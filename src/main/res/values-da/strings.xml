@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-
     <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Adgang nægtet</string>
     <string name="auth_email">E-mail</string>
     <string name="auth_continue">Fortsæt</string>
     <string name="auth_verification_code">Verifikationskode</string>
@@ -21,11 +21,14 @@
     <string name="common_delete">Slet</string>
     <string name="common_add">Tilføj</string>
     <string name="common_subscribe">Abonnér</string>
+    <string name="comment_edited">(redigeret)</string>
     <string name="comment_edit_placeholder">Redigér kommentar</string>
     <string name="comment_reply">Svar</string>
     <string name="comment_reply_placeholder">Svar</string>
     <string name="comment_send_reply">Send svar</string>
     <string name="person_picker_search">Søg efter brugere</string>
+    <string name="place_picker_no_results">Ingen steder fundet</string>
+    <string name="discovery_results">Resultater</string>
     <string name="discovery_recommended">Anbefalet</string>
     <string name="discovery_subscribed">Abonneret</string>
     <string name="access_owner">Ejer</string>
@@ -35,26 +38,34 @@
     <string name="access_level_comment">Kommentar</string>
     <string name="access_level_view">Vis</string>
     <string name="access_level_none">Ingen</string>
-    <string name="error_network">Kan ikke oprette forbindelse. Tjek din internetforbindelse, og prøv igen.</string>
+    <string name="reaction_like">Synes godt om</string>
+    <string name="reaction_dislike">Synes ikke om</string>
+    <string name="reaction_laugh">Grin</string>
+    <string name="reaction_amazed">Forbløffet</string>
+    <string name="reaction_love">Elsker</string>
+    <string name="reaction_sad">Trist</string>
+    <string name="reaction_angry">Vred</string>
+    <string name="reaction_agree">Enig</string>
+    <string name="reaction_disagree">Uenig</string>
+    <string name="error_network">Kan ikke forbinde. Tjek din internetforbindelse og prøv igen.</string>
     <string name="error_authentication_required">Godkendelse påkrævet</string>
-    <string name="error_access_denied">Adgang nægtet</string>
     <string name="error_not_found">Ikke fundet</string>
-    <string name="error_server">Serverfejl (%1$d). Prøv igen senere.</string>
+    <string name="error_server">Serverfejl (%1$d). Prøv venligst igen senere.</string>
     <string name="error_unexpected">Der opstod en uventet fejl</string>
-    <string name="error_request_failed">Anmodning mislykkedes</string>
-    <string name="error_enter_server_url">Angiv en server-URL</string>
-    <string name="error_enter_email">Angiv din e-mail</string>
-    <string name="error_enter_name">Angiv et navn</string>
-    <string name="auth_connect_to_server">Opret forbindelse til din server</string>
+    <string name="error_request_failed">Anmodning fejlede</string>
+    <string name="error_enter_server_url">Indtast venligst en server-URL</string>
+    <string name="error_enter_email">Indtast venligst din e-mail</string>
+    <string name="error_enter_name">Indtast venligst et navn</string>
+    <string name="auth_connect_to_server">Forbind til din server</string>
     <string name="auth_server_url">Server-URL</string>
-    <string name="auth_connect">Opret forbindelse</string>
-    <string name="auth_sign_in">Log ind</string>
-    <string name="auth_sign_in_with_passkey">Log ind med adgangsnøgle</string>
-    <string name="auth_sign_in_with_email_code">Log ind med e-mailkode</string>
+    <string name="auth_connect">Forbind</string>
+    <string name="auth_sign_in">Log på</string>
+    <string name="auth_sign_in_with_passkey">Log på med passkey</string>
+    <string name="auth_sign_in_with_email_code">Log på med e-mail-kode</string>
     <string name="auth_use_recovery_code">Brug gendannelseskode</string>
-    <string name="auth_back_to_sign_in">Tilbage til login</string>
+    <string name="auth_back_to_sign_in">Tilbage til log på</string>
     <string name="auth_send_code">Send kode</string>
-    <string name="auth_check_email">Tjek din e-mail for en verifikationskode</string>
+    <string name="auth_check_email">Tjek din e-mail for en bekræftelseskode</string>
     <string name="auth_six_digit_code">6-cifret kode</string>
     <string name="auth_mfa_title">Multifaktor-godkendelse</string>
     <string name="auth_mfa_subtitle">Fuldfør de resterende verifikationstrin</string>
@@ -65,39 +76,24 @@
     <string name="common_change">Skift</string>
     <string name="common_retry">Prøv igen</string>
     <string name="common_more_options">Flere indstillinger</string>
-    <string name="common_collapse">Skjul</string>
+    <string name="common_collapse">Sammenfold</string>
     <string name="common_expand">Udvid</string>
     <string name="common_play_video">Afspil video</string>
-    <string name="comment_edited">(redigeret)</string>
     <string name="place_picker_name">Stednavn</string>
-    <string name="place_picker_no_results">No places found</string>
     <string name="place_origin">Oprindelse</string>
     <string name="place_destination">Destination</string>
-    <string name="discovery_search_placeholder">Søg %1$ss</string>
-    <string name="discovery_results">Resultater</string>
-    <string name="discovery_no_results">Ingen %1$ss fundet</string>
+    <string name="discovery_search_placeholder">Søg %1$s</string>
+    <string name="discovery_no_results">Ingen %1$s fundet</string>
     <string name="discovery_no_recommendations">Ingen anbefalinger</string>
     <string name="discovery_search_hint">Prøv at søge efter en %1$s at abonnere på</string>
     <string name="access_add_rule">Tilføj regel</string>
     <string name="access_no_rules">Ingen adgangsregler</string>
-    <string name="access_no_rules_subtitle">Tilføj regler for at styre, hvem der kan få adgang til denne ressource</string>
+    <string name="access_no_rules_subtitle">Tilføj regler for at kontrollere, hvem der kan få adgang til denne ressource</string>
     <string name="access_add_rule_title">Tilføj adgangsregel</string>
     <string name="access_level_react">Reagér</string>
     <string name="entity_avatar_alt">Avatar for %1$s</string>
-    <string name="reaction_add">Tilføj reaktion</string>
-    <string name="reaction_like">Synes godt om</string>
-    <string name="reaction_dislike">Synes ikke om</string>
-    <string name="reaction_laugh">Grin</string>
-    <string name="reaction_amazed">Forbløffet</string>
-    <string name="reaction_love">Elsker</string>
-    <string name="reaction_sad">Trist</string>
-    <string name="reaction_angry">Vred</string>
-    <string name="reaction_agree">Enig</string>
-    <string name="reaction_disagree">Uenig</string>
-
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-
     <string name="format_time_just_now">Lige nu</string>
     <string name="format_time_minutes_ago">%1$dm siden</string>
     <string name="format_time_hours_ago">%1$dt siden</string>
@@ -111,4 +107,5 @@
     <string name="format_time_weeks_short">%1$du</string>
     <string name="format_time_months_short">%1$dmd</string>
     <string name="format_time_years_short">%1$då</string>
+    <string name="reaction_add">Tilføj reaktion</string>
 </resources>

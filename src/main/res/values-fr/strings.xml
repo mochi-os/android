@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Accès refusé</string>
     <string name="auth_email">E-mail</string>
@@ -22,11 +21,14 @@
     <string name="common_delete">Supprimer</string>
     <string name="common_add">Ajouter</string>
     <string name="common_subscribe">S\'abonner</string>
+    <string name="comment_edited">(modifié)</string>
     <string name="comment_edit_placeholder">Modifier le commentaire</string>
     <string name="comment_reply">Répondre</string>
     <string name="comment_reply_placeholder">Répondre</string>
     <string name="comment_send_reply">Envoyer la réponse</string>
     <string name="person_picker_search">Rechercher des utilisateurs</string>
+    <string name="place_picker_no_results">Aucun lieu trouvé</string>
+    <string name="discovery_results">Résultats</string>
     <string name="discovery_recommended">Recommandé</string>
     <string name="access_revoke">Révoquer</string>
     <string name="access_level">Niveau d\'accès</string>
@@ -34,7 +36,16 @@
     <string name="access_level_comment">Commentaire</string>
     <string name="access_level_view">Vue</string>
     <string name="access_level_none">Aucun</string>
-    <string name="error_network">Connexion impossible. Vérifiez votre connexion internet et réessayez.</string>
+    <string name="reaction_like">J\'aime</string>
+    <string name="reaction_dislike">Je n\'aime pas</string>
+    <string name="reaction_laugh">Rire</string>
+    <string name="reaction_amazed">Émerveillé</string>
+    <string name="reaction_love">J\'adore</string>
+    <string name="reaction_sad">Triste</string>
+    <string name="reaction_angry">En colère</string>
+    <string name="reaction_agree">D\'accord</string>
+    <string name="reaction_disagree">Pas d\'accord</string>
+    <string name="error_network">Impossible de se connecter. Vérifiez votre connexion internet et réessayez.</string>
     <string name="error_authentication_required">Authentification requise</string>
     <string name="error_not_found">Introuvable</string>
     <string name="error_server">Erreur du serveur (%1$d). Veuillez réessayer plus tard.</string>
@@ -43,21 +54,21 @@
     <string name="error_enter_server_url">Veuillez saisir une URL de serveur</string>
     <string name="error_enter_email">Veuillez saisir votre e-mail</string>
     <string name="error_enter_name">Veuillez saisir un nom</string>
-    <string name="auth_connect_to_server">Connectez-vous à votre serveur</string>
+    <string name="auth_connect_to_server">Se connecter à votre serveur</string>
     <string name="auth_server_url">URL du serveur</string>
-    <string name="auth_connect">Se connecter</string>
+    <string name="auth_connect">Connecter</string>
     <string name="auth_sign_in">Se connecter</string>
     <string name="auth_sign_in_with_passkey">Se connecter avec une clé d\'accès</string>
     <string name="auth_sign_in_with_email_code">Se connecter avec un code par e-mail</string>
-    <string name="auth_use_recovery_code">Utiliser un code de récupération</string>
+    <string name="auth_use_recovery_code">Utiliser le code de récupération</string>
     <string name="auth_back_to_sign_in">Retour à la connexion</string>
     <string name="auth_send_code">Envoyer le code</string>
-    <string name="auth_check_email">Consultez votre e-mail pour un code de vérification</string>
+    <string name="auth_check_email">Vérifiez votre e-mail pour un code de vérification</string>
     <string name="auth_six_digit_code">Code à 6 chiffres</string>
     <string name="auth_mfa_title">Authentification multifacteur</string>
-    <string name="auth_mfa_subtitle">Effectuez les étapes de vérification restantes</string>
+    <string name="auth_mfa_subtitle">Compléter les étapes de vérification restantes</string>
     <string name="auth_recover_account">Récupérer le compte</string>
-    <string name="auth_create_identity_title">Créez votre identité</string>
+    <string name="auth_create_identity_title">Créer votre identité</string>
     <string name="auth_create_identity_subtitle">Choisissez un nom pour votre identité sur ce serveur</string>
     <string name="common_or">ou</string>
     <string name="common_change">Modifier</string>
@@ -66,49 +77,35 @@
     <string name="common_collapse">Réduire</string>
     <string name="common_expand">Développer</string>
     <string name="common_play_video">Lire la vidéo</string>
-    <string name="comment_edited">(modifié)</string>
     <string name="place_picker_name">Nom du lieu</string>
-    <string name="place_picker_no_results">No places found</string>
     <string name="place_origin">Origine</string>
     <string name="place_destination">Destination</string>
-    <string name="discovery_search_placeholder">Rechercher des %1$ss</string>
-    <string name="discovery_results">Résultats</string>
+    <string name="discovery_search_placeholder">Rechercher des %1$s</string>
     <string name="discovery_no_results">Aucun %1$s trouvé</string>
     <string name="discovery_no_recommendations">Aucune recommandation</string>
-    <string name="discovery_search_hint">Essayez de rechercher un %1$s auquel vous abonner</string>
+    <string name="discovery_search_hint">Essayez de rechercher un %1$s à suivre</string>
     <string name="discovery_subscribed">Abonné</string>
     <string name="access_add_rule">Ajouter une règle</string>
     <string name="access_no_rules">Aucune règle d\'accès</string>
-    <string name="access_no_rules_subtitle">Ajoutez des règles pour contrôler qui peut accéder à cette ressource</string>
+    <string name="access_no_rules_subtitle">Ajouter des règles pour contrôler qui peut accéder à cette ressource</string>
     <string name="access_owner">Propriétaire</string>
     <string name="access_add_rule_title">Ajouter une règle d\'accès</string>
     <string name="access_level_react">Réagir</string>
     <string name="entity_avatar_alt">Avatar de %1$s</string>
-    <string name="reaction_add">Ajouter une réaction</string>
-    <string name="reaction_like">J\'aime</string>
-    <string name="reaction_dislike">Je n\'aime pas</string>
-    <string name="reaction_laugh">Rire</string>
-    <string name="reaction_amazed">Étonné</string>
-    <string name="reaction_love">Adorer</string>
-    <string name="reaction_sad">Triste</string>
-    <string name="reaction_angry">En colère</string>
-    <string name="reaction_agree">D\'accord</string>
-    <string name="reaction_disagree">Pas d\'accord</string>
-
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-
     <string name="format_time_just_now">À l\'instant</string>
     <string name="format_time_minutes_ago">il y a %1$dmin</string>
     <string name="format_time_hours_ago">il y a %1$dh</string>
     <string name="format_time_days_ago">il y a %1$dj</string>
     <string name="format_time_weeks_ago">il y a %1$dsem</string>
     <string name="format_time_months_ago">il y a %1$dmois</string>
-    <string name="format_time_years_ago">il y a %1$dan</string>
+    <string name="format_time_years_ago">il y a %1$dans</string>
     <string name="format_time_minutes_short">%1$dmin</string>
     <string name="format_time_hours_short">%1$dh</string>
     <string name="format_time_days_short">%1$dj</string>
     <string name="format_time_weeks_short">%1$dsem</string>
     <string name="format_time_months_short">%1$dmois</string>
-    <string name="format_time_years_short">%1$dan</string>
+    <string name="format_time_years_short">%1$dans</string>
+    <string name="reaction_add">Ajouter une réaction</string>
 </resources>

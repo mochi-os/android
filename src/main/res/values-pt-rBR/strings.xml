@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-
     <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Acesso negado</string>
     <string name="auth_email">E-mail</string>
     <string name="auth_continue">Continuar</string>
     <string name="auth_verification_code">Código de verificação</string>
@@ -21,11 +21,14 @@
     <string name="common_delete">Excluir</string>
     <string name="common_add">Adicionar</string>
     <string name="common_subscribe">Inscrever-se</string>
+    <string name="comment_edited">(editado)</string>
     <string name="comment_edit_placeholder">Editar comentário</string>
     <string name="comment_reply">Responder</string>
     <string name="comment_reply_placeholder">Responder</string>
     <string name="comment_send_reply">Enviar resposta</string>
     <string name="person_picker_search">Pesquisar usuários</string>
+    <string name="place_picker_no_results">Nenhum lugar encontrado</string>
+    <string name="discovery_results">Resultados</string>
     <string name="discovery_recommended">Recomendado</string>
     <string name="discovery_subscribed">Inscrito</string>
     <string name="access_owner">Proprietário</string>
@@ -35,24 +38,32 @@
     <string name="access_level_comment">Comentário</string>
     <string name="access_level_view">Visualizar</string>
     <string name="access_level_none">Nenhum</string>
+    <string name="reaction_like">Curtir</string>
+    <string name="reaction_dislike">Não curti</string>
+    <string name="reaction_laugh">Risada</string>
+    <string name="reaction_amazed">Surpreso</string>
+    <string name="reaction_love">Amei</string>
+    <string name="reaction_sad">Triste</string>
+    <string name="reaction_angry">Bravo</string>
+    <string name="reaction_agree">Concordo</string>
+    <string name="reaction_disagree">Discordo</string>
     <string name="error_network">Não foi possível conectar. Verifique sua conexão com a internet e tente novamente.</string>
     <string name="error_authentication_required">Autenticação necessária</string>
-    <string name="error_access_denied">Acesso negado</string>
     <string name="error_not_found">Não encontrado</string>
-    <string name="error_server">Erro no servidor (%1$d). Tente novamente mais tarde.</string>
+    <string name="error_server">Erro do servidor (%1$d). Por favor, tente novamente mais tarde.</string>
     <string name="error_unexpected">Ocorreu um erro inesperado</string>
-    <string name="error_request_failed">Falha na solicitação</string>
-    <string name="error_enter_server_url">Insira uma URL de servidor</string>
-    <string name="error_enter_email">Insira seu e-mail</string>
-    <string name="error_enter_name">Insira um nome</string>
+    <string name="error_request_failed">Solicitação falhou</string>
+    <string name="error_enter_server_url">Por favor, insira uma URL de servidor</string>
+    <string name="error_enter_email">Por favor, insira seu e-mail</string>
+    <string name="error_enter_name">Por favor, insira um nome</string>
     <string name="auth_connect_to_server">Conecte-se ao seu servidor</string>
     <string name="auth_server_url">URL do servidor</string>
     <string name="auth_connect">Conectar</string>
     <string name="auth_sign_in">Entrar</string>
-    <string name="auth_sign_in_with_passkey">Entrar com chave de acesso</string>
+    <string name="auth_sign_in_with_passkey">Entrar com passkey</string>
     <string name="auth_sign_in_with_email_code">Entrar com código por e-mail</string>
     <string name="auth_use_recovery_code">Usar código de recuperação</string>
-    <string name="auth_back_to_sign_in">Voltar para entrar</string>
+    <string name="auth_back_to_sign_in">Voltar ao login</string>
     <string name="auth_send_code">Enviar código</string>
     <string name="auth_check_email">Verifique seu e-mail para um código de verificação</string>
     <string name="auth_six_digit_code">Código de 6 dígitos</string>
@@ -68,13 +79,10 @@
     <string name="common_collapse">Recolher</string>
     <string name="common_expand">Expandir</string>
     <string name="common_play_video">Reproduzir vídeo</string>
-    <string name="comment_edited">(editado)</string>
     <string name="place_picker_name">Nome do local</string>
-    <string name="place_picker_no_results">No places found</string>
     <string name="place_origin">Origem</string>
     <string name="place_destination">Destino</string>
-    <string name="discovery_search_placeholder">Pesquisar %1$ss</string>
-    <string name="discovery_results">Resultados</string>
+    <string name="discovery_search_placeholder">Pesquisar %1$s</string>
     <string name="discovery_no_results">Nenhum %1$s encontrado</string>
     <string name="discovery_no_recommendations">Sem recomendações</string>
     <string name="discovery_search_hint">Tente pesquisar um %1$s para se inscrever</string>
@@ -84,20 +92,8 @@
     <string name="access_add_rule_title">Adicionar regra de acesso</string>
     <string name="access_level_react">Reagir</string>
     <string name="entity_avatar_alt">Avatar de %1$s</string>
-    <string name="reaction_add">Adicionar reação</string>
-    <string name="reaction_like">Curtir</string>
-    <string name="reaction_dislike">Não curtir</string>
-    <string name="reaction_laugh">Risada</string>
-    <string name="reaction_amazed">Surpreso</string>
-    <string name="reaction_love">Amar</string>
-    <string name="reaction_sad">Triste</string>
-    <string name="reaction_angry">Bravo</string>
-    <string name="reaction_agree">Concordar</string>
-    <string name="reaction_disagree">Discordar</string>
-
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-
     <string name="format_time_just_now">Agora mesmo</string>
     <string name="format_time_minutes_ago">há %1$dm</string>
     <string name="format_time_hours_ago">há %1$dh</string>
@@ -111,4 +107,5 @@
     <string name="format_time_weeks_short">%1$dsem</string>
     <string name="format_time_months_short">%1$dmes</string>
     <string name="format_time_years_short">%1$da</string>
+    <string name="reaction_add">Adicionar reação</string>
 </resources>

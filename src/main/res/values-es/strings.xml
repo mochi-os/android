@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-
     <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Acceso denegado</string>
     <string name="auth_email">Correo electrónico</string>
     <string name="auth_continue">Continuar</string>
     <string name="auth_verification_code">Código de verificación</string>
@@ -21,11 +21,14 @@
     <string name="common_delete">Eliminar</string>
     <string name="common_add">Añadir</string>
     <string name="common_subscribe">Suscribirse</string>
+    <string name="comment_edited">(editado)</string>
     <string name="comment_edit_placeholder">Editar comentario</string>
     <string name="comment_reply">Responder</string>
     <string name="comment_reply_placeholder">Responder</string>
     <string name="comment_send_reply">Enviar respuesta</string>
     <string name="person_picker_search">Buscar usuarios</string>
+    <string name="place_picker_no_results">No se encontraron lugares</string>
+    <string name="discovery_results">Resultados</string>
     <string name="discovery_recommended">Recomendado</string>
     <string name="discovery_subscribed">Suscrito</string>
     <string name="access_owner">Propietario</string>
@@ -35,17 +38,25 @@
     <string name="access_level_comment">Comentar</string>
     <string name="access_level_view">Ver</string>
     <string name="access_level_none">Ninguno</string>
-    <string name="error_network">No se puede conectar. Compruebe su conexión a internet e inténtelo de nuevo.</string>
-    <string name="error_authentication_required">Se requiere autenticación</string>
-    <string name="error_access_denied">Acceso denegado</string>
+    <string name="reaction_like">Me gusta</string>
+    <string name="reaction_dislike">No me gusta</string>
+    <string name="reaction_laugh">Risa</string>
+    <string name="reaction_amazed">Asombrado</string>
+    <string name="reaction_love">Me encanta</string>
+    <string name="reaction_sad">Triste</string>
+    <string name="reaction_angry">Enfadado</string>
+    <string name="reaction_agree">De acuerdo</string>
+    <string name="reaction_disagree">En desacuerdo</string>
+    <string name="error_network">No se puede conectar. Comprueba tu conexión a internet e inténtalo de nuevo.</string>
+    <string name="error_authentication_required">Autenticación requerida</string>
     <string name="error_not_found">No encontrado</string>
-    <string name="error_server">Error del servidor (%1$d). Inténtelo de nuevo más tarde.</string>
-    <string name="error_unexpected">Se ha producido un error inesperado</string>
-    <string name="error_request_failed">La solicitud ha fallado</string>
-    <string name="error_enter_server_url">Introduzca una URL de servidor</string>
-    <string name="error_enter_email">Introduzca su correo electrónico</string>
-    <string name="error_enter_name">Introduzca un nombre</string>
-    <string name="auth_connect_to_server">Conéctese a su servidor</string>
+    <string name="error_server">Error del servidor (%1$d). Inténtalo de nuevo más tarde.</string>
+    <string name="error_unexpected">Se produjo un error inesperado</string>
+    <string name="error_request_failed">Solicitud fallida</string>
+    <string name="error_enter_server_url">Por favor, introduce una URL de servidor</string>
+    <string name="error_enter_email">Por favor, introduce tu correo</string>
+    <string name="error_enter_name">Por favor, introduce un nombre</string>
+    <string name="auth_connect_to_server">Conecta a tu servidor</string>
     <string name="auth_server_url">URL del servidor</string>
     <string name="auth_connect">Conectar</string>
     <string name="auth_sign_in">Iniciar sesión</string>
@@ -54,13 +65,13 @@
     <string name="auth_use_recovery_code">Usar código de recuperación</string>
     <string name="auth_back_to_sign_in">Volver al inicio de sesión</string>
     <string name="auth_send_code">Enviar código</string>
-    <string name="auth_check_email">Compruebe su correo electrónico para obtener un código de verificación</string>
+    <string name="auth_check_email">Comprueba tu correo para un código de verificación</string>
     <string name="auth_six_digit_code">Código de 6 dígitos</string>
     <string name="auth_mfa_title">Autenticación multifactor</string>
-    <string name="auth_mfa_subtitle">Complete los pasos de verificación restantes</string>
+    <string name="auth_mfa_subtitle">Completa los pasos de verificación restantes</string>
     <string name="auth_recover_account">Recuperar cuenta</string>
-    <string name="auth_create_identity_title">Cree su identidad</string>
-    <string name="auth_create_identity_subtitle">Elija un nombre para su identidad en este servidor</string>
+    <string name="auth_create_identity_title">Crea tu identidad</string>
+    <string name="auth_create_identity_subtitle">Elige un nombre para tu identidad en este servidor</string>
     <string name="common_or">o</string>
     <string name="common_change">Cambiar</string>
     <string name="common_retry">Reintentar</string>
@@ -68,37 +79,22 @@
     <string name="common_collapse">Contraer</string>
     <string name="common_expand">Expandir</string>
     <string name="common_play_video">Reproducir vídeo</string>
-    <string name="comment_edited">(editado)</string>
     <string name="place_picker_name">Nombre del lugar</string>
-    <string name="place_picker_no_results">No places found</string>
     <string name="place_origin">Origen</string>
     <string name="place_destination">Destino</string>
     <string name="discovery_search_placeholder">Buscar %1$ss</string>
-    <string name="discovery_results">Resultados</string>
-    <string name="discovery_no_results">No se han encontrado %1$ss</string>
-    <string name="discovery_no_recommendations">No hay recomendaciones</string>
-    <string name="discovery_search_hint">Pruebe a buscar un %1$s al que suscribirse</string>
+    <string name="discovery_no_results">No se encontraron %1$ss</string>
+    <string name="discovery_no_recommendations">Sin recomendaciones</string>
+    <string name="discovery_search_hint">Prueba a buscar un %1$s para suscribirte</string>
     <string name="access_add_rule">Añadir regla</string>
-    <string name="access_no_rules">No hay reglas de acceso</string>
-    <string name="access_no_rules_subtitle">Añada reglas para controlar quién puede acceder a este recurso</string>
+    <string name="access_no_rules">Sin reglas de acceso</string>
+    <string name="access_no_rules_subtitle">Añade reglas para controlar quién puede acceder a este recurso</string>
     <string name="access_add_rule_title">Añadir regla de acceso</string>
     <string name="access_level_react">Reaccionar</string>
     <string name="entity_avatar_alt">Avatar de %1$s</string>
-    <string name="reaction_add">Añadir reacción</string>
-    <string name="reaction_like">Me gusta</string>
-    <string name="reaction_dislike">No me gusta</string>
-    <string name="reaction_laugh">Risa</string>
-    <string name="reaction_amazed">Asombro</string>
-    <string name="reaction_love">Amor</string>
-    <string name="reaction_sad">Tristeza</string>
-    <string name="reaction_angry">Enfado</string>
-    <string name="reaction_agree">De acuerdo</string>
-    <string name="reaction_disagree">En desacuerdo</string>
-
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-
-    <string name="format_time_just_now">Ahora mismo</string>
+    <string name="format_time_just_now">Justo ahora</string>
     <string name="format_time_minutes_ago">hace %1$dm</string>
     <string name="format_time_hours_ago">hace %1$dh</string>
     <string name="format_time_days_ago">hace %1$dd</string>
@@ -111,4 +107,5 @@
     <string name="format_time_weeks_short">%1$dsem</string>
     <string name="format_time_months_short">%1$dmes</string>
     <string name="format_time_years_short">%1$da</string>
+    <string name="reaction_add">Añadir reacción</string>
 </resources>
