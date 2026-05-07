@@ -1,4 +1,4 @@
-package org.mochi.android.ui.auth
+package org.mochios.android.ui.auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,15 +7,17 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.mochi.android.R
-import org.mochi.android.api.MochiError
-import org.mochi.android.api.toMochiError
-import org.mochi.android.auth.AuthRepository
-import org.mochi.android.i18n.AppContext
-import org.mochi.android.auth.AuthResult
-import org.mochi.android.auth.BeginResult
-import org.mochi.android.auth.PasskeyManager
-import org.mochi.android.auth.SessionManager
+import org.mochios.android.R
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.AuthRepository
+import org.mochios.android.i18n.AppContext
+import org.mochios.android.auth.AuthResult
+import org.mochios.android.auth.BeginResult
+import org.mochios.android.auth.MethodsResponse
+import org.mochios.android.auth.OAuthPkce
+import org.mochios.android.auth.PasskeyManager
+import org.mochios.android.auth.SessionManager
 import javax.inject.Inject
 
 data class AuthUiState(
@@ -36,7 +38,9 @@ data class AuthUiState(
     val showRecovery: Boolean = false,
     val authComplete: Boolean = false,
     val needsIdentity: Boolean = false,
-    val serverValidated: Boolean = false
+    val serverValidated: Boolean = false,
+    val methods: MethodsResponse? = null,
+    val oauthLaunchUrl: String? = null
 )
 
 @HiltViewModel
@@ -53,6 +57,20 @@ class AuthViewModel @Inject constructor(
         viewModelScope.launch {
             sessionManager.serverUrl.collect { url ->
                 _uiState.value = _uiState.value.copy(serverUrl = url)
+            }
+        }
+        viewModelScope.launch {
+            sessionManager.oauthReturn.collect { (code, error) ->
+                if (error != null) {
+                    sessionManager.clearOAuthReturn()
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        error = MochiError.Unknown("OAuth: $error")
+                    )
+                } else if (code != null) {
+                    sessionManager.clearOAuthReturn()
+                    completeOAuth(code)
+                }
             }
         }
     }
@@ -109,10 +127,11 @@ class AuthViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 sessionManager.setServerUrl(url)
-                authRepository.getAvailableMethods()
+                val methods = authRepository.getAvailableMethods()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    serverValidated = true
+                    serverValidated = true,
+                    methods = methods
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
@@ -140,6 +159,11 @@ class AuthViewModel @Inject constructor(
                     isLoading = false,
                     beginResult = result
                 )
+                // Match the web flow: auto-send the email code so the user
+                // doesn't see an extra "Send code" tap before the input.
+                if (result.methods.contains("email") && !result.hasPasskey) {
+                    requestEmailCode()
+                }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -283,6 +307,53 @@ class AuthViewModel @Inject constructor(
                     isLoading = false,
                     authComplete = true
                 )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    error = e.toMochiError()
+                )
+            }
+        }
+    }
+
+    fun startOAuth(provider: String, scheme: String) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            try {
+                val verifier = OAuthPkce.generateVerifier()
+                sessionManager.saveOAuthVerifier(verifier)
+                val challenge = OAuthPkce.challengeFor(verifier)
+                val url = authRepository.beginOAuth(provider, scheme, challenge)
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    oauthLaunchUrl = url
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    error = e.toMochiError()
+                )
+            }
+        }
+    }
+
+    fun consumeOAuthLaunchUrl() {
+        _uiState.value = _uiState.value.copy(oauthLaunchUrl = null)
+    }
+
+    private fun completeOAuth(code: String) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            try {
+                val verifier = sessionManager.consumeOAuthVerifier()
+                if (verifier == null) {
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        error = MochiError.Unknown("OAuth: missing verifier")
+                    )
+                    return@launch
+                }
+                handleAuthResult(authRepository.exchangeOAuth(code, verifier))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,

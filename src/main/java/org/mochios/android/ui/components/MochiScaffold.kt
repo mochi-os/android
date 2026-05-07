@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.RowScope
@@ -12,7 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import org.mochi.android.R
+import org.mochios.android.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

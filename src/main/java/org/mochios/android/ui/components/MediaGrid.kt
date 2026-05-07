@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -21,7 +21,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import org.mochi.android.R
+import org.mochios.android.R
 
 /**
  * Grid of image attachments using the conventional Mochi layout:

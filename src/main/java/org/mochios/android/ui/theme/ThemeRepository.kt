@@ -1,6 +1,6 @@
-package org.mochi.android.ui.theme
+package org.mochios.android.ui.theme
 
-import org.mochi.android.auth.SessionManager
+import org.mochios.android.auth.SessionManager
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.GET

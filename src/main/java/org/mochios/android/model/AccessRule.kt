@@ -1,9 +1,9 @@
-package org.mochi.android.model
+package org.mochios.android.model
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.google.gson.annotations.SerializedName
-import org.mochi.android.R
+import org.mochios.android.R
 
 data class AccessRule(
     val id: Int = 0,

@@ -1,8 +1,8 @@
-package org.mochi.android.util
+package org.mochios.android.util
 
-import org.mochi.android.model.Reaction
-import org.mochi.android.model.ReactionCount
-import org.mochi.android.model.ReactionType
+import org.mochios.android.model.Reaction
+import org.mochios.android.model.ReactionCount
+import org.mochios.android.model.ReactionType
 
 fun List<Reaction>.toReactionCounts(myReaction: String): List<ReactionCount> {
     val countMap = mutableMapOf<String, Int>()

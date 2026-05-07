@@ -1,7 +1,7 @@
-package org.mochi.android.api
+package org.mochios.android.api
 
-import org.mochi.android.R
-import org.mochi.android.i18n.AppContext
+import org.mochios.android.R
+import org.mochios.android.i18n.AppContext
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.SocketTimeoutException

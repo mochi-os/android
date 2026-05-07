@@ -1,6 +1,6 @@
-package org.mochi.android.auth
+package org.mochios.android.auth
 
-import org.mochi.android.api.unwrapRaw
+import org.mochios.android.api.unwrapRaw
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -25,8 +25,9 @@ data class PasskeyChallenge(
 )
 
 data class Identity(
-    val userId: Int,
+    val identity: String,    // canonical entity ID, network-unique
     val name: String,
+    val email: String,
     val fingerprint: String
 )
 
@@ -124,15 +125,31 @@ class AuthRepository @Inject constructor(
     suspend fun getIdentity(): Identity {
         val response = authApi.getIdentity().unwrapRaw()
         return Identity(
-            userId = response.user,
-            name = response.name,
-            fingerprint = response.fingerprint
+            identity = response.identity?.id.orEmpty(),
+            name = response.identity?.name?.takeIf { it.isNotBlank() }
+                ?: response.user.name,
+            email = response.user.email,
+            fingerprint = response.identity?.fingerprint.orEmpty()
         )
     }
 
-    suspend fun getAvailableMethods(): List<String> {
-        val response = authApi.getAvailableMethods().unwrapRaw()
-        return response.methods
+    suspend fun getAvailableMethods(): MethodsResponse {
+        return authApi.getAvailableMethods().unwrapRaw()
+    }
+
+    suspend fun beginOAuth(provider: String, scheme: String, challenge: String): String {
+        val resp = authApi.oauthBegin(
+            provider,
+            OAuthBeginRequest(mode = "mobile", scheme = scheme, challenge = challenge)
+        ).unwrapRaw()
+        return resp.url
+    }
+
+    suspend fun exchangeOAuth(code: String, verifier: String): AuthResult {
+        val response = authApi.oauthExchange(OAuthExchangeRequest(code, verifier))
+        extractSessionCookie(response)
+        val data = response.unwrapRaw()
+        return mapVerifyResponse(data)
     }
 
     private fun mapVerifyResponse(data: VerifyResponse): AuthResult {

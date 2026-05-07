@@ -1,4 +1,4 @@
-package org.mochi.android.ui.auth
+package org.mochios.android.ui.auth
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -10,10 +10,21 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun AuthNavigation(onAuthenticated: () -> Unit) {
+fun AuthNavigation(
+    onAuthenticated: () -> Unit,
+    oauthScheme: String? = null
+) {
     val navController = rememberNavController()
     val viewModel: AuthViewModel = hiltViewModel()
     val uiState by viewModel.uiState.collectAsState()
+    val context = androidx.compose.ui.platform.LocalContext.current
+
+    LaunchedEffect(uiState.oauthLaunchUrl) {
+        val url = uiState.oauthLaunchUrl ?: return@LaunchedEffect
+        val intent = androidx.browser.customtabs.CustomTabsIntent.Builder().build()
+        intent.launchUrl(context, android.net.Uri.parse(url))
+        viewModel.consumeOAuthLaunchUrl()
+    }
 
     LaunchedEffect(uiState.authComplete) {
         if (uiState.authComplete) {
@@ -59,7 +70,9 @@ fun AuthNavigation(onAuthenticated: () -> Unit) {
                 onBeginPasskey = viewModel::beginPasskeyAuth,
                 onToggleRecovery = viewModel::toggleRecovery,
                 onUpdateRecoveryCode = viewModel::updateRecoveryCode,
-                onVerifyRecovery = viewModel::verifyRecoveryCode
+                onVerifyRecovery = viewModel::verifyRecoveryCode,
+                oauthScheme = oauthScheme,
+                onStartOAuth = viewModel::startOAuth
             )
         }
 

@@ -1,8 +1,8 @@
-package org.mochi.android.i18n
+package org.mochios.android.i18n
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
-import org.mochi.android.auth.SessionManager
+import org.mochios.android.auth.SessionManager
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.GET

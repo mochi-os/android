@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,9 +20,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import org.mochi.android.R
-import org.mochi.android.api.MochiError
-import org.mochi.android.api.userMessage
+import org.mochios.android.R
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.userMessage
 
 @Composable
 fun ErrorState(

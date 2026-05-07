@@ -1,4 +1,4 @@
-package org.mochi.android.i18n
+package org.mochios.android.i18n
 
 import android.app.LocaleManager
 import android.content.Context

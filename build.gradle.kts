@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "org.mochi.android"
+    namespace = "org.mochios.android"
     compileSdk = 35
 
     defaultConfig {
@@ -76,6 +76,7 @@ dependencies {
 
     implementation(libs.credentials)
     implementation(libs.credentials.play.services)
+    implementation(libs.browser)
 
     api(libs.hilt.android)
     ksp(libs.hilt.compiler)

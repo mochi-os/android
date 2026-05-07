@@ -1,4 +1,4 @@
-package org.mochi.android.ui.auth
+package org.mochios.android.ui.auth
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -27,8 +27,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import org.mochi.android.R
-import org.mochi.android.api.userMessage
+import org.mochios.android.R
+import org.mochios.android.api.userMessage
 
 @Composable
 fun LoginScreen(
@@ -43,8 +43,15 @@ fun LoginScreen(
     onBeginPasskey: () -> Unit,
     onToggleRecovery: () -> Unit,
     onUpdateRecoveryCode: (String) -> Unit,
-    onVerifyRecovery: () -> Unit
+    onVerifyRecovery: () -> Unit,
+    oauthScheme: String? = null,
+    onStartOAuth: (String, String) -> Unit = { _, _ -> }
 ) {
+    val oauthProviders = uiState.methods?.oauth.orEmpty()
+        .filterValues { it }
+        .keys
+        .toList()
+        .sorted()
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -68,6 +75,21 @@ fun LoginScreen(
                 onUpdateEmail = onUpdateEmail,
                 onContinue = onBeginLogin
             )
+            if (oauthProviders.isNotEmpty() && oauthScheme != null) {
+                Spacer(modifier = Modifier.height(16.dp))
+                DividerWithText(stringResource(R.string.common_or))
+                Spacer(modifier = Modifier.height(16.dp))
+                oauthProviders.forEach { provider ->
+                    OutlinedButton(
+                        onClick = { onStartOAuth(provider, oauthScheme) },
+                        enabled = !uiState.isLoading,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(providerLabel(provider))
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+            }
         } else if (uiState.mfaPartial != null) {
             MfaSection(
                 uiState = uiState,
@@ -390,6 +412,12 @@ private fun RecoverySection(
             Text(stringResource(R.string.auth_recover_account))
         }
     }
+}
+
+private fun providerLabel(name: String): String = when (name.lowercase()) {
+    "github" -> "GitHub"
+    "x" -> "X"
+    else -> name.replaceFirstChar { it.uppercase() }
 }
 
 @Composable

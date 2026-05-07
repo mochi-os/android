@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import org.mochi.android.R
+import org.mochios.android.R
 
 /**
  * Circular avatar for a person entity. When `src` is provided the image is

@@ -1,4 +1,4 @@
-package org.mochi.android.websocket
+package org.mochios.android.websocket
 
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
@@ -6,8 +6,8 @@ import okhttp3.Request
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
-import org.mochi.android.auth.SessionManager
-import org.mochi.android.model.WebSocketEvent
+import org.mochios.android.auth.SessionManager
+import org.mochios.android.model.WebSocketEvent
 import java.util.UUID
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject

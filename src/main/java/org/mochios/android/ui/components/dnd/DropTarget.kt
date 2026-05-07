@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components.dnd
+package org.mochios.android.ui.components.dnd
 
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.mutableStateOf

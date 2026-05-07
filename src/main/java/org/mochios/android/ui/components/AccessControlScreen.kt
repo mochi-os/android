@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -43,11 +43,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
-import org.mochi.android.R
-import org.mochi.android.model.AccessLevel
-import org.mochi.android.model.AccessRule
-import org.mochi.android.model.User
-import org.mochi.android.model.label
+import org.mochios.android.R
+import org.mochios.android.model.AccessLevel
+import org.mochios.android.model.AccessRule
+import org.mochios.android.model.User
+import org.mochios.android.model.label
 
 @Composable
 fun AccessControlScreen(

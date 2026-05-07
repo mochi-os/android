@@ -1,4 +1,4 @@
-package org.mochi.android.model
+package org.mochios.android.model
 
 data class PlaceData(
     val name: String = "",

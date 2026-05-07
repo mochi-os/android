@@ -1,4 +1,4 @@
-package org.mochi.android.auth
+package org.mochios.android.auth
 
 import dagger.Module
 import dagger.Provides

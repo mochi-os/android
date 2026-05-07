@@ -1,4 +1,4 @@
-package org.mochi.android.ui.theme
+package org.mochios.android.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -9,7 +9,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import org.mochi.android.auth.SessionManager
+import org.mochios.android.auth.SessionManager
 
 private val LightColorScheme = lightColorScheme(
     primary = Blue40,

@@ -1,4 +1,4 @@
-package org.mochi.android.places
+package org.mochios.android.places
 
 import com.google.gson.JsonParser
 import dagger.Module
@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.HttpUrl.Companion.toHttpUrl
-import org.mochi.android.model.PlaceData
+import org.mochios.android.model.PlaceData
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Qualifier
@@ -63,7 +63,7 @@ class NominatimService @Inject constructor(
     companion object {
         private const val BASE = "https://nominatim.openstreetmap.org"
         // Nominatim's TOS requires a descriptive User-Agent identifying the app.
-        private const val USER_AGENT = "org.mochi.android/1.0"
+        private const val USER_AGENT = "org.mochios.android/1.0"
     }
 
     suspend fun search(query: String, limit: Int = 8): List<NominatimPlace> {

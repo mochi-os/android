@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
@@ -37,12 +37,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.mochi.android.R
-import org.mochi.android.i18n.LocalFormat
-import org.mochi.android.i18n.formatRelativeTime
-import org.mochi.android.model.Attachment
-import org.mochi.android.model.Comment
-import org.mochi.android.util.toReactionCounts
+import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.model.Attachment
+import org.mochios.android.model.Comment
+import org.mochios.android.util.toReactionCounts
 
 private const val MAX_DEPTH = 6
 

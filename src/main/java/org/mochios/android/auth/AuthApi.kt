@@ -1,4 +1,4 @@
-package org.mochi.android.auth
+package org.mochios.android.auth
 
 import com.google.gson.JsonObject
 import com.google.gson.annotations.SerializedName
@@ -39,13 +39,43 @@ data class IdentityResponse(
 )
 
 data class IdentityInfoResponse(
-    val user: Int = 0,
+    val user: IdentityUserNode = IdentityUserNode(),
+    val identity: IdentityEntityNode? = null
+)
+
+data class IdentityUserNode(
+    val email: String = "",
+    val name: String = ""
+)
+
+data class IdentityEntityNode(
+    val id: String = "",
     val name: String = "",
+    val privacy: String = "",
     val fingerprint: String = ""
 )
 
 data class MethodsResponse(
-    val methods: List<String> = emptyList()
+    val email: Boolean = false,
+    val passkey: Boolean = false,
+    val recovery: Boolean = false,
+    val signup: Boolean = false,
+    val oauth: Map<String, Boolean> = emptyMap()
+)
+
+data class OAuthBeginRequest(
+    val mode: String = "mobile",
+    val scheme: String,
+    val challenge: String
+)
+
+data class OAuthBeginResponse(
+    val url: String = ""
+)
+
+data class OAuthExchangeRequest(
+    val code: String,
+    val verifier: String
 )
 
 // Request bodies
@@ -110,4 +140,13 @@ interface AuthApi {
 
     @POST("_/auth/recovery")
     suspend fun verifyRecoveryCode(@Body body: RecoveryRequest): Response<VerifyResponse>
+
+    @POST("_/auth/oauth/{provider}/begin")
+    suspend fun oauthBegin(
+        @retrofit2.http.Path("provider") provider: String,
+        @Body body: OAuthBeginRequest
+    ): Response<OAuthBeginResponse>
+
+    @POST("_/auth/oauth/exchange")
+    suspend fun oauthExchange(@Body body: OAuthExchangeRequest): Response<VerifyResponse>
 }

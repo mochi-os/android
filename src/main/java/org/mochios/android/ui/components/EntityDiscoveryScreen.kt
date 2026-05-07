@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -39,8 +39,8 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.mochi.android.R
-import org.mochi.android.model.EntitySummary
+import org.mochios.android.R
+import org.mochios.android.model.EntitySummary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -5,7 +5,7 @@
 -keepclasseswithmembers class * { @retrofit2.http.* <methods>; }
 
 # Gson models
--keep class org.mochi.android.model.** { *; }
+-keep class org.mochios.android.model.** { *; }
 -keepclassmembers class * { @com.google.gson.annotations.SerializedName <fields>; }
 
 # OkHttp

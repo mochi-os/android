@@ -1,4 +1,4 @@
-package org.mochi.android.auth
+package org.mochios.android.auth
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.combine
 import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
+import org.mochios.android.account.MochiAccount
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -32,6 +33,11 @@ class SessionManager @Inject constructor(
         private val KEY_THEME_HUE = stringPreferencesKey("theme_hue")
         private val KEY_THEME_CHROMA = stringPreferencesKey("theme_chroma")
         private val KEY_THEME_HUE_BG = stringPreferencesKey("theme_hue_bg")
+        private val KEY_OAUTH_VERIFIER = stringPreferencesKey("oauth_verifier")
+        private val KEY_OAUTH_RETURN_CODE = stringPreferencesKey("oauth_return_code")
+        private val KEY_OAUTH_RETURN_ERROR = stringPreferencesKey("oauth_return_error")
+        private val KEY_BOUND_IDENTITY = stringPreferencesKey("bound_identity")
+        private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
         private const val DEFAULT_SERVER_URL = "https://mochi-os.org"
     }
@@ -79,6 +85,21 @@ class SessionManager @Inject constructor(
         }
     }
 
+    /** Identity (network-unique entity ID) this app is currently bound to. */
+    val boundIdentity: Flow<String?> = dataStore.data.map { it[KEY_BOUND_IDENTITY] }
+
+    /** Server this app's bound account belongs to. */
+    val boundServer: Flow<String?> = dataStore.data.map { it[KEY_BOUND_SERVER] }
+
+    suspend fun setBoundAccount(identity: String, server: String) {
+        dataStore.edit { prefs ->
+            prefs[KEY_BOUND_IDENTITY] = identity
+            prefs[KEY_BOUND_SERVER] = server
+        }
+    }
+
+    suspend fun getBoundIdentity(): String? = dataStore.data.first()[KEY_BOUND_IDENTITY]
+
     suspend fun getToken(app: String): String? {
         val prefs = dataStore.data.first()
         return prefs[stringPreferencesKey("$TOKEN_PREFIX$app")]
@@ -98,8 +119,76 @@ class SessionManager @Inject constructor(
     }
 
     suspend fun clearAll() {
+        val identity = dataStore.data.first()[KEY_BOUND_IDENTITY]
         dataStore.edit { prefs ->
             prefs.clear()
+        }
+        // Logout in this app shouldn't tear down OTHER apps' bindings —
+        // remove only the account this app was bound to.
+        if (identity != null) MochiAccount.remove(context, identity)
+    }
+
+    /**
+     * Reserved for future reconciliation hooks. Today we trust the local
+     * session as the source of truth for authentication; AccountManager is
+     * a sharing mechanism, not the canonical store. Cross-app logouts are
+     * detected through the runtime [MochiAccount.watch] listener, not via
+     * a startup state diff (which can't distinguish a genuine logout from
+     * a missing-because-never-written record).
+     */
+    suspend fun validateLocalAgainstAccount(): Boolean = true
+
+    /**
+     * If we have no local session, look for a sibling Mochi account whose
+     * server matches what this app is already bound to (or the most recently
+     * registered account, when this is a fresh install with no binding).
+     * Returns the snapshot if one was adopted, or null.
+     */
+    suspend fun adoptSharedSessionIfMissing(): MochiAccount.Snapshot? {
+        val prefs = dataStore.data.first()
+        if (prefs[KEY_SESSION_COOKIE] != null) return null
+        val boundServer = prefs[KEY_BOUND_SERVER]
+        val candidate = if (boundServer != null) {
+            MochiAccount.byServer(context, boundServer)
+        } else {
+            MochiAccount.first(context)
+        } ?: return null
+        setServerUrl(candidate.server)
+        saveSession(candidate.session)
+        setBoundAccount(candidate.identity, candidate.server)
+        return candidate
+    }
+
+    suspend fun saveOAuthVerifier(verifier: String) {
+        dataStore.edit { prefs ->
+            prefs[KEY_OAUTH_VERIFIER] = verifier
+        }
+    }
+
+    suspend fun consumeOAuthVerifier(): String? {
+        val prefs = dataStore.data.first()
+        val verifier = prefs[KEY_OAUTH_VERIFIER]
+        if (verifier != null) {
+            dataStore.edit { p -> p.remove(KEY_OAUTH_VERIFIER) }
+        }
+        return verifier
+    }
+
+    val oauthReturn: Flow<Pair<String?, String?>> = dataStore.data.map { prefs ->
+        prefs[KEY_OAUTH_RETURN_CODE] to prefs[KEY_OAUTH_RETURN_ERROR]
+    }
+
+    suspend fun setOAuthReturn(code: String?, error: String?) {
+        dataStore.edit { prefs ->
+            if (code != null) prefs[KEY_OAUTH_RETURN_CODE] = code else prefs.remove(KEY_OAUTH_RETURN_CODE)
+            if (error != null) prefs[KEY_OAUTH_RETURN_ERROR] = error else prefs.remove(KEY_OAUTH_RETURN_ERROR)
+        }
+    }
+
+    suspend fun clearOAuthReturn() {
+        dataStore.edit { prefs ->
+            prefs.remove(KEY_OAUTH_RETURN_CODE)
+            prefs.remove(KEY_OAUTH_RETURN_ERROR)
         }
     }
 

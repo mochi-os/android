@@ -1,10 +1,10 @@
-package org.mochi.android.i18n
+package org.mochios.android.i18n
 
 import android.content.Context
 
 /**
  * Application-context holder for code paths that need `getString()` without
- * an explicit Context parameter — chiefly [org.mochi.android.api.userMessage].
+ * an explicit Context parameter — chiefly [org.mochios.android.api.userMessage].
  *
  * Set once in `Application.onCreate`; reads after that are safe.
  *

@@ -1,4 +1,4 @@
-package org.mochi.android.model
+package org.mochios.android.model
 
 import com.google.gson.annotations.SerializedName
 

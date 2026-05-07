@@ -1,4 +1,4 @@
-package org.mochi.android.api
+package org.mochios.android.api
 
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName

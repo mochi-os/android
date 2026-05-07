@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -30,10 +30,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
-import org.mochi.android.R
-import org.mochi.android.model.ReactionCount
-import org.mochi.android.model.ReactionType
-import org.mochi.android.model.label
+import org.mochios.android.R
+import org.mochios.android.model.ReactionCount
+import org.mochios.android.model.ReactionType
+import org.mochios.android.model.label
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

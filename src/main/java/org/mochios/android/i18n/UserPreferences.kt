@@ -1,4 +1,4 @@
-package org.mochi.android.i18n
+package org.mochios.android.i18n
 
 /**
  * Format-related user preferences. Mirrors the schema in

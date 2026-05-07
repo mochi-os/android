@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -9,8 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.mochi.android.R
-import org.mochi.android.model.PlaceData
+import org.mochios.android.R
+import org.mochios.android.model.PlaceData
 
 @Composable
 fun TravellingPicker(

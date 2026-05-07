@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import android.webkit.WebChromeClient
 import android.webkit.WebView

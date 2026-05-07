@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -34,9 +34,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import org.mochi.android.R
-import org.mochi.android.i18n.LocalFormat
-import org.mochi.android.model.Attachment
+import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.model.Attachment
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

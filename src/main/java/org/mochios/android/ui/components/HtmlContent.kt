@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod

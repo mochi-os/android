@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import coil3.compose.AsyncImage
-import org.mochi.android.R
+import org.mochios.android.R
 
 /**
  * Fullscreen image lightbox: swipe between images, pinch-zoom each one,

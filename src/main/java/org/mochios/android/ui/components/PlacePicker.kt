@@ -1,4 +1,4 @@
-package org.mochi.android.ui.components
+package org.mochios.android.ui.components
 
 import android.content.Context
 import androidx.compose.foundation.background
@@ -53,10 +53,10 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
-import org.mochi.android.R
-import org.mochi.android.model.PlaceData
-import org.mochi.android.places.NominatimPlace
-import org.mochi.android.places.NominatimService
+import org.mochios.android.R
+import org.mochios.android.model.PlaceData
+import org.mochios.android.places.NominatimPlace
+import org.mochios.android.places.NominatimService
 import org.osmdroid.events.MapEventsReceiver
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
