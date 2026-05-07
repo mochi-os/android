@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dmán</string>
     <string name="format_time_years_short">%1$då</string>
     <string name="reaction_add">Bæta við viðbrögðum</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d áskrifandi</item>
+        <item quantity="other">%1$d áskrifendur</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">Velkomin aftur</string>
+    <string name="bootstrap_continue_as">Halda áfram sem %1$s</string>
+    <string name="bootstrap_sign_in_differently">Skrá inn á annan hátt</string>
+    <string name="bootstrap_choose_account">Veldu reikning</string>
+    <string name="bootstrap_sign_in_different_server">Skrá inn á annan netþjón</string>
 </resources>

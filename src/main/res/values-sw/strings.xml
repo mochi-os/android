@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dm</string>
     <string name="format_time_years_short">%1$dm</string>
     <string name="reaction_add">Ongeza majibu</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">Mfuasi %1$d</item>
+        <item quantity="other">Wafuasi %1$d</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">Karibu tena</string>
+    <string name="bootstrap_continue_as">Endelea kama %1$s</string>
+    <string name="bootstrap_sign_in_differently">Ingia kwa njia tofauti</string>
+    <string name="bootstrap_choose_account">Chagua akaunti</string>
+    <string name="bootstrap_sign_in_different_server">Ingia kwenye seva tofauti</string>
 </resources>

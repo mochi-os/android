@@ -108,4 +108,17 @@
     <string name="format_time_months_short">%1$dміс</string>
     <string name="format_time_years_short">%1$dр</string>
     <string name="reaction_add">Додати реакцію</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d підписник</item>
+        <item quantity="few">%1$d підписники</item>
+        <item quantity="many">%1$d підписників</item>
+        <item quantity="other">%1$d підписника</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">З поверненням</string>
+    <string name="bootstrap_continue_as">Продовжити як %1$s</string>
+    <string name="bootstrap_sign_in_differently">Увійти інакше</string>
+    <string name="bootstrap_choose_account">Виберіть обліковий запис</string>
+    <string name="bootstrap_sign_in_different_server">Увійти на інший сервер</string>
 </resources>

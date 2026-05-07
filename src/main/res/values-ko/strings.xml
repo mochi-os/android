@@ -108,4 +108,14 @@
     <string name="format_time_months_short">%1$d개월</string>
     <string name="format_time_years_short">%1$d년</string>
     <string name="reaction_add">반응 추가</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">구독자 %1$d명</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">다시 오신 것을 환영합니다</string>
+    <string name="bootstrap_continue_as">%1$s(으)로 계속</string>
+    <string name="bootstrap_sign_in_differently">다른 방법으로 로그인</string>
+    <string name="bootstrap_choose_account">계정 선택</string>
+    <string name="bootstrap_sign_in_different_server">다른 서버에 로그인</string>
 </resources>

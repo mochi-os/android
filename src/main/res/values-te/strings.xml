@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dనె</string>
     <string name="format_time_years_short">%1$dసం</string>
     <string name="reaction_add">ప్రతిచర్యను జోడించు</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d చందాదారు</item>
+        <item quantity="other">%1$d చందాదారులు</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">తిరిగి స్వాగతం</string>
+    <string name="bootstrap_continue_as">%1$sగా కొనసాగించండి</string>
+    <string name="bootstrap_sign_in_differently">వేరే విధంగా సైన్ ఇన్ చేయండి</string>
+    <string name="bootstrap_choose_account">ఒక ఖాతాను ఎంచుకోండి</string>
+    <string name="bootstrap_sign_in_different_server">వేరే సర్వర్‌కు సైన్ ఇన్ చేయండి</string>
 </resources>

@@ -108,4 +108,14 @@
     <string name="format_time_months_short">%1$dth</string>
     <string name="format_time_years_short">%1$dn</string>
     <string name="reaction_add">Thêm phản ứng</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">%1$d người đăng ký</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">Chào mừng trở lại</string>
+    <string name="bootstrap_continue_as">Tiếp tục với tên %1$s</string>
+    <string name="bootstrap_sign_in_differently">Đăng nhập theo cách khác</string>
+    <string name="bootstrap_choose_account">Chọn một tài khoản</string>
+    <string name="bootstrap_sign_in_different_server">Đăng nhập vào máy chủ khác</string>
 </resources>

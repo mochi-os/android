@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dمہ</string>
     <string name="format_time_years_short">%1$dس</string>
     <string name="reaction_add">ردعمل شامل کریں</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d سبسکرائبر</item>
+        <item quantity="other">%1$d سبسکرائبرز</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">خوش آمدید، واپسی پر</string>
+    <string name="bootstrap_continue_as">%1$s کے طور پر جاری رکھیں</string>
+    <string name="bootstrap_sign_in_differently">مختلف طریقے سے سائن ان کریں</string>
+    <string name="bootstrap_choose_account">ایک اکاؤنٹ منتخب کریں</string>
+    <string name="bootstrap_sign_in_different_server">کسی اور سرور پر سائن ان کریں</string>
 </resources>

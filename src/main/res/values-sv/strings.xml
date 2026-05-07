@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dmån</string>
     <string name="format_time_years_short">%1$då</string>
     <string name="reaction_add">Lägg till reaktion</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d prenumerant</item>
+        <item quantity="other">%1$d prenumeranter</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">Välkommen tillbaka</string>
+    <string name="bootstrap_continue_as">Fortsätt som %1$s</string>
+    <string name="bootstrap_sign_in_differently">Logga in på ett annat sätt</string>
+    <string name="bootstrap_choose_account">Välj ett konto</string>
+    <string name="bootstrap_sign_in_different_server">Logga in på en annan server</string>
 </resources>

@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dወ</string>
     <string name="format_time_years_short">%1$dዓ</string>
     <string name="reaction_add">ምላሽ አክል</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d ተመዝጋቢ</item>
+        <item quantity="other">%1$d ተመዝጋቢዎች</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">እንኳን ደህና መጡ</string>
+    <string name="bootstrap_continue_as">እንደ %1$s ይቀጥሉ</string>
+    <string name="bootstrap_sign_in_differently">በተለየ መንገድ ይግቡ</string>
+    <string name="bootstrap_choose_account">መለያ ይምረጡ</string>
+    <string name="bootstrap_sign_in_different_server">ወደ ሌላ አገልጋይ ይግቡ</string>
 </resources>

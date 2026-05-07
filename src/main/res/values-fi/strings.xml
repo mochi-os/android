@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dkk</string>
     <string name="format_time_years_short">%1$dv</string>
     <string name="reaction_add">Lisää reaktio</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d tilaaja</item>
+        <item quantity="other">%1$d tilaajaa</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">Tervetuloa takaisin</string>
+    <string name="bootstrap_continue_as">Jatka nimellä %1$s</string>
+    <string name="bootstrap_sign_in_differently">Kirjaudu toisella tavalla</string>
+    <string name="bootstrap_choose_account">Valitse tili</string>
+    <string name="bootstrap_sign_in_different_server">Kirjaudu toiselle palvelimelle</string>
 </resources>

@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dmois</string>
     <string name="format_time_years_short">%1$dans</string>
     <string name="reaction_add">Ajouter une réaction</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d abonné</item>
+        <item quantity="other">%1$d abonnés</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">Bon retour</string>
+    <string name="bootstrap_continue_as">Continuer en tant que %1$s</string>
+    <string name="bootstrap_sign_in_differently">Se connecter autrement</string>
+    <string name="bootstrap_choose_account">Choisir un compte</string>
+    <string name="bootstrap_sign_in_different_server">Se connecter à un autre serveur</string>
 </resources>

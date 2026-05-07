@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dම</string>
     <string name="format_time_years_short">%1$dව</string>
     <string name="reaction_add">ප්‍රතිචාරය එක් කරන්න</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d ග්‍රාහකයා</item>
+        <item quantity="other">%1$d ග්‍රාහකයින්</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">ආයුබෝවන්, නැවත ඔබව පිළිගනිමු</string>
+    <string name="bootstrap_continue_as">%1$s ලෙස ඉදිරියට යන්න</string>
+    <string name="bootstrap_sign_in_differently">වෙනත් ආකාරයකින් පුරන්න</string>
+    <string name="bootstrap_choose_account">ගිණුමක් තෝරන්න</string>
+    <string name="bootstrap_sign_in_different_server">වෙනත් සේවාදායකයකට පුරන්න</string>
 </resources>

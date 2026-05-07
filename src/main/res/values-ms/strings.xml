@@ -108,4 +108,14 @@
     <string name="format_time_months_short">%1$dbln</string>
     <string name="format_time_years_short">%1$dt</string>
     <string name="reaction_add">Tambah reaksi</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="other">%1$d pelanggan</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">Selamat kembali</string>
+    <string name="bootstrap_continue_as">Teruskan sebagai %1$s</string>
+    <string name="bootstrap_sign_in_differently">Daftar masuk dengan cara lain</string>
+    <string name="bootstrap_choose_account">Pilih akaun</string>
+    <string name="bootstrap_sign_in_different_server">Daftar masuk ke pelayan lain</string>
 </resources>

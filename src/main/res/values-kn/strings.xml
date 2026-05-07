@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dತಿ</string>
     <string name="format_time_years_short">%1$dವ</string>
     <string name="reaction_add">ಪ್ರತಿಕ್ರಿಯೆ ಸೇರಿಸು</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d ಚಂದಾದಾರ</item>
+        <item quantity="other">%1$d ಚಂದಾದಾರರು</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">ಮರಳಿ ಸ್ವಾಗತ</string>
+    <string name="bootstrap_continue_as">%1$s ಆಗಿ ಮುಂದುವರಿಸಿ</string>
+    <string name="bootstrap_sign_in_differently">ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
+    <string name="bootstrap_choose_account">ಖಾತೆಯನ್ನು ಆರಿಸಿ</string>
+    <string name="bootstrap_sign_in_different_server">ಬೇರೆ ಸರ್ವರ್‌ಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
 </resources>

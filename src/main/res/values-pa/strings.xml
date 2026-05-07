@@ -108,4 +108,15 @@
     <string name="format_time_months_short">%1$dਮ</string>
     <string name="format_time_years_short">%1$dਸ</string>
     <string name="reaction_add">ਪ੍ਰਤੀਕਿਰਿਆ ਜੋੜੋ</string>
+
+    <plurals name="discovery_subscriber_count">
+        <item quantity="one">%1$d ਗਾਹਕ</item>
+        <item quantity="other">%1$d ਗਾਹਕ</item>
+    </plurals>
+
+    <string name="bootstrap_welcome_back">ਵਾਪਸੀ \'ਤੇ ਸੁਆਗਤ ਹੈ</string>
+    <string name="bootstrap_continue_as">%1$s ਵਜੋਂ ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="bootstrap_sign_in_differently">ਵੱਖਰੇ ਤਰੀਕੇ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ</string>
+    <string name="bootstrap_choose_account">ਇੱਕ ਖਾਤਾ ਚੁਣੋ</string>
+    <string name="bootstrap_sign_in_different_server">ਕਿਸੇ ਹੋਰ ਸਰਵਰ \'ਤੇ ਸਾਈਨ ਇਨ ਕਰੋ</string>
 </resources>
