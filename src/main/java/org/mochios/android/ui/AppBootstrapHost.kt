@@ -44,8 +44,7 @@ fun AppBootstrapHost(
     appName: String,
     oauthScheme: String?,
     onLocaleChangeRequested: () -> Unit,
-    onLogout: () -> Unit = {},
-    ready: @Composable () -> Unit
+    ready: @Composable (onLogout: () -> Unit) -> Unit
 ) {
     val viewModel: AppBootstrapViewModel = hiltViewModel()
     val stage by viewModel.stage.collectAsState()
@@ -75,7 +74,7 @@ fun AppBootstrapHost(
                 LaunchedEffect(Unit) { onLocaleChangeRequested() }
                 Loading()
             } else {
-                ready()
+                ready(viewModel::logout)
             }
         }
     }

@@ -145,6 +145,19 @@ class AppBootstrapViewModel @Inject constructor(
         viewModelScope.launch { evaluate() }
     }
 
+    /**
+     * User-initiated logout. Wipes local + AccountManager and sets stage
+     * deterministically. Avoids relying on observer races (the DataStore
+     * change and the AccountManager change fire on different paths and the
+     * order isn't predictable).
+     */
+    fun logout() {
+        viewModelScope.launch {
+            sessionManager.clearAll()
+            _stage.value = AuthStage.NeedsLogin
+        }
+    }
+
     private suspend fun evaluate() {
         val hasSession = sessionManager.currentToken.first() != null
         if (hasSession) {
