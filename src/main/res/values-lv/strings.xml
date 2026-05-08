@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Piekļuve liegta</string>
+    <string name="auth_email">E-pasts</string>
+    <string name="auth_continue">Turpināt</string>
+    <string name="auth_verification_code">Verifikācijas kods</string>
+    <string name="auth_verify">Verificēt</string>
+    <string name="auth_authenticator_app">Authenticator lietotne</string>
+    <string name="auth_email_code">E-pasta kods</string>
+    <string name="auth_authenticator_code">Authenticator kods</string>
+    <string name="auth_recovery_code">Atjaunošanas kods</string>
+    <string name="auth_name">Nosaukums</string>
+    <string name="auth_create">Izveidot</string>
+    <string name="common_back">Atpakaļ</string>
+    <string name="common_close">Aizvērt</string>
+    <string name="common_cancel">Atcelt</string>
+    <string name="common_confirm">Apstiprināt</string>
+    <string name="common_save">Saglabāt</string>
+    <string name="common_edit">Rediģēt</string>
+    <string name="common_delete">Dzēst</string>
+    <string name="common_add">Pievienot</string>
+    <string name="common_subscribe">Abonēt</string>
+    <string name="comment_edited">(rediģēts)</string>
+    <string name="comment_edit_placeholder">Rediģēt komentāru</string>
+    <string name="comment_reply">Atbildēt</string>
+    <string name="comment_reply_placeholder">Atbildēt</string>
+    <string name="comment_send_reply">Sūtīt atbildi</string>
+    <string name="person_picker_search">Meklēt lietotājus</string>
+    <string name="place_picker_no_results">Vietas nav atrastas</string>
+    <string name="discovery_results">Rezultāti</string>
+    <string name="discovery_recommended">Ieteikts</string>
+    <string name="discovery_subscribed">Abonēts</string>
+    <string name="access_owner">Īpašnieks</string>
+    <string name="access_revoke">Atsaukt</string>
+    <string name="access_level">Piekļuves līmenis</string>
+    <string name="access_level_manage">Pārvaldīt</string>
+    <string name="access_level_comment">Komentārs</string>
+    <string name="access_level_view">Skatīt</string>
+    <string name="access_level_none">Nav</string>
+    <string name="reaction_like">Patīk</string>
+    <string name="reaction_dislike">Nepatīk</string>
+    <string name="reaction_laugh">Smieties</string>
+    <string name="reaction_amazed">Pārsteigts</string>
+    <string name="reaction_love">Mīlestība</string>
+    <string name="reaction_sad">Skumjš</string>
+    <string name="reaction_angry">Dusmīgs</string>
+    <string name="reaction_agree">Piekrist</string>
+    <string name="reaction_disagree">Nepiekrist</string>
+
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Acces refuzat</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_continue">Continuă</string>
+    <string name="auth_verification_code">Cod de verificare</string>
+    <string name="auth_verify">Verifică</string>
+    <string name="auth_authenticator_app">Aplicație de autentificare</string>
+    <string name="auth_email_code">Cod email</string>
+    <string name="auth_authenticator_code">Cod de autentificare</string>
+    <string name="auth_recovery_code">Cod de recuperare</string>
+    <string name="auth_name">Nume</string>
+    <string name="auth_create">Creează</string>
+    <string name="common_back">Înapoi</string>
+    <string name="common_close">Închide</string>
+    <string name="common_cancel">Anulează</string>
+    <string name="common_confirm">Confirmă</string>
+    <string name="common_save">Salvează</string>
+    <string name="common_edit">Editează</string>
+    <string name="common_delete">Șterge</string>
+    <string name="common_add">Adaugă</string>
+    <string name="common_subscribe">Abonează-te</string>
+    <string name="comment_edited">(editat)</string>
+    <string name="comment_edit_placeholder">Editează comentariul</string>
+    <string name="comment_reply">Răspunde</string>
+    <string name="comment_reply_placeholder">Răspunde</string>
+    <string name="comment_send_reply">Trimite răspunsul</string>
+    <string name="person_picker_search">Caută utilizatori</string>
+    <string name="place_picker_no_results">Nu s-au găsit locuri</string>
+    <string name="discovery_results">Rezultate</string>
+    <string name="discovery_recommended">Recomandat</string>
+    <string name="discovery_subscribed">Abonat</string>
+    <string name="access_owner">Proprietar</string>
+    <string name="access_revoke">Revocă</string>
+    <string name="access_level">Nivel de acces</string>
+    <string name="access_level_manage">Gestionează</string>
+    <string name="access_level_comment">Comentează</string>
+    <string name="access_level_view">Vizualizează</string>
+    <string name="access_level_none">Niciuna</string>
+    <string name="reaction_like">Apreciază</string>
+    <string name="reaction_dislike">Dezaprob</string>
+    <string name="reaction_laugh">Râs</string>
+    <string name="reaction_amazed">Uimit</string>
+    <string name="reaction_love">Iubire</string>
+    <string name="reaction_sad">Trist</string>
+    <string name="reaction_angry">Supărat</string>
+    <string name="reaction_agree">De acord</string>
+    <string name="reaction_disagree">Nu sunt de acord</string>
+
+</resources>

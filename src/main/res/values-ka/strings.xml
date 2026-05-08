@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">წვდომა უარყოფილია</string>
+    <string name="auth_email">ელფოსტა</string>
+    <string name="auth_continue">გაგრძელება</string>
+    <string name="auth_verification_code">შემოწმება</string>
+    <string name="auth_verify">შემოწმებული</string>
+    <string name="auth_authenticator_app">Authenticator აპი</string>
+    <string name="auth_email_code">ელფოსტის კოდი</string>
+    <string name="auth_authenticator_code">Authenticator-ის კოდი</string>
+    <string name="auth_recovery_code">აღდგენის კოდი</string>
+    <string name="auth_name">სახელი</string>
+    <string name="auth_create">შექმნა</string>
+    <string name="common_back">უკან</string>
+    <string name="common_close">დახურვა</string>
+    <string name="common_cancel">გაუქმება</string>
+    <string name="common_confirm">დადასტურება</string>
+    <string name="common_save">შენახვა</string>
+    <string name="common_edit">რედაქტირება</string>
+    <string name="common_delete">წაშლა</string>
+    <string name="common_add">დამატება</string>
+    <string name="common_subscribe">გამოწერა</string>
+    <string name="comment_edited">(რედაქტირებულია)</string>
+    <string name="comment_edit_placeholder">კომენტარის რედაქტირება</string>
+    <string name="comment_reply">პასუხი</string>
+    <string name="comment_reply_placeholder">პასუხი</string>
+    <string name="comment_send_reply">პასუხის გაგზავნა</string>
+    <string name="person_picker_search">მომხმარებლების ძიება</string>
+    <string name="place_picker_no_results">ადგილები ვერ მოიძებნა</string>
+    <string name="discovery_results">შედეგები</string>
+    <string name="discovery_recommended">რეკომენდებული</string>
+    <string name="discovery_subscribed">გამოწერილი</string>
+    <string name="access_owner">მფლობელი</string>
+    <string name="access_revoke">გაუქმება</string>
+    <string name="access_level">წვდომის დონე</string>
+    <string name="access_level_manage">მართვა</string>
+    <string name="access_level_comment">კომენტარი</string>
+    <string name="access_level_view">ვიდეოს ესკიზი</string>
+    <string name="access_level_none">არცერთი</string>
+    <string name="reaction_like">მოწონება</string>
+    <string name="reaction_dislike">არ მომწონს</string>
+    <string name="reaction_laugh">სიცილი</string>
+    <string name="reaction_amazed">გაოცებული</string>
+    <string name="reaction_love">სიყვარული</string>
+    <string name="reaction_sad">სევდიანი</string>
+    <string name="reaction_angry">გაბრაზებული</string>
+    <string name="reaction_agree">ვეთანხმები</string>
+    <string name="reaction_disagree">არ ვეთანხმები</string>
+
+</resources>

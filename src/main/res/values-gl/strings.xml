@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Acceso denegado</string>
+    <string name="auth_email">Correo electrónico</string>
+    <string name="auth_continue">Continuar</string>
+    <string name="auth_verification_code">Código de verificación</string>
+    <string name="auth_verify">Verificar</string>
+    <string name="auth_authenticator_app">Aplicación de autenticación</string>
+    <string name="auth_email_code">Código por correo</string>
+    <string name="auth_authenticator_code">Código de autenticación</string>
+    <string name="auth_recovery_code">Código de recuperación</string>
+    <string name="auth_name">Nome</string>
+    <string name="auth_create">Crear</string>
+    <string name="common_back">Atrás</string>
+    <string name="common_close">Pechar</string>
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_confirm">Confirmar</string>
+    <string name="common_save">Gardar</string>
+    <string name="common_edit">Editar</string>
+    <string name="common_delete">Eliminar</string>
+    <string name="common_add">Engadir</string>
+    <string name="common_subscribe">Subscribirse</string>
+    <string name="comment_edited">(editado)</string>
+    <string name="comment_edit_placeholder">Editar comentario</string>
+    <string name="comment_reply">Responder</string>
+    <string name="comment_reply_placeholder">Responder</string>
+    <string name="comment_send_reply">Enviar resposta</string>
+    <string name="person_picker_search">Buscar usuarios</string>
+    <string name="place_picker_no_results">Non se atoparon lugares</string>
+    <string name="discovery_results">Resultados</string>
+    <string name="discovery_recommended">Recomendado</string>
+    <string name="discovery_subscribed">Subscrito</string>
+    <string name="access_owner">Propietario</string>
+    <string name="access_revoke">Revogar</string>
+    <string name="access_level">Nivel de acceso</string>
+    <string name="access_level_manage">Xestionar</string>
+    <string name="access_level_comment">Comentario</string>
+    <string name="access_level_view">Ver</string>
+    <string name="access_level_none">Ningún</string>
+    <string name="reaction_like">Gústame</string>
+    <string name="reaction_dislike">Non gústame</string>
+    <string name="reaction_laugh">Risa</string>
+    <string name="reaction_amazed">Asombrado</string>
+    <string name="reaction_love">Encántame</string>
+    <string name="reaction_sad">Triste</string>
+    <string name="reaction_angry">Enfadado</string>
+    <string name="reaction_agree">De acordo</string>
+    <string name="reaction_disagree">En desacordo</string>
+
+</resources>

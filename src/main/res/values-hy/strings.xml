@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi հոսք</string>
+    <string name="error_access_denied">Մուտքը մերժված է</string>
+    <string name="auth_email">Էլ․ փոստ</string>
+    <string name="auth_continue">Շարունակել վճարումը</string>
+    <string name="auth_verification_code">Ստուգման կոդ</string>
+    <string name="auth_verify">Ստուգել</string>
+    <string name="auth_authenticator_app">Authenticator հավելվածն անջատված է</string>
+    <string name="auth_email_code">Էլ․ փոստի կոդ</string>
+    <string name="auth_authenticator_code">Հեղինակ</string>
+    <string name="auth_recovery_code">Վերականգնման կոդ</string>
+    <string name="auth_name">Անուն</string>
+    <string name="auth_create">Ստեղծել CRM</string>
+    <string name="common_back">Հետ դեպի CRM</string>
+    <string name="common_close">Փակել վահանակը</string>
+    <string name="common_cancel">Չեղարկել մեկնաբանությունը</string>
+    <string name="common_confirm">Հաստատել ստացումը</string>
+    <string name="common_save">Պահպանել</string>
+    <string name="common_edit">Խմբագրել</string>
+    <string name="common_delete">Ջնջել</string>
+    <string name="common_add">Ավելացնել Mochi հոսք</string>
+    <string name="common_subscribe">Բաժանորդագրվել</string>
+    <string name="comment_edited">(խմբագրված)</string>
+    <string name="comment_edit_placeholder">Խմբագրել մեկնաբանությունը</string>
+    <string name="comment_reply">Պատասխանել</string>
+    <string name="comment_reply_placeholder">Պատասխանել</string>
+    <string name="comment_send_reply">Ուղարկել պատասխանը</string>
+    <string name="person_picker_search">Որոնել օգտատերեր</string>
+    <string name="place_picker_no_results">Վայրեր չեն գտնվել</string>
+    <string name="discovery_results">Արդյունքներ</string>
+    <string name="discovery_recommended">Առաջարկվող</string>
+    <string name="discovery_subscribed">Բաժանորդագրված</string>
+    <string name="access_owner">Սեփականատեր</string>
+    <string name="access_revoke">Հետ վերցնել</string>
+    <string name="access_level">Մուտքի մակարդակ</string>
+    <string name="access_level_manage">Կառավարել նիստերը</string>
+    <string name="access_level_comment">Մեկնաբանել և դիտել</string>
+    <string name="access_level_view">Դիտել</string>
+    <string name="access_level_none">Ոչ մեկը</string>
+    <string name="reaction_like">Կապված է {0}</string>
+    <string name="reaction_dislike">Չհավանել</string>
+    <string name="reaction_laugh">Թողնել</string>
+    <string name="reaction_amazed">Գումար ({0})</string>
+    <string name="reaction_love">Համոզվեք, որ պահպանեք նոր կոդերը։</string>
+    <string name="reaction_sad">Տխուր</string>
+    <string name="reaction_angry">Անանուն</string>
+    <string name="reaction_agree">Բոլորը</string>
+    <string name="reaction_disagree">Անհամաձայն</string>
+
+</resources>

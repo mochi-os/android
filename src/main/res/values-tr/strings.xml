@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Erişim reddedildi</string>
+    <string name="auth_email">E-posta</string>
+    <string name="auth_continue">Devam et</string>
+    <string name="auth_verification_code">Doğrulama kodu</string>
+    <string name="auth_verify">Doğrula</string>
+    <string name="auth_authenticator_app">Authenticator uygulaması</string>
+    <string name="auth_email_code">E-posta kodu</string>
+    <string name="auth_authenticator_code">Authenticator kodu</string>
+    <string name="auth_recovery_code">Kurtarma kodu</string>
+    <string name="auth_name">Ad</string>
+    <string name="auth_create">Oluştur</string>
+    <string name="common_back">Geri</string>
+    <string name="common_close">Kapat</string>
+    <string name="common_cancel">İptal</string>
+    <string name="common_confirm">Onayla</string>
+    <string name="common_save">Kaydet</string>
+    <string name="common_edit">Düzenle</string>
+    <string name="common_delete">Sil</string>
+    <string name="common_add">Ekle</string>
+    <string name="common_subscribe">Abone ol</string>
+    <string name="comment_edited">(düzenlendi)</string>
+    <string name="comment_edit_placeholder">Yorumu düzenle</string>
+    <string name="comment_reply">Yanıtla</string>
+    <string name="comment_reply_placeholder">Yanıtla</string>
+    <string name="comment_send_reply">Yanıt gönder</string>
+    <string name="person_picker_search">Kullanıcılarda ara</string>
+    <string name="place_picker_no_results">Yer bulunamadı</string>
+    <string name="discovery_results">Sonuçlar</string>
+    <string name="discovery_recommended">Önerilen</string>
+    <string name="discovery_subscribed">Abone olundu</string>
+    <string name="access_owner">Sahip</string>
+    <string name="access_revoke">İptal et</string>
+    <string name="access_level">Erişim düzeyi</string>
+    <string name="access_level_manage">Yönet</string>
+    <string name="access_level_comment">Yorum</string>
+    <string name="access_level_view">Görüntüle</string>
+    <string name="access_level_none">Yok</string>
+    <string name="reaction_like">Beğen</string>
+    <string name="reaction_dislike">Beğenmedim</string>
+    <string name="reaction_laugh">Gülme</string>
+    <string name="reaction_amazed">Şaşkın</string>
+    <string name="reaction_love">Sevgi</string>
+    <string name="reaction_sad">Üzgün</string>
+    <string name="reaction_angry">Kızgın</string>
+    <string name="reaction_agree">Katılıyorum</string>
+    <string name="reaction_disagree">Katılmıyorum</string>
+
+</resources>

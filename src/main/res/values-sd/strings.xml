@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">رسائي رد ڪئي وئي</string>
+    <string name="auth_email">اي ميل</string>
+    <string name="auth_continue">جاري رکو</string>
+    <string name="auth_verification_code">تصديق ڪوڊ</string>
+    <string name="auth_verify">تصديق ڪريو</string>
+    <string name="auth_authenticator_app">Authenticator ايپ</string>
+    <string name="auth_email_code">اي ميل ڪوڊ</string>
+    <string name="auth_authenticator_code">Authenticator ڪوڊ</string>
+    <string name="auth_recovery_code">بحالي ڪوڊ</string>
+    <string name="auth_name">نالو</string>
+    <string name="auth_create">ٺاهيو</string>
+    <string name="common_back">واپس</string>
+    <string name="common_close">بند ڪريو</string>
+    <string name="common_cancel">منسوخ ڪريو</string>
+    <string name="common_confirm">تصديق ڪريو</string>
+    <string name="common_save">محفوظ ڪريو</string>
+    <string name="common_edit">ترميم</string>
+    <string name="common_delete">ختم ڪريو</string>
+    <string name="common_add">شامل ڪريو</string>
+    <string name="common_subscribe">سبسڪرائب ڪريو</string>
+    <string name="comment_edited">(تبديل ٿيل)</string>
+    <string name="comment_edit_placeholder">تبصري ۾ ترميم ڪريو</string>
+    <string name="comment_reply">جواب</string>
+    <string name="comment_reply_placeholder">جواب</string>
+    <string name="comment_send_reply">جواب موڪليو</string>
+    <string name="person_picker_search">يوزر ڳوليو</string>
+    <string name="place_picker_no_results">ڪا جاءِ نه ملي</string>
+    <string name="discovery_results">نتيجا</string>
+    <string name="discovery_recommended">تجويز ڪيل</string>
+    <string name="discovery_subscribed">سبسڪرائبڊ</string>
+    <string name="access_owner">مالڪ</string>
+    <string name="access_revoke">رد ڪريو</string>
+    <string name="access_level">رسائي جي سطح</string>
+    <string name="access_level_manage">منظم ڪريو</string>
+    <string name="access_level_comment">تبصرو</string>
+    <string name="access_level_view">ڏسو</string>
+    <string name="access_level_none">ڪا به نه</string>
+    <string name="reaction_like">پسند</string>
+    <string name="reaction_dislike">ناپسند</string>
+    <string name="reaction_laugh">کلڻ</string>
+    <string name="reaction_amazed">حيران</string>
+    <string name="reaction_love">محبت</string>
+    <string name="reaction_sad">اداس</string>
+    <string name="reaction_angry">ناراض</string>
+    <string name="reaction_agree">متفق</string>
+    <string name="reaction_disagree">غير متفق</string>
+
+</resources>

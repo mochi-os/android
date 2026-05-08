@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Достъпът е отказан</string>
+    <string name="auth_email">Имейл</string>
+    <string name="auth_continue">Продължи</string>
+    <string name="auth_verification_code">Код за потвърждение</string>
+    <string name="auth_verify">Потвърди</string>
+    <string name="auth_authenticator_app">Authenticator приложение</string>
+    <string name="auth_email_code">Имейл код</string>
+    <string name="auth_authenticator_code">Код от authenticator</string>
+    <string name="auth_recovery_code">Код за възстановяване</string>
+    <string name="auth_name">Име</string>
+    <string name="auth_create">Създай</string>
+    <string name="common_back">Назад</string>
+    <string name="common_close">Затвори</string>
+    <string name="common_cancel">Отказ</string>
+    <string name="common_confirm">Потвърди</string>
+    <string name="common_save">Запази</string>
+    <string name="common_edit">Редактиране</string>
+    <string name="common_delete">Изтрий</string>
+    <string name="common_add">Добави</string>
+    <string name="common_subscribe">Абонирай се</string>
+    <string name="comment_edited">(редактирано)</string>
+    <string name="comment_edit_placeholder">Редактиране на коментар</string>
+    <string name="comment_reply">Отговор</string>
+    <string name="comment_reply_placeholder">Отговор</string>
+    <string name="comment_send_reply">Изпрати отговор</string>
+    <string name="person_picker_search">Търси потребители</string>
+    <string name="place_picker_no_results">Не са намерени места</string>
+    <string name="discovery_results">Резултати</string>
+    <string name="discovery_recommended">Препоръчано</string>
+    <string name="discovery_subscribed">Абониран</string>
+    <string name="access_owner">Собственик</string>
+    <string name="access_revoke">Оттегли</string>
+    <string name="access_level">Ниво на достъп</string>
+    <string name="access_level_manage">Управление</string>
+    <string name="access_level_comment">Коментар</string>
+    <string name="access_level_view">Преглед</string>
+    <string name="access_level_none">Няма</string>
+    <string name="reaction_like">Харесвам</string>
+    <string name="reaction_dislike">Не харесвам</string>
+    <string name="reaction_laugh">Смях</string>
+    <string name="reaction_amazed">Изумен</string>
+    <string name="reaction_love">Обичам</string>
+    <string name="reaction_sad">Тъжно</string>
+    <string name="reaction_angry">Ядосан</string>
+    <string name="reaction_agree">Съгласен съм</string>
+    <string name="reaction_disagree">Не съм съгласен</string>
+
+</resources>

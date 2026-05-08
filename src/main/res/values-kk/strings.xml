@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Қол жеткізу қабылданбады</string>
+    <string name="auth_email">Электрондық пошта</string>
+    <string name="auth_continue">Жалғастыру</string>
+    <string name="auth_verification_code">Тексеру коды</string>
+    <string name="auth_verify">Тексеру</string>
+    <string name="auth_authenticator_app">Authenticator қолданбасы</string>
+    <string name="auth_email_code">Электрондық пошта коды</string>
+    <string name="auth_authenticator_code">Authenticator коды</string>
+    <string name="auth_recovery_code">Қалпына келтіру коды</string>
+    <string name="auth_name">Аты</string>
+    <string name="auth_create">Құру</string>
+    <string name="common_back">Артқа</string>
+    <string name="common_close">Жабу</string>
+    <string name="common_cancel">Болдырмау</string>
+    <string name="common_confirm">Растау</string>
+    <string name="common_save">Сақтау</string>
+    <string name="common_edit">Өңдеу</string>
+    <string name="common_delete">Жою</string>
+    <string name="common_add">Қосу</string>
+    <string name="common_subscribe">Жазылу</string>
+    <string name="comment_edited">(өңделді)</string>
+    <string name="comment_edit_placeholder">Пікірді өңдеу</string>
+    <string name="comment_reply">Жауап беру</string>
+    <string name="comment_reply_placeholder">Жауап беру</string>
+    <string name="comment_send_reply">Жауап жіберу</string>
+    <string name="person_picker_search">Қолданушыларды іздеу</string>
+    <string name="place_picker_no_results">Орындар табылмады</string>
+    <string name="discovery_results">Нәтижелер</string>
+    <string name="discovery_recommended">Ұсынылған</string>
+    <string name="discovery_subscribed">Жазылған</string>
+    <string name="access_owner">Иесі</string>
+    <string name="access_revoke">Қайтарып алу</string>
+    <string name="access_level">Қол жеткізу деңгейі</string>
+    <string name="access_level_manage">Басқару</string>
+    <string name="access_level_comment">Пікір</string>
+    <string name="access_level_view">Көру</string>
+    <string name="access_level_none">Жоқ</string>
+    <string name="reaction_like">Ұнайды</string>
+    <string name="reaction_dislike">Ұнатпау</string>
+    <string name="reaction_laugh">Күлкі</string>
+    <string name="reaction_amazed">Таңғалдым</string>
+    <string name="reaction_love">Махаббат</string>
+    <string name="reaction_sad">Қайғылы</string>
+    <string name="reaction_angry">Ашуланғанмын</string>
+    <string name="reaction_agree">Келісу</string>
+    <string name="reaction_disagree">Келіспеу</string>
+
+</resources>

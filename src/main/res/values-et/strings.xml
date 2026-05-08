@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Juurdepääs keelatud</string>
+    <string name="auth_email">E-post</string>
+    <string name="auth_continue">Jätka</string>
+    <string name="auth_verification_code">Kontrollkood</string>
+    <string name="auth_verify">Kontrolli</string>
+    <string name="auth_authenticator_app">Autentija rakendus</string>
+    <string name="auth_email_code">E-posti kood</string>
+    <string name="auth_authenticator_code">Autentija kood</string>
+    <string name="auth_recovery_code">Taastekood</string>
+    <string name="auth_name">Nimi</string>
+    <string name="auth_create">Loo</string>
+    <string name="common_back">Tagasi</string>
+    <string name="common_close">Sulge</string>
+    <string name="common_cancel">Tühista</string>
+    <string name="common_confirm">Kinnita</string>
+    <string name="common_save">Salvesta</string>
+    <string name="common_edit">Muuda</string>
+    <string name="common_delete">Kustuta</string>
+    <string name="common_add">Lisa</string>
+    <string name="common_subscribe">Telli</string>
+    <string name="comment_edited">(muudetud)</string>
+    <string name="comment_edit_placeholder">Muuda kommentaari</string>
+    <string name="comment_reply">Vasta</string>
+    <string name="comment_reply_placeholder">Vasta</string>
+    <string name="comment_send_reply">Saada vastus</string>
+    <string name="person_picker_search">Otsi kasutajaid</string>
+    <string name="place_picker_no_results">Kohti ei leitud</string>
+    <string name="discovery_results">Tulemused</string>
+    <string name="discovery_recommended">Soovitatud</string>
+    <string name="discovery_subscribed">Tellitud</string>
+    <string name="access_owner">Omanik</string>
+    <string name="access_revoke">Tühista</string>
+    <string name="access_level">Juurdepääsu tase</string>
+    <string name="access_level_manage">Halda</string>
+    <string name="access_level_comment">Kommentaar</string>
+    <string name="access_level_view">Vaata</string>
+    <string name="access_level_none">Puudub</string>
+    <string name="reaction_like">Meeldib</string>
+    <string name="reaction_dislike">Ei meeldi</string>
+    <string name="reaction_laugh">Naera</string>
+    <string name="reaction_amazed">Hämmastav</string>
+    <string name="reaction_love">Armastus</string>
+    <string name="reaction_sad">Kurb</string>
+    <string name="reaction_angry">Vihane</string>
+    <string name="reaction_agree">Nõustu</string>
+    <string name="reaction_disagree">Ei nõustu</string>
+
+</resources>

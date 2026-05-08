@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">دسترسی رد شد</string>
+    <string name="auth_email">ایمیل</string>
+    <string name="auth_continue">ادامه</string>
+    <string name="auth_verification_code">کد تأیید</string>
+    <string name="auth_verify">تأیید</string>
+    <string name="auth_authenticator_app">برنامهٔ احراز هویت</string>
+    <string name="auth_email_code">کد ایمیل</string>
+    <string name="auth_authenticator_code">کد احراز هویت</string>
+    <string name="auth_recovery_code">کد بازیابی</string>
+    <string name="auth_name">نام</string>
+    <string name="auth_create">ساختن</string>
+    <string name="common_back">بازگشت</string>
+    <string name="common_close">بستن</string>
+    <string name="common_cancel">لغو</string>
+    <string name="common_confirm">تأیید</string>
+    <string name="common_save">ذخیره</string>
+    <string name="common_edit">ویرایش</string>
+    <string name="common_delete">حذف</string>
+    <string name="common_add">افزودن</string>
+    <string name="common_subscribe">اشتراک</string>
+    <string name="comment_edited">(ویرایش‌شده)</string>
+    <string name="comment_edit_placeholder">ویرایش دیدگاه</string>
+    <string name="comment_reply">پاسخ</string>
+    <string name="comment_reply_placeholder">پاسخ</string>
+    <string name="comment_send_reply">ارسال پاسخ</string>
+    <string name="person_picker_search">جست‌وجوی کاربران</string>
+    <string name="place_picker_no_results">مکانی یافت نشد</string>
+    <string name="discovery_results">نتایج</string>
+    <string name="discovery_recommended">توصیه‌شده</string>
+    <string name="discovery_subscribed">مشترک شد</string>
+    <string name="access_owner">مالک</string>
+    <string name="access_revoke">لغو</string>
+    <string name="access_level">سطح دسترسی</string>
+    <string name="access_level_manage">مدیریت</string>
+    <string name="access_level_comment">نظر</string>
+    <string name="access_level_view">نمایش</string>
+    <string name="access_level_none">هیچ‌کدام</string>
+    <string name="reaction_like">پسندیدن</string>
+    <string name="reaction_dislike">نمی‌پسندم</string>
+    <string name="reaction_laugh">خنده</string>
+    <string name="reaction_amazed">شگفت‌زده</string>
+    <string name="reaction_love">عاشقانه</string>
+    <string name="reaction_sad">ناراحت</string>
+    <string name="reaction_angry">عصبانی</string>
+    <string name="reaction_agree">موافقم</string>
+    <string name="reaction_disagree">مخالفم</string>
+
+</resources>

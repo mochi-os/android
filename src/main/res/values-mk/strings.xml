@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Пристапот е одбиен</string>
+    <string name="auth_email">Е-пошта</string>
+    <string name="auth_continue">Продолжи</string>
+    <string name="auth_verification_code">Код за потврда</string>
+    <string name="auth_verify">Потврди</string>
+    <string name="auth_authenticator_app">Authenticator апликација</string>
+    <string name="auth_email_code">Код за е-пошта</string>
+    <string name="auth_authenticator_code">Код за автентикација</string>
+    <string name="auth_recovery_code">Код за обновување</string>
+    <string name="auth_name">Име</string>
+    <string name="auth_create">Создај</string>
+    <string name="common_back">Назад</string>
+    <string name="common_close">Затвори</string>
+    <string name="common_cancel">Откажи</string>
+    <string name="common_confirm">Потврди</string>
+    <string name="common_save">Зачувај</string>
+    <string name="common_edit">Уреди</string>
+    <string name="common_delete">Избриши</string>
+    <string name="common_add">Додај</string>
+    <string name="common_subscribe">Претплати се</string>
+    <string name="comment_edited">(изменето)</string>
+    <string name="comment_edit_placeholder">Уреди коментар</string>
+    <string name="comment_reply">Одговори</string>
+    <string name="comment_reply_placeholder">Одговори</string>
+    <string name="comment_send_reply">Испрати одговор</string>
+    <string name="person_picker_search">Пребарај корисници</string>
+    <string name="place_picker_no_results">Не се пронајдени места</string>
+    <string name="discovery_results">Резултати</string>
+    <string name="discovery_recommended">Препорачано</string>
+    <string name="discovery_subscribed">Претплатено</string>
+    <string name="access_owner">Сопственик</string>
+    <string name="access_revoke">Отповикај</string>
+    <string name="access_level">Ниво на пристап</string>
+    <string name="access_level_manage">Управувај</string>
+    <string name="access_level_comment">Коментар</string>
+    <string name="access_level_view">Прикажи</string>
+    <string name="access_level_none">Ништо</string>
+    <string name="reaction_like">Допаѓа</string>
+    <string name="reaction_dislike">Не ми се допаѓа</string>
+    <string name="reaction_laugh">Смеа</string>
+    <string name="reaction_amazed">Воодушевено</string>
+    <string name="reaction_love">Љубов</string>
+    <string name="reaction_sad">Тажно</string>
+    <string name="reaction_angry">Лутито</string>
+    <string name="reaction_agree">Се согласувам</string>
+    <string name="reaction_disagree">Не се согласувам</string>
+
+</resources>

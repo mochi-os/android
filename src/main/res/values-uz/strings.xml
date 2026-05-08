@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Kirish rad etildi</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_continue">Davom etish</string>
+    <string name="auth_verification_code">Tasdiqlash kodi</string>
+    <string name="auth_verify">Tasdiqlash</string>
+    <string name="auth_authenticator_app">Autentifikator ilova</string>
+    <string name="auth_email_code">Email kodi</string>
+    <string name="auth_authenticator_code">Autentifikator kodi</string>
+    <string name="auth_recovery_code">Tiklash kodi</string>
+    <string name="auth_name">Nomi</string>
+    <string name="auth_create">Yaratish</string>
+    <string name="common_back">Orqaga</string>
+    <string name="common_close">Yopish</string>
+    <string name="common_cancel">Bekor qilish</string>
+    <string name="common_confirm">Tasdiqlash</string>
+    <string name="common_save">Saqlash</string>
+    <string name="common_edit">Tahrirlash</string>
+    <string name="common_delete">Oʻchirish</string>
+    <string name="common_add">Qoʻshish</string>
+    <string name="common_subscribe">Obuna boʻlish</string>
+    <string name="comment_edited">(tahrirlangan)</string>
+    <string name="comment_edit_placeholder">Izohni tahrirlash</string>
+    <string name="comment_reply">Javob</string>
+    <string name="comment_reply_placeholder">Javob</string>
+    <string name="comment_send_reply">Javob yuborish</string>
+    <string name="person_picker_search">Foydalanuvchilarni qidirish</string>
+    <string name="place_picker_no_results">Joylar topilmadi</string>
+    <string name="discovery_results">Natijalar</string>
+    <string name="discovery_recommended">Tavsiya etiladi</string>
+    <string name="discovery_subscribed">Obuna boʻlingan</string>
+    <string name="access_owner">Egasi</string>
+    <string name="access_revoke">Bekor qilish</string>
+    <string name="access_level">Kirish darajasi</string>
+    <string name="access_level_manage">Boshqarish</string>
+    <string name="access_level_comment">Izoh</string>
+    <string name="access_level_view">Koʻrish</string>
+    <string name="access_level_none">Hech qanday</string>
+    <string name="reaction_like">Yoqdi</string>
+    <string name="reaction_dislike">Yoqtirmaslik</string>
+    <string name="reaction_laugh">Kulgi</string>
+    <string name="reaction_amazed">Hayratda</string>
+    <string name="reaction_love">Sevgi</string>
+    <string name="reaction_sad">Xafa</string>
+    <string name="reaction_angry">Gʻazabda</string>
+    <string name="reaction_agree">Roziman</string>
+    <string name="reaction_disagree">Rozi emas</string>
+
+</resources>

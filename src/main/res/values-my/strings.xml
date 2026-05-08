@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">ဝင်ရောက်ခွင့် ငြင်းပယ်ခံရသည်</string>
+    <string name="auth_email">အီးမေးလ်</string>
+    <string name="auth_continue">ဆက်လက်လုပ်ဆောင်မည်</string>
+    <string name="auth_verification_code">အတည်ပြု ကုဒ်</string>
+    <string name="auth_verify">အတည်ပြုမည်</string>
+    <string name="auth_authenticator_app">Authenticator app</string>
+    <string name="auth_email_code">အီးမေးလ် ကုဒ်</string>
+    <string name="auth_authenticator_code">Authenticator ကုဒ်</string>
+    <string name="auth_recovery_code">Recovery code</string>
+    <string name="auth_name">အမည်</string>
+    <string name="auth_create">ဖန်တီးမည်</string>
+    <string name="common_back">နောက်သို့</string>
+    <string name="common_close">ပိတ်မည်</string>
+    <string name="common_cancel">မလုပ်တော့ပါ</string>
+    <string name="common_confirm">အတည်ပြုမည်</string>
+    <string name="common_save">သိမ်းမည်</string>
+    <string name="common_edit">တည်းဖြတ်</string>
+    <string name="common_delete">ဖျက်မည်</string>
+    <string name="common_add">ထည့်မည်</string>
+    <string name="common_subscribe">Subscribe လုပ်မည်</string>
+    <string name="comment_edited">(တည်းဖြတ်ပြီး)</string>
+    <string name="comment_edit_placeholder">မှတ်ချက် တည်းဖြတ်</string>
+    <string name="comment_reply">ပြန်ကြား</string>
+    <string name="comment_reply_placeholder">ပြန်ကြား</string>
+    <string name="comment_send_reply">ပြန်ဖြေမည်</string>
+    <string name="person_picker_search">သုံးစွဲသူများ ရှာဖွေ</string>
+    <string name="place_picker_no_results">နေရာများ မတွေ့ပါ</string>
+    <string name="discovery_results">ရလဒ်များ</string>
+    <string name="discovery_recommended">အကြံပြုထား</string>
+    <string name="discovery_subscribed">Subscribe လုပ်ပြီး</string>
+    <string name="access_owner">ပိုင်ရှင်</string>
+    <string name="access_revoke">ရုပ်သိမ်း</string>
+    <string name="access_level">ဝင်ရောက်ခွင့်အဆင့်</string>
+    <string name="access_level_manage">စီမံ</string>
+    <string name="access_level_comment">မှတ်ချက်</string>
+    <string name="access_level_view">ကြည့်ရှုမည်</string>
+    <string name="access_level_none">မရှိ</string>
+    <string name="reaction_like">နှစ်သက်</string>
+    <string name="reaction_dislike">မကြိုက်ပါ</string>
+    <string name="reaction_laugh">ရယ်</string>
+    <string name="reaction_amazed">အံ့သြသည်</string>
+    <string name="reaction_love">နှစ်သက်</string>
+    <string name="reaction_sad">ဝမ်းနည်း</string>
+    <string name="reaction_angry">ဒေါသထွက်သည်</string>
+    <string name="reaction_agree">သဘောတူသည်</string>
+    <string name="reaction_disagree">သဘောမတူပါ</string>
+
+</resources>

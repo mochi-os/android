@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Prístup zamietnutý</string>
+    <string name="auth_email">E-mail</string>
+    <string name="auth_continue">Pokračovať</string>
+    <string name="auth_verification_code">Overovací kód</string>
+    <string name="auth_verify">Overiť</string>
+    <string name="auth_authenticator_app">Autentifikačná aplikácia</string>
+    <string name="auth_email_code">E-mailový kód</string>
+    <string name="auth_authenticator_code">Autentifikačný kód</string>
+    <string name="auth_recovery_code">Kód na obnovenie</string>
+    <string name="auth_name">Názov</string>
+    <string name="auth_create">Vytvoriť</string>
+    <string name="common_back">Späť</string>
+    <string name="common_close">Zavrieť</string>
+    <string name="common_cancel">Zrušiť</string>
+    <string name="common_confirm">Potvrdiť</string>
+    <string name="common_save">Uložiť</string>
+    <string name="common_edit">Upraviť</string>
+    <string name="common_delete">Odstrániť</string>
+    <string name="common_add">Pridať</string>
+    <string name="common_subscribe">Prihlásiť na odber</string>
+    <string name="comment_edited">(upravené)</string>
+    <string name="comment_edit_placeholder">Upraviť komentár</string>
+    <string name="comment_reply">Odpovedať</string>
+    <string name="comment_reply_placeholder">Odpovedať</string>
+    <string name="comment_send_reply">Odoslať odpoveď</string>
+    <string name="person_picker_search">Hľadať používateľov</string>
+    <string name="place_picker_no_results">Nenašli sa žiadne miesta</string>
+    <string name="discovery_results">Výsledky</string>
+    <string name="discovery_recommended">Odporúčané</string>
+    <string name="discovery_subscribed">Prihlásený na odber</string>
+    <string name="access_owner">Vlastník</string>
+    <string name="access_revoke">Odvolať</string>
+    <string name="access_level">Úroveň prístupu</string>
+    <string name="access_level_manage">Spravovať</string>
+    <string name="access_level_comment">Komentár</string>
+    <string name="access_level_view">Zobraziť</string>
+    <string name="access_level_none">Žiadne</string>
+    <string name="reaction_like">Páči sa mi</string>
+    <string name="reaction_dislike">Nepáči sa mi</string>
+    <string name="reaction_laugh">Smiech</string>
+    <string name="reaction_amazed">Ohromené</string>
+    <string name="reaction_love">Láska</string>
+    <string name="reaction_sad">Smutný</string>
+    <string name="reaction_angry">Nahnevané</string>
+    <string name="reaction_agree">Súhlasím</string>
+    <string name="reaction_disagree">Nesúhlasím</string>
+
+</resources>

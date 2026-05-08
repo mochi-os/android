@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">دەستڕاگەیشتن ڕەتکرایەوە</string>
+    <string name="auth_email">ئیمەیڵ</string>
+    <string name="auth_continue">بەردەوامبوون</string>
+    <string name="auth_verification_code">کۆدی پشتڕاستکردنەوە</string>
+    <string name="auth_verify">پشتڕاستبکە</string>
+    <string name="auth_authenticator_app">ئەپی پشتڕاستکەرەوە</string>
+    <string name="auth_email_code">کۆدی ئیمەیڵ</string>
+    <string name="auth_authenticator_code">کۆدی پشتڕاستکەرەوە</string>
+    <string name="auth_recovery_code">کۆدی گەڕانەوە</string>
+    <string name="auth_name">ناو</string>
+    <string name="auth_create">دروستکردن</string>
+    <string name="common_back">گەڕانەوە</string>
+    <string name="common_close">داخستن</string>
+    <string name="common_cancel">هەڵوەشاندنەوە</string>
+    <string name="common_confirm">پشتڕاستکردنەوە</string>
+    <string name="common_save">پاشەکەوتکردن</string>
+    <string name="common_edit">دەستکاری</string>
+    <string name="common_delete">سڕینەوە</string>
+    <string name="common_add">زیادکردن</string>
+    <string name="common_subscribe">بەشداربە</string>
+    <string name="comment_edited">(دەستکاریکراو)</string>
+    <string name="comment_edit_placeholder">دەستکاری بۆچوون</string>
+    <string name="comment_reply">وەڵام</string>
+    <string name="comment_reply_placeholder">وەڵام</string>
+    <string name="comment_send_reply">وەڵام بنێرە</string>
+    <string name="person_picker_search">گەڕانی بەکارهێنەران</string>
+    <string name="place_picker_no_results">هیچ شوێنێک نەدۆزرایەوە</string>
+    <string name="discovery_results">ئەنجامەکان</string>
+    <string name="discovery_recommended">پێشنیازکراو</string>
+    <string name="discovery_subscribed">بەشداربوو</string>
+    <string name="access_owner">خاوەن</string>
+    <string name="access_revoke">ڕاگرتن</string>
+    <string name="access_level">ئاستی دەستڕاگەیشتن</string>
+    <string name="access_level_manage">بەڕێوەبردن</string>
+    <string name="access_level_comment">لێدوان</string>
+    <string name="access_level_view">بینین</string>
+    <string name="access_level_none">هیچ</string>
+    <string name="reaction_like">بەدڵبوون</string>
+    <string name="reaction_dislike">نەویستن</string>
+    <string name="reaction_laugh">پێکەنین</string>
+    <string name="reaction_amazed">سەرسام</string>
+    <string name="reaction_love">خۆشەویستی</string>
+    <string name="reaction_sad">خەمگین</string>
+    <string name="reaction_angry">تووڕە</string>
+    <string name="reaction_agree">ڕەزامەندی</string>
+    <string name="reaction_disagree">ناڕەزایی</string>
+
+</resources>

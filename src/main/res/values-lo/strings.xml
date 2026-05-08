@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">ປະຕິເສດການເຂົ້າເຖິງ</string>
+    <string name="auth_email">ອີເມວ</string>
+    <string name="auth_continue">ຕໍ່</string>
+    <string name="auth_verification_code">ລະຫັດການຢືນຢັນ</string>
+    <string name="auth_verify">ຢືນຢັນ</string>
+    <string name="auth_authenticator_app">ແອັບ authenticator</string>
+    <string name="auth_email_code">ລະຫັດອີເມວ</string>
+    <string name="auth_authenticator_code">ລະຫັດ authenticator</string>
+    <string name="auth_recovery_code">ລະຫັດກູ້ຄືນ</string>
+    <string name="auth_name">ຊື່</string>
+    <string name="auth_create">ສ້າງ</string>
+    <string name="common_back">ກັບຄືນ</string>
+    <string name="common_close">ປິດ</string>
+    <string name="common_cancel">ຍົກເລີກ</string>
+    <string name="common_confirm">ຢືນຢັນ</string>
+    <string name="common_save">ບັນທຶກ</string>
+    <string name="common_edit">ແກ້ໄຂ</string>
+    <string name="common_delete">ລົບ</string>
+    <string name="common_add">ເພີ່ມ</string>
+    <string name="common_subscribe">ສະໝັກສະມາຊິກ</string>
+    <string name="comment_edited">(ແກ້ໄຂແລ້ວ)</string>
+    <string name="comment_edit_placeholder">ແກ້ໄຂຄຳເຫັນ</string>
+    <string name="comment_reply">ຕອບ</string>
+    <string name="comment_reply_placeholder">ຕອບ</string>
+    <string name="comment_send_reply">ສົ່ງການຕອບກັບ</string>
+    <string name="person_picker_search">ຄົ້ນຫາຜູ້ໃຊ້</string>
+    <string name="place_picker_no_results">ບໍ່ພົບສະຖານທີ່</string>
+    <string name="discovery_results">ຜົນລັບ</string>
+    <string name="discovery_recommended">ແນະນຳ</string>
+    <string name="discovery_subscribed">ສະໝັກສະມາຊິກແລ້ວ</string>
+    <string name="access_owner">ເຈົ້າຂອງ</string>
+    <string name="access_revoke">ຖອນ</string>
+    <string name="access_level">ລະດັບການເຂົ້າເຖິງ</string>
+    <string name="access_level_manage">ຈັດການ</string>
+    <string name="access_level_comment">ຄຳເຫັນ</string>
+    <string name="access_level_view">ເບິ່ງ</string>
+    <string name="access_level_none">ບໍ່ມີ</string>
+    <string name="reaction_like">ມັກ</string>
+    <string name="reaction_dislike">ບໍ່ມັກ</string>
+    <string name="reaction_laugh">ຫົວ</string>
+    <string name="reaction_amazed">ປະທັບໃຈ</string>
+    <string name="reaction_love">ຮັກ</string>
+    <string name="reaction_sad">ໂສກ</string>
+    <string name="reaction_angry">ໂກດ</string>
+    <string name="reaction_agree">ເຫັນດີ</string>
+    <string name="reaction_disagree">ບໍ່ເຫັນດີ</string>
+
+</resources>

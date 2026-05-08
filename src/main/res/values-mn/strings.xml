@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Хандалтыг татгалзсан</string>
+    <string name="auth_email">Имэйл</string>
+    <string name="auth_continue">Үргэлжлүүлэх</string>
+    <string name="auth_verification_code">Баталгаажуулах код</string>
+    <string name="auth_verify">Баталгаажуулах</string>
+    <string name="auth_authenticator_app">Authenticator апп</string>
+    <string name="auth_email_code">Имэйл код</string>
+    <string name="auth_authenticator_code">Authenticator код</string>
+    <string name="auth_recovery_code">Сэргээх код</string>
+    <string name="auth_name">Нэр</string>
+    <string name="auth_create">Үүсгэх</string>
+    <string name="common_back">Буцах</string>
+    <string name="common_close">Хаах</string>
+    <string name="common_cancel">Цуцлах</string>
+    <string name="common_confirm">Баталгаажуулах</string>
+    <string name="common_save">Хадгалах</string>
+    <string name="common_edit">Засах</string>
+    <string name="common_delete">Устгах</string>
+    <string name="common_add">Нэмэх</string>
+    <string name="common_subscribe">Захиалах</string>
+    <string name="comment_edited">(засварласан)</string>
+    <string name="comment_edit_placeholder">Сэтгэгдэл засах</string>
+    <string name="comment_reply">Хариу</string>
+    <string name="comment_reply_placeholder">Хариу</string>
+    <string name="comment_send_reply">Хариу илгээх</string>
+    <string name="person_picker_search">Хэрэглэгчид хайх</string>
+    <string name="place_picker_no_results">Газар олдсонгүй</string>
+    <string name="discovery_results">Үр дүн</string>
+    <string name="discovery_recommended">Зөвлөмжтэй</string>
+    <string name="discovery_subscribed">Захиалсан</string>
+    <string name="access_owner">Эзэмшигч</string>
+    <string name="access_revoke">Цуцлах</string>
+    <string name="access_level">Хандалтын түвшин</string>
+    <string name="access_level_manage">Удирдах</string>
+    <string name="access_level_comment">Сэтгэгдэл</string>
+    <string name="access_level_view">Үзэх</string>
+    <string name="access_level_none">Алга</string>
+    <string name="reaction_like">Таалагдсан</string>
+    <string name="reaction_dislike">Дургүй</string>
+    <string name="reaction_laugh">Инээх</string>
+    <string name="reaction_amazed">Гайхсан</string>
+    <string name="reaction_love">Хайр</string>
+    <string name="reaction_sad">Гунигтай</string>
+    <string name="reaction_angry">Уурласан</string>
+    <string name="reaction_agree">Зөвшөөрөх</string>
+    <string name="reaction_disagree">Үл зөвшөөрөх</string>
+
+</resources>

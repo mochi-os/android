@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="auth_continue">Continuá</string>
+    <string name="auth_verify">Verificá</string>
+    <string name="common_cancel">Cancelá</string>
+    <string name="common_confirm">Confirmá</string>
+    <string name="common_save">Guardá</string>
+    <string name="common_edit">Editá</string>
+    <string name="common_delete">Eliminá</string>
+    <string name="common_add">Agregá</string>
+    <string name="common_subscribe">Suscribite</string>
+    <string name="comment_edit_placeholder">Editá el comentario</string>
+    <string name="comment_reply">Respondé</string>
+    <string name="comment_reply_placeholder">Respondé</string>
+    <string name="comment_send_reply">Enviá la respuesta</string>
+    <string name="person_picker_search">Buscá usuarios</string>
+
+</resources>

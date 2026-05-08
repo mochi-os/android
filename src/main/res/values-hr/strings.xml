@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Pristup odbijen</string>
+    <string name="auth_email">E-pošta</string>
+    <string name="auth_continue">Nastavi</string>
+    <string name="auth_verification_code">Verifikacijski kod</string>
+    <string name="auth_verify">Provjeri</string>
+    <string name="auth_authenticator_app">Aplikacija autentifikatora</string>
+    <string name="auth_email_code">Kod e-pošte</string>
+    <string name="auth_authenticator_code">Kod autentifikatora</string>
+    <string name="auth_recovery_code">Kod za oporavak</string>
+    <string name="auth_name">Naziv</string>
+    <string name="auth_create">Stvori</string>
+    <string name="common_back">Natrag</string>
+    <string name="common_close">Zatvori</string>
+    <string name="common_cancel">Odustani</string>
+    <string name="common_confirm">Potvrdi</string>
+    <string name="common_save">Spremi</string>
+    <string name="common_edit">Uredi</string>
+    <string name="common_delete">Obriši</string>
+    <string name="common_add">Dodaj</string>
+    <string name="common_subscribe">Pretplati se</string>
+    <string name="comment_edited">(uređeno)</string>
+    <string name="comment_edit_placeholder">Uredi komentar</string>
+    <string name="comment_reply">Odgovori</string>
+    <string name="comment_reply_placeholder">Odgovori</string>
+    <string name="comment_send_reply">Pošalji odgovor</string>
+    <string name="person_picker_search">Pretraži korisnike</string>
+    <string name="place_picker_no_results">Nije pronađeno nijedno mjesto</string>
+    <string name="discovery_results">Rezultati</string>
+    <string name="discovery_recommended">Preporučeno</string>
+    <string name="discovery_subscribed">Pretplaćeno</string>
+    <string name="access_owner">Vlasnik</string>
+    <string name="access_revoke">Opozovi</string>
+    <string name="access_level">Razina pristupa</string>
+    <string name="access_level_manage">Upravljaj</string>
+    <string name="access_level_comment">Komentar</string>
+    <string name="access_level_view">Pogled</string>
+    <string name="access_level_none">Ništa</string>
+    <string name="reaction_like">Sviđa mi se</string>
+    <string name="reaction_dislike">Ne sviđa mi se</string>
+    <string name="reaction_laugh">Smijeh</string>
+    <string name="reaction_amazed">Zadivljen</string>
+    <string name="reaction_love">Volim</string>
+    <string name="reaction_sad">Tužno</string>
+    <string name="reaction_angry">Ljut</string>
+    <string name="reaction_agree">Slažem se</string>
+    <string name="reaction_disagree">Ne slažem se</string>
+
+</resources>

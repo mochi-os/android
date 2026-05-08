@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Доступ забаронены</string>
+    <string name="auth_email">Эл. пошта</string>
+    <string name="auth_continue">Працягнуць</string>
+    <string name="auth_verification_code">Код праверкі</string>
+    <string name="auth_verify">Праверыць</string>
+    <string name="auth_authenticator_app">Дадатак аўтэнтыфікатара</string>
+    <string name="auth_email_code">Код па эл. пошце</string>
+    <string name="auth_authenticator_code">Код аўтэнтыфікатара</string>
+    <string name="auth_recovery_code">Код аднаўлення</string>
+    <string name="auth_name">Назва</string>
+    <string name="auth_create">Стварыць</string>
+    <string name="common_back">Назад</string>
+    <string name="common_close">Закрыць</string>
+    <string name="common_cancel">Адмена</string>
+    <string name="common_confirm">Пацвердзіць</string>
+    <string name="common_save">Захаваць</string>
+    <string name="common_edit">Рэдагаваць</string>
+    <string name="common_delete">Выдаліць</string>
+    <string name="common_add">Дадаць</string>
+    <string name="common_subscribe">Падпісацца</string>
+    <string name="comment_edited">(зменена)</string>
+    <string name="comment_edit_placeholder">Рэдагаваць каментарый</string>
+    <string name="comment_reply">Адказаць</string>
+    <string name="comment_reply_placeholder">Адказаць</string>
+    <string name="comment_send_reply">Адправіць адказ</string>
+    <string name="person_picker_search">Пошук карыстальнікаў</string>
+    <string name="place_picker_no_results">Месцы не знойдзены</string>
+    <string name="discovery_results">Вынікі</string>
+    <string name="discovery_recommended">Рэкамендуецца</string>
+    <string name="discovery_subscribed">Падпісана</string>
+    <string name="access_owner">Уладальнік</string>
+    <string name="access_revoke">Адклікаць</string>
+    <string name="access_level">Узровень доступу</string>
+    <string name="access_level_manage">Кіраваць</string>
+    <string name="access_level_comment">Каментарый</string>
+    <string name="access_level_view">Прагляд</string>
+    <string name="access_level_none">Няма</string>
+    <string name="reaction_like">Падабаецца</string>
+    <string name="reaction_dislike">Не падабаецца</string>
+    <string name="reaction_laugh">Смех</string>
+    <string name="reaction_amazed">Здзіўлена</string>
+    <string name="reaction_love">Кахаю</string>
+    <string name="reaction_sad">Сумны</string>
+    <string name="reaction_angry">Злосна</string>
+    <string name="reaction_agree">Згодны</string>
+    <string name="reaction_disagree">Не згодны</string>
+
+</resources>

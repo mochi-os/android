@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Жетки четке кагылды</string>
+    <string name="auth_email">Электрондук почта</string>
+    <string name="auth_continue">Улантуу</string>
+    <string name="auth_verification_code">Текшерүү коду</string>
+    <string name="auth_verify">Текшерүү</string>
+    <string name="auth_authenticator_app">Authenticator колдонмосу</string>
+    <string name="auth_email_code">Электрондук почта коду</string>
+    <string name="auth_authenticator_code">Authenticator коду</string>
+    <string name="auth_recovery_code">Калыбына келтирүү коду</string>
+    <string name="auth_name">Аты</string>
+    <string name="auth_create">Түзүү</string>
+    <string name="common_back">Артка</string>
+    <string name="common_close">Жабуу</string>
+    <string name="common_cancel">Жокко чыгаруу</string>
+    <string name="common_confirm">Ырастоо</string>
+    <string name="common_save">Сактоо</string>
+    <string name="common_edit">Түзөтүү</string>
+    <string name="common_delete">Жок кылуу</string>
+    <string name="common_add">Кошуу</string>
+    <string name="common_subscribe">Жазылуу</string>
+    <string name="comment_edited">(өзгөртүлгөн)</string>
+    <string name="comment_edit_placeholder">Комментарийди түзөтүү</string>
+    <string name="comment_reply">Жооп</string>
+    <string name="comment_reply_placeholder">Жооп</string>
+    <string name="comment_send_reply">Жоопту жөнөтүү</string>
+    <string name="person_picker_search">Колдонуучуларды издөө</string>
+    <string name="place_picker_no_results">Жерлер табылган жок</string>
+    <string name="discovery_results">Натыйжалар</string>
+    <string name="discovery_recommended">Сунушталган</string>
+    <string name="discovery_subscribed">Жазылдыңыз</string>
+    <string name="access_owner">Ээси</string>
+    <string name="access_revoke">Кайтарып алуу</string>
+    <string name="access_level">Жетки деңгээли</string>
+    <string name="access_level_manage">Башкаруу</string>
+    <string name="access_level_comment">Комментарий</string>
+    <string name="access_level_view">Көрүү</string>
+    <string name="access_level_none">Эч кимиси</string>
+    <string name="reaction_like">Жактыруу</string>
+    <string name="reaction_dislike">Жактырбоо</string>
+    <string name="reaction_laugh">Күлкү</string>
+    <string name="reaction_amazed">Таң калган</string>
+    <string name="reaction_love">Сүйүү</string>
+    <string name="reaction_sad">Капалуу</string>
+    <string name="reaction_angry">Ачуулу</string>
+    <string name="reaction_agree">Макул</string>
+    <string name="reaction_disagree">Макул эмес</string>
+
+</resources>

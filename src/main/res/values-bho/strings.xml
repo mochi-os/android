@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">पहुंच मना</string>
+    <string name="auth_email">ईमेल</string>
+    <string name="auth_continue">जारी रखीं</string>
+    <string name="auth_verification_code">सत्यापन कोड</string>
+    <string name="auth_verify">सत्यापित करीं</string>
+    <string name="auth_authenticator_app">Authenticator ऐप</string>
+    <string name="auth_email_code">ईमेल कोड</string>
+    <string name="auth_authenticator_code">Authenticator कोड</string>
+    <string name="auth_recovery_code">रिकवरी कोड</string>
+    <string name="auth_name">नाम</string>
+    <string name="auth_create">बनाईं</string>
+    <string name="common_back">वापस</string>
+    <string name="common_close">बंद करीं</string>
+    <string name="common_cancel">रद्द करीं</string>
+    <string name="common_confirm">पुष्टि करीं</string>
+    <string name="common_save">सहेजीं</string>
+    <string name="common_edit">संपादित करीं</string>
+    <string name="common_delete">मेटाईं</string>
+    <string name="common_add">जोड़ीं</string>
+    <string name="common_subscribe">सदस्यता लीं</string>
+    <string name="comment_edited">(संपादित)</string>
+    <string name="comment_edit_placeholder">टिप्पणी संपादित करीं</string>
+    <string name="comment_reply">जवाब</string>
+    <string name="comment_reply_placeholder">जवाब</string>
+    <string name="comment_send_reply">जवाब भेजीं</string>
+    <string name="person_picker_search">यूजर खोजीं</string>
+    <string name="place_picker_no_results">कौनो जगह ना मिलल</string>
+    <string name="discovery_results">परिणाम</string>
+    <string name="discovery_recommended">सिफारिश कइल</string>
+    <string name="discovery_subscribed">सदस्यता ले लिहल गइल</string>
+    <string name="access_owner">मालिक</string>
+    <string name="access_revoke">वापस लीं</string>
+    <string name="access_level">पहुंच स्तर</string>
+    <string name="access_level_manage">प्रबंधित करीं</string>
+    <string name="access_level_comment">टिप्पणी</string>
+    <string name="access_level_view">देखीं</string>
+    <string name="access_level_none">कुछुओ ना</string>
+    <string name="reaction_like">पसंद</string>
+    <string name="reaction_dislike">नापसंद</string>
+    <string name="reaction_laugh">हँसी</string>
+    <string name="reaction_amazed">अचंभित</string>
+    <string name="reaction_love">प्यार</string>
+    <string name="reaction_sad">दुखी</string>
+    <string name="reaction_angry">गुस्सा</string>
+    <string name="reaction_agree">सहमत</string>
+    <string name="reaction_disagree">असहमत</string>
+
+</resources>

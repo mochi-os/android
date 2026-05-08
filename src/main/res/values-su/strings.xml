@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Aksés ditolak</string>
+    <string name="auth_email">Surélék</string>
+    <string name="auth_continue">Teruskeun</string>
+    <string name="auth_verification_code">Kode verifikasi</string>
+    <string name="auth_verify">Verifikasi</string>
+    <string name="auth_authenticator_app">Aplikasi authenticator</string>
+    <string name="auth_email_code">Kode surélék</string>
+    <string name="auth_authenticator_code">Kode authenticator</string>
+    <string name="auth_recovery_code">Kode pamulihan</string>
+    <string name="auth_name">Ngaran</string>
+    <string name="auth_create">Jieun</string>
+    <string name="common_back">Tukang</string>
+    <string name="common_close">Tutup</string>
+    <string name="common_cancel">Batalkeun</string>
+    <string name="common_confirm">Konfirmasi</string>
+    <string name="common_save">Simpen</string>
+    <string name="common_edit">Édit</string>
+    <string name="common_delete">Hapus</string>
+    <string name="common_add">Tambah</string>
+    <string name="common_subscribe">Langgan</string>
+    <string name="comment_edited">(diédit)</string>
+    <string name="comment_edit_placeholder">Édit koméntar</string>
+    <string name="comment_reply">Bales</string>
+    <string name="comment_reply_placeholder">Bales</string>
+    <string name="comment_send_reply">Kirim balesan</string>
+    <string name="person_picker_search">Paluruh pamaké</string>
+    <string name="place_picker_no_results">Teu manggih tempat</string>
+    <string name="discovery_results">Hasil</string>
+    <string name="discovery_recommended">Direkomendasikeun</string>
+    <string name="discovery_subscribed">Dilanggan</string>
+    <string name="access_owner">Nu boga</string>
+    <string name="access_revoke">Cabut</string>
+    <string name="access_level">Tingkat aksés</string>
+    <string name="access_level_manage">Atur</string>
+    <string name="access_level_comment">Koméntar</string>
+    <string name="access_level_view">Tingali</string>
+    <string name="access_level_none">Euweuh</string>
+    <string name="reaction_like">Resep</string>
+    <string name="reaction_dislike">Teu resep</string>
+    <string name="reaction_laugh">Seuri</string>
+    <string name="reaction_amazed">Helok</string>
+    <string name="reaction_love">Bogoh</string>
+    <string name="reaction_sad">Sedih</string>
+    <string name="reaction_angry">Ambek</string>
+    <string name="reaction_agree">Satuju</string>
+    <string name="reaction_disagree">Teu satuju</string>
+
+</resources>

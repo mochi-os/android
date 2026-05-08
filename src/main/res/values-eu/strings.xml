@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Sarbidea ukatua</string>
+    <string name="auth_email">Posta elektronikoa</string>
+    <string name="auth_continue">Jarraitu</string>
+    <string name="auth_verification_code">Egiaztatze-kodea</string>
+    <string name="auth_verify">Egiaztatu</string>
+    <string name="auth_authenticator_app">Autentifikatzaile aplikazioa</string>
+    <string name="auth_email_code">Posta elektronikoko kodea</string>
+    <string name="auth_authenticator_code">Autentifikatzaile kodea</string>
+    <string name="auth_recovery_code">Berreskuratze-kodea</string>
+    <string name="auth_name">Izena</string>
+    <string name="auth_create">Sortu</string>
+    <string name="common_back">Atzera</string>
+    <string name="common_close">Itxi</string>
+    <string name="common_cancel">Utzi</string>
+    <string name="common_confirm">Berretsi</string>
+    <string name="common_save">Gorde</string>
+    <string name="common_edit">Editatu</string>
+    <string name="common_delete">Ezabatu</string>
+    <string name="common_add">Gehitu</string>
+    <string name="common_subscribe">Harpidetu</string>
+    <string name="comment_edited">(editatua)</string>
+    <string name="comment_edit_placeholder">Editatu iruzkina</string>
+    <string name="comment_reply">Erantzun</string>
+    <string name="comment_reply_placeholder">Erantzun</string>
+    <string name="comment_send_reply">Bidali erantzuna</string>
+    <string name="person_picker_search">Bilatu erabiltzaileak</string>
+    <string name="place_picker_no_results">Ez da lekurik aurkitu</string>
+    <string name="discovery_results">Emaitzak</string>
+    <string name="discovery_recommended">Gomendatua</string>
+    <string name="discovery_subscribed">Harpidetuta</string>
+    <string name="access_owner">Jabea</string>
+    <string name="access_revoke">Indargabetu</string>
+    <string name="access_level">Sarbide maila</string>
+    <string name="access_level_manage">Kudeatu</string>
+    <string name="access_level_comment">Iruzkina</string>
+    <string name="access_level_view">Ikusi</string>
+    <string name="access_level_none">Bat ere ez</string>
+    <string name="reaction_like">Atsegin</string>
+    <string name="reaction_dislike">Ez gustatu</string>
+    <string name="reaction_laugh">Barre</string>
+    <string name="reaction_amazed">Harrituta</string>
+    <string name="reaction_love">Maitasuna</string>
+    <string name="reaction_sad">Triste</string>
+    <string name="reaction_angry">Haserre</string>
+    <string name="reaction_agree">Ados</string>
+    <string name="reaction_disagree">Ez ados</string>
+
+</resources>

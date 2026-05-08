@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">ការចូលប្រើត្រូវបានបដិសេធ</string>
+    <string name="auth_email">អ៊ីមែល</string>
+    <string name="auth_continue">បន្ត</string>
+    <string name="auth_verification_code">កូដផ្ទៀងផ្ទាត់</string>
+    <string name="auth_verify">ផ្ទៀងផ្ទាត់</string>
+    <string name="auth_authenticator_app">កម្មវិធី Authenticator</string>
+    <string name="auth_email_code">កូដអ៊ីមែល</string>
+    <string name="auth_authenticator_code">កូដ Authenticator</string>
+    <string name="auth_recovery_code">កូដស្តារ</string>
+    <string name="auth_name">ឈ្មោះ</string>
+    <string name="auth_create">បង្កើត</string>
+    <string name="common_back">ត្រឡប់</string>
+    <string name="common_close">បិទ</string>
+    <string name="common_cancel">បោះបង់</string>
+    <string name="common_confirm">បញ្ជាក់</string>
+    <string name="common_save">រក្សាទុក</string>
+    <string name="common_edit">កែសម្រួល</string>
+    <string name="common_delete">លុប</string>
+    <string name="common_add">បន្ថែម</string>
+    <string name="common_subscribe">ជាវ</string>
+    <string name="comment_edited">(បានកែ)</string>
+    <string name="comment_edit_placeholder">កែសម្រួលមតិយោបល់</string>
+    <string name="comment_reply">ឆ្លើយតប</string>
+    <string name="comment_reply_placeholder">ឆ្លើយតប</string>
+    <string name="comment_send_reply">ផ្ញើការឆ្លើយតប</string>
+    <string name="person_picker_search">ស្វែងរកអ្នកប្រើ</string>
+    <string name="place_picker_no_results">រកមិនឃើញកន្លែង</string>
+    <string name="discovery_results">លទ្ធផល</string>
+    <string name="discovery_recommended">បានណែនាំ</string>
+    <string name="discovery_subscribed">បានជាវ</string>
+    <string name="access_owner">ម្ចាស់</string>
+    <string name="access_revoke">ដកសិទ្ធិ</string>
+    <string name="access_level">កម្រិតការចូលប្រើ</string>
+    <string name="access_level_manage">គ្រប់គ្រង</string>
+    <string name="access_level_comment">មតិយោបល់</string>
+    <string name="access_level_view">មើល</string>
+    <string name="access_level_none">គ្មាន</string>
+    <string name="reaction_like">ចូលចិត្ត</string>
+    <string name="reaction_dislike">មិនចូលចិត្ត</string>
+    <string name="reaction_laugh">សើច</string>
+    <string name="reaction_amazed">ភ្ញាក់ផ្អើល</string>
+    <string name="reaction_love">ស្រឡាញ់</string>
+    <string name="reaction_sad">សោកសៅ</string>
+    <string name="reaction_angry">ខឹង</string>
+    <string name="reaction_agree">យល់ព្រម</string>
+    <string name="reaction_disagree">មិនយល់ព្រម</string>
+
+</resources>

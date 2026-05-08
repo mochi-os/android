@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_brand">Mochi</string>
+    <string name="error_access_denied">Inntrigeadh air a dhiùltadh</string>
+    <string name="auth_email">Post-d</string>
+    <string name="auth_continue">Lean air adhart</string>
+    <string name="auth_verification_code">Còd dearbhaidh</string>
+    <string name="auth_verify">Dearbh</string>
+    <string name="auth_authenticator_app">Aplacaid dhearbhachaidh</string>
+    <string name="auth_email_code">Còd puist-d</string>
+    <string name="auth_authenticator_code">Còd dearbhachaidh</string>
+    <string name="auth_recovery_code">Còd ath-shlànachaidh</string>
+    <string name="auth_name">Ainm</string>
+    <string name="auth_create">Cruthaich</string>
+    <string name="common_back">Air ais</string>
+    <string name="common_close">Dùin</string>
+    <string name="common_cancel">Sguir dheth</string>
+    <string name="common_confirm">Dearbhaich</string>
+    <string name="common_save">Sàbhail</string>
+    <string name="common_edit">Deasaich</string>
+    <string name="common_delete">Sguab às</string>
+    <string name="common_add">Cuir ris</string>
+    <string name="common_subscribe">Fo-sgrìobh</string>
+    <string name="comment_edited">(deasaichte)</string>
+    <string name="comment_edit_placeholder">Deasaich am beachd</string>
+    <string name="comment_reply">Freagair</string>
+    <string name="comment_reply_placeholder">Freagair</string>
+    <string name="comment_send_reply">Cuir freagairt</string>
+    <string name="person_picker_search">Lorg cleachdaichean</string>
+    <string name="place_picker_no_results">Cha deach àitichean a lorg</string>
+    <string name="discovery_results">Toraidhean</string>
+    <string name="discovery_recommended">Air a mholadh</string>
+    <string name="discovery_subscribed">Fo-sgrìobhte</string>
+    <string name="access_owner">Sealbhadair</string>
+    <string name="access_revoke">Cùl-ghairm</string>
+    <string name="access_level">Ìre inntrigidh</string>
+    <string name="access_level_manage">Stiùirich</string>
+    <string name="access_level_comment">Beachd</string>
+    <string name="access_level_view">Seall</string>
+    <string name="access_level_none">Chan eil gin</string>
+    <string name="reaction_like">Toil</string>
+    <string name="reaction_dislike">Cha toigh</string>
+    <string name="reaction_laugh">Gàire</string>
+    <string name="reaction_amazed">Air iongnadh</string>
+    <string name="reaction_love">Gaol</string>
+    <string name="reaction_sad">Brònach</string>
+    <string name="reaction_angry">Feargach</string>
+    <string name="reaction_agree">Aontaich</string>
+    <string name="reaction_disagree">Eas-aontaich</string>
+
+</resources>
