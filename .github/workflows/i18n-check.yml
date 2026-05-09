@@ -1,0 +1,50 @@
+name: i18n Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  i18n:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Android i18n catalogs
+        # Reports per-locale missing keys against values/strings.xml.
+        # Informational only (does not fail CI) until the residue
+        # translation is filled in for newly-added locales — flip to
+        # strict mode by setting STRICT=1.
+        env:
+          STRICT: '0'
+        run: |
+          python3 - <<'PY'
+          import os, re, sys
+          from pathlib import Path
+          KEY_RE = re.compile(r'<string name="([^"]+)"')
+          OVERLAYS = {"values-en-rUS"}
+          source = Path("src/main/res/values/strings.xml")
+          if not source.exists():
+              sys.exit(0)
+          source_keys = set(KEY_RE.findall(source.read_text(encoding="utf-8")))
+          any_problems = False
+          for vd in sorted(source.parent.parent.iterdir()):
+              if not vd.is_dir() or not vd.name.startswith("values-") or vd.name in OVERLAYS:
+                  continue
+              xml = vd / "strings.xml"
+              if not xml.exists():
+                  continue
+              missing = source_keys - set(KEY_RE.findall(xml.read_text(encoding="utf-8")))
+              if missing:
+                  sample = ", ".join(sorted(missing)[:3])
+                  print(f"::warning::{vd.name}: {len(missing)} missing ({sample}…)")
+                  any_problems = True
+          if not any_problems:
+              print("Android i18n catalogs complete.")
+          if any_problems and os.environ.get("STRICT") == "1":
+              sys.exit(1)
+          PY
