@@ -48,5 +48,14 @@
     <string name="reaction_angry">Dusmīgs</string>
     <string name="reaction_agree">Piekrist</string>
     <string name="reaction_disagree">Nepiekrist</string>
+    <string name="push_service_action_hide">Slēpt</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Uztur Mochi savienojumu, lai saņemtu paziņojumus</string>
+    <string name="push_service_title">Mochi klausās paziņojumus</string>
+    <string name="push_service_text">Varat paslēpt šo paziņojumu</string>
+    <string name="reauth_channel_name">Mochi: nepieciešama pieteikšanās</string>
+    <string name="reauth_channel_description">Tiek parādīts, kad Mochi nevar piekļūt jūsu serverim, jo jūsu sesija ir atcelta</string>
+    <string name="reauth_signin_title">Mochi: piesakieties vēlreiz</string>
+    <string name="reauth_signin_text">Paziņojumi ir apturēti, līdz piesakāties vēlreiz</string>
 </resources>

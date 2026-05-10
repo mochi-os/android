@@ -48,5 +48,14 @@
     <string name="reaction_angry">Haserre</string>
     <string name="reaction_agree">Ados</string>
     <string name="reaction_disagree">Ez ados</string>
+    <string name="push_service_action_hide">Ezkutatu</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi konektatuta mantentzen du jakinarazpenak jasotzeko</string>
+    <string name="push_service_title">Mochi jakinarazpenak entzuten</string>
+    <string name="push_service_text">Jakinarazpen hau ezkutatu dezakezu</string>
+    <string name="reauth_channel_name">Mochi: saioa hasi behar duzu</string>
+    <string name="reauth_channel_description">Zure saioa baliogabetu denez, Mochi-k zure zerbitzarira ezin duenean iristen</string>
+    <string name="reauth_signin_title">Mochi: hasi saioa berriro</string>
+    <string name="reauth_signin_text">Jakinarazpenak pausatuta daude saioa berriro hasi arte</string>
 </resources>

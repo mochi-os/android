@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Akses ditolak</string>
     <string name="auth_email">E-mel</string>
@@ -47,75 +48,14 @@
     <string name="reaction_angry">Marah</string>
     <string name="reaction_agree">Setuju</string>
     <string name="reaction_disagree">Tidak setuju</string>
-    <string name="error_network">Tidak dapat menyambung. Periksa sambungan internet anda dan cuba lagi.</string>
-    <string name="error_authentication_required">Pengesahan diperlukan</string>
-    <string name="error_not_found">Tidak ditemui</string>
-    <string name="error_server">Ralat pelayan (%1$d). Sila cuba lagi nanti.</string>
-    <string name="error_unexpected">Berlaku ralat tidak dijangka</string>
-    <string name="error_request_failed">Permintaan gagal</string>
-    <string name="error_enter_server_url">Sila masukkan URL pelayan</string>
-    <string name="error_enter_email">Sila masukkan e-mel anda</string>
-    <string name="error_enter_name">Sila masukkan nama</string>
-    <string name="auth_connect_to_server">Sambung ke pelayan anda</string>
-    <string name="auth_server_url">URL pelayan</string>
-    <string name="auth_connect">Sambung</string>
-    <string name="auth_sign_in">Log masuk</string>
-    <string name="auth_sign_in_with_passkey">Log masuk dengan passkey</string>
-    <string name="auth_sign_in_with_email_code">Log masuk dengan kod e-mel</string>
-    <string name="auth_use_recovery_code">Guna kod pemulihan</string>
-    <string name="auth_back_to_sign_in">Kembali ke log masuk</string>
-    <string name="auth_send_code">Hantar kod</string>
-    <string name="auth_check_email">Periksa e-mel anda untuk kod pengesahan</string>
-    <string name="auth_six_digit_code">Kod 6 digit</string>
-    <string name="auth_mfa_title">Pengesahan multifaktor</string>
-    <string name="auth_mfa_subtitle">Lengkapkan langkah pengesahan yang tinggal</string>
-    <string name="auth_recover_account">Pulihkan akaun</string>
-    <string name="auth_create_identity_title">Cipta identiti anda</string>
-    <string name="auth_create_identity_subtitle">Pilih nama untuk identiti anda di pelayan ini</string>
-    <string name="common_or">atau</string>
-    <string name="common_change">Ubah</string>
-    <string name="common_retry">Cuba lagi</string>
-    <string name="common_more_options">Pilihan lain</string>
-    <string name="common_collapse">Runtuhkan</string>
-    <string name="common_expand">Kembangkan</string>
-    <string name="common_play_video">Mainkan video</string>
-    <string name="place_picker_name">Nama tempat</string>
-    <string name="place_origin">Asal</string>
-    <string name="place_destination">Destinasi</string>
-    <string name="discovery_search_placeholder">Cari %1$s</string>
-    <string name="discovery_no_results">Tiada %1$s ditemui</string>
-    <string name="discovery_no_recommendations">Tiada cadangan</string>
-    <string name="discovery_search_hint">Cuba cari %1$s untuk dilanggan</string>
-    <string name="access_add_rule">Tambah peraturan</string>
-    <string name="access_no_rules">Tiada peraturan akses</string>
-    <string name="access_no_rules_subtitle">Tambah peraturan untuk mengawal siapa yang boleh mengakses sumber ini</string>
-    <string name="access_add_rule_title">Tambah peraturan akses</string>
-    <string name="access_level_react">Bertindak balas</string>
-    <string name="entity_avatar_alt">Avatar untuk %1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Sebentar tadi</string>
-    <string name="format_time_minutes_ago">%1$dm lalu</string>
-    <string name="format_time_hours_ago">%1$dj lalu</string>
-    <string name="format_time_days_ago">%1$dh lalu</string>
-    <string name="format_time_weeks_ago">%1$dmgg lalu</string>
-    <string name="format_time_months_ago">%1$dbln lalu</string>
-    <string name="format_time_years_ago">%1$dt lalu</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dj</string>
-    <string name="format_time_days_short">%1$dh</string>
-    <string name="format_time_weeks_short">%1$dmgg</string>
-    <string name="format_time_months_short">%1$dbln</string>
-    <string name="format_time_years_short">%1$dt</string>
-    <string name="reaction_add">Tambah reaksi</string>
+    <string name="push_service_action_hide">Sembunyikan</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="other">%1$d pelanggan</item>
-    </plurals>
-
-    <string name="bootstrap_welcome_back">Selamat kembali</string>
-    <string name="bootstrap_continue_as">Teruskan sebagai %1$s</string>
-    <string name="bootstrap_sign_in_differently">Daftar masuk dengan cara lain</string>
-    <string name="bootstrap_choose_account">Pilih akaun</string>
-    <string name="bootstrap_sign_in_different_server">Daftar masuk ke pelayan lain</string>
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mengekalkan Mochi disambungkan untuk menerima pemberitahuan</string>
+    <string name="push_service_title">Mochi sedang mendengar pemberitahuan</string>
+    <string name="push_service_text">Anda boleh menyembunyikan pemberitahuan ini</string>
+    <string name="reauth_channel_name">Mochi: log masuk diperlukan</string>
+    <string name="reauth_channel_description">Muncul apabila Mochi tidak dapat mencapai pelayan anda kerana sesi anda telah dibatalkan</string>
+    <string name="reauth_signin_title">Mochi: log masuk semula</string>
+    <string name="reauth_signin_text">Pemberitahuan dijeda sehingga anda log masuk semula</string>
 </resources>

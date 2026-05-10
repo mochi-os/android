@@ -48,5 +48,14 @@
     <string name="reaction_angry">ဒေါသထွက်သည်</string>
     <string name="reaction_agree">သဘောတူသည်</string>
     <string name="reaction_disagree">သဘောမတူပါ</string>
+    <string name="push_service_action_hide">ဝှက်</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">အကြောင်းကြားစာများလက်ခံရန် Mochi ကိုချိတ်ဆက်ထားသည်</string>
+    <string name="push_service_title">Mochi သည် အကြောင်းကြားစာများကို စောင့်ဆိုင်းနေသည်</string>
+    <string name="push_service_text">ဤအကြောင်းကြားစာကို သင်ဖျောက်ထားနိုင်သည်</string>
+    <string name="reauth_channel_name">Mochi: ဝင်ရောက်ရန်လိုအပ်သည်</string>
+    <string name="reauth_channel_description">သင့်ရဲ့ session ကိုဖျက်လိုက်ပြီးဖြစ်၍ Mochi သည် သင့်ဆာဗာသို့မရောက်နိုင်သည့်အခါ ပေါ်လာသည်</string>
+    <string name="reauth_signin_title">Mochi: ပြန်ဝင်ပါ</string>
+    <string name="reauth_signin_text">ပြန်လည်ဝင်ရောက်သည်အထိ အကြောင်းကြားစာများ ရပ်ဆိုင်းထားသည်</string>
 </resources>

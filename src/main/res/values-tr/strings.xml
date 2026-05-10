@@ -48,5 +48,14 @@
     <string name="reaction_angry">Kızgın</string>
     <string name="reaction_agree">Katılıyorum</string>
     <string name="reaction_disagree">Katılmıyorum</string>
+    <string name="push_service_action_hide">Gizle</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Bildirim alabilmek için Mochi bağlantısını korur</string>
+    <string name="push_service_title">Mochi bildirimleri dinliyor</string>
+    <string name="push_service_text">Bu bildirimi gizleyebilirsiniz</string>
+    <string name="reauth_channel_name">Mochi: oturum açın</string>
+    <string name="reauth_channel_description">Oturumunuz geçersiz kılındığı için Mochi sunucunuza ulaşamadığında görünür</string>
+    <string name="reauth_signin_title">Mochi: tekrar oturum açın</string>
+    <string name="reauth_signin_text">Tekrar oturum açana kadar bildirimler duraklatıldı</string>
 </resources>

@@ -48,5 +48,14 @@
     <string name="reaction_angry">ខឹង</string>
     <string name="reaction_agree">យល់ព្រម</string>
     <string name="reaction_disagree">មិនយល់ព្រម</string>
+    <string name="push_service_action_hide">លាក់</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">រក្សា Mochi ឲ្យភ្ជាប់ដើម្បីទទួលការជូនដំណឹង</string>
+    <string name="push_service_title">Mochi កំពុងស្តាប់ការជូនដំណឹង</string>
+    <string name="push_service_text">អ្នកអាចលាក់ការជូនដំណឹងនេះបាន</string>
+    <string name="reauth_channel_name">Mochi: តម្រូវឱ្យចូល</string>
+    <string name="reauth_channel_description">បង្ហាញនៅពេល Mochi មិនអាចទៅដល់ម៉ាស៊ីនមេរបស់អ្នកដោយសារសម័យរបស់អ្នកត្រូវបានលុបចោល</string>
+    <string name="reauth_signin_title">Mochi: ចូលម្តងទៀត</string>
+    <string name="reauth_signin_text">ការជូនដំណឹងត្រូវបានផ្អាករហូតដល់អ្នកចូលម្តងទៀត</string>
 </resources>

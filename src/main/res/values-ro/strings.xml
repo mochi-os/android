@@ -48,5 +48,14 @@
     <string name="reaction_angry">Supărat</string>
     <string name="reaction_agree">De acord</string>
     <string name="reaction_disagree">Nu sunt de acord</string>
+    <string name="push_service_action_hide">Ascunde</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Menține Mochi conectat pentru a primi notificări</string>
+    <string name="push_service_title">Mochi așteaptă notificări</string>
+    <string name="push_service_text">Puteți ascunde această notificare</string>
+    <string name="reauth_channel_name">Mochi: autentificare necesară</string>
+    <string name="reauth_channel_description">Apare când Mochi nu poate ajunge la serverul dvs. deoarece sesiunea a fost invalidată</string>
+    <string name="reauth_signin_title">Mochi: autentificați-vă din nou</string>
+    <string name="reauth_signin_text">Notificările sunt în pauză până vă autentificați din nou</string>
 </resources>

@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Ukufinyelela kuvinjelwe</string>
     <string name="auth_email">I-imeyili</string>
@@ -47,76 +48,14 @@
     <string name="reaction_angry">Thukuthele</string>
     <string name="reaction_agree">Vuma</string>
     <string name="reaction_disagree">Ngiyaphikisa</string>
-    <string name="error_network">Akukwazi ukuxhuma. Hlola uxhumano lwakho lwe-inthanethi futhi uzame futhi.</string>
-    <string name="error_authentication_required">Ukuqinisekisa kuyadingeka</string>
-    <string name="error_not_found">Akutholakali</string>
-    <string name="error_server">Iphutha leseva (%1$d). Sicela uzame futhi kamuva.</string>
-    <string name="error_unexpected">Iphutha elingalindelekile lenzekile</string>
-    <string name="error_request_failed">Isicelo sehlulekile</string>
-    <string name="error_enter_server_url">Sicela ufake i-URL yeseva</string>
-    <string name="error_enter_email">Sicela ufake i-imeyili yakho</string>
-    <string name="error_enter_name">Sicela ufake igama</string>
-    <string name="auth_connect_to_server">Xhuma kuseva yakho</string>
-    <string name="auth_server_url">I-URL yeseva</string>
-    <string name="auth_connect">Xhuma</string>
-    <string name="auth_sign_in">Ngena</string>
-    <string name="auth_sign_in_with_passkey">Ngena nge-passkey</string>
-    <string name="auth_sign_in_with_email_code">Ngena ngekhodi ye-imeyili</string>
-    <string name="auth_use_recovery_code">Sebenzisa ikhodi yokubuyisa</string>
-    <string name="auth_back_to_sign_in">Buyela ekungeneni</string>
-    <string name="auth_send_code">Thumela ikhodi</string>
-    <string name="auth_check_email">Hlola i-imeyili yakho ukuze uthole ikhodi yokuqinisekisa</string>
-    <string name="auth_six_digit_code">Ikhodi yamadijithi angu-6</string>
-    <string name="auth_mfa_title">Ukuqinisekisa okunezici eziningi</string>
-    <string name="auth_mfa_subtitle">Qedela izinyathelo zokuqinisekisa ezisele</string>
-    <string name="auth_recover_account">Buyisa i-akhawunti</string>
-    <string name="auth_create_identity_title">Dala ubuyena bakho</string>
-    <string name="auth_create_identity_subtitle">Khetha igama leqiniso lakho kule seva</string>
-    <string name="common_or">noma</string>
-    <string name="common_change">Shintsha</string>
-    <string name="common_retry">Zama futhi</string>
-    <string name="common_more_options">Izinketho ezengeziwe</string>
-    <string name="common_collapse">Goqa</string>
-    <string name="common_expand">Nweba</string>
-    <string name="common_play_video">Dlala ividiyo</string>
-    <string name="place_picker_name">Igama lendawo</string>
-    <string name="place_origin">Indabuko</string>
-    <string name="place_destination">Indawo yokuya</string>
-    <string name="discovery_search_placeholder">Sesha %1$s</string>
-    <string name="discovery_no_results">Akukho %1$s okutholiwe</string>
-    <string name="discovery_no_recommendations">Aziyona iziphakamiso</string>
-    <string name="discovery_search_hint">Zama ukusesha %1$s ukubhalisa</string>
-    <string name="access_add_rule">Engeza umthetho</string>
-    <string name="access_no_rules">Akukho mithetho yokufinyelela</string>
-    <string name="access_no_rules_subtitle">Engeza imithetho yokulawula ukuthi ngubani ongafinyelela kule nsiza</string>
-    <string name="access_add_rule_title">Engeza umthetho wokufinyelela</string>
-    <string name="access_level_react">Sabela</string>
-    <string name="entity_avatar_alt">I-Avatar ka-%1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Manje</string>
-    <string name="format_time_minutes_ago">%1$dm ezedlule</string>
-    <string name="format_time_hours_ago">%1$dh ezedlule</string>
-    <string name="format_time_days_ago">%1$dz ezedlule</string>
-    <string name="format_time_weeks_ago">%1$ds ezedlule</string>
-    <string name="format_time_months_ago">%1$di ezedlule</string>
-    <string name="format_time_years_ago">%1$du ezedlule</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dh</string>
-    <string name="format_time_days_short">%1$dz</string>
-    <string name="format_time_weeks_short">%1$ds</string>
-    <string name="format_time_months_short">%1$di</string>
-    <string name="format_time_years_short">%1$du</string>
-    <string name="reaction_add">Engeza ukusabela</string>
+    <string name="push_service_action_hide">Fihla</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d obhalisile</item>
-        <item quantity="other">%1$d ababhalisile</item>
-    </plurals>
-
-    <string name="bootstrap_welcome_back">Wamukelekile futhi</string>
-    <string name="bootstrap_continue_as">Qhubeka njengo-%1$s</string>
-    <string name="bootstrap_sign_in_differently">Ngena ngenye indlela</string>
-    <string name="bootstrap_choose_account">Khetha i-akhawunti</string>
-    <string name="bootstrap_sign_in_different_server">Ngena kwesinye iseva</string>
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Igcina i-Mochi ixhunyiwe ukuze ithole izaziso</string>
+    <string name="push_service_title">I-Mochi ilalele izaziso</string>
+    <string name="push_service_text">Ungayifihla lesi saziso</string>
+    <string name="reauth_channel_name">Mochi: kudingeka ungene ngemvume</string>
+    <string name="reauth_channel_description">Ivela lapho i-Mochi ingakwazi ukufinyelela iseva yakho ngenxa yokuthi iseshini yakho icishiwe</string>
+    <string name="reauth_signin_title">Mochi: ngena ngemvume futhi</string>
+    <string name="reauth_signin_text">Izaziso zimisiwe okwesikhashana ize ungene ngemvume futhi</string>
 </resources>

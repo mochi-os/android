@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="person_picker_search">搜尋用戶</string>
+
+    <string name="push_service_channel">Mochi 推送</string>
+    <string name="push_service_channel_description">保持 Mochi 連線以接收通知</string>
+    <string name="push_service_title">Mochi 正在監聽通知</string>
+    <string name="push_service_text">您可以隱藏此通知</string>
+    <string name="reauth_channel_name">Mochi:需要登入</string>
+    <string name="reauth_channel_description">當您嘅工作階段失效導致 Mochi 無法連線到您嘅伺服器時顯示</string>
+    <string name="reauth_signin_title">Mochi:請重新登入</string>
+    <string name="reauth_signin_text">重新登入前通知已暫停</string>
+</resources>

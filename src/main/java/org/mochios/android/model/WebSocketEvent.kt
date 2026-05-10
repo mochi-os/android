@@ -18,5 +18,8 @@ data class WebSocketEvent(
     val member: String? = null,
     val name: String? = null,
     val body: String? = null,
-    val created: Long? = null
+    val created: Long? = null,
+    // UnifiedPush distributor fields
+    val subId: String? = null,
+    val payload: String? = null,
 )

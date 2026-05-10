@@ -48,5 +48,14 @@
     <string name="reaction_angry">Ашуланғанмын</string>
     <string name="reaction_agree">Келісу</string>
     <string name="reaction_disagree">Келіспеу</string>
+    <string name="push_service_action_hide">Жасыру</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Хабарландыруларды алу үшін Mochi-ді қосылған күйде ұстайды</string>
+    <string name="push_service_title">Mochi хабарландыруларды күтуде</string>
+    <string name="push_service_text">Бұл хабарландыруды жасыруға болады</string>
+    <string name="reauth_channel_name">Mochi: кіру қажет</string>
+    <string name="reauth_channel_description">Сеансыңыз жарамсыз болғандықтан Mochi серверіңізге жете алмағанда пайда болады</string>
+    <string name="reauth_signin_title">Mochi: қайта кіріңіз</string>
+    <string name="reauth_signin_text">Қайта кірмейінше хабарландырулар тоқтатылады</string>
 </resources>

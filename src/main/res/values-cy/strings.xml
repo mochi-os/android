@@ -48,5 +48,14 @@
     <string name="reaction_angry">Dig</string>
     <string name="reaction_agree">Cytuno</string>
     <string name="reaction_disagree">Anghytuno</string>
+    <string name="push_service_action_hide">Cuddio</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Yn cadw Mochi wedi\'i gysylltu i dderbyn hysbysiadau</string>
+    <string name="push_service_title">Mochi\'n gwrando am hysbysiadau</string>
+    <string name="push_service_text">Gallwch guddio\'r hysbysiad hwn</string>
+    <string name="reauth_channel_name">Mochi: angen mewngofnodi</string>
+    <string name="reauth_channel_description">Yn ymddangos pan na all Mochi gyrraedd eich gweinydd oherwydd bod eich sesiwn wedi\'i annilysu</string>
+    <string name="reauth_signin_title">Mochi: mewngofnodwch eto</string>
+    <string name="reauth_signin_text">Mae hysbysiadau wedi\'u oedi nes i chi fewngofnodi eto</string>
 </resources>

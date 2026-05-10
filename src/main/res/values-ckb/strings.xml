@@ -48,5 +48,14 @@
     <string name="reaction_angry">تووڕە</string>
     <string name="reaction_agree">ڕەزامەندی</string>
     <string name="reaction_disagree">ناڕەزایی</string>
+    <string name="push_service_action_hide">شاردنەوە</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi پەیوەند دەکات بۆ وەرگرتنی ئاگادارکردنەوەکان</string>
+    <string name="push_service_title">Mochi چاوەڕێی ئاگادارکردنەوەکان دەکات</string>
+    <string name="push_service_text">دەتوانیت ئەم ئاگادارکردنەوەیە بشاریتەوە</string>
+    <string name="reauth_channel_name">Mochi: پێویستە چوونەژوورەوە بکەیت</string>
+    <string name="reauth_channel_description">دەردەکەوێت کاتێک Mochi ناتوانێت بگاتە سێرڤەرەکەت لەبەر ئەوەی دانیشتنەکەت بەتاڵ کراوەتەوە</string>
+    <string name="reauth_signin_title">Mochi: دووبارە بچۆ ژوورەوە</string>
+    <string name="reauth_signin_text">ئاگادارکردنەوەکان وەستاون تا دووبارە بچیتەوە ژوورەوە</string>
 </resources>

@@ -48,5 +48,14 @@
     <string name="reaction_angry">Хашмгин</string>
     <string name="reaction_agree">Розӣ ҳастам</string>
     <string name="reaction_disagree">Розӣ нестам</string>
+    <string name="push_service_action_hide">Пинҳон кардан</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi-ро барои гирифтани огоҳиҳо пайваст нигоҳ медорад</string>
+    <string name="push_service_title">Mochi огоҳиҳоро интизор аст</string>
+    <string name="push_service_text">Шумо метавонед ин огоҳиро пинҳон кунед</string>
+    <string name="reauth_channel_name">Mochi: воридшавӣ лозим аст</string>
+    <string name="reauth_channel_description">Замоне пайдо мешавад, ки сеанси шумо беэътибор шуда, Mochi ба сервери шумо расида наметавонад</string>
+    <string name="reauth_signin_title">Mochi: дубора ворид шавед</string>
+    <string name="reauth_signin_text">То дубора ворид нашавед, огоҳиҳо қатъ карда мешаванд</string>
 </resources>

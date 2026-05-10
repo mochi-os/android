@@ -48,5 +48,14 @@
     <string name="reaction_angry">ناراض</string>
     <string name="reaction_agree">متفق</string>
     <string name="reaction_disagree">غير متفق</string>
+    <string name="push_service_action_hide">لڪايو</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">اطلاعون حاصل ڪرڻ لاءِ Mochi کي ڳنڍيل رکي ٿو</string>
+    <string name="push_service_title">Mochi اطلاعون جو انتظار ڪري رهيو آهي</string>
+    <string name="push_service_text">توهان هي اطلاع لڪائي سگهو ٿا</string>
+    <string name="reauth_channel_name">Mochi: سائن ان ضروري آهي</string>
+    <string name="reauth_channel_description">ظاهر ٿيندو آهي جڏهن توهان جي سيشن کي رد ڪرڻ سبب Mochi توهان جي سرور تائين رسائي نٿو ڪري سگهي</string>
+    <string name="reauth_signin_title">Mochi: ٻيهر سائن ان ڪريو</string>
+    <string name="reauth_signin_text">اطلاعون ٻيهر سائن ان ٿيڻ تائين روڪيون ويون آهن</string>
 </resources>

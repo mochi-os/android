@@ -48,5 +48,14 @@
     <string name="reaction_angry">Fache</string>
     <string name="reaction_agree">Dakò</string>
     <string name="reaction_disagree">Pa dakò</string>
+    <string name="push_service_action_hide">Kache</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Kenbe Mochi konekte pou resevwa notifikasyon</string>
+    <string name="push_service_title">Mochi ap koute notifikasyon</string>
+    <string name="push_service_text">Ou ka kache notifikasyon sa a</string>
+    <string name="reauth_channel_name">Mochi: konekte ankò obligatwa</string>
+    <string name="reauth_channel_description">Parèt lè Mochi pa ka jwenn sèvè ou paske sesyon ou anile</string>
+    <string name="reauth_signin_title">Mochi: konekte ankò</string>
+    <string name="reauth_signin_text">Notifikasyon yo nan poz jiskaske ou rekonekte</string>
 </resources>

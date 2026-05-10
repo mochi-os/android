@@ -48,5 +48,14 @@
     <string name="reaction_angry">Enfadado</string>
     <string name="reaction_agree">De acordo</string>
     <string name="reaction_disagree">En desacordo</string>
+    <string name="push_service_action_hide">Ocultar</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mantén Mochi conectado para recibir notificacións</string>
+    <string name="push_service_title">Mochi á escoita de notificacións</string>
+    <string name="push_service_text">Podes ocultar esta notificación</string>
+    <string name="reauth_channel_name">Mochi: necesita iniciar sesión</string>
+    <string name="reauth_channel_description">Aparece cando Mochi non pode acceder ao teu servidor porque a túa sesión foi invalidada</string>
+    <string name="reauth_signin_title">Mochi: inicia sesión de novo</string>
+    <string name="reauth_signin_text">As notificacións están en pausa ata que inicies sesión de novo</string>
 </resources>

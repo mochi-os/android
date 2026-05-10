@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Ufikiaji umekataliwa</string>
     <string name="auth_email">Barua pepe</string>
@@ -47,76 +48,14 @@
     <string name="reaction_angry">Hasira</string>
     <string name="reaction_agree">Kubali</string>
     <string name="reaction_disagree">Sikubaliani</string>
-    <string name="error_network">Haiwezi kuunganisha. Angalia muunganisho wako wa intaneti na ujaribu tena.</string>
-    <string name="error_authentication_required">Uthibitishaji unahitajika</string>
-    <string name="error_not_found">Haikupatikana</string>
-    <string name="error_server">Hitilafu ya seva (%1$d). Tafadhali jaribu tena baadaye.</string>
-    <string name="error_unexpected">Hitilafu isiyotarajiwa imetokea</string>
-    <string name="error_request_failed">Ombi limeshindwa</string>
-    <string name="error_enter_server_url">Tafadhali ingiza URL ya seva</string>
-    <string name="error_enter_email">Tafadhali ingiza barua pepe yako</string>
-    <string name="error_enter_name">Tafadhali ingiza jina</string>
-    <string name="auth_connect_to_server">Unganisha kwenye seva yako</string>
-    <string name="auth_server_url">URL ya seva</string>
-    <string name="auth_connect">Unganisha</string>
-    <string name="auth_sign_in">Ingia</string>
-    <string name="auth_sign_in_with_passkey">Ingia kwa passkey</string>
-    <string name="auth_sign_in_with_email_code">Ingia kwa msimbo wa barua pepe</string>
-    <string name="auth_use_recovery_code">Tumia msimbo wa kurejesha</string>
-    <string name="auth_back_to_sign_in">Rudi kwenye kuingia</string>
-    <string name="auth_send_code">Tuma msimbo</string>
-    <string name="auth_check_email">Angalia barua pepe yako kwa msimbo wa uthibitishaji</string>
-    <string name="auth_six_digit_code">Msimbo wa tarakimu 6</string>
-    <string name="auth_mfa_title">Uthibitishaji wa vipengele vingi</string>
-    <string name="auth_mfa_subtitle">Maliza hatua za uthibitishaji zilizosalia</string>
-    <string name="auth_recover_account">Rejesha akaunti</string>
-    <string name="auth_create_identity_title">Tengeneza utambulisho wako</string>
-    <string name="auth_create_identity_subtitle">Chagua jina la utambulisho wako kwenye seva hii</string>
-    <string name="common_or">au</string>
-    <string name="common_change">Badilisha</string>
-    <string name="common_retry">Jaribu tena</string>
-    <string name="common_more_options">Chaguo zaidi</string>
-    <string name="common_collapse">Kunja</string>
-    <string name="common_expand">Panua</string>
-    <string name="common_play_video">Cheza video</string>
-    <string name="place_picker_name">Jina la mahali</string>
-    <string name="place_origin">Asili</string>
-    <string name="place_destination">Lengo</string>
-    <string name="discovery_search_placeholder">Tafuta %1$s</string>
-    <string name="discovery_no_results">Hakuna %1$s zilizopatikana</string>
-    <string name="discovery_no_recommendations">Hakuna mapendekezo</string>
-    <string name="discovery_search_hint">Jaribu kutafuta %1$s ya kujiandikisha</string>
-    <string name="access_add_rule">Ongeza sheria</string>
-    <string name="access_no_rules">Hakuna sheria za ufikiaji</string>
-    <string name="access_no_rules_subtitle">Ongeza sheria ili kudhibiti ni nani anaweza kufikia rasilimali hii</string>
-    <string name="access_add_rule_title">Ongeza sheria ya ufikiaji</string>
-    <string name="access_level_react">Itikia</string>
-    <string name="entity_avatar_alt">Avatar ya %1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Sasa hivi</string>
-    <string name="format_time_minutes_ago">%1$dd iliyopita</string>
-    <string name="format_time_hours_ago">%1$ds iliyopita</string>
-    <string name="format_time_days_ago">%1$dsi iliyopita</string>
-    <string name="format_time_weeks_ago">%1$dw iliyopita</string>
-    <string name="format_time_months_ago">%1$dm iliyopita</string>
-    <string name="format_time_years_ago">%1$dm iliyopita</string>
-    <string name="format_time_minutes_short">%1$dd</string>
-    <string name="format_time_hours_short">%1$ds</string>
-    <string name="format_time_days_short">%1$dsi</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dm</string>
-    <string name="format_time_years_short">%1$dm</string>
-    <string name="reaction_add">Ongeza majibu</string>
+    <string name="push_service_action_hide">Ficha</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">Mfuasi %1$d</item>
-        <item quantity="other">Wafuasi %1$d</item>
-    </plurals>
-
-    <string name="bootstrap_welcome_back">Karibu tena</string>
-    <string name="bootstrap_continue_as">Endelea kama %1$s</string>
-    <string name="bootstrap_sign_in_differently">Ingia kwa njia tofauti</string>
-    <string name="bootstrap_choose_account">Chagua akaunti</string>
-    <string name="bootstrap_sign_in_different_server">Ingia kwenye seva tofauti</string>
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Inashikilia Mochi imeunganishwa ili kupokea arifa</string>
+    <string name="push_service_title">Mochi inasikiliza arifa</string>
+    <string name="push_service_text">Unaweza kuficha arifa hii</string>
+    <string name="reauth_channel_name">Mochi: kuingia kunahitajika</string>
+    <string name="reauth_channel_description">Inaonekana wakati Mochi haiwezi kufikia seva yako kwa sababu kikao chako kimebatilishwa</string>
+    <string name="reauth_signin_title">Mochi: ingia tena</string>
+    <string name="reauth_signin_text">Arifa zimesimamishwa hadi uingie tena</string>
 </resources>

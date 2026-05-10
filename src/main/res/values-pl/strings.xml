@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Odmowa dostępu</string>
     <string name="auth_email">E-mail</string>
@@ -47,78 +48,14 @@
     <string name="reaction_angry">Zły</string>
     <string name="reaction_agree">Zgadzam się</string>
     <string name="reaction_disagree">Nie zgadzam się</string>
-    <string name="error_network">Nie można się połączyć. Sprawdź połączenie internetowe i spróbuj ponownie.</string>
-    <string name="error_authentication_required">Wymagane uwierzytelnienie</string>
-    <string name="error_not_found">Nie znaleziono</string>
-    <string name="error_server">Błąd serwera (%1$d). Spróbuj ponownie później.</string>
-    <string name="error_unexpected">Wystąpił nieoczekiwany błąd</string>
-    <string name="error_request_failed">Żądanie nie powiodło się</string>
-    <string name="error_enter_server_url">Wprowadź URL serwera</string>
-    <string name="error_enter_email">Wprowadź swój e-mail</string>
-    <string name="error_enter_name">Wprowadź nazwę</string>
-    <string name="auth_connect_to_server">Połącz z serwerem</string>
-    <string name="auth_server_url">URL serwera</string>
-    <string name="auth_connect">Połącz</string>
-    <string name="auth_sign_in">Zaloguj</string>
-    <string name="auth_sign_in_with_passkey">Zaloguj się kluczem</string>
-    <string name="auth_sign_in_with_email_code">Zaloguj się kodem e-mail</string>
-    <string name="auth_use_recovery_code">Użyj kodu odzyskiwania</string>
-    <string name="auth_back_to_sign_in">Wstecz do logowania</string>
-    <string name="auth_send_code">Wyślij kod</string>
-    <string name="auth_check_email">Sprawdź swoją skrzynkę e-mail w celu uzyskania kodu weryfikacyjnego</string>
-    <string name="auth_six_digit_code">6-cyfrowy kod</string>
-    <string name="auth_mfa_title">Uwierzytelnianie wieloskładnikowe</string>
-    <string name="auth_mfa_subtitle">Ukończ pozostałe kroki weryfikacji</string>
-    <string name="auth_recover_account">Odzyskaj konto</string>
-    <string name="auth_create_identity_title">Utwórz swoją tożsamość</string>
-    <string name="auth_create_identity_subtitle">Wybierz nazwę swojej tożsamości na tym serwerze</string>
-    <string name="common_or">lub</string>
-    <string name="common_change">Zmień</string>
-    <string name="common_retry">Spróbuj ponownie</string>
-    <string name="common_more_options">Więcej opcji</string>
-    <string name="common_collapse">Zwiń</string>
-    <string name="common_expand">Rozwiń</string>
-    <string name="common_play_video">Odtwórz wideo</string>
-    <string name="place_picker_name">Nazwa miejsca</string>
-    <string name="place_origin">Pochodzenie</string>
-    <string name="place_destination">Cel</string>
-    <string name="discovery_search_placeholder">Wyszukaj %1$s</string>
-    <string name="discovery_no_results">Nie znaleziono %1$s</string>
-    <string name="discovery_no_recommendations">Brak rekomendacji</string>
-    <string name="discovery_search_hint">Spróbuj wyszukać %1$s do subskrypcji</string>
-    <string name="access_add_rule">Dodaj regułę</string>
-    <string name="access_no_rules">Brak reguł dostępu</string>
-    <string name="access_no_rules_subtitle">Dodaj reguły, aby kontrolować, kto może uzyskać dostęp do tego zasobu</string>
-    <string name="access_add_rule_title">Dodaj regułę dostępu</string>
-    <string name="access_level_react">Reaguj</string>
-    <string name="entity_avatar_alt">Awatar dla %1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Właśnie teraz</string>
-    <string name="format_time_minutes_ago">%1$dm temu</string>
-    <string name="format_time_hours_ago">%1$dg temu</string>
-    <string name="format_time_days_ago">%1$dd temu</string>
-    <string name="format_time_weeks_ago">%1$dt temu</string>
-    <string name="format_time_months_ago">%1$dmies temu</string>
-    <string name="format_time_years_ago">%1$dr temu</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dg</string>
-    <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dt</string>
-    <string name="format_time_months_short">%1$dmies</string>
-    <string name="format_time_years_short">%1$dr</string>
-    <string name="reaction_add">Dodaj reakcję</string>
+    <string name="push_service_action_hide">Ukryj</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d subskrybent</item>
-        <item quantity="few">%1$d subskrybentów</item>
-        <item quantity="many">%1$d subskrybentów</item>
-        <item quantity="other">%1$d subskrybenta</item>
-    </plurals>
-
-    <string name="bootstrap_welcome_back">Witamy ponownie</string>
-    <string name="bootstrap_continue_as">Kontynuuj jako %1$s</string>
-    <string name="bootstrap_sign_in_differently">Zaloguj się inaczej</string>
-    <string name="bootstrap_choose_account">Wybierz konto</string>
-    <string name="bootstrap_sign_in_different_server">Zaloguj się na innym serwerze</string>
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Utrzymuje połączenie Mochi w celu odbierania powiadomień</string>
+    <string name="push_service_title">Mochi nasłuchuje powiadomień</string>
+    <string name="push_service_text">Możesz ukryć to powiadomienie</string>
+    <string name="reauth_channel_name">Mochi: wymagane logowanie</string>
+    <string name="reauth_channel_description">Pojawia się, gdy Mochi nie może połączyć się z Twoim serwerem, ponieważ Twoja sesja została unieważniona</string>
+    <string name="reauth_signin_title">Mochi: zaloguj się ponownie</string>
+    <string name="reauth_signin_text">Powiadomienia są wstrzymane do ponownego zalogowania</string>
 </resources>

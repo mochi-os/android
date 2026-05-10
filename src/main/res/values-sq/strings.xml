@@ -48,5 +48,14 @@
     <string name="reaction_angry">I zemëruar</string>
     <string name="reaction_agree">Pajtohem</string>
     <string name="reaction_disagree">Nuk pajtohem</string>
+    <string name="push_service_action_hide">Fshih</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mban Mochi të lidhur për të marrë njoftime</string>
+    <string name="push_service_title">Mochi po dëgjon njoftimet</string>
+    <string name="push_service_text">Mund ta fshehni këtë njoftim</string>
+    <string name="reauth_channel_name">Mochi: kërkohet identifikimi</string>
+    <string name="reauth_channel_description">Shfaqet kur Mochi nuk mund të arrijë serverin tuaj sepse sesioni juaj është anuluar</string>
+    <string name="reauth_signin_title">Mochi: identifikohuni përsëri</string>
+    <string name="reauth_signin_text">Njoftimet janë në pauzë derisa të identifikoheni përsëri</string>
 </resources>

@@ -48,5 +48,14 @@
     <string name="reaction_angry">Gʻazabda</string>
     <string name="reaction_agree">Roziman</string>
     <string name="reaction_disagree">Rozi emas</string>
+    <string name="push_service_action_hide">Yashirish</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Bildirishnomalarni olish uchun Mochi ulanishini saqlaydi</string>
+    <string name="push_service_title">Mochi bildirishnomalarni kutmoqda</string>
+    <string name="push_service_text">Bu bildirishnomani yashirishingiz mumkin</string>
+    <string name="reauth_channel_name">Mochi: kirish talab qilinadi</string>
+    <string name="reauth_channel_description">Sessiyangiz bekor qilinganligi uchun Mochi serveringizga yeta olmaganda paydo bo‘ladi</string>
+    <string name="reauth_signin_title">Mochi: qayta kiring</string>
+    <string name="reauth_signin_text">Qayta kirmaguningizcha bildirishnomalar to‘xtatib qo‘yilgan</string>
 </resources>

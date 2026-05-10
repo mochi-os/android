@@ -48,5 +48,14 @@
     <string name="reaction_angry">Inkwetat</string>
     <string name="reaction_agree">Naqbel</string>
     <string name="reaction_disagree">Ma naqbilx</string>
+    <string name="push_service_action_hide">Aħbi</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Iżżomm Mochi imqabbad biex jirċievi notifiki</string>
+    <string name="push_service_title">Mochi qed jisma\' għal notifiki</string>
+    <string name="push_service_text">Tista\' taħbi din in-notifika</string>
+    <string name="reauth_channel_name">Mochi: trid tidħol</string>
+    <string name="reauth_channel_description">Tidher meta Mochi ma jistax jasal għas-server tiegħek għax is-sessjoni tiegħek ġiet invalidata</string>
+    <string name="reauth_signin_title">Mochi: idħol mill-ġdid</string>
+    <string name="reauth_signin_text">In-notifiki huma pawżati sakemm tidħol mill-ġdid</string>
 </resources>

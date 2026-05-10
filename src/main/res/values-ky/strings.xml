@@ -48,5 +48,14 @@
     <string name="reaction_angry">Ачуулу</string>
     <string name="reaction_agree">Макул</string>
     <string name="reaction_disagree">Макул эмес</string>
+    <string name="push_service_action_hide">Жашыруу</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Билдирүүлөрдү алуу үчүн Mochi туташууда кармайт</string>
+    <string name="push_service_title">Mochi билдирүүлөрдү күтүүдө</string>
+    <string name="push_service_text">Бул билдирүүнү жашырсаңыз болот</string>
+    <string name="reauth_channel_name">Mochi: кирүү талап кылынат</string>
+    <string name="reauth_channel_description">Сиздин сессияңыз жокко чыгарылгандыктан Mochi серверге жете албай калганда пайда болот</string>
+    <string name="reauth_signin_title">Mochi: кайра кириңиз</string>
+    <string name="reauth_signin_text">Кайра кирмейинче билдирүүлөр тыныгууда</string>
 </resources>

@@ -48,5 +48,14 @@
     <string name="reaction_angry">Ядосан</string>
     <string name="reaction_agree">Съгласен съм</string>
     <string name="reaction_disagree">Не съм съгласен</string>
+    <string name="push_service_action_hide">Скрий</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Поддържа Mochi свързан за получаване на известия</string>
+    <string name="push_service_title">Mochi слуша за известия</string>
+    <string name="push_service_text">Можете да скриете това известие</string>
+    <string name="reauth_channel_name">Mochi: необходимо е влизане</string>
+    <string name="reauth_channel_description">Появява се, когато Mochi не може да достигне до вашия сървър, защото сесията ви е обезсилена</string>
+    <string name="reauth_signin_title">Mochi: влезте отново</string>
+    <string name="reauth_signin_text">Известията са спрени, докато не влезете отново</string>
 </resources>

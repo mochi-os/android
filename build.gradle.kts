@@ -101,4 +101,6 @@ dependencies {
     implementation(libs.markwon.image)
 
     implementation(libs.osmdroid)
+
+    api(libs.unifiedpush.connector)
 }

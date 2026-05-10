@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">ആക്സസ് നിരസിച്ചു</string>
     <string name="auth_email">ഇമെയിൽ</string>
@@ -9,7 +10,7 @@
     <string name="auth_authenticator_app">Authenticator ആപ്പ്</string>
     <string name="auth_email_code">ഇമെയിൽ കോഡ്</string>
     <string name="auth_authenticator_code">Authenticator കോഡ്</string>
-    <string name="auth_recovery_code">റിക്കവറി കോഡുകൾ</string>
+    <string name="auth_recovery_code">റിക്കവറി കോഡ്</string>
     <string name="auth_name">പേര്</string>
     <string name="auth_create">സൃഷ്ടിക്കുക</string>
     <string name="common_back">തിരികെ</string>
@@ -47,76 +48,14 @@
     <string name="reaction_angry">ദേഷ്യം</string>
     <string name="reaction_agree">സമ്മതം</string>
     <string name="reaction_disagree">വിയോജിക്കുന്നു</string>
-    <string name="error_network">കണക്റ്റുചെയ്യാൻ കഴിയില്ല. നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="error_authentication_required">പ്രാമാണീകരണം ആവശ്യമാണ്</string>
-    <string name="error_not_found">കണ്ടെത്തിയില്ല</string>
-    <string name="error_server">സെർവർ പിശക് (%1$d). ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="error_unexpected">അപ്രതീക്ഷിതമായ പിശക് സംഭവിച്ചു</string>
-    <string name="error_request_failed">അഭ്യർത്ഥന പരാജയപ്പെട്ടു</string>
-    <string name="error_enter_server_url">ദയവായി സെർവർ URL നൽകുക</string>
-    <string name="error_enter_email">ദയവായി നിങ്ങളുടെ ഇമെയിൽ നൽകുക</string>
-    <string name="error_enter_name">ദയവായി ഒരു പേര് നൽകുക</string>
-    <string name="auth_connect_to_server">നിങ്ങളുടെ സെർവറുമായി കണക്റ്റ്</string>
-    <string name="auth_server_url">സെർവർ URL</string>
-    <string name="auth_connect">കണക്റ്റ്</string>
-    <string name="auth_sign_in">സൈൻ ഇൻ</string>
-    <string name="auth_sign_in_with_passkey">പാസ്‌കീ ഉപയോഗിച്ച് സൈൻ ഇൻ</string>
-    <string name="auth_sign_in_with_email_code">ഇമെയിൽ കോഡ് ഉപയോഗിച്ച് സൈൻ ഇൻ</string>
-    <string name="auth_use_recovery_code">വീണ്ടെടുക്കൽ കോഡ് ഉപയോഗിക്കുക</string>
-    <string name="auth_back_to_sign_in">സൈൻ ഇന്നിലേക്ക് തിരികെ</string>
-    <string name="auth_send_code">കോഡ് അയയ്ക്കുക</string>
-    <string name="auth_check_email">പരിശോധനാ കോഡിനായി നിങ്ങളുടെ ഇമെയിൽ പരിശോധിക്കുക</string>
-    <string name="auth_six_digit_code">6-അക്ക കോഡ്</string>
-    <string name="auth_mfa_title">ഒന്നിലധികം ഘടക പ്രാമാണീകരണം</string>
-    <string name="auth_mfa_subtitle">ബാക്കിയുള്ള പരിശോധനാ ഘട്ടങ്ങൾ പൂർത്തിയാക്കുക</string>
-    <string name="auth_recover_account">അക്കൗണ്ട് വീണ്ടെടുക്കുക</string>
-    <string name="auth_create_identity_title">നിങ്ങളുടെ ഐഡന്റിറ്റി സൃഷ്ടിക്കുക</string>
-    <string name="auth_create_identity_subtitle">ഈ സെർവറിൽ നിങ്ങളുടെ ഐഡന്റിറ്റിക്കായി ഒരു പേര് തിരഞ്ഞെടുക്കുക</string>
-    <string name="common_or">അല്ലെങ്കിൽ</string>
-    <string name="common_change">മാറ്റുക</string>
-    <string name="common_retry">വീണ്ടും ശ്രമിക്കുക</string>
-    <string name="common_more_options">കൂടുതൽ ഓപ്ഷനുകൾ</string>
-    <string name="common_collapse">ചുരുക്കുക</string>
-    <string name="common_expand">വികസിപ്പിക്കുക</string>
-    <string name="common_play_video">വീഡിയോ പ്ലേ</string>
-    <string name="place_picker_name">സ്ഥലത്തിന്റെ പേര്</string>
-    <string name="place_origin">ഉറവിടം</string>
-    <string name="place_destination">ലക്ഷ്യം</string>
-    <string name="discovery_search_placeholder">%1$s തിരയുക</string>
-    <string name="discovery_no_results">%1$s കണ്ടെത്തിയില്ല</string>
-    <string name="discovery_no_recommendations">ശുപാർശകൾ ഇല്ല</string>
-    <string name="discovery_search_hint">സബ്സ്ക്രൈബ് ചെയ്യാൻ %1$s തിരയാൻ ശ്രമിക്കുക</string>
-    <string name="access_add_rule">നിയമം ചേർക്കുക</string>
-    <string name="access_no_rules">ആക്സസ് നിയമങ്ങൾ ഇല്ല</string>
-    <string name="access_no_rules_subtitle">ഈ വിഭവത്തിൽ ആർക്കാണ് ആക്സസ് ലഭിക്കുന്നതെന്ന് നിയന്ത്രിക്കുന്നതിന് നിയമങ്ങൾ ചേർക്കുക</string>
-    <string name="access_add_rule_title">ആക്സസ് നിയമം ചേർക്കുക</string>
-    <string name="access_level_react">പ്രതികരിക്കുക</string>
-    <string name="entity_avatar_alt">%1$s ന് അവതാർ</string>
-    <string name="media_grid_more_count">+%1$d</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">ഇപ്പോൾ</string>
-    <string name="format_time_minutes_ago">%1$dമി മുമ്പ്</string>
-    <string name="format_time_hours_ago">%1$dമ മുമ്പ്</string>
-    <string name="format_time_days_ago">%1$dദി മുമ്പ്</string>
-    <string name="format_time_weeks_ago">%1$dആ മുമ്പ്</string>
-    <string name="format_time_months_ago">%1$dമാ മുമ്പ്</string>
-    <string name="format_time_years_ago">%1$dവ മുമ്പ്</string>
-    <string name="format_time_minutes_short">%1$dമി</string>
-    <string name="format_time_hours_short">%1$dമ</string>
-    <string name="format_time_days_short">%1$dദി</string>
-    <string name="format_time_weeks_short">%1$dആ</string>
-    <string name="format_time_months_short">%1$dമാ</string>
-    <string name="format_time_years_short">%1$dവ</string>
-    <string name="reaction_add">പ്രതികരണം ചേർക്കുക</string>
+    <string name="push_service_action_hide">മറയ്ക്കുക</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d വരിക്കാരൻ</item>
-        <item quantity="other">%1$d വരിക്കാർ</item>
-    </plurals>
-
-    <string name="bootstrap_welcome_back">വീണ്ടും സ്വാഗതം</string>
-    <string name="bootstrap_continue_as">%1$s ആയി തുടരുക</string>
-    <string name="bootstrap_sign_in_differently">മറ്റൊരു വിധത്തിൽ സൈൻ ഇൻ ചെയ്യുക</string>
-    <string name="bootstrap_choose_account">ഒരു അക്കൗണ്ട് തിരഞ്ഞെടുക്കുക</string>
-    <string name="bootstrap_sign_in_different_server">മറ്റൊരു സെർവറിലേക്ക് സൈൻ ഇൻ ചെയ്യുക</string>
+    <string name="push_service_channel">Mochi പുഷ്</string>
+    <string name="push_service_channel_description">നോട്ടിഫിക്കേഷനുകൾ ലഭിക്കാൻ Mochi-യെ കണക്റ്റ് ചെയ്ത് നിലനിർത്തുന്നു</string>
+    <string name="push_service_title">Mochi നോട്ടിഫിക്കേഷനുകൾക്കായി കാത്തിരിക്കുന്നു</string>
+    <string name="push_service_text">നിങ്ങൾക്ക് ഈ നോട്ടിഫിക്കേഷൻ മറയ്ക്കാം</string>
+    <string name="reauth_channel_name">Mochi: സൈൻ ഇൻ ആവശ്യമാണ്</string>
+    <string name="reauth_channel_description">നിങ്ങളുടെ സെഷൻ അസാധുവാക്കിയതിനാൽ Mochi-ക്ക് നിങ്ങളുടെ സെർവറിൽ എത്താൻ കഴിയാത്തപ്പോൾ പ്രത്യക്ഷപ്പെടുന്നു</string>
+    <string name="reauth_signin_title">Mochi: വീണ്ടും സൈൻ ഇൻ ചെയ്യുക</string>
+    <string name="reauth_signin_text">നിങ്ങൾ വീണ്ടും സൈൻ ഇൻ ചെയ്യുന്നതുവരെ നോട്ടിഫിക്കേഷനുകൾ താൽക്കാലികമായി നിർത്തിയിരിക്കുന്നു</string>
 </resources>

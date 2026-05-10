@@ -48,5 +48,14 @@
     <string name="reaction_angry">Sint</string>
     <string name="reaction_agree">Samd</string>
     <string name="reaction_disagree">Usamd</string>
+    <string name="push_service_action_hide">Skjul</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Held Mochi tilkopla for å motta varsel</string>
+    <string name="push_service_title">Mochi lyttar etter varsel</string>
+    <string name="push_service_text">Du kan skjula dette varselet</string>
+    <string name="reauth_channel_name">Mochi: pålogging trengst</string>
+    <string name="reauth_channel_description">Vert vist når Mochi ikkje kan nå serveren din fordi økta di er ugyldig</string>
+    <string name="reauth_signin_title">Mochi: logg på att</string>
+    <string name="reauth_signin_text">Varsel er sett på pause til du loggar på att</string>
 </resources>

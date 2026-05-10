@@ -48,5 +48,14 @@
     <string name="reaction_angry">عصبانی</string>
     <string name="reaction_agree">موافقم</string>
     <string name="reaction_disagree">مخالفم</string>
+    <string name="push_service_action_hide">پنهان کردن</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi را برای دریافت اعلان‌ها متصل نگه می‌دارد</string>
+    <string name="push_service_title">Mochi در حال گوش دادن به اعلان‌ها است</string>
+    <string name="push_service_text">می‌توانید این اعلان را پنهان کنید</string>
+    <string name="reauth_channel_name">Mochi: ورود لازم است</string>
+    <string name="reauth_channel_description">زمانی ظاهر می‌شود که Mochi نمی‌تواند به سرور شما برسد زیرا جلسه شما باطل شده است</string>
+    <string name="reauth_signin_title">Mochi: دوباره وارد شوید</string>
+    <string name="reauth_signin_text">اعلان‌ها تا زمانی که دوباره وارد شوید متوقف شده‌اند</string>
 </resources>

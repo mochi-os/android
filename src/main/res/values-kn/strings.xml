@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">ಪ್ರವೇಶ ನಿರಾಕರಿಸಲಾಗಿದೆ</string>
     <string name="auth_email">ಇಮೇಲ್</string>
@@ -47,76 +48,14 @@
     <string name="reaction_angry">ಕೋಪಗೊಂಡ</string>
     <string name="reaction_agree">ಒಪ್ಪು</string>
     <string name="reaction_disagree">ಒಪ್ಪುವುದಿಲ್ಲ</string>
-    <string name="error_network">ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿಲ್ಲ. ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
-    <string name="error_authentication_required">ದೃಢೀಕರಣ ಅಗತ್ಯವಿದೆ</string>
-    <string name="error_not_found">ಸಿಗಲಿಲ್ಲ</string>
-    <string name="error_server">ಸರ್ವರ್ ದೋಷ (%1$d). ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
-    <string name="error_unexpected">ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ</string>
-    <string name="error_request_failed">ವಿನಂತಿ ವಿಫಲವಾಗಿದೆ</string>
-    <string name="error_enter_server_url">ದಯವಿಟ್ಟು ಸರ್ವರ್ URL ನಮೂದಿಸಿ</string>
-    <string name="error_enter_email">ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಮೇಲ್ ನಮೂದಿಸಿ</string>
-    <string name="error_enter_name">ದಯವಿಟ್ಟು ಹೆಸರನ್ನು ನಮೂದಿಸಿ</string>
-    <string name="auth_connect_to_server">ನಿಮ್ಮ ಸರ್ವರ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ</string>
-    <string name="auth_server_url">ಸರ್ವರ್ URL</string>
-    <string name="auth_connect">ಸಂಪರ್ಕಿಸಿ</string>
-    <string name="auth_sign_in">ಸೈನ್ ಇನ್</string>
-    <string name="auth_sign_in_with_passkey">ಪಾಸ್‌ಕೀಯೊಂದಿಗೆ ಸೈನ್ ಇನ್</string>
-    <string name="auth_sign_in_with_email_code">ಇಮೇಲ್ ಕೋಡ್‌ನೊಂದಿಗೆ ಸೈನ್ ಇನ್</string>
-    <string name="auth_use_recovery_code">ಮರುಪಡೆಯುವಿಕೆ ಕೋಡ್ ಬಳಸು</string>
-    <string name="auth_back_to_sign_in">ಸೈನ್ ಇನ್‌ಗೆ ಹಿಂದಿರುಗಿ</string>
-    <string name="auth_send_code">ಕೋಡ್ ಕಳುಹಿಸು</string>
-    <string name="auth_check_email">ಪರಿಶೀಲನೆ ಕೋಡ್‌ಗಾಗಿ ನಿಮ್ಮ ಇಮೇಲ್ ಪರಿಶೀಲಿಸಿ</string>
-    <string name="auth_six_digit_code">6-ಅಂಕಿಯ ಕೋಡ್</string>
-    <string name="auth_mfa_title">ಬಹು-ಅಂಶ ದೃಢೀಕರಣ</string>
-    <string name="auth_mfa_subtitle">ಉಳಿದ ಪರಿಶೀಲನಾ ಹಂತಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ</string>
-    <string name="auth_recover_account">ಖಾತೆ ಮರುಪಡೆಯಿರಿ</string>
-    <string name="auth_create_identity_title">ನಿಮ್ಮ ಗುರುತನ್ನು ರಚಿಸಿ</string>
-    <string name="auth_create_identity_subtitle">ಈ ಸರ್ವರ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಗುರುತಿಗಾಗಿ ಹೆಸರನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
-    <string name="common_or">ಅಥವಾ</string>
-    <string name="common_change">ಬದಲಾಯಿಸಿ</string>
-    <string name="common_retry">ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</string>
-    <string name="common_more_options">ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳು</string>
-    <string name="common_collapse">ಸಂಕುಚಿತಗೊಳಿಸಿ</string>
-    <string name="common_expand">ವಿಸ್ತರಿಸಿ</string>
-    <string name="common_play_video">ವೀಡಿಯೊ ಪ್ಲೇ</string>
-    <string name="place_picker_name">ಸ್ಥಳದ ಹೆಸರು</string>
-    <string name="place_origin">ಮೂಲ</string>
-    <string name="place_destination">ಗಮ್ಯಸ್ಥಾನ</string>
-    <string name="discovery_search_placeholder">%1$s ಹುಡುಕು</string>
-    <string name="discovery_no_results">ಯಾವುದೇ %1$s ಸಿಗಲಿಲ್ಲ</string>
-    <string name="discovery_no_recommendations">ಯಾವುದೇ ಶಿಫಾರಸುಗಳಿಲ್ಲ</string>
-    <string name="discovery_search_hint">ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಲು %1$s ಹುಡುಕಲು ಪ್ರಯತ್ನಿಸಿ</string>
-    <string name="access_add_rule">ನಿಯಮ ಸೇರಿಸು</string>
-    <string name="access_no_rules">ಪ್ರವೇಶ ನಿಯಮಗಳಿಲ್ಲ</string>
-    <string name="access_no_rules_subtitle">ಈ ಸಂಪನ್ಮೂಲವನ್ನು ಯಾರು ಪ್ರವೇಶಿಸಬಹುದು ಎಂಬುದನ್ನು ನಿಯಂತ್ರಿಸಲು ನಿಯಮಗಳನ್ನು ಸೇರಿಸಿ</string>
-    <string name="access_add_rule_title">ಪ್ರವೇಶ ನಿಯಮ ಸೇರಿಸು</string>
-    <string name="access_level_react">ಪ್ರತಿಕ್ರಿಯಿಸಿ</string>
-    <string name="entity_avatar_alt">%1$s ಗಾಗಿ ಅವತಾರ್</string>
-    <string name="media_grid_more_count">+%1$d</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">ಈಗ ತಾನೇ</string>
-    <string name="format_time_minutes_ago">%1$dನಿ ಹಿಂದೆ</string>
-    <string name="format_time_hours_ago">%1$dಗ ಹಿಂದೆ</string>
-    <string name="format_time_days_ago">%1$dದಿ ಹಿಂದೆ</string>
-    <string name="format_time_weeks_ago">%1$dವಾ ಹಿಂದೆ</string>
-    <string name="format_time_months_ago">%1$dತಿ ಹಿಂದೆ</string>
-    <string name="format_time_years_ago">%1$dವ ಹಿಂದೆ</string>
-    <string name="format_time_minutes_short">%1$dನಿ</string>
-    <string name="format_time_hours_short">%1$dಗ</string>
-    <string name="format_time_days_short">%1$dದಿ</string>
-    <string name="format_time_weeks_short">%1$dವಾ</string>
-    <string name="format_time_months_short">%1$dತಿ</string>
-    <string name="format_time_years_short">%1$dವ</string>
-    <string name="reaction_add">ಪ್ರತಿಕ್ರಿಯೆ ಸೇರಿಸು</string>
+    <string name="push_service_action_hide">ಮರೆಮಾಡಿ</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d ಚಂದಾದಾರ</item>
-        <item quantity="other">%1$d ಚಂದಾದಾರರು</item>
-    </plurals>
-
-    <string name="bootstrap_welcome_back">ಮರಳಿ ಸ್ವಾಗತ</string>
-    <string name="bootstrap_continue_as">%1$s ಆಗಿ ಮುಂದುವರಿಸಿ</string>
-    <string name="bootstrap_sign_in_differently">ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
-    <string name="bootstrap_choose_account">ಖಾತೆಯನ್ನು ಆರಿಸಿ</string>
-    <string name="bootstrap_sign_in_different_server">ಬೇರೆ ಸರ್ವರ್‌ಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
+    <string name="push_service_channel">Mochi ಪುಶ್</string>
+    <string name="push_service_channel_description">ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಲು Mochi ಅನ್ನು ಸಂಪರ್ಕಿತವಾಗಿ ಇರಿಸುತ್ತದೆ</string>
+    <string name="push_service_title">Mochi ಸೂಚನೆಗಳಿಗಾಗಿ ಕಾಯುತ್ತಿದೆ</string>
+    <string name="push_service_text">ನೀವು ಈ ಸೂಚನೆಯನ್ನು ಮರೆಮಾಡಬಹುದು</string>
+    <string name="reauth_channel_name">Mochi: ಸೈನ್ ಇನ್ ಅಗತ್ಯವಿದೆ</string>
+    <string name="reauth_channel_description">ನಿಮ್ಮ ಸೆಷನ್ ಅನೂರ್ಜಿತಗೊಳಿಸಲ್ಪಟ್ಟಿರುವುದರಿಂದ Mochi ನಿಮ್ಮ ಸರ್ವರ್ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗದಿದ್ದಾಗ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತದೆ</string>
+    <string name="reauth_signin_title">Mochi: ಮತ್ತೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
+    <string name="reauth_signin_text">ನೀವು ಮತ್ತೆ ಸೈನ್ ಇನ್ ಮಾಡುವವರೆಗೆ ಸೂಚನೆಗಳನ್ನು ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ</string>
 </resources>

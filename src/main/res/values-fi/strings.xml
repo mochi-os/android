@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Käyttö evätty</string>
     <string name="auth_email">Sähköposti</string>
@@ -47,76 +48,14 @@
     <string name="reaction_angry">Vihainen</string>
     <string name="reaction_agree">Samaa mieltä</string>
     <string name="reaction_disagree">Eri mieltä</string>
-    <string name="error_network">Yhteyttä ei voi muodostaa. Tarkista internet-yhteytesi ja yritä uudelleen.</string>
-    <string name="error_authentication_required">Vaaditaan todennus</string>
-    <string name="error_not_found">Ei löytynyt</string>
-    <string name="error_server">Palvelinvirhe (%1$d). Yritä myöhemmin uudelleen.</string>
-    <string name="error_unexpected">Odottamaton virhe tapahtui</string>
-    <string name="error_request_failed">Pyyntö epäonnistui</string>
-    <string name="error_enter_server_url">Anna palvelimen URL</string>
-    <string name="error_enter_email">Anna sähköpostiosoitteesi</string>
-    <string name="error_enter_name">Anna nimi</string>
-    <string name="auth_connect_to_server">Yhdistä palvelimeesi</string>
-    <string name="auth_server_url">Palvelimen URL</string>
-    <string name="auth_connect">Yhdistä</string>
-    <string name="auth_sign_in">Kirjaudu sisään</string>
-    <string name="auth_sign_in_with_passkey">Kirjaudu sisään passkeyllä</string>
-    <string name="auth_sign_in_with_email_code">Kirjaudu sisään sähköpostikoodilla</string>
-    <string name="auth_use_recovery_code">Käytä palautuskoodia</string>
-    <string name="auth_back_to_sign_in">Takaisin kirjautumiseen</string>
-    <string name="auth_send_code">Lähetä koodi</string>
-    <string name="auth_check_email">Tarkista sähköpostisi vahvistuskoodin saamiseksi</string>
-    <string name="auth_six_digit_code">6-numeroinen koodi</string>
-    <string name="auth_mfa_title">Monivaiheinen todennus</string>
-    <string name="auth_mfa_subtitle">Suorita jäljellä olevat vahvistusvaiheet</string>
-    <string name="auth_recover_account">Palauta tili</string>
-    <string name="auth_create_identity_title">Luo henkilöllisyytesi</string>
-    <string name="auth_create_identity_subtitle">Valitse nimi henkilöllisyydellesi tällä palvelimella</string>
-    <string name="common_or">tai</string>
-    <string name="common_change">Muuta</string>
-    <string name="common_retry">Yritä uudelleen</string>
-    <string name="common_more_options">Lisää vaihtoehtoja</string>
-    <string name="common_collapse">Pienennä</string>
-    <string name="common_expand">Laajenna</string>
-    <string name="common_play_video">Toista video</string>
-    <string name="place_picker_name">Paikan nimi</string>
-    <string name="place_origin">Alkuperä</string>
-    <string name="place_destination">Kohde</string>
-    <string name="discovery_search_placeholder">Hae %1$s</string>
-    <string name="discovery_no_results">%1$s ei löytynyt</string>
-    <string name="discovery_no_recommendations">Ei suosituksia</string>
-    <string name="discovery_search_hint">Yritä etsiä %1$s tilattavaksi</string>
-    <string name="access_add_rule">Lisää sääntö</string>
-    <string name="access_no_rules">Ei käyttöoikeussääntöjä</string>
-    <string name="access_no_rules_subtitle">Lisää sääntöjä hallitaksesi, kuka voi käyttää tätä resurssia</string>
-    <string name="access_add_rule_title">Lisää käyttöoikeussääntö</string>
-    <string name="access_level_react">Reagoi</string>
-    <string name="entity_avatar_alt">Avatar käyttäjälle %1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="format_time_just_now">Juuri nyt</string>
-    <string name="format_time_minutes_ago">%1$dmin sitten</string>
-    <string name="format_time_hours_ago">%1$dt sitten</string>
-    <string name="format_time_days_ago">%1$dpv sitten</string>
-    <string name="format_time_weeks_ago">%1$dvk sitten</string>
-    <string name="format_time_months_ago">%1$dkk sitten</string>
-    <string name="format_time_years_ago">%1$dv sitten</string>
-    <string name="format_time_minutes_short">%1$dmin</string>
-    <string name="format_time_hours_short">%1$dt</string>
-    <string name="format_time_days_short">%1$dpv</string>
-    <string name="format_time_weeks_short">%1$dvk</string>
-    <string name="format_time_months_short">%1$dkk</string>
-    <string name="format_time_years_short">%1$dv</string>
-    <string name="reaction_add">Lisää reaktio</string>
+    <string name="push_service_action_hide">Piilota</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d tilaaja</item>
-        <item quantity="other">%1$d tilaajaa</item>
-    </plurals>
-
-    <string name="bootstrap_welcome_back">Tervetuloa takaisin</string>
-    <string name="bootstrap_continue_as">Jatka nimellä %1$s</string>
-    <string name="bootstrap_sign_in_differently">Kirjaudu toisella tavalla</string>
-    <string name="bootstrap_choose_account">Valitse tili</string>
-    <string name="bootstrap_sign_in_different_server">Kirjaudu toiselle palvelimelle</string>
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Pitää Mochin yhdistettynä ilmoitusten vastaanottamista varten</string>
+    <string name="push_service_title">Mochi kuuntelee ilmoituksia</string>
+    <string name="push_service_text">Voit piilottaa tämän ilmoituksen</string>
+    <string name="reauth_channel_name">Mochi: kirjautuminen vaaditaan</string>
+    <string name="reauth_channel_description">Näkyy, kun Mochi ei tavoita palvelintasi, koska istuntosi on mitätöity</string>
+    <string name="reauth_signin_title">Mochi: kirjaudu uudelleen</string>
+    <string name="reauth_signin_text">Ilmoitukset ovat tauolla, kunnes kirjaudut uudelleen sisään</string>
 </resources>

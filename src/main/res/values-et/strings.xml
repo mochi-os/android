@@ -48,5 +48,14 @@
     <string name="reaction_angry">Vihane</string>
     <string name="reaction_agree">Nõustu</string>
     <string name="reaction_disagree">Ei nõustu</string>
+    <string name="push_service_action_hide">Peida</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Hoiab Mochi ühendatuna teadete vastuvõtmiseks</string>
+    <string name="push_service_title">Mochi kuulab teateid</string>
+    <string name="push_service_text">Saate selle teate peita</string>
+    <string name="reauth_channel_name">Mochi: sisselogimine nõutav</string>
+    <string name="reauth_channel_description">Ilmub, kui Mochi ei saa teie serverit kätte, kuna teie seanss on tühistatud</string>
+    <string name="reauth_signin_title">Mochi: logige uuesti sisse</string>
+    <string name="reauth_signin_text">Teated on pausitud, kuni logite uuesti sisse</string>
 </resources>

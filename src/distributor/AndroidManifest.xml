@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Distributor manifest fragment. Pulled in only by apps that opt into being
+  a UnifiedPush distributor (the Mochi shell — apps/menu/android/) by
+  declaring a `distributor` source set in their build.gradle.kts. Per-app
+  apps (Feeds, Chat, Forums, Projects) deliberately do NOT include this so
+  the system distributor picker doesn't show one entry per Mochi app.
+
+  See claude/plans/android-notifications.md → "Manifest additions" for the
+  full rationale.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <receiver
+            android:name="org.mochios.android.push.MochiDistributorReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.unifiedpush.android.distributor.REGISTER" />
+                <action android:name="org.unifiedpush.android.distributor.UNREGISTER" />
+                <action android:name="org.unifiedpush.android.distributor.MESSAGE_ACK" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

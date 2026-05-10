@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="auth_email">Courriel</string>
-    <string name="auth_email_code">Code par courriel</string>
-
-</resources>

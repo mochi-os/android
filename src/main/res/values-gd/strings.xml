@@ -48,5 +48,14 @@
     <string name="reaction_angry">Feargach</string>
     <string name="reaction_agree">Aontaich</string>
     <string name="reaction_disagree">Eas-aontaich</string>
+    <string name="push_service_action_hide">Falaich</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Cumaidh e Mochi ceangailte airson brathan fhaighinn</string>
+    <string name="push_service_title">Mochi ag èisteachd ri brathan</string>
+    <string name="push_service_text">Faodaidh tu am brath seo a chur am falach</string>
+    <string name="reauth_channel_name">Mochi: feumail clàradh a-steach</string>
+    <string name="reauth_channel_description">Nochdaidh nuair nach urrainn dha Mochi am frithealaiche agad a ruigsinn oir tha an seisean agad neo-dhligheach</string>
+    <string name="reauth_signin_title">Mochi: clàraich a-steach a-rithist</string>
+    <string name="reauth_signin_text">Tha brathan air stad gus an clàraich thu a-steach a-rithist</string>
 </resources>

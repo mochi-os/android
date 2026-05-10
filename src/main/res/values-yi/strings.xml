@@ -48,5 +48,14 @@
     <string name="reaction_angry">אין כּעס</string>
     <string name="reaction_agree">מסכּים זײַן</string>
     <string name="reaction_disagree">נישט מסכּים</string>
+    <string name="push_service_action_hide">באַהאַלטן</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">האלט Mochi פֿאַרבונדן צו באַקומען נאָטיפֿיקאַציעס</string>
+    <string name="push_service_title">Mochi הערט פֿאַר נאָטיפֿיקאַציעס</string>
+    <string name="push_service_text">איר קענט באַהאַלטן דעם נאָטיפֿיקאַציע</string>
+    <string name="reauth_channel_name">Mochi: דאַרף אָנמעלדן</string>
+    <string name="reauth_channel_description">ווייזט זיך ווען Mochi קען נישט דערגרייכן אייער סערווער ווייל אייער סעסיע איז אַנגאַלטיק געמאַכט</string>
+    <string name="reauth_signin_title">Mochi: מעלדט זיך אן ווידער</string>
+    <string name="reauth_signin_text">נאָטיפֿיקאַציעס זיינען אָפּגעשטעלט ביז איר מעלדט זיך אן ווידער</string>
 </resources>

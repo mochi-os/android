@@ -153,4 +153,17 @@
     <string name="reaction_agree">Agree</string>
     <string name="reaction_disagree">Disagree</string>
 
+    <!-- PushService foreground-service notification -->
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Keeps Mochi connected to receive notifications</string>
+    <string name="push_service_title">Mochi listening for notifications</string>
+    <string name="push_service_text">You may hide this notification</string>
+    <string name="push_service_action_hide">Hide</string>
+
+    <!-- Reauth-required system notification (rare; surfaces only on persistent 401) -->
+    <string name="reauth_channel_name">Mochi sign-in required</string>
+    <string name="reauth_channel_description">Surfaces when Mochi can\'t reach your server because your session has been invalidated</string>
+    <string name="reauth_signin_title">Mochi: sign in again</string>
+    <string name="reauth_signin_text">Notifications are paused until you sign back in</string>
+
 </resources>

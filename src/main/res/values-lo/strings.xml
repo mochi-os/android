@@ -48,5 +48,14 @@
     <string name="reaction_angry">ໂກດ</string>
     <string name="reaction_agree">ເຫັນດີ</string>
     <string name="reaction_disagree">ບໍ່ເຫັນດີ</string>
+    <string name="push_service_action_hide">ເຊື່ອງ</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">ຮັກສາ Mochi ໃຫ້ເຊື່ອມຕໍ່ເພື່ອຮັບການແຈ້ງເຕືອນ</string>
+    <string name="push_service_title">Mochi ກຳລັງລໍຖ້າການແຈ້ງເຕືອນ</string>
+    <string name="push_service_text">ທ່ານສາມາດເຊື່ອງການແຈ້ງເຕືອນນີ້ໄດ້</string>
+    <string name="reauth_channel_name">Mochi: ຕ້ອງການເຂົ້າສູ່ລະບົບ</string>
+    <string name="reauth_channel_description">ປະກົດເມື່ອ Mochi ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີຂອງທ່ານໄດ້ເພາະວ່າເຊດຊັນຂອງທ່ານຖືກຍົກເລີກ</string>
+    <string name="reauth_signin_title">Mochi: ເຂົ້າສູ່ລະບົບອີກຄັ້ງ</string>
+    <string name="reauth_signin_text">ການແຈ້ງເຕືອນຖືກຢຸດຊົ່ວຄາວຈົນກວ່າທ່ານຈະເຂົ້າສູ່ລະບົບອີກຄັ້ງ</string>
 </resources>

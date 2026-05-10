@@ -48,5 +48,14 @@
     <string name="reaction_angry">Ambek</string>
     <string name="reaction_agree">Satuju</string>
     <string name="reaction_disagree">Teu satuju</string>
+    <string name="push_service_action_hide">Sumputkeun</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Ngajaga Mochi tetep nyambung pikeun nampi bewara</string>
+    <string name="push_service_title">Mochi nuju ngadangukeun bewara</string>
+    <string name="push_service_text">Anjeun tiasa nyumputkeun bewara ieu</string>
+    <string name="reauth_channel_name">Mochi: kedah lebet</string>
+    <string name="reauth_channel_description">Muncul nalika Mochi teu tiasa ngahontal pangladén anjeun kusabab sési anjeun dibatalkeun</string>
+    <string name="reauth_signin_title">Mochi: lebet deui</string>
+    <string name="reauth_signin_text">Bewara dijeda dugi anjeun lebet deui</string>
 </resources>

@@ -48,5 +48,14 @@
     <string name="reaction_angry">Ljut</string>
     <string name="reaction_agree">Slažem se</string>
     <string name="reaction_disagree">Ne slažem se</string>
+    <string name="push_service_action_hide">Sakrij</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Održava Mochi povezanim za primanje obavijesti</string>
+    <string name="push_service_title">Mochi sluša obavijesti</string>
+    <string name="push_service_text">Možete sakriti ovu obavijest</string>
+    <string name="reauth_channel_name">Mochi: potrebna prijava</string>
+    <string name="reauth_channel_description">Pojavljuje se kada Mochi ne može doći do vašeg poslužitelja jer je vaša sesija poništena</string>
+    <string name="reauth_signin_title">Mochi: prijavite se ponovno</string>
+    <string name="reauth_signin_text">Obavijesti su pauzirane dok se ponovno ne prijavite</string>
 </resources>

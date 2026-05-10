@@ -48,5 +48,14 @@
     <string name="reaction_angry">Phiñasqa</string>
     <string name="reaction_agree">Iñiy</string>
     <string name="reaction_disagree">Mana iñiy</string>
+    <string name="push_service_action_hide">Pakay</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi-ta tinkichisqa hark\'an willaykunata chaskinapaq</string>
+    <string name="push_service_title">Mochi willaykunata uyarichkan</string>
+    <string name="push_service_text">Kay willaytaqa pakayta atinki</string>
+    <string name="reauth_channel_name">Mochi: yaykuyqa kanmi</string>
+    <string name="reauth_channel_description">Sessionniyki ch\'usaqyachisqa kaptin Mochi servidornikiman mana chayanchu chayqa rikhurin</string>
+    <string name="reauth_signin_title">Mochi: yapamanta yaykuy</string>
+    <string name="reauth_signin_text">Willaykunaqa sayachisqa kachkanku qan yapamanta yaykunaykikama</string>
 </resources>

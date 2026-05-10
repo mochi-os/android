@@ -48,5 +48,14 @@
     <string name="reaction_angry">غصه</string>
     <string name="reaction_agree">موافق یم</string>
     <string name="reaction_disagree">موافق نه یم</string>
+    <string name="push_service_action_hide">پټ کړه</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi د خبرتیاوو ترلاسه کولو لپاره وصل ساتي</string>
+    <string name="push_service_title">Mochi د خبرتیاوو لپاره غوږ نیسي</string>
+    <string name="push_service_text">تاسو کولی شئ دا خبرتیا پټه کړئ</string>
+    <string name="reauth_channel_name">Mochi: ننوتل اړین دي</string>
+    <string name="reauth_channel_description">هغه وخت ښکاري کله چې ستاسو ناسته باطله شي او Mochi نشي کولی ستاسو سرور ته ورسیږي</string>
+    <string name="reauth_signin_title">Mochi: بیا ننوځئ</string>
+    <string name="reauth_signin_text">خبرتیاوې تر هغه وخته ودرول شوې چې تاسو بیا ننوځئ</string>
 </resources>

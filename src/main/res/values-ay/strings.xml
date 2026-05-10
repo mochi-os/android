@@ -48,5 +48,14 @@
     <string name="reaction_angry">Colerasita</string>
     <string name="reaction_agree">Iyawsaña</string>
     <string name="reaction_disagree">Jan iyawsaña</string>
+    <string name="push_service_action_hide">Imantaña</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi ukax sat\'antasiñ tuqit yatiyawinakax katuqaña</string>
+    <string name="push_service_title">Mochi yatiyawinak ist\'asksiwa</string>
+    <string name="push_service_text">Aka yatiyawix imantasinkamawa</string>
+    <string name="reauth_channel_name">Mochi: mantañax wakisiwa</string>
+    <string name="reauth_channel_description">Sesionamax jan walt\'ata utjipan, Mochi servidor tuqit jan jik\'iqipan uñstaspawa</string>
+    <string name="reauth_signin_title">Mochi: mantañ kutt\'apxam</string>
+    <string name="reauth_signin_text">Yatiyawinakax mantañ kutt\'asksinkam, sayt\'atapinpiniwa</string>
 </resources>

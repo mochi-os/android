@@ -48,5 +48,14 @@
     <string name="reaction_angry">Nahnevané</string>
     <string name="reaction_agree">Súhlasím</string>
     <string name="reaction_disagree">Nesúhlasím</string>
+    <string name="push_service_action_hide">Skryť</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Udržuje Mochi pripojené na príjem notifikácií</string>
+    <string name="push_service_title">Mochi počúva notifikácie</string>
+    <string name="push_service_text">Túto notifikáciu môžete skryť</string>
+    <string name="reauth_channel_name">Mochi: vyžaduje sa prihlásenie</string>
+    <string name="reauth_channel_description">Zobrazí sa, keď sa Mochi nedokáže dostať na váš server, pretože vaša relácia bola zneplatnená</string>
+    <string name="reauth_signin_title">Mochi: prihláste sa znova</string>
+    <string name="reauth_signin_text">Notifikácie sú pozastavené, kým sa znova neprihlásite</string>
 </resources>

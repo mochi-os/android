@@ -48,5 +48,14 @@
     <string name="reaction_angry">Лутито</string>
     <string name="reaction_agree">Се согласувам</string>
     <string name="reaction_disagree">Не се согласувам</string>
+    <string name="push_service_action_hide">Сокриј</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Го одржува Mochi поврзан за примање известувања</string>
+    <string name="push_service_title">Mochi слуша за известувања</string>
+    <string name="push_service_text">Може да го скриете ова известување</string>
+    <string name="reauth_channel_name">Mochi: потребно е најавување</string>
+    <string name="reauth_channel_description">Се појавува кога Mochi не може да допре до вашиот сервер бидејќи вашата сесија е поништена</string>
+    <string name="reauth_signin_title">Mochi: најавете се повторно</string>
+    <string name="reauth_signin_text">Известувањата се паузирани додека повторно не се најавите</string>
 </resources>

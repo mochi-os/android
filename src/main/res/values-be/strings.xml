@@ -48,5 +48,14 @@
     <string name="reaction_angry">Злосна</string>
     <string name="reaction_agree">Згодны</string>
     <string name="reaction_disagree">Не згодны</string>
+    <string name="push_service_action_hide">Схаваць</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Падтрымлівае злучэнне Mochi для атрымання апавяшчэнняў</string>
+    <string name="push_service_title">Mochi чакае апавяшчэнняў</string>
+    <string name="push_service_text">Вы можаце схаваць гэта апавяшчэнне</string>
+    <string name="reauth_channel_name">Mochi: патрабуецца ўваход</string>
+    <string name="reauth_channel_description">З\'яўляецца, калі Mochi не можа звязацца з вашым серверам, бо ваш сеанс аннуляваны</string>
+    <string name="reauth_signin_title">Mochi: увайдзіце зноў</string>
+    <string name="reauth_signin_text">Апавяшчэнні прыпынены да паўторнага ўваходу</string>
 </resources>

@@ -48,5 +48,14 @@
     <string name="reaction_angry">Aarii</string>
     <string name="reaction_agree">Ittan walii gala</string>
     <string name="reaction_disagree">Wal mormi</string>
+    <string name="push_service_action_hide">Dhoksi</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Mochi beeksisawwan fudhachuuf akka walqabsiifame ta\'u taasisa</string>
+    <string name="push_service_title">Mochi beeksisawwan eega jira</string>
+    <string name="push_service_text">Beeksisa kana dhoksuu dandeessa</string>
+    <string name="reauth_channel_name">Mochi: galuun barbaachisa</string>
+    <string name="reauth_channel_description">Sababaa sessenii kee fashalaa\'eef Mochi sarvarii kee dhaquu hin dandeenye yeroo mul\'ata</string>
+    <string name="reauth_signin_title">Mochi: irra deebi\'ii gali</string>
+    <string name="reauth_signin_text">Hanga irra deebi\'ee galtutti beeksisawwan dhaabbatu</string>
 </resources>

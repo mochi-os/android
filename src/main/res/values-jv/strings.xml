@@ -48,5 +48,14 @@
     <string name="reaction_angry">Nesu</string>
     <string name="reaction_agree">Setuju</string>
     <string name="reaction_disagree">Ora setuju</string>
+    <string name="push_service_action_hide">Singidaké</string>
 
+    <string name="push_service_channel">Mochi push</string>
+    <string name="push_service_channel_description">Njaga Mochi tetep nyambung kanggo nampa kabar</string>
+    <string name="push_service_title">Mochi lagi ngrungokake kabar</string>
+    <string name="push_service_text">Sampeyan bisa ndhelikake kabar iki</string>
+    <string name="reauth_channel_name">Mochi: kudu mlebu</string>
+    <string name="reauth_channel_description">Tampil nalika Mochi ora bisa tekan server sampeyan amarga sesi sampeyan dibatalake</string>
+    <string name="reauth_signin_title">Mochi: mlebu maneh</string>
+    <string name="reauth_signin_text">Kabar dijeda nganti sampeyan mlebu maneh</string>
 </resources>
