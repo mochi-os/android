@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  Notification small icon for the PushService foreground notification.
-  Material-style notifications bell, monochrome white (Android tints it
-  to match the channel). Placeholder until a Mochi-branded glyph lands.
--->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
@@ -11,5 +6,5 @@
     android:viewportHeight="24">
     <path
         android:fillColor="@android:color/white"
-        android:pathData="M12,22c1.1,0 2,-0.9 2,-2h-4c0,1.1 0.9,2 2,2zM18,16v-5c0,-3.07 -1.63,-5.64 -4.5,-6.32V4c0,-0.83 -0.67,-1.5 -1.5,-1.5s-1.5,0.67 -1.5,1.5v0.68C7.64,5.36 6,7.92 6,11v5l-2,2v1h16v-1l-2,-2z" />
+        android:pathData="M12,4 C16.5,4 20,7 20,11.5 C20,15 17.5,17 15.5,18 C14.5,18.5 13.5,18.7 12,18.7 C10.5,18.7 9.5,18.5 8.5,18 C6.5,17 4,15 4,11.5 C4,7 7.5,4 12,4 Z" />
 </vector>
