@@ -12,7 +12,10 @@ import android.util.Log
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import okhttp3.Cookie
 import okhttp3.HttpUrl.Companion.toHttpUrl
@@ -55,12 +58,15 @@ class PushService : Service() {
     @Inject lateinit var okHttpClient: OkHttpClient
 
     private val store by lazy { DistributorStore(applicationContext) }
-    // server → subscriptionId. Uses ConcurrentHashMap so connect() can claim
+    // identity → subscriptionId. ConcurrentHashMap so reconcile() can claim
     // a slot atomically via putIfAbsent — onStartCommand can fire reentrantly
-    // (Hilt re-init, system restarts) and we'd otherwise register the same
-    // callback twice and dispatch each push N times.
+    // (Hilt re-init, system restarts, accountsFlow emissions) and we'd
+    // otherwise register the same callback twice and dispatch each push N
+    // times. Keyed by identity (not server) because two accounts can live on
+    // the same server with different user tokens.
     private val subscriptions = java.util.concurrent.ConcurrentHashMap<String, String>()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private var accountsJob: Job? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -69,13 +75,24 @@ class PushService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         startForegroundCompat()
-        connect()
+        // Initial snapshot — accountsFlow does NOT emit synchronously on
+        // collection, so we have to seed from MochiAccount.all() ourselves.
+        reconcile(MochiAccount.all(applicationContext))
+        // Then watch for changes (new identity added, identity removed) and
+        // re-reconcile on every emission. The previous job is cancelled in
+        // case onStartCommand fires reentrantly so we don't accumulate
+        // concurrent collectors.
+        accountsJob?.cancel()
+        accountsJob = MochiAccount.accountsFlow(applicationContext)
+            .onEach { reconcile(it) }
+            .launchIn(scope)
         return START_STICKY
     }
 
     override fun onDestroy() {
+        accountsJob?.cancel()
         for ((_, id) in subscriptions) {
-            webSocket.unsubscribe(id)
+            if (id != PENDING) webSocket.unsubscribe(id)
         }
         subscriptions.clear()
         super.onDestroy()
@@ -83,16 +100,47 @@ class PushService : Service() {
 
     override fun onBind(intent: Intent?): IBinder? = null
 
-    private fun connect() {
-        val account = MochiAccount.first(applicationContext) ?: run {
-            Log.w(TAG, "No Mochi account; idle until one is added")
+    /**
+     * Multiplex subscriptions across the current set of Mochi identities.
+     *
+     * For each account not yet subscribed → connect.
+     * For each existing subscription whose identity has disappeared → drop.
+     *
+     * Safe to call concurrently and reentrantly: the per-identity slot
+     * claim uses putIfAbsent, so a second caller observing the same account
+     * set won't double-subscribe.
+     */
+    private fun reconcile(accounts: List<MochiAccount.Snapshot>) {
+        if (accounts.isEmpty()) {
+            Log.w(TAG, "No Mochi accounts; idle until one is added")
+            // Drop any leftover subscriptions if the last account got removed.
+            for ((identity, id) in subscriptions) {
+                if (id != PENDING) webSocket.unsubscribe(id)
+                subscriptions.remove(identity)
+            }
             return
         }
+        val current = accounts.map { it.identity }.toSet()
+        // Drop subscriptions whose identity is no longer present.
+        for ((identity, id) in subscriptions) {
+            if (identity !in current) {
+                Log.i(TAG, "Identity $identity gone; unsubscribing")
+                if (id != PENDING) webSocket.unsubscribe(id)
+                subscriptions.remove(identity)
+            }
+        }
+        // Add subscriptions for newly-present identities.
+        for (account in accounts) {
+            connectOne(account)
+        }
+    }
+
+    private fun connectOne(account: MochiAccount.Snapshot) {
         // Claim the slot atomically before launching the coroutine. If a
-        // concurrent connect() already claimed (returns non-null), bail out
-        // so we don't end up registering two callbacks against
+        // concurrent reconcile() already claimed (returns non-null), bail
+        // out so we don't end up registering two callbacks against
         // MochiWebSocket.subscribe and dispatching every push twice.
-        if (subscriptions.putIfAbsent(account.server, PENDING) != null) return
+        if (subscriptions.putIfAbsent(account.identity, PENDING) != null) return
 
         scope.launch {
             var sid: String? = null
@@ -108,17 +156,23 @@ class PushService : Service() {
                     Log.w(TAG, "Could not mint token for ${account.server}; WS will not authenticate")
                     return@launch
                 }
-                Log.i(TAG, "Subscribing to push channel on ${account.server}")
+                Log.i(TAG, "Subscribing to push channel on ${account.server} (identity ${account.identity})")
                 sid = webSocket.subscribe(
                     serverUrl = account.server,
                     fingerprint = FINGERPRINT,
                     token = token,
-                ) { event -> handleEvent(event) }
-                subscriptions[account.server] = sid
+                ) { event -> handleEvent(event, account.server, token) }
+                subscriptions[account.identity] = sid
+                // Drain anything queued while we were offline. The server queues
+                // events whenever the live WS push had no subscriber (phone
+                // killed, Doze drop, transient network). Drained events go
+                // through the same dispatch path as live ones so per-app
+                // receivers see them as ordinary pushes.
+                drainPending(account.server, token)
             } finally {
                 // If we didn't get to a real subscription id, drop the
-                // placeholder so the next connect() can retry.
-                if (sid == null) subscriptions.remove(account.server, PENDING)
+                // placeholder so the next reconcile() can retry.
+                if (sid == null) subscriptions.remove(account.identity, PENDING)
             }
         }
     }
@@ -160,9 +214,23 @@ class PushService : Service() {
         }.getOrNull()
     }
 
-    private fun handleEvent(event: org.mochios.android.model.WebSocketEvent) {
+    private fun handleEvent(
+        event: org.mochios.android.model.WebSocketEvent,
+        server: String,
+        token: String,
+    ) {
         val subId = event.subId ?: return
         val payload = event.payload ?: return
+        dispatchPush(subId, payload)
+        // Ack so the matching push_pending row is removed server-side. The
+        // server queues every unifiedpush event for durability; if we never
+        // ack, the row stays around until the 7-day TTL sweep.
+        val account = subId.toIntOrNull() ?: return
+        val eventId = extractTag(payload) ?: return
+        scope.launch { ackEvent(server, token, account, eventId) }
+    }
+
+    private fun dispatchPush(subId: String, payload: String) {
         val entry = store.bySubId(subId)
         if (entry == null) {
             Log.w(TAG, "Received push for unknown subId=$subId; dropping")
@@ -176,6 +244,81 @@ class PushService : Service() {
         }
         applicationContext.sendBroadcast(out)
     }
+
+    /**
+     * GET /menu/-/push/drain → dispatch each queued event and ack in one batch.
+     *
+     * Fires once after every successful WS subscribe. The drain itself is
+     * read-only on the server, and the ack is a separate POST with the list
+     * of (account, event_id) pairs we delivered — so a crash mid-drain leaves
+     * the rows in place and we'll see them again on the next subscribe.
+     */
+    private fun drainPending(server: String, token: String) {
+        val url = server.trimEnd('/') + "/menu/-/push/drain"
+        val request = Request.Builder()
+            .url(url)
+            .header("Authorization", "Bearer $token")
+            .post("".toRequestBody("application/x-www-form-urlencoded".toMediaType()))
+            .build()
+        runCatching {
+            okHttpClient.newCall(request).execute().use { resp ->
+                if (!resp.isSuccessful) {
+                    Log.w(TAG, "/menu/-/push/drain returned ${resp.code}")
+                    return@use
+                }
+                val raw = resp.body?.string().orEmpty()
+                val events = JSONObject(raw).optJSONArray("data") ?: return@use
+                if (events.length() == 0) return@use
+                Log.i(TAG, "Draining ${events.length()} queued event(s) from $server")
+                val acks = org.json.JSONArray()
+                for (i in 0 until events.length()) {
+                    val ev = events.getJSONObject(i)
+                    val subId = ev.optString("subId")
+                    val payload = ev.optString("payload")
+                    val account = ev.optInt("account", 0)
+                    val eventId = ev.optString("event_id")
+                    if (subId.isBlank() || payload.isBlank()) continue
+                    dispatchPush(subId, payload)
+                    if (account > 0 && eventId.isNotBlank()) {
+                        acks.put(JSONObject().put("account", account).put("event_id", eventId))
+                    }
+                }
+                if (acks.length() > 0) {
+                    ackBatch(server, token, acks)
+                }
+            }
+        }.onFailure { Log.w(TAG, "Drain failed: ${it.message}") }
+    }
+
+    private fun ackEvent(server: String, token: String, account: Int, eventId: String) {
+        val acks = org.json.JSONArray().put(
+            JSONObject().put("account", account).put("event_id", eventId)
+        )
+        ackBatch(server, token, acks)
+    }
+
+    private fun ackBatch(server: String, token: String, acks: org.json.JSONArray) {
+        val url = server.trimEnd('/') + "/menu/-/push/ack"
+        val form = okhttp3.FormBody.Builder()
+            .add("events", acks.toString())
+            .build()
+        val request = Request.Builder()
+            .url(url)
+            .header("Authorization", "Bearer $token")
+            .post(form)
+            .build()
+        runCatching {
+            okHttpClient.newCall(request).execute().use { resp ->
+                if (!resp.isSuccessful) {
+                    Log.w(TAG, "/menu/-/push/ack returned ${resp.code}")
+                }
+            }
+        }.onFailure { Log.w(TAG, "Ack failed: ${it.message}") }
+    }
+
+    private fun extractTag(payload: String): String? = runCatching {
+        JSONObject(payload).optString("tag").takeIf { it.isNotBlank() }
+    }.getOrNull()
 
     private fun startForegroundCompat() {
         val pendingFlags = android.app.PendingIntent.FLAG_UPDATE_CURRENT or

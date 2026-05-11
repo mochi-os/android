@@ -40,6 +40,13 @@ class MochiWebSocket @Inject constructor(
             .build()
     }
 
+    // All internal maps are keyed by a composite `serverUrl::fingerprint`
+    // so two subscribe calls with the same fingerprint but different servers
+    // (e.g. the push distributor multiplexing across two Mochi identities)
+    // get separate WebSocket connections rather than silently sharing one.
+    private fun keyOf(serverUrl: String, fingerprint: String): String =
+        "$serverUrl::$fingerprint"
+
     fun subscribe(
         serverUrl: String,
         fingerprint: String,
@@ -47,11 +54,12 @@ class MochiWebSocket @Inject constructor(
         onEvent: (WebSocketEvent) -> Unit,
     ): String {
         val subscriptionId = UUID.randomUUID().toString()
+        val key = keyOf(serverUrl, fingerprint)
 
-        val callbacks = subscribers.getOrPut(fingerprint) { ConcurrentHashMap() }
+        val callbacks = subscribers.getOrPut(key) { ConcurrentHashMap() }
         callbacks[subscriptionId] = onEvent
 
-        if (!sockets.containsKey(fingerprint)) {
+        if (!sockets.containsKey(key)) {
             connect(serverUrl, fingerprint, token)
         }
 
@@ -59,25 +67,25 @@ class MochiWebSocket @Inject constructor(
     }
 
     fun unsubscribe(subscriptionId: String) {
-        val emptyFingerprints = mutableListOf<String>()
+        val emptyKeys = mutableListOf<String>()
 
-        for ((fingerprint, callbacks) in subscribers) {
+        for ((key, callbacks) in subscribers) {
             callbacks.remove(subscriptionId)
             if (callbacks.isEmpty()) {
-                emptyFingerprints.add(fingerprint)
+                emptyKeys.add(key)
             }
         }
 
-        for (fingerprint in emptyFingerprints) {
-            subscribers.remove(fingerprint)
-            reconnecting[fingerprint] = false
-            sockets.remove(fingerprint)?.close(1000, "No subscribers")
+        for (key in emptyKeys) {
+            subscribers.remove(key)
+            reconnecting[key] = false
+            sockets.remove(key)?.close(1000, "No subscribers")
         }
     }
 
     fun disconnectAll() {
         reconnecting.keys.forEach { reconnecting[it] = false }
-        for ((fingerprint, socket) in sockets) {
+        for ((_, socket) in sockets) {
             socket.close(1000, "Disconnect all")
         }
         sockets.clear()
@@ -88,14 +96,15 @@ class MochiWebSocket @Inject constructor(
     private val tokens = ConcurrentHashMap<String, String>()
 
     private fun connect(serverUrl: String, fingerprint: String, token: String? = null) {
+        val key = keyOf(serverUrl, fingerprint)
         if (token != null) {
-            tokens[fingerprint] = token
+            tokens[key] = token
         }
         val wsUrl = serverUrl
             .replace("https://", "wss://")
             .replace("http://", "ws://")
             .trimEnd('/')
-        val storedToken = tokens[fingerprint]
+        val storedToken = tokens[key]
         val url = if (storedToken != null) {
             "$wsUrl/_/websocket?key=$fingerprint&token=$storedToken"
         } else {
@@ -106,19 +115,19 @@ class MochiWebSocket @Inject constructor(
             .url(url)
             .build()
 
-        reconnecting[fingerprint] = true
+        reconnecting[key] = true
 
         val socket = wsClient.newWebSocket(request, object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
                 // Reset backoff on successful connect so the next failure
                 // starts at the short-end again.
-                backoffAttempts.remove(fingerprint)
+                backoffAttempts.remove(key)
             }
 
             override fun onMessage(webSocket: WebSocket, text: String) {
                 try {
                     val event = gson.fromJson(text, WebSocketEvent::class.java)
-                    val callbacks = subscribers[fingerprint]
+                    val callbacks = subscribers[key]
                     if (callbacks != null) {
                         for ((_, callback) in callbacks) {
                             try {
@@ -138,29 +147,30 @@ class MochiWebSocket @Inject constructor(
             }
 
             override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
-                sockets.remove(fingerprint)
+                sockets.remove(key)
                 scheduleReconnect(serverUrl, fingerprint)
             }
 
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
-                sockets.remove(fingerprint)
+                sockets.remove(key)
                 scheduleReconnect(serverUrl, fingerprint)
             }
         })
 
-        sockets[fingerprint] = socket
+        sockets[key] = socket
     }
 
     private fun scheduleReconnect(serverUrl: String, fingerprint: String) {
-        if (reconnecting[fingerprint] != true) return
-        if (subscribers[fingerprint].isNullOrEmpty()) return
+        val key = keyOf(serverUrl, fingerprint)
+        if (reconnecting[key] != true) return
+        if (subscribers[key].isNullOrEmpty()) return
 
         // Exponential backoff with ±20% jitter, capped at 5 minutes.
         // 1s → 2s → 4s → 8s → 16s → 32s → 64s → 128s → 256s → 300s (cap).
         // Jitter spreads thundering herds when many clients reconnect
         // after a server restart. Backoff prevents a tight loop when the
         // server is genuinely down.
-        val attempt = backoffAttempts.compute(fingerprint) { _, prev -> (prev ?: 0) + 1 }!!
+        val attempt = backoffAttempts.compute(key) { _, prev -> (prev ?: 0) + 1 }!!
         val baseMs = min(1000L shl (attempt - 1).coerceIn(0, 8), 300_000L)
         val jitterMs = (baseMs * (Math.random() * 0.4 - 0.2)).toLong()
         val delayMs = baseMs + jitterMs
@@ -171,7 +181,7 @@ class MochiWebSocket @Inject constructor(
             } catch (e: InterruptedException) {
                 return@Thread
             }
-            if (reconnecting[fingerprint] == true && !subscribers[fingerprint].isNullOrEmpty()) {
+            if (reconnecting[key] == true && !subscribers[key].isNullOrEmpty()) {
                 connect(serverUrl, fingerprint)
             }
         }.start()
