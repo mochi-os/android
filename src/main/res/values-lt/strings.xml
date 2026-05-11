@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Rodomas, kai Mochi negali pasiekti jūsų serverio, nes jūsų sesija buvo panaikinta</string>
     <string name="reauth_signin_title">Mochi: prisijunkite iš naujo</string>
     <string name="reauth_signin_text">Pranešimai pristabdyti, kol prisijungsite iš naujo</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Likite pasiekiami fone</string>
+    <string name="oem_hint_body">Kad Mochi pristatytų pranešimus, jis turi veikti fone. Leiskite tai kitame ekrane, kitaip telefonas gali sustabdyti pranešimus, kai ekranas išjungtas.</string>
+    <string name="oem_hint_samsung_note">Samsung telefonuose taip pat patikrinkite Settings → Device care → Sleeping apps ir pašalinkite Mochi, jei jis sąraše.</string>
+    <string name="oem_hint_allow">Leisti foną</string>
+    <string name="oem_hint_dismiss">Daugiau nerodyti</string>
+
 </resources>

@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Sessiyanız ləğv edildiyi üçün Mochi serverinizə çata bilməyəndə görünür</string>
     <string name="reauth_signin_title">Mochi: yenidən daxil olun</string>
     <string name="reauth_signin_text">Yenidən daxil olana qədər bildirişlər dayandırılıb</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Arxa fonda əlçatan qalın</string>
+    <string name="oem_hint_body">Mochi bildirişləri çatdırmaq üçün arxa fonda işləməlidir. Zəhmət olmasa növbəti ekranda buna icazə verin, əks halda ekran sönəndə telefonunuz bildirişləri dayandıra bilər.</string>
+    <string name="oem_hint_samsung_note">Samsung telefonlarda həmçinin Settings → Device care → Sleeping apps yoxlayın və Mochi siyahıdadırsa silin.</string>
+    <string name="oem_hint_allow">Arxa fona icazə ver</string>
+    <string name="oem_hint_dismiss">Bir daha göstərmə</string>
+
 </resources>

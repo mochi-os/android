@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Yana bayyana lokacin da Mochi ba zai iya isa ga sabar ku ba saboda an soke zaman ku</string>
     <string name="reauth_signin_title">Mochi: shiga kuma</string>
     <string name="reauth_signin_text">Sanarwa sun dakata har sai kun shiga kuma</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Ka kasance a wurin bayan fage</string>
+    <string name="oem_hint_body">Mochi yana buƙatar yin aiki a bayan fage don kawo sanarwa. Don Allah a ba da izini a allon mai zuwa, in ba haka ba wayarka tana iya tsayar da sanarwa lokacin da allon ya kashe.</string>
+    <string name="oem_hint_samsung_note">A wayoyin Samsung, kuma duba Settings → Device care → Sleeping apps kuma cire Mochi idan yana cikin jeri.</string>
+    <string name="oem_hint_allow">Bada izinin bayan fage</string>
+    <string name="oem_hint_dismiss">Kar a sake nuna</string>
+
 </resources>

@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Ivela lapho i-Mochi ingakwazi ukufinyelela iseva yakho ngenxa yokuthi iseshini yakho icishiwe</string>
     <string name="reauth_signin_title">Mochi: ngena ngemvume futhi</string>
     <string name="reauth_signin_text">Izaziso zimisiwe okwesikhashana ize ungene ngemvume futhi</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Hlala ufinyeleleka ngemuva</string>
+    <string name="oem_hint_body">I-Mochi kumelwe isebenze ngemuva ukuze ilethe izaziso. Sicela uvumele lokhu esikrinini esilandelayo, ngenye indlela ifoni yakho ingakhipha izaziso uma isikrini sicishiwe.</string>
+    <string name="oem_hint_samsung_note">Kumakhalekhukhwini e-Samsung, hlola futhi i-Settings → Device care → Sleeping apps bese ususa i-Mochi uma ifakwe ohlwini.</string>
+    <string name="oem_hint_allow">Vumela ngemuva</string>
+    <string name="oem_hint_dismiss">Ungabonisi futhi</string>
+
 </resources>

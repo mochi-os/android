@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">ਜਦੋਂ Mochi ਤੁਹਾਡੇ ਸਰਵਰ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਸਕਦਾ ਕਿਉਂਕਿ ਤੁਹਾਡਾ ਸੈਸ਼ਨ ਅਯੋਗ ਹੋ ਗਿਆ ਹੈ ਉਦੋਂ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ</string>
     <string name="reauth_signin_title">Mochi: ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਕਰੋ</string>
     <string name="reauth_signin_text">ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰਦੇ ਸੂਚਨਾਵਾਂ ਰੋਕ ਦਿੱਤੀਆਂ ਗਈਆਂ ਹਨ</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">ਬੈਕਗਰਾਊਂਡ ਵਿੱਚ ਉਪਲਬਧ ਰਹੋ</string>
+    <string name="oem_hint_body">ਨੋਟੀਫਿਕੇਸ਼ਨ ਦੇਣ ਲਈ Mochi ਨੂੰ ਬੈਕਗਰਾਊਂਡ ਵਿੱਚ ਚੱਲਣਾ ਚਾਹੀਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਅਗਲੀ ਸਕਰੀਨ \'ਤੇ ਇਸਦੀ ਇਜਾਜ਼ਤ ਦਿਓ, ਨਹੀਂ ਤਾਂ ਸਕਰੀਨ ਬੰਦ ਹੋਣ \'ਤੇ ਤੁਹਾਡਾ ਫ਼ੋਨ ਨੋਟੀਫਿਕੇਸ਼ਨ ਰੋਕ ਸਕਦਾ ਹੈ।</string>
+    <string name="oem_hint_samsung_note">Samsung ਫ਼ੋਨਾਂ \'ਤੇ Settings → Device care → Sleeping apps ਵੀ ਚੈੱਕ ਕਰੋ ਅਤੇ ਜੇ ਸੂਚੀ ਵਿੱਚ ਹੋਵੇ ਤਾਂ Mochi ਹਟਾਓ।</string>
+    <string name="oem_hint_allow">ਬੈਕਗਰਾਊਂਡ ਦੀ ਇਜਾਜ਼ਤ</string>
+    <string name="oem_hint_dismiss">ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ</string>
+
 </resources>

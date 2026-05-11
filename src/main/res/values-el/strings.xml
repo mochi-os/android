@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Εμφανίζεται όταν το Mochi δεν μπορεί να φτάσει στον διακομιστή σας επειδή η συνεδρία σας έχει ακυρωθεί</string>
     <string name="reauth_signin_title">Mochi: συνδεθείτε ξανά</string>
     <string name="reauth_signin_text">Οι ειδοποιήσεις έχουν παύσει μέχρι να συνδεθείτε ξανά</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Παραμείνετε προσβάσιμοι στο παρασκήνιο</string>
+    <string name="oem_hint_body">Το Mochi πρέπει να εκτελείται στο παρασκήνιο για να παραδίδει ειδοποιήσεις. Επιτρέψτε το στην επόμενη οθόνη, διαφορετικά το τηλέφωνό σας μπορεί να διακόψει τις ειδοποιήσεις όταν η οθόνη είναι κλειστή.</string>
+    <string name="oem_hint_samsung_note">Σε τηλέφωνα Samsung, ελέγξτε επίσης Settings → Device care → Sleeping apps και αφαιρέστε το Mochi εάν αναφέρεται.</string>
+    <string name="oem_hint_allow">Επιτρέψτε παρασκήνιο</string>
+    <string name="oem_hint_dismiss">Μην εμφανιστεί ξανά</string>
+
 </resources>

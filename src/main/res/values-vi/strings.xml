@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Xuất hiện khi Mochi không thể truy cập máy chủ của bạn vì phiên của bạn đã bị vô hiệu hóa</string>
     <string name="reauth_signin_title">Mochi: đăng nhập lại</string>
     <string name="reauth_signin_text">Thông báo tạm dừng cho đến khi bạn đăng nhập lại</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Vẫn liên lạc được trong nền</string>
+    <string name="oem_hint_body">Mochi phải chạy trong nền để gửi thông báo. Vui lòng cho phép điều này ở màn hình tiếp theo, nếu không điện thoại của bạn có thể tạm dừng thông báo khi màn hình tắt.</string>
+    <string name="oem_hint_samsung_note">Trên điện thoại Samsung, hãy kiểm tra cả Settings → Device care → Sleeping apps và xóa Mochi nếu được liệt kê.</string>
+    <string name="oem_hint_allow">Cho phép chạy nền</string>
+    <string name="oem_hint_dismiss">Không hiển thị lại</string>
+
 </resources>

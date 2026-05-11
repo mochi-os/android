@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Tampil nalika Mochi ora bisa tekan server sampeyan amarga sesi sampeyan dibatalake</string>
     <string name="reauth_signin_title">Mochi: mlebu maneh</string>
     <string name="reauth_signin_text">Kabar dijeda nganti sampeyan mlebu maneh</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Tetep bisa diakses ing latar mburi</string>
+    <string name="oem_hint_body">Mochi kudu mlaku ing latar mburi kanggo ngirim notifikasi. Mangga ngidinaké iki ing layar sabanjuré, yèn ora ponsel sampéyan bisa nyandhetaké notifikasi nalika layar mati.</string>
+    <string name="oem_hint_samsung_note">Ing ponsel Samsung, uga priksa Settings → Device care → Sleeping apps lan busak Mochi yèn ana ing dhaftar.</string>
+    <string name="oem_hint_allow">Idini latar mburi</string>
+    <string name="oem_hint_dismiss">Aja tampilake manèh</string>
+
 </resources>

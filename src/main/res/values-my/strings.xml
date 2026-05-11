@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">သင့်ရဲ့ session ကိုဖျက်လိုက်ပြီးဖြစ်၍ Mochi သည် သင့်ဆာဗာသို့မရောက်နိုင်သည့်အခါ ပေါ်လာသည်</string>
     <string name="reauth_signin_title">Mochi: ပြန်ဝင်ပါ</string>
     <string name="reauth_signin_text">ပြန်လည်ဝင်ရောက်သည်အထိ အကြောင်းကြားစာများ ရပ်ဆိုင်းထားသည်</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">နောက်ခံတွင် ဆက်သွယ်နိုင်အောင်ထားပါ</string>
+    <string name="oem_hint_body">Mochi သည် အကြောင်းကြားချက်များ ပို့ဆောင်ရန် နောက်ခံတွင် လည်ပတ်ရမည်။ ကျေးဇူးပြု၍ နောက်ဖန်သားပြင်တွင် ခွင့်ပြုပါ၊ မဟုတ်ပါက ဖန်သားပြင်ပိတ်ထားသောအခါ ဖုန်းသည် အကြောင်းကြားချက်များ ရပ်တန့်နိုင်သည်။</string>
+    <string name="oem_hint_samsung_note">Samsung ဖုန်းများတွင် Settings → Device care → Sleeping apps ကိုလည်း စစ်ဆေးပြီး စာရင်းတွင်ပါက Mochi ကို ဖယ်ရှားပါ။</string>
+    <string name="oem_hint_allow">နောက်ခံ ခွင့်ပြုပါ</string>
+    <string name="oem_hint_dismiss">ထပ်မပြပါနှင့်</string>
+
 </resources>

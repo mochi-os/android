@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">जेव्हा तुमचे सत्र अवैध झाल्यामुळे Mochi तुमच्या सर्व्हरपर्यंत पोहोचू शकत नाही तेव्हा दिसते</string>
     <string name="reauth_signin_title">Mochi: पुन्हा साइन इन करा</string>
     <string name="reauth_signin_text">तुम्ही पुन्हा साइन इन करेपर्यंत सूचना थांबवल्या आहेत</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">पार्श्वभूमीत उपलब्ध रहा</string>
+    <string name="oem_hint_body">सूचना देण्यासाठी Mochi ला पार्श्वभूमीत चालावे लागते. कृपया पुढील स्क्रीनवर याला परवानगी द्या, अन्यथा स्क्रीन बंद असताना तुमचा फोन सूचना थांबवू शकतो.</string>
+    <string name="oem_hint_samsung_note">Samsung फोनवर, Settings → Device care → Sleeping apps देखील तपासा आणि सूचीत असल्यास Mochi काढून टाका.</string>
+    <string name="oem_hint_allow">पार्श्वभूमी अनुमती द्या</string>
+    <string name="oem_hint_dismiss">पुन्हा दाखवू नका</string>
+
 </resources>

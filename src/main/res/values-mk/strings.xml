@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Се појавува кога Mochi не може да допре до вашиот сервер бидејќи вашата сесија е поништена</string>
     <string name="reauth_signin_title">Mochi: најавете се повторно</string>
     <string name="reauth_signin_text">Известувањата се паузирани додека повторно не се најавите</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Останете достапни во заднина</string>
+    <string name="oem_hint_body">Mochi мора да работи во заднина за да испорачува известувања. Дозволете го ова на следниот екран, инаку телефонот може да ги паузира известувањата кога екранот е исклучен.</string>
+    <string name="oem_hint_samsung_note">На Samsung телефони, проверете и Settings → Device care → Sleeping apps и отстранете го Mochi ако е на листата.</string>
+    <string name="oem_hint_allow">Дозволи заднина</string>
+    <string name="oem_hint_dismiss">Не покажувај повторно</string>
+
 </resources>

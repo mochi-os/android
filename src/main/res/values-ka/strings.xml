@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">ჩნდება, როდესაც Mochi ვერ აღწევს თქვენს სერვერთან, რადგან თქვენი სესია გაუქმებულია</string>
     <string name="reauth_signin_title">Mochi: ხელახლა შედით</string>
     <string name="reauth_signin_text">შეტყობინებები შეჩერებულია სანამ ხელახლა არ შეხვალთ</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">დარჩი ხელმისაწვდომი ფონზე</string>
+    <string name="oem_hint_body">Mochi უნდა მუშაობდეს ფონზე შეტყობინებების მისაწოდებლად. გთხოვთ, შემდეგ ეკრანზე ნებართვა მისცეთ, წინააღმდეგ შემთხვევაში თქვენი ტელეფონი შეიძლება შეაჩეროს შეტყობინებები, როცა ეკრანი გამორთულია.</string>
+    <string name="oem_hint_samsung_note">Samsung ტელეფონებზე ასევე შეამოწმეთ Settings → Device care → Sleeping apps და წაშალეთ Mochi, თუ ჩამოთვლილია.</string>
+    <string name="oem_hint_allow">ფონის ნება</string>
+    <string name="oem_hint_dismiss">აღარ ჩვენება</string>
+
 </resources>

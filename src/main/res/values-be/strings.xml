@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">З\'яўляецца, калі Mochi не можа звязацца з вашым серверам, бо ваш сеанс аннуляваны</string>
     <string name="reauth_signin_title">Mochi: увайдзіце зноў</string>
     <string name="reauth_signin_text">Апавяшчэнні прыпынены да паўторнага ўваходу</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Заставайцеся даступным у фонавым рэжыме</string>
+    <string name="oem_hint_body">Mochi павінен працаваць у фонавым рэжыме, каб дастаўляць паведамленні. Калі ласка, дазвольце гэта на наступным экране, інакш ваш тэлефон можа прыпыняць паведамленні, калі экран выключаны.</string>
+    <string name="oem_hint_samsung_note">На тэлефонах Samsung таксама праверце Settings → Device care → Sleeping apps і выдаліце Mochi, калі ён у спісе.</string>
+    <string name="oem_hint_allow">Дазволіць фон</string>
+    <string name="oem_hint_dismiss">Больш не паказваць</string>
+
 </resources>

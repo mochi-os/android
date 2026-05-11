@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Таны сесс хүчингүй болсон тул Mochi таны серверт хүрч чадаагүй үед гарна</string>
     <string name="reauth_signin_title">Mochi: дахин нэвтэрнэ үү</string>
     <string name="reauth_signin_text">Дахин нэвтрэх хүртэл мэдэгдлүүд түр зогссон</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Арын дэвсгэрт хүртээмжтэй байх</string>
+    <string name="oem_hint_body">Mochi мэдэгдэл хүргэхийн тулд арын дэвсгэрт ажиллах ёстой. Дараагийн дэлгэц дээр үүнийг зөвшөөрнө үү, эс тэгвээс таны утас дэлгэц унтрах үед мэдэгдлийг түр зогсоож болзошгүй.</string>
+    <string name="oem_hint_samsung_note">Samsung утсан дээр мөн Settings → Device care → Sleeping apps шалгаж, жагсаалтад байгаа бол Mochi-г устгана уу.</string>
+    <string name="oem_hint_allow">Арын дэвсгэр зөвшөөрөх</string>
+    <string name="oem_hint_dismiss">Дахин харуулахгүй</string>
+
 </resources>

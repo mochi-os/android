@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Ilmub, kui Mochi ei saa teie serverit kätte, kuna teie seanss on tühistatud</string>
     <string name="reauth_signin_title">Mochi: logige uuesti sisse</string>
     <string name="reauth_signin_text">Teated on pausitud, kuni logite uuesti sisse</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Püsi taustal kättesaadav</string>
+    <string name="oem_hint_body">Mochi peab töötama taustal, et teateid kohale toimetada. Palun lubage see järgmisel ekraanil, vastasel juhul võib teie telefon teateid pausida, kui ekraan on välja lülitatud.</string>
+    <string name="oem_hint_samsung_note">Samsungi telefonidel kontrollige ka Settings → Device care → Sleeping apps ja eemaldage Mochi, kui see on loendis.</string>
+    <string name="oem_hint_allow">Luba taust</string>
+    <string name="oem_hint_dismiss">Ära näita uuesti</string>
+
 </resources>

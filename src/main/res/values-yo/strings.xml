@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Ó hàn nígbà tí Mochi kò lè dé sí olùpèsè rẹ nítorí pé ìpàdé rẹ ti dí àìlò</string>
     <string name="reauth_signin_title">Mochi: tún wọlé</string>
     <string name="reauth_signin_text">Àwọn ìfitónilétí dúró títí ìwọ ó fi tún wọlé</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Wa ni iraye si ni abẹlẹ</string>
+    <string name="oem_hint_body">Mochi gbọdọ ṣiṣẹ ni abẹlẹ lati fi awọn iwifunni ranṣẹ. Jọwọ gba laaye eyi lori iboju ti n bọ, bibẹẹkọ foonu rẹ le da awọn iwifunni duro nigbati iboju ba pa.</string>
+    <string name="oem_hint_samsung_note">Lori awọn foonu Samsung, tun ṣayẹwo Settings → Device care → Sleeping apps ki o si yọ Mochi kuro ti o ba wa lori atokọ.</string>
+    <string name="oem_hint_allow">Gba abẹlẹ laaye</string>
+    <string name="oem_hint_dismiss">Maṣe fihan mọ</string>
+
 </resources>

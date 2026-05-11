@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">يظهر عندما لا يمكن لـ Mochi الوصول إلى خادمك لأن جلستك تم إبطالها</string>
     <string name="reauth_signin_title">Mochi: سجل الدخول مرة أخرى</string>
     <string name="reauth_signin_text">الإشعارات متوقفة مؤقتًا حتى تسجل الدخول مرة أخرى</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">ابقَ متاحاً في الخلفية</string>
+    <string name="oem_hint_body">يحتاج Mochi إلى العمل في الخلفية لتسليم الإشعارات. يُرجى السماح بذلك في الشاشة التالية، وإلا فقد يوقف هاتفك الإشعارات عند إيقاف الشاشة.</string>
+    <string name="oem_hint_samsung_note">على هواتف Samsung، تحقق أيضاً من Settings → Device care → Sleeping apps وأزل Mochi إذا كان مدرجاً.</string>
+    <string name="oem_hint_allow">السماح بالخلفية</string>
+    <string name="oem_hint_dismiss">عدم الإظهار مرة أخرى</string>
+
 </resources>

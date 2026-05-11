@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Iyabonakala xa i-Mochi ingakwazi ukufikelela kwiseva yakho ngenxa yokuba iseshoni yakho irhoxisiwe</string>
     <string name="reauth_signin_title">Mochi: ngena kwakhona</string>
     <string name="reauth_signin_text">Izaziso zinqunyanyisiwe ude ungene kwakhona</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Hlala ufikeleleka kwingxowa</string>
+    <string name="oem_hint_body">I-Mochi kufuneka iqhube kwingxowa ukuze isise izaziso. Nceda uvumele oku kwiscreen esilandelayo, kungenjalo ifowuni yakho ingayinqumamisa izaziso xa iscreen sicimile.</string>
+    <string name="oem_hint_samsung_note">Kwiifowuni ze-Samsung, jonga kwakhona i-Settings → Device care → Sleeping apps kwaye ususe i-Mochi ukuba iyadwelisiwe.</string>
+    <string name="oem_hint_allow">Vumela ingxowa</string>
+    <string name="oem_hint_dismiss">Ungaboniseli kwakhona</string>
+
 </resources>

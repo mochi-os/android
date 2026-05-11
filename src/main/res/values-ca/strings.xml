@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Apareix quan Mochi no pot accedir al vostre servidor perquè la vostra sessió s\'ha invalidat</string>
     <string name="reauth_signin_title">Mochi: torneu a iniciar sessió</string>
     <string name="reauth_signin_text">Les notificacions estan en pausa fins que torneu a iniciar sessió</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Mantén-te disponible en segon pla</string>
+    <string name="oem_hint_body">Mochi ha d\'executar-se en segon pla per lliurar notificacions. Permet-ho a la pantalla següent; en cas contrari, el teu telèfon pot aturar les notificacions quan la pantalla estigui apagada.</string>
+    <string name="oem_hint_samsung_note">Als telèfons Samsung, comprova també Settings → Device care → Sleeping apps i elimina Mochi si hi apareix.</string>
+    <string name="oem_hint_allow">Permet segon pla</string>
+    <string name="oem_hint_dismiss">No tornar a mostrar</string>
+
 </resources>

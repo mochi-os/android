@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Pojavi se, ko Mochi ne more doseči vašega strežnika, ker je bila vaša seja razveljavljena</string>
     <string name="reauth_signin_title">Mochi: ponovno se prijavite</string>
     <string name="reauth_signin_text">Obvestila so začasno ustavljena, dokler se ponovno ne prijavite</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Ostanite dosegljivi v ozadju</string>
+    <string name="oem_hint_body">Mochi mora teči v ozadju, da dostavi obvestila. Prosimo, dovolite to na naslednjem zaslonu, sicer lahko vaš telefon zaustavi obvestila, ko je zaslon izklopljen.</string>
+    <string name="oem_hint_samsung_note">Na telefonih Samsung preverite tudi Settings → Device care → Sleeping apps in odstranite Mochi, če je na seznamu.</string>
+    <string name="oem_hint_allow">Dovoli ozadje</string>
+    <string name="oem_hint_dismiss">Ne prikaži več</string>
+
 </resources>

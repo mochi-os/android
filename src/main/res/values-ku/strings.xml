@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Dema ku tora te betal bûye û Mochi nikare bigihê servera te xuya dibe</string>
     <string name="reauth_signin_title">Mochi: dîsa têkeve</string>
     <string name="reauth_signin_text">Agahdarî heya tu dîsa têkevî hatine sekinandin</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Li paşxaneyê berdest bimîne</string>
+    <string name="oem_hint_body">Mochi divê di paşxaneyê de bixebite da ku agahdariyan radest bike. Ji kerema xwe vê li ekrana paşîn destûr bidin, an na têlefona te dikare dema ekran girtî be agahdariyan rawestîne.</string>
+    <string name="oem_hint_samsung_note">Li ser têlefonên Samsung, Settings → Device care → Sleeping apps jî kontrol bikin û Mochi jê derxin heke di lîsteyê de be.</string>
+    <string name="oem_hint_allow">Destûra paşxaneyê</string>
+    <string name="oem_hint_dismiss">Cardin nîşan nede</string>
+
 </resources>

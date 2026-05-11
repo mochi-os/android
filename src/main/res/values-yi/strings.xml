@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">ווייזט זיך ווען Mochi קען נישט דערגרייכן אייער סערווער ווייל אייער סעסיע איז אַנגאַלטיק געמאַכט</string>
     <string name="reauth_signin_title">Mochi: מעלדט זיך אן ווידער</string>
     <string name="reauth_signin_text">נאָטיפֿיקאַציעס זיינען אָפּגעשטעלט ביז איר מעלדט זיך אן ווידער</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">בלייב צוטריטלעך אין הינטערגרונט</string>
+    <string name="oem_hint_body">Mochi מוז לויפן אין הינטערגרונט כדי צו צושטעלן באַמערקונגען. ביטע גיב דערלויבעניש דערצו אויף דעם קומענדיקן עקראַן, אַנדערש קען דיין טעלעפֿאָן פּויזירן באַמערקונגען ווען דער עקראַן איז אַראָפּ.</string>
+    <string name="oem_hint_samsung_note">אויף Samsung טעלעפֿאָנען טשעקירט אויך Settings → Device care → Sleeping apps און נעמט אַראָפּ Mochi אויב עס איז אין דער רשימה.</string>
+    <string name="oem_hint_allow">דערלויבן הינטערגרונט</string>
+    <string name="oem_hint_dismiss">ווייז נישט נאָך אַ מאָל</string>
+
 </resources>

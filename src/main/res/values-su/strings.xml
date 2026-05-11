@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Muncul nalika Mochi teu tiasa ngahontal pangladén anjeun kusabab sési anjeun dibatalkeun</string>
     <string name="reauth_signin_title">Mochi: lebet deui</string>
     <string name="reauth_signin_text">Bewara dijeda dugi anjeun lebet deui</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Tetep bisa kahubung di latar tukang</string>
+    <string name="oem_hint_body">Mochi kudu jalan di latar tukang pikeun nepikeun béwara. Mangga widian ieu di layar saterusna, lamun henteu télépon Anjeun bisa ngeureunkeun béwara nalika layar pareum.</string>
+    <string name="oem_hint_samsung_note">Dina télépon Samsung, parios ogé Settings → Device care → Sleeping apps tur cabut Mochi lamun aya dina daptar.</string>
+    <string name="oem_hint_allow">Widian latar tukang</string>
+    <string name="oem_hint_dismiss">Tong tembongkeun deui</string>
+
 </resources>

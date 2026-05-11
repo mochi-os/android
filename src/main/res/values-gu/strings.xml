@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">જ્યારે Mochi તમારા સર્વર સુધી પહોંચી શકતું નથી કારણ કે તમારું સત્ર અમાન્ય છે ત્યારે દેખાય છે</string>
     <string name="reauth_signin_title">Mochi: ફરીથી સાઇન ઇન કરો</string>
     <string name="reauth_signin_text">જ્યાં સુધી તમે ફરીથી સાઇન ઇન ન કરો ત્યાં સુધી નોટિફિકેશન અટકાવવામાં આવ્યા છે</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">પૃષ્ઠભૂમિમાં ઉપલબ્ધ રહો</string>
+    <string name="oem_hint_body">Mochi-ને નોટિફિકેશન પહોંચાડવા માટે પૃષ્ઠભૂમિમાં ચાલવું જરૂરી છે. કૃપા કરીને આગલી સ્ક્રીન પર આને મંજૂરી આપો, અન્યથા સ્ક્રીન બંધ હોય ત્યારે તમારો ફોન સૂચનાઓ થોભાવી શકે છે.</string>
+    <string name="oem_hint_samsung_note">Samsung ફોન પર, Settings → Device care → Sleeping apps પણ તપાસો અને જો સૂચિબદ્ધ હોય તો Mochi દૂર કરો.</string>
+    <string name="oem_hint_allow">પૃષ્ઠભૂમિ મંજૂર કરો</string>
+    <string name="oem_hint_dismiss">ફરી બતાવશો નહીં</string>
+
 </resources>

@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Aparece quando o Mochi não consegue contactar o seu servidor porque a sua sessão foi invalidada</string>
     <string name="reauth_signin_title">Mochi: inicie sessão novamente</string>
     <string name="reauth_signin_text">As notificações estão em pausa até iniciar sessão novamente</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Mantenha-se acessível em segundo plano</string>
+    <string name="oem_hint_body">O Mochi precisa de funcionar em segundo plano para entregar notificações. Permita isto no ecrã seguinte, caso contrário o seu telefone pode pausar notificações quando o ecrã está desligado.</string>
+    <string name="oem_hint_samsung_note">Em telefones Samsung, verifique também Settings → Device care → Sleeping apps e remova o Mochi se estiver listado.</string>
+    <string name="oem_hint_allow">Permitir segundo plano</string>
+    <string name="oem_hint_dismiss">Não mostrar novamente</string>
+
 </resources>

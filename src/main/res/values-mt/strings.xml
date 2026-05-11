@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Tidher meta Mochi ma jistax jasal għas-server tiegħek għax is-sessjoni tiegħek ġiet invalidata</string>
     <string name="reauth_signin_title">Mochi: idħol mill-ġdid</string>
     <string name="reauth_signin_text">In-notifiki huma pawżati sakemm tidħol mill-ġdid</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Ibqa\' kuntattabbli fl-isfond</string>
+    <string name="oem_hint_body">Mochi għandu jaħdem fl-isfond biex iwassal in-notifiki. Jekk jogħġbok ippermettilu dan fl-iskrin li jmiss, inkella t-telefon tiegħek jista\' jippawżja n-notifiki meta l-iskrin ikun mitfi.</string>
+    <string name="oem_hint_samsung_note">Fuq it-telefons Samsung, iċċekkja wkoll Settings → Device care → Sleeping apps u neħħi Mochi jekk ikun elenkat.</string>
+    <string name="oem_hint_allow">Ippermetti l-isfond</string>
+    <string name="oem_hint_dismiss">Tixxewwx aktar</string>
+
 </resources>

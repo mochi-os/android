@@ -103,4 +103,6 @@ dependencies {
     implementation(libs.osmdroid)
 
     api(libs.unifiedpush.connector)
+
+    implementation(libs.work.runtime)
 }

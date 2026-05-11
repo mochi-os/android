@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">زمانی ظاهر می‌شود که Mochi نمی‌تواند به سرور شما برسد زیرا جلسه شما باطل شده است</string>
     <string name="reauth_signin_title">Mochi: دوباره وارد شوید</string>
     <string name="reauth_signin_text">اعلان‌ها تا زمانی که دوباره وارد شوید متوقف شده‌اند</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">در پس‌زمینه در دسترس بمانید</string>
+    <string name="oem_hint_body">Mochi برای تحویل اعلان‌ها باید در پس‌زمینه اجرا شود. لطفاً در صفحه بعدی این را اجازه دهید، در غیر این صورت تلفن شما ممکن است هنگام خاموش بودن صفحه، اعلان‌ها را متوقف کند.</string>
+    <string name="oem_hint_samsung_note">در تلفن‌های Samsung، Settings → Device care → Sleeping apps را نیز بررسی کنید و در صورت فهرست شدن، Mochi را حذف کنید.</string>
+    <string name="oem_hint_allow">اجازه پس‌زمینه</string>
+    <string name="oem_hint_dismiss">دوباره نشان نده</string>
+
 </resources>

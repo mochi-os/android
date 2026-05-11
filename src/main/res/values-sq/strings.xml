@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Shfaqet kur Mochi nuk mund të arrijë serverin tuaj sepse sesioni juaj është anuluar</string>
     <string name="reauth_signin_title">Mochi: identifikohuni përsëri</string>
     <string name="reauth_signin_text">Njoftimet janë në pauzë derisa të identifikoheni përsëri</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Qëndro i arritshëm në sfond</string>
+    <string name="oem_hint_body">Mochi duhet të ekzekutohet në sfond për të dorëzuar njoftime. Ju lutemi lejojeni në ekranin tjetër, përndryshe telefoni juaj mund të ndalë njoftimet kur ekrani është i fikur.</string>
+    <string name="oem_hint_samsung_note">Në telefonët Samsung, kontrolloni gjithashtu Settings → Device care → Sleeping apps dhe hiqni Mochi nëse është në listë.</string>
+    <string name="oem_hint_allow">Lejo sfondin</string>
+    <string name="oem_hint_dismiss">Mos shfaq më</string>
+
 </resources>

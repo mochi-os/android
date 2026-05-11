@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Sessiyangiz bekor qilinganligi uchun Mochi serveringizga yeta olmaganda paydo bo‘ladi</string>
     <string name="reauth_signin_title">Mochi: qayta kiring</string>
     <string name="reauth_signin_text">Qayta kirmaguningizcha bildirishnomalar to‘xtatib qo‘yilgan</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Fonda erishish mumkin bo\'lib qoling</string>
+    <string name="oem_hint_body">Mochi bildirishnomalarni yetkazish uchun fonda ishlashi kerak. Iltimos, keyingi ekranda buni ruxsat bering, aks holda ekran o\'chirilganda telefoningiz bildirishnomalarni to\'xtatishi mumkin.</string>
+    <string name="oem_hint_samsung_note">Samsung telefonlarda Settings → Device care → Sleeping apps ni ham tekshiring va ro\'yxatda bo\'lsa Mochi ni o\'chirib tashlang.</string>
+    <string name="oem_hint_allow">Fonga ruxsat</string>
+    <string name="oem_hint_dismiss">Boshqa ko\'rsatmang</string>
+
 </resources>

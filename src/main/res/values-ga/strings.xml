@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Tagann sé chun cinn nuair nach féidir le Mochi do fhreastalaí a bhaint amach toisc go bhfuil do sheisiún neamhbhailí</string>
     <string name="reauth_signin_title">Mochi: logáil isteach arís</string>
     <string name="reauth_signin_text">Tá fógraí ar sos go dtí go logálann tú isteach arís</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Fan inrochtana sa chúlra</string>
+    <string name="oem_hint_body">Caithfidh Mochi rith sa chúlra chun fógraí a sheachadadh. Ceadaigh é seo ar an gcéad scáileán eile, le do thoil, nó d\'fhéadfadh do ghuthán fógraí a chur ar sos nuair atá an scáileán múchta.</string>
+    <string name="oem_hint_samsung_note">Ar ghutháin Samsung, seiceáil Settings → Device care → Sleeping apps freisin agus bain Mochi má tá sé liostaithe.</string>
+    <string name="oem_hint_allow">Ceadaigh cúlra</string>
+    <string name="oem_hint_dismiss">Ná taispeáin arís</string>
+
 </resources>

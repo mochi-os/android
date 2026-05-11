@@ -32,6 +32,10 @@ class BootReceiver : BroadcastReceiver() {
                 Log.i(TAG, "Boot completed — starting PushService")
                 runCatching { PushService.start(context.applicationContext) }
                     .onFailure { Log.w(TAG, "Failed to start PushService on boot: ${it.message}") }
+                // Re-arm the watchdog: WorkManager's persisted state typically
+                // survives reboot, but enqueueUniquePeriodicWork with KEEP is
+                // a cheap idempotent guard against edge cases where it didn't.
+                PushServiceWatchdog.schedule(context.applicationContext)
             }
         }
     }

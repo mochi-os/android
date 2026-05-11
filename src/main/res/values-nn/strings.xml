@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Vert vist når Mochi ikkje kan nå serveren din fordi økta di er ugyldig</string>
     <string name="reauth_signin_title">Mochi: logg på att</string>
     <string name="reauth_signin_text">Varsel er sett på pause til du loggar på att</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Vere tilgjengeleg i bakgrunnen</string>
+    <string name="oem_hint_body">Mochi må køyre i bakgrunnen for å levere varsel. Tillat dette på neste skjerm, elles kan telefonen pause varsel når skjermen er av.</string>
+    <string name="oem_hint_samsung_note">På Samsung-telefonar, sjekk òg Settings → Device care → Sleeping apps og fjern Mochi om det står på lista.</string>
+    <string name="oem_hint_allow">Tillat bakgrunn</string>
+    <string name="oem_hint_dismiss">Ikkje vis igjen</string>
+
 </resources>

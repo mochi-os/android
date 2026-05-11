@@ -166,4 +166,11 @@
     <string name="reauth_signin_title">Mochi: sign in again</string>
     <string name="reauth_signin_text">Notifications are paused until you sign back in</string>
 
+    <!-- OEM background-restriction first-run dialog (shown once if battery optimization is on for Mochi) -->
+    <string name="oem_hint_title">Stay reachable in the background</string>
+    <string name="oem_hint_body">Mochi must run in the background to deliver notifications. Please allow this on the next screen, otherwise your phone may pause notifications when the screen is off.</string>
+    <string name="oem_hint_samsung_note">On Samsung phones, also check Settings → Device care → Sleeping apps and remove Mochi if listed.</string>
+    <string name="oem_hint_allow">Allow background</string>
+    <string name="oem_hint_dismiss">Don\'t show again</string>
+
 </resources>

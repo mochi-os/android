@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Muncul apabila Mochi tidak dapat mencapai pelayan anda kerana sesi anda telah dibatalkan</string>
     <string name="reauth_signin_title">Mochi: log masuk semula</string>
     <string name="reauth_signin_text">Pemberitahuan dijeda sehingga anda log masuk semula</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Kekal boleh dihubungi di latar belakang</string>
+    <string name="oem_hint_body">Mochi mesti berjalan di latar belakang untuk menghantar pemberitahuan. Sila benarkan ini di skrin seterusnya, jika tidak telefon anda mungkin menjeda pemberitahuan apabila skrin dimatikan.</string>
+    <string name="oem_hint_samsung_note">Pada telefon Samsung, periksa juga Settings → Device care → Sleeping apps dan keluarkan Mochi jika tersenarai.</string>
+    <string name="oem_hint_allow">Benarkan latar belakang</string>
+    <string name="oem_hint_dismiss">Jangan tunjuk lagi</string>
+
 </resources>

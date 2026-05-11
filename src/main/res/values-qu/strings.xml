@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Sessionniyki ch\'usaqyachisqa kaptin Mochi servidornikiman mana chayanchu chayqa rikhurin</string>
     <string name="reauth_signin_title">Mochi: yapamanta yaykuy</string>
     <string name="reauth_signin_text">Willaykunaqa sayachisqa kachkanku qan yapamanta yaykunaykikama</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Qhipanchaypi tariqlla qhipakuy</string>
+    <string name="oem_hint_body">Mochi-qa qhipanchaypi llamkʼananmi willaykunata aypachinanpaq. Ama hina kaspa qatiq qhawanapi saqiy, mana chayqa celulayki qhawanapi wañusqa kaptin willaykunata sayachinmanmi.</string>
+    <string name="oem_hint_samsung_note">Samsung celularkunapi Settings → Device care → Sleeping apps qhawariy ima, qillqasqa kaqtinqa Mochi-ta qichuy.</string>
+    <string name="oem_hint_allow">Qhipanchayta saqiy</string>
+    <string name="oem_hint_dismiss">Ama qhipamantapas rikuchichu</string>
+
 </resources>

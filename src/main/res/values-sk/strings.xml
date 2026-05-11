@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Zobrazí sa, keď sa Mochi nedokáže dostať na váš server, pretože vaša relácia bola zneplatnená</string>
     <string name="reauth_signin_title">Mochi: prihláste sa znova</string>
     <string name="reauth_signin_text">Notifikácie sú pozastavené, kým sa znova neprihlásite</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Zostaňte dostupní na pozadí</string>
+    <string name="oem_hint_body">Mochi musí bežať na pozadí, aby doručoval upozornenia. Povoľte to prosím na nasledujúcej obrazovke, inak môže váš telefón pozastaviť upozornenia, keď je obrazovka vypnutá.</string>
+    <string name="oem_hint_samsung_note">Na telefónoch Samsung skontrolujte aj Settings → Device care → Sleeping apps a odstráňte Mochi, ak je v zozname.</string>
+    <string name="oem_hint_allow">Povoliť pozadie</string>
+    <string name="oem_hint_dismiss">Nezobrazovať znova</string>
+
 </resources>

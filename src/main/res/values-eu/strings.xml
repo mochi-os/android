@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Zure saioa baliogabetu denez, Mochi-k zure zerbitzarira ezin duenean iristen</string>
     <string name="reauth_signin_title">Mochi: hasi saioa berriro</string>
     <string name="reauth_signin_text">Jakinarazpenak pausatuta daude saioa berriro hasi arte</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Iraun atzeko planoan eskuragarri</string>
+    <string name="oem_hint_body">Mochi-k atzeko planoan ibili behar du jakinarazpenak emateko. Mesedez, baimendu hori hurrengo pantailan, bestela zure telefonoak jakinarazpenak gera ditzake pantaila itzalita dagoenean.</string>
+    <string name="oem_hint_samsung_note">Samsung telefonoetan, egiaztatu ere Settings → Device care → Sleeping apps eta kendu Mochi zerrendatuta badago.</string>
+    <string name="oem_hint_allow">Baimendu atzeko planoa</string>
+    <string name="oem_hint_dismiss">Ez erakutsi berriro</string>
+
 </resources>

@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Birtist þegar Mochi getur ekki náð í þjóninn þinn vegna þess að lotunni þinni var hætt við</string>
     <string name="reauth_signin_title">Mochi: skráðu þig inn aftur</string>
     <string name="reauth_signin_text">Tilkynningar eru í bið þar til þú skráir þig aftur inn</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Vertu áfram aðgengilegur í bakgrunni</string>
+    <string name="oem_hint_body">Mochi þarf að keyra í bakgrunni til að skila tilkynningum. Vinsamlegast leyfðu þetta á næsta skjá, annars getur síminn þinn stöðvað tilkynningar þegar skjárinn er slökktur.</string>
+    <string name="oem_hint_samsung_note">Á Samsung símum skaltu líka athuga Settings → Device care → Sleeping apps og fjarlægja Mochi ef það er á listanum.</string>
+    <string name="oem_hint_allow">Leyfa bakgrunn</string>
+    <string name="oem_hint_dismiss">Sýna ekki aftur</string>
+
 </resources>

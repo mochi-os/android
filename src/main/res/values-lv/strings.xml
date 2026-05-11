@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Tiek parādīts, kad Mochi nevar piekļūt jūsu serverim, jo jūsu sesija ir atcelta</string>
     <string name="reauth_signin_title">Mochi: piesakieties vēlreiz</string>
     <string name="reauth_signin_text">Paziņojumi ir apturēti, līdz piesakāties vēlreiz</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Palieciet sasniedzami fonā</string>
+    <string name="oem_hint_body">Mochi ir jādarbojas fonā, lai piegādātu paziņojumus. Lūdzu, atļaujiet to nākamajā ekrānā, pretējā gadījumā tālrunis var apturēt paziņojumus, kad ekrāns ir izslēgts.</string>
+    <string name="oem_hint_samsung_note">Samsung tālruņos pārbaudiet arī Settings → Device care → Sleeping apps un noņemiet Mochi, ja tas ir sarakstā.</string>
+    <string name="oem_hint_allow">Atļaut fonu</string>
+    <string name="oem_hint_dismiss">Nerādīt vairs</string>
+
 </resources>

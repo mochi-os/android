@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">உங்கள் அமர்வு செல்லாததாக ஆக்கப்பட்டதால் Mochi உங்கள் சேவையகத்தை அடைய முடியாதபோது தோன்றும்</string>
     <string name="reauth_signin_title">Mochi: மீண்டும் உள்நுழையவும்</string>
     <string name="reauth_signin_text">நீங்கள் மீண்டும் உள்நுழையும் வரை அறிவிப்புகள் இடைநிறுத்தப்பட்டுள்ளன</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">பின்னணியில் தொடர்பு கொள்ளக்கூடியதாக இருங்கள்</string>
+    <string name="oem_hint_body">அறிவிப்புகளை வழங்க Mochi பின்னணியில் இயங்க வேண்டும். அடுத்த திரையில் இதை அனுமதிக்கவும், இல்லையெனில் திரை அணைந்திருக்கும் போது உங்கள் தொலைபேசி அறிவிப்புகளை நிறுத்தலாம்.</string>
+    <string name="oem_hint_samsung_note">Samsung தொலைபேசிகளில், Settings → Device care → Sleeping apps ஐயும் சரிபார்த்து, பட்டியலில் இருந்தால் Mochi ஐ அகற்றவும்.</string>
+    <string name="oem_hint_allow">பின்னணியை அனுமதி</string>
+    <string name="oem_hint_dismiss">மீண்டும் காட்ட வேண்டாம்</string>
+
 </resources>

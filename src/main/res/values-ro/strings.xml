@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Apare când Mochi nu poate ajunge la serverul dvs. deoarece sesiunea a fost invalidată</string>
     <string name="reauth_signin_title">Mochi: autentificați-vă din nou</string>
     <string name="reauth_signin_text">Notificările sunt în pauză până vă autentificați din nou</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Rămâi accesibil în fundal</string>
+    <string name="oem_hint_body">Mochi trebuie să ruleze în fundal pentru a livra notificări. Te rugăm să permiți acest lucru pe ecranul următor, altfel telefonul tău poate pauza notificările când ecranul este oprit.</string>
+    <string name="oem_hint_samsung_note">Pe telefoanele Samsung, verifică și Settings → Device care → Sleeping apps și elimină Mochi dacă apare în listă.</string>
+    <string name="oem_hint_allow">Permite fundalul</string>
+    <string name="oem_hint_dismiss">Nu mai afișa</string>
+
 </resources>

@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Ojechauka oñondive Mochi ndaikatúi og̃uahẽ servidor-pe ndepysoma jepórupi</string>
     <string name="reauth_signin_title">Mochi: emoinge jey</string>
     <string name="reauth_signin_text">Marandukuéra ojepyta emoinge jey peve</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Eñerenduvo tapykuepe</string>
+    <string name="oem_hint_body">Mochi tekotevẽ omba\'apo tapykuepe ojeporu hag̃ua marandukuéra. Eikuaauka ko\'ã ko ape upéicha ramo nde pumbyry ikatu ojoko marandu\'i tembiporu pe tata\'ỹ ramo.</string>
+    <string name="oem_hint_samsung_note">Samsung pumbyrýpe ehecha avei Settings → Device care → Sleeping apps ha emboguete Mochi oĩramo lístape.</string>
+    <string name="oem_hint_allow">Eikuaauka tapykuepe</string>
+    <string name="oem_hint_dismiss">Anive ehechauka</string>
+
 </resources>

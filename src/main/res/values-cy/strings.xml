@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Yn ymddangos pan na all Mochi gyrraedd eich gweinydd oherwydd bod eich sesiwn wedi\'i annilysu</string>
     <string name="reauth_signin_title">Mochi: mewngofnodwch eto</string>
     <string name="reauth_signin_text">Mae hysbysiadau wedi\'u oedi nes i chi fewngofnodi eto</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Aros yn gyrhaeddadwy yn y cefndir</string>
+    <string name="oem_hint_body">Rhaid i Mochi redeg yn y cefndir i ddarparu hysbysiadau. Caniatewch hyn ar y sgrin nesaf, fel arall efallai y bydd eich ffôn yn oedi hysbysiadau pan fydd y sgrin i ffwrdd.</string>
+    <string name="oem_hint_samsung_note">Ar ffonau Samsung, gwiriwch hefyd Settings → Device care → Sleeping apps a thynnu Mochi os yw wedi\'i restru.</string>
+    <string name="oem_hint_allow">Caniatáu cefndir</string>
+    <string name="oem_hint_dismiss">Peidio â dangos eto</string>
+
 </resources>

@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">ظاهر ٿيندو آهي جڏهن توهان جي سيشن کي رد ڪرڻ سبب Mochi توهان جي سرور تائين رسائي نٿو ڪري سگهي</string>
     <string name="reauth_signin_title">Mochi: ٻيهر سائن ان ڪريو</string>
     <string name="reauth_signin_text">اطلاعون ٻيهر سائن ان ٿيڻ تائين روڪيون ويون آهن</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">پس منظر ۾ پهچ ۾ رهو</string>
+    <string name="oem_hint_body">Mochi کي اطلاعن جي ترسيل لاءِ پس منظر ۾ هلڻ گهرجي. مهرباني ڪري ايندڙ اسڪرين تي هن کي اجازت ڏيو، نه ته اسڪرين بند ٿيڻ تي توهان جو فون اطلاع روڪي سگهي ٿو.</string>
+    <string name="oem_hint_samsung_note">Samsung فون تي Settings → Device care → Sleeping apps پڻ چيڪ ڪريو ۽ جيڪڏهن لسٽ ۾ آهي ته Mochi هٽائي ڇڏيو.</string>
+    <string name="oem_hint_allow">پس منظر جي اجازت</string>
+    <string name="oem_hint_dismiss">وري نه ڏيکاريو</string>
+
 </resources>

@@ -58,4 +58,11 @@
     <string name="reauth_channel_description">Appare quando Mochi non riesce a raggiungere il tuo server perché la tua sessione è stata invalidata</string>
     <string name="reauth_signin_title">Mochi: accedi di nuovo</string>
     <string name="reauth_signin_text">Le notifiche sono in pausa finché non accedi di nuovo</string>
+    <!-- OEM background-restriction first-run dialog -->
+    <string name="oem_hint_title">Resta raggiungibile in background</string>
+    <string name="oem_hint_body">Mochi deve essere in esecuzione in background per consegnare le notifiche. Consentilo nella schermata successiva, altrimenti il telefono potrebbe sospendere le notifiche quando lo schermo è spento.</string>
+    <string name="oem_hint_samsung_note">Sui telefoni Samsung, controlla anche Settings → Device care → Sleeping apps e rimuovi Mochi se elencato.</string>
+    <string name="oem_hint_allow">Consenti background</string>
+    <string name="oem_hint_dismiss">Non mostrare più</string>
+
 </resources>
