@@ -8,8 +8,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import org.mochios.android.auth.SessionManager
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
+import retrofit2.http.POST
 import java.time.DayOfWeek
 import java.time.temporal.WeekFields
 import java.util.Locale
@@ -21,6 +23,18 @@ private data class FullPrefsResponse(val preferences: Map<String, String>?)
 private interface PreferencesApi {
     @GET("settings/-/user/preferences/data")
     suspend fun getPreferences(@Header("Authorization") token: String): Response<FullPrefsResponse>
+}
+
+// Hosts (chat / feeds / forums / projects / …) mint their own app token at
+// bootstrap; the settings app's token isn't fetched for them. We mint it
+// here on demand so the preferences endpoint, which requires a settings
+// token, is reachable from every Mochi Android host.
+private data class TokenRequest(val app: String)
+private data class TokenResponse(val token: String)
+
+private interface TokenApi {
+    @POST("_/token")
+    suspend fun fetchToken(@Body request: TokenRequest): Response<TokenResponse>
 }
 
 /**
@@ -40,6 +54,7 @@ class PreferencesManager @Inject constructor(
 ) {
 
     private val api: PreferencesApi by lazy { retrofit.create(PreferencesApi::class.java) }
+    private val tokenApi: TokenApi by lazy { retrofit.create(TokenApi::class.java) }
 
     private val _preferences = MutableStateFlow(resolveAuto(emptyMap()))
     val preferences: StateFlow<UserPreferences> = _preferences.asStateFlow()
@@ -48,7 +63,15 @@ class PreferencesManager @Inject constructor(
     val format: Format get() = Format(_preferences.value)
 
     suspend fun refresh() {
-        val token = sessionManager.getToken("settings") ?: return
+        // Cached "settings" token first (saves a round trip when this app
+        // happens to be settings itself or has already minted one). Otherwise
+        // mint a fresh one from the host's session — every Mochi user has a
+        // settings app token available.
+        val token = sessionManager.getToken("settings") ?: try {
+            tokenApi.fetchToken(TokenRequest("settings")).body()?.token
+        } catch (_: Exception) {
+            null
+        } ?: return
         val resp = try {
             api.getPreferences("Bearer $token")
         } catch (_: Exception) {
@@ -99,7 +122,12 @@ class PreferencesManager @Inject constructor(
             weekStartsOn = weekStartsOn,
             numberFormat = numberFormat,
             units = units,
-            timezone = timezone
+            timezone = timezone,
+            appearance = Appearance.fromString(raw["appearance"]),
+            density = Density.fromString(raw["density"]),
+            radius = Radius.fromString(raw["radius"]),
+            font = FontPref.fromString(raw["font"]),
+            fontSize = FontSizePref.fromString(raw["font_size"])
         )
     }
 

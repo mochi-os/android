@@ -18,8 +18,85 @@ data class UserPreferences(
     val weekStartsOn: Int = 1,
     val numberFormat: NumberFormat = NumberFormat.WESTERN_COMMA_DOT,
     val units: Units = Units.METRIC,
-    val timezone: String = "UTC"
+    val timezone: String = "UTC",
+    val appearance: Appearance = Appearance.AUTO,
+    val density: Density = Density.THEME,
+    val radius: Radius = Radius.THEME,
+    val font: FontPref = FontPref.THEME,
+    val fontSize: FontSizePref = FontSizePref.THEME
 )
+
+enum class Appearance {
+    LIGHT, DARK, AUTO;
+
+    companion object {
+        fun fromString(s: String?): Appearance = when (s) {
+            "light" -> LIGHT
+            "dark" -> DARK
+            else -> AUTO
+        }
+    }
+}
+
+enum class Density(val scale: Float) {
+    /** Use whatever the theme/Compose defaults give. */
+    THEME(1.0f),
+    COMPACT(0.85f),
+    COMFORTABLE(1.0f),
+    SPACIOUS(1.20f);
+
+    companion object {
+        fun fromString(s: String?): Density = when (s) {
+            "compact" -> COMPACT
+            "comfortable" -> COMFORTABLE
+            "spacious" -> SPACIOUS
+            else -> THEME
+        }
+    }
+}
+
+/** Corner radius preset. Values mirror the rem values from the server schema
+ *  (0rem, 0.375rem, 0.75rem, 1.75rem) treating 1rem = 16dp. */
+enum class Radius(val dp: Int?) {
+    THEME(null), NONE(0), SMALL(6), MEDIUM(12), LARGE(28);
+
+    companion object {
+        fun fromString(s: String?): Radius = when (s) {
+            "0rem" -> NONE
+            "0.375rem" -> SMALL
+            "0.75rem" -> MEDIUM
+            "1.75rem" -> LARGE
+            else -> THEME
+        }
+    }
+}
+
+enum class FontPref {
+    THEME, SYSTEM, SERIF, DYSLEXIA;
+
+    companion object {
+        fun fromString(s: String?): FontPref = when (s) {
+            "system" -> SYSTEM
+            "serif" -> SERIF
+            "dyslexia" -> DYSLEXIA
+            else -> THEME
+        }
+    }
+}
+
+enum class FontSizePref(val scale: Float) {
+    THEME(1.0f), SMALL(0.9f), NORMAL(1.0f), LARGE(1.15f), EXTRA_LARGE(1.30f);
+
+    companion object {
+        fun fromString(s: String?): FontSizePref = when (s) {
+            "small" -> SMALL
+            "normal" -> NORMAL
+            "large" -> LARGE
+            "extra-large" -> EXTRA_LARGE
+            else -> THEME
+        }
+    }
+}
 
 enum class DateFormat(val pattern: String) {
     YYYY_MM_DD("YYYY-MM-DD"),

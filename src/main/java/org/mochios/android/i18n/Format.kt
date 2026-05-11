@@ -193,10 +193,20 @@ fun Format.formatTimestamp(epochSeconds: Long): String {
  * Compact relative timestamp ("5m", "2h", "3d", "2w") for tight UI surfaces.
  * Falls back to [Format.formatDate] for old timestamps. Mirrors web's
  * `formatRelativeTime` in `lib/web/src/lib/locale-format.ts`.
+ *
+ * Honours [UserPreferences.timestampDisplay]:
+ * - RELATIVE — always compact relative form
+ * - ABSOLUTE — always [formatDate] (the compact-UI counterpart of
+ *   `formatDateTime`; we keep it date-only to stay within tight surfaces)
+ * - AUTO — relative for the recent past (< 30d), date otherwise — same
+ *   buckets as before.
  */
 @Composable
 fun Format.formatRelativeTime(epochSeconds: Long): String {
     if (epochSeconds <= 0) return ""
+
+    val display = preferences.timestampDisplay
+    if (display == TimestampDisplay.ABSOLUTE) return formatDate(epochSeconds)
 
     val now = System.currentTimeMillis() / 1000
     val diff = now - epochSeconds
