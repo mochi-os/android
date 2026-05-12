@@ -74,8 +74,10 @@ tasks.named("preBuild") { dependsOn("checkLocaleCompleteness") }
 
 dependencies {
     implementation(project(":lib"))
+    implementation(project(":apps:feeds"))
 
     implementation(libs.core.ktx)
+    implementation(libs.navigation.compose)
     implementation(libs.lifecycle.runtime)
     implementation(libs.activity.compose)
 
