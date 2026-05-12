@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Mochi programų dar nėra įdiegta. Norėdami pradėti, įdiekite Mochi Feeds, Mochi Chat, Mochi Forums arba Mochi Projects.</string>
+    <string name="launcher_feeds">Srautai</string>
+    <string name="launcher_chat">Pokalbis</string>
+    <string name="launcher_forums">Forumai</string>
+    <string name="launcher_projects">Projektai</string>
 </resources>

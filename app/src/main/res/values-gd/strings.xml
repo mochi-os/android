@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Chan eil aplacaid Mochi sam bith air a stàladh fhathast. Stàlaich Mochi Feeds, Mochi Chat, Mochi Forums no Mochi Projects gus tòiseachadh.</string>
+    <string name="launcher_feeds">Inbhirean</string>
+    <string name="launcher_chat">Còmhradh</string>
+    <string name="launcher_forums">Fòraman</string>
+    <string name="launcher_projects">Pròiseactan</string>
 </resources>

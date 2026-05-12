@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Nicio aplicație Mochi instalată încă. Instalați Mochi Feeds, Mochi Chat, Mochi Forums sau Mochi Projects pentru a începe.</string>
+    <string name="launcher_feeds">Fluxuri</string>
+    <string name="launcher_chat">Chat</string>
+    <string name="launcher_forums">Forumuri</string>
+    <string name="launcher_projects">Proiecte</string>
 </resources>

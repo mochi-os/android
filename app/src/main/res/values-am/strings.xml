@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">እስካሁን Mochi መተግበሪያዎች አልተጫነም። ለመጀመር Mochi Feeds፣ Mochi Chat፣ Mochi Forums ወይም Mochi Projects ይጫኑ።</string>
+    <string name="launcher_feeds">ምግቦች</string>
+    <string name="launcher_chat">ውይይት</string>
+    <string name="launcher_forums">ፎረሞች</string>
+    <string name="launcher_projects">ፕሮጀክቶች</string>
 </resources>

@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">ຍັງບໍ່ໄດ້ຕິດຕັ້ງແອັບ Mochi. ຕິດຕັ້ງ Mochi Feeds, Mochi Chat, Mochi Forums ຫຼື Mochi Projects ເພື່ອເລີ່ມຕົ້ນ.</string>
+    <string name="launcher_feeds">ຟີດ</string>
+    <string name="launcher_chat">ແຊັດ</string>
+    <string name="launcher_forums">ກະດານສົນທະນາ</string>
+    <string name="launcher_projects">ໂຄງການ</string>
 </resources>

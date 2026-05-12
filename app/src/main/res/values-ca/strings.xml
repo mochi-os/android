@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Encara no hi ha aplicacions Mochi instal·lades. Instal·leu Mochi Feeds, Mochi Chat, Mochi Forums o Mochi Projects per començar.</string>
+    <string name="launcher_feeds">Fonts</string>
+    <string name="launcher_chat">Xat</string>
+    <string name="launcher_forums">Fòrums</string>
+    <string name="launcher_projects">Projectes</string>
 </resources>

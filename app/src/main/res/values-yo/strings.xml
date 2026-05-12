@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Kò sí àwọn ohun-èlò Mochi tí a tí ìbẹ̀rẹ̀ síi. Fi Mochi Feeds, Mochi Chat, Mochi Forums tàbí Mochi Projects sori láti bẹ̀rẹ̀.</string>
+    <string name="launcher_feeds">Àwọn ìjì</string>
+    <string name="launcher_chat">Ìjíròrò</string>
+    <string name="launcher_forums">Àwọn forum</string>
+    <string name="launcher_projects">Àwọn project</string>
 </resources>

@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Әлі Mochi қолданбалары орнатылмаған. Бастау үшін Mochi Feeds, Mochi Chat, Mochi Forums немесе Mochi Projects орнатыңыз.</string>
+    <string name="launcher_feeds">Таспалар</string>
+    <string name="launcher_chat">Чат</string>
+    <string name="launcher_forums">Форумдар</string>
+    <string name="launcher_projects">Жобалар</string>
 </resources>

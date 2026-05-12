@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Heniz Mochi programmalary gurnalmady. Başlamak üçin Mochi Feeds, Mochi Chat, Mochi Forums ýa-da Mochi Projects gurnaň.</string>
+    <string name="launcher_feeds">Akymlar</string>
+    <string name="launcher_chat">Söhbetdeşlik</string>
+    <string name="launcher_forums">Forumlar</string>
+    <string name="launcher_projects">Taslamalar</string>
 </resources>

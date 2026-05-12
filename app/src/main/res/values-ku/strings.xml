@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Hîn tu sepanên Mochi nehatine sazkirin. Ji bo destpêkê Mochi Feeds, Mochi Chat, Mochi Forums an Mochi Projects saz bike.</string>
+    <string name="launcher_feeds">Feed</string>
+    <string name="launcher_chat">Chat</string>
+    <string name="launcher_forums">Forum</string>
+    <string name="launcher_projects">Proje</string>
 </resources>

@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">තවම Mochi යෙදුම් ස්ථාපනය කර නැත. ආරම්භ කිරීමට Mochi Feeds, Mochi Chat, Mochi Forums හෝ Mochi Projects ස්ථාපනය කරන්න.</string>
+    <string name="launcher_feeds">පෝෂණයන්</string>
+    <string name="launcher_chat">චැට්</string>
+    <string name="launcher_forums">සභා</string>
+    <string name="launcher_projects">ව්‍යාපෘති</string>
 </resources>

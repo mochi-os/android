@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">ยังไม่ได้ติดตั้งแอป Mochi ติดตั้ง Mochi Feeds, Mochi Chat, Mochi Forums หรือ Mochi Projects เพื่อเริ่มต้น</string>
+    <string name="launcher_feeds">ฟีด</string>
+    <string name="launcher_chat">แชท</string>
+    <string name="launcher_forums">ฟอรัม</string>
+    <string name="launcher_projects">โปรเจกต์</string>
 </resources>

@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Wala pang naka-install na Mochi apps. I-install ang Mochi Feeds, Mochi Chat, Mochi Forums o Mochi Projects para magsimula.</string>
+    <string name="launcher_feeds">Mga feed</string>
+    <string name="launcher_chat">Chat</string>
+    <string name="launcher_forums">Mga forum</string>
+    <string name="launcher_projects">Mga Proyekto</string>
 </resources>

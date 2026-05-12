@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">Pa gen okenn aplikasyon Mochi ki enstale ankò. Enstale Mochi Feeds, Mochi Chat, Mochi Forums oswa Mochi Projects pou kòmanse.</string>
+    <string name="launcher_feeds">Feed</string>
+    <string name="launcher_chat">Chat</string>
+    <string name="launcher_forums">Fowòm</string>
+    <string name="launcher_projects">Pwojè yo</string>
 </resources>

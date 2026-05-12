@@ -4,4 +4,8 @@
     <string name="app_name">Mochi</string>
 
     <string name="launchpad_no_apps">अद्याप कोणतेही Mochi अॅप इंस्टॉल केलेले नाहीत. सुरू करण्यासाठी Mochi Feeds, Mochi Chat, Mochi Forums किंवा Mochi Projects इंस्टॉल करा.</string>
+    <string name="launcher_feeds">फीड्स</string>
+    <string name="launcher_chat">चॅट</string>
+    <string name="launcher_forums">फोरम्स</string>
+    <string name="launcher_projects">प्रोजेक्ट्स</string>
 </resources>
