@@ -15,6 +15,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
@@ -46,6 +47,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         PushService.start(this)
+        handleOAuthIntent(intent)
         handleNotificationIntent(intent)
         val startApp = resolveAliasTargetApp(intent?.component)
         setContent {
@@ -61,7 +63,7 @@ class MainActivity : ComponentActivity() {
                     }
                     AppBootstrapHost(
                         appName = startApp ?: "feeds",
-                        oauthScheme = null,
+                        oauthScheme = "mochi",
                         onLocaleChangeRequested = { recreate() },
                     ) { onLogout ->
                         val navController = rememberNavController()
@@ -91,6 +93,7 @@ class MainActivity : ComponentActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
+        handleOAuthIntent(intent)
         handleNotificationIntent(intent)
         // Warm-start from a different alias (singleTask brings the existing
         // task to the front instead of recreating). Drop a synthetic /<app>
@@ -104,6 +107,15 @@ class MainActivity : ComponentActivity() {
         if (data.scheme != "mochi" || data.host != "notification") return
         val link = data.getQueryParameter("link") ?: return
         PendingDeepLink.set(link)
+    }
+
+    private fun handleOAuthIntent(intent: Intent?) {
+        val data = intent?.data ?: return
+        if (data.scheme != "mochi" || data.host != "oauth-return") return
+        val code = data.getQueryParameter("code")
+        val error = data.getQueryParameter("error")
+        if (code == null && error == null) return
+        runBlocking { sessionManager.setOAuthReturn(code, error) }
     }
 
     private fun navigateToLink(navController: NavController, link: String) {
