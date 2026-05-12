@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Mochi"
 include(":lib")
+include(":app")
