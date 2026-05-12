@@ -29,11 +29,12 @@ import org.unifiedpush.android.connector.data.PushMessage
 abstract class MochiPushReceiver : MessagingReceiver() {
 
     /**
-     * Channel id for the system notification. Receives [link] so the
-     * dispatcher can pick the per-app channel ("feeds", "chat", ...) based
-     * on the deep-link's first path segment.
+     * Channel id for the system notification. The dispatcher picks the
+     * per-app channel from [app] when the server includes it in the payload,
+     * and falls back to parsing [link]'s first path segment when it doesn't
+     * (older server, system notifications without a link, etc.).
      */
-    abstract fun channelId(context: Context, instance: String, link: String): String
+    abstract fun channelId(context: Context, instance: String, app: String, link: String): String
 
     /** Deep-link Uri for tapping the notification. */
     abstract fun deepLinkFor(context: Context, instance: String, link: String): android.net.Uri
@@ -143,13 +144,14 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         val body = payload.optString("body", "")
         val link = payload.optString("link", "")
         val tag = payload.optString("tag", "")
+        val app = payload.optString("app", "")
 
         if (title.isBlank() && body.isBlank()) {
             Log.w(TAG, "Push payload has no title/body; ignoring")
             return
         }
 
-        postSystemNotification(context, instance, title, body, link, tag)
+        postSystemNotification(context, instance, title, body, link, tag, app)
     }
 
     private fun postPushRegister(
@@ -256,8 +258,9 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         body: String,
         link: String,
         tag: String,
+        app: String,
     ) {
-        val channelId = channelId(context, instance, link)
+        val channelId = channelId(context, instance, app, link)
         val deepLink = deepLinkFor(context, instance, link)
 
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
