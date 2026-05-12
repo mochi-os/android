@@ -16,3 +16,4 @@ rootProject.name = "Mochi"
 include(":lib")
 include(":app")
 include(":apps:feeds")
+include(":apps:chat")

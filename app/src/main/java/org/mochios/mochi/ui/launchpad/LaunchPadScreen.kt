@@ -17,6 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.chat.navigation.ChatApp
 import org.mochios.feeds.navigation.FeedsApp
 import org.mochios.mochi.R
 
@@ -33,6 +34,7 @@ fun LaunchPadScreen(
     val tiles = remember {
         listOf(
             LaunchpadTile(label = "Feeds", route = FeedsApp.HOME),
+            LaunchpadTile(label = "Chat", route = ChatApp.HOME),
         )
     }
 
