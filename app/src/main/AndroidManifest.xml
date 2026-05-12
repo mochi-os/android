@@ -34,7 +34,34 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="mochi" android:host="notification" />
+            </intent-filter>
         </activity>
+
+        <!--
+          UnifiedPush MessagingReceiver for the consolidated super-app. Catches
+          MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts
+          from PushService and posts a system notification on the right per-app
+          channel (routed by the deep-link's first path segment in
+          MochiPushDispatcher.channelId). Replaces the four per-app
+          XxxPushReceiver classes that existed when feeds / chat / forums /
+          projects shipped as separate APKs.
+        -->
+        <receiver
+            android:name=".push.MochiPushDispatcher"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.unifiedpush.android.connector.MESSAGE" />
+                <action android:name="org.unifiedpush.android.connector.UNREGISTERED" />
+                <action android:name="org.unifiedpush.android.connector.NEW_ENDPOINT" />
+                <action android:name="org.unifiedpush.android.connector.REGISTRATION_FAILED" />
+            </intent-filter>
+        </receiver>
 
         <!--
           UnifiedPush distributor receiver. The class lives in lib/android

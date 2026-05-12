@@ -7,6 +7,10 @@ import org.mochios.android.i18n.AppContext
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.push.PushServiceWatchdog
+import org.mochios.chat.notifications.setupChatNotificationChannel
+import org.mochios.feeds.notifications.setupFeedsNotificationChannel
+import org.mochios.forums.notifications.setupForumsNotificationChannel
+import org.mochios.projects.notifications.setupProjectsNotificationChannel
 
 @HiltAndroidApp
 class MochiApplication : Application() {
@@ -19,6 +23,10 @@ class MochiApplication : Application() {
         super.onCreate()
         AppContext.set(this)
         LocaleHelper.apply(this, LanguageStore.get(this))
+        setupFeedsNotificationChannel(this)
+        setupChatNotificationChannel(this)
+        setupForumsNotificationChannel(this)
+        setupProjectsNotificationChannel(this)
         PushServiceWatchdog.schedule(this)
     }
 }

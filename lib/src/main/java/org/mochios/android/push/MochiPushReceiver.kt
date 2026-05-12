@@ -21,28 +21,22 @@ import org.unifiedpush.android.connector.data.PushEndpoint
 import org.unifiedpush.android.connector.data.PushMessage
 
 /**
- * Bridges UnifiedPush callbacks into Mochi-shaped events. Each per-app app
- * subclasses this to inject its notification channel id and deep-link
- * Uri builder; the base class handles the wire decoding, server-side
- * bookkeeping, and notification posting.
+ * Bridges UnifiedPush callbacks into Mochi-shaped events. The super-app
+ * subclasses this once with a single MochiPushDispatcher that routes by
+ * the deep-link's first path segment; the base class handles the wire
+ * decoding, server-side bookkeeping, and notification posting.
  */
 abstract class MochiPushReceiver : MessagingReceiver() {
 
-    /** Channel id for the system notification. */
-    abstract fun channelId(context: Context, instance: String): String
+    /**
+     * Channel id for the system notification. Receives [link] so the
+     * dispatcher can pick the per-app channel ("feeds", "chat", ...) based
+     * on the deep-link's first path segment.
+     */
+    abstract fun channelId(context: Context, instance: String, link: String): String
 
     /** Deep-link Uri for tapping the notification. */
     abstract fun deepLinkFor(context: Context, instance: String, link: String): android.net.Uri
-
-    /**
-     * Mochi-app slug this receiver serves ("feeds", "chat", "forums",
-     * "projects"). Used to filter out events whose deep-link belongs to a
-     * different app — without this every per-app receiver displays every
-     * notification, and tapping the wrong one tries to load the link as an
-     * entity in the wrong app's namespace (e.g. chat looking for a chat
-     * with id `<feed_fp>` and showing a 404).
-     */
-    abstract fun appName(): String
 
     @EntryPoint
     @InstallIn(SingletonComponent::class)
@@ -155,20 +149,6 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             return
         }
 
-        // Filter out events whose deep-link belongs to a different Mochi app.
-        // Until we consolidate to a single unifiedpush account per device,
-        // every per-app receiver gets fired for every event — without this
-        // guard, a feed-post notification arrives in Feeds AND Chat AND
-        // Forums AND Projects, with the latter three showing the same body
-        // and dumping the user into a 404 when tapped. Empty links (e.g.
-        // the test category) are left unfiltered so the test path still
-        // exercises every channel.
-        val linkApp = link.trimStart('/').substringBefore('/').takeIf { it.isNotBlank() }
-        if (linkApp != null && linkApp != appName()) {
-            Log.i(TAG, "Push targeted at $linkApp; this is ${appName()} — dropping")
-            return
-        }
-
         postSystemNotification(context, instance, title, body, link, tag)
     }
 
@@ -277,7 +257,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         link: String,
         tag: String,
     ) {
-        val channelId = channelId(context, instance)
+        val channelId = channelId(context, instance, link)
         val deepLink = deepLinkFor(context, instance, link)
 
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
