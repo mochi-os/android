@@ -3,7 +3,9 @@ package org.mochios.mochi
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -47,8 +49,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         PushService.start(this)
-        handleOAuthIntent(intent)
-        handleNotificationIntent(intent)
+        handleMochiUri(intent)
         val startApp = resolveAliasTargetApp(intent?.component)
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
@@ -93,8 +94,7 @@ class MainActivity : ComponentActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
-        handleOAuthIntent(intent)
-        handleNotificationIntent(intent)
+        handleMochiUri(intent)
         // Warm-start from a different alias (singleTask brings the existing
         // task to the front instead of recreating). Drop a synthetic /<app>
         // link into PendingDeepLink so the running NavHost re-routes.
@@ -102,18 +102,92 @@ class MainActivity : ComponentActivity() {
         if (targetApp != null) PendingDeepLink.set("/$targetApp")
     }
 
-    private fun handleNotificationIntent(intent: Intent?) {
-        val data = intent?.data ?: return
-        if (data.scheme != "mochi" || data.host != "notification") return
-        val link = data.getQueryParameter("link") ?: return
+    /**
+     * Dispatcher for the three [mochi: URI scheme][claude/plans/mochi-uri-scheme.md] shapes:
+     *
+     *  - `mochi:<intent>?<query>`                — 0 slashes, system intent
+     *  - `mochi:/<entity>[/<sub>...]`            — 1 slash, entity in current session
+     *  - `mochi://<peer>/<entity>[/<sub>...]`    — 2 slashes, entity on a libp2p peer
+     *
+     * Also tolerates the legacy hierarchical-with-authority shape for system
+     * intents (`mochi://notification?...` / `mochi://oauth-return?...`) that
+     * older OAuth-return server builds + older shortcut intents may still emit.
+     */
+    private fun handleMochiUri(intent: Intent?) {
+        val uri = intent?.data ?: return
+        if (uri.scheme != "mochi") return
+        when {
+            !uri.isHierarchical -> handleSystemIntent(uri)
+            uri.authority.isNullOrEmpty() -> handleEntityIntent(intent, uri)
+            uri.authority in LEGACY_SYSTEM_INTENT_AUTHORITIES -> handleLegacySystemIntent(uri)
+            else -> handleCrossPeerEntityIntent(intent, uri)
+        }
+    }
+
+    /** mochi:<intent>?<query> — opaque URI; parse the SSP manually. */
+    private fun handleSystemIntent(uri: Uri) {
+        val ssp = uri.schemeSpecificPart
+        val name = ssp.substringBefore('?')
+        when (name) {
+            "notification" -> setNotificationDeepLink(uri.getQueryParameter("link"))
+            "oauth-return" -> applyOAuthReturn(uri.getQueryParameter("code"), uri.getQueryParameter("error"))
+            else -> Log.w(TAG, "Unknown system intent in $uri")
+        }
+    }
+
+    /**
+     * Legacy `mochi://notification?...` / `mochi://oauth-return?...` shapes.
+     * Kept so OAuth callbacks issued by older server builds + shortcuts
+     * created by earlier app versions keep working through the manifest's
+     * new broad filter.
+     */
+    private fun handleLegacySystemIntent(uri: Uri) {
+        when (uri.authority) {
+            "notification" -> setNotificationDeepLink(uri.getQueryParameter("link"))
+            "oauth-return" -> applyOAuthReturn(uri.getQueryParameter("code"), uri.getQueryParameter("error"))
+        }
+    }
+
+    /**
+     * mochi:/<entity>[/<sub>...] — entity in the current session.
+     *
+     * When the caller provides an `app` hint via Intent extras (e.g. the per-app
+     * "Add to home screen" shortcut intents), use it to short-circuit the
+     * entity → app lookup. Without a hint we'd need to query the current
+     * server's directory to figure out which app owns the entity — left as a
+     * follow-up; external entity URIs without a hint currently no-op.
+     */
+    private fun handleEntityIntent(intent: Intent, uri: Uri) {
+        val segments = uri.pathSegments
+        val entity = segments.firstOrNull() ?: return
+        val sub = segments.drop(1)
+        val app = intent.getStringExtra(EXTRA_APP_HINT)
+        if (app != null) {
+            val link = buildString {
+                append('/').append(app).append('/').append(entity)
+                for (s in sub) append('/').append(s)
+            }
+            PendingDeepLink.set(link)
+        } else {
+            Log.w(TAG, "Entity URI without app hint: $uri (directory lookup not yet implemented)")
+        }
+    }
+
+    /**
+     * mochi://<peer>/<entity>[/<sub>...] — entity on a specific libp2p peer.
+     * Cross-peer routing isn't implemented yet — scheme slot reserved for the
+     * eventual "share an entity from server A with a user on server B" flow.
+     */
+    private fun handleCrossPeerEntityIntent(intent: Intent, uri: Uri) {
+        Log.w(TAG, "Cross-peer URI not yet supported: $uri")
+    }
+
+    private fun setNotificationDeepLink(link: String?) {
+        link ?: return
         PendingDeepLink.set(link)
     }
 
-    private fun handleOAuthIntent(intent: Intent?) {
-        val data = intent?.data ?: return
-        if (data.scheme != "mochi" || data.host != "oauth-return") return
-        val code = data.getQueryParameter("code")
-        val error = data.getQueryParameter("error")
+    private fun applyOAuthReturn(code: String?, error: String?) {
         if (code == null && error == null) return
         runBlocking { sessionManager.setOAuthReturn(code, error) }
     }
@@ -161,7 +235,13 @@ class MainActivity : ComponentActivity() {
     }
 
     companion object {
+        private const val TAG = "MainActivity"
         private const val LAUNCHPAD = "launchpad"
         private const val META_TARGET_APP = "org.mochios.targetApp"
+
+        /** Intent extra a per-app `XxxListScreen.kt` shortcut sets to skip directory lookup. */
+        const val EXTRA_APP_HINT = "app"
+
+        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return")
     }
 }

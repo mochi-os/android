@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
@@ -383,23 +384,20 @@ private fun FeedRow(
                 text = { Text(stringResource(R.string.feeds_add_to_home_screen)) },
                 onClick = {
                     showMenu = false
-                    val intent = context.packageManager
-                        .getLaunchIntentForPackage(context.packageName)
-                        ?.apply {
-                            action = Intent.ACTION_VIEW
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                                Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            putExtra("entityId", feedId)
-                        }
-                    if (intent != null) {
-                        val shortcut = ShortcutInfoCompat.Builder(context, "feed_$feedId")
-                            .setShortLabel(feed.name)
-                            .setLongLabel(feed.name)
-                            .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
-                            .setIntent(intent)
-                            .build()
-                        ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
+                    // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("mochi:/$feedId")).apply {
+                        setPackage(context.packageName)
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        putExtra("app", "feeds")
                     }
+                    val shortcut = ShortcutInfoCompat.Builder(context, "feed_$feedId")
+                        .setShortLabel(feed.name)
+                        .setLongLabel(feed.name)
+                        .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
+                        .setIntent(intent)
+                        .build()
+                    ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
                 }
             )
         }

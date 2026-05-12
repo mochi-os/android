@@ -41,13 +41,12 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="mochi" android:host="notification" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="mochi" android:host="oauth-return" />
+                <!--
+                  Single broad filter — claim all `mochi:` URIs. The
+                  super-app routes by slash count in MainActivity.
+                  See claude/plans/mochi-uri-scheme.md.
+                -->
+                <data android:scheme="mochi" />
             </intent-filter>
         </activity>
 

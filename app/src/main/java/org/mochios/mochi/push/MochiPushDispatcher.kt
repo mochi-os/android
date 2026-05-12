@@ -26,9 +26,12 @@ class MochiPushDispatcher : MochiPushReceiver() {
         }
     }
 
-    override fun deepLinkFor(context: Context, instance: String, link: String): Uri =
-        Uri.parse("mochi://notification")
-            .buildUpon()
-            .appendQueryParameter("link", link)
-            .build()
+    override fun deepLinkFor(context: Context, instance: String, link: String): Uri {
+        // Per claude/plans/mochi-uri-scheme.md, system intents use the opaque
+        // shape (0 slashes): mochi:notification?link=…
+        // Hand-construct via the opaque-URI builder to avoid the //authority/path
+        // shape Uri.parse + buildUpon would otherwise emit.
+        val encoded = Uri.encode(link)
+        return Uri.parse("mochi:notification?link=$encoded")
+    }
 }

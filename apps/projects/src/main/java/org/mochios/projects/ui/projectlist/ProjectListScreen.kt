@@ -1,6 +1,7 @@
 package org.mochios.projects.ui.projectlist
 
 import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -254,23 +255,20 @@ private fun ProjectRow(
                 leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
                 onClick = {
                     showMenu = false
-                    val intent = context.packageManager
-                        .getLaunchIntentForPackage(context.packageName)
-                        ?.apply {
-                            action = Intent.ACTION_VIEW
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                                Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            putExtra("entityId", projectId)
-                        }
-                    if (intent != null) {
-                        val shortcut = ShortcutInfoCompat.Builder(context, "project_$projectId")
-                            .setShortLabel(project.name)
-                            .setLongLabel(project.name)
-                            .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
-                            .setIntent(intent)
-                            .build()
-                        ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
+                    // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("mochi:/$projectId")).apply {
+                        setPackage(context.packageName)
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        putExtra("app", "projects")
                     }
+                    val shortcut = ShortcutInfoCompat.Builder(context, "project_$projectId")
+                        .setShortLabel(project.name)
+                        .setLongLabel(project.name)
+                        .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
+                        .setIntent(intent)
+                        .build()
+                    ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
                 }
             )
             if (canUnsubscribe) {

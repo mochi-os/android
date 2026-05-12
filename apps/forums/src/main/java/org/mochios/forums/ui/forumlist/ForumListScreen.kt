@@ -1,6 +1,7 @@
 package org.mochios.forums.ui.forumlist
 
 import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -260,23 +261,22 @@ private fun ForumRow(
                 leadingIcon = { Icon(Icons.Default.HomeMax, contentDescription = null) },
                 onClick = {
                     showMenu = false
-                    val intent = context.packageManager
-                        .getLaunchIntentForPackage(context.packageName)
-                        ?.apply {
-                            action = Intent.ACTION_VIEW
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                                Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            putExtra("entityId", forumId)
-                        }
-                    if (intent != null) {
-                        val shortcut = ShortcutInfoCompat.Builder(context, "forum_$forumId")
-                            .setShortLabel(forum.name)
-                            .setLongLabel(forum.name)
-                            .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
-                            .setIntent(intent)
-                            .build()
-                        ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
+                    // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                    // The "app" extra is a hint the dispatcher uses to skip the
+                    // entity → app directory lookup.
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("mochi:/$forumId")).apply {
+                        setPackage(context.packageName)
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        putExtra("app", "forums")
                     }
+                    val shortcut = ShortcutInfoCompat.Builder(context, "forum_$forumId")
+                        .setShortLabel(forum.name)
+                        .setLongLabel(forum.name)
+                        .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
+                        .setIntent(intent)
+                        .build()
+                    ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
                 }
             )
             DropdownMenuItem(
