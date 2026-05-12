@@ -29,4 +29,5 @@
     <string name="chat_members_you">آپ</string>
 
     <string name="notification_channel_chat">Chat نوٹیفکیشنز</string>
+    <string name="chat_chat_not_found">چیٹ نہیں ملی</string>
 </resources>

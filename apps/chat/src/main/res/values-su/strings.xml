@@ -29,4 +29,5 @@
     <string name="chat_members_you">Anjeun</string>
 
     <string name="notification_channel_chat">Bewara Chat</string>
+    <string name="chat_chat_not_found">Chat teu kapanggih</string>
 </resources>

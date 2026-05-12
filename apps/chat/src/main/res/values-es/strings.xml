@@ -29,4 +29,5 @@
     <string name="chat_members_you">Tú</string>
 
     <string name="notification_channel_chat">Notificaciones de Chat</string>
+    <string name="chat_chat_not_found">Chat no encontrado</string>
 </resources>

@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Διαγραφή forum</string>
 
     <string name="notification_channel_forums">Ειδοποιήσεις Forums</string>
+    <string name="forums_forum_not_found">Το φόρουμ δεν βρέθηκε</string>
+    <string name="forums_post_not_found">Η ανάρτηση δεν βρέθηκε</string>
 </resources>

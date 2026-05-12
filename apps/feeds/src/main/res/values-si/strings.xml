@@ -77,4 +77,6 @@
     <string name="feeds_view_post">පළ කිරීම බලන්න</string>
     <string name="feeds_open_in_browser">බ්‍රවුසරයේ විවෘත කරන්න</string>
     <string name="feeds_unable_to_load">පිටුව පූරණය කළ නොහැක</string>
+    <string name="feeds_feed_not_found">පෝෂණය හමු නොවීය</string>
+    <string name="feeds_post_not_found">පළ කිරීම හමු නොවීය</string>
 </resources>

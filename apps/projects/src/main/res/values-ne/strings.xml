@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">रैंक</string>
 
     <string name="notification_channel_projects">Projects सूचनाहरू</string>
+    <string name="projects_project_not_found">प्रोजेक्ट भेटिएन</string>
 </resources>

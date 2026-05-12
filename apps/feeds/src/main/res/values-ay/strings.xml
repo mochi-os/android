@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Apnaqa uñjaña</string>
     <string name="feeds_open_in_browser">Internet jiskaña anqaru jisthapiña</string>
     <string name="feeds_unable_to_load">Janiw uka jana qalltawayañkamasati</string>
+    <string name="feeds_feed_not_found">Janiw feed jikxatkti</string>
+    <string name="feeds_post_not_found">Qillqata jan jikxatasiti</string>
 </resources>

@@ -29,4 +29,5 @@
     <string name="chat_members_you">Ön</string>
 
     <string name="notification_channel_chat">Chat értesítések</string>
+    <string name="chat_chat_not_found">A chat nem található</string>
 </resources>

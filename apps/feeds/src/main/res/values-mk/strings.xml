@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Прикажи објава</string>
     <string name="feeds_open_in_browser">Отвори во прелистувач</string>
     <string name="feeds_unable_to_load">Не може да се вчита страницата</string>
+    <string name="feeds_feed_not_found">Feed не е најден</string>
+    <string name="feeds_post_not_found">Објавата не е пронајдена</string>
 </resources>

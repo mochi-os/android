@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">ランク</string>
 
     <string name="notification_channel_projects">Projects の通知</string>
+    <string name="projects_project_not_found">プロジェクトが見つかりません</string>
 </resources>

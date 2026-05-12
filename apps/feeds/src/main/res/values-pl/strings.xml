@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Pokaż wpis</string>
     <string name="feeds_open_in_browser">Otwórz w przeglądarce</string>
     <string name="feeds_unable_to_load">Nie można załadować strony</string>
+    <string name="feeds_feed_not_found">Nie znaleziono kanału</string>
+    <string name="feeds_post_not_found">Nie znaleziono wpisu</string>
 </resources>

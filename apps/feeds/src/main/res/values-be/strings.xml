@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Прагледзець допіс</string>
     <string name="feeds_open_in_browser">Адкрыць у браўзеры</string>
     <string name="feeds_unable_to_load">Не атрымалася загрузіць старонку</string>
+    <string name="feeds_feed_not_found">Стужка не знойдзена</string>
+    <string name="feeds_post_not_found">Пост не знойдзены</string>
 </resources>

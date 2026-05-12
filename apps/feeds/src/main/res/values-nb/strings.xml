@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Vis innlegg</string>
     <string name="feeds_open_in_browser">Åpne i nettleser</string>
     <string name="feeds_unable_to_load">Kunne ikke laste siden</string>
+    <string name="feeds_feed_not_found">Feed ikke funnet</string>
+    <string name="feeds_post_not_found">Innlegg ikke funnet</string>
 </resources>

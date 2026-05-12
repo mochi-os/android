@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Scrios fóram</string>
 
     <string name="notification_channel_forums">Fógraí Forums</string>
+    <string name="forums_forum_not_found">Níor aimsíodh an fóram</string>
+    <string name="forums_post_not_found">Níor aimsíodh an phostáil</string>
 </resources>

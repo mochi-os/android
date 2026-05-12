@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Ranga</string>
 
     <string name="notification_channel_projects">Powiadomienia Projects</string>
+    <string name="projects_project_not_found">Nie znaleziono projektu</string>
 </resources>

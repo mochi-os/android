@@ -29,4 +29,5 @@
     <string name="chat_members_you">Шумо</string>
 
     <string name="notification_channel_chat">Огоҳиҳои Chat</string>
+    <string name="chat_chat_not_found">Чат ёфт нашуд</string>
 </resources>

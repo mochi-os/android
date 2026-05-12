@@ -29,4 +29,5 @@
     <string name="chat_members_you">អ្នក</string>
 
     <string name="notification_channel_chat">ការជូនដំណឹង Chat</string>
+    <string name="chat_chat_not_found">រកមិនឃើញការជជែក</string>
 </resources>

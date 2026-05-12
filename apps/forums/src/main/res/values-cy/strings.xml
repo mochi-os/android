@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Dileu fforwm</string>
 
     <string name="notification_channel_forums">Hysbysiadau Forums</string>
+    <string name="forums_forum_not_found">Ni chanfuwyd y fforwm</string>
+    <string name="forums_post_not_found">Heb ddod o hyd i\'r postiad</string>
 </resources>

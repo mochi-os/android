@@ -29,4 +29,5 @@
     <string name="chat_members_you">Ati</string>
 
     <string name="notification_channel_chat">Beeksisawwan Chat</string>
+    <string name="chat_chat_not_found">Chaattiin hin argamne</string>
 </resources>

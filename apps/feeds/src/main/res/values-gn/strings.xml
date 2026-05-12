@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Mañe’ã apopyre</string>
     <string name="feeds_open_in_browser">Mbo’o tetepyre rupive</string>
     <string name="feeds_unable_to_load">Ndaikatúi henondepe ojeguereko</string>
+    <string name="feeds_feed_not_found">Feed nojetopái</string>
+    <string name="feeds_post_not_found">Marandu ndojejuhúi</string>
 </resources>

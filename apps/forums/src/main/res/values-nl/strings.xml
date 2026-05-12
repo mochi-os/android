@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Forum verwijderen</string>
 
     <string name="notification_channel_forums">Forums-meldingen</string>
+    <string name="forums_forum_not_found">Forum niet gevonden</string>
+    <string name="forums_post_not_found">Post niet gevonden</string>
 </resources>

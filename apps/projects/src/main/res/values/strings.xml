@@ -370,4 +370,5 @@
     <string name="projects_design_preview_pick_columns">Pick a columns field</string>
     <string name="projects_design_preview_no_options">No options on the columns field</string>
     <string name="projects_design_preview_empty">Nothing to show</string>
+    <string name="projects_project_not_found">Project not found</string>
 </resources>

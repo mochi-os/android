@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Προβολή ανάρτησης</string>
     <string name="feeds_open_in_browser">Άνοιγμα στο πρόγραμμα περιήγησης</string>
     <string name="feeds_unable_to_load">Αδυναμία φόρτωσης σελίδας</string>
+    <string name="feeds_feed_not_found">Η ροή δεν βρέθηκε</string>
+    <string name="feeds_post_not_found">Η ανάρτηση δεν βρέθηκε</string>
 </resources>

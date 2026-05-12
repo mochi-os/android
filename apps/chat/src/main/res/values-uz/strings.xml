@@ -29,4 +29,5 @@
     <string name="chat_members_you">Siz</string>
 
     <string name="notification_channel_chat">Chat bildirishnomalari</string>
+    <string name="chat_chat_not_found">Suhbat topilmadi</string>
 </resources>

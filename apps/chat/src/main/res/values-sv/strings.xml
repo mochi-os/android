@@ -29,4 +29,5 @@
     <string name="chat_members_you">Du</string>
 
     <string name="notification_channel_chat">Chat-aviseringar</string>
+    <string name="chat_chat_not_found">Chatt hittades inte</string>
 </resources>

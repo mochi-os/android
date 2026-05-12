@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Ištrinti forumą</string>
 
     <string name="notification_channel_forums">Forums pranešimai</string>
+    <string name="forums_forum_not_found">Forumas nerastas</string>
+    <string name="forums_post_not_found">Įrašas nerastas</string>
 </resources>

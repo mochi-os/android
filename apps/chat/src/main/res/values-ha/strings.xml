@@ -29,4 +29,5 @@
     <string name="chat_members_you">Kai</string>
 
     <string name="notification_channel_chat">Sanarwa na Chat</string>
+    <string name="chat_chat_not_found">Ba a sami chat ba</string>
 </resources>

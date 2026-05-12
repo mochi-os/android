@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Gönderiyi gör</string>
     <string name="feeds_open_in_browser">Tarayıcıda aç</string>
     <string name="feeds_unable_to_load">Sayfa yüklenemiyor</string>
+    <string name="feeds_feed_not_found">Akış bulunamadı</string>
+    <string name="feeds_post_not_found">Gönderi bulunamadı</string>
 </resources>

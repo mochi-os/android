@@ -77,4 +77,6 @@
     <string name="feeds_view_post">הצג פוסט</string>
     <string name="feeds_open_in_browser">פתח בדפדפן</string>
     <string name="feeds_unable_to_load">לא ניתן לטעון את הדף</string>
+    <string name="feeds_feed_not_found">הפיד לא נמצא</string>
+    <string name="feeds_post_not_found">הפוסט לא נמצא</string>
 </resources>

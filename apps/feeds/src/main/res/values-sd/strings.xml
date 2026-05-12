@@ -77,4 +77,6 @@
     <string name="feeds_view_post">پوسٽ ڏسو</string>
     <string name="feeds_open_in_browser">برائوزر ۾ کوليو</string>
     <string name="feeds_unable_to_load">صفحو لوڊ نه ٿي سگھيو</string>
+    <string name="feeds_feed_not_found">فيڊ نه ملي</string>
+    <string name="feeds_post_not_found">پوسٽ نه ملي</string>
 </resources>

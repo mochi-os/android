@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Bejegyzés megtekintése</string>
     <string name="feeds_open_in_browser">Megnyitás böngészőben</string>
     <string name="feeds_unable_to_load">Az oldal nem tölthető be</string>
+    <string name="feeds_feed_not_found">Hírcsatorna nem található</string>
+    <string name="feeds_post_not_found">A bejegyzés nem található</string>
 </resources>

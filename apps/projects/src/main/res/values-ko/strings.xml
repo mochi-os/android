@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">순위</string>
 
     <string name="notification_channel_projects">Projects 알림</string>
+    <string name="projects_project_not_found">프로젝트를 찾을 수 없어요</string>
 </resources>

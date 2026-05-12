@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Fshi forumin</string>
 
     <string name="notification_channel_forums">Njoftime Forums</string>
+    <string name="forums_forum_not_found">Forumi nuk u gjet</string>
+    <string name="forums_post_not_found">Postimi s\'u gjet</string>
 </resources>

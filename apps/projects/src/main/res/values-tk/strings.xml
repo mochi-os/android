@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Reýting</string>
 
     <string name="notification_channel_projects">Projects habarnamalary</string>
+    <string name="projects_project_not_found">Taslama tapylmady</string>
 </resources>

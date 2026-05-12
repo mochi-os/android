@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Դիտել գրառումը</string>
     <string name="feeds_open_in_browser">Բացել զննարկիչում</string>
     <string name="feeds_unable_to_load">Հնարավոր չէ բեռնել էջը</string>
+    <string name="feeds_feed_not_found">Հոսքը չի գտնվել</string>
+    <string name="feeds_post_not_found">Գրառումը չի գտնվել</string>
 </resources>

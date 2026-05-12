@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">删除论坛</string>
 
     <string name="notification_channel_forums">Forums 通知</string>
+    <string name="forums_forum_not_found">论坛未找到</string>
+    <string name="forums_post_not_found">帖子未找到</string>
 </resources>

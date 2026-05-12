@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Peržiūrėti įrašą</string>
     <string name="feeds_open_in_browser">Atidaryti naršyklėje</string>
     <string name="feeds_unable_to_load">Nepavyko įkelti puslapio</string>
+    <string name="feeds_feed_not_found">Srautas nerastas</string>
+    <string name="feeds_post_not_found">Įrašas nerastas</string>
 </resources>

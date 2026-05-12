@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Tingali kintunan</string>
     <string name="feeds_open_in_browser">Buka dina panyungsi</string>
     <string name="feeds_unable_to_load">Teu tiasa muka kaca</string>
+    <string name="feeds_feed_not_found">Feed teu kapanggih</string>
+    <string name="feeds_post_not_found">Pos teu kapanggih</string>
 </resources>

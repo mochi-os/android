@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Visa inlägg</string>
     <string name="feeds_open_in_browser">Öppna i webbläsare</string>
     <string name="feeds_unable_to_load">Det gick inte att läsa in sidan</string>
+    <string name="feeds_feed_not_found">Flöde hittades inte</string>
+    <string name="feeds_post_not_found">Inlägget hittades inte</string>
 </resources>

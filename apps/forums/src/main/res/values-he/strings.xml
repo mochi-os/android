@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">מחק פורום</string>
 
     <string name="notification_channel_forums">התראות Forums</string>
+    <string name="forums_forum_not_found">הפורום לא נמצא</string>
+    <string name="forums_post_not_found">הפוסט לא נמצא</string>
 </resources>

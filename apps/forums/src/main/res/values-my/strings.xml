@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">forum ဖျက်မည်</string>
 
     <string name="notification_channel_forums">Forums အကြောင်းကြားစာများ</string>
+    <string name="forums_forum_not_found">ဖိုရမ် မတွေ့ပါ</string>
+    <string name="forums_post_not_found">ပို့စ် မတွေ့ပါ</string>
 </resources>

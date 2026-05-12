@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">อันดับ</string>
 
     <string name="notification_channel_projects">การแจ้งเตือน Projects</string>
+    <string name="projects_project_not_found">ไม่พบโปรเจกต์</string>
 </resources>

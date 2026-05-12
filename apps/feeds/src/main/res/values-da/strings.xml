@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Vis opslag</string>
     <string name="feeds_open_in_browser">Åbn i browser</string>
     <string name="feeds_unable_to_load">Kunne ikke indlæse siden</string>
+    <string name="feeds_feed_not_found">Feed ikke fundet</string>
+    <string name="feeds_post_not_found">Indlæg ikke fundet</string>
 </resources>

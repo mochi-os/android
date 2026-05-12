@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Xem bài đăng</string>
     <string name="feeds_open_in_browser">Mở trong trình duyệt</string>
     <string name="feeds_unable_to_load">Không thể tải trang</string>
+    <string name="feeds_feed_not_found">Không tìm thấy nguồn cấp</string>
+    <string name="feeds_post_not_found">Không tìm thấy bài viết</string>
 </resources>

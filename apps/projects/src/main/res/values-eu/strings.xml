@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Maila</string>
 
     <string name="notification_channel_projects">Projects jakinarazpenak</string>
+    <string name="projects_project_not_found">Ez da proiektua aurkitu</string>
 </resources>

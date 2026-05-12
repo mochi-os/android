@@ -29,4 +29,5 @@
     <string name="chat_members_you">Sen</string>
 
     <string name="notification_channel_chat">Chat habarnamalary</string>
+    <string name="chat_chat_not_found">Söhbetdeşlik tapylmady</string>
 </resources>

@@ -29,4 +29,5 @@
     <string name="chat_members_you">Sampéyan</string>
 
     <string name="notification_channel_chat">Kabar Chat</string>
+    <string name="chat_chat_not_found">Chat ora ketemu</string>
 </resources>

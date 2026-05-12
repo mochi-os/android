@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Выдаліць форум</string>
 
     <string name="notification_channel_forums">Апавяшчэнні Forums</string>
+    <string name="forums_forum_not_found">Форум не знойдзены</string>
+    <string name="forums_post_not_found">Пост не знойдзены</string>
 </resources>

@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">தரவரிசை</string>
 
     <string name="notification_channel_projects">Projects அறிவிப்புகள்</string>
+    <string name="projects_project_not_found">Project கிடைக்கவில்லை</string>
 </resources>

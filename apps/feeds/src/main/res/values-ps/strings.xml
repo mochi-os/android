@@ -77,4 +77,6 @@
     <string name="feeds_view_post">پوسټ وګورئ</string>
     <string name="feeds_open_in_browser">په لټوونکي کې پرانیستل</string>
     <string name="feeds_unable_to_load">د پاڼې بار کول ونه شو</string>
+    <string name="feeds_feed_not_found">فیډ ونه موندل شو</string>
+    <string name="feeds_post_not_found">لیکنه ونه موندل شوه</string>
 </resources>

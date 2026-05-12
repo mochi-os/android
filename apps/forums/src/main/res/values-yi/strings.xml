@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">אויסמעקן פֿאָרום</string>
 
     <string name="notification_channel_forums">Forums נאָטיפֿיקאַציעס</string>
+    <string name="forums_forum_not_found">פֿאָרום ניט געפֿונען</string>
+    <string name="forums_post_not_found">פּאָסט ניט געפֿונען</string>
 </resources>

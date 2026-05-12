@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Xóa diễn đàn</string>
 
     <string name="notification_channel_forums">Thông báo Forums</string>
+    <string name="forums_forum_not_found">Không tìm thấy diễn đàn</string>
+    <string name="forums_post_not_found">Không tìm thấy bài viết</string>
 </resources>

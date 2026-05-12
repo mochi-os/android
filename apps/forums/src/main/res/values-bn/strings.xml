@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">ফোরাম মুছুন</string>
 
     <string name="notification_channel_forums">Forums বিজ্ঞপ্তি</string>
+    <string name="forums_forum_not_found">ফোরাম পাওয়া যায়নি</string>
+    <string name="forums_post_not_found">পোস্ট পাওয়া যায়নি</string>
 </resources>

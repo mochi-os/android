@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Бичлэгийг харах</string>
     <string name="feeds_open_in_browser">Хөтөч дээр нээх</string>
     <string name="feeds_unable_to_load">Хуудсыг ачаалж чадсангүй</string>
+    <string name="feeds_feed_not_found">Feed олдсонгүй</string>
+    <string name="feeds_post_not_found">Нийтлэл олдсонгүй</string>
 </resources>

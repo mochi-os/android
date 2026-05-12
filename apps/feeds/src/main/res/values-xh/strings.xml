@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Jonga isithuba</string>
     <string name="feeds_open_in_browser">Vula kwibrawuza</string>
     <string name="feeds_unable_to_load">Akukwazi kufaka iphepha</string>
+    <string name="feeds_feed_not_found">Ifidi ayifumanekanga</string>
+    <string name="feeds_post_not_found">Umyalezo awufumaneki</string>
 </resources>

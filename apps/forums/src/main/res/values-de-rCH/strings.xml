@@ -5,4 +5,6 @@
     <string name="forums_sort_hot">Heiss</string>
 
     <string name="notification_channel_forums">Forums-Benachrichtigungen</string>
+    <string name="forums_forum_not_found">Forum not found</string>
+    <string name="forums_post_not_found">Post not found</string>
 </resources>

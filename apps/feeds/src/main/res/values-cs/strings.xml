@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Zobrazit příspěvek</string>
     <string name="feeds_open_in_browser">Otevřít v prohlížeči</string>
     <string name="feeds_unable_to_load">Stránku nelze načíst</string>
+    <string name="feeds_feed_not_found">Kanál nenalezen</string>
+    <string name="feeds_post_not_found">Příspěvek nenalezen</string>
 </resources>

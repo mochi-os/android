@@ -29,4 +29,5 @@
     <string name="chat_members_you">אתה</string>
 
     <string name="notification_channel_chat">התראות Chat</string>
+    <string name="chat_chat_not_found">הצ\'אט לא נמצא</string>
 </resources>

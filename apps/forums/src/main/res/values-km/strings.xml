@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">លុបវេទិកា</string>
 
     <string name="notification_channel_forums">ការជូនដំណឹង Forums</string>
+    <string name="forums_forum_not_found">រកមិនឃើញវេទិកា</string>
+    <string name="forums_post_not_found">រកមិនឃើញប្រកាស</string>
 </resources>

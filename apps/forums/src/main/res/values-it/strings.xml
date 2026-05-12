@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Elimina forum</string>
 
     <string name="notification_channel_forums">Notifiche Forums</string>
+    <string name="forums_forum_not_found">Forum non trovato</string>
+    <string name="forums_post_not_found">Post non trovato</string>
 </resources>

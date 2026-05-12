@@ -77,4 +77,6 @@
     <string name="feeds_view_post">இடுகையைப் பார்</string>
     <string name="feeds_open_in_browser">உலாவியில் திற</string>
     <string name="feeds_unable_to_load">பக்கத்தை ஏற்ற முடியவில்லை</string>
+    <string name="feeds_feed_not_found">ஃபீட் கிடைக்கவில்லை</string>
+    <string name="feeds_post_not_found">பதிவு கிடைக்கவில்லை</string>
 </resources>

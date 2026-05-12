@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Rang</string>
 
     <string name="notification_channel_projects">Projects-varsler</string>
+    <string name="projects_project_not_found">Prosjekt ikke funnet</string>
 </resources>

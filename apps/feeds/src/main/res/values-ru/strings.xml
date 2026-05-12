@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Показать публикацию</string>
     <string name="feeds_open_in_browser">Открыть в браузере</string>
     <string name="feeds_unable_to_load">Не удалось загрузить страницу</string>
+    <string name="feeds_feed_not_found">Лента не найдена</string>
+    <string name="feeds_post_not_found">Публикация не найдена</string>
 </resources>

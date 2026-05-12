@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Bericht bekijken</string>
     <string name="feeds_open_in_browser">Openen in browser</string>
     <string name="feeds_unable_to_load">Pagina kan niet worden geladen</string>
+    <string name="feeds_feed_not_found">Feed niet gevonden</string>
+    <string name="feeds_post_not_found">Bericht niet gevonden</string>
 </resources>

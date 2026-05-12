@@ -29,4 +29,5 @@
     <string name="chat_members_you">Þú</string>
 
     <string name="notification_channel_chat">Chat-tilkynningar</string>
+    <string name="chat_chat_not_found">Spjall fannst ekki</string>
 </resources>

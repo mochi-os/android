@@ -29,4 +29,5 @@
     <string name="chat_members_you">እርስዎ</string>
 
     <string name="notification_channel_chat">Chat ማሳወቂያዎች</string>
+    <string name="chat_chat_not_found">ውይይት አልተገኘም</string>
 </resources>

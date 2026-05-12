@@ -29,4 +29,5 @@
     <string name="chat_members_you">تۆ</string>
 
     <string name="notification_channel_chat">ئاگادارکردنەوەکانی Chat</string>
+    <string name="chat_chat_not_found">گفتوگۆ نەدۆزرایەوە</string>
 </resources>

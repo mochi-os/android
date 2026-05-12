@@ -91,6 +91,7 @@ import org.mochios.android.model.ReactionType
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MediaGrid
+import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
@@ -114,6 +115,7 @@ fun FeedScreen(
     val isLoadingMore by viewModel.isLoadingMore.collectAsState()
     val hasMore by viewModel.hasMore.collectAsState()
     val error by viewModel.error.collectAsState()
+    val isNotFound by viewModel.isNotFound.collectAsState()
     val currentSort by viewModel.currentSort.collectAsState()
     val currentTag by viewModel.currentTag.collectAsState()
     val unreadOnly by viewModel.unreadOnly.collectAsState()
@@ -245,6 +247,12 @@ fun FeedScreen(
                     ) {
                         CircularProgressIndicator()
                     }
+                }
+                isNotFound && posts.isEmpty() -> {
+                    NotFoundState(
+                        title = stringResource(R.string.feeds_feed_not_found),
+                        onBack = onNavigateBack,
+                    )
                 }
                 error != null && posts.isEmpty() -> {
                     Box(

@@ -29,4 +29,5 @@
     <string name="chat_members_you">Εσείς</string>
 
     <string name="notification_channel_chat">Ειδοποιήσεις Chat</string>
+    <string name="chat_chat_not_found">Η συνομιλία δεν βρέθηκε</string>
 </resources>

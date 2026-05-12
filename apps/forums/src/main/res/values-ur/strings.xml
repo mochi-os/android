@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">فورم حذف کریں</string>
 
     <string name="notification_channel_forums">Forums نوٹیفکیشنز</string>
+    <string name="forums_forum_not_found">فورم نہیں ملا</string>
+    <string name="forums_post_not_found">پوسٹ نہیں ملی</string>
 </resources>

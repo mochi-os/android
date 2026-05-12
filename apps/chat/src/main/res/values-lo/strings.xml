@@ -29,4 +29,5 @@
     <string name="chat_members_you">ທ່ານ</string>
 
     <string name="notification_channel_chat">ການແຈ້ງເຕືອນ Chat</string>
+    <string name="chat_chat_not_found">ບໍ່ພົບແຊັດ</string>
 </resources>

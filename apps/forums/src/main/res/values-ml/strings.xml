@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">ഫോറം ഇല്ലാതാക്കുക</string>
 
     <string name="notification_channel_forums">Forums നോട്ടിഫിക്കേഷനുകൾ</string>
+    <string name="forums_forum_not_found">ഫോറം കണ്ടെത്തിയില്ല</string>
+    <string name="forums_post_not_found">പോസ്റ്റ് കണ്ടെത്തിയില്ല</string>
 </resources>

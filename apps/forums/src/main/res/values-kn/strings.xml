@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">ಫೋರಮ್ ಅಳಿಸಿ</string>
 
     <string name="notification_channel_forums">Forums ಸೂಚನೆಗಳು</string>
+    <string name="forums_forum_not_found">ಫೋರಮ್ ಸಿಗಲಿಲ್ಲ</string>
+    <string name="forums_post_not_found">ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
 </resources>

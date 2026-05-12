@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Rang</string>
 
     <string name="notification_channel_projects">Obavijesti Projects</string>
+    <string name="projects_project_not_found">Projekt nije pronađen</string>
 </resources>

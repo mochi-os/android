@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Skoða færslu</string>
     <string name="feeds_open_in_browser">Opna í vafra</string>
     <string name="feeds_unable_to_load">Get ekki hlaðið síðunni</string>
+    <string name="feeds_feed_not_found">Streymi fannst ekki</string>
+    <string name="feeds_post_not_found">Færsla fannst ekki</string>
 </resources>

@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Vezi postarea</string>
     <string name="feeds_open_in_browser">Deschide în browser</string>
     <string name="feeds_unable_to_load">Pagina nu poate fi încărcată</string>
+    <string name="feeds_feed_not_found">Flux negăsit</string>
+    <string name="feeds_post_not_found">Postarea nu a fost găsită</string>
 </resources>

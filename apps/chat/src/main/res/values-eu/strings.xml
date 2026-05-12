@@ -29,4 +29,5 @@
     <string name="chat_members_you">Zu</string>
 
     <string name="notification_channel_chat">Chat jakinarazpenak</string>
+    <string name="chat_chat_not_found">Txata ez da aurkitu</string>
 </resources>

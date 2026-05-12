@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Преглед на публикацията</string>
     <string name="feeds_open_in_browser">Отвори в браузъра</string>
     <string name="feeds_unable_to_load">Страницата не може да се зареди</string>
+    <string name="feeds_feed_not_found">Емисията не е намерена</string>
+    <string name="feeds_post_not_found">Публикацията не е намерена</string>
 </resources>

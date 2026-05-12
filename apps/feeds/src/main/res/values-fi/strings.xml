@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Näytä julkaisu</string>
     <string name="feeds_open_in_browser">Avaa selaimessa</string>
     <string name="feeds_unable_to_load">Sivua ei voi ladata</string>
+    <string name="feeds_feed_not_found">Syötettä ei löytynyt</string>
+    <string name="feeds_post_not_found">Julkaisua ei löytynyt</string>
 </resources>

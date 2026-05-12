@@ -67,6 +67,9 @@ class FeedViewModel @Inject constructor(
     private val _error = MutableStateFlow<String?>(null)
     val error: StateFlow<String?> = _error.asStateFlow()
 
+    private val _isNotFound = MutableStateFlow(false)
+    val isNotFound: StateFlow<Boolean> = _isNotFound.asStateFlow()
+
     private val _currentSort = MutableStateFlow("interests")
     val currentSort: StateFlow<String> = _currentSort.asStateFlow()
 
@@ -90,6 +93,7 @@ class FeedViewModel @Inject constructor(
     fun loadFeed() {
         viewModelScope.launch {
             _error.value = null
+            _isNotFound.value = false
 
             if (isAllFeeds) {
                 _isLoading.value = true
@@ -100,6 +104,7 @@ class FeedViewModel @Inject constructor(
                     loadAllFeeds()
                 } catch (e: MochiError) {
                     _error.value = e.userMessage()
+                    if (e is MochiError.NotFoundError) _isNotFound.value = true
                 } catch (e: Exception) {
                     _error.value = e.message ?: "Failed to load feed"
                 } finally {
@@ -151,6 +156,7 @@ class FeedViewModel @Inject constructor(
                 loadTags()
             } catch (e: MochiError) {
                 _error.value = e.userMessage()
+                if (e is MochiError.NotFoundError) _isNotFound.value = true
             } catch (e: Exception) {
                 _error.value = e.message ?: "Failed to load feed"
             } finally {

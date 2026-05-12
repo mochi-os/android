@@ -29,4 +29,5 @@
     <string name="chat_members_you">Ви</string>
 
     <string name="notification_channel_chat">Сповіщення Chat</string>
+    <string name="chat_chat_not_found">Чат не знайдено</string>
 </resources>

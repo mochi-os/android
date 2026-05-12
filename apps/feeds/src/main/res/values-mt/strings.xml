@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Ara l-post</string>
     <string name="feeds_open_in_browser">Iftaħ fil-browżer</string>
     <string name="feeds_unable_to_load">Ma jistax jitla\' l-paġna</string>
+    <string name="feeds_feed_not_found">Il-feed ma nstabitx</string>
+    <string name="feeds_post_not_found">Post mhux misjub</string>
 </resources>

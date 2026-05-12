@@ -77,4 +77,6 @@
     <string name="feeds_view_post">ਪੋਸਟ ਵੇਖੋ</string>
     <string name="feeds_open_in_browser">ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
     <string name="feeds_unable_to_load">ਪੰਨਾ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</string>
+    <string name="feeds_feed_not_found">ਫੀਡ ਨਹੀਂ ਮਿਲੀ</string>
+    <string name="feeds_post_not_found">ਪੋਸਟ ਨਹੀਂ ਮਿਲੀ</string>
 </resources>

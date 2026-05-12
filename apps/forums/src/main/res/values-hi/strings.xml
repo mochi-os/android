@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">फ़ोरम हटाएँ</string>
 
     <string name="notification_channel_forums">Forums सूचनाएँ</string>
+    <string name="forums_forum_not_found">फ़ोरम नहीं मिला</string>
+    <string name="forums_post_not_found">पोस्ट नहीं मिली</string>
 </resources>

@@ -77,4 +77,6 @@
     <string name="feeds_view_post">查看帖子</string>
     <string name="feeds_open_in_browser">在浏览器中打开</string>
     <string name="feeds_unable_to_load">无法加载页面</string>
+    <string name="feeds_feed_not_found">信息流未找到</string>
+    <string name="feeds_post_not_found">帖子未找到</string>
 </resources>

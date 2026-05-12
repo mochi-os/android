@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Rank</string>
 
     <string name="notification_channel_projects">Mga abiso ng Projects</string>
+    <string name="projects_project_not_found">Hindi nahanap ang proyekto</string>
 </resources>

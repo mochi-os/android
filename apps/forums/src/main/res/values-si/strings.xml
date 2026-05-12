@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">සංසදය මකන්න</string>
 
     <string name="notification_channel_forums">Forums දැනුම්දීම්</string>
+    <string name="forums_forum_not_found">සභාව හමු නොවීය</string>
+    <string name="forums_post_not_found">පළ කිරීම හමු නොවීය</string>
 </resources>

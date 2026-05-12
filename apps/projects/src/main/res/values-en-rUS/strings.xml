@@ -14,4 +14,5 @@
     <string name="projects_links_type_duplicates">Duplicates</string>
     <string name="projects_option_edit">Edit option</string>
 
+    <string name="projects_project_not_found">Project not found</string>
 </resources>

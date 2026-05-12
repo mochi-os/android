@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Gade pòs la</string>
     <string name="feeds_open_in_browser">Louvri nan navigatè</string>
     <string name="feeds_unable_to_load">Pa ka chaje paj la</string>
+    <string name="feeds_feed_not_found">Feed pa jwenn</string>
+    <string name="feeds_post_not_found">Pòs pa jwenn</string>
 </resources>

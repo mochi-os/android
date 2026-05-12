@@ -29,4 +29,5 @@
     <string name="chat_members_you">Bạn</string>
 
     <string name="notification_channel_chat">Thông báo Chat</string>
+    <string name="chat_chat_not_found">Không tìm thấy cuộc trò chuyện</string>
 </resources>

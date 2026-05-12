@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Forumu sil</string>
 
     <string name="notification_channel_forums">Forums bildirişləri</string>
+    <string name="forums_forum_not_found">Forum tapılmadı</string>
+    <string name="forums_post_not_found">Post tapılmadı</string>
 </resources>

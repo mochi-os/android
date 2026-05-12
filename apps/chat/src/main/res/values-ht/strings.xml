@@ -29,4 +29,5 @@
     <string name="chat_members_you">Ou</string>
 
     <string name="notification_channel_chat">Notifikasyon Chat</string>
+    <string name="chat_chat_not_found">Chat pa jwenn</string>
 </resources>

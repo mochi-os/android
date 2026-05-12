@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">ደረጃ</string>
 
     <string name="notification_channel_projects">Projects ማሳወቂያዎች</string>
+    <string name="projects_project_not_found">ፕሮጀክት አልተገኘም</string>
 </resources>

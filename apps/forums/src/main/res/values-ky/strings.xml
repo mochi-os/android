@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Форумду жок кылуу</string>
 
     <string name="notification_channel_forums">Forums билдирүүлөрү</string>
+    <string name="forums_forum_not_found">Форум табылган жок</string>
+    <string name="forums_post_not_found">Пост табылган жок</string>
 </resources>

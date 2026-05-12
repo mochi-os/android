@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Tazama chapisho</string>
     <string name="feeds_open_in_browser">Fungua katika kivinjari</string>
     <string name="feeds_unable_to_load">Imeshindwa kupakia ukurasa</string>
+    <string name="feeds_feed_not_found">Mlisho haukupatikana</string>
+    <string name="feeds_post_not_found">Chapisho halikupatikana</string>
 </resources>

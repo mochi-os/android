@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Жазууну көрүү</string>
     <string name="feeds_open_in_browser">Браузерде ачуу</string>
     <string name="feeds_unable_to_load">Бетти жүктөө мүмкүн эмес</string>
+    <string name="feeds_feed_not_found">Лента табылган жок</string>
+    <string name="feeds_post_not_found">Пост табылган жок</string>
 </resources>

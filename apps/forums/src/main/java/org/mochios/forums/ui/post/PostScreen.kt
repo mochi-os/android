@@ -47,7 +47,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.model.resolveAttachmentUrl
@@ -100,6 +102,12 @@ fun PostScreen(
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator()
                     }
+                }
+                uiState.error is MochiError.NotFoundError && uiState.post.id.isEmpty() -> {
+                    NotFoundState(
+                        title = stringResource(R.string.forums_post_not_found),
+                        onBack = onBack,
+                    )
                 }
                 uiState.error != null && uiState.post.id.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

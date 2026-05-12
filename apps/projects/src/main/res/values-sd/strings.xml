@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">درجو</string>
 
     <string name="notification_channel_projects">Projects اطلاعون</string>
+    <string name="projects_project_not_found">پروجيڪٽ نه مليو</string>
 </resources>

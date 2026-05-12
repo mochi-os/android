@@ -29,4 +29,5 @@
     <string name="chat_members_you">დიახ, ძალით</string>
 
     <string name="notification_channel_chat">Chat შეტყობინებები</string>
+    <string name="chat_chat_not_found">ჩატი ვერ მოიძებნა</string>
 </resources>

@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Lihat postingan</string>
     <string name="feeds_open_in_browser">Buka di peramban</string>
     <string name="feeds_unable_to_load">Tidak dapat memuat halaman</string>
+    <string name="feeds_feed_not_found">Feed tidak ditemukan</string>
+    <string name="feeds_post_not_found">Postingan tidak ditemukan</string>
 </resources>

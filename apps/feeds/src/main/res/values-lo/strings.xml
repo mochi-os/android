@@ -77,4 +77,6 @@
     <string name="feeds_view_post">ເບິ່ງໂພສ</string>
     <string name="feeds_open_in_browser">ເປີດໃນຕົວທ່ອງເວັບ</string>
     <string name="feeds_unable_to_load">ບໍ່ສາມາດໂຫຼດໜ້າໄດ້</string>
+    <string name="feeds_feed_not_found">ບໍ່ພົບຟີດ</string>
+    <string name="feeds_post_not_found">ບໍ່ພົບໂພສ</string>
 </resources>

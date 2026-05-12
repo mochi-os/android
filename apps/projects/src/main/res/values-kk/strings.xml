@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Дәреже</string>
 
     <string name="notification_channel_projects">Projects хабарландырулары</string>
+    <string name="projects_project_not_found">Жоба табылмады</string>
 </resources>

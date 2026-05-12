@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Inqanaba</string>
 
     <string name="notification_channel_projects">Izaziso ze-Projects</string>
+    <string name="projects_project_not_found">Iprojekthi ayifumaneki</string>
 </resources>

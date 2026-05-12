@@ -77,4 +77,6 @@
     <string name="feeds_view_post">ပို့စ်ကြည့်ပါ</string>
     <string name="feeds_open_in_browser">ဘရောက်ဇာတွင်ဖွင့်ပါ</string>
     <string name="feeds_unable_to_load">စာမျက်နှာကို တင်၍မရပါ</string>
+    <string name="feeds_feed_not_found">ဖိဒ် မတွေ့ပါ</string>
+    <string name="feeds_post_not_found">ပို့စ် မတွေ့ပါ</string>
 </resources>

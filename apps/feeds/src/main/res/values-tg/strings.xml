@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Дидани паём</string>
     <string name="feeds_open_in_browser">Дар браузер кушодан</string>
     <string name="feeds_unable_to_load">Саҳифа бор намешавад</string>
+    <string name="feeds_feed_not_found">Фид ёфт нашуд</string>
+    <string name="feeds_post_not_found">Пост ёфт нашуд</string>
 </resources>

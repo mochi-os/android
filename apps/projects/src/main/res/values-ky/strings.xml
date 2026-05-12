@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Орду</string>
 
     <string name="notification_channel_projects">Projects билдирүүлөрү</string>
+    <string name="projects_project_not_found">Долбоор табылган жок</string>
 </resources>

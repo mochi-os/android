@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Barreeffama ilaali</string>
     <string name="feeds_open_in_browser">Sakatta’aatti banaa</string>
     <string name="feeds_unable_to_load">Fuula fe\'uu hin danda\'amne</string>
+    <string name="feeds_feed_not_found">Feed hin argamne</string>
+    <string name="feeds_post_not_found">Maxxansi hin argamne</string>
 </resources>

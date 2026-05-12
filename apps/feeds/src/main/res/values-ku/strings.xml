@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Postê bibîne</string>
     <string name="feeds_open_in_browser">Di gerokê de veke</string>
     <string name="feeds_unable_to_load">Nikare rûpel were barkirin</string>
+    <string name="feeds_feed_not_found">Feed nehat dîtin</string>
+    <string name="feeds_post_not_found">Poste nehat dîtin</string>
 </resources>

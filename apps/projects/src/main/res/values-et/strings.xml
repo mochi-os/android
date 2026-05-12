@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Koht</string>
 
     <string name="notification_channel_projects">Projects teated</string>
+    <string name="projects_project_not_found">Projekti ei leitud</string>
 </resources>

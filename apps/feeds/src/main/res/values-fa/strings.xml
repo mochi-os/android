@@ -77,4 +77,6 @@
     <string name="feeds_view_post">مشاهده پست</string>
     <string name="feeds_open_in_browser">باز کردن در مرورگر</string>
     <string name="feeds_unable_to_load">بارگیری صفحه ناموفق بود</string>
+    <string name="feeds_feed_not_found">فید یافت نشد</string>
+    <string name="feeds_post_not_found">پست یافت نشد</string>
 </resources>

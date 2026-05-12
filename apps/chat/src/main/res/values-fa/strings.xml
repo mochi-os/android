@@ -29,4 +29,5 @@
     <string name="chat_members_you">شما</string>
 
     <string name="notification_channel_chat">اعلان‌های Chat</string>
+    <string name="chat_chat_not_found">گفت‌وگو پیدا نشد</string>
 </resources>

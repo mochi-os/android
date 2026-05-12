@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Աստիճան</string>
 
     <string name="notification_channel_projects">Projects ծանուցումներ</string>
+    <string name="projects_project_not_found">Նախագիծը չի գտնվել</string>
 </resources>

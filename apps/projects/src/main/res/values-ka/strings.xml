@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">რანკი</string>
 
     <string name="notification_channel_projects">Projects შეტყობინებები</string>
+    <string name="projects_project_not_found">პროექტი ვერ მოიძებნა</string>
 </resources>

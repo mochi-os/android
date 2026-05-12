@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Bekyk plasing</string>
     <string name="feeds_open_in_browser">Maak in blaaier oop</string>
     <string name="feeds_unable_to_load">Kan nie bladsy laai nie</string>
+    <string name="feeds_feed_not_found">Feed nie gevind nie</string>
+    <string name="feeds_post_not_found">Plasing nie gevind nie</string>
 </resources>

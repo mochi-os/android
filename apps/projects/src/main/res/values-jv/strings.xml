@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Peringkat</string>
 
     <string name="notification_channel_projects">Kabar Projects</string>
+    <string name="projects_project_not_found">Proyèk ora ditemokaké</string>
 </resources>

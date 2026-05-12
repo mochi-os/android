@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Slett forum</string>
 
     <string name="notification_channel_forums">Forums-varsel</string>
+    <string name="forums_forum_not_found">Fann ikkje forumet</string>
+    <string name="forums_post_not_found">Innlegg ikkje funne</string>
 </resources>

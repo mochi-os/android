@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Slet forum</string>
 
     <string name="notification_channel_forums">Forums-notifikationer</string>
+    <string name="forums_forum_not_found">Forum ikke fundet</string>
+    <string name="forums_post_not_found">Indlæg ikke fundet</string>
 </resources>

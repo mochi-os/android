@@ -90,6 +90,7 @@ import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
+import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
@@ -188,6 +189,7 @@ fun PostDetailScreen(
             viewModel = viewModel,
             showAddTagDialog = { showAddTagDialog = true },
             showDeleteCommentDialog = { showDeleteCommentDialog = it },
+            onBack = onNavigateBack,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
@@ -260,6 +262,7 @@ internal fun PostDetailContent(
     viewModel: PostDetailViewModel,
     showAddTagDialog: () -> Unit,
     showDeleteCommentDialog: (String) -> Unit,
+    onBack: () -> Unit,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(bottom = 16.dp),
     // When false, suppress the post body and any other content the source
@@ -271,6 +274,7 @@ internal fun PostDetailContent(
     val permissions by viewModel.permissions.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
+    val isNotFound by viewModel.isNotFound.collectAsState()
     val editingCommentId by viewModel.editingCommentId.collectAsState()
     val editCommentText by viewModel.editCommentText.collectAsState()
     val tags by viewModel.tags.collectAsState()
@@ -279,6 +283,14 @@ internal fun PostDetailContent(
         isLoading && post == null -> {
             Box(modifier = modifier, contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
+            }
+        }
+        isNotFound && post == null -> {
+            Box(modifier = modifier) {
+                NotFoundState(
+                    title = stringResource(R.string.feeds_post_not_found),
+                    onBack = onBack,
+                )
             }
         }
         error != null && post == null -> {

@@ -45,6 +45,9 @@ class PostDetailViewModel @Inject constructor(
     private val _error = MutableStateFlow<String?>(null)
     val error: StateFlow<String?> = _error.asStateFlow()
 
+    private val _isNotFound = MutableStateFlow(false)
+    val isNotFound: StateFlow<Boolean> = _isNotFound.asStateFlow()
+
     private val _commentText = MutableStateFlow("")
     val commentText: StateFlow<String> = _commentText.asStateFlow()
 
@@ -80,6 +83,7 @@ class PostDetailViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoading.value = true
             _error.value = null
+            _isNotFound.value = false
             try {
                 val result = repository.getPost(feedId, postId)
                 _post.value = result.post
@@ -87,6 +91,7 @@ class PostDetailViewModel @Inject constructor(
                 loadTags()
             } catch (e: MochiError) {
                 _error.value = e.userMessage()
+                if (e is MochiError.NotFoundError) _isNotFound.value = true
             } catch (e: Exception) {
                 _error.value = e.message ?: "Failed to load post"
             } finally {

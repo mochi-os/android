@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">דירוג</string>
 
     <string name="notification_channel_projects">התראות Projects</string>
+    <string name="projects_project_not_found">הפרויקט לא נמצא</string>
 </resources>

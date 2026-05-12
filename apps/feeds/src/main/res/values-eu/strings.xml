@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Ikusi argitalpena</string>
     <string name="feeds_open_in_browser">Ireki nabigatzailean</string>
     <string name="feeds_unable_to_load">Ezin da orria kargatu</string>
+    <string name="feeds_feed_not_found">Jarioa ez da aurkitu</string>
+    <string name="feeds_post_not_found">Ez da argitalpena aurkitu</string>
 </resources>

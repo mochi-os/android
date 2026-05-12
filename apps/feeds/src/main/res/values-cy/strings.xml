@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Gweld y postiad</string>
     <string name="feeds_open_in_browser">Agor yn y porwr</string>
     <string name="feeds_unable_to_load">Methu llwytho\'r dudalen</string>
+    <string name="feeds_feed_not_found">Ni chanfuwyd y ffrwd</string>
+    <string name="feeds_post_not_found">Heb ddod o hyd i\'r postiad</string>
 </resources>

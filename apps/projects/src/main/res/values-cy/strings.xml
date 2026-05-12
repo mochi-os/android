@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Rheng</string>
 
     <string name="notification_channel_projects">Hysbysiadau Projects</string>
+    <string name="projects_project_not_found">Heb ddod o hyd i\'r prosiect</string>
 </resources>

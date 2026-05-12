@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Skatīt ierakstu</string>
     <string name="feeds_open_in_browser">Atvērt pārlūkā</string>
     <string name="feeds_unable_to_load">Nevar ielādēt lapu</string>
+    <string name="feeds_feed_not_found">Plūsma nav atrasta</string>
+    <string name="feeds_post_not_found">Ieraksts nav atrasts</string>
 </resources>

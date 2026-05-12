@@ -29,4 +29,5 @@
     <string name="chat_members_you">Qan</string>
 
     <string name="notification_channel_chat">Chat willaykuna</string>
+    <string name="chat_chat_not_found">Chat mana tarisqa</string>
 </resources>

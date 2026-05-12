@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Pogledaj objavu</string>
     <string name="feeds_open_in_browser">Otvori u pregledniku</string>
     <string name="feeds_unable_to_load">Stranicu nije moguće učitati</string>
+    <string name="feeds_feed_not_found">Feed nije pronađen</string>
+    <string name="feeds_post_not_found">Objava nije pronađena</string>
 </resources>

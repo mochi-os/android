@@ -77,4 +77,6 @@
     <string name="feeds_view_post">بینینی پۆست</string>
     <string name="feeds_open_in_browser">بکەرەوە لە وێبگەڕدا</string>
     <string name="feeds_unable_to_load">ناتوانیت پەڕەکە بار بکەیت</string>
+    <string name="feeds_feed_not_found">Feed نەدۆزرایەوە</string>
+    <string name="feeds_post_not_found">پۆست نەدۆزرایەوە</string>
 </resources>

@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Избриши форум</string>
 
     <string name="notification_channel_forums">Известувања Forums</string>
+    <string name="forums_forum_not_found">Форумот не е најден</string>
+    <string name="forums_post_not_found">Објавата не е пронајдена</string>
 </resources>

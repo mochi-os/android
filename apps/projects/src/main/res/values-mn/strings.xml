@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Зэрэг</string>
 
     <string name="notification_channel_projects">Projects мэдэгдэл</string>
+    <string name="projects_project_not_found">Төсөл олдсонгүй</string>
 </resources>

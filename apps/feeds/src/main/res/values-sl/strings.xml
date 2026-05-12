@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Pokaži objavo</string>
     <string name="feeds_open_in_browser">Odpri v brskalniku</string>
     <string name="feeds_unable_to_load">Strani ni mogoče naložiti</string>
+    <string name="feeds_feed_not_found">Vir ni najden</string>
+    <string name="feeds_post_not_found">Objave ni mogoče najti</string>
 </resources>

@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">રેન્ક</string>
 
     <string name="notification_channel_projects">Projects નોટિફિકેશન</string>
+    <string name="projects_project_not_found">પ્રોજેક્ટ મળ્યો નથી</string>
 </resources>

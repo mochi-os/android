@@ -265,7 +265,8 @@ fun PostSourceScreen(
                 showDeleteCommentDialog = { showDeleteCommentDialog = it },
                 onExpand = {
                     coroutineScope.launch { sheetState.expand() }
-                }
+                },
+                onBack = onNavigateBack,
             )
         }
     ) { paddingValues ->
@@ -499,7 +500,8 @@ private fun PostSourceSheet(
     commentCount: Int,
     showAddTagDialog: () -> Unit,
     showDeleteCommentDialog: (String) -> Unit,
-    onExpand: () -> Unit
+    onExpand: () -> Unit,
+    onBack: () -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
         Row(
@@ -531,6 +533,7 @@ private fun PostSourceSheet(
             viewModel = viewModel,
             showAddTagDialog = showAddTagDialog,
             showDeleteCommentDialog = showDeleteCommentDialog,
+            onBack = onBack,
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth(),

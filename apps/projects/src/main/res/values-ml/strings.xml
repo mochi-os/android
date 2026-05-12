@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Rate Limiting</string>
 
     <string name="notification_channel_projects">Projects നോട്ടിഫിക്കേഷനുകൾ</string>
+    <string name="projects_project_not_found">പ്രോജക്റ്റ് ലഭ്യമല്ല</string>
 </resources>

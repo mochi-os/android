@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">ශ්‍රේණිය</string>
 
     <string name="notification_channel_projects">Projects දැනුම්දීම්</string>
+    <string name="projects_project_not_found">ව්‍යාපෘතිය හමු නොවීය</string>
 </resources>

@@ -29,4 +29,5 @@
     <string name="chat_members_you">Anda</string>
 
     <string name="notification_channel_chat">Pemberitahuan Chat</string>
+    <string name="chat_chat_not_found">Sembang tidak dijumpai</string>
 </resources>

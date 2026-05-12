@@ -57,7 +57,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.NotFoundState
 import org.mochios.projects.R
 import org.mochios.projects.ui.board.BoardView
 import org.mochios.projects.ui.`object`.ObjectDetailSheet
@@ -225,6 +227,13 @@ fun ProjectScreen(
                         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                             CircularProgressIndicator()
                         }
+                    }
+
+                    uiState.error is MochiError.NotFoundError && details == null -> {
+                        NotFoundState(
+                            title = stringResource(R.string.projects_project_not_found),
+                            onBack = onBack,
+                        )
                     }
 
                     uiState.error != null && details == null -> {

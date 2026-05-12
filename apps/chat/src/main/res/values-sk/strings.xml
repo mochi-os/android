@@ -29,4 +29,5 @@
     <string name="chat_members_you">Vy</string>
 
     <string name="notification_channel_chat">Notifikácie Chat</string>
+    <string name="chat_chat_not_found">Chat sa nenašiel</string>
 </resources>

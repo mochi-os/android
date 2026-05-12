@@ -77,4 +77,6 @@
     <string name="feeds_view_post">عرض المنشور</string>
     <string name="feeds_open_in_browser">فتح في المتصفح</string>
     <string name="feeds_unable_to_load">تعذر تحميل الصفحة</string>
+    <string name="feeds_feed_not_found">التغذية غير موجودة</string>
+    <string name="feeds_post_not_found">المنشور غير موجود</string>
 </resources>

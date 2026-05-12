@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Duba sakon</string>
     <string name="feeds_open_in_browser">Buɗe a cikin mai bincike</string>
     <string name="feeds_unable_to_load">Ba a iya ɗora shafin ba</string>
+    <string name="feeds_feed_not_found">Ba a samu feed ba</string>
+    <string name="feeds_post_not_found">Ba a sami post ba</string>
 </resources>

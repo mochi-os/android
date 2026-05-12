@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Buka okuthunyelwe</string>
     <string name="feeds_open_in_browser">Vula kusiphequluli</string>
     <string name="feeds_unable_to_load">Ayikwazi ukulayisha ikhasi</string>
+    <string name="feeds_feed_not_found">Ifidi ayitholakalanga</string>
+    <string name="feeds_post_not_found">Okwabiwayo akutholakali</string>
 </resources>

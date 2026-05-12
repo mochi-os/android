@@ -77,4 +77,6 @@
     <string name="feeds_view_post">ดูโพสต์</string>
     <string name="feeds_open_in_browser">เปิดในเบราว์เซอร์</string>
     <string name="feeds_unable_to_load">ไม่สามารถโหลดหน้าได้</string>
+    <string name="feeds_feed_not_found">ไม่พบฟีด</string>
+    <string name="feeds_post_not_found">ไม่พบโพสต์</string>
 </resources>

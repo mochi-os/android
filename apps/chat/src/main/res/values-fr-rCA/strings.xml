@@ -9,4 +9,5 @@
     <string name="chat_settings_delete_title">Supprimer le clavardage</string>
 
     <string name="notification_channel_chat">Notifications Chat</string>
+    <string name="chat_chat_not_found">Clavardage introuvable</string>
 </resources>

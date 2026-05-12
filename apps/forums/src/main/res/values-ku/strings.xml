@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Forumê jê bibe</string>
 
     <string name="notification_channel_forums">Agahdariyên Forums</string>
+    <string name="forums_forum_not_found">Forum nehat dîtin</string>
+    <string name="forums_post_not_found">Poste nehat dîtin</string>
 </resources>

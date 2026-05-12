@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Ver publicación</string>
     <string name="feeds_open_in_browser">Abrir en el navegador</string>
     <string name="feeds_unable_to_load">No se puede cargar la página</string>
+    <string name="feeds_feed_not_found">Feed no encontrado</string>
+    <string name="feeds_post_not_found">Publicación no encontrada</string>
 </resources>

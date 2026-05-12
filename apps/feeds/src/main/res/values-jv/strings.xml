@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Deleng kiriman</string>
     <string name="feeds_open_in_browser">Bukak ing browser</string>
     <string name="feeds_unable_to_load">Ora bisa mbukak kaca</string>
+    <string name="feeds_feed_not_found">Feed ora ditemokaké</string>
+    <string name="feeds_post_not_found">Postingan ora ditemokaké</string>
 </resources>

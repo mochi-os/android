@@ -77,4 +77,6 @@
     <string name="feeds_view_post">পোস্ট দেখুন</string>
     <string name="feeds_open_in_browser">ব্রাউজারে খুলুন</string>
     <string name="feeds_unable_to_load">পেজ লোড করা যায়নি</string>
+    <string name="feeds_feed_not_found">ফিড পাওয়া যায়নি</string>
+    <string name="feeds_post_not_found">পোস্ট পাওয়া যায়নি</string>
 </resources>

@@ -77,4 +77,6 @@
     <string name="feeds_view_post">באַווייַזן פּאָסטן</string>
     <string name="feeds_open_in_browser">עפֿן אין בלעטערער</string>
     <string name="feeds_unable_to_load">ניט ביכולת צו לאָדן בלאַט</string>
+    <string name="feeds_feed_not_found">פֿיד ניט געפֿונען</string>
+    <string name="feeds_post_not_found">פּאָסט ניט געפֿונען</string>
 </resources>

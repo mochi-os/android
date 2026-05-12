@@ -203,4 +203,6 @@
     <string name="feeds_ai_prompt_credibility">Credibility assessment</string>
     <string name="feeds_ai_reset_default">Reset to default</string>
 
+    <string name="feeds_feed_not_found">Feed not found</string>
+    <string name="feeds_post_not_found">Post not found</string>
 </resources>

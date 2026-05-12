@@ -29,4 +29,5 @@
     <string name="chat_members_you">Ti</string>
 
     <string name="notification_channel_chat">Njoftime Chat</string>
+    <string name="chat_chat_not_found">Biseda nuk u gjet</string>
 </resources>

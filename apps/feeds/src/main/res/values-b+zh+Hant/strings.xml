@@ -77,4 +77,6 @@
     <string name="feeds_view_post">查看貼文</string>
     <string name="feeds_open_in_browser">在瀏覽器中開啟</string>
     <string name="feeds_unable_to_load">無法載入頁面</string>
+    <string name="feeds_feed_not_found">找不到摘要</string>
+    <string name="feeds_post_not_found">找不到貼文</string>
 </resources>

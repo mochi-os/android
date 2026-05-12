@@ -77,4 +77,6 @@
     <string name="feeds_view_post">មើល​ប្រកាស</string>
     <string name="feeds_open_in_browser">បើក​ក្នុង​កម្មវិធី​រុករក</string>
     <string name="feeds_unable_to_load">មិន​អាច​ផ្ទុក​ទំព័រ​បាន​ទេ</string>
+    <string name="feeds_feed_not_found">រកមិនឃើញព័ត៌មានបង្ហាញ</string>
+    <string name="feeds_post_not_found">រកមិនឃើញប្រកាស</string>
 </resources>

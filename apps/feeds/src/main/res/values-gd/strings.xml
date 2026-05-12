@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Seall am post</string>
     <string name="feeds_open_in_browser">Fosgail sa bhrabhsair</string>
     <string name="feeds_unable_to_load">Cha ghabh an duilleag a luchdadh</string>
+    <string name="feeds_feed_not_found">Cha deach an inbhir a lorg</string>
+    <string name="feeds_post_not_found">Cha deach am post a lorg</string>
 </resources>

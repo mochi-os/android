@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Rangering</string>
 
     <string name="notification_channel_projects">Projects-notifikationer</string>
+    <string name="projects_project_not_found">Projekt ikke fundet</string>
 </resources>

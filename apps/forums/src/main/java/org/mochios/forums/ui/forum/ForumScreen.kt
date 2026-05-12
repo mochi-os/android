@@ -50,9 +50,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.NotFoundState
 import org.mochios.forums.R
 import org.mochios.forums.model.Post
 import org.mochios.android.R as MochiR
@@ -142,6 +144,12 @@ fun ForumScreen(
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator()
                     }
+                }
+                uiState.error is MochiError.NotFoundError && uiState.posts.isEmpty() -> {
+                    NotFoundState(
+                        title = stringResource(R.string.forums_forum_not_found),
+                        onBack = onBack,
+                    )
                 }
                 uiState.error != null && uiState.posts.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

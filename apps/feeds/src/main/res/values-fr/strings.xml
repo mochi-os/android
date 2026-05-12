@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Voir la publication</string>
     <string name="feeds_open_in_browser">Ouvrir dans le navigateur</string>
     <string name="feeds_unable_to_load">Impossible de charger la page</string>
+    <string name="feeds_feed_not_found">Flux introuvable</string>
+    <string name="feeds_post_not_found">Publication introuvable</string>
 </resources>

@@ -29,4 +29,5 @@
     <string name="chat_members_you">Ти</string>
 
     <string name="notification_channel_chat">Обавештења Chat</string>
+    <string name="chat_chat_not_found">Разговор није пронађен</string>
 </resources>

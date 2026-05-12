@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Vaata postitust</string>
     <string name="feeds_open_in_browser">Ava brauseris</string>
     <string name="feeds_unable_to_load">Lehte ei õnnestu laadida</string>
+    <string name="feeds_feed_not_found">Voogu ei leitud</string>
+    <string name="feeds_post_not_found">Postitust ei leitud</string>
 </resources>

@@ -29,4 +29,5 @@
     <string name="chat_members_you">توھان</string>
 
     <string name="notification_channel_chat">Chat اطلاعون</string>
+    <string name="chat_chat_not_found">چيٽ نه ملي</string>
 </resources>

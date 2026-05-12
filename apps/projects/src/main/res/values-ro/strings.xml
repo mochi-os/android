@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Rang</string>
 
     <string name="notification_channel_projects">Notificări Projects</string>
+    <string name="projects_project_not_found">Proiectul nu a fost găsit</string>
 </resources>

@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">I-delete ang forum</string>
 
     <string name="notification_channel_forums">Mga abiso ng Forums</string>
+    <string name="forums_forum_not_found">Hindi nahanap ang forum</string>
+    <string name="forums_post_not_found">Hindi nahanap ang post</string>
 </resources>

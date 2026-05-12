@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">الترتيب</string>
 
     <string name="notification_channel_projects">إشعارات Projects</string>
+    <string name="projects_project_not_found">المشروع غير موجود</string>
 </resources>

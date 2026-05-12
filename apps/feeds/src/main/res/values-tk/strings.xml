@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Ýazgyny gör</string>
     <string name="feeds_open_in_browser">Brauzerde aç</string>
     <string name="feeds_unable_to_load">Sahypa ýüklenip bilinmedi</string>
+    <string name="feeds_feed_not_found">Akym tapylmady</string>
+    <string name="feeds_post_not_found">Post tapylmady</string>
 </resources>

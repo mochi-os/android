@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Cheo</string>
 
     <string name="notification_channel_projects">Arifa za Projects</string>
+    <string name="projects_project_not_found">Mradi haukupatikana</string>
 </resources>

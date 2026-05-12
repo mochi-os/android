@@ -29,4 +29,5 @@
     <string name="chat_members_you">Dig</string>
 
     <string name="notification_channel_chat">Chat-notifikationer</string>
+    <string name="chat_chat_not_found">Chat ikke fundet</string>
 </resources>

@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Жазбаны қарау</string>
     <string name="feeds_open_in_browser">Браузерде ашу</string>
     <string name="feeds_unable_to_load">Бетті жүктеу мүмкін емес</string>
+    <string name="feeds_feed_not_found">Таспа табылмады</string>
+    <string name="feeds_post_not_found">Жазба табылмады</string>
 </resources>

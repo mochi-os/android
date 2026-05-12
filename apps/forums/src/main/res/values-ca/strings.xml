@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Suprimeix el fòrum</string>
 
     <string name="notification_channel_forums">Notificacions Forums</string>
+    <string name="forums_forum_not_found">No s\'ha trobat el fòrum</string>
+    <string name="forums_post_not_found">Publicació no trobada</string>
 </resources>

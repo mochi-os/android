@@ -100,4 +100,6 @@
     <string name="forums_settings_delete">Delete forum</string>
     <string name="forums_settings_delete_title">Delete forum</string>
     <string name="forums_settings_delete_message">This will permanently delete the forum and all its posts. This cannot be undone.</string>
+    <string name="forums_forum_not_found">Forum not found</string>
+    <string name="forums_post_not_found">Post not found</string>
 </resources>

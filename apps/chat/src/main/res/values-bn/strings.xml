@@ -29,4 +29,5 @@
     <string name="chat_members_you">আপনি</string>
 
     <string name="notification_channel_chat">Chat বিজ্ঞপ্তি</string>
+    <string name="chat_chat_not_found">চ্যাট পাওয়া যায়নি</string>
 </resources>

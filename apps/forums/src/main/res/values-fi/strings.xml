@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Poista foorumi</string>
 
     <string name="notification_channel_forums">Forums-ilmoitukset</string>
+    <string name="forums_forum_not_found">Foorumia ei löytynyt</string>
+    <string name="forums_post_not_found">Julkaisua ei löytynyt</string>
 </resources>

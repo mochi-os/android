@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Tingnan ang post</string>
     <string name="feeds_open_in_browser">Buksan sa browser</string>
     <string name="feeds_unable_to_load">Hindi mailo-load ang pahina</string>
+    <string name="feeds_feed_not_found">Hindi nahanap ang feed</string>
+    <string name="feeds_post_not_found">Hindi nahanap ang post</string>
 </resources>

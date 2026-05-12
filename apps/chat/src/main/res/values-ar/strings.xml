@@ -29,4 +29,5 @@
     <string name="chat_members_you">أنت</string>
 
     <string name="notification_channel_chat">إشعارات Chat</string>
+    <string name="chat_chat_not_found">الدردشة غير موجودة</string>
 </resources>

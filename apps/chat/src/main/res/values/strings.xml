@@ -69,4 +69,5 @@
     <!-- Member list -->
     <string name="chat_members_empty">No members</string>
     <string name="chat_members_you">You</string>
+    <string name="chat_chat_not_found">Chat not found</string>
 </resources>

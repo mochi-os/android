@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Qillqasqata qhaway</string>
     <string name="feeds_open_in_browser">Internet maskaqpi kichay</string>
     <string name="feeds_unable_to_load">Kay panaqa mana cargayta atinchu</string>
+    <string name="feeds_feed_not_found">Feed mana tarisqachu</string>
+    <string name="feeds_post_not_found">Qillqa mana tarisqachu</string>
 </resources>

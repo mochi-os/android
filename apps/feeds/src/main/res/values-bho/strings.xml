@@ -77,4 +77,6 @@
     <string name="feeds_view_post">पोस्ट देखीं</string>
     <string name="feeds_open_in_browser">ब्राउज़र में खोलीं</string>
     <string name="feeds_unable_to_load">पन्ना लोड नइखे हो पावत</string>
+    <string name="feeds_feed_not_found">फीड नइखे मिलल</string>
+    <string name="feeds_post_not_found">पोस्ट ना मिलल</string>
 </resources>

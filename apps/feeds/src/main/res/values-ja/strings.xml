@@ -77,4 +77,6 @@
     <string name="feeds_view_post">投稿を表示</string>
     <string name="feeds_open_in_browser">ブラウザで開く</string>
     <string name="feeds_unable_to_load">ページを読み込めません</string>
+    <string name="feeds_feed_not_found">フィードが見つかりません</string>
+    <string name="feeds_post_not_found">投稿が見つかりません</string>
 </resources>

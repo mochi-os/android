@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Féach ar an bpostáil</string>
     <string name="feeds_open_in_browser">Oscail sa bhrabhsálaí</string>
     <string name="feeds_unable_to_load">Ní féidir an leathanach a luchtú</string>
+    <string name="feeds_feed_not_found">Níor aimsíodh an fotha</string>
+    <string name="feeds_post_not_found">Níor aimsíodh an phostáil</string>
 </resources>

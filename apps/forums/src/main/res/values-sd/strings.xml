@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">فورم ختم ڪريو</string>
 
     <string name="notification_channel_forums">Forums اطلاعون</string>
+    <string name="forums_forum_not_found">فورم نه مليو</string>
+    <string name="forums_post_not_found">پوسٽ نه ملي</string>
 </resources>

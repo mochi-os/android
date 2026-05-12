@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">Forumni oʻchirish</string>
 
     <string name="notification_channel_forums">Forums bildirishnomalari</string>
+    <string name="forums_forum_not_found">Forum topilmadi</string>
+    <string name="forums_post_not_found">Post topilmadi</string>
 </resources>

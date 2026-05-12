@@ -57,4 +57,6 @@
     <string name="forums_settings_delete_title">ఫోరమ్‌ను తొలగించండి</string>
 
     <string name="notification_channel_forums">Forums నోటిఫికేషన్లు</string>
+    <string name="forums_forum_not_found">ఫోరమ్ కనుగొనబడలేదు</string>
+    <string name="forums_post_not_found">పోస్ట్ కనుగొనబడలేదు</string>
 </resources>

@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Renditja</string>
 
     <string name="notification_channel_projects">Njoftime Projects</string>
+    <string name="projects_project_not_found">Projekti s\'u gjet</string>
 </resources>

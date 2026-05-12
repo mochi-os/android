@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Yazını gör</string>
     <string name="feeds_open_in_browser">Brauzerdə aç</string>
     <string name="feeds_unable_to_load">Səhifəni yükləmək mümkün olmadı</string>
+    <string name="feeds_feed_not_found">Lent tapılmadı</string>
+    <string name="feeds_post_not_found">Post tapılmadı</string>
 </resources>

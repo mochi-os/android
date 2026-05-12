@@ -29,4 +29,5 @@
     <string name="chat_members_you">Jūs</string>
 
     <string name="notification_channel_chat">Chat pranešimai</string>
+    <string name="chat_chat_not_found">Pokalbis nerastas</string>
 </resources>

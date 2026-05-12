@@ -153,4 +153,5 @@
     <string name="projects_views_sort_rank">Κατάταξη</string>
 
     <string name="notification_channel_projects">Ειδοποιήσεις Projects</string>
+    <string name="projects_project_not_found">Το έργο δεν βρέθηκε</string>
 </resources>

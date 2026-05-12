@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Показати допис</string>
     <string name="feeds_open_in_browser">Відкрити в браузері</string>
     <string name="feeds_unable_to_load">Не вдалося завантажити сторінку</string>
+    <string name="feeds_feed_not_found">Стрічку не знайдено</string>
+    <string name="feeds_post_not_found">Допис не знайдено</string>
 </resources>

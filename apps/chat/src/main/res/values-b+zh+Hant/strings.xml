@@ -29,4 +29,5 @@
     <string name="chat_members_you">您</string>
 
     <string name="notification_channel_chat">Chat 通知</string>
+    <string name="chat_chat_not_found">找不到聊天</string>
 </resources>

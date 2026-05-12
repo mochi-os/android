@@ -77,4 +77,6 @@
     <string name="feeds_view_post">Mostra la publicació</string>
     <string name="feeds_open_in_browser">Obre al navegador</string>
     <string name="feeds_unable_to_load">No es pot carregar la pàgina</string>
+    <string name="feeds_feed_not_found">No s\'ha trobat la font</string>
+    <string name="feeds_post_not_found">Publicació no trobada</string>
 </resources>
