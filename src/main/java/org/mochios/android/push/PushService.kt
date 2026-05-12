@@ -223,9 +223,12 @@ class PushService : Service() {
         val payload = event.payload ?: return
         dispatchPush(subId, payload)
         // Ack so the matching push_pending row is removed server-side. The
-        // server queues every unifiedpush event for durability; if we never
-        // ack, the row stays around until the 7-day TTL sweep.
-        val account = subId.toIntOrNull() ?: return
+        // server includes `account` (the integer accounts.id) on the WS
+        // envelope specifically for this — subId alone is the random
+        // subscription token and can't identify the queue row. Without
+        // account we silently skip the ack and the row stays until the
+        // 7-day TTL sweep.
+        val account = event.account?.toInt() ?: return
         val eventId = extractTag(payload) ?: return
         scope.launch { ackEvent(server, token, account, eventId) }
     }
