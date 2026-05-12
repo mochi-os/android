@@ -1,6 +1,8 @@
 package org.mochios.mochi
 
+import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -45,6 +47,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         PushService.start(this)
         handleNotificationIntent(intent)
+        val startApp = resolveAliasTargetApp(intent?.component)
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
             val identity by sessionManager.boundIdentity.collectAsState(initial = null)
@@ -57,7 +60,7 @@ class MainActivity : ComponentActivity() {
                         identity?.let { MochiPushClient.register(applicationContext, it) }
                     }
                     AppBootstrapHost(
-                        appName = "feeds",
+                        appName = startApp ?: "feeds",
                         oauthScheme = null,
                         onLocaleChangeRequested = { recreate() },
                     ) { onLogout ->
@@ -68,7 +71,7 @@ class MainActivity : ComponentActivity() {
                             navigateToLink(navController, link)
                             PendingDeepLink.consume()
                         }
-                        NavHost(navController = navController, startDestination = LAUNCHPAD) {
+                        NavHost(navController = navController, startDestination = startDestinationFor(startApp)) {
                             composable(LAUNCHPAD) {
                                 LaunchPadScreen(
                                     onAppSelected = { route -> navController.navigate(route) },
@@ -89,6 +92,11 @@ class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         handleNotificationIntent(intent)
+        // Warm-start from a different alias (singleTask brings the existing
+        // task to the front instead of recreating). Drop a synthetic /<app>
+        // link into PendingDeepLink so the running NavHost re-routes.
+        val targetApp = resolveAliasTargetApp(intent.component)
+        if (targetApp != null) PendingDeepLink.set("/$targetApp")
     }
 
     private fun handleNotificationIntent(intent: Intent?) {
@@ -122,7 +130,26 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private fun resolveAliasTargetApp(component: ComponentName?): String? {
+        component ?: return null
+        return try {
+            val info = packageManager.getActivityInfo(component, PackageManager.GET_META_DATA)
+            info.metaData?.getString(META_TARGET_APP)
+        } catch (_: PackageManager.NameNotFoundException) {
+            null
+        }
+    }
+
+    private fun startDestinationFor(targetApp: String?): String = when (targetApp) {
+        "feeds" -> FeedsApp.HOME
+        "chat" -> ChatApp.HOME
+        "forums" -> ForumsApp.HOME
+        "projects" -> ProjectsApp.HOME
+        else -> LAUNCHPAD
+    }
+
     companion object {
         private const val LAUNCHPAD = "launchpad"
+        private const val META_TARGET_APP = "org.mochios.targetApp"
     }
 }

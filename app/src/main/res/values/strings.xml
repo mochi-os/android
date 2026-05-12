@@ -2,4 +2,8 @@
 <resources>
     <string name="app_name">Mochi</string>
     <string name="launchpad_no_apps">No Mochi apps installed yet. Install Mochi Feeds, Mochi Chat, Mochi Forums or Mochi Projects to get started.</string>
+    <string name="launcher_feeds">Mochi Feeds</string>
+    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_forums">Mochi Forums</string>
+    <string name="launcher_projects">Mochi Projects</string>
 </resources>

@@ -25,15 +25,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mochi">
 
+        <!--
+          MainActivity has NO MAIN/LAUNCHER intent-filter — the per-app
+          activity-aliases below own those, so Android shows one launcher
+          entry per Mochi-app instead of a single 'Mochi' icon. MainActivity
+          still catches mochi://notification (tapped system notification)
+          and the upcoming mochi://oauth-return (task #133).
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -41,6 +44,65 @@
                 <data android:scheme="mochi" android:host="notification" />
             </intent-filter>
         </activity>
+
+        <!--
+          Per-app activity-aliases. Each shows up as its own launcher icon
+          (Mochi Feeds / Mochi Chat / Mochi Forums / Mochi Projects). All
+          point at MainActivity; the alias's org.mochios.targetApp meta-data
+          tells MainActivity which Mochi-app's nav graph to start in.
+          Adaptive icons per app land in task #132.
+        -->
+        <activity-alias
+            android:name=".MochiFeedsLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_feeds"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MochiChatLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_chat"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="chat" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MochiForumsLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_forums"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="forums" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MochiProjectsLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_projects"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="projects" />
+        </activity-alias>
 
         <!--
           UnifiedPush MessagingReceiver for the consolidated super-app. Catches
