@@ -57,6 +57,8 @@
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_feeds"
+            android:icon="@mipmap/ic_feeds"
+            android:roundIcon="@mipmap/ic_feeds_round"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,6 +72,8 @@
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_chat"
+            android:icon="@mipmap/ic_chat"
+            android:roundIcon="@mipmap/ic_chat_round"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,6 +87,8 @@
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_forums"
+            android:icon="@mipmap/ic_forums"
+            android:roundIcon="@mipmap/ic_forums_round"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -96,6 +102,8 @@
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_projects"
+            android:icon="@mipmap/ic_projects"
+            android:roundIcon="@mipmap/ic_projects_round"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
