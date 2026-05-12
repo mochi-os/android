@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">દર્શાવનાર નામ</string>
+    <string name="forums_auth_verification_failed">ચકાસણી નિષ્ફળ</string>
+    <string name="forums_list_title">ફોરમ્સ</string>
+    <string name="forums_list_close_search">શોધ બંધ કરો</string>
+    <string name="forums_list_search">શોધો</string>
+    <string name="forums_list_find">ફોરમ્સ શોધો</string>
+    <string name="forums_list_logout">લૉગ આઉટ કરો</string>
+    <string name="forums_list_create">ફોરમ બનાવો</string>
+    <string name="forums_list_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
+    <string name="forums_list_unsubscribe_title">અનસબ્સ્ક્રાઇબ કરો</string>
+    <string name="forums_create_title">ફોરમ બનાવો</string>
+    <string name="forums_create_name">નામ</string>
+    <string name="forums_create_privacy">ગોપનીયતા</string>
+    <string name="forums_create_private">ખાનગી</string>
+    <string name="forums_create_public">જાહેર</string>
+    <string name="forums_create_action">બનાવો</string>
+    <string name="forums_find_title">ફોરમ્સ શોધો</string>
+    <string name="forums_find_recommended">ભલામણ કરેલ</string>
+    <string name="forums_find_subscribe">સબ્સ્ક્રાઇબ કરો</string>
+    <string name="forums_find_subscribed">સબ્સ્ક્રાઇબ કર્યું</string>
+    <string name="forums_find_no_results">કોઈ ફોરમ્સ મળ્યા નથી</string>
+    <string name="forums_loading">લોડ થઈ રહ્યું છે…</string>
+    <string name="forums_no_posts">હજુ સુધી કોઈ પોસ્ટ્સ નથી</string>
+    <string name="forums_new_post">નવી પોસ્ટ</string>
+    <string name="forums_settings">સેટિંગ્સ</string>
+    <string name="forums_load_more">વધુ લોડ કરો</string>
+    <string name="forums_sort_label">સોર્ટ કરો</string>
+    <string name="forums_sort_new">નવું</string>
+    <string name="forums_sort_hot">હૉટ</string>
+    <string name="forums_sort_top">ટોચ</string>
+    <string name="forums_sort_interests">રુચિઓ</string>
+    <string name="forums_post_title_field">શીર્ષક</string>
+    <string name="forums_post_attach">ફાઇલો જોડો</string>
+    <string name="forums_post_create_action">પોસ્ટ</string>
+    <string name="forums_post_edit">પોસ્ટ એડિટ કરો</string>
+    <string name="forums_post_save">સાચવો</string>
+    <string name="forums_post_delete">પોસ્ટ કાઢી નાખો</string>
+    <string name="forums_post_delete_title">પોસ્ટ કાઢી નાખો</string>
+    <string name="forums_post_locked">લૉક કરેલું</string>
+    <string name="forums_post_pinned">પિન કરેલ</string>
+    <string name="forums_post_removed">દૂર કર્યું</string>
+    <string name="forums_post_pending">બાકી</string>
+    <string name="forums_post_default_author">વપરાશકર્તા</string>
+    <string name="forums_comments">ટિપ્પણીઓ</string>
+    <string name="forums_no_comments">હજુ સુધી કોઈ કૉમેન્ટ્સ નથી</string>
+    <string name="forums_comment_save">સાચવો</string>
+    <string name="forums_comment_edit">કમેન્ટ એડિટ કરો</string>
+    <string name="forums_comment_delete">ટિપ્પણી કાઢી નાખો</string>
+    <string name="forums_comment_delete_title">ટિપ્પણી કાઢી નાખો</string>
+    <string name="forums_comment_reply">જવાબ આપો</string>
+    <string name="forums_settings_rename">નામ બદલો</string>
+    <string name="forums_settings_save">સાચવો</string>
+    <string name="forums_settings_delete">ફોરમ કાઢી નાખો</string>
+    <string name="forums_settings_delete_title">ફોરમ કાઢી નાખો</string>
+
+    <string name="notification_channel_forums">Forums નોટિફિકેશન</string>
+</resources>

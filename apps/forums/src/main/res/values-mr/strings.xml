@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">प्रदर्शित नाव</string>
+    <string name="forums_auth_verification_failed">पडताळणी अयशस्वी</string>
+    <string name="forums_list_title">फोरम्स</string>
+    <string name="forums_list_close_search">शोध बंद करा</string>
+    <string name="forums_list_search">शोधा</string>
+    <string name="forums_list_find">फोरम्स शोधा</string>
+    <string name="forums_list_logout">लॉग आउट करा</string>
+    <string name="forums_list_create">मंच तयार करा</string>
+    <string name="forums_list_unsubscribe">अनसबस्क्राइब करा</string>
+    <string name="forums_list_unsubscribe_title">अनसबस्क्राइब करा</string>
+    <string name="forums_create_title">मंच तयार करा</string>
+    <string name="forums_create_name">नाव</string>
+    <string name="forums_create_privacy">गोपनीयता</string>
+    <string name="forums_create_private">खाजगी</string>
+    <string name="forums_create_public">सार्वजनिक</string>
+    <string name="forums_create_action">तयार करा</string>
+    <string name="forums_find_title">फोरम्स शोधा</string>
+    <string name="forums_find_recommended">शिफारस केलेले</string>
+    <string name="forums_find_subscribe">सबस्क्राइब करा</string>
+    <string name="forums_find_subscribed">सबस्क्राइब केले</string>
+    <string name="forums_find_no_results">फोरम्स सापडले नाहीत</string>
+    <string name="forums_loading">लोड करत आहे…</string>
+    <string name="forums_no_posts">अद्याप पोस्ट्स नाहीत</string>
+    <string name="forums_new_post">नवीन पोस्ट</string>
+    <string name="forums_settings">सेटिंग्ज</string>
+    <string name="forums_load_more">अधिक लोड करा</string>
+    <string name="forums_sort_label">क्रमवारी</string>
+    <string name="forums_sort_new">नवीन</string>
+    <string name="forums_sort_hot">हॉट</string>
+    <string name="forums_sort_top">वर</string>
+    <string name="forums_sort_interests">इंटरेस्ट्स</string>
+    <string name="forums_post_title_field">शीर्षक</string>
+    <string name="forums_post_attach">फाइल्स संलग्न करा</string>
+    <string name="forums_post_create_action">पोस्ट</string>
+    <string name="forums_post_edit">पोस्ट संपादित करा</string>
+    <string name="forums_post_save">जतन करा</string>
+    <string name="forums_post_delete">पोस्ट हटवा</string>
+    <string name="forums_post_delete_title">पोस्ट हटवा</string>
+    <string name="forums_post_locked">लॉक केले</string>
+    <string name="forums_post_pinned">पिन केले</string>
+    <string name="forums_post_removed">काढले</string>
+    <string name="forums_post_pending">प्रलंबित</string>
+    <string name="forums_post_default_author">वापरकर्ता</string>
+    <string name="forums_comments">टिप्पण्या</string>
+    <string name="forums_no_comments">अद्याप कमेंट्स नाहीत</string>
+    <string name="forums_comment_save">जतन करा</string>
+    <string name="forums_comment_edit">टिप्पणी संपादित करा</string>
+    <string name="forums_comment_delete">टिप्पणी हटवा</string>
+    <string name="forums_comment_delete_title">टिप्पणी हटवा</string>
+    <string name="forums_comment_reply">प्रत्युत्तर द्या</string>
+    <string name="forums_settings_rename">पुन्हा नाव द्या</string>
+    <string name="forums_settings_save">जतन करा</string>
+    <string name="forums_settings_delete">मंच हटवा</string>
+    <string name="forums_settings_delete_title">मंच हटवा</string>
+
+    <string name="notification_channel_forums">Forums सूचना</string>
+</resources>

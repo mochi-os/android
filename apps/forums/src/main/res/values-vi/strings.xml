@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Tên hiển thị</string>
+    <string name="forums_auth_verification_failed">Xác minh thất bại</string>
+    <string name="forums_list_title">Diễn đàn</string>
+    <string name="forums_list_close_search">Đóng tìm kiếm</string>
+    <string name="forums_list_search">Tìm kiếm</string>
+    <string name="forums_list_find">Tìm diễn đàn</string>
+    <string name="forums_list_logout">Đăng xuất</string>
+    <string name="forums_list_create">Tạo diễn đàn</string>
+    <string name="forums_list_unsubscribe">Hủy đăng ký</string>
+    <string name="forums_list_unsubscribe_title">Hủy đăng ký</string>
+    <string name="forums_create_title">Tạo diễn đàn</string>
+    <string name="forums_create_name">Tên</string>
+    <string name="forums_create_privacy">Quyền riêng tư</string>
+    <string name="forums_create_private">Riêng tư</string>
+    <string name="forums_create_public">Công khai</string>
+    <string name="forums_create_action">Tạo</string>
+    <string name="forums_find_title">Tìm diễn đàn</string>
+    <string name="forums_find_recommended">Được đề xuất</string>
+    <string name="forums_find_subscribe">Đăng ký</string>
+    <string name="forums_find_subscribed">Đã đăng ký</string>
+    <string name="forums_find_no_results">Không tìm thấy diễn đàn nào</string>
+    <string name="forums_loading">Đang tải…</string>
+    <string name="forums_no_posts">Chưa có bài viết</string>
+    <string name="forums_new_post">Bài viết mới</string>
+    <string name="forums_settings">Cài đặt</string>
+    <string name="forums_load_more">Tải thêm</string>
+    <string name="forums_sort_label">Sắp xếp</string>
+    <string name="forums_sort_new">Mới</string>
+    <string name="forums_sort_hot">Nóng</string>
+    <string name="forums_sort_top">Đầu</string>
+    <string name="forums_sort_interests">Sở thích</string>
+    <string name="forums_post_title_field">Tiêu đề</string>
+    <string name="forums_post_attach">Đính kèm tệp</string>
+    <string name="forums_post_create_action">Bài viết</string>
+    <string name="forums_post_edit">Sửa bài đăng</string>
+    <string name="forums_post_save">Lưu</string>
+    <string name="forums_post_delete">Xóa bài viết</string>
+    <string name="forums_post_delete_title">Xóa bài viết</string>
+    <string name="forums_post_locked">Đã khoá</string>
+    <string name="forums_post_pinned">Đã ghim</string>
+    <string name="forums_post_removed">Đã xoá</string>
+    <string name="forums_post_pending">Đang chờ</string>
+    <string name="forums_post_default_author">Người dùng</string>
+    <string name="forums_comments">Bình luận</string>
+    <string name="forums_no_comments">Chưa có bình luận</string>
+    <string name="forums_comment_save">Lưu</string>
+    <string name="forums_comment_edit">Sửa bình luận</string>
+    <string name="forums_comment_delete">Xóa bình luận</string>
+    <string name="forums_comment_delete_title">Xóa bình luận</string>
+    <string name="forums_comment_reply">Trả lời</string>
+    <string name="forums_settings_rename">Đổi tên</string>
+    <string name="forums_settings_save">Lưu</string>
+    <string name="forums_settings_delete">Xóa diễn đàn</string>
+    <string name="forums_settings_delete_title">Xóa diễn đàn</string>
+
+    <string name="notification_channel_forums">Thông báo Forums</string>
+</resources>

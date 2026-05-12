@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Nume afișat</string>
+    <string name="forums_auth_verification_failed">Verificarea a eșuat</string>
+    <string name="forums_list_title">Forumuri</string>
+    <string name="forums_list_close_search">Închide căutarea</string>
+    <string name="forums_list_search">Caută</string>
+    <string name="forums_list_find">Găsește forumuri</string>
+    <string name="forums_list_logout">Deconectează-te</string>
+    <string name="forums_list_create">Creează forum</string>
+    <string name="forums_list_unsubscribe">Dezabonează-te</string>
+    <string name="forums_list_unsubscribe_title">Dezabonează-te</string>
+    <string name="forums_create_title">Creează forum</string>
+    <string name="forums_create_name">Nume</string>
+    <string name="forums_create_privacy">Confidențialitate</string>
+    <string name="forums_create_private">Privat</string>
+    <string name="forums_create_public">Public</string>
+    <string name="forums_create_action">Creează</string>
+    <string name="forums_find_title">Găsește forumuri</string>
+    <string name="forums_find_recommended">Recomandat</string>
+    <string name="forums_find_subscribe">Abonează-te</string>
+    <string name="forums_find_subscribed">Abonat</string>
+    <string name="forums_find_no_results">Nu s-au găsit forumuri</string>
+    <string name="forums_loading">Se încarcă…</string>
+    <string name="forums_no_posts">Încă nicio postare</string>
+    <string name="forums_new_post">Postare nouă</string>
+    <string name="forums_settings">Setări</string>
+    <string name="forums_load_more">Încarcă mai multe</string>
+    <string name="forums_sort_label">Sortează</string>
+    <string name="forums_sort_new">Nou</string>
+    <string name="forums_sort_hot">Popular</string>
+    <string name="forums_sort_top">Sus</string>
+    <string name="forums_sort_interests">Interese</string>
+    <string name="forums_post_title_field">Titlu</string>
+    <string name="forums_post_attach">Atașează fișiere</string>
+    <string name="forums_post_create_action">Postare</string>
+    <string name="forums_post_edit">Editează postarea</string>
+    <string name="forums_post_save">Salvează</string>
+    <string name="forums_post_delete">Șterge postarea</string>
+    <string name="forums_post_delete_title">Șterge postarea</string>
+    <string name="forums_post_locked">Blocat</string>
+    <string name="forums_post_pinned">Fixat</string>
+    <string name="forums_post_removed">Eliminat</string>
+    <string name="forums_post_pending">În așteptare</string>
+    <string name="forums_post_default_author">Utilizator</string>
+    <string name="forums_comments">Comentarii</string>
+    <string name="forums_no_comments">Încă niciun comentariu</string>
+    <string name="forums_comment_save">Salvează</string>
+    <string name="forums_comment_edit">Editează comentariul</string>
+    <string name="forums_comment_delete">Șterge comentariul</string>
+    <string name="forums_comment_delete_title">Șterge comentariul</string>
+    <string name="forums_comment_reply">Răspunde</string>
+    <string name="forums_settings_rename">Redenumește</string>
+    <string name="forums_settings_save">Salvează</string>
+    <string name="forums_settings_delete">Șterge forumul</string>
+    <string name="forums_settings_delete_title">Șterge forumul</string>
+
+    <string name="notification_channel_forums">Notificări Forums</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Maqaa mul\'atu</string>
+    <string name="forums_auth_verification_failed">Mirkaneessuun hin milkoofne</string>
+    <string name="forums_list_title">Foramiiwwan</string>
+    <string name="forums_list_close_search">Barbaadii cufi</string>
+    <string name="forums_list_search">Barbaadi</string>
+    <string name="forums_list_find">Foramiiwwan argi</string>
+    <string name="forums_list_logout">Ba\'i</string>
+    <string name="forums_list_create">Marii uumi</string>
+    <string name="forums_list_unsubscribe">Galaa\'uu kaasi</string>
+    <string name="forums_list_unsubscribe_title">Galaa\'uu kaasi</string>
+    <string name="forums_create_title">Marii uumi</string>
+    <string name="forums_create_name">Maqaa</string>
+    <string name="forums_create_privacy">Iccitii</string>
+    <string name="forums_create_private">Dhuunfaa</string>
+    <string name="forums_create_public">Ifa</string>
+    <string name="forums_create_action">Uumi</string>
+    <string name="forums_find_title">Foramiiwwan argi</string>
+    <string name="forums_find_recommended">Yaadachifame</string>
+    <string name="forums_find_subscribe">Galaa\'i</string>
+    <string name="forums_find_subscribed">Galaa\'eera</string>
+    <string name="forums_find_no_results">Mariin hin argamne</string>
+    <string name="forums_loading">Fe\'aa jiraa…</string>
+    <string name="forums_no_posts">Hanga ammaatti maxxansi hin jiru</string>
+    <string name="forums_new_post">Maxxansa haaraa</string>
+    <string name="forums_settings">Qindaa\'inoota</string>
+    <string name="forums_load_more">Caalaa fe\'i</string>
+    <string name="forums_sort_label">Sirreessi</string>
+    <string name="forums_sort_new">Haaraa</string>
+    <string name="forums_sort_hot">Ho\'aa</string>
+    <string name="forums_sort_top">Ol</string>
+    <string name="forums_sort_interests">Fedhota</string>
+    <string name="forums_post_title_field">Mata duree</string>
+    <string name="forums_post_attach">Faayilii hidhi</string>
+    <string name="forums_post_create_action">Maxxansa</string>
+    <string name="forums_post_edit">Maxxansa sirreessi</string>
+    <string name="forums_post_save">Olkaa\'i</string>
+    <string name="forums_post_delete">Maxxansa haqi</string>
+    <string name="forums_post_delete_title">Maxxansa haqi</string>
+    <string name="forums_post_locked">Cufame</string>
+    <string name="forums_post_pinned">Maxxanfame</string>
+    <string name="forums_post_removed">Haqame</string>
+    <string name="forums_post_pending">Eegaa jira</string>
+    <string name="forums_post_default_author">Fayyadamaa</string>
+    <string name="forums_comments">Yaadawwan</string>
+    <string name="forums_no_comments">Hanga ammaatti yaadni hin jiru</string>
+    <string name="forums_comment_save">Olkaa\'i</string>
+    <string name="forums_comment_edit">Yaada sirreessi</string>
+    <string name="forums_comment_delete">Yaada haqi</string>
+    <string name="forums_comment_delete_title">Yaada haqi</string>
+    <string name="forums_comment_reply">Deebii</string>
+    <string name="forums_settings_rename">Maqaa jijjiiri</string>
+    <string name="forums_settings_save">Olkaa\'i</string>
+    <string name="forums_settings_delete">Marii haqi</string>
+    <string name="forums_settings_delete_title">Marii haqi</string>
+
+    <string name="notification_channel_forums">Beeksisawwan Forums</string>
+</resources>

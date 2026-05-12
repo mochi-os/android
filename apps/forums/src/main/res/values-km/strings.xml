@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">ឈ្មោះបង្ហាញ</string>
+    <string name="forums_auth_verification_failed">ការផ្ទៀងផ្ទាត់បរាជ័យ</string>
+    <string name="forums_list_title">វេទិកា</string>
+    <string name="forums_list_close_search">បិទការស្វែងរក</string>
+    <string name="forums_list_search">ស្វែងរក</string>
+    <string name="forums_list_find">ស្វែងរកវេទិកា</string>
+    <string name="forums_list_logout">ចាកចេញ</string>
+    <string name="forums_list_create">បង្កើតវេទិកា</string>
+    <string name="forums_list_unsubscribe">ឈប់ជាវ</string>
+    <string name="forums_list_unsubscribe_title">ឈប់ជាវ</string>
+    <string name="forums_create_title">បង្កើតវេទិកា</string>
+    <string name="forums_create_name">ឈ្មោះ</string>
+    <string name="forums_create_privacy">ឯកជនភាព</string>
+    <string name="forums_create_private">ឯកជន</string>
+    <string name="forums_create_public">សាធារណៈ</string>
+    <string name="forums_create_action">បង្កើត</string>
+    <string name="forums_find_title">ស្វែងរកវេទិកា</string>
+    <string name="forums_find_recommended">បានណែនាំ</string>
+    <string name="forums_find_subscribe">ជាវ</string>
+    <string name="forums_find_subscribed">បានជាវ</string>
+    <string name="forums_find_no_results">រកមិនឃើញវេទិកា</string>
+    <string name="forums_loading">កំពុងផ្ទុក…</string>
+    <string name="forums_no_posts">មិនទាន់មានប្រកាស</string>
+    <string name="forums_new_post">ប្រកាសថ្មី</string>
+    <string name="forums_settings">ការកំណត់</string>
+    <string name="forums_load_more">ផ្ទុកបន្ថែម</string>
+    <string name="forums_sort_label">តម្រៀប</string>
+    <string name="forums_sort_new">ថ្មី</string>
+    <string name="forums_sort_hot">ក្ដៅ</string>
+    <string name="forums_sort_top">កំពូល</string>
+    <string name="forums_sort_interests">ចំណាប់អារម្មណ៍</string>
+    <string name="forums_post_title_field">ចំណងជើង</string>
+    <string name="forums_post_attach">ភ្ជាប់ឯកសារ</string>
+    <string name="forums_post_create_action">ប្រកាស</string>
+    <string name="forums_post_edit">កែសម្រួលការបង្ហោះ</string>
+    <string name="forums_post_save">រក្សាទុក</string>
+    <string name="forums_post_delete">លុបការបង្ហោះ</string>
+    <string name="forums_post_delete_title">លុបការបង្ហោះ</string>
+    <string name="forums_post_locked">បានចាក់សោ</string>
+    <string name="forums_post_pinned">បានខ្ទាស់</string>
+    <string name="forums_post_removed">បានយកចេញ</string>
+    <string name="forums_post_pending">កំពុងរង់ចាំ</string>
+    <string name="forums_post_default_author">អ្នកប្រើប្រាស់</string>
+    <string name="forums_comments">មតិយោបល់</string>
+    <string name="forums_no_comments">មិនទាន់មានមតិយោបល់</string>
+    <string name="forums_comment_save">រក្សាទុក</string>
+    <string name="forums_comment_edit">កែសម្រួលមតិយោបល់</string>
+    <string name="forums_comment_delete">លុបមតិយោបល់</string>
+    <string name="forums_comment_delete_title">លុបមតិយោបល់</string>
+    <string name="forums_comment_reply">ឆ្លើយតប</string>
+    <string name="forums_settings_rename">ប្តូរឈ្មោះ</string>
+    <string name="forums_settings_save">រក្សាទុក</string>
+    <string name="forums_settings_delete">លុបវេទិកា</string>
+    <string name="forums_settings_delete_title">លុបវេទិកា</string>
+
+    <string name="notification_channel_forums">ការជូនដំណឹង Forums</string>
+</resources>

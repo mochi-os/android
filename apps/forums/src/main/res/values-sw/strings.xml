@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Jina la kuonyesha</string>
+    <string name="forums_auth_verification_failed">Uthibitishaji umeshindwa</string>
+    <string name="forums_list_title">Makongamano</string>
+    <string name="forums_list_close_search">Funga utafutaji</string>
+    <string name="forums_list_search">Tafuta</string>
+    <string name="forums_list_find">Tafuta makongamano</string>
+    <string name="forums_list_logout">Toka</string>
+    <string name="forums_list_create">Unda jukwaa</string>
+    <string name="forums_list_unsubscribe">Jiondoe</string>
+    <string name="forums_list_unsubscribe_title">Jiondoe</string>
+    <string name="forums_create_title">Unda jukwaa</string>
+    <string name="forums_create_name">Jina</string>
+    <string name="forums_create_privacy">Faragha</string>
+    <string name="forums_create_private">Ya faragha</string>
+    <string name="forums_create_public">Ya umma</string>
+    <string name="forums_create_action">Unda</string>
+    <string name="forums_find_title">Tafuta makongamano</string>
+    <string name="forums_find_recommended">Inapendekezwa</string>
+    <string name="forums_find_subscribe">Jiunge</string>
+    <string name="forums_find_subscribed">Umejiunga</string>
+    <string name="forums_find_no_results">Hakuna majukwaa yaliyopatikana</string>
+    <string name="forums_loading">Inapakia…</string>
+    <string name="forums_no_posts">Hakuna machapisho bado</string>
+    <string name="forums_new_post">Chapisho jipya</string>
+    <string name="forums_settings">Mipangilio</string>
+    <string name="forums_load_more">Pakia zaidi</string>
+    <string name="forums_sort_label">Panga</string>
+    <string name="forums_sort_new">Mpya</string>
+    <string name="forums_sort_hot">Moto</string>
+    <string name="forums_sort_top">Juu</string>
+    <string name="forums_sort_interests">Mivuto</string>
+    <string name="forums_post_title_field">Kichwa</string>
+    <string name="forums_post_attach">Ambatisha faili</string>
+    <string name="forums_post_create_action">Chapisho</string>
+    <string name="forums_post_edit">Hariri chapisho</string>
+    <string name="forums_post_save">Hifadhi</string>
+    <string name="forums_post_delete">Futa chapisho</string>
+    <string name="forums_post_delete_title">Futa chapisho</string>
+    <string name="forums_post_locked">Imefungwa</string>
+    <string name="forums_post_pinned">Imebandikwa</string>
+    <string name="forums_post_removed">Imeondolewa</string>
+    <string name="forums_post_pending">Inasubiri</string>
+    <string name="forums_post_default_author">Mtumiaji</string>
+    <string name="forums_comments">Maoni</string>
+    <string name="forums_no_comments">Hakuna maoni bado</string>
+    <string name="forums_comment_save">Hifadhi</string>
+    <string name="forums_comment_edit">Hariri maoni</string>
+    <string name="forums_comment_delete">Futa maoni</string>
+    <string name="forums_comment_delete_title">Futa maoni</string>
+    <string name="forums_comment_reply">Jibu</string>
+    <string name="forums_settings_rename">Badilisha jina</string>
+    <string name="forums_settings_save">Hifadhi</string>
+    <string name="forums_settings_delete">Futa jukwaa</string>
+    <string name="forums_settings_delete_title">Futa jukwaa</string>
+
+    <string name="notification_channel_forums">Arifa za Forums</string>
+</resources>

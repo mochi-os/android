@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Göstərilən ad</string>
+    <string name="forums_auth_verification_failed">Yoxla</string>
+    <string name="forums_list_title">Forumlar</string>
+    <string name="forums_list_close_search">Axtarışı bağla</string>
+    <string name="forums_list_search">Axtar</string>
+    <string name="forums_list_find">Forumları tap</string>
+    <string name="forums_list_logout">Çıx</string>
+    <string name="forums_list_create">Forum yarat</string>
+    <string name="forums_list_unsubscribe">CRM-dən abunəlikdən çıx</string>
+    <string name="forums_list_unsubscribe_title">CRM-dən abunəlikdən çıx</string>
+    <string name="forums_create_title">Forum yarat</string>
+    <string name="forums_create_name">Ad</string>
+    <string name="forums_create_privacy">Məxfilik</string>
+    <string name="forums_create_private">Şəxsi</string>
+    <string name="forums_create_public">Açıq</string>
+    <string name="forums_create_action">Yarat</string>
+    <string name="forums_find_title">Forumları tap</string>
+    <string name="forums_find_recommended">Tövsiyə olunur</string>
+    <string name="forums_find_subscribe">Abunə ol</string>
+    <string name="forums_find_subscribed">Abunə oldun</string>
+    <string name="forums_find_no_results">Forum tapılmadı</string>
+    <string name="forums_loading">Yüklənir…</string>
+    <string name="forums_no_posts">Hələ post yoxdur</string>
+    <string name="forums_new_post">Yeni post</string>
+    <string name="forums_settings">Parametrlər</string>
+    <string name="forums_load_more">Daha çox yüklə</string>
+    <string name="forums_sort_label">Sırala</string>
+    <string name="forums_sort_new">Yeni</string>
+    <string name="forums_sort_hot">İsti</string>
+    <string name="forums_sort_top">Mövzular</string>
+    <string name="forums_sort_interests">Maraqlar</string>
+    <string name="forums_post_title_field">Başlıq tələb olunur</string>
+    <string name="forums_post_attach">Faylları qoş</string>
+    <string name="forums_post_create_action">Post</string>
+    <string name="forums_post_edit">Postu redaktə et</string>
+    <string name="forums_post_save">Saxla</string>
+    <string name="forums_post_delete">Yazını sil</string>
+    <string name="forums_post_delete_title">Yazını sil</string>
+    <string name="forums_post_locked">Kilidli</string>
+    <string name="forums_post_pinned">Sancaqlanıb</string>
+    <string name="forums_post_removed">Silindi</string>
+    <string name="forums_post_pending">Gözləmədə</string>
+    <string name="forums_post_default_author">İstifadəçi yaradıldı</string>
+    <string name="forums_comments">Şərhlər</string>
+    <string name="forums_no_comments">Hələ şərh yoxdur</string>
+    <string name="forums_comment_save">Saxla</string>
+    <string name="forums_comment_edit">Şərhi redaktə et</string>
+    <string name="forums_comment_delete">Şərhi sil</string>
+    <string name="forums_comment_delete_title">Şərhi sil</string>
+    <string name="forums_comment_reply">Cavabla</string>
+    <string name="forums_settings_rename">Adı dəyiş</string>
+    <string name="forums_settings_save">Saxla</string>
+    <string name="forums_settings_delete">Forumu sil</string>
+    <string name="forums_settings_delete_title">Forumu sil</string>
+
+    <string name="notification_channel_forums">Forums bildirişləri</string>
+</resources>

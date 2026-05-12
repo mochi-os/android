@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Nama tampilan</string>
+    <string name="forums_auth_verification_failed">Verifikasi gagal</string>
+    <string name="forums_list_title">Forum</string>
+    <string name="forums_list_close_search">Tutup pencarian</string>
+    <string name="forums_list_search">Cari</string>
+    <string name="forums_list_find">Cari forum</string>
+    <string name="forums_list_logout">Keluar</string>
+    <string name="forums_list_create">Buat forum</string>
+    <string name="forums_list_unsubscribe">Berhenti berlangganan</string>
+    <string name="forums_list_unsubscribe_title">Berhenti berlangganan</string>
+    <string name="forums_create_title">Buat forum</string>
+    <string name="forums_create_name">Nama</string>
+    <string name="forums_create_privacy">Privasi</string>
+    <string name="forums_create_private">Pribadi</string>
+    <string name="forums_create_public">Publik</string>
+    <string name="forums_create_action">Buat</string>
+    <string name="forums_find_title">Cari forum</string>
+    <string name="forums_find_recommended">Direkomendasikan</string>
+    <string name="forums_find_subscribe">Berlangganan</string>
+    <string name="forums_find_subscribed">Berlangganan</string>
+    <string name="forums_find_no_results">Tidak ada forum yang ditemukan</string>
+    <string name="forums_loading">Memuat…</string>
+    <string name="forums_no_posts">Belum ada postingan</string>
+    <string name="forums_new_post">Postingan baru</string>
+    <string name="forums_settings">Pengaturan</string>
+    <string name="forums_load_more">Muat lebih banyak</string>
+    <string name="forums_sort_label">Urutkan</string>
+    <string name="forums_sort_new">Baru</string>
+    <string name="forums_sort_hot">Populer</string>
+    <string name="forums_sort_top">Atas</string>
+    <string name="forums_sort_interests">Minat</string>
+    <string name="forums_post_title_field">Judul</string>
+    <string name="forums_post_attach">Lampirkan file</string>
+    <string name="forums_post_create_action">Postingan</string>
+    <string name="forums_post_edit">Edit kiriman</string>
+    <string name="forums_post_save">Simpan</string>
+    <string name="forums_post_delete">Hapus postingan</string>
+    <string name="forums_post_delete_title">Hapus postingan</string>
+    <string name="forums_post_locked">Terkunci</string>
+    <string name="forums_post_pinned">Disematkan</string>
+    <string name="forums_post_removed">Dihapus</string>
+    <string name="forums_post_pending">Tertunda</string>
+    <string name="forums_post_default_author">Pengguna</string>
+    <string name="forums_comments">Komentar</string>
+    <string name="forums_no_comments">Belum ada komentar</string>
+    <string name="forums_comment_save">Simpan</string>
+    <string name="forums_comment_edit">Edit komentar</string>
+    <string name="forums_comment_delete">Hapus komentar</string>
+    <string name="forums_comment_delete_title">Hapus komentar</string>
+    <string name="forums_comment_reply">Balas</string>
+    <string name="forums_settings_rename">Ubah nama</string>
+    <string name="forums_settings_save">Simpan</string>
+    <string name="forums_settings_delete">Hapus forum</string>
+    <string name="forums_settings_delete_title">Hapus forum</string>
+
+    <string name="notification_channel_forums">Notifikasi Forums</string>
+</resources>

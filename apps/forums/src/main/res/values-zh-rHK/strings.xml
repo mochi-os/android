@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_post_default_author">用戶</string>
+
+    <string name="notification_channel_forums">Forums 通知</string>
+</resources>

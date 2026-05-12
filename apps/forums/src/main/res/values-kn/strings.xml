@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">ಪ್ರದರ್ಶನ ಹೆಸರು</string>
+    <string name="forums_auth_verification_failed">ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
+    <string name="forums_list_title">ಫೋರಮ್‌ಗಳು</string>
+    <string name="forums_list_close_search">ಹುಡುಕಾಟ ಮುಚ್ಚಿ</string>
+    <string name="forums_list_search">ಹುಡುಕಿ</string>
+    <string name="forums_list_find">ಫೋರಮ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
+    <string name="forums_list_logout">ಲಾಗ್ ಔಟ್</string>
+    <string name="forums_list_create">ಫೋರಮ್ ರಚಿಸಿ</string>
+    <string name="forums_list_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="forums_list_unsubscribe_title">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="forums_create_title">ಫೋರಮ್ ರಚಿಸಿ</string>
+    <string name="forums_create_name">ಹೆಸರು</string>
+    <string name="forums_create_privacy">ಗೌಪ್ಯತೆ</string>
+    <string name="forums_create_private">ಖಾಸಗಿ</string>
+    <string name="forums_create_public">ಸಾರ್ವಜನಿಕ</string>
+    <string name="forums_create_action">ರಚಿಸಿ</string>
+    <string name="forums_find_title">ಫೋರಮ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
+    <string name="forums_find_recommended">ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ</string>
+    <string name="forums_find_subscribe">ಚಂದಾದಾರರಾಗಿ</string>
+    <string name="forums_find_subscribed">ಚಂದಾದಾರರಾಗಿದ್ದೀರಿ</string>
+    <string name="forums_find_no_results">ಯಾವುದೇ ಫೋರಮ್‌ಗಳು ಸಿಗಲಿಲ್ಲ</string>
+    <string name="forums_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
+    <string name="forums_no_posts">ಇನ್ನೂ ಯಾವುದೇ ಪೋಸ್ಟ್‌ಗಳಿಲ್ಲ</string>
+    <string name="forums_new_post">ಹೊಸ ಪೋಸ್ಟ್</string>
+    <string name="forums_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="forums_load_more">ಇನ್ನಷ್ಟು ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="forums_sort_label">ವಿಂಗಡಿಸಿ</string>
+    <string name="forums_sort_new">ಹೊಸ</string>
+    <string name="forums_sort_hot">ಹಾಟ್</string>
+    <string name="forums_sort_top">ಅಗ್ರ</string>
+    <string name="forums_sort_interests">ಆಸಕ್ತಿಗಳು</string>
+    <string name="forums_post_title_field">ಶೀರ್ಷಿಕೆ</string>
+    <string name="forums_post_attach">ಫೈಲ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ</string>
+    <string name="forums_post_create_action">ಪೋಸ್ಟ್</string>
+    <string name="forums_post_edit">ಪೋಸ್ಟ್ ಸಂಪಾದಿಸಿ</string>
+    <string name="forums_post_save">ಉಳಿಸಿ</string>
+    <string name="forums_post_delete">ಪೋಸ್ಟ್ ಅಳಿಸಿ</string>
+    <string name="forums_post_delete_title">ಪೋಸ್ಟ್ ಅಳಿಸಿ</string>
+    <string name="forums_post_locked">ಲಾಕ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="forums_post_pinned">ಪಿನ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="forums_post_removed">ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
+    <string name="forums_post_pending">ಬಾಕಿ ಇದೆ</string>
+    <string name="forums_post_default_author">ಬಳಕೆದಾರ</string>
+    <string name="forums_comments">ಕಾಮೆಂಟ್‌ಗಳು</string>
+    <string name="forums_no_comments">ಇನ್ನೂ ಯಾವುದೇ ಕಾಮೆಂಟ್‌ಗಳಿಲ್ಲ</string>
+    <string name="forums_comment_save">ಉಳಿಸಿ</string>
+    <string name="forums_comment_edit">ಕಾಮೆಂಟ್ ಸಂಪಾದಿಸಿ</string>
+    <string name="forums_comment_delete">ಕಾಮೆಂಟ್ ಅಳಿಸಿ</string>
+    <string name="forums_comment_delete_title">ಕಾಮೆಂಟ್ ಅಳಿಸಿ</string>
+    <string name="forums_comment_reply">ರಿಪ್ಲೈ</string>
+    <string name="forums_settings_rename">ಮರುಹೆಸರಿಸಿ</string>
+    <string name="forums_settings_save">ಉಳಿಸಿ</string>
+    <string name="forums_settings_delete">ಫೋರಮ್ ಅಳಿಸಿ</string>
+    <string name="forums_settings_delete_title">ಫೋರಮ್ ಅಳಿಸಿ</string>
+
+    <string name="notification_channel_forums">Forums ಸೂಚನೆಗಳು</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Rodomas vardas</string>
+    <string name="forums_auth_verification_failed">Patvirtinimas nepavyko</string>
+    <string name="forums_list_title">Forumai</string>
+    <string name="forums_list_close_search">Uždaryti paiešką</string>
+    <string name="forums_list_search">Ieškoti</string>
+    <string name="forums_list_find">Rasti forumus</string>
+    <string name="forums_list_logout">Atsijungti</string>
+    <string name="forums_list_create">Sukurti forumą</string>
+    <string name="forums_list_unsubscribe">Atšaukti prenumeratą</string>
+    <string name="forums_list_unsubscribe_title">Atšaukti prenumeratą</string>
+    <string name="forums_create_title">Sukurti forumą</string>
+    <string name="forums_create_name">Pavadinimas</string>
+    <string name="forums_create_privacy">Privatumas</string>
+    <string name="forums_create_private">Privatus</string>
+    <string name="forums_create_public">Viešas</string>
+    <string name="forums_create_action">Sukurti</string>
+    <string name="forums_find_title">Rasti forumus</string>
+    <string name="forums_find_recommended">Rekomenduojama</string>
+    <string name="forums_find_subscribe">Prenumeruoti</string>
+    <string name="forums_find_subscribed">Prenumeruota</string>
+    <string name="forums_find_no_results">Forumų nerasta</string>
+    <string name="forums_loading">Įkeliama…</string>
+    <string name="forums_no_posts">Dar nėra įrašų</string>
+    <string name="forums_new_post">Naujas įrašas</string>
+    <string name="forums_settings">Nustatymai</string>
+    <string name="forums_load_more">Įkelti daugiau</string>
+    <string name="forums_sort_label">Rūšiuoti</string>
+    <string name="forums_sort_new">Naujas</string>
+    <string name="forums_sort_hot">Karšta</string>
+    <string name="forums_sort_top">Viršus</string>
+    <string name="forums_sort_interests">Pomėgiai</string>
+    <string name="forums_post_title_field">Pavadinimas</string>
+    <string name="forums_post_attach">Pridėti failus</string>
+    <string name="forums_post_create_action">Įrašas</string>
+    <string name="forums_post_edit">Redaguoti įrašą</string>
+    <string name="forums_post_save">Išsaugoti</string>
+    <string name="forums_post_delete">Ištrinti įrašą</string>
+    <string name="forums_post_delete_title">Ištrinti įrašą</string>
+    <string name="forums_post_locked">Užrakintas</string>
+    <string name="forums_post_pinned">Prisegta</string>
+    <string name="forums_post_removed">Pašalinta</string>
+    <string name="forums_post_pending">Laukiama</string>
+    <string name="forums_post_default_author">Vartotojas</string>
+    <string name="forums_comments">Komentarai</string>
+    <string name="forums_no_comments">Dar nėra komentarų</string>
+    <string name="forums_comment_save">Išsaugoti</string>
+    <string name="forums_comment_edit">Redaguoti komentarą</string>
+    <string name="forums_comment_delete">Ištrinti komentarą</string>
+    <string name="forums_comment_delete_title">Ištrinti komentarą</string>
+    <string name="forums_comment_reply">Atsakyti</string>
+    <string name="forums_settings_rename">Pervadinti</string>
+    <string name="forums_settings_save">Išsaugoti</string>
+    <string name="forums_settings_delete">Ištrinti forumą</string>
+    <string name="forums_settings_delete_title">Ištrinti forumą</string>
+
+    <string name="notification_channel_forums">Forums pranešimai</string>
+</resources>

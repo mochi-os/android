@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Isem li jidher</string>
+    <string name="forums_auth_verification_failed">Verifika falliet</string>
+    <string name="forums_list_title">Forums</string>
+    <string name="forums_list_close_search">Agħlaq it-tiftix</string>
+    <string name="forums_list_search">Fittex</string>
+    <string name="forums_list_find">Sib forums</string>
+    <string name="forums_list_logout">Oħroġ</string>
+    <string name="forums_list_create">Oħloq forum</string>
+    <string name="forums_list_unsubscribe">Iddiżabbona</string>
+    <string name="forums_list_unsubscribe_title">Iddiżabbona</string>
+    <string name="forums_create_title">Oħloq forum</string>
+    <string name="forums_create_name">Isem</string>
+    <string name="forums_create_privacy">Privatezza</string>
+    <string name="forums_create_private">Privat</string>
+    <string name="forums_create_public">Pubbliku</string>
+    <string name="forums_create_action">Oħloq</string>
+    <string name="forums_find_title">Sib forums</string>
+    <string name="forums_find_recommended">Rakkomandat</string>
+    <string name="forums_find_subscribe">Abbona</string>
+    <string name="forums_find_subscribed">Abbonat</string>
+    <string name="forums_find_no_results">Ma nstabu l-ebda forums</string>
+    <string name="forums_loading">Qed jitgħabba…</string>
+    <string name="forums_no_posts">L-ebda posts s\'issa</string>
+    <string name="forums_new_post">Post ġdid</string>
+    <string name="forums_settings">Settings</string>
+    <string name="forums_load_more">Tella\' aktar</string>
+    <string name="forums_sort_label">Issortja</string>
+    <string name="forums_sort_new">Ġdid</string>
+    <string name="forums_sort_hot">Sħun</string>
+    <string name="forums_sort_top">Quċċata</string>
+    <string name="forums_sort_interests">Interessi</string>
+    <string name="forums_post_title_field">Titlu</string>
+    <string name="forums_post_attach">Ehmeż files</string>
+    <string name="forums_post_create_action">Post</string>
+    <string name="forums_post_edit">Editja l-post</string>
+    <string name="forums_post_save">Issejvja</string>
+    <string name="forums_post_delete">Ħassar post</string>
+    <string name="forums_post_delete_title">Ħassar post</string>
+    <string name="forums_post_locked">Maqful</string>
+    <string name="forums_post_pinned">Pinnjat</string>
+    <string name="forums_post_removed">Imneħħi</string>
+    <string name="forums_post_pending">Pendenti</string>
+    <string name="forums_post_default_author">Utent</string>
+    <string name="forums_comments">Kummenti</string>
+    <string name="forums_no_comments">L-ebda kummenti s\'issa</string>
+    <string name="forums_comment_save">Issejvja</string>
+    <string name="forums_comment_edit">Editja l-kumment</string>
+    <string name="forums_comment_delete">Ħassar kumment</string>
+    <string name="forums_comment_delete_title">Ħassar kumment</string>
+    <string name="forums_comment_reply">Wieġeb</string>
+    <string name="forums_settings_rename">Irrinomina</string>
+    <string name="forums_settings_save">Issejvja</string>
+    <string name="forums_settings_delete">Ħassar forum</string>
+    <string name="forums_settings_delete_title">Ħassar forum</string>
+
+    <string name="notification_channel_forums">Notifiki ta\' Forums</string>
+</resources>

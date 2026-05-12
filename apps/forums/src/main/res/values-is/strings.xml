@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Birtingarnafn</string>
+    <string name="forums_auth_verification_failed">Sannprófun mistókst</string>
+    <string name="forums_list_title">Spjallborð</string>
+    <string name="forums_list_close_search">Loka leit</string>
+    <string name="forums_list_search">Leita</string>
+    <string name="forums_list_find">Finna spjallborð</string>
+    <string name="forums_list_logout">Skrá út</string>
+    <string name="forums_list_create">Búa til spjallþráð</string>
+    <string name="forums_list_unsubscribe">Afskrá áskrift</string>
+    <string name="forums_list_unsubscribe_title">Afskrá áskrift</string>
+    <string name="forums_create_title">Búa til spjallþráð</string>
+    <string name="forums_create_name">Nafn</string>
+    <string name="forums_create_privacy">Friðhelgi</string>
+    <string name="forums_create_private">Einkamál</string>
+    <string name="forums_create_public">Opinbert</string>
+    <string name="forums_create_action">Búa til</string>
+    <string name="forums_find_title">Finna spjallborð</string>
+    <string name="forums_find_recommended">Mælt með</string>
+    <string name="forums_find_subscribe">Gerast áskrifandi</string>
+    <string name="forums_find_subscribed">Áskrift virk</string>
+    <string name="forums_find_no_results">Engin spjallborð fundust</string>
+    <string name="forums_loading">Hleð…</string>
+    <string name="forums_no_posts">Engar færslur ennþá</string>
+    <string name="forums_new_post">Ný færsla</string>
+    <string name="forums_settings">Stillingar</string>
+    <string name="forums_load_more">Hlaða meiru</string>
+    <string name="forums_sort_label">Raða</string>
+    <string name="forums_sort_new">Nýtt</string>
+    <string name="forums_sort_hot">Heitt</string>
+    <string name="forums_sort_top">Efst</string>
+    <string name="forums_sort_interests">Áhugaefni</string>
+    <string name="forums_post_title_field">Titill</string>
+    <string name="forums_post_attach">Hengja við skrár</string>
+    <string name="forums_post_create_action">Færsla</string>
+    <string name="forums_post_edit">Breyta færslu</string>
+    <string name="forums_post_save">Vista</string>
+    <string name="forums_post_delete">Eyða færslu</string>
+    <string name="forums_post_delete_title">Eyða færslu</string>
+    <string name="forums_post_locked">Læst</string>
+    <string name="forums_post_pinned">Fest</string>
+    <string name="forums_post_removed">Fjarlægt</string>
+    <string name="forums_post_pending">Í bið</string>
+    <string name="forums_post_default_author">Notandi</string>
+    <string name="forums_comments">Athugasemdir</string>
+    <string name="forums_no_comments">Engar athugasemdir ennþá</string>
+    <string name="forums_comment_save">Vista</string>
+    <string name="forums_comment_edit">Breyta athugasemd</string>
+    <string name="forums_comment_delete">Eyða athugasemd</string>
+    <string name="forums_comment_delete_title">Eyða athugasemd</string>
+    <string name="forums_comment_reply">Svara</string>
+    <string name="forums_settings_rename">Endurnefna</string>
+    <string name="forums_settings_save">Vista</string>
+    <string name="forums_settings_delete">Eyða spjallþræði</string>
+    <string name="forums_settings_delete_title">Eyða spjallþræði</string>
+
+    <string name="notification_channel_forums">Forums-tilkynningar</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Enw arddangos</string>
+    <string name="forums_auth_verification_failed">Dilysiad wedi methu</string>
+    <string name="forums_list_title">Fforymau</string>
+    <string name="forums_list_close_search">Cau chwiliad</string>
+    <string name="forums_list_search">Chwilio</string>
+    <string name="forums_list_find">Dod o hyd i fforymau</string>
+    <string name="forums_list_logout">Allgofnodi</string>
+    <string name="forums_list_create">Creu fforwm</string>
+    <string name="forums_list_unsubscribe">Dad-danysgrifio</string>
+    <string name="forums_list_unsubscribe_title">Dad-danysgrifio</string>
+    <string name="forums_create_title">Creu fforwm</string>
+    <string name="forums_create_name">Enw</string>
+    <string name="forums_create_privacy">Preifatrwydd</string>
+    <string name="forums_create_private">Preifat</string>
+    <string name="forums_create_public">Cyhoeddus</string>
+    <string name="forums_create_action">Creu</string>
+    <string name="forums_find_title">Dod o hyd i fforymau</string>
+    <string name="forums_find_recommended">Argymhellir</string>
+    <string name="forums_find_subscribe">Tanysgrifio</string>
+    <string name="forums_find_subscribed">Wedi tanysgrifio</string>
+    <string name="forums_find_no_results">Heb ddod o hyd i fforymau</string>
+    <string name="forums_loading">Yn llwytho…</string>
+    <string name="forums_no_posts">Dim postiadau eto</string>
+    <string name="forums_new_post">Postiad newydd</string>
+    <string name="forums_settings">Gosodiadau</string>
+    <string name="forums_load_more">Llwytho mwy</string>
+    <string name="forums_sort_label">Trefnu</string>
+    <string name="forums_sort_new">Newydd</string>
+    <string name="forums_sort_hot">Poeth</string>
+    <string name="forums_sort_top">Brig</string>
+    <string name="forums_sort_interests">Diddordebau</string>
+    <string name="forums_post_title_field">Teitl</string>
+    <string name="forums_post_attach">Atodi ffeiliau</string>
+    <string name="forums_post_create_action">Postio</string>
+    <string name="forums_post_edit">Golygu post</string>
+    <string name="forums_post_save">Cadw</string>
+    <string name="forums_post_delete">Dileu postiad</string>
+    <string name="forums_post_delete_title">Dileu postiad</string>
+    <string name="forums_post_locked">Wedi\'i gloi</string>
+    <string name="forums_post_pinned">Wedi\'i binio</string>
+    <string name="forums_post_removed">Wedi\'i dynnu</string>
+    <string name="forums_post_pending">Ar y gweill</string>
+    <string name="forums_post_default_author">Defnyddiwr</string>
+    <string name="forums_comments">Sylwadau</string>
+    <string name="forums_no_comments">Dim sylwadau eto</string>
+    <string name="forums_comment_save">Cadw</string>
+    <string name="forums_comment_edit">Golygu sylw</string>
+    <string name="forums_comment_delete">Dileu sylw</string>
+    <string name="forums_comment_delete_title">Dileu sylw</string>
+    <string name="forums_comment_reply">Ymateb</string>
+    <string name="forums_settings_rename">Ailenwi</string>
+    <string name="forums_settings_save">Cadw</string>
+    <string name="forums_settings_delete">Dileu fforwm</string>
+    <string name="forums_settings_delete_title">Dileu fforwm</string>
+
+    <string name="notification_channel_forums">Hysbysiadau Forums</string>
+</resources>

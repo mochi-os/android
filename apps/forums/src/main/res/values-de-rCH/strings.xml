@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_list_close_search">Suche schliessen</string>
+    <string name="forums_sort_hot">Heiss</string>
+
+    <string name="notification_channel_forums">Forums-Benachrichtigungen</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Igama elibonisiweyo</string>
+    <string name="forums_auth_verification_failed">Uqinisekiso lusilele</string>
+    <string name="forums_list_title">Iiforamu</string>
+    <string name="forums_list_close_search">Vala ukukhangela</string>
+    <string name="forums_list_search">Khangela</string>
+    <string name="forums_list_find">Fumana iiforamu</string>
+    <string name="forums_list_logout">Phuma</string>
+    <string name="forums_list_create">Yenza iforam</string>
+    <string name="forums_list_unsubscribe">Yeka ukurhuma</string>
+    <string name="forums_list_unsubscribe_title">Yeka ukurhuma</string>
+    <string name="forums_create_title">Yenza iforam</string>
+    <string name="forums_create_name">Igama</string>
+    <string name="forums_create_privacy">Ubumfihlo</string>
+    <string name="forums_create_private">Yangasese</string>
+    <string name="forums_create_public">Esidlangalaleni</string>
+    <string name="forums_create_action">Yenza</string>
+    <string name="forums_find_title">Fumana iiforamu</string>
+    <string name="forums_find_recommended">Iyacetyiswa</string>
+    <string name="forums_find_subscribe">Rhuma</string>
+    <string name="forums_find_subscribed">Kurhunyiwe</string>
+    <string name="forums_find_no_results">Akukho foramu zifumanekileyo</string>
+    <string name="forums_loading">Kulayishwa…</string>
+    <string name="forums_no_posts">Akukho miyalezo okwangoku</string>
+    <string name="forums_new_post">Umyalezo omtsha</string>
+    <string name="forums_settings">Iisetingi</string>
+    <string name="forums_load_more">Layisha okungakumbi</string>
+    <string name="forums_sort_label">Hlela</string>
+    <string name="forums_sort_new">Entsha</string>
+    <string name="forums_sort_hot">Ishushu</string>
+    <string name="forums_sort_top">Phezulu</string>
+    <string name="forums_sort_interests">Imidla</string>
+    <string name="forums_post_title_field">Isihloko</string>
+    <string name="forums_post_attach">Qhoboshela iifayile</string>
+    <string name="forums_post_create_action">Umpapasho</string>
+    <string name="forums_post_edit">Hlela umyalezo</string>
+    <string name="forums_post_save">Gcina</string>
+    <string name="forums_post_delete">Cima iposi</string>
+    <string name="forums_post_delete_title">Cima iposi</string>
+    <string name="forums_post_locked">Itshixiwe</string>
+    <string name="forums_post_pinned">Incamathiselwe</string>
+    <string name="forums_post_removed">Isusiwe</string>
+    <string name="forums_post_pending">Ilindile</string>
+    <string name="forums_post_default_author">Umsebenzisi</string>
+    <string name="forums_comments">Izimvo</string>
+    <string name="forums_no_comments">Akukho zimvo okwangoku</string>
+    <string name="forums_comment_save">Gcina</string>
+    <string name="forums_comment_edit">Hlela uluvo</string>
+    <string name="forums_comment_delete">Cima isiphawuli</string>
+    <string name="forums_comment_delete_title">Cima isiphawuli</string>
+    <string name="forums_comment_reply">Phendula</string>
+    <string name="forums_settings_rename">Guqula igama</string>
+    <string name="forums_settings_save">Gcina</string>
+    <string name="forums_settings_delete">Cima iforam</string>
+    <string name="forums_settings_delete_title">Cima iforam</string>
+
+    <string name="notification_channel_forums">Izaziso ze-Forums</string>
+</resources>

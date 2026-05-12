@@ -19,6 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.chat.navigation.ChatApp
 import org.mochios.feeds.navigation.FeedsApp
+import org.mochios.forums.navigation.ForumsApp
 import org.mochios.mochi.R
 
 private data class LaunchpadTile(
@@ -35,6 +36,7 @@ fun LaunchPadScreen(
         listOf(
             LaunchpadTile(label = "Feeds", route = FeedsApp.HOME),
             LaunchpadTile(label = "Chat", route = ChatApp.HOME),
+            LaunchpadTile(label = "Forums", route = ForumsApp.HOME),
         )
     }
 

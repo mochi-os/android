@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">ຊື່ສະແດງ</string>
+    <string name="forums_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
+    <string name="forums_list_title">ກະດານສົນທະນາ</string>
+    <string name="forums_list_close_search">ປິດການຄົ້ນຫາ</string>
+    <string name="forums_list_search">ຄົ້ນຫາ</string>
+    <string name="forums_list_find">ຄົ້ນຫາກະດານສົນທະນາ</string>
+    <string name="forums_list_logout">ອອກຈາກລະບົບ</string>
+    <string name="forums_list_create">ສ້າງກະດານສົນທະນາ</string>
+    <string name="forums_list_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="forums_list_unsubscribe_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="forums_create_title">ສ້າງກະດານສົນທະນາ</string>
+    <string name="forums_create_name">ຊື່</string>
+    <string name="forums_create_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="forums_create_private">ສ່ວນຕົວ</string>
+    <string name="forums_create_public">ສາທາລະນະ</string>
+    <string name="forums_create_action">ສ້າງ</string>
+    <string name="forums_find_title">ຄົ້ນຫາກະດານສົນທະນາ</string>
+    <string name="forums_find_recommended">ແນະນຳ</string>
+    <string name="forums_find_subscribe">ສະໝັກສະມາຊິກ</string>
+    <string name="forums_find_subscribed">ສະໝັກສະມາຊິກແລ້ວ</string>
+    <string name="forums_find_no_results">ບໍ່ພົບກະດານສົນທະນາ</string>
+    <string name="forums_loading">ກຳລັງໂຫຼດ…</string>
+    <string name="forums_no_posts">ຍັງບໍ່ມີໂພສ</string>
+    <string name="forums_new_post">ໂພສໃໝ່</string>
+    <string name="forums_settings">ການຕັ້ງຄ່າ</string>
+    <string name="forums_load_more">ໂຫຼດເພີ່ມ</string>
+    <string name="forums_sort_label">ຈັດລຽງ</string>
+    <string name="forums_sort_new">ໃໝ່</string>
+    <string name="forums_sort_hot">ມາແຮງ</string>
+    <string name="forums_sort_top">ເທິງ</string>
+    <string name="forums_sort_interests">ຄວາມສົນໃຈ</string>
+    <string name="forums_post_title_field">ຊື່ເລື່ອງ</string>
+    <string name="forums_post_attach">ແນບໄຟລ໌</string>
+    <string name="forums_post_create_action">ໂພສ</string>
+    <string name="forums_post_edit">ແກ້ໄຂໂພສ</string>
+    <string name="forums_post_save">ບັນທຶກ</string>
+    <string name="forums_post_delete">ລົບໂພສ</string>
+    <string name="forums_post_delete_title">ລົບໂພສ</string>
+    <string name="forums_post_locked">ລັອກແລ້ວ</string>
+    <string name="forums_post_pinned">ປັກໝຸດແລ້ວ</string>
+    <string name="forums_post_removed">ລຶບແລ້ວ</string>
+    <string name="forums_post_pending">ກຳລັງລໍຖ້າ</string>
+    <string name="forums_post_default_author">ຜູ້ໃຊ້</string>
+    <string name="forums_comments">ຄຳເຫັນ</string>
+    <string name="forums_no_comments">ຍັງບໍ່ມີຄຳເຫັນ</string>
+    <string name="forums_comment_save">ບັນທຶກ</string>
+    <string name="forums_comment_edit">ແກ້ໄຂຄຳເຫັນ</string>
+    <string name="forums_comment_delete">ລົບຄຳເຫັນ</string>
+    <string name="forums_comment_delete_title">ລົບຄຳເຫັນ</string>
+    <string name="forums_comment_reply">ຕອບ</string>
+    <string name="forums_settings_rename">ປ່ຽນຊື່</string>
+    <string name="forums_settings_save">ບັນທຶກ</string>
+    <string name="forums_settings_delete">ລົບກະດານສົນທະນາ</string>
+    <string name="forums_settings_delete_title">ລົບກະດານສົນທະນາ</string>
+
+    <string name="notification_channel_forums">ການແຈ້ງເຕືອນ Forums</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">ڏيکاري وارو نالو</string>
+    <string name="forums_auth_verification_failed">تصديق ناڪام ٿي</string>
+    <string name="forums_list_title">فورمَ</string>
+    <string name="forums_list_close_search">ڳولا بند ڪريو</string>
+    <string name="forums_list_search">ڳوليو</string>
+    <string name="forums_list_find">فورمَ ڳوليو</string>
+    <string name="forums_list_logout">لاگ آئوٽ</string>
+    <string name="forums_list_create">فورم ٺاهيو</string>
+    <string name="forums_list_unsubscribe">ان سبسڪرائب ڪريو</string>
+    <string name="forums_list_unsubscribe_title">ان سبسڪرائب ڪريو</string>
+    <string name="forums_create_title">فورم ٺاهيو</string>
+    <string name="forums_create_name">نالو</string>
+    <string name="forums_create_privacy">رازداري</string>
+    <string name="forums_create_private">نجي</string>
+    <string name="forums_create_public">عوامي</string>
+    <string name="forums_create_action">ٺاهيو</string>
+    <string name="forums_find_title">فورمَ ڳوليو</string>
+    <string name="forums_find_recommended">تجويز ڪيل</string>
+    <string name="forums_find_subscribe">سبسڪرائب ڪريو</string>
+    <string name="forums_find_subscribed">سبسڪرائبڊ</string>
+    <string name="forums_find_no_results">ڪو فورم نه مليو</string>
+    <string name="forums_loading">لوڊ ٿي رهيو آهي…</string>
+    <string name="forums_no_posts">اڃا ڪا پوسٽ نه آهي</string>
+    <string name="forums_new_post">نئين پوسٽ</string>
+    <string name="forums_settings">سيٽنگون</string>
+    <string name="forums_load_more">وڌيڪ لوڊ ڪريو</string>
+    <string name="forums_sort_label">ترتيب</string>
+    <string name="forums_sort_new">نئون</string>
+    <string name="forums_sort_hot">گرم</string>
+    <string name="forums_sort_top">مٿي</string>
+    <string name="forums_sort_interests">دلچسپيون</string>
+    <string name="forums_post_title_field">عنوان</string>
+    <string name="forums_post_attach">فائلون ڳنڍيو</string>
+    <string name="forums_post_create_action">پوسٽ</string>
+    <string name="forums_post_edit">پوسٽ ۾ ترميم ڪريو</string>
+    <string name="forums_post_save">محفوظ ڪريو</string>
+    <string name="forums_post_delete">پوسٽ ختم ڪريو</string>
+    <string name="forums_post_delete_title">پوسٽ ختم ڪريو</string>
+    <string name="forums_post_locked">بند ٿيل</string>
+    <string name="forums_post_pinned">پن ٿيل</string>
+    <string name="forums_post_removed">هٽايو ويو</string>
+    <string name="forums_post_pending">زير التوا</string>
+    <string name="forums_post_default_author">صارف</string>
+    <string name="forums_comments">تبصرا</string>
+    <string name="forums_no_comments">اڃا ڪو تبصرو نه آهي</string>
+    <string name="forums_comment_save">محفوظ ڪريو</string>
+    <string name="forums_comment_edit">تبصري ۾ ترميم ڪريو</string>
+    <string name="forums_comment_delete">تبصرو ختم ڪريو</string>
+    <string name="forums_comment_delete_title">تبصرو ختم ڪريو</string>
+    <string name="forums_comment_reply">جواب</string>
+    <string name="forums_settings_rename">نالو تبديل ڪريو</string>
+    <string name="forums_settings_save">محفوظ ڪريو</string>
+    <string name="forums_settings_delete">فورم ختم ڪريو</string>
+    <string name="forums_settings_delete_title">فورم ختم ڪريو</string>
+
+    <string name="notification_channel_forums">Forums اطلاعون</string>
+</resources>

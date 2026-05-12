@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">顯示名稱</string>
+    <string name="forums_auth_verification_failed">驗證失敗</string>
+    <string name="forums_list_title">論壇</string>
+    <string name="forums_list_close_search">關閉搜尋</string>
+    <string name="forums_list_search">搜尋</string>
+    <string name="forums_list_find">尋找論壇</string>
+    <string name="forums_list_logout">登出</string>
+    <string name="forums_list_create">建立論壇</string>
+    <string name="forums_list_unsubscribe">取消訂閱</string>
+    <string name="forums_list_unsubscribe_title">取消訂閱</string>
+    <string name="forums_create_title">建立論壇</string>
+    <string name="forums_create_name">名稱</string>
+    <string name="forums_create_privacy">隱私</string>
+    <string name="forums_create_private">私人</string>
+    <string name="forums_create_public">公開</string>
+    <string name="forums_create_action">建立</string>
+    <string name="forums_find_title">尋找論壇</string>
+    <string name="forums_find_recommended">推薦</string>
+    <string name="forums_find_subscribe">訂閱</string>
+    <string name="forums_find_subscribed">已訂閱</string>
+    <string name="forums_find_no_results">找不到論壇</string>
+    <string name="forums_loading">載入中…</string>
+    <string name="forums_no_posts">尚無貼文</string>
+    <string name="forums_new_post">新貼文</string>
+    <string name="forums_settings">設定</string>
+    <string name="forums_load_more">載入更多</string>
+    <string name="forums_sort_label">排序</string>
+    <string name="forums_sort_new">新增</string>
+    <string name="forums_sort_hot">熱門</string>
+    <string name="forums_sort_top">頂端</string>
+    <string name="forums_sort_interests">興趣</string>
+    <string name="forums_post_title_field">標題</string>
+    <string name="forums_post_attach">附加檔案</string>
+    <string name="forums_post_create_action">貼文</string>
+    <string name="forums_post_edit">編輯貼文</string>
+    <string name="forums_post_save">儲存</string>
+    <string name="forums_post_delete">刪除貼文</string>
+    <string name="forums_post_delete_title">刪除貼文</string>
+    <string name="forums_post_locked">已鎖定</string>
+    <string name="forums_post_pinned">已釘選</string>
+    <string name="forums_post_removed">已移除</string>
+    <string name="forums_post_pending">待處理</string>
+    <string name="forums_post_default_author">使用者</string>
+    <string name="forums_comments">留言</string>
+    <string name="forums_no_comments">尚無留言</string>
+    <string name="forums_comment_save">儲存</string>
+    <string name="forums_comment_edit">編輯留言</string>
+    <string name="forums_comment_delete">刪除留言</string>
+    <string name="forums_comment_delete_title">刪除留言</string>
+    <string name="forums_comment_reply">回覆</string>
+    <string name="forums_settings_rename">重新命名</string>
+    <string name="forums_settings_save">儲存</string>
+    <string name="forums_settings_delete">刪除論壇</string>
+    <string name="forums_settings_delete_title">刪除論壇</string>
+
+    <string name="notification_channel_forums">Forums 通知</string>
+</resources>

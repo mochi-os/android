@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Weergavenaam</string>
+    <string name="forums_auth_verification_failed">Verificatie mislukt</string>
+    <string name="forums_list_title">Forums</string>
+    <string name="forums_list_close_search">Zoeken sluiten</string>
+    <string name="forums_list_search">Zoeken</string>
+    <string name="forums_list_find">Forums zoeken</string>
+    <string name="forums_list_logout">Uitloggen</string>
+    <string name="forums_list_create">Forum aanmaken</string>
+    <string name="forums_list_unsubscribe">Abonnement opzeggen</string>
+    <string name="forums_list_unsubscribe_title">Abonnement opzeggen</string>
+    <string name="forums_create_title">Forum aanmaken</string>
+    <string name="forums_create_name">Naam</string>
+    <string name="forums_create_privacy">Privacy</string>
+    <string name="forums_create_private">Privé</string>
+    <string name="forums_create_public">Openbaar</string>
+    <string name="forums_create_action">Aanmaken</string>
+    <string name="forums_find_title">Forums zoeken</string>
+    <string name="forums_find_recommended">Aanbevolen</string>
+    <string name="forums_find_subscribe">Abonneren</string>
+    <string name="forums_find_subscribed">Geabonneerd</string>
+    <string name="forums_find_no_results">Geen forums gevonden</string>
+    <string name="forums_loading">Laden…</string>
+    <string name="forums_no_posts">Nog geen posts</string>
+    <string name="forums_new_post">Nieuwe post</string>
+    <string name="forums_settings">Instellingen</string>
+    <string name="forums_load_more">Meer laden</string>
+    <string name="forums_sort_label">Sorteren</string>
+    <string name="forums_sort_new">Nieuw</string>
+    <string name="forums_sort_hot">Populair</string>
+    <string name="forums_sort_top">Boven</string>
+    <string name="forums_sort_interests">Interesses</string>
+    <string name="forums_post_title_field">Titel</string>
+    <string name="forums_post_attach">Bestanden bijvoegen</string>
+    <string name="forums_post_create_action">Post</string>
+    <string name="forums_post_edit">Bericht bewerken</string>
+    <string name="forums_post_save">Opslaan</string>
+    <string name="forums_post_delete">Post verwijderen</string>
+    <string name="forums_post_delete_title">Post verwijderen</string>
+    <string name="forums_post_locked">Vergrendeld</string>
+    <string name="forums_post_pinned">Vastgemaakt</string>
+    <string name="forums_post_removed">Verwijderd</string>
+    <string name="forums_post_pending">In afwachting</string>
+    <string name="forums_post_default_author">Gebruiker</string>
+    <string name="forums_comments">Reacties</string>
+    <string name="forums_no_comments">Nog geen reacties</string>
+    <string name="forums_comment_save">Opslaan</string>
+    <string name="forums_comment_edit">Reactie bewerken</string>
+    <string name="forums_comment_delete">Reactie verwijderen</string>
+    <string name="forums_comment_delete_title">Reactie verwijderen</string>
+    <string name="forums_comment_reply">Antwoorden</string>
+    <string name="forums_settings_rename">Hernoemen</string>
+    <string name="forums_settings_save">Opslaan</string>
+    <string name="forums_settings_delete">Forum verwijderen</string>
+    <string name="forums_settings_delete_title">Forum verwijderen</string>
+
+    <string name="notification_channel_forums">Forums-meldingen</string>
+</resources>

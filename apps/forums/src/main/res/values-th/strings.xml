@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">ชื่อที่แสดง</string>
+    <string name="forums_auth_verification_failed">การยืนยันไม่สำเร็จ</string>
+    <string name="forums_list_title">ฟอรัม</string>
+    <string name="forums_list_close_search">ปิดการค้นหา</string>
+    <string name="forums_list_search">ค้นหา</string>
+    <string name="forums_list_find">ค้นหาฟอรัม</string>
+    <string name="forums_list_logout">ออกจากระบบ</string>
+    <string name="forums_list_create">สร้างฟอรัม</string>
+    <string name="forums_list_unsubscribe">ยกเลิกการติดตาม</string>
+    <string name="forums_list_unsubscribe_title">ยกเลิกการติดตาม</string>
+    <string name="forums_create_title">สร้างฟอรัม</string>
+    <string name="forums_create_name">ชื่อ</string>
+    <string name="forums_create_privacy">ความเป็นส่วนตัว</string>
+    <string name="forums_create_private">ส่วนตัว</string>
+    <string name="forums_create_public">สาธารณะ</string>
+    <string name="forums_create_action">สร้าง</string>
+    <string name="forums_find_title">ค้นหาฟอรัม</string>
+    <string name="forums_find_recommended">แนะนำ</string>
+    <string name="forums_find_subscribe">ติดตาม</string>
+    <string name="forums_find_subscribed">ติดตามแล้ว</string>
+    <string name="forums_find_no_results">ไม่พบฟอรัม</string>
+    <string name="forums_loading">กำลังโหลด…</string>
+    <string name="forums_no_posts">ยังไม่มีโพสต์</string>
+    <string name="forums_new_post">โพสต์ใหม่</string>
+    <string name="forums_settings">การตั้งค่า</string>
+    <string name="forums_load_more">โหลดเพิ่ม</string>
+    <string name="forums_sort_label">เรียงลำดับ</string>
+    <string name="forums_sort_new">ใหม่</string>
+    <string name="forums_sort_hot">ยอดนิยม</string>
+    <string name="forums_sort_top">บนสุด</string>
+    <string name="forums_sort_interests">ความสนใจ</string>
+    <string name="forums_post_title_field">ชื่อ</string>
+    <string name="forums_post_attach">แนบไฟล์</string>
+    <string name="forums_post_create_action">โพสต์</string>
+    <string name="forums_post_edit">แก้ไขโพสต์</string>
+    <string name="forums_post_save">บันทึก</string>
+    <string name="forums_post_delete">ลบโพสต์</string>
+    <string name="forums_post_delete_title">ลบโพสต์</string>
+    <string name="forums_post_locked">ล็อกแล้ว</string>
+    <string name="forums_post_pinned">ปักหมุดแล้ว</string>
+    <string name="forums_post_removed">ลบแล้ว</string>
+    <string name="forums_post_pending">รอดำเนินการ</string>
+    <string name="forums_post_default_author">ผู้ใช้</string>
+    <string name="forums_comments">ความคิดเห็น</string>
+    <string name="forums_no_comments">ยังไม่มีความคิดเห็น</string>
+    <string name="forums_comment_save">บันทึก</string>
+    <string name="forums_comment_edit">แก้ไขความคิดเห็น</string>
+    <string name="forums_comment_delete">ลบความคิดเห็น</string>
+    <string name="forums_comment_delete_title">ลบความคิดเห็น</string>
+    <string name="forums_comment_reply">ตอบกลับ</string>
+    <string name="forums_settings_rename">เปลี่ยนชื่อ</string>
+    <string name="forums_settings_save">บันทึก</string>
+    <string name="forums_settings_delete">ลบฟอรัม</string>
+    <string name="forums_settings_delete_title">ลบฟอรัม</string>
+
+    <string name="notification_channel_forums">การแจ้งเตือน Forums</string>
+</resources>

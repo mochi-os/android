@@ -20,6 +20,7 @@ import org.mochios.android.ui.AppBootstrapHost
 import org.mochios.android.ui.theme.MochiTheme
 import org.mochios.chat.navigation.chatNavGraph
 import org.mochios.feeds.navigation.feedsNavGraph
+import org.mochios.forums.navigation.forumsNavGraph
 import org.mochios.mochi.ui.launchpad.LaunchPadScreen
 import javax.inject.Inject
 
@@ -54,6 +55,7 @@ class MainActivity : ComponentActivity() {
                             }
                             feedsNavGraph(navController, onLogout = onLogout)
                             chatNavGraph(navController, onLogout = onLogout)
+                            forumsNavGraph(navController, onLogout = onLogout)
                         }
                     }
                 }

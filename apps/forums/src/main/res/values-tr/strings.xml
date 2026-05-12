@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Görünen ad</string>
+    <string name="forums_auth_verification_failed">Doğrulama başarısız</string>
+    <string name="forums_list_title">Forumlar</string>
+    <string name="forums_list_close_search">Aramayı kapat</string>
+    <string name="forums_list_search">Ara</string>
+    <string name="forums_list_find">Forum bul</string>
+    <string name="forums_list_logout">Oturumu kapat</string>
+    <string name="forums_list_create">Forum oluştur</string>
+    <string name="forums_list_unsubscribe">Aboneliği iptal et</string>
+    <string name="forums_list_unsubscribe_title">Aboneliği iptal et</string>
+    <string name="forums_create_title">Forum oluştur</string>
+    <string name="forums_create_name">Ad</string>
+    <string name="forums_create_privacy">Gizlilik</string>
+    <string name="forums_create_private">Özel</string>
+    <string name="forums_create_public">Herkese açık</string>
+    <string name="forums_create_action">Oluştur</string>
+    <string name="forums_find_title">Forum bul</string>
+    <string name="forums_find_recommended">Önerilen</string>
+    <string name="forums_find_subscribe">Abone ol</string>
+    <string name="forums_find_subscribed">Abone olundu</string>
+    <string name="forums_find_no_results">Forum bulunamadı</string>
+    <string name="forums_loading">Yükleniyor…</string>
+    <string name="forums_no_posts">Henüz gönderi yok</string>
+    <string name="forums_new_post">Yeni gönderi</string>
+    <string name="forums_settings">Ayarlar</string>
+    <string name="forums_load_more">Daha fazla yükle</string>
+    <string name="forums_sort_label">Sırala</string>
+    <string name="forums_sort_new">Yeni</string>
+    <string name="forums_sort_hot">Popüler</string>
+    <string name="forums_sort_top">Üst</string>
+    <string name="forums_sort_interests">İlgi alanları</string>
+    <string name="forums_post_title_field">Başlık</string>
+    <string name="forums_post_attach">Dosya ekle</string>
+    <string name="forums_post_create_action">Gönderi</string>
+    <string name="forums_post_edit">Gönderiyi düzenle</string>
+    <string name="forums_post_save">Kaydet</string>
+    <string name="forums_post_delete">Gönderiyi sil</string>
+    <string name="forums_post_delete_title">Gönderiyi sil</string>
+    <string name="forums_post_locked">Kilitli</string>
+    <string name="forums_post_pinned">Sabitlendi</string>
+    <string name="forums_post_removed">Kaldırıldı</string>
+    <string name="forums_post_pending">Beklemede</string>
+    <string name="forums_post_default_author">Kullanıcı</string>
+    <string name="forums_comments">Yorumlar</string>
+    <string name="forums_no_comments">Henüz yorum yok</string>
+    <string name="forums_comment_save">Kaydet</string>
+    <string name="forums_comment_edit">Yorumu düzenle</string>
+    <string name="forums_comment_delete">Yorumu sil</string>
+    <string name="forums_comment_delete_title">Yorumu sil</string>
+    <string name="forums_comment_reply">Yanıtla</string>
+    <string name="forums_settings_rename">Yeniden adlandır</string>
+    <string name="forums_settings_save">Kaydet</string>
+    <string name="forums_settings_delete">Forumu sil</string>
+    <string name="forums_settings_delete_title">Forumu sil</string>
+
+    <string name="notification_channel_forums">Forums bildirimleri</string>
+</resources>

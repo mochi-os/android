@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Nome de exibição</string>
+    <string name="forums_auth_verification_failed">Falha na verificação</string>
+    <string name="forums_list_title">Fóruns</string>
+    <string name="forums_list_close_search">Fechar pesquisa</string>
+    <string name="forums_list_search">Pesquisar</string>
+    <string name="forums_list_find">Encontrar fóruns</string>
+    <string name="forums_list_logout">Sair</string>
+    <string name="forums_list_create">Criar fórum</string>
+    <string name="forums_list_unsubscribe">Cancelar inscrição</string>
+    <string name="forums_list_unsubscribe_title">Cancelar inscrição</string>
+    <string name="forums_create_title">Criar fórum</string>
+    <string name="forums_create_name">Nome</string>
+    <string name="forums_create_privacy">Privacidade</string>
+    <string name="forums_create_private">Privado</string>
+    <string name="forums_create_public">Público</string>
+    <string name="forums_create_action">Criar</string>
+    <string name="forums_find_title">Encontrar fóruns</string>
+    <string name="forums_find_recommended">Recomendado</string>
+    <string name="forums_find_subscribe">Inscrever-se</string>
+    <string name="forums_find_subscribed">Inscrito</string>
+    <string name="forums_find_no_results">Nenhum fórum encontrado</string>
+    <string name="forums_loading">Carregando…</string>
+    <string name="forums_no_posts">Ainda não há postagens</string>
+    <string name="forums_new_post">Nova postagem</string>
+    <string name="forums_settings">Configurações</string>
+    <string name="forums_load_more">Carregar mais</string>
+    <string name="forums_sort_label">Ordenar</string>
+    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_hot">Em alta</string>
+    <string name="forums_sort_top">Topo</string>
+    <string name="forums_sort_interests">Interesses</string>
+    <string name="forums_post_title_field">Título</string>
+    <string name="forums_post_attach">Anexar arquivos</string>
+    <string name="forums_post_create_action">Postagem</string>
+    <string name="forums_post_edit">Editar publicação</string>
+    <string name="forums_post_save">Salvar</string>
+    <string name="forums_post_delete">Excluir publicação</string>
+    <string name="forums_post_delete_title">Excluir publicação</string>
+    <string name="forums_post_locked">Bloqueado</string>
+    <string name="forums_post_pinned">Fixado</string>
+    <string name="forums_post_removed">Removido</string>
+    <string name="forums_post_pending">Pendente</string>
+    <string name="forums_post_default_author">Usuário</string>
+    <string name="forums_comments">Comentários</string>
+    <string name="forums_no_comments">Ainda não há comentários</string>
+    <string name="forums_comment_save">Salvar</string>
+    <string name="forums_comment_edit">Editar comentário</string>
+    <string name="forums_comment_delete">Excluir comentário</string>
+    <string name="forums_comment_delete_title">Excluir comentário</string>
+    <string name="forums_comment_reply">Responder</string>
+    <string name="forums_settings_rename">Renomear</string>
+    <string name="forums_settings_save">Salvar</string>
+    <string name="forums_settings_delete">Excluir fórum</string>
+    <string name="forums_settings_delete_title">Excluir fórum</string>
+
+    <string name="notification_channel_forums">Notificações Forums</string>
+</resources>

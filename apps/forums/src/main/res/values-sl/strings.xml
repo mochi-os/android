@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Prikazno ime</string>
+    <string name="forums_auth_verification_failed">Preverjanje ni uspelo</string>
+    <string name="forums_list_title">Forumi</string>
+    <string name="forums_list_close_search">Zapri iskanje</string>
+    <string name="forums_list_search">Iskanje</string>
+    <string name="forums_list_find">Najdi forume</string>
+    <string name="forums_list_logout">Odjava</string>
+    <string name="forums_list_create">Ustvari forum</string>
+    <string name="forums_list_unsubscribe">Odjavi se</string>
+    <string name="forums_list_unsubscribe_title">Odjavi se</string>
+    <string name="forums_create_title">Ustvari forum</string>
+    <string name="forums_create_name">Ime</string>
+    <string name="forums_create_privacy">Zasebnost</string>
+    <string name="forums_create_private">Zasebno</string>
+    <string name="forums_create_public">Javno</string>
+    <string name="forums_create_action">Ustvari</string>
+    <string name="forums_find_title">Najdi forume</string>
+    <string name="forums_find_recommended">Priporočeno</string>
+    <string name="forums_find_subscribe">Naroči se</string>
+    <string name="forums_find_subscribed">Naročeno</string>
+    <string name="forums_find_no_results">Forumov ni mogoče najti</string>
+    <string name="forums_loading">Nalaganje…</string>
+    <string name="forums_no_posts">Še ni objav</string>
+    <string name="forums_new_post">Nova objava</string>
+    <string name="forums_settings">Nastavitve</string>
+    <string name="forums_load_more">Naloži več</string>
+    <string name="forums_sort_label">Razvrsti</string>
+    <string name="forums_sort_new">Novo</string>
+    <string name="forums_sort_hot">Vroče</string>
+    <string name="forums_sort_top">Vrh</string>
+    <string name="forums_sort_interests">Zanimanja</string>
+    <string name="forums_post_title_field">Naslov</string>
+    <string name="forums_post_attach">Priloži datoteke</string>
+    <string name="forums_post_create_action">Objavi</string>
+    <string name="forums_post_edit">Uredi objavo</string>
+    <string name="forums_post_save">Shrani</string>
+    <string name="forums_post_delete">Izbriši objavo</string>
+    <string name="forums_post_delete_title">Izbriši objavo</string>
+    <string name="forums_post_locked">Zaklenjeno</string>
+    <string name="forums_post_pinned">Pripeto</string>
+    <string name="forums_post_removed">Odstranjeno</string>
+    <string name="forums_post_pending">V obdelavi</string>
+    <string name="forums_post_default_author">Uporabnik</string>
+    <string name="forums_comments">Komentarji</string>
+    <string name="forums_no_comments">Še ni komentarjev</string>
+    <string name="forums_comment_save">Shrani</string>
+    <string name="forums_comment_edit">Uredi komentar</string>
+    <string name="forums_comment_delete">Izbriši komentar</string>
+    <string name="forums_comment_delete_title">Izbriši komentar</string>
+    <string name="forums_comment_reply">Odgovori</string>
+    <string name="forums_settings_rename">Preimenuj</string>
+    <string name="forums_settings_save">Shrani</string>
+    <string name="forums_settings_delete">Izbriši forum</string>
+    <string name="forums_settings_delete_title">Izbriši forum</string>
+
+    <string name="notification_channel_forums">Obvestila Forums</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Näyttönimi</string>
+    <string name="forums_auth_verification_failed">Vahvistus epäonnistui</string>
+    <string name="forums_list_title">Foorumit</string>
+    <string name="forums_list_close_search">Sulje haku</string>
+    <string name="forums_list_search">Haku</string>
+    <string name="forums_list_find">Etsi foorumeita</string>
+    <string name="forums_list_logout">Kirjaudu ulos</string>
+    <string name="forums_list_create">Luo foorumi</string>
+    <string name="forums_list_unsubscribe">Peru tilaus</string>
+    <string name="forums_list_unsubscribe_title">Peru tilaus</string>
+    <string name="forums_create_title">Luo foorumi</string>
+    <string name="forums_create_name">Nimi</string>
+    <string name="forums_create_privacy">Yksityisyys</string>
+    <string name="forums_create_private">Yksityinen</string>
+    <string name="forums_create_public">Julkinen</string>
+    <string name="forums_create_action">Luo</string>
+    <string name="forums_find_title">Etsi foorumeita</string>
+    <string name="forums_find_recommended">Suositeltu</string>
+    <string name="forums_find_subscribe">Tilaa</string>
+    <string name="forums_find_subscribed">Tilattu</string>
+    <string name="forums_find_no_results">Foorumeita ei löytynyt</string>
+    <string name="forums_loading">Ladataan…</string>
+    <string name="forums_no_posts">Ei vielä julkaisuja</string>
+    <string name="forums_new_post">Uusi julkaisu</string>
+    <string name="forums_settings">Asetukset</string>
+    <string name="forums_load_more">Lataa lisää</string>
+    <string name="forums_sort_label">Lajittele</string>
+    <string name="forums_sort_new">Uusi</string>
+    <string name="forums_sort_hot">Kuuma</string>
+    <string name="forums_sort_top">Ylin</string>
+    <string name="forums_sort_interests">Kiinnostuksen kohteet</string>
+    <string name="forums_post_title_field">Otsikko</string>
+    <string name="forums_post_attach">Liitä tiedostoja</string>
+    <string name="forums_post_create_action">Julkaisu</string>
+    <string name="forums_post_edit">Muokkaa julkaisua</string>
+    <string name="forums_post_save">Tallenna</string>
+    <string name="forums_post_delete">Poista julkaisu</string>
+    <string name="forums_post_delete_title">Poista julkaisu</string>
+    <string name="forums_post_locked">Lukittu</string>
+    <string name="forums_post_pinned">Kiinnitetty</string>
+    <string name="forums_post_removed">Poistettu</string>
+    <string name="forums_post_pending">Odottaa</string>
+    <string name="forums_post_default_author">Käyttäjä</string>
+    <string name="forums_comments">Kommentit</string>
+    <string name="forums_no_comments">Ei vielä kommentteja</string>
+    <string name="forums_comment_save">Tallenna</string>
+    <string name="forums_comment_edit">Muokkaa kommenttia</string>
+    <string name="forums_comment_delete">Poista kommentti</string>
+    <string name="forums_comment_delete_title">Poista kommentti</string>
+    <string name="forums_comment_reply">Vastaa</string>
+    <string name="forums_settings_rename">Nimeä uudelleen</string>
+    <string name="forums_settings_save">Tallenna</string>
+    <string name="forums_settings_delete">Poista foorumi</string>
+    <string name="forums_settings_delete_title">Poista foorumi</string>
+
+    <string name="notification_channel_forums">Forums-ilmoitukset</string>
+</resources>

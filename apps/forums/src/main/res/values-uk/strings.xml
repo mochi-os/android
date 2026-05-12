@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Відображуване ім\'я</string>
+    <string name="forums_auth_verification_failed">Перевірка не вдалася</string>
+    <string name="forums_list_title">Форуми</string>
+    <string name="forums_list_close_search">Закрити пошук</string>
+    <string name="forums_list_search">Пошук</string>
+    <string name="forums_list_find">Знайти форуми</string>
+    <string name="forums_list_logout">Вийти</string>
+    <string name="forums_list_create">Створити форум</string>
+    <string name="forums_list_unsubscribe">Відписатися</string>
+    <string name="forums_list_unsubscribe_title">Відписатися</string>
+    <string name="forums_create_title">Створити форум</string>
+    <string name="forums_create_name">Ім\'я</string>
+    <string name="forums_create_privacy">Приватність</string>
+    <string name="forums_create_private">Приватний</string>
+    <string name="forums_create_public">Публічний</string>
+    <string name="forums_create_action">Створити</string>
+    <string name="forums_find_title">Знайти форуми</string>
+    <string name="forums_find_recommended">Рекомендоване</string>
+    <string name="forums_find_subscribe">Підписатися</string>
+    <string name="forums_find_subscribed">Підписано</string>
+    <string name="forums_find_no_results">Форумів не знайдено</string>
+    <string name="forums_loading">Завантаження…</string>
+    <string name="forums_no_posts">Дописів ще немає</string>
+    <string name="forums_new_post">Новий допис</string>
+    <string name="forums_settings">Налаштування</string>
+    <string name="forums_load_more">Завантажити більше</string>
+    <string name="forums_sort_label">Сортувати</string>
+    <string name="forums_sort_new">Нове</string>
+    <string name="forums_sort_hot">Популярне</string>
+    <string name="forums_sort_top">Верх</string>
+    <string name="forums_sort_interests">Інтереси</string>
+    <string name="forums_post_title_field">Заголовок</string>
+    <string name="forums_post_attach">Додати файли</string>
+    <string name="forums_post_create_action">Допис</string>
+    <string name="forums_post_edit">Редагувати допис</string>
+    <string name="forums_post_save">Зберегти</string>
+    <string name="forums_post_delete">Видалити допис</string>
+    <string name="forums_post_delete_title">Видалити допис</string>
+    <string name="forums_post_locked">Заблоковано</string>
+    <string name="forums_post_pinned">Закріплено</string>
+    <string name="forums_post_removed">Видалено</string>
+    <string name="forums_post_pending">В очікуванні</string>
+    <string name="forums_post_default_author">Користувач</string>
+    <string name="forums_comments">Коментарі</string>
+    <string name="forums_no_comments">Коментарів ще немає</string>
+    <string name="forums_comment_save">Зберегти</string>
+    <string name="forums_comment_edit">Редагувати коментар</string>
+    <string name="forums_comment_delete">Видалити коментар</string>
+    <string name="forums_comment_delete_title">Видалити коментар</string>
+    <string name="forums_comment_reply">Відповісти</string>
+    <string name="forums_settings_rename">Перейменувати</string>
+    <string name="forums_settings_save">Зберегти</string>
+    <string name="forums_settings_delete">Видалити форум</string>
+    <string name="forums_settings_delete_title">Видалити форум</string>
+
+    <string name="notification_channel_forums">Сповіщення Forums</string>
+</resources>

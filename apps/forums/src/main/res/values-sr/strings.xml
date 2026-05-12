@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Име за приказ</string>
+    <string name="forums_auth_verification_failed">Верификација није успела</string>
+    <string name="forums_list_title">Форуми</string>
+    <string name="forums_list_close_search">Затвори претрагу</string>
+    <string name="forums_list_search">Претражи</string>
+    <string name="forums_list_find">Пронађи форуме</string>
+    <string name="forums_list_logout">Одјави се</string>
+    <string name="forums_list_create">Креирај форум</string>
+    <string name="forums_list_unsubscribe">Откажи претплату</string>
+    <string name="forums_list_unsubscribe_title">Откажи претплату</string>
+    <string name="forums_create_title">Креирај форум</string>
+    <string name="forums_create_name">Име</string>
+    <string name="forums_create_privacy">Приватност</string>
+    <string name="forums_create_private">Приватно</string>
+    <string name="forums_create_public">Јавно</string>
+    <string name="forums_create_action">Креирај</string>
+    <string name="forums_find_title">Пронађи форуме</string>
+    <string name="forums_find_recommended">Препоручено</string>
+    <string name="forums_find_subscribe">Претплати се</string>
+    <string name="forums_find_subscribed">Претплаћен</string>
+    <string name="forums_find_no_results">Нема пронађених форума</string>
+    <string name="forums_loading">Учитавање…</string>
+    <string name="forums_no_posts">Још нема постова</string>
+    <string name="forums_new_post">Нови пост</string>
+    <string name="forums_settings">Поставке</string>
+    <string name="forums_load_more">Учитај још</string>
+    <string name="forums_sort_label">Сортирај</string>
+    <string name="forums_sort_new">Ново</string>
+    <string name="forums_sort_hot">Популарно</string>
+    <string name="forums_sort_top">Врх</string>
+    <string name="forums_sort_interests">Интересовања</string>
+    <string name="forums_post_title_field">Наслов</string>
+    <string name="forums_post_attach">Приложи датотеке</string>
+    <string name="forums_post_create_action">Постави</string>
+    <string name="forums_post_edit">Уреди објаву</string>
+    <string name="forums_post_save">Сачувај</string>
+    <string name="forums_post_delete">Обриши објаву</string>
+    <string name="forums_post_delete_title">Обриши објаву</string>
+    <string name="forums_post_locked">Закључано</string>
+    <string name="forums_post_pinned">Закачено</string>
+    <string name="forums_post_removed">Уклоњено</string>
+    <string name="forums_post_pending">На чекању</string>
+    <string name="forums_post_default_author">Корисник</string>
+    <string name="forums_comments">Коментари</string>
+    <string name="forums_no_comments">Још нема коментара</string>
+    <string name="forums_comment_save">Сачувај</string>
+    <string name="forums_comment_edit">Уреди коментар</string>
+    <string name="forums_comment_delete">Обриши коментар</string>
+    <string name="forums_comment_delete_title">Обриши коментар</string>
+    <string name="forums_comment_reply">Одговори</string>
+    <string name="forums_settings_rename">Преименуј</string>
+    <string name="forums_settings_save">Сачувај</string>
+    <string name="forums_settings_delete">Обриши форум</string>
+    <string name="forums_settings_delete_title">Обриши форум</string>
+
+    <string name="notification_channel_forums">Обавештења Forums</string>
+</resources>

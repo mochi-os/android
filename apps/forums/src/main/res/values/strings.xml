@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_channel_forums">Forums notifications</string>
+
+    <!-- Auth -->
+    <string name="forums_auth_brand">Mochi Forums</string>
+    <string name="forums_auth_display_name">Display name</string>
+    <string name="forums_auth_login_failed">Login failed</string>
+    <string name="forums_auth_verification_failed">Verification failed</string>
+    <string name="forums_auth_create_identity_failed">Failed to create identity</string>
+    <string name="forums_auth_mfa_unsupported">MFA not yet supported in mobile app</string>
+    <string name="forums_auth_enter_code_sent">Enter the code sent to %1$s</string>
+    <string name="forums_auth_create_identity">Create your identity</string>
+
+    <!-- Forum list -->
+    <string name="forums_list_title">Forums</string>
+    <string name="forums_list_search_placeholder">Search forums</string>
+    <string name="forums_list_close_search">Close search</string>
+    <string name="forums_list_search">Search</string>
+    <string name="forums_list_find">Find forums</string>
+    <string name="forums_list_more">More</string>
+    <string name="forums_list_logout">Log out</string>
+    <string name="forums_list_create">Create forum</string>
+    <string name="forums_list_no_matching">No matching forums</string>
+    <string name="forums_list_empty">No forums yet</string>
+    <string name="forums_list_add_to_home">Add to home screen</string>
+    <string name="forums_list_unsubscribe">Unsubscribe</string>
+    <string name="forums_list_unsubscribe_title">Unsubscribe</string>
+    <string name="forums_list_unsubscribe_message">Are you sure you want to unsubscribe from this forum?</string>
+
+    <!-- Create forum -->
+    <string name="forums_create_title">Create forum</string>
+    <string name="forums_create_name">Name</string>
+    <string name="forums_create_privacy">Privacy</string>
+    <string name="forums_create_private">Private</string>
+    <string name="forums_create_public">Public</string>
+    <string name="forums_create_action">Create</string>
+
+    <!-- Find forums -->
+    <string name="forums_find_title">Find forums</string>
+    <string name="forums_find_search_placeholder">Search forums or paste URL</string>
+    <string name="forums_find_recommended">Recommended</string>
+    <string name="forums_find_search_hint">Search for forums to subscribe to</string>
+    <string name="forums_find_subscribe">Subscribe</string>
+    <string name="forums_find_subscribed">Subscribed</string>
+    <string name="forums_find_no_results">No forums found</string>
+
+    <!-- Forum screen -->
+    <string name="forums_loading">Loading…</string>
+    <string name="forums_no_posts">No posts yet</string>
+    <string name="forums_new_post">New post</string>
+    <string name="forums_settings">Settings</string>
+    <string name="forums_load_more">Load more</string>
+
+    <!-- Sort -->
+    <string name="forums_sort_label">Sort</string>
+    <string name="forums_sort_new">New</string>
+    <string name="forums_sort_hot">Hot</string>
+    <string name="forums_sort_top">Top</string>
+    <string name="forums_sort_interests">Interests</string>
+
+    <!-- Post -->
+    <string name="forums_post_title_field">Title</string>
+    <string name="forums_post_body_field">Body</string>
+    <string name="forums_post_attach">Attach files</string>
+    <string name="forums_post_create_action">Post</string>
+    <string name="forums_post_edit">Edit post</string>
+    <string name="forums_post_save">Save</string>
+    <string name="forums_post_delete">Delete post</string>
+    <string name="forums_post_delete_title">Delete post</string>
+    <string name="forums_post_delete_message">Are you sure you want to delete this post? This cannot be undone.</string>
+    <string name="forums_post_locked">Locked</string>
+    <string name="forums_post_pinned">Pinned</string>
+    <string name="forums_post_removed">Removed</string>
+    <string name="forums_post_pending">Pending</string>
+    <string name="forums_post_vote_up">Upvote</string>
+    <string name="forums_post_vote_down">Downvote</string>
+
+    <!-- Post detail -->
+    <string name="forums_post_default_author">User</string>
+    <string name="forums_comments">Comments</string>
+    <string name="forums_no_comments">No comments yet</string>
+    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_comment_send">Send</string>
+    <string name="forums_comment_save">Save</string>
+    <string name="forums_comment_edit">Edit comment</string>
+    <string name="forums_comment_delete">Delete comment</string>
+    <string name="forums_comment_delete_title">Delete comment</string>
+    <string name="forums_comment_delete_message">Are you sure you want to delete this comment?</string>
+    <string name="forums_comment_replying_to">Replying to %1$s</string>
+    <string name="forums_comment_clear_reply">Clear reply</string>
+    <string name="forums_comment_reply">Reply</string>
+
+    <!-- Forum settings -->
+    <string name="forums_settings_title">Forum settings</string>
+    <string name="forums_settings_rename">Rename</string>
+    <string name="forums_settings_rename_label">Forum name</string>
+    <string name="forums_settings_save">Save</string>
+    <string name="forums_settings_danger_zone">Danger zone</string>
+    <string name="forums_settings_delete">Delete forum</string>
+    <string name="forums_settings_delete_title">Delete forum</string>
+    <string name="forums_settings_delete_message">This will permanently delete the forum and all its posts. This cannot be undone.</string>
+</resources>

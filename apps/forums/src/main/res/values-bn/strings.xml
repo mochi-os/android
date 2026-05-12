@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">প্রদর্শনের নাম</string>
+    <string name="forums_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
+    <string name="forums_list_title">ফোরামসমূহ</string>
+    <string name="forums_list_close_search">অনুসন্ধান বন্ধ করুন</string>
+    <string name="forums_list_search">অনুসন্ধান</string>
+    <string name="forums_list_find">ফোরাম খুঁজুন</string>
+    <string name="forums_list_logout">লগ আউট করুন</string>
+    <string name="forums_list_create">ফোরাম তৈরি করুন</string>
+    <string name="forums_list_unsubscribe">আনসাবস্ক্রাইব করুন</string>
+    <string name="forums_list_unsubscribe_title">আনসাবস্ক্রাইব করুন</string>
+    <string name="forums_create_title">ফোরাম তৈরি করুন</string>
+    <string name="forums_create_name">নাম</string>
+    <string name="forums_create_privacy">গোপনীয়তা</string>
+    <string name="forums_create_private">প্রাইভেট</string>
+    <string name="forums_create_public">সর্বজনীন</string>
+    <string name="forums_create_action">তৈরি করুন</string>
+    <string name="forums_find_title">ফোরাম খুঁজুন</string>
+    <string name="forums_find_recommended">সুপারিশকৃত</string>
+    <string name="forums_find_subscribe">সাবস্ক্রাইব করুন</string>
+    <string name="forums_find_subscribed">সাবস্ক্রাইব করা হয়েছে</string>
+    <string name="forums_find_no_results">কোনো ফোরাম পাওয়া যায়নি</string>
+    <string name="forums_loading">লোড হচ্ছে…</string>
+    <string name="forums_no_posts">এখনও কোনো পোস্ট নেই</string>
+    <string name="forums_new_post">নতুন পোস্ট</string>
+    <string name="forums_settings">সেটিংস</string>
+    <string name="forums_load_more">আরও লোড করুন</string>
+    <string name="forums_sort_label">সাজান</string>
+    <string name="forums_sort_new">নতুন</string>
+    <string name="forums_sort_hot">জনপ্রিয়</string>
+    <string name="forums_sort_top">উপরে</string>
+    <string name="forums_sort_interests">আগ্রহসমূহ</string>
+    <string name="forums_post_title_field">শিরোনাম</string>
+    <string name="forums_post_attach">ফাইল সংযুক্ত করুন</string>
+    <string name="forums_post_create_action">পোস্ট</string>
+    <string name="forums_post_edit">পোস্ট সম্পাদনা করুন</string>
+    <string name="forums_post_save">সংরক্ষণ করুন</string>
+    <string name="forums_post_delete">পোস্ট মুছুন</string>
+    <string name="forums_post_delete_title">পোস্ট মুছুন</string>
+    <string name="forums_post_locked">লক করা</string>
+    <string name="forums_post_pinned">পিন করা হয়েছে</string>
+    <string name="forums_post_removed">সরানো হয়েছে</string>
+    <string name="forums_post_pending">মুলতুবি</string>
+    <string name="forums_post_default_author">ব্যবহারকারী</string>
+    <string name="forums_comments">মন্তব্য</string>
+    <string name="forums_no_comments">এখনও কোনো মন্তব্য নেই</string>
+    <string name="forums_comment_save">সংরক্ষণ করুন</string>
+    <string name="forums_comment_edit">মন্তব্য সম্পাদনা করুন</string>
+    <string name="forums_comment_delete">মন্তব্য মুছুন</string>
+    <string name="forums_comment_delete_title">মন্তব্য মুছুন</string>
+    <string name="forums_comment_reply">উত্তর দিন</string>
+    <string name="forums_settings_rename">পুনঃনামকরণ করুন</string>
+    <string name="forums_settings_save">সংরক্ষণ করুন</string>
+    <string name="forums_settings_delete">ফোরাম মুছুন</string>
+    <string name="forums_settings_delete_title">ফোরাম মুছুন</string>
+
+    <string name="notification_channel_forums">Forums বিজ্ঞপ্তি</string>
+</resources>

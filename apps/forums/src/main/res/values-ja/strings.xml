@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">表示名</string>
+    <string name="forums_auth_verification_failed">確認に失敗しました</string>
+    <string name="forums_list_title">フォーラム</string>
+    <string name="forums_list_close_search">検索を閉じる</string>
+    <string name="forums_list_search">検索</string>
+    <string name="forums_list_find">フォーラムを検索</string>
+    <string name="forums_list_logout">ログアウト</string>
+    <string name="forums_list_create">フォーラムを作成</string>
+    <string name="forums_list_unsubscribe">購読解除</string>
+    <string name="forums_list_unsubscribe_title">購読解除</string>
+    <string name="forums_create_title">フォーラムを作成</string>
+    <string name="forums_create_name">名前</string>
+    <string name="forums_create_privacy">プライバシー</string>
+    <string name="forums_create_private">非公開</string>
+    <string name="forums_create_public">公開</string>
+    <string name="forums_create_action">作成</string>
+    <string name="forums_find_title">フォーラムを検索</string>
+    <string name="forums_find_recommended">おすすめ</string>
+    <string name="forums_find_subscribe">購読する</string>
+    <string name="forums_find_subscribed">購読中</string>
+    <string name="forums_find_no_results">フォーラムが見つかりません</string>
+    <string name="forums_loading">読み込み中…</string>
+    <string name="forums_no_posts">まだ投稿はありません</string>
+    <string name="forums_new_post">新しい投稿</string>
+    <string name="forums_settings">設定</string>
+    <string name="forums_load_more">もっと読み込む</string>
+    <string name="forums_sort_label">並べ替え</string>
+    <string name="forums_sort_new">新規</string>
+    <string name="forums_sort_hot">人気</string>
+    <string name="forums_sort_top">トップ</string>
+    <string name="forums_sort_interests">興味</string>
+    <string name="forums_post_title_field">タイトル</string>
+    <string name="forums_post_attach">ファイルを添付</string>
+    <string name="forums_post_create_action">投稿</string>
+    <string name="forums_post_edit">投稿を編集</string>
+    <string name="forums_post_save">保存</string>
+    <string name="forums_post_delete">投稿を削除</string>
+    <string name="forums_post_delete_title">投稿を削除</string>
+    <string name="forums_post_locked">ロック済み</string>
+    <string name="forums_post_pinned">ピン留め済み</string>
+    <string name="forums_post_removed">削除済み</string>
+    <string name="forums_post_pending">保留中</string>
+    <string name="forums_post_default_author">ユーザー</string>
+    <string name="forums_comments">コメント</string>
+    <string name="forums_no_comments">まだコメントがありません</string>
+    <string name="forums_comment_save">保存</string>
+    <string name="forums_comment_edit">コメントを編集</string>
+    <string name="forums_comment_delete">コメントを削除</string>
+    <string name="forums_comment_delete_title">コメントを削除</string>
+    <string name="forums_comment_reply">返信</string>
+    <string name="forums_settings_rename">名前を変更</string>
+    <string name="forums_settings_save">保存</string>
+    <string name="forums_settings_delete">フォーラムを削除</string>
+    <string name="forums_settings_delete_title">フォーラムを削除</string>
+
+    <string name="notification_channel_forums">Forums の通知</string>
+</resources>

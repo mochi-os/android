@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">Kuvatav nimi</string>
+    <string name="forums_auth_verification_failed">Kontrollimine ebaõnnestus</string>
+    <string name="forums_list_title">Foorumid</string>
+    <string name="forums_list_close_search">Sulge otsing</string>
+    <string name="forums_list_search">Otsi</string>
+    <string name="forums_list_find">Otsi foorumeid</string>
+    <string name="forums_list_logout">Logi välja</string>
+    <string name="forums_list_create">Loo foorum</string>
+    <string name="forums_list_unsubscribe">Tühista tellimus</string>
+    <string name="forums_list_unsubscribe_title">Tühista tellimus</string>
+    <string name="forums_create_title">Loo foorum</string>
+    <string name="forums_create_name">Nimi</string>
+    <string name="forums_create_privacy">Privaatsus</string>
+    <string name="forums_create_private">Privaatne</string>
+    <string name="forums_create_public">Avalik</string>
+    <string name="forums_create_action">Loo</string>
+    <string name="forums_find_title">Otsi foorumeid</string>
+    <string name="forums_find_recommended">Soovitatud</string>
+    <string name="forums_find_subscribe">Telli</string>
+    <string name="forums_find_subscribed">Tellitud</string>
+    <string name="forums_find_no_results">Foorumeid ei leitud</string>
+    <string name="forums_loading">Laadimine…</string>
+    <string name="forums_no_posts">Postitusi veel pole</string>
+    <string name="forums_new_post">Uus postitus</string>
+    <string name="forums_settings">Seaded</string>
+    <string name="forums_load_more">Lae rohkem</string>
+    <string name="forums_sort_label">Sorteeri</string>
+    <string name="forums_sort_new">Uus</string>
+    <string name="forums_sort_hot">Kuum</string>
+    <string name="forums_sort_top">Üles</string>
+    <string name="forums_sort_interests">Huvid</string>
+    <string name="forums_post_title_field">Pealkiri</string>
+    <string name="forums_post_attach">Lisa failid</string>
+    <string name="forums_post_create_action">Postita</string>
+    <string name="forums_post_edit">Muuda postitust</string>
+    <string name="forums_post_save">Salvesta</string>
+    <string name="forums_post_delete">Kustuta postitus</string>
+    <string name="forums_post_delete_title">Kustuta postitus</string>
+    <string name="forums_post_locked">Lukus</string>
+    <string name="forums_post_pinned">Kinnitatud</string>
+    <string name="forums_post_removed">Eemaldatud</string>
+    <string name="forums_post_pending">Ootel</string>
+    <string name="forums_post_default_author">Kasutaja</string>
+    <string name="forums_comments">Kommentaarid</string>
+    <string name="forums_no_comments">Kommentaare veel pole</string>
+    <string name="forums_comment_save">Salvesta</string>
+    <string name="forums_comment_edit">Muuda kommentaari</string>
+    <string name="forums_comment_delete">Kustuta kommentaar</string>
+    <string name="forums_comment_delete_title">Kustuta kommentaar</string>
+    <string name="forums_comment_reply">Vasta</string>
+    <string name="forums_settings_rename">Nimeta ümber</string>
+    <string name="forums_settings_save">Salvesta</string>
+    <string name="forums_settings_delete">Kustuta foorum</string>
+    <string name="forums_settings_delete_title">Kustuta foorum</string>
+
+    <string name="notification_channel_forums">Forums teated</string>
+</resources>

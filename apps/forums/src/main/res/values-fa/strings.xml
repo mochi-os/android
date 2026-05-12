@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forums_auth_display_name">نام نمایشی</string>
+    <string name="forums_auth_verification_failed">تأیید ناموفق بود</string>
+    <string name="forums_list_title">انجمن‌ها</string>
+    <string name="forums_list_close_search">بستن جست‌وجو</string>
+    <string name="forums_list_search">جست‌وجو</string>
+    <string name="forums_list_find">یافتن انجمن‌ها</string>
+    <string name="forums_list_logout">خروج</string>
+    <string name="forums_list_create">ساخت انجمن</string>
+    <string name="forums_list_unsubscribe">لغو اشتراک</string>
+    <string name="forums_list_unsubscribe_title">لغو اشتراک</string>
+    <string name="forums_create_title">ساخت انجمن</string>
+    <string name="forums_create_name">نام</string>
+    <string name="forums_create_privacy">حریم خصوصی</string>
+    <string name="forums_create_private">خصوصی</string>
+    <string name="forums_create_public">عمومی</string>
+    <string name="forums_create_action">ساختن</string>
+    <string name="forums_find_title">یافتن انجمن‌ها</string>
+    <string name="forums_find_recommended">توصیه‌شده</string>
+    <string name="forums_find_subscribe">اشتراک</string>
+    <string name="forums_find_subscribed">مشترک شد</string>
+    <string name="forums_find_no_results">انجمنی یافت نشد</string>
+    <string name="forums_loading">در حال بارگذاری…</string>
+    <string name="forums_no_posts">هنوز پستی وجود ندارد</string>
+    <string name="forums_new_post">پست جدید</string>
+    <string name="forums_settings">تنظیمات</string>
+    <string name="forums_load_more">بارگذاری بیشتر</string>
+    <string name="forums_sort_label">مرتب‌سازی</string>
+    <string name="forums_sort_new">جدید</string>
+    <string name="forums_sort_hot">داغ</string>
+    <string name="forums_sort_top">بالا</string>
+    <string name="forums_sort_interests">علاقه‌مندی‌ها</string>
+    <string name="forums_post_title_field">عنوان</string>
+    <string name="forums_post_attach">پیوست فایل‌ها</string>
+    <string name="forums_post_create_action">ارسال</string>
+    <string name="forums_post_edit">ویرایش پست</string>
+    <string name="forums_post_save">ذخیره</string>
+    <string name="forums_post_delete">حذف پست</string>
+    <string name="forums_post_delete_title">حذف پست</string>
+    <string name="forums_post_locked">قفل شده</string>
+    <string name="forums_post_pinned">سنجاق‌شده</string>
+    <string name="forums_post_removed">حذف شد</string>
+    <string name="forums_post_pending">در انتظار</string>
+    <string name="forums_post_default_author">کاربر</string>
+    <string name="forums_comments">نظرها</string>
+    <string name="forums_no_comments">هنوز نظری وجود ندارد</string>
+    <string name="forums_comment_save">ذخیره</string>
+    <string name="forums_comment_edit">ویرایش دیدگاه</string>
+    <string name="forums_comment_delete">حذف نظر</string>
+    <string name="forums_comment_delete_title">حذف نظر</string>
+    <string name="forums_comment_reply">پاسخ</string>
+    <string name="forums_settings_rename">تغییر نام</string>
+    <string name="forums_settings_save">ذخیره</string>
+    <string name="forums_settings_delete">حذف انجمن</string>
+    <string name="forums_settings_delete_title">حذف انجمن</string>
+
+    <string name="notification_channel_forums">اعلان‌های Forums</string>
+</resources>
