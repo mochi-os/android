@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="projects_field_type_user">用戶</string>
+
+    <string name="notification_channel_projects">Projects 通知</string>
+</resources>

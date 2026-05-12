@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="projects_list_close_search">Cerrá la búsqueda</string>
+    <string name="projects_list_search">Buscá</string>
+    <string name="projects_list_logout">Cerrá sesión</string>
+    <string name="projects_list_create">Creá un proyecto</string>
+    <string name="projects_create_title">Creá un proyecto</string>
+    <string name="projects_find_subscribe">Suscribite</string>
+    <string name="projects_create_object">Creá un objeto</string>
+    <string name="projects_search">Buscá</string>
+    <string name="projects_create_object_title">Creá un objeto</string>
+    <string name="projects_settings_save">Guardá los cambios</string>
+    <string name="projects_settings_unsubscribe">Cancelá la suscripción</string>
+    <string name="projects_settings_delete_project">Eliminá el proyecto</string>
+    <string name="projects_settings_delete_confirm_title">Eliminá el proyecto</string>
+    <string name="projects_settings_unsubscribe_title">Cancelá la suscripción</string>
+    <string name="projects_settings_unsubscribe_message">¿Estás seguro de que querés cancelar la suscripción a este proyecto?</string>
+    <string name="projects_parent_search_placeholder">Buscá</string>
+    <string name="projects_links_add">Agregá un enlace</string>
+    <string name="projects_comment_save">Guardá</string>
+    <string name="projects_property_remove">Quitá</string>
+    <string name="projects_attachment_add">Agregá un adjunto</string>
+    <string name="projects_board_rename">Renombrá</string>
+    <string name="projects_board_rename_column">Renombrá la columna</string>
+    <string name="projects_design_import_choose_template">Elegí una plantilla</string>
+    <string name="projects_classes_add">Agregá una clase</string>
+    <string name="projects_classes_add_dialog_title">Agregá una clase</string>
+    <string name="projects_class_add_field">Agregá un campo</string>
+    <string name="projects_class_delete">Eliminá la clase</string>
+    <string name="projects_class_delete_title">Eliminá la clase</string>
+    <string name="projects_field_save">Guardá los cambios</string>
+    <string name="projects_field_add_option">Agregá una opción</string>
+    <string name="projects_field_delete">Eliminá el campo</string>
+    <string name="projects_field_delete_title">Eliminá el campo</string>
+    <string name="projects_field_add_field_dialog_title">Agregá un campo</string>
+    <string name="projects_option_add">Agregá una opción</string>
+    <string name="projects_option_edit">Editá la opción</string>
+    <string name="projects_views_add">Agregá una vista</string>
+    <string name="projects_views_add_dialog_title">Agregá una vista</string>
+    <string name="projects_views_edit_dialog_title">Editá la vista</string>
+    <string name="projects_views_delete_title">Eliminá la vista</string>
+
+    <string name="notification_channel_projects">Notificaciones de Projects</string>
+</resources>

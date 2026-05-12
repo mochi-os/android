@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="projects_sort_rank">Manual</string>
+    <string name="projects_settings_tab_access">Access</string>
+    <string name="projects_object_watch">Watch</string>
+    <string name="projects_object_tab_properties">Properties</string>
+    <string name="projects_object_tab_activity">Activity</string>
+    <string name="projects_links_section_blocks">Blocks</string>
+    <string name="projects_links_section_blocked_by">Blocked by</string>
+    <string name="projects_links_section_duplicates">Duplicates</string>
+    <string name="projects_links_type_blocks">Blocks</string>
+    <string name="projects_links_type_blocked_by">Blocked by</string>
+    <string name="projects_links_type_duplicates">Duplicates</string>
+    <string name="projects_option_edit">Edit option</string>
+
+</resources>

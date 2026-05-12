@@ -77,6 +77,7 @@ dependencies {
     implementation(project(":apps:feeds"))
     implementation(project(":apps:chat"))
     implementation(project(":apps:forums"))
+    implementation(project(":apps:projects"))
 
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)
