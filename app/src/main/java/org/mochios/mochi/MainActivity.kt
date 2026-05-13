@@ -69,6 +69,19 @@ class MainActivity : ComponentActivity() {
                         prefetchApps = SUPER_APP_MOCHI_APPS,
                     ) { onLogout ->
                         val navController = rememberNavController()
+                        // rememberNavController persists the back stack across
+                        // recomposition via rememberSaveable. The bootstrap
+                        // host re-mounts this entire scope after every
+                        // Ready→NeedsLogin→Ready cycle (e.g. logout + login),
+                        // so without this the user would land on whatever
+                        // screen was on top before logout — which may not
+                        // exist or be accessible to the new session, and
+                        // would surface as a NotFoundState. Pop to the cold-
+                        // start app's home destination on every ready re-entry.
+                        LaunchedEffect(Unit) {
+                            val start = navController.graph.startDestinationId
+                            navController.popBackStack(start, inclusive = false)
+                        }
                         val pendingLink by PendingDeepLink.link.collectAsState()
                         LaunchedEffect(pendingLink) {
                             val link = pendingLink ?: return@LaunchedEffect
