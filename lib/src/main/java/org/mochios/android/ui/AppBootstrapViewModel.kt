@@ -51,8 +51,15 @@ sealed class AuthStage {
      * Fully ready. [recreateForLocale] is true iff the language fetched
      * during bootstrap differs from what the host activity was using; the
      * activity should call `recreate()` once.
+     *
+     * [epoch] is monotonically incremented on each fresh transition into
+     * Ready so the host can `key()` the ready scope by it and force a clean
+     * NavController + back stack after every logout + re-login (otherwise
+     * rememberSaveable inside rememberNavController restores stale entries
+     * from the previous session and a per-app detail screen surfaces as
+     * NotFoundState against the new session).
      */
-    data class Ready(val recreateForLocale: Boolean = false) : AuthStage()
+    data class Ready(val epoch: Long, val recreateForLocale: Boolean = false) : AuthStage()
 }
 
 @HiltViewModel
@@ -71,6 +78,7 @@ class AppBootstrapViewModel @Inject constructor(
     private var appName: String = ""
     private var prefetchApps: List<String> = emptyList()
     private var justAuthenticated: Boolean = false
+    private var readyEpoch: Long = 0L
 
     init {
         // The ViewModel survives Activity.recreate(), so a `clearAll` in the
@@ -149,15 +157,21 @@ class AppBootstrapViewModel @Inject constructor(
     }
 
     /**
-     * User-initiated logout. Wipes local + AccountManager and sets stage
-     * deterministically. Avoids relying on observer races (the DataStore
-     * change and the AccountManager change fire on different paths and the
-     * order isn't predictable).
+     * User-initiated logout. Stage flips to NeedsLogin synchronously so the
+     * host swaps the ready scope out *before* clearAll's DataStore emission
+     * and MochiAccount.remove fire, sidestepping the observer races:
+     *  - `currentToken.collect` sees stage != Ready/Bootstrapping → skips evaluate.
+     *  - `accountsFlow.collect` for the NeedsLogin branch only auto-evaluates
+     *    when accounts are *added* (sibling sign-in), not removed.
+     * Without this, the in-flight evaluate() could race a sibling-app account
+     * lookup and momentarily bounce stage back through NeedsAccountChoice /
+     * Ready, restoring the navController's saved back stack from the previous
+     * session and surfacing a per-app NotFoundState against the new context.
      */
     fun logout() {
+        _stage.value = AuthStage.NeedsLogin
         viewModelScope.launch {
             sessionManager.clearAll()
-            _stage.value = AuthStage.NeedsLogin
         }
     }
 
@@ -240,7 +254,7 @@ class AppBootstrapViewModel @Inject constructor(
             }
         }
 
-        _stage.value = AuthStage.Ready(recreateForLocale = recreate)
+        _stage.value = AuthStage.Ready(epoch = ++readyEpoch, recreateForLocale = recreate)
     }
 
     /**

@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -75,7 +76,16 @@ fun AppBootstrapHost(
                 LaunchedEffect(Unit) { onLocaleChangeRequested() }
                 Loading()
             } else {
-                ready(viewModel::logout)
+                // Bump the composition key on every fresh Ready re-entry so
+                // any rememberSaveable inside the ready scope — notably
+                // rememberNavController's back stack saver — starts clean.
+                // Without this, a logout + re-login restores the previous
+                // session's nav state and the user lands on a stale entity
+                // detail screen that the new session can't access, surfacing
+                // as NotFoundState ("Forum not found", etc.).
+                key(s.epoch) {
+                    ready(viewModel::logout)
+                }
             }
         }
     }
