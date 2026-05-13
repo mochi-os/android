@@ -72,8 +72,14 @@ class ChatListViewModel @Inject constructor(
 
     fun filteredChats(): List<Chat> {
         val query = _uiState.value.searchQuery.lowercase().trim()
-        if (query.isEmpty()) return _uiState.value.chats
-        return _uiState.value.chats.filter { it.name.lowercase().contains(query) }
+        val base = _uiState.value.chats
+        val filtered = if (query.isEmpty()) base else base.filter { it.name.lowercase().contains(query) }
+        // Most recent activity first; chats with no activity yet (updated=0)
+        // sink to the bottom in name order so they remain reachable but don't
+        // outrank chats with real messages.
+        return filtered.sortedWith(
+            compareByDescending<Chat> { it.updated }.thenBy { it.name.lowercase() }
+        )
     }
 
     fun deleteLeftChat(chatId: String) {

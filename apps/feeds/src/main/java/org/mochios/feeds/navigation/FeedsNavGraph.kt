@@ -6,18 +6,24 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.feeds.ui.feed.FeedScreen
-import org.mochios.feeds.ui.feedlist.FeedListScreen
 import org.mochios.feeds.ui.find.FindFeedsScreen
 import org.mochios.feeds.ui.post.CreatePostScreen
 import org.mochios.feeds.ui.post.PostDetailScreen
 import org.mochios.feeds.ui.post.PostSourceScreen
+import org.mochios.feeds.ui.router.FeedsRouter
 import org.mochios.feeds.ui.settings.FeedSettingsScreen
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
 object FeedsApp {
-    const val HOME = "feeds/list"
-    const val FEED_LIST = "feeds/list"
+    /**
+     * HOME points at the router (resolves last-viewed feed or "__all__").
+     * The router immediately navigates to FEED with the resolved id and
+     * pops itself off the back stack so the user never sees the spinner
+     * for more than a frame.
+     */
+    const val HOME = "feeds/router"
+    const val ROUTER = "feeds/router"
     const val FEED = "feeds/feed/{feedId}"
     const val POST = "feeds/post/{feedId}/{postId}"
     const val POST_SOURCE = "feeds/postSource/{feedId}/{postId}?url={url}"
@@ -45,13 +51,12 @@ fun NavGraphBuilder.feedsNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
 ) {
-    composable(FeedsApp.FEED_LIST) {
-        FeedListScreen(
-            onNavigateToFeed = { feedId -> navController.navigate(FeedsApp.feed(feedId)) },
-            onNavigateToCreatePost = { navController.navigate(FeedsApp.createPost()) },
-            onNavigateToFindFeeds = { navController.navigate(FeedsApp.FIND_FEEDS) },
-            onLogout = onLogout,
-        )
+    composable(FeedsApp.ROUTER) {
+        FeedsRouter(onResolve = { feedId ->
+            navController.navigate(FeedsApp.feed(feedId)) {
+                popUpTo(FeedsApp.ROUTER) { inclusive = true }
+            }
+        })
     }
 
     composable(
@@ -75,7 +80,17 @@ fun NavGraphBuilder.feedsNavGraph(
             onNavigateToSettings = { feedId ->
                 navController.navigate(FeedsApp.feedSettings(feedId))
             },
-            onNavigateBack = { navController.popBackStack() },
+            onSelectFeed = { feedId ->
+                // Swap the current feed in-place rather than stacking — back
+                // from a feed goes to the host (not a chain of every feed
+                // the user clicked in the drawer).
+                navController.navigate(FeedsApp.feed(feedId)) {
+                    popUpTo(FeedsApp.FEED) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
+            onNavigateToFindFeeds = { navController.navigate(FeedsApp.FIND_FEEDS) },
+            onLogout = onLogout,
         )
     }
 
@@ -156,7 +171,10 @@ fun NavGraphBuilder.feedsNavGraph(
         FeedSettingsScreen(
             onNavigateBack = { navController.popBackStack() },
             onFeedDeleted = {
-                navController.popBackStack(FeedsApp.FEED_LIST, inclusive = false)
+                // Feed deletion drops the user back to the router so the
+                // last-viewed lookup re-runs (the deleted feed shouldn't
+                // come back as the destination).
+                navController.popBackStack(FeedsApp.ROUTER, inclusive = false)
             },
         )
     }

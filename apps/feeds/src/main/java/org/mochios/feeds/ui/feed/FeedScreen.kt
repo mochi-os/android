@@ -36,12 +36,18 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.ImportExport
+import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.RssFeed
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -49,12 +55,15 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -63,6 +72,7 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
@@ -89,12 +99,17 @@ import org.mochios.android.model.Reaction
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.model.resolveAttachmentUrl
+import org.mochios.android.ui.components.FeatureDrawerItem
+import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.ui.feedlist.FeedListViewModel
+import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -104,9 +119,25 @@ fun FeedScreen(
     onNavigateToCreatePost: (String) -> Unit,
     onNavigateToEditPost: (String, String) -> Unit,
     onNavigateToSettings: (String) -> Unit,
-    onNavigateBack: () -> Unit,
-    viewModel: FeedViewModel = hiltViewModel()
+    onSelectFeed: (String) -> Unit,
+    onNavigateToFindFeeds: () -> Unit,
+    onLogout: () -> Unit,
+    viewModel: FeedViewModel = hiltViewModel(),
+    feedListViewModel: FeedListViewModel = hiltViewModel(),
 ) {
+    val context = LocalContext.current
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val drawerScope = rememberCoroutineScope()
+    val drawerFeeds by feedListViewModel.feeds.collectAsState()
+
+    // Persist the last-viewed feed so the next cold start lands here. The
+    // router composable reads this back via [LastViewedStore.get].
+    LaunchedEffect(viewModel.feedId) {
+        if (viewModel.feedId.isNotBlank()) {
+            LastViewedStore.set(context, FEEDS_FEATURE, viewModel.feedId)
+        }
+    }
+
     val posts by viewModel.posts.collectAsState()
     val feedInfo by viewModel.feedInfo.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
@@ -172,6 +203,57 @@ fun FeedScreen(
         }
     }
 
+    val totalUnread = drawerFeeds.sumOf { it.unread }
+    val allId = LastViewedStore.ALL
+    val allLabel = stringResource(R.string.feeds_all_feeds)
+    val drawerItems = remember(drawerFeeds) {
+        drawerFeeds.map { feed ->
+            FeatureDrawerItem(
+                id = feed.fingerprint.ifEmpty { feed.id },
+                title = feed.name,
+                unread = feed.unread,
+                icon = Icons.Default.RssFeed,
+            )
+        }
+    }
+    val drawerAll = FeatureDrawerItem(
+        id = allId,
+        title = allLabel,
+        unread = totalUnread,
+        icon = Icons.Default.RssFeed,
+    )
+    val currentDrawerId = if (viewModel.feedId == allId) allId else viewModel.feedId
+
+    FeatureListDrawer(
+        drawerState = drawerState,
+        items = drawerItems,
+        allItem = drawerAll,
+        selectedId = currentDrawerId,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            if (item.id != currentDrawerId) onSelectFeed(item.id)
+        },
+        actions = {
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onNavigateToFindFeeds()
+                },
+                headlineContent = { Text(stringResource(R.string.feeds_find_feeds)) },
+                leadingContent = { Icon(Icons.Default.Search, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
+                },
+                headlineContent = { Text(stringResource(R.string.feeds_logout)) },
+                leadingContent = { Icon(Icons.Default.Logout, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+        },
+    ) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -183,8 +265,8 @@ fun FeedScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
+                    IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.feeds_title))
                     }
                 },
                 actions = {
@@ -251,7 +333,7 @@ fun FeedScreen(
                 isNotFound && posts.isEmpty() -> {
                     NotFoundState(
                         title = stringResource(R.string.feeds_feed_not_found),
-                        onBack = onNavigateBack,
+                        onBack = { drawerScope.launch { drawerState.open() } },
                     )
                 }
                 error != null && posts.isEmpty() -> {
@@ -367,6 +449,7 @@ fun FeedScreen(
                 }
             }
         )
+    }
     }
 }
 
