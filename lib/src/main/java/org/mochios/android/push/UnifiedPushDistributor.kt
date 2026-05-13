@@ -18,7 +18,7 @@ package org.mochios.android.push
  *     to the corresponding Mochi server.
  *   - On REGISTER intent from a UP Application: allocate a per-Application
  *     subscription with the user's Mochi server (via
- *     `/menu/-/push/register`), generate a P-256 keypair, and return
+ *     `/notifications/-/push/register`), generate a P-256 keypair, and return
  *     the endpoint URL via the NEW_ENDPOINT broadcast.
  *   - On WebSocket message from server: decode envelope, send MESSAGE
  *     intent to the registered Application package.

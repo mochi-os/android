@@ -162,8 +162,8 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         p256dh: String,
         endpoint: String,
     ): Int? {
-        val token = mintAppToken(client, server, "menu") ?: return null
-        val url = server.trimEnd('/') + "/menu/-/push/register"
+        val token = mintAppToken(client, server, "notifications") ?: return null
+        val url = server.trimEnd('/') + "/notifications/-/push/register"
         val form = FormBody.Builder()
             .add("label", label)
             .add("auth", auth)
@@ -177,22 +177,22 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             .build()
         client.newCall(request).execute().use { resp ->
             if (!resp.isSuccessful) {
-                Log.w(TAG, "/menu/-/push/register returned ${resp.code}")
+                Log.w(TAG, "/notifications/-/push/register returned ${resp.code}")
                 return null
             }
             val body = resp.body?.string().orEmpty()
             return try {
                 JSONObject(body).optJSONObject("data")?.optInt("id")?.takeIf { it > 0 }
             } catch (_: Exception) {
-                Log.w(TAG, "Could not parse /menu/-/push/register response")
+                Log.w(TAG, "Could not parse /notifications/-/push/register response")
                 null
             }
         }
     }
 
     private fun postPushAccountsRemove(client: OkHttpClient, server: String, accountId: Int) {
-        val token = mintAppToken(client, server, "menu") ?: return
-        val url = server.trimEnd('/') + "/menu/-/push/accounts/remove"
+        val token = mintAppToken(client, server, "notifications") ?: return
+        val url = server.trimEnd('/') + "/notifications/-/push/accounts/remove"
         val form = FormBody.Builder().add("id", accountId.toString()).build()
         val request = Request.Builder()
             .url(url)

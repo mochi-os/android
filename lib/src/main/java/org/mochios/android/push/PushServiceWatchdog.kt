@@ -41,6 +41,12 @@ class PushServiceWatchdog(
 
     override suspend fun doWork(): Result {
         return try {
+            val transport = PushTransport.current(applicationContext)
+            if (transport == PushTransport.TRANSPORT_FCM) {
+                // FCM is doing delivery; nothing for the UP distributor to do.
+                Log.d(TAG, "Transport=fcm; PushService deliberately not running")
+                return Result.success()
+            }
             if (isPushServiceRunning(applicationContext)) {
                 Log.d(TAG, "PushService alive; nothing to do")
             } else {

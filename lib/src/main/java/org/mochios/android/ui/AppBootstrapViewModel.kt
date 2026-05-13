@@ -127,6 +127,23 @@ class AppBootstrapViewModel @Inject constructor(
     fun start(appName: String, prefetchApps: List<String> = emptyList()) {
         val same = this.appName == appName && this.prefetchApps == prefetchApps
         if (same && _stage.value !is AuthStage.Booting) return
+
+        // Pure alias switch within an already-bootstrapped session: same
+        // prefetch list, only the "primary" appName changed (user tapped a
+        // different launcher icon). The tokens for every entry in
+        // prefetchApps were minted on the original bootstrap, so we have
+        // nothing new to fetch — silently update appName so the inner
+        // NavHost re-keys without flipping the stage through
+        // Bootstrapping → Ready (which leaves the previous feature's Ready
+        // content visible for ~half a second of token re-mint).
+        if (_stage.value is AuthStage.Ready &&
+            this.prefetchApps == prefetchApps &&
+            prefetchApps.contains(appName)
+        ) {
+            this.appName = appName
+            return
+        }
+
         this.appName = appName
         this.prefetchApps = prefetchApps
         viewModelScope.launch { evaluate() }

@@ -49,7 +49,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.chat.R
@@ -244,7 +244,7 @@ private fun MessageBubble(
                 }
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = format.formatRelativeTime(message.created),
+                    text = format.formatTimestamp(message.created),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )

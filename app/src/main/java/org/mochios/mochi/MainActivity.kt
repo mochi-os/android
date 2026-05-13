@@ -13,20 +13,20 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
-import org.mochios.android.push.MochiPushClient
 import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PendingDeepLink
-import org.mochios.android.push.PushService
+import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.ui.AppBootstrapHost
 import org.mochios.android.ui.theme.MochiTheme
@@ -46,32 +46,48 @@ class MainActivity : ComponentActivity() {
 
     @Inject lateinit var sessionManager: SessionManager
     @Inject lateinit var preferencesManager: PreferencesManager
+    @Inject lateinit var okHttpClient: okhttp3.OkHttpClient
 
     // Latest alias / shortcut hint resolved from the launching intent.
     // Updated on every onNewIntent so swapping launcher icons (e.g.
     // Projects → Feeds) re-keys the NavHost below and lands the user
     // directly on the new feature's home, rather than flashing whatever
-    // screen was on top of the previous feature's back stack.
-    private val targetApp = MutableStateFlow<String?>(null)
+    // screen was on top of the previous feature's back stack. Compose's
+    // mutableStateOf (vs a Flow) makes the write Snapshot-tracked so the
+    // recomposition is scheduled inside the same Choreographer frame as
+    // the onResume call — no extra coroutine dispatch delay before the
+    // surface is repainted, which is what was leaving the old feature
+    // visible for a frame.
+    private var targetApp by mutableStateOf<String?>(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        PushService.start(this)
+        // No eager PushService.start here — push transport is server-driven.
+        // After the user authenticates, the LaunchedEffect on `identity`
+        // below calls PushTransport.configure() which either:
+        //   - if the server has Firebase config: initialises FCM and skips
+        //     PushService (no "listening for notifications" status notif)
+        //   - else: starts PushService for the UnifiedPush fallback
         handleMochiUri(intent)
-        targetApp.value = resolveTargetApp(intent)
+        targetApp = resolveTargetApp(intent)
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
-            val identity by sessionManager.boundIdentity.collectAsState(initial = null)
+            val isAuthenticated by sessionManager.isAuthenticated.collectAsState(initial = false)
             val userPrefs by preferencesManager.preferences.collectAsState()
             MochiTheme(themeAnchors = themeAnchors, preferences = userPrefs) {
                 FormatProvider(manager = preferencesManager) {
                     RequestNotificationPermission()
                     OemBackgroundHintDialog()
-                    LaunchedEffect(identity) {
-                        identity?.let { MochiPushClient.register(applicationContext, it) }
+                    LaunchedEffect(isAuthenticated) {
+                        Log.i(TAG, "LaunchedEffect(isAuthenticated)=$isAuthenticated")
+                        if (isAuthenticated) {
+                            Log.i(TAG, "PushTransport.configure starting")
+                            PushTransport.configure(applicationContext, sessionManager, okHttpClient)
+                            Log.i(TAG, "PushTransport.configure returned")
+                        }
                     }
-                    val startApp by targetApp.collectAsState()
+                    val startApp = targetApp
                     AppBootstrapHost(
                         appName = startApp ?: "feeds",
                         oauthScheme = "mochi",
@@ -111,7 +127,7 @@ class MainActivity : ComponentActivity() {
         setIntent(intent)
         handleMochiUri(intent)
         val resolved = resolveTargetApp(intent)
-        if (resolved != null) targetApp.value = resolved
+        if (resolved != null) targetApp = resolved
     }
 
     /**

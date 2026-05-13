@@ -10,7 +10,7 @@ plugins {
 // keystore + passwords stay out of the repo. The signing key is the user-
 // visible identity of every published Mochi release — losing it means every
 // existing install has to be uninstalled before a new build can replace it.
-// See claude/.claude/commands/android.md for the release flow.
+// See .claude/commands/android-release.md for the release flow.
 val releaseStorePath: String? = providers.gradleProperty("MOCHI_RELEASE_STORE_FILE").orNull
 val releaseStoreFile: File? = releaseStorePath?.let(::File)?.takeIf { it.exists() }
 
@@ -23,7 +23,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 1
-        versionName = "0.1"
+        versionName = "0.2"
     }
 
     signingConfigs {

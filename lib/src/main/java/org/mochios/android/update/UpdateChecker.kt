@@ -144,14 +144,18 @@ class UpdateChecker(
         private const val VERSIONS_URL = "https://packages.mochi-os.org/android/versions.json"
         private const val APK_URL = "https://packages.mochi-os.org/android/mochi.apk"
 
-        /** Idempotent daily schedule. Call from the host Application's onCreate. */
+        /**
+         * Idempotent periodic schedule. Call from the host Application's
+         * onCreate. Currently set to 1h for testing the update flow; revert
+         * to 24h once the path is validated.
+         */
         fun schedule(context: Context) {
             val request = PeriodicWorkRequestBuilder<UpdateChecker>(
-                24, TimeUnit.HOURS,
+                1, TimeUnit.HOURS,
             ).build()
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
                 WORK_NAME,
-                ExistingPeriodicWorkPolicy.KEEP,
+                ExistingPeriodicWorkPolicy.REPLACE,
                 request,
             )
         }

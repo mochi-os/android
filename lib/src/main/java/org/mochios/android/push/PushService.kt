@@ -196,7 +196,7 @@ class PushService : Service() {
                 override fun loadForRequest(url: okhttp3.HttpUrl): List<Cookie> = listOf(cookie)
             })
             .build()
-        val body = JSONObject().put("app", "menu").toString()
+        val body = JSONObject().put("app", "notifications").toString()
             .toRequestBody("application/json".toMediaType())
         val request = Request.Builder().url(url).post(body).build()
         return runCatching {
@@ -249,7 +249,7 @@ class PushService : Service() {
     }
 
     /**
-     * GET /menu/-/push/drain → dispatch each queued event and ack in one batch.
+     * GET /notifications/-/push/drain → dispatch each queued event and ack in one batch.
      *
      * Fires once after every successful WS subscribe. The drain itself is
      * read-only on the server, and the ack is a separate POST with the list
@@ -257,7 +257,7 @@ class PushService : Service() {
      * the rows in place and we'll see them again on the next subscribe.
      */
     private fun drainPending(server: String, token: String) {
-        val url = server.trimEnd('/') + "/menu/-/push/drain"
+        val url = server.trimEnd('/') + "/notifications/-/push/drain"
         val request = Request.Builder()
             .url(url)
             .header("Authorization", "Bearer $token")
@@ -266,7 +266,7 @@ class PushService : Service() {
         runCatching {
             okHttpClient.newCall(request).execute().use { resp ->
                 if (!resp.isSuccessful) {
-                    Log.w(TAG, "/menu/-/push/drain returned ${resp.code}")
+                    Log.w(TAG, "/notifications/-/push/drain returned ${resp.code}")
                     return@use
                 }
                 val raw = resp.body?.string().orEmpty()
@@ -301,7 +301,7 @@ class PushService : Service() {
     }
 
     private fun ackBatch(server: String, token: String, acks: org.json.JSONArray) {
-        val url = server.trimEnd('/') + "/menu/-/push/ack"
+        val url = server.trimEnd('/') + "/notifications/-/push/ack"
         val form = okhttp3.FormBody.Builder()
             .add("events", acks.toString())
             .build()
@@ -313,7 +313,7 @@ class PushService : Service() {
         runCatching {
             okHttpClient.newCall(request).execute().use { resp ->
                 if (!resp.isSuccessful) {
-                    Log.w(TAG, "/menu/-/push/ack returned ${resp.code}")
+                    Log.w(TAG, "/notifications/-/push/ack returned ${resp.code}")
                 }
             }
         }.onFailure { Log.w(TAG, "Ack failed: ${it.message}") }
@@ -429,6 +429,16 @@ class PushService : Service() {
             } else {
                 context.startService(intent)
             }
+        }
+
+        /**
+         * Stop the UP distributor service. Used by [PushTransport] when the
+         * server has FCM configured — we don't want the FG service running
+         * (and the "listening for notifications" status notification it
+         * implies) when FCM is doing the delivery.
+         */
+        fun stop(context: android.content.Context) {
+            context.stopService(Intent(context, PushService::class.java))
         }
     }
 }

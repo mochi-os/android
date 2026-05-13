@@ -11,8 +11,8 @@ import org.unifiedpush.android.connector.UnifiedPush
  * UnifiedPush distributor on the device — whether the Mochi shell, ntfy,
  * NextPush, or anything else — issues an endpoint URL via the
  * NEW_ENDPOINT broadcast. [MochiPushReceiver] picks that up and forwards
- * it to the user's Mochi server through the menu app's
- * `/menu/-/push/register` action; the server stores the endpoint as an
+ * it to the user's Mochi server through the notifications app's
+ * `/notifications/-/push/register` action; the server stores the endpoint as an
  * `unifiedpush` account row, and from then on notifications fan out
  * through it.
  *

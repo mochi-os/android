@@ -36,7 +36,7 @@ import java.security.SecureRandom
  *   - MESSAGE_ACK is a no-op.
  *
  * Deferred (TODO, blocked on PushService work):
- *   - Server-side push-account registration (POST to /menu/-/push/register)
+ *   - Server-side push-account registration (POST to /notifications/-/push/register)
  *     so the user's Mochi server knows about the endpoint and starts
  *     directing notifications to it.
  *   - Web Push key generation (auth + p256dh keypair). Currently emits
@@ -129,7 +129,7 @@ class MochiDistributorReceiver : BroadcastReceiver() {
 
     private fun buildEndpoint(server: String, subId: String): String {
         val base = server.trimEnd('/')
-        return "$base/menu/-/push/inbound/$subId"
+        return "$base/notifications/-/push/inbound/$subId"
     }
 
     private companion object {

@@ -29,12 +29,17 @@ class BootReceiver : BroadcastReceiver() {
             Intent.ACTION_LOCKED_BOOT_COMPLETED,
             "android.intent.action.QUICKBOOT_POWERON",
             -> {
-                Log.i(TAG, "Boot completed — starting PushService")
-                runCatching { PushService.start(context.applicationContext) }
-                    .onFailure { Log.w(TAG, "Failed to start PushService on boot: ${it.message}") }
+                if (PushTransport.current(context.applicationContext) == PushTransport.TRANSPORT_FCM) {
+                    Log.i(TAG, "Boot completed — transport=fcm, leaving PushService stopped")
+                } else {
+                    Log.i(TAG, "Boot completed — starting PushService")
+                    runCatching { PushService.start(context.applicationContext) }
+                        .onFailure { Log.w(TAG, "Failed to start PushService on boot: ${it.message}") }
+                }
                 // Re-arm the watchdog: WorkManager's persisted state typically
                 // survives reboot, but enqueueUniquePeriodicWork with KEEP is
                 // a cheap idempotent guard against edge cases where it didn't.
+                // The watchdog itself respects the current transport.
                 PushServiceWatchdog.schedule(context.applicationContext)
             }
         }

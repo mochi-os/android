@@ -13,7 +13,7 @@ import org.json.JSONObject
  *   - `appPackage`  — Application's package name; used to dispatch MESSAGE
  *                     intents back to the right App.
  *   - `subId`       — opaque server-allocated subscription id; appears in
- *                     the endpoint URL path as `/menu/-/push/inbound/<subId>`.
+ *                     the endpoint URL path as `/notifications/-/push/inbound/<subId>`.
  *   - `server`      — base URL of the Mochi server that issued the subId.
  *                     Lets us POST registration/unregistration from the
  *                     correct identity context.
