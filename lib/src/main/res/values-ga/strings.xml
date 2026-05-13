@@ -35,7 +35,6 @@
     <string name="access_owner">Úinéir</string>
     <string name="access_revoke">Cúlghair</string>
     <string name="access_level">Leibhéal rochtana</string>
-    <string name="access_level_manage">Bainistigh</string>
     <string name="access_level_comment">Nóta tráchta</string>
     <string name="access_level_view">Féach</string>
     <string name="access_level_none">Faic</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Easaontaigh</string>
     <string name="push_service_action_hide">Folaigh</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Coinníonn Mochi ceangailte chun fógraí a fháil</string>
-    <string name="push_service_title">Mochi ag éisteacht le fógraí</string>
-    <string name="push_service_text">Is féidir leat an fógra seo a cheilt</string>
-    <string name="reauth_channel_name">Mochi: ní mór logáil isteach</string>
-    <string name="reauth_channel_description">Tagann sé chun cinn nuair nach féidir le Mochi do fhreastalaí a bhaint amach toisc go bhfuil do sheisiún neamhbhailí</string>
-    <string name="reauth_signin_title">Mochi: logáil isteach arís</string>
-    <string name="reauth_signin_text">Tá fógraí ar sos go dtí go logálann tú isteach arís</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Fan inrochtana sa chúlra</string>
-    <string name="oem_hint_body">Caithfidh Mochi rith sa chúlra chun fógraí a sheachadadh. Ceadaigh é seo ar an gcéad scáileán eile, le do thoil, nó d\'fhéadfadh do ghuthán fógraí a chur ar sos nuair atá an scáileán múchta.</string>
-    <string name="oem_hint_samsung_note">Ar ghutháin Samsung, seiceáil Settings → Device care → Sleeping apps freisin agus bain Mochi má tá sé liostaithe.</string>
-    <string name="oem_hint_allow">Ceadaigh cúlra</string>
-    <string name="oem_hint_dismiss">Ná taispeáin arís</string>
-
+    <string name="push_service_group">Seirbhís chúlra</string>
 </resources>

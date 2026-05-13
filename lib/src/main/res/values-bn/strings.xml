@@ -35,7 +35,6 @@
     <string name="access_owner">মালিক</string>
     <string name="access_revoke">প্রত্যাহার করুন</string>
     <string name="access_level">অ্যাক্সেস লেভেল</string>
-    <string name="access_level_manage">পরিচালনা করুন</string>
     <string name="access_level_comment">মন্তব্য</string>
     <string name="access_level_view">দেখুন</string>
     <string name="access_level_none">কোনোটি নয়</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">দ্বিমত</string>
     <string name="push_service_action_hide">লুকান</string>
 
-    <string name="push_service_channel">Mochi পুশ</string>
-    <string name="push_service_channel_description">বিজ্ঞপ্তি গ্রহণের জন্য Mochi-কে সংযুক্ত রাখে</string>
-    <string name="push_service_title">Mochi বিজ্ঞপ্তির জন্য অপেক্ষা করছে</string>
-    <string name="push_service_text">আপনি এই বিজ্ঞপ্তিটি লুকাতে পারেন</string>
-    <string name="reauth_channel_name">Mochi: সাইন ইন প্রয়োজন</string>
-    <string name="reauth_channel_description">আপনার সেশন বাতিল হওয়ায় Mochi আপনার সার্ভারে পৌঁছাতে পারে না তখন প্রদর্শিত হয়</string>
-    <string name="reauth_signin_title">Mochi: আবার সাইন ইন করুন</string>
-    <string name="reauth_signin_text">আপনি আবার সাইন ইন না করা পর্যন্ত বিজ্ঞপ্তি বিরতিতে আছে</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">ব্যাকগ্রাউন্ডে পাওয়া যাবে</string>
-    <string name="oem_hint_body">বিজ্ঞপ্তি পৌঁছে দিতে Mochi-কে ব্যাকগ্রাউন্ডে চলতে হবে। অনুগ্রহ করে পরবর্তী স্ক্রিনে এটি অনুমোদন করুন, অন্যথায় স্ক্রিন বন্ধ থাকলে আপনার ফোন বিজ্ঞপ্তি থামিয়ে দিতে পারে।</string>
-    <string name="oem_hint_samsung_note">Samsung ফোনে Settings → Device care → Sleeping apps-ও দেখুন এবং তালিকায় থাকলে Mochi সরিয়ে দিন।</string>
-    <string name="oem_hint_allow">ব্যাকগ্রাউন্ড অনুমতি দিন</string>
-    <string name="oem_hint_dismiss">আর দেখাবেন না</string>
-
+    <string name="push_service_group">ব্যাকগ্রাউন্ড পরিষেবা</string>
 </resources>

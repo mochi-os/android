@@ -35,7 +35,6 @@
     <string name="access_owner">ባለቤት</string>
     <string name="access_revoke">ይሻሩ</string>
     <string name="access_level">የመዳረሻ ደረጃ</string>
-    <string name="access_level_manage">አስተዳድር</string>
     <string name="access_level_comment">አስተያየት</string>
     <string name="access_level_view">ይመልከቱ</string>
     <string name="access_level_none">ምንም</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">አልስማማም</string>
     <string name="push_service_action_hide">ደብቅ</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">ማሳወቂያዎችን ለመቀበል Mochi እንዲገናኝ ያደርጋል</string>
-    <string name="push_service_title">Mochi ማሳወቂያዎችን እያዳመጠ ነው</string>
-    <string name="push_service_text">ይህን ማሳወቂያ መደበቅ ይችላሉ</string>
-    <string name="reauth_channel_name">Mochi: መግባት ያስፈልጋል</string>
-    <string name="reauth_channel_description">የእርስዎ ክፍለ ጊዜ ስለተበደለ Mochi አገልጋይዎ ላይ መድረስ በማይችልበት ጊዜ ይታያል</string>
-    <string name="reauth_signin_title">Mochi: እንደገና ይግቡ</string>
-    <string name="reauth_signin_text">እንደገና እስከሚገቡ ድረስ ማሳወቂያዎች ቆመዋል</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">በበስተጀርባ ይገኝ ይዘዙ</string>
-    <string name="oem_hint_body">Mochi ማሳወቂያዎችን ለማድረስ በበስተጀርባ መሥራት አለበት። እባክዎ በሚቀጥለው ስክሪን ይፍቀዱ፣ አለበለዚያ ስልክዎ ስክሪኑ ሲጠፋ ማሳወቂያዎችን ሊያቆም ይችላል።</string>
-    <string name="oem_hint_samsung_note">በ Samsung ስልኮች ላይ Settings → Device care → Sleeping apps ይመልከቱ እና Mochi ከተዘረዘረ ያስወግዱ።</string>
-    <string name="oem_hint_allow">በበስተጀርባ ፍቀድ</string>
-    <string name="oem_hint_dismiss">ድጋሚ አታሳይ</string>
-
+    <string name="push_service_group">የጀርባ አገልግሎት</string>
 </resources>

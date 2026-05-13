@@ -35,7 +35,6 @@
     <string name="access_owner">Właściciel</string>
     <string name="access_revoke">Odwołaj</string>
     <string name="access_level">Poziom dostępu</string>
-    <string name="access_level_manage">Zarządzaj</string>
     <string name="access_level_comment">Komentarz</string>
     <string name="access_level_view">Zobacz</string>
     <string name="access_level_none">Brak</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Nie zgadzam się</string>
     <string name="push_service_action_hide">Ukryj</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Utrzymuje połączenie Mochi w celu odbierania powiadomień</string>
-    <string name="push_service_title">Mochi nasłuchuje powiadomień</string>
-    <string name="push_service_text">Możesz ukryć to powiadomienie</string>
-    <string name="reauth_channel_name">Mochi: wymagane logowanie</string>
-    <string name="reauth_channel_description">Pojawia się, gdy Mochi nie może połączyć się z Twoim serwerem, ponieważ Twoja sesja została unieważniona</string>
-    <string name="reauth_signin_title">Mochi: zaloguj się ponownie</string>
-    <string name="reauth_signin_text">Powiadomienia są wstrzymane do ponownego zalogowania</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Pozostań osiągalny w tle</string>
-    <string name="oem_hint_body">Mochi musi działać w tle, aby dostarczać powiadomienia. Zezwól na to na następnym ekranie, w przeciwnym razie telefon może wstrzymać powiadomienia, gdy ekran jest wyłączony.</string>
-    <string name="oem_hint_samsung_note">W telefonach Samsung sprawdź również Settings → Device care → Sleeping apps i usuń Mochi, jeśli jest na liście.</string>
-    <string name="oem_hint_allow">Zezwól na tło</string>
-    <string name="oem_hint_dismiss">Nie pokazuj ponownie</string>
-
+    <string name="push_service_group">Usługa w tle</string>
 </resources>

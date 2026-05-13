@@ -35,7 +35,6 @@
     <string name="access_owner">ម្ចាស់</string>
     <string name="access_revoke">ដកសិទ្ធិ</string>
     <string name="access_level">កម្រិតការចូលប្រើ</string>
-    <string name="access_level_manage">គ្រប់គ្រង</string>
     <string name="access_level_comment">មតិយោបល់</string>
     <string name="access_level_view">មើល</string>
     <string name="access_level_none">គ្មាន</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">មិនយល់ព្រម</string>
     <string name="push_service_action_hide">លាក់</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">រក្សា Mochi ឲ្យភ្ជាប់ដើម្បីទទួលការជូនដំណឹង</string>
-    <string name="push_service_title">Mochi កំពុងស្តាប់ការជូនដំណឹង</string>
-    <string name="push_service_text">អ្នកអាចលាក់ការជូនដំណឹងនេះបាន</string>
-    <string name="reauth_channel_name">Mochi: តម្រូវឱ្យចូល</string>
-    <string name="reauth_channel_description">បង្ហាញនៅពេល Mochi មិនអាចទៅដល់ម៉ាស៊ីនមេរបស់អ្នកដោយសារសម័យរបស់អ្នកត្រូវបានលុបចោល</string>
-    <string name="reauth_signin_title">Mochi: ចូលម្តងទៀត</string>
-    <string name="reauth_signin_text">ការជូនដំណឹងត្រូវបានផ្អាករហូតដល់អ្នកចូលម្តងទៀត</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">នៅតែអាចទាក់ទងបាននៅផ្ទៃខាងក្រោយ</string>
-    <string name="oem_hint_body">Mochi ត្រូវដំណើរការនៅផ្ទៃខាងក្រោយដើម្បីផ្ដល់ការជូនដំណឹង។ សូមអនុញ្ញាតវានៅអេក្រង់បន្ទាប់ បើមិនដូច្នេះទេ ទូរស័ព្ទរបស់អ្នកអាចផ្អាកការជូនដំណឹងពេលអេក្រង់បិទ។</string>
-    <string name="oem_hint_samsung_note">នៅលើទូរស័ព្ទ Samsung សូមពិនិត្យ Settings → Device care → Sleeping apps ផងដែរ ហើយដក Mochi ប្រសិនបើបានរាយ។</string>
-    <string name="oem_hint_allow">អនុញ្ញាតផ្ទៃខាងក្រោយ</string>
-    <string name="oem_hint_dismiss">កុំបង្ហាញម្ដងទៀត</string>
-
+    <string name="push_service_group">សេវាផ្ទៃខាងក្រោយ</string>
 </resources>

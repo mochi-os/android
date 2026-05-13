@@ -156,8 +156,8 @@
     <!-- PushService foreground-service notification -->
     <string name="push_service_channel">Mochi push</string>
     <string name="push_service_channel_description">Keeps Mochi connected to receive notifications</string>
+    <string name="push_service_group">Background service</string>
     <string name="push_service_title">Mochi listening for notifications</string>
-    <string name="push_service_text">You may hide this notification</string>
     <string name="push_service_action_hide">Hide</string>
 
     <!-- Reauth-required system notification (rare; surfaces only on persistent 401) -->

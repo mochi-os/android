@@ -35,7 +35,6 @@
     <string name="access_owner">मालिक</string>
     <string name="access_revoke">रद्द गर्नुहोस्</string>
     <string name="access_level">पहुँच स्तर</string>
-    <string name="access_level_manage">व्यवस्थापन गर्नुहोस्</string>
     <string name="access_level_comment">टिप्पणी</string>
     <string name="access_level_view">हेर्नुहोस्</string>
     <string name="access_level_none">कुनै पनि होइन</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">असहमत</string>
     <string name="push_service_action_hide">लुकाउनुहोस्</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">सूचनाहरू प्राप्त गर्न Mochi लाई जडान गरिएको राख्छ</string>
-    <string name="push_service_title">Mochi सूचनाहरूको लागि पर्खिरहेको छ</string>
-    <string name="push_service_text">तपाईं यो सूचना लुकाउन सक्नुहुन्छ</string>
-    <string name="reauth_channel_name">Mochi: साइन इन आवश्यक</string>
-    <string name="reauth_channel_description">तपाईंको सत्र अमान्य भएको कारण Mochi ले तपाईंको सर्भरमा पुग्न नसक्दा देखिन्छ</string>
-    <string name="reauth_signin_title">Mochi: फेरि साइन इन गर्नुहोस्</string>
-    <string name="reauth_signin_text">तपाईं फेरि साइन इन नगरेसम्म सूचनाहरू रोकिएका छन्</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">पृष्ठभूमिमा पहुँचयोग्य रहनुहोस्</string>
-    <string name="oem_hint_body">सूचनाहरू पुऱ्याउन Mochi पृष्ठभूमिमा चल्नुपर्छ। कृपया अर्को स्क्रिनमा यसलाई अनुमति दिनुहोस्, अन्यथा स्क्रिन बन्द हुँदा तपाईंको फोनले सूचनाहरू रोक्न सक्छ।</string>
-    <string name="oem_hint_samsung_note">Samsung फोनमा, Settings → Device care → Sleeping apps पनि जाँच गर्नुहोस् र सूचीमा छ भने Mochi हटाउनुहोस्।</string>
-    <string name="oem_hint_allow">पृष्ठभूमि अनुमति</string>
-    <string name="oem_hint_dismiss">फेरि नदेखाउनुहोस्</string>
-
+    <string name="push_service_group">पृष्ठभूमि सेवा</string>
 </resources>

@@ -35,7 +35,6 @@
     <string name="access_owner">Xwedî</string>
     <string name="access_revoke">Vekişîne</string>
     <string name="access_level">Asta gihîştinê</string>
-    <string name="access_level_manage">Bi rê ve bibe</string>
     <string name="access_level_comment">Şîrove</string>
     <string name="access_level_view">Bibîne</string>
     <string name="access_level_none">Tu</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Na</string>
     <string name="push_service_action_hide">Veşêre</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mochi girêdayî dihêle da ku agahdariyan bistîne</string>
-    <string name="push_service_title">Mochi li agahdariyan guhdarî dike</string>
-    <string name="push_service_text">Tu dikarî vê agahdariyê veşêrî</string>
-    <string name="reauth_channel_name">Mochi: têketin pêwîst e</string>
-    <string name="reauth_channel_description">Dema ku tora te betal bûye û Mochi nikare bigihê servera te xuya dibe</string>
-    <string name="reauth_signin_title">Mochi: dîsa têkeve</string>
-    <string name="reauth_signin_text">Agahdarî heya tu dîsa têkevî hatine sekinandin</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Li paşxaneyê berdest bimîne</string>
-    <string name="oem_hint_body">Mochi divê di paşxaneyê de bixebite da ku agahdariyan radest bike. Ji kerema xwe vê li ekrana paşîn destûr bidin, an na têlefona te dikare dema ekran girtî be agahdariyan rawestîne.</string>
-    <string name="oem_hint_samsung_note">Li ser têlefonên Samsung, Settings → Device care → Sleeping apps jî kontrol bikin û Mochi jê derxin heke di lîsteyê de be.</string>
-    <string name="oem_hint_allow">Destûra paşxaneyê</string>
-    <string name="oem_hint_dismiss">Cardin nîşan nede</string>
-
+    <string name="push_service_group">Xizmeta paşxanê</string>
 </resources>

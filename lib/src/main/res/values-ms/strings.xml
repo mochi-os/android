@@ -35,7 +35,6 @@
     <string name="access_owner">Pemilik</string>
     <string name="access_revoke">Batalkan</string>
     <string name="access_level">Tahap akses</string>
-    <string name="access_level_manage">Urus</string>
     <string name="access_level_comment">Komen</string>
     <string name="access_level_view">Lihat</string>
     <string name="access_level_none">Tiada</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Tidak setuju</string>
     <string name="push_service_action_hide">Sembunyikan</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mengekalkan Mochi disambungkan untuk menerima pemberitahuan</string>
-    <string name="push_service_title">Mochi sedang mendengar pemberitahuan</string>
-    <string name="push_service_text">Anda boleh menyembunyikan pemberitahuan ini</string>
-    <string name="reauth_channel_name">Mochi: log masuk diperlukan</string>
-    <string name="reauth_channel_description">Muncul apabila Mochi tidak dapat mencapai pelayan anda kerana sesi anda telah dibatalkan</string>
-    <string name="reauth_signin_title">Mochi: log masuk semula</string>
-    <string name="reauth_signin_text">Pemberitahuan dijeda sehingga anda log masuk semula</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Kekal boleh dihubungi di latar belakang</string>
-    <string name="oem_hint_body">Mochi mesti berjalan di latar belakang untuk menghantar pemberitahuan. Sila benarkan ini di skrin seterusnya, jika tidak telefon anda mungkin menjeda pemberitahuan apabila skrin dimatikan.</string>
-    <string name="oem_hint_samsung_note">Pada telefon Samsung, periksa juga Settings → Device care → Sleeping apps dan keluarkan Mochi jika tersenarai.</string>
-    <string name="oem_hint_allow">Benarkan latar belakang</string>
-    <string name="oem_hint_dismiss">Jangan tunjuk lagi</string>
-
+    <string name="push_service_group">Perkhidmatan latar belakang</string>
 </resources>

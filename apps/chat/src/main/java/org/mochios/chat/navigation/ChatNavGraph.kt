@@ -14,12 +14,16 @@ import org.mochios.chat.ui.settings.ChatSettingsScreen
 object ChatApp {
     const val HOME = "chat/list"
     const val CHAT_LIST = "chat/list"
-    const val CHAT = "chat/{chatId}"
+    // Detail routes use a `chat/` discriminator after the feature prefix so
+    // they can't shadow the literal HOME / NEW_CHAT routes — `chat/list`
+    // would otherwise match `chat/{chatId}` with chatId='list' and route to
+    // the detail screen rendering NotFoundState.
+    const val CHAT = "chat/chat/{chatId}"
     const val NEW_CHAT = "chat/new"
-    const val CHAT_SETTINGS = "chat/{chatId}/settings"
+    const val CHAT_SETTINGS = "chat/chat/{chatId}/settings"
 
-    fun chat(chatId: String) = "chat/$chatId"
-    fun chatSettings(chatId: String) = "chat/$chatId/settings"
+    fun chat(chatId: String) = "chat/chat/$chatId"
+    fun chatSettings(chatId: String) = "chat/chat/$chatId/settings"
 }
 
 fun NavGraphBuilder.chatNavGraph(

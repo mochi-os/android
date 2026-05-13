@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Još nema instaliranih aplikacija Mochi. Za početak instalirajte Mochi Feeds, Mochi Chat, Mochi Forums ili Mochi Projects.</string>
     <string name="launcher_feeds">Feedovi</string>
     <string name="launcher_chat">Razgovor</string>
     <string name="launcher_forums">Forumi</string>

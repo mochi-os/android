@@ -35,7 +35,6 @@
     <string name="access_owner">خاوەن</string>
     <string name="access_revoke">ڕاگرتن</string>
     <string name="access_level">ئاستی دەستڕاگەیشتن</string>
-    <string name="access_level_manage">بەڕێوەبردن</string>
     <string name="access_level_comment">لێدوان</string>
     <string name="access_level_view">بینین</string>
     <string name="access_level_none">هیچ</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">ناڕەزایی</string>
     <string name="push_service_action_hide">شاردنەوە</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mochi پەیوەند دەکات بۆ وەرگرتنی ئاگادارکردنەوەکان</string>
-    <string name="push_service_title">Mochi چاوەڕێی ئاگادارکردنەوەکان دەکات</string>
-    <string name="push_service_text">دەتوانیت ئەم ئاگادارکردنەوەیە بشاریتەوە</string>
-    <string name="reauth_channel_name">Mochi: پێویستە چوونەژوورەوە بکەیت</string>
-    <string name="reauth_channel_description">دەردەکەوێت کاتێک Mochi ناتوانێت بگاتە سێرڤەرەکەت لەبەر ئەوەی دانیشتنەکەت بەتاڵ کراوەتەوە</string>
-    <string name="reauth_signin_title">Mochi: دووبارە بچۆ ژوورەوە</string>
-    <string name="reauth_signin_text">ئاگادارکردنەوەکان وەستاون تا دووبارە بچیتەوە ژوورەوە</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">لە پاشاوەدا بەردەست بمێنەرەوە</string>
-    <string name="oem_hint_body">Mochi دەبێت لە پاشاوەدا کار بکات بۆ گەیاندنی ئاگادارکردنەوەکان. تکایە لە شاشەی داهاتوودا ئەمە بهێڵە، ئەگەرنا فۆنەکەت ڕەنگە ئاگادارکردنەوەکان بوەستێنێت کاتێک شاشە کوژاوەیە.</string>
-    <string name="oem_hint_samsung_note">لەسەر تەلەفۆنەکانی Samsung، Settings → Device care → Sleeping apps پشکنە و Mochi لاببە ئەگەر لە لیستدا بوو.</string>
-    <string name="oem_hint_allow">ڕێگە بدە بە پاشاوە</string>
-    <string name="oem_hint_dismiss">جارێکی تر پیشانی مەدە</string>
-
+    <string name="push_service_group">خزمەتگوزاری پاشبنەما</string>
 </resources>

@@ -35,7 +35,6 @@
     <string name="access_owner">Mmiliki</string>
     <string name="access_revoke">Batilisha</string>
     <string name="access_level">Kiwango cha ufikiaji</string>
-    <string name="access_level_manage">Simamia</string>
     <string name="access_level_comment">Maoni</string>
     <string name="access_level_view">Tazama</string>
     <string name="access_level_none">Hakuna</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Sikubaliani</string>
     <string name="push_service_action_hide">Ficha</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Inashikilia Mochi imeunganishwa ili kupokea arifa</string>
-    <string name="push_service_title">Mochi inasikiliza arifa</string>
-    <string name="push_service_text">Unaweza kuficha arifa hii</string>
-    <string name="reauth_channel_name">Mochi: kuingia kunahitajika</string>
-    <string name="reauth_channel_description">Inaonekana wakati Mochi haiwezi kufikia seva yako kwa sababu kikao chako kimebatilishwa</string>
-    <string name="reauth_signin_title">Mochi: ingia tena</string>
-    <string name="reauth_signin_text">Arifa zimesimamishwa hadi uingie tena</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Endelea kupatikana chinichini</string>
-    <string name="oem_hint_body">Mochi lazima iendeshe chinichini ili kufikisha arifa. Tafadhali ruhusu hii kwenye skrini inayofuata, vinginevyo simu yako inaweza kusimamisha arifa wakati skrini imezimwa.</string>
-    <string name="oem_hint_samsung_note">Kwenye simu za Samsung, angalia pia Settings → Device care → Sleeping apps na ondoa Mochi ikiwa imeorodheshwa.</string>
-    <string name="oem_hint_allow">Ruhusu chinichini</string>
-    <string name="oem_hint_dismiss">Usionyeshe tena</string>
-
+    <string name="push_service_group">Huduma ya usuli</string>
 </resources>

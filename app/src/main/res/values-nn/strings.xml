@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Ingen Mochi-appar er installerte enno. Installer Mochi Feeds, Mochi Chat, Mochi Forums eller Mochi Projects for å koma i gang.</string>
     <string name="launcher_feeds">Straumar</string>
     <string name="launcher_chat">Prat</string>
     <string name="launcher_forums">Forum</string>

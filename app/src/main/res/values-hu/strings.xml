@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Még nincsenek Mochi alkalmazások telepítve. Kezdéshez telepítse a Mochi Feeds, Mochi Chat, Mochi Forums vagy Mochi Projects alkalmazást.</string>
     <string name="launcher_feeds">Hírcsatornák</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Fórumok</string>

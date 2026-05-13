@@ -265,7 +265,7 @@ private fun ProjectRow(
                     val shortcut = ShortcutInfoCompat.Builder(context, "project_$projectId")
                         .setShortLabel(project.name)
                         .setLongLabel(project.name)
-                        .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
+                        .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_projects))
                         .setIntent(intent)
                         .build()
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)

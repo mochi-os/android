@@ -35,7 +35,6 @@
     <string name="access_owner">Власник</string>
     <string name="access_revoke">Відкликати</string>
     <string name="access_level">Рівень доступу</string>
-    <string name="access_level_manage">Керувати</string>
     <string name="access_level_comment">Коментар</string>
     <string name="access_level_view">Переглянути</string>
     <string name="access_level_none">Немає</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Не згоден</string>
     <string name="push_service_action_hide">Приховати</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Підтримує з\'єднання Mochi для отримання сповіщень</string>
-    <string name="push_service_title">Mochi очікує на сповіщення</string>
-    <string name="push_service_text">Ви можете приховати це сповіщення</string>
-    <string name="reauth_channel_name">Mochi: потрібно увійти</string>
-    <string name="reauth_channel_description">З\'являється, коли Mochi не може зв\'язатися з вашим сервером, оскільки ваш сеанс анульовано</string>
-    <string name="reauth_signin_title">Mochi: увійдіть знову</string>
-    <string name="reauth_signin_text">Сповіщення призупинено, доки ви знову не увійдете</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Залишайтеся доступними у фоні</string>
-    <string name="oem_hint_body">Mochi повинен працювати у фоні, щоб доставляти сповіщення. Будь ласка, дозвольте це на наступному екрані, інакше ваш телефон може призупиняти сповіщення, коли екран вимкнено.</string>
-    <string name="oem_hint_samsung_note">На телефонах Samsung перевірте також Settings → Device care → Sleeping apps і видаліть Mochi, якщо він у списку.</string>
-    <string name="oem_hint_allow">Дозволити фон</string>
-    <string name="oem_hint_dismiss">Більше не показувати</string>
-
+    <string name="push_service_group">Фонова служба</string>
 </resources>

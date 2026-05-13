@@ -35,7 +35,6 @@
     <string name="access_owner">Ээси</string>
     <string name="access_revoke">Кайтарып алуу</string>
     <string name="access_level">Жетки деңгээли</string>
-    <string name="access_level_manage">Башкаруу</string>
     <string name="access_level_comment">Комментарий</string>
     <string name="access_level_view">Көрүү</string>
     <string name="access_level_none">Эч кимиси</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Макул эмес</string>
     <string name="push_service_action_hide">Жашыруу</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Билдирүүлөрдү алуу үчүн Mochi туташууда кармайт</string>
-    <string name="push_service_title">Mochi билдирүүлөрдү күтүүдө</string>
-    <string name="push_service_text">Бул билдирүүнү жашырсаңыз болот</string>
-    <string name="reauth_channel_name">Mochi: кирүү талап кылынат</string>
-    <string name="reauth_channel_description">Сиздин сессияңыз жокко чыгарылгандыктан Mochi серверге жете албай калганда пайда болот</string>
-    <string name="reauth_signin_title">Mochi: кайра кириңиз</string>
-    <string name="reauth_signin_text">Кайра кирмейинче билдирүүлөр тыныгууда</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Фондо жетимдүү бойдон калыңыз</string>
-    <string name="oem_hint_body">Mochi билдирмелерди жеткирүү үчүн фондо иштеши керек. Кийинки экранда буга уруксат бериңиз, антпесе экран өчүк кезде телефонуңуз билдирмелерди токтотуп коюшу мүмкүн.</string>
-    <string name="oem_hint_samsung_note">Samsung телефондорунда Settings → Device care → Sleeping apps дагы текшерип, тизмеде болсо Mochi-ди алып салыңыз.</string>
-    <string name="oem_hint_allow">Фонго уруксат берүү</string>
-    <string name="oem_hint_dismiss">Кайра көрсөтпө</string>
-
+    <string name="push_service_group">Фондук кызмат</string>
 </resources>

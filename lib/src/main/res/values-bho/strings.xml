@@ -35,7 +35,6 @@
     <string name="access_owner">मालिक</string>
     <string name="access_revoke">वापस लीं</string>
     <string name="access_level">पहुंच स्तर</string>
-    <string name="access_level_manage">प्रबंधित करीं</string>
     <string name="access_level_comment">टिप्पणी</string>
     <string name="access_level_view">देखीं</string>
     <string name="access_level_none">कुछुओ ना</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">असहमत</string>
     <string name="push_service_action_hide">छिपाईं</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mochi के सूचना पावे खातिर जुड़ल राखेला</string>
-    <string name="push_service_title">Mochi सूचना के इंतजार करत बा</string>
-    <string name="push_service_text">रउआ ई सूचना छिपा सकीला</string>
-    <string name="reauth_channel_name">Mochi: साइन इन के जरूरत बा</string>
-    <string name="reauth_channel_description">जब रउआ के सत्र अमान्य हो जाला आ Mochi रउआ के सर्वर ले नइखे पहुंच पावत त ई देखाई देला</string>
-    <string name="reauth_signin_title">Mochi: फेर साइन इन करीं</string>
-    <string name="reauth_signin_text">जब तक रउआ फेर साइन इन ना करीं तब तक सूचना रुकल बा</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">बैकग्राउंड में पहुँच में रहीं</string>
-    <string name="oem_hint_body">Mochi के सूचना देबे खातिर बैकग्राउंड में चलल जरूरी बा। कृपया अगिला स्क्रीन पर एकर अनुमति दीं, ना त रउआ के फोन स्क्रीन बंद होखला पर सूचना रोक सकेला।</string>
-    <string name="oem_hint_samsung_note">Samsung फोन पर Settings → Device care → Sleeping apps भी जाँचीं आ अगर Mochi लिस्ट में बा त ओकरा हटा दीं।</string>
-    <string name="oem_hint_allow">बैकग्राउंड के अनुमति दीं</string>
-    <string name="oem_hint_dismiss">फेर मत देखाईं</string>
-
+    <string name="push_service_group">बैकग्राउंड सेवा</string>
 </resources>

@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">То ҳол барномаҳои Mochi насб нашудаанд. Барои оғоз Mochi Feeds, Mochi Chat, Mochi Forums ё Mochi Projects-ро насб кунед.</string>
     <string name="launcher_feeds">Фидҳо</string>
     <string name="launcher_chat">Чат</string>
     <string name="launcher_forums">Форумҳо</string>

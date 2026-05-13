@@ -35,7 +35,6 @@
     <string name="access_owner">Ejer</string>
     <string name="access_revoke">Tilbagekald</string>
     <string name="access_level">Adgangsniveau</string>
-    <string name="access_level_manage">Administrer</string>
     <string name="access_level_comment">Kommentar</string>
     <string name="access_level_view">Vis</string>
     <string name="access_level_none">Ingen</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Uenig</string>
     <string name="push_service_action_hide">Skjul</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Holder Mochi forbundet for at modtage notifikationer</string>
-    <string name="push_service_title">Mochi lytter efter notifikationer</string>
-    <string name="push_service_text">Du kan skjule denne notifikation</string>
-    <string name="reauth_channel_name">Mochi: log ind påkrævet</string>
-    <string name="reauth_channel_description">Vises når Mochi ikke kan nå din server, fordi din session er blevet ugyldig</string>
-    <string name="reauth_signin_title">Mochi: log ind igen</string>
-    <string name="reauth_signin_text">Notifikationer er på pause, indtil du logger ind igen</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Forbliv tilgængelig i baggrunden</string>
-    <string name="oem_hint_body">Mochi skal køre i baggrunden for at levere notifikationer. Tillad dette på næste skærm, ellers kan din telefon sætte notifikationer på pause, når skærmen er slukket.</string>
-    <string name="oem_hint_samsung_note">På Samsung-telefoner skal du også tjekke Settings → Device care → Sleeping apps og fjerne Mochi, hvis det er på listen.</string>
-    <string name="oem_hint_allow">Tillad baggrund</string>
-    <string name="oem_hint_dismiss">Vis ikke igen</string>
-
+    <string name="push_service_group">Baggrundstjeneste</string>
 </resources>

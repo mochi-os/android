@@ -29,6 +29,7 @@ fun AuthNavigation(
     LaunchedEffect(uiState.authComplete) {
         if (uiState.authComplete) {
             onAuthenticated()
+            viewModel.consumeAuthComplete()
         }
     }
 

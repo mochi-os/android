@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Belum ada aplikasi Mochi yang terpasang. Pasang Mochi Feeds, Mochi Chat, Mochi Forums, atau Mochi Projects untuk memulai.</string>
     <string name="launcher_feeds">Feed</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forum</string>

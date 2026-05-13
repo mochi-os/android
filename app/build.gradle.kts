@@ -6,6 +6,14 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
+// Release signing reads its config from ~/.gradle/gradle.properties so the
+// keystore + passwords stay out of the repo. The signing key is the user-
+// visible identity of every published Mochi release — losing it means every
+// existing install has to be uninstalled before a new build can replace it.
+// See claude/.claude/commands/android.md for the release flow.
+val releaseStorePath: String? = providers.gradleProperty("MOCHI_RELEASE_STORE_FILE").orNull
+val releaseStoreFile: File? = releaseStorePath?.let(::File)?.takeIf { it.exists() }
+
 android {
     namespace = "org.mochios.mochi"
     compileSdk = 35
@@ -15,7 +23,18 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = "0.1"
+    }
+
+    signingConfigs {
+        if (releaseStoreFile != null) {
+            create("release") {
+                storeFile = releaseStoreFile
+                storePassword = providers.gradleProperty("MOCHI_RELEASE_STORE_PASSWORD").orNull
+                keyAlias = providers.gradleProperty("MOCHI_RELEASE_KEY_ALIAS").orNull
+                keyPassword = providers.gradleProperty("MOCHI_RELEASE_KEY_PASSWORD").orNull
+            }
+        }
     }
 
     buildTypes {
@@ -23,11 +42,14 @@ android {
             isPseudoLocalesEnabled = true
         }
         release {
-            isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            // Minification is off until ProGuard rules are tuned for Hilt /
+            // Retrofit / Compose reflection paths — enabling it without
+            // tuned rules would surface runtime crashes that hide in the
+            // debug build. APK is ~30 MB either way for now.
+            isMinifyEnabled = false
+            if (releaseStoreFile != null) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 

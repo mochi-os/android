@@ -35,7 +35,6 @@
     <string name="access_owner">Eienaar</string>
     <string name="access_revoke">Herroep</string>
     <string name="access_level">Toegangsvlak</string>
-    <string name="access_level_manage">Bestuur</string>
     <string name="access_level_comment">Kommentaar</string>
     <string name="access_level_view">Bekyk</string>
     <string name="access_level_none">Geen</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Verskil</string>
     <string name="push_service_action_hide">Versteek</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Hou Mochi gekoppel om kennisgewings te ontvang</string>
-    <string name="push_service_title">Mochi luister vir kennisgewings</string>
-    <string name="push_service_text">Jy kan hierdie kennisgewing wegsteek</string>
-    <string name="reauth_channel_name">Mochi: aanmelding vereis</string>
-    <string name="reauth_channel_description">Verskyn wanneer Mochi nie jou bediener kan bereik nie omdat jou sessie ongeldig gemaak is</string>
-    <string name="reauth_signin_title">Mochi: meld weer aan</string>
-    <string name="reauth_signin_text">Kennisgewings is gepouseer totdat jy weer aanmeld</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Bly bereikbaar in die agtergrond</string>
-    <string name="oem_hint_body">Mochi moet in die agtergrond loop om kennisgewings te lewer. Laat dit asseblief toe op die volgende skerm, anders kan jou foon kennisgewings pouseer wanneer die skerm af is.</string>
-    <string name="oem_hint_samsung_note">Op Samsung-fone, kyk ook by Settings → Device care → Sleeping apps en verwyder Mochi indien gelys.</string>
-    <string name="oem_hint_allow">Laat agtergrond toe</string>
-    <string name="oem_hint_dismiss">Moenie weer wys nie</string>
-
+    <string name="push_service_group">Agtergronddiens</string>
 </resources>

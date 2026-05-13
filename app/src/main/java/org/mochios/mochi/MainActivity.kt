@@ -12,11 +12,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.FormatProvider
@@ -28,13 +30,13 @@ import org.mochios.android.push.PushService
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.ui.AppBootstrapHost
 import org.mochios.android.ui.theme.MochiTheme
+import org.mochios.android.update.UpdateInstaller
 import org.mochios.chat.navigation.ChatApp
 import org.mochios.chat.navigation.chatNavGraph
 import org.mochios.feeds.navigation.FeedsApp
 import org.mochios.feeds.navigation.feedsNavGraph
 import org.mochios.forums.navigation.ForumsApp
 import org.mochios.forums.navigation.forumsNavGraph
-import org.mochios.mochi.ui.launchpad.LaunchPadScreen
 import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
 import javax.inject.Inject
@@ -45,12 +47,19 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var sessionManager: SessionManager
     @Inject lateinit var preferencesManager: PreferencesManager
 
+    // Latest alias / shortcut hint resolved from the launching intent.
+    // Updated on every onNewIntent so swapping launcher icons (e.g.
+    // Projects → Feeds) re-keys the NavHost below and lands the user
+    // directly on the new feature's home, rather than flashing whatever
+    // screen was on top of the previous feature's back stack.
+    private val targetApp = MutableStateFlow<String?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         PushService.start(this)
         handleMochiUri(intent)
-        val startApp = resolveAliasTargetApp(intent?.component)
+        targetApp.value = resolveTargetApp(intent)
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
             val identity by sessionManager.boundIdentity.collectAsState(initial = null)
@@ -62,33 +71,34 @@ class MainActivity : ComponentActivity() {
                     LaunchedEffect(identity) {
                         identity?.let { MochiPushClient.register(applicationContext, it) }
                     }
+                    val startApp by targetApp.collectAsState()
                     AppBootstrapHost(
                         appName = startApp ?: "feeds",
                         oauthScheme = "mochi",
                         onLocaleChangeRequested = { recreate() },
                         prefetchApps = SUPER_APP_MOCHI_APPS,
                     ) { onLogout ->
-                        // AppBootstrapHost wraps this scope in key(stage.epoch),
-                        // so rememberNavController returns a fresh controller on
-                        // every Ready re-entry — no stale back stack to defend
-                        // against here.
-                        val navController = rememberNavController()
-                        val pendingLink by PendingDeepLink.link.collectAsState()
-                        LaunchedEffect(pendingLink) {
-                            val link = pendingLink ?: return@LaunchedEffect
-                            navigateToLink(navController, link)
-                            PendingDeepLink.consume()
-                        }
-                        NavHost(navController = navController, startDestination = startDestinationFor(startApp)) {
-                            composable(LAUNCHPAD) {
-                                LaunchPadScreen(
-                                    onAppSelected = { route -> navController.navigate(route) },
-                                )
+                        // Re-key the NavHost when the alias / shortcut hint
+                        // changes — swapping Projects → Feeds via the launcher
+                        // (singleTask → onNewIntent) updates targetApp; without
+                        // this `key()` the previous feature's back-stack top
+                        // composes for one frame before LaunchedEffect can
+                        // navigate, surfacing as a half-second flash of the
+                        // wrong screen.
+                        key(startApp) {
+                            val navController = rememberNavController()
+                            val pendingLink by PendingDeepLink.link.collectAsState()
+                            LaunchedEffect(pendingLink) {
+                                val link = pendingLink ?: return@LaunchedEffect
+                                navigateToLink(navController, link)
+                                PendingDeepLink.consume()
                             }
-                            feedsNavGraph(navController, onLogout = onLogout)
-                            chatNavGraph(navController, onLogout = onLogout)
-                            forumsNavGraph(navController, onLogout = onLogout)
-                            projectsNavGraph(navController, onLogout = onLogout)
+                            NavHost(navController = navController, startDestination = startDestinationFor(startApp)) {
+                                feedsNavGraph(navController, onLogout = onLogout)
+                                chatNavGraph(navController, onLogout = onLogout)
+                                forumsNavGraph(navController, onLogout = onLogout)
+                                projectsNavGraph(navController, onLogout = onLogout)
+                            }
                         }
                     }
                 }
@@ -100,11 +110,27 @@ class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         handleMochiUri(intent)
-        // Warm-start from a different alias (singleTask brings the existing
-        // task to the front instead of recreating). Drop a synthetic /<app>
-        // link into PendingDeepLink so the running NavHost re-routes.
-        val targetApp = resolveAliasTargetApp(intent.component)
-        if (targetApp != null) PendingDeepLink.set("/$targetApp")
+        val resolved = resolveTargetApp(intent)
+        if (resolved != null) targetApp.value = resolved
+    }
+
+    /**
+     * The alias's `org.mochios.targetApp` meta-data (set on the per-feature
+     * activity-aliases) is the primary signal. For shortcut intents the
+     * component is `MainActivity` itself — no meta-data — so fall back to
+     * the `EXTRA_APP_HINT` set by the per-feature "Add to home screen" path.
+     */
+    private fun resolveTargetApp(intent: Intent?): String? =
+        resolveAliasTargetApp(intent?.component)
+            ?: intent?.getStringExtra(EXTRA_APP_HINT)
+
+    override fun onResume() {
+        super.onResume()
+        // When the daily worker has staged a newer APK in cacheDir/updates/,
+        // hand it off to the system installer now. Android shows its own
+        // confirmation dialog; we can't suppress that, but pre-downloading
+        // means the user never sees the browser/file-picker chain.
+        UpdateInstaller.promptIfPending(this)
     }
 
     /**
@@ -257,16 +283,14 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun startDestinationFor(targetApp: String?): String = when (targetApp) {
-        "feeds" -> FeedsApp.HOME
         "chat" -> ChatApp.HOME
         "forums" -> ForumsApp.HOME
         "projects" -> ProjectsApp.HOME
-        else -> LAUNCHPAD
+        else -> FeedsApp.HOME
     }
 
     companion object {
         private const val TAG = "MainActivity"
-        private const val LAUNCHPAD = "launchpad"
         private const val META_TARGET_APP = "org.mochios.targetApp"
 
         /** Intent extra a per-app `XxxListScreen.kt` shortcut sets to skip directory lookup. */
@@ -276,8 +300,8 @@ class MainActivity : ComponentActivity() {
 
         /**
          * Every Mochi-app the super-app bundles. The bootstrap path mints a JWT
-         * for each so the user can navigate between apps via the launchpad or a
-         * notification deep-link without surfacing "app token required" on the
+         * for each so cross-feature navigation (notification deep-links, in-app
+         * routing) doesn't surface "app token required" on the
          * first API call — only one of the four would otherwise get its token
          * minted (the cold-start alias's app).
          */

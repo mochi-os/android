@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Níl aon aip Mochi suiteáilte fós. Suiteáil Mochi Feeds, Mochi Chat, Mochi Forums nó Mochi Projects chun tosú.</string>
     <string name="launcher_feeds">Fothaí</string>
     <string name="launcher_chat">Comhrá</string>
     <string name="launcher_forums">Fóraim</string>

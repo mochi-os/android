@@ -35,7 +35,6 @@
     <string name="access_owner">Omistaja</string>
     <string name="access_revoke">Peruuta</string>
     <string name="access_level">Käyttöoikeustaso</string>
-    <string name="access_level_manage">Hallitse</string>
     <string name="access_level_comment">Kommentti</string>
     <string name="access_level_view">Näytä</string>
     <string name="access_level_none">Ei mitään</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Eri mieltä</string>
     <string name="push_service_action_hide">Piilota</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Pitää Mochin yhdistettynä ilmoitusten vastaanottamista varten</string>
-    <string name="push_service_title">Mochi kuuntelee ilmoituksia</string>
-    <string name="push_service_text">Voit piilottaa tämän ilmoituksen</string>
-    <string name="reauth_channel_name">Mochi: kirjautuminen vaaditaan</string>
-    <string name="reauth_channel_description">Näkyy, kun Mochi ei tavoita palvelintasi, koska istuntosi on mitätöity</string>
-    <string name="reauth_signin_title">Mochi: kirjaudu uudelleen</string>
-    <string name="reauth_signin_text">Ilmoitukset ovat tauolla, kunnes kirjaudut uudelleen sisään</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Pysy tavoitettavissa taustalla</string>
-    <string name="oem_hint_body">Mochin on toimittava taustalla ilmoitusten toimittamiseksi. Salli tämä seuraavalla näytöllä, muuten puhelimesi voi keskeyttää ilmoitukset, kun näyttö on pois päältä.</string>
-    <string name="oem_hint_samsung_note">Samsung-puhelimissa tarkista myös Settings → Device care → Sleeping apps ja poista Mochi, jos se on listalla.</string>
-    <string name="oem_hint_allow">Salli tausta</string>
-    <string name="oem_hint_dismiss">Älä näytä uudelleen</string>
-
+    <string name="push_service_group">Taustapalvelu</string>
 </resources>

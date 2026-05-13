@@ -35,7 +35,6 @@
     <string name="access_owner">Dueño</string>
     <string name="access_revoke">Aparma</string>
     <string name="access_level">Mantañ tama</string>
-    <string name="access_level_manage">Apnaqaña</string>
     <string name="access_level_comment">Comentaña</string>
     <string name="access_level_view">Taqi uñjaña</string>
     <string name="access_level_none">Janiwa</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Jan iyawsaña</string>
     <string name="push_service_action_hide">Imantaña</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mochi ukax sat\'antasiñ tuqit yatiyawinakax katuqaña</string>
-    <string name="push_service_title">Mochi yatiyawinak ist\'asksiwa</string>
-    <string name="push_service_text">Aka yatiyawix imantasinkamawa</string>
-    <string name="reauth_channel_name">Mochi: mantañax wakisiwa</string>
-    <string name="reauth_channel_description">Sesionamax jan walt\'ata utjipan, Mochi servidor tuqit jan jik\'iqipan uñstaspawa</string>
-    <string name="reauth_signin_title">Mochi: mantañ kutt\'apxam</string>
-    <string name="reauth_signin_text">Yatiyawinakax mantañ kutt\'asksinkam, sayt\'atapinpiniwa</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Qhipäxaru utjañataki</string>
-    <string name="oem_hint_body">Mochi-x yatiyäwinak apnaqañatakix qhipäxan irnaqañapawa. Mä jutiri pantallan iyawsam, janir ukhamax telefonomax pantalla jiwayata uka pachax yatiyäwinak iqartʼaspawa.</string>
-    <string name="oem_hint_samsung_note">Samsung telefononakanx Settings → Device care → Sleeping apps uñakiptʼam, ukatx Mochi qillqantata uksax apaqtʼam.</string>
-    <string name="oem_hint_allow">Qhipäxaru iyawsam</string>
-    <string name="oem_hint_dismiss">Janiw mayampi uñachtʼayañani</string>
-
+    <string name="push_service_group">Q\'ipa yanapt\'awi</string>
 </resources>

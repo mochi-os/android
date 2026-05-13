@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Durung ana aplikasi Mochi sing diinstal. Instal Mochi Feeds, Mochi Chat, Mochi Forums utawa Mochi Projects kanggo miwiti.</string>
     <string name="launcher_feeds">Feed</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forum</string>

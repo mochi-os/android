@@ -341,6 +341,20 @@ class AuthViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(oauthLaunchUrl = null)
     }
 
+    /**
+     * Reset transient one-shot signals that should not survive an
+     * AuthNavigation re-mount. Critical for logout + later re-entry: the
+     * AuthViewModel is scoped to the activity and outlives the AuthNavigation
+     * composable, so without consuming `authComplete` the next mount
+     * immediately calls onAuthenticated again and re-bootstraps the previous
+     * session — making the new logout appear to do nothing because the
+     * NeedsLogin → Bootstrapping → Ready cycle fires the moment AuthNavigation
+     * comes back on screen.
+     */
+    fun consumeAuthComplete() {
+        _uiState.value = _uiState.value.copy(authComplete = false)
+    }
+
     private fun completeOAuth(code: String) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)

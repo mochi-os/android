@@ -35,7 +35,6 @@
     <string name="access_owner">Sahibi</string>
     <string name="access_revoke">Geri çağır</string>
     <string name="access_level">Giriş səviyyəsi</string>
-    <string name="access_level_manage">İdarə et</string>
     <string name="access_level_comment">Şərh</string>
     <string name="access_level_view">Bütün bildirişlərə bax</string>
     <string name="access_level_none">Heç biri</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Razı deyiləm</string>
     <string name="push_service_action_hide">Gizlət</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Bildirişləri qəbul etmək üçün Mochi bağlantısını saxlayır</string>
-    <string name="push_service_title">Mochi bildirişləri dinləyir</string>
-    <string name="push_service_text">Bu bildirişi gizlədə bilərsiniz</string>
-    <string name="reauth_channel_name">Mochi: giriş tələb olunur</string>
-    <string name="reauth_channel_description">Sessiyanız ləğv edildiyi üçün Mochi serverinizə çata bilməyəndə görünür</string>
-    <string name="reauth_signin_title">Mochi: yenidən daxil olun</string>
-    <string name="reauth_signin_text">Yenidən daxil olana qədər bildirişlər dayandırılıb</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Arxa fonda əlçatan qalın</string>
-    <string name="oem_hint_body">Mochi bildirişləri çatdırmaq üçün arxa fonda işləməlidir. Zəhmət olmasa növbəti ekranda buna icazə verin, əks halda ekran sönəndə telefonunuz bildirişləri dayandıra bilər.</string>
-    <string name="oem_hint_samsung_note">Samsung telefonlarda həmçinin Settings → Device care → Sleeping apps yoxlayın və Mochi siyahıdadırsa silin.</string>
-    <string name="oem_hint_allow">Arxa fona icazə ver</string>
-    <string name="oem_hint_dismiss">Bir daha göstərmə</string>
-
+    <string name="push_service_group">Arxa xidmət</string>
 </resources>

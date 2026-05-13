@@ -16,16 +16,20 @@ import org.mochios.forums.ui.settings.ForumSettingsScreen
 object ForumsApp {
     const val HOME = "forums/list"
     const val FORUM_LIST = "forums/list"
-    const val FORUM = "forums/{forumId}"
-    const val POST = "forums/{forumId}/post/{postId}"
-    const val NEW_POST = "forums/{forumId}/new"
+    // Detail routes use a `forum/` discriminator after the feature prefix so
+    // they can't shadow the literal HOME / FIND_FORUMS routes — `forums/list`
+    // would otherwise match `forums/{forumId}` with forumId='list' and route
+    // to the detail screen rendering NotFoundState.
+    const val FORUM = "forums/forum/{forumId}"
+    const val POST = "forums/forum/{forumId}/post/{postId}"
+    const val NEW_POST = "forums/forum/{forumId}/new"
     const val FIND_FORUMS = "forums/discover"
-    const val FORUM_SETTINGS = "forums/{forumId}/settings"
+    const val FORUM_SETTINGS = "forums/forum/{forumId}/settings"
 
-    fun forum(forumId: String) = "forums/$forumId"
-    fun post(forumId: String, postId: String) = "forums/$forumId/post/$postId"
-    fun newPost(forumId: String) = "forums/$forumId/new"
-    fun forumSettings(forumId: String) = "forums/$forumId/settings"
+    fun forum(forumId: String) = "forums/forum/$forumId"
+    fun post(forumId: String, postId: String) = "forums/forum/$forumId/post/$postId"
+    fun newPost(forumId: String) = "forums/forum/$forumId/new"
+    fun forumSettings(forumId: String) = "forums/forum/$forumId/settings"
 }
 
 fun NavGraphBuilder.forumsNavGraph(

@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">ჯერ არ არის დაყენებული Mochi აპლიკაციები. დასაწყებად დააყენეთ Mochi Feeds, Mochi Chat, Mochi Forums ან Mochi Projects.</string>
     <string name="launcher_feeds">არხები</string>
     <string name="launcher_chat">ჩატი</string>
     <string name="launcher_forums">ფორუმები</string>

@@ -35,7 +35,6 @@
     <string name="access_owner">Sid</string>
     <string name="access_revoke">Irrevoka</string>
     <string name="access_level">Livell ta\' aċċess</string>
-    <string name="access_level_manage">Immaniġġja</string>
     <string name="access_level_comment">Kumment</string>
     <string name="access_level_view">Ara</string>
     <string name="access_level_none">Xejn</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Ma naqbilx</string>
     <string name="push_service_action_hide">Aħbi</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Iżżomm Mochi imqabbad biex jirċievi notifiki</string>
-    <string name="push_service_title">Mochi qed jisma\' għal notifiki</string>
-    <string name="push_service_text">Tista\' taħbi din in-notifika</string>
-    <string name="reauth_channel_name">Mochi: trid tidħol</string>
-    <string name="reauth_channel_description">Tidher meta Mochi ma jistax jasal għas-server tiegħek għax is-sessjoni tiegħek ġiet invalidata</string>
-    <string name="reauth_signin_title">Mochi: idħol mill-ġdid</string>
-    <string name="reauth_signin_text">In-notifiki huma pawżati sakemm tidħol mill-ġdid</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Ibqa\' kuntattabbli fl-isfond</string>
-    <string name="oem_hint_body">Mochi għandu jaħdem fl-isfond biex iwassal in-notifiki. Jekk jogħġbok ippermettilu dan fl-iskrin li jmiss, inkella t-telefon tiegħek jista\' jippawżja n-notifiki meta l-iskrin ikun mitfi.</string>
-    <string name="oem_hint_samsung_note">Fuq it-telefons Samsung, iċċekkja wkoll Settings → Device care → Sleeping apps u neħħi Mochi jekk ikun elenkat.</string>
-    <string name="oem_hint_allow">Ippermetti l-isfond</string>
-    <string name="oem_hint_dismiss">Tixxewwx aktar</string>
-
+    <string name="push_service_group">Servizz tal-isfond</string>
 </resources>

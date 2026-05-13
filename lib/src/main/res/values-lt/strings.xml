@@ -35,7 +35,6 @@
     <string name="access_owner">Savininkas</string>
     <string name="access_revoke">Atšaukti</string>
     <string name="access_level">Prieigos lygis</string>
-    <string name="access_level_manage">Tvarkyti</string>
     <string name="access_level_comment">Komentaras</string>
     <string name="access_level_view">Peržiūrėti</string>
     <string name="access_level_none">Nėra</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Nesutinku</string>
     <string name="push_service_action_hide">Slėpti</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Palaiko Mochi prijungtą, kad gautų pranešimus</string>
-    <string name="push_service_title">Mochi laukia pranešimų</string>
-    <string name="push_service_text">Galite paslėpti šį pranešimą</string>
-    <string name="reauth_channel_name">Mochi: reikia prisijungti</string>
-    <string name="reauth_channel_description">Rodomas, kai Mochi negali pasiekti jūsų serverio, nes jūsų sesija buvo panaikinta</string>
-    <string name="reauth_signin_title">Mochi: prisijunkite iš naujo</string>
-    <string name="reauth_signin_text">Pranešimai pristabdyti, kol prisijungsite iš naujo</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Likite pasiekiami fone</string>
-    <string name="oem_hint_body">Kad Mochi pristatytų pranešimus, jis turi veikti fone. Leiskite tai kitame ekrane, kitaip telefonas gali sustabdyti pranešimus, kai ekranas išjungtas.</string>
-    <string name="oem_hint_samsung_note">Samsung telefonuose taip pat patikrinkite Settings → Device care → Sleeping apps ir pašalinkite Mochi, jei jis sąraše.</string>
-    <string name="oem_hint_allow">Leisti foną</string>
-    <string name="oem_hint_dismiss">Daugiau nerodyti</string>
-
+    <string name="push_service_group">Fono paslauga</string>
 </resources>

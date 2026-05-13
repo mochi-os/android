@@ -275,7 +275,7 @@ private fun ChatRow(
                     val shortcut = ShortcutInfoCompat.Builder(context, "chat_$chatId")
                         .setShortLabel(chat.name)
                         .setLongLabel(chat.name)
-                        .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
+                        .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_chat))
                         .setIntent(intent)
                         .build()
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)

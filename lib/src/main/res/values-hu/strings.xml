@@ -35,7 +35,6 @@
     <string name="access_owner">Tulajdonos</string>
     <string name="access_revoke">Visszavonás</string>
     <string name="access_level">Hozzáférési szint</string>
-    <string name="access_level_manage">Kezelés</string>
     <string name="access_level_comment">Megjegyzés</string>
     <string name="access_level_view">Megtekintés</string>
     <string name="access_level_none">Nincs</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Nem értek egyet</string>
     <string name="push_service_action_hide">Elrejtés</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Fenntartja a Mochi kapcsolatot az értesítések fogadásához</string>
-    <string name="push_service_title">A Mochi értesítésekre vár</string>
-    <string name="push_service_text">Elrejtheti ezt az értesítést</string>
-    <string name="reauth_channel_name">Mochi: bejelentkezés szükséges</string>
-    <string name="reauth_channel_description">Akkor jelenik meg, ha a Mochi nem éri el a szerverét, mert a munkamenete érvénytelenné vált</string>
-    <string name="reauth_signin_title">Mochi: jelentkezzen be újra</string>
-    <string name="reauth_signin_text">Az értesítések szüneteltetve, amíg újra be nem jelentkezik</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Maradj elérhető a háttérben</string>
-    <string name="oem_hint_body">A Mochi-nak a háttérben kell futnia, hogy értesítéseket kézbesítsen. Kérjük, engedélyezze ezt a következő képernyőn, különben a telefon szüneteltetheti az értesítéseket, amikor a képernyő ki van kapcsolva.</string>
-    <string name="oem_hint_samsung_note">Samsung telefonoknál ellenőrizze a Settings → Device care → Sleeping apps menüt is, és távolítsa el a Mochi-t, ha szerepel.</string>
-    <string name="oem_hint_allow">Háttér engedélyezése</string>
-    <string name="oem_hint_dismiss">Ne mutasd újra</string>
-
+    <string name="push_service_group">Háttérszolgáltatás</string>
 </resources>

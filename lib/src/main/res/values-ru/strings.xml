@@ -35,7 +35,6 @@
     <string name="access_owner">Владелец</string>
     <string name="access_revoke">Отозвать</string>
     <string name="access_level">Уровень доступа</string>
-    <string name="access_level_manage">Управление</string>
     <string name="access_level_comment">Комментарий</string>
     <string name="access_level_view">Просмотр</string>
     <string name="access_level_none">Нет</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Не согласен</string>
     <string name="push_service_action_hide">Скрыть</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Поддерживает соединение Mochi для получения уведомлений</string>
-    <string name="push_service_title">Mochi ожидает уведомления</string>
-    <string name="push_service_text">Это уведомление можно скрыть</string>
-    <string name="reauth_channel_name">Mochi: требуется вход</string>
-    <string name="reauth_channel_description">Появляется, когда Mochi не может связаться с вашим сервером, поскольку ваша сессия аннулирована</string>
-    <string name="reauth_signin_title">Mochi: войдите снова</string>
-    <string name="reauth_signin_text">Уведомления приостановлены до повторного входа</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Оставайтесь на связи в фоне</string>
-    <string name="oem_hint_body">Mochi должен работать в фоне для доставки уведомлений. Пожалуйста, разрешите это на следующем экране, иначе ваш телефон может приостановить уведомления при выключенном экране.</string>
-    <string name="oem_hint_samsung_note">На телефонах Samsung также проверьте Settings → Device care → Sleeping apps и удалите Mochi, если он в списке.</string>
-    <string name="oem_hint_allow">Разрешить фон</string>
-    <string name="oem_hint_dismiss">Больше не показывать</string>
-
+    <string name="push_service_group">Фоновая служба</string>
 </resources>

@@ -35,7 +35,6 @@
     <string name="access_owner">Propietari</string>
     <string name="access_revoke">Revoca</string>
     <string name="access_level">Nivell d\'accés</string>
-    <string name="access_level_manage">Gestiona</string>
     <string name="access_level_comment">Comentari</string>
     <string name="access_level_view">Visualitza</string>
     <string name="access_level_none">Cap</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">No hi estic d\'acord</string>
     <string name="push_service_action_hide">Amaga</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Manté el Mochi connectat per rebre notificacions</string>
-    <string name="push_service_title">Mochi escolta les notificacions</string>
-    <string name="push_service_text">Podeu amagar aquesta notificació</string>
-    <string name="reauth_channel_name">Mochi: cal iniciar sessió</string>
-    <string name="reauth_channel_description">Apareix quan Mochi no pot accedir al vostre servidor perquè la vostra sessió s\'ha invalidat</string>
-    <string name="reauth_signin_title">Mochi: torneu a iniciar sessió</string>
-    <string name="reauth_signin_text">Les notificacions estan en pausa fins que torneu a iniciar sessió</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Mantén-te disponible en segon pla</string>
-    <string name="oem_hint_body">Mochi ha d\'executar-se en segon pla per lliurar notificacions. Permet-ho a la pantalla següent; en cas contrari, el teu telèfon pot aturar les notificacions quan la pantalla estigui apagada.</string>
-    <string name="oem_hint_samsung_note">Als telèfons Samsung, comprova també Settings → Device care → Sleeping apps i elimina Mochi si hi apareix.</string>
-    <string name="oem_hint_allow">Permet segon pla</string>
-    <string name="oem_hint_dismiss">No tornar a mostrar</string>
-
+    <string name="push_service_group">Servei en segon pla</string>
 </resources>

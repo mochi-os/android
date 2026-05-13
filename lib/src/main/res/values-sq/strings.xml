@@ -35,7 +35,6 @@
     <string name="access_owner">Pronari</string>
     <string name="access_revoke">Revoko</string>
     <string name="access_level">Niveli i qasjes</string>
-    <string name="access_level_manage">Menaxho</string>
     <string name="access_level_comment">Komenti</string>
     <string name="access_level_view">Shiko</string>
     <string name="access_level_none">Asnjë</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Nuk pajtohem</string>
     <string name="push_service_action_hide">Fshih</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mban Mochi të lidhur për të marrë njoftime</string>
-    <string name="push_service_title">Mochi po dëgjon njoftimet</string>
-    <string name="push_service_text">Mund ta fshehni këtë njoftim</string>
-    <string name="reauth_channel_name">Mochi: kërkohet identifikimi</string>
-    <string name="reauth_channel_description">Shfaqet kur Mochi nuk mund të arrijë serverin tuaj sepse sesioni juaj është anuluar</string>
-    <string name="reauth_signin_title">Mochi: identifikohuni përsëri</string>
-    <string name="reauth_signin_text">Njoftimet janë në pauzë derisa të identifikoheni përsëri</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Qëndro i arritshëm në sfond</string>
-    <string name="oem_hint_body">Mochi duhet të ekzekutohet në sfond për të dorëzuar njoftime. Ju lutemi lejojeni në ekranin tjetër, përndryshe telefoni juaj mund të ndalë njoftimet kur ekrani është i fikur.</string>
-    <string name="oem_hint_samsung_note">Në telefonët Samsung, kontrolloni gjithashtu Settings → Device care → Sleeping apps dhe hiqni Mochi nëse është në listë.</string>
-    <string name="oem_hint_allow">Lejo sfondin</string>
-    <string name="oem_hint_dismiss">Mos shfaq më</string>
-
+    <string name="push_service_group">Shërbim në sfond</string>
 </resources>

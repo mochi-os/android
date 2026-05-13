@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Δεν έχουν εγκατασταθεί ακόμη εφαρμογές Mochi. Εγκαταστήστε Mochi Feeds, Mochi Chat, Mochi Forums ή Mochi Projects για να ξεκινήσετε.</string>
     <string name="launcher_feeds">Ροές</string>
     <string name="launcher_chat">Συνομιλία</string>
     <string name="launcher_forums">Φόρουμ</string>

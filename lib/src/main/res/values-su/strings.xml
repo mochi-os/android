@@ -35,7 +35,6 @@
     <string name="access_owner">Nu boga</string>
     <string name="access_revoke">Cabut</string>
     <string name="access_level">Tingkat aksés</string>
-    <string name="access_level_manage">Atur</string>
     <string name="access_level_comment">Koméntar</string>
     <string name="access_level_view">Tingali</string>
     <string name="access_level_none">Euweuh</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Teu satuju</string>
     <string name="push_service_action_hide">Sumputkeun</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Ngajaga Mochi tetep nyambung pikeun nampi bewara</string>
-    <string name="push_service_title">Mochi nuju ngadangukeun bewara</string>
-    <string name="push_service_text">Anjeun tiasa nyumputkeun bewara ieu</string>
-    <string name="reauth_channel_name">Mochi: kedah lebet</string>
-    <string name="reauth_channel_description">Muncul nalika Mochi teu tiasa ngahontal pangladén anjeun kusabab sési anjeun dibatalkeun</string>
-    <string name="reauth_signin_title">Mochi: lebet deui</string>
-    <string name="reauth_signin_text">Bewara dijeda dugi anjeun lebet deui</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Tetep bisa kahubung di latar tukang</string>
-    <string name="oem_hint_body">Mochi kudu jalan di latar tukang pikeun nepikeun béwara. Mangga widian ieu di layar saterusna, lamun henteu télépon Anjeun bisa ngeureunkeun béwara nalika layar pareum.</string>
-    <string name="oem_hint_samsung_note">Dina télépon Samsung, parios ogé Settings → Device care → Sleeping apps tur cabut Mochi lamun aya dina daptar.</string>
-    <string name="oem_hint_allow">Widian latar tukang</string>
-    <string name="oem_hint_dismiss">Tong tembongkeun deui</string>
-
+    <string name="push_service_group">Layanan latar</string>
 </resources>

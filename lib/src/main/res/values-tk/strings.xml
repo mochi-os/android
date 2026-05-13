@@ -35,7 +35,6 @@
     <string name="access_owner">Eýesi</string>
     <string name="access_revoke">Ýatyr</string>
     <string name="access_level">Giriş derejesi</string>
-    <string name="access_level_manage">Dolandyr</string>
     <string name="access_level_comment">Teswir</string>
     <string name="access_level_view">Görkez</string>
     <string name="access_level_none">Hiç biri</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Razy däl</string>
     <string name="push_service_action_hide">Gizle</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Habarnamalary almak üçin Mochi-niň birikmesini saklaýar</string>
-    <string name="push_service_title">Mochi habarnamalara garaşýar</string>
-    <string name="push_service_text">Bu habarnamany gizläp bilersiňiz</string>
-    <string name="reauth_channel_name">Mochi: hasaba girmeli</string>
-    <string name="reauth_channel_description">Sessiýaňyz ýatyrylany üçin Mochi serweriňize ýetip bilmeýän mahaly görünýär</string>
-    <string name="reauth_signin_title">Mochi: ýene hasaba giriň</string>
-    <string name="reauth_signin_text">Ýene hasaba girýänçäňiz habarnamalar duruzylýar</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Arka fonda elýeterli boluň</string>
-    <string name="oem_hint_body">Habarnamalary ibermek üçin Mochi arka fonda işlemeli. Indiki ekranda muňa rugsat beriň, ýogsam telefonyňyz ekran öçirilende habarnamalary togtadyp biler.</string>
-    <string name="oem_hint_samsung_note">Samsung telefonlarynda Settings → Device care → Sleeping apps barlaň we sanawda bolsa Mochi-ny aýyryň.</string>
-    <string name="oem_hint_allow">Arka fona rugsat</string>
-    <string name="oem_hint_dismiss">Indi görkezme</string>
-
+    <string name="push_service_group">Arka hyzmaty</string>
 </resources>

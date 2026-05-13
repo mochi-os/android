@@ -35,7 +35,6 @@
     <string name="access_owner">Sahip</string>
     <string name="access_revoke">İptal et</string>
     <string name="access_level">Erişim düzeyi</string>
-    <string name="access_level_manage">Yönet</string>
     <string name="access_level_comment">Yorum</string>
     <string name="access_level_view">Görüntüle</string>
     <string name="access_level_none">Yok</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Katılmıyorum</string>
     <string name="push_service_action_hide">Gizle</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Bildirim alabilmek için Mochi bağlantısını korur</string>
-    <string name="push_service_title">Mochi bildirimleri dinliyor</string>
-    <string name="push_service_text">Bu bildirimi gizleyebilirsiniz</string>
-    <string name="reauth_channel_name">Mochi: oturum açın</string>
-    <string name="reauth_channel_description">Oturumunuz geçersiz kılındığı için Mochi sunucunuza ulaşamadığında görünür</string>
-    <string name="reauth_signin_title">Mochi: tekrar oturum açın</string>
-    <string name="reauth_signin_text">Tekrar oturum açana kadar bildirimler duraklatıldı</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Arka planda erişilebilir kalın</string>
-    <string name="oem_hint_body">Mochi\'nin bildirimleri iletmek için arka planda çalışması gerekir. Lütfen bir sonraki ekranda buna izin verin, aksi takdirde ekran kapalıyken telefonunuz bildirimleri duraklatabilir.</string>
-    <string name="oem_hint_samsung_note">Samsung telefonlarda Settings → Device care → Sleeping apps bölümünü de kontrol edin ve listede varsa Mochi\'yi kaldırın.</string>
-    <string name="oem_hint_allow">Arka plana izin ver</string>
-    <string name="oem_hint_dismiss">Tekrar gösterme</string>
-
+    <string name="push_service_group">Arka plan hizmeti</string>
 </resources>

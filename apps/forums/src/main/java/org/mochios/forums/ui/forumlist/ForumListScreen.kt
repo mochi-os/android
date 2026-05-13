@@ -273,7 +273,7 @@ private fun ForumRow(
                     val shortcut = ShortcutInfoCompat.Builder(context, "forum_$forumId")
                         .setShortLabel(forum.name)
                         .setLongLabel(forum.name)
-                        .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
+                        .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_forums))
                         .setIntent(intent)
                         .build()
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)

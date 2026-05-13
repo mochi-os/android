@@ -35,7 +35,6 @@
     <string name="access_owner">માલિક</string>
     <string name="access_revoke">રદ કરો</string>
     <string name="access_level">ઍક્સેસ સ્તર</string>
-    <string name="access_level_manage">મેનેજ કરો</string>
     <string name="access_level_comment">ટિપ્પણી</string>
     <string name="access_level_view">જુઓ</string>
     <string name="access_level_none">કોઈ નહીં</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">અસંમત</string>
     <string name="push_service_action_hide">છુપાવો</string>
 
-    <string name="push_service_channel">Mochi પુશ</string>
-    <string name="push_service_channel_description">નોટિફિકેશન મેળવવા માટે Mochi ને કનેક્ટ રાખે છે</string>
-    <string name="push_service_title">Mochi નોટિફિકેશનની રાહ જોઈ રહ્યું છે</string>
-    <string name="push_service_text">તમે આ નોટિફિકેશન છુપાવી શકો છો</string>
-    <string name="reauth_channel_name">Mochi: સાઇન ઇન જરૂરી</string>
-    <string name="reauth_channel_description">જ્યારે Mochi તમારા સર્વર સુધી પહોંચી શકતું નથી કારણ કે તમારું સત્ર અમાન્ય છે ત્યારે દેખાય છે</string>
-    <string name="reauth_signin_title">Mochi: ફરીથી સાઇન ઇન કરો</string>
-    <string name="reauth_signin_text">જ્યાં સુધી તમે ફરીથી સાઇન ઇન ન કરો ત્યાં સુધી નોટિફિકેશન અટકાવવામાં આવ્યા છે</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">પૃષ્ઠભૂમિમાં ઉપલબ્ધ રહો</string>
-    <string name="oem_hint_body">Mochi-ને નોટિફિકેશન પહોંચાડવા માટે પૃષ્ઠભૂમિમાં ચાલવું જરૂરી છે. કૃપા કરીને આગલી સ્ક્રીન પર આને મંજૂરી આપો, અન્યથા સ્ક્રીન બંધ હોય ત્યારે તમારો ફોન સૂચનાઓ થોભાવી શકે છે.</string>
-    <string name="oem_hint_samsung_note">Samsung ફોન પર, Settings → Device care → Sleeping apps પણ તપાસો અને જો સૂચિબદ્ધ હોય તો Mochi દૂર કરો.</string>
-    <string name="oem_hint_allow">પૃષ્ઠભૂમિ મંજૂર કરો</string>
-    <string name="oem_hint_dismiss">ફરી બતાવશો નહીં</string>
-
+    <string name="push_service_group">બેકગ્રાઉન્ડ સેવા</string>
 </resources>

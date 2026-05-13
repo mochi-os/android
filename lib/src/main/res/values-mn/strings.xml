@@ -35,7 +35,6 @@
     <string name="access_owner">Эзэмшигч</string>
     <string name="access_revoke">Цуцлах</string>
     <string name="access_level">Хандалтын түвшин</string>
-    <string name="access_level_manage">Удирдах</string>
     <string name="access_level_comment">Сэтгэгдэл</string>
     <string name="access_level_view">Үзэх</string>
     <string name="access_level_none">Алга</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Үл зөвшөөрөх</string>
     <string name="push_service_action_hide">Нуух</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Мэдэгдлүүдийг хүлээн авахын тулд Mochi-г холбогдсон байлгана</string>
-    <string name="push_service_title">Mochi мэдэгдлүүдийг сонсож байна</string>
-    <string name="push_service_text">Та энэ мэдэгдлийг нуух боломжтой</string>
-    <string name="reauth_channel_name">Mochi: нэвтрэх шаардлагатай</string>
-    <string name="reauth_channel_description">Таны сесс хүчингүй болсон тул Mochi таны серверт хүрч чадаагүй үед гарна</string>
-    <string name="reauth_signin_title">Mochi: дахин нэвтэрнэ үү</string>
-    <string name="reauth_signin_text">Дахин нэвтрэх хүртэл мэдэгдлүүд түр зогссон</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Арын дэвсгэрт хүртээмжтэй байх</string>
-    <string name="oem_hint_body">Mochi мэдэгдэл хүргэхийн тулд арын дэвсгэрт ажиллах ёстой. Дараагийн дэлгэц дээр үүнийг зөвшөөрнө үү, эс тэгвээс таны утас дэлгэц унтрах үед мэдэгдлийг түр зогсоож болзошгүй.</string>
-    <string name="oem_hint_samsung_note">Samsung утсан дээр мөн Settings → Device care → Sleeping apps шалгаж, жагсаалтад байгаа бол Mochi-г устгана уу.</string>
-    <string name="oem_hint_allow">Арын дэвсгэр зөвшөөрөх</string>
-    <string name="oem_hint_dismiss">Дахин харуулахгүй</string>
-
+    <string name="push_service_group">Арын үйлчилгээ</string>
 </resources>

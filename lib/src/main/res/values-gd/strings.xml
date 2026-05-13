@@ -35,7 +35,6 @@
     <string name="access_owner">Sealbhadair</string>
     <string name="access_revoke">Cùl-ghairm</string>
     <string name="access_level">Ìre inntrigidh</string>
-    <string name="access_level_manage">Stiùirich</string>
     <string name="access_level_comment">Beachd</string>
     <string name="access_level_view">Seall</string>
     <string name="access_level_none">Chan eil gin</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Eas-aontaich</string>
     <string name="push_service_action_hide">Falaich</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Cumaidh e Mochi ceangailte airson brathan fhaighinn</string>
-    <string name="push_service_title">Mochi ag èisteachd ri brathan</string>
-    <string name="push_service_text">Faodaidh tu am brath seo a chur am falach</string>
-    <string name="reauth_channel_name">Mochi: feumail clàradh a-steach</string>
-    <string name="reauth_channel_description">Nochdaidh nuair nach urrainn dha Mochi am frithealaiche agad a ruigsinn oir tha an seisean agad neo-dhligheach</string>
-    <string name="reauth_signin_title">Mochi: clàraich a-steach a-rithist</string>
-    <string name="reauth_signin_text">Tha brathan air stad gus an clàraich thu a-steach a-rithist</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Fuirich ruigsinneach sa chùlaibh</string>
-    <string name="oem_hint_body">Feumaidh Mochi ruith sa chùlaibh gus brathan a lìbhrigeadh. Ceadaich seo air an ath sgrìn, no faodaidh am fòn agad brathan a chur an dàil nuair a tha an sgrìn dheth.</string>
-    <string name="oem_hint_samsung_note">Air fònaichean Samsung, thoir sùil cuideachd air Settings → Device care → Sleeping apps agus thoir air falbh Mochi ma tha e air an liosta.</string>
-    <string name="oem_hint_allow">Ceadaich cùlaibh</string>
-    <string name="oem_hint_dismiss">Na seall a-rithist</string>
-
+    <string name="push_service_group">Seirbheis cùlra</string>
 </resources>

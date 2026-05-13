@@ -35,7 +35,6 @@
     <string name="access_owner">May-ari</string>
     <string name="access_revoke">Bawiin</string>
     <string name="access_level">Antas ng access</string>
-    <string name="access_level_manage">Pamahalaan</string>
     <string name="access_level_comment">Komento</string>
     <string name="access_level_view">Tingnan</string>
     <string name="access_level_none">Wala</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Hindi sumasang-ayon</string>
     <string name="push_service_action_hide">Itago</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Pinapanatili ang Mochi na nakakonekta upang makatanggap ng mga abiso</string>
-    <string name="push_service_title">Naghihintay ang Mochi ng mga abiso</string>
-    <string name="push_service_text">Maaari mong itago ang abisong ito</string>
-    <string name="reauth_channel_name">Mochi: kailangang mag-sign in</string>
-    <string name="reauth_channel_description">Lumalabas kapag hindi maaabot ng Mochi ang iyong server dahil ang iyong session ay napawalang-bisa</string>
-    <string name="reauth_signin_title">Mochi: mag-sign in muli</string>
-    <string name="reauth_signin_text">Naka-pause ang mga abiso hanggang sa muli kang mag-sign in</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Manatiling marating sa background</string>
-    <string name="oem_hint_body">Kailangang tumakbo ang Mochi sa background upang maghatid ng mga notipikasyon. Mangyaring payagan ito sa susunod na screen, kung hindi maaaring i-pause ng telepono mo ang mga notipikasyon kapag naka-off ang screen.</string>
-    <string name="oem_hint_samsung_note">Sa mga Samsung phone, suriin din ang Settings → Device care → Sleeping apps at alisin ang Mochi kung nakalista.</string>
-    <string name="oem_hint_allow">Payagan ang background</string>
-    <string name="oem_hint_dismiss">Huwag nang ipakita</string>
-
+    <string name="push_service_group">Serbisyo sa background</string>
 </resources>

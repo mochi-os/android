@@ -335,8 +335,13 @@ class PushService : Service() {
             android.app.PendingIntent.getActivity(this, 0, it, pendingFlags)
         }
 
-        // "Hide" action → deep-link to this channel's notification settings,
-        // so the user can disable display without killing the FG service.
+        // Hide action → opens this channel's notification settings (scoped to
+        // mochi_push_service only), so the user toggling 'Show notifications'
+        // off there silences just this listening notification and leaves the
+        // per-app push channels (Feeds / Chat / Forums / Projects) alone.
+        // Critical that users discover *this* path rather than swipe-to-dismiss,
+        // which on Samsung pops a "Turn off ALL notifications from this app?"
+        // dialog and would kill the per-app channels too.
         val hideIntent = android.content.Intent(android.provider.Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
             .putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, packageName)
             .putExtra(android.provider.Settings.EXTRA_CHANNEL_ID, CHANNEL_ID)
@@ -345,9 +350,14 @@ class PushService : Service() {
 
         val builder = androidx.core.app.NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(getString(org.mochios.android.R.string.push_service_title))
-            .setContentText(getString(org.mochios.android.R.string.push_service_text))
             .setSmallIcon(org.mochios.android.R.drawable.ic_mochi_notification)
             .setPriority(androidx.core.app.NotificationCompat.PRIORITY_MIN)
+            // Mark this as a service-status notification so Android groups it
+            // with other background-activity notices in the shade and in DND
+            // / per-app filters — keeps it visually and semantically distinct
+            // from the per-app push channels (feeds / chat / forums / projects)
+            // so hiding it via the channel toggle doesn't ripple into them.
+            .setCategory(Notification.CATEGORY_SERVICE)
             .setOngoing(true)
             .apply {
                 if (tapPendingIntent != null) setContentIntent(tapPendingIntent)
@@ -371,14 +381,28 @@ class PushService : Service() {
 
     private fun ensureChannel() {
         val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-        val existing = nm.getNotificationChannel(CHANNEL_ID)
-        if (existing != null) return
+        // Group goes in first — channel.group references it. The pair surfaces
+        // the FG-service channel under a 'Background service' header in Android
+        // settings, well away from the per-app channels (Feeds / Chat / Forums
+        // / Projects) that live ungrouped. Disabling the FG channel is then
+        // visually clearly distinct from disabling a feature's notifications.
+        // Both calls are idempotent on (group_id, channel_id), and calling
+        // createNotificationChannel on an existing channel updates the
+        // non-user-locked fields (including `group`) — important for installs
+        // upgraded from a build that didn't have the group yet.
+        nm.createNotificationChannelGroup(
+            android.app.NotificationChannelGroup(
+                CHANNEL_GROUP_ID,
+                getString(org.mochios.android.R.string.push_service_group),
+            )
+        )
         val channel = NotificationChannel(
             CHANNEL_ID,
             getString(org.mochios.android.R.string.push_service_channel),
             NotificationManager.IMPORTANCE_MIN,
         ).apply {
             description = getString(org.mochios.android.R.string.push_service_channel_description)
+            group = CHANNEL_GROUP_ID
             setShowBadge(false)
         }
         nm.createNotificationChannel(channel)
@@ -386,6 +410,7 @@ class PushService : Service() {
 
     companion object {
         const val CHANNEL_ID = "mochi_push_service"
+        const val CHANNEL_GROUP_ID = "mochi_service_status"
         const val NOTIFICATION_ID = 0x4D43_0001 // 'MC' 0001
         const val FINGERPRINT = "unifiedpush"
         const val PENDING = "_pending_"

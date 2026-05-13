@@ -35,7 +35,6 @@
     <string name="access_owner">හිමිකරු</string>
     <string name="access_revoke">අවලංගු කරන්න</string>
     <string name="access_level">ප්‍රවේශ මට්ටම</string>
-    <string name="access_level_manage">කළමනාකරණය කරන්න</string>
     <string name="access_level_comment">අදහස</string>
     <string name="access_level_view">බලන්න</string>
     <string name="access_level_none">කිසිවක් නැත</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">එකඟ නොවේ</string>
     <string name="push_service_action_hide">සඟවන්න</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">දැනුම්දීම් ලබා ගැනීමට Mochi සම්බන්ධව තබයි</string>
-    <string name="push_service_title">Mochi දැනුම්දීම් සඳහා සවන් දෙයි</string>
-    <string name="push_service_text">ඔබට මෙම දැනුම්දීම සැඟවිය හැක</string>
-    <string name="reauth_channel_name">Mochi: පුරනය වීම අවශ්‍යයි</string>
-    <string name="reauth_channel_description">ඔබේ සැසිය අවලංගු කර ඇති නිසා Mochi හට ඔබේ සේවාදායකයට ළඟා වීමට නොහැකි වූ විට දිස්වේ</string>
-    <string name="reauth_signin_title">Mochi: නැවත පුරනය වන්න</string>
-    <string name="reauth_signin_text">ඔබ නැවත පුරනය වන තෙක් දැනුම්දීම් විරාම කර ඇත</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">පසුබිමේ ළඟාවිය හැකි ලෙස සිටින්න</string>
-    <string name="oem_hint_body">දැනුම්දීම් ලබා දීමට Mochi පසුබිමේ ක්‍රියාත්මක විය යුතුය. කරුණාකර මීළඟ තිරයේ එයට අවසර දෙන්න, නැතහොත් තිරය ක්‍රියා විරහිතව ඇති විට ඔබේ දුරකථනය දැනුම්දීම් නවත්වනු ඇත.</string>
-    <string name="oem_hint_samsung_note">Samsung දුරකථනවල Settings → Device care → Sleeping apps ද පරීක්ෂා කර, ලැයිස්තුවේ ඇත්නම් Mochi ඉවත් කරන්න.</string>
-    <string name="oem_hint_allow">පසුබිමට අවසර</string>
-    <string name="oem_hint_dismiss">නැවත නොපෙන්වන්න</string>
-
+    <string name="push_service_group">පසුබිම් සේවාව</string>
 </resources>

@@ -35,7 +35,6 @@
     <string name="access_owner">Սեփականատեր</string>
     <string name="access_revoke">Հետ վերցնել</string>
     <string name="access_level">Մուտքի մակարդակ</string>
-    <string name="access_level_manage">Կառավարել նիստերը</string>
     <string name="access_level_comment">Մեկնաբանել և դիտել</string>
     <string name="access_level_view">Դիտել</string>
     <string name="access_level_none">Ոչ մեկը</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Անհամաձայն</string>
     <string name="push_service_action_hide">Թաքցնել</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mochi-ն կապակցված է պահում՝ ծանուցումներ ստանալու համար</string>
-    <string name="push_service_title">Mochi-ն լսում է ծանուցումներ</string>
-    <string name="push_service_text">Դուք կարող եք թաքցնել այս ծանուցումը</string>
-    <string name="reauth_channel_name">Mochi: մուտքագրումը պարտադիր է</string>
-    <string name="reauth_channel_description">Հայտնվում է, երբ Mochi-ն չի կարող կապ հաստատել ձեր սերվերի հետ, քանի որ ձեր նիստը չեղյալ է հայտարարված</string>
-    <string name="reauth_signin_title">Mochi: կրկին մուտք գործեք</string>
-    <string name="reauth_signin_text">Ծանուցումները դադարեցված են, մինչև կրկին մուտք գործեք</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Մնացեք հասանելի ֆոնում</string>
-    <string name="oem_hint_body">Mochi-ն պետք է աշխատի ֆոնում՝ ծանուցումներ առաքելու համար: Խնդրում ենք թույլատրել սա հաջորդ էկրանին, հակառակ դեպքում ձեր հեռախոսը կարող է դադարեցնել ծանուցումները, երբ էկրանը անջատված է:</string>
-    <string name="oem_hint_samsung_note">Samsung հեռախոսներում նաև ստուգեք Settings → Device care → Sleeping apps և հեռացրեք Mochi-ն, եթե այն ցուցակում է:</string>
-    <string name="oem_hint_allow">Թույլատրել ֆոնը</string>
-    <string name="oem_hint_dismiss">Այլևս ցույց չտալ</string>
-
+    <string name="push_service_group">Ֆոնային ծառայություն</string>
 </resources>

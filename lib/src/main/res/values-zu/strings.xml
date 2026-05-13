@@ -35,7 +35,6 @@
     <string name="access_owner">Umnikazi</string>
     <string name="access_revoke">Hoxisa</string>
     <string name="access_level">Izinga lokufinyelela</string>
-    <string name="access_level_manage">Phatha</string>
     <string name="access_level_comment">Umbono</string>
     <string name="access_level_view">Buka</string>
     <string name="access_level_none">Lutho</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Ngiyaphikisa</string>
     <string name="push_service_action_hide">Fihla</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Igcina i-Mochi ixhunyiwe ukuze ithole izaziso</string>
-    <string name="push_service_title">I-Mochi ilalele izaziso</string>
-    <string name="push_service_text">Ungayifihla lesi saziso</string>
-    <string name="reauth_channel_name">Mochi: kudingeka ungene ngemvume</string>
-    <string name="reauth_channel_description">Ivela lapho i-Mochi ingakwazi ukufinyelela iseva yakho ngenxa yokuthi iseshini yakho icishiwe</string>
-    <string name="reauth_signin_title">Mochi: ngena ngemvume futhi</string>
-    <string name="reauth_signin_text">Izaziso zimisiwe okwesikhashana ize ungene ngemvume futhi</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Hlala ufinyeleleka ngemuva</string>
-    <string name="oem_hint_body">I-Mochi kumelwe isebenze ngemuva ukuze ilethe izaziso. Sicela uvumele lokhu esikrinini esilandelayo, ngenye indlela ifoni yakho ingakhipha izaziso uma isikrini sicishiwe.</string>
-    <string name="oem_hint_samsung_note">Kumakhalekhukhwini e-Samsung, hlola futhi i-Settings → Device care → Sleeping apps bese ususa i-Mochi uma ifakwe ohlwini.</string>
-    <string name="oem_hint_allow">Vumela ngemuva</string>
-    <string name="oem_hint_dismiss">Ungabonisi futhi</string>
-
+    <string name="push_service_group">Insizakalo yangemuva</string>
 </resources>

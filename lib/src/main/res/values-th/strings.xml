@@ -35,7 +35,6 @@
     <string name="access_owner">เจ้าของ</string>
     <string name="access_revoke">เพิกถอน</string>
     <string name="access_level">ระดับการเข้าถึง</string>
-    <string name="access_level_manage">จัดการ</string>
     <string name="access_level_comment">ความคิดเห็น</string>
     <string name="access_level_view">ดู</string>
     <string name="access_level_none">ไม่มี</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">ไม่เห็นด้วย</string>
     <string name="push_service_action_hide">ซ่อน</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">ทำให้ Mochi เชื่อมต่ออยู่เพื่อรับการแจ้งเตือน</string>
-    <string name="push_service_title">Mochi กำลังรอการแจ้งเตือน</string>
-    <string name="push_service_text">คุณสามารถซ่อนการแจ้งเตือนนี้ได้</string>
-    <string name="reauth_channel_name">Mochi: ต้องเข้าสู่ระบบ</string>
-    <string name="reauth_channel_description">ปรากฏเมื่อ Mochi ไม่สามารถเข้าถึงเซิร์ฟเวอร์ของคุณได้เนื่องจากเซสชันของคุณถูกเพิกถอน</string>
-    <string name="reauth_signin_title">Mochi: เข้าสู่ระบบอีกครั้ง</string>
-    <string name="reauth_signin_text">การแจ้งเตือนหยุดชั่วคราวจนกว่าคุณจะเข้าสู่ระบบอีกครั้ง</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">ติดต่อได้ในเบื้องหลัง</string>
-    <string name="oem_hint_body">Mochi ต้องทำงานในเบื้องหลังเพื่อส่งการแจ้งเตือน โปรดอนุญาตในหน้าจอถัดไป มิฉะนั้นโทรศัพท์ของคุณอาจหยุดการแจ้งเตือนเมื่อหน้าจอปิด</string>
-    <string name="oem_hint_samsung_note">บนโทรศัพท์ Samsung โปรดตรวจสอบ Settings → Device care → Sleeping apps ด้วย และนำ Mochi ออกหากอยู่ในรายการ</string>
-    <string name="oem_hint_allow">อนุญาตเบื้องหลัง</string>
-    <string name="oem_hint_dismiss">ไม่ต้องแสดงอีก</string>
-
+    <string name="push_service_group">บริการเบื้องหลัง</string>
 </resources>

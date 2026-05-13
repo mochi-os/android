@@ -35,7 +35,6 @@
     <string name="access_owner">Pemilik</string>
     <string name="access_revoke">Cabut</string>
     <string name="access_level">Tingkat akses</string>
-    <string name="access_level_manage">Kelola</string>
     <string name="access_level_comment">Komentar</string>
     <string name="access_level_view">Lihat</string>
     <string name="access_level_none">Tidak ada</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Tidak setuju</string>
     <string name="push_service_action_hide">Sembunyikan</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Menjaga Mochi tetap terhubung untuk menerima notifikasi</string>
-    <string name="push_service_title">Mochi mendengarkan notifikasi</string>
-    <string name="push_service_text">Anda dapat menyembunyikan notifikasi ini</string>
-    <string name="reauth_channel_name">Mochi: perlu masuk</string>
-    <string name="reauth_channel_description">Muncul saat Mochi tidak dapat menjangkau server Anda karena sesi Anda dibatalkan</string>
-    <string name="reauth_signin_title">Mochi: masuk lagi</string>
-    <string name="reauth_signin_text">Notifikasi dijeda hingga Anda masuk kembali</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Tetap terjangkau di latar belakang</string>
-    <string name="oem_hint_body">Mochi harus berjalan di latar belakang untuk mengirimkan notifikasi. Harap izinkan ini pada layar berikutnya, jika tidak, ponsel Anda dapat menjeda notifikasi saat layar mati.</string>
-    <string name="oem_hint_samsung_note">Pada ponsel Samsung, periksa juga Settings → Device care → Sleeping apps dan hapus Mochi jika terdaftar.</string>
-    <string name="oem_hint_allow">Izinkan latar belakang</string>
-    <string name="oem_hint_dismiss">Jangan tampilkan lagi</string>
-
+    <string name="push_service_group">Layanan latar belakang</string>
 </resources>

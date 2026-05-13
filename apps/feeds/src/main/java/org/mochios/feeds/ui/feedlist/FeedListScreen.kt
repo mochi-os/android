@@ -394,7 +394,7 @@ private fun FeedRow(
                     val shortcut = ShortcutInfoCompat.Builder(context, "feed_$feedId")
                         .setShortLabel(feed.name)
                         .setLongLabel(feed.name)
-                        .setIcon(IconCompat.createWithResource(context, MochiR.drawable.ic_mochi_notification))
+                        .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_feeds))
                         .setIntent(intent)
                         .build()
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)

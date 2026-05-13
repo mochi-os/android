@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Oraindik ez dago Mochi aplikaziorik instalatuta. Hasteko instalatu Mochi Feeds, Mochi Chat, Mochi Forums edo Mochi Projects.</string>
     <string name="launcher_feeds">Jarioak</string>
     <string name="launcher_chat">Txata</string>
     <string name="launcher_forums">Foroak</string>

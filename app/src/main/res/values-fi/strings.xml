@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Mochi-sovelluksia ei ole vielä asennettu. Asenna Mochi Feeds, Mochi Chat, Mochi Forums tai Mochi Projects aloittaaksesi.</string>
     <string name="launcher_feeds">Syötteet</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Foorumit</string>

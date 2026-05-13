@@ -35,7 +35,6 @@
     <string name="access_owner">Proprietário</string>
     <string name="access_revoke">Revogar</string>
     <string name="access_level">Nível de acesso</string>
-    <string name="access_level_manage">Gerenciar</string>
     <string name="access_level_comment">Comentário</string>
     <string name="access_level_view">Visualizar</string>
     <string name="access_level_none">Nenhum</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Discordo</string>
     <string name="push_service_action_hide">Ocultar</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mantém o Mochi conectado para receber notificações</string>
-    <string name="push_service_title">Mochi aguardando notificações</string>
-    <string name="push_service_text">Você pode ocultar esta notificação</string>
-    <string name="reauth_channel_name">Mochi: login necessário</string>
-    <string name="reauth_channel_description">Aparece quando o Mochi não consegue acessar seu servidor porque sua sessão foi invalidada</string>
-    <string name="reauth_signin_title">Mochi: faça login novamente</string>
-    <string name="reauth_signin_text">As notificações estão pausadas até você fazer login novamente</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Mantenha-se acessível em segundo plano</string>
-    <string name="oem_hint_body">O Mochi precisa rodar em segundo plano para entregar notificações. Permita isso na próxima tela, caso contrário, seu telefone pode pausar as notificações quando a tela estiver desligada.</string>
-    <string name="oem_hint_samsung_note">Em celulares Samsung, verifique também Settings → Device care → Sleeping apps e remova o Mochi se estiver listado.</string>
-    <string name="oem_hint_allow">Permitir segundo plano</string>
-    <string name="oem_hint_dismiss">Não mostrar novamente</string>
-
+    <string name="push_service_group">Serviço em segundo plano</string>
 </resources>

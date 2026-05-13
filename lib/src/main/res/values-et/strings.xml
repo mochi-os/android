@@ -35,7 +35,6 @@
     <string name="access_owner">Omanik</string>
     <string name="access_revoke">Tühista</string>
     <string name="access_level">Juurdepääsu tase</string>
-    <string name="access_level_manage">Halda</string>
     <string name="access_level_comment">Kommentaar</string>
     <string name="access_level_view">Vaata</string>
     <string name="access_level_none">Puudub</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Ei nõustu</string>
     <string name="push_service_action_hide">Peida</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Hoiab Mochi ühendatuna teadete vastuvõtmiseks</string>
-    <string name="push_service_title">Mochi kuulab teateid</string>
-    <string name="push_service_text">Saate selle teate peita</string>
-    <string name="reauth_channel_name">Mochi: sisselogimine nõutav</string>
-    <string name="reauth_channel_description">Ilmub, kui Mochi ei saa teie serverit kätte, kuna teie seanss on tühistatud</string>
-    <string name="reauth_signin_title">Mochi: logige uuesti sisse</string>
-    <string name="reauth_signin_text">Teated on pausitud, kuni logite uuesti sisse</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Püsi taustal kättesaadav</string>
-    <string name="oem_hint_body">Mochi peab töötama taustal, et teateid kohale toimetada. Palun lubage see järgmisel ekraanil, vastasel juhul võib teie telefon teateid pausida, kui ekraan on välja lülitatud.</string>
-    <string name="oem_hint_samsung_note">Samsungi telefonidel kontrollige ka Settings → Device care → Sleeping apps ja eemaldage Mochi, kui see on loendis.</string>
-    <string name="oem_hint_allow">Luba taust</string>
-    <string name="oem_hint_dismiss">Ära näita uuesti</string>
-
+    <string name="push_service_group">Taustateenus</string>
 </resources>

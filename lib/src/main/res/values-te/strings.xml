@@ -35,7 +35,6 @@
     <string name="access_owner">ఓనర్</string>
     <string name="access_revoke">రద్దు చేయండి</string>
     <string name="access_level">యాక్సెస్ స్థాయి</string>
-    <string name="access_level_manage">నిర్వహించండి</string>
     <string name="access_level_comment">వ్యాఖ్య</string>
     <string name="access_level_view">వీక్షించండి</string>
     <string name="access_level_none">ఏదీ లేదు</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">ఏకీభవించను</string>
     <string name="push_service_action_hide">దాచండి</string>
 
-    <string name="push_service_channel">Mochi పుష్</string>
-    <string name="push_service_channel_description">నోటిఫికేషన్లను పొందడానికి Mochi ని కనెక్ట్ గా ఉంచుతుంది</string>
-    <string name="push_service_title">Mochi నోటిఫికేషన్ల కోసం వేచి ఉంది</string>
-    <string name="push_service_text">మీరు ఈ నోటిఫికేషన్ ను దాచవచ్చు</string>
-    <string name="reauth_channel_name">Mochi: సైన్ ఇన్ అవసరం</string>
-    <string name="reauth_channel_description">మీ సెషన్ చెల్లుబాటుకాకుండా చేయబడినందున Mochi మీ సర్వర్ ను చేరుకోలేనప్పుడు కనిపిస్తుంది</string>
-    <string name="reauth_signin_title">Mochi: మళ్లీ సైన్ ఇన్ చేయండి</string>
-    <string name="reauth_signin_text">మీరు మళ్లీ సైన్ ఇన్ చేసే వరకు నోటిఫికేషన్లు పాజ్ చేయబడ్డాయి</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">నేపథ్యంలో అందుబాటులో ఉండండి</string>
-    <string name="oem_hint_body">నోటిఫికేషన్‌లు అందించడానికి Mochi నేపథ్యంలో నడవాలి. దయచేసి తదుపరి స్క్రీన్‌లో దీనిని అనుమతించండి, లేదంటే స్క్రీన్ ఆఫ్ ఉన్నప్పుడు మీ ఫోన్ నోటిఫికేషన్‌లను నిలిపివేయవచ్చు.</string>
-    <string name="oem_hint_samsung_note">Samsung ఫోన్‌లలో Settings → Device care → Sleeping apps కూడా తనిఖీ చేసి, జాబితాలో ఉంటే Mochi ను తీసివేయండి.</string>
-    <string name="oem_hint_allow">నేపథ్యం అనుమతించు</string>
-    <string name="oem_hint_dismiss">మళ్ళీ చూపవద్దు</string>
-
+    <string name="push_service_group">నేపథ్య సేవ</string>
 </resources>

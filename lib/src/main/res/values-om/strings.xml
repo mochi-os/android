@@ -35,7 +35,6 @@
     <string name="access_owner">Abbaa qabeenyaa</string>
     <string name="access_revoke">Haqi</string>
     <string name="access_level">Sadarkaa seensaa</string>
-    <string name="access_level_manage">Toattaachi</string>
     <string name="access_level_comment">Yaada</string>
     <string name="access_level_view">Daawwadhu</string>
     <string name="access_level_none">Tokko illee</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Wal mormi</string>
     <string name="push_service_action_hide">Dhoksi</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mochi beeksisawwan fudhachuuf akka walqabsiifame ta\'u taasisa</string>
-    <string name="push_service_title">Mochi beeksisawwan eega jira</string>
-    <string name="push_service_text">Beeksisa kana dhoksuu dandeessa</string>
-    <string name="reauth_channel_name">Mochi: galuun barbaachisa</string>
-    <string name="reauth_channel_description">Sababaa sessenii kee fashalaa\'eef Mochi sarvarii kee dhaquu hin dandeenye yeroo mul\'ata</string>
-    <string name="reauth_signin_title">Mochi: irra deebi\'ii gali</string>
-    <string name="reauth_signin_text">Hanga irra deebi\'ee galtutti beeksisawwan dhaabbatu</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Duuba boodhaa irratti dhaqqabamaa ta\'i</string>
-    <string name="oem_hint_body">Mochi beeksisawwan dabarsuuf duuba boodhaa irratti hojjechuu qaba. Maaloo agarsiisaa itti aanu irratti hayyamuuf, yoo kana ta\'uu baate bilbilli kee yeroo agarsiisaan dhaamu beeksisawwan dhaabuu danda\'a.</string>
-    <string name="oem_hint_samsung_note">Bilbilawwan Samsung irratti Settings → Device care → Sleeping apps mirkaneeffadhu fi tarreeffame yoo ta\'e Mochi haqi.</string>
-    <string name="oem_hint_allow">Duuba boodhaa hayyamuu</string>
-    <string name="oem_hint_dismiss">Lammata hin agarsiisin</string>
-
+    <string name="push_service_group">Tajaajila duubaa</string>
 </resources>

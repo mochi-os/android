@@ -35,7 +35,6 @@
     <string name="access_owner">ഉടമ</string>
     <string name="access_revoke">റദ്ദാക്കുക</string>
     <string name="access_level">ആക്സസ് ലെവൽ</string>
-    <string name="access_level_manage">മാനേജ് ചെയ്യുക</string>
     <string name="access_level_comment">അഭിപ്രായം</string>
     <string name="access_level_view">കാണുക</string>
     <string name="access_level_none">ഒന്നുമില്ല</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">വിയോജിക്കുന്നു</string>
     <string name="push_service_action_hide">മറയ്ക്കുക</string>
 
-    <string name="push_service_channel">Mochi പുഷ്</string>
-    <string name="push_service_channel_description">നോട്ടിഫിക്കേഷനുകൾ ലഭിക്കാൻ Mochi-യെ കണക്റ്റ് ചെയ്ത് നിലനിർത്തുന്നു</string>
-    <string name="push_service_title">Mochi നോട്ടിഫിക്കേഷനുകൾക്കായി കാത്തിരിക്കുന്നു</string>
-    <string name="push_service_text">നിങ്ങൾക്ക് ഈ നോട്ടിഫിക്കേഷൻ മറയ്ക്കാം</string>
-    <string name="reauth_channel_name">Mochi: സൈൻ ഇൻ ആവശ്യമാണ്</string>
-    <string name="reauth_channel_description">നിങ്ങളുടെ സെഷൻ അസാധുവാക്കിയതിനാൽ Mochi-ക്ക് നിങ്ങളുടെ സെർവറിൽ എത്താൻ കഴിയാത്തപ്പോൾ പ്രത്യക്ഷപ്പെടുന്നു</string>
-    <string name="reauth_signin_title">Mochi: വീണ്ടും സൈൻ ഇൻ ചെയ്യുക</string>
-    <string name="reauth_signin_text">നിങ്ങൾ വീണ്ടും സൈൻ ഇൻ ചെയ്യുന്നതുവരെ നോട്ടിഫിക്കേഷനുകൾ താൽക്കാലികമായി നിർത്തിയിരിക്കുന്നു</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">പശ്ചാത്തലത്തിൽ ലഭ്യമായിരിക്കുക</string>
-    <string name="oem_hint_body">അറിയിപ്പുകൾ വിതരണം ചെയ്യാൻ Mochi പശ്ചാത്തലത്തിൽ പ്രവർത്തിക്കണം. അടുത്ത സ്ക്രീനിൽ ഇത് അനുവദിക്കുക, അല്ലെങ്കിൽ സ്ക്രീൻ ഓഫ് ആകുമ്പോൾ ഫോൺ അറിയിപ്പുകൾ താൽക്കാലികമായി നിർത്തിയേക്കാം.</string>
-    <string name="oem_hint_samsung_note">Samsung ഫോണുകളിൽ Settings → Device care → Sleeping apps പരിശോധിക്കുകയും, പട്ടികയിലുണ്ടെങ്കിൽ Mochi നീക്കം ചെയ്യുകയും ചെയ്യുക.</string>
-    <string name="oem_hint_allow">പശ്ചാത്തലം അനുവദിക്കുക</string>
-    <string name="oem_hint_dismiss">വീണ്ടും കാണിക്കരുത്</string>
-
+    <string name="push_service_group">പശ്ചാത്തല സേവനം</string>
 </resources>

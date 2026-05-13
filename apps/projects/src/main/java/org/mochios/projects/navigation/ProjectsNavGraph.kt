@@ -16,19 +16,23 @@ import org.mochios.projects.ui.settings.ProjectSettingsScreen
 object ProjectsApp {
     const val HOME = "projects/list"
     const val PROJECT_LIST = "projects/list"
-    const val PROJECT = "projects/{projectId}"
-    const val PROJECT_OBJECT = "projects/{projectId}/object/{objectId}"
+    // Detail routes use a `project/` discriminator after the feature prefix
+    // so they can't shadow the literal HOME / FIND_PROJECTS routes —
+    // `projects/list` would otherwise match `projects/{projectId}` with
+    // projectId='list' and route to the detail screen rendering NotFoundState.
+    const val PROJECT = "projects/project/{projectId}"
+    const val PROJECT_OBJECT = "projects/project/{projectId}/object/{objectId}"
     const val FIND_PROJECTS = "projects/discover"
-    const val PROJECT_SETTINGS = "projects/{projectId}/settings"
-    const val PROJECT_DESIGN = "projects/{projectId}/design"
-    const val DIFF_VIEWER = "projects/{projectId}/diff/{repo}?source={source}&target={target}"
+    const val PROJECT_SETTINGS = "projects/project/{projectId}/settings"
+    const val PROJECT_DESIGN = "projects/project/{projectId}/design"
+    const val DIFF_VIEWER = "projects/project/{projectId}/diff/{repo}?source={source}&target={target}"
 
-    fun project(projectId: String) = "projects/$projectId"
-    fun projectObject(projectId: String, objectId: String) = "projects/$projectId/object/$objectId"
-    fun projectSettings(projectId: String) = "projects/$projectId/settings"
-    fun projectDesign(projectId: String) = "projects/$projectId/design"
+    fun project(projectId: String) = "projects/project/$projectId"
+    fun projectObject(projectId: String, objectId: String) = "projects/project/$projectId/object/$objectId"
+    fun projectSettings(projectId: String) = "projects/project/$projectId/settings"
+    fun projectDesign(projectId: String) = "projects/project/$projectId/design"
     fun diffViewer(projectId: String, repo: String, source: String, target: String) =
-        "projects/$projectId/diff/$repo?source=$source&target=$target"
+        "projects/project/$projectId/diff/$repo?source=$source&target=$target"
 }
 
 fun NavGraphBuilder.projectsNavGraph(

@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Hali Mochi ilovalari o‘rnatilmagan. Boshlash uchun Mochi Feeds, Mochi Chat, Mochi Forums yoki Mochi Projects o‘rnating.</string>
     <string name="launcher_feeds">Tasmalar</string>
     <string name="launcher_chat">Suhbat</string>
     <string name="launcher_forums">Forumlar</string>

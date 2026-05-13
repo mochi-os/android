@@ -35,7 +35,6 @@
     <string name="access_owner">オーナー</string>
     <string name="access_revoke">取り消し</string>
     <string name="access_level">アクセスレベル</string>
-    <string name="access_level_manage">管理</string>
     <string name="access_level_comment">コメント</string>
     <string name="access_level_view">ビュー</string>
     <string name="access_level_none">なし</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">反対</string>
     <string name="push_service_action_hide">非表示</string>
 
-    <string name="push_service_channel">Mochi プッシュ</string>
-    <string name="push_service_channel_description">通知を受信するため Mochi の接続を維持します</string>
-    <string name="push_service_title">Mochi が通知を待機しています</string>
-    <string name="push_service_text">この通知は非表示にできます</string>
-    <string name="reauth_channel_name">Mochi: サインインが必要です</string>
-    <string name="reauth_channel_description">セッションが無効になり Mochi がサーバーに接続できないときに表示されます</string>
-    <string name="reauth_signin_title">Mochi: 再度サインインしてください</string>
-    <string name="reauth_signin_text">再度サインインするまで通知は一時停止されます</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">バックグラウンドで到達可能を維持</string>
-    <string name="oem_hint_body">Mochi が通知を配信するにはバックグラウンドで実行する必要があります。次の画面で許可してください。許可しないと、画面がオフのときに端末が通知を停止する場合があります。</string>
-    <string name="oem_hint_samsung_note">Samsung 端末では、Settings → Device care → Sleeping apps も確認し、Mochi がリストにある場合は削除してください。</string>
-    <string name="oem_hint_allow">バックグラウンドを許可</string>
-    <string name="oem_hint_dismiss">今後表示しない</string>
-
+    <string name="push_service_group">バックグラウンドサービス</string>
 </resources>

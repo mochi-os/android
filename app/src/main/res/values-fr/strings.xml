@@ -3,7 +3,6 @@
 
     <string name="app_name">Mochi</string>
 
-    <string name="launchpad_no_apps">Aucune application Mochi installée. Installez Mochi Feeds, Mochi Chat, Mochi Forums ou Mochi Projects pour commencer.</string>
     <string name="launcher_feeds">Flux</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forums</string>

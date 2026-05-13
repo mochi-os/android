@@ -35,7 +35,6 @@
     <string name="access_owner">Соҳиб</string>
     <string name="access_revoke">Бекор кардан</string>
     <string name="access_level">Сатҳи дастрасӣ</string>
-    <string name="access_level_manage">Идора</string>
     <string name="access_level_comment">Шарҳ</string>
     <string name="access_level_view">Намоиш</string>
     <string name="access_level_none">Ҳеҷ кадом</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Розӣ нестам</string>
     <string name="push_service_action_hide">Пинҳон кардан</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Mochi-ро барои гирифтани огоҳиҳо пайваст нигоҳ медорад</string>
-    <string name="push_service_title">Mochi огоҳиҳоро интизор аст</string>
-    <string name="push_service_text">Шумо метавонед ин огоҳиро пинҳон кунед</string>
-    <string name="reauth_channel_name">Mochi: воридшавӣ лозим аст</string>
-    <string name="reauth_channel_description">Замоне пайдо мешавад, ки сеанси шумо беэътибор шуда, Mochi ба сервери шумо расида наметавонад</string>
-    <string name="reauth_signin_title">Mochi: дубора ворид шавед</string>
-    <string name="reauth_signin_text">То дубора ворид нашавед, огоҳиҳо қатъ карда мешаванд</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Дар замина дастрас бимонед</string>
-    <string name="oem_hint_body">Mochi бояд дар замина кор кунад, то огоҳиҳоро расонад. Лутфан дар экрани навбатӣ ба ин иҷозат диҳед, вагарна телефон шумо вақте ки экран хомӯш аст, метавонад огоҳиҳоро қатъ кунад.</string>
-    <string name="oem_hint_samsung_note">Дар телефонҳои Samsung, инчунин Settings → Device care → Sleeping apps -ро санҷед ва агар дар рӯйхат бошад, Mochi-ро ҳазф кунед.</string>
-    <string name="oem_hint_allow">Иҷозат барои замина</string>
-    <string name="oem_hint_dismiss">Боз нишон надиҳед</string>
-
+    <string name="push_service_group">Хидмати замина</string>
 </resources>

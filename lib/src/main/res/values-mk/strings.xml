@@ -35,7 +35,6 @@
     <string name="access_owner">Сопственик</string>
     <string name="access_revoke">Отповикај</string>
     <string name="access_level">Ниво на пристап</string>
-    <string name="access_level_manage">Управувај</string>
     <string name="access_level_comment">Коментар</string>
     <string name="access_level_view">Прикажи</string>
     <string name="access_level_none">Ништо</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Не се согласувам</string>
     <string name="push_service_action_hide">Сокриј</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Го одржува Mochi поврзан за примање известувања</string>
-    <string name="push_service_title">Mochi слуша за известувања</string>
-    <string name="push_service_text">Може да го скриете ова известување</string>
-    <string name="reauth_channel_name">Mochi: потребно е најавување</string>
-    <string name="reauth_channel_description">Се појавува кога Mochi не може да допре до вашиот сервер бидејќи вашата сесија е поништена</string>
-    <string name="reauth_signin_title">Mochi: најавете се повторно</string>
-    <string name="reauth_signin_text">Известувањата се паузирани додека повторно не се најавите</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Останете достапни во заднина</string>
-    <string name="oem_hint_body">Mochi мора да работи во заднина за да испорачува известувања. Дозволете го ова на следниот екран, инаку телефонот може да ги паузира известувањата кога екранот е исклучен.</string>
-    <string name="oem_hint_samsung_note">На Samsung телефони, проверете и Settings → Device care → Sleeping apps и отстранете го Mochi ако е на листата.</string>
-    <string name="oem_hint_allow">Дозволи заднина</string>
-    <string name="oem_hint_dismiss">Не покажувај повторно</string>
-
+    <string name="push_service_group">Услуга во заднина</string>
 </resources>

@@ -35,7 +35,6 @@
     <string name="access_owner">בעלים</string>
     <string name="access_revoke">בטל</string>
     <string name="access_level">רמת גישה</string>
-    <string name="access_level_manage">ניהול</string>
     <string name="access_level_comment">תגובה</string>
     <string name="access_level_view">הצג</string>
     <string name="access_level_none">ללא</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">לא מסכים</string>
     <string name="push_service_action_hide">הסתר</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">שומר על חיבור Mochi כדי לקבל התראות</string>
-    <string name="push_service_title">Mochi מאזין להתראות</string>
-    <string name="push_service_text">ניתן להסתיר את ההתראה הזו</string>
-    <string name="reauth_channel_name">Mochi: נדרשת התחברות</string>
-    <string name="reauth_channel_description">מופיע כאשר Mochi לא יכול להגיע לשרת שלך כיוון שהפעלתך בוטלה</string>
-    <string name="reauth_signin_title">Mochi: התחבר שוב</string>
-    <string name="reauth_signin_text">ההתראות מושהות עד שתתחבר שוב</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">הישאר זמין ברקע</string>
-    <string name="oem_hint_body">Mochi חייב לפעול ברקע כדי לספק התראות. אנא אפשר זאת במסך הבא, אחרת הטלפון שלך עשוי להשהות התראות כשהמסך כבוי.</string>
-    <string name="oem_hint_samsung_note">בטלפוני Samsung, בדוק גם Settings → Device care → Sleeping apps והסר את Mochi אם הוא רשום.</string>
-    <string name="oem_hint_allow">אפשר רקע</string>
-    <string name="oem_hint_dismiss">אל תציג שוב</string>
-
+    <string name="push_service_group">שירות רקע</string>
 </resources>

@@ -35,7 +35,6 @@
     <string name="access_owner">Ιδιοκτήτης</string>
     <string name="access_revoke">Ανάκληση</string>
     <string name="access_level">Επίπεδο πρόσβασης</string>
-    <string name="access_level_manage">Διαχείριση</string>
     <string name="access_level_comment">Σχόλιο</string>
     <string name="access_level_view">Προβολή</string>
     <string name="access_level_none">Κανένα</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">Διαφωνώ</string>
     <string name="push_service_action_hide">Απόκρυψη</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">Διατηρεί το Mochi συνδεδεμένο για λήψη ειδοποιήσεων</string>
-    <string name="push_service_title">Το Mochi ακούει για ειδοποιήσεις</string>
-    <string name="push_service_text">Μπορείτε να αποκρύψετε αυτήν την ειδοποίηση</string>
-    <string name="reauth_channel_name">Mochi: απαιτείται σύνδεση</string>
-    <string name="reauth_channel_description">Εμφανίζεται όταν το Mochi δεν μπορεί να φτάσει στον διακομιστή σας επειδή η συνεδρία σας έχει ακυρωθεί</string>
-    <string name="reauth_signin_title">Mochi: συνδεθείτε ξανά</string>
-    <string name="reauth_signin_text">Οι ειδοποιήσεις έχουν παύσει μέχρι να συνδεθείτε ξανά</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">Παραμείνετε προσβάσιμοι στο παρασκήνιο</string>
-    <string name="oem_hint_body">Το Mochi πρέπει να εκτελείται στο παρασκήνιο για να παραδίδει ειδοποιήσεις. Επιτρέψτε το στην επόμενη οθόνη, διαφορετικά το τηλέφωνό σας μπορεί να διακόψει τις ειδοποιήσεις όταν η οθόνη είναι κλειστή.</string>
-    <string name="oem_hint_samsung_note">Σε τηλέφωνα Samsung, ελέγξτε επίσης Settings → Device care → Sleeping apps και αφαιρέστε το Mochi εάν αναφέρεται.</string>
-    <string name="oem_hint_allow">Επιτρέψτε παρασκήνιο</string>
-    <string name="oem_hint_dismiss">Μην εμφανιστεί ξανά</string>
-
+    <string name="push_service_group">Υπηρεσία παρασκηνίου</string>
 </resources>

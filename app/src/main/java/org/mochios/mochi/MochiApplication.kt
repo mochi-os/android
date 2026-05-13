@@ -7,6 +7,7 @@ import org.mochios.android.i18n.AppContext
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.push.PushServiceWatchdog
+import org.mochios.android.update.UpdateChecker
 import org.mochios.chat.notifications.setupChatNotificationChannel
 import org.mochios.feeds.notifications.setupFeedsNotificationChannel
 import org.mochios.forums.notifications.setupForumsNotificationChannel
@@ -28,5 +29,6 @@ class MochiApplication : Application() {
         setupForumsNotificationChannel(this)
         setupProjectsNotificationChannel(this)
         PushServiceWatchdog.schedule(this)
+        UpdateChecker.schedule(this)
     }
 }

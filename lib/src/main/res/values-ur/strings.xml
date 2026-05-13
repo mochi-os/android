@@ -35,7 +35,6 @@
     <string name="access_owner">مالک</string>
     <string name="access_revoke">منسوخ کریں</string>
     <string name="access_level">رسائی کی سطح</string>
-    <string name="access_level_manage">منظم کریں</string>
     <string name="access_level_comment">تبصرہ</string>
     <string name="access_level_view">دیکھیں</string>
     <string name="access_level_none">کوئی نہیں</string>
@@ -50,19 +49,5 @@
     <string name="reaction_disagree">اختلاف</string>
     <string name="push_service_action_hide">چھپائیں</string>
 
-    <string name="push_service_channel">Mochi push</string>
-    <string name="push_service_channel_description">نوٹیفکیشنز وصول کرنے کے لیے Mochi کو منسلک رکھتا ہے</string>
-    <string name="push_service_title">Mochi نوٹیفکیشنز کا انتظار کر رہا ہے</string>
-    <string name="push_service_text">آپ اس نوٹیفکیشن کو چھپا سکتے ہیں</string>
-    <string name="reauth_channel_name">Mochi: سائن ان کی ضرورت</string>
-    <string name="reauth_channel_description">ظاہر ہوتا ہے جب آپ کا سیشن باطل ہونے کی وجہ سے Mochi آپ کے سرور تک نہیں پہنچ سکتا</string>
-    <string name="reauth_signin_title">Mochi: دوبارہ سائن ان کریں</string>
-    <string name="reauth_signin_text">نوٹیفکیشنز اس وقت تک روک دی گئی ہیں جب تک آپ دوبارہ سائن ان نہیں کرتے</string>
-    <!-- OEM background-restriction first-run dialog -->
-    <string name="oem_hint_title">پس منظر میں قابل رسائی رہیں</string>
-    <string name="oem_hint_body">اطلاعات پہنچانے کے لیے Mochi کو پس منظر میں چلنا ضروری ہے۔ براہ کرم اگلی اسکرین پر اس کی اجازت دیں، ورنہ اسکرین بند ہونے پر آپ کا فون اطلاعات روک سکتا ہے۔</string>
-    <string name="oem_hint_samsung_note">Samsung فونز پر Settings → Device care → Sleeping apps بھی چیک کریں اور اگر فہرست میں ہو تو Mochi کو ہٹا دیں۔</string>
-    <string name="oem_hint_allow">پس منظر کی اجازت</string>
-    <string name="oem_hint_dismiss">دوبارہ نہ دکھائیں</string>
-
+    <string name="push_service_group">بیک گراؤنڈ سروس</string>
 </resources>
