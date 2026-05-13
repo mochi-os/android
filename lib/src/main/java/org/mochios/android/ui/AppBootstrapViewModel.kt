@@ -69,6 +69,7 @@ class AppBootstrapViewModel @Inject constructor(
     val stage: StateFlow<AuthStage> = _stage.asStateFlow()
 
     private var appName: String = ""
+    private var prefetchApps: List<String> = emptyList()
     private var justAuthenticated: Boolean = false
 
     init {
@@ -115,9 +116,11 @@ class AppBootstrapViewModel @Inject constructor(
     }
 
     /** Host activity calls this once per onCreate with its own app name. */
-    fun start(appName: String) {
-        if (this.appName == appName && _stage.value !is AuthStage.Booting) return
+    fun start(appName: String, prefetchApps: List<String> = emptyList()) {
+        val same = this.appName == appName && this.prefetchApps == prefetchApps
+        if (same && _stage.value !is AuthStage.Booting) return
         this.appName = appName
+        this.prefetchApps = prefetchApps
         viewModelScope.launch { evaluate() }
     }
 
@@ -198,6 +201,17 @@ class AppBootstrapViewModel @Inject constructor(
             sessionManager.clearAll()
             _stage.value = AuthStage.NeedsLogin
             return
+        }
+
+        // Prefetch tokens for the super-app's other Mochi-apps so navigating
+        // to them via the launchpad or a notification doesn't surface "app
+        // token required" on the first API call. Best-effort — a per-app
+        // mint failure (user lacks access to that app on this server, etc.)
+        // is logged but not fatal. The cold-start app's mint above is the
+        // canonical session check.
+        for (other in prefetchApps) {
+            if (other == appName) continue
+            runCatching { authRepository.fetchToken(other) }
         }
 
         // Reconcile AccountManager with our just-validated session. The local

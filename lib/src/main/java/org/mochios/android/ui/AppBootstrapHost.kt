@@ -44,13 +44,14 @@ fun AppBootstrapHost(
     appName: String,
     oauthScheme: String?,
     onLocaleChangeRequested: () -> Unit,
-    ready: @Composable (onLogout: () -> Unit) -> Unit
+    prefetchApps: List<String> = emptyList(),
+    ready: @Composable (onLogout: () -> Unit) -> Unit,
 ) {
     val viewModel: AppBootstrapViewModel = hiltViewModel()
     val stage by viewModel.stage.collectAsState()
 
-    LaunchedEffect(appName) {
-        viewModel.start(appName)
+    LaunchedEffect(appName, prefetchApps) {
+        viewModel.start(appName, prefetchApps)
     }
 
     when (val s = stage) {
