@@ -125,15 +125,40 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    /** mochi:<intent>?<query> — opaque URI; parse the SSP manually. */
+    /**
+     * mochi:<intent>?<query> — opaque URI; parse the SSP manually.
+     *
+     * Android's Uri.getQueryParameter throws UnsupportedOperationException on
+     * opaque URIs (only HierarchicalUri implements it), so we split SSP into
+     * <name>?<query-string> and parse the params ourselves. Use the encoded
+     * form so percent-decoding is one pass per param value rather than once
+     * at the top (which can confuse splitting on '?' / '&' if a literal byte
+     * survives decoding).
+     */
     private fun handleSystemIntent(uri: Uri) {
-        val ssp = uri.schemeSpecificPart
-        val name = ssp.substringBefore('?')
+        val ssp = uri.encodedSchemeSpecificPart ?: return
+        val qIndex = ssp.indexOf('?')
+        val name = if (qIndex >= 0) ssp.substring(0, qIndex) else ssp
+        val query = if (qIndex >= 0) ssp.substring(qIndex + 1) else ""
+        val params = parseOpaqueQuery(query)
         when (name) {
-            "notification" -> setNotificationDeepLink(uri.getQueryParameter("link"))
-            "oauth-return" -> applyOAuthReturn(uri.getQueryParameter("code"), uri.getQueryParameter("error"))
+            "notification" -> setNotificationDeepLink(params["link"])
+            "oauth-return" -> applyOAuthReturn(params["code"], params["error"])
             else -> Log.w(TAG, "Unknown system intent in $uri")
         }
+    }
+
+    private fun parseOpaqueQuery(query: String): Map<String, String> {
+        if (query.isEmpty()) return emptyMap()
+        val out = mutableMapOf<String, String>()
+        for (pair in query.split('&')) {
+            val eq = pair.indexOf('=')
+            val key = if (eq < 0) pair else pair.substring(0, eq)
+            val value = if (eq < 0) "" else pair.substring(eq + 1)
+            if (key.isEmpty()) continue
+            out[Uri.decode(key)] = Uri.decode(value)
+        }
+        return out
     }
 
     /**
