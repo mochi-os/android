@@ -7,6 +7,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.heightIn
@@ -81,6 +83,7 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -107,6 +110,7 @@ import org.mochios.android.model.ReactionType
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.FlipboardPage
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MediaGrid
@@ -163,18 +167,16 @@ fun FeedScreen(
     var showAbout by remember { mutableStateOf(false) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
-    // Mark the current page's post as read after it's been settled for 1s
-    // (i.e. the user actually stopped on this post, didn't just flip past
-    // it). Equivalent to the old "bottom-of-post visible for 1s" rule
-    // adapted to the magazine-style pager — each page IS the bottom of
-    // the post for the user.
+    // Mark the current page's post as read as soon as the swipe settles on
+    // it — no debounce. The pager's currentPage only flips once the user
+    // has committed to that page (mid-swipe doesn't tick currentPage), so
+    // dropping the 1s delay still avoids spuriously marking pages the
+    // user flipped past.
     LaunchedEffect(pagerState, posts.size) {
-        snapshotFlow { pagerState.currentPage to pagerState.isScrollInProgress }
+        snapshotFlow { pagerState.currentPage }
             .distinctUntilChanged()
-            .collectLatest { (page, scrolling) ->
-                if (scrolling) return@collectLatest
+            .collectLatest { page ->
                 val current = posts.getOrNull(page) ?: return@collectLatest
-                delay(1000)
                 viewModel.onPostBottomViewed(current.id)
             }
     }
@@ -392,18 +394,7 @@ fun FeedScreen(
                                 // in rss.link. Anything else falls through to
                                 // the standard post detail screen.
                                 val sourceUrl = post.data?.rss?.link?.takeIf { it.isNotEmpty() }
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxSize()
-                                        .graphicsLayer {
-                                            val pageOffset = pagerState
-                                                .getOffsetDistanceInPages(page)
-                                                .coerceIn(-1f, 1f)
-                                            rotationX = pageOffset * 25f
-                                            cameraDistance = 8f * density
-                                            alpha = 1f - abs(pageOffset) * 0.4f
-                                        }
-                                ) {
+                                FlipboardPage(pagerState = pagerState, page = page) {
                                     PostCard(
                                         post = post,
                                         serverUrl = viewModel.serverUrl,
@@ -568,14 +559,24 @@ private fun PostCard(
 ) {
     // Magazine-style page: full-screen surface, no card chrome. The
     // VerticalPager wrapper handles the 3D flip; the page itself is just
-    // content on the theme background.
+    // content on the theme background. The action row is hoisted out of
+    // the scrollable content area below so it stays pinned at the bottom
+    // of the screen — easier thumb reach on tall phones, and matches the
+    // bottom-action-bar pattern Flipboard / Apple News use on full-screen
+    // article pages.
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surface)
-            .clickable(onClick = onClick)
             .padding(start = 16.dp, end = 4.dp, top = 16.dp, bottom = 16.dp)
     ) {
+      Column(
+          modifier = Modifier
+              .weight(1f)
+              .fillMaxWidth()
+              .verticalScroll(rememberScrollState())
+              .clickable(onClick = onClick)
+      ) {
             // Header: source/feed name + time + overflow menu
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -702,46 +703,6 @@ private fun PostCard(
             }
 
 
-            // Action row: reaction bar, then comment / edit / delete icon
-            // buttons. Mirrors the web layout (feed-posts.tsx: ReactionBar,
-            // MessageSquare, Pencil, Trash2). On mobile web these icons are
-            // always visible; on desktop they reveal on hover.
-            Spacer(modifier = Modifier.height(8.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                ReactionBar(
-                    reactions = toReactionCounts(post.reactions, post.myReaction),
-                    onReact = onReact,
-                    onRemoveReaction = { onReact(post.myReaction) },
-                    modifier = Modifier.weight(1f)
-                )
-                IconButton(onClick = onClick, modifier = Modifier.size(32.dp)) {
-                    Icon(
-                        Icons.Default.ChatBubbleOutline,
-                        contentDescription = stringResource(R.string.feeds_comments),
-                        modifier = Modifier.size(18.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                if (canManage) {
-                    IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
-                        Icon(
-                            Icons.Default.Edit,
-                            contentDescription = stringResource(MochiR.string.common_edit),
-                            modifier = Modifier.size(18.dp),
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                    IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
-                        Icon(
-                            Icons.Default.Delete,
-                            contentDescription = stringResource(MochiR.string.common_delete),
-                            modifier = Modifier.size(18.dp),
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                }
-            }
-
             // Inline comments preview (top-level only, newest first)
             if (post.comments.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(8.dp))
@@ -768,6 +729,47 @@ private fun PostCard(
                 }
             }
         }
+
+        // Bottom action bar: reaction bar, then comment / edit / delete
+        // icon buttons. Pinned at the bottom of the full-screen page so
+        // the user always knows where the menu is regardless of post
+        // length. Spacer adds a thin top divider-ish gap above the row.
+        Spacer(modifier = Modifier.height(8.dp))
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            ReactionBar(
+                reactions = toReactionCounts(post.reactions, post.myReaction),
+                onReact = onReact,
+                onRemoveReaction = { onReact(post.myReaction) },
+                modifier = Modifier.weight(1f)
+            )
+            IconButton(onClick = onClick, modifier = Modifier.size(32.dp)) {
+                Icon(
+                    Icons.Default.ChatBubbleOutline,
+                    contentDescription = stringResource(R.string.feeds_comments),
+                    modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            if (canManage) {
+                IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
+                    Icon(
+                        Icons.Default.Edit,
+                        contentDescription = stringResource(MochiR.string.common_edit),
+                        modifier = Modifier.size(18.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
+                    Icon(
+                        Icons.Default.Delete,
+                        contentDescription = stringResource(MochiR.string.common_delete),
+                        modifier = Modifier.size(18.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
+    }
 }
 
 @Composable

@@ -8,6 +8,8 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okio.buffer
@@ -51,14 +53,10 @@ class UpdateChecker(
         private const val VERSIONS_URL = "https://packages.mochi-os.org/android/versions.json"
         private const val APK_URL = "https://packages.mochi-os.org/android/mochi.apk"
 
-        /**
-         * Idempotent periodic schedule. Call from the host Application's
-         * onCreate. Currently set to 1h for testing the update flow; revert
-         * to 24h once the path is validated.
-         */
+        /** Idempotent daily schedule. Call from the host Application's onCreate. */
         fun schedule(context: Context) {
             val request = PeriodicWorkRequestBuilder<UpdateChecker>(
-                1, TimeUnit.HOURS,
+                24, TimeUnit.HOURS,
             ).build()
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
                 WORK_NAME,
@@ -72,22 +70,28 @@ class UpdateChecker(
          * the periodic worker uses; callable from a Compose coroutine so the
          * About dialog's button can show fresh status without waiting for the
          * next scheduled fire. Idempotent and safe to call from any context.
+         *
+         * Wrapped in Dispatchers.IO so callers can invoke from the main
+         * dispatcher (the dialog uses rememberCoroutineScope, which is Main)
+         * without tripping NetworkOnMainThreadException — OkHttp's
+         * synchronous execute() is blocking. CoroutineWorker.doWork runs
+         * off-main on its own, but this entry point may not.
          */
-        suspend fun checkNow(context: Context): CheckOutcome {
+        suspend fun checkNow(context: Context): CheckOutcome = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
-            val current = currentVersionName(ctx) ?: return CheckOutcome.UpToDate
+            val current = currentVersionName(ctx) ?: return@withContext CheckOutcome.UpToDate
 
             val latest = try {
                 fetchLatest()
             } catch (e: Exception) {
                 Log.i(TAG, "Fetch versions.json failed: ${e.message}")
-                return CheckOutcome.NetworkError
-            } ?: return CheckOutcome.UpToDate
+                return@withContext CheckOutcome.NetworkError
+            } ?: return@withContext CheckOutcome.UpToDate
 
             if (compareVersions(latest, current) <= 0) {
                 Log.d(TAG, "Running $current, latest $latest, nothing to do")
                 clearPending(ctx)
-                return CheckOutcome.UpToDate
+                return@withContext CheckOutcome.UpToDate
             }
 
             val target = apkFile(ctx, latest)
@@ -95,7 +99,7 @@ class UpdateChecker(
             val pending = prefs.getString(KEY_PENDING, "") ?: ""
             if (pending == latest && target.exists() && target.length() > 0) {
                 Log.d(TAG, "$latest already downloaded at ${target.absolutePath}")
-                return CheckOutcome.UpdateStaged
+                return@withContext CheckOutcome.UpdateStaged
             }
 
             // Stale entries for prior versions — drop them so cacheDir doesn't
@@ -107,12 +111,12 @@ class UpdateChecker(
             } catch (e: Exception) {
                 Log.i(TAG, "APK download failed: ${e.message}")
                 target.delete()
-                return CheckOutcome.DownloadFailed
+                return@withContext CheckOutcome.DownloadFailed
             }
             if (!target.exists() || target.length() == 0L) {
                 Log.w(TAG, "APK download produced empty file")
                 target.delete()
-                return CheckOutcome.DownloadFailed
+                return@withContext CheckOutcome.DownloadFailed
             }
 
             prefs.edit()
@@ -120,7 +124,7 @@ class UpdateChecker(
                 .putString(KEY_PENDING_PATH, target.absolutePath)
                 .apply()
             Log.i(TAG, "Update $latest staged at ${target.absolutePath} (running $current)")
-            return CheckOutcome.UpdateStaged
+            CheckOutcome.UpdateStaged
         }
 
         private fun fetchLatest(): String? {

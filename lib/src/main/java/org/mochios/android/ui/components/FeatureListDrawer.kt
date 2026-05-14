@@ -182,7 +182,7 @@ private fun DrawerItemRow(
         }
         if (item.unread > 0) {
             Badge {
-                Text(text = if (item.unread > 999) "999+" else item.unread.toString())
+                Text(text = item.unread.toString())
             }
         }
     }
