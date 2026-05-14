@@ -8,14 +8,14 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.forums.ui.find.FindForumsScreen
 import org.mochios.forums.ui.forum.ForumScreen
-import org.mochios.forums.ui.forumlist.ForumListScreen
 import org.mochios.forums.ui.newpost.NewPostScreen
 import org.mochios.forums.ui.post.PostScreen
+import org.mochios.forums.ui.router.ForumsRouter
 import org.mochios.forums.ui.settings.ForumSettingsScreen
 
 object ForumsApp {
-    const val HOME = "forums/list"
-    const val FORUM_LIST = "forums/list"
+    const val HOME = "forums/router"
+    const val ROUTER = "forums/router"
     // Detail routes use a `forum/` discriminator after the feature prefix so
     // they can't shadow the literal HOME / FIND_FORUMS routes — `forums/list`
     // would otherwise match `forums/{forumId}` with forumId='list' and route
@@ -36,26 +36,39 @@ fun NavGraphBuilder.forumsNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
 ) {
-    composable(ForumsApp.FORUM_LIST) {
-        ForumListScreen(
-            onForumClick = { id -> navController.navigate(ForumsApp.forum(id)) },
-            onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
-            onLogout = onLogout,
-        )
+    composable(ForumsApp.ROUTER) {
+        ForumsRouter(onResolve = { forumId ->
+            navController.navigate(ForumsApp.forum(forumId)) {
+                popUpTo(ForumsApp.ROUTER) { inclusive = true }
+            }
+        })
     }
 
     composable(
         route = ForumsApp.FORUM,
-        arguments = listOf(navArgument("forumId") { type = NavType.StringType }),
+        arguments = listOf(navArgument("forumId") {
+            type = NavType.StringType
+            defaultValue = ""
+            nullable = false
+        }),
         deepLinks = listOf(
             navDeepLink { uriPattern = "https://{host}/forums/{forumId}" }
         )
-    ) {
+    ) { backStackEntry ->
+        val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
         ForumScreen(
-            onBack = { navController.popBackStack() },
+            forumId = forumId,
+            onSelectForum = { id ->
+                navController.navigate(ForumsApp.forum(id)) {
+                    popUpTo(ForumsApp.FORUM) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
             onPostClick = { fId, pId -> navController.navigate(ForumsApp.post(fId, pId)) },
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },
+            onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
             onSettings = { fId -> navController.navigate(ForumsApp.forumSettings(fId)) },
+            onLogout = onLogout,
         )
     }
 
@@ -100,7 +113,7 @@ fun NavGraphBuilder.forumsNavGraph(
     ) {
         ForumSettingsScreen(
             onBack = { navController.popBackStack() },
-            onForumDeleted = { navController.popBackStack(ForumsApp.FORUM_LIST, inclusive = false) },
+            onForumDeleted = { navController.popBackStack(ForumsApp.ROUTER, inclusive = false) },
         )
     }
 }

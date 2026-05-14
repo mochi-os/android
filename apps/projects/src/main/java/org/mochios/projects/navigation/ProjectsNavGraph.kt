@@ -10,12 +10,12 @@ import org.mochios.projects.ui.design.DesignScreen
 import org.mochios.projects.ui.find.FindProjectsScreen
 import org.mochios.projects.ui.`object`.DiffViewerScreen
 import org.mochios.projects.ui.project.ProjectScreen
-import org.mochios.projects.ui.projectlist.ProjectListScreen
+import org.mochios.projects.ui.router.ProjectsRouter
 import org.mochios.projects.ui.settings.ProjectSettingsScreen
 
 object ProjectsApp {
-    const val HOME = "projects/list"
-    const val PROJECT_LIST = "projects/list"
+    const val HOME = "projects/router"
+    const val ROUTER = "projects/router"
     // Detail routes use a `project/` discriminator after the feature prefix
     // so they can't shadow the literal HOME / FIND_PROJECTS routes —
     // `projects/list` would otherwise match `projects/{projectId}` with
@@ -39,25 +39,38 @@ fun NavGraphBuilder.projectsNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
 ) {
-    composable(ProjectsApp.PROJECT_LIST) {
-        ProjectListScreen(
-            onProjectClick = { projectId -> navController.navigate(ProjectsApp.project(projectId)) },
-            onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
-            onLogout = onLogout,
-        )
+    composable(ProjectsApp.ROUTER) {
+        ProjectsRouter(onResolve = { projectId ->
+            navController.navigate(ProjectsApp.project(projectId)) {
+                popUpTo(ProjectsApp.ROUTER) { inclusive = true }
+            }
+        })
     }
 
     composable(
         route = ProjectsApp.PROJECT,
-        arguments = listOf(navArgument("projectId") { type = NavType.StringType })
-    ) {
+        arguments = listOf(navArgument("projectId") {
+            type = NavType.StringType
+            defaultValue = ""
+            nullable = false
+        })
+    ) { backStackEntry ->
+        val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
         ProjectScreen(
-            onBack = { navController.popBackStack() },
-            onSettings = { projectId -> navController.navigate(ProjectsApp.projectSettings(projectId)) },
-            onDesign = { projectId -> navController.navigate(ProjectsApp.projectDesign(projectId)) },
-            onViewDiff = { projectId, repo, source, target ->
-                navController.navigate(ProjectsApp.diffViewer(projectId, repo, source, target))
+            projectId = projectId,
+            onSelectProject = { id ->
+                navController.navigate(ProjectsApp.project(id)) {
+                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
+                    launchSingleTop = true
+                }
             },
+            onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
+            onSettings = { id -> navController.navigate(ProjectsApp.projectSettings(id)) },
+            onDesign = { id -> navController.navigate(ProjectsApp.projectDesign(id)) },
+            onViewDiff = { id, repo, source, target ->
+                navController.navigate(ProjectsApp.diffViewer(id, repo, source, target))
+            },
+            onLogout = onLogout,
         )
     }
 
@@ -70,15 +83,24 @@ fun NavGraphBuilder.projectsNavGraph(
         deepLinks = listOf(
             navDeepLink { uriPattern = "https://{host}/projects/{projectId}/{objectId}" }
         )
-    ) {
+    ) { backStackEntry ->
+        val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
         ProjectScreen(
-            onBack = { navController.popBackStack() },
-            onSettings = { projectId -> navController.navigate(ProjectsApp.projectSettings(projectId)) },
-            onDesign = { projectId -> navController.navigate(ProjectsApp.projectDesign(projectId)) },
-            onViewDiff = { projectId, repo, source, target ->
-                navController.navigate(ProjectsApp.diffViewer(projectId, repo, source, target))
+            projectId = projectId,
+            onSelectProject = { id ->
+                navController.navigate(ProjectsApp.project(id)) {
+                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
+                    launchSingleTop = true
+                }
             },
-            initialObjectId = it.arguments?.getString("objectId"),
+            onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
+            onSettings = { id -> navController.navigate(ProjectsApp.projectSettings(id)) },
+            onDesign = { id -> navController.navigate(ProjectsApp.projectDesign(id)) },
+            onViewDiff = { id, repo, source, target ->
+                navController.navigate(ProjectsApp.diffViewer(id, repo, source, target))
+            },
+            onLogout = onLogout,
+            initialObjectId = backStackEntry.arguments?.getString("objectId"),
         )
     }
 
@@ -95,7 +117,7 @@ fun NavGraphBuilder.projectsNavGraph(
     ) {
         ProjectSettingsScreen(
             onBack = { navController.popBackStack() },
-            onProjectDeleted = { navController.popBackStack(ProjectsApp.PROJECT_LIST, inclusive = false) },
+            onProjectDeleted = { navController.popBackStack(ProjectsApp.ROUTER, inclusive = false) },
         )
     }
 

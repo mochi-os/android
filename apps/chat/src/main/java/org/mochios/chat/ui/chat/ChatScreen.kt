@@ -16,37 +16,55 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ChatBubbleOutline
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavBackStackEntry
+import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.FeatureDrawerItem
+import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -54,14 +72,142 @@ import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.ui.chatlist.ChatListViewModel
+import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.android.R as MochiR
 
+/**
+ * Chat detail screen wrapped in a [FeatureListDrawer]. The drawer holds
+ * the user's chat list (so swiping in from the left switches chats
+ * directly without an intervening list page) plus actions (New chat,
+ * Logout). When [chatId] is empty (first launch with no recorded
+ * last-viewed), the drawer auto-opens over a "pick a chat" placeholder.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChatScreen(
-    onBack: () -> Unit,
+    chatId: String,
+    onSelectChat: (String) -> Unit,
+    onNewChat: () -> Unit,
     onSettings: (String) -> Unit,
-    viewModel: ChatViewModel = hiltViewModel()
+    onLogout: () -> Unit,
+    listViewModel: ChatListViewModel = hiltViewModel(),
+) {
+    val context = LocalContext.current
+    val drawerState = rememberDrawerState(
+        if (chatId.isEmpty()) DrawerValue.Open else DrawerValue.Closed
+    )
+    val drawerScope = rememberCoroutineScope()
+    val listUiState by listViewModel.uiState.collectAsState()
+    var showAbout by remember { mutableStateOf(false) }
+
+    // Persist last-viewed so the next cold start lands here. Empty id is
+    // the "no chat selected" sentinel — don't write that or we'd wipe a
+    // real prior selection.
+    LaunchedEffect(chatId) {
+        if (chatId.isNotBlank()) {
+            LastViewedStore.set(context, CHAT_FEATURE, chatId)
+        }
+    }
+
+    val drawerItems = remember(listUiState.chats) {
+        listViewModel.filteredChats().map { chat ->
+            FeatureDrawerItem(
+                id = chat.fingerprint.ifEmpty { chat.id },
+                title = chat.name,
+                icon = Icons.Default.ChatBubbleOutline,
+            )
+        }
+    }
+
+    FeatureListDrawer(
+        drawerState = drawerState,
+        items = drawerItems,
+        selectedId = chatId,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            if (item.id != chatId) onSelectChat(item.id)
+        },
+        actions = {
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onNewChat()
+                },
+                headlineContent = { Text(stringResource(R.string.chat_list_new)) },
+                leadingContent = { Icon(Icons.Default.Add, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
+                },
+                headlineContent = { Text(stringResource(R.string.chat_list_logout)) },
+                leadingContent = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+                headlineContent = { Text(stringResource(MochiR.string.about_label)) },
+                leadingContent = { Icon(Icons.Default.Info, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+        },
+    ) {
+        if (chatId.isEmpty()) {
+            ChatDrawerPlaceholder(
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+            )
+        } else {
+            ChatContent(
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                onSettings = onSettings,
+            )
+        }
+    }
+
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ChatDrawerPlaceholder(onOpenDrawer: () -> Unit) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.chat_list_title)) },
+                navigationIcon = {
+                    IconButton(onClick = onOpenDrawer) {
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.chat_list_title))
+                    }
+                }
+            )
+        }
+    ) { padding ->
+        Box(
+            modifier = Modifier.fillMaxSize().padding(padding),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = stringResource(R.string.chat_list_empty),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ChatContent(
+    onOpenDrawer: () -> Unit,
+    onSettings: (String) -> Unit,
+    viewModel: ChatViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     var draft by remember { mutableStateOf("") }
@@ -84,10 +230,10 @@ fun ChatScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    IconButton(onClick = onOpenDrawer) {
                         Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back)
+                            Icons.Default.Menu,
+                            contentDescription = stringResource(R.string.chat_list_title)
                         )
                     }
                 },
@@ -118,7 +264,7 @@ fun ChatScreen(
                 uiState.error is MochiError.NotFoundError && uiState.messages.isEmpty() -> {
                     NotFoundState(
                         title = stringResource(R.string.chat_chat_not_found),
-                        onBack = onBack,
+                        onBack = onOpenDrawer,
                     )
                 }
                 uiState.error != null && uiState.messages.isEmpty() -> {

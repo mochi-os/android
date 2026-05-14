@@ -13,18 +13,24 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.FolderOpen
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -35,6 +41,8 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
@@ -44,32 +52,164 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.FeatureDrawerItem
+import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.projects.R
 import org.mochios.projects.ui.board.BoardView
 import org.mochios.projects.ui.`object`.ObjectDetailSheet
+import org.mochios.projects.ui.projectlist.ProjectListViewModel
+import org.mochios.projects.ui.router.PROJECTS_FEATURE
 import org.mochios.projects.ui.tree.TreeView
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProjectScreen(
-    onBack: () -> Unit,
+    projectId: String,
+    onSelectProject: (String) -> Unit,
+    onFindProjects: () -> Unit,
+    onSettings: (String) -> Unit,
+    onDesign: (String) -> Unit,
+    onViewDiff: (String, String, String, String) -> Unit,
+    onLogout: () -> Unit,
+    initialObjectId: String? = null,
+    listViewModel: ProjectListViewModel = hiltViewModel(),
+) {
+    val context = LocalContext.current
+    val drawerState = rememberDrawerState(
+        if (projectId.isEmpty()) DrawerValue.Open else DrawerValue.Closed
+    )
+    val drawerScope = rememberCoroutineScope()
+    val listUiState by listViewModel.uiState.collectAsState()
+    var showAbout by remember { mutableStateOf(false) }
+
+    LaunchedEffect(projectId) {
+        if (projectId.isNotBlank()) {
+            LastViewedStore.set(context, PROJECTS_FEATURE, projectId)
+        }
+    }
+
+    val drawerItems = remember(listUiState.projects) {
+        listViewModel.filteredProjects().map { project ->
+            FeatureDrawerItem(
+                id = project.fingerprint.ifEmpty { project.id },
+                title = project.name,
+                icon = Icons.Default.FolderOpen,
+            )
+        }
+    }
+
+    FeatureListDrawer(
+        drawerState = drawerState,
+        items = drawerItems,
+        selectedId = projectId,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            if (item.id != projectId) onSelectProject(item.id)
+        },
+        actions = {
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onFindProjects()
+                },
+                headlineContent = { Text(stringResource(R.string.projects_list_find)) },
+                leadingContent = { Icon(Icons.Default.Search, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
+                },
+                headlineContent = { Text(stringResource(R.string.projects_list_logout)) },
+                leadingContent = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+                headlineContent = { Text(stringResource(MochiR.string.about_label)) },
+                leadingContent = { Icon(Icons.Default.Info, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+        },
+    ) {
+        if (projectId.isEmpty()) {
+            ProjectDrawerPlaceholder(
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+            )
+        } else {
+            ProjectContent(
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                onSettings = onSettings,
+                onDesign = onDesign,
+                onViewDiff = onViewDiff,
+                initialObjectId = initialObjectId,
+            )
+        }
+    }
+
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ProjectDrawerPlaceholder(onOpenDrawer: () -> Unit) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.projects_list_title)) },
+                navigationIcon = {
+                    IconButton(onClick = onOpenDrawer) {
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
+                    }
+                }
+            )
+        }
+    ) { padding ->
+        Box(
+            modifier = Modifier.fillMaxSize().padding(padding),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = stringResource(R.string.projects_list_empty),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ProjectContent(
+    onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
@@ -100,8 +240,8 @@ fun ProjectScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
+                    IconButton(onClick = onOpenDrawer) {
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
                     }
                 },
                 actions = {
@@ -232,7 +372,7 @@ fun ProjectScreen(
                     uiState.error is MochiError.NotFoundError && details == null -> {
                         NotFoundState(
                             title = stringResource(R.string.projects_project_not_found),
-                            onBack = onBack,
+                            onBack = onOpenDrawer,
                         )
                     }
 

@@ -3,6 +3,9 @@ package org.mochios.android.update
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
+import android.os.Build
+import android.provider.Settings
 import android.util.Log
 import androidx.core.content.FileProvider
 
@@ -45,6 +48,35 @@ object UpdateInstaller {
         if (!apk.exists() || apk.length() == 0L) {
             Log.w(TAG, "Pending update $pending has no APK on disk; clearing")
             clear(ctx)
+            return
+        }
+
+        // Android 8+ requires per-app "install unknown apps" consent on top
+        // of the manifest REQUEST_INSTALL_PACKAGES permission. If we don't
+        // have it yet, the system installer just bounces the user with a
+        // generic "For your security…" dialog and no clear path forward.
+        // Send them straight to the toggle for this app instead and bail
+        // out — the next onResume after they grant it (and return) retries.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O &&
+            !ctx.packageManager.canRequestPackageInstalls()) {
+            try {
+                val grant = Intent(
+                    Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+                    Uri.parse("package:" + ctx.packageName),
+                ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                activity.startActivity(grant)
+                Log.i(TAG, "Prompting user to grant install-unknown-apps for $pending")
+            } catch (e: Exception) {
+                // Some OEM builds don't expose the per-app screen; fall back
+                // to the global one so the user can find the toggle manually.
+                Log.w(TAG, "Per-app install-sources screen unavailable: ${e.message}")
+                try {
+                    activity.startActivity(
+                        Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES)
+                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    )
+                } catch (_: Exception) { /* nothing more to try */ }
+            }
             return
         }
 

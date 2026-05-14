@@ -65,9 +65,36 @@ object PushTransport {
         }
         Log.i(TAG, "configure() setup response: $setup")
 
-        val transport = setup?.optString("transport")
+        if (setup == null) {
+            // Offline / server unreachable / 401. We *don't* know whether
+            // FCM is configured, so falling back to UnifiedPush would be
+            // wrong — that's how a phone with bad reception ended up with
+            // the "listening for notifications" FG service running
+            // overnight despite FCM being the configured transport.
+            // Honour the last known transport instead: if cached FCM,
+            // leave PushService stopped; if cached UnifiedPush, start it.
+            // First launch with no cache: stay quiet (no UP service)
+            // until the next configure() succeeds.
+            when (current(context)) {
+                TRANSPORT_FCM -> {
+                    runCatching { PushService.stop(context) }
+                    Log.i(TAG, "fetchSetup failed; honouring cached FCM transport (no fallback)")
+                }
+                TRANSPORT_UNIFIEDPUSH -> {
+                    startUnifiedPush(context, sessionManager)
+                    Log.i(TAG, "fetchSetup failed; honouring cached UnifiedPush transport")
+                }
+                else -> {
+                    runCatching { PushService.stop(context) }
+                    Log.i(TAG, "fetchSetup failed and no cached transport; standing by")
+                }
+            }
+            return@withContext
+        }
+
+        val transport = setup.optString("transport")
         if (transport == TRANSPORT_FCM) {
-            val configJson = setup?.optJSONObject("firebase_config")
+            val configJson = setup.optJSONObject("firebase_config")
             val firebaseConfig = configJson?.let(::parseFirebaseConfig)
             if (firebaseConfig != null && FcmRegistrar.connect(context, client, server, firebaseConfig)) {
                 recordTransport(context, server, TRANSPORT_FCM)
@@ -80,8 +107,14 @@ object PushTransport {
             Log.w(TAG, "FCM advertised but failed to connect; falling back to UnifiedPush")
         }
 
-        // UnifiedPush path (explicit or fallback).
+        // UnifiedPush path: server explicitly said unifiedpush, OR server
+        // said FCM but we couldn't connect to Firebase. Either way the
+        // server confirmed its preference, so this is a real fallback.
+        startUnifiedPush(context, sessionManager)
         recordTransport(context, server, TRANSPORT_UNIFIEDPUSH)
+    }
+
+    private suspend fun startUnifiedPush(context: Context, sessionManager: SessionManager) {
         runCatching { FcmRegistrar.disconnect(context) }
         PushService.start(context)
         // MochiPushClient.register requires a stable per-account instance.
@@ -94,7 +127,7 @@ object PushTransport {
         if (identity.isNotBlank()) {
             MochiPushClient.register(context, identity)
         } else {
-            Log.i(TAG, "configure(): no bound identity yet; skipping UP register")
+            Log.i(TAG, "startUnifiedPush(): no bound identity yet; skipping UP register")
         }
     }
 

@@ -7,13 +7,18 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.chat.ui.chat.ChatScreen
-import org.mochios.chat.ui.chatlist.ChatListScreen
 import org.mochios.chat.ui.newchat.NewChatScreen
+import org.mochios.chat.ui.router.ChatRouter
 import org.mochios.chat.ui.settings.ChatSettingsScreen
 
 object ChatApp {
-    const val HOME = "chat/list"
-    const val CHAT_LIST = "chat/list"
+    /**
+     * HOME points at the router (resolves last-viewed chat); the router
+     * navigates onward to CHAT with the resolved id (or empty for first
+     * launch with no history) and pops itself off the back stack.
+     */
+    const val HOME = "chat/router"
+    const val ROUTER = "chat/router"
     // Detail routes use a `chat/` discriminator after the feature prefix so
     // they can't shadow the literal HOME / NEW_CHAT routes — `chat/list`
     // would otherwise match `chat/{chatId}` with chatId='list' and route to
@@ -30,24 +35,37 @@ fun NavGraphBuilder.chatNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
 ) {
-    composable(ChatApp.CHAT_LIST) {
-        ChatListScreen(
-            onChatClick = { chatId -> navController.navigate(ChatApp.chat(chatId)) },
-            onNewChat = { navController.navigate(ChatApp.NEW_CHAT) },
-            onLogout = onLogout,
-        )
+    composable(ChatApp.ROUTER) {
+        ChatRouter(onResolve = { chatId ->
+            navController.navigate(ChatApp.chat(chatId)) {
+                popUpTo(ChatApp.ROUTER) { inclusive = true }
+            }
+        })
     }
 
     composable(
         route = ChatApp.CHAT,
-        arguments = listOf(navArgument("chatId") { type = NavType.StringType }),
+        arguments = listOf(navArgument("chatId") {
+            type = NavType.StringType
+            defaultValue = ""
+            nullable = false
+        }),
         deepLinks = listOf(
             navDeepLink { uriPattern = "https://{host}/chat/{chatId}" }
         )
-    ) {
+    ) { backStackEntry ->
+        val chatId = backStackEntry.arguments?.getString("chatId").orEmpty()
         ChatScreen(
-            onBack = { navController.popBackStack() },
-            onSettings = { chatId -> navController.navigate(ChatApp.chatSettings(chatId)) },
+            chatId = chatId,
+            onSelectChat = { id ->
+                navController.navigate(ChatApp.chat(id)) {
+                    popUpTo(ChatApp.CHAT) { inclusive = true }
+                    launchSingleTop = true
+                }
+            },
+            onNewChat = { navController.navigate(ChatApp.NEW_CHAT) },
+            onSettings = { id -> navController.navigate(ChatApp.chatSettings(id)) },
+            onLogout = onLogout,
         )
     }
 
@@ -56,7 +74,10 @@ fun NavGraphBuilder.chatNavGraph(
             onBack = { navController.popBackStack() },
             onChatCreated = { chatId ->
                 navController.popBackStack()
-                navController.navigate(ChatApp.chat(chatId))
+                navController.navigate(ChatApp.chat(chatId)) {
+                    popUpTo(ChatApp.CHAT) { inclusive = true }
+                    launchSingleTop = true
+                }
             },
         )
     }
@@ -68,7 +89,9 @@ fun NavGraphBuilder.chatNavGraph(
         ChatSettingsScreen(
             onBack = { navController.popBackStack() },
             onChatLeft = {
-                navController.popBackStack(ChatApp.CHAT_LIST, inclusive = false)
+                // Drop back to the router so last-viewed re-resolves (the
+                // left chat shouldn't reappear as the next destination).
+                navController.popBackStack(ChatApp.ROUTER, inclusive = false)
             },
         )
     }

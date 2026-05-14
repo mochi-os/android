@@ -17,56 +17,202 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Forum
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.PushPin
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.FeatureDrawerItem
+import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.forums.R
 import org.mochios.forums.model.Post
+import org.mochios.forums.ui.forumlist.ForumListViewModel
+import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
 
+/**
+ * Forum detail screen wrapped in a [FeatureListDrawer]. The drawer holds
+ * the user's forum list (so swiping in from the left switches forums
+ * directly without an intervening list page) plus actions (Find forums,
+ * Logout). When [forumId] is empty (first launch with no recorded
+ * last-viewed), the drawer auto-opens over a "pick a forum" placeholder.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ForumScreen(
-    onBack: () -> Unit,
+    forumId: String,
+    onSelectForum: (String) -> Unit,
+    onPostClick: (String, String) -> Unit,
+    onNewPost: (String) -> Unit,
+    onFindForums: () -> Unit,
+    onSettings: (String) -> Unit,
+    onLogout: () -> Unit,
+    listViewModel: ForumListViewModel = hiltViewModel(),
+) {
+    val context = LocalContext.current
+    val drawerState = rememberDrawerState(
+        if (forumId.isEmpty()) DrawerValue.Open else DrawerValue.Closed
+    )
+    val drawerScope = rememberCoroutineScope()
+    val listUiState by listViewModel.uiState.collectAsState()
+    var showAbout by remember { mutableStateOf(false) }
+
+    LaunchedEffect(forumId) {
+        if (forumId.isNotBlank()) {
+            LastViewedStore.set(context, FORUMS_FEATURE, forumId)
+        }
+    }
+
+    val drawerItems = remember(listUiState.forums) {
+        listViewModel.filteredForums().map { forum ->
+            FeatureDrawerItem(
+                id = forum.fingerprint.ifEmpty { forum.id },
+                title = forum.name,
+                icon = Icons.Default.Forum,
+            )
+        }
+    }
+
+    FeatureListDrawer(
+        drawerState = drawerState,
+        items = drawerItems,
+        selectedId = forumId,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            if (item.id != forumId) onSelectForum(item.id)
+        },
+        actions = {
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onFindForums()
+                },
+                headlineContent = { Text(stringResource(R.string.forums_list_find)) },
+                leadingContent = { Icon(Icons.Default.Search, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
+                },
+                headlineContent = { Text(stringResource(R.string.forums_list_logout)) },
+                leadingContent = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+                headlineContent = { Text(stringResource(MochiR.string.about_label)) },
+                leadingContent = { Icon(Icons.Default.Info, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+        },
+    ) {
+        if (forumId.isEmpty()) {
+            ForumDrawerPlaceholder(
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+            )
+        } else {
+            ForumContent(
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                onPostClick = onPostClick,
+                onNewPost = onNewPost,
+                onSettings = onSettings,
+            )
+        }
+    }
+
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ForumDrawerPlaceholder(onOpenDrawer: () -> Unit) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.forums_list_title)) },
+                navigationIcon = {
+                    IconButton(onClick = onOpenDrawer) {
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.forums_list_title))
+                    }
+                }
+            )
+        }
+    ) { padding ->
+        Box(
+            modifier = Modifier.fillMaxSize().padding(padding),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = stringResource(R.string.forums_list_empty),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ForumContent(
+    onOpenDrawer: () -> Unit,
     onPostClick: (String, String) -> Unit,
     onNewPost: (String) -> Unit,
     onSettings: (String) -> Unit,
-    viewModel: ForumViewModel = hiltViewModel()
+    viewModel: ForumViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     var showSortMenu by remember { mutableStateOf(false) }
@@ -83,10 +229,10 @@ fun ForumScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    IconButton(onClick = onOpenDrawer) {
                         Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back)
+                            Icons.Default.Menu,
+                            contentDescription = stringResource(R.string.forums_list_title)
                         )
                     }
                 },
@@ -148,7 +294,7 @@ fun ForumScreen(
                 uiState.error is MochiError.NotFoundError && uiState.posts.isEmpty() -> {
                     NotFoundState(
                         title = stringResource(R.string.forums_forum_not_found),
-                        onBack = onBack,
+                        onBack = onOpenDrawer,
                     )
                 }
                 uiState.error != null && uiState.posts.isEmpty() -> {

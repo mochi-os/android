@@ -9,6 +9,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.lifecycle.lifecycleScope
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -20,6 +21,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.FormatProvider
@@ -147,6 +150,20 @@ class MainActivity : ComponentActivity() {
         // confirmation dialog; we can't suppress that, but pre-downloading
         // means the user never sees the browser/file-picker chain.
         UpdateInstaller.promptIfPending(this)
+
+        // Re-run the push-transport setup on every resume. The LaunchedEffect
+        // in setContent only fires on isAuthenticated transitions (cold-start
+        // path), which leaves the server-side row stuck if it gets deleted
+        // out-of-band (e.g. the test-on-failure cleanup we added, the user
+        // removing it manually, or a server reset). configure() is idempotent
+        // — when transport is FCM, FcmRegistrar.connect's upsert just touches
+        // the existing row; only if the row is missing does it land a fresh
+        // one. Safe to call on every resume.
+        lifecycleScope.launch {
+            if (sessionManager.isAuthenticated.first()) {
+                PushTransport.configure(applicationContext, sessionManager, okHttpClient)
+            }
+        }
     }
 
     /**

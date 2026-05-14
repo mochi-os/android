@@ -26,113 +26,20 @@ import java.util.concurrent.TimeUnit
  * next foreground entry — no notification, no browser, no manual file
  * lookup. Android still shows its own "Update Mochi?" confirmation; that's
  * unavoidable for sideloaded apps.
+ *
+ * The check-and-stage logic is also exposed as [UpdateChecker.checkNow] so
+ * the About dialog's "Check for updates" button can run it on demand.
  */
 class UpdateChecker(
     context: Context,
     params: WorkerParameters,
 ) : CoroutineWorker(context, params) {
 
-    override suspend fun doWork(): Result {
-        val ctx = applicationContext
-        val current = currentVersionName(ctx) ?: return Result.success()
-
-        val latest = try {
-            fetchLatest()
-        } catch (e: Exception) {
-            Log.i(TAG, "Fetch versions.json failed: ${e.message}")
-            return Result.retry()
-        } ?: return Result.success()
-
-        if (compareVersions(latest, current) <= 0) {
-            Log.d(TAG, "Running $current, latest $latest, nothing to do")
-            clearPending(ctx)
-            return Result.success()
+    override suspend fun doWork(): Result =
+        when (checkNow(applicationContext)) {
+            CheckOutcome.UpToDate, CheckOutcome.UpdateStaged -> Result.success()
+            CheckOutcome.NetworkError, CheckOutcome.DownloadFailed -> Result.retry()
         }
-
-        val target = apkFile(ctx, latest)
-        val prefs = prefs(ctx)
-        val pending = prefs.getString(KEY_PENDING, "") ?: ""
-        if (pending == latest && target.exists() && target.length() > 0) {
-            Log.d(TAG, "$latest already downloaded at ${target.absolutePath}")
-            return Result.success()
-        }
-
-        // Stale entries for prior versions — drop them so cacheDir doesn't
-        // accumulate APKs from every release the user ever skipped.
-        purgeStale(ctx, keep = latest)
-
-        try {
-            download(target)
-        } catch (e: Exception) {
-            Log.i(TAG, "APK download failed: ${e.message}")
-            target.delete()
-            return Result.retry()
-        }
-        if (!target.exists() || target.length() == 0L) {
-            Log.w(TAG, "APK download produced empty file")
-            target.delete()
-            return Result.retry()
-        }
-
-        prefs.edit()
-            .putString(KEY_PENDING, latest)
-            .putString(KEY_PENDING_PATH, target.absolutePath)
-            .apply()
-        Log.i(TAG, "Update $latest staged at ${target.absolutePath} (running $current)")
-        return Result.success()
-    }
-
-    private fun fetchLatest(): String? {
-        val req = Request.Builder().url(VERSIONS_URL).get().build()
-        httpClient().newCall(req).execute().use { resp ->
-            if (!resp.isSuccessful) {
-                Log.i(TAG, "Fetch $VERSIONS_URL: status ${resp.code}")
-                return null
-            }
-            val body = resp.body?.string().orEmpty()
-            val tracks = JSONObject(body).optJSONObject("tracks") ?: return null
-            return tracks.optString(TRACK).takeIf { it.isNotBlank() }
-        }
-    }
-
-    private fun download(target: File) {
-        target.parentFile?.mkdirs()
-        val req = Request.Builder().url(APK_URL).get().build()
-        httpClient().newCall(req).execute().use { resp ->
-            if (!resp.isSuccessful) {
-                throw IllegalStateException("HTTP ${resp.code}")
-            }
-            val body = resp.body ?: throw IllegalStateException("empty body")
-            // Stream straight to disk — APK is ~30 MB, don't buffer in memory.
-            target.sink().buffer().use { out ->
-                body.source().use { src -> out.writeAll(src) }
-            }
-        }
-    }
-
-    private fun httpClient(): OkHttpClient = OkHttpClient.Builder()
-        .connectTimeout(15, TimeUnit.SECONDS)
-        // Download timeout is permissive — phones on slow networks should be
-        // able to finish a 30 MB pull.
-        .readTimeout(5, TimeUnit.MINUTES)
-        .build()
-
-    private fun purgeStale(ctx: Context, keep: String) {
-        val dir = updatesDir(ctx)
-        val keepFile = apkFile(ctx, keep).name
-        dir.listFiles()?.forEach { f ->
-            if (f.name != keepFile) {
-                f.delete()
-            }
-        }
-    }
-
-    private fun clearPending(ctx: Context) {
-        val prefs = prefs(ctx)
-        if (!prefs.contains(KEY_PENDING)) return
-        prefs.edit().remove(KEY_PENDING).remove(KEY_PENDING_PATH).apply()
-        purgeStale(ctx, keep = "") // empty keep → delete everything
-    }
 
     companion object {
         private const val TAG = "MochiUpdateCheck"
@@ -158,6 +65,114 @@ class UpdateChecker(
                 ExistingPeriodicWorkPolicy.REPLACE,
                 request,
             )
+        }
+
+        /**
+         * Run one check-and-stage cycle inline (no WorkManager). Same logic
+         * the periodic worker uses; callable from a Compose coroutine so the
+         * About dialog's button can show fresh status without waiting for the
+         * next scheduled fire. Idempotent and safe to call from any context.
+         */
+        suspend fun checkNow(context: Context): CheckOutcome {
+            val ctx = context.applicationContext
+            val current = currentVersionName(ctx) ?: return CheckOutcome.UpToDate
+
+            val latest = try {
+                fetchLatest()
+            } catch (e: Exception) {
+                Log.i(TAG, "Fetch versions.json failed: ${e.message}")
+                return CheckOutcome.NetworkError
+            } ?: return CheckOutcome.UpToDate
+
+            if (compareVersions(latest, current) <= 0) {
+                Log.d(TAG, "Running $current, latest $latest, nothing to do")
+                clearPending(ctx)
+                return CheckOutcome.UpToDate
+            }
+
+            val target = apkFile(ctx, latest)
+            val prefs = prefs(ctx)
+            val pending = prefs.getString(KEY_PENDING, "") ?: ""
+            if (pending == latest && target.exists() && target.length() > 0) {
+                Log.d(TAG, "$latest already downloaded at ${target.absolutePath}")
+                return CheckOutcome.UpdateStaged
+            }
+
+            // Stale entries for prior versions — drop them so cacheDir doesn't
+            // accumulate APKs from every release the user ever skipped.
+            purgeStale(ctx, keep = latest)
+
+            try {
+                download(target)
+            } catch (e: Exception) {
+                Log.i(TAG, "APK download failed: ${e.message}")
+                target.delete()
+                return CheckOutcome.DownloadFailed
+            }
+            if (!target.exists() || target.length() == 0L) {
+                Log.w(TAG, "APK download produced empty file")
+                target.delete()
+                return CheckOutcome.DownloadFailed
+            }
+
+            prefs.edit()
+                .putString(KEY_PENDING, latest)
+                .putString(KEY_PENDING_PATH, target.absolutePath)
+                .apply()
+            Log.i(TAG, "Update $latest staged at ${target.absolutePath} (running $current)")
+            return CheckOutcome.UpdateStaged
+        }
+
+        private fun fetchLatest(): String? {
+            val req = Request.Builder().url(VERSIONS_URL).get().build()
+            httpClient().newCall(req).execute().use { resp ->
+                if (!resp.isSuccessful) {
+                    Log.i(TAG, "Fetch $VERSIONS_URL: status ${resp.code}")
+                    return null
+                }
+                val body = resp.body?.string().orEmpty()
+                val tracks = JSONObject(body).optJSONObject("tracks") ?: return null
+                return tracks.optString(TRACK).takeIf { it.isNotBlank() }
+            }
+        }
+
+        private fun download(target: File) {
+            target.parentFile?.mkdirs()
+            val req = Request.Builder().url(APK_URL).get().build()
+            httpClient().newCall(req).execute().use { resp ->
+                if (!resp.isSuccessful) {
+                    throw IllegalStateException("HTTP ${resp.code}")
+                }
+                val body = resp.body ?: throw IllegalStateException("empty body")
+                // Stream straight to disk — APK is ~30 MB, don't buffer in memory.
+                target.sink().buffer().use { out ->
+                    body.source().use { src -> out.writeAll(src) }
+                }
+            }
+        }
+
+        private fun httpClient(): OkHttpClient = OkHttpClient.Builder()
+            .connectTimeout(15, TimeUnit.SECONDS)
+            // Download timeout is permissive — phones on slow networks should be
+            // able to finish a 30 MB pull.
+            .readTimeout(5, TimeUnit.MINUTES)
+            .build()
+
+        private fun purgeStale(ctx: Context, keep: String) {
+            val dir = updatesDir(ctx)
+            val keepFile = apkFile(ctx, keep).name
+            dir.listFiles()?.forEach { f ->
+                if (f.name != keepFile) {
+                    f.delete()
+                }
+            }
+        }
+
+        private fun clearPending(ctx: Context) {
+            val prefs = prefs(ctx)
+            if (!prefs.contains(KEY_PENDING)) return
+            prefs.edit().remove(KEY_PENDING).remove(KEY_PENDING_PATH).apply()
+            purgeStale(ctx, keep = "") // empty keep → delete everything
         }
 
         internal fun prefs(ctx: Context): SharedPreferences =
@@ -191,4 +206,16 @@ class UpdateChecker(
             return 0
         }
     }
+}
+
+/**
+ * Outcome of one [UpdateChecker.checkNow] cycle. The About dialog renders
+ * different status text per outcome; the worker just maps these to
+ * Result.success / Result.retry.
+ */
+enum class CheckOutcome {
+    UpToDate,
+    UpdateStaged,
+    NetworkError,
+    DownloadFailed,
 }

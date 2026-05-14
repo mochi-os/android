@@ -26,6 +26,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.pager.VerticalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -37,6 +39,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ImportExport
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
@@ -78,6 +81,7 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
@@ -87,6 +91,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import androidx.hilt.navigation.compose.hiltViewModel
+import kotlin.math.abs
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
@@ -95,6 +100,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.model.Comment
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.model.Reaction
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
@@ -154,51 +160,31 @@ fun FeedScreen(
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
-    val listState = rememberLazyListState()
+    var showAbout by remember { mutableStateOf(false) }
+    val pagerState = rememberPagerState(pageCount = { posts.size })
 
-    // Mark a post as read after its bottom edge has been continuously
-    // visible for 1 second — i.e. the user actually scrolled past the
-    // whole post. Per-post timers, not a debounced batch.
-    LaunchedEffect(listState) {
-        val timers = mutableMapOf<String, Job>()
-        snapshotFlow {
-            val knownIds = viewModel.posts.value.mapTo(HashSet()) { it.id }
-            val viewportEnd = listState.layoutInfo.viewportEndOffset
-            listState.layoutInfo.visibleItemsInfo
-                .filter {
-                    val key = it.key as? String ?: return@filter false
-                    key in knownIds && (it.offset + it.size) <= viewportEnd
-                }
-                .mapNotNull { it.key as? String }
-                .toSet()
-        }
+    // Mark the current page's post as read after it's been settled for 1s
+    // (i.e. the user actually stopped on this post, didn't just flip past
+    // it). Equivalent to the old "bottom-of-post visible for 1s" rule
+    // adapted to the magazine-style pager — each page IS the bottom of
+    // the post for the user.
+    LaunchedEffect(pagerState, posts.size) {
+        snapshotFlow { pagerState.currentPage to pagerState.isScrollInProgress }
             .distinctUntilChanged()
-            .collectLatest { bottomVisible ->
-                (timers.keys - bottomVisible).forEach { id ->
-                    timers.remove(id)?.cancel()
-                }
-                (bottomVisible - timers.keys).forEach { id ->
-                    timers[id] = launch {
-                        delay(1000)
-                        viewModel.onPostBottomViewed(id)
-                        timers.remove(id)
-                    }
-                }
+            .collectLatest { (page, scrolling) ->
+                if (scrolling) return@collectLatest
+                val current = posts.getOrNull(page) ?: return@collectLatest
+                delay(1000)
+                viewModel.onPostBottomViewed(current.id)
             }
     }
 
-    // Load more when near the end
-    val shouldLoadMore by remember {
-        derivedStateOf {
-            val layoutInfo = listState.layoutInfo
-            val totalItems = layoutInfo.totalItemsCount
-            val lastVisibleItem = layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0
-            lastVisibleItem >= totalItems - 3 && hasMore && !isLoadingMore
-        }
-    }
-
-    LaunchedEffect(shouldLoadMore) {
-        if (shouldLoadMore) {
+    // Load more when within 3 pages of the end. Pager state's currentPage
+    // updates as the user flips, so the fetch fires while there's still
+    // headroom — by the time they reach the end of the current batch the
+    // next page has already loaded.
+    LaunchedEffect(pagerState.currentPage, posts.size, hasMore, isLoadingMore) {
+        if (hasMore && !isLoadingMore && pagerState.currentPage >= posts.size - 3) {
             viewModel.loadMore()
         }
     }
@@ -250,6 +236,15 @@ fun FeedScreen(
                 },
                 headlineContent = { Text(stringResource(R.string.feeds_logout)) },
                 leadingContent = { Icon(Icons.Default.Logout, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+                headlineContent = { Text(stringResource(MochiR.string.about_label)) },
+                leadingContent = { Icon(Icons.Default.Info, contentDescription = null) },
                 colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
@@ -355,67 +350,70 @@ fun FeedScreen(
                     }
                 }
                 else -> {
-                    LazyColumn(
-                        state = listState,
-                        contentPadding = PaddingValues(bottom = 16.dp)
-                    ) {
-                        // Sort dropdown
-                        item(key = "sort_row") {
-                            SortDropdown(
-                                currentSort = currentSort,
-                                onSortChange = { viewModel.setSort(it) },
-                                unreadOnly = unreadOnly,
-                                onUnreadOnlyChange = { viewModel.setUnreadOnly(it) },
-                                onMarkAllRead = { viewModel.markAllRead() }
-                            )
-                        }
+                    Column(modifier = Modifier.fillMaxSize()) {
+                        SortDropdown(
+                            currentSort = currentSort,
+                            onSortChange = { viewModel.setSort(it) },
+                            unreadOnly = unreadOnly,
+                            onUnreadOnlyChange = { viewModel.setUnreadOnly(it) },
+                            onMarkAllRead = { viewModel.markAllRead() }
+                        )
 
                         if (posts.isEmpty() && !isLoading) {
-                            item(key = "empty") {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(48.dp),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Text(
-                                        text = stringResource(R.string.feeds_no_posts_yet),
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                                    )
-                                }
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(48.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = stringResource(R.string.feeds_no_posts_yet),
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
                             }
-                        }
-
-                        itemsIndexed(posts, key = { _, post -> post.id }) { _, post ->
-                            val routeFeedId = post.feedFingerprint.ifEmpty { viewModel.feedId }
-                            // post.source.url is the RSS feed (XML) URL — not the
-                            // article URL. The article URL lives in rss.link.
-                            // Anything else (Mochi feed-to-feed sources, memories)
-                            // has no external URL → falls through to the standard
-                            // post detail screen.
-                            val sourceUrl = post.data?.rss?.link?.takeIf { it.isNotEmpty() }
-                            PostCard(
-                                post = post,
-                                serverUrl = viewModel.serverUrl,
-                                fallbackFeedId = viewModel.feedId,
-                                canManage = permissions.manage,
-                                onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl) },
-                                onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
-                                onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
-                                onDelete = { pendingDelete = post }
-                            )
-                        }
-
-                        if (isLoadingMore) {
-                            item(key = "loading_more") {
+                        } else {
+                            // Magazine-style vertical pager: one post per page,
+                            // with a 3D tilt + alpha falloff driven off the
+                            // page's offset from the current page (the "fold"
+                            // visual at the page edge). Not the full
+                            // Flipboard two-half book-fold but feels page-flippy
+                            // and is one composable rather than a custom
+                            // graphics-layer split.
+                            VerticalPager(
+                                state = pagerState,
+                                modifier = Modifier.fillMaxSize(),
+                                key = { page -> posts[page].id },
+                            ) { page ->
+                                val post = posts[page]
+                                val routeFeedId = post.feedFingerprint.ifEmpty { viewModel.feedId }
+                                // post.source.url is the RSS feed (XML) URL —
+                                // not the article URL. The article URL lives
+                                // in rss.link. Anything else falls through to
+                                // the standard post detail screen.
+                                val sourceUrl = post.data?.rss?.link?.takeIf { it.isNotEmpty() }
                                 Box(
                                     modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(16.dp),
-                                    contentAlignment = Alignment.Center
+                                        .fillMaxSize()
+                                        .graphicsLayer {
+                                            val pageOffset = pagerState
+                                                .getOffsetDistanceInPages(page)
+                                                .coerceIn(-1f, 1f)
+                                            rotationX = pageOffset * 25f
+                                            cameraDistance = 8f * density
+                                            alpha = 1f - abs(pageOffset) * 0.4f
+                                        }
                                 ) {
-                                    CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                                    PostCard(
+                                        post = post,
+                                        serverUrl = viewModel.serverUrl,
+                                        fallbackFeedId = viewModel.feedId,
+                                        canManage = permissions.manage,
+                                        onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl) },
+                                        onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
+                                        onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
+                                        onDelete = { pendingDelete = post }
+                                    )
                                 }
                             }
                         }
@@ -423,6 +421,10 @@ fun FeedScreen(
                 }
             }
         }
+    }
+
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
     }
 
     pendingDelete?.let { target ->
@@ -564,18 +566,16 @@ private fun PostCard(
     onEdit: () -> Unit,
     onDelete: () -> Unit
 ) {
-    Card(
+    // Magazine-style page: full-screen surface, no card chrome. The
+    // VerticalPager wrapper handles the 3D flip; the page itself is just
+    // content on the theme background.
+    Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 4.dp)
-            .clickable(onClick = onClick),
-        shape = RoundedCornerShape(10.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainer
-        ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.surface)
+            .clickable(onClick = onClick)
+            .padding(start = 16.dp, end = 4.dp, top = 16.dp, bottom = 16.dp)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 4.dp, top = 4.dp, bottom = 16.dp)) {
             // Header: source/feed name + time + overflow menu
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -768,7 +768,6 @@ private fun PostCard(
                 }
             }
         }
-    }
 }
 
 @Composable
