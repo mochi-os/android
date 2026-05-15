@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Amigos</string>
     <string name="chat_new_search_placeholder">Buscar amigos</string>
     <string name="chat_message_placeholder">Mensaxe</string>
+    <string name="chat_attachment_add">Anexar ficheiros</string>
     <string name="chat_message_attach">Anexar ficheiros</string>
     <string name="chat_settings_title">Configuración do chat</string>
     <string name="chat_settings_rename_label">Nome do chat</string>
     <string name="chat_settings_save">Gardar</string>
     <string name="chat_settings_members">Membros</string>
     <string name="chat_settings_add_member">Engadir membro</string>
+    <string name="chat_settings_add_member_search">Buscar amigos</string>
     <string name="chat_settings_remove_member">Eliminar</string>
     <string name="chat_settings_remove_member_title">Eliminar membro</string>
     <string name="chat_settings_leave">Saír da conversa</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Eliminar chat</string>
     <string name="chat_members_empty">Sen membros</string>
     <string name="chat_members_you">Ti</string>
-
-    <string name="notification_channel_chat">Notificacións Chat</string>
     <string name="chat_chat_not_found">Chat non atopado</string>
+
 </resources>

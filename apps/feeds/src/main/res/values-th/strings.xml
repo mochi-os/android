@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">ทำเครื่องหมายว่าอ่านแล้วทั้งหมด</string>
     <string name="feeds_settings">การตั้งค่า</string>
     <string name="feeds_no_posts_yet">ยังไม่มีโพสต์</string>
+    <string name="feeds_default_sort">การเรียงลำดับเริ่มต้น</string>
+    <string name="feeds_suggested_interests_add">เพิ่ม</string>
+    <string name="feeds_suggested_interests_dismiss">ซ่อน</string>
     <string name="feeds_unread">ยังไม่ได้อ่าน</string>
     <string name="feeds_filter_all">ทั้งหมด</string>
+    <string name="feeds_sort_label">เรียงลำดับ</string>
     <string name="feeds_sort_interests">ความสนใจ</string>
     <string name="feeds_sort_new">ใหม่</string>
     <string name="feeds_sort_hot">ยอดนิยม</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">ยอมรับ</string>
     <string name="feeds_rss_url_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
     <string name="feeds_logout">ออกจากระบบ</string>
+    <string name="feeds_ai_account_default">บัญชีเริ่มต้น</string>
     <string name="feeds_ai_mode_off">ปิดใช้งานแล้ว</string>
     <string name="feeds_ai_mode_tag">แท็ก</string>
     <string name="feeds_ai_mode_tag_deduplicate">แท็ก + ลบรายการที่ซ้ำกัน</string>
     <string name="feeds_ai_reset_default">รีเซ็ตเป็นค่าเริ่มต้น</string>
-
-    <string name="notification_channel_feeds">การแจ้งเตือน Feeds</string>
-    <string name="feeds_view_post">ดูโพสต์</string>
-    <string name="feeds_open_in_browser">เปิดในเบราว์เซอร์</string>
-    <string name="feeds_unable_to_load">ไม่สามารถโหลดหน้าได้</string>
     <string name="feeds_feed_not_found">ไม่พบฟีด</string>
     <string name="feeds_post_not_found">ไม่พบโพสต์</string>
+
 </resources>

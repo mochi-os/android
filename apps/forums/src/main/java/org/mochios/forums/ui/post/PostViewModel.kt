@@ -29,14 +29,17 @@ data class PostUiState(
     val isSending: Boolean = false,
     val error: MochiError? = null,
     val replyTo: ForumComment? = null,
-    val deleted: Boolean = false
+    val deleted: Boolean = false,
+    /** Bound identity for the current session — used to gate the Edit
+     *  menu items on (author == me) || canModerate. */
+    val identity: String = "",
 )
 
 @HiltViewModel
 class PostViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: ForumsRepository,
-    sessionManager: SessionManager
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     val forumId: String = savedStateHandle["forumId"] ?: ""
@@ -47,6 +50,10 @@ class PostViewModel @Inject constructor(
     val uiState: StateFlow<PostUiState> = _uiState.asStateFlow()
 
     init {
+        viewModelScope.launch {
+            val id = sessionManager.getBoundIdentity().orEmpty()
+            _uiState.value = _uiState.value.copy(identity = id)
+        }
         load()
     }
 
@@ -150,6 +157,86 @@ class PostViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteComment(forumId, postId, commentId)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun editComment(commentId: String, newBody: String) {
+        viewModelScope.launch {
+            try {
+                repository.editComment(forumId, postId, commentId, newBody)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun editCommentWithAttachments(
+        commentId: String,
+        newBody: String,
+        keptAttachmentIds: List<String>,
+        newFileUris: List<android.net.Uri>,
+        contentResolver: android.content.ContentResolver,
+    ) {
+        viewModelScope.launch {
+            try {
+                repository.editCommentFromUris(
+                    forumId, postId, commentId,
+                    newBody, keptAttachmentIds, newFileUris, contentResolver
+                )
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun editPost(newTitle: String, newBody: String) {
+        viewModelScope.launch {
+            try {
+                repository.editPost(forumId, postId, newTitle, newBody)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun pinPost() = moderate { repository.pinPost(forumId, postId) }
+    fun unpinPost() = moderate { repository.unpinPost(forumId, postId) }
+    fun lockPost() = moderate { repository.lockPost(forumId, postId) }
+    fun unlockPost() = moderate { repository.unlockPost(forumId, postId) }
+    fun approvePost() = moderate { repository.approvePost(forumId, postId) }
+    fun removePost() = moderate { repository.removePost(forumId, postId) }
+    fun restorePost() = moderate { repository.restorePost(forumId, postId) }
+    fun reportPost(reason: String, details: String) =
+        moderate { repository.reportPost(forumId, postId, reason, details) }
+
+    fun removeComment(commentId: String) =
+        moderate { repository.removeComment(forumId, postId, commentId) }
+    fun restoreComment(commentId: String) =
+        moderate { repository.restoreComment(forumId, postId, commentId) }
+    fun approveComment(commentId: String) =
+        moderate { repository.approveComment(forumId, postId, commentId) }
+    fun reportComment(commentId: String, reason: String, details: String) =
+        moderate { repository.reportComment(forumId, postId, commentId, reason, details) }
+
+    fun addPostTag(label: String) = moderate {
+        repository.addPostTag(forumId, postId, label)
+    }
+
+    fun removePostTag(tagId: String) = moderate {
+        repository.removePostTag(forumId, postId, tagId)
+    }
+
+    private fun moderate(block: suspend () -> Unit) {
+        viewModelScope.launch {
+            try {
+                block()
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

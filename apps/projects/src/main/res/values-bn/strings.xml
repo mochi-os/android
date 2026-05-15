@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">অবজেক্ট তৈরি করুন</string>
     <string name="projects_create_object_type">ধরন</string>
     <string name="projects_create_object_title_field">শিরোনাম</string>
+    <string name="projects_create_object_parent">প্যারেন্ট</string>
     <string name="projects_settings_title">সেটিংস</string>
     <string name="projects_settings_tab_general">সাধারণ</string>
     <string name="projects_settings_tab_access">অ্যাক্সেস</string>
+    <string name="projects_settings_tab_people">ব্যক্তিরা</string>
+    <string name="projects_option_icon">আইকন</string>
     <string name="projects_settings_save">পরিবর্তন সংরক্ষণ করুন</string>
     <string name="projects_settings_unsubscribe">আনসাবস্ক্রাইব করুন</string>
     <string name="projects_settings_delete_project">প্রজেক্ট মুছুন</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">অনুরোধ</string>
     <string name="projects_object_tab_attachments">অ্যাটাচমেন্ট</string>
     <string name="projects_object_tab_links">লিঙ্কসমূহ</string>
+    <string name="projects_watchers_watch">দেখুন</string>
+    <string name="projects_watchers_unwatch">দেখা বন্ধ করুন</string>
     <string name="projects_parent_label">প্যারেন্ট</string>
     <string name="projects_parent_search_placeholder">অনুসন্ধান</string>
     <string name="projects_links_add">লিঙ্ক যোগ করুন</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ডিজাইন ইম্পোর্ট করুন</string>
     <string name="projects_design_import_choose_template">একটি টেমপ্লেট বেছে নিন</string>
     <string name="projects_design_replace_title">ডিজাইন প্রতিস্থাপন করবেন?</string>
+    <string name="projects_design_replace">প্রতিস্থাপন করুন</string>
     <string name="projects_classes_add">ক্লাস যোগ করুন</string>
     <string name="projects_classes_add_dialog_title">ক্লাস যোগ করুন</string>
     <string name="projects_classes_create">তৈরি করুন</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">তৈরি হয়েছে</string>
     <string name="projects_views_sort_updated">আপডেট হয়েছে</string>
     <string name="projects_views_sort_rank">র‍্যাঙ্ক</string>
-
-    <string name="notification_channel_projects">Projects বিজ্ঞপ্তি</string>
     <string name="projects_project_not_found">প্রকল্প পাওয়া যায়নি</string>
+
 </resources>

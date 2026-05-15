@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Truy cập bị từ chối</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Tiếp tục</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Bình luận</string>
     <string name="access_level_view">Xem</string>
     <string name="access_level_none">Không có</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Thích</string>
     <string name="reaction_dislike">Không thích</string>
     <string name="reaction_laugh">Cười</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Đồng ý</string>
     <string name="reaction_disagree">Không đồng ý</string>
     <string name="push_service_action_hide">Ẩn</string>
+    <string name="about_close">Đóng</string>
 
-    <string name="push_service_group">Dịch vụ nền</string>
 </resources>

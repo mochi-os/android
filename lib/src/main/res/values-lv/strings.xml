@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Piekļuve liegta</string>
     <string name="auth_email">E-pasts</string>
     <string name="auth_continue">Turpināt</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Komentārs</string>
     <string name="access_level_view">Skatīt</string>
     <string name="access_level_none">Nav</string>
+    <string name="banner_label">Baneris</string>
     <string name="reaction_like">Patīk</string>
     <string name="reaction_dislike">Nepatīk</string>
     <string name="reaction_laugh">Smieties</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Piekrist</string>
     <string name="reaction_disagree">Nepiekrist</string>
     <string name="push_service_action_hide">Slēpt</string>
+    <string name="about_close">Aizvērt</string>
 
-    <string name="push_service_group">Fona pakalpojums</string>
 </resources>

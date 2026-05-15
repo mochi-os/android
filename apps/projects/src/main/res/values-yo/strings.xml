@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Dá ohun</string>
     <string name="projects_create_object_type">Irú</string>
     <string name="projects_create_object_title_field">Àkọlé</string>
+    <string name="projects_create_object_parent">Òbí</string>
     <string name="projects_settings_title">Àwọn ìṣètò</string>
     <string name="projects_settings_tab_general">Gbogbogbòò</string>
     <string name="projects_settings_tab_access">Ìwọlé</string>
+    <string name="projects_settings_tab_people">Àwọn ènìyàn</string>
+    <string name="projects_option_icon">Àmì</string>
     <string name="projects_settings_save">Fi àwọn àyípadà pamọ́</string>
     <string name="projects_settings_unsubscribe">Yọ ìforúkọsílẹ̀ kúrò</string>
     <string name="projects_settings_delete_project">Pa iṣẹ́ àkànṣe rẹ́</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Àwọn ìbéèrè</string>
     <string name="projects_object_tab_attachments">Àwọn ìsomọ́</string>
     <string name="projects_object_tab_links">Àwọn ìjápọ̀</string>
+    <string name="projects_watchers_watch">Wo</string>
+    <string name="projects_watchers_unwatch">Dáwọ́ ìríran dúró</string>
     <string name="projects_parent_label">Òbí</string>
     <string name="projects_parent_search_placeholder">Wá</string>
     <string name="projects_links_add">Fi ọ̀nà kún</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Mú àpẹrẹ wọlé</string>
     <string name="projects_design_import_choose_template">Yan àwòṣe</string>
     <string name="projects_design_replace_title">Pààrọ̀ àpẹrẹ?</string>
+    <string name="projects_design_replace">Rọ́pò</string>
     <string name="projects_classes_add">Fi kíláàsì kún</string>
     <string name="projects_classes_add_dialog_title">Fi kíláàsì kún</string>
     <string name="projects_classes_create">Dá</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Tí a dá</string>
     <string name="projects_views_sort_updated">Ti ṣe imudojúìwọ̀n</string>
     <string name="projects_views_sort_rank">Ipò</string>
-
-    <string name="notification_channel_projects">Ìfitónilétí Projects</string>
     <string name="projects_project_not_found">A kò rí project</string>
+
 </resources>

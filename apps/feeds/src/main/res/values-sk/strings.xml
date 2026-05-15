@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Označiť všetko ako prečítané</string>
     <string name="feeds_settings">Nastavenia</string>
     <string name="feeds_no_posts_yet">Zatiaľ žiadne príspevky</string>
+    <string name="feeds_default_sort">Predvolené triedenie</string>
+    <string name="feeds_suggested_interests_add">Pridať</string>
+    <string name="feeds_suggested_interests_dismiss">Skryť</string>
     <string name="feeds_unread">Neprečítané</string>
     <string name="feeds_filter_all">Všetko</string>
+    <string name="feeds_sort_label">Zoradiť</string>
     <string name="feeds_sort_interests">Záujmy</string>
     <string name="feeds_sort_new">Nový</string>
     <string name="feeds_sort_hot">Populárne</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Prijať</string>
     <string name="feeds_rss_url_copied">URL RSS skopírovaná do schránky</string>
     <string name="feeds_logout">Odhlásiť sa</string>
+    <string name="feeds_ai_account_default">Predvolený účet</string>
     <string name="feeds_ai_mode_off">Vypnuté</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + odstrániť duplikáty</string>
     <string name="feeds_ai_reset_default">Obnoviť na predvolené</string>
-
-    <string name="notification_channel_feeds">Notifikácie Feeds</string>
-    <string name="feeds_view_post">Zobraziť príspevok</string>
-    <string name="feeds_open_in_browser">Otvoriť v prehliadači</string>
-    <string name="feeds_unable_to_load">Stránku sa nepodarilo načítať</string>
     <string name="feeds_feed_not_found">Kanál sa nenašiel</string>
     <string name="feeds_post_not_found">Príspevok sa nenašiel</string>
+
 </resources>

@@ -30,6 +30,7 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
@@ -64,12 +65,18 @@ import org.mochios.android.R as MochiR
 fun PropertiesTab(
     obj: ProjectObject,
     projectDetails: ProjectDetails,
-    viewModel: ObjectDetailViewModel
+    viewModel: ObjectDetailViewModel,
+    onAddChild: () -> Unit = {},
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val fields = projectDetails.fields[obj.objectClass] ?: emptyList()
     val classOptions = projectDetails.options[obj.objectClass] ?: emptyMap()
     val canWrite = canWriteAccess(uiState.access)
+    // "Can this object have children?" — true when at least one class
+    // lists obj.objectClass in its allowed parent classes.
+    val canHaveChildren = remember(projectDetails.hierarchy, obj.objectClass) {
+        projectDetails.hierarchy.any { (_, parents) -> obj.objectClass in parents }
+    }
 
     Column(
         modifier = Modifier
@@ -111,6 +118,27 @@ fun PropertiesTab(
                 onSearchUsers = { query -> viewModel.searchPeople(query) }
             )
             Spacer(modifier = Modifier.height(12.dp))
+        }
+
+        // "Add child" affordance — shown when this object's class is
+        // listed as an allowed parent in any other class's hierarchy,
+        // and the user has write access. Tap routes through ProjectScreen
+        // to open CreateObjectDialog with parent pre-selected to this
+        // object's id.
+        if (canHaveChildren && canWrite) {
+            Spacer(modifier = Modifier.height(8.dp))
+            OutlinedButton(
+                onClick = onAddChild,
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Icon(
+                    Icons.Default.Add,
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp),
+                )
+                Spacer(modifier = Modifier.size(8.dp))
+                Text(stringResource(R.string.projects_add_child))
+            }
         }
 
         Spacer(modifier = Modifier.height(32.dp))

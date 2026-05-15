@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ສ້າງວັດຖຸ</string>
     <string name="projects_create_object_type">ປະເພດ</string>
     <string name="projects_create_object_title_field">ຊື່ເລື່ອງ</string>
+    <string name="projects_create_object_parent">ແມ່</string>
     <string name="projects_settings_title">ການຕັ້ງຄ່າ</string>
     <string name="projects_settings_tab_general">ທົ່ວໄປ</string>
     <string name="projects_settings_tab_access">ການເຂົ້າເຖິງ</string>
+    <string name="projects_settings_tab_people">ຄົນ</string>
+    <string name="projects_option_icon">ໄອຄອນ</string>
     <string name="projects_settings_save">ບັນທຶກການປ່ຽນແປງ</string>
     <string name="projects_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="projects_settings_delete_project">ລົບໂຄງການ</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">ຄຳຮ້ອງຂໍ</string>
     <string name="projects_object_tab_attachments">ໄຟລ໌ແນບ</string>
     <string name="projects_object_tab_links">ລິ້ງ</string>
+    <string name="projects_watchers_watch">ເບິ່ງ</string>
+    <string name="projects_watchers_unwatch">ຢຸດການເບິ່ງ</string>
     <string name="projects_parent_label">ແມ່</string>
     <string name="projects_parent_search_placeholder">ຄົ້ນຫາ</string>
     <string name="projects_links_add">ເພີ່ມລິ້ງ</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ນຳເຂົ້າການອອກແບບ</string>
     <string name="projects_design_import_choose_template">ເລືອກແມ່ແບບ</string>
     <string name="projects_design_replace_title">ປ່ຽນແທນການອອກແບບ?</string>
+    <string name="projects_design_replace">ແທນທີ່</string>
     <string name="projects_classes_add">ເພີ່ມຄລາສ</string>
     <string name="projects_classes_add_dialog_title">ເພີ່ມຄລາສ</string>
     <string name="projects_classes_create">ສ້າງ</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">ສ້າງແລ້ວ</string>
     <string name="projects_views_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="projects_views_sort_rank">ອັນດັບ</string>
-
-    <string name="notification_channel_projects">ການແຈ້ງເຕືອນ Projects</string>
     <string name="projects_project_not_found">ບໍ່ພົບໂຄງການ</string>
+
 </resources>

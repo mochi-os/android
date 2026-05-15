@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Crea un objecte</string>
     <string name="projects_create_object_type">Tipus</string>
     <string name="projects_create_object_title_field">Títol</string>
+    <string name="projects_create_object_parent">Pare</string>
     <string name="projects_settings_title">Configuració</string>
     <string name="projects_settings_tab_general">General</string>
     <string name="projects_settings_tab_access">Accés</string>
+    <string name="projects_settings_tab_people">Persones</string>
+    <string name="projects_option_icon">Icona</string>
     <string name="projects_settings_save">Desa els canvis</string>
     <string name="projects_settings_unsubscribe">Cancel·la la subscripció</string>
     <string name="projects_settings_delete_project">Suprimeix el projecte</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Sol·licituds</string>
     <string name="projects_object_tab_attachments">Fitxers adjunts</string>
     <string name="projects_object_tab_links">Enllaços</string>
+    <string name="projects_watchers_watch">Segueix</string>
+    <string name="projects_watchers_unwatch">Deixa de seguir</string>
     <string name="projects_parent_label">Pare</string>
     <string name="projects_parent_search_placeholder">Cerca</string>
     <string name="projects_links_add">Afegeix un enllaç</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importa el disseny</string>
     <string name="projects_design_import_choose_template">Tria una plantilla</string>
     <string name="projects_design_replace_title">Vols substituir el disseny?</string>
+    <string name="projects_design_replace">Substitueix</string>
     <string name="projects_classes_add">Afegeix una classe</string>
     <string name="projects_classes_add_dialog_title">Afegeix una classe</string>
     <string name="projects_classes_create">Crea</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Creat</string>
     <string name="projects_views_sort_updated">Actualitzat</string>
     <string name="projects_views_sort_rank">Posició</string>
-
-    <string name="notification_channel_projects">Notificacions Projects</string>
     <string name="projects_project_not_found">Projecte no trobat</string>
+
 </resources>

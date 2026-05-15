@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Эҷоди объект</string>
     <string name="projects_create_object_type">Намуд</string>
     <string name="projects_create_object_title_field">Сарлавҳа</string>
+    <string name="projects_create_object_parent">Волидайн</string>
     <string name="projects_settings_title">Танзимот</string>
     <string name="projects_settings_tab_general">Умумӣ</string>
     <string name="projects_settings_tab_access">Дастрасӣ</string>
+    <string name="projects_settings_tab_people">Шахсон</string>
+    <string name="projects_option_icon">Нишона</string>
     <string name="projects_settings_save">Захираи тағйиротҳо</string>
     <string name="projects_settings_unsubscribe">Аз обуна баромадан</string>
     <string name="projects_settings_delete_project">Нест кардани лоиҳа</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Дархостҳо</string>
     <string name="projects_object_tab_attachments">Замимаҳо</string>
     <string name="projects_object_tab_links">Пайвандҳо</string>
+    <string name="projects_watchers_watch">Назорат</string>
+    <string name="projects_watchers_unwatch">Назоратро қатъ кардан</string>
     <string name="projects_parent_label">Волидайн</string>
     <string name="projects_parent_search_placeholder">Ҷустуҷӯ</string>
     <string name="projects_links_add">Иловаи пайванд</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Воридкунии тарроҳӣ</string>
     <string name="projects_design_import_choose_template">Шаблон интихоб кунед</string>
     <string name="projects_design_replace_title">Тарҳро иваз кардан?</string>
+    <string name="projects_design_replace">Иваз кардан</string>
     <string name="projects_classes_add">Иловаи синф</string>
     <string name="projects_classes_add_dialog_title">Иловаи синф</string>
     <string name="projects_classes_create">Эҷод кардан</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Эҷодшуда</string>
     <string name="projects_views_sort_updated">Навсозӣ шуд</string>
     <string name="projects_views_sort_rank">Дараҷа</string>
-
-    <string name="notification_channel_projects">Огоҳиҳои Projects</string>
     <string name="projects_project_not_found">Лоиҳа ёфт нашуд</string>
+
 </resources>

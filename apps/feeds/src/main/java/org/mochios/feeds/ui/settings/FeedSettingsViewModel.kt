@@ -71,6 +71,12 @@ class FeedSettingsViewModel @Inject constructor(
     private val _aiMode = MutableStateFlow("")
     val aiMode: StateFlow<String> = _aiMode.asStateFlow()
 
+    private val _aiAccount = MutableStateFlow(0)
+    val aiAccount: StateFlow<Int> = _aiAccount.asStateFlow()
+
+    private val _aiAccounts = MutableStateFlow<List<org.mochios.android.model.Account>>(emptyList())
+    val aiAccounts: StateFlow<List<org.mochios.android.model.Account>> = _aiAccounts.asStateFlow()
+
     private val _aiPrompts = MutableStateFlow<Map<String, String>>(emptyMap())
     val aiPrompts: StateFlow<Map<String, String>> = _aiPrompts.asStateFlow()
 
@@ -114,6 +120,7 @@ class FeedSettingsViewModel @Inject constructor(
                 _feedInfo.value = info.feed
                 _feedName.value = info.feed.name
                 _aiMode.value = info.feed.aiMode ?: ""
+                _aiAccount.value = info.feed.aiAccount
             } catch (e: MochiError) {
                 _error.value = e.userMessage()
             } catch (e: Exception) {
@@ -439,13 +446,33 @@ class FeedSettingsViewModel @Inject constructor(
         _aiMode.value = mode
         viewModelScope.launch {
             try {
-                repository.setAiSettings(feedId, mode)
+                repository.setAiSettings(feedId, mode, _aiAccount.value)
                 _actionMessage.value = "AI mode updated"
             } catch (e: MochiError) {
                 _error.value = e.userMessage()
             } catch (e: Exception) {
                 _error.value = e.message ?: "Failed to update AI mode"
             }
+        }
+    }
+
+    fun setAiAccount(accountId: Int) {
+        _aiAccount.value = accountId
+        viewModelScope.launch {
+            try {
+                repository.setAiSettings(feedId, _aiMode.value, accountId)
+                _actionMessage.value = "AI account updated"
+            } catch (e: MochiError) {
+                _error.value = e.userMessage()
+            } catch (e: Exception) {
+                _error.value = e.message ?: "Failed to update AI account"
+            }
+        }
+    }
+
+    fun loadAiAccounts() {
+        viewModelScope.launch {
+            _aiAccounts.value = repository.listAiAccounts()
         }
     }
 

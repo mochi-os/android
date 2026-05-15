@@ -49,6 +49,7 @@ fun GeneralTab(
     val rssToken by viewModel.rssToken.collectAsState()
     val rssMode by viewModel.rssMode.collectAsState()
     val banner by viewModel.banner.collectAsState()
+    val feedInfo by viewModel.feedInfo.collectAsState()
     var showDeleteDialog by remember { mutableStateOf(false) }
     val context = LocalContext.current
     val focusManager = LocalFocusManager.current
@@ -84,6 +85,24 @@ fun GeneralTab(
             }
         ) {
             Text(stringResource(R.string.feeds_save_name))
+        }
+
+        feedInfo?.let { info ->
+            if (info.fingerprint.isNotBlank()) {
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    stringResource(R.string.feeds_identity_fingerprint, info.fingerprint),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            if (!info.server.isNullOrBlank()) {
+                Text(
+                    stringResource(R.string.feeds_identity_server, info.server!!),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
         }
 
         Spacer(modifier = Modifier.height(24.dp))

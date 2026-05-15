@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Galmee uumi</string>
     <string name="projects_create_object_type">Akaakuu</string>
     <string name="projects_create_object_title_field">Mata duree</string>
+    <string name="projects_create_object_parent">Maatii</string>
     <string name="projects_settings_title">Qindaa\'inoota</string>
     <string name="projects_settings_tab_general">Waliigalaa</string>
     <string name="projects_settings_tab_access">Seensa</string>
+    <string name="projects_settings_tab_people">Namoota</string>
+    <string name="projects_option_icon">Mallattoo</string>
     <string name="projects_settings_save">Jijjiiramoota olkaa\'i</string>
     <string name="projects_settings_unsubscribe">Galaa\'uu kaasi</string>
     <string name="projects_settings_delete_project">Pirojektii haqi</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Iyyannoolee</string>
     <string name="projects_object_tab_attachments">Maxxansaalee</string>
     <string name="projects_object_tab_links">Hidhaalee</string>
+    <string name="projects_watchers_watch">Daawwadhu</string>
+    <string name="projects_watchers_unwatch">Daawwannaa dhaabsisi</string>
     <string name="projects_parent_label">Maatii</string>
     <string name="projects_parent_search_placeholder">Barbaadi</string>
     <string name="projects_links_add">Hidhaa dabali</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Bocii fidi</string>
     <string name="projects_design_import_choose_template">Galmee filadhu</string>
     <string name="projects_design_replace_title">Dizaayinii bakka buusuuf?</string>
+    <string name="projects_design_replace">Bakka buusi</string>
     <string name="projects_classes_add">Daree dabali</string>
     <string name="projects_classes_add_dialog_title">Daree dabali</string>
     <string name="projects_classes_create">Uumi</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Uumame</string>
     <string name="projects_views_sort_updated">Haaromfameera</string>
     <string name="projects_views_sort_rank">Sadarkaa</string>
-
-    <string name="notification_channel_projects">Beeksisawwan Projects</string>
     <string name="projects_project_not_found">Pirojektiin hin argamne</string>
+
 </resources>

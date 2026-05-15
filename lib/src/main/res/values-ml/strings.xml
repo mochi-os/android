@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">ആക്സസ് നിരസിച്ചു</string>
     <string name="auth_email">ഇമെയിൽ</string>
     <string name="auth_continue">തുടരുക</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">അഭിപ്രായം</string>
     <string name="access_level_view">കാണുക</string>
     <string name="access_level_none">ഒന്നുമില്ല</string>
+    <string name="banner_label">ബാനർ</string>
     <string name="reaction_like">ഇഷ്ടം</string>
     <string name="reaction_dislike">ഇഷ്ടമല്ല</string>
     <string name="reaction_laugh">ചിരി</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">സമ്മതം</string>
     <string name="reaction_disagree">വിയോജിക്കുന്നു</string>
     <string name="push_service_action_hide">മറയ്ക്കുക</string>
+    <string name="about_close">അടയ്ക്കുക</string>
 
-    <string name="push_service_group">പശ്ചാത്തല സേവനം</string>
 </resources>

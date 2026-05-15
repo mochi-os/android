@@ -4,6 +4,4 @@
     <string name="projects_list_close_search">Suche schliessen</string>
     <string name="projects_request_close">Schliessen</string>
 
-    <string name="notification_channel_projects">Projects-Benachrichtigungen</string>
-    <string name="projects_project_not_found">Project not found</string>
 </resources>

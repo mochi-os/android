@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Дастрасӣ рад карда шуд</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Идома</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Шарҳ</string>
     <string name="access_level_view">Намоиш</string>
     <string name="access_level_none">Ҳеҷ кадом</string>
+    <string name="banner_label">Баннер</string>
     <string name="reaction_like">Писандидан</string>
     <string name="reaction_dislike">Дӯст намедорам</string>
     <string name="reaction_laugh">Хандидан</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Розӣ ҳастам</string>
     <string name="reaction_disagree">Розӣ нестам</string>
     <string name="push_service_action_hide">Пинҳон кардан</string>
+    <string name="about_close">Пӯшидан</string>
 
-    <string name="push_service_group">Хидмати замина</string>
 </resources>

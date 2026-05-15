@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">សម្គាល់ទាំងអស់បានអាន</string>
     <string name="feeds_settings">ការកំណត់</string>
     <string name="feeds_no_posts_yet">មិនទាន់មានប្រកាស</string>
+    <string name="feeds_default_sort">ការតម្រៀបលំនាំដើម</string>
+    <string name="feeds_suggested_interests_add">បន្ថែម</string>
+    <string name="feeds_suggested_interests_dismiss">លាក់</string>
     <string name="feeds_unread">មិនទាន់អាន</string>
     <string name="feeds_filter_all">ទាំងអស់</string>
+    <string name="feeds_sort_label">តម្រៀប</string>
     <string name="feeds_sort_interests">ចំណាប់អារម្មណ៍</string>
     <string name="feeds_sort_new">ថ្មី</string>
     <string name="feeds_sort_hot">ក្ដៅ</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">ទទួលយក</string>
     <string name="feeds_rss_url_copied">បានចម្លង RSS URL ទៅ clipboard</string>
     <string name="feeds_logout">ចាកចេញ</string>
+    <string name="feeds_ai_account_default">គណនីលំនាំដើម</string>
     <string name="feeds_ai_mode_off">បិទ</string>
     <string name="feeds_ai_mode_tag">ស្លាក</string>
     <string name="feeds_ai_mode_tag_deduplicate">ស្លាក + ដកស្ទួន</string>
     <string name="feeds_ai_reset_default">កំណត់ឡើងវិញទៅលំនាំដើម</string>
-
-    <string name="notification_channel_feeds">ការជូនដំណឹង Feeds</string>
-    <string name="feeds_view_post">មើល​ប្រកាស</string>
-    <string name="feeds_open_in_browser">បើក​ក្នុង​កម្មវិធី​រុករក</string>
-    <string name="feeds_unable_to_load">មិន​អាច​ផ្ទុក​ទំព័រ​បាន​ទេ</string>
     <string name="feeds_feed_not_found">រកមិនឃើញព័ត៌មានបង្ហាញ</string>
     <string name="feeds_post_not_found">រកមិនឃើញប្រកាស</string>
+
 </resources>

@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Sàmì sí gbogbo gẹ́gẹ́ bí kíkà</string>
     <string name="feeds_settings">Àwọn ìṣètò</string>
     <string name="feeds_no_posts_yet">Kò sí ìfìránṣẹ́ síbẹ̀</string>
+    <string name="feeds_default_sort">Ìtò àìpé</string>
+    <string name="feeds_suggested_interests_add">Fi kún</string>
+    <string name="feeds_suggested_interests_dismiss">Fi pamọ́</string>
     <string name="feeds_unread">Aláìkà</string>
     <string name="feeds_filter_all">Gbogbo</string>
+    <string name="feeds_sort_label">Ṣètò</string>
     <string name="feeds_sort_interests">Àwọn ìfẹ́</string>
     <string name="feeds_sort_new">Tuntun</string>
     <string name="feeds_sort_hot">Gbígbóná</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Gbà</string>
     <string name="feeds_rss_url_copied">A ti ṣàdàkọ URL RSS sí clipboard</string>
     <string name="feeds_logout">Jáde</string>
+    <string name="feeds_ai_account_default">Àkáǹtì àìpé</string>
     <string name="feeds_ai_mode_off">Tí a ti pa</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + yọ ẹda kuro</string>
     <string name="feeds_ai_reset_default">Pa padà sí àbùdá</string>
-
-    <string name="notification_channel_feeds">Ìfitónilétí Feeds</string>
-    <string name="feeds_view_post">Wo ifiweranṣẹ</string>
-    <string name="feeds_open_in_browser">Ṣii ninu aṣawakiri</string>
-    <string name="feeds_unable_to_load">Ko le ṣe ikojọpọ oju-iwe</string>
     <string name="feeds_feed_not_found">A kò rí feed</string>
     <string name="feeds_post_not_found">A kò rí ìfìránṣẹ́</string>
+
 </resources>

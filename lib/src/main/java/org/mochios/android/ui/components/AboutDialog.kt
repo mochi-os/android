@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.AlertDialog
@@ -64,7 +65,9 @@ fun AboutDialog(onDismiss: () -> Unit) {
             CheckOutcome.NetworkError -> UpdateCheckState.NETWORK_ERROR
             CheckOutcome.DownloadFailed -> UpdateCheckState.DOWNLOAD_FAILED
             CheckOutcome.UpdateStaged -> {
-                (context as? Activity)?.let { UpdateInstaller.promptIfPending(it) }
+                // Use forcePrompt — user explicitly asked, so suppression
+                // for an already-declined version should be ignored here.
+                (context as? Activity)?.let { UpdateInstaller.forcePrompt(it) }
                 onDismiss()
                 UpdateCheckState.IDLE
             }
@@ -75,7 +78,10 @@ fun AboutDialog(onDismiss: () -> Unit) {
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.about_title)) },
         text = {
-            Column {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
                 Text(stringResource(R.string.about_version, version))
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {

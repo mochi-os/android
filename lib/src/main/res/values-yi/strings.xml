@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">צוטריט אָפּגעזאָגט</string>
     <string name="auth_email">בליצפּאָסט</string>
     <string name="auth_continue">ממשיך</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">קאָמענטאַר</string>
     <string name="access_level_view">בליק</string>
     <string name="access_level_none">קיינס</string>
+    <string name="banner_label">באַנער</string>
     <string name="reaction_like">געפֿעלט</string>
     <string name="reaction_dislike">נישט גלײַכן</string>
     <string name="reaction_laugh">לאַכן</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">מסכּים זײַן</string>
     <string name="reaction_disagree">נישט מסכּים</string>
     <string name="push_service_action_hide">באַהאַלטן</string>
+    <string name="about_close">פֿאַרמאַכן</string>
 
-    <string name="push_service_group">הינטערגרונט סערוויס</string>
 </resources>

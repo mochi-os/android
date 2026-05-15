@@ -23,15 +23,34 @@ object UpdateInstaller {
 
     /**
      * If a newer-than-current APK is staged in cacheDir/updates/, launches
-     * the system installer with it. Idempotent — called every onResume; the
-     * stage flag is cleared once the install dialog has been launched so a
-     * cancelled install doesn't re-trigger on every screen unlock.
+     * the system installer with it. Idempotent — called every onResume.
      *
-     * If the staged version turns out to match (or be older than) the
-     * currently-installed APK — common right after a successful upgrade —
-     * the staged file and pending flag are cleared.
+     * Once the user has been prompted for a given staged version, we
+     * record that version in [KEY_PROMPTED_VERSION] and skip on subsequent
+     * resumes for the SAME version. If they declined the system "Update
+     * Mochi?" dialog, hammering them every time they unlock the phone is
+     * worse than waiting for the next version. When UpdateChecker stages
+     * a newer version, [KEY_PROMPTED_VERSION] will be stale relative to
+     * the new pending, and we re-prompt.
+     *
+     * The user can also trigger the prompt explicitly from the About
+     * dialog's "Check for updates" button via [forcePrompt].
      */
     fun promptIfPending(activity: Activity) {
+        promptInternal(activity, force = false)
+    }
+
+    /**
+     * Trigger the install prompt regardless of whether the user has
+     * already been asked for this version. Called from the About dialog
+     * "Check for updates" flow when [UpdateChecker.checkNow] reports
+     * UpdateStaged — the user explicitly asked, so re-asking is expected.
+     */
+    fun forcePrompt(activity: Activity) {
+        promptInternal(activity, force = true)
+    }
+
+    private fun promptInternal(activity: Activity, force: Boolean) {
         val ctx = activity.applicationContext
         val prefs = UpdateChecker.prefs(ctx)
         val pending = prefs.getString(UpdateChecker.KEY_PENDING, "")
@@ -41,6 +60,15 @@ object UpdateInstaller {
         if (current != null && UpdateChecker.compareVersions(pending, current) <= 0) {
             // Already installed (either by this prompt or out-of-band) — clean up.
             clear(ctx)
+            return
+        }
+
+        // Skip if the user has already been prompted for this exact version
+        // and hasn't asked us to retry. A newer staged version clears the
+        // suppression because KEY_PROMPTED_VERSION won't match.
+        val promptedFor = prefs.getString(KEY_PROMPTED_VERSION, "") ?: ""
+        if (!force && promptedFor == pending) {
+            Log.d(TAG, "Already prompted for $pending; not re-asking")
             return
         }
 
@@ -80,10 +108,11 @@ object UpdateInstaller {
             return
         }
 
-        // Mark as launched *before* starting the activity. The system dialog
-        // shows independently of our Activity lifecycle, and we'd otherwise
-        // re-prompt on every onResume cycle while the dialog sits there.
-        prefs.edit().putBoolean(KEY_PROMPTED, true).apply()
+        // Record that we've prompted for this version BEFORE starting the
+        // activity. The system dialog shows independently of our Activity
+        // lifecycle, and we'd otherwise re-prompt on every onResume cycle
+        // while the dialog sits there (and forever if the user taps No).
+        prefs.edit().putString(KEY_PROMPTED_VERSION, pending).apply()
 
         try {
             val uri = FileProvider.getUriForFile(
@@ -108,10 +137,10 @@ object UpdateInstaller {
         prefs.edit()
             .remove(UpdateChecker.KEY_PENDING)
             .remove(UpdateChecker.KEY_PENDING_PATH)
-            .remove(KEY_PROMPTED)
+            .remove(KEY_PROMPTED_VERSION)
             .apply()
         UpdateChecker.updatesDir(ctx).listFiles()?.forEach { it.delete() }
     }
 
-    private const val KEY_PROMPTED = "prompted"
+    private const val KEY_PROMPTED_VERSION = "prompted_version"
 }

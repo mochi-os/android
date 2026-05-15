@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Баарын окулду деп белгилөө</string>
     <string name="feeds_settings">Жөндөөлөр</string>
     <string name="feeds_no_posts_yet">Посттор азырынча жок</string>
+    <string name="feeds_default_sort">Демейки иргөө</string>
+    <string name="feeds_suggested_interests_add">Кошуу</string>
+    <string name="feeds_suggested_interests_dismiss">Жашыруу</string>
     <string name="feeds_unread">Окулган эмес</string>
     <string name="feeds_filter_all">Баары</string>
+    <string name="feeds_sort_label">Сорттоо</string>
     <string name="feeds_sort_interests">Кызыкчылыктар</string>
     <string name="feeds_sort_new">Жаңы</string>
     <string name="feeds_sort_hot">Ысык</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Кабыл алуу</string>
     <string name="feeds_rss_url_copied">RSS URL алмашуу буферине көчүрүлдү</string>
     <string name="feeds_logout">Чыгуу</string>
+    <string name="feeds_ai_account_default">Демейки аккаунт</string>
     <string name="feeds_ai_mode_off">Өчүрүлгөн</string>
     <string name="feeds_ai_mode_tag">Тег</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тег + кайталоону жокко чыгаруу</string>
     <string name="feeds_ai_reset_default">Демейкиге кайтаруу</string>
-
-    <string name="notification_channel_feeds">Feeds билдирүүлөрү</string>
-    <string name="feeds_view_post">Жазууну көрүү</string>
-    <string name="feeds_open_in_browser">Браузерде ачуу</string>
-    <string name="feeds_unable_to_load">Бетти жүктөө мүмкүн эмес</string>
     <string name="feeds_feed_not_found">Лента табылган жок</string>
     <string name="feeds_post_not_found">Пост табылган жок</string>
+
 </resources>

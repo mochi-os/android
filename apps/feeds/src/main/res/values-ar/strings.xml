@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">وضع علامة مقروء على الكل</string>
     <string name="feeds_settings">الإعدادات</string>
     <string name="feeds_no_posts_yet">لا توجد منشورات بعد</string>
+    <string name="feeds_default_sort">الترتيب الافتراضي</string>
+    <string name="feeds_suggested_interests_add">إضافة</string>
+    <string name="feeds_suggested_interests_dismiss">إخفاء</string>
     <string name="feeds_unread">غير مقروء</string>
     <string name="feeds_filter_all">الكل</string>
+    <string name="feeds_sort_label">ترتيب</string>
     <string name="feeds_sort_interests">الاهتمامات</string>
     <string name="feeds_sort_new">جديد</string>
     <string name="feeds_sort_hot">رائج</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">قبول</string>
     <string name="feeds_rss_url_copied">تم نسخ URL RSS إلى الحافظة</string>
     <string name="feeds_logout">تسجيل الخروج</string>
+    <string name="feeds_ai_account_default">الحساب الافتراضي</string>
     <string name="feeds_ai_mode_off">معطّل</string>
     <string name="feeds_ai_mode_tag">وسم</string>
     <string name="feeds_ai_mode_tag_deduplicate">العلامة + إزالة التكرار</string>
     <string name="feeds_ai_reset_default">إعادة تعيين إلى الافتراضي</string>
-
-    <string name="notification_channel_feeds">إشعارات Feeds</string>
-    <string name="feeds_view_post">عرض المنشور</string>
-    <string name="feeds_open_in_browser">فتح في المتصفح</string>
-    <string name="feeds_unable_to_load">تعذر تحميل الصفحة</string>
     <string name="feeds_feed_not_found">التغذية غير موجودة</string>
     <string name="feeds_post_not_found">المنشور غير موجود</string>
+
 </resources>

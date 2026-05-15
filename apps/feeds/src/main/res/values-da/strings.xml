@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Markér alle læst</string>
     <string name="feeds_settings">Indstillinger</string>
     <string name="feeds_no_posts_yet">Ingen indlæg endnu</string>
+    <string name="feeds_default_sort">Standardsortering</string>
+    <string name="feeds_suggested_interests_add">Tilføj</string>
+    <string name="feeds_suggested_interests_dismiss">Skjul</string>
     <string name="feeds_unread">Ulæst</string>
     <string name="feeds_filter_all">Alle</string>
+    <string name="feeds_sort_label">Sortér</string>
     <string name="feeds_sort_interests">Interesser</string>
     <string name="feeds_sort_new">Ny</string>
     <string name="feeds_sort_hot">Populære</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Accepter</string>
     <string name="feeds_rss_url_copied">RSS-URL kopieret til udklipsholderen</string>
     <string name="feeds_logout">Log ud</string>
+    <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktiveret</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + fjern dubletter</string>
     <string name="feeds_ai_reset_default">Nulstil til standard</string>
-
-    <string name="notification_channel_feeds">Feeds-notifikationer</string>
-    <string name="feeds_view_post">Vis opslag</string>
-    <string name="feeds_open_in_browser">Åbn i browser</string>
-    <string name="feeds_unable_to_load">Kunne ikke indlæse siden</string>
     <string name="feeds_feed_not_found">Feed ikke fundet</string>
     <string name="feeds_post_not_found">Indlæg ikke fundet</string>
+
 </resources>

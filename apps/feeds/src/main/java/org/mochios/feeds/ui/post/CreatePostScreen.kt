@@ -233,25 +233,47 @@ fun CreatePostScreen(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    existingAttachments.forEach { attachment ->
+                    existingAttachments.forEachIndexed { index, attachment ->
                         val isRemoved = attachment.id in removedExistingIds
-                        FilterChip(
-                            selected = !isRemoved,
-                            onClick = { viewModel.toggleRemoveExistingAttachment(attachment.id) },
-                            label = {
-                                Text(
-                                    attachment.name.takeLast(25),
-                                    style = MaterialTheme.typography.labelSmall
-                                )
-                            },
-                            trailingIcon = {
-                                Icon(
-                                    Icons.Default.Close,
-                                    contentDescription = stringResource(if (isRemoved) R.string.feeds_restore else R.string.feeds_remove),
-                                    modifier = Modifier.size(14.dp)
-                                )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            if (existingAttachments.size > 1) {
+                                Column {
+                                    if (index > 0) {
+                                        IconButton(
+                                            onClick = { viewModel.moveExistingAttachment(attachment.id, -1) },
+                                            modifier = Modifier.size(20.dp)
+                                        ) {
+                                            Icon(Icons.Default.ExpandLess, contentDescription = stringResource(R.string.feeds_move_up), modifier = Modifier.size(14.dp))
+                                        }
+                                    }
+                                    if (index < existingAttachments.lastIndex) {
+                                        IconButton(
+                                            onClick = { viewModel.moveExistingAttachment(attachment.id, 1) },
+                                            modifier = Modifier.size(20.dp)
+                                        ) {
+                                            Icon(Icons.Default.ExpandMore, contentDescription = stringResource(R.string.feeds_move_down), modifier = Modifier.size(14.dp))
+                                        }
+                                    }
+                                }
                             }
-                        )
+                            FilterChip(
+                                selected = !isRemoved,
+                                onClick = { viewModel.toggleRemoveExistingAttachment(attachment.id) },
+                                label = {
+                                    Text(
+                                        attachment.name.takeLast(25),
+                                        style = MaterialTheme.typography.labelSmall
+                                    )
+                                },
+                                trailingIcon = {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = stringResource(if (isRemoved) R.string.feeds_restore else R.string.feeds_remove),
+                                        modifier = Modifier.size(14.dp)
+                                    )
+                                }
+                            )
+                        }
                     }
                     attachments.forEachIndexed { index, uri ->
                         Row(verticalAlignment = Alignment.CenterVertically) {

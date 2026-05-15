@@ -14,12 +14,14 @@
     <string name="chat_new_friends">මිතුරන්</string>
     <string name="chat_new_search_placeholder">මිතුරන් සොයන්න</string>
     <string name="chat_message_placeholder">පණිවිඩය</string>
+    <string name="chat_attachment_add">ගොනු අමුණන්න</string>
     <string name="chat_message_attach">ගොනු අමුණන්න</string>
     <string name="chat_settings_title">චැට් සැකසීම්</string>
     <string name="chat_settings_rename_label">චැට් නාමය</string>
     <string name="chat_settings_save">සුරකින්න</string>
     <string name="chat_settings_members">සාමාජිකයින්</string>
     <string name="chat_settings_add_member">සාමාජිකයෙකු එක් කරන්න</string>
+    <string name="chat_settings_add_member_search">මිතුරන් සොයන්න</string>
     <string name="chat_settings_remove_member">ඉවත් කරන්න</string>
     <string name="chat_settings_remove_member_title">සාමාජිකයා ඉවත් කරන්න</string>
     <string name="chat_settings_leave">කතාබහෙන් ඉවත් වන්න</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">චැට් එක මකන්න</string>
     <string name="chat_members_empty">සාමාජිකයින් නැත</string>
     <string name="chat_members_you">ඔබ</string>
-
-    <string name="notification_channel_chat">Chat දැනුම්දීම්</string>
     <string name="chat_chat_not_found">චැට් එක සොයාගත නොහැක</string>
+
 </resources>

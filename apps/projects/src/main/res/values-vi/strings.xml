@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Tạo đối tượng</string>
     <string name="projects_create_object_type">Loại</string>
     <string name="projects_create_object_title_field">Tiêu đề</string>
+    <string name="projects_create_object_parent">Cha</string>
     <string name="projects_settings_title">Cài đặt</string>
     <string name="projects_settings_tab_general">Chung</string>
     <string name="projects_settings_tab_access">Truy cập</string>
+    <string name="projects_settings_tab_people">Mọi người</string>
+    <string name="projects_option_icon">Biểu tượng</string>
     <string name="projects_settings_save">Lưu thay đổi</string>
     <string name="projects_settings_unsubscribe">Hủy đăng ký</string>
     <string name="projects_settings_delete_project">Xóa dự án</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Yêu cầu</string>
     <string name="projects_object_tab_attachments">Tệp đính kèm</string>
     <string name="projects_object_tab_links">Liên kết</string>
+    <string name="projects_watchers_watch">Theo dõi</string>
+    <string name="projects_watchers_unwatch">Ngừng theo dõi</string>
     <string name="projects_parent_label">Cha</string>
     <string name="projects_parent_search_placeholder">Tìm kiếm</string>
     <string name="projects_links_add">Thêm liên kết</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Nhập thiết kế</string>
     <string name="projects_design_import_choose_template">Chọn một mẫu</string>
     <string name="projects_design_replace_title">Thay thế thiết kế?</string>
+    <string name="projects_design_replace">Thay thế</string>
     <string name="projects_classes_add">Thêm class</string>
     <string name="projects_classes_add_dialog_title">Thêm class</string>
     <string name="projects_classes_create">Tạo</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Đã tạo</string>
     <string name="projects_views_sort_updated">Đã cập nhật</string>
     <string name="projects_views_sort_rank">Xếp hạng</string>
-
-    <string name="notification_channel_projects">Thông báo Projects</string>
     <string name="projects_project_not_found">Không tìm thấy dự án</string>
+
 </resources>

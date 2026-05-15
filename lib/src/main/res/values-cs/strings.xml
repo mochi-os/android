@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Přístup odepřen</string>
     <string name="auth_email">E-mail</string>
     <string name="auth_continue">Pokračovat</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Komentář</string>
     <string name="access_level_view">Zobrazit</string>
     <string name="access_level_none">Žádné</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Líbí se</string>
     <string name="reaction_dislike">Nelíbí se</string>
     <string name="reaction_laugh">Smích</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Souhlasím</string>
     <string name="reaction_disagree">Nesouhlasím</string>
     <string name="push_service_action_hide">Skrýt</string>
+    <string name="about_close">Zavřít</string>
 
-    <string name="push_service_group">Služba na pozadí</string>
 </resources>

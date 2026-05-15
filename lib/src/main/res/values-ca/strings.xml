@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Accés denegat</string>
     <string name="auth_email">Correu electrònic</string>
     <string name="auth_continue">Continua</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Comentari</string>
     <string name="access_level_view">Visualitza</string>
     <string name="access_level_none">Cap</string>
+    <string name="banner_label">Bàner</string>
     <string name="reaction_like">M\'agrada</string>
     <string name="reaction_dislike">No m\'agrada</string>
     <string name="reaction_laugh">Riure</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">D\'acord</string>
     <string name="reaction_disagree">No hi estic d\'acord</string>
     <string name="push_service_action_hide">Amaga</string>
+    <string name="about_close">Tanca</string>
 
-    <string name="push_service_group">Servei en segon pla</string>
 </resources>

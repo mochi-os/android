@@ -14,12 +14,14 @@
     <string name="chat_new_friends">મિત્રો</string>
     <string name="chat_new_search_placeholder">મિત્રો શોધો</string>
     <string name="chat_message_placeholder">સંદેશ</string>
+    <string name="chat_attachment_add">ફાઇલો જોડો</string>
     <string name="chat_message_attach">ફાઇલો જોડો</string>
     <string name="chat_settings_title">ચેટ સેટિંગ્સ</string>
     <string name="chat_settings_rename_label">ચેટનું નામ</string>
     <string name="chat_settings_save">સાચવો</string>
     <string name="chat_settings_members">સભ્યો</string>
     <string name="chat_settings_add_member">સભ્ય ઉમેરો</string>
+    <string name="chat_settings_add_member_search">મિત્રો શોધો</string>
     <string name="chat_settings_remove_member">દૂર કરો</string>
     <string name="chat_settings_remove_member_title">સભ્ય દૂર કરો</string>
     <string name="chat_settings_leave">ચેટ છોડો</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">ચેટ કાઢી નાખો</string>
     <string name="chat_members_empty">કોઈ સભ્યો નથી</string>
     <string name="chat_members_you">તમે</string>
-
-    <string name="notification_channel_chat">Chat નોટિફિકેશન</string>
     <string name="chat_chat_not_found">ચેટ મળી નહીં</string>
+
 </resources>

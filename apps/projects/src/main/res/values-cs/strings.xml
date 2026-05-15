@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Vytvořit objekt</string>
     <string name="projects_create_object_type">Typ</string>
     <string name="projects_create_object_title_field">Název</string>
+    <string name="projects_create_object_parent">Rodič</string>
     <string name="projects_settings_title">Nastavení</string>
     <string name="projects_settings_tab_general">Obecné</string>
     <string name="projects_settings_tab_access">Přístup</string>
+    <string name="projects_settings_tab_people">Lidé</string>
+    <string name="projects_option_icon">Ikona</string>
     <string name="projects_settings_save">Uložit změny</string>
     <string name="projects_settings_unsubscribe">Zrušit odběr</string>
     <string name="projects_settings_delete_project">Smazat projekt</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Žádosti</string>
     <string name="projects_object_tab_attachments">Přílohy</string>
     <string name="projects_object_tab_links">Odkazy</string>
+    <string name="projects_watchers_watch">Sledovat</string>
+    <string name="projects_watchers_unwatch">Přestat sledovat</string>
     <string name="projects_parent_label">Rodič</string>
     <string name="projects_parent_search_placeholder">Hledat</string>
     <string name="projects_links_add">Přidat odkaz</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importovat návrh</string>
     <string name="projects_design_import_choose_template">Vyberte šablonu</string>
     <string name="projects_design_replace_title">Nahradit design?</string>
+    <string name="projects_design_replace">Nahradit</string>
     <string name="projects_classes_add">Přidat třídu</string>
     <string name="projects_classes_add_dialog_title">Přidat třídu</string>
     <string name="projects_classes_create">Vytvořit</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Vytvořeno</string>
     <string name="projects_views_sort_updated">Aktualizováno</string>
     <string name="projects_views_sort_rank">Pořadí</string>
-
-    <string name="notification_channel_projects">Oznámení Projects</string>
     <string name="projects_project_not_found">Projekt nenalezen</string>
+
 </resources>

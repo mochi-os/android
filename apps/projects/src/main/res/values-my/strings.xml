@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">object ဖန်တီးမည်</string>
     <string name="projects_create_object_type">အမျိုးအစား</string>
     <string name="projects_create_object_title_field">ခေါင်းစဉ်</string>
+    <string name="projects_create_object_parent">Parent</string>
     <string name="projects_settings_title">ဆက်တင်များ</string>
     <string name="projects_settings_tab_general">အထွေထွေ</string>
     <string name="projects_settings_tab_access">ဝင်ရောက်ခွင့်</string>
+    <string name="projects_settings_tab_people">လူများ</string>
+    <string name="projects_option_icon">သင်္ကေတ</string>
     <string name="projects_settings_save">ပြောင်းလဲမှုများ သိမ်းမည်</string>
     <string name="projects_settings_unsubscribe">Subscribe ဖြုတ်မည်</string>
     <string name="projects_settings_delete_project">project ဖျက်မည်</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">တောင်းခံချက်များ</string>
     <string name="projects_object_tab_attachments">ပူးတွဲဖိုင်များ</string>
     <string name="projects_object_tab_links">လင့်များ</string>
+    <string name="projects_watchers_watch">ကြည့်ရှုမည်</string>
+    <string name="projects_watchers_unwatch">ကြည့်ရှုခြင်း ရပ်မည်</string>
     <string name="projects_parent_label">Parent</string>
     <string name="projects_parent_search_placeholder">ရှာဖွေ</string>
     <string name="projects_links_add">လင့်ခ် ထည့်မည်</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ဒီဇိုင်း တင်သွင်း</string>
     <string name="projects_design_import_choose_template">template တစ်ခု ရွေးချယ်ပါ</string>
     <string name="projects_design_replace_title">ဒီဇိုင်း အစားထိုးမလား?</string>
+    <string name="projects_design_replace">အစားထိုးပါ</string>
     <string name="projects_classes_add">class ထည့်မည်</string>
     <string name="projects_classes_add_dialog_title">class ထည့်မည်</string>
     <string name="projects_classes_create">ဖန်တီးမည်</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">ဖန်တီးပြီး</string>
     <string name="projects_views_sort_updated">အပ်ဒိတ်လုပ်ပြီး</string>
     <string name="projects_views_sort_rank">Rank</string>
-
-    <string name="notification_channel_projects">Projects အကြောင်းကြားစာများ</string>
     <string name="projects_project_not_found">ပရောဂျက် မတွေ့ပါ</string>
+
 </resources>

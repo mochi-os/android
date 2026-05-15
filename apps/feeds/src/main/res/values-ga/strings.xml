@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Marcáil gach rud léite</string>
     <string name="feeds_settings">Socruithe</string>
     <string name="feeds_no_posts_yet">Níl aon phostáil fós</string>
+    <string name="feeds_default_sort">Sórtáil réamhshocraithe</string>
+    <string name="feeds_suggested_interests_add">Cuir leis</string>
+    <string name="feeds_suggested_interests_dismiss">Folaigh</string>
     <string name="feeds_unread">Gan léamh</string>
     <string name="feeds_filter_all">Iomlán</string>
+    <string name="feeds_sort_label">Sórtáil</string>
     <string name="feeds_sort_interests">Suimeanna</string>
     <string name="feeds_sort_new">Nua</string>
     <string name="feeds_sort_hot">Te</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Glac leis</string>
     <string name="feeds_rss_url_copied">Cóipeáladh URL RSS chuig an ngearrthaisce</string>
     <string name="feeds_logout">Logáil amach</string>
+    <string name="feeds_ai_account_default">Cuntas réamhshocraithe</string>
     <string name="feeds_ai_mode_off">Díchumasaithe</string>
     <string name="feeds_ai_mode_tag">Clib</string>
     <string name="feeds_ai_mode_tag_deduplicate">Clib + dí-dhúblach</string>
     <string name="feeds_ai_reset_default">Athshocraigh chuig réamhshocrú</string>
-
-    <string name="notification_channel_feeds">Fógraí Feeds</string>
-    <string name="feeds_view_post">Féach ar an bpostáil</string>
-    <string name="feeds_open_in_browser">Oscail sa bhrabhsálaí</string>
-    <string name="feeds_unable_to_load">Ní féidir an leathanach a luchtú</string>
     <string name="feeds_feed_not_found">Níor aimsíodh an fotha</string>
     <string name="feeds_post_not_found">Níor aimsíodh an phostáil</string>
+
 </resources>

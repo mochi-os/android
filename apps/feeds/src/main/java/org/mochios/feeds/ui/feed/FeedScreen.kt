@@ -24,7 +24,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -35,6 +38,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
@@ -42,6 +46,7 @@ import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ImportExport
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
@@ -109,6 +114,7 @@ import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.FeatureDrawerItem
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipboardPage
 import org.mochios.android.ui.components.HtmlContent
@@ -117,7 +123,9 @@ import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
+import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
@@ -142,9 +150,14 @@ fun FeedScreen(
 
     // Persist the last-viewed feed so the next cold start lands here. The
     // router composable reads this back via [LastViewedStore.get].
+    // Also dismiss any system-tray pushes for this feed — server-side
+    // clear/object marks the bell row read, but Android's tray only
+    // clears via AUTO_CANCEL on tap; opening the feed directly without
+    // tapping the push needs a manual cancel.
     LaunchedEffect(viewModel.feedId) {
         if (viewModel.feedId.isNotBlank()) {
             LastViewedStore.set(context, FEEDS_FEATURE, viewModel.feedId)
+            SystemNotifications.cancelFor(context, "feeds", viewModel.feedId)
         }
     }
 
@@ -160,11 +173,14 @@ fun FeedScreen(
     val currentSort by viewModel.currentSort.collectAsState()
     val currentTag by viewModel.currentTag.collectAsState()
     val unreadOnly by viewModel.unreadOnly.collectAsState()
+    val tags by viewModel.tags.collectAsState()
 
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
     var showAbout by remember { mutableStateOf(false) }
+    var showSuggestedInterests by remember { mutableStateOf(false) }
+    var showDefaultSortDialog by remember { mutableStateOf(false) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
     // Mark the current page's post as read as soon as the swipe settles on
@@ -178,6 +194,13 @@ fun FeedScreen(
             .collectLatest { page ->
                 val current = posts.getOrNull(page) ?: return@collectLatest
                 viewModel.onPostBottomViewed(current.id)
+                // Prefetch the lazy og:image for the current page and its
+                // immediate neighbours so the picture is ready when the
+                // user flips. Server caches per post, so duplicate calls
+                // on subsequent flips are cheap.
+                viewModel.loadPostImageIfMissing(current.id)
+                posts.getOrNull(page + 1)?.let { viewModel.loadPostImageIfMissing(it.id) }
+                posts.getOrNull(page - 1)?.let { viewModel.loadPostImageIfMissing(it.id) }
             }
     }
 
@@ -234,6 +257,30 @@ fun FeedScreen(
             ListItem(
                 modifier = Modifier.clickable {
                     drawerScope.launch { drawerState.close() }
+                    showDefaultSortDialog = true
+                },
+                headlineContent = { Text(stringResource(R.string.feeds_default_sort)) },
+                leadingContent = { Icon(Icons.Default.ImportExport, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            val suggestedInterests by viewModel.suggestedInterests.collectAsState()
+            if (suggestedInterests.isNotEmpty()) {
+                ListItem(
+                    modifier = Modifier.clickable {
+                        drawerScope.launch { drawerState.close() }
+                        showSuggestedInterests = true
+                    },
+                    headlineContent = { Text(stringResource(R.string.feeds_suggested_interests)) },
+                    supportingContent = {
+                        Text(stringResource(R.string.feeds_suggested_interests_count, suggestedInterests.size))
+                    },
+                    leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+                )
+            }
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
                     onLogout()
                 },
                 headlineContent = { Text(stringResource(R.string.feeds_logout)) },
@@ -280,6 +327,60 @@ fun FeedScreen(
                             expanded = showOverflowMenu,
                             onDismissRequest = { showOverflowMenu = false }
                         ) {
+                            // Sort options — listed inline (no nested menu)
+                            // with a check next to the active one. Each tap
+                            // picks the sort and dismisses the menu.
+                            Text(
+                                text = stringResource(R.string.feeds_sort_label),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp)
+                            )
+                            val sortOptions = listOf(
+                                "ai" to R.string.feeds_sort_ai,
+                                "interests" to R.string.feeds_sort_interests,
+                                "new" to R.string.feeds_sort_new,
+                                "hot" to R.string.feeds_sort_hot,
+                                "top" to R.string.feeds_sort_top,
+                            )
+                            sortOptions.forEach { (value, labelRes) ->
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(labelRes)) },
+                                    leadingIcon = {
+                                        if (currentSort == value) {
+                                            Icon(Icons.Default.Check, contentDescription = null)
+                                        } else {
+                                            Spacer(Modifier.size(24.dp))
+                                        }
+                                    },
+                                    onClick = {
+                                        viewModel.setSort(value)
+                                        showOverflowMenu = false
+                                    }
+                                )
+                            }
+
+                            HorizontalDivider()
+
+                            // Unread-only toggle. Tapping flips state; the
+                            // leading checkmark indicates the current value.
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.feeds_unread_only)) },
+                                leadingIcon = {
+                                    if (unreadOnly) {
+                                        Icon(Icons.Default.Check, contentDescription = null)
+                                    } else {
+                                        Spacer(Modifier.size(24.dp))
+                                    }
+                                },
+                                onClick = {
+                                    viewModel.setUnreadOnly(!unreadOnly)
+                                    showOverflowMenu = false
+                                }
+                            )
+
+                            HorizontalDivider()
+
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.feeds_mark_all_read)) },
                                 leadingIcon = {
@@ -353,14 +454,39 @@ fun FeedScreen(
                 }
                 else -> {
                     Column(modifier = Modifier.fillMaxSize()) {
-                        SortDropdown(
-                            currentSort = currentSort,
-                            onSortChange = { viewModel.setSort(it) },
-                            unreadOnly = unreadOnly,
-                            onUnreadOnlyChange = { viewModel.setUnreadOnly(it) },
-                            onMarkAllRead = { viewModel.markAllRead() }
-                        )
-
+                        // Sort + unread-only + mark-all-read moved into the
+                        // TopAppBar overflow menu — keeps the magazine page
+                        // chrome-free.
+                        if (tags.isNotEmpty()) {
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp),
+                                horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(6.dp),
+                            ) {
+                                if (currentTag != null) {
+                                    item(key = "clear") {
+                                        FilterChip(
+                                            selected = false,
+                                            onClick = { viewModel.setTagFilter(null) },
+                                            label = { Text(stringResource(R.string.feeds_tag_clear)) },
+                                        )
+                                    }
+                                }
+                                items(tags, key = { it.id }) { tag ->
+                                    TagFilterChip(
+                                        tag = tag,
+                                        selected = currentTag == tag.id,
+                                        onClick = {
+                                            viewModel.setTagFilter(
+                                                if (currentTag == tag.id) null else tag.id
+                                            )
+                                        },
+                                        onAdjustInterest = { direction ->
+                                            viewModel.adjustTagInterest(tag, direction)
+                                        },
+                                    )
+                                }
+                            }
+                        }
                         if (posts.isEmpty() && !isLoading) {
                             Box(
                                 modifier = Modifier
@@ -386,6 +512,26 @@ fun FeedScreen(
                                 state = pagerState,
                                 modifier = Modifier.fillMaxSize(),
                                 key = { page -> posts[page].id },
+                                // Default snap threshold is 50% of page —
+                                // feels stiff because a short flick doesn't
+                                // commit and the page rubber-bands back.
+                                // Drop to 20% so a confident-but-short swipe
+                                // turns the page; velocity-based fling
+                                // continues to handle quick flicks.
+                                //
+                                // snapAnimationSpec: default spring micro-
+                                // overshoots near the end and reads as a
+                                // bounce. A short FastOutSlowIn tween
+                                // settles cleanly, matching the eased
+                                // mid-swipe rotation in FlipboardPage.
+                                flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
+                                    state = pagerState,
+                                    snapPositionalThreshold = 0.2f,
+                                    snapAnimationSpec = androidx.compose.animation.core.tween(
+                                        durationMillis = 220,
+                                        easing = androidx.compose.animation.core.FastOutSlowInEasing,
+                                    ),
+                                ),
                             ) { page ->
                                 val post = posts[page]
                                 val routeFeedId = post.feedFingerprint.ifEmpty { viewModel.feedId }
@@ -412,6 +558,54 @@ fun FeedScreen(
                 }
             }
         }
+    }
+
+    if (showDefaultSortDialog) {
+        val sortOptions = listOf(
+            "ai" to R.string.feeds_sort_ai,
+            "interests" to R.string.feeds_sort_interests,
+            "new" to R.string.feeds_sort_new,
+            "hot" to R.string.feeds_sort_hot,
+            "top" to R.string.feeds_sort_top,
+        )
+        androidx.compose.material3.AlertDialog(
+            onDismissRequest = { showDefaultSortDialog = false },
+            title = { Text(stringResource(R.string.feeds_default_sort)) },
+            text = {
+                androidx.compose.foundation.layout.Column {
+                    sortOptions.forEach { (value, labelRes) ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable {
+                                    viewModel.setGlobalDefaultSort(value)
+                                    showDefaultSortDialog = false
+                                }
+                                .padding(vertical = 12.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Text(stringResource(labelRes))
+                        }
+                    }
+                }
+            },
+            confirmButton = {},
+            dismissButton = {
+                TextButton(onClick = { showDefaultSortDialog = false }) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
+            },
+        )
+    }
+
+    if (showSuggestedInterests) {
+        val suggestions by viewModel.suggestedInterests.collectAsState()
+        InterestSuggestionsDialog(
+            suggestions = suggestions,
+            onAdd = { viewModel.addInterest(it) },
+            onDismissOne = { viewModel.dismissInterest(it) },
+            onDismiss = { showSuggestedInterests = false },
+        )
     }
 
     if (showAbout) {
@@ -443,106 +637,6 @@ fun FeedScreen(
             }
         )
     }
-    }
-}
-
-@Composable
-private fun SortDropdown(
-    currentSort: String,
-    onSortChange: (String) -> Unit,
-    unreadOnly: Boolean,
-    onUnreadOnlyChange: (Boolean) -> Unit,
-    onMarkAllRead: () -> Unit
-) {
-    val sorts = listOf(
-        "ai" to stringResource(R.string.feeds_sort_ai),
-        "interests" to stringResource(R.string.feeds_sort_interests),
-        "new" to stringResource(R.string.feeds_sort_new),
-        "hot" to stringResource(R.string.feeds_sort_hot),
-        "top" to stringResource(R.string.feeds_sort_top),
-    )
-    val currentLabel = sorts.firstOrNull { it.first == currentSort }?.second
-        ?: stringResource(R.string.feeds_sort_interests)
-    var sortExpanded by remember { mutableStateOf(false) }
-    var readExpanded by remember { mutableStateOf(false) }
-    val readLabel = stringResource(if (unreadOnly) R.string.feeds_unread else R.string.feeds_filter_all)
-
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        Box {
-            FilterChip(
-                selected = true,
-                onClick = { sortExpanded = true },
-                label = { Text(currentLabel) },
-                trailingIcon = {
-                    Icon(
-                        Icons.Default.ArrowDropDown,
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                }
-            )
-            DropdownMenu(
-                expanded = sortExpanded,
-                onDismissRequest = { sortExpanded = false }
-            ) {
-                sorts.forEach { (value, label) ->
-                    DropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            onSortChange(value)
-                            sortExpanded = false
-                        }
-                    )
-                }
-            }
-        }
-        Box {
-            FilterChip(
-                selected = true,
-                onClick = { readExpanded = true },
-                label = { Text(readLabel) },
-                trailingIcon = {
-                    Icon(
-                        Icons.Default.ArrowDropDown,
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp)
-                    )
-                }
-            )
-            DropdownMenu(
-                expanded = readExpanded,
-                onDismissRequest = { readExpanded = false }
-            ) {
-                DropdownMenuItem(
-                    text = { Text(stringResource(R.string.feeds_filter_all)) },
-                    onClick = {
-                        onUnreadOnlyChange(false)
-                        readExpanded = false
-                    }
-                )
-                DropdownMenuItem(
-                    text = { Text(stringResource(R.string.feeds_unread)) },
-                    onClick = {
-                        onUnreadOnlyChange(true)
-                        readExpanded = false
-                    }
-                )
-                HorizontalDivider()
-                DropdownMenuItem(
-                    text = { Text(stringResource(R.string.feeds_mark_all_read)) },
-                    onClick = {
-                        onMarkAllRead()
-                        readExpanded = false
-                    }
-                )
-            }
-        }
     }
 }
 
@@ -836,5 +930,107 @@ private fun boldRssTitle(post: Post): String {
     val body = post.body
     if (title.isEmpty() || !body.startsWith(title)) return body
     return "**${title}**" + body.substring(title.length)
+}
+
+@Composable
+private fun InterestSuggestionsDialog(
+    suggestions: List<InterestSuggestion>,
+    onAdd: (InterestSuggestion) -> Unit,
+    onDismissOne: (InterestSuggestion) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    androidx.compose.material3.AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.feeds_suggested_interests)) },
+        text = {
+            if (suggestions.isEmpty()) {
+                Text(stringResource(R.string.feeds_suggested_interests_empty))
+            } else {
+                LazyColumn(
+                    modifier = Modifier.fillMaxWidth().height(300.dp),
+                    verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(4.dp),
+                ) {
+                    items(suggestions, key = { it.qid }) { s ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            androidx.compose.foundation.layout.Column(modifier = Modifier.weight(1f)) {
+                                Text(s.label, style = MaterialTheme.typography.bodyMedium)
+                                if (s.count > 0) {
+                                    Text(
+                                        stringResource(R.string.feeds_suggested_interests_count, s.count),
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                            }
+                            TextButton(onClick = { onAdd(s) }) {
+                                Text(stringResource(R.string.feeds_suggested_interests_add))
+                            }
+                            TextButton(onClick = { onDismissOne(s) }) {
+                                Text(stringResource(R.string.feeds_suggested_interests_dismiss))
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_close))
+            }
+        },
+    )
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun TagFilterChip(
+    tag: Tag,
+    selected: Boolean,
+    onClick: () -> Unit,
+    onAdjustInterest: (direction: String) -> Unit,
+) {
+    var menuExpanded by remember { mutableStateOf(false) }
+    androidx.compose.foundation.layout.Box {
+        FilterChip(
+            selected = selected,
+            onClick = onClick,
+            label = { Text(tag.label) },
+            modifier = Modifier.combinedClickable(
+                onClick = onClick,
+                onLongClick = { menuExpanded = true },
+            ),
+        )
+        DropdownMenu(
+            expanded = menuExpanded,
+            onDismissRequest = { menuExpanded = false },
+        ) {
+            androidx.compose.material3.DropdownMenuItem(
+                text = { Text(stringResource(R.string.feeds_tag_more_up)) },
+                onClick = {
+                    menuExpanded = false
+                    onAdjustInterest("up")
+                },
+            )
+            androidx.compose.material3.DropdownMenuItem(
+                text = { Text(stringResource(R.string.feeds_tag_more_down)) },
+                onClick = {
+                    menuExpanded = false
+                    onAdjustInterest("down")
+                },
+            )
+            androidx.compose.material3.DropdownMenuItem(
+                text = { Text(stringResource(R.string.feeds_tag_remove)) },
+                onClick = {
+                    menuExpanded = false
+                    onAdjustInterest("remove")
+                },
+            )
+        }
+    }
 }
 

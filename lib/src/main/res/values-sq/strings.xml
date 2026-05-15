@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Qasja u refuzua</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Vazhdo</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Komenti</string>
     <string name="access_level_view">Shiko</string>
     <string name="access_level_none">Asnjë</string>
+    <string name="banner_label">Banner-i</string>
     <string name="reaction_like">Pëlqej</string>
     <string name="reaction_dislike">Nuk pëlqej</string>
     <string name="reaction_laugh">Qesh</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Pajtohem</string>
     <string name="reaction_disagree">Nuk pajtohem</string>
     <string name="push_service_action_hide">Fshih</string>
+    <string name="about_close">Mbyll</string>
 
-    <string name="push_service_group">Shërbim në sfond</string>
 </resources>

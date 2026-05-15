@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Luo objekti</string>
     <string name="projects_create_object_type">Tyyppi</string>
     <string name="projects_create_object_title_field">Otsikko</string>
+    <string name="projects_create_object_parent">Yläkohde</string>
     <string name="projects_settings_title">Asetukset</string>
     <string name="projects_settings_tab_general">Yleiset</string>
     <string name="projects_settings_tab_access">Käyttöoikeus</string>
+    <string name="projects_settings_tab_people">Henkilöt</string>
+    <string name="projects_option_icon">Kuvake</string>
     <string name="projects_settings_save">Tallenna muutokset</string>
     <string name="projects_settings_unsubscribe">Peru tilaus</string>
     <string name="projects_settings_delete_project">Poista projekti</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Pyynnöt</string>
     <string name="projects_object_tab_attachments">Liitteet</string>
     <string name="projects_object_tab_links">Linkit</string>
+    <string name="projects_watchers_watch">Seuraa</string>
+    <string name="projects_watchers_unwatch">Lopeta seuranta</string>
     <string name="projects_parent_label">Yläkohde</string>
     <string name="projects_parent_search_placeholder">Haku</string>
     <string name="projects_links_add">Lisää linkki</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Tuo rakenne</string>
     <string name="projects_design_import_choose_template">Valitse malli</string>
     <string name="projects_design_replace_title">Korvataanko suunnittelu?</string>
+    <string name="projects_design_replace">Korvaa</string>
     <string name="projects_classes_add">Lisää luokka</string>
     <string name="projects_classes_add_dialog_title">Lisää luokka</string>
     <string name="projects_classes_create">Luo</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Luotu</string>
     <string name="projects_views_sort_updated">Päivitetty</string>
     <string name="projects_views_sort_rank">Sijoitus</string>
-
-    <string name="notification_channel_projects">Projects-ilmoitukset</string>
     <string name="projects_project_not_found">Projektia ei löytynyt</string>
+
 </resources>

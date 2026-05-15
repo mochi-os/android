@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">شی جوړ کړئ</string>
     <string name="projects_create_object_type">ډول</string>
     <string name="projects_create_object_title_field">سرلیک</string>
+    <string name="projects_create_object_parent">مور</string>
     <string name="projects_settings_title">ترتیبات</string>
     <string name="projects_settings_tab_general">عمومي</string>
     <string name="projects_settings_tab_access">لاسرسی</string>
+    <string name="projects_settings_tab_people">خلک</string>
+    <string name="projects_option_icon">آیکون</string>
     <string name="projects_settings_save">بدلونونه خوندي کړئ</string>
     <string name="projects_settings_unsubscribe">ګډون لغوه کول</string>
     <string name="projects_settings_delete_project">پروژه ړنګه کړئ</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">غوښتنې</string>
     <string name="projects_object_tab_attachments">ضمیمې</string>
     <string name="projects_object_tab_links">لینکونه</string>
+    <string name="projects_watchers_watch">وګورئ</string>
+    <string name="projects_watchers_unwatch">کتل بند کړئ</string>
     <string name="projects_parent_label">مور</string>
     <string name="projects_parent_search_placeholder">لټون</string>
     <string name="projects_links_add">لینک اضافه کړئ</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ډیزاین وارد کړئ</string>
     <string name="projects_design_import_choose_template">یو ټیمپلیټ وټاکئ</string>
     <string name="projects_design_replace_title">ډیزاین بدل کړو؟</string>
+    <string name="projects_design_replace">بدلول</string>
     <string name="projects_classes_add">ټولګی اضافه کړئ</string>
     <string name="projects_classes_add_dialog_title">ټولګی اضافه کړئ</string>
     <string name="projects_classes_create">جوړ کړئ</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">جوړ شو</string>
     <string name="projects_views_sort_updated">نوی شو</string>
     <string name="projects_views_sort_rank">درجه</string>
-
-    <string name="notification_channel_projects">Projects خبرتیاوې</string>
     <string name="projects_project_not_found">پروژه ونه موندل شوه</string>
+
 </resources>

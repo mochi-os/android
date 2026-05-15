@@ -1,5 +1,7 @@
 package org.mochios.chat.ui.chat
 
+import android.app.Application
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -27,7 +29,8 @@ data class ChatUiState(
     val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,
     val isSending: Boolean = false,
-    val error: MochiError? = null
+    val error: MochiError? = null,
+    val pendingAttachments: List<Uri> = emptyList(),
 )
 
 @HiltViewModel
@@ -35,7 +38,8 @@ class ChatViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: ChatRepository,
     private val webSocket: MochiWebSocket,
-    private val sessionManager: SessionManager
+    private val sessionManager: SessionManager,
+    private val application: Application,
 ) : ViewModel() {
 
     private val chatId: String = savedStateHandle["chatId"] ?: ""
@@ -110,11 +114,17 @@ class ChatViewModel @Inject constructor(
 
     fun sendMessage(body: String) {
         val trimmed = body.trim()
-        if (trimmed.isEmpty()) return
+        val attachments = _uiState.value.pendingAttachments
+        if (trimmed.isEmpty() && attachments.isEmpty()) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSending = true)
             try {
-                repository.sendMessage(chatId, trimmed)
+                if (attachments.isEmpty()) {
+                    repository.sendMessage(chatId, trimmed)
+                } else {
+                    repository.sendMessageFromUris(chatId, trimmed, attachments, application.contentResolver)
+                }
+                _uiState.value = _uiState.value.copy(pendingAttachments = emptyList())
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -122,6 +132,31 @@ class ChatViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isSending = false)
             }
         }
+    }
+
+    fun addAttachments(uris: List<Uri>) {
+        if (uris.isEmpty()) return
+        _uiState.value = _uiState.value.copy(
+            pendingAttachments = _uiState.value.pendingAttachments + uris,
+        )
+    }
+
+    fun removeAttachment(uri: Uri) {
+        _uiState.value = _uiState.value.copy(
+            pendingAttachments = _uiState.value.pendingAttachments - uri,
+        )
+    }
+
+    fun moveAttachment(uri: Uri, direction: Int) {
+        val current = _uiState.value.pendingAttachments.toMutableList()
+        val index = current.indexOf(uri)
+        if (index < 0) return
+        val newIndex = (index + direction).coerceIn(0, current.size - 1)
+        if (newIndex == index) return
+        val tmp = current[index]
+        current[index] = current[newIndex]
+        current[newIndex] = tmp
+        _uiState.value = _uiState.value.copy(pendingAttachments = current)
     }
 
     private fun subscribeWebSocket(key: String) {

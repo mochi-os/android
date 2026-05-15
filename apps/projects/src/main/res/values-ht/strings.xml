@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Kreye objè</string>
     <string name="projects_create_object_type">Tip</string>
     <string name="projects_create_object_title_field">Tit</string>
+    <string name="projects_create_object_parent">Paran</string>
     <string name="projects_settings_title">Paramèt</string>
     <string name="projects_settings_tab_general">Jeneral</string>
     <string name="projects_settings_tab_access">Aksè</string>
+    <string name="projects_settings_tab_people">Moun</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Sove chanjman</string>
     <string name="projects_settings_unsubscribe">Dezabòne</string>
     <string name="projects_settings_delete_project">Efase pwojè</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Demand</string>
     <string name="projects_object_tab_attachments">Atachman yo</string>
     <string name="projects_object_tab_links">Lyen</string>
+    <string name="projects_watchers_watch">Gade</string>
+    <string name="projects_watchers_unwatch">Sispann gade</string>
     <string name="projects_parent_label">Paran</string>
     <string name="projects_parent_search_placeholder">Chèche</string>
     <string name="projects_links_add">Ajoute lyen</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Enpòte konsepsyon</string>
     <string name="projects_design_import_choose_template">Chwazi yon modèl</string>
     <string name="projects_design_replace_title">Ranplase konsepsyon?</string>
+    <string name="projects_design_replace">Ranplase</string>
     <string name="projects_classes_add">Ajoute klas</string>
     <string name="projects_classes_add_dialog_title">Ajoute klas</string>
     <string name="projects_classes_create">Kreye</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Kreye</string>
     <string name="projects_views_sort_updated">Mete ajou</string>
     <string name="projects_views_sort_rank">Klasman</string>
-
-    <string name="notification_channel_projects">Notifikasyon Projects</string>
     <string name="projects_project_not_found">Pwojè pa jwenn</string>
+
 </resources>

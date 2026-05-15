@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">എല്ലാം വായിച്ചതായി അടയാളപ്പെടുത്തുക</string>
     <string name="feeds_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="feeds_no_posts_yet">പോസ്റ്റുകളൊന്നും ഇതുവരെ ഇല്ല</string>
+    <string name="feeds_default_sort">ഡിഫോൾട്ട് സോർട്ട്</string>
+    <string name="feeds_suggested_interests_add">ചേർക്കുക</string>
+    <string name="feeds_suggested_interests_dismiss">മറയ്ക്കുക</string>
     <string name="feeds_unread">വായിക്കാത്തത്</string>
     <string name="feeds_filter_all">എല്ലാം</string>
+    <string name="feeds_sort_label">അടുക്കുക</string>
     <string name="feeds_sort_interests">താൽപ്പര്യങ്ങൾ</string>
     <string name="feeds_sort_new">പുതിയത്</string>
     <string name="feeds_sort_hot">ഹോട്ട്</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">സ്വീകരിക്കുക</string>
     <string name="feeds_rss_url_copied">RSS ഫീഡ്</string>
     <string name="feeds_logout">ലോഗ് ഔട്ട്</string>
+    <string name="feeds_ai_account_default">ഡിഫോൾട്ട് അക്കൗണ്ട്</string>
     <string name="feeds_ai_mode_off">പ്രവർത്തനരഹിതം</string>
     <string name="feeds_ai_mode_tag">ടാഗ്</string>
     <string name="feeds_ai_mode_tag_deduplicate">ടാഗ് + ഡുപ്ലിക്കേറ്റ് നീക്കം ചെയ്യുക</string>
     <string name="feeds_ai_reset_default">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യണോ?</string>
-
-    <string name="notification_channel_feeds">Feeds നോട്ടിഫിക്കേഷനുകൾ</string>
-    <string name="feeds_view_post">പോസ്റ്റ് കാണുക</string>
-    <string name="feeds_open_in_browser">ബ്രൗസറിൽ തുറക്കുക</string>
-    <string name="feeds_unable_to_load">പേജ് ലോഡ് ചെയ്യാൻ കഴിയില്ല</string>
     <string name="feeds_feed_not_found">ഫീഡ് കണ്ടെത്തിയില്ല</string>
     <string name="feeds_post_not_found">പോസ്റ്റ് കണ്ടെത്തിയില്ല</string>
+
 </resources>

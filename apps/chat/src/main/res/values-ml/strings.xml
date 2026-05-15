@@ -14,12 +14,14 @@
     <string name="chat_new_friends">സുഹൃത്തുക്കൾ</string>
     <string name="chat_new_search_placeholder">സുഹൃത്തുക്കളെ തിരയുക</string>
     <string name="chat_message_placeholder">സന്ദേശം</string>
+    <string name="chat_attachment_add">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="chat_message_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="chat_settings_title">ചാറ്റ് ക്രമീകരണങ്ങൾ</string>
     <string name="chat_settings_rename_label">ചാറ്റ് നാമം</string>
     <string name="chat_settings_save">സേവ് ചെയ്യുക</string>
     <string name="chat_settings_members">അംഗങ്ങൾ</string>
     <string name="chat_settings_add_member">അംഗത്തെ ചേർക്കുക</string>
+    <string name="chat_settings_add_member_search">സുഹൃത്തുക്കളെ തിരയുക</string>
     <string name="chat_settings_remove_member">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
     <string name="chat_settings_remove_member_title">അംഗത്തെ നീക്കം ചെയ്യണോ?</string>
     <string name="chat_settings_leave">ചാറ്റ് വിടുക</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">ചാറ്റ് ഇല്ലാതാക്കുക</string>
     <string name="chat_members_empty">അംഗങ്ങളാരുമില്ല</string>
     <string name="chat_members_you">നിങ്ങൾ</string>
-
-    <string name="notification_channel_chat">Chat നോട്ടിഫിക്കേഷനുകൾ</string>
     <string name="chat_chat_not_found">ചാറ്റ് കണ്ടെത്തിയില്ല</string>
+
 </resources>

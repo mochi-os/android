@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Atzīmēt visus kā lasītus</string>
     <string name="feeds_settings">Iestatījumi</string>
     <string name="feeds_no_posts_yet">Vēl nav ierakstu</string>
+    <string name="feeds_default_sort">Noklusētā kārtošana</string>
+    <string name="feeds_suggested_interests_add">Pievienot</string>
+    <string name="feeds_suggested_interests_dismiss">Slēpt</string>
     <string name="feeds_unread">Nelasīts</string>
     <string name="feeds_filter_all">Visi</string>
+    <string name="feeds_sort_label">Kārtot</string>
     <string name="feeds_sort_interests">Intereses</string>
     <string name="feeds_sort_new">Jauns</string>
     <string name="feeds_sort_hot">Aktuāli</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Pieņemt</string>
     <string name="feeds_rss_url_copied">RSS URL nokopēts starpliktuvē</string>
     <string name="feeds_logout">Izrakstīties</string>
+    <string name="feeds_ai_account_default">Noklusētais konts</string>
     <string name="feeds_ai_mode_off">Atspējots</string>
     <string name="feeds_ai_mode_tag">Tags</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tags + dublikātu novēršana</string>
     <string name="feeds_ai_reset_default">Atiestatīt uz noklusējumu</string>
-
-    <string name="notification_channel_feeds">Feeds paziņojumi</string>
-    <string name="feeds_view_post">Skatīt ierakstu</string>
-    <string name="feeds_open_in_browser">Atvērt pārlūkā</string>
-    <string name="feeds_unable_to_load">Nevar ielādēt lapu</string>
     <string name="feeds_feed_not_found">Plūsma nav atrasta</string>
     <string name="feeds_post_not_found">Ieraksts nav atrasts</string>
+
 </resources>

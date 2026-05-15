@@ -3,6 +3,7 @@
 
     <string name="feeds_create_feed">Creá un feed</string>
     <string name="feeds_mark_all_read">Marcá todo como leído</string>
+    <string name="feeds_suggested_interests_add">Agregá</string>
     <string name="feeds_delete_post">Eliminá el posteo</string>
     <string name="feeds_delete_comment">Eliminá el comentario</string>
     <string name="feeds_remove">Quitá</string>
@@ -19,10 +20,4 @@
     <string name="feeds_logout">Cerrá sesión</string>
     <string name="feeds_ai_reset_default">Reiniciá a los valores predeterminados</string>
 
-    <string name="notification_channel_feeds">Notificaciones de Feeds</string>
-    <string name="feeds_view_post">Ver publicación</string>
-    <string name="feeds_open_in_browser">Abrir en el navegador</string>
-    <string name="feeds_unable_to_load">No se puede cargar la página</string>
-    <string name="feeds_feed_not_found">Feed not found</string>
-    <string name="feeds_post_not_found">Post not found</string>
 </resources>

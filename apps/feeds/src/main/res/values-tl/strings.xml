@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Markahang nabasa lahat</string>
     <string name="feeds_settings">Mga setting</string>
     <string name="feeds_no_posts_yet">Wala pang post</string>
+    <string name="feeds_default_sort">Default na sort</string>
+    <string name="feeds_suggested_interests_add">Idagdag</string>
+    <string name="feeds_suggested_interests_dismiss">Itago</string>
     <string name="feeds_unread">Hindi nabasa</string>
     <string name="feeds_filter_all">Lahat</string>
+    <string name="feeds_sort_label">Ayusin</string>
     <string name="feeds_sort_interests">Mga interest</string>
     <string name="feeds_sort_new">Bago</string>
     <string name="feeds_sort_hot">Hot</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Tanggapin</string>
     <string name="feeds_rss_url_copied">Nakopya ang RSS URL sa clipboard</string>
     <string name="feeds_logout">Mag-log out</string>
+    <string name="feeds_ai_account_default">Default na account</string>
     <string name="feeds_ai_mode_off">Naka-disable</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + alisin ang duplicate</string>
     <string name="feeds_ai_reset_default">I-reset sa default</string>
-
-    <string name="notification_channel_feeds">Mga abiso ng Feeds</string>
-    <string name="feeds_view_post">Tingnan ang post</string>
-    <string name="feeds_open_in_browser">Buksan sa browser</string>
-    <string name="feeds_unable_to_load">Hindi mailo-load ang pahina</string>
     <string name="feeds_feed_not_found">Hindi nahanap ang feed</string>
     <string name="feeds_post_not_found">Hindi nahanap ang post</string>
+
 </resources>

@@ -1,9 +1,11 @@
 package org.mochios.feeds.ui.feed
 
+import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -24,13 +26,19 @@ import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
 
+private const val PREFS = "mochi_feeds"
+private const val KEY_UNREAD_ONLY = "unread_only"
+
 @HiltViewModel
 class FeedViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: FeedsRepository,
     private val webSocket: MochiWebSocket,
-    private val sessionManager: SessionManager
+    private val sessionManager: SessionManager,
+    @ApplicationContext private val context: Context,
 ) : ViewModel() {
+
+    private val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 
     val feedId: String = savedStateHandle.get<String>("feedId") ?: ""
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
@@ -76,7 +84,7 @@ class FeedViewModel @Inject constructor(
     private val _currentTag = MutableStateFlow<String?>(null)
     val currentTag: StateFlow<String?> = _currentTag.asStateFlow()
 
-    private val _unreadOnly = MutableStateFlow(false)
+    private val _unreadOnly = MutableStateFlow(prefs.getBoolean(KEY_UNREAD_ONLY, false))
     val unreadOnly: StateFlow<Boolean> = _unreadOnly.asStateFlow()
 
     val isAllFeeds: Boolean = feedId == "__all__"
@@ -316,6 +324,15 @@ class FeedViewModel @Inject constructor(
         reloadPosts()
     }
 
+    fun setGlobalDefaultSort(sort: String) {
+        viewModelScope.launch {
+            try {
+                repository.setGlobalSort(sort)
+            } catch (_: Exception) {
+            }
+        }
+    }
+
     fun setTagFilter(tag: String?) {
         if (_currentTag.value == tag) return
         _currentTag.value = tag
@@ -325,6 +342,7 @@ class FeedViewModel @Inject constructor(
     fun setUnreadOnly(unreadOnly: Boolean) {
         if (_unreadOnly.value == unreadOnly) return
         _unreadOnly.value = unreadOnly
+        prefs.edit().putBoolean(KEY_UNREAD_ONLY, unreadOnly).apply()
         reloadPosts()
     }
 
@@ -393,12 +411,45 @@ class FeedViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Lazy og:image fetch for an RSS post that arrived without an inline
+     * image. Idempotent — the repository's server-side handler caches the
+     * fetch outcome, and we skip the call entirely when image is already
+     * set, when there's no link to scrape, or when we've already attempted
+     * a fetch for this post in this session.
+     */
+    private val lazyImageAttempted = mutableSetOf<String>()
+    fun loadPostImageIfMissing(postId: String) {
+        val post = _posts.value.firstOrNull { it.id == postId } ?: return
+        val rss = post.data?.rss ?: return
+        if (rss.image.isNotEmpty()) return
+        if (rss.link.isEmpty()) return
+        if (!lazyImageAttempted.add(postId)) return
+        viewModelScope.launch {
+            val image = repository.getPostImage(feedId, postId)
+            if (image.isBlank()) return@launch
+            _posts.value = _posts.value.map { p ->
+                if (p.id != postId) p
+                else p.copy(data = p.data?.copy(rss = p.data.rss?.copy(image = image)))
+            }
+        }
+    }
+
     fun markAllRead() {
         viewModelScope.launch {
             try {
                 repository.markAllRead(feedId)
                 val now = System.currentTimeMillis() / 1000
-                _posts.value = _posts.value.map { it.copy(read = now) }
+                // In "unread only" mode every visible post just became read,
+                // so they should disappear from the list immediately rather
+                // than wait for the next reload. In "all" mode keep the
+                // posts but stamp them as read so any unread-badge UI drops
+                // to zero without a re-fetch.
+                _posts.value = if (_unreadOnly.value) {
+                    emptyList()
+                } else {
+                    _posts.value.map { it.copy(read = now) }
+                }
                 _feedInfo.value = _feedInfo.value?.copy(unread = 0)
             } catch (_: Exception) {
                 // Refresh on failure
@@ -424,6 +475,16 @@ class FeedViewModel @Inject constructor(
                 // Keep existing data
             } finally {
                 _isLoading.value = false
+            }
+        }
+    }
+
+    fun adjustTagInterest(tag: Tag, direction: String) {
+        viewModelScope.launch {
+            try {
+                repository.adjustInterest(feedId, qid = tag.qid, label = tag.label, direction = direction)
+                _tags.value = repository.getTags(feedId)
+            } catch (_: Exception) {
             }
         }
     }

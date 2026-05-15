@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">دروستکردنی بابەت</string>
     <string name="projects_create_object_type">جۆر</string>
     <string name="projects_create_object_title_field">ناونیشان</string>
+    <string name="projects_create_object_parent">باوان</string>
     <string name="projects_settings_title">ڕێکخستنەکان</string>
     <string name="projects_settings_tab_general">گشتی</string>
     <string name="projects_settings_tab_access">دەستڕاگەیشتن</string>
+    <string name="projects_settings_tab_people">کەسەکان</string>
+    <string name="projects_option_icon">ئایکۆن</string>
     <string name="projects_settings_save">پاشەکەوتکردنی گۆڕانکارییەکان</string>
     <string name="projects_settings_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
     <string name="projects_settings_delete_project">سڕینەوەی پڕۆژە</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">داواکارییەکان</string>
     <string name="projects_object_tab_attachments">هاوپێچەکان</string>
     <string name="projects_object_tab_links">بەستەرەکان</string>
+    <string name="projects_watchers_watch">چاودێری</string>
+    <string name="projects_watchers_unwatch">وازبهێنە لە چاودێری</string>
     <string name="projects_parent_label">باوان</string>
     <string name="projects_parent_search_placeholder">گەڕان</string>
     <string name="projects_links_add">زیادکردنی بەستەر</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">هاوردەکردنی دیزاین</string>
     <string name="projects_design_import_choose_template">قاڵبێک هەڵبژێرە</string>
     <string name="projects_design_replace_title">دیزاین بگۆڕیت؟</string>
+    <string name="projects_design_replace">بیگۆڕە</string>
     <string name="projects_classes_add">زیادکردنی پۆل</string>
     <string name="projects_classes_add_dialog_title">زیادکردنی پۆل</string>
     <string name="projects_classes_create">دروستکردن</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">دروستکرا</string>
     <string name="projects_views_sort_updated">نوێکرایەوە</string>
     <string name="projects_views_sort_rank">پلە</string>
-
-    <string name="notification_channel_projects">ئاگادارکردنەوەکانی Projects</string>
     <string name="projects_project_not_found">پڕۆژە نەدۆزرایەوە</string>
+
 </resources>

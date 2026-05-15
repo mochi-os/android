@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Giriş rədd edildi</string>
     <string name="auth_email">E-poçt</string>
     <string name="auth_continue">Davam et</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Şərh</string>
     <string name="access_level_view">Bütün bildirişlərə bax</string>
     <string name="access_level_none">Heç biri</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Bəyən</string>
     <string name="reaction_dislike">Bəyənmirəm</string>
     <string name="reaction_laugh">Gül</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Razıyam</string>
     <string name="reaction_disagree">Razı deyiləm</string>
     <string name="push_service_action_hide">Gizlət</string>
+    <string name="about_close">Bağla</string>
 
-    <string name="push_service_group">Arxa xidmət</string>
 </resources>

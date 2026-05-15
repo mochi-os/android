@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">ປະຕິເສດການເຂົ້າເຖິງ</string>
     <string name="auth_email">ອີເມວ</string>
     <string name="auth_continue">ຕໍ່</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">ຄຳເຫັນ</string>
     <string name="access_level_view">ເບິ່ງ</string>
     <string name="access_level_none">ບໍ່ມີ</string>
+    <string name="banner_label">ປ້າຍ</string>
     <string name="reaction_like">ມັກ</string>
     <string name="reaction_dislike">ບໍ່ມັກ</string>
     <string name="reaction_laugh">ຫົວ</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">ເຫັນດີ</string>
     <string name="reaction_disagree">ບໍ່ເຫັນດີ</string>
     <string name="push_service_action_hide">ເຊື່ອງ</string>
+    <string name="about_close">ປິດ</string>
 
-    <string name="push_service_group">ບໍລິການພື້ນຫຼັງ</string>
 </resources>

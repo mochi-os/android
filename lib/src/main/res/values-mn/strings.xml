@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Хандалтыг татгалзсан</string>
     <string name="auth_email">Имэйл</string>
     <string name="auth_continue">Үргэлжлүүлэх</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Сэтгэгдэл</string>
     <string name="access_level_view">Үзэх</string>
     <string name="access_level_none">Алга</string>
+    <string name="banner_label">Баннер</string>
     <string name="reaction_like">Таалагдсан</string>
     <string name="reaction_dislike">Дургүй</string>
     <string name="reaction_laugh">Инээх</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Зөвшөөрөх</string>
     <string name="reaction_disagree">Үл зөвшөөрөх</string>
     <string name="push_service_action_hide">Нуух</string>
+    <string name="about_close">Хаах</string>
 
-    <string name="push_service_group">Арын үйлчилгээ</string>
 </resources>

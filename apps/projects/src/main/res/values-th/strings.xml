@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">สร้างวัตถุ</string>
     <string name="projects_create_object_type">ประเภท</string>
     <string name="projects_create_object_title_field">ชื่อ</string>
+    <string name="projects_create_object_parent">แม่</string>
     <string name="projects_settings_title">การตั้งค่า</string>
     <string name="projects_settings_tab_general">ทั่วไป</string>
     <string name="projects_settings_tab_access">การเข้าถึง</string>
+    <string name="projects_settings_tab_people">ผู้คน</string>
+    <string name="projects_option_icon">ไอคอน</string>
     <string name="projects_settings_save">บันทึกการเปลี่ยนแปลง</string>
     <string name="projects_settings_unsubscribe">ยกเลิกการติดตาม</string>
     <string name="projects_settings_delete_project">ลบโครงการ</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">คำขอ</string>
     <string name="projects_object_tab_attachments">ไฟล์แนบ</string>
     <string name="projects_object_tab_links">ลิงก์</string>
+    <string name="projects_watchers_watch">ติดตาม</string>
+    <string name="projects_watchers_unwatch">หยุดติดตาม</string>
     <string name="projects_parent_label">แม่</string>
     <string name="projects_parent_search_placeholder">ค้นหา</string>
     <string name="projects_links_add">เพิ่มลิงก์</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">นำเข้าการออกแบบ</string>
     <string name="projects_design_import_choose_template">เลือกเทมเพลต</string>
     <string name="projects_design_replace_title">แทนที่ดีไซน์?</string>
+    <string name="projects_design_replace">แทนที่</string>
     <string name="projects_classes_add">เพิ่มคลาส</string>
     <string name="projects_classes_add_dialog_title">เพิ่มคลาส</string>
     <string name="projects_classes_create">สร้าง</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">สร้างแล้ว</string>
     <string name="projects_views_sort_updated">อัปเดตแล้ว</string>
     <string name="projects_views_sort_rank">อันดับ</string>
-
-    <string name="notification_channel_projects">การแจ้งเตือน Projects</string>
     <string name="projects_project_not_found">ไม่พบโปรเจกต์</string>
+
 </resources>

@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Crear objeto</string>
     <string name="projects_create_object_type">Tipo</string>
     <string name="projects_create_object_title_field">Título</string>
+    <string name="projects_create_object_parent">Principal</string>
     <string name="projects_settings_title">Ajustes</string>
     <string name="projects_settings_tab_general">General</string>
     <string name="projects_settings_tab_access">Acceso</string>
+    <string name="projects_settings_tab_people">Personas</string>
+    <string name="projects_option_icon">Icono</string>
     <string name="projects_settings_save">Guardar cambios</string>
     <string name="projects_settings_unsubscribe">Cancelar suscripción</string>
     <string name="projects_settings_delete_project">Eliminar proyecto</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Solicitudes</string>
     <string name="projects_object_tab_attachments">Adjuntos</string>
     <string name="projects_object_tab_links">Enlaces</string>
+    <string name="projects_watchers_watch">Seguir</string>
+    <string name="projects_watchers_unwatch">Dejar de seguir</string>
     <string name="projects_parent_label">Principal</string>
     <string name="projects_parent_search_placeholder">Buscar</string>
     <string name="projects_links_add">Añadir enlace</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importar diseño</string>
     <string name="projects_design_import_choose_template">Elige una plantilla</string>
     <string name="projects_design_replace_title">¿Reemplazar el diseño?</string>
+    <string name="projects_design_replace">Reemplazar</string>
     <string name="projects_classes_add">Añadir clase</string>
     <string name="projects_classes_add_dialog_title">Añadir clase</string>
     <string name="projects_classes_create">Crear</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Creado</string>
     <string name="projects_views_sort_updated">Actualizado</string>
     <string name="projects_views_sort_rank">Rango</string>
-
-    <string name="notification_channel_projects">Notificaciones de Projects</string>
     <string name="projects_project_not_found">Proyecto no encontrado</string>
+
 </resources>

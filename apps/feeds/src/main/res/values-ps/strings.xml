@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">ټول د لوستل شویو په توګه نښه کړئ</string>
     <string name="feeds_settings">ترتیبات</string>
     <string name="feeds_no_posts_yet">تر اوسه هیڅ لیکنې نشته</string>
+    <string name="feeds_default_sort">ډیفالټ ترتیب</string>
+    <string name="feeds_suggested_interests_add">اضافه کړئ</string>
+    <string name="feeds_suggested_interests_dismiss">پټ کړه</string>
     <string name="feeds_unread">نه لوستل شوی</string>
     <string name="feeds_filter_all">ټول</string>
+    <string name="feeds_sort_label">ترتیب</string>
     <string name="feeds_sort_interests">علاقې</string>
     <string name="feeds_sort_new">نوی</string>
     <string name="feeds_sort_hot">ګرم</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">ومنه</string>
     <string name="feeds_rss_url_copied">د RSS URL کلیپبورډ ته کاپي شو</string>
     <string name="feeds_logout">لاګ آوټ</string>
+    <string name="feeds_ai_account_default">ډیفالټ حساب</string>
     <string name="feeds_ai_mode_off">غیرفعال شوی</string>
     <string name="feeds_ai_mode_tag">ټاګ</string>
     <string name="feeds_ai_mode_tag_deduplicate">ټاګ + ډوډۍ کول</string>
     <string name="feeds_ai_reset_default">ډیفالټ ته بیرته تنظیم کړئ</string>
-
-    <string name="notification_channel_feeds">Feeds خبرتیاوې</string>
-    <string name="feeds_view_post">پوسټ وګورئ</string>
-    <string name="feeds_open_in_browser">په لټوونکي کې پرانیستل</string>
-    <string name="feeds_unable_to_load">د پاڼې بار کول ونه شو</string>
     <string name="feeds_feed_not_found">فیډ ونه موندل شو</string>
     <string name="feeds_post_not_found">لیکنه ونه موندل شوه</string>
+
 </resources>

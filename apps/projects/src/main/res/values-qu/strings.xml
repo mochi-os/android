@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Objeto kamariy</string>
     <string name="projects_create_object_type">Layan</string>
     <string name="projects_create_object_title_field">Sutinchay</string>
+    <string name="projects_create_object_parent">Yaya</string>
     <string name="projects_settings_title">Wakichiykuna</string>
     <string name="projects_settings_tab_general">Llapanpi</string>
     <string name="projects_settings_tab_access">Yaykuy</string>
+    <string name="projects_settings_tab_people">Runakuna</string>
+    <string name="projects_option_icon">Icono</string>
     <string name="projects_settings_save">Cambiokunata waqaychay</string>
     <string name="projects_settings_unsubscribe">Suscripcionta saqiy</string>
     <string name="projects_settings_delete_project">Proyecto wischuy</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Mañakuykuna</string>
     <string name="projects_object_tab_attachments">Yapasqakuna</string>
     <string name="projects_object_tab_links">Enlacekuna</string>
+    <string name="projects_watchers_watch">Qhaway</string>
+    <string name="projects_watchers_unwatch">Qhaway saqiy</string>
     <string name="projects_parent_label">Yaya</string>
     <string name="projects_parent_search_placeholder">Maskay</string>
     <string name="projects_links_add">Link yapay</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Diseñota apaykachiy</string>
     <string name="projects_design_import_choose_template">Template akllay</string>
     <string name="projects_design_replace_title">Diseñota cambiay?</string>
+    <string name="projects_design_replace">Tikray</string>
     <string name="projects_classes_add">Clase yapay</string>
     <string name="projects_classes_add_dialog_title">Clase yapay</string>
     <string name="projects_classes_create">Kamariy</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Kamarisqa</string>
     <string name="projects_views_sort_updated">Musuqchasqa</string>
     <string name="projects_views_sort_rank">Rank</string>
-
-    <string name="notification_channel_projects">Projects willaykuna</string>
     <string name="projects_project_not_found">Proyecto mana tarisqachu</string>
+
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Доступ запрещён</string>
     <string name="auth_email">Электронная почта</string>
     <string name="auth_continue">Продолжить</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Комментарий</string>
     <string name="access_level_view">Просмотр</string>
     <string name="access_level_none">Нет</string>
+    <string name="banner_label">Баннер</string>
     <string name="reaction_like">Нравится</string>
     <string name="reaction_dislike">Не нравится</string>
     <string name="reaction_laugh">Смех</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Согласен</string>
     <string name="reaction_disagree">Не согласен</string>
     <string name="push_service_action_hide">Скрыть</string>
+    <string name="about_close">Закрыть</string>
 
-    <string name="push_service_group">Фоновая служба</string>
 </resources>

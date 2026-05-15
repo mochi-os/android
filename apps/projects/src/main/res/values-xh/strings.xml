@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Yenza into</string>
     <string name="projects_create_object_type">Uhlobo</string>
     <string name="projects_create_object_title_field">Isihloko</string>
+    <string name="projects_create_object_parent">Umzali</string>
     <string name="projects_settings_title">Iisetingi</string>
     <string name="projects_settings_tab_general">Ngokubanzi</string>
     <string name="projects_settings_tab_access">Ufikelelo</string>
+    <string name="projects_settings_tab_people">Abantu</string>
+    <string name="projects_option_icon">Umfanekiso</string>
     <string name="projects_settings_save">Gcina utshintsho</string>
     <string name="projects_settings_unsubscribe">Yeka ukurhuma</string>
     <string name="projects_settings_delete_project">Cima iprojekthi</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Izicelo</string>
     <string name="projects_object_tab_attachments">Iziqhotyoshelwa</string>
     <string name="projects_object_tab_links">Amakhonkco</string>
+    <string name="projects_watchers_watch">Bukela</string>
+    <string name="projects_watchers_unwatch">Yeka ukubukela</string>
     <string name="projects_parent_label">Umzali</string>
     <string name="projects_parent_search_placeholder">Khangela</string>
     <string name="projects_links_add">Yongeza ikhonkco</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Ngenisa uyilo</string>
     <string name="projects_design_import_choose_template">Khetha iteyimpleyithi</string>
     <string name="projects_design_replace_title">Tshintsha uyilo?</string>
+    <string name="projects_design_replace">Ngenisa endaweni</string>
     <string name="projects_classes_add">Yongeza iklasi</string>
     <string name="projects_classes_add_dialog_title">Yongeza iklasi</string>
     <string name="projects_classes_create">Yenza</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Yenziwe</string>
     <string name="projects_views_sort_updated">Kuhlaziyiwe</string>
     <string name="projects_views_sort_rank">Inqanaba</string>
-
-    <string name="notification_channel_projects">Izaziso ze-Projects</string>
     <string name="projects_project_not_found">Iprojekthi ayifumaneki</string>
+
 </resources>

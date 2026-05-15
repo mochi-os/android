@@ -22,7 +22,11 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubbleOutline
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Settings
@@ -61,6 +65,7 @@ import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -107,6 +112,12 @@ fun ChatScreen(
     LaunchedEffect(chatId) {
         if (chatId.isNotBlank()) {
             LastViewedStore.set(context, CHAT_FEATURE, chatId)
+            // Dismiss any system-tray push notifications targeting this
+            // chat. The server-side clear/object call inside chat.star's
+            // action_view marks the bell row read but doesn't reach the
+            // status bar; this closes that gap so opening a chat
+            // directly (without tapping the push) also clears the tray.
+            SystemNotifications.cancelFor(context, "chat", chatId)
         }
     }
 
@@ -324,6 +335,10 @@ private fun ChatContent(
                 onValueChange = { draft = it },
                 isSending = uiState.isSending,
                 enabled = uiState.chat.id.isNotEmpty() && uiState.chat.left == 0,
+                pendingAttachments = uiState.pendingAttachments,
+                onAddAttachments = { viewModel.addAttachments(it) },
+                onRemoveAttachment = { viewModel.removeAttachment(it) },
+                onMoveAttachment = { uri, dir -> viewModel.moveAttachment(uri, dir) },
                 onSend = {
                     viewModel.sendMessage(draft)
                     draft = ""
@@ -399,41 +414,114 @@ private fun MessageBubble(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
 private fun ComposerBar(
     value: String,
     onValueChange: (String) -> Unit,
     isSending: Boolean,
     enabled: Boolean,
-    onSend: () -> Unit
+    pendingAttachments: List<android.net.Uri>,
+    onAddAttachments: (List<android.net.Uri>) -> Unit,
+    onRemoveAttachment: (android.net.Uri) -> Unit,
+    onMoveAttachment: (android.net.Uri, Int) -> Unit,
+    onSend: () -> Unit,
 ) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 8.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        OutlinedTextField(
-            value = value,
-            onValueChange = onValueChange,
-            modifier = Modifier.weight(1f),
-            placeholder = { Text(stringResource(R.string.chat_message_placeholder)) },
-            enabled = enabled,
-            maxLines = 4
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        IconButton(
-            onClick = onSend,
-            enabled = enabled && !isSending && value.isNotBlank()
-        ) {
-            if (isSending) {
-                CircularProgressIndicator(modifier = Modifier.padding(4.dp))
-            } else {
+    val filePickerLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
+        contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
+    ) { uris ->
+        onAddAttachments(uris)
+    }
+
+    Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp)) {
+        if (pendingAttachments.isNotEmpty()) {
+            androidx.compose.foundation.layout.FlowRow(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                pendingAttachments.forEachIndexed { index, uri ->
+                    androidx.compose.material3.AssistChip(
+                        onClick = { onRemoveAttachment(uri) },
+                        label = {
+                            Text(
+                                uri.lastPathSegment?.takeLast(20)
+                                    ?: stringResource(R.string.chat_attachment_label),
+                                style = MaterialTheme.typography.labelSmall,
+                            )
+                        },
+                        leadingIcon = if (pendingAttachments.size > 1) {
+                            {
+                                Row {
+                                    if (index > 0) {
+                                        IconButton(
+                                            onClick = { onMoveAttachment(uri, -1) },
+                                            modifier = Modifier.width(20.dp).height(20.dp),
+                                        ) {
+                                            Icon(
+                                                Icons.Default.ExpandLess,
+                                                contentDescription = stringResource(R.string.chat_attachment_move_up),
+                                                modifier = Modifier.width(14.dp).height(14.dp),
+                                            )
+                                        }
+                                    }
+                                    if (index < pendingAttachments.lastIndex) {
+                                        IconButton(
+                                            onClick = { onMoveAttachment(uri, 1) },
+                                            modifier = Modifier.width(20.dp).height(20.dp),
+                                        ) {
+                                            Icon(
+                                                Icons.Default.ExpandMore,
+                                                contentDescription = stringResource(R.string.chat_attachment_move_down),
+                                                modifier = Modifier.width(14.dp).height(14.dp),
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        } else null,
+                        trailingIcon = {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = stringResource(R.string.chat_attachment_remove),
+                                modifier = Modifier.width(14.dp).height(14.dp),
+                            )
+                        },
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(4.dp))
+        }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            IconButton(
+                onClick = { filePickerLauncher.launch("*/*") },
+                enabled = enabled,
+            ) {
                 Icon(
-                    Icons.AutoMirrored.Filled.Send,
-                    contentDescription = stringResource(R.string.chat_message_send)
+                    Icons.Default.AttachFile,
+                    contentDescription = stringResource(R.string.chat_attachment_add),
                 )
+            }
+            OutlinedTextField(
+                value = value,
+                onValueChange = onValueChange,
+                modifier = Modifier.weight(1f),
+                placeholder = { Text(stringResource(R.string.chat_message_placeholder)) },
+                enabled = enabled,
+                maxLines = 4,
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            IconButton(
+                onClick = onSend,
+                enabled = enabled && !isSending && (value.isNotBlank() || pendingAttachments.isNotEmpty()),
+            ) {
+                if (isSending) {
+                    CircularProgressIndicator(modifier = Modifier.padding(4.dp))
+                } else {
+                    Icon(
+                        Icons.AutoMirrored.Filled.Send,
+                        contentDescription = stringResource(R.string.chat_message_send),
+                    )
+                }
             }
         }
     }

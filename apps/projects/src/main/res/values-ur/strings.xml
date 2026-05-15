@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">آبجیکٹ بنائیں</string>
     <string name="projects_create_object_type">قسم</string>
     <string name="projects_create_object_title_field">عنوان</string>
+    <string name="projects_create_object_parent">parent</string>
     <string name="projects_settings_title">سیٹنگز</string>
     <string name="projects_settings_tab_general">عمومی</string>
     <string name="projects_settings_tab_access">رسائی</string>
+    <string name="projects_settings_tab_people">لوگ</string>
+    <string name="projects_option_icon">آئیکن</string>
     <string name="projects_settings_save">تبدیلیاں محفوظ کریں</string>
     <string name="projects_settings_unsubscribe">ان سبسکرائب کریں</string>
     <string name="projects_settings_delete_project">پروجیکٹ حذف کریں</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">درخواستیں</string>
     <string name="projects_object_tab_attachments">اٹیچمنٹس</string>
     <string name="projects_object_tab_links">لنکس</string>
+    <string name="projects_watchers_watch">دیکھیں</string>
+    <string name="projects_watchers_unwatch">دیکھنا بند کریں</string>
     <string name="projects_parent_label">parent</string>
     <string name="projects_parent_search_placeholder">تلاش کریں</string>
     <string name="projects_links_add">لنک شامل کریں</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ڈیزائن امپورٹ کریں</string>
     <string name="projects_design_import_choose_template">ٹیمپلیٹ منتخب کریں</string>
     <string name="projects_design_replace_title">design تبدیل کریں؟</string>
+    <string name="projects_design_replace">بدلیں</string>
     <string name="projects_classes_add">کلاس شامل کریں</string>
     <string name="projects_classes_add_dialog_title">کلاس شامل کریں</string>
     <string name="projects_classes_create">بنائیں</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">بنایا گیا</string>
     <string name="projects_views_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="projects_views_sort_rank">رینک</string>
-
-    <string name="notification_channel_projects">Projects نوٹیفکیشنز</string>
     <string name="projects_project_not_found">project نہیں ملا</string>
+
 </resources>

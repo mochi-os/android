@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ነገር ፍጠር</string>
     <string name="projects_create_object_type">አይነት</string>
     <string name="projects_create_object_title_field">ርዕስ</string>
+    <string name="projects_create_object_parent">ወላጅ</string>
     <string name="projects_settings_title">ቅንብሮች</string>
     <string name="projects_settings_tab_general">አጠቃላይ</string>
     <string name="projects_settings_tab_access">መዳረሻ</string>
+    <string name="projects_settings_tab_people">ሰዎች</string>
+    <string name="projects_option_icon">አዶ</string>
     <string name="projects_settings_save">ለውጦችን ያስቀምጡ</string>
     <string name="projects_settings_unsubscribe">ምዝገባ ያቋርጡ</string>
     <string name="projects_settings_delete_project">ፕሮጀክት ሰርዝ</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">ጥያቄዎች</string>
     <string name="projects_object_tab_attachments">አባሪዎች</string>
     <string name="projects_object_tab_links">አገናኞች</string>
+    <string name="projects_watchers_watch">ተከታተል</string>
+    <string name="projects_watchers_unwatch">መከታተል አቁም</string>
     <string name="projects_parent_label">ወላጅ</string>
     <string name="projects_parent_search_placeholder">ይፈልጉ</string>
     <string name="projects_links_add">አገናኝ ጨምር</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ዲዛይን አስመጣ</string>
     <string name="projects_design_import_choose_template">አብነት ይምረጡ</string>
     <string name="projects_design_replace_title">ንድፍ ይተካ?</string>
+    <string name="projects_design_replace">ተካ</string>
     <string name="projects_classes_add">ክፍል ጨምር</string>
     <string name="projects_classes_add_dialog_title">ክፍል ጨምር</string>
     <string name="projects_classes_create">ፍጠር</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">ተፈጥሯል</string>
     <string name="projects_views_sort_updated">ተዘምኗል</string>
     <string name="projects_views_sort_rank">ደረጃ</string>
-
-    <string name="notification_channel_projects">Projects ማሳወቂያዎች</string>
     <string name="projects_project_not_found">ፕሮጀክት አልተገኘም</string>
+
 </resources>

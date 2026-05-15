@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Cairde</string>
     <string name="chat_new_search_placeholder">Cuardaigh cairde</string>
     <string name="chat_message_placeholder">Teachtaireacht</string>
+    <string name="chat_attachment_add">Ceangail comhaid</string>
     <string name="chat_message_attach">Ceangail comhaid</string>
     <string name="chat_settings_title">Socruithe comhrá</string>
     <string name="chat_settings_rename_label">Ainm an chomhrá</string>
     <string name="chat_settings_save">Sábháil</string>
     <string name="chat_settings_members">Baill</string>
     <string name="chat_settings_add_member">Cuir ball leis</string>
+    <string name="chat_settings_add_member_search">Cuardaigh cairde</string>
     <string name="chat_settings_remove_member">Bain</string>
     <string name="chat_settings_remove_member_title">Bain ball</string>
     <string name="chat_settings_leave">Fág comhrá</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Scrios comhrá</string>
     <string name="chat_members_empty">Níl aon bhall</string>
     <string name="chat_members_you">Tusa</string>
-
-    <string name="notification_channel_chat">Fógraí Chat</string>
     <string name="chat_chat_not_found">Comhrá gan aimsiú</string>
+
 </resources>

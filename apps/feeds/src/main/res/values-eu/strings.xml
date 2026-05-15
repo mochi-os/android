@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Markatu denak irakurritzat</string>
     <string name="feeds_settings">Ezarpenak</string>
     <string name="feeds_no_posts_yet">Oraindik argitalpenik ez</string>
+    <string name="feeds_default_sort">Lehenetsitako ordena</string>
+    <string name="feeds_suggested_interests_add">Gehitu</string>
+    <string name="feeds_suggested_interests_dismiss">Ezkutatu</string>
     <string name="feeds_unread">Irakurri gabea</string>
     <string name="feeds_filter_all">Guztiak</string>
+    <string name="feeds_sort_label">Ordenatu</string>
     <string name="feeds_sort_interests">Interesak</string>
     <string name="feeds_sort_new">Berria</string>
     <string name="feeds_sort_hot">Beroa</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Onartu</string>
     <string name="feeds_rss_url_copied">RSS URLa arbelera kopiatu da</string>
     <string name="feeds_logout">Amaitu saioa</string>
+    <string name="feeds_ai_account_default">Lehenetsitako kontua</string>
     <string name="feeds_ai_mode_off">Desgaituta</string>
     <string name="feeds_ai_mode_tag">Etiketa</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketatu eta deduplikatu</string>
     <string name="feeds_ai_reset_default">Berrezarri lehenetsira</string>
-
-    <string name="notification_channel_feeds">Feeds jakinarazpenak</string>
-    <string name="feeds_view_post">Ikusi argitalpena</string>
-    <string name="feeds_open_in_browser">Ireki nabigatzailean</string>
-    <string name="feeds_unable_to_load">Ezin da orria kargatu</string>
     <string name="feeds_feed_not_found">Jarioa ez da aurkitu</string>
     <string name="feeds_post_not_found">Ez da argitalpena aurkitu</string>
+
 </resources>

@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Cipta objek</string>
     <string name="projects_create_object_type">Jenis</string>
     <string name="projects_create_object_title_field">Tajuk</string>
+    <string name="projects_create_object_parent">Induk</string>
     <string name="projects_settings_title">Tetapan</string>
     <string name="projects_settings_tab_general">Umum</string>
     <string name="projects_settings_tab_access">Akses</string>
+    <string name="projects_settings_tab_people">Orang</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Simpan perubahan</string>
     <string name="projects_settings_unsubscribe">Berhenti melanggan</string>
     <string name="projects_settings_delete_project">Padam projek</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Permintaan</string>
     <string name="projects_object_tab_attachments">Lampiran</string>
     <string name="projects_object_tab_links">Pautan</string>
+    <string name="projects_watchers_watch">Perhati</string>
+    <string name="projects_watchers_unwatch">Berhenti memerhati</string>
     <string name="projects_parent_label">Induk</string>
     <string name="projects_parent_search_placeholder">Cari</string>
     <string name="projects_links_add">Tambah pautan</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Import reka bentuk</string>
     <string name="projects_design_import_choose_template">Pilih templat</string>
     <string name="projects_design_replace_title">Ganti reka bentuk?</string>
+    <string name="projects_design_replace">Ganti</string>
     <string name="projects_classes_add">Tambah kelas</string>
     <string name="projects_classes_add_dialog_title">Tambah kelas</string>
     <string name="projects_classes_create">Cipta</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Dicipta</string>
     <string name="projects_views_sort_updated">Dikemas kini</string>
     <string name="projects_views_sort_rank">Pangkat</string>
-
-    <string name="notification_channel_projects">Pemberitahuan Projects</string>
     <string name="projects_project_not_found">Projek tidak dijumpai</string>
+
 </resources>

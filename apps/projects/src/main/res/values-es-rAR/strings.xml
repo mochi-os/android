@@ -41,6 +41,4 @@
     <string name="projects_views_edit_dialog_title">Editá la vista</string>
     <string name="projects_views_delete_title">Eliminá la vista</string>
 
-    <string name="notification_channel_projects">Notificaciones de Projects</string>
-    <string name="projects_project_not_found">Project not found</string>
 </resources>

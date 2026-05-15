@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Достор</string>
     <string name="chat_new_search_placeholder">Досторду издөө</string>
     <string name="chat_message_placeholder">Билдирүү</string>
+    <string name="chat_attachment_add">Файлдарды тиркөө</string>
     <string name="chat_message_attach">Файлдарды тиркөө</string>
     <string name="chat_settings_title">Чат жөндөөлөрү</string>
     <string name="chat_settings_rename_label">Чат аты</string>
     <string name="chat_settings_save">Сактоо</string>
     <string name="chat_settings_members">Мүчөлөр</string>
     <string name="chat_settings_add_member">Мүчө кошуу</string>
+    <string name="chat_settings_add_member_search">Досторду издөө</string>
     <string name="chat_settings_remove_member">Алуу</string>
     <string name="chat_settings_remove_member_title">Мүчөнү алуу</string>
     <string name="chat_settings_leave">Чаттан чыгуу</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Чатты жок кылуу</string>
     <string name="chat_members_empty">Мүчөлөр жок</string>
     <string name="chat_members_you">Сиз</string>
-
-    <string name="notification_channel_chat">Chat билдирүүлөрү</string>
     <string name="chat_chat_not_found">Чат табылган жок</string>
+
 </resources>

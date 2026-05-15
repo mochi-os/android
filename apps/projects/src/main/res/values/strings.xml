@@ -69,11 +69,20 @@
     <string name="projects_create_object_title">Create object</string>
     <string name="projects_create_object_type">Type</string>
     <string name="projects_create_object_title_field">Title</string>
+    <string name="projects_create_object_parent">Parent</string>
+    <string name="projects_create_object_parent_none">(none)</string>
+    <string name="projects_add_child">Add child</string>
 
     <!-- Project settings -->
     <string name="projects_settings_title">Settings</string>
     <string name="projects_settings_tab_general">General</string>
     <string name="projects_settings_tab_access">Access</string>
+    <string name="projects_settings_tab_people">People</string>
+    <string name="projects_option_icon">Icon</string>
+    <string name="projects_views_move_up">Move up</string>
+    <string name="projects_views_move_down">Move down</string>
+    <string name="projects_views_filter">Filter (stored, not yet applied)</string>
+    <string name="projects_people_empty">No people have access yet</string>
     <string name="projects_settings_save">Save changes</string>
     <string name="projects_settings_danger_zone">Danger zone</string>
     <string name="projects_settings_unsubscribe">Unsubscribe</string>
@@ -101,6 +110,10 @@
     <string name="projects_object_tab_requests">Requests</string>
     <string name="projects_object_tab_attachments">Attachments</string>
     <string name="projects_object_tab_links">Links</string>
+    <string name="projects_object_tab_watchers">Watchers</string>
+    <string name="projects_watchers_empty">No watchers yet</string>
+    <string name="projects_watchers_watch">Watch</string>
+    <string name="projects_watchers_unwatch">Stop watching</string>
     <string name="projects_object_delete_title">Delete object</string>
     <string name="projects_object_delete_message">Are you sure you want to delete this object? This action cannot be undone.</string>
 

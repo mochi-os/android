@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">모두 읽음 처리</string>
     <string name="feeds_settings">설정</string>
     <string name="feeds_no_posts_yet">아직 게시물이 없어요</string>
+    <string name="feeds_default_sort">기본 정렬</string>
+    <string name="feeds_suggested_interests_add">추가</string>
+    <string name="feeds_suggested_interests_dismiss">숨기기</string>
     <string name="feeds_unread">읽지 않음</string>
     <string name="feeds_filter_all">전체</string>
+    <string name="feeds_sort_label">정렬</string>
     <string name="feeds_sort_interests">관심사</string>
     <string name="feeds_sort_new">새로 만들기</string>
     <string name="feeds_sort_hot">인기</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">수락</string>
     <string name="feeds_rss_url_copied">RSS URL이 클립보드에 복사되었어요</string>
     <string name="feeds_logout">로그아웃</string>
+    <string name="feeds_ai_account_default">기본 계정</string>
     <string name="feeds_ai_mode_off">비활성화됨</string>
     <string name="feeds_ai_mode_tag">태그</string>
     <string name="feeds_ai_mode_tag_deduplicate">태그 + 중복 제거</string>
     <string name="feeds_ai_reset_default">기본값으로 재설정</string>
-
-    <string name="notification_channel_feeds">Feeds 알림</string>
-    <string name="feeds_view_post">게시물 보기</string>
-    <string name="feeds_open_in_browser">브라우저에서 열기</string>
-    <string name="feeds_unable_to_load">페이지를 불러올 수 없습니다</string>
     <string name="feeds_feed_not_found">피드를 찾을 수 없어요</string>
     <string name="feeds_post_not_found">게시물을 찾을 수 없어요</string>
+
 </resources>

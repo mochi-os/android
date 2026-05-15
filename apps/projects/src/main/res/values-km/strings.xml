@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">បង្កើតវត្ថុ</string>
     <string name="projects_create_object_type">ប្រភេទ</string>
     <string name="projects_create_object_title_field">ចំណងជើង</string>
+    <string name="projects_create_object_parent">មេ</string>
     <string name="projects_settings_title">ការកំណត់</string>
     <string name="projects_settings_tab_general">ទូទៅ</string>
     <string name="projects_settings_tab_access">ការចូលប្រើ</string>
+    <string name="projects_settings_tab_people">មនុស្ស</string>
+    <string name="projects_option_icon">រូបតំណាង</string>
     <string name="projects_settings_save">រក្សាទុកការផ្លាស់ប្តូរ</string>
     <string name="projects_settings_unsubscribe">ឈប់ជាវ</string>
     <string name="projects_settings_delete_project">លុបគម្រោង</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">សំណើ</string>
     <string name="projects_object_tab_attachments">ឯកសារភ្ជាប់</string>
     <string name="projects_object_tab_links">តំណ</string>
+    <string name="projects_watchers_watch">មើល</string>
+    <string name="projects_watchers_unwatch">បញ្ឈប់ការតាមដាន</string>
     <string name="projects_parent_label">មេ</string>
     <string name="projects_parent_search_placeholder">ស្វែងរក</string>
     <string name="projects_links_add">បន្ថែមតំណ</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">នាំចូលការរចនា</string>
     <string name="projects_design_import_choose_template">ជ្រើសរើសគំរូ</string>
     <string name="projects_design_replace_title">ជំនួសការរចនា?</string>
+    <string name="projects_design_replace">ជំនួស</string>
     <string name="projects_classes_add">បន្ថែមថ្នាក់</string>
     <string name="projects_classes_add_dialog_title">បន្ថែមថ្នាក់</string>
     <string name="projects_classes_create">បង្កើត</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">បានបង្កើត</string>
     <string name="projects_views_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>
     <string name="projects_views_sort_rank">ចំណាត់ថ្នាក់</string>
-
-    <string name="notification_channel_projects">ការជូនដំណឹង Projects</string>
     <string name="projects_project_not_found">រកមិនឃើញគម្រោង</string>
+
 </resources>

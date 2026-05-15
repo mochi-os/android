@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Ստեղծեք մեկը՝ սկսելու համար։</string>
     <string name="projects_create_object_type">Տեսակ</string>
     <string name="projects_create_object_title_field">Վերնագիր</string>
+    <string name="projects_create_object_parent">Ծնող</string>
     <string name="projects_settings_title">Կարգավորումներ</string>
     <string name="projects_settings_tab_general">Ընդհանուր</string>
     <string name="projects_settings_tab_access">Մուտք</string>
+    <string name="projects_settings_tab_people">Մարդիկ</string>
+    <string name="projects_option_icon">Պատկերակ</string>
     <string name="projects_settings_save">Պահպանել փոփոխությունները</string>
     <string name="projects_settings_unsubscribe">Բաժանորդագրությունից հրաժարվել</string>
     <string name="projects_settings_delete_project">Ջնջել նախագիծը</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Հարցումներ</string>
     <string name="projects_object_tab_attachments">Աճուրդ</string>
     <string name="projects_object_tab_links">Ցուցակի տեսք</string>
+    <string name="projects_watchers_watch">Հետևել</string>
+    <string name="projects_watchers_unwatch">Դադարեցնել դիտումը</string>
     <string name="projects_parent_label">Ծնող</string>
     <string name="projects_parent_search_placeholder">Որոնել</string>
     <string name="projects_links_add">Ավելացնել անդամ</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Ներմուծել ձևավորումը</string>
     <string name="projects_design_import_choose_template">Ընտրեք լռելյայն ընդարձակվածի, կոմպակտ միայն-պատկերակի կամ լրիվ դասավորության ռեժիմների միջև</string>
     <string name="projects_design_replace_title">Փոխարինե՞լ ձևավորումը։</string>
+    <string name="projects_design_replace">Փոխարինել</string>
     <string name="projects_classes_add">Ավելացնել սյունակ</string>
     <string name="projects_classes_add_dialog_title">Ավելացնել սյունակ</string>
     <string name="projects_classes_create">Ստեղծել CRM</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Ստեղծված է {0}</string>
     <string name="projects_views_sort_updated">Թարմացված</string>
     <string name="projects_views_sort_rank">Աստիճան</string>
-
-    <string name="notification_channel_projects">Projects ծանուցումներ</string>
     <string name="projects_project_not_found">Նախագիծը չի գտնվել</string>
+
 </resources>

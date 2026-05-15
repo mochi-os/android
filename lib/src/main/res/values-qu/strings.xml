@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Yaykuy mana saqisqa</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Qatiy</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Comentario</string>
     <string name="access_level_view">Qhaway</string>
     <string name="access_level_none">Mana</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Munay</string>
     <string name="reaction_dislike">Mana munay</string>
     <string name="reaction_laugh">Asiy</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Iñiy</string>
     <string name="reaction_disagree">Mana iñiy</string>
     <string name="push_service_action_hide">Pakay</string>
+    <string name="about_close">Wichq\'ay</string>
 
-    <string name="push_service_group">Qhipa llamk\'ay</string>
 </resources>

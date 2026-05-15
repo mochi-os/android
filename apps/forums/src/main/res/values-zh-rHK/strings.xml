@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="forums_ai_account_default">預設賬戶</string>
     <string name="forums_post_default_author">用戶</string>
 
-    <string name="notification_channel_forums">Forums 通知</string>
-    <string name="forums_forum_not_found">Forum not found</string>
-    <string name="forums_post_not_found">Post not found</string>
 </resources>

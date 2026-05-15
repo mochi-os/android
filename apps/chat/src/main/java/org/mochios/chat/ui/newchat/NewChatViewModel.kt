@@ -26,8 +26,12 @@ data class NewChatUiState(
 
 @HiltViewModel
 class NewChatViewModel @Inject constructor(
-    private val repository: ChatRepository
+    savedStateHandle: androidx.lifecycle.SavedStateHandle,
+    private val repository: ChatRepository,
 ) : ViewModel() {
+
+    /** Friend identity pre-selected via deep-link (mochi://chat/with?friend=X). */
+    private val preselectFriend: String = savedStateHandle["friend"] ?: ""
 
     private val _uiState = MutableStateFlow(NewChatUiState())
     val uiState: StateFlow<NewChatUiState> = _uiState.asStateFlow()
@@ -41,9 +45,14 @@ class NewChatViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val data = repository.getNewChatData()
+                val preselected = if (preselectFriend.isNotBlank() &&
+                    data.friends.any { it.id == preselectFriend }) {
+                    setOf(preselectFriend)
+                } else emptySet()
                 _uiState.value = _uiState.value.copy(
                     friends = data.friends,
-                    isLoading = false
+                    selected = preselected,
+                    isLoading = false,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())

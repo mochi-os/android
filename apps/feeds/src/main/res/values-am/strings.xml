@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">ሁሉንም እንደተነበበ ምልክት አድርግ</string>
     <string name="feeds_settings">ቅንብሮች</string>
     <string name="feeds_no_posts_yet">እስካሁን ልጥፎች የሉም</string>
+    <string name="feeds_default_sort">ነባሪ ቅደም ተከተል</string>
+    <string name="feeds_suggested_interests_add">ጨምር</string>
+    <string name="feeds_suggested_interests_dismiss">ደብቅ</string>
     <string name="feeds_unread">ያልተነበበ</string>
     <string name="feeds_filter_all">ሁሉም</string>
+    <string name="feeds_sort_label">ይደርድሩ</string>
     <string name="feeds_sort_interests">ፍላጎቶች</string>
     <string name="feeds_sort_new">አዲስ</string>
     <string name="feeds_sort_hot">ሞቅ ያለ</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">ተቀበል</string>
     <string name="feeds_rss_url_copied">RSS ዩአርኤል ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
     <string name="feeds_logout">ውጣ</string>
+    <string name="feeds_ai_account_default">ነባሪ መለያ</string>
     <string name="feeds_ai_mode_off">ተሰናክሏል</string>
     <string name="feeds_ai_mode_tag">መለያ</string>
     <string name="feeds_ai_mode_tag_deduplicate">መለያ + ድግግሞሽን አስወግድ</string>
     <string name="feeds_ai_reset_default">ወደ ነባሪ ዳግም አስጀምር</string>
-
-    <string name="notification_channel_feeds">Feeds ማሳወቂያዎች</string>
-    <string name="feeds_view_post">ልጥፍ ይመልከቱ</string>
-    <string name="feeds_open_in_browser">በአሳሽ ውስጥ ክፈት</string>
-    <string name="feeds_unable_to_load">ገጹን መጫን አልተቻለም</string>
     <string name="feeds_feed_not_found">ፊድ አልተገኘም</string>
     <string name="feeds_post_not_found">ልጥፍ አልተገኘም</string>
+
 </resources>

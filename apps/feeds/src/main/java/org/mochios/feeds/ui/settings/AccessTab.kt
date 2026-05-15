@@ -49,6 +49,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.AccessRule
+import org.mochios.android.ui.components.AccessRuleCard
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -103,7 +104,8 @@ fun AccessTab(
                     items(accessRules, key = { it.id }) { rule ->
                         AccessRuleCard(
                             rule = rule,
-                            onRevoke = { viewModel.revokeAccess(rule.subject) }
+                            levelLabel = { op -> accessLevelLabel(op) },
+                            onRevoke = { viewModel.revokeAccess(rule.subject) },
                         )
                     }
                 }
@@ -120,61 +122,6 @@ fun AccessTab(
                 showAddDialog = false
             }
         )
-    }
-}
-
-@Composable
-private fun AccessRuleCard(
-    rule: AccessRule,
-    onRevoke: () -> Unit
-) {
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(10.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Icon(
-                Icons.Default.Person,
-                contentDescription = null,
-                modifier = Modifier.size(24.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Spacer(modifier = Modifier.width(12.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = rule.name ?: rule.subject,
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Medium,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Text(
-                    text = rule.operation,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.primary
-                )
-            }
-            if (!rule.isOwner) {
-                IconButton(
-                    onClick = onRevoke,
-                    modifier = Modifier.size(32.dp)
-                ) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(MochiR.string.access_revoke),
-                        modifier = Modifier.size(18.dp),
-                        tint = MaterialTheme.colorScheme.error
-                    )
-                }
-            }
-        }
     }
 }
 

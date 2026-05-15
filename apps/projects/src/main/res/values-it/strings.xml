@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Crea oggetto</string>
     <string name="projects_create_object_type">Tipo</string>
     <string name="projects_create_object_title_field">Titolo</string>
+    <string name="projects_create_object_parent">Padre</string>
     <string name="projects_settings_title">Impostazioni</string>
     <string name="projects_settings_tab_general">Generale</string>
     <string name="projects_settings_tab_access">Accesso</string>
+    <string name="projects_settings_tab_people">Persone</string>
+    <string name="projects_option_icon">Icona</string>
     <string name="projects_settings_save">Salva modifiche</string>
     <string name="projects_settings_unsubscribe">Annulla iscrizione</string>
     <string name="projects_settings_delete_project">Elimina progetto</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Richieste</string>
     <string name="projects_object_tab_attachments">Allegati</string>
     <string name="projects_object_tab_links">Link</string>
+    <string name="projects_watchers_watch">Segui</string>
+    <string name="projects_watchers_unwatch">Smetti di seguire</string>
     <string name="projects_parent_label">Padre</string>
     <string name="projects_parent_search_placeholder">Cerca</string>
     <string name="projects_links_add">Aggiungi link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importa progettazione</string>
     <string name="projects_design_import_choose_template">Scegli un modello</string>
     <string name="projects_design_replace_title">Sostituire il design?</string>
+    <string name="projects_design_replace">Sostituisci</string>
     <string name="projects_classes_add">Aggiungi classe</string>
     <string name="projects_classes_add_dialog_title">Aggiungi classe</string>
     <string name="projects_classes_create">Crea</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Creato</string>
     <string name="projects_views_sort_updated">Aggiornato</string>
     <string name="projects_views_sort_rank">Classifica</string>
-
-    <string name="notification_channel_projects">Notifiche Projects</string>
     <string name="projects_project_not_found">Progetto non trovato</string>
+
 </resources>

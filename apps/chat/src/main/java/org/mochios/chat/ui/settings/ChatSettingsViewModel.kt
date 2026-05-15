@@ -12,6 +12,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMember
+import org.mochios.chat.model.Friend
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -21,7 +22,8 @@ data class ChatSettingsUiState(
     val isLoading: Boolean = false,
     val isSaving: Boolean = false,
     val error: MochiError? = null,
-    val leftOrDeleted: Boolean = false
+    val leftOrDeleted: Boolean = false,
+    val friends: List<Friend> = emptyList(),
 )
 
 @HiltViewModel
@@ -66,6 +68,28 @@ class ChatSettingsViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    fun addMember(memberId: String) {
+        viewModelScope.launch {
+            try {
+                repository.addMember(chatId, memberId)
+                load()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun loadFriends() {
+        viewModelScope.launch {
+            try {
+                val data = repository.getNewChatData()
+                _uiState.value = _uiState.value.copy(friends = data.friends)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }

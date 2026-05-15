@@ -6,6 +6,8 @@
     <string name="projects_object_watch">Watch</string>
     <string name="projects_object_tab_properties">Properties</string>
     <string name="projects_object_tab_activity">Activity</string>
+    <string name="projects_watchers_watch">Watch</string>
+    <string name="projects_watchers_unwatch">Stop watching</string>
     <string name="projects_links_section_blocks">Blocks</string>
     <string name="projects_links_section_blocked_by">Blocked by</string>
     <string name="projects_links_section_duplicates">Duplicates</string>
@@ -14,5 +16,4 @@
     <string name="projects_links_type_duplicates">Duplicates</string>
     <string name="projects_option_edit">Edit option</string>
 
-    <string name="projects_project_not_found">Project not found</string>
 </resources>

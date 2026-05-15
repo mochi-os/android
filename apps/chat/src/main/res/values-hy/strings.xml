@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Ընկերներ</string>
     <string name="chat_new_search_placeholder">Որոնել ընկերներին</string>
     <string name="chat_message_placeholder">Հաղորդագրեք ձեր ընկերներին, անհատապես կամ խմբերով, peer-to-peer և կոդավորված։</string>
+    <string name="chat_attachment_add">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_message_attach">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_settings_title">Զրույցներ</string>
     <string name="chat_settings_rename_label">Զրույցի անունը պարտադիր է</string>
     <string name="chat_settings_save">Պահպանել</string>
     <string name="chat_settings_members">Հիշողությունների աղբյուրն ավելացվեց</string>
     <string name="chat_settings_add_member">Ավելացնել նոր հաշիվ</string>
+    <string name="chat_settings_add_member_search">Որոնել ընկերներին</string>
     <string name="chat_settings_remove_member">Հեռացնել</string>
     <string name="chat_settings_remove_member_title">Հեռացնել անդամին</string>
     <string name="chat_settings_leave">Թողնել դատարկ արմատային ուղու համար</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Ջնջել զրույցը</string>
     <string name="chat_members_empty">Անդամներ չկան</string>
     <string name="chat_members_you">Դուք</string>
-
-    <string name="notification_channel_chat">Chat ծանուցումներ</string>
     <string name="chat_chat_not_found">Զրույցը պատրաստ է</string>
+
 </resources>

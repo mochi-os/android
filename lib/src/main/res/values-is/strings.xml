@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Aðgangi hafnað</string>
     <string name="auth_email">Tölvupóstur</string>
     <string name="auth_continue">Halda áfram</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Athugasemd</string>
     <string name="access_level_view">Skoða</string>
     <string name="access_level_none">Ekkert</string>
+    <string name="banner_label">Borði</string>
     <string name="reaction_like">Líkar við</string>
     <string name="reaction_dislike">Líkar ekki</string>
     <string name="reaction_laugh">Hlátur</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Sammála</string>
     <string name="reaction_disagree">Ósammála</string>
     <string name="push_service_action_hide">Fela</string>
+    <string name="about_close">Loka</string>
 
-    <string name="push_service_group">Bakgrunnsþjónusta</string>
 </resources>

@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Σήμανση όλων ως αναγνωσμένα</string>
     <string name="feeds_settings">Ρυθμίσεις</string>
     <string name="feeds_no_posts_yet">Δεν υπάρχουν ακόμη αναρτήσεις</string>
+    <string name="feeds_default_sort">Προεπιλεγμένη ταξινόμηση</string>
+    <string name="feeds_suggested_interests_add">Προσθήκη</string>
+    <string name="feeds_suggested_interests_dismiss">Απόκρυψη</string>
     <string name="feeds_unread">Μη αναγνωσμένα</string>
     <string name="feeds_filter_all">Όλα</string>
+    <string name="feeds_sort_label">Ταξινόμηση</string>
     <string name="feeds_sort_interests">Ενδιαφέροντα</string>
     <string name="feeds_sort_new">Νέο</string>
     <string name="feeds_sort_hot">Δημοφιλή</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Αποδοχή</string>
     <string name="feeds_rss_url_copied">Το URL του RSS αντιγράφηκε στο πρόχειρο</string>
     <string name="feeds_logout">Αποσύνδεση</string>
+    <string name="feeds_ai_account_default">Προεπιλεγμένος λογαριασμός</string>
     <string name="feeds_ai_mode_off">Απενεργοποιημένο</string>
     <string name="feeds_ai_mode_tag">Ετικέτα</string>
     <string name="feeds_ai_mode_tag_deduplicate">Ετικέτα + απομάκρυνση διπλότυπων</string>
     <string name="feeds_ai_reset_default">Επαναφορά στις προεπιλογές</string>
-
-    <string name="notification_channel_feeds">Ειδοποιήσεις Feeds</string>
-    <string name="feeds_view_post">Προβολή ανάρτησης</string>
-    <string name="feeds_open_in_browser">Άνοιγμα στο πρόγραμμα περιήγησης</string>
-    <string name="feeds_unable_to_load">Αδυναμία φόρτωσης σελίδας</string>
     <string name="feeds_feed_not_found">Η ροή δεν βρέθηκε</string>
     <string name="feeds_post_not_found">Η ανάρτηση δεν βρέθηκε</string>
+
 </resources>

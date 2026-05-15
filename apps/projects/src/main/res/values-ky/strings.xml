@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Объект түзүү</string>
     <string name="projects_create_object_type">Тип</string>
     <string name="projects_create_object_title_field">Аталышы</string>
+    <string name="projects_create_object_parent">Ата-эне</string>
     <string name="projects_settings_title">Жөндөөлөр</string>
     <string name="projects_settings_tab_general">Жалпы</string>
     <string name="projects_settings_tab_access">Жетки</string>
+    <string name="projects_settings_tab_people">Адамдар</string>
+    <string name="projects_option_icon">Сүрөтчө</string>
     <string name="projects_settings_save">Өзгөрүүлөрдү сактоо</string>
     <string name="projects_settings_unsubscribe">Жазылуудан баш тартуу</string>
     <string name="projects_settings_delete_project">Долбоорду жок кылуу</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Сурамдар</string>
     <string name="projects_object_tab_attachments">Тиркемелер</string>
     <string name="projects_object_tab_links">Шилтемелер</string>
+    <string name="projects_watchers_watch">Көрүү</string>
+    <string name="projects_watchers_unwatch">Көрүүнү токтотуу</string>
     <string name="projects_parent_label">Ата-эне</string>
     <string name="projects_parent_search_placeholder">Издөө</string>
     <string name="projects_links_add">Шилтеме кошуу</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Дизайнды импорттоо</string>
     <string name="projects_design_import_choose_template">Шаблонду тандоо</string>
     <string name="projects_design_replace_title">Дизайнды алмаштырасызбы?</string>
+    <string name="projects_design_replace">Алмаштыруу</string>
     <string name="projects_classes_add">Класс кошуу</string>
     <string name="projects_classes_add_dialog_title">Класс кошуу</string>
     <string name="projects_classes_create">Түзүү</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Түзүлдү</string>
     <string name="projects_views_sort_updated">Жаңыланды</string>
     <string name="projects_views_sort_rank">Орду</string>
-
-    <string name="notification_channel_projects">Projects билдирүүлөрү</string>
     <string name="projects_project_not_found">Долбоор табылган жок</string>
+
 </resources>

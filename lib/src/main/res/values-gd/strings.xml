@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Inntrigeadh air a dhiùltadh</string>
     <string name="auth_email">Post-d</string>
     <string name="auth_continue">Lean air adhart</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Beachd</string>
     <string name="access_level_view">Seall</string>
     <string name="access_level_none">Chan eil gin</string>
+    <string name="banner_label">Bratach</string>
     <string name="reaction_like">Toil</string>
     <string name="reaction_dislike">Cha toigh</string>
     <string name="reaction_laugh">Gàire</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Aontaich</string>
     <string name="reaction_disagree">Eas-aontaich</string>
     <string name="push_service_action_hide">Falaich</string>
+    <string name="about_close">Dùin</string>
 
-    <string name="push_service_group">Seirbheis cùlra</string>
 </resources>

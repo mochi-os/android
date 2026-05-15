@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Ufikiaji umekataliwa</string>
     <string name="auth_email">Barua pepe</string>
     <string name="auth_continue">Endelea</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Maoni</string>
     <string name="access_level_view">Tazama</string>
     <string name="access_level_none">Hakuna</string>
+    <string name="banner_label">Bango</string>
     <string name="reaction_like">Pendezwa</string>
     <string name="reaction_dislike">Sipendi</string>
     <string name="reaction_laugh">Cheka</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Kubali</string>
     <string name="reaction_disagree">Sikubaliani</string>
     <string name="push_service_action_hide">Ficha</string>
+    <string name="about_close">Funga</string>
 
-    <string name="push_service_group">Huduma ya usuli</string>
 </resources>

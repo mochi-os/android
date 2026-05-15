@@ -40,6 +40,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.AccessRule
+import org.mochios.android.ui.components.AccessRuleCard
 import org.mochios.projects.R
 import org.mochios.android.R as MochiR
 
@@ -78,13 +79,17 @@ fun AccessTab(
                 )
             }
         } else {
-            LazyColumn(modifier = Modifier.weight(1f)) {
+            LazyColumn(
+                modifier = Modifier.weight(1f),
+                contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 items(uiState.accessRules, key = { it.id }) { rule ->
-                    AccessRuleItem(
+                    AccessRuleCard(
                         rule = rule,
-                        onRevoke = { viewModel.revokeAccess(rule.id) }
+                        levelLabel = { op -> accessLevelLabel(op) },
+                        onRevoke = { viewModel.revokeAccess(rule.id) },
                     )
-                    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
                 }
             }
         }
@@ -111,47 +116,6 @@ fun AccessTab(
                 showAddDialog = false
             }
         )
-    }
-}
-
-@Composable
-private fun AccessRuleItem(
-    rule: AccessRule,
-    onRevoke: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Icon(
-            Icons.Default.Person,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(modifier = Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = rule.name ?: rule.subject,
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium
-            )
-            Text(
-                text = accessLevelLabel(rule.operation),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-        if (!rule.isOwner) {
-            IconButton(onClick = onRevoke) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(MochiR.string.access_revoke),
-                    tint = MaterialTheme.colorScheme.error
-                )
-            }
-        }
     }
 }
 

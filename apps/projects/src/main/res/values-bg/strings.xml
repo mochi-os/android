@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Създай обект</string>
     <string name="projects_create_object_type">Тип</string>
     <string name="projects_create_object_title_field">Заглавие</string>
+    <string name="projects_create_object_parent">Родител</string>
     <string name="projects_settings_title">Настройки</string>
     <string name="projects_settings_tab_general">Общи</string>
     <string name="projects_settings_tab_access">Достъп</string>
+    <string name="projects_settings_tab_people">Хора</string>
+    <string name="projects_option_icon">Икона</string>
     <string name="projects_settings_save">Запази промените</string>
     <string name="projects_settings_unsubscribe">Отпиши се</string>
     <string name="projects_settings_delete_project">Изтрий проекта</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Заявки</string>
     <string name="projects_object_tab_attachments">Прикачени файлове</string>
     <string name="projects_object_tab_links">Връзки</string>
+    <string name="projects_watchers_watch">Наблюдавай</string>
+    <string name="projects_watchers_unwatch">Спри да следиш</string>
     <string name="projects_parent_label">Родител</string>
     <string name="projects_parent_search_placeholder">Търсене</string>
     <string name="projects_links_add">Добави връзка</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Импорт на дизайн</string>
     <string name="projects_design_import_choose_template">Изберете шаблон</string>
     <string name="projects_design_replace_title">Да заменя ли дизайна?</string>
+    <string name="projects_design_replace">Замени</string>
     <string name="projects_classes_add">Добави клас</string>
     <string name="projects_classes_add_dialog_title">Добави клас</string>
     <string name="projects_classes_create">Създай</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Създадено</string>
     <string name="projects_views_sort_updated">Обновено</string>
     <string name="projects_views_sort_rank">Ранг</string>
-
-    <string name="notification_channel_projects">Известия Projects</string>
     <string name="projects_project_not_found">Проектът не е намерен</string>
+
 </resources>

@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Maka konke njengokufundiwe</string>
     <string name="feeds_settings">Izilungiselelo</string>
     <string name="feeds_no_posts_yet">Akukho okwabiwayo okwamanje</string>
+    <string name="feeds_default_sort">Ukuhlunga okuzenzakalelayo</string>
+    <string name="feeds_suggested_interests_add">Engeza</string>
+    <string name="feeds_suggested_interests_dismiss">Fihla</string>
     <string name="feeds_unread">Okungafundwanga</string>
     <string name="feeds_filter_all">Konke</string>
+    <string name="feeds_sort_label">Hlunga</string>
     <string name="feeds_sort_interests">Izintshisekelo</string>
     <string name="feeds_sort_new">Okusha</string>
     <string name="feeds_sort_hot">Okushisayo</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Yamukela</string>
     <string name="feeds_rss_url_copied">I-URL ye-RSS ikopishelwe kubhodi</string>
     <string name="feeds_logout">Phuma</string>
+    <string name="feeds_ai_account_default">I-akhawunti ezenzakalelayo</string>
     <string name="feeds_ai_mode_off">Kuvinjelwe</string>
     <string name="feeds_ai_mode_tag">Ithegi</string>
     <string name="feeds_ai_mode_tag_deduplicate">Ithegi + susa okuphindiwe</string>
     <string name="feeds_ai_reset_default">Setha kabusha kokuzenzakalelayo</string>
-
-    <string name="notification_channel_feeds">Izaziso ze-Feeds</string>
-    <string name="feeds_view_post">Buka okuthunyelwe</string>
-    <string name="feeds_open_in_browser">Vula kusiphequluli</string>
-    <string name="feeds_unable_to_load">Ayikwazi ukulayisha ikhasi</string>
     <string name="feeds_feed_not_found">Ifidi ayitholakalanga</string>
     <string name="feeds_post_not_found">Okwabiwayo akutholakali</string>
+
 </resources>

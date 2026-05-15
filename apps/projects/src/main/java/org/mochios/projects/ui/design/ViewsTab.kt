@@ -17,12 +17,15 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.FormatListBulleted
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -127,10 +130,25 @@ fun ViewsTab(
                         )
                     }
                 }
-                items(views.sortedBy { it.rank }, key = { it.id }) { view ->
+                val sortedViews = views.sortedBy { it.rank }
+                itemsIndexed(sortedViews, key = { _, v -> v.id }) { index, view ->
                     ViewRow(
                         view = view,
                         allFields = allFields,
+                        canMoveUp = index > 0,
+                        canMoveDown = index < sortedViews.size - 1,
+                        onMoveUp = {
+                            val newOrder = sortedViews.toMutableList().also {
+                                val tmp = it[index - 1]; it[index - 1] = it[index]; it[index] = tmp
+                            }.joinToString(",") { it.id }
+                            viewModel.reorderViews(newOrder)
+                        },
+                        onMoveDown = {
+                            val newOrder = sortedViews.toMutableList().also {
+                                val tmp = it[index + 1]; it[index + 1] = it[index]; it[index] = tmp
+                            }.joinToString(",") { it.id }
+                            viewModel.reorderViews(newOrder)
+                        },
                         onEdit = { editingView = view },
                         onDelete = { deletingView = view }
                     )
@@ -149,13 +167,13 @@ fun ViewsTab(
             allFields = allFields,
             projectDetails = projectDetails,
             onDismiss = { showAddDialog = false },
-            onSave = { name, viewtype, columns, rows, sort, direction, selectedClasses, border ->
+            onSave = { name, viewtype, columns, rows, sort, direction, selectedClasses, border, filter ->
                 viewModel.createView(
                     name = name,
                     viewtype = viewtype,
                     columns = columns,
                     rows = rows,
-                    filter = null,
+                    filter = filter,
                     sort = sort,
                     direction = direction,
                     classes = selectedClasses,
@@ -175,14 +193,14 @@ fun ViewsTab(
             allFields = allFields,
             projectDetails = projectDetails,
             onDismiss = { editingView = null },
-            onSave = { name, viewtype, columns, rows, sort, direction, selectedClasses, border ->
+            onSave = { name, viewtype, columns, rows, sort, direction, selectedClasses, border, filter ->
                 viewModel.updateView(
                     viewId = view.id,
                     name = name,
                     viewtype = viewtype,
                     columns = columns,
                     rows = rows,
-                    filter = null,
+                    filter = filter,
                     sort = sort,
                     direction = direction,
                     classes = selectedClasses,
@@ -210,6 +228,10 @@ fun ViewsTab(
 private fun ViewRow(
     view: ProjectView,
     allFields: List<ProjectField>,
+    canMoveUp: Boolean = false,
+    canMoveDown: Boolean = false,
+    onMoveUp: () -> Unit = {},
+    onMoveDown: () -> Unit = {},
     onEdit: () -> Unit,
     onDelete: () -> Unit
 ) {
@@ -252,6 +274,20 @@ private fun ViewRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
+        IconButton(onClick = onMoveUp, enabled = canMoveUp, modifier = Modifier.size(32.dp)) {
+            Icon(
+                Icons.Default.KeyboardArrowUp,
+                contentDescription = stringResource(R.string.projects_views_move_up),
+                modifier = Modifier.size(18.dp),
+            )
+        }
+        IconButton(onClick = onMoveDown, enabled = canMoveDown, modifier = Modifier.size(32.dp)) {
+            Icon(
+                Icons.Default.KeyboardArrowDown,
+                contentDescription = stringResource(R.string.projects_views_move_down),
+                modifier = Modifier.size(18.dp),
+            )
+        }
         IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
             Icon(Icons.Default.Edit, contentDescription = stringResource(MochiR.string.common_edit), modifier = Modifier.size(18.dp))
         }
@@ -284,7 +320,8 @@ private fun ViewDialog(
         sort: String?,
         direction: String?,
         classes: String?,
-        border: String?
+        border: String?,
+        filter: String?,
     ) -> Unit
 ) {
     var name by remember { mutableStateOf(initialView?.name ?: "") }
@@ -294,6 +331,7 @@ private fun ViewDialog(
     var sortField by remember { mutableStateOf(initialView?.sort ?: "") }
     var direction by remember { mutableStateOf(initialView?.direction ?: "asc") }
     var borderField by remember { mutableStateOf(initialView?.border ?: "") }
+    var filterField by remember { mutableStateOf(initialView?.filter ?: "") }
     var selectedClasses by remember {
         mutableStateOf(initialView?.classes?.toSet() ?: emptySet())
     }
@@ -409,6 +447,17 @@ private fun ViewDialog(
 
                 Spacer(modifier = Modifier.height(8.dp))
 
+                // Filter (stored on the view; not yet applied to listings).
+                OutlinedTextField(
+                    value = filterField,
+                    onValueChange = { filterField = it },
+                    label = { Text(stringResource(R.string.projects_views_filter)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
                 // Sort
                 FieldDropdown(
                     label = stringResource(R.string.projects_views_sort_by),
@@ -485,7 +534,8 @@ private fun ViewDialog(
                         sortField.ifBlank { null },
                         direction,
                         selectedClasses.joinToString(",").ifBlank { null },
-                        borderField.ifBlank { null }
+                        borderField.ifBlank { null },
+                        filterField.ifBlank { null },
                     )
                 },
                 enabled = name.isNotBlank()

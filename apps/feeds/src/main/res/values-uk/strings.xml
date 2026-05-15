@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Позначити все прочитаним</string>
     <string name="feeds_settings">Налаштування</string>
     <string name="feeds_no_posts_yet">Дописів ще немає</string>
+    <string name="feeds_default_sort">Сортування за замовчуванням</string>
+    <string name="feeds_suggested_interests_add">Додати</string>
+    <string name="feeds_suggested_interests_dismiss">Приховати</string>
     <string name="feeds_unread">Непрочитані</string>
     <string name="feeds_filter_all">Усі</string>
+    <string name="feeds_sort_label">Сортувати</string>
     <string name="feeds_sort_interests">Інтереси</string>
     <string name="feeds_sort_new">Нове</string>
     <string name="feeds_sort_hot">Популярне</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Прийняти</string>
     <string name="feeds_rss_url_copied">RSS URL скопійовано в буфер обміну</string>
     <string name="feeds_logout">Вийти</string>
+    <string name="feeds_ai_account_default">Обліковий запис за замовчуванням</string>
     <string name="feeds_ai_mode_off">Вимкнено</string>
     <string name="feeds_ai_mode_tag">Тег</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тег + видалити дублікати</string>
     <string name="feeds_ai_reset_default">Скинути до значення за замовчуванням</string>
-
-    <string name="notification_channel_feeds">Сповіщення Feeds</string>
-    <string name="feeds_view_post">Показати допис</string>
-    <string name="feeds_open_in_browser">Відкрити в браузері</string>
-    <string name="feeds_unable_to_load">Не вдалося завантажити сторінку</string>
     <string name="feeds_feed_not_found">Стрічку не знайдено</string>
     <string name="feeds_post_not_found">Допис не знайдено</string>
+
 </resources>

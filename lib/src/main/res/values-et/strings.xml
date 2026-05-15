@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Juurdepääs keelatud</string>
     <string name="auth_email">E-post</string>
     <string name="auth_continue">Jätka</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Kommentaar</string>
     <string name="access_level_view">Vaata</string>
     <string name="access_level_none">Puudub</string>
+    <string name="banner_label">Bänner</string>
     <string name="reaction_like">Meeldib</string>
     <string name="reaction_dislike">Ei meeldi</string>
     <string name="reaction_laugh">Naera</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Nõustu</string>
     <string name="reaction_disagree">Ei nõustu</string>
     <string name="push_service_action_hide">Peida</string>
+    <string name="about_close">Sulge</string>
 
-    <string name="push_service_group">Taustateenus</string>
 </resources>

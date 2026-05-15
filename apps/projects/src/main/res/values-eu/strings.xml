@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Sortu objektua</string>
     <string name="projects_create_object_type">Mota</string>
     <string name="projects_create_object_title_field">Izenburua</string>
+    <string name="projects_create_object_parent">Gurasoa</string>
     <string name="projects_settings_title">Ezarpenak</string>
     <string name="projects_settings_tab_general">Orokorra</string>
     <string name="projects_settings_tab_access">Sarbidea</string>
+    <string name="projects_settings_tab_people">Jendea</string>
+    <string name="projects_option_icon">Ikonoa</string>
     <string name="projects_settings_save">Gorde aldaketak</string>
     <string name="projects_settings_unsubscribe">Harpidetza kendu</string>
     <string name="projects_settings_delete_project">Ezabatu proiektua</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Eskaerak</string>
     <string name="projects_object_tab_attachments">Eranskinak</string>
     <string name="projects_object_tab_links">Estekak</string>
+    <string name="projects_watchers_watch">Ikusi</string>
+    <string name="projects_watchers_unwatch">Utzi ikusten</string>
     <string name="projects_parent_label">Gurasoa</string>
     <string name="projects_parent_search_placeholder">Bilatu</string>
     <string name="projects_links_add">Gehitu esteka</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Inportatu diseinua</string>
     <string name="projects_design_import_choose_template">Aukeratu txantiloi bat</string>
     <string name="projects_design_replace_title">Diseinua ordeztu?</string>
+    <string name="projects_design_replace">Ordeztu</string>
     <string name="projects_classes_add">Gehitu klasea</string>
     <string name="projects_classes_add_dialog_title">Gehitu klasea</string>
     <string name="projects_classes_create">Sortu</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Sortua</string>
     <string name="projects_views_sort_updated">Eguneratuta</string>
     <string name="projects_views_sort_rank">Maila</string>
-
-    <string name="notification_channel_projects">Projects jakinarazpenak</string>
     <string name="projects_project_not_found">Ez da proiektua aurkitu</string>
+
 </resources>

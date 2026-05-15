@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ఆబ్జెక్ట్‌ను సృష్టించండి</string>
     <string name="projects_create_object_type">రకం</string>
     <string name="projects_create_object_title_field">శీర్షిక</string>
+    <string name="projects_create_object_parent">పేరెంట్</string>
     <string name="projects_settings_title">సెట్టింగ్‌లు</string>
     <string name="projects_settings_tab_general">సాధారణం</string>
     <string name="projects_settings_tab_access">యాక్సెస్</string>
+    <string name="projects_settings_tab_people">పీపుల్</string>
+    <string name="projects_option_icon">ఐకాన్</string>
     <string name="projects_settings_save">మార్పులను సేవ్ చేయండి</string>
     <string name="projects_settings_unsubscribe">చందా మానివేయండి</string>
     <string name="projects_settings_delete_project">ప్రాజెక్ట్‌ను తొలగించండి</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">రిక్వెస్ట్‌లు</string>
     <string name="projects_object_tab_attachments">అటాచ్‌మెంట్‌లు</string>
     <string name="projects_object_tab_links">లింక్‌లు</string>
+    <string name="projects_watchers_watch">చూడండి</string>
+    <string name="projects_watchers_unwatch">చూడటం ఆపండి</string>
     <string name="projects_parent_label">పేరెంట్</string>
     <string name="projects_parent_search_placeholder">శోధన</string>
     <string name="projects_links_add">లింక్‌ను జోడించండి</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">డిజైన్‌ను దిగుమతి చేయండి</string>
     <string name="projects_design_import_choose_template">టెంప్లేట్‌ను ఎంచుకోండి</string>
     <string name="projects_design_replace_title">డిజైన్‌ను భర్తీ చేయాలా?</string>
+    <string name="projects_design_replace">భర్తీ చేయండి</string>
     <string name="projects_classes_add">క్లాస్‌ను జోడించండి</string>
     <string name="projects_classes_add_dialog_title">క్లాస్‌ను జోడించండి</string>
     <string name="projects_classes_create">సృష్టించండి</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">సృష్టించబడింది</string>
     <string name="projects_views_sort_updated">నవీకరించబడింది</string>
     <string name="projects_views_sort_rank">ర్యాంక్</string>
-
-    <string name="notification_channel_projects">Projects నోటిఫికేషన్లు</string>
     <string name="projects_project_not_found">ప్రాజెక్ట్ కనుగొనబడలేదు</string>
+
 </resources>

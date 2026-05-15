@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Alle als gelesen markieren</string>
     <string name="feeds_settings">Einstellungen</string>
     <string name="feeds_no_posts_yet">Noch keine Beiträge</string>
+    <string name="feeds_default_sort">Standardsortierung</string>
+    <string name="feeds_suggested_interests_add">Hinzufügen</string>
+    <string name="feeds_suggested_interests_dismiss">Ausblenden</string>
     <string name="feeds_unread">Ungelesen</string>
     <string name="feeds_filter_all">Alle</string>
+    <string name="feeds_sort_label">Sortieren</string>
     <string name="feeds_sort_interests">Interessen</string>
     <string name="feeds_sort_new">Neu</string>
     <string name="feeds_sort_hot">Heiß</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Annehmen</string>
     <string name="feeds_rss_url_copied">RSS-URL in die Zwischenablage kopiert</string>
     <string name="feeds_logout">Abmelden</string>
+    <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktiviert</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + Duplikate entfernen</string>
     <string name="feeds_ai_reset_default">Auf Standard zurücksetzen</string>
-
-    <string name="notification_channel_feeds">Feeds-Benachrichtigungen</string>
-    <string name="feeds_view_post">Beitrag ansehen</string>
-    <string name="feeds_open_in_browser">Im Browser öffnen</string>
-    <string name="feeds_unable_to_load">Seite kann nicht geladen werden</string>
     <string name="feeds_feed_not_found">Feed nicht gefunden</string>
     <string name="feeds_post_not_found">Beitrag nicht gefunden</string>
+
 </resources>

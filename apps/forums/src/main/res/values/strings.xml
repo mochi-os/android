@@ -65,6 +65,9 @@
     <string name="forums_post_attach">Attach files</string>
     <string name="forums_post_create_action">Post</string>
     <string name="forums_post_edit">Edit post</string>
+    <string name="forums_post_edit_title">Edit post</string>
+    <string name="forums_post_edit_title_field">Title</string>
+    <string name="forums_post_edit_body_field">Body</string>
     <string name="forums_post_save">Save</string>
     <string name="forums_post_delete">Delete post</string>
     <string name="forums_post_delete_title">Delete post</string>
@@ -75,6 +78,121 @@
     <string name="forums_post_pending">Pending</string>
     <string name="forums_post_vote_up">Upvote</string>
     <string name="forums_post_vote_down">Downvote</string>
+    <string name="forums_post_pin">Pin</string>
+    <string name="forums_post_unpin">Unpin</string>
+    <string name="forums_post_lock">Lock</string>
+    <string name="forums_post_unlock">Unlock</string>
+    <string name="forums_post_approve">Approve</string>
+    <string name="forums_post_remove">Remove</string>
+    <string name="forums_post_restore">Restore</string>
+    <string name="forums_post_report">Report</string>
+
+    <!-- Comment moderation -->
+    <string name="forums_comment_approve">Approve</string>
+    <string name="forums_comment_remove">Remove</string>
+    <string name="forums_comment_restore">Restore</string>
+    <string name="forums_comment_report">Report</string>
+
+    <!-- Tag filter -->
+    <string name="forums_tag_clear">Clear filter</string>
+    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_remove">Remove tag</string>
+    <string name="forums_post_tag_label">Tag</string>
+
+    <!-- Settings tabs -->
+    <string name="forums_tab_general">General</string>
+    <string name="forums_tab_access">Access</string>
+    <string name="forums_tab_members">Members</string>
+    <string name="forums_tab_banner">Banner</string>
+    <string name="forums_tab_ai">AI</string>
+
+    <!-- Access tab -->
+    <string name="forums_access_add">Add access rule</string>
+    <string name="forums_access_empty">No rules yet — defaults apply</string>
+    <string name="forums_access_target">Target</string>
+    <string name="forums_access_target_hint">Entity ID, @group, * (everyone), or + (members)</string>
+    <string name="forums_access_level">Level</string>
+    <string name="forums_access_level_view">View</string>
+    <string name="forums_access_level_comment">Comment</string>
+    <string name="forums_access_level_post">Post</string>
+    <string name="forums_access_level_moderate">Moderate</string>
+    <string name="forums_access_level_manage">Manage</string>
+    <string name="forums_access_level_none">None</string>
+
+    <!-- Members tab -->
+    <string name="forums_members_search">Filter members</string>
+    <string name="forums_members_empty">No members</string>
+
+    <!-- Banner tab -->
+    <string name="forums_banner_description">Markdown shown at the top of the forum.</string>
+    <string name="forums_banner_placeholder">Welcome to this forum…</string>
+
+    <!-- AI tab -->
+    <string name="forums_ai_mode_label">Mode: %1$s</string>
+    <string name="forums_ai_mode_heading">AI mode</string>
+    <string name="forums_ai_mode_off">Off</string>
+    <string name="forums_ai_mode_tag">Tag</string>
+    <string name="forums_ai_account">AI account</string>
+    <string name="forums_ai_account_default">Default account</string>
+    <string name="forums_ai_prompt_tag">Tagging prompt</string>
+    <string name="forums_ai_prompt_score">Scoring prompt</string>
+    <string name="forums_ai_prompt_reset">Reset to default</string>
+    <string name="forums_ai_post_prompt_label">Prompt for post tags</string>
+    <string name="forums_ai_comment_prompt_label">Prompt for comment tags</string>
+
+    <!-- General tab extras -->
+    <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
+    <string name="forums_settings_clear_notifications">Clear notifications</string>
+    <string name="forums_settings_unsubscribe">Unsubscribe</string>
+
+    <!-- Moderation centre -->
+    <string name="forums_moderation_title">Moderation</string>
+    <string name="forums_moderation_settings">Moderation settings</string>
+    <string name="forums_moderation_tab_queue">Queue</string>
+    <string name="forums_moderation_tab_reports">Reports</string>
+    <string name="forums_moderation_tab_log">Log</string>
+    <string name="forums_moderation_tab_restrictions">Restrictions</string>
+    <string name="forums_moderation_queue_empty">Nothing pending</string>
+    <string name="forums_moderation_pending_posts">Pending posts</string>
+    <string name="forums_moderation_pending_comments">Pending comments</string>
+    <string name="forums_moderation_reports_status">Status</string>
+    <string name="forums_moderation_reports_pending">Pending</string>
+    <string name="forums_moderation_reports_resolved">Resolved</string>
+    <string name="forums_moderation_reports_all">All</string>
+    <string name="forums_moderation_reports_empty">No reports</string>
+    <string name="forums_moderation_report_details">Details: %1$s</string>
+    <string name="forums_moderation_report_meta">Reported by %1$s · Author %2$s</string>
+    <string name="forums_moderation_report_dismiss">Dismiss</string>
+    <string name="forums_moderation_report_acted">Acted</string>
+    <string name="forums_moderation_report_resolved_by">Resolved by %1$s — %2$s</string>
+    <string name="forums_moderation_log_empty">No moderator activity yet</string>
+    <string name="forums_moderation_log_meta">By %1$s · Target %2$s</string>
+    <string name="forums_moderation_restrictions_empty">No restrictions</string>
+    <string name="forums_moderation_restriction_add">Add restriction</string>
+    <string name="forums_moderation_restriction_remove">Remove</string>
+    <string name="forums_moderation_restriction_user">User identity</string>
+    <string name="forums_moderation_restriction_type">Type</string>
+    <string name="forums_moderation_restriction_type_muted">Mute</string>
+    <string name="forums_moderation_restriction_type_banned">Ban</string>
+    <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
+    <string name="forums_moderation_restriction_duration_seconds">Duration (seconds, blank for permanent)</string>
+    <string name="forums_moderation_restriction_expires">Expires %1$s</string>
+    <string name="forums_moderation_restriction_permanent">Permanent</string>
+    <string name="forums_moderation_auto_approve_posts">Auto-approve new posts</string>
+    <string name="forums_moderation_auto_approve_comments">Auto-approve new comments</string>
+    <string name="forums_moderation_min_karma">Required minimum karma</string>
+
+    <!-- Report dialog -->
+    <string name="forums_report_reason">Reason</string>
+    <string name="forums_report_details">Details</string>
+    <string name="forums_report_submit">Submit report</string>
+    <string name="forums_report_reason_spam">Spam</string>
+    <string name="forums_report_reason_harassment">Harassment</string>
+    <string name="forums_report_reason_hate">Hate</string>
+    <string name="forums_report_reason_violence">Violence</string>
+    <string name="forums_report_reason_misinformation">Misinformation</string>
+    <string name="forums_report_reason_offtopic">Off-topic</string>
+    <string name="forums_report_reason_other">Other</string>
 
     <!-- Post detail -->
     <string name="forums_post_default_author">User</string>
@@ -84,6 +202,9 @@
     <string name="forums_comment_send">Send</string>
     <string name="forums_comment_save">Save</string>
     <string name="forums_comment_edit">Edit comment</string>
+    <string name="forums_comment_edit_title">Edit comment</string>
+    <string name="forums_comment_edit_body_field">Body</string>
+    <string name="forums_comment_edit_attach">Attach files</string>
     <string name="forums_comment_delete">Delete comment</string>
     <string name="forums_comment_delete_title">Delete comment</string>
     <string name="forums_comment_delete_message">Are you sure you want to delete this comment?</string>

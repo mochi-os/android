@@ -686,15 +686,13 @@ private fun CommentItem(
                 )
             }
 
-            // Reactions on comment
-            if (comment.reactions.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(4.dp))
-                ReactionBar(
-                    reactions = toReactionCounts(comment.reactions, comment.myReaction),
-                    onReact = onReact,
-                    onRemoveReaction = { onReact(comment.myReaction) }
-                )
-            }
+            // Reactions on comment — always shown so users can add their first reaction.
+            Spacer(modifier = Modifier.height(4.dp))
+            ReactionBar(
+                reactions = toReactionCounts(comment.reactions, comment.myReaction),
+                onReact = onReact,
+                onRemoveReaction = { onReact(comment.myReaction) }
+            )
 
             // Comment actions
             Row {

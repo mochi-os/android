@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Obyekt yaratish</string>
     <string name="projects_create_object_type">Tur</string>
     <string name="projects_create_object_title_field">Sarlavha</string>
+    <string name="projects_create_object_parent">Ota</string>
     <string name="projects_settings_title">Sozlamalar</string>
     <string name="projects_settings_tab_general">Umumiy</string>
     <string name="projects_settings_tab_access">Kirish</string>
+    <string name="projects_settings_tab_people">Odamlar</string>
+    <string name="projects_option_icon">Belgi</string>
     <string name="projects_settings_save">Oʻzgarishlarni saqlash</string>
     <string name="projects_settings_unsubscribe">Obunadan chiqish</string>
     <string name="projects_settings_delete_project">Loyihani oʻchirish</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Soʻrovlar</string>
     <string name="projects_object_tab_attachments">Biriktirmalar</string>
     <string name="projects_object_tab_links">Havolalar</string>
+    <string name="projects_watchers_watch">Kuzatish</string>
+    <string name="projects_watchers_unwatch">Kuzatishni toʻxtatish</string>
     <string name="projects_parent_label">Ota</string>
     <string name="projects_parent_search_placeholder">Qidirish</string>
     <string name="projects_links_add">Havola qoʻshish</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Dizaynni import qilish</string>
     <string name="projects_design_import_choose_template">Shablon tanlang</string>
     <string name="projects_design_replace_title">Dizayn almashtirilsinmi?</string>
+    <string name="projects_design_replace">Almashtirish</string>
     <string name="projects_classes_add">Sinf qoʻshish</string>
     <string name="projects_classes_add_dialog_title">Sinf qoʻshish</string>
     <string name="projects_classes_create">Yaratish</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Yaratildi</string>
     <string name="projects_views_sort_updated">Yangilangan</string>
     <string name="projects_views_sort_rank">Reyting</string>
-
-    <string name="notification_channel_projects">Projects bildirishnomalari</string>
     <string name="projects_project_not_found">Loyiha topilmadi</string>
+
 </resources>

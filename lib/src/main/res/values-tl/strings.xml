@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Tinanggihan ang access</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Magpatuloy</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Komento</string>
     <string name="access_level_view">Tingnan</string>
     <string name="access_level_none">Wala</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Gusto</string>
     <string name="reaction_dislike">Ayaw</string>
     <string name="reaction_laugh">Tawa</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Sang-ayon</string>
     <string name="reaction_disagree">Hindi sumasang-ayon</string>
     <string name="push_service_action_hide">Itago</string>
+    <string name="about_close">Isara</string>
 
-    <string name="push_service_group">Serbisyo sa background</string>
 </resources>

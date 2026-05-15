@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Märgi kõik loetuks</string>
     <string name="feeds_settings">Seaded</string>
     <string name="feeds_no_posts_yet">Postitusi veel pole</string>
+    <string name="feeds_default_sort">Vaikimisi sortimine</string>
+    <string name="feeds_suggested_interests_add">Lisa</string>
+    <string name="feeds_suggested_interests_dismiss">Peida</string>
     <string name="feeds_unread">Lugemata</string>
     <string name="feeds_filter_all">Kõik</string>
+    <string name="feeds_sort_label">Sorteeri</string>
     <string name="feeds_sort_interests">Huvid</string>
     <string name="feeds_sort_new">Uus</string>
     <string name="feeds_sort_hot">Kuum</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Nõustu</string>
     <string name="feeds_rss_url_copied">RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="feeds_logout">Logi välja</string>
+    <string name="feeds_ai_account_default">Vaikimisi konto</string>
     <string name="feeds_ai_mode_off">Keelatud</string>
     <string name="feeds_ai_mode_tag">Silt</string>
     <string name="feeds_ai_mode_tag_deduplicate">Sildi lisamine + dubleerimine eemaldamine</string>
     <string name="feeds_ai_reset_default">Lähtesta vaikeväärtusele</string>
-
-    <string name="notification_channel_feeds">Feeds teated</string>
-    <string name="feeds_view_post">Vaata postitust</string>
-    <string name="feeds_open_in_browser">Ava brauseris</string>
-    <string name="feeds_unable_to_load">Lehte ei õnnestu laadida</string>
     <string name="feeds_feed_not_found">Voogu ei leitud</string>
     <string name="feeds_post_not_found">Postitust ei leitud</string>
+
 </resources>

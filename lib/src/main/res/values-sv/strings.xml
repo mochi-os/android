@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Åtkomst nekad</string>
     <string name="auth_email">E-post</string>
     <string name="auth_continue">Fortsätt</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Kommentera</string>
     <string name="access_level_view">Visa</string>
     <string name="access_level_none">Ingen</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Gilla</string>
     <string name="reaction_dislike">Ogillar</string>
     <string name="reaction_laugh">Skratt</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Håller med</string>
     <string name="reaction_disagree">Håller inte med</string>
     <string name="push_service_action_hide">Dölj</string>
+    <string name="about_close">Stäng</string>
 
-    <string name="push_service_group">Bakgrundstjänst</string>
 </resources>

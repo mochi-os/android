@@ -24,10 +24,11 @@ object ChatApp {
     // would otherwise match `chat/{chatId}` with chatId='list' and route to
     // the detail screen rendering NotFoundState.
     const val CHAT = "chat/chat/{chatId}"
-    const val NEW_CHAT = "chat/new"
+    const val NEW_CHAT = "chat/new?friend={friend}"
     const val CHAT_SETTINGS = "chat/chat/{chatId}/settings"
 
     fun chat(chatId: String) = "chat/chat/$chatId"
+    fun newChat(friendId: String = "") = if (friendId.isEmpty()) "chat/new" else "chat/new?friend=$friendId"
     fun chatSettings(chatId: String) = "chat/chat/$chatId/settings"
 }
 
@@ -63,13 +64,23 @@ fun NavGraphBuilder.chatNavGraph(
                     launchSingleTop = true
                 }
             },
-            onNewChat = { navController.navigate(ChatApp.NEW_CHAT) },
+            onNewChat = { navController.navigate(ChatApp.newChat()) },
             onSettings = { id -> navController.navigate(ChatApp.chatSettings(id)) },
             onLogout = onLogout,
         )
     }
 
-    composable(ChatApp.NEW_CHAT) {
+    composable(
+        route = ChatApp.NEW_CHAT,
+        arguments = listOf(navArgument("friend") {
+            type = NavType.StringType
+            defaultValue = ""
+            nullable = false
+        }),
+        deepLinks = listOf(
+            navDeepLink { uriPattern = "mochi://chat/with?friend={friend}" }
+        )
+    ) {
         NewChatScreen(
             onBack = { navController.popBackStack() },
             onChatCreated = { chatId ->

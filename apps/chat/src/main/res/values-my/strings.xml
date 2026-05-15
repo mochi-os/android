@@ -14,12 +14,14 @@
     <string name="chat_new_friends">သူငယ်ချင်းများ</string>
     <string name="chat_new_search_placeholder">သူငယ်ချင်းများ ရှာဖွေ</string>
     <string name="chat_message_placeholder">မက်ဆေ့ဂျ်</string>
+    <string name="chat_attachment_add">ဖိုင်များ ပူးတွဲမည်</string>
     <string name="chat_message_attach">ဖိုင်များ ပူးတွဲမည်</string>
     <string name="chat_settings_title">စကားပြောခန်း ဆက်တင်များ</string>
     <string name="chat_settings_rename_label">စကားပြောခန်း အမည်</string>
     <string name="chat_settings_save">သိမ်းမည်</string>
     <string name="chat_settings_members">အဖွဲ့ဝင်များ</string>
     <string name="chat_settings_add_member">အဖွဲ့ဝင် ထည့်မည်</string>
+    <string name="chat_settings_add_member_search">သူငယ်ချင်းများ ရှာဖွေ</string>
     <string name="chat_settings_remove_member">ဖယ်ရှား</string>
     <string name="chat_settings_remove_member_title">အဖွဲ့ဝင် ဖယ်ရှား</string>
     <string name="chat_settings_leave">စကားပြောမှ ထွက်</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">စကားပြောခန်း ဖျက်မည်</string>
     <string name="chat_members_empty">အဖွဲ့ဝင်များ မရှိပါ</string>
     <string name="chat_members_you">သင်</string>
-
-    <string name="notification_channel_chat">Chat အကြောင်းကြားစာများ</string>
     <string name="chat_chat_not_found">စကားပြောခန်း မတွေ့ရှိပါ</string>
+
 </resources>

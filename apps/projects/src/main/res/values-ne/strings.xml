@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">वस्तु सिर्जना गर्नुहोस्</string>
     <string name="projects_create_object_type">प्रकार</string>
     <string name="projects_create_object_title_field">शीर्षक</string>
+    <string name="projects_create_object_parent">अभिभावक</string>
     <string name="projects_settings_title">सेटिङहरू</string>
     <string name="projects_settings_tab_general">सामान्य</string>
     <string name="projects_settings_tab_access">पहुँच</string>
+    <string name="projects_settings_tab_people">पिपल</string>
+    <string name="projects_option_icon">आइकन</string>
     <string name="projects_settings_save">परिवर्तनहरू सुरक्षित गर्नुहोस्</string>
     <string name="projects_settings_unsubscribe">सदस्यता हटाउनुहोस्</string>
     <string name="projects_settings_delete_project">परियोजना मेटाउनुहोस्</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">अनुरोधहरू</string>
     <string name="projects_object_tab_attachments">एट्याचमेन्टहरू</string>
     <string name="projects_object_tab_links">लिङ्कहरू</string>
+    <string name="projects_watchers_watch">हेर्नुहोस्</string>
+    <string name="projects_watchers_unwatch">हेर्न रोक्नुहोस्</string>
     <string name="projects_parent_label">अभिभावक</string>
     <string name="projects_parent_search_placeholder">खोज्नुहोस्</string>
     <string name="projects_links_add">लिङ्क थप्नुहोस्</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">डिजाइन आयात गर्नुहोस्</string>
     <string name="projects_design_import_choose_template">टेम्प्लेट छान्नुहोस्</string>
     <string name="projects_design_replace_title">डिजाइन बदल्ने?</string>
+    <string name="projects_design_replace">बदल्नुहोस्</string>
     <string name="projects_classes_add">क्लास थप्नुहोस्</string>
     <string name="projects_classes_add_dialog_title">क्लास थप्नुहोस्</string>
     <string name="projects_classes_create">सिर्जना गर्नुहोस्</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">सिर्जना गरियो</string>
     <string name="projects_views_sort_updated">अद्यावधिक गरियो</string>
     <string name="projects_views_sort_rank">रैंक</string>
-
-    <string name="notification_channel_projects">Projects सूचनाहरू</string>
     <string name="projects_project_not_found">प्रोजेक्ट भेटिएन</string>
+
 </resources>

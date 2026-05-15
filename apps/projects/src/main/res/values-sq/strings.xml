@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Krijo objekt</string>
     <string name="projects_create_object_type">Lloji</string>
     <string name="projects_create_object_title_field">Titulli</string>
+    <string name="projects_create_object_parent">Prindi</string>
     <string name="projects_settings_title">Cilësimet</string>
     <string name="projects_settings_tab_general">Të përgjithshme</string>
     <string name="projects_settings_tab_access">Qasja</string>
+    <string name="projects_settings_tab_people">Persona</string>
+    <string name="projects_option_icon">Ikona</string>
     <string name="projects_settings_save">Ruaj ndryshimet</string>
     <string name="projects_settings_unsubscribe">Çabonohu</string>
     <string name="projects_settings_delete_project">Fshi projektin</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Kërkesat</string>
     <string name="projects_object_tab_attachments">Bashkëngjitjet</string>
     <string name="projects_object_tab_links">Lidhjet</string>
+    <string name="projects_watchers_watch">Shiko</string>
+    <string name="projects_watchers_unwatch">Ndalo shikimin</string>
     <string name="projects_parent_label">Prindi</string>
     <string name="projects_parent_search_placeholder">Kërko</string>
     <string name="projects_links_add">Shto lidhje</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importo modelin</string>
     <string name="projects_design_import_choose_template">Zgjidh një shabllon</string>
     <string name="projects_design_replace_title">Të zëvendësohet dizajni?</string>
+    <string name="projects_design_replace">Zëvendëso</string>
     <string name="projects_classes_add">Shto klasë</string>
     <string name="projects_classes_add_dialog_title">Shto klasë</string>
     <string name="projects_classes_create">Krijo</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">U krijua</string>
     <string name="projects_views_sort_updated">U përditësua</string>
     <string name="projects_views_sort_rank">Renditja</string>
-
-    <string name="notification_channel_projects">Njoftime Projects</string>
     <string name="projects_project_not_found">Projekti s\'u gjet</string>
+
 </resources>

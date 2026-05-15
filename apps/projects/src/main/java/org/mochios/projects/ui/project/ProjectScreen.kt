@@ -71,6 +71,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -108,6 +109,7 @@ fun ProjectScreen(
     LaunchedEffect(projectId) {
         if (projectId.isNotBlank()) {
             LastViewedStore.set(context, PROJECTS_FEATURE, projectId)
+            SystemNotifications.cancelFor(context, "projects", projectId)
         }
     }
 
@@ -241,7 +243,15 @@ private fun ProjectContent(
                 },
                 navigationIcon = {
                     IconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
+                        if (uiState.hasNotifications) {
+                            androidx.compose.material3.BadgedBox(
+                                badge = { androidx.compose.material3.Badge() }
+                            ) {
+                                Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
+                            }
+                        } else {
+                            Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
+                        }
                     }
                 },
                 actions = {
@@ -397,7 +407,7 @@ private fun ProjectContent(
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
                                     onCreateObject = { classId, title, initialValues ->
-                                        viewModel.createObject(classId, title, initialValues)
+                                        viewModel.createObject(classId, title, initialValues = initialValues)
                                     }
                                 )
                             }
@@ -420,12 +430,15 @@ private fun ProjectContent(
     if (uiState.showCreateObjectDialog && details != null) {
         CreateObjectDialog(
             classes = details.classes,
+            hierarchy = details.hierarchy,
+            objects = uiState.objects,
+            presetParent = uiState.createObjectParent,
             isCreating = uiState.isCreatingObject,
             activeView = activeView,
             viewModel = viewModel,
             onDismiss = { viewModel.hideCreateObjectDialog() },
-            onCreate = { classId, title, initialValues ->
-                viewModel.createObject(classId, title, initialValues)
+            onCreate = { classId, title, parent, initialValues ->
+                viewModel.createObject(classId, title, parent, initialValues)
             }
         )
     }
@@ -443,7 +456,14 @@ private fun ProjectContent(
                 viewModel.refresh()
             },
             onViewDiff = onViewDiff,
-            onNavigateToObject = { id -> viewModel.selectObject(id) }
+            onNavigateToObject = { id -> viewModel.selectObject(id) },
+            onAddChild = { parentId ->
+                // Close the sheet, then open the create dialog with the
+                // parent pre-selected. The dialog reads project.hierarchy
+                // and seeds the class to one that permits this parent.
+                viewModel.selectObject(null)
+                viewModel.showCreateObjectDialog(parent = parentId)
+            },
         )
     }
 }

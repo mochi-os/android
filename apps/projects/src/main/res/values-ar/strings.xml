@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">إنشاء كائن</string>
     <string name="projects_create_object_type">النوع</string>
     <string name="projects_create_object_title_field">العنوان</string>
+    <string name="projects_create_object_parent">الأصل</string>
     <string name="projects_settings_title">الإعدادات</string>
     <string name="projects_settings_tab_general">عام</string>
     <string name="projects_settings_tab_access">الوصول</string>
+    <string name="projects_settings_tab_people">الأشخاص</string>
+    <string name="projects_option_icon">أيقونة</string>
     <string name="projects_settings_save">حفظ التغييرات</string>
     <string name="projects_settings_unsubscribe">إلغاء الاشتراك</string>
     <string name="projects_settings_delete_project">حذف المشروع</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">الطلبات</string>
     <string name="projects_object_tab_attachments">المرفقات</string>
     <string name="projects_object_tab_links">الروابط</string>
+    <string name="projects_watchers_watch">متابعة</string>
+    <string name="projects_watchers_unwatch">إيقاف المتابعة</string>
     <string name="projects_parent_label">الأصل</string>
     <string name="projects_parent_search_placeholder">بحث</string>
     <string name="projects_links_add">إضافة رابط</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">استيراد التصميم</string>
     <string name="projects_design_import_choose_template">اختر قالباً</string>
     <string name="projects_design_replace_title">استبدال التصميم؟</string>
+    <string name="projects_design_replace">استبدال</string>
     <string name="projects_classes_add">إضافة فئة</string>
     <string name="projects_classes_add_dialog_title">إضافة فئة</string>
     <string name="projects_classes_create">إنشاء</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">تم الإنشاء</string>
     <string name="projects_views_sort_updated">تم التحديث</string>
     <string name="projects_views_sort_rank">الترتيب</string>
-
-    <string name="notification_channel_projects">إشعارات Projects</string>
     <string name="projects_project_not_found">المشروع غير موجود</string>
+
 </resources>

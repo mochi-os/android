@@ -13,7 +13,9 @@ data class Forum(
     val server: String = "",
     val banner: String = "",
     @SerializedName("banner_html") val bannerHtml: String = "",
-    val sort: String = ""
+    val sort: String = "",
+    @SerializedName("ai_mode") val aiMode: String = "",
+    @SerializedName("ai_account") val aiAccount: Int = 0,
 )
 
 data class Member(
@@ -104,4 +106,81 @@ data class RecommendedForum(
     val blurb: String = "",
     val fingerprint: String = "",
     val server: String = ""
+)
+
+data class ModerationReport(
+    val id: String = "",
+    val forum: String = "",
+    val reporter: String = "",
+    @SerializedName("reporter_name") val reporterName: String = "",
+    val type: String = "",
+    val target: String = "",
+    val author: String = "",
+    @SerializedName("author_name") val authorName: String = "",
+    val reason: String = "",
+    val details: String = "",
+    val status: String = "",
+    val created: Long = 0,
+    val resolver: String = "",
+    @SerializedName("resolver_name") val resolverName: String = "",
+    val resolved: Long = 0,
+    val resolution: String = "",
+    @SerializedName("content_title") val contentTitle: String = "",
+    @SerializedName("content_preview") val contentPreview: String = "",
+    val attachments: List<PostAttachment> = emptyList(),
+)
+
+data class Restriction(
+    val forum: String = "",
+    val user: String = "",
+    val name: String = "",
+    val type: String = "",
+    val reason: String = "",
+    val moderator: String = "",
+    @SerializedName("moderator_name") val moderatorName: String = "",
+    val expires: Long? = null,
+    val created: Long = 0,
+)
+
+data class ModerationLogEntry(
+    val id: String = "",
+    val forum: String = "",
+    val moderator: String = "",
+    @SerializedName("moderator_name") val moderatorName: String = "",
+    val action: String = "",
+    val type: String = "",
+    val target: String = "",
+    val author: String = "",
+    @SerializedName("author_name") val authorName: String = "",
+    val reason: String = "",
+    val created: Long = 0,
+)
+
+data class ModerationQueueCounts(
+    val posts: Int = 0,
+    val comments: Int = 0,
+    val reports: Int = 0,
+    val total: Int = 0,
+)
+
+data class ModerationSettings(
+    @SerializedName("auto_approve_posts") val autoApprovePosts: Boolean = true,
+    @SerializedName("auto_approve_comments") val autoApproveComments: Boolean = true,
+    @SerializedName("require_min_karma") val requireMinKarma: Int = 0,
+)
+
+data class ForumMember(
+    val forum: String = "",
+    val id: String = "",
+    val name: String = "",
+)
+
+data class AiSettings(
+    val mode: String = "off",
+    val account: String = "",
+)
+
+data class AiPrompts(
+    val prompts: Map<String, String> = emptyMap(),
+    val defaults: Map<String, String> = emptyMap(),
 )

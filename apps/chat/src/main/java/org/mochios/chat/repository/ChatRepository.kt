@@ -50,6 +50,30 @@ class ChatRepository @Inject constructor(
         return api.sendMessageWithFiles(chatId, bodyPart, parts).unwrap().id
     }
 
+    suspend fun sendMessageFromUris(
+        chatId: String,
+        body: String,
+        uris: List<android.net.Uri>,
+        contentResolver: android.content.ContentResolver,
+    ): String {
+        if (uris.isEmpty()) {
+            return api.sendMessage(chatId, body).unwrap().id
+        }
+        val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
+        val parts = uris.map { uri ->
+            val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
+            val fileName = uri.lastPathSegment?.substringAfterLast('/') ?: "file"
+            val bytes = contentResolver.openInputStream(uri)?.readBytes()
+                ?: throw IllegalStateException("Cannot read file: $uri")
+            MultipartBody.Part.createFormData(
+                "files",
+                fileName,
+                bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
+            )
+        }
+        return api.sendMessageWithFiles(chatId, bodyPart, parts).unwrap().id
+    }
+
     suspend fun getMembers(chatId: String): List<ChatMember> =
         api.getMembers(chatId).unwrap().members
 

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Hozzáférés megtagadva</string>
     <string name="auth_email">E-mail</string>
     <string name="auth_continue">Folytatás</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Megjegyzés</string>
     <string name="access_level_view">Megtekintés</string>
     <string name="access_level_none">Nincs</string>
+    <string name="banner_label">Fejléckép</string>
     <string name="reaction_like">Tetszik</string>
     <string name="reaction_dislike">Nem tetszik</string>
     <string name="reaction_laugh">Nevetés</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Egyetért</string>
     <string name="reaction_disagree">Nem értek egyet</string>
     <string name="push_service_action_hide">Elrejtés</string>
+    <string name="about_close">Bezárás</string>
 
-    <string name="push_service_group">Háttérszolgáltatás</string>
 </resources>

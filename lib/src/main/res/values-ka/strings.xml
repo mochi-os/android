@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">წვდომა უარყოფილია</string>
     <string name="auth_email">ელფოსტა</string>
     <string name="auth_continue">გაგრძელება</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">კომენტარი</string>
     <string name="access_level_view">ვიდეოს ესკიზი</string>
     <string name="access_level_none">არცერთი</string>
+    <string name="banner_label">ბანერი</string>
     <string name="reaction_like">მოწონება</string>
     <string name="reaction_dislike">არ მომწონს</string>
     <string name="reaction_laugh">სიცილი</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">ვეთანხმები</string>
     <string name="reaction_disagree">არ ვეთანხმები</string>
     <string name="push_service_action_hide">დამალვა</string>
+    <string name="about_close">დახურვა</string>
 
-    <string name="push_service_group">ფონური სერვისი</string>
 </resources>

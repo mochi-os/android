@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Masikuna</string>
     <string name="chat_new_search_placeholder">Amigokunata maskay</string>
     <string name="chat_message_placeholder">Willakuy</string>
+    <string name="chat_attachment_add">Archivos churay</string>
     <string name="chat_message_attach">Archivos churay</string>
     <string name="chat_settings_title">Chat kamariykuna</string>
     <string name="chat_settings_rename_label">Chat suti</string>
     <string name="chat_settings_save">Waqaychay</string>
     <string name="chat_settings_members">Miembrokuna</string>
     <string name="chat_settings_add_member">Yanapaq yapay</string>
+    <string name="chat_settings_add_member_search">Amigokunata maskay</string>
     <string name="chat_settings_remove_member">Qichuy</string>
     <string name="chat_settings_remove_member_title">Miembrota qichuy</string>
     <string name="chat_settings_leave">Rimanakuyta saqiy</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Chat wischuy</string>
     <string name="chat_members_empty">Mana miembrokuna</string>
     <string name="chat_members_you">Qan</string>
-
-    <string name="notification_channel_chat">Chat willaykuna</string>
     <string name="chat_chat_not_found">Chat mana tarisqa</string>
+
 </resources>

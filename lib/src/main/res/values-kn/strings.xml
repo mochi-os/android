@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">ಪ್ರವೇಶ ನಿರಾಕರಿಸಲಾಗಿದೆ</string>
     <string name="auth_email">ಇಮೇಲ್</string>
     <string name="auth_continue">ಮುಂದುವರಿಸಿ</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">ಕಾಮೆಂಟ್</string>
     <string name="access_level_view">ವೀಕ್ಷಿಸಿ</string>
     <string name="access_level_none">ಯಾವುದೂ ಇಲ್ಲ</string>
+    <string name="banner_label">ಬ್ಯಾನರ್</string>
     <string name="reaction_like">ಇಷ್ಟ</string>
     <string name="reaction_dislike">ಇಷ್ಟವಿಲ್ಲ</string>
     <string name="reaction_laugh">ನಗು</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">ಒಪ್ಪು</string>
     <string name="reaction_disagree">ಒಪ್ಪುವುದಿಲ್ಲ</string>
     <string name="push_service_action_hide">ಮರೆಮಾಡಿ</string>
+    <string name="about_close">ಮುಚ್ಚಿ</string>
 
-    <string name="push_service_group">ಹಿನ್ನೆಲೆ ಸೇವೆ</string>
 </resources>

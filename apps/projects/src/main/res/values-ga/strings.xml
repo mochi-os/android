@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Cruthaigh oibiacht</string>
     <string name="projects_create_object_type">Cineál</string>
     <string name="projects_create_object_title_field">Teideal</string>
+    <string name="projects_create_object_parent">Tuismitheoir</string>
     <string name="projects_settings_title">Socruithe</string>
     <string name="projects_settings_tab_general">Ginearálta</string>
     <string name="projects_settings_tab_access">Rochtain</string>
+    <string name="projects_settings_tab_people">Daoine</string>
+    <string name="projects_option_icon">Deilbhín</string>
     <string name="projects_settings_save">Sábháil athruithe</string>
     <string name="projects_settings_unsubscribe">Díliostáil</string>
     <string name="projects_settings_delete_project">Scrios tionscadal</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Iarratais</string>
     <string name="projects_object_tab_attachments">Ceangaltáin</string>
     <string name="projects_object_tab_links">Naisc</string>
+    <string name="projects_watchers_watch">Faire</string>
+    <string name="projects_watchers_unwatch">Stop ag faire</string>
     <string name="projects_parent_label">Tuismitheoir</string>
     <string name="projects_parent_search_placeholder">Cuardach</string>
     <string name="projects_links_add">Cuir nasc leis</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Iompórtáil dearadh</string>
     <string name="projects_design_import_choose_template">Roghnaigh teimpléad</string>
     <string name="projects_design_replace_title">Cuir dearadh in ionad?</string>
+    <string name="projects_design_replace">Athchuir</string>
     <string name="projects_classes_add">Cuir rang leis</string>
     <string name="projects_classes_add_dialog_title">Cuir rang leis</string>
     <string name="projects_classes_create">Cruthaigh</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Cruthaithe</string>
     <string name="projects_views_sort_updated">Nuashonraithe</string>
     <string name="projects_views_sort_rank">Rang</string>
-
-    <string name="notification_channel_projects">Fógraí Projects</string>
     <string name="projects_project_not_found">Níor aimsíodh an tionscadal</string>
+
 </resources>

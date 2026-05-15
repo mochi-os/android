@@ -251,6 +251,21 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /**
+     * Lazy og:image fetch for RSS posts whose feed didn't carry an
+     * inline image. Server-side action_post_image fetches the article URL
+     * once per day per post and caches the result on the post row;
+     * subsequent calls return the cached value cheaply. Returns "" when
+     * no image could be extracted (or the post is non-RSS).
+     */
+    suspend fun getPostImage(feedId: String, postId: String): String {
+        return try {
+            api.getPostImage(feedId, postId).unwrap().image
+        } catch (_: Exception) {
+            ""
+        }
+    }
+
     suspend fun markPostsRead(feedId: String, postIds: List<String>) {
         if (postIds.isEmpty()) return
         try {
@@ -611,9 +626,18 @@ class FeedsRepository @Inject constructor(
 
     // --- AI ---
 
-    suspend fun setAiSettings(feedId: String, mode: String) {
+    suspend fun listAiAccounts(): List<org.mochios.android.model.Account> {
+        return try {
+            api.listAccounts(capability = "ai").unwrap()
+        } catch (_: Exception) {
+            emptyList()
+        }
+    }
+
+    suspend fun setAiSettings(feedId: String, mode: String, account: Int = 0) {
         try {
-            api.setAiSettings(feedId, mode).unwrap()
+            api.setAiSettings(feedId, mode, account).unwrap()
+            return
         } catch (e: Exception) {
             throw e.toMochiError()
         }

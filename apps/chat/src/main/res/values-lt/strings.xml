@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Draugai</string>
     <string name="chat_new_search_placeholder">Ieškoti draugų</string>
     <string name="chat_message_placeholder">Pranešimas</string>
+    <string name="chat_attachment_add">Pridėti failus</string>
     <string name="chat_message_attach">Pridėti failus</string>
     <string name="chat_settings_title">Pokalbio nustatymai</string>
     <string name="chat_settings_rename_label">Pokalbio pavadinimas</string>
     <string name="chat_settings_save">Išsaugoti</string>
     <string name="chat_settings_members">Nariai</string>
     <string name="chat_settings_add_member">Pridėti narį</string>
+    <string name="chat_settings_add_member_search">Ieškoti draugų</string>
     <string name="chat_settings_remove_member">Šalinti</string>
     <string name="chat_settings_remove_member_title">Šalinti narį</string>
     <string name="chat_settings_leave">Išeiti iš pokalbio</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Ištrinti pokalbį</string>
     <string name="chat_members_empty">Narių nėra</string>
     <string name="chat_members_you">Jūs</string>
-
-    <string name="notification_channel_chat">Chat pranešimai</string>
     <string name="chat_chat_not_found">Pokalbis nerastas</string>
+
 </resources>

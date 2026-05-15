@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Rochtain diúltaithe</string>
     <string name="auth_email">Ríomhphost</string>
     <string name="auth_continue">Lean ar aghaidh</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Nóta tráchta</string>
     <string name="access_level_view">Féach</string>
     <string name="access_level_none">Faic</string>
+    <string name="banner_label">Meirge</string>
     <string name="reaction_like">Is maith liom</string>
     <string name="reaction_dislike">Mí-thaitin</string>
     <string name="reaction_laugh">Gáire</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Aontaigh</string>
     <string name="reaction_disagree">Easaontaigh</string>
     <string name="push_service_action_hide">Folaigh</string>
+    <string name="about_close">Dún</string>
 
-    <string name="push_service_group">Seirbhís chúlra</string>
 </resources>

@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">צור אובייקט</string>
     <string name="projects_create_object_type">סוג</string>
     <string name="projects_create_object_title_field">כותרת</string>
+    <string name="projects_create_object_parent">אב</string>
     <string name="projects_settings_title">הגדרות</string>
     <string name="projects_settings_tab_general">כללי</string>
     <string name="projects_settings_tab_access">גישה</string>
+    <string name="projects_settings_tab_people">אנשים</string>
+    <string name="projects_option_icon">אייקון</string>
     <string name="projects_settings_save">שמור שינויים</string>
     <string name="projects_settings_unsubscribe">בטל הרשמה</string>
     <string name="projects_settings_delete_project">מחק פרויקט</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">בקשות</string>
     <string name="projects_object_tab_attachments">קבצים מצורפים</string>
     <string name="projects_object_tab_links">קישורים</string>
+    <string name="projects_watchers_watch">עקוב</string>
+    <string name="projects_watchers_unwatch">הפסק לעקוב</string>
     <string name="projects_parent_label">אב</string>
     <string name="projects_parent_search_placeholder">חיפוש</string>
     <string name="projects_links_add">הוסף קישור</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ייבוא עיצוב</string>
     <string name="projects_design_import_choose_template">בחר תבנית</string>
     <string name="projects_design_replace_title">להחליף עיצוב?</string>
+    <string name="projects_design_replace">החלף</string>
     <string name="projects_classes_add">הוסף מחלקה</string>
     <string name="projects_classes_add_dialog_title">הוסף מחלקה</string>
     <string name="projects_classes_create">צור</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">נוצר</string>
     <string name="projects_views_sort_updated">עודכן</string>
     <string name="projects_views_sort_rank">דירוג</string>
-
-    <string name="notification_channel_projects">התראות Projects</string>
     <string name="projects_project_not_found">הפרויקט לא נמצא</string>
+
 </resources>

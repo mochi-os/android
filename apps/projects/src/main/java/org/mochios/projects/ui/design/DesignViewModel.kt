@@ -204,10 +204,10 @@ class DesignViewModel @Inject constructor(
 
     // ---- Options ----
 
-    fun createOption(classId: String, fieldId: String, name: String, colour: String?) {
+    fun createOption(classId: String, fieldId: String, name: String, colour: String?, icon: String? = null) {
         viewModelScope.launch {
             try {
-                repository.createOption(projectId, classId, fieldId, name, colour)
+                repository.createOption(projectId, classId, fieldId, name, colour, icon)
                 loadProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

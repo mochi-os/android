@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Opret objekt</string>
     <string name="projects_create_object_type">Type</string>
     <string name="projects_create_object_title_field">Titel</string>
+    <string name="projects_create_object_parent">Overordnet</string>
     <string name="projects_settings_title">Indstillinger</string>
     <string name="projects_settings_tab_general">Generelt</string>
     <string name="projects_settings_tab_access">Adgang</string>
+    <string name="projects_settings_tab_people">Personer</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Gem ændringer</string>
     <string name="projects_settings_unsubscribe">Afmeld</string>
     <string name="projects_settings_delete_project">Slet projekt</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Anmodninger</string>
     <string name="projects_object_tab_attachments">Vedhæftninger</string>
     <string name="projects_object_tab_links">Links</string>
+    <string name="projects_watchers_watch">Overvåg</string>
+    <string name="projects_watchers_unwatch">Stop overvågning</string>
     <string name="projects_parent_label">Overordnet</string>
     <string name="projects_parent_search_placeholder">Søg</string>
     <string name="projects_links_add">Tilføj link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importér design</string>
     <string name="projects_design_import_choose_template">Vælg en skabelon</string>
     <string name="projects_design_replace_title">Erstat design?</string>
+    <string name="projects_design_replace">Erstat</string>
     <string name="projects_classes_add">Tilføj klasse</string>
     <string name="projects_classes_add_dialog_title">Tilføj klasse</string>
     <string name="projects_classes_create">Opret</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Oprettet</string>
     <string name="projects_views_sort_updated">Opdateret</string>
     <string name="projects_views_sort_rank">Rangering</string>
-
-    <string name="notification_channel_projects">Projects-notifikationer</string>
     <string name="projects_project_not_found">Projekt ikke fundet</string>
+
 </resources>

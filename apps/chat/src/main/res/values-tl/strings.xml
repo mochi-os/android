@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Mga kaibigan</string>
     <string name="chat_new_search_placeholder">Maghanap ng kaibigan</string>
     <string name="chat_message_placeholder">Mensahe</string>
+    <string name="chat_attachment_add">Mag-attach ng file</string>
     <string name="chat_message_attach">Mag-attach ng file</string>
     <string name="chat_settings_title">Mga setting ng chat</string>
     <string name="chat_settings_rename_label">Pangalan ng chat</string>
     <string name="chat_settings_save">I-save</string>
     <string name="chat_settings_members">Mga Miyembro</string>
     <string name="chat_settings_add_member">Magdagdag ng member</string>
+    <string name="chat_settings_add_member_search">Maghanap ng kaibigan</string>
     <string name="chat_settings_remove_member">Alisin</string>
     <string name="chat_settings_remove_member_title">Alisin ang miyembro</string>
     <string name="chat_settings_leave">Umalis sa chat</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">I-delete ang chat</string>
     <string name="chat_members_empty">Walang miyembro</string>
     <string name="chat_members_you">Ikaw</string>
-
-    <string name="notification_channel_chat">Mga abiso ng Chat</string>
     <string name="chat_chat_not_found">Hindi nahanap ang chat</string>
+
 </resources>

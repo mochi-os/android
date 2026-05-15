@@ -54,7 +54,8 @@ fun ProjectSettingsScreen(
         ) {
             val tabs = listOf(
                 stringResource(R.string.projects_settings_tab_general),
-                stringResource(R.string.projects_settings_tab_access)
+                stringResource(R.string.projects_settings_tab_access),
+                stringResource(R.string.projects_settings_tab_people),
             )
             TabRow(selectedTabIndex = selectedTab) {
                 tabs.forEachIndexed { index, title ->
@@ -77,6 +78,7 @@ fun ProjectSettingsScreen(
                     uiState = uiState,
                     viewModel = viewModel
                 )
+                2 -> PeopleTab(uiState = uiState)
             }
         }
     }

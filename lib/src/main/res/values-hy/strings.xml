@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi հոսք</string>
     <string name="error_access_denied">Մուտքը մերժված է</string>
     <string name="auth_email">Էլ․ փոստ</string>
     <string name="auth_continue">Շարունակել վճարումը</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Մեկնաբանել և դիտել</string>
     <string name="access_level_view">Դիտել</string>
     <string name="access_level_none">Ոչ մեկը</string>
+    <string name="banner_label">Բաններն հանված է</string>
     <string name="reaction_like">Կապված է {0}</string>
     <string name="reaction_dislike">Չհավանել</string>
     <string name="reaction_laugh">Թողնել</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Բոլորը</string>
     <string name="reaction_disagree">Անհամաձայն</string>
     <string name="push_service_action_hide">Թաքցնել</string>
+    <string name="about_close">Փակել վահանակը</string>
 
-    <string name="push_service_group">Ֆոնային ծառայություն</string>
 </resources>

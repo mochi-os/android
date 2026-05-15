@@ -32,6 +32,13 @@ data class ProjectUiState(
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
     val showCreateObjectDialog: Boolean = false,
+    /**
+     * Pre-selected parent for the create-object dialog when invoked from
+     * an "Add child" affordance on an existing object. Null means the
+     * dialog is opened from the FAB and lets the user pick a parent (or
+     * none) themselves.
+     */
+    val createObjectParent: String? = null,
     val isCreatingObject: Boolean = false,
     val selectedObjectId: String? = null,
     /**
@@ -41,7 +48,9 @@ data class ProjectUiState(
      */
     val sortByView: Map<String, String> = emptyMap(),
     /** Sort direction per view id. "asc" or "desc". */
-    val sortDirByView: Map<String, String> = emptyMap()
+    val sortDirByView: Map<String, String> = emptyMap(),
+    /** True if the user has unread project notifications somewhere. */
+    val hasNotifications: Boolean = false,
 )
 
 @HiltViewModel
@@ -62,6 +71,17 @@ class ProjectViewModel @Inject constructor(
     init {
         loadProject()
         subscribeWebSocket()
+        checkNotifications()
+    }
+
+    fun checkNotifications() {
+        viewModelScope.launch {
+            try {
+                val hasUnread = repository.checkNotifications()
+                _uiState.value = _uiState.value.copy(hasNotifications = hasUnread)
+            } catch (_: Exception) {
+            }
+        }
     }
 
     override fun onCleared() {
@@ -231,29 +251,41 @@ class ProjectViewModel @Inject constructor(
         return result
     }
 
-    fun showCreateObjectDialog() {
-        _uiState.value = _uiState.value.copy(showCreateObjectDialog = true)
+    fun showCreateObjectDialog(parent: String? = null) {
+        _uiState.value = _uiState.value.copy(
+            showCreateObjectDialog = true,
+            createObjectParent = parent,
+        )
     }
 
     fun hideCreateObjectDialog() {
-        _uiState.value = _uiState.value.copy(showCreateObjectDialog = false)
+        _uiState.value = _uiState.value.copy(
+            showCreateObjectDialog = false,
+            createObjectParent = null,
+        )
     }
 
     fun selectObject(objectId: String?) {
         _uiState.value = _uiState.value.copy(selectedObjectId = objectId)
     }
 
-    fun createObject(classId: String, title: String, initialValues: Map<String, String> = emptyMap()) {
+    fun createObject(
+        classId: String,
+        title: String,
+        parent: String? = null,
+        initialValues: Map<String, String> = emptyMap(),
+    ) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreatingObject = true)
             try {
-                val obj = repository.createObject(projectId, classId, null, title)
+                val obj = repository.createObject(projectId, classId, parent, title)
                 if (initialValues.isNotEmpty()) {
                     repository.setValues(projectId, obj.id, initialValues)
                 }
                 _uiState.value = _uiState.value.copy(
                     isCreatingObject = false,
-                    showCreateObjectDialog = false
+                    showCreateObjectDialog = false,
+                    createObjectParent = null,
                 )
                 refreshObjects()
             } catch (e: Exception) {

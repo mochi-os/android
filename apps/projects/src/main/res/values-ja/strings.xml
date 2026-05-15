@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">オブジェクトを作成</string>
     <string name="projects_create_object_type">タイプ</string>
     <string name="projects_create_object_title_field">タイトル</string>
+    <string name="projects_create_object_parent">親</string>
     <string name="projects_settings_title">設定</string>
     <string name="projects_settings_tab_general">一般</string>
     <string name="projects_settings_tab_access">アクセス</string>
+    <string name="projects_settings_tab_people">ピープル</string>
+    <string name="projects_option_icon">アイコン</string>
     <string name="projects_settings_save">変更を保存</string>
     <string name="projects_settings_unsubscribe">購読解除</string>
     <string name="projects_settings_delete_project">プロジェクトを削除</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">リクエスト</string>
     <string name="projects_object_tab_attachments">添付ファイル</string>
     <string name="projects_object_tab_links">リンク</string>
+    <string name="projects_watchers_watch">ウォッチ</string>
+    <string name="projects_watchers_unwatch">ウォッチを停止</string>
     <string name="projects_parent_label">親</string>
     <string name="projects_parent_search_placeholder">検索</string>
     <string name="projects_links_add">リンクを追加</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">デザインをインポート</string>
     <string name="projects_design_import_choose_template">テンプレートを選択</string>
     <string name="projects_design_replace_title">デザインを置き換えますか?</string>
+    <string name="projects_design_replace">置き換える</string>
     <string name="projects_classes_add">クラスを追加</string>
     <string name="projects_classes_add_dialog_title">クラスを追加</string>
     <string name="projects_classes_create">作成</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">作成日</string>
     <string name="projects_views_sort_updated">更新日</string>
     <string name="projects_views_sort_rank">ランク</string>
-
-    <string name="notification_channel_projects">Projects の通知</string>
     <string name="projects_project_not_found">プロジェクトが見つかりません</string>
+
 </resources>

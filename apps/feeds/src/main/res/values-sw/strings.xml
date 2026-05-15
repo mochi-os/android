@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Weka zote zimesomwa</string>
     <string name="feeds_settings">Mipangilio</string>
     <string name="feeds_no_posts_yet">Hakuna machapisho bado</string>
+    <string name="feeds_default_sort">Mpangilio chaguo-msingi</string>
+    <string name="feeds_suggested_interests_add">Ongeza</string>
+    <string name="feeds_suggested_interests_dismiss">Ficha</string>
     <string name="feeds_unread">Haijasomwa</string>
     <string name="feeds_filter_all">Vyote</string>
+    <string name="feeds_sort_label">Panga</string>
     <string name="feeds_sort_interests">Mivuto</string>
     <string name="feeds_sort_new">Mpya</string>
     <string name="feeds_sort_hot">Moto</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Kubali</string>
     <string name="feeds_rss_url_copied">URL ya RSS imenakiliwa kwenye ubao wa kunakili</string>
     <string name="feeds_logout">Toka</string>
+    <string name="feeds_ai_account_default">Akaunti chaguo-msingi</string>
     <string name="feeds_ai_mode_off">Imezimwa</string>
     <string name="feeds_ai_mode_tag">Lebo</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + ondoa nakala</string>
     <string name="feeds_ai_reset_default">Weka upya kwa chaguo-msingi</string>
-
-    <string name="notification_channel_feeds">Arifa za Feeds</string>
-    <string name="feeds_view_post">Tazama chapisho</string>
-    <string name="feeds_open_in_browser">Fungua katika kivinjari</string>
-    <string name="feeds_unable_to_load">Imeshindwa kupakia ukurasa</string>
     <string name="feeds_feed_not_found">Mlisho haukupatikana</string>
     <string name="feeds_post_not_found">Chapisho halikupatikana</string>
+
 </resources>

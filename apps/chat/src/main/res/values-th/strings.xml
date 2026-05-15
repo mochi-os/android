@@ -14,12 +14,14 @@
     <string name="chat_new_friends">เพื่อน</string>
     <string name="chat_new_search_placeholder">ค้นหาเพื่อน</string>
     <string name="chat_message_placeholder">ข้อความ</string>
+    <string name="chat_attachment_add">แนบไฟล์</string>
     <string name="chat_message_attach">แนบไฟล์</string>
     <string name="chat_settings_title">การตั้งค่าแชท</string>
     <string name="chat_settings_rename_label">ชื่อแชท</string>
     <string name="chat_settings_save">บันทึก</string>
     <string name="chat_settings_members">สมาชิก</string>
     <string name="chat_settings_add_member">เพิ่มสมาชิก</string>
+    <string name="chat_settings_add_member_search">ค้นหาเพื่อน</string>
     <string name="chat_settings_remove_member">ลบ</string>
     <string name="chat_settings_remove_member_title">ลบสมาชิก</string>
     <string name="chat_settings_leave">ออกจากแชท</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">ลบแชท</string>
     <string name="chat_members_empty">ไม่มีสมาชิก</string>
     <string name="chat_members_you">คุณ</string>
-
-    <string name="notification_channel_chat">การแจ้งเตือน Chat</string>
     <string name="chat_chat_not_found">ไม่พบแชท</string>
+
 </resources>

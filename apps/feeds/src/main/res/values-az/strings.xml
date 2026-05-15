@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Hamısını oxunmuş işarələ</string>
     <string name="feeds_settings">Parametrlər</string>
     <string name="feeds_no_posts_yet">Hələ post yoxdur</string>
+    <string name="feeds_default_sort">Default sıralama</string>
+    <string name="feeds_suggested_interests_add">Əlavə et</string>
+    <string name="feeds_suggested_interests_dismiss">Gizlət</string>
     <string name="feeds_unread">Abunəlikdən çıx</string>
     <string name="feeds_filter_all">Hamısı</string>
+    <string name="feeds_sort_label">Sırala</string>
     <string name="feeds_sort_interests">Maraqlar</string>
     <string name="feeds_sort_new">Yeni</string>
     <string name="feeds_sort_hot">İsti</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Qəbul et</string>
     <string name="feeds_rss_url_copied">RSS URL panelə kopyalandı</string>
     <string name="feeds_logout">Çıx</string>
+    <string name="feeds_ai_account_default">Default hesab</string>
     <string name="feeds_ai_mode_off">Söndürülmüşdür</string>
     <string name="feeds_ai_mode_tag">Etiket</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketlə + dublikatları sil</string>
     <string name="feeds_ai_reset_default">Standarta sıfırla</string>
-
-    <string name="notification_channel_feeds">Feeds bildirişləri</string>
-    <string name="feeds_view_post">Yazını gör</string>
-    <string name="feeds_open_in_browser">Brauzerdə aç</string>
-    <string name="feeds_unable_to_load">Səhifəni yükləmək mümkün olmadı</string>
     <string name="feeds_feed_not_found">Lent tapılmadı</string>
     <string name="feeds_post_not_found">Post tapılmadı</string>
+
 </resources>

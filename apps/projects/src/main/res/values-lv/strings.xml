@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Izveidot objektu</string>
     <string name="projects_create_object_type">Tips</string>
     <string name="projects_create_object_title_field">Virsraksts</string>
+    <string name="projects_create_object_parent">Vecāks</string>
     <string name="projects_settings_title">Iestatījumi</string>
     <string name="projects_settings_tab_general">Vispārīgi</string>
     <string name="projects_settings_tab_access">Piekļuve</string>
+    <string name="projects_settings_tab_people">Cilvēki</string>
+    <string name="projects_option_icon">Ikona</string>
     <string name="projects_settings_save">Saglabāt izmaiņas</string>
     <string name="projects_settings_unsubscribe">Atrakstīties</string>
     <string name="projects_settings_delete_project">Dzēst projektu</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Pieprasījumi</string>
     <string name="projects_object_tab_attachments">Pielikumi</string>
     <string name="projects_object_tab_links">Saites</string>
+    <string name="projects_watchers_watch">Skatīties</string>
+    <string name="projects_watchers_unwatch">Pārtraukt skatīšanos</string>
     <string name="projects_parent_label">Vecāks</string>
     <string name="projects_parent_search_placeholder">Meklēt</string>
     <string name="projects_links_add">Pievienot saiti</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importēt dizainu</string>
     <string name="projects_design_import_choose_template">Izvēlies veidni</string>
     <string name="projects_design_replace_title">Aizstāt dizainu?</string>
+    <string name="projects_design_replace">Aizstāt</string>
     <string name="projects_classes_add">Pievienot klasi</string>
     <string name="projects_classes_add_dialog_title">Pievienot klasi</string>
     <string name="projects_classes_create">Izveidot</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Izveidots</string>
     <string name="projects_views_sort_updated">Atjaunināts</string>
     <string name="projects_views_sort_rank">Rangs</string>
-
-    <string name="notification_channel_projects">Projects paziņojumi</string>
     <string name="projects_project_not_found">Projekts nav atrasts</string>
+
 </resources>

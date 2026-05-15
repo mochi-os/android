@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Δημιουργία αντικειμένου</string>
     <string name="projects_create_object_type">Τύπος</string>
     <string name="projects_create_object_title_field">Τίτλος</string>
+    <string name="projects_create_object_parent">Γονικό</string>
     <string name="projects_settings_title">Ρυθμίσεις</string>
     <string name="projects_settings_tab_general">Γενικά</string>
     <string name="projects_settings_tab_access">Πρόσβαση</string>
+    <string name="projects_settings_tab_people">Άτομα</string>
+    <string name="projects_option_icon">Εικονίδιο</string>
     <string name="projects_settings_save">Αποθήκευση αλλαγών</string>
     <string name="projects_settings_unsubscribe">Διαγραφή εγγραφής</string>
     <string name="projects_settings_delete_project">Διαγραφή έργου</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Αιτήματα</string>
     <string name="projects_object_tab_attachments">Συνημμένα</string>
     <string name="projects_object_tab_links">Σύνδεσμοι</string>
+    <string name="projects_watchers_watch">Παρακολούθηση</string>
+    <string name="projects_watchers_unwatch">Διακοπή παρακολούθησης</string>
     <string name="projects_parent_label">Γονικό</string>
     <string name="projects_parent_search_placeholder">Αναζήτηση</string>
     <string name="projects_links_add">Προσθήκη συνδέσμου</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Εισαγωγή σχεδίασης</string>
     <string name="projects_design_import_choose_template">Επιλέξτε ένα πρότυπο</string>
     <string name="projects_design_replace_title">Αντικατάσταση σχεδιασμού;</string>
+    <string name="projects_design_replace">Αντικατάσταση</string>
     <string name="projects_classes_add">Προσθήκη κλάσης</string>
     <string name="projects_classes_add_dialog_title">Προσθήκη κλάσης</string>
     <string name="projects_classes_create">Δημιουργία</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Δημιουργήθηκε</string>
     <string name="projects_views_sort_updated">Ενημερώθηκε</string>
     <string name="projects_views_sort_rank">Κατάταξη</string>
-
-    <string name="notification_channel_projects">Ειδοποιήσεις Projects</string>
     <string name="projects_project_not_found">Το έργο δεν βρέθηκε</string>
+
 </resources>

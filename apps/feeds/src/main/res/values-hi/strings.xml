@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">सभी पढ़ा हुआ मार्क करें</string>
     <string name="feeds_settings">सेटिंग्स</string>
     <string name="feeds_no_posts_yet">अभी तक कोई पोस्ट नहीं</string>
+    <string name="feeds_default_sort">डिफ़ॉल्ट सॉर्ट</string>
+    <string name="feeds_suggested_interests_add">जोड़ें</string>
+    <string name="feeds_suggested_interests_dismiss">छिपाएँ</string>
     <string name="feeds_unread">अनरीड</string>
     <string name="feeds_filter_all">सभी</string>
+    <string name="feeds_sort_label">सॉर्ट करें</string>
     <string name="feeds_sort_interests">रुचियाँ</string>
     <string name="feeds_sort_new">नया</string>
     <string name="feeds_sort_hot">हॉट</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">स्वीकार करें</string>
     <string name="feeds_rss_url_copied">RSS URL क्लिपबोर्ड पर कॉपी हो गया</string>
     <string name="feeds_logout">लॉग आउट</string>
+    <string name="feeds_ai_account_default">डिफ़ॉल्ट अकाउंट</string>
     <string name="feeds_ai_mode_off">अक्षम</string>
     <string name="feeds_ai_mode_tag">टैग</string>
     <string name="feeds_ai_mode_tag_deduplicate">टैग + डुप्लिकेट हटाएं</string>
     <string name="feeds_ai_reset_default">डिफ़ॉल्ट पर रीसेट करें</string>
-
-    <string name="notification_channel_feeds">Feeds सूचनाएँ</string>
-    <string name="feeds_view_post">पोस्ट देखें</string>
-    <string name="feeds_open_in_browser">ब्राउज़र में खोलें</string>
-    <string name="feeds_unable_to_load">पेज लोड नहीं किया जा सका</string>
     <string name="feeds_feed_not_found">फीड नहीं मिला</string>
     <string name="feeds_post_not_found">पोस्ट नहीं मिली</string>
+
 </resources>

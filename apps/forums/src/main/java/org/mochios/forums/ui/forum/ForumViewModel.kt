@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
 import org.mochios.forums.repository.ForumsRepository
@@ -26,7 +27,9 @@ data class ForumUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,
-    val error: MochiError? = null
+    val error: MochiError? = null,
+    val tags: List<ForumTagCount> = emptyList(),
+    val currentTag: String? = null,
 )
 
 @HiltViewModel
@@ -42,13 +45,14 @@ class ForumViewModel @Inject constructor(
 
     init {
         load()
+        loadTags()
     }
 
     fun load(sort: String? = null) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val r = repository.viewForum(forumId, sort = sort)
+                val r = repository.viewForum(forumId, sort = sort, tag = _uiState.value.currentTag)
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
                     posts = r.posts,
@@ -69,7 +73,7 @@ class ForumViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val r = repository.viewForum(forumId, sort = _uiState.value.sort.ifEmpty { null })
+                val r = repository.viewForum(forumId, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
                     posts = r.posts,
@@ -92,7 +96,7 @@ class ForumViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoadingMore = true)
             try {
-                val r = repository.viewForum(forumId, before = cursor, sort = _uiState.value.sort.ifEmpty { null })
+                val r = repository.viewForum(forumId, before = cursor, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
                 _uiState.value = _uiState.value.copy(
                     posts = _uiState.value.posts + r.posts,
                     hasMore = r.hasMore,
@@ -110,6 +114,21 @@ class ForumViewModel @Inject constructor(
             try { repository.setForumSort(forumId, sort) } catch (_: Exception) { }
         }
         load(sort)
+    }
+
+    fun setTagFilter(tag: String?) {
+        if (_uiState.value.currentTag == tag) return
+        _uiState.value = _uiState.value.copy(currentTag = tag)
+        load(sort = _uiState.value.sort.ifEmpty { null })
+    }
+
+    private fun loadTags() {
+        viewModelScope.launch {
+            try {
+                _uiState.value = _uiState.value.copy(tags = repository.getForumTags(forumId))
+            } catch (_: Exception) {
+            }
+        }
     }
 
     fun votePost(postId: String, vote: String) {

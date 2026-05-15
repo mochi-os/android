@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Vrienden</string>
     <string name="chat_new_search_placeholder">Vrienden zoeken</string>
     <string name="chat_message_placeholder">Bericht</string>
+    <string name="chat_attachment_add">Bestanden bijvoegen</string>
     <string name="chat_message_attach">Bestanden bijvoegen</string>
     <string name="chat_settings_title">Chatinstellingen</string>
     <string name="chat_settings_rename_label">Chatnaam</string>
     <string name="chat_settings_save">Opslaan</string>
     <string name="chat_settings_members">Leden</string>
     <string name="chat_settings_add_member">Lid toevoegen</string>
+    <string name="chat_settings_add_member_search">Vrienden zoeken</string>
     <string name="chat_settings_remove_member">Verwijderen</string>
     <string name="chat_settings_remove_member_title">Lid verwijderen</string>
     <string name="chat_settings_leave">Chat verlaten</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Chat verwijderen</string>
     <string name="chat_members_empty">Geen leden</string>
     <string name="chat_members_you">U</string>
-
-    <string name="notification_channel_chat">Chat-meldingen</string>
     <string name="chat_chat_not_found">Chat niet gevonden</string>
+
 </resources>

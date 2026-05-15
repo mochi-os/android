@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Merk alle som lesne</string>
     <string name="feeds_settings">Innstillingar</string>
     <string name="feeds_no_posts_yet">Ingen innlegg enno</string>
+    <string name="feeds_default_sort">Standardsortering</string>
+    <string name="feeds_suggested_interests_add">Legg til</string>
+    <string name="feeds_suggested_interests_dismiss">Skjul</string>
     <string name="feeds_unread">Ulesen</string>
     <string name="feeds_filter_all">Alle</string>
+    <string name="feeds_sort_label">Sorter</string>
     <string name="feeds_sort_interests">Interesser</string>
     <string name="feeds_sort_new">Ny</string>
     <string name="feeds_sort_hot">Het</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Godta</string>
     <string name="feeds_rss_url_copied">RSS-URL kopiert til utklippstavla</string>
     <string name="feeds_logout">Logg ut</string>
+    <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktivert</string>
     <string name="feeds_ai_mode_tag">Etikett</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketter + dedupliser</string>
     <string name="feeds_ai_reset_default">Tilbakestill til standard</string>
-
-    <string name="notification_channel_feeds">Feeds-varsel</string>
-    <string name="feeds_view_post">Vis innlegg</string>
-    <string name="feeds_open_in_browser">Opne i nettlesar</string>
-    <string name="feeds_unable_to_load">Kunne ikkje laste sida</string>
     <string name="feeds_feed_not_found">Fann ikkje straumen</string>
     <string name="feeds_post_not_found">Innlegg ikkje funne</string>
+
 </resources>

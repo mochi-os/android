@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Object aanmaken</string>
     <string name="projects_create_object_type">Type</string>
     <string name="projects_create_object_title_field">Titel</string>
+    <string name="projects_create_object_parent">Bovenliggend</string>
     <string name="projects_settings_title">Instellingen</string>
     <string name="projects_settings_tab_general">Algemeen</string>
     <string name="projects_settings_tab_access">Toegang</string>
+    <string name="projects_settings_tab_people">Mensen</string>
+    <string name="projects_option_icon">Icoon</string>
     <string name="projects_settings_save">Wijzigingen opslaan</string>
     <string name="projects_settings_unsubscribe">Abonnement opzeggen</string>
     <string name="projects_settings_delete_project">Project verwijderen</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Verzoeken</string>
     <string name="projects_object_tab_attachments">Bijlagen</string>
     <string name="projects_object_tab_links">Links</string>
+    <string name="projects_watchers_watch">Volgen</string>
+    <string name="projects_watchers_unwatch">Stoppen met volgen</string>
     <string name="projects_parent_label">Bovenliggend</string>
     <string name="projects_parent_search_placeholder">Zoeken</string>
     <string name="projects_links_add">Link toevoegen</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Ontwerp importeren</string>
     <string name="projects_design_import_choose_template">Kies een sjabloon</string>
     <string name="projects_design_replace_title">Ontwerp vervangen?</string>
+    <string name="projects_design_replace">Vervangen</string>
     <string name="projects_classes_add">Klasse toevoegen</string>
     <string name="projects_classes_add_dialog_title">Klasse toevoegen</string>
     <string name="projects_classes_create">Aanmaken</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Aangemaakt</string>
     <string name="projects_views_sort_updated">Bijgewerkt</string>
     <string name="projects_views_sort_rank">Rang</string>
-
-    <string name="notification_channel_projects">Projects-meldingen</string>
     <string name="projects_project_not_found">Project niet gevonden</string>
+
 </resources>

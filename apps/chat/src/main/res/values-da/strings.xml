@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Venner</string>
     <string name="chat_new_search_placeholder">Søg efter venner</string>
     <string name="chat_message_placeholder">Besked</string>
+    <string name="chat_attachment_add">Vedhæft filer</string>
     <string name="chat_message_attach">Vedhæft filer</string>
     <string name="chat_settings_title">Chatindstillinger</string>
     <string name="chat_settings_rename_label">Chatnavn</string>
     <string name="chat_settings_save">Gem</string>
     <string name="chat_settings_members">Medlemmer</string>
     <string name="chat_settings_add_member">Tilføj medlem</string>
+    <string name="chat_settings_add_member_search">Søg efter venner</string>
     <string name="chat_settings_remove_member">Fjern</string>
     <string name="chat_settings_remove_member_title">Fjern medlem</string>
     <string name="chat_settings_leave">Forlad chat</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Slet chat</string>
     <string name="chat_members_empty">Ingen medlemmer</string>
     <string name="chat_members_you">Dig</string>
-
-    <string name="notification_channel_chat">Chat-notifikationer</string>
     <string name="chat_chat_not_found">Chat ikke fundet</string>
+
 </resources>

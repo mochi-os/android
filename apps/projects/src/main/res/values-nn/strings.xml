@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Opprett objekt</string>
     <string name="projects_create_object_type">Type</string>
     <string name="projects_create_object_title_field">Tittel</string>
+    <string name="projects_create_object_parent">Forelder</string>
     <string name="projects_settings_title">Innstillingar</string>
     <string name="projects_settings_tab_general">Generelt</string>
     <string name="projects_settings_tab_access">Tilgang</string>
+    <string name="projects_settings_tab_people">Personar</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Lagre endringar</string>
     <string name="projects_settings_unsubscribe">Sei opp abonnement</string>
     <string name="projects_settings_delete_project">Slett prosjekt</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Førespurnader</string>
     <string name="projects_object_tab_attachments">Vedlegg</string>
     <string name="projects_object_tab_links">Lenker</string>
+    <string name="projects_watchers_watch">Følg</string>
+    <string name="projects_watchers_unwatch">Slutt å sjå på</string>
     <string name="projects_parent_label">Forelder</string>
     <string name="projects_parent_search_placeholder">Søk</string>
     <string name="projects_links_add">Legg til lenkje</string>
@@ -151,7 +156,6 @@
     <string name="projects_views_sort_created">Oppretta</string>
     <string name="projects_views_sort_updated">Oppdatert</string>
     <string name="projects_views_sort_rank">Rang</string>
-
-    <string name="notification_channel_projects">Projects-varsel</string>
     <string name="projects_project_not_found">Prosjekt ikkje funne</string>
+
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Gihîştin hat redkirin</string>
     <string name="auth_email">E-name</string>
     <string name="auth_continue">Berdewam bike</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Şîrove</string>
     <string name="access_level_view">Bibîne</string>
     <string name="access_level_none">Tu</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Bibêjim</string>
     <string name="reaction_dislike">Hez nake</string>
     <string name="reaction_laugh">Bikene</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Erê</string>
     <string name="reaction_disagree">Na</string>
     <string name="push_service_action_hide">Veşêre</string>
+    <string name="about_close">Bigire</string>
 
-    <string name="push_service_group">Xizmeta paşxanê</string>
 </resources>

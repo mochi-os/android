@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Obyekt yarat</string>
     <string name="projects_create_object_type">Mesaj yazın...</string>
     <string name="projects_create_object_title_field">Başlıq tələb olunur</string>
+    <string name="projects_create_object_parent">Əsas</string>
     <string name="projects_settings_title">Parametrlər</string>
     <string name="projects_settings_tab_general">Ümumi</string>
     <string name="projects_settings_tab_access">Giriş</string>
+    <string name="projects_settings_tab_people">İnsanlar</string>
+    <string name="projects_option_icon">İkon</string>
     <string name="projects_settings_save">Dəyişiklikləri saxla</string>
     <string name="projects_settings_unsubscribe">CRM-dən abunəlikdən çıx</string>
     <string name="projects_settings_delete_project">Layihəni sil</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Sorğular</string>
     <string name="projects_object_tab_attachments">Qoşmalar</string>
     <string name="projects_object_tab_links">Linklər</string>
+    <string name="projects_watchers_watch">Yalnız izlənilən</string>
+    <string name="projects_watchers_unwatch">İzləməyi dayandır</string>
     <string name="projects_parent_label">Əsas</string>
     <string name="projects_parent_search_placeholder">Axtar</string>
     <string name="projects_links_add">Link əlavə et</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Dizaynı idxal et</string>
     <string name="projects_design_import_choose_template">Şablon seçin</string>
     <string name="projects_design_replace_title">Dizaynı əvəz edək?</string>
+    <string name="projects_design_replace">Əvəz et</string>
     <string name="projects_classes_add">Sinif əlavə et</string>
     <string name="projects_classes_add_dialog_title">Sinif əlavə et</string>
     <string name="projects_classes_create">Yarat</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Yaradıldı</string>
     <string name="projects_views_sort_updated">Yenilənir...</string>
     <string name="projects_views_sort_rank">Sıra</string>
-
-    <string name="notification_channel_projects">Projects bildirişləri</string>
     <string name="projects_project_not_found">Layihə tapılmadı</string>
+
 </resources>

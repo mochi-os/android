@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Ehecha pyre opavave</string>
     <string name="feeds_settings">Ñemboheko</string>
     <string name="feeds_no_posts_yet">Ndaipóri marandu gueteri</string>
+    <string name="feeds_default_sort">Default sort</string>
+    <string name="feeds_suggested_interests_add">Embojuaju</string>
+    <string name="feeds_suggested_interests_dismiss">Emokañy</string>
     <string name="feeds_unread">Ñemoñe\'ẽ\'ỹva</string>
     <string name="feeds_filter_all">Opaite</string>
+    <string name="feeds_sort_label">Embojo\'a</string>
     <string name="feeds_sort_interests">Oikotevevakuéra</string>
     <string name="feeds_sort_new">Pyahu</string>
     <string name="feeds_sort_hot">Akúva</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Hekoite</string>
     <string name="feeds_rss_url_copied">RSS URL oñekopia clipboard-pe</string>
     <string name="feeds_logout">Esẽ</string>
+    <string name="feeds_ai_account_default">Default tetãygua</string>
     <string name="feeds_ai_mode_off">Oñemboty</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + ndojeguerojahéi</string>
     <string name="feeds_ai_reset_default">Embojevy ypy peguávape</string>
-
-    <string name="notification_channel_feeds">Marandu Feeds</string>
-    <string name="feeds_view_post">Mañe’ã apopyre</string>
-    <string name="feeds_open_in_browser">Mbo’o tetepyre rupive</string>
-    <string name="feeds_unable_to_load">Ndaikatúi henondepe ojeguereko</string>
     <string name="feeds_feed_not_found">Feed nojetopái</string>
     <string name="feeds_post_not_found">Marandu ndojejuhúi</string>
+
 </resources>

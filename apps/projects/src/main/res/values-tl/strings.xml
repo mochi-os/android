@@ -13,7 +13,7 @@
     <string name="projects_create_name">Pangalan</string>
     <string name="projects_create_description">Paglalarawan</string>
     <string name="projects_create_prefix">Prefix</string>
-    <string name="projects_create_privacy">Privacy</string>
+    <string name="projects_create_privacy">Pagkapribado</string>
     <string name="projects_create_private">Pribado</string>
     <string name="projects_create_public">Pampubliko</string>
     <string name="projects_create_template_none">Wala</string>
@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Gumawa ng object</string>
     <string name="projects_create_object_type">Uri</string>
     <string name="projects_create_object_title_field">Pamagat</string>
+    <string name="projects_create_object_parent">Magulang</string>
     <string name="projects_settings_title">Mga setting</string>
     <string name="projects_settings_tab_general">General</string>
     <string name="projects_settings_tab_access">Access</string>
+    <string name="projects_settings_tab_people">Mga Tao</string>
+    <string name="projects_option_icon">Icon</string>
     <string name="projects_settings_save">I-save ang mga pagbabago</string>
     <string name="projects_settings_unsubscribe">Mag-unsubscribe</string>
     <string name="projects_settings_delete_project">I-delete ang project</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Mga Kahilingan</string>
     <string name="projects_object_tab_attachments">Mga attachment</string>
     <string name="projects_object_tab_links">Mga link</string>
+    <string name="projects_watchers_watch">Manood</string>
+    <string name="projects_watchers_unwatch">Itigil ang pagmamasid</string>
     <string name="projects_parent_label">Magulang</string>
     <string name="projects_parent_search_placeholder">Maghanap</string>
     <string name="projects_links_add">Magdagdag ng link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">I-import ang design</string>
     <string name="projects_design_import_choose_template">Pumili ng template</string>
     <string name="projects_design_replace_title">Palitan ang design?</string>
+    <string name="projects_design_replace">Palitan</string>
     <string name="projects_classes_add">Magdagdag ng class</string>
     <string name="projects_classes_add_dialog_title">Magdagdag ng class</string>
     <string name="projects_classes_create">Gumawa</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Nagawa</string>
     <string name="projects_views_sort_updated">Na-update</string>
     <string name="projects_views_sort_rank">Rank</string>
-
-    <string name="notification_channel_projects">Mga abiso ng Projects</string>
     <string name="projects_project_not_found">Hindi nahanap ang proyekto</string>
+
 </resources>

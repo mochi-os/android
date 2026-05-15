@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">සියල්ල කියවූ ලෙස සලකුණු කරන්න</string>
     <string name="feeds_settings">සැකසුම්</string>
     <string name="feeds_no_posts_yet">තවම පළ කිරීම් නැත</string>
+    <string name="feeds_default_sort">පෙරනිමි වර්ග කිරීම</string>
+    <string name="feeds_suggested_interests_add">එක් කරන්න</string>
+    <string name="feeds_suggested_interests_dismiss">සඟවන්න</string>
     <string name="feeds_unread">කියවා නැති</string>
     <string name="feeds_filter_all">සියල්ල</string>
+    <string name="feeds_sort_label">වර්ග කරන්න</string>
     <string name="feeds_sort_interests">උනන්දු</string>
     <string name="feeds_sort_new">අලුත්</string>
     <string name="feeds_sort_hot">උණුසුම්</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">පිළිගන්න</string>
     <string name="feeds_rss_url_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="feeds_logout">ඉවත් වන්න</string>
+    <string name="feeds_ai_account_default">පෙරනිමි ගිණුම</string>
     <string name="feeds_ai_mode_off">අක්‍රියයි</string>
     <string name="feeds_ai_mode_tag">ටැගය</string>
     <string name="feeds_ai_mode_tag_deduplicate">ටැග් + අනුපිටපත් ඉවත් කරන්න</string>
     <string name="feeds_ai_reset_default">පෙරනිමියට reset කරන්න</string>
-
-    <string name="notification_channel_feeds">Feeds දැනුම්දීම්</string>
-    <string name="feeds_view_post">පළ කිරීම බලන්න</string>
-    <string name="feeds_open_in_browser">බ්‍රවුසරයේ විවෘත කරන්න</string>
-    <string name="feeds_unable_to_load">පිටුව පූරණය කළ නොහැක</string>
     <string name="feeds_feed_not_found">පෝෂණය හමු නොවීය</string>
     <string name="feeds_post_not_found">පළ කිරීම හමු නොවීය</string>
+
 </resources>

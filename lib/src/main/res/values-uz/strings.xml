@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Kirish rad etildi</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Davom etish</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Izoh</string>
     <string name="access_level_view">Koʻrish</string>
     <string name="access_level_none">Hech qanday</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Yoqdi</string>
     <string name="reaction_dislike">Yoqtirmaslik</string>
     <string name="reaction_laugh">Kulgi</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Roziman</string>
     <string name="reaction_disagree">Rozi emas</string>
     <string name="push_service_action_hide">Yashirish</string>
+    <string name="about_close">Yopish</string>
 
-    <string name="push_service_group">Fon xizmati</string>
 </resources>

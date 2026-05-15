@@ -54,6 +54,13 @@ fun ObjectDetailSheet(
     onObjectDeleted: () -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
     onNavigateToObject: (String) -> Unit = {},
+    /**
+     * Invoked when the user taps "Add child" inside the PropertiesTab.
+     * The caller closes the sheet and opens CreateObjectDialog with the
+     * given parent pre-selected. Falls back to a no-op so embedded uses
+     * (e.g. tests) don't have to wire it.
+     */
+    onAddChild: (parent: String) -> Unit = {},
     viewModel: ObjectDetailViewModel = hiltViewModel()
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -170,7 +177,8 @@ fun ObjectDetailSheet(
                         stringResource(R.string.projects_object_tab_activity),
                         stringResource(R.string.projects_object_tab_requests),
                         stringResource(R.string.projects_object_tab_attachments),
-                        stringResource(R.string.projects_object_tab_links)
+                        stringResource(R.string.projects_object_tab_links),
+                        stringResource(R.string.projects_object_tab_watchers),
                     )
                     ScrollableTabRow(
                         selectedTabIndex = uiState.selectedTab,
@@ -190,7 +198,8 @@ fun ObjectDetailSheet(
                         0 -> PropertiesTab(
                             obj = obj,
                             projectDetails = projectDetails,
-                            viewModel = viewModel
+                            viewModel = viewModel,
+                            onAddChild = { onAddChild(obj.id) },
                         )
                         1 -> CommentsTab(
                             comments = uiState.comments,
@@ -235,6 +244,11 @@ fun ObjectDetailSheet(
                             projectDetails = projectDetails,
                             viewModel = viewModel,
                             onNavigateToObject = onNavigateToObject
+                        )
+                        6 -> WatchersTab(
+                            watchers = uiState.watchers,
+                            isWatching = uiState.isWatching,
+                            onToggle = { viewModel.toggleWatch() },
                         )
                     }
                 }

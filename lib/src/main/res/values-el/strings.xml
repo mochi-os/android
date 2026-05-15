@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Άρνηση πρόσβασης</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Συνέχεια</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Σχόλιο</string>
     <string name="access_level_view">Προβολή</string>
     <string name="access_level_none">Κανένα</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Μου αρέσει</string>
     <string name="reaction_dislike">Δεν μου αρέσει</string>
     <string name="reaction_laugh">Γέλιο</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Συμφωνώ</string>
     <string name="reaction_disagree">Διαφωνώ</string>
     <string name="push_service_action_hide">Απόκρυψη</string>
+    <string name="about_close">Κλείσιμο</string>
 
-    <string name="push_service_group">Υπηρεσία παρασκηνίου</string>
 </resources>

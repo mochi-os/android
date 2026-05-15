@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Адзначыць усе прачытаныя</string>
     <string name="feeds_settings">Налады</string>
     <string name="feeds_no_posts_yet">Пакуль няма пастоў</string>
+    <string name="feeds_default_sort">Сартаванне па змаўчанні</string>
+    <string name="feeds_suggested_interests_add">Дадаць</string>
+    <string name="feeds_suggested_interests_dismiss">Схаваць</string>
     <string name="feeds_unread">Непрачытана</string>
     <string name="feeds_filter_all">Усе</string>
+    <string name="feeds_sort_label">Сартаваць</string>
     <string name="feeds_sort_interests">Інтарэсы</string>
     <string name="feeds_sort_new">Новы</string>
     <string name="feeds_sort_hot">Папулярнае</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Прыняць</string>
     <string name="feeds_rss_url_copied">URL RSS скапіраваны ў буфер абмену</string>
     <string name="feeds_logout">Выйсці</string>
+    <string name="feeds_ai_account_default">Уліковы запіс па змаўчанні</string>
     <string name="feeds_ai_mode_off">Адключана</string>
     <string name="feeds_ai_mode_tag">Тэг</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тэг + дэдуплікацыя</string>
     <string name="feeds_ai_reset_default">Скінуць да змаўчання</string>
-
-    <string name="notification_channel_feeds">Апавяшчэнні Feeds</string>
-    <string name="feeds_view_post">Прагледзець допіс</string>
-    <string name="feeds_open_in_browser">Адкрыць у браўзеры</string>
-    <string name="feeds_unable_to_load">Не атрымалася загрузіць старонку</string>
     <string name="feeds_feed_not_found">Стужка не знойдзена</string>
     <string name="feeds_post_not_found">Пост не знойдзены</string>
+
 </resources>

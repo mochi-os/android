@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Merk alles gelees</string>
     <string name="feeds_settings">Instellings</string>
     <string name="feeds_no_posts_yet">Nog geen plasings nie</string>
+    <string name="feeds_default_sort">Verstek sortering</string>
+    <string name="feeds_suggested_interests_add">Voeg by</string>
+    <string name="feeds_suggested_interests_dismiss">Versteek</string>
     <string name="feeds_unread">Ongelees</string>
     <string name="feeds_filter_all">Alle</string>
+    <string name="feeds_sort_label">Sorteer</string>
     <string name="feeds_sort_interests">Belange</string>
     <string name="feeds_sort_new">Nuut</string>
     <string name="feeds_sort_hot">Warm</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Aanvaar</string>
     <string name="feeds_rss_url_copied">RSS-URL na knipbord gekopieer</string>
     <string name="feeds_logout">Meld af</string>
+    <string name="feeds_ai_account_default">Verstek rekening</string>
     <string name="feeds_ai_mode_off">Gedeaktiveer</string>
     <string name="feeds_ai_mode_tag">Etiket</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketteer + ontdupliseer</string>
     <string name="feeds_ai_reset_default">Stel terug na verstek</string>
-
-    <string name="notification_channel_feeds">Feeds-kennisgewings</string>
-    <string name="feeds_view_post">Bekyk plasing</string>
-    <string name="feeds_open_in_browser">Maak in blaaier oop</string>
-    <string name="feeds_unable_to_load">Kan nie bladsy laai nie</string>
     <string name="feeds_feed_not_found">Feed nie gevind nie</string>
     <string name="feeds_post_not_found">Plasing nie gevind nie</string>
+
 </resources>

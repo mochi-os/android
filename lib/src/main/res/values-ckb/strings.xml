@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">دەستڕاگەیشتن ڕەتکرایەوە</string>
     <string name="auth_email">ئیمەیڵ</string>
     <string name="auth_continue">بەردەوامبوون</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">لێدوان</string>
     <string name="access_level_view">بینین</string>
     <string name="access_level_none">هیچ</string>
+    <string name="banner_label">بانەر</string>
     <string name="reaction_like">بەدڵبوون</string>
     <string name="reaction_dislike">نەویستن</string>
     <string name="reaction_laugh">پێکەنین</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">ڕەزامەندی</string>
     <string name="reaction_disagree">ناڕەزایی</string>
     <string name="push_service_action_hide">شاردنەوە</string>
+    <string name="about_close">داخستن</string>
 
-    <string name="push_service_group">خزمەتگوزاری پاشبنەما</string>
 </resources>

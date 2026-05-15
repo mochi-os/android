@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">एक्सेस अस्वीकृत</string>
     <string name="auth_email">ईमेल</string>
     <string name="auth_continue">जारी रखें</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">टिप्पणी</string>
     <string name="access_level_view">देखें</string>
     <string name="access_level_none">कोई नहीं</string>
+    <string name="banner_label">बैनर</string>
     <string name="reaction_like">पसंद</string>
     <string name="reaction_dislike">नापसंद</string>
     <string name="reaction_laugh">हंसी</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">सहमत</string>
     <string name="reaction_disagree">असहमत</string>
     <string name="push_service_action_hide">छिपाएँ</string>
+    <string name="about_close">बंद करें</string>
 
-    <string name="push_service_group">बैकग्राउंड सेवा</string>
 </resources>

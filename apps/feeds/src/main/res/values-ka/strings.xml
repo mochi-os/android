@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">ყველას წაკითხულად მონიშვნა</string>
     <string name="feeds_settings">პარამეტრები</string>
     <string name="feeds_no_posts_yet">პოსტები ჯერ არ არის</string>
+    <string name="feeds_default_sort">ნაგულისხმევი დახარისხება</string>
+    <string name="feeds_suggested_interests_add">დამატება</string>
+    <string name="feeds_suggested_interests_dismiss">დამალვა</string>
     <string name="feeds_unread">მიმაგრების მოხსნა</string>
     <string name="feeds_filter_all">ყველა</string>
+    <string name="feeds_sort_label">დახარისხება</string>
     <string name="feeds_sort_interests">ინტერესები</string>
     <string name="feeds_sort_new">ახალი</string>
     <string name="feeds_sort_hot">ცხელი</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">მიღება</string>
     <string name="feeds_rss_url_copied">RSS URL დაკოპირდა</string>
     <string name="feeds_logout">გასვლა</string>
+    <string name="feeds_ai_account_default">ნაგულისხმევი ანგარიში</string>
     <string name="feeds_ai_mode_off">გათიშულია</string>
     <string name="feeds_ai_mode_tag">ტეგი</string>
     <string name="feeds_ai_mode_tag_deduplicate">ტეგი + დუბლიკატების მოცილება</string>
     <string name="feeds_ai_reset_default">ნაგულისხმევზე გადაყენება</string>
-
-    <string name="notification_channel_feeds">Feeds შეტყობინებები</string>
-    <string name="feeds_view_post">პოსტის ნახვა</string>
-    <string name="feeds_open_in_browser">გახსნა ბრაუზერში</string>
-    <string name="feeds_unable_to_load">გვერდის ჩატვირთვა ვერ მოხერხდა</string>
     <string name="feeds_feed_not_found">არხი ვერ მოიძებნა</string>
     <string name="feeds_post_not_found">პოსტი ვერ მოიძებნა</string>
+
 </resources>

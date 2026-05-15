@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">سڀ پڙهيل نشانبر ڪريو</string>
     <string name="feeds_settings">سيٽنگون</string>
     <string name="feeds_no_posts_yet">اڃا ڪا پوسٽ نه آهي</string>
+    <string name="feeds_default_sort">ڊفالٽ ترتيب</string>
+    <string name="feeds_suggested_interests_add">شامل ڪريو</string>
+    <string name="feeds_suggested_interests_dismiss">لڪايو</string>
     <string name="feeds_unread">اڻ پڙهيل</string>
     <string name="feeds_filter_all">سڀ</string>
+    <string name="feeds_sort_label">ترتيب</string>
     <string name="feeds_sort_interests">دلچسپيون</string>
     <string name="feeds_sort_new">نئون</string>
     <string name="feeds_sort_hot">گرم</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">قبول ڪريو</string>
     <string name="feeds_rss_url_copied">RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
     <string name="feeds_logout">لاگ آئوٽ</string>
+    <string name="feeds_ai_account_default">ڊفالٽ اڪائونٽ</string>
     <string name="feeds_ai_mode_off">غيرفعال</string>
     <string name="feeds_ai_mode_tag">ٽيگ</string>
     <string name="feeds_ai_mode_tag_deduplicate">ٽيگ + نقل ختم ڪريو</string>
     <string name="feeds_ai_reset_default">ڊفالٽ تي ري سيٽ ڪريو</string>
-
-    <string name="notification_channel_feeds">Feeds اطلاعون</string>
-    <string name="feeds_view_post">پوسٽ ڏسو</string>
-    <string name="feeds_open_in_browser">برائوزر ۾ کوليو</string>
-    <string name="feeds_unable_to_load">صفحو لوڊ نه ٿي سگھيو</string>
     <string name="feeds_feed_not_found">فيڊ نه ملي</string>
     <string name="feeds_post_not_found">پوسٽ نه ملي</string>
+
 </resources>

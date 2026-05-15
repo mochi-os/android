@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Markera alla lästa</string>
     <string name="feeds_settings">Inställningar</string>
     <string name="feeds_no_posts_yet">Inga inlägg ännu</string>
+    <string name="feeds_default_sort">Standardsortering</string>
+    <string name="feeds_suggested_interests_add">Lägg till</string>
+    <string name="feeds_suggested_interests_dismiss">Dölj</string>
     <string name="feeds_unread">Olästa</string>
     <string name="feeds_filter_all">Alla</string>
+    <string name="feeds_sort_label">Sortera</string>
     <string name="feeds_sort_interests">Intressen</string>
     <string name="feeds_sort_new">Ny</string>
     <string name="feeds_sort_hot">Het</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Acceptera</string>
     <string name="feeds_rss_url_copied">RSS-URL kopierad till urklipp</string>
     <string name="feeds_logout">Logga ut</string>
+    <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Inaktiverad</string>
     <string name="feeds_ai_mode_tag">Tagg</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tagg + ta bort dubbletter</string>
     <string name="feeds_ai_reset_default">Återställ till standard</string>
-
-    <string name="notification_channel_feeds">Feeds-aviseringar</string>
-    <string name="feeds_view_post">Visa inlägg</string>
-    <string name="feeds_open_in_browser">Öppna i webbläsare</string>
-    <string name="feeds_unable_to_load">Det gick inte att läsa in sidan</string>
     <string name="feeds_feed_not_found">Flöde hittades inte</string>
     <string name="feeds_post_not_found">Inlägget hittades inte</string>
+
 </resources>

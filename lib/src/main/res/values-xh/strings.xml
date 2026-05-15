@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Ufikelelo lwaliwe</string>
     <string name="auth_email">I-imeyili</string>
     <string name="auth_continue">Qhubeka</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Isiphawuli</string>
     <string name="access_level_view">Bonisa</string>
     <string name="access_level_none">Akukho nanye</string>
+    <string name="banner_label">Ibhena</string>
     <string name="reaction_like">Yithanda</string>
     <string name="reaction_dislike">Andiyithandi</string>
     <string name="reaction_laugh">Hleka</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Vumelana</string>
     <string name="reaction_disagree">Hayi</string>
     <string name="push_service_action_hide">Fihla</string>
+    <string name="about_close">Vala</string>
 
-    <string name="push_service_group">Inkonzo engasemva</string>
 </resources>

@@ -457,8 +457,9 @@ class ProjectsRepository @Inject constructor(
         classId: String,
         fieldId: String,
         name: String,
-        colour: String? = null
-    ): FieldOption = api.createOption(projectId, classId, fieldId, name, colour).unwrap().option
+        colour: String? = null,
+        icon: String? = null
+    ): FieldOption = api.createOption(projectId, classId, fieldId, name, colour, icon).unwrap().option
 
     suspend fun reorderOptions(projectId: String, classId: String, fieldId: String, order: String) {
         api.reorderOptions(projectId, classId, fieldId, order).unwrap()

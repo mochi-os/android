@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Összes olvasottként</string>
     <string name="feeds_settings">Beállítások</string>
     <string name="feeds_no_posts_yet">Még nincsenek bejegyzések</string>
+    <string name="feeds_default_sort">Alapértelmezett rendezés</string>
+    <string name="feeds_suggested_interests_add">Hozzáadás</string>
+    <string name="feeds_suggested_interests_dismiss">Elrejtés</string>
     <string name="feeds_unread">Olvasatlan</string>
     <string name="feeds_filter_all">Összes</string>
+    <string name="feeds_sort_label">Rendezés</string>
     <string name="feeds_sort_interests">Érdeklődések</string>
     <string name="feeds_sort_new">Új</string>
     <string name="feeds_sort_hot">Forró</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Elfogadás</string>
     <string name="feeds_rss_url_copied">RSS URL vágólapra másolva</string>
     <string name="feeds_logout">Kijelentkezés</string>
+    <string name="feeds_ai_account_default">Alapértelmezett fiók</string>
     <string name="feeds_ai_mode_off">Letiltva</string>
     <string name="feeds_ai_mode_tag">Címke</string>
     <string name="feeds_ai_mode_tag_deduplicate">Címkézés + duplikátumok eltávolítása</string>
     <string name="feeds_ai_reset_default">Visszaállítás alapértelmezettre</string>
-
-    <string name="notification_channel_feeds">Feeds értesítések</string>
-    <string name="feeds_view_post">Bejegyzés megtekintése</string>
-    <string name="feeds_open_in_browser">Megnyitás böngészőben</string>
-    <string name="feeds_unable_to_load">Az oldal nem tölthető be</string>
     <string name="feeds_feed_not_found">Hírcsatorna nem található</string>
     <string name="feeds_post_not_found">A bejegyzés nem található</string>
+
 </resources>

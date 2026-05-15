@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Vriende</string>
     <string name="chat_new_search_placeholder">Soek vriende</string>
     <string name="chat_message_placeholder">Boodskap</string>
+    <string name="chat_attachment_add">Heg lêers aan</string>
     <string name="chat_message_attach">Heg lêers aan</string>
     <string name="chat_settings_title">Kletsinstellings</string>
     <string name="chat_settings_rename_label">Kletsnaam</string>
     <string name="chat_settings_save">Stoor</string>
     <string name="chat_settings_members">Lede</string>
     <string name="chat_settings_add_member">Voeg lid by</string>
+    <string name="chat_settings_add_member_search">Soek vriende</string>
     <string name="chat_settings_remove_member">Verwyder</string>
     <string name="chat_settings_remove_member_title">Verwyder lid</string>
     <string name="chat_settings_leave">Verlaat geselsie</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Verwyder klets</string>
     <string name="chat_members_empty">Geen lede</string>
     <string name="chat_members_you">Jy</string>
-
-    <string name="notification_channel_chat">Chat-kennisgewings</string>
     <string name="chat_chat_not_found">Klets nie gevind nie</string>
+
 </resources>

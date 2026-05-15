@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Dala into</string>
     <string name="projects_create_object_type">Uhlobo</string>
     <string name="projects_create_object_title_field">Isihloko</string>
+    <string name="projects_create_object_parent">Umzali</string>
     <string name="projects_settings_title">Izilungiselelo</string>
     <string name="projects_settings_tab_general">Okujwayelekile</string>
     <string name="projects_settings_tab_access">Ukufinyelela</string>
+    <string name="projects_settings_tab_people">Abantu</string>
+    <string name="projects_option_icon">Isithonjana</string>
     <string name="projects_settings_save">Londoloza izinguquko</string>
     <string name="projects_settings_unsubscribe">Susa ukubhalisa</string>
     <string name="projects_settings_delete_project">Susa iprojekthi</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Izicelo</string>
     <string name="projects_object_tab_attachments">Okunamathiselwe</string>
     <string name="projects_object_tab_links">Izixhumanisi</string>
+    <string name="projects_watchers_watch">Buka</string>
+    <string name="projects_watchers_unwatch">Misa ukubuka</string>
     <string name="projects_parent_label">Umzali</string>
     <string name="projects_parent_search_placeholder">Sesha</string>
     <string name="projects_links_add">Engeza isixhumanisi</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Ngenisa umklamo</string>
     <string name="projects_design_import_choose_template">Khetha isifanekiso</string>
     <string name="projects_design_replace_title">Buyisela idizayini?</string>
+    <string name="projects_design_replace">Buyisela</string>
     <string name="projects_classes_add">Engeza iklasi</string>
     <string name="projects_classes_add_dialog_title">Engeza iklasi</string>
     <string name="projects_classes_create">Dala</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Kudaliwe</string>
     <string name="projects_views_sort_updated">Kubuyekeziwe</string>
     <string name="projects_views_sort_rank">Isigaba</string>
-
-    <string name="notification_channel_projects">Izaziso ze-Projects</string>
     <string name="projects_project_not_found">Iphrojekthi ayitholakali</string>
+
 </resources>

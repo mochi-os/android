@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Označi sve kao pročitano</string>
     <string name="feeds_settings">Postavke</string>
     <string name="feeds_no_posts_yet">Još nema objava</string>
+    <string name="feeds_default_sort">Podrazumijevano sortiranje</string>
+    <string name="feeds_suggested_interests_add">Dodaj</string>
+    <string name="feeds_suggested_interests_dismiss">Sakrij</string>
     <string name="feeds_unread">Nepročitano</string>
     <string name="feeds_filter_all">Sve</string>
+    <string name="feeds_sort_label">Sortiraj</string>
     <string name="feeds_sort_interests">Interesi</string>
     <string name="feeds_sort_new">Novo</string>
     <string name="feeds_sort_hot">Vruće</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Prihvati</string>
     <string name="feeds_rss_url_copied">RSS URL kopiran u međuspremnik</string>
     <string name="feeds_logout">Odjavi se</string>
+    <string name="feeds_ai_account_default">Podrazumijevani račun</string>
     <string name="feeds_ai_mode_off">Onemogućeno</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Označi + ukloni duplikate</string>
     <string name="feeds_ai_reset_default">Vrati na zadano</string>
-
-    <string name="notification_channel_feeds">Obavještenja Feeds</string>
-    <string name="feeds_view_post">Pogledaj objavu</string>
-    <string name="feeds_open_in_browser">Otvori u pregledniku</string>
-    <string name="feeds_unable_to_load">Nije moguće učitati stranicu</string>
     <string name="feeds_feed_not_found">Feed nije pronađen</string>
     <string name="feeds_post_not_found">Objava nije pronađena</string>
+
 </resources>

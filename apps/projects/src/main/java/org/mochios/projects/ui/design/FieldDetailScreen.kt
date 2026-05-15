@@ -415,9 +415,10 @@ fun FieldDetailScreen(
             title = stringResource(R.string.projects_option_add),
             initialName = "",
             initialColour = "",
+            initialIcon = "",
             onDismiss = { showAddOptionDialog = false },
-            onSave = { name, colour ->
-                viewModel.createOption(classId, field.id, name, colour)
+            onSave = { name, colour, icon ->
+                viewModel.createOption(classId, field.id, name, colour, icon)
                 showAddOptionDialog = false
             }
         )
@@ -428,9 +429,10 @@ fun FieldDetailScreen(
             title = stringResource(R.string.projects_option_edit),
             initialName = option.name,
             initialColour = option.colour,
+            initialIcon = option.icon,
             onDismiss = { editingOption = null },
-            onSave = { name, colour ->
-                viewModel.updateOption(classId, field.id, option.id, name, colour, null)
+            onSave = { name, colour, icon ->
+                viewModel.updateOption(classId, field.id, option.id, name, colour, icon)
                 editingOption = null
             }
         )
@@ -474,11 +476,13 @@ private fun OptionDialog(
     title: String,
     initialName: String,
     initialColour: String,
+    initialIcon: String = "",
     onDismiss: () -> Unit,
-    onSave: (name: String, colour: String?) -> Unit
+    onSave: (name: String, colour: String?, icon: String?) -> Unit,
 ) {
     var name by remember { mutableStateOf(initialName) }
     var colour by remember { mutableStateOf(initialColour) }
+    var icon by remember { mutableStateOf(initialIcon) }
 
     val presetColours = listOf(
         "#ef4444", "#f97316", "#eab308", "#22c55e",
@@ -535,11 +539,21 @@ private fun OptionDialog(
                         }
                     }
                 }
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(stringResource(R.string.projects_option_icon), style = MaterialTheme.typography.labelMedium)
+                Spacer(modifier = Modifier.height(8.dp))
+                OutlinedTextField(
+                    value = icon,
+                    onValueChange = { icon = it },
+                    placeholder = { Text("e.g. Check, Star, Flag") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
             }
         },
         confirmButton = {
             TextButton(
-                onClick = { onSave(name, colour.ifBlank { null }) },
+                onClick = { onSave(name, colour.ifBlank { null }, icon.ifBlank { null }) },
                 enabled = name.isNotBlank()
             ) {
                 Text(stringResource(MochiR.string.common_save))

@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Arkadaşlar</string>
     <string name="chat_new_search_placeholder">Arkadaşlarda ara</string>
     <string name="chat_message_placeholder">Mesaj</string>
+    <string name="chat_attachment_add">Dosya ekle</string>
     <string name="chat_message_attach">Dosya ekle</string>
     <string name="chat_settings_title">Sohbet ayarları</string>
     <string name="chat_settings_rename_label">Sohbet adı</string>
     <string name="chat_settings_save">Kaydet</string>
     <string name="chat_settings_members">Üyeler</string>
     <string name="chat_settings_add_member">Üye ekle</string>
+    <string name="chat_settings_add_member_search">Arkadaşlarda ara</string>
     <string name="chat_settings_remove_member">Kaldır</string>
     <string name="chat_settings_remove_member_title">Üyeyi kaldır</string>
     <string name="chat_settings_leave">Sohbetten ayrıl</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Sohbeti sil</string>
     <string name="chat_members_empty">Üye yok</string>
     <string name="chat_members_you">Sen</string>
-
-    <string name="notification_channel_chat">Chat bildirimleri</string>
     <string name="chat_chat_not_found">Sohbet bulunamadı</string>
+
 </resources>

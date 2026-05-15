@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Unda kitu</string>
     <string name="projects_create_object_type">Aina</string>
     <string name="projects_create_object_title_field">Kichwa</string>
+    <string name="projects_create_object_parent">Mzazi</string>
     <string name="projects_settings_title">Mipangilio</string>
     <string name="projects_settings_tab_general">Jumla</string>
     <string name="projects_settings_tab_access">Ufikiaji</string>
+    <string name="projects_settings_tab_people">Watu</string>
+    <string name="projects_option_icon">Aikoni</string>
     <string name="projects_settings_save">Hifadhi mabadiliko</string>
     <string name="projects_settings_unsubscribe">Jiondoe</string>
     <string name="projects_settings_delete_project">Futa mradi</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Maombi</string>
     <string name="projects_object_tab_attachments">Viambatisho</string>
     <string name="projects_object_tab_links">Viungo</string>
+    <string name="projects_watchers_watch">Fuatilia</string>
+    <string name="projects_watchers_unwatch">Acha kufuatilia</string>
     <string name="projects_parent_label">Mzazi</string>
     <string name="projects_parent_search_placeholder">Tafuta</string>
     <string name="projects_links_add">Ongeza kiungo</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Ingiza muundo</string>
     <string name="projects_design_import_choose_template">Chagua kiolezo</string>
     <string name="projects_design_replace_title">Badilisha muundo?</string>
+    <string name="projects_design_replace">Badilisha</string>
     <string name="projects_classes_add">Ongeza darasa</string>
     <string name="projects_classes_add_dialog_title">Ongeza darasa</string>
     <string name="projects_classes_create">Unda</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Imeundwa</string>
     <string name="projects_views_sort_updated">Imesasishwa</string>
     <string name="projects_views_sort_rank">Cheo</string>
-
-    <string name="notification_channel_projects">Arifa za Projects</string>
     <string name="projects_project_not_found">Mradi haukupatikana</string>
+
 </resources>

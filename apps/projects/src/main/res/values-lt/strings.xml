@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Sukurti objektą</string>
     <string name="projects_create_object_type">Tipas</string>
     <string name="projects_create_object_title_field">Pavadinimas</string>
+    <string name="projects_create_object_parent">Tėvas</string>
     <string name="projects_settings_title">Nustatymai</string>
     <string name="projects_settings_tab_general">Bendra</string>
     <string name="projects_settings_tab_access">Prieiga</string>
+    <string name="projects_settings_tab_people">Žmonės</string>
+    <string name="projects_option_icon">Piktograma</string>
     <string name="projects_settings_save">Išsaugoti pakeitimus</string>
     <string name="projects_settings_unsubscribe">Atšaukti prenumeratą</string>
     <string name="projects_settings_delete_project">Ištrinti projektą</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Užklausos</string>
     <string name="projects_object_tab_attachments">Priedai</string>
     <string name="projects_object_tab_links">Nuorodos</string>
+    <string name="projects_watchers_watch">Stebėti</string>
+    <string name="projects_watchers_unwatch">Nebestebėti</string>
     <string name="projects_parent_label">Tėvas</string>
     <string name="projects_parent_search_placeholder">Ieškoti</string>
     <string name="projects_links_add">Pridėti nuorodą</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importuoti dizainą</string>
     <string name="projects_design_import_choose_template">Pasirinkite šabloną</string>
     <string name="projects_design_replace_title">Pakeisti dizainą?</string>
+    <string name="projects_design_replace">Pakeisti</string>
     <string name="projects_classes_add">Pridėti klasę</string>
     <string name="projects_classes_add_dialog_title">Pridėti klasę</string>
     <string name="projects_classes_create">Sukurti</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Sukurta</string>
     <string name="projects_views_sort_updated">Atnaujinta</string>
     <string name="projects_views_sort_rank">Reitingas</string>
-
-    <string name="notification_channel_projects">Projects pranešimai</string>
     <string name="projects_project_not_found">Projektas nerastas</string>
+
 </resources>

@@ -43,6 +43,11 @@
     <string name="chat_messages_load_more">Load older messages</string>
     <string name="chat_message_placeholder">Message</string>
     <string name="chat_message_send">Send</string>
+    <string name="chat_attachment_add">Attach files</string>
+    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_attachment_move_up">Move up</string>
+    <string name="chat_attachment_move_down">Move down</string>
+    <string name="chat_attachment_label">File</string>
     <string name="chat_message_attach">Attach files</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_message_too_long">Message too long</string>
@@ -55,6 +60,8 @@
     <string name="chat_settings_save">Save</string>
     <string name="chat_settings_members">Members</string>
     <string name="chat_settings_add_member">Add member</string>
+    <string name="chat_settings_add_member_search">Search friends</string>
+    <string name="chat_settings_add_member_empty">No friends to add</string>
     <string name="chat_settings_remove_member">Remove</string>
     <string name="chat_settings_remove_member_title">Remove member</string>
     <string name="chat_settings_remove_member_message">Remove %1$s from this chat?</string>

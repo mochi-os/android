@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Prieiga atmesta</string>
     <string name="auth_email">El. paštas</string>
     <string name="auth_continue">Tęsti</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Komentaras</string>
     <string name="access_level_view">Peržiūrėti</string>
     <string name="access_level_none">Nėra</string>
+    <string name="banner_label">Reklamjuostė</string>
     <string name="reaction_like">Patinka</string>
     <string name="reaction_dislike">Nepatinka</string>
     <string name="reaction_laugh">Juokas</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Sutinku</string>
     <string name="reaction_disagree">Nesutinku</string>
     <string name="push_service_action_hide">Slėpti</string>
+    <string name="about_close">Uždaryti</string>
 
-    <string name="push_service_group">Fono paslauga</string>
 </resources>

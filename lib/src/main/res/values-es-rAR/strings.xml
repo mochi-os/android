@@ -16,5 +16,4 @@
     <string name="comment_send_reply">Enviá la respuesta</string>
     <string name="person_picker_search">Buscá usuarios</string>
 
-    <string name="push_service_group">Servicio en segundo plano</string>
 </resources>

@@ -3,12 +3,21 @@ package org.mochios.forums.api
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
+import org.mochios.android.model.AccessRule
+import org.mochios.forums.model.AiPrompts
+import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.DirectoryEntry
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumComment
+import org.mochios.forums.model.ForumMember
 import org.mochios.forums.model.Member
+import org.mochios.forums.model.ModerationLogEntry
+import org.mochios.forums.model.ModerationQueueCounts
+import org.mochios.forums.model.ModerationReport
+import org.mochios.forums.model.ModerationSettings
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.RecommendedForum
+import org.mochios.forums.model.Restriction
 import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -80,6 +89,56 @@ data class CreateCommentResponse(
 )
 
 data class SuccessResponse(val success: Boolean = false)
+
+data class ModerationQueueResponse(
+    val forum: Forum = Forum(),
+    val posts: List<Post> = emptyList(),
+    val comments: List<ForumComment> = emptyList(),
+    val reports: List<ModerationReport> = emptyList(),
+    val counts: ModerationQueueCounts = ModerationQueueCounts(),
+)
+
+data class ModerationReportsResponse(
+    val forum: Forum = Forum(),
+    val reports: List<ModerationReport> = emptyList(),
+)
+
+data class RestrictionsResponse(
+    val restrictions: List<Restriction> = emptyList(),
+)
+
+data class ModerationLogResponse(
+    val entries: List<ModerationLogEntry> = emptyList(),
+)
+
+data class AccessResponse(
+    val forum: Forum = Forum(),
+    val rules: List<AccessRule> = emptyList(),
+)
+
+data class MembersResponse(
+    val forum: Forum = Forum(),
+    val members: List<ForumMember> = emptyList(),
+)
+
+data class MemberSearchResponse(
+    val members: List<ForumMember> = emptyList(),
+)
+
+data class BannerResponse(
+    val banner: String = "",
+)
+
+data class RssTokenResponse(
+    val token: String = "",
+    val url: String = "",
+)
+
+data class ForumTagCount(val label: String = "", val count: Int = 0)
+
+data class ForumTagsResponse(
+    val tags: List<ForumTagCount> = emptyList(),
+)
 
 interface ForumsApi {
 
@@ -196,6 +255,59 @@ interface ForumsApi {
         @Path("postId") postId: String
     ): Response<ApiResponse<SuccessResponse>>
 
+    // ---- Post moderation ----
+
+    @POST("{forumId}/-/{postId}/pin")
+    suspend fun pinPost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/unpin")
+    suspend fun unpinPost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/lock")
+    suspend fun lockPost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/unlock")
+    suspend fun unlockPost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/approve")
+    suspend fun approvePost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/remove")
+    suspend fun removePost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/restore")
+    suspend fun restorePost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/{postId}/report")
+    suspend fun reportPost(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+        @Field("reason") reason: String,
+        @Field("details") details: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
     // ---- Comments ----
 
     @GET("{forumId}/-/{postId}/comment")
@@ -225,13 +337,15 @@ interface ForumsApi {
         @Path("vote") vote: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
+    @Multipart
     @POST("{forumId}/-/{postId}/{commentId}/edit")
     suspend fun editComment(
         @Path("forumId") forumId: String,
         @Path("postId") postId: String,
         @Path("commentId") commentId: String,
-        @Field("body") body: String
+        @Part("body") body: RequestBody,
+        @Part("order") order: RequestBody?,
+        @Part files: List<MultipartBody.Part>,
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{forumId}/-/{postId}/{commentId}/delete")
@@ -239,6 +353,39 @@ interface ForumsApi {
         @Path("forumId") forumId: String,
         @Path("postId") postId: String,
         @Path("commentId") commentId: String
+    ): Response<ApiResponse<SuccessResponse>>
+
+    // ---- Comment moderation ----
+
+    @POST("{forumId}/-/{postId}/{commentId}/remove")
+    suspend fun removeComment(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+        @Path("commentId") commentId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/{commentId}/restore")
+    suspend fun restoreComment(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+        @Path("commentId") commentId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/{postId}/{commentId}/approve")
+    suspend fun approveComment(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+        @Path("commentId") commentId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/{postId}/{commentId}/report")
+    suspend fun reportComment(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+        @Path("commentId") commentId: String,
+        @Field("reason") reason: String,
+        @Field("details") details: String,
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Sort ----
@@ -253,4 +400,170 @@ interface ForumsApi {
         @Path("forumId") forumId: String,
         @Field("sort") sort: String
     ): Response<ApiResponse<SuccessResponse>>
+
+    // ---- Moderation centre ----
+
+    @GET("{forumId}/-/moderation/queue")
+    suspend fun moderationQueue(
+        @Path("forumId") forumId: String,
+    ): Response<ApiResponse<ModerationQueueResponse>>
+
+    @GET("{forumId}/-/moderation/reports")
+    suspend fun moderationReports(
+        @Path("forumId") forumId: String,
+        @Query("status") status: String = "pending",
+    ): Response<ApiResponse<ModerationReportsResponse>>
+
+    @GET("{forumId}/-/moderation/log")
+    suspend fun moderationLog(
+        @Path("forumId") forumId: String,
+        @Query("limit") limit: Int? = null,
+    ): Response<ApiResponse<ModerationLogResponse>>
+
+    @GET("{forumId}/-/restrictions")
+    suspend fun restrictions(
+        @Path("forumId") forumId: String,
+    ): Response<ApiResponse<RestrictionsResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/restrict")
+    suspend fun restrict(
+        @Path("forumId") forumId: String,
+        @Field("user") user: String,
+        @Field("type") type: String,
+        @Field("reason") reason: String,
+        @Field("duration") duration: Long? = null,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/unrestrict")
+    suspend fun unrestrict(
+        @Path("forumId") forumId: String,
+        @Field("user") user: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/moderation/reports/{reportId}/resolve")
+    suspend fun resolveReport(
+        @Path("forumId") forumId: String,
+        @Path("reportId") reportId: String,
+        @Field("resolution") resolution: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @GET("{forumId}/-/moderation/settings")
+    suspend fun moderationSettings(
+        @Path("forumId") forumId: String,
+    ): Response<ApiResponse<ModerationSettings>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/moderation/settings/save")
+    suspend fun saveModerationSettings(
+        @Path("forumId") forumId: String,
+        @Field("auto_approve_posts") autoApprovePosts: Boolean,
+        @Field("auto_approve_comments") autoApproveComments: Boolean,
+        @Field("require_min_karma") requireMinKarma: Int,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    // ---- Settings ----
+
+    @GET("{forumId}/-/access")
+    suspend fun getAccess(@Path("forumId") forumId: String): Response<ApiResponse<AccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/access/set")
+    suspend fun setAccess(
+        @Path("forumId") forumId: String,
+        @Field("target") target: String,
+        @Field("level") level: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/access/revoke")
+    suspend fun revokeAccess(
+        @Path("forumId") forumId: String,
+        @Field("target") target: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @GET("{forumId}/-/members")
+    suspend fun getMembers(@Path("forumId") forumId: String): Response<ApiResponse<MembersResponse>>
+
+    @GET("{forumId}/-/members/search")
+    suspend fun searchMembers(
+        @Path("forumId") forumId: String,
+        @Query("q") query: String,
+    ): Response<ApiResponse<MemberSearchResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/members/save")
+    suspend fun saveMembers(
+        @Path("forumId") forumId: String,
+        @Field("remove") remove: String? = null,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @GET("{forumId}/-/banner/get")
+    suspend fun getBanner(@Path("forumId") forumId: String): Response<ApiResponse<BannerResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/banner/set")
+    suspend fun setBanner(
+        @Path("forumId") forumId: String,
+        @Field("banner") banner: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @GET("-/accounts/list")
+    suspend fun listAccounts(
+        @Query("capability") capability: String,
+    ): Response<ApiResponse<List<org.mochios.android.model.Account>>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/ai/settings")
+    suspend fun setAiSettings(
+        @Path("forumId") forumId: String,
+        @Field("mode") mode: String,
+        @Field("account") account: Int = 0,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @GET("{forumId}/-/ai/prompts/get")
+    suspend fun getAiPrompts(@Path("forumId") forumId: String): Response<ApiResponse<AiPrompts>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/ai/prompts/set")
+    suspend fun setAiPrompt(
+        @Path("forumId") forumId: String,
+        @Field("type") type: String,
+        @Field("prompt") prompt: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/tags/interest")
+    suspend fun setTagInterest(
+        @Path("forumId") forumId: String,
+        @Field("tag") tag: String,
+        @Field("interest") interest: Float,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/{postId}/tags/add")
+    suspend fun addPostTag(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+        @Field("label") label: String,
+    ): Response<ApiResponse<Map<String, Any>>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/{postId}/tags/remove")
+    suspend fun removePostTag(
+        @Path("forumId") forumId: String,
+        @Path("postId") postId: String,
+        @Field("tag") tagId: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
+    @POST("{forumId}/-/notifications/clear")
+    suspend fun clearNotifications(@Path("forumId") forumId: String): Response<ApiResponse<SuccessResponse>>
+
+    @GET("-/rss/token")
+    suspend fun getRssToken(): Response<ApiResponse<RssTokenResponse>>
+
+    @GET("{forumId}/-/tags")
+    suspend fun getForumTags(@Path("forumId") forumId: String): Response<ApiResponse<ForumTagsResponse>>
 }

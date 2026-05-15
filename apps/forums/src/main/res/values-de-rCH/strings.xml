@@ -3,8 +3,6 @@
 
     <string name="forums_list_close_search">Suche schliessen</string>
     <string name="forums_sort_hot">Heiss</string>
+    <string name="forums_moderation_report_dismiss">Schliessen</string>
 
-    <string name="notification_channel_forums">Forums-Benachrichtigungen</string>
-    <string name="forums_forum_not_found">Forum not found</string>
-    <string name="forums_post_not_found">Post not found</string>
 </resources>

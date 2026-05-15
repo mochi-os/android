@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">అన్నీ చదివినట్లు గుర్తించండి</string>
     <string name="feeds_settings">సెట్టింగ్‌లు</string>
     <string name="feeds_no_posts_yet">ఇంకా పోస్ట్‌లు లేవు</string>
+    <string name="feeds_default_sort">డిఫాల్ట్ క్రమబద్ధీకరణ</string>
+    <string name="feeds_suggested_interests_add">జోడించండి</string>
+    <string name="feeds_suggested_interests_dismiss">దాచండి</string>
     <string name="feeds_unread">చదవనివి</string>
     <string name="feeds_filter_all">అన్నీ</string>
+    <string name="feeds_sort_label">సార్ట్ చేయండి</string>
     <string name="feeds_sort_interests">ఆసక్తులు</string>
     <string name="feeds_sort_new">కొత్తది</string>
     <string name="feeds_sort_hot">హాట్</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">అంగీకరించండి</string>
     <string name="feeds_rss_url_copied">RSS URL క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది</string>
     <string name="feeds_logout">లాగ్ అవుట్</string>
+    <string name="feeds_ai_account_default">డిఫాల్ట్ ఖాతా</string>
     <string name="feeds_ai_mode_off">నిలిపివేయబడింది</string>
     <string name="feeds_ai_mode_tag">ట్యాగ్</string>
     <string name="feeds_ai_mode_tag_deduplicate">ట్యాగ్ + నకిలీలను తొలగించండి</string>
     <string name="feeds_ai_reset_default">డిఫాల్ట్‌కు రీసెట్ చేయండి</string>
-
-    <string name="notification_channel_feeds">Feeds నోటిఫికేషన్లు</string>
-    <string name="feeds_view_post">పోస్ట్ చూడండి</string>
-    <string name="feeds_open_in_browser">బ్రౌజర్‌లో తెరవండి</string>
-    <string name="feeds_unable_to_load">పేజీని లోడ్ చేయడం సాధ్యం కాలేదు</string>
     <string name="feeds_feed_not_found">ఫీడ్ కనుగొనబడలేదు</string>
     <string name="feeds_post_not_found">పోస్ట్ కనుగొనబడలేదు</string>
+
 </resources>

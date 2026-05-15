@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Ffrindiau</string>
     <string name="chat_new_search_placeholder">Chwilio ffrindiau</string>
     <string name="chat_message_placeholder">Neges</string>
+    <string name="chat_attachment_add">Atodi ffeiliau</string>
     <string name="chat_message_attach">Atodi ffeiliau</string>
     <string name="chat_settings_title">Gosodiadau sgwrs</string>
     <string name="chat_settings_rename_label">Enw\'r sgwrs</string>
     <string name="chat_settings_save">Cadw</string>
     <string name="chat_settings_members">Aelodau</string>
     <string name="chat_settings_add_member">Ychwanegu aelod</string>
+    <string name="chat_settings_add_member_search">Chwilio ffrindiau</string>
     <string name="chat_settings_remove_member">Tynnu</string>
     <string name="chat_settings_remove_member_title">Tynnu aelod</string>
     <string name="chat_settings_leave">Gadael y sgwrs</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Dileu sgwrs</string>
     <string name="chat_members_empty">Dim aelodau</string>
     <string name="chat_members_you">Chi</string>
-
-    <string name="notification_channel_chat">Hysbysiadau Chat</string>
     <string name="chat_chat_not_found">Sgwrs heb ei chanfod</string>
+
 </resources>

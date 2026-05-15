@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Достъпът е отказан</string>
     <string name="auth_email">Имейл</string>
     <string name="auth_continue">Продължи</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Коментар</string>
     <string name="access_level_view">Преглед</string>
     <string name="access_level_none">Няма</string>
+    <string name="banner_label">Банер</string>
     <string name="reaction_like">Харесвам</string>
     <string name="reaction_dislike">Не харесвам</string>
     <string name="reaction_laugh">Смях</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Съгласен съм</string>
     <string name="reaction_disagree">Не съм съгласен</string>
     <string name="push_service_action_hide">Скрий</string>
+    <string name="about_close">Затвори</string>
 
-    <string name="push_service_group">Фонова услуга</string>
 </resources>

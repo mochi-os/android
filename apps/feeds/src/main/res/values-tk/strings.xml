@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Hemmesini okaldy diýip belgile</string>
     <string name="feeds_settings">Sazlamalar</string>
     <string name="feeds_no_posts_yet">Heniz postlar ýok</string>
+    <string name="feeds_default_sort">Adaty tertipleşdirme</string>
+    <string name="feeds_suggested_interests_add">Goşmak</string>
+    <string name="feeds_suggested_interests_dismiss">Gizle</string>
     <string name="feeds_unread">Okalmadyk</string>
     <string name="feeds_filter_all">Hemmesi</string>
+    <string name="feeds_sort_label">Tertiple</string>
     <string name="feeds_sort_interests">Gyzyklanmalar</string>
     <string name="feeds_sort_new">Täze</string>
     <string name="feeds_sort_hot">Gyzgyn</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Kabul etmek</string>
     <string name="feeds_rss_url_copied">RSS URL bufer ýadyna göçürildi</string>
     <string name="feeds_logout">Çyk</string>
+    <string name="feeds_ai_account_default">Adaty hasap</string>
     <string name="feeds_ai_mode_off">Öçürildi</string>
     <string name="feeds_ai_mode_tag">Bellik</string>
     <string name="feeds_ai_mode_tag_deduplicate">Bellik + dublikatlary aýyr</string>
     <string name="feeds_ai_reset_default">Deslapky baha gaýtar</string>
-
-    <string name="notification_channel_feeds">Feeds habarnamalary</string>
-    <string name="feeds_view_post">Ýazgyny gör</string>
-    <string name="feeds_open_in_browser">Brauzerde aç</string>
-    <string name="feeds_unable_to_load">Sahypa ýüklenip bilinmedi</string>
     <string name="feeds_feed_not_found">Akym tapylmady</string>
     <string name="feeds_post_not_found">Post tapylmady</string>
+
 </resources>

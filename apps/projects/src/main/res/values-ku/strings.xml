@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Obje çêbike</string>
     <string name="projects_create_object_type">Cure</string>
     <string name="projects_create_object_title_field">Sernav</string>
+    <string name="projects_create_object_parent">Dêûbav</string>
     <string name="projects_settings_title">Mîheng</string>
     <string name="projects_settings_tab_general">Giştî</string>
     <string name="projects_settings_tab_access">Gihîştin</string>
+    <string name="projects_settings_tab_people">Kes</string>
+    <string name="projects_option_icon">Wêneyê piçûk</string>
     <string name="projects_settings_save">Guhertinan tomar bike</string>
     <string name="projects_settings_unsubscribe">Abone yî nebe</string>
     <string name="projects_settings_delete_project">Projeyê jê bibe</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Daxwaz</string>
     <string name="projects_object_tab_attachments">Pêvek</string>
     <string name="projects_object_tab_links">Lînka</string>
+    <string name="projects_watchers_watch">Temaşe bike</string>
+    <string name="projects_watchers_unwatch">Temaşekirinê rawestîne</string>
     <string name="projects_parent_label">Dêûbav</string>
     <string name="projects_parent_search_placeholder">Lêger</string>
     <string name="projects_links_add">Girêdan zêde bike</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Sêwiranê bîne</string>
     <string name="projects_design_import_choose_template">Şabloneke hilbijêre</string>
     <string name="projects_design_replace_title">Dîzaynê biguhere?</string>
+    <string name="projects_design_replace">Biguhêre</string>
     <string name="projects_classes_add">Pol zêde bike</string>
     <string name="projects_classes_add_dialog_title">Pol zêde bike</string>
     <string name="projects_classes_create">Çêbike</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Hat çêkirin</string>
     <string name="projects_views_sort_updated">Nûjen kirin</string>
     <string name="projects_views_sort_rank">Rêz</string>
-
-    <string name="notification_channel_projects">Agahdariyên Projects</string>
     <string name="projects_project_not_found">Proje nehat dîtin</string>
+
 </resources>

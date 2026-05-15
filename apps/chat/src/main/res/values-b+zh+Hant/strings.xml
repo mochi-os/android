@@ -14,12 +14,14 @@
     <string name="chat_new_friends">朋友</string>
     <string name="chat_new_search_placeholder">搜尋朋友</string>
     <string name="chat_message_placeholder">訊息</string>
+    <string name="chat_attachment_add">附加檔案</string>
     <string name="chat_message_attach">附加檔案</string>
     <string name="chat_settings_title">聊天設定</string>
     <string name="chat_settings_rename_label">聊天名稱</string>
     <string name="chat_settings_save">儲存</string>
     <string name="chat_settings_members">成員</string>
     <string name="chat_settings_add_member">新增成員</string>
+    <string name="chat_settings_add_member_search">搜尋朋友</string>
     <string name="chat_settings_remove_member">移除</string>
     <string name="chat_settings_remove_member_title">移除成員</string>
     <string name="chat_settings_leave">離開聊天</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">刪除聊天</string>
     <string name="chat_members_empty">無成員</string>
     <string name="chat_members_you">您</string>
-
-    <string name="notification_channel_chat">Chat 通知</string>
     <string name="chat_chat_not_found">找不到聊天</string>
+
 </resources>

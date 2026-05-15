@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Նշված է որպես առաքված</string>
     <string name="feeds_settings">Կարգավորումներ</string>
     <string name="feeds_no_posts_yet">Դեռ գրառումներ չկան</string>
+    <string name="feeds_default_sort">Լռելյայն տեսակավորում</string>
+    <string name="feeds_suggested_interests_add">Ավելացնել Mochi հոսք</string>
+    <string name="feeds_suggested_interests_dismiss">Թաքցնել</string>
     <string name="feeds_unread">Չկարդացված</string>
     <string name="feeds_filter_all">Բոլոր CRM-երը</string>
+    <string name="feeds_sort_label">Տեսակավորել</string>
     <string name="feeds_sort_interests">Անվավեր նույնականացման կոդ</string>
     <string name="feeds_sort_new">Նոր</string>
     <string name="feeds_sort_hot">Թեժ</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Ընդունել</string>
     <string name="feeds_rss_url_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
     <string name="feeds_logout">Դուրս է եկել հաջողությամբ</string>
+    <string name="feeds_ai_account_default">Լռելյայն հաշիվ</string>
     <string name="feeds_ai_mode_off">Անջատված է</string>
     <string name="feeds_ai_mode_tag">Թեգ</string>
     <string name="feeds_ai_mode_tag_deduplicate">Թեգավորել + չկրկնակել</string>
     <string name="feeds_ai_reset_default">Վերականգնել լռելյայնին</string>
-
-    <string name="notification_channel_feeds">Feeds ծանուցումներ</string>
-    <string name="feeds_view_post">Դիտել գրառումը</string>
-    <string name="feeds_open_in_browser">Բացել զննարկիչում</string>
-    <string name="feeds_unable_to_load">Հնարավոր չէ բեռնել էջը</string>
     <string name="feeds_feed_not_found">Հոսքը չի գտնվել</string>
     <string name="feeds_post_not_found">Գրառումը չի գտնվել</string>
+
 </resources>

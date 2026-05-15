@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">拒絕存取</string>
     <string name="auth_email">電子郵件</string>
     <string name="auth_continue">繼續</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">留言</string>
     <string name="access_level_view">檢視</string>
     <string name="access_level_none">無</string>
+    <string name="banner_label">橫幅</string>
     <string name="reaction_like">喜歡</string>
     <string name="reaction_dislike">不喜歡</string>
     <string name="reaction_laugh">笑</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">同意</string>
     <string name="reaction_disagree">不同意</string>
     <string name="push_service_action_hide">隱藏</string>
+    <string name="about_close">關閉</string>
 
-    <string name="push_service_group">背景服務</string>
 </resources>

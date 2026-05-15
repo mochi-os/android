@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ساخت شیء</string>
     <string name="projects_create_object_type">نوع</string>
     <string name="projects_create_object_title_field">عنوان</string>
+    <string name="projects_create_object_parent">والد</string>
     <string name="projects_settings_title">تنظیمات</string>
     <string name="projects_settings_tab_general">عمومی</string>
     <string name="projects_settings_tab_access">دسترسی</string>
+    <string name="projects_settings_tab_people">افراد</string>
+    <string name="projects_option_icon">آیکون</string>
     <string name="projects_settings_save">ذخیره تغییرات</string>
     <string name="projects_settings_unsubscribe">لغو اشتراک</string>
     <string name="projects_settings_delete_project">حذف پروژه</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">درخواست‌ها</string>
     <string name="projects_object_tab_attachments">پیوست‌ها</string>
     <string name="projects_object_tab_links">لینک‌ها</string>
+    <string name="projects_watchers_watch">تماشا</string>
+    <string name="projects_watchers_unwatch">توقف تماشا</string>
     <string name="projects_parent_label">والد</string>
     <string name="projects_parent_search_placeholder">جست‌وجو</string>
     <string name="projects_links_add">افزودن پیوند</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">وارد کردن طراحی</string>
     <string name="projects_design_import_choose_template">یک قالب انتخاب کنید</string>
     <string name="projects_design_replace_title">جایگزینی طراحی؟</string>
+    <string name="projects_design_replace">جایگزینی</string>
     <string name="projects_classes_add">افزودن کلاس</string>
     <string name="projects_classes_add_dialog_title">افزودن کلاس</string>
     <string name="projects_classes_create">ساختن</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">ساخته شد</string>
     <string name="projects_views_sort_updated">به‌روزرسانی شد</string>
     <string name="projects_views_sort_rank">رتبه</string>
-
-    <string name="notification_channel_projects">اعلان‌های Projects</string>
     <string name="projects_project_not_found">پروژه یافت نشد</string>
+
 </resources>

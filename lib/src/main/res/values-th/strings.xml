@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">ปฏิเสธการเข้าถึง</string>
     <string name="auth_email">อีเมล</string>
     <string name="auth_continue">ดำเนินการต่อ</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">ความคิดเห็น</string>
     <string name="access_level_view">ดู</string>
     <string name="access_level_none">ไม่มี</string>
+    <string name="banner_label">แบนเนอร์</string>
     <string name="reaction_like">ถูกใจ</string>
     <string name="reaction_dislike">ไม่ชอบ</string>
     <string name="reaction_laugh">หัวเราะ</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">เห็นด้วย</string>
     <string name="reaction_disagree">ไม่เห็นด้วย</string>
     <string name="push_service_action_hide">ซ่อน</string>
+    <string name="about_close">ปิด</string>
 
-    <string name="push_service_group">บริการเบื้องหลัง</string>
 </resources>

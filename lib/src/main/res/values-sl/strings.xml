@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Dostop zavrnjen</string>
     <string name="auth_email">E-pošta</string>
     <string name="auth_continue">Nadaljuj</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Komentar</string>
     <string name="access_level_view">Pogled</string>
     <string name="access_level_none">Brez</string>
+    <string name="banner_label">Pasica</string>
     <string name="reaction_like">Všeč mi je</string>
     <string name="reaction_dislike">Ne maram</string>
     <string name="reaction_laugh">Smeh</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Strinjam se</string>
     <string name="reaction_disagree">Ne strinjam se</string>
     <string name="push_service_action_hide">Skrij</string>
+    <string name="about_close">Zapri</string>
 
-    <string name="push_service_group">Storitev v ozadju</string>
 </resources>

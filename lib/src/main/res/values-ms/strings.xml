@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Akses ditolak</string>
     <string name="auth_email">E-mel</string>
     <string name="auth_continue">Teruskan</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Komen</string>
     <string name="access_level_view">Lihat</string>
     <string name="access_level_none">Tiada</string>
+    <string name="banner_label">Sepanduk</string>
     <string name="reaction_like">Suka</string>
     <string name="reaction_dislike">Tidak suka</string>
     <string name="reaction_laugh">Ketawa</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Setuju</string>
     <string name="reaction_disagree">Tidak setuju</string>
     <string name="push_service_action_hide">Sembunyikan</string>
+    <string name="about_close">Tutup</string>
 
-    <string name="push_service_group">Perkhidmatan latar belakang</string>
 </resources>

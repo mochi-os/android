@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Acces refuzat</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Continuă</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Comentează</string>
     <string name="access_level_view">Vizualizează</string>
     <string name="access_level_none">Niciuna</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Apreciază</string>
     <string name="reaction_dislike">Dezaprob</string>
     <string name="reaction_laugh">Râs</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">De acord</string>
     <string name="reaction_disagree">Nu sunt de acord</string>
     <string name="push_service_action_hide">Ascunde</string>
+    <string name="about_close">Închide</string>
 
-    <string name="push_service_group">Serviciu în fundal</string>
 </resources>

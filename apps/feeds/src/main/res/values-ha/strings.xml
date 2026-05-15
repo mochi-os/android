@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Alama duka karanta</string>
     <string name="feeds_settings">Saitunan</string>
     <string name="feeds_no_posts_yet">Babu posts tukuna</string>
+    <string name="feeds_default_sort">Default sort</string>
+    <string name="feeds_suggested_interests_add">Ƙara</string>
+    <string name="feeds_suggested_interests_dismiss">Ɓoye</string>
     <string name="feeds_unread">Ba a karanta ba</string>
     <string name="feeds_filter_all">Duk</string>
+    <string name="feeds_sort_label">Jera</string>
     <string name="feeds_sort_interests">Interests</string>
     <string name="feeds_sort_new">Sabon</string>
     <string name="feeds_sort_hot">Mai zafi</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Yarda</string>
     <string name="feeds_rss_url_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
     <string name="feeds_logout">Fita</string>
+    <string name="feeds_ai_account_default">Asusun default</string>
     <string name="feeds_ai_mode_off">An kashe</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + cire kwafi</string>
     <string name="feeds_ai_reset_default">Mayar zuwa asali</string>
-
-    <string name="notification_channel_feeds">Sanarwa na Feeds</string>
-    <string name="feeds_view_post">Duba sakon</string>
-    <string name="feeds_open_in_browser">Buɗe a cikin mai bincike</string>
-    <string name="feeds_unable_to_load">Ba a iya ɗora shafin ba</string>
     <string name="feeds_feed_not_found">Ba a samu feed ba</string>
     <string name="feeds_post_not_found">Ba a sami post ba</string>
+
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">アクセスが拒否されました</string>
     <string name="auth_email">メールアドレス</string>
     <string name="auth_continue">続行</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">コメント</string>
     <string name="access_level_view">ビュー</string>
     <string name="access_level_none">なし</string>
+    <string name="banner_label">バナー</string>
     <string name="reaction_like">いいね</string>
     <string name="reaction_dislike">イマイチ</string>
     <string name="reaction_laugh">笑い</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">賛成</string>
     <string name="reaction_disagree">反対</string>
     <string name="push_service_action_hide">非表示</string>
+    <string name="about_close">閉じる</string>
 
-    <string name="push_service_group">バックグラウンドサービス</string>
 </resources>

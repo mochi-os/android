@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ઘટક બનાવો</string>
     <string name="projects_create_object_type">પ્રકાર</string>
     <string name="projects_create_object_title_field">શીર્ષક</string>
+    <string name="projects_create_object_parent">પેરન્ટ</string>
     <string name="projects_settings_title">સેટિંગ્સ</string>
     <string name="projects_settings_tab_general">સામાન્ય</string>
     <string name="projects_settings_tab_access">ઍક્સેસ</string>
+    <string name="projects_settings_tab_people">લોકો</string>
+    <string name="projects_option_icon">આઇકોન</string>
     <string name="projects_settings_save">ફેરફારો સાચવો</string>
     <string name="projects_settings_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="projects_settings_delete_project">પ્રોજેક્ટ કાઢી નાખો</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">વિનંતીઓ</string>
     <string name="projects_object_tab_attachments">જોડાણો</string>
     <string name="projects_object_tab_links">લિંક્સ</string>
+    <string name="projects_watchers_watch">જુઓ</string>
+    <string name="projects_watchers_unwatch">જોવાનું બંધ કરો</string>
     <string name="projects_parent_label">પેરન્ટ</string>
     <string name="projects_parent_search_placeholder">શોધો</string>
     <string name="projects_links_add">લિંક ઉમેરો</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ડિઝાઇન ઇમ્પોર્ટ કરો</string>
     <string name="projects_design_import_choose_template">ટેમ્પલેટ પસંદ કરો</string>
     <string name="projects_design_replace_title">ડિઝાઇન બદલો?</string>
+    <string name="projects_design_replace">બદલો</string>
     <string name="projects_classes_add">ક્લાસ ઉમેરો</string>
     <string name="projects_classes_add_dialog_title">ક્લાસ ઉમેરો</string>
     <string name="projects_classes_create">બનાવો</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">બનાવ્યું</string>
     <string name="projects_views_sort_updated">અપડેટ કર્યું</string>
     <string name="projects_views_sort_rank">રેન્ક</string>
-
-    <string name="notification_channel_projects">Projects નોટિફિકેશન</string>
     <string name="projects_project_not_found">પ્રોજેક્ટ મળ્યો નથી</string>
+
 </resources>

@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Merkja allt lesið</string>
     <string name="feeds_settings">Stillingar</string>
     <string name="feeds_no_posts_yet">Engar færslur ennþá</string>
+    <string name="feeds_default_sort">Sjálfgefin röðun</string>
+    <string name="feeds_suggested_interests_add">Bæta við</string>
+    <string name="feeds_suggested_interests_dismiss">Fela</string>
     <string name="feeds_unread">Ólesið</string>
     <string name="feeds_filter_all">Allt</string>
+    <string name="feeds_sort_label">Raða</string>
     <string name="feeds_sort_interests">Áhugaefni</string>
     <string name="feeds_sort_new">Nýtt</string>
     <string name="feeds_sort_hot">Heitt</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Samþykkja</string>
     <string name="feeds_rss_url_copied">RSS-vefslóð afrituð á klippiborð</string>
     <string name="feeds_logout">Skrá út</string>
+    <string name="feeds_ai_account_default">Sjálfgefinn reikningur</string>
     <string name="feeds_ai_mode_off">Slökkt</string>
     <string name="feeds_ai_mode_tag">Merki</string>
     <string name="feeds_ai_mode_tag_deduplicate">Merkja + fjarlægja afrit</string>
     <string name="feeds_ai_reset_default">Endurstilla á sjálfgefið</string>
-
-    <string name="notification_channel_feeds">Feeds-tilkynningar</string>
-    <string name="feeds_view_post">Skoða færslu</string>
-    <string name="feeds_open_in_browser">Opna í vafra</string>
-    <string name="feeds_unable_to_load">Get ekki hlaðið síðunni</string>
     <string name="feeds_feed_not_found">Streymi fannst ekki</string>
     <string name="feeds_post_not_found">Færsla fannst ekki</string>
+
 </resources>

@@ -23,10 +23,14 @@ import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -70,6 +74,10 @@ fun PostScreen(
     var draft by remember { mutableStateOf("") }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
+    var showEditPost by remember { mutableStateOf(false) }
+    var editingComment by remember { mutableStateOf<ForumComment?>(null) }
+    var showReportPost by remember { mutableStateOf(false) }
+    var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
 
     LaunchedEffect(uiState.deleted) {
         if (uiState.deleted) onBack()
@@ -124,10 +132,25 @@ fun PostScreen(
                             PostHeader(
                                 post = uiState.post,
                                 canVote = uiState.canVote,
+                                canEdit = (uiState.post.member == uiState.identity && uiState.identity.isNotBlank())
+                                    || uiState.canModerate,
+                                canModerate = uiState.canModerate,
+                                isAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank(),
                                 serverUrl = viewModel.serverUrl,
                                 forumId = viewModel.forumId,
                                 onVote = { viewModel.votePost(it) },
-                                onDelete = { showDeletePostConfirm = true }
+                                onEdit = { showEditPost = true },
+                                onDelete = { showDeletePostConfirm = true },
+                                onPin = viewModel::pinPost,
+                                onUnpin = viewModel::unpinPost,
+                                onLock = viewModel::lockPost,
+                                onUnlock = viewModel::unlockPost,
+                                onApprove = viewModel::approvePost,
+                                onRemove = viewModel::removePost,
+                                onRestore = viewModel::restorePost,
+                                onReport = { showReportPost = true },
+                                onAddTag = { label -> viewModel.addPostTag(label) },
+                                onRemoveTag = { tagId -> viewModel.removePostTag(tagId) },
                             )
                         }
                         if (uiState.comments.isEmpty()) {
@@ -147,9 +170,16 @@ fun PostScreen(
                                 comments = uiState.comments,
                                 serverUrl = viewModel.serverUrl,
                                 forumId = viewModel.forumId,
+                                currentIdentity = uiState.identity,
+                                canModerate = uiState.canModerate,
                                 onVote = viewModel::voteComment,
                                 onReply = { viewModel.setReplyTo(it) },
-                                onDelete = { commentToDelete = it }
+                                onEdit = { editingComment = it },
+                                onDelete = { commentToDelete = it },
+                                onApprove = { viewModel.approveComment(it.id) },
+                                onRemove = { viewModel.removeComment(it.id) },
+                                onRestore = { viewModel.restoreComment(it.id) },
+                                onReport = { reportingComment = it },
                             )
                         }
                     }
@@ -200,17 +230,318 @@ fun PostScreen(
             onDismiss = { commentToDelete = null }
         )
     }
+
+    if (showEditPost) {
+        EditPostDialog(
+            initialTitle = uiState.post.title,
+            initialBody = uiState.post.body,
+            onConfirm = { title, body ->
+                viewModel.editPost(title, body)
+                showEditPost = false
+            },
+            onDismiss = { showEditPost = false }
+        )
+    }
+
+    editingComment?.let { c ->
+        val ctx = androidx.compose.ui.platform.LocalContext.current
+        EditCommentDialog(
+            comment = c,
+            onConfirm = { body, keptIds, newUris ->
+                viewModel.editCommentWithAttachments(
+                    c.id, body, keptIds, newUris, ctx.contentResolver
+                )
+                editingComment = null
+            },
+            onDismiss = { editingComment = null }
+        )
+    }
+
+    if (showReportPost) {
+        ReportDialog(
+            title = stringResource(R.string.forums_post_report),
+            onConfirm = { reason, details ->
+                viewModel.reportPost(reason, details)
+                showReportPost = false
+            },
+            onDismiss = { showReportPost = false }
+        )
+    }
+
+    reportingComment?.let { c ->
+        ReportDialog(
+            title = stringResource(R.string.forums_comment_report),
+            onConfirm = { reason, details ->
+                viewModel.reportComment(c.id, reason, details)
+                reportingComment = null
+            },
+            onDismiss = { reportingComment = null }
+        )
+    }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun EditPostDialog(
+    initialTitle: String,
+    initialBody: String,
+    onConfirm: (String, String) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    var title by remember { mutableStateOf(initialTitle) }
+    var body by remember { mutableStateOf(initialBody) }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.forums_post_edit_title)) },
+        text = {
+            Column {
+                OutlinedTextField(
+                    value = title,
+                    onValueChange = { title = it },
+                    label = { Text(stringResource(R.string.forums_post_edit_title_field)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(8.dp))
+                OutlinedTextField(
+                    value = body,
+                    onValueChange = { body = it },
+                    label = { Text(stringResource(R.string.forums_post_edit_body_field)) },
+                    minLines = 3,
+                    maxLines = 8,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(
+                onClick = { onConfirm(title, body) },
+                enabled = title.isNotBlank()
+            ) {
+                Text(stringResource(MochiR.string.common_save))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        }
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
+@Composable
+private fun EditCommentDialog(
+    comment: ForumComment,
+    onConfirm: (body: String, keptAttachmentIds: List<String>, newUris: List<android.net.Uri>) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    var body by remember { mutableStateOf(comment.body) }
+    val keptIds = remember { androidx.compose.runtime.mutableStateListOf<String>().apply {
+        addAll(comment.attachments.map { it.id })
+    } }
+    val newUris = remember { androidx.compose.runtime.mutableStateListOf<android.net.Uri>() }
+
+    val filePickerLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
+        contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
+    ) { uris -> newUris.addAll(uris) }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.forums_comment_edit_title)) },
+        text = {
+            Column {
+                OutlinedTextField(
+                    value = body,
+                    onValueChange = { body = it },
+                    label = { Text(stringResource(R.string.forums_comment_edit_body_field)) },
+                    minLines = 3,
+                    maxLines = 8,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                IconButton(onClick = { filePickerLauncher.launch("*/*") }) {
+                    Icon(
+                        androidx.compose.material.icons.Icons.Default.MoreHoriz,
+                        contentDescription = null,
+                    )
+                    Text(stringResource(R.string.forums_comment_edit_attach))
+                }
+                if (comment.attachments.isNotEmpty() || newUris.isNotEmpty()) {
+                    androidx.compose.foundation.layout.FlowRow(
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        comment.attachments.forEach { att ->
+                            val isKept = att.id in keptIds
+                            androidx.compose.material3.FilterChip(
+                                selected = isKept,
+                                onClick = {
+                                    if (isKept) keptIds.remove(att.id) else keptIds.add(att.id)
+                                },
+                                label = {
+                                    Text(
+                                        att.name.ifBlank { att.id }.takeLast(20),
+                                        style = MaterialTheme.typography.labelSmall,
+                                    )
+                                },
+                                trailingIcon = {
+                                    Icon(
+                                        androidx.compose.material.icons.Icons.Default.Close,
+                                        contentDescription = null,
+                                        modifier = Modifier.size(14.dp),
+                                    )
+                                },
+                            )
+                        }
+                        newUris.forEach { uri ->
+                            androidx.compose.material3.AssistChip(
+                                onClick = { newUris.remove(uri) },
+                                label = {
+                                    Text(
+                                        uri.lastPathSegment?.takeLast(20)
+                                            ?: stringResource(R.string.forums_comment_edit_attach),
+                                        style = MaterialTheme.typography.labelSmall,
+                                    )
+                                },
+                                trailingIcon = {
+                                    Icon(
+                                        androidx.compose.material.icons.Icons.Default.Close,
+                                        contentDescription = null,
+                                        modifier = Modifier.size(14.dp),
+                                    )
+                                },
+                            )
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(
+                onClick = { onConfirm(body, keptIds.toList(), newUris.toList()) },
+                enabled = body.isNotBlank()
+            ) {
+                Text(stringResource(MochiR.string.common_save))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        }
+    )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ReportDialog(
+    title: String,
+    onConfirm: (reason: String, details: String) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val reasons = listOf(
+        "spam" to stringResource(R.string.forums_report_reason_spam),
+        "harassment" to stringResource(R.string.forums_report_reason_harassment),
+        "hate" to stringResource(R.string.forums_report_reason_hate),
+        "violence" to stringResource(R.string.forums_report_reason_violence),
+        "misinformation" to stringResource(R.string.forums_report_reason_misinformation),
+        "offtopic" to stringResource(R.string.forums_report_reason_offtopic),
+        "other" to stringResource(R.string.forums_report_reason_other),
+    )
+    var selectedReason by remember { mutableStateOf("spam") }
+    var details by remember { mutableStateOf("") }
+    var reasonExpanded by remember { mutableStateOf(false) }
+    val selectedLabel = reasons.firstOrNull { it.first == selectedReason }?.second ?: ""
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(title) },
+        text = {
+            Column {
+                ExposedDropdownMenuBox(
+                    expanded = reasonExpanded,
+                    onExpandedChange = { reasonExpanded = it }
+                ) {
+                    OutlinedTextField(
+                        value = selectedLabel,
+                        onValueChange = {},
+                        readOnly = true,
+                        label = { Text(stringResource(R.string.forums_report_reason)) },
+                        trailingIcon = {
+                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = reasonExpanded)
+                        },
+                        modifier = Modifier
+                            .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                            .fillMaxWidth()
+                    )
+                    ExposedDropdownMenu(
+                        expanded = reasonExpanded,
+                        onDismissRequest = { reasonExpanded = false }
+                    ) {
+                        reasons.forEach { (code, label) ->
+                            DropdownMenuItem(
+                                text = { Text(label) },
+                                onClick = {
+                                    selectedReason = code
+                                    reasonExpanded = false
+                                }
+                            )
+                        }
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+                OutlinedTextField(
+                    value = details,
+                    onValueChange = { details = it },
+                    label = { Text(stringResource(R.string.forums_report_details)) },
+                    minLines = 2,
+                    maxLines = 5,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(
+                onClick = { onConfirm(selectedReason, details) },
+                enabled = selectedReason != "other" || details.isNotBlank()
+            ) {
+                Text(stringResource(R.string.forums_report_submit))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        }
+    )
+}
+
+@OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
 private fun PostHeader(
     post: Post,
     canVote: Boolean,
+    canEdit: Boolean,
+    canModerate: Boolean,
+    isAuthor: Boolean,
     serverUrl: String,
     forumId: String,
     onVote: (String) -> Unit,
-    onDelete: () -> Unit
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onPin: () -> Unit,
+    onUnpin: () -> Unit,
+    onLock: () -> Unit,
+    onUnlock: () -> Unit,
+    onApprove: () -> Unit,
+    onRemove: () -> Unit,
+    onRestore: () -> Unit,
+    onReport: () -> Unit,
+    onAddTag: (String) -> Unit,
+    onRemoveTag: (String) -> Unit,
 ) {
+    var showAddTag by remember { mutableStateOf(false) }
     val format = LocalFormat.current
     var showMenu by remember { mutableStateOf(false) }
     Card(modifier = Modifier.fillMaxWidth()) {
@@ -232,6 +563,62 @@ private fun PostHeader(
                         expanded = showMenu,
                         onDismissRequest = { showMenu = false }
                     ) {
+                        if (canEdit) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.forums_post_edit)) },
+                                onClick = {
+                                    showMenu = false
+                                    onEdit()
+                                }
+                            )
+                        }
+                        if (canModerate) {
+                            if (post.pinned) {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_post_unpin)) },
+                                    onClick = { showMenu = false; onUnpin() }
+                                )
+                            } else {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_post_pin)) },
+                                    onClick = { showMenu = false; onPin() }
+                                )
+                            }
+                            if (post.locked) {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_post_unlock)) },
+                                    onClick = { showMenu = false; onUnlock() }
+                                )
+                            } else {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_post_lock)) },
+                                    onClick = { showMenu = false; onLock() }
+                                )
+                            }
+                            if (post.status == "pending") {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_post_approve)) },
+                                    onClick = { showMenu = false; onApprove() }
+                                )
+                            }
+                            if (post.status == "removed") {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_post_restore)) },
+                                    onClick = { showMenu = false; onRestore() }
+                                )
+                            } else {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_post_remove)) },
+                                    onClick = { showMenu = false; onRemove() }
+                                )
+                            }
+                        }
+                        if (!isAuthor) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.forums_post_report)) },
+                                onClick = { showMenu = false; onReport() }
+                            )
+                        }
                         DropdownMenuItem(
                             text = { Text(stringResource(R.string.forums_post_delete)) },
                             onClick = {
@@ -255,6 +642,36 @@ private fun PostHeader(
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+            }
+            if (post.tags.isNotEmpty() || canEdit) {
+                Spacer(Modifier.height(8.dp))
+                androidx.compose.foundation.layout.FlowRow(
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    post.tags.forEach { tag ->
+                        androidx.compose.material3.AssistChip(
+                            onClick = { if (canEdit) onRemoveTag(tag.id) },
+                            label = {
+                                Text(tag.label, style = MaterialTheme.typography.labelSmall)
+                            },
+                            trailingIcon = if (canEdit) {
+                                {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = stringResource(R.string.forums_post_tag_remove),
+                                        modifier = Modifier.size(14.dp),
+                                    )
+                                }
+                            } else null,
+                        )
+                    }
+                    if (canEdit) {
+                        TextButton(onClick = { showAddTag = true }) {
+                            Text("+ " + stringResource(R.string.forums_post_tag_add))
+                        }
+                    }
+                }
             }
             if (post.body.isNotBlank()) {
                 Spacer(Modifier.height(12.dp))
@@ -296,31 +713,91 @@ private fun PostHeader(
             }
         }
     }
+
+    if (showAddTag) {
+        AddTagDialog(
+            onConfirm = { label ->
+                onAddTag(label)
+                showAddTag = false
+            },
+            onDismiss = { showAddTag = false },
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun AddTagDialog(
+    onConfirm: (label: String) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    var label by remember { mutableStateOf("") }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.forums_post_tag_add)) },
+        text = {
+            OutlinedTextField(
+                value = label,
+                onValueChange = { label = it },
+                label = { Text(stringResource(R.string.forums_post_tag_label)) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        },
+        confirmButton = {
+            TextButton(
+                onClick = { onConfirm(label.trim()) },
+                enabled = label.isNotBlank(),
+            ) { Text(stringResource(MochiR.string.common_add)) }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        },
+    )
 }
 
 private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
     comments: List<ForumComment>,
     serverUrl: String,
     forumId: String,
+    currentIdentity: String,
+    canModerate: Boolean,
     depth: Int = 0,
     onVote: (String, String) -> Unit,
     onReply: (ForumComment) -> Unit,
-    onDelete: (ForumComment) -> Unit
+    onEdit: (ForumComment) -> Unit,
+    onDelete: (ForumComment) -> Unit,
+    onApprove: (ForumComment) -> Unit,
+    onRemove: (ForumComment) -> Unit,
+    onRestore: (ForumComment) -> Unit,
+    onReport: (ForumComment) -> Unit,
 ) {
     comments.forEach { c ->
         item(key = c.id) {
+            val isAuthor = c.member == currentIdentity && currentIdentity.isNotBlank()
+            val canEditThis = isAuthor || canModerate
             CommentCard(
                 comment = c,
                 depth = depth,
                 serverUrl = serverUrl,
                 forumId = forumId,
+                canEdit = canEditThis,
+                canModerate = canModerate,
+                isAuthor = isAuthor,
                 onVote = { vote -> onVote(c.id, vote) },
                 onReply = { onReply(c) },
-                onDelete = { onDelete(c) }
+                onEdit = { onEdit(c) },
+                onDelete = { onDelete(c) },
+                onApprove = { onApprove(c) },
+                onRemove = { onRemove(c) },
+                onRestore = { onRestore(c) },
+                onReport = { onReport(c) },
             )
         }
         if (c.children.isNotEmpty()) {
-            commentsItems(c.children, serverUrl, forumId, depth + 1, onVote, onReply, onDelete)
+            commentsItems(c.children, serverUrl, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport)
         }
     }
 }
@@ -331,9 +808,17 @@ private fun CommentCard(
     depth: Int,
     serverUrl: String,
     forumId: String,
+    canEdit: Boolean,
+    canModerate: Boolean,
+    isAuthor: Boolean,
     onVote: (String) -> Unit,
     onReply: () -> Unit,
-    onDelete: () -> Unit
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onApprove: () -> Unit,
+    onRemove: () -> Unit,
+    onRestore: () -> Unit,
+    onReport: () -> Unit,
 ) {
     val format = LocalFormat.current
     var showMenu by remember { mutableStateOf(false) }
@@ -366,6 +851,40 @@ private fun CommentCard(
                         expanded = showMenu,
                         onDismissRequest = { showMenu = false }
                     ) {
+                        if (canEdit) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.forums_comment_edit)) },
+                                onClick = {
+                                    showMenu = false
+                                    onEdit()
+                                }
+                            )
+                        }
+                        if (canModerate) {
+                            if (comment.status == "pending") {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_comment_approve)) },
+                                    onClick = { showMenu = false; onApprove() }
+                                )
+                            }
+                            if (comment.status == "removed") {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_comment_restore)) },
+                                    onClick = { showMenu = false; onRestore() }
+                                )
+                            } else {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_comment_remove)) },
+                                    onClick = { showMenu = false; onRemove() }
+                                )
+                            }
+                        }
+                        if (!isAuthor) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.forums_comment_report)) },
+                                onClick = { showMenu = false; onReport() }
+                            )
+                        }
                         DropdownMenuItem(
                             text = { Text(stringResource(R.string.forums_comment_delete)) },
                             onClick = {

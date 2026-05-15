@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">نیشانەکردنی هەمووان وەک خوێندراوە</string>
     <string name="feeds_settings">ڕێکخستنەکان</string>
     <string name="feeds_no_posts_yet">هێشتا هیچ پۆستێک نییە</string>
+    <string name="feeds_default_sort">ڕیزکردنی بنەڕەت</string>
+    <string name="feeds_suggested_interests_add">زیادکردن</string>
+    <string name="feeds_suggested_interests_dismiss">شاردنەوە</string>
     <string name="feeds_unread">نەخوێندراوە</string>
     <string name="feeds_filter_all">هەموو</string>
+    <string name="feeds_sort_label">ڕیزکردن</string>
     <string name="feeds_sort_interests">ئارەزووەکان</string>
     <string name="feeds_sort_new">نوێ</string>
     <string name="feeds_sort_hot">گەرم</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">وەرگرتن</string>
     <string name="feeds_rss_url_copied">URLی RSS لەبەر کرایەوە بۆ کلیپ بۆرد</string>
     <string name="feeds_logout">دەرچوون</string>
+    <string name="feeds_ai_account_default">هەژماری بنەڕەت</string>
     <string name="feeds_ai_mode_off">ناچالاک</string>
     <string name="feeds_ai_mode_tag">تاگ</string>
     <string name="feeds_ai_mode_tag_deduplicate">تاگ + لابردنی دووبارە</string>
     <string name="feeds_ai_reset_default">گەڕاندنەوە بۆ بنەڕەت</string>
-
-    <string name="notification_channel_feeds">ئاگادارکردنەوەکانی Feeds</string>
-    <string name="feeds_view_post">بینینی پۆست</string>
-    <string name="feeds_open_in_browser">بکەرەوە لە وێبگەڕدا</string>
-    <string name="feeds_unable_to_load">ناتوانیت پەڕەکە بار بکەیت</string>
     <string name="feeds_feed_not_found">Feed نەدۆزرایەوە</string>
     <string name="feeds_post_not_found">پۆست نەدۆزرایەوە</string>
+
 </resources>

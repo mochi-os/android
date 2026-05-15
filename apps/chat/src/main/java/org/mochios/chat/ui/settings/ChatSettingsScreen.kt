@@ -1,5 +1,6 @@
 package org.mochios.chat.ui.settings
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -61,6 +62,7 @@ fun ChatSettingsScreen(
     var memberToRemove by remember { mutableStateOf<ChatMember?>(null) }
     var showLeaveDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
+    var showAddMember by remember { mutableStateOf(false) }
 
     LaunchedEffect(uiState.chat.name) {
         if (nameDraft.isEmpty()) nameDraft = uiState.chat.name
@@ -130,10 +132,21 @@ fun ChatSettingsScreen(
                     }
 
                     item {
-                        Text(
-                            text = stringResource(R.string.chat_settings_members),
-                            style = MaterialTheme.typography.titleMedium
-                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                text = stringResource(R.string.chat_settings_members),
+                                style = MaterialTheme.typography.titleMedium,
+                                modifier = Modifier.weight(1f),
+                            )
+                            if (uiState.chat.left == 0) {
+                                OutlinedButton(onClick = {
+                                    viewModel.loadFriends()
+                                    showAddMember = true
+                                }) {
+                                    Text(stringResource(R.string.chat_settings_add_member))
+                                }
+                            }
+                        }
                     }
 
                     if (uiState.chat.members.isEmpty()) {
@@ -242,6 +255,83 @@ fun ChatSettingsScreen(
             onDismiss = { showDeleteDialog = false }
         )
     }
+
+    if (showAddMember) {
+        val existingMemberIds = uiState.chat.members.map { it.id }.toSet()
+        val candidates = uiState.friends.filter { it.id !in existingMemberIds }
+        AddMemberDialog(
+            friends = candidates,
+            onConfirm = { friendId ->
+                viewModel.addMember(friendId)
+                showAddMember = false
+            },
+            onDismiss = { showAddMember = false },
+        )
+    }
+}
+
+@Composable
+private fun AddMemberDialog(
+    friends: List<org.mochios.chat.model.Friend>,
+    onConfirm: (friendId: String) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    var query by remember { mutableStateOf("") }
+    val filtered = if (query.isBlank()) friends
+    else friends.filter { it.name.contains(query, ignoreCase = true) }
+
+    androidx.compose.material3.AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.chat_settings_add_member)) },
+        text = {
+            Column {
+                OutlinedTextField(
+                    value = query,
+                    onValueChange = { query = it },
+                    placeholder = { Text(stringResource(R.string.chat_settings_add_member_search)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                if (filtered.isEmpty()) {
+                    Text(
+                        stringResource(R.string.chat_settings_add_member_empty),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                } else {
+                    LazyColumn(
+                        modifier = Modifier.fillMaxWidth().height(300.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        items(filtered, key = { it.id }) { f ->
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 6.dp)
+                                    .clickable { onConfirm(f.id) },
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Icon(
+                                    Icons.Default.Person,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.size(20.dp),
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(f.name)
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {},
+        dismissButton = {
+            androidx.compose.material3.TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        },
+    )
 }
 
 @Composable

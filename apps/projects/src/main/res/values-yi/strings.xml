@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">באַשאַפֿן אָביעקט</string>
     <string name="projects_create_object_type">טיפּ</string>
     <string name="projects_create_object_title_field">קעפּל</string>
+    <string name="projects_create_object_parent">עלטער</string>
     <string name="projects_settings_title">אײַנשטעלונגען</string>
     <string name="projects_settings_tab_general">אַלגעמיין</string>
     <string name="projects_settings_tab_access">צוטריט</string>
+    <string name="projects_settings_tab_people">מענטשן</string>
+    <string name="projects_option_icon">איקאָנע</string>
     <string name="projects_settings_save">היט ענדערונגען</string>
     <string name="projects_settings_unsubscribe">אַבאַבאָנירן</string>
     <string name="projects_settings_delete_project">אויסמעקן פּראָיעקט</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">פֿאָדערונגען</string>
     <string name="projects_object_tab_attachments">בײַלאַגעס</string>
     <string name="projects_object_tab_links">לינקס</string>
+    <string name="projects_watchers_watch">נאָכקוק</string>
+    <string name="projects_watchers_unwatch">הער אויף נאָכקוקן</string>
     <string name="projects_parent_label">עלטער</string>
     <string name="projects_parent_search_placeholder">זוך</string>
     <string name="projects_links_add">צולייגן לינק</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">אימפּאָרטירן דיזײַן</string>
     <string name="projects_design_import_choose_template">קלײַבט אַ מוסטער</string>
     <string name="projects_design_replace_title">פֿאַרבײַטן פּלאַן?</string>
+    <string name="projects_design_replace">פארטוישן</string>
     <string name="projects_classes_add">צולייגן קלאַס</string>
     <string name="projects_classes_add_dialog_title">צולייגן קלאַס</string>
     <string name="projects_classes_create">באַשאַפֿן</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">באַשאַפֿן</string>
     <string name="projects_views_sort_updated">באַנײַט</string>
     <string name="projects_views_sort_rank">ראַנג</string>
-
-    <string name="notification_channel_projects">Projects נאָטיפֿיקאַציעס</string>
     <string name="projects_project_not_found">פּראָיעקט ניט געפֿונען</string>
+
 </resources>

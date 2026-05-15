@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Giriş ret edildi</string>
     <string name="auth_email">E-poçta</string>
     <string name="auth_continue">Dowam etmek</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Teswir</string>
     <string name="access_level_view">Görkez</string>
     <string name="access_level_none">Hiç biri</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Halaýaryn</string>
     <string name="reaction_dislike">Halamok</string>
     <string name="reaction_laugh">Gül</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Razy</string>
     <string name="reaction_disagree">Razy däl</string>
     <string name="push_service_action_hide">Gizle</string>
+    <string name="about_close">Ýapmak</string>
 
-    <string name="push_service_group">Arka hyzmaty</string>
 </resources>

@@ -25,6 +25,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectClass
+import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.ProjectView
 import org.mochios.android.R as MochiR
 
@@ -32,23 +33,55 @@ import org.mochios.android.R as MochiR
 @Composable
 fun CreateObjectDialog(
     classes: List<ProjectClass>,
+    /** className/parentClassIds map from [ProjectDetails.hierarchy]. */
+    hierarchy: Map<String, List<String>>,
+    /** All objects in the project — used to populate the parent picker. */
+    objects: List<ProjectObject>,
+    /**
+     * When non-null, the dialog opens with this object as the pre-selected
+     * parent (and the class auto-set to a class that allows that parent).
+     * Set by `viewModel.showCreateObjectDialog(parent = ...)` from an
+     * "Add child" affordance on an existing object.
+     */
+    presetParent: String?,
     isCreating: Boolean,
     activeView: ProjectView?,
     viewModel: ProjectViewModel,
     onDismiss: () -> Unit,
-    onCreate: (classId: String, title: String, initialValues: Map<String, String>) -> Unit
+    onCreate: (classId: String, title: String, parent: String?, initialValues: Map<String, String>) -> Unit
 ) {
     var title by remember { mutableStateOf("") }
-    var selectedClassId by remember {
-        mutableStateOf(
-            if (activeView != null && activeView.classes.isNotEmpty()) {
-                activeView.classes.first()
-            } else {
-                classes.firstOrNull()?.id ?: ""
-            }
-        )
+    val presetParentObj = remember(presetParent, objects) {
+        presetParent?.let { p -> objects.firstOrNull { it.id == p } }
     }
+    val initialClassId = remember(presetParentObj, activeView, classes, hierarchy) {
+        when {
+            // If pre-selected from "Add child", pick a class that permits
+            // the parent's class as a parent (first match).
+            presetParentObj != null -> {
+                classes.firstOrNull { cls ->
+                    (hierarchy[cls.id] ?: emptyList()).contains(presetParentObj.objectClass)
+                }?.id ?: classes.firstOrNull()?.id ?: ""
+            }
+            activeView != null && activeView.classes.isNotEmpty() -> activeView.classes.first()
+            else -> classes.firstOrNull()?.id ?: ""
+        }
+    }
+    var selectedClassId by remember { mutableStateOf(initialClassId) }
     var classExpanded by remember { mutableStateOf(false) }
+
+    // Parent picker state. Derived from the selected class's allowed
+    // parent classes (hierarchy[selectedClassId]) intersected with the
+    // project's existing objects.
+    val allowedParentClasses = hierarchy[selectedClassId] ?: emptyList()
+    val parentCandidates = remember(objects, allowedParentClasses) {
+        if (allowedParentClasses.isEmpty()) emptyList()
+        else objects.filter { it.objectClass in allowedParentClasses }
+    }
+    var selectedParentId by remember(initialClassId) {
+        mutableStateOf(presetParent.takeIf { presetParentObj != null })
+    }
+    var parentExpanded by remember { mutableStateOf(false) }
 
     AlertDialog(
         onDismissRequest = { if (!isCreating) onDismiss() },
@@ -79,7 +112,59 @@ fun CreateObjectDialog(
                                     text = { Text(cls.name) },
                                     onClick = {
                                         selectedClassId = cls.id
+                                        // Reset parent when class changes; old
+                                        // selection may no longer be allowed.
+                                        selectedParentId = null
                                         classExpanded = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+
+                // Parent picker — only shown when the selected class has
+                // allowed parent classes per project.hierarchy. "None" is
+                // always an option so root-level objects can still be
+                // created from the dialog.
+                if (parentCandidates.isNotEmpty()) {
+                    val selectedParentLabel = selectedParentId?.let { id ->
+                        objects.firstOrNull { it.id == id }?.let { o ->
+                            o.readable.ifBlank { o.id }
+                        } ?: id
+                    } ?: stringResource(R.string.projects_create_object_parent_none)
+                    ExposedDropdownMenuBox(
+                        expanded = parentExpanded,
+                        onExpandedChange = { parentExpanded = it }
+                    ) {
+                        OutlinedTextField(
+                            value = selectedParentLabel,
+                            onValueChange = {},
+                            readOnly = true,
+                            label = { Text(stringResource(R.string.projects_create_object_parent)) },
+                            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = parentExpanded) },
+                            modifier = Modifier
+                                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                                .fillMaxWidth()
+                        )
+                        ExposedDropdownMenu(
+                            expanded = parentExpanded,
+                            onDismissRequest = { parentExpanded = false }
+                        ) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.projects_create_object_parent_none)) },
+                                onClick = {
+                                    selectedParentId = null
+                                    parentExpanded = false
+                                }
+                            )
+                            parentCandidates.forEach { p ->
+                                DropdownMenuItem(
+                                    text = { Text(p.readable.ifBlank { p.id }) },
+                                    onClick = {
+                                        selectedParentId = p.id
+                                        parentExpanded = false
                                     }
                                 )
                             }
@@ -108,7 +193,7 @@ fun CreateObjectDialog(
                             initialValues[activeView.columns] = options.first().id
                         }
                     }
-                    onCreate(selectedClassId, title, initialValues)
+                    onCreate(selectedClassId, title, selectedParentId, initialValues)
                 },
                 enabled = title.isNotBlank() && selectedClassId.isNotBlank() && !isCreating
             ) {

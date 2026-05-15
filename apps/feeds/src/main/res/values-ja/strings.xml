@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">すべて既読にする</string>
     <string name="feeds_settings">設定</string>
     <string name="feeds_no_posts_yet">まだ投稿はありません</string>
+    <string name="feeds_default_sort">デフォルトの並び順</string>
+    <string name="feeds_suggested_interests_add">追加</string>
+    <string name="feeds_suggested_interests_dismiss">非表示</string>
     <string name="feeds_unread">未読</string>
     <string name="feeds_filter_all">すべて</string>
+    <string name="feeds_sort_label">並べ替え</string>
     <string name="feeds_sort_interests">興味</string>
     <string name="feeds_sort_new">新規</string>
     <string name="feeds_sort_hot">人気</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">承認</string>
     <string name="feeds_rss_url_copied">RSS URL をクリップボードにコピーしました</string>
     <string name="feeds_logout">ログアウト</string>
+    <string name="feeds_ai_account_default">デフォルトアカウント</string>
     <string name="feeds_ai_mode_off">無効</string>
     <string name="feeds_ai_mode_tag">タグ</string>
     <string name="feeds_ai_mode_tag_deduplicate">タグ付け + 重複削除</string>
     <string name="feeds_ai_reset_default">デフォルトに戻す</string>
-
-    <string name="notification_channel_feeds">Feeds の通知</string>
-    <string name="feeds_view_post">投稿を表示</string>
-    <string name="feeds_open_in_browser">ブラウザで開く</string>
-    <string name="feeds_unable_to_load">ページを読み込めません</string>
     <string name="feeds_feed_not_found">フィードが見つかりません</string>
     <string name="feeds_post_not_found">投稿が見つかりません</string>
+
 </resources>

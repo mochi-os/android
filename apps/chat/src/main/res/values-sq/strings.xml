@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Miqtë</string>
     <string name="chat_new_search_placeholder">Kërko miq</string>
     <string name="chat_message_placeholder">Mesazhi</string>
+    <string name="chat_attachment_add">Bashkëngjit skedarë</string>
     <string name="chat_message_attach">Bashkëngjit skedarë</string>
     <string name="chat_settings_title">Cilësimet e bisedës</string>
     <string name="chat_settings_rename_label">Emri i bisedës</string>
     <string name="chat_settings_save">Ruaj</string>
     <string name="chat_settings_members">Anëtarët</string>
     <string name="chat_settings_add_member">Shto anëtar</string>
+    <string name="chat_settings_add_member_search">Kërko miq</string>
     <string name="chat_settings_remove_member">Hiq</string>
     <string name="chat_settings_remove_member_title">Hiq anëtarin</string>
     <string name="chat_settings_leave">Largohu nga biseda</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Fshi bisedën</string>
     <string name="chat_members_empty">Asnjë anëtar</string>
     <string name="chat_members_you">Ti</string>
-
-    <string name="notification_channel_chat">Njoftime Chat</string>
     <string name="chat_chat_not_found">Biseda nuk u gjet</string>
+
 </resources>

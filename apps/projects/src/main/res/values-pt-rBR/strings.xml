@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Criar objeto</string>
     <string name="projects_create_object_type">Tipo</string>
     <string name="projects_create_object_title_field">Título</string>
+    <string name="projects_create_object_parent">Pai</string>
     <string name="projects_settings_title">Configurações</string>
     <string name="projects_settings_tab_general">Geral</string>
     <string name="projects_settings_tab_access">Acesso</string>
+    <string name="projects_settings_tab_people">Pessoas</string>
+    <string name="projects_option_icon">Ícone</string>
     <string name="projects_settings_save">Salvar alterações</string>
     <string name="projects_settings_unsubscribe">Cancelar inscrição</string>
     <string name="projects_settings_delete_project">Excluir projeto</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Solicitações</string>
     <string name="projects_object_tab_attachments">Anexos</string>
     <string name="projects_object_tab_links">Links</string>
+    <string name="projects_watchers_watch">Observar</string>
+    <string name="projects_watchers_unwatch">Parar de observar</string>
     <string name="projects_parent_label">Pai</string>
     <string name="projects_parent_search_placeholder">Pesquisar</string>
     <string name="projects_links_add">Adicionar link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importar design</string>
     <string name="projects_design_import_choose_template">Escolha um modelo</string>
     <string name="projects_design_replace_title">Substituir design?</string>
+    <string name="projects_design_replace">Substituir</string>
     <string name="projects_classes_add">Adicionar classe</string>
     <string name="projects_classes_add_dialog_title">Adicionar classe</string>
     <string name="projects_classes_create">Criar</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Criado</string>
     <string name="projects_views_sort_updated">Atualizado</string>
     <string name="projects_views_sort_rank">Classificação</string>
-
-    <string name="notification_channel_projects">Notificações Projects</string>
     <string name="projects_project_not_found">Projeto não encontrado</string>
+
 </resources>

@@ -8,6 +8,8 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.forums.ui.find.FindForumsScreen
 import org.mochios.forums.ui.forum.ForumScreen
+import org.mochios.forums.ui.moderation.ForumModerationScreen
+import org.mochios.forums.ui.moderation.ForumModerationSettingsScreen
 import org.mochios.forums.ui.newpost.NewPostScreen
 import org.mochios.forums.ui.post.PostScreen
 import org.mochios.forums.ui.router.ForumsRouter
@@ -25,11 +27,15 @@ object ForumsApp {
     const val NEW_POST = "forums/forum/{forumId}/new"
     const val FIND_FORUMS = "forums/discover"
     const val FORUM_SETTINGS = "forums/forum/{forumId}/settings"
+    const val MODERATION = "forums/forum/{forumId}/moderation"
+    const val MODERATION_SETTINGS = "forums/forum/{forumId}/moderation/settings"
 
     fun forum(forumId: String) = "forums/forum/$forumId"
     fun post(forumId: String, postId: String) = "forums/forum/$forumId/post/$postId"
     fun newPost(forumId: String) = "forums/forum/$forumId/new"
     fun forumSettings(forumId: String) = "forums/forum/$forumId/settings"
+    fun moderation(forumId: String) = "forums/forum/$forumId/moderation"
+    fun moderationSettings(forumId: String) = "forums/forum/$forumId/moderation/settings"
 }
 
 fun NavGraphBuilder.forumsNavGraph(
@@ -110,10 +116,32 @@ fun NavGraphBuilder.forumsNavGraph(
     composable(
         route = ForumsApp.FORUM_SETTINGS,
         arguments = listOf(navArgument("forumId") { type = NavType.StringType })
-    ) {
+    ) { backStackEntry ->
+        val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
         ForumSettingsScreen(
             onBack = { navController.popBackStack() },
             onForumDeleted = { navController.popBackStack(ForumsApp.ROUTER, inclusive = false) },
+            onModeration = { navController.navigate(ForumsApp.moderation(forumId)) },
+        )
+    }
+
+    composable(
+        route = ForumsApp.MODERATION,
+        arguments = listOf(navArgument("forumId") { type = NavType.StringType })
+    ) { backStackEntry ->
+        val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
+        ForumModerationScreen(
+            onBack = { navController.popBackStack() },
+            onOpenSettings = { navController.navigate(ForumsApp.moderationSettings(forumId)) },
+        )
+    }
+
+    composable(
+        route = ForumsApp.MODERATION_SETTINGS,
+        arguments = listOf(navArgument("forumId") { type = NavType.StringType })
+    ) {
+        ForumModerationSettingsScreen(
+            onBack = { navController.popBackStack() },
         )
     }
 }

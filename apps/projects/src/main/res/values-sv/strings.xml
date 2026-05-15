@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Skapa objekt</string>
     <string name="projects_create_object_type">Typ</string>
     <string name="projects_create_object_title_field">Titel</string>
+    <string name="projects_create_object_parent">Överordnad</string>
     <string name="projects_settings_title">Inställningar</string>
     <string name="projects_settings_tab_general">Allmänt</string>
     <string name="projects_settings_tab_access">Åtkomst</string>
+    <string name="projects_settings_tab_people">Personer</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Spara ändringar</string>
     <string name="projects_settings_unsubscribe">Avsluta prenumeration</string>
     <string name="projects_settings_delete_project">Ta bort projekt</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Förfrågningar</string>
     <string name="projects_object_tab_attachments">Bilagor</string>
     <string name="projects_object_tab_links">Länkar</string>
+    <string name="projects_watchers_watch">Bevaka</string>
+    <string name="projects_watchers_unwatch">Sluta bevaka</string>
     <string name="projects_parent_label">Överordnad</string>
     <string name="projects_parent_search_placeholder">Sök</string>
     <string name="projects_links_add">Lägg till länk</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importera design</string>
     <string name="projects_design_import_choose_template">Välj en mall</string>
     <string name="projects_design_replace_title">Ersätt design?</string>
+    <string name="projects_design_replace">Ersätt</string>
     <string name="projects_classes_add">Lägg till klass</string>
     <string name="projects_classes_add_dialog_title">Lägg till klass</string>
     <string name="projects_classes_create">Skapa</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Skapad</string>
     <string name="projects_views_sort_updated">Uppdaterad</string>
     <string name="projects_views_sort_rank">Rank</string>
-
-    <string name="notification_channel_projects">Projects-aviseringar</string>
     <string name="projects_project_not_found">Projektet hittades inte</string>
+
 </resources>

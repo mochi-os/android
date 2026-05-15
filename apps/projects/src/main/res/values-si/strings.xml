@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">වස්තුවක් නිර්මාණය කරන්න</string>
     <string name="projects_create_object_type">වර්ගය</string>
     <string name="projects_create_object_title_field">මාතෘකාව</string>
+    <string name="projects_create_object_parent">මව්</string>
     <string name="projects_settings_title">සැකසුම්</string>
     <string name="projects_settings_tab_general">සාමාන්‍ය</string>
     <string name="projects_settings_tab_access">ප්‍රවේශය</string>
+    <string name="projects_settings_tab_people">පුද්ගලයන්</string>
+    <string name="projects_option_icon">අයිකනය</string>
     <string name="projects_settings_save">වෙනස්කම් සුරකින්න</string>
     <string name="projects_settings_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
     <string name="projects_settings_delete_project">project එක මකන්න</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">ඉල්ලීම්</string>
     <string name="projects_object_tab_attachments">ඇමුණුම්</string>
     <string name="projects_object_tab_links">සබැඳි</string>
+    <string name="projects_watchers_watch">නරඹන්න</string>
+    <string name="projects_watchers_unwatch">නැරඹීම නවත්වන්න</string>
     <string name="projects_parent_label">මව්</string>
     <string name="projects_parent_search_placeholder">සොයන්න</string>
     <string name="projects_links_add">සබැඳියක් එක් කරන්න</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">සැලසුම ආයාත කරන්න</string>
     <string name="projects_design_import_choose_template">අච්චුවක් තෝරන්න</string>
     <string name="projects_design_replace_title">design ප්‍රතිස්ථාපනය කරන්නද?</string>
+    <string name="projects_design_replace">ප්‍රතිස්ථාපනය</string>
     <string name="projects_classes_add">පන්තියක් එක් කරන්න</string>
     <string name="projects_classes_add_dialog_title">පන්තියක් එක් කරන්න</string>
     <string name="projects_classes_create">නිර්මාණය කරන්න</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">නිර්මාණය කරන ලදී</string>
     <string name="projects_views_sort_updated">යාවත්කාලීන කරන ලදී</string>
     <string name="projects_views_sort_rank">ශ්‍රේණිය</string>
-
-    <string name="notification_channel_projects">Projects දැනුම්දීම්</string>
     <string name="projects_project_not_found">ව්‍යාපෘතිය හමු නොවීය</string>
+
 </resources>

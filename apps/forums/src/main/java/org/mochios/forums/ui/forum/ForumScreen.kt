@@ -67,6 +67,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -108,6 +109,7 @@ fun ForumScreen(
     LaunchedEffect(forumId) {
         if (forumId.isNotBlank()) {
             LastViewedStore.set(context, FORUMS_FEATURE, forumId)
+            SystemNotifications.cancelFor(context, "forums", forumId)
         }
     }
 
@@ -285,6 +287,34 @@ private fun ForumContent(
             onRefresh = { viewModel.refresh() },
             modifier = Modifier.fillMaxSize().padding(padding)
         ) {
+          Column(modifier = Modifier.fillMaxSize()) {
+            if (uiState.tags.isNotEmpty()) {
+                androidx.compose.foundation.lazy.LazyRow(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    if (uiState.currentTag != null) {
+                        item(key = "clear") {
+                            androidx.compose.material3.FilterChip(
+                                selected = false,
+                                onClick = { viewModel.setTagFilter(null) },
+                                label = { Text(stringResource(R.string.forums_tag_clear)) },
+                            )
+                        }
+                    }
+                    items(uiState.tags, key = { it.label }) { tag ->
+                        androidx.compose.material3.FilterChip(
+                            selected = uiState.currentTag == tag.label,
+                            onClick = {
+                                viewModel.setTagFilter(
+                                    if (uiState.currentTag == tag.label) null else tag.label
+                                )
+                            },
+                            label = { Text(tag.label) },
+                        )
+                    }
+                }
+            }
             when {
                 uiState.isLoading && uiState.posts.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -346,6 +376,7 @@ private fun ForumContent(
                     }
                 }
             }
+          }
         }
     }
 }

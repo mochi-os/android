@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Rakan</string>
     <string name="chat_new_search_placeholder">Cari rakan</string>
     <string name="chat_message_placeholder">Mesej</string>
+    <string name="chat_attachment_add">Lampirkan fail</string>
     <string name="chat_message_attach">Lampirkan fail</string>
     <string name="chat_settings_title">Tetapan sembang</string>
     <string name="chat_settings_rename_label">Nama sembang</string>
     <string name="chat_settings_save">Simpan</string>
     <string name="chat_settings_members">Ahli</string>
     <string name="chat_settings_add_member">Tambah ahli</string>
+    <string name="chat_settings_add_member_search">Cari rakan</string>
     <string name="chat_settings_remove_member">Alih keluar</string>
     <string name="chat_settings_remove_member_title">Alih keluar ahli</string>
     <string name="chat_settings_leave">Tinggalkan sembang</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Padam sembang</string>
     <string name="chat_members_empty">Tiada ahli</string>
     <string name="chat_members_you">Anda</string>
-
-    <string name="notification_channel_chat">Pemberitahuan Chat</string>
     <string name="chat_chat_not_found">Sembang tidak dijumpai</string>
+
 </resources>

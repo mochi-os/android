@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Embojeguáva mba\'e</string>
     <string name="projects_create_object_type">Mba\'éichagua</string>
     <string name="projects_create_object_title_field">Téra</string>
+    <string name="projects_create_object_parent">Sy/ru</string>
     <string name="projects_settings_title">Ñemboheko</string>
     <string name="projects_settings_tab_general">Tekorapy</string>
     <string name="projects_settings_tab_access">Jeike</string>
+    <string name="projects_settings_tab_people">Tapichakuéra</string>
+    <string name="projects_option_icon">Icono</string>
     <string name="projects_settings_save">Ñongatu ñemoambue</string>
     <string name="projects_settings_unsubscribe">Eñemboaty\'ỹ</string>
     <string name="projects_settings_delete_project">Hundi tembiaporã</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Jerure</string>
     <string name="projects_object_tab_attachments">Archivokuéra</string>
     <string name="projects_object_tab_links">Linkkuéra</string>
+    <string name="projects_watchers_watch">Ehecha</string>
+    <string name="projects_watchers_unwatch">Ñehapykuere\'ỹ</string>
     <string name="projects_parent_label">Sy/ru</string>
     <string name="projects_parent_search_placeholder">Eheka</string>
     <string name="projects_links_add">Embojuaju link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Embojuaju diseño</string>
     <string name="projects_design_import_choose_template">Eiporavo peteĩ template</string>
     <string name="projects_design_replace_title">Embyepyru diseño?</string>
+    <string name="projects_design_replace">Embyekovia</string>
     <string name="projects_classes_add">Embojuaju class</string>
     <string name="projects_classes_add_dialog_title">Embojuaju class</string>
     <string name="projects_classes_create">Embojeguáva</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Oñembojeguáma</string>
     <string name="projects_views_sort_updated">Hekopyahúpyre</string>
     <string name="projects_views_sort_rank">Rango</string>
-
-    <string name="notification_channel_projects">Marandu Projects</string>
     <string name="projects_project_not_found">Mba\'apo ndojejuhúi</string>
+
 </resources>

@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Make tout kòm li</string>
     <string name="feeds_settings">Paramèt</string>
     <string name="feeds_no_posts_yet">Poko gen pòs</string>
+    <string name="feeds_default_sort">Klasman defo</string>
+    <string name="feeds_suggested_interests_add">Ajoute</string>
+    <string name="feeds_suggested_interests_dismiss">Kache</string>
     <string name="feeds_unread">Pa li</string>
     <string name="feeds_filter_all">Tout</string>
+    <string name="feeds_sort_label">Klase</string>
     <string name="feeds_sort_interests">Enterè</string>
     <string name="feeds_sort_new">Nouvo</string>
     <string name="feeds_sort_hot">Cho</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Aksepte</string>
     <string name="feeds_rss_url_copied">URL RSS kopye nan clipboard</string>
     <string name="feeds_logout">Dekonekte</string>
+    <string name="feeds_ai_account_default">Kont defo</string>
     <string name="feeds_ai_mode_off">Dezaktive</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + dedouble</string>
     <string name="feeds_ai_reset_default">Reset nan default</string>
-
-    <string name="notification_channel_feeds">Notifikasyon Feeds</string>
-    <string name="feeds_view_post">Gade pòs la</string>
-    <string name="feeds_open_in_browser">Louvri nan navigatè</string>
-    <string name="feeds_unable_to_load">Pa ka chaje paj la</string>
     <string name="feeds_feed_not_found">Feed pa jwenn</string>
     <string name="feeds_post_not_found">Pòs pa jwenn</string>
+
 </resources>

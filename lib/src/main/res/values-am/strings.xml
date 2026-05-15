@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">መዳረሻ ተከልክሏል</string>
     <string name="auth_email">ኢሜይል</string>
     <string name="auth_continue">ቀጥል</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">አስተያየት</string>
     <string name="access_level_view">ይመልከቱ</string>
     <string name="access_level_none">ምንም</string>
+    <string name="banner_label">ሰንደቅ</string>
     <string name="reaction_like">ወደድኩት</string>
     <string name="reaction_dislike">አልወድም</string>
     <string name="reaction_laugh">ሳቅ</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">እስማማለሁ</string>
     <string name="reaction_disagree">አልስማማም</string>
     <string name="push_service_action_hide">ደብቅ</string>
+    <string name="about_close">ዝጋ</string>
 
-    <string name="push_service_group">የጀርባ አገልግሎት</string>
 </resources>

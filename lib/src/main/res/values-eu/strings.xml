@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Sarbidea ukatua</string>
     <string name="auth_email">Posta elektronikoa</string>
     <string name="auth_continue">Jarraitu</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Iruzkina</string>
     <string name="access_level_view">Ikusi</string>
     <string name="access_level_none">Bat ere ez</string>
+    <string name="banner_label">Iragarki-banda</string>
     <string name="reaction_like">Atsegin</string>
     <string name="reaction_dislike">Ez gustatu</string>
     <string name="reaction_laugh">Barre</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Ados</string>
     <string name="reaction_disagree">Ez ados</string>
     <string name="push_service_action_hide">Ezkutatu</string>
+    <string name="about_close">Itxi</string>
 
-    <string name="push_service_group">Atzeko planoko zerbitzua</string>
 </resources>

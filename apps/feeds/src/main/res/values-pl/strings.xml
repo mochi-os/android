@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Oznacz wszystkie jako przeczytane</string>
     <string name="feeds_settings">Ustawienia</string>
     <string name="feeds_no_posts_yet">Brak postów</string>
+    <string name="feeds_default_sort">Domyślne sortowanie</string>
+    <string name="feeds_suggested_interests_add">Dodaj</string>
+    <string name="feeds_suggested_interests_dismiss">Ukryj</string>
     <string name="feeds_unread">Nieprzeczytane</string>
     <string name="feeds_filter_all">Wszystko</string>
+    <string name="feeds_sort_label">Sortuj</string>
     <string name="feeds_sort_interests">Zainteresowania</string>
     <string name="feeds_sort_new">Nowy</string>
     <string name="feeds_sort_hot">Popularne</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Akceptuj</string>
     <string name="feeds_rss_url_copied">Skopiowano adres URL RSS do schowka</string>
     <string name="feeds_logout">Wyloguj się</string>
+    <string name="feeds_ai_account_default">Domyślne konto</string>
     <string name="feeds_ai_mode_off">Wyłączone</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + usuń duplikaty</string>
     <string name="feeds_ai_reset_default">Zresetuj do domyślnych</string>
-
-    <string name="notification_channel_feeds">Powiadomienia Feeds</string>
-    <string name="feeds_view_post">Pokaż wpis</string>
-    <string name="feeds_open_in_browser">Otwórz w przeglądarce</string>
-    <string name="feeds_unable_to_load">Nie można załadować strony</string>
     <string name="feeds_feed_not_found">Nie znaleziono kanału</string>
     <string name="feeds_post_not_found">Nie znaleziono wpisu</string>
+
 </resources>

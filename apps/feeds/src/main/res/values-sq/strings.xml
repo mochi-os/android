@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Shëno të gjitha si të lexuara</string>
     <string name="feeds_settings">Cilësimet</string>
     <string name="feeds_no_posts_yet">Ende pa postime</string>
+    <string name="feeds_default_sort">Renditja e parazgjedhur</string>
+    <string name="feeds_suggested_interests_add">Shto</string>
+    <string name="feeds_suggested_interests_dismiss">Fshih</string>
     <string name="feeds_unread">Pa lexuar</string>
     <string name="feeds_filter_all">Të gjitha</string>
+    <string name="feeds_sort_label">Rendit</string>
     <string name="feeds_sort_interests">Interesat</string>
     <string name="feeds_sort_new">I ri</string>
     <string name="feeds_sort_hot">Të nxehta</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Prano</string>
     <string name="feeds_rss_url_copied">URL e RSS u kopjua në clipboard</string>
     <string name="feeds_logout">Dilni</string>
+    <string name="feeds_ai_account_default">Llogaria e parazgjedhur</string>
     <string name="feeds_ai_mode_off">I çaktivizuar</string>
     <string name="feeds_ai_mode_tag">Etiketa</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiketo + duplikatat</string>
     <string name="feeds_ai_reset_default">Rivendos në parazgjedhje</string>
-
-    <string name="notification_channel_feeds">Njoftime Feeds</string>
-    <string name="feeds_view_post">Shfaq postimin</string>
-    <string name="feeds_open_in_browser">Hape në shfletues</string>
-    <string name="feeds_unable_to_load">Faqja nuk mund të ngarkohet</string>
     <string name="feeds_feed_not_found">Feed nuk u gjet</string>
     <string name="feeds_post_not_found">Postimi s\'u gjet</string>
+
 </resources>

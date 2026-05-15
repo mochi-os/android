@@ -4,5 +4,4 @@
     <string name="auth_email">Courriel</string>
     <string name="auth_email_code">Code par courriel</string>
 
-    <string name="push_service_group">Service en arrière-plan</string>
 </resources>

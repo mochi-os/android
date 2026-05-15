@@ -79,15 +79,16 @@ class CreatePostViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoadingFeeds.value = true
             try {
-                // Only show feeds the user owns — posts can only be written to owned feeds.
-                // Matches action_post_new server behaviour.
-                val feeds = repository.listFeeds().filter { it.owner == 1 }
+                val feeds = if (!preSelectedFeedId.isNullOrEmpty()) {
+                    repository.getNewPostFeeds(preSelectedFeedId)
+                } else {
+                    repository.listFeeds().filter { it.owner == 1 }
+                }
                 _availableFeeds.value = feeds
                 if (_selectedFeed.value.isEmpty() && feeds.isNotEmpty()) {
                     _selectedFeed.value = feeds.first().fingerprint.ifEmpty { feeds.first().id }
                 }
             } catch (_: Exception) {
-                // Will show empty dropdown
             } finally {
                 _isLoadingFeeds.value = false
             }
@@ -133,6 +134,18 @@ class CreatePostViewModel @Inject constructor(
 
     fun removeAttachment(uri: Uri) {
         _attachments.value = _attachments.value - uri
+    }
+
+    fun moveExistingAttachment(attachmentId: String, direction: Int) {
+        val current = _existingAttachments.value.toMutableList()
+        val index = current.indexOfFirst { it.id == attachmentId }
+        if (index < 0) return
+        val newIndex = (index + direction).coerceIn(0, current.size - 1)
+        if (newIndex == index) return
+        val tmp = current[index]
+        current[index] = current[newIndex]
+        current[newIndex] = tmp
+        _existingAttachments.value = current
     }
 
     fun moveAttachment(uri: Uri, direction: Int) {

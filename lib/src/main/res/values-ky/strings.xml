@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Жетки четке кагылды</string>
     <string name="auth_email">Электрондук почта</string>
     <string name="auth_continue">Улантуу</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Комментарий</string>
     <string name="access_level_view">Көрүү</string>
     <string name="access_level_none">Эч кимиси</string>
+    <string name="banner_label">Баннер</string>
     <string name="reaction_like">Жактыруу</string>
     <string name="reaction_dislike">Жактырбоо</string>
     <string name="reaction_laugh">Күлкү</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Макул</string>
     <string name="reaction_disagree">Макул эмес</string>
     <string name="push_service_action_hide">Жашыруу</string>
+    <string name="about_close">Жабуу</string>
 
-    <string name="push_service_group">Фондук кызмат</string>
 </resources>

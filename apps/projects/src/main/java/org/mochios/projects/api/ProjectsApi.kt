@@ -605,7 +605,8 @@ interface ProjectsApi {
         @Path("classId") classId: String,
         @Path("fieldId") fieldId: String,
         @Field("name") name: String,
-        @Field("colour") colour: String?
+        @Field("colour") colour: String?,
+        @Field("icon") icon: String? = null
     ): Response<ApiResponse<OptionResponse>>
 
     @FormUrlEncoded

@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Tanda semua dibaca</string>
     <string name="feeds_settings">Tetapan</string>
     <string name="feeds_no_posts_yet">Tiada hantaran lagi</string>
+    <string name="feeds_default_sort">Susunan lalai</string>
+    <string name="feeds_suggested_interests_add">Tambah</string>
+    <string name="feeds_suggested_interests_dismiss">Sembunyikan</string>
     <string name="feeds_unread">Belum dibaca</string>
     <string name="feeds_filter_all">Semua</string>
+    <string name="feeds_sort_label">Susun</string>
     <string name="feeds_sort_interests">Minat</string>
     <string name="feeds_sort_new">Baharu</string>
     <string name="feeds_sort_hot">Panas</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Terima</string>
     <string name="feeds_rss_url_copied">URL RSS disalin ke papan keratan</string>
     <string name="feeds_logout">Log keluar</string>
+    <string name="feeds_ai_account_default">Akaun lalai</string>
     <string name="feeds_ai_mode_off">Dilumpuhkan</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + buang duplikat</string>
     <string name="feeds_ai_reset_default">Tetapkan semula kepada lalai</string>
-
-    <string name="notification_channel_feeds">Pemberitahuan Feeds</string>
-    <string name="feeds_view_post">Lihat hantaran</string>
-    <string name="feeds_open_in_browser">Buka dalam pelayar</string>
-    <string name="feeds_unable_to_load">Tidak dapat memuatkan halaman</string>
     <string name="feeds_feed_not_found">Suapan tidak ditemui</string>
     <string name="feeds_post_not_found">Hantaran tidak dijumpai</string>
+
 </resources>

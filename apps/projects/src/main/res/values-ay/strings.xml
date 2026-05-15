@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Objeto luraña</string>
     <string name="projects_create_object_type">Mä comando qillqam jan ukax thaqham...</string>
     <string name="projects_create_object_title_field">Suti campo</string>
+    <string name="projects_create_object_parent">Awki</string>
     <string name="projects_settings_title">Configuración</string>
     <string name="projects_settings_tab_general">Taqpacha</string>
     <string name="projects_settings_tab_access">Mantaña</string>
+    <string name="projects_settings_tab_people">Jaqinaka</string>
+    <string name="projects_option_icon">Icono</string>
     <string name="projects_settings_save">Mayjt\'awinak imaña</string>
     <string name="projects_settings_unsubscribe">CRM ukatpach suscripción jaytaña?</string>
     <string name="projects_settings_delete_project">Proyecto chhaqtayaña</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Mayisiwinaka</string>
     <string name="projects_object_tab_attachments">Apkatawinaka</string>
     <string name="projects_object_tab_links">Enlacenaka</string>
+    <string name="projects_watchers_watch">Uñch\'ukita</string>
+    <string name="projects_watchers_unwatch">Uñch\'ukiñ tukuyaña</string>
     <string name="projects_parent_label">Awki</string>
     <string name="projects_parent_search_placeholder">Thaqhama</string>
     <string name="projects_links_add">Link yapxataña</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Diseño mantayaña</string>
     <string name="projects_design_import_choose_template">Mä template ajllxaña</string>
     <string name="projects_design_replace_title">¿Diseño turkama?</string>
+    <string name="projects_design_replace">Lantiri</string>
     <string name="projects_classes_add">Class yapxataña</string>
     <string name="projects_classes_add_dialog_title">Class yapxataña</string>
     <string name="projects_classes_create">Luraña</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Lurata</string>
     <string name="projects_views_sort_updated">{0}-na machaqachata</string>
     <string name="projects_views_sort_rank">Rango</string>
-
-    <string name="notification_channel_projects">Projects yatiyawinaka</string>
     <string name="projects_project_not_found">Lurawi jan jikxatasiti</string>
+
 </resources>

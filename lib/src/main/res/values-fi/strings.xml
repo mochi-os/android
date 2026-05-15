@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Käyttö evätty</string>
     <string name="auth_email">Sähköposti</string>
     <string name="auth_continue">Jatka</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Kommentti</string>
     <string name="access_level_view">Näytä</string>
     <string name="access_level_none">Ei mitään</string>
+    <string name="banner_label">Banneri</string>
     <string name="reaction_like">Tykkää</string>
     <string name="reaction_dislike">Ei tykkää</string>
     <string name="reaction_laugh">Nauru</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Samaa mieltä</string>
     <string name="reaction_disagree">Eri mieltä</string>
     <string name="push_service_action_hide">Piilota</string>
+    <string name="about_close">Sulje</string>
 
-    <string name="push_service_group">Taustapalvelu</string>
 </resources>

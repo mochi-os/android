@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">ໝາຍວ່າອ່ານທັງໝົດແລ້ວ</string>
     <string name="feeds_settings">ການຕັ້ງຄ່າ</string>
     <string name="feeds_no_posts_yet">ຍັງບໍ່ມີໂພສ</string>
+    <string name="feeds_default_sort">ການຈັດລຽງເລີ່ມຕົ້ນ</string>
+    <string name="feeds_suggested_interests_add">ເພີ່ມ</string>
+    <string name="feeds_suggested_interests_dismiss">ເຊື່ອງ</string>
     <string name="feeds_unread">ຍັງບໍ່ໄດ້ອ່ານ</string>
     <string name="feeds_filter_all">ທັງໝົດ</string>
+    <string name="feeds_sort_label">ຈັດລຽງ</string>
     <string name="feeds_sort_interests">ຄວາມສົນໃຈ</string>
     <string name="feeds_sort_new">ໃໝ່</string>
     <string name="feeds_sort_hot">ມາແຮງ</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">ຍອມຮັບ</string>
     <string name="feeds_rss_url_copied">ຄັດລອກ RSS URL ໄປຄລິບບອດແລ້ວ</string>
     <string name="feeds_logout">ອອກຈາກລະບົບ</string>
+    <string name="feeds_ai_account_default">ບັນຊີເລີ່ມຕົ້ນ</string>
     <string name="feeds_ai_mode_off">ປິດໃຊ້ງານແລ້ວ</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + ກຳຈັດຊ້ຳ</string>
     <string name="feeds_ai_reset_default">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
-
-    <string name="notification_channel_feeds">ການແຈ້ງເຕືອນ Feeds</string>
-    <string name="feeds_view_post">ເບິ່ງໂພສ</string>
-    <string name="feeds_open_in_browser">ເປີດໃນຕົວທ່ອງເວັບ</string>
-    <string name="feeds_unable_to_load">ບໍ່ສາມາດໂຫຼດໜ້າໄດ້</string>
     <string name="feeds_feed_not_found">ບໍ່ພົບຟີດ</string>
     <string name="feeds_post_not_found">ບໍ່ພົບໂພສ</string>
+
 </resources>

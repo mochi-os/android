@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ობიექტის შექმნა</string>
     <string name="projects_create_object_type">სამშაბათი</string>
     <string name="projects_create_object_title_field">სათაური</string>
+    <string name="projects_create_object_parent">მშობელი</string>
     <string name="projects_settings_title">პარამეტრები</string>
     <string name="projects_settings_tab_general">ზოგადი</string>
     <string name="projects_settings_tab_access">წვდომა</string>
+    <string name="projects_settings_tab_people">ხალხი</string>
+    <string name="projects_option_icon">ხატულა</string>
     <string name="projects_settings_save">ცვლილებების შენახვა</string>
     <string name="projects_settings_unsubscribe">ამოუცნობი ანგარიში</string>
     <string name="projects_settings_delete_project">პროექტის წაშლა</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">მოთხოვნები</string>
     <string name="projects_object_tab_attachments">დანართები</string>
     <string name="projects_object_tab_links">ბმულები</string>
+    <string name="projects_watchers_watch">გაფრთხილება გამოიცა</string>
+    <string name="projects_watchers_unwatch">ყურების შეწყვეტა</string>
     <string name="projects_parent_label">მშობელი</string>
     <string name="projects_parent_search_placeholder">ძიება</string>
     <string name="projects_links_add">ბმულის დამატება</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">დიზაინის იმპორტი</string>
     <string name="projects_design_import_choose_template">აირჩიეთ შაბლონი</string>
     <string name="projects_design_replace_title">დიზაინის ჩანაცვლება?</string>
+    <string name="projects_design_replace">ჩანაცვლება</string>
     <string name="projects_classes_add">კლასის დამატება</string>
     <string name="projects_classes_add_dialog_title">კლასის დამატება</string>
     <string name="projects_classes_create">შექმნა</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">შექმნილია</string>
     <string name="projects_views_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
     <string name="projects_views_sort_rank">რანკი</string>
-
-    <string name="notification_channel_projects">Projects შეტყობინებები</string>
     <string name="projects_project_not_found">პროექტი ვერ მოიძებნა</string>
+
 </resources>

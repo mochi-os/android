@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Caraidean</string>
     <string name="chat_new_search_placeholder">Lorg caraidean</string>
     <string name="chat_message_placeholder">Teachdaireachd</string>
+    <string name="chat_attachment_add">Ceangail faidhlichean</string>
     <string name="chat_message_attach">Ceangail faidhlichean</string>
     <string name="chat_settings_title">Roghainnean còmhraidh</string>
     <string name="chat_settings_rename_label">Ainm còmhraidh</string>
     <string name="chat_settings_save">Sàbhail</string>
     <string name="chat_settings_members">Buill</string>
     <string name="chat_settings_add_member">Cuir ball ris</string>
+    <string name="chat_settings_add_member_search">Lorg caraidean</string>
     <string name="chat_settings_remove_member">Thoir air falbh</string>
     <string name="chat_settings_remove_member_title">Thoir am ball air falbh</string>
     <string name="chat_settings_leave">Fàg an còmhradh</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Sguab às còmhradh</string>
     <string name="chat_members_empty">Gun bhall</string>
     <string name="chat_members_you">Thusa</string>
-
-    <string name="notification_channel_chat">Brathan Chat</string>
     <string name="chat_chat_not_found">Cha deach an còmhradh a lorg</string>
+
 </resources>

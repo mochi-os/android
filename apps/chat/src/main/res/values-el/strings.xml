@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Φίλοι</string>
     <string name="chat_new_search_placeholder">Αναζήτηση φίλων</string>
     <string name="chat_message_placeholder">Μήνυμα</string>
+    <string name="chat_attachment_add">Επισύναψη αρχείων</string>
     <string name="chat_message_attach">Επισύναψη αρχείων</string>
     <string name="chat_settings_title">Ρυθμίσεις συνομιλίας</string>
     <string name="chat_settings_rename_label">Όνομα συνομιλίας</string>
     <string name="chat_settings_save">Αποθήκευση</string>
     <string name="chat_settings_members">Μέλη</string>
     <string name="chat_settings_add_member">Προσθήκη μέλους</string>
+    <string name="chat_settings_add_member_search">Αναζήτηση φίλων</string>
     <string name="chat_settings_remove_member">Αφαίρεση</string>
     <string name="chat_settings_remove_member_title">Αφαίρεση μέλους</string>
     <string name="chat_settings_leave">Αποχώρηση από τη συνομιλία</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Διαγραφή συνομιλίας</string>
     <string name="chat_members_empty">Χωρίς μέλη</string>
     <string name="chat_members_you">Εσείς</string>
-
-    <string name="notification_channel_chat">Ειδοποιήσεις Chat</string>
     <string name="chat_chat_not_found">Η συνομιλία δεν βρέθηκε</string>
+
 </resources>

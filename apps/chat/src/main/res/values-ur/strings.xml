@@ -14,12 +14,14 @@
     <string name="chat_new_friends">دوست</string>
     <string name="chat_new_search_placeholder">دوست تلاش کریں</string>
     <string name="chat_message_placeholder">پیغام</string>
+    <string name="chat_attachment_add">فائلیں منسلک کریں</string>
     <string name="chat_message_attach">فائلیں منسلک کریں</string>
     <string name="chat_settings_title">چیٹ کی ترتیبات</string>
     <string name="chat_settings_rename_label">چیٹ کا نام</string>
     <string name="chat_settings_save">محفوظ کریں</string>
     <string name="chat_settings_members">ممبران</string>
     <string name="chat_settings_add_member">ممبر شامل کریں</string>
+    <string name="chat_settings_add_member_search">دوست تلاش کریں</string>
     <string name="chat_settings_remove_member">ہٹائیں</string>
     <string name="chat_settings_remove_member_title">ممبر ہٹائیں</string>
     <string name="chat_settings_leave">چیٹ چھوڑیں</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">چیٹ حذف کریں</string>
     <string name="chat_members_empty">کوئی ممبران نہیں</string>
     <string name="chat_members_you">آپ</string>
-
-    <string name="notification_channel_chat">Chat نوٹیفکیشنز</string>
     <string name="chat_chat_not_found">چیٹ نہیں ملی</string>
+
 </resources>

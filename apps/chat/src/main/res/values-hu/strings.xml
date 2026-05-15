@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Barátok</string>
     <string name="chat_new_search_placeholder">Barátok keresése</string>
     <string name="chat_message_placeholder">Üzenet</string>
+    <string name="chat_attachment_add">Fájlok csatolása</string>
     <string name="chat_message_attach">Fájlok csatolása</string>
     <string name="chat_settings_title">Chatbeállítások</string>
     <string name="chat_settings_rename_label">Chat neve</string>
     <string name="chat_settings_save">Mentés</string>
     <string name="chat_settings_members">Tagok</string>
     <string name="chat_settings_add_member">Tag hozzáadása</string>
+    <string name="chat_settings_add_member_search">Barátok keresése</string>
     <string name="chat_settings_remove_member">Eltávolítás</string>
     <string name="chat_settings_remove_member_title">Tag eltávolítása</string>
     <string name="chat_settings_leave">Csevegés elhagyása</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Chat törlése</string>
     <string name="chat_members_empty">Nincsenek tagok</string>
     <string name="chat_members_you">Ön</string>
-
-    <string name="notification_channel_chat">Chat értesítések</string>
     <string name="chat_chat_not_found">A chat nem található</string>
+
 </resources>

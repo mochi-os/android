@@ -3,9 +3,5 @@
 
     <string name="feeds_travelling">Traveling</string>
     <string name="feeds_tab_access">Access</string>
-    <string name="feeds_view_post">View post</string>
-    <string name="feeds_open_in_browser">Open in browser</string>
-    <string name="feeds_unable_to_load">Unable to load page</string>
-    <string name="feeds_feed_not_found">Feed not found</string>
-    <string name="feeds_post_not_found">Post not found</string>
+
 </resources>

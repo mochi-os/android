@@ -117,6 +117,16 @@
     <string name="access_level_view">View</string>
     <string name="access_level_none">None</string>
 
+    <!-- Notifications -->
+    <string name="notifications_clear">Clear notifications</string>
+
+    <!-- Banner editor -->
+    <string name="banner_label">Banner</string>
+    <string name="banner_description">Markdown shown at the top of this view.</string>
+    <string name="banner_placeholder">Welcome…</string>
+    <string name="banner_save">Save banner</string>
+    <string name="banner_clear">Clear banner</string>
+
     <!-- Entity avatar -->
     <string name="entity_avatar_alt">Avatar for %1$s</string>
 

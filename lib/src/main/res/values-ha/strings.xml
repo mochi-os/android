@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">An hana shiga</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Ci gaba</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Sharhi</string>
     <string name="access_level_view">Kalla</string>
     <string name="access_level_none">Babu</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">So</string>
     <string name="reaction_dislike">Rashin so</string>
     <string name="reaction_laugh">Dariya</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Yarda</string>
     <string name="reaction_disagree">Rashin yarda</string>
     <string name="push_service_action_hide">Ɓoye</string>
+    <string name="about_close">Rufe</string>
 
-    <string name="push_service_group">Sabis na baya</string>
 </resources>

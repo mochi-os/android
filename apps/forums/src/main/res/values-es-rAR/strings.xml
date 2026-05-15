@@ -10,11 +10,25 @@
     <string name="forums_create_title">Creá un foro</string>
     <string name="forums_find_subscribe">Suscribite</string>
     <string name="forums_post_edit">Editá el posteo</string>
+    <string name="forums_post_edit_title">Editá el posteo</string>
     <string name="forums_post_save">Guardá</string>
     <string name="forums_post_delete">Eliminá el posteo</string>
     <string name="forums_post_delete_title">Eliminá el posteo</string>
+    <string name="forums_post_pin">Fijá</string>
+    <string name="forums_post_approve">Aprobá</string>
+    <string name="forums_post_remove">Quitá</string>
+    <string name="forums_post_restore">Restaurá</string>
+    <string name="forums_comment_approve">Aprobá</string>
+    <string name="forums_comment_remove">Quitá</string>
+    <string name="forums_comment_restore">Restaurá</string>
+    <string name="forums_ai_prompt_reset">Reiniciá a los valores predeterminados</string>
+    <string name="forums_settings_unsubscribe">Cancelá la suscripción</string>
+    <string name="forums_moderation_restriction_remove">Quitá</string>
+    <string name="forums_moderation_restriction_type_muted">Silenciá</string>
+    <string name="forums_report_submit">Enviá la denuncia</string>
     <string name="forums_comment_save">Guardá</string>
     <string name="forums_comment_edit">Editá el comentario</string>
+    <string name="forums_comment_edit_title">Editá el comentario</string>
     <string name="forums_comment_delete">Eliminá el comentario</string>
     <string name="forums_comment_delete_title">Eliminá el comentario</string>
     <string name="forums_comment_reply">Respondé</string>
@@ -23,7 +37,4 @@
     <string name="forums_settings_delete">Eliminá el foro</string>
     <string name="forums_settings_delete_title">Eliminá el foro</string>
 
-    <string name="notification_channel_forums">Notificaciones de Forums</string>
-    <string name="forums_forum_not_found">Forum not found</string>
-    <string name="forums_post_not_found">Post not found</string>
 </resources>

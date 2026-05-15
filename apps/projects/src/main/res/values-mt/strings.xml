@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Oħloq oġġett</string>
     <string name="projects_create_object_type">Tip</string>
     <string name="projects_create_object_title_field">Titlu</string>
+    <string name="projects_create_object_parent">Ġenitur</string>
     <string name="projects_settings_title">Settings</string>
     <string name="projects_settings_tab_general">Ġenerali</string>
     <string name="projects_settings_tab_access">Aċċess</string>
+    <string name="projects_settings_tab_people">Nies</string>
+    <string name="projects_option_icon">Ikona</string>
     <string name="projects_settings_save">Issejvja l-bidliet</string>
     <string name="projects_settings_unsubscribe">Iddiżabbona</string>
     <string name="projects_settings_delete_project">Ħassar proġett</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Talbiet</string>
     <string name="projects_object_tab_attachments">Mehmużin</string>
     <string name="projects_object_tab_links">Links</string>
+    <string name="projects_watchers_watch">Segwi</string>
+    <string name="projects_watchers_unwatch">Ieqaf segwi</string>
     <string name="projects_parent_label">Ġenitur</string>
     <string name="projects_parent_search_placeholder">Fittex</string>
     <string name="projects_links_add">Żid link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Importa d-disinn</string>
     <string name="projects_design_import_choose_template">Agħżel mudell</string>
     <string name="projects_design_replace_title">Tibdel id-disinn?</string>
+    <string name="projects_design_replace">Ibdel</string>
     <string name="projects_classes_add">Żid klassi</string>
     <string name="projects_classes_add_dialog_title">Żid klassi</string>
     <string name="projects_classes_create">Oħloq</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Maħluq</string>
     <string name="projects_views_sort_updated">Aġġornat</string>
     <string name="projects_views_sort_rank">Rank</string>
-
-    <string name="notification_channel_projects">Notifiki ta\' Projects</string>
     <string name="projects_project_not_found">Proġett mhux misjub</string>
+
 </resources>

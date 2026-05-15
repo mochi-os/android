@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Nesne oluştur</string>
     <string name="projects_create_object_type">Tür</string>
     <string name="projects_create_object_title_field">Başlık</string>
+    <string name="projects_create_object_parent">Üst</string>
     <string name="projects_settings_title">Ayarlar</string>
     <string name="projects_settings_tab_general">Genel</string>
     <string name="projects_settings_tab_access">Erişim</string>
+    <string name="projects_settings_tab_people">Kişiler</string>
+    <string name="projects_option_icon">Simge</string>
     <string name="projects_settings_save">Değişiklikleri kaydet</string>
     <string name="projects_settings_unsubscribe">Aboneliği iptal et</string>
     <string name="projects_settings_delete_project">Projeyi sil</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">İstekler</string>
     <string name="projects_object_tab_attachments">Ekler</string>
     <string name="projects_object_tab_links">Bağlantılar</string>
+    <string name="projects_watchers_watch">İzle</string>
+    <string name="projects_watchers_unwatch">İzlemeyi bırak</string>
     <string name="projects_parent_label">Üst</string>
     <string name="projects_parent_search_placeholder">Ara</string>
     <string name="projects_links_add">Bağlantı ekle</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Tasarımı içe aktar</string>
     <string name="projects_design_import_choose_template">Bir şablon seçin</string>
     <string name="projects_design_replace_title">Tasarım değiştirilsin mi?</string>
+    <string name="projects_design_replace">Değiştir</string>
     <string name="projects_classes_add">Sınıf ekle</string>
     <string name="projects_classes_add_dialog_title">Sınıf ekle</string>
     <string name="projects_classes_create">Oluştur</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Oluşturuldu</string>
     <string name="projects_views_sort_updated">Güncellendi</string>
     <string name="projects_views_sort_rank">Sıralama</string>
-
-    <string name="notification_channel_projects">Projects bildirimleri</string>
     <string name="projects_project_not_found">Proje bulunamadı</string>
+
 </resources>

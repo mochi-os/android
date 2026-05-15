@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Jieun obyék</string>
     <string name="projects_create_object_type">Tipe</string>
     <string name="projects_create_object_title_field">Judul</string>
+    <string name="projects_create_object_parent">Kolot</string>
     <string name="projects_settings_title">Setélan</string>
     <string name="projects_settings_tab_general">Umum</string>
     <string name="projects_settings_tab_access">Aksés</string>
+    <string name="projects_settings_tab_people">Jalma</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Simpen parobahan</string>
     <string name="projects_settings_unsubscribe">Hentikeun langganan</string>
     <string name="projects_settings_delete_project">Hapus proyék</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Pamundut</string>
     <string name="projects_object_tab_attachments">Lampiran</string>
     <string name="projects_object_tab_links">Tautan</string>
+    <string name="projects_watchers_watch">Awas</string>
+    <string name="projects_watchers_unwatch">Eureun nempo</string>
     <string name="projects_parent_label">Kolot</string>
     <string name="projects_parent_search_placeholder">Paluruh</string>
     <string name="projects_links_add">Tambah link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Impor desain</string>
     <string name="projects_design_import_choose_template">Pilih témplat</string>
     <string name="projects_design_replace_title">Ganti desain?</string>
+    <string name="projects_design_replace">Ganti</string>
     <string name="projects_classes_add">Tambah kelas</string>
     <string name="projects_classes_add_dialog_title">Tambah kelas</string>
     <string name="projects_classes_create">Jieun</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Dijieun</string>
     <string name="projects_views_sort_updated">Diapdet</string>
     <string name="projects_views_sort_rank">Pangkat</string>
-
-    <string name="notification_channel_projects">Bewara Projects</string>
     <string name="projects_project_not_found">Proyék teu kapanggih</string>
+
 </resources>

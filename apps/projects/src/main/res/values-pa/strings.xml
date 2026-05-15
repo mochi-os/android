@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ਆਬਜੈਕਟ ਬਣਾਓ</string>
     <string name="projects_create_object_type">ਕਿਸਮ</string>
     <string name="projects_create_object_title_field">ਸਿਰਲੇਖ</string>
+    <string name="projects_create_object_parent">ਪੇਰੈਂਟ</string>
     <string name="projects_settings_title">ਸੈਟਿੰਗਾਂ</string>
     <string name="projects_settings_tab_general">ਆਮ</string>
     <string name="projects_settings_tab_access">ਪਹੁੰਚ</string>
+    <string name="projects_settings_tab_people">ਲੋਕ</string>
+    <string name="projects_option_icon">ਆਈਕਨ</string>
     <string name="projects_settings_save">ਤਬਦੀਲੀਆਂ ਸੰਭਾਲੋ</string>
     <string name="projects_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="projects_settings_delete_project">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">ਬੇਨਤੀਆਂ</string>
     <string name="projects_object_tab_attachments">ਅਟੈਚਮੈਂਟਾਂ</string>
     <string name="projects_object_tab_links">ਲਿਸਟਿੰਗ ਨਹੀਂ ਮਿਲੀ</string>
+    <string name="projects_watchers_watch">ਦੇਖੋ</string>
+    <string name="projects_watchers_unwatch">ਦੇਖਣਾ ਬੰਦ ਕਰੋ</string>
     <string name="projects_parent_label">ਪੇਰੈਂਟ</string>
     <string name="projects_parent_search_placeholder">ਖੋਜ</string>
     <string name="projects_links_add">ਲਿੰਕ ਜੋੜੋ</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ਡਿਜ਼ਾਇਨ ਆਯਾਤ ਕਰੋ</string>
     <string name="projects_design_import_choose_template">ਟੈਮਪਲੇਟ ਚੁਣੋ</string>
     <string name="projects_design_replace_title">ਡਿਜ਼ਾਈਨ ਬਦਲੀਏ?</string>
+    <string name="projects_design_replace">ਬਦਲੋ</string>
     <string name="projects_classes_add">ਕਲਾਸ ਜੋੜੋ</string>
     <string name="projects_classes_add_dialog_title">ਕਲਾਸ ਜੋੜੋ</string>
     <string name="projects_classes_create">ਬਣਾਓ</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">ਬਣਾਇਆ ਗਿਆ</string>
     <string name="projects_views_sort_updated">ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="projects_views_sort_rank">ਰੈਂਕ</string>
-
-    <string name="notification_channel_projects">Projects ਸੂਚਨਾਵਾਂ</string>
     <string name="projects_project_not_found">ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਮਿਲਿਆ</string>
+
 </resources>

@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Objektum létrehozása</string>
     <string name="projects_create_object_type">Típus</string>
     <string name="projects_create_object_title_field">Cím</string>
+    <string name="projects_create_object_parent">Szülő</string>
     <string name="projects_settings_title">Beállítások</string>
     <string name="projects_settings_tab_general">Általános</string>
     <string name="projects_settings_tab_access">Hozzáférés</string>
+    <string name="projects_settings_tab_people">Személyek</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Módosítások mentése</string>
     <string name="projects_settings_unsubscribe">Leiratkozás</string>
     <string name="projects_settings_delete_project">Projekt törlése</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Kérések</string>
     <string name="projects_object_tab_attachments">Mellékletek</string>
     <string name="projects_object_tab_links">Hivatkozások</string>
+    <string name="projects_watchers_watch">Figyelés</string>
+    <string name="projects_watchers_unwatch">Figyelés leállítása</string>
     <string name="projects_parent_label">Szülő</string>
     <string name="projects_parent_search_placeholder">Keresés</string>
     <string name="projects_links_add">Hivatkozás hozzáadása</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Terv importálása</string>
     <string name="projects_design_import_choose_template">Válassz egy sablont</string>
     <string name="projects_design_replace_title">Lecseréli a tervet?</string>
+    <string name="projects_design_replace">Csere</string>
     <string name="projects_classes_add">Osztály hozzáadása</string>
     <string name="projects_classes_add_dialog_title">Osztály hozzáadása</string>
     <string name="projects_classes_create">Létrehozás</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Létrehozva</string>
     <string name="projects_views_sort_updated">Frissítve</string>
     <string name="projects_views_sort_rank">Rangsor</string>
-
-    <string name="notification_channel_projects">Projects értesítések</string>
     <string name="projects_project_not_found">A projekt nem található</string>
+
 </resources>

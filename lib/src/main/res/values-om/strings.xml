@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Seensi dhorkamee jira</string>
     <string name="auth_email">Imeelii</string>
     <string name="auth_continue">Itti fufi</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Yaada</string>
     <string name="access_level_view">Daawwadhu</string>
     <string name="access_level_none">Tokko illee</string>
+    <string name="banner_label">Bannerii</string>
     <string name="reaction_like">Jaalladha</string>
     <string name="reaction_dislike">Hin jaalladhu</string>
     <string name="reaction_laugh">Kolfi</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Ittan walii gala</string>
     <string name="reaction_disagree">Wal mormi</string>
     <string name="push_service_action_hide">Dhoksi</string>
+    <string name="about_close">Cufi</string>
 
-    <string name="push_service_group">Tajaajila duubaa</string>
 </resources>

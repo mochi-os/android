@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Sõbrad</string>
     <string name="chat_new_search_placeholder">Otsi sõpru</string>
     <string name="chat_message_placeholder">Sõnum</string>
+    <string name="chat_attachment_add">Lisa failid</string>
     <string name="chat_message_attach">Lisa failid</string>
     <string name="chat_settings_title">Vestluse seaded</string>
     <string name="chat_settings_rename_label">Vestluse nimi</string>
     <string name="chat_settings_save">Salvesta</string>
     <string name="chat_settings_members">Liikmed</string>
     <string name="chat_settings_add_member">Lisa liige</string>
+    <string name="chat_settings_add_member_search">Otsi sõpru</string>
     <string name="chat_settings_remove_member">Eemalda</string>
     <string name="chat_settings_remove_member_title">Eemalda liige</string>
     <string name="chat_settings_leave">Lahku vestlusest</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Kustuta vestlus</string>
     <string name="chat_members_empty">Liikmeid pole</string>
     <string name="chat_members_you">Sina</string>
-
-    <string name="notification_channel_chat">Chat teated</string>
     <string name="chat_chat_not_found">Vestlust ei leitud</string>
+
 </resources>

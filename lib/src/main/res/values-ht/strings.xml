@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Aksè refize</string>
     <string name="auth_email">Imèl</string>
     <string name="auth_continue">Kontinye</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Kòmantè</string>
     <string name="access_level_view">Wè</string>
     <string name="access_level_none">Okenn</string>
+    <string name="banner_label">Banyè</string>
     <string name="reaction_like">Renmen</string>
     <string name="reaction_dislike">Pa renmen</string>
     <string name="reaction_laugh">Ri</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Dakò</string>
     <string name="reaction_disagree">Pa dakò</string>
     <string name="push_service_action_hide">Kache</string>
+    <string name="about_close">Fèmen</string>
 
-    <string name="push_service_group">Sèvis nan fon</string>
 </resources>

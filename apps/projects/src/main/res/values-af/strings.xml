@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Skep objek</string>
     <string name="projects_create_object_type">Tipe</string>
     <string name="projects_create_object_title_field">Titel</string>
+    <string name="projects_create_object_parent">Ouer</string>
     <string name="projects_settings_title">Instellings</string>
     <string name="projects_settings_tab_general">Algemeen</string>
     <string name="projects_settings_tab_access">Toegang</string>
+    <string name="projects_settings_tab_people">Mense</string>
+    <string name="projects_option_icon">Ikoon</string>
     <string name="projects_settings_save">Stoor veranderinge</string>
     <string name="projects_settings_unsubscribe">Teken uit</string>
     <string name="projects_settings_delete_project">Verwyder projek</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Versoeke</string>
     <string name="projects_object_tab_attachments">Aanhangsels</string>
     <string name="projects_object_tab_links">Skakels</string>
+    <string name="projects_watchers_watch">Kyk</string>
+    <string name="projects_watchers_unwatch">Hou op kyk</string>
     <string name="projects_parent_label">Ouer</string>
     <string name="projects_parent_search_placeholder">Soek</string>
     <string name="projects_links_add">Voeg skakel by</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Voer ontwerp in</string>
     <string name="projects_design_import_choose_template">Kies \'n sjabloon</string>
     <string name="projects_design_replace_title">Vervang ontwerp?</string>
+    <string name="projects_design_replace">Vervang</string>
     <string name="projects_classes_add">Voeg klas by</string>
     <string name="projects_classes_add_dialog_title">Voeg klas by</string>
     <string name="projects_classes_create">Skep</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Geskep</string>
     <string name="projects_views_sort_updated">Opgedateer</string>
     <string name="projects_views_sort_rank">Rang</string>
-
-    <string name="notification_channel_projects">Projects-kennisgewings</string>
     <string name="projects_project_not_found">Projek nie gevind nie</string>
+
 </resources>

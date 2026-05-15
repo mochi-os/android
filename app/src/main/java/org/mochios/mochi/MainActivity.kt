@@ -10,12 +10,19 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.lifecycleScope
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -97,26 +104,43 @@ class MainActivity : ComponentActivity() {
                         onLocaleChangeRequested = { recreate() },
                         prefetchApps = SUPER_APP_MOCHI_APPS,
                     ) { onLogout ->
-                        // Re-key the NavHost when the alias / shortcut hint
-                        // changes — swapping Projects → Feeds via the launcher
-                        // (singleTask → onNewIntent) updates targetApp; without
-                        // this `key()` the previous feature's back-stack top
-                        // composes for one frame before LaunchedEffect can
-                        // navigate, surfacing as a half-second flash of the
-                        // wrong screen.
-                        key(startApp) {
-                            val navController = rememberNavController()
-                            val pendingLink by PendingDeepLink.link.collectAsState()
-                            LaunchedEffect(pendingLink) {
-                                val link = pendingLink ?: return@LaunchedEffect
-                                navigateToLink(navController, link)
-                                PendingDeepLink.consume()
-                            }
-                            NavHost(navController = navController, startDestination = startDestinationFor(startApp)) {
-                                feedsNavGraph(navController, onLogout = onLogout)
-                                chatNavGraph(navController, onLogout = onLogout)
-                                forumsNavGraph(navController, onLogout = onLogout)
-                                projectsNavGraph(navController, onLogout = onLogout)
+                        // Alias-switch transition. The previous attempt
+                        // (Snapshot-tracked mutableStateOf + key(startApp)
+                        // wrap) still left Android's surface showing the
+                        // last frame of the old feature until Compose
+                        // measured + drew the new NavHost. Wrapping the
+                        // NavHost in Crossfade explicitly animates both
+                        // pages during the swap, so the old feature
+                        // fades out while the new fades in instead of
+                        // staying frozen on screen. The 120ms tween is
+                        // imperceptible for an in-app switch but covers
+                        // the recomposition + first-draw window. The
+                        // outer Box paints the theme background so any
+                        // moment Crossfade hasn't drawn yet is the
+                        // theme colour, not the old pixels.
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(MaterialTheme.colorScheme.background)
+                        ) {
+                            Crossfade(
+                                targetState = startApp,
+                                animationSpec = tween(durationMillis = 120),
+                                label = "alias-switch",
+                            ) { app ->
+                                val navController = rememberNavController()
+                                val pendingLink by PendingDeepLink.link.collectAsState()
+                                LaunchedEffect(pendingLink) {
+                                    val link = pendingLink ?: return@LaunchedEffect
+                                    navigateToLink(navController, link)
+                                    PendingDeepLink.consume()
+                                }
+                                NavHost(navController = navController, startDestination = startDestinationFor(app)) {
+                                    feedsNavGraph(navController, onLogout = onLogout)
+                                    chatNavGraph(navController, onLogout = onLogout)
+                                    forumsNavGraph(navController, onLogout = onLogout)
+                                    projectsNavGraph(navController, onLogout = onLogout)
+                                }
                             }
                         }
                     }

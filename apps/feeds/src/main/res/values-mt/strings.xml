@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Immarka kollox maqru</string>
     <string name="feeds_settings">Settings</string>
     <string name="feeds_no_posts_yet">L-ebda posts s\'issa</string>
+    <string name="feeds_default_sort">Ssortjar default</string>
+    <string name="feeds_suggested_interests_add">Żid</string>
+    <string name="feeds_suggested_interests_dismiss">Aħbi</string>
     <string name="feeds_unread">Mhux moqri</string>
     <string name="feeds_filter_all">Kollha</string>
+    <string name="feeds_sort_label">Issortja</string>
     <string name="feeds_sort_interests">Interessi</string>
     <string name="feeds_sort_new">Ġdid</string>
     <string name="feeds_sort_hot">Sħun</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Aċċetta</string>
     <string name="feeds_rss_url_copied">URL ta\' RSS ikkupjat fil-clipboard</string>
     <string name="feeds_logout">Oħroġ</string>
+    <string name="feeds_ai_account_default">Kont default</string>
     <string name="feeds_ai_mode_off">Diżabbiltat</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + iddedupplika</string>
     <string name="feeds_ai_reset_default">Irriżetta għal default</string>
-
-    <string name="notification_channel_feeds">Notifiki ta\' Feeds</string>
-    <string name="feeds_view_post">Ara l-post</string>
-    <string name="feeds_open_in_browser">Iftaħ fil-browżer</string>
-    <string name="feeds_unable_to_load">Ma jistax jitla\' l-paġna</string>
     <string name="feeds_feed_not_found">Il-feed ma nstabitx</string>
     <string name="feeds_post_not_found">Post mhux misjub</string>
+
 </resources>

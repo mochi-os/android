@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ഒബ്ജക്റ്റ് സൃഷ്ടിക്കുക</string>
     <string name="projects_create_object_type">തരം</string>
     <string name="projects_create_object_title_field">തലക്കെട്ട്</string>
+    <string name="projects_create_object_parent">parent</string>
     <string name="projects_settings_title">ക്രമീകരണങ്ങൾ</string>
     <string name="projects_settings_tab_general">പൊതുവായവ</string>
     <string name="projects_settings_tab_access">ആക്സസ്</string>
+    <string name="projects_settings_tab_people">People</string>
+    <string name="projects_option_icon">ഐക്കൺ</string>
     <string name="projects_settings_save">മാറ്റങ്ങൾ സേവ് ചെയ്യുക</string>
     <string name="projects_settings_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="projects_settings_delete_project">പ്രോജക്റ്റ് ഇല്ലാതാക്കുക</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">ലോഗിൻ ചെയ്യാൻ തിരഞ്ഞെടുത്ത എല്ലാ രീതികളും ആവശ്യപ്പെടുക</string>
     <string name="projects_object_tab_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="projects_object_tab_links">ലിങ്കുകൾ</string>
+    <string name="projects_watchers_watch">നിരീക്ഷിക്കുക</string>
+    <string name="projects_watchers_unwatch">നിരീക്ഷണം നിർത്തുക</string>
     <string name="projects_parent_label">parent</string>
     <string name="projects_parent_search_placeholder">തിരയുക</string>
     <string name="projects_links_add">ലിങ്ക് ചേർക്കുക</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ഡിസൈൻ ഇംപോർട്ട് ചെയ്യുക</string>
     <string name="projects_design_import_choose_template">ഒരു ടെംപ്ലേറ്റ് തിരഞ്ഞെടുക്കുക</string>
     <string name="projects_design_replace_title">മാറ്റിസ്ഥാപിക്കുന്നു...</string>
+    <string name="projects_design_replace">മാറ്റിസ്ഥാപിക്കുക</string>
     <string name="projects_classes_add">ക്ലാസ് ചേർക്കുക</string>
     <string name="projects_classes_add_dialog_title">ക്ലാസ് ചേർക്കുക</string>
     <string name="projects_classes_create">സൃഷ്ടിക്കുക</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">സൃഷ്ടിച്ചു</string>
     <string name="projects_views_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="projects_views_sort_rank">Rate Limiting</string>
-
-    <string name="notification_channel_projects">Projects നോട്ടിഫിക്കേഷനുകൾ</string>
     <string name="projects_project_not_found">പ്രോജക്റ്റ് ലഭ്യമല്ല</string>
+
 </resources>

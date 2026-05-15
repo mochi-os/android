@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Барлығын оқылды деп белгілеу</string>
     <string name="feeds_settings">Параметрлер</string>
     <string name="feeds_no_posts_yet">Жазбалар әлі жоқ</string>
+    <string name="feeds_default_sort">Әдепкі сұрыптау</string>
+    <string name="feeds_suggested_interests_add">Қосу</string>
+    <string name="feeds_suggested_interests_dismiss">Жасыру</string>
     <string name="feeds_unread">Оқылмаған</string>
     <string name="feeds_filter_all">Барлығы</string>
+    <string name="feeds_sort_label">Сұрыптау</string>
     <string name="feeds_sort_interests">Қызығушылықтар</string>
     <string name="feeds_sort_new">Жаңа</string>
     <string name="feeds_sort_hot">Танымал</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Қабылдау</string>
     <string name="feeds_rss_url_copied">RSS URL алмасу буферіне көшірілді</string>
     <string name="feeds_logout">Шығу</string>
+    <string name="feeds_ai_account_default">Әдепкі тіркелгі</string>
     <string name="feeds_ai_mode_off">Өшірілген</string>
     <string name="feeds_ai_mode_tag">Тег</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тегтеу + қайталануды жою</string>
     <string name="feeds_ai_reset_default">Әдепкіге қайтару</string>
-
-    <string name="notification_channel_feeds">Feeds хабарландырулары</string>
-    <string name="feeds_view_post">Жазбаны қарау</string>
-    <string name="feeds_open_in_browser">Браузерде ашу</string>
-    <string name="feeds_unable_to_load">Бетті жүктеу мүмкін емес</string>
     <string name="feeds_feed_not_found">Таспа табылмады</string>
     <string name="feeds_post_not_found">Жазба табылмады</string>
+
 </resources>

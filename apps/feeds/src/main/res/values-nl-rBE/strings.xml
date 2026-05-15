@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Alles als gelezen markeren</string>
     <string name="feeds_settings">Instellingen</string>
     <string name="feeds_no_posts_yet">Nog geen berichten</string>
+    <string name="feeds_default_sort">Standaardsortering</string>
+    <string name="feeds_suggested_interests_add">Toevoegen</string>
+    <string name="feeds_suggested_interests_dismiss">Verbergen</string>
     <string name="feeds_unread">Ongelezen</string>
     <string name="feeds_filter_all">Alle</string>
+    <string name="feeds_sort_label">Sorteren</string>
     <string name="feeds_sort_interests">Interesses</string>
     <string name="feeds_sort_new">Nieuw</string>
     <string name="feeds_sort_hot">Populair</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Accepteren</string>
     <string name="feeds_rss_url_copied">RSS-URL gekopieerd naar klembord</string>
     <string name="feeds_logout">Uitloggen</string>
+    <string name="feeds_ai_account_default">Standaardaccount</string>
     <string name="feeds_ai_mode_off">Uitgeschakeld</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + dedupliceren</string>
     <string name="feeds_ai_reset_default">Terugzetten naar standaard</string>
-
-    <string name="notification_channel_feeds">Feeds-meldingen</string>
-    <string name="feeds_view_post">Bericht bekijken</string>
-    <string name="feeds_open_in_browser">Openen in browser</string>
-    <string name="feeds_unable_to_load">Pagina kan niet worden geladen</string>
     <string name="feeds_feed_not_found">Feed niet gevonden</string>
     <string name="feeds_post_not_found">Bericht niet gevonden</string>
+
 </resources>

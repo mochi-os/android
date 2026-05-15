@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Gawé objek</string>
     <string name="projects_create_object_type">Jenis</string>
     <string name="projects_create_object_title_field">Judul</string>
+    <string name="projects_create_object_parent">Induk</string>
     <string name="projects_settings_title">Setelan</string>
     <string name="projects_settings_tab_general">Umum</string>
     <string name="projects_settings_tab_access">Akses</string>
+    <string name="projects_settings_tab_people">Wong</string>
+    <string name="projects_option_icon">Ikon</string>
     <string name="projects_settings_save">Simpen owahan</string>
     <string name="projects_settings_unsubscribe">Mbatalaké langganan</string>
     <string name="projects_settings_delete_project">Busak proyek</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Panyuwunan</string>
     <string name="projects_object_tab_attachments">Lampiran</string>
     <string name="projects_object_tab_links">Tautan</string>
+    <string name="projects_watchers_watch">Tonton</string>
+    <string name="projects_watchers_unwatch">Mandheg nonton</string>
     <string name="projects_parent_label">Induk</string>
     <string name="projects_parent_search_placeholder">Goleki</string>
     <string name="projects_links_add">Tambah link</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Impor desain</string>
     <string name="projects_design_import_choose_template">Pilih cithakan</string>
     <string name="projects_design_replace_title">Ganti désain?</string>
+    <string name="projects_design_replace">Ganti</string>
     <string name="projects_classes_add">Tambah kelas</string>
     <string name="projects_classes_add_dialog_title">Tambah kelas</string>
     <string name="projects_classes_create">Gawé</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Digawé</string>
     <string name="projects_views_sort_updated">Wis dianyari</string>
     <string name="projects_views_sort_rank">Peringkat</string>
-
-    <string name="notification_channel_projects">Kabar Projects</string>
     <string name="projects_project_not_found">Proyèk ora ditemokaké</string>
+
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">A kọ̀ ìwọlé</string>
     <string name="auth_email">Ímẹ́ẹ̀lì</string>
     <string name="auth_continue">Tẹ̀síwájú</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Àlàyé</string>
     <string name="access_level_view">Wo</string>
     <string name="access_level_none">Kòsí</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Fẹran</string>
     <string name="reaction_dislike">Kò fẹ́</string>
     <string name="reaction_laugh">Rẹrin</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Gba</string>
     <string name="reaction_disagree">Tako</string>
     <string name="push_service_action_hide">Fi pamọ́</string>
+    <string name="about_close">Tì</string>
 
-    <string name="push_service_group">Iṣẹ́ ẹ̀yìnwá</string>
 </resources>

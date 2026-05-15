@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">접근이 거부되었어요</string>
     <string name="auth_email">이메일</string>
     <string name="auth_continue">계속</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">댓글</string>
     <string name="access_level_view">보기</string>
     <string name="access_level_none">없음</string>
+    <string name="banner_label">배너</string>
     <string name="reaction_like">좋아요</string>
     <string name="reaction_dislike">싫어요</string>
     <string name="reaction_laugh">웃음</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">동의</string>
     <string name="reaction_disagree">동의하지 않음</string>
     <string name="push_service_action_hide">숨기기</string>
+    <string name="about_close">닫기</string>
 
-    <string name="push_service_group">백그라운드 서비스</string>
 </resources>

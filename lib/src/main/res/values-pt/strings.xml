@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">Acesso negado</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Continuar</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">Comentário</string>
     <string name="access_level_view">Ver</string>
     <string name="access_level_none">Nenhum</string>
+    <string name="banner_label">Banner</string>
     <string name="reaction_like">Gosto</string>
     <string name="reaction_dislike">Não gosto</string>
     <string name="reaction_laugh">Riso</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">Concordo</string>
     <string name="reaction_disagree">Discordo</string>
     <string name="push_service_action_hide">Ocultar</string>
+    <string name="about_close">Fechar</string>
 
-    <string name="push_service_group">Serviço em segundo plano</string>
 </resources>

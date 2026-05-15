@@ -49,6 +49,10 @@ data class PostDetailResponse(
     val permissions: Permissions = Permissions()
 )
 
+data class PostImageResponse(
+    val image: String = ""
+)
+
 data class PostCreateResponse(
     val id: String = ""
 )
@@ -275,6 +279,12 @@ interface FeedsApi {
         @Path("postId") postId: String
     ): Response<ApiResponse<PostDetailResponse>>
 
+    @GET("{feedId}/-/{postId}/image")
+    suspend fun getPostImage(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String
+    ): Response<ApiResponse<PostImageResponse>>
+
     @POST("{feedId}/-/{postId}/comment/create")
     suspend fun createComment(
         @Path("feedId") feedId: String,
@@ -415,11 +425,17 @@ interface FeedsApi {
 
     // --- AI ---
 
+    @GET("-/accounts/list")
+    suspend fun listAccounts(
+        @Query("capability") capability: String,
+    ): Response<ApiResponse<List<org.mochios.android.model.Account>>>
+
     @FormUrlEncoded
     @POST("{feedId}/-/ai/settings")
     suspend fun setAiSettings(
         @Path("feedId") feedId: String,
-        @Field("mode") mode: String
+        @Field("mode") mode: String,
+        @Field("account") account: Int = 0,
     ): Response<ApiResponse<SuccessResponse>>
 
     @GET("{feedId}/-/ai/prompts/get")

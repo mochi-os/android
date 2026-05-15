@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_brand">Mochi</string>
     <string name="error_access_denied">ဝင်ရောက်ခွင့် ငြင်းပယ်ခံရသည်</string>
     <string name="auth_email">အီးမေးလ်</string>
     <string name="auth_continue">ဆက်လက်လုပ်ဆောင်မည်</string>
@@ -38,6 +37,7 @@
     <string name="access_level_comment">မှတ်ချက်</string>
     <string name="access_level_view">ကြည့်ရှုမည်</string>
     <string name="access_level_none">မရှိ</string>
+    <string name="banner_label">ပိုစတာ</string>
     <string name="reaction_like">နှစ်သက်</string>
     <string name="reaction_dislike">မကြိုက်ပါ</string>
     <string name="reaction_laugh">ရယ်</string>
@@ -48,6 +48,6 @@
     <string name="reaction_agree">သဘောတူသည်</string>
     <string name="reaction_disagree">သဘောမတူပါ</string>
     <string name="push_service_action_hide">ဝှက်</string>
+    <string name="about_close">ပိတ်မည်</string>
 
-    <string name="push_service_group">နောက်ခံဝန်ဆောင်မှု</string>
 </resources>

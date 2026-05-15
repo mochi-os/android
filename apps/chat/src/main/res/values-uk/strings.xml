@@ -14,12 +14,14 @@
     <string name="chat_new_friends">Друзі</string>
     <string name="chat_new_search_placeholder">Пошук друзів</string>
     <string name="chat_message_placeholder">Повідомлення</string>
+    <string name="chat_attachment_add">Додати файли</string>
     <string name="chat_message_attach">Додати файли</string>
     <string name="chat_settings_title">Налаштування чату</string>
     <string name="chat_settings_rename_label">Назва чату</string>
     <string name="chat_settings_save">Зберегти</string>
     <string name="chat_settings_members">Учасники</string>
     <string name="chat_settings_add_member">Додати учасника</string>
+    <string name="chat_settings_add_member_search">Пошук друзів</string>
     <string name="chat_settings_remove_member">Видалити</string>
     <string name="chat_settings_remove_member_title">Видалити учасника</string>
     <string name="chat_settings_leave">Покинути чат</string>
@@ -27,7 +29,6 @@
     <string name="chat_settings_delete_title">Видалити чат</string>
     <string name="chat_members_empty">Немає учасників</string>
     <string name="chat_members_you">Ви</string>
-
-    <string name="notification_channel_chat">Сповіщення Chat</string>
     <string name="chat_chat_not_found">Чат не знайдено</string>
+
 </resources>

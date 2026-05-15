@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Отметить все прочитанным</string>
     <string name="feeds_settings">Настройки</string>
     <string name="feeds_no_posts_yet">Публикаций пока нет</string>
+    <string name="feeds_default_sort">Сортировка по умолчанию</string>
+    <string name="feeds_suggested_interests_add">Добавить</string>
+    <string name="feeds_suggested_interests_dismiss">Скрыть</string>
     <string name="feeds_unread">Непрочитанные</string>
     <string name="feeds_filter_all">Все</string>
+    <string name="feeds_sort_label">Сортировка</string>
     <string name="feeds_sort_interests">Интересы</string>
     <string name="feeds_sort_new">Новый</string>
     <string name="feeds_sort_hot">Популярное</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Принять</string>
     <string name="feeds_rss_url_copied">URL RSS скопирован в буфер обмена</string>
     <string name="feeds_logout">Выйти</string>
+    <string name="feeds_ai_account_default">Аккаунт по умолчанию</string>
     <string name="feeds_ai_mode_off">Отключено</string>
     <string name="feeds_ai_mode_tag">Тег</string>
     <string name="feeds_ai_mode_tag_deduplicate">Тег + удалить дубликаты</string>
     <string name="feeds_ai_reset_default">Сбросить к значениям по умолчанию</string>
-
-    <string name="notification_channel_feeds">Уведомления Feeds</string>
-    <string name="feeds_view_post">Показать публикацию</string>
-    <string name="feeds_open_in_browser">Открыть в браузере</string>
-    <string name="feeds_unable_to_load">Не удалось загрузить страницу</string>
     <string name="feeds_feed_not_found">Лента не найдена</string>
     <string name="feeds_post_not_found">Публикация не найдена</string>
+
 </resources>

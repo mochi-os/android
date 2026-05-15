@@ -16,8 +16,12 @@
     <string name="feeds_mark_all_read">Hunda dubbifame</string>
     <string name="feeds_settings">Qindaa\'inoota</string>
     <string name="feeds_no_posts_yet">Hanga ammaatti maxxansi hin jiru</string>
+    <string name="feeds_default_sort">Tartiiba idilee</string>
+    <string name="feeds_suggested_interests_add">Dabali</string>
+    <string name="feeds_suggested_interests_dismiss">Dhoksi</string>
     <string name="feeds_unread">Hin dubbifamne</string>
     <string name="feeds_filter_all">Hunda</string>
+    <string name="feeds_sort_label">Sirreessi</string>
     <string name="feeds_sort_interests">Fedhota</string>
     <string name="feeds_sort_new">Haaraa</string>
     <string name="feeds_sort_hot">Ho\'aa</string>
@@ -68,15 +72,12 @@
     <string name="feeds_suggested_credibility_accept">Fudhadhu</string>
     <string name="feeds_rss_url_copied">URL RSS kilipboordiitti garagalfame</string>
     <string name="feeds_logout">Ba\'i</string>
+    <string name="feeds_ai_account_default">Akkaawuntii idilee</string>
     <string name="feeds_ai_mode_off">Cufame</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + dachaa haqi</string>
     <string name="feeds_ai_reset_default">Gara durtiitti deebisi</string>
-
-    <string name="notification_channel_feeds">Beeksisawwan Feeds</string>
-    <string name="feeds_view_post">Barreeffama ilaali</string>
-    <string name="feeds_open_in_browser">Sakatta’aatti banaa</string>
-    <string name="feeds_unable_to_load">Fuula fe\'uu hin danda\'amne</string>
     <string name="feeds_feed_not_found">Feed hin argamne</string>
     <string name="feeds_post_not_found">Maxxansi hin argamne</string>
+
 </resources>

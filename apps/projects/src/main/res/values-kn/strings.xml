@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ಆಬ್ಜೆಕ್ಟ್ ರಚಿಸಿ</string>
     <string name="projects_create_object_type">ಪ್ರಕಾರ</string>
     <string name="projects_create_object_title_field">ಶೀರ್ಷಿಕೆ</string>
+    <string name="projects_create_object_parent">ಪೋಷಕ</string>
     <string name="projects_settings_title">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="projects_settings_tab_general">ಸಾಮಾನ್ಯ</string>
     <string name="projects_settings_tab_access">ಪ್ರವೇಶ</string>
+    <string name="projects_settings_tab_people">People</string>
+    <string name="projects_option_icon">ಐಕಾನ್</string>
     <string name="projects_settings_save">ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ</string>
     <string name="projects_settings_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="projects_settings_delete_project">ಪ್ರಾಜೆಕ್ಟ್ ಅಳಿಸಿ</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">ರಿಕ್ವೆಸ್ಟ್‌ಗಳು</string>
     <string name="projects_object_tab_attachments">ಲಗತ್ತುಗಳು</string>
     <string name="projects_object_tab_links">ಲಿಂಕ್‌ಗಳು</string>
+    <string name="projects_watchers_watch">ವೀಕ್ಷಿಸಿ</string>
+    <string name="projects_watchers_unwatch">ವೀಕ್ಷಿಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ</string>
     <string name="projects_parent_label">ಪೋಷಕ</string>
     <string name="projects_parent_search_placeholder">ಹುಡುಕಿ</string>
     <string name="projects_links_add">ಲಿಂಕ್ ಸೇರಿಸಿ</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">ಡಿಸೈನ್ ಇಂಪೋರ್ಟ್</string>
     <string name="projects_design_import_choose_template">ಟೆಂಪ್ಲೇಟ್ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="projects_design_replace_title">ಡಿಸೈನ್ ಬದಲಾಯಿಸಬೇಕೆ?</string>
+    <string name="projects_design_replace">ಬದಲಾಯಿಸಿ</string>
     <string name="projects_classes_add">ಕ್ಲಾಸ್ ಸೇರಿಸಿ</string>
     <string name="projects_classes_add_dialog_title">ಕ್ಲಾಸ್ ಸೇರಿಸಿ</string>
     <string name="projects_classes_create">ರಚಿಸಿ</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">ರಚಿಸಲಾಗಿದೆ</string>
     <string name="projects_views_sort_updated">ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="projects_views_sort_rank">ರ‍್ಯಾಂಕ್</string>
-
-    <string name="notification_channel_projects">Projects ಸೂಚನೆಗಳು</string>
     <string name="projects_project_not_found">ಪ್ರಾಜೆಕ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
+
 </resources>

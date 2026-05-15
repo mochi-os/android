@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">ऑब्जेक्ट तयार करा</string>
     <string name="projects_create_object_type">प्रकार</string>
     <string name="projects_create_object_title_field">शीर्षक</string>
+    <string name="projects_create_object_parent">पॅरेंट</string>
     <string name="projects_settings_title">सेटिंग्ज</string>
     <string name="projects_settings_tab_general">सामान्य</string>
     <string name="projects_settings_tab_access">प्रवेश</string>
+    <string name="projects_settings_tab_people">लोक</string>
+    <string name="projects_option_icon">आयकॉन</string>
     <string name="projects_settings_save">बदल जतन करा</string>
     <string name="projects_settings_unsubscribe">अनसबस्क्राइब करा</string>
     <string name="projects_settings_delete_project">प्रकल्प हटवा</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">विनंत्या</string>
     <string name="projects_object_tab_attachments">संलग्नके</string>
     <string name="projects_object_tab_links">लिंक्स</string>
+    <string name="projects_watchers_watch">पहा</string>
+    <string name="projects_watchers_unwatch">पाहणे थांबवा</string>
     <string name="projects_parent_label">पॅरेंट</string>
     <string name="projects_parent_search_placeholder">शोधा</string>
     <string name="projects_links_add">लिंक जोडा</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">डिझाइन इम्पोर्ट करा</string>
     <string name="projects_design_import_choose_template">टेम्पलेट निवडा</string>
     <string name="projects_design_replace_title">डिझाइन बदलायचे?</string>
+    <string name="projects_design_replace">बदला</string>
     <string name="projects_classes_add">वर्ग जोडा</string>
     <string name="projects_classes_add_dialog_title">वर्ग जोडा</string>
     <string name="projects_classes_create">तयार करा</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">तयार केले</string>
     <string name="projects_views_sort_updated">अपडेट केले</string>
     <string name="projects_views_sort_rank">क्रमांक</string>
-
-    <string name="notification_channel_projects">Projects सूचना</string>
     <string name="projects_project_not_found">प्रोजेक्ट सापडला नाही</string>
+
 </resources>

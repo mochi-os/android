@@ -36,9 +36,12 @@
     <string name="projects_create_object_title">Búa til hlut</string>
     <string name="projects_create_object_type">Tegund</string>
     <string name="projects_create_object_title_field">Titill</string>
+    <string name="projects_create_object_parent">Foreldri</string>
     <string name="projects_settings_title">Stillingar</string>
     <string name="projects_settings_tab_general">Almennt</string>
     <string name="projects_settings_tab_access">Aðgangur</string>
+    <string name="projects_settings_tab_people">Fólk</string>
+    <string name="projects_option_icon">Tákn</string>
     <string name="projects_settings_save">Vista breytingar</string>
     <string name="projects_settings_unsubscribe">Afskrá áskrift</string>
     <string name="projects_settings_delete_project">Eyða verkefni</string>
@@ -57,6 +60,8 @@
     <string name="projects_object_tab_requests">Beiðnir</string>
     <string name="projects_object_tab_attachments">Viðhengi</string>
     <string name="projects_object_tab_links">Tenglar</string>
+    <string name="projects_watchers_watch">Fylgjast með</string>
+    <string name="projects_watchers_unwatch">Hætta að fylgjast með</string>
     <string name="projects_parent_label">Foreldri</string>
     <string name="projects_parent_search_placeholder">Leita</string>
     <string name="projects_links_add">Bæta við tengli</string>
@@ -110,6 +115,7 @@
     <string name="projects_design_import_dialog_title">Flytja inn hönnun</string>
     <string name="projects_design_import_choose_template">Veldu sniðmát</string>
     <string name="projects_design_replace_title">Skipta út hönnun?</string>
+    <string name="projects_design_replace">Skipta út</string>
     <string name="projects_classes_add">Bæta við flokki</string>
     <string name="projects_classes_add_dialog_title">Bæta við flokki</string>
     <string name="projects_classes_create">Búa til</string>
@@ -151,7 +157,6 @@
     <string name="projects_views_sort_created">Búið til</string>
     <string name="projects_views_sort_updated">Uppfært</string>
     <string name="projects_views_sort_rank">Röð</string>
-
-    <string name="notification_channel_projects">Projects-tilkynningar</string>
     <string name="projects_project_not_found">Verkefni fannst ekki</string>
+
 </resources>
