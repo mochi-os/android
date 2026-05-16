@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">ព័ត៌មានបង្ហាញ</string>
     <string name="launcher_chat">ជជែក</string>
     <string name="launcher_forums">វេទិកា</string>
     <string name="launcher_projects">គម្រោង</string>
+    <string name="launcher_settings">ការកំណត់</string>
+
 </resources>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Hírcsatornák</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Fórumok</string>
     <string name="launcher_projects">Projektek</string>
+    <string name="launcher_settings">Beállítások</string>
+
 </resources>

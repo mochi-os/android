@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Jerukan labarai</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forums</string>
     <string name="launcher_projects">Projects</string>
+    <string name="launcher_settings">Saitunan</string>
+
 </resources>

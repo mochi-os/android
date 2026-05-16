@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi հոսք</string>
-
     <string name="launcher_feeds">Հոսքեր</string>
     <string name="launcher_chat">Զրույցի ID</string>
     <string name="launcher_forums">Ֆորումներ</string>
     <string name="launcher_projects">Նախագծեր</string>
+    <string name="launcher_settings">Կարգավորումներ</string>
+
 </resources>

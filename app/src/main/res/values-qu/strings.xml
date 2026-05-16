@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Feedkuna</string>
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forokuna</string>
     <string name="launcher_projects">Proyectokuna</string>
+    <string name="launcher_settings">Wakichiykuna</string>
+
 </resources>

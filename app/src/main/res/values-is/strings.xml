@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Streymi</string>
     <string name="launcher_chat">Spjall</string>
     <string name="launcher_forums">Spjallborð</string>
     <string name="launcher_projects">Verkefni</string>
+    <string name="launcher_settings">Stillingar</string>
+
 </resources>

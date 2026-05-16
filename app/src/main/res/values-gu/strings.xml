@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">ફીડ્સ</string>
     <string name="launcher_chat">ચેટ</string>
     <string name="launcher_forums">ફોરમ્સ</string>
     <string name="launcher_projects">પ્રોજેક્ટ્સ</string>
+    <string name="launcher_settings">સેટિંગ્સ</string>
+
 </resources>

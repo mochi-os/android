@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Фидҳо</string>
     <string name="launcher_chat">Чат</string>
     <string name="launcher_forums">Форумҳо</string>
     <string name="launcher_projects">Лоиҳаҳо</string>
+    <string name="launcher_settings">Танзимот</string>
+
 </resources>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">פֿידן</string>
     <string name="launcher_chat">שמועס</string>
     <string name="launcher_forums">פֿאָרומס</string>
     <string name="launcher_projects">פּראָיעקטן</string>
+    <string name="launcher_settings">אײַנשטעלונגען</string>
+
 </resources>

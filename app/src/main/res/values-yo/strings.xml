@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Àwọn ìjì</string>
     <string name="launcher_chat">Ìjíròrò</string>
     <string name="launcher_forums">Àwọn forum</string>
     <string name="launcher_projects">Àwọn project</string>
+    <string name="launcher_settings">Àwọn ìṣètò</string>
+
 </resources>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Amafidi</string>
     <string name="launcher_chat">Ingxoxo</string>
     <string name="launcher_forums">Izinkundla</string>
     <string name="launcher_projects">Amaphrojekthi</string>
+    <string name="launcher_settings">Izilungiselelo</string>
+
 </resources>

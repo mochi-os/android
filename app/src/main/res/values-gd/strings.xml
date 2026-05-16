@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Inbhirean</string>
     <string name="launcher_chat">Còmhradh</string>
     <string name="launcher_forums">Fòraman</string>
     <string name="launcher_projects">Pròiseactan</string>
+    <string name="launcher_settings">Roghainnean</string>
+
 </resources>

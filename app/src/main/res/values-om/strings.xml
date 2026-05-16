@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Feed-iiwwan</string>
     <string name="launcher_chat">Chaattii</string>
     <string name="launcher_forums">Foramiiwwan</string>
     <string name="launcher_projects">Pirojektota</string>
+    <string name="launcher_settings">Qindaa\'inoota</string>
+
 </resources>

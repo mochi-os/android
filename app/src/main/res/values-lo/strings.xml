@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">ຟີດ</string>
     <string name="launcher_chat">ແຊັດ</string>
     <string name="launcher_forums">ກະດານສົນທະນາ</string>
     <string name="launcher_projects">ໂຄງການ</string>
+    <string name="launcher_settings">ການຕັ້ງຄ່າ</string>
+
 </resources>

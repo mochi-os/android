@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">ഫീഡുകൾ</string>
     <string name="launcher_chat">ചാറ്റ്</string>
     <string name="launcher_forums">ഫോറങ്ങൾ</string>
     <string name="launcher_projects">prompt സേവ് ചെയ്തു</string>
+    <string name="launcher_settings">ക്രമീകരണങ്ങൾ</string>
+
 </resources>

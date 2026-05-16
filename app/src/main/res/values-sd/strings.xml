@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">فيڊز</string>
     <string name="launcher_chat">چيٽ</string>
     <string name="launcher_forums">فورمَ</string>
     <string name="launcher_projects">پروجيڪٽ</string>
+    <string name="launcher_settings">سيٽنگون</string>
+
 </resources>

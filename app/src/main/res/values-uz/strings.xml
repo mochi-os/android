@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mochi</string>
-
     <string name="launcher_feeds">Tasmalar</string>
     <string name="launcher_chat">Suhbat</string>
     <string name="launcher_forums">Forumlar</string>
     <string name="launcher_projects">Loyihalar</string>
+    <string name="launcher_settings">Sozlamalar</string>
+
 </resources>
