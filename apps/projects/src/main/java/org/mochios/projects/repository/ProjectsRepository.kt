@@ -160,12 +160,12 @@ class ProjectsRepository @Inject constructor(
     suspend fun getAccess(projectId: String): List<AccessRule> =
         api.getAccess(projectId).unwrap().rules
 
-    suspend fun setAccess(projectId: String, subject: String, operation: String) {
-        api.setAccess(projectId, subject, operation).unwrap()
+    suspend fun setAccess(projectId: String, subject: String, level: String) {
+        api.setAccess(projectId, subject, level).unwrap()
     }
 
-    suspend fun revokeAccess(projectId: String, id: Int) {
-        api.revokeAccess(projectId, id).unwrap()
+    suspend fun revokeAccess(projectId: String, subject: String) {
+        api.revokeAccess(projectId, subject).unwrap()
     }
 
     // ---- Objects ----

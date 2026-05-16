@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Okuthunyelwe</string>
     <string name="forums_access_level_none">Lutho</string>
     <string name="forums_members_empty">Awekho amalungu</string>
+    <string name="forums_banner_dismiss">Cashisa ibhana</string>
     <string name="forums_ai_mode_tag">Ithegi</string>
     <string name="forums_ai_account_default">I-akhawunti ezenzakalelayo</string>
     <string name="forums_ai_prompt_reset">Setha kabusha kokuzenzakalelayo</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Uhlobo</string>
     <string name="forums_moderation_restriction_type_muted">Thulisa</string>
     <string name="forums_moderation_restriction_type_banned">Vimba</string>
+    <string name="forums_moderation_section_premoderation">Ukulawula kuqala</string>
+    <string name="forums_moderation_section_ratelimiting">Ukukhawulela Izinga</string>
+    <string name="forums_moderation_require_posts">Funa imvume yokwabiwayo okusha</string>
+    <string name="forums_moderation_require_comments">Funa imvume yamazwana amasha</string>
+    <string name="forums_moderation_require_new_users">Funa imvume yabasebenzisi abasha</string>
+    <string name="forums_moderation_new_user_days">Umkhawulo womsebenzisi omusha:</string>
+    <string name="forums_moderation_post_limit">Umkhawulo wokwabiwayo</string>
+    <string name="forums_moderation_comment_limit">Umkhawulo wombono</string>
+    <string name="forums_moderation_limit_window">Ubude bewindi</string>
     <string name="forums_report_reason">Isizathu</string>
     <string name="forums_report_details">Imininingwane</string>
     <string name="forums_report_submit">Hambisa umbiko</string>

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Пост</string>
     <string name="forums_access_level_none">Эч кимиси</string>
     <string name="forums_members_empty">Мүчөлөр жок</string>
+    <string name="forums_banner_dismiss">Баннерди четке кагуу</string>
     <string name="forums_ai_mode_tag">Тег</string>
     <string name="forums_ai_account_default">Демейки аккаунт</string>
     <string name="forums_ai_prompt_reset">Демейкиге кайтаруу</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Тип</string>
     <string name="forums_moderation_restriction_type_muted">Үнсүздөө</string>
     <string name="forums_moderation_restriction_type_banned">Тыюу салуу</string>
+    <string name="forums_moderation_section_premoderation">Алдын ала модерация</string>
+    <string name="forums_moderation_section_ratelimiting">Ылдамдыкты чектөө</string>
+    <string name="forums_moderation_require_posts">Жаңы посттор үчүн бекитүүнү талап кылуу</string>
+    <string name="forums_moderation_require_comments">Жаңы комментарийлер үчүн бекитүүнү талап кылуу</string>
+    <string name="forums_moderation_require_new_users">Жаңы колдонуучулар үчүн бекитүүнү талап кылуу</string>
+    <string name="forums_moderation_new_user_days">Жаңы колдонуучу босогосу:</string>
+    <string name="forums_moderation_post_limit">Пост чеги</string>
+    <string name="forums_moderation_comment_limit">Комментарий чеги</string>
+    <string name="forums_moderation_limit_window">Терезенин узактыгы</string>
     <string name="forums_report_reason">Себеп</string>
     <string name="forums_report_details">Деталдар</string>
     <string name="forums_report_submit">Доклад жөнөтүү</string>

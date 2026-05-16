@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">게시물</string>
     <string name="forums_access_level_none">없음</string>
     <string name="forums_members_empty">멤버가 없어요</string>
+    <string name="forums_banner_dismiss">배너 닫기</string>
     <string name="forums_ai_mode_tag">태그</string>
     <string name="forums_ai_account_default">기본 계정</string>
     <string name="forums_ai_prompt_reset">기본값으로 재설정</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">유형</string>
     <string name="forums_moderation_restriction_type_muted">음소거</string>
     <string name="forums_moderation_restriction_type_banned">차단</string>
+    <string name="forums_moderation_section_premoderation">사전 모더레이션</string>
+    <string name="forums_moderation_section_ratelimiting">속도 제한</string>
+    <string name="forums_moderation_require_posts">새 게시물에 승인이 필요해요</string>
+    <string name="forums_moderation_require_comments">새 댓글에 승인이 필요해요</string>
+    <string name="forums_moderation_require_new_users">새 사용자에 승인이 필요해요</string>
+    <string name="forums_moderation_new_user_days">신규 사용자 임계값:</string>
+    <string name="forums_moderation_post_limit">게시물 한도</string>
+    <string name="forums_moderation_comment_limit">댓글 제한</string>
+    <string name="forums_moderation_limit_window">창 지속 시간</string>
     <string name="forums_report_reason">사유</string>
     <string name="forums_report_details">세부 정보</string>
     <string name="forums_report_submit">신고 제출</string>

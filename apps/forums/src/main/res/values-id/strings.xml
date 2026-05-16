@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Postingan</string>
     <string name="forums_access_level_none">Tidak ada</string>
     <string name="forums_members_empty">Tidak ada anggota</string>
+    <string name="forums_banner_dismiss">Tutup banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akun default</string>
     <string name="forums_ai_prompt_reset">Reset ke default</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipe</string>
     <string name="forums_moderation_restriction_type_muted">Bisukan</string>
     <string name="forums_moderation_restriction_type_banned">Blokir</string>
+    <string name="forums_moderation_section_premoderation">Pra-moderasi</string>
+    <string name="forums_moderation_section_ratelimiting">Pembatasan Laju</string>
+    <string name="forums_moderation_require_posts">Memerlukan persetujuan untuk postingan baru</string>
+    <string name="forums_moderation_require_comments">Memerlukan persetujuan untuk komentar baru</string>
+    <string name="forums_moderation_require_new_users">Memerlukan persetujuan untuk pengguna baru</string>
+    <string name="forums_moderation_new_user_days">Ambang pengguna baru:</string>
+    <string name="forums_moderation_post_limit">Batas postingan</string>
+    <string name="forums_moderation_comment_limit">Batas komentar</string>
+    <string name="forums_moderation_limit_window">Durasi jendela</string>
     <string name="forums_report_reason">Alasan</string>
     <string name="forums_report_details">Detail</string>
     <string name="forums_report_submit">Kirim laporan</string>

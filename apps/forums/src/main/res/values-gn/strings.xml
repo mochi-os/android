@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Marandu</string>
     <string name="forums_access_level_none">Mba\'eve</string>
     <string name="forums_members_empty">Ndaipóri miembros</string>
+    <string name="forums_banner_dismiss">Mbohovái banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Default tetãygua</string>
     <string name="forums_ai_prompt_reset">Embojevy ypy peguávape</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Mba\'éichagua</string>
     <string name="forums_moderation_restriction_type_muted">Emokirirĩ</string>
     <string name="forums_moderation_restriction_type_banned">Mboyke</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderación</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Aprobación oñeikotevẽ marandu pyahu rehe</string>
+    <string name="forums_moderation_require_comments">Aprobación oñeikotevẽ comentario pyahu rehe</string>
+    <string name="forums_moderation_require_new_users">Aprobación oñeikotevẽ usuario pyahu rehe</string>
+    <string name="forums_moderation_new_user_days">Marandu pyahu raha:</string>
+    <string name="forums_moderation_post_limit">Marandu límite</string>
+    <string name="forums_moderation_comment_limit">Comentario ipysyrõ</string>
+    <string name="forums_moderation_limit_window">Aravo aréhápe</string>
     <string name="forums_report_reason">Mba\'érepa</string>
     <string name="forums_report_details">Detallekuéra</string>
     <string name="forums_report_submit">Emondo marandu</string>

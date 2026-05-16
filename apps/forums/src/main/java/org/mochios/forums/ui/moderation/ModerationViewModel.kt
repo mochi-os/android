@@ -139,13 +139,11 @@ class ModerationViewModel @Inject constructor(
         }
     }
 
-    fun saveSettings(autoApprovePosts: Boolean, autoApproveComments: Boolean, requireMinKarma: Int) {
+    fun saveSettings(settings: ModerationSettings) {
         viewModelScope.launch {
             try {
-                repository.saveModerationSettings(forumId, autoApprovePosts, autoApproveComments, requireMinKarma)
-                _uiState.value = _uiState.value.copy(
-                    settings = ModerationSettings(autoApprovePosts, autoApproveComments, requireMinKarma)
-                )
+                repository.saveModerationSettings(forumId, settings)
+                _uiState.value = _uiState.value.copy(settings = settings)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

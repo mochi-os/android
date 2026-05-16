@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">पोस्ट</string>
     <string name="forums_access_level_none">कुछुओ ना</string>
     <string name="forums_members_empty">कौनो सदस्य नइखे</string>
+    <string name="forums_banner_dismiss">Banner खारिज करीं</string>
     <string name="forums_ai_mode_tag">टैग</string>
     <string name="forums_ai_account_default">डिफ़ॉल्ट खाता</string>
     <string name="forums_ai_prompt_reset">डिफ़ॉल्ट पर रीसेट करीं</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">प्रकार</string>
     <string name="forums_moderation_restriction_type_muted">म्यूट</string>
     <string name="forums_moderation_restriction_type_banned">प्रतिबंधित करीं</string>
+    <string name="forums_moderation_section_premoderation">पूर्व-मॉडरेशन</string>
+    <string name="forums_moderation_section_ratelimiting">दर सीमा</string>
+    <string name="forums_moderation_require_posts">नया पोस्ट खातिर मंजूरी जरूरी करीं</string>
+    <string name="forums_moderation_require_comments">नया टिप्पणी खातिर मंजूरी जरूरी करीं</string>
+    <string name="forums_moderation_require_new_users">नया यूजर खातिर मंजूरी जरूरी करीं</string>
+    <string name="forums_moderation_new_user_days">नया यूजर सीमा:</string>
+    <string name="forums_moderation_post_limit">पोस्ट सीमा</string>
+    <string name="forums_moderation_comment_limit">टिप्पणी सीमा</string>
+    <string name="forums_moderation_limit_window">विंडो अवधि</string>
     <string name="forums_report_reason">कारण</string>
     <string name="forums_report_details">विवरण</string>
     <string name="forums_report_submit">रिपोर्ट जमा करीं</string>

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Posto</string>
     <string name="forums_access_level_none">Asnjë</string>
     <string name="forums_members_empty">Asnjë anëtar</string>
+    <string name="forums_banner_dismiss">Hidhe banner-in</string>
     <string name="forums_ai_mode_tag">Etiketa</string>
     <string name="forums_ai_account_default">Llogaria e parazgjedhur</string>
     <string name="forums_ai_prompt_reset">Rivendos në parazgjedhje</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Lloji</string>
     <string name="forums_moderation_restriction_type_muted">Hesht</string>
     <string name="forums_moderation_restriction_type_banned">Përjashto</string>
+    <string name="forums_moderation_section_premoderation">Para-moderim</string>
+    <string name="forums_moderation_section_ratelimiting">Kufizimi i shpeshtësisë</string>
+    <string name="forums_moderation_require_posts">Kërko miratim për postime të reja</string>
+    <string name="forums_moderation_require_comments">Kërko miratim për komente të reja</string>
+    <string name="forums_moderation_require_new_users">Kërko miratim për përdorues të rinj</string>
+    <string name="forums_moderation_new_user_days">Pragu i përdoruesve të rinj:</string>
+    <string name="forums_moderation_post_limit">Kufiri i postimeve</string>
+    <string name="forums_moderation_comment_limit">Limiti i komenteve</string>
+    <string name="forums_moderation_limit_window">Kohëzgjatja e dritares</string>
     <string name="forums_report_reason">Arsyeja</string>
     <string name="forums_report_details">Detajet</string>
     <string name="forums_report_submit">Dërgo raportin</string>

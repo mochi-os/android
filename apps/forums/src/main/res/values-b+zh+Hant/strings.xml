@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">貼文</string>
     <string name="forums_access_level_none">無</string>
     <string name="forums_members_empty">無成員</string>
+    <string name="forums_banner_dismiss">關閉橫幅</string>
     <string name="forums_ai_mode_tag">標籤</string>
     <string name="forums_ai_account_default">預設帳戶</string>
     <string name="forums_ai_prompt_reset">重設為預設值</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">類型</string>
     <string name="forums_moderation_restriction_type_muted">靜音</string>
     <string name="forums_moderation_restriction_type_banned">封鎖</string>
+    <string name="forums_moderation_section_premoderation">預先審核</string>
+    <string name="forums_moderation_section_ratelimiting">速率限制</string>
+    <string name="forums_moderation_require_posts">新貼文需要核准</string>
+    <string name="forums_moderation_require_comments">新留言需要核准</string>
+    <string name="forums_moderation_require_new_users">新使用者需要核准</string>
+    <string name="forums_moderation_new_user_days">新使用者門檻：</string>
+    <string name="forums_moderation_post_limit">貼文上限</string>
+    <string name="forums_moderation_comment_limit">留言限制</string>
+    <string name="forums_moderation_limit_window">視窗持續時間</string>
     <string name="forums_report_reason">原因</string>
     <string name="forums_report_details">詳細資料</string>
     <string name="forums_report_submit">提交檢舉</string>

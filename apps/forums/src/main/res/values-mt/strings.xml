@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Xejn</string>
     <string name="forums_members_empty">L-ebda membri</string>
+    <string name="forums_banner_dismiss">Warrab il-banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Kont default</string>
     <string name="forums_ai_prompt_reset">Irriżetta għal default</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tip</string>
     <string name="forums_moderation_restriction_type_muted">Mute</string>
     <string name="forums_moderation_restriction_type_banned">Ipprojbixxi</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderazzjoni</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Eħtieġ approvazzjoni għal posts ġodda</string>
+    <string name="forums_moderation_require_comments">Eħtieġ approvazzjoni għal kummenti ġodda</string>
+    <string name="forums_moderation_require_new_users">Eħtieġ approvazzjoni għal utenti ġodda</string>
+    <string name="forums_moderation_new_user_days">Limitu għal utenti ġodda:</string>
+    <string name="forums_moderation_post_limit">Limitu tal-post</string>
+    <string name="forums_moderation_comment_limit">Limitu tal-kummenti</string>
+    <string name="forums_moderation_limit_window">Tul tat-tieqa</string>
     <string name="forums_report_reason">Raġuni</string>
     <string name="forums_report_details">Dettalji</string>
     <string name="forums_report_submit">Issottometti rapport</string>

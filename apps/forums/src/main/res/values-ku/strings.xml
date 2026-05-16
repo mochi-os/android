@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Poste</string>
     <string name="forums_access_level_none">Tu</string>
     <string name="forums_members_empty">Tu endam tune</string>
+    <string name="forums_banner_dismiss">Bannerê red bike</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Hesabê standard</string>
     <string name="forums_ai_prompt_reset">Ber bi standard ve veguhêze</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Cure</string>
     <string name="forums_moderation_restriction_type_muted">Bêdeng bike</string>
     <string name="forums_moderation_restriction_type_banned">Asteng bike</string>
+    <string name="forums_moderation_section_premoderation">Pêş-nezimkirin</string>
+    <string name="forums_moderation_section_ratelimiting">Sînorkirina Rêjeyê</string>
+    <string name="forums_moderation_require_posts">Ji bo posteyên nû erêkirin pêwîst e</string>
+    <string name="forums_moderation_require_comments">Ji bo şîroveyên nû erêkirin pêwîst e</string>
+    <string name="forums_moderation_require_new_users">Ji bo bikarhênerên nû erêkirin pêwîst e</string>
+    <string name="forums_moderation_new_user_days">Sînorê bikarhênerê nû:</string>
+    <string name="forums_moderation_post_limit">Sînorê posteyê</string>
+    <string name="forums_moderation_comment_limit">Sînorê şîroveyê</string>
+    <string name="forums_moderation_limit_window">Dema pencerê</string>
     <string name="forums_report_reason">Sedem</string>
     <string name="forums_report_details">Hûragahî</string>
     <string name="forums_report_submit">Raporê bişîne</string>

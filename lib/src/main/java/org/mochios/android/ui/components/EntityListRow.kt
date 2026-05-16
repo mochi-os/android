@@ -55,6 +55,7 @@ fun EntityListRow(
     subtitle: String? = null,
     trailing: (@Composable () -> Unit)? = null,
     onLongClick: (() -> Unit)? = null,
+    avatarUrl: String? = null,
 ) {
     val clickable = if (onLongClick != null) {
         Modifier.combinedClickable(onClick = onClick, onLongClick = onLongClick)
@@ -91,7 +92,11 @@ fun EntityListRow(
                 }
             },
             leadingContent = {
-                EntityIconCircle(seed = seed, icon = icon)
+                if (!avatarUrl.isNullOrBlank()) {
+                    EntityAvatar(name = name, src = avatarUrl, seed = seed, size = 40.dp)
+                } else {
+                    EntityIconCircle(seed = seed, icon = icon)
+                }
             },
             trailingContent = trailing,
             colors = ListItemDefaults.colors(

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">पोस्ट</string>
     <string name="forums_access_level_none">काहीही नाही</string>
     <string name="forums_members_empty">सदस्य नाहीत</string>
+    <string name="forums_banner_dismiss">बॅनर काढून टाका</string>
     <string name="forums_ai_mode_tag">टॅग</string>
     <string name="forums_ai_account_default">डीफॉल्ट खाते</string>
     <string name="forums_ai_prompt_reset">डीफॉल्टवर रीसेट करा</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">प्रकार</string>
     <string name="forums_moderation_restriction_type_muted">म्यूट</string>
     <string name="forums_moderation_restriction_type_banned">प्रतिबंध करा</string>
+    <string name="forums_moderation_section_premoderation">प्री-मॉडरेशन</string>
+    <string name="forums_moderation_section_ratelimiting">रेट लिमिटिंग</string>
+    <string name="forums_moderation_require_posts">नवीन पोस्ट्ससाठी मंजुरी आवश्यक करा</string>
+    <string name="forums_moderation_require_comments">नवीन कमेंट्ससाठी मंजुरी आवश्यक करा</string>
+    <string name="forums_moderation_require_new_users">नवीन वापरकर्त्यांसाठी मंजुरी आवश्यक करा</string>
+    <string name="forums_moderation_new_user_days">नवीन वापरकर्ता मर्यादा:</string>
+    <string name="forums_moderation_post_limit">पोस्ट मर्यादा</string>
+    <string name="forums_moderation_comment_limit">टिप्पणी मर्यादा</string>
+    <string name="forums_moderation_limit_window">विंडो कालावधी</string>
     <string name="forums_report_reason">कारण</string>
     <string name="forums_report_details">तपशील</string>
     <string name="forums_report_submit">अहवाल सादर करा</string>

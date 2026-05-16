@@ -75,6 +75,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.ui.chatlist.ChatListViewModel
@@ -232,13 +233,50 @@ private fun ChatContent(
 
     Scaffold(
         topBar = {
+            val members = uiState.chat.members
+            val isGroup = members.size > 2
+            val peer = if (members.size == 2) members.firstOrNull { it.id != uiState.identity } else null
+            val peerAvatarUrl = peer?.let {
+                if (viewModel.serverUrl.isNotBlank()) "${viewModel.serverUrl}/people/${it.id}/-/avatar" else null
+            }
+            val youLabel = stringResource(R.string.chat_members_you)
+            val membersSubtitle = remember(members, uiState.identity, youLabel) {
+                if (!isGroup) "" else {
+                    val ordered = mutableListOf<String>()
+                    members.firstOrNull { it.id == uiState.identity }?.let { ordered += youLabel }
+                    members.filter { it.id != uiState.identity }.forEach { ordered += it.name }
+                    ordered.joinToString(", ")
+                }
+            }
             TopAppBar(
                 title = {
-                    Text(
-                        text = uiState.chat.name.ifBlank { stringResource(R.string.chat_messages_loading) },
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (peerAvatarUrl != null) {
+                            EntityAvatar(
+                                name = peer.name.ifBlank { uiState.chat.name },
+                                src = peerAvatarUrl,
+                                seed = peer.id,
+                                size = 32.dp,
+                            )
+                            Spacer(Modifier.width(8.dp))
+                        }
+                        Column {
+                            Text(
+                                text = uiState.chat.name.ifBlank { stringResource(R.string.chat_messages_loading) },
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                            if (membersSubtitle.isNotBlank()) {
+                                Text(
+                                    text = membersSubtitle,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                )
+                            }
+                        }
+                    }
                 },
                 navigationIcon = {
                     IconButton(onClick = onOpenDrawer) {
@@ -296,6 +334,7 @@ private fun ChatContent(
                     }
                 }
                 else -> {
+                    val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
                     LazyColumn(
                         state = listState,
                         modifier = Modifier.weight(1f).fillMaxWidth(),
@@ -318,13 +357,25 @@ private fun ChatContent(
                                 }
                             }
                         }
-                        items(uiState.messages, key = { it.id }) { message ->
-                            MessageBubble(
-                                message = message,
-                                isOwn = message.member == uiState.identity,
-                                serverUrl = viewModel.serverUrl,
-                                chatId = uiState.chat.id
-                            )
+                        grouped.forEach { entry ->
+                            when (entry) {
+                                is MessageListEntry.DateHeader -> {
+                                    item(key = "date-${entry.dayKey}") {
+                                        DateSeparator(entry.epochSeconds)
+                                    }
+                                }
+                                is MessageListEntry.MessageItem -> {
+                                    item(key = entry.message.id) {
+                                        MessageBubble(
+                                            message = entry.message,
+                                            isOwn = entry.message.member == uiState.identity,
+                                            isGroup = uiState.chat.members.size > 2,
+                                            serverUrl = viewModel.serverUrl,
+                                            chatId = uiState.chat.id
+                                        )
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -352,14 +403,34 @@ private fun ChatContent(
 private fun MessageBubble(
     message: ChatMessage,
     isOwn: Boolean,
+    isGroup: Boolean,
     serverUrl: String,
     chatId: String
 ) {
     val format = LocalFormat.current
-    Row(
+    Column(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = if (isOwn) Arrangement.End else Arrangement.Start
+        horizontalAlignment = if (isOwn) Alignment.End else Alignment.Start
     ) {
+        if (isGroup && !isOwn) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(start = 4.dp, bottom = 2.dp),
+            ) {
+                EntityAvatar(
+                    name = message.name,
+                    src = "$serverUrl/chat/$chatId/-/${message.id}/asset/avatar",
+                    seed = message.member,
+                    size = 16.dp,
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = message.name,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
         Card(
             shape = RoundedCornerShape(16.dp),
             colors = CardDefaults.cardColors(
@@ -372,7 +443,7 @@ private fun MessageBubble(
             modifier = Modifier.widthIn(max = 320.dp)
         ) {
             Column(modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)) {
-                if (!isOwn) {
+                if (!isOwn && !isGroup) {
                     Text(
                         text = message.name,
                         style = MaterialTheme.typography.labelMedium,
@@ -411,6 +482,45 @@ private fun MessageBubble(
                 )
             }
         }
+    }
+}
+
+private sealed class MessageListEntry {
+    data class DateHeader(val dayKey: String, val epochSeconds: Long) : MessageListEntry()
+    data class MessageItem(val message: ChatMessage) : MessageListEntry()
+}
+
+private fun groupMessagesByDate(messages: List<ChatMessage>): List<MessageListEntry> {
+    val tz = java.util.TimeZone.getDefault()
+    val out = mutableListOf<MessageListEntry>()
+    var lastKey: String? = null
+    for (msg in messages) {
+        val cal = java.util.Calendar.getInstance(tz).apply { timeInMillis = msg.created * 1000L }
+        val key = "${cal.get(java.util.Calendar.YEAR)}-" +
+            "${cal.get(java.util.Calendar.MONTH) + 1}-" +
+            "${cal.get(java.util.Calendar.DAY_OF_MONTH)}"
+        if (key != lastKey) {
+            out += MessageListEntry.DateHeader(key, msg.created)
+            lastKey = key
+        }
+        out += MessageListEntry.MessageItem(msg)
+    }
+    return out
+}
+
+@Composable
+private fun DateSeparator(epochSeconds: Long) {
+    val format = LocalFormat.current
+    Row(
+        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center,
+    ) {
+        Text(
+            text = format.formatDate(epochSeconds),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }
 

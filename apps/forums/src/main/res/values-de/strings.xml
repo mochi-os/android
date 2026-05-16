@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Beitrag</string>
     <string name="forums_access_level_none">Keine</string>
     <string name="forums_members_empty">Keine Mitglieder</string>
+    <string name="forums_banner_dismiss">Banner schließen</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Auf Standard zurücksetzen</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Typ</string>
     <string name="forums_moderation_restriction_type_muted">Stummschalten</string>
     <string name="forums_moderation_restriction_type_banned">Sperren</string>
+    <string name="forums_moderation_section_premoderation">Vorabmoderation</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Genehmigung für neue Beiträge erforderlich</string>
+    <string name="forums_moderation_require_comments">Genehmigung für neue Kommentare erforderlich</string>
+    <string name="forums_moderation_require_new_users">Genehmigung für neue Nutzer erforderlich</string>
+    <string name="forums_moderation_new_user_days">Schwellenwert für neue Benutzer:</string>
+    <string name="forums_moderation_post_limit">Beitragslimit</string>
+    <string name="forums_moderation_comment_limit">Kommentar-Limit</string>
+    <string name="forums_moderation_limit_window">Fensterdauer</string>
     <string name="forums_report_reason">Grund</string>
     <string name="forums_report_details">Details</string>
     <string name="forums_report_submit">Bericht senden</string>

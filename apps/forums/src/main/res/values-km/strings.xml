@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">ប្រកាស</string>
     <string name="forums_access_level_none">គ្មាន</string>
     <string name="forums_members_empty">មិនមានសមាជិក</string>
+    <string name="forums_banner_dismiss">បិទបដា</string>
     <string name="forums_ai_mode_tag">ស្លាក</string>
     <string name="forums_ai_account_default">គណនីលំនាំដើម</string>
     <string name="forums_ai_prompt_reset">កំណត់ឡើងវិញទៅលំនាំដើម</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">ប្រភេទ</string>
     <string name="forums_moderation_restriction_type_muted">បិទសំឡេង</string>
     <string name="forums_moderation_restriction_type_banned">ហាមឃាត់</string>
+    <string name="forums_moderation_section_premoderation">ការកែប្រែជាមុន</string>
+    <string name="forums_moderation_section_ratelimiting">ការកំណត់អត្រា</string>
+    <string name="forums_moderation_require_posts">តម្រូវឱ្យមានការអនុម័តសម្រាប់ប្រកាសថ្មី</string>
+    <string name="forums_moderation_require_comments">តម្រូវឱ្យមានការអនុម័តសម្រាប់មតិយោបល់ថ្មី</string>
+    <string name="forums_moderation_require_new_users">តម្រូវឱ្យមានការអនុម័តសម្រាប់អ្នកប្រើថ្មី</string>
+    <string name="forums_moderation_new_user_days">កម្រិតអ្នកប្រើថ្មី៖</string>
+    <string name="forums_moderation_post_limit">ដែនកំណត់ប្រកាស</string>
+    <string name="forums_moderation_comment_limit">កម្រិតមតិយោបល់</string>
+    <string name="forums_moderation_limit_window">រយៈពេលបង្អួច</string>
     <string name="forums_report_reason">មូលហេតុ</string>
     <string name="forums_report_details">ព័ត៌មានលម្អិត</string>
     <string name="forums_report_submit">ដាក់ស្នើរបាយការណ៍</string>

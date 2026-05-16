@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Bejegyzés</string>
     <string name="forums_access_level_none">Nincs</string>
     <string name="forums_members_empty">Nincsenek tagok</string>
+    <string name="forums_banner_dismiss">Banner elvetése</string>
     <string name="forums_ai_mode_tag">Címke</string>
     <string name="forums_ai_account_default">Alapértelmezett fiók</string>
     <string name="forums_ai_prompt_reset">Visszaállítás alapértelmezettre</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Típus</string>
     <string name="forums_moderation_restriction_type_muted">Némítás</string>
     <string name="forums_moderation_restriction_type_banned">Kitiltás</string>
+    <string name="forums_moderation_section_premoderation">Előzetes moderálás</string>
+    <string name="forums_moderation_section_ratelimiting">Sebességkorlátozás</string>
+    <string name="forums_moderation_require_posts">Új bejegyzések jóváhagyásának megkövetelése</string>
+    <string name="forums_moderation_require_comments">Új hozzászólások jóváhagyásának megkövetelése</string>
+    <string name="forums_moderation_require_new_users">Új felhasználók jóváhagyásának megkövetelése</string>
+    <string name="forums_moderation_new_user_days">Új felhasználói küszöb:</string>
+    <string name="forums_moderation_post_limit">Bejegyzés korlát</string>
+    <string name="forums_moderation_comment_limit">Megjegyzéskorlát</string>
+    <string name="forums_moderation_limit_window">Ablak időtartama</string>
     <string name="forums_report_reason">Indok</string>
     <string name="forums_report_details">Részletek</string>
     <string name="forums_report_submit">Jelentés elküldése</string>

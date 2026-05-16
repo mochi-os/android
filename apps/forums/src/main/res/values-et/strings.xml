@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Postita</string>
     <string name="forums_access_level_none">Puudub</string>
     <string name="forums_members_empty">Liikmeid pole</string>
+    <string name="forums_banner_dismiss">Sulge bänner</string>
     <string name="forums_ai_mode_tag">Silt</string>
     <string name="forums_ai_account_default">Vaikimisi konto</string>
     <string name="forums_ai_prompt_reset">Lähtesta vaikeväärtusele</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tüüp</string>
     <string name="forums_moderation_restriction_type_muted">Vaigista</string>
     <string name="forums_moderation_restriction_type_banned">Blokeeri</string>
+    <string name="forums_moderation_section_premoderation">Eelmodereerimine</string>
+    <string name="forums_moderation_section_ratelimiting">Päringusageduse piirang</string>
+    <string name="forums_moderation_require_posts">Nõua heakskiitu uutele postitustele</string>
+    <string name="forums_moderation_require_comments">Nõua heakskiitu uutele kommentaaridele</string>
+    <string name="forums_moderation_require_new_users">Nõua heakskiitu uutele kasutajatele</string>
+    <string name="forums_moderation_new_user_days">Uute kasutajate lävi:</string>
+    <string name="forums_moderation_post_limit">Postituste limiit</string>
+    <string name="forums_moderation_comment_limit">Kommentaaride limiit</string>
+    <string name="forums_moderation_limit_window">Akna kestus</string>
     <string name="forums_report_reason">Põhjus</string>
     <string name="forums_report_details">Üksikasjad</string>
     <string name="forums_report_submit">Esita raport</string>

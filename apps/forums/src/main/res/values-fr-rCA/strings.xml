@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="forums_create_privacy">Privacy</string>
     <string name="forums_report_reason_spam">Pourriel</string>
 
 </resources>

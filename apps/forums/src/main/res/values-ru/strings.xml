@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Публикация</string>
     <string name="forums_access_level_none">Нет</string>
     <string name="forums_members_empty">Нет участников</string>
+    <string name="forums_banner_dismiss">Закрыть баннер</string>
     <string name="forums_ai_mode_tag">Тег</string>
     <string name="forums_ai_account_default">Аккаунт по умолчанию</string>
     <string name="forums_ai_prompt_reset">Сбросить к значениям по умолчанию</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Тип</string>
     <string name="forums_moderation_restriction_type_muted">Заглушить</string>
     <string name="forums_moderation_restriction_type_banned">Заблокировать</string>
+    <string name="forums_moderation_section_premoderation">Премодерация</string>
+    <string name="forums_moderation_section_ratelimiting">Ограничение частоты</string>
+    <string name="forums_moderation_require_posts">Требовать одобрение новых публикаций</string>
+    <string name="forums_moderation_require_comments">Требовать одобрение новых комментариев</string>
+    <string name="forums_moderation_require_new_users">Требовать одобрение новых пользователей</string>
+    <string name="forums_moderation_new_user_days">Порог нового пользователя:</string>
+    <string name="forums_moderation_post_limit">Лимит публикаций</string>
+    <string name="forums_moderation_comment_limit">Лимит комментариев</string>
+    <string name="forums_moderation_limit_window">Длительность окна</string>
     <string name="forums_report_reason">Причина</string>
     <string name="forums_report_details">Подробности</string>
     <string name="forums_report_submit">Отправить жалобу</string>

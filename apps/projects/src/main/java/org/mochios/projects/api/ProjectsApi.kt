@@ -206,14 +206,14 @@ interface ProjectsApi {
     suspend fun setAccess(
         @Path("projectId") projectId: String,
         @Field("subject") subject: String,
-        @Field("operation") operation: String
+        @Field("level") level: String
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/access/revoke")
     suspend fun revokeAccess(
         @Path("projectId") projectId: String,
-        @Field("id") id: Int
+        @Field("subject") subject: String
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Objects ----

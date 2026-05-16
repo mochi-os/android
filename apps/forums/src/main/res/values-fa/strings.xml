@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">ارسال</string>
     <string name="forums_access_level_none">هیچ‌کدام</string>
     <string name="forums_members_empty">هیچ عضوی وجود ندارد</string>
+    <string name="forums_banner_dismiss">بستن بنر</string>
     <string name="forums_ai_mode_tag">برچسب</string>
     <string name="forums_ai_account_default">حساب پیش‌فرض</string>
     <string name="forums_ai_prompt_reset">بازنشانی به پیش‌فرض</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">نوع</string>
     <string name="forums_moderation_restriction_type_muted">بی‌صدا</string>
     <string name="forums_moderation_restriction_type_banned">مسدود کردن</string>
+    <string name="forums_moderation_section_premoderation">پیش‌نظارت</string>
+    <string name="forums_moderation_section_ratelimiting">محدودیت نرخ</string>
+    <string name="forums_moderation_require_posts">تأیید برای پست‌های جدید الزامی است</string>
+    <string name="forums_moderation_require_comments">تأیید برای نظرات جدید الزامی است</string>
+    <string name="forums_moderation_require_new_users">تأیید برای کاربران جدید الزامی است</string>
+    <string name="forums_moderation_new_user_days">آستانه کاربران جدید:</string>
+    <string name="forums_moderation_post_limit">محدودیت پست</string>
+    <string name="forums_moderation_comment_limit">محدودیت نظر</string>
+    <string name="forums_moderation_limit_window">مدت پنجره</string>
     <string name="forums_report_reason">دلیل</string>
     <string name="forums_report_details">جزئیات</string>
     <string name="forums_report_submit">ثبت گزارش</string>

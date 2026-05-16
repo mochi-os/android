@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
@@ -40,6 +41,7 @@ class PostViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: ForumsRepository,
     private val sessionManager: SessionManager,
+    private val webSocket: MochiWebSocket,
 ) : ViewModel() {
 
     val forumId: String = savedStateHandle["forumId"] ?: ""
@@ -49,12 +51,35 @@ class PostViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(PostUiState())
     val uiState: StateFlow<PostUiState> = _uiState.asStateFlow()
 
+    private var subscriptionId: String? = null
+
     init {
         viewModelScope.launch {
             val id = sessionManager.getBoundIdentity().orEmpty()
             _uiState.value = _uiState.value.copy(identity = id)
         }
         load()
+    }
+
+    private fun subscribeWebSocket(forumKey: String) {
+        if (forumKey.isBlank() || subscriptionId != null) return
+        subscriptionId = webSocket.subscribe(sessionManager.getServerUrlBlocking(), forumKey) { _ ->
+            viewModelScope.launch {
+                try {
+                    val r = repository.viewPost(forumId, postId)
+                    _uiState.value = _uiState.value.copy(
+                        forum = r.forum,
+                        post = r.post,
+                        comments = r.comments,
+                    )
+                } catch (_: Exception) {}
+            }
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        subscriptionId?.let { webSocket.unsubscribe(it) }
     }
 
     fun load() {
@@ -71,6 +96,7 @@ class PostViewModel @Inject constructor(
                     canModerate = r.can_moderate,
                     isLoading = false
                 )
+                subscribeWebSocket(r.forum.fingerprint)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }

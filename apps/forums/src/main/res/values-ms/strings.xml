@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Hantar</string>
     <string name="forums_access_level_none">Tiada</string>
     <string name="forums_members_empty">Tiada ahli</string>
+    <string name="forums_banner_dismiss">Tutup sepanduk</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akaun lalai</string>
     <string name="forums_ai_prompt_reset">Tetapkan semula kepada lalai</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Jenis</string>
     <string name="forums_moderation_restriction_type_muted">Senyapkan</string>
     <string name="forums_moderation_restriction_type_banned">Haramkan</string>
+    <string name="forums_moderation_section_premoderation">Pra-penyederhanaan</string>
+    <string name="forums_moderation_section_ratelimiting">Hadkan Kadar</string>
+    <string name="forums_moderation_require_posts">Memerlukan kelulusan untuk hantaran baharu</string>
+    <string name="forums_moderation_require_comments">Memerlukan kelulusan untuk komen baharu</string>
+    <string name="forums_moderation_require_new_users">Memerlukan kelulusan untuk pengguna baharu</string>
+    <string name="forums_moderation_new_user_days">Ambang pengguna baharu:</string>
+    <string name="forums_moderation_post_limit">Had hantaran</string>
+    <string name="forums_moderation_comment_limit">Had komen</string>
+    <string name="forums_moderation_limit_window">Tempoh tetingkap</string>
     <string name="forums_report_reason">Sebab</string>
     <string name="forums_report_details">Butiran</string>
     <string name="forums_report_submit">Hantar laporan</string>

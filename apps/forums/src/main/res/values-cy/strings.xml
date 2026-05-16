@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Postio</string>
     <string name="forums_access_level_none">Dim</string>
     <string name="forums_members_empty">Dim aelodau</string>
+    <string name="forums_banner_dismiss">Diystyru baner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Cyfrif diofyn</string>
     <string name="forums_ai_prompt_reset">Ailosod i\'r diofyn</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Math</string>
     <string name="forums_moderation_restriction_type_muted">Tewi</string>
     <string name="forums_moderation_restriction_type_banned">Gwahardd</string>
+    <string name="forums_moderation_section_premoderation">Cyn-gymedroli</string>
+    <string name="forums_moderation_section_ratelimiting">Cyfyngu Cyfradd</string>
+    <string name="forums_moderation_require_posts">Mynnu cymeradwyaeth ar gyfer postiadau newydd</string>
+    <string name="forums_moderation_require_comments">Mynnu cymeradwyaeth ar gyfer sylwadau newydd</string>
+    <string name="forums_moderation_require_new_users">Mynnu cymeradwyaeth ar gyfer defnyddwyr newydd</string>
+    <string name="forums_moderation_new_user_days">Trothwy defnyddwyr newydd:</string>
+    <string name="forums_moderation_post_limit">Cyfyngiad postiadau</string>
+    <string name="forums_moderation_comment_limit">Terfyn sylwadau</string>
+    <string name="forums_moderation_limit_window">Hyd y ffenestr</string>
     <string name="forums_report_reason">Rheswm</string>
     <string name="forums_report_details">Manylion</string>
     <string name="forums_report_submit">Cyflwyno adroddiad</string>

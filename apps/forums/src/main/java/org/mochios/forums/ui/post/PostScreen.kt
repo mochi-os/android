@@ -59,6 +59,7 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.HtmlContent
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
@@ -673,9 +674,10 @@ private fun PostHeader(
                     }
                 }
             }
-            if (post.body.isNotBlank()) {
+            val postMarkdown = post.bodyMarkdown.ifBlank { post.body }
+            if (postMarkdown.isNotBlank()) {
                 Spacer(Modifier.height(12.dp))
-                Text(text = post.body, style = MaterialTheme.typography.bodyLarge)
+                HtmlContent(html = postMarkdown, modifier = Modifier.fillMaxWidth())
             }
             if (post.attachments.isNotEmpty()) {
                 Spacer(Modifier.height(12.dp))
@@ -896,7 +898,7 @@ private fun CommentCard(
                 }
             }
             Spacer(Modifier.height(4.dp))
-            Text(text = comment.body, style = MaterialTheme.typography.bodyMedium)
+            HtmlContent(html = comment.body, modifier = Modifier.fillMaxWidth())
             if (comment.attachments.isNotEmpty()) {
                 Spacer(Modifier.height(8.dp))
                 AttachmentGallery(

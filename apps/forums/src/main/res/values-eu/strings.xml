@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Argitalpena</string>
     <string name="forums_access_level_none">Bat ere ez</string>
     <string name="forums_members_empty">Kiderik ez</string>
+    <string name="forums_banner_dismiss">Baztertu iragarki-banda</string>
     <string name="forums_ai_mode_tag">Etiketa</string>
     <string name="forums_ai_account_default">Lehenetsitako kontua</string>
     <string name="forums_ai_prompt_reset">Berrezarri lehenetsira</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Mota</string>
     <string name="forums_moderation_restriction_type_muted">Isilarazi</string>
     <string name="forums_moderation_restriction_type_banned">Debekatu</string>
+    <string name="forums_moderation_section_premoderation">Aurre-moderazioa</string>
+    <string name="forums_moderation_section_ratelimiting">Tasa-mugaketa</string>
+    <string name="forums_moderation_require_posts">Onarpena behar da argitalpen berrietarako</string>
+    <string name="forums_moderation_require_comments">Onarpena behar da iruzkin berrietarako</string>
+    <string name="forums_moderation_require_new_users">Onarpena behar da erabiltzaile berrietarako</string>
+    <string name="forums_moderation_new_user_days">Erabiltzaile berrien atalasea:</string>
+    <string name="forums_moderation_post_limit">Argitalpenen muga</string>
+    <string name="forums_moderation_comment_limit">Iruzkin muga</string>
+    <string name="forums_moderation_limit_window">Leihoaren iraupena</string>
     <string name="forums_report_reason">Arrazoia</string>
     <string name="forums_report_details">Xehetasunak</string>
     <string name="forums_report_submit">Bidali salaketa</string>

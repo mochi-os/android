@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMember
 import org.mochios.chat.model.Friend
@@ -29,10 +30,12 @@ data class ChatSettingsUiState(
 @HiltViewModel
 class ChatSettingsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
-    private val repository: ChatRepository
+    private val repository: ChatRepository,
+    sessionManager: SessionManager,
 ) : ViewModel() {
 
     private val chatId: String = savedStateHandle["chatId"] ?: ""
+    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _uiState = MutableStateFlow(ChatSettingsUiState())
     val uiState: StateFlow<ChatSettingsUiState> = _uiState.asStateFlow()

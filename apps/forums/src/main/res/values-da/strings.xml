@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Indlæg</string>
     <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Ingen medlemmer</string>
+    <string name="forums_banner_dismiss">Afvis banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Nulstil til standard</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Type</string>
     <string name="forums_moderation_restriction_type_muted">Tavsgør</string>
     <string name="forums_moderation_restriction_type_banned">Bortvis</string>
+    <string name="forums_moderation_section_premoderation">Forhåndsmoderation</string>
+    <string name="forums_moderation_section_ratelimiting">Hastighedsbegrænsning</string>
+    <string name="forums_moderation_require_posts">Kræv godkendelse af nye indlæg</string>
+    <string name="forums_moderation_require_comments">Kræv godkendelse af nye kommentarer</string>
+    <string name="forums_moderation_require_new_users">Kræv godkendelse af nye brugere</string>
+    <string name="forums_moderation_new_user_days">Grænse for ny bruger:</string>
+    <string name="forums_moderation_post_limit">Indlægsgrænse</string>
+    <string name="forums_moderation_comment_limit">Kommentargrænse</string>
+    <string name="forums_moderation_limit_window">Vinduesvarighed</string>
     <string name="forums_report_reason">Årsag</string>
     <string name="forums_report_details">Detaljer</string>
     <string name="forums_report_submit">Indsend rapport</string>

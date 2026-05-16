@@ -164,9 +164,17 @@ data class ModerationQueueCounts(
 )
 
 data class ModerationSettings(
-    @SerializedName("auto_approve_posts") val autoApprovePosts: Boolean = true,
-    @SerializedName("auto_approve_comments") val autoApproveComments: Boolean = true,
-    @SerializedName("require_min_karma") val requireMinKarma: Int = 0,
+    @SerializedName("moderation_posts") val moderationPosts: Boolean = false,
+    @SerializedName("moderation_comments") val moderationComments: Boolean = false,
+    @SerializedName("moderation_new") val moderationNew: Boolean = false,
+    @SerializedName("new_user_days") val newUserDays: Int = 0,
+    @SerializedName("post_limit") val postLimit: Int = 0,
+    @SerializedName("comment_limit") val commentLimit: Int = 0,
+    @SerializedName("limit_window") val limitWindow: Int = 3600,
+)
+
+data class ModerationSettingsResponse(
+    val settings: ModerationSettings = ModerationSettings(),
 )
 
 data class ForumMember(

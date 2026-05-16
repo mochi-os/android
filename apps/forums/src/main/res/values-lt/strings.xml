@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Įrašas</string>
     <string name="forums_access_level_none">Nėra</string>
     <string name="forums_members_empty">Narių nėra</string>
+    <string name="forums_banner_dismiss">Atmesti reklamjuostę</string>
     <string name="forums_ai_mode_tag">Žyma</string>
     <string name="forums_ai_account_default">Numatytoji paskyra</string>
     <string name="forums_ai_prompt_reset">Atstatyti į numatytąjį</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipas</string>
     <string name="forums_moderation_restriction_type_muted">Nutildyti</string>
     <string name="forums_moderation_restriction_type_banned">Užblokuoti</string>
+    <string name="forums_moderation_section_premoderation">Išankstinis moderavimas</string>
+    <string name="forums_moderation_section_ratelimiting">Dažnio ribojimas</string>
+    <string name="forums_moderation_require_posts">Reikalauti patvirtinimo naujiems įrašams</string>
+    <string name="forums_moderation_require_comments">Reikalauti patvirtinimo naujiems komentarams</string>
+    <string name="forums_moderation_require_new_users">Reikalauti patvirtinimo naujiems vartotojams</string>
+    <string name="forums_moderation_new_user_days">Naujų vartotojų slenkstis:</string>
+    <string name="forums_moderation_post_limit">Įrašų limitas</string>
+    <string name="forums_moderation_comment_limit">Komentarų limitas</string>
+    <string name="forums_moderation_limit_window">Lango trukmė</string>
     <string name="forums_report_reason">Priežastis</string>
     <string name="forums_report_details">Detalės</string>
     <string name="forums_report_submit">Pateikti pranešimą</string>

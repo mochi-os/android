@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Qillqa</string>
     <string name="forums_access_level_none">Mana</string>
     <string name="forums_members_empty">Mana miembrokuna</string>
+    <string name="forums_banner_dismiss">Banner wischuy</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Default cuenta</string>
     <string name="forums_ai_prompt_reset">Por defectoman kutichiy</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Layan</string>
     <string name="forums_moderation_restriction_type_muted">Ch\'inyachiy</string>
     <string name="forums_moderation_restriction_type_banned">Hark\'ay</string>
+    <string name="forums_moderation_section_premoderation">Ñawpaq moderación</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Musuq qillqakunapaq aprobacionta munay</string>
+    <string name="forums_moderation_require_comments">Musuq comentariokunapaq aprobacionta munay</string>
+    <string name="forums_moderation_require_new_users">Musuq usuariokunapaq aprobacionta munay</string>
+    <string name="forums_moderation_new_user_days">Musuq usuario umbral:</string>
+    <string name="forums_moderation_post_limit">Qillqa límite</string>
+    <string name="forums_moderation_comment_limit">Comentario chanin</string>
+    <string name="forums_moderation_limit_window">Window mit\'a</string>
     <string name="forums_report_reason">Imarayku</string>
     <string name="forums_report_details">Willariykuna</string>
     <string name="forums_report_submit">Reporteta apachiy</string>

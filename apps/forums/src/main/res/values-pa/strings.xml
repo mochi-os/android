@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">ਪੋਸਟ</string>
     <string name="forums_access_level_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="forums_members_empty">ਕੋਈ ਮੈਂਬਰ ਨਹੀਂ</string>
+    <string name="forums_banner_dismiss">ਬੈਨਰ ਖਾਰਜ ਕਰੋ</string>
     <string name="forums_ai_mode_tag">ਟੈਗ</string>
     <string name="forums_ai_account_default">ਡਿਫਾਲਟ ਖਾਤਾ</string>
     <string name="forums_ai_prompt_reset">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">ਕਿਸਮ</string>
     <string name="forums_moderation_restriction_type_muted">ਮਿਊਟ</string>
     <string name="forums_moderation_restriction_type_banned">ਪਾਬੰਦੀ ਲਾਓ</string>
+    <string name="forums_moderation_section_premoderation">ਪ੍ਰੀ-ਮਾਡਰੇਸ਼ਨ</string>
+    <string name="forums_moderation_section_ratelimiting">ਰੇਟ ਲਿਮਿਟਿੰਗ</string>
+    <string name="forums_moderation_require_posts">ਨਵੀਆਂ ਪੋਸਟਾਂ ਲਈ ਮਨਜ਼ੂਰੀ ਜ਼ਰੂਰੀ ਕਰੋ</string>
+    <string name="forums_moderation_require_comments">ਨਵੀਆਂ ਟਿੱਪਣੀਆਂ ਲਈ ਮਨਜ਼ੂਰੀ ਜ਼ਰੂਰੀ ਕਰੋ</string>
+    <string name="forums_moderation_require_new_users">ਨਵੇਂ ਯੂਜ਼ਰਾਂ ਲਈ ਮਨਜ਼ੂਰੀ ਜ਼ਰੂਰੀ ਕਰੋ</string>
+    <string name="forums_moderation_new_user_days">ਨਵੇਂ ਉਪਭੋਗਤਾ ਦੀ ਸੀਮਾ:</string>
+    <string name="forums_moderation_post_limit">ਪੋਸਟ ਸੀਮਾ</string>
+    <string name="forums_moderation_comment_limit">ਟਿੱਪਣੀ ਸੀਮਾ</string>
+    <string name="forums_moderation_limit_window">ਵਿੰਡੋ ਦਾ ਸਮਾਂ</string>
     <string name="forums_report_reason">ਕਾਰਨ</string>
     <string name="forums_report_details">ਵੇਰਵੇ</string>
     <string name="forums_report_submit">ਰਿਪੋਰਟ ਜਮ੍ਹਾਂ ਕਰੋ</string>

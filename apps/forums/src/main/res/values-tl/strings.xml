@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Wala</string>
     <string name="forums_members_empty">Walang miyembro</string>
+    <string name="forums_banner_dismiss">I-dismiss ang banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Default na account</string>
     <string name="forums_ai_prompt_reset">I-reset sa default</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Uri</string>
     <string name="forums_moderation_restriction_type_muted">I-mute</string>
     <string name="forums_moderation_restriction_type_banned">I-ban</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderation</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Kailanganin ang pag-apruba para sa mga bagong post</string>
+    <string name="forums_moderation_require_comments">Kailanganin ang pag-apruba para sa mga bagong komento</string>
+    <string name="forums_moderation_require_new_users">Kailanganin ang pag-apruba para sa mga bagong user</string>
+    <string name="forums_moderation_new_user_days">Threshold ng bagong user:</string>
+    <string name="forums_moderation_post_limit">Limitasyon ng post</string>
+    <string name="forums_moderation_comment_limit">Limitasyon ng komento</string>
+    <string name="forums_moderation_limit_window">Tagal ng window</string>
     <string name="forums_report_reason">Dahilan</string>
     <string name="forums_report_details">Mga detalye</string>
     <string name="forums_report_submit">Isumite ang ulat</string>

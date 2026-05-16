@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Plaas</string>
     <string name="forums_access_level_none">Geen</string>
     <string name="forums_members_empty">Geen lede</string>
+    <string name="forums_banner_dismiss">Sluit banier</string>
     <string name="forums_ai_mode_tag">Etiket</string>
     <string name="forums_ai_account_default">Verstek rekening</string>
     <string name="forums_ai_prompt_reset">Stel terug na verstek</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipe</string>
     <string name="forums_moderation_restriction_type_muted">Demp</string>
     <string name="forums_moderation_restriction_type_banned">Verban</string>
+    <string name="forums_moderation_section_premoderation">Voor-moderasie</string>
+    <string name="forums_moderation_section_ratelimiting">Tempobeperking</string>
+    <string name="forums_moderation_require_posts">Vereis goedkeuring vir nuwe plasings</string>
+    <string name="forums_moderation_require_comments">Vereis goedkeuring vir nuwe kommentaar</string>
+    <string name="forums_moderation_require_new_users">Vereis goedkeuring vir nuwe gebruikers</string>
+    <string name="forums_moderation_new_user_days">Drempel vir nuwe gebruiker:</string>
+    <string name="forums_moderation_post_limit">Plasingsperk</string>
+    <string name="forums_moderation_comment_limit">Kommentaarlimiet</string>
+    <string name="forums_moderation_limit_window">Venster-duur</string>
     <string name="forums_report_reason">Rede</string>
     <string name="forums_report_details">Besonderhede</string>
     <string name="forums_report_submit">Stuur verslag in</string>

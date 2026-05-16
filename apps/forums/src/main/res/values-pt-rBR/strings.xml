@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Postagem</string>
     <string name="forums_access_level_none">Nenhum</string>
     <string name="forums_members_empty">Sem membros</string>
+    <string name="forums_banner_dismiss">Dispensar banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Conta padrão</string>
     <string name="forums_ai_prompt_reset">Redefinir para o padrão</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipo</string>
     <string name="forums_moderation_restriction_type_muted">Silenciar</string>
     <string name="forums_moderation_restriction_type_banned">Banir</string>
+    <string name="forums_moderation_section_premoderation">Moderação prévia</string>
+    <string name="forums_moderation_section_ratelimiting">Limite de taxa</string>
+    <string name="forums_moderation_require_posts">Exigir aprovação para novas postagens</string>
+    <string name="forums_moderation_require_comments">Exigir aprovação para novos comentários</string>
+    <string name="forums_moderation_require_new_users">Exigir aprovação para novos usuários</string>
+    <string name="forums_moderation_new_user_days">Limite de novo usuário:</string>
+    <string name="forums_moderation_post_limit">Limite de postagens</string>
+    <string name="forums_moderation_comment_limit">Limite de comentários</string>
+    <string name="forums_moderation_limit_window">Duração da janela</string>
     <string name="forums_report_reason">Motivo</string>
     <string name="forums_report_details">Detalhes</string>
     <string name="forums_report_submit">Enviar denúncia</string>

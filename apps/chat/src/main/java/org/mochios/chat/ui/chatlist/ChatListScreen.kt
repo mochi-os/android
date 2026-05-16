@@ -202,6 +202,7 @@ fun ChatListScreen(
                                 items(filtered, key = { it.fingerprint.ifEmpty { it.id } }) { chat ->
                                     ChatRow(
                                         chat = chat,
+                                        serverUrl = viewModel.serverUrl,
                                         onClick = {
                                             val id = chat.fingerprint.ifEmpty { chat.id }
                                             onChatClick(id)
@@ -221,6 +222,7 @@ fun ChatListScreen(
 @Composable
 private fun ChatRow(
     chat: Chat,
+    serverUrl: String,
     onClick: () -> Unit,
     onDeleteLocally: () -> Unit
 ) {
@@ -239,12 +241,17 @@ private fun ChatRow(
         else -> null
     }
 
+    val avatarUrl = if (chat.members == 2 && chat.other.isNotBlank() && serverUrl.isNotBlank()) {
+        "$serverUrl/people/${chat.other}/-/avatar"
+    } else null
+
     Box {
         EntityListRow(
             name = chat.name,
             seed = chatId.ifEmpty { chat.id },
             icon = Icons.Default.ChatBubble,
             subtitle = subtitle,
+            avatarUrl = avatarUrl,
             onClick = onClick,
             onLongClick = { showMenu = true },
             trailing = {

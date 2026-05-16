@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Ανάρτηση</string>
     <string name="forums_access_level_none">Κανένα</string>
     <string name="forums_members_empty">Χωρίς μέλη</string>
+    <string name="forums_banner_dismiss">Απόρριψη μπάνερ</string>
     <string name="forums_ai_mode_tag">Ετικέτα</string>
     <string name="forums_ai_account_default">Προεπιλεγμένος λογαριασμός</string>
     <string name="forums_ai_prompt_reset">Επαναφορά στις προεπιλογές</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Τύπος</string>
     <string name="forums_moderation_restriction_type_muted">Σίγαση</string>
     <string name="forums_moderation_restriction_type_banned">Αποκλεισμός</string>
+    <string name="forums_moderation_section_premoderation">Προ-συντονισμός</string>
+    <string name="forums_moderation_section_ratelimiting">Περιορισμός ρυθμού</string>
+    <string name="forums_moderation_require_posts">Απαίτηση έγκρισης για νέες αναρτήσεις</string>
+    <string name="forums_moderation_require_comments">Απαίτηση έγκρισης για νέα σχόλια</string>
+    <string name="forums_moderation_require_new_users">Απαίτηση έγκρισης για νέους χρήστες</string>
+    <string name="forums_moderation_new_user_days">Όριο νέου χρήστη:</string>
+    <string name="forums_moderation_post_limit">Όριο αναρτήσεων</string>
+    <string name="forums_moderation_comment_limit">Όριο σχολίων</string>
+    <string name="forums_moderation_limit_window">Διάρκεια παραθύρου</string>
     <string name="forums_report_reason">Αιτία</string>
     <string name="forums_report_details">Λεπτομέρειες</string>
     <string name="forums_report_submit">Υποβολή αναφοράς</string>

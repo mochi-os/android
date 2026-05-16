@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">پۆست</string>
     <string name="forums_access_level_none">هیچ</string>
     <string name="forums_members_empty">هیچ ئەندامێک نییە</string>
+    <string name="forums_banner_dismiss">لابردنی بانەر</string>
     <string name="forums_ai_mode_tag">تاگ</string>
     <string name="forums_ai_account_default">هەژماری بنەڕەت</string>
     <string name="forums_ai_prompt_reset">گەڕاندنەوە بۆ بنەڕەت</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">جۆر</string>
     <string name="forums_moderation_restriction_type_muted">بێدەنگکردن</string>
     <string name="forums_moderation_restriction_type_banned">بلۆککردن</string>
+    <string name="forums_moderation_section_premoderation">پێش-ڕێکخستن</string>
+    <string name="forums_moderation_section_ratelimiting">سنووردارکردنی ڕێژە</string>
+    <string name="forums_moderation_require_posts">پەسەندکردن پێویستە بۆ پۆستە نوێیەکان</string>
+    <string name="forums_moderation_require_comments">پەسەندکردن پێویستە بۆ بۆچوونە نوێیەکان</string>
+    <string name="forums_moderation_require_new_users">پەسەندکردن پێویستە بۆ بەکارهێنەرە نوێیەکان</string>
+    <string name="forums_moderation_new_user_days">سنووری بەکارهێنەری نوێ:</string>
+    <string name="forums_moderation_post_limit">سنووری پۆست</string>
+    <string name="forums_moderation_comment_limit">سنووری لێدوان</string>
+    <string name="forums_moderation_limit_window">ماوەی پەنجەرە</string>
     <string name="forums_report_reason">هۆکار</string>
     <string name="forums_report_details">وردەکارییەکان</string>
     <string name="forums_report_submit">ڕاپۆرت بنێرە</string>

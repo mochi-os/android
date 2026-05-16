@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">لیکنه</string>
     <string name="forums_access_level_none">هیڅوک</string>
     <string name="forums_members_empty">هیڅ غړي نشته</string>
+    <string name="forums_banner_dismiss">بانر وردکړه</string>
     <string name="forums_ai_mode_tag">ټاګ</string>
     <string name="forums_ai_account_default">ډیفالټ حساب</string>
     <string name="forums_ai_prompt_reset">ډیفالټ ته بیرته تنظیم کړئ</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">ډول</string>
     <string name="forums_moderation_restriction_type_muted">خاموش</string>
     <string name="forums_moderation_restriction_type_banned">بند کړه</string>
+    <string name="forums_moderation_section_premoderation">د مخکې اعتدال</string>
+    <string name="forums_moderation_section_ratelimiting">د کچې محدودیت</string>
+    <string name="forums_moderation_require_posts">د نویو لیکنو لپاره تصویب اړین دی</string>
+    <string name="forums_moderation_require_comments">د نویو تبصرو لپاره تصویب اړین دی</string>
+    <string name="forums_moderation_require_new_users">د نویو کاروونکو لپاره تصویب اړین دی</string>
+    <string name="forums_moderation_new_user_days">د نوي کارن حد:</string>
+    <string name="forums_moderation_post_limit">د لیکنې حد</string>
+    <string name="forums_moderation_comment_limit">د تبصرې حد</string>
+    <string name="forums_moderation_limit_window">د کړکۍ موده</string>
     <string name="forums_report_reason">دلیل</string>
     <string name="forums_report_details">تفصیلات</string>
     <string name="forums_report_submit">راپور وسپارئ</string>

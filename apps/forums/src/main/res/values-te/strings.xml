@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">పోస్ట్</string>
     <string name="forums_access_level_none">ఏదీ లేదు</string>
     <string name="forums_members_empty">సభ్యులు లేరు</string>
+    <string name="forums_banner_dismiss">బ్యానర్‌ను విస్మరించండి</string>
     <string name="forums_ai_mode_tag">ట్యాగ్</string>
     <string name="forums_ai_account_default">డిఫాల్ట్ ఖాతా</string>
     <string name="forums_ai_prompt_reset">డిఫాల్ట్‌కు రీసెట్ చేయండి</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">రకం</string>
     <string name="forums_moderation_restriction_type_muted">మ్యూట్</string>
     <string name="forums_moderation_restriction_type_banned">నిషేధించండి</string>
+    <string name="forums_moderation_section_premoderation">ప్రీ-మోడరేషన్</string>
+    <string name="forums_moderation_section_ratelimiting">రేట్ లిమిటింగ్</string>
+    <string name="forums_moderation_require_posts">కొత్త పోస్ట్‌లకు ఆమోదాన్ని అవసరం చేయండి</string>
+    <string name="forums_moderation_require_comments">కొత్త కామెంట్‌లకు ఆమోదాన్ని అవసరం చేయండి</string>
+    <string name="forums_moderation_require_new_users">కొత్త యూజర్‌లకు ఆమోదాన్ని అవసరం చేయండి</string>
+    <string name="forums_moderation_new_user_days">కొత్త వినియోగదారు థ్రెషోల్డ్:</string>
+    <string name="forums_moderation_post_limit">పోస్ట్ పరిమితి</string>
+    <string name="forums_moderation_comment_limit">వ్యాఖ్య పరిమితి</string>
+    <string name="forums_moderation_limit_window">విండో వ్యవధి</string>
     <string name="forums_report_reason">కారణం</string>
     <string name="forums_report_details">వివరాలు</string>
     <string name="forums_report_submit">నివేదిక సమర్పించండి</string>

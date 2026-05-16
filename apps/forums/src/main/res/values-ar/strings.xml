@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">نشر</string>
     <string name="forums_access_level_none">لا شيء</string>
     <string name="forums_members_empty">لا يوجد أعضاء</string>
+    <string name="forums_banner_dismiss">تجاهل الشعار</string>
     <string name="forums_ai_mode_tag">وسم</string>
     <string name="forums_ai_account_default">الحساب الافتراضي</string>
     <string name="forums_ai_prompt_reset">إعادة تعيين إلى الافتراضي</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">النوع</string>
     <string name="forums_moderation_restriction_type_muted">كتم</string>
     <string name="forums_moderation_restriction_type_banned">حظر</string>
+    <string name="forums_moderation_section_premoderation">إشراف مسبق</string>
+    <string name="forums_moderation_section_ratelimiting">تحديد المعدل</string>
+    <string name="forums_moderation_require_posts">طلب الموافقة على المنشورات الجديدة</string>
+    <string name="forums_moderation_require_comments">طلب الموافقة على التعليقات الجديدة</string>
+    <string name="forums_moderation_require_new_users">طلب الموافقة على المستخدمين الجدد</string>
+    <string name="forums_moderation_new_user_days">حد المستخدم الجديد:</string>
+    <string name="forums_moderation_post_limit">حد المنشورات</string>
+    <string name="forums_moderation_comment_limit">حد التعليقات</string>
+    <string name="forums_moderation_limit_window">مدة النافذة</string>
     <string name="forums_report_reason">السبب</string>
     <string name="forums_report_details">التفاصيل</string>
     <string name="forums_report_submit">إرسال التقرير</string>

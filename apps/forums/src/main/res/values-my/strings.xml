@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">ပို့စ်</string>
     <string name="forums_access_level_none">မရှိ</string>
     <string name="forums_members_empty">အဖွဲ့ဝင်များ မရှိပါ</string>
+    <string name="forums_banner_dismiss">ပိုစတာ ပယ်မည်</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">မူရင်း အကောင့်</string>
     <string name="forums_ai_prompt_reset">ပုံသေသို့ ပြန်ထား</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">အမျိုးအစား</string>
     <string name="forums_moderation_restriction_type_muted">အသံပိတ်</string>
     <string name="forums_moderation_restriction_type_banned">ပိတ်ပင်မည်</string>
+    <string name="forums_moderation_section_premoderation">ကြိုတင် moderation</string>
+    <string name="forums_moderation_section_ratelimiting">Rate ကန့်သတ်ခြင်း</string>
+    <string name="forums_moderation_require_posts">ပို့စ်အသစ်များအတွက် အတည်ပြုခြင်း လိုအပ်</string>
+    <string name="forums_moderation_require_comments">comment အသစ်များအတွက် အတည်ပြုခြင်း လိုအပ်</string>
+    <string name="forums_moderation_require_new_users">သုံးစွဲသူအသစ်များအတွက် အတည်ပြုခြင်း လိုအပ်</string>
+    <string name="forums_moderation_new_user_days">သုံးစွဲသူအသစ် ကန့်သတ်ချက် -</string>
+    <string name="forums_moderation_post_limit">ပို့စ် ကန့်သတ်</string>
+    <string name="forums_moderation_comment_limit">မှတ်ချက် ကန့်သတ်ချက်</string>
+    <string name="forums_moderation_limit_window">ပြတင်းပေါက် ကြာချိန်</string>
     <string name="forums_report_reason">အကြောင်းပြချက်</string>
     <string name="forums_report_details">အသေးစိတ်များ</string>
     <string name="forums_report_submit">သတင်းပို့ချက် တင်ပြမည်</string>

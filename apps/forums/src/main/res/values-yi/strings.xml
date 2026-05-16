@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">פּאָסט</string>
     <string name="forums_access_level_none">קיינס</string>
     <string name="forums_members_empty">קיין מיטגלידער</string>
+    <string name="forums_banner_dismiss">אַראָפּזאָגן באַנער</string>
     <string name="forums_ai_mode_tag">טאַג</string>
     <string name="forums_ai_account_default">פֿאַרשטאַנדלעך קאָנטע</string>
     <string name="forums_ai_prompt_reset">צוריקזעצן צו פֿאַרשטעלונג</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">טיפּ</string>
     <string name="forums_moderation_restriction_type_muted">פֿאַרשטומען</string>
     <string name="forums_moderation_restriction_type_banned">פֿאַרבאָטן</string>
+    <string name="forums_moderation_section_premoderation">פֿאָר-מאָדעראַציע</string>
+    <string name="forums_moderation_section_ratelimiting">ראַטע באַגרענעצונג</string>
+    <string name="forums_moderation_require_posts">פֿאָדער באַשטעטיקונג פֿאַר נײַע פּאָסטן</string>
+    <string name="forums_moderation_require_comments">פֿאָדער באַשטעטיקונג פֿאַר נײַע באַמערקונגען</string>
+    <string name="forums_moderation_require_new_users">פֿאָדער באַשטעטיקונג פֿאַר נײַע באַניצערס</string>
+    <string name="forums_moderation_new_user_days">נײַער באַניצער שוועל:</string>
+    <string name="forums_moderation_post_limit">פּאָסט גרענעץ</string>
+    <string name="forums_moderation_comment_limit">קאָמענטאַר גרענעץ</string>
+    <string name="forums_moderation_limit_window">פֿענצטער־דויערונג</string>
     <string name="forums_report_reason">סיבה</string>
     <string name="forums_report_details">פּרטים</string>
     <string name="forums_report_submit">געב אונטער באַריכט</string>

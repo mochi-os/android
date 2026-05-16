@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Нийтлэл</string>
     <string name="forums_access_level_none">Алга</string>
     <string name="forums_members_empty">Гишүүн алга</string>
+    <string name="forums_banner_dismiss">Баннер хаах</string>
     <string name="forums_ai_mode_tag">Тэг</string>
     <string name="forums_ai_account_default">Үндсэн бүртгэл</string>
     <string name="forums_ai_prompt_reset">Анхдагчид буцаах</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Төрөл</string>
     <string name="forums_moderation_restriction_type_muted">Чимээгүй болгох</string>
     <string name="forums_moderation_restriction_type_banned">Хориглох</string>
+    <string name="forums_moderation_section_premoderation">Урьдчилсан модераци</string>
+    <string name="forums_moderation_section_ratelimiting">Хязгаарлалтын хурд</string>
+    <string name="forums_moderation_require_posts">Шинэ нийтлэлд батлах хэрэгтэй</string>
+    <string name="forums_moderation_require_comments">Шинэ сэтгэгдэлд батлах хэрэгтэй</string>
+    <string name="forums_moderation_require_new_users">Шинэ хэрэглэгчид батлах хэрэгтэй</string>
+    <string name="forums_moderation_new_user_days">Шинэ хэрэглэгчийн босго:</string>
+    <string name="forums_moderation_post_limit">Нийтлэлийн хязгаар</string>
+    <string name="forums_moderation_comment_limit">Сэтгэгдлийн хязгаар</string>
+    <string name="forums_moderation_limit_window">Цонхны үргэлжлэх хугацаа</string>
     <string name="forums_report_reason">Шалтгаан</string>
     <string name="forums_report_details">Дэлгэрэнгүй</string>
     <string name="forums_report_submit">Гомдол илгээх</string>

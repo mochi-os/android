@@ -317,10 +317,10 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun pollSource(id: String) {
+    fun pollSource(source: String) {
         viewModelScope.launch {
             try {
-                repository.pollSource(feedId, id)
+                repository.pollSource(feedId, source)
                 _actionMessage.value = "Polling source..."
             } catch (e: MochiError) {
                 _error.value = e.userMessage()

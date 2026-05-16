@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Допис</string>
     <string name="forums_access_level_none">Немає</string>
     <string name="forums_members_empty">Немає учасників</string>
+    <string name="forums_banner_dismiss">Закрити банер</string>
     <string name="forums_ai_mode_tag">Тег</string>
     <string name="forums_ai_account_default">Обліковий запис за замовчуванням</string>
     <string name="forums_ai_prompt_reset">Скинути до значення за замовчуванням</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Тип</string>
     <string name="forums_moderation_restriction_type_muted">Заглушити</string>
     <string name="forums_moderation_restriction_type_banned">Заблокувати</string>
+    <string name="forums_moderation_section_premoderation">Премодерація</string>
+    <string name="forums_moderation_section_ratelimiting">Обмеження частоти</string>
+    <string name="forums_moderation_require_posts">Вимагати схвалення нових дописів</string>
+    <string name="forums_moderation_require_comments">Вимагати схвалення нових коментарів</string>
+    <string name="forums_moderation_require_new_users">Вимагати схвалення нових користувачів</string>
+    <string name="forums_moderation_new_user_days">Поріг нового користувача:</string>
+    <string name="forums_moderation_post_limit">Ліміт дописів</string>
+    <string name="forums_moderation_comment_limit">Обмеження коментарів</string>
+    <string name="forums_moderation_limit_window">Тривалість вікна</string>
     <string name="forums_report_reason">Причина</string>
     <string name="forums_report_details">Деталі</string>
     <string name="forums_report_submit">Надіслати скаргу</string>

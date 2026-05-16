@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">پوسٽ</string>
     <string name="forums_access_level_none">ڪا به نه</string>
     <string name="forums_members_empty">ڪي ميمبر نه آهن</string>
+    <string name="forums_banner_dismiss">بينر رد ڪريو</string>
     <string name="forums_ai_mode_tag">ٽيگ</string>
     <string name="forums_ai_account_default">ڊفالٽ اڪائونٽ</string>
     <string name="forums_ai_prompt_reset">ڊفالٽ تي ري سيٽ ڪريو</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">قسم</string>
     <string name="forums_moderation_restriction_type_muted">خاموش ڪريو</string>
     <string name="forums_moderation_restriction_type_banned">پابندي</string>
+    <string name="forums_moderation_section_premoderation">اڳ-اعتدال</string>
+    <string name="forums_moderation_section_ratelimiting">ريٽ محدود ڪرڻ</string>
+    <string name="forums_moderation_require_posts">نون پوسٽن لاءِ منظوري گهرجي</string>
+    <string name="forums_moderation_require_comments">نوان تبصرن لاءِ منظوري گهرجي</string>
+    <string name="forums_moderation_require_new_users">نون يوزرن لاءِ منظوري گهرجي</string>
+    <string name="forums_moderation_new_user_days">نئين يوزر جي حد:</string>
+    <string name="forums_moderation_post_limit">پوسٽ جي حد</string>
+    <string name="forums_moderation_comment_limit">تبصرن جي حد</string>
+    <string name="forums_moderation_limit_window">ونڊو دورانيو</string>
     <string name="forums_report_reason">سبب</string>
     <string name="forums_report_details">تفصيل</string>
     <string name="forums_report_submit">رپورٽ جمع ڪريو</string>

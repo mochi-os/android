@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Nessuno</string>
     <string name="forums_members_empty">Nessun membro</string>
+    <string name="forums_banner_dismiss">Ignora banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Account predefinito</string>
     <string name="forums_ai_prompt_reset">Reimposta ai valori predefiniti</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipo</string>
     <string name="forums_moderation_restriction_type_muted">Silenzia</string>
     <string name="forums_moderation_restriction_type_banned">Bandisci</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderazione</string>
+    <string name="forums_moderation_section_ratelimiting">Limitazione di frequenza</string>
+    <string name="forums_moderation_require_posts">Richiedi approvazione per i nuovi post</string>
+    <string name="forums_moderation_require_comments">Richiedi approvazione per i nuovi commenti</string>
+    <string name="forums_moderation_require_new_users">Richiedi approvazione per i nuovi utenti</string>
+    <string name="forums_moderation_new_user_days">Soglia nuovo utente:</string>
+    <string name="forums_moderation_post_limit">Limite post</string>
+    <string name="forums_moderation_comment_limit">Limite di commenti</string>
+    <string name="forums_moderation_limit_window">Durata della finestra</string>
     <string name="forums_report_reason">Motivo</string>
     <string name="forums_report_details">Dettagli</string>
     <string name="forums_report_submit">Invia segnalazione</string>

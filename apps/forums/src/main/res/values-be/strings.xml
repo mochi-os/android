@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Апублікаваць</string>
     <string name="forums_access_level_none">Няма</string>
     <string name="forums_members_empty">Удзельнікаў няма</string>
+    <string name="forums_banner_dismiss">Закрыць банер</string>
     <string name="forums_ai_mode_tag">Тэг</string>
     <string name="forums_ai_account_default">Уліковы запіс па змаўчанні</string>
     <string name="forums_ai_prompt_reset">Скінуць да змаўчання</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Тып</string>
     <string name="forums_moderation_restriction_type_muted">Адключыць гук</string>
     <string name="forums_moderation_restriction_type_banned">Заблакаваць</string>
+    <string name="forums_moderation_section_premoderation">Прэ-мадэрацыя</string>
+    <string name="forums_moderation_section_ratelimiting">Абмежаванне частаты</string>
+    <string name="forums_moderation_require_posts">Патрабаваць ухвалення новых пастоў</string>
+    <string name="forums_moderation_require_comments">Патрабаваць ухвалення новых каментароў</string>
+    <string name="forums_moderation_require_new_users">Патрабаваць ухвалення новых карыстальнікаў</string>
+    <string name="forums_moderation_new_user_days">Парог новага карыстальніка:</string>
+    <string name="forums_moderation_post_limit">Ліміт пастоў</string>
+    <string name="forums_moderation_comment_limit">Ліміт каментарыяў</string>
+    <string name="forums_moderation_limit_window">Працягласць акна</string>
     <string name="forums_report_reason">Прычына</string>
     <string name="forums_report_details">Дэталі</string>
     <string name="forums_report_submit">Адправіць скаргу</string>

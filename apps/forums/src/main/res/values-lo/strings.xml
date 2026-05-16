@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">ໂພສ</string>
     <string name="forums_access_level_none">ບໍ່ມີ</string>
     <string name="forums_members_empty">ບໍ່ມີສະມາຊິກ</string>
+    <string name="forums_banner_dismiss">ປິດປ້າຍ</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">ບັນຊີເລີ່ມຕົ້ນ</string>
     <string name="forums_ai_prompt_reset">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">ປະເພດ</string>
     <string name="forums_moderation_restriction_type_muted">ປິດສຽງ</string>
     <string name="forums_moderation_restriction_type_banned">ແບນ</string>
+    <string name="forums_moderation_section_premoderation">ກວດກາລ່ວງໜ້າ</string>
+    <string name="forums_moderation_section_ratelimiting">ການຈຳກັດອັດຕາ</string>
+    <string name="forums_moderation_require_posts">ຕ້ອງການການອະນຸມັດສຳລັບໂພສໃໝ່</string>
+    <string name="forums_moderation_require_comments">ຕ້ອງການການອະນຸມັດສຳລັບຄຳເຫັນໃໝ່</string>
+    <string name="forums_moderation_require_new_users">ຕ້ອງການການອະນຸມັດສຳລັບຜູ້ໃຊ້ໃໝ່</string>
+    <string name="forums_moderation_new_user_days">ເກນຜູ້ໃຊ້ໃໝ່:</string>
+    <string name="forums_moderation_post_limit">ຂີດຈຳກັດໂພສ</string>
+    <string name="forums_moderation_comment_limit">ຂີດຈຳກັດຄຳເຫັນ</string>
+    <string name="forums_moderation_limit_window">ໄລຍະເວລາໜ້າຕ່າງ</string>
     <string name="forums_report_reason">ເຫດຜົນ</string>
     <string name="forums_report_details">ລາຍລະອຽດ</string>
     <string name="forums_report_submit">ສົ່ງລາຍງານ</string>

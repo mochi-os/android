@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">පළ කිරීම</string>
     <string name="forums_access_level_none">කිසිවක් නැත</string>
     <string name="forums_members_empty">සාමාජිකයින් නැත</string>
+    <string name="forums_banner_dismiss">බැනරය ඉවත ලන්න</string>
     <string name="forums_ai_mode_tag">ටැගය</string>
     <string name="forums_ai_account_default">පෙරනිමි ගිණුම</string>
     <string name="forums_ai_prompt_reset">පෙරනිමියට reset කරන්න</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">වර්ගය</string>
     <string name="forums_moderation_restriction_type_muted">නිහඬ</string>
     <string name="forums_moderation_restriction_type_banned">තහනම් කරන්න</string>
+    <string name="forums_moderation_section_premoderation">පූර්ව මෝඩරේෂන්</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">නව පළ කිරීම් සඳහා අනුමැතිය අවශ්‍ය කරන්න</string>
+    <string name="forums_moderation_require_comments">නව අදහස් සඳහා අනුමැතිය අවශ්‍ය කරන්න</string>
+    <string name="forums_moderation_require_new_users">නව පරිශීලකයින් සඳහා අනුමැතිය අවශ්‍ය කරන්න</string>
+    <string name="forums_moderation_new_user_days">නව පරිශීලක සීමාව:</string>
+    <string name="forums_moderation_post_limit">පළ කිරීමේ සීමාව</string>
+    <string name="forums_moderation_comment_limit">අදහස් සීමාව</string>
+    <string name="forums_moderation_limit_window">කවුළු කාලය</string>
     <string name="forums_report_reason">හේතුව</string>
     <string name="forums_report_details">විස්තර</string>
     <string name="forums_report_submit">වාර්තාව ඉදිරිපත් කරන්න</string>

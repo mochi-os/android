@@ -18,7 +18,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
+import android.content.Context
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Forum
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Lock
@@ -72,6 +74,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.forums.R
 import org.mochios.forums.model.Post
@@ -288,6 +291,12 @@ private fun ForumContent(
             modifier = Modifier.fillMaxSize().padding(padding)
         ) {
           Column(modifier = Modifier.fillMaxSize()) {
+            if (uiState.forum.bannerHtml.isNotBlank()) {
+                ForumBanner(
+                    bannerHtml = uiState.forum.bannerHtml,
+                    forumId = uiState.forum.id,
+                )
+            }
             if (uiState.tags.isNotEmpty()) {
                 androidx.compose.foundation.lazy.LazyRow(
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp),
@@ -474,6 +483,44 @@ private fun PostCard(
                     text = "${post.comments}",
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+    }
+}
+
+private fun bannerContentHash(content: String): String {
+    var hash = 5381
+    for (c in content) hash = (hash shl 5) + hash + c.code
+    return Integer.toHexString(hash)
+}
+
+@Composable
+private fun ForumBanner(bannerHtml: String, forumId: String) {
+    val context = LocalContext.current
+    val prefs = remember(context) {
+        context.getSharedPreferences("forums_banner_dismissed", Context.MODE_PRIVATE)
+    }
+    val prefKey = remember(forumId) { "forum_$forumId" }
+    val contentHash = remember(bannerHtml) { bannerContentHash(bannerHtml) }
+    var dismissed by remember(prefKey, contentHash) {
+        mutableStateOf(prefs.getString(prefKey, null) == contentHash)
+    }
+    if (dismissed) return
+
+    Card(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(start = 12.dp, top = 8.dp, bottom = 8.dp),
+            verticalAlignment = Alignment.Top,
+        ) {
+            HtmlContent(html = bannerHtml, modifier = Modifier.weight(1f))
+            IconButton(onClick = {
+                prefs.edit().putString(prefKey, contentHash).apply()
+                dismissed = true
+            }) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.forums_banner_dismiss),
                 )
             }
         }

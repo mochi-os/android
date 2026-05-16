@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Pòs</string>
     <string name="forums_access_level_none">Okenn</string>
     <string name="forums_members_empty">Pa gen manm</string>
+    <string name="forums_banner_dismiss">Rejte banyè</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Kont defo</string>
     <string name="forums_ai_prompt_reset">Reset nan default</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tip</string>
     <string name="forums_moderation_restriction_type_muted">Bay silans</string>
     <string name="forums_moderation_restriction_type_banned">Entèdi</string>
+    <string name="forums_moderation_section_premoderation">Pre-modèrasyon</string>
+    <string name="forums_moderation_section_ratelimiting">Limit Vitès</string>
+    <string name="forums_moderation_require_posts">Egzije apwobasyon pou nouvo pòs</string>
+    <string name="forums_moderation_require_comments">Egzije apwobasyon pou nouvo kòmantè</string>
+    <string name="forums_moderation_require_new_users">Egzije apwobasyon pou nouvo itilizatè</string>
+    <string name="forums_moderation_new_user_days">Limit nouvo itilizatè:</string>
+    <string name="forums_moderation_post_limit">Limit pòs</string>
+    <string name="forums_moderation_comment_limit">Limit kòmantè</string>
+    <string name="forums_moderation_limit_window">Dire fenèt</string>
     <string name="forums_report_reason">Rezon</string>
     <string name="forums_report_details">Detay</string>
     <string name="forums_report_submit">Soumèt rapò</string>

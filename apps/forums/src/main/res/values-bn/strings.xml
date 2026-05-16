@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">পোস্ট</string>
     <string name="forums_access_level_none">কোনোটি নয়</string>
     <string name="forums_members_empty">কোনো সদস্য নেই</string>
+    <string name="forums_banner_dismiss">ব্যানার বাতিল করুন</string>
     <string name="forums_ai_mode_tag">ট্যাগ</string>
     <string name="forums_ai_account_default">ডিফল্ট অ্যাকাউন্ট</string>
     <string name="forums_ai_prompt_reset">ডিফল্টে রিসেট করুন</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">ধরন</string>
     <string name="forums_moderation_restriction_type_muted">নিঃশব্দ</string>
     <string name="forums_moderation_restriction_type_banned">নিষিদ্ধ করুন</string>
+    <string name="forums_moderation_section_premoderation">প্রি-মডারেশন</string>
+    <string name="forums_moderation_section_ratelimiting">রেট লিমিটিং</string>
+    <string name="forums_moderation_require_posts">নতুন পোস্টের জন্য অনুমোদন প্রয়োজন</string>
+    <string name="forums_moderation_require_comments">নতুন মন্তব্যের জন্য অনুমোদন প্রয়োজন</string>
+    <string name="forums_moderation_require_new_users">নতুন ব্যবহারকারীদের জন্য অনুমোদন প্রয়োজন</string>
+    <string name="forums_moderation_new_user_days">নতুন ব্যবহারকারী থ্রেশহোল্ড:</string>
+    <string name="forums_moderation_post_limit">পোস্ট সীমা</string>
+    <string name="forums_moderation_comment_limit">মন্তব্যের সীমা</string>
+    <string name="forums_moderation_limit_window">উইন্ডো সময়কাল</string>
     <string name="forums_report_reason">কারণ</string>
     <string name="forums_report_details">বিবরণ</string>
     <string name="forums_report_submit">প্রতিবেদন জমা দিন</string>

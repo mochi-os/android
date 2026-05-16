@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Postáil</string>
     <string name="forums_access_level_none">Faic</string>
     <string name="forums_members_empty">Níl aon bhall</string>
+    <string name="forums_banner_dismiss">Dífhostaigh meirge</string>
     <string name="forums_ai_mode_tag">Clib</string>
     <string name="forums_ai_account_default">Cuntas réamhshocraithe</string>
     <string name="forums_ai_prompt_reset">Athshocraigh chuig réamhshocrú</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Cineál</string>
     <string name="forums_moderation_restriction_type_muted">Ciúnaigh</string>
     <string name="forums_moderation_restriction_type_banned">Cosc</string>
+    <string name="forums_moderation_section_premoderation">Réamh-mhodhnóireacht</string>
+    <string name="forums_moderation_section_ratelimiting">Teorannú Ráta</string>
+    <string name="forums_moderation_require_posts">Riachtanach faomhadh do phostálacha nua</string>
+    <string name="forums_moderation_require_comments">Riachtanach faomhadh do thráchtanna nua</string>
+    <string name="forums_moderation_require_new_users">Riachtanach faomhadh d\'úsáideoirí nua</string>
+    <string name="forums_moderation_new_user_days">Tairseach úsáideora nua:</string>
+    <string name="forums_moderation_post_limit">Teorainn postála</string>
+    <string name="forums_moderation_comment_limit">Teorainn nótaí tráchta</string>
+    <string name="forums_moderation_limit_window">Fad fuinneoige</string>
     <string name="forums_report_reason">Cúis</string>
     <string name="forums_report_details">Sonraí</string>
     <string name="forums_report_submit">Cuir tuairisc isteach</string>

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Objavi</string>
     <string name="forums_access_level_none">Brez</string>
     <string name="forums_members_empty">Brez članov</string>
+    <string name="forums_banner_dismiss">Opusti pasico</string>
     <string name="forums_ai_mode_tag">Oznaka</string>
     <string name="forums_ai_account_default">Privzeti račun</string>
     <string name="forums_ai_prompt_reset">Ponastavi na privzeto</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Vrsta</string>
     <string name="forums_moderation_restriction_type_muted">Utišaj</string>
     <string name="forums_moderation_restriction_type_banned">Prepovej</string>
+    <string name="forums_moderation_section_premoderation">Predmoderacija</string>
+    <string name="forums_moderation_section_ratelimiting">Omejevanje hitrosti</string>
+    <string name="forums_moderation_require_posts">Zahtevaj odobritev za nove objave</string>
+    <string name="forums_moderation_require_comments">Zahtevaj odobritev za nove komentarje</string>
+    <string name="forums_moderation_require_new_users">Zahtevaj odobritev za nove uporabnike</string>
+    <string name="forums_moderation_new_user_days">Prag novih uporabnikov:</string>
+    <string name="forums_moderation_post_limit">Omejitev objav</string>
+    <string name="forums_moderation_comment_limit">Omejitev komentarjev</string>
+    <string name="forums_moderation_limit_window">Trajanje okna</string>
     <string name="forums_report_reason">Razlog</string>
     <string name="forums_report_details">Podrobnosti</string>
     <string name="forums_report_submit">Pošlji prijavo</string>

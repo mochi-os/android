@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">پوسٹ</string>
     <string name="forums_access_level_none">کوئی نہیں</string>
     <string name="forums_members_empty">کوئی ممبران نہیں</string>
+    <string name="forums_banner_dismiss">بینر برخاست کریں</string>
     <string name="forums_ai_mode_tag">ٹیگ</string>
     <string name="forums_ai_account_default">ڈیفالٹ اکاؤنٹ</string>
     <string name="forums_ai_prompt_reset">ڈیفالٹ پر reset کریں</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">قسم</string>
     <string name="forums_moderation_restriction_type_muted">خاموش</string>
     <string name="forums_moderation_restriction_type_banned">پابندی</string>
+    <string name="forums_moderation_section_premoderation">pre-moderation</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">نئی پوسٹس کے لیے منظوری درکار کریں</string>
+    <string name="forums_moderation_require_comments">نئے تبصروں کے لیے منظوری درکار کریں</string>
+    <string name="forums_moderation_require_new_users">نئے صارفین کے لیے منظوری درکار کریں</string>
+    <string name="forums_moderation_new_user_days">نئے صارف کی حد:</string>
+    <string name="forums_moderation_post_limit">پوسٹ کی حد</string>
+    <string name="forums_moderation_comment_limit">تبصرے کی حد</string>
+    <string name="forums_moderation_limit_window">ونڈو کا دورانیہ</string>
     <string name="forums_report_reason">وجہ</string>
     <string name="forums_report_details">تفصیلات</string>
     <string name="forums_report_submit">رپورٹ جمع کریں</string>

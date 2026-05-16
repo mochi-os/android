@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Chan eil gin</string>
     <string name="forums_members_empty">Gun bhall</string>
+    <string name="forums_banner_dismiss">Leig seachad a\' bhratach</string>
     <string name="forums_ai_mode_tag">Taga</string>
     <string name="forums_ai_account_default">Cunntas bunaiteach</string>
     <string name="forums_ai_prompt_reset">Ath-shuidhich chun a\' bhun-tuiteamais</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Seòrsa</string>
     <string name="forums_moderation_restriction_type_muted">Cuir na thosd</string>
     <string name="forums_moderation_restriction_type_banned">Toirmisg</string>
+    <string name="forums_moderation_section_premoderation">Ro-mhodaratachadh</string>
+    <string name="forums_moderation_section_ratelimiting">Cuingealachadh ìre</string>
+    <string name="forums_moderation_require_posts">Iarr aontachadh airson postaichean ùra</string>
+    <string name="forums_moderation_require_comments">Iarr aontachadh airson beachdan ùra</string>
+    <string name="forums_moderation_require_new_users">Iarr aontachadh airson cleachdaichean ùra</string>
+    <string name="forums_moderation_new_user_days">Stairsneach cleachdaiche ùr:</string>
+    <string name="forums_moderation_post_limit">Cuingealachadh phostaichean</string>
+    <string name="forums_moderation_comment_limit">Crìoch bheachdan</string>
+    <string name="forums_moderation_limit_window">Faid uinneig</string>
     <string name="forums_report_reason">Adhbhar</string>
     <string name="forums_report_details">Mion-fhiosrachadh</string>
     <string name="forums_report_submit">Cuir a-steach aithisg</string>

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Chapisho</string>
     <string name="forums_access_level_none">Hakuna</string>
     <string name="forums_members_empty">Hakuna wanachama</string>
+    <string name="forums_banner_dismiss">Ondoa bango</string>
     <string name="forums_ai_mode_tag">Lebo</string>
     <string name="forums_ai_account_default">Akaunti chaguo-msingi</string>
     <string name="forums_ai_prompt_reset">Weka upya kwa chaguo-msingi</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Aina</string>
     <string name="forums_moderation_restriction_type_muted">Nyamazisha</string>
     <string name="forums_moderation_restriction_type_banned">Piga marufuku</string>
+    <string name="forums_moderation_section_premoderation">Udhibiti wa awali</string>
+    <string name="forums_moderation_section_ratelimiting">Kuweka Kikomo cha Kasi</string>
+    <string name="forums_moderation_require_posts">Inahitaji idhini kwa machapisho mapya</string>
+    <string name="forums_moderation_require_comments">Inahitaji idhini kwa maoni mapya</string>
+    <string name="forums_moderation_require_new_users">Inahitaji idhini kwa watumiaji wapya</string>
+    <string name="forums_moderation_new_user_days">Kizingiti cha mtumiaji mpya:</string>
+    <string name="forums_moderation_post_limit">Kikomo cha chapisho</string>
+    <string name="forums_moderation_comment_limit">Kikomo cha maoni</string>
+    <string name="forums_moderation_limit_window">Muda wa dirisha</string>
     <string name="forums_report_reason">Sababu</string>
     <string name="forums_report_details">Undani</string>
     <string name="forums_report_submit">Wasilisha ripoti</string>

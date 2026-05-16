@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Hech qanday</string>
     <string name="forums_members_empty">Aʼzolar yoʻq</string>
+    <string name="forums_banner_dismiss">Bannerni bekor qilish</string>
     <string name="forums_ai_mode_tag">Teg</string>
     <string name="forums_ai_account_default">Standart hisob</string>
     <string name="forums_ai_prompt_reset">Standartga qaytarish</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tur</string>
     <string name="forums_moderation_restriction_type_muted">Ovozsizlantirish</string>
     <string name="forums_moderation_restriction_type_banned">Bloklash</string>
+    <string name="forums_moderation_section_premoderation">Oldindan moderatsiya</string>
+    <string name="forums_moderation_section_ratelimiting">Tezlik chegarasi</string>
+    <string name="forums_moderation_require_posts">Yangi postlar uchun tasdiqlash talab qilish</string>
+    <string name="forums_moderation_require_comments">Yangi izohlar uchun tasdiqlash talab qilish</string>
+    <string name="forums_moderation_require_new_users">Yangi foydalanuvchilar uchun tasdiqlash talab qilish</string>
+    <string name="forums_moderation_new_user_days">Yangi foydalanuvchi chegarasi:</string>
+    <string name="forums_moderation_post_limit">Post chegarasi</string>
+    <string name="forums_moderation_comment_limit">Izoh chegarasi</string>
+    <string name="forums_moderation_limit_window">Oyna davomiyligi</string>
     <string name="forums_report_reason">Sabab</string>
     <string name="forums_report_details">Tafsilotlar</string>
     <string name="forums_report_submit">Hisobotni yuborish</string>

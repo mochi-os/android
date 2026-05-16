@@ -129,10 +129,10 @@ class ProjectSettingsViewModel @Inject constructor(
         }
     }
 
-    fun setAccess(subject: String, operation: String) {
+    fun setAccess(subject: String, level: String) {
         viewModelScope.launch {
             try {
-                repository.setAccess(projectId, subject, operation)
+                repository.setAccess(projectId, subject, level)
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -151,10 +151,10 @@ class ProjectSettingsViewModel @Inject constructor(
         }
     }
 
-    fun revokeAccess(id: Int) {
+    fun revokeAccess(subject: String) {
         viewModelScope.launch {
             try {
-                repository.revokeAccess(projectId, id)
+                repository.revokeAccess(projectId, subject)
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

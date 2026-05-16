@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Bài viết</string>
     <string name="forums_access_level_none">Không có</string>
     <string name="forums_members_empty">Không có thành viên</string>
+    <string name="forums_banner_dismiss">Bỏ qua biểu ngữ</string>
     <string name="forums_ai_mode_tag">Thẻ</string>
     <string name="forums_ai_account_default">Tài khoản mặc định</string>
     <string name="forums_ai_prompt_reset">Đặt lại về mặc định</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Loại</string>
     <string name="forums_moderation_restriction_type_muted">Tắt tiếng</string>
     <string name="forums_moderation_restriction_type_banned">Cấm</string>
+    <string name="forums_moderation_section_premoderation">Kiểm duyệt trước</string>
+    <string name="forums_moderation_section_ratelimiting">Giới hạn tần suất</string>
+    <string name="forums_moderation_require_posts">Yêu cầu duyệt cho bài viết mới</string>
+    <string name="forums_moderation_require_comments">Yêu cầu duyệt cho bình luận mới</string>
+    <string name="forums_moderation_require_new_users">Yêu cầu duyệt cho người dùng mới</string>
+    <string name="forums_moderation_new_user_days">Ngưỡng người dùng mới:</string>
+    <string name="forums_moderation_post_limit">Giới hạn bài viết</string>
+    <string name="forums_moderation_comment_limit">Giới hạn bình luận</string>
+    <string name="forums_moderation_limit_window">Thời lượng cửa sổ</string>
     <string name="forums_report_reason">Lý do</string>
     <string name="forums_report_details">Chi tiết</string>
     <string name="forums_report_submit">Gửi báo cáo</string>

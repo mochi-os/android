@@ -13,7 +13,7 @@
     <string name="forums_list_unsubscribe_title">Sei opp abonnement</string>
     <string name="forums_create_title">Opprett forum</string>
     <string name="forums_create_name">Namn</string>
-    <string name="forums_create_privacy">Personvern</string>
+    <string name="forums_create_privacy">Privacy</string>
     <string name="forums_create_private">Privat</string>
     <string name="forums_create_public">Offentleg</string>
     <string name="forums_create_action">Opprett</string>
@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Innlegg</string>
     <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Ingen medlemmer</string>
+    <string name="forums_banner_dismiss">Avvis banner</string>
     <string name="forums_ai_mode_tag">Etikett</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Tilbakestill til standard</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Type</string>
     <string name="forums_moderation_restriction_type_muted">Stilla</string>
     <string name="forums_moderation_restriction_type_banned">Utesteng</string>
+    <string name="forums_moderation_section_premoderation">Førmoderasjon</string>
+    <string name="forums_moderation_section_ratelimiting">Frekvensavgrensing</string>
+    <string name="forums_moderation_require_posts">Krev godkjenning for nye innlegg</string>
+    <string name="forums_moderation_require_comments">Krev godkjenning for nye kommentarar</string>
+    <string name="forums_moderation_require_new_users">Krev godkjenning for nye brukarar</string>
+    <string name="forums_moderation_new_user_days">Terskel for ny brukar:</string>
+    <string name="forums_moderation_post_limit">Innleggsgrense</string>
+    <string name="forums_moderation_comment_limit">Kommentargrense</string>
+    <string name="forums_moderation_limit_window">Vindaugevarigheit</string>
     <string name="forums_report_reason">Grunn</string>
     <string name="forums_report_details">Detaljar</string>
     <string name="forums_report_submit">Send inn rapport</string>

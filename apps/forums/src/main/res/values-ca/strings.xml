@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Publicació</string>
     <string name="forums_access_level_none">Cap</string>
     <string name="forums_members_empty">Sense membres</string>
+    <string name="forums_banner_dismiss">Descarta el bàner</string>
     <string name="forums_ai_mode_tag">Etiqueta</string>
     <string name="forums_ai_account_default">Compte per defecte</string>
     <string name="forums_ai_prompt_reset">Restableix al valor per defecte</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipus</string>
     <string name="forums_moderation_restriction_type_muted">Silencia</string>
     <string name="forums_moderation_restriction_type_banned">Veta</string>
+    <string name="forums_moderation_section_premoderation">Premoderació</string>
+    <string name="forums_moderation_section_ratelimiting">Limitació de freqüència</string>
+    <string name="forums_moderation_require_posts">Cal aprovació per a les publicacions noves</string>
+    <string name="forums_moderation_require_comments">Cal aprovació per als comentaris nous</string>
+    <string name="forums_moderation_require_new_users">Cal aprovació per als usuaris nous</string>
+    <string name="forums_moderation_new_user_days">Llindar d\'usuaris nous:</string>
+    <string name="forums_moderation_post_limit">Límit de publicacions</string>
+    <string name="forums_moderation_comment_limit">Límit de comentaris</string>
+    <string name="forums_moderation_limit_window">Durada de la finestra</string>
     <string name="forums_report_reason">Motiu</string>
     <string name="forums_report_details">Detalls</string>
     <string name="forums_report_submit">Envia informe</string>

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Sako</string>
     <string name="forums_access_level_none">Babu</string>
     <string name="forums_members_empty">Babu membobi</string>
+    <string name="forums_banner_dismiss">Kau da banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Asusun default</string>
     <string name="forums_ai_prompt_reset">Mayar zuwa asali</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Nau\'i</string>
     <string name="forums_moderation_restriction_type_muted">Yi shiru</string>
     <string name="forums_moderation_restriction_type_banned">Hana</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderation</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Buƙaci amincewa don sabbin posts</string>
+    <string name="forums_moderation_require_comments">Buƙaci amincewa don sabbin sharhi</string>
+    <string name="forums_moderation_require_new_users">Buƙaci amincewa don sabbin masu amfani</string>
+    <string name="forums_moderation_new_user_days">Iyakar sabon mai amfani:</string>
+    <string name="forums_moderation_post_limit">Iyakar post</string>
+    <string name="forums_moderation_comment_limit">Iyakar sharhi</string>
+    <string name="forums_moderation_limit_window">Tsawon window</string>
     <string name="forums_report_reason">Dalili</string>
     <string name="forums_report_details">Cikakkun bayanai</string>
     <string name="forums_report_submit">Aika rahoto</string>

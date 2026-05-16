@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Postingan</string>
     <string name="forums_access_level_none">Ora ana</string>
     <string name="forums_members_empty">Ora ana anggota</string>
+    <string name="forums_banner_dismiss">Singkiraké banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akun standar</string>
     <string name="forums_ai_prompt_reset">Reset menyang default</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Jenis</string>
     <string name="forums_moderation_restriction_type_muted">Bisuaké</string>
     <string name="forums_moderation_restriction_type_banned">Blokir</string>
+    <string name="forums_moderation_section_premoderation">Pra-moderasi</string>
+    <string name="forums_moderation_section_ratelimiting">Watesan Tarif</string>
+    <string name="forums_moderation_require_posts">Butuh persetujuan kanggo postingan anyar</string>
+    <string name="forums_moderation_require_comments">Butuh persetujuan kanggo komentar anyar</string>
+    <string name="forums_moderation_require_new_users">Butuh persetujuan kanggo pangguna anyar</string>
+    <string name="forums_moderation_new_user_days">Ambang pangguna anyar:</string>
+    <string name="forums_moderation_post_limit">Watesan postingan</string>
+    <string name="forums_moderation_comment_limit">Watesan komentar</string>
+    <string name="forums_moderation_limit_window">Durasi window</string>
     <string name="forums_report_reason">Alesan</string>
     <string name="forums_report_details">Rincian</string>
     <string name="forums_report_submit">Kirim laporan</string>

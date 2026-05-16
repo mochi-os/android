@@ -46,6 +46,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
 import org.mochios.android.R as MochiR
@@ -162,6 +163,7 @@ fun ChatSettingsScreen(
                                 member = member,
                                 isMe = member.id == uiState.identity,
                                 canRemove = uiState.chat.left == 0 && member.id != uiState.identity,
+                                serverUrl = viewModel.serverUrl,
                                 onRemove = { memberToRemove = member }
                             )
                         }
@@ -261,6 +263,7 @@ fun ChatSettingsScreen(
         val candidates = uiState.friends.filter { it.id !in existingMemberIds }
         AddMemberDialog(
             friends = candidates,
+            serverUrl = viewModel.serverUrl,
             onConfirm = { friendId ->
                 viewModel.addMember(friendId)
                 showAddMember = false
@@ -273,6 +276,7 @@ fun ChatSettingsScreen(
 @Composable
 private fun AddMemberDialog(
     friends: List<org.mochios.chat.model.Friend>,
+    serverUrl: String,
     onConfirm: (friendId: String) -> Unit,
     onDismiss: () -> Unit,
 ) {
@@ -311,11 +315,11 @@ private fun AddMemberDialog(
                                     .clickable { onConfirm(f.id) },
                                 verticalAlignment = Alignment.CenterVertically,
                             ) {
-                                Icon(
-                                    Icons.Default.Person,
-                                    contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.size(20.dp),
+                                EntityAvatar(
+                                    name = f.name,
+                                    src = if (serverUrl.isNotBlank()) "$serverUrl/people/${f.id}/-/avatar" else null,
+                                    seed = f.id,
+                                    size = 24.dp,
                                 )
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(f.name)
@@ -339,17 +343,18 @@ private fun MemberRow(
     member: ChatMember,
     isMe: Boolean,
     canRemove: Boolean,
+    serverUrl: String,
     onRemove: () -> Unit
 ) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Icon(
-            imageVector = Icons.Default.Person,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.size(24.dp)
+        EntityAvatar(
+            name = member.name,
+            src = if (serverUrl.isNotBlank()) "$serverUrl/people/${member.id}/-/avatar" else null,
+            seed = member.id,
+            size = 32.dp,
         )
         Spacer(modifier = Modifier.width(12.dp))
         Column(modifier = Modifier.weight(1f)) {

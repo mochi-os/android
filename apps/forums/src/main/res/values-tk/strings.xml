@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Hiç biri</string>
     <string name="forums_members_empty">Agzalar ýok</string>
+    <string name="forums_banner_dismiss">Banneri goýbermek</string>
     <string name="forums_ai_mode_tag">Bellik</string>
     <string name="forums_ai_account_default">Adaty hasap</string>
     <string name="forums_ai_prompt_reset">Deslapky baha gaýtar</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Görnüş</string>
     <string name="forums_moderation_restriction_type_muted">Sessiz et</string>
     <string name="forums_moderation_restriction_type_banned">Gadagan etmek</string>
+    <string name="forums_moderation_section_premoderation">Öňünden moderasiýa</string>
+    <string name="forums_moderation_section_ratelimiting">Tizlik çäklendirmesi</string>
+    <string name="forums_moderation_require_posts">Täze postlar üçin tassyklama talap et</string>
+    <string name="forums_moderation_require_comments">Täze teswirler üçin tassyklama talap et</string>
+    <string name="forums_moderation_require_new_users">Täze ulanyjylar üçin tassyklama talap et</string>
+    <string name="forums_moderation_new_user_days">Täze ulanyjy çägi:</string>
+    <string name="forums_moderation_post_limit">Post çägi</string>
+    <string name="forums_moderation_comment_limit">Teswir çägi</string>
+    <string name="forums_moderation_limit_window">Penjire dowamlylygy</string>
     <string name="forums_report_reason">Sebäp</string>
     <string name="forums_report_details">Jikme-jiklikler</string>
     <string name="forums_report_submit">Hasabat tabşyr</string>

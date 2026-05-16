@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">ልጥፍ</string>
     <string name="forums_access_level_none">ምንም</string>
     <string name="forums_members_empty">ምንም አባላት የሉም</string>
+    <string name="forums_banner_dismiss">ባነሩን አጥፋ</string>
     <string name="forums_ai_mode_tag">መለያ</string>
     <string name="forums_ai_account_default">ነባሪ መለያ</string>
     <string name="forums_ai_prompt_reset">ወደ ነባሪ ዳግም አስጀምር</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">አይነት</string>
     <string name="forums_moderation_restriction_type_muted">ዝምታ</string>
     <string name="forums_moderation_restriction_type_banned">አግድ</string>
+    <string name="forums_moderation_section_premoderation">ቅድመ-ማስተካከያ</string>
+    <string name="forums_moderation_section_ratelimiting">ፍጥነት መገደብ</string>
+    <string name="forums_moderation_require_posts">ለአዲስ ልጥፎች ማጽደቅን ይጠይቁ</string>
+    <string name="forums_moderation_require_comments">ለአዲስ አስተያየቶች ማጽደቅን ይጠይቁ</string>
+    <string name="forums_moderation_require_new_users">ለአዲስ ተጠቃሚዎች ማጽደቅን ይጠይቁ</string>
+    <string name="forums_moderation_new_user_days">የአዲስ ተጠቃሚ ገደብ:</string>
+    <string name="forums_moderation_post_limit">የልጥፍ ገደብ</string>
+    <string name="forums_moderation_comment_limit">የአስተያየት ገደብ</string>
+    <string name="forums_moderation_limit_window">የመስኮት ቆይታ</string>
     <string name="forums_report_reason">ምክንያት</string>
     <string name="forums_report_details">ዝርዝሮች</string>
     <string name="forums_report_submit">ሪፖርት አስገባ</string>

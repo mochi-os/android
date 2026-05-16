@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Færsla</string>
     <string name="forums_access_level_none">Ekkert</string>
     <string name="forums_members_empty">Engir meðlimir</string>
+    <string name="forums_banner_dismiss">Loka borða</string>
     <string name="forums_ai_mode_tag">Merki</string>
     <string name="forums_ai_account_default">Sjálfgefinn reikningur</string>
     <string name="forums_ai_prompt_reset">Endurstilla á sjálfgefið</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tegund</string>
     <string name="forums_moderation_restriction_type_muted">Þagga</string>
     <string name="forums_moderation_restriction_type_banned">Banna</string>
+    <string name="forums_moderation_section_premoderation">Foryfirferð</string>
+    <string name="forums_moderation_section_ratelimiting">Hraðatakmörkun</string>
+    <string name="forums_moderation_require_posts">Krefjast samþykkis fyrir nýjar færslur</string>
+    <string name="forums_moderation_require_comments">Krefjast samþykkis fyrir nýjar athugasemdir</string>
+    <string name="forums_moderation_require_new_users">Krefjast samþykkis fyrir nýja notendur</string>
+    <string name="forums_moderation_new_user_days">Mörk fyrir nýja notendur:</string>
+    <string name="forums_moderation_post_limit">Færslutakmörk</string>
+    <string name="forums_moderation_comment_limit">Athugasemdarmark</string>
+    <string name="forums_moderation_limit_window">Lengd glugga</string>
     <string name="forums_report_reason">Ástæða</string>
     <string name="forums_report_details">Smáatriði</string>
     <string name="forums_report_submit">Senda tilkynningu</string>

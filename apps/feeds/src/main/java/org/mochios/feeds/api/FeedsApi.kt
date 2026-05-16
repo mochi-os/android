@@ -376,7 +376,7 @@ interface FeedsApi {
     @POST("{feedId}/-/sources/poll")
     suspend fun pollSource(
         @Path("feedId") feedId: String,
-        @Field("id") id: String
+        @Field("source") source: String
     ): Response<ApiResponse<SuccessResponse>>
 
     // --- Tags ---

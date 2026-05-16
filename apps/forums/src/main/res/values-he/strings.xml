@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">פוסט</string>
     <string name="forums_access_level_none">ללא</string>
     <string name="forums_members_empty">אין חברים</string>
+    <string name="forums_banner_dismiss">סגור באנר</string>
     <string name="forums_ai_mode_tag">תגית</string>
     <string name="forums_ai_account_default">חשבון ברירת מחדל</string>
     <string name="forums_ai_prompt_reset">אפס לברירת מחדל</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">סוג</string>
     <string name="forums_moderation_restriction_type_muted">השתק</string>
     <string name="forums_moderation_restriction_type_banned">חסימה</string>
+    <string name="forums_moderation_section_premoderation">ניהול תוכן מקדים</string>
+    <string name="forums_moderation_section_ratelimiting">הגבלת קצב</string>
+    <string name="forums_moderation_require_posts">דרוש אישור עבור פוסטים חדשים</string>
+    <string name="forums_moderation_require_comments">דרוש אישור עבור תגובות חדשות</string>
+    <string name="forums_moderation_require_new_users">דרוש אישור עבור משתמשים חדשים</string>
+    <string name="forums_moderation_new_user_days">סף משתמש חדש:</string>
+    <string name="forums_moderation_post_limit">מגבלת פוסטים</string>
+    <string name="forums_moderation_comment_limit">מגבלת תגובות</string>
+    <string name="forums_moderation_limit_window">משך החלון</string>
     <string name="forums_report_reason">סיבה</string>
     <string name="forums_report_details">פרטים</string>
     <string name="forums_report_submit">שלח דיווח</string>

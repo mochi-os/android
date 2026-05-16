@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">发布</string>
     <string name="forums_access_level_none">无</string>
     <string name="forums_members_empty">无成员</string>
+    <string name="forums_banner_dismiss">关闭横幅</string>
     <string name="forums_ai_mode_tag">标签</string>
     <string name="forums_ai_account_default">默认账户</string>
     <string name="forums_ai_prompt_reset">重置为默认</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">类型</string>
     <string name="forums_moderation_restriction_type_muted">禁言</string>
     <string name="forums_moderation_restriction_type_banned">封禁</string>
+    <string name="forums_moderation_section_premoderation">事前审核</string>
+    <string name="forums_moderation_section_ratelimiting">速率限制</string>
+    <string name="forums_moderation_require_posts">新帖子需经过审批</string>
+    <string name="forums_moderation_require_comments">新评论需经过审批</string>
+    <string name="forums_moderation_require_new_users">新用户需经过审批</string>
+    <string name="forums_moderation_new_user_days">新用户阈值：</string>
+    <string name="forums_moderation_post_limit">帖子限制</string>
+    <string name="forums_moderation_comment_limit">评论限制</string>
+    <string name="forums_moderation_limit_window">窗口时长</string>
     <string name="forums_report_reason">原因</string>
     <string name="forums_report_details">详情</string>
     <string name="forums_report_submit">提交举报</string>

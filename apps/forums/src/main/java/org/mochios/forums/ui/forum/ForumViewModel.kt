@@ -10,6 +10,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
+import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
@@ -35,7 +37,9 @@ data class ForumUiState(
 @HiltViewModel
 class ForumViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
-    private val repository: ForumsRepository
+    private val repository: ForumsRepository,
+    private val webSocket: MochiWebSocket,
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     private val forumId: String = savedStateHandle["forumId"] ?: ""
@@ -43,9 +47,42 @@ class ForumViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(ForumUiState())
     val uiState: StateFlow<ForumUiState> = _uiState.asStateFlow()
 
+    private var subscriptionId: String? = null
+
     init {
         load()
         loadTags()
+    }
+
+    private fun subscribeWebSocket(forumKey: String) {
+        if (forumKey.isBlank() || subscriptionId != null) return
+        val serverUrl = sessionManager.getServerUrlBlocking()
+        subscriptionId = webSocket.subscribe(serverUrl, forumKey) { _ ->
+            // forums.star broadcasts post/*, comment/*, tag/* — every event
+            // is a hint that the visible post list / tag chip counts may have
+            // changed. Refresh silently so the user sees the update without a
+            // spinner. (Could be narrowed per-event later if profiling
+            // shows it's too eager.)
+            viewModelScope.launch {
+                try {
+                    val r = repository.viewForum(forumId, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
+                    _uiState.value = _uiState.value.copy(
+                        forum = r.forum,
+                        posts = r.posts,
+                        canManage = r.can_manage,
+                        canModerate = r.can_moderate,
+                        hasMore = r.hasMore,
+                        nextCursor = r.nextCursor,
+                    )
+                    loadTags()
+                } catch (_: Exception) {}
+            }
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        subscriptionId?.let { webSocket.unsubscribe(it) }
     }
 
     fun load(sort: String? = null) {
@@ -63,6 +100,7 @@ class ForumViewModel @Inject constructor(
                     nextCursor = r.nextCursor,
                     isLoading = false
                 )
+                subscribeWebSocket(r.forum.fingerprint)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }

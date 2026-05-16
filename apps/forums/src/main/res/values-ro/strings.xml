@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Postare</string>
     <string name="forums_access_level_none">Niciuna</string>
     <string name="forums_members_empty">Niciun membru</string>
+    <string name="forums_banner_dismiss">Renunță la banner</string>
     <string name="forums_ai_mode_tag">Etichetă</string>
     <string name="forums_ai_account_default">Cont implicit</string>
     <string name="forums_ai_prompt_reset">Resetează la implicit</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tip</string>
     <string name="forums_moderation_restriction_type_muted">Dezactivează sunetul</string>
     <string name="forums_moderation_restriction_type_banned">Blochează</string>
+    <string name="forums_moderation_section_premoderation">Moderare prealabilă</string>
+    <string name="forums_moderation_section_ratelimiting">Limitare rată</string>
+    <string name="forums_moderation_require_posts">Necesită aprobare pentru postări noi</string>
+    <string name="forums_moderation_require_comments">Necesită aprobare pentru comentarii noi</string>
+    <string name="forums_moderation_require_new_users">Necesită aprobare pentru utilizatori noi</string>
+    <string name="forums_moderation_new_user_days">Prag pentru utilizatori noi:</string>
+    <string name="forums_moderation_post_limit">Limită postări</string>
+    <string name="forums_moderation_comment_limit">Limită de comentarii</string>
+    <string name="forums_moderation_limit_window">Durata ferestrei</string>
     <string name="forums_report_reason">Motiv</string>
     <string name="forums_report_details">Detalii</string>
     <string name="forums_report_submit">Trimite raportul</string>

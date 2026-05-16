@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">პოსტი</string>
     <string name="forums_access_level_none">არცერთი</string>
     <string name="forums_members_empty">წევრები არ არის</string>
+    <string name="forums_banner_dismiss">ბანერის უარყოფა</string>
     <string name="forums_ai_mode_tag">ტეგი</string>
     <string name="forums_ai_account_default">ნაგულისხმევი ანგარიში</string>
     <string name="forums_ai_prompt_reset">ნაგულისხმევზე გადაყენება</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">სამშაბათი</string>
     <string name="forums_moderation_restriction_type_muted">ჩაჩუმება</string>
     <string name="forums_moderation_restriction_type_banned">Ban</string>
+    <string name="forums_moderation_section_premoderation">წინასწარი მოდერაცია</string>
+    <string name="forums_moderation_section_ratelimiting">სიხშირის შეზღუდვა</string>
+    <string name="forums_moderation_require_posts">ახალი პოსტების დამტკიცების მოთხოვნა</string>
+    <string name="forums_moderation_require_comments">ახალი კომენტარების დამტკიცების მოთხოვნა</string>
+    <string name="forums_moderation_require_new_users">ახალი მომხმარებლების დამტკიცების მოთხოვნა</string>
+    <string name="forums_moderation_new_user_days">ახალი მომხმარებლის ზღვარი:</string>
+    <string name="forums_moderation_post_limit">პოსტის ლიმიტი</string>
+    <string name="forums_moderation_comment_limit">კომენტარების ლიმიტი</string>
+    <string name="forums_moderation_limit_window">ვიკები</string>
     <string name="forums_report_reason">მიზეზი</string>
     <string name="forums_report_details">დეტალები</string>
     <string name="forums_report_submit">ანგარიშის გაგზავნა</string>

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Pos</string>
     <string name="forums_access_level_none">Euweuh</string>
     <string name="forums_members_empty">Teu aya anggota</string>
+    <string name="forums_banner_dismiss">Pasini banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akun standar</string>
     <string name="forums_ai_prompt_reset">Setel ulang ka baku</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipe</string>
     <string name="forums_moderation_restriction_type_muted">Bungkem</string>
     <string name="forums_moderation_restriction_type_banned">Blokir</string>
+    <string name="forums_moderation_section_premoderation">Pra-moderasi</string>
+    <string name="forums_moderation_section_ratelimiting">Watesan Laju</string>
+    <string name="forums_moderation_require_posts">Peryogikeun persetujuan pikeun pos anyar</string>
+    <string name="forums_moderation_require_comments">Peryogikeun persetujuan pikeun koméntar anyar</string>
+    <string name="forums_moderation_require_new_users">Peryogikeun persetujuan pikeun pamaké anyar</string>
+    <string name="forums_moderation_new_user_days">Wates pamaké anyar:</string>
+    <string name="forums_moderation_post_limit">Wates pos</string>
+    <string name="forums_moderation_comment_limit">Wates koméntar</string>
+    <string name="forums_moderation_limit_window">Lila jandela</string>
     <string name="forums_report_reason">Alesan</string>
     <string name="forums_report_details">Détil</string>
     <string name="forums_report_submit">Kirim laporan</string>

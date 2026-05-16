@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Пост</string>
     <string name="forums_access_level_none">Ҳеҷ кадом</string>
     <string name="forums_members_empty">Ягон аъзо нест</string>
+    <string name="forums_banner_dismiss">Рад кардани баннер</string>
     <string name="forums_ai_mode_tag">Барчасп</string>
     <string name="forums_ai_account_default">Ҳисоби пешфарз</string>
     <string name="forums_ai_prompt_reset">Барқарорсозӣ ба нобаёнӣ</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Намуд</string>
     <string name="forums_moderation_restriction_type_muted">Хомӯш кардан</string>
     <string name="forums_moderation_restriction_type_banned">Манъ кардан</string>
+    <string name="forums_moderation_section_premoderation">Пешмодератсия</string>
+    <string name="forums_moderation_section_ratelimiting">Маҳдудияти суръат</string>
+    <string name="forums_moderation_require_posts">Талаб кардани тасдиқ барои постҳои нав</string>
+    <string name="forums_moderation_require_comments">Талаб кардани тасдиқ барои шарҳҳои нав</string>
+    <string name="forums_moderation_require_new_users">Талаб кардани тасдиқ барои корбарони нав</string>
+    <string name="forums_moderation_new_user_days">Ҳадди корбарони нав:</string>
+    <string name="forums_moderation_post_limit">Маҳдудияти пост</string>
+    <string name="forums_moderation_comment_limit">Ҳудуди шарҳҳо</string>
+    <string name="forums_moderation_limit_window">Давомнокии тиреза</string>
     <string name="forums_report_reason">Сабаб</string>
     <string name="forums_report_details">Тафсилот</string>
     <string name="forums_report_submit">Ҳисобот пешниҳод кардан</string>

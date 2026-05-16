@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">പോസ്റ്റ്</string>
     <string name="forums_access_level_none">ഒന്നുമില്ല</string>
     <string name="forums_members_empty">അംഗങ്ങളാരുമില്ല</string>
+    <string name="forums_banner_dismiss">ബാനർ ഒഴിവാക്കുക</string>
     <string name="forums_ai_mode_tag">ടാഗ്</string>
     <string name="forums_ai_account_default">ഡിഫോൾട്ട് അക്കൗണ്ട്</string>
     <string name="forums_ai_prompt_reset">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യണോ?</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">തരം</string>
     <string name="forums_moderation_restriction_type_muted">നിശബ്ദമാക്കുക</string>
     <string name="forums_moderation_restriction_type_banned">വിലക്കുക</string>
+    <string name="forums_moderation_section_premoderation">മുൻ-മോഡറേഷൻ</string>
+    <string name="forums_moderation_section_ratelimiting">റേറ്റിംഗ്</string>
+    <string name="forums_moderation_require_posts">പുതിയ ഉപയോക്താക്കൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
+    <string name="forums_moderation_require_comments">പുതിയ പോസ്റ്റുകൾക്ക് അംഗീകാരം ആവശ്യപ്പെടുക</string>
+    <string name="forums_moderation_require_new_users">ഡൊമെയ്ൻ verification ആവശ്യപ്പെടുക</string>
+    <string name="forums_moderation_new_user_days">പുതിയ ഉപയോക്താവിന്റെ പരിധി:</string>
+    <string name="forums_moderation_post_limit">പോസ്റ്റ് പരിധി</string>
+    <string name="forums_moderation_comment_limit">അഭിപ്രായ പരിധി</string>
+    <string name="forums_moderation_limit_window">വിൻഡോ ദൈർഘ്യം</string>
     <string name="forums_report_reason">പഴയപടിയാക്കാനുള്ള കാരണം</string>
     <string name="forums_report_details">വിശദാംശങ്ങൾ</string>
     <string name="forums_report_submit">റിപ്പോർട്ട് സമർപ്പിക്കുക</string>

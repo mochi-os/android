@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Публикация</string>
     <string name="forums_access_level_none">Няма</string>
     <string name="forums_members_empty">Няма членове</string>
+    <string name="forums_banner_dismiss">Отхвърли банера</string>
     <string name="forums_ai_mode_tag">Етикет</string>
     <string name="forums_ai_account_default">Акаунт по подразбиране</string>
     <string name="forums_ai_prompt_reset">Върни към подразбиране</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Тип</string>
     <string name="forums_moderation_restriction_type_muted">Заглуши</string>
     <string name="forums_moderation_restriction_type_banned">Блокирай</string>
+    <string name="forums_moderation_section_premoderation">Предварителна модерация</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Изисквай одобрение за нови публикации</string>
+    <string name="forums_moderation_require_comments">Изисквай одобрение за нови коментари</string>
+    <string name="forums_moderation_require_new_users">Изисквай одобрение за нови потребители</string>
+    <string name="forums_moderation_new_user_days">Праг за нови потребители:</string>
+    <string name="forums_moderation_post_limit">Лимит на публикациите</string>
+    <string name="forums_moderation_comment_limit">Лимит на коментарите</string>
+    <string name="forums_moderation_limit_window">Продължителност на прозореца</string>
     <string name="forums_report_reason">Причина</string>
     <string name="forums_report_details">Детайли</string>
     <string name="forums_report_submit">Изпрати сигнал</string>

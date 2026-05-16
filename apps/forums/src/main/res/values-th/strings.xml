@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">โพสต์</string>
     <string name="forums_access_level_none">ไม่มี</string>
     <string name="forums_members_empty">ไม่มีสมาชิก</string>
+    <string name="forums_banner_dismiss">ปิดแบนเนอร์</string>
     <string name="forums_ai_mode_tag">แท็ก</string>
     <string name="forums_ai_account_default">บัญชีเริ่มต้น</string>
     <string name="forums_ai_prompt_reset">รีเซ็ตเป็นค่าเริ่มต้น</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">ประเภท</string>
     <string name="forums_moderation_restriction_type_muted">ปิดเสียง</string>
     <string name="forums_moderation_restriction_type_banned">แบน</string>
+    <string name="forums_moderation_section_premoderation">การดูแลก่อนเผยแพร่</string>
+    <string name="forums_moderation_section_ratelimiting">การจำกัดอัตรา</string>
+    <string name="forums_moderation_require_posts">ต้องอนุมัติโพสต์ใหม่</string>
+    <string name="forums_moderation_require_comments">ต้องอนุมัติความคิดเห็นใหม่</string>
+    <string name="forums_moderation_require_new_users">ต้องอนุมัติผู้ใช้ใหม่</string>
+    <string name="forums_moderation_new_user_days">เกณฑ์ผู้ใช้ใหม่:</string>
+    <string name="forums_moderation_post_limit">ขีดจำกัดการโพสต์</string>
+    <string name="forums_moderation_comment_limit">ขีดจำกัดความคิดเห็น</string>
+    <string name="forums_moderation_limit_window">ระยะเวลาหน้าต่าง</string>
     <string name="forums_report_reason">เหตุผล</string>
     <string name="forums_report_details">รายละเอียด</string>
     <string name="forums_report_submit">ส่งรายงาน</string>

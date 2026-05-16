@@ -88,7 +88,7 @@ fun AccessTab(
                     AccessRuleCard(
                         rule = rule,
                         levelLabel = { op -> accessLevelLabel(op) },
-                        onRevoke = { viewModel.revokeAccess(rule.id) },
+                        onRevoke = { viewModel.revokeAccess(rule.subject) },
                     )
                 }
             }
@@ -111,8 +111,8 @@ fun AccessTab(
     if (showAddDialog) {
         AddAccessDialog(
             onDismiss = { showAddDialog = false },
-            onAdd = { subject, operation ->
-                viewModel.setAccess(subject, operation)
+            onAdd = { subject, level ->
+                viewModel.setAccess(subject, level)
                 showAddDialog = false
             }
         )
@@ -126,8 +126,8 @@ private fun AddAccessDialog(
     onAdd: (String, String) -> Unit
 ) {
     var subject by remember { mutableStateOf("") }
-    var operation by remember { mutableStateOf("view") }
-    var operationExpanded by remember { mutableStateOf(false) }
+    var level by remember { mutableStateOf("view") }
+    var levelExpanded by remember { mutableStateOf(false) }
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -143,29 +143,29 @@ private fun AddAccessDialog(
                 )
                 Spacer(modifier = Modifier.height(12.dp))
                 ExposedDropdownMenuBox(
-                    expanded = operationExpanded,
-                    onExpandedChange = { operationExpanded = it }
+                    expanded = levelExpanded,
+                    onExpandedChange = { levelExpanded = it }
                 ) {
                     OutlinedTextField(
-                        value = accessLevelLabel(operation),
+                        value = accessLevelLabel(level),
                         onValueChange = {},
                         readOnly = true,
                         label = { Text(stringResource(MochiR.string.access_level)) },
-                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = operationExpanded) },
+                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded) },
                         modifier = Modifier
                             .menuAnchor(MenuAnchorType.PrimaryNotEditable)
                             .fillMaxWidth()
                     )
                     ExposedDropdownMenu(
-                        expanded = operationExpanded,
-                        onDismissRequest = { operationExpanded = false }
+                        expanded = levelExpanded,
+                        onDismissRequest = { levelExpanded = false }
                     ) {
                         ACCESS_LEVEL_KEYS.forEach { value ->
                             DropdownMenuItem(
                                 text = { Text(accessLevelLabel(value)) },
                                 onClick = {
-                                    operation = value
-                                    operationExpanded = false
+                                    level = value
+                                    levelExpanded = false
                                 }
                             )
                         }
@@ -175,7 +175,7 @@ private fun AddAccessDialog(
         },
         confirmButton = {
             TextButton(
-                onClick = { onAdd(subject, operation) },
+                onClick = { onAdd(subject, level) },
                 enabled = subject.isNotBlank()
             ) {
                 Text(stringResource(MochiR.string.common_add))

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Ìfìránṣẹ́</string>
     <string name="forums_access_level_none">Kòsí</string>
     <string name="forums_members_empty">Kò sí ọmọ ẹgbẹ́</string>
+    <string name="forums_banner_dismiss">Mú banner kúrò</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Àkáǹtì àìpé</string>
     <string name="forums_ai_prompt_reset">Pa padà sí àbùdá</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Irú</string>
     <string name="forums_moderation_restriction_type_muted">Pa ìró</string>
     <string name="forums_moderation_restriction_type_banned">Fòfin de</string>
+    <string name="forums_moderation_section_premoderation">Ìṣàkóso ṣáájú</string>
+    <string name="forums_moderation_section_ratelimiting">Ìpinnu Ìwọ̀n</string>
+    <string name="forums_moderation_require_posts">Nílò àfọwọ́sí fún àwọn ìfìránṣẹ́ tuntun</string>
+    <string name="forums_moderation_require_comments">Nílò àfọwọ́sí fún àwọn àlàyé tuntun</string>
+    <string name="forums_moderation_require_new_users">Nílò àfọwọ́sí fún àwọn olùlò tuntun</string>
+    <string name="forums_moderation_new_user_days">Ààlà olùmúlò titun:</string>
+    <string name="forums_moderation_post_limit">Ààlà ìfìránṣẹ́</string>
+    <string name="forums_moderation_comment_limit">Ààlà àlàyé</string>
+    <string name="forums_moderation_limit_window">Àkókò Window</string>
     <string name="forums_report_reason">Ìdí</string>
     <string name="forums_report_details">Àwọn ẹ̀kúnrẹ́rẹ́</string>
     <string name="forums_report_submit">Fi ìròyìn ránṣẹ́</string>

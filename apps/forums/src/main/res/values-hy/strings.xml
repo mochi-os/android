@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Գրառում</string>
     <string name="forums_access_level_none">Ոչ մեկը</string>
     <string name="forums_members_empty">Անդամներ չկան</string>
+    <string name="forums_banner_dismiss">Հեռացնել բաններն</string>
     <string name="forums_ai_mode_tag">Թեգ</string>
     <string name="forums_ai_account_default">Լռելյայն հաշիվ</string>
     <string name="forums_ai_prompt_reset">Վերականգնել լռելյայնին</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Տեսակ</string>
     <string name="forums_moderation_restriction_type_muted">Իմ հավելվածը</string>
     <string name="forums_moderation_restriction_type_banned">Արգելափակել հաշիվը</string>
+    <string name="forums_moderation_section_premoderation">Նախնական մոդերացիա</string>
+    <string name="forums_moderation_section_ratelimiting">Արագության սահմանափակում</string>
+    <string name="forums_moderation_require_posts">Պահանջել հաստատում նոր գրառումների համար</string>
+    <string name="forums_moderation_require_comments">Պահանջել հաստատում նոր մեկնաբանությունների համար</string>
+    <string name="forums_moderation_require_new_users">Պահանջել հաստատում նոր օգտատերերի համար</string>
+    <string name="forums_moderation_new_user_days">Նոր օգտատիրոջ շեմը՝</string>
+    <string name="forums_moderation_post_limit">Գրառումների սահմանաչափ</string>
+    <string name="forums_moderation_comment_limit">Մեկնաբանությունը հրապարակված է</string>
+    <string name="forums_moderation_limit_window">Պատուհանի տևողություն</string>
     <string name="forums_report_reason">Պատճառ</string>
     <string name="forums_report_details">Մանրամասներ</string>
     <string name="forums_report_submit">Ներկայացնել զեկույցը</string>

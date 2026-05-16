@@ -15,6 +15,7 @@ import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationQueueCounts
 import org.mochios.forums.model.ModerationReport
 import org.mochios.forums.model.ModerationSettings
+import org.mochios.forums.model.ModerationSettingsResponse
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.RecommendedForum
 import org.mochios.forums.model.Restriction
@@ -453,15 +454,19 @@ interface ForumsApi {
     @GET("{forumId}/-/moderation/settings")
     suspend fun moderationSettings(
         @Path("forumId") forumId: String,
-    ): Response<ApiResponse<ModerationSettings>>
+    ): Response<ApiResponse<ModerationSettingsResponse>>
 
     @FormUrlEncoded
     @POST("{forumId}/-/moderation/settings/save")
     suspend fun saveModerationSettings(
         @Path("forumId") forumId: String,
-        @Field("auto_approve_posts") autoApprovePosts: Boolean,
-        @Field("auto_approve_comments") autoApproveComments: Boolean,
-        @Field("require_min_karma") requireMinKarma: Int,
+        @Field("moderation_posts") moderationPosts: Boolean,
+        @Field("moderation_comments") moderationComments: Boolean,
+        @Field("moderation_new") moderationNew: Boolean,
+        @Field("new_user_days") newUserDays: Int,
+        @Field("post_limit") postLimit: Int,
+        @Field("comment_limit") commentLimit: Int,
+        @Field("limit_window") limitWindow: Int,
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Settings ----
@@ -532,14 +537,6 @@ interface ForumsApi {
         @Path("forumId") forumId: String,
         @Field("type") type: String,
         @Field("prompt") prompt: String,
-    ): Response<ApiResponse<SuccessResponse>>
-
-    @FormUrlEncoded
-    @POST("{forumId}/-/tags/interest")
-    suspend fun setTagInterest(
-        @Path("forumId") forumId: String,
-        @Field("tag") tag: String,
-        @Field("interest") interest: Float,
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded

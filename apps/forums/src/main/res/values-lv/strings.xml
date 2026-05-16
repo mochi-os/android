@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Ieraksts</string>
     <string name="forums_access_level_none">Nav</string>
     <string name="forums_members_empty">Nav dalībnieku</string>
+    <string name="forums_banner_dismiss">Aizvērt baneri</string>
     <string name="forums_ai_mode_tag">Tags</string>
     <string name="forums_ai_account_default">Noklusētais konts</string>
     <string name="forums_ai_prompt_reset">Atiestatīt uz noklusējumu</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tips</string>
     <string name="forums_moderation_restriction_type_muted">Apklusināt</string>
     <string name="forums_moderation_restriction_type_banned">Bloķēt</string>
+    <string name="forums_moderation_section_premoderation">Iepriekšēja moderācija</string>
+    <string name="forums_moderation_section_ratelimiting">Pieprasījumu ierobežošana</string>
+    <string name="forums_moderation_require_posts">Prasīt apstiprinājumu jauniem ierakstiem</string>
+    <string name="forums_moderation_require_comments">Prasīt apstiprinājumu jauniem komentāriem</string>
+    <string name="forums_moderation_require_new_users">Prasīt apstiprinājumu jauniem lietotājiem</string>
+    <string name="forums_moderation_new_user_days">Jauna lietotāja slieksnis:</string>
+    <string name="forums_moderation_post_limit">Ierakstu limits</string>
+    <string name="forums_moderation_comment_limit">Komentāru ierobežojums</string>
+    <string name="forums_moderation_limit_window">Loga ilgums</string>
     <string name="forums_report_reason">Iemesls</string>
     <string name="forums_report_details">Detaļas</string>
     <string name="forums_report_submit">Iesniegt ziņojumu</string>

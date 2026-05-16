@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">投稿</string>
     <string name="forums_access_level_none">なし</string>
     <string name="forums_members_empty">メンバーがいません</string>
+    <string name="forums_banner_dismiss">バナーを閉じる</string>
     <string name="forums_ai_mode_tag">タグ</string>
     <string name="forums_ai_account_default">デフォルトアカウント</string>
     <string name="forums_ai_prompt_reset">デフォルトに戻す</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">タイプ</string>
     <string name="forums_moderation_restriction_type_muted">ミュート</string>
     <string name="forums_moderation_restriction_type_banned">BAN</string>
+    <string name="forums_moderation_section_premoderation">事前モデレーション</string>
+    <string name="forums_moderation_section_ratelimiting">レート制限</string>
+    <string name="forums_moderation_require_posts">新しい投稿に承認を必須にする</string>
+    <string name="forums_moderation_require_comments">新しいコメントに承認を必須にする</string>
+    <string name="forums_moderation_require_new_users">新しいユーザーに承認を必須にする</string>
+    <string name="forums_moderation_new_user_days">新規ユーザーのしきい値:</string>
+    <string name="forums_moderation_post_limit">投稿上限</string>
+    <string name="forums_moderation_comment_limit">コメント上限</string>
+    <string name="forums_moderation_limit_window">ウィンドウの期間</string>
     <string name="forums_report_reason">理由</string>
     <string name="forums_report_details">詳細</string>
     <string name="forums_report_submit">通報を送信</string>

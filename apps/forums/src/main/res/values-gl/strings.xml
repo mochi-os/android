@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Publicar</string>
     <string name="forums_access_level_none">Ningún</string>
     <string name="forums_members_empty">Sen membros</string>
+    <string name="forums_banner_dismiss">Descartar banner</string>
     <string name="forums_ai_mode_tag">Etiqueta</string>
     <string name="forums_ai_account_default">Conta predeterminada</string>
     <string name="forums_ai_prompt_reset">Restablecer ao valor por defecto</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tipo</string>
     <string name="forums_moderation_restriction_type_muted">Silenciar</string>
     <string name="forums_moderation_restriction_type_banned">Vetar</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderación</string>
+    <string name="forums_moderation_section_ratelimiting">Limitación de taxa</string>
+    <string name="forums_moderation_require_posts">Requirir aprobación das publicacións novas</string>
+    <string name="forums_moderation_require_comments">Requirir aprobación dos comentarios novos</string>
+    <string name="forums_moderation_require_new_users">Requirir aprobación dos usuarios novos</string>
+    <string name="forums_moderation_new_user_days">Limiar de usuarios novos:</string>
+    <string name="forums_moderation_post_limit">Límite de publicacións</string>
+    <string name="forums_moderation_comment_limit">Límite de comentarios</string>
+    <string name="forums_moderation_limit_window">Duración da xanela</string>
     <string name="forums_report_reason">Motivo</string>
     <string name="forums_report_details">Detalles</string>
     <string name="forums_report_submit">Enviar informe</string>

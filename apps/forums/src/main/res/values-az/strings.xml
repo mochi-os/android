@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Heç biri</string>
     <string name="forums_members_empty">Üzv yoxdur</string>
+    <string name="forums_banner_dismiss">Banneri rədd et</string>
     <string name="forums_ai_mode_tag">Etiket</string>
     <string name="forums_ai_account_default">Default hesab</string>
     <string name="forums_ai_prompt_reset">Standarta sıfırla</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Mesaj yazın...</string>
     <string name="forums_moderation_restriction_type_muted">Sustur</string>
     <string name="forums_moderation_restriction_type_banned">Blokla</string>
+    <string name="forums_moderation_section_premoderation">Ön-moderasiya</string>
+    <string name="forums_moderation_section_ratelimiting">Sürət Məhdudiyyəti</string>
+    <string name="forums_moderation_require_posts">Yeni postlar üçün təsdiq tələb et</string>
+    <string name="forums_moderation_require_comments">Yeni şərhlər üçün təsdiq tələb et</string>
+    <string name="forums_moderation_require_new_users">Yeni istifadəçilər üçün təsdiq tələb et</string>
+    <string name="forums_moderation_new_user_days">Yeni istifadəçi həddi:</string>
+    <string name="forums_moderation_post_limit">Post limiti</string>
+    <string name="forums_moderation_comment_limit">Şərh limiti</string>
+    <string name="forums_moderation_limit_window">Qazandı</string>
     <string name="forums_report_reason">Səbəb</string>
     <string name="forums_report_details">Təfərrüatlar</string>
     <string name="forums_report_submit">Hesabatı təqdim et</string>

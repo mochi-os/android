@@ -566,9 +566,9 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun pollSource(feedId: String, id: String) {
+    suspend fun pollSource(feedId: String, source: String) {
         try {
-            api.pollSource(feedId, id).unwrap()
+            api.pollSource(feedId, source).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Inlägg</string>
     <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Inga medlemmar</string>
+    <string name="forums_banner_dismiss">Avfärda banner</string>
     <string name="forums_ai_mode_tag">Tagg</string>
     <string name="forums_ai_account_default">Standardkonto</string>
     <string name="forums_ai_prompt_reset">Återställ till standard</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Typ</string>
     <string name="forums_moderation_restriction_type_muted">Tysta</string>
     <string name="forums_moderation_restriction_type_banned">Banna</string>
+    <string name="forums_moderation_section_premoderation">Förmoderering</string>
+    <string name="forums_moderation_section_ratelimiting">Hastighetsbegränsning</string>
+    <string name="forums_moderation_require_posts">Kräv godkännande för nya inlägg</string>
+    <string name="forums_moderation_require_comments">Kräv godkännande för nya kommentarer</string>
+    <string name="forums_moderation_require_new_users">Kräv godkännande för nya användare</string>
+    <string name="forums_moderation_new_user_days">Tröskel för ny användare:</string>
+    <string name="forums_moderation_post_limit">Inläggsgräns</string>
+    <string name="forums_moderation_comment_limit">Kommentargräns</string>
+    <string name="forums_moderation_limit_window">Fönsterlängd</string>
     <string name="forums_report_reason">Anledning</string>
     <string name="forums_report_details">Detaljer</string>
     <string name="forums_report_submit">Skicka rapport</string>

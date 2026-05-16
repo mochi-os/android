@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="forums_create_privacy">Privacy</string>
     <string name="forums_ai_account_default">預設賬戶</string>
+    <string name="forums_moderation_require_new_users">新用戶需要批准</string>
+    <string name="forums_moderation_new_user_days">新用戶閾值:</string>
     <string name="forums_post_default_author">用戶</string>
 
 </resources>

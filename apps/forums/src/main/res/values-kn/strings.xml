@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">ಪೋಸ್ಟ್</string>
     <string name="forums_access_level_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="forums_members_empty">ಯಾವುದೇ ಸದಸ್ಯರಿಲ್ಲ</string>
+    <string name="forums_banner_dismiss">ಬ್ಯಾನರ್ ತಿರಸ್ಕರಿಸಿ</string>
     <string name="forums_ai_mode_tag">ಟ್ಯಾಗ್</string>
     <string name="forums_ai_account_default">ಡೀಫಾಲ್ಟ್ ಖಾತೆ</string>
     <string name="forums_ai_prompt_reset">ಡೀಫಾಲ್ಟ್‌ಗೆ ರೀಸೆಟ್ ಮಾಡಿ</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">ಪ್ರಕಾರ</string>
     <string name="forums_moderation_restriction_type_muted">ಮ್ಯೂಟ್</string>
     <string name="forums_moderation_restriction_type_banned">ನಿಷೇಧಿಸಿ</string>
+    <string name="forums_moderation_section_premoderation">ಪ್ರೀ-ಮಾಡರೇಶನ್</string>
+    <string name="forums_moderation_section_ratelimiting">ರೇಟ್ ಲಿಮಿಟಿಂಗ್</string>
+    <string name="forums_moderation_require_posts">ಹೊಸ ಪೋಸ್ಟ್‌ಗಳಿಗೆ ಅನುಮೋದನೆ ಅಗತ್ಯವಿರಿಸಿ</string>
+    <string name="forums_moderation_require_comments">ಹೊಸ ಕಾಮೆಂಟ್‌ಗಳಿಗೆ ಅನುಮೋದನೆ ಅಗತ್ಯವಿರಿಸಿ</string>
+    <string name="forums_moderation_require_new_users">ಹೊಸ ಬಳಕೆದಾರರಿಗೆ ಅನುಮೋದನೆ ಅಗತ್ಯವಿರಿಸಿ</string>
+    <string name="forums_moderation_new_user_days">ಹೊಸ ಬಳಕೆದಾರರ ಮಿತಿ:</string>
+    <string name="forums_moderation_post_limit">ಪೋಸ್ಟ್ ಮಿತಿ</string>
+    <string name="forums_moderation_comment_limit">ಕಾಮೆಂಟ್ ಮಿತಿ</string>
+    <string name="forums_moderation_limit_window">ವಿಂಡೋ ಅವಧಿ</string>
     <string name="forums_report_reason">ಕಾರಣ</string>
     <string name="forums_report_details">ವಿವರಗಳು</string>
     <string name="forums_report_submit">ವರದಿ ಸಲ್ಲಿಸಿ</string>

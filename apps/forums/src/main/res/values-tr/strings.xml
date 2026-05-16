@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Gönderi</string>
     <string name="forums_access_level_none">Yok</string>
     <string name="forums_members_empty">Üye yok</string>
+    <string name="forums_banner_dismiss">Banner\'ı kapat</string>
     <string name="forums_ai_mode_tag">Etiket</string>
     <string name="forums_ai_account_default">Varsayılan hesap</string>
     <string name="forums_ai_prompt_reset">Varsayılana sıfırla</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Tür</string>
     <string name="forums_moderation_restriction_type_muted">Sessize al</string>
     <string name="forums_moderation_restriction_type_banned">Yasakla</string>
+    <string name="forums_moderation_section_premoderation">Ön moderasyon</string>
+    <string name="forums_moderation_section_ratelimiting">Hız sınırlama</string>
+    <string name="forums_moderation_require_posts">Yeni gönderiler için onay zorunlu kıl</string>
+    <string name="forums_moderation_require_comments">Yeni yorumlar için onay zorunlu kıl</string>
+    <string name="forums_moderation_require_new_users">Yeni kullanıcılar için onay zorunlu kıl</string>
+    <string name="forums_moderation_new_user_days">Yeni kullanıcı eşiği:</string>
+    <string name="forums_moderation_post_limit">Gönderi limiti</string>
+    <string name="forums_moderation_comment_limit">Yorum sınırı</string>
+    <string name="forums_moderation_limit_window">Pencere süresi</string>
     <string name="forums_report_reason">Neden</string>
     <string name="forums_report_details">Ayrıntılar</string>
     <string name="forums_report_submit">Rapor gönder</string>

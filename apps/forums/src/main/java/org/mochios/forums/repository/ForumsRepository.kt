@@ -274,10 +274,19 @@ class ForumsRepository @Inject constructor(
     }
 
     suspend fun moderationSettings(forumId: String): ModerationSettings =
-        api.moderationSettings(forumId).unwrap()
+        api.moderationSettings(forumId).unwrap().settings
 
-    suspend fun saveModerationSettings(forumId: String, autoApprovePosts: Boolean, autoApproveComments: Boolean, requireMinKarma: Int) {
-        api.saveModerationSettings(forumId, autoApprovePosts, autoApproveComments, requireMinKarma).unwrap()
+    suspend fun saveModerationSettings(forumId: String, settings: ModerationSettings) {
+        api.saveModerationSettings(
+            forumId,
+            settings.moderationPosts,
+            settings.moderationComments,
+            settings.moderationNew,
+            settings.newUserDays,
+            settings.postLimit,
+            settings.commentLimit,
+            settings.limitWindow,
+        ).unwrap()
     }
 
     suspend fun getAccess(forumId: String): AccessResponse =
@@ -325,10 +334,6 @@ class ForumsRepository @Inject constructor(
 
     suspend fun setAiPrompt(forumId: String, type: String, prompt: String) {
         api.setAiPrompt(forumId, type, prompt).unwrap()
-    }
-
-    suspend fun setTagInterest(forumId: String, tag: String, interest: Float) {
-        api.setTagInterest(forumId, tag, interest).unwrap()
     }
 
     suspend fun addPostTag(forumId: String, postId: String, label: String): Map<String, Any> {

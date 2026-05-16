@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Bericht</string>
     <string name="forums_access_level_none">Geen</string>
     <string name="forums_members_empty">Geen leden</string>
+    <string name="forums_banner_dismiss">Banner sluiten</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Standaardaccount</string>
     <string name="forums_ai_prompt_reset">Terugzetten naar standaard</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Type</string>
     <string name="forums_moderation_restriction_type_muted">Dempen</string>
     <string name="forums_moderation_restriction_type_banned">Verbannen</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderatie</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Goedkeuring vereisen voor nieuwe berichten</string>
+    <string name="forums_moderation_require_comments">Goedkeuring vereisen voor nieuwe reacties</string>
+    <string name="forums_moderation_require_new_users">Goedkeuring vereisen voor nieuwe gebruikers</string>
+    <string name="forums_moderation_new_user_days">Drempel nieuwe gebruiker:</string>
+    <string name="forums_moderation_post_limit">Berichtlimiet</string>
+    <string name="forums_moderation_comment_limit">Reactielimiet</string>
+    <string name="forums_moderation_limit_window">Vensterduur</string>
     <string name="forums_report_reason">Reden</string>
     <string name="forums_report_details">Details</string>
     <string name="forums_report_submit">Rapport verzenden</string>

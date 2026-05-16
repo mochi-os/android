@@ -126,6 +126,7 @@
     <!-- Banner tab -->
     <string name="forums_banner_description">Markdown shown at the top of the forum.</string>
     <string name="forums_banner_placeholder">Welcome to this forum…</string>
+    <string name="forums_banner_dismiss">Dismiss banner</string>
 
     <!-- AI tab -->
     <string name="forums_ai_mode_label">Mode: %1$s</string>
@@ -178,9 +179,15 @@
     <string name="forums_moderation_restriction_duration_seconds">Duration (seconds, blank for permanent)</string>
     <string name="forums_moderation_restriction_expires">Expires %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
-    <string name="forums_moderation_auto_approve_posts">Auto-approve new posts</string>
-    <string name="forums_moderation_auto_approve_comments">Auto-approve new comments</string>
-    <string name="forums_moderation_min_karma">Required minimum karma</string>
+    <string name="forums_moderation_section_premoderation">Pre-moderation</string>
+    <string name="forums_moderation_section_ratelimiting">Rate Limiting</string>
+    <string name="forums_moderation_require_posts">Require approval for new posts</string>
+    <string name="forums_moderation_require_comments">Require approval for new comments</string>
+    <string name="forums_moderation_require_new_users">Require approval for new users</string>
+    <string name="forums_moderation_new_user_days">New user threshold:</string>
+    <string name="forums_moderation_post_limit">Post limit</string>
+    <string name="forums_moderation_comment_limit">Comment limit</string>
+    <string name="forums_moderation_limit_window">Window duration</string>
 
     <!-- Report dialog -->
     <string name="forums_report_reason">Reason</string>

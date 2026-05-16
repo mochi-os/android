@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Maxxansa</string>
     <string name="forums_access_level_none">Tokko illee</string>
     <string name="forums_members_empty">Miseensonni hin jiran</string>
+    <string name="forums_banner_dismiss">Bannerii dhiisi</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akkaawuntii idilee</string>
     <string name="forums_ai_prompt_reset">Gara durtiitti deebisi</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Akaakuu</string>
     <string name="forums_moderation_restriction_type_muted">Cal\'isiisi</string>
     <string name="forums_moderation_restriction_type_banned">Dhorki</string>
+    <string name="forums_moderation_section_premoderation">To\'annaa duraa</string>
+    <string name="forums_moderation_section_ratelimiting">Daangeessuu Saffisaa</string>
+    <string name="forums_moderation_require_posts">Maxxansoota haaraaf mirkaneeffannaa barbaachisi</string>
+    <string name="forums_moderation_require_comments">Yaadawwan haaraaf mirkaneeffannaa barbaachisi</string>
+    <string name="forums_moderation_require_new_users">Fayyadamtoota haaraaf mirkaneeffannaa barbaachisi</string>
+    <string name="forums_moderation_new_user_days">Daangaa fayyadamtuu haaraa:</string>
+    <string name="forums_moderation_post_limit">Daangaa maxxansaa</string>
+    <string name="forums_moderation_comment_limit">Daangaa yaada</string>
+    <string name="forums_moderation_limit_window">Yeroo turtii foddaa</string>
     <string name="forums_report_reason">Sababa</string>
     <string name="forums_report_details">Bal\'inaan</string>
     <string name="forums_report_submit">Gabaasa galchaa</string>

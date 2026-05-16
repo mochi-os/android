@@ -69,6 +69,7 @@
     <string name="forums_access_level_post">Příspěvek</string>
     <string name="forums_access_level_none">Žádné</string>
     <string name="forums_members_empty">Žádní členové</string>
+    <string name="forums_banner_dismiss">Zavřít banner</string>
     <string name="forums_ai_mode_tag">Štítek</string>
     <string name="forums_ai_account_default">Výchozí účet</string>
     <string name="forums_ai_prompt_reset">Obnovit na výchozí</string>
@@ -89,6 +90,15 @@
     <string name="forums_moderation_restriction_type">Typ</string>
     <string name="forums_moderation_restriction_type_muted">Ztlumit</string>
     <string name="forums_moderation_restriction_type_banned">Zablokovat</string>
+    <string name="forums_moderation_section_premoderation">Premoderování</string>
+    <string name="forums_moderation_section_ratelimiting">Omezení rychlosti</string>
+    <string name="forums_moderation_require_posts">Vyžadovat schválení nových příspěvků</string>
+    <string name="forums_moderation_require_comments">Vyžadovat schválení nových komentářů</string>
+    <string name="forums_moderation_require_new_users">Vyžadovat schválení nových uživatelů</string>
+    <string name="forums_moderation_new_user_days">Práh nového uživatele:</string>
+    <string name="forums_moderation_post_limit">Limit příspěvků</string>
+    <string name="forums_moderation_comment_limit">Limit komentářů</string>
+    <string name="forums_moderation_limit_window">Délka okna</string>
     <string name="forums_report_reason">Důvod</string>
     <string name="forums_report_details">Podrobnosti</string>
     <string name="forums_report_submit">Odeslat hlášení</string>
