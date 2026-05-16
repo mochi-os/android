@@ -75,17 +75,37 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
             try {
                 val deps = deps()
                 val server = deps.sessionManager().getServerUrlBlocking()
-                postPushRegisterFcm(deps.okHttpClient(), server, token)
+                postPushRegisterFcm(deps.okHttpClient(), applicationContext, server, token)
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to register FCM token with Mochi server: ${e.message}")
             }
         }
     }
 
-    private fun postPushRegisterFcm(client: OkHttpClient, server: String, token: String) {
+    /**
+     * Body shape matches [FcmRegistrar.postRegisterFcm] — server requires
+     * `install_id` (Firebase Installations ID, used as the per-device dedup
+     * key) and `device` (display name) alongside `token`. Sending only the
+     * token returned 400 and the cold-start race then fell back to
+     * UnifiedPush, surfacing the "listening for notifications" status row.
+     */
+    private fun postPushRegisterFcm(client: OkHttpClient, context: Context, server: String, token: String) {
         val appToken = mintAppToken(client, server, "notifications") ?: return
+        val installId = try {
+            com.google.firebase.installations.FirebaseInstallations.getInstance().id
+                .let { task ->
+                    com.google.android.gms.tasks.Tasks.await(task)
+                }
+        } catch (e: Exception) {
+            Log.w(TAG, "Could not fetch Firebase Installations ID for FCM re-register: ${e.message}")
+            return
+        }
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
-        val body = JSONObject().put("token", token).toString()
+        val body = JSONObject()
+            .put("token", token)
+            .put("install_id", installId)
+            .put("device", DeviceName.resolve(context))
+            .toString()
             .toRequestBody("application/json".toMediaType())
         val request = Request.Builder()
             .url(url)

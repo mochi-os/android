@@ -471,13 +471,13 @@ fun FeedScreen(
                                         )
                                     }
                                 }
-                                items(tags, key = { it.id }) { tag ->
+                                items(tags, key = { it.label }) { tag ->
                                     TagFilterChip(
                                         tag = tag,
-                                        selected = currentTag == tag.id,
+                                        selected = currentTag == tag.label,
                                         onClick = {
                                             viewModel.setTagFilter(
-                                                if (currentTag == tag.id) null else tag.id
+                                                if (currentTag == tag.label) null else tag.label
                                             )
                                         },
                                         onAdjustInterest = { direction ->

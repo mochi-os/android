@@ -3,6 +3,7 @@ package org.mochios.android.push
 import android.content.Context
 import android.util.Log
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -42,6 +43,16 @@ object PushTransport {
     const val TRANSPORT_UNIFIEDPUSH = "unifiedpush"
 
     /**
+     * Serialises configure() so MainActivity's LaunchedEffect(isAuthenticated)
+     * and onResume() (which both call configure() on cold start) can't race on
+     * FirebaseApp.initializeApp(). The race left one caller falling back to
+     * UnifiedPush and starting PushService — i.e. the "listening for
+     * notifications" status-bar entry appearing despite the server returning
+     * transport=fcm.
+     */
+    private val configureMutex = kotlinx.coroutines.sync.Mutex()
+
+    /**
      * Fetch the server's push transport choice and apply it. Idempotent —
      * safe to call on every identity change / app start.
      */
@@ -50,11 +61,19 @@ object PushTransport {
         sessionManager: SessionManager,
         client: OkHttpClient,
     ) = withContext(Dispatchers.IO) {
+        configureMutex.withLock { configureLocked(context, sessionManager, client) }
+    }
+
+    private suspend fun configureLocked(
+        context: Context,
+        sessionManager: SessionManager,
+        client: OkHttpClient,
+    ) {
         val server = sessionManager.getServerUrlBlocking()
         Log.i(TAG, "configure() server=$server")
         if (server.isBlank()) {
             Log.w(TAG, "configure(): blank server URL, bailing")
-            return@withContext
+            return
         }
 
         val setup = try {
@@ -89,7 +108,7 @@ object PushTransport {
                     Log.i(TAG, "fetchSetup failed and no cached transport; standing by")
                 }
             }
-            return@withContext
+            return
         }
 
         val transport = setup.optString("transport")
@@ -102,7 +121,7 @@ object PushTransport {
                 // a prior session — no "listening for notifications"
                 // notification while on FCM.
                 runCatching { PushService.stop(context) }
-                return@withContext
+                return
             }
             Log.w(TAG, "FCM advertised but failed to connect; falling back to UnifiedPush")
         }
