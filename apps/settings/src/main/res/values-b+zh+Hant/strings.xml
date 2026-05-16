@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">設定</string>
     <string name="settings_home_logout">登出</string>
+    <string name="security_method_email">電子郵件代碼</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">驗證器應用程式</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">新增通行金鑰</string>
+    <string name="security_passkey_delete_title">刪除通行金鑰?</string>
+    <string name="security_section_totp">驗證器應用程式</string>
+    <string name="security_totp_setup">設定驗證器</string>
+    <string name="security_totp_setup_title">設定驗證器</string>
+    <string name="security_totp_verify">驗證</string>
+    <string name="security_totp_disable_title">停用驗證器?</string>
+    <string name="security_section_recovery">復原代碼</string>
+    <string name="security_recovery_codes_title">復原代碼</string>
+    <string name="security_session_unknown_agent">未知裝置</string>
+    <string name="security_session_revoke_title">撤銷工作階段？</string>
+    <string name="security_section_oauth">已連結帳戶</string>
+    <string name="security_oauth_link">連結帳號</string>
+    <string name="security_unlink">取消連結</string>
+    <string name="security_token_create">建立權杖</string>
+    <string name="security_token_name">名稱</string>
+    <string name="security_token_delete_title">刪除權杖?</string>
+    <string name="security_create">建立</string>
+    <string name="security_cancel">取消</string>
+    <string name="security_save">儲存</string>
+    <string name="security_done">完成</string>
+    <string name="security_delete">刪除</string>
+    <string name="security_rename">重新命名</string>
+    <string name="security_revoke">撤銷</string>
+    <string name="security_disable">停用</string>
+    <string name="security_copy">複製</string>
+    <string name="security_copy_all">全部複製</string>
 
 </resources>

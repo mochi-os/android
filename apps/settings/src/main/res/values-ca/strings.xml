@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Configuració</string>
     <string name="settings_home_logout">Tanca la sessió</string>
+    <string name="security_method_email">Codi per correu</string>
+    <string name="security_method_passkey">Clau d\'accés</string>
+    <string name="security_method_totp">Aplicació autenticadora</string>
+    <string name="security_section_passkeys">Claus d\'accés</string>
+    <string name="security_passkey_register">Afegeix una clau d\'accés</string>
+    <string name="security_passkey_delete_title">Vols suprimir la clau d\'accés?</string>
+    <string name="security_section_totp">Aplicació autenticadora</string>
+    <string name="security_totp_setup">Configura l\'autenticador</string>
+    <string name="security_totp_setup_title">Configura l\'autenticador</string>
+    <string name="security_totp_verify">Verifica</string>
+    <string name="security_totp_disable_title">Vols desactivar l\'autenticador?</string>
+    <string name="security_section_recovery">Codis de recuperació</string>
+    <string name="security_recovery_codes_title">Codis de recuperació</string>
+    <string name="security_session_unknown_agent">Dispositiu desconegut</string>
+    <string name="security_session_revoke_title">Vols revocar la sessió?</string>
+    <string name="security_section_oauth">Comptes connectats</string>
+    <string name="security_oauth_link">Enllaça el compte</string>
+    <string name="security_unlink">Desvincula</string>
+    <string name="security_token_create">Crea un token</string>
+    <string name="security_token_name">Nom</string>
+    <string name="security_token_delete_title">Vols suprimir el token?</string>
+    <string name="security_create">Crea</string>
+    <string name="security_cancel">Cancel·la</string>
+    <string name="security_save">Desa</string>
+    <string name="security_done">Fet</string>
+    <string name="security_delete">Suprimeix</string>
+    <string name="security_rename">Canvia el nom</string>
+    <string name="security_revoke">Revoca</string>
+    <string name="security_disable">Desactiva</string>
+    <string name="security_copy">Copia</string>
+    <string name="security_copy_all">Copia-ho tot</string>
 
 </resources>

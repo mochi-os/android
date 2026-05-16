@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Recovery código</string>
     <string name="auth_name">Suti</string>
     <string name="auth_create">Luraña</string>
+    <string name="auth_privacy_label">Imantawi</string>
+    <string name="auth_privacy_public">Public</string>
+    <string name="auth_privacy_private">Imantata</string>
+    <string name="auth_link_privacy">Imantawi</string>
+    <string name="auth_use_different_account">Registrata passkey apnaqam mantañataki</string>
+    <string name="auth_error_suspended_title">Cuenta jark\'ata</string>
     <string name="common_back">Kutta</string>
     <string name="common_close">Jist\'antaña</string>
     <string name="common_cancel">Jaytaña</string>

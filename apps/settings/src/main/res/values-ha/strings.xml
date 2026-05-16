@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Saitunan</string>
     <string name="settings_home_logout">Fita</string>
+    <string name="security_method_email">Email code</string>
+    <string name="security_method_passkey">Maɓallin shiga</string>
+    <string name="security_method_totp">Authenticator app</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Ƙara passkey</string>
+    <string name="security_passkey_delete_title">Goge passkey?</string>
+    <string name="security_section_totp">Authenticator app</string>
+    <string name="security_totp_setup">Saita authenticator</string>
+    <string name="security_totp_setup_title">Saita authenticator</string>
+    <string name="security_totp_verify">Tabbatar</string>
+    <string name="security_totp_disable_title">Kashe authenticator?</string>
+    <string name="security_section_recovery">Recovery codes</string>
+    <string name="security_recovery_codes_title">Recovery codes</string>
+    <string name="security_session_unknown_agent">Na\'urar da ba a sani ba</string>
+    <string name="security_session_revoke_title">Janye session?</string>
+    <string name="security_section_oauth">Asusai da aka haɗa</string>
+    <string name="security_oauth_link">Haɗa account</string>
+    <string name="security_unlink">Cire haɗin</string>
+    <string name="security_token_create">Ƙirƙira token</string>
+    <string name="security_token_name">Suna</string>
+    <string name="security_token_delete_title">Goge token?</string>
+    <string name="security_create">Ƙirƙira</string>
+    <string name="security_cancel">Soke</string>
+    <string name="security_save">Adana</string>
+    <string name="security_done">An gama</string>
+    <string name="security_delete">Goge</string>
+    <string name="security_rename">Sake suna</string>
+    <string name="security_revoke">Janyewa</string>
+    <string name="security_disable">Kashe</string>
+    <string name="security_copy">Kwafi</string>
+    <string name="security_copy_all">Kwafi duka</string>
 
 </resources>

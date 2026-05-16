@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Kod za oporavak</string>
     <string name="auth_name">Ime</string>
     <string name="auth_create">Kreiraj</string>
+    <string name="auth_privacy_label">Privatnost</string>
+    <string name="auth_privacy_public">Javno</string>
+    <string name="auth_privacy_private">Privatno</string>
+    <string name="auth_link_privacy">Privatnost</string>
+    <string name="auth_use_different_account">Koristi drugi račun</string>
+    <string name="auth_error_suspended_title">Račun suspendovan</string>
     <string name="common_back">Nazad</string>
     <string name="common_close">Zatvori</string>
     <string name="common_cancel">Otkaži</string>

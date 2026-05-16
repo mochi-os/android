@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">రికవరీ కోడ్</string>
     <string name="auth_name">పేరు</string>
     <string name="auth_create">సృష్టించండి</string>
+    <string name="auth_privacy_label">గోప్యత</string>
+    <string name="auth_privacy_public">పబ్లిక్</string>
+    <string name="auth_privacy_private">ప్రైవేట్</string>
+    <string name="auth_link_privacy">గోప్యత</string>
+    <string name="auth_use_different_account">వేరే ఖాతాను ఉపయోగించండి</string>
+    <string name="auth_error_suspended_title">ఖాతా సస్పెండ్ చేయబడింది</string>
     <string name="common_back">వెనుకకు</string>
     <string name="common_close">మూసివేయండి</string>
     <string name="common_cancel">రద్దు చేయండి</string>

@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Рамзи барқарорсозӣ</string>
     <string name="auth_name">Ном</string>
     <string name="auth_create">Эҷод кардан</string>
+    <string name="auth_privacy_label">Махфият</string>
+    <string name="auth_privacy_public">Ҷамъиятӣ</string>
+    <string name="auth_privacy_private">Хусусӣ</string>
+    <string name="auth_link_privacy">Махфият</string>
+    <string name="auth_use_different_account">Ҳисоби дигарро истифода баред</string>
+    <string name="auth_error_suspended_title">Ҳисоб боздошта шуд</string>
     <string name="common_back">Бозгашт</string>
     <string name="common_close">Пӯшидан</string>
     <string name="common_cancel">Бекор кардан</string>

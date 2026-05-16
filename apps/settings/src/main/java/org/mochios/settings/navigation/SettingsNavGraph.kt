@@ -7,12 +7,14 @@ import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.notifications.NotificationsScreen
 import org.mochios.settings.ui.preferences.UserSettingsScreen
 import org.mochios.settings.ui.profile.ProfileScreen
+import org.mochios.settings.ui.security.SecurityScreen
 
 object SettingsApp {
     const val HOME = "settings/home"
     const val PROFILE = "settings/profile"
     const val PREFERENCES = "settings/preferences"
     const val NOTIFICATIONS = "settings/notifications"
+    const val SECURITY = "settings/security"
 }
 
 fun NavGraphBuilder.settingsNavGraph(
@@ -26,8 +28,12 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenProfile = { navController.navigate(SettingsApp.PROFILE) },
             onOpenPreferences = { navController.navigate(SettingsApp.PREFERENCES) },
             onOpenNotifications = { navController.navigate(SettingsApp.NOTIFICATIONS) },
+            onOpenSecurity = { navController.navigate(SettingsApp.SECURITY) },
             onLogout = onLogout,
         )
+    }
+    composable(SettingsApp.SECURITY) {
+        SecurityScreen(onBack = { navController.popBackStack() })
     }
     composable(SettingsApp.PROFILE) {
         ProfileScreen(onBack = { navController.popBackStack() })

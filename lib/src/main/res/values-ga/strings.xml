@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Cód aisghabhála</string>
     <string name="auth_name">Ainm</string>
     <string name="auth_create">Cruthaigh</string>
+    <string name="auth_privacy_label">Príobháideacht</string>
+    <string name="auth_privacy_public">Poiblí</string>
+    <string name="auth_privacy_private">Príobháideach</string>
+    <string name="auth_link_privacy">Príobháideacht</string>
+    <string name="auth_use_different_account">Úsáid cuntas difriúil</string>
+    <string name="auth_error_suspended_title">Cuntas ar fionraí</string>
     <string name="common_back">Ar ais</string>
     <string name="common_close">Dún</string>
     <string name="common_cancel">Cealaigh</string>

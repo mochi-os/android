@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Қалпына келтіру коды</string>
     <string name="auth_name">Аты</string>
     <string name="auth_create">Құру</string>
+    <string name="auth_privacy_label">Құпиялылық</string>
+    <string name="auth_privacy_public">Қоғамдық</string>
+    <string name="auth_privacy_private">Жеке</string>
+    <string name="auth_link_privacy">Құпиялылық</string>
+    <string name="auth_use_different_account">Басқа есептік жазбаны пайдалану</string>
+    <string name="auth_error_suspended_title">Тіркелгі тоқтатылды</string>
     <string name="common_back">Артқа</string>
     <string name="common_close">Жабу</string>
     <string name="common_cancel">Болдырмау</string>

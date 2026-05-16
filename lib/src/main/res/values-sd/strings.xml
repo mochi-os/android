@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">بحالي ڪوڊ</string>
     <string name="auth_name">نالو</string>
     <string name="auth_create">ٺاهيو</string>
+    <string name="auth_privacy_label">رازداري</string>
+    <string name="auth_privacy_public">عوامي</string>
+    <string name="auth_privacy_private">نجي</string>
+    <string name="auth_link_privacy">رازداري</string>
+    <string name="auth_use_different_account">ڪو ٻيو اڪائونٽ استعمال ڪريو</string>
+    <string name="auth_error_suspended_title">اڪائونٽ معطل</string>
     <string name="common_back">واپس</string>
     <string name="common_close">بند ڪريو</string>
     <string name="common_cancel">منسوخ ڪريو</string>

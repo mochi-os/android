@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">الإعدادات</string>
     <string name="settings_home_logout">تسجيل الخروج</string>
+    <string name="security_method_email">رمز البريد الإلكتروني</string>
+    <string name="security_method_passkey">مفتاح المرور</string>
+    <string name="security_method_totp">تطبيق المصادقة</string>
+    <string name="security_section_passkeys">مفاتيح المرور</string>
+    <string name="security_passkey_register">إضافة مفتاح مرور</string>
+    <string name="security_passkey_delete_title">حذف مفتاح المرور؟</string>
+    <string name="security_section_totp">تطبيق المصادقة</string>
+    <string name="security_totp_setup">إعداد المصادق</string>
+    <string name="security_totp_setup_title">إعداد المصادق</string>
+    <string name="security_totp_verify">تحقق</string>
+    <string name="security_totp_disable_title">تعطيل المصادق؟</string>
+    <string name="security_section_recovery">رموز الاسترداد</string>
+    <string name="security_recovery_codes_title">رموز الاسترداد</string>
+    <string name="security_session_unknown_agent">جهاز غير معروف</string>
+    <string name="security_session_revoke_title">إلغاء الجلسة؟</string>
+    <string name="security_section_oauth">الحسابات المتصلة</string>
+    <string name="security_oauth_link">ربط الحساب</string>
+    <string name="security_unlink">إلغاء الربط</string>
+    <string name="security_token_create">إنشاء رمز</string>
+    <string name="security_token_name">الاسم</string>
+    <string name="security_token_delete_title">حذف الرمز؟</string>
+    <string name="security_create">إنشاء</string>
+    <string name="security_cancel">إلغاء</string>
+    <string name="security_save">حفظ</string>
+    <string name="security_done">منتهٍ</string>
+    <string name="security_delete">حذف</string>
+    <string name="security_rename">إعادة تسمية</string>
+    <string name="security_revoke">إلغاء</string>
+    <string name="security_disable">تعطيل</string>
+    <string name="security_copy">نسخ</string>
+    <string name="security_copy_all">نسخ الكل</string>
 
 </resources>

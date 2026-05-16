@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ቅንብሮች</string>
     <string name="settings_home_logout">ውጣ</string>
+    <string name="security_method_email">የኢሜይል ኮድ</string>
+    <string name="security_method_passkey">የይለፍ ቁልፍ</string>
+    <string name="security_method_totp">የማረጋገጫ መተግበሪያ</string>
+    <string name="security_section_passkeys">ፓስኪዎች</string>
+    <string name="security_passkey_register">ፓስኪ ጨምር</string>
+    <string name="security_passkey_delete_title">ፓስኪ ይሰረዝ?</string>
+    <string name="security_section_totp">የማረጋገጫ መተግበሪያ</string>
+    <string name="security_totp_setup">አረጋጋጭ ያዘጋጁ</string>
+    <string name="security_totp_setup_title">አረጋጋጭ ያዘጋጁ</string>
+    <string name="security_totp_verify">ያረጋግጡ</string>
+    <string name="security_totp_disable_title">አረጋጋጭን አሰናክል?</string>
+    <string name="security_section_recovery">የመልሶ ማግኛ ኮዶች</string>
+    <string name="security_recovery_codes_title">የመልሶ ማግኛ ኮዶች</string>
+    <string name="security_session_unknown_agent">ያልታወቀ መሣሪያ</string>
+    <string name="security_session_revoke_title">ክፍለ-ጊዜን ይሻሩ?</string>
+    <string name="security_section_oauth">የተገናኙ መለያዎች</string>
+    <string name="security_oauth_link">መለያ አገናኝ</string>
+    <string name="security_unlink">ግንኙነት አቋርጥ</string>
+    <string name="security_token_create">ቶከን ፍጠር</string>
+    <string name="security_token_name">ስም</string>
+    <string name="security_token_delete_title">ቶከን ይሰረዝ?</string>
+    <string name="security_create">ፍጠር</string>
+    <string name="security_cancel">ይቅር</string>
+    <string name="security_save">ያስቀምጡ</string>
+    <string name="security_done">ተጠናቅቋል</string>
+    <string name="security_delete">ሰርዝ</string>
+    <string name="security_rename">ስም ቀይር</string>
+    <string name="security_revoke">ይሻሩ</string>
+    <string name="security_disable">አሰናክል</string>
+    <string name="security_copy">ቅዳ</string>
+    <string name="security_copy_all">ሁሉንም ቅዳ</string>
 
 </resources>

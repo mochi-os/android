@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">รหัสกู้คืน</string>
     <string name="auth_name">ชื่อ</string>
     <string name="auth_create">สร้าง</string>
+    <string name="auth_privacy_label">ความเป็นส่วนตัว</string>
+    <string name="auth_privacy_public">สาธารณะ</string>
+    <string name="auth_privacy_private">ส่วนตัว</string>
+    <string name="auth_link_privacy">ความเป็นส่วนตัว</string>
+    <string name="auth_use_different_account">ใช้บัญชีอื่น</string>
+    <string name="auth_error_suspended_title">ระงับบัญชีแล้ว</string>
     <string name="common_back">ย้อนกลับ</string>
     <string name="common_close">ปิด</string>
     <string name="common_cancel">ยกเลิก</string>

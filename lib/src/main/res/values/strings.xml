@@ -47,6 +47,19 @@
     <string name="auth_create_identity_subtitle">Choose a name for your identity on this server</string>
     <string name="auth_name">Name</string>
     <string name="auth_create">Create</string>
+    <string name="auth_privacy_label">Privacy</string>
+    <string name="auth_privacy_public">Public</string>
+    <string name="auth_privacy_public_description">Listed in the user directory so others can find you.</string>
+    <string name="auth_privacy_private">Private</string>
+    <string name="auth_privacy_private_description">Hidden from the user directory.</string>
+    <string name="auth_link_rules">Rules</string>
+    <string name="auth_link_terms">Terms</string>
+    <string name="auth_link_privacy">Privacy</string>
+    <string name="auth_use_different_account">Use a different account</string>
+    <string name="auth_error_suspended_title">Account suspended</string>
+    <string name="auth_error_suspended_body">Your account has been suspended. Contact the server administrator if you think this is a mistake.</string>
+    <string name="auth_error_signup_disabled_title">Sign-up disabled</string>
+    <string name="auth_error_signup_disabled_body">This server isn\'t accepting new registrations right now.</string>
 
     <!-- App bootstrap: account picker shown to returning users -->
     <string name="bootstrap_welcome_back">Welcome back</string>

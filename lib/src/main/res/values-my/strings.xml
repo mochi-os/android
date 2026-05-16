@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Recovery code</string>
     <string name="auth_name">အမည်</string>
     <string name="auth_create">ဖန်တီးမည်</string>
+    <string name="auth_privacy_label">ကိုယ်ရေးကိုယ်တာ</string>
+    <string name="auth_privacy_public">အများသုံး</string>
+    <string name="auth_privacy_private">သီးသန့်</string>
+    <string name="auth_link_privacy">ကိုယ်ရေးကိုယ်တာ</string>
+    <string name="auth_use_different_account">အကောင့် အခြားတစ်ခုကို သုံးပါ</string>
+    <string name="auth_error_suspended_title">အကောင့် ဆိုင်းငံ့ထားသည်</string>
     <string name="common_back">နောက်သို့</string>
     <string name="common_close">ပိတ်မည်</string>
     <string name="common_cancel">မလုပ်တော့ပါ</string>

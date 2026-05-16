@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Setelan</string>
     <string name="settings_home_logout">Metu</string>
+    <string name="security_method_email">Kode email</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">App authenticator</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Tambah passkey</string>
+    <string name="security_passkey_delete_title">Busak passkey?</string>
+    <string name="security_section_totp">App authenticator</string>
+    <string name="security_totp_setup">Setel authenticator</string>
+    <string name="security_totp_setup_title">Setel authenticator</string>
+    <string name="security_totp_verify">Verifikasi</string>
+    <string name="security_totp_disable_title">Pateni authenticator?</string>
+    <string name="security_section_recovery">Kode pemulihan</string>
+    <string name="security_recovery_codes_title">Kode pemulihan</string>
+    <string name="security_session_unknown_agent">Piranti ora dimangerteni</string>
+    <string name="security_session_revoke_title">Cabut sesi?</string>
+    <string name="security_section_oauth">Akun sing nyambung</string>
+    <string name="security_oauth_link">Sambungaké akun</string>
+    <string name="security_unlink">Lepasaké</string>
+    <string name="security_token_create">Gawé token</string>
+    <string name="security_token_name">Jeneng</string>
+    <string name="security_token_delete_title">Busak token?</string>
+    <string name="security_create">Gawé</string>
+    <string name="security_cancel">Batal</string>
+    <string name="security_save">Simpen</string>
+    <string name="security_done">Rampung</string>
+    <string name="security_delete">Busak</string>
+    <string name="security_rename">Owahi jeneng</string>
+    <string name="security_revoke">Cabut</string>
+    <string name="security_disable">Pateni</string>
+    <string name="security_copy">Salin</string>
+    <string name="security_copy_all">Salin kabèh</string>
 
 </resources>

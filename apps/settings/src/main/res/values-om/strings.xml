@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Qindaa\'inoota</string>
     <string name="settings_home_logout">Ba\'i</string>
+    <string name="security_method_email">Koodii imeelii</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Appii mirkaneessaa</string>
+    <string name="security_section_passkeys">Passkey-wwan</string>
+    <string name="security_passkey_register">Passkey dabali</string>
+    <string name="security_passkey_delete_title">Passkey haqu?</string>
+    <string name="security_section_totp">Appii mirkaneessaa</string>
+    <string name="security_totp_setup">Mirkaneessaa qindeessi</string>
+    <string name="security_totp_setup_title">Mirkaneessaa qindeessi</string>
+    <string name="security_totp_verify">Mirkaneessi</string>
+    <string name="security_totp_disable_title">Mirkaneessaa cufu?</string>
+    <string name="security_section_recovery">Koodiwwan deebii</string>
+    <string name="security_recovery_codes_title">Koodiwwan deebii</string>
+    <string name="security_session_unknown_agent">Meeshaa hin beekamne</string>
+    <string name="security_session_revoke_title">Galii haquuf?</string>
+    <string name="security_section_oauth">Akkaawuntiilee walitti hidhaman</string>
+    <string name="security_oauth_link">Akkaawuntii hidhi</string>
+    <string name="security_unlink">Hidhuu kaasi</string>
+    <string name="security_token_create">Tokeenii uumi</string>
+    <string name="security_token_name">Maqaa</string>
+    <string name="security_token_delete_title">Tokeenii haqu?</string>
+    <string name="security_create">Uumi</string>
+    <string name="security_cancel">Haquu</string>
+    <string name="security_save">Olkaa\'i</string>
+    <string name="security_done">Xumurame</string>
+    <string name="security_delete">Haqi</string>
+    <string name="security_rename">Maqaa jijjiiri</string>
+    <string name="security_revoke">Haqi</string>
+    <string name="security_disable">Cufi</string>
+    <string name="security_copy">Garagalchi</string>
+    <string name="security_copy_all">Hunda garagalchi</string>
 
 </resources>

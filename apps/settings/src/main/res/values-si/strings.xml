@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">සැකසුම්</string>
     <string name="settings_home_logout">ඉවත් වන්න</string>
+    <string name="security_method_email">ඊමේල් කේතය</string>
+    <string name="security_method_passkey">ප්‍රවේශ යතුර</string>
+    <string name="security_method_totp">Authenticator app</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">passkey එකක් එක් කරන්න</string>
+    <string name="security_passkey_delete_title">passkey එක මකන්නද?</string>
+    <string name="security_section_totp">Authenticator app</string>
+    <string name="security_totp_setup">authenticator සකසන්න</string>
+    <string name="security_totp_setup_title">authenticator සකසන්න</string>
+    <string name="security_totp_verify">සත්‍යාපනය කරන්න</string>
+    <string name="security_totp_disable_title">සත්‍යාපකය අක්‍රිය කරනවාද?</string>
+    <string name="security_section_recovery">ප්‍රතිසාධන කේත</string>
+    <string name="security_recovery_codes_title">ප්‍රතිසාධන කේත</string>
+    <string name="security_session_unknown_agent">නොදන්නා උපාංගය</string>
+    <string name="security_session_revoke_title">සැසිය අවලංගු කරන්නද?</string>
+    <string name="security_section_oauth">සම්බන්ධිත ගිණුම්</string>
+    <string name="security_oauth_link">ගිණුම සම්බන්ධ කරන්න</string>
+    <string name="security_unlink">සම්බන්ධතාවය ඉවත් කරන්න</string>
+    <string name="security_token_create">token එකක් නිර්මාණය කරන්න</string>
+    <string name="security_token_name">නම</string>
+    <string name="security_token_delete_title">token එක මකන්නද?</string>
+    <string name="security_create">නිර්මාණය කරන්න</string>
+    <string name="security_cancel">අවලංගු කරන්න</string>
+    <string name="security_save">සුරකින්න</string>
+    <string name="security_done">නිමයි</string>
+    <string name="security_delete">මකන්න</string>
+    <string name="security_rename">නැවත නම් කරන්න</string>
+    <string name="security_revoke">අවලංගු කරන්න</string>
+    <string name="security_disable">අක්‍රිය කරන්න</string>
+    <string name="security_copy">පිටපත් කරන්න</string>
+    <string name="security_copy_all">සියල්ල පිටපත් කරන්න</string>
 
 </resources>

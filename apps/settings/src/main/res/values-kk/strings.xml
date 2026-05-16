@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Параметрлер</string>
     <string name="settings_home_logout">Шығу</string>
+    <string name="security_method_email">Электрондық пошта коды</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator қолданбасы</string>
+    <string name="security_section_passkeys">Passkey-лер</string>
+    <string name="security_passkey_register">Passkey қосу</string>
+    <string name="security_passkey_delete_title">Passkey жою керек пе?</string>
+    <string name="security_section_totp">Authenticator қолданбасы</string>
+    <string name="security_totp_setup">Authenticator орнату</string>
+    <string name="security_totp_setup_title">Authenticator орнату</string>
+    <string name="security_totp_verify">Тексеру</string>
+    <string name="security_totp_disable_title">Authenticator өшіру керек пе?</string>
+    <string name="security_section_recovery">Қалпына келтіру кодтары</string>
+    <string name="security_recovery_codes_title">Қалпына келтіру кодтары</string>
+    <string name="security_session_unknown_agent">Белгісіз құрылғы</string>
+    <string name="security_session_revoke_title">Сеансты қайтарып алу керек пе?</string>
+    <string name="security_section_oauth">Қосылған тіркелгілер</string>
+    <string name="security_oauth_link">Тіркелгіні байланыстыру</string>
+    <string name="security_unlink">Байланысын үзу</string>
+    <string name="security_token_create">Токен құру</string>
+    <string name="security_token_name">Аты</string>
+    <string name="security_token_delete_title">Токенді жою керек пе?</string>
+    <string name="security_create">Құру</string>
+    <string name="security_cancel">Болдырмау</string>
+    <string name="security_save">Сақтау</string>
+    <string name="security_done">Дайын</string>
+    <string name="security_delete">Жою</string>
+    <string name="security_rename">Атын өзгерту</string>
+    <string name="security_revoke">Қайтарып алу</string>
+    <string name="security_disable">Өшіру</string>
+    <string name="security_copy">Көшіру</string>
+    <string name="security_copy_all">Барлығын көшіру</string>
 
 </resources>

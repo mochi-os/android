@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Код аднаўлення</string>
     <string name="auth_name">Назва</string>
     <string name="auth_create">Стварыць</string>
+    <string name="auth_privacy_label">Канфідэнцыяльнасць</string>
+    <string name="auth_privacy_public">Публічны</string>
+    <string name="auth_privacy_private">Прыватны</string>
+    <string name="auth_link_privacy">Канфідэнцыяльнасць</string>
+    <string name="auth_use_different_account">Выкарыстаць іншы ўліковы запіс</string>
+    <string name="auth_error_suspended_title">Уліковы запіс прыпынены</string>
     <string name="common_back">Назад</string>
     <string name="common_close">Закрыць</string>
     <string name="common_cancel">Адмена</string>

@@ -3,6 +3,8 @@
 
     <string name="auth_continue">Continuá</string>
     <string name="auth_verify">Verificá</string>
+    <string name="auth_privacy_label">Privacy</string>
+    <string name="auth_link_privacy">Privacy</string>
     <string name="common_cancel">Cancelá</string>
     <string name="common_confirm">Confirmá</string>
     <string name="common_save">Guardá</string>

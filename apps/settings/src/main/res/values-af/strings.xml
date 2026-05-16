@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Instellings</string>
     <string name="settings_home_logout">Meld af</string>
+    <string name="security_method_email">E-poskode</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Verifikasie-app</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Voeg sleutelpas by</string>
+    <string name="security_passkey_delete_title">Verwyder sleutelpas?</string>
+    <string name="security_section_totp">Verifikasie-app</string>
+    <string name="security_totp_setup">Stel verifikasie-program op</string>
+    <string name="security_totp_setup_title">Stel verifikasie-program op</string>
+    <string name="security_totp_verify">Verifieer</string>
+    <string name="security_totp_disable_title">Deaktiveer verifiëerder?</string>
+    <string name="security_section_recovery">Herstelkodes</string>
+    <string name="security_recovery_codes_title">Herstelkodes</string>
+    <string name="security_session_unknown_agent">Onbekende toestel</string>
+    <string name="security_session_revoke_title">Herroep sessie?</string>
+    <string name="security_section_oauth">Verbinde rekeninge</string>
+    <string name="security_oauth_link">Koppel rekening</string>
+    <string name="security_unlink">Ontkoppel</string>
+    <string name="security_token_create">Skep token</string>
+    <string name="security_token_name">Naam</string>
+    <string name="security_token_delete_title">Verwyder token?</string>
+    <string name="security_create">Skep</string>
+    <string name="security_cancel">Kanselleer</string>
+    <string name="security_save">Stoor</string>
+    <string name="security_done">Klaar</string>
+    <string name="security_delete">Verwyder</string>
+    <string name="security_rename">Hernoem</string>
+    <string name="security_revoke">Herroep</string>
+    <string name="security_disable">Deaktiveer</string>
+    <string name="security_copy">Kopieer</string>
+    <string name="security_copy_all">Kopieer alles</string>
 
 </resources>

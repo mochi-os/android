@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">აღდგენის კოდი</string>
     <string name="auth_name">სახელი</string>
     <string name="auth_create">შექმნა</string>
+    <string name="auth_privacy_label">კონფიდენციალურობა</string>
+    <string name="auth_privacy_public">საჯარო</string>
+    <string name="auth_privacy_private">პირადი</string>
+    <string name="auth_link_privacy">კონფიდენციალურობა</string>
+    <string name="auth_use_different_account">გამოიყენეთ *.domain.com wildcard დომენებისთვის</string>
+    <string name="auth_error_suspended_title">ანგარიში შეჩერებულია</string>
     <string name="common_back">უკან</string>
     <string name="common_close">დახურვა</string>
     <string name="common_cancel">გაუქმება</string>

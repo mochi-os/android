@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="security_section_oauth">已連接賬戶</string>
+    <string name="security_oauth_link">關聯賬戶</string>
+
+</resources>

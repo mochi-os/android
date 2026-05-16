@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">سيٽنگون</string>
     <string name="settings_home_logout">لاگ آئوٽ</string>
+    <string name="security_method_email">اي ميل ڪوڊ</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator ايپ</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">پاس ڪيءَ شامل ڪريو</string>
+    <string name="security_passkey_delete_title">پاس ڪيءَ ختم ڪجي؟</string>
+    <string name="security_section_totp">Authenticator ايپ</string>
+    <string name="security_totp_setup">آٿينٽڪيٽر ترتيب ڏيو</string>
+    <string name="security_totp_setup_title">آٿينٽڪيٽر ترتيب ڏيو</string>
+    <string name="security_totp_verify">تصديق ڪريو</string>
+    <string name="security_totp_disable_title">Authenticator غيرفعال ڪجي؟</string>
+    <string name="security_section_recovery">بحالي ڪوڊ</string>
+    <string name="security_recovery_codes_title">بحالي ڪوڊ</string>
+    <string name="security_session_unknown_agent">اڻڄاتل ڊيوائس</string>
+    <string name="security_session_revoke_title">سيشن رد ڪجي؟</string>
+    <string name="security_section_oauth">ڳنڍيل اڪائونٽ</string>
+    <string name="security_oauth_link">اڪائونٽ ڳنڍيو</string>
+    <string name="security_unlink">لنڪ ھٽايو</string>
+    <string name="security_token_create">ٽوڪن ٺاهيو</string>
+    <string name="security_token_name">نالو</string>
+    <string name="security_token_delete_title">ٽوڪن ختم ڪجي؟</string>
+    <string name="security_create">ٺاهيو</string>
+    <string name="security_cancel">منسوخ ڪريو</string>
+    <string name="security_save">محفوظ ڪريو</string>
+    <string name="security_done">مڪمل</string>
+    <string name="security_delete">ختم ڪريو</string>
+    <string name="security_rename">نالو تبديل ڪريو</string>
+    <string name="security_revoke">رد ڪريو</string>
+    <string name="security_disable">غيرفعال ڪريو</string>
+    <string name="security_copy">ڪاپي ڪريو</string>
+    <string name="security_copy_all">سڀ ڪاپي ڪريو</string>
 
 </resources>

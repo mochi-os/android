@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Helyreállítási kód</string>
     <string name="auth_name">Név</string>
     <string name="auth_create">Létrehozás</string>
+    <string name="auth_privacy_label">Adatvédelem</string>
+    <string name="auth_privacy_public">Nyilvános</string>
+    <string name="auth_privacy_private">Privát</string>
+    <string name="auth_link_privacy">Adatvédelem</string>
+    <string name="auth_use_different_account">Másik fiók használata</string>
+    <string name="auth_error_suspended_title">Fiók felfüggesztve</string>
     <string name="common_back">Vissza</string>
     <string name="common_close">Bezárás</string>
     <string name="common_cancel">Mégse</string>

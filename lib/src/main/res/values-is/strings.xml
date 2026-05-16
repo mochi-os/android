@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Endurheimtarkóði</string>
     <string name="auth_name">Nafn</string>
     <string name="auth_create">Búa til</string>
+    <string name="auth_privacy_label">Friðhelgi</string>
+    <string name="auth_privacy_public">Opinbert</string>
+    <string name="auth_privacy_private">Einkamál</string>
+    <string name="auth_link_privacy">Friðhelgi</string>
+    <string name="auth_use_different_account">Nota annan reikning</string>
+    <string name="auth_error_suspended_title">Reikningur frystur</string>
     <string name="common_back">Til baka</string>
     <string name="common_close">Loka</string>
     <string name="common_cancel">Hætta við</string>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">设置</string>
     <string name="settings_home_logout">退出登录</string>
+    <string name="security_method_email">邮箱验证码</string>
+    <string name="security_method_passkey">通行密钥</string>
+    <string name="security_method_totp">身份验证器应用</string>
+    <string name="security_section_passkeys">通行密钥</string>
+    <string name="security_passkey_register">添加通行密钥</string>
+    <string name="security_passkey_delete_title">删除通行密钥吗?</string>
+    <string name="security_section_totp">身份验证器应用</string>
+    <string name="security_totp_setup">设置身份验证器</string>
+    <string name="security_totp_setup_title">设置身份验证器</string>
+    <string name="security_totp_verify">验证</string>
+    <string name="security_totp_disable_title">禁用身份验证器?</string>
+    <string name="security_section_recovery">恢复码</string>
+    <string name="security_recovery_codes_title">恢复码</string>
+    <string name="security_session_unknown_agent">未知设备</string>
+    <string name="security_session_revoke_title">撤销会话?</string>
+    <string name="security_section_oauth">已连接的账户</string>
+    <string name="security_oauth_link">关联账户</string>
+    <string name="security_unlink">取消链接</string>
+    <string name="security_token_create">创建令牌</string>
+    <string name="security_token_name">名称</string>
+    <string name="security_token_delete_title">删除令牌吗?</string>
+    <string name="security_create">创建</string>
+    <string name="security_cancel">取消</string>
+    <string name="security_save">保存</string>
+    <string name="security_done">完成</string>
+    <string name="security_delete">删除</string>
+    <string name="security_rename">重命名</string>
+    <string name="security_revoke">撤销</string>
+    <string name="security_disable">禁用</string>
+    <string name="security_copy">复制</string>
+    <string name="security_copy_all">全部复制</string>
 
 </resources>

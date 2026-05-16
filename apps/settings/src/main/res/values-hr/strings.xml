@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Postavke</string>
     <string name="settings_home_logout">Odjavi se</string>
+    <string name="security_method_email">Kod e-pošte</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Aplikacija autentifikatora</string>
+    <string name="security_section_passkeys">Passkeyevi</string>
+    <string name="security_passkey_register">Dodaj passkey</string>
+    <string name="security_passkey_delete_title">Obrisati passkey?</string>
+    <string name="security_section_totp">Aplikacija autentifikatora</string>
+    <string name="security_totp_setup">Postavi autentifikator</string>
+    <string name="security_totp_setup_title">Postavi autentifikator</string>
+    <string name="security_totp_verify">Provjeri</string>
+    <string name="security_totp_disable_title">Onemogućiti autentifikator?</string>
+    <string name="security_section_recovery">Kodovi za oporavak</string>
+    <string name="security_recovery_codes_title">Kodovi za oporavak</string>
+    <string name="security_session_unknown_agent">Nepoznat uređaj</string>
+    <string name="security_session_revoke_title">Opozvati sesiju?</string>
+    <string name="security_section_oauth">Povezani računi</string>
+    <string name="security_oauth_link">Poveži račun</string>
+    <string name="security_unlink">Odpovezi</string>
+    <string name="security_token_create">Stvori token</string>
+    <string name="security_token_name">Naziv</string>
+    <string name="security_token_delete_title">Obrisati token?</string>
+    <string name="security_create">Stvori</string>
+    <string name="security_cancel">Odustani</string>
+    <string name="security_save">Spremi</string>
+    <string name="security_done">Gotovo</string>
+    <string name="security_delete">Obriši</string>
+    <string name="security_rename">Preimenuj</string>
+    <string name="security_revoke">Opozovi</string>
+    <string name="security_disable">Onemogući</string>
+    <string name="security_copy">Kopiraj</string>
+    <string name="security_copy_all">Kopiraj sve</string>
 
 </resources>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">সেটিংস</string>
     <string name="settings_home_logout">লগ আউট করুন</string>
+    <string name="security_method_email">ইমেইল কোড</string>
+    <string name="security_method_passkey">পাসকি</string>
+    <string name="security_method_totp">অথেন্টিকেটর অ্যাপ</string>
+    <string name="security_section_passkeys">পাসকি</string>
+    <string name="security_passkey_register">পাসকি যোগ করুন</string>
+    <string name="security_passkey_delete_title">পাসকি মুছবেন?</string>
+    <string name="security_section_totp">অথেন্টিকেটর অ্যাপ</string>
+    <string name="security_totp_setup">অথেনটিকেটর সেট আপ করুন</string>
+    <string name="security_totp_setup_title">অথেনটিকেটর সেট আপ করুন</string>
+    <string name="security_totp_verify">যাচাই করুন</string>
+    <string name="security_totp_disable_title">অথেনটিকেটর নিষ্ক্রিয় করবেন?</string>
+    <string name="security_section_recovery">রিকভারি কোড</string>
+    <string name="security_recovery_codes_title">রিকভারি কোড</string>
+    <string name="security_session_unknown_agent">অজানা ডিভাইস</string>
+    <string name="security_session_revoke_title">সেশন প্রত্যাহার করবেন?</string>
+    <string name="security_section_oauth">সংযুক্ত অ্যাকাউন্ট</string>
+    <string name="security_oauth_link">অ্যাকাউন্ট লিঙ্ক করুন</string>
+    <string name="security_unlink">লিঙ্ক বিচ্ছিন্ন</string>
+    <string name="security_token_create">টোকেন তৈরি করুন</string>
+    <string name="security_token_name">নাম</string>
+    <string name="security_token_delete_title">টোকেন মুছবেন?</string>
+    <string name="security_create">তৈরি করুন</string>
+    <string name="security_cancel">বাতিল করুন</string>
+    <string name="security_save">সংরক্ষণ করুন</string>
+    <string name="security_done">সম্পন্ন</string>
+    <string name="security_delete">মুছুন</string>
+    <string name="security_rename">পুনঃনামকরণ করুন</string>
+    <string name="security_revoke">প্রত্যাহার করুন</string>
+    <string name="security_disable">নিষ্ক্রিয় করুন</string>
+    <string name="security_copy">কপি করুন</string>
+    <string name="security_copy_all">সব কপি করুন</string>
 
 </resources>

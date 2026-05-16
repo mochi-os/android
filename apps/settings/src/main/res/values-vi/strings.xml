@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Cài đặt</string>
     <string name="settings_home_logout">Đăng xuất</string>
+    <string name="security_method_email">Mã email</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Ứng dụng xác thực</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Thêm passkey</string>
+    <string name="security_passkey_delete_title">Xóa passkey?</string>
+    <string name="security_section_totp">Ứng dụng xác thực</string>
+    <string name="security_totp_setup">Thiết lập trình xác thực</string>
+    <string name="security_totp_setup_title">Thiết lập trình xác thực</string>
+    <string name="security_totp_verify">Xác minh</string>
+    <string name="security_totp_disable_title">Tắt trình xác thực?</string>
+    <string name="security_section_recovery">Mã khôi phục</string>
+    <string name="security_recovery_codes_title">Mã khôi phục</string>
+    <string name="security_session_unknown_agent">Thiết bị không xác định</string>
+    <string name="security_session_revoke_title">Thu hồi phiên?</string>
+    <string name="security_section_oauth">Tài khoản đã kết nối</string>
+    <string name="security_oauth_link">Liên kết tài khoản</string>
+    <string name="security_unlink">Hủy liên kết</string>
+    <string name="security_token_create">Tạo token</string>
+    <string name="security_token_name">Tên</string>
+    <string name="security_token_delete_title">Xóa token?</string>
+    <string name="security_create">Tạo</string>
+    <string name="security_cancel">Hủy</string>
+    <string name="security_save">Lưu</string>
+    <string name="security_done">Xong</string>
+    <string name="security_delete">Xóa</string>
+    <string name="security_rename">Đổi tên</string>
+    <string name="security_revoke">Thu hồi</string>
+    <string name="security_disable">Tắt</string>
+    <string name="security_copy">Sao chép</string>
+    <string name="security_copy_all">Sao chép tất cả</string>
 
 </resources>

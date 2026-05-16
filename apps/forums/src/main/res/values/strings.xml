@@ -86,12 +86,14 @@
     <string name="forums_post_remove">Remove</string>
     <string name="forums_post_restore">Restore</string>
     <string name="forums_post_report">Report</string>
+    <string name="forums_post_quote">Quote in reply</string>
 
     <!-- Comment moderation -->
     <string name="forums_comment_approve">Approve</string>
     <string name="forums_comment_remove">Remove</string>
     <string name="forums_comment_restore">Restore</string>
     <string name="forums_comment_report">Report</string>
+    <string name="forums_comment_quote">Quote in reply</string>
 
     <!-- Tag filter -->
     <string name="forums_tag_clear">Clear filter</string>

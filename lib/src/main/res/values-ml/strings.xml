@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">റിക്കവറി കോഡ്</string>
     <string name="auth_name">പേര്</string>
     <string name="auth_create">സൃഷ്ടിക്കുക</string>
+    <string name="auth_privacy_label">സ്വകാര്യതാ നയം</string>
+    <string name="auth_privacy_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
+    <string name="auth_privacy_private">തുടരുക</string>
+    <string name="auth_link_privacy">സ്വകാര്യതാ നയം</string>
+    <string name="auth_use_different_account">മറ്റൊരു അക്കൗണ്ട് ഉപയോഗിക്കുക</string>
+    <string name="auth_error_suspended_title">അക്കൗണ്ട് സസ്പെൻഡ് ചെയ്തു</string>
     <string name="common_back">തിരികെ</string>
     <string name="common_close">അടയ്ക്കുക</string>
     <string name="common_cancel">റദ്ദാക്കുക</string>

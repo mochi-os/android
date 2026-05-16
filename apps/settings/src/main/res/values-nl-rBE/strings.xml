@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Instellingen</string>
     <string name="settings_home_logout">Uitloggen</string>
+    <string name="security_method_email">E-mailcode</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator-app</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Passkey toevoegen</string>
+    <string name="security_passkey_delete_title">Passkey verwijderen?</string>
+    <string name="security_section_totp">Authenticator-app</string>
+    <string name="security_totp_setup">Authenticator instellen</string>
+    <string name="security_totp_setup_title">Authenticator instellen</string>
+    <string name="security_totp_verify">Verifiëren</string>
+    <string name="security_totp_disable_title">Authenticator uitschakelen?</string>
+    <string name="security_section_recovery">Herstelcodes</string>
+    <string name="security_recovery_codes_title">Herstelcodes</string>
+    <string name="security_session_unknown_agent">Onbekend apparaat</string>
+    <string name="security_session_revoke_title">Sessie intrekken?</string>
+    <string name="security_section_oauth">Gekoppelde accounts</string>
+    <string name="security_oauth_link">Account koppelen</string>
+    <string name="security_unlink">Ontkoppelen</string>
+    <string name="security_token_create">Token aanmaken</string>
+    <string name="security_token_name">Naam</string>
+    <string name="security_token_delete_title">Token verwijderen?</string>
+    <string name="security_create">Aanmaken</string>
+    <string name="security_cancel">Annuleren</string>
+    <string name="security_save">Opslaan</string>
+    <string name="security_done">Klaar</string>
+    <string name="security_delete">Verwijderen</string>
+    <string name="security_rename">Hernoemen</string>
+    <string name="security_revoke">Intrekken</string>
+    <string name="security_disable">Uitschakelen</string>
+    <string name="security_copy">Kopiëren</string>
+    <string name="security_copy_all">Alles kopiëren</string>
 
 </resources>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Կարգավորումներ</string>
     <string name="settings_home_logout">Դուրս է եկել հաջողությամբ</string>
+    <string name="security_method_email">Էլ․ փոստի կոդ</string>
+    <string name="security_method_passkey">Անցաբանալի</string>
+    <string name="security_method_totp">Authenticator հավելվածն անջատված է</string>
+    <string name="security_section_passkeys">Անցաբանալիներ</string>
+    <string name="security_passkey_register">Ավելացնել առաջարկվող կետ</string>
+    <string name="security_passkey_delete_title">Ջնջե՞լ անցաբառը։</string>
+    <string name="security_section_totp">Authenticator հավելվածն անջատված է</string>
+    <string name="security_totp_setup">Կարգավորել ստուգիչը</string>
+    <string name="security_totp_setup_title">Կարգավորել ստուգիչը</string>
+    <string name="security_totp_verify">Ստուգել</string>
+    <string name="security_totp_disable_title">Անջատե՞լ Authenticator-ը։</string>
+    <string name="security_section_recovery">Վերականգնման կոդեր</string>
+    <string name="security_recovery_codes_title">Վերականգնման կոդեր</string>
+    <string name="security_session_unknown_agent">Անհայտ սարք</string>
+    <string name="security_session_revoke_title">Հետ վերցնե՞լ սեսսիան։</string>
+    <string name="security_section_oauth">Կապվեք ադմինիստրատորի հետ պատվիրակություն ստանալու համար։</string>
+    <string name="security_oauth_link">Հղումներ</string>
+    <string name="security_unlink">Ապակապակցել</string>
+    <string name="security_token_create">Ստեղծել track</string>
+    <string name="security_token_name">Անուն</string>
+    <string name="security_token_delete_title">Ջնջե՞լ թոքենը։</string>
+    <string name="security_create">Ստեղծել CRM</string>
+    <string name="security_cancel">Չեղարկել մեկնաբանությունը</string>
+    <string name="security_save">Պահպանել</string>
+    <string name="security_done">Կատարված է</string>
+    <string name="security_delete">Ջնջել</string>
+    <string name="security_rename">Վերանվանել</string>
+    <string name="security_revoke">Հետ վերցնել</string>
+    <string name="security_disable">Անջատել</string>
+    <string name="security_copy">Պատճենել ամենը</string>
+    <string name="security_copy_all">Պատճենել ներդրման հղումը</string>
 
 </resources>

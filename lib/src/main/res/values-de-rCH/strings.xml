@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="auth_privacy_label">Privacy</string>
+    <string name="auth_link_privacy">Privacy</string>
     <string name="common_close">Schliessen</string>
     <string name="about_close">Schliessen</string>
     <string name="settings_radius_medium">Medium</string>

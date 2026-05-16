@@ -66,7 +66,14 @@ data class MethodsResponse(
 data class OAuthBeginRequest(
     val mode: String = "mobile",
     val scheme: String,
-    val challenge: String
+    val challenge: String,
+    /** When true, server attaches the OAuth identity to the current session's
+     *  user instead of starting a sign-in. Requires an authenticated Bearer
+     *  token in the request (Authorization header). */
+    val link: Boolean = false,
+    /** Mobile target the server redirects back to with `?oauth_linked=` or
+     *  `?oauth_error=`. Should be a `<scheme>://oauth-link-return` URI. */
+    val target: String = ""
 )
 
 data class OAuthBeginResponse(
@@ -100,7 +107,7 @@ data class PasskeyResponseData(
     val signature: String
 )
 data class TokenRequest(val app: String)
-data class IdentityRequest(val name: String)
+data class IdentityRequest(val name: String, val privacy: String = "public")
 data class RecoveryRequest(val email: String, val code: String)
 
 interface AuthApi {
@@ -144,6 +151,13 @@ interface AuthApi {
     @POST("_/auth/oauth/{provider}/begin")
     suspend fun oauthBegin(
         @retrofit2.http.Path("provider") provider: String,
+        @Body body: OAuthBeginRequest
+    ): Response<OAuthBeginResponse>
+
+    @POST("_/auth/oauth/{provider}/begin")
+    suspend fun oauthBeginAuthorised(
+        @retrofit2.http.Path("provider") provider: String,
+        @retrofit2.http.Header("Authorization") authorization: String,
         @Body body: OAuthBeginRequest
     ): Response<OAuthBeginResponse>
 

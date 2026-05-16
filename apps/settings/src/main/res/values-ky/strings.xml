@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Жөндөөлөр</string>
     <string name="settings_home_logout">Чыгуу</string>
+    <string name="security_method_email">Электрондук почта коду</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator колдонмосу</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Passkey кошуу</string>
+    <string name="security_passkey_delete_title">Passkey жок кылабызбы?</string>
+    <string name="security_section_totp">Authenticator колдонмосу</string>
+    <string name="security_totp_setup">Аутентификаторду орнотуу</string>
+    <string name="security_totp_setup_title">Аутентификаторду орнотуу</string>
+    <string name="security_totp_verify">Текшерүү</string>
+    <string name="security_totp_disable_title">Authenticatorду өчүрөбүзбү?</string>
+    <string name="security_section_recovery">Калыбына келтирүү коддору</string>
+    <string name="security_recovery_codes_title">Калыбына келтирүү коддору</string>
+    <string name="security_session_unknown_agent">Белгисиз түзмөк</string>
+    <string name="security_session_revoke_title">Сессияны кайтарып аласызбы?</string>
+    <string name="security_section_oauth">Байланышкан аккаунттар</string>
+    <string name="security_oauth_link">Эсеп байланыштыруу</string>
+    <string name="security_unlink">Байланышты үзүү</string>
+    <string name="security_token_create">Токен түзүү</string>
+    <string name="security_token_name">Аты</string>
+    <string name="security_token_delete_title">Токенди жок кылабызбы?</string>
+    <string name="security_create">Түзүү</string>
+    <string name="security_cancel">Жокко чыгаруу</string>
+    <string name="security_save">Сактоо</string>
+    <string name="security_done">Бүттү</string>
+    <string name="security_delete">Жок кылуу</string>
+    <string name="security_rename">Атын өзгөртүү</string>
+    <string name="security_revoke">Кайтарып алуу</string>
+    <string name="security_disable">Өчүрүү</string>
+    <string name="security_copy">Көчүрүү</string>
+    <string name="security_copy_all">Баарын көчүрүү</string>
 
 </resources>

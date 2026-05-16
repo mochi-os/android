@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Återställningskod</string>
     <string name="auth_name">Namn</string>
     <string name="auth_create">Skapa</string>
+    <string name="auth_privacy_label">Integritet</string>
+    <string name="auth_privacy_public">Offentlig</string>
+    <string name="auth_privacy_private">Privat</string>
+    <string name="auth_link_privacy">Integritet</string>
+    <string name="auth_use_different_account">Använd ett annat konto</string>
+    <string name="auth_error_suspended_title">Konto avstängt</string>
     <string name="common_back">Tillbaka</string>
     <string name="common_close">Stäng</string>
     <string name="common_cancel">Avbryt</string>

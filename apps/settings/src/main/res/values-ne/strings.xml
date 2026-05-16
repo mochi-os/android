@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">सेटिङहरू</string>
     <string name="settings_home_logout">लग आउट</string>
+    <string name="security_method_email">इमेल कोड</string>
+    <string name="security_method_passkey">पासकी</string>
+    <string name="security_method_totp">Authenticator एप</string>
+    <string name="security_section_passkeys">पासकीहरू</string>
+    <string name="security_passkey_register">पासकी थप्नुहोस्</string>
+    <string name="security_passkey_delete_title">पासकी मेटाउने?</string>
+    <string name="security_section_totp">Authenticator एप</string>
+    <string name="security_totp_setup">अथेन्टिकेटर सेटअप गर्नुहोस्</string>
+    <string name="security_totp_setup_title">अथेन्टिकेटर सेटअप गर्नुहोस्</string>
+    <string name="security_totp_verify">प्रमाणित गर्नुहोस्</string>
+    <string name="security_totp_disable_title">प्रमाणिकरण निष्क्रिय गर्ने?</string>
+    <string name="security_section_recovery">रिकभरी कोडहरू</string>
+    <string name="security_recovery_codes_title">रिकभरी कोडहरू</string>
+    <string name="security_session_unknown_agent">अज्ञात उपकरण</string>
+    <string name="security_session_revoke_title">सेसन रद्द गर्ने हो?</string>
+    <string name="security_section_oauth">जडित खाताहरू</string>
+    <string name="security_oauth_link">खाता लिङ्क गर्नुहोस्</string>
+    <string name="security_unlink">अनलिंक गर्नुहोस्</string>
+    <string name="security_token_create">टोकन सिर्जना गर्नुहोस्</string>
+    <string name="security_token_name">नाम</string>
+    <string name="security_token_delete_title">टोकन मेटाउने?</string>
+    <string name="security_create">सिर्जना गर्नुहोस्</string>
+    <string name="security_cancel">रद्द गर्नुहोस्</string>
+    <string name="security_save">सुरक्षित गर्नुहोस्</string>
+    <string name="security_done">सम्पन्न</string>
+    <string name="security_delete">मेटाउनुहोस्</string>
+    <string name="security_rename">नाम परिवर्तन गर्नुहोस्</string>
+    <string name="security_revoke">रद्द गर्नुहोस्</string>
+    <string name="security_disable">निष्क्रिय गर्नुहोस्</string>
+    <string name="security_copy">प्रतिलिपि</string>
+    <string name="security_copy_all">सबै प्रतिलिपि गर्नुहोस्</string>
 
 </resources>

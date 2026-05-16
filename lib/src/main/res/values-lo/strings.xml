@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">ລະຫັດກູ້ຄືນ</string>
     <string name="auth_name">ຊື່</string>
     <string name="auth_create">ສ້າງ</string>
+    <string name="auth_privacy_label">ຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="auth_privacy_public">ສາທາລະນະ</string>
+    <string name="auth_privacy_private">ສ່ວນຕົວ</string>
+    <string name="auth_link_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
+    <string name="auth_use_different_account">ໃຊ້ບັນຊີທີ່ແຕກຕ່າງກັນ</string>
+    <string name="auth_error_suspended_title">ບັນຊີຖືກລະງັບ</string>
     <string name="common_back">ກັບຄືນ</string>
     <string name="common_close">ປິດ</string>
     <string name="common_cancel">ຍົກເລີກ</string>

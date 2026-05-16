@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">سیٹنگز</string>
     <string name="settings_home_logout">لاگ آؤٹ</string>
+    <string name="security_method_email">ای میل کوڈ</string>
+    <string name="security_method_passkey">passkey</string>
+    <string name="security_method_totp">Authenticator ایپ</string>
+    <string name="security_section_passkeys">passkeys</string>
+    <string name="security_passkey_register">Passkey شامل کریں</string>
+    <string name="security_passkey_delete_title">Passkey حذف کریں؟</string>
+    <string name="security_section_totp">Authenticator ایپ</string>
+    <string name="security_totp_setup">تصدیق کنندہ سیٹ اپ کریں</string>
+    <string name="security_totp_setup_title">تصدیق کنندہ سیٹ اپ کریں</string>
+    <string name="security_totp_verify">تصدیق کریں</string>
+    <string name="security_totp_disable_title">تصدیق کنندہ غیر فعال کریں؟</string>
+    <string name="security_section_recovery">recovery کوڈز</string>
+    <string name="security_recovery_codes_title">recovery کوڈز</string>
+    <string name="security_session_unknown_agent">نامعلوم ڈیوائس</string>
+    <string name="security_session_revoke_title">سیشن منسوخ کریں؟</string>
+    <string name="security_section_oauth">کنیکٹ شدہ اکاؤنٹس</string>
+    <string name="security_oauth_link">اکاؤنٹ منسلک کریں</string>
+    <string name="security_unlink">لنک ختم کریں</string>
+    <string name="security_token_create">Token بنائیں</string>
+    <string name="security_token_name">نام</string>
+    <string name="security_token_delete_title">Token حذف کریں؟</string>
+    <string name="security_create">بنائیں</string>
+    <string name="security_cancel">منسوخ کریں</string>
+    <string name="security_save">محفوظ کریں</string>
+    <string name="security_done">مکمل</string>
+    <string name="security_delete">حذف کریں</string>
+    <string name="security_rename">نام تبدیل کریں</string>
+    <string name="security_revoke">منسوخ کریں</string>
+    <string name="security_disable">غیر فعال کریں</string>
+    <string name="security_copy">کاپی کریں</string>
+    <string name="security_copy_all">سب کاپی کریں</string>
 
 </resources>

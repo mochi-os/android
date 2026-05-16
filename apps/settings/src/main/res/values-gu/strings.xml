@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">સેટિંગ્સ</string>
     <string name="settings_home_logout">લૉગ આઉટ કરો</string>
+    <string name="security_method_email">ઇમેઇલ કોડ</string>
+    <string name="security_method_passkey">પાસકી</string>
+    <string name="security_method_totp">Authenticator એપ્લિકેશન</string>
+    <string name="security_section_passkeys">પાસકીઝ</string>
+    <string name="security_passkey_register">પાસકી ઉમેરો</string>
+    <string name="security_passkey_delete_title">પાસકી કાઢી નાખવી છે?</string>
+    <string name="security_section_totp">Authenticator એપ્લિકેશન</string>
+    <string name="security_totp_setup">પ્રમાણીકરણકર્તા સેટ અપ કરો</string>
+    <string name="security_totp_setup_title">પ્રમાણીકરણકર્તા સેટ અપ કરો</string>
+    <string name="security_totp_verify">ચકાસો</string>
+    <string name="security_totp_disable_title">ઑથેન્ટિકેટર નિષ્ક્રિય કરવું છે?</string>
+    <string name="security_section_recovery">રિકવરી કોડ્સ</string>
+    <string name="security_recovery_codes_title">રિકવરી કોડ્સ</string>
+    <string name="security_session_unknown_agent">અજાણ્યું ઉપકરણ</string>
+    <string name="security_session_revoke_title">સત્ર રદ કરવું છે?</string>
+    <string name="security_section_oauth">જોડાયેલા ખાતાઓ</string>
+    <string name="security_oauth_link">એકાઉન્ટ લિંક કરો</string>
+    <string name="security_unlink">અનલિંક કરો</string>
+    <string name="security_token_create">token બનાવો</string>
+    <string name="security_token_name">નામ</string>
+    <string name="security_token_delete_title">token કાઢી નાખવો છે?</string>
+    <string name="security_create">બનાવો</string>
+    <string name="security_cancel">રદ કરો</string>
+    <string name="security_save">સાચવો</string>
+    <string name="security_done">થઈ ગયું</string>
+    <string name="security_delete">કાઢી નાખો</string>
+    <string name="security_rename">નામ બદલો</string>
+    <string name="security_revoke">રદ કરો</string>
+    <string name="security_disable">નિષ્ક્રિય કરો</string>
+    <string name="security_copy">કૉપિ કરો</string>
+    <string name="security_copy_all">બધું કૉપિ કરો</string>
 
 </resources>

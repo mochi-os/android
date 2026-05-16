@@ -1,5 +1,7 @@
 package org.mochios.android.ui.auth
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -144,11 +146,7 @@ fun LoginScreen(
 
         if (uiState.error != null) {
             Spacer(modifier = Modifier.height(12.dp))
-            Text(
-                text = uiState.error.userMessage(),
-                color = MaterialTheme.colorScheme.error,
-                style = MaterialTheme.typography.bodySmall
-            )
+            AuthErrorBanner(error = uiState.error)
         }
 
         if (uiState.beginResult != null) {
@@ -418,6 +416,59 @@ private fun providerLabel(name: String): String = when (name.lowercase()) {
     "github" -> "GitHub"
     "x" -> "X"
     else -> name.replaceFirstChar { it.uppercase() }
+}
+
+/**
+ * Banner-style error display for auth failures. Detects specific server
+ * error codes (`suspended`, `signup_disabled`) and surfaces a heading +
+ * detail message so users get a clearer story than the bare label. Other
+ * errors fall back to a short error-coloured line.
+ */
+@Composable
+private fun AuthErrorBanner(error: org.mochios.android.api.MochiError) {
+    val code = when (error) {
+        is org.mochios.android.api.MochiError.ForbiddenError -> error.errorCode
+        is org.mochios.android.api.MochiError.AuthError -> error.errorCode
+        else -> null
+    }
+    val headingRes = when (code) {
+        "suspended" -> R.string.auth_error_suspended_title
+        "signup_disabled" -> R.string.auth_error_signup_disabled_title
+        else -> null
+    }
+    val bodyRes = when (code) {
+        "suspended" -> R.string.auth_error_suspended_body
+        "signup_disabled" -> R.string.auth_error_signup_disabled_body
+        else -> null
+    }
+    if (headingRes != null && bodyRes != null) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(MaterialTheme.colorScheme.errorContainer)
+                .padding(12.dp),
+        ) {
+            Column {
+                Text(
+                    text = stringResource(headingRes),
+                    style = MaterialTheme.typography.titleSmall,
+                    color = MaterialTheme.colorScheme.onErrorContainer,
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = error.userMessage().ifBlank { stringResource(bodyRes) },
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onErrorContainer,
+                )
+            }
+        }
+    } else {
+        Text(
+            text = error.userMessage(),
+            color = MaterialTheme.colorScheme.error,
+            style = MaterialTheme.typography.bodySmall,
+        )
+    }
 }
 
 @Composable

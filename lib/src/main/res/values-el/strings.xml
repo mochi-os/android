@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Κωδικός ανάκτησης</string>
     <string name="auth_name">Όνομα</string>
     <string name="auth_create">Δημιουργία</string>
+    <string name="auth_privacy_label">Ιδιωτικότητα</string>
+    <string name="auth_privacy_public">Δημόσιο</string>
+    <string name="auth_privacy_private">Ιδιωτικό</string>
+    <string name="auth_link_privacy">Ιδιωτικότητα</string>
+    <string name="auth_use_different_account">Χρησιμοποιήστε διαφορετικό λογαριασμό</string>
+    <string name="auth_error_suspended_title">Ο λογαριασμός ανεστάλη</string>
     <string name="common_back">Πίσω</string>
     <string name="common_close">Κλείσιμο</string>
     <string name="common_cancel">Ακύρωση</string>

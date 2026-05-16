@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Cilësimet</string>
     <string name="settings_home_logout">Dilni</string>
+    <string name="security_method_email">Kodi me email</string>
+    <string name="security_method_passkey">Kyç</string>
+    <string name="security_method_totp">Aplikacion autentikues</string>
+    <string name="security_section_passkeys">Kyçet</string>
+    <string name="security_passkey_register">Shto passkey</string>
+    <string name="security_passkey_delete_title">Të fshihet passkey?</string>
+    <string name="security_section_totp">Aplikacion autentikues</string>
+    <string name="security_totp_setup">Konfiguro autentikuesin</string>
+    <string name="security_totp_setup_title">Konfiguro autentikuesin</string>
+    <string name="security_totp_verify">Verifiko</string>
+    <string name="security_totp_disable_title">Të çaktivizohet autentikuesi?</string>
+    <string name="security_section_recovery">Kodet e rikuperimit</string>
+    <string name="security_recovery_codes_title">Kodet e rikuperimit</string>
+    <string name="security_session_unknown_agent">Pajisje e panjohur</string>
+    <string name="security_session_revoke_title">Të revokohet seanca?</string>
+    <string name="security_section_oauth">Llogaritë e lidhura</string>
+    <string name="security_oauth_link">Lidh llogarinë</string>
+    <string name="security_unlink">Shkëput</string>
+    <string name="security_token_create">Krijo token</string>
+    <string name="security_token_name">Emri</string>
+    <string name="security_token_delete_title">Të fshihet token-i?</string>
+    <string name="security_create">Krijo</string>
+    <string name="security_cancel">Anulo</string>
+    <string name="security_save">Ruaj</string>
+    <string name="security_done">Përfunduar</string>
+    <string name="security_delete">Fshi</string>
+    <string name="security_rename">Riemërto</string>
+    <string name="security_revoke">Revoko</string>
+    <string name="security_disable">Çaktivizo</string>
+    <string name="security_copy">Kopjo</string>
+    <string name="security_copy_all">Kopjo të gjitha</string>
 
 </resources>

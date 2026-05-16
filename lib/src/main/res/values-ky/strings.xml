@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Калыбына келтирүү коду</string>
     <string name="auth_name">Аты</string>
     <string name="auth_create">Түзүү</string>
+    <string name="auth_privacy_label">Купуялык</string>
+    <string name="auth_privacy_public">Ачык</string>
+    <string name="auth_privacy_private">Купуя</string>
+    <string name="auth_link_privacy">Купуялык</string>
+    <string name="auth_use_different_account">Башка аккаунтту колдонуу</string>
+    <string name="auth_error_suspended_title">Аккаунт убактылуу токтотулду</string>
     <string name="common_back">Артка</string>
     <string name="common_close">Жабуу</string>
     <string name="common_cancel">Жокко чыгаруу</string>

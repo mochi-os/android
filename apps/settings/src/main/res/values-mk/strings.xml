@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Поставки</string>
     <string name="settings_home_logout">Одјави се</string>
+    <string name="security_method_email">Код за е-пошта</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator апликација</string>
+    <string name="security_section_passkeys">Passkey-и</string>
+    <string name="security_passkey_register">Додај passkey</string>
+    <string name="security_passkey_delete_title">Да се избрише passkey?</string>
+    <string name="security_section_totp">Authenticator апликација</string>
+    <string name="security_totp_setup">Поставете автентификатор</string>
+    <string name="security_totp_setup_title">Поставете автентификатор</string>
+    <string name="security_totp_verify">Потврди</string>
+    <string name="security_totp_disable_title">Да се оневозможи Authenticator?</string>
+    <string name="security_section_recovery">Кодови за обновување</string>
+    <string name="security_recovery_codes_title">Кодови за обновување</string>
+    <string name="security_session_unknown_agent">Непознат уред</string>
+    <string name="security_session_revoke_title">Да ја отповикаме сесијата?</string>
+    <string name="security_section_oauth">Поврзани сметки</string>
+    <string name="security_oauth_link">Поврзи сметка</string>
+    <string name="security_unlink">Отповрзи</string>
+    <string name="security_token_create">Создај токен</string>
+    <string name="security_token_name">Име</string>
+    <string name="security_token_delete_title">Да се избрише токенот?</string>
+    <string name="security_create">Создај</string>
+    <string name="security_cancel">Откажи</string>
+    <string name="security_save">Зачувај</string>
+    <string name="security_done">Готово</string>
+    <string name="security_delete">Избриши</string>
+    <string name="security_rename">Преименувај</string>
+    <string name="security_revoke">Отповикај</string>
+    <string name="security_disable">Оневозможи</string>
+    <string name="security_copy">Копирај</string>
+    <string name="security_copy_all">Копирај сè</string>
 
 </resources>

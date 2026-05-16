@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">កូដស្តារ</string>
     <string name="auth_name">ឈ្មោះ</string>
     <string name="auth_create">បង្កើត</string>
+    <string name="auth_privacy_label">ឯកជនភាព</string>
+    <string name="auth_privacy_public">សាធារណៈ</string>
+    <string name="auth_privacy_private">ឯកជន</string>
+    <string name="auth_link_privacy">ឯកជនភាព</string>
+    <string name="auth_use_different_account">ប្រើគណនីផ្សេង</string>
+    <string name="auth_error_suspended_title">គណនីត្រូវបានផ្អាក</string>
     <string name="common_back">ត្រឡប់</string>
     <string name="common_close">បិទ</string>
     <string name="common_cancel">បោះបង់</string>

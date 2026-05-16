@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Configuración</string>
     <string name="settings_home_logout">Mistuña</string>
+    <string name="security_method_email">Email código</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator app</string>
+    <string name="security_section_passkeys">Passkeyanaka</string>
+    <string name="security_passkey_register">Passkey yapxataña</string>
+    <string name="security_passkey_delete_title">Passkey chhaqtayaña?</string>
+    <string name="security_section_totp">Authenticator app</string>
+    <string name="security_totp_setup">Autenticador wakichaña</string>
+    <string name="security_totp_setup_title">Autenticador wakichaña</string>
+    <string name="security_totp_verify">Verificaña ukat habilitaña</string>
+    <string name="security_totp_disable_title">Authenticator jark\'aña?</string>
+    <string name="security_section_recovery">Recovery códigonaka</string>
+    <string name="security_recovery_codes_title">Recovery códigonaka</string>
+    <string name="security_session_unknown_agent">Janiw tukuyatakiti</string>
+    <string name="security_session_revoke_title">¿Sesión aparma?</string>
+    <string name="security_section_oauth">Chinjat cuentanaka</string>
+    <string name="security_oauth_link">Cuenta enlazaña</string>
+    <string name="security_unlink">Proveedor jaytaña?</string>
+    <string name="security_token_create">Token luraña</string>
+    <string name="security_token_name">Suti</string>
+    <string name="security_token_delete_title">Token chhaqtayaña?</string>
+    <string name="security_create">Luraña</string>
+    <string name="security_cancel">Jaytaña</string>
+    <string name="security_save">Imaña</string>
+    <string name="security_done">Tukuyata</string>
+    <string name="security_delete">Chhaqtayaña</string>
+    <string name="security_rename">Suti machaqachama</string>
+    <string name="security_revoke">Aparma</string>
+    <string name="security_disable">Jark\'aña</string>
+    <string name="security_copy">Copiaña</string>
+    <string name="security_copy_all">Taqpach copiaña</string>
 
 </resources>

@@ -34,6 +34,7 @@ data class AuthUiState(
     val mfaEmailCode: String = "",
     val mfaTotpCode: String = "",
     val identityName: String = "",
+    val identityPrivacy: String = "public",
     val recoveryCode: String = "",
     val showRecovery: Boolean = false,
     val authComplete: Boolean = false,
@@ -101,6 +102,17 @@ class AuthViewModel @Inject constructor(
 
     fun updateIdentityName(name: String) {
         _uiState.value = _uiState.value.copy(identityName = name, error = null)
+    }
+
+    fun updateIdentityPrivacy(privacy: String) {
+        if (privacy != "public" && privacy != "private") return
+        _uiState.value = _uiState.value.copy(identityPrivacy = privacy)
+    }
+
+    /** Abandon the in-progress identity-creation and drop the user back to
+     *  the email entry step. Mirrors web's "Use a different account" link. */
+    fun abandonIdentity() {
+        _uiState.value = AuthUiState(serverUrl = _uiState.value.serverUrl)
     }
 
     fun updateRecoveryCode(code: String) {
@@ -299,10 +311,11 @@ class AuthViewModel @Inject constructor(
             return
         }
 
+        val privacy = _uiState.value.identityPrivacy
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                authRepository.createIdentity(name)
+                authRepository.createIdentity(name, privacy)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     authComplete = true

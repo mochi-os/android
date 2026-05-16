@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="security_method_email">Code par courriel</string>
+
+</resources>

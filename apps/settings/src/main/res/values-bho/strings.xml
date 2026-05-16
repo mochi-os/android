@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">सेटिंग सब</string>
     <string name="settings_home_logout">लॉग आउट</string>
+    <string name="security_method_email">ईमेल कोड</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator ऐप</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Passkey जोड़ीं</string>
+    <string name="security_passkey_delete_title">Passkey मेटाईं?</string>
+    <string name="security_section_totp">Authenticator ऐप</string>
+    <string name="security_totp_setup">ऑथेंटिकेटर सेट अप करीं</string>
+    <string name="security_totp_setup_title">ऑथेंटिकेटर सेट अप करीं</string>
+    <string name="security_totp_verify">सत्यापित करीं</string>
+    <string name="security_totp_disable_title">Authenticator अक्षम करीं?</string>
+    <string name="security_section_recovery">रिकवरी कोड</string>
+    <string name="security_recovery_codes_title">रिकवरी कोड</string>
+    <string name="security_session_unknown_agent">अनजान डिवाइस</string>
+    <string name="security_session_revoke_title">सत्र वापस लीं?</string>
+    <string name="security_section_oauth">जुड़ल खाता</string>
+    <string name="security_oauth_link">खाता जोड़ीं</string>
+    <string name="security_unlink">लिंक हटाईं</string>
+    <string name="security_token_create">टोकन बनाईं</string>
+    <string name="security_token_name">नाम</string>
+    <string name="security_token_delete_title">टोकन मेटाईं?</string>
+    <string name="security_create">बनाईं</string>
+    <string name="security_cancel">रद्द करीं</string>
+    <string name="security_save">सहेजीं</string>
+    <string name="security_done">हो गइल</string>
+    <string name="security_delete">मेटाईं</string>
+    <string name="security_rename">नाम बदलीं</string>
+    <string name="security_revoke">वापस लीं</string>
+    <string name="security_disable">अक्षम करीं</string>
+    <string name="security_copy">कॉपी करीं</string>
+    <string name="security_copy_all">सब कॉपी करीं</string>
 
 </resources>

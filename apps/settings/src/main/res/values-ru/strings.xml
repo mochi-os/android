@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Настройки</string>
     <string name="settings_home_logout">Выйти</string>
+    <string name="security_method_email">Код по электронной почте</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Приложение-аутентификатор</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Добавить passkey</string>
+    <string name="security_passkey_delete_title">Удалить passkey?</string>
+    <string name="security_section_totp">Приложение-аутентификатор</string>
+    <string name="security_totp_setup">Настроить аутентификатор</string>
+    <string name="security_totp_setup_title">Настроить аутентификатор</string>
+    <string name="security_totp_verify">Подтвердить</string>
+    <string name="security_totp_disable_title">Отключить аутентификатор?</string>
+    <string name="security_section_recovery">Коды восстановления</string>
+    <string name="security_recovery_codes_title">Коды восстановления</string>
+    <string name="security_session_unknown_agent">Неизвестное устройство</string>
+    <string name="security_session_revoke_title">Отозвать сеанс?</string>
+    <string name="security_section_oauth">Подключённые аккаунты</string>
+    <string name="security_oauth_link">Связать аккаунт</string>
+    <string name="security_unlink">Отвязать</string>
+    <string name="security_token_create">Создать токен</string>
+    <string name="security_token_name">Имя</string>
+    <string name="security_token_delete_title">Удалить токен?</string>
+    <string name="security_create">Создать</string>
+    <string name="security_cancel">Отмена</string>
+    <string name="security_save">Сохранить</string>
+    <string name="security_done">Готово</string>
+    <string name="security_delete">Удалить</string>
+    <string name="security_rename">Переименовать</string>
+    <string name="security_revoke">Отозвать</string>
+    <string name="security_disable">Отключить</string>
+    <string name="security_copy">Копировать</string>
+    <string name="security_copy_all">Копировать всё</string>
 
 </resources>

@@ -2,5 +2,19 @@
 <resources>
 
     <string name="settings_home_logout">Cerrá sesión</string>
+    <string name="security_passkey_register">Agregá una passkey</string>
+    <string name="security_passkey_delete_title">¿Eliminás la passkey?</string>
+    <string name="security_totp_setup">Configurá el autenticador</string>
+    <string name="security_totp_setup_title">Configurá el autenticador</string>
+    <string name="security_totp_verify">Verificá</string>
+    <string name="security_totp_disable_title">¿Desactivás el autenticador?</string>
+    <string name="security_token_create">Creá un token</string>
+    <string name="security_token_delete_title">¿Eliminás el token?</string>
+    <string name="security_cancel">Cancelá</string>
+    <string name="security_save">Guardá</string>
+    <string name="security_delete">Eliminá</string>
+    <string name="security_rename">Renombrá</string>
+    <string name="security_disable">Desactivá</string>
+    <string name="security_copy_all">Copiá todo</string>
 
 </resources>

@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Сэргээх код</string>
     <string name="auth_name">Нэр</string>
     <string name="auth_create">Үүсгэх</string>
+    <string name="auth_privacy_label">Нууцлал</string>
+    <string name="auth_privacy_public">Нийтийн</string>
+    <string name="auth_privacy_private">Хувийн</string>
+    <string name="auth_link_privacy">Нууцлал</string>
+    <string name="auth_use_different_account">Өөр данс ашиглах</string>
+    <string name="auth_error_suspended_title">Бүртгэлийг түр зогсоосон</string>
     <string name="common_back">Буцах</string>
     <string name="common_close">Хаах</string>
     <string name="common_cancel">Цуцлах</string>

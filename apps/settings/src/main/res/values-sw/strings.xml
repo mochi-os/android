@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Mipangilio</string>
     <string name="settings_home_logout">Toka</string>
+    <string name="security_method_email">Msimbo wa barua pepe</string>
+    <string name="security_method_passkey">Pasiki</string>
+    <string name="security_method_totp">Programu ya mthibitishaji</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Ongeza ufunguo wa kupita</string>
+    <string name="security_passkey_delete_title">Futa ufunguo wa kupita?</string>
+    <string name="security_section_totp">Programu ya mthibitishaji</string>
+    <string name="security_totp_setup">Sanidi kithibitishaji</string>
+    <string name="security_totp_setup_title">Sanidi kithibitishaji</string>
+    <string name="security_totp_verify">Thibitisha</string>
+    <string name="security_totp_disable_title">Zima kithibitishi?</string>
+    <string name="security_section_recovery">Misimbo ya kurejesha</string>
+    <string name="security_recovery_codes_title">Misimbo ya kurejesha</string>
+    <string name="security_session_unknown_agent">Kifaa kisichojulikana</string>
+    <string name="security_session_revoke_title">Batilisha kipindi?</string>
+    <string name="security_section_oauth">Akaunti zilizounganishwa</string>
+    <string name="security_oauth_link">Unganisha akaunti</string>
+    <string name="security_unlink">Tenganisha</string>
+    <string name="security_token_create">Unda tokeni</string>
+    <string name="security_token_name">Jina</string>
+    <string name="security_token_delete_title">Futa tokeni?</string>
+    <string name="security_create">Unda</string>
+    <string name="security_cancel">Ghairi</string>
+    <string name="security_save">Hifadhi</string>
+    <string name="security_done">Imekamilika</string>
+    <string name="security_delete">Futa</string>
+    <string name="security_rename">Badilisha jina</string>
+    <string name="security_revoke">Batilisha</string>
+    <string name="security_disable">Zima</string>
+    <string name="security_copy">Nakili</string>
+    <string name="security_copy_all">Nakili vyote</string>
 
 </resources>

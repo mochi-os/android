@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Kóòdù ìgbàpadà</string>
     <string name="auth_name">Orúkọ</string>
     <string name="auth_create">Dá</string>
+    <string name="auth_privacy_label">Aṣírí</string>
+    <string name="auth_privacy_public">Gbangba</string>
+    <string name="auth_privacy_private">Aṣírí</string>
+    <string name="auth_link_privacy">Aṣírí</string>
+    <string name="auth_use_different_account">Lo account mìíràn</string>
+    <string name="auth_error_suspended_title">A ti dádúró àkáǹtì</string>
     <string name="common_back">Padà</string>
     <string name="common_close">Tì</string>
     <string name="common_cancel">Fagilé</string>

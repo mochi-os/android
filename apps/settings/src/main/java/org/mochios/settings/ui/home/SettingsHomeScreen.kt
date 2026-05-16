@@ -12,6 +12,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.Security
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -38,6 +39,7 @@ fun SettingsHomeScreen(
     onOpenProfile: () -> Unit,
     onOpenPreferences: () -> Unit,
     onOpenNotifications: () -> Unit,
+    onOpenSecurity: () -> Unit,
     onLogout: () -> Unit,
 ) {
     Scaffold(
@@ -82,6 +84,15 @@ fun SettingsHomeScreen(
                     modifier = Modifier.clickable(onClick = onOpenNotifications),
                     headlineContent = { Text(stringResource(MochiR.string.notifications_open)) },
                     leadingContent = { Icon(Icons.Default.Notifications, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                )
+                HorizontalDivider()
+            }
+            item {
+                ListItem(
+                    modifier = Modifier.clickable(onClick = onOpenSecurity),
+                    headlineContent = { Text(stringResource(R.string.settings_home_security)) },
+                    leadingContent = { Icon(Icons.Default.Security, contentDescription = null) },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()

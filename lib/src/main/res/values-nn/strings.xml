@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Gjenopprettingskode</string>
     <string name="auth_name">Namn</string>
     <string name="auth_create">Opprett</string>
+    <string name="auth_privacy_label">Privacy</string>
+    <string name="auth_privacy_public">Offentleg</string>
+    <string name="auth_privacy_private">Privat</string>
+    <string name="auth_link_privacy">Privacy</string>
+    <string name="auth_use_different_account">Bruk ein annan konto</string>
+    <string name="auth_error_suspended_title">Konto suspendert</string>
     <string name="common_back">Tilbake</string>
     <string name="common_close">Lat att</string>
     <string name="common_cancel">Avbryt</string>

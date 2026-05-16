@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">ප්‍රතිසාධන කේතය</string>
     <string name="auth_name">නම</string>
     <string name="auth_create">නිර්මාණය කරන්න</string>
+    <string name="auth_privacy_label">පෞද්ගලිකත්වය</string>
+    <string name="auth_privacy_public">ප්‍රසිද්ධ</string>
+    <string name="auth_privacy_private">පෞද්ගලික</string>
+    <string name="auth_link_privacy">පෞද්ගලිකත්වය</string>
+    <string name="auth_use_different_account">වෙනස් ගිණුමක් භාවිතා කරන්න</string>
+    <string name="auth_error_suspended_title">ගිණුම අත්හිටුවා ඇත</string>
     <string name="common_back">ආපසු</string>
     <string name="common_close">වසන්න</string>
     <string name="common_cancel">අවලංගු කරන්න</string>

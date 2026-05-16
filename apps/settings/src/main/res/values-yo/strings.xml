@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Àwọn ìṣètò</string>
     <string name="settings_home_logout">Jáde</string>
+    <string name="security_method_email">Kóòdù ímẹ́ẹ̀lì</string>
+    <string name="security_method_passkey">Kọ́kọ́rọ́-ìwọlé</string>
+    <string name="security_method_totp">App olùfọwọ́sí</string>
+    <string name="security_section_passkeys">Àwọn passkey</string>
+    <string name="security_passkey_register">Fi passkey kún</string>
+    <string name="security_passkey_delete_title">Pa passkey rẹ́?</string>
+    <string name="security_section_totp">App olùfọwọ́sí</string>
+    <string name="security_totp_setup">Ṣètò authenticator</string>
+    <string name="security_totp_setup_title">Ṣètò authenticator</string>
+    <string name="security_totp_verify">Jẹ́rìí sí</string>
+    <string name="security_totp_disable_title">Pa authenticator?</string>
+    <string name="security_section_recovery">Àwọn kóòdù ìgbàpadà</string>
+    <string name="security_recovery_codes_title">Àwọn kóòdù ìgbàpadà</string>
+    <string name="security_session_unknown_agent">Ohun èlò tí a kò mọ̀</string>
+    <string name="security_session_revoke_title">Fagi lé session?</string>
+    <string name="security_section_oauth">Àwọn àkáǹtì tí a so pọ̀</string>
+    <string name="security_oauth_link">Ìjápọ̀ àkántì</string>
+    <string name="security_unlink">Yọ ìsopọ̀ kúrò</string>
+    <string name="security_token_create">Dá token</string>
+    <string name="security_token_name">Orúkọ</string>
+    <string name="security_token_delete_title">Pa token rẹ́?</string>
+    <string name="security_create">Dá</string>
+    <string name="security_cancel">Fagilé</string>
+    <string name="security_save">Fi pamọ́</string>
+    <string name="security_done">Ti parí</string>
+    <string name="security_delete">Pa rẹ́</string>
+    <string name="security_rename">Tún sọ orúkọ</string>
+    <string name="security_revoke">Fagi lé</string>
+    <string name="security_disable">Pa á</string>
+    <string name="security_copy">Ṣe àdàkọ</string>
+    <string name="security_copy_all">Ṣe àdàkọ gbogbo rẹ̀</string>
 
 </resources>

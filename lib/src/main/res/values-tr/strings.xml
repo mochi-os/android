@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Kurtarma kodu</string>
     <string name="auth_name">Ad</string>
     <string name="auth_create">Oluştur</string>
+    <string name="auth_privacy_label">Gizlilik</string>
+    <string name="auth_privacy_public">Herkese açık</string>
+    <string name="auth_privacy_private">Özel</string>
+    <string name="auth_link_privacy">Gizlilik</string>
+    <string name="auth_use_different_account">Farklı bir hesap kullan</string>
+    <string name="auth_error_suspended_title">Hesap askıya alındı</string>
     <string name="common_back">Geri</string>
     <string name="common_close">Kapat</string>
     <string name="common_cancel">İptal</string>

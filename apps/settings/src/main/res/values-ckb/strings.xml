@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ڕێکخستنەکان</string>
     <string name="settings_home_logout">دەرچوون</string>
+    <string name="security_method_email">کۆدی ئیمەیڵ</string>
+    <string name="security_method_passkey">پاسکی</string>
+    <string name="security_method_totp">ئەپی پشتڕاستکەرەوە</string>
+    <string name="security_section_passkeys">پاسکییەکان</string>
+    <string name="security_passkey_register">زیادکردنی passkey</string>
+    <string name="security_passkey_delete_title">passkey بسڕەوە؟</string>
+    <string name="security_section_totp">ئەپی پشتڕاستکەرەوە</string>
+    <string name="security_totp_setup">سیستەمی پشتڕاستکردنەوە ڕێکبخە</string>
+    <string name="security_totp_setup_title">سیستەمی پشتڕاستکردنەوە ڕێکبخە</string>
+    <string name="security_totp_verify">پشتڕاستبکە</string>
+    <string name="security_totp_disable_title">پشتڕاستکەرەوە ناچالاک بکە؟</string>
+    <string name="security_section_recovery">کۆدەکانی گەڕانەوە</string>
+    <string name="security_recovery_codes_title">کۆدەکانی گەڕانەوە</string>
+    <string name="security_session_unknown_agent">ئامێری نەناسراو</string>
+    <string name="security_session_revoke_title">دانیشتن بڕاگریت؟</string>
+    <string name="security_section_oauth">هەژمارە پەیوەستکراوەکان</string>
+    <string name="security_oauth_link">بەستنی هەژمار</string>
+    <string name="security_unlink">بەستن لابرە</string>
+    <string name="security_token_create">دروستکردنی تۆکن</string>
+    <string name="security_token_name">ناو</string>
+    <string name="security_token_delete_title">تۆکن بسڕەوە؟</string>
+    <string name="security_create">دروستکردن</string>
+    <string name="security_cancel">هەڵوەشاندنەوە</string>
+    <string name="security_save">پاشەکەوتکردن</string>
+    <string name="security_done">تەواوبوو</string>
+    <string name="security_delete">سڕینەوە</string>
+    <string name="security_rename">ناوگۆڕکردن</string>
+    <string name="security_revoke">ڕاگرتن</string>
+    <string name="security_disable">ناچالاککردن</string>
+    <string name="security_copy">کۆپیکردن</string>
+    <string name="security_copy_all">کۆپیکردنی هەموو</string>
 
 </resources>

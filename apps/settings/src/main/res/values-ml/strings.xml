@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ക്രമീകരണങ്ങൾ</string>
     <string name="settings_home_logout">ലോഗ് ഔട്ട്</string>
+    <string name="security_method_email">ഇമെയിൽ കോഡ്</string>
+    <string name="security_method_passkey">പാസ്കീ</string>
+    <string name="security_method_totp">Authenticator ആപ്പ്</string>
+    <string name="security_section_passkeys">പാസ്കീകൾ</string>
+    <string name="security_passkey_register">പാസ്കീ ചേർക്കുക</string>
+    <string name="security_passkey_delete_title">പാസ്കീ ഇല്ലാതാക്കണോ?</string>
+    <string name="security_section_totp">Authenticator ആപ്പ്</string>
+    <string name="security_totp_setup">ഓതന്റിക്കേറ്റർ സജ്ജമാക്കുക</string>
+    <string name="security_totp_setup_title">ഓതന്റിക്കേറ്റർ സജ്ജമാക്കുക</string>
+    <string name="security_totp_verify">സ്ഥിരീകരിക്കുക</string>
+    <string name="security_totp_disable_title">ഓതന്റിക്കേറ്റർ പ്രവർത്തനരഹിതമാക്കണോ?</string>
+    <string name="security_section_recovery">Redirect</string>
+    <string name="security_recovery_codes_title">Redirect</string>
+    <string name="security_session_unknown_agent">അജ്ഞാത ഉപകരണം</string>
+    <string name="security_session_revoke_title">സെഷൻ റദ്ദാക്കണോ?</string>
+    <string name="security_section_oauth">കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുകൾ</string>
+    <string name="security_oauth_link">അക്കൗണ്ട് ലിങ്ക് ചെയ്യുക</string>
+    <string name="security_unlink">അൺലിങ്ക് ചെയ്യുക</string>
+    <string name="security_token_create">ടോക്കൺ സൃഷ്ടിക്കുക</string>
+    <string name="security_token_name">പേര്</string>
+    <string name="security_token_delete_title">ടോക്കൺ ഇല്ലാതാക്കണോ?</string>
+    <string name="security_create">സൃഷ്ടിക്കുക</string>
+    <string name="security_cancel">റദ്ദാക്കുക</string>
+    <string name="security_save">സേവ് ചെയ്യുക</string>
+    <string name="security_done">പൂർത്തിയായി</string>
+    <string name="security_delete">ഇല്ലാതാക്കുക</string>
+    <string name="security_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="security_revoke">റദ്ദാക്കുക</string>
+    <string name="security_disable">പ്രവർത്തനരഹിതമാക്കുക</string>
+    <string name="security_copy">പകർത്തുക</string>
+    <string name="security_copy_all">എല്ലാം പകർത്തുക</string>
 
 </resources>

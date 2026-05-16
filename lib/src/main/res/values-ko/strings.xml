@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">복구 코드</string>
     <string name="auth_name">이름</string>
     <string name="auth_create">생성</string>
+    <string name="auth_privacy_label">개인정보</string>
+    <string name="auth_privacy_public">공개</string>
+    <string name="auth_privacy_private">비공개</string>
+    <string name="auth_link_privacy">개인정보</string>
+    <string name="auth_use_different_account">다른 계정 사용</string>
+    <string name="auth_error_suspended_title">계정이 정지되었어요</string>
     <string name="common_back">뒤로</string>
     <string name="common_close">닫기</string>
     <string name="common_cancel">취소</string>

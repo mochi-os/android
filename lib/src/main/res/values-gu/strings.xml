@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">રિકવરી કોડ</string>
     <string name="auth_name">નામ</string>
     <string name="auth_create">બનાવો</string>
+    <string name="auth_privacy_label">ગોપનીયતા</string>
+    <string name="auth_privacy_public">જાહેર</string>
+    <string name="auth_privacy_private">ખાનગી</string>
+    <string name="auth_link_privacy">ગોપનીયતા</string>
+    <string name="auth_use_different_account">અલગ ખાતું વાપરો</string>
+    <string name="auth_error_suspended_title">ખાતું સ્થગિત</string>
     <string name="common_back">પાછળ</string>
     <string name="common_close">બંધ કરો</string>
     <string name="common_cancel">રદ કરો</string>

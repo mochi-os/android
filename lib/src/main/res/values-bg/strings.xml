@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Код за възстановяване</string>
     <string name="auth_name">Име</string>
     <string name="auth_create">Създай</string>
+    <string name="auth_privacy_label">Поверителност</string>
+    <string name="auth_privacy_public">Публичен</string>
+    <string name="auth_privacy_private">Частен</string>
+    <string name="auth_link_privacy">Поверителност</string>
+    <string name="auth_use_different_account">Използвай друг профил</string>
+    <string name="auth_error_suspended_title">Акаунтът е спрян</string>
     <string name="common_back">Назад</string>
     <string name="common_close">Затвори</string>
     <string name="common_cancel">Отказ</string>

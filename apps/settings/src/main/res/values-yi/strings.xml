@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">אײַנשטעלונגען</string>
     <string name="settings_home_logout">אַרויסקומען</string>
+    <string name="security_method_email">בליצפּאָסט־קאָד</string>
+    <string name="security_method_passkey">פּאַסקיי</string>
+    <string name="security_method_totp">Authenticator אַפּ</string>
+    <string name="security_section_passkeys">פּאַסקייס</string>
+    <string name="security_passkey_register">צולייגן passkey</string>
+    <string name="security_passkey_delete_title">אויסמעקן passkey?</string>
+    <string name="security_section_totp">Authenticator אַפּ</string>
+    <string name="security_totp_setup">שטעל אויף אויטענטיקאַטאָר</string>
+    <string name="security_totp_setup_title">שטעל אויף אויטענטיקאַטאָר</string>
+    <string name="security_totp_verify">פֿאַריפֿיצירן</string>
+    <string name="security_totp_disable_title">אומדערלויבן Authenticator?</string>
+    <string name="security_section_recovery">אומקער קאָדן</string>
+    <string name="security_recovery_codes_title">אומקער קאָדן</string>
+    <string name="security_session_unknown_agent">אומבאַקאַנטער מיטל</string>
+    <string name="security_session_revoke_title">אָפּזאָגן סעסיע?</string>
+    <string name="security_section_oauth">פֿאַרבונדענע קאָנטעס</string>
+    <string name="security_oauth_link">פֿאַרבינדן קאָנטע</string>
+    <string name="security_unlink">אָפּקניפּן</string>
+    <string name="security_token_create">באַשאַפֿן טאָקן</string>
+    <string name="security_token_name">נאָמען</string>
+    <string name="security_token_delete_title">אויסמעקן טאָקן?</string>
+    <string name="security_create">באַשאַפֿן</string>
+    <string name="security_cancel">אָפּזאָגן</string>
+    <string name="security_save">היט אויף</string>
+    <string name="security_done">געטאָן</string>
+    <string name="security_delete">אויסמעקן</string>
+    <string name="security_rename">איבערטויפֿן</string>
+    <string name="security_revoke">אָפּזאָגן</string>
+    <string name="security_disable">אומדערלויבן</string>
+    <string name="security_copy">קאָפּירן</string>
+    <string name="security_copy_all">קאָפּירן אַלץ</string>
 
 </resources>

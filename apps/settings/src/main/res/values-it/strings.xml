@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Impostazioni</string>
     <string name="settings_home_logout">Esci</string>
+    <string name="security_method_email">Codice email</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">App di autenticazione</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Aggiungi passkey</string>
+    <string name="security_passkey_delete_title">Eliminare la passkey?</string>
+    <string name="security_section_totp">App di autenticazione</string>
+    <string name="security_totp_setup">Configura autenticatore</string>
+    <string name="security_totp_setup_title">Configura autenticatore</string>
+    <string name="security_totp_verify">Verifica</string>
+    <string name="security_totp_disable_title">Disattivare l\'autenticatore?</string>
+    <string name="security_section_recovery">Codici di recupero</string>
+    <string name="security_recovery_codes_title">Codici di recupero</string>
+    <string name="security_session_unknown_agent">Dispositivo sconosciuto</string>
+    <string name="security_session_revoke_title">Revocare la sessione?</string>
+    <string name="security_section_oauth">Account collegati</string>
+    <string name="security_oauth_link">Collega account</string>
+    <string name="security_unlink">Scollega</string>
+    <string name="security_token_create">Crea token</string>
+    <string name="security_token_name">Nome</string>
+    <string name="security_token_delete_title">Eliminare il token?</string>
+    <string name="security_create">Crea</string>
+    <string name="security_cancel">Annulla</string>
+    <string name="security_save">Salva</string>
+    <string name="security_done">Fatto</string>
+    <string name="security_delete">Elimina</string>
+    <string name="security_rename">Rinomina</string>
+    <string name="security_revoke">Revoca</string>
+    <string name="security_disable">Disattiva</string>
+    <string name="security_copy">Copia</string>
+    <string name="security_copy_all">Copia tutto</string>
 
 </resources>

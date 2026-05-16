@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Izilungiselelo</string>
     <string name="settings_home_logout">Phuma</string>
+    <string name="security_method_email">Ikhodi ye-imeyili</string>
+    <string name="security_method_passkey">Ukhiye wokungena</string>
+    <string name="security_method_totp">I-app yokuqinisekisa</string>
+    <string name="security_section_passkeys">Ama-passkey</string>
+    <string name="security_passkey_register">Engeza i-passkey</string>
+    <string name="security_passkey_delete_title">Susa i-passkey?</string>
+    <string name="security_section_totp">I-app yokuqinisekisa</string>
+    <string name="security_totp_setup">Setha umqinisekisi</string>
+    <string name="security_totp_setup_title">Setha umqinisekisi</string>
+    <string name="security_totp_verify">Qinisekisa</string>
+    <string name="security_totp_disable_title">Vimbela isiqinisekisi?</string>
+    <string name="security_section_recovery">Amakhodi okubuyisela</string>
+    <string name="security_recovery_codes_title">Amakhodi okubuyisela</string>
+    <string name="security_session_unknown_agent">Idivayisi engaziwa</string>
+    <string name="security_session_revoke_title">Hoxisa iseshini?</string>
+    <string name="security_section_oauth">Ama-akhawunti axhunyiwe</string>
+    <string name="security_oauth_link">Xhuma i-akhawunti</string>
+    <string name="security_unlink">Susa isixhumanisi</string>
+    <string name="security_token_create">Dala ithokheni</string>
+    <string name="security_token_name">Igama</string>
+    <string name="security_token_delete_title">Susa ithokheni?</string>
+    <string name="security_create">Dala</string>
+    <string name="security_cancel">Khansela</string>
+    <string name="security_save">Londoloza</string>
+    <string name="security_done">Kwenziwe</string>
+    <string name="security_delete">Susa</string>
+    <string name="security_rename">Qamba kabusha</string>
+    <string name="security_revoke">Hoxisa</string>
+    <string name="security_disable">Vimbela</string>
+    <string name="security_copy">Kopisha</string>
+    <string name="security_copy_all">Kopisha konke</string>
 
 </resources>

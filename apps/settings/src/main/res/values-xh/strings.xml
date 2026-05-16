@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Iisetingi</string>
     <string name="settings_home_logout">Phuma</string>
+    <string name="security_method_email">Ikhowudi ye-imeyili</string>
+    <string name="security_method_passkey">Isitshixo sokungena</string>
+    <string name="security_method_totp">I-app yokuqinisekisa</string>
+    <string name="security_section_passkeys">Ii-passkey</string>
+    <string name="security_passkey_register">Yongeza i-passkey</string>
+    <string name="security_passkey_delete_title">Cima i-passkey?</string>
+    <string name="security_section_totp">I-app yokuqinisekisa</string>
+    <string name="security_totp_setup">Misela isiqinisekisi</string>
+    <string name="security_totp_setup_title">Misela isiqinisekisi</string>
+    <string name="security_totp_verify">Qinisekisa</string>
+    <string name="security_totp_disable_title">Cima isiqinisekisi?</string>
+    <string name="security_section_recovery">Iikhowudi zokubuyisa</string>
+    <string name="security_recovery_codes_title">Iikhowudi zokubuyisa</string>
+    <string name="security_session_unknown_agent">Isixhobo esingaziwayo</string>
+    <string name="security_session_revoke_title">Rhoxisa iseshoni?</string>
+    <string name="security_section_oauth">Ii-akhawunti ezidibeneyo</string>
+    <string name="security_oauth_link">Dibanisa iakhawunti</string>
+    <string name="security_unlink">Yahlula</string>
+    <string name="security_token_create">Yenza itokeni</string>
+    <string name="security_token_name">Igama</string>
+    <string name="security_token_delete_title">Cima itokeni?</string>
+    <string name="security_create">Yenza</string>
+    <string name="security_cancel">Rhoxisa</string>
+    <string name="security_save">Gcina</string>
+    <string name="security_done">Kwenziwe</string>
+    <string name="security_delete">Cima</string>
+    <string name="security_rename">Guqula igama</string>
+    <string name="security_revoke">Rhoxisa</string>
+    <string name="security_disable">Cima</string>
+    <string name="security_copy">Kotshela</string>
+    <string name="security_copy_all">Kotshela konke</string>
 
 </resources>

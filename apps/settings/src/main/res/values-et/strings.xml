@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Seaded</string>
     <string name="settings_home_logout">Logi välja</string>
+    <string name="security_method_email">E-posti kood</string>
+    <string name="security_method_passkey">Pääsuvõti</string>
+    <string name="security_method_totp">Autentija rakendus</string>
+    <string name="security_section_passkeys">Pääsuvõtmed</string>
+    <string name="security_passkey_register">Lisa pääsuvõti</string>
+    <string name="security_passkey_delete_title">Kustutada pääsuvõti?</string>
+    <string name="security_section_totp">Autentija rakendus</string>
+    <string name="security_totp_setup">Seadista autentija</string>
+    <string name="security_totp_setup_title">Seadista autentija</string>
+    <string name="security_totp_verify">Kontrolli</string>
+    <string name="security_totp_disable_title">Keelata autentija?</string>
+    <string name="security_section_recovery">Taastekoodid</string>
+    <string name="security_recovery_codes_title">Taastekoodid</string>
+    <string name="security_session_unknown_agent">Tundmatu seade</string>
+    <string name="security_session_revoke_title">Kas tühistada sessioon?</string>
+    <string name="security_section_oauth">Ühendatud kontod</string>
+    <string name="security_oauth_link">Lingi konto</string>
+    <string name="security_unlink">Eemalda link</string>
+    <string name="security_token_create">Loo luba</string>
+    <string name="security_token_name">Nimi</string>
+    <string name="security_token_delete_title">Kustutada luba?</string>
+    <string name="security_create">Loo</string>
+    <string name="security_cancel">Tühista</string>
+    <string name="security_save">Salvesta</string>
+    <string name="security_done">Tehtud</string>
+    <string name="security_delete">Kustuta</string>
+    <string name="security_rename">Nimeta ümber</string>
+    <string name="security_revoke">Tühista</string>
+    <string name="security_disable">Keela</string>
+    <string name="security_copy">Kopeeri</string>
+    <string name="security_copy_all">Kopeeri kõik</string>
 
 </resources>

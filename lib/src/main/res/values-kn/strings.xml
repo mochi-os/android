@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">ರಿಕವರಿ ಕೋಡ್</string>
     <string name="auth_name">ಹೆಸರು</string>
     <string name="auth_create">ರಚಿಸಿ</string>
+    <string name="auth_privacy_label">ಗೌಪ್ಯತೆ</string>
+    <string name="auth_privacy_public">ಸಾರ್ವಜನಿಕ</string>
+    <string name="auth_privacy_private">ಖಾಸಗಿ</string>
+    <string name="auth_link_privacy">ಗೌಪ್ಯತೆ</string>
+    <string name="auth_use_different_account">ಬೇರೆ ಖಾತೆಯನ್ನು ಬಳಸಿ</string>
+    <string name="auth_error_suspended_title">ಖಾತೆಯನ್ನು ಅಮಾನತುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="common_back">ಹಿಂದೆ</string>
     <string name="common_close">ಮುಚ್ಚಿ</string>
     <string name="common_cancel">ರದ್ದುಮಾಡಿ</string>

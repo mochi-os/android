@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Obnovovací kód</string>
     <string name="auth_name">Název</string>
     <string name="auth_create">Vytvořit</string>
+    <string name="auth_privacy_label">Soukromí</string>
+    <string name="auth_privacy_public">Veřejné</string>
+    <string name="auth_privacy_private">Soukromé</string>
+    <string name="auth_link_privacy">Soukromí</string>
+    <string name="auth_use_different_account">Použít jiný účet</string>
+    <string name="auth_error_suspended_title">Účet pozastaven</string>
     <string name="common_back">Zpět</string>
     <string name="common_close">Zavřít</string>
     <string name="common_cancel">Zrušit</string>

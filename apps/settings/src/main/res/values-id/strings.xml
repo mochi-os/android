@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Pengaturan</string>
     <string name="settings_home_logout">Keluar</string>
+    <string name="security_method_email">Kode email</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Aplikasi authenticator</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Tambah passkey</string>
+    <string name="security_passkey_delete_title">Hapus passkey?</string>
+    <string name="security_section_totp">Aplikasi authenticator</string>
+    <string name="security_totp_setup">Siapkan autentikator</string>
+    <string name="security_totp_setup_title">Siapkan autentikator</string>
+    <string name="security_totp_verify">Verifikasi</string>
+    <string name="security_totp_disable_title">Nonaktifkan authenticator?</string>
+    <string name="security_section_recovery">Kode pemulihan</string>
+    <string name="security_recovery_codes_title">Kode pemulihan</string>
+    <string name="security_session_unknown_agent">Perangkat tidak dikenal</string>
+    <string name="security_session_revoke_title">Cabut sesi?</string>
+    <string name="security_section_oauth">Akun yang terhubung</string>
+    <string name="security_oauth_link">Tautkan akun</string>
+    <string name="security_unlink">Putuskan tautan</string>
+    <string name="security_token_create">Buat token</string>
+    <string name="security_token_name">Nama</string>
+    <string name="security_token_delete_title">Hapus token?</string>
+    <string name="security_create">Buat</string>
+    <string name="security_cancel">Batal</string>
+    <string name="security_save">Simpan</string>
+    <string name="security_done">Selesai</string>
+    <string name="security_delete">Hapus</string>
+    <string name="security_rename">Ubah nama</string>
+    <string name="security_revoke">Cabut</string>
+    <string name="security_disable">Nonaktifkan</string>
+    <string name="security_copy">Salin</string>
+    <string name="security_copy_all">Salin semua</string>
 
 </resources>

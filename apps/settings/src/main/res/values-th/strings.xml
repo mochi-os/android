@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">การตั้งค่า</string>
     <string name="settings_home_logout">ออกจากระบบ</string>
+    <string name="security_method_email">รหัสอีเมล</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">แอป Authenticator</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">เพิ่ม Passkey</string>
+    <string name="security_passkey_delete_title">ลบ Passkey หรือไม่?</string>
+    <string name="security_section_totp">แอป Authenticator</string>
+    <string name="security_totp_setup">ตั้งค่าแอปยืนยันตัวตน</string>
+    <string name="security_totp_setup_title">ตั้งค่าแอปยืนยันตัวตน</string>
+    <string name="security_totp_verify">ยืนยัน</string>
+    <string name="security_totp_disable_title">ปิดใช้งาน Authenticator?</string>
+    <string name="security_section_recovery">รหัสกู้คืน</string>
+    <string name="security_recovery_codes_title">รหัสกู้คืน</string>
+    <string name="security_session_unknown_agent">อุปกรณ์ที่ไม่รู้จัก</string>
+    <string name="security_session_revoke_title">เพิกถอนเซสชัน?</string>
+    <string name="security_section_oauth">บัญชีที่เชื่อมต่อ</string>
+    <string name="security_oauth_link">เชื่อมโยงบัญชี</string>
+    <string name="security_unlink">ยกเลิกการเชื่อมโยง</string>
+    <string name="security_token_create">สร้างโทเคน</string>
+    <string name="security_token_name">ชื่อ</string>
+    <string name="security_token_delete_title">ลบโทเคนหรือไม่?</string>
+    <string name="security_create">สร้าง</string>
+    <string name="security_cancel">ยกเลิก</string>
+    <string name="security_save">บันทึก</string>
+    <string name="security_done">เสร็จสิ้น</string>
+    <string name="security_delete">ลบ</string>
+    <string name="security_rename">เปลี่ยนชื่อ</string>
+    <string name="security_revoke">เพิกถอน</string>
+    <string name="security_disable">ปิดใช้งาน</string>
+    <string name="security_copy">คัดลอก</string>
+    <string name="security_copy_all">คัดลอกทั้งหมด</string>
 
 </resources>

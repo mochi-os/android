@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">קוד שחזור</string>
     <string name="auth_name">שם</string>
     <string name="auth_create">צור</string>
+    <string name="auth_privacy_label">פרטיות</string>
+    <string name="auth_privacy_public">ציבורי</string>
+    <string name="auth_privacy_private">פרטי</string>
+    <string name="auth_link_privacy">פרטיות</string>
+    <string name="auth_use_different_account">השתמש בחשבון אחר</string>
+    <string name="auth_error_suspended_title">החשבון הושעה</string>
     <string name="common_back">חזור</string>
     <string name="common_close">סגור</string>
     <string name="common_cancel">ביטול</string>

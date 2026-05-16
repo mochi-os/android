@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Тохиргоо</string>
     <string name="settings_home_logout">Гарах</string>
+    <string name="security_method_email">Имэйл код</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator апп</string>
+    <string name="security_section_passkeys">Passkey-ууд</string>
+    <string name="security_passkey_register">Passkey нэмэх</string>
+    <string name="security_passkey_delete_title">Passkey устгах уу?</string>
+    <string name="security_section_totp">Authenticator апп</string>
+    <string name="security_totp_setup">Баталгаажуулагч тохируулах</string>
+    <string name="security_totp_setup_title">Баталгаажуулагч тохируулах</string>
+    <string name="security_totp_verify">Баталгаажуулах</string>
+    <string name="security_totp_disable_title">Authenticator-ийг идэвхгүй болгох уу?</string>
+    <string name="security_section_recovery">Сэргээх кодууд</string>
+    <string name="security_recovery_codes_title">Сэргээх кодууд</string>
+    <string name="security_session_unknown_agent">Үл мэдэгдэх төхөөрөмж</string>
+    <string name="security_session_revoke_title">Сесс цуцлах уу?</string>
+    <string name="security_section_oauth">Холбогдсон бүртгэлүүд</string>
+    <string name="security_oauth_link">Бүртгэл холбох</string>
+    <string name="security_unlink">Холбоо тасалах</string>
+    <string name="security_token_create">Токен үүсгэх</string>
+    <string name="security_token_name">Нэр</string>
+    <string name="security_token_delete_title">Токен устгах уу?</string>
+    <string name="security_create">Үүсгэх</string>
+    <string name="security_cancel">Цуцлах</string>
+    <string name="security_save">Хадгалах</string>
+    <string name="security_done">Дууссан</string>
+    <string name="security_delete">Устгах</string>
+    <string name="security_rename">Нэр өөрчлөх</string>
+    <string name="security_revoke">Цуцлах</string>
+    <string name="security_disable">Идэвхгүй болгох</string>
+    <string name="security_copy">Хуулах</string>
+    <string name="security_copy_all">Бүгдийг хуулах</string>
 
 </resources>

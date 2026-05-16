@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Stillingar</string>
     <string name="settings_home_logout">Skrá út</string>
+    <string name="security_method_email">Tölvupóstkóði</string>
+    <string name="security_method_passkey">Aðgangslykill</string>
+    <string name="security_method_totp">Auðkennisforrit</string>
+    <string name="security_section_passkeys">Aðgangslyklar</string>
+    <string name="security_passkey_register">Bæta við aðgangslykli</string>
+    <string name="security_passkey_delete_title">Eyða aðgangslykli?</string>
+    <string name="security_section_totp">Auðkennisforrit</string>
+    <string name="security_totp_setup">Setja upp auðkenni</string>
+    <string name="security_totp_setup_title">Setja upp auðkenni</string>
+    <string name="security_totp_verify">Sannprófa</string>
+    <string name="security_totp_disable_title">Slökkva á auðkenni?</string>
+    <string name="security_section_recovery">Endurheimtarkóðar</string>
+    <string name="security_recovery_codes_title">Endurheimtarkóðar</string>
+    <string name="security_session_unknown_agent">Óþekkt tæki</string>
+    <string name="security_session_revoke_title">Afturkalla setu?</string>
+    <string name="security_section_oauth">Tengdir reikningar</string>
+    <string name="security_oauth_link">Tengja reikning</string>
+    <string name="security_unlink">Aftengja</string>
+    <string name="security_token_create">Búa til tókna</string>
+    <string name="security_token_name">Nafn</string>
+    <string name="security_token_delete_title">Eyða tókna?</string>
+    <string name="security_create">Búa til</string>
+    <string name="security_cancel">Hætta við</string>
+    <string name="security_save">Vista</string>
+    <string name="security_done">Lokið</string>
+    <string name="security_delete">Eyða</string>
+    <string name="security_rename">Endurnefna</string>
+    <string name="security_revoke">Afturkalla</string>
+    <string name="security_disable">Slökkva</string>
+    <string name="security_copy">Afrita</string>
+    <string name="security_copy_all">Afrita allt</string>
 
 </resources>

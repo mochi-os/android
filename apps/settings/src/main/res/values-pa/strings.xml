@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ਸੈਟਿੰਗਾਂ</string>
     <string name="settings_home_logout">ਲੌਗ ਆਊਟ</string>
+    <string name="security_method_email">ਈਮੇਲ ਕੋਡ</string>
+    <string name="security_method_passkey">ਪਾਸਕੀ</string>
+    <string name="security_method_totp">ਪ੍ਰਮਾਣਕ ਐਪ</string>
+    <string name="security_section_passkeys">ਪਾਸਕੀਆਂ</string>
+    <string name="security_passkey_register">ਪਾਸਕੀ ਜੋੜੋ</string>
+    <string name="security_passkey_delete_title">ਪਾਸਕੀ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="security_section_totp">ਪ੍ਰਮਾਣਕ ਐਪ</string>
+    <string name="security_totp_setup">authenticator ਸੈੱਟ ਅੱਪ ਕਰੋ</string>
+    <string name="security_totp_setup_title">authenticator ਸੈੱਟ ਅੱਪ ਕਰੋ</string>
+    <string name="security_totp_verify">ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string name="security_totp_disable_title">ਔਥੈਂਟੀਕੇਟਰ ਬੰਦ ਕਰਨਾ ਹੈ?</string>
+    <string name="security_section_recovery">ਰਿਕਵਰੀ ਕੋਡ</string>
+    <string name="security_recovery_codes_title">ਰਿਕਵਰੀ ਕੋਡ</string>
+    <string name="security_session_unknown_agent">ਅਣਜਾਣ ਡਿਵਾਈਸ</string>
+    <string name="security_session_revoke_title">ਸੈਸ਼ਨ ਰੱਦ ਕਰੋ?</string>
+    <string name="security_section_oauth">ਜੁੜੇ ਖਾਤੇ</string>
+    <string name="security_oauth_link">ਲਿਸਟਿੰਗ ਇਤਿਹਾਸ</string>
+    <string name="security_unlink">ਅਨਲਿੰਕ ਕਰੋ</string>
+    <string name="security_token_create">ਟੋਕਨ ਬਣਾਓ</string>
+    <string name="security_token_name">ਨਾਮ</string>
+    <string name="security_token_delete_title">ਟੋਕਨ ਮਿਟਾਉਣਾ ਹੈ?</string>
+    <string name="security_create">ਬਣਾਓ</string>
+    <string name="security_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="security_save">ਸੰਭਾਲੋ</string>
+    <string name="security_done">ਹੋ ਗਿਆ</string>
+    <string name="security_delete">ਮਿਟਾਓ</string>
+    <string name="security_rename">ਨਾਮ ਬਦਲੋ</string>
+    <string name="security_revoke">ਰੱਦ ਕਰੋ</string>
+    <string name="security_disable">ਬੰਦ ਕਰੋ</string>
+    <string name="security_copy">ਕਾਪੀ ਕਰੋ</string>
+    <string name="security_copy_all">ਸਭ ਕਾਪੀ ਕਰੋ</string>
 
 </resources>

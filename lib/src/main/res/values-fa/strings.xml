@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">کد بازیابی</string>
     <string name="auth_name">نام</string>
     <string name="auth_create">ساختن</string>
+    <string name="auth_privacy_label">حریم خصوصی</string>
+    <string name="auth_privacy_public">عمومی</string>
+    <string name="auth_privacy_private">خصوصی</string>
+    <string name="auth_link_privacy">حریم خصوصی</string>
+    <string name="auth_use_different_account">از حساب دیگری استفاده کنید</string>
+    <string name="auth_error_suspended_title">حساب تعلیق شد</string>
     <string name="common_back">بازگشت</string>
     <string name="common_close">بستن</string>
     <string name="common_cancel">لغو</string>

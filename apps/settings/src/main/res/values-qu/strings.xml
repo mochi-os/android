@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Wakichiykuna</string>
     <string name="settings_home_logout">Lluqsiy</string>
+    <string name="security_method_email">Email código</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator app</string>
+    <string name="security_section_passkeys">Passkeykuna</string>
+    <string name="security_passkey_register">Passkey yapay</string>
+    <string name="security_passkey_delete_title">Passkey wischuy?</string>
+    <string name="security_section_totp">Authenticator app</string>
+    <string name="security_totp_setup">Autenticadorta wakichiy</string>
+    <string name="security_totp_setup_title">Autenticadorta wakichiy</string>
+    <string name="security_totp_verify">Qhaway</string>
+    <string name="security_totp_disable_title">Authenticator wañuchiy?</string>
+    <string name="security_section_recovery">Recuperación códigokuna</string>
+    <string name="security_recovery_codes_title">Recuperación códigokuna</string>
+    <string name="security_session_unknown_agent">Mana riqsisqa dispositivo</string>
+    <string name="security_session_revoke_title">Sesionta qichuy?</string>
+    <string name="security_section_oauth">Tinkichisqa cuentas</string>
+    <string name="security_oauth_link">Cuentata watay</string>
+    <string name="security_unlink">Paskay</string>
+    <string name="security_token_create">Token kamariy</string>
+    <string name="security_token_name">Sutin</string>
+    <string name="security_token_delete_title">Token wischuy?</string>
+    <string name="security_create">Kamariy</string>
+    <string name="security_cancel">Mana ruway</string>
+    <string name="security_save">Waqaychay</string>
+    <string name="security_done">Tukurqun</string>
+    <string name="security_delete">Wischuy</string>
+    <string name="security_rename">Huk sutin churay</string>
+    <string name="security_revoke">Qichuy</string>
+    <string name="security_disable">Wañuchiy</string>
+    <string name="security_copy">Copiay</string>
+    <string name="security_copy_all">Llapan copiay</string>
 
 </resources>

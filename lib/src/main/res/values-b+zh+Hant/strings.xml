@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">復原代碼</string>
     <string name="auth_name">名稱</string>
     <string name="auth_create">建立</string>
+    <string name="auth_privacy_label">隱私</string>
+    <string name="auth_privacy_public">公開</string>
+    <string name="auth_privacy_private">私人</string>
+    <string name="auth_link_privacy">隱私</string>
+    <string name="auth_use_different_account">使用其他帳戶</string>
+    <string name="auth_error_suspended_title">帳戶已暫停</string>
     <string name="common_back">返回</string>
     <string name="common_close">關閉</string>
     <string name="common_cancel">取消</string>

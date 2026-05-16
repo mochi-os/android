@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">אומקער קאָד</string>
     <string name="auth_name">נאָמען</string>
     <string name="auth_create">באַשאַפֿן</string>
+    <string name="auth_privacy_label">פּריוואַטקײַט</string>
+    <string name="auth_privacy_public">עפֿנטלעך</string>
+    <string name="auth_privacy_private">פּריוואַט</string>
+    <string name="auth_link_privacy">פּריוואַטקײַט</string>
+    <string name="auth_use_different_account">ניצט אַן אַנדער קאָנטע</string>
+    <string name="auth_error_suspended_title">קאָנטע אויפֿגעהאַנגען</string>
     <string name="common_back">צוריק</string>
     <string name="common_close">פֿאַרמאַכן</string>
     <string name="common_cancel">אָפּזאָגן</string>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ဆက်တင်များ</string>
     <string name="settings_home_logout">ထွက်</string>
+    <string name="security_method_email">အီးမေးလ် ကုဒ်</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator app</string>
+    <string name="security_section_passkeys">Passkey များ</string>
+    <string name="security_passkey_register">passkey ထည့်မည်</string>
+    <string name="security_passkey_delete_title">passkey ဖျက်မလား?</string>
+    <string name="security_section_totp">Authenticator app</string>
+    <string name="security_totp_setup">Authenticator တပ်ဆင်ပါ</string>
+    <string name="security_totp_setup_title">Authenticator တပ်ဆင်ပါ</string>
+    <string name="security_totp_verify">အတည်ပြုမည်</string>
+    <string name="security_totp_disable_title">Authenticator ပိတ်မလား?</string>
+    <string name="security_section_recovery">Recovery code များ</string>
+    <string name="security_recovery_codes_title">Recovery code များ</string>
+    <string name="security_session_unknown_agent">မသိရသော device</string>
+    <string name="security_session_revoke_title">Session ရုပ်သိမ်းမလား?</string>
+    <string name="security_section_oauth">ချိတ်ဆက်ထားသော အကောင့်များ</string>
+    <string name="security_oauth_link">အကောင့် ချိတ်ဆက်</string>
+    <string name="security_unlink">ချိတ်ဆက်မှု ဖြုတ်မည်</string>
+    <string name="security_token_create">Token ဖန်တီးမည်</string>
+    <string name="security_token_name">အမည်</string>
+    <string name="security_token_delete_title">Token ဖျက်မလား?</string>
+    <string name="security_create">ဖန်တီးမည်</string>
+    <string name="security_cancel">မလုပ်တော့ပါ</string>
+    <string name="security_save">သိမ်းမည်</string>
+    <string name="security_done">ပြီးပါပြီ</string>
+    <string name="security_delete">ဖျက်မည်</string>
+    <string name="security_rename">အမည်ပြောင်း</string>
+    <string name="security_revoke">ရုပ်သိမ်း</string>
+    <string name="security_disable">ပိတ်မည်</string>
+    <string name="security_copy">ကူးမည်</string>
+    <string name="security_copy_all">အားလုံး ကူးမည်</string>
 
 </resources>

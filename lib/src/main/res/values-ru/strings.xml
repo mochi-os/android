@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Код восстановления</string>
     <string name="auth_name">Имя</string>
     <string name="auth_create">Создать</string>
+    <string name="auth_privacy_label">Конфиденциальность</string>
+    <string name="auth_privacy_public">Публичный</string>
+    <string name="auth_privacy_private">Приватный</string>
+    <string name="auth_link_privacy">Конфиденциальность</string>
+    <string name="auth_use_different_account">Использовать другой аккаунт</string>
+    <string name="auth_error_suspended_title">Аккаунт приостановлен</string>
     <string name="common_back">Назад</string>
     <string name="common_close">Закрыть</string>
     <string name="common_cancel">Отмена</string>

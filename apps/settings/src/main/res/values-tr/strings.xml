@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Ayarlar</string>
     <string name="settings_home_logout">Oturumu kapat</string>
+    <string name="security_method_email">E-posta kodu</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator uygulaması</string>
+    <string name="security_section_passkeys">Passkey\'ler</string>
+    <string name="security_passkey_register">Passkey ekle</string>
+    <string name="security_passkey_delete_title">Passkey silinsin mi?</string>
+    <string name="security_section_totp">Authenticator uygulaması</string>
+    <string name="security_totp_setup">Authenticator kur</string>
+    <string name="security_totp_setup_title">Authenticator kur</string>
+    <string name="security_totp_verify">Doğrula</string>
+    <string name="security_totp_disable_title">Authenticator devre dışı bırakılsın mı?</string>
+    <string name="security_section_recovery">Kurtarma kodları</string>
+    <string name="security_recovery_codes_title">Kurtarma kodları</string>
+    <string name="security_session_unknown_agent">Bilinmeyen cihaz</string>
+    <string name="security_session_revoke_title">Oturum iptal edilsin mi?</string>
+    <string name="security_section_oauth">Bağlı hesaplar</string>
+    <string name="security_oauth_link">Hesabı bağla</string>
+    <string name="security_unlink">Bağlantıyı kaldır</string>
+    <string name="security_token_create">Token oluştur</string>
+    <string name="security_token_name">Ad</string>
+    <string name="security_token_delete_title">Token silinsin mi?</string>
+    <string name="security_create">Oluştur</string>
+    <string name="security_cancel">İptal</string>
+    <string name="security_save">Kaydet</string>
+    <string name="security_done">Tamamlandı</string>
+    <string name="security_delete">Sil</string>
+    <string name="security_rename">Yeniden adlandır</string>
+    <string name="security_revoke">İptal et</string>
+    <string name="security_disable">Devre dışı bırak</string>
+    <string name="security_copy">Kopyala</string>
+    <string name="security_copy_all">Tümünü kopyala</string>
 
 </resources>

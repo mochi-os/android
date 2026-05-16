@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Танзимот</string>
     <string name="settings_home_logout">Баромадан</string>
+    <string name="security_method_email">Рамзи email</string>
+    <string name="security_method_passkey">Калиди дастрасӣ</string>
+    <string name="security_method_totp">Барномаи Authenticator</string>
+    <string name="security_section_passkeys">Калидҳои дастрасӣ</string>
+    <string name="security_passkey_register">Иловаи калиди гузар</string>
+    <string name="security_passkey_delete_title">Калиди гузарро нест кунем?</string>
+    <string name="security_section_totp">Барномаи Authenticator</string>
+    <string name="security_totp_setup">Аутентификаторро танзим кунед</string>
+    <string name="security_totp_setup_title">Аутентификаторро танзим кунед</string>
+    <string name="security_totp_verify">Тасдиқ кардан</string>
+    <string name="security_totp_disable_title">Authenticator-ро ғайрифаъол кунем?</string>
+    <string name="security_section_recovery">Рамзҳои барқарорсозӣ</string>
+    <string name="security_recovery_codes_title">Рамзҳои барқарорсозӣ</string>
+    <string name="security_session_unknown_agent">Дастгоҳи номаълум</string>
+    <string name="security_session_revoke_title">Сессияро бекор кардан?</string>
+    <string name="security_section_oauth">Ҳисобҳои пайвастшуда</string>
+    <string name="security_oauth_link">Пайвасткунии ҳисоб</string>
+    <string name="security_unlink">Қатъи пайвастшавӣ</string>
+    <string name="security_token_create">Эҷоди токен</string>
+    <string name="security_token_name">Ном</string>
+    <string name="security_token_delete_title">Токенро нест кунем?</string>
+    <string name="security_create">Эҷод кардан</string>
+    <string name="security_cancel">Бекор кардан</string>
+    <string name="security_save">Захира</string>
+    <string name="security_done">Иҷро шуд</string>
+    <string name="security_delete">Нест кардан</string>
+    <string name="security_rename">Тағйири ном</string>
+    <string name="security_revoke">Бекор кардан</string>
+    <string name="security_disable">Ғайрифаъол кардан</string>
+    <string name="security_copy">Нусхабардорӣ</string>
+    <string name="security_copy_all">Нусхабардории ҳама</string>
 
 </resources>

@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Recuperación código</string>
     <string name="auth_name">Sutin</string>
     <string name="auth_create">Kamariy</string>
+    <string name="auth_privacy_label">Pakaynin</string>
+    <string name="auth_privacy_public">Público</string>
+    <string name="auth_privacy_private">Pakasqa</string>
+    <string name="auth_link_privacy">Pakaynin</string>
+    <string name="auth_use_different_account">Huk cuentata apaykachay</string>
+    <string name="auth_error_suspended_title">Cuenta sayachisqa</string>
     <string name="common_back">Kutichiy</string>
     <string name="common_close">Wichq\'ay</string>
     <string name="common_cancel">Mana ruway</string>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ការកំណត់</string>
     <string name="settings_home_logout">ចាកចេញ</string>
+    <string name="security_method_email">កូដអ៊ីមែល</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">កម្មវិធី Authenticator</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">បន្ថែមកូនសោ</string>
+    <string name="security_passkey_delete_title">លុបកូនសោ?</string>
+    <string name="security_section_totp">កម្មវិធី Authenticator</string>
+    <string name="security_totp_setup">រៀបចំកម្មវិធីផ្ទៀងផ្ទាត់</string>
+    <string name="security_totp_setup_title">រៀបចំកម្មវិធីផ្ទៀងផ្ទាត់</string>
+    <string name="security_totp_verify">ផ្ទៀងផ្ទាត់</string>
+    <string name="security_totp_disable_title">បិទ Authenticator?</string>
+    <string name="security_section_recovery">កូដស្តារ</string>
+    <string name="security_recovery_codes_title">កូដស្តារ</string>
+    <string name="security_session_unknown_agent">ឧបករណ៍មិនស្គាល់</string>
+    <string name="security_session_revoke_title">ដកវគ្គ?</string>
+    <string name="security_section_oauth">គណនីដែលបានភ្ជាប់</string>
+    <string name="security_oauth_link">ភ្ជាប់គណនី</string>
+    <string name="security_unlink">ផ្តាច់</string>
+    <string name="security_token_create">បង្កើតតូខឹន</string>
+    <string name="security_token_name">ឈ្មោះ</string>
+    <string name="security_token_delete_title">លុបតូខឹន?</string>
+    <string name="security_create">បង្កើត</string>
+    <string name="security_cancel">បោះបង់</string>
+    <string name="security_save">រក្សាទុក</string>
+    <string name="security_done">រួចរាល់</string>
+    <string name="security_delete">លុប</string>
+    <string name="security_rename">ប្តូរឈ្មោះ</string>
+    <string name="security_revoke">ដកសិទ្ធិ</string>
+    <string name="security_disable">បិទ</string>
+    <string name="security_copy">ចម្លង</string>
+    <string name="security_copy_all">ចម្លងទាំងអស់</string>
 
 </resources>

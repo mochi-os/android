@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Berreskuratze-kodea</string>
     <string name="auth_name">Izena</string>
     <string name="auth_create">Sortu</string>
+    <string name="auth_privacy_label">Pribatutasuna</string>
+    <string name="auth_privacy_public">Publikoa</string>
+    <string name="auth_privacy_private">Pribatua</string>
+    <string name="auth_link_privacy">Pribatutasuna</string>
+    <string name="auth_use_different_account">Erabili beste kontu bat</string>
+    <string name="auth_error_suspended_title">Kontua etenda</string>
     <string name="common_back">Atzera</string>
     <string name="common_close">Itxi</string>
     <string name="common_cancel">Utzi</string>

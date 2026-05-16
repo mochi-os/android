@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Paramèt</string>
     <string name="settings_home_logout">Dekonekte</string>
+    <string name="security_method_email">Kòd imèl</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">App otantifikatè</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Ajoute passkey</string>
+    <string name="security_passkey_delete_title">Efase passkey?</string>
+    <string name="security_section_totp">App otantifikatè</string>
+    <string name="security_totp_setup">Konfigire otantifikatè</string>
+    <string name="security_totp_setup_title">Konfigire otantifikatè</string>
+    <string name="security_totp_verify">Verifye</string>
+    <string name="security_totp_disable_title">Dezaktive otantifikatè?</string>
+    <string name="security_section_recovery">Kòd rekiperasyon</string>
+    <string name="security_recovery_codes_title">Kòd rekiperasyon</string>
+    <string name="security_session_unknown_agent">Aparèy enkoni</string>
+    <string name="security_session_revoke_title">Revoke sesyon?</string>
+    <string name="security_section_oauth">Kont konekte</string>
+    <string name="security_oauth_link">Lye kont</string>
+    <string name="security_unlink">Dekonekte</string>
+    <string name="security_token_create">Kreye token</string>
+    <string name="security_token_name">Non</string>
+    <string name="security_token_delete_title">Efase token?</string>
+    <string name="security_create">Kreye</string>
+    <string name="security_cancel">Anile</string>
+    <string name="security_save">Sove</string>
+    <string name="security_done">Fini</string>
+    <string name="security_delete">Efase</string>
+    <string name="security_rename">Rebatize</string>
+    <string name="security_revoke">Revoke</string>
+    <string name="security_disable">Dezaktive</string>
+    <string name="security_copy">Kopye</string>
+    <string name="security_copy_all">Kopye tout</string>
 
 </resources>

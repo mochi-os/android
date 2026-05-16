@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Налады</string>
     <string name="settings_home_logout">Выйсці</string>
+    <string name="security_method_email">Код па эл. пошце</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Дадатак аўтэнтыфікатара</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Дадаць ключ доступу</string>
+    <string name="security_passkey_delete_title">Выдаліць ключ доступу?</string>
+    <string name="security_section_totp">Дадатак аўтэнтыфікатара</string>
+    <string name="security_totp_setup">Наладзіць аўтэнтыфікатар</string>
+    <string name="security_totp_setup_title">Наладзіць аўтэнтыфікатар</string>
+    <string name="security_totp_verify">Праверыць</string>
+    <string name="security_totp_disable_title">Адключыць аўтэнтыфікатар?</string>
+    <string name="security_section_recovery">Коды аднаўлення</string>
+    <string name="security_recovery_codes_title">Коды аднаўлення</string>
+    <string name="security_session_unknown_agent">Невядомая прылада</string>
+    <string name="security_session_revoke_title">Адклікаць сесію?</string>
+    <string name="security_section_oauth">Падключаныя ўліковыя запісы</string>
+    <string name="security_oauth_link">Звязаць акаўнт</string>
+    <string name="security_unlink">Адвязаць</string>
+    <string name="security_token_create">Стварыць токен</string>
+    <string name="security_token_name">Назва</string>
+    <string name="security_token_delete_title">Выдаліць токен?</string>
+    <string name="security_create">Стварыць</string>
+    <string name="security_cancel">Адмена</string>
+    <string name="security_save">Захаваць</string>
+    <string name="security_done">Гатова</string>
+    <string name="security_delete">Выдаліць</string>
+    <string name="security_rename">Перайменаваць</string>
+    <string name="security_revoke">Адклікаць</string>
+    <string name="security_disable">Адключыць</string>
+    <string name="security_copy">Капіраваць</string>
+    <string name="security_copy_all">Капіраваць усё</string>
 
 </resources>

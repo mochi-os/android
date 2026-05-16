@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Koodii deebii</string>
     <string name="auth_name">Maqaa</string>
     <string name="auth_create">Uumi</string>
+    <string name="auth_privacy_label">Iccitii</string>
+    <string name="auth_privacy_public">Ifa</string>
+    <string name="auth_privacy_private">Dhuunfaa</string>
+    <string name="auth_link_privacy">Iccitii</string>
+    <string name="auth_use_different_account">Akkaawuntii biraa fayyadami</string>
+    <string name="auth_error_suspended_title">Akkaawuntiin yeroof dhaabbate</string>
     <string name="common_back">Duuba</string>
     <string name="common_close">Cufi</string>
     <string name="common_cancel">Haquu</string>

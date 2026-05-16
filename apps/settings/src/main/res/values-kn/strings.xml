@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="settings_home_logout">ಲಾಗ್ ಔಟ್</string>
+    <string name="security_method_email">ಇಮೇಲ್ ಕೋಡ್</string>
+    <string name="security_method_passkey">ಪಾಸ್‌ಕೀ</string>
+    <string name="security_method_totp">Authenticator ಆ್ಯಪ್</string>
+    <string name="security_section_passkeys">ಪಾಸ್‌ಕೀಗಳು</string>
+    <string name="security_passkey_register">ಪಾಸ್‌ಕೀ ಸೇರಿಸಿ</string>
+    <string name="security_passkey_delete_title">ಪಾಸ್‌ಕೀ ಅಳಿಸಬೇಕೆ?</string>
+    <string name="security_section_totp">Authenticator ಆ್ಯಪ್</string>
+    <string name="security_totp_setup">ದೃಢೀಕರಣಕಾರಿಯನ್ನು ಸೆಟಪ್ ಮಾಡಿ</string>
+    <string name="security_totp_setup_title">ದೃಢೀಕರಣಕಾರಿಯನ್ನು ಸೆಟಪ್ ಮಾಡಿ</string>
+    <string name="security_totp_verify">ಪರಿಶೀಲಿಸಿ</string>
+    <string name="security_totp_disable_title">ಅಥೆಂಟಿಕೇಟರ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕೆ?</string>
+    <string name="security_section_recovery">ರಿಕವರಿ ಕೋಡ್‌ಗಳು</string>
+    <string name="security_recovery_codes_title">ರಿಕವರಿ ಕೋಡ್‌ಗಳು</string>
+    <string name="security_session_unknown_agent">ಅಜ್ಞಾತ ಸಾಧನ</string>
+    <string name="security_session_revoke_title">ಸೆಷನ್ ರದ್ದುಗೊಳಿಸಬೇಕೆ?</string>
+    <string name="security_section_oauth">ಸಂಪರ್ಕಿತ ಖಾತೆಗಳು</string>
+    <string name="security_oauth_link">ಖಾತೆ ಲಿಂಕ್ ಮಾಡಿ</string>
+    <string name="security_unlink">ಲಿಂಕ್ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="security_token_create">ಟೋಕನ್ ರಚಿಸಿ</string>
+    <string name="security_token_name">ಹೆಸರು</string>
+    <string name="security_token_delete_title">ಟೋಕನ್ ಅಳಿಸಬೇಕೆ?</string>
+    <string name="security_create">ರಚಿಸಿ</string>
+    <string name="security_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="security_save">ಉಳಿಸಿ</string>
+    <string name="security_done">ಮುಗಿಯಿತು</string>
+    <string name="security_delete">ಅಳಿಸಿ</string>
+    <string name="security_rename">ಮರುಹೆಸರಿಸಿ</string>
+    <string name="security_revoke">ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="security_disable">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ</string>
+    <string name="security_copy">ನಕಲಿಸಿ</string>
+    <string name="security_copy_all">ಎಲ್ಲವನ್ನೂ ನಕಲಿಸಿ</string>
 
 </resources>

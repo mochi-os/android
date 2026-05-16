@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">ਰਿਕਵਰੀ ਕੋਡ</string>
     <string name="auth_name">ਨਾਮ</string>
     <string name="auth_create">ਬਣਾਓ</string>
+    <string name="auth_privacy_label">ਪ੍ਰਾਈਵੇਸੀ</string>
+    <string name="auth_privacy_public">ਜਨਤਕ</string>
+    <string name="auth_privacy_private">ਨਿੱਜੀ</string>
+    <string name="auth_link_privacy">ਪ੍ਰਾਈਵੇਸੀ</string>
+    <string name="auth_use_different_account">ਵੱਖਰਾ ਖਾਤਾ ਵਰਤੋ</string>
+    <string name="auth_error_suspended_title">ਖਾਤਾ ਮੁਅੱਤਲ ਕੀਤਾ ਗਿਆ</string>
     <string name="common_back">ਵਾਪਸ</string>
     <string name="common_close">ਬੰਦ ਕਰੋ</string>
     <string name="common_cancel">ਰੱਦ ਕਰੋ</string>

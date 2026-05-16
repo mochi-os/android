@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Nustatymai</string>
     <string name="settings_home_logout">Atsijungti</string>
+    <string name="security_method_email">El. pašto kodas</string>
+    <string name="security_method_passkey">Slaptaraktis</string>
+    <string name="security_method_totp">Autentifikatoriaus programėlė</string>
+    <string name="security_section_passkeys">Slaptarakčiai</string>
+    <string name="security_passkey_register">Pridėti slaptaraktį</string>
+    <string name="security_passkey_delete_title">Ištrinti slaptaraktį?</string>
+    <string name="security_section_totp">Autentifikatoriaus programėlė</string>
+    <string name="security_totp_setup">Nustatyti autentifikatorių</string>
+    <string name="security_totp_setup_title">Nustatyti autentifikatorių</string>
+    <string name="security_totp_verify">Patvirtinti</string>
+    <string name="security_totp_disable_title">Išjungti autentifikatorių?</string>
+    <string name="security_section_recovery">Atkūrimo kodai</string>
+    <string name="security_recovery_codes_title">Atkūrimo kodai</string>
+    <string name="security_session_unknown_agent">Nežinomas įrenginys</string>
+    <string name="security_session_revoke_title">Atšaukti sesiją?</string>
+    <string name="security_section_oauth">Susietos paskyros</string>
+    <string name="security_oauth_link">Susieti paskyrą</string>
+    <string name="security_unlink">Atsieti</string>
+    <string name="security_token_create">Sukurti žetoną</string>
+    <string name="security_token_name">Pavadinimas</string>
+    <string name="security_token_delete_title">Ištrinti žetoną?</string>
+    <string name="security_create">Sukurti</string>
+    <string name="security_cancel">Atšaukti</string>
+    <string name="security_save">Išsaugoti</string>
+    <string name="security_done">Atlikta</string>
+    <string name="security_delete">Ištrinti</string>
+    <string name="security_rename">Pervadinti</string>
+    <string name="security_revoke">Atšaukti</string>
+    <string name="security_disable">Išjungti</string>
+    <string name="security_copy">Kopijuoti</string>
+    <string name="security_copy_all">Kopijuoti viską</string>
 
 </resources>

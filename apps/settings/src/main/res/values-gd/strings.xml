@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Roghainnean</string>
     <string name="settings_home_logout">Clàraich a-mach</string>
+    <string name="security_method_email">Còd puist-d</string>
+    <string name="security_method_passkey">Pasgair</string>
+    <string name="security_method_totp">Aplacaid dhearbhachaidh</string>
+    <string name="security_section_passkeys">Pasgairean</string>
+    <string name="security_passkey_register">Cuir iuchair-fhaclair ris</string>
+    <string name="security_passkey_delete_title">Sguab às iuchair-fhaclair?</string>
+    <string name="security_section_totp">Aplacaid dhearbhachaidh</string>
+    <string name="security_totp_setup">Suidhich dearbhaichear</string>
+    <string name="security_totp_setup_title">Suidhich dearbhaichear</string>
+    <string name="security_totp_verify">Dearbh</string>
+    <string name="security_totp_disable_title">Cuir an aplacaid dhearbhachaidh à comas?</string>
+    <string name="security_section_recovery">Còdaichean ath-shlànachaidh</string>
+    <string name="security_recovery_codes_title">Còdaichean ath-shlànachaidh</string>
+    <string name="security_session_unknown_agent">Innleachd neo-aithnichte</string>
+    <string name="security_session_revoke_title">An cùl-ghairm an seisean?</string>
+    <string name="security_section_oauth">Cunntasan ceangailte</string>
+    <string name="security_oauth_link">Ceangail an cunntas</string>
+    <string name="security_unlink">Dì-cheangail</string>
+    <string name="security_token_create">Cruthaich tòcan</string>
+    <string name="security_token_name">Ainm</string>
+    <string name="security_token_delete_title">Sguab às tòcan?</string>
+    <string name="security_create">Cruthaich</string>
+    <string name="security_cancel">Sguir dheth</string>
+    <string name="security_save">Sàbhail</string>
+    <string name="security_done">Deiseil</string>
+    <string name="security_delete">Sguab às</string>
+    <string name="security_rename">Cuir ainm ùr air</string>
+    <string name="security_revoke">Cùl-ghairm</string>
+    <string name="security_disable">Cuir à comas</string>
+    <string name="security_copy">Dèan lethbhreac</string>
+    <string name="security_copy_all">Dèan lethbhreac den a h-uile</string>
 
 </resources>

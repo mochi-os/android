@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">የመልሶ ማግኛ ኮድ</string>
     <string name="auth_name">ስም</string>
     <string name="auth_create">ፍጠር</string>
+    <string name="auth_privacy_label">ግላዊነት</string>
+    <string name="auth_privacy_public">ሕዝባዊ</string>
+    <string name="auth_privacy_private">የግል</string>
+    <string name="auth_link_privacy">ግላዊነት</string>
+    <string name="auth_use_different_account">የተለየ መለያ ይጠቀሙ</string>
+    <string name="auth_error_suspended_title">መለያ ታግዷል</string>
     <string name="common_back">ተመለስ</string>
     <string name="common_close">ዝጋ</string>
     <string name="common_cancel">ይቅር</string>

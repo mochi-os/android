@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Socruithe</string>
     <string name="settings_home_logout">Logáil amach</string>
+    <string name="security_method_email">Cód ríomhphoist</string>
+    <string name="security_method_passkey">Pasluiche</string>
+    <string name="security_method_totp">Aip fhíordheimhnitheora</string>
+    <string name="security_section_passkeys">Pasluichí</string>
+    <string name="security_passkey_register">Cuir eochair phasála leis</string>
+    <string name="security_passkey_delete_title">Scrios eochair phasála?</string>
+    <string name="security_section_totp">Aip fhíordheimhnitheora</string>
+    <string name="security_totp_setup">Socraigh fíordheimhneoir</string>
+    <string name="security_totp_setup_title">Socraigh fíordheimhneoir</string>
+    <string name="security_totp_verify">Fíoraigh</string>
+    <string name="security_totp_disable_title">Díchumasaigh fíordheimhnitheoir?</string>
+    <string name="security_section_recovery">Cóid aisghabhála</string>
+    <string name="security_recovery_codes_title">Cóid aisghabhála</string>
+    <string name="security_session_unknown_agent">Gléas anaithnid</string>
+    <string name="security_session_revoke_title">Cúlghair seisiún?</string>
+    <string name="security_section_oauth">Cuntais cheangailte</string>
+    <string name="security_oauth_link">Nasc cuntas</string>
+    <string name="security_unlink">Dínasc</string>
+    <string name="security_token_create">Cruthaigh comhartha</string>
+    <string name="security_token_name">Ainm</string>
+    <string name="security_token_delete_title">Scrios comhartha?</string>
+    <string name="security_create">Cruthaigh</string>
+    <string name="security_cancel">Cealaigh</string>
+    <string name="security_save">Sábháil</string>
+    <string name="security_done">Críochnaithe</string>
+    <string name="security_delete">Scrios</string>
+    <string name="security_rename">Athainmnigh</string>
+    <string name="security_revoke">Cúlghair</string>
+    <string name="security_disable">Díchumasaigh</string>
+    <string name="security_copy">Cóipeáil</string>
+    <string name="security_copy_all">Cóipeáil an t-iomlán</string>
 
 </resources>

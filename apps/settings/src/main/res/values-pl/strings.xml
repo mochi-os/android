@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Ustawienia</string>
     <string name="settings_home_logout">Wyloguj się</string>
+    <string name="security_method_email">Kod e-mail</string>
+    <string name="security_method_passkey">Klucz dostępu</string>
+    <string name="security_method_totp">Aplikacja uwierzytelniająca</string>
+    <string name="security_section_passkeys">Klucze dostępu</string>
+    <string name="security_passkey_register">Dodaj klucz dostępu</string>
+    <string name="security_passkey_delete_title">Usunąć klucz dostępu?</string>
+    <string name="security_section_totp">Aplikacja uwierzytelniająca</string>
+    <string name="security_totp_setup">Skonfiguruj aplikację uwierzytelniającą</string>
+    <string name="security_totp_setup_title">Skonfiguruj aplikację uwierzytelniającą</string>
+    <string name="security_totp_verify">Weryfikuj</string>
+    <string name="security_totp_disable_title">Wyłączyć aplikację uwierzytelniającą?</string>
+    <string name="security_section_recovery">Kody odzyskiwania</string>
+    <string name="security_recovery_codes_title">Kody odzyskiwania</string>
+    <string name="security_session_unknown_agent">Nieznane urządzenie</string>
+    <string name="security_session_revoke_title">Odwołać sesję?</string>
+    <string name="security_section_oauth">Połączone konta</string>
+    <string name="security_oauth_link">Połącz konto</string>
+    <string name="security_unlink">Odłącz</string>
+    <string name="security_token_create">Utwórz token</string>
+    <string name="security_token_name">Nazwa</string>
+    <string name="security_token_delete_title">Usunąć token?</string>
+    <string name="security_create">Utwórz</string>
+    <string name="security_cancel">Anuluj</string>
+    <string name="security_save">Zapisz</string>
+    <string name="security_done">Gotowe</string>
+    <string name="security_delete">Usuń</string>
+    <string name="security_rename">Zmień nazwę</string>
+    <string name="security_revoke">Odwołaj</string>
+    <string name="security_disable">Wyłącz</string>
+    <string name="security_copy">Kopiuj</string>
+    <string name="security_copy_all">Kopiuj wszystko</string>
 
 </resources>

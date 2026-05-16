@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Cod adfer</string>
     <string name="auth_name">Enw</string>
     <string name="auth_create">Creu</string>
+    <string name="auth_privacy_label">Preifatrwydd</string>
+    <string name="auth_privacy_public">Cyhoeddus</string>
+    <string name="auth_privacy_private">Preifat</string>
+    <string name="auth_link_privacy">Preifatrwydd</string>
+    <string name="auth_use_different_account">Defnyddio cyfrif gwahanol</string>
+    <string name="auth_error_suspended_title">Cyfrif wedi\'i atal</string>
     <string name="common_back">Yn ôl</string>
     <string name="common_close">Cau</string>
     <string name="common_cancel">Canslo</string>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Sazlamalar</string>
     <string name="settings_home_logout">Çyk</string>
+    <string name="security_method_email">E-poçta kody</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Autentifikator programma</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Passkey goşmak</string>
+    <string name="security_passkey_delete_title">Passkey pozmaly?</string>
+    <string name="security_section_totp">Autentifikator programma</string>
+    <string name="security_totp_setup">Autentifikator gur</string>
+    <string name="security_totp_setup_title">Autentifikator gur</string>
+    <string name="security_totp_verify">Tassykla</string>
+    <string name="security_totp_disable_title">Autentifikatory öçürmeli?</string>
+    <string name="security_section_recovery">Dikeldiş kodlary</string>
+    <string name="security_recovery_codes_title">Dikeldiş kodlary</string>
+    <string name="security_session_unknown_agent">Näbelli enjam</string>
+    <string name="security_session_revoke_title">Sessiýany ýatyrmak?</string>
+    <string name="security_section_oauth">Baglanan hasaplar</string>
+    <string name="security_oauth_link">Hasaby baglanyşdyr</string>
+    <string name="security_unlink">Baglanyşdyrmany aýyr</string>
+    <string name="security_token_create">Token döretmek</string>
+    <string name="security_token_name">At</string>
+    <string name="security_token_delete_title">Tokeni pozmaly?</string>
+    <string name="security_create">Döretmek</string>
+    <string name="security_cancel">Ýatyrmak</string>
+    <string name="security_save">Saklaýyş</string>
+    <string name="security_done">Taýýar</string>
+    <string name="security_delete">Pozmak</string>
+    <string name="security_rename">Adyny üýtget</string>
+    <string name="security_revoke">Ýatyr</string>
+    <string name="security_disable">Öçürmek</string>
+    <string name="security_copy">Nusgalamak</string>
+    <string name="security_copy_all">Hemmesini nusgalamak</string>
 
 </resources>

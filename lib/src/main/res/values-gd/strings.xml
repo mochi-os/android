@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Còd ath-shlànachaidh</string>
     <string name="auth_name">Ainm</string>
     <string name="auth_create">Cruthaich</string>
+    <string name="auth_privacy_label">Prìobhaideachd</string>
+    <string name="auth_privacy_public">Poblach</string>
+    <string name="auth_privacy_private">Prìobhaideach</string>
+    <string name="auth_link_privacy">Prìobhaideachd</string>
+    <string name="auth_use_different_account">Cleachd cunntas eadar-dhealaichte</string>
+    <string name="auth_error_suspended_title">Cunntas air a chur à bith</string>
     <string name="common_back">Air ais</string>
     <string name="common_close">Dùin</string>
     <string name="common_cancel">Sguir dheth</string>

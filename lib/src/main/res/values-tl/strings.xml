@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Recovery code</string>
     <string name="auth_name">Pangalan</string>
     <string name="auth_create">Gumawa</string>
+    <string name="auth_privacy_label">Pagkapribado</string>
+    <string name="auth_privacy_public">Pampubliko</string>
+    <string name="auth_privacy_private">Pribado</string>
+    <string name="auth_link_privacy">Pagkapribado</string>
+    <string name="auth_use_different_account">Gumamit ng ibang account</string>
+    <string name="auth_error_suspended_title">Na-suspend ang account</string>
     <string name="common_back">Bumalik</string>
     <string name="common_close">Isara</string>
     <string name="common_cancel">Kanselahin</string>

@@ -36,6 +36,8 @@ class SessionManager @Inject constructor(
         private val KEY_OAUTH_VERIFIER = stringPreferencesKey("oauth_verifier")
         private val KEY_OAUTH_RETURN_CODE = stringPreferencesKey("oauth_return_code")
         private val KEY_OAUTH_RETURN_ERROR = stringPreferencesKey("oauth_return_error")
+        private val KEY_OAUTH_LINK_PROVIDER = stringPreferencesKey("oauth_link_provider")
+        private val KEY_OAUTH_LINK_ERROR = stringPreferencesKey("oauth_link_error")
         private val KEY_BOUND_IDENTITY = stringPreferencesKey("bound_identity")
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
@@ -189,6 +191,28 @@ class SessionManager @Inject constructor(
         dataStore.edit { prefs ->
             prefs.remove(KEY_OAUTH_RETURN_CODE)
             prefs.remove(KEY_OAUTH_RETURN_ERROR)
+        }
+    }
+
+    /** Separate channel from the login OAuth return — the link flow's server
+     *  callback sends back `?oauth_linked=<provider>` or `?oauth_error=...`
+     *  rather than a code to exchange. SecurityViewModel listens for these
+     *  to know when to refresh the OAuth-identities list. */
+    val oauthLinkReturn: Flow<Pair<String?, String?>> = dataStore.data.map { prefs ->
+        prefs[KEY_OAUTH_LINK_PROVIDER] to prefs[KEY_OAUTH_LINK_ERROR]
+    }
+
+    suspend fun setOAuthLinkReturn(provider: String?, error: String?) {
+        dataStore.edit { prefs ->
+            if (provider != null) prefs[KEY_OAUTH_LINK_PROVIDER] = provider else prefs.remove(KEY_OAUTH_LINK_PROVIDER)
+            if (error != null) prefs[KEY_OAUTH_LINK_ERROR] = error else prefs.remove(KEY_OAUTH_LINK_ERROR)
+        }
+    }
+
+    suspend fun clearOAuthLinkReturn() {
+        dataStore.edit { prefs ->
+            prefs.remove(KEY_OAUTH_LINK_PROVIDER)
+            prefs.remove(KEY_OAUTH_LINK_ERROR)
         }
     }
 

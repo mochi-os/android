@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Configuración</string>
     <string name="settings_home_logout">Cerrar sesión</string>
+    <string name="security_method_email">Código de correo electrónico</string>
+    <string name="security_method_passkey">Clave de acceso</string>
+    <string name="security_method_totp">App de autenticación</string>
+    <string name="security_section_passkeys">Claves de acceso</string>
+    <string name="security_passkey_register">Añadir passkey</string>
+    <string name="security_passkey_delete_title">¿Eliminar passkey?</string>
+    <string name="security_section_totp">App de autenticación</string>
+    <string name="security_totp_setup">Configurar autenticador</string>
+    <string name="security_totp_setup_title">Configurar autenticador</string>
+    <string name="security_totp_verify">Verificar</string>
+    <string name="security_totp_disable_title">¿Desactivar autenticador?</string>
+    <string name="security_section_recovery">Códigos de recuperación</string>
+    <string name="security_recovery_codes_title">Códigos de recuperación</string>
+    <string name="security_session_unknown_agent">Dispositivo desconocido</string>
+    <string name="security_session_revoke_title">¿Revocar sesión?</string>
+    <string name="security_section_oauth">Cuentas conectadas</string>
+    <string name="security_oauth_link">Vincular cuenta</string>
+    <string name="security_unlink">Desvincular</string>
+    <string name="security_token_create">Crear token</string>
+    <string name="security_token_name">Nombre</string>
+    <string name="security_token_delete_title">¿Eliminar token?</string>
+    <string name="security_create">Crear</string>
+    <string name="security_cancel">Cancelar</string>
+    <string name="security_save">Guardar</string>
+    <string name="security_done">Hecho</string>
+    <string name="security_delete">Eliminar</string>
+    <string name="security_rename">Renombrar</string>
+    <string name="security_revoke">Revocar</string>
+    <string name="security_disable">Desactivar</string>
+    <string name="security_copy">Copiar</string>
+    <string name="security_copy_all">Copiar todo</string>
 
 </resources>

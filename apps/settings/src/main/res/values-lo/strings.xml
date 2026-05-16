@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ການຕັ້ງຄ່າ</string>
     <string name="settings_home_logout">ອອກຈາກລະບົບ</string>
+    <string name="security_method_email">ລະຫັດອີເມວ</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">ແອັບ authenticator</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">ເພີ່ມ passkey</string>
+    <string name="security_passkey_delete_title">ລົບ passkey ບໍ?</string>
+    <string name="security_section_totp">ແອັບ authenticator</string>
+    <string name="security_totp_setup">ຕັ້ງຄ່າ authenticator</string>
+    <string name="security_totp_setup_title">ຕັ້ງຄ່າ authenticator</string>
+    <string name="security_totp_verify">ຢືນຢັນ</string>
+    <string name="security_totp_disable_title">ປິດໃຊ້ງານ authenticator ບໍ?</string>
+    <string name="security_section_recovery">ລະຫັດກູ້ຄືນ</string>
+    <string name="security_recovery_codes_title">ລະຫັດກູ້ຄືນ</string>
+    <string name="security_session_unknown_agent">ອຸປະກອນບໍ່ຮູ້ຈັກ</string>
+    <string name="security_session_revoke_title">ຖອນເຊດຊັນ?</string>
+    <string name="security_section_oauth">ບັນຊີທີ່ເຊື່ອມຕໍ່</string>
+    <string name="security_oauth_link">ເຊື່ອມຕໍ່ບັນຊີ</string>
+    <string name="security_unlink">ຍົກເລີກການເຊື່ອມໂຍງ</string>
+    <string name="security_token_create">ສ້າງໂທເຄນ</string>
+    <string name="security_token_name">ຊື່</string>
+    <string name="security_token_delete_title">ລົບໂທເຄນບໍ?</string>
+    <string name="security_create">ສ້າງ</string>
+    <string name="security_cancel">ຍົກເລີກ</string>
+    <string name="security_save">ບັນທຶກ</string>
+    <string name="security_done">ສຳເລັດແລ້ວ</string>
+    <string name="security_delete">ລົບ</string>
+    <string name="security_rename">ປ່ຽນຊື່</string>
+    <string name="security_revoke">ຖອນ</string>
+    <string name="security_disable">ປິດໃຊ້ງານ</string>
+    <string name="security_copy">ສຳເນົາ</string>
+    <string name="security_copy_all">ສຳເນົາທັງໝົດ</string>
 
 </resources>

@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Koda vegerê</string>
     <string name="auth_name">Nav</string>
     <string name="auth_create">Çêbike</string>
+    <string name="auth_privacy_label">Nepenî</string>
+    <string name="auth_privacy_public">Giştî</string>
+    <string name="auth_privacy_private">Taybet</string>
+    <string name="auth_link_privacy">Nepenî</string>
+    <string name="auth_use_different_account">Hesabekî cuda bi kar bîne</string>
+    <string name="auth_error_suspended_title">Hesab hat sekinandin</string>
     <string name="common_back">Vegere</string>
     <string name="common_close">Bigire</string>
     <string name="common_cancel">Betal bike</string>

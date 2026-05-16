@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Tiklash kodi</string>
     <string name="auth_name">Nomi</string>
     <string name="auth_create">Yaratish</string>
+    <string name="auth_privacy_label">Maxfiylik</string>
+    <string name="auth_privacy_public">Ommaviy</string>
+    <string name="auth_privacy_private">Shaxsiy</string>
+    <string name="auth_link_privacy">Maxfiylik</string>
+    <string name="auth_use_different_account">Boshqa hisobdan foydalaning</string>
+    <string name="auth_error_suspended_title">Hisob toʻxtatildi</string>
     <string name="common_back">Orqaga</string>
     <string name="common_close">Yopish</string>
     <string name="common_cancel">Bekor qilish</string>

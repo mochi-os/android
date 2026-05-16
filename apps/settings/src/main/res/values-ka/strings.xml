@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">პარამეტრები</string>
     <string name="settings_home_logout">გასვლა</string>
+    <string name="security_method_email">ელფოსტის კოდი</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator აპი</string>
+    <string name="security_section_passkeys">Passkey-ები</string>
+    <string name="security_passkey_register">passkey-ის დამატება</string>
+    <string name="security_passkey_delete_title">passkey-ის წაშლა?</string>
+    <string name="security_section_totp">Authenticator აპი</string>
+    <string name="security_totp_setup">დააყენეთ ავტენტიფიკატორი</string>
+    <string name="security_totp_setup_title">დააყენეთ ავტენტიფიკატორი</string>
+    <string name="security_totp_verify">შემოწმებული</string>
+    <string name="security_totp_disable_title">Authenticator-ის გათიშვა?</string>
+    <string name="security_section_recovery">აღდგენის კოდები</string>
+    <string name="security_recovery_codes_title">აღდგენის კოდები</string>
+    <string name="security_session_unknown_agent">უცნობი ბრაუზერი</string>
+    <string name="security_session_revoke_title">სესიის გაუქმება?</string>
+    <string name="security_section_oauth">დაკავშირებული ანგარიშები</string>
+    <string name="security_oauth_link">ანგარიშის დაკავშირება</string>
+    <string name="security_unlink">შეუზღუდავი</string>
+    <string name="security_token_create">ტოკენის შექმნა</string>
+    <string name="security_token_name">სახელი</string>
+    <string name="security_token_delete_title">ტოკენის წაშლა?</string>
+    <string name="security_create">შექმნა</string>
+    <string name="security_cancel">გაუქმება</string>
+    <string name="security_save">შენახვა</string>
+    <string name="security_done">მზადაა</string>
+    <string name="security_delete">წაშლა</string>
+    <string name="security_rename">სახელის შეცვლა</string>
+    <string name="security_revoke">გაუქმება</string>
+    <string name="security_disable">გათიშვა</string>
+    <string name="security_copy">კოპირება</string>
+    <string name="security_copy_all">ყველაფრის კოპირება</string>
 
 </resources>

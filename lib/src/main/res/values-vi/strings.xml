@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Mã khôi phục</string>
     <string name="auth_name">Tên</string>
     <string name="auth_create">Tạo</string>
+    <string name="auth_privacy_label">Quyền riêng tư</string>
+    <string name="auth_privacy_public">Công khai</string>
+    <string name="auth_privacy_private">Riêng tư</string>
+    <string name="auth_link_privacy">Quyền riêng tư</string>
+    <string name="auth_use_different_account">Dùng tài khoản khác</string>
+    <string name="auth_error_suspended_title">Đã tạm ngưng tài khoản</string>
     <string name="common_back">Quay lại</string>
     <string name="common_close">Đóng</string>
     <string name="common_cancel">Hủy</string>

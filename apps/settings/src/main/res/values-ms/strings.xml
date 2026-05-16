@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Tetapan</string>
     <string name="settings_home_logout">Log keluar</string>
+    <string name="security_method_email">Kod e-mel</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Apl authenticator</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Tambah passkey</string>
+    <string name="security_passkey_delete_title">Padam passkey?</string>
+    <string name="security_section_totp">Apl authenticator</string>
+    <string name="security_totp_setup">Sediakan pengesah</string>
+    <string name="security_totp_setup_title">Sediakan pengesah</string>
+    <string name="security_totp_verify">Sahkan</string>
+    <string name="security_totp_disable_title">Lumpuhkan pengesah?</string>
+    <string name="security_section_recovery">Kod pemulihan</string>
+    <string name="security_recovery_codes_title">Kod pemulihan</string>
+    <string name="security_session_unknown_agent">Peranti tidak diketahui</string>
+    <string name="security_session_revoke_title">Batalkan sesi?</string>
+    <string name="security_section_oauth">Akaun disambungkan</string>
+    <string name="security_oauth_link">Pautkan akaun</string>
+    <string name="security_unlink">Nyahpaut</string>
+    <string name="security_token_create">Cipta token</string>
+    <string name="security_token_name">Nama</string>
+    <string name="security_token_delete_title">Padam token?</string>
+    <string name="security_create">Cipta</string>
+    <string name="security_cancel">Batal</string>
+    <string name="security_save">Simpan</string>
+    <string name="security_done">Selesai</string>
+    <string name="security_delete">Padam</string>
+    <string name="security_rename">Namakan semula</string>
+    <string name="security_revoke">Batalkan</string>
+    <string name="security_disable">Lumpuhkan</string>
+    <string name="security_copy">Salin</string>
+    <string name="security_copy_all">Salin semua</string>
 
 </resources>

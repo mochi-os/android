@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Cod de recuperare</string>
     <string name="auth_name">Nume</string>
     <string name="auth_create">Creează</string>
+    <string name="auth_privacy_label">Confidențialitate</string>
+    <string name="auth_privacy_public">Public</string>
+    <string name="auth_privacy_private">Privat</string>
+    <string name="auth_link_privacy">Confidențialitate</string>
+    <string name="auth_use_different_account">Folosește un alt cont</string>
+    <string name="auth_error_suspended_title">Cont suspendat</string>
     <string name="common_back">Înapoi</string>
     <string name="common_close">Închide</string>
     <string name="common_cancel">Anulează</string>

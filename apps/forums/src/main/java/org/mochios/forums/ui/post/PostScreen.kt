@@ -150,6 +150,7 @@ fun PostScreen(
                                 onRemove = viewModel::removePost,
                                 onRestore = viewModel::restorePost,
                                 onReport = { showReportPost = true },
+                                onQuote = { draft = quoteText(uiState.post.bodyMarkdown.ifBlank { uiState.post.body }, draft) },
                                 onAddTag = { label -> viewModel.addPostTag(label) },
                                 onRemoveTag = { tagId -> viewModel.removePostTag(tagId) },
                             )
@@ -181,6 +182,10 @@ fun PostScreen(
                                 onRemove = { viewModel.removeComment(it.id) },
                                 onRestore = { viewModel.restoreComment(it.id) },
                                 onReport = { reportingComment = it },
+                                onQuote = { c ->
+                                    viewModel.setReplyTo(c)
+                                    draft = quoteText(c.body, draft)
+                                },
                             )
                         }
                     }
@@ -539,6 +544,7 @@ private fun PostHeader(
     onRemove: () -> Unit,
     onRestore: () -> Unit,
     onReport: () -> Unit,
+    onQuote: () -> Unit,
     onAddTag: (String) -> Unit,
     onRemoveTag: (String) -> Unit,
 ) {
@@ -614,6 +620,10 @@ private fun PostHeader(
                                 )
                             }
                         }
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.forums_post_quote)) },
+                            onClick = { showMenu = false; onQuote() }
+                        )
                         if (!isAuthor) {
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.forums_post_report)) },
@@ -775,6 +785,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
     onRemove: (ForumComment) -> Unit,
     onRestore: (ForumComment) -> Unit,
     onReport: (ForumComment) -> Unit,
+    onQuote: (ForumComment) -> Unit,
 ) {
     comments.forEach { c ->
         item(key = c.id) {
@@ -796,10 +807,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
                 onRemove = { onRemove(c) },
                 onRestore = { onRestore(c) },
                 onReport = { onReport(c) },
+                onQuote = { onQuote(c) },
             )
         }
         if (c.children.isNotEmpty()) {
-            commentsItems(c.children, serverUrl, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport)
+            commentsItems(c.children, serverUrl, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport, onQuote)
         }
     }
 }
@@ -821,6 +833,7 @@ private fun CommentCard(
     onRemove: () -> Unit,
     onRestore: () -> Unit,
     onReport: () -> Unit,
+    onQuote: () -> Unit,
 ) {
     val format = LocalFormat.current
     var showMenu by remember { mutableStateOf(false) }
@@ -881,6 +894,10 @@ private fun CommentCard(
                                 )
                             }
                         }
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.forums_comment_quote)) },
+                            onClick = { showMenu = false; onQuote() }
+                        )
                         if (!isAuthor) {
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.forums_comment_report)) },
@@ -974,6 +991,21 @@ private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
             )
         }
     }
+}
+
+/**
+ * Quote a post or comment body into the reply composer. Mirrors web's
+ * thread-detail behaviour: prefix every non-empty line with "> " and append
+ * a blank line so the user can start typing immediately. When the draft is
+ * already non-empty, prepend the quote above existing text.
+ */
+private fun quoteText(body: String, currentDraft: String): String {
+    val trimmed = body.trim()
+    if (trimmed.isEmpty()) return currentDraft
+    val quoted = trimmed.split("\n").joinToString("\n") { line ->
+        if (line.isBlank()) ">" else "> $line"
+    } + "\n\n"
+    return if (currentDraft.isBlank()) quoted else "$quoted$currentDraft"
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

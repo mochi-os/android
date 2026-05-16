@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">کۆدی گەڕانەوە</string>
     <string name="auth_name">ناو</string>
     <string name="auth_create">دروستکردن</string>
+    <string name="auth_privacy_label">تایبەتمەندی</string>
+    <string name="auth_privacy_public">گشتی</string>
+    <string name="auth_privacy_private">تایبەت</string>
+    <string name="auth_link_privacy">تایبەتمەندی</string>
+    <string name="auth_use_different_account">هەژمارێکی جیاواز بەکاربێنە</string>
+    <string name="auth_error_suspended_title">هەژمار ڕاگیراوە</string>
     <string name="common_back">گەڕانەوە</string>
     <string name="common_close">داخستن</string>
     <string name="common_cancel">هەڵوەشاندنەوە</string>

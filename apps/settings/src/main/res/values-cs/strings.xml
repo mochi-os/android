@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Nastavení</string>
     <string name="settings_home_logout">Odhlásit se</string>
+    <string name="security_method_email">E-mailový kód</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Autentizační aplikace</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Přidat passkey</string>
+    <string name="security_passkey_delete_title">Smazat passkey?</string>
+    <string name="security_section_totp">Autentizační aplikace</string>
+    <string name="security_totp_setup">Nastavit autentizátor</string>
+    <string name="security_totp_setup_title">Nastavit autentizátor</string>
+    <string name="security_totp_verify">Ověřit</string>
+    <string name="security_totp_disable_title">Zakázat autentizátor?</string>
+    <string name="security_section_recovery">Obnovovací kódy</string>
+    <string name="security_recovery_codes_title">Obnovovací kódy</string>
+    <string name="security_session_unknown_agent">Neznámé zařízení</string>
+    <string name="security_session_revoke_title">Odvolat relaci?</string>
+    <string name="security_section_oauth">Připojené účty</string>
+    <string name="security_oauth_link">Propojit účet</string>
+    <string name="security_unlink">Odpojit</string>
+    <string name="security_token_create">Vytvořit token</string>
+    <string name="security_token_name">Název</string>
+    <string name="security_token_delete_title">Smazat token?</string>
+    <string name="security_create">Vytvořit</string>
+    <string name="security_cancel">Zrušit</string>
+    <string name="security_save">Uložit</string>
+    <string name="security_done">Hotovo</string>
+    <string name="security_delete">Smazat</string>
+    <string name="security_rename">Přejmenovat</string>
+    <string name="security_revoke">Odvolat</string>
+    <string name="security_disable">Zakázat</string>
+    <string name="security_copy">Kopírovat</string>
+    <string name="security_copy_all">Kopírovat vše</string>
 
 </resources>

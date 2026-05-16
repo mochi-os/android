@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Iestatījumi</string>
     <string name="settings_home_logout">Izrakstīties</string>
+    <string name="security_method_email">E-pasta kods</string>
+    <string name="security_method_passkey">Piekļuves atslēga</string>
+    <string name="security_method_totp">Authenticator lietotne</string>
+    <string name="security_section_passkeys">Piekļuves atslēgas</string>
+    <string name="security_passkey_register">Pievienot piekļuves atslēgu</string>
+    <string name="security_passkey_delete_title">Dzēst piekļuves atslēgu?</string>
+    <string name="security_section_totp">Authenticator lietotne</string>
+    <string name="security_totp_setup">Iestatīt autentifikatoru</string>
+    <string name="security_totp_setup_title">Iestatīt autentifikatoru</string>
+    <string name="security_totp_verify">Verificēt</string>
+    <string name="security_totp_disable_title">Atspējot Authenticator?</string>
+    <string name="security_section_recovery">Atjaunošanas kodi</string>
+    <string name="security_recovery_codes_title">Atjaunošanas kodi</string>
+    <string name="security_session_unknown_agent">Nezināma ierīce</string>
+    <string name="security_session_revoke_title">Atsaukt sesiju?</string>
+    <string name="security_section_oauth">Savienotie konti</string>
+    <string name="security_oauth_link">Saistīt kontu</string>
+    <string name="security_unlink">Atvienot</string>
+    <string name="security_token_create">Izveidot pilnvaru</string>
+    <string name="security_token_name">Nosaukums</string>
+    <string name="security_token_delete_title">Dzēst pilnvaru?</string>
+    <string name="security_create">Izveidot</string>
+    <string name="security_cancel">Atcelt</string>
+    <string name="security_save">Saglabāt</string>
+    <string name="security_done">Pabeigts</string>
+    <string name="security_delete">Dzēst</string>
+    <string name="security_rename">Pārdēvēt</string>
+    <string name="security_revoke">Atsaukt</string>
+    <string name="security_disable">Atspējot</string>
+    <string name="security_copy">Kopēt</string>
+    <string name="security_copy_all">Kopēt visu</string>
 
 </resources>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Asetukset</string>
     <string name="settings_home_logout">Kirjaudu ulos</string>
+    <string name="security_method_email">Sähköpostikoodi</string>
+    <string name="security_method_passkey">Avainkoodi</string>
+    <string name="security_method_totp">Todennussovellus</string>
+    <string name="security_section_passkeys">Avainkoodit</string>
+    <string name="security_passkey_register">Lisää avain</string>
+    <string name="security_passkey_delete_title">Poistetaanko avain?</string>
+    <string name="security_section_totp">Todennussovellus</string>
+    <string name="security_totp_setup">Aseta todennussovellus</string>
+    <string name="security_totp_setup_title">Aseta todennussovellus</string>
+    <string name="security_totp_verify">Vahvista</string>
+    <string name="security_totp_disable_title">Poistetaanko todentaja käytöstä?</string>
+    <string name="security_section_recovery">Palautuskoodit</string>
+    <string name="security_recovery_codes_title">Palautuskoodit</string>
+    <string name="security_session_unknown_agent">Tuntematon laite</string>
+    <string name="security_session_revoke_title">Peruutetaanko istunto?</string>
+    <string name="security_section_oauth">Yhdistetyt tilit</string>
+    <string name="security_oauth_link">Linkitä tili</string>
+    <string name="security_unlink">Poista liitos</string>
+    <string name="security_token_create">Luo tunnus</string>
+    <string name="security_token_name">Nimi</string>
+    <string name="security_token_delete_title">Poistetaanko tunnus?</string>
+    <string name="security_create">Luo</string>
+    <string name="security_cancel">Peruuta</string>
+    <string name="security_save">Tallenna</string>
+    <string name="security_done">Valmis</string>
+    <string name="security_delete">Poista</string>
+    <string name="security_rename">Nimeä uudelleen</string>
+    <string name="security_revoke">Peruuta</string>
+    <string name="security_disable">Poista käytöstä</string>
+    <string name="security_copy">Kopioi</string>
+    <string name="security_copy_all">Kopioi kaikki</string>
 
 </resources>

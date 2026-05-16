@@ -118,8 +118,8 @@ class AuthRepository @Inject constructor(
         return response.token
     }
 
-    suspend fun createIdentity(name: String) {
-        authApi.createIdentity(IdentityRequest(name)).unwrapRaw()
+    suspend fun createIdentity(name: String, privacy: String = "public") {
+        authApi.createIdentity(IdentityRequest(name, privacy)).unwrapRaw()
     }
 
     suspend fun getIdentity(): Identity {
@@ -141,6 +141,37 @@ class AuthRepository @Inject constructor(
         val resp = authApi.oauthBegin(
             provider,
             OAuthBeginRequest(mode = "mobile", scheme = scheme, challenge = challenge)
+        ).unwrapRaw()
+        return resp.url
+    }
+
+    /**
+     * Begin an OAuth flow that LINKS the provider identity to the
+     * already-authenticated user instead of starting a sign-in. The server
+     * needs a Bearer JWT for any of the user's apps; any settings/feeds/...
+     * token works since the JWT verification is core-level.
+     *
+     * Server redirects to `<target>?oauth_linked=<provider>` on success or
+     * `<target>?oauth_error=<reason>` on failure. The host MainActivity
+     * parses the return URI and routes into `SessionManager.setOAuthLinkReturn`.
+     */
+    suspend fun beginOAuthLink(
+        provider: String,
+        scheme: String,
+        target: String,
+        challenge: String,
+        bearerToken: String,
+    ): String {
+        val resp = authApi.oauthBeginAuthorised(
+            provider,
+            "Bearer $bearerToken",
+            OAuthBeginRequest(
+                mode = "mobile",
+                scheme = scheme,
+                challenge = challenge,
+                link = true,
+                target = target,
+            )
         ).unwrapRaw()
         return resp.url
     }

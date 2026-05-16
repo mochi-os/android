@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Налаштування</string>
     <string name="settings_home_logout">Вийти</string>
+    <string name="security_method_email">Код електронної пошти</string>
+    <string name="security_method_passkey">Ключ доступу</string>
+    <string name="security_method_totp">Застосунок-автентифікатор</string>
+    <string name="security_section_passkeys">Ключі доступу</string>
+    <string name="security_passkey_register">Додати ключ доступу</string>
+    <string name="security_passkey_delete_title">Видалити ключ доступу?</string>
+    <string name="security_section_totp">Застосунок-автентифікатор</string>
+    <string name="security_totp_setup">Налаштувати автентифікатор</string>
+    <string name="security_totp_setup_title">Налаштувати автентифікатор</string>
+    <string name="security_totp_verify">Перевірити</string>
+    <string name="security_totp_disable_title">Вимкнути автентифікатор?</string>
+    <string name="security_section_recovery">Резервні коди</string>
+    <string name="security_recovery_codes_title">Резервні коди</string>
+    <string name="security_session_unknown_agent">Невідомий пристрій</string>
+    <string name="security_session_revoke_title">Відкликати сесію?</string>
+    <string name="security_section_oauth">Підключені облікові записи</string>
+    <string name="security_oauth_link">Прив\'язати обліковий запис</string>
+    <string name="security_unlink">Від\'єднати</string>
+    <string name="security_token_create">Створити токен</string>
+    <string name="security_token_name">Ім\'я</string>
+    <string name="security_token_delete_title">Видалити токен?</string>
+    <string name="security_create">Створити</string>
+    <string name="security_cancel">Скасувати</string>
+    <string name="security_save">Зберегти</string>
+    <string name="security_done">Готово</string>
+    <string name="security_delete">Видалити</string>
+    <string name="security_rename">Перейменувати</string>
+    <string name="security_revoke">Відкликати</string>
+    <string name="security_disable">Вимкнути</string>
+    <string name="security_copy">Копіювати</string>
+    <string name="security_copy_all">Копіювати все</string>
 
 </resources>

@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">رمز الاسترداد</string>
     <string name="auth_name">الاسم</string>
     <string name="auth_create">إنشاء</string>
+    <string name="auth_privacy_label">الخصوصية</string>
+    <string name="auth_privacy_public">عام</string>
+    <string name="auth_privacy_private">خاص</string>
+    <string name="auth_link_privacy">الخصوصية</string>
+    <string name="auth_use_different_account">استخدم حسابًا مختلفًا</string>
+    <string name="auth_error_suspended_title">تم تعليق الحساب</string>
     <string name="common_back">رجوع</string>
     <string name="common_close">إغلاق</string>
     <string name="common_cancel">إلغاء</string>

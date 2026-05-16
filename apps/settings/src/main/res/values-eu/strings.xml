@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Ezarpenak</string>
     <string name="settings_home_logout">Amaitu saioa</string>
+    <string name="security_method_email">Posta elektronikoko kodea</string>
+    <string name="security_method_passkey">Passkey-a</string>
+    <string name="security_method_totp">Autentifikatzaile aplikazioa</string>
+    <string name="security_section_passkeys">Passkey-ak</string>
+    <string name="security_passkey_register">Gehitu pasakodea</string>
+    <string name="security_passkey_delete_title">Ezabatu pasakodea?</string>
+    <string name="security_section_totp">Autentifikatzaile aplikazioa</string>
+    <string name="security_totp_setup">Konfiguratu autentifikatzailea</string>
+    <string name="security_totp_setup_title">Konfiguratu autentifikatzailea</string>
+    <string name="security_totp_verify">Egiaztatu</string>
+    <string name="security_totp_disable_title">Desgaitu autentifikatzailea?</string>
+    <string name="security_section_recovery">Berreskuratze-kodeak</string>
+    <string name="security_recovery_codes_title">Berreskuratze-kodeak</string>
+    <string name="security_session_unknown_agent">Gailu ezezaguna</string>
+    <string name="security_session_revoke_title">Saioa indargabetu?</string>
+    <string name="security_section_oauth">Konektatutako kontuak</string>
+    <string name="security_oauth_link">Lotu kontua</string>
+    <string name="security_unlink">Desestekatu</string>
+    <string name="security_token_create">Sortu tokena</string>
+    <string name="security_token_name">Izena</string>
+    <string name="security_token_delete_title">Ezabatu tokena?</string>
+    <string name="security_create">Sortu</string>
+    <string name="security_cancel">Utzi</string>
+    <string name="security_save">Gorde</string>
+    <string name="security_done">Eginda</string>
+    <string name="security_delete">Ezabatu</string>
+    <string name="security_rename">Aldatu izena</string>
+    <string name="security_revoke">Indargabetu</string>
+    <string name="security_disable">Desgaitu</string>
+    <string name="security_copy">Kopiatu</string>
+    <string name="security_copy_all">Kopiatu dena</string>
 
 </resources>

@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Atjaunošanas kods</string>
     <string name="auth_name">Nosaukums</string>
     <string name="auth_create">Izveidot</string>
+    <string name="auth_privacy_label">Privātums</string>
+    <string name="auth_privacy_public">Publisks</string>
+    <string name="auth_privacy_private">Privāts</string>
+    <string name="auth_link_privacy">Privātums</string>
+    <string name="auth_use_different_account">Izmantot citu kontu</string>
+    <string name="auth_error_suspended_title">Konts apturēts</string>
     <string name="common_back">Atpakaļ</string>
     <string name="common_close">Aizvērt</string>
     <string name="common_cancel">Atcelt</string>

@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Gendannelseskode</string>
     <string name="auth_name">Navn</string>
     <string name="auth_create">Opret</string>
+    <string name="auth_privacy_label">Privatliv</string>
+    <string name="auth_privacy_public">Offentlig</string>
+    <string name="auth_privacy_private">Privat</string>
+    <string name="auth_link_privacy">Privatliv</string>
+    <string name="auth_use_different_account">Brug en anden konto</string>
+    <string name="auth_error_suspended_title">Konto suspenderet</string>
     <string name="common_back">Tilbage</string>
     <string name="common_close">Luk</string>
     <string name="common_cancel">Annuller</string>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Nastavenia</string>
     <string name="settings_home_logout">Odhlásiť sa</string>
+    <string name="security_method_email">E-mailový kód</string>
+    <string name="security_method_passkey">Prístupový kľúč</string>
+    <string name="security_method_totp">Autentifikačná aplikácia</string>
+    <string name="security_section_passkeys">Prístupové kľúče</string>
+    <string name="security_passkey_register">Pridať passkey</string>
+    <string name="security_passkey_delete_title">Odstrániť passkey?</string>
+    <string name="security_section_totp">Autentifikačná aplikácia</string>
+    <string name="security_totp_setup">Nastaviť autentifikátor</string>
+    <string name="security_totp_setup_title">Nastaviť autentifikátor</string>
+    <string name="security_totp_verify">Overiť</string>
+    <string name="security_totp_disable_title">Vypnúť autentifikátor?</string>
+    <string name="security_section_recovery">Kódy na obnovenie</string>
+    <string name="security_recovery_codes_title">Kódy na obnovenie</string>
+    <string name="security_session_unknown_agent">Neznáme zariadenie</string>
+    <string name="security_session_revoke_title">Odvolať reláciu?</string>
+    <string name="security_section_oauth">Pripojené účty</string>
+    <string name="security_oauth_link">Prepojiť účet</string>
+    <string name="security_unlink">Odpojiť</string>
+    <string name="security_token_create">Vytvoriť token</string>
+    <string name="security_token_name">Názov</string>
+    <string name="security_token_delete_title">Odstrániť token?</string>
+    <string name="security_create">Vytvoriť</string>
+    <string name="security_cancel">Zrušiť</string>
+    <string name="security_save">Uložiť</string>
+    <string name="security_done">Hotovo</string>
+    <string name="security_delete">Odstrániť</string>
+    <string name="security_rename">Premenovať</string>
+    <string name="security_revoke">Odvolať</string>
+    <string name="security_disable">Vypnúť</string>
+    <string name="security_copy">Kopírovať</string>
+    <string name="security_copy_all">Kopírovať všetko</string>
 
 </resources>

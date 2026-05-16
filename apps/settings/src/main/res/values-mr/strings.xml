@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">सेटिंग्ज</string>
     <string name="settings_home_logout">लॉग आउट करा</string>
+    <string name="security_method_email">ईमेल कोड</string>
+    <string name="security_method_passkey">पासकी</string>
+    <string name="security_method_totp">प्रमाणीकरण अॅप</string>
+    <string name="security_section_passkeys">पासकीज</string>
+    <string name="security_passkey_register">पासकी जोडा</string>
+    <string name="security_passkey_delete_title">पासकी हटवायची?</string>
+    <string name="security_section_totp">प्रमाणीकरण अॅप</string>
+    <string name="security_totp_setup">ऑथेंटिकेटर सेट अप करा</string>
+    <string name="security_totp_setup_title">ऑथेंटिकेटर सेट अप करा</string>
+    <string name="security_totp_verify">पडताळा</string>
+    <string name="security_totp_disable_title">ऑथेंटिकेटर बंद करायचा?</string>
+    <string name="security_section_recovery">रिकव्हरी कोड्स</string>
+    <string name="security_recovery_codes_title">रिकव्हरी कोड्स</string>
+    <string name="security_session_unknown_agent">अज्ञात डिव्हाइस</string>
+    <string name="security_session_revoke_title">सेशन रद्द करायचे?</string>
+    <string name="security_section_oauth">कनेक्ट केलेली खाती</string>
+    <string name="security_oauth_link">खाते लिंक करा</string>
+    <string name="security_unlink">अनलिंक करा</string>
+    <string name="security_token_create">टोकन तयार करा</string>
+    <string name="security_token_name">नाव</string>
+    <string name="security_token_delete_title">टोकन हटवायचे?</string>
+    <string name="security_create">तयार करा</string>
+    <string name="security_cancel">रद्द करा</string>
+    <string name="security_save">जतन करा</string>
+    <string name="security_done">पूर्ण</string>
+    <string name="security_delete">हटवा</string>
+    <string name="security_rename">पुन्हा नाव द्या</string>
+    <string name="security_revoke">रद्द करा</string>
+    <string name="security_disable">बंद करा</string>
+    <string name="security_copy">कॉपी करा</string>
+    <string name="security_copy_all">सर्व कॉपी करा</string>
 
 </resources>

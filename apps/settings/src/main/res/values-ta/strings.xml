@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">அமைப்புகள்</string>
     <string name="settings_home_logout">வெளியேறு</string>
+    <string name="security_method_email">மின்னஞ்சல் குறியீடு</string>
+    <string name="security_method_passkey">கடவுக்குறி</string>
+    <string name="security_method_totp">அங்கீகரிப்பு பயன்பாடு</string>
+    <string name="security_section_passkeys">Passkeyக்கள்</string>
+    <string name="security_passkey_register">Passkey சேர்</string>
+    <string name="security_passkey_delete_title">Passkey-ஐ நீக்கவா?</string>
+    <string name="security_section_totp">அங்கீகரிப்பு பயன்பாடு</string>
+    <string name="security_totp_setup">அங்கீகாரியை அமைக்க</string>
+    <string name="security_totp_setup_title">அங்கீகாரியை அமைக்க</string>
+    <string name="security_totp_verify">சரிபார்</string>
+    <string name="security_totp_disable_title">அங்கீகரிப்பானை முடக்கவா?</string>
+    <string name="security_section_recovery">மீட்பு குறியீடுகள்</string>
+    <string name="security_recovery_codes_title">மீட்பு குறியீடுகள்</string>
+    <string name="security_session_unknown_agent">அறியப்படாத சாதனம்</string>
+    <string name="security_session_revoke_title">அமர்வை திரும்பப் பெற வேண்டுமா?</string>
+    <string name="security_section_oauth">இணைக்கப்பட்ட கணக்குகள்</string>
+    <string name="security_oauth_link">கணக்கை இணை</string>
+    <string name="security_unlink">இணைப்பை நீக்கவும்</string>
+    <string name="security_token_create">டோக்கன் உருவாக்கு</string>
+    <string name="security_token_name">பெயர்</string>
+    <string name="security_token_delete_title">டோக்கனை நீக்கவா?</string>
+    <string name="security_create">உருவாக்கு</string>
+    <string name="security_cancel">ரத்துசெய்</string>
+    <string name="security_save">சேமி</string>
+    <string name="security_done">முடிந்தது</string>
+    <string name="security_delete">நீக்கு</string>
+    <string name="security_rename">பெயர் மாற்று</string>
+    <string name="security_revoke">திரும்பப் பெறு</string>
+    <string name="security_disable">முடக்கு</string>
+    <string name="security_copy">நகலெடு</string>
+    <string name="security_copy_all">அனைத்தையும் நகலெடு</string>
 
 </resources>

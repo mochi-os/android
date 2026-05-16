@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">மீட்பு குறியீடு</string>
     <string name="auth_name">பெயர்</string>
     <string name="auth_create">உருவாக்கு</string>
+    <string name="auth_privacy_label">தனியுரிமை</string>
+    <string name="auth_privacy_public">பொது</string>
+    <string name="auth_privacy_private">தனிப்பட்டது</string>
+    <string name="auth_link_privacy">தனியுரிமை</string>
+    <string name="auth_use_different_account">வேறு கணக்கை பயன்படுத்து</string>
+    <string name="auth_error_suspended_title">கணக்கு இடைநிறுத்தப்பட்டது</string>
     <string name="common_back">பின்</string>
     <string name="common_close">மூடு</string>
     <string name="common_cancel">ரத்துசெய்</string>

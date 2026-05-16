@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Dikeldiş kody</string>
     <string name="auth_name">At</string>
     <string name="auth_create">Döretmek</string>
+    <string name="auth_privacy_label">Gizlinlik</string>
+    <string name="auth_privacy_public">Köpçülige açyk</string>
+    <string name="auth_privacy_private">Şahsy</string>
+    <string name="auth_link_privacy">Gizlinlik</string>
+    <string name="auth_use_different_account">Başga hasaby ulan</string>
+    <string name="auth_error_suspended_title">Hasap togtadyldy</string>
     <string name="common_back">Yza</string>
     <string name="common_close">Ýapmak</string>
     <string name="common_cancel">Ýatyrmak</string>

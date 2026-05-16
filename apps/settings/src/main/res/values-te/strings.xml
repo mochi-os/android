@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">సెట్టింగ్‌లు</string>
     <string name="settings_home_logout">లాగ్ అవుట్</string>
+    <string name="security_method_email">ఇమెయిల్ కోడ్</string>
+    <string name="security_method_passkey">పాస్‌కీ</string>
+    <string name="security_method_totp">ఆథెంటికేటర్ యాప్</string>
+    <string name="security_section_passkeys">పాస్‌కీలు</string>
+    <string name="security_passkey_register">పాస్‌కీని జోడించండి</string>
+    <string name="security_passkey_delete_title">పాస్‌కీని తొలగించాలా?</string>
+    <string name="security_section_totp">ఆథెంటికేటర్ యాప్</string>
+    <string name="security_totp_setup">ఆథెంటికేటర్‌ను సెటప్ చేయండి</string>
+    <string name="security_totp_setup_title">ఆథెంటికేటర్‌ను సెటప్ చేయండి</string>
+    <string name="security_totp_verify">ధృవీకరించండి</string>
+    <string name="security_totp_disable_title">ప్రామాణీకరణ యాప్‌ను నిలిపివేయాలా?</string>
+    <string name="security_section_recovery">రికవరీ కోడ్‌లు</string>
+    <string name="security_recovery_codes_title">రికవరీ కోడ్‌లు</string>
+    <string name="security_session_unknown_agent">తెలియని పరికరం</string>
+    <string name="security_session_revoke_title">సెషన్‌ను రద్దు చేయాలా?</string>
+    <string name="security_section_oauth">కనెక్ట్ చేయబడిన ఖాతాలు</string>
+    <string name="security_oauth_link">ఖాతాను లింక్ చేయండి</string>
+    <string name="security_unlink">అన్‌లింక్ చేయండి</string>
+    <string name="security_token_create">టోకెన్‌ను సృష్టించండి</string>
+    <string name="security_token_name">పేరు</string>
+    <string name="security_token_delete_title">టోకెన్‌ను తొలగించాలా?</string>
+    <string name="security_create">సృష్టించండి</string>
+    <string name="security_cancel">రద్దు చేయండి</string>
+    <string name="security_save">సేవ్ చేయండి</string>
+    <string name="security_done">పూర్తయింది</string>
+    <string name="security_delete">తొలగించండి</string>
+    <string name="security_rename">పేరు మార్చండి</string>
+    <string name="security_revoke">రద్దు చేయండి</string>
+    <string name="security_disable">నిలిపివేయండి</string>
+    <string name="security_copy">కాపీ చేయండి</string>
+    <string name="security_copy_all">అన్నీ కాపీ చేయండి</string>
 
 </resources>

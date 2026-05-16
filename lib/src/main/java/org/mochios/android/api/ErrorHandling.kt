@@ -9,8 +9,8 @@ import java.net.UnknownHostException
 
 sealed class MochiError : Exception() {
     data class NetworkError(override val cause: Throwable? = null) : MochiError()
-    data class AuthError(override val message: String? = null) : MochiError()
-    data class ForbiddenError(override val message: String? = null) : MochiError()
+    data class AuthError(override val message: String? = null, val errorCode: String? = null) : MochiError()
+    data class ForbiddenError(override val message: String? = null, val errorCode: String? = null) : MochiError()
     data class NotFoundError(override val message: String? = null) : MochiError()
     data class ServerError(val code: Int, override val message: String? = null) : MochiError()
     data class Unknown(override val message: String? = null) : MochiError()
@@ -20,8 +20,8 @@ fun Throwable.toMochiError(): MochiError {
     return when (this) {
         is MochiError -> this
         is ApiException -> when (code) {
-            401 -> MochiError.AuthError(apiError.message ?: apiError.error)
-            403 -> MochiError.ForbiddenError(apiError.message ?: apiError.error)
+            401 -> MochiError.AuthError(apiError.message ?: apiError.error, apiError.error)
+            403 -> MochiError.ForbiddenError(apiError.message ?: apiError.error, apiError.error)
             404 -> MochiError.NotFoundError(apiError.message ?: apiError.error)
             in 500..599 -> MochiError.ServerError(code, apiError.message ?: apiError.error)
             else -> MochiError.Unknown(apiError.message ?: apiError.error)

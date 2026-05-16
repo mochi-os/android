@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Obnovitvena koda</string>
     <string name="auth_name">Ime</string>
     <string name="auth_create">Ustvari</string>
+    <string name="auth_privacy_label">Zasebnost</string>
+    <string name="auth_privacy_public">Javno</string>
+    <string name="auth_privacy_private">Zasebno</string>
+    <string name="auth_link_privacy">Zasebnost</string>
+    <string name="auth_use_different_account">Uporabi drug račun</string>
+    <string name="auth_error_suspended_title">Račun je suspendiran</string>
     <string name="common_back">Nazaj</string>
     <string name="common_close">Zapri</string>
     <string name="common_cancel">Prekliči</string>

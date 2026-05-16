@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Msimbo wa kurejesha</string>
     <string name="auth_name">Jina</string>
     <string name="auth_create">Unda</string>
+    <string name="auth_privacy_label">Faragha</string>
+    <string name="auth_privacy_public">Ya umma</string>
+    <string name="auth_privacy_private">Ya faragha</string>
+    <string name="auth_link_privacy">Faragha</string>
+    <string name="auth_use_different_account">Tumia akaunti tofauti</string>
+    <string name="auth_error_suspended_title">Akaunti imesimamishwa</string>
     <string name="common_back">Rudi</string>
     <string name="common_close">Funga</string>
     <string name="common_cancel">Ghairi</string>

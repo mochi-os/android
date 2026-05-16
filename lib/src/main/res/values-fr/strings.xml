@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Code de récupération</string>
     <string name="auth_name">Nom</string>
     <string name="auth_create">Créer</string>
+    <string name="auth_privacy_label">Confidentialité</string>
+    <string name="auth_privacy_public">Public</string>
+    <string name="auth_privacy_private">Privé</string>
+    <string name="auth_link_privacy">Confidentialité</string>
+    <string name="auth_use_different_account">Utiliser un autre compte</string>
+    <string name="auth_error_suspended_title">Compte suspendu</string>
     <string name="common_back">Retour</string>
     <string name="common_close">Fermer</string>
     <string name="common_cancel">Annuler</string>

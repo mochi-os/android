@@ -257,6 +257,7 @@ class MainActivity : ComponentActivity() {
         when (name) {
             "notification" -> setNotificationDeepLink(params["link"])
             "oauth-return" -> applyOAuthReturn(params["code"], params["error"])
+            "oauth-link-return" -> applyOAuthLinkReturn(params["oauth_linked"], params["oauth_error"])
             else -> Log.w(TAG, "Unknown system intent in $uri")
         }
     }
@@ -284,6 +285,7 @@ class MainActivity : ComponentActivity() {
         when (uri.authority) {
             "notification" -> setNotificationDeepLink(uri.getQueryParameter("link"))
             "oauth-return" -> applyOAuthReturn(uri.getQueryParameter("code"), uri.getQueryParameter("error"))
+            "oauth-link-return" -> applyOAuthLinkReturn(uri.getQueryParameter("oauth_linked"), uri.getQueryParameter("oauth_error"))
         }
     }
 
@@ -329,6 +331,11 @@ class MainActivity : ComponentActivity() {
     private fun applyOAuthReturn(code: String?, error: String?) {
         if (code == null && error == null) return
         runBlocking { sessionManager.setOAuthReturn(code, error) }
+    }
+
+    private fun applyOAuthLinkReturn(provider: String?, error: String?) {
+        if (provider == null && error == null) return
+        runBlocking { sessionManager.setOAuthLinkReturn(provider, error) }
     }
 
     private fun navigateToLink(navController: NavController, link: String) {
@@ -385,7 +392,7 @@ class MainActivity : ComponentActivity() {
         // navigates to SettingsApp.NOTIFICATIONS; the Mochi Settings launcher
         // alias targets SettingsApp.HOME via `targetApp = "settings"`.
 
-        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return")
+        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
 
         /**
          * Every Mochi-app the super-app bundles. The bootstrap path mints a JWT

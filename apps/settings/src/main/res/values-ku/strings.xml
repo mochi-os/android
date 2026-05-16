@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Mîheng</string>
     <string name="settings_home_logout">Derkeve</string>
+    <string name="security_method_email">Koda e-nameyê</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Sepana rastandinê</string>
+    <string name="security_section_passkeys">Passkey</string>
+    <string name="security_passkey_register">Passkey zêde bike</string>
+    <string name="security_passkey_delete_title">Passkey jê bibe?</string>
+    <string name="security_section_totp">Sepana rastandinê</string>
+    <string name="security_totp_setup">Pîvanker saz bike</string>
+    <string name="security_totp_setup_title">Pîvanker saz bike</string>
+    <string name="security_totp_verify">Verifîke bike</string>
+    <string name="security_totp_disable_title">Rastandinê neçalak bike?</string>
+    <string name="security_section_recovery">Kodên vegerê</string>
+    <string name="security_recovery_codes_title">Kodên vegerê</string>
+    <string name="security_session_unknown_agent">Cîhaza nediyar</string>
+    <string name="security_session_revoke_title">Danişînê vekişîne?</string>
+    <string name="security_section_oauth">Hesabên girêdayî</string>
+    <string name="security_oauth_link">Hesabê girêde</string>
+    <string name="security_unlink">Veqetîne</string>
+    <string name="security_token_create">Token çêbike</string>
+    <string name="security_token_name">Nav</string>
+    <string name="security_token_delete_title">Tokenê jê bibe?</string>
+    <string name="security_create">Çêbike</string>
+    <string name="security_cancel">Betal bike</string>
+    <string name="security_save">Tomar bike</string>
+    <string name="security_done">Qediya</string>
+    <string name="security_delete">Jê bibe</string>
+    <string name="security_rename">Navê biguhere</string>
+    <string name="security_revoke">Vekişîne</string>
+    <string name="security_disable">Neçalak bike</string>
+    <string name="security_copy">Kopî bike</string>
+    <string name="security_copy_all">Hemûyan kopî bike</string>
 
 </resources>

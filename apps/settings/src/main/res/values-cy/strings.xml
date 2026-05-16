@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Gosodiadau</string>
     <string name="settings_home_logout">Allgofnodi</string>
+    <string name="security_method_email">Cod e-bost</string>
+    <string name="security_method_passkey">Pasallwedd</string>
+    <string name="security_method_totp">App dilyswr</string>
+    <string name="security_section_passkeys">Pasallweddi</string>
+    <string name="security_passkey_register">Ychwanegu allwedd basg</string>
+    <string name="security_passkey_delete_title">Dileu allwedd basg?</string>
+    <string name="security_section_totp">App dilyswr</string>
+    <string name="security_totp_setup">Gosod dilysydd</string>
+    <string name="security_totp_setup_title">Gosod dilysydd</string>
+    <string name="security_totp_verify">Dilysu</string>
+    <string name="security_totp_disable_title">Analluogi\'r dilyswr?</string>
+    <string name="security_section_recovery">Codau adfer</string>
+    <string name="security_recovery_codes_title">Codau adfer</string>
+    <string name="security_session_unknown_agent">Dyfais anhysbys</string>
+    <string name="security_session_revoke_title">Dirymu sesiwn?</string>
+    <string name="security_section_oauth">Cyfrifon cysylltiedig</string>
+    <string name="security_oauth_link">Cysylltu cyfrif</string>
+    <string name="security_unlink">Datgysylltu</string>
+    <string name="security_token_create">Creu tocyn</string>
+    <string name="security_token_name">Enw</string>
+    <string name="security_token_delete_title">Dileu tocyn?</string>
+    <string name="security_create">Creu</string>
+    <string name="security_cancel">Canslo</string>
+    <string name="security_save">Cadw</string>
+    <string name="security_done">Wedi gorffen</string>
+    <string name="security_delete">Dileu</string>
+    <string name="security_rename">Ailenwi</string>
+    <string name="security_revoke">Dirymu</string>
+    <string name="security_disable">Analluogi</string>
+    <string name="security_copy">Copïo</string>
+    <string name="security_copy_all">Copïo\'r cyfan</string>
 
 </resources>

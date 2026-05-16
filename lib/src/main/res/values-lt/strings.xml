@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Atkūrimo kodas</string>
     <string name="auth_name">Pavadinimas</string>
     <string name="auth_create">Sukurti</string>
+    <string name="auth_privacy_label">Privatumas</string>
+    <string name="auth_privacy_public">Viešas</string>
+    <string name="auth_privacy_private">Privatus</string>
+    <string name="auth_link_privacy">Privatumas</string>
+    <string name="auth_use_different_account">Naudoti kitą paskyrą</string>
+    <string name="auth_error_suspended_title">Paskyra sustabdyta</string>
     <string name="common_back">Atgal</string>
     <string name="common_close">Uždaryti</string>
     <string name="common_cancel">Atšaukti</string>

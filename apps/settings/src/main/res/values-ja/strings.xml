@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">設定</string>
     <string name="settings_home_logout">ログアウト</string>
+    <string name="security_method_email">メールコード</string>
+    <string name="security_method_passkey">パスキー</string>
+    <string name="security_method_totp">認証アプリ</string>
+    <string name="security_section_passkeys">パスキー</string>
+    <string name="security_passkey_register">パスキーを追加</string>
+    <string name="security_passkey_delete_title">パスキーを削除しますか?</string>
+    <string name="security_section_totp">認証アプリ</string>
+    <string name="security_totp_setup">認証アプリを設定</string>
+    <string name="security_totp_setup_title">認証アプリを設定</string>
+    <string name="security_totp_verify">認証</string>
+    <string name="security_totp_disable_title">認証アプリを無効にしますか?</string>
+    <string name="security_section_recovery">リカバリーコード</string>
+    <string name="security_recovery_codes_title">リカバリーコード</string>
+    <string name="security_session_unknown_agent">不明なデバイス</string>
+    <string name="security_session_revoke_title">セッションを取り消しますか?</string>
+    <string name="security_section_oauth">連携アカウント</string>
+    <string name="security_oauth_link">アカウントをリンク</string>
+    <string name="security_unlink">リンク解除</string>
+    <string name="security_token_create">トークンを作成</string>
+    <string name="security_token_name">名前</string>
+    <string name="security_token_delete_title">トークンを削除しますか?</string>
+    <string name="security_create">作成</string>
+    <string name="security_cancel">キャンセル</string>
+    <string name="security_save">保存</string>
+    <string name="security_done">完了</string>
+    <string name="security_delete">削除</string>
+    <string name="security_rename">名前を変更</string>
+    <string name="security_revoke">取り消し</string>
+    <string name="security_disable">無効化</string>
+    <string name="security_copy">コピー</string>
+    <string name="security_copy_all">すべてコピー</string>
 
 </resources>

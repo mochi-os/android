@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Sozlamalar</string>
     <string name="settings_home_logout">Chiqish</string>
+    <string name="security_method_email">Email kodi</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Autentifikator ilova</string>
+    <string name="security_section_passkeys">Passkey’lar</string>
+    <string name="security_passkey_register">Passkey qoʻshish</string>
+    <string name="security_passkey_delete_title">Passkey oʻchirilsinmi?</string>
+    <string name="security_section_totp">Autentifikator ilova</string>
+    <string name="security_totp_setup">Autentifikatorni sozlash</string>
+    <string name="security_totp_setup_title">Autentifikatorni sozlash</string>
+    <string name="security_totp_verify">Tasdiqlash</string>
+    <string name="security_totp_disable_title">Autentifikator oʻchirilsinmi?</string>
+    <string name="security_section_recovery">Tiklash kodlari</string>
+    <string name="security_recovery_codes_title">Tiklash kodlari</string>
+    <string name="security_session_unknown_agent">Nomaʼlum qurilma</string>
+    <string name="security_session_revoke_title">Seans bekor qilinsinmi?</string>
+    <string name="security_section_oauth">Ulangan hisoblar</string>
+    <string name="security_oauth_link">Hisobni bogʻlash</string>
+    <string name="security_unlink">Bogʻlamani yechish</string>
+    <string name="security_token_create">Token yaratish</string>
+    <string name="security_token_name">Nomi</string>
+    <string name="security_token_delete_title">Token oʻchirilsinmi?</string>
+    <string name="security_create">Yaratish</string>
+    <string name="security_cancel">Bekor qilish</string>
+    <string name="security_save">Saqlash</string>
+    <string name="security_done">Bajarildi</string>
+    <string name="security_delete">Oʻchirish</string>
+    <string name="security_rename">Nomini oʻzgartirish</string>
+    <string name="security_revoke">Bekor qilish</string>
+    <string name="security_disable">Oʻchirish</string>
+    <string name="security_copy">Nusxalash</string>
+    <string name="security_copy_all">Hammasini nusxalash</string>
 
 </resources>

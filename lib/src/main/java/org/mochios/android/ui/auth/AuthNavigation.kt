@@ -81,7 +81,9 @@ fun AuthNavigation(
             IdentityScreen(
                 uiState = uiState,
                 onUpdateName = viewModel::updateIdentityName,
-                onCreate = viewModel::createIdentity
+                onUpdatePrivacy = viewModel::updateIdentityPrivacy,
+                onCreate = viewModel::createIdentity,
+                onAbandon = viewModel::abandonIdentity,
             )
         }
     }

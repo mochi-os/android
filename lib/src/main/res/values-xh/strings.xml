@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Ikhowudi yokubuyisa</string>
     <string name="auth_name">Igama</string>
     <string name="auth_create">Yenza</string>
+    <string name="auth_privacy_label">Ubumfihlo</string>
+    <string name="auth_privacy_public">Esidlangalaleni</string>
+    <string name="auth_privacy_private">Yangasese</string>
+    <string name="auth_link_privacy">Ubumfihlo</string>
+    <string name="auth_use_different_account">Sebenzisa enye i-akhawunti</string>
+    <string name="auth_error_suspended_title">I-akhawunti inqunyanyisiwe</string>
     <string name="common_back">Buyela</string>
     <string name="common_close">Vala</string>
     <string name="common_cancel">Rhoxisa</string>

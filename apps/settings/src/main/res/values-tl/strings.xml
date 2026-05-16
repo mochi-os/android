@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Mga setting</string>
     <string name="settings_home_logout">Mag-log out</string>
+    <string name="security_method_email">Email code</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">Authenticator app</string>
+    <string name="security_section_passkeys">Mga Passkey</string>
+    <string name="security_passkey_register">Magdagdag ng passkey</string>
+    <string name="security_passkey_delete_title">I-delete ang passkey?</string>
+    <string name="security_section_totp">Authenticator app</string>
+    <string name="security_totp_setup">Mag-set up ng authenticator</string>
+    <string name="security_totp_setup_title">Mag-set up ng authenticator</string>
+    <string name="security_totp_verify">Beripikahin</string>
+    <string name="security_totp_disable_title">I-disable ang authenticator?</string>
+    <string name="security_section_recovery">Mga recovery code</string>
+    <string name="security_recovery_codes_title">Mga recovery code</string>
+    <string name="security_session_unknown_agent">Hindi kilalang device</string>
+    <string name="security_session_revoke_title">Bawiin ang session?</string>
+    <string name="security_section_oauth">Mga konektadong account</string>
+    <string name="security_oauth_link">I-link ang account</string>
+    <string name="security_unlink">Tanggalin ang link</string>
+    <string name="security_token_create">Gumawa ng token</string>
+    <string name="security_token_name">Pangalan</string>
+    <string name="security_token_delete_title">I-delete ang token?</string>
+    <string name="security_create">Gumawa</string>
+    <string name="security_cancel">Kanselahin</string>
+    <string name="security_save">I-save</string>
+    <string name="security_done">Tapos na</string>
+    <string name="security_delete">I-delete</string>
+    <string name="security_rename">Palitan ang pangalan</string>
+    <string name="security_revoke">Bawiin</string>
+    <string name="security_disable">I-disable</string>
+    <string name="security_copy">Kopyahin</string>
+    <string name="security_copy_all">Kopyahin lahat</string>
 
 </resources>

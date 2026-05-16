@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">د بیرته راګرځولو کوډ</string>
     <string name="auth_name">نوم</string>
     <string name="auth_create">جوړ کړئ</string>
+    <string name="auth_privacy_label">محرمیت</string>
+    <string name="auth_privacy_public">عامه</string>
+    <string name="auth_privacy_private">خصوصي</string>
+    <string name="auth_link_privacy">محرمیت</string>
+    <string name="auth_use_different_account">بل حساب وکاروئ</string>
+    <string name="auth_error_suspended_title">حساب وځنډول شو</string>
     <string name="common_back">شاته</string>
     <string name="common_close">وتړئ</string>
     <string name="common_cancel">لغوه کول</string>

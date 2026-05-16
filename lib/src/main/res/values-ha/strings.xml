@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Lambar dawowa</string>
     <string name="auth_name">Suna</string>
     <string name="auth_create">Ƙirƙira</string>
+    <string name="auth_privacy_label">Sirri</string>
+    <string name="auth_privacy_public">Na jama\'a</string>
+    <string name="auth_privacy_private">Na sirri</string>
+    <string name="auth_link_privacy">Sirri</string>
+    <string name="auth_use_different_account">Yi amfani da wani account dabam</string>
+    <string name="auth_error_suspended_title">An dakatar da asusu</string>
     <string name="common_back">Komawa</string>
     <string name="common_close">Rufe</string>
     <string name="common_cancel">Soke</string>

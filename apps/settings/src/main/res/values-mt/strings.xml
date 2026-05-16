@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">Settings</string>
     <string name="settings_home_logout">Oħroġ</string>
+    <string name="security_method_email">Kodiċi tal-email</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">App tal-awtentikazzjoni</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Żid passkey</string>
+    <string name="security_passkey_delete_title">Tħassar passkey?</string>
+    <string name="security_section_totp">App tal-awtentikazzjoni</string>
+    <string name="security_totp_setup">Issettja awtentikatur</string>
+    <string name="security_totp_setup_title">Issettja awtentikatur</string>
+    <string name="security_totp_verify">Ivverifika</string>
+    <string name="security_totp_disable_title">Tiddiżabbilta l-awtentikatur?</string>
+    <string name="security_section_recovery">Kodiċi ta\' rkupru</string>
+    <string name="security_recovery_codes_title">Kodiċi ta\' rkupru</string>
+    <string name="security_session_unknown_agent">Apparat mhux magħruf</string>
+    <string name="security_session_revoke_title">Tirrevoka s-sessjoni?</string>
+    <string name="security_section_oauth">Kontijiet konnessi</string>
+    <string name="security_oauth_link">Orbot kont</string>
+    <string name="security_unlink">Aqta\'</string>
+    <string name="security_token_create">Oħloq token</string>
+    <string name="security_token_name">Isem</string>
+    <string name="security_token_delete_title">Tħassar token?</string>
+    <string name="security_create">Oħloq</string>
+    <string name="security_cancel">Ikkanċella</string>
+    <string name="security_save">Issejvja</string>
+    <string name="security_done">Lest</string>
+    <string name="security_delete">Ħassar</string>
+    <string name="security_rename">Irrinomina</string>
+    <string name="security_revoke">Irrevoka</string>
+    <string name="security_disable">Iddiżabbilta</string>
+    <string name="security_copy">Ikkupja</string>
+    <string name="security_copy_all">Ikkupja kollox</string>
 
 </resources>

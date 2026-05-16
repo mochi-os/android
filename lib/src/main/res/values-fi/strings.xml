@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Palautuskoodi</string>
     <string name="auth_name">Nimi</string>
     <string name="auth_create">Luo</string>
+    <string name="auth_privacy_label">Yksityisyys</string>
+    <string name="auth_privacy_public">Julkinen</string>
+    <string name="auth_privacy_private">Yksityinen</string>
+    <string name="auth_link_privacy">Yksityisyys</string>
+    <string name="auth_use_different_account">Käytä toista tiliä</string>
+    <string name="auth_error_suspended_title">Tili jäädytetty</string>
     <string name="common_back">Takaisin</string>
     <string name="common_close">Sulje</string>
     <string name="common_cancel">Peruuta</string>

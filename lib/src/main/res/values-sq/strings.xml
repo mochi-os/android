@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Kodi i rikuperimit</string>
     <string name="auth_name">Emri</string>
     <string name="auth_create">Krijo</string>
+    <string name="auth_privacy_label">Privatësia</string>
+    <string name="auth_privacy_public">Publik</string>
+    <string name="auth_privacy_private">Privat</string>
+    <string name="auth_link_privacy">Privatësia</string>
+    <string name="auth_use_different_account">Përdor një llogari tjetër</string>
+    <string name="auth_error_suspended_title">Llogaria u pezullua</string>
     <string name="common_back">Mbrapa</string>
     <string name="common_close">Mbyll</string>
     <string name="common_cancel">Anulo</string>

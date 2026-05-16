@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">تنظیمات</string>
     <string name="settings_home_logout">خروج</string>
+    <string name="security_method_email">کد ایمیل</string>
+    <string name="security_method_passkey">پسکی</string>
+    <string name="security_method_totp">برنامهٔ احراز هویت</string>
+    <string name="security_section_passkeys">پسکی‌ها</string>
+    <string name="security_passkey_register">افزودن passkey</string>
+    <string name="security_passkey_delete_title">حذف passkey؟</string>
+    <string name="security_section_totp">برنامهٔ احراز هویت</string>
+    <string name="security_totp_setup">راه‌اندازی authenticator</string>
+    <string name="security_totp_setup_title">راه‌اندازی authenticator</string>
+    <string name="security_totp_verify">تأیید</string>
+    <string name="security_totp_disable_title">غیرفعال کردن احراز هویت؟</string>
+    <string name="security_section_recovery">کدهای بازیابی</string>
+    <string name="security_recovery_codes_title">کدهای بازیابی</string>
+    <string name="security_session_unknown_agent">دستگاه ناشناخته</string>
+    <string name="security_session_revoke_title">لغو نشست؟</string>
+    <string name="security_section_oauth">حساب‌های متصل</string>
+    <string name="security_oauth_link">اتصال حساب</string>
+    <string name="security_unlink">قطع پیوند</string>
+    <string name="security_token_create">ساخت توکن</string>
+    <string name="security_token_name">نام</string>
+    <string name="security_token_delete_title">حذف توکن؟</string>
+    <string name="security_create">ساختن</string>
+    <string name="security_cancel">لغو</string>
+    <string name="security_save">ذخیره</string>
+    <string name="security_done">انجام شد</string>
+    <string name="security_delete">حذف</string>
+    <string name="security_rename">تغییر نام</string>
+    <string name="security_revoke">لغو</string>
+    <string name="security_disable">غیرفعال کردن</string>
+    <string name="security_copy">کپی</string>
+    <string name="security_copy_all">کپی همه</string>
 
 </resources>

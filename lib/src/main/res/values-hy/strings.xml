@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Վերականգնման կոդ</string>
     <string name="auth_name">Անուն</string>
     <string name="auth_create">Ստեղծել CRM</string>
+    <string name="auth_privacy_label">Գաղտնիություն</string>
+    <string name="auth_privacy_public">Հանրային</string>
+    <string name="auth_privacy_private">Մասնավոր</string>
+    <string name="auth_link_privacy">Գաղտնիություն</string>
+    <string name="auth_use_different_account">Օգտագործել այլ հաշիվ</string>
+    <string name="auth_error_suspended_title">Հաշվի տեսակ</string>
     <string name="common_back">Հետ դեպի CRM</string>
     <string name="common_close">Փակել վահանակը</string>
     <string name="common_cancel">Չեղարկել մեկնաբանությունը</string>

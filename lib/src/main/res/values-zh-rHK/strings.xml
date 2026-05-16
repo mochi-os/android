@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="auth_privacy_label">Privacy</string>
+    <string name="auth_link_privacy">Privacy</string>
+    <string name="auth_use_different_account">使用其他賬戶</string>
+    <string name="auth_error_suspended_title">賬戶已停權</string>
     <string name="person_picker_search">搜尋用戶</string>
     <string name="settings_radius_medium">Medium</string>
     <string name="settings_font_serif">Serif</string>

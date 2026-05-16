@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Kodiċi ta\' rkupru</string>
     <string name="auth_name">Isem</string>
     <string name="auth_create">Oħloq</string>
+    <string name="auth_privacy_label">Privatezza</string>
+    <string name="auth_privacy_public">Pubbliku</string>
+    <string name="auth_privacy_private">Privat</string>
+    <string name="auth_link_privacy">Privatezza</string>
+    <string name="auth_use_different_account">Uża kont differenti</string>
+    <string name="auth_error_suspended_title">Kont sospiż</string>
     <string name="common_back">Lura</string>
     <string name="common_close">Agħlaq</string>
     <string name="common_cancel">Ikkanċella</string>

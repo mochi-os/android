@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Recuperación papapy</string>
     <string name="auth_name">Téra</string>
     <string name="auth_create">Embojeguáva</string>
+    <string name="auth_privacy_label">Privacidad</string>
+    <string name="auth_privacy_public">Ojeikéva</string>
+    <string name="auth_privacy_private">Ñemiguáva</string>
+    <string name="auth_link_privacy">Privacidad</string>
+    <string name="auth_use_different_account">Eipuru ambue cuenta</string>
+    <string name="auth_error_suspended_title">Tetãygua oñepe\'ã</string>
     <string name="common_back">Tapykuépe</string>
     <string name="common_close">Mboty</string>
     <string name="common_cancel">Heja</string>

@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">ترتیبات</string>
     <string name="settings_home_logout">لاګ آوټ</string>
+    <string name="security_method_email">د بریښنالیک کوډ</string>
+    <string name="security_method_passkey">Passkey</string>
+    <string name="security_method_totp">د Authenticator اپلیکیشن</string>
+    <string name="security_section_passkeys">Passkeys</string>
+    <string name="security_passkey_register">Passkey اضافه کړئ</string>
+    <string name="security_passkey_delete_title">Passkey ړنګ کړئ؟</string>
+    <string name="security_section_totp">د Authenticator اپلیکیشن</string>
+    <string name="security_totp_setup">Authenticator تنظیم کړئ</string>
+    <string name="security_totp_setup_title">Authenticator تنظیم کړئ</string>
+    <string name="security_totp_verify">تصدیق</string>
+    <string name="security_totp_disable_title">Authenticator غیرفعال کړئ؟</string>
+    <string name="security_section_recovery">د بیرته راګرځولو کوډونه</string>
+    <string name="security_recovery_codes_title">د بیرته راګرځولو کوډونه</string>
+    <string name="security_session_unknown_agent">نامعلوم ډیوایس</string>
+    <string name="security_session_revoke_title">ناسته لغوه کړو؟</string>
+    <string name="security_section_oauth">وصل شوي حسابونه</string>
+    <string name="security_oauth_link">حساب وصل کړئ</string>
+    <string name="security_unlink">بې وصله کول</string>
+    <string name="security_token_create">ټوکن جوړ کړئ</string>
+    <string name="security_token_name">نوم</string>
+    <string name="security_token_delete_title">ټوکن ړنګ کړئ؟</string>
+    <string name="security_create">جوړ کړئ</string>
+    <string name="security_cancel">لغوه کول</string>
+    <string name="security_save">خوندي کول</string>
+    <string name="security_done">ترسره شو</string>
+    <string name="security_delete">ړنګ کړئ</string>
+    <string name="security_rename">بیا نومول</string>
+    <string name="security_revoke">لغوه کول</string>
+    <string name="security_disable">غیرفعال کړئ</string>
+    <string name="security_copy">کاپي کړئ</string>
+    <string name="security_copy_all">ټول کاپي کړئ</string>
 
 </resources>

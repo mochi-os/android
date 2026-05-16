@@ -3,5 +3,36 @@
 
     <string name="settings_home_title">הגדרות</string>
     <string name="settings_home_logout">התנתק</string>
+    <string name="security_method_email">קוד אימייל</string>
+    <string name="security_method_passkey">מפתח גישה</string>
+    <string name="security_method_totp">אפליקציית אימות</string>
+    <string name="security_section_passkeys">מפתחות גישה</string>
+    <string name="security_passkey_register">הוסף Passkey</string>
+    <string name="security_passkey_delete_title">למחוק Passkey?</string>
+    <string name="security_section_totp">אפליקציית אימות</string>
+    <string name="security_totp_setup">הגדר מאמת</string>
+    <string name="security_totp_setup_title">הגדר מאמת</string>
+    <string name="security_totp_verify">אמת</string>
+    <string name="security_totp_disable_title">להשבית את האימות?</string>
+    <string name="security_section_recovery">קודי שחזור</string>
+    <string name="security_recovery_codes_title">קודי שחזור</string>
+    <string name="security_session_unknown_agent">מכשיר לא ידוע</string>
+    <string name="security_session_revoke_title">לבטל הפעלה?</string>
+    <string name="security_section_oauth">חשבונות מחוברים</string>
+    <string name="security_oauth_link">קשר חשבון</string>
+    <string name="security_unlink">בטל קישור</string>
+    <string name="security_token_create">צור אסימון</string>
+    <string name="security_token_name">שם</string>
+    <string name="security_token_delete_title">למחוק אסימון?</string>
+    <string name="security_create">צור</string>
+    <string name="security_cancel">ביטול</string>
+    <string name="security_save">שמור</string>
+    <string name="security_done">בוצע</string>
+    <string name="security_delete">מחק</string>
+    <string name="security_rename">שנה שם</string>
+    <string name="security_revoke">בטל</string>
+    <string name="security_disable">השבת</string>
+    <string name="security_copy">העתק</string>
+    <string name="security_copy_all">העתק הכול</string>
 
 </resources>

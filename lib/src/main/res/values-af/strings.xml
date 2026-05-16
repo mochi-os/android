@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Herstelkode</string>
     <string name="auth_name">Naam</string>
     <string name="auth_create">Skep</string>
+    <string name="auth_privacy_label">Privaatheid</string>
+    <string name="auth_privacy_public">Publiek</string>
+    <string name="auth_privacy_private">Privaat</string>
+    <string name="auth_link_privacy">Privaatheid</string>
+    <string name="auth_use_different_account">Gebruik \'n ander rekening</string>
+    <string name="auth_error_suspended_title">Rekening opgeskort</string>
     <string name="common_back">Terug</string>
     <string name="common_close">Sluit</string>
     <string name="common_cancel">Kanselleer</string>

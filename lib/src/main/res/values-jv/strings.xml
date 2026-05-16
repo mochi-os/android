@@ -12,6 +12,12 @@
     <string name="auth_recovery_code">Kode pemulihan</string>
     <string name="auth_name">Jeneng</string>
     <string name="auth_create">Gawé</string>
+    <string name="auth_privacy_label">Privasi</string>
+    <string name="auth_privacy_public">Publik</string>
+    <string name="auth_privacy_private">Privat</string>
+    <string name="auth_link_privacy">Privasi</string>
+    <string name="auth_use_different_account">Gunakaké akun beda</string>
+    <string name="auth_error_suspended_title">Akun digantung</string>
     <string name="common_back">Bali</string>
     <string name="common_close">Tutup</string>
     <string name="common_cancel">Batal</string>
