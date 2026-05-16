@@ -153,7 +153,7 @@ fun BoardView(
 
     LazyRow(
         modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp),
+        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(orderedColumns, key = { it.id }) { columnOption ->
@@ -322,7 +322,7 @@ private fun BoardColumn(
                 .then(headerDragModifier)
                 .then(edgeBorderModifier)
                 .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
-                .padding(horizontal = 4.dp, vertical = 8.dp)
+                .padding(horizontal = 4.dp, vertical = 6.dp)
         ) {
             Icon(
                 imageVector = if (collapsed) Icons.Default.ChevronRight else Icons.Default.ExpandMore,
