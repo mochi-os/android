@@ -100,6 +100,7 @@ dependencies {
     implementation(project(":apps:chat"))
     implementation(project(":apps:forums"))
     implementation(project(":apps:projects"))
+    implementation(project(":apps:settings"))
 
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)

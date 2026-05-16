@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Сапар</string>
     <string name="feeds_tab_general">Жалпы</string>
     <string name="feeds_tab_sources">Дереккөздер</string>
+    <string name="feeds_sources_title">Дереккөздер</string>
     <string name="feeds_tab_access">Қол жеткізу</string>
     <string name="feeds_tab_members">Мүшелер</string>
     <string name="feeds_tab_ai">AI</string>

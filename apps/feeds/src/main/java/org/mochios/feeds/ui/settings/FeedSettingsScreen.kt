@@ -49,9 +49,10 @@ fun FeedSettingsScreen(
 
     val isPrivate = feedInfo?.privacy == "private"
     // Stable IDs drive dispatch; titles come from resources at render time
+    // Sources moved to a standalone page off the ellipsis menu to match the
+    // web layout (apps/feeds/web/src/routes/_authenticated/$feedId_.sources.tsx).
     val tabIds = buildList {
         add(SettingsTab.General)
-        add(SettingsTab.Sources)
         add(SettingsTab.Access)
         if (isPrivate) add(SettingsTab.Members)
         add(SettingsTab.Ai)
@@ -86,7 +87,6 @@ fun FeedSettingsScreen(
     // Load data for each tab when selected, keyed by tab id
     LaunchedEffect(selectedTab) {
         when (selectedTab) {
-            SettingsTab.Sources -> viewModel.loadSources()
             SettingsTab.Access -> viewModel.loadAccessRules()
             SettingsTab.Members -> viewModel.loadMembers()
             SettingsTab.Ai -> viewModel.loadAiPrompts()
@@ -143,7 +143,6 @@ fun FeedSettingsScreen(
                         viewModel = viewModel,
                         onFeedDeleted = onFeedDeleted
                     )
-                    SettingsTab.Sources -> SourcesTab(viewModel = viewModel)
                     SettingsTab.Access -> AccessTab(viewModel = viewModel)
                     SettingsTab.Members -> MembersTab(viewModel = viewModel)
                     SettingsTab.Ai -> AiTab(viewModel = viewModel)
@@ -155,7 +154,6 @@ fun FeedSettingsScreen(
 
 private enum class SettingsTab(val titleRes: Int) {
     General(R.string.feeds_tab_general),
-    Sources(R.string.feeds_tab_sources),
     Access(R.string.feeds_tab_access),
     Members(R.string.feeds_tab_members),
     Ai(R.string.feeds_tab_ai),

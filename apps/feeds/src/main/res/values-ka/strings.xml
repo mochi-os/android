@@ -47,6 +47,7 @@
     <string name="feeds_travelling">თარგმნე ინგლისურად და აჩვენე ჩამონათვალის სახით.</string>
     <string name="feeds_tab_general">ზოგადი</string>
     <string name="feeds_tab_sources">წყაროები</string>
+    <string name="feeds_sources_title">წყაროები</string>
     <string name="feeds_tab_access">წვდომა</string>
     <string name="feeds_tab_members">წევრები</string>
     <string name="feeds_tab_ai">AI</string>

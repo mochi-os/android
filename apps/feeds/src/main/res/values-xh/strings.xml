@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Ukuhamba</string>
     <string name="feeds_tab_general">Ngokubanzi</string>
     <string name="feeds_tab_sources">Imithombo</string>
+    <string name="feeds_sources_title">Imithombo</string>
     <string name="feeds_tab_access">Ufikelelo</string>
     <string name="feeds_tab_members">Amalungu</string>
     <string name="feeds_tab_ai">AI</string>

@@ -47,6 +47,7 @@
     <string name="feeds_travelling">កំពុងធ្វើដំណើរ</string>
     <string name="feeds_tab_general">ទូទៅ</string>
     <string name="feeds_tab_sources">ប្រភព</string>
+    <string name="feeds_sources_title">ប្រភព</string>
     <string name="feeds_tab_access">ការចូលប្រើ</string>
     <string name="feeds_tab_members">សមាជិក</string>
     <string name="feeds_tab_ai">AI</string>

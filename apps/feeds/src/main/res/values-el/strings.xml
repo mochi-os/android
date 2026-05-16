@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Σε ταξίδι</string>
     <string name="feeds_tab_general">Γενικά</string>
     <string name="feeds_tab_sources">Πηγές</string>
+    <string name="feeds_sources_title">Πηγές</string>
     <string name="feeds_tab_access">Πρόσβαση</string>
     <string name="feeds_tab_members">Μέλη</string>
     <string name="feeds_tab_ai">AI</string>

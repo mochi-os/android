@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Reisil</string>
     <string name="feeds_tab_general">Üldine</string>
     <string name="feeds_tab_sources">Allikad</string>
+    <string name="feeds_sources_title">Allikad</string>
     <string name="feeds_tab_access">Juurdepääs</string>
     <string name="feeds_tab_members">Liikmed</string>
     <string name="feeds_tab_ai">AI</string>

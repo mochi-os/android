@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_home_title">সেটিংস</string>
+    <string name="settings_home_logout">লগ আউট করুন</string>
+
+</resources>

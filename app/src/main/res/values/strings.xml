@@ -5,4 +5,5 @@
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forums</string>
     <string name="launcher_projects">Projects</string>
+    <string name="launcher_settings">Settings</string>
 </resources>

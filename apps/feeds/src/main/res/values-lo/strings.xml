@@ -47,6 +47,7 @@
     <string name="feeds_travelling">ການເດີນທາງ</string>
     <string name="feeds_tab_general">ທົ່ວໄປ</string>
     <string name="feeds_tab_sources">ແຫຼ່ງ</string>
+    <string name="feeds_sources_title">ແຫຼ່ງ</string>
     <string name="feeds_tab_access">ການເຂົ້າເຖິງ</string>
     <string name="feeds_tab_members">ສະມາຊິກ</string>
     <string name="feeds_tab_ai">AI</string>

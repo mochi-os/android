@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Ճանապարհորդություն</string>
     <string name="feeds_tab_general">Ընդհանուր</string>
     <string name="feeds_tab_sources">Աղբյուրներ</string>
+    <string name="feeds_sources_title">Աղբյուրներ</string>
     <string name="feeds_tab_access">Մուտք</string>
     <string name="feeds_tab_members">Հիշողությունների աղբյուրն ավելացվեց</string>
     <string name="feeds_tab_ai">AI</string>

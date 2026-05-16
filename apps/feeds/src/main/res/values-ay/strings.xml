@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Yaqha thaqhañ término yant\'am</string>
     <string name="feeds_tab_general">Taqpacha</string>
     <string name="feeds_tab_sources">Origenanaka</string>
+    <string name="feeds_sources_title">Origenanaka</string>
     <string name="feeds_tab_access">Mantaña</string>
     <string name="feeds_tab_members">Integrantenaka</string>
     <string name="feeds_tab_ai">AI</string>

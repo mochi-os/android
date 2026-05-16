@@ -29,6 +29,7 @@ import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -76,6 +77,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.ui.chatlist.ChatListViewModel
@@ -96,6 +98,7 @@ fun ChatScreen(
     onSelectChat: (String) -> Unit,
     onNewChat: () -> Unit,
     onSettings: (String) -> Unit,
+    onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     listViewModel: ChatListViewModel = hiltViewModel(),
 ) {
@@ -178,6 +181,7 @@ fun ChatScreen(
             ChatContent(
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                 onSettings = onSettings,
+                onOpenNotifications = onOpenNotifications,
             )
         }
     }
@@ -219,6 +223,7 @@ private fun ChatDrawerPlaceholder(onOpenDrawer: () -> Unit) {
 private fun ChatContent(
     onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
+    onOpenNotifications: () -> Unit,
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -287,6 +292,7 @@ private fun ChatContent(
                     }
                 },
                 actions = {
+                    NotificationBell(onClick = onOpenNotifications)
                     if (uiState.chat.id.isNotEmpty()) {
                         IconButton(onClick = { onSettings(uiState.chat.fingerprint.ifEmpty { uiState.chat.id }) }) {
                             Icon(

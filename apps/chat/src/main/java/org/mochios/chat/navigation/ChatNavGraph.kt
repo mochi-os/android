@@ -35,6 +35,7 @@ object ChatApp {
 fun NavGraphBuilder.chatNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
+    onOpenNotifications: () -> Unit = {},
 ) {
     composable(ChatApp.ROUTER) {
         ChatRouter(onResolve = { chatId ->
@@ -66,6 +67,7 @@ fun NavGraphBuilder.chatNavGraph(
             },
             onNewChat = { navController.navigate(ChatApp.newChat()) },
             onSettings = { id -> navController.navigate(ChatApp.chatSettings(id)) },
+            onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
         )
     }

@@ -47,6 +47,7 @@
     <string name="feeds_travelling">በጉዞ ላይ</string>
     <string name="feeds_tab_general">አጠቃላይ</string>
     <string name="feeds_tab_sources">ምንጮች</string>
+    <string name="feeds_sources_title">ምንጮች</string>
     <string name="feeds_tab_access">መዳረሻ</string>
     <string name="feeds_tab_members">አባላት</string>
     <string name="feeds_tab_ai">AI</string>

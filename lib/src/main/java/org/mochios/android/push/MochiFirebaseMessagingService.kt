@@ -170,12 +170,17 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         val deepLink = Uri.parse("mochi:notification?link=${Uri.encode(link)}")
         val intent = Intent(Intent.ACTION_VIEW, deepLink).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            // Pin the PendingIntent to the matching launcher alias so badge-
+            // capable launchers (Octopi etc.) attribute the unread dot to the
+            // right Mochi-app icon. Without this every alias targeting
+            // MainActivity shows the badge.
+            launcherComponentFor(context, app)?.let { component = it }
         }
         val pendingFlags = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         val pending = PendingIntent.getActivity(context, 0, intent, pendingFlags)
 
         val builder = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(notificationIconFor(app))
             .setContentTitle(title)
             .setContentText(body)
             .setAutoCancel(true)

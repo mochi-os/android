@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Viajando</string>
     <string name="feeds_tab_general">Geral</string>
     <string name="feeds_tab_sources">Fontes</string>
+    <string name="feeds_sources_title">Fontes</string>
     <string name="feeds_tab_access">Acesso</string>
     <string name="feeds_tab_members">Membros</string>
     <string name="feeds_tab_ai">IA</string>

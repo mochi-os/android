@@ -118,6 +118,21 @@
             <meta-data android:name="org.mochios.targetApp" android:value="projects" />
         </activity-alias>
 
+        <activity-alias
+            android:name=".MochiSettingsLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_settings"
+            android:icon="@mipmap/ic_settings"
+            android:roundIcon="@mipmap/ic_settings_round"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="settings" />
+        </activity-alias>
+
         <!--
           UnifiedPush MessagingReceiver for the consolidated super-app. Catches
           MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts

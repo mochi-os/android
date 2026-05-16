@@ -47,6 +47,7 @@
     <string name="feeds_travelling">ਯਾਤਰਾ ਕਰ ਰਿਹਾ ਹੈ</string>
     <string name="feeds_tab_general">ਆਮ</string>
     <string name="feeds_tab_sources">ਸਰੋਤ</string>
+    <string name="feeds_sources_title">ਸਰੋਤ</string>
     <string name="feeds_tab_access">ਪਹੁੰਚ</string>
     <string name="feeds_tab_members">ਮੈਂਬਰ</string>
     <string name="feeds_tab_ai">AI</string>

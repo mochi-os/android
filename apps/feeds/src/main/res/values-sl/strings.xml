@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Potovanje</string>
     <string name="feeds_tab_general">Splošno</string>
     <string name="feeds_tab_sources">Viri</string>
+    <string name="feeds_sources_title">Viri</string>
     <string name="feeds_tab_access">Dostop</string>
     <string name="feeds_tab_members">Člani</string>
     <string name="feeds_tab_ai">AI</string>

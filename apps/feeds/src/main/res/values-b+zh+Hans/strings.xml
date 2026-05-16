@@ -47,6 +47,7 @@
     <string name="feeds_travelling">行进中</string>
     <string name="feeds_tab_general">常规</string>
     <string name="feeds_tab_sources">来源</string>
+    <string name="feeds_sources_title">来源</string>
     <string name="feeds_tab_access">访问</string>
     <string name="feeds_tab_members">成员</string>
     <string name="feeds_tab_ai">AI</string>

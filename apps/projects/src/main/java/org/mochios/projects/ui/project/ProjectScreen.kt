@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.filled.Visibility
@@ -75,6 +76,7 @@ import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.projects.R
@@ -94,6 +96,7 @@ fun ProjectScreen(
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
+    onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     initialObjectId: String? = null,
     listViewModel: ProjectListViewModel = hiltViewModel(),
@@ -171,6 +174,7 @@ fun ProjectScreen(
                 onSettings = onSettings,
                 onDesign = onDesign,
                 onViewDiff = onViewDiff,
+                onOpenNotifications = onOpenNotifications,
                 initialObjectId = initialObjectId,
             )
         }
@@ -215,6 +219,7 @@ private fun ProjectContent(
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
+    onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
     viewModel: ProjectViewModel = hiltViewModel()
 ) {
@@ -255,6 +260,7 @@ private fun ProjectContent(
                     }
                 },
                 actions = {
+                    NotificationBell(onClick = onOpenNotifications)
                     IconButton(onClick = { showSearch = !showSearch }) {
                         Icon(
                             if (showSearch) Icons.Default.Close else Icons.Default.Search,

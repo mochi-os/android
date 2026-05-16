@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Op reis</string>
     <string name="feeds_tab_general">Algemeen</string>
     <string name="feeds_tab_sources">Bronnen</string>
+    <string name="feeds_sources_title">Bronnen</string>
     <string name="feeds_tab_access">Toegang</string>
     <string name="feeds_tab_members">Leden</string>
     <string name="feeds_tab_ai">AI</string>

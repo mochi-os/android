@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Reiser</string>
     <string name="feeds_tab_general">Generelt</string>
     <string name="feeds_tab_sources">Kjelder</string>
+    <string name="feeds_sources_title">Kjelder</string>
     <string name="feeds_tab_access">Tilgang</string>
     <string name="feeds_tab_members">Medlemer</string>
     <string name="feeds_tab_ai">KI</string>

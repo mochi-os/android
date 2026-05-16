@@ -47,6 +47,7 @@
     <string name="feeds_travelling">ভ্রমণরত</string>
     <string name="feeds_tab_general">সাধারণ</string>
     <string name="feeds_tab_sources">উৎস</string>
+    <string name="feeds_sources_title">উৎস</string>
     <string name="feeds_tab_access">অ্যাক্সেস</string>
     <string name="feeds_tab_members">সদস্যগণ</string>
     <string name="feeds_tab_ai">AI</string>

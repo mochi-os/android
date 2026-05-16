@@ -23,6 +23,13 @@ private data class FullPrefsResponse(val preferences: Map<String, String>?)
 private interface PreferencesApi {
     @GET("settings/-/user/preferences/data")
     suspend fun getPreferences(@Header("Authorization") token: String): Response<FullPrefsResponse>
+
+    @retrofit2.http.FormUrlEncoded
+    @POST("settings/-/user/preferences/set")
+    suspend fun setPreferences(
+        @Header("Authorization") token: String,
+        @retrofit2.http.FieldMap fields: Map<String, String>,
+    ): Response<Map<String, Any>>
 }
 
 // Hosts (chat / feeds / forums / projects / …) mint their own app token at
@@ -59,8 +66,31 @@ class PreferencesManager @Inject constructor(
     private val _preferences = MutableStateFlow(resolveAuto(emptyMap()))
     val preferences: StateFlow<UserPreferences> = _preferences.asStateFlow()
 
+    /** Most recent raw server map (pre-auto-resolve). Settings UI needs the
+     *  original "" / "auto" / explicit value to render the right select. */
+    private var rawPrefs: Map<String, String> = emptyMap()
+
+    fun rawPreferences(): Map<String, String> = rawPrefs
+
     /** Latest snapshot, for non-Composable callers (e.g. ViewModels). */
     val format: Format get() = Format(_preferences.value)
+
+    /**
+     * Persist a single preference to the server and refresh the local
+     * [preferences] state. An empty [value] resets the preference back to
+     * the server default. Throws on auth/network failure so the caller can
+     * surface an error.
+     */
+    suspend fun setPreference(key: String, value: String) {
+        val token = sessionManager.getToken("settings") ?: try {
+            tokenApi.fetchToken(TokenRequest("settings")).body()?.token
+        } catch (_: Exception) {
+            null
+        } ?: throw IllegalStateException("settings token unavailable")
+        val resp = api.setPreferences("Bearer $token", mapOf(key to value))
+        if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        refresh()
+    }
 
     suspend fun refresh() {
         // Cached "settings" token first (saves a round trip when this app
@@ -78,6 +108,7 @@ class PreferencesManager @Inject constructor(
             return
         }
         val raw = resp.body()?.preferences ?: return
+        rawPrefs = raw
         _preferences.value = resolveAuto(raw)
     }
 

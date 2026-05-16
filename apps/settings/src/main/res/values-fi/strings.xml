@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_home_title">Asetukset</string>
+    <string name="settings_home_logout">Kirjaudu ulos</string>
+
+</resources>

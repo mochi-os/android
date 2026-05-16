@@ -15,5 +15,10 @@
     <string name="comment_reply_placeholder">Respondé</string>
     <string name="comment_send_reply">Enviá la respuesta</string>
     <string name="person_picker_search">Buscá usuarios</string>
+    <string name="notifications_mark_all_read">Marcá todo como leído</string>
+    <string name="settings_radius_medium">Medium</string>
+    <string name="settings_font_serif">Serif</string>
+    <string name="settings_font_size_normal">Normal</string>
+    <string name="profile_privacy">Privacy</string>
 
 </resources>

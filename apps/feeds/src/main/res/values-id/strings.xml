@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Bepergian</string>
     <string name="feeds_tab_general">Umum</string>
     <string name="feeds_tab_sources">Sumber</string>
+    <string name="feeds_sources_title">Sumber</string>
     <string name="feeds_tab_access">Akses</string>
     <string name="feeds_tab_members">Anggota</string>
     <string name="feeds_tab_ai">AI</string>

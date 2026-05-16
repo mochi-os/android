@@ -47,6 +47,7 @@
     <string name="feeds_travelling">이동 중</string>
     <string name="feeds_tab_general">일반</string>
     <string name="feeds_tab_sources">소스</string>
+    <string name="feeds_sources_title">소스</string>
     <string name="feeds_tab_access">접근</string>
     <string name="feeds_tab_members">멤버</string>
     <string name="feeds_tab_ai">AI</string>

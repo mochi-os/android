@@ -47,6 +47,7 @@
     <string name="feeds_travelling">प्रवास करत आहे</string>
     <string name="feeds_tab_general">सामान्य</string>
     <string name="feeds_tab_sources">स्त्रोत</string>
+    <string name="feeds_sources_title">स्त्रोत</string>
     <string name="feeds_tab_access">प्रवेश</string>
     <string name="feeds_tab_members">सदस्य</string>
     <string name="feeds_tab_ai">AI</string>

@@ -12,6 +12,7 @@ import org.mochios.feeds.ui.post.PostDetailScreen
 import org.mochios.feeds.ui.post.PostSourceScreen
 import org.mochios.feeds.ui.router.FeedsRouter
 import org.mochios.feeds.ui.settings.FeedSettingsScreen
+import org.mochios.feeds.ui.settings.SourcesScreen
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
@@ -30,6 +31,7 @@ object FeedsApp {
     const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}"
     const val FIND_FEEDS = "feeds/findFeeds"
     const val FEED_SETTINGS = "feeds/feedSettings/{feedId}"
+    const val FEED_SOURCES = "feeds/feedSources/{feedId}"
 
     fun feed(feedId: String) = "feeds/feed/$feedId"
     fun post(feedId: String, postId: String) = "feeds/post/$feedId/$postId"
@@ -45,11 +47,13 @@ object FeedsApp {
         return if (params.isEmpty()) "feeds/createPost" else "feeds/createPost?${params.joinToString("&")}"
     }
     fun feedSettings(feedId: String) = "feeds/feedSettings/$feedId"
+    fun feedSources(feedId: String) = "feeds/feedSources/$feedId"
 }
 
 fun NavGraphBuilder.feedsNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
+    onOpenNotifications: () -> Unit = {},
 ) {
     composable(FeedsApp.ROUTER) {
         FeedsRouter(onResolve = { feedId ->
@@ -80,6 +84,9 @@ fun NavGraphBuilder.feedsNavGraph(
             onNavigateToSettings = { feedId ->
                 navController.navigate(FeedsApp.feedSettings(feedId))
             },
+            onNavigateToSources = { feedId ->
+                navController.navigate(FeedsApp.feedSources(feedId))
+            },
             onSelectFeed = { feedId ->
                 // Swap the current feed in-place rather than stacking — back
                 // from a feed goes to the host (not a chain of every feed
@@ -90,6 +97,7 @@ fun NavGraphBuilder.feedsNavGraph(
                 }
             },
             onNavigateToFindFeeds = { navController.navigate(FeedsApp.FIND_FEEDS) },
+            onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
         )
     }
@@ -177,5 +185,12 @@ fun NavGraphBuilder.feedsNavGraph(
                 navController.popBackStack(FeedsApp.ROUTER, inclusive = false)
             },
         )
+    }
+
+    composable(
+        route = FeedsApp.FEED_SOURCES,
+        arguments = listOf(navArgument("feedId") { type = NavType.StringType })
+    ) {
+        SourcesScreen(onNavigateBack = { navController.popBackStack() })
     }
 }

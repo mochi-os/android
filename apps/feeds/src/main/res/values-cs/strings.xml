@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Cestuje se</string>
     <string name="feeds_tab_general">Obecné</string>
     <string name="feeds_tab_sources">Zdroje</string>
+    <string name="feeds_sources_title">Zdroje</string>
     <string name="feeds_tab_access">Přístup</string>
     <string name="feeds_tab_members">Členové</string>
     <string name="feeds_tab_ai">AI</string>

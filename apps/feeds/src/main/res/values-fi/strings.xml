@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Matkustetaan</string>
     <string name="feeds_tab_general">Yleiset</string>
     <string name="feeds_tab_sources">Lähteet</string>
+    <string name="feeds_sources_title">Lähteet</string>
     <string name="feeds_tab_access">Käyttöoikeus</string>
     <string name="feeds_tab_members">Jäsenet</string>
     <string name="feeds_tab_ai">Tekoäly</string>

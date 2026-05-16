@@ -266,13 +266,18 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
             flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or
                     android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
+            // Pin the PendingIntent to the matching launcher alias so badge-
+            // capable launchers attribute the unread dot to the right Mochi-
+            // app icon (every alias targets MainActivity, so without this the
+            // badge stamps on every Mochi icon).
+            launcherComponentFor(context, app)?.let { component = it }
         }
         val pendingFlags = android.app.PendingIntent.FLAG_UPDATE_CURRENT or
                 android.app.PendingIntent.FLAG_IMMUTABLE
         val pending = android.app.PendingIntent.getActivity(context, 0, intent, pendingFlags)
 
         val builder = androidx.core.app.NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(notificationIconFor(app))
             .setContentTitle(title)
             .setContentText(body)
             .setAutoCancel(true)

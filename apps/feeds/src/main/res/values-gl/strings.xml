@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Viaxando</string>
     <string name="feeds_tab_general">Xeral</string>
     <string name="feeds_tab_sources">Fontes</string>
+    <string name="feeds_sources_title">Fontes</string>
     <string name="feeds_tab_access">Acceso</string>
     <string name="feeds_tab_members">Membros</string>
     <string name="feeds_tab_ai">IA</string>

@@ -144,6 +144,8 @@
     <!-- Settings: tabs -->
     <string name="feeds_tab_general">General</string>
     <string name="feeds_tab_sources">Sources</string>
+    <string name="feeds_sources_title">Sources</string>
+    <string name="feeds_sources_title_named">%1$s sources</string>
     <string name="feeds_tab_access">Access</string>
     <string name="feeds_tab_members">Members</string>
     <string name="feeds_tab_ai">AI</string>

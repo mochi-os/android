@@ -41,6 +41,7 @@ object ForumsApp {
 fun NavGraphBuilder.forumsNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
+    onOpenNotifications: () -> Unit = {},
 ) {
     composable(ForumsApp.ROUTER) {
         ForumsRouter(onResolve = { forumId ->
@@ -74,6 +75,7 @@ fun NavGraphBuilder.forumsNavGraph(
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },
             onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
             onSettings = { fId -> navController.navigate(ForumsApp.forumSettings(fId)) },
+            onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
         )
     }

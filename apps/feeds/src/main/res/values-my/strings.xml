@@ -47,6 +47,7 @@
     <string name="feeds_travelling">ခရီးသွားနေသည်</string>
     <string name="feeds_tab_general">အထွေထွေ</string>
     <string name="feeds_tab_sources">မူရင်းများ</string>
+    <string name="feeds_sources_title">မူရင်းများ</string>
     <string name="feeds_tab_access">ဝင်ရောက်ခွင့်</string>
     <string name="feeds_tab_members">အဖွဲ့ဝင်များ</string>
     <string name="feeds_tab_ai">AI</string>

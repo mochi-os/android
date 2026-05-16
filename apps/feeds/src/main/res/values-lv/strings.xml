@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Ceļojums</string>
     <string name="feeds_tab_general">Vispārīgi</string>
     <string name="feeds_tab_sources">Avoti</string>
+    <string name="feeds_sources_title">Avoti</string>
     <string name="feeds_tab_access">Piekļuve</string>
     <string name="feeds_tab_members">Dalībnieki</string>
     <string name="feeds_tab_ai">AI</string>

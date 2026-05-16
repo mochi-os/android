@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material.icons.filled.ThumbDown
@@ -76,6 +77,7 @@ import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.forums.R
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.forumlist.ForumListViewModel
@@ -98,6 +100,7 @@ fun ForumScreen(
     onNewPost: (String) -> Unit,
     onFindForums: () -> Unit,
     onSettings: (String) -> Unit,
+    onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     listViewModel: ForumListViewModel = hiltViewModel(),
 ) {
@@ -174,6 +177,7 @@ fun ForumScreen(
                 onPostClick = onPostClick,
                 onNewPost = onNewPost,
                 onSettings = onSettings,
+                onOpenNotifications = onOpenNotifications,
             )
         }
     }
@@ -217,6 +221,7 @@ private fun ForumContent(
     onPostClick: (String, String) -> Unit,
     onNewPost: (String) -> Unit,
     onSettings: (String) -> Unit,
+    onOpenNotifications: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -242,6 +247,7 @@ private fun ForumContent(
                     }
                 },
                 actions = {
+                    NotificationBell(onClick = onOpenNotifications)
                     Box {
                         IconButton(onClick = { showSortMenu = true }) {
                             Icon(Icons.Default.Sort, contentDescription = stringResource(R.string.forums_sort_label))

@@ -47,6 +47,7 @@
     <string name="feeds_travelling">यात्रा कर रहे हैं</string>
     <string name="feeds_tab_general">सामान्य</string>
     <string name="feeds_tab_sources">स्रोत</string>
+    <string name="feeds_sources_title">स्रोत</string>
     <string name="feeds_tab_access">एक्सेस</string>
     <string name="feeds_tab_members">सदस्य</string>
     <string name="feeds_tab_ai">AI</string>

@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Duke udhëtuar</string>
     <string name="feeds_tab_general">Të përgjithshme</string>
     <string name="feeds_tab_sources">Burimet</string>
+    <string name="feeds_sources_title">Burimet</string>
     <string name="feeds_tab_access">Qasja</string>
     <string name="feeds_tab_members">Anëtarët</string>
     <string name="feeds_tab_ai">AI</string>

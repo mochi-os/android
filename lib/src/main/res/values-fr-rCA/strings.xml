@@ -3,5 +3,9 @@
 
     <string name="auth_email">Courriel</string>
     <string name="auth_email_code">Code par courriel</string>
+    <string name="settings_radius_medium">Medium</string>
+    <string name="settings_font_serif">Serif</string>
+    <string name="settings_font_size_normal">Normal</string>
+    <string name="profile_privacy">Privacy</string>
 
 </resources>

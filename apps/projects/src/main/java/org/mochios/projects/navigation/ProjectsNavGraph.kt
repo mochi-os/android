@@ -38,6 +38,7 @@ object ProjectsApp {
 fun NavGraphBuilder.projectsNavGraph(
     navController: NavController,
     onLogout: () -> Unit,
+    onOpenNotifications: () -> Unit = {},
 ) {
     composable(ProjectsApp.ROUTER) {
         ProjectsRouter(onResolve = { projectId ->
@@ -70,6 +71,7 @@ fun NavGraphBuilder.projectsNavGraph(
             onViewDiff = { id, repo, source, target ->
                 navController.navigate(ProjectsApp.diffViewer(id, repo, source, target))
             },
+            onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
         )
     }

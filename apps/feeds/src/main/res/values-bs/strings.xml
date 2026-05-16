@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Putovanje</string>
     <string name="feeds_tab_general">Općenito</string>
     <string name="feeds_tab_sources">Izvori</string>
+    <string name="feeds_sources_title">Izvori</string>
     <string name="feeds_tab_access">Pristup</string>
     <string name="feeds_tab_members">Članovi</string>
     <string name="feeds_tab_ai">AI</string>

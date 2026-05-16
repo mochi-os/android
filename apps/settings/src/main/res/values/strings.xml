@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings app -->
+    <string name="settings_app_label">Mochi Settings</string>
+    <string name="settings_home_title">Settings</string>
+    <string name="settings_home_logout">Log out</string>
+</resources>

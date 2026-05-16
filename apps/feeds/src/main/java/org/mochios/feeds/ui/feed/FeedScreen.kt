@@ -52,6 +52,7 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
@@ -120,6 +121,7 @@ import org.mochios.android.ui.components.FlipboardPage
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MediaGrid
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
@@ -137,8 +139,10 @@ fun FeedScreen(
     onNavigateToCreatePost: (String) -> Unit,
     onNavigateToEditPost: (String, String) -> Unit,
     onNavigateToSettings: (String) -> Unit,
+    onNavigateToSources: (String) -> Unit = {},
     onSelectFeed: (String) -> Unit,
     onNavigateToFindFeeds: () -> Unit,
+    onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     viewModel: FeedViewModel = hiltViewModel(),
     feedListViewModel: FeedListViewModel = hiltViewModel(),
@@ -314,6 +318,7 @@ fun FeedScreen(
                     }
                 },
                 actions = {
+                    NotificationBell(onClick = onOpenNotifications)
                     if (permissions.manage) {
                         IconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
                             Icon(Icons.Default.Add, contentDescription = stringResource(R.string.feeds_new_post))
@@ -392,6 +397,16 @@ fun FeedScreen(
                                 }
                             )
                             if (permissions.manage) {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                    leadingIcon = {
+                                        Icon(Icons.Default.RssFeed, contentDescription = null)
+                                    },
+                                    onClick = {
+                                        onNavigateToSources(viewModel.feedId)
+                                        showOverflowMenu = false
+                                    }
+                                )
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.feeds_settings)) },
                                     leadingIcon = {

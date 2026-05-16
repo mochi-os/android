@@ -47,6 +47,7 @@
     <string name="feeds_travelling">移動中</string>
     <string name="feeds_tab_general">一般</string>
     <string name="feeds_tab_sources">ソース</string>
+    <string name="feeds_sources_title">ソース</string>
     <string name="feeds_tab_access">アクセス</string>
     <string name="feeds_tab_members">メンバー</string>
     <string name="feeds_tab_ai">AI</string>

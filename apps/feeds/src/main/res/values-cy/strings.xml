@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Yn teithio</string>
     <string name="feeds_tab_general">Cyffredinol</string>
     <string name="feeds_tab_sources">Ffynonellau</string>
+    <string name="feeds_sources_title">Ffynonellau</string>
     <string name="feeds_tab_access">Mynediad</string>
     <string name="feeds_tab_members">Aelodau</string>
     <string name="feeds_tab_ai">AI</string>

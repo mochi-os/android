@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Đang di chuyển</string>
     <string name="feeds_tab_general">Chung</string>
     <string name="feeds_tab_sources">Nguồn</string>
+    <string name="feeds_sources_title">Nguồn</string>
     <string name="feeds_tab_access">Truy cập</string>
     <string name="feeds_tab_members">Thành viên</string>
     <string name="feeds_tab_ai">AI</string>

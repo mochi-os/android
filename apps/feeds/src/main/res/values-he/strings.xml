@@ -47,6 +47,7 @@
     <string name="feeds_travelling">בנסיעה</string>
     <string name="feeds_tab_general">כללי</string>
     <string name="feeds_tab_sources">מקורות</string>
+    <string name="feeds_sources_title">מקורות</string>
     <string name="feeds_tab_access">גישה</string>
     <string name="feeds_tab_members">חברים</string>
     <string name="feeds_tab_ai">AI</string>

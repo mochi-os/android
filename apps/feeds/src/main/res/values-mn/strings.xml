@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Аялж байна</string>
     <string name="feeds_tab_general">Ерөнхий</string>
     <string name="feeds_tab_sources">Эх сурвалжууд</string>
+    <string name="feeds_sources_title">Эх сурвалжууд</string>
     <string name="feeds_tab_access">Хандалт</string>
     <string name="feeds_tab_members">Гишүүд</string>
     <string name="feeds_tab_ai">AI</string>

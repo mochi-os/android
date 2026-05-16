@@ -49,6 +49,8 @@ import org.mochios.forums.navigation.ForumsApp
 import org.mochios.forums.navigation.forumsNavGraph
 import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
+import org.mochios.settings.navigation.SettingsApp
+import org.mochios.settings.navigation.settingsNavGraph
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -135,11 +137,35 @@ class MainActivity : ComponentActivity() {
                                     navigateToLink(navController, link)
                                     PendingDeepLink.consume()
                                 }
+                                val openNotifications: () -> Unit = {
+                                    navController.navigate(SettingsApp.NOTIFICATIONS) { launchSingleTop = true }
+                                }
                                 NavHost(navController = navController, startDestination = startDestinationFor(app)) {
-                                    feedsNavGraph(navController, onLogout = onLogout)
-                                    chatNavGraph(navController, onLogout = onLogout)
-                                    forumsNavGraph(navController, onLogout = onLogout)
-                                    projectsNavGraph(navController, onLogout = onLogout)
+                                    feedsNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                    )
+                                    chatNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                    )
+                                    forumsNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                    )
+                                    projectsNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                    )
+                                    settingsNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenLink = { link -> navigateToLink(navController, link) },
+                                    )
                                 }
                             }
                         }
@@ -343,6 +369,7 @@ class MainActivity : ComponentActivity() {
         "chat" -> ChatApp.HOME
         "forums" -> ForumsApp.HOME
         "projects" -> ProjectsApp.HOME
+        "settings" -> SettingsApp.HOME
         else -> FeedsApp.HOME
     }
 
@@ -353,6 +380,11 @@ class MainActivity : ComponentActivity() {
         /** Intent extra a per-app `XxxListScreen.kt` shortcut sets to skip directory lookup. */
         const val EXTRA_APP_HINT = "app"
 
+        // Notifications / Settings / Profile routes moved into the Settings
+        // app module (`apps/settings`). The bell in each feature's TopAppBar
+        // navigates to SettingsApp.NOTIFICATIONS; the Mochi Settings launcher
+        // alias targets SettingsApp.HOME via `targetApp = "settings"`.
+
         private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return")
 
         /**
@@ -362,6 +394,6 @@ class MainActivity : ComponentActivity() {
          * first API call — only one of the four would otherwise get its token
          * minted (the cold-start alias's app).
          */
-        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects")
+        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "settings")
     }
 }

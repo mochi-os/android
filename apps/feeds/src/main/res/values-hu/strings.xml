@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Utazás</string>
     <string name="feeds_tab_general">Általános</string>
     <string name="feeds_tab_sources">Források</string>
+    <string name="feeds_sources_title">Források</string>
     <string name="feeds_tab_access">Hozzáférés</string>
     <string name="feeds_tab_members">Tagok</string>
     <string name="feeds_tab_ai">MI</string>

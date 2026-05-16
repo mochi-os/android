@@ -47,6 +47,7 @@
     <string name="feeds_travelling">Naglalakbay</string>
     <string name="feeds_tab_general">General</string>
     <string name="feeds_tab_sources">Mga source</string>
+    <string name="feeds_sources_title">Mga source</string>
     <string name="feeds_tab_access">Access</string>
     <string name="feeds_tab_members">Mga Miyembro</string>
     <string name="feeds_tab_ai">AI</string>

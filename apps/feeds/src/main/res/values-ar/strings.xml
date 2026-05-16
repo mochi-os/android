@@ -47,6 +47,7 @@
     <string name="feeds_travelling">السفر</string>
     <string name="feeds_tab_general">عام</string>
     <string name="feeds_tab_sources">المصادر</string>
+    <string name="feeds_sources_title">المصادر</string>
     <string name="feeds_tab_access">الوصول</string>
     <string name="feeds_tab_members">الأعضاء</string>
     <string name="feeds_tab_ai">الذكاء الاصطناعي</string>

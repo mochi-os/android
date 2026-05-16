@@ -47,6 +47,7 @@
     <string name="feeds_travelling">กำลังเดินทาง</string>
     <string name="feeds_tab_general">ทั่วไป</string>
     <string name="feeds_tab_sources">แหล่งที่มา</string>
+    <string name="feeds_sources_title">แหล่งที่มา</string>
     <string name="feeds_tab_access">การเข้าถึง</string>
     <string name="feeds_tab_members">สมาชิก</string>
     <string name="feeds_tab_ai">AI</string>
