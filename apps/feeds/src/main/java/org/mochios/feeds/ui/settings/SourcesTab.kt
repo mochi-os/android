@@ -54,9 +54,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Source
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -171,6 +169,7 @@ private fun SourceCard(
     onRemove: () -> Unit,
     onPoll: () -> Unit
 ) {
+    val format = LocalFormat.current
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
@@ -218,9 +217,8 @@ private fun SourceCard(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 if (source.fetched > 0) {
-                    val dateFormat = SimpleDateFormat("d MMM, HH:mm", Locale.getDefault())
                     Text(
-                        text = stringResource(R.string.feeds_source_last_fetched, dateFormat.format(Date(source.fetched * 1000))),
+                        text = stringResource(R.string.feeds_source_last_fetched, format.formatDateTime(source.fetched)),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )

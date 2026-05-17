@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Zresetuj do domyślnych</string>
     <string name="feeds_feed_not_found">Nie znaleziono kanału</string>
     <string name="feeds_post_not_found">Nie znaleziono wpisu</string>
+    <string name="feeds_settings_feed_renamed">Zmieniono nazwę kanału</string>
+    <string name="feeds_settings_source_added">Źródło dodane</string>
+    <string name="feeds_settings_source_updated">Źródło zaktualizowane</string>
+    <string name="feeds_settings_source_removed">Źródło usunięte</string>
+    <string name="feeds_settings_access_updated">Dostęp zaktualizowany</string>
+    <string name="feeds_settings_member_added">Dodano członka</string>
+    <string name="feeds_settings_member_removed">Usunięto członka</string>
+    <string name="feeds_settings_prompt_saved">Zapisano prompt</string>
+    <string name="feeds_settings_banner_saved">Baner zapisany</string>
+    <string name="feeds_settings_banner_cleared">Baner wyczyszczony</string>
+    <string name="feeds_settings_source_polling">Odpytywanie źródła…</string>
+    <string name="feeds_settings_access_revoked">Dostęp unieważniony</string>
+    <string name="feeds_settings_ai_mode_updated">Tryb AI zaktualizowany</string>
+    <string name="feeds_settings_ai_account_updated">Konto AI zaktualizowane</string>
+    <string name="feeds_settings_prompt_reset">Monit przywrócony do wartości domyślnej</string>
+    <string name="feeds_post_select_feed">Wybierz kanał</string>
+    <string name="feeds_post_empty_content">Wprowadź tekst lub dołącz plik</string>
 
 </resources>

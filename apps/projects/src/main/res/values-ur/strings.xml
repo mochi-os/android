@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="projects_views_sort_rank">رینک</string>
     <string name="projects_project_not_found">project نہیں ملا</string>
+    <string name="projects_option_icon_placeholder">مثال Check، Star، Flag</string>
 
 </resources>

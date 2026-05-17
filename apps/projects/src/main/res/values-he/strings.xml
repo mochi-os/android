@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">עודכן</string>
     <string name="projects_views_sort_rank">דירוג</string>
     <string name="projects_project_not_found">הפרויקט לא נמצא</string>
+    <string name="projects_option_icon_placeholder">לדוגמה Check, Star, Flag</string>
 
 </resources>

@@ -40,6 +40,12 @@ tasks.register("checkLocaleCompleteness") {
         if (!source.exists()) return@doLast
         val keyPattern = Regex("""<string name="([^"]+)"""")
         val sourceKeys = keyPattern.findAll(source.readText()).map { it.groupValues[1] }.toSet()
+        // Brand-identity strings stay verbatim in every locale (Latin script,
+        // unchanged) — see the i18n glossary rule in CLAUDE.md. Excluding them
+        // here keeps the warning signal honest; otherwise every locale flags
+        // missing entries for keys that intentionally don't need translation.
+        val brandKeys = setOf("app_brand")
+        val checkKeys = sourceKeys - brandKeys
         val overlays = setOf("values-en-rUS")
         val problems = mutableListOf<String>()
         resDir.listFiles { f -> f.isDirectory && f.name.startsWith("values-") }?.forEach { dir ->
@@ -47,7 +53,7 @@ tasks.register("checkLocaleCompleteness") {
             val xml = dir.resolve("strings.xml")
             if (!xml.exists()) return@forEach
             val have = keyPattern.findAll(xml.readText()).map { it.groupValues[1] }.toSet()
-            val missing = sourceKeys - have
+            val missing = checkKeys - have
             if (missing.isNotEmpty()) {
                 problems += "${dir.name}: ${missing.size} missing (${missing.take(3).joinToString()}…)"
             }

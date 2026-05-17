@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Palauta oletukseksi</string>
     <string name="feeds_feed_not_found">Syötettä ei löytynyt</string>
     <string name="feeds_post_not_found">Julkaisua ei löytynyt</string>
+    <string name="feeds_settings_feed_renamed">Syöte nimetty uudelleen</string>
+    <string name="feeds_settings_source_added">Lähde lisätty</string>
+    <string name="feeds_settings_source_updated">Lähde päivitetty</string>
+    <string name="feeds_settings_source_removed">Lähde poistettu</string>
+    <string name="feeds_settings_access_updated">Käyttöoikeus päivitetty</string>
+    <string name="feeds_settings_member_added">Jäsen lisätty</string>
+    <string name="feeds_settings_member_removed">Jäsen poistettu</string>
+    <string name="feeds_settings_prompt_saved">Kehote tallennettu</string>
+    <string name="feeds_settings_banner_saved">Banneri tallennettu</string>
+    <string name="feeds_settings_banner_cleared">Banneri tyhjennetty</string>
+    <string name="feeds_settings_source_polling">Lähdettä noudetaan…</string>
+    <string name="feeds_settings_access_revoked">Käyttöoikeus peruutettu</string>
+    <string name="feeds_settings_ai_mode_updated">Tekoälytila päivitetty</string>
+    <string name="feeds_settings_ai_account_updated">Tekoälytili päivitetty</string>
+    <string name="feeds_settings_prompt_reset">Kehote palautettu oletukseksi</string>
+    <string name="feeds_post_select_feed">Valitse syöte</string>
+    <string name="feeds_post_empty_content">Kirjoita tekstia tai liitä tiedosto</string>
 
 </resources>

@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Yenilənir...</string>
     <string name="projects_views_sort_rank">Sıra</string>
     <string name="projects_project_not_found">Layihə tapılmadı</string>
+    <string name="projects_option_icon_placeholder">məs. Check, Star, Flag</string>
 
 </resources>

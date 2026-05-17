@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Демейкиге кайтаруу</string>
     <string name="feeds_feed_not_found">Лента табылган жок</string>
     <string name="feeds_post_not_found">Пост табылган жок</string>
+    <string name="feeds_settings_feed_renamed">Лента аты өзгөртүлдү</string>
+    <string name="feeds_settings_source_added">Булак кошулду</string>
+    <string name="feeds_settings_source_updated">Булак жаңыланды</string>
+    <string name="feeds_settings_source_removed">Булак өчүрүлдү</string>
+    <string name="feeds_settings_access_updated">Жетки жаңыланды</string>
+    <string name="feeds_settings_member_added">Мүчө кошулду</string>
+    <string name="feeds_settings_member_removed">Мүчө алынып салынды</string>
+    <string name="feeds_settings_prompt_saved">Prompt сакталды</string>
+    <string name="feeds_settings_banner_saved">Баннер сакталды</string>
+    <string name="feeds_settings_banner_cleared">Баннер тазаланды</string>
+    <string name="feeds_settings_source_polling">Булакка суроо жиберилип жатат…</string>
+    <string name="feeds_settings_access_revoked">Кирүү жокко чыгарылды</string>
+    <string name="feeds_settings_ai_mode_updated">AI режими жаңыртылды</string>
+    <string name="feeds_settings_ai_account_updated">AI эсеби жаңыртылды</string>
+    <string name="feeds_settings_prompt_reset">Суроо баштапкыга кайтарылды</string>
+    <string name="feeds_post_select_feed">Суранабыз, лентаны тандаңыз</string>
+    <string name="feeds_post_empty_content">Суранабыз, текст киргизиңиз же файл тиркеңиз</string>
 
 </resources>

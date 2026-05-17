@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Aktualisiert</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Projekt nicht gefunden</string>
+    <string name="projects_option_icon_placeholder">z. B. Check, Star, Flag</string>
 
 </resources>

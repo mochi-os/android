@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">إعادة تعيين إلى الافتراضي</string>
     <string name="feeds_feed_not_found">التغذية غير موجودة</string>
     <string name="feeds_post_not_found">المنشور غير موجود</string>
+    <string name="feeds_settings_feed_renamed">تمت إعادة تسمية التغذية</string>
+    <string name="feeds_settings_source_added">تمت إضافة المصدر</string>
+    <string name="feeds_settings_source_updated">تم تحديث المصدر</string>
+    <string name="feeds_settings_source_removed">تمت إزالة المصدر</string>
+    <string name="feeds_settings_access_updated">تم تحديث الوصول</string>
+    <string name="feeds_settings_member_added">تمت إضافة العضو</string>
+    <string name="feeds_settings_member_removed">تمت إزالة العضو</string>
+    <string name="feeds_settings_prompt_saved">تم حفظ الموجه</string>
+    <string name="feeds_settings_banner_saved">تم حفظ اللافتة</string>
+    <string name="feeds_settings_banner_cleared">تم مسح اللافتة</string>
+    <string name="feeds_settings_source_polling">جار استطلاع المصدر…</string>
+    <string name="feeds_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="feeds_settings_ai_mode_updated">تم تحديث وضع الذكاء الاصطناعي</string>
+    <string name="feeds_settings_ai_account_updated">تم تحديث حساب الذكاء الاصطناعي</string>
+    <string name="feeds_settings_prompt_reset">تمت إعادة تعيين الموجّه إلى الإعداد الافتراضي</string>
+    <string name="feeds_post_select_feed">يرجى تحديد خلاصة</string>
+    <string name="feeds_post_empty_content">يرجى إدخال نص أو إرفاق ملف</string>
 
 </resources>

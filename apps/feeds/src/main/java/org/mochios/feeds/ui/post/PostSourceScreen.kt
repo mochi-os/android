@@ -73,6 +73,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import org.mochios.android.api.userMessage
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -123,7 +124,7 @@ fun PostSourceScreen(
 
     LaunchedEffect(actionError) {
         actionError?.let {
-            snackbarHostState.showSnackbar(it)
+            snackbarHostState.showSnackbar(it.userMessage())
             viewModel.clearActionError()
         }
     }

@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">আপডেট হয়েছে</string>
     <string name="projects_views_sort_rank">র‍্যাঙ্ক</string>
     <string name="projects_project_not_found">প্রকল্প পাওয়া যায়নি</string>
+    <string name="projects_option_icon_placeholder">যেমন. Check, Star, Flag</string>
 
 </resources>

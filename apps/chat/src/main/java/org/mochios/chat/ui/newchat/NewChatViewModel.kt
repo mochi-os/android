@@ -50,7 +50,7 @@ class NewChatViewModel @Inject constructor(
                     setOf(preselectFriend)
                 } else emptySet()
                 _uiState.value = _uiState.value.copy(
-                    friends = data.friends,
+                    friends = data.friends.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name }),
                     selected = preselected,
                     isLoading = false,
                 )

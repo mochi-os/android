@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Standartga qaytarish</string>
     <string name="feeds_feed_not_found">Tasma topilmadi</string>
     <string name="feeds_post_not_found">Post topilmadi</string>
+    <string name="feeds_settings_feed_renamed">Tasma nomi oʻzgartirildi</string>
+    <string name="feeds_settings_source_added">Manba qoʻshildi</string>
+    <string name="feeds_settings_source_updated">Manba yangilandi</string>
+    <string name="feeds_settings_source_removed">Manba olib tashlandi</string>
+    <string name="feeds_settings_access_updated">Kirish yangilandi</string>
+    <string name="feeds_settings_member_added">Aʼzo qoʻshildi</string>
+    <string name="feeds_settings_member_removed">Aʼzo olib tashlandi</string>
+    <string name="feeds_settings_prompt_saved">Soʻrov saqlandi</string>
+    <string name="feeds_settings_banner_saved">Banner saqlandi</string>
+    <string name="feeds_settings_banner_cleared">Banner tozalandi</string>
+    <string name="feeds_settings_source_polling">Manba soʻraladi…</string>
+    <string name="feeds_settings_access_revoked">Kirish bekor qilindi</string>
+    <string name="feeds_settings_ai_mode_updated">AI rejimi yangilandi</string>
+    <string name="feeds_settings_ai_account_updated">AI hisobi yangilandi</string>
+    <string name="feeds_settings_prompt_reset">Soʻrov standartga qaytarildi</string>
+    <string name="feeds_post_select_feed">Iltimos, oqimni tanlang</string>
+    <string name="feeds_post_empty_content">Iltimos, matn kiriting yoki faylni biriktiring</string>
 
 </resources>

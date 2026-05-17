@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Täzelendi</string>
     <string name="projects_views_sort_rank">Reýting</string>
     <string name="projects_project_not_found">Taslama tapylmady</string>
+    <string name="projects_option_icon_placeholder">mysal üçin. Check, Star, Flag</string>
 
 </resources>

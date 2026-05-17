@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Restablecer ao valor por defecto</string>
     <string name="feeds_feed_not_found">Fonte non atopada</string>
     <string name="feeds_post_not_found">Publicación non atopada</string>
+    <string name="feeds_settings_feed_renamed">Fonte renomeada</string>
+    <string name="feeds_settings_source_added">Fonte engadida</string>
+    <string name="feeds_settings_source_updated">Fonte actualizada</string>
+    <string name="feeds_settings_source_removed">Fonte eliminada</string>
+    <string name="feeds_settings_access_updated">Acceso actualizado</string>
+    <string name="feeds_settings_member_added">Membro engadido</string>
+    <string name="feeds_settings_member_removed">Membro eliminado</string>
+    <string name="feeds_settings_prompt_saved">Indicación gardada</string>
+    <string name="feeds_settings_banner_saved">Banner gardado</string>
+    <string name="feeds_settings_banner_cleared">Banner borrado</string>
+    <string name="feeds_settings_source_polling">Sondaxe da fonte…</string>
+    <string name="feeds_settings_access_revoked">Acceso revogado</string>
+    <string name="feeds_settings_ai_mode_updated">Modo IA actualizado</string>
+    <string name="feeds_settings_ai_account_updated">Conta IA actualizada</string>
+    <string name="feeds_settings_prompt_reset">Suxestión restablecida ao valor predeterminado</string>
+    <string name="feeds_post_select_feed">Seleccione unha fonte</string>
+    <string name="feeds_post_empty_content">Introduza texto ou achegue un ficheiro</string>
 
 </resources>

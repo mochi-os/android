@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">अपडेट किया गया</string>
     <string name="projects_views_sort_rank">रैंक</string>
     <string name="projects_project_not_found">प्रोजेक्ट नहीं मिला</string>
+    <string name="projects_option_icon_placeholder">उदा. Check, Star, Flag</string>
 
 </resources>

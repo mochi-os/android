@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Güncellendi</string>
     <string name="projects_views_sort_rank">Sıralama</string>
     <string name="projects_project_not_found">Proje bulunamadı</string>
+    <string name="projects_option_icon_placeholder">ör. Check, Star, Flag</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Lähtesta vaikeväärtusele</string>
     <string name="feeds_feed_not_found">Voogu ei leitud</string>
     <string name="feeds_post_not_found">Postitust ei leitud</string>
+    <string name="feeds_settings_feed_renamed">Voog ümber nimetatud</string>
+    <string name="feeds_settings_source_added">Allikas lisatud</string>
+    <string name="feeds_settings_source_updated">Allikas uuendatud</string>
+    <string name="feeds_settings_source_removed">Allikas eemaldatud</string>
+    <string name="feeds_settings_access_updated">Juurdepääs uuendatud</string>
+    <string name="feeds_settings_member_added">Liige lisatud</string>
+    <string name="feeds_settings_member_removed">Liige eemaldatud</string>
+    <string name="feeds_settings_prompt_saved">Viip salvestatud</string>
+    <string name="feeds_settings_banner_saved">Bannär salvestatud</string>
+    <string name="feeds_settings_banner_cleared">Bannär tehti tuhjaks</string>
+    <string name="feeds_settings_source_polling">Allika küsitlemine…</string>
+    <string name="feeds_settings_access_revoked">Juurdepääs tühistati</string>
+    <string name="feeds_settings_ai_mode_updated">AI režiim uuendatud</string>
+    <string name="feeds_settings_ai_account_updated">AI konto uuendatud</string>
+    <string name="feeds_settings_prompt_reset">Viip lähtestati vaikeväärtusele</string>
+    <string name="feeds_post_select_feed">Palun valige kanal</string>
+    <string name="feeds_post_empty_content">Palun sisestage teksti või lisage fail</string>
 
 </resources>

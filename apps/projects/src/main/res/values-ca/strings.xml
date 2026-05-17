@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Actualitzat</string>
     <string name="projects_views_sort_rank">Posició</string>
     <string name="projects_project_not_found">Projecte no trobat</string>
+    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
 
 </resources>

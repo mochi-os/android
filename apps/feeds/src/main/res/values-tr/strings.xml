@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Varsayılana sıfırla</string>
     <string name="feeds_feed_not_found">Akış bulunamadı</string>
     <string name="feeds_post_not_found">Gönderi bulunamadı</string>
+    <string name="feeds_settings_feed_renamed">Akış yeniden adlandırıldı</string>
+    <string name="feeds_settings_source_added">Kaynak eklendi</string>
+    <string name="feeds_settings_source_updated">Kaynak güncellendi</string>
+    <string name="feeds_settings_source_removed">Kaynak kaldırıldı</string>
+    <string name="feeds_settings_access_updated">Erişim güncellendi</string>
+    <string name="feeds_settings_member_added">Üye eklendi</string>
+    <string name="feeds_settings_member_removed">Üye kaldırıldı</string>
+    <string name="feeds_settings_prompt_saved">İstem kaydedildi</string>
+    <string name="feeds_settings_banner_saved">Banner kaydedildi</string>
+    <string name="feeds_settings_banner_cleared">Banner temizlendi</string>
+    <string name="feeds_settings_source_polling">Kaynak yoklaınıyor…</string>
+    <string name="feeds_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="feeds_settings_ai_mode_updated">AI modu güncellendi</string>
+    <string name="feeds_settings_ai_account_updated">AI hesabı güncellendi</string>
+    <string name="feeds_settings_prompt_reset">Komut, varsayılana sıfırlandı</string>
+    <string name="feeds_post_select_feed">Lütfen bir besleme seçin</string>
+    <string name="feeds_post_empty_content">Lütfen metin girin veya bir dosya ekleyin</string>
 
 </resources>

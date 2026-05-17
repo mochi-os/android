@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">កំណត់ឡើងវិញទៅលំនាំដើម</string>
     <string name="feeds_feed_not_found">រកមិនឃើញព័ត៌មានបង្ហាញ</string>
     <string name="feeds_post_not_found">រកមិនឃើញប្រកាស</string>
+    <string name="feeds_settings_feed_renamed">បានប្ដូរឈ្មោះព័ត៌មានបង្ហាញ</string>
+    <string name="feeds_settings_source_added">បានបន្ថែមប្រភព</string>
+    <string name="feeds_settings_source_updated">បានធ្វើបច្ចុប្បន្នភាពប្រភព</string>
+    <string name="feeds_settings_source_removed">បានដកប្រភព</string>
+    <string name="feeds_settings_access_updated">បានធ្វើបច្ចុប្បន្នភាពការចូលប្រើ</string>
+    <string name="feeds_settings_member_added">បានបន្ថែមសមាជិក</string>
+    <string name="feeds_settings_member_removed">បានដកសមាជិក</string>
+    <string name="feeds_settings_prompt_saved">បានរក្សាទុក prompt</string>
+    <string name="feeds_settings_banner_saved">បានរកុទុកនៅបានែរ</string>
+    <string name="feeds_settings_banner_cleared">បានលុបបានែរ</string>
+    <string name="feeds_settings_source_polling">កំពុងសួរានិយលូវ…</string>
+    <string name="feeds_settings_access_revoked">សិទ្ធិបែររបស៴គទែរ</string>
+    <string name="feeds_settings_ai_mode_updated">វិទី AI ទែររានបែរ</string>
+    <string name="feeds_settings_ai_account_updated">គននៀ AI ទែររានបែរ</string>
+    <string name="feeds_settings_prompt_reset">លានដែលដាកះបញ្ឈារូគិនបុនពែលួមពាវ</string>
+    <string name="feeds_post_select_feed">សូមជែវសុនមានបានឈៅសួរភែរ</string>
+    <string name="feeds_post_empty_content">សូមបុរានសវែរញឮសលបាដះពាសៀវបាទឬគានសុបដាសៀវពែលតា</string>
 
 </resources>

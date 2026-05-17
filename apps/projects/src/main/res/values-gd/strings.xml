@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Ùraichte</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Cha deach am pròiseact a lorg</string>
+    <string name="projects_option_icon_placeholder">m.e. Check, Star, Flag</string>
 
 </resources>

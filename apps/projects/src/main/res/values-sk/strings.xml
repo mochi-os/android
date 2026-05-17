@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Aktualizované</string>
     <string name="projects_views_sort_rank">Poradie</string>
     <string name="projects_project_not_found">Projekt sa nenašiel</string>
+    <string name="projects_option_icon_placeholder">napr. Check, Star, Flag</string>
 
 </resources>

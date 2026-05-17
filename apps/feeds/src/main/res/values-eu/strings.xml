@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Berrezarri lehenetsira</string>
     <string name="feeds_feed_not_found">Jarioa ez da aurkitu</string>
     <string name="feeds_post_not_found">Ez da argitalpena aurkitu</string>
+    <string name="feeds_settings_feed_renamed">Jarioa berrizendatuta</string>
+    <string name="feeds_settings_source_added">Iturria gehitu da</string>
+    <string name="feeds_settings_source_updated">Iturria eguneratu da</string>
+    <string name="feeds_settings_source_removed">Iturria kendu da</string>
+    <string name="feeds_settings_access_updated">Sarbidea eguneratua</string>
+    <string name="feeds_settings_member_added">Kidea gehituta</string>
+    <string name="feeds_settings_member_removed">Kidea kenduta</string>
+    <string name="feeds_settings_prompt_saved">Galdera-aukera gorde da</string>
+    <string name="feeds_settings_banner_saved">Banderatxoa gordeta</string>
+    <string name="feeds_settings_banner_cleared">Banderatxoa garbituta</string>
+    <string name="feeds_settings_source_polling">Iturria kontsultatzen…</string>
+    <string name="feeds_settings_access_revoked">Sarbidea kendu da</string>
+    <string name="feeds_settings_ai_mode_updated">AI modua eguneratuta</string>
+    <string name="feeds_settings_ai_account_updated">AI kontua eguneratuta</string>
+    <string name="feeds_settings_prompt_reset">Galderaren lehenetsia berrezarri da</string>
+    <string name="feeds_post_select_feed">Mesedez, hautatu jario bat</string>
+    <string name="feeds_post_empty_content">Mesedez, sartu testu bat edo erantsi fitxategi bat</string>
 
 </resources>

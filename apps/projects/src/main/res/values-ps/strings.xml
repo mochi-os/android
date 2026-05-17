@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">نوی شو</string>
     <string name="projects_views_sort_rank">درجه</string>
     <string name="projects_project_not_found">پروژه ونه موندل شوه</string>
+    <string name="projects_option_icon_placeholder">لکه چېنه Check، Star، Flag</string>
 
 </resources>

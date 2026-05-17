@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Tilbakestill til standard</string>
     <string name="feeds_feed_not_found">Feed ikke funnet</string>
     <string name="feeds_post_not_found">Innlegg ikke funnet</string>
+    <string name="feeds_settings_feed_renamed">Feed har fått nytt navn</string>
+    <string name="feeds_settings_source_added">Kilde lagt til</string>
+    <string name="feeds_settings_source_updated">Kilde oppdatert</string>
+    <string name="feeds_settings_source_removed">Kilde fjernet</string>
+    <string name="feeds_settings_access_updated">Tilgang oppdatert</string>
+    <string name="feeds_settings_member_added">Medlem lagt til</string>
+    <string name="feeds_settings_member_removed">Medlem fjernet</string>
+    <string name="feeds_settings_prompt_saved">Ledetekst lagret</string>
+    <string name="feeds_settings_banner_saved">Banner lagret</string>
+    <string name="feeds_settings_banner_cleared">Banner fjernet</string>
+    <string name="feeds_settings_source_polling">Spør kilde…</string>
+    <string name="feeds_settings_access_revoked">Tilgang opphevet</string>
+    <string name="feeds_settings_ai_mode_updated">AI-modus oppdatert</string>
+    <string name="feeds_settings_ai_account_updated">AI-konto oppdatert</string>
+    <string name="feeds_settings_prompt_reset">Forespørsel tilbakestilt til standard</string>
+    <string name="feeds_post_select_feed">Velg en strøm</string>
+    <string name="feeds_post_empty_content">Skriv inn tekst eller legg ved en fil</string>
 
 </resources>

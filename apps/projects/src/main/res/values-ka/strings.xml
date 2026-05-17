@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
     <string name="projects_views_sort_rank">რანკი</string>
     <string name="projects_project_not_found">პროექტი ვერ მოიძებნა</string>
+    <string name="projects_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
 
 </resources>

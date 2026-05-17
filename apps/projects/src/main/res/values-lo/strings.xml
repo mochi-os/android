@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="projects_views_sort_rank">ອັນດັບ</string>
     <string name="projects_project_not_found">ບໍ່ພົບໂຄງການ</string>
+    <string name="projects_option_icon_placeholder">ຕ຺ືັກ. Check, Star, Flag</string>
 
 </resources>

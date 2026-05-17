@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ډیفالټ ته بیرته تنظیم کړئ</string>
     <string name="feeds_feed_not_found">فیډ ونه موندل شو</string>
     <string name="feeds_post_not_found">لیکنه ونه موندل شوه</string>
+    <string name="feeds_settings_feed_renamed">د فیډ نوم بدل شو</string>
+    <string name="feeds_settings_source_added">سرچینه اضافه شوه</string>
+    <string name="feeds_settings_source_updated">سرچینه نوې شوه</string>
+    <string name="feeds_settings_source_removed">سرچینه لرې شوه</string>
+    <string name="feeds_settings_access_updated">لاسرسی نوی شو</string>
+    <string name="feeds_settings_member_added">غړی اضافه شو</string>
+    <string name="feeds_settings_member_removed">غړی لیرې شو</string>
+    <string name="feeds_settings_prompt_saved">پرامپټ خوندي شو</string>
+    <string name="feeds_settings_banner_saved">پلکات حفظ شو</string>
+    <string name="feeds_settings_banner_cleared">پلکات پاک شو</string>
+    <string name="feeds_settings_source_polling">د سرچینې پوښتنه …</string>
+    <string name="feeds_settings_access_revoked">لاسرسی پرېګدل و</string>
+    <string name="feeds_settings_ai_mode_updated">د AI حالت تازه شو</string>
+    <string name="feeds_settings_ai_account_updated">د AI حساب تازه شو</string>
+    <string name="feeds_settings_prompt_reset">لارښود هغه بېرګه درجە ته بیرته شو</string>
+    <string name="feeds_post_select_feed">مهربانی وکړئ یو خبر ولارېئ</string>
+    <string name="feeds_post_empty_content">مهربانی وکړئ داسې متن دنننننیئ یا یوه دوسیه پیوسته کړئ</string>
 
 </resources>

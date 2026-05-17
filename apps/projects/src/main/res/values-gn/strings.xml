@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Hekopyahúpyre</string>
     <string name="projects_views_sort_rank">Rango</string>
     <string name="projects_project_not_found">Mba\'apo ndojejuhúi</string>
+    <string name="projects_option_icon_placeholder">techapyrã. Check, Star, Flag</string>
 
 </resources>

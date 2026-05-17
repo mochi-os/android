@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Ailosod i\'r diofyn</string>
     <string name="feeds_feed_not_found">Ni chanfuwyd y ffrwd</string>
     <string name="feeds_post_not_found">Heb ddod o hyd i\'r postiad</string>
+    <string name="feeds_settings_feed_renamed">Ffrwd wedi\'i hailenwi</string>
+    <string name="feeds_settings_source_added">Ffynhonnell wedi\'i hychwanegu</string>
+    <string name="feeds_settings_source_updated">Ffynhonnell wedi\'i diweddaru</string>
+    <string name="feeds_settings_source_removed">Ffynhonnell wedi\'i thynnu</string>
+    <string name="feeds_settings_access_updated">Mynediad wedi\'i ddiweddaru</string>
+    <string name="feeds_settings_member_added">Aelod wedi\'i ychwanegu</string>
+    <string name="feeds_settings_member_removed">Aelod wedi\'i ddileu</string>
+    <string name="feeds_settings_prompt_saved">Anogiad wedi\'i gadw</string>
+    <string name="feeds_settings_banner_saved">Baner wedi’i gadw</string>
+    <string name="feeds_settings_banner_cleared">Baner wedi’i chlirio</string>
+    <string name="feeds_settings_source_polling">Wrthi’n holi’r ffynhonnell…</string>
+    <string name="feeds_settings_access_revoked">Mynediad wedi’i ddirymu</string>
+    <string name="feeds_settings_ai_mode_updated">Modd AI wedi’i ddiweddaru</string>
+    <string name="feeds_settings_ai_account_updated">Cyfrif AI wedi’i ddiweddaru</string>
+    <string name="feeds_settings_prompt_reset">Anogwr wedi’i ailosod i’r rhagosodiad</string>
+    <string name="feeds_post_select_feed">Dewiswch ffrwd</string>
+    <string name="feeds_post_empty_content">Rhowch destun neu atodwch ffeil</string>
 
 </resources>

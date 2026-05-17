@@ -73,7 +73,10 @@ class ModerationViewModel @Inject constructor(
                         reports = repository.moderationReports(forumId, _uiState.value.reportsStatus)
                     )
                     2 -> _uiState.value = _uiState.value.copy(log = repository.moderationLog(forumId).entries)
-                    3 -> _uiState.value = _uiState.value.copy(restrictions = repository.restrictions(forumId).restrictions)
+                    3 -> _uiState.value = _uiState.value.copy(
+                        restrictions = repository.restrictions(forumId).restrictions
+                            .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    )
                 }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

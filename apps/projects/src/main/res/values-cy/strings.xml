@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Wedi\'i ddiweddaru</string>
     <string name="projects_views_sort_rank">Rheng</string>
     <string name="projects_project_not_found">Heb ddod o hyd i\'r prosiect</string>
+    <string name="projects_option_icon_placeholder">e.e. Check, Star, Flag</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Барқарорсозӣ ба нобаёнӣ</string>
     <string name="feeds_feed_not_found">Фид ёфт нашуд</string>
     <string name="feeds_post_not_found">Пост ёфт нашуд</string>
+    <string name="feeds_settings_feed_renamed">Номи фид иваз шуд</string>
+    <string name="feeds_settings_source_added">Манбаъ илова карда шуд</string>
+    <string name="feeds_settings_source_updated">Манбаъ навсозӣ шуд</string>
+    <string name="feeds_settings_source_removed">Манбаъ хориҷ карда шуд</string>
+    <string name="feeds_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
+    <string name="feeds_settings_member_added">Узв илова шуд</string>
+    <string name="feeds_settings_member_removed">Узв бартараф шуд</string>
+    <string name="feeds_settings_prompt_saved">Дархост захира шуд</string>
+    <string name="feeds_settings_banner_saved">Баннер захира шуд</string>
+    <string name="feeds_settings_banner_cleared">Баннер пок шуд</string>
+    <string name="feeds_settings_source_polling">Сарчашма пурсида шуда истадааст…</string>
+    <string name="feeds_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
+    <string name="feeds_settings_ai_mode_updated">Режими AI нав карда шуд</string>
+    <string name="feeds_settings_ai_account_updated">Ҳисоби AI нав карда шуд</string>
+    <string name="feeds_settings_prompt_reset">Дархост ба пешфарз баргардонида шуд</string>
+    <string name="feeds_post_select_feed">Лутфан фидро интихоб кунед</string>
+    <string name="feeds_post_empty_content">Лутфан матнро ворид кунед ё файлро пайваст кунед</string>
 
 </resources>

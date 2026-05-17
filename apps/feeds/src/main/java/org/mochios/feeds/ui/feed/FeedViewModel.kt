@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
+import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
@@ -72,8 +72,8 @@ class FeedViewModel @Inject constructor(
 
     private var nextCursor: Long = 0
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
+    private val _error = MutableStateFlow<MochiError?>(null)
+    val error: StateFlow<MochiError?> = _error.asStateFlow()
 
     private val _isNotFound = MutableStateFlow(false)
     val isNotFound: StateFlow<Boolean> = _isNotFound.asStateFlow()
@@ -110,11 +110,10 @@ class FeedViewModel @Inject constructor(
                     // so the all-feeds view honors the persisted preference.
                     loadGlobalSort()
                     loadAllFeeds()
-                } catch (e: MochiError) {
-                    _error.value = e.userMessage()
-                    if (e is MochiError.NotFoundError) _isNotFound.value = true
                 } catch (e: Exception) {
-                    _error.value = e.message ?: "Failed to load feed"
+                    val err = e.toMochiError()
+                    _error.value = err
+                    if (err is MochiError.NotFoundError) _isNotFound.value = true
                 } finally {
                     _isLoading.value = false
                 }
@@ -162,11 +161,10 @@ class FeedViewModel @Inject constructor(
                 nextCursor = result.nextCursor
 
                 loadTags()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
-                if (e is MochiError.NotFoundError) _isNotFound.value = true
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load feed"
+                val err = e.toMochiError()
+                _error.value = err
+                if (err is MochiError.NotFoundError) _isNotFound.value = true
             } finally {
                 _isLoading.value = false
             }
@@ -254,10 +252,8 @@ class FeedViewModel @Inject constructor(
 
                     loadTags()
                 }
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to refresh"
+                _error.value = e.toMochiError()
             } finally {
                 _isRefreshing.value = false
             }

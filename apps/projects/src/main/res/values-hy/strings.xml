@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Թարմացված</string>
     <string name="projects_views_sort_rank">Աստիճան</string>
     <string name="projects_project_not_found">Նախագիծը չի գտնվել</string>
+    <string name="projects_option_icon_placeholder">օր. Check, Star, Flag</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Atstatyti į numatytąjį</string>
     <string name="feeds_feed_not_found">Srautas nerastas</string>
     <string name="feeds_post_not_found">Įrašas nerastas</string>
+    <string name="feeds_settings_feed_renamed">Srautas pervadintas</string>
+    <string name="feeds_settings_source_added">Šaltinis pridėtas</string>
+    <string name="feeds_settings_source_updated">Šaltinis atnaujintas</string>
+    <string name="feeds_settings_source_removed">Šaltinis pašalintas</string>
+    <string name="feeds_settings_access_updated">Prieiga atnaujinta</string>
+    <string name="feeds_settings_member_added">Narys pridėtas</string>
+    <string name="feeds_settings_member_removed">Narys pašalintas</string>
+    <string name="feeds_settings_prompt_saved">Užklausa išsaugota</string>
+    <string name="feeds_settings_banner_saved">Reklamjuostė išsaugota</string>
+    <string name="feeds_settings_banner_cleared">Reklamjuostė išvalyta</string>
+    <string name="feeds_settings_source_polling">Apklausiamas šaltinis…</string>
+    <string name="feeds_settings_access_revoked">Prieiga atšaukta</string>
+    <string name="feeds_settings_ai_mode_updated">DI režimas atnaujintas</string>
+    <string name="feeds_settings_ai_account_updated">DI paskyra atnaujinta</string>
+    <string name="feeds_settings_prompt_reset">Raginimas atstatytas į numatytąjį</string>
+    <string name="feeds_post_select_feed">Pasirinkite srautą</string>
+    <string name="feeds_post_empty_content">Įveskite tekstą arba pridėkite failą</string>
 
 </resources>

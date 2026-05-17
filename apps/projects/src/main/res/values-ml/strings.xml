@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="projects_views_sort_rank">Rate Limiting</string>
     <string name="projects_project_not_found">പ്രോജക്റ്റ് ലഭ്യമല്ല</string>
+    <string name="projects_option_icon_placeholder">ഉദാ. Check, Star, Flag</string>
 
 </resources>

@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Kubuyekeziwe</string>
     <string name="projects_views_sort_rank">Isigaba</string>
     <string name="projects_project_not_found">Iphrojekthi ayitholakali</string>
+    <string name="projects_option_icon_placeholder">isib. Check, Star, Flag</string>
 
 </resources>

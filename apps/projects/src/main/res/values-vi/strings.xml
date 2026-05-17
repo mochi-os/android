@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Đã cập nhật</string>
     <string name="projects_views_sort_rank">Xếp hạng</string>
     <string name="projects_project_not_found">Không tìm thấy dự án</string>
+    <string name="projects_option_icon_placeholder">ví dụ Check, Star, Flag</string>
 
 </resources>

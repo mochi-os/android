@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Жаңыланды</string>
     <string name="projects_views_sort_rank">Орду</string>
     <string name="projects_project_not_found">Долбоор табылган жок</string>
+    <string name="projects_option_icon_placeholder">мыс. Check, Star, Flag</string>
 
 </resources>

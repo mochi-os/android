@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">డిఫాల్ట్‌కు రీసెట్ చేయండి</string>
     <string name="feeds_feed_not_found">ఫీడ్ కనుగొనబడలేదు</string>
     <string name="feeds_post_not_found">పోస్ట్ కనుగొనబడలేదు</string>
+    <string name="feeds_settings_feed_renamed">ఫీడ్ పేరు మార్చబడింది</string>
+    <string name="feeds_settings_source_added">సోర్స్ జోడించబడింది</string>
+    <string name="feeds_settings_source_updated">సోర్స్ నవీకరించబడింది</string>
+    <string name="feeds_settings_source_removed">సోర్స్ తీసివేయబడింది</string>
+    <string name="feeds_settings_access_updated">యాక్సెస్ నవీకరించబడింది</string>
+    <string name="feeds_settings_member_added">సభ్యుడు జోడించబడ్డారు</string>
+    <string name="feeds_settings_member_removed">సభ్యుడు తొలగించబడ్డారు</string>
+    <string name="feeds_settings_prompt_saved">ప్రాంప్ట్ సేవ్ చేయబడింది</string>
+    <string name="feeds_settings_banner_saved">బ్యానర్ సేవ్ చేయబడింది</string>
+    <string name="feeds_settings_banner_cleared">బ్యానర్ త్రీయతూరీఙింది</string>
+    <string name="feeds_settings_source_polling">మూలం నుండి తలఖరే చేరెనీ…</string>
+    <string name="feeds_settings_access_revoked">ప్రవేశీఙీ రద్దు చేయబడింది</string>
+    <string name="feeds_settings_ai_mode_updated">AI మోడ్ నవీకరించబడింది</string>
+    <string name="feeds_settings_ai_account_updated">AI ఖాతా నవీకరించబడింది</string>
+    <string name="feeds_settings_prompt_reset">ప్రాంప్ಟ్ డిఫాల్ಟ్ పరిలక్కులికు రీసెಟ్ చేరెని</string>
+    <string name="feeds_post_select_feed">దయచెసి ఒక ఫీడ్ను ఎన్నుకోండి</string>
+    <string name="feeds_post_empty_content">దయచెసి కూలం ఎమారానా టెక్సಟ్ నమోదు చేరెని లేదా ఫ౉లను జಟ్ చేరెని</string>
 
 </resources>

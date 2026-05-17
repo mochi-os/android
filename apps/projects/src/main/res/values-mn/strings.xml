@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Шинэчлэгдсэн</string>
     <string name="projects_views_sort_rank">Зэрэг</string>
     <string name="projects_project_not_found">Төсөл олдсонгүй</string>
+    <string name="projects_option_icon_placeholder">жишээ нь. Check, Star, Flag</string>
 
 </resources>

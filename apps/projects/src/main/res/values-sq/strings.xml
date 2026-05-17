@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">U përditësua</string>
     <string name="projects_views_sort_rank">Renditja</string>
     <string name="projects_project_not_found">Projekti s\'u gjet</string>
+    <string name="projects_option_icon_placeholder">p.sh. Check, Star, Flag</string>
 
 </resources>

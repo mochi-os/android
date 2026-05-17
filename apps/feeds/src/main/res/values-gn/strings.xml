@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Embojevy ypy peguávape</string>
     <string name="feeds_feed_not_found">Feed nojetopái</string>
     <string name="feeds_post_not_found">Marandu ndojejuhúi</string>
+    <string name="feeds_settings_feed_renamed">Oñembohera\'ã feed</string>
+    <string name="feeds_settings_source_added">Pyendarã embyaty</string>
+    <string name="feeds_settings_source_updated">Pyendarã ñembohekopyahu</string>
+    <string name="feeds_settings_source_removed">Pyendarã embogua</string>
+    <string name="feeds_settings_access_updated">Jeike oñembojeguáma</string>
+    <string name="feeds_settings_member_added">Oñembojuaju member</string>
+    <string name="feeds_settings_member_removed">Oñembogue member</string>
+    <string name="feeds_settings_prompt_saved">Prompt oñeñongatu</string>
+    <string name="feeds_settings_banner_saved">Banner ojeguereko</string>
+    <string name="feeds_settings_banner_cleared">Banner ojekuera</string>
+    <string name="feeds_settings_source_polling">Oñemoporandu opaite mba’e…</string>
+    <string name="feeds_settings_access_revoked">Jeike oje’ói</string>
+    <string name="feeds_settings_ai_mode_updated">AI mba’e oje’oguerá</string>
+    <string name="feeds_settings_ai_account_updated">AI mba’e renohe oje’oguerá</string>
+    <string name="feeds_settings_prompt_reset">Mbo’epyrã ojej’api jey peteichaitehapegua</string>
+    <string name="feeds_post_select_feed">Eporavo peteichaitehapegua kuatia</string>
+    <string name="feeds_post_empty_content">Ejehai mba’e’à omoaña peteichaitehapegua marandurenda</string>
 
 </resources>

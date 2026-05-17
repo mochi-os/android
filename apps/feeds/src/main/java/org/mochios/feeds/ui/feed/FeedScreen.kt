@@ -25,9 +25,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -62,7 +60,6 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -106,6 +103,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
+import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.model.Comment
@@ -127,7 +125,6 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
 import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Post
-import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
@@ -175,9 +172,7 @@ fun FeedScreen(
     val error by viewModel.error.collectAsState()
     val isNotFound by viewModel.isNotFound.collectAsState()
     val currentSort by viewModel.currentSort.collectAsState()
-    val currentTag by viewModel.currentTag.collectAsState()
     val unreadOnly by viewModel.unreadOnly.collectAsState()
-    val tags by viewModel.tags.collectAsState()
 
 
     var showOverflowMenu by remember { mutableStateOf(false) }
@@ -456,7 +451,7 @@ fun FeedScreen(
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = error!!,
+                                text = error!!.userMessage(),
                                 style = MaterialTheme.typography.bodyLarge,
                                 color = MaterialTheme.colorScheme.error
                             )
@@ -469,39 +464,6 @@ fun FeedScreen(
                 }
                 else -> {
                     Column(modifier = Modifier.fillMaxSize()) {
-                        // Sort + unread-only + mark-all-read moved into the
-                        // TopAppBar overflow menu — keeps the magazine page
-                        // chrome-free.
-                        if (tags.isNotEmpty()) {
-                            LazyRow(
-                                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp),
-                                horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(6.dp),
-                            ) {
-                                if (currentTag != null) {
-                                    item(key = "clear") {
-                                        FilterChip(
-                                            selected = false,
-                                            onClick = { viewModel.setTagFilter(null) },
-                                            label = { Text(stringResource(R.string.feeds_tag_clear)) },
-                                        )
-                                    }
-                                }
-                                items(tags, key = { it.label }) { tag ->
-                                    TagFilterChip(
-                                        tag = tag,
-                                        selected = currentTag == tag.label,
-                                        onClick = {
-                                            viewModel.setTagFilter(
-                                                if (currentTag == tag.label) null else tag.label
-                                            )
-                                        },
-                                        onAdjustInterest = { direction ->
-                                            viewModel.adjustTagInterest(tag, direction)
-                                        },
-                                    )
-                                }
-                            }
-                        }
                         if (posts.isEmpty() && !isLoading) {
                             Box(
                                 modifier = Modifier
@@ -999,53 +961,5 @@ private fun InterestSuggestionsDialog(
             }
         },
     )
-}
-
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-private fun TagFilterChip(
-    tag: Tag,
-    selected: Boolean,
-    onClick: () -> Unit,
-    onAdjustInterest: (direction: String) -> Unit,
-) {
-    var menuExpanded by remember { mutableStateOf(false) }
-    androidx.compose.foundation.layout.Box {
-        FilterChip(
-            selected = selected,
-            onClick = onClick,
-            label = { Text(tag.label) },
-            modifier = Modifier.combinedClickable(
-                onClick = onClick,
-                onLongClick = { menuExpanded = true },
-            ),
-        )
-        DropdownMenu(
-            expanded = menuExpanded,
-            onDismissRequest = { menuExpanded = false },
-        ) {
-            androidx.compose.material3.DropdownMenuItem(
-                text = { Text(stringResource(R.string.feeds_tag_more_up)) },
-                onClick = {
-                    menuExpanded = false
-                    onAdjustInterest("up")
-                },
-            )
-            androidx.compose.material3.DropdownMenuItem(
-                text = { Text(stringResource(R.string.feeds_tag_more_down)) },
-                onClick = {
-                    menuExpanded = false
-                    onAdjustInterest("down")
-                },
-            )
-            androidx.compose.material3.DropdownMenuItem(
-                text = { Text(stringResource(R.string.feeds_tag_remove)) },
-                onClick = {
-                    menuExpanded = false
-                    onAdjustInterest("remove")
-                },
-            )
-        }
-    }
 }
 

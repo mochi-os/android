@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Жаңартылды</string>
     <string name="projects_views_sort_rank">Дәреже</string>
     <string name="projects_project_not_found">Жоба табылмады</string>
+    <string name="projects_option_icon_placeholder">мыс. Check, Star, Flag</string>
 
 </resources>

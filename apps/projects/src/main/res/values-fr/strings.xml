@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Mis à jour</string>
     <string name="projects_views_sort_rank">Classement</string>
     <string name="projects_project_not_found">Projet introuvable</string>
+    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
 
 </resources>

@@ -90,7 +90,9 @@ class ChatSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val data = repository.getNewChatData()
-                _uiState.value = _uiState.value.copy(friends = data.friends)
+                _uiState.value = _uiState.value.copy(
+                    friends = data.friends.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

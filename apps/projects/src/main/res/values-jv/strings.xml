@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Wis dianyari</string>
     <string name="projects_views_sort_rank">Peringkat</string>
     <string name="projects_project_not_found">Proyèk ora ditemokaké</string>
+    <string name="projects_option_icon_placeholder">tuladha Check, Star, Flag</string>
 
 </resources>

@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Ενημερώθηκε</string>
     <string name="projects_views_sort_rank">Κατάταξη</string>
     <string name="projects_project_not_found">Το έργο δεν βρέθηκε</string>
+    <string name="projects_option_icon_placeholder">π.χ. Check, Star, Flag</string>
 
 </resources>

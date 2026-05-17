@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Päivitetty</string>
     <string name="projects_views_sort_rank">Sijoitus</string>
     <string name="projects_project_not_found">Projektia ei löytynyt</string>
+    <string name="projects_option_icon_placeholder">esim. Check, Star, Flag</string>
 
 </resources>

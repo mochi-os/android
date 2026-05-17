@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">புதுப்பிக்கப்பட்டது</string>
     <string name="projects_views_sort_rank">தரவரிசை</string>
     <string name="projects_project_not_found">Project கிடைக்கவில்லை</string>
+    <string name="projects_option_icon_placeholder">உதா. Check, Star, Flag</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ડિફૉલ્ટ પર રીસેટ કરો</string>
     <string name="feeds_feed_not_found">ફીડ મળ્યું નહીં</string>
     <string name="feeds_post_not_found">પોસ્ટ મળી નથી</string>
+    <string name="feeds_settings_feed_renamed">ફીડનું નામ બદલ્યું</string>
+    <string name="feeds_settings_source_added">સ્રોત ઉમેર્યો</string>
+    <string name="feeds_settings_source_updated">સ્રોત અપડેટ કર્યો</string>
+    <string name="feeds_settings_source_removed">સ્રોત દૂર કર્યો</string>
+    <string name="feeds_settings_access_updated">ઍક્સેસ અપડેટ થયું</string>
+    <string name="feeds_settings_member_added">સભ્ય ઉમેર્યા</string>
+    <string name="feeds_settings_member_removed">સભ્ય દૂર કર્યા</string>
+    <string name="feeds_settings_prompt_saved">પ્રોમ્પ્ટ સાચવ્યું</string>
+    <string name="feeds_settings_banner_saved">બેનર સાન્વ્યો</string>
+    <string name="feeds_settings_banner_cleared">બેનર સાફ કર્યો</string>
+    <string name="feeds_settings_source_polling">સ્રોત પોલ કરી રાષ્યુંછે…</string>
+    <string name="feeds_settings_access_revoked">એક્સેસ રદ કર્યો</string>
+    <string name="feeds_settings_ai_mode_updated">AI મોડ અપડેટ કર્યો</string>
+    <string name="feeds_settings_ai_account_updated">AI ખાતું અપડેટ કર્યું</string>
+    <string name="feeds_settings_prompt_reset">પ્રોમ્પને ડિફોલ્ટ પર રીસેટ કર્યું</string>
+    <string name="feeds_post_select_feed">કૃપા કરીને એક ફિડ પસંદ કરો</string>
+    <string name="feeds_post_empty_content">કૃપા કરીને કાંનું લષકું કે એક ફાઇલ જોડો</string>
 
 </resources>

@@ -88,11 +88,14 @@ class SecurityViewModel @Inject constructor(
             try {
                 val methods = api.getMethods().bodyOrThrow().methods
                 val passkeys = api.listPasskeys().bodyOrThrow().passkeys
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 val totp = api.getTotp().bodyOrThrow().enabled
                 val recovery = api.recoveryCount().bodyOrThrow().count
                 val sessions = api.listSessions().bodyOrThrow().sessions.sortedByDescending { it.accessed }
                 val oauth = api.listOAuth().bodyOrThrow().identities
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.provider })
                 val tokens = api.listTokens().bodyOrThrow().tokens
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _uiState.value = state.copy(
                     isLoading = false,
                     enabledMethods = methods.toSet(),

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="projects_create_privacy">Privacy</string>
     <string name="projects_sort_rank">Manual</string>
     <string name="projects_settings_tab_access">Access</string>
     <string name="projects_object_watch">Watch</string>

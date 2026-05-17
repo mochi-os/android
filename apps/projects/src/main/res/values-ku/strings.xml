@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Nûjen kirin</string>
     <string name="projects_views_sort_rank">Rêz</string>
     <string name="projects_project_not_found">Proje nehat dîtin</string>
+    <string name="projects_option_icon_placeholder">wekî Check, Star, Flag</string>
 
 </resources>

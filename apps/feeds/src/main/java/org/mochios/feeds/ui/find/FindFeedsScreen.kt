@@ -52,6 +52,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.userMessage
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.android.R as MochiR
@@ -68,7 +69,7 @@ fun FindFeedsScreen(
 
     LaunchedEffect(error) {
         error?.let {
-            snackbarHostState.showSnackbar(it)
+            snackbarHostState.showSnackbar(it.userMessage())
             viewModel.clearError()
         }
     }

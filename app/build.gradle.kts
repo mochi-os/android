@@ -23,7 +23,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 1
-        versionName = "0.16"
+        versionName = "0.17"
     }
 
     signingConfigs {
@@ -75,14 +75,24 @@ tasks.register("checkLocaleCompleteness") {
         if (!source.exists()) return@doLast
         val keyPattern = Regex("""<string name="([^"]+)"""")
         val sourceKeys = keyPattern.findAll(source.readText()).map { it.groupValues[1] }.toSet()
-        val overlays = setOf("values-en-rUS")
+        // Brand-identity strings stay verbatim in every locale (Latin script,
+        // unchanged) — see the i18n glossary rule in CLAUDE.md. Excluding them
+        // here keeps the warning signal honest; otherwise every locale flags
+        // missing entries for keys that intentionally don't need translation.
+        val brandKeys = setOf("app_name")
+        val checkKeys = sourceKeys - brandKeys
+        // Sparse-override locales: only carry their locale-specific spelling
+        // / vocabulary diffs from the parent (en-rUS over en, fr-rCA's
+        // "Clavardage" over fr). Everything else resolves through Android's
+        // locale fallback chain, so missing keys here are by design.
+        val overlays = setOf("values-en-rUS", "values-fr-rCA")
         val problems = mutableListOf<String>()
         resDir.listFiles { f -> f.isDirectory && f.name.startsWith("values-") }?.forEach { dir ->
             if (dir.name in overlays) return@forEach
             val xml = dir.resolve("strings.xml")
             if (!xml.exists()) return@forEach
             val have = keyPattern.findAll(xml.readText()).map { it.groupValues[1] }.toSet()
-            val missing = sourceKeys - have
+            val missing = checkKeys - have
             if (missing.isNotEmpty()) {
                 problems += "${dir.name}: ${missing.size} missing (${missing.take(3).joinToString()}…)"
             }

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Pa padà sí àbùdá</string>
     <string name="feeds_feed_not_found">A kò rí feed</string>
     <string name="feeds_post_not_found">A kò rí ìfìránṣẹ́</string>
+    <string name="feeds_settings_feed_renamed">A ti tún feed sọ lórúkọ</string>
+    <string name="feeds_settings_source_added">Orísun ti fikún</string>
+    <string name="feeds_settings_source_updated">Orísun ti ṣe imudojúìwọ̀n</string>
+    <string name="feeds_settings_source_removed">Orísun ti yọ kúrò</string>
+    <string name="feeds_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
+    <string name="feeds_settings_member_added">Ọmọ ẹgbẹ́ ti fi kún</string>
+    <string name="feeds_settings_member_removed">Ọmọ ẹgbẹ́ ti yọ kúrò</string>
+    <string name="feeds_settings_prompt_saved">A ti tọ́jú prompt</string>
+    <string name="feeds_settings_banner_saved">Tààánà ti fọwọ sí</string>
+    <string name="feeds_settings_banner_cleared">Tààánà ti mu kuro</string>
+    <string name="feeds_settings_source_polling">Ẹ́kò ìgbòkànà ti ṣègbà…</string>
+    <string name="feeds_settings_access_revoked">Ati gba aṣèsẹbí</string>
+    <string name="feeds_settings_ai_mode_updated">Àpọn AI ti se imudoju</string>
+    <string name="feeds_settings_ai_account_updated">Akàntí AI ti se imudoju</string>
+    <string name="feeds_settings_prompt_reset">Prọmptì ti tun rinlè si tíò jṣ</string>
+    <string name="feeds_post_select_feed">Jọwọ, yan akìkújú</string>
+    <string name="feeds_post_empty_content">Jọwọ, te akoonu kúrò tabí so fàìlì kan pọ</string>
 
 </resources>

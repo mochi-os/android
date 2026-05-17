@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
+import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
@@ -31,14 +31,14 @@ class FeedListViewModel @Inject constructor(
     private val _isRefreshing = MutableStateFlow(false)
     val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
+    private val _error = MutableStateFlow<MochiError?>(null)
+    val error: StateFlow<MochiError?> = _error.asStateFlow()
 
     private val _showCreateDialog = MutableStateFlow(false)
     val showCreateDialog: StateFlow<Boolean> = _showCreateDialog.asStateFlow()
 
-    private val _createError = MutableStateFlow<String?>(null)
-    val createError: StateFlow<String?> = _createError.asStateFlow()
+    private val _createError = MutableStateFlow<MochiError?>(null)
+    val createError: StateFlow<MochiError?> = _createError.asStateFlow()
 
     private val _isCreating = MutableStateFlow(false)
     val isCreating: StateFlow<Boolean> = _isCreating.asStateFlow()
@@ -89,12 +89,11 @@ class FeedListViewModel @Inject constructor(
             _error.value = null
             try {
                 val feedList = repository.listFeeds()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _feeds.value = feedList
                 subscribeToWebSockets(feedList)
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load feeds"
+                _error.value = e.toMochiError()
             } finally {
                 _isLoading.value = false
             }
@@ -106,12 +105,11 @@ class FeedListViewModel @Inject constructor(
             _isRefreshing.value = true
             try {
                 val feedList = repository.listFeeds()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _feeds.value = feedList
                 subscribeToWebSockets(feedList)
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to refresh feeds"
+                _error.value = e.toMochiError()
             } finally {
                 _isRefreshing.value = false
             }
@@ -136,10 +134,8 @@ class FeedListViewModel @Inject constructor(
                 repository.createFeed(name, privacy, memories)
                 _showCreateDialog.value = false
                 refresh()
-            } catch (e: MochiError) {
-                _createError.value = e.userMessage()
             } catch (e: Exception) {
-                _createError.value = e.message ?: "Failed to create feed"
+                _createError.value = e.toMochiError()
             } finally {
                 _isCreating.value = false
             }
@@ -152,10 +148,8 @@ class FeedListViewModel @Inject constructor(
                 val token = repository.getRssToken("*", mode)
                 val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
                 _globalRssUrl.value = "$serverUrl/feeds/-/rss?token=$token"
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to generate RSS URL"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -202,6 +196,7 @@ class FeedListViewModel @Inject constructor(
     private suspend fun refreshFeedSilently() {
         try {
             val feedList = repository.listFeeds()
+                .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
             _feeds.value = feedList
         } catch (_: Exception) {
             // Silent refresh failure

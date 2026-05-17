@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Aġġornat</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">Proġett mhux misjub</string>
+    <string name="projects_option_icon_placeholder">ez. Check, Star, Flag</string>
 
 </resources>

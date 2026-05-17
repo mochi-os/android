@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ডিফল্টে রিসেট করুন</string>
     <string name="feeds_feed_not_found">ফিড পাওয়া যায়নি</string>
     <string name="feeds_post_not_found">পোস্ট পাওয়া যায়নি</string>
+    <string name="feeds_settings_feed_renamed">ফিডের নাম পরিবর্তন করা হয়েছে</string>
+    <string name="feeds_settings_source_added">উৎস যোগ করা হয়েছে</string>
+    <string name="feeds_settings_source_updated">উৎস আপডেট হয়েছে</string>
+    <string name="feeds_settings_source_removed">উৎস সরানো হয়েছে</string>
+    <string name="feeds_settings_access_updated">অ্যাক্সেস আপডেট হয়েছে</string>
+    <string name="feeds_settings_member_added">সদস্য যোগ করা হয়েছে</string>
+    <string name="feeds_settings_member_removed">সদস্য সরানো হয়েছে</string>
+    <string name="feeds_settings_prompt_saved">প্রম্পট সংরক্ষণ করা হয়েছে</string>
+    <string name="feeds_settings_banner_saved">ব্যানার সংরক্ষিত হয়েছে</string>
+    <string name="feeds_settings_banner_cleared">ব্যানার মুছে ফেলা হয়েছে</string>
+    <string name="feeds_settings_source_polling">সোর্স পোল করা হচ্ছে…</string>
+    <string name="feeds_settings_access_revoked">অ্যাক্সেস প্রত্যাহার করা হয়েছে</string>
+    <string name="feeds_settings_ai_mode_updated">AI মোড আপডেট করা হয়েছে</string>
+    <string name="feeds_settings_ai_account_updated">AI অ্যাকাউন্ট আপডেট করা হয়েছে</string>
+    <string name="feeds_settings_prompt_reset">প্রম্পট ডিফল্টে রিসেট করা হয়েছে</string>
+    <string name="feeds_post_select_feed">অনুগ্রহ করে একটি ফিড নির্বাচন করুন</string>
+    <string name="feeds_post_empty_content">অনুগ্রহ করে কিছু লিখুন বা একটি ফাইল সংযুক্ত করুন</string>
 
 </resources>

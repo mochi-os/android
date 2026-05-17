@@ -74,6 +74,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
@@ -132,7 +133,7 @@ fun PostDetailScreen(
 
     LaunchedEffect(actionError) {
         actionError?.let {
-            snackbarHostState.showSnackbar(it)
+            snackbarHostState.showSnackbar(it.userMessage())
             viewModel.clearActionError()
         }
     }
@@ -297,7 +298,7 @@ internal fun PostDetailContent(
             Box(modifier = modifier, contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(
-                        text = error!!,
+                        text = error!!.userMessage(),
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.error
                     )

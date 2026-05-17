@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">An sabunta</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">Ba a sami project ba</string>
+    <string name="projects_option_icon_placeholder">misali Check, Star, Flag</string>
 
 </resources>

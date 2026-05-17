@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Mayar zuwa asali</string>
     <string name="feeds_feed_not_found">Ba a samu feed ba</string>
     <string name="feeds_post_not_found">Ba a sami post ba</string>
+    <string name="feeds_settings_feed_renamed">An sake suna feed</string>
+    <string name="feeds_settings_source_added">An ƙara tushe</string>
+    <string name="feeds_settings_source_updated">An sabunta tushe</string>
+    <string name="feeds_settings_source_removed">An cire tushe</string>
+    <string name="feeds_settings_access_updated">An sabunta damar shiga</string>
+    <string name="feeds_settings_member_added">An ƙara memba</string>
+    <string name="feeds_settings_member_removed">An cire memba</string>
+    <string name="feeds_settings_prompt_saved">An adana prompt</string>
+    <string name="feeds_settings_banner_saved">An ajiye fastoci</string>
+    <string name="feeds_settings_banner_cleared">An share fastoci</string>
+    <string name="feeds_settings_source_polling">Ana bincike majiyar…</string>
+    <string name="feeds_settings_access_revoked">An hana shiga</string>
+    <string name="feeds_settings_ai_mode_updated">An sabunta yanayin AI</string>
+    <string name="feeds_settings_ai_account_updated">An sabunta asusun AI</string>
+    <string name="feeds_settings_prompt_reset">An sake saita umarni zuwa tsoho</string>
+    <string name="feeds_post_select_feed">Da fatan za a zabi feed</string>
+    <string name="feeds_post_empty_content">Da fatan za a shigar da rubutu ko a kara fayil</string>
 
 </resources>

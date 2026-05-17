@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Default ukar kutintayama</string>
     <string name="feeds_feed_not_found">Janiw feed jikxatkti</string>
     <string name="feeds_post_not_found">Qillqata jan jikxatasiti</string>
+    <string name="feeds_settings_feed_renamed">Feed suti turkatawa</string>
+    <string name="feeds_settings_source_added">Origen yapxatata</string>
+    <string name="feeds_settings_source_updated">Origen machaqachata</string>
+    <string name="feeds_settings_source_removed">Origen apaqata</string>
+    <string name="feeds_settings_access_updated">Mantañ machaqachata</string>
+    <string name="feeds_settings_member_added">Integrante yapxatatawa</string>
+    <string name="feeds_settings_member_removed">Integrante apsutawa</string>
+    <string name="feeds_settings_prompt_saved">Prompt imaña</string>
+    <string name="feeds_settings_banner_saved">Banner imata</string>
+    <string name="feeds_settings_banner_cleared">Banner pichaqata</string>
+    <string name="feeds_settings_source_polling">Pugutaq jutkata…</string>
+    <string name="feeds_settings_access_revoked">Mantanas jark’aqata</string>
+    <string name="feeds_settings_ai_mode_updated">AI mantani machaqach’ata</string>
+    <string name="feeds_settings_ai_account_updated">AI cuentap machaqach’ata</string>
+    <string name="feeds_settings_prompt_reset">Jakthapina mayampi qalltata</string>
+    <string name="feeds_post_select_feed">Mayni feed ajllinim</string>
+    <string name="feeds_post_empty_content">Qillqam ukat mayni archivo apaynim</string>
 
 </resources>

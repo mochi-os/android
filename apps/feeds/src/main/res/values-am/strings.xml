@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ወደ ነባሪ ዳግም አስጀምር</string>
     <string name="feeds_feed_not_found">ፊድ አልተገኘም</string>
     <string name="feeds_post_not_found">ልጥፍ አልተገኘም</string>
+    <string name="feeds_settings_feed_renamed">ፊድ እንደገና ተሰይሟል</string>
+    <string name="feeds_settings_source_added">ምንጭ ተጨምሯል</string>
+    <string name="feeds_settings_source_updated">ምንጭ ተዘምኗል</string>
+    <string name="feeds_settings_source_removed">ምንጭ ተወግዷል</string>
+    <string name="feeds_settings_access_updated">መዳረሻ ተዘምኗል</string>
+    <string name="feeds_settings_member_added">አባል ተጨምሯል</string>
+    <string name="feeds_settings_member_removed">አባል ተወግዷል</string>
+    <string name="feeds_settings_prompt_saved">ጥያቄ ተቀምጧል</string>
+    <string name="feeds_settings_banner_saved">ባነር ተቀምጧል</string>
+    <string name="feeds_settings_banner_cleared">ባነር ተሰርዟል</string>
+    <string name="feeds_settings_source_polling">ምንጭ አልሳል…</string>
+    <string name="feeds_settings_access_revoked">ጭቅም ተርሿል</string>
+    <string name="feeds_settings_ai_mode_updated">የአወቀ መረጃ (AI) ምቀረታ ተኵᜳል</string>
+    <string name="feeds_settings_ai_account_updated">የአወቀ መረጃ (AI) አካውንት ተኵᜳል</string>
+    <string name="feeds_settings_prompt_reset">ሞብያ ወደ ነባብስታው ተመልሶአል</string>
+    <string name="feeds_post_select_feed">እባክዎ ምንጭ ይምረጡ</string>
+    <string name="feeds_post_empty_content">እባክዎ ጭሑፍ ያስገቡ ወይም ፋይል ያያያዙ</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">डीफॉल्टवर रीसेट करा</string>
     <string name="feeds_feed_not_found">फीड सापडले नाही</string>
     <string name="feeds_post_not_found">पोस्ट सापडली नाही</string>
+    <string name="feeds_settings_feed_renamed">फीडचे नाव बदलले</string>
+    <string name="feeds_settings_source_added">स्त्रोत जोडला</string>
+    <string name="feeds_settings_source_updated">स्त्रोत अद्ययावत केला</string>
+    <string name="feeds_settings_source_removed">स्त्रोत काढला</string>
+    <string name="feeds_settings_access_updated">प्रवेश अद्ययावत केला</string>
+    <string name="feeds_settings_member_added">सदस्य जोडला</string>
+    <string name="feeds_settings_member_removed">सदस्य काढला</string>
+    <string name="feeds_settings_prompt_saved">प्रॉम्प्ट जतन केला</string>
+    <string name="feeds_settings_banner_saved">बॅनर जतन केला</string>
+    <string name="feeds_settings_banner_cleared">बॅनर साफ केला</string>
+    <string name="feeds_settings_source_polling">स्रोत बघत आहोत…</string>
+    <string name="feeds_settings_access_revoked">प्रवेश रद्द केला</string>
+    <string name="feeds_settings_ai_mode_updated">AI मोड अद्ययावत बनवला</string>
+    <string name="feeds_settings_ai_account_updated">AI खाते अद्ययावत बनवले</string>
+    <string name="feeds_settings_prompt_reset">प्रॉम्पट डीफॉल्टवर रीसेट केले</string>
+    <string name="feeds_post_select_feed">कृपया फीड निवडा</string>
+    <string name="feeds_post_empty_content">कृपया काही मजकूर प्रविष्ट करा किंवा एक फाइल जोडा</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Ber bi standard ve veguhêze</string>
     <string name="feeds_feed_not_found">Feed nehat dîtin</string>
     <string name="feeds_post_not_found">Poste nehat dîtin</string>
+    <string name="feeds_settings_feed_renamed">Feed ji nû ve hat navlêkirin</string>
+    <string name="feeds_settings_source_added">Çavkanî hat zêdekirin</string>
+    <string name="feeds_settings_source_updated">Çavkanî hat nûkirin</string>
+    <string name="feeds_settings_source_removed">Çavkanî hat rakirin</string>
+    <string name="feeds_settings_access_updated">Gihîştin hat nûkirin</string>
+    <string name="feeds_settings_member_added">Endam hat zêdekirin</string>
+    <string name="feeds_settings_member_removed">Endam hat rakirin</string>
+    <string name="feeds_settings_prompt_saved">Daxwaz hate tomarkirin</string>
+    <string name="feeds_settings_banner_saved">Pankart hate tomarkirin</string>
+    <string name="feeds_settings_banner_cleared">Pankart hate pêvêna</string>
+    <string name="feeds_settings_source_polling">Çavkanî tê xwendin…</string>
+    <string name="feeds_settings_access_revoked">Gihiştin hate betalkirin</string>
+    <string name="feeds_settings_ai_mode_updated">Modêla AI hate nûkirin</string>
+    <string name="feeds_settings_ai_account_updated">Hesabê AI hate nûkirin</string>
+    <string name="feeds_settings_prompt_reset">Zêdebarê ji nuh ve hate vegerandin</string>
+    <string name="feeds_post_select_feed">Ji kerema xwe feedekê hilbijêre</string>
+    <string name="feeds_post_empty_content">Ji kerema xwe noqteyekê binûsî an pelekê pêva bike</string>
 
 </resources>

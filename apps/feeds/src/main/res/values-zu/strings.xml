@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Setha kabusha kokuzenzakalelayo</string>
     <string name="feeds_feed_not_found">Ifidi ayitholakalanga</string>
     <string name="feeds_post_not_found">Okwabiwayo akutholakali</string>
+    <string name="feeds_settings_feed_renamed">Ifidi iqanjwe kabusha</string>
+    <string name="feeds_settings_source_added">Umthombo wengeziwe</string>
+    <string name="feeds_settings_source_updated">Umthombo ubuyekeziwe</string>
+    <string name="feeds_settings_source_removed">Umthombo ususiwe</string>
+    <string name="feeds_settings_access_updated">Ukufinyelela kubuyekeziwe</string>
+    <string name="feeds_settings_member_added">Ilungu lengeziwe</string>
+    <string name="feeds_settings_member_removed">Ilungu likhishiwe</string>
+    <string name="feeds_settings_prompt_saved">Isikhuthazi silondoloziwe</string>
+    <string name="feeds_settings_banner_saved">Ibhena ligciniwe</string>
+    <string name="feeds_settings_banner_cleared">Ibhena lisuliwe</string>
+    <string name="feeds_settings_source_polling">Iyacubekela umthombo…</string>
+    <string name="feeds_settings_access_revoked">Ukufinyelela kuhoxisiwe</string>
+    <string name="feeds_settings_ai_mode_updated">Indlela ye-AI iyabuyekezwa</string>
+    <string name="feeds_settings_ai_account_updated">I-akhawunti ye-AI iyabuyekezwa</string>
+    <string name="feeds_settings_prompt_reset">Isimemo siphinde sazimisela ngokuzenzakalelayo</string>
+    <string name="feeds_post_select_feed">Sicela ukhethe ifidi</string>
+    <string name="feeds_post_empty_content">Sicela ufake umbhalo noma unamathisele ifayela</string>
 
 </resources>

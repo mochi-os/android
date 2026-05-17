@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Ath-shuidhich chun a\' bhun-tuiteamais</string>
     <string name="feeds_feed_not_found">Cha deach an inbhir a lorg</string>
     <string name="feeds_post_not_found">Cha deach am post a lorg</string>
+    <string name="feeds_settings_feed_renamed">Chaidh an inbhir ath-ainmeachadh</string>
+    <string name="feeds_settings_source_added">Tùs air a chur ris</string>
+    <string name="feeds_settings_source_updated">Tùs air ùrachadh</string>
+    <string name="feeds_settings_source_removed">Tùs air a thoirt air falbh</string>
+    <string name="feeds_settings_access_updated">Inntrigeadh air ùrachadh</string>
+    <string name="feeds_settings_member_added">Chaidh ball a chur ris</string>
+    <string name="feeds_settings_member_removed">Chaidh ball a thoirt air falbh</string>
+    <string name="feeds_settings_prompt_saved">Chaidh an t-iarrtas a shàbhaladh</string>
+    <string name="feeds_settings_banner_saved">Bratach air a shabhaladh</string>
+    <string name="feeds_settings_banner_cleared">Bratach air a glànadh</string>
+    <string name="feeds_settings_source_polling">A’ toirt sgrudadh air an stoc…</string>
+    <string name="feeds_settings_access_revoked">Chaidh cothrom inntrigidh a thoirmeasg</string>
+    <string name="feeds_settings_ai_mode_updated">Modh IF air ùrachadh</string>
+    <string name="feeds_settings_ai_account_updated">Cunntas IF air ùrachadh</string>
+    <string name="feeds_settings_prompt_reset">Chaidh am brodadh ath-shuidheachadh chun a’ ghnàthaich</string>
+    <string name="feeds_post_select_feed">Tagh inbhir, mas e do thoil e</string>
+    <string name="feeds_post_empty_content">Cuir a-steach teacsa no ceangail faidhle, mas e do thoil e</string>
 
 </resources>

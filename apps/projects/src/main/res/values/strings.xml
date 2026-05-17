@@ -79,6 +79,7 @@
     <string name="projects_settings_tab_access">Access</string>
     <string name="projects_settings_tab_people">People</string>
     <string name="projects_option_icon">Icon</string>
+    <string name="projects_option_icon_placeholder">e.g. Check, Star, Flag</string>
     <string name="projects_views_move_up">Move up</string>
     <string name="projects_views_move_down">Move down</string>
     <string name="projects_views_filter">Filter (stored, not yet applied)</string>

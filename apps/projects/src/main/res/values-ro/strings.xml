@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Actualizat</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Proiectul nu a fost găsit</string>
+    <string name="projects_option_icon_placeholder">de ex. Check, Star, Flag</string>
 
 </resources>

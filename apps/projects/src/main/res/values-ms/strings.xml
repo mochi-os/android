@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Dikemas kini</string>
     <string name="projects_views_sort_rank">Pangkat</string>
     <string name="projects_project_not_found">Projek tidak dijumpai</string>
+    <string name="projects_option_icon_placeholder">cth. Check, Star, Flag</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">צוריקזעצן צו פֿאַרשטעלונג</string>
     <string name="feeds_feed_not_found">פֿיד ניט געפֿונען</string>
     <string name="feeds_post_not_found">פּאָסט ניט געפֿונען</string>
+    <string name="feeds_settings_feed_renamed">פֿיד איבערגענומען</string>
+    <string name="feeds_settings_source_added">מקור צוגעלייגט</string>
+    <string name="feeds_settings_source_updated">מקור באַנײַט</string>
+    <string name="feeds_settings_source_removed">מקור אַראָפּגענומען</string>
+    <string name="feeds_settings_access_updated">צוטריט באַנײַט</string>
+    <string name="feeds_settings_member_added">מיטגליד צוגעגעבן</string>
+    <string name="feeds_settings_member_removed">מיטגליד אַראָפּגענומען</string>
+    <string name="feeds_settings_prompt_saved">פּראָמפּט אויפֿגעהיט</string>
+    <string name="feeds_settings_banner_saved">באאנער געזיכערט</string>
+    <string name="feeds_settings_banner_cleared">באאנער גערײניקט</string>
+    <string name="feeds_settings_source_polling">ווערט פערזיכטער קוועלע…</string>
+    <string name="feeds_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="feeds_settings_ai_mode_updated">AI אופנעיחטונג אפגעטעט זיך</string>
+    <string name="feeds_settings_ai_account_updated">AI חשבון אפגעטעט זיך</string>
+    <string name="feeds_settings_prompt_reset">פראמפט געגעלט צו סטאנדערט</string>
+    <string name="feeds_post_select_feed">זײט אזװי גוט קלײבט אן פיד</string>
+    <string name="feeds_post_empty_content">זײט אזװי גוט ארײן עטלכע טעקסט אדער לױגט אן א פאיל</string>
 
 </resources>

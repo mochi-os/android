@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Irriżetta għal default</string>
     <string name="feeds_feed_not_found">Il-feed ma nstabitx</string>
     <string name="feeds_post_not_found">Post mhux misjub</string>
+    <string name="feeds_settings_feed_renamed">Il-feed ġiet imsemmija mill-ġdid</string>
+    <string name="feeds_settings_source_added">Sors miżjud</string>
+    <string name="feeds_settings_source_updated">Sors aġġornat</string>
+    <string name="feeds_settings_source_removed">Sors imneħħi</string>
+    <string name="feeds_settings_access_updated">Aċċess aġġornat</string>
+    <string name="feeds_settings_member_added">Inżied il-membru</string>
+    <string name="feeds_settings_member_removed">Tneħħa l-membru</string>
+    <string name="feeds_settings_prompt_saved">Prompt issejvjat</string>
+    <string name="feeds_settings_banner_saved">Il-banner inhazen</string>
+    <string name="feeds_settings_banner_cleared">Il-banner nehha</string>
+    <string name="feeds_settings_source_polling">Qed jigi konsultat is-sors…</string>
+    <string name="feeds_settings_access_revoked">L-acess gie revokat</string>
+    <string name="feeds_settings_ai_mode_updated">Modalita AI gie agornata</string>
+    <string name="feeds_settings_ai_account_updated">Kont AI gie agornat</string>
+    <string name="feeds_settings_prompt_reset">Il-prompt giet ripristinata ghall-default</string>
+    <string name="feeds_post_select_feed">Jekk joghgbok aghzel feed</string>
+    <string name="feeds_post_empty_content">Jekk joghgbok dahhal xi test jew tehhel xi fajl</string>
 
 </resources>

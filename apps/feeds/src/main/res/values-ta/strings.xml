@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">இயல்புநிலைக்கு மீட்டமை</string>
     <string name="feeds_feed_not_found">ஃபீட் கிடைக்கவில்லை</string>
     <string name="feeds_post_not_found">பதிவு கிடைக்கவில்லை</string>
+    <string name="feeds_settings_feed_renamed">ஃபீட் பெயர் மாற்றப்பட்டது</string>
+    <string name="feeds_settings_source_added">மூலம் சேர்க்கப்பட்டது</string>
+    <string name="feeds_settings_source_updated">மூலம் புதுப்பிக்கப்பட்டது</string>
+    <string name="feeds_settings_source_removed">மூலம் நீக்கப்பட்டது</string>
+    <string name="feeds_settings_access_updated">அணுகல் புதுப்பிக்கப்பட்டது</string>
+    <string name="feeds_settings_member_added">உறுப்பினர் சேர்க்கப்பட்டார்</string>
+    <string name="feeds_settings_member_removed">உறுப்பினர் அகற்றப்பட்டார்</string>
+    <string name="feeds_settings_prompt_saved">Prompt சேமிக்கப்பட்டது</string>
+    <string name="feeds_settings_banner_saved">பதாகை சேமிக்கப்பட்டது</string>
+    <string name="feeds_settings_banner_cleared">பதாகை அழிக்கப்பட்டது</string>
+    <string name="feeds_settings_source_polling">மூலம் நூறப்ப்படுகிறது…</string>
+    <string name="feeds_settings_access_revoked">அணுகல் ரதுச்சையை மீண்டது</string>
+    <string name="feeds_settings_ai_mode_updated">AI பளமீது முடிவுசீல்கீலுமு</string>
+    <string name="feeds_settings_ai_account_updated">AI கணக்கு முடிவுசீல்கீலுமு</string>
+    <string name="feeds_settings_prompt_reset">வினாவை இயல்நிலைக்கு மீண்டம்மீடம்க்குமு</string>
+    <string name="feeds_post_select_feed">ஒரு பீடை தேர்வு செய்யவும்</string>
+    <string name="feeds_post_empty_content">தயவுகள் அறிமுகற்றை பழமோ அொலா பைலினை இலம்களை இணாமும்</string>
 
 </resources>

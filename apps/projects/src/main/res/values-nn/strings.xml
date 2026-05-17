@@ -13,7 +13,7 @@
     <string name="projects_create_name">Namn</string>
     <string name="projects_create_description">Skildring</string>
     <string name="projects_create_prefix">Prefiks</string>
-    <string name="projects_create_privacy">Personvern</string>
+    <string name="projects_create_privacy">Privacy</string>
     <string name="projects_create_private">Privat</string>
     <string name="projects_create_public">Offentleg</string>
     <string name="projects_create_template_none">Ingen</string>
@@ -157,5 +157,6 @@
     <string name="projects_views_sort_updated">Oppdatert</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Prosjekt ikkje funne</string>
+    <string name="projects_option_icon_placeholder">t.d. Check, Star, Flag</string>
 
 </resources>

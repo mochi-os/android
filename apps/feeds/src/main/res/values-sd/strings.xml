@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ڊفالٽ تي ري سيٽ ڪريو</string>
     <string name="feeds_feed_not_found">فيڊ نه ملي</string>
     <string name="feeds_post_not_found">پوسٽ نه ملي</string>
+    <string name="feeds_settings_feed_renamed">فيڊ جو نالو تبديل ٿيو</string>
+    <string name="feeds_settings_source_added">ماخذ شامل ڪيو ويو</string>
+    <string name="feeds_settings_source_updated">ماخذ تازو ڪيو ويو</string>
+    <string name="feeds_settings_source_removed">ماخذ هٽايو ويو</string>
+    <string name="feeds_settings_access_updated">رسائي اپڊيٽ ڪئي وئي</string>
+    <string name="feeds_settings_member_added">ميمبر شامل ٿيو</string>
+    <string name="feeds_settings_member_removed">ميمبر هٽايو ويو</string>
+    <string name="feeds_settings_prompt_saved">پرامپٽ محفوظ ٿيو</string>
+    <string name="feeds_settings_banner_saved">بینر محفوظ تابیو</string>
+    <string name="feeds_settings_banner_cleared">بینر صاف ڈږایو</string>
+    <string name="feeds_settings_source_polling">سر ٽرسجو پد پر اعتبر جیو وې…</string>
+    <string name="feeds_settings_access_revoked">رسائی ژلائی ٽکدایو</string>
+    <string name="feeds_settings_ai_mode_updated">AI وثیرو اپڈیت تابو</string>
+    <string name="feeds_settings_ai_account_updated">AI سالاد اپڈیت تابو</string>
+    <string name="feeds_settings_prompt_reset">پرامپت پفر خالص چوردو ویو</string>
+    <string name="feeds_post_select_feed">مهربانی کری فیڈ چورو</string>
+    <string name="feeds_post_empty_content">مهربانی کری حرف درج کرو الا فائل لگائیو</string>
 
 </resources>

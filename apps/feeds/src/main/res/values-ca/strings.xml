@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Restableix al valor per defecte</string>
     <string name="feeds_feed_not_found">No s\'ha trobat la font</string>
     <string name="feeds_post_not_found">Publicació no trobada</string>
+    <string name="feeds_settings_feed_renamed">Font reanomenada</string>
+    <string name="feeds_settings_source_added">Origen afegit</string>
+    <string name="feeds_settings_source_updated">Origen actualitzat</string>
+    <string name="feeds_settings_source_removed">Origen eliminat</string>
+    <string name="feeds_settings_access_updated">Accés actualitzat</string>
+    <string name="feeds_settings_member_added">Membre afegit</string>
+    <string name="feeds_settings_member_removed">Membre retirat</string>
+    <string name="feeds_settings_prompt_saved">Sol·licitud desada</string>
+    <string name="feeds_settings_banner_saved">Bandera desada</string>
+    <string name="feeds_settings_banner_cleared">Bandera esborrada</string>
+    <string name="feeds_settings_source_polling">Sondeig de la font…</string>
+    <string name="feeds_settings_access_revoked">Accés revocat</string>
+    <string name="feeds_settings_ai_mode_updated">Mode IA actualitzat</string>
+    <string name="feeds_settings_ai_account_updated">Compte IA actualitzat</string>
+    <string name="feeds_settings_prompt_reset">Indicació restablerta al valor predeterminat</string>
+    <string name="feeds_post_select_feed">Seleccioneu un feed</string>
+    <string name="feeds_post_empty_content">Introduïu text o adjunteu un fitxer</string>
 
 </resources>

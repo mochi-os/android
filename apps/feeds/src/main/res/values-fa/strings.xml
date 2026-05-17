@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">بازنشانی به پیش‌فرض</string>
     <string name="feeds_feed_not_found">فید یافت نشد</string>
     <string name="feeds_post_not_found">پست یافت نشد</string>
+    <string name="feeds_settings_feed_renamed">نام فید تغییر کرد</string>
+    <string name="feeds_settings_source_added">منبع افزوده شد</string>
+    <string name="feeds_settings_source_updated">منبع به‌روزرسانی شد</string>
+    <string name="feeds_settings_source_removed">منبع حذف شد</string>
+    <string name="feeds_settings_access_updated">دسترسی به‌روزرسانی شد</string>
+    <string name="feeds_settings_member_added">عضو افزوده شد</string>
+    <string name="feeds_settings_member_removed">عضو حذف شد</string>
+    <string name="feeds_settings_prompt_saved">Prompt ذخیره شد</string>
+    <string name="feeds_settings_banner_saved">بنر ذخیره شد</string>
+    <string name="feeds_settings_banner_cleared">بنر پاک شد</string>
+    <string name="feeds_settings_source_polling">در حال دریافت منبع…</string>
+    <string name="feeds_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="feeds_settings_ai_mode_updated">حالت هوش مصنوعی به‌روز شد</string>
+    <string name="feeds_settings_ai_account_updated">حساب هوش مصنوعی به‌روز شد</string>
+    <string name="feeds_settings_prompt_reset">دستور به حالت پیش‌فرض بازنشانی شد</string>
+    <string name="feeds_post_select_feed">لطفاً یک خوراک را انتخاب کنید</string>
+    <string name="feeds_post_empty_content">لطفاً متنی وارد کنید یا فایلی پیوست کنید</string>
 
 </resources>

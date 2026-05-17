@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
+import org.mochios.android.api.toMochiError
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
@@ -35,8 +35,8 @@ class FindFeedsViewModel @Inject constructor(
     private val _isLoadingRecommendations = MutableStateFlow(false)
     val isLoadingRecommendations: StateFlow<Boolean> = _isLoadingRecommendations.asStateFlow()
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
+    private val _error = MutableStateFlow<MochiError?>(null)
+    val error: StateFlow<MochiError?> = _error.asStateFlow()
 
     private val _subscribingFeed = MutableStateFlow<String?>(null)
     val subscribingFeed: StateFlow<String?> = _subscribingFeed.asStateFlow()
@@ -88,10 +88,8 @@ class FindFeedsViewModel @Inject constructor(
         _isSearching.value = true
         try {
             _searchResults.value = repository.searchDirectory(query)
-        } catch (e: MochiError) {
-            _error.value = e.userMessage()
         } catch (e: Exception) {
-            _error.value = e.message ?: "Search failed"
+            _error.value = e.toMochiError()
         } finally {
             _isSearching.value = false
         }
@@ -145,10 +143,8 @@ class FindFeedsViewModel @Inject constructor(
                         _justSubscribedFeed.value = feedId
                     }
                 } catch (_: Exception) { }
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to subscribe"
+                _error.value = e.toMochiError()
             } finally {
                 _subscribingFeed.value = null
             }

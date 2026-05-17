@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Na-update</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">Hindi nahanap ang proyekto</string>
+    <string name="projects_option_icon_placeholder">hal. Check, Star, Flag</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Resetten naar standaard</string>
     <string name="feeds_feed_not_found">Feed niet gevonden</string>
     <string name="feeds_post_not_found">Post niet gevonden</string>
+    <string name="feeds_settings_feed_renamed">Feed hernoemd</string>
+    <string name="feeds_settings_source_added">Bron toegevoegd</string>
+    <string name="feeds_settings_source_updated">Bron bijgewerkt</string>
+    <string name="feeds_settings_source_removed">Bron verwijderd</string>
+    <string name="feeds_settings_access_updated">Toegang bijgewerkt</string>
+    <string name="feeds_settings_member_added">Lid toegevoegd</string>
+    <string name="feeds_settings_member_removed">Lid verwijderd</string>
+    <string name="feeds_settings_prompt_saved">Prompt opgeslagen</string>
+    <string name="feeds_settings_banner_saved">Banner opgeslagen</string>
+    <string name="feeds_settings_banner_cleared">Banner gewist</string>
+    <string name="feeds_settings_source_polling">Bron wordt opgevraagd…</string>
+    <string name="feeds_settings_access_revoked">Toegang ingetrokken</string>
+    <string name="feeds_settings_ai_mode_updated">AI-modus bijgewerkt</string>
+    <string name="feeds_settings_ai_account_updated">AI-account bijgewerkt</string>
+    <string name="feeds_settings_prompt_reset">Prompt teruggezet op standaard</string>
+    <string name="feeds_post_select_feed">Selecteer een feed</string>
+    <string name="feeds_post_empty_content">Voer tekst in of voeg een bestand toe</string>
 
 </resources>

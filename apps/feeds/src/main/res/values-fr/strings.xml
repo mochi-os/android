@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Réinitialiser</string>
     <string name="feeds_feed_not_found">Flux introuvable</string>
     <string name="feeds_post_not_found">Publication introuvable</string>
+    <string name="feeds_settings_feed_renamed">Flux renommé</string>
+    <string name="feeds_settings_source_added">Source ajoutée</string>
+    <string name="feeds_settings_source_updated">Source mise à jour</string>
+    <string name="feeds_settings_source_removed">Source retirée</string>
+    <string name="feeds_settings_access_updated">Accès mis à jour</string>
+    <string name="feeds_settings_member_added">Membre ajouté</string>
+    <string name="feeds_settings_member_removed">Membre supprimé</string>
+    <string name="feeds_settings_prompt_saved">Invite enregistrée</string>
+    <string name="feeds_settings_banner_saved">Bannière enregistrée</string>
+    <string name="feeds_settings_banner_cleared">Bannière effacée</string>
+    <string name="feeds_settings_source_polling">Interrogation de la source…</string>
+    <string name="feeds_settings_access_revoked">Accès révoqué</string>
+    <string name="feeds_settings_ai_mode_updated">Mode IA mis à jour</string>
+    <string name="feeds_settings_ai_account_updated">Compte IA mis à jour</string>
+    <string name="feeds_settings_prompt_reset">Invite réinitialisée à la valeur par défaut</string>
+    <string name="feeds_post_select_feed">Veuillez sélectionner un flux</string>
+    <string name="feeds_post_empty_content">Veuillez saisir du texte ou joindre un fichier</string>
 
 </resources>

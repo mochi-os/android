@@ -30,8 +30,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.userMessage
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -70,16 +72,17 @@ fun FeedSettingsScreen(
 
     val snackbarHostState = remember { SnackbarHostState() }
 
+    val context = LocalContext.current
     LaunchedEffect(error) {
         error?.let {
-            snackbarHostState.showSnackbar(it)
+            snackbarHostState.showSnackbar(it.userMessage())
             viewModel.clearError()
         }
     }
 
     LaunchedEffect(actionMessage) {
         actionMessage?.let {
-            snackbarHostState.showSnackbar(it)
+            snackbarHostState.showSnackbar(context.getString(it))
             viewModel.clearActionMessage()
         }
     }

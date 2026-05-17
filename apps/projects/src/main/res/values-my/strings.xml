@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">အပ်ဒိတ်လုပ်ပြီး</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">ပရောဂျက် မတွေ့ပါ</string>
+    <string name="projects_option_icon_placeholder">ဆိုလိုရသော် Check, Star, Flag</string>
 
 </resources>

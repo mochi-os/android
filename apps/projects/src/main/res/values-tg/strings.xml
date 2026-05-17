@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Навсозӣ шуд</string>
     <string name="projects_views_sort_rank">Дараҷа</string>
     <string name="projects_project_not_found">Лоиҳа ёфт нашуд</string>
+    <string name="projects_option_icon_placeholder">мисол барои. Check, Star, Flag</string>
 
 </resources>

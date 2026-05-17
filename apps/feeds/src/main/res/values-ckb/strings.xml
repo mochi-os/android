@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">گەڕاندنەوە بۆ بنەڕەت</string>
     <string name="feeds_feed_not_found">Feed نەدۆزرایەوە</string>
     <string name="feeds_post_not_found">پۆست نەدۆزرایەوە</string>
+    <string name="feeds_settings_feed_renamed">ناوی Feed گۆڕدرا</string>
+    <string name="feeds_settings_source_added">سەرچاوە زیادکرا</string>
+    <string name="feeds_settings_source_updated">سەرچاوە نوێکرایەوە</string>
+    <string name="feeds_settings_source_removed">سەرچاوە لابرا</string>
+    <string name="feeds_settings_access_updated">دەستڕاگەیشتن نوێکرایەوە</string>
+    <string name="feeds_settings_member_added">ئەندام زیاد کرا</string>
+    <string name="feeds_settings_member_removed">ئەندام لابرا</string>
+    <string name="feeds_settings_prompt_saved">پرۆمپت پاشەکەوت کرا</string>
+    <string name="feeds_settings_banner_saved">بانەڕ پاشکەوتەکرا</string>
+    <string name="feeds_settings_banner_cleared">بانەڕ سرایەکرا</string>
+    <string name="feeds_settings_source_polling">گونچینی سەرچاوە…</string>
+    <string name="feeds_settings_access_revoked">دەستپێگەیشتن هەڵوەشایەوە</string>
+    <string name="feeds_settings_ai_mode_updated">ڈۆخی AI نوێکرایەوە</string>
+    <string name="feeds_settings_ai_account_updated">هەژماری AI نوێکرایەوە</string>
+    <string name="feeds_settings_prompt_reset">رینوێنیکاری گەڕاندراوەتەوە بۆ بنچینە</string>
+    <string name="feeds_post_select_feed">تکایە خوارچێک هەڵبژێرە</string>
+    <string name="feeds_post_empty_content">تکایە دەقیک بنوسە یان پەڕگەیەک پێوە بکە</string>
 
 </resources>

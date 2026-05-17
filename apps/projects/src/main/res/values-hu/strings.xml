@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Frissítve</string>
     <string name="projects_views_sort_rank">Rangsor</string>
     <string name="projects_project_not_found">A projekt nem található</string>
+    <string name="projects_option_icon_placeholder">pl. Check, Star, Flag</string>
 
 </resources>

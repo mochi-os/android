@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Resetează la implicit</string>
     <string name="feeds_feed_not_found">Flux negăsit</string>
     <string name="feeds_post_not_found">Postarea nu a fost găsită</string>
+    <string name="feeds_settings_feed_renamed">Flux redenumit</string>
+    <string name="feeds_settings_source_added">Sursă adăugată</string>
+    <string name="feeds_settings_source_updated">Sursă actualizată</string>
+    <string name="feeds_settings_source_removed">Sursă eliminată</string>
+    <string name="feeds_settings_access_updated">Acces actualizat</string>
+    <string name="feeds_settings_member_added">Membru adăugat</string>
+    <string name="feeds_settings_member_removed">Membru eliminat</string>
+    <string name="feeds_settings_prompt_saved">Prompt salvat</string>
+    <string name="feeds_settings_banner_saved">Banner salvat</string>
+    <string name="feeds_settings_banner_cleared">Banner şters</string>
+    <string name="feeds_settings_source_polling">Se interoghează sursa…</string>
+    <string name="feeds_settings_access_revoked">Accesul a fost revocat</string>
+    <string name="feeds_settings_ai_mode_updated">Modul IA a fost actualizat</string>
+    <string name="feeds_settings_ai_account_updated">Contul IA a fost actualizat</string>
+    <string name="feeds_settings_prompt_reset">Solicitarea a fost resetată la valoarea implicită</string>
+    <string name="feeds_post_select_feed">Selectati un flux</string>
+    <string name="feeds_post_empty_content">Introduceti un text sau atasati un fisier</string>
 
 </resources>

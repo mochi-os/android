@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Gara durtiitti deebisi</string>
     <string name="feeds_feed_not_found">Feed hin argamne</string>
     <string name="feeds_post_not_found">Maxxansi hin argamne</string>
+    <string name="feeds_settings_feed_renamed">Feed moggaafame</string>
+    <string name="feeds_settings_source_added">Maddi dabalameera</string>
+    <string name="feeds_settings_source_updated">Maddi haaromfameera</string>
+    <string name="feeds_settings_source_removed">Maddi haqameera</string>
+    <string name="feeds_settings_access_updated">Seensi haaromfame</string>
+    <string name="feeds_settings_member_added">Miseensi dabalame</string>
+    <string name="feeds_settings_member_removed">Miseensi haqame</string>
+    <string name="feeds_settings_prompt_saved">Gaaffii olkaa\'ame</string>
+    <string name="feeds_settings_banner_saved">Baanara olkaa\'amee jira</string>
+    <string name="feeds_settings_banner_cleared">Baanara haqamee jira</string>
+    <string name="feeds_settings_source_polling">Madda gaafachuu…</string>
+    <string name="feeds_settings_access_revoked">Galmaa\'iinsi haqamee jira</string>
+    <string name="feeds_settings_ai_mode_updated">Haalli AI haaromfameera</string>
+    <string name="feeds_settings_ai_account_updated">Akaawuntiin AI haaromfameera</string>
+    <string name="feeds_settings_prompt_reset">Gaaffiin durtaa\'iitti deebi\'ee qixxeefameera</string>
+    <string name="feeds_post_select_feed">Maaloo feedii filadhaa</string>
+    <string name="feeds_post_empty_content">Maaloo barreeffama galchaa ykn faayilii itti dabalaa</string>
 
 </resources>

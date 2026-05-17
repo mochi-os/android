@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ڈیفالٹ پر reset کریں</string>
     <string name="feeds_feed_not_found">فیڈ نہیں ملی</string>
     <string name="feeds_post_not_found">پوسٹ نہیں ملی</string>
+    <string name="feeds_settings_feed_renamed">فیڈ کا نام تبدیل ہو گیا</string>
+    <string name="feeds_settings_source_added">سورس شامل کر دیا گیا</string>
+    <string name="feeds_settings_source_updated">سورس اپ ڈیٹ ہو گیا</string>
+    <string name="feeds_settings_source_removed">سورس ہٹا دیا گیا</string>
+    <string name="feeds_settings_access_updated">رسائی اپ ڈیٹ ہو گئی</string>
+    <string name="feeds_settings_member_added">ممبر شامل ہو گیا</string>
+    <string name="feeds_settings_member_removed">ممبر ہٹا دیا گیا</string>
+    <string name="feeds_settings_prompt_saved">prompt محفوظ ہو گیا</string>
+    <string name="feeds_settings_banner_saved">بینر محفوظ کر دیا گیا</string>
+    <string name="feeds_settings_banner_cleared">بینر صاف کر دیا گیا</string>
+    <string name="feeds_settings_source_polling">ماخذ دیکھا جا رہا ہے…</string>
+    <string name="feeds_settings_access_revoked">رسائی منسوخ کر دی گئی</string>
+    <string name="feeds_settings_ai_mode_updated">AI موڈ اپڈیٹ کردیا گیا</string>
+    <string name="feeds_settings_ai_account_updated">AI اکاؤنٹ اپڈیٹ کردیا گیا</string>
+    <string name="feeds_settings_prompt_reset">پرومپٹ کو طرح دیکھا دوبارہ جوڑ کر دیا گیا</string>
+    <string name="feeds_post_select_feed">برائے کرم ایک فیڈ منتخب کریں</string>
+    <string name="feeds_post_empty_content">برائے کرم تحریر درج کریں یا دیکھائی جائیں فائل جوڑیں</string>
 
 </resources>

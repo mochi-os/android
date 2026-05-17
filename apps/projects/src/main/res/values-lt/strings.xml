@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Atnaujinta</string>
     <string name="projects_views_sort_rank">Reitingas</string>
     <string name="projects_project_not_found">Projektas nerastas</string>
+    <string name="projects_option_icon_placeholder">pvz. Check, Star, Flag</string>
 
 </resources>

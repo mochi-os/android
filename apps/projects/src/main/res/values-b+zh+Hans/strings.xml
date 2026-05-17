@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">已更新</string>
     <string name="projects_views_sort_rank">排名</string>
     <string name="projects_project_not_found">项目未找到</string>
+    <string name="projects_option_icon_placeholder">例如 Check, Star, Flag</string>
 
 </resources>

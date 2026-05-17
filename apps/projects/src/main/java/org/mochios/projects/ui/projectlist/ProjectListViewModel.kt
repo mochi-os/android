@@ -43,6 +43,7 @@ class ProjectListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val projects = repository.listProjects()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _uiState.value = _uiState.value.copy(
                     projects = projects,
                     isLoading = false
@@ -61,6 +62,7 @@ class ProjectListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val projects = repository.listProjects()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _uiState.value = _uiState.value.copy(
                     projects = projects,
                     isRefreshing = false,
@@ -91,6 +93,7 @@ class ProjectListViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val templates = repository.getTemplates()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _uiState.value = _uiState.value.copy(
                     showCreateDialog = true,
                     templates = templates

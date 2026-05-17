@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Ажурирано</string>
     <string name="projects_views_sort_rank">Ранг</string>
     <string name="projects_project_not_found">Пројекат није пронађен</string>
+    <string name="projects_option_icon_placeholder">нпр. Check, Star, Flag</string>
 
 </resources>

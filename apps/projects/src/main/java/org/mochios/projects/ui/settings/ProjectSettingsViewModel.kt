@@ -70,7 +70,9 @@ class ProjectSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val rules = repository.getAccess(projectId)
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name ?: it.subject })
                 val people = repository.getPeople(projectId)
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _uiState.value = _uiState.value.copy(
                     accessRules = rules,
                     people = people

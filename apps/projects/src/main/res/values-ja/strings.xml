@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">更新日</string>
     <string name="projects_views_sort_rank">ランク</string>
     <string name="projects_project_not_found">プロジェクトが見つかりません</string>
+    <string name="projects_option_icon_placeholder">例： Check, Star, Flag</string>
 
 </resources>

@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">{0}-na machaqachata</string>
     <string name="projects_views_sort_rank">Rango</string>
     <string name="projects_project_not_found">Lurawi jan jikxatasiti</string>
+    <string name="projects_option_icon_placeholder">kunjamati. Check, Star, Flag</string>
 
 </resources>

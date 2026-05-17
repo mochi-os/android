@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">اپڊيٽ ٿيو</string>
     <string name="projects_views_sort_rank">درجو</string>
     <string name="projects_project_not_found">پروجيڪٽ نه مليو</string>
+    <string name="projects_option_icon_placeholder">مثل Check، Star، Flag</string>
 
 </resources>

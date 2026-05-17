@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">באַנײַט</string>
     <string name="projects_views_sort_rank">ראַנג</string>
     <string name="projects_project_not_found">פּראָיעקט ניט געפֿונען</string>
+    <string name="projects_option_icon_placeholder">גיט א בײשפיל. Check, Star, Flag</string>
 
 </resources>

@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">ተዘምኗል</string>
     <string name="projects_views_sort_rank">ደረጃ</string>
     <string name="projects_project_not_found">ፕሮጀክት አልተገኘም</string>
+    <string name="projects_option_icon_placeholder">ምሳሌ. Check, Star, Flag</string>
 
 </resources>

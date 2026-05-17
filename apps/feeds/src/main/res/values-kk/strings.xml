@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Әдепкіге қайтару</string>
     <string name="feeds_feed_not_found">Таспа табылмады</string>
     <string name="feeds_post_not_found">Жазба табылмады</string>
+    <string name="feeds_settings_feed_renamed">Таспаның атауы өзгертілді</string>
+    <string name="feeds_settings_source_added">Дереккөз қосылды</string>
+    <string name="feeds_settings_source_updated">Дереккөз жаңартылды</string>
+    <string name="feeds_settings_source_removed">Дереккөз жойылды</string>
+    <string name="feeds_settings_access_updated">Қол жеткізу жаңартылды</string>
+    <string name="feeds_settings_member_added">Мүше қосылды</string>
+    <string name="feeds_settings_member_removed">Мүше жойылды</string>
+    <string name="feeds_settings_prompt_saved">Сұрау сақталды</string>
+    <string name="feeds_settings_banner_saved">Баннер сақталды</string>
+    <string name="feeds_settings_banner_cleared">Баннер тазаланды</string>
+    <string name="feeds_settings_source_polling">Дереккөзі сұралуда…</string>
+    <string name="feeds_settings_access_revoked">Қатынасу жойылды</string>
+    <string name="feeds_settings_ai_mode_updated">AI режимі жаңартылды</string>
+    <string name="feeds_settings_ai_account_updated">AI тіркелгісі жаңартылды</string>
+    <string name="feeds_settings_prompt_reset">Нұсқаулық әдепкіге қалпына келтірілді</string>
+    <string name="feeds_post_select_feed">Ләтіпен тасқынды таңдаңыз</string>
+    <string name="feeds_post_empty_content">Ләтіпен мәтін енгізіңіз немесе файл тіркеңіз</string>
 
 </resources>

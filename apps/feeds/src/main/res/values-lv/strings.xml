@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Atiestatīt uz noklusējumu</string>
     <string name="feeds_feed_not_found">Plūsma nav atrasta</string>
     <string name="feeds_post_not_found">Ieraksts nav atrasts</string>
+    <string name="feeds_settings_feed_renamed">Plūsma pārdēvēta</string>
+    <string name="feeds_settings_source_added">Avots pievienots</string>
+    <string name="feeds_settings_source_updated">Avots atjaunināts</string>
+    <string name="feeds_settings_source_removed">Avots noņemts</string>
+    <string name="feeds_settings_access_updated">Piekļuve atjaunināta</string>
+    <string name="feeds_settings_member_added">Dalībnieks pievienots</string>
+    <string name="feeds_settings_member_removed">Dalībnieks noņemts</string>
+    <string name="feeds_settings_prompt_saved">Pamudinājums saglabāts</string>
+    <string name="feeds_settings_banner_saved">Banneris saglabāts</string>
+    <string name="feeds_settings_banner_cleared">Banneris notīrīts</string>
+    <string name="feeds_settings_source_polling">Notiek avota aptājašana…</string>
+    <string name="feeds_settings_access_revoked">Piekļuve atsaukta</string>
+    <string name="feeds_settings_ai_mode_updated">AI režīms atjaunināts</string>
+    <string name="feeds_settings_ai_account_updated">AI konts atjaunināts</string>
+    <string name="feeds_settings_prompt_reset">Pamudinājums atiestatīts uz noklusēto</string>
+    <string name="feeds_post_select_feed">Lūdzu, atlasiet plūsmu</string>
+    <string name="feeds_post_empty_content">Lūdzu, ievadiet tekstu vai pievienojiet failu</string>
 
 </resources>

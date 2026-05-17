@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">पूर्वनिर्धारितमा रिसेट गर्नुहोस्</string>
     <string name="feeds_feed_not_found">फिड फेला परेन</string>
     <string name="feeds_post_not_found">पोस्ट भेटिएन</string>
+    <string name="feeds_settings_feed_renamed">फिडको नाम परिवर्तन भयो</string>
+    <string name="feeds_settings_source_added">स्रोत थपियो</string>
+    <string name="feeds_settings_source_updated">स्रोत अद्यावधिक गरियो</string>
+    <string name="feeds_settings_source_removed">स्रोत हटाइयो</string>
+    <string name="feeds_settings_access_updated">पहुँच अद्यावधिक गरियो</string>
+    <string name="feeds_settings_member_added">सदस्य थपियो</string>
+    <string name="feeds_settings_member_removed">सदस्य हटाइयो</string>
+    <string name="feeds_settings_prompt_saved">प्रोम्प्ट बचत गरियो</string>
+    <string name="feeds_settings_banner_saved">ब्यानर बचाइयो</string>
+    <string name="feeds_settings_banner_cleared">ब्यानर खाली गरियो</string>
+    <string name="feeds_settings_source_polling">स्रोत बिंटहरूू हुँदैछ…</string>
+    <string name="feeds_settings_access_revoked">पहुँच रद्द गरियो</string>
+    <string name="feeds_settings_ai_mode_updated">AI मोड अपडेट गरियो</string>
+    <string name="feeds_settings_ai_account_updated">AI खाता अपडेट गरियो</string>
+    <string name="feeds_settings_prompt_reset">प्राम्पट पूर्वनिर्धारितमा रीसेट गरियो</string>
+    <string name="feeds_post_select_feed">कृपया फिड छनौट गर्नुहोस्</string>
+    <string name="feeds_post_empty_content">कृपया केही पाठ राख्नुहोस् वा फाइल संलग्न गर्नुहोस्</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Återställ till standard</string>
     <string name="feeds_feed_not_found">Flöde hittades inte</string>
     <string name="feeds_post_not_found">Inlägget hittades inte</string>
+    <string name="feeds_settings_feed_renamed">Flöde omdöpt</string>
+    <string name="feeds_settings_source_added">Källa tillagd</string>
+    <string name="feeds_settings_source_updated">Källa uppdaterad</string>
+    <string name="feeds_settings_source_removed">Källa borttagen</string>
+    <string name="feeds_settings_access_updated">Åtkomst uppdaterad</string>
+    <string name="feeds_settings_member_added">Medlem tillagd</string>
+    <string name="feeds_settings_member_removed">Medlem borttagen</string>
+    <string name="feeds_settings_prompt_saved">Prompt sparad</string>
+    <string name="feeds_settings_banner_saved">Banner sparad</string>
+    <string name="feeds_settings_banner_cleared">Banner rensad</string>
+    <string name="feeds_settings_source_polling">Avsöker källa…</string>
+    <string name="feeds_settings_access_revoked">Åtkomst återkallad</string>
+    <string name="feeds_settings_ai_mode_updated">AI-läge uppdaterat</string>
+    <string name="feeds_settings_ai_account_updated">AI-konto uppdaterat</string>
+    <string name="feeds_settings_prompt_reset">Promt återställd till standard</string>
+    <string name="feeds_post_select_feed">Välj ett flöde</string>
+    <string name="feeds_post_empty_content">Skriv in text eller bifoga en fil</string>
 
 </resources>

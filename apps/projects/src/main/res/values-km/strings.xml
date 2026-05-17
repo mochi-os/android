@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>
     <string name="projects_views_sort_rank">ចំណាត់ថ្នាក់</string>
     <string name="projects_project_not_found">រកមិនឃើញគម្រោង</string>
+    <string name="projects_option_icon_placeholder">២.១. Check, Star, Flag</string>
 
 </resources>

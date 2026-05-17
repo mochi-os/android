@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">อัปเดตแล้ว</string>
     <string name="projects_views_sort_rank">อันดับ</string>
     <string name="projects_project_not_found">ไม่พบโปรเจกต์</string>
+    <string name="projects_option_icon_placeholder">เช่น Check, Star, Flag</string>
 
 </resources>

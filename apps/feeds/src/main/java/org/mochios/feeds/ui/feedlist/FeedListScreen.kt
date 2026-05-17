@@ -75,6 +75,7 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.hilt.navigation.compose.hiltViewModel
+import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityListRow
@@ -200,7 +201,7 @@ fun FeedListScreen(
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = error ?: "An error occurred",
+                                text = error?.userMessage() ?: stringResource(MochiR.string.error_unexpected),
                                 style = MaterialTheme.typography.bodyLarge,
                                 color = MaterialTheme.colorScheme.error
                             )
@@ -451,10 +452,10 @@ private fun CreateFeedDialog(
                         onCheckedChange = { memoriesEnabled = it }
                     )
                 }
-                if (createError != null) {
+                createError?.let {
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        text = createError!!,
+                        text = it.userMessage(),
                         color = MaterialTheme.colorScheme.error,
                         style = MaterialTheme.typography.bodySmall
                     )

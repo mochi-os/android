@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">යාවත්කාලීන කරන ලදී</string>
     <string name="projects_views_sort_rank">ශ්‍රේණිය</string>
     <string name="projects_project_not_found">ව්‍යාපෘතිය හමු නොවීය</string>
+    <string name="projects_option_icon_placeholder">වයදාහරණය ලෝෝස්. Check, Star, Flag</string>
 
 </resources>

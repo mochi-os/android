@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
+import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Permissions
@@ -42,8 +42,8 @@ class PostDetailViewModel @Inject constructor(
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
+    private val _error = MutableStateFlow<MochiError?>(null)
+    val error: StateFlow<MochiError?> = _error.asStateFlow()
 
     private val _isNotFound = MutableStateFlow(false)
     val isNotFound: StateFlow<Boolean> = _isNotFound.asStateFlow()
@@ -69,8 +69,8 @@ class PostDetailViewModel @Inject constructor(
     private val _tags = MutableStateFlow<List<Tag>>(emptyList())
     val tags: StateFlow<List<Tag>> = _tags.asStateFlow()
 
-    private val _actionError = MutableStateFlow<String?>(null)
-    val actionError: StateFlow<String?> = _actionError.asStateFlow()
+    private val _actionError = MutableStateFlow<MochiError?>(null)
+    val actionError: StateFlow<MochiError?> = _actionError.asStateFlow()
 
     private var subscriptionId: String? = null
 
@@ -89,11 +89,10 @@ class PostDetailViewModel @Inject constructor(
                 _post.value = result.post
                 _permissions.value = result.permissions
                 loadTags()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
-                if (e is MochiError.NotFoundError) _isNotFound.value = true
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load post"
+                val err = e.toMochiError()
+                _error.value = err
+                if (err is MochiError.NotFoundError) _isNotFound.value = true
             } finally {
                 _isLoading.value = false
             }
@@ -151,10 +150,8 @@ class PostDetailViewModel @Inject constructor(
                 _commentAttachments.value = emptyList()
                 _replyingTo.value = null
                 loadPost()
-            } catch (e: MochiError) {
-                _actionError.value = e.userMessage()
             } catch (e: Exception) {
-                _actionError.value = e.message ?: "Failed to send comment"
+                _actionError.value = e.toMochiError()
             } finally {
                 _isSendingComment.value = false
             }
@@ -187,10 +184,8 @@ class PostDetailViewModel @Inject constructor(
                 _editingCommentId.value = null
                 _editCommentText.value = ""
                 loadPost()
-            } catch (e: MochiError) {
-                _actionError.value = e.userMessage()
             } catch (e: Exception) {
-                _actionError.value = e.message ?: "Failed to edit comment"
+                _actionError.value = e.toMochiError()
             }
         }
     }
@@ -201,10 +196,8 @@ class PostDetailViewModel @Inject constructor(
             try {
                 repository.deleteComment(feedId, postId, commentId)
                 loadPost()
-            } catch (e: MochiError) {
-                _actionError.value = e.userMessage()
             } catch (e: Exception) {
-                _actionError.value = e.message ?: "Failed to delete comment"
+                _actionError.value = e.toMochiError()
             }
         }
     }
@@ -227,10 +220,8 @@ class PostDetailViewModel @Inject constructor(
                 repository.addTag(feedId, postId, label, qid)
                 loadTags()
                 loadPost()
-            } catch (e: MochiError) {
-                _actionError.value = e.userMessage()
             } catch (e: Exception) {
-                _actionError.value = e.message ?: "Failed to add tag"
+                _actionError.value = e.toMochiError()
             }
         }
     }
@@ -242,10 +233,8 @@ class PostDetailViewModel @Inject constructor(
                 repository.removeTag(feedId, postId, id)
                 loadTags()
                 loadPost()
-            } catch (e: MochiError) {
-                _actionError.value = e.userMessage()
             } catch (e: Exception) {
-                _actionError.value = e.message ?: "Failed to remove tag"
+                _actionError.value = e.toMochiError()
             }
         }
     }
@@ -260,7 +249,7 @@ class PostDetailViewModel @Inject constructor(
                     direction = direction
                 )
             } catch (e: MochiError) {
-                _actionError.value = e.userMessage()
+                _actionError.value = e
             } catch (_: Exception) {
                 // Silent — user can retry
             }
@@ -273,10 +262,8 @@ class PostDetailViewModel @Inject constructor(
             try {
                 repository.deletePost(feedId, postId)
                 onSuccess()
-            } catch (e: MochiError) {
-                _actionError.value = e.userMessage()
             } catch (e: Exception) {
-                _actionError.value = e.message ?: "Failed to delete post"
+                _actionError.value = e.toMochiError()
             }
         }
     }

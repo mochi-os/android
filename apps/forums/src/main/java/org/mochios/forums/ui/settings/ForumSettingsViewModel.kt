@@ -92,7 +92,9 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val r = repository.getAccess(forumId)
-                _uiState.value = _uiState.value.copy(accessRules = r.rules)
+                _uiState.value = _uiState.value.copy(
+                    accessRules = r.rules.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name ?: it.subject })
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -125,7 +127,9 @@ class ForumSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val r = repository.getMembers(forumId)
-                _uiState.value = _uiState.value.copy(members = r.members)
+                _uiState.value = _uiState.value.copy(
+                    members = r.members.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -188,7 +192,8 @@ class ForumSettingsViewModel @Inject constructor(
                         account = _uiState.value.forum.aiAccount.toString(),
                     ),
                     aiPrompts = repository.getAiPrompts(forumId),
-                    aiAccounts = repository.listAiAccounts(),
+                    aiAccounts = repository.listAiAccounts()
+                        .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.label }),
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

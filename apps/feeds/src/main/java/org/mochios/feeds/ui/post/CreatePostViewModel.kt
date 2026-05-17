@@ -11,9 +11,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
+import org.mochios.android.api.toMochiError
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.PlaceData
+import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
@@ -62,8 +63,8 @@ class CreatePostViewModel @Inject constructor(
     private val _isLoadingFeeds = MutableStateFlow(false)
     val isLoadingFeeds: StateFlow<Boolean> = _isLoadingFeeds.asStateFlow()
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
+    private val _error = MutableStateFlow<MochiError?>(null)
+    val error: StateFlow<MochiError?> = _error.asStateFlow()
 
     private val _postSuccess = MutableStateFlow(false)
     val postSuccess: StateFlow<Boolean> = _postSuccess.asStateFlow()
@@ -83,7 +84,7 @@ class CreatePostViewModel @Inject constructor(
                     repository.getNewPostFeeds(preSelectedFeedId)
                 } else {
                     repository.listFeeds().filter { it.owner == 1 }
-                }
+                }.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _availableFeeds.value = feeds
                 if (_selectedFeed.value.isEmpty() && feeds.isNotEmpty()) {
                     _selectedFeed.value = feeds.first().fingerprint.ifEmpty { feeds.first().id }
@@ -107,10 +108,8 @@ class CreatePostViewModel @Inject constructor(
                 result.post.data?.checkin?.let { _checkin.value = it }
                 result.post.data?.travelling?.origin?.let { _travellingOrigin.value = it }
                 result.post.data?.travelling?.destination?.let { _travellingDestination.value = it }
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load post"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -193,7 +192,7 @@ class CreatePostViewModel @Inject constructor(
     fun createPost() {
         val feedId = _selectedFeed.value
         if (feedId.isEmpty()) {
-            _error.value = "Please select a feed"
+            _error.value = MochiError.Local(R.string.feeds_post_select_feed)
             return
         }
         val bodyText = _body.value.trim()
@@ -201,7 +200,7 @@ class CreatePostViewModel @Inject constructor(
                 _attachments.value.isNotEmpty() ||
                 _existingAttachments.value.any { it.id !in _removedExistingIds.value }
         if (!hasContent) {
-            _error.value = "Please enter some text or attach a file"
+            _error.value = MochiError.Local(R.string.feeds_post_empty_content)
             return
         }
 
@@ -242,10 +241,8 @@ class CreatePostViewModel @Inject constructor(
                     )
                 }
                 _postSuccess.value = true
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to save post"
+                _error.value = e.toMochiError()
             } finally {
                 _isPosting.value = false
             }

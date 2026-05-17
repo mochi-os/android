@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">I-reset sa default</string>
     <string name="feeds_feed_not_found">Hindi nahanap ang feed</string>
     <string name="feeds_post_not_found">Hindi nahanap ang post</string>
+    <string name="feeds_settings_feed_renamed">Na-rename ang feed</string>
+    <string name="feeds_settings_source_added">Naidagdag ang source</string>
+    <string name="feeds_settings_source_updated">Na-update ang source</string>
+    <string name="feeds_settings_source_removed">Tinanggal ang source</string>
+    <string name="feeds_settings_access_updated">Na-update ang access</string>
+    <string name="feeds_settings_member_added">Naidagdag ang miyembro</string>
+    <string name="feeds_settings_member_removed">Naalis ang miyembro</string>
+    <string name="feeds_settings_prompt_saved">Na-save ang prompt</string>
+    <string name="feeds_settings_banner_saved">Nai-save ang banner</string>
+    <string name="feeds_settings_banner_cleared">Naalis ang banner</string>
+    <string name="feeds_settings_source_polling">Sinusuri ang pinagmulan…</string>
+    <string name="feeds_settings_access_revoked">Binawi ang access</string>
+    <string name="feeds_settings_ai_mode_updated">Na-update ang mode ng AI</string>
+    <string name="feeds_settings_ai_account_updated">Na-update ang account ng AI</string>
+    <string name="feeds_settings_prompt_reset">Na-reset ang prompt sa default</string>
+    <string name="feeds_post_select_feed">Mangyaring pumili ng feed</string>
+    <string name="feeds_post_empty_content">Mangyaring magpasok ng teksto o maglakip ng file</string>
 
 </resources>

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Анхдагчид буцаах</string>
     <string name="feeds_feed_not_found">Feed олдсонгүй</string>
     <string name="feeds_post_not_found">Нийтлэл олдсонгүй</string>
+    <string name="feeds_settings_feed_renamed">Feed-н нэр өөрчлөгдсөн</string>
+    <string name="feeds_settings_source_added">Эх сурвалж нэмэгдсэн</string>
+    <string name="feeds_settings_source_updated">Эх сурвалж шинэчлэгдсэн</string>
+    <string name="feeds_settings_source_removed">Эх сурвалж устгагдсан</string>
+    <string name="feeds_settings_access_updated">Хандалт шинэчлэгдсэн</string>
+    <string name="feeds_settings_member_added">Гишүүн нэмэгдсэн</string>
+    <string name="feeds_settings_member_removed">Гишүүн хасагдсан</string>
+    <string name="feeds_settings_prompt_saved">Prompt хадгалагдсан</string>
+    <string name="feeds_settings_banner_saved">Баннер хадгалагдсан</string>
+    <string name="feeds_settings_banner_cleared">Баннер цэвэрлэгдсэн</string>
+    <string name="feeds_settings_source_polling">Эх үүсвэрээс мэдээлэл авч байна…</string>
+    <string name="feeds_settings_access_revoked">Нэвтрэх эрхийг цуцалсан</string>
+    <string name="feeds_settings_ai_mode_updated">AI горим шинэчлэгдсэн</string>
+    <string name="feeds_settings_ai_account_updated">AI бүртгэл шинэчлэгдсэн</string>
+    <string name="feeds_settings_prompt_reset">Зэвлөлгөө өгөгдсөн хэмжээнд буцаав</string>
+    <string name="feeds_post_select_feed">Суваг сонгоно уу</string>
+    <string name="feeds_post_empty_content">Текст оруулах эсвэл файл хавсаргана уу</string>
 
 </resources>

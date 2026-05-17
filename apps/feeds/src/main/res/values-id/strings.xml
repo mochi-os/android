@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Reset ke default</string>
     <string name="feeds_feed_not_found">Feed tidak ditemukan</string>
     <string name="feeds_post_not_found">Postingan tidak ditemukan</string>
+    <string name="feeds_settings_feed_renamed">Nama feed diubah</string>
+    <string name="feeds_settings_source_added">Sumber ditambahkan</string>
+    <string name="feeds_settings_source_updated">Sumber diperbarui</string>
+    <string name="feeds_settings_source_removed">Sumber dihapus</string>
+    <string name="feeds_settings_access_updated">Akses diperbarui</string>
+    <string name="feeds_settings_member_added">Anggota ditambahkan</string>
+    <string name="feeds_settings_member_removed">Anggota dihapus</string>
+    <string name="feeds_settings_prompt_saved">Prompt disimpan</string>
+    <string name="feeds_settings_banner_saved">Banner disimpan</string>
+    <string name="feeds_settings_banner_cleared">Banner dihapus</string>
+    <string name="feeds_settings_source_polling">Memuat sumber…</string>
+    <string name="feeds_settings_access_revoked">Akses dicabut</string>
+    <string name="feeds_settings_ai_mode_updated">Mode AI diperbarui</string>
+    <string name="feeds_settings_ai_account_updated">Akun AI diperbarui</string>
+    <string name="feeds_settings_prompt_reset">Prompt disetel ulang ke default</string>
+    <string name="feeds_post_select_feed">Silakan pilih umpan</string>
+    <string name="feeds_post_empty_content">Silakan masukkan teks atau lampirkan file</string>
 
 </resources>

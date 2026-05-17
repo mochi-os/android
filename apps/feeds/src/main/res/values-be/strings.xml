@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Скінуць да змаўчання</string>
     <string name="feeds_feed_not_found">Стужка не знойдзена</string>
     <string name="feeds_post_not_found">Пост не знойдзены</string>
+    <string name="feeds_settings_feed_renamed">Стужка перайменавана</string>
+    <string name="feeds_settings_source_added">Крыніца дададзена</string>
+    <string name="feeds_settings_source_updated">Крыніца абноўлена</string>
+    <string name="feeds_settings_source_removed">Крыніца выдалена</string>
+    <string name="feeds_settings_access_updated">Доступ абноўлены</string>
+    <string name="feeds_settings_member_added">Удзельнік дададзены</string>
+    <string name="feeds_settings_member_removed">Удзельнік выдалены</string>
+    <string name="feeds_settings_prompt_saved">Падказка захавана</string>
+    <string name="feeds_settings_banner_saved">Банер захаваны</string>
+    <string name="feeds_settings_banner_cleared">Банер відалены</string>
+    <string name="feeds_settings_source_polling">Апытванне крыніцы…</string>
+    <string name="feeds_settings_access_revoked">Доступ адкліканы</string>
+    <string name="feeds_settings_ai_mode_updated">Рэжым ШІ абноўлены</string>
+    <string name="feeds_settings_ai_account_updated">Акаўнт ШІ абноўлены</string>
+    <string name="feeds_settings_prompt_reset">Падказка скінута да змоўчання</string>
+    <string name="feeds_post_select_feed">Калі ласка, выберыце струмень</string>
+    <string name="feeds_post_empty_content">Калі ласка, ўвядзіце тэкст або дадайце файл</string>
 
 </resources>

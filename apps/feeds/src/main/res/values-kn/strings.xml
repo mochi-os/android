@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ಡೀಫಾಲ್ಟ್‌ಗೆ ರೀಸೆಟ್ ಮಾಡಿ</string>
     <string name="feeds_feed_not_found">ಫೀಡ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="feeds_post_not_found">ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
+    <string name="feeds_settings_feed_renamed">ಫೀಡ್ ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_source_added">ಮೂಲ ಸೇರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_source_updated">ಮೂಲ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_source_removed">ಮೂಲ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
+    <string name="feeds_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_member_added">ಸದಸ್ಯ ಸೇರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_member_removed">ಸದಸ್ಯ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
+    <string name="feeds_settings_prompt_saved">ಪ್ರಾಂಪ್ಟ್ ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_banner_saved">ಬ್ಯಾನರ್ ಸುರಕ್ಷಿತವಾಗಿದೆ</string>
+    <string name="feeds_settings_banner_cleared">ಬ್ಯಾನರ್ ತಕೆರಳಗಾಗಿದೆ</string>
+    <string name="feeds_settings_source_polling">ಮೂಲವನ್ನು ವಿಚಾರವಾಗುತ್ತಿದೆ…</string>
+    <string name="feeds_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_ai_mode_updated">AI ವಿಧಾನವನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_ai_account_updated">AI ಖಾತೆಯನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_prompt_reset">ಪ್ರಾಂಪ್ಟ್ ಡೆಫಾಲ್ಟ್‌ಗೆ ಮರುಹೊಂದಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_post_select_feed">ದಯವಿಟ್ಟು ಫೀಡ್ ಒಂದನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="feeds_post_empty_content">ದಯವಿಟ್ಟು ಒಂದ್ ಪಠ್ಯವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಸೇರಿಸಲಿ ಅಥವಾ ಫೈಲ್‌ಅನ್ನು ಲಗತ್ತಿಸಲಿ</string>
 
 </resources>

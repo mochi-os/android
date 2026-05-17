@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Yangilangan</string>
     <string name="projects_views_sort_rank">Reyting</string>
     <string name="projects_project_not_found">Loyiha topilmadi</string>
+    <string name="projects_option_icon_placeholder">masalan. Check, Star, Flag</string>
 
 </resources>

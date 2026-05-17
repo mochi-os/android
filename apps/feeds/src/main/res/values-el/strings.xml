@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Επαναφορά στις προεπιλογές</string>
     <string name="feeds_feed_not_found">Η ροή δεν βρέθηκε</string>
     <string name="feeds_post_not_found">Η ανάρτηση δεν βρέθηκε</string>
+    <string name="feeds_settings_feed_renamed">Η ροή μετονομάστηκε</string>
+    <string name="feeds_settings_source_added">Η πηγή προστέθηκε</string>
+    <string name="feeds_settings_source_updated">Η πηγή ενημερώθηκε</string>
+    <string name="feeds_settings_source_removed">Η πηγή αφαιρέθηκε</string>
+    <string name="feeds_settings_access_updated">Η πρόσβαση ενημερώθηκε</string>
+    <string name="feeds_settings_member_added">Το μέλος προστέθηκε</string>
+    <string name="feeds_settings_member_removed">Το μέλος αφαιρέθηκε</string>
+    <string name="feeds_settings_prompt_saved">Το prompt αποθηκεύτηκε</string>
+    <string name="feeds_settings_banner_saved">Το μπάνερ αποθηκεύτηκε</string>
+    <string name="feeds_settings_banner_cleared">Το μπάνερ εκκαθαρίστηκε</string>
+    <string name="feeds_settings_source_polling">Ανίχνευση πηγής…</string>
+    <string name="feeds_settings_access_revoked">Η πρόσβαση ανακλήθηκε</string>
+    <string name="feeds_settings_ai_mode_updated">Η λειτουργία AI ενημερώθηκε</string>
+    <string name="feeds_settings_ai_account_updated">Ο λογαριασμός AI ενημερώθηκε</string>
+    <string name="feeds_settings_prompt_reset">Η οδηγία επαναφέρθηκε στην προεπιλογή</string>
+    <string name="feeds_post_select_feed">Παρακαλώ επιλέξτε ροή</string>
+    <string name="feeds_post_empty_content">Παρακαλώ εισαγάγετε κείμενο ή επισυνάψτε αρχείο</string>
 
 </resources>

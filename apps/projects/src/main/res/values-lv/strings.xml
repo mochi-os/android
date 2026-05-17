@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Atjaunināts</string>
     <string name="projects_views_sort_rank">Rangs</string>
     <string name="projects_project_not_found">Projekts nav atrasts</string>
+    <string name="projects_option_icon_placeholder">piem. Check, Star, Flag</string>
 
 </resources>

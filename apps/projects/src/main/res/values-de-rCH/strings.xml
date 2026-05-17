@@ -2,6 +2,7 @@
 <resources>
 
     <string name="projects_list_close_search">Suche schliessen</string>
+    <string name="projects_create_privacy">Privacy</string>
     <string name="projects_request_close">Schliessen</string>
 
 </resources>

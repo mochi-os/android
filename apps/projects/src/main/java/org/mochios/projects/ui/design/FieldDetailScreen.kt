@@ -545,7 +545,7 @@ private fun OptionDialog(
                 OutlinedTextField(
                     value = icon,
                     onValueChange = { icon = it },
-                    placeholder = { Text("e.g. Check, Star, Flag") },
+                    placeholder = { Text(stringResource(R.string.projects_option_icon_placeholder)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )

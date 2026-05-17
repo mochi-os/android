@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Posodobljeno</string>
     <string name="projects_views_sort_rank">Uvrstitev</string>
     <string name="projects_project_not_found">Projekta ni mogoče najti</string>
+    <string name="projects_option_icon_placeholder">npr. Check, Star, Flag</string>
 
 </resources>

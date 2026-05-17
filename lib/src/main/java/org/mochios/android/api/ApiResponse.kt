@@ -30,7 +30,7 @@ fun <T> Response<ApiResponse<T>>.unwrap(): T {
             throw ApiException(code = code(), apiError = ApiError(error = errorBody))
         }
     }
-    throw ApiException(code = code(), apiError = ApiError(error = "Unknown error"))
+    throw ApiException(code = code(), apiError = ApiError())
 }
 
 fun <T> Response<T>.unwrapRaw(): T {
@@ -46,7 +46,7 @@ fun <T> Response<T>.unwrapRaw(): T {
             throw ApiException(code = code(), apiError = ApiError(error = errorBody))
         }
     }
-    throw ApiException(code = code(), apiError = ApiError(error = "Unknown error"))
+    throw ApiException(code = code(), apiError = ApiError())
 }
 
 fun HttpException.extractApiError(): ApiError {

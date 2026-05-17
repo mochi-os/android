@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">업데이트됨</string>
     <string name="projects_views_sort_rank">순위</string>
     <string name="projects_project_not_found">프로젝트를 찾을 수 없어요</string>
+    <string name="projects_option_icon_placeholder">예: Check, Star, Flag</string>
 
 </resources>

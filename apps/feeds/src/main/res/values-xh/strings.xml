@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Buyisela kumiselweyo</string>
     <string name="feeds_feed_not_found">Ifidi ayifumanekanga</string>
     <string name="feeds_post_not_found">Umyalezo awufumaneki</string>
+    <string name="feeds_settings_feed_renamed">Ifidi inikwe igama elitsha</string>
+    <string name="feeds_settings_source_added">Umthombo wongezwe</string>
+    <string name="feeds_settings_source_updated">Umthombo uhlaziyiwe</string>
+    <string name="feeds_settings_source_removed">Umthombo ususiwe</string>
+    <string name="feeds_settings_access_updated">Ufikelelo luhlaziyiwe</string>
+    <string name="feeds_settings_member_added">Ilungu lifakiwe</string>
+    <string name="feeds_settings_member_removed">Ilungu lisusiwe</string>
+    <string name="feeds_settings_prompt_saved">Isikhumbuzi sigciniwe</string>
+    <string name="feeds_settings_banner_saved">Ibhanara igciniwe</string>
+    <string name="feeds_settings_banner_cleared">Ibhanara icocekile</string>
+    <string name="feeds_settings_source_polling">Iyabuyisela umthombo…</string>
+    <string name="feeds_settings_access_revoked">Ufikelelo lurhoxisiwe</string>
+    <string name="feeds_settings_ai_mode_updated">Imo ye-AI ihlaziyiwe</string>
+    <string name="feeds_settings_ai_account_updated">I-akhawunti ye-AI ihlaziyiwe</string>
+    <string name="feeds_settings_prompt_reset">Isikhokelo siphinde sasethwa ngokumiselweyo</string>
+    <string name="feeds_post_select_feed">Nceda khetha isiphakeli</string>
+    <string name="feeds_post_empty_content">Nceda ngenisa umbhalo okanye uqhoboshe ifayile</string>
 
 </resources>

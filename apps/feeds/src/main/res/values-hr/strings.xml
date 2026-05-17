@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Resetiraj na zadano</string>
     <string name="feeds_feed_not_found">Feed nije pronađen</string>
     <string name="feeds_post_not_found">Objava nije pronađena</string>
+    <string name="feeds_settings_feed_renamed">Feed preimenovan</string>
+    <string name="feeds_settings_source_added">Izvor dodan</string>
+    <string name="feeds_settings_source_updated">Izvor ažuriran</string>
+    <string name="feeds_settings_source_removed">Izvor uklonjen</string>
+    <string name="feeds_settings_access_updated">Pristup ažuriran</string>
+    <string name="feeds_settings_member_added">Član dodan</string>
+    <string name="feeds_settings_member_removed">Član uklonjen</string>
+    <string name="feeds_settings_prompt_saved">Prompt spremljen</string>
+    <string name="feeds_settings_banner_saved">Banner spremljen</string>
+    <string name="feeds_settings_banner_cleared">Banner obrisan</string>
+    <string name="feeds_settings_source_polling">Provjera izvora…</string>
+    <string name="feeds_settings_access_revoked">Pristup opozvan</string>
+    <string name="feeds_settings_ai_mode_updated">AI način rada ažuriran</string>
+    <string name="feeds_settings_ai_account_updated">AI račun ažuriran</string>
+    <string name="feeds_settings_prompt_reset">Upit vraćen na zadano</string>
+    <string name="feeds_post_select_feed">Odaberite feed</string>
+    <string name="feeds_post_empty_content">Unesite tekst ili priključite datoteku</string>
 
 </resources>

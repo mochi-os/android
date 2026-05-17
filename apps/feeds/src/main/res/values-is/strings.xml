@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Endurstilla á sjálfgefið</string>
     <string name="feeds_feed_not_found">Streymi fannst ekki</string>
     <string name="feeds_post_not_found">Færsla fannst ekki</string>
+    <string name="feeds_settings_feed_renamed">Streymi endurnefnt</string>
+    <string name="feeds_settings_source_added">Uppruna bætt við</string>
+    <string name="feeds_settings_source_updated">Uppruni uppfærður</string>
+    <string name="feeds_settings_source_removed">Uppruni fjarlægður</string>
+    <string name="feeds_settings_access_updated">Aðgangur uppfærður</string>
+    <string name="feeds_settings_member_added">Meðlimi bætt við</string>
+    <string name="feeds_settings_member_removed">Meðlimur fjarlægður</string>
+    <string name="feeds_settings_prompt_saved">Hvati vistaður</string>
+    <string name="feeds_settings_banner_saved">Borði vistaður</string>
+    <string name="feeds_settings_banner_cleared">Borði hreinsaður</string>
+    <string name="feeds_settings_source_polling">Sækir gögn úr veitu…</string>
+    <string name="feeds_settings_access_revoked">Aðgangur afturkallaður</string>
+    <string name="feeds_settings_ai_mode_updated">Gervigreindarstilling uppfærð</string>
+    <string name="feeds_settings_ai_account_updated">Gervigreindarreikningur uppfærður</string>
+    <string name="feeds_settings_prompt_reset">Skipun núllstillt á sjálfgefið gildi</string>
+    <string name="feeds_post_select_feed">Vinsamlegast veldu veitu</string>
+    <string name="feeds_post_empty_content">Vinsamlegast sláðu inn texta eða hengdu skrá við</string>
 
 </resources>

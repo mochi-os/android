@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">デフォルトに戻す</string>
     <string name="feeds_feed_not_found">フィードが見つかりません</string>
     <string name="feeds_post_not_found">投稿が見つかりません</string>
+    <string name="feeds_settings_feed_renamed">フィードの名前を変更しました</string>
+    <string name="feeds_settings_source_added">ソースを追加しました</string>
+    <string name="feeds_settings_source_updated">ソースを更新しました</string>
+    <string name="feeds_settings_source_removed">ソースを削除しました</string>
+    <string name="feeds_settings_access_updated">アクセスを更新しました</string>
+    <string name="feeds_settings_member_added">メンバーを追加しました</string>
+    <string name="feeds_settings_member_removed">メンバーを削除しました</string>
+    <string name="feeds_settings_prompt_saved">プロンプトを保存しました</string>
+    <string name="feeds_settings_banner_saved">バナーを保存しました</string>
+    <string name="feeds_settings_banner_cleared">バナーをクリアしました</string>
+    <string name="feeds_settings_source_polling">ソースをポリング中…</string>
+    <string name="feeds_settings_access_revoked">アクセスを取り消しました</string>
+    <string name="feeds_settings_ai_mode_updated">AIモードを更新しました</string>
+    <string name="feeds_settings_ai_account_updated">AIアカウントを更新しました</string>
+    <string name="feeds_settings_prompt_reset">プロンプトをデフォルトにリセットしました</string>
+    <string name="feeds_post_select_feed">フィードを選択してください</string>
+    <string name="feeds_post_empty_content">テキストを入力するか、ファイルを添付してください</string>
 
 </resources>

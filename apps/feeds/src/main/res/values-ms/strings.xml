@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Tetapkan semula kepada lalai</string>
     <string name="feeds_feed_not_found">Suapan tidak ditemui</string>
     <string name="feeds_post_not_found">Hantaran tidak dijumpai</string>
+    <string name="feeds_settings_feed_renamed">Suapan dinamakan semula</string>
+    <string name="feeds_settings_source_added">Sumber ditambah</string>
+    <string name="feeds_settings_source_updated">Sumber dikemas kini</string>
+    <string name="feeds_settings_source_removed">Sumber dialih keluar</string>
+    <string name="feeds_settings_access_updated">Akses dikemas kini</string>
+    <string name="feeds_settings_member_added">Ahli ditambah</string>
+    <string name="feeds_settings_member_removed">Ahli dialih keluar</string>
+    <string name="feeds_settings_prompt_saved">Gesaan disimpan</string>
+    <string name="feeds_settings_banner_saved">Sepanduk disimpan</string>
+    <string name="feeds_settings_banner_cleared">Sepanduk dikosongkan</string>
+    <string name="feeds_settings_source_polling">Mengundi sumber…</string>
+    <string name="feeds_settings_access_revoked">Akses dibatalkan</string>
+    <string name="feeds_settings_ai_mode_updated">Mod AI dikemas kini</string>
+    <string name="feeds_settings_ai_account_updated">Akaun AI dikemas kini</string>
+    <string name="feeds_settings_prompt_reset">Gesaan ditetapkan semula kepada lalai</string>
+    <string name="feeds_post_select_feed">Sila pilih suapan</string>
+    <string name="feeds_post_empty_content">Sila masukkan teks atau lampirkan fail</string>
 
 </resources>

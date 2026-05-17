@@ -9,10 +9,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
-import org.mochios.android.api.userMessage
+import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.User
+import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
@@ -87,11 +88,12 @@ class FeedSettingsViewModel @Inject constructor(
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
+    private val _error = MutableStateFlow<MochiError?>(null)
+    val error: StateFlow<MochiError?> = _error.asStateFlow()
 
-    private val _actionMessage = MutableStateFlow<String?>(null)
-    val actionMessage: StateFlow<String?> = _actionMessage.asStateFlow()
+    /** Snackbar message resource — screens render via stringResource. */
+    private val _actionMessage = MutableStateFlow<Int?>(null)
+    val actionMessage: StateFlow<Int?> = _actionMessage.asStateFlow()
 
     // User search for access control
     private val _userSearchResults = MutableStateFlow<List<User>>(emptyList())
@@ -121,10 +123,8 @@ class FeedSettingsViewModel @Inject constructor(
                 _feedName.value = info.feed.name
                 _aiMode.value = info.feed.aiMode ?: ""
                 _aiAccount.value = info.feed.aiAccount
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load feed info"
+                _error.value = e.toMochiError()
             } finally {
                 _isLoading.value = false
             }
@@ -143,12 +143,10 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.renameFeed(feedId, name)
-                _actionMessage.value = "Feed renamed"
+                _actionMessage.value = R.string.feeds_settings_feed_renamed
                 _feedInfo.value = _feedInfo.value?.copy(name = name)
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to rename feed"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -158,10 +156,8 @@ class FeedSettingsViewModel @Inject constructor(
             try {
                 repository.deleteFeed(feedId)
                 onSuccess()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to delete feed"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -177,10 +173,8 @@ class FeedSettingsViewModel @Inject constructor(
                 val token = repository.getRssToken(feedId, _rssMode.value)
                 val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
                 _rssToken.value = "$serverUrl/feeds/$feedId/-/rss?token=$token"
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to generate RSS token"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -208,11 +202,9 @@ class FeedSettingsViewModel @Inject constructor(
             try {
                 repository.setBanner(feedId, _banner.value)
                 _bannerOriginal.value = _banner.value
-                _actionMessage.value = "Banner saved"
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                _actionMessage.value = R.string.feeds_settings_banner_saved
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to save banner"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -223,11 +215,9 @@ class FeedSettingsViewModel @Inject constructor(
             try {
                 repository.setBanner(feedId, "")
                 _bannerOriginal.value = ""
-                _actionMessage.value = "Banner cleared"
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                _actionMessage.value = R.string.feeds_settings_banner_cleared
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to clear banner"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -238,11 +228,13 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoadingSources.value = true
             try {
+                // Server returns sources in insertion order. Sort
+                // case-insensitively by name for the UI, matching the web
+                // sources page which sorts with naturalCompare.
                 _sources.value = repository.getSources(feedId)
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name.ifBlank { it.url } })
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load sources"
+                _error.value = e.toMochiError()
             } finally {
                 _isLoadingSources.value = false
             }
@@ -253,7 +245,7 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val result = repository.addSource(feedId, url, type)
-                _actionMessage.value = "Source added"
+                _actionMessage.value = R.string.feeds_settings_source_added
                 loadSources()
                 val suggested = result.suggestedCredibility
                 if (suggested != null && result.source.id.isNotEmpty()) {
@@ -262,10 +254,8 @@ class FeedSettingsViewModel @Inject constructor(
                         suggested = suggested
                     )
                 }
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to add source"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -277,10 +267,8 @@ class FeedSettingsViewModel @Inject constructor(
             try {
                 repository.editSource(feedId, pending.sourceId, credibility = pending.suggested)
                 loadSources()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to update credibility"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -293,12 +281,10 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.editSource(feedId, id, name, credibility, transform)
-                _actionMessage.value = "Source updated"
+                _actionMessage.value = R.string.feeds_settings_source_updated
                 loadSources()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to edit source"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -307,12 +293,10 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.removeSource(feedId, id, deletePosts)
-                _actionMessage.value = "Source removed"
+                _actionMessage.value = R.string.feeds_settings_source_removed
                 loadSources()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to remove source"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -321,11 +305,9 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.pollSource(feedId, source)
-                _actionMessage.value = "Polling source..."
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                _actionMessage.value = R.string.feeds_settings_source_polling
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to poll source"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -337,10 +319,9 @@ class FeedSettingsViewModel @Inject constructor(
             _isLoadingAccess.value = true
             try {
                 _accessRules.value = repository.getAccessRules(feedId)
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name ?: it.subject })
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load access rules"
+                _error.value = e.toMochiError()
             } finally {
                 _isLoadingAccess.value = false
             }
@@ -351,12 +332,10 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAccess(feedId, subject, level)
-                _actionMessage.value = "Access updated"
+                _actionMessage.value = R.string.feeds_settings_access_updated
                 loadAccessRules()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to set access"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -365,12 +344,10 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.revokeAccess(feedId, subject)
-                _actionMessage.value = "Access revoked"
+                _actionMessage.value = R.string.feeds_settings_access_revoked
                 loadAccessRules()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to revoke access"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -389,6 +366,7 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _groups.value = repository.getGroups()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
             } catch (_: Exception) {
                 _groups.value = emptyList()
             }
@@ -402,10 +380,9 @@ class FeedSettingsViewModel @Inject constructor(
             _isLoadingMembers.value = true
             try {
                 _members.value = repository.getMembers(feedId)
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to load members"
+                _error.value = e.toMochiError()
             } finally {
                 _isLoadingMembers.value = false
             }
@@ -416,12 +393,10 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.addMember(feedId, memberEntityId)
-                _actionMessage.value = "Member added"
+                _actionMessage.value = R.string.feeds_settings_member_added
                 loadMembers()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to add member"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -430,12 +405,10 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.removeMember(feedId, memberEntityId)
-                _actionMessage.value = "Member removed"
+                _actionMessage.value = R.string.feeds_settings_member_removed
                 loadMembers()
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to remove member"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -447,11 +420,9 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAiSettings(feedId, mode, _aiAccount.value)
-                _actionMessage.value = "AI mode updated"
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                _actionMessage.value = R.string.feeds_settings_ai_mode_updated
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to update AI mode"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -461,11 +432,9 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAiSettings(feedId, _aiMode.value, accountId)
-                _actionMessage.value = "AI account updated"
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                _actionMessage.value = R.string.feeds_settings_ai_account_updated
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to update AI account"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -473,6 +442,7 @@ class FeedSettingsViewModel @Inject constructor(
     fun loadAiAccounts() {
         viewModelScope.launch {
             _aiAccounts.value = repository.listAiAccounts()
+                .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.label })
         }
     }
 
@@ -497,11 +467,9 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAiPrompt(feedId, type, prompt)
-                _actionMessage.value = "Prompt saved"
-            } catch (e: MochiError) {
-                _error.value = e.userMessage()
+                _actionMessage.value = R.string.feeds_settings_prompt_saved
             } catch (e: Exception) {
-                _error.value = e.message ?: "Failed to save prompt"
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -512,7 +480,7 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.setAiPrompt(feedId, type, "")
-                _actionMessage.value = "Prompt reset to default"
+                _actionMessage.value = R.string.feeds_settings_prompt_reset
             } catch (_: Exception) { }
         }
     }
@@ -525,8 +493,8 @@ class FeedSettingsViewModel @Inject constructor(
         _actionMessage.value = null
     }
 
-    fun setActionMessage(message: String) {
-        _actionMessage.value = message
+    fun setActionMessage(messageRes: Int) {
+        _actionMessage.value = messageRes
     }
 }
 

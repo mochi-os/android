@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Auf Standard zurücksetzen</string>
     <string name="feeds_feed_not_found">Feed nicht gefunden</string>
     <string name="feeds_post_not_found">Beitrag nicht gefunden</string>
+    <string name="feeds_settings_feed_renamed">Feed umbenannt</string>
+    <string name="feeds_settings_source_added">Quelle hinzugefügt</string>
+    <string name="feeds_settings_source_updated">Quelle aktualisiert</string>
+    <string name="feeds_settings_source_removed">Quelle entfernt</string>
+    <string name="feeds_settings_access_updated">Zugriff aktualisiert</string>
+    <string name="feeds_settings_member_added">Mitglied hinzugefügt</string>
+    <string name="feeds_settings_member_removed">Mitglied entfernt</string>
+    <string name="feeds_settings_prompt_saved">Prompt gespeichert</string>
+    <string name="feeds_settings_banner_saved">Banner gespeichert</string>
+    <string name="feeds_settings_banner_cleared">Banner gelöscht</string>
+    <string name="feeds_settings_source_polling">Quelle wird abgerufen…</string>
+    <string name="feeds_settings_access_revoked">Zugriff widerrufen</string>
+    <string name="feeds_settings_ai_mode_updated">KI-Modus aktualisiert</string>
+    <string name="feeds_settings_ai_account_updated">KI-Konto aktualisiert</string>
+    <string name="feeds_settings_prompt_reset">Prompt auf Standard zurückgesetzt</string>
+    <string name="feeds_post_select_feed">Bitte wähle einen Feed aus</string>
+    <string name="feeds_post_empty_content">Bitte gib Text ein oder füge eine Datei an</string>
 
 </resources>

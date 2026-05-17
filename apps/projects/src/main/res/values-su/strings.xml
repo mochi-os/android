@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Diapdet</string>
     <string name="projects_views_sort_rank">Pangkat</string>
     <string name="projects_project_not_found">Proyék teu kapanggih</string>
+    <string name="projects_option_icon_placeholder">saperti Check, Star, Flag</string>
 
 </resources>

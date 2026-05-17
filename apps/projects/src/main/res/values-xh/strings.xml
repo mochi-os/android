@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Kuhlaziyiwe</string>
     <string name="projects_views_sort_rank">Inqanaba</string>
     <string name="projects_project_not_found">Iprojekthi ayifumaneki</string>
+    <string name="projects_option_icon_placeholder">umzekelo Check, Star, Flag</string>
 
 </resources>

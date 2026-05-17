@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Rivendos në parazgjedhje</string>
     <string name="feeds_feed_not_found">Feed nuk u gjet</string>
     <string name="feeds_post_not_found">Postimi s\'u gjet</string>
+    <string name="feeds_settings_feed_renamed">Feed u riemërua</string>
+    <string name="feeds_settings_source_added">Burimi u shtua</string>
+    <string name="feeds_settings_source_updated">Burimi u përditësua</string>
+    <string name="feeds_settings_source_removed">Burimi u hoq</string>
+    <string name="feeds_settings_access_updated">Qasja u përditësua</string>
+    <string name="feeds_settings_member_added">Anëtari u shtua</string>
+    <string name="feeds_settings_member_removed">Anëtari u hoq</string>
+    <string name="feeds_settings_prompt_saved">Prompti u ruajt</string>
+    <string name="feeds_settings_banner_saved">Banneri u ruajt</string>
+    <string name="feeds_settings_banner_cleared">Banneri u pastrua</string>
+    <string name="feeds_settings_source_polling">Po sondazhohet burimi…</string>
+    <string name="feeds_settings_access_revoked">Aksesi u revokua</string>
+    <string name="feeds_settings_ai_mode_updated">Modaliteti i IA u përditësua</string>
+    <string name="feeds_settings_ai_account_updated">Llogaria e IA u përditësua</string>
+    <string name="feeds_settings_prompt_reset">Sugjerimi u rivendos në të parazgjedhurin</string>
+    <string name="feeds_post_select_feed">Ju lutemi zgjidhni një ushqim</string>
+    <string name="feeds_post_empty_content">Ju lutemi shkruani disa tekste ose bashkëngjisni një skedar</string>
 
 </resources>

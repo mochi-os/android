@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Върни към подразбиране</string>
     <string name="feeds_feed_not_found">Емисията не е намерена</string>
     <string name="feeds_post_not_found">Публикацията не е намерена</string>
+    <string name="feeds_settings_feed_renamed">Емисията е преименувана</string>
+    <string name="feeds_settings_source_added">Източникът е добавен</string>
+    <string name="feeds_settings_source_updated">Източникът е обновен</string>
+    <string name="feeds_settings_source_removed">Източникът е премахнат</string>
+    <string name="feeds_settings_access_updated">Достъпът е обновен</string>
+    <string name="feeds_settings_member_added">Членът е добавен</string>
+    <string name="feeds_settings_member_removed">Членът е премахнат</string>
+    <string name="feeds_settings_prompt_saved">Промптът е запазен</string>
+    <string name="feeds_settings_banner_saved">Банерът е запазен</string>
+    <string name="feeds_settings_banner_cleared">Банерът е изчистен</string>
+    <string name="feeds_settings_source_polling">Извличане от източник…</string>
+    <string name="feeds_settings_access_revoked">Достъпът е отменен</string>
+    <string name="feeds_settings_ai_mode_updated">Режимът на ИИ е актуализиран</string>
+    <string name="feeds_settings_ai_account_updated">Акаунтът на ИИ е актуализиран</string>
+    <string name="feeds_settings_prompt_reset">Подсказката е върната към началните настройки</string>
+    <string name="feeds_post_select_feed">Моля, изберете поток</string>
+    <string name="feeds_post_empty_content">Моля, въведете текст или прикачете файл</string>
 
 </resources>

@@ -7,6 +7,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
 import org.mochios.projects.model.Project
 import org.mochios.projects.repository.ProjectsRepository
 import javax.inject.Inject
@@ -17,7 +19,7 @@ data class FindProjectsUiState(
     val recommendations: List<Project> = emptyList(),
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
-    val error: String? = null,
+    val error: MochiError? = null,
     val subscribingId: String? = null
 )
 
@@ -65,7 +67,7 @@ class FindProjectsViewModel @Inject constructor(
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isRefreshing = false,
-                    error = e.message ?: "Refresh failed"
+                    error = e.toMochiError()
                 )
             }
         }
@@ -99,7 +101,7 @@ class FindProjectsViewModel @Inject constructor(
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    error = e.message ?: "Search failed"
+                    error = e.toMochiError()
                 )
             }
         }
@@ -116,7 +118,7 @@ class FindProjectsViewModel @Inject constructor(
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     subscribingId = null,
-                    error = e.message ?: "Subscribe failed"
+                    error = e.toMochiError()
                 )
             }
         }

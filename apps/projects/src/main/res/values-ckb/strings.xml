@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">نوێکرایەوە</string>
     <string name="projects_views_sort_rank">پلە</string>
     <string name="projects_project_not_found">پڕۆژە نەدۆزرایەوە</string>
+    <string name="projects_option_icon_placeholder">وێنەی. Check, Star, Flag</string>
 
 </resources>

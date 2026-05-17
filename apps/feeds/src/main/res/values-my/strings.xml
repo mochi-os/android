@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ပုံသေသို့ ပြန်ထား</string>
     <string name="feeds_feed_not_found">ဖိဒ် မတွေ့ပါ</string>
     <string name="feeds_post_not_found">ပို့စ် မတွေ့ပါ</string>
+    <string name="feeds_settings_feed_renamed">ဖိဒ် အမည်ပြောင်းပြီးပါပြီ</string>
+    <string name="feeds_settings_source_added">မူရင်း ထည့်ပြီး</string>
+    <string name="feeds_settings_source_updated">မူရင်း အပ်ဒိတ်လုပ်ပြီး</string>
+    <string name="feeds_settings_source_removed">မူရင်း ဖျက်ပြီး</string>
+    <string name="feeds_settings_access_updated">ဝင်ရောက်ခွင့် ပြောင်းပြီး</string>
+    <string name="feeds_settings_member_added">အဖွဲ့ဝင် ထည့်ပြီးပါပြီ</string>
+    <string name="feeds_settings_member_removed">အဖွဲ့ဝင် ဖယ်ရှားပြီးပါပြီ</string>
+    <string name="feeds_settings_prompt_saved">Prompt သိမ်းပြီးပါပြီ</string>
+    <string name="feeds_settings_banner_saved">ဘန်နားကို သိမ်းဆည်းပြီးပါပြီ</string>
+    <string name="feeds_settings_banner_cleared">ဘန်နားကို ရှင်းလင်းပြီးပါပြီ</string>
+    <string name="feeds_settings_source_polling">သလ်လာမှုပ၊့ နှင့် ဆက်သွယ်နေပါသည်…</string>
+    <string name="feeds_settings_access_revoked">လာရောက်ခွင့် ပယ်သထားပါပြီ</string>
+    <string name="feeds_settings_ai_mode_updated">AI မုဒ်ကို မှန်ထားနေနေသည်</string>
+    <string name="feeds_settings_ai_account_updated">AI အကောင့်ကို မှန်ထားနေနေသည်</string>
+    <string name="feeds_settings_prompt_reset">လမ်းညွှန်မှုကို မူလပဝန်သို့ ပြန်ထားပါပြီ</string>
+    <string name="feeds_post_select_feed">ကျေးဇူးပြု၍ ဖီးတစ်ခုကို ရွေးပါ</string>
+    <string name="feeds_post_empty_content">ကျေးဇူးပြု၍ စာမျက်နှာ ရိုက်ထည့်ပါ သို့မဟုတ် ဖိုင်လ် တစ်ခုကို ပူးတွဲပါ</string>
 
 </resources>

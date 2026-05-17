@@ -224,4 +224,25 @@
 
     <string name="feeds_feed_not_found">Feed not found</string>
     <string name="feeds_post_not_found">Post not found</string>
+
+    <!-- Validation -->
+    <string name="feeds_post_select_feed">Please select a feed</string>
+    <string name="feeds_post_empty_content">Please enter some text or attach a file</string>
+
+    <!-- Action confirmations (snackbar) -->
+    <string name="feeds_settings_feed_renamed">Feed renamed</string>
+    <string name="feeds_settings_banner_saved">Banner saved</string>
+    <string name="feeds_settings_banner_cleared">Banner cleared</string>
+    <string name="feeds_settings_source_added">Source added</string>
+    <string name="feeds_settings_source_updated">Source updated</string>
+    <string name="feeds_settings_source_removed">Source removed</string>
+    <string name="feeds_settings_source_polling">Polling source…</string>
+    <string name="feeds_settings_access_updated">Access updated</string>
+    <string name="feeds_settings_access_revoked">Access revoked</string>
+    <string name="feeds_settings_member_added">Member added</string>
+    <string name="feeds_settings_member_removed">Member removed</string>
+    <string name="feeds_settings_ai_mode_updated">AI mode updated</string>
+    <string name="feeds_settings_ai_account_updated">AI account updated</string>
+    <string name="feeds_settings_prompt_saved">Prompt saved</string>
+    <string name="feeds_settings_prompt_reset">Prompt reset to default</string>
 </resources>

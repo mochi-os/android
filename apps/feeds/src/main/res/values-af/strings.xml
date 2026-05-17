@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Stel terug na verstek</string>
     <string name="feeds_feed_not_found">Feed nie gevind nie</string>
     <string name="feeds_post_not_found">Plasing nie gevind nie</string>
+    <string name="feeds_settings_feed_renamed">Feed hernoem</string>
+    <string name="feeds_settings_source_added">Bron bygevoeg</string>
+    <string name="feeds_settings_source_updated">Bron opgedateer</string>
+    <string name="feeds_settings_source_removed">Bron verwyder</string>
+    <string name="feeds_settings_access_updated">Toegang opgedateer</string>
+    <string name="feeds_settings_member_added">Lid bygevoeg</string>
+    <string name="feeds_settings_member_removed">Lid verwyder</string>
+    <string name="feeds_settings_prompt_saved">Aanwysing gestoor</string>
+    <string name="feeds_settings_banner_saved">Banier gestoor</string>
+    <string name="feeds_settings_banner_cleared">Banier verwyder</string>
+    <string name="feeds_settings_source_polling">Bron word gepol…</string>
+    <string name="feeds_settings_access_revoked">Toegang ingetrek</string>
+    <string name="feeds_settings_ai_mode_updated">KI-modus bygewerk</string>
+    <string name="feeds_settings_ai_account_updated">KI-rekening bygewerk</string>
+    <string name="feeds_settings_prompt_reset">Aansporing teruggestel na standaard</string>
+    <string name="feeds_post_select_feed">Kies asseblief \'n stroom</string>
+    <string name="feeds_post_empty_content">Voer asseblief teks in of heg \'n lêer aan</string>
 
 </resources>

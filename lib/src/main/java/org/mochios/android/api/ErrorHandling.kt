@@ -14,6 +14,8 @@ sealed class MochiError : Exception() {
     data class NotFoundError(override val message: String? = null) : MochiError()
     data class ServerError(val code: Int, override val message: String? = null) : MochiError()
     data class Unknown(override val message: String? = null) : MochiError()
+    /** Client-side validation or local error that resolves to a string resource. */
+    data class Local(val messageRes: Int) : MochiError()
 }
 
 fun Throwable.toMochiError(): MochiError {
@@ -59,5 +61,6 @@ fun MochiError.userMessage(): String {
         is MochiError.NotFoundError -> message ?: ctx.getString(R.string.error_not_found)
         is MochiError.ServerError -> ctx.getString(R.string.error_server, code)
         is MochiError.Unknown -> message ?: ctx.getString(R.string.error_unexpected)
+        is MochiError.Local -> ctx.getString(messageRes)
     }
 }

@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="feeds_feed_not_found">ਫੀਡ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="feeds_post_not_found">ਪੋਸਟ ਨਹੀਂ ਮਿਲੀ</string>
+    <string name="feeds_settings_feed_renamed">ਫੀਡ ਦਾ ਨਾਮ ਬਦਲਿਆ ਗਿਆ</string>
+    <string name="feeds_settings_source_added">ਸਰੋਤ ਜੋੜਿਆ ਗਿਆ</string>
+    <string name="feeds_settings_source_updated">ਸਰੋਤ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="feeds_settings_source_removed">ਸਰੋਤ ਹਟਾਇਆ ਗਿਆ</string>
+    <string name="feeds_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
+    <string name="feeds_settings_member_added">ਮੈਂਬਰ ਜੋੜਿਆ ਗਿਆ</string>
+    <string name="feeds_settings_member_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
+    <string name="feeds_settings_prompt_saved">ਪ੍ਰਾਂਪਟ ਸੇਵ ਹੋ ਗਿਆ</string>
+    <string name="feeds_settings_banner_saved">ਬੈਨਰ ਸੈਵ ਹੋ ਗਿਆ</string>
+    <string name="feeds_settings_banner_cleared">ਬੈਨਰ ਸਾਫ કੀਤਾ ਗਿਆ</string>
+    <string name="feeds_settings_source_polling">ਸਰੋਤ ਪੋਲ કੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
+    <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
+    <string name="feeds_settings_ai_mode_updated">AI ਮੋਡ ਅਪਡੇਟ કੀਤਾ ਗਿਆ</string>
+    <string name="feeds_settings_ai_account_updated">AI ਖਾਤਾ ਅਪਡੇਟ કੀਤਾ ਗਿਆ</string>
+    <string name="feeds_settings_prompt_reset">ਪ੍ਰੋਮੁਟ ਡਿਫੌਲਟ ਤੇ ਰੀਸੈਟ કੀਤਾ ਗਿਆ</string>
+    <string name="feeds_post_select_feed">કਿਰਪਾ કਰકੇ ਇક ਫੀਡ ਚੁਣੋ</string>
+    <string name="feeds_post_empty_content">કਿਰਪਾ કਰકੇ કੋਈ ਟੈਕਸਟ ਦਰਜ કਰੋ ਜਾਂ ਇક ਫਾਇਲ ਨੁੰ ਨੱਥੀ કਰੋ</string>
 
 </resources>

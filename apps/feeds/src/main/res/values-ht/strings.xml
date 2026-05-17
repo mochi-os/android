@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Reset nan default</string>
     <string name="feeds_feed_not_found">Feed pa jwenn</string>
     <string name="feeds_post_not_found">Pòs pa jwenn</string>
+    <string name="feeds_settings_feed_renamed">Feed rebatize</string>
+    <string name="feeds_settings_source_added">Sous ajoute</string>
+    <string name="feeds_settings_source_updated">Sous mete ajou</string>
+    <string name="feeds_settings_source_removed">Sous retire</string>
+    <string name="feeds_settings_access_updated">Aksè mete ajou</string>
+    <string name="feeds_settings_member_added">Manm ajoute</string>
+    <string name="feeds_settings_member_removed">Manm retire</string>
+    <string name="feeds_settings_prompt_saved">Prompt sove</string>
+    <string name="feeds_settings_banner_saved">Banyè anrejistre</string>
+    <string name="feeds_settings_banner_cleared">Banyè efase</string>
+    <string name="feeds_settings_source_polling">Sous ap konsilte…</string>
+    <string name="feeds_settings_access_revoked">Akè retire</string>
+    <string name="feeds_settings_ai_mode_updated">Mod IA mete ajò</string>
+    <string name="feeds_settings_ai_account_updated">Kont IA mete ajò</string>
+    <string name="feeds_settings_prompt_reset">Ankourajman re-konfigire ann otomatik</string>
+    <string name="feeds_post_select_feed">Tanpri chwazi yon flux</string>
+    <string name="feeds_post_empty_content">Tanpri tape tex oswa atache yon fichye</string>
 
 </resources>

@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Uppfært</string>
     <string name="projects_views_sort_rank">Röð</string>
     <string name="projects_project_not_found">Verkefni fannst ekki</string>
+    <string name="projects_option_icon_placeholder">t.d. Check, Star, Flag</string>
 
 </resources>

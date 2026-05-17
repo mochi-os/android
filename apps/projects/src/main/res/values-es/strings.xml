@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">Actualizado</string>
     <string name="projects_views_sort_rank">Rango</string>
     <string name="projects_project_not_found">Proyecto no encontrado</string>
+    <string name="projects_option_icon_placeholder">p. ej. Check, Star, Flag</string>
 
 </resources>

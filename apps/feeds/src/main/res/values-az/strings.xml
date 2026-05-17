@@ -80,5 +80,22 @@
     <string name="feeds_ai_reset_default">Standarta sıfırla</string>
     <string name="feeds_feed_not_found">Lent tapılmadı</string>
     <string name="feeds_post_not_found">Post tapılmadı</string>
+    <string name="feeds_settings_feed_renamed">Lentin adı dəyişdirildi</string>
+    <string name="feeds_settings_source_added">Mənbə əlavə edildi</string>
+    <string name="feeds_settings_source_updated">Mənbə yeniləndi</string>
+    <string name="feeds_settings_source_removed">Mənbə silindi</string>
+    <string name="feeds_settings_access_updated">Giriş yeniləndi</string>
+    <string name="feeds_settings_member_added">Üzv əlavə edildi</string>
+    <string name="feeds_settings_member_removed">Üzv silindi</string>
+    <string name="feeds_settings_prompt_saved">Sorğu saxlanıldı</string>
+    <string name="feeds_settings_banner_saved">Banner yadda saxlandı</string>
+    <string name="feeds_settings_banner_cleared">Banner təmizləndi</string>
+    <string name="feeds_settings_source_polling">Mənbə sorğulanır…</string>
+    <string name="feeds_settings_access_revoked">İcaxə ləğv edildi</string>
+    <string name="feeds_settings_ai_mode_updated">AI rejimi yeniləndi</string>
+    <string name="feeds_settings_ai_account_updated">AI hesabı yeniləndi</string>
+    <string name="feeds_settings_prompt_reset">Göstəriş standarta sıfırlandı</string>
+    <string name="feeds_post_select_feed">Lütfən bir lent seçin</string>
+    <string name="feeds_post_empty_content">Lütfən mətn daxil edin və ya bir fayl əlavə edin</string>
 
 </resources>

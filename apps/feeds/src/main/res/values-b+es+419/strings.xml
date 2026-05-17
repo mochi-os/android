@@ -80,5 +80,13 @@
     <string name="feeds_ai_reset_default">Restablecer al predeterminado</string>
     <string name="feeds_feed_not_found">Feed no encontrado</string>
     <string name="feeds_post_not_found">Publicación no encontrada</string>
+    <string name="feeds_settings_feed_renamed">Feed renombrado</string>
+    <string name="feeds_settings_source_added">Fuente agregada</string>
+    <string name="feeds_settings_source_updated">Fuente actualizada</string>
+    <string name="feeds_settings_source_removed">Fuente eliminada</string>
+    <string name="feeds_settings_access_updated">Acceso actualizado</string>
+    <string name="feeds_settings_member_added">Miembro añadido</string>
+    <string name="feeds_settings_member_removed">Miembro eliminado</string>
+    <string name="feeds_settings_prompt_saved">Prompt guardado</string>
 
 </resources>

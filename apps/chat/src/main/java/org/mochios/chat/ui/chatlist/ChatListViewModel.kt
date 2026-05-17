@@ -82,7 +82,7 @@ class ChatListViewModel @Inject constructor(
         // sink to the bottom in name order so they remain reachable but don't
         // outrank chats with real messages.
         return filtered.sortedWith(
-            compareByDescending<Chat> { it.updated }.thenBy { it.name.lowercase() }
+            compareByDescending<Chat> { it.updated }.thenBy(String.CASE_INSENSITIVE_ORDER) { it.name }
         )
     }
 

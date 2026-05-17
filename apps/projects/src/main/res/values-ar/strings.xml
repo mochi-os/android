@@ -158,5 +158,6 @@
     <string name="projects_views_sort_updated">تم التحديث</string>
     <string name="projects_views_sort_rank">الترتيب</string>
     <string name="projects_project_not_found">المشروع غير موجود</string>
+    <string name="projects_option_icon_placeholder">مثل Check، Star، Flag</string>
 
 </resources>
