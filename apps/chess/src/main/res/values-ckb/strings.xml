@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">شەترەنج</string>
+    <string name="chess_sidebar_header">شەترەنج</string>
+    <string name="chess_sidebar_active">یارییە چالاکەکان</string>
+    <string name="chess_sidebar_completed">تەواوبوو</string>
+    <string name="chess_sidebar_new_game">یاری نوێ</string>
+    <string name="chess_section_active">یارییە چالاکەکان</string>
+    <string name="chess_section_completed">تەواوبوو</string>
+    <string name="chess_new_game">یاری نوێ</string>
+    <string name="chess_empty_title">هێشتا هیچ یارییەک نییە</string>
+    <string name="chess_new_title">یاری نوێ</string>
+    <string name="chess_new_pick_opponent">بەرامبەر هەڵبژێرە</string>
+    <string name="chess_new_no_friends_title">هێشتا هیچ هاوڕێیەک نییە</string>
+    <string name="chess_new_no_friends_subtitle">هاوڕێیان لە ئەپی خەڵک زیاد بکە بۆ دەستپێکردنی یاری</string>
+    <string name="chess_new_add_friends">زیادکردنی هاوڕێیان</string>
+    <string name="chess_new_start_button">یاری دەستپێبکە</string>
+    <string name="chess_new_creating">دروستکردن…</string>
+    <string name="chess_new_failed">دروستکردنی یاری سەرکەوتوو نەبوو</string>
+    <string name="chess_chat_title">گفتوگۆ</string>
+    <string name="chess_open_chat">کردنەوەی پانێڵی گفتوگۆ</string>
+    <string name="chess_open_actions">کردنەوەی کردارەکانی یاری</string>
+    <string name="chess_offer_draw">پێشنیاری وەکیەکی</string>
+    <string name="chess_resign">دەستلەکارکێشانەوە</string>
+    <string name="chess_rematch">یاری دووبارە</string>
+    <string name="chess_delete_game">سڕینەوەی یاری</string>
+    <string name="chess_side_white">سپی</string>
+    <string name="chess_side_black">ڕەش</string>
+    <string name="chess_resign_title">دەست لە یاری بکێشیتەوە؟</string>
+    <string name="chess_resign_confirm">دەستلەکارکێشانەوە</string>
+    <string name="chess_delete_confirm">سڕینەوەی یاری</string>
+    <string name="chess_draw_accept">وەرگرتن</string>
+    <string name="chess_draw_decline">ڕەتکردنەوە</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — تۆ بردتەوە!</string>
+    <string name="chess_status_stalemate">گیرکردن — یەکسانی</string>
+    <string name="chess_status_draw">یەکسانی</string>
+    <string name="chess_status_check_your_move">Check — جوڵانی تۆ</string>
+    <string name="chess_status_your_move">نۆرەی تۆ</string>
+    <string name="chess_move_subject_you">تۆ</string>
+    <string name="chess_promotion_title">پلەبەرزکردنەوە بۆ:</string>
+
+    <string name="chess_resign_message">ئایا دڵنیایت لە دەستلەکارکێشانەوە؟ %1$s لە یارییەکە دەباتەوە.</string>
+    <string name="chess_draw_offered">%1$s پێشنیاری یەکسانی کرد</string>
+    <string name="chess_draw_waiting">یەکسانی پێشنیار کرا — چاوەڕێی %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s بردیەوە</string>
+    <string name="chess_status_resigned_you">تۆ وازت هێنا — %1$s دەبێت بە براوە</string>
+    <string name="chess_status_resigned_opponent">%1$s وازی هێنا — تۆ دەبیت بە براوە!</string>
+    <string name="chess_status_check_opponent_move">Check — جوڵانی %1$s</string>
+    <string name="chess_status_opponent_move">نۆرەی %1$s</string>
+    <string name="chess_piece_king">شا</string>
+    <string name="chess_piece_queen">وەزیر</string>
+    <string name="chess_piece_rook">قەڵا</string>
+    <string name="chess_piece_bishop">بیشۆپ</string>
+    <string name="chess_piece_knight">ئەسپ</string>
+    <string name="chess_piece_pawn">پیاو</string>
+    <string name="chess_move_played">%1$s یاری کرد %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Λέξεις</string>
+    <string name="words_list_title">Λέξεις</string>
+    <string name="words_list_menu">Μενού</string>
+    <string name="words_list_new">Νέο παιχνίδι</string>
+    <string name="words_list_logout">Αποσύνδεση</string>
+    <string name="words_list_empty_title">Δεν υπάρχουν ακόμη παιχνίδια</string>
+    <string name="words_sidebar_header">Λέξεις</string>
+    <string name="words_sidebar_completed">Ολοκληρώθηκε</string>
+    <string name="words_sidebar_new_game">Νέο παιχνίδι</string>
+    <string name="words_new_game_title">Νέο παιχνίδι</string>
+    <string name="words_new_game_language">Γλώσσα</string>
+    <string name="words_new_game_language_uk">Αγγλικά (Ηνωμένο Βασίλειο)</string>
+    <string name="words_new_game_language_us">Αγγλικά (ΗΠΑ)</string>
+    <string name="words_new_game_start">Έναρξη παιχνιδιού</string>
+    <string name="words_new_game_no_friends_title">Δεν υπάρχουν ακόμη φίλοι</string>
+    <string name="words_new_game_add_friends">Προσθήκη φίλων</string>
+    <string name="words_detail_status_your_move">Η σειρά σας</string>
+    <string name="words_detail_status_you_win">Νικήσατε!</string>
+    <string name="words_detail_status_game_over">Τέλος παιχνιδιού</string>
+    <string name="words_detail_status_opponent_resigned">Ο αντίπαλος παραιτήθηκε — κερδίζετε!</string>
+    <string name="words_detail_status_you_resigned">Παραιτηθήκατε</string>
+    <string name="words_detail_label_you">Εσείς</string>
+    <string name="words_detail_action_shuffle">Ανακάτεμα ραφιού</string>
+    <string name="words_detail_action_pass">Πάσο</string>
+    <string name="words_detail_action_exchange">Ανταλλαγή πλακιδίων</string>
+    <string name="words_detail_action_cancel_exchange">Ακύρωση ανταλλαγής</string>
+    <string name="words_detail_action_resign">Παραίτηση</string>
+    <string name="words_detail_action_rematch">Ρεβάνς</string>
+    <string name="words_detail_action_delete">Διαγραφή παιχνιδιού</string>
+    <string name="words_detail_chat_title">Συνομιλία</string>
+    <string name="words_detail_invalid_move">Μη έγκυρη κίνηση</string>
+    <string name="words_detail_recall">Ανάκληση</string>
+    <string name="words_detail_submit">Υποβολή</string>
+    <string name="words_detail_cancel">Ακύρωση</string>
+    <string name="words_detail_exchange">Ανταλλαγή</string>
+    <string name="words_detail_blank_title">Επιλέξτε ένα γράμμα</string>
+    <string name="words_detail_resign_title">Παραίτηση από το παιχνίδι;</string>
+    <string name="words_detail_resign_message">Είστε σίγουροι ότι θέλετε να εγκαταλείψετε;</string>
+    <string name="words_detail_failed_move">Αποτυχία υποβολής κίνησης</string>
+    <string name="words_detail_failed_pass">Αποτυχία πάσου</string>
+    <string name="words_detail_failed_exchange">Αποτυχία ανταλλαγής</string>
+    <string name="words_detail_failed_resign">Αποτυχία παραίτησης</string>
+    <string name="words_detail_failed_rematch">Αποτυχία δημιουργίας ρεβάνς</string>
+    <string name="words_detail_failed_delete">Αποτυχία διαγραφής παιχνιδιού</string>
+    <string name="words_detail_game_deleted">Το παιχνίδι διαγράφηκε</string>
+
+    <string name="words_channel_name">Ειδοποιήσεις Λέξεις</string>
+    <string name="words_channel_description">Ειδοποιήσεις σχετικά με σειρές, ανταλλαγές και αποτελέσματα παρτίδων.</string>
+    <string name="words_list_empty_subtitle">Πατήστε το κουμπί + για να ξεκινήσετε την πρώτη σας παρτίδα.</string>
+    <string name="words_list_status_finished">Ολοκληρώθηκε</string>
+    <string name="words_list_status_resigned">Παραιτήθηκε</string>
+    <string name="words_list_your_turn">Σειρά σας</string>
+    <string name="words_sidebar_active">Ενεργές παρτίδες</string>
+    <string name="words_sidebar_empty">Δεν υπάρχουν ακόμη παρτίδες.</string>
+    <string name="words_new_game_choose_opponents">Επιλέξτε αντιπάλους</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d παίκτες</string>
+    <string name="words_new_game_no_friends_subtitle">Προσθέστε φίλους στην εφαρμογή Άτομα για να αρχίσετε να παίζετε.</string>
+    <string name="words_detail_title">Παρτίδα</string>
+    <string name="words_detail_coming_soon">Λεπτομέρειες παρτίδας σύντομα</string>
+    <string name="words_detail_status_opponent_move">Σειρά του %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s κερδίζει</string>
+    <string name="words_detail_player_fallback">Παίκτης %1$d</string>
+    <string name="words_detail_player_count">%1$d παίκτες</string>
+    <string name="words_detail_label_tiles_left">%1$d πλακίδια απομένουν</string>
+    <string name="words_detail_action_open_chat">Άνοιγμα συνομιλίας</string>
+    <string name="words_detail_action_more">Ενέργειες παρτίδας</string>
+    <string name="words_detail_exchange_count">Ανταλλαγή (%1$d)</string>
+    <string name="words_detail_chat_you_played">Παίξατε %1$s</string>
+    <string name="words_detail_chat_player_played">Ο %1$s έπαιξε %2$s</string>
+
+</resources>

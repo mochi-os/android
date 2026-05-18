@@ -198,6 +198,54 @@
             <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
         </activity-alias>
 
+        <activity-alias
+            android:name=".MochiChessLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_chess"
+            android:icon="@mipmap/ic_chess"
+            android:roundIcon="@mipmap/ic_chess_round"
+            android:taskAffinity="org.mochios.mochi.chess"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="chess" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MochiGoLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_go"
+            android:icon="@mipmap/ic_go"
+            android:roundIcon="@mipmap/ic_go_round"
+            android:taskAffinity="org.mochios.mochi.go"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="go" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MochiWordsLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_words"
+            android:icon="@mipmap/ic_words"
+            android:roundIcon="@mipmap/ic_words_round"
+            android:taskAffinity="org.mochios.mochi.words"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="words" />
+        </activity-alias>
+
         <!--
           UnifiedPush MessagingReceiver for the consolidated super-app. Catches
           MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts

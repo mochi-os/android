@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Şetrenc</string>
+    <string name="chess_sidebar_header">Şetrenc</string>
+    <string name="chess_sidebar_active">Lîstikên çalak</string>
+    <string name="chess_sidebar_completed">Temam</string>
+    <string name="chess_sidebar_new_game">Lîstika nû</string>
+    <string name="chess_section_active">Lîstikên çalak</string>
+    <string name="chess_section_completed">Temam</string>
+    <string name="chess_new_game">Lîstika nû</string>
+    <string name="chess_empty_title">Hêj tu lîstik tune</string>
+    <string name="chess_new_title">Lîstika nû</string>
+    <string name="chess_new_pick_opponent">Hevrik hilbijêre</string>
+    <string name="chess_new_no_friends_title">Hêj tu heval tune</string>
+    <string name="chess_new_no_friends_subtitle">Ji bo destpêkirina lîstikê di sepana Mirovan de hevalan zêde bike</string>
+    <string name="chess_new_add_friends">Hevalan zêde bike</string>
+    <string name="chess_new_start_button">Lîstikê dest pê bike</string>
+    <string name="chess_new_creating">Tê çêkirin…</string>
+    <string name="chess_new_failed">Çêkirina lîstikê neserkeftî bû</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Panela chatê veke</string>
+    <string name="chess_open_actions">Çalakiyên lîstikê veke</string>
+    <string name="chess_offer_draw">Wekheviyê pêşniyar bike</string>
+    <string name="chess_resign">Dest jê berde</string>
+    <string name="chess_rematch">Lîstika ji nû</string>
+    <string name="chess_delete_game">Lîstikê jê bibe</string>
+    <string name="chess_side_white">Spî</string>
+    <string name="chess_side_black">Reş</string>
+    <string name="chess_resign_title">Dest ji lîstikê berde?</string>
+    <string name="chess_resign_confirm">Dest jê berde</string>
+    <string name="chess_delete_confirm">Lîstikê jê bibe</string>
+    <string name="chess_draw_accept">Qebûl bike</string>
+    <string name="chess_draw_decline">Red bike</string>
+    <string name="chess_status_checkmate_you_win">Mat — tu bi ser ketî!</string>
+    <string name="chess_status_stalemate">Patgirê — wekhevî</string>
+    <string name="chess_status_draw">Xêz bike</string>
+    <string name="chess_status_check_your_move">Şah — tewra te</string>
+    <string name="chess_status_your_move">Tevgera te</string>
+    <string name="chess_move_subject_you">Tu</string>
+    <string name="chess_promotion_title">Berbi vê pêşvebibe:</string>
+
+    <string name="chess_resign_message">Tu bawer î ku dixwazî teslîm bibî? %1$s dê di lîstikê de bi ser bikeve.</string>
+    <string name="chess_draw_offered">%1$s pêşniyara wekheviyê kir</string>
+    <string name="chess_draw_waiting">Wekheviyek hat pêşniyarkirin — li bendê ye %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Mat — %1$s bi ser ket</string>
+    <string name="chess_status_resigned_you">Te dest jê berda — %1$s bi serket</string>
+    <string name="chess_status_resigned_opponent">%1$s dest jê berda — tu bi serket î!</string>
+    <string name="chess_status_check_opponent_move">Şah — tewra %1$s</string>
+    <string name="chess_status_opponent_move">Tevgera %1$s</string>
+    <string name="chess_piece_king">Şah</string>
+    <string name="chess_piece_queen">Şahbanû</string>
+    <string name="chess_piece_rook">Qele</string>
+    <string name="chess_piece_bishop">Fîl</string>
+    <string name="chess_piece_knight">Siwar</string>
+    <string name="chess_piece_pawn">Piyade</string>
+    <string name="chess_move_played">%1$s %2$s lîst</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Izbornik</string>
+    <string name="words_list_new">Nova igra</string>
+    <string name="words_list_logout">Odjavi se</string>
+    <string name="words_list_empty_title">Još nema igara</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Završeno</string>
+    <string name="words_sidebar_new_game">Nova igra</string>
+    <string name="words_new_game_title">Nova igra</string>
+    <string name="words_new_game_language">Jezik</string>
+    <string name="words_new_game_language_uk">Engleski (UK)</string>
+    <string name="words_new_game_language_us">Engleski (SAD)</string>
+    <string name="words_new_game_start">Započni igru</string>
+    <string name="words_new_game_no_friends_title">Još nema prijatelja</string>
+    <string name="words_new_game_add_friends">Dodaj prijatelje</string>
+    <string name="words_detail_status_your_move">Vaš potez</string>
+    <string name="words_detail_status_you_win">Pobijedili ste!</string>
+    <string name="words_detail_status_game_over">Kraj igre</string>
+    <string name="words_detail_status_opponent_resigned">Protivnik se predao — pobijedili ste!</string>
+    <string name="words_detail_status_you_resigned">Predali ste se</string>
+    <string name="words_detail_label_you">Vi</string>
+    <string name="words_detail_action_shuffle">Promiješaj stalak</string>
+    <string name="words_detail_action_pass">Predaj</string>
+    <string name="words_detail_action_exchange">Razmijeni pločice</string>
+    <string name="words_detail_action_cancel_exchange">Odustani od razmjene</string>
+    <string name="words_detail_action_resign">Predaj se</string>
+    <string name="words_detail_action_rematch">Revanš</string>
+    <string name="words_detail_action_delete">Obriši igru</string>
+    <string name="words_detail_chat_title">Razgovor</string>
+    <string name="words_detail_invalid_move">Nevažeći potez</string>
+    <string name="words_detail_recall">Opozovi</string>
+    <string name="words_detail_submit">Pošalji</string>
+    <string name="words_detail_cancel">Odustani</string>
+    <string name="words_detail_exchange">Razmjena</string>
+    <string name="words_detail_blank_title">Odaberite slovo</string>
+    <string name="words_detail_resign_title">Predati igru?</string>
+    <string name="words_detail_resign_message">Jeste li sigurni da želite predati partiju?</string>
+    <string name="words_detail_failed_move">Podnošenje poteza nije uspjelo</string>
+    <string name="words_detail_failed_pass">Pas nije uspio</string>
+    <string name="words_detail_failed_exchange">Razmjena nije uspjela</string>
+    <string name="words_detail_failed_resign">Predaja nije uspjela</string>
+    <string name="words_detail_failed_rematch">Stvaranje uzvrata nije uspjelo</string>
+    <string name="words_detail_failed_delete">Brisanje igre nije uspjelo</string>
+    <string name="words_detail_game_deleted">Igra izbrisana</string>
+
+    <string name="words_channel_name">Riječi obavijesti</string>
+    <string name="words_channel_description">Obavijesti o potezima, razmjenama i rezultatima partija.</string>
+    <string name="words_list_empty_subtitle">Dodirnite gumb + za pokretanje prve partije.</string>
+    <string name="words_list_status_finished">Završena</string>
+    <string name="words_list_status_resigned">Predana</string>
+    <string name="words_list_your_turn">Vaš red</string>
+    <string name="words_sidebar_active">Aktivne partije</string>
+    <string name="words_sidebar_empty">Još nema partija.</string>
+    <string name="words_new_game_choose_opponents">Odaberite protivnike</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d igrača</string>
+    <string name="words_new_game_no_friends_subtitle">Dodajte prijatelje u aplikaciji Ljudi kako biste počeli igrati.</string>
+    <string name="words_detail_title">Partija</string>
+    <string name="words_detail_coming_soon">Detalji partije uskoro</string>
+    <string name="words_detail_status_opponent_move">Red %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s pobjeđuje</string>
+    <string name="words_detail_player_fallback">Igrač %1$d</string>
+    <string name="words_detail_player_count">%1$d igrača</string>
+    <string name="words_detail_label_tiles_left">Preostalo %1$d pločica</string>
+    <string name="words_detail_action_open_chat">Otvori chat</string>
+    <string name="words_detail_action_more">Akcije partije</string>
+    <string name="words_detail_exchange_count">Razmijeni (%1$d)</string>
+    <string name="words_detail_chat_you_played">Odigrali ste %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s je odigrao %2$s</string>
+
+</resources>

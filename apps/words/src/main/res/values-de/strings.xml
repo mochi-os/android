@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menü</string>
+    <string name="words_list_new">Neues Spiel</string>
+    <string name="words_list_logout">Abmelden</string>
+    <string name="words_list_empty_title">Noch keine Spiele</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Abgeschlossen</string>
+    <string name="words_sidebar_new_game">Neues Spiel</string>
+    <string name="words_new_game_title">Neues Spiel</string>
+    <string name="words_new_game_language">Sprache</string>
+    <string name="words_new_game_language_uk">Englisch (UK)</string>
+    <string name="words_new_game_language_us">Englisch (US)</string>
+    <string name="words_new_game_start">Spiel starten</string>
+    <string name="words_new_game_no_friends_title">Noch keine Freunde</string>
+    <string name="words_new_game_add_friends">Freunde hinzufügen</string>
+    <string name="words_detail_status_your_move">Ihr Zug</string>
+    <string name="words_detail_status_you_win">Sie gewinnen!</string>
+    <string name="words_detail_status_game_over">Spiel beendet</string>
+    <string name="words_detail_status_opponent_resigned">Gegner hat aufgegeben — Sie gewinnen!</string>
+    <string name="words_detail_status_you_resigned">Sie haben aufgegeben</string>
+    <string name="words_detail_label_you">Sie</string>
+    <string name="words_detail_action_shuffle">Buchstabenleiste mischen</string>
+    <string name="words_detail_action_pass">Passen</string>
+    <string name="words_detail_action_exchange">Steine tauschen</string>
+    <string name="words_detail_action_cancel_exchange">Austausch abbrechen</string>
+    <string name="words_detail_action_resign">Aufgeben</string>
+    <string name="words_detail_action_rematch">Revanche</string>
+    <string name="words_detail_action_delete">Spiel löschen</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Ungültiger Zug</string>
+    <string name="words_detail_recall">Zurückrufen</string>
+    <string name="words_detail_submit">Absenden</string>
+    <string name="words_detail_cancel">Abbrechen</string>
+    <string name="words_detail_exchange">Tauschen</string>
+    <string name="words_detail_blank_title">Buchstaben auswählen</string>
+    <string name="words_detail_resign_title">Spiel aufgeben?</string>
+    <string name="words_detail_resign_message">Möchtest du wirklich aufgeben?</string>
+    <string name="words_detail_failed_move">Zug konnte nicht eingereicht werden</string>
+    <string name="words_detail_failed_pass">Passen fehlgeschlagen</string>
+    <string name="words_detail_failed_exchange">Tausch fehlgeschlagen</string>
+    <string name="words_detail_failed_resign">Aufgabe fehlgeschlagen</string>
+    <string name="words_detail_failed_rematch">Revanche konnte nicht erstellt werden</string>
+    <string name="words_detail_failed_delete">Spiel konnte nicht gelöscht werden</string>
+    <string name="words_detail_game_deleted">Spiel gelöscht</string>
+
+    <string name="words_channel_name">Wörter-Benachrichtigungen</string>
+    <string name="words_channel_description">Benachrichtigungen über Züge, Austausche und Partieergebnisse.</string>
+    <string name="words_list_empty_subtitle">Tippe auf die +-Schaltfläche, um deine erste Partie zu beginnen.</string>
+    <string name="words_list_status_finished">Beendet</string>
+    <string name="words_list_status_resigned">Aufgegeben</string>
+    <string name="words_list_your_turn">Dein Zug</string>
+    <string name="words_sidebar_active">Aktive Partien</string>
+    <string name="words_sidebar_empty">Noch keine Partien.</string>
+    <string name="words_new_game_choose_opponents">Gegner auswählen</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d Spieler</string>
+    <string name="words_new_game_no_friends_subtitle">Füge Freunde in der Personen-App hinzu, um zu spielen.</string>
+    <string name="words_detail_title">Partie</string>
+    <string name="words_detail_coming_soon">Partiedetails folgen in Kürze</string>
+    <string name="words_detail_status_opponent_move">Zug von %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s gewinnt</string>
+    <string name="words_detail_player_fallback">Spieler %1$d</string>
+    <string name="words_detail_player_count">%1$d Spieler</string>
+    <string name="words_detail_label_tiles_left">%1$d Steine übrig</string>
+    <string name="words_detail_action_open_chat">Chat öffnen</string>
+    <string name="words_detail_action_more">Partieaktionen</string>
+    <string name="words_detail_exchange_count">Tauschen (%1$d)</string>
+    <string name="words_detail_chat_you_played">Du hast %1$s gespielt</string>
+    <string name="words_detail_chat_player_played">%1$s hat %2$s gespielt</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Escacs</string>
+    <string name="chess_sidebar_header">Escacs</string>
+    <string name="chess_sidebar_active">Partides actives</string>
+    <string name="chess_sidebar_completed">Completat</string>
+    <string name="chess_sidebar_new_game">Joc nou</string>
+    <string name="chess_section_active">Partides actives</string>
+    <string name="chess_section_completed">Completat</string>
+    <string name="chess_new_game">Joc nou</string>
+    <string name="chess_empty_title">Encara no hi ha jocs</string>
+    <string name="chess_new_title">Joc nou</string>
+    <string name="chess_new_pick_opponent">Tria un oponent</string>
+    <string name="chess_new_no_friends_title">Encara no tens amics</string>
+    <string name="chess_new_no_friends_subtitle">Afegeix amistats a l\'aplicació Persones per començar a jugar</string>
+    <string name="chess_new_add_friends">Afegeix amistats</string>
+    <string name="chess_new_start_button">Comença la partida</string>
+    <string name="chess_new_creating">S\'està creant…</string>
+    <string name="chess_new_failed">No s\'ha pogut crear la partida</string>
+    <string name="chess_chat_title">Xat</string>
+    <string name="chess_open_chat">Obre el panell del xat</string>
+    <string name="chess_open_actions">Obre les accions del joc</string>
+    <string name="chess_offer_draw">Ofereix taules</string>
+    <string name="chess_resign">Abandona</string>
+    <string name="chess_rematch">Revenja</string>
+    <string name="chess_delete_game">Suprimeix la partida</string>
+    <string name="chess_side_white">Blanques</string>
+    <string name="chess_side_black">Negres</string>
+    <string name="chess_resign_title">Vols abandonar la partida?</string>
+    <string name="chess_resign_confirm">Abandona</string>
+    <string name="chess_delete_confirm">Suprimeix la partida</string>
+    <string name="chess_draw_accept">Accepta</string>
+    <string name="chess_draw_decline">Rebutja</string>
+    <string name="chess_status_checkmate_you_win">Escac i mat — has guanyat!</string>
+    <string name="chess_status_stalemate">Ofegat — empat</string>
+    <string name="chess_status_draw">Taules</string>
+    <string name="chess_status_check_your_move">Escac — el teu moviment</string>
+    <string name="chess_status_your_move">El teu torn</string>
+    <string name="chess_move_subject_you">Tu</string>
+    <string name="chess_promotion_title">Promociona a:</string>
+
+    <string name="chess_resign_message">Segur que vols rendir-te? %1$s guanyarà la partida.</string>
+    <string name="chess_draw_offered">%1$s ha ofert un empat</string>
+    <string name="chess_draw_waiting">Taules ofertes — esperant %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Escac i mat — guanya %1$s</string>
+    <string name="chess_status_resigned_you">T\'has rendit, guanya %1$s</string>
+    <string name="chess_status_resigned_opponent">%1$s s\'ha rendit, has guanyat!</string>
+    <string name="chess_status_check_opponent_move">Escac — moviment de %1$s</string>
+    <string name="chess_status_opponent_move">Torn de %1$s</string>
+    <string name="chess_piece_king">Rei</string>
+    <string name="chess_piece_queen">Reina</string>
+    <string name="chess_piece_rook">Torre</string>
+    <string name="chess_piece_bishop">Alfil</string>
+    <string name="chess_piece_knight">Cavall</string>
+    <string name="chess_piece_pawn">Peó</string>
+    <string name="chess_move_played">%1$s ha jugat %2$s</string>
+    <string name="chess_channel_name">Notificacions d\'Escacs</string>
+    <string name="chess_channel_description">Notificacions sobre jugades, ofertes de taules i resultats de partides.</string>
+    <string name="chess_open_sidebar">Obre la barra lateral</string>
+    <string name="chess_empty_subtitle">Comença la teva primera partida per jugar a escacs amb un amic.</string>
+    <string name="chess_empty_start_button">Comença la teva primera partida</string>
+    <string name="chess_detail_unavailable">Partida no disponible</string>
+    <string name="chess_delete_title">Eliminar partida?</string>
+    <string name="chess_delete_message">Això elimina la partida de la teva llista.</string>
+    <string name="chess_ws_connecting">Connectant…</string>
+    <string name="chess_ws_disconnected">Fora de línia</string>
+    <string name="chess_ws_reconnecting">Reconnectant…</string>
+    <string name="chess_ws_failed">Connexió fallida</string>
+    <string name="chess_move_capture">%1$s va capturar %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

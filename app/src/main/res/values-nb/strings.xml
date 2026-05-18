@@ -7,4 +7,9 @@
     <string name="launcher_projects">Prosjekter</string>
     <string name="launcher_settings">Innstillinger</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Sjakk</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Ord</string>
+
 </resources>

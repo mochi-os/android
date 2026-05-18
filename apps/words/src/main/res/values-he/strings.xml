@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">תפריט</string>
+    <string name="words_list_new">משחק חדש</string>
+    <string name="words_list_logout">התנתק</string>
+    <string name="words_list_empty_title">עדיין אין משחקים</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">הושלם</string>
+    <string name="words_sidebar_new_game">משחק חדש</string>
+    <string name="words_new_game_title">משחק חדש</string>
+    <string name="words_new_game_language">שפה</string>
+    <string name="words_new_game_language_uk">אנגלית (בריטניה)</string>
+    <string name="words_new_game_language_us">אנגלית (ארה\"ב)</string>
+    <string name="words_new_game_start">התחל משחק</string>
+    <string name="words_new_game_no_friends_title">עדיין אין חברים</string>
+    <string name="words_new_game_add_friends">הוסף חברים</string>
+    <string name="words_detail_status_your_move">התור שלך</string>
+    <string name="words_detail_status_you_win">ניצחת!</string>
+    <string name="words_detail_status_game_over">המשחק נגמר</string>
+    <string name="words_detail_status_opponent_resigned">היריב פרש — ניצחת!</string>
+    <string name="words_detail_status_you_resigned">התפטרת</string>
+    <string name="words_detail_label_you">אתה</string>
+    <string name="words_detail_action_shuffle">ערבב מדף</string>
+    <string name="words_detail_action_pass">דלג</string>
+    <string name="words_detail_action_exchange">החלף אריחים</string>
+    <string name="words_detail_action_cancel_exchange">בטל החלפה</string>
+    <string name="words_detail_action_resign">פרוש</string>
+    <string name="words_detail_action_rematch">משחק חוזר</string>
+    <string name="words_detail_action_delete">מחק משחק</string>
+    <string name="words_detail_chat_title">צ\'אט</string>
+    <string name="words_detail_invalid_move">מהלך לא תקין</string>
+    <string name="words_detail_recall">החזר</string>
+    <string name="words_detail_submit">שלח</string>
+    <string name="words_detail_cancel">ביטול</string>
+    <string name="words_detail_exchange">החלף</string>
+    <string name="words_detail_blank_title">בחר אות</string>
+    <string name="words_detail_resign_title">לפרוש מהמשחק?</string>
+    <string name="words_detail_resign_message">האם אתה בטוח שברצונך לפרוש?</string>
+    <string name="words_detail_failed_move">הגשת המהלך נכשלה</string>
+    <string name="words_detail_failed_pass">הוויתור נכשל</string>
+    <string name="words_detail_failed_exchange">ההחלפה נכשלה</string>
+    <string name="words_detail_failed_resign">ההתפטרות נכשלה</string>
+    <string name="words_detail_failed_rematch">יצירת המשחק החוזר נכשלה</string>
+    <string name="words_detail_failed_delete">מחיקת המשחק נכשלה</string>
+    <string name="words_detail_game_deleted">המשחק נמחק</string>
+
+    <string name="words_channel_name">התראות מילים</string>
+    <string name="words_channel_description">התראות על תורות, החלפות ותוצאות משחקים.</string>
+    <string name="words_list_empty_subtitle">הקש על כפתור + כדי להתחיל את המשחק הראשון שלך.</string>
+    <string name="words_list_status_finished">הסתיים</string>
+    <string name="words_list_status_resigned">הפסיד</string>
+    <string name="words_list_your_turn">תורך</string>
+    <string name="words_sidebar_active">משחקים פעילים</string>
+    <string name="words_sidebar_empty">אין עדיין משחקים.</string>
+    <string name="words_new_game_choose_opponents">בחר יריבים</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d שחקנים</string>
+    <string name="words_new_game_no_friends_subtitle">הוסף חברים באפליקציית אנשים כדי להתחיל לשחק.</string>
+    <string name="words_detail_title">משחק</string>
+    <string name="words_detail_coming_soon">פרטי המשחק בקרוב</string>
+    <string name="words_detail_status_opponent_move">תורו של %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s מנצח</string>
+    <string name="words_detail_player_fallback">שחקן %1$d</string>
+    <string name="words_detail_player_count">%1$d שחקנים</string>
+    <string name="words_detail_label_tiles_left">נותרו %1$d אריחים</string>
+    <string name="words_detail_action_open_chat">פתח צ\'אט</string>
+    <string name="words_detail_action_more">פעולות משחק</string>
+    <string name="words_detail_exchange_count">החלף (%1$d)</string>
+    <string name="words_detail_chat_you_played">שיחקת %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s שיחק %2$s</string>
+
+</resources>

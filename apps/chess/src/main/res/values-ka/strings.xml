@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">ჭადრაკი</string>
+    <string name="chess_sidebar_header">ჭადრაკი</string>
+    <string name="chess_sidebar_active">აქტიური თამაშები</string>
+    <string name="chess_sidebar_completed">დასრულდა</string>
+    <string name="chess_sidebar_new_game">ახალი თამაში</string>
+    <string name="chess_section_active">აქტიური თამაშები</string>
+    <string name="chess_section_completed">დასრულდა</string>
+    <string name="chess_new_game">ახალი თამაში</string>
+    <string name="chess_empty_title">თამაშები ჯერ არ არის</string>
+    <string name="chess_new_title">ახალი თამაში</string>
+    <string name="chess_new_pick_opponent">აირჩიეთ ოპონენტი</string>
+    <string name="chess_new_no_friends_title">მეგობრები ჯერ არ არის</string>
+    <string name="chess_new_no_friends_subtitle">დაამატეთ მეგობრები People აპში სათამაშოდ დასაწყებად</string>
+    <string name="chess_new_add_friends">მეგობრების დამატება</string>
+    <string name="chess_new_start_button">თამაშის დაწყება</string>
+    <string name="chess_new_creating">იქმნება…</string>
+    <string name="chess_new_failed">თამაშის შექმნა ვერ მოხერხდა</string>
+    <string name="chess_chat_title">ჩატი</string>
+    <string name="chess_open_chat">ჩატის პანელის გახსნა</string>
+    <string name="chess_open_actions">თამაშის მოქმედებების გახსნა</string>
+    <string name="chess_offer_draw">ფრის შეთავაზება</string>
+    <string name="chess_resign">ჩაბარება</string>
+    <string name="chess_rematch">რევანში</string>
+    <string name="chess_delete_game">თამაშის წაშლა</string>
+    <string name="chess_side_white">როდესაც სხვა ვიკები ამ ვიკს რეპლიცირებენ, ისინი აქ გამოჩნდებიან.</string>
+    <string name="chess_side_black">შავი</string>
+    <string name="chess_resign_title">თამაშის ჩაბარება?</string>
+    <string name="chess_resign_confirm">ჩაბარება</string>
+    <string name="chess_delete_confirm">თამაშის წაშლა</string>
+    <string name="chess_draw_accept">მიღება</string>
+    <string name="chess_draw_decline">უარის თქმა</string>
+    <string name="chess_status_checkmate_you_win">მატი — თქვენ მოიგეთ!</string>
+    <string name="chess_status_stalemate">უმოქმედო — ფრე</string>
+    <string name="chess_status_draw">ფრე</string>
+    <string name="chess_status_check_your_move">შაჰი — თქვენი სვლაა</string>
+    <string name="chess_status_your_move">თქვენი ლისტინგი ავტომატურად განიხილება და შესაძლოა მოითხოვოს მოდერატორის დამტკიცება, სანამ სხვა მომხმარებლებისთვის ხილული გახდება.</string>
+    <string name="chess_move_subject_you">დიახ, ძალით</string>
+    <string name="chess_promotion_title">დაწინაურება:</string>
+
+    <string name="chess_resign_message">დარწმუნებული ხართ, რომ გსურთ დათმობა? %1$s მოიგებს თამაშს.</string>
+    <string name="chess_draw_offered">%1$s-მაც გაატარა. დასტური დაასრულებს თამაშს და დაითვლის დაფას.</string>
+    <string name="chess_draw_waiting">შემოთავაზებულია ფრე — ველოდები %1$s-ს</string>
+    <string name="chess_status_checkmate_opponent_wins">მატი — %1$s-მა მოიგო</string>
+    <string name="chess_status_resigned_you">თქვენ თავი დანებეთ</string>
+    <string name="chess_status_resigned_opponent">%1$s-მა შემოგთავაზათ ფრე</string>
+    <string name="chess_status_check_opponent_move">შაჰი — %1$s-ის სვლაა</string>
+    <string name="chess_status_opponent_move">%1$s იმარჯვებს</string>
+    <string name="chess_piece_king">Მთავარი</string>
+    <string name="chess_piece_queen">Პერიოდში</string>
+    <string name="chess_piece_rook">Როლი: {0}</string>
+    <string name="chess_piece_bishop">Დაბანილი</string>
+    <string name="chess_piece_knight">Მეფე</string>
+    <string name="chess_piece_pawn">Passkey</string>
+    <string name="chess_move_played">%1$s 走了 %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

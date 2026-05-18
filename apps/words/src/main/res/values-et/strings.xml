@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menüü</string>
+    <string name="words_list_new">Uus mäng</string>
+    <string name="words_list_logout">Logi välja</string>
+    <string name="words_list_empty_title">Mänge veel pole</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Lõpetatud</string>
+    <string name="words_sidebar_new_game">Uus mäng</string>
+    <string name="words_new_game_title">Uus mäng</string>
+    <string name="words_new_game_language">Keel</string>
+    <string name="words_new_game_language_uk">English (UK)</string>
+    <string name="words_new_game_language_us">English (US)</string>
+    <string name="words_new_game_start">Alusta mängu</string>
+    <string name="words_new_game_no_friends_title">Sõpru veel pole</string>
+    <string name="words_new_game_add_friends">Lisa sõpru</string>
+    <string name="words_detail_status_your_move">Sinu käik</string>
+    <string name="words_detail_status_you_win">Võitsid!</string>
+    <string name="words_detail_status_game_over">Mäng on lõppenud</string>
+    <string name="words_detail_status_opponent_resigned">Vastane andis alla — sa võitsid!</string>
+    <string name="words_detail_status_you_resigned">Andsid alla</string>
+    <string name="words_detail_label_you">Sina</string>
+    <string name="words_detail_action_shuffle">Sega rest</string>
+    <string name="words_detail_action_pass">Edasta</string>
+    <string name="words_detail_action_exchange">Vaheta klotse</string>
+    <string name="words_detail_action_cancel_exchange">Tühista vahetus</string>
+    <string name="words_detail_action_resign">Anna alla</string>
+    <string name="words_detail_action_rematch">Korduv mäng</string>
+    <string name="words_detail_action_delete">Kustuta mäng</string>
+    <string name="words_detail_chat_title">Vestlus</string>
+    <string name="words_detail_invalid_move">Vigane käik</string>
+    <string name="words_detail_recall">Tühista</string>
+    <string name="words_detail_submit">Esita</string>
+    <string name="words_detail_cancel">Tühista</string>
+    <string name="words_detail_exchange">Vahetus</string>
+    <string name="words_detail_blank_title">Vali täht</string>
+    <string name="words_detail_resign_title">Kas anda mäng alla?</string>
+    <string name="words_detail_resign_message">Kas oled kindel, et soovid alla anda?</string>
+    <string name="words_detail_failed_move">Käigu esitamine ebaõnnestus</string>
+    <string name="words_detail_failed_pass">Vahelejätmine ebaõnnestus</string>
+    <string name="words_detail_failed_exchange">Vahetus ebaõnnestus</string>
+    <string name="words_detail_failed_resign">Alistumine ebaõnnestus</string>
+    <string name="words_detail_failed_rematch">Korduva mängu loomine ebaõnnestus</string>
+    <string name="words_detail_failed_delete">Mängu kustutamine ebaõnnestus</string>
+    <string name="words_detail_game_deleted">Mäng kustutatud</string>
+
+    <string name="words_channel_name">Sõnade teavitused</string>
+    <string name="words_channel_description">Teavitused käikude, vahetuste ja partii tulemuste kohta.</string>
+    <string name="words_list_empty_subtitle">Toksake nuppu +, et alustada oma esimest partiid.</string>
+    <string name="words_list_status_finished">Lõpetatud</string>
+    <string name="words_list_status_resigned">Andis alla</string>
+    <string name="words_list_your_turn">Sinu käik</string>
+    <string name="words_sidebar_active">Aktiivsed partiid</string>
+    <string name="words_sidebar_empty">Veel pole partiisid.</string>
+    <string name="words_new_game_choose_opponents">Vali vastased</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d mängijat</string>
+    <string name="words_new_game_no_friends_subtitle">Lisa sõpru rakenduses Inimesed, et alustada mängimist.</string>
+    <string name="words_detail_title">Partii</string>
+    <string name="words_detail_coming_soon">Partii üksikasjad varsti</string>
+    <string name="words_detail_status_opponent_move">%1$s käik</string>
+    <string name="words_detail_status_winner_wins">%1$s võidab</string>
+    <string name="words_detail_player_fallback">Mängija %1$d</string>
+    <string name="words_detail_player_count">%1$d mängijat</string>
+    <string name="words_detail_label_tiles_left">%1$d kivi järel</string>
+    <string name="words_detail_action_open_chat">Ava vestlus</string>
+    <string name="words_detail_action_more">Partii toimingud</string>
+    <string name="words_detail_exchange_count">Vaheta (%1$d)</string>
+    <string name="words_detail_chat_you_played">Mängisid %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s mängis %2$s</string>
+
+</resources>

@@ -7,5 +7,6 @@
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_size_normal">Normal</string>
     <string name="profile_privacy">Privacy</string>
-
+    <string name="game_chat_load_more">Load more</string>
+    <string name="game_chat_move_played">%1$s played %2$s</string>
 </resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Ñe\'ẽkuéra</string>
+    <string name="words_list_title">Ñe\'ẽkuéra</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Ñembosarái pyahu</string>
+    <string name="words_list_logout">Esẽ</string>
+    <string name="words_list_empty_title">Ndaipóri ñembosarái gueteri</string>
+    <string name="words_sidebar_header">Ñe\'ẽkuéra</string>
+    <string name="words_sidebar_completed">Oñembokuapy</string>
+    <string name="words_sidebar_new_game">Ñembosarái pyahu</string>
+    <string name="words_new_game_title">Ñembosarái pyahu</string>
+    <string name="words_new_game_language">Ñe\'ẽ</string>
+    <string name="words_new_game_language_uk">Inglés (UK)</string>
+    <string name="words_new_game_language_us">Inglés (US)</string>
+    <string name="words_new_game_start">Eñepyrũ ñembosarái</string>
+    <string name="words_new_game_no_friends_title">Ndaipóri angirũ gueteri</string>
+    <string name="words_new_game_add_friends">Embojuaju angirũnguéra</string>
+    <string name="words_detail_status_your_move">Ne pyenda</string>
+    <string name="words_detail_status_you_win">Repu\'aka!</string>
+    <string name="words_detail_status_game_over">Mbosaraita opa</string>
+    <string name="words_detail_status_opponent_resigned">Mbohovái oheja — emba\'apo!</string>
+    <string name="words_detail_status_you_resigned">Reñembohasáma</string>
+    <string name="words_detail_label_you">Nde</string>
+    <string name="words_detail_action_shuffle">Embojere rack</string>
+    <string name="words_detail_action_pass">Ehasa</string>
+    <string name="words_detail_action_exchange">Mbojopyru fichas</string>
+    <string name="words_detail_action_cancel_exchange">Heja exchange</string>
+    <string name="words_detail_action_resign">Ehasa</string>
+    <string name="words_detail_action_rematch">Eha\'ã jey</string>
+    <string name="words_detail_action_delete">Hundi ñembosarái</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Ku\'e ndoikóiva</string>
+    <string name="words_detail_recall">Recall</string>
+    <string name="words_detail_submit">Emondo</string>
+    <string name="words_detail_cancel">Heja</string>
+    <string name="words_detail_exchange">Mbojopyru</string>
+    <string name="words_detail_blank_title">Eiporavo peteĩ ñe\'ẽ</string>
+    <string name="words_detail_resign_title">Ehasa ñembosarái?</string>
+    <string name="words_detail_resign_message">Añetehápe eikese?</string>
+    <string name="words_detail_failed_move">Ndaikatúi oñembojepyru ku\'e</string>
+    <string name="words_detail_failed_pass">Ndaikatúi oñehasa</string>
+    <string name="words_detail_failed_exchange">Ndaikatúi ojembojopyru</string>
+    <string name="words_detail_failed_resign">Ndaikatúi oñerrendi</string>
+    <string name="words_detail_failed_rematch">Ndaikatúi oñembojuaju ñembosarai jey</string>
+    <string name="words_detail_failed_delete">Ndaikatúi ojejuka mbosaraita</string>
+    <string name="words_detail_game_deleted">Oñembogue mbosaraita</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

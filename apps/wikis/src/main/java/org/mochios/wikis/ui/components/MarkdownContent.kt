@@ -5,38 +5,58 @@ import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
+import android.view.MotionEvent
 import android.view.View
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text as M3Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import io.noties.markwon.AbstractMarkwonPlugin
 import io.noties.markwon.LinkResolver
 import io.noties.markwon.Markwon
 import io.noties.markwon.MarkwonConfiguration
+import io.noties.markwon.core.spans.HeadingSpan
 import io.noties.markwon.core.spans.LinkSpan
 import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
 import io.noties.markwon.ext.tables.TablePlugin
 import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.html.HtmlPlugin
+import io.noties.markwon.image.AsyncDrawableSpan
 import io.noties.markwon.image.ImagesPlugin
 import io.noties.markwon.linkify.LinkifyPlugin
 import org.commonmark.node.AbstractVisitor
+import org.commonmark.node.FencedCodeBlock
 import org.commonmark.node.Heading
 import org.commonmark.node.Image
 import org.commonmark.node.Node
 import org.commonmark.node.Text
 import org.commonmark.parser.Parser
 import org.mochios.android.ui.components.ClickableLinkTextView
+import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.LightboxScreen
 import java.text.Normalizer
 
@@ -90,6 +110,11 @@ data class TocHeading(val id: String, val text: String, val level: Int)
  *                            heading list (in document order). Pass a lambda
  *                            from the TableOfContents host; pass `null` to
  *                            skip extraction entirely.
+ * @param onHeadingPositions  Invoked from the TextView's layout pass with a
+ *                            map of `headingId -> yOffsetPx` (relative to the
+ *                            article's start) every time the layout changes.
+ *                            Hosts use it to compute the active TOC row given
+ *                            the current scroll position. Null to skip.
  * @param onInternalLink Invoked when the user taps a relative link that
  *                       looks like a wiki page slug (not http/https, not
  *                       anchor-only). Hosts route to
@@ -101,6 +126,7 @@ fun MarkdownContent(
     modifier: Modifier = Modifier,
     missingLinks: List<String> = emptyList(),
     onHeadingsExtracted: ((List<TocHeading>) -> Unit)? = null,
+    onHeadingPositions: ((Map<String, Int>) -> Unit)? = null,
     onInternalLink: (slug: String) -> Unit = {},
 ) {
     val context = LocalContext.current
@@ -140,12 +166,25 @@ fun MarkdownContent(
         rewriteAttachmentUrls(content) { url -> wiki.resolveAttachmentUrl(url) }
     }
 
+    // Split the rewritten source into a sequence of segments — alternating
+    // ordinary-markdown chunks and fenced-code-block chunks. This lets each
+    // code block render with its own Compose-native header strip (language
+    // label + CopyButton, mirroring web's `<pre>` wrapper) while the rest
+    // of the article stays a single Markwon-rendered TextView.
+    val segments = remember(rewritten) { splitIntoSegments(rewritten) }
+
     // Build the Markwon stack. Same plugins as `HtmlContent`, plus:
     //  - a link resolver that routes through Custom Tabs / lightbox /
     //    onInternalLink based on the URL's classification.
     //  - a post-render visitor that paints missing-link spans red.
     val missingLinksKey = remember(missingLinks) { missingLinks.toSet() }
     val missingColor = Color(0xFFDC2626).toArgb() // web: text-red-600
+
+    // Build a stable ordered list of heading ids so we can match the
+    // n-th `HeadingSpan` in the rendered Spannable back to the heading id
+    // we computed up-front. (Markwon's spans don't carry the slug; we walk
+    // them in document order to attach the right id by index.)
+    val headingIds = remember(parsed.headings) { parsed.headings.map { it.id } }
 
     val markwon = remember(context, wiki.baseURL, missingLinksKey, onInternalLink) {
         Markwon.builder(context)
@@ -208,9 +247,126 @@ fun MarkdownContent(
             .build()
     }
 
-    val spanned = remember(markwon, rewritten) {
-        markwon.toMarkdown(rewritten)
+    // The Column lays out the article as a stack of (markdown TextView,
+    // code-block-with-header, markdown TextView, ...). Each TextView is
+    // OnPreDraw-listened to compute per-heading Y positions, and each
+    // code-block segment uses a pure-Compose surface so the language
+    // label + CopyButton can be Compose primitives.
+    //
+    // For active-heading scroll tracking we need every heading's absolute
+    // Y offset within this Column. We collect them per-segment-TextView
+    // (with each TextView's `top` measured from the layout pass) and
+    // re-merge as `headingId -> yOffsetPx` for the host. The host adds
+    // the Column's own offset (it lives inside a `verticalScroll`) when
+    // matching against the scroll position.
+    val segmentTops = remember(segments) { mutableMapOf<Int, Int>() }
+    val segmentHeadingOffsets = remember(segments) { mutableMapOf<Int, Map<String, Int>>() }
+
+    fun publishHeadingPositions() {
+        if (onHeadingPositions == null) return
+        val merged = mutableMapOf<String, Int>()
+        for ((segIdx, perSeg) in segmentHeadingOffsets) {
+            val segTop = segmentTops[segIdx] ?: continue
+            for ((id, offset) in perSeg) merged[id] = segTop + offset
+        }
+        if (merged.isNotEmpty()) onHeadingPositions(merged)
     }
+
+    Column(modifier = modifier.fillMaxWidth()) {
+        // Walk the heading-id list as we encounter prose segments so each
+        // TextView gets a sub-slice of the ids in the order Markwon's spans
+        // will appear inside it. The web's extractor walks the AST in the
+        // same order, so this index-zipping stays correct as long as we
+        // include heading text only in prose segments (FencedCodeBlock
+        // can't contain Heading nodes).
+        var headingCursor = 0
+        for ((idx, seg) in segments.withIndex()) {
+            when (seg) {
+                is MarkdownSegment.Prose -> {
+                    // Count how many H2..H4 headings appear in this prose
+                    // chunk so the TextView can match them by ordinal.
+                    val proseHeadingCount = countH2H4Headings(seg.markdown)
+                    val proseIds = headingIds.subList(
+                        headingCursor.coerceAtMost(headingIds.size),
+                        (headingCursor + proseHeadingCount).coerceAtMost(headingIds.size),
+                    ).toList()
+                    headingCursor += proseHeadingCount
+
+                    ProseSegment(
+                        markwon = markwon,
+                        markdown = seg.markdown,
+                        headingIds = proseIds,
+                        imageUrls = parsed.imageUrls,
+                        wiki = wiki,
+                        onTopMeasured = { top ->
+                            segmentTops[idx] = top
+                            publishHeadingPositions()
+                        },
+                        onHeadingOffsetsMeasured = { perHeading ->
+                            segmentHeadingOffsets[idx] = perHeading
+                            publishHeadingPositions()
+                        },
+                        onImageTap = { resolvedUrl ->
+                            val imageUrls = parsed.imageUrls
+                            val i = imageUrls.indexOf(resolvedUrl)
+                            if (i >= 0) lightbox = imageUrls to i
+                        },
+                    )
+                }
+                is MarkdownSegment.Code -> {
+                    CodeBlockSegment(
+                        markwon = markwon,
+                        language = seg.language,
+                        codeMarkdown = seg.fullMarkdown,
+                        codeText = seg.codeText,
+                        onTopMeasured = { top ->
+                            segmentTops[idx] = top
+                            publishHeadingPositions()
+                        },
+                    )
+                }
+            }
+        }
+    }
+
+    val lightboxState = lightbox
+    if (lightboxState != null) {
+        LightboxScreen(
+            images = lightboxState.first,
+            initialIndex = lightboxState.second,
+            onDismiss = { lightbox = null },
+        )
+    }
+
+    // TODO: trailing external-link icon next to http(s) links. Web shows
+    // a ⤴ Lucide ExternalLink icon after each external link. Markwon
+    // doesn't make inline icon-after-text trivial — the simplest route is
+    // an ImageSpan inserted in afterSetText, but rendering a vector
+    // drawable as a span needs a one-time bitmap rasterisation. Deferred.
+}
+
+/**
+ * A single prose run of markdown — anything that isn't a fenced code
+ * block. Rendered as a Markwon `AndroidView` with:
+ *
+ *  - Per-heading Y-offset measurement (matches the i-th HeadingSpan in
+ *    the rendered Spannable to `headingIds[i]`).
+ *  - Bare-image tap-to-lightbox via the TextView's touch interceptor.
+ *  - The same LinkResolver routing as before, since the Markwon instance
+ *    is shared across all prose segments.
+ */
+@Composable
+private fun ProseSegment(
+    markwon: Markwon,
+    markdown: String,
+    headingIds: List<String>,
+    imageUrls: List<String>,
+    wiki: WikiContextValue,
+    onTopMeasured: (top: Int) -> Unit,
+    onHeadingOffsetsMeasured: (perHeading: Map<String, Int>) -> Unit,
+    onImageTap: (resolvedUrl: String) -> Unit,
+) {
+    val spanned = remember(markwon, markdown) { markwon.toMarkdown(markdown) }
 
     AndroidView(
         factory = { ctx ->
@@ -225,43 +381,170 @@ fun MarkdownContent(
         update = { textView ->
             textView.ellipsize = TextUtils.TruncateAt.END
             markwon.setParsedMarkdown(textView, spanned)
+
+            // Wire up bare-image tap-to-lightbox. The TextView already
+            // routes LinkSpan clicks through its movement method; here
+            // we hook the touch event to look for AsyncDrawableSpan at
+            // the tap offset (which LinkResolver never sees).
+            installImageTapInterceptor(
+                textView = textView,
+                wiki = wiki,
+                imageUrls = imageUrls,
+                onImageTap = onImageTap,
+            )
+
+            // After layout we can read each HeadingSpan's character
+            // offset and translate it to a vertical pixel position via
+            // the TextView's layout. The OnPreDrawListener fires on
+            // every layout pass, which keeps the map fresh through
+            // text-size changes, configuration changes, or content
+            // updates.
+            textView.viewTreeObserver.addOnPreDrawListener {
+                onTopMeasured(textView.top)
+                val layout = textView.layout
+                val text = textView.text as? Spannable
+                if (layout != null && text != null && headingIds.isNotEmpty()) {
+                    val perHeading = mutableMapOf<String, Int>()
+                    val spans = text.getSpans(0, text.length, HeadingSpan::class.java)
+                        .sortedBy { text.getSpanStart(it) }
+                    val limit = minOf(spans.size, headingIds.size)
+                    for (i in 0 until limit) {
+                        val start = text.getSpanStart(spans[i]).coerceAtLeast(0)
+                        val line = layout.getLineForOffset(start)
+                        perHeading[headingIds[i]] = layout.getLineTop(line)
+                    }
+                    if (perHeading.isNotEmpty()) {
+                        onHeadingOffsetsMeasured(perHeading)
+                    }
+                }
+                true
+            }
         },
-        modifier = modifier,
+        modifier = Modifier.fillMaxWidth(),
     )
+}
 
-    val lightboxState = lightbox
-    if (lightboxState != null) {
-        LightboxScreen(
-            images = lightboxState.first,
-            initialIndex = lightboxState.second,
-            onDismiss = { lightbox = null },
-        )
+/**
+ * A fenced code block rendered with a Compose-native header strip
+ * (language label on the left, CopyButton on the right) over a
+ * Markwon-rendered code body. Mirrors web's `<pre>` wrapper in
+ * `apps/wikis/web/src/features/wiki/markdown-content.tsx`.
+ *
+ * The body is Markwon-rendered (rather than a plain `Text`) so syntax
+ * inside the code block — escaped backticks, embedded markdown that
+ * happens to start a code fence — survives the round-trip identically
+ * to what users would see in a non-split MarkdownContent.
+ */
+@Composable
+private fun CodeBlockSegment(
+    markwon: Markwon,
+    language: String,
+    codeMarkdown: String,
+    codeText: String,
+    onTopMeasured: (top: Int) -> Unit,
+) {
+    val spanned = remember(markwon, codeMarkdown) { markwon.toMarkdown(codeMarkdown) }
+
+    Surface(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        shape = RoundedCornerShape(8.dp),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+    ) {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 12.dp, vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                M3Text(
+                    text = language.uppercase(),
+                    style = MaterialTheme.typography.labelSmall.copy(
+                        fontFamily = FontFamily.Monospace,
+                        fontWeight = FontWeight.Medium,
+                    ),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                CopyButton(value = codeText)
+            }
+            Box(modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)) {
+                AndroidView(
+                    factory = { ctx ->
+                        ClickableLinkTextView(ctx).apply {
+                            movementMethod = LinkMovementMethod.getInstance()
+                            textSize = 13f
+                            setTextColor(
+                                ctx.resources.getColor(android.R.color.primary_text_light, ctx.theme)
+                            )
+                        }
+                    },
+                    update = { textView ->
+                        textView.ellipsize = TextUtils.TruncateAt.END
+                        markwon.setParsedMarkdown(textView, spanned)
+                        textView.viewTreeObserver.addOnPreDrawListener {
+                            onTopMeasured(textView.top)
+                            true
+                        }
+                    },
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+        }
     }
+}
 
-    // TODO: code-block language label + CopyButton header strip.
-    // Web wraps each <pre><code class="language-foo"> in a card with a
-    // header showing "foo" + a CopyButton. Doing the same on Android
-    // means overriding Markwon's FencedCodeBlock visitor to render an
-    // AndroidView { ComposeView { Column { Row(lang, CopyButton); CodeText } } },
-    // which is doable but invasive — left as a follow-up so this composable
-    // lands with parity on heading/url/missing-link/lightbox first.
+/**
+ * Wire a touch listener on [textView] that, after a clean tap on text
+ * NOT covered by a clickable link span, looks for an AsyncDrawableSpan
+ * at the tap offset and opens the lightbox via [onImageTap].
+ *
+ * `[![](img)](href)` wrapped-image links keep working through the
+ * existing LinkResolver because they're [LinkSpan]s; this fills in the
+ * gap for plain `![alt](img)` taps which Markwon doesn't surface to
+ * LinkResolver.
+ */
+private fun installImageTapInterceptor(
+    textView: android.widget.TextView,
+    wiki: WikiContextValue,
+    imageUrls: List<String>,
+    onImageTap: (resolvedUrl: String) -> Unit,
+) {
+    textView.setOnTouchListener { v, event ->
+        if (event.action != MotionEvent.ACTION_UP) return@setOnTouchListener false
+        val spanned = textView.text as? Spannable ?: return@setOnTouchListener false
+        val layout = textView.layout ?: return@setOnTouchListener false
 
-    // TODO: trailing external-link icon next to http(s) links. Web shows
-    // a ⤴ Lucide ExternalLink icon after each external link. Markwon
-    // doesn't make inline icon-after-text trivial — the simplest route is
-    // an ImageSpan inserted in afterSetText, but rendering a vector
-    // drawable as a span needs a one-time bitmap rasterisation. Deferred.
+        val x = event.x.toInt() - textView.totalPaddingLeft + textView.scrollX
+        val y = event.y.toInt() - textView.totalPaddingTop + textView.scrollY
+        val line = layout.getLineForVertical(y)
+        if (x < layout.getLineLeft(line) || x > layout.getLineRight(line)) {
+            return@setOnTouchListener false
+        }
+        val offset = layout.getOffsetForHorizontal(line, x.toFloat())
 
-    // TODO: bare `![alt](img)` tap-to-lightbox. LinkResolver above only
-    // fires for LinkSpan, so the wrapped-image case `[![](img)](href)`
-    // works but a plain image tap is currently a no-op. The fix is to
-    // attach a touch handler to the underlying ClickableLinkTextView that:
-    //   1. converts tap coordinates to text offset via getLayout()
-    //   2. asks the Spanned for any AsyncDrawableSpan at that offset
-    //   3. resolves the span's destination via wiki.resolveAttachmentUrl
-    //   4. matches it against parsed.imageUrls and sets `lightbox`
-    // ClickableLinkTextView's existing onNonLinkClick + a span lookup is
-    // most of the way there but needs the offset->span mapping wired up.
+        // Don't fire when the tap also lands inside a clickable span —
+        // ClickableLinkTextView already handles those via the movement
+        // method and our LinkResolver.
+        val clickable = spanned.getSpans(offset, offset, ClickableSpan::class.java)
+        if (clickable.isNotEmpty()) return@setOnTouchListener false
+
+        val drawSpans = spanned.getSpans(offset, offset, AsyncDrawableSpan::class.java)
+        if (drawSpans.isEmpty()) return@setOnTouchListener false
+
+        val dest = drawSpans[0].drawable.destination ?: return@setOnTouchListener false
+        val resolved = wiki.resolveAttachmentUrl(stripThumbnail(dest))
+        val idx = imageUrls.indexOf(resolved)
+        if (idx >= 0) {
+            onImageTap(resolved)
+            v.performClick()
+            true
+        } else {
+            false
+        }
+    }
 }
 
 // --------------------------------------------------------------------------
@@ -272,6 +555,131 @@ private data class ParsedDocument(
     val headings: List<TocHeading>,
     val imageUrls: List<String>,
 )
+
+/**
+ * One step of the article — either a prose run rendered by Markwon as a
+ * single Spannable, or a fenced code block rendered with our own header
+ * strip (language label + CopyButton) above a code-only Markwon body.
+ */
+internal sealed class MarkdownSegment {
+    data class Prose(val markdown: String) : MarkdownSegment()
+    data class Code(
+        val language: String,
+        /** Inner code, without the fence lines. Used by the CopyButton. */
+        val codeText: String,
+        /** Full original block including fences, so Markwon can render it. */
+        val fullMarkdown: String,
+    ) : MarkdownSegment()
+}
+
+/**
+ * Split [content] into alternating prose / fenced-code segments. Mirrors
+ * the way the web renderer hands `<pre>` blocks to a dedicated component
+ * with a header strip while the rest of the article walks through the
+ * normal Markdown component.
+ *
+ * Recognises both ``` and ~~~ fences with the same fence character. The
+ * opening fence may have an info string after it (e.g. ```kotlin); the
+ * closing fence must use the same character and length and stand alone
+ * on its line. Indented (non-fenced) code blocks are left in the prose
+ * segment — they get the normal Markwon rendering, no header strip.
+ */
+internal fun splitIntoSegments(content: String): List<MarkdownSegment> {
+    val out = mutableListOf<MarkdownSegment>()
+    val lines = content.split("\n")
+    val prose = StringBuilder()
+    var i = 0
+    while (i < lines.size) {
+        val line = lines[i]
+        val fenceMatch = Regex("^(\\s*)(`{3,}|~{3,})(.*)$").matchEntire(line)
+        if (fenceMatch != null) {
+            val indent = fenceMatch.groupValues[1]
+            val fence = fenceMatch.groupValues[2]
+            val info = fenceMatch.groupValues[3].trim()
+            // Find the matching closing fence (same char, >= same length).
+            val fenceChar = fence[0]
+            val fenceLen = fence.length
+            var close = -1
+            var j = i + 1
+            while (j < lines.size) {
+                val l = lines[j]
+                val cm = Regex("^(\\s*)(`{3,}|~{3,})\\s*$").matchEntire(l)
+                if (cm != null) {
+                    val cFence = cm.groupValues[2]
+                    if (cFence[0] == fenceChar && cFence.length >= fenceLen) {
+                        close = j
+                        break
+                    }
+                }
+                j++
+            }
+            if (close < 0) {
+                // No closing fence — treat the rest of the document as
+                // an open code block. Match commonmark behaviour.
+                close = lines.size
+            }
+
+            if (prose.isNotEmpty()) {
+                out += MarkdownSegment.Prose(prose.toString().trimEnd('\n'))
+                prose.clear()
+            }
+
+            val codeLines = if (close <= lines.size) lines.subList(i + 1, minOf(close, lines.size)) else emptyList()
+            val codeText = codeLines.joinToString("\n")
+            // Reconstruct the original block so Markwon parses it the
+            // same way the un-split renderer would have.
+            val fullBlock = buildString {
+                append(line)
+                append('\n')
+                for (cl in codeLines) {
+                    append(cl)
+                    append('\n')
+                }
+                if (close < lines.size) {
+                    append(lines[close])
+                }
+            }
+            val language = info.split(Regex("\\s+")).firstOrNull()?.ifBlank { null } ?: "text"
+            out += MarkdownSegment.Code(
+                language = language,
+                codeText = codeText,
+                fullMarkdown = fullBlock,
+            )
+            // Skip past the closing fence so the next iteration starts
+            // on the line after it (or off the end if the block was
+            // unterminated).
+            i = if (close < lines.size) close + 1 else lines.size
+            // Discard the indent — it's only relevant to the fence
+            // detection; the block itself is reconstructed verbatim.
+            @Suppress("UNUSED_EXPRESSION") indent
+        } else {
+            prose.append(line)
+            prose.append('\n')
+            i++
+        }
+    }
+    if (prose.isNotEmpty()) {
+        out += MarkdownSegment.Prose(prose.toString().trimEnd('\n'))
+    }
+    return out
+}
+
+/**
+ * Count H2..H4 headings in [markdown] (ATX `#` form), respecting fenced
+ * code blocks. Used to slice the global heading-ids list across prose
+ * segments so each TextView's HeadingSpans get the right ids.
+ *
+ * We rely on the same fence-detection rules as [splitIntoSegments] so
+ * the counts add up to the total in the full document (fenced code
+ * blocks already live in their own segments, so we never see a fenced
+ * block inside a prose segment; this guard is defensive against future
+ * changes to the splitter).
+ */
+internal fun countH2H4Headings(markdown: String): Int {
+    val parser = Parser.builder().build()
+    val doc = parser.parse(markdown)
+    return extractHeadings(doc).size
+}
 
 /**
  * Walk the commonmark AST and emit H2..H4 headings in document order.

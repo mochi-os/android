@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="launcher_feeds">Jarioak</string>
     <string name="launcher_chat">Txata</string>
     <string name="launcher_forums">Foroak</string>
     <string name="launcher_projects">Proiektuak</string>
     <string name="launcher_settings">Ezarpenak</string>
-
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Xakea</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Hitzak</string>
 </resources>

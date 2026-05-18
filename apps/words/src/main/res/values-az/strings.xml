@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Şərh yazın...</string>
+    <string name="words_list_title">Şərh yazın...</string>
+    <string name="words_list_menu">Menyu</string>
+    <string name="words_list_new">Yeni oyun</string>
+    <string name="words_list_logout">Çıx</string>
+    <string name="words_list_empty_title">Hələ oyun yoxdur</string>
+    <string name="words_sidebar_header">Şərh yazın...</string>
+    <string name="words_sidebar_completed">Tamamlandı</string>
+    <string name="words_sidebar_new_game">Yeni oyun</string>
+    <string name="words_new_game_title">Yeni oyun</string>
+    <string name="words_new_game_language">Dil</string>
+    <string name="words_new_game_language_uk">İngiliscə (Britaniya)</string>
+    <string name="words_new_game_language_us">İngiliscə (ABŞ)</string>
+    <string name="words_new_game_start">Oyuna başla</string>
+    <string name="words_new_game_no_friends_title">Hələ dost yoxdur</string>
+    <string name="words_new_game_add_friends">Dostlar əlavə et</string>
+    <string name="words_detail_status_your_move">Sizin ödənişiniz</string>
+    <string name="words_detail_status_you_win">Artıq {0} ilə daxil ola bilməyəcəksiniz. Daxil olmaq üçün başqa yolunuzun olduğundan əmin olun.</string>
+    <string name="words_detail_status_game_over">Oyun bitdi</string>
+    <string name="words_detail_status_opponent_resigned">Rəqib təslim oldu — qalibsiniz!</string>
+    <string name="words_detail_status_you_resigned">Bu söhbətdən silindiniz</string>
+    <string name="words_detail_label_you">Artıq söhbətiniz olanlar:</string>
+    <string name="words_detail_action_shuffle">Rəfi qarışdır</string>
+    <string name="words_detail_action_pass">Pas</string>
+    <string name="words_detail_action_exchange">Plitələri mübadilə et</string>
+    <string name="words_detail_action_cancel_exchange">Mübadiləni ləğv et</string>
+    <string name="words_detail_action_resign">Təslim ol</string>
+    <string name="words_detail_action_rematch">Yenidən qarşılaşma</string>
+    <string name="words_detail_action_delete">Oyunu sil</string>
+    <string name="words_detail_chat_title">Söhbət</string>
+    <string name="words_detail_invalid_move">Etibarsız hərəkət</string>
+    <string name="words_detail_recall">Geri çağır</string>
+    <string name="words_detail_submit">Təqdim et</string>
+    <string name="words_detail_cancel">Ləğv et</string>
+    <string name="words_detail_exchange">Mübadilə</string>
+    <string name="words_detail_blank_title">Hərf seçin</string>
+    <string name="words_detail_resign_title">Oyundan təslim olunsun?</string>
+    <string name="words_detail_resign_message">Təslim olmaq istədiyinizə əminsiniz?</string>
+    <string name="words_detail_failed_move">Hərəkət göndərmək alınmadı</string>
+    <string name="words_detail_failed_pass">Pas vermək alınmadı</string>
+    <string name="words_detail_failed_exchange">Mübadilə etmək alınmadı</string>
+    <string name="words_detail_failed_resign">Təslim olmaq alınmadı</string>
+    <string name="words_detail_failed_rematch">Təkrar oyun yaratmaq alınmadı</string>
+    <string name="words_detail_failed_delete">Oyunu silmək alınmadı</string>
+    <string name="words_detail_game_deleted">Oyun silindi</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

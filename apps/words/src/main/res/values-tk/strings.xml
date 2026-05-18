@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Sözler</string>
+    <string name="words_list_title">Sözler</string>
+    <string name="words_list_menu">Menýu</string>
+    <string name="words_list_new">Täze oýun</string>
+    <string name="words_list_logout">Çyk</string>
+    <string name="words_list_empty_title">Heniz oýunlar ýok</string>
+    <string name="words_sidebar_header">Sözler</string>
+    <string name="words_sidebar_completed">Tamamlandy</string>
+    <string name="words_sidebar_new_game">Täze oýun</string>
+    <string name="words_new_game_title">Täze oýun</string>
+    <string name="words_new_game_language">Dil</string>
+    <string name="words_new_game_language_uk">Iňlisçe (Beýik Britaniýa)</string>
+    <string name="words_new_game_language_us">Iňlisçe (ABŞ)</string>
+    <string name="words_new_game_start">Oýny başla</string>
+    <string name="words_new_game_no_friends_title">Heniz dostlar ýok</string>
+    <string name="words_new_game_add_friends">Dost goşmak</string>
+    <string name="words_detail_status_your_move">Hereketiň</string>
+    <string name="words_detail_status_you_win">Sen ýeňdiň!</string>
+    <string name="words_detail_status_game_over">Oýun tamamlandy</string>
+    <string name="words_detail_status_opponent_resigned">Garşydaş resign etdi — sen ýeňdiň!</string>
+    <string name="words_detail_status_you_resigned">Sen ýüz öwürdiň</string>
+    <string name="words_detail_label_you">Sen</string>
+    <string name="words_detail_action_shuffle">Tagtany garyşdyr</string>
+    <string name="words_detail_action_pass">Geç</string>
+    <string name="words_detail_action_exchange">Plitkalary çalyş</string>
+    <string name="words_detail_action_cancel_exchange">Çalşygy ýatyrmak</string>
+    <string name="words_detail_action_resign">Resign et</string>
+    <string name="words_detail_action_rematch">Gaýtadan oýun</string>
+    <string name="words_detail_action_delete">Oýun pozmak</string>
+    <string name="words_detail_chat_title">Söhbetdeşlik</string>
+    <string name="words_detail_invalid_move">Nädogry hereket</string>
+    <string name="words_detail_recall">Yza gaýtar</string>
+    <string name="words_detail_submit">Tabşyr</string>
+    <string name="words_detail_cancel">Ýatyrmak</string>
+    <string name="words_detail_exchange">Çalşyk</string>
+    <string name="words_detail_blank_title">Harp saýlaň</string>
+    <string name="words_detail_resign_title">Oýny resign etmek?</string>
+    <string name="words_detail_resign_message">Boýun egmek isleýärsiňizmi?</string>
+    <string name="words_detail_failed_move">Hereket tabşyrylmady</string>
+    <string name="words_detail_failed_pass">Geçilmedi</string>
+    <string name="words_detail_failed_exchange">Çalşylmady</string>
+    <string name="words_detail_failed_resign">Boýun egilmedi</string>
+    <string name="words_detail_failed_rematch">Gaýtalama döredilmedi</string>
+    <string name="words_detail_failed_delete">Oýun pozulmady</string>
+    <string name="words_detail_game_deleted">Oýun pozuldy</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

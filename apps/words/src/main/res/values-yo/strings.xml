@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Àwọn ọ̀rọ̀</string>
+    <string name="words_list_title">Àwọn ọ̀rọ̀</string>
+    <string name="words_list_menu">Ìtòlẹ́sẹẹsẹ</string>
+    <string name="words_list_new">Eré tuntun</string>
+    <string name="words_list_logout">Jáde</string>
+    <string name="words_list_empty_title">Kò sí eré síbẹ̀</string>
+    <string name="words_sidebar_header">Àwọn ọ̀rọ̀</string>
+    <string name="words_sidebar_completed">Tí a parí</string>
+    <string name="words_sidebar_new_game">Eré tuntun</string>
+    <string name="words_new_game_title">Eré tuntun</string>
+    <string name="words_new_game_language">Èdè</string>
+    <string name="words_new_game_language_uk">Èdè Gẹ̀ẹ́sì (UK)</string>
+    <string name="words_new_game_language_us">Èdè Gẹ̀ẹ́sì (US)</string>
+    <string name="words_new_game_start">Bẹ̀rẹ̀ eré</string>
+    <string name="words_new_game_no_friends_title">Kò sí ọ̀rẹ́ síbẹ̀</string>
+    <string name="words_new_game_add_friends">Fi àwọn ọ̀rẹ́ kún</string>
+    <string name="words_detail_status_your_move">Ìṣíkiri rẹ</string>
+    <string name="words_detail_status_you_win">O borí!</string>
+    <string name="words_detail_status_game_over">Eré ti parí</string>
+    <string name="words_detail_status_opponent_resigned">Olórúkọ ti fi sílẹ̀ — o borí!</string>
+    <string name="words_detail_status_you_resigned">O fi ipò sílẹ̀</string>
+    <string name="words_detail_label_you">Ìwọ</string>
+    <string name="words_detail_action_shuffle">Gbọn rack</string>
+    <string name="words_detail_action_pass">Kọjá</string>
+    <string name="words_detail_action_exchange">Pààrọ̀ àwọn tile</string>
+    <string name="words_detail_action_cancel_exchange">Fagilé pàṣípààrọ̀</string>
+    <string name="words_detail_action_resign">Fi sílẹ̀</string>
+    <string name="words_detail_action_rematch">Tún bá</string>
+    <string name="words_detail_action_delete">Pa eré rẹ́</string>
+    <string name="words_detail_chat_title">Ìjíròrò</string>
+    <string name="words_detail_invalid_move">Ìṣíkiri aláìdára</string>
+    <string name="words_detail_recall">Rántí</string>
+    <string name="words_detail_submit">Fi sí ilẹ̀</string>
+    <string name="words_detail_cancel">Fagilé</string>
+    <string name="words_detail_exchange">Pààrọ̀</string>
+    <string name="words_detail_blank_title">Yan lẹ́tà kan</string>
+    <string name="words_detail_resign_title">Fi eré sílẹ̀?</string>
+    <string name="words_detail_resign_message">Ṣé o dájú pé o fẹ́ jọ̀wọ́?</string>
+    <string name="words_detail_failed_move">Kò lè fi ìṣíkiri sílẹ̀</string>
+    <string name="words_detail_failed_pass">Kò lè kọjá</string>
+    <string name="words_detail_failed_exchange">Kò lè pààrọ̀</string>
+    <string name="words_detail_failed_resign">Kò lè jọ̀wọ́</string>
+    <string name="words_detail_failed_rematch">Kò lè dá ìbárapọ̀ tuntun</string>
+    <string name="words_detail_failed_delete">Kò lè pa eré rẹ́</string>
+    <string name="words_detail_game_deleted">A ti pa eré rẹ́</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

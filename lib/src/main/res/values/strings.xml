@@ -294,4 +294,12 @@
     <string name="profile_privacy_private">Private</string>
     <string name="profile_fingerprint">Fingerprint</string>
 
+    <!-- Game chat panel -->
+    <string name="game_chat_empty">No messages yet</string>
+    <string name="game_chat_load_more">Load older messages</string>
+    <string name="game_chat_input_placeholder">Type a message…</string>
+    <string name="game_chat_send">Send message</string>
+    <string name="game_chat_subject_you">You</string>
+    <string name="game_chat_move_played">%1$s played %2$s</string>
+
 </resources>

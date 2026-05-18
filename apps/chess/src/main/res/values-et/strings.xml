@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Male</string>
+    <string name="chess_sidebar_header">Male</string>
+    <string name="chess_sidebar_active">Aktiivsed mängud</string>
+    <string name="chess_sidebar_completed">Lõpetatud</string>
+    <string name="chess_sidebar_new_game">Uus mäng</string>
+    <string name="chess_section_active">Aktiivsed mängud</string>
+    <string name="chess_section_completed">Lõpetatud</string>
+    <string name="chess_new_game">Uus mäng</string>
+    <string name="chess_empty_title">Mänge veel pole</string>
+    <string name="chess_new_title">Uus mäng</string>
+    <string name="chess_new_pick_opponent">Vali vastane</string>
+    <string name="chess_new_no_friends_title">Sõpru veel pole</string>
+    <string name="chess_new_no_friends_subtitle">Lisa sõpru People rakenduses, et alustada mängimist</string>
+    <string name="chess_new_add_friends">Lisa sõpru</string>
+    <string name="chess_new_start_button">Alusta mängu</string>
+    <string name="chess_new_creating">Loomine…</string>
+    <string name="chess_new_failed">Mängu loomine ebaõnnestus</string>
+    <string name="chess_chat_title">Vestlus</string>
+    <string name="chess_open_chat">Ava vestluse paneel</string>
+    <string name="chess_open_actions">Ava mängu tegevused</string>
+    <string name="chess_offer_draw">Paku viiki</string>
+    <string name="chess_resign">Anna alla</string>
+    <string name="chess_rematch">Korduv mäng</string>
+    <string name="chess_delete_game">Kustuta mäng</string>
+    <string name="chess_side_white">Valge</string>
+    <string name="chess_side_black">Must</string>
+    <string name="chess_resign_title">Kas anda mäng alla?</string>
+    <string name="chess_resign_confirm">Anna alla</string>
+    <string name="chess_delete_confirm">Kustuta mäng</string>
+    <string name="chess_draw_accept">Nõustu</string>
+    <string name="chess_draw_decline">Keeldu</string>
+    <string name="chess_status_checkmate_you_win">Matt — sa võitsid!</string>
+    <string name="chess_status_stalemate">Patiseis — viik</string>
+    <string name="chess_status_draw">Joonista</string>
+    <string name="chess_status_check_your_move">Tuli — sinu käik</string>
+    <string name="chess_status_your_move">Sinu käik</string>
+    <string name="chess_move_subject_you">Sina</string>
+    <string name="chess_promotion_title">Edutage rolli:</string>
+
+    <string name="chess_resign_message">Kas oled kindel, et soovid alla anda? %1$s võidab mängu.</string>
+    <string name="chess_draw_offered">%1$s pakkus viiki</string>
+    <string name="chess_draw_waiting">Pakuti viiki — oodatakse kasutajat %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Matt — %1$s võitis</string>
+    <string name="chess_status_resigned_you">Andsid alla — %1$s võitis</string>
+    <string name="chess_status_resigned_opponent">%1$s andis alla — võitsid!</string>
+    <string name="chess_status_check_opponent_move">Tuli — %1$s käik</string>
+    <string name="chess_status_opponent_move">%1$s käik</string>
+    <string name="chess_piece_king">Kuningas</string>
+    <string name="chess_piece_queen">Lipp</string>
+    <string name="chess_piece_rook">Vanker</string>
+    <string name="chess_piece_bishop">Oda</string>
+    <string name="chess_piece_knight">Ratsu</string>
+    <string name="chess_piece_pawn">Ettur</string>
+    <string name="chess_move_played">%1$s mängis %2$s</string>
+    <string name="chess_channel_name">Male teavitused</string>
+    <string name="chess_channel_description">Teavitused käikude, viigipakkumiste ja partii tulemuste kohta.</string>
+    <string name="chess_open_sidebar">Ava külgriba</string>
+    <string name="chess_empty_subtitle">Alusta esimest partiid, et mängida malet sõbraga.</string>
+    <string name="chess_empty_start_button">Alusta esimest partiid</string>
+    <string name="chess_detail_unavailable">Partii pole saadaval</string>
+    <string name="chess_delete_title">Kustuta partii?</string>
+    <string name="chess_delete_message">See eemaldab partii sinu nimekirjast.</string>
+    <string name="chess_ws_connecting">Ühendamine…</string>
+    <string name="chess_ws_disconnected">Ühendamata</string>
+    <string name="chess_ws_reconnecting">Uuesti ühendamine…</string>
+    <string name="chess_ws_failed">Ühendamine ebaõnnestus</string>
+    <string name="chess_move_capture">%1$s võttis %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

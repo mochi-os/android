@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">ਮੇਨੂ</string>
+    <string name="words_list_new">ਨਵੀਂ ਗੇਮ</string>
+    <string name="words_list_logout">ਲੌਗ ਆਊਟ</string>
+    <string name="words_list_empty_title">ਅਜੇ ਕੋਈ ਗੇਮ ਨਹੀਂ</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">ਪੂਰਾ</string>
+    <string name="words_sidebar_new_game">ਨਵੀਂ ਗੇਮ</string>
+    <string name="words_new_game_title">ਨਵੀਂ ਗੇਮ</string>
+    <string name="words_new_game_language">ਖਰੀਦਦਾਰ ਦਾ ਰੀਵਿਊ ਛੱਡੋ</string>
+    <string name="words_new_game_language_uk">ਅੰਗਰੇਜ਼ੀ (UK)</string>
+    <string name="words_new_game_language_us">ਅੰਗਰੇਜ਼ੀ (US)</string>
+    <string name="words_new_game_start">ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="words_new_game_no_friends_title">ਅਜੇ ਕੋਈ ਦੋਸਤ ਨਹੀਂ</string>
+    <string name="words_new_game_add_friends">ਦੋਸਤ ਜੋੜੋ</string>
+    <string name="words_detail_status_your_move">ਤੁਹਾਡੀ ਚਾਲ</string>
+    <string name="words_detail_status_you_win">ਤੁਸੀਂ ਜਿੱਤੇ!</string>
+    <string name="words_detail_status_game_over">ਗੇਮ ਖ਼ਤਮ</string>
+    <string name="words_detail_status_opponent_resigned">ਵਿਰੋਧੀ ਨੇ ਅਸਤੀਫ਼ਾ ਦਿੱਤਾ — ਤੁਸੀਂ ਜਿੱਤੇ!</string>
+    <string name="words_detail_status_you_resigned">ਤੁਸੀਂ ਅਸਤੀਫ਼ਾ ਦਿੱਤਾ</string>
+    <string name="words_detail_label_you">ਤੁਸੀਂ</string>
+    <string name="words_detail_action_shuffle">rack ਮਿਲਾਓ</string>
+    <string name="words_detail_action_pass">ਪਾਸ</string>
+    <string name="words_detail_action_exchange">ਟਾਈਲਾਂ ਅਦਲਾ-ਬਦਲੀ ਕਰੋ</string>
+    <string name="words_detail_action_cancel_exchange">ਅਦਲਾ-ਬਦਲੀ ਰੱਦ ਕਰੋ</string>
+    <string name="words_detail_action_resign">ਅਸਤੀਫ਼ਾ ਦਿਓ</string>
+    <string name="words_detail_action_rematch">Rematch</string>
+    <string name="words_detail_action_delete">ਖੇਡ ਮਿਟਾਓ</string>
+    <string name="words_detail_chat_title">ਚੈਟ</string>
+    <string name="words_detail_invalid_move">ਅਯੋਗ ਚਾਲ</string>
+    <string name="words_detail_recall">Recall</string>
+    <string name="words_detail_submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
+    <string name="words_detail_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="words_detail_exchange">ਬਦਲੋ</string>
+    <string name="words_detail_blank_title">ਇੱਕ ਅੱਖਰ ਚੁਣੋ</string>
+    <string name="words_detail_resign_title">ਗੇਮ ਤੋਂ ਅਸਤੀਫ਼ਾ ਦੇਈਏ?</string>
+    <string name="words_detail_resign_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਹਾਰ ਮੰਨਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="words_detail_failed_move">ਚਾਲ ਜਮ੍ਹਾਂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="words_detail_failed_pass">ਪਾਸ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="words_detail_failed_exchange">ਅਦਲਾ-ਬਦਲੀ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="words_detail_failed_resign">ਅਸਤੀਫ਼ਾ ਦੇਣ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="words_detail_failed_rematch">ਰੀਮੈਚ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="words_detail_failed_delete">ਗੇਮ ਮਿਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="words_detail_game_deleted">ਗੇਮ ਮਿਟਾਈ ਗਈ</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

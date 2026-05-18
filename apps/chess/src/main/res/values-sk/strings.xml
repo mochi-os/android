@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Šach</string>
+    <string name="chess_sidebar_header">Šach</string>
+    <string name="chess_sidebar_active">Aktívne hry</string>
+    <string name="chess_sidebar_completed">Dokončené</string>
+    <string name="chess_sidebar_new_game">Nová hra</string>
+    <string name="chess_section_active">Aktívne hry</string>
+    <string name="chess_section_completed">Dokončené</string>
+    <string name="chess_new_game">Nová hra</string>
+    <string name="chess_empty_title">Zatiaľ žiadne hry</string>
+    <string name="chess_new_title">Nová hra</string>
+    <string name="chess_new_pick_opponent">Vyberte súpera</string>
+    <string name="chess_new_no_friends_title">Zatiaľ žiadni priatelia</string>
+    <string name="chess_new_no_friends_subtitle">Pridajte priateľov v aplikácii Ľudia a začnite hrať</string>
+    <string name="chess_new_add_friends">Pridať priateľov</string>
+    <string name="chess_new_start_button">Začať hru</string>
+    <string name="chess_new_creating">Vytvára sa…</string>
+    <string name="chess_new_failed">Nepodarilo sa vytvoriť hru</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Otvoriť panel chatu</string>
+    <string name="chess_open_actions">Otvoriť akcie hry</string>
+    <string name="chess_offer_draw">Ponúknuť remízu</string>
+    <string name="chess_resign">Vzdať</string>
+    <string name="chess_rematch">Odveta</string>
+    <string name="chess_delete_game">Odstrániť hru</string>
+    <string name="chess_side_white">Biely</string>
+    <string name="chess_side_black">Čierne</string>
+    <string name="chess_resign_title">Vzdať hru?</string>
+    <string name="chess_resign_confirm">Vzdať</string>
+    <string name="chess_delete_confirm">Odstrániť hru</string>
+    <string name="chess_draw_accept">Prijať</string>
+    <string name="chess_draw_decline">Odmietnuť</string>
+    <string name="chess_status_checkmate_you_win">Mat — vyhrali ste!</string>
+    <string name="chess_status_stalemate">Patová situácia — remíza</string>
+    <string name="chess_status_draw">Remíza</string>
+    <string name="chess_status_check_your_move">Šach — váš ťah</string>
+    <string name="chess_status_your_move">Váš ťah</string>
+    <string name="chess_move_subject_you">Vy</string>
+    <string name="chess_promotion_title">Povýšiť na:</string>
+
+    <string name="chess_resign_message">Naozaj sa chcete vzdať? Hru vyhrá %1$s.</string>
+    <string name="chess_draw_offered">%1$s ponúkol remízu</string>
+    <string name="chess_draw_waiting">Ponúknutá remíza — čaká sa na %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Mat — vyhráva %1$s</string>
+    <string name="chess_status_resigned_you">Vzdali ste sa — %1$s vyhráva</string>
+    <string name="chess_status_resigned_opponent">%1$s sa vzdal — vyhrávate!</string>
+    <string name="chess_status_check_opponent_move">Šach — ťah hráča %1$s</string>
+    <string name="chess_status_opponent_move">Ťah %1$s</string>
+    <string name="chess_piece_king">Kráľ</string>
+    <string name="chess_piece_queen">Dáma</string>
+    <string name="chess_piece_rook">Veža</string>
+    <string name="chess_piece_bishop">Strelec</string>
+    <string name="chess_piece_knight">Jazdec</string>
+    <string name="chess_piece_pawn">Pešiak</string>
+    <string name="chess_move_played">%1$s hral %2$s</string>
+    <string name="chess_channel_name">Oznámenia Šach</string>
+    <string name="chess_channel_description">Oznámenia o ťahoch, ponukách remízy a výsledkoch partií.</string>
+    <string name="chess_open_sidebar">Otvoriť bočný panel</string>
+    <string name="chess_empty_subtitle">Začnite prvú partiu a hrajte šach s priateľom.</string>
+    <string name="chess_empty_start_button">Začať prvú partiu</string>
+    <string name="chess_detail_unavailable">Partia nedostupná</string>
+    <string name="chess_delete_title">Zmazať partiu?</string>
+    <string name="chess_delete_message">Tým sa partia odstráni zo zoznamu.</string>
+    <string name="chess_ws_connecting">Pripájanie…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Opätovné pripájanie…</string>
+    <string name="chess_ws_failed">Pripojenie zlyhalo</string>
+    <string name="chess_move_capture">%1$s vzal %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

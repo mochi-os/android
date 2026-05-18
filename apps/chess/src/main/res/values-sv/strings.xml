@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Schack</string>
+    <string name="chess_sidebar_header">Schack</string>
+    <string name="chess_sidebar_active">Aktiva spel</string>
+    <string name="chess_sidebar_completed">Slutförd</string>
+    <string name="chess_sidebar_new_game">Nytt spel</string>
+    <string name="chess_section_active">Aktiva spel</string>
+    <string name="chess_section_completed">Slutförd</string>
+    <string name="chess_new_game">Nytt spel</string>
+    <string name="chess_empty_title">Inga spel ännu</string>
+    <string name="chess_new_title">Nytt spel</string>
+    <string name="chess_new_pick_opponent">Välj motståndare</string>
+    <string name="chess_new_no_friends_title">Inga vänner ännu</string>
+    <string name="chess_new_no_friends_subtitle">Lägg till vänner i People-appen för att börja spela</string>
+    <string name="chess_new_add_friends">Lägg till vänner</string>
+    <string name="chess_new_start_button">Starta spel</string>
+    <string name="chess_new_creating">Skapar…</string>
+    <string name="chess_new_failed">Kunde inte skapa spel</string>
+    <string name="chess_chat_title">Chatt</string>
+    <string name="chess_open_chat">Öppna chattpanel</string>
+    <string name="chess_open_actions">Öppna spelåtgärder</string>
+    <string name="chess_offer_draw">Erbjud remi</string>
+    <string name="chess_resign">Ge upp</string>
+    <string name="chess_rematch">Revansch</string>
+    <string name="chess_delete_game">Ta bort spel</string>
+    <string name="chess_side_white">Vit</string>
+    <string name="chess_side_black">Svart</string>
+    <string name="chess_resign_title">Ge upp partiet?</string>
+    <string name="chess_resign_confirm">Ge upp</string>
+    <string name="chess_delete_confirm">Ta bort spel</string>
+    <string name="chess_draw_accept">Acceptera</string>
+    <string name="chess_draw_decline">Avböj</string>
+    <string name="chess_status_checkmate_you_win">Schackmatt — du vinner!</string>
+    <string name="chess_status_stalemate">Patt — oavgjort</string>
+    <string name="chess_status_draw">Remi</string>
+    <string name="chess_status_check_your_move">Schack — ditt drag</string>
+    <string name="chess_status_your_move">Ditt drag</string>
+    <string name="chess_move_subject_you">Du</string>
+    <string name="chess_promotion_title">Förvandla till:</string>
+
+    <string name="chess_resign_message">Är du säker på att du vill ge upp? %1$s kommer att vinna partiet.</string>
+    <string name="chess_draw_offered">%1$s erbjöd remi</string>
+    <string name="chess_draw_waiting">Remi erbjuden — väntar på %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Schackmatt — %1$s vinner</string>
+    <string name="chess_status_resigned_you">Du gav upp — %1$s vinner</string>
+    <string name="chess_status_resigned_opponent">%1$s gav upp — du vinner!</string>
+    <string name="chess_status_check_opponent_move">Schack — %1$ss drag</string>
+    <string name="chess_status_opponent_move">%1$ss drag</string>
+    <string name="chess_piece_king">Kung</string>
+    <string name="chess_piece_queen">Dam</string>
+    <string name="chess_piece_rook">Torn</string>
+    <string name="chess_piece_bishop">Löpare</string>
+    <string name="chess_piece_knight">Springare</string>
+    <string name="chess_piece_pawn">Bonde</string>
+    <string name="chess_move_played">%1$s spelade %2$s</string>
+    <string name="chess_channel_name">Schack-aviseringar</string>
+    <string name="chess_channel_description">Aviseringar om drag, remierbjudanden och partiresultat.</string>
+    <string name="chess_open_sidebar">Öppna sidofält</string>
+    <string name="chess_empty_subtitle">Starta ditt första parti för att spela schack med en vän.</string>
+    <string name="chess_empty_start_button">Starta ditt första parti</string>
+    <string name="chess_detail_unavailable">Parti otillgängligt</string>
+    <string name="chess_delete_title">Radera parti?</string>
+    <string name="chess_delete_message">Detta tar bort partiet från din lista.</string>
+    <string name="chess_ws_connecting">Ansluter…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Återansluter…</string>
+    <string name="chess_ws_failed">Anslutning misslyckades</string>
+    <string name="chess_move_capture">%1$s tog %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

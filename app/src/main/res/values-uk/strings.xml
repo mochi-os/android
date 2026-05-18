@@ -7,4 +7,9 @@
     <string name="launcher_projects">Проєкти</string>
     <string name="launcher_settings">Налаштування</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Шахи</string>
+    <string name="launcher_go">Го</string>
+    <string name="launcher_words">Слова</string>
+
 </resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Catur</string>
+    <string name="chess_sidebar_header">Catur</string>
+    <string name="chess_sidebar_active">Kaulinan Aktif</string>
+    <string name="chess_sidebar_completed">Réngsé</string>
+    <string name="chess_sidebar_new_game">Game anyar</string>
+    <string name="chess_section_active">Kaulinan Aktif</string>
+    <string name="chess_section_completed">Réngsé</string>
+    <string name="chess_new_game">Game anyar</string>
+    <string name="chess_empty_title">Tacan aya game</string>
+    <string name="chess_new_title">Game Anyar</string>
+    <string name="chess_new_pick_opponent">Pilih lawan</string>
+    <string name="chess_new_no_friends_title">Tacan aya babaturan</string>
+    <string name="chess_new_no_friends_subtitle">Tambah babaturan dina aplikasi People pikeun mimitian maén</string>
+    <string name="chess_new_add_friends">Tambah babaturan</string>
+    <string name="chess_new_start_button">Mimitian kaulinan</string>
+    <string name="chess_new_creating">Ngajieun…</string>
+    <string name="chess_new_failed">Gagal nyieun kaulinan</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Buka panel obrolan</string>
+    <string name="chess_open_actions">Buka aksi game</string>
+    <string name="chess_offer_draw">Tawarkeun seri</string>
+    <string name="chess_resign">Resign</string>
+    <string name="chess_rematch">Tanding deui</string>
+    <string name="chess_delete_game">Hapus kaulinan</string>
+    <string name="chess_side_white">Bodas</string>
+    <string name="chess_side_black">Hideung</string>
+    <string name="chess_resign_title">Resign game?</string>
+    <string name="chess_resign_confirm">Resign</string>
+    <string name="chess_delete_confirm">Hapus kaulinan</string>
+    <string name="chess_draw_accept">Tarima</string>
+    <string name="chess_draw_decline">Tolak</string>
+    <string name="chess_status_checkmate_you_win">Skakmat — anjeun meunang!</string>
+    <string name="chess_status_stalemate">Stalemate — séri</string>
+    <string name="chess_status_draw">Seri</string>
+    <string name="chess_status_check_your_move">Skak — giliran anjeun</string>
+    <string name="chess_status_your_move">Lengkah anjeun</string>
+    <string name="chess_move_subject_you">Anjeun</string>
+    <string name="chess_promotion_title">Promosikeun jadi:</string>
+
+    <string name="chess_resign_message">Anjeun yakin hayang nyerah? %1$s bakal meunang kaulinan.</string>
+    <string name="chess_draw_offered">%1$s nawarkeun séri</string>
+    <string name="chess_draw_waiting">Tawaran seri — ngantosan %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Skakmat — %1$s meunang</string>
+    <string name="chess_status_resigned_you">Anjeun mundur — %1$s menang</string>
+    <string name="chess_status_resigned_opponent">%1$s mundur — anjeun menang!</string>
+    <string name="chess_status_check_opponent_move">Skak — giliran %1$s</string>
+    <string name="chess_status_opponent_move">Lengkah %1$s</string>
+    <string name="chess_piece_king">King</string>
+    <string name="chess_piece_queen">Queen</string>
+    <string name="chess_piece_rook">Rook</string>
+    <string name="chess_piece_bishop">Bishop</string>
+    <string name="chess_piece_knight">Knight</string>
+    <string name="chess_piece_pawn">Pawn</string>
+    <string name="chess_move_played">%1$s maén %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Şahmat</string>
+    <string name="chess_sidebar_header">Şahmat</string>
+    <string name="chess_sidebar_active">Aktiw oýunlar</string>
+    <string name="chess_sidebar_completed">Tamamlandy</string>
+    <string name="chess_sidebar_new_game">Täze oýun</string>
+    <string name="chess_section_active">Aktiw oýunlar</string>
+    <string name="chess_section_completed">Tamamlandy</string>
+    <string name="chess_new_game">Täze oýun</string>
+    <string name="chess_empty_title">Heniz oýunlar ýok</string>
+    <string name="chess_new_title">Täze oýun</string>
+    <string name="chess_new_pick_opponent">Garşydaş saýlamak</string>
+    <string name="chess_new_no_friends_title">Heniz dostlar ýok</string>
+    <string name="chess_new_no_friends_subtitle">Oýun başlamak üçin People programmasynda dostlar goşuň</string>
+    <string name="chess_new_add_friends">Dost goşmak</string>
+    <string name="chess_new_start_button">Oýny başla</string>
+    <string name="chess_new_creating">Döredilýär…</string>
+    <string name="chess_new_failed">Oýun döredilmedi</string>
+    <string name="chess_chat_title">Söhbetdeşlik</string>
+    <string name="chess_open_chat">Söhbet panelini aç</string>
+    <string name="chess_open_actions">Oýun hereketlerini aç</string>
+    <string name="chess_offer_draw">Deňme-deň hödürle</string>
+    <string name="chess_resign">Resign et</string>
+    <string name="chess_rematch">Gaýtadan oýun</string>
+    <string name="chess_delete_game">Oýun pozmak</string>
+    <string name="chess_side_white">Ak</string>
+    <string name="chess_side_black">Gara</string>
+    <string name="chess_resign_title">Oýny resign etmek?</string>
+    <string name="chess_resign_confirm">Resign et</string>
+    <string name="chess_delete_confirm">Oýun pozmak</string>
+    <string name="chess_draw_accept">Kabul etmek</string>
+    <string name="chess_draw_decline">Ret etmek</string>
+    <string name="chess_status_checkmate_you_win">Mat — siz utdyňyz!</string>
+    <string name="chess_status_stalemate">Stalemate — deňme-deň</string>
+    <string name="chess_status_draw">Deňme-deň</string>
+    <string name="chess_status_check_your_move">Şah — siziň hereketiňiz</string>
+    <string name="chess_status_your_move">Hereketiň</string>
+    <string name="chess_move_subject_you">Sen</string>
+    <string name="chess_promotion_title">Şuňa ýokarlandyr:</string>
+
+    <string name="chess_resign_message">Boýun egmek isleýärsiňizmi? %1$s oýny utar.</string>
+    <string name="chess_draw_offered">%1$s deňme-deň teklip etdi</string>
+    <string name="chess_draw_waiting">Deňme-deň teklip edildi — %1$s garaşylýar</string>
+    <string name="chess_status_checkmate_opponent_wins">Mat — %1$s utdy</string>
+    <string name="chess_status_resigned_you">Sen ýüz öwürdiň — %1$s ýeňdi</string>
+    <string name="chess_status_resigned_opponent">%1$s ýüz öwürdi — sen ýeňdiň!</string>
+    <string name="chess_status_check_opponent_move">Şah — %1$s hereketi</string>
+    <string name="chess_status_opponent_move">%1$s -yň hereketi</string>
+    <string name="chess_piece_king">Şa</string>
+    <string name="chess_piece_queen">Şa zenan</string>
+    <string name="chess_piece_rook">Tura</string>
+    <string name="chess_piece_bishop">Fil</string>
+    <string name="chess_piece_knight">At</string>
+    <string name="chess_piece_pawn">Esger</string>
+    <string name="chess_move_played">%1$s %2$s oýnady</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

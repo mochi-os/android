@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">หมากรุก</string>
+    <string name="chess_sidebar_header">หมากรุก</string>
+    <string name="chess_sidebar_active">เกมที่ใช้งานอยู่</string>
+    <string name="chess_sidebar_completed">เสร็จสมบูรณ์</string>
+    <string name="chess_sidebar_new_game">เกมใหม่</string>
+    <string name="chess_section_active">เกมที่ใช้งานอยู่</string>
+    <string name="chess_section_completed">เสร็จสมบูรณ์</string>
+    <string name="chess_new_game">เกมใหม่</string>
+    <string name="chess_empty_title">ยังไม่มีเกม</string>
+    <string name="chess_new_title">เกมใหม่</string>
+    <string name="chess_new_pick_opponent">เลือกคู่ต่อสู้</string>
+    <string name="chess_new_no_friends_title">ยังไม่มีเพื่อน</string>
+    <string name="chess_new_no_friends_subtitle">เพิ่มเพื่อนในแอป People เพื่อเริ่มเล่น</string>
+    <string name="chess_new_add_friends">เพิ่มเพื่อน</string>
+    <string name="chess_new_start_button">เริ่มเกม</string>
+    <string name="chess_new_creating">กำลังสร้าง…</string>
+    <string name="chess_new_failed">ไม่สามารถสร้างเกมได้</string>
+    <string name="chess_chat_title">แชท</string>
+    <string name="chess_open_chat">เปิดแผงแชต</string>
+    <string name="chess_open_actions">เปิดการดำเนินการของเกม</string>
+    <string name="chess_offer_draw">เสนอเสมอ</string>
+    <string name="chess_resign">ยอมแพ้</string>
+    <string name="chess_rematch">แข่งใหม่</string>
+    <string name="chess_delete_game">ลบเกม</string>
+    <string name="chess_side_white">ขาว</string>
+    <string name="chess_side_black">ดำ</string>
+    <string name="chess_resign_title">ยอมแพ้เกม?</string>
+    <string name="chess_resign_confirm">ยอมแพ้</string>
+    <string name="chess_delete_confirm">ลบเกม</string>
+    <string name="chess_draw_accept">ยอมรับ</string>
+    <string name="chess_draw_decline">ปฏิเสธ</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — คุณชนะ!</string>
+    <string name="chess_status_stalemate">ตันกัน — เสมอ</string>
+    <string name="chess_status_draw">เสมอ</string>
+    <string name="chess_status_check_your_move">Check — ตาของคุณ</string>
+    <string name="chess_status_your_move">ตาของคุณ</string>
+    <string name="chess_move_subject_you">คุณ</string>
+    <string name="chess_promotion_title">เลื่อนขั้นเป็น:</string>
+
+    <string name="chess_resign_message">คุณแน่ใจหรือไม่ว่าต้องการยอมแพ้? %1$s จะชนะเกม</string>
+    <string name="chess_draw_offered">%1$s เสนอเสมอ</string>
+    <string name="chess_draw_waiting">เสนอเสมอแล้ว — กำลังรอ %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$sชนะ</string>
+    <string name="chess_status_resigned_you">คุณยอมแพ้ — %1$s ชนะ</string>
+    <string name="chess_status_resigned_opponent">%1$s ยอมแพ้ — คุณชนะ!</string>
+    <string name="chess_status_check_opponent_move">Check — ตาของ%1$s</string>
+    <string name="chess_status_opponent_move">ตาของ %1$s</string>
+    <string name="chess_piece_king">ขุน</string>
+    <string name="chess_piece_queen">ควีน</string>
+    <string name="chess_piece_rook">เรือ</string>
+    <string name="chess_piece_bishop">บิชอป</string>
+    <string name="chess_piece_knight">ม้า</string>
+    <string name="chess_piece_pawn">เบี้ย</string>
+    <string name="chess_move_played">%1$s เดิน %2$s</string>
+    <string name="chess_channel_name">การแจ้งเตือนหมากรุก</string>
+    <string name="chess_channel_description">การแจ้งเตือนเกี่ยวกับการเดิน ข้อเสนอเสมอ และผลการแข่งขัน</string>
+    <string name="chess_open_sidebar">เปิดแถบด้านข้าง</string>
+    <string name="chess_empty_subtitle">เริ่มเกมแรกของคุณเพื่อเล่นหมากรุกกับเพื่อน</string>
+    <string name="chess_empty_start_button">เริ่มเกมแรกของคุณ</string>
+    <string name="chess_detail_unavailable">เกมไม่พร้อมใช้งาน</string>
+    <string name="chess_delete_title">ลบเกม?</string>
+    <string name="chess_delete_message">การกระทำนี้จะลบเกมออกจากรายการของคุณ</string>
+    <string name="chess_ws_connecting">กำลังเชื่อมต่อ…</string>
+    <string name="chess_ws_disconnected">ออฟไลน์</string>
+    <string name="chess_ws_reconnecting">กำลังเชื่อมต่อใหม่…</string>
+    <string name="chess_ws_failed">การเชื่อมต่อล้มเหลว</string>
+    <string name="chess_move_capture">%1$s กิน %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

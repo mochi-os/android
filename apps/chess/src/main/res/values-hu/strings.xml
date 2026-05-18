@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Sakk</string>
+    <string name="chess_sidebar_header">Sakk</string>
+    <string name="chess_sidebar_active">Aktív játékok</string>
+    <string name="chess_sidebar_completed">Teljesítve</string>
+    <string name="chess_sidebar_new_game">Új játék</string>
+    <string name="chess_section_active">Aktív játékok</string>
+    <string name="chess_section_completed">Teljesítve</string>
+    <string name="chess_new_game">Új játék</string>
+    <string name="chess_empty_title">Még nincsenek játékok</string>
+    <string name="chess_new_title">Új játék</string>
+    <string name="chess_new_pick_opponent">Ellenfél kiválasztása</string>
+    <string name="chess_new_no_friends_title">Még nincsenek barátok</string>
+    <string name="chess_new_no_friends_subtitle">A játék megkezdéséhez vegyen fel barátokat az Emberek alkalmazásban</string>
+    <string name="chess_new_add_friends">Barátok hozzáadása</string>
+    <string name="chess_new_start_button">Játék indítása</string>
+    <string name="chess_new_creating">Létrehozás…</string>
+    <string name="chess_new_failed">Nem sikerült létrehozni a játékot</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Csevegőpanel megnyitása</string>
+    <string name="chess_open_actions">Játékműveletek megnyitása</string>
+    <string name="chess_offer_draw">Döntetlen felajánlása</string>
+    <string name="chess_resign">Feladás</string>
+    <string name="chess_rematch">Visszavágó</string>
+    <string name="chess_delete_game">Játék törlése</string>
+    <string name="chess_side_white">Fehér</string>
+    <string name="chess_side_black">Fekete</string>
+    <string name="chess_resign_title">Feladja a játékot?</string>
+    <string name="chess_resign_confirm">Feladás</string>
+    <string name="chess_delete_confirm">Játék törlése</string>
+    <string name="chess_draw_accept">Elfogadás</string>
+    <string name="chess_draw_decline">Elutasítás</string>
+    <string name="chess_status_checkmate_you_win">Sakk-matt — Ön nyert!</string>
+    <string name="chess_status_stalemate">Patt — döntetlen</string>
+    <string name="chess_status_draw">Döntetlen</string>
+    <string name="chess_status_check_your_move">Sakk — Ön következik</string>
+    <string name="chess_status_your_move">Az ön lépése</string>
+    <string name="chess_move_subject_you">Ön</string>
+    <string name="chess_promotion_title">Átváltoztatás:</string>
+
+    <string name="chess_resign_message">Biztosan feladja? %1$s fog nyerni.</string>
+    <string name="chess_draw_offered">%1$s döntetlent ajánlott</string>
+    <string name="chess_draw_waiting">Döntetlent ajánlott — várakozás %1$s válaszára</string>
+    <string name="chess_status_checkmate_opponent_wins">Sakk-matt — %1$s nyert</string>
+    <string name="chess_status_resigned_you">Feladta — %1$s nyer</string>
+    <string name="chess_status_resigned_opponent">%1$s feladta — ön nyert!</string>
+    <string name="chess_status_check_opponent_move">Sakk — %1$s következik</string>
+    <string name="chess_status_opponent_move">%1$s lépése</string>
+    <string name="chess_piece_king">Király</string>
+    <string name="chess_piece_queen">Vezér</string>
+    <string name="chess_piece_rook">Bástya</string>
+    <string name="chess_piece_bishop">Futó</string>
+    <string name="chess_piece_knight">Huszár</string>
+    <string name="chess_piece_pawn">Gyalog</string>
+    <string name="chess_move_played">%1$s lépett: %2$s</string>
+    <string name="chess_channel_name">Sakk értesítések</string>
+    <string name="chess_channel_description">Értesítések lépésekről, döntetlen ajánlatokról és játszma-eredményekről.</string>
+    <string name="chess_open_sidebar">Oldalsáv megnyitása</string>
+    <string name="chess_empty_subtitle">Kezdje el első játszmáját, hogy sakkozhasson egy baráttal.</string>
+    <string name="chess_empty_start_button">Első játszma indítása</string>
+    <string name="chess_detail_unavailable">A játszma nem érhető el</string>
+    <string name="chess_delete_title">Játszma törlése?</string>
+    <string name="chess_delete_message">Ez eltávolítja a játszmát a listájáról.</string>
+    <string name="chess_ws_connecting">Csatlakozás…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Újracsatlakozás…</string>
+    <string name="chess_ws_failed">Csatlakozás sikertelen</string>
+    <string name="chess_move_capture">%1$s elvette: %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

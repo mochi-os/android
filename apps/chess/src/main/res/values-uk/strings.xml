@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Шахи</string>
+    <string name="chess_sidebar_header">Шахи</string>
+    <string name="chess_sidebar_active">Активні ігри</string>
+    <string name="chess_sidebar_completed">Завершено</string>
+    <string name="chess_sidebar_new_game">Нова гра</string>
+    <string name="chess_section_active">Активні ігри</string>
+    <string name="chess_section_completed">Завершено</string>
+    <string name="chess_new_game">Нова гра</string>
+    <string name="chess_empty_title">Ігор ще немає</string>
+    <string name="chess_new_title">Нова гра</string>
+    <string name="chess_new_pick_opponent">Виберіть суперника</string>
+    <string name="chess_new_no_friends_title">Друзів ще немає</string>
+    <string name="chess_new_no_friends_subtitle">Додайте друзів у застосунку People, щоб почати грати</string>
+    <string name="chess_new_add_friends">Додати друзів</string>
+    <string name="chess_new_start_button">Почати гру</string>
+    <string name="chess_new_creating">Створення…</string>
+    <string name="chess_new_failed">Не вдалося створити гру</string>
+    <string name="chess_chat_title">Чат</string>
+    <string name="chess_open_chat">Відкрити панель чату</string>
+    <string name="chess_open_actions">Відкрити дії гри</string>
+    <string name="chess_offer_draw">Запропонувати нічию</string>
+    <string name="chess_resign">Здатися</string>
+    <string name="chess_rematch">Реванш</string>
+    <string name="chess_delete_game">Видалити гру</string>
+    <string name="chess_side_white">Білий</string>
+    <string name="chess_side_black">Чорний</string>
+    <string name="chess_resign_title">Здатися у грі?</string>
+    <string name="chess_resign_confirm">Здатися</string>
+    <string name="chess_delete_confirm">Видалити гру</string>
+    <string name="chess_draw_accept">Прийняти</string>
+    <string name="chess_draw_decline">Відхилити</string>
+    <string name="chess_status_checkmate_you_win">Мат — ви виграли!</string>
+    <string name="chess_status_stalemate">Пат — нічия</string>
+    <string name="chess_status_draw">Нічия</string>
+    <string name="chess_status_check_your_move">Шах — ваш хід</string>
+    <string name="chess_status_your_move">Ваш хід</string>
+    <string name="chess_move_subject_you">Ви</string>
+    <string name="chess_promotion_title">Перетворити на:</string>
+
+    <string name="chess_resign_message">Ви впевнені, що хочете здатися? %1$s виграє партію.</string>
+    <string name="chess_draw_offered">%1$s запропонував нічию</string>
+    <string name="chess_draw_waiting">Запропоновано нічию — очікування на %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Мат — переміг %1$s</string>
+    <string name="chess_status_resigned_you">Ви здалися — перемагає %1$s</string>
+    <string name="chess_status_resigned_opponent">%1$s здався — ви перемогли!</string>
+    <string name="chess_status_check_opponent_move">Шах — хід гравця %1$s</string>
+    <string name="chess_status_opponent_move">Хід %1$s</string>
+    <string name="chess_piece_king">Король</string>
+    <string name="chess_piece_queen">Ферзь</string>
+    <string name="chess_piece_rook">Тура</string>
+    <string name="chess_piece_bishop">Слон</string>
+    <string name="chess_piece_knight">Кінь</string>
+    <string name="chess_piece_pawn">Пішак</string>
+    <string name="chess_move_played">%1$s зіграв %2$s</string>
+    <string name="chess_channel_name">Сповіщення Шахи</string>
+    <string name="chess_channel_description">Сповіщення про ходи, пропозиції нічиєї та результати партій.</string>
+    <string name="chess_open_sidebar">Відкрити бічну панель</string>
+    <string name="chess_empty_subtitle">Розпочніть першу партію, щоб грати в шахи з другом.</string>
+    <string name="chess_empty_start_button">Розпочати першу партію</string>
+    <string name="chess_detail_unavailable">Партія недоступна</string>
+    <string name="chess_delete_title">Видалити партію?</string>
+    <string name="chess_delete_message">Це видаляє партію з вашого списку.</string>
+    <string name="chess_ws_connecting">Підключення…</string>
+    <string name="chess_ws_disconnected">Офлайн</string>
+    <string name="chess_ws_reconnecting">Перепідключення…</string>
+    <string name="chess_ws_failed">Підключення невдале</string>
+    <string name="chess_move_capture">%1$s взяв %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

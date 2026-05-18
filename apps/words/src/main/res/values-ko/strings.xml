@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">메뉴</string>
+    <string name="words_list_new">새 게임</string>
+    <string name="words_list_logout">로그아웃</string>
+    <string name="words_list_empty_title">아직 게임이 없어요</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">완료됨</string>
+    <string name="words_sidebar_new_game">새 게임</string>
+    <string name="words_new_game_title">새 게임</string>
+    <string name="words_new_game_language">언어</string>
+    <string name="words_new_game_language_uk">영어 (영국)</string>
+    <string name="words_new_game_language_us">영어 (미국)</string>
+    <string name="words_new_game_start">게임 시작</string>
+    <string name="words_new_game_no_friends_title">아직 친구가 없어요</string>
+    <string name="words_new_game_add_friends">친구 추가</string>
+    <string name="words_detail_status_your_move">본인의 차례</string>
+    <string name="words_detail_status_you_win">승리했어요!</string>
+    <string name="words_detail_status_game_over">게임 종료</string>
+    <string name="words_detail_status_opponent_resigned">상대방이 기권했어요 — 승리예요!</string>
+    <string name="words_detail_status_you_resigned">기권했어요</string>
+    <string name="words_detail_label_you">본인</string>
+    <string name="words_detail_action_shuffle">랙 섞기</string>
+    <string name="words_detail_action_pass">패스</string>
+    <string name="words_detail_action_exchange">타일 교환</string>
+    <string name="words_detail_action_cancel_exchange">교환 취소</string>
+    <string name="words_detail_action_resign">기권</string>
+    <string name="words_detail_action_rematch">재대결</string>
+    <string name="words_detail_action_delete">게임 삭제</string>
+    <string name="words_detail_chat_title">채팅</string>
+    <string name="words_detail_invalid_move">잘못된 수</string>
+    <string name="words_detail_recall">회수</string>
+    <string name="words_detail_submit">제출</string>
+    <string name="words_detail_cancel">취소</string>
+    <string name="words_detail_exchange">교환</string>
+    <string name="words_detail_blank_title">문자 선택</string>
+    <string name="words_detail_resign_title">게임을 기권할까요?</string>
+    <string name="words_detail_resign_message">정말 기권하시겠습니까?</string>
+    <string name="words_detail_failed_move">수 제출에 실패했어요</string>
+    <string name="words_detail_failed_pass">패스에 실패했어요</string>
+    <string name="words_detail_failed_exchange">교환에 실패했어요</string>
+    <string name="words_detail_failed_resign">기권에 실패했어요</string>
+    <string name="words_detail_failed_rematch">재대결 생성에 실패했어요</string>
+    <string name="words_detail_failed_delete">게임 삭제에 실패했어요</string>
+    <string name="words_detail_game_deleted">게임이 삭제되었어요</string>
+
+    <string name="words_channel_name">워드 알림</string>
+    <string name="words_channel_description">차례, 교환, 게임 결과에 관한 알림.</string>
+    <string name="words_list_empty_subtitle">+ 버튼을 탭하여 첫 게임을 시작하세요.</string>
+    <string name="words_list_status_finished">종료됨</string>
+    <string name="words_list_status_resigned">기권함</string>
+    <string name="words_list_your_turn">당신 차례</string>
+    <string name="words_sidebar_active">진행 중인 게임</string>
+    <string name="words_sidebar_empty">아직 게임이 없습니다.</string>
+    <string name="words_new_game_choose_opponents">상대 선택</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">플레이어 %1$d명</string>
+    <string name="words_new_game_no_friends_subtitle">사람 앱에서 친구를 추가하여 플레이를 시작하세요.</string>
+    <string name="words_detail_title">게임</string>
+    <string name="words_detail_coming_soon">게임 세부 정보 곧 제공 예정</string>
+    <string name="words_detail_status_opponent_move">%1$s 차례</string>
+    <string name="words_detail_status_winner_wins">%1$s 승리</string>
+    <string name="words_detail_player_fallback">플레이어 %1$d</string>
+    <string name="words_detail_player_count">플레이어 %1$d명</string>
+    <string name="words_detail_label_tiles_left">타일 %1$d개 남음</string>
+    <string name="words_detail_action_open_chat">채팅 열기</string>
+    <string name="words_detail_action_more">게임 액션</string>
+    <string name="words_detail_exchange_count">교환 (%1$d)</string>
+    <string name="words_detail_chat_you_played">당신이 %1$s을(를) 놓았습니다</string>
+    <string name="words_detail_chat_player_played">%1$s이(가) %2$s을(를) 놓았습니다</string>
+
+</resources>

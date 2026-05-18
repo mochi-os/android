@@ -22,6 +22,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import android.widget.TextView
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -100,6 +101,9 @@ fun WikiCommentThread(
     var editing by rememberSaveable(comment.id) { mutableStateOf(false) }
     var editBody by rememberSaveable(comment.id) { mutableStateOf("") }
     var deleting by remember { mutableStateOf(false) }
+    // Captured ref to the rendered comment-body TextView so the Reply
+    // button can read the user's active selection at tap time.
+    var bodyTextView by remember(comment.id) { mutableStateOf<TextView?>(null) }
 
     val canEdit = currentUserId != null && comment.author == currentUserId
     val canDelete = (currentUserId != null && comment.author == currentUserId) || isOwner
@@ -256,6 +260,7 @@ fun WikiCommentThread(
                         HtmlContent(
                             html = comment.bodyMarkdown,
                             modifier = Modifier.fillMaxWidth(),
+                            onTextViewReady = { tv -> bodyTextView = tv },
                         )
                     } else if (comment.body.isNotBlank()) {
                         Text(
@@ -277,7 +282,18 @@ fun WikiCommentThread(
                         ActionChip(
                             icon = Icons.AutoMirrored.Filled.Reply,
                             label = stringResource(R.string.wikis_comment_action_reply),
-                            onClick = { onStartReply(comment.id, null) },
+                            onClick = {
+                                // Read the active text selection from the rendered comment
+                                // body so we can seed the reply with `> `-quoted lines.
+                                // Mirrors web's `window.getSelection()` quote-on-select.
+                                val tv = bodyTextView
+                                val sel = tv?.let {
+                                    val start = it.selectionStart.coerceAtLeast(0)
+                                    val end = it.selectionEnd.coerceAtLeast(0)
+                                    if (end > start) it.text.subSequence(start, end).toString() else null
+                                }
+                                onStartReply(comment.id, sel)
+                            },
                         )
                         if (canEdit && onEdit != null) {
                             Spacer(Modifier.width(4.dp))

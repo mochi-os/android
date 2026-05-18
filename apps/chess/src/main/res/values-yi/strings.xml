@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">שאָך</string>
+    <string name="chess_sidebar_header">שאָך</string>
+    <string name="chess_sidebar_active">אַקטיווע שפּילן</string>
+    <string name="chess_sidebar_completed">פֿאַרענדיקט</string>
+    <string name="chess_sidebar_new_game">נײַ שפּיל</string>
+    <string name="chess_section_active">אַקטיווע שפּילן</string>
+    <string name="chess_section_completed">פֿאַרענדיקט</string>
+    <string name="chess_new_game">נײַ שפּיל</string>
+    <string name="chess_empty_title">נאָך קיין שפּילן</string>
+    <string name="chess_new_title">נײַ שפּיל</string>
+    <string name="chess_new_pick_opponent">קלײַבט קעגנער</string>
+    <string name="chess_new_no_friends_title">נאָך קיין פֿרײַנד</string>
+    <string name="chess_new_no_friends_subtitle">צולייגט פֿרײַנד אין דער מענטשן אַפּ צו אָנהייבן שפּילן</string>
+    <string name="chess_new_add_friends">צולייגן פֿרײַנד</string>
+    <string name="chess_new_start_button">הייב אָן שפּיל</string>
+    <string name="chess_new_creating">באַשאַפֿן…</string>
+    <string name="chess_new_failed">ניט געלונגען צו שאַפֿן שפּיל</string>
+    <string name="chess_chat_title">שמועס</string>
+    <string name="chess_open_chat">עפֿן שמועס פּאַנעל</string>
+    <string name="chess_open_actions">עפֿן שפּיל אַקציעס</string>
+    <string name="chess_offer_draw">פֿאָרשלאָג גלײַך</string>
+    <string name="chess_resign">רעזיגנירן</string>
+    <string name="chess_rematch">ווידערמאַטש</string>
+    <string name="chess_delete_game">אויסמעקן שפּיל</string>
+    <string name="chess_side_white">ווײַס</string>
+    <string name="chess_side_black">שוואַרץ</string>
+    <string name="chess_resign_title">רעזיגנירן שפּיל?</string>
+    <string name="chess_resign_confirm">רעזיגנירן</string>
+    <string name="chess_delete_confirm">אויסמעקן שפּיל</string>
+    <string name="chess_draw_accept">אָננעמען</string>
+    <string name="chess_draw_decline">אָפּזאָגן</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — איר געווינט!</string>
+    <string name="chess_status_stalemate">פּאַט — תּיקו</string>
+    <string name="chess_status_draw">תּיקו</string>
+    <string name="chess_status_check_your_move">Check — אײַער גאַנג</string>
+    <string name="chess_status_your_move">אײַער צוג</string>
+    <string name="chess_move_subject_you">איר</string>
+    <string name="chess_promotion_title">פֿאַרהייב צו:</string>
+
+    <string name="chess_resign_message">זענט איר זיכער איר ווילט רעזיגנירן? %1$s וועט געווינען די שפּיל.</string>
+    <string name="chess_draw_offered">%1$s האָט פֿאָרגעלייגט אַ תּיקו</string>
+    <string name="chess_draw_waiting">תּיקו פֿאָרגעלייגט — וואַרט אויף %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s געווינט</string>
+    <string name="chess_status_resigned_you">איר האָט רעזיגנירט — %1$s געווינט</string>
+    <string name="chess_status_resigned_opponent">%1$s האָט רעזיגנירט — איר געווינט!</string>
+    <string name="chess_status_check_opponent_move">Check — %1$s\'ס גאַנג</string>
+    <string name="chess_status_opponent_move">%1$s׳ס צוג</string>
+    <string name="chess_piece_king">מלך</string>
+    <string name="chess_piece_queen">מלכּה</string>
+    <string name="chess_piece_rook">טורעם</string>
+    <string name="chess_piece_bishop">לויפֿער</string>
+    <string name="chess_piece_knight">פֿערדל</string>
+    <string name="chess_piece_pawn">פּאַון</string>
+    <string name="chess_move_played">%1$s האָט געשפּילט %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

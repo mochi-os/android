@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Šakki</string>
+    <string name="chess_sidebar_header">Šakki</string>
+    <string name="chess_sidebar_active">Aktiiviset pelit</string>
+    <string name="chess_sidebar_completed">Valmis</string>
+    <string name="chess_sidebar_new_game">Uusi peli</string>
+    <string name="chess_section_active">Aktiiviset pelit</string>
+    <string name="chess_section_completed">Valmis</string>
+    <string name="chess_new_game">Uusi peli</string>
+    <string name="chess_empty_title">Ei vielä pelejä</string>
+    <string name="chess_new_title">Uusi peli</string>
+    <string name="chess_new_pick_opponent">Valitse vastustaja</string>
+    <string name="chess_new_no_friends_title">Ei vielä ystäviä</string>
+    <string name="chess_new_no_friends_subtitle">Lisää kavereita People-sovelluksessa aloittaaksesi pelin</string>
+    <string name="chess_new_add_friends">Lisää kavereita</string>
+    <string name="chess_new_start_button">Aloita peli</string>
+    <string name="chess_new_creating">Luodaan…</string>
+    <string name="chess_new_failed">Pelin luominen epäonnistui</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Avaa keskustelupaneeli</string>
+    <string name="chess_open_actions">Avaa pelin toiminnot</string>
+    <string name="chess_offer_draw">Tarjoa tasapeliä</string>
+    <string name="chess_resign">Luovuta</string>
+    <string name="chess_rematch">Uusinta</string>
+    <string name="chess_delete_game">Poista peli</string>
+    <string name="chess_side_white">Valkoinen</string>
+    <string name="chess_side_black">Musta</string>
+    <string name="chess_resign_title">Luovutatko pelin?</string>
+    <string name="chess_resign_confirm">Luovuta</string>
+    <string name="chess_delete_confirm">Poista peli</string>
+    <string name="chess_draw_accept">Hyväksy</string>
+    <string name="chess_draw_decline">Hylkää</string>
+    <string name="chess_status_checkmate_you_win">Šakkimatti — voitit!</string>
+    <string name="chess_status_stalemate">Patti — tasapeli</string>
+    <string name="chess_status_draw">Tasapeli</string>
+    <string name="chess_status_check_your_move">Šakki — sinun vuorosi</string>
+    <string name="chess_status_your_move">Sinun siirtosi</string>
+    <string name="chess_move_subject_you">Sinä</string>
+    <string name="chess_promotion_title">Korota:</string>
+
+    <string name="chess_resign_message">Haluatko varmasti luovuttaa? %1$s voittaa pelin.</string>
+    <string name="chess_draw_offered">%1$s tarjosi tasapeliä</string>
+    <string name="chess_draw_waiting">Tasapeliä tarjottu — odotetaan pelaajaa %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Šakkimatti — %1$s voittaa</string>
+    <string name="chess_status_resigned_you">Luovutit — %1$s voittaa</string>
+    <string name="chess_status_resigned_opponent">%1$s luovutti — voitit!</string>
+    <string name="chess_status_check_opponent_move">Šakki — %1$s on vuorossa</string>
+    <string name="chess_status_opponent_move">Pelaajan %1$s siirto</string>
+    <string name="chess_piece_king">Kuningas</string>
+    <string name="chess_piece_queen">Kuningatar</string>
+    <string name="chess_piece_rook">Torni</string>
+    <string name="chess_piece_bishop">Lähetti</string>
+    <string name="chess_piece_knight">Ratsu</string>
+    <string name="chess_piece_pawn">Sotilas</string>
+    <string name="chess_move_played">%1$s pelasi %2$s</string>
+    <string name="chess_channel_name">Shakki-ilmoitukset</string>
+    <string name="chess_channel_description">Ilmoitukset siirroista, tasapelitarjouksista ja pelitulokset.</string>
+    <string name="chess_open_sidebar">Avaa sivupalkki</string>
+    <string name="chess_empty_subtitle">Aloita ensimmäinen pelisi pelataksesi shakkia ystävän kanssa.</string>
+    <string name="chess_empty_start_button">Aloita ensimmäinen pelisi</string>
+    <string name="chess_detail_unavailable">Peli ei käytettävissä</string>
+    <string name="chess_delete_title">Poistetaanko peli?</string>
+    <string name="chess_delete_message">Tämä poistaa pelin listaltasi.</string>
+    <string name="chess_ws_connecting">Yhdistetään…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Yhdistetään uudelleen…</string>
+    <string name="chess_ws_failed">Yhteys epäonnistui</string>
+    <string name="chess_move_capture">%1$s otti %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

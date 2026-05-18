@@ -7,4 +7,9 @@
     <string name="launcher_projects">Projektit</string>
     <string name="launcher_settings">Asetukset</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Shakki</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Sanat</string>
+
 </resources>

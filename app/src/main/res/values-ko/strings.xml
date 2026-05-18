@@ -7,4 +7,9 @@
     <string name="launcher_projects">프로젝트</string>
     <string name="launcher_settings">설정</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">체스</string>
+    <string name="launcher_go">바둑</string>
+    <string name="launcher_words">워드</string>
+
 </resources>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="launcher_feeds">Стужкі</string>
     <string name="launcher_chat">Чат</string>
     <string name="launcher_forums">Форумы</string>
     <string name="launcher_projects">Праекты</string>
     <string name="launcher_settings">Налады</string>
-
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Шахматы</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Словы</string>
 </resources>

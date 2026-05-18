@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">שחמט</string>
+    <string name="chess_sidebar_header">שחמט</string>
+    <string name="chess_sidebar_active">משחקים פעילים</string>
+    <string name="chess_sidebar_completed">הושלם</string>
+    <string name="chess_sidebar_new_game">משחק חדש</string>
+    <string name="chess_section_active">משחקים פעילים</string>
+    <string name="chess_section_completed">הושלם</string>
+    <string name="chess_new_game">משחק חדש</string>
+    <string name="chess_empty_title">עדיין אין משחקים</string>
+    <string name="chess_new_title">משחק חדש</string>
+    <string name="chess_new_pick_opponent">בחר יריב</string>
+    <string name="chess_new_no_friends_title">עדיין אין חברים</string>
+    <string name="chess_new_no_friends_subtitle">הוסף חברים באפליקציית האנשים כדי להתחיל לשחק</string>
+    <string name="chess_new_add_friends">הוסף חברים</string>
+    <string name="chess_new_start_button">התחל משחק</string>
+    <string name="chess_new_creating">יוצר…</string>
+    <string name="chess_new_failed">יצירת המשחק נכשלה</string>
+    <string name="chess_chat_title">צ\'אט</string>
+    <string name="chess_open_chat">פתח פאנל צ\'אט</string>
+    <string name="chess_open_actions">פתח פעולות משחק</string>
+    <string name="chess_offer_draw">הצע תיקו</string>
+    <string name="chess_resign">פרוש</string>
+    <string name="chess_rematch">משחק חוזר</string>
+    <string name="chess_delete_game">מחק משחק</string>
+    <string name="chess_side_white">לבן</string>
+    <string name="chess_side_black">שחור</string>
+    <string name="chess_resign_title">לפרוש מהמשחק?</string>
+    <string name="chess_resign_confirm">פרוש</string>
+    <string name="chess_delete_confirm">מחק משחק</string>
+    <string name="chess_draw_accept">אישור</string>
+    <string name="chess_draw_decline">דחייה</string>
+    <string name="chess_status_checkmate_you_win">שחמט — ניצחת!</string>
+    <string name="chess_status_stalemate">פט — תיקו</string>
+    <string name="chess_status_draw">תיקו</string>
+    <string name="chess_status_check_your_move">שח — תורך</string>
+    <string name="chess_status_your_move">התור שלך</string>
+    <string name="chess_move_subject_you">אתה</string>
+    <string name="chess_promotion_title">הכתרה ל:</string>
+
+    <string name="chess_resign_message">האם אתה בטוח שברצונך לפרוש? %1$s ינצח במשחק.</string>
+    <string name="chess_draw_offered">%1$s הציע תיקו</string>
+    <string name="chess_draw_waiting">הוצעה תיקו — ממתין ל-%1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">שחמט — %1$s ניצח</string>
+    <string name="chess_status_resigned_you">התפטרת — %1$s ניצח</string>
+    <string name="chess_status_resigned_opponent">%1$s התפטר — ניצחת!</string>
+    <string name="chess_status_check_opponent_move">שח — תורו של %1$s</string>
+    <string name="chess_status_opponent_move">התור של %1$s</string>
+    <string name="chess_piece_king">מלך</string>
+    <string name="chess_piece_queen">מלכה</string>
+    <string name="chess_piece_rook">צריח</string>
+    <string name="chess_piece_bishop">רץ</string>
+    <string name="chess_piece_knight">פרש</string>
+    <string name="chess_piece_pawn">רגלי</string>
+    <string name="chess_move_played">%1$s שיחק %2$s</string>
+    <string name="chess_channel_name">התראות שחמט</string>
+    <string name="chess_channel_description">התראות על מהלכים, הצעות תיקו ותוצאות משחקים.</string>
+    <string name="chess_open_sidebar">פתח סרגל צד</string>
+    <string name="chess_empty_subtitle">התחל את המשחק הראשון שלך כדי לשחק שחמט עם חבר.</string>
+    <string name="chess_empty_start_button">התחל את המשחק הראשון שלך</string>
+    <string name="chess_detail_unavailable">המשחק לא זמין</string>
+    <string name="chess_delete_title">מחק משחק?</string>
+    <string name="chess_delete_message">פעולה זו מסירה את המשחק מהרשימה שלך.</string>
+    <string name="chess_ws_connecting">מתחבר…</string>
+    <string name="chess_ws_disconnected">לא מקוון</string>
+    <string name="chess_ws_reconnecting">מתחבר מחדש…</string>
+    <string name="chess_ws_failed">ההתחברות נכשלה</string>
+    <string name="chess_move_capture">%1$s לקח %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

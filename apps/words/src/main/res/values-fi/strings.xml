@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Valikko</string>
+    <string name="words_list_new">Uusi peli</string>
+    <string name="words_list_logout">Kirjaudu ulos</string>
+    <string name="words_list_empty_title">Ei vielä pelejä</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Valmis</string>
+    <string name="words_sidebar_new_game">Uusi peli</string>
+    <string name="words_new_game_title">Uusi peli</string>
+    <string name="words_new_game_language">Kieli</string>
+    <string name="words_new_game_language_uk">Englanti (UK)</string>
+    <string name="words_new_game_language_us">Englanti (US)</string>
+    <string name="words_new_game_start">Aloita peli</string>
+    <string name="words_new_game_no_friends_title">Ei vielä ystäviä</string>
+    <string name="words_new_game_add_friends">Lisää kavereita</string>
+    <string name="words_detail_status_your_move">Sinun siirtosi</string>
+    <string name="words_detail_status_you_win">Voitit!</string>
+    <string name="words_detail_status_game_over">Peli päättyi</string>
+    <string name="words_detail_status_opponent_resigned">Vastustaja luovutti — voitit!</string>
+    <string name="words_detail_status_you_resigned">Luovutit</string>
+    <string name="words_detail_label_you">Sinä</string>
+    <string name="words_detail_action_shuffle">Sekoita teline</string>
+    <string name="words_detail_action_pass">Passaa</string>
+    <string name="words_detail_action_exchange">Vaihda laattoja</string>
+    <string name="words_detail_action_cancel_exchange">Peruuta vaihto</string>
+    <string name="words_detail_action_resign">Luovuta</string>
+    <string name="words_detail_action_rematch">Uusinta</string>
+    <string name="words_detail_action_delete">Poista peli</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Virheellinen siirto</string>
+    <string name="words_detail_recall">Peruuta</string>
+    <string name="words_detail_submit">Lähetä</string>
+    <string name="words_detail_cancel">Peruuta</string>
+    <string name="words_detail_exchange">Vaihda</string>
+    <string name="words_detail_blank_title">Valitse kirjain</string>
+    <string name="words_detail_resign_title">Luovutatko pelin?</string>
+    <string name="words_detail_resign_message">Haluatko varmasti luovuttaa?</string>
+    <string name="words_detail_failed_move">Siirron lähetys epäonnistui</string>
+    <string name="words_detail_failed_pass">Ohittaminen epäonnistui</string>
+    <string name="words_detail_failed_exchange">Vaihto epäonnistui</string>
+    <string name="words_detail_failed_resign">Luovuttaminen epäonnistui</string>
+    <string name="words_detail_failed_rematch">Uusintaottelun luominen epäonnistui</string>
+    <string name="words_detail_failed_delete">Pelin poistaminen epäonnistui</string>
+    <string name="words_detail_game_deleted">Peli poistettu</string>
+
+    <string name="words_channel_name">Sanat-ilmoitukset</string>
+    <string name="words_channel_description">Ilmoitukset vuoroista, vaihdoista ja pelitulokset.</string>
+    <string name="words_list_empty_subtitle">Napauta +-painiketta aloittaaksesi ensimmäisen pelisi.</string>
+    <string name="words_list_status_finished">Päättynyt</string>
+    <string name="words_list_status_resigned">Luovutettu</string>
+    <string name="words_list_your_turn">Sinun vuorosi</string>
+    <string name="words_sidebar_active">Aktiiviset pelit</string>
+    <string name="words_sidebar_empty">Ei pelejä vielä.</string>
+    <string name="words_new_game_choose_opponents">Valitse vastustajat</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d pelaajaa</string>
+    <string name="words_new_game_no_friends_subtitle">Lisää ystäviä Henkilöt-sovelluksessa aloittaaksesi pelaamisen.</string>
+    <string name="words_detail_title">Peli</string>
+    <string name="words_detail_coming_soon">Pelin tiedot tulossa pian</string>
+    <string name="words_detail_status_opponent_move">%1$s vuoro</string>
+    <string name="words_detail_status_winner_wins">%1$s voittaa</string>
+    <string name="words_detail_player_fallback">Pelaaja %1$d</string>
+    <string name="words_detail_player_count">%1$d pelaajaa</string>
+    <string name="words_detail_label_tiles_left">%1$d laattaa jäljellä</string>
+    <string name="words_detail_action_open_chat">Avaa chat</string>
+    <string name="words_detail_action_more">Pelin toiminnot</string>
+    <string name="words_detail_exchange_count">Vaihda (%1$d)</string>
+    <string name="words_detail_chat_you_played">Pelasit %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s pelasi %2$s</string>
+
+</resources>

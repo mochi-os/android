@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Меню</string>
+    <string name="words_list_new">Бозии нав</string>
+    <string name="words_list_logout">Баромадан</string>
+    <string name="words_list_empty_title">То ҳол ягон бозӣ нест</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Анҷомшуда</string>
+    <string name="words_sidebar_new_game">Бозии нав</string>
+    <string name="words_new_game_title">Бозии нав</string>
+    <string name="words_new_game_language">Забон</string>
+    <string name="words_new_game_language_uk">English (UK)</string>
+    <string name="words_new_game_language_us">English (US)</string>
+    <string name="words_new_game_start">Бозӣ оғоз кунед</string>
+    <string name="words_new_game_no_friends_title">То ҳол ягон дӯст нест</string>
+    <string name="words_new_game_add_friends">Иловаи дӯстон</string>
+    <string name="words_detail_status_your_move">Ҳаракати шумо</string>
+    <string name="words_detail_status_you_win">Шумо мебаред!</string>
+    <string name="words_detail_status_game_over">Бозӣ ба охир расид</string>
+    <string name="words_detail_status_opponent_resigned">Рақиб таслим шуд — шумо ғолиб!</string>
+    <string name="words_detail_status_you_resigned">Шумо истеъфо додед</string>
+    <string name="words_detail_label_you">Шумо</string>
+    <string name="words_detail_action_shuffle">Рафро бо тартиби тасодуфӣ ҷобаҷо кардан</string>
+    <string name="words_detail_action_pass">Гузар</string>
+    <string name="words_detail_action_exchange">Мубодилаи плитаҳо</string>
+    <string name="words_detail_action_cancel_exchange">Бекор кардани мубодила</string>
+    <string name="words_detail_action_resign">Таслим</string>
+    <string name="words_detail_action_rematch">Бозиҳои такрорӣ</string>
+    <string name="words_detail_action_delete">Нест кардани бозӣ</string>
+    <string name="words_detail_chat_title">Чат</string>
+    <string name="words_detail_invalid_move">Ҳаракати нодуруст</string>
+    <string name="words_detail_recall">Бозхон</string>
+    <string name="words_detail_submit">Пешниҳод кардан</string>
+    <string name="words_detail_cancel">Бекор кардан</string>
+    <string name="words_detail_exchange">Мубодила</string>
+    <string name="words_detail_blank_title">Ҳарф интихоб кунед</string>
+    <string name="words_detail_resign_title">Аз бозӣ таслим шудан?</string>
+    <string name="words_detail_resign_message">Шумо мутмаин ҳастед, ки мехоҳед таслим шавед?</string>
+    <string name="words_detail_failed_move">Пешниҳоди ҳаракат ба анҷом нарасид</string>
+    <string name="words_detail_failed_pass">Гузаштан ба анҷом нарасид</string>
+    <string name="words_detail_failed_exchange">Мубодила ба анҷом нарасид</string>
+    <string name="words_detail_failed_resign">Истеъфо ба анҷом нарасид</string>
+    <string name="words_detail_failed_rematch">Эҷоди бозии нав ба анҷом нарасид</string>
+    <string name="words_detail_failed_delete">Ҳазфи бозӣ ба анҷом нарасид</string>
+    <string name="words_detail_game_deleted">Бозӣ ҳазф шуд</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

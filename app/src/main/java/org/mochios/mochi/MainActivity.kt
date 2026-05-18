@@ -53,6 +53,12 @@ import org.mochios.people.navigation.PeopleApp
 import org.mochios.people.navigation.peopleNavGraph
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.navigation.wikisNavGraph
+import org.mochios.chess.navigation.ChessApp
+import org.mochios.chess.navigation.chessNavGraph
+import org.mochios.go.navigation.GoApp
+import org.mochios.go.navigation.goNavGraph
+import org.mochios.words.navigation.WordsApp
+import org.mochios.words.navigation.wordsNavGraph
 import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
 import org.mochios.settings.navigation.SettingsApp
@@ -184,6 +190,24 @@ class MainActivity : ComponentActivity() {
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                     wikisNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                        onOpenLink = { link -> navigateToLink(navController, link) },
+                                    )
+                                    chessNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                        onOpenLink = { link -> navigateToLink(navController, link) },
+                                    )
+                                    goNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                        onOpenLink = { link -> navigateToLink(navController, link) },
+                                    )
+                                    wordsNavGraph(
                                         navController,
                                         onLogout = onLogout,
                                         onOpenNotifications = openNotifications,
@@ -481,6 +505,9 @@ class MainActivity : ComponentActivity() {
         "people" -> PeopleApp.HOME
         "settings" -> SettingsApp.HOME
         "wikis" -> WikisApp.HOME
+        "chess" -> ChessApp.HOME
+        "go" -> GoApp.HOME
+        "words" -> WordsApp.HOME
         else -> FeedsApp.HOME
     }
 
@@ -518,6 +545,6 @@ class MainActivity : ComponentActivity() {
          * first API call — only one of the four would otherwise get its token
          * minted (the cold-start alias's app).
          */
-        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis")
+        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words")
     }
 }

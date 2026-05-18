@@ -7,4 +7,9 @@
     <string name="launcher_projects">Taslamalar</string>
     <string name="launcher_settings">Sazlamalar</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Chess</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Words</string>
+
 </resources>

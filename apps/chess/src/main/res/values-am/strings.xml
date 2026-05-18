@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">ቼዝ</string>
+    <string name="chess_sidebar_header">ቼዝ</string>
+    <string name="chess_sidebar_active">ንቁ ጨዋታዎች</string>
+    <string name="chess_sidebar_completed">ተጠናቅቋል</string>
+    <string name="chess_sidebar_new_game">አዲስ ጨዋታ</string>
+    <string name="chess_section_active">ንቁ ጨዋታዎች</string>
+    <string name="chess_section_completed">ተጠናቅቋል</string>
+    <string name="chess_new_game">አዲስ ጨዋታ</string>
+    <string name="chess_empty_title">እስካሁን ጨዋታዎች የሉም</string>
+    <string name="chess_new_title">አዲስ ጨዋታ</string>
+    <string name="chess_new_pick_opponent">ተቀናቃኝ ምረጥ</string>
+    <string name="chess_new_no_friends_title">እስካሁን ጓደኞች የሉም</string>
+    <string name="chess_new_no_friends_subtitle">መጫወት ለመጀመር በሰዎች መተግበሪያ ላይ ጓደኞችን ጨምር</string>
+    <string name="chess_new_add_friends">ጓደኞችን ጨምር</string>
+    <string name="chess_new_start_button">ጨዋታ ይጀምሩ</string>
+    <string name="chess_new_creating">በመፍጠር ላይ…</string>
+    <string name="chess_new_failed">ጨዋታ መፍጠር አልተሳካም</string>
+    <string name="chess_chat_title">ውይይት</string>
+    <string name="chess_open_chat">የውይይት ፓነልን ክፈት</string>
+    <string name="chess_open_actions">የጨዋታ ድርጊቶችን ክፈት</string>
+    <string name="chess_offer_draw">አቻ አቅርብ</string>
+    <string name="chess_resign">ለቀቅ</string>
+    <string name="chess_rematch">እንደገና ተወዳደር</string>
+    <string name="chess_delete_game">ጨዋታ ሰርዝ</string>
+    <string name="chess_side_white">ነጭ</string>
+    <string name="chess_side_black">ጥቁር</string>
+    <string name="chess_resign_title">ጨዋታ ይለቀቅ?</string>
+    <string name="chess_resign_confirm">ለቀቅ</string>
+    <string name="chess_delete_confirm">ጨዋታ ሰርዝ</string>
+    <string name="chess_draw_accept">ተቀበል</string>
+    <string name="chess_draw_decline">አትቀበል</string>
+    <string name="chess_status_checkmate_you_win">ቼክሜት — አሸንፈሃል!</string>
+    <string name="chess_status_stalemate">የማይነቃነቅ — አቻ</string>
+    <string name="chess_status_draw">አቻ</string>
+    <string name="chess_status_check_your_move">ቼክ — የአንተ ተራ</string>
+    <string name="chess_status_your_move">የእርስዎ እንቅስቃሴ</string>
+    <string name="chess_move_subject_you">እርስዎ</string>
+    <string name="chess_promotion_title">ከፍ ያድርጉ:</string>
+
+    <string name="chess_resign_message">በእርግጥ መልቀቅ ይፈልጋሉ? %1$s ጨዋታውን ያሸንፋል።</string>
+    <string name="chess_draw_offered">%1$s አቻ አቅርቧል</string>
+    <string name="chess_draw_waiting">አቻ ቀርቧል — %1$sን በመጠበቅ ላይ</string>
+    <string name="chess_status_checkmate_opponent_wins">ቼክሜት — %1$s አሸንፏል</string>
+    <string name="chess_status_resigned_you">ተዉ — %1$s አሸንፏል</string>
+    <string name="chess_status_resigned_opponent">%1$s ተወ — እርስዎ አሸንፈዋል!</string>
+    <string name="chess_status_check_opponent_move">ቼክ — የ%1$s ተራ</string>
+    <string name="chess_status_opponent_move">የ%1$s እንቅስቃሴ</string>
+    <string name="chess_piece_king">ንጉስ</string>
+    <string name="chess_piece_queen">ንግስት</string>
+    <string name="chess_piece_rook">ግንብ</string>
+    <string name="chess_piece_bishop">ፈረሰኛ</string>
+    <string name="chess_piece_knight">ፈረስ</string>
+    <string name="chess_piece_pawn">ወታደር</string>
+    <string name="chess_move_played">%1$s %2$s ተጫውቷል</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

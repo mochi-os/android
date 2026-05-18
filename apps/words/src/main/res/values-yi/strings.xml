@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">מעניו</string>
+    <string name="words_list_new">נײַ שפּיל</string>
+    <string name="words_list_logout">אַרויסקומען</string>
+    <string name="words_list_empty_title">נאָך קיין שפּילן</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">פֿאַרענדיקט</string>
+    <string name="words_sidebar_new_game">נײַ שפּיל</string>
+    <string name="words_new_game_title">נײַ שפּיל</string>
+    <string name="words_new_game_language">שפּראַך</string>
+    <string name="words_new_game_language_uk">ענגליש (UK)</string>
+    <string name="words_new_game_language_us">ענגליש (US)</string>
+    <string name="words_new_game_start">הייב אָן שפּיל</string>
+    <string name="words_new_game_no_friends_title">נאָך קיין פֿרײַנד</string>
+    <string name="words_new_game_add_friends">צולייגן פֿרײַנד</string>
+    <string name="words_detail_status_your_move">אײַער צוג</string>
+    <string name="words_detail_status_you_win">איר געווינט!</string>
+    <string name="words_detail_status_game_over">שפּיל פֿאַרענדיקט</string>
+    <string name="words_detail_status_opponent_resigned">געגנער האָט רעזיגנירט — איר געווינט!</string>
+    <string name="words_detail_status_you_resigned">איר האָט רעזיגנירט</string>
+    <string name="words_detail_label_you">איר</string>
+    <string name="words_detail_action_shuffle">מיש פֿאַך</string>
+    <string name="words_detail_action_pass">פּאַס</string>
+    <string name="words_detail_action_exchange">אויסטויש ציגלען</string>
+    <string name="words_detail_action_cancel_exchange">אָפּזאָגן בײַט</string>
+    <string name="words_detail_action_resign">רעזיגנירן</string>
+    <string name="words_detail_action_rematch">ווידערמאַטש</string>
+    <string name="words_detail_action_delete">אויסמעקן שפּיל</string>
+    <string name="words_detail_chat_title">שמועס</string>
+    <string name="words_detail_invalid_move">ניט גילטיקער גאַנג</string>
+    <string name="words_detail_recall">צוריקרופֿן</string>
+    <string name="words_detail_submit">אונטערגעב</string>
+    <string name="words_detail_cancel">אָפּזאָגן</string>
+    <string name="words_detail_exchange">אויסטויש</string>
+    <string name="words_detail_blank_title">קלײַבט אַ אות</string>
+    <string name="words_detail_resign_title">רעזיגנירן שפּיל?</string>
+    <string name="words_detail_resign_message">זענט איר זיכער איר ווילט רעזיגנירן?</string>
+    <string name="words_detail_failed_move">ניט געלונגען אונטערצוגעבן גאַנג</string>
+    <string name="words_detail_failed_pass">ניט געלונגען צו פּאַסירן</string>
+    <string name="words_detail_failed_exchange">ניט געלונגען צו אויסטוישן</string>
+    <string name="words_detail_failed_resign">ניט געלונגען צו רעזיגנירן</string>
+    <string name="words_detail_failed_rematch">ניט געלונגען צו שאַפֿן רעמאַטש</string>
+    <string name="words_detail_failed_delete">ניט געלונגען צו מעקן שפּיל</string>
+    <string name="words_detail_game_deleted">שפּיל אויסגעמעקט</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

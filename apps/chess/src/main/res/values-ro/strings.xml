@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Șah</string>
+    <string name="chess_sidebar_header">Șah</string>
+    <string name="chess_sidebar_active">Jocuri active</string>
+    <string name="chess_sidebar_completed">Finalizat</string>
+    <string name="chess_sidebar_new_game">Joc nou</string>
+    <string name="chess_section_active">Jocuri active</string>
+    <string name="chess_section_completed">Finalizat</string>
+    <string name="chess_new_game">Joc nou</string>
+    <string name="chess_empty_title">Încă niciun joc</string>
+    <string name="chess_new_title">Joc nou</string>
+    <string name="chess_new_pick_opponent">Alege adversarul</string>
+    <string name="chess_new_no_friends_title">Încă niciun prieten</string>
+    <string name="chess_new_no_friends_subtitle">Adaugă prieteni în aplicația People pentru a începe să joci</string>
+    <string name="chess_new_add_friends">Adaugă prieteni</string>
+    <string name="chess_new_start_button">Începe jocul</string>
+    <string name="chess_new_creating">Se creează…</string>
+    <string name="chess_new_failed">Crearea jocului a eșuat</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Deschide panoul de conversație</string>
+    <string name="chess_open_actions">Deschide acțiuni joc</string>
+    <string name="chess_offer_draw">Oferă remiză</string>
+    <string name="chess_resign">Abandonează</string>
+    <string name="chess_rematch">Revanșă</string>
+    <string name="chess_delete_game">Șterge jocul</string>
+    <string name="chess_side_white">Alb</string>
+    <string name="chess_side_black">Negru</string>
+    <string name="chess_resign_title">Abandonezi jocul?</string>
+    <string name="chess_resign_confirm">Abandonează</string>
+    <string name="chess_delete_confirm">Șterge jocul</string>
+    <string name="chess_draw_accept">Acceptă</string>
+    <string name="chess_draw_decline">Respinge</string>
+    <string name="chess_status_checkmate_you_win">Șah-mat — ai câștigat!</string>
+    <string name="chess_status_stalemate">Pat — egalitate</string>
+    <string name="chess_status_draw">Remiză</string>
+    <string name="chess_status_check_your_move">Șah — e rândul tău</string>
+    <string name="chess_status_your_move">Mutarea ta</string>
+    <string name="chess_move_subject_you">Tu</string>
+    <string name="chess_promotion_title">Promovează la:</string>
+
+    <string name="chess_resign_message">Sigur vrei să te retragi? %1$s va câștiga jocul.</string>
+    <string name="chess_draw_offered">%1$s a oferit egalitate</string>
+    <string name="chess_draw_waiting">Remiză oferită — se așteaptă %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Șah-mat — câștigă %1$s</string>
+    <string name="chess_status_resigned_you">Ai abandonat — %1$s câștigă</string>
+    <string name="chess_status_resigned_opponent">%1$s a abandonat — ai câștigat!</string>
+    <string name="chess_status_check_opponent_move">Șah — e rândul lui %1$s</string>
+    <string name="chess_status_opponent_move">Mutarea lui %1$s</string>
+    <string name="chess_piece_king">Rege</string>
+    <string name="chess_piece_queen">Regină</string>
+    <string name="chess_piece_rook">Tură</string>
+    <string name="chess_piece_bishop">Nebun</string>
+    <string name="chess_piece_knight">Cal</string>
+    <string name="chess_piece_pawn">Pion</string>
+    <string name="chess_move_played">%1$s a jucat %2$s</string>
+    <string name="chess_channel_name">Notificări Șah</string>
+    <string name="chess_channel_description">Notificări despre mutări, oferte de remiză și rezultate de partidă.</string>
+    <string name="chess_open_sidebar">Deschide bara laterală</string>
+    <string name="chess_empty_subtitle">Începeți prima partidă pentru a juca șah cu un prieten.</string>
+    <string name="chess_empty_start_button">Începeți prima partidă</string>
+    <string name="chess_detail_unavailable">Partidă indisponibilă</string>
+    <string name="chess_delete_title">Ștergeți partida?</string>
+    <string name="chess_delete_message">Aceasta elimină partida din lista dumneavoastră.</string>
+    <string name="chess_ws_connecting">Se conectează…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Se reconectează…</string>
+    <string name="chess_ws_failed">Conexiunea a eșuat</string>
+    <string name="chess_move_capture">%1$s a luat %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="launcher_feeds">Mlisho</string>
     <string name="launcher_chat">Gumzo</string>
     <string name="launcher_forums">Makongamano</string>
     <string name="launcher_projects">Miradi</string>
     <string name="launcher_settings">Mipangilio</string>
-
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Chess</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Maneno</string>
 </resources>

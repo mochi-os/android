@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="launcher_feeds">Straumar</string>
     <string name="launcher_chat">Prat</string>
     <string name="launcher_forums">Forum</string>
     <string name="launcher_projects">Prosjekt</string>
     <string name="launcher_settings">Innstillingar</string>
-
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Sjakk</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Ord</string>
 </resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Logħba ġdida</string>
+    <string name="words_list_logout">Oħroġ</string>
+    <string name="words_list_empty_title">L-ebda logħob s\'issa</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Lest</string>
+    <string name="words_sidebar_new_game">Logħba ġdida</string>
+    <string name="words_new_game_title">Logħba ġdida</string>
+    <string name="words_new_game_language">Lingwa</string>
+    <string name="words_new_game_language_uk">Ingliż (UK)</string>
+    <string name="words_new_game_language_us">Ingliż (US)</string>
+    <string name="words_new_game_start">Ibda l-logħba</string>
+    <string name="words_new_game_no_friends_title">L-ebda ħbieb s\'issa</string>
+    <string name="words_new_game_add_friends">Żid ħbieb</string>
+    <string name="words_detail_status_your_move">Il-mossa tiegħek</string>
+    <string name="words_detail_status_you_win">Rebaħt!</string>
+    <string name="words_detail_status_game_over">Il-logħba ntemmet</string>
+    <string name="words_detail_status_opponent_resigned">L-avversarju rriżenja — int rebbaħt!</string>
+    <string name="words_detail_status_you_resigned">Irriżenjajt</string>
+    <string name="words_detail_label_you">Int</string>
+    <string name="words_detail_action_shuffle">Ħallat l-ixkaffa</string>
+    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_exchange">Skambja l-madum</string>
+    <string name="words_detail_action_cancel_exchange">Ikkanċella l-iskambju</string>
+    <string name="words_detail_action_resign">Irriżenja</string>
+    <string name="words_detail_action_rematch">Logħba mill-ġdid</string>
+    <string name="words_detail_action_delete">Ħassar logħba</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Mossa invalida</string>
+    <string name="words_detail_recall">Sejjaħ lura</string>
+    <string name="words_detail_submit">Issottometti</string>
+    <string name="words_detail_cancel">Ikkanċella</string>
+    <string name="words_detail_exchange">Skambja</string>
+    <string name="words_detail_blank_title">Agħżel ittra</string>
+    <string name="words_detail_resign_title">Tirriżenja l-logħba?</string>
+    <string name="words_detail_resign_message">Żgur trid tirriżenja?</string>
+    <string name="words_detail_failed_move">Ma rnexxiex tiġi sottomessa l-mossa</string>
+    <string name="words_detail_failed_pass">Ma rnexxiex jiġi pass</string>
+    <string name="words_detail_failed_exchange">Ma rnexxiex jiġi skambjat</string>
+    <string name="words_detail_failed_resign">Ma rnexxiex jiġi rriżenjat</string>
+    <string name="words_detail_failed_rematch">Ma rnexxiex tinħoloq it-tieni partita</string>
+    <string name="words_detail_failed_delete">Ma rnexxiex titħassar il-logħba</string>
+    <string name="words_detail_game_deleted">Tħassret il-logħba</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

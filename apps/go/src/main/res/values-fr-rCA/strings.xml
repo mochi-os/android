@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="go_chat_close">Fermer le clavardage</string>
+    <string name="go_chat_title">Clavardage</string>
+    <string name="go_delete_title">Supprimer la partie?</string>
+
+</resources>

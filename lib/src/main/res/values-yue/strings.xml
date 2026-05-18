@@ -8,4 +8,6 @@
     <string name="settings_font_size_normal">Normal</string>
     <string name="profile_privacy">Privacy</string>
 
+    <string name="game_chat_load_more">載入更多</string>
+    <string name="game_chat_move_played">%1$s 走了 %2$s</string>
 </resources>

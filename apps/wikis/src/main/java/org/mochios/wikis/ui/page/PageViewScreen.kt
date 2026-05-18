@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -40,13 +41,17 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
@@ -398,10 +403,12 @@ fun PageViewScreen(
  * heading list pushed up by [MarkdownContent] so the [TableOfContents] card
  * can render the entries.
  *
- * The active-heading-tracking that the web version performs from scroll
- * position is intentionally not ported — phone-screen scroll listening +
- * Markwon's view doesn't expose per-heading offsets cleanly. The TOC stays a
- * pure navigation aid (tap → scroll), without a live "you are here" pip.
+ * Mirrors web's scroll-driven active-heading tracker in
+ * `apps/wikis/web/src/features/wiki/page-view.tsx` lines 115-180.
+ * [MarkdownContent] reports per-heading Y offsets (relative to its own
+ * top); we compare them against the current `scrollState.value` plus a
+ * 120dp activation offset to pick the topmost-visible heading and
+ * highlight that TOC row.
  */
 @Composable
 private fun PageBody(
@@ -416,28 +423,77 @@ private fun PageBody(
     onTagsChanged: (List<String>) -> Unit,
 ) {
     val headings = remember { mutableStateOf(emptyList<TocHeading>()) }
+    val scrollState = rememberScrollState()
+    val tocScope = rememberCoroutineScope()
+    // Map of headingId -> Y in pixels, measured by MarkdownContent's
+    // per-segment TextViews from their layout pass. Positions are
+    // relative to MarkdownContent's own top — we add `markdownOffsetY`
+    // (below) to get the absolute Y in the outer scrolling Column's
+    // content space.
+    var headingPositions by remember { mutableStateOf<Map<String, Int>>(emptyMap()) }
+    // Y offset of MarkdownContent inside the outer scrolling Column.
+    // Captured via `onGloballyPositioned` on the wrapper so we can shift
+    // `headingPositions` into the outer scroll's coordinate system before
+    // comparing them against `scrollState.value`.
+    var markdownOffsetY by remember { mutableIntStateOf(0) }
+    val density = LocalDensity.current
+    val activationOffsetPx = with(density) { 120.dp.toPx() }.toInt()
+
+    // Derive the active heading from current scroll position. Matches the
+    // web's algorithm: pick the heading whose top is just above
+    // (scrollValue + activationOffset); fall back to the first heading
+    // when the user is above all of them.
+    val activeId = computeActiveHeading(
+        headings = headings.value,
+        positions = headingPositions.mapValues { it.value + markdownOffsetY },
+        scrollY = scrollState.value,
+        activationOffsetPx = activationOffsetPx,
+    )
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .verticalScroll(rememberScrollState())
+            .verticalScroll(scrollState)
             .padding(horizontal = 16.dp, vertical = 12.dp),
     ) {
         if (headings.value.isNotEmpty()) {
             TableOfContents(
                 headings = headings.value,
-                activeId = null,
-                onHeadingTap = { /* no scroll-target wiring yet; see kdoc */ },
+                activeId = activeId,
+                onHeadingTap = { id ->
+                    headingPositions[id]?.let { y ->
+                        tocScope.launch {
+                            // The map is in MarkdownContent-relative
+                            // coordinates; add the markdown wrapper's Y
+                            // inside the outer scroll Column to get the
+                            // absolute target. Mirrors web's
+                            // `scrollIntoView({block:'start'})`.
+                            scrollState.animateScrollTo(y + markdownOffsetY)
+                        }
+                    }
+                },
             )
             Spacer(Modifier.height(12.dp))
         }
 
-        MarkdownContent(
-            content = page.content,
-            missingLinks = missingLinks,
-            onHeadingsExtracted = { headings.value = it },
-            onInternalLink = onInternalLink,
-        )
+        // The wrapper captures MarkdownContent's Y inside the outer
+        // verticalScroll Column so the per-heading positions reported
+        // *within* MarkdownContent can be shifted into outer-scroll
+        // coordinates before comparing them against `scrollState.value`.
+        Box(
+            modifier = Modifier.onGloballyPositioned { coords ->
+                val parentY = coords.positionInParent().y.toInt()
+                if (parentY != markdownOffsetY) markdownOffsetY = parentY
+            }
+        ) {
+            MarkdownContent(
+                content = page.content,
+                missingLinks = missingLinks,
+                onHeadingsExtracted = { headings.value = it },
+                onHeadingPositions = { positions -> headingPositions = positions },
+                onInternalLink = onInternalLink,
+            )
+        }
 
         Spacer(Modifier.height(16.dp))
         HorizontalDivider()
@@ -453,6 +509,36 @@ private fun PageBody(
             onTagsChanged = onTagsChanged,
         )
     }
+}
+
+/**
+ * Pure function: pick the active TOC heading given current scroll offset
+ * and the per-heading Y positions inside [MarkdownContent]. Mirrors web's
+ * `updateActiveHeadingFromScroll`:
+ *
+ *  - Choose the heading whose top is at or above `(scrollY + activation)`.
+ *  - Fall back to the first heading when the user is above all of them.
+ *  - Returns `null` only if there are no headings at all (in which case
+ *    the TOC card wouldn't render either).
+ */
+internal fun computeActiveHeading(
+    headings: List<TocHeading>,
+    positions: Map<String, Int>,
+    scrollY: Int,
+    activationOffsetPx: Int,
+): String? {
+    if (headings.isEmpty()) return null
+    val threshold = scrollY + activationOffsetPx
+    var current: String? = headings.firstOrNull()?.id
+    for (h in headings) {
+        val y = positions[h.id] ?: continue
+        if (y <= threshold) {
+            current = h.id
+        } else {
+            break
+        }
+    }
+    return current
 }
 
 /**

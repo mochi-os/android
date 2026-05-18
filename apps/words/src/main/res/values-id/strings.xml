@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Permainan baru</string>
+    <string name="words_list_logout">Keluar</string>
+    <string name="words_list_empty_title">Belum ada permainan</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Selesai</string>
+    <string name="words_sidebar_new_game">Permainan baru</string>
+    <string name="words_new_game_title">Permainan baru</string>
+    <string name="words_new_game_language">Bahasa</string>
+    <string name="words_new_game_language_uk">Inggris (UK)</string>
+    <string name="words_new_game_language_us">Inggris (US)</string>
+    <string name="words_new_game_start">Mulai permainan</string>
+    <string name="words_new_game_no_friends_title">Belum ada teman</string>
+    <string name="words_new_game_add_friends">Tambah teman</string>
+    <string name="words_detail_status_your_move">Giliran Anda</string>
+    <string name="words_detail_status_you_win">Anda menang!</string>
+    <string name="words_detail_status_game_over">Permainan selesai</string>
+    <string name="words_detail_status_opponent_resigned">Lawan menyerah — Anda menang!</string>
+    <string name="words_detail_status_you_resigned">Anda mengundurkan diri</string>
+    <string name="words_detail_label_you">Anda</string>
+    <string name="words_detail_action_shuffle">Acak rak</string>
+    <string name="words_detail_action_pass">Lewati</string>
+    <string name="words_detail_action_exchange">Tukar ubin</string>
+    <string name="words_detail_action_cancel_exchange">Batalkan pertukaran</string>
+    <string name="words_detail_action_resign">Menyerah</string>
+    <string name="words_detail_action_rematch">Tanding ulang</string>
+    <string name="words_detail_action_delete">Hapus permainan</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Langkah tidak valid</string>
+    <string name="words_detail_recall">Tarik kembali</string>
+    <string name="words_detail_submit">Kirim</string>
+    <string name="words_detail_cancel">Batal</string>
+    <string name="words_detail_exchange">Tukar</string>
+    <string name="words_detail_blank_title">Pilih huruf</string>
+    <string name="words_detail_resign_title">Menyerah dalam permainan?</string>
+    <string name="words_detail_resign_message">Yakin ingin menyerah?</string>
+    <string name="words_detail_failed_move">Gagal mengirimkan langkah</string>
+    <string name="words_detail_failed_pass">Gagal melewati</string>
+    <string name="words_detail_failed_exchange">Gagal menukar</string>
+    <string name="words_detail_failed_resign">Gagal menyerah</string>
+    <string name="words_detail_failed_rematch">Gagal membuat tanding ulang</string>
+    <string name="words_detail_failed_delete">Gagal menghapus permainan</string>
+    <string name="words_detail_game_deleted">Permainan dihapus</string>
+
+    <string name="words_channel_name">Notifikasi Kata</string>
+    <string name="words_channel_description">Notifikasi tentang giliran, pertukaran, dan hasil pertandingan.</string>
+    <string name="words_list_empty_subtitle">Ketuk tombol + untuk memulai pertandingan pertama Anda.</string>
+    <string name="words_list_status_finished">Selesai</string>
+    <string name="words_list_status_resigned">Menyerah</string>
+    <string name="words_list_your_turn">Giliran Anda</string>
+    <string name="words_sidebar_active">Pertandingan aktif</string>
+    <string name="words_sidebar_empty">Belum ada pertandingan.</string>
+    <string name="words_new_game_choose_opponents">Pilih lawan</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d pemain</string>
+    <string name="words_new_game_no_friends_subtitle">Tambahkan teman di aplikasi Orang untuk mulai bermain.</string>
+    <string name="words_detail_title">Pertandingan</string>
+    <string name="words_detail_coming_soon">Detail pertandingan segera hadir</string>
+    <string name="words_detail_status_opponent_move">Giliran %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s menang</string>
+    <string name="words_detail_player_fallback">Pemain %1$d</string>
+    <string name="words_detail_player_count">%1$d pemain</string>
+    <string name="words_detail_label_tiles_left">%1$d ubin tersisa</string>
+    <string name="words_detail_action_open_chat">Buka obrolan</string>
+    <string name="words_detail_action_more">Tindakan pertandingan</string>
+    <string name="words_detail_exchange_count">Tukar (%1$d)</string>
+    <string name="words_detail_chat_you_played">Anda memainkan %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s memainkan %2$s</string>
+
+</resources>

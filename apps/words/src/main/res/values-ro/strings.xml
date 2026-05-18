@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Meniu</string>
+    <string name="words_list_new">Joc nou</string>
+    <string name="words_list_logout">Deconectează-te</string>
+    <string name="words_list_empty_title">Încă niciun joc</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Finalizat</string>
+    <string name="words_sidebar_new_game">Joc nou</string>
+    <string name="words_new_game_title">Joc nou</string>
+    <string name="words_new_game_language">Limbă</string>
+    <string name="words_new_game_language_uk">Engleză (Marea Britanie)</string>
+    <string name="words_new_game_language_us">Engleză (SUA)</string>
+    <string name="words_new_game_start">Începe jocul</string>
+    <string name="words_new_game_no_friends_title">Încă niciun prieten</string>
+    <string name="words_new_game_add_friends">Adaugă prieteni</string>
+    <string name="words_detail_status_your_move">Mutarea ta</string>
+    <string name="words_detail_status_you_win">Ai câștigat!</string>
+    <string name="words_detail_status_game_over">Joc terminat</string>
+    <string name="words_detail_status_opponent_resigned">Adversarul a abandonat — ai câștigat!</string>
+    <string name="words_detail_status_you_resigned">Ai abandonat</string>
+    <string name="words_detail_label_you">Tu</string>
+    <string name="words_detail_action_shuffle">Amestecă suportul</string>
+    <string name="words_detail_action_pass">Pasează</string>
+    <string name="words_detail_action_exchange">Schimbă piesele</string>
+    <string name="words_detail_action_cancel_exchange">Anulează schimbul</string>
+    <string name="words_detail_action_resign">Abandonează</string>
+    <string name="words_detail_action_rematch">Revanșă</string>
+    <string name="words_detail_action_delete">Șterge jocul</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Mutare invalidă</string>
+    <string name="words_detail_recall">Retrage</string>
+    <string name="words_detail_submit">Trimite</string>
+    <string name="words_detail_cancel">Anulează</string>
+    <string name="words_detail_exchange">Schimb</string>
+    <string name="words_detail_blank_title">Alege o literă</string>
+    <string name="words_detail_resign_title">Abandonezi jocul?</string>
+    <string name="words_detail_resign_message">Sigur vrei să te retragi?</string>
+    <string name="words_detail_failed_move">Trimiterea mutării a eșuat</string>
+    <string name="words_detail_failed_pass">Trecerea a eșuat</string>
+    <string name="words_detail_failed_exchange">Schimbul a eșuat</string>
+    <string name="words_detail_failed_resign">Abandonul a eșuat</string>
+    <string name="words_detail_failed_rematch">Crearea revanșei a eșuat</string>
+    <string name="words_detail_failed_delete">Ștergerea jocului a eșuat</string>
+    <string name="words_detail_game_deleted">Joc șters</string>
+
+    <string name="words_channel_name">Notificări Cuvinte</string>
+    <string name="words_channel_description">Notificări despre ture, schimburi și rezultate de partidă.</string>
+    <string name="words_list_empty_subtitle">Atingeți butonul + pentru a începe prima partidă.</string>
+    <string name="words_list_status_finished">Finalizată</string>
+    <string name="words_list_status_resigned">Abandonată</string>
+    <string name="words_list_your_turn">Tura dumneavoastră</string>
+    <string name="words_sidebar_active">Partide active</string>
+    <string name="words_sidebar_empty">Încă nu există partide.</string>
+    <string name="words_new_game_choose_opponents">Alegeți adversari</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d jucători</string>
+    <string name="words_new_game_no_friends_subtitle">Adăugați prieteni în aplicația Persoane pentru a începe să jucați.</string>
+    <string name="words_detail_title">Partidă</string>
+    <string name="words_detail_coming_soon">Detalii partidă în curând</string>
+    <string name="words_detail_status_opponent_move">Tura lui %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s câștigă</string>
+    <string name="words_detail_player_fallback">Jucător %1$d</string>
+    <string name="words_detail_player_count">%1$d jucători</string>
+    <string name="words_detail_label_tiles_left">%1$d piese rămase</string>
+    <string name="words_detail_action_open_chat">Deschide chat</string>
+    <string name="words_detail_action_more">Acțiuni partidă</string>
+    <string name="words_detail_exchange_count">Schimbă (%1$d)</string>
+    <string name="words_detail_chat_you_played">Ai jucat %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s a jucat %2$s</string>
+
+</resources>

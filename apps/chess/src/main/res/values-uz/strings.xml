@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Shaxmat</string>
+    <string name="chess_sidebar_header">Shaxmat</string>
+    <string name="chess_sidebar_active">Faol oʻyinlar</string>
+    <string name="chess_sidebar_completed">Yakunlandi</string>
+    <string name="chess_sidebar_new_game">Yangi oʻyin</string>
+    <string name="chess_section_active">Faol oʻyinlar</string>
+    <string name="chess_section_completed">Yakunlandi</string>
+    <string name="chess_new_game">Yangi oʻyin</string>
+    <string name="chess_empty_title">Hozircha oʻyinlar yoʻq</string>
+    <string name="chess_new_title">Yangi oʻyin</string>
+    <string name="chess_new_pick_opponent">Raqib tanlang</string>
+    <string name="chess_new_no_friends_title">Hozircha doʻstlar yoʻq</string>
+    <string name="chess_new_no_friends_subtitle">Oʻyinni boshlash uchun People ilovasida doʻstlar qoʻshing</string>
+    <string name="chess_new_add_friends">Doʻstlar qoʻshish</string>
+    <string name="chess_new_start_button">Oʻyinni boshlash</string>
+    <string name="chess_new_creating">Yaratilmoqda…</string>
+    <string name="chess_new_failed">Oʻyin yaratib boʻlmadi</string>
+    <string name="chess_chat_title">Suhbat</string>
+    <string name="chess_open_chat">Suhbat panelini ochish</string>
+    <string name="chess_open_actions">Oʻyin amallarini ochish</string>
+    <string name="chess_offer_draw">Durang taklif qilish</string>
+    <string name="chess_resign">Taslim boʻlish</string>
+    <string name="chess_rematch">Qayta oʻyin</string>
+    <string name="chess_delete_game">Oʻyinni oʻchirish</string>
+    <string name="chess_side_white">Oq</string>
+    <string name="chess_side_black">Qora</string>
+    <string name="chess_resign_title">Oʻyindan voz kechilsinmi?</string>
+    <string name="chess_resign_confirm">Taslim boʻlish</string>
+    <string name="chess_delete_confirm">Oʻyinni oʻchirish</string>
+    <string name="chess_draw_accept">Qabul qilish</string>
+    <string name="chess_draw_decline">Rad etish</string>
+    <string name="chess_status_checkmate_you_win">Mat — siz yutdingiz!</string>
+    <string name="chess_status_stalemate">Tikilib qoldi — durang</string>
+    <string name="chess_status_draw">Chizish</string>
+    <string name="chess_status_check_your_move">Shoh — sizning yurishingiz</string>
+    <string name="chess_status_your_move">Sizning yurishingiz</string>
+    <string name="chess_move_subject_you">Siz</string>
+    <string name="chess_promotion_title">Bunga koʻtarish:</string>
+
+    <string name="chess_resign_message">Taslim boʻlishga ishonchingiz komilmi? %1$s oʻyinda gʻalaba qozonadi.</string>
+    <string name="chess_draw_offered">%1$s durang taklif qildi</string>
+    <string name="chess_draw_waiting">Durang taklif qilindi — %1$s kutilmoqda</string>
+    <string name="chess_status_checkmate_opponent_wins">Mat — %1$s yutdi</string>
+    <string name="chess_status_resigned_you">Siz taslim boʻldingiz — %1$s gʻalaba qildi</string>
+    <string name="chess_status_resigned_opponent">%1$s taslim boʻldi — siz yutdingiz!</string>
+    <string name="chess_status_check_opponent_move">Shoh — %1$s ning yurishi</string>
+    <string name="chess_status_opponent_move">%1$s ning yurishi</string>
+    <string name="chess_piece_king">Shoh</string>
+    <string name="chess_piece_queen">Qirolicha (farzin)</string>
+    <string name="chess_piece_rook">Tura</string>
+    <string name="chess_piece_bishop">Fil (slon)</string>
+    <string name="chess_piece_knight">Ot</string>
+    <string name="chess_piece_pawn">Piyoda</string>
+    <string name="chess_move_played">%1$s %2$s oʻynadi</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

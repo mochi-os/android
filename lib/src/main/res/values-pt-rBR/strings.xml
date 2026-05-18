@@ -26,7 +26,11 @@
     <string name="common_edit">Editar</string>
     <string name="common_delete">Excluir</string>
     <string name="common_add">Adicionar</string>
+    <string name="common_notifications">Notificações</string>
+    <string name="common_logout">Sair</string>
     <string name="common_subscribe">Inscrever-se</string>
+    <string name="common_copy">Copiar</string>
+    <string name="common_copied">Copiado para a área de transferência</string>
     <string name="comment_edited">(editado)</string>
     <string name="comment_edit_placeholder">Editar comentário</string>
     <string name="comment_reply">Responder</string>
@@ -119,7 +123,11 @@
     <string name="profile_privacy_public">Público</string>
     <string name="profile_privacy_private">Privado</string>
     <string name="profile_fingerprint">Impressão digital</string>
+    <string name="game_chat_empty">Ainda não há mensagens</string>
+    <string name="game_chat_input_placeholder">Digite uma mensagem…</string>
+    <string name="game_chat_send">Enviar mensagem</string>
+    <string name="game_chat_subject_you">Você</string>
 
-    <string name="common_copy">Copiar</string>
-    <string name="common_copied">Copiado para a área de transferência</string>
+    <string name="game_chat_load_more">Carregar mais</string>
+    <string name="game_chat_move_played">%1$s jogou %2$s</string>
 </resources>

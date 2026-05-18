@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="launcher_feeds">Viri</string>
     <string name="launcher_chat">Klepet</string>
     <string name="launcher_forums">Forumi</string>
     <string name="launcher_projects">Projekti</string>
     <string name="launcher_settings">Nastavitve</string>
-
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Šah</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Besede</string>
 </resources>

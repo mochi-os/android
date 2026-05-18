@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Ord</string>
+    <string name="words_list_title">Ord</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Nyt spil</string>
+    <string name="words_list_logout">Log ud</string>
+    <string name="words_list_empty_title">Ingen spil endnu</string>
+    <string name="words_sidebar_header">Ord</string>
+    <string name="words_sidebar_completed">Gennemført</string>
+    <string name="words_sidebar_new_game">Nyt spil</string>
+    <string name="words_new_game_title">Nyt spil</string>
+    <string name="words_new_game_language">Sprog</string>
+    <string name="words_new_game_language_uk">Engelsk (UK)</string>
+    <string name="words_new_game_language_us">Engelsk (US)</string>
+    <string name="words_new_game_start">Start spil</string>
+    <string name="words_new_game_no_friends_title">Ingen venner endnu</string>
+    <string name="words_new_game_add_friends">Tilføj venner</string>
+    <string name="words_detail_status_your_move">Dit træk</string>
+    <string name="words_detail_status_you_win">Du vandt!</string>
+    <string name="words_detail_status_game_over">Spillet slut</string>
+    <string name="words_detail_status_opponent_resigned">Modstanderen gav op — du vinder!</string>
+    <string name="words_detail_status_you_resigned">Du opgav</string>
+    <string name="words_detail_label_you">Dig</string>
+    <string name="words_detail_action_shuffle">Bland holder</string>
+    <string name="words_detail_action_pass">Pas</string>
+    <string name="words_detail_action_exchange">Byt brikker</string>
+    <string name="words_detail_action_cancel_exchange">Annuller bytte</string>
+    <string name="words_detail_action_resign">Giv op</string>
+    <string name="words_detail_action_rematch">Returkamp</string>
+    <string name="words_detail_action_delete">Slet spil</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Ugyldigt træk</string>
+    <string name="words_detail_recall">Tilbagekald</string>
+    <string name="words_detail_submit">Indsend</string>
+    <string name="words_detail_cancel">Annuller</string>
+    <string name="words_detail_exchange">Byt</string>
+    <string name="words_detail_blank_title">Vælg et bogstav</string>
+    <string name="words_detail_resign_title">Giv op i spillet?</string>
+    <string name="words_detail_resign_message">Er du sikker på, at du vil opgive?</string>
+    <string name="words_detail_failed_move">Kunne ikke indsende træk</string>
+    <string name="words_detail_failed_pass">Kunne ikke passe</string>
+    <string name="words_detail_failed_exchange">Kunne ikke bytte</string>
+    <string name="words_detail_failed_resign">Kunne ikke opgive</string>
+    <string name="words_detail_failed_rematch">Kunne ikke oprette omkamp</string>
+    <string name="words_detail_failed_delete">Kunne ikke slette spil</string>
+    <string name="words_detail_game_deleted">Spil slettet</string>
+
+    <string name="words_channel_name">Ord-notifikationer</string>
+    <string name="words_channel_description">Notifikationer om træk, ombytninger og partiresultater.</string>
+    <string name="words_list_empty_subtitle">Tryk på +-knappen for at starte dit første parti.</string>
+    <string name="words_list_status_finished">Afsluttet</string>
+    <string name="words_list_status_resigned">Opgivet</string>
+    <string name="words_list_your_turn">Din tur</string>
+    <string name="words_sidebar_active">Aktive partier</string>
+    <string name="words_sidebar_empty">Ingen partier endnu.</string>
+    <string name="words_new_game_choose_opponents">Vælg modstandere</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d spillere</string>
+    <string name="words_new_game_no_friends_subtitle">Tilføj venner i Personer-appen for at begynde at spille.</string>
+    <string name="words_detail_title">Parti</string>
+    <string name="words_detail_coming_soon">Partidetaljer kommer snart</string>
+    <string name="words_detail_status_opponent_move">%1$ss tur</string>
+    <string name="words_detail_status_winner_wins">%1$s vinder</string>
+    <string name="words_detail_player_fallback">Spiller %1$d</string>
+    <string name="words_detail_player_count">%1$d spillere</string>
+    <string name="words_detail_label_tiles_left">%1$d brikker tilbage</string>
+    <string name="words_detail_action_open_chat">Åbn chat</string>
+    <string name="words_detail_action_more">Partihandlinger</string>
+    <string name="words_detail_exchange_count">Byt (%1$d)</string>
+    <string name="words_detail_chat_you_played">Du spillede %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s spillede %2$s</string>
+
+</resources>

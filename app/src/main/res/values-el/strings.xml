@@ -7,4 +7,9 @@
     <string name="launcher_projects">Έργα</string>
     <string name="launcher_settings">Ρυθμίσεις</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Σκάκι</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Λέξεις</string>
+
 </resources>

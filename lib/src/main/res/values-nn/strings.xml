@@ -26,7 +26,11 @@
     <string name="common_edit">Rediger</string>
     <string name="common_delete">Slett</string>
     <string name="common_add">Legg til</string>
+    <string name="common_notifications">Varsel</string>
+    <string name="common_logout">Logg ut</string>
     <string name="common_subscribe">Abonner</string>
+    <string name="common_copy">Kopier</string>
+    <string name="common_copied">Kopiert til utklippstavla</string>
     <string name="comment_edited">(redigert)</string>
     <string name="comment_edit_placeholder">Rediger kommentar</string>
     <string name="comment_reply">Svar</string>
@@ -119,7 +123,11 @@
     <string name="profile_privacy_public">Offentleg</string>
     <string name="profile_privacy_private">Privat</string>
     <string name="profile_fingerprint">Fingeravtrykk</string>
+    <string name="game_chat_empty">Ingen meldingar enno</string>
+    <string name="game_chat_input_placeholder">Skriv ei melding…</string>
+    <string name="game_chat_send">Send melding</string>
+    <string name="game_chat_subject_you">Du</string>
 
-    <string name="common_copy">Kopier</string>
-    <string name="common_copied">Kopiert til utklippstavla</string>
+    <string name="game_chat_load_more">Last fleire</string>
+    <string name="game_chat_move_played">%1$s spelte %2$s</string>
 </resources>

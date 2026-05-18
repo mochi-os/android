@@ -14,6 +14,9 @@ import org.mochios.forums.notifications.setupForumsNotificationChannel
 import org.mochios.people.notifications.setupPeopleNotificationChannel
 import org.mochios.projects.notifications.setupProjectsNotificationChannel
 import org.mochios.wikis.notifications.setupWikisNotificationChannel
+import org.mochios.chess.notifications.setupChessNotificationChannel
+import org.mochios.go.notifications.setupGoNotificationChannel
+import org.mochios.words.notifications.setupWordsNotificationChannel
 
 @HiltAndroidApp
 class MochiApplication : Application() {
@@ -32,6 +35,9 @@ class MochiApplication : Application() {
         setupProjectsNotificationChannel(this)
         setupPeopleNotificationChannel(this)
         setupWikisNotificationChannel(this)
+        setupChessNotificationChannel(this)
+        setupGoNotificationChannel(this)
+        setupWordsNotificationChannel(this)
         PushServiceWatchdog.schedule(this)
         UpdateChecker.schedule(this)
     }

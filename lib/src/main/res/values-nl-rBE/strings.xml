@@ -26,7 +26,11 @@
     <string name="common_edit">Bewerken</string>
     <string name="common_delete">Verwijderen</string>
     <string name="common_add">Toevoegen</string>
+    <string name="common_notifications">Meldingen</string>
+    <string name="common_logout">Uitloggen</string>
     <string name="common_subscribe">Abonneren</string>
+    <string name="common_copy">Kopiëren</string>
+    <string name="common_copied">Gekopieerd naar klembord</string>
     <string name="comment_edited">(bewerkt)</string>
     <string name="comment_edit_placeholder">Reactie bewerken</string>
     <string name="comment_reply">Antwoord</string>
@@ -119,7 +123,11 @@
     <string name="profile_privacy_public">Publiek</string>
     <string name="profile_privacy_private">Privé</string>
     <string name="profile_fingerprint">Fingerprint</string>
+    <string name="game_chat_empty">Nog geen berichten</string>
+    <string name="game_chat_input_placeholder">Typ een bericht…</string>
+    <string name="game_chat_send">Bericht versturen</string>
+    <string name="game_chat_subject_you">U</string>
 
-    <string name="common_copy">Kopiëren</string>
-    <string name="common_copied">Gekopieerd naar klembord</string>
+    <string name="game_chat_load_more">Meer laden</string>
+    <string name="game_chat_move_played">%1$s speelde %2$s</string>
 </resources>

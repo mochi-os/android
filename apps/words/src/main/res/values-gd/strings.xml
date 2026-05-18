@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Clàr-taice</string>
+    <string name="words_list_new">Geama ùr</string>
+    <string name="words_list_logout">Clàraich a-mach</string>
+    <string name="words_list_empty_title">Chan eil geamannan ann fhathast</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Crìochnaichte</string>
+    <string name="words_sidebar_new_game">Geama ùr</string>
+    <string name="words_new_game_title">Geama ùr</string>
+    <string name="words_new_game_language">Cànan</string>
+    <string name="words_new_game_language_uk">Beurla (RA)</string>
+    <string name="words_new_game_language_us">Beurla (SA)</string>
+    <string name="words_new_game_start">Tòisich an geama</string>
+    <string name="words_new_game_no_friends_title">Chan eil caraidean ann fhathast</string>
+    <string name="words_new_game_add_friends">Cuir caraidean ris</string>
+    <string name="words_detail_status_your_move">Do ghluasad</string>
+    <string name="words_detail_status_you_win">Bhuannaich thu!</string>
+    <string name="words_detail_status_game_over">Tha an geama seachad</string>
+    <string name="words_detail_status_opponent_resigned">Leig an nàmhaid seachad — bhuannaich thu!</string>
+    <string name="words_detail_status_you_resigned">Leig thu seachad</string>
+    <string name="words_detail_label_you">Thusa</string>
+    <string name="words_detail_action_shuffle">Cuir an raca tro chèile</string>
+    <string name="words_detail_action_pass">Soirbheachail</string>
+    <string name="words_detail_action_exchange">Iomlaid leacagan</string>
+    <string name="words_detail_action_cancel_exchange">Sguir den iomlaid</string>
+    <string name="words_detail_action_resign">Leig seachad</string>
+    <string name="words_detail_action_rematch">Geama ùr</string>
+    <string name="words_detail_action_delete">Sguab às geama</string>
+    <string name="words_detail_chat_title">Còmhradh</string>
+    <string name="words_detail_invalid_move">Gluasad mì-dhligheach</string>
+    <string name="words_detail_recall">Cuimhnich</string>
+    <string name="words_detail_submit">Cuir a-steach</string>
+    <string name="words_detail_cancel">Sguir dheth</string>
+    <string name="words_detail_exchange">Iomlaid</string>
+    <string name="words_detail_blank_title">Tagh litir</string>
+    <string name="words_detail_resign_title">An leig thu seachad an geama?</string>
+    <string name="words_detail_resign_message">A bheil thu cinnteach gu bheil thu airson dreuchd a leigeil dhìot?</string>
+    <string name="words_detail_failed_move">Cha b\' urrainn an gluasad a chur a-steach</string>
+    <string name="words_detail_failed_pass">Cha b\' urrainn dol seachad</string>
+    <string name="words_detail_failed_exchange">Cha b\' urrainn iomlaid a dhèanamh</string>
+    <string name="words_detail_failed_resign">Cha b\' urrainn gèilleadh</string>
+    <string name="words_detail_failed_rematch">Cha b\' urrainn ath-mhaids a chruthachadh</string>
+    <string name="words_detail_failed_delete">Cha b\' urrainn geama a sguabadh às</string>
+    <string name="words_detail_game_deleted">Chaidh an geama a sguabadh às</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

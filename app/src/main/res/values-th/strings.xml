@@ -7,4 +7,9 @@
     <string name="launcher_projects">โปรเจกต์</string>
     <string name="launcher_settings">การตั้งค่า</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">หมากรุก</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Words</string>
+
 </resources>

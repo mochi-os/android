@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Nová hra</string>
+    <string name="words_list_logout">Odhlásit se</string>
+    <string name="words_list_empty_title">Zatím žádné hry</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Dokončeno</string>
+    <string name="words_sidebar_new_game">Nová hra</string>
+    <string name="words_new_game_title">Nová hra</string>
+    <string name="words_new_game_language">Jazyk</string>
+    <string name="words_new_game_language_uk">Angličtina (UK)</string>
+    <string name="words_new_game_language_us">Angličtina (US)</string>
+    <string name="words_new_game_start">Začít hru</string>
+    <string name="words_new_game_no_friends_title">Zatím žádní přátelé</string>
+    <string name="words_new_game_add_friends">Přidat přátele</string>
+    <string name="words_detail_status_your_move">Váš tah</string>
+    <string name="words_detail_status_you_win">Vyhráváte!</string>
+    <string name="words_detail_status_game_over">Konec hry</string>
+    <string name="words_detail_status_opponent_resigned">Soupeř vzdal — vyhráváte!</string>
+    <string name="words_detail_status_you_resigned">Vzdal jste to</string>
+    <string name="words_detail_label_you">Vy</string>
+    <string name="words_detail_action_shuffle">Zamíchat stojan</string>
+    <string name="words_detail_action_pass">Vynechat</string>
+    <string name="words_detail_action_exchange">Vyměnit kameny</string>
+    <string name="words_detail_action_cancel_exchange">Zrušit výměnu</string>
+    <string name="words_detail_action_resign">Vzdát</string>
+    <string name="words_detail_action_rematch">Odveta</string>
+    <string name="words_detail_action_delete">Smazat hru</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Neplatný tah</string>
+    <string name="words_detail_recall">Stáhnout</string>
+    <string name="words_detail_submit">Odeslat</string>
+    <string name="words_detail_cancel">Zrušit</string>
+    <string name="words_detail_exchange">Vyměnit</string>
+    <string name="words_detail_blank_title">Vyberte písmeno</string>
+    <string name="words_detail_resign_title">Vzdát hru?</string>
+    <string name="words_detail_resign_message">Opravdu chcete vzdát hru?</string>
+    <string name="words_detail_failed_move">Nepodařilo se odeslat tah</string>
+    <string name="words_detail_failed_pass">Nepodařilo se předat</string>
+    <string name="words_detail_failed_exchange">Nepodařilo se vyměnit</string>
+    <string name="words_detail_failed_resign">Nepodařilo se vzdát se</string>
+    <string name="words_detail_failed_rematch">Nepodařilo se vytvořit odvetu</string>
+    <string name="words_detail_failed_delete">Nepodařilo se smazat hru</string>
+    <string name="words_detail_game_deleted">Hra smazána</string>
+
+    <string name="words_channel_name">Oznámení Slova</string>
+    <string name="words_channel_description">Oznámení o tazích, výměnách a výsledcích partií.</string>
+    <string name="words_list_empty_subtitle">Klepněte na tlačítko + pro zahájení první partie.</string>
+    <string name="words_list_status_finished">Dokončeno</string>
+    <string name="words_list_status_resigned">Vzdáno</string>
+    <string name="words_list_your_turn">Váš tah</string>
+    <string name="words_sidebar_active">Aktivní partie</string>
+    <string name="words_sidebar_empty">Zatím žádné partie.</string>
+    <string name="words_new_game_choose_opponents">Vyberte soupeře</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d hráčů</string>
+    <string name="words_new_game_no_friends_subtitle">Přidejte přátele v aplikaci Lidé a začněte hrát.</string>
+    <string name="words_detail_title">Partie</string>
+    <string name="words_detail_coming_soon">Detaily partie již brzy</string>
+    <string name="words_detail_status_opponent_move">Tah %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s vyhrává</string>
+    <string name="words_detail_player_fallback">Hráč %1$d</string>
+    <string name="words_detail_player_count">%1$d hráčů</string>
+    <string name="words_detail_label_tiles_left">Zbývá %1$d kamenů</string>
+    <string name="words_detail_action_open_chat">Otevřít chat</string>
+    <string name="words_detail_action_more">Akce partie</string>
+    <string name="words_detail_exchange_count">Vyměnit (%1$d)</string>
+    <string name="words_detail_chat_you_played">Hrál jste %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s hrál %2$s</string>
+
+</resources>

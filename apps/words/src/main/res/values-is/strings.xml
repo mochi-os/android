@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Orð</string>
+    <string name="words_list_title">Orð</string>
+    <string name="words_list_menu">Valmynd</string>
+    <string name="words_list_new">Nýr leikur</string>
+    <string name="words_list_logout">Skrá út</string>
+    <string name="words_list_empty_title">Engir leikir ennþá</string>
+    <string name="words_sidebar_header">Orð</string>
+    <string name="words_sidebar_completed">Lokið</string>
+    <string name="words_sidebar_new_game">Nýr leikur</string>
+    <string name="words_new_game_title">Nýr leikur</string>
+    <string name="words_new_game_language">Tungumál</string>
+    <string name="words_new_game_language_uk">Enska (UK)</string>
+    <string name="words_new_game_language_us">Enska (US)</string>
+    <string name="words_new_game_start">Hefja leik</string>
+    <string name="words_new_game_no_friends_title">Engir vinir ennþá</string>
+    <string name="words_new_game_add_friends">Bæta við vinum</string>
+    <string name="words_detail_status_your_move">Þinn leikur</string>
+    <string name="words_detail_status_you_win">Þú vannst!</string>
+    <string name="words_detail_status_game_over">Leik lokið</string>
+    <string name="words_detail_status_opponent_resigned">Andstæðingur gafst upp — þú vinnur!</string>
+    <string name="words_detail_status_you_resigned">Þú gafst upp</string>
+    <string name="words_detail_label_you">Þú</string>
+    <string name="words_detail_action_shuffle">Stokka grind</string>
+    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_exchange">Skipta um flísar</string>
+    <string name="words_detail_action_cancel_exchange">Hætta við skipti</string>
+    <string name="words_detail_action_resign">Gefast upp</string>
+    <string name="words_detail_action_rematch">Endurleikur</string>
+    <string name="words_detail_action_delete">Eyða leik</string>
+    <string name="words_detail_chat_title">Spjall</string>
+    <string name="words_detail_invalid_move">Ógildur leikur</string>
+    <string name="words_detail_recall">Innkalla</string>
+    <string name="words_detail_submit">Senda</string>
+    <string name="words_detail_cancel">Hætta við</string>
+    <string name="words_detail_exchange">Skipta</string>
+    <string name="words_detail_blank_title">Veldu staf</string>
+    <string name="words_detail_resign_title">Gefast upp í leik?</string>
+    <string name="words_detail_resign_message">Ertu viss um að þú viljir gefast upp?</string>
+    <string name="words_detail_failed_move">Tókst ekki að senda leik</string>
+    <string name="words_detail_failed_pass">Tókst ekki að sleppa</string>
+    <string name="words_detail_failed_exchange">Tókst ekki að skipta</string>
+    <string name="words_detail_failed_resign">Tókst ekki að gefast upp</string>
+    <string name="words_detail_failed_rematch">Tókst ekki að búa til endurleik</string>
+    <string name="words_detail_failed_delete">Tókst ekki að eyða leik</string>
+    <string name="words_detail_game_deleted">Leik eytt</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

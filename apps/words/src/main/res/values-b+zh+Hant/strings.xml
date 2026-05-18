@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">選單</string>
+    <string name="words_list_new">新遊戲</string>
+    <string name="words_list_logout">登出</string>
+    <string name="words_list_empty_title">尚無遊戲</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">已完成</string>
+    <string name="words_sidebar_new_game">新遊戲</string>
+    <string name="words_new_game_title">新遊戲</string>
+    <string name="words_new_game_language">語言</string>
+    <string name="words_new_game_language_uk">英語 (英國)</string>
+    <string name="words_new_game_language_us">英語 (美國)</string>
+    <string name="words_new_game_start">開始遊戲</string>
+    <string name="words_new_game_no_friends_title">尚無朋友</string>
+    <string name="words_new_game_add_friends">新增好友</string>
+    <string name="words_detail_status_your_move">輪到您</string>
+    <string name="words_detail_status_you_win">您贏了!</string>
+    <string name="words_detail_status_game_over">遊戲結束</string>
+    <string name="words_detail_status_opponent_resigned">對手認輸 — 您獲勝!</string>
+    <string name="words_detail_status_you_resigned">您已認輸</string>
+    <string name="words_detail_label_you">您</string>
+    <string name="words_detail_action_shuffle">重新排列字架</string>
+    <string name="words_detail_action_pass">略過</string>
+    <string name="words_detail_action_exchange">交換棋子</string>
+    <string name="words_detail_action_cancel_exchange">取消交換</string>
+    <string name="words_detail_action_resign">認輸</string>
+    <string name="words_detail_action_rematch">再戰一場</string>
+    <string name="words_detail_action_delete">刪除遊戲</string>
+    <string name="words_detail_chat_title">聊天</string>
+    <string name="words_detail_invalid_move">無效的走法</string>
+    <string name="words_detail_recall">撤回</string>
+    <string name="words_detail_submit">送出</string>
+    <string name="words_detail_cancel">取消</string>
+    <string name="words_detail_exchange">換牌</string>
+    <string name="words_detail_blank_title">選擇字母</string>
+    <string name="words_detail_resign_title">認輸?</string>
+    <string name="words_detail_resign_message">確定要認輸嗎?</string>
+    <string name="words_detail_failed_move">送出走法失敗</string>
+    <string name="words_detail_failed_pass">略過失敗</string>
+    <string name="words_detail_failed_exchange">交換失敗</string>
+    <string name="words_detail_failed_resign">認輸失敗</string>
+    <string name="words_detail_failed_rematch">建立再戰失敗</string>
+    <string name="words_detail_failed_delete">刪除遊戲失敗</string>
+    <string name="words_detail_game_deleted">遊戲已刪除</string>
+
+    <string name="words_channel_name">字詞通知</string>
+    <string name="words_channel_description">關於回合、交換和棋局結果的通知。</string>
+    <string name="words_list_empty_subtitle">點選 + 按鈕開始第一局。</string>
+    <string name="words_list_status_finished">已結束</string>
+    <string name="words_list_status_resigned">已認輸</string>
+    <string name="words_list_your_turn">您的回合</string>
+    <string name="words_sidebar_active">進行中的棋局</string>
+    <string name="words_sidebar_empty">暫無棋局。</string>
+    <string name="words_new_game_choose_opponents">選擇對手</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d 名玩家</string>
+    <string name="words_new_game_no_friends_subtitle">在 People 應用程式中新增朋友以開始遊戲。</string>
+    <string name="words_detail_title">棋局</string>
+    <string name="words_detail_coming_soon">棋局詳情即將推出</string>
+    <string name="words_detail_status_opponent_move">%1$s 的回合</string>
+    <string name="words_detail_status_winner_wins">%1$s 獲勝</string>
+    <string name="words_detail_player_fallback">玩家 %1$d</string>
+    <string name="words_detail_player_count">%1$d 名玩家</string>
+    <string name="words_detail_label_tiles_left">剩餘 %1$d 塊</string>
+    <string name="words_detail_action_open_chat">開啟聊天</string>
+    <string name="words_detail_action_more">棋局操作</string>
+    <string name="words_detail_exchange_count">交換 (%1$d)</string>
+    <string name="words_detail_chat_you_played">您下了 %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s 下了 %2$s</string>
+
+</resources>

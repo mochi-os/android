@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Šah</string>
+    <string name="chess_sidebar_header">Šah</string>
+    <string name="chess_sidebar_active">Aktivne igre</string>
+    <string name="chess_sidebar_completed">Završeno</string>
+    <string name="chess_sidebar_new_game">Nova igra</string>
+    <string name="chess_section_active">Aktivne igre</string>
+    <string name="chess_section_completed">Završeno</string>
+    <string name="chess_new_game">Nova igra</string>
+    <string name="chess_empty_title">Još nema igara</string>
+    <string name="chess_new_title">Nova igra</string>
+    <string name="chess_new_pick_opponent">Odaberite protivnika</string>
+    <string name="chess_new_no_friends_title">Još nema prijatelja</string>
+    <string name="chess_new_no_friends_subtitle">Dodajte prijatelje u aplikaciji Ljudi za početak igranja</string>
+    <string name="chess_new_add_friends">Dodaj prijatelje</string>
+    <string name="chess_new_start_button">Započni igru</string>
+    <string name="chess_new_creating">Stvaranje…</string>
+    <string name="chess_new_failed">Stvaranje igre nije uspjelo</string>
+    <string name="chess_chat_title">Razgovor</string>
+    <string name="chess_open_chat">Otvori panel razgovora</string>
+    <string name="chess_open_actions">Otvori akcije igre</string>
+    <string name="chess_offer_draw">Ponudi remi</string>
+    <string name="chess_resign">Predaj se</string>
+    <string name="chess_rematch">Revanš</string>
+    <string name="chess_delete_game">Obriši igru</string>
+    <string name="chess_side_white">Bijeli</string>
+    <string name="chess_side_black">Crni</string>
+    <string name="chess_resign_title">Predati igru?</string>
+    <string name="chess_resign_confirm">Predaj se</string>
+    <string name="chess_delete_confirm">Obriši igru</string>
+    <string name="chess_draw_accept">Prihvati</string>
+    <string name="chess_draw_decline">Odbij</string>
+    <string name="chess_status_checkmate_you_win">Šah-mat — pobijedili ste!</string>
+    <string name="chess_status_stalemate">Pat — neriješeno</string>
+    <string name="chess_status_draw">Remi</string>
+    <string name="chess_status_check_your_move">Šah — vaš potez</string>
+    <string name="chess_status_your_move">Vaš potez</string>
+    <string name="chess_move_subject_you">Vi</string>
+    <string name="chess_promotion_title">Promaknuti u:</string>
+
+    <string name="chess_resign_message">Jeste li sigurni da želite predati partiju? %1$s će dobiti igru.</string>
+    <string name="chess_draw_offered">%1$s je ponudio neriješeno</string>
+    <string name="chess_draw_waiting">Ponuđen remi — čeka se %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Šah-mat — %1$s pobjeđuje</string>
+    <string name="chess_status_resigned_you">Predali ste se — %1$s pobjeđuje</string>
+    <string name="chess_status_resigned_opponent">%1$s se predao — pobijedili ste!</string>
+    <string name="chess_status_check_opponent_move">Šah — potez %1$s</string>
+    <string name="chess_status_opponent_move">Potez igrača %1$s</string>
+    <string name="chess_piece_king">Kralj</string>
+    <string name="chess_piece_queen">Kraljica</string>
+    <string name="chess_piece_rook">Top</string>
+    <string name="chess_piece_bishop">Lovac</string>
+    <string name="chess_piece_knight">Konj</string>
+    <string name="chess_piece_pawn">Pijun</string>
+    <string name="chess_move_played">%1$s odigrao %2$s</string>
+    <string name="chess_channel_name">Šah obavijesti</string>
+    <string name="chess_channel_description">Obavijesti o potezima, ponudama za remi i rezultatima partija.</string>
+    <string name="chess_open_sidebar">Otvori bočnu traku</string>
+    <string name="chess_empty_subtitle">Započnite prvu partiju za igranje šaha s prijateljem.</string>
+    <string name="chess_empty_start_button">Započnite prvu partiju</string>
+    <string name="chess_detail_unavailable">Partija nedostupna</string>
+    <string name="chess_delete_title">Izbrisati partiju?</string>
+    <string name="chess_delete_message">Ovo uklanja partiju s vašeg popisa.</string>
+    <string name="chess_ws_connecting">Povezivanje…</string>
+    <string name="chess_ws_disconnected">Izvan mreže</string>
+    <string name="chess_ws_reconnecting">Ponovno povezivanje…</string>
+    <string name="chess_ws_failed">Povezivanje neuspjelo</string>
+    <string name="chess_move_capture">%1$s je uzeo %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

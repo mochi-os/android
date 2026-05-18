@@ -11,6 +11,7 @@
     <string name="common_edit">Editá</string>
     <string name="common_delete">Eliminá</string>
     <string name="common_add">Agregá</string>
+    <string name="common_logout">Cerrá sesión</string>
     <string name="common_subscribe">Suscribite</string>
     <string name="comment_edit_placeholder">Editá el comentario</string>
     <string name="comment_reply">Respondé</string>
@@ -26,5 +27,8 @@
     <string name="settings_reset">Reiniciá</string>
     <string name="settings_display_reset">Reiniciá a los valores predeterminados</string>
     <string name="profile_privacy">Privacy</string>
-
+    <string name="game_chat_input_placeholder">Escribí un mensaje…</string>
+    <string name="game_chat_send">Enviá el mensaje</string>
+    <string name="game_chat_load_more">Cargar más</string>
+    <string name="game_chat_move_played">%1$s jugó %2$s</string>
 </resources>

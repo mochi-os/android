@@ -7,4 +7,9 @@
     <string name="launcher_projects">Projektek</string>
     <string name="launcher_settings">Beállítások</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Sakk</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Szavak</string>
+
 </resources>

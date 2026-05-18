@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Gwyddbwyll</string>
+    <string name="chess_sidebar_header">Gwyddbwyll</string>
+    <string name="chess_sidebar_active">Gemau gweithredol</string>
+    <string name="chess_sidebar_completed">Wedi cwblhau</string>
+    <string name="chess_sidebar_new_game">Gêm newydd</string>
+    <string name="chess_section_active">Gemau gweithredol</string>
+    <string name="chess_section_completed">Wedi cwblhau</string>
+    <string name="chess_new_game">Gêm newydd</string>
+    <string name="chess_empty_title">Dim gemau eto</string>
+    <string name="chess_new_title">Gêm Newydd</string>
+    <string name="chess_new_pick_opponent">Dewiswch wrthwynebydd</string>
+    <string name="chess_new_no_friends_title">Dim ffrindiau eto</string>
+    <string name="chess_new_no_friends_subtitle">Ychwanegu cyfeillion yn yr app Pobl i ddechrau chwarae</string>
+    <string name="chess_new_add_friends">Ychwanegu cyfeillion</string>
+    <string name="chess_new_start_button">Cychwyn gêm</string>
+    <string name="chess_new_creating">Yn creu…</string>
+    <string name="chess_new_failed">Methwyd creu gêm</string>
+    <string name="chess_chat_title">Sgwrs</string>
+    <string name="chess_open_chat">Agor panel sgwrs</string>
+    <string name="chess_open_actions">Agor camau gweithredu gêm</string>
+    <string name="chess_offer_draw">Cynnig gêm gyfartal</string>
+    <string name="chess_resign">Ymddiswyddo</string>
+    <string name="chess_rematch">Aildrefnu gêm</string>
+    <string name="chess_delete_game">Dileu gêm</string>
+    <string name="chess_side_white">Gwyn</string>
+    <string name="chess_side_black">Du</string>
+    <string name="chess_resign_title">Ymddiswyddo o\'r gêm?</string>
+    <string name="chess_resign_confirm">Ymddiswyddo</string>
+    <string name="chess_delete_confirm">Dileu gêm</string>
+    <string name="chess_draw_accept">Derbyn</string>
+    <string name="chess_draw_decline">Gwrthod</string>
+    <string name="chess_status_checkmate_you_win">Siecmat — chi sy\'n ennill!</string>
+    <string name="chess_status_stalemate">Sefyllfa farw — gêm gyfartal</string>
+    <string name="chess_status_draw">Cyfartal</string>
+    <string name="chess_status_check_your_move">Siec — eich tro chi</string>
+    <string name="chess_status_your_move">Eich symudiad</string>
+    <string name="chess_move_subject_you">Chi</string>
+    <string name="chess_promotion_title">Dyrchafu i:</string>
+
+    <string name="chess_resign_message">Ydych chi\'n siŵr eich bod am ymddiswyddo? Bydd %1$s yn ennill y gêm.</string>
+    <string name="chess_draw_offered">Cynigiodd %1$s gêm gyfartal</string>
+    <string name="chess_draw_waiting">Cynigiwyd cyfartal — yn aros am %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Siecmat — %1$s sy\'n ennill</string>
+    <string name="chess_status_resigned_you">Ymddiswyddoch</string>
+    <string name="chess_status_resigned_opponent">Ymddiswyddodd %1$s — rydych yn ennill!</string>
+    <string name="chess_status_check_opponent_move">Siec — tro %1$s</string>
+    <string name="chess_status_opponent_move">Symudiad %1$s</string>
+    <string name="chess_piece_king">Brenin</string>
+    <string name="chess_piece_queen">Brenhines</string>
+    <string name="chess_piece_rook">Castell</string>
+    <string name="chess_piece_bishop">Esgob</string>
+    <string name="chess_piece_knight">Marchog</string>
+    <string name="chess_piece_pawn">Gwerinwr</string>
+    <string name="chess_move_played">Chwaraeodd %1$s %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

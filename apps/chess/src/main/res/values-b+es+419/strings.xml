@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Ajedrez</string>
+    <string name="chess_sidebar_header">Ajedrez</string>
+    <string name="chess_sidebar_active">Juegos activos</string>
+    <string name="chess_sidebar_completed">Completado</string>
+    <string name="chess_sidebar_new_game">Nueva partida</string>
+    <string name="chess_section_active">Juegos activos</string>
+    <string name="chess_section_completed">Completado</string>
+    <string name="chess_new_game">Nueva partida</string>
+    <string name="chess_empty_title">Aún no hay partidas</string>
+    <string name="chess_new_title">Nueva partida</string>
+    <string name="chess_new_pick_opponent">Elige oponente</string>
+    <string name="chess_new_no_friends_title">Aún no tienes amigos</string>
+    <string name="chess_new_no_friends_subtitle">Añade amigos en la app People para empezar a jugar</string>
+    <string name="chess_new_add_friends">Añadir amigos</string>
+    <string name="chess_new_start_button">Iniciar partida</string>
+    <string name="chess_new_creating">Creando…</string>
+    <string name="chess_new_failed">Error al crear la partida</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Abrir panel de chat</string>
+    <string name="chess_open_actions">Abrir acciones de partida</string>
+    <string name="chess_offer_draw">Ofrecer tablas</string>
+    <string name="chess_resign">Rendirse</string>
+    <string name="chess_rematch">Revancha</string>
+    <string name="chess_delete_game">Eliminar juego</string>
+    <string name="chess_side_white">Blanco</string>
+    <string name="chess_side_black">Negro</string>
+    <string name="chess_resign_title">¿Rendirse en la partida?</string>
+    <string name="chess_resign_confirm">Rendirse</string>
+    <string name="chess_delete_confirm">Eliminar juego</string>
+    <string name="chess_draw_accept">Aceptar</string>
+    <string name="chess_draw_decline">Rechazar</string>
+    <string name="chess_status_checkmate_you_win">Jaque mate — ¡ganas!</string>
+    <string name="chess_status_stalemate">Empate — tablas</string>
+    <string name="chess_status_draw">Tablas</string>
+    <string name="chess_status_check_your_move">Jaque — tu turno</string>
+    <string name="chess_status_your_move">Tu turno</string>
+    <string name="chess_move_subject_you">Tú</string>
+    <string name="chess_promotion_title">Promover a:</string>
+
+    <string name="chess_resign_message">¿Estás seguro de que quieres rendirte? %1$s ganará la partida.</string>
+    <string name="chess_draw_offered">%1$s ofreció tablas</string>
+    <string name="chess_draw_waiting">Tablas ofrecidas — esperando a %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Jaque mate — %1$s gana</string>
+    <string name="chess_status_resigned_you">Renunciaste — %1$s gana</string>
+    <string name="chess_status_resigned_opponent">%1$s renunció — ¡ganaste!</string>
+    <string name="chess_status_check_opponent_move">Jaque — turno de %1$s</string>
+    <string name="chess_status_opponent_move">Turno de %1$s</string>
+    <string name="chess_piece_king">Rey</string>
+    <string name="chess_piece_queen">Dama</string>
+    <string name="chess_piece_rook">Torre</string>
+    <string name="chess_piece_bishop">Alfil</string>
+    <string name="chess_piece_knight">Caballo</string>
+    <string name="chess_piece_pawn">Peón</string>
+    <string name="chess_move_played">%1$s jugó %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

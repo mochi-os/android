@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Nieuw spel</string>
+    <string name="words_list_logout">Uitloggen</string>
+    <string name="words_list_empty_title">Nog geen spellen</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Voltooid</string>
+    <string name="words_sidebar_new_game">Nieuw spel</string>
+    <string name="words_new_game_title">Nieuw spel</string>
+    <string name="words_new_game_language">Taal</string>
+    <string name="words_new_game_language_uk">Engels (VK)</string>
+    <string name="words_new_game_language_us">Engels (VS)</string>
+    <string name="words_new_game_start">Spel starten</string>
+    <string name="words_new_game_no_friends_title">Nog geen vrienden</string>
+    <string name="words_new_game_add_friends">Vrienden toevoegen</string>
+    <string name="words_detail_status_your_move">Uw zet</string>
+    <string name="words_detail_status_you_win">U wint!</string>
+    <string name="words_detail_status_game_over">Spel afgelopen</string>
+    <string name="words_detail_status_opponent_resigned">Tegenstander gaf op — je hebt gewonnen!</string>
+    <string name="words_detail_status_you_resigned">U hebt opgegeven</string>
+    <string name="words_detail_label_you">U</string>
+    <string name="words_detail_action_shuffle">Rek schudden</string>
+    <string name="words_detail_action_pass">Passen</string>
+    <string name="words_detail_action_exchange">Stenen wisselen</string>
+    <string name="words_detail_action_cancel_exchange">Ruil annuleren</string>
+    <string name="words_detail_action_resign">Opgeven</string>
+    <string name="words_detail_action_rematch">Revanche</string>
+    <string name="words_detail_action_delete">Spel verwijderen</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Ongeldige zet</string>
+    <string name="words_detail_recall">Terugroepen</string>
+    <string name="words_detail_submit">Indienen</string>
+    <string name="words_detail_cancel">Annuleren</string>
+    <string name="words_detail_exchange">Wisselen</string>
+    <string name="words_detail_blank_title">Kies een letter</string>
+    <string name="words_detail_resign_title">Spel opgeven?</string>
+    <string name="words_detail_resign_message">Weet je zeker dat je wilt opgeven?</string>
+    <string name="words_detail_failed_move">Zet indienen mislukt</string>
+    <string name="words_detail_failed_pass">Passen mislukt</string>
+    <string name="words_detail_failed_exchange">Wisselen mislukt</string>
+    <string name="words_detail_failed_resign">Opgeven mislukt</string>
+    <string name="words_detail_failed_rematch">Rematch aanmaken mislukt</string>
+    <string name="words_detail_failed_delete">Spel verwijderen mislukt</string>
+    <string name="words_detail_game_deleted">Spel verwijderd</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

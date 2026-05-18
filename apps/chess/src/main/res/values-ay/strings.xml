@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Chess</string>
+    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_sidebar_active">Anatawi Lurkaski</string>
+    <string name="chess_sidebar_completed">Tukuyata</string>
+    <string name="chess_sidebar_new_game">Machaqa anatawi</string>
+    <string name="chess_section_active">Anatawi Lurkaski</string>
+    <string name="chess_section_completed">Tukuyata</string>
+    <string name="chess_new_game">Machaqa anatawi</string>
+    <string name="chess_empty_title">Janira anatawinaka</string>
+    <string name="chess_new_title">Machaqa Anatawi</string>
+    <string name="chess_new_pick_opponent">Atipt\'iri ajllxaña</string>
+    <string name="chess_new_no_friends_title">Janira amigonaka</string>
+    <string name="chess_new_no_friends_subtitle">Masinaka yapxataña People appnxa anatañ qalltañataki</string>
+    <string name="chess_new_add_friends">Masinaka yapxataña</string>
+    <string name="chess_new_start_button">Anata qalltaña</string>
+    <string name="chess_new_creating">Lurkasa…</string>
+    <string name="chess_new_failed">Janiw anatawi lurña atinkti</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Parla panel jist\'arma</string>
+    <string name="chess_open_actions">Anatawi lurawinak jist\'arma</string>
+    <string name="chess_offer_draw">Empate offerma</string>
+    <string name="chess_resign">Jaytayma</string>
+    <string name="chess_rematch">Mayamp anatasiñ</string>
+    <string name="chess_delete_game">Anatawi chhaqtayaña</string>
+    <string name="chess_side_white">Janq\'u katuqäwinaka:</string>
+    <string name="chess_side_black">Ch\'iyara</string>
+    <string name="chess_resign_title">¿Anatawi jaytayma?</string>
+    <string name="chess_resign_confirm">Jaytayma</string>
+    <string name="chess_delete_confirm">Anatawi chhaqtayaña</string>
+    <string name="chess_draw_accept">Iyawsaña</string>
+    <string name="chess_draw_decline">Jark\'aña</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — atipt\'ta!</string>
+    <string name="chess_status_stalemate">Inakacht\'ata — empate</string>
+    <string name="chess_status_draw">Sallqa</string>
+    <string name="chess_status_check_your_move">Check — jumam saraña</string>
+    <string name="chess_status_your_move">Sutimax, kunjaman mayninakax uñjapxañpa muntax</string>
+    <string name="chess_move_subject_you">Aka masimamp mä chat utjxiwa</string>
+    <string name="chess_promotion_title">Promotema:</string>
+
+    <string name="chess_resign_message">Chiqpach jaytaña munta? %1$s ukax anatawix atipiyani.</string>
+    <string name="chess_draw_offered">%1$s resignasta — gantata!</string>
+    <string name="chess_draw_waiting">Sallqa churatawa — %1$s suyasin</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s atipi</string>
+    <string name="chess_status_resigned_you">Aka chatat apaqasta</string>
+    <string name="chess_status_resigned_opponent">%1$s ganata</string>
+    <string name="chess_status_check_opponent_move">Check — %1$s saraña</string>
+    <string name="chess_status_opponent_move">%1$s - Comentarios</string>
+    <string name="chess_piece_king">Caballo</string>
+    <string name="chess_piece_queen">Juntayata cuentas liyiña</string>
+    <string name="chess_piece_rook">Sistema</string>
+    <string name="chess_piece_bishop">{0}-na</string>
+    <string name="chess_piece_knight">Juntayata cuentas apnaqaña</string>
+    <string name="chess_piece_pawn">Sapa periodo</string>
+    <string name="chess_move_played">%1$s apaqi %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

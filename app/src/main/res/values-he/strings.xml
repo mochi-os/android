@@ -7,4 +7,9 @@
     <string name="launcher_projects">פרויקטים</string>
     <string name="launcher_settings">הגדרות</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">שחמט</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">מילים</string>
+
 </resources>

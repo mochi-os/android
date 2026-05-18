@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Chess</string>
+    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_sidebar_active">Wasannin da ke kan ci gaba</string>
+    <string name="chess_sidebar_completed">An kammala</string>
+    <string name="chess_sidebar_new_game">Sabon wasa</string>
+    <string name="chess_section_active">Wasannin da ke kan ci gaba</string>
+    <string name="chess_section_completed">An kammala</string>
+    <string name="chess_new_game">Sabon wasa</string>
+    <string name="chess_empty_title">Babu wasanni tukuna</string>
+    <string name="chess_new_title">Sabon Wasa</string>
+    <string name="chess_new_pick_opponent">Zaɓi abokin gaba</string>
+    <string name="chess_new_no_friends_title">Babu abokai tukuna</string>
+    <string name="chess_new_no_friends_subtitle">Ƙara abokai a app ɗin People don fara wasa</string>
+    <string name="chess_new_add_friends">Ƙara abokai</string>
+    <string name="chess_new_start_button">Fara wasa</string>
+    <string name="chess_new_creating">Ana ƙirƙira…</string>
+    <string name="chess_new_failed">An gaza ƙirƙirar wasa</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Buɗe panel ɗin chat</string>
+    <string name="chess_open_actions">Buɗe ayyukan wasa</string>
+    <string name="chess_offer_draw">Ba da tayin canjaras</string>
+    <string name="chess_resign">Yi murabus</string>
+    <string name="chess_rematch">Sake wasa</string>
+    <string name="chess_delete_game">Goge wasa</string>
+    <string name="chess_side_white">Fari</string>
+    <string name="chess_side_black">Baƙi</string>
+    <string name="chess_resign_title">A yi murabus daga wasa?</string>
+    <string name="chess_resign_confirm">Yi murabus</string>
+    <string name="chess_delete_confirm">Goge wasa</string>
+    <string name="chess_draw_accept">Yarda</string>
+    <string name="chess_draw_decline">Ƙi</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — ka yi nasara!</string>
+    <string name="chess_status_stalemate">Stalemate — kunnen doki</string>
+    <string name="chess_status_draw">Canjaras</string>
+    <string name="chess_status_check_your_move">Check — motsinka</string>
+    <string name="chess_status_your_move">Move ɗinku</string>
+    <string name="chess_move_subject_you">Kai</string>
+    <string name="chess_promotion_title">Inganta zuwa:</string>
+
+    <string name="chess_resign_message">Kana da tabbacin kana son mika wuya? %1$s zai lashe wasan.</string>
+    <string name="chess_draw_offered">%1$s ya ba da kunnen doki</string>
+    <string name="chess_draw_waiting">An ba da kunnen doki — ana jiran %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s ya yi nasara</string>
+    <string name="chess_status_resigned_you">Kun yi murabus — %1$s ya yi nasara</string>
+    <string name="chess_status_resigned_opponent">%1$s ya yi murabus — kun yi nasara!</string>
+    <string name="chess_status_check_opponent_move">Check — motsin %1$s</string>
+    <string name="chess_status_opponent_move">Move na %1$s</string>
+    <string name="chess_piece_king">Sarki</string>
+    <string name="chess_piece_queen">Sarauniya</string>
+    <string name="chess_piece_rook">Hasumiya</string>
+    <string name="chess_piece_bishop">Bishop</string>
+    <string name="chess_piece_knight">Doki</string>
+    <string name="chess_piece_pawn">Soja</string>
+    <string name="chess_move_played">%1$s ya yi %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

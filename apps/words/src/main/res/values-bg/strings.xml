@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Меню</string>
+    <string name="words_list_new">Нова игра</string>
+    <string name="words_list_logout">Изход</string>
+    <string name="words_list_empty_title">Все още няма игри</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Завършено</string>
+    <string name="words_sidebar_new_game">Нова игра</string>
+    <string name="words_new_game_title">Нова игра</string>
+    <string name="words_new_game_language">Език</string>
+    <string name="words_new_game_language_uk">Английски (Великобритания)</string>
+    <string name="words_new_game_language_us">Английски (САЩ)</string>
+    <string name="words_new_game_start">Започни играта</string>
+    <string name="words_new_game_no_friends_title">Все още няма приятели</string>
+    <string name="words_new_game_add_friends">Добави приятели</string>
+    <string name="words_detail_status_your_move">Вашият ход</string>
+    <string name="words_detail_status_you_win">Печелите!</string>
+    <string name="words_detail_status_game_over">Край на играта</string>
+    <string name="words_detail_status_opponent_resigned">Опонентът се предаде — печелите!</string>
+    <string name="words_detail_status_you_resigned">Подадохте оставка</string>
+    <string name="words_detail_label_you">Вие</string>
+    <string name="words_detail_action_shuffle">Разбъркай поставката</string>
+    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_exchange">Размяна на плочки</string>
+    <string name="words_detail_action_cancel_exchange">Отказ от размяната</string>
+    <string name="words_detail_action_resign">Предай се</string>
+    <string name="words_detail_action_rematch">Реванш</string>
+    <string name="words_detail_action_delete">Изтрий играта</string>
+    <string name="words_detail_chat_title">Чат</string>
+    <string name="words_detail_invalid_move">Невалиден ход</string>
+    <string name="words_detail_recall">Извикай</string>
+    <string name="words_detail_submit">Изпрати</string>
+    <string name="words_detail_cancel">Отказ</string>
+    <string name="words_detail_exchange">Размяна</string>
+    <string name="words_detail_blank_title">Изберете буква</string>
+    <string name="words_detail_resign_title">Да се предадеш ли в играта?</string>
+    <string name="words_detail_resign_message">Сигурни ли сте, че искате да се откажете?</string>
+    <string name="words_detail_failed_move">Неуспешно подаване на ход</string>
+    <string name="words_detail_failed_pass">Неуспешно подаване</string>
+    <string name="words_detail_failed_exchange">Неуспешна размяна</string>
+    <string name="words_detail_failed_resign">Неуспешно предаване на партията</string>
+    <string name="words_detail_failed_rematch">Неуспешно създаване на реванш</string>
+    <string name="words_detail_failed_delete">Неуспешно изтриване на игра</string>
+    <string name="words_detail_game_deleted">Играта е изтрита</string>
+
+    <string name="words_channel_name">Известия Думи</string>
+    <string name="words_channel_description">Известия за ходове, размени и резултати от партии.</string>
+    <string name="words_list_empty_subtitle">Докоснете бутона + за да започнете първата си партия.</string>
+    <string name="words_list_status_finished">Завършена</string>
+    <string name="words_list_status_resigned">Предадена</string>
+    <string name="words_list_your_turn">Вашият ход</string>
+    <string name="words_sidebar_active">Активни партии</string>
+    <string name="words_sidebar_empty">Все още няма партии.</string>
+    <string name="words_new_game_choose_opponents">Изберете противници</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d играчи</string>
+    <string name="words_new_game_no_friends_subtitle">Добавете приятели в приложението Хора, за да започнете да играете.</string>
+    <string name="words_detail_title">Партия</string>
+    <string name="words_detail_coming_soon">Подробности за партията скоро</string>
+    <string name="words_detail_status_opponent_move">Ход на %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s печели</string>
+    <string name="words_detail_player_fallback">Играч %1$d</string>
+    <string name="words_detail_player_count">%1$d играчи</string>
+    <string name="words_detail_label_tiles_left">%1$d плочки остават</string>
+    <string name="words_detail_action_open_chat">Отвори чат</string>
+    <string name="words_detail_action_more">Действия в партията</string>
+    <string name="words_detail_exchange_count">Размени (%1$d)</string>
+    <string name="words_detail_chat_you_played">Изиграхте %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s изигра %2$s</string>
+
+</resources>

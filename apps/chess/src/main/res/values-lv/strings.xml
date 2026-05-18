@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Šahs</string>
+    <string name="chess_sidebar_header">Šahs</string>
+    <string name="chess_sidebar_active">Aktīvas spēles</string>
+    <string name="chess_sidebar_completed">Pabeigts</string>
+    <string name="chess_sidebar_new_game">Jauna spēle</string>
+    <string name="chess_section_active">Aktīvas spēles</string>
+    <string name="chess_section_completed">Pabeigts</string>
+    <string name="chess_new_game">Jauna spēle</string>
+    <string name="chess_empty_title">Vēl nav spēļu</string>
+    <string name="chess_new_title">Jauna spēle</string>
+    <string name="chess_new_pick_opponent">Izvēlies pretinieku</string>
+    <string name="chess_new_no_friends_title">Vēl nav draugu</string>
+    <string name="chess_new_no_friends_subtitle">Pievieno draugus People lietotnē, lai sāktu spēlēt</string>
+    <string name="chess_new_add_friends">Pievienot draugus</string>
+    <string name="chess_new_start_button">Sākt spēli</string>
+    <string name="chess_new_creating">Izveido…</string>
+    <string name="chess_new_failed">Neizdevās izveidot spēli</string>
+    <string name="chess_chat_title">Saruna</string>
+    <string name="chess_open_chat">Atvērt čata paneli</string>
+    <string name="chess_open_actions">Atvērt spēles darbības</string>
+    <string name="chess_offer_draw">Piedāvāt neizšķirtu</string>
+    <string name="chess_resign">Padoties</string>
+    <string name="chess_rematch">Atkārtota spēle</string>
+    <string name="chess_delete_game">Dzēst spēli</string>
+    <string name="chess_side_white">Baltais</string>
+    <string name="chess_side_black">Melnais</string>
+    <string name="chess_resign_title">Padoties spēlē?</string>
+    <string name="chess_resign_confirm">Padoties</string>
+    <string name="chess_delete_confirm">Dzēst spēli</string>
+    <string name="chess_draw_accept">Pieņemt</string>
+    <string name="chess_draw_decline">Noraidīt</string>
+    <string name="chess_status_checkmate_you_win">Šahs un mats — tu uzvarēji!</string>
+    <string name="chess_status_stalemate">Patstāvs — neizšķirts</string>
+    <string name="chess_status_draw">Neizšķirts</string>
+    <string name="chess_status_check_your_move">Šahs — tavs gājiens</string>
+    <string name="chess_status_your_move">Jūsu gājiens</string>
+    <string name="chess_move_subject_you">Jūs</string>
+    <string name="chess_promotion_title">Paaugstināt uz:</string>
+
+    <string name="chess_resign_message">Vai tiešām vēlies padoties? %1$s uzvarēs spēli.</string>
+    <string name="chess_draw_offered">%1$s piedāvāja neizšķirtu</string>
+    <string name="chess_draw_waiting">Piedāvāts neizšķirts — gaida %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Šahs un mats — %1$s uzvar</string>
+    <string name="chess_status_resigned_you">Jūs padevāties — %1$s uzvar</string>
+    <string name="chess_status_resigned_opponent">%1$s padevās — jūs uzvarat!</string>
+    <string name="chess_status_check_opponent_move">Šahs — %1$s gājiens</string>
+    <string name="chess_status_opponent_move">%1$s gājiens</string>
+    <string name="chess_piece_king">Karalis</string>
+    <string name="chess_piece_queen">Dāma</string>
+    <string name="chess_piece_rook">Tornis</string>
+    <string name="chess_piece_bishop">Laidnis</string>
+    <string name="chess_piece_knight">Zirgs</string>
+    <string name="chess_piece_pawn">Bandinieks</string>
+    <string name="chess_move_played">%1$s spēlēja %2$s</string>
+    <string name="chess_channel_name">Šaha paziņojumi</string>
+    <string name="chess_channel_description">Paziņojumi par gājieniem, neizšķirtu piedāvājumiem un spēļu rezultātiem.</string>
+    <string name="chess_open_sidebar">Atvērt sānu joslu</string>
+    <string name="chess_empty_subtitle">Sāciet savu pirmo spēli, lai spēlētu šahu ar draugu.</string>
+    <string name="chess_empty_start_button">Sāciet savu pirmo spēli</string>
+    <string name="chess_detail_unavailable">Spēle nav pieejama</string>
+    <string name="chess_delete_title">Dzēst spēli?</string>
+    <string name="chess_delete_message">Tas noņem spēli no jūsu saraksta.</string>
+    <string name="chess_ws_connecting">Pieslēdzas…</string>
+    <string name="chess_ws_disconnected">Bezsaistē</string>
+    <string name="chess_ws_reconnecting">Pieslēdzas atkārtoti…</string>
+    <string name="chess_ws_failed">Savienojums neizdevās</string>
+    <string name="chess_move_capture">%1$s paņēma %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

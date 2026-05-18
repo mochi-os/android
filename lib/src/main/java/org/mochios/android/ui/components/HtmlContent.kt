@@ -21,7 +21,8 @@ fun HtmlContent(
     html: String,
     modifier: Modifier = Modifier,
     maxLines: Int = Int.MAX_VALUE,
-    onClick: (() -> Unit)? = null
+    onClick: (() -> Unit)? = null,
+    onTextViewReady: ((TextView) -> Unit)? = null
 ) {
     val context = LocalContext.current
     val markwon = remember(context) {
@@ -47,6 +48,11 @@ fun HtmlContent(
                 setTextColor(
                     ctx.resources.getColor(android.R.color.primary_text_light, ctx.theme)
                 )
+                // Selectable so the user can long-press to pick text inside
+                // the rendered markdown — used by wikis' quote-on-select
+                // reply path, which reads the active selection at the moment
+                // Reply is tapped.
+                setTextIsSelectable(true)
             }
         },
         update = { textView ->
@@ -56,6 +62,7 @@ fun HtmlContent(
             }
             (textView as ClickableLinkTextView).onNonLinkClick = onClick
             markwon.setParsedMarkdown(textView, spanned)
+            onTextViewReady?.invoke(textView)
         },
         modifier = modifier
     )

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Roghchlár</string>
+    <string name="words_list_new">Cluiche nua</string>
+    <string name="words_list_logout">Logáil amach</string>
+    <string name="words_list_empty_title">Níl aon chluiche fós</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Críochnaithe</string>
+    <string name="words_sidebar_new_game">Cluiche nua</string>
+    <string name="words_new_game_title">Cluiche nua</string>
+    <string name="words_new_game_language">Teanga</string>
+    <string name="words_new_game_language_uk">Béarla (RA)</string>
+    <string name="words_new_game_language_us">Béarla (SAM)</string>
+    <string name="words_new_game_start">Tosaigh an cluiche</string>
+    <string name="words_new_game_no_friends_title">Níl aon chara fós</string>
+    <string name="words_new_game_add_friends">Cuir cairde leis</string>
+    <string name="words_detail_status_your_move">Do ghluaiseacht</string>
+    <string name="words_detail_status_you_win">Bhuaigh tú!</string>
+    <string name="words_detail_status_game_over">Cluiche thart</string>
+    <string name="words_detail_status_opponent_resigned">D\'éirigh an céile comhraic as — bhuaigh tú!</string>
+    <string name="words_detail_status_you_resigned">D\'éirigh tú as</string>
+    <string name="words_detail_label_you">Tusa</string>
+    <string name="words_detail_action_shuffle">Suaitheadh raca</string>
+    <string name="words_detail_action_pass">Lig thar</string>
+    <string name="words_detail_action_exchange">Malartaigh tíleanna</string>
+    <string name="words_detail_action_cancel_exchange">Cealaigh malartú</string>
+    <string name="words_detail_action_resign">Éirigh as</string>
+    <string name="words_detail_action_rematch">Athchluiche</string>
+    <string name="words_detail_action_delete">Scrios cluiche</string>
+    <string name="words_detail_chat_title">Comhrá</string>
+    <string name="words_detail_invalid_move">Bogadh neamhbhailí</string>
+    <string name="words_detail_recall">Aisghair</string>
+    <string name="words_detail_submit">Cuir isteach</string>
+    <string name="words_detail_cancel">Cealaigh</string>
+    <string name="words_detail_exchange">Malartaigh</string>
+    <string name="words_detail_blank_title">Roghnaigh litir</string>
+    <string name="words_detail_resign_title">Éirigh as an gcluiche?</string>
+    <string name="words_detail_resign_message">An bhfuil tú cinnte gur mian leat éirí as?</string>
+    <string name="words_detail_failed_move">Theip ar bhogadh a chur isteach</string>
+    <string name="words_detail_failed_pass">Theip ar phas</string>
+    <string name="words_detail_failed_exchange">Theip ar mhalartú</string>
+    <string name="words_detail_failed_resign">Theip ar éirí as</string>
+    <string name="words_detail_failed_rematch">Theip ar athchluiche a chruthú</string>
+    <string name="words_detail_failed_delete">Theip ar chluiche a scriosadh</string>
+    <string name="words_detail_game_deleted">Cluiche scriosta</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

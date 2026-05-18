@@ -7,4 +7,9 @@
     <string name="launcher_projects">项目</string>
     <string name="launcher_settings">设置</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">国际象棋</string>
+    <string name="launcher_go">围棋</string>
+    <string name="launcher_words">词语</string>
+
 </resources>

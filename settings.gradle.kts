@@ -10,6 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // chesslib (com.github.bhlangonijr:chesslib) is published via JitPack.
+        maven { url = uri("https://jitpack.io") }
     }
 }
 rootProject.name = "Mochi"
@@ -23,3 +25,6 @@ include(":apps:crm")
 include(":apps:people")
 include(":apps:settings")
 include(":apps:wikis")
+include(":apps:chess")
+include(":apps:go")
+include(":apps:words")

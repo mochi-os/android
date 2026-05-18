@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Novo jogo</string>
+    <string name="words_list_logout">Sair</string>
+    <string name="words_list_empty_title">Ainda não há jogos</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Concluído</string>
+    <string name="words_sidebar_new_game">Novo jogo</string>
+    <string name="words_new_game_title">Novo jogo</string>
+    <string name="words_new_game_language">Idioma</string>
+    <string name="words_new_game_language_uk">Inglês (Reino Unido)</string>
+    <string name="words_new_game_language_us">Inglês (EUA)</string>
+    <string name="words_new_game_start">Iniciar jogo</string>
+    <string name="words_new_game_no_friends_title">Ainda não há amigos</string>
+    <string name="words_new_game_add_friends">Adicionar amigos</string>
+    <string name="words_detail_status_your_move">Sua vez</string>
+    <string name="words_detail_status_you_win">Você venceu!</string>
+    <string name="words_detail_status_game_over">Fim de jogo</string>
+    <string name="words_detail_status_opponent_resigned">O oponente desistiu — você venceu!</string>
+    <string name="words_detail_status_you_resigned">Você desistiu</string>
+    <string name="words_detail_label_you">Você</string>
+    <string name="words_detail_action_shuffle">Embaralhar suporte</string>
+    <string name="words_detail_action_pass">Passar</string>
+    <string name="words_detail_action_exchange">Trocar peças</string>
+    <string name="words_detail_action_cancel_exchange">Cancelar troca</string>
+    <string name="words_detail_action_resign">Desistir</string>
+    <string name="words_detail_action_rematch">Revanche</string>
+    <string name="words_detail_action_delete">Excluir jogo</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Jogada inválida</string>
+    <string name="words_detail_recall">Revogar</string>
+    <string name="words_detail_submit">Enviar</string>
+    <string name="words_detail_cancel">Cancelar</string>
+    <string name="words_detail_exchange">Trocar</string>
+    <string name="words_detail_blank_title">Escolha uma letra</string>
+    <string name="words_detail_resign_title">Desistir do jogo?</string>
+    <string name="words_detail_resign_message">Tem certeza de que deseja desistir?</string>
+    <string name="words_detail_failed_move">Falha ao enviar jogada</string>
+    <string name="words_detail_failed_pass">Falha ao passar</string>
+    <string name="words_detail_failed_exchange">Falha ao trocar</string>
+    <string name="words_detail_failed_resign">Falha ao desistir</string>
+    <string name="words_detail_failed_rematch">Falha ao criar revanche</string>
+    <string name="words_detail_failed_delete">Falha ao excluir jogo</string>
+    <string name="words_detail_game_deleted">Jogo excluído</string>
+
+    <string name="words_channel_name">Notificações de Palavras</string>
+    <string name="words_channel_description">Notificações sobre turnos, trocas e resultados de partidas.</string>
+    <string name="words_list_empty_subtitle">Toque no botão + para começar sua primeira partida.</string>
+    <string name="words_list_status_finished">Concluída</string>
+    <string name="words_list_status_resigned">Abandonada</string>
+    <string name="words_list_your_turn">Sua vez</string>
+    <string name="words_sidebar_active">Partidas ativas</string>
+    <string name="words_sidebar_empty">Ainda sem partidas.</string>
+    <string name="words_new_game_choose_opponents">Escolher adversários</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d jogadores</string>
+    <string name="words_new_game_no_friends_subtitle">Adicione amigos no aplicativo Pessoas para começar a jogar.</string>
+    <string name="words_detail_title">Partida</string>
+    <string name="words_detail_coming_soon">Detalhes da partida em breve</string>
+    <string name="words_detail_status_opponent_move">Vez de %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s vence</string>
+    <string name="words_detail_player_fallback">Jogador %1$d</string>
+    <string name="words_detail_player_count">%1$d jogadores</string>
+    <string name="words_detail_label_tiles_left">%1$d peças restantes</string>
+    <string name="words_detail_action_open_chat">Abrir bate-papo</string>
+    <string name="words_detail_action_more">Ações da partida</string>
+    <string name="words_detail_exchange_count">Trocar (%1$d)</string>
+    <string name="words_detail_chat_you_played">Você jogou %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s jogou %2$s</string>
+
+</resources>

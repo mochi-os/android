@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Chess</string>
+    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_sidebar_active">Àwọn Eré Tó Ń Lọ</string>
+    <string name="chess_sidebar_completed">Tí a parí</string>
+    <string name="chess_sidebar_new_game">Eré tuntun</string>
+    <string name="chess_section_active">Àwọn Eré Tó Ń Lọ</string>
+    <string name="chess_section_completed">Tí a parí</string>
+    <string name="chess_new_game">Eré tuntun</string>
+    <string name="chess_empty_title">Kò sí eré síbẹ̀</string>
+    <string name="chess_new_title">Eré Tuntun</string>
+    <string name="chess_new_pick_opponent">Yan alátakò</string>
+    <string name="chess_new_no_friends_title">Kò sí ọ̀rẹ́ síbẹ̀</string>
+    <string name="chess_new_no_friends_subtitle">Fi àwọn ọ̀rẹ́ kún nínú app People láti bẹ̀rẹ̀ eré</string>
+    <string name="chess_new_add_friends">Fi àwọn ọ̀rẹ́ kún</string>
+    <string name="chess_new_start_button">Bẹ̀rẹ̀ eré</string>
+    <string name="chess_new_creating">Ó ń dá…</string>
+    <string name="chess_new_failed">Kò lè dá eré</string>
+    <string name="chess_chat_title">Ìjíròrò</string>
+    <string name="chess_open_chat">Ṣí àwòrán chat</string>
+    <string name="chess_open_actions">Ṣí àwọn iṣẹ́ eré</string>
+    <string name="chess_offer_draw">Pèsè ìdọ́gba</string>
+    <string name="chess_resign">Fi sílẹ̀</string>
+    <string name="chess_rematch">Tún bá</string>
+    <string name="chess_delete_game">Pa eré rẹ́</string>
+    <string name="chess_side_white">Funfun</string>
+    <string name="chess_side_black">Dúdú</string>
+    <string name="chess_resign_title">Fi eré sílẹ̀?</string>
+    <string name="chess_resign_confirm">Fi sílẹ̀</string>
+    <string name="chess_delete_confirm">Pa eré rẹ́</string>
+    <string name="chess_draw_accept">Gbà</string>
+    <string name="chess_draw_decline">Kọ̀</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — o ṣẹgun!</string>
+    <string name="chess_status_stalemate">Stalemate — díẹ̀</string>
+    <string name="chess_status_draw">Ìbárapọ̀</string>
+    <string name="chess_status_check_your_move">Check — ìṣíkiri rẹ</string>
+    <string name="chess_status_your_move">Ìṣíkiri rẹ</string>
+    <string name="chess_move_subject_you">Ìwọ</string>
+    <string name="chess_promotion_title">Gbé sí:</string>
+
+    <string name="chess_resign_message">Ǹjẹ́ ó dájú pé o fẹ́ jọ̀wọ́? %1$s yóò ṣẹ́gun ìdíje náà.</string>
+    <string name="chess_draw_offered">%1$s fún ní ìdábọ̀</string>
+    <string name="chess_draw_waiting">A fún ní ìdábọ̀ — ń dúró de %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s ṣẹgun</string>
+    <string name="chess_status_resigned_you">O fi ipò sílẹ̀ — %1$s borí</string>
+    <string name="chess_status_resigned_opponent">%1$s fi ipò sílẹ̀ — o borí!</string>
+    <string name="chess_status_check_opponent_move">Check — ìṣíkiri %1$s</string>
+    <string name="chess_status_opponent_move">Ìṣíkiri ti %1$s</string>
+    <string name="chess_piece_king">Ọba</string>
+    <string name="chess_piece_queen">Ayaba</string>
+    <string name="chess_piece_rook">Ilé olódi</string>
+    <string name="chess_piece_bishop">Bíṣọ́ọ̀bù</string>
+    <string name="chess_piece_knight">Ẹṣin</string>
+    <string name="chess_piece_pawn">Ọmọ ogun</string>
+    <string name="chess_move_played">%1$s ṣe %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

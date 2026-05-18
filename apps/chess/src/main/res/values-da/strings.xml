@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Skak</string>
+    <string name="chess_sidebar_header">Skak</string>
+    <string name="chess_sidebar_active">Aktive spil</string>
+    <string name="chess_sidebar_completed">Gennemført</string>
+    <string name="chess_sidebar_new_game">Nyt spil</string>
+    <string name="chess_section_active">Aktive spil</string>
+    <string name="chess_section_completed">Gennemført</string>
+    <string name="chess_new_game">Nyt spil</string>
+    <string name="chess_empty_title">Ingen spil endnu</string>
+    <string name="chess_new_title">Nyt spil</string>
+    <string name="chess_new_pick_opponent">Vælg modstander</string>
+    <string name="chess_new_no_friends_title">Ingen venner endnu</string>
+    <string name="chess_new_no_friends_subtitle">Tilføj venner i Personer-appen for at begynde at spille</string>
+    <string name="chess_new_add_friends">Tilføj venner</string>
+    <string name="chess_new_start_button">Start spil</string>
+    <string name="chess_new_creating">Opretter…</string>
+    <string name="chess_new_failed">Kunne ikke oprette spil</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Åbn chatpanel</string>
+    <string name="chess_open_actions">Åbn spilhandlinger</string>
+    <string name="chess_offer_draw">Tilbyd remis</string>
+    <string name="chess_resign">Giv op</string>
+    <string name="chess_rematch">Returkamp</string>
+    <string name="chess_delete_game">Slet spil</string>
+    <string name="chess_side_white">Hvid</string>
+    <string name="chess_side_black">Sort</string>
+    <string name="chess_resign_title">Giv op i spillet?</string>
+    <string name="chess_resign_confirm">Giv op</string>
+    <string name="chess_delete_confirm">Slet spil</string>
+    <string name="chess_draw_accept">Accepter</string>
+    <string name="chess_draw_decline">Afvis</string>
+    <string name="chess_status_checkmate_you_win">Skakmat — du vinder!</string>
+    <string name="chess_status_stalemate">Pat — uafgjort</string>
+    <string name="chess_status_draw">Remis</string>
+    <string name="chess_status_check_your_move">Skak — dit træk</string>
+    <string name="chess_status_your_move">Dit træk</string>
+    <string name="chess_move_subject_you">Dig</string>
+    <string name="chess_promotion_title">Forfrem til:</string>
+
+    <string name="chess_resign_message">Er du sikker på, at du vil opgive? %1$s vinder spillet.</string>
+    <string name="chess_draw_offered">%1$s tilbød remis</string>
+    <string name="chess_draw_waiting">Remis tilbudt — venter på %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Skakmat — %1$s vinder</string>
+    <string name="chess_status_resigned_you">Du opgav — %1$s vinder</string>
+    <string name="chess_status_resigned_opponent">%1$s opgav — du vinder!</string>
+    <string name="chess_status_check_opponent_move">Skak — %1$ss træk</string>
+    <string name="chess_status_opponent_move">%1$ss træk</string>
+    <string name="chess_piece_king">Konge</string>
+    <string name="chess_piece_queen">Dronning</string>
+    <string name="chess_piece_rook">Tårn</string>
+    <string name="chess_piece_bishop">Løber</string>
+    <string name="chess_piece_knight">Springer</string>
+    <string name="chess_piece_pawn">Bonde</string>
+    <string name="chess_move_played">%1$s spillede %2$s</string>
+    <string name="chess_channel_name">Skak-notifikationer</string>
+    <string name="chess_channel_description">Notifikationer om træk, remistilbud og partiresultater.</string>
+    <string name="chess_open_sidebar">Åbn sidebjælke</string>
+    <string name="chess_empty_subtitle">Start dit første parti for at spille skak med en ven.</string>
+    <string name="chess_empty_start_button">Start dit første parti</string>
+    <string name="chess_detail_unavailable">Parti utilgængeligt</string>
+    <string name="chess_delete_title">Slet parti?</string>
+    <string name="chess_delete_message">Dette fjerner partiet fra din liste.</string>
+    <string name="chess_ws_connecting">Forbinder…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Genopretter forbindelse…</string>
+    <string name="chess_ws_failed">Forbindelse mislykkedes</string>
+    <string name="chess_move_capture">%1$s tog %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

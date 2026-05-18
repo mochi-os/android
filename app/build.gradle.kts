@@ -114,6 +114,9 @@ dependencies {
     implementation(project(":apps:people"))
     implementation(project(":apps:settings"))
     implementation(project(":apps:wikis"))
+    implementation(project(":apps:chess"))
+    implementation(project(":apps:go"))
+    implementation(project(":apps:words"))
 
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Amagama</string>
+    <string name="words_list_title">Amagama</string>
+    <string name="words_list_menu">Imenyu</string>
+    <string name="words_list_new">Umdlalo omusha</string>
+    <string name="words_list_logout">Phuma</string>
+    <string name="words_list_empty_title">Ayikho imidlalo okwamanje</string>
+    <string name="words_sidebar_header">Amagama</string>
+    <string name="words_sidebar_completed">Kuqediwe</string>
+    <string name="words_sidebar_new_game">Umdlalo omusha</string>
+    <string name="words_new_game_title">Umdlalo omusha</string>
+    <string name="words_new_game_language">Ulimi</string>
+    <string name="words_new_game_language_uk">IsiNgisi (UK)</string>
+    <string name="words_new_game_language_us">IsiNgisi (US)</string>
+    <string name="words_new_game_start">Qala umdlalo</string>
+    <string name="words_new_game_no_friends_title">Abakho abangani okwamanje</string>
+    <string name="words_new_game_add_friends">Engeza abangane</string>
+    <string name="words_detail_status_your_move">Ukunyakaza kwakho</string>
+    <string name="words_detail_status_you_win">Uwinile!</string>
+    <string name="words_detail_status_game_over">Umdlalo uphelile</string>
+    <string name="words_detail_status_opponent_resigned">Ophikisanayo uyekile — uwinile!</string>
+    <string name="words_detail_status_you_resigned">Ushiye phansi</string>
+    <string name="words_detail_label_you">Wena</string>
+    <string name="words_detail_action_shuffle">Phithizela ishalofu</string>
+    <string name="words_detail_action_pass">Yedlula</string>
+    <string name="words_detail_action_exchange">Shintshanisa amathayela</string>
+    <string name="words_detail_action_cancel_exchange">Khansela ukushintshelana</string>
+    <string name="words_detail_action_resign">Yeka</string>
+    <string name="words_detail_action_rematch">Phindela emdlalweni</string>
+    <string name="words_detail_action_delete">Susa umdlalo</string>
+    <string name="words_detail_chat_title">Ingxoxo</string>
+    <string name="words_detail_invalid_move">Ukunyakaza okungalungile</string>
+    <string name="words_detail_recall">Khumbula</string>
+    <string name="words_detail_submit">Hambisa</string>
+    <string name="words_detail_cancel">Khansela</string>
+    <string name="words_detail_exchange">Shintsha</string>
+    <string name="words_detail_blank_title">Khetha uhlamvu</string>
+    <string name="words_detail_resign_title">Yeka umdlalo?</string>
+    <string name="words_detail_resign_message">Uqinisekile ufuna ukuyeka?</string>
+    <string name="words_detail_failed_move">Kuhlulekile ukuthumela ukunyakaza</string>
+    <string name="words_detail_failed_pass">Kuhlulekile ukudlula</string>
+    <string name="words_detail_failed_exchange">Kuhlulekile ukushintshanisa</string>
+    <string name="words_detail_failed_resign">Kuhlulekile ukuyeka</string>
+    <string name="words_detail_failed_rematch">Kuhlulekile ukudala umdlalo omusha</string>
+    <string name="words_detail_failed_delete">Kuhlulekile ukususa umdlalo</string>
+    <string name="words_detail_game_deleted">Umdlalo ususiwe</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">ဆက်စ်</string>
+    <string name="chess_sidebar_header">ဆက်စ်</string>
+    <string name="chess_sidebar_active">လက်ရှိ Games</string>
+    <string name="chess_sidebar_completed">ပြီးစီးပြီး</string>
+    <string name="chess_sidebar_new_game">ဂိမ်းအသစ်</string>
+    <string name="chess_section_active">လက်ရှိ Games</string>
+    <string name="chess_section_completed">ပြီးစီးပြီး</string>
+    <string name="chess_new_game">ဂိမ်းအသစ်</string>
+    <string name="chess_empty_title">ဂိမ်းများ မရှိသေးပါ</string>
+    <string name="chess_new_title">ဂိမ်းအသစ်</string>
+    <string name="chess_new_pick_opponent">ပြိုင်ဘက် ရွေးချယ်ပါ</string>
+    <string name="chess_new_no_friends_title">သူငယ်ချင်းများ မရှိသေးပါ</string>
+    <string name="chess_new_no_friends_subtitle">ကစားစတင်ရန် People app တွင် သူငယ်ချင်းများ ထည့်ပါ</string>
+    <string name="chess_new_add_friends">သူငယ်ချင်းများ ထည့်မည်</string>
+    <string name="chess_new_start_button">ဂိမ်း စတင်မည်</string>
+    <string name="chess_new_creating">ဖန်တီးနေသည်…</string>
+    <string name="chess_new_failed">ဂိမ်း ဖန်တီး၍ မရပါ</string>
+    <string name="chess_chat_title">စကားပြောခန်း</string>
+    <string name="chess_open_chat">ချတ် panel ကို ဖွင့်</string>
+    <string name="chess_open_actions">ဂိမ်း လုပ်ဆောင်ချက်များကို ဖွင့်</string>
+    <string name="chess_offer_draw">ထိုးကွက် ပြန်မျှခြင်း ကမ်းလှမ်း</string>
+    <string name="chess_resign">ရှုံးကြောင်းပြော</string>
+    <string name="chess_rematch">ပြန်ကစား</string>
+    <string name="chess_delete_game">ဂိမ်း ဖျက်မည်</string>
+    <string name="chess_side_white">အဖြူ</string>
+    <string name="chess_side_black">အနက်</string>
+    <string name="chess_resign_title">ဂိမ်း ရှုံးကြောင်းပြောမလား?</string>
+    <string name="chess_resign_confirm">ရှုံးကြောင်းပြော</string>
+    <string name="chess_delete_confirm">ဂိမ်း ဖျက်မည်</string>
+    <string name="chess_draw_accept">လက်ခံမည်</string>
+    <string name="chess_draw_decline">ငြင်းပယ်မည်</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — သင် နိုင်သည်!</string>
+    <string name="chess_status_stalemate">ပြိုင်ဆိုင်ရာ မအောင်မြင်ပါ — တစ်ဖက်နှင့်တစ်ဖက် တူ</string>
+    <string name="chess_status_draw">သရေ</string>
+    <string name="chess_status_check_your_move">Check — သင့်အလှည့်</string>
+    <string name="chess_status_your_move">သင်၏ အလှည့်</string>
+    <string name="chess_move_subject_you">သင်</string>
+    <string name="chess_promotion_title">သို့ မြှင့်တင် -</string>
+
+    <string name="chess_resign_message">လက်လျှော့မှာသေချာပါသလား? %1$s က ပွဲကို နိုင်မည်ဖြစ်သည်။</string>
+    <string name="chess_draw_offered">%1$s က သရေ ပေးခဲ့သည်</string>
+    <string name="chess_draw_waiting">သရေ ကမ်းလှမ်းထားသည် — %1$s ကို စောင့်နေသည်</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s နိုင်သည်</string>
+    <string name="chess_status_resigned_you">သင် လက်လျှော့ခဲ့သည် — %1$s နိုင်သည်</string>
+    <string name="chess_status_resigned_opponent">%1$s လက်လျှော့ခဲ့သည် — သင်နိုင်ပြီ!</string>
+    <string name="chess_status_check_opponent_move">Check — %1$s ၏ အလှည့်</string>
+    <string name="chess_status_opponent_move">%1$s ၏ အလှည့်</string>
+    <string name="chess_piece_king">ရှင်ဘုရင်</string>
+    <string name="chess_piece_queen">မိဖုရား</string>
+    <string name="chess_piece_rook">ရထား</string>
+    <string name="chess_piece_bishop">ဆင်</string>
+    <string name="chess_piece_knight">မြင်း</string>
+    <string name="chess_piece_pawn">စစ်သား</string>
+    <string name="chess_move_played">%1$s က %2$s ကို ကစားခဲ့သည်</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

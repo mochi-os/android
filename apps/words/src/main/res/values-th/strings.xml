@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">เมนู</string>
+    <string name="words_list_new">เกมใหม่</string>
+    <string name="words_list_logout">ออกจากระบบ</string>
+    <string name="words_list_empty_title">ยังไม่มีเกม</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">เสร็จสมบูรณ์</string>
+    <string name="words_sidebar_new_game">เกมใหม่</string>
+    <string name="words_new_game_title">เกมใหม่</string>
+    <string name="words_new_game_language">ภาษา</string>
+    <string name="words_new_game_language_uk">อังกฤษ (UK)</string>
+    <string name="words_new_game_language_us">อังกฤษ (US)</string>
+    <string name="words_new_game_start">เริ่มเกม</string>
+    <string name="words_new_game_no_friends_title">ยังไม่มีเพื่อน</string>
+    <string name="words_new_game_add_friends">เพิ่มเพื่อน</string>
+    <string name="words_detail_status_your_move">ตาของคุณ</string>
+    <string name="words_detail_status_you_win">คุณชนะ!</string>
+    <string name="words_detail_status_game_over">จบเกม</string>
+    <string name="words_detail_status_opponent_resigned">คู่ต่อสู้ยอมแพ้ — คุณชนะ!</string>
+    <string name="words_detail_status_you_resigned">คุณยอมแพ้</string>
+    <string name="words_detail_label_you">คุณ</string>
+    <string name="words_detail_action_shuffle">สับเปลี่ยนแร็ค</string>
+    <string name="words_detail_action_pass">ผ่าน</string>
+    <string name="words_detail_action_exchange">แลกเปลี่ยนตัวอักษร</string>
+    <string name="words_detail_action_cancel_exchange">ยกเลิกการแลกเปลี่ยน</string>
+    <string name="words_detail_action_resign">ยอมแพ้</string>
+    <string name="words_detail_action_rematch">แข่งใหม่</string>
+    <string name="words_detail_action_delete">ลบเกม</string>
+    <string name="words_detail_chat_title">แชท</string>
+    <string name="words_detail_invalid_move">การเดินไม่ถูกต้อง</string>
+    <string name="words_detail_recall">เรียกคืน</string>
+    <string name="words_detail_submit">ส่ง</string>
+    <string name="words_detail_cancel">ยกเลิก</string>
+    <string name="words_detail_exchange">สลับ</string>
+    <string name="words_detail_blank_title">เลือกตัวอักษร</string>
+    <string name="words_detail_resign_title">ยอมแพ้เกม?</string>
+    <string name="words_detail_resign_message">แน่ใจว่าต้องการยอมแพ้?</string>
+    <string name="words_detail_failed_move">ไม่สามารถส่งการเดินได้</string>
+    <string name="words_detail_failed_pass">ไม่สามารถข้ามได้</string>
+    <string name="words_detail_failed_exchange">ไม่สามารถแลกเปลี่ยนได้</string>
+    <string name="words_detail_failed_resign">ไม่สามารถยอมแพ้ได้</string>
+    <string name="words_detail_failed_rematch">ไม่สามารถสร้างการแข่งใหม่ได้</string>
+    <string name="words_detail_failed_delete">ไม่สามารถลบเกมได้</string>
+    <string name="words_detail_game_deleted">ลบเกมแล้ว</string>
+
+    <string name="words_channel_name">การแจ้งเตือน Words</string>
+    <string name="words_channel_description">การแจ้งเตือนเกี่ยวกับเทิร์น การแลกเปลี่ยน และผลการแข่งขัน</string>
+    <string name="words_list_empty_subtitle">แตะปุ่ม + เพื่อเริ่มเกมแรกของคุณ</string>
+    <string name="words_list_status_finished">จบแล้ว</string>
+    <string name="words_list_status_resigned">ยอมแพ้</string>
+    <string name="words_list_your_turn">ตาคุณ</string>
+    <string name="words_sidebar_active">เกมที่กำลังเล่น</string>
+    <string name="words_sidebar_empty">ยังไม่มีเกม</string>
+    <string name="words_new_game_choose_opponents">เลือกคู่ต่อสู้</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d ผู้เล่น</string>
+    <string name="words_new_game_no_friends_subtitle">เพิ่มเพื่อนในแอปผู้คนเพื่อเริ่มเล่น</string>
+    <string name="words_detail_title">เกม</string>
+    <string name="words_detail_coming_soon">รายละเอียดเกมเร็วๆ นี้</string>
+    <string name="words_detail_status_opponent_move">ตาของ %1$s</string>
+    <string name="words_detail_status_winner_wins">%1$s ชนะ</string>
+    <string name="words_detail_player_fallback">ผู้เล่น %1$d</string>
+    <string name="words_detail_player_count">%1$d ผู้เล่น</string>
+    <string name="words_detail_label_tiles_left">เหลือ %1$d ตัว</string>
+    <string name="words_detail_action_open_chat">เปิดแชท</string>
+    <string name="words_detail_action_more">การกระทำในเกม</string>
+    <string name="words_detail_exchange_count">แลกเปลี่ยน (%1$d)</string>
+    <string name="words_detail_chat_you_played">คุณเล่น %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s เล่น %2$s</string>
+
+</resources>

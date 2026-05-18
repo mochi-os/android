@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">ワーズ</string>
+    <string name="words_list_title">ワーズ</string>
+    <string name="words_list_menu">メニュー</string>
+    <string name="words_list_new">新しいゲーム</string>
+    <string name="words_list_logout">ログアウト</string>
+    <string name="words_list_empty_title">まだゲームがありません</string>
+    <string name="words_sidebar_header">ワーズ</string>
+    <string name="words_sidebar_completed">完了</string>
+    <string name="words_sidebar_new_game">新しいゲーム</string>
+    <string name="words_new_game_title">新しいゲーム</string>
+    <string name="words_new_game_language">言語</string>
+    <string name="words_new_game_language_uk">英語 (英国)</string>
+    <string name="words_new_game_language_us">英語 (米国)</string>
+    <string name="words_new_game_start">ゲームを開始</string>
+    <string name="words_new_game_no_friends_title">まだ友だちがいません</string>
+    <string name="words_new_game_add_friends">友だちを追加</string>
+    <string name="words_detail_status_your_move">あなたの番です</string>
+    <string name="words_detail_status_you_win">勝ちました！</string>
+    <string name="words_detail_status_game_over">ゲーム終了</string>
+    <string name="words_detail_status_opponent_resigned">相手が投了しました — あなたの勝ち！</string>
+    <string name="words_detail_status_you_resigned">投了しました</string>
+    <string name="words_detail_label_you">あなた</string>
+    <string name="words_detail_action_shuffle">ラックをシャッフル</string>
+    <string name="words_detail_action_pass">パス</string>
+    <string name="words_detail_action_exchange">タイルを交換</string>
+    <string name="words_detail_action_cancel_exchange">交換をキャンセル</string>
+    <string name="words_detail_action_resign">投了</string>
+    <string name="words_detail_action_rematch">再戦</string>
+    <string name="words_detail_action_delete">ゲームを削除</string>
+    <string name="words_detail_chat_title">チャット</string>
+    <string name="words_detail_invalid_move">無効な着手</string>
+    <string name="words_detail_recall">戻す</string>
+    <string name="words_detail_submit">送信</string>
+    <string name="words_detail_cancel">キャンセル</string>
+    <string name="words_detail_exchange">交換</string>
+    <string name="words_detail_blank_title">文字を選択</string>
+    <string name="words_detail_resign_title">ゲームを投了しますか?</string>
+    <string name="words_detail_resign_message">本当に投了しますか?</string>
+    <string name="words_detail_failed_move">着手の送信に失敗しました</string>
+    <string name="words_detail_failed_pass">パスに失敗しました</string>
+    <string name="words_detail_failed_exchange">交換に失敗しました</string>
+    <string name="words_detail_failed_resign">投了に失敗しました</string>
+    <string name="words_detail_failed_rematch">再戦の作成に失敗しました</string>
+    <string name="words_detail_failed_delete">ゲームの削除に失敗しました</string>
+    <string name="words_detail_game_deleted">ゲームを削除しました</string>
+
+    <string name="words_channel_name">ワードの通知</string>
+    <string name="words_channel_description">ターン、交換、ゲーム結果に関する通知。</string>
+    <string name="words_list_empty_subtitle">+ボタンをタップして最初のゲームを始めましょう。</string>
+    <string name="words_list_status_finished">終了</string>
+    <string name="words_list_status_resigned">投了</string>
+    <string name="words_list_your_turn">あなたの番</string>
+    <string name="words_sidebar_active">進行中のゲーム</string>
+    <string name="words_sidebar_empty">まだゲームはありません。</string>
+    <string name="words_new_game_choose_opponents">対戦相手を選ぶ</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d人のプレイヤー</string>
+    <string name="words_new_game_no_friends_subtitle">ピープルアプリで友達を追加してプレイを始めましょう。</string>
+    <string name="words_detail_title">ゲーム</string>
+    <string name="words_detail_coming_soon">ゲームの詳細は近日公開</string>
+    <string name="words_detail_status_opponent_move">%1$sの番</string>
+    <string name="words_detail_status_winner_wins">%1$sの勝ち</string>
+    <string name="words_detail_player_fallback">プレイヤー%1$d</string>
+    <string name="words_detail_player_count">%1$d人のプレイヤー</string>
+    <string name="words_detail_label_tiles_left">残り%1$d枚</string>
+    <string name="words_detail_action_open_chat">チャットを開く</string>
+    <string name="words_detail_action_more">ゲームのアクション</string>
+    <string name="words_detail_exchange_count">交換 (%1$d)</string>
+    <string name="words_detail_chat_you_played">あなたは%1$sを置きました</string>
+    <string name="words_detail_chat_player_played">%1$sは%2$sを置きました</string>
+
+</resources>

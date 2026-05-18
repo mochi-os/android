@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Salita</string>
+    <string name="words_list_title">Salita</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Bagong laro</string>
+    <string name="words_list_logout">Mag-log out</string>
+    <string name="words_list_empty_title">Wala pang laro</string>
+    <string name="words_sidebar_header">Salita</string>
+    <string name="words_sidebar_completed">Natapos</string>
+    <string name="words_sidebar_new_game">Bagong laro</string>
+    <string name="words_new_game_title">Bagong laro</string>
+    <string name="words_new_game_language">Wika</string>
+    <string name="words_new_game_language_uk">Ingles (UK)</string>
+    <string name="words_new_game_language_us">Ingles (US)</string>
+    <string name="words_new_game_start">Simulan ang laro</string>
+    <string name="words_new_game_no_friends_title">Wala pang kaibigan</string>
+    <string name="words_new_game_add_friends">Magdagdag ng mga kaibigan</string>
+    <string name="words_detail_status_your_move">Galaw mo</string>
+    <string name="words_detail_status_you_win">Nanalo ka!</string>
+    <string name="words_detail_status_game_over">Tapos na ang game</string>
+    <string name="words_detail_status_opponent_resigned">Sumuko ang katunggali — nanalo ka!</string>
+    <string name="words_detail_status_you_resigned">Sumuko ka</string>
+    <string name="words_detail_label_you">Ikaw</string>
+    <string name="words_detail_action_shuffle">I-shuffle ang rack</string>
+    <string name="words_detail_action_pass">Pumasa</string>
+    <string name="words_detail_action_exchange">Magpalit ng tiles</string>
+    <string name="words_detail_action_cancel_exchange">Kanselahin ang exchange</string>
+    <string name="words_detail_action_resign">Sumuko</string>
+    <string name="words_detail_action_rematch">Rematch</string>
+    <string name="words_detail_action_delete">I-delete ang game</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Invalid na move</string>
+    <string name="words_detail_recall">Bawiin</string>
+    <string name="words_detail_submit">Ipasa</string>
+    <string name="words_detail_cancel">Kanselahin</string>
+    <string name="words_detail_exchange">Palitan</string>
+    <string name="words_detail_blank_title">Pumili ng titik</string>
+    <string name="words_detail_resign_title">Sumuko sa laro?</string>
+    <string name="words_detail_resign_message">Sigurado kang gusto mong sumuko?</string>
+    <string name="words_detail_failed_move">Nabigong i-submit ang move</string>
+    <string name="words_detail_failed_pass">Nabigong magpasa</string>
+    <string name="words_detail_failed_exchange">Nabigong magpalit</string>
+    <string name="words_detail_failed_resign">Nabigong mag-resign</string>
+    <string name="words_detail_failed_rematch">Nabigong gumawa ng rematch</string>
+    <string name="words_detail_failed_delete">Nabigong magdelete ng game</string>
+    <string name="words_detail_game_deleted">Nadelete ang game</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

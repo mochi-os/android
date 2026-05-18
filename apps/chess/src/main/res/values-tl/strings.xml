@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Chess</string>
+    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_sidebar_active">Mga aktibong laro</string>
+    <string name="chess_sidebar_completed">Natapos</string>
+    <string name="chess_sidebar_new_game">Bagong laro</string>
+    <string name="chess_section_active">Mga aktibong laro</string>
+    <string name="chess_section_completed">Natapos</string>
+    <string name="chess_new_game">Bagong laro</string>
+    <string name="chess_empty_title">Wala pang laro</string>
+    <string name="chess_new_title">Bagong Laro</string>
+    <string name="chess_new_pick_opponent">Pumili ng kalaban</string>
+    <string name="chess_new_no_friends_title">Wala pang kaibigan</string>
+    <string name="chess_new_no_friends_subtitle">Magdagdag ng mga kaibigan sa People app para magsimulang maglaro</string>
+    <string name="chess_new_add_friends">Magdagdag ng mga kaibigan</string>
+    <string name="chess_new_start_button">Simulan ang laro</string>
+    <string name="chess_new_creating">Ginagawa…</string>
+    <string name="chess_new_failed">Nabigong gumawa ng game</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Buksan ang chat panel</string>
+    <string name="chess_open_actions">Buksan ang mga aksyon ng laro</string>
+    <string name="chess_offer_draw">Mag-alok ng tabla</string>
+    <string name="chess_resign">Sumuko</string>
+    <string name="chess_rematch">Rematch</string>
+    <string name="chess_delete_game">I-delete ang game</string>
+    <string name="chess_side_white">Puti</string>
+    <string name="chess_side_black">Itim</string>
+    <string name="chess_resign_title">Sumuko sa laro?</string>
+    <string name="chess_resign_confirm">Sumuko</string>
+    <string name="chess_delete_confirm">I-delete ang game</string>
+    <string name="chess_draw_accept">Tanggapin</string>
+    <string name="chess_draw_decline">Tanggihan</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — nanalo ka!</string>
+    <string name="chess_status_stalemate">Stalemate — patas</string>
+    <string name="chess_status_draw">Draw</string>
+    <string name="chess_status_check_your_move">Check — galaw mo na</string>
+    <string name="chess_status_your_move">Galaw mo</string>
+    <string name="chess_move_subject_you">Ikaw</string>
+    <string name="chess_promotion_title">I-promote sa:</string>
+
+    <string name="chess_resign_message">Sigurado ka bang gusto mong sumuko? Mananalo si %1$s sa laro.</string>
+    <string name="chess_draw_offered">Nag-alok ng draw si %1$s</string>
+    <string name="chess_draw_waiting">Inalok ang draw — naghihintay kay %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — nanalo si %1$s</string>
+    <string name="chess_status_resigned_you">Sumuko ka — nanalo si %1$s</string>
+    <string name="chess_status_resigned_opponent">Sumuko si %1$s — nanalo ka!</string>
+    <string name="chess_status_check_opponent_move">Check — galaw na ni %1$s</string>
+    <string name="chess_status_opponent_move">Galaw ni %1$s</string>
+    <string name="chess_piece_king">Hari</string>
+    <string name="chess_piece_queen">Reyna</string>
+    <string name="chess_piece_rook">Tore</string>
+    <string name="chess_piece_bishop">Obispo</string>
+    <string name="chess_piece_knight">Kabayo</string>
+    <string name="chess_piece_pawn">Peon</string>
+    <string name="chess_move_played">Naglaro si %1$s ng %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_side_white">Weiss</string>
+
+    <string name="chess_move_played">%1$s spielte %2$s</string>
+    <string name="chess_app_title">Chess</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_sidebar_active">Active Games</string>
+    <string name="chess_sidebar_completed">Completed</string>
+    <string name="chess_sidebar_new_game">New game</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_section_active">Active Games</string>
+    <string name="chess_section_completed">Completed</string>
+    <string name="chess_new_game">New game</string>
+    <string name="chess_empty_title">No games yet</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_new_title">New Game</string>
+    <string name="chess_new_pick_opponent">Choose opponent</string>
+    <string name="chess_new_no_friends_title">No friends yet</string>
+    <string name="chess_new_no_friends_subtitle">Add friends in the People app to start playing</string>
+    <string name="chess_new_add_friends">Add friends</string>
+    <string name="chess_new_start_button">Start game</string>
+    <string name="chess_new_creating">Creating…</string>
+    <string name="chess_new_failed">Failed to create game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_chat_title">Chat</string>
+    <string name="chess_open_chat">Open chat panel</string>
+    <string name="chess_open_actions">Open game actions</string>
+    <string name="chess_offer_draw">Offer draw</string>
+    <string name="chess_resign">Resign</string>
+    <string name="chess_rematch">Rematch</string>
+    <string name="chess_delete_game">Delete game</string>
+    <string name="chess_side_black">Black</string>
+    <string name="chess_resign_title">Resign game?</string>
+    <string name="chess_resign_message">Are you sure you want to resign? %1$s will win the game.</string>
+    <string name="chess_resign_confirm">Resign</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_delete_confirm">Delete game</string>
+    <string name="chess_draw_offered">%1$s offered a draw</string>
+    <string name="chess_draw_waiting">Draw offered — waiting for %1$s</string>
+    <string name="chess_draw_accept">Accept</string>
+    <string name="chess_draw_decline">Decline</string>
+    <string name="chess_status_checkmate_you_win">Checkmate — you win!</string>
+    <string name="chess_status_checkmate_opponent_wins">Checkmate — %1$s wins</string>
+    <string name="chess_status_stalemate">Stalemate — draw</string>
+    <string name="chess_status_draw">Draw</string>
+    <string name="chess_status_resigned_you">You resigned — %1$s wins</string>
+    <string name="chess_status_resigned_opponent">%1$s resigned — you win!</string>
+    <string name="chess_status_check_your_move">Check — your move</string>
+    <string name="chess_status_check_opponent_move">Check — %1$s\'s move</string>
+    <string name="chess_status_your_move">Your move</string>
+    <string name="chess_status_opponent_move">%1$s\'s move</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_subject_you">You</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_promotion_title">Promote to:</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_piece_king">King</string>
+    <string name="chess_piece_queen">Queen</string>
+    <string name="chess_piece_rook">Rook</string>
+    <string name="chess_piece_bishop">Bishop</string>
+    <string name="chess_piece_knight">Knight</string>
+    <string name="chess_piece_pawn">Pawn</string>
+
+</resources>

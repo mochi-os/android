@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Kalmomi</string>
+    <string name="words_list_title">Kalmomi</string>
+    <string name="words_list_menu">Menu</string>
+    <string name="words_list_new">Sabon wasa</string>
+    <string name="words_list_logout">Fita</string>
+    <string name="words_list_empty_title">Babu wasanni tukuna</string>
+    <string name="words_sidebar_header">Kalmomi</string>
+    <string name="words_sidebar_completed">An kammala</string>
+    <string name="words_sidebar_new_game">Sabon wasa</string>
+    <string name="words_new_game_title">Sabon wasa</string>
+    <string name="words_new_game_language">Harshe</string>
+    <string name="words_new_game_language_uk">Turanci (UK)</string>
+    <string name="words_new_game_language_us">Turanci (US)</string>
+    <string name="words_new_game_start">Fara wasa</string>
+    <string name="words_new_game_no_friends_title">Babu abokai tukuna</string>
+    <string name="words_new_game_add_friends">Ƙara abokai</string>
+    <string name="words_detail_status_your_move">Move ɗinku</string>
+    <string name="words_detail_status_you_win">Kun yi nasara!</string>
+    <string name="words_detail_status_game_over">Wasan ya ƙare</string>
+    <string name="words_detail_status_opponent_resigned">Abokin hamayya ya yi murabus — ka yi nasara!</string>
+    <string name="words_detail_status_you_resigned">Kun yi murabus</string>
+    <string name="words_detail_label_you">Kai</string>
+    <string name="words_detail_action_shuffle">Shuffle rack</string>
+    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_exchange">Musanya tiles</string>
+    <string name="words_detail_action_cancel_exchange">Soke musayar</string>
+    <string name="words_detail_action_resign">Yi murabus</string>
+    <string name="words_detail_action_rematch">Sake wasa</string>
+    <string name="words_detail_action_delete">Goge wasa</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Motsi mara inganci</string>
+    <string name="words_detail_recall">Tuna</string>
+    <string name="words_detail_submit">Aikawa</string>
+    <string name="words_detail_cancel">Soke</string>
+    <string name="words_detail_exchange">Musanya</string>
+    <string name="words_detail_blank_title">Zaɓi harafi</string>
+    <string name="words_detail_resign_title">A yi murabus daga wasa?</string>
+    <string name="words_detail_resign_message">Tabbas kana son ka mika wuya?</string>
+    <string name="words_detail_failed_move">An gaza miƙa motsi</string>
+    <string name="words_detail_failed_pass">An gaza pass</string>
+    <string name="words_detail_failed_exchange">An gaza musayawa</string>
+    <string name="words_detail_failed_resign">An gaza yin murabus</string>
+    <string name="words_detail_failed_rematch">An gaza ƙirƙirar rematch</string>
+    <string name="words_detail_failed_delete">An gaza share wasa</string>
+    <string name="words_detail_game_deleted">An share wasa</string>
+
+    <string name="words_channel_name">Words notifications</string>
+    <string name="words_channel_description">Notifications about Words turns, exchanges, and game outcomes.</string>
+    <string name="words_list_empty_subtitle">Tap the + button to start your first game.</string>
+    <string name="words_list_status_finished">Finished</string>
+    <string name="words_list_status_resigned">Resigned</string>
+    <string name="words_list_your_turn">Your turn</string>
+    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_empty">No games yet.</string>
+    <string name="words_new_game_choose_opponents">Choose opponents</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_no_friends_subtitle">Add friends in the People app to start playing.</string>
+    <string name="words_detail_title">Game</string>
+    <string name="words_detail_coming_soon">Game detail coming soon</string>
+    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_winner_wins">%1$s wins</string>
+    <string name="words_detail_player_fallback">Player %1$d</string>
+    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_action_open_chat">Open chat</string>
+    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_chat_you_played">You played %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+
+</resources>

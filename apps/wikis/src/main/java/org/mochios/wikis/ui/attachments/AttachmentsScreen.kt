@@ -6,8 +6,14 @@ import android.net.Uri
 import android.os.Environment
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.draganddrop.dragAndDropTarget
+import androidx.compose.ui.draganddrop.DragAndDropEvent
+import androidx.compose.ui.draganddrop.DragAndDropTarget
+import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,8 +32,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.InsertDriveFile
@@ -122,7 +128,7 @@ import org.mochios.android.R as MochiR
  * helpers and download-URL builders can resolve `${baseURL}attachments/<id>`
  * without each one having to be threaded a `serverUrl + wikiId` pair.
  */
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun AttachmentsScreen(
     navController: NavController,
@@ -160,6 +166,38 @@ fun AttachmentsScreen(
         }
     }
 
+    // Drag-and-drop file upload — accepts files dragged onto the screen
+    // from external apps (Files, Drive, Photos). Visible on Chromebooks,
+    // foldables, and Samsung DeX where drag-source apps exist.
+    var isDraggedOver by remember { mutableStateOf(false) }
+    val dragDropTarget = remember {
+        object : DragAndDropTarget {
+            override fun onStarted(event: DragAndDropEvent) {
+                isDraggedOver = true
+            }
+            override fun onEnded(event: DragAndDropEvent) {
+                isDraggedOver = false
+            }
+            override fun onDrop(event: DragAndDropEvent): Boolean {
+                val clip = event.toAndroidDragEvent().clipData ?: return false
+                val uris = mutableListOf<Uri>()
+                for (i in 0 until clip.itemCount) {
+                    val u = clip.getItemAt(i).uri ?: continue
+                    uris.add(u)
+                }
+                if (uris.isEmpty()) return false
+                viewModel.uploadAttachments(
+                    uris = uris,
+                    contentResolver = context.contentResolver,
+                    cacheDir = context.cacheDir,
+                    uploadFailed = uploadFailedMsg,
+                    uploadSuccess = uploadingMsg,
+                )
+                return true
+            }
+        }
+    }
+
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
@@ -172,7 +210,24 @@ fun AttachmentsScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding),
+                .padding(padding)
+                .dragAndDropTarget(
+                    shouldStartDragAndDrop = { event ->
+                        // Accept any drag event that carries at least one URI in
+                        // its ClipData — covers file pickers + Photos + Drive.
+                        val clip = event.toAndroidDragEvent().clipData
+                        clip != null && (0 until clip.itemCount).any { i ->
+                            clip.getItemAt(i).uri != null
+                        }
+                    },
+                    target = dragDropTarget,
+                )
+                .then(
+                    if (isDraggedOver) Modifier.border(
+                        border = BorderStroke(2.dp, MaterialTheme.colorScheme.primary),
+                        shape = RoundedCornerShape(12.dp),
+                    ) else Modifier
+                ),
         ) {
             val wikiInfo = state.wiki
             when {

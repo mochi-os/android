@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">Tàileasg</string>
+    <string name="chess_sidebar_header">Tàileasg</string>
+    <string name="chess_sidebar_active">Geamannan gnìomhach</string>
+    <string name="chess_sidebar_completed">Crìochnaichte</string>
+    <string name="chess_sidebar_new_game">Geama ùr</string>
+    <string name="chess_section_active">Geamannan gnìomhach</string>
+    <string name="chess_section_completed">Crìochnaichte</string>
+    <string name="chess_new_game">Geama ùr</string>
+    <string name="chess_empty_title">Chan eil geamannan ann fhathast</string>
+    <string name="chess_new_title">Geama Ùr</string>
+    <string name="chess_new_pick_opponent">Tagh nàmhaid</string>
+    <string name="chess_new_no_friends_title">Chan eil caraidean ann fhathast</string>
+    <string name="chess_new_no_friends_subtitle">Cuir caraidean ris ann an aplacaid Daoine gus tòiseachadh a\' cluich</string>
+    <string name="chess_new_add_friends">Cuir caraidean ris</string>
+    <string name="chess_new_start_button">Tòisich an geama</string>
+    <string name="chess_new_creating">A\' cruthachadh…</string>
+    <string name="chess_new_failed">Cha b\' urrainn geama a chruthachadh</string>
+    <string name="chess_chat_title">Còmhradh</string>
+    <string name="chess_open_chat">Fosgail panail na cabadaich</string>
+    <string name="chess_open_actions">Fosgail gnìomhan a\' gheama</string>
+    <string name="chess_offer_draw">Tairg co-ionnan</string>
+    <string name="chess_resign">Leig seachad</string>
+    <string name="chess_rematch">Geama ùr</string>
+    <string name="chess_delete_game">Sguab às geama</string>
+    <string name="chess_side_white">Geal</string>
+    <string name="chess_side_black">Dubh</string>
+    <string name="chess_resign_title">An leig thu seachad an geama?</string>
+    <string name="chess_resign_confirm">Leig seachad</string>
+    <string name="chess_delete_confirm">Sguab às geama</string>
+    <string name="chess_draw_accept">Gabh ris</string>
+    <string name="chess_draw_decline">Diùlt</string>
+    <string name="chess_status_checkmate_you_win">Tul-chunnart — bhuannaich thu!</string>
+    <string name="chess_status_stalemate">Stalemate — co-ionann</string>
+    <string name="chess_status_draw">Tarraing</string>
+    <string name="chess_status_check_your_move">Cunnart — do ghluasad</string>
+    <string name="chess_status_your_move">Do ghluasad</string>
+    <string name="chess_move_subject_you">Thusa</string>
+    <string name="chess_promotion_title">Àrdaich gu:</string>
+
+    <string name="chess_resign_message">A bheil thu cinnteach gu bheil thu airson dreuchd a leigeil dhìot? Buannaichidh %1$s an geama.</string>
+    <string name="chess_draw_offered">Thairg %1$s co-ionann</string>
+    <string name="chess_draw_waiting">Tarraing air a thabhann — a\' feitheamh ri %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">Tul-chunnart — buannaichidh %1$s</string>
+    <string name="chess_status_resigned_you">Leig thu seachad — bhuannaich %1$s</string>
+    <string name="chess_status_resigned_opponent">Leig %1$s seachad — bhuannaich thu!</string>
+    <string name="chess_status_check_opponent_move">Cunnart — gluasad %1$s</string>
+    <string name="chess_status_opponent_move">Gluasad aig %1$s</string>
+    <string name="chess_piece_king">Rìgh</string>
+    <string name="chess_piece_queen">Bànrigh</string>
+    <string name="chess_piece_rook">Rùc</string>
+    <string name="chess_piece_bishop">Easbaig</string>
+    <string name="chess_piece_knight">Ridire</string>
+    <string name="chess_piece_pawn">Saighdear-coise</string>
+    <string name="chess_move_played">Chluich %1$s %2$s</string>
+    <string name="chess_channel_name">Chess notifications</string>
+    <string name="chess_channel_description">Notifications about chess moves, draw offers, and game outcomes.</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+    <string name="chess_empty_subtitle">Start your first game to play chess with a friend.</string>
+    <string name="chess_empty_start_button">Start your first game</string>
+    <string name="chess_detail_unavailable">Game unavailable</string>
+    <string name="chess_delete_title">Delete game?</string>
+    <string name="chess_delete_message">This removes the game from your list.</string>
+    <string name="chess_ws_connecting">Connecting…</string>
+    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_reconnecting">Reconnecting…</string>
+    <string name="chess_ws_failed">Connection failed</string>
+    <string name="chess_move_capture">%1$s took %2$s</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

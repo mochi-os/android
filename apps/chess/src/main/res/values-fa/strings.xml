@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chess_app_title">شطرنج</string>
+    <string name="chess_sidebar_header">شطرنج</string>
+    <string name="chess_sidebar_active">بازی‌های فعال</string>
+    <string name="chess_sidebar_completed">تکمیل شد</string>
+    <string name="chess_sidebar_new_game">بازی جدید</string>
+    <string name="chess_section_active">بازی‌های فعال</string>
+    <string name="chess_section_completed">تکمیل شد</string>
+    <string name="chess_new_game">بازی جدید</string>
+    <string name="chess_empty_title">هنوز بازی‌ای وجود ندارد</string>
+    <string name="chess_new_title">بازی جدید</string>
+    <string name="chess_new_pick_opponent">انتخاب حریف</string>
+    <string name="chess_new_no_friends_title">هنوز دوستی وجود ندارد</string>
+    <string name="chess_new_no_friends_subtitle">برای شروع بازی، در برنامهٔ People دوست اضافه کنید</string>
+    <string name="chess_new_add_friends">افزودن دوستان</string>
+    <string name="chess_new_start_button">شروع بازی</string>
+    <string name="chess_new_creating">در حال ساخت…</string>
+    <string name="chess_new_failed">ایجاد بازی ناموفق بود</string>
+    <string name="chess_chat_title">گفت‌وگو</string>
+    <string name="chess_open_chat">باز کردن پنل گفت‌وگو</string>
+    <string name="chess_open_actions">باز کردن اقدامات بازی</string>
+    <string name="chess_offer_draw">پیشنهاد تساوی</string>
+    <string name="chess_resign">تسلیم</string>
+    <string name="chess_rematch">بازی مجدد</string>
+    <string name="chess_delete_game">حذف بازی</string>
+    <string name="chess_side_white">سفید</string>
+    <string name="chess_side_black">سیاه</string>
+    <string name="chess_resign_title">بازی را تسلیم می‌شوید؟</string>
+    <string name="chess_resign_confirm">تسلیم</string>
+    <string name="chess_delete_confirm">حذف بازی</string>
+    <string name="chess_draw_accept">پذیرش</string>
+    <string name="chess_draw_decline">رد</string>
+    <string name="chess_status_checkmate_you_win">مات — شما بردید!</string>
+    <string name="chess_status_stalemate">بن‌بست — مساوی</string>
+    <string name="chess_status_draw">تساوی</string>
+    <string name="chess_status_check_your_move">کیش — نوبت شماست</string>
+    <string name="chess_status_your_move">نوبت شما</string>
+    <string name="chess_move_subject_you">شما</string>
+    <string name="chess_promotion_title">ارتقا به:</string>
+
+    <string name="chess_resign_message">آیا از تسلیم شدن مطمئن هستید؟ %1$s برندهٔ بازی می‌شود.</string>
+    <string name="chess_draw_offered">%1$s پیشنهاد مساوی داد</string>
+    <string name="chess_draw_waiting">پیشنهاد تساوی داده شد — در انتظار %1$s</string>
+    <string name="chess_status_checkmate_opponent_wins">مات — %1$s برنده شد</string>
+    <string name="chess_status_resigned_you">شما تسلیم شدید — %1$s برنده شد</string>
+    <string name="chess_status_resigned_opponent">%1$s تسلیم شد — شما برنده شدید!</string>
+    <string name="chess_status_check_opponent_move">کیش — نوبت %1$s</string>
+    <string name="chess_status_opponent_move">نوبت %1$s</string>
+    <string name="chess_piece_king">شاه</string>
+    <string name="chess_piece_queen">وزیر</string>
+    <string name="chess_piece_rook">رخ</string>
+    <string name="chess_piece_bishop">فیل</string>
+    <string name="chess_piece_knight">اسب</string>
+    <string name="chess_piece_pawn">پیاده</string>
+    <string name="chess_move_played">%1$s %2$s را بازی کرد</string>
+    <string name="chess_channel_name">اعلان‌های شطرنج</string>
+    <string name="chess_channel_description">اعلان‌ها در مورد حرکات، پیشنهادهای تساوی و نتایج بازی‌ها.</string>
+    <string name="chess_open_sidebar">باز کردن نوار کناری</string>
+    <string name="chess_empty_subtitle">اولین بازی خود را شروع کنید تا با یک دوست شطرنج بازی کنید.</string>
+    <string name="chess_empty_start_button">اولین بازی خود را شروع کنید</string>
+    <string name="chess_detail_unavailable">بازی در دسترس نیست</string>
+    <string name="chess_delete_title">بازی حذف شود؟</string>
+    <string name="chess_delete_message">این بازی را از لیست شما حذف می‌کند.</string>
+    <string name="chess_ws_connecting">در حال اتصال…</string>
+    <string name="chess_ws_disconnected">آفلاین</string>
+    <string name="chess_ws_reconnecting">در حال اتصال مجدد…</string>
+    <string name="chess_ws_failed">اتصال شکست خورد</string>
+    <string name="chess_move_capture">%1$s مهره %2$s را گرفت</string>
+    <string name="chess_captured_multiplier">×%1$d</string>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Menü</string>
+    <string name="words_list_new">Yeni oyun</string>
+    <string name="words_list_logout">Oturumu kapat</string>
+    <string name="words_list_empty_title">Henüz oyun yok</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Tamamlandı</string>
+    <string name="words_sidebar_new_game">Yeni oyun</string>
+    <string name="words_new_game_title">Yeni oyun</string>
+    <string name="words_new_game_language">Dil</string>
+    <string name="words_new_game_language_uk">İngilizce (Birleşik Krallık)</string>
+    <string name="words_new_game_language_us">İngilizce (ABD)</string>
+    <string name="words_new_game_start">Oyunu başlat</string>
+    <string name="words_new_game_no_friends_title">Henüz arkadaş yok</string>
+    <string name="words_new_game_add_friends">Arkadaş ekle</string>
+    <string name="words_detail_status_your_move">Senin sıran</string>
+    <string name="words_detail_status_you_win">Kazandın!</string>
+    <string name="words_detail_status_game_over">Oyun bitti</string>
+    <string name="words_detail_status_opponent_resigned">Rakip çekildi — kazandınız!</string>
+    <string name="words_detail_status_you_resigned">Çekildin</string>
+    <string name="words_detail_label_you">Sen</string>
+    <string name="words_detail_action_shuffle">Rafı karıştır</string>
+    <string name="words_detail_action_pass">Pas</string>
+    <string name="words_detail_action_exchange">Taşları değiştir</string>
+    <string name="words_detail_action_cancel_exchange">Değişimi iptal et</string>
+    <string name="words_detail_action_resign">Çekil</string>
+    <string name="words_detail_action_rematch">Yeniden eşleş</string>
+    <string name="words_detail_action_delete">Oyunu sil</string>
+    <string name="words_detail_chat_title">Sohbet</string>
+    <string name="words_detail_invalid_move">Geçersiz hamle</string>
+    <string name="words_detail_recall">Geri çağır</string>
+    <string name="words_detail_submit">Gönder</string>
+    <string name="words_detail_cancel">İptal</string>
+    <string name="words_detail_exchange">Değiştir</string>
+    <string name="words_detail_blank_title">Bir harf seçin</string>
+    <string name="words_detail_resign_title">Oyundan çekilsin mi?</string>
+    <string name="words_detail_resign_message">Çekilmek istediğinizden emin misiniz?</string>
+    <string name="words_detail_failed_move">Hamle gönderilemedi</string>
+    <string name="words_detail_failed_pass">Pas geçilemedi</string>
+    <string name="words_detail_failed_exchange">Değiştirilemedi</string>
+    <string name="words_detail_failed_resign">Çekilinemedi</string>
+    <string name="words_detail_failed_rematch">Rövanş oluşturulamadı</string>
+    <string name="words_detail_failed_delete">Oyun silinemedi</string>
+    <string name="words_detail_game_deleted">Oyun silindi</string>
+
+    <string name="words_channel_name">Kelimeler bildirimleri</string>
+    <string name="words_channel_description">Sıralar, değişimler ve oyun sonuçları hakkında bildirimler.</string>
+    <string name="words_list_empty_subtitle">İlk oyununuzu başlatmak için + düğmesine dokunun.</string>
+    <string name="words_list_status_finished">Bitti</string>
+    <string name="words_list_status_resigned">Çekildi</string>
+    <string name="words_list_your_turn">Sizin sıranız</string>
+    <string name="words_sidebar_active">Aktif oyunlar</string>
+    <string name="words_sidebar_empty">Henüz oyun yok.</string>
+    <string name="words_new_game_choose_opponents">Rakipleri seç</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d oyuncu</string>
+    <string name="words_new_game_no_friends_subtitle">Oynamaya başlamak için Kişiler uygulamasında arkadaş ekleyin.</string>
+    <string name="words_detail_title">Oyun</string>
+    <string name="words_detail_coming_soon">Oyun ayrıntıları yakında</string>
+    <string name="words_detail_status_opponent_move">%1$s\'in sırası</string>
+    <string name="words_detail_status_winner_wins">%1$s kazanır</string>
+    <string name="words_detail_player_fallback">Oyuncu %1$d</string>
+    <string name="words_detail_player_count">%1$d oyuncu</string>
+    <string name="words_detail_label_tiles_left">%1$d taş kaldı</string>
+    <string name="words_detail_action_open_chat">Sohbeti aç</string>
+    <string name="words_detail_action_more">Oyun eylemleri</string>
+    <string name="words_detail_exchange_count">Değiş (%1$d)</string>
+    <string name="words_detail_chat_you_played">Oynadın %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s oynadı %2$s</string>
+
+</resources>

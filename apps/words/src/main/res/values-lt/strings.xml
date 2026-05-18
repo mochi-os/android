@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Meniu</string>
+    <string name="words_list_new">Naujas game</string>
+    <string name="words_list_logout">Atsijungti</string>
+    <string name="words_list_empty_title">Dar nėra games</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Baigta</string>
+    <string name="words_sidebar_new_game">Naujas game</string>
+    <string name="words_new_game_title">Naujas game</string>
+    <string name="words_new_game_language">Kalba</string>
+    <string name="words_new_game_language_uk">Anglų (JK)</string>
+    <string name="words_new_game_language_us">Anglų (JAV)</string>
+    <string name="words_new_game_start">Pradėti žaidimą</string>
+    <string name="words_new_game_no_friends_title">Dar nėra draugų</string>
+    <string name="words_new_game_add_friends">Pridėti draugų</string>
+    <string name="words_detail_status_your_move">Jūsų ėjimas</string>
+    <string name="words_detail_status_you_win">Jūs laimėjote!</string>
+    <string name="words_detail_status_game_over">Žaidimas baigtas</string>
+    <string name="words_detail_status_opponent_resigned">Varžovas pasidavė — jūs laimėjote!</string>
+    <string name="words_detail_status_you_resigned">Jūs pasidavėte</string>
+    <string name="words_detail_label_you">Jūs</string>
+    <string name="words_detail_action_shuffle">Sumaišyti stovą</string>
+    <string name="words_detail_action_pass">Praleisti</string>
+    <string name="words_detail_action_exchange">Iškeisti plyteles</string>
+    <string name="words_detail_action_cancel_exchange">Atšaukti mainus</string>
+    <string name="words_detail_action_resign">Pasiduoti</string>
+    <string name="words_detail_action_rematch">Permatch</string>
+    <string name="words_detail_action_delete">Ištrinti žaidimą</string>
+    <string name="words_detail_chat_title">Pokalbis</string>
+    <string name="words_detail_invalid_move">Netinkamas ėjimas</string>
+    <string name="words_detail_recall">Atšaukti</string>
+    <string name="words_detail_submit">Pateikti</string>
+    <string name="words_detail_cancel">Atšaukti</string>
+    <string name="words_detail_exchange">Iškeisti</string>
+    <string name="words_detail_blank_title">Pasirinkite raidę</string>
+    <string name="words_detail_resign_title">Pasiduoti game?</string>
+    <string name="words_detail_resign_message">Ar tikrai norite pasiduoti?</string>
+    <string name="words_detail_failed_move">Nepavyko pateikti ėjimo</string>
+    <string name="words_detail_failed_pass">Nepavyko praleisti</string>
+    <string name="words_detail_failed_exchange">Nepavyko iškeisti</string>
+    <string name="words_detail_failed_resign">Nepavyko pasitraukti</string>
+    <string name="words_detail_failed_rematch">Nepavyko sukurti revanšo</string>
+    <string name="words_detail_failed_delete">Nepavyko ištrinti žaidimo</string>
+    <string name="words_detail_game_deleted">Žaidimas ištrintas</string>
+
+    <string name="words_channel_name">Žodžių pranešimai</string>
+    <string name="words_channel_description">Pranešimai apie eilę, mainus ir partijų rezultatus.</string>
+    <string name="words_list_empty_subtitle">Bakstelėkite mygtuką +, kad pradėtumėte pirmą partiją.</string>
+    <string name="words_list_status_finished">Baigta</string>
+    <string name="words_list_status_resigned">Pasidavė</string>
+    <string name="words_list_your_turn">Jūsų eilė</string>
+    <string name="words_sidebar_active">Aktyvios partijos</string>
+    <string name="words_sidebar_empty">Dar nėra partijų.</string>
+    <string name="words_new_game_choose_opponents">Pasirinkite varžovus</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d žaidėjai</string>
+    <string name="words_new_game_no_friends_subtitle">Pridėkite draugų programėlėje Žmonės, kad pradėtumėte žaisti.</string>
+    <string name="words_detail_title">Partija</string>
+    <string name="words_detail_coming_soon">Partijos detalės netrukus</string>
+    <string name="words_detail_status_opponent_move">%1$s eilė</string>
+    <string name="words_detail_status_winner_wins">%1$s laimi</string>
+    <string name="words_detail_player_fallback">Žaidėjas %1$d</string>
+    <string name="words_detail_player_count">%1$d žaidėjai</string>
+    <string name="words_detail_label_tiles_left">Liko %1$d kortelių</string>
+    <string name="words_detail_action_open_chat">Atidaryti pokalbį</string>
+    <string name="words_detail_action_more">Partijos veiksmai</string>
+    <string name="words_detail_exchange_count">Pakeisti (%1$d)</string>
+    <string name="words_detail_chat_you_played">Jūs žaidėte %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s žaidė %2$s</string>
+
+</resources>

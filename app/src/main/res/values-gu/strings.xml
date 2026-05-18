@@ -7,4 +7,9 @@
     <string name="launcher_projects">પ્રોજેક્ટ્સ</string>
     <string name="launcher_settings">સેટિંગ્સ</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Chess</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Words</string>
+
 </resources>

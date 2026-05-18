@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="words_app_title">Words</string>
+    <string name="words_list_title">Words</string>
+    <string name="words_list_menu">Meny</string>
+    <string name="words_list_new">Nytt spill</string>
+    <string name="words_list_logout">Logg ut</string>
+    <string name="words_list_empty_title">Ingen spill ennå</string>
+    <string name="words_sidebar_header">Words</string>
+    <string name="words_sidebar_completed">Fullført</string>
+    <string name="words_sidebar_new_game">Nytt spill</string>
+    <string name="words_new_game_title">Nytt spill</string>
+    <string name="words_new_game_language">Språk</string>
+    <string name="words_new_game_language_uk">Engelsk (UK)</string>
+    <string name="words_new_game_language_us">Engelsk (US)</string>
+    <string name="words_new_game_start">Start spill</string>
+    <string name="words_new_game_no_friends_title">Ingen venner ennå</string>
+    <string name="words_new_game_add_friends">Legg til venner</string>
+    <string name="words_detail_status_your_move">Ditt trekk</string>
+    <string name="words_detail_status_you_win">Du vant!</string>
+    <string name="words_detail_status_game_over">Spillet er slutt</string>
+    <string name="words_detail_status_opponent_resigned">Motstanderen ga opp – du vinner!</string>
+    <string name="words_detail_status_you_resigned">Du ga opp</string>
+    <string name="words_detail_label_you">Du</string>
+    <string name="words_detail_action_shuffle">Stokk stativet</string>
+    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_exchange">Bytt brikker</string>
+    <string name="words_detail_action_cancel_exchange">Avbryt utveksling</string>
+    <string name="words_detail_action_resign">Gi opp</string>
+    <string name="words_detail_action_rematch">Omkamp</string>
+    <string name="words_detail_action_delete">Slett spill</string>
+    <string name="words_detail_chat_title">Chat</string>
+    <string name="words_detail_invalid_move">Ugyldig trekk</string>
+    <string name="words_detail_recall">Trekk tilbake</string>
+    <string name="words_detail_submit">Send inn</string>
+    <string name="words_detail_cancel">Avbryt</string>
+    <string name="words_detail_exchange">Bytt</string>
+    <string name="words_detail_blank_title">Velg en bokstav</string>
+    <string name="words_detail_resign_title">Gi opp partiet?</string>
+    <string name="words_detail_resign_message">Er du sikker på at du vil gi deg?</string>
+    <string name="words_detail_failed_move">Kunne ikke sende inn trekk</string>
+    <string name="words_detail_failed_pass">Kunne ikke passe</string>
+    <string name="words_detail_failed_exchange">Kunne ikke bytte</string>
+    <string name="words_detail_failed_resign">Kunne ikke gi opp</string>
+    <string name="words_detail_failed_rematch">Kunne ikke opprette omkamp</string>
+    <string name="words_detail_failed_delete">Kunne ikke slette spill</string>
+    <string name="words_detail_game_deleted">Spill slettet</string>
+
+    <string name="words_channel_name">Ord-varsler</string>
+    <string name="words_channel_description">Varsler om trekk, bytter og partiresultater.</string>
+    <string name="words_list_empty_subtitle">Trykk på +-knappen for å starte ditt første parti.</string>
+    <string name="words_list_status_finished">Ferdig</string>
+    <string name="words_list_status_resigned">Lagt ned</string>
+    <string name="words_list_your_turn">Din tur</string>
+    <string name="words_sidebar_active">Aktive partier</string>
+    <string name="words_sidebar_empty">Ingen partier ennå.</string>
+    <string name="words_new_game_choose_opponents">Velg motstandere</string>
+    <string name="words_new_game_opponents_hint">(1-3)</string>
+    <string name="words_new_game_player_count">%1$d spillere</string>
+    <string name="words_new_game_no_friends_subtitle">Legg til venner i Personer-appen for å begynne å spille.</string>
+    <string name="words_detail_title">Parti</string>
+    <string name="words_detail_coming_soon">Partidetaljer kommer snart</string>
+    <string name="words_detail_status_opponent_move">%1$s sin tur</string>
+    <string name="words_detail_status_winner_wins">%1$s vinner</string>
+    <string name="words_detail_player_fallback">Spiller %1$d</string>
+    <string name="words_detail_player_count">%1$d spillere</string>
+    <string name="words_detail_label_tiles_left">%1$d brikker igjen</string>
+    <string name="words_detail_action_open_chat">Åpne chat</string>
+    <string name="words_detail_action_more">Partihandlinger</string>
+    <string name="words_detail_exchange_count">Bytt (%1$d)</string>
+    <string name="words_detail_chat_you_played">Du spilte %1$s</string>
+    <string name="words_detail_chat_player_played">%1$s spilte %2$s</string>
+
+</resources>

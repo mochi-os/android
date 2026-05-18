@@ -7,4 +7,9 @@
     <string name="launcher_projects">Dự án</string>
     <string name="launcher_settings">Cài đặt</string>
 
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Cờ vua</string>
+    <string name="launcher_go">Cờ vây</string>
+    <string name="launcher_words">Từ</string>
+
 </resources>
