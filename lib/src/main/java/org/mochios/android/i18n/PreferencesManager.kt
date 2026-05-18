@@ -18,7 +18,27 @@ import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
 
-private data class FullPrefsResponse(val preferences: Map<String, String>?)
+/** Subset of the `themes` array returned by `/settings/-/user/preferences/data`.
+ *  Per-theme metadata for rendering theme-picker swatches. */
+data class ThemeInfo(
+    val id: String,
+    val hue: Float,
+    val chroma: Float,
+    val hueBg: Float,
+)
+
+private data class FullPrefsResponse(
+    val preferences: Map<String, String>?,
+    val themes: List<RawTheme>?,
+    val default_theme: String?,
+)
+
+private data class RawTheme(
+    val id: String?,
+    val hue: Double?,
+    val chroma: Double?,
+    val hue_bg: Double?,
+)
 
 private interface PreferencesApi {
     @GET("settings/-/user/preferences/data")
@@ -29,6 +49,11 @@ private interface PreferencesApi {
     suspend fun setPreferences(
         @Header("Authorization") token: String,
         @retrofit2.http.FieldMap fields: Map<String, String>,
+    ): Response<Map<String, Any>>
+
+    @POST("settings/-/user/preferences/reset")
+    suspend fun resetPreferences(
+        @Header("Authorization") token: String,
     ): Response<Map<String, Any>>
 }
 
@@ -70,7 +95,18 @@ class PreferencesManager @Inject constructor(
      *  original "" / "auto" / explicit value to render the right select. */
     private var rawPrefs: Map<String, String> = emptyMap()
 
+    /** Available themes, captured from the most recent `/data` response. The
+     *  Display screen renders these in the theme picker. */
+    private var themes: List<ThemeInfo> = emptyList()
+
+    /** Server-declared default theme id, used when the user hasn't picked one. */
+    private var defaultThemeId: String? = null
+
     fun rawPreferences(): Map<String, String> = rawPrefs
+
+    fun availableThemes(): List<ThemeInfo> = themes
+
+    fun defaultTheme(): String? = defaultThemeId
 
     /** Latest snapshot, for non-Composable callers (e.g. ViewModels). */
     val format: Format get() = Format(_preferences.value)
@@ -82,15 +118,39 @@ class PreferencesManager @Inject constructor(
      * surface an error.
      */
     suspend fun setPreference(key: String, value: String) {
-        val token = sessionManager.getToken("settings") ?: try {
-            tokenApi.fetchToken(TokenRequest("settings")).body()?.token
-        } catch (_: Exception) {
-            null
-        } ?: throw IllegalStateException("settings token unavailable")
+        val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
         val resp = api.setPreferences("Bearer $token", mapOf(key to value))
         if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
         refresh()
     }
+
+    /** Reset every preference to its server default — empties the user's
+     *  preferences row so the next read returns the defaults. */
+    suspend fun resetPreferences() {
+        val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
+        val resp = api.resetPreferences("Bearer $token")
+        if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        refresh()
+    }
+
+    /** Clear only the supplied preference keys (server-side: setting "" resets
+     *  that key to its default). Used by the Display reset, which must not
+     *  touch regional keys, and vice versa. */
+    suspend fun resetKeys(keys: List<String>) {
+        if (keys.isEmpty()) return
+        val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
+        val payload = keys.associateWith { "" }
+        val resp = api.setPreferences("Bearer $token", payload)
+        if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        refresh()
+    }
+
+    private suspend fun settingsToken(): String? =
+        sessionManager.getToken("settings") ?: try {
+            tokenApi.fetchToken(TokenRequest("settings")).body()?.token
+        } catch (_: Exception) {
+            null
+        }
 
     suspend fun refresh() {
         // Cached "settings" token first (saves a round trip when this app
@@ -107,8 +167,17 @@ class PreferencesManager @Inject constructor(
         } catch (_: Exception) {
             return
         }
-        val raw = resp.body()?.preferences ?: return
+        val body = resp.body() ?: return
+        val raw = body.preferences ?: return
         rawPrefs = raw
+        themes = (body.themes ?: emptyList()).mapNotNull { t ->
+            val id = t.id ?: return@mapNotNull null
+            val hue = t.hue?.toFloat() ?: return@mapNotNull null
+            val chroma = t.chroma?.toFloat() ?: return@mapNotNull null
+            val hueBg = t.hue_bg?.toFloat() ?: 0f
+            ThemeInfo(id = id, hue = hue, chroma = chroma, hueBg = hueBg)
+        }
+        defaultThemeId = body.default_theme
         _preferences.value = resolveAuto(raw)
     }
 

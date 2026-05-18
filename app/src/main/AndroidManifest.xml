@@ -33,10 +33,22 @@
           still catches mochi://notification (tapped system notification)
           and the upcoming mochi://oauth-return (task #133).
         -->
+        <!--
+          launchMode="singleTop" + per-alias taskAffinity = one task per
+          launcher icon. Tap Mochi Feeds → resume the feeds task (its cached
+          frame shows feeds). Tap Mochi Projects → resume the projects task
+          (its cached frame shows projects). With the previous singleTask
+          there was a single global MainActivity and a single task; the
+          alias's intent arrived after Android had already restored the
+          previous feature's cached frame, leaving the wrong app visible
+          for the time it took Compose to redraw. singleTop keeps state
+          across taps within a task while letting each affinity host its
+          own instance.
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
             android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -65,6 +77,7 @@
             android:label="@string/launcher_feeds"
             android:icon="@mipmap/ic_feeds"
             android:roundIcon="@mipmap/ic_feeds_round"
+            android:taskAffinity="org.mochios.mochi.feeds"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,6 +93,7 @@
             android:label="@string/launcher_chat"
             android:icon="@mipmap/ic_chat"
             android:roundIcon="@mipmap/ic_chat_round"
+            android:taskAffinity="org.mochios.mochi.chat"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -95,6 +109,7 @@
             android:label="@string/launcher_forums"
             android:icon="@mipmap/ic_forums"
             android:roundIcon="@mipmap/ic_forums_round"
+            android:taskAffinity="org.mochios.mochi.forums"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -110,6 +125,7 @@
             android:label="@string/launcher_projects"
             android:icon="@mipmap/ic_projects"
             android:roundIcon="@mipmap/ic_projects_round"
+            android:taskAffinity="org.mochios.mochi.projects"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -119,18 +135,67 @@
         </activity-alias>
 
         <activity-alias
+            android:name=".MochiCrmLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_crm"
+            android:icon="@mipmap/ic_crm"
+            android:roundIcon="@mipmap/ic_crm_round"
+            android:taskAffinity="org.mochios.mochi.crm"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="crm" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MochiPeopleLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_people"
+            android:icon="@mipmap/ic_people"
+            android:roundIcon="@mipmap/ic_people_round"
+            android:taskAffinity="org.mochios.mochi.people"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="people" />
+        </activity-alias>
+
+        <activity-alias
             android:name=".MochiSettingsLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_settings"
             android:icon="@mipmap/ic_settings"
             android:roundIcon="@mipmap/ic_settings_round"
+            android:taskAffinity="org.mochios.mochi.settings"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="settings" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MochiWikisLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_wikis"
+            android:icon="@mipmap/ic_wikis"
+            android:roundIcon="@mipmap/ic_wikis_round"
+            android:taskAffinity="org.mochios.mochi.wikis"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
         </activity-alias>
 
         <!--

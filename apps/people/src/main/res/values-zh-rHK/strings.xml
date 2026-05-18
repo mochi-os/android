@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="people_profile_title">個人資料</string>
+    <string name="people_add_friend_search_label">搜尋用戶</string>
+    <string name="people_add_friend_search_start">開始輸入以搜尋用戶</string>
+    <string name="people_group_members_description">屬於此群組的用戶和群組</string>
+    <string name="people_member_add_hint">新增用戶或群組以開始</string>
+    <string name="people_member_search">搜尋用戶</string>
+    <string name="people_member_type_user">用戶</string>
+    <string name="people_profile_saved">個人資料已儲存</string>
+    <string name="people_profile_save_profile_failed">儲存個人資料失敗</string>
+    <string name="people_profile_preview_title">個人資料預覽</string>
+    <string name="people_friends_message">Message</string>
+    <string name="people_person_message">Message</string>
+
+</resources>

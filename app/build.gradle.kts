@@ -23,7 +23,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 1
-        versionName = "0.17"
+        versionName = "0.18"
     }
 
     signingConfigs {
@@ -110,7 +110,10 @@ dependencies {
     implementation(project(":apps:chat"))
     implementation(project(":apps:forums"))
     implementation(project(":apps:projects"))
+    implementation(project(":apps:crm"))
+    implementation(project(":apps:people"))
     implementation(project(":apps:settings"))
+    implementation(project(":apps:wikis"))
 
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)

@@ -14,6 +14,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.PlaceData
+import org.mochios.android.util.NaturalCompare
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.repository.FeedsRepository
@@ -84,7 +85,7 @@ class CreatePostViewModel @Inject constructor(
                     repository.getNewPostFeeds(preSelectedFeedId)
                 } else {
                     repository.listFeeds().filter { it.owner == 1 }
-                }.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                }.sortedWith(compareBy(NaturalCompare) { it.name })
                 _availableFeeds.value = feeds
                 if (_selectedFeed.value.isEmpty() && feeds.isNotEmpty()) {
                     _selectedFeed.value = feeds.first().fingerprint.ifEmpty { feeds.first().id }

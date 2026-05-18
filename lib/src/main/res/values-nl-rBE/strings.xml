@@ -98,6 +98,20 @@
     <string name="settings_units">Eenheden</string>
     <string name="settings_units_metric">Metrisch</string>
     <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_time_zone">Tijdzone</string>
+    <string name="settings_reset_to_defaults">Terugzetten naar standaardwaarden</string>
+    <string name="settings_reset_confirm_title">Voorkeuren resetten?</string>
+    <string name="settings_reset_confirm_message">Dit zal alle voorkeuren terugzetten naar hun standaardwaarden.</string>
+    <string name="settings_reset">Resetten</string>
+    <string name="settings_display_title">Weergave</string>
+    <string name="settings_display_reset">Terugzetten naar standaardwaarden</string>
+    <string name="settings_display_reset_confirm_title">Weergave terugzetten?</string>
+    <string name="settings_display_reset_confirm_message">Dit zet de weergave-instellingen terug naar hun standaardwaarden.</string>
+    <string name="settings_theme_title">Thema</string>
+    <string name="settings_theme_default">Standaard</string>
+    <string name="settings_background">Achtergrond</string>
+    <string name="settings_background_theme">Van thema</string>
+    <string name="settings_background_off">Geen</string>
     <string name="profile_title">Profiel</string>
     <string name="profile_open">Profiel</string>
     <string name="profile_display_name">Weergavenaam</string>
@@ -106,4 +120,6 @@
     <string name="profile_privacy_private">Privé</string>
     <string name="profile_fingerprint">Fingerprint</string>
 
+    <string name="common_copy">Kopiëren</string>
+    <string name="common_copied">Gekopieerd naar klembord</string>
 </resources>

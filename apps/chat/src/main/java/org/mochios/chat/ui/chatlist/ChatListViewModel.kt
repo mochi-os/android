@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.NaturalCompare
 import org.mochios.chat.model.Chat
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
@@ -82,7 +83,7 @@ class ChatListViewModel @Inject constructor(
         // sink to the bottom in name order so they remain reachable but don't
         // outrank chats with real messages.
         return filtered.sortedWith(
-            compareByDescending<Chat> { it.updated }.thenBy(String.CASE_INSENSITIVE_ORDER) { it.name }
+            compareByDescending<Chat> { it.updated }.thenBy(NaturalCompare) { it.name }
         )
     }
 

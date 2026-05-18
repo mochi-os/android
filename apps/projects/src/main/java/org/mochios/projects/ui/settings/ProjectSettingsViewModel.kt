@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
+import org.mochios.android.util.NaturalCompare
 import org.mochios.projects.model.Person
 import org.mochios.projects.model.Project
 import org.mochios.projects.repository.ProjectsRepository
@@ -70,9 +71,9 @@ class ProjectSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val rules = repository.getAccess(projectId)
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name ?: it.subject })
+                    .sortedWith(compareBy(NaturalCompare) { it.name ?: it.subject })
                 val people = repository.getPeople(projectId)
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
                     accessRules = rules,
                     people = people

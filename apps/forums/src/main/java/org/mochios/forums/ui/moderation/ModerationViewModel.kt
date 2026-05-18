@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.api.ModerationQueueResponse
 import org.mochios.forums.api.ModerationReportsResponse
 import org.mochios.forums.model.ModerationLogEntry
@@ -75,7 +76,7 @@ class ModerationViewModel @Inject constructor(
                     2 -> _uiState.value = _uiState.value.copy(log = repository.moderationLog(forumId).entries)
                     3 -> _uiState.value = _uiState.value.copy(
                         restrictions = repository.restrictions(forumId).restrictions
-                            .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                            .sortedWith(compareBy(NaturalCompare) { it.name })
                     )
                 }
             } catch (e: Exception) {

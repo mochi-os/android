@@ -81,10 +81,14 @@
     <string name="common_change">Change</string>
     <string name="common_retry">Retry</string>
     <string name="common_more_options">More options</string>
+    <string name="common_notifications">Notifications</string>
+    <string name="common_logout">Log out</string>
     <string name="common_collapse">Collapse</string>
     <string name="common_expand">Expand</string>
     <string name="common_subscribe">Subscribe</string>
     <string name="common_play_video">Play video</string>
+    <string name="common_copy">Copy</string>
+    <string name="common_copied">Copied to clipboard</string>
 
     <!-- Comments -->
     <string name="comment_edited">(edited)</string>
@@ -262,6 +266,22 @@
     <string name="settings_units_metric">Metric</string>
     <string name="settings_units_imperial">Imperial</string>
     <string name="settings_units_usa">US</string>
+    <string name="settings_time_zone">Time zone</string>
+    <string name="settings_reset_to_defaults">Reset to defaults</string>
+    <string name="settings_reset_confirm_title">Reset preferences?</string>
+    <string name="settings_reset_confirm_message">This will reset all preferences to their default values.</string>
+    <string name="settings_reset">Reset</string>
+
+    <!-- Display screen -->
+    <string name="settings_display_title">Display</string>
+    <string name="settings_display_reset">Reset to defaults</string>
+    <string name="settings_display_reset_confirm_title">Reset display?</string>
+    <string name="settings_display_reset_confirm_message">This will reset display settings to their default values.</string>
+    <string name="settings_theme_title">Theme</string>
+    <string name="settings_theme_default">Default</string>
+    <string name="settings_background">Background</string>
+    <string name="settings_background_theme">From theme</string>
+    <string name="settings_background_off">None</string>
 
     <!-- Profile -->
     <string name="profile_title">Profile</string>

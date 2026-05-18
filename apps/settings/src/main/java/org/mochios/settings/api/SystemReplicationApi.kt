@@ -1,0 +1,65 @@
+package org.mochios.settings.api
+
+import com.google.gson.annotations.SerializedName
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import org.mochios.settings.ui.profile.SettingsRetrofit
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
+import retrofit2.http.POST
+import javax.inject.Singleton
+
+// Mirrors lib/web's use-system-replication.ts. Server-admin "pair page" — manages
+// server-to-server replication: pending join requests + established pair members.
+
+data class PendingJoin(
+    val peer: String = "",
+    val label: String = "",
+    val expires: Long = 0,
+)
+
+data class BootstrapEntry(
+    val peer: String = "",
+    val scope: String = "",
+    val state: String = "",
+    val position: String = "",
+)
+
+data class SystemReplicationData(
+    @SerializedName("peer") val peer: String = "",
+    @SerializedName("pair") val pair: List<String> = emptyList(),
+    @SerializedName("joins") val joins: List<PendingJoin> = emptyList(),
+    @SerializedName("bootstrap") val bootstrap: List<BootstrapEntry> = emptyList(),
+    @SerializedName("bootstrap_pending") val bootstrapPending: Int = 0,
+)
+
+interface SystemReplicationApi {
+    @GET("settings/-/system/replication/data")
+    suspend fun getSystemReplication(): Response<SystemReplicationData>
+
+    @FormUrlEncoded
+    @POST("settings/-/system/replication/join/approve")
+    suspend fun approveJoin(@Field("peer") peer: String): Response<Unit>
+
+    @FormUrlEncoded
+    @POST("settings/-/system/replication/join/deny")
+    suspend fun denyJoin(@Field("peer") peer: String): Response<Unit>
+
+    @FormUrlEncoded
+    @POST("settings/-/system/replication/pair/remove")
+    suspend fun removePair(@Field("peer") peer: String): Response<Unit>
+}
+
+@Module
+@InstallIn(SingletonComponent::class)
+object SystemReplicationApiModule {
+    @Provides
+    @Singleton
+    fun provideSystemReplicationApi(@SettingsRetrofit retrofit: Retrofit): SystemReplicationApi =
+        retrofit.create(SystemReplicationApi::class.java)
+}

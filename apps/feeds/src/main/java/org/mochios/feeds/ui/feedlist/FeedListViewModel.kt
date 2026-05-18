@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.NaturalCompare
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.repository.FeedsRepository
@@ -89,7 +90,7 @@ class FeedListViewModel @Inject constructor(
             _error.value = null
             try {
                 val feedList = repository.listFeeds()
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _feeds.value = feedList
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
@@ -105,7 +106,7 @@ class FeedListViewModel @Inject constructor(
             _isRefreshing.value = true
             try {
                 val feedList = repository.listFeeds()
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _feeds.value = feedList
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
@@ -196,7 +197,7 @@ class FeedListViewModel @Inject constructor(
     private suspend fun refreshFeedSilently() {
         try {
             val feedList = repository.listFeeds()
-                .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                .sortedWith(compareBy(NaturalCompare) { it.name })
             _feeds.value = feedList
         } catch (_: Exception) {
             // Silent refresh failure

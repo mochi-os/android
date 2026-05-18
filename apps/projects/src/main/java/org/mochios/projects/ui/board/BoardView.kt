@@ -1,8 +1,11 @@
 package org.mochios.projects.ui.board
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -226,6 +229,7 @@ fun BoardView(
 }
 
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun BoardColumn(
     option: FieldOption,
@@ -508,7 +512,7 @@ private fun BoardColumn(
             // Simple list mode
             val sortedObjects = viewModel.sortObjects(objects)
             LazyColumn(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.weight(1f, fill = false),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 itemsIndexed(sortedObjects, key = { _, o -> o.id }) { index, obj ->
@@ -524,6 +528,22 @@ private fun BoardColumn(
                         onClick = { onObjectClick(obj.id) }
                     )
                 }
+            }
+            // Double-tap empty space below cards → create card in this column,
+            // matching the web board where double-clicking column whitespace
+            // opens the create dialog with the column value pre-filled.
+            if (onCreateInColumn != null) {
+                Spacer(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .combinedClickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                            onClick = {},
+                            onDoubleClick = onCreateInColumn,
+                        )
+                )
             }
         }
     }

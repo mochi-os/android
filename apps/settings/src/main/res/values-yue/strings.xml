@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="system_documents_tab_privacy">Privacy</string>
+
+    <string name="domain_empty_user">你冇任何網域嘅存取權限。</string>
+</resources>

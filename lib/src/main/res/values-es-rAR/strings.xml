@@ -21,6 +21,10 @@
     <string name="settings_radius_medium">Medium</string>
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_size_normal">Normal</string>
+    <string name="settings_reset_to_defaults">Reiniciá a los valores predeterminados</string>
+    <string name="settings_reset_confirm_title">¿Reiniciás las preferencias?</string>
+    <string name="settings_reset">Reiniciá</string>
+    <string name="settings_display_reset">Reiniciá a los valores predeterminados</string>
     <string name="profile_privacy">Privacy</string>
 
 </resources>

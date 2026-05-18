@@ -13,8 +13,11 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -40,69 +43,37 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.mochios.android.R
 
-private data class PrefSpec(
+/** Public, shared by the dropdown row. Display screen owns its own dropdown. */
+internal data class PrefSpec(
     val key: String,
     val label: String,
     val options: List<Pair<String, String>>,
 )
 
+/** Keys this screen renders. The Display screen has its own list; we use this
+ *  to scope the reset button so it only touches regional preferences. */
+internal val REGIONAL_PREF_KEYS: List<String> = listOf(
+    "language",
+    "timezone",
+    "date_format",
+    "time_format",
+    "timestamp_display",
+    "week_start",
+    "number_format",
+    "units",
+)
+
 @Composable
 private fun prefSchema(): List<PrefSpec> = listOf(
-    PrefSpec(
-        key = "appearance",
-        label = stringResource(R.string.settings_appearance),
-        options = listOf(
-            "auto" to stringResource(R.string.settings_value_auto),
-            "light" to stringResource(R.string.settings_appearance_light),
-            "dark" to stringResource(R.string.settings_appearance_dark),
-        ),
-    ),
-    PrefSpec(
-        key = "density",
-        label = stringResource(R.string.settings_density),
-        options = listOf(
-            "theme" to stringResource(R.string.settings_value_theme),
-            "compact" to stringResource(R.string.settings_density_compact),
-            "comfortable" to stringResource(R.string.settings_density_comfortable),
-            "spacious" to stringResource(R.string.settings_density_spacious),
-        ),
-    ),
-    PrefSpec(
-        key = "radius",
-        label = stringResource(R.string.settings_radius),
-        options = listOf(
-            "theme" to stringResource(R.string.settings_value_theme),
-            "0rem" to stringResource(R.string.settings_radius_none),
-            "0.375rem" to stringResource(R.string.settings_radius_small),
-            "0.75rem" to stringResource(R.string.settings_radius_medium),
-            "1.75rem" to stringResource(R.string.settings_radius_large),
-        ),
-    ),
-    PrefSpec(
-        key = "font",
-        label = stringResource(R.string.settings_font),
-        options = listOf(
-            "theme" to stringResource(R.string.settings_value_theme),
-            "system" to stringResource(R.string.settings_font_system),
-            "serif" to stringResource(R.string.settings_font_serif),
-            "dyslexia" to stringResource(R.string.settings_font_dyslexia),
-        ),
-    ),
-    PrefSpec(
-        key = "font_size",
-        label = stringResource(R.string.settings_font_size),
-        options = listOf(
-            "theme" to stringResource(R.string.settings_value_theme),
-            "small" to stringResource(R.string.settings_font_size_small),
-            "normal" to stringResource(R.string.settings_font_size_normal),
-            "large" to stringResource(R.string.settings_font_size_large),
-            "extra-large" to stringResource(R.string.settings_font_size_extra_large),
-        ),
-    ),
     PrefSpec(
         key = "language",
         label = stringResource(R.string.settings_language),
         options = LANGUAGE_OPTIONS,
+    ),
+    PrefSpec(
+        key = "timezone",
+        label = stringResource(R.string.settings_time_zone),
+        options = TIMEZONE_OPTIONS,
     ),
     PrefSpec(
         key = "date_format",
@@ -171,6 +142,19 @@ private fun prefSchema(): List<PrefSpec> = listOf(
         ),
     ),
 )
+
+/**
+ * Time-zone options. We rely on Android's `java.util.TimeZone.getAvailableIDs()`
+ * for the full IANA list and prepend "auto" so users can keep the device
+ * default. Computed lazily at first read.
+ */
+private val TIMEZONE_OPTIONS: List<Pair<String, String>> by lazy {
+    val zones = java.util.TimeZone.getAvailableIDs()
+        .filter { it.contains('/') } // drop short aliases like "EST"
+        .sorted()
+    val auto = "auto" to "Auto-detect"
+    listOf(auto) + zones.map { it to it }
+}
 
 private val LANGUAGE_OPTIONS: List<Pair<String, String>> = listOf(
     "" to "(default)",
@@ -258,6 +242,7 @@ fun UserSettingsScreen(
             }
             return@Scaffold
         }
+        var showResetConfirm by remember { mutableStateOf(false) }
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(padding),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
@@ -271,13 +256,43 @@ fun UserSettingsScreen(
                 )
                 HorizontalDivider()
             }
+            item(key = "reset") {
+                Spacer(Modifier.height(16.dp))
+                OutlinedButton(
+                    onClick = { showResetConfirm = true },
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Text(stringResource(R.string.settings_reset_to_defaults))
+                }
+            }
+        }
+
+        if (showResetConfirm) {
+            AlertDialog(
+                onDismissRequest = { showResetConfirm = false },
+                title = { Text(stringResource(R.string.settings_reset_confirm_title)) },
+                text = { Text(stringResource(R.string.settings_reset_confirm_message)) },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            showResetConfirm = false
+                            viewModel.reset(REGIONAL_PREF_KEYS)
+                        },
+                    ) { Text(stringResource(R.string.settings_reset)) }
+                },
+                dismissButton = {
+                    TextButton(onClick = { showResetConfirm = false }) {
+                        Text(stringResource(R.string.common_cancel))
+                    }
+                },
+            )
         }
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun PrefRow(
+internal fun PrefRow(
     spec: PrefSpec,
     current: String,
     onChange: (String) -> Unit,

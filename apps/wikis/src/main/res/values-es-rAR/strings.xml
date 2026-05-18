@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wikis_sidebar_create">Creá una wiki</string>
+    <string name="wikis_pageview_create_this_page">Creá esta página</string>
+    <string name="wikis_page_action_edit">Editá</string>
+    <string name="wikis_page_action_rename">Renombrá</string>
+    <string name="wikis_page_action_delete">Eliminá</string>
+    <string name="wikis_page_action_search">Buscá</string>
+    <string name="wikis_page_action_unsubscribe">Cancelá la suscripción</string>
+    <string name="wikis_empty_subtitle">Buscá una wiki para suscribirte, o creá una para publicar tu propia documentación.</string>
+    <string name="wikis_create_button">Creá una wiki</string>
+    <string name="wikis_subscribe_button">Suscribite</string>
+    <string name="wikis_unsubscribe_action">Cancelá la suscripción</string>
+    <string name="wikis_unsubscribe_confirm_title">Cancelá la suscripción</string>
+    <string name="wikis_create_title">Creá una wiki</string>
+    <string name="wikis_create_privacy_label">Permití que cualquiera busque la wiki</string>
+    <string name="wikis_create_cancel">Cancelá</string>
+    <string name="wikis_comment_action_reply">Respondé</string>
+    <string name="wikis_comment_action_edit">Editá</string>
+    <string name="wikis_comment_action_delete">Eliminá</string>
+    <string name="wikis_comment_action_save">Guardá</string>
+    <string name="wikis_comment_action_cancel">Cancelá</string>
+    <string name="wikis_comment_delete_confirm_title">Eliminá el comentario</string>
+    <string name="wikis_comment_delete_confirm_message">¿Estás seguro de que querés eliminar este comentario? Esto también eliminará todas las respuestas. Esta acción no se puede deshacer.</string>
+    <string name="wikis_editor_title_new">Creá una página nueva</string>
+    <string name="wikis_editor_edit">Editá</string>
+    <string name="wikis_editor_cancel">Cancelá</string>
+    <string name="wikis_editor_delete">Eliminá la página</string>
+    <string name="wikis_editor_save">Guardá</string>
+    <string name="wikis_editor_create">Creá una página</string>
+    <string name="wikis_editor_summary_label">Editá el resumen (opcional)</string>
+    <string name="wikis_insert_dialog_subtitle">Seleccioná un adjunto para insertar en tu página, o subí un archivo nuevo.</string>
+    <string name="wikis_insert_dialog_upload_new">Subí uno nuevo</string>
+    <string name="wikis_delete_page_title">Eliminá la página</string>
+    <string name="wikis_delete_page_confirm">Eliminá</string>
+    <string name="wikis_delete_page_cancel">Cancelá</string>
+    <string name="wikis_revert_page_cancel">Cancelá</string>
+    <string name="wikis_rename_page_title">Renombrá la página</string>
+    <string name="wikis_rename_page_redirects">Creá una redirección desde la URL vieja</string>
+    <string name="wikis_rename_page_confirm">Renombrá</string>
+    <string name="wikis_rename_page_cancel">Cancelá</string>
+    <string name="wikis_search_title">Buscá</string>
+    <string name="wikis_search_empty_query">Ingresá un término de búsqueda</string>
+    <string name="wikis_redirects_add">Agregá</string>
+    <string name="wikis_redirect_create_title">Creá una redirección</string>
+    <string name="wikis_redirect_delete_confirm_title">¿Eliminás la redirección?</string>
+    <string name="wikis_tags_empty_description">Agregá etiquetas para agrupar páginas en tu wiki.</string>
+    <string name="wikis_tag_pages_empty_description">Probá con otra etiqueta.</string>
+    <string name="wikis_tag_dialog_cancel">Cancelá</string>
+    <string name="wikis_tag_dialog_add">Agregá</string>
+    <string name="wikis_attachments_upload">Subí archivos</string>
+    <string name="wikis_attachments_copy_embed">Copiá el enlace para insertar</string>
+    <string name="wikis_attachments_delete">Eliminá</string>
+    <string name="wikis_attachments_delete_confirm_title">Eliminá el adjunto</string>
+    <string name="wikis_attachments_no_results_description">Probá con otro término de búsqueda o filtro.</string>
+    <string name="wikis_settings_name_edit_cd">Editá el nombre</string>
+    <string name="wikis_settings_home_save">Guardá los cambios</string>
+    <string name="wikis_settings_section_delete">Eliminá la wiki</string>
+    <string name="wikis_settings_delete_action">Eliminá la wiki</string>
+    <string name="wikis_settings_delete_confirm_title">¿Estás absolutamente seguro?</string>
+    <string name="wikis_access_add_action">Agregá</string>
+    <string name="wikis_access_level_edit">Editá y mirá</string>
+    <string name="wikis_replicas_remove_confirm_title">¿Quitás la réplica?</string>
+    <string name="wikis_replicas_remove_confirm_action">Quitá</string>
+
+</resources>

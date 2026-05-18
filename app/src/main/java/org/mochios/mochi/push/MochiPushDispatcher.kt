@@ -7,6 +7,7 @@ import org.mochios.chat.notifications.CHAT_NOTIFICATION_CHANNEL_ID
 import org.mochios.feeds.notifications.FEEDS_NOTIFICATION_CHANNEL_ID
 import org.mochios.forums.notifications.FORUMS_NOTIFICATION_CHANNEL_ID
 import org.mochios.projects.notifications.PROJECTS_NOTIFICATION_CHANNEL_ID
+import org.mochios.wikis.notifications.WIKIS_NOTIFICATION_CHANNEL_ID
 
 class MochiPushDispatcher : MochiPushReceiver() {
 
@@ -22,6 +23,7 @@ class MochiPushDispatcher : MochiPushReceiver() {
             "chat" -> CHAT_NOTIFICATION_CHANNEL_ID
             "forums" -> FORUMS_NOTIFICATION_CHANNEL_ID
             "projects" -> PROJECTS_NOTIFICATION_CHANNEL_ID
+            "wikis" -> WIKIS_NOTIFICATION_CHANNEL_ID
             else -> FEEDS_NOTIFICATION_CHANNEL_ID
         }
     }

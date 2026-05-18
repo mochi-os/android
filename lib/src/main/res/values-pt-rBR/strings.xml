@@ -98,6 +98,20 @@
     <string name="settings_units">Unidades</string>
     <string name="settings_units_metric">Métrica</string>
     <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_time_zone">Fuso horário</string>
+    <string name="settings_reset_to_defaults">Redefinir para os padrões</string>
+    <string name="settings_reset_confirm_title">Redefinir preferências?</string>
+    <string name="settings_reset_confirm_message">Isso redefinirá todas as preferências para seus valores padrão.</string>
+    <string name="settings_reset">Redefinir</string>
+    <string name="settings_display_title">Exibir</string>
+    <string name="settings_display_reset">Redefinir para os padrões</string>
+    <string name="settings_display_reset_confirm_title">Redefinir exibição?</string>
+    <string name="settings_display_reset_confirm_message">Isso redefinirá as configurações de exibição para seus valores padrão.</string>
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_default">Padrão</string>
+    <string name="settings_background">Fundo</string>
+    <string name="settings_background_theme">Do tema</string>
+    <string name="settings_background_off">Nenhum</string>
     <string name="profile_title">Perfil</string>
     <string name="profile_open">Perfil</string>
     <string name="profile_display_name">Nome de exibição</string>
@@ -106,4 +120,6 @@
     <string name="profile_privacy_private">Privado</string>
     <string name="profile_fingerprint">Impressão digital</string>
 
+    <string name="common_copy">Copiar</string>
+    <string name="common_copied">Copiado para a área de transferência</string>
 </resources>

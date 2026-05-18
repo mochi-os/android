@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="crm_list_close_search">Cerrá la búsqueda</string>
+    <string name="crm_list_search">Buscá</string>
+    <string name="crm_list_logout">Cerrá sesión</string>
+    <string name="crm_list_create">Creá un proyecto</string>
+    <string name="crm_create_title">Creá un proyecto</string>
+    <string name="crm_create_privacy">Privacy</string>
+    <string name="crm_find_subscribe">Suscribite</string>
+    <string name="crm_create_object">Creá un objeto</string>
+    <string name="crm_search">Buscá</string>
+    <string name="crm_create_object_title">Creá un objeto</string>
+    <string name="crm_settings_save">Guardá los cambios</string>
+    <string name="crm_settings_unsubscribe">Cancelá la suscripción</string>
+    <string name="crm_settings_delete_crm">Eliminá el proyecto</string>
+    <string name="crm_settings_delete_confirm_title">Eliminá el proyecto</string>
+    <string name="crm_settings_unsubscribe_title">Cancelá la suscripción</string>
+    <string name="crm_settings_unsubscribe_message">¿Estás seguro de que querés cancelar la suscripción a este proyecto?</string>
+    <string name="crm_parent_search_placeholder">Buscá</string>
+    <string name="crm_links_add">Agregá un enlace</string>
+    <string name="crm_comment_save">Guardá</string>
+    <string name="crm_property_remove">Quitá</string>
+    <string name="crm_attachment_add">Agregá un adjunto</string>
+    <string name="crm_board_rename">Renombrá</string>
+    <string name="crm_board_rename_column">Renombrá la columna</string>
+    <string name="crm_design_import_choose_template">Elegí una plantilla</string>
+    <string name="crm_classes_add">Agregá una clase</string>
+    <string name="crm_classes_add_dialog_title">Agregá una clase</string>
+    <string name="crm_class_add_field">Agregá un campo</string>
+    <string name="crm_class_delete">Eliminá la clase</string>
+    <string name="crm_class_delete_title">Eliminá la clase</string>
+    <string name="crm_field_save">Guardá los cambios</string>
+    <string name="crm_field_add_option">Agregá una opción</string>
+    <string name="crm_field_delete">Eliminá el campo</string>
+    <string name="crm_field_delete_title">Eliminá el campo</string>
+    <string name="crm_field_add_field_dialog_title">Agregá un campo</string>
+    <string name="crm_option_add">Agregá una opción</string>
+    <string name="crm_option_edit">Editá la opción</string>
+    <string name="crm_views_add">Agregá una vista</string>
+    <string name="crm_views_add_dialog_title">Agregá una vista</string>
+    <string name="crm_views_edit_dialog_title">Editá la vista</string>
+    <string name="crm_views_delete_title">Eliminá la vista</string>
+
+</resources>

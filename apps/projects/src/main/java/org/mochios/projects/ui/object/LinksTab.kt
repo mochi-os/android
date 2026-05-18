@@ -61,9 +61,13 @@ private data class DisplayLink(
     val linktype: String
 )
 
+/**
+ * Inline links section, rendered inside PropertiesTab to match the web's
+ * object-detail-panel layout (links embedded in Properties, not a separate tab).
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LinksTab(
+fun LinksSection(
     obj: ProjectObject,
     projectDetails: ProjectDetails,
     viewModel: ObjectDetailViewModel,
@@ -145,28 +149,36 @@ fun LinksTab(
     val grouped = display.groupBy({ it.first }, { it.second })
     val sectionOrder = listOf(sectionRelates, sectionBlocks, sectionBlockedBy, sectionDuplicates, sectionDuplicatedBy)
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp, vertical = 12.dp)
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            if (display.isEmpty()) {
-                Text(
-                    text = stringResource(R.string.projects_links_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Spacer(modifier = Modifier.height(12.dp))
+            Text(
+                stringResource(R.string.projects_links_title),
+                style = MaterialTheme.typography.titleSmall,
+                modifier = Modifier.weight(1f),
+            )
+            if (canWrite) {
+                IconButton(onClick = { showAddSheet = true }) {
+                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_links_add))
+                }
             }
+        }
+        if (display.isEmpty()) {
+            Text(
+                text = stringResource(R.string.projects_links_empty),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        } else {
             for (section in sectionOrder) {
                 val items = grouped[section] ?: continue
                 if (items.isEmpty()) continue
                 Text(
                     text = section,
                     style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 for (item in items) {
@@ -185,15 +197,6 @@ fun LinksTab(
                 }
                 Spacer(modifier = Modifier.height(12.dp))
             }
-
-            if (canWrite) {
-                OutlinedButton(onClick = { showAddSheet = true }) {
-                    Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.projects_links_add))
-                }
-            }
-            Spacer(modifier = Modifier.height(32.dp))
         }
     }
 

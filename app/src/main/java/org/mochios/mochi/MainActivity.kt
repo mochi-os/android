@@ -43,10 +43,16 @@ import org.mochios.android.ui.theme.MochiTheme
 import org.mochios.android.update.UpdateInstaller
 import org.mochios.chat.navigation.ChatApp
 import org.mochios.chat.navigation.chatNavGraph
+import org.mochios.crm.navigation.CrmsApp
+import org.mochios.crm.navigation.crmsNavGraph
 import org.mochios.feeds.navigation.FeedsApp
 import org.mochios.feeds.navigation.feedsNavGraph
 import org.mochios.forums.navigation.ForumsApp
 import org.mochios.forums.navigation.forumsNavGraph
+import org.mochios.people.navigation.PeopleApp
+import org.mochios.people.navigation.peopleNavGraph
+import org.mochios.wikis.navigation.WikisApp
+import org.mochios.wikis.navigation.wikisNavGraph
 import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
 import org.mochios.settings.navigation.SettingsApp
@@ -82,7 +88,7 @@ class MainActivity : ComponentActivity() {
         //     PushService (no "listening for notifications" status notif)
         //   - else: starts PushService for the UnifiedPush fallback
         handleMochiUri(intent)
-        targetApp = resolveTargetApp(intent)
+        targetApp = resolveStartTargetApp(intent, savedInstanceState)
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
             val isAuthenticated by sessionManager.isAuthenticated.collectAsState(initial = false)
@@ -161,9 +167,26 @@ class MainActivity : ComponentActivity() {
                                         onLogout = onLogout,
                                         onOpenNotifications = openNotifications,
                                     )
+                                    crmsNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                    )
+                                    peopleNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
+                                        onOpenLink = { link -> navigateToLink(navController, link) },
+                                    )
                                     settingsNavGraph(
                                         navController,
                                         onLogout = onLogout,
+                                        onOpenLink = { link -> navigateToLink(navController, link) },
+                                    )
+                                    wikisNavGraph(
+                                        navController,
+                                        onLogout = onLogout,
+                                        onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                 }
@@ -192,6 +215,50 @@ class MainActivity : ComponentActivity() {
     private fun resolveTargetApp(intent: Intent?): String? =
         resolveAliasTargetApp(intent?.component)
             ?: intent?.getStringExtra(EXTRA_APP_HINT)
+
+    /**
+     * Cold-start target resolution. Differs from [resolveTargetApp] only in
+     * the post-install relaunch case: when the system installer hands the
+     * upgraded APK back to Android, Android relaunches the package via the
+     * default LAUNCHER intent — which picks one alias out of the five
+     * (settings, on our manifest), regardless of which feature the user
+     * was actually in when they tapped Update. Detect that window via
+     * [PackageInfo.lastUpdateTime] and prefer the last-active feature
+     * saved by [onPause] instead, so the user lands back where they were.
+     */
+    private fun resolveStartTargetApp(intent: Intent?, savedInstanceState: Bundle?): String? {
+        val resolved = resolveTargetApp(intent)
+        // Configuration changes / process death restores: trust the saved
+        // state (Compose will rehydrate), don't second-guess the alias.
+        if (savedInstanceState != null) return resolved
+        // Explicit shortcut hint: user picked a specific feature, honour it.
+        if (intent?.getStringExtra(EXTRA_APP_HINT) != null) return resolved
+        val timeSinceUpdate = try {
+            System.currentTimeMillis() -
+                packageManager.getPackageInfo(packageName, 0).lastUpdateTime
+        } catch (_: PackageManager.NameNotFoundException) {
+            Long.MAX_VALUE
+        }
+        if (timeSinceUpdate > POST_INSTALL_RELAUNCH_WINDOW_MS) return resolved
+        val saved = lastActiveAppPrefs().getString(KEY_LAST_ACTIVE_APP, null)
+        if (saved == null) return resolved
+        Log.i(TAG, "Post-install relaunch (${timeSinceUpdate}ms ago); restoring last-active=$saved over alias=$resolved")
+        return saved
+    }
+
+    override fun onPause() {
+        super.onPause()
+        // Remember the active feature so the post-install relaunch can land
+        // the user back here. Saved on every pause so a notification deep
+        // link / OAuth return / install prompt that follows still preserves
+        // the right feature.
+        targetApp?.let {
+            lastActiveAppPrefs().edit().putString(KEY_LAST_ACTIVE_APP, it).apply()
+        }
+    }
+
+    private fun lastActiveAppPrefs() =
+        getSharedPreferences("mochi_main_activity", MODE_PRIVATE)
 
     override fun onResume() {
         super.onResume()
@@ -339,7 +406,12 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun navigateToLink(navController: NavController, link: String) {
-        val parts = link.trimStart('/').split('/')
+        // Split off an optional query string before path tokenisation so links
+        // like "chat/new?friend=<id>" survive intact for the matcher below.
+        val pathAndQuery = link.trimStart('/').split('?', limit = 2)
+        val path = pathAndQuery[0]
+        val query = pathAndQuery.getOrNull(1).orEmpty()
+        val parts = path.split('/')
         val firstSegment = parts.firstOrNull()?.lowercase() ?: return
         val id = parts.getOrNull(1)
         when (firstSegment) {
@@ -348,6 +420,14 @@ class MainActivity : ComponentActivity() {
                 if (id != null) navController.navigate(FeedsApp.feed(id)) { launchSingleTop = true }
             }
             "chat" -> {
+                if (id == "new") {
+                    val friendId = parseQueryParam(query, "friend")
+                    navController.navigate(ChatApp.HOME) { launchSingleTop = true }
+                    navController.navigate(ChatApp.newChat(friendId.orEmpty())) {
+                        launchSingleTop = true
+                    }
+                    return
+                }
                 navController.navigate(ChatApp.HOME) { launchSingleTop = true }
                 if (id != null) navController.navigate(ChatApp.chat(id)) { launchSingleTop = true }
             }
@@ -360,6 +440,27 @@ class MainActivity : ComponentActivity() {
                 if (id != null) navController.navigate(ProjectsApp.project(id)) { launchSingleTop = true }
             }
         }
+    }
+
+    /**
+     * Pull a single key out of an URL-style query string ("a=1&b=2"). Returns
+     * null when the key isn't present. Values are URL-decoded.
+     */
+    private fun parseQueryParam(query: String, key: String): String? {
+        if (query.isBlank()) return null
+        for (pair in query.split('&')) {
+            val idx = pair.indexOf('=')
+            if (idx <= 0) continue
+            val k = pair.substring(0, idx)
+            if (k != key) continue
+            val raw = pair.substring(idx + 1)
+            return try {
+                java.net.URLDecoder.decode(raw, Charsets.UTF_8.name())
+            } catch (_: IllegalArgumentException) {
+                raw
+            }
+        }
+        return null
     }
 
     private fun resolveAliasTargetApp(component: ComponentName?): String? {
@@ -376,7 +477,10 @@ class MainActivity : ComponentActivity() {
         "chat" -> ChatApp.HOME
         "forums" -> ForumsApp.HOME
         "projects" -> ProjectsApp.HOME
+        "crm" -> CrmsApp.HOME
+        "people" -> PeopleApp.HOME
         "settings" -> SettingsApp.HOME
+        "wikis" -> WikisApp.HOME
         else -> FeedsApp.HOME
     }
 
@@ -386,6 +490,19 @@ class MainActivity : ComponentActivity() {
 
         /** Intent extra a per-app `XxxListScreen.kt` shortcut sets to skip directory lookup. */
         const val EXTRA_APP_HINT = "app"
+
+        /** SharedPreferences key holding the feature active at last onPause. */
+        private const val KEY_LAST_ACTIVE_APP = "last_active_app"
+
+        /**
+         * How long after a package update we treat a fresh launch as a
+         * post-install relaunch (and restore the previously-active feature
+         * instead of trusting the alias the system happened to pick).
+         * Tight window so a legitimate launcher-icon tap 30+ seconds later
+         * isn't second-guessed: by then the install dialog is long gone
+         * and the tap is a deliberate user choice.
+         */
+        private const val POST_INSTALL_RELAUNCH_WINDOW_MS = 30_000L
 
         // Notifications / Settings / Profile routes moved into the Settings
         // app module (`apps/settings`). The bell in each feature's TopAppBar
@@ -401,6 +518,6 @@ class MainActivity : ComponentActivity() {
          * first API call — only one of the four would otherwise get its token
          * minted (the cold-start alias's app).
          */
-        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "settings")
+        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis")
     }
 }

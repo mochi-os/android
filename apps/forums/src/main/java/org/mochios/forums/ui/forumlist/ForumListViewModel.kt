@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.model.Forum
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
@@ -41,7 +42,7 @@ class ForumListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val r = repository.listForums()
-                val sorted = r.forums.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(forums = sorted, isLoading = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
@@ -54,7 +55,7 @@ class ForumListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val r = repository.listForums()
-                val sorted = r.forums.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(forums = sorted, isRefreshing = false, error = null)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())

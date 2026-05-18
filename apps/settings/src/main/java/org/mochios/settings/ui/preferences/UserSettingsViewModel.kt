@@ -61,4 +61,26 @@ class UserSettingsViewModel @Inject constructor(
             }
         }
     }
+
+    /** Reset only the supplied keys to their server defaults. Pass an empty
+     *  list to reset everything (preserved for callers that want the full
+     *  wipe — currently no UI exposes it, but the endpoint is still useful). */
+    fun reset(keys: List<String> = emptyList()) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isSaving = true, error = null)
+            try {
+                if (keys.isEmpty()) {
+                    preferences.resetPreferences()
+                } else {
+                    preferences.resetKeys(keys)
+                }
+                _uiState.value = _uiState.value.copy(
+                    isSaving = false,
+                    values = preferences.rawPreferences(),
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+            }
+        }
+    }
 }

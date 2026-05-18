@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -592,12 +593,29 @@ private fun SessionsSection(sessions: List<Session>, onRevoke: (String) -> Unit)
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     } else {
-        sessions.forEach { session ->
+        // Sessions are sorted accessed-desc by the ViewModel; the top entry
+        // is the current session (matches web's heuristic). The `(current)`
+        // suffix tells the user which row revoking will sign them out of.
+        sessions.forEachIndexed { index, session ->
+            val isCurrent = index == 0 && session.accessed > 0
             var confirm by remember(session.id) { mutableStateOf(false) }
             Card(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), colors = CardDefaults.outlinedCardColors()) {
                 Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(modifier = Modifier.weight(1f)) {
-                        Text(session.agent.ifBlank { stringResource(R.string.security_session_unknown_agent) }, fontWeight = FontWeight.SemiBold)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                session.agent.ifBlank { stringResource(R.string.security_session_unknown_agent) },
+                                fontWeight = FontWeight.SemiBold,
+                            )
+                            if (isCurrent) {
+                                Spacer(Modifier.width(6.dp))
+                                Text(
+                                    stringResource(R.string.security_session_current),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.primary,
+                                )
+                            }
+                        }
                         Text(
                             stringResource(R.string.security_last_used, format.formatRelativeTime(session.accessed)),
                             style = MaterialTheme.typography.labelSmall,
@@ -785,6 +803,20 @@ private fun TokensSection(
                         if (t.lastUsed > 0) {
                             Text(
                                 stringResource(R.string.security_last_used, format.formatRelativeTime(t.lastUsed)),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        if (t.scopes.isNotBlank()) {
+                            Text(
+                                stringResource(R.string.security_token_scopes, t.scopes),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        if (t.expires.isNotBlank()) {
+                            Text(
+                                stringResource(R.string.security_token_expires, t.expires),
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )

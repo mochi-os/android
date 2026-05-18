@@ -3,6 +3,7 @@ package org.mochios.projects.ui.`object`
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
@@ -67,6 +68,9 @@ fun PropertiesTab(
     projectDetails: ProjectDetails,
     viewModel: ObjectDetailViewModel,
     onAddChild: () -> Unit = {},
+    onNavigateToObject: (String) -> Unit = {},
+    projectId: String = "",
+    serverUrl: String = "",
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val fields = projectDetails.fields[obj.objectClass] ?: emptyList()
@@ -139,6 +143,33 @@ fun PropertiesTab(
                 Spacer(modifier = Modifier.size(8.dp))
                 Text(stringResource(R.string.projects_add_child))
             }
+        }
+
+        // Attachments section — inlined here to match web's
+        // object-detail-panel layout (attachments live inside Properties,
+        // not as a separate tab).
+        if (projectId.isNotBlank()) {
+            Spacer(modifier = Modifier.height(24.dp))
+            HorizontalDivider()
+            Spacer(modifier = Modifier.height(16.dp))
+            AttachmentsSection(
+                attachments = uiState.attachments,
+                projectId = projectId,
+                serverUrl = serverUrl,
+                onAddAttachment = { file -> viewModel.createAttachment(file) },
+                onDeleteAttachment = { id -> viewModel.deleteAttachment(id) },
+            )
+
+            // Links section — same web-parity reasoning as Attachments.
+            Spacer(modifier = Modifier.height(24.dp))
+            HorizontalDivider()
+            Spacer(modifier = Modifier.height(16.dp))
+            LinksSection(
+                obj = obj,
+                projectDetails = projectDetails,
+                viewModel = viewModel,
+                onNavigateToObject = onNavigateToObject,
+            )
         }
 
         Spacer(modifier = Modifier.height(32.dp))

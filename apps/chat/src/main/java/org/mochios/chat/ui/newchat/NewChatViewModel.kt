@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.NaturalCompare
 import org.mochios.chat.model.Friend
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
@@ -50,7 +51,7 @@ class NewChatViewModel @Inject constructor(
                     setOf(preselectFriend)
                 } else emptySet()
                 _uiState.value = _uiState.value.copy(
-                    friends = data.friends.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name }),
+                    friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name }),
                     selected = preselected,
                     isLoading = false,
                 )

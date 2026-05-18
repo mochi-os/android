@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="people_friends_add_to_start">Agregá amigos para empezar a conectarte</string>
+    <string name="people_friends_search">Buscá amigos</string>
+    <string name="people_friends_search_placeholder">Buscá…</string>
+    <string name="people_friends_remove">Quitá al amigo</string>
+    <string name="people_friends_try_different_search">Probá con otro término de búsqueda</string>
+    <string name="people_friends_try_adjusting">Probá ajustando tu búsqueda</string>
+    <string name="people_add_friend">Agregá un amigo</string>
+    <string name="people_add_friend_search_label">Buscá usuarios</string>
+    <string name="people_add_friend_search_hint">Buscá personas y enviá una solicitud de amistad.</string>
+    <string name="people_add_friend_accept_invite">Aceptá la invitación</string>
+    <string name="people_add_friend_now_friends_title">¡Ya son amigos!</string>
+    <string name="people_invitations_accept">Aceptá</string>
+    <string name="people_invitations_decline">Rechazá</string>
+    <string name="people_invite_settings_reject_all">Rechazá todo</string>
+    <string name="people_groups_create">Creá un grupo</string>
+    <string name="people_group_edit">Editá el grupo</string>
+    <string name="people_group_delete">Eliminá el grupo</string>
+    <string name="people_member_add">Agregá un miembro</string>
+    <string name="people_member_add_hint">Agregá usuarios o grupos para empezar</string>
+    <string name="people_member_remove">Quitá al miembro</string>
+    <string name="people_member_remove_title">Quitá al miembro</string>
+    <string name="people_member_search">Buscá usuarios</string>
+    <string name="people_member_search_hint">Ingresá un nombre para encontrar personas que querés agregar</string>
+    <string name="people_member_select_group">Seleccioná un grupo</string>
+    <string name="people_profile_save">Guardá</string>
+    <string name="people_profile_edit_name">Editá el nombre</string>
+    <string name="people_profile_directory_listing">Permití que otros te encuentren en el directorio</string>
+    <string name="people_profile_upload_avatar">Subí un avatar</string>
+    <string name="people_profile_upload">Subí</string>
+    <string name="people_profile_change_banner">Cambiá el banner</string>
+    <string name="people_common_edit">Editá</string>
+    <string name="people_common_delete">Eliminá</string>
+    <string name="people_common_cancel">Cancelá</string>
+    <string name="people_common_save">Guardá</string>
+    <string name="people_common_send_invitation">Enviá la invitación</string>
+    <string name="people_friends_message">Message</string>
+    <string name="people_friends_close_search">Cerrá la búsqueda</string>
+    <string name="people_open_sidebar">Abrí la navegación</string>
+    <string name="people_person_message">Message</string>
+    <string name="people_person_accept">Aceptá</string>
+    <string name="people_person_decline">Rechazá</string>
+
+</resources>

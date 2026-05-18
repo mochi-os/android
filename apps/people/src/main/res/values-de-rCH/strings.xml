@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="people_profile_file_too_large">Datei zu gross</string>
+    <string name="people_common_close">Schliessen</string>
+    <string name="people_welcome_dismiss">Schliessen</string>
+    <string name="people_friends_message">Message</string>
+    <string name="people_friends_close_search">Suche schliessen</string>
+    <string name="people_person_message">Message</string>
+
+</resources>

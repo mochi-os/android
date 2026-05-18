@@ -11,7 +11,9 @@ import org.mochios.android.update.UpdateChecker
 import org.mochios.chat.notifications.setupChatNotificationChannel
 import org.mochios.feeds.notifications.setupFeedsNotificationChannel
 import org.mochios.forums.notifications.setupForumsNotificationChannel
+import org.mochios.people.notifications.setupPeopleNotificationChannel
 import org.mochios.projects.notifications.setupProjectsNotificationChannel
+import org.mochios.wikis.notifications.setupWikisNotificationChannel
 
 @HiltAndroidApp
 class MochiApplication : Application() {
@@ -28,6 +30,8 @@ class MochiApplication : Application() {
         setupChatNotificationChannel(this)
         setupForumsNotificationChannel(this)
         setupProjectsNotificationChannel(this)
+        setupPeopleNotificationChannel(this)
+        setupWikisNotificationChannel(this)
         PushServiceWatchdog.schedule(this)
         UpdateChecker.schedule(this)
     }

@@ -98,6 +98,20 @@
     <string name="settings_units">Unidades</string>
     <string name="settings_units_metric">Métrico</string>
     <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_time_zone">Zona horaria</string>
+    <string name="settings_reset_to_defaults">Restablecer a los predeterminados</string>
+    <string name="settings_reset_confirm_title">¿Restablecer preferencias?</string>
+    <string name="settings_reset_confirm_message">Esto restablecerá todas las preferencias a sus valores predeterminados.</string>
+    <string name="settings_reset">Restablecer</string>
+    <string name="settings_display_title">Mostrar</string>
+    <string name="settings_display_reset">Restablecer a los predeterminados</string>
+    <string name="settings_display_reset_confirm_title">¿Restablecer la pantalla?</string>
+    <string name="settings_display_reset_confirm_message">Esto restablecerá la configuración de pantalla a sus valores predeterminados.</string>
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_default">Predeterminado</string>
+    <string name="settings_background">Fondo</string>
+    <string name="settings_background_theme">Del tema</string>
+    <string name="settings_background_off">Ninguno</string>
     <string name="profile_title">Perfil</string>
     <string name="profile_open">Perfil</string>
     <string name="profile_display_name">Nombre para mostrar</string>
@@ -106,4 +120,6 @@
     <string name="profile_privacy_private">Privado</string>
     <string name="profile_fingerprint">Huella</string>
 
+    <string name="common_copy">Copiar</string>
+    <string name="common_copied">Copiado al portapapeles</string>
 </resources>

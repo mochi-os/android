@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="system_status_update">Update</string>
+    <string name="system_status_install_update">Install update</string>
+    <string name="system_status_download_installer">Download installer</string>
+    <string name="system_status_download_from_packages">Download from packages.mochi-os.org</string>
+    <string name="system_documents_tab_privacy">Privacy</string>
+
+</resources>

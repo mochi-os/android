@@ -2,5 +2,11 @@
 <resources>
 
     <string name="security_method_email">Code par courriel</string>
+    <string name="accounts_field_email">Courriel</string>
+    <string name="system_documents_tab_privacy">Privacy</string>
+    <string name="system_setting_auth_email">Connexion avec un code par courriel</string>
+    <string name="system_setting_email_from">Adresse d\'expéditeur par défaut pour les courriels système</string>
+    <string name="system_setting_operator_email">Courriel de l\'opérateur</string>
+    <string name="system_users_email_label">Courriel</string>
 
 </resources>

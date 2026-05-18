@@ -118,6 +118,7 @@ import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipboardPage
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.NotFoundState
@@ -628,6 +629,11 @@ private fun PostCard(
     onEdit: () -> Unit,
     onDelete: () -> Unit
 ) {
+    // Lightbox open-state: (image urls list, starting index). null = closed.
+    // Tapping an image populates this; the lightbox dialog renders above the
+    // page. Matches web's per-card image-tap behaviour (open lightbox, not
+    // navigate to post detail).
+    var lightboxState by remember { mutableStateOf<Pair<List<String>, Int>?>(null) }
     // Magazine-style page: full-screen surface, no card chrome. The
     // VerticalPager wrapper handles the 3D flip; the page itself is just
     // content on the theme background. The action row is hoisted out of
@@ -737,16 +743,17 @@ private fun PostCard(
                 val others = post.attachments.filter { !it.isImage }
                 val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
                 if (images.isNotEmpty()) {
+                    val imageUrls = images.map { att ->
+                        resolveAttachmentUrl(serverUrl, att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}")
+                    }
                     Spacer(modifier = Modifier.height(8.dp))
                     MediaGrid(
-                        urls = images.map { att ->
-                            resolveAttachmentUrl(serverUrl, att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}")
-                        },
+                        urls = imageUrls,
                         thumbnailUrls = images.map { att ->
                             resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail")
                         },
                         contentDescriptions = images.map { it.name },
-                        onClick = { onClick() }
+                        onClick = { index -> lightboxState = imageUrls to index }
                     )
                 }
                 if (others.isNotEmpty()) {
@@ -759,7 +766,7 @@ private fun PostCard(
                 }
             }
 
-            // RSS preview image. Tapping opens detail.
+            // RSS preview image. Tapping opens the lightbox (web parity).
             post.data?.rss?.image?.takeIf { it.isNotEmpty() }?.let { imageUrl ->
                 Spacer(modifier = Modifier.height(8.dp))
                 AsyncImage(
@@ -768,7 +775,7 @@ private fun PostCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(8.dp))
-                        .clickable(onClick = onClick),
+                        .clickable { lightboxState = listOf(imageUrl) to 0 },
                     contentScale = ContentScale.Fit
                 )
             }
@@ -840,6 +847,14 @@ private fun PostCard(
                 }
             }
         }
+    }
+
+    lightboxState?.let { (urls, index) ->
+        LightboxScreen(
+            images = urls,
+            initialIndex = index,
+            onDismiss = { lightboxState = null },
+        )
     }
 }
 

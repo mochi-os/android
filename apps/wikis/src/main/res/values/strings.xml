@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="launcher_wikis">Mochi Wikis</string>
+
+    <!-- Notification channel -->
+    <string name="wikis_channel_name">Wikis notifications</string>
+    <string name="wikis_channel_description">Notifications about wiki page edits, comments, and invitations.</string>
+
+    <!-- Sidebar -->
+    <string name="wikis_sidebar_header">Wikis</string>
+    <string name="wikis_sidebar_all">All wikis</string>
+    <string name="wikis_sidebar_find">Find wikis</string>
+    <string name="wikis_sidebar_create">Create wiki</string>
+
+    <!-- Page view -->
+    <string name="wikis_pageview_title_fallback">Page</string>
+    <string name="wikis_pageview_wiki_fallback">Wiki</string>
+    <string name="wikis_pageview_back">Back</string>
+    <string name="wikis_pageview_page_actions">Page actions</string>
+    <string name="wikis_pageview_toc">On this page</string>
+    <string name="wikis_pageview_toc_expand">Show table of contents</string>
+    <string name="wikis_pageview_toc_collapse">Hide table of contents</string>
+    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_updated">Updated %1$s</string>
+    <string name="wikis_pageview_not_found_title">Page not found</string>
+    <string name="wikis_pageview_not_found_description">The page “%1$s” does not exist yet.</string>
+    <string name="wikis_pageview_create_this_page">Create this page</string>
+    <string name="wikis_pageview_share_subject">%1$s</string>
+    <string name="wikis_pageview_share_chooser">Share page link</string>
+    <string name="wikis_pageview_rss_copied">RSS URL copied to clipboard</string>
+    <string name="wikis_pageview_share_link_copied">Page link copied to clipboard</string>
+    <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
+    <string name="wikis_pageview_clipboard_label_share">Wiki page link</string>
+    <string name="wikis_pageview_rss_failed">Failed to get RSS token</string>
+    <string name="wikis_pageview_loading">Loading page…</string>
+
+    <!-- Page overflow menu — Page section -->
+    <string name="wikis_page_action_section_page">Page</string>
+    <string name="wikis_page_action_edit">Edit</string>
+    <string name="wikis_page_action_rename">Rename</string>
+    <string name="wikis_page_action_history">History</string>
+    <string name="wikis_page_action_delete">Delete</string>
+
+    <!-- Page overflow menu — Wiki section -->
+    <string name="wikis_page_action_section_wiki">Wiki</string>
+    <string name="wikis_page_action_search">Search</string>
+    <string name="wikis_page_action_tags">Tags</string>
+    <string name="wikis_page_action_recent_changes">Recent changes</string>
+    <string name="wikis_page_action_new_page">New page</string>
+    <string name="wikis_page_action_settings">Settings</string>
+    <string name="wikis_page_action_share">Share page link</string>
+    <string name="wikis_page_action_unsubscribe">Unsubscribe</string>
+    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
+    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
+    <string name="wikis_page_action_rss_all">RSS: Changes and comments</string>
+
+    <plurals name="wikis_page_action_comments">
+        <item quantity="one">%d comment</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
+
+    <!-- Wikis list screen (landing) -->
+    <string name="wikis_title">Wikis</string>
+    <string name="wikis_open_sidebar">Open sidebar</string>
+
+    <!-- Empty state -->
+    <string name="wikis_empty_title">Start your first wiki</string>
+    <string name="wikis_empty_subtitle">Search for a wiki to subscribe, or create one to publish your own documentation.</string>
+
+    <!-- Card badges -->
+    <string name="wikis_owned_badge">Owned</string>
+    <string name="wikis_subscribed_badge">Subscribed</string>
+
+    <!-- Buttons -->
+    <string name="wikis_create_button">Create wiki</string>
+    <string name="wikis_search_placeholder">Search for a wiki…</string>
+
+    <!-- Recommended rail -->
+    <string name="wikis_recommended_section">Recommended wikis</string>
+
+    <!-- Subscribe / unsubscribe -->
+    <string name="wikis_subscribe_button">Subscribe</string>
+    <string name="wikis_subscribing">Subscribing…</string>
+    <string name="wikis_subscribed">Subscribed</string>
+    <string name="wikis_unsubscribe_action">Unsubscribe</string>
+    <string name="wikis_unsubscribing">Unsubscribing…</string>
+    <string name="wikis_unsubscribe_confirm_title">Unsubscribe</string>
+    <string name="wikis_unsubscribe_confirm_message">Are you sure you want to unsubscribe from %1$s?</string>
+    <string name="wikis_unsubscribe_success">Unsubscribed</string>
+    <string name="wikis_subscribe_failed_502">That server is unreachable. Retrying…</string>
+    <string name="wikis_subscribe_failed">Failed to subscribe</string>
+
+    <!-- RSS feed overflow -->
+    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu_trailing">›</string>
+    <string name="wikis_rss_changes">Changes</string>
+    <string name="wikis_rss_comments">Comments</string>
+    <string name="wikis_rss_both">Changes and comments</string>
+    <string name="wikis_rss_copied">RSS URL copied to clipboard</string>
+    <string name="wikis_rss_failed">Failed to get RSS token</string>
+    <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
+
+    <!-- Create-wiki dialog placeholder (stub until CreateWikiDialog lands) -->
+    <string name="wikis_create_dialog_stub">Wiki creation will be available in a future update.</string>
+
+    <!-- Find wikis screen -->
+    <string name="wikis_find_title">Find wikis</string>
+    <string name="wikis_find_search_placeholder">Search by name, ID, fingerprint, or URL…</string>
+    <string name="wikis_find_no_results">No wikis found</string>
+    <string name="wikis_find_recommended_section">Recommended wikis</string>
+
+    <!-- Replicate (join) wiki screen -->
+    <string name="wikis_join_title">Replicate wiki</string>
+    <string name="wikis_join_search_button">Search for wikis…</string>
+    <string name="wikis_join_or_id">Or enter ID directly</string>
+    <string name="wikis_join_id_label">Wiki entity ID</string>
+    <string name="wikis_join_id_hint">abc123…</string>
+    <string name="wikis_join_submit">Replicate wiki</string>
+
+    <!-- Create wiki dialog -->
+    <string name="wikis_create_title">Create wiki</string>
+    <string name="wikis_create_name_label">Name</string>
+    <string name="wikis_create_privacy_label">Allow anyone to search for wiki</string>
+    <string name="wikis_create_submit">Create</string>
+    <string name="wikis_create_cancel">Cancel</string>
+
+    <!-- Subscribe feedback -->
+    <string name="wikis_subscribe_success">Subscribed to wiki</string>
+    <string name="wikis_subscribe_502_retry">Retrying without the suggested server…</string>
+
+    <!-- Comments screen -->
+    <string name="wikis_comments_title_template">%1$s - Comments</string>
+    <string name="wikis_comments_empty_title">No comments yet</string>
+    <string name="wikis_comments_empty_subtitle">Be the first to comment on this page.</string>
+    <string name="wikis_comment_action_reply">Reply</string>
+    <string name="wikis_comment_action_edit">Edit</string>
+    <string name="wikis_comment_action_delete">Delete</string>
+    <string name="wikis_comment_action_save">Save</string>
+    <string name="wikis_comment_action_cancel">Cancel</string>
+    <string name="wikis_comment_edited">(edited)</string>
+    <string name="wikis_comment_delete_confirm_title">Delete comment</string>
+    <string name="wikis_comment_delete_confirm_message">Are you sure you want to delete this comment? This will also delete all replies. This action cannot be undone.</string>
+    <string name="wikis_comment_form_placeholder_new">Write a comment…</string>
+    <string name="wikis_comment_form_placeholder_reply">Write a reply…</string>
+    <string name="wikis_comment_form_attach">Attach files</string>
+    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
+    <string name="wikis_comment_expand">(expand)</string>
+    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
+    <string name="wikis_comment_attachment_size">(%1$s)</string>
+
+    <plurals name="wikis_comment_collapsed_replies">
+        <item quantity="one">%d reply</item>
+        <item quantity="other">+%d more replies</item>
+    </plurals>
+
+    <!-- Page editor — top bar and action row -->
+    <string name="wikis_editor_title_new">Create new page</string>
+    <string name="wikis_editor_title_edit">Editing: %1$s</string>
+    <string name="wikis_editor_preview">Preview</string>
+    <string name="wikis_editor_preview_untitled">Untitled</string>
+    <string name="wikis_editor_edit">Edit</string>
+    <string name="wikis_editor_insert">Insert</string>
+    <string name="wikis_editor_attachments">Attachments</string>
+    <string name="wikis_editor_cancel">Cancel</string>
+    <string name="wikis_editor_delete">Delete page</string>
+    <string name="wikis_editor_save">Save</string>
+    <string name="wikis_editor_saving">Saving…</string>
+    <string name="wikis_editor_create">Create page</string>
+    <string name="wikis_editor_creating">Creating…</string>
+
+    <!-- Page editor — form fields and toasts -->
+    <string name="wikis_editor_title_label">Title</string>
+    <string name="wikis_editor_slug_label">Page URL</string>
+    <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_content_label">Content</string>
+    <string name="wikis_editor_content_placeholder">Write your content here using Markdown…</string>
+    <string name="wikis_editor_summary_label">Edit summary (optional)</string>
+    <string name="wikis_editor_summary_hint">Briefly describe your changes</string>
+    <string name="wikis_editor_title_required">Title is required</string>
+    <string name="wikis_editor_slug_required">Page URL is required</string>
+    <string name="wikis_editor_saved">Page saved</string>
+    <string name="wikis_editor_created">Page created</string>
+    <string name="wikis_editor_save_failed">Failed to save page</string>
+    <string name="wikis_editor_create_failed">Failed to create page</string>
+
+    <!-- Insert attachment dialog -->
+    <string name="wikis_insert_dialog_title">Insert attachment</string>
+    <string name="wikis_insert_dialog_subtitle">Select an attachment to insert into your page, or upload a new file.</string>
+    <string name="wikis_insert_dialog_upload_new">Upload new</string>
+    <string name="wikis_insert_dialog_empty">No attachments yet. Upload a file to get started.</string>
+    <string name="wikis_insert_dialog_error">Failed to upload files</string>
+
+    <!-- Delete page screen -->
+    <string name="wikis_delete_page_title">Delete page</string>
+    <string name="wikis_delete_page_message">You are about to delete the page \"%1$s\" (%2$s). This action can be undone by restoring from history.</string>
+    <string name="wikis_delete_page_confirm">Delete</string>
+    <string name="wikis_delete_page_cancel">Cancel</string>
+    <string name="wikis_delete_page_success">Page deleted</string>
+    <string name="wikis_delete_page_failed">Failed to delete page</string>
+
+    <!-- Revert page screen -->
+    <string name="wikis_revert_page_title">Revert page</string>
+    <string name="wikis_revert_page_message">You are about to revert %1$s to version %2$d. This will create a new revision with the content from version %2$d.</string>
+    <string name="wikis_revert_page_comment_label">Revert comment</string>
+    <string name="wikis_revert_page_default_comment">Reverted to version %1$d</string>
+    <string name="wikis_revert_page_confirm">Revert</string>
+    <string name="wikis_revert_page_cancel">Cancel</string>
+    <string name="wikis_revert_page_success">Reverted to version %1$d</string>
+    <string name="wikis_revert_page_failed">Failed to revert page</string>
+
+    <!-- Rename page dialog -->
+    <string name="wikis_rename_page_title">Rename page</string>
+    <string name="wikis_rename_page_label">New URL</string>
+    <string name="wikis_rename_page_redirects">Create redirect from old URL</string>
+    <string name="wikis_rename_page_confirm">Rename</string>
+    <string name="wikis_rename_page_renaming">Renaming…</string>
+    <string name="wikis_rename_page_cancel">Cancel</string>
+    <string name="wikis_rename_page_new_required">New URL is required</string>
+    <string name="wikis_rename_page_must_differ">New URL must be different from current URL</string>
+    <string name="wikis_rename_page_success">Page renamed</string>
+    <string name="wikis_rename_page_failed">Failed to rename page</string>
+
+    <plurals name="wikis_rename_page_renamed">
+        <item quantity="one">Renamed %1$d page</item>
+        <item quantity="other">Renamed %1$d pages</item>
+    </plurals>
+    <plurals name="wikis_rename_page_updated_links">
+        <item quantity="one">updated %1$d link</item>
+        <item quantity="other">updated %1$d links</item>
+    </plurals>
+
+    <!-- Page history screen -->
+    <string name="wikis_history_title">History</string>
+    <string name="wikis_history_viewing">Viewing history for %1$s, current version %2$d</string>
+    <string name="wikis_history_empty">No revisions found</string>
+    <string name="wikis_history_view_action">View</string>
+    <string name="wikis_history_revert_action">Revert to this version</string>
+
+    <!-- Revision view screen -->
+    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_current_badge">Current</string>
+    <string name="wikis_revision_back_to_history">Back to history</string>
+    <string name="wikis_revision_revert_to_this">Revert to this version</string>
+
+    <!-- Recent changes screen -->
+    <string name="wikis_changes_title">Recent changes</string>
+    <string name="wikis_changes_subtitle">Recent edits across all pages in this wiki.</string>
+    <string name="wikis_changes_empty">No changes yet</string>
+
+    <!-- Wiki content search screen -->
+    <string name="wikis_search_title">Search</string>
+    <string name="wikis_search_pages_placeholder">Search pages by title or content…</string>
+    <string name="wikis_search_empty_query">Enter a search term</string>
+    <string name="wikis_search_no_results">No pages found for \"%1$s\". Try different search terms.</string>
+    <string name="wikis_search_updated">Updated %1$s</string>
+
+    <!-- Redirects screen -->
+    <string name="wikis_redirects_title">Redirects</string>
+    <string name="wikis_redirects_add">Add</string>
+    <string name="wikis_redirects_empty">No redirects configured</string>
+    <string name="wikis_redirect_create_title">Create redirect</string>
+    <string name="wikis_redirect_create_action">Create</string>
+    <string name="wikis_redirect_source_label">Source</string>
+    <string name="wikis_redirect_target_label">Target</string>
+    <string name="wikis_redirect_required_fields">Both source and target are required</string>
+    <string name="wikis_redirect_created_success">Redirect created</string>
+    <string name="wikis_redirect_create_failed">Failed to create redirect</string>
+    <string name="wikis_redirect_deleted_success">Redirect \"%1$s\" deleted</string>
+    <string name="wikis_redirect_delete_failed">Failed to delete redirect</string>
+    <string name="wikis_redirect_delete_confirm_title">Delete redirect?</string>
+    <string name="wikis_redirect_delete_confirm_message">This will remove the redirect from \"%1$s\" to \"%2$s\". Users visiting the source URL will no longer be redirected.</string>
+
+    <plurals name="wikis_search_results_count">
+        <item quantity="one">Found %1$d result for \"%2$s\"</item>
+        <item quantity="other">Found %1$d results for \"%2$s\"</item>
+    </plurals>
+
+    <!-- All-tags index screen -->
+    <string name="wikis_tags_title">All tags</string>
+    <string name="wikis_tags_subtitle">Browse pages by tag. Tap a tag to see all pages with that tag.</string>
+    <string name="wikis_tags_empty_title">No tags found</string>
+    <string name="wikis_tags_empty_description">Add tags to group pages in your wiki.</string>
+
+    <plurals name="wikis_tags_count">
+        <item quantity="one">%d page</item>
+        <item quantity="other">%d pages</item>
+    </plurals>
+
+    <!-- Pages-for-tag screen -->
+    <string name="wikis_tag_pages_title_template">Pages tagged \"%1$s\"</string>
+    <string name="wikis_tag_pages_empty_title">No pages found with this tag</string>
+    <string name="wikis_tag_pages_empty_description">Try a different tag.</string>
+    <string name="wikis_tag_pages_all_tags_action">All tags</string>
+
+    <plurals name="wikis_tag_pages_count">
+        <item quantity="one">%d page with this tag</item>
+        <item quantity="other">%d pages with this tag</item>
+    </plurals>
+
+    <!-- Tag manager (inline on page footer) -->
+    <string name="wikis_tag_manager_add_action">Add tag</string>
+    <string name="wikis_tag_manager_remove_confirm_title">Remove tag?</string>
+    <string name="wikis_tag_manager_remove_confirm_message">Remove the tag \"%1$s\" from this page?</string>
+    <string name="wikis_tag_manager_added">Tag \"%1$s\" added</string>
+    <string name="wikis_tag_manager_removed">Tag \"%1$s\" removed</string>
+    <string name="wikis_tag_manager_add_failed">Failed to add tag</string>
+    <string name="wikis_tag_manager_remove_failed">Failed to remove tag</string>
+
+    <!-- Add tag dialog -->
+    <string name="wikis_tag_dialog_title">Add tag</string>
+    <string name="wikis_tag_dialog_label">Tag</string>
+    <string name="wikis_tag_dialog_duplicate">Tag already exists</string>
+    <string name="wikis_tag_dialog_empty">Tag cannot be empty</string>
+    <string name="wikis_tag_dialog_cancel">Cancel</string>
+    <string name="wikis_tag_dialog_add">Add</string>
+
+    <!-- Attachments management screen -->
+    <string name="wikis_attachments_title">Attachments</string>
+    <string name="wikis_attachments_upload">Upload files</string>
+    <string name="wikis_attachments_uploading">Uploading…</string>
+    <string name="wikis_attachments_upload_failed">Failed to upload files</string>
+
+    <string name="wikis_attachments_search_placeholder">Search attachments…</string>
+    <string name="wikis_attachments_search_clear">Clear search</string>
+    <string name="wikis_attachments_filter">Filter</string>
+    <string name="wikis_attachments_filter_all">All files</string>
+    <string name="wikis_attachments_filter_images">Images</string>
+    <string name="wikis_attachments_filter_documents">Documents</string>
+
+    <string name="wikis_attachments_sort">Sort</string>
+    <string name="wikis_attachments_sort_date">Date</string>
+    <string name="wikis_attachments_sort_name">Name</string>
+    <string name="wikis_attachments_sort_size">Size</string>
+
+    <string name="wikis_attachments_view_grid">Grid view</string>
+    <string name="wikis_attachments_view_list">List view</string>
+
+    <string name="wikis_attachments_copy_embed">Copy embed link</string>
+    <string name="wikis_attachments_copy_success">Embed link copied</string>
+    <string name="wikis_attachments_copy_failed">Failed to copy embed link</string>
+
+    <string name="wikis_attachments_delete">Delete</string>
+    <string name="wikis_attachments_delete_confirm_title">Delete attachment</string>
+    <string name="wikis_attachments_delete_confirm_message">Delete \"%1$s\"? This cannot be undone.</string>
+    <string name="wikis_attachments_delete_success">Attachment deleted</string>
+    <string name="wikis_attachments_delete_failed">Failed to delete attachment</string>
+
+    <string name="wikis_attachments_open">Open</string>
+    <string name="wikis_attachments_downloading">Downloading…</string>
+
+    <string name="wikis_attachments_empty_title">No attachments yet</string>
+    <string name="wikis_attachments_empty_description">Tap Upload to add files to this page.</string>
+    <string name="wikis_attachments_no_results_title">No attachments match your search</string>
+    <string name="wikis_attachments_no_results_description">Try a different search term or filter.</string>
+
+    <plurals name="wikis_attachments_total_files">
+        <item quantity="one">%d file</item>
+        <item quantity="other">%d files</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_images">
+        <item quantity="one">%d image</item>
+        <item quantity="other">%d images</item>
+    </plurals>
+    <plurals name="wikis_attachments_total_documents">
+        <item quantity="one">%d document</item>
+        <item quantity="other">%d documents</item>
+    </plurals>
+
+    <!-- Wiki settings screen -->
+    <string name="wikis_settings_title">Settings</string>
+    <string name="wikis_settings_tab_settings">Settings</string>
+    <string name="wikis_settings_tab_redirects">Redirects</string>
+    <string name="wikis_settings_tab_access">Access</string>
+    <string name="wikis_settings_tab_replicas">Replicas</string>
+
+    <!-- Settings tab — identity -->
+    <string name="wikis_settings_section_identity">Identity</string>
+    <string name="wikis_settings_field_name">Name</string>
+    <string name="wikis_settings_field_entity_id">Entity ID</string>
+    <string name="wikis_settings_field_fingerprint">Fingerprint</string>
+    <string name="wikis_settings_name_edit_cd">Edit name</string>
+    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
+    <string name="wikis_settings_name_invalid_char">Name cannot contain &lt; or &gt; characters</string>
+    <string name="wikis_settings_name_too_long">Name must be 100 characters or less</string>
+    <string name="wikis_settings_name_required">Wiki name is required</string>
+    <string name="wikis_settings_name_saved">Wiki renamed</string>
+    <string name="wikis_settings_name_save_failed">Failed to rename wiki</string>
+
+    <!-- Settings tab — subscription -->
+    <string name="wikis_settings_section_subscription">Subscription</string>
+    <string name="wikis_settings_field_source">Source</string>
+    <string name="wikis_settings_action_sync">Sync now</string>
+    <string name="wikis_settings_sync_success">Wiki synced</string>
+    <string name="wikis_settings_sync_failed">Failed to sync wiki</string>
+
+    <!-- Settings tab — home page -->
+    <string name="wikis_settings_section_home">Home page</string>
+    <string name="wikis_settings_field_home_label">Use as home</string>
+    <string name="wikis_settings_home_save">Save changes</string>
+    <string name="wikis_settings_home_saved">Settings saved</string>
+    <string name="wikis_settings_home_save_failed">Failed to save settings</string>
+
+    <!-- Settings tab — delete -->
+    <string name="wikis_settings_section_delete">Delete wiki</string>
+    <string name="wikis_settings_delete_description">Permanently delete this wiki and all its contents. This cannot be undone.</string>
+    <string name="wikis_settings_delete_action">Delete wiki</string>
+    <string name="wikis_settings_delete_confirm_title">Are you absolutely sure?</string>
+    <string name="wikis_settings_delete_confirm_message">This action cannot be undone. This will permanently delete the wiki and all its contents.</string>
+    <string name="wikis_settings_delete_success">Wiki deleted</string>
+    <string name="wikis_settings_delete_failed">Failed to delete wiki</string>
+
+    <!-- Access tab -->
+    <string name="wikis_access_add_action">Add</string>
+    <string name="wikis_access_add_subject_label">User</string>
+    <string name="wikis_access_level_label">Permission</string>
+    <string name="wikis_access_level_edit">Edit and view</string>
+    <string name="wikis_access_level_view">View only</string>
+    <string name="wikis_access_level_none">No access</string>
+    <string name="wikis_access_owner_label">Owner</string>
+    <string name="wikis_access_tab_users">Users</string>
+    <string name="wikis_access_tab_groups">Groups</string>
+    <string name="wikis_access_no_groups">No groups available</string>
+    <string name="wikis_access_set_success">Access updated</string>
+    <string name="wikis_access_set_failed">Failed to update access</string>
+    <string name="wikis_access_revoke_success">Access removed</string>
+    <string name="wikis_access_revoke_failed">Failed to remove access</string>
+
+    <!-- Replicas tab -->
+    <string name="wikis_replicas_empty_title">No replicas yet</string>
+    <string name="wikis_replicas_empty_message">When other wikis replicate this wiki, they will appear here.</string>
+    <string name="wikis_replicas_col_id">ID</string>
+    <string name="wikis_replicas_col_subscribed">Subscribed: %1$s</string>
+    <string name="wikis_replicas_col_synced">Last synced: %1$s</string>
+    <string name="wikis_replicas_never_synced">Never</string>
+    <string name="wikis_replicas_remove_confirm_title">Remove replica?</string>
+    <string name="wikis_replicas_remove_confirm_message">This will stop sending updates to \"%1$s\". They can replicate again if they want.</string>
+    <string name="wikis_replicas_remove_confirm_action">Remove</string>
+    <string name="wikis_replicas_removed_success">Replica removed</string>
+    <string name="wikis_replicas_remove_failed">Failed to remove replica</string>
+</resources>

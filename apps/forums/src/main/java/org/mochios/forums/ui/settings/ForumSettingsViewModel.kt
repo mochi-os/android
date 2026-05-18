@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.AccessRule
+import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.Forum
@@ -93,7 +94,7 @@ class ForumSettingsViewModel @Inject constructor(
             try {
                 val r = repository.getAccess(forumId)
                 _uiState.value = _uiState.value.copy(
-                    accessRules = r.rules.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name ?: it.subject })
+                    accessRules = r.rules.sortedWith(compareBy(NaturalCompare) { it.name ?: it.subject })
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -128,7 +129,7 @@ class ForumSettingsViewModel @Inject constructor(
             try {
                 val r = repository.getMembers(forumId)
                 _uiState.value = _uiState.value.copy(
-                    members = r.members.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    members = r.members.sortedWith(compareBy(NaturalCompare) { it.name })
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -193,7 +194,7 @@ class ForumSettingsViewModel @Inject constructor(
                     ),
                     aiPrompts = repository.getAiPrompts(forumId),
                     aiAccounts = repository.listAiAccounts()
-                        .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.label }),
+                        .sortedWith(compareBy(NaturalCompare) { it.label }),
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

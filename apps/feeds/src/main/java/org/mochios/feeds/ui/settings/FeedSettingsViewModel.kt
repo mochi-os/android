@@ -13,6 +13,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.User
+import org.mochios.android.util.NaturalCompare
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
@@ -232,7 +233,7 @@ class FeedSettingsViewModel @Inject constructor(
                 // case-insensitively by name for the UI, matching the web
                 // sources page which sorts with naturalCompare.
                 _sources.value = repository.getSources(feedId)
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name.ifBlank { it.url } })
+                    .sortedWith(compareBy(NaturalCompare) { it.name.ifBlank { it.url } })
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -319,7 +320,7 @@ class FeedSettingsViewModel @Inject constructor(
             _isLoadingAccess.value = true
             try {
                 _accessRules.value = repository.getAccessRules(feedId)
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name ?: it.subject })
+                    .sortedWith(compareBy(NaturalCompare) { it.name ?: it.subject })
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -366,7 +367,7 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _groups.value = repository.getGroups()
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
             } catch (_: Exception) {
                 _groups.value = emptyList()
             }
@@ -380,7 +381,7 @@ class FeedSettingsViewModel @Inject constructor(
             _isLoadingMembers.value = true
             try {
                 _members.value = repository.getMembers(feedId)
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -442,7 +443,7 @@ class FeedSettingsViewModel @Inject constructor(
     fun loadAiAccounts() {
         viewModelScope.launch {
             _aiAccounts.value = repository.listAiAccounts()
-                .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.label })
+                .sortedWith(compareBy(NaturalCompare) { it.label })
         }
     }
 

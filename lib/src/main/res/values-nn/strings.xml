@@ -98,6 +98,20 @@
     <string name="settings_units">Einingar</string>
     <string name="settings_units_metric">Metrisk</string>
     <string name="settings_units_imperial">Imperial</string>
+    <string name="settings_time_zone">Tidssone</string>
+    <string name="settings_reset_to_defaults">Tilbakestill til standardverdiar</string>
+    <string name="settings_reset_confirm_title">Tilbakestill innstillingar?</string>
+    <string name="settings_reset_confirm_message">Dette vil tilbakestille alle preferansar til standardverdiane.</string>
+    <string name="settings_reset">Tilbakestill</string>
+    <string name="settings_display_title">Vis</string>
+    <string name="settings_display_reset">Tilbakestill til standardverdiar</string>
+    <string name="settings_display_reset_confirm_title">Tilbakestill vising?</string>
+    <string name="settings_display_reset_confirm_message">Dette vil tilbakestille visingsinnstillingane til standardverdiane.</string>
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_default">Standard</string>
+    <string name="settings_background">Bakgrunn</string>
+    <string name="settings_background_theme">Frå tema</string>
+    <string name="settings_background_off">Ingen</string>
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Visingsnamn</string>
@@ -106,4 +120,6 @@
     <string name="profile_privacy_private">Privat</string>
     <string name="profile_fingerprint">Fingeravtrykk</string>
 
+    <string name="common_copy">Kopier</string>
+    <string name="common_copied">Kopiert til utklippstavla</string>
 </resources>

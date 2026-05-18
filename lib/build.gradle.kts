@@ -105,6 +105,10 @@ dependencies {
     implementation(libs.markwon.core)
     implementation(libs.markwon.html)
     implementation(libs.markwon.image)
+    implementation(libs.markwon.ext.tables)
+    implementation(libs.markwon.ext.strikethrough)
+    implementation(libs.markwon.ext.tasklist)
+    implementation(libs.markwon.linkify)
 
     implementation(libs.osmdroid)
 

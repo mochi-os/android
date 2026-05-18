@@ -170,15 +170,15 @@ fun ObjectDetailSheet(
 
                     Spacer(modifier = Modifier.height(8.dp))
 
-                    // Tabs
+                    // Tabs match the web layout: Properties / Comments /
+                    // Activity / Requests. Attachments + links fold into
+                    // Properties as inline sections; watch/unwatch is the
+                    // Eye icon in the header above.
                     val tabs = listOf(
                         stringResource(R.string.projects_object_tab_properties),
                         stringResource(R.string.projects_object_tab_comments),
                         stringResource(R.string.projects_object_tab_activity),
                         stringResource(R.string.projects_object_tab_requests),
-                        stringResource(R.string.projects_object_tab_attachments),
-                        stringResource(R.string.projects_object_tab_links),
-                        stringResource(R.string.projects_object_tab_watchers),
                     )
                     ScrollableTabRow(
                         selectedTabIndex = uiState.selectedTab,
@@ -200,6 +200,9 @@ fun ObjectDetailSheet(
                             projectDetails = projectDetails,
                             viewModel = viewModel,
                             onAddChild = { onAddChild(obj.id) },
+                            onNavigateToObject = onNavigateToObject,
+                            projectId = projectId,
+                            serverUrl = viewModel.serverUrl,
                         )
                         1 -> CommentsTab(
                             comments = uiState.comments,
@@ -231,24 +234,6 @@ fun ObjectDetailSheet(
                             projectId = projectId,
                             viewModel = viewModel,
                             onViewDiff = onViewDiff
-                        )
-                        4 -> AttachmentsTab(
-                            attachments = uiState.attachments,
-                            projectId = projectId,
-                            serverUrl = viewModel.serverUrl,
-                            onAddAttachment = { file -> viewModel.createAttachment(file) },
-                            onDeleteAttachment = { id -> viewModel.deleteAttachment(id) }
-                        )
-                        5 -> LinksTab(
-                            obj = obj,
-                            projectDetails = projectDetails,
-                            viewModel = viewModel,
-                            onNavigateToObject = onNavigateToObject
-                        )
-                        6 -> WatchersTab(
-                            watchers = uiState.watchers,
-                            isWatching = uiState.isWatching,
-                            onToggle = { viewModel.toggleWatch() },
                         )
                     }
                 }

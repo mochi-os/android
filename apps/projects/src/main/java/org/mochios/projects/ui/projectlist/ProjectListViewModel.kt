@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.NaturalCompare
 import org.mochios.projects.model.Project
 import org.mochios.projects.model.Template
 import org.mochios.projects.repository.ProjectsRepository
@@ -43,7 +44,7 @@ class ProjectListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val projects = repository.listProjects()
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
                     projects = projects,
                     isLoading = false
@@ -62,7 +63,7 @@ class ProjectListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val projects = repository.listProjects()
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
                     projects = projects,
                     isRefreshing = false,
@@ -93,7 +94,7 @@ class ProjectListViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val templates = repository.getTemplates()
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
                     showCreateDialog = true,
                     templates = templates

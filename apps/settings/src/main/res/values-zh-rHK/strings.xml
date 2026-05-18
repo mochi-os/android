@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="settings_home_accounts">已連接賬戶</string>
     <string name="security_section_oauth">已連接賬戶</string>
     <string name="security_oauth_link">關聯賬戶</string>
+    <string name="accounts_title">已連接賬戶</string>
+    <string name="accounts_add">新增賬戶</string>
+    <string name="accounts_add_title">新增賬戶</string>
+    <string name="accounts_empty">無已連接的賬戶</string>
+    <string name="accounts_remove_title">移除賬戶?</string>
+    <string name="system_documents_description">向您的用戶顯示的伺服器規則、條款及細則,以及隱私通知</string>
+    <string name="system_documents_tab_privacy">Privacy</string>
+    <string name="system_settings_section_user_defaults">用戶預設值</string>
+    <string name="system_setting_apps_install_user">允許用戶安裝應用程式</string>
+    <string name="system_users_title">用戶</string>
+    <string name="system_users_col_user">用戶</string>
+    <string name="system_users_open_actions">開啟用戶操作</string>
+    <string name="system_users_role_user">用戶</string>
+    <string name="system_users_edit">編輯用戶</string>
+    <string name="system_users_edit_title">編輯用戶</string>
+    <string name="system_users_create_title">建立用戶</string>
+    <string name="system_users_suspend">停權用戶</string>
+    <string name="system_users_delete">刪除用戶</string>
+    <string name="system_users_delete_title">刪除用戶?</string>
+    <string name="system_users_sessions_description">檢視並撤銷此用戶的活躍工作階段。</string>
+    <string name="system_users_sessions_empty">此用戶沒有活躍的工作階段。</string>
+    <string name="system_users_empty">找不到用戶</string>
+    <string name="system_users_empty_search">沒有用戶符合您的搜尋</string>
+    <string name="system_users_toast_created">用戶已建立</string>
+    <string name="system_users_toast_updated">用戶已更新</string>
+    <string name="system_users_toast_deleted">用戶已刪除</string>
+    <string name="system_users_toast_suspended">用戶已停權</string>
+    <string name="system_users_toast_create_failed">建立用戶失敗</string>
+    <string name="system_users_toast_update_failed">更新用戶失敗</string>
+    <string name="system_users_toast_delete_failed">刪除用戶失敗</string>
+    <string name="system_users_toast_status_failed">更新用戶狀態失敗</string>
 
 </resources>
