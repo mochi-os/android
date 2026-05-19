@@ -1,0 +1,42 @@
+package org.mochios.market.model
+
+import com.google.gson.annotations.SerializedName
+
+/**
+ * A buyer/seller conversation, optionally pinned to a specific listing/order.
+ *
+ * Mirrors `Thread` in `apps/market/web/src/types/threads.ts`. `order` is 0
+ * for pre-purchase enquiry threads. `last_message` / `unread` /
+ * `other_name` are denormalised onto thread-list rows so the UI can render
+ * an inbox without an extra fetch per row.
+ */
+data class MarketThread(
+    val id: Long = 0,
+    val listing: Long = 0,
+    val order: Long = 0,
+    val buyer: String = "",
+    val seller: String = "",
+    val created: Long = 0,
+    val updated: Long = 0,
+    val title: String? = null,
+    @SerializedName("last_message") val lastMessage: String? = null,
+    @SerializedName("last_message_time") val lastMessageTime: Long? = null,
+    val unread: Long? = null,
+    @SerializedName("other_name") val otherName: String? = null,
+)
+
+/**
+ * A single message inside a [MarketThread].
+ *
+ * Mirrors `Message` in `apps/market/web/src/types/threads.ts`. `read` is 0
+ * (unread) or the timestamp the recipient marked it read.
+ */
+data class Message(
+    val id: Long = 0,
+    val thread: Long = 0,
+    val sender: String = "",
+    @SerializedName("sender_name") val senderName: String = "",
+    val body: String = "",
+    val read: Long = 0,
+    val created: Long = 0,
+)

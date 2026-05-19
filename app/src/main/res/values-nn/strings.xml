@@ -9,4 +9,5 @@
     <string name="launcher_chess">Sjakk</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Ord</string>
+    <string name="launcher_market">Mochi Market</string>
 </resources>

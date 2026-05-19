@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="market_chargeback_reason_debit_not_authorized">Debit not authorized</string>
+    <string name="market_chargeback_reason_subscription_canceled">Subscription canceled</string>
+    <string name="market_chargeback_reason_unrecognized">Unrecognized charge</string>
+    <string name="market_purchase_audit_section">Activity</string>
+    <string name="market_refund_reason_unauthorised">Unauthorized</string>
+    <string name="market_sale_section_audit">Activity</string>
+    <string name="market_status_cancelled">Canceled</string>
+    <string name="market_subscriptions_cancelled">Subscription canceled</string>
+
+    <string name="market_notifications_load_failed">Could not load notification preferences</string>
+    <string name="market_notifications_subtitle">Choose which marketplace events send you notifications. Disabled topics are still recorded in your inbox.</string>
+    <string name="market_notifications_title">Notification preferences</string>
+    <string name="market_notifications_topic_account_moderation">Account status</string>
+    <string name="market_notifications_topic_account_moderation_desc">Suspension, ban, and reactivation notices for your account.</string>
+    <string name="market_notifications_topic_account_stripe">Stripe Connect status</string>
+    <string name="market_notifications_topic_account_stripe_desc">Capability and payout changes on your connected Stripe account.</string>
+    <string name="market_notifications_topic_auction_cancelled">Auction cancelled</string>
+    <string name="market_notifications_topic_auction_cancelled_desc">An auction you bid on has been cancelled.</string>
+    <string name="market_notifications_topic_auction_ended">Auction ended</string>
+    <string name="market_notifications_topic_auction_ended_desc">An auction you bid on or watched has closed.</string>
+    <string name="market_notifications_topic_auction_outbid">Outbid</string>
+    <string name="market_notifications_topic_auction_outbid_desc">Another bidder has placed a higher bid than yours.</string>
+    <string name="market_notifications_topic_bid_placed">Bid received</string>
+    <string name="market_notifications_topic_bid_placed_desc">A new bid was placed on one of your auctions.</string>
+    <string name="market_notifications_topic_listing_moderation">Listing moderation</string>
+    <string name="market_notifications_topic_listing_moderation_desc">Decisions on listings you posted or appealed.</string>
+    <string name="market_notifications_topic_message">Messages</string>
+    <string name="market_notifications_topic_message_desc">New messages from buyers or sellers in your threads.</string>
+    <string name="market_notifications_topic_order_buyer">Order updates (buying)</string>
+    <string name="market_notifications_topic_order_buyer_desc">Shipping, delivery, dispute, and refund updates on orders you placed.</string>
+    <string name="market_notifications_topic_order_seller">Order updates (selling)</string>
+    <string name="market_notifications_topic_order_seller_desc">New orders, dispute openings, and refund requests on items you sell.</string>
+    <string name="market_notifications_topic_report_reporter">Report outcomes</string>
+    <string name="market_notifications_topic_report_reporter_desc">Updates on reports you have filed.</string>
+    <string name="market_notifications_topic_report_target">Moderation actions against you</string>
+    <string name="market_notifications_topic_report_target_desc">Notices when a report names you as the target.</string>
+    <string name="market_notifications_topic_review_received">Reviews received</string>
+    <string name="market_notifications_topic_review_received_desc">New reviews written about you by buyers or sellers.</string>
+    <string name="market_notifications_topic_review_responded">Review responses</string>
+    <string name="market_notifications_topic_review_responded_desc">Replies to reviews you have written.</string>
+    <string name="market_notifications_topic_subscription_buyer">Subscription updates (buying)</string>
+    <string name="market_notifications_topic_subscription_buyer_desc">Billing, pause, and cancellation events on subscriptions you bought.</string>
+    <string name="market_notifications_topic_subscription_seller">Subscription updates (selling)</string>
+    <string name="market_notifications_topic_subscription_seller_desc">Billing, pause, and cancellation events on subscriptions you sell.</string>
+    <string name="market_onboarding_activate">Activate</string>
+    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_body">Activate your account to start buying and selling.</string>
+    <string name="market_onboarding_dismiss">Dismiss</string>
+    <string name="market_onboarding_title">Welcome to Market</string>
+    <string name="market_subscription_detail_billing_history">Billing history</string>
+    <string name="market_subscription_detail_billing_history_empty">No charges yet.</string>
+    <string name="market_subscription_detail_billing_info">Billing</string>
+    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
+    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
+    <string name="market_subscription_detail_listing">Listing</string>
+    <string name="market_subscription_detail_load_failed">Could not load subscription</string>
+    <string name="market_subscription_detail_next_billing">Next billing date: %1$s</string>
+    <string name="market_subscription_detail_not_found">Subscription not found</string>
+    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
+    <string name="market_subscription_detail_seller">Seller</string>
+    <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_subscription_detail_title">Subscription</string>
+</resources>

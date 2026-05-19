@@ -246,6 +246,22 @@
             <meta-data android:name="org.mochios.targetApp" android:value="words" />
         </activity-alias>
 
+        <activity-alias
+            android:name=".MochiMarketLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_market"
+            android:icon="@mipmap/ic_market"
+            android:roundIcon="@mipmap/ic_market_round"
+            android:taskAffinity="org.mochios.mochi.market"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="market" />
+        </activity-alias>
+
         <!--
           UnifiedPush MessagingReceiver for the consolidated super-app. Catches
           MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts

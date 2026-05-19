@@ -59,6 +59,8 @@ import org.mochios.go.navigation.GoApp
 import org.mochios.go.navigation.goNavGraph
 import org.mochios.words.navigation.WordsApp
 import org.mochios.words.navigation.wordsNavGraph
+import org.mochios.market.navigation.MarketApp
+import org.mochios.market.navigation.marketNavGraph
 import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
 import org.mochios.settings.navigation.SettingsApp
@@ -213,6 +215,7 @@ class MainActivity : ComponentActivity() {
                                         onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
+                                    marketNavGraph(navController)
                                 }
                             }
                         }
@@ -325,8 +328,42 @@ class MainActivity : ComponentActivity() {
             !uri.isHierarchical -> handleSystemIntent(uri)
             uri.authority.isNullOrEmpty() -> handleEntityIntent(intent, uri)
             uri.authority in LEGACY_SYSTEM_INTENT_AUTHORITIES -> handleLegacySystemIntent(uri)
+            uri.authority == "market" && uri.pathSegments.firstOrNull() == "checkout" ->
+                handleMarketCheckoutDeepLink(uri)
             else -> handleCrossPeerEntityIntent(intent, uri)
         }
+    }
+
+    /**
+     * Stripe Checkout success / cancel returns for the Android market app.
+     * The Comptroller mints these URIs when the order/subscription create
+     * carries `client_platform=android`; Stripe's hosted page redirects to
+     * `mochi://market/checkout/success` or `mochi://market/checkout/cancel`,
+     * the Custom Tab hands the URI to the OS, the app's broad mochi:// intent
+     * filter brings us back here, and we route the user to the right
+     * post-checkout screen.
+     *
+     * Real order/subscription state is established by the Comptroller's
+     * webhook handler (`checkout.session.completed`), not by these returns —
+     * the success deep link is purely a UX nudge to the buyer; the
+     * authoritative confirmation arrives via the purchases / subscriptions
+     * list refresh.
+     */
+    private fun handleMarketCheckoutDeepLink(uri: Uri) {
+        val outcome = uri.pathSegments.getOrNull(1) ?: return
+        val link = when (outcome) {
+            "success" -> "/market/purchases?paid=1"
+            "cancel" -> {
+                val listing = uri.getQueryParameter("listing")
+                if (listing.isNullOrBlank()) "/market" else "/market/listing/$listing"
+            }
+            else -> {
+                Log.w(TAG, "Unknown market checkout outcome: $uri")
+                return
+            }
+        }
+        PendingDeepLink.set(link)
+        targetApp = "market"
     }
 
     /**
@@ -463,6 +500,26 @@ class MainActivity : ComponentActivity() {
                 navController.navigate(ProjectsApp.HOME) { launchSingleTop = true }
                 if (id != null) navController.navigate(ProjectsApp.project(id)) { launchSingleTop = true }
             }
+            "market" -> {
+                navController.navigate(MarketApp.HOME) { launchSingleTop = true }
+                when (id) {
+                    "listing" -> parts.getOrNull(2)
+                        ?.let { navController.navigate(MarketApp.listingDetail(it)) { launchSingleTop = true } }
+                    "purchases" -> {
+                        val orderId = parts.getOrNull(2)
+                        if (orderId != null) {
+                            navController.navigate(MarketApp.purchaseDetail(orderId)) {
+                                launchSingleTop = true
+                            }
+                        } else {
+                            navController.navigate(MarketApp.PURCHASES) { launchSingleTop = true }
+                        }
+                    }
+                    "subscriptions" -> navController.navigate(MarketApp.SUBSCRIPTIONS) {
+                        launchSingleTop = true
+                    }
+                }
+            }
         }
     }
 
@@ -508,6 +565,7 @@ class MainActivity : ComponentActivity() {
         "chess" -> ChessApp.HOME
         "go" -> GoApp.HOME
         "words" -> WordsApp.HOME
+        "market" -> MarketApp.HOME
         else -> FeedsApp.HOME
     }
 
@@ -545,6 +603,6 @@ class MainActivity : ComponentActivity() {
          * first API call — only one of the four would otherwise get its token
          * minted (the cold-start alias's app).
          */
-        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words")
+        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market")
     }
 }

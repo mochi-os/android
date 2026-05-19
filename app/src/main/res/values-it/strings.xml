@@ -11,5 +11,6 @@
     <string name="launcher_chess">Scacchi</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Parole</string>
+    <string name="launcher_market">Mochi Market</string>
 
 </resources>

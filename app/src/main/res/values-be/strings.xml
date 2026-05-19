@@ -9,4 +9,5 @@
     <string name="launcher_chess">Шахматы</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Словы</string>
+    <string name="launcher_market">Mochi Market</string>
 </resources>

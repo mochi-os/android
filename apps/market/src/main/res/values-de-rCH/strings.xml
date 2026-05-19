@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="market_onboarding_dismiss">Schliessen</string>
+    <string name="market_purchases_complete_purchase">Kauf abschliessen</string>
+
+    <string name="market_notifications_load_failed">Benachrichtigungseinstellungen konnten nicht geladen werden</string>
+    <string name="market_notifications_subtitle">Wählen Sie, welche Marketplace-Ereignisse Benachrichtigungen senden. Deaktivierte Themen erscheinen weiterhin in Ihrem Posteingang.</string>
+    <string name="market_notifications_title">Benachrichtigungseinstellungen</string>
+    <string name="market_notifications_topic_account_moderation">Kontostatus</string>
+    <string name="market_notifications_topic_account_moderation_desc">Sperr-, Bann- und Reaktivierungshinweise für Ihr Konto.</string>
+    <string name="market_notifications_topic_account_stripe">Stripe-Connect-Status</string>
+    <string name="market_notifications_topic_account_stripe_desc">Funktions- und Auszahlungsänderungen Ihres verknüpften Stripe-Kontos.</string>
+    <string name="market_notifications_topic_auction_cancelled">Auktion abgebrochen</string>
+    <string name="market_notifications_topic_auction_cancelled_desc">Eine Auktion, auf die Sie geboten haben, wurde abgebrochen.</string>
+    <string name="market_notifications_topic_auction_ended">Auktion beendet</string>
+    <string name="market_notifications_topic_auction_ended_desc">Eine Auktion, die Sie beobachtet oder beboten haben, ist beendet.</string>
+    <string name="market_notifications_topic_auction_outbid">Überboten</string>
+    <string name="market_notifications_topic_auction_outbid_desc">Ein anderer Bieter hat ein höheres Gebot abgegeben.</string>
+    <string name="market_notifications_topic_bid_placed">Gebot erhalten</string>
+    <string name="market_notifications_topic_bid_placed_desc">Auf eine Ihrer Auktionen wurde ein neues Gebot abgegeben.</string>
+    <string name="market_notifications_topic_listing_moderation">Anzeigen-Moderation</string>
+    <string name="market_notifications_topic_listing_moderation_desc">Entscheidungen zu Anzeigen, die Sie eingestellt oder angefochten haben.</string>
+    <string name="market_notifications_topic_message">Nachrichten</string>
+    <string name="market_notifications_topic_message_desc">Neue Nachrichten von Käufern oder Verkäufern in Ihren Unterhaltungen.</string>
+    <string name="market_notifications_topic_order_buyer">Bestellaktualisierungen (Käufer)</string>
+    <string name="market_notifications_topic_order_buyer_desc">Versand-, Liefer-, Streit- und Rückerstattungsupdates zu Ihren Bestellungen.</string>
+    <string name="market_notifications_topic_order_seller">Bestellaktualisierungen (Verkäufer)</string>
+    <string name="market_notifications_topic_order_seller_desc">Neue Bestellungen, Streiteröffnungen und Rückerstattungsanfragen.</string>
+    <string name="market_notifications_topic_report_reporter">Meldungsergebnisse</string>
+    <string name="market_notifications_topic_report_reporter_desc">Updates zu von Ihnen abgegebenen Meldungen.</string>
+    <string name="market_notifications_topic_report_target">Moderationsaktionen gegen Sie</string>
+    <string name="market_notifications_topic_report_target_desc">Hinweise, wenn eine Meldung Sie als Ziel nennt.</string>
+    <string name="market_notifications_topic_review_received">Erhaltene Bewertungen</string>
+    <string name="market_notifications_topic_review_received_desc">Neue Bewertungen, die Käufer oder Verkäufer über Sie geschrieben haben.</string>
+    <string name="market_notifications_topic_review_responded">Bewertungsantworten</string>
+    <string name="market_notifications_topic_review_responded_desc">Antworten auf Bewertungen, die Sie geschrieben haben.</string>
+    <string name="market_notifications_topic_subscription_buyer">Abonnement-Aktualisierungen (Käufer)</string>
+    <string name="market_notifications_topic_subscription_buyer_desc">Abrechnungs-, Pausen- und Kündigungsereignisse zu Ihren Abonnements.</string>
+    <string name="market_notifications_topic_subscription_seller">Abonnement-Aktualisierungen (Verkäufer)</string>
+    <string name="market_notifications_topic_subscription_seller_desc">Abrechnungs-, Pausen- und Kündigungsereignisse zu Abonnements, die Sie verkaufen.</string>
+    <string name="market_onboarding_activate">Aktivieren</string>
+    <string name="market_onboarding_activating">Wird aktiviert…</string>
+    <string name="market_onboarding_body">Aktivieren Sie Ihr Konto, um zu kaufen und zu verkaufen.</string>
+    <string name="market_onboarding_title">Willkommen bei Market</string>
+    <string name="market_subscription_detail_billing_history">Abrechnungsverlauf</string>
+    <string name="market_subscription_detail_billing_history_empty">Noch keine Abbuchungen.</string>
+    <string name="market_subscription_detail_billing_info">Abrechnung</string>
+    <string name="market_subscription_detail_cancelled_on">Gekündigt am %1$s</string>
+    <string name="market_subscription_detail_charge_amount">Letzte Abbuchung: %1$s</string>
+    <string name="market_subscription_detail_listing">Anzeige</string>
+    <string name="market_subscription_detail_load_failed">Abonnement konnte nicht geladen werden</string>
+    <string name="market_subscription_detail_next_billing">Nächste Abrechnung: %1$s</string>
+    <string name="market_subscription_detail_not_found">Abonnement nicht gefunden</string>
+    <string name="market_subscription_detail_pending_cancel">Kündigung steht aus</string>
+    <string name="market_subscription_detail_seller">Verkäufer</string>
+    <string name="market_subscription_detail_started">Begonnen %1$s</string>
+    <string name="market_subscription_detail_title">Abonnement</string>
+</resources>

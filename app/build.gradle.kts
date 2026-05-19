@@ -117,6 +117,7 @@ dependencies {
     implementation(project(":apps:chess"))
     implementation(project(":apps:go"))
     implementation(project(":apps:words"))
+    implementation(project(":apps:market"))
 
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)

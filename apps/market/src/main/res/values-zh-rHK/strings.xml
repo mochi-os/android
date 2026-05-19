@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="market_account_status_banned_title">賬戶已封禁</string>
+    <string name="market_account_status_suspended_title">賬戶已停權</string>
+    <string name="market_account_title">賬戶</string>
+    <string name="market_chargeback_reason_incorrect_account_details">賬戶詳細資料不正確</string>
+    <string name="market_sidebar_account">賬戶</string>
+
+    <string name="market_notifications_load_failed">无法加载通知偏好</string>
+    <string name="market_notifications_subtitle">选择哪些市场事件向您发送通知。已禁用的主题仍会保留在收件箱中。</string>
+    <string name="market_notifications_title">通知偏好</string>
+    <string name="market_notifications_topic_account_moderation">账户状态</string>
+    <string name="market_notifications_topic_account_moderation_desc">账户暂停、封禁和恢复的通知。</string>
+    <string name="market_notifications_topic_account_stripe">Stripe Connect 状态</string>
+    <string name="market_notifications_topic_account_stripe_desc">您关联的 Stripe 账户的功能和支付变更。</string>
+    <string name="market_notifications_topic_auction_cancelled">拍卖取消</string>
+    <string name="market_notifications_topic_auction_cancelled_desc">您出价的拍卖已被取消。</string>
+    <string name="market_notifications_topic_auction_ended">拍卖结束</string>
+    <string name="market_notifications_topic_auction_ended_desc">您出价或关注的拍卖已结束。</string>
+    <string name="market_notifications_topic_auction_outbid">被超过</string>
+    <string name="market_notifications_topic_auction_outbid_desc">另一位出价者出价高于您。</string>
+    <string name="market_notifications_topic_bid_placed">收到出价</string>
+    <string name="market_notifications_topic_bid_placed_desc">您的一个拍卖收到了新的出价。</string>
+    <string name="market_notifications_topic_listing_moderation">刊登审核</string>
+    <string name="market_notifications_topic_listing_moderation_desc">对您发布或申诉的刊登的决定。</string>
+    <string name="market_notifications_topic_message">消息</string>
+    <string name="market_notifications_topic_message_desc">买家或卖家在您会话中的新消息。</string>
+    <string name="market_notifications_topic_order_buyer">订单更新(购买)</string>
+    <string name="market_notifications_topic_order_buyer_desc">您订单的发货、配送、争议和退款更新。</string>
+    <string name="market_notifications_topic_order_seller">订单更新(销售)</string>
+    <string name="market_notifications_topic_order_seller_desc">新订单、争议开启和退款请求。</string>
+    <string name="market_notifications_topic_report_reporter">举报结果</string>
+    <string name="market_notifications_topic_report_reporter_desc">您提交的举报的最新进展。</string>
+    <string name="market_notifications_topic_report_target">针对您的审核操作</string>
+    <string name="market_notifications_topic_report_target_desc">当举报指向您时的通知。</string>
+    <string name="market_notifications_topic_review_received">收到的评价</string>
+    <string name="market_notifications_topic_review_received_desc">买家或卖家撰写的关于您的新评价。</string>
+    <string name="market_notifications_topic_review_responded">评价回复</string>
+    <string name="market_notifications_topic_review_responded_desc">对您写的评价的回复。</string>
+    <string name="market_notifications_topic_subscription_buyer">订阅更新(购买)</string>
+    <string name="market_notifications_topic_subscription_buyer_desc">您购买的订阅的计费、暂停和取消事件。</string>
+    <string name="market_notifications_topic_subscription_seller">订阅更新(销售)</string>
+    <string name="market_notifications_topic_subscription_seller_desc">您销售的订阅的计费、暂停和取消事件。</string>
+    <string name="market_onboarding_activate">激活</string>
+    <string name="market_onboarding_activating">正在激活…</string>
+    <string name="market_onboarding_body">激活您的账户开始买卖。</string>
+    <string name="market_onboarding_dismiss">忽略</string>
+    <string name="market_onboarding_title">欢迎使用市场</string>
+    <string name="market_subscription_detail_billing_history">账单记录</string>
+    <string name="market_subscription_detail_billing_history_empty">暂无扣费。</string>
+    <string name="market_subscription_detail_billing_info">账单</string>
+    <string name="market_subscription_detail_cancelled_on">于 %1$s 取消</string>
+    <string name="market_subscription_detail_charge_amount">最近扣费:%1$s</string>
+    <string name="market_subscription_detail_listing">刊登</string>
+    <string name="market_subscription_detail_load_failed">无法加载订阅</string>
+    <string name="market_subscription_detail_next_billing">下一次账单日期:%1$s</string>
+    <string name="market_subscription_detail_not_found">未找到订阅</string>
+    <string name="market_subscription_detail_pending_cancel">待取消</string>
+    <string name="market_subscription_detail_seller">卖家</string>
+    <string name="market_subscription_detail_started">开始于 %1$s</string>
+    <string name="market_subscription_detail_title">订阅</string>
+</resources>

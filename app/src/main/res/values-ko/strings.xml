@@ -11,5 +11,6 @@
     <string name="launcher_chess">체스</string>
     <string name="launcher_go">바둑</string>
     <string name="launcher_words">워드</string>
+    <string name="launcher_market">Mochi Market</string>
 
 </resources>

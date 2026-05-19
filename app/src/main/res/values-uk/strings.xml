@@ -11,5 +11,6 @@
     <string name="launcher_chess">Шахи</string>
     <string name="launcher_go">Го</string>
     <string name="launcher_words">Слова</string>
+    <string name="launcher_market">Mochi Market</string>
 
 </resources>

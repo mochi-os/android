@@ -1,0 +1,234 @@
+package org.mochios.market.ui.listing
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
+import org.mochios.market.lib.RecentlyViewedStore
+import org.mochios.market.lib.ReportedStore
+import org.mochios.market.lib.SavedStore
+import org.mochios.market.model.AuditEvent
+import org.mochios.market.model.Category
+import org.mochios.market.model.Currency
+import org.mochios.market.model.ListingDetailResponse
+import org.mochios.market.repository.MarketRepository
+import javax.inject.Inject
+
+/**
+ * UI state for [ListingDetailScreen]. Mirrors the loader-driven shape the
+ * web listing page uses: loading, the [ListingDetailResponse] payload, or
+ * an error. The view model loads the listing once on entry and again on
+ * mutation (relist) so a fresh server view is always rendered.
+ */
+data class ListingDetailUiState(
+    val isLoading: Boolean = true,
+    val listing: ListingDetailResponse? = null,
+    val audit: List<AuditEvent> = emptyList(),
+    val categories: List<Category> = emptyList(),
+    val error: MochiError? = null,
+)
+
+/**
+ * One-shot snackbar message emitted by [ListingDetailViewModel]. Carries a
+ * string-resource id (and optional positional args) so the composable can
+ * resolve localised text at render time.
+ */
+data class ListingDetailSnackbar(
+    val messageRes: Int,
+    val args: List<Any> = emptyList(),
+)
+
+/**
+ * ViewModel for [ListingDetailScreen].
+ *
+ * Wraps [MarketRepository.getListing] for the initial load, exposes the
+ * three on-device stores ([SavedStore], [RecentlyViewedStore],
+ * [ReportedStore]) the screen needs for the save / report / recently-viewed
+ * affordances, and re-fetches the listing after a relist so the new status /
+ * id surface in the UI.
+ *
+ * The repository raises typed [MochiError]s; every async path catches and
+ * converts unexpected exceptions via [toMochiError] so the UI can render a
+ * localised message instead of stack-trace text.
+ */
+@HiltViewModel
+class ListingDetailViewModel @Inject constructor(
+    private val repository: MarketRepository,
+    private val savedStore: SavedStore,
+    private val recentStore: RecentlyViewedStore,
+    private val reportedStore: ReportedStore,
+) : ViewModel() {
+
+    private val _state = MutableStateFlow(ListingDetailUiState())
+    val state: StateFlow<ListingDetailUiState> = _state.asStateFlow()
+
+    private val _snackbar = MutableSharedFlow<ListingDetailSnackbar>(extraBufferCapacity = 4)
+    val snackbar: SharedFlow<ListingDetailSnackbar> = _snackbar.asSharedFlow()
+
+    /** Carries the new listing id after a successful relist so the screen can navigate to its editor. */
+    private val _navigateToEdit = MutableSharedFlow<Long>(extraBufferCapacity = 1)
+    val navigateToEdit: SharedFlow<Long> = _navigateToEdit.asSharedFlow()
+
+    private var currentId: Long = 0
+
+    init {
+        loadCategories()
+    }
+
+    private fun loadCategories() {
+        viewModelScope.launch {
+            try {
+                _state.value = _state.value.copy(categories = repository.listCategories())
+            } catch (_: Exception) {
+                // Categories non-critical; category chip just hides itself.
+            }
+        }
+    }
+
+    fun load(id: String) {
+        val parsed = id.toLongOrNull() ?: run {
+            _state.value = _state.value.copy(
+                isLoading = false,
+                error = MochiError.Unknown("Invalid listing id"),
+            )
+            return
+        }
+        currentId = parsed
+        viewModelScope.launch {
+            _state.value = _state.value.copy(isLoading = true, error = null)
+            try {
+                val resp = repository.getListing(parsed)
+                // Audit fetch is best-effort: regular buyers don't have read
+                // access, and a 403 must not blow up the detail render.
+                val audit = runCatching {
+                    repository.auditObject(kind = "listing", objectId = parsed.toString()).audit
+                }.getOrDefault(emptyList())
+                _state.value = _state.value.copy(
+                    isLoading = false,
+                    listing = resp,
+                    audit = audit,
+                    error = null,
+                )
+                // Record the visit for the "recently viewed" rail. Best-effort —
+                // a write failure here must not surface as a load error.
+                try {
+                    recentStore.push(parsed.toString())
+                } catch (_: Exception) {
+                    // ignore
+                }
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(
+                    isLoading = false,
+                    error = e.toMochiError(),
+                )
+            }
+        }
+    }
+
+    fun toggleSave() {
+        val id = currentId
+        if (id == 0L) return
+        viewModelScope.launch {
+            try {
+                savedStore.toggle(id.toString())
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun reportListing(
+        reason: String,
+        details: String,
+        onSuccess: () -> Unit = {},
+    ) {
+        val id = currentId
+        if (id == 0L) return
+        viewModelScope.launch {
+            try {
+                repository.createReport(
+                    target = id.toString(),
+                    type = "listing",
+                    reason = reason,
+                    details = details.ifBlank { null },
+                )
+                reportedStore.markReported(id.toString())
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_report_dialog_success,
+                    )
+                )
+                onSuccess()
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(error = e.toMochiError())
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_report_dialog_failed,
+                    )
+                )
+            }
+        }
+    }
+
+    fun placeBid(
+        amount: Long,
+        @Suppress("UNUSED_PARAMETER") currency: Currency,
+        onSuccess: () -> Unit = {},
+    ) {
+        val auctionId = _state.value.listing?.auction?.id ?: return
+        viewModelScope.launch {
+            try {
+                repository.placeBid(auctionId, amount)
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_bid_dialog_success,
+                    )
+                )
+                // Refresh so the new high bid and history surface immediately.
+                load(currentId.toString())
+                onSuccess()
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(error = e.toMochiError())
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_bid_dialog_failed,
+                    )
+                )
+            }
+        }
+    }
+
+    fun relistListing() {
+        val id = currentId
+        if (id == 0L) return
+        viewModelScope.launch {
+            try {
+                val resp = repository.relistListing(id)
+                _navigateToEdit.emit(resp.listing.id)
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(error = e.toMochiError())
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_listing_detail_relist_failed,
+                    )
+                )
+            }
+        }
+    }
+
+    fun isSaved(): Flow<Boolean> =
+        savedStore.observe().map { set -> currentId.toString() in set }
+
+    fun isReported(): Flow<Boolean> =
+        reportedStore.observe().map { set -> currentId.toString() in set }
+}
