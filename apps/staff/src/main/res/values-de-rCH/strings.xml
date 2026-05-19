@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="staff_accounts_close">Schliessen</string>
+    <string name="staff_disputes_close">Schliessen</string>
+    <string name="staff_disputes_refund_must_be_positive">Erstattungsbetrag muss grösser als null sein</string>
+    <string name="staff_reports_action_dismiss">Schliessen</string>
+    <string name="staff_reports_action_taken_toast">Massnahme zur Meldung ergriffen</string>
+    <string name="staff_reports_close">Schliessen</string>
+    <string name="staff_reports_dialog_title_action">Massnahme zu Meldung ergreifen</string>
+
+</resources>

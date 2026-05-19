@@ -216,7 +216,11 @@ class GameWebSocketController internal constructor(
         return try {
             val mapType = object : TypeToken<Map<String, Any?>>() {}.type
             val raw: Map<String, Any?> = gson.fromJson(text, mapType) ?: return null
-            val type = (raw["type"] as? String) ?: return null
+            // Game payloads always carry "type" ("message"/"move"/"system");
+            // non-game payloads (e.g. staff-events sending {topic, object})
+            // don't. Default to "" so the raw map still reaches the
+            // subscriber, who can pick out whatever keyed fields apply.
+            val type = (raw["type"] as? String) ?: ""
             val created = (raw["created"] as? Number)?.toLong()
                 ?: (System.currentTimeMillis() / 1000L)
             GameWsEvent(

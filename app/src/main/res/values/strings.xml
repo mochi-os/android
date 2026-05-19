@@ -13,4 +13,5 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Staff</string>
 </resources>

@@ -61,6 +61,8 @@ import org.mochios.words.navigation.WordsApp
 import org.mochios.words.navigation.wordsNavGraph
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.navigation.marketNavGraph
+import org.mochios.staff.navigation.StaffApp
+import org.mochios.staff.navigation.staffNavGraph
 import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
 import org.mochios.settings.navigation.SettingsApp
@@ -216,6 +218,7 @@ class MainActivity : ComponentActivity() {
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
                                     marketNavGraph(navController)
+                                    staffNavGraph(navController)
                                 }
                             }
                         }
@@ -566,6 +569,7 @@ class MainActivity : ComponentActivity() {
         "go" -> GoApp.HOME
         "words" -> WordsApp.HOME
         "market" -> MarketApp.HOME
+        "staff" -> StaffApp.HOME
         else -> FeedsApp.HOME
     }
 
@@ -603,6 +607,6 @@ class MainActivity : ComponentActivity() {
          * first API call — only one of the four would otherwise get its token
          * minted (the cold-start alias's app).
          */
-        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market")
+        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff")
     }
 }

@@ -23,7 +23,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 1
-        versionName = "0.18"
+        versionName = "0.19"
     }
 
     signingConfigs {
@@ -118,6 +118,7 @@ dependencies {
     implementation(project(":apps:go"))
     implementation(project(":apps:words"))
     implementation(project(":apps:market"))
+    implementation(project(":apps:staff"))
 
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)

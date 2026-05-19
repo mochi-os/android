@@ -263,6 +263,28 @@
         </activity-alias>
 
         <!--
+          Staff (operator console) launcher. Hidden by default — only flipped
+          to enabled at runtime by StaffAccessController once the bound
+          identity passes a `staffApi.me()` check. Disappears again on
+          sign-out, role revocation, or any 401/403 from a staff endpoint.
+        -->
+        <activity-alias
+            android:name=".MochiStaffLauncher"
+            android:enabled="false"
+            android:exported="true"
+            android:label="@string/launcher_staff"
+            android:icon="@mipmap/ic_staff"
+            android:roundIcon="@mipmap/ic_staff_round"
+            android:taskAffinity="org.mochios.mochi.staff"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="staff" />
+        </activity-alias>
+
+        <!--
           UnifiedPush MessagingReceiver for the consolidated super-app. Catches
           MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts
           from PushService and posts a system notification on the right per-app

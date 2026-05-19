@@ -12,6 +12,7 @@ import org.mochios.chess.notifications.CHESS_NOTIFICATION_CHANNEL_ID
 import org.mochios.go.notifications.GO_NOTIFICATION_CHANNEL_ID
 import org.mochios.words.notifications.WORDS_NOTIFICATION_CHANNEL_ID
 import org.mochios.market.notifications.MARKET_NOTIFICATION_CHANNEL_ID
+import org.mochios.staff.notifications.STAFF_NOTIFICATION_CHANNEL_ID
 
 class MochiPushDispatcher : MochiPushReceiver() {
 
@@ -32,6 +33,7 @@ class MochiPushDispatcher : MochiPushReceiver() {
             "go" -> GO_NOTIFICATION_CHANNEL_ID
             "words" -> WORDS_NOTIFICATION_CHANNEL_ID
             "market" -> MARKET_NOTIFICATION_CHANNEL_ID
+            "staff" -> STAFF_NOTIFICATION_CHANNEL_ID
             else -> FEEDS_NOTIFICATION_CHANNEL_ID
         }
     }

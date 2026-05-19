@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="staff_accounts_action_ban_title">封禁賬戶</string>
+    <string name="staff_accounts_action_suspend_title">停權賬戶</string>
+    <string name="staff_accounts_banned_toast">賬戶已封禁</string>
+    <string name="staff_accounts_empty">找不到賬戶</string>
+    <string name="staff_accounts_history_title">賬戶歷史</string>
+    <string name="staff_accounts_suspended_toast">賬戶已停權</string>
+    <string name="staff_accounts_title">賬戶</string>
+    <string name="staff_accounts_unbanned_toast">賬戶已解除封禁</string>
+    <string name="staff_accounts_unsuspended_toast">賬戶已解除停權</string>
+    <string name="staff_reports_action_ban">封禁用戶</string>
+    <string name="staff_reports_type_user">用戶</string>
+    <string name="staff_sidebar_accounts">賬戶</string>
+
+</resources>
