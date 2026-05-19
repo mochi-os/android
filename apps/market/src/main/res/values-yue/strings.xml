@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_audit_actor_and_action">%1$s — %2$s</string>
+    <string name="market_carousel_main">Soeng2pin3 %1$d / %2$d</string>
+    <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
+    <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
+    <string name="market_dispute_dialog_evidence_role_staff">Mochi jyun4gung1</string>
+    <string name="market_editor_days">%1$d jat6</string>
+    <string name="market_editor_zone_country_au">Ou1zau1</string>
+    <string name="market_editor_zone_country_ca">Gaa1naa4daai6</string>
+    <string name="market_editor_zone_country_de">Dak1gwok3</string>
+    <string name="market_editor_zone_country_es">Sai1baan1ngaa4</string>
+    <string name="market_editor_zone_country_fr">Faat3gwok3</string>
+    <string name="market_editor_zone_country_gb">Jing1gwok3</string>
+    <string name="market_editor_zone_country_it">Ji3daai6lei6</string>
+    <string name="market_editor_zone_country_jp">Jat6bun2</string>
+    <string name="market_editor_zone_country_nl">Ho4laan4</string>
+    <string name="market_editor_zone_european_union">Au1mang4</string>
+    <string name="market_editor_zone_worldwide">Cyun4kau4</string>
+    <string name="market_filter_chip_max">Zeoi3gou1 %1$s</string>
+    <string name="market_filter_chip_min">Zeoi3dai1 %1$s</string>
+    <string name="market_listing_detail_sales_count">%1$d gin6 sou1sau3</string>
+    <string name="market_messages_unread_badge">%1$d mei6duk6</string>
+    <string name="market_price_from">Jau4 %1$s hei2</string>
+    <string name="market_price_per_month">%1$s / jyut6</string>
+    <string name="market_price_per_year">%1$s / nin4</string>
+    <string name="market_profile_sales_count">%1$d gin6 sou1sau3</string>
+    <string name="market_purchases_auction_label">Paak3maai6 #%1$d</string>
+    <string name="market_purchases_order_label">Deng6daan1 #%1$d</string>
+    <string name="market_rating_reviews">(%1$d ping4leon6)</string>
+</resources>
