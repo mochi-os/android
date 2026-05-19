@@ -21,8 +21,8 @@ import org.unifiedpush.android.connector.data.PushEndpoint
 import org.unifiedpush.android.connector.data.PushMessage
 
 /**
- * Bridges UnifiedPush callbacks into Mochi-shaped events. The super-app
- * subclasses this once with a single MochiPushDispatcher that routes by
+ * Bridges UnifiedPush callbacks into Mochi-shaped events. The Android
+ * client subclasses this once with a single MochiPushDispatcher that routes by
  * the deep-link's first path segment; the base class handles the wire
  * decoding, server-side bookkeeping, and notification posting.
  */

@@ -17,7 +17,7 @@ import org.mochios.chess.ui.list.ChessGameListScreen
  *    launcher alias is tapped.
  *  - [GAME] (`chess/{gameId}`) — entity-context game detail. The detail
  *    screen pattern matches every other entity-context route in the
- *    super-app (e.g. `wikis/{wikiId}`).
+ *    Android client (e.g. `wikis/{wikiId}`).
  *
  * The detail screen itself is a stub in this wave — a separate agent owns
  * the board, engine integration, chat panel, and WebSocket wiring. The

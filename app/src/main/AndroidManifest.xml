@@ -56,7 +56,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <!--
                   Single broad filter — claim all `mochi:` URIs. The
-                  super-app routes by slash count in MainActivity.
+                  client routes by slash count in MainActivity.
                   See claude/plans/mochi-uri-scheme.md.
                 -->
                 <data android:scheme="mochi" />
@@ -285,7 +285,7 @@
         </activity-alias>
 
         <!--
-          UnifiedPush MessagingReceiver for the consolidated super-app. Catches
+          UnifiedPush MessagingReceiver for the Android client. Catches
           MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts
           from PushService and posts a system notification on the right per-app
           channel (routed by the deep-link's first path segment in

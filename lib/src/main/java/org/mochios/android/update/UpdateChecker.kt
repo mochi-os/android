@@ -53,8 +53,19 @@ class UpdateChecker(
         private const val VERSIONS_URL = "https://packages.mochi-os.org/android/versions.json"
         private const val APK_URL = "https://packages.mochi-os.org/android/mochi.apk"
 
-        /** Idempotent daily schedule. Call from the host Application's onCreate. */
+        /**
+         * Idempotent daily schedule. Call from the host Application's
+         * onCreate. Short-circuits and cancels any previously-scheduled
+         * work when the APK was installed from a known app store
+         * (Play / F-Droid / …) — the store will deliver updates and our
+         * self-installed APK from packages.mochi-os.org would likely fail
+         * the signature check anyway.
+         */
         fun schedule(context: Context) {
+            if (InstallSource.isStoreInstalled(context)) {
+                WorkManager.getInstance(context).cancelUniqueWork(WORK_NAME)
+                return
+            }
             val request = PeriodicWorkRequestBuilder<UpdateChecker>(
                 24, TimeUnit.HOURS,
             ).build()
@@ -79,6 +90,12 @@ class UpdateChecker(
          */
         suspend fun checkNow(context: Context): CheckOutcome = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
+            if (InstallSource.isStoreInstalled(ctx)) {
+                // The store is responsible for updates here. About-dialog
+                // "Check for updates" reports UpToDate so the user doesn't
+                // get an error when there's nothing for us to do.
+                return@withContext CheckOutcome.UpToDate
+            }
             val current = currentVersionName(ctx) ?: return@withContext CheckOutcome.UpToDate
 
             val latest = try {

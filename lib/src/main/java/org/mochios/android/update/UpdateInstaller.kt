@@ -52,6 +52,13 @@ object UpdateInstaller {
 
     private fun promptInternal(activity: Activity, force: Boolean) {
         val ctx = activity.applicationContext
+        if (InstallSource.isStoreInstalled(ctx)) {
+            // Belt and braces: UpdateChecker should already have skipped
+            // the download, but if a pending APK is sitting in cacheDir
+            // from a previous non-store install + later store reinstall,
+            // never prompt the user to install it.
+            return
+        }
         val prefs = UpdateChecker.prefs(ctx)
         val pending = prefs.getString(UpdateChecker.KEY_PENDING, "")
             ?.takeIf { it.isNotBlank() } ?: return

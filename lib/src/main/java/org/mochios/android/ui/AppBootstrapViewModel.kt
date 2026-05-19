@@ -234,7 +234,7 @@ class AppBootstrapViewModel @Inject constructor(
             return
         }
 
-        // Prefetch tokens for the super-app's other Mochi-apps so navigating
+        // Prefetch tokens for the client's other Mochi-apps so navigating
         // to them via the launchpad or a notification doesn't surface "app
         // token required" on the first API call. Best-effort — a per-app
         // mint failure (user lacks access to that app on this server, etc.)

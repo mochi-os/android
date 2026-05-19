@@ -20,7 +20,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
@@ -57,6 +56,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.board.PagedZoomableBoard
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -154,77 +154,76 @@ fun BoardView(
     val columnOptionsById = columnOptions.associateBy { it.id }
     val orderedColumns: List<FieldOption> = columnOrder.mapNotNull { columnOptionsById[it] }
 
-    LazyRow(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        items(orderedColumns, key = { it.id }) { columnOption ->
-            val columnObjects = objectsByColumn[columnOption.id] ?: emptyList()
-            BoardColumn(
-                option = columnOption,
-                objects = columnObjects,
-                viewModel = viewModel,
-                columnFieldId = columnFieldId,
-                rowFieldId = rowFieldId,
-                rowOptions = rowOptions,
-                borderFieldId = borderFieldId,
-                childrenByParent = childrenByParent,
-                cardDragState = cardDragState,
-                columnDragState = columnDragState,
-                onColumnDrop = { sourceColumnId, edge ->
-                    val sourceIndex = columnOrder.indexOf(sourceColumnId)
-                    val targetIndex = columnOrder.indexOf(columnOption.id)
-                    if (sourceIndex < 0 || targetIndex < 0 || sourceIndex == targetIndex) return@BoardColumn
-                    val dropIndex = when (edge) {
-                        DragEdge.Start -> targetIndex
-                        DragEdge.End -> targetIndex + 1
-                        else -> targetIndex
-                    }.let {
-                        // Adjust for the removal of the source from earlier in the list.
-                        if (sourceIndex < it) it - 1 else it
-                    }
-                    columnOrder.removeAt(sourceIndex)
-                    columnOrder.add(dropIndex.coerceIn(0, columnOrder.size), sourceColumnId)
-                    viewModel.reorderColumnOptions(columnFieldId, columnOrder.toList())
-                },
-                onObjectClick = onObjectClick,
-                onRename = { newName -> viewModel.renameColumnOption(columnFieldId, columnOption.id, newName) },
-                onDelete = { viewModel.deleteColumnOption(columnFieldId, columnOption.id) },
-                onCreateInColumn = if (onCreateObject != null) {
-                    {
-                        val details = viewModel.uiState.value.projectDetails
-                        val classId = view.classes.firstOrNull() ?: details?.classes?.firstOrNull()?.id ?: ""
-                        if (classId.isNotBlank()) {
-                            onCreateObject(classId, "", mapOf(columnFieldId to columnOption.id))
-                        }
-                    }
-                } else null
-            )
-        }
-
-        if (unassigned.isNotEmpty()) {
-            item {
-                BoardColumn(
-                    option = FieldOption(id = "", name = unassignedLabel, colour = ""),
-                    objects = unassigned,
-                    viewModel = viewModel,
-                    columnFieldId = columnFieldId,
-                    rowFieldId = rowFieldId,
-                    rowOptions = rowOptions,
-                    borderFieldId = borderFieldId,
-                    childrenByParent = childrenByParent,
-                    cardDragState = cardDragState,
-                    columnDragState = columnDragState,
-                    onColumnDrop = { _, _ -> /* unassigned column is not reorderable */ },
-                    columnReorderEnabled = false,
-                    onObjectClick = onObjectClick,
-                    onRename = null,
-                    onDelete = null
-                )
+    // Trello-style paging via the shared PagedZoomableBoard in lib: one
+    // column at a time with a peek of neighbours; long-press a card to
+    // zoom out and see several columns, with edge auto-scroll to reach
+    // far-away targets.
+    val pages: List<FieldOption> = remember(orderedColumns, unassigned, unassignedLabel) {
+        buildList {
+            addAll(orderedColumns)
+            if (unassigned.isNotEmpty()) {
+                add(FieldOption(id = "", name = unassignedLabel, colour = ""))
             }
         }
+    }
 
+    PagedZoomableBoard(
+        pageCount = pages.size,
+        cardDragState = cardDragState,
+        columnDragState = columnDragState,
+    ) { pageIndex ->
+        val columnOption = pages[pageIndex]
+        val isUnassigned = columnOption.id.isBlank()
+        val columnObjects = if (isUnassigned) unassigned else (objectsByColumn[columnOption.id] ?: emptyList())
+        BoardColumn(
+            option = columnOption,
+            objects = columnObjects,
+            viewModel = viewModel,
+            columnFieldId = columnFieldId,
+            rowFieldId = rowFieldId,
+            rowOptions = rowOptions,
+            borderFieldId = borderFieldId,
+            childrenByParent = childrenByParent,
+            cardDragState = cardDragState,
+            columnDragState = columnDragState,
+            onColumnDrop = if (isUnassigned) {
+                { _, _ -> /* unassigned column is not reorderable */ }
+            } else {
+                { sourceColumnId, edge ->
+                    val sourceIndex = columnOrder.indexOf(sourceColumnId)
+                    val targetIndex = columnOrder.indexOf(columnOption.id)
+                    if (sourceIndex >= 0 && targetIndex >= 0 && sourceIndex != targetIndex) {
+                        val dropIndex = when (edge) {
+                            DragEdge.Start -> targetIndex
+                            DragEdge.End -> targetIndex + 1
+                            else -> targetIndex
+                        }.let {
+                            if (sourceIndex < it) it - 1 else it
+                        }
+                        columnOrder.removeAt(sourceIndex)
+                        columnOrder.add(dropIndex.coerceIn(0, columnOrder.size), sourceColumnId)
+                        viewModel.reorderColumnOptions(columnFieldId, columnOrder.toList())
+                    }
+                }
+            },
+            columnReorderEnabled = !isUnassigned,
+            onObjectClick = onObjectClick,
+            onRename = if (isUnassigned) null else {
+                { newName -> viewModel.renameColumnOption(columnFieldId, columnOption.id, newName) }
+            },
+            onDelete = if (isUnassigned) null else {
+                { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
+            },
+            onCreateInColumn = if (onCreateObject != null && !isUnassigned) {
+                {
+                    val details = viewModel.uiState.value.projectDetails
+                    val classId = view.classes.firstOrNull() ?: details?.classes?.firstOrNull()?.id ?: ""
+                    if (classId.isNotBlank()) {
+                        onCreateObject(classId, "", mapOf(columnFieldId to columnOption.id))
+                    }
+                }
+            } else null,
+        )
     }
 }
 

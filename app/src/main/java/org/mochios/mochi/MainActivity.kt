@@ -120,7 +120,7 @@ class MainActivity : ComponentActivity() {
                         appName = startApp ?: "feeds",
                         oauthScheme = "mochi",
                         onLocaleChangeRequested = { recreate() },
-                        prefetchApps = SUPER_APP_MOCHI_APPS,
+                        prefetchApps = MOCHI_APPS,
                     ) { onLogout ->
                         // Alias-switch transition. The previous attempt
                         // (Snapshot-tracked mutableStateOf + key(startApp)
@@ -601,12 +601,12 @@ class MainActivity : ComponentActivity() {
         private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
 
         /**
-         * Every Mochi-app the super-app bundles. The bootstrap path mints a JWT
-         * for each so cross-feature navigation (notification deep-links, in-app
-         * routing) doesn't surface "app token required" on the
-         * first API call — only one of the four would otherwise get its token
-         * minted (the cold-start alias's app).
+         * Every Mochi-app the Android client bundles. The bootstrap path mints
+         * a JWT for each so cross-feature navigation (notification deep-links,
+         * in-app routing) doesn't surface "app token required" on the first
+         * API call — only the cold-start alias's app would otherwise get its
+         * token minted.
          */
-        private val SUPER_APP_MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff")
+        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff")
     }
 }
