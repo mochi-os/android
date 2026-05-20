@@ -3,7 +3,6 @@ package org.mochios.projects.ui.board
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -25,10 +24,8 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
@@ -43,7 +40,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -248,8 +244,6 @@ private fun BoardColumn(
     onDelete: (() -> Unit)? = null,
     onCreateInColumn: (() -> Unit)? = null
 ) {
-    var collapsed by rememberSaveable(option.id) { mutableStateOf(false) }
-
     // The whole column is a drop target for "drop on column" — append to end.
     // Cards inside register their own (smaller) drop targets that win when the
     // pointer is over them; this catches drops on empty space or on the
@@ -276,7 +270,7 @@ private fun BoardColumn(
 
     Column(
         modifier = Modifier
-            .width(if (collapsed) 48.dp else 280.dp)
+            .fillMaxWidth()
             .fillMaxHeight()
             .background(
                 MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
@@ -325,110 +319,97 @@ private fun BoardColumn(
                 .then(headerDragModifier)
                 .then(edgeBorderModifier)
                 .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
-                .padding(horizontal = 4.dp, vertical = 6.dp)
+                .padding(horizontal = 8.dp, vertical = 6.dp)
         ) {
-            Icon(
-                imageVector = if (collapsed) Icons.Default.ChevronRight else Icons.Default.ExpandMore,
-                contentDescription = if (collapsed) stringResource(MochiR.string.common_expand) else stringResource(MochiR.string.common_collapse),
-                modifier = Modifier
-                    .size(18.dp)
-                    .clickable { collapsed = !collapsed },
-                tint = MaterialTheme.colorScheme.primary
+            if (option.colour.isNotBlank()) {
+                Box(
+                    modifier = Modifier
+                        .size(10.dp)
+                        .clip(CircleShape)
+                        .background(parseColor(option.colour))
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+            }
+            Text(
+                text = option.name,
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.weight(1f)
             )
-            if (!collapsed) {
-                if (option.colour.isNotBlank()) {
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Box(
-                        modifier = Modifier
-                            .size(10.dp)
-                            .clip(CircleShape)
-                            .background(parseColor(option.colour))
+            if (onCreateInColumn != null) {
+                IconButton(onClick = onCreateInColumn) {
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(R.string.projects_board_new)
                     )
                 }
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = option.name,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.weight(1f)
-                )
-                if (onCreateInColumn != null) {
-                    IconButton(onClick = onCreateInColumn) {
+            }
+            if (onRename != null || onDelete != null) {
+                var showMenu by remember { mutableStateOf(false) }
+                var showRenameDialog by remember { mutableStateOf(false) }
+                Box {
+                    IconButton(onClick = { showMenu = true }) {
                         Icon(
-                            Icons.Default.Add,
-                            contentDescription = stringResource(R.string.projects_board_new)
+                            Icons.Default.MoreHoriz,
+                            contentDescription = stringResource(MochiR.string.common_more_options)
                         )
                     }
-                }
-                if (onRename != null || onDelete != null) {
-                    var showMenu by remember { mutableStateOf(false) }
-                    var showRenameDialog by remember { mutableStateOf(false) }
-                    Box {
-                        IconButton(onClick = { showMenu = true }) {
-                            Icon(
-                                Icons.Default.MoreHoriz,
-                                contentDescription = stringResource(MochiR.string.common_more_options)
+                    DropdownMenu(
+                        expanded = showMenu,
+                        onDismissRequest = { showMenu = false }
+                    ) {
+                        if (onRename != null) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.projects_board_rename)) },
+                                leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) },
+                                onClick = {
+                                    showMenu = false
+                                    showRenameDialog = true
+                                }
                             )
                         }
-                        DropdownMenu(
-                            expanded = showMenu,
-                            onDismissRequest = { showMenu = false }
-                        ) {
-                            if (onRename != null) {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.projects_board_rename)) },
-                                    leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) },
-                                    onClick = {
-                                        showMenu = false
-                                        showRenameDialog = true
-                                    }
-                                )
-                            }
-                            if (onDelete != null) {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.common_delete)) },
-                                    leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
-                                    onClick = {
-                                        showMenu = false
-                                        onDelete()
-                                    }
-                                )
-                            }
+                        if (onDelete != null) {
+                            DropdownMenuItem(
+                                text = { Text(stringResource(MochiR.string.common_delete)) },
+                                leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },
+                                onClick = {
+                                    showMenu = false
+                                    onDelete()
+                                }
+                            )
                         }
                     }
-                    if (showRenameDialog && onRename != null) {
-                        var newName by remember { mutableStateOf(option.name) }
-                        AlertDialog(
-                            onDismissRequest = { showRenameDialog = false },
-                            title = { Text(stringResource(R.string.projects_board_rename_column)) },
-                            text = {
-                                OutlinedTextField(
-                                    value = newName,
-                                    onValueChange = { newName = it },
-                                    singleLine = true,
-                                    modifier = Modifier.fillMaxWidth()
-                                )
-                            },
-                            confirmButton = {
-                                TextButton(
-                                    onClick = {
-                                        onRename(newName)
-                                        showRenameDialog = false
-                                    },
-                                    enabled = newName.isNotBlank()
-                                ) { Text(stringResource(R.string.projects_board_rename)) }
-                            },
-                            dismissButton = {
-                                TextButton(onClick = { showRenameDialog = false }) { Text(stringResource(MochiR.string.common_cancel)) }
-                            }
-                        )
-                    }
+                }
+                if (showRenameDialog && onRename != null) {
+                    var newName by remember { mutableStateOf(option.name) }
+                    AlertDialog(
+                        onDismissRequest = { showRenameDialog = false },
+                        title = { Text(stringResource(R.string.projects_board_rename_column)) },
+                        text = {
+                            OutlinedTextField(
+                                value = newName,
+                                onValueChange = { newName = it },
+                                singleLine = true,
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                        },
+                        confirmButton = {
+                            TextButton(
+                                onClick = {
+                                    onRename(newName)
+                                    showRenameDialog = false
+                                },
+                                enabled = newName.isNotBlank()
+                            ) { Text(stringResource(R.string.projects_board_rename)) }
+                        },
+                        dismissButton = {
+                            TextButton(onClick = { showRenameDialog = false }) { Text(stringResource(MochiR.string.common_cancel)) }
+                        }
+                    )
                 }
             }
         }
-
-        if (collapsed) return@Column
 
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -511,7 +492,9 @@ private fun BoardColumn(
             // Simple list mode
             val sortedObjects = viewModel.sortObjects(objects)
             LazyColumn(
-                modifier = Modifier.weight(1f, fill = false),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f, fill = false),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 itemsIndexed(sortedObjects, key = { _, o -> o.id }) { index, obj ->
