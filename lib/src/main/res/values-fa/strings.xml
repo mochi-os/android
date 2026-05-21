@@ -23,6 +23,8 @@
     <string name="common_cancel">لغو</string>
     <string name="common_confirm">تأیید</string>
     <string name="common_save">ذخیره</string>
+    <string name="common_saving">در حال ذخیره…</string>
+    <string name="common_saved">ذخیره شد</string>
     <string name="common_edit">ویرایش</string>
     <string name="common_delete">حذف</string>
     <string name="common_add">افزودن</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">نتایج</string>
     <string name="discovery_recommended">توصیه‌شده</string>
     <string name="discovery_subscribed">مشترک شد</string>
+    <string name="access_add_rule">افزودن قانون</string>
     <string name="access_owner">مالک</string>
     <string name="access_revoke">لغو</string>
     <string name="access_level">سطح دسترسی</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">پروفایل</string>
     <string name="profile_open">پروفایل</string>
     <string name="profile_display_name">نام نمایشی</string>
+    <string name="profile_save_name">ذخیره نام</string>
     <string name="profile_privacy">حریم خصوصی</string>
     <string name="profile_privacy_public">عمومی</string>
     <string name="profile_privacy_private">خصوصی</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">ارسال پیام</string>
     <string name="game_chat_subject_you">شما</string>
 
-    <string name="game_chat_load_more">بارگذاری بیشتر</string>
-    <string name="game_chat_move_played">%1$s %2$s را بازی کرد</string>
+    <string name="common_not_saved">ذخیره نشد</string>
+    <string name="common_save_failed">تغییرات شما ذخیره نشد.</string>
 </resources>

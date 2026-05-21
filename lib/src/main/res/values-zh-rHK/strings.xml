@@ -13,6 +13,8 @@
     <string name="profile_open">個人資料</string>
     <string name="profile_privacy">Privacy</string>
 
-    <string name="game_chat_load_more">載入更多</string>
-    <string name="game_chat_move_played">%1$s 走了 %2$s</string>
+    <string name="common_saving">正在儲存…</string>
+    <string name="common_saved">已儲存</string>
+    <string name="common_not_saved">未儲存</string>
+    <string name="common_save_failed">無法儲存您的變更。</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">取消</string>
     <string name="common_confirm">确认</string>
     <string name="common_save">保存</string>
+    <string name="common_saving">保存中…</string>
+    <string name="common_saved">已保存</string>
     <string name="common_edit">编辑</string>
     <string name="common_delete">删除</string>
     <string name="common_add">添加</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">结果</string>
     <string name="discovery_recommended">推荐</string>
     <string name="discovery_subscribed">已订阅</string>
+    <string name="access_add_rule">添加规则</string>
     <string name="access_owner">所有者</string>
     <string name="access_revoke">撤销</string>
     <string name="access_level">访问级别</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">个人资料</string>
     <string name="profile_open">个人资料</string>
     <string name="profile_display_name">显示名称</string>
+    <string name="profile_save_name">保存名称</string>
     <string name="profile_privacy">隐私</string>
     <string name="profile_privacy_public">公开</string>
     <string name="profile_privacy_private">私有</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">发送消息</string>
     <string name="game_chat_subject_you">您</string>
 
-    <string name="game_chat_load_more">加载更多</string>
-    <string name="game_chat_move_played">%1$s 走了 %2$s</string>
+    <string name="common_not_saved">未保存</string>
+    <string name="common_save_failed">无法保存您的更改。</string>
 </resources>

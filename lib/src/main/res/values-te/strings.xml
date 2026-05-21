@@ -23,6 +23,8 @@
     <string name="common_cancel">రద్దు చేయండి</string>
     <string name="common_confirm">నిర్ధారించండి</string>
     <string name="common_save">సేవ్ చేయండి</string>
+    <string name="common_saving">సేవ్ చేస్తోంది…</string>
+    <string name="common_saved">సేవ్ చేయబడింది</string>
     <string name="common_edit">సవరించండి</string>
     <string name="common_delete">తొలగించండి</string>
     <string name="common_add">జోడించండి</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ఫలితాలు</string>
     <string name="discovery_recommended">రికమెండ్ చేయబడింది</string>
     <string name="discovery_subscribed">చందా చేరారు</string>
+    <string name="access_add_rule">నియమం జోడించండి</string>
     <string name="access_owner">ఓనర్</string>
     <string name="access_revoke">రద్దు చేయండి</string>
     <string name="access_level">యాక్సెస్ స్థాయి</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">ప్రొఫైల్</string>
     <string name="profile_open">ప్రొఫైల్</string>
     <string name="profile_display_name">ప్రదర్శన పేరు</string>
+    <string name="profile_save_name">పేరును భద్రపరచండి</string>
     <string name="profile_privacy">గోప్యత</string>
     <string name="profile_privacy_public">పబ్లిక్</string>
     <string name="profile_privacy_private">ప్రైవేట్</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">సందేశాన్ని పంపండి</string>
     <string name="game_chat_subject_you">మీరు</string>
 
-    <string name="game_chat_load_more">మరింత లోడ్ చేయండి</string>
-    <string name="game_chat_move_played">%1$s %2$s ఆడారు</string>
+    <string name="common_not_saved">సేవ్ చేయబడలేదు</string>
+    <string name="common_save_failed">మీ మార్పులను సేవ్ చేయడం సాధ్యపడలేదు.</string>
 </resources>

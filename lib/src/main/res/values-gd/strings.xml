@@ -23,6 +23,8 @@
     <string name="common_cancel">Sguir dheth</string>
     <string name="common_confirm">Dearbhaich</string>
     <string name="common_save">Sàbhail</string>
+    <string name="common_saving">A\' sàbhaladh…</string>
+    <string name="common_saved">Air a shàbhaladh</string>
     <string name="common_edit">Deasaich</string>
     <string name="common_delete">Sguab às</string>
     <string name="common_add">Cuir ris</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Toraidhean</string>
     <string name="discovery_recommended">Air a mholadh</string>
     <string name="discovery_subscribed">Fo-sgrìobhte</string>
+    <string name="access_add_rule">Cuir riaghailt ris</string>
     <string name="access_owner">Sealbhadair</string>
     <string name="access_revoke">Cùl-ghairm</string>
     <string name="access_level">Ìre inntrigidh</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Pròifil</string>
     <string name="profile_open">Pròifil</string>
     <string name="profile_display_name">Ainm taisbeanaidh</string>
+    <string name="profile_save_name">Sàbhail an t-ainm</string>
     <string name="profile_privacy">Prìobhaideachd</string>
     <string name="profile_privacy_public">Poblach</string>
     <string name="profile_privacy_private">Prìobhaideach</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Cuir teachdaireachd</string>
     <string name="game_chat_subject_you">Thusa</string>
 
-    <string name="game_chat_load_more">Luchdaich barrachd</string>
-    <string name="game_chat_move_played">Chluich %1$s %2$s</string>
+    <string name="common_not_saved">Gun sàbhaladh</string>
+    <string name="common_save_failed">Cha b\' urrainn na h-atharrachaidhean agad a shàbhaladh.</string>
 </resources>

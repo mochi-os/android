@@ -23,6 +23,8 @@
     <string name="common_cancel">Ləğv et</string>
     <string name="common_confirm">Təsdiqlə</string>
     <string name="common_save">Saxla</string>
+    <string name="common_saving">Saxlanılır…</string>
+    <string name="common_saved">Saxlanıldı</string>
     <string name="common_edit">Redaktə et</string>
     <string name="common_delete">Sil</string>
     <string name="common_add">Əlavə et</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Nəticələr</string>
     <string name="discovery_recommended">Tövsiyə olunur</string>
     <string name="discovery_subscribed">Abunə oldun</string>
+    <string name="access_add_rule">Qayda əlavə et</string>
     <string name="access_owner">Sahibi</string>
     <string name="access_revoke">Geri çağır</string>
     <string name="access_level">Giriş səviyyəsi</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Göstərilən ad</string>
+    <string name="profile_save_name">Adı saxla</string>
     <string name="profile_privacy">Məxfilik</string>
     <string name="profile_privacy_public">Açıq</string>
     <string name="profile_privacy_private">Şəxsi</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Mesaj göndər</string>
     <string name="game_chat_subject_you">Artıq söhbətiniz olanlar:</string>
 
-    <string name="game_chat_load_more">Daha çox yüklə</string>
-    <string name="game_chat_move_played">%1$s 走了 %2$s</string>
+    <string name="common_not_saved">Saxlanmadı</string>
+    <string name="common_save_failed">Dəyişiklikləriniz saxlanıla bilmədi.</string>
 </resources>

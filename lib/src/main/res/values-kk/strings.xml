@@ -23,6 +23,8 @@
     <string name="common_cancel">Болдырмау</string>
     <string name="common_confirm">Растау</string>
     <string name="common_save">Сақтау</string>
+    <string name="common_saving">Сақталуда…</string>
+    <string name="common_saved">Сақталды</string>
     <string name="common_edit">Өңдеу</string>
     <string name="common_delete">Жою</string>
     <string name="common_add">Қосу</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Нәтижелер</string>
     <string name="discovery_recommended">Ұсынылған</string>
     <string name="discovery_subscribed">Жазылған</string>
+    <string name="access_add_rule">Ереже қосу</string>
     <string name="access_owner">Иесі</string>
     <string name="access_revoke">Қайтарып алу</string>
     <string name="access_level">Қол жеткізу деңгейі</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Профиль</string>
     <string name="profile_open">Профиль</string>
     <string name="profile_display_name">Көрсетілетін атау</string>
+    <string name="profile_save_name">Атауды сақтау</string>
     <string name="profile_privacy">Құпиялылық</string>
     <string name="profile_privacy_public">Қоғамдық</string>
     <string name="profile_privacy_private">Жеке</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Хабар жіберу</string>
     <string name="game_chat_subject_you">Сіз</string>
 
-    <string name="game_chat_load_more">Көбірек жүктеу</string>
-    <string name="game_chat_move_played">%1$s %2$s ойнады</string>
+    <string name="common_not_saved">Сақталмады</string>
+    <string name="common_save_failed">Өзгерістеріңізді сақтау мүмкін болмады.</string>
 </resources>

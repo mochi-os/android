@@ -23,6 +23,8 @@
     <string name="common_cancel">Fagilé</string>
     <string name="common_confirm">Fọwọ́sí</string>
     <string name="common_save">Fi pamọ́</string>
+    <string name="common_saving">Ń tọ́jú…</string>
+    <string name="common_saved">Ti fi pamọ́</string>
     <string name="common_edit">Ṣàtúnṣe</string>
     <string name="common_delete">Pa rẹ́</string>
     <string name="common_add">Fi kún</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Àbájáde</string>
     <string name="discovery_recommended">Tí a dábàá</string>
     <string name="discovery_subscribed">Ti forúkọsílẹ̀</string>
+    <string name="access_add_rule">Fi ofin kun</string>
     <string name="access_owner">Onílé</string>
     <string name="access_revoke">Fagi lé</string>
     <string name="access_level">Ìpele ìwọlé</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profile</string>
     <string name="profile_open">Profile</string>
     <string name="profile_display_name">Orúkọ àfihàn</string>
+    <string name="profile_save_name">Fi orúkọ pamọ́</string>
     <string name="profile_privacy">Aṣírí</string>
     <string name="profile_privacy_public">Gbangba</string>
     <string name="profile_privacy_private">Aṣírí</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Fi ìránṣẹ́ ránṣẹ́</string>
     <string name="game_chat_subject_you">Ìwọ</string>
 
-    <string name="game_chat_load_more">Ṣí síwájú</string>
-    <string name="game_chat_move_played">%1$s ṣe %2$s</string>
+    <string name="common_not_saved">Kò tí ì fipamọ́</string>
+    <string name="common_save_failed">A kò lè fi àwọn àyípadà rẹ pamọ́.</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">გაუქმება</string>
     <string name="common_confirm">დადასტურება</string>
     <string name="common_save">შენახვა</string>
+    <string name="common_saving">შენახვა…</string>
+    <string name="common_saved">შენახული</string>
     <string name="common_edit">რედაქტირება</string>
     <string name="common_delete">წაშლა</string>
     <string name="common_add">დამატება</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">შედეგები</string>
     <string name="discovery_recommended">რეკომენდებული</string>
     <string name="discovery_subscribed">გამოწერილი</string>
+    <string name="access_add_rule">წესის დამატება</string>
     <string name="access_owner">მფლობელი</string>
     <string name="access_revoke">გაუქმება</string>
     <string name="access_level">წვდომის დონე</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">პროფილი</string>
     <string name="profile_open">პროფილი</string>
     <string name="profile_display_name">ნაჩვენები სახელი</string>
+    <string name="profile_save_name">სახელის შენახვა</string>
     <string name="profile_privacy">კონფიდენციალურობა</string>
     <string name="profile_privacy_public">საჯარო</string>
     <string name="profile_privacy_private">პირადი</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">შეტყობინების გაგზავნა</string>
     <string name="game_chat_subject_you">დიახ, ძალით</string>
 
-    <string name="game_chat_load_more">მეტის ჩატვირთვა</string>
-    <string name="game_chat_move_played">%1$s 走了 %2$s</string>
+    <string name="common_not_saved">არ შენახულა</string>
+    <string name="common_save_failed">თქვენი ცვლილებების შენახვა ვერ მოხერხდა.</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">Бекор кардан</string>
     <string name="common_confirm">Тасдиқ</string>
     <string name="common_save">Захира</string>
+    <string name="common_saving">Захира кардан…</string>
+    <string name="common_saved">Захирашуда</string>
     <string name="common_edit">Таҳрир</string>
     <string name="common_delete">Нест кардан</string>
     <string name="common_add">Илова кардан</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Натиҷаҳо</string>
     <string name="discovery_recommended">Тавсияшуда</string>
     <string name="discovery_subscribed">Обуна шуд</string>
+    <string name="access_add_rule">Қоида илова кардан</string>
     <string name="access_owner">Соҳиб</string>
     <string name="access_revoke">Бекор кардан</string>
     <string name="access_level">Сатҳи дастрасӣ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Профил</string>
     <string name="profile_open">Профил</string>
     <string name="profile_display_name">Номи намоишӣ</string>
+    <string name="profile_save_name">Номро нигоҳ доштан</string>
     <string name="profile_privacy">Махфият</string>
     <string name="profile_privacy_public">Ҷамъиятӣ</string>
     <string name="profile_privacy_private">Хусусӣ</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Паём фиристодан</string>
     <string name="game_chat_subject_you">Шумо</string>
 
-    <string name="game_chat_load_more">Бештар бор кунед</string>
-    <string name="game_chat_move_played">%1$s %2$s бозӣ кард</string>
+    <string name="common_not_saved">Захира нашуд</string>
+    <string name="common_save_failed">Тағйироти шумо захира нашуд.</string>
 </resources>

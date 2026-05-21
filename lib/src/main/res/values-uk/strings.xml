@@ -23,6 +23,8 @@
     <string name="common_cancel">Скасувати</string>
     <string name="common_confirm">Підтвердити</string>
     <string name="common_save">Зберегти</string>
+    <string name="common_saving">Збереження…</string>
+    <string name="common_saved">Збережено</string>
     <string name="common_edit">Редагувати</string>
     <string name="common_delete">Видалити</string>
     <string name="common_add">Додати</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Результати</string>
     <string name="discovery_recommended">Рекомендоване</string>
     <string name="discovery_subscribed">Підписано</string>
+    <string name="access_add_rule">Додати правило</string>
     <string name="access_owner">Власник</string>
     <string name="access_revoke">Відкликати</string>
     <string name="access_level">Рівень доступу</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Профіль</string>
     <string name="profile_open">Профіль</string>
     <string name="profile_display_name">Відображуване ім\'я</string>
+    <string name="profile_save_name">Зберегти ім’я</string>
     <string name="profile_privacy">Приватність</string>
     <string name="profile_privacy_public">Публічний</string>
     <string name="profile_privacy_private">Приватний</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Надіслати повідомлення</string>
     <string name="game_chat_subject_you">Ви</string>
 
-    <string name="game_chat_load_more">Завантажити більше</string>
-    <string name="game_chat_move_played">%1$s зіграв %2$s</string>
+    <string name="common_not_saved">Не збережено</string>
+    <string name="common_save_failed">Не вдалося зберегти ваші зміни.</string>
 </resources>

@@ -3,10 +3,16 @@ package org.mochios.crm.ui.`object`
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -15,6 +21,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.ui.components.SaveStatus
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.Link
@@ -36,7 +43,7 @@ data class ObjectDetailUiState(
     val isLoading: Boolean = false,
     val error: MochiError? = null,
     val selectedTab: Int = 0,
-    val isSaving: Boolean = false,
+    val saveStatus: SaveStatus = SaveStatus.Idle,
     val access: String = "",
     val siblingObjects: List<CrmObject> = emptyList(),
     val people: List<org.mochios.crm.model.Person> = emptyList()
@@ -55,6 +62,18 @@ class ObjectDetailViewModel @Inject constructor(
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private var debounceJobs = mutableMapOf<String, Job>()
+
+    // Auto-save runs on a scope deliberately NOT tied to viewModelScope: a
+    // save scheduled just before the user leaves the screen must still
+    // complete. viewModelScope would cancel it in onCleared().
+    private val saveScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+    private var activeSaves = 0
+    private var savedResetJob: Job? = null
+
+    private val _saveFailed = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    /** Emits when an auto-save write fails — the screen shows a toast. */
+    val saveFailed: SharedFlow<Unit> = _saveFailed.asSharedFlow()
+
     private var currentCrmId: String = ""
     private var currentObjectId: String = ""
     private var wsSubscriptionId: String? = null
@@ -182,10 +201,8 @@ class ObjectDetailViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(
             obj = obj.copy(readable = title)
         )
-        debounce("title") {
-            try {
-                repository.updateObject(currentCrmId, currentObjectId, title = title)
-            } catch (_: Exception) { }
+        scheduleSave("title") {
+            repository.updateObject(currentCrmId, currentObjectId, title = title)
         }
     }
 
@@ -198,10 +215,8 @@ class ObjectDetailViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(
             obj = obj.copy(values = newValues)
         )
-        debounce("value_$fieldId") {
-            try {
-                repository.setValue(currentCrmId, currentObjectId, fieldId, value)
-            } catch (_: Exception) { }
+        scheduleSave("value_$fieldId") {
+            repository.setValue(currentCrmId, currentObjectId, fieldId, value)
         }
     }
 
@@ -212,10 +227,8 @@ class ObjectDetailViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(
             obj = obj.copy(values = newVals)
         )
-        debounce("value_$fieldId") {
-            try {
-                repository.setValue(currentCrmId, currentObjectId, fieldId, values.joinToString(","))
-            } catch (_: Exception) { }
+        scheduleSave("value_$fieldId") {
+            repository.setValue(currentCrmId, currentObjectId, fieldId, values.joinToString(","))
         }
     }
 
@@ -421,12 +434,8 @@ class ObjectDetailViewModel @Inject constructor(
     fun updateParent(newParent: String) {
         val obj = _uiState.value.obj ?: return
         _uiState.value = _uiState.value.copy(obj = obj.copy(parent = newParent))
-        viewModelScope.launch {
-            try {
-                repository.updateObject(currentCrmId, currentObjectId, parent = newParent)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
+        scheduleSave("parent", delayMs = 0) {
+            repository.updateObject(currentCrmId, currentObjectId, parent = newParent)
         }
     }
 
@@ -461,11 +470,37 @@ class ObjectDetailViewModel @Inject constructor(
 
     // ---- Helpers ----
 
-    private fun debounce(key: String, delayMs: Long = 500, action: suspend () -> Unit) {
+    // Debounced auto-save: coalesces rapid edits to the same key, tracks
+    // saveStatus for the indicator, and signals saveFailed (→ toast) when
+    // the write throws. Runs on saveScope so a pending write survives the
+    // user navigating away before the debounce elapses.
+    private fun scheduleSave(key: String, delayMs: Long = 500, save: suspend () -> Unit) {
         debounceJobs[key]?.cancel()
-        debounceJobs[key] = viewModelScope.launch {
+        debounceJobs[key] = saveScope.launch {
             delay(delayMs)
-            action()
+            savedResetJob?.cancel()
+            activeSaves++
+            _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Saving)
+            val ok = try {
+                save()
+                true
+            } catch (_: Exception) {
+                false
+            }
+            activeSaves--
+            debounceJobs.remove(key)
+            if (!ok) {
+                _saveFailed.tryEmit(Unit)
+                _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Error)
+            } else if (activeSaves == 0 && _uiState.value.saveStatus != SaveStatus.Error) {
+                _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Saved)
+                savedResetJob = saveScope.launch {
+                    delay(2000)
+                    if (_uiState.value.saveStatus == SaveStatus.Saved) {
+                        _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Idle)
+                    }
+                }
+            }
         }
     }
 }

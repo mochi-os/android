@@ -29,6 +29,9 @@
     <string name="profile_privacy">Privacy</string>
     <string name="game_chat_input_placeholder">Escribí un mensaje…</string>
     <string name="game_chat_send">Enviá el mensaje</string>
-    <string name="game_chat_load_more">Cargar más</string>
-    <string name="game_chat_move_played">%1$s jugó %2$s</string>
+
+    <string name="common_saving">Guardando…</string>
+    <string name="common_saved">Guardado</string>
+    <string name="common_not_saved">No guardado</string>
+    <string name="common_save_failed">No se pudieron guardar los cambios.</string>
 </resources>

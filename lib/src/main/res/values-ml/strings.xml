@@ -23,6 +23,8 @@
     <string name="common_cancel">റദ്ദാക്കുക</string>
     <string name="common_confirm">സ്ഥിരീകരിക്കുക</string>
     <string name="common_save">സേവ് ചെയ്യുക</string>
+    <string name="common_saving">സംരക്ഷിക്കുന്നു…</string>
+    <string name="common_saved">സേവ് ചെയ്തു</string>
     <string name="common_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="common_delete">ഇല്ലാതാക്കുക</string>
     <string name="common_add">ചേർക്കുക</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ഫലങ്ങൾ</string>
     <string name="discovery_recommended">ശുപാർശ ചെയ്യുന്ന CRM-കൾ</string>
     <string name="discovery_subscribed">സബ്സ്ക്രൈബ് ചെയ്തു</string>
+    <string name="access_add_rule">നിയമം ചേർക്കുക</string>
     <string name="access_owner">ഉടമ</string>
     <string name="access_revoke">റദ്ദാക്കുക</string>
     <string name="access_level">ആക്സസ് ലെവൽ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">പ്രൊഫൈൽ പ്രിവ്യൂ</string>
     <string name="profile_open">പ്രൊഫൈൽ പ്രിവ്യൂ</string>
     <string name="profile_display_name">പ്രദർശന നാമം</string>
+    <string name="profile_save_name">പേര് സംരക്ഷിക്കുക</string>
     <string name="profile_privacy">സ്വകാര്യതാ നയം</string>
     <string name="profile_privacy_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
     <string name="profile_privacy_private">തുടരുക</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">സന്ദേശം അയയ്ക്കുക</string>
     <string name="game_chat_subject_you">നിങ്ങൾ</string>
 
-    <string name="game_chat_load_more">കൂടുതൽ ലോഡുചെയ്യുക</string>
-    <string name="game_chat_move_played">%1$s %2$s കളിച്ചു</string>
+    <string name="common_not_saved">സംരക്ഷിച്ചിട്ടില്ല</string>
+    <string name="common_save_failed">നിങ്ങളുടെ മാറ്റങ്ങൾ സംരക്ഷിക്കാനായില്ല.</string>
 </resources>

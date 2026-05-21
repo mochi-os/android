@@ -23,6 +23,8 @@
     <string name="common_cancel">Rhoxisa</string>
     <string name="common_confirm">Qinisekisa</string>
     <string name="common_save">Gcina</string>
+    <string name="common_saving">Iyagcina…</string>
+    <string name="common_saved">Igciniwe</string>
     <string name="common_edit">Hlela</string>
     <string name="common_delete">Cima</string>
     <string name="common_add">Yongeza</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Iziphumo</string>
     <string name="discovery_recommended">Iyacetyiswa</string>
     <string name="discovery_subscribed">Kurhunyiwe</string>
+    <string name="access_add_rule">Yongeza umthetho</string>
     <string name="access_owner">Umnini</string>
     <string name="access_revoke">Rhoxisa</string>
     <string name="access_level">Inqanaba lofikelelo</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Iprofayile</string>
     <string name="profile_open">Iprofayile</string>
     <string name="profile_display_name">Igama elibonisiweyo</string>
+    <string name="profile_save_name">Gcina igama</string>
     <string name="profile_privacy">Ubumfihlo</string>
     <string name="profile_privacy_public">Esidlangalaleni</string>
     <string name="profile_privacy_private">Yangasese</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Thumela umyalezo</string>
     <string name="game_chat_subject_you">Wena</string>
 
-    <string name="game_chat_load_more">Layisha okungakumbi</string>
-    <string name="game_chat_move_played">%1$s udlale %2$s</string>
+    <string name="common_not_saved">Akugcinwanga</string>
+    <string name="common_save_failed">Azikwazanga ukugcinwa iinguqu zakho.</string>
 </resources>

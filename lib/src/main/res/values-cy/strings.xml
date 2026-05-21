@@ -23,6 +23,8 @@
     <string name="common_cancel">Canslo</string>
     <string name="common_confirm">Cadarnhau</string>
     <string name="common_save">Cadw</string>
+    <string name="common_saving">Yn cadw…</string>
+    <string name="common_saved">Wedi\'i gadw</string>
     <string name="common_edit">Golygu</string>
     <string name="common_delete">Dileu</string>
     <string name="common_add">Ychwanegu</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Canlyniadau</string>
     <string name="discovery_recommended">Argymhellir</string>
     <string name="discovery_subscribed">Wedi tanysgrifio</string>
+    <string name="access_add_rule">Ychwanegu rheol</string>
     <string name="access_owner">Perchennog</string>
     <string name="access_revoke">Dirymu</string>
     <string name="access_level">Lefel mynediad</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Proffil</string>
     <string name="profile_open">Proffil</string>
     <string name="profile_display_name">Enw arddangos</string>
+    <string name="profile_save_name">Cadw’r enw</string>
     <string name="profile_privacy">Preifatrwydd</string>
     <string name="profile_privacy_public">Cyhoeddus</string>
     <string name="profile_privacy_private">Preifat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Anfon neges</string>
     <string name="game_chat_subject_you">Chi</string>
 
-    <string name="game_chat_load_more">Llwytho mwy</string>
-    <string name="game_chat_move_played">Chwaraeodd %1$s %2$s</string>
+    <string name="common_not_saved">Heb ei gadw</string>
+    <string name="common_save_failed">Methwyd cadw eich newidiadau.</string>
 </resources>

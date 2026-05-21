@@ -23,6 +23,8 @@
     <string name="common_cancel">Avbryt</string>
     <string name="common_confirm">Bekreft</string>
     <string name="common_save">Lagre</string>
+    <string name="common_saving">Lagrer…</string>
+    <string name="common_saved">Lagret</string>
     <string name="common_edit">Rediger</string>
     <string name="common_delete">Slett</string>
     <string name="common_add">Legg til</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Treff</string>
     <string name="discovery_recommended">Anbefalt</string>
     <string name="discovery_subscribed">Abonnert</string>
+    <string name="access_add_rule">Legg til regel</string>
     <string name="access_owner">Eier</string>
     <string name="access_revoke">Tilbakekall</string>
     <string name="access_level">Tilgangsnivå</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Visningsnavn</string>
+    <string name="profile_save_name">Lagre navn</string>
     <string name="profile_privacy">Personvern</string>
     <string name="profile_privacy_public">Offentlig</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Send melding</string>
     <string name="game_chat_subject_you">Du</string>
 
-    <string name="game_chat_load_more">Last inn flere</string>
-    <string name="game_chat_move_played">%1$s spilte %2$s</string>
+    <string name="common_not_saved">Ikke lagret</string>
+    <string name="common_save_failed">Endringene dine kunne ikke lagres.</string>
 </resources>

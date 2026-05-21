@@ -23,6 +23,8 @@
     <string name="common_cancel">Ακύρωση</string>
     <string name="common_confirm">Επιβεβαίωση</string>
     <string name="common_save">Αποθήκευση</string>
+    <string name="common_saving">Αποθήκευση…</string>
+    <string name="common_saved">Αποθηκεύτηκε</string>
     <string name="common_edit">Επεξεργασία</string>
     <string name="common_delete">Διαγραφή</string>
     <string name="common_add">Προσθήκη</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Αποτελέσματα</string>
     <string name="discovery_recommended">Συνιστώμενο</string>
     <string name="discovery_subscribed">Εγγεγραμμένος</string>
+    <string name="access_add_rule">Προσθήκη κανόνα</string>
     <string name="access_owner">Ιδιοκτήτης</string>
     <string name="access_revoke">Ανάκληση</string>
     <string name="access_level">Επίπεδο πρόσβασης</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Προφίλ</string>
     <string name="profile_open">Προφίλ</string>
     <string name="profile_display_name">Εμφανιζόμενο όνομα</string>
+    <string name="profile_save_name">Αποθήκευση ονόματος</string>
     <string name="profile_privacy">Ιδιωτικότητα</string>
     <string name="profile_privacy_public">Δημόσιο</string>
     <string name="profile_privacy_private">Ιδιωτικό</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Αποστολή μηνύματος</string>
     <string name="game_chat_subject_you">Εσείς</string>
 
-    <string name="game_chat_load_more">Φόρτωση περισσότερων</string>
-    <string name="game_chat_move_played">Ο/Η %1$s έπαιξε %2$s</string>
+    <string name="common_not_saved">Δεν αποθηκεύτηκε</string>
+    <string name="common_save_failed">Δεν ήταν δυνατή η αποθήκευση των αλλαγών σας.</string>
 </resources>

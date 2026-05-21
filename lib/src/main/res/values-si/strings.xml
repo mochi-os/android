@@ -23,6 +23,8 @@
     <string name="common_cancel">අවලංගු කරන්න</string>
     <string name="common_confirm">තහවුරු කරන්න</string>
     <string name="common_save">සුරකින්න</string>
+    <string name="common_saving">සුරැකේ…</string>
+    <string name="common_saved">සුරකින ලදී</string>
     <string name="common_edit">සංස්කරණය කරන්න</string>
     <string name="common_delete">මකන්න</string>
     <string name="common_add">එක් කරන්න</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ප්‍රතිඵල</string>
     <string name="discovery_recommended">නිර්දේශිත</string>
     <string name="discovery_subscribed">දායක වී ඇත</string>
+    <string name="access_add_rule">නියමයක් එක් කරන්න</string>
     <string name="access_owner">හිමිකරු</string>
     <string name="access_revoke">අවලංගු කරන්න</string>
     <string name="access_level">ප්‍රවේශ මට්ටම</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">පැතිකඩ</string>
     <string name="profile_open">පැතිකඩ</string>
     <string name="profile_display_name">සංදර්ශන නාමය</string>
+    <string name="profile_save_name">නම සුරකින්න</string>
     <string name="profile_privacy">පෞද්ගලිකත්වය</string>
     <string name="profile_privacy_public">ප්‍රසිද්ධ</string>
     <string name="profile_privacy_private">පෞද්ගලික</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">පණිවිඩය යවන්න</string>
     <string name="game_chat_subject_you">ඔබ</string>
 
-    <string name="game_chat_load_more">තවත් පූරණය කරන්න</string>
-    <string name="game_chat_move_played">%1$s %2$s ක්‍රීඩා කළා</string>
+    <string name="common_not_saved">සුරැකී නැත</string>
+    <string name="common_save_failed">ඔබගේ වෙනස්කම් සුරැකිය නොහැකි විය.</string>
 </resources>

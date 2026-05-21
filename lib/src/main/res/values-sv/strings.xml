@@ -23,6 +23,8 @@
     <string name="common_cancel">Avbryt</string>
     <string name="common_confirm">Bekräfta</string>
     <string name="common_save">Spara</string>
+    <string name="common_saving">Sparar…</string>
+    <string name="common_saved">Sparad</string>
     <string name="common_edit">Redigera</string>
     <string name="common_delete">Ta bort</string>
     <string name="common_add">Lägg till</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultat</string>
     <string name="discovery_recommended">Rekommenderad</string>
     <string name="discovery_subscribed">Prenumererad</string>
+    <string name="access_add_rule">Lägg till regel</string>
     <string name="access_owner">Ägare</string>
     <string name="access_revoke">Återkalla</string>
     <string name="access_level">Åtkomstnivå</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Visningsnamn</string>
+    <string name="profile_save_name">Spara namn</string>
     <string name="profile_privacy">Integritet</string>
     <string name="profile_privacy_public">Offentlig</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Skicka meddelande</string>
     <string name="game_chat_subject_you">Du</string>
 
-    <string name="game_chat_load_more">Läs in fler</string>
-    <string name="game_chat_move_played">%1$s spelade %2$s</string>
+    <string name="common_not_saved">Inte sparat</string>
+    <string name="common_save_failed">Det gick inte att spara dina ändringar.</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">لغوه کول</string>
     <string name="common_confirm">تایید کړئ</string>
     <string name="common_save">خوندي کول</string>
+    <string name="common_saving">د خوندي کولو په حال کې…</string>
+    <string name="common_saved">خوندي شو</string>
     <string name="common_edit">سمول</string>
     <string name="common_delete">ړنګ کړئ</string>
     <string name="common_add">اضافه کړئ</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">پایلې</string>
     <string name="discovery_recommended">سپارښتل شوی</string>
     <string name="discovery_subscribed">ګډون شوی</string>
+    <string name="access_add_rule">قاعده اضافه کړئ</string>
     <string name="access_owner">مالک</string>
     <string name="access_revoke">لغوه کول</string>
     <string name="access_level">د لاسرسي کچه</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">پروفایل</string>
     <string name="profile_open">پروفایل</string>
     <string name="profile_display_name">د ښوون نوم</string>
+    <string name="profile_save_name">نوم وساتئ</string>
     <string name="profile_privacy">محرمیت</string>
     <string name="profile_privacy_public">عامه</string>
     <string name="profile_privacy_private">خصوصي</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">پیغام ولېږئ</string>
     <string name="game_chat_subject_you">تاسو</string>
 
-    <string name="game_chat_load_more">نور بار کړئ</string>
-    <string name="game_chat_move_played">%1$s %2$s ولوبید</string>
+    <string name="common_not_saved">نه دي خوندي شوي</string>
+    <string name="common_save_failed">ستاسو بدلونونه ونه ساتل شول.</string>
 </resources>

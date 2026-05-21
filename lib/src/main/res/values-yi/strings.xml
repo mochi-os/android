@@ -23,6 +23,8 @@
     <string name="common_cancel">אָפּזאָגן</string>
     <string name="common_confirm">באַשטעטיקן</string>
     <string name="common_save">היט אויף</string>
+    <string name="common_saving">היטן…</string>
+    <string name="common_saved">אויפֿגעהיט</string>
     <string name="common_edit">רעדאַקטירן</string>
     <string name="common_delete">אויסמעקן</string>
     <string name="common_add">צולייגן</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">רעזולטאַטן</string>
     <string name="discovery_recommended">רעקאָמענדירט</string>
     <string name="discovery_subscribed">אַבאָנירט</string>
+    <string name="access_add_rule">צוגעבן כלל</string>
     <string name="access_owner">אייגנטימער</string>
     <string name="access_revoke">אָפּזאָגן</string>
     <string name="access_level">צוטריט שטאַפּל</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">פּראָפֿיל</string>
     <string name="profile_open">פּראָפֿיל</string>
     <string name="profile_display_name">ווײַז נאָמען</string>
+    <string name="profile_save_name">אָפּהיטן נאָמען</string>
     <string name="profile_privacy">פּריוואַטקײַט</string>
     <string name="profile_privacy_public">עפֿנטלעך</string>
     <string name="profile_privacy_private">פּריוואַט</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">שיק אַ מעלדונג</string>
     <string name="game_chat_subject_you">איר</string>
 
-    <string name="game_chat_load_more">לאָדן מער</string>
-    <string name="game_chat_move_played">%1$s האָט געשפּילט %2$s</string>
+    <string name="common_not_saved">ניט געהיט</string>
+    <string name="common_save_failed">מע האט ניט געקענט אויפהיטן אייערע ענדערונגען.</string>
 </resources>

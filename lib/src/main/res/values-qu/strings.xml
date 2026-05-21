@@ -23,6 +23,8 @@
     <string name="common_cancel">Mana ruway</string>
     <string name="common_confirm">Takyachiy</string>
     <string name="common_save">Waqaychay</string>
+    <string name="common_saving">Waqaychashan…</string>
+    <string name="common_saved">Waqaychasqa</string>
     <string name="common_edit">Hukchay</string>
     <string name="common_delete">Wischuy</string>
     <string name="common_add">Yapay</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultadokuna</string>
     <string name="discovery_recommended">Munasqa</string>
     <string name="discovery_subscribed">Suscribisqa</string>
+    <string name="access_add_rule">Kamachiyta yapay</string>
     <string name="access_owner">Apuq</string>
     <string name="access_revoke">Qichuy</string>
     <string name="access_level">Yaykuy patachan</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Perfil</string>
     <string name="profile_open">Perfil</string>
     <string name="profile_display_name">Qhaway suti</string>
+    <string name="profile_save_name">Sutita waqaychay</string>
     <string name="profile_privacy">Pakaynin</string>
     <string name="profile_privacy_public">Público</string>
     <string name="profile_privacy_private">Pakasqa</string>
@@ -128,6 +132,4 @@
     <string name="game_chat_send">Willakuyta apachiy</string>
     <string name="game_chat_subject_you">Qan</string>
 
-    <string name="game_chat_load_more">Aswan wichachiy</string>
-    <string name="game_chat_move_played">%1$s %2$sta pukllarqan</string>
 </resources>

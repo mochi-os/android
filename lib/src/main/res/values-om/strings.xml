@@ -23,6 +23,8 @@
     <string name="common_cancel">Haquu</string>
     <string name="common_confirm">Mirkaneessi</string>
     <string name="common_save">Olkaa\'i</string>
+    <string name="common_saving">Olkaa\'aa jira…</string>
+    <string name="common_saved">Olkaa\'ame</string>
     <string name="common_edit">Sirreessi</string>
     <string name="common_delete">Haqi</string>
     <string name="common_add">Dabali</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Bu\'aalee</string>
     <string name="discovery_recommended">Yaadachifame</string>
     <string name="discovery_subscribed">Galaa\'eera</string>
+    <string name="access_add_rule">Seera dabaluu</string>
     <string name="access_owner">Abbaa qabeenyaa</string>
     <string name="access_revoke">Haqi</string>
     <string name="access_level">Sadarkaa seensaa</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Piroofaayilii</string>
     <string name="profile_open">Piroofaayilii</string>
     <string name="profile_display_name">Maqaa mul\'atu</string>
+    <string name="profile_save_name">Maqaa kuusuu</string>
     <string name="profile_privacy">Iccitii</string>
     <string name="profile_privacy_public">Ifa</string>
     <string name="profile_privacy_private">Dhuunfaa</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Ergaa ergi</string>
     <string name="game_chat_subject_you">Ati</string>
 
-    <string name="game_chat_load_more">Caalaa fe\'i</string>
-    <string name="game_chat_move_played">%1$s %2$s taphate</string>
+    <string name="common_not_saved">Hin kuufamne</string>
+    <string name="common_save_failed">Jijjiiramni kee kuufamuu hin dandeenye.</string>
 </resources>

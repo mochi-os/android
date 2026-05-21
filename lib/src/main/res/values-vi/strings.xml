@@ -23,6 +23,8 @@
     <string name="common_cancel">Hủy</string>
     <string name="common_confirm">Xác nhận</string>
     <string name="common_save">Lưu</string>
+    <string name="common_saving">Đang lưu…</string>
+    <string name="common_saved">Đã lưu</string>
     <string name="common_edit">Sửa</string>
     <string name="common_delete">Xóa</string>
     <string name="common_add">Thêm</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Kết quả</string>
     <string name="discovery_recommended">Được đề xuất</string>
     <string name="discovery_subscribed">Đã đăng ký</string>
+    <string name="access_add_rule">Thêm quy tắc</string>
     <string name="access_owner">Chủ sở hữu</string>
     <string name="access_revoke">Thu hồi</string>
     <string name="access_level">Cấp độ truy cập</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Hồ sơ</string>
     <string name="profile_open">Hồ sơ</string>
     <string name="profile_display_name">Tên hiển thị</string>
+    <string name="profile_save_name">Lưu tên</string>
     <string name="profile_privacy">Quyền riêng tư</string>
     <string name="profile_privacy_public">Công khai</string>
     <string name="profile_privacy_private">Riêng tư</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Gửi tin nhắn</string>
     <string name="game_chat_subject_you">Bạn</string>
 
-    <string name="game_chat_load_more">Tải thêm</string>
-    <string name="game_chat_move_played">%1$s đã đi %2$s</string>
+    <string name="common_not_saved">Chưa lưu</string>
+    <string name="common_save_failed">Không thể lưu các thay đổi của bạn.</string>
 </resources>

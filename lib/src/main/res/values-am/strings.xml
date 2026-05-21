@@ -23,6 +23,8 @@
     <string name="common_cancel">ይቅር</string>
     <string name="common_confirm">አረጋግጥ</string>
     <string name="common_save">ያስቀምጡ</string>
+    <string name="common_saving">በማስቀመጥ ላይ…</string>
+    <string name="common_saved">ተቀምጧል</string>
     <string name="common_edit">አስተካክል</string>
     <string name="common_delete">ሰርዝ</string>
     <string name="common_add">ጨምር</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ውጤቶች</string>
     <string name="discovery_recommended">የተመከረ</string>
     <string name="discovery_subscribed">ተመዝግቧል</string>
+    <string name="access_add_rule">ሕግ አክል</string>
     <string name="access_owner">ባለቤት</string>
     <string name="access_revoke">ይሻሩ</string>
     <string name="access_level">የመዳረሻ ደረጃ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">መገለጫ</string>
     <string name="profile_open">መገለጫ</string>
     <string name="profile_display_name">የማሳያ ስም</string>
+    <string name="profile_save_name">ስም አስቀምጥ</string>
     <string name="profile_privacy">ግላዊነት</string>
     <string name="profile_privacy_public">ሕዝባዊ</string>
     <string name="profile_privacy_private">የግል</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">መልዕክት ይላኩ</string>
     <string name="game_chat_subject_you">እርስዎ</string>
 
-    <string name="game_chat_load_more">ተጨማሪ ጫን</string>
-    <string name="game_chat_move_played">%1$s %2$s ተጫውቷል</string>
+    <string name="common_not_saved">አልተቀመጠም</string>
+    <string name="common_save_failed">ለውጦችዎ ሊቀመጡ አልቻሉም።</string>
 </resources>

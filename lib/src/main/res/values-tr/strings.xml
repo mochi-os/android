@@ -23,6 +23,8 @@
     <string name="common_cancel">İptal</string>
     <string name="common_confirm">Onayla</string>
     <string name="common_save">Kaydet</string>
+    <string name="common_saving">Kaydediliyor…</string>
+    <string name="common_saved">Kaydedildi</string>
     <string name="common_edit">Düzenle</string>
     <string name="common_delete">Sil</string>
     <string name="common_add">Ekle</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Sonuçlar</string>
     <string name="discovery_recommended">Önerilen</string>
     <string name="discovery_subscribed">Abone olundu</string>
+    <string name="access_add_rule">Kural ekle</string>
     <string name="access_owner">Sahip</string>
     <string name="access_revoke">İptal et</string>
     <string name="access_level">Erişim düzeyi</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Görünen ad</string>
+    <string name="profile_save_name">Adı kaydet</string>
     <string name="profile_privacy">Gizlilik</string>
     <string name="profile_privacy_public">Herkese açık</string>
     <string name="profile_privacy_private">Özel</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Mesaj gönder</string>
     <string name="game_chat_subject_you">Sen</string>
 
-    <string name="game_chat_load_more">Daha fazla yükle</string>
-    <string name="game_chat_move_played">%1$s %2$s oynadı</string>
+    <string name="common_not_saved">Kaydedilmedi</string>
+    <string name="common_save_failed">Değişiklikleriniz kaydedilemedi.</string>
 </resources>

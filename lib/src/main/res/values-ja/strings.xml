@@ -23,6 +23,8 @@
     <string name="common_cancel">キャンセル</string>
     <string name="common_confirm">確認</string>
     <string name="common_save">保存</string>
+    <string name="common_saving">保存中…</string>
+    <string name="common_saved">保存しました</string>
     <string name="common_edit">編集</string>
     <string name="common_delete">削除</string>
     <string name="common_add">追加</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">結果</string>
     <string name="discovery_recommended">おすすめ</string>
     <string name="discovery_subscribed">購読中</string>
+    <string name="access_add_rule">ルールを追加</string>
     <string name="access_owner">オーナー</string>
     <string name="access_revoke">取り消し</string>
     <string name="access_level">アクセスレベル</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">プロフィール</string>
     <string name="profile_open">プロフィール</string>
     <string name="profile_display_name">表示名</string>
+    <string name="profile_save_name">名前を保存</string>
     <string name="profile_privacy">プライバシー</string>
     <string name="profile_privacy_public">公開</string>
     <string name="profile_privacy_private">非公開</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">メッセージを送信</string>
     <string name="game_chat_subject_you">あなた</string>
 
-    <string name="game_chat_load_more">もっと読み込む</string>
-    <string name="game_chat_move_played">%1$sが%2$sを指しました</string>
+    <string name="common_not_saved">保存されていません</string>
+    <string name="common_save_failed">変更を保存できませんでした。</string>
 </resources>

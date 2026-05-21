@@ -23,6 +23,8 @@
     <string name="common_cancel">Avbryt</string>
     <string name="common_confirm">Stadfest</string>
     <string name="common_save">Lagre</string>
+    <string name="common_saving">Lagrar…</string>
+    <string name="common_saved">Lagra</string>
     <string name="common_edit">Rediger</string>
     <string name="common_delete">Slett</string>
     <string name="common_add">Legg til</string>
@@ -128,6 +130,6 @@
     <string name="game_chat_send">Send melding</string>
     <string name="game_chat_subject_you">Du</string>
 
-    <string name="game_chat_load_more">Last fleire</string>
-    <string name="game_chat_move_played">%1$s spelte %2$s</string>
+    <string name="common_not_saved">Ikkje lagra</string>
+    <string name="common_save_failed">Endringane dine kunne ikkje lagrast.</string>
 </resources>

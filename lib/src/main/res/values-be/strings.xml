@@ -23,6 +23,8 @@
     <string name="common_cancel">Адмена</string>
     <string name="common_confirm">Пацвердзіць</string>
     <string name="common_save">Захаваць</string>
+    <string name="common_saving">Захаванне…</string>
+    <string name="common_saved">Захавана</string>
     <string name="common_edit">Рэдагаваць</string>
     <string name="common_delete">Выдаліць</string>
     <string name="common_add">Дадаць</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Вынікі</string>
     <string name="discovery_recommended">Рэкамендуецца</string>
     <string name="discovery_subscribed">Падпісана</string>
+    <string name="access_add_rule">Дадаць правіла</string>
     <string name="access_owner">Уладальнік</string>
     <string name="access_revoke">Адклікаць</string>
     <string name="access_level">Узровень доступу</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Профіль</string>
     <string name="profile_open">Профіль</string>
     <string name="profile_display_name">Адлюстраванае імя</string>
+    <string name="profile_save_name">Захаваць імя</string>
     <string name="profile_privacy">Канфідэнцыяльнасць</string>
     <string name="profile_privacy_public">Публічны</string>
     <string name="profile_privacy_private">Прыватны</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Адправіць паведамленне</string>
     <string name="game_chat_subject_you">Вы</string>
 
-    <string name="game_chat_load_more">Загрузіць больш</string>
-    <string name="game_chat_move_played">%1$s згуляў %2$s</string>
+    <string name="common_not_saved">Не захавана</string>
+    <string name="common_save_failed">Не ўдалося захаваць змены.</string>
 </resources>

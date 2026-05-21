@@ -23,6 +23,8 @@
     <string name="common_cancel">ยกเลิก</string>
     <string name="common_confirm">ยืนยัน</string>
     <string name="common_save">บันทึก</string>
+    <string name="common_saving">กำลังบันทึก…</string>
+    <string name="common_saved">บันทึกแล้ว</string>
     <string name="common_edit">แก้ไข</string>
     <string name="common_delete">ลบ</string>
     <string name="common_add">เพิ่ม</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ผลลัพธ์</string>
     <string name="discovery_recommended">แนะนำ</string>
     <string name="discovery_subscribed">ติดตามแล้ว</string>
+    <string name="access_add_rule">เพิ่มกฎ</string>
     <string name="access_owner">เจ้าของ</string>
     <string name="access_revoke">เพิกถอน</string>
     <string name="access_level">ระดับการเข้าถึง</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">โปรไฟล์</string>
     <string name="profile_open">โปรไฟล์</string>
     <string name="profile_display_name">ชื่อที่แสดง</string>
+    <string name="profile_save_name">บันทึกชื่อ</string>
     <string name="profile_privacy">ความเป็นส่วนตัว</string>
     <string name="profile_privacy_public">สาธารณะ</string>
     <string name="profile_privacy_private">ส่วนตัว</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">ส่งข้อความ</string>
     <string name="game_chat_subject_you">คุณ</string>
 
-    <string name="game_chat_load_more">โหลดเพิ่ม</string>
-    <string name="game_chat_move_played">%1$s เดิน %2$s</string>
+    <string name="common_not_saved">ยังไม่ได้บันทึก</string>
+    <string name="common_save_failed">ไม่สามารถบันทึกการเปลี่ยนแปลงของคุณได้</string>
 </resources>

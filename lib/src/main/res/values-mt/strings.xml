@@ -23,6 +23,8 @@
     <string name="common_cancel">Ikkanċella</string>
     <string name="common_confirm">Ikkonferma</string>
     <string name="common_save">Issejvja</string>
+    <string name="common_saving">Qed jiġi ssejvjat…</string>
+    <string name="common_saved">Issejvjat</string>
     <string name="common_edit">Editja</string>
     <string name="common_delete">Ħassar</string>
     <string name="common_add">Żid</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Riżultati</string>
     <string name="discovery_recommended">Rakkomandat</string>
     <string name="discovery_subscribed">Abbonat</string>
+    <string name="access_add_rule">Żid regola</string>
     <string name="access_owner">Sid</string>
     <string name="access_revoke">Irrevoka</string>
     <string name="access_level">Livell ta\' aċċess</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Isem li jidher</string>
+    <string name="profile_save_name">Issejvja l-isem</string>
     <string name="profile_privacy">Privatezza</string>
     <string name="profile_privacy_public">Pubbliku</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Ibgħat messaġġ</string>
     <string name="game_chat_subject_you">Int</string>
 
-    <string name="game_chat_load_more">Tella\' aktar</string>
-    <string name="game_chat_move_played">%1$s laqat %2$s</string>
+    <string name="common_not_saved">Mhux salvat</string>
+    <string name="common_save_failed">Ma stajniex insalvaw il-bidliet tiegħek.</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">Atcelt</string>
     <string name="common_confirm">Apstiprināt</string>
     <string name="common_save">Saglabāt</string>
+    <string name="common_saving">Saglabā…</string>
+    <string name="common_saved">Saglabāts</string>
     <string name="common_edit">Rediģēt</string>
     <string name="common_delete">Dzēst</string>
     <string name="common_add">Pievienot</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Rezultāti</string>
     <string name="discovery_recommended">Ieteikts</string>
     <string name="discovery_subscribed">Abonēts</string>
+    <string name="access_add_rule">Pievienot noteikumu</string>
     <string name="access_owner">Īpašnieks</string>
     <string name="access_revoke">Atsaukt</string>
     <string name="access_level">Piekļuves līmenis</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profils</string>
     <string name="profile_open">Profils</string>
     <string name="profile_display_name">Parādāmais vārds</string>
+    <string name="profile_save_name">Saglabāt nosaukumu</string>
     <string name="profile_privacy">Privātums</string>
     <string name="profile_privacy_public">Publisks</string>
     <string name="profile_privacy_private">Privāts</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Sūtīt ziņu</string>
     <string name="game_chat_subject_you">Jūs</string>
 
-    <string name="game_chat_load_more">Ielādēt vairāk</string>
-    <string name="game_chat_move_played">%1$s spēlēja %2$s</string>
+    <string name="common_not_saved">Nav saglabāts</string>
+    <string name="common_save_failed">Neizdevās saglabāt jūsu izmaiņas.</string>
 </resources>

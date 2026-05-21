@@ -23,6 +23,8 @@
     <string name="common_cancel">Jaytaña</string>
     <string name="common_confirm">Iyawsaña</string>
     <string name="common_save">Imaña</string>
+    <string name="common_saving">Imaski…</string>
+    <string name="common_saved">Imaña</string>
     <string name="common_edit">Askichaña</string>
     <string name="common_delete">Chhaqtayaña</string>
     <string name="common_add">Yapxataña</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultadonaka</string>
     <string name="discovery_recommended">Recomendata</string>
     <string name="discovery_subscribed">Suscribita</string>
+    <string name="access_add_rule">Kamachi yapxata</string>
     <string name="access_owner">Dueño</string>
     <string name="access_revoke">Aparma</string>
     <string name="access_level">Mantañ tama</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Perfil</string>
     <string name="profile_open">Perfil</string>
     <string name="profile_display_name">Uñacht\'awi suti</string>
+    <string name="profile_save_name">Suti imaña</string>
     <string name="profile_privacy">Imantawi</string>
     <string name="profile_privacy_public">Public</string>
     <string name="profile_privacy_private">Imantata</string>
@@ -128,6 +132,4 @@
     <string name="game_chat_send">Mensaje apayaña</string>
     <string name="game_chat_subject_you">Aka masimamp mä chat utjxiwa</string>
 
-    <string name="game_chat_load_more">Jukamp apaqaña</string>
-    <string name="game_chat_move_played">%1$s apaqi %2$s</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">បោះបង់</string>
     <string name="common_confirm">បញ្ជាក់</string>
     <string name="common_save">រក្សាទុក</string>
+    <string name="common_saving">កំពុងរក្សាទុក…</string>
+    <string name="common_saved">បានរក្សាទុក</string>
     <string name="common_edit">កែសម្រួល</string>
     <string name="common_delete">លុប</string>
     <string name="common_add">បន្ថែម</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">លទ្ធផល</string>
     <string name="discovery_recommended">បានណែនាំ</string>
     <string name="discovery_subscribed">បានជាវ</string>
+    <string name="access_add_rule">បន្ថែមច្បាប់</string>
     <string name="access_owner">ម្ចាស់</string>
     <string name="access_revoke">ដកសិទ្ធិ</string>
     <string name="access_level">កម្រិតការចូលប្រើ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">ប្រវត្តិរូប</string>
     <string name="profile_open">ប្រវត្តិរូប</string>
     <string name="profile_display_name">ឈ្មោះបង្ហាញ</string>
+    <string name="profile_save_name">រក្សាទុកឈ្មោះ</string>
     <string name="profile_privacy">ឯកជនភាព</string>
     <string name="profile_privacy_public">សាធារណៈ</string>
     <string name="profile_privacy_private">ឯកជន</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">ផ្ញើសារ</string>
     <string name="game_chat_subject_you">អ្នក</string>
 
-    <string name="game_chat_load_more">ផ្ទុកបន្ថែម</string>
-    <string name="game_chat_move_played">%1$s បានលេង %2$s</string>
+    <string name="common_not_saved">មិនបានរក្សាទុក</string>
+    <string name="common_save_failed">មិនអាចរក្សាទុកការផ្លាស់ប្ដូររបស់អ្នកបានទេ។</string>
 </resources>

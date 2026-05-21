@@ -23,6 +23,8 @@
     <string name="common_cancel">ביטול</string>
     <string name="common_confirm">אישור</string>
     <string name="common_save">שמור</string>
+    <string name="common_saving">שומר…</string>
+    <string name="common_saved">נשמר</string>
     <string name="common_edit">עריכה</string>
     <string name="common_delete">מחק</string>
     <string name="common_add">הוספה</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">תוצאות</string>
     <string name="discovery_recommended">מומלץ</string>
     <string name="discovery_subscribed">רשום</string>
+    <string name="access_add_rule">הוסף כלל</string>
     <string name="access_owner">בעלים</string>
     <string name="access_revoke">בטל</string>
     <string name="access_level">רמת גישה</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">פרופיל</string>
     <string name="profile_open">פרופיל</string>
     <string name="profile_display_name">שם תצוגה</string>
+    <string name="profile_save_name">שמור שם</string>
     <string name="profile_privacy">פרטיות</string>
     <string name="profile_privacy_public">ציבורי</string>
     <string name="profile_privacy_private">פרטי</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">שלח הודעה</string>
     <string name="game_chat_subject_you">אתה</string>
 
-    <string name="game_chat_load_more">טען עוד</string>
-    <string name="game_chat_move_played">%1$s שיחק %2$s</string>
+    <string name="common_not_saved">לא נשמר</string>
+    <string name="common_save_failed">לא ניתן היה לשמור את השינויים שלך.</string>
 </resources>

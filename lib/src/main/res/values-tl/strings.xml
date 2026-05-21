@@ -23,6 +23,8 @@
     <string name="common_cancel">Kanselahin</string>
     <string name="common_confirm">Kumpirmahin</string>
     <string name="common_save">I-save</string>
+    <string name="common_saving">Nagse-save…</string>
+    <string name="common_saved">Na-save</string>
     <string name="common_edit">I-edit</string>
     <string name="common_delete">I-delete</string>
     <string name="common_add">Idagdag</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Mga resulta</string>
     <string name="discovery_recommended">Inirerekomenda</string>
     <string name="discovery_subscribed">Naka-subscribe</string>
+    <string name="access_add_rule">Magdagdag ng panuntunan</string>
     <string name="access_owner">May-ari</string>
     <string name="access_revoke">Bawiin</string>
     <string name="access_level">Antas ng access</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profile</string>
     <string name="profile_open">Profile</string>
     <string name="profile_display_name">Display name</string>
+    <string name="profile_save_name">I-save ang pangalan</string>
     <string name="profile_privacy">Pagkapribado</string>
     <string name="profile_privacy_public">Pampubliko</string>
     <string name="profile_privacy_private">Pribado</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Ipadala ang mensahe</string>
     <string name="game_chat_subject_you">Ikaw</string>
 
-    <string name="game_chat_load_more">Mag-load ng higit pa</string>
-    <string name="game_chat_move_played">Naglaro si %1$s ng %2$s</string>
+    <string name="common_not_saved">Hindi naka-save</string>
+    <string name="common_save_failed">Hindi ma-save ang iyong mga pagbabago.</string>
 </resources>

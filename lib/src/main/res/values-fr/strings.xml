@@ -23,6 +23,8 @@
     <string name="common_cancel">Annuler</string>
     <string name="common_confirm">Confirmer</string>
     <string name="common_save">Enregistrer</string>
+    <string name="common_saving">Enregistrement…</string>
+    <string name="common_saved">Enregistré</string>
     <string name="common_edit">Modifier</string>
     <string name="common_delete">Supprimer</string>
     <string name="common_add">Ajouter</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Résultats</string>
     <string name="discovery_recommended">Recommandé</string>
     <string name="discovery_subscribed">Abonné</string>
+    <string name="access_add_rule">Ajouter une règle</string>
     <string name="access_owner">Propriétaire</string>
     <string name="access_revoke">Révoquer</string>
     <string name="access_level">Niveau d\'accès</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Nom d\'affichage</string>
+    <string name="profile_save_name">Enregistrer le nom</string>
     <string name="profile_privacy">Confidentialité</string>
     <string name="profile_privacy_public">Public</string>
     <string name="profile_privacy_private">Privé</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Envoyer un message</string>
     <string name="game_chat_subject_you">Vous</string>
 
-    <string name="game_chat_load_more">Charger plus</string>
-    <string name="game_chat_move_played">%1$s a joué %2$s</string>
+    <string name="common_not_saved">Non enregistré</string>
+    <string name="common_save_failed">Impossible d\'enregistrer vos modifications.</string>
 </resources>

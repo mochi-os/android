@@ -23,6 +23,8 @@
     <string name="common_cancel">ரத்துசெய்</string>
     <string name="common_confirm">உறுதிசெய்</string>
     <string name="common_save">சேமி</string>
+    <string name="common_saving">சேமிக்கிறது…</string>
+    <string name="common_saved">சேமிக்கப்பட்டது</string>
     <string name="common_edit">திருத்து</string>
     <string name="common_delete">நீக்கு</string>
     <string name="common_add">சேர்</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">முடிவுகள்</string>
     <string name="discovery_recommended">பரிந்துரைக்கப்பட்டது</string>
     <string name="discovery_subscribed">சந்தாதாரர் ஆனார்</string>
+    <string name="access_add_rule">விதியைச் சேர்</string>
     <string name="access_owner">உரிமையாளர்</string>
     <string name="access_revoke">திரும்பப் பெறு</string>
     <string name="access_level">அணுகல் நிலை</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">சுயவிவரம்</string>
     <string name="profile_open">சுயவிவரம்</string>
     <string name="profile_display_name">காட்சிப் பெயர்</string>
+    <string name="profile_save_name">பெயரைச் சேமி</string>
     <string name="profile_privacy">தனியுரிமை</string>
     <string name="profile_privacy_public">பொது</string>
     <string name="profile_privacy_private">தனிப்பட்டது</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">செய்தியை அனுப்பு</string>
     <string name="game_chat_subject_you">நீங்கள்</string>
 
-    <string name="game_chat_load_more">மேலும் ஏற்று</string>
-    <string name="game_chat_move_played">%1$s %2$s விளையாடினார்</string>
+    <string name="common_not_saved">சேமிக்கப்படவில்லை</string>
+    <string name="common_save_failed">உங்கள் மாற்றங்களைச் சேமிக்க முடியவில்லை.</string>
 </resources>

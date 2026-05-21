@@ -9,6 +9,9 @@
     <string name="settings_font_serif">Serif</string>
     <string name="settings_font_size_normal">Normal</string>
     <string name="profile_privacy">Privacy</string>
-    <string name="game_chat_load_more">Mehr laden</string>
-    <string name="game_chat_move_played">%1$s spielte %2$s</string>
+
+    <string name="common_saving">Wird gespeichert…</string>
+    <string name="common_saved">Gespeichert</string>
+    <string name="common_not_saved">Nicht gespeichert</string>
+    <string name="common_save_failed">Deine Änderungen konnten nicht gespeichert werden.</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">ຍົກເລີກ</string>
     <string name="common_confirm">ຢືນຢັນ</string>
     <string name="common_save">ບັນທຶກ</string>
+    <string name="common_saving">ກຳລັງບັນທຶກ…</string>
+    <string name="common_saved">ບັນທຶກແລ້ວ</string>
     <string name="common_edit">ແກ້ໄຂ</string>
     <string name="common_delete">ລົບ</string>
     <string name="common_add">ເພີ່ມ</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ຜົນລັບ</string>
     <string name="discovery_recommended">ແນະນຳ</string>
     <string name="discovery_subscribed">ສະໝັກສະມາຊິກແລ້ວ</string>
+    <string name="access_add_rule">ເພີ່ມກົດ</string>
     <string name="access_owner">ເຈົ້າຂອງ</string>
     <string name="access_revoke">ຖອນ</string>
     <string name="access_level">ລະດັບການເຂົ້າເຖິງ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">ໂປຣໄຟລ໌</string>
     <string name="profile_open">ໂປຣໄຟລ໌</string>
     <string name="profile_display_name">ຊື່ສະແດງ</string>
+    <string name="profile_save_name">ບັນທຶກຊື່</string>
     <string name="profile_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
     <string name="profile_privacy_public">ສາທາລະນະ</string>
     <string name="profile_privacy_private">ສ່ວນຕົວ</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">ສົ່ງຂໍ້ຄວາມ</string>
     <string name="game_chat_subject_you">ທ່ານ</string>
 
-    <string name="game_chat_load_more">ໂຫຼດເພີ່ມ</string>
-    <string name="game_chat_move_played">%1$s ຫຼິ້ນ %2$s</string>
+    <string name="common_not_saved">ບໍ່ໄດ້ບັນທຶກ</string>
+    <string name="common_save_failed">ບໍ່ສາມາດບັນທຶກການປ່ຽນແປງຂອງທ່ານໄດ້.</string>
 </resources>

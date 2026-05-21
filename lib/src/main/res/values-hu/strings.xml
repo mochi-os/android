@@ -23,6 +23,8 @@
     <string name="common_cancel">Mégse</string>
     <string name="common_confirm">Megerősítés</string>
     <string name="common_save">Mentés</string>
+    <string name="common_saving">Mentés…</string>
+    <string name="common_saved">Mentve</string>
     <string name="common_edit">Szerkesztés</string>
     <string name="common_delete">Törlés</string>
     <string name="common_add">Hozzáadás</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Találatok</string>
     <string name="discovery_recommended">Ajánlott</string>
     <string name="discovery_subscribed">Feliratkozva</string>
+    <string name="access_add_rule">Szabály hozzáadása</string>
     <string name="access_owner">Tulajdonos</string>
     <string name="access_revoke">Visszavonás</string>
     <string name="access_level">Hozzáférési szint</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Megjelenítendő név</string>
+    <string name="profile_save_name">Név mentése</string>
     <string name="profile_privacy">Adatvédelem</string>
     <string name="profile_privacy_public">Nyilvános</string>
     <string name="profile_privacy_private">Privát</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Üzenet küldése</string>
     <string name="game_chat_subject_you">Ön</string>
 
-    <string name="game_chat_load_more">Továbbiak betöltése</string>
-    <string name="game_chat_move_played">%1$s lépett: %2$s</string>
+    <string name="common_not_saved">Nincs mentve</string>
+    <string name="common_save_failed">A módosításait nem sikerült menteni.</string>
 </resources>

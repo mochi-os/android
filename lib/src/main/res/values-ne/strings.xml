@@ -23,6 +23,8 @@
     <string name="common_cancel">रद्द गर्नुहोस्</string>
     <string name="common_confirm">पुष्टि गर्नुहोस्</string>
     <string name="common_save">सुरक्षित गर्नुहोस्</string>
+    <string name="common_saving">सुरक्षित गर्दै…</string>
+    <string name="common_saved">सुरक्षित गरियो</string>
     <string name="common_edit">सम्पादन</string>
     <string name="common_delete">मेटाउनुहोस्</string>
     <string name="common_add">थप्नुहोस्</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">नतिजा</string>
     <string name="discovery_recommended">सिफारिस गरिएको</string>
     <string name="discovery_subscribed">सदस्यता लिइयो</string>
+    <string name="access_add_rule">नियम थप्नुहोस्</string>
     <string name="access_owner">मालिक</string>
     <string name="access_revoke">रद्द गर्नुहोस्</string>
     <string name="access_level">पहुँच स्तर</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">प्रोफाइल</string>
     <string name="profile_open">प्रोफाइल</string>
     <string name="profile_display_name">प्रदर्शन नाम</string>
+    <string name="profile_save_name">नाम सुरक्षित गर्नुहोस्</string>
     <string name="profile_privacy">गोपनीयता</string>
     <string name="profile_privacy_public">सार्वजनिक</string>
     <string name="profile_privacy_private">निजी</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">सन्देश पठाउनुहोस्</string>
     <string name="game_chat_subject_you">तपाईं</string>
 
-    <string name="game_chat_load_more">थप लोड गर्नुहोस्</string>
-    <string name="game_chat_move_played">%1$s ले %2$s खेल्यो</string>
+    <string name="common_not_saved">सुरक्षित गरिएको छैन</string>
+    <string name="common_save_failed">तपाईंका परिवर्तनहरू सुरक्षित गर्न सकिएन।</string>
 </resources>

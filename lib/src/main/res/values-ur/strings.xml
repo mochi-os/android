@@ -23,6 +23,8 @@
     <string name="common_cancel">منسوخ کریں</string>
     <string name="common_confirm">تصدیق کریں</string>
     <string name="common_save">محفوظ کریں</string>
+    <string name="common_saving">محفوظ کیا جا رہا ہے…</string>
+    <string name="common_saved">محفوظ ہو گیا</string>
     <string name="common_edit">ترمیم</string>
     <string name="common_delete">حذف کریں</string>
     <string name="common_add">شامل کریں</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">نتائج</string>
     <string name="discovery_recommended">تجویز کردہ</string>
     <string name="discovery_subscribed">سبسکرائب ہو گیا</string>
+    <string name="access_add_rule">قاعدہ شامل کریں</string>
     <string name="access_owner">مالک</string>
     <string name="access_revoke">منسوخ کریں</string>
     <string name="access_level">رسائی کی سطح</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">پروفائل</string>
     <string name="profile_open">پروفائل</string>
     <string name="profile_display_name">ڈسپلے نام</string>
+    <string name="profile_save_name">نام محفوظ کریں</string>
     <string name="profile_privacy">پرائیویسی</string>
     <string name="profile_privacy_public">عوامی</string>
     <string name="profile_privacy_private">نجی</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">پیغام بھیجیں</string>
     <string name="game_chat_subject_you">آپ</string>
 
-    <string name="game_chat_load_more">مزید لوڈ کریں</string>
-    <string name="game_chat_move_played">%1$s نے %2$s کھیلا</string>
+    <string name="common_not_saved">محفوظ نہیں ہوا</string>
+    <string name="common_save_failed">آپ کی تبدیلیاں محفوظ نہیں ہو سکیں۔</string>
 </resources>

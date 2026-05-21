@@ -23,6 +23,8 @@
     <string name="common_cancel">Anulo</string>
     <string name="common_confirm">Konfirmo</string>
     <string name="common_save">Ruaj</string>
+    <string name="common_saving">Duke ruajtur…</string>
+    <string name="common_saved">I ruajtur</string>
     <string name="common_edit">Modifiko</string>
     <string name="common_delete">Fshi</string>
     <string name="common_add">Shto</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Rezultatet</string>
     <string name="discovery_recommended">I rekomanduar</string>
     <string name="discovery_subscribed">I abonuar</string>
+    <string name="access_add_rule">Shto rregull</string>
     <string name="access_owner">Pronari</string>
     <string name="access_revoke">Revoko</string>
     <string name="access_level">Niveli i qasjes</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profili</string>
     <string name="profile_open">Profili</string>
     <string name="profile_display_name">Emri i shfaqur</string>
+    <string name="profile_save_name">Ruaj emrin</string>
     <string name="profile_privacy">Privatësia</string>
     <string name="profile_privacy_public">Publik</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Dërgo mesazhin</string>
     <string name="game_chat_subject_you">Ti</string>
 
-    <string name="game_chat_load_more">Ngarko më shumë</string>
-    <string name="game_chat_move_played">%1$s luajti %2$s</string>
+    <string name="common_not_saved">I paruajtur</string>
+    <string name="common_save_failed">Ndryshimet tuaja nuk u ruajtën dot.</string>
 </resources>

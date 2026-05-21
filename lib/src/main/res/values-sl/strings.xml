@@ -23,6 +23,8 @@
     <string name="common_cancel">Prekliči</string>
     <string name="common_confirm">Potrdi</string>
     <string name="common_save">Shrani</string>
+    <string name="common_saving">Shranjevanje…</string>
+    <string name="common_saved">Shranjeno</string>
     <string name="common_edit">Uredi</string>
     <string name="common_delete">Izbriši</string>
     <string name="common_add">Dodaj</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Rezultati</string>
     <string name="discovery_recommended">Priporočeno</string>
     <string name="discovery_subscribed">Naročeno</string>
+    <string name="access_add_rule">Dodaj pravilo</string>
     <string name="access_owner">Lastnik</string>
     <string name="access_revoke">Prekliči</string>
     <string name="access_level">Raven dostopa</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Prikazno ime</string>
+    <string name="profile_save_name">Shrani ime</string>
     <string name="profile_privacy">Zasebnost</string>
     <string name="profile_privacy_public">Javno</string>
     <string name="profile_privacy_private">Zasebno</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Pošlji sporočilo</string>
     <string name="game_chat_subject_you">Ti</string>
 
-    <string name="game_chat_load_more">Naloži več</string>
-    <string name="game_chat_move_played">%1$s odigral %2$s</string>
+    <string name="common_not_saved">Ni shranjeno</string>
+    <string name="common_save_failed">Vaših sprememb ni bilo mogoče shraniti.</string>
 </resources>

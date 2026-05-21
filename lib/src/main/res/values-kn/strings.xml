@@ -23,6 +23,8 @@
     <string name="common_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="common_confirm">ದೃಢೀಕರಿಸಿ</string>
     <string name="common_save">ಉಳಿಸಿ</string>
+    <string name="common_saving">ಉಳಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="common_saved">ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="common_edit">ಸಂಪಾದಿಸಿ</string>
     <string name="common_delete">ಅಳಿಸಿ</string>
     <string name="common_add">ಸೇರಿಸಿ</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ಫಲಿತಾಂಶಗಳು</string>
     <string name="discovery_recommended">ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ</string>
     <string name="discovery_subscribed">ಚಂದಾದಾರರಾಗಿದ್ದೀರಿ</string>
+    <string name="access_add_rule">ನಿಯಮ ಸೇರಿಸಿ</string>
     <string name="access_owner">ಮಾಲೀಕ</string>
     <string name="access_revoke">ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="access_level">ಪ್ರವೇಶ ಮಟ್ಟ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">ಪ್ರೊಫೈಲ್</string>
     <string name="profile_open">ಪ್ರೊಫೈಲ್</string>
     <string name="profile_display_name">ಪ್ರದರ್ಶನ ಹೆಸರು</string>
+    <string name="profile_save_name">ಹೆಸರು ಉಳಿಸಿ</string>
     <string name="profile_privacy">ಗೌಪ್ಯತೆ</string>
     <string name="profile_privacy_public">ಸಾರ್ವಜನಿಕ</string>
     <string name="profile_privacy_private">ಖಾಸಗಿ</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="game_chat_subject_you">ನೀವು</string>
 
-    <string name="game_chat_load_more">ಇನ್ನಷ್ಟು ಲೋಡ್ ಮಾಡಿ</string>
-    <string name="game_chat_move_played">%1$s %2$s ಆಡಿದರು</string>
+    <string name="common_not_saved">ಉಳಿಸಲಾಗಿಲ್ಲ</string>
+    <string name="common_save_failed">ನಿಮ್ಮ ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಲಾಗಲಿಲ್ಲ.</string>
 </resources>

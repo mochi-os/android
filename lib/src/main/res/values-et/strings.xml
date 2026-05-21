@@ -23,6 +23,8 @@
     <string name="common_cancel">Tühista</string>
     <string name="common_confirm">Kinnita</string>
     <string name="common_save">Salvesta</string>
+    <string name="common_saving">Salvestamine…</string>
+    <string name="common_saved">Salvestatud</string>
     <string name="common_edit">Muuda</string>
     <string name="common_delete">Kustuta</string>
     <string name="common_add">Lisa</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Tulemused</string>
     <string name="discovery_recommended">Soovitatud</string>
     <string name="discovery_subscribed">Tellitud</string>
+    <string name="access_add_rule">Lisa reegel</string>
     <string name="access_owner">Omanik</string>
     <string name="access_revoke">Tühista</string>
     <string name="access_level">Juurdepääsu tase</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profiil</string>
     <string name="profile_open">Profiil</string>
     <string name="profile_display_name">Kuvatav nimi</string>
+    <string name="profile_save_name">Salvesta nimi</string>
     <string name="profile_privacy">Privaatsus</string>
     <string name="profile_privacy_public">Avalik</string>
     <string name="profile_privacy_private">Privaatne</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Saada sõnum</string>
     <string name="game_chat_subject_you">Sina</string>
 
-    <string name="game_chat_load_more">Lae rohkem</string>
-    <string name="game_chat_move_played">%1$s mängis %2$s</string>
+    <string name="common_not_saved">Salvestamata</string>
+    <string name="common_save_failed">Teie muudatusi ei õnnestunud salvestada.</string>
 </resources>

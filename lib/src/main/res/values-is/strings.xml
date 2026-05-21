@@ -23,6 +23,8 @@
     <string name="common_cancel">Hætta við</string>
     <string name="common_confirm">Staðfesta</string>
     <string name="common_save">Vista</string>
+    <string name="common_saving">Vistar…</string>
+    <string name="common_saved">Vistað</string>
     <string name="common_edit">Breyta</string>
     <string name="common_delete">Eyða</string>
     <string name="common_add">Bæta við</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Niðurstöður</string>
     <string name="discovery_recommended">Mælt með</string>
     <string name="discovery_subscribed">Áskrift virk</string>
+    <string name="access_add_rule">Bæta við reglu</string>
     <string name="access_owner">Eigandi</string>
     <string name="access_revoke">Afturkalla</string>
     <string name="access_level">Aðgangsstig</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Síða</string>
     <string name="profile_open">Síða</string>
     <string name="profile_display_name">Birtingarnafn</string>
+    <string name="profile_save_name">Vista nafn</string>
     <string name="profile_privacy">Friðhelgi</string>
     <string name="profile_privacy_public">Opinbert</string>
     <string name="profile_privacy_private">Einkamál</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Senda skilaboð</string>
     <string name="game_chat_subject_you">Þú</string>
 
-    <string name="game_chat_load_more">Hlaða meiru</string>
-    <string name="game_chat_move_played">%1$s lék %2$s</string>
+    <string name="common_not_saved">Ekki vistað</string>
+    <string name="common_save_failed">Ekki tókst að vista breytingarnar þínar.</string>
 </resources>

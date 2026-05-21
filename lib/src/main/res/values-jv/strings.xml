@@ -23,6 +23,8 @@
     <string name="common_cancel">Batal</string>
     <string name="common_confirm">Konfirmasi</string>
     <string name="common_save">Simpen</string>
+    <string name="common_saving">Lagi nyimpen…</string>
+    <string name="common_saved">Disimpen</string>
     <string name="common_edit">Owahi</string>
     <string name="common_delete">Busak</string>
     <string name="common_add">Tambah</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Asil</string>
     <string name="discovery_recommended">Disaranaké</string>
     <string name="discovery_subscribed">Wis langganan</string>
+    <string name="access_add_rule">Tambah aturan</string>
     <string name="access_owner">Sing duwé</string>
     <string name="access_revoke">Cabut</string>
     <string name="access_level">Tingkat akses</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Jeneng tampilan</string>
+    <string name="profile_save_name">Simpen jeneng</string>
     <string name="profile_privacy">Privasi</string>
     <string name="profile_privacy_public">Publik</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Kirim pesen</string>
     <string name="game_chat_subject_you">Sampéyan</string>
 
-    <string name="game_chat_load_more">Muat luwih akèh</string>
-    <string name="game_chat_move_played">%1$s main %2$s</string>
+    <string name="common_not_saved">Durung disimpen</string>
+    <string name="common_save_failed">Owahan sampeyan ora bisa disimpen.</string>
 </resources>

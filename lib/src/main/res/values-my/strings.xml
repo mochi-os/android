@@ -23,6 +23,8 @@
     <string name="common_cancel">မလုပ်တော့ပါ</string>
     <string name="common_confirm">အတည်ပြုမည်</string>
     <string name="common_save">သိမ်းမည်</string>
+    <string name="common_saving">သိမ်းနေသည်…</string>
+    <string name="common_saved">သိမ်းပြီး</string>
     <string name="common_edit">တည်းဖြတ်</string>
     <string name="common_delete">ဖျက်မည်</string>
     <string name="common_add">ထည့်မည်</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ရလဒ်များ</string>
     <string name="discovery_recommended">အကြံပြုထား</string>
     <string name="discovery_subscribed">Subscribe လုပ်ပြီး</string>
+    <string name="access_add_rule">စည်းမျဉ်း ထည့်ပါ</string>
     <string name="access_owner">ပိုင်ရှင်</string>
     <string name="access_revoke">ရုပ်သိမ်း</string>
     <string name="access_level">ဝင်ရောက်ခွင့်အဆင့်</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">ပရိုဖိုင်</string>
     <string name="profile_open">ပရိုဖိုင်</string>
     <string name="profile_display_name">ဖော်ပြချက် အမည်</string>
+    <string name="profile_save_name">အမည် သိမ်းပါ</string>
     <string name="profile_privacy">ကိုယ်ရေးကိုယ်တာ</string>
     <string name="profile_privacy_public">အများသုံး</string>
     <string name="profile_privacy_private">သီးသန့်</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">မက်ဆေ့ပို့မည်</string>
     <string name="game_chat_subject_you">သင်</string>
 
-    <string name="game_chat_load_more">ထပ်တင်</string>
-    <string name="game_chat_move_played">%1$s က %2$s ကို ကစားခဲ့သည်</string>
+    <string name="common_not_saved">မသိမ်းဆည်းရသေးပါ</string>
+    <string name="common_save_failed">သင့်အပြောင်းအလဲများကို သိမ်းဆည်း၍မရပါ။</string>
 </resources>

@@ -23,6 +23,8 @@
     <string name="common_cancel">Zrušit</string>
     <string name="common_confirm">Potvrdit</string>
     <string name="common_save">Uložit</string>
+    <string name="common_saving">Ukládá se…</string>
+    <string name="common_saved">Uloženo</string>
     <string name="common_edit">Upravit</string>
     <string name="common_delete">Smazat</string>
     <string name="common_add">Přidat</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Výsledky</string>
     <string name="discovery_recommended">Doporučené</string>
     <string name="discovery_subscribed">Odebíráno</string>
+    <string name="access_add_rule">Přidat pravidlo</string>
     <string name="access_owner">Vlastník</string>
     <string name="access_revoke">Odvolat</string>
     <string name="access_level">Úroveň přístupu</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Zobrazované jméno</string>
+    <string name="profile_save_name">Uložit název</string>
     <string name="profile_privacy">Soukromí</string>
     <string name="profile_privacy_public">Veřejné</string>
     <string name="profile_privacy_private">Soukromé</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Odeslat zprávu</string>
     <string name="game_chat_subject_you">Vy</string>
 
-    <string name="game_chat_load_more">Načíst další</string>
-    <string name="game_chat_move_played">%1$s zahrál %2$s</string>
+    <string name="common_not_saved">Neuloženo</string>
+    <string name="common_save_failed">Vaše změny se nepodařilo uložit.</string>
 </resources>

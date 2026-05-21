@@ -10,4 +10,8 @@
     <string name="settings_font_size_normal">Normal</string>
     <string name="profile_privacy">Privacy</string>
 
+    <string name="common_saving">Saving…</string>
+    <string name="common_saved">Saved</string>
+    <string name="common_not_saved">Not saved</string>
+    <string name="common_save_failed">Couldn\'t save your changes.</string>
 </resources>

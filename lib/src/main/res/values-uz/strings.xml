@@ -23,6 +23,8 @@
     <string name="common_cancel">Bekor qilish</string>
     <string name="common_confirm">Tasdiqlash</string>
     <string name="common_save">Saqlash</string>
+    <string name="common_saving">Saqlanmoqda…</string>
+    <string name="common_saved">Saqlandi</string>
     <string name="common_edit">Tahrirlash</string>
     <string name="common_delete">Oʻchirish</string>
     <string name="common_add">Qoʻshish</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Natijalar</string>
     <string name="discovery_recommended">Tavsiya etiladi</string>
     <string name="discovery_subscribed">Obuna boʻlingan</string>
+    <string name="access_add_rule">Qoida qoʻshish</string>
     <string name="access_owner">Egasi</string>
     <string name="access_revoke">Bekor qilish</string>
     <string name="access_level">Kirish darajasi</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Koʻrsatish nomi</string>
+    <string name="profile_save_name">Nomni saqlash</string>
     <string name="profile_privacy">Maxfiylik</string>
     <string name="profile_privacy_public">Ommaviy</string>
     <string name="profile_privacy_private">Shaxsiy</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Xabar yuborish</string>
     <string name="game_chat_subject_you">Siz</string>
 
-    <string name="game_chat_load_more">Koʻproq yuklash</string>
-    <string name="game_chat_move_played">%1$s %2$s oʻynadi</string>
+    <string name="common_not_saved">Saqlanmadi</string>
+    <string name="common_save_failed">O\'zgarishlaringizni saqlab bo\'lmadi.</string>
 </resources>

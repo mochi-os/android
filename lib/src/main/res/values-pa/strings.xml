@@ -23,6 +23,8 @@
     <string name="common_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="common_confirm">ਪੁਸ਼ਟੀ ਕਰੋ</string>
     <string name="common_save">ਸੰਭਾਲੋ</string>
+    <string name="common_saving">ਸੰਭਾਲ ਰਿਹਾ ਹੈ…</string>
+    <string name="common_saved">ਸੰਭਾਲਿਆ ਗਿਆ</string>
     <string name="common_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="common_delete">ਮਿਟਾਓ</string>
     <string name="common_add">ਜੋੜੋ</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">ਨਤੀਜੇ</string>
     <string name="discovery_recommended">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ</string>
     <string name="discovery_subscribed">ਗਾਹਕ ਬਣ ਗਏ</string>
+    <string name="access_add_rule">ਨਿਯਮ ਜੋੜੋ</string>
     <string name="access_owner">ਮਾਲਕ</string>
     <string name="access_revoke">ਰੱਦ ਕਰੋ</string>
     <string name="access_level">ਪਹੁੰਚ ਪੱਧਰ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">ਪ੍ਰੋਫਾਈਲ</string>
     <string name="profile_open">ਪ੍ਰੋਫਾਈਲ</string>
     <string name="profile_display_name">ਡਿਸਪਲੇ ਨਾਮ</string>
+    <string name="profile_save_name">ਨਾਮ ਸੰਭਾਲੋ</string>
     <string name="profile_privacy">ਪ੍ਰਾਈਵੇਸੀ</string>
     <string name="profile_privacy_public">ਜਨਤਕ</string>
     <string name="profile_privacy_private">ਨਿੱਜੀ</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="game_chat_subject_you">ਤੁਸੀਂ</string>
 
-    <string name="game_chat_load_more">ਲਾਕ</string>
-    <string name="game_chat_move_played">%1$s ਨੇ %2$s ਖੇਡਿਆ</string>
+    <string name="common_not_saved">ਸੰਭਾਲਿਆ ਨਹੀਂ ਗਿਆ</string>
+    <string name="common_save_failed">ਤੁਹਾਡੀਆਂ ਤਬਦੀਲੀਆਂ ਸੰਭਾਲੀਆਂ ਨਹੀਂ ਜਾ ਸਕੀਆਂ।</string>
 </resources>

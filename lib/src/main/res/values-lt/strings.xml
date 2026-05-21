@@ -23,6 +23,8 @@
     <string name="common_cancel">Atšaukti</string>
     <string name="common_confirm">Patvirtinti</string>
     <string name="common_save">Išsaugoti</string>
+    <string name="common_saving">Išsaugoma…</string>
+    <string name="common_saved">Išsaugota</string>
     <string name="common_edit">Redaguoti</string>
     <string name="common_delete">Ištrinti</string>
     <string name="common_add">Pridėti</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Rezultatai</string>
     <string name="discovery_recommended">Rekomenduojama</string>
     <string name="discovery_subscribed">Prenumeruota</string>
+    <string name="access_add_rule">Pridėti taisyklę</string>
     <string name="access_owner">Savininkas</string>
     <string name="access_revoke">Atšaukti</string>
     <string name="access_level">Prieigos lygis</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profilis</string>
     <string name="profile_open">Profilis</string>
     <string name="profile_display_name">Rodomas vardas</string>
+    <string name="profile_save_name">Išsaugoti pavadinimą</string>
     <string name="profile_privacy">Privatumas</string>
     <string name="profile_privacy_public">Viešas</string>
     <string name="profile_privacy_private">Privatus</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Siųsti žinutę</string>
     <string name="game_chat_subject_you">Jūs</string>
 
-    <string name="game_chat_load_more">Įkelti daugiau</string>
-    <string name="game_chat_move_played">%1$s sužaidė %2$s</string>
+    <string name="common_not_saved">Neįrašyta</string>
+    <string name="common_save_failed">Nepavyko įrašyti jūsų pakeitimų.</string>
 </resources>

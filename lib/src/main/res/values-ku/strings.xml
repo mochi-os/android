@@ -23,6 +23,8 @@
     <string name="common_cancel">Betal bike</string>
     <string name="common_confirm">Piştrast bike</string>
     <string name="common_save">Tomar bike</string>
+    <string name="common_saving">Tê tomarkirin…</string>
+    <string name="common_saved">Hatiye tomarkirin</string>
     <string name="common_edit">Sererast bike</string>
     <string name="common_delete">Jê bibe</string>
     <string name="common_add">Zêde bike</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Encam</string>
     <string name="discovery_recommended">Pêşniyarkirî</string>
     <string name="discovery_subscribed">Abone</string>
+    <string name="access_add_rule">Yasa zêde bike</string>
     <string name="access_owner">Xwedî</string>
     <string name="access_revoke">Vekişîne</string>
     <string name="access_level">Asta gihîştinê</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profîl</string>
     <string name="profile_open">Profîl</string>
     <string name="profile_display_name">Navê xuyabûnê</string>
+    <string name="profile_save_name">Navê tomar bike</string>
     <string name="profile_privacy">Nepenî</string>
     <string name="profile_privacy_public">Giştî</string>
     <string name="profile_privacy_private">Taybet</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Peyamê bişîne</string>
     <string name="game_chat_subject_you">Tu</string>
 
-    <string name="game_chat_load_more">Bêtir bar bike</string>
-    <string name="game_chat_move_played">%1$s %2$s lîst</string>
+    <string name="common_not_saved">Nehat tomarkirin</string>
+    <string name="common_save_failed">Guhertinên te nehatin tomarkirin.</string>
 </resources>

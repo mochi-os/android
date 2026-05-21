@@ -23,6 +23,8 @@
     <string name="common_cancel">Khansela</string>
     <string name="common_confirm">Qinisekisa</string>
     <string name="common_save">Londoloza</string>
+    <string name="common_saving">Iyalondoloza…</string>
+    <string name="common_saved">Kulondoloziwe</string>
     <string name="common_edit">Hlela</string>
     <string name="common_delete">Susa</string>
     <string name="common_add">Engeza</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Imiphumela</string>
     <string name="discovery_recommended">Kunconywayo</string>
     <string name="discovery_subscribed">Kubhalisiwe</string>
+    <string name="access_add_rule">Engeza umthetho</string>
     <string name="access_owner">Umnikazi</string>
     <string name="access_revoke">Hoxisa</string>
     <string name="access_level">Izinga lokufinyelela</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Umbiko womsebenzisi</string>
     <string name="profile_open">Umbiko womsebenzisi</string>
     <string name="profile_display_name">Igama lokubonisa</string>
+    <string name="profile_save_name">Londoloza igama</string>
     <string name="profile_privacy">Ubumfihlo</string>
     <string name="profile_privacy_public">Emphakathini</string>
     <string name="profile_privacy_private">Okuyimfihlo</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Thumela umyalezo</string>
     <string name="game_chat_subject_you">Wena</string>
 
-    <string name="game_chat_load_more">Layisha okuningi</string>
-    <string name="game_chat_move_played">%1$s udlale %2$s</string>
+    <string name="common_not_saved">Akulondoloziwe</string>
+    <string name="common_save_failed">Azikwazanga ukulondolozwa izinguquko zakho.</string>
 </resources>

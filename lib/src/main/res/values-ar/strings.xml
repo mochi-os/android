@@ -23,6 +23,8 @@
     <string name="common_cancel">إلغاء</string>
     <string name="common_confirm">تأكيد</string>
     <string name="common_save">حفظ</string>
+    <string name="common_saving">جارٍ الحفظ…</string>
+    <string name="common_saved">تم الحفظ</string>
     <string name="common_edit">تعديل</string>
     <string name="common_delete">حذف</string>
     <string name="common_add">إضافة</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">النتائج</string>
     <string name="discovery_recommended">موصى به</string>
     <string name="discovery_subscribed">مشترك</string>
+    <string name="access_add_rule">إضافة قاعدة</string>
     <string name="access_owner">المالك</string>
     <string name="access_revoke">إلغاء</string>
     <string name="access_level">مستوى الوصول</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">الملف الشخصي</string>
     <string name="profile_open">الملف الشخصي</string>
     <string name="profile_display_name">الاسم المعروض</string>
+    <string name="profile_save_name">حفظ الاسم</string>
     <string name="profile_privacy">الخصوصية</string>
     <string name="profile_privacy_public">عام</string>
     <string name="profile_privacy_private">خاص</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">إرسال رسالة</string>
     <string name="game_chat_subject_you">أنت</string>
 
-    <string name="game_chat_load_more">تحميل المزيد</string>
-    <string name="game_chat_move_played">لعب %1$s %2$s</string>
+    <string name="common_not_saved">لم يُحفظ</string>
+    <string name="common_save_failed">تعذّر حفظ تغييراتك.</string>
 </resources>

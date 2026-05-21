@@ -23,6 +23,8 @@
     <string name="common_cancel">Отмена</string>
     <string name="common_confirm">Подтвердить</string>
     <string name="common_save">Сохранить</string>
+    <string name="common_saving">Сохранение…</string>
+    <string name="common_saved">Сохранено</string>
     <string name="common_edit">Изменить</string>
     <string name="common_delete">Удалить</string>
     <string name="common_add">Добавить</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Результаты</string>
     <string name="discovery_recommended">Рекомендуется</string>
     <string name="discovery_subscribed">Подписан</string>
+    <string name="access_add_rule">Добавить правило</string>
     <string name="access_owner">Владелец</string>
     <string name="access_revoke">Отозвать</string>
     <string name="access_level">Уровень доступа</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Профиль</string>
     <string name="profile_open">Профиль</string>
     <string name="profile_display_name">Отображаемое имя</string>
+    <string name="profile_save_name">Сохранить имя</string>
     <string name="profile_privacy">Конфиденциальность</string>
     <string name="profile_privacy_public">Публичный</string>
     <string name="profile_privacy_private">Приватный</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Отправить сообщение</string>
     <string name="game_chat_subject_you">Вы</string>
 
-    <string name="game_chat_load_more">Загрузить ещё</string>
-    <string name="game_chat_move_played">%1$s сыграл %2$s</string>
+    <string name="common_not_saved">Не сохранено</string>
+    <string name="common_save_failed">Не удалось сохранить изменения.</string>
 </resources>

@@ -1,7 +1,6 @@
 package org.mochios.projects.ui.`object`
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,7 +24,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -151,21 +153,22 @@ private fun ActivityItem(
             tint = MaterialTheme.colorScheme.onSurfaceVariant
         )
         Spacer(modifier = Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Row {
-                Text(
-                    text = item.name,
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.SemiBold
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = description,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        }
+        // Actor name + change description as one flowing paragraph. Two
+        // separate Texts in a Row starved the description of width when the
+        // name was long, wrapping it one character per line.
+        Text(
+            text = buildAnnotatedString {
+                withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) {
+                    append(item.name)
+                }
+                append(" ")
+                withStyle(SpanStyle(color = MaterialTheme.colorScheme.onSurfaceVariant)) {
+                    append(description)
+                }
+            },
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.weight(1f)
+        )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = LocalFormat.current.formatTimestamp(item.created),

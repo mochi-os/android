@@ -23,6 +23,8 @@
     <string name="common_cancel">Откажи</string>
     <string name="common_confirm">Потврди</string>
     <string name="common_save">Зачувај</string>
+    <string name="common_saving">Зачувување…</string>
+    <string name="common_saved">Зачувано</string>
     <string name="common_edit">Уреди</string>
     <string name="common_delete">Избриши</string>
     <string name="common_add">Додај</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Резултати</string>
     <string name="discovery_recommended">Препорачано</string>
     <string name="discovery_subscribed">Претплатено</string>
+    <string name="access_add_rule">Додај правило</string>
     <string name="access_owner">Сопственик</string>
     <string name="access_revoke">Отповикај</string>
     <string name="access_level">Ниво на пристап</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Профил</string>
     <string name="profile_open">Профил</string>
     <string name="profile_display_name">Име за прикажување</string>
+    <string name="profile_save_name">Зачувај име</string>
     <string name="profile_privacy">Приватност</string>
     <string name="profile_privacy_public">Јавно</string>
     <string name="profile_privacy_private">Приватно</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Испрати порака</string>
     <string name="game_chat_subject_you">Вие</string>
 
-    <string name="game_chat_load_more">Вчитај повеќе</string>
-    <string name="game_chat_move_played">%1$s играше %2$s</string>
+    <string name="common_not_saved">Не е зачувано</string>
+    <string name="common_save_failed">Не може да се зачуваат вашите промени.</string>
 </resources>

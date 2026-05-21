@@ -23,6 +23,8 @@
     <string name="common_cancel">Utzi</string>
     <string name="common_confirm">Berretsi</string>
     <string name="common_save">Gorde</string>
+    <string name="common_saving">Gordetzen…</string>
+    <string name="common_saved">Gordeta</string>
     <string name="common_edit">Editatu</string>
     <string name="common_delete">Ezabatu</string>
     <string name="common_add">Gehitu</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Emaitzak</string>
     <string name="discovery_recommended">Gomendatua</string>
     <string name="discovery_subscribed">Harpidetuta</string>
+    <string name="access_add_rule">Gehitu araua</string>
     <string name="access_owner">Jabea</string>
     <string name="access_revoke">Indargabetu</string>
     <string name="access_level">Sarbide maila</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profila</string>
     <string name="profile_open">Profila</string>
     <string name="profile_display_name">Bistaratzeko izena</string>
+    <string name="profile_save_name">Gorde izena</string>
     <string name="profile_privacy">Pribatutasuna</string>
     <string name="profile_privacy_public">Publikoa</string>
     <string name="profile_privacy_private">Pribatua</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Bidali mezua</string>
     <string name="game_chat_subject_you">Zu</string>
 
-    <string name="game_chat_load_more">Kargatu gehiago</string>
-    <string name="game_chat_move_played">%1$s-(e)k %2$s jokatu du</string>
+    <string name="common_not_saved">Ez da gorde</string>
+    <string name="common_save_failed">Ezin izan dira zure aldaketak gorde.</string>
 </resources>

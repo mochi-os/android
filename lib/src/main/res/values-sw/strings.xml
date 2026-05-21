@@ -23,6 +23,8 @@
     <string name="common_cancel">Ghairi</string>
     <string name="common_confirm">Thibitisha</string>
     <string name="common_save">Hifadhi</string>
+    <string name="common_saving">Inahifadhi…</string>
+    <string name="common_saved">Imehifadhiwa</string>
     <string name="common_edit">Hariri</string>
     <string name="common_delete">Futa</string>
     <string name="common_add">Ongeza</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Matokeo</string>
     <string name="discovery_recommended">Inapendekezwa</string>
     <string name="discovery_subscribed">Umejiunga</string>
+    <string name="access_add_rule">Ongeza sheria</string>
     <string name="access_owner">Mmiliki</string>
     <string name="access_revoke">Batilisha</string>
     <string name="access_level">Kiwango cha ufikiaji</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Wasifu</string>
     <string name="profile_open">Wasifu</string>
     <string name="profile_display_name">Jina la kuonyesha</string>
+    <string name="profile_save_name">Hifadhi jina</string>
     <string name="profile_privacy">Faragha</string>
     <string name="profile_privacy_public">Ya umma</string>
     <string name="profile_privacy_private">Ya faragha</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Tuma ujumbe</string>
     <string name="game_chat_subject_you">Wewe</string>
 
-    <string name="game_chat_load_more">Pakia zaidi</string>
-    <string name="game_chat_move_played">%1$s amecheza %2$s</string>
+    <string name="common_not_saved">Haijahifadhiwa</string>
+    <string name="common_save_failed">Mabadiliko yako hayakuweza kuhifadhiwa.</string>
 </resources>

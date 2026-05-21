@@ -23,6 +23,8 @@
     <string name="common_cancel">Anulează</string>
     <string name="common_confirm">Confirmă</string>
     <string name="common_save">Salvează</string>
+    <string name="common_saving">Se salvează…</string>
+    <string name="common_saved">Salvat</string>
     <string name="common_edit">Editează</string>
     <string name="common_delete">Șterge</string>
     <string name="common_add">Adaugă</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Rezultate</string>
     <string name="discovery_recommended">Recomandat</string>
     <string name="discovery_subscribed">Abonat</string>
+    <string name="access_add_rule">Adaugă regulă</string>
     <string name="access_owner">Proprietar</string>
     <string name="access_revoke">Revocă</string>
     <string name="access_level">Nivel de acces</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Nume afișat</string>
+    <string name="profile_save_name">Salvează numele</string>
     <string name="profile_privacy">Confidențialitate</string>
     <string name="profile_privacy_public">Public</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Trimite mesajul</string>
     <string name="game_chat_subject_you">Tu</string>
 
-    <string name="game_chat_load_more">Încarcă mai multe</string>
-    <string name="game_chat_move_played">%1$s a jucat %2$s</string>
+    <string name="common_not_saved">Nesalvat</string>
+    <string name="common_save_failed">Modificările tale nu au putut fi salvate.</string>
 </resources>

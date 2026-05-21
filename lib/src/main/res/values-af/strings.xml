@@ -23,6 +23,8 @@
     <string name="common_cancel">Kanselleer</string>
     <string name="common_confirm">Bevestig</string>
     <string name="common_save">Stoor</string>
+    <string name="common_saving">Stoor…</string>
+    <string name="common_saved">Gestoor</string>
     <string name="common_edit">Wysig</string>
     <string name="common_delete">Verwyder</string>
     <string name="common_add">Voeg by</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultate</string>
     <string name="discovery_recommended">Aanbeveel</string>
     <string name="discovery_subscribed">Ingeteken</string>
+    <string name="access_add_rule">Voeg reël by</string>
     <string name="access_owner">Eienaar</string>
     <string name="access_revoke">Herroep</string>
     <string name="access_level">Toegangsvlak</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profiel</string>
     <string name="profile_open">Profiel</string>
     <string name="profile_display_name">Vertoonnaam</string>
+    <string name="profile_save_name">Stoor naam</string>
     <string name="profile_privacy">Privaatheid</string>
     <string name="profile_privacy_public">Publiek</string>
     <string name="profile_privacy_private">Privaat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Stuur boodskap</string>
     <string name="game_chat_subject_you">Jy</string>
 
-    <string name="game_chat_load_more">Laai meer</string>
-    <string name="game_chat_move_played">%1$s het %2$s gespeel</string>
+    <string name="common_not_saved">Nie gestoor nie</string>
+    <string name="common_save_failed">Kon nie jou veranderinge stoor nie.</string>
 </resources>

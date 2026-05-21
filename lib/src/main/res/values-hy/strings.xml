@@ -23,6 +23,8 @@
     <string name="common_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="common_confirm">Հաստատել ստացումը</string>
     <string name="common_save">Պահպանել</string>
+    <string name="common_saving">Պահպանում…</string>
+    <string name="common_saved">Պահպանված է</string>
     <string name="common_edit">Խմբագրել</string>
     <string name="common_delete">Ջնջել</string>
     <string name="common_add">Ավելացնել Mochi հոսք</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Արդյունքներ</string>
     <string name="discovery_recommended">Առաջարկվող</string>
     <string name="discovery_subscribed">Բաժանորդագրված</string>
+    <string name="access_add_rule">Ավելացնել կանոն</string>
     <string name="access_owner">Սեփականատեր</string>
     <string name="access_revoke">Հետ վերցնել</string>
     <string name="access_level">Մուտքի մակարդակ</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Պրոֆիլ</string>
     <string name="profile_open">Պրոֆիլ</string>
     <string name="profile_display_name">Ցուցադրման անուն</string>
+    <string name="profile_save_name">Պահպանել անունը</string>
     <string name="profile_privacy">Գաղտնիություն</string>
     <string name="profile_privacy_public">Հանրային</string>
     <string name="profile_privacy_private">Մասնավոր</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Ուղարկել հաղորդագրությունը</string>
     <string name="game_chat_subject_you">Դուք</string>
 
-    <string name="game_chat_load_more">Բեռնվում են վճարների մանրամասները...</string>
-    <string name="game_chat_move_played">%1$s-ը խաղաց %2$s</string>
+    <string name="common_not_saved">Չպահպանված</string>
+    <string name="common_save_failed">Չհաջողվեց պահպանել ձեր փոփոխությունները։</string>
 </resources>

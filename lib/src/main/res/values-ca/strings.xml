@@ -23,6 +23,8 @@
     <string name="common_cancel">Cancel·la</string>
     <string name="common_confirm">Confirma</string>
     <string name="common_save">Desa</string>
+    <string name="common_saving">Desant…</string>
+    <string name="common_saved">Desat</string>
     <string name="common_edit">Edita</string>
     <string name="common_delete">Suprimeix</string>
     <string name="common_add">Afegeix</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultats</string>
     <string name="discovery_recommended">Recomanat</string>
     <string name="discovery_subscribed">Subscrit</string>
+    <string name="access_add_rule">Afegeix una regla</string>
     <string name="access_owner">Propietari</string>
     <string name="access_revoke">Revoca</string>
     <string name="access_level">Nivell d\'accés</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Perfil</string>
     <string name="profile_open">Perfil</string>
     <string name="profile_display_name">Nom visible</string>
+    <string name="profile_save_name">Desa el nom</string>
     <string name="profile_privacy">Privadesa</string>
     <string name="profile_privacy_public">Públic</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Envia missatge</string>
     <string name="game_chat_subject_you">Tu</string>
 
-    <string name="game_chat_load_more">Carrega\'n més</string>
-    <string name="game_chat_move_played">%1$s ha jugat %2$s</string>
+    <string name="common_not_saved">No s\'ha desat</string>
+    <string name="common_save_failed">No s\'han pogut desar els canvis.</string>
 </resources>

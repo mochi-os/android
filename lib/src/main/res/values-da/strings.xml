@@ -23,6 +23,8 @@
     <string name="common_cancel">Annuller</string>
     <string name="common_confirm">Bekræft</string>
     <string name="common_save">Gem</string>
+    <string name="common_saving">Gemmer…</string>
+    <string name="common_saved">Gemt</string>
     <string name="common_edit">Redigér</string>
     <string name="common_delete">Slet</string>
     <string name="common_add">Tilføj</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultater</string>
     <string name="discovery_recommended">Anbefalet</string>
     <string name="discovery_subscribed">Abonneret</string>
+    <string name="access_add_rule">Tilføj regel</string>
     <string name="access_owner">Ejer</string>
     <string name="access_revoke">Tilbagekald</string>
     <string name="access_level">Adgangsniveau</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profil</string>
     <string name="profile_open">Profil</string>
     <string name="profile_display_name">Visningsnavn</string>
+    <string name="profile_save_name">Gem navn</string>
     <string name="profile_privacy">Privatliv</string>
     <string name="profile_privacy_public">Offentlig</string>
     <string name="profile_privacy_private">Privat</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Send besked</string>
     <string name="game_chat_subject_you">Dig</string>
 
-    <string name="game_chat_load_more">Indlæs flere</string>
-    <string name="game_chat_move_played">%1$s spillede %2$s</string>
+    <string name="common_not_saved">Ikke gemt</string>
+    <string name="common_save_failed">Dine ændringer kunne ikke gemmes.</string>
 </resources>

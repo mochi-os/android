@@ -23,6 +23,8 @@
     <string name="common_cancel">Annuleren</string>
     <string name="common_confirm">Bevestigen</string>
     <string name="common_save">Opslaan</string>
+    <string name="common_saving">Opslaan…</string>
+    <string name="common_saved">Opgeslagen</string>
     <string name="common_edit">Bewerken</string>
     <string name="common_delete">Verwijderen</string>
     <string name="common_add">Toevoegen</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultaten</string>
     <string name="discovery_recommended">Aanbevolen</string>
     <string name="discovery_subscribed">Geabonneerd</string>
+    <string name="access_add_rule">Regel toevoegen</string>
     <string name="access_owner">Eigenaar</string>
     <string name="access_revoke">Intrekken</string>
     <string name="access_level">Toegangsniveau</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profiel</string>
     <string name="profile_open">Profiel</string>
     <string name="profile_display_name">Weergavenaam</string>
+    <string name="profile_save_name">Naam opslaan</string>
     <string name="profile_privacy">Privacy</string>
     <string name="profile_privacy_public">Publiek</string>
     <string name="profile_privacy_private">Privé</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Bericht versturen</string>
     <string name="game_chat_subject_you">U</string>
 
-    <string name="game_chat_load_more">Meer laden</string>
-    <string name="game_chat_move_played">%1$s speelde %2$s</string>
+    <string name="common_not_saved">Niet opgeslagen</string>
+    <string name="common_save_failed">Je wijzigingen konden niet worden opgeslagen.</string>
 </resources>

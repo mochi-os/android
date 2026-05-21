@@ -23,6 +23,8 @@
     <string name="common_cancel">Цуцлах</string>
     <string name="common_confirm">Баталгаажуулах</string>
     <string name="common_save">Хадгалах</string>
+    <string name="common_saving">Хадгалж байна…</string>
+    <string name="common_saved">Хадгалагдсан</string>
     <string name="common_edit">Засах</string>
     <string name="common_delete">Устгах</string>
     <string name="common_add">Нэмэх</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Үр дүн</string>
     <string name="discovery_recommended">Зөвлөмжтэй</string>
     <string name="discovery_subscribed">Захиалсан</string>
+    <string name="access_add_rule">Дүрэм нэмэх</string>
     <string name="access_owner">Эзэмшигч</string>
     <string name="access_revoke">Цуцлах</string>
     <string name="access_level">Хандалтын түвшин</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Профайл</string>
     <string name="profile_open">Профайл</string>
     <string name="profile_display_name">Харагдах нэр</string>
+    <string name="profile_save_name">Нэрийг хадгалах</string>
     <string name="profile_privacy">Нууцлал</string>
     <string name="profile_privacy_public">Нийтийн</string>
     <string name="profile_privacy_private">Хувийн</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Зурвас илгээх</string>
     <string name="game_chat_subject_you">Та</string>
 
-    <string name="game_chat_load_more">Илүү ачаалах</string>
-    <string name="game_chat_move_played">%1$s %2$s-г тоглосон</string>
+    <string name="common_not_saved">Хадгалаагүй</string>
+    <string name="common_save_failed">Таны өөрчлөлтийг хадгалж чадсангүй.</string>
 </resources>

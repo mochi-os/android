@@ -23,6 +23,8 @@
     <string name="common_cancel">Cealaigh</string>
     <string name="common_confirm">Deimhnigh</string>
     <string name="common_save">Sábháil</string>
+    <string name="common_saving">Á shábháil…</string>
+    <string name="common_saved">Sábháilte</string>
     <string name="common_edit">Cuir in eagar</string>
     <string name="common_delete">Scrios</string>
     <string name="common_add">Cuir leis</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Torthaí</string>
     <string name="discovery_recommended">Molta</string>
     <string name="discovery_subscribed">Liostáilte</string>
+    <string name="access_add_rule">Cuir riail leis</string>
     <string name="access_owner">Úinéir</string>
     <string name="access_revoke">Cúlghair</string>
     <string name="access_level">Leibhéal rochtana</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Próifíl</string>
     <string name="profile_open">Próifíl</string>
     <string name="profile_display_name">Ainm taispeána</string>
+    <string name="profile_save_name">Sábháil ainm</string>
     <string name="profile_privacy">Príobháideacht</string>
     <string name="profile_privacy_public">Poiblí</string>
     <string name="profile_privacy_private">Príobháideach</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Seol teachtaireacht</string>
     <string name="game_chat_subject_you">Tusa</string>
 
-    <string name="game_chat_load_more">Luchtaigh tuilleadh</string>
-    <string name="game_chat_move_played">Sheinn %1$s %2$s</string>
+    <string name="common_not_saved">Gan sábháil</string>
+    <string name="common_save_failed">Níorbh fhéidir do chuid athruithe a shábháil.</string>
 </resources>

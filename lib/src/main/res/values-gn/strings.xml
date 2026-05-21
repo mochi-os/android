@@ -23,6 +23,8 @@
     <string name="common_cancel">Heja</string>
     <string name="common_confirm">Emoneĩ</string>
     <string name="common_save">Ñongatu</string>
+    <string name="common_saving">Oñeñongatuhína…</string>
+    <string name="common_saved">Oñeñongatu</string>
     <string name="common_edit">Embojuruja</string>
     <string name="common_delete">Hundi</string>
     <string name="common_add">Embojuaju</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Resultados</string>
     <string name="discovery_recommended">Ojeporavóva</string>
     <string name="discovery_subscribed">Mboatypyre</string>
+    <string name="access_add_rule">Embojuruja peteĩ tembiapouka</string>
     <string name="access_owner">Mburuvicha</string>
     <string name="access_revoke">Embogue</string>
     <string name="access_level">Jeike rupa</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Perfil</string>
     <string name="profile_open">Perfil</string>
     <string name="profile_display_name">Hechauka téra</string>
+    <string name="profile_save_name">Eñongatu téra</string>
     <string name="profile_privacy">Privacidad</string>
     <string name="profile_privacy_public">Ojeikéva</string>
     <string name="profile_privacy_private">Ñemiguáva</string>
@@ -128,6 +132,4 @@
     <string name="game_chat_send">Emondo marandu</string>
     <string name="game_chat_subject_you">Nde</string>
 
-    <string name="game_chat_load_more">Embojuaju hetave</string>
-    <string name="game_chat_move_played">%1$s ojapo %2$s</string>
 </resources>

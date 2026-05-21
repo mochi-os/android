@@ -23,6 +23,8 @@
     <string name="common_cancel">Anile</string>
     <string name="common_confirm">Konfime</string>
     <string name="common_save">Sove</string>
+    <string name="common_saving">Ap sove…</string>
+    <string name="common_saved">Sove</string>
     <string name="common_edit">Modifye</string>
     <string name="common_delete">Efase</string>
     <string name="common_add">Ajoute</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Rezilta</string>
     <string name="discovery_recommended">Rekòmande</string>
     <string name="discovery_subscribed">Abone</string>
+    <string name="access_add_rule">Ajoute yon règ</string>
     <string name="access_owner">Pwopriyetè</string>
     <string name="access_revoke">Revoke</string>
     <string name="access_level">Nivo aksè</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Pwofil</string>
     <string name="profile_open">Pwofil</string>
     <string name="profile_display_name">Non afichaj</string>
+    <string name="profile_save_name">Sove non</string>
     <string name="profile_privacy">Konfidansyalite</string>
     <string name="profile_privacy_public">Piblik</string>
     <string name="profile_privacy_private">Prive</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Voye mesaj</string>
     <string name="game_chat_subject_you">Ou</string>
 
-    <string name="game_chat_load_more">Chaje plis</string>
-    <string name="game_chat_move_played">%1$s jwe %2$s</string>
+    <string name="common_not_saved">Pa anrejistre</string>
+    <string name="common_save_failed">Nou pa t kapab anrejistre chanjman ou yo.</string>
 </resources>

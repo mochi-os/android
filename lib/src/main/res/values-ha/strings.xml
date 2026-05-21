@@ -23,6 +23,8 @@
     <string name="common_cancel">Soke</string>
     <string name="common_confirm">Tabbatar</string>
     <string name="common_save">Adana</string>
+    <string name="common_saving">Ana ajiyewa…</string>
+    <string name="common_saved">An adana</string>
     <string name="common_edit">Gyara</string>
     <string name="common_delete">Goge</string>
     <string name="common_add">Ƙara</string>
@@ -41,6 +43,7 @@
     <string name="discovery_results">Sakamako</string>
     <string name="discovery_recommended">An ba da shawara</string>
     <string name="discovery_subscribed">An yi subscribe</string>
+    <string name="access_add_rule">Ƙara doka</string>
     <string name="access_owner">Mai shi</string>
     <string name="access_revoke">Janyewa</string>
     <string name="access_level">Matakin shiga</string>
@@ -119,6 +122,7 @@
     <string name="profile_title">Profile</string>
     <string name="profile_open">Profile</string>
     <string name="profile_display_name">Sunan nunawa</string>
+    <string name="profile_save_name">Adana suna</string>
     <string name="profile_privacy">Sirri</string>
     <string name="profile_privacy_public">Na jama\'a</string>
     <string name="profile_privacy_private">Na sirri</string>
@@ -128,6 +132,6 @@
     <string name="game_chat_send">Aika saƙo</string>
     <string name="game_chat_subject_you">Kai</string>
 
-    <string name="game_chat_load_more">Saukar da ƙari</string>
-    <string name="game_chat_move_played">%1$s ya yi %2$s</string>
+    <string name="common_not_saved">Ba a ajiye ba</string>
+    <string name="common_save_failed">An kasa ajiye canje-canjenku.</string>
 </resources>
