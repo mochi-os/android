@@ -5,6 +5,8 @@
     <string name="launcher_chat">Saruna</string>
     <string name="launcher_forums">Forumi</string>
     <string name="launcher_projects">Projekti</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Cilvēki</string>
     <string name="launcher_settings">Iestatījumi</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Vārdi</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Personāls</string>
 
 </resources>

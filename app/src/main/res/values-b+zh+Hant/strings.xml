@@ -5,6 +5,8 @@
     <string name="launcher_chat">聊天</string>
     <string name="launcher_forums">論壇</string>
     <string name="launcher_projects">專案</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">人員</string>
     <string name="launcher_settings">設定</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">圍棋</string>
     <string name="launcher_words">字詞</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi 員工</string>
 
 </resources>

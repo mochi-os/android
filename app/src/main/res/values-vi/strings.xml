@@ -5,6 +5,8 @@
     <string name="launcher_chat">Trò chuyện</string>
     <string name="launcher_forums">Diễn đàn</string>
     <string name="launcher_projects">Dự án</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Mọi người</string>
     <string name="launcher_settings">Cài đặt</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Cờ vây</string>
     <string name="launcher_words">Từ</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Nhân viên</string>
 
 </resources>

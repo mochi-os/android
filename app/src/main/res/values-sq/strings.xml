@@ -4,10 +4,13 @@
     <string name="launcher_chat">Bisedë</string>
     <string name="launcher_forums">Forumet</string>
     <string name="launcher_projects">Projektet</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Persona</string>
     <string name="launcher_settings">Cilësimet</string>
     <string name="launcher_wikis">Wikis</string>
     <string name="launcher_chess">Shahu</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Fjalë</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Stafi</string>
 </resources>

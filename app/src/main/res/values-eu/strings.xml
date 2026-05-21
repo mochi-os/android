@@ -4,10 +4,13 @@
     <string name="launcher_chat">Txata</string>
     <string name="launcher_forums">Foroak</string>
     <string name="launcher_projects">Proiektuak</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Jendea</string>
     <string name="launcher_settings">Ezarpenak</string>
     <string name="launcher_wikis">Wikis</string>
     <string name="launcher_chess">Xakea</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Hitzak</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Langileak</string>
 </resources>

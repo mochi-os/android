@@ -5,6 +5,8 @@
     <string name="launcher_chat">Συνομιλία</string>
     <string name="launcher_forums">Φόρουμ</string>
     <string name="launcher_projects">Έργα</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Άτομα</string>
     <string name="launcher_settings">Ρυθμίσεις</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Λέξεις</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Προσωπικό</string>
 
 </resources>

@@ -5,6 +5,8 @@
     <string name="launcher_chat">چټ</string>
     <string name="launcher_forums">فورمونه</string>
     <string name="launcher_projects">پروژې</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">خلک</string>
     <string name="launcher_settings">ترتیبات</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi کارکوونکي</string>
 
 </resources>

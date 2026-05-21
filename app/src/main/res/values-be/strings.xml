@@ -4,10 +4,13 @@
     <string name="launcher_chat">Чат</string>
     <string name="launcher_forums">Форумы</string>
     <string name="launcher_projects">Праекты</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Людзі</string>
     <string name="launcher_settings">Налады</string>
     <string name="launcher_wikis">Wikis</string>
     <string name="launcher_chess">Шахматы</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Словы</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Персанал</string>
 </resources>

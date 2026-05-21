@@ -5,6 +5,8 @@
     <string name="launcher_chat">שמועס</string>
     <string name="launcher_forums">פֿאָרומס</string>
     <string name="launcher_projects">פּראָיעקטן</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">מענטשן</string>
     <string name="launcher_settings">אײַנשטעלונגען</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi שטאַב</string>
 
 </resources>

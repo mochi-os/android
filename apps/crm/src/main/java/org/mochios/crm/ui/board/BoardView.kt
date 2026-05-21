@@ -489,42 +489,47 @@ private fun BoardColumn(
                 }
             }
         } else {
-            // Simple list mode
+            // Simple list mode. The card list fills all remaining column
+            // height. Double-tapping the empty space below the last card
+            // creates a card (matching the web board's double-click-to-
+            // create); the tap zone sits behind the list so it only
+            // receives touches where there are no cards.
             val sortedObjects = viewModel.sortObjects(objects)
-            LazyColumn(
+            Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f, fill = false),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                    .weight(1f)
             ) {
-                itemsIndexed(sortedObjects, key = { _, o -> o.id }) { index, obj ->
-                    BoardCard(
-                        obj = obj,
-                        viewModel = viewModel,
-                        borderFieldId = borderFieldId,
-                        childrenByParent = childrenByParent,
-                        cardDragState = cardDragState,
-                        cardIndexInColumn = index,
-                        columnObjectsForDrop = sortedObjects,
-                        targetColumnId = option.id,
-                        onClick = { onObjectClick(obj.id) }
+                if (onCreateInColumn != null) {
+                    Box(
+                        modifier = Modifier
+                            .matchParentSize()
+                            .combinedClickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                onClick = {},
+                                onDoubleClick = onCreateInColumn,
+                            )
                     )
                 }
-            }
-            // Double-tap empty space below cards → create card in this column,
-            // matching the web board's double-click-to-create UX.
-            if (onCreateInColumn != null) {
-                Spacer(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f)
-                        .combinedClickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null,
-                            onClick = {},
-                            onDoubleClick = onCreateInColumn,
+                LazyColumn(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    itemsIndexed(sortedObjects, key = { _, o -> o.id }) { index, obj ->
+                        BoardCard(
+                            obj = obj,
+                            viewModel = viewModel,
+                            borderFieldId = borderFieldId,
+                            childrenByParent = childrenByParent,
+                            cardDragState = cardDragState,
+                            cardIndexInColumn = index,
+                            columnObjectsForDrop = sortedObjects,
+                            targetColumnId = option.id,
+                            onClick = { onObjectClick(obj.id) }
                         )
-                )
+                    }
+                }
             }
         }
     }

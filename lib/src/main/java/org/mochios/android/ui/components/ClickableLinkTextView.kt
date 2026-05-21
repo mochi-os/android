@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.ViewConfiguration
 import android.widget.TextView
+import io.noties.markwon.ext.tables.TableRowSpan
 import kotlin.math.abs
 
 class ClickableLinkTextView @JvmOverloads constructor(
@@ -49,6 +50,12 @@ class ClickableLinkTextView @JvmOverloads constructor(
         val line = layout.getLineForVertical(y)
         if (x < layout.getLineLeft(line) || x > layout.getLineRight(line)) return false
         val offset = layout.getOffsetForHorizontal(line, x.toFloat())
-        return spanned.getSpans(offset, offset, ClickableSpan::class.java).isNotEmpty()
+        if (spanned.getSpans(offset, offset, ClickableSpan::class.java).isNotEmpty()) return true
+        // Markwon renders each table row as a TableRowSpan (a ReplacementSpan);
+        // links inside cells are ClickableSpans held in the cell's own text,
+        // invisible to this outer layout. Treat any tap on a table row as a
+        // link tap so the event reaches TableAwareMovementMethod, which
+        // dispatches into the cell and fires the link if one is there.
+        return spanned.getSpans(offset, offset, TableRowSpan::class.java).isNotEmpty()
     }
 }

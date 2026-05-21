@@ -4,10 +4,13 @@
     <string name="launcher_chat">চ্যাট</string>
     <string name="launcher_forums">ফোরামসমূহ</string>
     <string name="launcher_projects">প্রকল্প</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">ব্যক্তিরা</string>
     <string name="launcher_settings">সেটিংস</string>
     <string name="launcher_wikis">Wikis</string>
     <string name="launcher_chess">দাবা</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">শব্দ</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi কর্মী</string>
 </resources>

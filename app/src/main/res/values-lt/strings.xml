@@ -5,6 +5,8 @@
     <string name="launcher_chat">Pokalbis</string>
     <string name="launcher_forums">Forumai</string>
     <string name="launcher_projects">Projektai</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Žmonės</string>
     <string name="launcher_settings">Nustatymai</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Žodžiai</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Personalas</string>
 
 </resources>

@@ -5,6 +5,8 @@
     <string name="launcher_chat">채팅</string>
     <string name="launcher_forums">포럼</string>
     <string name="launcher_projects">프로젝트</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">사람</string>
     <string name="launcher_settings">설정</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">바둑</string>
     <string name="launcher_words">워드</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi 스태프</string>
 
 </resources>

@@ -5,6 +5,8 @@
     <string name="launcher_chat">Ingxoxo</string>
     <string name="launcher_forums">Izinkundla</string>
     <string name="launcher_projects">Amaphrojekthi</string>
+    <string name="launcher_crm">I-CRM</string>
+    <string name="launcher_people">Abantu</string>
     <string name="launcher_settings">Izilungiselelo</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Abasebenzi</string>
 
 </resources>

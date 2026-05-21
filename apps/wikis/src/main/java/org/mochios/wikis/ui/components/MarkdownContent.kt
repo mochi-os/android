@@ -42,6 +42,7 @@ import io.noties.markwon.MarkwonConfiguration
 import io.noties.markwon.core.spans.HeadingSpan
 import io.noties.markwon.core.spans.LinkSpan
 import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
+import io.noties.markwon.ext.tables.TableAwareMovementMethod
 import io.noties.markwon.ext.tables.TablePlugin
 import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.html.HtmlPlugin
@@ -371,7 +372,10 @@ private fun ProseSegment(
     AndroidView(
         factory = { ctx ->
             ClickableLinkTextView(ctx).apply {
-                movementMethod = LinkMovementMethod.getInstance()
+                // TableAwareMovementMethod (wraps LinkMovementMethod) so links
+                // inside Markwon table cells are tappable — plain
+                // LinkMovementMethod can't dispatch clicks into TableRowSpans.
+                movementMethod = TableAwareMovementMethod.create()
                 textSize = 16f
                 setTextColor(
                     ctx.resources.getColor(android.R.color.primary_text_light, ctx.theme)

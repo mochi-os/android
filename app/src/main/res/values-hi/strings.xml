@@ -5,6 +5,8 @@
     <string name="launcher_chat">चैट</string>
     <string name="launcher_forums">फ़ोरम</string>
     <string name="launcher_projects">प्रोजेक्ट्स</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">लोग</string>
     <string name="launcher_settings">सेटिंग्स</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">शब्द</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi स्टाफ़</string>
 
 </resources>

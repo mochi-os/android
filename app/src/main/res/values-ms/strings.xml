@@ -4,10 +4,13 @@
     <string name="launcher_chat">Sembang</string>
     <string name="launcher_forums">Forum</string>
     <string name="launcher_projects">Projek</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Orang</string>
     <string name="launcher_settings">Tetapan</string>
     <string name="launcher_wikis">Wikis</string>
     <string name="launcher_chess">Catur</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Kata</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Kakitangan</string>
 </resources>

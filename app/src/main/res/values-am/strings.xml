@@ -5,6 +5,8 @@
     <string name="launcher_chat">ውይይት</string>
     <string name="launcher_forums">ፎረሞች</string>
     <string name="launcher_projects">ፕሮጀክቶች</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">ሰዎች</string>
     <string name="launcher_settings">ቅንብሮች</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi ሰራተኞች</string>
 
 </resources>

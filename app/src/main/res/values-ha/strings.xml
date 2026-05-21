@@ -5,6 +5,8 @@
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forums</string>
     <string name="launcher_projects">Projects</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Mutane</string>
     <string name="launcher_settings">Saitunan</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Ma\'aikata</string>
 
 </resources>

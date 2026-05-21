@@ -4,10 +4,13 @@
     <string name="launcher_chat">چیٹ</string>
     <string name="launcher_forums">فورمز</string>
     <string name="launcher_projects">projects</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">لوگ</string>
     <string name="launcher_settings">سیٹنگز</string>
     <string name="launcher_wikis">Wikis</string>
     <string name="launcher_chess">شطرنج</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">الفاظ</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi عملہ</string>
 </resources>

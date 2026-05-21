@@ -5,6 +5,8 @@
     <string name="launcher_chat">Chat</string>
     <string name="launcher_forums">Forokuna</string>
     <string name="launcher_projects">Proyectokuna</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Runakuna</string>
     <string name="launcher_settings">Wakichiykuna</string>
 
     <string name="launcher_wikis">Wikis</string>
@@ -12,5 +14,6 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Llamkaqkuna</string>
 
 </resources>
