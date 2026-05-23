@@ -36,8 +36,12 @@ abstract class MochiPushReceiver : MessagingReceiver() {
      */
     abstract fun channelId(context: Context, instance: String, app: String, link: String): String
 
-    /** Deep-link Uri for tapping the notification. */
-    abstract fun deepLinkFor(context: Context, instance: String, link: String): android.net.Uri
+    /**
+     * Deep-link Uri for tapping the notification. When [id] is non-empty
+     * the dispatcher should include it on the URI so MainActivity can hit
+     * the notifications app's `-/read` endpoint after navigating.
+     */
+    abstract fun deepLinkFor(context: Context, instance: String, link: String, id: String): android.net.Uri
 
     @EntryPoint
     @InstallIn(SingletonComponent::class)
@@ -145,13 +149,14 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         val link = payload.optString("link", "")
         val tag = payload.optString("tag", "")
         val app = payload.optString("app", "")
+        val id = payload.optString("id", "")
 
         if (title.isBlank() && body.isBlank()) {
             Log.w(TAG, "Push payload has no title/body; ignoring")
             return
         }
 
-        postSystemNotification(context, instance, title, body, link, tag, app)
+        postSystemNotification(context, instance, title, body, link, tag, app, id)
     }
 
     private fun postPushRegister(
@@ -259,9 +264,10 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         link: String,
         tag: String,
         app: String,
+        id: String,
     ) {
         val channelId = channelId(context, instance, app, link)
-        val deepLink = deepLinkFor(context, instance, link)
+        val deepLink = deepLinkFor(context, instance, link, id)
 
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
             flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or

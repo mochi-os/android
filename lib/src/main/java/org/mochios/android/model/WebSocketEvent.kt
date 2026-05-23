@@ -10,6 +10,10 @@ data class WebSocketEvent(
     val comment: String? = null,
     val id: String? = null,
     @SerializedName("object") val objectId: String? = null,
+    // Notifications app fields — populated on "read" / "clear_object" events
+    // so the Android client can map back to a system-tray tag and cancel.
+    val app: String? = null,
+    val topic: String? = null,
     val source: String? = null,
     val target: String? = null,
     val sender: String? = null,

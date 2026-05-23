@@ -61,12 +61,13 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         val link = data["link"].orEmpty()
         val tag = data["tag"].orEmpty()
         val app = data["app"].orEmpty()
+        val id = data["id"].orEmpty()
 
         if (title.isBlank() && body.isBlank()) {
             Log.w(TAG, "FCM payload missing title/body; ignoring")
             return
         }
-        postSystemNotification(applicationContext, title, body, link, tag, app)
+        postSystemNotification(applicationContext, title, body, link, tag, app, id)
     }
 
     override fun onNewToken(token: String) {
@@ -161,13 +162,20 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         link: String,
         tag: String,
         app: String,
+        id: String,
     ) {
         val channelId = channelIdFor(app, link)
 
-        // mochi:notification?link=<encoded> — same opaque URI the
-        // UnifiedPush dispatcher uses; routed by MainActivity through
-        // claude/plans/mochi-uri-scheme.md.
-        val deepLink = Uri.parse("mochi:notification?link=${Uri.encode(link)}")
+        // mochi:notification?link=<encoded>[&id=<encoded>] — same opaque URI
+        // the UnifiedPush dispatcher uses; routed by MainActivity through
+        // claude/plans/mochi-uri-scheme.md. `id` lets MainActivity call the
+        // notifications app's -/read endpoint so the matching web row is
+        // cleared on tap.
+        val ssp = buildString {
+            append("notification?link=").append(Uri.encode(link))
+            if (id.isNotEmpty()) append("&id=").append(Uri.encode(id))
+        }
+        val deepLink = Uri.parse("mochi:$ssp")
         val intent = Intent(Intent.ACTION_VIEW, deepLink).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             // Pin the PendingIntent to the matching launcher alias so badge-

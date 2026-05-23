@@ -75,6 +75,7 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var sessionManager: SessionManager
     @Inject lateinit var preferencesManager: PreferencesManager
     @Inject lateinit var okHttpClient: okhttp3.OkHttpClient
+    @Inject lateinit var notificationsRepository: org.mochios.android.notifications.NotificationsRepository
 
     // Latest alias / shortcut hint resolved from the launching intent.
     // Updated on every onNewIntent so swapping launcher icons (e.g.
@@ -386,7 +387,7 @@ class MainActivity : ComponentActivity() {
         val query = if (qIndex >= 0) ssp.substring(qIndex + 1) else ""
         val params = parseOpaqueQuery(query)
         when (name) {
-            "notification" -> setNotificationDeepLink(params["link"])
+            "notification" -> setNotificationDeepLink(params["link"], params["id"])
             "oauth-return" -> applyOAuthReturn(params["code"], params["error"])
             "oauth-link-return" -> applyOAuthLinkReturn(params["oauth_linked"], params["oauth_error"])
             else -> Log.w(TAG, "Unknown system intent in $uri")
@@ -414,7 +415,7 @@ class MainActivity : ComponentActivity() {
      */
     private fun handleLegacySystemIntent(uri: Uri) {
         when (uri.authority) {
-            "notification" -> setNotificationDeepLink(uri.getQueryParameter("link"))
+            "notification" -> setNotificationDeepLink(uri.getQueryParameter("link"), uri.getQueryParameter("id"))
             "oauth-return" -> applyOAuthReturn(uri.getQueryParameter("code"), uri.getQueryParameter("error"))
             "oauth-link-return" -> applyOAuthLinkReturn(uri.getQueryParameter("oauth_linked"), uri.getQueryParameter("oauth_error"))
         }
@@ -454,9 +455,22 @@ class MainActivity : ComponentActivity() {
         Log.w(TAG, "Cross-peer URI not yet supported: $uri")
     }
 
-    private fun setNotificationDeepLink(link: String?) {
+    private fun setNotificationDeepLink(link: String?, id: String?) {
         link ?: return
         PendingDeepLink.set(link)
+        // Tapping the system notification dismisses it on the device but
+        // leaves the matching unread row on the server, so the web bell
+        // keeps showing it. Hit -/read so the row is marked read and
+        // disappears from the web bell / drops the unread count.
+        if (!id.isNullOrEmpty()) {
+            lifecycleScope.launch {
+                try {
+                    notificationsRepository.markRead(id)
+                } catch (e: Exception) {
+                    Log.w(TAG, "markRead($id) failed: ${e.message}")
+                }
+            }
+        }
     }
 
     private fun applyOAuthReturn(code: String?, error: String?) {
