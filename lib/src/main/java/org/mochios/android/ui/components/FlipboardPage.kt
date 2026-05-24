@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
@@ -20,6 +21,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import kotlin.math.abs
 import kotlin.math.max
+import kotlin.random.Random
 
 /**
  * Flipboard-style page composable for use inside VerticalPager. Renders
@@ -206,6 +208,46 @@ private fun foldProgress(angle: Float): Float {
 private fun smoothstep(x: Float): Float {
     val t = x.coerceIn(0f, 1f)
     return t * t * (3f - 2f * t)
+}
+
+/**
+ * Subtle paper-grain background for pages inside [FlipboardPage]. A flat
+ * surface colour gives the rotating halves nothing to grip onto visually
+ * — the fold reads as a faint shadow only. A fine stable noise pattern
+ * supplies low-frequency reference points so the user's eye registers
+ * the rotation even on otherwise-white content.
+ *
+ * [color] is multiplied by [alpha] and stamped as small dots over the
+ * area. Pass `MaterialTheme.colorScheme.onSurface` so the grain
+ * automatically inverts between light and dark themes.
+ *
+ * Stable across recompositions — the dot positions are computed once
+ * from a fixed seed and reused.
+ */
+fun Modifier.flipboardPaperTexture(
+    color: Color,
+    alpha: Float = 0.04f,
+): Modifier = this.drawBehind {
+    paperGrainDots.forEach { dot ->
+        drawCircle(
+            color = color.copy(alpha = alpha),
+            radius = dot.radius,
+            center = Offset(dot.x * size.width, dot.y * size.height),
+        )
+    }
+}
+
+private data class GrainDot(val x: Float, val y: Float, val radius: Float)
+
+private val paperGrainDots: List<GrainDot> = run {
+    val rng = Random(0x70617065724772L)
+    List(600) {
+        GrainDot(
+            x = rng.nextFloat(),
+            y = rng.nextFloat(),
+            radius = 0.6f + rng.nextFloat() * 1.2f,
+        )
+    }
 }
 
 private object TopHalfShape : Shape {
