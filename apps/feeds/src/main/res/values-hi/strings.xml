@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">टैग जोड़ें</string>
     <string name="feeds_write_a_comment">टिप्पणी लिखें…</string>
     <string name="feeds_access_permission">अनुमति</string>
+    <string name="feeds_move_up">ऊपर ले जाएं</string>
+    <string name="feeds_move_down">नीचे ले जाएं</string>
 </resources>

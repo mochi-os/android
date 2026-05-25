@@ -179,4 +179,8 @@
     <string name="crm_class_move_up">ઉપર ખસેડો</string>
     <string name="crm_class_move_down">નીચે ખસેડો</string>
     <string name="crm_views_sort_by">દ્વારા સૉર્ટ કરો</string>
+    <string name="crm_sort_direction_asc">ઊભરતું</string>
+    <string name="crm_views_direction_asc">ઊભરતું</string>
+    <string name="crm_sort_direction_desc">ઊતરતું</string>
+    <string name="crm_views_direction_desc">ઊતરતું</string>
 </resources>

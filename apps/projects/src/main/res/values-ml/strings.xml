@@ -169,4 +169,13 @@
     <string name="projects_sort_field">ഇതനുസരിച്ച് ക്രമീകരിക്കുക</string>
     <string name="projects_comment_remove_attachment">Remove attachment</string>
     <string name="projects_views_sort_by">ഇതനുസരിച്ച് ക്രമീകരിക്കുക</string>
+    <string name="projects_auth_login_failed">ലോഗിൻ പരാജയപ്പെട്ടു</string>
+    <string name="projects_views_move_up">മുകളിലേക്ക് നീക്കുക</string>
+    <string name="projects_class_move_up">മുകളിലേക്ക് നീക്കുക</string>
+    <string name="projects_views_move_down">താഴേക്ക് നീക്കുക</string>
+    <string name="projects_class_move_down">താഴേക്ക് നീക്കുക</string>
+    <string name="projects_sort_direction_asc">ആരോഹണം</string>
+    <string name="projects_views_direction_asc">ആരോഹണം</string>
+    <string name="projects_sort_direction_desc">അവരോഹണം</string>
+    <string name="projects_views_direction_desc">അവരോഹണം</string>
 </resources>

@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Sorteren op</string>
     <string name="crm_comment_remove_attachment">Bijlage verwijderen</string>
     <string name="crm_views_sort_by">Sorteren op</string>
+    <string name="crm_auth_login_failed">Aanmelding mislukt</string>
+    <string name="crm_views_move_up">Omhoog verplaatsen</string>
+    <string name="crm_class_move_up">Omhoog verplaatsen</string>
+    <string name="crm_views_move_down">Omlaag verplaatsen</string>
+    <string name="crm_class_move_down">Omlaag verplaatsen</string>
+    <string name="crm_sort_direction_asc">Oplopend</string>
+    <string name="crm_views_direction_asc">Oplopend</string>
+    <string name="crm_sort_direction_desc">Aflopend</string>
+    <string name="crm_views_direction_desc">Aflopend</string>
 </resources>

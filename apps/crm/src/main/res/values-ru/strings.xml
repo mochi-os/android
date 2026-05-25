@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Сортировать по</string>
     <string name="crm_comment_remove_attachment">Удалить вложение</string>
     <string name="crm_views_sort_by">Сортировать по</string>
+    <string name="crm_auth_login_failed">Ошибка входа</string>
+    <string name="crm_views_move_up">Переместить вверх</string>
+    <string name="crm_class_move_up">Переместить вверх</string>
+    <string name="crm_views_move_down">Переместить вниз</string>
+    <string name="crm_class_move_down">Переместить вниз</string>
+    <string name="crm_sort_direction_asc">По возрастанию</string>
+    <string name="crm_views_direction_asc">По возрастанию</string>
+    <string name="crm_sort_direction_desc">По убыванию</string>
+    <string name="crm_views_direction_desc">По убыванию</string>
 </resources>

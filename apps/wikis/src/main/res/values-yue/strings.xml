@@ -286,4 +286,5 @@
     <string name="wikis_access_owner_label">擁有者</string>
     <string name="wikis_access_tab_users">用戶</string>
     <string name="wikis_replicas_never_synced">從未</string>
+    <string name="wikis_access_tab_groups">群組</string>
 </resources>

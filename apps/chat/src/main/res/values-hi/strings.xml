@@ -35,4 +35,7 @@
     <string name="chat_message_send">भेजें</string>
     <string name="chat_attachment_remove">अनुलग्नक हटाएं</string>
     <string name="chat_message_remove_attachment">अनुलग्नक हटाएं</string>
+    <string name="chat_auth_login_failed">लॉगिन विफल</string>
+    <string name="chat_attachment_move_up">ऊपर ले जाएं</string>
+    <string name="chat_attachment_move_down">नीचे ले जाएं</string>
 </resources>

@@ -35,4 +35,7 @@
     <string name="chat_message_send">موڪليو</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
+    <string name="chat_auth_login_failed">لاگ ان ناڪام</string>
+    <string name="chat_attachment_move_up">مٿي منتقل ڪريو</string>
+    <string name="chat_attachment_move_down">هيٺ منتقل ڪريو</string>
 </resources>

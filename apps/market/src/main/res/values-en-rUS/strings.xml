@@ -218,4 +218,11 @@
     <string name="market_title">Market</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Physical</string>
+    <string name="market_account_location_label">Location</string>
+    <string name="market_editor_section_location">Location</string>
+    <string name="market_listing_detail_location_heading">Location</string>
+    <string name="market_editor_section_delivery">Delivery</string>
+    <string name="market_filter_delivery">Delivery</string>
+    <string name="market_purchase_delivery">Delivery</string>
+    <string name="market_shipping_days">Delivery</string>
 </resources>

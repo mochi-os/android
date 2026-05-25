@@ -35,4 +35,7 @@
     <string name="chat_message_send">Sūtīt</string>
     <string name="chat_attachment_remove">Noņemt pielikumu</string>
     <string name="chat_message_remove_attachment">Noņemt pielikumu</string>
+    <string name="chat_auth_login_failed">Pieteikšanās neizdevās</string>
+    <string name="chat_attachment_move_up">Pārvietot uz augšu</string>
+    <string name="chat_attachment_move_down">Pārvietot uz leju</string>
 </resources>

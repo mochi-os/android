@@ -199,4 +199,13 @@
     <string name="market_sidebar_reviews">Évaluations</string>
     <string name="market_status_refunded">Remboursé</string>
     <string name="market_title">Marché</string>
+    <string name="market_purchase_audit_section">Activité</string>
+    <string name="market_sale_section_audit">Activité</string>
+    <string name="market_account_location_label">Emplacement</string>
+    <string name="market_editor_section_location">Emplacement</string>
+    <string name="market_listing_detail_location_heading">Emplacement</string>
+    <string name="market_editor_section_delivery">Livraison</string>
+    <string name="market_filter_delivery">Livraison</string>
+    <string name="market_purchase_delivery">Livraison</string>
+    <string name="market_shipping_days">Livraison</string>
 </resources>

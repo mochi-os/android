@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">เพิ่มแท็ก</string>
     <string name="feeds_write_a_comment">เขียนความคิดเห็น…</string>
     <string name="feeds_access_permission">การอนุญาต</string>
+    <string name="feeds_move_up">เลื่อนขึ้น</string>
+    <string name="feeds_move_down">เลื่อนลง</string>
 </resources>

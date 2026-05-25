@@ -133,4 +133,5 @@
     <string name="forums_tag_clear">Počisti filter</string>
     <string name="forums_post_tag_add">Dodaj oznako</string>
     <string name="forums_write_comment">Napišite komentar…</string>
+    <string name="forums_auth_login_failed">Prijava neuspešna</string>
 </resources>

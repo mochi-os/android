@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Dodaj tag</string>
     <string name="feeds_write_a_comment">Napisz komentarz…</string>
     <string name="feeds_access_permission">Uprawnienie</string>
+    <string name="feeds_move_up">Przenieś w górę</string>
+    <string name="feeds_move_down">Przenieś w dół</string>
 </resources>

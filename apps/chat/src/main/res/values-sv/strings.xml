@@ -35,4 +35,7 @@
     <string name="chat_message_send">Skicka</string>
     <string name="chat_attachment_remove">Ta bort bilaga</string>
     <string name="chat_message_remove_attachment">Ta bort bilaga</string>
+    <string name="chat_auth_login_failed">Inloggning misslyckades</string>
+    <string name="chat_attachment_move_up">Flytta upp</string>
+    <string name="chat_attachment_move_down">Flytta ner</string>
 </resources>

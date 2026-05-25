@@ -179,4 +179,8 @@
     <string name="crm_class_move_up">Monte</string>
     <string name="crm_class_move_down">Desann</string>
     <string name="crm_views_sort_by">Triye pa</string>
+    <string name="crm_sort_direction_asc">Monte</string>
+    <string name="crm_views_direction_asc">Monte</string>
+    <string name="crm_sort_direction_desc">Desann</string>
+    <string name="crm_views_direction_desc">Desann</string>
 </resources>

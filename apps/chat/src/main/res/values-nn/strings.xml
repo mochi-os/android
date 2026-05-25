@@ -35,4 +35,7 @@
     <string name="chat_message_send">Send</string>
     <string name="chat_attachment_remove">Fjern vedlegg</string>
     <string name="chat_message_remove_attachment">Fjern vedlegg</string>
+    <string name="chat_auth_login_failed">Innlogging mislukkast</string>
+    <string name="chat_attachment_move_up">Flytt opp</string>
+    <string name="chat_attachment_move_down">Flytt ned</string>
 </resources>

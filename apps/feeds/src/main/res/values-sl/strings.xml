@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Dodaj oznako</string>
     <string name="feeds_write_a_comment">Napišite komentar…</string>
     <string name="feeds_access_permission">Dovoljenje</string>
+    <string name="feeds_move_up">Premakni navzgor</string>
+    <string name="feeds_move_down">Premakni navzdol</string>
 </resources>

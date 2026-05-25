@@ -35,4 +35,7 @@
     <string name="chat_message_send">Испрати</string>
     <string name="chat_attachment_remove">Отстрани прилог</string>
     <string name="chat_message_remove_attachment">Отстрани прилог</string>
+    <string name="chat_auth_login_failed">Најавата не успеа</string>
+    <string name="chat_attachment_move_up">Премести нагоре</string>
+    <string name="chat_attachment_move_down">Премести надолу</string>
 </resources>

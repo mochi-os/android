@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Сортирај по</string>
     <string name="crm_comment_remove_attachment">Отстрани прилог</string>
     <string name="crm_views_sort_by">Сортирај по</string>
+    <string name="crm_auth_login_failed">Најавата не успеа</string>
+    <string name="crm_views_move_up">Премести нагоре</string>
+    <string name="crm_class_move_up">Премести нагоре</string>
+    <string name="crm_views_move_down">Премести надолу</string>
+    <string name="crm_class_move_down">Премести надолу</string>
+    <string name="crm_sort_direction_asc">Растечки</string>
+    <string name="crm_views_direction_asc">Растечки</string>
+    <string name="crm_sort_direction_desc">Опаѓачки</string>
+    <string name="crm_views_direction_desc">Опаѓачки</string>
 </resources>

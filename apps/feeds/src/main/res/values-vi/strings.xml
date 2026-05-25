@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Thêm thẻ</string>
     <string name="feeds_write_a_comment">Viết bình luận…</string>
     <string name="feeds_access_permission">Quyền</string>
+    <string name="feeds_move_up">Di chuyển lên</string>
+    <string name="feeds_move_down">Di chuyển xuống</string>
 </resources>

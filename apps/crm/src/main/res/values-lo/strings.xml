@@ -169,4 +169,13 @@
     <string name="crm_sort_field">ຈັດລຽງຕາມ</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">ຈັດລຽງຕາມ</string>
+    <string name="crm_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
+    <string name="crm_views_move_up">ຍ້າຍຂຶ້ນ</string>
+    <string name="crm_class_move_up">ຍ້າຍຂຶ້ນ</string>
+    <string name="crm_views_move_down">ຍ້າຍລົງ</string>
+    <string name="crm_class_move_down">ຍ້າຍລົງ</string>
+    <string name="crm_sort_direction_asc">ຈາກນ້ອຍຫາໃຫຍ່</string>
+    <string name="crm_views_direction_asc">ຈາກນ້ອຍຫາໃຫຍ່</string>
+    <string name="crm_sort_direction_desc">ຈາກໃຫຍ່ຫານ້ອຍ</string>
+    <string name="crm_views_direction_desc">ຈາກໃຫຍ່ຫານ້ອຍ</string>
 </resources>

@@ -169,4 +169,13 @@
     <string name="projects_sort_field">क्रमबद्ध गर्नुहोस्</string>
     <string name="projects_comment_remove_attachment">Remove attachment</string>
     <string name="projects_views_sort_by">क्रमबद्ध गर्नुहोस्</string>
+    <string name="projects_auth_login_failed">लग इन असफल</string>
+    <string name="projects_views_move_up">माथि सार्नुहोस्</string>
+    <string name="projects_class_move_up">माथि सार्नुहोस्</string>
+    <string name="projects_views_move_down">तल सार्नुहोस्</string>
+    <string name="projects_class_move_down">तल सार्नुहोस्</string>
+    <string name="projects_sort_direction_asc">बढ्दो</string>
+    <string name="projects_views_direction_asc">बढ्दो</string>
+    <string name="projects_sort_direction_desc">घट्दो</string>
+    <string name="projects_views_direction_desc">घट्दो</string>
 </resources>

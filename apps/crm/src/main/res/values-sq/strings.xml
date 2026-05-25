@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Rendit sipas</string>
     <string name="crm_comment_remove_attachment">Hiq bashkëngjitjen</string>
     <string name="crm_views_sort_by">Rendit sipas</string>
+    <string name="crm_auth_login_failed">Hyrja dështoi</string>
+    <string name="crm_views_move_up">Lëviz lart</string>
+    <string name="crm_class_move_up">Lëviz lart</string>
+    <string name="crm_views_move_down">Lëviz poshtë</string>
+    <string name="crm_class_move_down">Lëviz poshtë</string>
+    <string name="crm_sort_direction_asc">Rritëse</string>
+    <string name="crm_views_direction_asc">Rritëse</string>
+    <string name="crm_sort_direction_desc">Zbritëse</string>
+    <string name="crm_views_direction_desc">Zbritëse</string>
 </resources>

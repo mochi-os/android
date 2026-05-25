@@ -182,4 +182,8 @@
     <string name="crm_class_move_up">Siirrä ylös</string>
     <string name="crm_class_move_down">Siirrä alas</string>
     <string name="crm_views_sort_by">Lajitteluperuste</string>
+    <string name="crm_sort_direction_asc">Nouseva</string>
+    <string name="crm_views_direction_asc">Nouseva</string>
+    <string name="crm_sort_direction_desc">Laskeva</string>
+    <string name="crm_views_direction_desc">Laskeva</string>
 </resources>

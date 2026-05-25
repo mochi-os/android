@@ -35,4 +35,7 @@
     <string name="chat_message_send">Invia</string>
     <string name="chat_attachment_remove">Rimuovi allegato</string>
     <string name="chat_message_remove_attachment">Rimuovi allegato</string>
+    <string name="chat_auth_login_failed">Accesso non riuscito</string>
+    <string name="chat_attachment_move_up">Sposta su</string>
+    <string name="chat_attachment_move_down">Sposta giù</string>
 </resources>

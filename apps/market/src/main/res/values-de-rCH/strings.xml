@@ -213,4 +213,13 @@
     <string name="market_title">Markt</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Physisch</string>
+    <string name="market_purchase_audit_section">Aktivität</string>
+    <string name="market_sale_section_audit">Aktivität</string>
+    <string name="market_account_location_label">Standort</string>
+    <string name="market_editor_section_location">Standort</string>
+    <string name="market_listing_detail_location_heading">Standort</string>
+    <string name="market_editor_section_delivery">Lieferung</string>
+    <string name="market_filter_delivery">Lieferung</string>
+    <string name="market_purchase_delivery">Lieferung</string>
+    <string name="market_shipping_days">Lieferung</string>
 </resources>

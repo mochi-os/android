@@ -182,4 +182,8 @@
     <string name="crm_class_move_up">Eraman gora</string>
     <string name="crm_class_move_down">Eraman behera</string>
     <string name="crm_views_sort_by">Ordenatu honen arabera</string>
+    <string name="crm_sort_direction_asc">Goranzkoa</string>
+    <string name="crm_views_direction_asc">Goranzkoa</string>
+    <string name="crm_sort_direction_desc">Beheranzkoa</string>
+    <string name="crm_views_direction_desc">Beheranzkoa</string>
 </resources>

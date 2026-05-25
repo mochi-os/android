@@ -61,4 +61,6 @@
     <string name="feeds_settings_access_updated">Access updated</string>
     <string name="feeds_settings_member_added">Member added</string>
     <string name="feeds_settings_member_removed">Member removed</string>
+    <string name="feeds_sort_top">Top</string>
+    <string name="feeds_location">Location</string>
 </resources>

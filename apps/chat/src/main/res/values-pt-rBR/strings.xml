@@ -35,4 +35,7 @@
     <string name="chat_message_send">Enviar</string>
     <string name="chat_attachment_remove">Remover anexo</string>
     <string name="chat_message_remove_attachment">Remover anexo</string>
+    <string name="chat_auth_login_failed">Falha no login</string>
+    <string name="chat_attachment_move_up">Mover para cima</string>
+    <string name="chat_attachment_move_down">Mover para baixo</string>
 </resources>

@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Иреттөө</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">Иреттөө</string>
+    <string name="crm_auth_login_failed">Кирүү ишке ашпады</string>
+    <string name="crm_views_move_up">Жогору жылдыруу</string>
+    <string name="crm_class_move_up">Жогору жылдыруу</string>
+    <string name="crm_views_move_down">Төмөн жылдыруу</string>
+    <string name="crm_class_move_down">Төмөн жылдыруу</string>
+    <string name="crm_sort_direction_asc">Өсүп</string>
+    <string name="crm_views_direction_asc">Өсүп</string>
+    <string name="crm_sort_direction_desc">Кемип</string>
+    <string name="crm_views_direction_desc">Кемип</string>
 </resources>

@@ -62,4 +62,6 @@
     <string name="profile_save_name">儲存名稱</string>
     <string name="profile_fingerprint">指紋</string>
     <string name="game_chat_move_played">%1$s 行咗 %2$s</string>
+    <string name="discovery_recommended">推薦</string>
+    <string name="profile_display_name">顯示名稱</string>
 </resources>

@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Etiket ekle</string>
     <string name="feeds_write_a_comment">Yorum yaz…</string>
     <string name="feeds_access_permission">İzin</string>
+    <string name="feeds_move_up">Yukarı taşı</string>
+    <string name="feeds_move_down">Aşağı taşı</string>
 </resources>

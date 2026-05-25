@@ -182,4 +182,8 @@
     <string name="projects_class_move_up">Déplacer vers le haut</string>
     <string name="projects_class_move_down">Déplacer vers le bas</string>
     <string name="projects_views_sort_by">Trier par</string>
+    <string name="projects_sort_direction_asc">Croissant</string>
+    <string name="projects_views_direction_asc">Croissant</string>
+    <string name="projects_sort_direction_desc">Décroissant</string>
+    <string name="projects_views_direction_desc">Décroissant</string>
 </resources>

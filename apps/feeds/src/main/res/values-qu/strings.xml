@@ -102,4 +102,6 @@
     <string name="feeds_add_tag">Add tag</string>
     <string name="feeds_write_a_comment">Write a comment…</string>
     <string name="feeds_access_permission">Permission</string>
+    <string name="feeds_move_up">Patamanta apay</string>
+    <string name="feeds_move_down">Uramanta apay</string>
 </resources>

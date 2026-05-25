@@ -179,4 +179,8 @@
     <string name="projects_class_move_up">Gluais suas</string>
     <string name="projects_class_move_down">Gluais sìos</string>
     <string name="projects_views_sort_by">Seòrsaich a-rèir</string>
+    <string name="projects_sort_direction_asc">A\' dìreadh</string>
+    <string name="projects_views_direction_asc">A\' dìreadh</string>
+    <string name="projects_sort_direction_desc">A\' teàrnadh</string>
+    <string name="projects_views_direction_desc">A\' teàrnadh</string>
 </resources>

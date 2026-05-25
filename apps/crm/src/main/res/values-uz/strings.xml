@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Saralash</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">Saralash</string>
+    <string name="crm_auth_login_failed">Kirish bajarilmadi</string>
+    <string name="crm_views_move_up">Yuqoriga ko‘chirish</string>
+    <string name="crm_class_move_up">Yuqoriga ko‘chirish</string>
+    <string name="crm_views_move_down">Pastga ko‘chirish</string>
+    <string name="crm_class_move_down">Pastga ko‘chirish</string>
+    <string name="crm_sort_direction_asc">O‘sish</string>
+    <string name="crm_views_direction_asc">O‘sish</string>
+    <string name="crm_sort_direction_desc">Kamayish</string>
+    <string name="crm_views_direction_desc">Kamayish</string>
 </resources>

@@ -182,4 +182,8 @@
     <string name="crm_class_move_up">Déplacer vers le haut</string>
     <string name="crm_class_move_down">Déplacer vers le bas</string>
     <string name="crm_views_sort_by">Trier par</string>
+    <string name="crm_sort_direction_asc">Croissant</string>
+    <string name="crm_views_direction_asc">Croissant</string>
+    <string name="crm_sort_direction_desc">Décroissant</string>
+    <string name="crm_views_direction_desc">Décroissant</string>
 </resources>

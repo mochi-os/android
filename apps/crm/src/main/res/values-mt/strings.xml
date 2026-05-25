@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Issortja skont</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">Issortja skont</string>
+    <string name="crm_auth_login_failed">Il-login falla</string>
+    <string name="crm_views_move_up">Mexxi \'l fuq</string>
+    <string name="crm_class_move_up">Mexxi \'l fuq</string>
+    <string name="crm_views_move_down">Mexxi \'l isfel</string>
+    <string name="crm_class_move_down">Mexxi \'l isfel</string>
+    <string name="crm_sort_direction_asc">Tielgħu</string>
+    <string name="crm_views_direction_asc">Tielgħu</string>
+    <string name="crm_sort_direction_desc">Nieżel</string>
+    <string name="crm_views_direction_desc">Nieżel</string>
 </resources>

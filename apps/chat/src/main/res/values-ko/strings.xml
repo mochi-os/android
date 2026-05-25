@@ -35,4 +35,7 @@
     <string name="chat_message_send">보내기</string>
     <string name="chat_attachment_remove">첨부 파일 제거</string>
     <string name="chat_message_remove_attachment">첨부 파일 제거</string>
+    <string name="chat_auth_login_failed">로그인 실패</string>
+    <string name="chat_attachment_move_up">위로 이동</string>
+    <string name="chat_attachment_move_down">아래로 이동</string>
 </resources>

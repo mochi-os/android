@@ -34,4 +34,6 @@
     <string name="people_common_chat">聊天</string>
     <string name="people_person_fingerprint_label">指紋</string>
     <string name="people_person_decline">拒絕</string>
+    <string name="people_groups_title">群組</string>
+    <string name="people_friends_groups_menu">群組</string>
 </resources>

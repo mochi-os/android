@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Panga kulingana na</string>
     <string name="crm_comment_remove_attachment">Ondoa kiambatisho</string>
     <string name="crm_views_sort_by">Panga kulingana na</string>
+    <string name="crm_auth_login_failed">Kuingia kumeshindwa</string>
+    <string name="crm_views_move_up">Sogeza juu</string>
+    <string name="crm_class_move_up">Sogeza juu</string>
+    <string name="crm_views_move_down">Sogeza chini</string>
+    <string name="crm_class_move_down">Sogeza chini</string>
+    <string name="crm_sort_direction_asc">Kupanda</string>
+    <string name="crm_views_direction_asc">Kupanda</string>
+    <string name="crm_sort_direction_desc">Kushuka</string>
+    <string name="crm_views_direction_desc">Kushuka</string>
 </resources>

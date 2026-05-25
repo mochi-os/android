@@ -132,4 +132,5 @@
     <string name="forums_comment_edit_body_field">Isi</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_auth_login_failed">Login gagal</string>
 </resources>

@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Додати тег</string>
     <string name="feeds_write_a_comment">Напишіть коментар…</string>
     <string name="feeds_access_permission">Дозвіл</string>
+    <string name="feeds_move_up">Перемістити вгору</string>
+    <string name="feeds_move_down">Перемістити вниз</string>
 </resources>

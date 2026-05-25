@@ -169,4 +169,13 @@
     <string name="crm_sort_field">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
+    <string name="crm_auth_login_failed">ਲਾਗਇਨ ਅਸਫਲ</string>
+    <string name="crm_views_move_up">ਉੱਪਰ ਜਾਓ</string>
+    <string name="crm_class_move_up">ਉੱਪਰ ਜਾਓ</string>
+    <string name="crm_views_move_down">ਹੇਠਾਂ ਜਾਓ</string>
+    <string name="crm_class_move_down">ਹੇਠਾਂ ਜਾਓ</string>
+    <string name="crm_sort_direction_asc">ਚੜ੍ਹਦਾ</string>
+    <string name="crm_views_direction_asc">ਚੜ੍ਹਦਾ</string>
+    <string name="crm_sort_direction_desc">ਘਟਦਾ</string>
+    <string name="crm_views_direction_desc">ਘਟਦਾ</string>
 </resources>

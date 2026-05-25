@@ -169,4 +169,13 @@
     <string name="projects_sort_field">Sortează după</string>
     <string name="projects_comment_remove_attachment">Elimină atașamentul</string>
     <string name="projects_views_sort_by">Sortează după</string>
+    <string name="projects_auth_login_failed">Autentificare eșuată</string>
+    <string name="projects_views_move_up">Mutați sus</string>
+    <string name="projects_class_move_up">Mutați sus</string>
+    <string name="projects_views_move_down">Mutați jos</string>
+    <string name="projects_class_move_down">Mutați jos</string>
+    <string name="projects_sort_direction_asc">Crescător</string>
+    <string name="projects_views_direction_asc">Crescător</string>
+    <string name="projects_sort_direction_desc">Descrescător</string>
+    <string name="projects_views_direction_desc">Descrescător</string>
 </resources>

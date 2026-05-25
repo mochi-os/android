@@ -169,4 +169,13 @@
     <string name="projects_sort_field">To nípasẹ̀</string>
     <string name="projects_comment_remove_attachment">Remove attachment</string>
     <string name="projects_views_sort_by">To nípasẹ̀</string>
+    <string name="projects_auth_login_failed">Iwọle kuna</string>
+    <string name="projects_views_move_up">Gbe soke</string>
+    <string name="projects_class_move_up">Gbe soke</string>
+    <string name="projects_views_move_down">Gbe sokale</string>
+    <string name="projects_class_move_down">Gbe sokale</string>
+    <string name="projects_sort_direction_asc">Goke</string>
+    <string name="projects_views_direction_asc">Goke</string>
+    <string name="projects_sort_direction_desc">Sokale</string>
+    <string name="projects_views_direction_desc">Sokale</string>
 </resources>

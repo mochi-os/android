@@ -35,4 +35,7 @@
     <string name="chat_message_send">Senda</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
+    <string name="chat_auth_login_failed">Innskráning mistókst</string>
+    <string name="chat_attachment_move_up">Færa upp</string>
+    <string name="chat_attachment_move_down">Færa niður</string>
 </resources>

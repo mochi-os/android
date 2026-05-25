@@ -478,4 +478,5 @@
     <string name="staff_status_manual">Manual</string>
     <string name="staff_status_moderator">Moderator</string>
     <string name="staff_status_rejected">Rejected</string>
+    <string name="staff_sidebar_market">Market</string>
 </resources>

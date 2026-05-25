@@ -35,4 +35,7 @@
     <string name="chat_message_send">Gửi</string>
     <string name="chat_attachment_remove">Xóa tệp đính kèm</string>
     <string name="chat_message_remove_attachment">Xóa tệp đính kèm</string>
+    <string name="chat_auth_login_failed">Đăng nhập thất bại</string>
+    <string name="chat_attachment_move_up">Di chuyển lên</string>
+    <string name="chat_attachment_move_down">Di chuyển xuống</string>
 </resources>

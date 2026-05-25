@@ -182,4 +182,8 @@
     <string name="projects_class_move_up">Liiguta üles</string>
     <string name="projects_class_move_down">Liiguta alla</string>
     <string name="projects_views_sort_by">Sorteeri</string>
+    <string name="projects_sort_direction_asc">Tõusev</string>
+    <string name="projects_views_direction_asc">Tõusev</string>
+    <string name="projects_sort_direction_desc">Kahanev</string>
+    <string name="projects_views_direction_desc">Kahanev</string>
 </resources>

@@ -169,4 +169,13 @@
     <string name="projects_sort_field">დაალაგე</string>
     <string name="projects_comment_remove_attachment">Remove attachment</string>
     <string name="projects_views_sort_by">დაალაგე</string>
+    <string name="projects_auth_login_failed">შესვლა ვერ მოხერხდა</string>
+    <string name="projects_views_move_up">აწევა</string>
+    <string name="projects_class_move_up">აწევა</string>
+    <string name="projects_views_move_down">ჩამოწევა</string>
+    <string name="projects_class_move_down">ჩამოწევა</string>
+    <string name="projects_sort_direction_asc">ზრდადობით</string>
+    <string name="projects_views_direction_asc">ზრდადობით</string>
+    <string name="projects_sort_direction_desc">კლებადობით</string>
+    <string name="projects_views_direction_desc">კლებადობით</string>
 </resources>

@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Tambah tag</string>
     <string name="feeds_write_a_comment">Tulis komen…</string>
     <string name="feeds_access_permission">Kebenaran</string>
+    <string name="feeds_move_up">Alihkan ke atas</string>
+    <string name="feeds_move_down">Alihkan ke bawah</string>
 </resources>

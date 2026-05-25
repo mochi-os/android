@@ -35,4 +35,7 @@
     <string name="chat_message_send">Фиристодан</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
+    <string name="chat_auth_login_failed">Воридшавӣ ноком шуд</string>
+    <string name="chat_attachment_move_up">Боло баровардан</string>
+    <string name="chat_attachment_move_down">Поён баровардан</string>
 </resources>

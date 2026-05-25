@@ -169,4 +169,13 @@
     <string name="projects_sort_field">အလိုက် စီရန်</string>
     <string name="projects_comment_remove_attachment">Remove attachment</string>
     <string name="projects_views_sort_by">အလိုက် စီရန်</string>
+    <string name="projects_auth_login_failed">လော့ဂ်အင် မအောင်မြင်ပါ</string>
+    <string name="projects_views_move_up">အပေါ်သို့ ရွှေ့</string>
+    <string name="projects_class_move_up">အပေါ်သို့ ရွှေ့</string>
+    <string name="projects_views_move_down">အောက်သို့ ရွှေ့</string>
+    <string name="projects_class_move_down">အောက်သို့ ရွှေ့</string>
+    <string name="projects_sort_direction_asc">တိုးတက်</string>
+    <string name="projects_views_direction_asc">တိုးတက်</string>
+    <string name="projects_sort_direction_desc">လျော့ကျ</string>
+    <string name="projects_views_direction_desc">လျော့ကျ</string>
 </resources>

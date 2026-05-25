@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Sortuj według</string>
     <string name="crm_comment_remove_attachment">Usuń załącznik</string>
     <string name="crm_views_sort_by">Sortuj według</string>
+    <string name="crm_auth_login_failed">Logowanie nieudane</string>
+    <string name="crm_views_move_up">Przenieś w górę</string>
+    <string name="crm_class_move_up">Przenieś w górę</string>
+    <string name="crm_views_move_down">Przenieś w dół</string>
+    <string name="crm_class_move_down">Przenieś w dół</string>
+    <string name="crm_sort_direction_asc">Rosnąco</string>
+    <string name="crm_views_direction_asc">Rosnąco</string>
+    <string name="crm_sort_direction_desc">Malejąco</string>
+    <string name="crm_views_direction_desc">Malejąco</string>
 </resources>

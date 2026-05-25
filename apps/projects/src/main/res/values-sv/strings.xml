@@ -169,4 +169,13 @@
     <string name="projects_sort_field">Sortera efter</string>
     <string name="projects_comment_remove_attachment">Ta bort bilaga</string>
     <string name="projects_views_sort_by">Sortera efter</string>
+    <string name="projects_auth_login_failed">Inloggning misslyckades</string>
+    <string name="projects_views_move_up">Flytta upp</string>
+    <string name="projects_class_move_up">Flytta upp</string>
+    <string name="projects_views_move_down">Flytta ner</string>
+    <string name="projects_class_move_down">Flytta ner</string>
+    <string name="projects_sort_direction_asc">Stigande</string>
+    <string name="projects_views_direction_asc">Stigande</string>
+    <string name="projects_sort_direction_desc">Fallande</string>
+    <string name="projects_views_direction_desc">Fallande</string>
 </resources>

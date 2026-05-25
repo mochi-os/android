@@ -35,4 +35,7 @@
     <string name="chat_message_send">ಕಳುಹಿಸಿ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
+    <string name="chat_auth_login_failed">ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ</string>
+    <string name="chat_attachment_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
+    <string name="chat_attachment_move_down">ಕೆಳಗೆ ಸರಿಸಿ</string>
 </resources>

@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Raða eftir</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">Raða eftir</string>
+    <string name="crm_auth_login_failed">Innskráning mistókst</string>
+    <string name="crm_views_move_up">Færa upp</string>
+    <string name="crm_class_move_up">Færa upp</string>
+    <string name="crm_views_move_down">Færa niður</string>
+    <string name="crm_class_move_down">Færa niður</string>
+    <string name="crm_sort_direction_asc">Hækkandi</string>
+    <string name="crm_views_direction_asc">Hækkandi</string>
+    <string name="crm_sort_direction_desc">Lækkandi</string>
+    <string name="crm_views_direction_desc">Lækkandi</string>
 </resources>

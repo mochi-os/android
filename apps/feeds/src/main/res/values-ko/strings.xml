@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">태그 추가</string>
     <string name="feeds_write_a_comment">댓글 작성…</string>
     <string name="feeds_access_permission">권한</string>
+    <string name="feeds_move_up">위로 이동</string>
+    <string name="feeds_move_down">아래로 이동</string>
 </resources>

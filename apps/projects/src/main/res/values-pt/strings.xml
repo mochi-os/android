@@ -169,4 +169,13 @@
     <string name="projects_sort_field">Ordenar por</string>
     <string name="projects_comment_remove_attachment">Remover anexo</string>
     <string name="projects_views_sort_by">Ordenar por</string>
+    <string name="projects_auth_login_failed">Início de sessão falhou</string>
+    <string name="projects_views_move_up">Mover para cima</string>
+    <string name="projects_class_move_up">Mover para cima</string>
+    <string name="projects_views_move_down">Mover para baixo</string>
+    <string name="projects_class_move_down">Mover para baixo</string>
+    <string name="projects_sort_direction_asc">Crescente</string>
+    <string name="projects_views_direction_asc">Crescente</string>
+    <string name="projects_sort_direction_desc">Decrescente</string>
+    <string name="projects_views_direction_desc">Decrescente</string>
 </resources>

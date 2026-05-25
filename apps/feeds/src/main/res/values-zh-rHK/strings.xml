@@ -51,4 +51,8 @@
     <string name="feeds_ai_mode_off">已停用</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_settings_access_updated">Access updated</string>
+    <string name="feeds_move_up">上移</string>
+    <string name="feeds_move_down">下移</string>
+    <string name="feeds_sort_top">頂部</string>
+    <string name="feeds_restore">還原</string>
 </resources>

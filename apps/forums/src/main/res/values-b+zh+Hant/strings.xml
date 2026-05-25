@@ -133,4 +133,5 @@
     <string name="forums_tag_clear">清除篩選</string>
     <string name="forums_post_tag_add">新增標籤</string>
     <string name="forums_write_comment">撰寫評論…</string>
+    <string name="forums_auth_login_failed">登入失敗</string>
 </resources>

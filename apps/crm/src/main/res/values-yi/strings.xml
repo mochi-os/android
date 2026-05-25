@@ -169,4 +169,13 @@
     <string name="crm_sort_field">סאָרטן לויט</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">סאָרטן לויט</string>
+    <string name="crm_auth_login_failed">לאָגין דורכגעפֿאַלן</string>
+    <string name="crm_views_move_up">באַוועגן אַרויף</string>
+    <string name="crm_class_move_up">באַוועגן אַרויף</string>
+    <string name="crm_views_move_down">באַוועגן אַראָפּ</string>
+    <string name="crm_class_move_down">באַוועגן אַראָפּ</string>
+    <string name="crm_sort_direction_asc">שטייגן</string>
+    <string name="crm_views_direction_asc">שטייגן</string>
+    <string name="crm_sort_direction_desc">אַראָפּגיין</string>
+    <string name="crm_views_direction_desc">אַראָפּגיין</string>
 </resources>

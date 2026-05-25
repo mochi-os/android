@@ -182,4 +182,8 @@
     <string name="projects_class_move_up">انتقال به بالا</string>
     <string name="projects_class_move_down">انتقال به پایین</string>
     <string name="projects_views_sort_by">مرتب‌سازی بر اساس</string>
+    <string name="projects_sort_direction_asc">صعودی</string>
+    <string name="projects_views_direction_asc">صعودی</string>
+    <string name="projects_sort_direction_desc">نزولی</string>
+    <string name="projects_views_direction_desc">نزولی</string>
 </resources>

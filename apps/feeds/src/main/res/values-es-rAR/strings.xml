@@ -78,4 +78,5 @@
     <string name="feeds_settings_access_updated">Access updated</string>
     <string name="feeds_settings_member_added">Miembro agregado</string>
     <string name="feeds_settings_member_removed">Miembro eliminado</string>
+    <string name="feeds_location">Ubicación</string>
 </resources>

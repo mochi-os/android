@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Susun mengikut</string>
     <string name="crm_comment_remove_attachment">Buang lampiran</string>
     <string name="crm_views_sort_by">Susun mengikut</string>
+    <string name="crm_auth_login_failed">Log masuk gagal</string>
+    <string name="crm_views_move_up">Alihkan ke atas</string>
+    <string name="crm_class_move_up">Alihkan ke atas</string>
+    <string name="crm_views_move_down">Alihkan ke bawah</string>
+    <string name="crm_class_move_down">Alihkan ke bawah</string>
+    <string name="crm_sort_direction_asc">Menaik</string>
+    <string name="crm_views_direction_asc">Menaik</string>
+    <string name="crm_sort_direction_desc">Menurun</string>
+    <string name="crm_views_direction_desc">Menurun</string>
 </resources>

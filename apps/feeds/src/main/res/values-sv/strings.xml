@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Lägg till tagg</string>
     <string name="feeds_write_a_comment">Skriv en kommentar…</string>
     <string name="feeds_access_permission">Behörighet</string>
+    <string name="feeds_move_up">Flytta upp</string>
+    <string name="feeds_move_down">Flytta ner</string>
 </resources>

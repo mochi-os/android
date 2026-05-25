@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">新增標籤</string>
     <string name="feeds_write_a_comment">撰寫評論…</string>
     <string name="feeds_access_permission">權限</string>
+    <string name="feeds_move_up">上移</string>
+    <string name="feeds_move_down">下移</string>
 </resources>

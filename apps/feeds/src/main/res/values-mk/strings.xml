@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Додај ознака</string>
     <string name="feeds_write_a_comment">Напишете коментар…</string>
     <string name="feeds_access_permission">Дозвола</string>
+    <string name="feeds_move_up">Премести нагоре</string>
+    <string name="feeds_move_down">Премести надолу</string>
 </resources>

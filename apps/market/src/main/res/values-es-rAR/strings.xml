@@ -242,4 +242,13 @@
     <string name="market_title">Mercado</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Físico</string>
+    <string name="market_purchase_audit_section">Actividad</string>
+    <string name="market_sale_section_audit">Actividad</string>
+    <string name="market_account_location_label">Ubicación</string>
+    <string name="market_editor_section_location">Ubicación</string>
+    <string name="market_listing_detail_location_heading">Ubicación</string>
+    <string name="market_editor_section_delivery">Entrega</string>
+    <string name="market_filter_delivery">Entrega</string>
+    <string name="market_purchase_delivery">Entrega</string>
+    <string name="market_shipping_days">Entrega</string>
 </resources>

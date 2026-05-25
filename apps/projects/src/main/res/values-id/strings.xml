@@ -169,4 +169,13 @@
     <string name="projects_sort_field">Urutkan berdasarkan</string>
     <string name="projects_comment_remove_attachment">Hapus lampiran</string>
     <string name="projects_views_sort_by">Urutkan berdasarkan</string>
+    <string name="projects_auth_login_failed">Login gagal</string>
+    <string name="projects_views_move_up">Pindahkan ke atas</string>
+    <string name="projects_class_move_up">Pindahkan ke atas</string>
+    <string name="projects_views_move_down">Pindahkan ke bawah</string>
+    <string name="projects_class_move_down">Pindahkan ke bawah</string>
+    <string name="projects_sort_direction_asc">Naik</string>
+    <string name="projects_views_direction_asc">Naik</string>
+    <string name="projects_sort_direction_desc">Turun</string>
+    <string name="projects_views_direction_desc">Turun</string>
 </resources>

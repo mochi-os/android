@@ -68,4 +68,11 @@
     <string name="forums_comment_delete">Delete comment</string>
     <string name="forums_comment_delete_title">Delete comment</string>
     <string name="forums_settings_rename">重新命名</string>
+    <string name="forums_find_recommended">推薦</string>
+    <string name="forums_auth_display_name">顯示名稱</string>
+    <string name="forums_auth_login_failed">登入失敗</string>
+    <string name="forums_sort_top">頂部</string>
+    <string name="forums_post_restore">還原</string>
+    <string name="forums_comment_restore">還原</string>
+    <string name="forums_moderation_title">審核</string>
 </resources>

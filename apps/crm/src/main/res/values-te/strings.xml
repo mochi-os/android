@@ -169,4 +169,13 @@
     <string name="crm_sort_field">దీని ద్వారా క్రమబద్ధీకరించు</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">దీని ద్వారా క్రమబద్ధీకరించు</string>
+    <string name="crm_auth_login_failed">లాగిన్ విఫలమైంది</string>
+    <string name="crm_views_move_up">పైకి జరుపు</string>
+    <string name="crm_class_move_up">పైకి జరుపు</string>
+    <string name="crm_views_move_down">కిందికి జరుపు</string>
+    <string name="crm_class_move_down">కిందికి జరుపు</string>
+    <string name="crm_sort_direction_asc">పెరుగుదల</string>
+    <string name="crm_views_direction_asc">పెరుగుదల</string>
+    <string name="crm_sort_direction_desc">తగ్గుదల</string>
+    <string name="crm_views_direction_desc">తగ్గుదల</string>
 </resources>

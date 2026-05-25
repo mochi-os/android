@@ -35,4 +35,7 @@
     <string name="chat_message_send">Gönder</string>
     <string name="chat_attachment_remove">Eki kaldır</string>
     <string name="chat_message_remove_attachment">Eki kaldır</string>
+    <string name="chat_auth_login_failed">Giriş başarısız</string>
+    <string name="chat_attachment_move_up">Yukarı taşı</string>
+    <string name="chat_attachment_move_down">Aşağı taşı</string>
 </resources>

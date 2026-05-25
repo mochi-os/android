@@ -169,4 +169,13 @@
     <string name="crm_sort_field">ترتیب</string>
     <string name="crm_comment_remove_attachment">اٹیچمنٹ ہٹائیں</string>
     <string name="crm_views_sort_by">ترتیب</string>
+    <string name="crm_auth_login_failed">لاگ ان ناکام</string>
+    <string name="crm_views_move_up">اوپر منتقل کریں</string>
+    <string name="crm_class_move_up">اوپر منتقل کریں</string>
+    <string name="crm_views_move_down">نیچے منتقل کریں</string>
+    <string name="crm_class_move_down">نیچے منتقل کریں</string>
+    <string name="crm_sort_direction_asc">چڑھتی</string>
+    <string name="crm_views_direction_asc">چڑھتی</string>
+    <string name="crm_sort_direction_desc">ڈھلتی</string>
+    <string name="crm_views_direction_desc">ڈھلتی</string>
 </resources>

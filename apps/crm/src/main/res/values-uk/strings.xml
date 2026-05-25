@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Сортувати за</string>
     <string name="crm_comment_remove_attachment">Видалити вкладення</string>
     <string name="crm_views_sort_by">Сортувати за</string>
+    <string name="crm_auth_login_failed">Не вдалося увійти</string>
+    <string name="crm_views_move_up">Перемістити вгору</string>
+    <string name="crm_class_move_up">Перемістити вгору</string>
+    <string name="crm_views_move_down">Перемістити вниз</string>
+    <string name="crm_class_move_down">Перемістити вниз</string>
+    <string name="crm_sort_direction_asc">За зростанням</string>
+    <string name="crm_views_direction_asc">За зростанням</string>
+    <string name="crm_sort_direction_desc">За спаданням</string>
+    <string name="crm_views_direction_desc">За спаданням</string>
 </resources>

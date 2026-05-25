@@ -35,4 +35,7 @@
     <string name="chat_message_send">ਭੇਜੋ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
+    <string name="chat_auth_login_failed">ਲਾਗਇਨ ਅਸਫਲ</string>
+    <string name="chat_attachment_move_up">ਉੱਪਰ ਜਾਓ</string>
+    <string name="chat_attachment_move_down">ਹੇਠਾਂ ਜਾਓ</string>
 </resources>

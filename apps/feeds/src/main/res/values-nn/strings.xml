@@ -104,4 +104,6 @@
     <string name="feeds_write_a_comment">Skriv ein kommentar…</string>
     <string name="feeds_save_name">Lagre namn</string>
     <string name="feeds_access_permission">Løyve</string>
+    <string name="feeds_move_up">Flytt opp</string>
+    <string name="feeds_move_down">Flytt ned</string>
 </resources>

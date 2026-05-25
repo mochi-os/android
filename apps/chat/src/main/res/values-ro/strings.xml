@@ -35,4 +35,7 @@
     <string name="chat_message_send">Trimite</string>
     <string name="chat_attachment_remove">Elimină atașamentul</string>
     <string name="chat_message_remove_attachment">Elimină atașamentul</string>
+    <string name="chat_auth_login_failed">Autentificare eșuată</string>
+    <string name="chat_attachment_move_up">Mutați sus</string>
+    <string name="chat_attachment_move_down">Mutați jos</string>
 </resources>

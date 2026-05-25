@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Shto etiketë</string>
     <string name="feeds_write_a_comment">Shkruaj një koment…</string>
     <string name="feeds_access_permission">Lejim</string>
+    <string name="feeds_move_up">Lëviz lart</string>
+    <string name="feeds_move_down">Lëviz poshtë</string>
 </resources>

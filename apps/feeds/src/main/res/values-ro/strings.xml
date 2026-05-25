@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Adaugă etichetă</string>
     <string name="feeds_write_a_comment">Scrie un comentariu…</string>
     <string name="feeds_access_permission">Permisiune</string>
+    <string name="feeds_move_up">Mutați sus</string>
+    <string name="feeds_move_down">Mutați jos</string>
 </resources>

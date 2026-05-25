@@ -133,4 +133,5 @@
     <string name="forums_tag_clear">ഫിൽട്ടർ മായ്ക്കുക</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_auth_login_failed">ലോഗിൻ പരാജയപ്പെട്ടു</string>
 </resources>

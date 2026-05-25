@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Sortir dumasar</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">Sortir dumasar</string>
+    <string name="crm_auth_login_failed">Login gagal</string>
+    <string name="crm_views_move_up">Pindahkeun ka luhur</string>
+    <string name="crm_class_move_up">Pindahkeun ka luhur</string>
+    <string name="crm_views_move_down">Pindahkeun ka handap</string>
+    <string name="crm_class_move_down">Pindahkeun ka handap</string>
+    <string name="crm_sort_direction_asc">Naék</string>
+    <string name="crm_views_direction_asc">Naék</string>
+    <string name="crm_sort_direction_desc">Turun</string>
+    <string name="crm_views_direction_desc">Turun</string>
 </resources>

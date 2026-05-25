@@ -181,4 +181,8 @@
     <string name="projects_class_move_up">Mover arriba</string>
     <string name="projects_class_move_down">Mover abajo</string>
     <string name="projects_views_sort_by">Ordenar por</string>
+    <string name="projects_sort_direction_asc">Ascendente</string>
+    <string name="projects_views_direction_asc">Ascendente</string>
+    <string name="projects_sort_direction_desc">Descendente</string>
+    <string name="projects_views_direction_desc">Descendente</string>
 </resources>

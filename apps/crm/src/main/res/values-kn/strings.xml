@@ -169,4 +169,13 @@
     <string name="crm_sort_field">ವಿಂಗಡಿಸು</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">ವಿಂಗಡಿಸು</string>
+    <string name="crm_auth_login_failed">ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ</string>
+    <string name="crm_views_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
+    <string name="crm_class_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
+    <string name="crm_views_move_down">ಕೆಳಗೆ ಸರಿಸಿ</string>
+    <string name="crm_class_move_down">ಕೆಳಗೆ ಸರಿಸಿ</string>
+    <string name="crm_sort_direction_asc">ಆರೋಹಣ</string>
+    <string name="crm_views_direction_asc">ಆರೋಹಣ</string>
+    <string name="crm_sort_direction_desc">ಅವರೋಹಣ</string>
+    <string name="crm_views_direction_desc">ಅವರೋಹಣ</string>
 </resources>

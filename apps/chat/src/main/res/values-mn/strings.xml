@@ -35,4 +35,7 @@
     <string name="chat_message_send">Илгээх</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
+    <string name="chat_auth_login_failed">Нэвтрэх амжилтгүй</string>
+    <string name="chat_attachment_move_up">Дээш зөөх</string>
+    <string name="chat_attachment_move_down">Доош зөөх</string>
 </resources>

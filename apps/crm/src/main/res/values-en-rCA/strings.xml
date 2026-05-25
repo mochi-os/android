@@ -95,4 +95,25 @@
     <string name="crm_class_move_down">Move down</string>
     <string name="crm_field_type_date">Date</string>
     <string name="crm_field_required">Required</string>
+    <string name="crm_design">Design</string>
+    <string name="crm_access_level_design">Design</string>
+    <string name="crm_design_title">Design</string>
+    <string name="crm_sort_direction">Direction</string>
+    <string name="crm_views_direction">Direction</string>
+    <string name="crm_sort_direction_asc">Ascending</string>
+    <string name="crm_views_direction_asc">Ascending</string>
+    <string name="crm_sort_direction_desc">Descending</string>
+    <string name="crm_views_direction_desc">Descending</string>
+    <string name="crm_sort_created">Created</string>
+    <string name="crm_views_sort_created">Created</string>
+    <string name="crm_sort_updated">Updated</string>
+    <string name="crm_views_sort_updated">Updated</string>
+    <string name="crm_object_watch">Watch</string>
+    <string name="crm_watchers_watch">Watch</string>
+    <string name="crm_object_tab_activity">Activity</string>
+    <string name="crm_object_tab_links">Links</string>
+    <string name="crm_links_title">Links</string>
+    <string name="crm_request_merge">Merge</string>
+    <string name="crm_request_merge_dialog_title">Merge</string>
+    <string name="crm_request_method_merge">Merge</string>
 </resources>

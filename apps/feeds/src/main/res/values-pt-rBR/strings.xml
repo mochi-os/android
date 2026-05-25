@@ -94,4 +94,6 @@
     <string name="feeds_add_tag">Adicionar etiqueta</string>
     <string name="feeds_write_a_comment">Escreva um comentário…</string>
     <string name="feeds_access_permission">Permissão</string>
+    <string name="feeds_move_up">Mover para cima</string>
+    <string name="feeds_move_down">Mover para baixo</string>
 </resources>

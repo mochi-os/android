@@ -169,4 +169,13 @@
     <string name="crm_sort_field">Tartiibessuu</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">Tartiibessuu</string>
+    <string name="crm_auth_login_failed">Galmaa\'uun hin milkoofne</string>
+    <string name="crm_views_move_up">Gubbatti dabarsi</string>
+    <string name="crm_class_move_up">Gubbatti dabarsi</string>
+    <string name="crm_views_move_down">Gadi dabarsi</string>
+    <string name="crm_class_move_down">Gadi dabarsi</string>
+    <string name="crm_sort_direction_asc">Ol guddataa</string>
+    <string name="crm_views_direction_asc">Ol guddataa</string>
+    <string name="crm_sort_direction_desc">Gad bu\'aa</string>
+    <string name="crm_views_direction_desc">Gad bu\'aa</string>
 </resources>

@@ -35,4 +35,7 @@
     <string name="chat_message_send">Kirim</string>
     <string name="chat_attachment_remove">Hapus lampiran</string>
     <string name="chat_message_remove_attachment">Hapus lampiran</string>
+    <string name="chat_auth_login_failed">Login gagal</string>
+    <string name="chat_attachment_move_up">Pindahkan ke atas</string>
+    <string name="chat_attachment_move_down">Pindahkan ke bawah</string>
 </resources>

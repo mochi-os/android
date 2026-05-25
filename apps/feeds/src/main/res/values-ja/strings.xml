@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">タグを追加</string>
     <string name="feeds_write_a_comment">コメントを書く…</string>
     <string name="feeds_access_permission">権限</string>
+    <string name="feeds_move_up">上に移動</string>
+    <string name="feeds_move_down">下に移動</string>
 </resources>

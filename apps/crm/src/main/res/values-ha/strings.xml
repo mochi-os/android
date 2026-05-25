@@ -179,4 +179,8 @@
     <string name="crm_class_move_up">Matsa sama</string>
     <string name="crm_class_move_down">Matsa ƙasa</string>
     <string name="crm_views_sort_by">Tsara ta</string>
+    <string name="crm_sort_direction_asc">Hawan</string>
+    <string name="crm_views_direction_asc">Hawan</string>
+    <string name="crm_sort_direction_desc">Saukar</string>
+    <string name="crm_views_direction_desc">Saukar</string>
 </resources>

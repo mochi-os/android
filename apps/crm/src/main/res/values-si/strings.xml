@@ -169,4 +169,13 @@
     <string name="crm_sort_field">අනුව වර්ග කරන්න</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
     <string name="crm_views_sort_by">අනුව වර්ග කරන්න</string>
+    <string name="crm_auth_login_failed">පුරනය වීම අසාර්ථකයි</string>
+    <string name="crm_views_move_up">ඉහළට ගෙනයන්න</string>
+    <string name="crm_class_move_up">ඉහළට ගෙනයන්න</string>
+    <string name="crm_views_move_down">පහළට ගෙනයන්න</string>
+    <string name="crm_class_move_down">පහළට ගෙනයන්න</string>
+    <string name="crm_sort_direction_asc">ආරෝහණ</string>
+    <string name="crm_views_direction_asc">ආරෝහණ</string>
+    <string name="crm_sort_direction_desc">අවරෝහණ</string>
+    <string name="crm_views_direction_desc">අවරෝහණ</string>
 </resources>

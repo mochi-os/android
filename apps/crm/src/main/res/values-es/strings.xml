@@ -182,4 +182,8 @@
     <string name="crm_class_move_up">Mover arriba</string>
     <string name="crm_class_move_down">Mover abajo</string>
     <string name="crm_views_sort_by">Ordenar por</string>
+    <string name="crm_sort_direction_asc">Ascendente</string>
+    <string name="crm_views_direction_asc">Ascendente</string>
+    <string name="crm_sort_direction_desc">Descendente</string>
+    <string name="crm_views_direction_desc">Descendente</string>
 </resources>

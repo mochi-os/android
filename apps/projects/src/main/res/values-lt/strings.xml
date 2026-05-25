@@ -169,4 +169,13 @@
     <string name="projects_sort_field">Rūšiuoti pagal</string>
     <string name="projects_comment_remove_attachment">Pašalinti priedą</string>
     <string name="projects_views_sort_by">Rūšiuoti pagal</string>
+    <string name="projects_auth_login_failed">Prisijungti nepavyko</string>
+    <string name="projects_views_move_up">Perkelti į viršų</string>
+    <string name="projects_class_move_up">Perkelti į viršų</string>
+    <string name="projects_views_move_down">Perkelti į apačią</string>
+    <string name="projects_class_move_down">Perkelti į apačią</string>
+    <string name="projects_sort_direction_asc">Didėjančiai</string>
+    <string name="projects_views_direction_asc">Didėjančiai</string>
+    <string name="projects_sort_direction_desc">Mažėjančiai</string>
+    <string name="projects_views_direction_desc">Mažėjančiai</string>
 </resources>

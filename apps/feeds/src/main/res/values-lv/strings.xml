@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Pievienot atzīmi</string>
     <string name="feeds_write_a_comment">Rakstiet komentāru…</string>
     <string name="feeds_access_permission">Atļauja</string>
+    <string name="feeds_move_up">Pārvietot uz augšu</string>
+    <string name="feeds_move_down">Pārvietot uz leju</string>
 </resources>

@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">ٹیگ شامل کریں</string>
     <string name="feeds_write_a_comment">تبصرہ لکھیں…</string>
     <string name="feeds_access_permission">اجازت</string>
+    <string name="feeds_move_up">اوپر منتقل کریں</string>
+    <string name="feeds_move_down">نیچے منتقل کریں</string>
 </resources>

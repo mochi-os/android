@@ -179,4 +179,8 @@
     <string name="projects_class_move_up">Տեղափոխել վերև</string>
     <string name="projects_class_move_down">Տեղափոխել ներքև</string>
     <string name="projects_views_sort_by">Տեսակավորել ըստ</string>
+    <string name="projects_sort_direction_asc">Աճման</string>
+    <string name="projects_views_direction_asc">Աճման</string>
+    <string name="projects_sort_direction_desc">Նվազման</string>
+    <string name="projects_views_direction_desc">Նվազման</string>
 </resources>

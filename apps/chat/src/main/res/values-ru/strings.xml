@@ -35,4 +35,7 @@
     <string name="chat_message_send">Отправить</string>
     <string name="chat_attachment_remove">Удалить вложение</string>
     <string name="chat_message_remove_attachment">Удалить вложение</string>
+    <string name="chat_auth_login_failed">Ошибка входа</string>
+    <string name="chat_attachment_move_up">Переместить вверх</string>
+    <string name="chat_attachment_move_down">Переместить вниз</string>
 </resources>

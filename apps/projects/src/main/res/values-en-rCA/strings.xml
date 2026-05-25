@@ -96,4 +96,25 @@
     <string name="projects_class_move_down">Move down</string>
     <string name="projects_field_type_date">Date</string>
     <string name="projects_field_required">Required</string>
+    <string name="projects_design">Design</string>
+    <string name="projects_access_level_design">Design</string>
+    <string name="projects_design_title">Design</string>
+    <string name="projects_sort_direction">Direction</string>
+    <string name="projects_views_direction">Direction</string>
+    <string name="projects_sort_direction_asc">Ascending</string>
+    <string name="projects_views_direction_asc">Ascending</string>
+    <string name="projects_sort_direction_desc">Descending</string>
+    <string name="projects_views_direction_desc">Descending</string>
+    <string name="projects_sort_created">Created</string>
+    <string name="projects_views_sort_created">Created</string>
+    <string name="projects_sort_updated">Updated</string>
+    <string name="projects_views_sort_updated">Updated</string>
+    <string name="projects_object_watch">Watch</string>
+    <string name="projects_watchers_watch">Watch</string>
+    <string name="projects_object_tab_activity">Activity</string>
+    <string name="projects_object_tab_links">Links</string>
+    <string name="projects_links_title">Links</string>
+    <string name="projects_request_merge">Merge</string>
+    <string name="projects_request_merge_dialog_title">Merge</string>
+    <string name="projects_request_method_merge">Merge</string>
 </resources>

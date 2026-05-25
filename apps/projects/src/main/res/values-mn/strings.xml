@@ -169,4 +169,13 @@
     <string name="projects_sort_field">Эрэмбэлэх</string>
     <string name="projects_comment_remove_attachment">Remove attachment</string>
     <string name="projects_views_sort_by">Эрэмбэлэх</string>
+    <string name="projects_auth_login_failed">Нэвтрэх амжилтгүй</string>
+    <string name="projects_views_move_up">Дээш зөөх</string>
+    <string name="projects_class_move_up">Дээш зөөх</string>
+    <string name="projects_views_move_down">Доош зөөх</string>
+    <string name="projects_class_move_down">Доош зөөх</string>
+    <string name="projects_sort_direction_asc">Өсөх</string>
+    <string name="projects_views_direction_asc">Өсөх</string>
+    <string name="projects_sort_direction_desc">Буурах</string>
+    <string name="projects_views_direction_desc">Буурах</string>
 </resources>

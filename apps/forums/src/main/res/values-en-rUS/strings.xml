@@ -153,4 +153,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_post_tag_label">Tag</string>
     <string name="forums_access_target">Target</string>
+    <string name="forums_find_recommended">Recommended</string>
+    <string name="forums_sort_top">Top</string>
 </resources>

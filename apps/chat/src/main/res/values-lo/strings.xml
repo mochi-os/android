@@ -35,4 +35,7 @@
     <string name="chat_message_send">ສົ່ງ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
+    <string name="chat_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
+    <string name="chat_attachment_move_up">ຍ້າຍຂຶ້ນ</string>
+    <string name="chat_attachment_move_down">ຍ້າຍລົງ</string>
 </resources>

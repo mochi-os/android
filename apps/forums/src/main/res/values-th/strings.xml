@@ -133,4 +133,5 @@
     <string name="forums_tag_clear">ล้างตัวกรอง</string>
     <string name="forums_post_tag_add">เพิ่มแท็ก</string>
     <string name="forums_write_comment">เขียนความคิดเห็น…</string>
+    <string name="forums_auth_login_failed">เข้าสู่ระบบล้มเหลว</string>
 </resources>

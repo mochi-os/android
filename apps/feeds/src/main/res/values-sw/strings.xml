@@ -103,4 +103,6 @@
     <string name="feeds_add_tag">Ongeza lebo</string>
     <string name="feeds_write_a_comment">Andika maoni…</string>
     <string name="feeds_access_permission">Ruhusa</string>
+    <string name="feeds_move_up">Sogeza juu</string>
+    <string name="feeds_move_down">Sogeza chini</string>
 </resources>

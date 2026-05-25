@@ -179,4 +179,8 @@
     <string name="projects_class_move_up">Emonge\\'e yvate</string>
     <string name="projects_class_move_down">Emonge\\'e yvy gotyo</string>
     <string name="projects_views_sort_by">Embysýi</string>
+    <string name="projects_sort_direction_asc">Ojupíva</string>
+    <string name="projects_views_direction_asc">Ojupíva</string>
+    <string name="projects_sort_direction_desc">Oguejyva</string>
+    <string name="projects_views_direction_desc">Oguejyva</string>
 </resources>

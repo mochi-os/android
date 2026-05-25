@@ -179,4 +179,8 @@
     <string name="crm_class_move_up">Gluais suas</string>
     <string name="crm_class_move_down">Gluais sìos</string>
     <string name="crm_views_sort_by">Seòrsaich a-rèir</string>
+    <string name="crm_sort_direction_asc">A\' dìreadh</string>
+    <string name="crm_views_direction_asc">A\' dìreadh</string>
+    <string name="crm_sort_direction_desc">A\' teàrnadh</string>
+    <string name="crm_views_direction_desc">A\' teàrnadh</string>
 </resources>

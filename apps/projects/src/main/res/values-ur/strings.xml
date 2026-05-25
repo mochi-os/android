@@ -169,4 +169,13 @@
     <string name="projects_sort_field">ترتیب</string>
     <string name="projects_comment_remove_attachment">اٹیچمنٹ ہٹائیں</string>
     <string name="projects_views_sort_by">ترتیب</string>
+    <string name="projects_auth_login_failed">لاگ ان ناکام</string>
+    <string name="projects_views_move_up">اوپر منتقل کریں</string>
+    <string name="projects_class_move_up">اوپر منتقل کریں</string>
+    <string name="projects_views_move_down">نیچے منتقل کریں</string>
+    <string name="projects_class_move_down">نیچے منتقل کریں</string>
+    <string name="projects_sort_direction_asc">چڑھتی</string>
+    <string name="projects_views_direction_asc">چڑھتی</string>
+    <string name="projects_sort_direction_desc">ڈھلتی</string>
+    <string name="projects_views_direction_desc">ڈھلتی</string>
 </resources>

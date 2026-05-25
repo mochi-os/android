@@ -452,4 +452,8 @@
     <string name="staff_categories_toast_updated">Catégorie modifiée</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_channel_name">Staff</string>
+    <string name="staff_categories_col_parent">Parent</string>
+    <string name="staff_categories_dialog_parent">Parent</string>
+    <string name="staff_categories_col_position">Position</string>
+    <string name="staff_categories_dialog_position">Position</string>
 </resources>

@@ -169,4 +169,13 @@
     <string name="crm_sort_field">並べ替え</string>
     <string name="crm_comment_remove_attachment">添付を削除</string>
     <string name="crm_views_sort_by">並べ替え</string>
+    <string name="crm_auth_login_failed">ログインに失敗しました</string>
+    <string name="crm_views_move_up">上に移動</string>
+    <string name="crm_class_move_up">上に移動</string>
+    <string name="crm_views_move_down">下に移動</string>
+    <string name="crm_class_move_down">下に移動</string>
+    <string name="crm_sort_direction_asc">昇順</string>
+    <string name="crm_views_direction_asc">昇順</string>
+    <string name="crm_sort_direction_desc">降順</string>
+    <string name="crm_views_direction_desc">降順</string>
 </resources>
