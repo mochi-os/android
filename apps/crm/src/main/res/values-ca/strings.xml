@@ -316,4 +316,14 @@
     <string name="crm_request_commit_message">Missatge del commit</string>
     <string name="crm_request_method_squash">Squash</string>
     <string name="crm_request_method_rebase">Rebase</string>
+
+    <string name="notification_channel_crm">Notificacions de CRM</string>
+    <string name="crm_auth_brand">Mochi CRMs</string>
+    <string name="crm_list_search_placeholder">Cerca CRM</string>
+    <string name="crm_list_no_matching">Cap CRM coincident</string>
+    <string name="crm_list_empty">Encara no hi ha cap CRM</string>
+    <string name="crm_find_search_placeholder">Cerca un CRM o enganxa un URL</string>
+    <string name="crm_find_search_hint">Cerca un CRM al qual subscriure\'s</string>
+    <string name="crm_settings_delete_confirm_message">Segur que voleu suprimir aquest CRM? Tots els objectes, comentaris i paràmetres se suprimiran permanentment.</string>
+
 </resources>

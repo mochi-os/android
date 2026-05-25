@@ -218,4 +218,36 @@
 
     <string name="game_chat_load_more">Indlæs ældre beskeder</string>
     <string name="game_chat_move_played">%1$s spillede %2$s</string>
+
+    <string name="push_service_channel_description">Holder Mochi forbundet for at modtage notifikationer</string>
+    <string name="push_service_group">Baggrundstjeneste</string>
+    <string name="push_service_title">Mochi lytter efter notifikationer</string>
+    <string name="reauth_channel_name">Mochi-login påkrævet</string>
+    <string name="reauth_channel_description">Vises, når Mochi ikke kan nå din server, fordi din session er blevet ugyldig</string>
+    <string name="reauth_signin_title">Mochi: log ind igen</string>
+    <string name="reauth_signin_text">Notifikationer er sat på pause, indtil du logger ind igen</string>
+    <string name="oem_hint_title">Forbliv tilgængelig i baggrunden</string>
+    <string name="oem_hint_body">Mochi skal køre i baggrunden for at levere notifikationer. Tillad dette på næste skærm, ellers kan din telefon sætte notifikationer på pause, når skærmen er slukket.</string>
+    <string name="oem_hint_samsung_note">På Samsung-telefoner skal du også tjekke Indstillinger → Enhedspleje → Sovende apps og fjerne Mochi, hvis den er angivet.</string>
+    <string name="oem_hint_allow">Tillad baggrund</string>
+    <string name="oem_hint_dismiss">Vis ikke igen</string>
+    <string name="about_label">Om</string>
+    <string name="about_title">Mochi-klient til Android</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_check_updates">Søg efter opdateringer</string>
+    <string name="about_up_to_date">Opdateret</string>
+    <string name="about_check_network_error">Kunne ikke nå opdateringsserveren</string>
+    <string name="about_check_download_failed">Download mislykkedes</string>
+    <string name="notifications_clear_all_title">Ryd alle notifikationer?</string>
+    <string name="notifications_clear_all_message">Dette fjerner alle notifikationer. De kan ikke gendannes.</string>
+    <string name="notifications_count_n">%1$d nye</string>
+    <string name="settings_value_auto">Automatisk</string>
+    <string name="settings_value_theme">Tema-standard</string>
+    <string name="settings_radius">Hjørneradius</string>
+    <string name="settings_timestamp_display">Visning af tidsstempel</string>
+    <string name="settings_timestamp_relative">Relativ</string>
+    <string name="settings_timestamp_absolute">Absolut</string>
+    <string name="settings_units_usa">US</string>
+    <string name="profile_privacy_description">Om andre kan finde dig i kataloget.</string>
+
 </resources>

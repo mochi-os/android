@@ -487,4 +487,33 @@
     <string name="staff_team_toast_role_failed">როლის განახლება ვერ მოხერხდა</string>
     <string name="staff_team_toast_role_updated">როლი განახლდა</string>
 
+
+    <string name="staff_disputes_dialog_title_chargeback">თანხის დაბრუნება: %1$s</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe-ის მიერ შენახული</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s დაბრუნებული</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">დაბრუნებული</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s-დან</string>
+    <string name="staff_disputes_meta_seller_response">გამყიდველის პასუხი</string>
+    <string name="staff_disputes_refund_amount_label">დაბრუნების თანხა (%1$s)</string>
+    <string name="staff_disputes_refund_help">დატოვეთ ცარიელი %1$s-ის სრული დაბრუნებისთვის. შეიყვანეთ უფრო მცირე თანხა ნაწილობრივი დაბრუნებისთვის.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ბანკმა ვერ დაამუშავა</string>
+    <string name="staff_disputes_stripe_check_returned">ჩეკი დაბრუნდა</string>
+    <string name="staff_disputes_stripe_credit_not_processed">კრედიტი არ დამუშავდა</string>
+    <string name="staff_disputes_stripe_customer_initiated">მომხმარებლის მიერ ინიცირებული</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">დებეტი არ იყო ავტორიზებული</string>
+    <string name="staff_disputes_stripe_duplicate">გადახდის დუბლირება</string>
+    <string name="staff_disputes_stripe_fraudulent">თაღლითური</string>
+    <string name="staff_disputes_stripe_general">ზოგადი</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">ანგარიშის არასწორი მონაცემები</string>
+    <string name="staff_disputes_stripe_insufficient_funds">არასაკმარისი თანხა</string>
+    <string name="staff_disputes_stripe_product_not_received">პროდუქტი არ მიღებულა</string>
+    <string name="staff_disputes_stripe_product_unacceptable">პროდუქტი მიუღებელია</string>
+    <string name="staff_disputes_stripe_subscription_canceled">გამოწერა გაუქმდა</string>
+    <string name="staff_disputes_stripe_unrecognized">ამოუცნობი გადახდა</string>
+    <string name="staff_reports_meta_details">მომხსენებლის დეტალები</string>
+    <string name="staff_reviews_order_label">შეკვეთა #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s — %3$s. სამუდამოდ წავშალოთ ეს მიმოხილვა? ამის გაუქმება შეუძლებელია.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. სამუდამოდ წავშალოთ ეს მიმოხილვა? ამის გაუქმება შეუძლებელია.</string>
+    <string name="staff_team_dialog_search_placeholder">ძიება სახელით, თითის ანაბეჭდით ან ID-ით…</string>
+
 </resources>

@@ -482,4 +482,38 @@
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Kòmand #%1$d</string>
+
+    <string name="staff_appeals_reason_label">Rezon apèl vandè a</string>
+    <string name="staff_audit_action_staff_team_role_changed">Wòl anplwaye chanje</string>
+    <string name="staff_disputes_dialog_title_chargeback">Ranbousman fòse: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Gade diskisyon</string>
+    <string name="staff_disputes_meta_buyer_details">Detay achtè a</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe kenbe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s ranbouse</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">ranbouse</string>
+    <string name="staff_disputes_meta_refunded_of">sou %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Repons vandè a</string>
+    <string name="staff_disputes_refund_amount_label">Montan ranbousman (%1$s)</string>
+    <string name="staff_disputes_refund_help">Kite vid pou yon ranbousman konplè nan %1$s. Antre yon montan ki pi piti pou yon ranbousman pasyèl.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">bank pa t kapab trete</string>
+    <string name="staff_disputes_stripe_check_returned">chèk retounen</string>
+    <string name="staff_disputes_stripe_credit_not_processed">kredi pa trete</string>
+    <string name="staff_disputes_stripe_customer_initiated">kliyan an inisye</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debi pa otorize</string>
+    <string name="staff_disputes_stripe_duplicate">chaj doub</string>
+    <string name="staff_disputes_stripe_fraudulent">fwod</string>
+    <string name="staff_disputes_stripe_general">jeneral</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">detay kont pa kòrèk</string>
+    <string name="staff_disputes_stripe_insufficient_funds">lajan pa sifi</string>
+    <string name="staff_disputes_stripe_product_not_received">pwodwi pa resevwa</string>
+    <string name="staff_disputes_stripe_product_unacceptable">pwodwi pa akseptab</string>
+    <string name="staff_disputes_stripe_subscription_canceled">abònman anile</string>
+    <string name="staff_disputes_stripe_unrecognized">chaj pa rekonèt</string>
+    <string name="staff_reports_listing_label">Anons #%1$d</string>
+    <string name="staff_reports_meta_details">Detay moun ki rapòte a</string>
+    <string name="staff_reviews_order_label">kòmand #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s sou %3$s. Efase revi sa a pou tout tan? Sa pa ka defèt.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Efase revi sa a pou tout tan? Sa pa ka defèt.</string>
+    <string name="staff_team_dialog_search_placeholder">Chèche pa non, anprent, oswa ID…</string>
+
 </resources>

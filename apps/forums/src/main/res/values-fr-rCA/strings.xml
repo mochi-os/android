@@ -195,4 +195,9 @@
     <string name="forums_settings_delete">Supprimer le forum</string>
 
     <string name="forums_settings_delete_title">Supprimer le forum</string>
+
+    <string name="forums_settings_delete_message">Cela supprimera définitivement le forum et toutes ses publications. Cette action est irréversible.</string>
+    <string name="forums_forum_not_found">Forum introuvable</string>
+    <string name="forums_post_not_found">Publication introuvable</string>
+
 </resources>

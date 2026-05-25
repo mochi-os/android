@@ -7,4 +7,13 @@
     <string name="launcher_chess">國際象棋</string>
     <string name="launcher_go">圍棋</string>
     <string name="launcher_words">Words</string>
+
+    <string name="app_name">Mochi</string>
+    <string name="launcher_feeds">動態</string>
+    <string name="launcher_forums">討論區</string>
+    <string name="launcher_projects">專案</string>
+    <string name="launcher_crm">客戶關係管理</string>
+    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Staff</string>
+
 </resources>

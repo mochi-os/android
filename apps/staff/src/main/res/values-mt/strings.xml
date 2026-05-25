@@ -482,4 +482,38 @@
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Ordni #%1$d</string>
+
+    <string name="staff_appeals_reason_label">Raġuni tal-appell tal-bejjiegħ</string>
+    <string name="staff_audit_action_staff_team_role_changed">Rwol tal-istaff inbidel</string>
+    <string name="staff_disputes_dialog_title_chargeback">Chargeback: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Ara t-tilwima</string>
+    <string name="staff_disputes_meta_buyer_details">Dettalji tax-xerrej</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">miżmum minn Stripe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s rifondut</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">rifondut</string>
+    <string name="staff_disputes_meta_refunded_of">minn %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Tweġiba tal-bejjiegħ</string>
+    <string name="staff_disputes_refund_amount_label">Ammont tar-rifużjoni (%1$s)</string>
+    <string name="staff_disputes_refund_help">Ħalli vojt għal rifużjoni sħiħa ta\' %1$s. Daħħal ammont iżgħar għal rifużjoni parzjali.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">il-bank ma setax jipproċessa</string>
+    <string name="staff_disputes_stripe_check_returned">ċekk irritornat</string>
+    <string name="staff_disputes_stripe_credit_not_processed">kreditu mhux ipproċessat</string>
+    <string name="staff_disputes_stripe_customer_initiated">mibdi mill-klijent</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debitu mhux awtorizzat</string>
+    <string name="staff_disputes_stripe_duplicate">ħlas duplikat</string>
+    <string name="staff_disputes_stripe_fraudulent">frodulenti</string>
+    <string name="staff_disputes_stripe_general">ġenerali</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">dettalji tal-kont skorretti</string>
+    <string name="staff_disputes_stripe_insufficient_funds">fondi insuffiċjenti</string>
+    <string name="staff_disputes_stripe_product_not_received">prodott mhux irċevut</string>
+    <string name="staff_disputes_stripe_product_unacceptable">prodott mhux aċċettabbli</string>
+    <string name="staff_disputes_stripe_subscription_canceled">abbonament ikkanċellat</string>
+    <string name="staff_disputes_stripe_unrecognized">ħlas mhux rikonoxxut</string>
+    <string name="staff_reports_listing_label">Lista #%1$d</string>
+    <string name="staff_reports_meta_details">Dettalji ta\' min irrapporta</string>
+    <string name="staff_reviews_order_label">ordni #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s fi %3$s. Tħassar din ir-reviżjoni permanentement? Dan ma jistax jitreġġa\' lura.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Tħassar din ir-reviżjoni permanentement? Dan ma jistax jitreġġa\' lura.</string>
+    <string name="staff_team_dialog_search_placeholder">Fittex b\'isem, marka tas-swaba\', jew ID…</string>
+
 </resources>

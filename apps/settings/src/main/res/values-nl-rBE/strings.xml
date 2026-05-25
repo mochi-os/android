@@ -341,4 +341,19 @@
     <string name="accounts_verify_hint">Voer de code in die naar %1$s is verstuurd.</string>
 
     <string name="system_users_sort_by">Sorteren op</string>
+
+    <string name="accounts_remove_message">Hiermee wordt het gekoppelde account \\"%1$s\\" verwijderd.</string>
+    <string name="system_documents_last_edited">Laatst bewerkt %1$s</string>
+    <string name="system_settings_reset_message">Hiermee wordt \\"%1$s\\" teruggezet naar de standaardwaarde (%2$s).</string>
+    <string name="system_settings_reset_message_empty">Hiermee wordt \\"%1$s\\" teruggezet naar de standaardwaarde (leeg).</string>
+    <string name="settings_home_system_users">Gebruikers (server)</string>
+    <string name="system_users_search_placeholder">Gebruikers zoeken…</string>
+    <string name="system_users_last_login">Laatste aanmelding: %1$s</string>
+    <string name="system_users_delete_message">Hiermee wordt de gebruiker \"%1$s\" permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt.</string>
+    <string name="system_users_sessions_title">Sessies voor %1$s</string>
+    <string name="system_users_session_last_accessed">Laatst geopend: %1$s</string>
+    <string name="system_users_revoke_all_title">Alle sessies intrekken?</string>
+    <string name="system_users_revoke_all_message">Alle actieve sessies voor deze gebruiker worden afgemeld.</string>
+    <string name="system_users_pagination_status">%1$d–%2$d van %3$d gebruikers worden weergegeven</string>
+
 </resources>

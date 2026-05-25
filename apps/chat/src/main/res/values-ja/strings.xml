@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">上に移動</string>
     <string name="chat_attachment_move_down">下に移動</string>
     <string name="chat_list_add_to_home">ホーム画面に追加</string>
+
+    <string name="notification_channel_chat">チャット通知</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">アイデンティティの作成に失敗しました</string>
+    <string name="chat_auth_mfa_unsupported">モバイルアプリではMFAはまだサポートされていません</string>
+    <string name="chat_auth_enter_code_sent">%1$s に送信されたコードを入力してください</string>
+    <string name="chat_auth_create_identity">アイデンティティを作成</string>
+    <string name="chat_list_search_placeholder">チャットを検索</string>
+    <string name="chat_list_no_matching">一致するチャットがありません</string>
+    <string name="chat_list_empty">チャットはまだありません</string>
+    <string name="chat_list_left_chat">退出済み</string>
+    <string name="chat_new_no_friends">チャットできる友達がまだいません</string>
+    <string name="chat_new_no_matches">一致する友達がいません</string>
+    <string name="chat_new_existing_chat">既存のチャットを開く</string>
+    <string name="chat_new_start">チャットを開始</string>
+    <string name="chat_new_start_group">グループチャットを開始</string>
+    <string name="chat_messages_loading">メッセージを読み込み中…</string>
+    <string name="chat_messages_empty">メッセージはまだありません — 挨拶してみましょう!</string>
+    <string name="chat_messages_load_more">古いメッセージを読み込む</string>
+    <string name="chat_attachment_label">ファイル</string>
+    <string name="chat_message_too_long">メッセージが長すぎます</string>
+    <string name="chat_message_empty">メッセージを空にすることはできません</string>
+    <string name="chat_settings_rename">チャット名を変更</string>
+    <string name="chat_settings_add_member_empty">追加できる友達がいません</string>
+    <string name="chat_settings_remove_member_message">%1$s をこのチャットから削除しますか?</string>
+    <string name="chat_settings_leave_message">このチャットを退出しますか?他のメンバーにはあなたのメッセージが表示されなくなります。</string>
+    <string name="chat_settings_leave_and_delete">退出してローカルから削除</string>
+    <string name="chat_settings_delete">ローカルから削除</string>
+    <string name="chat_settings_delete_message">このデバイスからのみチャットとそのメッセージを削除します。</string>
+
 </resources>

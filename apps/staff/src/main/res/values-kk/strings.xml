@@ -498,4 +498,22 @@
     <string name="staff_team_toast_role_failed">Рөлді жаңарту мүмкін болмады</string>
     <string name="staff_team_toast_role_updated">Рөл жаңартылды</string>
 
+
+    <string name="staff_disputes_stripe_bank_cannot_process">банк өңдей алмады</string>
+    <string name="staff_disputes_stripe_check_returned">чек қайтарылды</string>
+    <string name="staff_disputes_stripe_credit_not_processed">несие өңделмеді</string>
+    <string name="staff_disputes_stripe_customer_initiated">клиент бастамасымен</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">дебет рұқсат етілмеген</string>
+    <string name="staff_disputes_stripe_duplicate">қайталанған төлем</string>
+    <string name="staff_disputes_stripe_fraudulent">алаяқтық</string>
+    <string name="staff_disputes_stripe_general">жалпы</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">шот деректері қате</string>
+    <string name="staff_disputes_stripe_insufficient_funds">қаражат жеткіліксіз</string>
+    <string name="staff_disputes_stripe_product_not_received">тауар алынбады</string>
+    <string name="staff_disputes_stripe_product_unacceptable">тауар жарамсыз</string>
+    <string name="staff_disputes_stripe_subscription_canceled">жазылым тоқтатылды</string>
+    <string name="staff_disputes_stripe_unrecognized">танылмаған төлем</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Осы пікірді біржола жою керек пе? Бұл әрекетті кері қайтару мүмкін емес.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Осы пікірді біржола жою керек пе? Бұл әрекетті кері қайтару мүмкін емес.</string>
+
 </resources>

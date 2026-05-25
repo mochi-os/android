@@ -473,4 +473,45 @@
     <string name="staff_team_toast_role_updated">An sabunta matsayi</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Oda #%1$d</string>
+
+    <string name="staff_accounts_action_unsuspend_title">Ɗage dakatarwa</string>
+    <string name="staff_accounts_reason_optional_label">Dalili (na zaɓi)</string>
+    <string name="staff_accounts_sales">Sayarwa %1$d</string>
+    <string name="staff_appeals_reason_label">Dalilin ƙara na mai sayarwa</string>
+    <string name="staff_audit_action_staff_team_role_changed">An canza matsayin ma\'aikaci</string>
+    <string name="staff_categories_delete_desc">A goge \"%1$s\"? Ba za a iya warware wannan ba.</string>
+    <string name="staff_disputes_dialog_title_chargeback">Mayar da kuɗi: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Duba takaddama</string>
+    <string name="staff_disputes_meta_buyer_details">Bayanan mai siye</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ta riƙe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">An mayar %1$s</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">an mayar</string>
+    <string name="staff_disputes_meta_refunded_of">daga %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Amsar mai sayarwa</string>
+    <string name="staff_disputes_refund_amount_label">Adadin mayarwa (%1$s)</string>
+    <string name="staff_disputes_refund_help">Bar wofi don cikakken mayarwa na %1$s. Shigar da ƙaramin adadi don mayarwa ta ɓangare.</string>
+    <string name="staff_disputes_resolving">Ana warwarewa…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">banki bai iya aiwatarwa ba</string>
+    <string name="staff_disputes_stripe_check_returned">an mayar da cak</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ba a aiwatar da bashi ba</string>
+    <string name="staff_disputes_stripe_customer_initiated">abokin ciniki ne ya fara</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ba a ba da izinin cire kuɗi ba</string>
+    <string name="staff_disputes_stripe_duplicate">caji ninki biyu</string>
+    <string name="staff_disputes_stripe_fraudulent">na zamba</string>
+    <string name="staff_disputes_stripe_general">gama-gari</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">bayanan asusu ba daidai ba</string>
+    <string name="staff_disputes_stripe_insufficient_funds">kuɗi bai isa ba</string>
+    <string name="staff_disputes_stripe_product_not_received">ba a karɓi kayan ba</string>
+    <string name="staff_disputes_stripe_product_unacceptable">kaya bai dace ba</string>
+    <string name="staff_disputes_stripe_subscription_canceled">an soke biyan kuɗi</string>
+    <string name="staff_disputes_stripe_unrecognized">caji da ba a sani ba</string>
+    <string name="staff_listings_seller_unknown">Mai sayarwa da ba a sani ba</string>
+    <string name="staff_listings_seller_verified">Mai sayarwa da aka tabbatar</string>
+    <string name="staff_reports_listing_label">Tallace-tallace #%1$d</string>
+    <string name="staff_reports_meta_details">Bayanan mai bayar da rahoto</string>
+    <string name="staff_reviews_order_label">oda #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s a kan %3$s. A goge wannan ra\'ayin har abada? Ba za a iya warware wannan ba.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. A goge wannan ra\'ayin har abada? Ba za a iya warware wannan ba.</string>
+    <string name="staff_team_dialog_search_placeholder">Bincika ta suna, yatsa, ko ID…</string>
+
 </resources>

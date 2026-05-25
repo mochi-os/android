@@ -484,4 +484,36 @@
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Заказ #%1$d</string>
+
+    <string name="staff_audit_action_staff_team_role_changed">Кызматкердин ролу өзгөртүлдү</string>
+    <string name="staff_disputes_dialog_title_chargeback">Чарджбэк: %1$s</string>
+    <string name="staff_disputes_meta_buyer_details">Сатып алуучунун маалыматтары</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe тарабынан кармалды</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s кайтарылды</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">кайтарылды</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s ичинен</string>
+    <string name="staff_disputes_meta_seller_response">Сатуучунун жообу</string>
+    <string name="staff_disputes_refund_amount_label">Кайтаруу суммасы (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s толук кайтаруу үчүн бош калтырыңыз. Жарым-жартылай кайтаруу үчүн кичирээк сумманы киргизиңиз.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">банк иштете алган жок</string>
+    <string name="staff_disputes_stripe_check_returned">чек кайтарылды</string>
+    <string name="staff_disputes_stripe_credit_not_processed">кредит иштетилген жок</string>
+    <string name="staff_disputes_stripe_customer_initiated">кардар тарабынан баштоо</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">дебетке уруксат берилген эмес</string>
+    <string name="staff_disputes_stripe_duplicate">кайталанган төлөм</string>
+    <string name="staff_disputes_stripe_fraudulent">алдамчылык</string>
+    <string name="staff_disputes_stripe_general">жалпы</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">эсептин туура эмес маалыматтары</string>
+    <string name="staff_disputes_stripe_insufficient_funds">каражат жетишсиз</string>
+    <string name="staff_disputes_stripe_product_not_received">товар алынган жок</string>
+    <string name="staff_disputes_stripe_product_unacceptable">товар канааттандырарлык эмес</string>
+    <string name="staff_disputes_stripe_subscription_canceled">жазылуу жокко чыгарылды</string>
+    <string name="staff_disputes_stripe_unrecognized">тааныла элек төлөм</string>
+    <string name="staff_reports_listing_label">Жарыя #%1$d</string>
+    <string name="staff_reports_meta_details">Билдирүүчүнүн маалыматтары</string>
+    <string name="staff_reviews_order_label">буйрутма #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Бул пикирди биротоло өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Бул пикирди биротоло өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
+    <string name="staff_team_dialog_search_placeholder">Аты, манжа изи же ID боюнча издөө…</string>
+
 </resources>

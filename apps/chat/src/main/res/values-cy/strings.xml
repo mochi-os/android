@@ -44,4 +44,29 @@
     <string name="chat_attachment_move_up">Symud i fyny</string>
     <string name="chat_attachment_move_down">Symud i lawr</string>
     <string name="chat_message_remove_attachment">Tynnu atodiad</string>
+
+    <string name="notification_channel_chat">Hysbysiadau sgwrs</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_list_search_placeholder">Chwilio sgyrsiau</string>
+    <string name="chat_list_no_matching">Dim sgyrsiau cyfatebol</string>
+    <string name="chat_list_empty">Dim sgyrsiau eto</string>
+    <string name="chat_list_left_chat">Wedi gadael</string>
+    <string name="chat_new_no_friends">Dim ffrindiau i sgwrsio â nhw eto</string>
+    <string name="chat_new_no_matches">Dim ffrindiau cyfatebol</string>
+    <string name="chat_new_existing_chat">Agor sgwrs sy\'n bodoli</string>
+    <string name="chat_new_start">Dechrau sgwrs</string>
+    <string name="chat_new_start_group">Dechrau sgwrs grŵp</string>
+    <string name="chat_messages_loading">Wrthi\'n llwytho negeseuon…</string>
+    <string name="chat_messages_empty">Dim negeseuon eto — dywedwch helo!</string>
+    <string name="chat_attachment_label">Ffeil</string>
+    <string name="chat_message_too_long">Mae\'r neges yn rhy hir</string>
+    <string name="chat_message_empty">Ni all y neges fod yn wag</string>
+    <string name="chat_settings_rename">Ailenwi\'r sgwrs</string>
+    <string name="chat_settings_add_member_empty">Dim ffrindiau i\'w hychwanegu</string>
+    <string name="chat_settings_remove_member_message">Tynnu %1$s o\'r sgwrs hon?</string>
+    <string name="chat_settings_leave_message">Gadael y sgwrs hon? Ni fydd aelodau eraill yn gweld eich negeseuon mwyach.</string>
+    <string name="chat_settings_leave_and_delete">Gadael a dileu\'n lleol</string>
+    <string name="chat_settings_delete">Dileu\'n lleol</string>
+    <string name="chat_settings_delete_message">Mae hyn yn tynnu\'r sgwrs a\'i negeseuon o\'r ddyfais hon yn unig.</string>
+
 </resources>

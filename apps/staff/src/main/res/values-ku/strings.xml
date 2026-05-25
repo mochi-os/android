@@ -473,4 +473,45 @@
     <string name="staff_team_toast_role_updated">Rol nûve bû</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Fermandar #%1$d</string>
+
+    <string name="staff_accounts_action_unsuspend_title">Rakirina sekinandinê</string>
+    <string name="staff_accounts_reason_optional_label">Sedem (bijarte)</string>
+    <string name="staff_accounts_sales">%1$d firotin</string>
+    <string name="staff_appeals_reason_label">Sedema îtiraza firoşkar</string>
+    <string name="staff_audit_action_staff_team_role_changed">Rola karmend hat guhertin</string>
+    <string name="staff_categories_delete_desc">“%1$s” jê bibe? Ev nayê vegerandin.</string>
+    <string name="staff_disputes_dialog_title_chargeback">Vegerandina dravê: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Nakokiyê bibîne</string>
+    <string name="staff_disputes_meta_buyer_details">Agahiyên kirrêr</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">ji aliyê Stripe ve hat girtin</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s hat vegerandin</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">hat vegerandin</string>
+    <string name="staff_disputes_meta_refunded_of">ji %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Bersiva firoşkar</string>
+    <string name="staff_disputes_refund_amount_label">Birra vegerandinê (%1$s)</string>
+    <string name="staff_disputes_refund_help">Ji bo vegerandineke tam a %1$s vala bihêle. Ji bo vegerandineke beşî birreke biçûktir binivîse.</string>
+    <string name="staff_disputes_resolving">Tê çareserkirin…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">bank nikare bişopîne</string>
+    <string name="staff_disputes_stripe_check_returned">çek vegeriya</string>
+    <string name="staff_disputes_stripe_credit_not_processed">krediya neşopandî</string>
+    <string name="staff_disputes_stripe_customer_initiated">ji aliyê kirrêr ve hat destpêkirin</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debît nehat destûrkirin</string>
+    <string name="staff_disputes_stripe_duplicate">barkirina dubare</string>
+    <string name="staff_disputes_stripe_fraudulent">sextekarî</string>
+    <string name="staff_disputes_stripe_general">giştî</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">agahiyên hesabê çewt</string>
+    <string name="staff_disputes_stripe_insufficient_funds">drav têrê nake</string>
+    <string name="staff_disputes_stripe_product_not_received">berhem nehat wergirtin</string>
+    <string name="staff_disputes_stripe_product_unacceptable">berhem nayê qebûlkirin</string>
+    <string name="staff_disputes_stripe_subscription_canceled">abone hat betalkirin</string>
+    <string name="staff_disputes_stripe_unrecognized">barkirineke nenas</string>
+    <string name="staff_listings_seller_unknown">Firoşkarê nenas</string>
+    <string name="staff_listings_seller_verified">Firoşkarê pejirandî</string>
+    <string name="staff_reports_listing_label">Lîsteya #%1$d</string>
+    <string name="staff_reports_meta_details">Agahiyên ragihîner</string>
+    <string name="staff_reviews_order_label">fermana #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s li ser %3$s. Ev nirxandin bi awayekî daîmî jê bibe? Ev nayê vegerandin.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ev nirxandin bi awayekî daîmî jê bibe? Ev nayê vegerandin.</string>
+    <string name="staff_team_dialog_search_placeholder">Bi nav, şopa tilî, an nasnameyê bigere…</string>
+
 </resources>

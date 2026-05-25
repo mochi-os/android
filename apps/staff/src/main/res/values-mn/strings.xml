@@ -487,4 +487,33 @@
     <string name="staff_team_toast_role_updated">Үүргийг шинэчиллээ</string>
 
     <string name="staff_disputes_meta_seller_response">Худалдагчийн хариу</string>
+
+    <string name="staff_disputes_dialog_title_chargeback">Эргүүлэн татах: %1$s</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe-д үлдсэн</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s буцаагдсан</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">буцаагдсан</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s-ээс</string>
+    <string name="staff_disputes_refund_amount_label">Буцаалтын дүн (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s-ийг бүтэн буцаахын тулд хоосон үлдээнэ үү. Хэсэгчилсэн буцаалт хийхийн тулд бага дүн оруулна уу.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">банк боловсруулж чадаагүй</string>
+    <string name="staff_disputes_stripe_check_returned">чек буцаагдсан</string>
+    <string name="staff_disputes_stripe_credit_not_processed">зээл боловсруулагдаагүй</string>
+    <string name="staff_disputes_stripe_customer_initiated">үйлчлүүлэгчээс эхэлсэн</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">дебит зөвшөөрөгдөөгүй</string>
+    <string name="staff_disputes_stripe_duplicate">давхар төлбөр</string>
+    <string name="staff_disputes_stripe_fraudulent">залилан</string>
+    <string name="staff_disputes_stripe_general">ерөнхий</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">дансны мэдээлэл буруу</string>
+    <string name="staff_disputes_stripe_insufficient_funds">хүрэлцэхгүй хөрөнгө</string>
+    <string name="staff_disputes_stripe_product_not_received">бараа хүлээн аваагүй</string>
+    <string name="staff_disputes_stripe_product_unacceptable">бараа хүлээн зөвшөөрөхгүй</string>
+    <string name="staff_disputes_stripe_subscription_canceled">захиалга цуцлагдсан</string>
+    <string name="staff_disputes_stripe_unrecognized">танигдаагүй төлбөр</string>
+    <string name="staff_reports_listing_label">Зар #%1$d</string>
+    <string name="staff_reports_meta_details">Мэдэгдсэн хүний мэдээлэл</string>
+    <string name="staff_reviews_order_label">захиалга #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s-нд. Энэ үнэлгээг бүрмөсөн устгах уу? Үүнийг буцаах боломжгүй.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Энэ үнэлгээг бүрмөсөн устгах уу? Үүнийг буцаах боломжгүй.</string>
+    <string name="staff_team_dialog_search_placeholder">Нэр, хурууны хээ эсвэл ID-аар хайх…</string>
+
 </resources>

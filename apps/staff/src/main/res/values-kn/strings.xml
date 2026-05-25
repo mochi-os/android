@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">ಪಾತ್ರ ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ಆದೇಶ #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">ಕಾರಣ (ಐಚ್ಛಿಕ)</string>
+    <string name="staff_accounts_sales">%1$d ಮಾರಾಟಗಳು</string>
+    <string name="staff_appeals_reason_label">ಮಾರಾಟಗಾರನ ಮನವಿಯ ಕಾರಣ</string>
+    <string name="staff_audit_action_staff_team_role_changed">ಸಿಬ್ಬಂದಿ ಪಾತ್ರ ಬದಲಾಯಿಸಲಾಗಿದೆ</string>
+    <string name="staff_categories_delete_desc">“%1$s” ಅನ್ನು ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="staff_disputes_dialog_title_chargeback">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">ವಿವಾದವನ್ನು ವೀಕ್ಷಿಸಿ</string>
+    <string name="staff_disputes_meta_buyer_details">ಖರೀದಿದಾರನ ವಿವರಗಳು</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ಇರಿಸಿಕೊಂಡಿದೆ</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s ಮರುಪಾವತಿಸಲಾಗಿದೆ</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">ಮರುಪಾವತಿಸಲಾಗಿದೆ</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s ರಲ್ಲಿ</string>
+    <string name="staff_disputes_meta_seller_response">ಮಾರಾಟಗಾರನ ಪ್ರತಿಕ್ರಿಯೆ</string>
+    <string name="staff_disputes_refund_amount_label">ಮರುಪಾವತಿ ಮೊತ್ತ (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s ನ ಪೂರ್ಣ ಮರುಪಾವತಿಗಾಗಿ ಖಾಲಿ ಬಿಡಿ. ಭಾಗಶಃ ಮರುಪಾವತಿಗಾಗಿ ಕಡಿಮೆ ಮೊತ್ತವನ್ನು ನಮೂದಿಸಿ.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ಬ್ಯಾಂಕ್ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="staff_disputes_stripe_check_returned">ಚೆಕ್ ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ಕ್ರೆಡಿಟ್ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗಿಲ್ಲ</string>
+    <string name="staff_disputes_stripe_customer_initiated">ಗ್ರಾಹಕ ಪ್ರಾರಂಭಿಸಿದ್ದು</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ಡೆಬಿಟ್‌ಗೆ ಅನುಮತಿ ಇಲ್ಲ</string>
+    <string name="staff_disputes_stripe_duplicate">ನಕಲಿ ಶುಲ್ಕ</string>
+    <string name="staff_disputes_stripe_fraudulent">ವಂಚನೆ</string>
+    <string name="staff_disputes_stripe_general">ಸಾಮಾನ್ಯ</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">ತಪ್ಪಾದ ಖಾತೆಯ ವಿವರಗಳು</string>
+    <string name="staff_disputes_stripe_insufficient_funds">ಸಾಕಷ್ಟು ಹಣವಿಲ್ಲ</string>
+    <string name="staff_disputes_stripe_product_not_received">ಉತ್ಪನ್ನ ಸ್ವೀಕರಿಸಲಾಗಿಲ್ಲ</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ಉತ್ಪನ್ನ ಸ್ವೀಕಾರಾರ್ಹವಲ್ಲ</string>
+    <string name="staff_disputes_stripe_subscription_canceled">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="staff_disputes_stripe_unrecognized">ಗುರುತಿಸದ ಶುಲ್ಕ</string>
+    <string name="staff_listings_seller_unknown">ಅಪರಿಚಿತ ಮಾರಾಟಗಾರ</string>
+    <string name="staff_listings_seller_verified">ಪರಿಶೀಲಿಸಿದ ಮಾರಾಟಗಾರ</string>
+    <string name="staff_reports_listing_label">ಪಟ್ಟಿ #%1$d</string>
+    <string name="staff_reports_meta_details">ವರದಿಗಾರನ ವಿವರಗಳು</string>
+    <string name="staff_reviews_order_label">ಆದೇಶ #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s ರಂದು. ಈ ವಿಮರ್ಶೆಯನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ಈ ವಿಮರ್ಶೆಯನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="staff_team_dialog_search_placeholder">ಹೆಸರು, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ ID ಮೂಲಕ ಹುಡುಕಿ…</string>
+
 </resources>

@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Perkelti į viršų</string>
     <string name="chat_attachment_move_down">Perkelti į apačią</string>
     <string name="chat_list_add_to_home">Pridėti į pradinį ekraną</string>
+
+    <string name="notification_channel_chat">Pokalbių pranešimai</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Nepavyko sukurti tapatybės</string>
+    <string name="chat_auth_mfa_unsupported">MFA dar nepalaikoma mobiliojoje programėlėje</string>
+    <string name="chat_auth_enter_code_sent">Įveskite kodą, išsiųstą į %1$s</string>
+    <string name="chat_auth_create_identity">Sukurkite savo tapatybę</string>
+    <string name="chat_list_search_placeholder">Ieškoti pokalbių</string>
+    <string name="chat_list_no_matching">Nėra atitinkančių pokalbių</string>
+    <string name="chat_list_empty">Pokalbių dar nėra</string>
+    <string name="chat_list_left_chat">Išėjo</string>
+    <string name="chat_new_no_friends">Dar nėra draugų, su kuriais galėtumėte kalbėtis</string>
+    <string name="chat_new_no_matches">Nėra atitinkančių draugų</string>
+    <string name="chat_new_existing_chat">Atidaryti esamą pokalbį</string>
+    <string name="chat_new_start">Pradėti pokalbį</string>
+    <string name="chat_new_start_group">Pradėti grupinį pokalbį</string>
+    <string name="chat_messages_loading">Įkeliami pranešimai…</string>
+    <string name="chat_messages_empty">Pranešimų dar nėra — pasisveikinkite!</string>
+    <string name="chat_messages_load_more">Įkelti senesnius pranešimus</string>
+    <string name="chat_attachment_label">Failas</string>
+    <string name="chat_message_too_long">Pranešimas per ilgas</string>
+    <string name="chat_message_empty">Pranešimas negali būti tuščias</string>
+    <string name="chat_settings_rename">Pervadinti pokalbį</string>
+    <string name="chat_settings_add_member_empty">Nėra draugų, kuriuos būtų galima pridėti</string>
+    <string name="chat_settings_remove_member_message">Pašalinti %1$s iš šio pokalbio?</string>
+    <string name="chat_settings_leave_message">Išeiti iš šio pokalbio? Kiti dalyviai nebematys jūsų pranešimų.</string>
+    <string name="chat_settings_leave_and_delete">Išeiti ir ištrinti vietoje</string>
+    <string name="chat_settings_delete">Ištrinti vietoje</string>
+    <string name="chat_settings_delete_message">Tai pašalina pokalbį ir jo pranešimus tik iš šio įrenginio.</string>
+
 </resources>

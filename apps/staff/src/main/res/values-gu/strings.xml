@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">ભૂમિકા અપડેટ થઈ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ઓર્ડર #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">કારણ (વૈકલ્પિક)</string>
+    <string name="staff_accounts_sales">%1$d વેચાણ</string>
+    <string name="staff_appeals_reason_label">વિક્રેતાનું અપીલ કારણ</string>
+    <string name="staff_audit_action_staff_team_role_changed">સ્ટાફની ભૂમિકા બદલાઈ</string>
+    <string name="staff_categories_delete_desc">“%1$s” કાઢી નાખીએ? આ પૂર્વવત્ કરી શકાશે નહીં.</string>
+    <string name="staff_disputes_dialog_title_chargeback">ચાર્જબેક: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">વિવાદ જુઓ</string>
+    <string name="staff_disputes_meta_buyer_details">ખરીદનારની વિગતો</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe દ્વારા રાખવામાં આવ્યું</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s પરત કરાયું</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">પરત કરાયું</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s માંથી</string>
+    <string name="staff_disputes_meta_seller_response">વિક્રેતાનો જવાબ</string>
+    <string name="staff_disputes_refund_amount_label">રિફંડ રકમ (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s ના સંપૂર્ણ રિફંડ માટે ખાલી રાખો. આંશિક રિફંડ માટે નાની રકમ દાખલ કરો.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">બેન્ક પ્રક્રિયા કરી શકી નહીં</string>
+    <string name="staff_disputes_stripe_check_returned">ચેક પરત આવ્યો</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ક્રેડિટ પ્રક્રિયા કરાઈ નથી</string>
+    <string name="staff_disputes_stripe_customer_initiated">ગ્રાહક દ્વારા શરૂ કરાયું</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ડેબિટ અધિકૃત નથી</string>
+    <string name="staff_disputes_stripe_duplicate">ડુપ્લિકેટ ચાર્જ</string>
+    <string name="staff_disputes_stripe_fraudulent">છેતરપિંડીભર્યું</string>
+    <string name="staff_disputes_stripe_general">સામાન્ય</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">ખોટી ખાતા વિગતો</string>
+    <string name="staff_disputes_stripe_insufficient_funds">અપૂરતું ભંડોળ</string>
+    <string name="staff_disputes_stripe_product_not_received">ઉત્પાદન મળ્યું નથી</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ઉત્પાદન અસ્વીકાર્ય</string>
+    <string name="staff_disputes_stripe_subscription_canceled">સબ્સ્ક્રિપ્શન રદ કરાયું</string>
+    <string name="staff_disputes_stripe_unrecognized">અજાણ્યો ચાર્જ</string>
+    <string name="staff_listings_seller_unknown">અજાણ્યો વિક્રેતા</string>
+    <string name="staff_listings_seller_verified">ચકાસાયેલ વિક્રેતા</string>
+    <string name="staff_reports_listing_label">લિસ્ટિંગ #%1$d</string>
+    <string name="staff_reports_meta_details">રિપોર્ટરની વિગતો</string>
+    <string name="staff_reviews_order_label">ઑર્ડર #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s પર. આ સમીક્ષા કાયમ માટે કાઢી નાખીએ? આ પૂર્વવત્ કરી શકાશે નહીં.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. આ સમીક્ષા કાયમ માટે કાઢી નાખીએ? આ પૂર્વવત્ કરી શકાશે નહીં.</string>
+    <string name="staff_team_dialog_search_placeholder">નામ, ફિંગરપ્રિન્ટ અથવા ID દ્વારા શોધો…</string>
+
 </resources>

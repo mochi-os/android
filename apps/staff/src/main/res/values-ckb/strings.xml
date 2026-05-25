@@ -483,4 +483,37 @@
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">داواکاری #%1$d</string>
     <string name="staff_disputes_meta_seller_response">وەڵامی فرۆشیار</string>
+
+    <string name="staff_appeals_reason_label">هۆکاری تانەی فرۆشیار</string>
+    <string name="staff_audit_action_staff_team_role_changed">ڕۆڵی ستاف گۆڕدرا</string>
+    <string name="staff_categories_delete_desc">سڕینەوەی “%1$s”؟ ئەمە ناتوانرێت پاشگەزی لێ بکرێتەوە.</string>
+    <string name="staff_disputes_dialog_title_chargeback">گەڕاندنەوەی پارە: %1$s</string>
+    <string name="staff_disputes_meta_buyer_details">زانیاری کڕیار</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">لەلایەن Stripe پاراسترا</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s گەڕێندرایەوە</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">گەڕێندرایەوە</string>
+    <string name="staff_disputes_meta_refunded_of">لە %1$s</string>
+    <string name="staff_disputes_refund_amount_label">بڕی گەڕاندنەوە (%1$s)</string>
+    <string name="staff_disputes_refund_help">بەتاڵی بهێڵەرەوە بۆ گەڕاندنەوەی تەواوی %1$s. بڕێکی بچووکتر بنووسە بۆ گەڕاندنەوەی بەشێکی.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">بانک نەیتوانی پرۆسێس بکات</string>
+    <string name="staff_disputes_stripe_check_returned">چێک گەڕێندرایەوە</string>
+    <string name="staff_disputes_stripe_credit_not_processed">قەرز پرۆسێس نەکرا</string>
+    <string name="staff_disputes_stripe_customer_initiated">لەلایەن کڕیارەوە دەستپێکرا</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">قەرز ڕێگەی پێنەدرا</string>
+    <string name="staff_disputes_stripe_duplicate">بڕی دووبارە</string>
+    <string name="staff_disputes_stripe_fraudulent">ساختە</string>
+    <string name="staff_disputes_stripe_general">گشتی</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">زانیاری هەژمار هەڵەیە</string>
+    <string name="staff_disputes_stripe_insufficient_funds">پارەی پێویست نییە</string>
+    <string name="staff_disputes_stripe_product_not_received">بەرهەم وەرنەگیرا</string>
+    <string name="staff_disputes_stripe_product_unacceptable">بەرهەم قبوڵ ناکرێت</string>
+    <string name="staff_disputes_stripe_subscription_canceled">بەشداری هەڵوەشێندرایەوە</string>
+    <string name="staff_disputes_stripe_unrecognized">بڕی نەناسراو</string>
+    <string name="staff_reports_listing_label">لیست #%1$d</string>
+    <string name="staff_reports_meta_details">زانیاری ڕاپۆرتکەر</string>
+    <string name="staff_reviews_order_label">داواکاری #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s لە %3$s. بە تەواوەتی ئەم پێداچوونەوەیە بسڕێتەوە؟ ئەمە ناتوانرێت پاشگەزی لێ بکرێتەوە.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. بە تەواوەتی ئەم پێداچوونەوەیە بسڕێتەوە؟ ئەمە ناتوانرێت پاشگەزی لێ بکرێتەوە.</string>
+    <string name="staff_team_dialog_search_placeholder">گەڕان بە ناو، پەنجەمۆر، یان ناسنامە…</string>
+
 </resources>

@@ -13,4 +13,7 @@
     <string name="launcher_words">الفاظ</string>
     <string name="launcher_market">Mochi Market</string>
     <string name="launcher_staff">Mochi عملہ</string>
+
+    <string name="app_name">Mochi</string>
+
 </resources>

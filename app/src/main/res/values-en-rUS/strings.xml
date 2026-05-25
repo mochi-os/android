@@ -8,4 +8,12 @@
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
     <string name="launcher_staff">Mochi Staff</string>
+
+    <string name="app_name">Mochi</string>
+    <string name="launcher_feeds">Feeds</string>
+    <string name="launcher_forums">Forums</string>
+    <string name="launcher_projects">Projects</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_market">Mochi Market</string>
+
 </resources>

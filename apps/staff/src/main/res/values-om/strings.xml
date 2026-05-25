@@ -471,4 +471,47 @@
     <string name="staff_team_toast_role_updated">Gahee haaromfameera</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Aja\\\'a #%1$d</string>
+
+    <string name="staff_accounts_action_unban_title">Dhorkaa kaasi</string>
+    <string name="staff_accounts_action_unsuspend_title">Addaan kutiinsa kaasi</string>
+    <string name="staff_accounts_reason_optional_label">Sababa (filannoo)</string>
+    <string name="staff_accounts_sales">gurgurtaa %1$d</string>
+    <string name="staff_appeals_reason_label">Sababa ol\'iyyannoo gurguraa</string>
+    <string name="staff_audit_action_staff_team_role_changed">Gahee hojjetaa jijjiirame</string>
+    <string name="staff_categories_delete_desc">“%1$s” haqi? Kun deebifamuu hin danda\'u.</string>
+    <string name="staff_disputes_dialog_title_chargeback">Deebii kaffaltii: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Mormii ilaali</string>
+    <string name="staff_disputes_meta_buyer_details">Odeeffannoo bitataa</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe biratti qabame</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s deebi\'e</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">deebi\'e</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s keessaa</string>
+    <string name="staff_disputes_meta_seller_response">Deebii gurguraa</string>
+    <string name="staff_disputes_refund_amount_label">Hamma deebii (%1$s)</string>
+    <string name="staff_disputes_refund_help">Deebii guutuu %1$s argachuuf duwwaa dhiisi. Deebii gartokkeef hamma xiqqaa galchi.</string>
+    <string name="staff_disputes_resolving">Furamaa jira…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">baankiin raawwachuu hin dandeenye</string>
+    <string name="staff_disputes_stripe_check_returned">caaki deebi\'e</string>
+    <string name="staff_disputes_stripe_credit_not_processed">liqiin hin raawwatamne</string>
+    <string name="staff_disputes_stripe_customer_initiated">maamilaan kan jalqabe</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">baasiin hin hayyamamne</string>
+    <string name="staff_disputes_stripe_duplicate">kaffaltii irra deebi\'e</string>
+    <string name="staff_disputes_stripe_fraudulent">gowwoomsaa</string>
+    <string name="staff_disputes_stripe_general">waliigalaa</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">odeeffannoo herrega dogoggoraa</string>
+    <string name="staff_disputes_stripe_insufficient_funds">maallaqni gahaa miti</string>
+    <string name="staff_disputes_stripe_product_not_received">oomishni hin argamne</string>
+    <string name="staff_disputes_stripe_product_unacceptable">oomishni hin fudhatamne</string>
+    <string name="staff_disputes_stripe_subscription_canceled">miseensummaan haqame</string>
+    <string name="staff_disputes_stripe_unrecognized">kaffaltiin hin beekamne</string>
+    <string name="staff_listings_seller_unknown">Gurguraa hin beekamne</string>
+    <string name="staff_listings_seller_verified">Gurguraa mirkanaa\'e</string>
+    <string name="staff_reports_listing_label">Tarreeffama #%1$d</string>
+    <string name="staff_reports_meta_details">Odeeffannoo gabaasaa</string>
+    <string name="staff_reviews_order_label">ajaja #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s irratti. Gamaaggama kana yeroo hundaaf haqi? Kun deebifamuu hin danda\'u.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Gamaaggama kana yeroo hundaaf haqi? Kun deebifamuu hin danda\'u.</string>
+    <string name="staff_team_dialog_adding">Itti dabalamaa jira…</string>
+    <string name="staff_team_dialog_search_placeholder">Maqaa, faanaa quba, ykn ID\'n barbaadi…</string>
+
 </resources>

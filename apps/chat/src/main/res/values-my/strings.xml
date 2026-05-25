@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">အပေါ်သို့ ရွှေ့</string>
     <string name="chat_attachment_move_down">အောက်သို့ ရွှေ့</string>
     <string name="chat_list_add_to_home">ပင်မစခရင် သို့ ထည့်</string>
+
+    <string name="notification_channel_chat">ချတ် အကြောင်းကြားချက်များ</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">အထောက်အထား ဖန်တီးခြင်း မအောင်မြင်ပါ</string>
+    <string name="chat_auth_mfa_unsupported">MFA ကို မိုဘိုင်းအက်ပ်တွင် ယခုထိ မပံ့ပိုးသေးပါ</string>
+    <string name="chat_auth_enter_code_sent">%1$s သို့ ပို့ထားသော ကုဒ်ကို ထည့်ပါ</string>
+    <string name="chat_auth_create_identity">သင်၏ အထောက်အထား ဖန်တီးပါ</string>
+    <string name="chat_list_search_placeholder">ချတ်များ ရှာဖွေပါ</string>
+    <string name="chat_list_no_matching">ကိုက်ညီသော ချတ်များ မရှိပါ</string>
+    <string name="chat_list_empty">ချတ်များ မရှိသေးပါ</string>
+    <string name="chat_list_left_chat">ထွက်ခွာပြီး</string>
+    <string name="chat_new_no_friends">ချတ်လုပ်ရန် မိတ်ဆွေများ မရှိသေးပါ</string>
+    <string name="chat_new_no_matches">ကိုက်ညီသော မိတ်ဆွေများ မရှိပါ</string>
+    <string name="chat_new_existing_chat">ရှိပြီးသား ချတ်ကို ဖွင့်ပါ</string>
+    <string name="chat_new_start">ချတ် စတင်ပါ</string>
+    <string name="chat_new_start_group">အုပ်စု ချတ် စတင်ပါ</string>
+    <string name="chat_messages_loading">မက်ဆေ့ဂျ်များ ဖွင့်နေသည်…</string>
+    <string name="chat_messages_empty">မက်ဆေ့ဂျ်များ မရှိသေးပါ — နှုတ်ဆက်လိုက်ပါ!</string>
+    <string name="chat_messages_load_more">ဟောင်းသော မက်ဆေ့ဂျ်များ ဖွင့်ပါ</string>
+    <string name="chat_attachment_label">ဖိုင်</string>
+    <string name="chat_message_too_long">မက်ဆေ့ဂျ် အလွန်ရှည်လွန်းသည်</string>
+    <string name="chat_message_empty">မက်ဆေ့ဂျ်ကို ဗလာထား၍ မရပါ</string>
+    <string name="chat_settings_rename">ချတ်ကို အမည်ပြောင်းပါ</string>
+    <string name="chat_settings_add_member_empty">ထည့်ရန် မိတ်ဆွေများ မရှိပါ</string>
+    <string name="chat_settings_remove_member_message">%1$s ကို ဤချတ်မှ ဖယ်ရှားမည်လား?</string>
+    <string name="chat_settings_leave_message">ဤချတ်မှ ထွက်ခွာမည်လား? အခြားအဖွဲ့ဝင်များသည် သင်၏ မက်ဆေ့ဂျ်များကို မမြင်နိုင်တော့ပါ။</string>
+    <string name="chat_settings_leave_and_delete">ထွက်ခွာပြီး ဒေသခံ၌ ဖျက်ပါ</string>
+    <string name="chat_settings_delete">ဒေသခံ၌ ဖျက်ပါ</string>
+    <string name="chat_settings_delete_message">ဤလုပ်ဆောင်ချက်သည် ချတ်နှင့် ၎င်း၏ မက်ဆေ့ဂျ်များကို ဤစက်ပစ္စည်းမှသာ ဖယ်ရှားပါသည်။</string>
+
 </resources>

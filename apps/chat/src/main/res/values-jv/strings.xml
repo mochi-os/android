@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Pindhah munggah</string>
     <string name="chat_attachment_move_down">Pindhah mudhun</string>
     <string name="chat_list_add_to_home">Tambah ing layar utama</string>
+
+    <string name="notification_channel_chat">Notifikasi obrolan</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Gagal nggawe identitas</string>
+    <string name="chat_auth_mfa_unsupported">MFA durung didhukung ing aplikasi seluler</string>
+    <string name="chat_auth_enter_code_sent">Ketik kode sing dikirim menyang %1$s</string>
+    <string name="chat_auth_create_identity">Gawe identitas panjenengan</string>
+    <string name="chat_list_search_placeholder">Goleki obrolan</string>
+    <string name="chat_list_no_matching">Ora ana obrolan sing cocog</string>
+    <string name="chat_list_empty">Durung ana obrolan</string>
+    <string name="chat_list_left_chat">Metu</string>
+    <string name="chat_new_no_friends">Durung ana kanca kanggo diobrolake</string>
+    <string name="chat_new_no_matches">Ora ana kanca sing cocog</string>
+    <string name="chat_new_existing_chat">Bukak obrolan sing wis ana</string>
+    <string name="chat_new_start">Wiwiti obrolan</string>
+    <string name="chat_new_start_group">Wiwiti obrolan grup</string>
+    <string name="chat_messages_loading">Ngemot pesen…</string>
+    <string name="chat_messages_empty">Durung ana pesen — kandhaa halo!</string>
+    <string name="chat_messages_load_more">Muat pesen sing luwih lawas</string>
+    <string name="chat_attachment_label">Berkas</string>
+    <string name="chat_message_too_long">Pesen kedawan</string>
+    <string name="chat_message_empty">Pesen ora kena kosong</string>
+    <string name="chat_settings_rename">Ganti jeneng obrolan</string>
+    <string name="chat_settings_add_member_empty">Ora ana kanca kanggo ditambahake</string>
+    <string name="chat_settings_remove_member_message">Busak %1$s saka obrolan iki?</string>
+    <string name="chat_settings_leave_message">Metu saka obrolan iki? Anggota liyane ora bakal weruh pesen panjenengan maneh.</string>
+    <string name="chat_settings_leave_and_delete">Metu lan busak sacara lokal</string>
+    <string name="chat_settings_delete">Busak sacara lokal</string>
+    <string name="chat_settings_delete_message">Iki mbusak obrolan lan pesen-pesene mung saka piranti iki.</string>
+
 </resources>

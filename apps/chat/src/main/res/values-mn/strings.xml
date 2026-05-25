@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Дээш зөөх</string>
     <string name="chat_attachment_move_down">Доош зөөх</string>
     <string name="chat_list_add_to_home">Үндсэн дэлгэцэнд нэмэх</string>
+
+    <string name="notification_channel_chat">Чатын мэдэгдэл</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Хувийн мэдээлэл үүсгэж чадсангүй</string>
+    <string name="chat_auth_mfa_unsupported">MFA-г гар утасны аппад одоогоор дэмжихгүй</string>
+    <string name="chat_auth_enter_code_sent">%1$s руу илгээсэн кодыг оруулна уу</string>
+    <string name="chat_auth_create_identity">Хувийн мэдээллээ үүсгэх</string>
+    <string name="chat_list_search_placeholder">Чат хайх</string>
+    <string name="chat_list_no_matching">Тохирох чат алга</string>
+    <string name="chat_list_empty">Одоогоор чат алга</string>
+    <string name="chat_list_left_chat">Гарсан</string>
+    <string name="chat_new_no_friends">Чатлах найз одоогоор алга</string>
+    <string name="chat_new_no_matches">Тохирох найз алга</string>
+    <string name="chat_new_existing_chat">Одоо байгаа чатыг нээх</string>
+    <string name="chat_new_start">Чат эхлүүлэх</string>
+    <string name="chat_new_start_group">Бүлгийн чат эхлүүлэх</string>
+    <string name="chat_messages_loading">Мессеж ачаалж байна…</string>
+    <string name="chat_messages_empty">Одоогоор мессеж алга — мэндчилнэ үү!</string>
+    <string name="chat_messages_load_more">Хуучин мессежүүдийг ачаалах</string>
+    <string name="chat_attachment_label">Файл</string>
+    <string name="chat_message_too_long">Мессеж хэт урт байна</string>
+    <string name="chat_message_empty">Мессеж хоосон байж болохгүй</string>
+    <string name="chat_settings_rename">Чатын нэр өөрчлөх</string>
+    <string name="chat_settings_add_member_empty">Нэмэх найз алга</string>
+    <string name="chat_settings_remove_member_message">%1$s-г энэ чатаас хасах уу?</string>
+    <string name="chat_settings_leave_message">Энэ чатаас гарах уу? Бусад гишүүд таны мессежийг цаашид харахгүй.</string>
+    <string name="chat_settings_leave_and_delete">Гарч, төхөөрөмжөөс устгах</string>
+    <string name="chat_settings_delete">Төхөөрөмжөөс устгах</string>
+    <string name="chat_settings_delete_message">Энэ нь чат болон мессежүүдийг зөвхөн энэ төхөөрөмжөөс устгана.</string>
+
 </resources>

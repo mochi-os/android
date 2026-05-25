@@ -316,4 +316,14 @@
     <string name="projects_request_commit_message">پەیامی کۆمیت</string>
     <string name="projects_request_method_squash">Squash</string>
     <string name="projects_request_method_rebase">Rebase</string>
+
+    <string name="notification_channel_projects">ئاگادارکردنەوەکانی پڕۆژەکان</string>
+    <string name="projects_auth_brand">Mochi Projects</string>
+    <string name="projects_list_search_placeholder">گەڕان لە پڕۆژەکان</string>
+    <string name="projects_list_no_matching">هیچ پڕۆژەیەکی هاوتا نییە</string>
+    <string name="projects_list_empty">هێشتا هیچ پڕۆژەیەک نییە</string>
+    <string name="projects_find_search_placeholder">گەڕان لە پڕۆژەکان یان لکاندنی URL</string>
+    <string name="projects_find_search_hint">گەڕان بۆ پڕۆژەکان بۆ بەشداربوون</string>
+    <string name="projects_settings_delete_confirm_message">دڵنیایت لە سڕینەوەی ئەم پڕۆژەیە؟ هەموو بابەت، لێدوان، و ڕێکخستنەکان بە تەواوی دەسڕێنەوە.</string>
+
 </resources>

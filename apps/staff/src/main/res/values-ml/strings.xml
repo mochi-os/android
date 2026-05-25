@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">റോൾ അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ഓർഡർ #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">കാരണം (നിർബന്ധമല്ല)</string>
+    <string name="staff_accounts_sales">%1$d വിൽപ്പനകൾ</string>
+    <string name="staff_appeals_reason_label">വിൽപ്പനക്കാരന്റെ അപ്പീൽ കാരണം</string>
+    <string name="staff_audit_action_staff_team_role_changed">സ്റ്റാഫ് റോൾ മാറ്റി</string>
+    <string name="staff_categories_delete_desc">“%1$s” ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <string name="staff_disputes_dialog_title_chargeback">ചാർജ്ബാക്ക്: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">തർക്കം കാണുക</string>
+    <string name="staff_disputes_meta_buyer_details">വാങ്ങുന്നയാളുടെ വിശദാംശങ്ങൾ</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe സൂക്ഷിച്ചു</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s തിരികെ നൽകി</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">തിരികെ നൽകി</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s-ൽ</string>
+    <string name="staff_disputes_meta_seller_response">വിൽപ്പനക്കാരന്റെ പ്രതികരണം</string>
+    <string name="staff_disputes_refund_amount_label">റീഫണ്ട് തുക (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s-ന്റെ പൂർണ്ണ റീഫണ്ടിനായി ശൂന്യമായി വിടുക. ഭാഗിക റീഫണ്ടിനായി ചെറിയ തുക നൽകുക.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ബാങ്കിന് പ്രോസസ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
+    <string name="staff_disputes_stripe_check_returned">ചെക്ക് മടക്കി</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ക്രെഡിറ്റ് പ്രോസസ് ചെയ്തിട്ടില്ല</string>
+    <string name="staff_disputes_stripe_customer_initiated">ഉപഭോക്താവ് ആരംഭിച്ചത്</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ഡെബിറ്റ് അനുവദിച്ചിട്ടില്ല</string>
+    <string name="staff_disputes_stripe_duplicate">തനിപ്പകർപ്പ് ചാർജ്</string>
+    <string name="staff_disputes_stripe_fraudulent">വഞ്ചനാപരം</string>
+    <string name="staff_disputes_stripe_general">പൊതുവായത്</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">തെറ്റായ അക്കൗണ്ട് വിശദാംശങ്ങൾ</string>
+    <string name="staff_disputes_stripe_insufficient_funds">മതിയായ ഫണ്ടില്ല</string>
+    <string name="staff_disputes_stripe_product_not_received">ഉൽപ്പന്നം ലഭിച്ചിട്ടില്ല</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ഉൽപ്പന്നം സ്വീകാര്യമല്ല</string>
+    <string name="staff_disputes_stripe_subscription_canceled">സബ്സ്ക്രിപ്ഷൻ റദ്ദാക്കി</string>
+    <string name="staff_disputes_stripe_unrecognized">തിരിച്ചറിയാത്ത ചാർജ്</string>
+    <string name="staff_listings_seller_unknown">അജ്ഞാത വിൽപ്പനക്കാരൻ</string>
+    <string name="staff_listings_seller_verified">സ്ഥിരീകരിച്ച വിൽപ്പനക്കാരൻ</string>
+    <string name="staff_reports_listing_label">ലിസ്റ്റിംഗ് #%1$d</string>
+    <string name="staff_reports_meta_details">റിപ്പോർട്ടറുടെ വിശദാംശങ്ങൾ</string>
+    <string name="staff_reviews_order_label">ഓർഡർ #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s-ന്. ഈ അവലോകനം ശാശ്വതമായി ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ഈ അവലോകനം ശാശ്വതമായി ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <string name="staff_team_dialog_search_placeholder">പേര്, ഫിംഗർപ്രിന്റ്, അല്ലെങ്കിൽ ID പ്രകാരം തിരയുക…</string>
+
 </resources>

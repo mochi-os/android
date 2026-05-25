@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Pindahkan ke atas</string>
     <string name="chat_attachment_move_down">Pindahkan ke bawah</string>
     <string name="chat_list_add_to_home">Tambahkan ke layar utama</string>
+
+    <string name="notification_channel_chat">Notifikasi chat</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Gagal membuat identitas</string>
+    <string name="chat_auth_mfa_unsupported">MFA belum didukung di aplikasi mobile</string>
+    <string name="chat_auth_enter_code_sent">Masukkan kode yang dikirim ke %1$s</string>
+    <string name="chat_auth_create_identity">Buat identitas Anda</string>
+    <string name="chat_list_search_placeholder">Cari chat</string>
+    <string name="chat_list_no_matching">Tidak ada chat yang cocok</string>
+    <string name="chat_list_empty">Belum ada chat</string>
+    <string name="chat_list_left_chat">Keluar</string>
+    <string name="chat_new_no_friends">Belum ada teman untuk diajak chat</string>
+    <string name="chat_new_no_matches">Tidak ada teman yang cocok</string>
+    <string name="chat_new_existing_chat">Buka chat yang ada</string>
+    <string name="chat_new_start">Mulai chat</string>
+    <string name="chat_new_start_group">Mulai chat grup</string>
+    <string name="chat_messages_loading">Memuat pesan…</string>
+    <string name="chat_messages_empty">Belum ada pesan — sapa dulu!</string>
+    <string name="chat_messages_load_more">Muat pesan lama</string>
+    <string name="chat_attachment_label">Berkas</string>
+    <string name="chat_message_too_long">Pesan terlalu panjang</string>
+    <string name="chat_message_empty">Pesan tidak boleh kosong</string>
+    <string name="chat_settings_rename">Ganti nama chat</string>
+    <string name="chat_settings_add_member_empty">Tidak ada teman untuk ditambahkan</string>
+    <string name="chat_settings_remove_member_message">Keluarkan %1$s dari chat ini?</string>
+    <string name="chat_settings_leave_message">Keluar dari chat ini? Anggota lain tidak akan melihat pesan Anda lagi.</string>
+    <string name="chat_settings_leave_and_delete">Keluar dan hapus secara lokal</string>
+    <string name="chat_settings_delete">Hapus secara lokal</string>
+    <string name="chat_settings_delete_message">Ini hanya menghapus chat dan pesannya dari perangkat ini.</string>
+
 </resources>

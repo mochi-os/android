@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Pārvietot uz augšu</string>
     <string name="chat_attachment_move_down">Pārvietot uz leju</string>
     <string name="chat_list_add_to_home">Pievienot sākuma ekrānam</string>
+
+    <string name="notification_channel_chat">Tērzēšanas paziņojumi</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Neizdevās izveidot identitāti</string>
+    <string name="chat_auth_mfa_unsupported">MFA mobilajā lietotnē vēl netiek atbalstīta</string>
+    <string name="chat_auth_enter_code_sent">Ievadiet kodu, kas nosūtīts uz %1$s</string>
+    <string name="chat_auth_create_identity">Izveidojiet savu identitāti</string>
+    <string name="chat_list_search_placeholder">Meklēt tērzēšanas</string>
+    <string name="chat_list_no_matching">Nav atbilstošu tērzēšanu</string>
+    <string name="chat_list_empty">Vēl nav nevienas tērzēšanas</string>
+    <string name="chat_list_left_chat">Pamesta</string>
+    <string name="chat_new_no_friends">Vēl nav draugu, ar kuriem tērzēt</string>
+    <string name="chat_new_no_matches">Nav atbilstošu draugu</string>
+    <string name="chat_new_existing_chat">Atvērt esošu tērzēšanu</string>
+    <string name="chat_new_start">Sākt tērzēšanu</string>
+    <string name="chat_new_start_group">Sākt grupas tērzēšanu</string>
+    <string name="chat_messages_loading">Notiek ziņojumu ielāde…</string>
+    <string name="chat_messages_empty">Vēl nav ziņojumu — pasakiet sveiki!</string>
+    <string name="chat_messages_load_more">Ielādēt vecākus ziņojumus</string>
+    <string name="chat_attachment_label">Fails</string>
+    <string name="chat_message_too_long">Ziņojums ir pārāk garš</string>
+    <string name="chat_message_empty">Ziņojums nevar būt tukšs</string>
+    <string name="chat_settings_rename">Pārdēvēt tērzēšanu</string>
+    <string name="chat_settings_add_member_empty">Nav draugu, ko pievienot</string>
+    <string name="chat_settings_remove_member_message">Noņemt %1$s no šīs tērzēšanas?</string>
+    <string name="chat_settings_leave_message">Pamest šo tērzēšanu? Citi dalībnieki vairs neredzēs jūsu ziņojumus.</string>
+    <string name="chat_settings_leave_and_delete">Pamest un dzēst lokāli</string>
+    <string name="chat_settings_delete">Dzēst lokāli</string>
+    <string name="chat_settings_delete_message">Šī darbība noņem tērzēšanu un tās ziņojumus tikai no šīs ierīces.</string>
+
 </resources>

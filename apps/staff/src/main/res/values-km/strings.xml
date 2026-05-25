@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">បានធ្វើបច្ចុប្បន្នភាពតួនាទី</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ការបញ្ជា #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">មូលហេតុ (ស្រេចចិត្ត)</string>
+    <string name="staff_accounts_sales">ការលក់ %1$d</string>
+    <string name="staff_appeals_reason_label">មូលហេតុបណ្តឹងសាទុក្ខរបស់អ្នកលក់</string>
+    <string name="staff_audit_action_staff_team_role_changed">តួនាទីបុគ្គលិកត្រូវបានផ្លាស់ប្តូរ</string>
+    <string name="staff_categories_delete_desc">លុប “%1$s”? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
+    <string name="staff_disputes_dialog_title_chargeback">ការដកប្រាក់ត្រឡប់៖ %1$s</string>
+    <string name="staff_disputes_dialog_title_view">មើលវិវាទ</string>
+    <string name="staff_disputes_meta_buyer_details">ព័ត៌មានលម្អិតរបស់អ្នកទិញ</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">រក្សាទុកដោយ Stripe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s បានសងវិញ</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">បានសងវិញ</string>
+    <string name="staff_disputes_meta_refunded_of">នៃ %1$s</string>
+    <string name="staff_disputes_meta_seller_response">ការឆ្លើយតបរបស់អ្នកលក់</string>
+    <string name="staff_disputes_refund_amount_label">ចំនួនទឹកប្រាក់សងវិញ (%1$s)</string>
+    <string name="staff_disputes_refund_help">ទុកឱ្យទទេសម្រាប់ការសងវិញពេញលេញនៃ %1$s។ បញ្ចូលចំនួនតិចជាងសម្រាប់ការសងវិញដោយផ្នែក។</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ធនាគារមិនអាចដំណើរការបាន</string>
+    <string name="staff_disputes_stripe_check_returned">មូលប្បទានបត្រត្រូវបានបញ្ជូនត្រឡប់</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ឥណទានមិនត្រូវបានដំណើរការ</string>
+    <string name="staff_disputes_stripe_customer_initiated">ផ្តើមដោយអតិថិជន</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ការដកប្រាក់មិនត្រូវបានអនុញ្ញាត</string>
+    <string name="staff_disputes_stripe_duplicate">ការគិតប្រាក់ស្ទួន</string>
+    <string name="staff_disputes_stripe_fraudulent">ការក្លែងបន្លំ</string>
+    <string name="staff_disputes_stripe_general">ទូទៅ</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">ព័ត៌មានគណនីមិនត្រឹមត្រូវ</string>
+    <string name="staff_disputes_stripe_insufficient_funds">ប្រាក់មិនគ្រប់គ្រាន់</string>
+    <string name="staff_disputes_stripe_product_not_received">មិនទទួលបានផលិតផល</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ផលិតផលមិនអាចទទួលយកបាន</string>
+    <string name="staff_disputes_stripe_subscription_canceled">ការជាវត្រូវបានបោះបង់</string>
+    <string name="staff_disputes_stripe_unrecognized">ការគិតប្រាក់មិនស្គាល់</string>
+    <string name="staff_listings_seller_unknown">អ្នកលក់មិនស្គាល់</string>
+    <string name="staff_listings_seller_verified">អ្នកលក់ដែលបានផ្ទៀងផ្ទាត់</string>
+    <string name="staff_reports_listing_label">ការចុះបញ្ជី #%1$d</string>
+    <string name="staff_reports_meta_details">ព័ត៌មានលម្អិតរបស់អ្នករាយការណ៍</string>
+    <string name="staff_reviews_order_label">ការបញ្ជាទិញ #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s នៅលើ %3$s។ លុបការវាយតម្លៃនេះជាអចិន្ត្រៃយ៍? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s។ លុបការវាយតម្លៃនេះជាអចិន្ត្រៃយ៍? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
+    <string name="staff_team_dialog_search_placeholder">ស្វែងរកតាមឈ្មោះ ស្នាមម្រាមដៃ ឬលេខសម្គាល់…</string>
+
 </resources>

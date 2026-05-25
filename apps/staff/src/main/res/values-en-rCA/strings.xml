@@ -479,4 +479,43 @@
     <string name="staff_status_moderator">Moderator</string>
     <string name="staff_status_rejected">Rejected</string>
     <string name="staff_sidebar_market">Market</string>
+
+    <string name="staff_reports_history">Report history</string>
+    <string name="staff_reports_listing_label">Listing #%1$d</string>
+    <string name="staff_reports_meta_details">Reporter\'s details</string>
+    <string name="staff_reports_meta_price">Price</string>
+    <string name="staff_reports_meta_reporter">Reporter</string>
+    <string name="staff_reports_reason_counterfeit">Counterfeit or stolen</string>
+    <string name="staff_reports_reason_inappropriate">Inappropriate content</string>
+    <string name="staff_reports_reason_misleading">Misleading description</string>
+    <string name="staff_reports_reason_prohibited">Prohibited or illegal item</string>
+    <string name="staff_reports_reason_spam">Spam or scam</string>
+    <string name="staff_reports_status_actioned">Actioned</string>
+    <string name="staff_reports_status_dismissed">Dismissed</string>
+    <string name="staff_reviews_action_hide">Hide</string>
+    <string name="staff_reviews_col_rating">Rating</string>
+    <string name="staff_reviews_col_reviewer">Reviewer</string>
+    <string name="staff_reviews_col_subject">Subject</string>
+    <string name="staff_reviews_col_text">Text</string>
+    <string name="staff_reviews_empty">No reviews</string>
+    <string name="staff_reviews_filter_hidden">Hidden</string>
+    <string name="staff_reviews_filter_published">Published</string>
+    <string name="staff_reviews_order_label">order #%1$d</string>
+    <string name="staff_reviews_overflow_actions">Actions</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s on %3$s. Permanently delete this review? This cannot be undone.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Permanently delete this review? This cannot be undone.</string>
+    <string name="staff_reviews_remove_title">Remove review?</string>
+    <string name="staff_reviews_toast_remove_failed">Failed to remove review</string>
+    <string name="staff_reviews_toast_update_failed">Failed to update review</string>
+    <string name="staff_reviews_toast_updated">Review updated</string>
+    <string name="staff_sidebar_dashboard">Dashboard</string>
+    <string name="staff_sidebar_management">Management</string>
+    <string name="staff_sidebar_overview">Overview</string>
+    <string name="staff_status_actioned">Actioned</string>
+    <string name="staff_status_appealed">Appealed</string>
+    <string name="staff_status_approved">Approved</string>
+    <string name="staff_status_dismissed">Dismissed</string>
+    <string name="staff_status_hidden">Hidden</string>
+    <string name="staff_status_published">Published</string>
+
 </resources>

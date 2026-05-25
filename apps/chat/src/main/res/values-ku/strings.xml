@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Bibe jor</string>
     <string name="chat_attachment_move_down">Bibe jêr</string>
     <string name="chat_list_add_to_home">Li ekrana malê zêde bike</string>
+
+    <string name="notification_channel_chat">Agahdariyên chatê</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Çêkirina nasnameyê serneket</string>
+    <string name="chat_auth_mfa_unsupported">MFA hêj di sepana mobîl de nayê piştgirîkirin</string>
+    <string name="chat_auth_enter_code_sent">Koda ku ji %1$s re hat şandin binivîse</string>
+    <string name="chat_auth_create_identity">Nasnameya xwe çêbike</string>
+    <string name="chat_list_search_placeholder">Li chatan bigere</string>
+    <string name="chat_list_no_matching">Tu chata lihevhatî tune</string>
+    <string name="chat_list_empty">Hêj chat tune</string>
+    <string name="chat_list_left_chat">Derket</string>
+    <string name="chat_new_no_friends">Hêj heval tune ku tu bi wan re biaxivî</string>
+    <string name="chat_new_no_matches">Tu hevalê lihevhatî tune</string>
+    <string name="chat_new_existing_chat">Chata heyî veke</string>
+    <string name="chat_new_start">Chatê dest pê bike</string>
+    <string name="chat_new_start_group">Chata komê dest pê bike</string>
+    <string name="chat_messages_loading">Peyam tên barkirin…</string>
+    <string name="chat_messages_empty">Hêj peyam tune — silavekê bide!</string>
+    <string name="chat_messages_load_more">Peyamên kevntir bar bike</string>
+    <string name="chat_attachment_label">Dosye</string>
+    <string name="chat_message_too_long">Peyam pir dirêj e</string>
+    <string name="chat_message_empty">Peyam nikare vala be</string>
+    <string name="chat_settings_rename">Navê chatê biguhêre</string>
+    <string name="chat_settings_add_member_empty">Tu heval tune ku werin lê zêdekirin</string>
+    <string name="chat_settings_remove_member_message">%1$s ji vê chatê were rakirin?</string>
+    <string name="chat_settings_leave_message">Ji vê chatê derkeve? Endamên din êdî peyamên te nabînin.</string>
+    <string name="chat_settings_leave_and_delete">Derkeve û herêmî jêbibe</string>
+    <string name="chat_settings_delete">Herêmî jêbibe</string>
+    <string name="chat_settings_delete_message">Ev tenê chatê û peyamên wê ji vê amûrê radike.</string>
+
 </resources>

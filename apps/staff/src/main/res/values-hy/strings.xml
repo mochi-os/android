@@ -498,4 +498,22 @@
     <string name="staff_team_toast_role_failed">Չհաջողվեց թարմացնել դերը</string>
     <string name="staff_team_toast_role_updated">Դերը թարմացված է</string>
 
+
+    <string name="staff_disputes_stripe_bank_cannot_process">բանկը չկարողացավ մշակել</string>
+    <string name="staff_disputes_stripe_check_returned">չեկը վերադարձվել է</string>
+    <string name="staff_disputes_stripe_credit_not_processed">վարկը չի մշակվել</string>
+    <string name="staff_disputes_stripe_customer_initiated">հաճախորդի կողմից նախաձեռնված</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">դեբետը չի թույլատրվել</string>
+    <string name="staff_disputes_stripe_duplicate">կրկնակի գանձում</string>
+    <string name="staff_disputes_stripe_fraudulent">խարդախ</string>
+    <string name="staff_disputes_stripe_general">ընդհանուր</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">հաշվի սխալ տվյալներ</string>
+    <string name="staff_disputes_stripe_insufficient_funds">անբավարար միջոցներ</string>
+    <string name="staff_disputes_stripe_product_not_received">ապրանքը չի ստացվել</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ապրանքն անընդունելի է</string>
+    <string name="staff_disputes_stripe_subscription_canceled">բաժանորդագրությունը չեղարկվել է</string>
+    <string name="staff_disputes_stripe_unrecognized">չճանաչված գանձում</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s-ին։ Ընդմիշտ ջնջե՞լ այս կարծիքը։ Սա հնարավոր չէ հետարկել։</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s։ Ընդմիշտ ջնջե՞լ այս կարծիքը։ Սա հնարավոր չէ հետարկել։</string>
+
 </resources>

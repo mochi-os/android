@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Жоғары жылжыту</string>
     <string name="chat_attachment_move_down">Төмен жылжыту</string>
     <string name="chat_list_add_to_home">Негізгі экранға қосу</string>
+
+    <string name="notification_channel_chat">Чат хабарландырулары</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Сәйкестікті жасау сәтсіз аяқталды</string>
+    <string name="chat_auth_mfa_unsupported">MFA мобильді қолданбада әлі қолдау таппайды</string>
+    <string name="chat_auth_enter_code_sent">%1$s мекенжайына жіберілген кодты енгізіңіз</string>
+    <string name="chat_auth_create_identity">Сәйкестігіңізді жасаңыз</string>
+    <string name="chat_list_search_placeholder">Чаттарды іздеу</string>
+    <string name="chat_list_no_matching">Сәйкес чаттар жоқ</string>
+    <string name="chat_list_empty">Әзірге чаттар жоқ</string>
+    <string name="chat_list_left_chat">Шықты</string>
+    <string name="chat_new_no_friends">Әзірге сөйлесетін достар жоқ</string>
+    <string name="chat_new_no_matches">Сәйкес достар жоқ</string>
+    <string name="chat_new_existing_chat">Бар чатты ашу</string>
+    <string name="chat_new_start">Чат бастау</string>
+    <string name="chat_new_start_group">Топтық чат бастау</string>
+    <string name="chat_messages_loading">Хабарламалар жүктелуде…</string>
+    <string name="chat_messages_empty">Әзірге хабарламалар жоқ — сәлемдесіңіз!</string>
+    <string name="chat_messages_load_more">Ескі хабарламаларды жүктеу</string>
+    <string name="chat_attachment_label">Файл</string>
+    <string name="chat_message_too_long">Хабарлама тым ұзын</string>
+    <string name="chat_message_empty">Хабарлама бос болмауы керек</string>
+    <string name="chat_settings_rename">Чат атын өзгерту</string>
+    <string name="chat_settings_add_member_empty">Қосатын достар жоқ</string>
+    <string name="chat_settings_remove_member_message">%1$s пайдаланушысын осы чаттан жоюға бола ма?</string>
+    <string name="chat_settings_leave_message">Осы чаттан шығасыз ба? Басқа қатысушылар сіздің хабарламаларыңызды бұдан былай көрмейді.</string>
+    <string name="chat_settings_leave_and_delete">Шығу және жергілікті түрде жою</string>
+    <string name="chat_settings_delete">Жергілікті түрде жою</string>
+    <string name="chat_settings_delete_message">Бұл чатты және оның хабарламаларын тек осы құрылғыдан жояды.</string>
+
 </resources>

@@ -182,4 +182,17 @@
     <string name="feeds_suggested_credibility_keep">Cari saxlanılsın</string>
 
     <string name="feeds_ai_account">AI hesabı</string>
+
+    <string name="feeds_global_rss_export">Bütün lentlərin RSS ixracı</string>
+    <string name="feeds_ai_processing_mode">AI emal rejimi</string>
+    <string name="feeds_ai_custom_prompts">Fərdi promptlar</string>
+    <string name="feeds_ai_custom_prompts_description">Hər tapşırıq üçün standart AI promptlarını əvəz edin. Standartları istifadə etmək üçün boş buraxın.</string>
+    <string name="feeds_ai_mode_off_description">AI emalı yoxdur</string>
+    <string name="feeds_ai_mode_tag_description">AI yazıları maraqlara əsaslanan sıralamanı dəstəkləmək üçün etiketləyir</string>
+    <string name="feeds_ai_mode_tag_deduplicate_description">AI yazıları etiketləyir və oxşar hekayələri silir</string>
+    <string name="feeds_ai_prompt_new">Yeni yazıları etiketləyin</string>
+    <string name="feeds_ai_prompt_batch">Toplu emal</string>
+    <string name="feeds_ai_prompt_rank">Sıralama / qiymətləndirmə</string>
+    <string name="feeds_ai_prompt_credibility">Etibarlılıq qiymətləndirməsi</string>
+
 </resources>

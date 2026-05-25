@@ -476,4 +476,42 @@
     <string name="staff_team_toast_role_updated">Peran wis dianyari</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Pesenan #%1$d</string>
+
+    <string name="staff_appeals_reason_label">Alesan banding penjual</string>
+    <string name="staff_audit_action_staff_team_role_changed">Peran staf diowahi</string>
+    <string name="staff_categories_delete_desc">Busak \"%1$s\"? Iki ora bisa dibatalake.</string>
+    <string name="staff_disputes_dialog_title_chargeback">Chargeback: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Deleng sengketa</string>
+    <string name="staff_disputes_meta_buyer_details">Rincian tumbas</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">ditahan dening Stripe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s wis dibalekake</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">wis dibalekake</string>
+    <string name="staff_disputes_meta_refunded_of">saka %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Tanggapan penjual</string>
+    <string name="staff_disputes_refund_amount_label">Jumlah pengembalian (%1$s)</string>
+    <string name="staff_disputes_refund_help">Kosongake kanggo pengembalian kabeh %1$s. Lebokake jumlah sing luwih cilik kanggo pengembalian sebagian.</string>
+    <string name="staff_disputes_resolving">Ngrampungake…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">bank ora bisa ngolah</string>
+    <string name="staff_disputes_stripe_check_returned">cek dibalekake</string>
+    <string name="staff_disputes_stripe_credit_not_processed">kredit ora diolah</string>
+    <string name="staff_disputes_stripe_customer_initiated">diwiwiti pelanggan</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debit ora diidini</string>
+    <string name="staff_disputes_stripe_duplicate">tagihan pindho</string>
+    <string name="staff_disputes_stripe_fraudulent">penipuan</string>
+    <string name="staff_disputes_stripe_general">umum</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">rincian akun salah</string>
+    <string name="staff_disputes_stripe_insufficient_funds">dana ora cukup</string>
+    <string name="staff_disputes_stripe_product_not_received">produk ora ditampa</string>
+    <string name="staff_disputes_stripe_product_unacceptable">produk ora bisa ditampa</string>
+    <string name="staff_disputes_stripe_subscription_canceled">langganan dibatalake</string>
+    <string name="staff_disputes_stripe_unrecognized">tagihan ora dikenali</string>
+    <string name="staff_listings_seller_verified">Penjual kaverifikasi</string>
+    <string name="staff_moderation_filter_clear">Busak saringan</string>
+    <string name="staff_reports_listing_label">Daftar #%1$d</string>
+    <string name="staff_reports_meta_details">Rincian pelapor</string>
+    <string name="staff_reviews_order_label">pesenan #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s ing %3$s. Busak ulasan iki kanthi permanen? Iki ora bisa dibatalake.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Busak ulasan iki kanthi permanen? Iki ora bisa dibatalake.</string>
+    <string name="staff_team_dialog_search_placeholder">Goleki miturut jeneng, sidik jari, utawa ID…</string>
+
 </resources>

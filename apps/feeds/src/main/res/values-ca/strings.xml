@@ -182,4 +182,17 @@
     <string name="feeds_suggested_credibility_keep">Mantén l\'actual</string>
 
     <string name="feeds_ai_account">Compte d\\'IA</string>
+
+    <string name="feeds_global_rss_export">Exportació RSS de tots els canals</string>
+    <string name="feeds_ai_processing_mode">Mode de processament d\'IA</string>
+    <string name="feeds_ai_custom_prompts">Indicacions personalitzades</string>
+    <string name="feeds_ai_custom_prompts_description">Substitueix les indicacions d\'IA per defecte per a cada tasca. Deixeu-ho en blanc per utilitzar els valors per defecte.</string>
+    <string name="feeds_ai_mode_off_description">Sense processament d\'IA</string>
+    <string name="feeds_ai_mode_tag_description">La IA etiqueta les publicacions per donar suport a la classificació basada en interessos</string>
+    <string name="feeds_ai_mode_tag_deduplicate_description">La IA etiqueta les publicacions i elimina les notícies gairebé duplicades</string>
+    <string name="feeds_ai_prompt_new">Etiqueta publicacions noves</string>
+    <string name="feeds_ai_prompt_batch">Processament per lots</string>
+    <string name="feeds_ai_prompt_rank">Classificació / puntuació</string>
+    <string name="feeds_ai_prompt_credibility">Avaluació de la credibilitat</string>
+
 </resources>

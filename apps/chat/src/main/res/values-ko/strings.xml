@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">위로 이동</string>
     <string name="chat_attachment_move_down">아래로 이동</string>
     <string name="chat_list_add_to_home">홈 화면에 추가</string>
+
+    <string name="notification_channel_chat">채팅 알림</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">신원 생성에 실패했습니다</string>
+    <string name="chat_auth_mfa_unsupported">MFA는 아직 모바일 앱에서 지원되지 않습니다</string>
+    <string name="chat_auth_enter_code_sent">%1$s(으)로 전송된 코드를 입력하세요</string>
+    <string name="chat_auth_create_identity">신원 만들기</string>
+    <string name="chat_list_search_placeholder">채팅 검색</string>
+    <string name="chat_list_no_matching">일치하는 채팅이 없습니다</string>
+    <string name="chat_list_empty">아직 채팅이 없습니다</string>
+    <string name="chat_list_left_chat">나감</string>
+    <string name="chat_new_no_friends">아직 채팅할 친구가 없습니다</string>
+    <string name="chat_new_no_matches">일치하는 친구가 없습니다</string>
+    <string name="chat_new_existing_chat">기존 채팅 열기</string>
+    <string name="chat_new_start">채팅 시작</string>
+    <string name="chat_new_start_group">그룹 채팅 시작</string>
+    <string name="chat_messages_loading">메시지를 불러오는 중…</string>
+    <string name="chat_messages_empty">아직 메시지가 없습니다 — 인사해 보세요!</string>
+    <string name="chat_messages_load_more">이전 메시지 불러오기</string>
+    <string name="chat_attachment_label">파일</string>
+    <string name="chat_message_too_long">메시지가 너무 깁니다</string>
+    <string name="chat_message_empty">메시지를 비워 둘 수 없습니다</string>
+    <string name="chat_settings_rename">채팅 이름 바꾸기</string>
+    <string name="chat_settings_add_member_empty">추가할 친구가 없습니다</string>
+    <string name="chat_settings_remove_member_message">%1$s님을 이 채팅에서 내보내시겠습니까?</string>
+    <string name="chat_settings_leave_message">이 채팅에서 나가시겠습니까? 다른 구성원이 더 이상 회원님의 메시지를 볼 수 없게 됩니다.</string>
+    <string name="chat_settings_leave_and_delete">나가고 로컬에서 삭제</string>
+    <string name="chat_settings_delete">로컬에서 삭제</string>
+    <string name="chat_settings_delete_message">이 기기에서만 채팅과 메시지를 삭제합니다.</string>
+
 </resources>

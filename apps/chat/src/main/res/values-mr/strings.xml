@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">वर हलवा</string>
     <string name="chat_attachment_move_down">खाली हलवा</string>
     <string name="chat_list_add_to_home">होम स्क्रीनवर जोडा</string>
+
+    <string name="notification_channel_chat">चॅट सूचना</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">ओळख तयार करण्यात अयशस्वी</string>
+    <string name="chat_auth_mfa_unsupported">मोबाइल अॅपमध्ये MFA अद्याप समर्थित नाही</string>
+    <string name="chat_auth_enter_code_sent">%1$s वर पाठवलेला कोड प्रविष्ट करा</string>
+    <string name="chat_auth_create_identity">तुमची ओळख तयार करा</string>
+    <string name="chat_list_search_placeholder">चॅट शोधा</string>
+    <string name="chat_list_no_matching">जुळणारे चॅट नाहीत</string>
+    <string name="chat_list_empty">अद्याप कोणतेही चॅट नाहीत</string>
+    <string name="chat_list_left_chat">सोडले</string>
+    <string name="chat_new_no_friends">अद्याप चॅट करण्यासाठी मित्र नाहीत</string>
+    <string name="chat_new_no_matches">जुळणारे मित्र नाहीत</string>
+    <string name="chat_new_existing_chat">विद्यमान चॅट उघडा</string>
+    <string name="chat_new_start">चॅट सुरू करा</string>
+    <string name="chat_new_start_group">गट चॅट सुरू करा</string>
+    <string name="chat_messages_loading">संदेश लोड करत आहे…</string>
+    <string name="chat_messages_empty">अद्याप कोणतेही संदेश नाहीत — नमस्कार म्हणा!</string>
+    <string name="chat_messages_load_more">जुने संदेश लोड करा</string>
+    <string name="chat_attachment_label">फाइल</string>
+    <string name="chat_message_too_long">संदेश खूप लांब आहे</string>
+    <string name="chat_message_empty">संदेश रिक्त असू शकत नाही</string>
+    <string name="chat_settings_rename">चॅटचे नाव बदला</string>
+    <string name="chat_settings_add_member_empty">जोडण्यासाठी मित्र नाहीत</string>
+    <string name="chat_settings_remove_member_message">या चॅटमधून %1$s ला काढायचे का?</string>
+    <string name="chat_settings_leave_message">हा चॅट सोडायचा का? इतर सदस्यांना यापुढे तुमचे संदेश दिसणार नाहीत.</string>
+    <string name="chat_settings_leave_and_delete">सोडा आणि स्थानिक पातळीवर हटवा</string>
+    <string name="chat_settings_delete">स्थानिक पातळीवर हटवा</string>
+    <string name="chat_settings_delete_message">हे केवळ या डिव्हाइसवरून चॅट आणि त्याचे संदेश काढून टाकते.</string>
+
 </resources>

@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">پورته یوسئ</string>
     <string name="chat_attachment_move_down">ښکته یوسئ</string>
     <string name="chat_list_add_to_home">کور پاڼې ته اضافه کړئ</string>
+
+    <string name="notification_channel_chat">د چټ خبرتیاوې</string>
+    <string name="chat_auth_brand">Mochi چټ</string>
+    <string name="chat_auth_create_identity_failed">د پېژندنې جوړول ناکام شول</string>
+    <string name="chat_auth_mfa_unsupported">MFA لا تر اوسه په ګرځنده اپلیکیشن کې ملاتړ نه لري</string>
+    <string name="chat_auth_enter_code_sent">هغه کوډ دننه کړئ چې %1$s ته لیږل شوی</string>
+    <string name="chat_auth_create_identity">خپله پېژندنه جوړه کړئ</string>
+    <string name="chat_list_search_placeholder">د چټونو لټون</string>
+    <string name="chat_list_no_matching">هیڅ سمون لرونکی چټ نشته</string>
+    <string name="chat_list_empty">تر اوسه هیڅ چټ نشته</string>
+    <string name="chat_list_left_chat">پریښودل شو</string>
+    <string name="chat_new_no_friends">تر اوسه د چټ کولو لپاره هیڅ ملګری نشته</string>
+    <string name="chat_new_no_matches">هیڅ سمون لرونکي ملګري نشته</string>
+    <string name="chat_new_existing_chat">موجود چټ خلاص کړئ</string>
+    <string name="chat_new_start">چټ پیل کړئ</string>
+    <string name="chat_new_start_group">ډله ییز چټ پیل کړئ</string>
+    <string name="chat_messages_loading">پیغامونه لوډېږي…</string>
+    <string name="chat_messages_empty">تر اوسه هیڅ پیغام نشته — سلام ووایاست!</string>
+    <string name="chat_messages_load_more">زاړه پیغامونه راوړئ</string>
+    <string name="chat_attachment_label">فایل</string>
+    <string name="chat_message_too_long">پیغام ډېر اوږد دی</string>
+    <string name="chat_message_empty">پیغام نشي خالي کیدای</string>
+    <string name="chat_settings_rename">د چټ نوم بدلول</string>
+    <string name="chat_settings_add_member_empty">د اضافه کولو لپاره هیڅ ملګری نشته</string>
+    <string name="chat_settings_remove_member_message">%1$s له دې چټ څخه لرې کړئ؟</string>
+    <string name="chat_settings_leave_message">دا چټ پریږدئ؟ نور غړي به ستاسو پیغامونه نور ونه ګوري.</string>
+    <string name="chat_settings_leave_and_delete">پریږدئ او په محلي ډول یې ړنګ کړئ</string>
+    <string name="chat_settings_delete">په محلي ډول ړنګ کړئ</string>
+    <string name="chat_settings_delete_message">دا چټ او د هغه پیغامونه یوازې له دې وسیلې څخه لرې کوي.</string>
+
 </resources>

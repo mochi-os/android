@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">भूमिका अद्यावधिक गरियो</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">अर्डर #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">कारण (वैकल्पिक)</string>
+    <string name="staff_accounts_sales">%1$d बिक्री</string>
+    <string name="staff_appeals_reason_label">विक्रेताको अपील कारण</string>
+    <string name="staff_audit_action_staff_team_role_changed">स्टाफ भूमिका परिवर्तन गरियो</string>
+    <string name="staff_categories_delete_desc">“%1$s” मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
+    <string name="staff_disputes_dialog_title_chargeback">चार्जब्याक: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">विवाद हेर्नुहोस्</string>
+    <string name="staff_disputes_meta_buyer_details">खरिदकर्ताको विवरण</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe द्वारा राखिएको</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s फिर्ता गरियो</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">फिर्ता गरियो</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s मध्ये</string>
+    <string name="staff_disputes_meta_seller_response">विक्रेताको जवाफ</string>
+    <string name="staff_disputes_refund_amount_label">फिर्ता रकम (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s को पूर्ण फिर्ताका लागि खाली छोड्नुहोस्। आंशिक फिर्ताका लागि सानो रकम प्रविष्ट गर्नुहोस्।</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">बैंकले प्रक्रिया गर्न सकेन</string>
+    <string name="staff_disputes_stripe_check_returned">चेक फिर्ता भयो</string>
+    <string name="staff_disputes_stripe_credit_not_processed">क्रेडिट प्रक्रिया गरिएन</string>
+    <string name="staff_disputes_stripe_customer_initiated">ग्राहकले सुरु गरेको</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">डेबिट अधिकृत गरिएको थिएन</string>
+    <string name="staff_disputes_stripe_duplicate">दोहोरो शुल्क</string>
+    <string name="staff_disputes_stripe_fraudulent">धोखाधडी</string>
+    <string name="staff_disputes_stripe_general">सामान्य</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">गलत खाता विवरण</string>
+    <string name="staff_disputes_stripe_insufficient_funds">अपर्याप्त रकम</string>
+    <string name="staff_disputes_stripe_product_not_received">उत्पादन प्राप्त भएन</string>
+    <string name="staff_disputes_stripe_product_unacceptable">उत्पादन अस्वीकार्य</string>
+    <string name="staff_disputes_stripe_subscription_canceled">सदस्यता रद्द गरियो</string>
+    <string name="staff_disputes_stripe_unrecognized">अपरिचित शुल्क</string>
+    <string name="staff_listings_seller_unknown">अज्ञात विक्रेता</string>
+    <string name="staff_listings_seller_verified">प्रमाणित विक्रेता</string>
+    <string name="staff_reports_listing_label">लिस्टिङ #%1$d</string>
+    <string name="staff_reports_meta_details">रिपोर्टकर्ताको विवरण</string>
+    <string name="staff_reviews_order_label">अर्डर #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s मा। यो समीक्षा स्थायी रूपमा मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s। यो समीक्षा स्थायी रूपमा मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
+    <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिन्ट, वा ID द्वारा खोज्नुहोस्…</string>
+
 </resources>

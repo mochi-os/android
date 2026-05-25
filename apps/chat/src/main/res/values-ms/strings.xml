@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Alihkan ke atas</string>
     <string name="chat_attachment_move_down">Alihkan ke bawah</string>
     <string name="chat_list_add_to_home">Tambah ke skrin utama</string>
+
+    <string name="notification_channel_chat">Pemberitahuan sembang</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Gagal mencipta identiti</string>
+    <string name="chat_auth_mfa_unsupported">MFA belum disokong dalam aplikasi mudah alih</string>
+    <string name="chat_auth_enter_code_sent">Masukkan kod yang dihantar ke %1$s</string>
+    <string name="chat_auth_create_identity">Cipta identiti anda</string>
+    <string name="chat_list_search_placeholder">Cari sembang</string>
+    <string name="chat_list_no_matching">Tiada sembang yang sepadan</string>
+    <string name="chat_list_empty">Belum ada sembang</string>
+    <string name="chat_list_left_chat">Keluar</string>
+    <string name="chat_new_no_friends">Belum ada rakan untuk disembangkan</string>
+    <string name="chat_new_no_matches">Tiada rakan yang sepadan</string>
+    <string name="chat_new_existing_chat">Buka sembang sedia ada</string>
+    <string name="chat_new_start">Mulakan sembang</string>
+    <string name="chat_new_start_group">Mulakan sembang kumpulan</string>
+    <string name="chat_messages_loading">Memuatkan mesej…</string>
+    <string name="chat_messages_empty">Belum ada mesej — sapa dahulu!</string>
+    <string name="chat_messages_load_more">Muatkan mesej lebih lama</string>
+    <string name="chat_attachment_label">Fail</string>
+    <string name="chat_message_too_long">Mesej terlalu panjang</string>
+    <string name="chat_message_empty">Mesej tidak boleh kosong</string>
+    <string name="chat_settings_rename">Namakan semula sembang</string>
+    <string name="chat_settings_add_member_empty">Tiada rakan untuk ditambah</string>
+    <string name="chat_settings_remove_member_message">Keluarkan %1$s daripada sembang ini?</string>
+    <string name="chat_settings_leave_message">Tinggalkan sembang ini? Ahli lain tidak akan melihat mesej anda lagi.</string>
+    <string name="chat_settings_leave_and_delete">Tinggalkan dan padam secara setempat</string>
+    <string name="chat_settings_delete">Padam secara setempat</string>
+    <string name="chat_settings_delete_message">Ini mengeluarkan sembang dan mesejnya daripada peranti ini sahaja.</string>
+
 </resources>

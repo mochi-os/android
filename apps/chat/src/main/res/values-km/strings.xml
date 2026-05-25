@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">ផ្លាស់ទីឡើងលើ</string>
     <string name="chat_attachment_move_down">ផ្លាស់ទីចុះក្រោម</string>
     <string name="chat_list_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
+
+    <string name="notification_channel_chat">ការជូនដំណឹងជជែក</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">បរាជ័យក្នុងការបង្កើតអត្តសញ្ញាណ</string>
+    <string name="chat_auth_mfa_unsupported">MFA មិនទាន់គាំទ្រនៅក្នុងកម្មវិធីទូរស័ព្ទចល័ត</string>
+    <string name="chat_auth_enter_code_sent">បញ្ចូលលេខកូដដែលបានផ្ញើទៅ %1$s</string>
+    <string name="chat_auth_create_identity">បង្កើតអត្តសញ្ញាណរបស់អ្នក</string>
+    <string name="chat_list_search_placeholder">ស្វែងរកការជជែក</string>
+    <string name="chat_list_no_matching">មិនមានការជជែកត្រូវគ្នាទេ</string>
+    <string name="chat_list_empty">មិនទាន់មានការជជែកទេ</string>
+    <string name="chat_list_left_chat">បានចាកចេញ</string>
+    <string name="chat_new_no_friends">មិនទាន់មានមិត្តភក្ដិសម្រាប់ជជែកទេ</string>
+    <string name="chat_new_no_matches">មិនមានមិត្តភក្ដិត្រូវគ្នាទេ</string>
+    <string name="chat_new_existing_chat">បើកការជជែកដែលមានស្រាប់</string>
+    <string name="chat_new_start">ចាប់ផ្ដើមការជជែក</string>
+    <string name="chat_new_start_group">ចាប់ផ្ដើមការជជែកជាក្រុម</string>
+    <string name="chat_messages_loading">កំពុងផ្ទុកសារ…</string>
+    <string name="chat_messages_empty">មិនទាន់មានសារទេ — សួរស្ដី!</string>
+    <string name="chat_messages_load_more">ផ្ទុកសារចាស់ៗ</string>
+    <string name="chat_attachment_label">ឯកសារ</string>
+    <string name="chat_message_too_long">សារវែងពេក</string>
+    <string name="chat_message_empty">សារមិនអាចទទេបានទេ</string>
+    <string name="chat_settings_rename">ប្ដូរឈ្មោះការជជែក</string>
+    <string name="chat_settings_add_member_empty">មិនមានមិត្តភក្ដិត្រូវបន្ថែមទេ</string>
+    <string name="chat_settings_remove_member_message">ដក %1$s ចេញពីការជជែកនេះ?</string>
+    <string name="chat_settings_leave_message">ចាកចេញពីការជជែកនេះ? សមាជិកដទៃទៀតនឹងលែងឃើញសាររបស់អ្នកទៀតហើយ។</string>
+    <string name="chat_settings_leave_and_delete">ចាកចេញ និងលុបនៅក្នុងតំបន់</string>
+    <string name="chat_settings_delete">លុបនៅក្នុងតំបន់</string>
+    <string name="chat_settings_delete_message">សកម្មភាពនេះលុបការជជែក និងសាររបស់វាចេញពីឧបករណ៍នេះតែប៉ុណ្ណោះ។</string>
+
 </resources>

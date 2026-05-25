@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">भूमिका अद्ययावत केली</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ऑर्डर #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">कारण (पर्यायी)</string>
+    <string name="staff_accounts_sales">%1$d विक्री</string>
+    <string name="staff_appeals_reason_label">विक्रेत्याचे अपील कारण</string>
+    <string name="staff_audit_action_staff_team_role_changed">कर्मचारी भूमिका बदलली</string>
+    <string name="staff_categories_delete_desc">“%1$s” हटवायचे? हे पूर्ववत करता येणार नाही.</string>
+    <string name="staff_disputes_dialog_title_chargeback">चार्जबॅक: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">वाद पाहा</string>
+    <string name="staff_disputes_meta_buyer_details">खरेदीदाराचे तपशील</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ने ठेवले</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s परत केले</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">परत केले</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s पैकी</string>
+    <string name="staff_disputes_meta_seller_response">विक्रेत्याचा प्रतिसाद</string>
+    <string name="staff_disputes_refund_amount_label">परतावा रक्कम (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s च्या पूर्ण परताव्यासाठी रिकामे ठेवा. आंशिक परताव्यासाठी लहान रक्कम प्रविष्ट करा.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">बँक प्रक्रिया करू शकली नाही</string>
+    <string name="staff_disputes_stripe_check_returned">धनादेश परत आला</string>
+    <string name="staff_disputes_stripe_credit_not_processed">क्रेडिटवर प्रक्रिया झाली नाही</string>
+    <string name="staff_disputes_stripe_customer_initiated">ग्राहकाने सुरू केले</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">डेबिटला अधिकृत केले नाही</string>
+    <string name="staff_disputes_stripe_duplicate">डुप्लिकेट शुल्क</string>
+    <string name="staff_disputes_stripe_fraudulent">फसवणूक</string>
+    <string name="staff_disputes_stripe_general">सामान्य</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">चुकीचे खाते तपशील</string>
+    <string name="staff_disputes_stripe_insufficient_funds">अपुरा निधी</string>
+    <string name="staff_disputes_stripe_product_not_received">उत्पादन मिळाले नाही</string>
+    <string name="staff_disputes_stripe_product_unacceptable">उत्पादन अस्वीकार्य</string>
+    <string name="staff_disputes_stripe_subscription_canceled">सदस्यता रद्द केली</string>
+    <string name="staff_disputes_stripe_unrecognized">अनोळखी शुल्क</string>
+    <string name="staff_listings_seller_unknown">अज्ञात विक्रेता</string>
+    <string name="staff_listings_seller_verified">सत्यापित विक्रेता</string>
+    <string name="staff_reports_listing_label">सूची #%1$d</string>
+    <string name="staff_reports_meta_details">तक्रारकर्त्याचे तपशील</string>
+    <string name="staff_reviews_order_label">ऑर्डर #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%3$s रोजी %1$s → %2$s. हे पुनरावलोकन कायमचे हटवायचे? हे पूर्ववत करता येणार नाही.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. हे पुनरावलोकन कायमचे हटवायचे? हे पूर्ववत करता येणार नाही.</string>
+    <string name="staff_team_dialog_search_placeholder">नाव, फिंगरप्रिंट, किंवा ID ने शोधा…</string>
+
 </resources>

@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">ရာထူးကို အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">အမှာစာ #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">အကြောင်းပြချက် (ရွေးချယ်နိုင်)</string>
+    <string name="staff_accounts_sales">ရောင်းအား %1$d ခု</string>
+    <string name="staff_appeals_reason_label">ရောင်းသူ၏ အယူခံအကြောင်းပြချက်</string>
+    <string name="staff_audit_action_staff_team_role_changed">ဝန်ထမ်းအခန်းကဏ္ဍ ပြောင်းလဲခဲ့သည်</string>
+    <string name="staff_categories_delete_desc">“%1$s” ကို ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။</string>
+    <string name="staff_disputes_dialog_title_chargeback">ငွေပြန်တောင်းခြင်း- %1$s</string>
+    <string name="staff_disputes_dialog_title_view">အငြင်းပွားမှုကို ကြည့်ရန်</string>
+    <string name="staff_disputes_meta_buyer_details">ဝယ်သူ၏ အသေးစိတ်အချက်အလက်</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe မှ သိမ်းထားသည်</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s ပြန်အမ်းပြီး</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">ပြန်အမ်းပြီး</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s မှ</string>
+    <string name="staff_disputes_meta_seller_response">ရောင်းသူ၏ တုံ့ပြန်ချက်</string>
+    <string name="staff_disputes_refund_amount_label">ပြန်အမ်းငွေပမာဏ (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s အပြည့်ပြန်အမ်းရန် ဗလာထားပါ။ တစ်စိတ်တစ်ပိုင်းပြန်အမ်းရန် ပမာဏ နည်းနည်းထည့်ပါ။</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ဘဏ်မှ လုပ်ဆောင်၍မရပါ</string>
+    <string name="staff_disputes_stripe_check_returned">ချက်လက်မှတ် ပြန်လည်ပို့သည်</string>
+    <string name="staff_disputes_stripe_credit_not_processed">credit ကို လုပ်ဆောင်ခြင်းမရှိပါ</string>
+    <string name="staff_disputes_stripe_customer_initiated">ဖောက်သည်မှ စတင်ခဲ့သည်</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debit ကို ခွင့်ပြုထားခြင်းမရှိပါ</string>
+    <string name="staff_disputes_stripe_duplicate">ထပ်နေသော ငွေတောင်းခံမှု</string>
+    <string name="staff_disputes_stripe_fraudulent">လိမ်လည်မှု</string>
+    <string name="staff_disputes_stripe_general">ယေဘုယျ</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">အကောင့်အသေးစိတ်အချက်အလက် မှားယွင်းနေသည်</string>
+    <string name="staff_disputes_stripe_insufficient_funds">ငွေပမာဏ မလုံလောက်ပါ</string>
+    <string name="staff_disputes_stripe_product_not_received">ပစ္စည်း မရရှိပါ</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ပစ္စည်း လက်မခံနိုင်ပါ</string>
+    <string name="staff_disputes_stripe_subscription_canceled">subscription ပယ်ဖျက်ပြီး</string>
+    <string name="staff_disputes_stripe_unrecognized">မသိရှိသော ငွေတောင်းခံမှု</string>
+    <string name="staff_listings_seller_unknown">မသိရှိသော ရောင်းသူ</string>
+    <string name="staff_listings_seller_verified">အတည်ပြုပြီး ရောင်းသူ</string>
+    <string name="staff_reports_listing_label">ရောင်းရန်စာရင်း #%1$d</string>
+    <string name="staff_reports_meta_details">သတင်းပို့သူ၏ အသေးစိတ်အချက်အလက်</string>
+    <string name="staff_reviews_order_label">အမှာစာ #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%3$s တွင် %1$s → %2$s။ ဤသုံးသပ်ချက်ကို အပြီးတိုင် ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s။ ဤသုံးသပ်ချက်ကို အပြီးတိုင် ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။</string>
+    <string name="staff_team_dialog_search_placeholder">နာမည်၊ လက်ဗွေ၊ သို့မဟုတ် ID ဖြင့် ရှာရန်…</string>
+
 </resources>

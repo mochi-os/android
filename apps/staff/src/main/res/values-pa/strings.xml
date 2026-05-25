@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">ਭੂਮਿਕਾ ਅੱਪਡੇਟ ਹੋਈ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ਆਰਡਰ #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">ਕਾਰਨ (ਚੋਣਵਾਂ)</string>
+    <string name="staff_accounts_sales">%1$d ਵਿਕਰੀਆਂ</string>
+    <string name="staff_appeals_reason_label">ਵਿਕਰੇਤਾ ਦੀ ਅਪੀਲ ਦਾ ਕਾਰਨ</string>
+    <string name="staff_audit_action_staff_team_role_changed">ਸਟਾਫ਼ ਭੂਮਿਕਾ ਬਦਲੀ ਗਈ</string>
+    <string name="staff_categories_delete_desc">“%1$s” ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="staff_disputes_dialog_title_chargeback">ਚਾਰਜਬੈਕ: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">ਵਿਵਾਦ ਵੇਖੋ</string>
+    <string name="staff_disputes_meta_buyer_details">ਖਰੀਦਦਾਰ ਦੇ ਵੇਰਵੇ</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ਵੱਲੋਂ ਰੱਖੀ ਗਈ</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s ਵਾਪਸ ਕੀਤੇ ਗਏ</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">ਵਾਪਸ ਕੀਤੀ ਗਈ</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s ਵਿੱਚੋਂ</string>
+    <string name="staff_disputes_meta_seller_response">ਵਿਕਰੇਤਾ ਦਾ ਜਵਾਬ</string>
+    <string name="staff_disputes_refund_amount_label">ਵਾਪਸੀ ਰਕਮ (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s ਦੀ ਪੂਰੀ ਵਾਪਸੀ ਲਈ ਖਾਲੀ ਛੱਡੋ। ਅੰਸ਼ਕ ਵਾਪਸੀ ਲਈ ਛੋਟੀ ਰਕਮ ਦਰਜ ਕਰੋ।</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ਬੈਂਕ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਕਰ ਸਕਿਆ</string>
+    <string name="staff_disputes_stripe_check_returned">ਚੈੱਕ ਵਾਪਸ ਕੀਤਾ ਗਿਆ</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ਕਰੈਡਿਟ ਦੀ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਹੋਈ</string>
+    <string name="staff_disputes_stripe_customer_initiated">ਗਾਹਕ ਵੱਲੋਂ ਸ਼ੁਰੂ ਕੀਤਾ</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ਡੈਬਿਟ ਅਧਿਕਾਰਤ ਨਹੀਂ</string>
+    <string name="staff_disputes_stripe_duplicate">ਨਕਲੀ ਚਾਰਜ</string>
+    <string name="staff_disputes_stripe_fraudulent">ਧੋਖਾਧੜੀ ਵਾਲਾ</string>
+    <string name="staff_disputes_stripe_general">ਆਮ</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">ਖਾਤੇ ਦੇ ਗਲਤ ਵੇਰਵੇ</string>
+    <string name="staff_disputes_stripe_insufficient_funds">ਨਾਕਾਫ਼ੀ ਫੰਡ</string>
+    <string name="staff_disputes_stripe_product_not_received">ਉਤਪਾਦ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਇਆ</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ਉਤਪਾਦ ਮਨਜ਼ੂਰ ਨਹੀਂ</string>
+    <string name="staff_disputes_stripe_subscription_canceled">ਗਾਹਕੀ ਰੱਦ ਕੀਤੀ ਗਈ</string>
+    <string name="staff_disputes_stripe_unrecognized">ਅਣਪਛਾਤਾ ਚਾਰਜ</string>
+    <string name="staff_listings_seller_unknown">ਅਣਜਾਣ ਵਿਕਰੇਤਾ</string>
+    <string name="staff_listings_seller_verified">ਤਸਦੀਕਸ਼ੁਦਾ ਵਿਕਰੇਤਾ</string>
+    <string name="staff_reports_listing_label">ਸੂਚੀ #%1$d</string>
+    <string name="staff_reports_meta_details">ਰਿਪੋਰਟਰ ਦੇ ਵੇਰਵੇ</string>
+    <string name="staff_reviews_order_label">ਆਰਡਰ #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%3$s ਨੂੰ %1$s → %2$s। ਇਸ ਸਮੀਖਿਆ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s। ਇਸ ਸਮੀਖਿਆ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="staff_team_dialog_search_placeholder">ਨਾਮ, ਫਿੰਗਰਪ੍ਰਿੰਟ, ਜਾਂ ID ਦੁਆਰਾ ਖੋਜੋ…</string>
+
 </resources>
