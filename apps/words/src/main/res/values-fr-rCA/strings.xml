@@ -31,7 +31,7 @@
     <string name="words_new_game_language_us">Anglais (É.-U.)</string>
     <string name="words_new_game_start">Démarrer la partie</string>
     <string name="words_new_game_no_friends_title">Aucun ami pour le moment</string>
-    <string name="words_new_game_no_friends_subtitle">Ajoutez des amis dans l\\\'application Personnes pour commencer à jouer.</string>
+    <string name="words_new_game_no_friends_subtitle">Ajoutez des amis dans l\'application Personnes pour commencer à jouer.</string>
     <string name="words_new_game_add_friends">Ajouter des amis</string>
     <string name="words_detail_title">Partie</string>
     <string name="words_detail_coming_soon">Le détail de la partie sera bientôt disponible</string>
@@ -40,7 +40,7 @@
     <string name="words_detail_status_you_win">Vous gagnez!</string>
     <string name="words_detail_status_winner_wins">%1$s gagne</string>
     <string name="words_detail_status_game_over">Partie terminée</string>
-    <string name="words_detail_status_opponent_resigned">L\\\'adversaire a abandonné — vous gagnez!</string>
+    <string name="words_detail_status_opponent_resigned">L\'adversaire a abandonné — vous gagnez!</string>
     <string name="words_detail_status_you_resigned">Vous avez abandonné</string>
     <string name="words_detail_player_fallback">Joueur %1$d</string>
     <string name="words_detail_player_count">%1$d joueurs</string>
@@ -48,7 +48,7 @@
     <string name="words_detail_action_shuffle">Mélanger le chevalet</string>
     <string name="words_detail_action_pass">Passer</string>
     <string name="words_detail_action_exchange">Échanger des tuiles</string>
-    <string name="words_detail_action_cancel_exchange">Annuler l\\\'échange</string>
+    <string name="words_detail_action_cancel_exchange">Annuler l\'échange</string>
     <string name="words_detail_action_resign">Abandonner</string>
     <string name="words_detail_action_rematch">Revanche</string>
     <string name="words_detail_action_delete">Supprimer la partie</string>

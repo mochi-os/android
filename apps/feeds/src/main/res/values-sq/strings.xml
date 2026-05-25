@@ -10,7 +10,7 @@
     <string name="feeds_memories">Kujtimet</string>
     <string name="feeds_create">Krijo</string>
     <string name="feeds_dismiss">Hidhe</string>
-    <string name="feeds_no_feeds_found">S\\'u gjet asnjë feed</string>
+    <string name="feeds_no_feeds_found">S\'u gjet asnjë feed</string>
     <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_mark_all_read">Shëno të gjitha si të lexuara</string>
     <string name="feeds_settings">Cilësimet</string>
@@ -80,7 +80,7 @@
     <string name="feeds_ai_mode_tag_deduplicate">Etiketo + duplikatat</string>
     <string name="feeds_ai_reset_default">Rivendos në parazgjedhje</string>
     <string name="feeds_feed_not_found">Feed nuk u gjet</string>
-    <string name="feeds_post_not_found">Postimi s\\'u gjet</string>
+    <string name="feeds_post_not_found">Postimi s\'u gjet</string>
     <string name="feeds_post_select_feed">Ju lutemi zgjidhni një ushqim</string>
     <string name="feeds_post_empty_content">Ju lutemi shkruani disa tekste ose bashkëngjisni një skedar</string>
     <string name="feeds_settings_feed_renamed">Feed u riemërua</string>

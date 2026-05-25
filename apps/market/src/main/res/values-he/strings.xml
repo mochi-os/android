@@ -30,7 +30,7 @@
     <string name="market_bids_title">הצעות</string>
     <string name="market_channel_name">שוק</string>
     <string name="market_chargeback_reason_bank_cannot_process">הבנק לא יכול לעבד</string>
-    <string name="market_chargeback_reason_check_returned">הצ\\'ק חזר</string>
+    <string name="market_chargeback_reason_check_returned">הצ\'ק חזר</string>
     <string name="market_chargeback_reason_credit_not_processed">האשראי לא עובד</string>
     <string name="market_chargeback_reason_customer_initiated">יוזם לקוח</string>
     <string name="market_chargeback_reason_debit_not_authorized">החיוב לא מאושר</string>

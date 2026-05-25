@@ -24,8 +24,8 @@
     <string name="feeds_auth_email_code_sent">Entrez le code envoyé à %1$s</string>
     <string name="feeds_title">Fils</string>
     <string name="feeds_new_post">Nouvelle publication</string>
-    <string name="feeds_add_to_home_screen">Ajouter à l\\'écran d\\'accueil</string>
-    <string name="feeds_no_posts_yet">Aucune publication pour l\\'instant</string>
+    <string name="feeds_add_to_home_screen">Ajouter à l\'écran d\'accueil</string>
+    <string name="feeds_no_posts_yet">Aucune publication pour l\'instant</string>
     <string name="feeds_tag_clear">Effacer le filtre</string>
     <string name="feeds_identity_fingerprint">Empreinte : %1$s</string>
     <string name="feeds_suggested_interests_dismiss">Masquer</string>

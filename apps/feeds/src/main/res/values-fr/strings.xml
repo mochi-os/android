@@ -21,7 +21,7 @@
     <string name="feeds_unread">Non lus</string>
     <string name="feeds_filter_all">Tout</string>
     <string name="feeds_sort_label">Trier</string>
-    <string name="feeds_sort_interests">Centres d\\'intérêt</string>
+    <string name="feeds_sort_interests">Centres d\'intérêt</string>
     <string name="feeds_sort_new">Nouveau</string>
     <string name="feeds_sort_hot">Populaire</string>
     <string name="feeds_sort_top">Meilleur</string>
@@ -100,7 +100,7 @@
     <string name="feeds_settings_prompt_reset">Invite réinitialisée à la valeur par défaut</string>
     <string name="feeds_send">Envoyer</string>
     <string name="feeds_auth_email_code_sent">Saisissez le code envoyé à %1$s</string>
-    <string name="feeds_add_to_home_screen">Ajouter à l\\'écran d\\'accueil</string>
+    <string name="feeds_add_to_home_screen">Ajouter à l\'écran d\'accueil</string>
     <string name="feeds_tag_clear">Effacer le filtre</string>
     <string name="feeds_identity_fingerprint">Empreinte : %1$s</string>
     <string name="feeds_delete_post_confirm">Voulez-vous vraiment supprimer cette publication ? Cette action est irréversible.</string>

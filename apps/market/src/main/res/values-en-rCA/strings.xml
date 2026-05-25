@@ -174,7 +174,7 @@
     <string name="market_profile_status_banned">Banned</string>
     <string name="market_profile_status_suspended">Suspended</string>
     <string name="market_profile_verified">Verified</string>
-    <string name="market_purchase_dispute_response">Seller\\'s response</string>
+    <string name="market_purchase_dispute_response">Seller\'s response</string>
     <string name="market_purchase_refund_done">Refund requested</string>
     <string name="market_purchase_refunded">Refunded</string>
     <string name="market_purchase_refunded_partial">Refunded (partial)</string>

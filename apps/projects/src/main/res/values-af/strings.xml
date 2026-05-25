@@ -115,7 +115,7 @@
     <string name="projects_design_tab_classes">Klasse</string>
     <string name="projects_design_tab_views">Bekykings</string>
     <string name="projects_design_import_dialog_title">Voer ontwerp in</string>
-    <string name="projects_design_import_choose_template">Kies \\'n sjabloon</string>
+    <string name="projects_design_import_choose_template">Kies \'n sjabloon</string>
     <string name="projects_design_replace_title">Vervang ontwerp?</string>
     <string name="projects_design_replace">Vervang</string>
     <string name="projects_classes_add">Voeg klas by</string>

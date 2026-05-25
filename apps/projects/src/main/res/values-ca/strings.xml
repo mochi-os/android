@@ -20,7 +20,7 @@
     <string name="projects_find_title">Cerca projectes</string>
     <string name="projects_find_recommended">Recomanat</string>
     <string name="projects_find_subscribe">Subscriu-te</string>
-    <string name="projects_loading">S\\'està carregant…</string>
+    <string name="projects_loading">S\'està carregant…</string>
     <string name="projects_watched">Seguit</string>
     <string name="projects_create_object">Crea un objecte</string>
     <string name="projects_search">Cerca</string>
@@ -93,7 +93,7 @@
     <string name="projects_request_method">Mètode</string>
     <string name="projects_request_method_merge">Fusiona</string>
     <string name="projects_request_field_repository">Repositori</string>
-    <string name="projects_request_field_source">Branca d\\'origen</string>
+    <string name="projects_request_field_source">Branca d\'origen</string>
     <string name="projects_request_field_title">Títol</string>
     <string name="projects_request_field_description">Descripció</string>
     <string name="projects_request_field_draft">Esborrany</string>
@@ -147,7 +147,7 @@
     <string name="projects_field_delete_title">Suprimeix el camp</string>
     <string name="projects_field_add_field_dialog_title">Afegeix un camp</string>
     <string name="projects_option_add">Afegeix una opció</string>
-    <string name="projects_option_edit">Edita l\\'opció</string>
+    <string name="projects_option_edit">Edita l\'opció</string>
     <string name="projects_views_add">Afegeix una vista</string>
     <string name="projects_views_add_dialog_title">Afegeix una vista</string>
     <string name="projects_views_edit_dialog_title">Edita la vista</string>

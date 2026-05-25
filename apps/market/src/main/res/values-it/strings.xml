@@ -53,7 +53,7 @@
     <string name="market_checkout_address_region">Regione</string>
     <string name="market_checkout_back">Indietro</string>
     <string name="market_checkout_buy_it_now">Compralo subito</string>
-    <string name="market_checkout_create_failed">Impossibile creare l\\'ordine</string>
+    <string name="market_checkout_create_failed">Impossibile creare l\'ordine</string>
     <string name="market_checkout_delivery_download">Scarica</string>
     <string name="market_checkout_delivery_method">Metodo di consegna</string>
     <string name="market_checkout_delivery_pickup">Ritiro</string>
@@ -63,7 +63,7 @@
     <string name="market_checkout_listing_not_found">Annuncio non trovato</string>
     <string name="market_checkout_payment_failed">Impossibile avviare il checkout di pagamento — il venditore potrebbe non aver completato la configurazione dei pagamenti</string>
     <string name="market_checkout_secure">Pagamento sicuro tramite Stripe</string>
-    <string name="market_checkout_select_option">Seleziona un\\'opzione</string>
+    <string name="market_checkout_select_option">Seleziona un\'opzione</string>
     <string name="market_checkout_shipping">Spedizione</string>
     <string name="market_checkout_shipping_option">Opzione di spedizione</string>
     <string name="market_checkout_shipping_placeholder">Inserisci il tuo paese per vedere le opzioni di spedizione</string>
@@ -71,7 +71,7 @@
     <string name="market_checkout_subscribe_failed">Impossibile iscriversi</string>
     <string name="market_checkout_subscribe_intro">Ti stai abbonando a</string>
     <string name="market_checkout_subscribe_title">Iscriviti</string>
-    <string name="market_checkout_summary">Riepilogo dell\\'ordine</string>
+    <string name="market_checkout_summary">Riepilogo dell\'ordine</string>
     <string name="market_checkout_title">Checkout</string>
     <string name="market_checkout_total">Totale</string>
     <string name="market_checkout_winning_bid">Offerta vincente</string>
@@ -161,7 +161,7 @@
     <string name="market_listing_detail_buy_now">Acquista ora</string>
     <string name="market_listing_detail_description_heading">Descrizione</string>
     <string name="market_listing_detail_edit">Modifica</string>
-    <string name="market_listing_detail_load_failed">Impossibile caricare l\\'annuncio</string>
+    <string name="market_listing_detail_load_failed">Impossibile caricare l\'annuncio</string>
     <string name="market_listing_detail_location_heading">Posizione</string>
     <string name="market_listing_detail_message_seller">Invia messaggio al venditore</string>
     <string name="market_listing_detail_not_found">Annuncio non trovato</string>
@@ -202,13 +202,13 @@
     <string name="market_notifications_topic_account_stripe">Stato Stripe Connect</string>
     <string name="market_notifications_topic_account_stripe_desc">Cambiamenti di capacità e pagamenti del tuo account Stripe collegato.</string>
     <string name="market_notifications_topic_auction_cancelled">Asta annullata</string>
-    <string name="market_notifications_topic_auction_cancelled_desc">Un\\'asta su cui hai offerto è stata annullata.</string>
+    <string name="market_notifications_topic_auction_cancelled_desc">Un\'asta su cui hai offerto è stata annullata.</string>
     <string name="market_notifications_topic_auction_ended">Asta terminata</string>
-    <string name="market_notifications_topic_auction_ended_desc">Un\\'asta su cui hai offerto o che seguivi è chiusa.</string>
+    <string name="market_notifications_topic_auction_ended_desc">Un\'asta su cui hai offerto o che seguivi è chiusa.</string>
     <string name="market_notifications_topic_auction_outbid">Superato</string>
-    <string name="market_notifications_topic_auction_outbid_desc">Un altro offerente ha fatto un\\'offerta più alta.</string>
+    <string name="market_notifications_topic_auction_outbid_desc">Un altro offerente ha fatto un\'offerta più alta.</string>
     <string name="market_notifications_topic_bid_placed">Offerta ricevuta</string>
-    <string name="market_notifications_topic_bid_placed_desc">C\\'è una nuova offerta su una delle tue aste.</string>
+    <string name="market_notifications_topic_bid_placed_desc">C\'è una nuova offerta su una delle tue aste.</string>
     <string name="market_notifications_topic_listing_moderation">Moderazione annunci</string>
     <string name="market_notifications_topic_listing_moderation_desc">Decisioni sugli annunci che hai pubblicato o contestato.</string>
     <string name="market_notifications_topic_message">Messaggi</string>
@@ -264,7 +264,7 @@
     <string name="market_purchase_review_body">Recensione</string>
     <string name="market_purchase_review_failed">Impossibile inviare la recensione</string>
     <string name="market_purchase_review_hidden">Nascosto finché il venditore non ti recensisce, o dopo 14 giorni.</string>
-    <string name="market_purchase_review_prompt_body">Aiuta i futuri acquirenti — racconta com\\'è andato questo ordine.</string>
+    <string name="market_purchase_review_prompt_body">Aiuta i futuri acquirenti — racconta com\'è andato questo ordine.</string>
     <string name="market_purchase_review_rating">Valutazione</string>
     <string name="market_purchase_review_section">Lascia una recensione</string>
     <string name="market_purchase_review_submit">Invia recensione</string>
@@ -272,11 +272,11 @@
     <string name="market_purchase_review_your_review">La tua recensione</string>
     <string name="market_purchase_seller">Venditore</string>
     <string name="market_purchase_shipping_line">Spedizione</string>
-    <string name="market_purchase_summary">Riepilogo dell\\'ordine</string>
+    <string name="market_purchase_summary">Riepilogo dell\'ordine</string>
     <string name="market_purchase_title">Ordine</string>
     <string name="market_purchase_total">Totale</string>
     <string name="market_purchase_track">Traccia il pacco</string>
-    <string name="market_purchases_complete_purchase">Completa l\\'acquisto</string>
+    <string name="market_purchases_complete_purchase">Completa l\'acquisto</string>
     <string name="market_purchases_empty">Nessun acquisto</string>
     <string name="market_purchases_title">Acquisti</string>
     <string name="market_rating_label">Valutazione</string>
@@ -321,8 +321,8 @@
     <string name="market_sale_dispute_respond">Rispondi</string>
     <string name="market_sale_dispute_state_open">Apri</string>
     <string name="market_sale_dispute_state_resolved">Risolto</string>
-    <string name="market_sale_load_failed">Impossibile caricare l\\'ordine</string>
-    <string name="market_sale_message_buyer">Invia messaggio all\\'acquirente</string>
+    <string name="market_sale_load_failed">Impossibile caricare l\'ordine</string>
+    <string name="market_sale_message_buyer">Invia messaggio all\'acquirente</string>
     <string name="market_sale_refund_action">Emetti rimborso</string>
     <string name="market_sale_review_response_existing">La tua risposta</string>
     <string name="market_sale_review_response_failed">Impossibile inviare la risposta</string>
@@ -385,7 +385,7 @@
     <string name="market_subscription_detail_cancelled_on">Cancellato il %1$s</string>
     <string name="market_subscription_detail_charge_amount">Ultimo addebito: %1$s</string>
     <string name="market_subscription_detail_listing">Annuncio</string>
-    <string name="market_subscription_detail_load_failed">Impossibile caricare l\\'abbonamento</string>
+    <string name="market_subscription_detail_load_failed">Impossibile caricare l\'abbonamento</string>
     <string name="market_subscription_detail_next_billing">Prossima fatturazione: %1$s</string>
     <string name="market_subscription_detail_not_found">Abbonamento non trovato</string>
     <string name="market_subscription_detail_pending_cancel">Cancellazione in sospeso</string>
@@ -397,7 +397,7 @@
     <string name="market_subscriptions_action_reactivate">Riattiva</string>
     <string name="market_subscriptions_action_resubscribe">Iscriviti di nuovo</string>
     <string name="market_subscriptions_action_resume">Riprendi</string>
-    <string name="market_subscriptions_cancel_body">Questo annullerà il tuo abbonamento. Perderai l\\'accesso al termine del periodo di fatturazione corrente.</string>
+    <string name="market_subscriptions_cancel_body">Questo annullerà il tuo abbonamento. Perderai l\'accesso al termine del periodo di fatturazione corrente.</string>
     <string name="market_subscriptions_cancel_confirm">Annulla abbonamento</string>
     <string name="market_subscriptions_cancel_failed">Impossibile annullare</string>
     <string name="market_subscriptions_cancel_title">Annulla abbonamento</string>

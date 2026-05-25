@@ -48,7 +48,7 @@
     <string name="market_checkout_address_heading">Адреса доставки</string>
     <string name="market_checkout_address_line1">Адреса, рядок 1</string>
     <string name="market_checkout_address_line2">Адреса, рядок 2</string>
-    <string name="market_checkout_address_name">Ім\\'я</string>
+    <string name="market_checkout_address_name">Ім\'я</string>
     <string name="market_checkout_address_postcode">Поштовий індекс</string>
     <string name="market_checkout_address_region">Регіон</string>
     <string name="market_checkout_back">Назад</string>

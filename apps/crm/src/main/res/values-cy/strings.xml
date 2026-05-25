@@ -21,7 +21,7 @@
     <string name="crm_find_recommended">Argymhellir</string>
     <string name="crm_find_subscribe">Tanysgrifio</string>
     <string name="crm_loading">Yn llwytho…</string>
-    <string name="crm_watched">Wedi\\'i wylio</string>
+    <string name="crm_watched">Wedi\'i wylio</string>
     <string name="crm_create_object">Creu gwrthrych</string>
     <string name="crm_search">Chwilio</string>
     <string name="crm_settings">Gosodiadau</string>
@@ -30,8 +30,8 @@
     <string name="crm_sort_direction">Cyfeiriad</string>
     <string name="crm_sort_rank">Llawlyfr</string>
     <string name="crm_sort_number">Rhif</string>
-    <string name="crm_sort_created">Wedi\\'i greu</string>
-    <string name="crm_sort_updated">Wedi\\'i ddiweddaru</string>
+    <string name="crm_sort_created">Wedi\'i greu</string>
+    <string name="crm_sort_updated">Wedi\'i ddiweddaru</string>
     <string name="crm_create_object_title">Creu gwrthrych</string>
     <string name="crm_create_object_type">Math</string>
     <string name="crm_create_object_title_field">Teitl</string>
@@ -47,7 +47,7 @@
     <string name="crm_settings_delete_crm">Dileu prosiect</string>
     <string name="crm_settings_delete_confirm_title">Dileu prosiect</string>
     <string name="crm_settings_unsubscribe_title">Dad-danysgrifio</string>
-    <string name="crm_settings_unsubscribe_message">Ydych chi\\'n siŵr eich bod am ddad-danysgrifio o\\'r prosiect hwn?</string>
+    <string name="crm_settings_unsubscribe_message">Ydych chi\'n siŵr eich bod am ddad-danysgrifio o\'r prosiect hwn?</string>
     <string name="crm_access_level_owner">Perchennog</string>
     <string name="crm_access_level_design">Dyluniad</string>
     <string name="crm_access_level_comment">Sylw</string>
@@ -67,10 +67,10 @@
     <string name="crm_links_title">Dolenni</string>
     <string name="crm_links_add">Ychwanegu dolen</string>
     <string name="crm_links_section_blocks">Blociau</string>
-    <string name="crm_links_section_blocked_by">Wedi\\'i flocio gan</string>
+    <string name="crm_links_section_blocked_by">Wedi\'i flocio gan</string>
     <string name="crm_links_section_duplicates">Dyblygion</string>
     <string name="crm_links_type_blocks">Blociau</string>
-    <string name="crm_links_type_blocked_by">Wedi\\'i flocio gan</string>
+    <string name="crm_links_type_blocked_by">Wedi\'i flocio gan</string>
     <string name="crm_links_type_duplicates">Dyblygion</string>
     <string name="crm_links_no_matches">Dim gwrthrychau cyfatebol</string>
     <string name="crm_field_yes">Iawn</string>
@@ -86,7 +86,7 @@
     <string name="crm_request_empty">Dim ceisiadau cyfuno</string>
     <string name="crm_request_status_draft">Drafft</string>
     <string name="crm_request_status_open">Ar agor</string>
-    <string name="crm_request_status_merged">Wedi\\'i gyfuno</string>
+    <string name="crm_request_status_merged">Wedi\'i gyfuno</string>
     <string name="crm_request_merge">Cyfuno</string>
     <string name="crm_request_close">Cau</string>
     <string name="crm_request_merge_dialog_title">Cyfuno</string>
@@ -111,7 +111,7 @@
     <string name="crm_design_title">Dyluniad</string>
     <string name="crm_design_export">Allforio dyluniad</string>
     <string name="crm_design_import">Mewnforio dyluniad</string>
-    <string name="crm_design_imported">Dyluniad wedi\\'i fewnforio</string>
+    <string name="crm_design_imported">Dyluniad wedi\'i fewnforio</string>
     <string name="crm_design_tab_classes">Dosbarthiadau</string>
     <string name="crm_design_tab_views">Golygfeydd</string>
     <string name="crm_design_import_dialog_title">Mewnforio dyluniad</string>
@@ -157,10 +157,10 @@
     <string name="crm_views_type_list">Rhestr</string>
     <string name="crm_views_direction">Cyfeiriad</string>
     <string name="crm_views_sort_number">Rhif</string>
-    <string name="crm_views_sort_created">Wedi\\'i greu</string>
-    <string name="crm_views_sort_updated">Wedi\\'i ddiweddaru</string>
+    <string name="crm_views_sort_created">Wedi\'i greu</string>
+    <string name="crm_views_sort_updated">Wedi\'i ddiweddaru</string>
     <string name="crm_views_sort_rank">Rheng</string>
-    <string name="crm_not_found">Heb ddod o hyd i\\'r prosiect</string>
+    <string name="crm_not_found">Heb ddod o hyd i\'r prosiect</string>
     <string name="crm_list_more">Mwy</string>
     <string name="crm_more">Mwy</string>
     <string name="crm_request_more">Mwy</string>

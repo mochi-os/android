@@ -66,7 +66,7 @@
     <string name="feeds_no_sources">Babu tushen bayanai</string>
     <string name="feeds_edit_source">Gyara source</string>
     <string name="feeds_source_url">URL</string>
-    <string name="feeds_source_type">Nau\\'i</string>
+    <string name="feeds_source_type">Nau\'i</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Tunawa</string>

@@ -47,7 +47,7 @@
     <string name="projects_settings_delete_project">Elimina progetto</string>
     <string name="projects_settings_delete_confirm_title">Elimina progetto</string>
     <string name="projects_settings_unsubscribe_title">Annulla iscrizione</string>
-    <string name="projects_settings_unsubscribe_message">Sei sicuro di voler annullare l\\'iscrizione a questo progetto?</string>
+    <string name="projects_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo progetto?</string>
     <string name="projects_access_level_owner">Proprietario</string>
     <string name="projects_access_level_design">Progetta</string>
     <string name="projects_access_level_comment">Commento</string>

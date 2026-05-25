@@ -117,7 +117,7 @@
     <string name="market_editor_section_pricing">Fiyatlandırma</string>
     <string name="market_editor_section_tags">Etiketler</string>
     <string name="market_editor_shipping">Kargo</string>
-    <string name="market_editor_stripe_banner_action">Stripe\\'a bağlan</string>
+    <string name="market_editor_stripe_banner_action">Stripe\'a bağlan</string>
     <string name="market_editor_title">Başlık</string>
     <string name="market_editor_title_edit">İlanı düzenle</string>
     <string name="market_editor_type_digital">Dijital</string>
@@ -233,7 +233,7 @@
     <string name="market_onboarding_activating">Etkinleştiriliyor…</string>
     <string name="market_onboarding_body">Alıp satmaya başlamak için hesabınızı etkinleştirin.</string>
     <string name="market_onboarding_dismiss">Kapat</string>
-    <string name="market_onboarding_title">Market\\'e hoş geldiniz</string>
+    <string name="market_onboarding_title">Market\'e hoş geldiniz</string>
     <string name="market_open_sidebar">Menüyü aç</string>
     <string name="market_profile_reviews_section">Yorumlar</string>
     <string name="market_profile_status_banned">Yasaklandı</string>

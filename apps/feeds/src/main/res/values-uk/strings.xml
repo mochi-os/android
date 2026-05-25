@@ -5,7 +5,7 @@
     <string name="feeds_create_feed">Створити стрічку</string>
     <string name="feeds_new_post">Новий допис</string>
     <string name="feeds_all_feeds">Усі стрічки</string>
-    <string name="feeds_name">Ім\\'я</string>
+    <string name="feeds_name">Ім\'я</string>
     <string name="feeds_private">Приватний</string>
     <string name="feeds_memories">Спогади</string>
     <string name="feeds_create">Створити</string>
@@ -53,7 +53,7 @@
     <string name="feeds_feed_name">Назва стрічки</string>
     <string name="feeds_save_name">Зберегти ім’я</string>
     <string name="feeds_banner">Банер</string>
-    <string name="feeds_banner_description">Необов\\'язковий markdown-банер, що відображається у верхній частині вашої стрічки.</string>
+    <string name="feeds_banner_description">Необов\'язковий markdown-банер, що відображається у верхній частині вашої стрічки.</string>
     <string name="feeds_clear">Очистити</string>
     <string name="feeds_delete_feed">Видалити стрічку</string>
     <string name="feeds_add_member">Додати учасника</string>

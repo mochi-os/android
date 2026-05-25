@@ -7,7 +7,7 @@
     <string name="feeds_all_feeds">Opaite feed</string>
     <string name="feeds_name">Téra</string>
     <string name="feeds_private">Ñemiguáva</string>
-    <string name="feeds_memories">Mandu\\'a</string>
+    <string name="feeds_memories">Mandu\'a</string>
     <string name="feeds_create">Embojeguáva</string>
     <string name="feeds_dismiss">Mbohovái</string>
     <string name="feeds_no_feeds_found">Ndojejuhúi feeds</string>
@@ -18,9 +18,9 @@
     <string name="feeds_default_sort">Default sort</string>
     <string name="feeds_suggested_interests_add">Embojuaju</string>
     <string name="feeds_suggested_interests_dismiss">Emokañy</string>
-    <string name="feeds_unread">Ñemoñe\\'ẽ\\'ỹva</string>
+    <string name="feeds_unread">Ñemoñe\'ẽ\'ỹva</string>
     <string name="feeds_filter_all">Opaite</string>
-    <string name="feeds_sort_label">Embojo\\'a</string>
+    <string name="feeds_sort_label">Embojo\'a</string>
     <string name="feeds_sort_interests">Oikotevevakuéra</string>
     <string name="feeds_sort_new">Pyahu</string>
     <string name="feeds_sort_hot">Akúva</string>
@@ -66,10 +66,10 @@
     <string name="feeds_no_sources">Ndaipóri ypy</string>
     <string name="feeds_edit_source">Embojuruja apoha</string>
     <string name="feeds_source_url">URL</string>
-    <string name="feeds_source_type">Mba\\'éichagua</string>
+    <string name="feeds_source_type">Mba\'éichagua</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
-    <string name="feeds_source_type_feed_memories">Mandu\\'a</string>
+    <string name="feeds_source_type_feed_memories">Mandu\'a</string>
     <string name="feeds_remove_source">Eipe’a yvu</string>
     <string name="feeds_suggested_credibility_accept">Hekoite</string>
     <string name="feeds_rss_url_copied">RSS URL oñekopia clipboard-pe</string>
@@ -83,7 +83,7 @@
     <string name="feeds_post_not_found">Marandu ndojejuhúi</string>
     <string name="feeds_post_select_feed">Eporavo peteichaitehapegua kuatia</string>
     <string name="feeds_post_empty_content">Ejehai mba’e’à omoaña peteichaitehapegua marandurenda</string>
-    <string name="feeds_settings_feed_renamed">Oñembohera\\'ã feed</string>
+    <string name="feeds_settings_feed_renamed">Oñembohera\'ã feed</string>
     <string name="feeds_settings_banner_saved">Banner ojeguereko</string>
     <string name="feeds_settings_banner_cleared">Banner ojekuera</string>
     <string name="feeds_settings_source_added">Pyendarã embyaty</string>
@@ -99,14 +99,14 @@
     <string name="feeds_settings_prompt_saved">Prompt oñeñongatu</string>
     <string name="feeds_settings_prompt_reset">Mbo’epyrã ojej’api jey peteichaitehapegua</string>
     <string name="feeds_send">Mondo</string>
-    <string name="feeds_auth_email_code_sent">Emoinge papapy oñemondo\\'akue %1$s-pe</string>
+    <string name="feeds_auth_email_code_sent">Emoinge papapy oñemondo\'akue %1$s-pe</string>
     <string name="feeds_add_to_home_screen">Embojuaju óga rovetãme</string>
     <string name="feeds_tag_clear">Embogue mboguahávo</string>
     <string name="feeds_add_tag">Add tag</string>
     <string name="feeds_write_a_comment">Write a comment…</string>
     <string name="feeds_file">Marandurenda</string>
-    <string name="feeds_move_up">Emonge\\'e yvate</string>
-    <string name="feeds_move_down">Emonge\\'e yvy gotyo</string>
+    <string name="feeds_move_up">Emonge\'e yvate</string>
+    <string name="feeds_move_down">Emonge\'e yvy gotyo</string>
     <string name="feeds_access_permission">Permission</string>
 
     <string name="notification_channel_feeds">Marandu ñemoherakuã</string>

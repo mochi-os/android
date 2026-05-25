@@ -306,7 +306,7 @@
     <string name="market_purchase_download_section">Blerja jote është gati</string>
     <string name="market_purchase_item">Artikulli</string>
     <string name="market_purchase_message_seller">Dërgo mesazh shitësit</string>
-    <string name="market_purchase_not_found">Porosia s\\'u gjet</string>
+    <string name="market_purchase_not_found">Porosia s\'u gjet</string>
     <string name="market_purchase_order_label">Porosia</string>
     <string name="market_purchase_purchased">I blerë</string>
     <string name="market_purchase_refund_done">Rimbursimi u kërkua</string>
@@ -316,7 +316,7 @@
     <string name="market_purchase_request_refund">Kërko rimbursim</string>
     <string name="market_purchase_review_body">Vlerëso</string>
     <string name="market_purchase_review_failed">Dorëzimi i vlerësimit dështoi</string>
-    <string name="market_purchase_review_hidden">I fshehur derisa shitësi t\\'ju vlerësojë, ose pas 14 ditësh.</string>
+    <string name="market_purchase_review_hidden">I fshehur derisa shitësi t\'ju vlerësojë, ose pas 14 ditësh.</string>
     <string name="market_purchase_review_prompt_body">Ndihmoni blerësit e ardhshëm — ndani se si shkoi kjo porosi.</string>
     <string name="market_purchase_review_rating">Vlerësimi</string>
     <string name="market_purchase_review_section">Lini një vlerësim</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_auth_display_name">Nom d\\'affichage</string>
+    <string name="crm_auth_display_name">Nom d\'affichage</string>
     <string name="crm_auth_verification_failed">Échec de la vérification</string>
     <string name="crm_list_title">Projets</string>
     <string name="crm_list_close_search">Fermer la recherche</string>
@@ -19,7 +19,7 @@
     <string name="crm_create_action">Créer</string>
     <string name="crm_find_title">Trouver des projets</string>
     <string name="crm_find_recommended">Recommandé</string>
-    <string name="crm_find_subscribe">S\\'abonner</string>
+    <string name="crm_find_subscribe">S\'abonner</string>
     <string name="crm_loading">Chargement…</string>
     <string name="crm_watched">Surveillé</string>
     <string name="crm_create_object">Créer un objet</string>
@@ -147,7 +147,7 @@
     <string name="crm_field_delete_title">Supprimer le champ</string>
     <string name="crm_field_add_field_dialog_title">Ajouter un champ</string>
     <string name="crm_option_add">Ajouter une option</string>
-    <string name="crm_option_edit">Modifier l\\'option</string>
+    <string name="crm_option_edit">Modifier l\'option</string>
     <string name="crm_views_add">Ajouter une vue</string>
     <string name="crm_views_add_dialog_title">Ajouter une vue</string>
     <string name="crm_views_edit_dialog_title">Modifier la vue</string>
@@ -167,11 +167,11 @@
     <string name="crm_comment_send">Envoyer</string>
     <string name="crm_field_position_body">Contenu</string>
     <string name="crm_auth_login_failed">Échec de la connexion</string>
-    <string name="crm_auth_create_identity_failed">Échec de la création de l\\'identité</string>
-    <string name="crm_auth_mfa_unsupported">L\\'authentification multifacteur n\\'est pas encore prise en charge dans l\\'application mobile</string>
+    <string name="crm_auth_create_identity_failed">Échec de la création de l\'identité</string>
+    <string name="crm_auth_mfa_unsupported">L\'authentification multifacteur n\'est pas encore prise en charge dans l\'application mobile</string>
     <string name="crm_auth_enter_code_sent">Saisissez le code envoyé à %1$s</string>
     <string name="crm_auth_create_identity">Créez votre identité</string>
-    <string name="crm_list_add_to_home">Ajouter à l\\'écran d\\'accueil</string>
+    <string name="crm_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="crm_sort_field">Trier par</string>
     <string name="crm_views_move_up">Déplacer vers le haut</string>
     <string name="crm_views_move_down">Déplacer vers le bas</string>

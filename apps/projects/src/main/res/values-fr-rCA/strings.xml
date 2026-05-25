@@ -59,13 +59,13 @@
     <string name="projects_auth_display_name">Nom affiché</string>
     <string name="projects_auth_login_failed">Échec de la connexion</string>
     <string name="projects_auth_verification_failed">Échec de la vérification</string>
-    <string name="projects_auth_create_identity_failed">Échec de la création de l\\'identité</string>
-    <string name="projects_auth_mfa_unsupported">L\\'authentification multifacteur n\\'est pas encore prise en charge dans l\\'application mobile</string>
+    <string name="projects_auth_create_identity_failed">Échec de la création de l\'identité</string>
+    <string name="projects_auth_mfa_unsupported">L\'authentification multifacteur n\'est pas encore prise en charge dans l\'application mobile</string>
     <string name="projects_auth_enter_code_sent">Entrez le code envoyé à %1$s</string>
     <string name="projects_auth_create_identity">Créez votre identité</string>
     <string name="projects_list_title">Projets</string>
     <string name="projects_list_close_search">Fermer la recherche</string>
-    <string name="projects_list_add_to_home">Ajouter à l\\'écran d\\'accueil</string>
+    <string name="projects_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="projects_find_recommended">Recommandés</string>
     <string name="projects_sort_field">Trier par</string>
     <string name="projects_sort_rank">Manuelle</string>

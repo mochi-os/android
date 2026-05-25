@@ -462,12 +462,12 @@
     <string name="market_subscriptions_action_reactivate">ਮੁੜ-ਸਰਗਰਮ ਕਰੋ</string>
     <string name="market_subscriptions_action_resubscribe">ਮੁੜ-ਸਬਸਕ੍ਰਾਈਬ ਕਰੋ</string>
     <string name="market_subscriptions_action_resume">ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
-    <string name="market_subscriptions_cancel_body">ਇਹ ਤੁਹਾਡੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। ਤੁਸੀਂ ਆਪਣੇ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਪੀਰੀਅਡ ਦੇ ਅੰਤ \\'ਤੇ ਪਹੁੰਚ ਗੁਆ ਦਿਓਗੇ।</string>
+    <string name="market_subscriptions_cancel_body">ਇਹ ਤੁਹਾਡੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। ਤੁਸੀਂ ਆਪਣੇ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਪੀਰੀਅਡ ਦੇ ਅੰਤ \'ਤੇ ਪਹੁੰਚ ਗੁਆ ਦਿਓਗੇ।</string>
     <string name="market_subscriptions_cancel_confirm">ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰੋ</string>
     <string name="market_subscriptions_cancel_failed">ਰੱਦ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_subscriptions_cancel_title">ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰੋ</string>
     <string name="market_subscriptions_cancelled">ਮੈਂਬਰਸ਼ਿਪ ਰੱਦ ਕੀਤੀ ਗਈ</string>
-    <string name="market_subscriptions_cancels_period_end">ਮੌਜੂਦਾ ਸਮੇਂ ਦੇ ਅੰਤ \\'ਤੇ ਰੱਦ ਹੋਵੇਗਾ</string>
+    <string name="market_subscriptions_cancels_period_end">ਮੌਜੂਦਾ ਸਮੇਂ ਦੇ ਅੰਤ \'ਤੇ ਰੱਦ ਹੋਵੇਗਾ</string>
     <string name="market_subscriptions_empty">ਕੋਈ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ</string>
     <string name="market_subscriptions_empty_body">ਮੈਂਬਰਸ਼ਿਪਾਂ ਆਵਰਤੀ ਖਰੀਦਾਂ ਹਨ — ਵੇਚਣ ਵਾਲੇ ਉਨ੍ਹਾਂ ਨੂੰ ਮਾਸਿਕ ਜਾਂ ਸਾਲਾਨਾ ਕੀਮਤ ਨਾਲ ਸੂਚੀਬੱਧ ਕਰਦੇ ਹਨ।</string>
     <string name="market_subscriptions_pause_failed">ਰੋਕਣ ਵਿੱਚ ਅਸਫਲ</string>

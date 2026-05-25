@@ -77,7 +77,7 @@
     <string name="crm_field_no">Le</string>
     <string name="crm_field_type_checkbox">Checkbox</string>
     <string name="crm_comment_save">Issejvja</string>
-    <string name="crm_comment_empty">L-ebda kummenti s\\'issa</string>
+    <string name="crm_comment_empty">L-ebda kummenti s\'issa</string>
     <string name="crm_comment_attach">Ehmeż files</string>
     <string name="crm_property_remove">Neħħi</string>
     <string name="crm_property_option_none">Xejn</string>
@@ -124,7 +124,7 @@
     <string name="crm_class_name">Isem</string>
     <string name="crm_class_save_name">Issejvja l-isem</string>
     <string name="crm_class_title_field">Kamp tat-titlu</string>
-    <string name="crm_class_merge_requests">Talbiet ta\\' merge</string>
+    <string name="crm_class_merge_requests">Talbiet ta\' merge</string>
     <string name="crm_class_fields">Kampijiet</string>
     <string name="crm_class_add_field">Żid kamp</string>
     <string name="crm_class_delete">Ħassar klassi</string>

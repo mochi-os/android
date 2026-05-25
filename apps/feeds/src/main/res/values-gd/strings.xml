@@ -43,7 +43,7 @@
     <string name="feeds_restore">Aiseag</string>
     <string name="feeds_location">Àite</string>
     <string name="feeds_check_in">Clàraich a-steach</string>
-    <string name="feeds_travelling">A\\' siubhal</string>
+    <string name="feeds_travelling">A\' siubhal</string>
     <string name="feeds_tab_general">Coitcheann</string>
     <string name="feeds_tab_sources">Tùsan</string>
     <string name="feeds_sources_title">Tùsan</string>
@@ -78,7 +78,7 @@
     <string name="feeds_ai_mode_off">À comas</string>
     <string name="feeds_ai_mode_tag">Taga</string>
     <string name="feeds_ai_mode_tag_deduplicate">Taga + dì-dhùblaich</string>
-    <string name="feeds_ai_reset_default">Ath-shuidhich chun a\\' bhun-tuiteamais</string>
+    <string name="feeds_ai_reset_default">Ath-shuidhich chun a\' bhun-tuiteamais</string>
     <string name="feeds_feed_not_found">Cha deach an inbhir a lorg</string>
     <string name="feeds_post_not_found">Cha deach am post a lorg</string>
     <string name="feeds_post_select_feed">Tagh inbhir, mas e do thoil e</string>
@@ -101,7 +101,7 @@
     <string name="feeds_send">Cuir</string>
     <string name="feeds_auth_email_code_sent">Cuir a-steach an còd a chaidh a chur gu %1$s</string>
     <string name="feeds_add_to_home_screen">Cuir ris an sgrìn-dachaigh</string>
-    <string name="feeds_tag_clear">Glan a\\' chriathrag</string>
+    <string name="feeds_tag_clear">Glan a\' chriathrag</string>
     <string name="feeds_add_tag">Add tag</string>
     <string name="feeds_write_a_comment">Write a comment…</string>
     <string name="feeds_file">Faidhle</string>

@@ -146,7 +146,7 @@
     <string name="market_bids_ended">Enchère terminée</string>
     <string name="market_bids_tab_outbid">Surenchéri</string>
     <string name="market_channel_name">Marché</string>
-    <string name="market_checkout_subscribe_failed">Échec de l\\'abonnement</string>
+    <string name="market_checkout_subscribe_failed">Échec de l\'abonnement</string>
     <string name="market_checkout_subscribing">Abonnement en cours…</string>
     <string name="market_checkout_total">Total</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Acheteur</string>

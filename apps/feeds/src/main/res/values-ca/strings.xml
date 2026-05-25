@@ -10,7 +10,7 @@
     <string name="feeds_memories">Records</string>
     <string name="feeds_create">Crea</string>
     <string name="feeds_dismiss">Descarta</string>
-    <string name="feeds_no_feeds_found">No s\\'ha trobat cap canal</string>
+    <string name="feeds_no_feeds_found">No s\'ha trobat cap canal</string>
     <string name="feeds_feed_title_default">Font</string>
     <string name="feeds_mark_all_read">Marca-ho tot com a llegit</string>
     <string name="feeds_settings">Configuració</string>
@@ -42,7 +42,7 @@
     <string name="feeds_add_files">Afegeix fitxers</string>
     <string name="feeds_restore">Restaura</string>
     <string name="feeds_location">Ubicació</string>
-    <string name="feeds_check_in">Registre d\\'entrada</string>
+    <string name="feeds_check_in">Registre d\'entrada</string>
     <string name="feeds_travelling">Viatjant</string>
     <string name="feeds_tab_general">General</string>
     <string name="feeds_tab_sources">Orígens</string>
@@ -79,7 +79,7 @@
     <string name="feeds_ai_mode_tag">Etiqueta</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiqueta + deduplica</string>
     <string name="feeds_ai_reset_default">Restableix al valor per defecte</string>
-    <string name="feeds_feed_not_found">No s\\'ha trobat la font</string>
+    <string name="feeds_feed_not_found">No s\'ha trobat la font</string>
     <string name="feeds_post_not_found">Publicació no trobada</string>
     <string name="feeds_post_select_feed">Seleccioneu un feed</string>
     <string name="feeds_post_empty_content">Introduïu text o adjunteu un fitxer</string>
@@ -181,7 +181,7 @@
     <string name="feeds_suggested_credibility_body">Mochi suggereix una credibilitat de %1$d. Accepteu-la?</string>
     <string name="feeds_suggested_credibility_keep">Mantén l\'actual</string>
 
-    <string name="feeds_ai_account">Compte d\\'IA</string>
+    <string name="feeds_ai_account">Compte d\'IA</string>
 
     <string name="feeds_global_rss_export">Exportació RSS de tots els canals</string>
     <string name="feeds_ai_processing_mode">Mode de processament d\'IA</string>

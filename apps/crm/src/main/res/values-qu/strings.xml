@@ -3,7 +3,7 @@
     <string name="crm_auth_display_name">Qhaway suti</string>
     <string name="crm_auth_verification_failed">Qhawariy mana atikurqanchu</string>
     <string name="crm_list_title">Proyectokuna</string>
-    <string name="crm_list_close_search">Maskhay wichq\\'ay</string>
+    <string name="crm_list_close_search">Maskhay wichq\'ay</string>
     <string name="crm_list_search">Maskay</string>
     <string name="crm_list_find">Proyectokunata tariy</string>
     <string name="crm_list_logout">Lluqsiy</string>
@@ -67,10 +67,10 @@
     <string name="crm_links_title">Enlacekuna</string>
     <string name="crm_links_add">Link yapay</string>
     <string name="crm_links_section_blocks">Bloques</string>
-    <string name="crm_links_section_blocked_by">Hark\\'aq</string>
+    <string name="crm_links_section_blocked_by">Hark\'aq</string>
     <string name="crm_links_section_duplicates">Iskaynisqakuna</string>
     <string name="crm_links_type_blocks">Bloques</string>
-    <string name="crm_links_type_blocked_by">Hark\\'aq</string>
+    <string name="crm_links_type_blocked_by">Hark\'aq</string>
     <string name="crm_links_type_duplicates">Iskaynisqakuna</string>
     <string name="crm_links_no_matches">Mana tupaq objetokuna</string>
     <string name="crm_field_yes">Arí</string>
@@ -88,7 +88,7 @@
     <string name="crm_request_status_open">Kicharisqa</string>
     <string name="crm_request_status_merged">Mergesqa</string>
     <string name="crm_request_merge">Merge</string>
-    <string name="crm_request_close">Wichq\\'ay</string>
+    <string name="crm_request_close">Wichq\'ay</string>
     <string name="crm_request_merge_dialog_title">Merge</string>
     <string name="crm_request_method">Método</string>
     <string name="crm_request_method_merge">Merge</string>
@@ -132,7 +132,7 @@
     <string name="crm_field_type_text">Qillqa</string>
     <string name="crm_field_type_number">Yupay</string>
     <string name="crm_field_type_user">Apaykachaq</string>
-    <string name="crm_field_type_date">P\\'unchaw</string>
+    <string name="crm_field_type_date">P\'unchaw</string>
     <string name="crm_field_type_checklist">Lista</string>
     <string name="crm_field_name">Sutin</string>
     <string name="crm_field_type">Layan</string>

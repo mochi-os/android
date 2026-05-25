@@ -138,6 +138,6 @@
     <string name="auth_server_url">URL seerverii</string>
     <string name="auth_link_rules">Seerota</string>
     <string name="lightbox_position">%1$d / %2$d</string>
-    <string name="about_label">Waa\\\'ee</string>
+    <string name="about_label">Waa\'ee</string>
     <string name="game_chat_move_played">%1$s %2$s taphate</string>
 </resources>

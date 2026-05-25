@@ -133,7 +133,7 @@
     <string name="forums_auth_login_failed">Ndaikatúi eike</string>
     <string name="forums_auth_create_identity_failed">Ndaikatúi ojejapo teratee</string>
     <string name="forums_auth_mfa_unsupported">MFA ndoikói gueteri tembiporu pumbyrýpe</string>
-    <string name="forums_auth_enter_code_sent">Emoinge papapy oñemondo\\'akue %1$s-pe</string>
+    <string name="forums_auth_enter_code_sent">Emoinge papapy oñemondo\'akue %1$s-pe</string>
     <string name="forums_auth_create_identity">Ejapo ne teratee</string>
     <string name="forums_list_add_to_home">Embojuaju óga rovetãme</string>
     <string name="forums_tag_clear">Embogue mboguahávo</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crm_auth_display_name">Відображуване ім\\'я</string>
+    <string name="crm_auth_display_name">Відображуване ім\'я</string>
     <string name="crm_auth_verification_failed">Перевірка не вдалася</string>
     <string name="crm_list_title">Проєкти</string>
     <string name="crm_list_close_search">Закрити пошук</string>
@@ -9,7 +9,7 @@
     <string name="crm_list_logout">Вийти</string>
     <string name="crm_list_create">Створити проєкт</string>
     <string name="crm_create_title">Створити проєкт</string>
-    <string name="crm_create_name">Ім\\'я</string>
+    <string name="crm_create_name">Ім\'я</string>
     <string name="crm_create_description">Опис</string>
     <string name="crm_create_prefix">Префікс</string>
     <string name="crm_create_privacy">Приватність</string>
@@ -22,7 +22,7 @@
     <string name="crm_find_subscribe">Підписатися</string>
     <string name="crm_loading">Завантаження…</string>
     <string name="crm_watched">Відстежується</string>
-    <string name="crm_create_object">Створити об\\'єкт</string>
+    <string name="crm_create_object">Створити об\'єкт</string>
     <string name="crm_search">Пошук</string>
     <string name="crm_settings">Налаштування</string>
     <string name="crm_design">Дизайн</string>
@@ -32,7 +32,7 @@
     <string name="crm_sort_number">Число</string>
     <string name="crm_sort_created">Створено</string>
     <string name="crm_sort_updated">Оновлено</string>
-    <string name="crm_create_object_title">Створити об\\'єкт</string>
+    <string name="crm_create_object_title">Створити об\'єкт</string>
     <string name="crm_create_object_type">Тип</string>
     <string name="crm_create_object_title_field">Заголовок</string>
     <string name="crm_create_object_parent">Батьківський</string>
@@ -72,7 +72,7 @@
     <string name="crm_links_type_blocks">Блокує</string>
     <string name="crm_links_type_blocked_by">Блокується</string>
     <string name="crm_links_type_duplicates">Дублює</string>
-    <string name="crm_links_no_matches">Немає відповідних об\\'єктів</string>
+    <string name="crm_links_no_matches">Немає відповідних об\'єктів</string>
     <string name="crm_field_yes">Так</string>
     <string name="crm_field_no">Ні</string>
     <string name="crm_field_type_checkbox">Прапорець</string>
@@ -121,7 +121,7 @@
     <string name="crm_classes_add">Додати клас</string>
     <string name="crm_classes_add_dialog_title">Додати клас</string>
     <string name="crm_classes_create">Створити</string>
-    <string name="crm_class_name">Ім\\'я</string>
+    <string name="crm_class_name">Ім\'я</string>
     <string name="crm_class_save_name">Зберегти ім’я</string>
     <string name="crm_class_title_field">Поле заголовка</string>
     <string name="crm_class_merge_requests">Запити на злиття</string>
@@ -134,10 +134,10 @@
     <string name="crm_field_type_user">Користувач</string>
     <string name="crm_field_type_date">Дата</string>
     <string name="crm_field_type_checklist">Контрольний список</string>
-    <string name="crm_field_name">Ім\\'я</string>
+    <string name="crm_field_name">Ім\'я</string>
     <string name="crm_field_type">Тип</string>
     <string name="crm_field_flags">Прапорці</string>
-    <string name="crm_field_required">Обов\\'язково</string>
+    <string name="crm_field_required">Обов\'язково</string>
     <string name="crm_field_position_default">За замовчуванням</string>
     <string name="crm_field_position_sidebar">Бічна панель</string>
     <string name="crm_field_save">Зберегти зміни</string>

@@ -4,7 +4,7 @@
     <string name="feeds_find_feeds">Akış bul</string>
     <string name="feeds_create_feed">Feed oluştur</string>
     <string name="feeds_new_post">Yeni gönderi</string>
-    <string name="feeds_all_feeds">Tüm feed\\'ler</string>
+    <string name="feeds_all_feeds">Tüm feed\'ler</string>
     <string name="feeds_name">Ad</string>
     <string name="feeds_private">Özel</string>
     <string name="feeds_memories">Anılar</string>
@@ -55,7 +55,7 @@
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Akışınızın üstünde gösterilen isteğe bağlı markdown banner.</string>
     <string name="feeds_clear">Temizle</string>
-    <string name="feeds_delete_feed">Feed\\'i sil</string>
+    <string name="feeds_delete_feed">Feed\'i sil</string>
     <string name="feeds_add_member">Üye ekle</string>
     <string name="feeds_no_members">Üye yok</string>
     <string name="feeds_user">Kullanıcı</string>
@@ -72,7 +72,7 @@
     <string name="feeds_source_type_feed_memories">Anılar</string>
     <string name="feeds_remove_source">Kaynağı kaldır</string>
     <string name="feeds_suggested_credibility_accept">Kabul et</string>
-    <string name="feeds_rss_url_copied">RSS URL\\'si panoya kopyalandı</string>
+    <string name="feeds_rss_url_copied">RSS URL\'si panoya kopyalandı</string>
     <string name="feeds_logout">Oturumu kapat</string>
     <string name="feeds_ai_account_default">Varsayılan hesap</string>
     <string name="feeds_ai_mode_off">Devre dışı</string>

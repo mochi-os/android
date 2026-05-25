@@ -14,7 +14,7 @@
     <string name="crm_create_prefix">Prefix</string>
     <string name="crm_create_privacy">Sirri</string>
     <string name="crm_create_private">Na sirri</string>
-    <string name="crm_create_public">Na jama\\'a</string>
+    <string name="crm_create_public">Na jama\'a</string>
     <string name="crm_create_template_none">Babu</string>
     <string name="crm_create_action">Ƙirƙira</string>
     <string name="crm_find_title">Nemo CRM</string>
@@ -33,7 +33,7 @@
     <string name="crm_sort_created">An ƙirƙira</string>
     <string name="crm_sort_updated">An sabunta</string>
     <string name="crm_create_object_title">Ƙirƙira abu</string>
-    <string name="crm_create_object_type">Nau\\'i</string>
+    <string name="crm_create_object_type">Nau\'i</string>
     <string name="crm_create_object_title_field">Take</string>
     <string name="crm_create_object_parent">Iyaye</string>
     <string name="crm_settings_title">Saitunan</string>
@@ -74,7 +74,7 @@
     <string name="crm_links_type_duplicates">Yana ninkawa</string>
     <string name="crm_links_no_matches">Babu objects masu daidai</string>
     <string name="crm_field_yes">Ee</string>
-    <string name="crm_field_no">A\\'a</string>
+    <string name="crm_field_no">A\'a</string>
     <string name="crm_field_type_checkbox">Checkbox</string>
     <string name="crm_comment_save">Adana</string>
     <string name="crm_comment_empty">Babu sharhi tukuna</string>
@@ -92,7 +92,7 @@
     <string name="crm_request_merge_dialog_title">Merge</string>
     <string name="crm_request_method">Hanya</string>
     <string name="crm_request_method_merge">Merge</string>
-    <string name="crm_request_field_repository">Ma\\'ajiya</string>
+    <string name="crm_request_field_repository">Ma\'ajiya</string>
     <string name="crm_request_field_source">Source branch</string>
     <string name="crm_request_field_title">Take</string>
     <string name="crm_request_field_description">Bayani</string>
@@ -135,7 +135,7 @@
     <string name="crm_field_type_date">Kwanan wata</string>
     <string name="crm_field_type_checklist">Checklist</string>
     <string name="crm_field_name">Suna</string>
-    <string name="crm_field_type">Nau\\'i</string>
+    <string name="crm_field_type">Nau\'i</string>
     <string name="crm_field_flags">Tutoci</string>
     <string name="crm_field_required">Ana buƙata</string>
     <string name="crm_field_position_default">Default</string>
@@ -152,7 +152,7 @@
     <string name="crm_views_add_dialog_title">Ƙara view</string>
     <string name="crm_views_edit_dialog_title">Gyara view</string>
     <string name="crm_views_delete_title">Goge view</string>
-    <string name="crm_views_type">Nau\\'i</string>
+    <string name="crm_views_type">Nau\'i</string>
     <string name="crm_views_type_board">Allo</string>
     <string name="crm_views_type_list">List</string>
     <string name="crm_views_direction">Hanya</string>

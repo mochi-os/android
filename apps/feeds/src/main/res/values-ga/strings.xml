@@ -53,7 +53,7 @@
     <string name="feeds_feed_name">Ainm an fhotha</string>
     <string name="feeds_save_name">Sábháil ainm</string>
     <string name="feeds_banner">Meirge</string>
-    <string name="feeds_banner_description">Meirge markdown roghnach a thaispeántar ag barr d\\'fhotha.</string>
+    <string name="feeds_banner_description">Meirge markdown roghnach a thaispeántar ag barr d\'fhotha.</string>
     <string name="feeds_clear">Glan</string>
     <string name="feeds_delete_feed">Scrios fotha</string>
     <string name="feeds_add_member">Cuir ball leis</string>

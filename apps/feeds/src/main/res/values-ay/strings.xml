@@ -12,10 +12,10 @@
     <string name="feeds_dismiss">Apaqaña</string>
     <string name="feeds_no_feeds_found">Feedanak jan jikxatasiti</string>
     <string name="feeds_feed_title_default">Feed</string>
-    <string name="feeds_mark_all_read">Taqpach ullt\\'ata uñacht\\'ayaña</string>
+    <string name="feeds_mark_all_read">Taqpach ullt\'ata uñacht\'ayaña</string>
     <string name="feeds_settings">Configuración</string>
     <string name="feeds_no_posts_yet">Janira qillqatanaka</string>
-    <string name="feeds_default_sort">Default ch\\'ulluwi</string>
+    <string name="feeds_default_sort">Default ch\'ulluwi</string>
     <string name="feeds_suggested_interests_add">Yapxataña</string>
     <string name="feeds_suggested_interests_dismiss">Imantaña</string>
     <string name="feeds_unread">Jan yatxatat charge</string>
@@ -23,7 +23,7 @@
     <string name="feeds_sort_label">Sumaña</string>
     <string name="feeds_sort_interests">Interesanaka</string>
     <string name="feeds_sort_new">Machaqa</string>
-    <string name="feeds_sort_hot">Junt\\'u</string>
+    <string name="feeds_sort_hot">Junt\'u</string>
     <string name="feeds_sort_top">Patxa nivel</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Qillqata</string>
@@ -43,7 +43,7 @@
     <string name="feeds_restore">Kutiyama</string>
     <string name="feeds_location">Cheqa</string>
     <string name="feeds_check_in">Mantaña</string>
-    <string name="feeds_travelling">Yaqha thaqhañ término yant\\'am</string>
+    <string name="feeds_travelling">Yaqha thaqhañ término yant\'am</string>
     <string name="feeds_tab_general">Taqpacha</string>
     <string name="feeds_tab_sources">Origenanaka</string>
     <string name="feeds_sources_title">Origenanaka</string>
@@ -53,8 +53,8 @@
     <string name="feeds_feed_name">Feed suti</string>
     <string name="feeds_save_name">Suti imaña</string>
     <string name="feeds_banner">Banner</string>
-    <string name="feeds_banner_description">Opcional markdown banner feed patxana uñacht\\'ayata.</string>
-    <string name="feeds_clear">Q\\'umachaña</string>
+    <string name="feeds_banner_description">Opcional markdown banner feed patxana uñacht\'ayata.</string>
+    <string name="feeds_clear">Q\'umachaña</string>
     <string name="feeds_delete_feed">Feed chhaqtayaña</string>
     <string name="feeds_add_member">Miembro yapxataña</string>
     <string name="feeds_no_members">Jan miembronaka</string>
@@ -75,7 +75,7 @@
     <string name="feeds_rss_url_copied">RSS URL clipboard ukar copiata</string>
     <string name="feeds_logout">Mistuña</string>
     <string name="feeds_ai_account_default">Default cuenta</string>
-    <string name="feeds_ai_mode_off">Jark\\'ata</string>
+    <string name="feeds_ai_mode_off">Jark\'ata</string>
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + deduplicate</string>
     <string name="feeds_ai_reset_default">Default ukar kutintayama</string>

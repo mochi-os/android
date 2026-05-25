@@ -89,7 +89,7 @@
     <string name="feeds_settings_source_added">Sorgente aggiunta</string>
     <string name="feeds_settings_source_updated">Sorgente aggiornata</string>
     <string name="feeds_settings_source_removed">Sorgente rimossa</string>
-    <string name="feeds_settings_source_polling">Sondaggio dell\\'origine…</string>
+    <string name="feeds_settings_source_polling">Sondaggio dell\'origine…</string>
     <string name="feeds_settings_access_updated">Accesso aggiornato</string>
     <string name="feeds_settings_access_revoked">Accesso revocato</string>
     <string name="feeds_settings_member_added">Membro aggiunto</string>
