@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Ko‘proq</string>
     <string name="forums_comment_send">Yuborish</string>
+    <string name="forums_post_body_field">Matn</string>
+    <string name="forums_post_edit_body_field">Matn</string>
+    <string name="forums_comment_edit_body_field">Matn</string>
 </resources>

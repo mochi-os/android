@@ -478,4 +478,40 @@
     <string name="staff_team_toast_removed">አባል ተወግዷል</string>
     <string name="staff_team_toast_role_failed">ሚናን ማዘመን አልተሳካም</string>
     <string name="staff_team_toast_role_updated">ሚና ተዘምኗል</string>
+
+    <string name="staff_appeals_reason_label">የሻጩ ይግባኝ ምክንያት</string>
+    <string name="staff_audit_action_auction_cancelled">ጨረታ ተሰርዟል</string>
+    <string name="staff_audit_action_staff_team_role_changed">የሰራተኛ ሚና ተቀይሯል</string>
+    <string name="staff_dashboard_order_fallback">ትዕዛዝ #%1$d</string>
+    <string name="staff_disputes_dialog_title_chargeback">የክፍያ መመለስ: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">ክርክርን ይመልከቱ</string>
+    <string name="staff_disputes_meta_buyer_details">የገዢው ዝርዝሮች</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">በ Stripe ተይዟል</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s ተመላሽ ተደርጓል</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">ተመላሽ ተደርጓል</string>
+    <string name="staff_disputes_meta_refunded_of">ከ %1$s</string>
+    <string name="staff_disputes_meta_seller_response">የሻጩ ምላሽ</string>
+    <string name="staff_disputes_refund_amount_label">የተመላሽ መጠን (%1$s)</string>
+    <string name="staff_disputes_refund_help">ለሙሉ %1$s ተመላሽ ባዶ ይተዉት። ለከፊል ተመላሽ አነስተኛ መጠን ያስገቡ።</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ባንክ ማስኬድ አልቻለም</string>
+    <string name="staff_disputes_stripe_check_returned">ቼክ ተመልሷል</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ክሬዲት አልተሰራም</string>
+    <string name="staff_disputes_stripe_customer_initiated">በደንበኛ የተጀመረ</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ዴቢት አልተፈቀደም</string>
+    <string name="staff_disputes_stripe_duplicate">የተደገመ ክፍያ</string>
+    <string name="staff_disputes_stripe_fraudulent">የማታለል</string>
+    <string name="staff_disputes_stripe_general">አጠቃላይ</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">የተሳሳቱ የመለያ ዝርዝሮች</string>
+    <string name="staff_disputes_stripe_insufficient_funds">በቂ ያልሆነ ገንዘብ</string>
+    <string name="staff_disputes_stripe_product_not_received">ምርት አልደረሰም</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ምርት ተቀባይነት የለውም</string>
+    <string name="staff_disputes_stripe_subscription_canceled">ምዝገባ ተሰርዟል</string>
+    <string name="staff_disputes_stripe_unrecognized">ያልታወቀ ክፍያ</string>
+    <string name="staff_reports_listing_label">ዝርዝር #%1$d</string>
+    <string name="staff_reports_meta_details">የሪፖርት አቅራቢው ዝርዝሮች</string>
+    <string name="staff_reviews_order_label">ትዕዛዝ #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s በ %3$s። ይህን ግምገማ በቋሚነት ይሰረዝ? ይህ መቀልበስ አይቻልም።</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s። ይህን ግምገማ በቋሚነት ይሰረዝ? ይህ መቀልበስ አይቻልም።</string>
+    <string name="staff_team_dialog_search_placeholder">በስም፣ በጣት አሻራ ወይም በመለያ ይፈልጉ…</string>
+
 </resources>

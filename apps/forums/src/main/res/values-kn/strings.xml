@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">ಇನ್ನಷ್ಟು</string>
     <string name="forums_comment_send">ಕಳುಹಿಸಿ</string>
+    <string name="forums_post_body_field">ವಿಷಯ</string>
+    <string name="forums_post_edit_body_field">ವಿಷಯ</string>
+    <string name="forums_comment_edit_body_field">ವಿಷಯ</string>
 </resources>

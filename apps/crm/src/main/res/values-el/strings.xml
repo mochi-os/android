@@ -165,4 +165,5 @@
     <string name="crm_more">Περισσότερα</string>
     <string name="crm_request_more">Περισσότερα</string>
     <string name="crm_comment_send">Αποστολή</string>
+    <string name="crm_field_position_body">Σώμα</string>
 </resources>

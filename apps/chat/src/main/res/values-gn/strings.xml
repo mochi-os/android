@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Hetave</string>
     <string name="chat_message_send">Mondo</string>
+
+    <string name="notification_channel_chat">Marandu ñomongeta</string>
+    <string name="chat_auth_brand">Mochi Ñomongeta</string>
+    <string name="chat_auth_login_failed">Ndaikatúi eike</string>
+    <string name="chat_auth_create_identity_failed">Ndaikatúi ojejapo teratee</string>
+    <string name="chat_auth_mfa_unsupported">MFA ndoikói gueteri tembiporu pumbyrýpe</string>
+    <string name="chat_auth_enter_code_sent">Emoinge papapy oñemondo\'akue %1$s-pe</string>
+    <string name="chat_auth_create_identity">Ejapo ne teratee</string>
+    <string name="chat_list_search_placeholder">Eheka ñomongeta</string>
+    <string name="chat_list_no_matching">Ndaipóri ñomongeta ojokupytýva</string>
+    <string name="chat_list_empty">Ndaipóri gueteri ñomongeta</string>
+    <string name="chat_list_add_to_home">Embojuaju óga rovetãme</string>
+    <string name="chat_list_left_chat">Osẽmava</string>
+    <string name="chat_new_no_friends">Ndereguerekói gueteri angirũ reñomongeta hagua</string>
+    <string name="chat_new_no_matches">Ndaipóri angirũ ojokupytýva</string>
+    <string name="chat_new_existing_chat">Embojuruja ñomongeta oĩmava</string>
+    <string name="chat_new_start">Eñepyrũ ñomongeta</string>
+    <string name="chat_new_start_group">Eñepyrũ ñomongeta aty</string>
+    <string name="chat_messages_loading">Ohenduka marandu…</string>
+    <string name="chat_messages_empty">Ndaipóri gueteri marandu — eñe\'ẽmína!</string>
+    <string name="chat_messages_load_more">Ehenduka marandu yma</string>
+    <string name="chat_attachment_remove">Eipe\'a jeitypa</string>
+    <string name="chat_attachment_move_up">Emonge\'e yvate</string>
+    <string name="chat_attachment_move_down">Emonge\'e yvy gotyo</string>
+    <string name="chat_attachment_label">Marandurenda</string>
+    <string name="chat_message_remove_attachment">Eipe\'a jeitypa</string>
+    <string name="chat_message_too_long">Marandu puku eterei</string>
+    <string name="chat_message_empty">Marandu ndaikatúi opyta nandi</string>
+    <string name="chat_settings_rename">Embohéra jey ñomongeta</string>
+    <string name="chat_settings_add_member_empty">Ndaipóri angirũ embojuaju hagua</string>
+    <string name="chat_settings_remove_member_message">¿Eipe\'áta %1$s-pe ko ñomongetágui?</string>
+    <string name="chat_settings_leave_message">¿Esẽta ko ñomongetágui? Ambue oĩva ndohecha mo\'ãvéima nde marandu.</string>
+    <string name="chat_settings_leave_and_delete">Esẽ ha emboguete ko\'ápe</string>
+    <string name="chat_settings_delete">Emboguete ko\'ápe</string>
+    <string name="chat_settings_delete_message">Kóva oipe\'a ñomongeta ha imarandukuéra ko mba\'e\'okápe año.</string>
+
 </resources>

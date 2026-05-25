@@ -165,4 +165,5 @@
     <string name="projects_more">Więcej</string>
     <string name="projects_request_more">Więcej</string>
     <string name="projects_comment_send">Wyślij</string>
+    <string name="projects_field_position_body">Treść</string>
 </resources>

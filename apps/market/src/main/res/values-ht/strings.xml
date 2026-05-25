@@ -496,4 +496,5 @@
     <string name="market_type_digital">Dijital</string>
     <string name="market_type_physical">Fizik</string>
     <string name="market_warnings_title">Avètisman</string>
+    <string name="market_sale_review_response_submitting">K ap voye…</string>
 </resources>

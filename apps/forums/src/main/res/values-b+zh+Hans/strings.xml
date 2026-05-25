@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">更多</string>
     <string name="forums_comment_send">发送</string>
+    <string name="forums_post_body_field">正文</string>
+    <string name="forums_post_edit_body_field">正文</string>
+    <string name="forums_comment_edit_body_field">正文</string>
 </resources>

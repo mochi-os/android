@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Mais</string>
     <string name="forums_comment_send">Enviar</string>
+    <string name="forums_post_body_field">Conteúdo</string>
+    <string name="forums_post_edit_body_field">Conteúdo</string>
+    <string name="forums_comment_edit_body_field">Conteúdo</string>
 </resources>

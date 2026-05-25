@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Higit pa</string>
     <string name="forums_comment_send">Ipadala</string>
+    <string name="forums_post_body_field">Nilalaman</string>
+    <string name="forums_post_edit_body_field">Nilalaman</string>
+    <string name="forums_comment_edit_body_field">Nilalaman</string>
 </resources>

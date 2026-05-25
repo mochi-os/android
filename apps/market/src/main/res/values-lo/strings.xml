@@ -483,4 +483,5 @@
     <string name="market_type_digital">ດິຈິຕອນ</string>
     <string name="market_type_physical">ກາຍະພາບ</string>
     <string name="market_warnings_title">ຄຳເຕືອນ</string>
+    <string name="market_sale_review_response_submitting">ກຳລັງສົ່ງ…</string>
 </resources>

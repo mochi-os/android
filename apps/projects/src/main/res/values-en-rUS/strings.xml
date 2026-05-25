@@ -53,4 +53,21 @@
     <string name="projects_request_status_open">Open</string>
     <string name="projects_board_new">New</string>
     <string name="projects_field_type_user">User</string>
+    <string name="projects_create_public">Public</string>
+    <string name="projects_create_private">Private</string>
+    <string name="projects_access_level_owner">Owner</string>
+    <string name="projects_access_level_comment">Comment</string>
+    <string name="projects_loading">Loading…</string>
+    <string name="projects_field_position_default">Default</string>
+    <string name="projects_settings_tab_people">People</string>
+    <string name="projects_sort_label">Sort</string>
+    <string name="projects_sort_number">Number</string>
+    <string name="projects_field_type_number">Number</string>
+    <string name="projects_views_sort_number">Number</string>
+    <string name="projects_settings_tab_general">General</string>
+    <string name="projects_settings_save">Save changes</string>
+    <string name="projects_field_save">Save changes</string>
+    <string name="projects_request_status_draft">Draft</string>
+    <string name="projects_request_field_draft">Draft</string>
+    <string name="projects_field_position_body">Body</string>
 </resources>

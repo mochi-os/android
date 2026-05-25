@@ -483,4 +483,5 @@
     <string name="market_type_digital">டிஜிட்டல்</string>
     <string name="market_type_physical">உடல்நலம்</string>
     <string name="market_warnings_title">எச்சரிக்கைகள்</string>
+    <string name="market_sale_review_response_submitting">சமர்ப்பிக்கிறது…</string>
 </resources>

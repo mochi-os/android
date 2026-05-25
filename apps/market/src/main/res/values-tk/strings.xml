@@ -483,4 +483,5 @@
     <string name="market_type_digital">Sanly</string>
     <string name="market_type_physical">Fiziki</string>
     <string name="market_warnings_title">Duýduryşlar</string>
+    <string name="market_sale_review_response_submitting">Iberilýär…</string>
 </resources>

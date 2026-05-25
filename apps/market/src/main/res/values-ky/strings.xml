@@ -484,4 +484,5 @@
     <string name="market_type_digital">Санариптик</string>
     <string name="market_type_physical">Физикалык</string>
     <string name="market_warnings_title">Эскертүүлөр</string>
+    <string name="market_sale_review_response_submitting">Жөнөтүлүүдө…</string>
 </resources>

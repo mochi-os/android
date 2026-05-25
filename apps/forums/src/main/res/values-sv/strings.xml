@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Mer</string>
     <string name="forums_comment_send">Skicka</string>
+    <string name="forums_post_body_field">Innehåll</string>
+    <string name="forums_post_edit_body_field">Innehåll</string>
+    <string name="forums_comment_edit_body_field">Innehåll</string>
 </resources>

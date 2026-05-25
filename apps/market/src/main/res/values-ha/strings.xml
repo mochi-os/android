@@ -496,4 +496,5 @@
     <string name="market_type_digital">Dijital</string>
     <string name="market_type_physical">Na zahiri</string>
     <string name="market_warnings_title">Gargaɗi</string>
+    <string name="market_sale_review_response_submitting">Ana aikawa…</string>
 </resources>

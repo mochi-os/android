@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Mai mult</string>
     <string name="forums_comment_send">Trimite</string>
+    <string name="forums_post_body_field">Conținut</string>
+    <string name="forums_post_edit_body_field">Conținut</string>
+    <string name="forums_comment_edit_body_field">Conținut</string>
 </resources>

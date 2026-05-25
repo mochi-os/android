@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Ƙari</string>
     <string name="forums_comment_send">Aika</string>
+    <string name="forums_post_body_field">Jiki</string>
+    <string name="forums_post_edit_body_field">Jiki</string>
+    <string name="forums_comment_edit_body_field">Jiki</string>
 </resources>

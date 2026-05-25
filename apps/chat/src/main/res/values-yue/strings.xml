@@ -8,4 +8,6 @@
     <string name="chat_list_more">更多</string>
     <string name="chat_message_send">傳送</string>
     <string name="chat_settings_remove_member">移除</string>
+    <string name="chat_list_removed_chat">已移除</string>
+    <string name="chat_settings_members">成員</string>
 </resources>

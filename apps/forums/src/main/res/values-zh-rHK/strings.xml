@@ -34,4 +34,21 @@
     <string name="forums_moderation_reports_status">狀態</string>
     <string name="forums_report_reason">原因</string>
     <string name="forums_report_reason_other">其他</string>
+    <string name="forums_create_public">公開</string>
+    <string name="forums_create_private">私人</string>
+    <string name="forums_comment_reply">回覆</string>
+    <string name="forums_access_level_comment">留言</string>
+    <string name="forums_loading">載入中…</string>
+    <string name="forums_post_removed">已移除</string>
+    <string name="forums_tab_members">成員</string>
+    <string name="forums_sort_label">排序</string>
+    <string name="forums_tab_general">一般</string>
+    <string name="forums_post_body_field">內容</string>
+    <string name="forums_post_edit_body_field">內容</string>
+    <string name="forums_comment_edit_body_field">內容</string>
+    <string name="forums_moderation_report_dismiss">關閉</string>
+    <string name="forums_post_create_action">發佈</string>
+    <string name="forums_access_level_post">發佈</string>
+    <string name="forums_post_pending">待處理</string>
+    <string name="forums_moderation_reports_pending">待處理</string>
 </resources>

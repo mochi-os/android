@@ -165,4 +165,5 @@
     <string name="projects_more">Has köp</string>
     <string name="projects_request_more">Has köp</string>
     <string name="projects_comment_send">Iber</string>
+    <string name="projects_field_position_body">Tekst</string>
 </resources>

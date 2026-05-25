@@ -165,4 +165,5 @@
     <string name="projects_more">Повеќе</string>
     <string name="projects_request_more">Повеќе</string>
     <string name="projects_comment_send">Испрати</string>
+    <string name="projects_field_position_body">Содржина</string>
 </resources>

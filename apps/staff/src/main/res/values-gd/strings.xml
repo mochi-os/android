@@ -482,4 +482,36 @@
     <string name="staff_team_toast_removed">Chaidh ball a thoirt air falbh</string>
     <string name="staff_team_toast_role_failed">Cha b\\' urrainn an dreuchd ùrachadh</string>
     <string name="staff_team_toast_role_updated">Chaidh an dreuchd ùrachadh</string>
+
+    <string name="staff_disputes_dialog_title_chargeback">Cosgairt-air-ais: %1$s</string>
+    <string name="staff_disputes_meta_buyer_details">Mion-fhiosrachadh a\' cheannaiche</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">glèidhte le Stripe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s air ath-dhìoladh</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">air ath-dhìoladh</string>
+    <string name="staff_disputes_meta_refunded_of">à %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Freagairt an reiceadair</string>
+    <string name="staff_disputes_refund_amount_label">Suim an ath-dhìolaidh (%1$s)</string>
+    <string name="staff_disputes_refund_help">Fàg bàn airson làn ath-dhìoladh de %1$s. Cuir a-steach suim nas lugha airson pàirt-ath-dhìoladh.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">cha b\' urrainn don bhanca a phròiseasadh</string>
+    <string name="staff_disputes_stripe_check_returned">seic air a thilleadh</string>
+    <string name="staff_disputes_stripe_credit_not_processed">creideas gun phròiseasadh</string>
+    <string name="staff_disputes_stripe_customer_initiated">tòisichte leis a\' cheannaiche</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">deabit gun chead</string>
+    <string name="staff_disputes_stripe_duplicate">cosgais dhùblaichte</string>
+    <string name="staff_disputes_stripe_fraudulent">foilleil</string>
+    <string name="staff_disputes_stripe_general">coitcheann</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">mion-fhiosrachadh cunntais ceàrr</string>
+    <string name="staff_disputes_stripe_insufficient_funds">gun airgead gu leòr</string>
+    <string name="staff_disputes_stripe_product_not_received">bathar gun fhaighinn</string>
+    <string name="staff_disputes_stripe_product_unacceptable">bathar do-ghabhail</string>
+    <string name="staff_disputes_stripe_subscription_canceled">fo-sgrìobhadh air a sgur</string>
+    <string name="staff_disputes_stripe_unrecognized">cosgais neo-aithnichte</string>
+    <string name="staff_moderation_filter_clear">Glan a\' chriathrag</string>
+    <string name="staff_reports_listing_label">Liosta #%1$d</string>
+    <string name="staff_reports_meta_details">Mion-fhiosrachadh an neach-aithris</string>
+    <string name="staff_reviews_order_label">òrdugh #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s air %3$s. Sguab às an lèirmheas seo gu buan? Cha ghabh seo a thilleadh.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Sguab às an lèirmheas seo gu buan? Cha ghabh seo a thilleadh.</string>
+    <string name="staff_team_dialog_search_placeholder">Lorg a rèir ainm, lorg-meòir, no ID…</string>
+
 </resources>

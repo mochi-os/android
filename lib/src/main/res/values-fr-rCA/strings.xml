@@ -33,4 +33,18 @@
     <string name="settings_title">Paramètres</string>
     <string name="settings_open">Paramètres</string>
     <string name="game_chat_subject_you">Vous</string>
+    <string name="auth_privacy_public">Public</string>
+    <string name="profile_privacy_public">Public</string>
+    <string name="auth_privacy_private">Privé</string>
+    <string name="profile_privacy_private">Privé</string>
+    <string name="common_notifications">Notifications</string>
+    <string name="notifications_open">Notifications</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="comment_reply">Répondre</string>
+    <string name="comment_reply_placeholder">Répondre</string>
+    <string name="access_owner">Propriétaire</string>
+    <string name="access_level_comment">Commentaire</string>
+    <string name="notifications_loading">Chargement…</string>
+    <string name="settings_font_system">Système</string>
+    <string name="settings_theme_default">Par défaut</string>
 </resources>

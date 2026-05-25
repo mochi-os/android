@@ -483,4 +483,5 @@
     <string name="market_type_digital">Diġitali</string>
     <string name="market_type_physical">Fiżiku</string>
     <string name="market_warnings_title">Twissijiet</string>
+    <string name="market_sale_review_response_submitting">Qed jintbagħat…</string>
 </resources>

@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Больш</string>
     <string name="chat_message_send">Адправіць</string>
+
+    <string name="notification_channel_chat">Апавяшчэнні чата</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Не ўдалося ўвайсці</string>
+    <string name="chat_auth_create_identity_failed">Не ўдалося стварыць ідэнтычнасць</string>
+    <string name="chat_auth_mfa_unsupported">MFA пакуль не падтрымліваецца ў мабільным дадатку</string>
+    <string name="chat_auth_enter_code_sent">Увядзіце код, дасланы на %1$s</string>
+    <string name="chat_auth_create_identity">Стварыце сваю ідэнтычнасць</string>
+    <string name="chat_list_search_placeholder">Пошук чатаў</string>
+    <string name="chat_list_no_matching">Няма адпаведных чатаў</string>
+    <string name="chat_list_empty">Чатаў пакуль няма</string>
+    <string name="chat_list_add_to_home">Дадаць на галоўны экран</string>
+    <string name="chat_list_left_chat">Пакінуты</string>
+    <string name="chat_new_no_friends">Пакуль няма сяброў для чата</string>
+    <string name="chat_new_no_matches">Няма адпаведных сяброў</string>
+    <string name="chat_new_existing_chat">Адкрыць існуючы чат</string>
+    <string name="chat_new_start">Пачаць чат</string>
+    <string name="chat_new_start_group">Пачаць групавы чат</string>
+    <string name="chat_messages_loading">Загрузка паведамленняў…</string>
+    <string name="chat_messages_empty">Паведамленняў пакуль няма — прывітайцеся!</string>
+    <string name="chat_messages_load_more">Загрузіць старэйшыя паведамленні</string>
+    <string name="chat_attachment_remove">Выдаліць укладанне</string>
+    <string name="chat_attachment_move_up">Перамясціць уверх</string>
+    <string name="chat_attachment_move_down">Перамясціць уніз</string>
+    <string name="chat_attachment_label">Файл</string>
+    <string name="chat_message_remove_attachment">Выдаліць укладанне</string>
+    <string name="chat_message_too_long">Паведамленне занадта доўгае</string>
+    <string name="chat_message_empty">Паведамленне не можа быць пустым</string>
+    <string name="chat_settings_rename">Пераназваць чат</string>
+    <string name="chat_settings_add_member_empty">Няма сяброў для дадання</string>
+    <string name="chat_settings_remove_member_message">Выдаліць %1$s з гэтага чата?</string>
+    <string name="chat_settings_leave_message">Пакінуць гэты чат? Іншыя ўдзельнікі больш не будуць бачыць вашых паведамленняў.</string>
+    <string name="chat_settings_leave_and_delete">Пакінуць і выдаліць лакальна</string>
+    <string name="chat_settings_delete">Выдаліць лакальна</string>
+    <string name="chat_settings_delete_message">Гэта выдаліць чат і яго паведамленні толькі з гэтай прылады.</string>
+
 </resources>

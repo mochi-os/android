@@ -165,4 +165,5 @@
     <string name="projects_more">Vairāk</string>
     <string name="projects_request_more">Vairāk</string>
     <string name="projects_comment_send">Sūtīt</string>
+    <string name="projects_field_position_body">Teksts</string>
 </resources>

@@ -165,4 +165,5 @@
     <string name="projects_more">მეტი</string>
     <string name="projects_request_more">მეტი</string>
     <string name="projects_comment_send">გაგზავნა</string>
+    <string name="projects_field_position_body">შინაარსი</string>
 </resources>

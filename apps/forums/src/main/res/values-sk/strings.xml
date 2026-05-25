@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Viac</string>
     <string name="forums_comment_send">Odoslať</string>
+    <string name="forums_post_body_field">Text</string>
+    <string name="forums_post_edit_body_field">Text</string>
+    <string name="forums_comment_edit_body_field">Text</string>
 </resources>

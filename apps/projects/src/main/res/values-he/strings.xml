@@ -165,4 +165,5 @@
     <string name="projects_more">עוד</string>
     <string name="projects_request_more">עוד</string>
     <string name="projects_comment_send">שלח</string>
+    <string name="projects_field_position_body">גוף</string>
 </resources>

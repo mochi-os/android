@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Падказка захавана</string>
     <string name="feeds_settings_prompt_reset">Падказка скінута да змоўчання</string>
     <string name="feeds_send">Адправіць</string>
+
+    <string name="feeds_global_rss_export">Экспарт RSS усіх стужак</string>
+    <string name="feeds_ai_processing_mode">Рэжым апрацоўкі ШІ</string>
+    <string name="feeds_ai_account">Уліковы запіс ШІ</string>
+    <string name="feeds_ai_custom_prompts">Карыстальніцкія запыты</string>
+    <string name="feeds_ai_custom_prompts_description">Перавызначце стандартныя запыты ШІ для кожнай задачы. Пакіньце пустым, каб выкарыстоўваць стандартныя.</string>
+    <string name="feeds_ai_mode_off_description">Без апрацоўкі ШІ</string>
+    <string name="feeds_ai_mode_tag_description">ШІ дадае тэгі да допісаў для падтрымкі ранжыравання па інтарэсах</string>
+    <string name="feeds_ai_mode_tag_deduplicate_description">ШІ дадае тэгі да допісаў і выдаляе амаль аднолькавыя гісторыі</string>
+    <string name="feeds_ai_prompt_new">Дадаць тэгі да новых допісаў</string>
+    <string name="feeds_ai_prompt_batch">Пакетная апрацоўка</string>
+    <string name="feeds_ai_prompt_rank">Ранжыраванне / ацэньванне</string>
+    <string name="feeds_ai_prompt_credibility">Ацэнка дакладнасці</string>
+
 </resources>

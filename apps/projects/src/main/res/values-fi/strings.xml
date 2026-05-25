@@ -165,4 +165,5 @@
     <string name="projects_more">Lisää</string>
     <string name="projects_request_more">Lisää</string>
     <string name="projects_comment_send">Lähetä</string>
+    <string name="projects_field_position_body">Sisältö</string>
 </resources>

@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">మరిన్ని</string>
     <string name="forums_comment_send">పంపండి</string>
+    <string name="forums_post_body_field">కంటెంట్</string>
+    <string name="forums_post_edit_body_field">కంటెంట్</string>
+    <string name="forums_comment_edit_body_field">కంటెంట్</string>
 </resources>

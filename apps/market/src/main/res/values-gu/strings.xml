@@ -482,4 +482,5 @@
     <string name="market_type_digital">ડિજિટલ</string>
     <string name="market_type_physical">ભૌતિક</string>
     <string name="market_warnings_title">ચેતવણીઓ</string>
+    <string name="market_sale_review_response_submitting">સબમિટ થઈ રહ્યું છે…</string>
 </resources>

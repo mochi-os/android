@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Meer</string>
     <string name="chat_message_send">Stuur</string>
+
+    <string name="notification_channel_chat">Klets-kennisgewings</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Aanmelding het misluk</string>
+    <string name="chat_auth_create_identity_failed">Kon nie identiteit skep nie</string>
+    <string name="chat_auth_mfa_unsupported">MFA word nog nie in die mobiele app ondersteun nie</string>
+    <string name="chat_auth_enter_code_sent">Voer die kode in wat na %1$s gestuur is</string>
+    <string name="chat_auth_create_identity">Skep jou identiteit</string>
+    <string name="chat_list_search_placeholder">Soek kletse</string>
+    <string name="chat_list_no_matching">Geen passende kletse nie</string>
+    <string name="chat_list_empty">Nog geen kletse nie</string>
+    <string name="chat_list_add_to_home">Voeg by tuisskerm by</string>
+    <string name="chat_list_left_chat">Verlaat</string>
+    <string name="chat_new_no_friends">Nog geen vriende om mee te klets nie</string>
+    <string name="chat_new_no_matches">Geen passende vriende nie</string>
+    <string name="chat_new_existing_chat">Open bestaande klets</string>
+    <string name="chat_new_start">Begin klets</string>
+    <string name="chat_new_start_group">Begin groepklets</string>
+    <string name="chat_messages_loading">Boodskappe laai…</string>
+    <string name="chat_messages_empty">Nog geen boodskappe nie — sê hallo!</string>
+    <string name="chat_messages_load_more">Laai ouer boodskappe</string>
+    <string name="chat_attachment_remove">Verwyder aanhangsel</string>
+    <string name="chat_attachment_move_up">Skuif op</string>
+    <string name="chat_attachment_move_down">Skuif af</string>
+    <string name="chat_attachment_label">Lêer</string>
+    <string name="chat_message_remove_attachment">Verwyder aanhangsel</string>
+    <string name="chat_message_too_long">Boodskap te lank</string>
+    <string name="chat_message_empty">Boodskap kan nie leeg wees nie</string>
+    <string name="chat_settings_rename">Hernoem klets</string>
+    <string name="chat_settings_add_member_empty">Geen vriende om by te voeg nie</string>
+    <string name="chat_settings_remove_member_message">Verwyder %1$s uit hierdie klets?</string>
+    <string name="chat_settings_leave_message">Verlaat hierdie klets? Ander lede sal nie meer jou boodskappe sien nie.</string>
+    <string name="chat_settings_leave_and_delete">Verlaat en plaaslik uitvee</string>
+    <string name="chat_settings_delete">Vee plaaslik uit</string>
+    <string name="chat_settings_delete_message">Dit verwyder die klets en sy boodskappe slegs vanaf hierdie toestel.</string>
+
 </resources>

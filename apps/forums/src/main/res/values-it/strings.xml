@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Altro</string>
     <string name="forums_comment_send">Invia</string>
+    <string name="forums_post_body_field">Testo</string>
+    <string name="forums_post_edit_body_field">Testo</string>
+    <string name="forums_comment_edit_body_field">Testo</string>
 </resources>

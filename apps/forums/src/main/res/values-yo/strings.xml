@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Diẹ sii</string>
     <string name="forums_comment_send">Firanṣẹ</string>
+    <string name="forums_post_body_field">Ara</string>
+    <string name="forums_post_edit_body_field">Ara</string>
+    <string name="forums_comment_edit_body_field">Ara</string>
 </resources>

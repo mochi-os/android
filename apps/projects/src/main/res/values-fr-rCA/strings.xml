@@ -39,4 +39,21 @@
     <string name="projects_request_status_open">Ouvrir</string>
     <string name="projects_board_new">Nouveau</string>
     <string name="projects_field_type_user">Utilisateur</string>
+    <string name="projects_create_public">Public</string>
+    <string name="projects_create_private">Privé</string>
+    <string name="projects_access_level_owner">Propriétaire</string>
+    <string name="projects_access_level_comment">Commentaire</string>
+    <string name="projects_loading">Chargement…</string>
+    <string name="projects_field_position_default">Par défaut</string>
+    <string name="projects_settings_tab_people">Personnes</string>
+    <string name="projects_sort_label">Trier</string>
+    <string name="projects_sort_number">Numéro</string>
+    <string name="projects_field_type_number">Numéro</string>
+    <string name="projects_views_sort_number">Numéro</string>
+    <string name="projects_settings_tab_general">Général</string>
+    <string name="projects_settings_save">Enregistrer les modifications</string>
+    <string name="projects_field_save">Enregistrer les modifications</string>
+    <string name="projects_request_status_draft">Brouillon</string>
+    <string name="projects_request_field_draft">Brouillon</string>
+    <string name="projects_field_position_body">Contenu</string>
 </resources>

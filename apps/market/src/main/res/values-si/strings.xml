@@ -483,4 +483,5 @@
     <string name="market_type_digital">ඩිජිටල්</string>
     <string name="market_type_physical">භෞතික</string>
     <string name="market_warnings_title">අනතුරු ඇඟවීම්</string>
+    <string name="market_sale_review_response_submitting">ඉදිරිපත් කරයි…</string>
 </resources>

@@ -483,4 +483,5 @@
     <string name="market_type_digital">డిజిటల్</string>
     <string name="market_type_physical">ఫిజికల్</string>
     <string name="market_warnings_title">హెచ్చరికలు</string>
+    <string name="market_sale_review_response_submitting">సమర్పిస్తోంది…</string>
 </resources>

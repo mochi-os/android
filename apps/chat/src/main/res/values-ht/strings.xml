@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Plis</string>
     <string name="chat_message_send">Voye</string>
+
+    <string name="notification_channel_chat">Notifikasyon chat</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Koneksyon echwe</string>
+    <string name="chat_auth_create_identity_failed">Kreyasyon idantite echwe</string>
+    <string name="chat_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
+    <string name="chat_auth_enter_code_sent">Antre kòd ki voye nan %1$s la</string>
+    <string name="chat_auth_create_identity">Kreye idantite ou</string>
+    <string name="chat_list_search_placeholder">Chèche chat</string>
+    <string name="chat_list_no_matching">Pa gen chat ki koresponn</string>
+    <string name="chat_list_empty">Poko gen chat</string>
+    <string name="chat_list_add_to_home">Ajoute sou ekran akèy la</string>
+    <string name="chat_list_left_chat">Kite</string>
+    <string name="chat_new_no_friends">Poko gen zanmi pou pale ak yo</string>
+    <string name="chat_new_no_matches">Pa gen zanmi ki koresponn</string>
+    <string name="chat_new_existing_chat">Ouvri chat ki egziste</string>
+    <string name="chat_new_start">Kòmanse chat</string>
+    <string name="chat_new_start_group">Kòmanse chat gwoup</string>
+    <string name="chat_messages_loading">Mesaj yo ap chaje…</string>
+    <string name="chat_messages_empty">Poko gen mesaj — di bonjou!</string>
+    <string name="chat_messages_load_more">Chaje ansyen mesaj</string>
+    <string name="chat_attachment_remove">Retire pyès jwenti</string>
+    <string name="chat_attachment_move_up">Monte</string>
+    <string name="chat_attachment_move_down">Desann</string>
+    <string name="chat_attachment_label">Fichye</string>
+    <string name="chat_message_remove_attachment">Retire pyès jwenti</string>
+    <string name="chat_message_too_long">Mesaj la twò long</string>
+    <string name="chat_message_empty">Mesaj la pa ka vid</string>
+    <string name="chat_settings_rename">Chanje non chat la</string>
+    <string name="chat_settings_add_member_empty">Pa gen zanmi pou ajoute</string>
+    <string name="chat_settings_remove_member_message">Retire %1$s nan chat sa a?</string>
+    <string name="chat_settings_leave_message">Kite chat sa a? Lòt manm yo pap wè mesaj ou yo ankò.</string>
+    <string name="chat_settings_leave_and_delete">Kite epi efase lokalman</string>
+    <string name="chat_settings_delete">Efase lokalman</string>
+    <string name="chat_settings_delete_message">Sa retire chat la ak mesaj li yo sou aparèy sa a sèlman.</string>
+
 </resources>

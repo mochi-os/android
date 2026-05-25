@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Gehiago</string>
     <string name="chat_message_send">Bidali</string>
+
+    <string name="notification_channel_chat">Txat-jakinarazpenak</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Saio-hasierak huts egin du</string>
+    <string name="chat_auth_create_identity_failed">Ezin izan da identitatea sortu</string>
+    <string name="chat_auth_mfa_unsupported">MFA ez da oraindik onartzen aplikazio mugikorrean</string>
+    <string name="chat_auth_enter_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
+    <string name="chat_auth_create_identity">Sortu zure identitatea</string>
+    <string name="chat_list_search_placeholder">Bilatu txatak</string>
+    <string name="chat_list_no_matching">Ez dago bat datorren txatik</string>
+    <string name="chat_list_empty">Oraindik ez dago txatik</string>
+    <string name="chat_list_add_to_home">Gehitu hasierako pantailara</string>
+    <string name="chat_list_left_chat">Utzita</string>
+    <string name="chat_new_no_friends">Oraindik ez dago lagunik txateatzeko</string>
+    <string name="chat_new_no_matches">Ez dago bat datorren lagunik</string>
+    <string name="chat_new_existing_chat">Ireki lehendik dagoen txata</string>
+    <string name="chat_new_start">Hasi txata</string>
+    <string name="chat_new_start_group">Hasi talde-txata</string>
+    <string name="chat_messages_loading">Mezuak kargatzen…</string>
+    <string name="chat_messages_empty">Oraindik ez dago mezurik — agurtu!</string>
+    <string name="chat_messages_load_more">Kargatu mezu zaharragoak</string>
+    <string name="chat_attachment_remove">Kendu eranskina</string>
+    <string name="chat_attachment_move_up">Eraman gora</string>
+    <string name="chat_attachment_move_down">Eraman behera</string>
+    <string name="chat_attachment_label">Fitxategia</string>
+    <string name="chat_message_remove_attachment">Kendu eranskina</string>
+    <string name="chat_message_too_long">Mezua luzeegia da</string>
+    <string name="chat_message_empty">Mezua ezin da hutsik egon</string>
+    <string name="chat_settings_rename">Berrizendatu txata</string>
+    <string name="chat_settings_add_member_empty">Ez dago gehitzeko lagunik</string>
+    <string name="chat_settings_remove_member_message">Kendu %1$s txat honetatik?</string>
+    <string name="chat_settings_leave_message">Txat hau utzi nahi duzu? Gainerako kideek ez dituzte zure mezuak gehiago ikusiko.</string>
+    <string name="chat_settings_leave_and_delete">Utzi eta ezabatu lokalki</string>
+    <string name="chat_settings_delete">Ezabatu lokalki</string>
+    <string name="chat_settings_delete_message">Honek txata eta bere mezuak gailu honetatik bakarrik kentzen ditu.</string>
+
 </resources>

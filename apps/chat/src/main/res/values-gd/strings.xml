@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Barrachd</string>
     <string name="chat_message_send">Cuir</string>
+
+    <string name="notification_channel_chat">Brathan còmhraidh</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Cha b\' urrainn clàradh a-steach</string>
+    <string name="chat_auth_create_identity_failed">Cha b\' urrainn dearbh-aithne a chruthachadh</string>
+    <string name="chat_auth_mfa_unsupported">Chan eil MFA ri fhaighinn fhathast san aplacaid mhobile</string>
+    <string name="chat_auth_enter_code_sent">Cuir a-steach an còd a chaidh a chur gu %1$s</string>
+    <string name="chat_auth_create_identity">Cruthaich do dhearbh-aithne</string>
+    <string name="chat_list_search_placeholder">Lorg còmhraidhean</string>
+    <string name="chat_list_no_matching">Chan eil còmhradh co-fhreagarrach ann</string>
+    <string name="chat_list_empty">Chan eil còmhradh sam bith ann fhathast</string>
+    <string name="chat_list_add_to_home">Cuir ris an sgrìn-dachaigh</string>
+    <string name="chat_list_left_chat">Dh\'fhàg</string>
+    <string name="chat_new_no_friends">Chan eil caraidean agad ri an còmhradh fhathast</string>
+    <string name="chat_new_no_matches">Chan eil caraid co-fhreagarrach ann</string>
+    <string name="chat_new_existing_chat">Fosgail còmhradh a tha ann</string>
+    <string name="chat_new_start">Tòisich còmhradh</string>
+    <string name="chat_new_start_group">Tòisich còmhradh buidhinn</string>
+    <string name="chat_messages_loading">A\' luchdadh teachdaireachdan…</string>
+    <string name="chat_messages_empty">Chan eil teachdaireachd ann fhathast — abair halò!</string>
+    <string name="chat_messages_load_more">Luchdaich teachdaireachdan as sine</string>
+    <string name="chat_attachment_remove">Thoir air falbh an ceanglachan</string>
+    <string name="chat_attachment_move_up">Gluais suas</string>
+    <string name="chat_attachment_move_down">Gluais sìos</string>
+    <string name="chat_attachment_label">Faidhle</string>
+    <string name="chat_message_remove_attachment">Thoir air falbh an ceanglachan</string>
+    <string name="chat_message_too_long">Tha an teachdaireachd ro fhada</string>
+    <string name="chat_message_empty">Chan fhaod an teachdaireachd a bhith falamh</string>
+    <string name="chat_settings_rename">Cuir ainm ùr air a\' chòmhradh</string>
+    <string name="chat_settings_add_member_empty">Chan eil caraidean ann ri an cur ris</string>
+    <string name="chat_settings_remove_member_message">A bheil thu airson %1$s a thoirt air falbh on chòmhradh seo?</string>
+    <string name="chat_settings_leave_message">Fàg an còmhradh seo? Chan fhaic na buill eile na teachdaireachdan agad tuilleadh.</string>
+    <string name="chat_settings_leave_and_delete">Fàg agus sguab às gu h-ionadail</string>
+    <string name="chat_settings_delete">Sguab às gu h-ionadail</string>
+    <string name="chat_settings_delete_message">Bheir seo air falbh an còmhradh agus na teachdaireachdan aige bhon uidheam seo a-mhàin.</string>
+
 </resources>

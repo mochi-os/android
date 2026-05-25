@@ -165,4 +165,5 @@
     <string name="crm_more">その他</string>
     <string name="crm_request_more">その他</string>
     <string name="crm_comment_send">送信</string>
+    <string name="crm_field_position_body">本文</string>
 </resources>

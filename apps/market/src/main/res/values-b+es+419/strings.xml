@@ -489,4 +489,5 @@
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Físico</string>
     <string name="market_warnings_title">Advertencias</string>
+    <string name="market_sale_review_response_submitting">Enviando…</string>
 </resources>

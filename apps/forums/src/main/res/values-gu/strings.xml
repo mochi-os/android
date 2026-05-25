@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">વધુ</string>
     <string name="forums_comment_send">મોકલો</string>
+    <string name="forums_post_body_field">સામગ્રી</string>
+    <string name="forums_post_edit_body_field">સામગ્રી</string>
+    <string name="forums_comment_edit_body_field">સામગ્રી</string>
 </resources>

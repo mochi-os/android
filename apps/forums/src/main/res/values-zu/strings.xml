@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Okwengeziwe</string>
     <string name="forums_comment_send">Thumela</string>
+    <string name="forums_post_body_field">Umzimba</string>
+    <string name="forums_post_edit_body_field">Umzimba</string>
+    <string name="forums_comment_edit_body_field">Umzimba</string>
 </resources>

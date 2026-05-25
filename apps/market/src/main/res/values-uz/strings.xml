@@ -483,4 +483,5 @@
     <string name="market_type_digital">Raqamli</string>
     <string name="market_type_physical">Jismoniy</string>
     <string name="market_warnings_title">Ogohlantirishlar</string>
+    <string name="market_sale_review_response_submitting">Yuborilmoqda…</string>
 </resources>

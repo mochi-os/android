@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Tuilleadh</string>
     <string name="chat_message_send">Seol</string>
+
+    <string name="notification_channel_chat">Fógraí comhrá</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Theip ar logáil isteach</string>
+    <string name="chat_auth_create_identity_failed">Theip ar chéannacht a chruthú</string>
+    <string name="chat_auth_mfa_unsupported">Níl tacaíocht ag MFA san aip soghluaiste fós</string>
+    <string name="chat_auth_enter_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
+    <string name="chat_auth_create_identity">Cruthaigh do chéannacht</string>
+    <string name="chat_list_search_placeholder">Cuardaigh comhráite</string>
+    <string name="chat_list_no_matching">Níl aon chomhrá comhoiriúnach ann</string>
+    <string name="chat_list_empty">Níl aon chomhrá ann go fóill</string>
+    <string name="chat_list_add_to_home">Cuir leis an scáileán baile</string>
+    <string name="chat_list_left_chat">D\'fhág</string>
+    <string name="chat_new_no_friends">Níl aon chairde le comhrá a dhéanamh leo go fóill</string>
+    <string name="chat_new_no_matches">Níl aon chairde comhoiriúnacha ann</string>
+    <string name="chat_new_existing_chat">Oscail comhrá atá ann</string>
+    <string name="chat_new_start">Tosaigh comhrá</string>
+    <string name="chat_new_start_group">Tosaigh comhrá grúpa</string>
+    <string name="chat_messages_loading">Teachtaireachtaí á lódáil…</string>
+    <string name="chat_messages_empty">Níl aon teachtaireacht ann go fóill — abair haileo!</string>
+    <string name="chat_messages_load_more">Lódáil teachtaireachtaí níos sine</string>
+    <string name="chat_attachment_remove">Bain ceangaltán</string>
+    <string name="chat_attachment_move_up">Bog suas</string>
+    <string name="chat_attachment_move_down">Bog síos</string>
+    <string name="chat_attachment_label">Comhad</string>
+    <string name="chat_message_remove_attachment">Bain ceangaltán</string>
+    <string name="chat_message_too_long">Tá an teachtaireacht ró-fhada</string>
+    <string name="chat_message_empty">Ní féidir leis an teachtaireacht a bheith folamh</string>
+    <string name="chat_settings_rename">Athainmnigh an comhrá</string>
+    <string name="chat_settings_add_member_empty">Níl aon chairde le cur leis</string>
+    <string name="chat_settings_remove_member_message">Bain %1$s den chomhrá seo?</string>
+    <string name="chat_settings_leave_message">Fág an comhrá seo? Ní fheicfidh baill eile do theachtaireachtaí níos mó.</string>
+    <string name="chat_settings_leave_and_delete">Fág agus scrios go logánta</string>
+    <string name="chat_settings_delete">Scrios go logánta</string>
+    <string name="chat_settings_delete_message">Baineann sé seo an comhrá agus a chuid teachtaireachtaí den ghléas seo amháin.</string>
+
 </resources>

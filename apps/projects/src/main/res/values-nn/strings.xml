@@ -163,4 +163,5 @@
     <string name="projects_more">Meir</string>
     <string name="projects_request_more">Meir</string>
     <string name="projects_comment_send">Send</string>
+    <string name="projects_field_position_body">Innhald</string>
 </resources>

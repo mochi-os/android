@@ -165,4 +165,5 @@
     <string name="crm_more">مزید</string>
     <string name="crm_request_more">مزید</string>
     <string name="crm_comment_send">بھیجیں</string>
+    <string name="crm_field_position_body">متن</string>
 </resources>

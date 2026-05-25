@@ -31,4 +31,18 @@
     <string name="settings_title">設定</string>
     <string name="settings_open">設定</string>
     <string name="game_chat_subject_you">你</string>
+    <string name="auth_privacy_public">公開</string>
+    <string name="profile_privacy_public">公開</string>
+    <string name="auth_privacy_private">私人</string>
+    <string name="profile_privacy_private">私人</string>
+    <string name="common_notifications">通知</string>
+    <string name="notifications_open">通知</string>
+    <string name="notifications_title">通知</string>
+    <string name="comment_reply">回覆</string>
+    <string name="comment_reply_placeholder">回覆</string>
+    <string name="access_owner">擁有者</string>
+    <string name="access_level_comment">留言</string>
+    <string name="notifications_loading">載入中…</string>
+    <string name="settings_font_system">系統</string>
+    <string name="settings_theme_default">預設</string>
 </resources>

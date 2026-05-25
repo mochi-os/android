@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">കൂടുതൽ</string>
     <string name="forums_comment_send">അയയ്ക്കുക</string>
+    <string name="forums_post_body_field">ഉള്ളടക്കം</string>
+    <string name="forums_post_edit_body_field">ഉള്ളടക്കം</string>
+    <string name="forums_comment_edit_body_field">ഉള്ളടക്കം</string>
 </resources>

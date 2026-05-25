@@ -165,4 +165,5 @@
     <string name="crm_more">نور</string>
     <string name="crm_request_more">نور</string>
     <string name="crm_comment_send">لیږل</string>
+    <string name="crm_field_position_body">متن</string>
 </resources>

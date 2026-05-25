@@ -165,4 +165,5 @@
     <string name="projects_more">Mer</string>
     <string name="projects_request_more">Mer</string>
     <string name="projects_comment_send">Skicka</string>
+    <string name="projects_field_position_body">Innehåll</string>
 </resources>

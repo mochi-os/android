@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">और</string>
     <string name="forums_comment_send">भेजें</string>
+    <string name="forums_post_body_field">मुख्य पाठ</string>
+    <string name="forums_post_edit_body_field">मुख्य पाठ</string>
+    <string name="forums_comment_edit_body_field">मुख्य पाठ</string>
 </resources>

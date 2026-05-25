@@ -165,4 +165,5 @@
     <string name="crm_more">עוד</string>
     <string name="crm_request_more">עוד</string>
     <string name="crm_comment_send">שלח</string>
+    <string name="crm_field_position_body">גוף</string>
 </resources>

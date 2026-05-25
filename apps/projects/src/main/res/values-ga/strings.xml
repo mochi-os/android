@@ -165,4 +165,5 @@
     <string name="projects_more">Tuilleadh</string>
     <string name="projects_request_more">Tuilleadh</string>
     <string name="projects_comment_send">Seol</string>
+    <string name="projects_field_position_body">Corp</string>
 </resources>

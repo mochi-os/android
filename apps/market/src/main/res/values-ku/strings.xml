@@ -483,4 +483,5 @@
     <string name="market_type_digital">Dîjîtal</string>
     <string name="market_type_physical">Fizîkî</string>
     <string name="market_warnings_title">Hişyarî</string>
+    <string name="market_sale_review_response_submitting">Tê şandin…</string>
 </resources>

@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Më shumë</string>
     <string name="forums_comment_send">Dërgo</string>
+    <string name="forums_post_body_field">Përmbajtja</string>
+    <string name="forums_post_edit_body_field">Përmbajtja</string>
+    <string name="forums_comment_edit_body_field">Përmbajtja</string>
 </resources>

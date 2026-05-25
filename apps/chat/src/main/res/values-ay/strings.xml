@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Juk\'ampi</string>
     <string name="chat_message_send">Apayaña</string>
+
+    <string name="notification_channel_chat">Chat yatiyäwinaka</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Mantañax jan walïkiti</string>
+    <string name="chat_auth_create_identity_failed">Janiw uñtʼäwi luraña atkiti</string>
+    <string name="chat_auth_mfa_unsupported">MFA janïraw celular aplicacionan utjkiti</string>
+    <string name="chat_auth_enter_code_sent">%1$s tuqir apayata kodigo qillqantam</string>
+    <string name="chat_auth_create_identity">Uñtʼäwimax lurama</string>
+    <string name="chat_list_search_placeholder">Chats thaqaña</string>
+    <string name="chat_list_no_matching">Janiw kuna chat jikxatkiti</string>
+    <string name="chat_list_empty">Janïraw kuna chatsa utjkiti</string>
+    <string name="chat_list_add_to_home">Qallta pantallar yapxatam</string>
+    <string name="chat_list_left_chat">Mistuwayata</string>
+    <string name="chat_new_no_friends">Janïraw kuna masinakamampi chatañ utjkiti</string>
+    <string name="chat_new_no_matches">Janiw masinaka jikxatkiti</string>
+    <string name="chat_new_existing_chat">Utjki uka chat jistʼaram</string>
+    <string name="chat_new_start">Chat qalltaña</string>
+    <string name="chat_new_start_group">Tama chat qalltaña</string>
+    <string name="chat_messages_loading">Yatiyäwinak apsuskiwa…</string>
+    <string name="chat_messages_empty">Janïraw kuna yatiyäwisa utjkiti — kamisaki sasiñam!</string>
+    <string name="chat_messages_load_more">Nayraqat yatiyäwinak uñjam</string>
+    <string name="chat_attachment_remove">Yapxatata apsuña</string>
+    <string name="chat_attachment_move_up">Alaxar apaña</string>
+    <string name="chat_attachment_move_down">Aynachar apaña</string>
+    <string name="chat_attachment_label">Archivo</string>
+    <string name="chat_message_remove_attachment">Yapxatata apsuña</string>
+    <string name="chat_message_too_long">Yatiyäwix jachʼampiwa</string>
+    <string name="chat_message_empty">Yatiyäwix janiw chʼusäkaspati</string>
+    <string name="chat_settings_rename">Chat sutichaña</string>
+    <string name="chat_settings_add_member_empty">Janiw yapxatañ masinakax utjkiti</string>
+    <string name="chat_settings_remove_member_message">¿%1$s aka chatat apsuñati?</string>
+    <string name="chat_settings_leave_message">¿Aka chatat mistuñati? Yaqha masinakax janiw yatiyäwinakam uñjxapxkaniti.</string>
+    <string name="chat_settings_leave_and_delete">Mistuña ukatx aka aparatun chhaqtayaña</string>
+    <string name="chat_settings_delete">Aka aparatun chhaqtayaña</string>
+    <string name="chat_settings_delete_message">Akax aka aparatutakix chat ukat yatiyäwinakap chhaqtayi.</string>
+
 </resources>

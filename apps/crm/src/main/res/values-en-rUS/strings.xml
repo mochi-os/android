@@ -53,4 +53,21 @@
     <string name="crm_request_status_open">Open</string>
     <string name="crm_board_new">New</string>
     <string name="crm_field_type_user">User</string>
+    <string name="crm_create_public">Public</string>
+    <string name="crm_create_private">Private</string>
+    <string name="crm_access_level_owner">Owner</string>
+    <string name="crm_access_level_comment">Comment</string>
+    <string name="crm_loading">Loading…</string>
+    <string name="crm_field_position_default">Default</string>
+    <string name="crm_settings_tab_people">People</string>
+    <string name="crm_sort_label">Sort</string>
+    <string name="crm_sort_number">Number</string>
+    <string name="crm_field_type_number">Number</string>
+    <string name="crm_views_sort_number">Number</string>
+    <string name="crm_settings_tab_general">General</string>
+    <string name="crm_settings_save">Save changes</string>
+    <string name="crm_field_save">Save changes</string>
+    <string name="crm_request_status_draft">Draft</string>
+    <string name="crm_request_field_draft">Draft</string>
+    <string name="crm_field_position_body">Body</string>
 </resources>

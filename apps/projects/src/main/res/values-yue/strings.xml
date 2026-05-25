@@ -40,4 +40,21 @@
     <string name="projects_request_status_open">開啟</string>
     <string name="projects_board_new">新增</string>
     <string name="projects_field_type_user">用戶</string>
+    <string name="projects_create_public">公開</string>
+    <string name="projects_create_private">私人</string>
+    <string name="projects_access_level_owner">擁有者</string>
+    <string name="projects_access_level_comment">留言</string>
+    <string name="projects_loading">載入中…</string>
+    <string name="projects_field_position_default">預設</string>
+    <string name="projects_settings_tab_people">用戶</string>
+    <string name="projects_sort_label">排序</string>
+    <string name="projects_sort_number">編號</string>
+    <string name="projects_field_type_number">編號</string>
+    <string name="projects_views_sort_number">編號</string>
+    <string name="projects_settings_tab_general">一般</string>
+    <string name="projects_settings_save">儲存變更</string>
+    <string name="projects_field_save">儲存變更</string>
+    <string name="projects_request_status_draft">草稿</string>
+    <string name="projects_request_field_draft">草稿</string>
+    <string name="projects_field_position_body">內容</string>
 </resources>

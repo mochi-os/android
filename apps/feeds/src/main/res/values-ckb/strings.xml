@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">پرۆمپت پاشەکەوت کرا</string>
     <string name="feeds_settings_prompt_reset">رینوێنیکاری گەڕاندراوەتەوە بۆ بنچینە</string>
     <string name="feeds_send">ناردن</string>
+
+    <string name="feeds_global_rss_export">هەناردەکردنی RSS بۆ هەموو جۆڕەکان</string>
+    <string name="feeds_ai_processing_mode">دۆخی پرۆسێسکردنی AI</string>
+    <string name="feeds_ai_account">هەژماری AI</string>
+    <string name="feeds_ai_custom_prompts">داواکارییە تایبەتەکان</string>
+    <string name="feeds_ai_custom_prompts_description">داواکارییە بنەڕەتییەکانی AI بۆ هەر ئەرکێک بگۆڕە. بەتاڵی بهێڵەوە بۆ بەکارهێنانی بنەڕەتییەکان.</string>
+    <string name="feeds_ai_mode_off_description">بێ پرۆسێسکردنی AI</string>
+    <string name="feeds_ai_mode_tag_description">AI پۆستەکان تاگ دەکات بۆ پشتگیریکردنی ڕیزبەندی لەسەر بنەمای حەزەکان</string>
+    <string name="feeds_ai_mode_tag_deduplicate_description">AI پۆستەکان تاگ دەکات و چیرۆکە نزیک لە یەکچوونەکان لادەبات</string>
+    <string name="feeds_ai_prompt_new">تاگکردنی پۆستە نوێیەکان</string>
+    <string name="feeds_ai_prompt_batch">پرۆسێسکردنی کۆمەڵ</string>
+    <string name="feeds_ai_prompt_rank">ڕیزبەندی / خاڵدان</string>
+    <string name="feeds_ai_prompt_credibility">هەڵسەنگاندنی متمانەپێکراوی</string>
+
 </resources>

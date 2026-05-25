@@ -483,4 +483,5 @@
     <string name="market_type_digital">Idijithali</string>
     <string name="market_type_physical">Okuphathekayo</string>
     <string name="market_warnings_title">Izexwayiso</string>
+    <string name="market_sale_review_response_submitting">Iyathunyelwa…</string>
 </resources>

@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="launcher_settings">Einstellungen</string>
+
+    <string name="app_name">Mochi</string>
+    <string name="launcher_feeds">Feeds</string>
+    <string name="launcher_chat">Chat</string>
+    <string name="launcher_forums">Foren</string>
+    <string name="launcher_projects">Projekte</string>
+    <string name="launcher_crm">CRM</string>
+    <string name="launcher_people">Personen</string>
+    <string name="launcher_wikis">Wikis</string>
+    <string name="launcher_chess">Schach</string>
+    <string name="launcher_go">Go</string>
+    <string name="launcher_words">Wörter</string>
+    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_staff">Mochi Staff</string>
+
 </resources>

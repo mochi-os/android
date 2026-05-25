@@ -13,4 +13,7 @@
     <string name="launcher_words">Зборови</string>
     <string name="launcher_market">Mochi Market</string>
     <string name="launcher_staff">Mochi Персонал</string>
+
+    <string name="app_name">Mochi</string>
+
 </resources>

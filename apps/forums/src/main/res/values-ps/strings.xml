@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">نور</string>
     <string name="forums_comment_send">لیږل</string>
+    <string name="forums_post_body_field">متن</string>
+    <string name="forums_post_edit_body_field">متن</string>
+    <string name="forums_comment_edit_body_field">متن</string>
 </resources>

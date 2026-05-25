@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Ավելին</string>
     <string name="chat_message_send">Ուղարկել</string>
+
+    <string name="notification_channel_chat">Զրույցի ծանուցումներ</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Մուտքը ձախողվեց</string>
+    <string name="chat_auth_create_identity_failed">Չհաջողվեց ստեղծել ինքնություն</string>
+    <string name="chat_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
+    <string name="chat_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
+    <string name="chat_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
+    <string name="chat_list_search_placeholder">Որոնել զրույցներ</string>
+    <string name="chat_list_no_matching">Համապատասխան զրույցներ չկան</string>
+    <string name="chat_list_empty">Դեռ զրույցներ չկան</string>
+    <string name="chat_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
+    <string name="chat_list_left_chat">Լքված է</string>
+    <string name="chat_new_no_friends">Դեռ չկան ընկերներ, որոնց հետ զրուցել</string>
+    <string name="chat_new_no_matches">Համապատասխան ընկերներ չկան</string>
+    <string name="chat_new_existing_chat">Բացել առկա զրույցը</string>
+    <string name="chat_new_start">Սկսել զրույց</string>
+    <string name="chat_new_start_group">Սկսել խմբային զրույց</string>
+    <string name="chat_messages_loading">Հաղորդագրությունները բեռնվում են…</string>
+    <string name="chat_messages_empty">Դեռ հաղորդագրություններ չկան — բարևեք!</string>
+    <string name="chat_messages_load_more">Բեռնել ավելի հին հաղորդագրություններ</string>
+    <string name="chat_attachment_remove">Հեռացնել կցորդը</string>
+    <string name="chat_attachment_move_up">Տեղափոխել վերև</string>
+    <string name="chat_attachment_move_down">Տեղափոխել ներքև</string>
+    <string name="chat_attachment_label">Ֆայլ</string>
+    <string name="chat_message_remove_attachment">Հեռացնել կցորդը</string>
+    <string name="chat_message_too_long">Հաղորդագրությունը չափազանց երկար է</string>
+    <string name="chat_message_empty">Հաղորդագրությունը չի կարող դատարկ լինել</string>
+    <string name="chat_settings_rename">Վերանվանել զրույցը</string>
+    <string name="chat_settings_add_member_empty">Չկան ընկերներ՝ ավելացնելու համար</string>
+    <string name="chat_settings_remove_member_message">Հեռացնե՞լ %1$s-ին այս զրույցից:</string>
+    <string name="chat_settings_leave_message">Լքե՞լ այս զրույցը: Մյուս մասնակիցները այլևս չեն տեսնի ձեր հաղորդագրությունները:</string>
+    <string name="chat_settings_leave_and_delete">Լքել և ջնջել տեղականորեն</string>
+    <string name="chat_settings_delete">Ջնջել տեղականորեն</string>
+    <string name="chat_settings_delete_message">Սա հեռացնում է զրույցը և դրա հաղորդագրությունները միայն այս սարքից:</string>
+
 </resources>

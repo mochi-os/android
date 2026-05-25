@@ -91,16 +91,13 @@ class CrmListViewModel @Inject constructor(
     }
 
     fun showCreateDialog() {
+        _uiState.value = _uiState.value.copy(showCreateDialog = true)
         viewModelScope.launch {
             try {
                 val templates = repository.getTemplates()
                     .sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(
-                    showCreateDialog = true,
-                    templates = templates
-                )
+                _uiState.value = _uiState.value.copy(templates = templates)
             } catch (_: Exception) {
-                _uiState.value = _uiState.value.copy(showCreateDialog = true)
             }
         }
     }

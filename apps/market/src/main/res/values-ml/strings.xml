@@ -483,4 +483,5 @@
     <string name="market_type_digital">ഡിജിറ്റൽ</string>
     <string name="market_type_physical">ഫിസിക്കൽ</string>
     <string name="market_warnings_title">മുന്നറിയിപ്പുകൾ</string>
+    <string name="market_sale_review_response_submitting">സമർപ്പിക്കുന്നു…</string>
 </resources>

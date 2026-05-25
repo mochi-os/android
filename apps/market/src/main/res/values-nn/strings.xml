@@ -415,4 +415,7 @@
     <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
     <string name="market_subscription_detail_started">Started %1$s</string>
     <string name="market_messages_send">Send</string>
+    <string name="market_appeal_dialog_submitting">Sender…</string>
+    <string name="market_dispute_dialog_submitting">Sender…</string>
+    <string name="market_sale_review_response_submitting">Sender…</string>
 </resources>

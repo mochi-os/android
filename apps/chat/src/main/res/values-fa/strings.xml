@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">بیشتر</string>
     <string name="chat_message_send">ارسال</string>
+
+    <string name="notification_channel_chat">اعلان‌های گفتگو</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">ورود ناموفق بود</string>
+    <string name="chat_auth_create_identity_failed">ایجاد هویت ناموفق بود</string>
+    <string name="chat_auth_mfa_unsupported">احراز هویت چندعاملی هنوز در برنامه موبایل پشتیبانی نمی‌شود</string>
+    <string name="chat_auth_enter_code_sent">کدی که به %1$s ارسال شد را وارد کنید</string>
+    <string name="chat_auth_create_identity">هویت خود را ایجاد کنید</string>
+    <string name="chat_list_search_placeholder">جستجوی گفتگوها</string>
+    <string name="chat_list_no_matching">گفتگوی مطابقی یافت نشد</string>
+    <string name="chat_list_empty">هنوز گفتگویی وجود ندارد</string>
+    <string name="chat_list_add_to_home">افزودن به صفحه اصلی</string>
+    <string name="chat_list_left_chat">ترک‌شده</string>
+    <string name="chat_new_no_friends">هنوز دوستی برای گفتگو وجود ندارد</string>
+    <string name="chat_new_no_matches">دوست مطابقی یافت نشد</string>
+    <string name="chat_new_existing_chat">باز کردن گفتگوی موجود</string>
+    <string name="chat_new_start">شروع گفتگو</string>
+    <string name="chat_new_start_group">شروع گفتگوی گروهی</string>
+    <string name="chat_messages_loading">در حال بارگذاری پیام‌ها…</string>
+    <string name="chat_messages_empty">هنوز پیامی وجود ندارد — سلام کنید!</string>
+    <string name="chat_messages_load_more">بارگذاری پیام‌های قدیمی‌تر</string>
+    <string name="chat_attachment_remove">حذف پیوست</string>
+    <string name="chat_attachment_move_up">انتقال به بالا</string>
+    <string name="chat_attachment_move_down">انتقال به پایین</string>
+    <string name="chat_attachment_label">فایل</string>
+    <string name="chat_message_remove_attachment">حذف پیوست</string>
+    <string name="chat_message_too_long">پیام بسیار طولانی است</string>
+    <string name="chat_message_empty">پیام نمی‌تواند خالی باشد</string>
+    <string name="chat_settings_rename">تغییر نام گفتگو</string>
+    <string name="chat_settings_add_member_empty">دوستی برای افزودن وجود ندارد</string>
+    <string name="chat_settings_remove_member_message">%1$s از این گفتگو حذف شود؟</string>
+    <string name="chat_settings_leave_message">از این گفتگو خارج می‌شوید؟ سایر اعضا دیگر پیام‌های شما را نخواهند دید.</string>
+    <string name="chat_settings_leave_and_delete">خروج و حذف محلی</string>
+    <string name="chat_settings_delete">حذف محلی</string>
+    <string name="chat_settings_delete_message">این کار گفتگو و پیام‌های آن را فقط از این دستگاه حذف می‌کند.</string>
+
 </resources>

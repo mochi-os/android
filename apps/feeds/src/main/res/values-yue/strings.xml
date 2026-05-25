@@ -12,4 +12,13 @@
     <string name="feeds_sort_new">新增</string>
     <string name="feeds_user">用戶</string>
     <string name="feeds_filter_all">全部</string>
+    <string name="feeds_private">私人</string>
+    <string name="feeds_tab_members">成員</string>
+    <string name="feeds_suggested_credibility_accept">接受</string>
+    <string name="feeds_sort_label">排序</string>
+    <string name="feeds_tab_general">一般</string>
+    <string name="feeds_dismiss">關閉</string>
+    <string name="feeds_post_default_author">發布</string>
+    <string name="feeds_post">發布</string>
+    <string name="feeds_post_action">發布</string>
 </resources>

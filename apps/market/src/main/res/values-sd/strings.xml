@@ -483,4 +483,5 @@
     <string name="market_type_digital">ڊجيٽل</string>
     <string name="market_type_physical">جسماني</string>
     <string name="market_warnings_title">خبردارون</string>
+    <string name="market_sale_review_response_submitting">موڪليندي…</string>
 </resources>

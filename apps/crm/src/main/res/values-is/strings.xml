@@ -165,4 +165,5 @@
     <string name="crm_more">Meira</string>
     <string name="crm_request_more">Meira</string>
     <string name="crm_comment_send">Senda</string>
+    <string name="crm_field_position_body">Meginmál</string>
 </resources>

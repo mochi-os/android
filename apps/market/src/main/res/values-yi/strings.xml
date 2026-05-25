@@ -483,4 +483,5 @@
     <string name="market_type_digital">דיגיטאַל</string>
     <string name="market_type_physical">פֿיזיש</string>
     <string name="market_warnings_title">ווארענונגען</string>
+    <string name="market_sale_review_response_submitting">שיקן…</string>
 </resources>

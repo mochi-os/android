@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">បន្ថែម</string>
     <string name="forums_comment_send">ផ្ញើ</string>
+    <string name="forums_post_body_field">តួអត្ថបទ</string>
+    <string name="forums_post_edit_body_field">តួអត្ថបទ</string>
+    <string name="forums_comment_edit_body_field">តួអត្ថបទ</string>
 </resources>

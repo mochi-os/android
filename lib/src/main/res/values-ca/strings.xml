@@ -134,4 +134,38 @@
 
     <string name="common_not_saved">No s\'ha desat</string>
     <string name="common_save_failed">No s\'han pogut desar els canvis.</string>
+
+    <string name="push_service_channel_description">Manté Mochi connectat per rebre notificacions</string>
+    <string name="push_service_group">Servei en segon pla</string>
+    <string name="push_service_title">Mochi a l\'escolta de notificacions</string>
+    <string name="reauth_channel_name">Cal iniciar sessió a Mochi</string>
+    <string name="reauth_channel_description">Apareix quan Mochi no pot connectar amb el vostre servidor perquè la sessió s\'ha invalidat</string>
+    <string name="reauth_signin_title">Mochi: torneu a iniciar sessió</string>
+    <string name="reauth_signin_text">Les notificacions estan en pausa fins que torneu a iniciar sessió</string>
+    <string name="oem_hint_title">Mantingueu-vos accessible en segon pla</string>
+    <string name="oem_hint_body">Mochi s\'ha d\'executar en segon pla per lliurar notificacions. Permeteu-ho a la pantalla següent; en cas contrari, el telèfon podria aturar les notificacions quan la pantalla estigui apagada.</string>
+    <string name="oem_hint_samsung_note">Als telèfons Samsung, comproveu també Configuració → Manteniment del dispositiu → Aplicacions en repòs i traieu-ne Mochi si hi apareix.</string>
+    <string name="oem_hint_allow">Permet el segon pla</string>
+    <string name="oem_hint_dismiss">No ho tornis a mostrar</string>
+    <string name="about_label">Quant a</string>
+    <string name="about_title">Client Mochi per a Android</string>
+    <string name="about_version">Versió %1$s</string>
+    <string name="about_check_updates">Comprova si hi ha actualitzacions</string>
+    <string name="about_up_to_date">Al dia</string>
+    <string name="about_check_network_error">No s\'ha pogut connectar amb el servidor d\'actualitzacions</string>
+    <string name="about_check_download_failed">La descàrrega ha fallat</string>
+    <string name="notifications_clear_all_title">Voleu esborrar totes les notificacions?</string>
+    <string name="notifications_clear_all_message">Això eliminarà totes les notificacions. No es podran recuperar.</string>
+    <string name="notifications_count_n">%1$d noves</string>
+    <string name="settings_value_auto">Automàtic</string>
+    <string name="settings_value_theme">Predeterminat del tema</string>
+    <string name="settings_radius">Radi de les cantonades</string>
+    <string name="settings_timestamp_display">Visualització de la marca de temps</string>
+    <string name="settings_timestamp_relative">Relativa</string>
+    <string name="settings_timestamp_absolute">Absoluta</string>
+    <string name="settings_units_usa">EUA</string>
+    <string name="profile_privacy_description">Si els altres us poden trobar al directori.</string>
+    <string name="game_chat_load_more">Carrega missatges anteriors</string>
+    <string name="game_chat_move_played">%1$s ha jugat %2$s</string>
+
 </resources>

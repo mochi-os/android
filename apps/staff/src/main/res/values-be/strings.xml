@@ -498,4 +498,22 @@
     <string name="staff_team_toast_role_failed">Не ўдалося абнавіць ролю</string>
     <string name="staff_team_toast_role_updated">Роля абноўлена</string>
 
+
+    <string name="staff_disputes_stripe_bank_cannot_process">банк не змог апрацаваць</string>
+    <string name="staff_disputes_stripe_check_returned">чэк вернуты</string>
+    <string name="staff_disputes_stripe_credit_not_processed">крэдыт не апрацаваны</string>
+    <string name="staff_disputes_stripe_customer_initiated">ініцыявана кліентам</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">дэбет не дазволены</string>
+    <string name="staff_disputes_stripe_duplicate">дублікат спагнання</string>
+    <string name="staff_disputes_stripe_fraudulent">махлярства</string>
+    <string name="staff_disputes_stripe_general">агульная</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">няправільныя рэквізіты рахунку</string>
+    <string name="staff_disputes_stripe_insufficient_funds">недастаткова сродкаў</string>
+    <string name="staff_disputes_stripe_product_not_received">тавар не атрыманы</string>
+    <string name="staff_disputes_stripe_product_unacceptable">тавар непрымальны</string>
+    <string name="staff_disputes_stripe_subscription_canceled">падпіска скасавана</string>
+    <string name="staff_disputes_stripe_unrecognized">нераспазнанае спагнанне</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s на %3$s. Выдаліць гэты водгук назаўсёды? Гэта дзеянне нельга адмяніць.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Выдаліць гэты водгук назаўсёды? Гэта дзеянне нельга адмяніць.</string>
+
 </resources>

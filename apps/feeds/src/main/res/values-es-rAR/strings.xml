@@ -28,4 +28,12 @@
     <string name="feeds_sort_new">Nuevo</string>
     <string name="feeds_user">Usuario</string>
     <string name="feeds_filter_all">Todos</string>
+    <string name="feeds_private">Privado</string>
+    <string name="feeds_tab_members">Miembros</string>
+    <string name="feeds_sort_label">Ordenar</string>
+    <string name="feeds_tab_general">General</string>
+    <string name="feeds_dismiss">Descartar</string>
+    <string name="feeds_post_default_author">Publicar</string>
+    <string name="feeds_post">Publicar</string>
+    <string name="feeds_post_action">Publicar</string>
 </resources>

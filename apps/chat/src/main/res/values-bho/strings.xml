@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">और</string>
     <string name="chat_message_send">भेजीं</string>
+
+    <string name="notification_channel_chat">चैट सूचना</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">लॉगिन फेल हो गइल</string>
+    <string name="chat_auth_create_identity_failed">पहचान बनावे में फेल</string>
+    <string name="chat_auth_mfa_unsupported">मोबाइल ऐप में MFA अबहीं ना समर्थित बा</string>
+    <string name="chat_auth_enter_code_sent">%1$s पर भेजल कोड डालीं</string>
+    <string name="chat_auth_create_identity">आपन पहचान बनाईं</string>
+    <string name="chat_list_search_placeholder">चैट खोजीं</string>
+    <string name="chat_list_no_matching">कवनो मेल खात चैट नइखे</string>
+    <string name="chat_list_empty">अबहीं कवनो चैट नइखे</string>
+    <string name="chat_list_add_to_home">होम स्क्रीन पर जोड़ीं</string>
+    <string name="chat_list_left_chat">छोड़ दिहल</string>
+    <string name="chat_new_no_friends">अबहीं चैट करे खातिर कवनो दोस्त नइखे</string>
+    <string name="chat_new_no_matches">कवनो मेल खात दोस्त नइखे</string>
+    <string name="chat_new_existing_chat">मौजूदा चैट खोलीं</string>
+    <string name="chat_new_start">चैट शुरू करीं</string>
+    <string name="chat_new_start_group">ग्रुप चैट शुरू करीं</string>
+    <string name="chat_messages_loading">संदेस लोड हो रहल बा…</string>
+    <string name="chat_messages_empty">अबहीं कवनो संदेस नइखे — नमस्ते कहीं!</string>
+    <string name="chat_messages_load_more">पुरान संदेस लोड करीं</string>
+    <string name="chat_attachment_remove">अटैचमेंट हटाईं</string>
+    <string name="chat_attachment_move_up">ऊपर करीं</string>
+    <string name="chat_attachment_move_down">नीचे करीं</string>
+    <string name="chat_attachment_label">फाइल</string>
+    <string name="chat_message_remove_attachment">अटैचमेंट हटाईं</string>
+    <string name="chat_message_too_long">संदेस बहुते लंबा बा</string>
+    <string name="chat_message_empty">संदेस खाली ना हो सकेला</string>
+    <string name="chat_settings_rename">चैट के नाम बदलीं</string>
+    <string name="chat_settings_add_member_empty">जोड़े खातिर कवनो दोस्त नइखे</string>
+    <string name="chat_settings_remove_member_message">%1$s के एह चैट से हटाईं?</string>
+    <string name="chat_settings_leave_message">एह चैट के छोड़ दीं? बाकी सदस्य रउरा संदेस ना देख पइहें।</string>
+    <string name="chat_settings_leave_and_delete">छोड़ीं आ स्थानीय रूप से हटाईं</string>
+    <string name="chat_settings_delete">स्थानीय रूप से हटाईं</string>
+    <string name="chat_settings_delete_message">ई चैट आ ओकर संदेस के खाली एही डिवाइस से हटावेला।</string>
+
 </resources>

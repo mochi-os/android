@@ -483,4 +483,5 @@
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fisik</string>
     <string name="market_warnings_title">Bewara</string>
+    <string name="market_sale_review_response_submitting">Ngirim…</string>
 </resources>

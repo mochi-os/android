@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">더 보기</string>
     <string name="forums_comment_send">보내기</string>
+    <string name="forums_post_body_field">본문</string>
+    <string name="forums_post_edit_body_field">본문</string>
+    <string name="forums_comment_edit_body_field">본문</string>
 </resources>

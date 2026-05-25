@@ -498,4 +498,22 @@
     <string name="staff_team_toast_role_failed">Theip ar nuashonrú an róil</string>
     <string name="staff_team_toast_role_updated">Ról nuashonraithe</string>
 
+
+    <string name="staff_disputes_stripe_bank_cannot_process">níorbh fhéidir leis an mbanc próiseáil</string>
+    <string name="staff_disputes_stripe_check_returned">seic ar ais</string>
+    <string name="staff_disputes_stripe_credit_not_processed">creidmheas gan próiseáil</string>
+    <string name="staff_disputes_stripe_customer_initiated">tionscnaithe ag an gcustaiméir</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">dochar gan údarú</string>
+    <string name="staff_disputes_stripe_duplicate">muirear dúblach</string>
+    <string name="staff_disputes_stripe_fraudulent">calaoiseach</string>
+    <string name="staff_disputes_stripe_general">ginearálta</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">sonraí cuntais mícheart</string>
+    <string name="staff_disputes_stripe_insufficient_funds">easpa cistí</string>
+    <string name="staff_disputes_stripe_product_not_received">táirge gan fáil</string>
+    <string name="staff_disputes_stripe_product_unacceptable">táirge do-ghlactha</string>
+    <string name="staff_disputes_stripe_subscription_canceled">síntiús cealaithe</string>
+    <string name="staff_disputes_stripe_unrecognized">muirear neamhaitheanta</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s ar %3$s. An léirmheas seo a scriosadh go buan? Ní féidir é seo a chur ar ais.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. An léirmheas seo a scriosadh go buan? Ní féidir é seo a chur ar ais.</string>
+
 </resources>

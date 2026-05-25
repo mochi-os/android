@@ -498,4 +498,22 @@
     <string name="staff_team_toast_role_failed">Rolu yeniləmək alınmadı</string>
     <string name="staff_team_toast_role_updated">Rol yeniləndi</string>
 
+
+    <string name="staff_disputes_stripe_bank_cannot_process">bank emal apara bilmədi</string>
+    <string name="staff_disputes_stripe_check_returned">çek qaytarıldı</string>
+    <string name="staff_disputes_stripe_credit_not_processed">kredit emal edilmədi</string>
+    <string name="staff_disputes_stripe_customer_initiated">müştəri tərəfindən başladıldı</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debet icazəsi yoxdur</string>
+    <string name="staff_disputes_stripe_duplicate">təkrar ödəniş</string>
+    <string name="staff_disputes_stripe_fraudulent">saxta</string>
+    <string name="staff_disputes_stripe_general">ümumi</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">səhv hesab məlumatları</string>
+    <string name="staff_disputes_stripe_insufficient_funds">kifayət qədər vəsait yoxdur</string>
+    <string name="staff_disputes_stripe_product_not_received">məhsul alınmadı</string>
+    <string name="staff_disputes_stripe_product_unacceptable">məhsul qəbuledilməzdir</string>
+    <string name="staff_disputes_stripe_subscription_canceled">abunəlik ləğv edildi</string>
+    <string name="staff_disputes_stripe_unrecognized">tanınmayan ödəniş</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s tarixində. Bu rəyi həmişəlik silmək istəyirsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Bu rəyi həmişəlik silmək istəyirsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
+
 </resources>

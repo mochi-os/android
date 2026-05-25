@@ -165,4 +165,5 @@
     <string name="projects_more">Barrachd</string>
     <string name="projects_request_more">Barrachd</string>
     <string name="projects_comment_send">Cuir</string>
+    <string name="projects_field_position_body">Bodhaig</string>
 </resources>

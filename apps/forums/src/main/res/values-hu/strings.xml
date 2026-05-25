@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Több</string>
     <string name="forums_comment_send">Küldés</string>
+    <string name="forums_post_body_field">Szöveg</string>
+    <string name="forums_post_edit_body_field">Szöveg</string>
+    <string name="forums_comment_edit_body_field">Szöveg</string>
 </resources>

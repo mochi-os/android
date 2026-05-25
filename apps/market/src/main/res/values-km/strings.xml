@@ -483,4 +483,5 @@
     <string name="market_type_digital">ឌីជីថល</string>
     <string name="market_type_physical">រូបវន្ត</string>
     <string name="market_warnings_title">ការព្រមាន</string>
+    <string name="market_sale_review_response_submitting">កំពុងផ្ញើ…</string>
 </resources>

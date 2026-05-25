@@ -418,4 +418,7 @@
     <string name="market_type_digital">Digitális</string>
     <string name="market_type_physical">Fizikai</string>
     <string name="market_messages_send">Küldés</string>
+    <string name="market_appeal_dialog_submitting">Beküldés…</string>
+    <string name="market_dispute_dialog_submitting">Beküldés…</string>
+    <string name="market_sale_review_response_submitting">Beküldés…</string>
 </resources>

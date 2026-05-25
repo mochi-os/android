@@ -487,4 +487,5 @@
     <string name="market_type_digital">Digiteach</string>
     <string name="market_type_physical">Fisiciúil</string>
     <string name="market_warnings_title">Rabhaidh</string>
+    <string name="market_sale_review_response_submitting">Á sheoladh…</string>
 </resources>

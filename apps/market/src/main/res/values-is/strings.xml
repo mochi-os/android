@@ -489,4 +489,5 @@
     <string name="market_type_digital">Stafrænt</string>
     <string name="market_type_physical">Áþreifanlegt</string>
     <string name="market_warnings_title">Aðvaranir</string>
+    <string name="market_sale_review_response_submitting">Sendir…</string>
 </resources>

@@ -483,4 +483,5 @@
     <string name="market_type_digital">ဒစ်ဂျစ်တယ်</string>
     <string name="market_type_physical">ရုပ်ပိုင်း</string>
     <string name="market_warnings_title">သတိပေးချက်များ</string>
+    <string name="market_sale_review_response_submitting">တင်ပြနေသည်…</string>
 </resources>

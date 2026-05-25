@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Daha çox</string>
     <string name="chat_message_send">Göndər</string>
+
+    <string name="notification_channel_chat">Söhbət bildirişləri</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Giriş alınmadı</string>
+    <string name="chat_auth_create_identity_failed">Kimlik yaradıla bilmədi</string>
+    <string name="chat_auth_mfa_unsupported">MFA mobil tətbiqdə hələ dəstəklənmir</string>
+    <string name="chat_auth_enter_code_sent">%1$s ünvanına göndərilən kodu daxil edin</string>
+    <string name="chat_auth_create_identity">Kimliyinizi yaradın</string>
+    <string name="chat_list_search_placeholder">Söhbətləri axtarın</string>
+    <string name="chat_list_no_matching">Uyğun söhbət yoxdur</string>
+    <string name="chat_list_empty">Hələ söhbət yoxdur</string>
+    <string name="chat_list_add_to_home">Əsas ekrana əlavə edin</string>
+    <string name="chat_list_left_chat">Tərk edildi</string>
+    <string name="chat_new_no_friends">Hələ söhbət edəcək dost yoxdur</string>
+    <string name="chat_new_no_matches">Uyğun dost yoxdur</string>
+    <string name="chat_new_existing_chat">Mövcud söhbəti açın</string>
+    <string name="chat_new_start">Söhbətə başlayın</string>
+    <string name="chat_new_start_group">Qrup söhbətinə başlayın</string>
+    <string name="chat_messages_loading">Mesajlar yüklənir…</string>
+    <string name="chat_messages_empty">Hələ mesaj yoxdur — salam deyin!</string>
+    <string name="chat_messages_load_more">Köhnə mesajları yükləyin</string>
+    <string name="chat_attachment_remove">Qoşmanı silin</string>
+    <string name="chat_attachment_move_up">Yuxarı köçürün</string>
+    <string name="chat_attachment_move_down">Aşağı köçürün</string>
+    <string name="chat_attachment_label">Fayl</string>
+    <string name="chat_message_remove_attachment">Qoşmanı silin</string>
+    <string name="chat_message_too_long">Mesaj çox uzundur</string>
+    <string name="chat_message_empty">Mesaj boş ola bilməz</string>
+    <string name="chat_settings_rename">Söhbəti adlandırın</string>
+    <string name="chat_settings_add_member_empty">Əlavə ediləcək dost yoxdur</string>
+    <string name="chat_settings_remove_member_message">%1$s bu söhbətdən silinsin?</string>
+    <string name="chat_settings_leave_message">Bu söhbəti tərk edirsiniz? Digər üzvlər artıq mesajlarınızı görməyəcək.</string>
+    <string name="chat_settings_leave_and_delete">Tərk edin və lokal olaraq silin</string>
+    <string name="chat_settings_delete">Lokal olaraq silin</string>
+    <string name="chat_settings_delete_message">Bu, söhbəti və onun mesajlarını yalnız bu cihazdan silir.</string>
+
 </resources>

@@ -165,4 +165,5 @@
     <string name="crm_more">थप</string>
     <string name="crm_request_more">थप</string>
     <string name="crm_comment_send">पठाउनुहोस्</string>
+    <string name="crm_field_position_body">मुख्य भाग</string>
 </resources>

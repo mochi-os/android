@@ -165,4 +165,5 @@
     <string name="crm_more">Aktar</string>
     <string name="crm_request_more">Aktar</string>
     <string name="crm_comment_send">Ibgħat</string>
+    <string name="crm_field_position_body">Korp</string>
 </resources>

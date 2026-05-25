@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">ተጨማሪ</string>
     <string name="chat_message_send">ላክ</string>
+
+    <string name="notification_channel_chat">የውይይት ማሳወቂያዎች</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">መግባት አልተሳካም</string>
+    <string name="chat_auth_create_identity_failed">ማንነት መፍጠር አልተሳካም</string>
+    <string name="chat_auth_mfa_unsupported">MFA በሞባይል መተግበሪያ ላይ ገና አይደገፍም</string>
+    <string name="chat_auth_enter_code_sent">ወደ %1$s የተላከውን ኮድ ያስገቡ</string>
+    <string name="chat_auth_create_identity">ማንነትዎን ይፍጠሩ</string>
+    <string name="chat_list_search_placeholder">ውይይቶችን ይፈልጉ</string>
+    <string name="chat_list_no_matching">ተዛማጅ ውይይቶች የሉም</string>
+    <string name="chat_list_empty">እስካሁን ውይይቶች የሉም</string>
+    <string name="chat_list_add_to_home">ወደ መነሻ ስክሪን ያክሉ</string>
+    <string name="chat_list_left_chat">ወጥቷል</string>
+    <string name="chat_new_no_friends">እስካሁን ለመወያየት ጓደኞች የሉም</string>
+    <string name="chat_new_no_matches">ተዛማጅ ጓደኞች የሉም</string>
+    <string name="chat_new_existing_chat">ነባር ውይይት ይክፈቱ</string>
+    <string name="chat_new_start">ውይይት ይጀምሩ</string>
+    <string name="chat_new_start_group">የቡድን ውይይት ይጀምሩ</string>
+    <string name="chat_messages_loading">መልዕክቶችን በመጫን ላይ…</string>
+    <string name="chat_messages_empty">እስካሁን መልዕክቶች የሉም — ሰላም ይበሉ!</string>
+    <string name="chat_messages_load_more">የቆዩ መልዕክቶችን ይጫኑ</string>
+    <string name="chat_attachment_remove">አባሪውን ያስወግዱ</string>
+    <string name="chat_attachment_move_up">ወደ ላይ ያንቀሳቅሱ</string>
+    <string name="chat_attachment_move_down">ወደ ታች ያንቀሳቅሱ</string>
+    <string name="chat_attachment_label">ፋይል</string>
+    <string name="chat_message_remove_attachment">አባሪውን ያስወግዱ</string>
+    <string name="chat_message_too_long">መልዕክቱ በጣም ረጅም ነው</string>
+    <string name="chat_message_empty">መልዕክት ባዶ ሊሆን አይችልም</string>
+    <string name="chat_settings_rename">ውይይቱን ይሰይሙ</string>
+    <string name="chat_settings_add_member_empty">የሚጨመር ጓደኛ የለም</string>
+    <string name="chat_settings_remove_member_message">%1$s ከዚህ ውይይት ይወገድ?</string>
+    <string name="chat_settings_leave_message">ከዚህ ውይይት ይውጡ? ሌሎች አባላት መልዕክቶችዎን ከእንግዲህ አያዩም።</string>
+    <string name="chat_settings_leave_and_delete">ይውጡ እና በአካባቢ ይሰርዙ</string>
+    <string name="chat_settings_delete">በአካባቢ ይሰርዙ</string>
+    <string name="chat_settings_delete_message">ይህ ውይይቱን እና መልዕክቶቹን ከዚህ መሣሪያ ብቻ ያስወግዳል።</string>
+
 </resources>

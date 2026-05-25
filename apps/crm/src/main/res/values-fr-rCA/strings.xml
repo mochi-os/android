@@ -39,4 +39,21 @@
     <string name="crm_request_status_open">Ouvrir</string>
     <string name="crm_board_new">Nouveau</string>
     <string name="crm_field_type_user">Utilisateur</string>
+    <string name="crm_create_public">Public</string>
+    <string name="crm_create_private">Privé</string>
+    <string name="crm_access_level_owner">Propriétaire</string>
+    <string name="crm_access_level_comment">Commentaire</string>
+    <string name="crm_loading">Chargement…</string>
+    <string name="crm_field_position_default">Par défaut</string>
+    <string name="crm_settings_tab_people">Personnes</string>
+    <string name="crm_sort_label">Trier</string>
+    <string name="crm_sort_number">Numéro</string>
+    <string name="crm_field_type_number">Numéro</string>
+    <string name="crm_views_sort_number">Numéro</string>
+    <string name="crm_settings_tab_general">Général</string>
+    <string name="crm_settings_save">Enregistrer les modifications</string>
+    <string name="crm_field_save">Enregistrer les modifications</string>
+    <string name="crm_request_status_draft">Brouillon</string>
+    <string name="crm_request_field_draft">Brouillon</string>
+    <string name="crm_field_position_body">Contenu</string>
 </resources>

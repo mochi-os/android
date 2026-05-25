@@ -134,4 +134,38 @@
 
     <string name="common_not_saved">Nie gestoor nie</string>
     <string name="common_save_failed">Kon nie jou veranderinge stoor nie.</string>
+
+    <string name="push_service_channel_description">Hou Mochi gekoppel om kennisgewings te ontvang</string>
+    <string name="push_service_group">Agtergronddiens</string>
+    <string name="push_service_title">Mochi luister vir kennisgewings</string>
+    <string name="reauth_channel_name">Mochi-aanmelding vereis</string>
+    <string name="reauth_channel_description">Verskyn wanneer Mochi nie jou bediener kan bereik nie omdat jou sessie ongeldig gemaak is</string>
+    <string name="reauth_signin_title">Mochi: meld weer aan</string>
+    <string name="reauth_signin_text">Kennisgewings is gepouseer totdat jy weer aanmeld</string>
+    <string name="oem_hint_title">Bly bereikbaar in die agtergrond</string>
+    <string name="oem_hint_body">Mochi moet in die agtergrond loop om kennisgewings te lewer. Laat dit asseblief op die volgende skerm toe, anders mag jou foon kennisgewings pouseer wanneer die skerm af is.</string>
+    <string name="oem_hint_samsung_note">Op Samsung-fone, kyk ook na Instellings → Toestelsorg → Slapende programme en verwyder Mochi as dit gelys is.</string>
+    <string name="oem_hint_allow">Laat agtergrond toe</string>
+    <string name="oem_hint_dismiss">Moenie weer wys nie</string>
+    <string name="about_label">Aangaande</string>
+    <string name="about_title">Mochi-kliënt vir Android</string>
+    <string name="about_version">Weergawe %1$s</string>
+    <string name="about_check_updates">Kyk vir opdaterings</string>
+    <string name="about_up_to_date">Op datum</string>
+    <string name="about_check_network_error">Kon nie opdateringbediener bereik nie</string>
+    <string name="about_check_download_failed">Aflaai het misluk</string>
+    <string name="notifications_clear_all_title">Vee alle kennisgewings uit?</string>
+    <string name="notifications_clear_all_message">Dit sal elke kennisgewing verwyder. Hulle kan nie herstel word nie.</string>
+    <string name="notifications_count_n">%1$d nuwe</string>
+    <string name="settings_value_auto">Outomaties</string>
+    <string name="settings_value_theme">Tema-verstek</string>
+    <string name="settings_radius">Hoekradius</string>
+    <string name="settings_timestamp_display">Tydstempelvertoning</string>
+    <string name="settings_timestamp_relative">Relatief</string>
+    <string name="settings_timestamp_absolute">Absoluut</string>
+    <string name="settings_units_usa">VS</string>
+    <string name="profile_privacy_description">Of ander jou in die gids kan vind.</string>
+    <string name="game_chat_load_more">Laai ouer boodskappe</string>
+    <string name="game_chat_move_played">%1$s het %2$s gespeel</string>
+
 </resources>

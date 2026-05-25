@@ -483,4 +483,5 @@
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Pisikal</string>
     <string name="market_warnings_title">Mga babala</string>
+    <string name="market_sale_review_response_submitting">Isinusumite…</string>
 </resources>

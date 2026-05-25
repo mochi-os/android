@@ -165,4 +165,5 @@
     <string name="crm_more">Көбүрөөк</string>
     <string name="crm_request_more">Көбүрөөк</string>
     <string name="crm_comment_send">Жөнөтүү</string>
+    <string name="crm_field_position_body">Текст</string>
 </resources>

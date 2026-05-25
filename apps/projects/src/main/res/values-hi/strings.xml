@@ -165,4 +165,5 @@
     <string name="projects_more">और</string>
     <string name="projects_request_more">और</string>
     <string name="projects_comment_send">भेजें</string>
+    <string name="projects_field_position_body">मुख्य पाठ</string>
 </resources>

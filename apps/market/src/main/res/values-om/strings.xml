@@ -483,4 +483,5 @@
     <string name="market_type_digital">Dijitaala</string>
     <string name="market_type_physical">Qaamaan</string>
     <string name="market_warnings_title">Akeekkachiisawwan</string>
+    <string name="market_sale_review_response_submitting">Erguu jira…</string>
 </resources>

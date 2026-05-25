@@ -165,4 +165,5 @@
     <string name="projects_more">Илүү</string>
     <string name="projects_request_more">Илүү</string>
     <string name="projects_comment_send">Илгээх</string>
+    <string name="projects_field_position_body">Агуулга</string>
 </resources>

@@ -12,4 +12,13 @@
     <string name="feeds_sort_new">New</string>
     <string name="feeds_user">User</string>
     <string name="feeds_filter_all">All</string>
+    <string name="feeds_private">Private</string>
+    <string name="feeds_tab_members">Members</string>
+    <string name="feeds_suggested_credibility_accept">Accept</string>
+    <string name="feeds_sort_label">Sort</string>
+    <string name="feeds_tab_general">General</string>
+    <string name="feeds_dismiss">Dismiss</string>
+    <string name="feeds_post_default_author">Post</string>
+    <string name="feeds_post">Post</string>
+    <string name="feeds_post_action">Post</string>
 </resources>

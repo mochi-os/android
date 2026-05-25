@@ -165,4 +165,5 @@
     <string name="crm_more">Көбірек</string>
     <string name="crm_request_more">Көбірек</string>
     <string name="crm_comment_send">Жіберу</string>
+    <string name="crm_field_position_body">Мәтін</string>
 </resources>

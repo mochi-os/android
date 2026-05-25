@@ -418,4 +418,7 @@
     <string name="market_type_digital">Дигитално</string>
     <string name="market_type_physical">Физички</string>
     <string name="market_messages_send">Пошаљи</string>
+    <string name="market_appeal_dialog_submitting">Слање…</string>
+    <string name="market_dispute_dialog_submitting">Слање…</string>
+    <string name="market_sale_review_response_submitting">Слање…</string>
 </resources>

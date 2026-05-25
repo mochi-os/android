@@ -165,4 +165,5 @@
     <string name="crm_more">Ko‘proq</string>
     <string name="crm_request_more">Ko‘proq</string>
     <string name="crm_comment_send">Yuborish</string>
+    <string name="crm_field_position_body">Matn</string>
 </resources>

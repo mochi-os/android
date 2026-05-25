@@ -33,4 +33,40 @@
 
     <string name="chat_list_more">Mere</string>
     <string name="chat_message_send">Send</string>
+
+    <string name="notification_channel_chat">Chatnotifikationer</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_login_failed">Login mislykkedes</string>
+    <string name="chat_auth_create_identity_failed">Kunne ikke oprette identitet</string>
+    <string name="chat_auth_mfa_unsupported">MFA understøttes endnu ikke i mobilappen</string>
+    <string name="chat_auth_enter_code_sent">Indtast koden sendt til %1$s</string>
+    <string name="chat_auth_create_identity">Opret din identitet</string>
+    <string name="chat_list_search_placeholder">Søg i chats</string>
+    <string name="chat_list_no_matching">Ingen matchende chats</string>
+    <string name="chat_list_empty">Ingen chats endnu</string>
+    <string name="chat_list_add_to_home">Føj til startskærm</string>
+    <string name="chat_list_left_chat">Forladt</string>
+    <string name="chat_new_no_friends">Ingen venner at chatte med endnu</string>
+    <string name="chat_new_no_matches">Ingen matchende venner</string>
+    <string name="chat_new_existing_chat">Åbn eksisterende chat</string>
+    <string name="chat_new_start">Start chat</string>
+    <string name="chat_new_start_group">Start gruppechat</string>
+    <string name="chat_messages_loading">Indlæser beskeder…</string>
+    <string name="chat_messages_empty">Ingen beskeder endnu — sig hej!</string>
+    <string name="chat_messages_load_more">Indlæs ældre beskeder</string>
+    <string name="chat_attachment_remove">Fjern vedhæftning</string>
+    <string name="chat_attachment_move_up">Flyt op</string>
+    <string name="chat_attachment_move_down">Flyt ned</string>
+    <string name="chat_attachment_label">Fil</string>
+    <string name="chat_message_remove_attachment">Fjern vedhæftning</string>
+    <string name="chat_message_too_long">Beskeden er for lang</string>
+    <string name="chat_message_empty">Beskeden må ikke være tom</string>
+    <string name="chat_settings_rename">Omdøb chat</string>
+    <string name="chat_settings_add_member_empty">Ingen venner at tilføje</string>
+    <string name="chat_settings_remove_member_message">Fjern %1$s fra denne chat?</string>
+    <string name="chat_settings_leave_message">Forlad denne chat? Andre medlemmer vil ikke længere se dine beskeder.</string>
+    <string name="chat_settings_leave_and_delete">Forlad og slet lokalt</string>
+    <string name="chat_settings_delete">Slet lokalt</string>
+    <string name="chat_settings_delete_message">Dette fjerner chatten og dens beskeder fra denne enhed alene.</string>
+
 </resources>

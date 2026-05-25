@@ -483,4 +483,5 @@
     <string name="market_type_digital">डिजिटल</string>
     <string name="market_type_physical">भौतिक</string>
     <string name="market_warnings_title">इशारे</string>
+    <string name="market_sale_review_response_submitting">सबमिट करत आहे…</string>
 </resources>

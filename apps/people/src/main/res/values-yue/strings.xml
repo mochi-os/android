@@ -18,4 +18,10 @@
     <string name="people_group_description">描述</string>
     <string name="people_common_type">類型</string>
     <string name="people_member_type_user">用戶</string>
+    <string name="people_sidebar_header">用戶</string>
+    <string name="people_group_members">成員</string>
+    <string name="people_invitations_accept">接受</string>
+    <string name="people_person_accept">接受</string>
+    <string name="people_welcome_dismiss">關閉</string>
+    <string name="people_friends_pending">待處理</string>
 </resources>

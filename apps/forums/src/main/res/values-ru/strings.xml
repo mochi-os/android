@@ -127,4 +127,7 @@
 
     <string name="forums_list_more">Ещё</string>
     <string name="forums_comment_send">Отправить</string>
+    <string name="forums_post_body_field">Текст</string>
+    <string name="forums_post_edit_body_field">Текст</string>
+    <string name="forums_comment_edit_body_field">Текст</string>
 </resources>
