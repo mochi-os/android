@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feeds</string>
     <string name="feeds_find_feeds">Buscar feeds</string>
     <string name="feeds_create_feed">Crear feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Miembros</string>
     <string name="feeds_tab_ai">IA</string>
     <string name="feeds_feed_name">Nombre del feed</string>
+    <string name="feeds_save_name">Guardar nombre</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner Markdown opcional que se muestra en la parte superior de tu feed.</string>
     <string name="feeds_clear">Borrar</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed de Mochi</string>
     <string name="feeds_source_type_feed_memories">Recuerdos</string>
+    <string name="feeds_remove_source">Eliminar fuente</string>
     <string name="feeds_suggested_credibility_accept">Aceptar</string>
     <string name="feeds_rss_url_copied">URL del RSS copiada al portapapeles</string>
     <string name="feeds_logout">Cerrar sesión</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Restablecer al valor predeterminado</string>
     <string name="feeds_feed_not_found">Feed no encontrado</string>
     <string name="feeds_post_not_found">Publicación no encontrada</string>
+    <string name="feeds_post_select_feed">Seleccione un canal</string>
+    <string name="feeds_post_empty_content">Introduzca texto o adjunte un archivo</string>
     <string name="feeds_settings_feed_renamed">Feed renombrado</string>
+    <string name="feeds_settings_banner_saved">Banner guardado</string>
+    <string name="feeds_settings_banner_cleared">Banner borrado</string>
     <string name="feeds_settings_source_added">Fuente añadida</string>
     <string name="feeds_settings_source_updated">Fuente actualizada</string>
     <string name="feeds_settings_source_removed">Fuente eliminada</string>
+    <string name="feeds_settings_source_polling">Consultando fuente…</string>
     <string name="feeds_settings_access_updated">Acceso actualizado</string>
+    <string name="feeds_settings_access_revoked">Acceso revocado</string>
     <string name="feeds_settings_member_added">Miembro añadido</string>
     <string name="feeds_settings_member_removed">Miembro eliminado</string>
-    <string name="feeds_settings_prompt_saved">Prompt guardado</string>
-    <string name="feeds_settings_banner_saved">Banner guardado</string>
-    <string name="feeds_settings_banner_cleared">Banner borrado</string>
-    <string name="feeds_settings_source_polling">Consultando fuente…</string>
-    <string name="feeds_settings_access_revoked">Acceso revocado</string>
     <string name="feeds_settings_ai_mode_updated">Modo de IA actualizado</string>
     <string name="feeds_settings_ai_account_updated">Cuenta de IA actualizada</string>
+    <string name="feeds_settings_prompt_saved">Prompt guardado</string>
     <string name="feeds_settings_prompt_reset">Indicación restablecida a los valores predeterminados</string>
-    <string name="feeds_post_select_feed">Seleccione un canal</string>
-    <string name="feeds_post_empty_content">Introduzca texto o adjunte un archivo</string>
-
+    <string name="feeds_send">Enviar</string>
 </resources>

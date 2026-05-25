@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Näyttönimi</string>
     <string name="projects_auth_verification_failed">Vahvistus epäonnistui</string>
     <string name="projects_list_title">Projektit</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Käyttöoikeus</string>
     <string name="projects_settings_tab_people">Henkilöt</string>
     <string name="projects_option_icon">Kuvake</string>
+    <string name="projects_option_icon_placeholder">esim. Check, Star, Flag</string>
     <string name="projects_settings_save">Tallenna muutokset</string>
     <string name="projects_settings_unsubscribe">Peru tilaus</string>
     <string name="projects_settings_delete_project">Poista projekti</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Lopeta seuranta</string>
     <string name="projects_parent_label">Yläkohde</string>
     <string name="projects_parent_search_placeholder">Haku</string>
+    <string name="projects_links_title">Linkit</string>
     <string name="projects_links_add">Lisää linkki</string>
     <string name="projects_links_section_blocks">Estää</string>
     <string name="projects_links_section_blocked_by">Estää</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Liitä tiedostoja</string>
     <string name="projects_property_remove">Poista</string>
     <string name="projects_property_option_none">Ei mitään</string>
+    <string name="projects_attachments">Liitteet</string>
     <string name="projects_attachment_add">Lisää liite</string>
     <string name="projects_request_empty">Ei yhdistämispyyntöjä</string>
     <string name="projects_request_status_draft">Luonnos</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Lisää luokka</string>
     <string name="projects_classes_create">Luo</string>
     <string name="projects_class_name">Nimi</string>
+    <string name="projects_class_save_name">Tallenna nimi</string>
     <string name="projects_class_title_field">Otsikkokenttä</string>
     <string name="projects_class_merge_requests">Yhdistämispyynnöt</string>
     <string name="projects_class_fields">Kentät</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Päivitetty</string>
     <string name="projects_views_sort_rank">Sijoitus</string>
     <string name="projects_project_not_found">Projektia ei löytynyt</string>
-    <string name="projects_option_icon_placeholder">esim. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Lisää</string>
+    <string name="projects_more">Lisää</string>
+    <string name="projects_request_more">Lisää</string>
+    <string name="projects_comment_send">Lähetä</string>
 </resources>

@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Fann ikkje forumet</string>
     <string name="forums_post_not_found">Innlegg ikkje funne</string>
 
+    <string name="forums_list_more">Meir</string>
+    <string name="forums_comment_send">Send</string>
 </resources>

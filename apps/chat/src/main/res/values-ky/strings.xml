@@ -31,4 +31,6 @@
     <string name="chat_members_you">Сиз</string>
     <string name="chat_chat_not_found">Чат табылган жок</string>
 
+    <string name="chat_list_more">Көбүрөөк</string>
+    <string name="chat_message_send">Жөнөтүү</string>
 </resources>

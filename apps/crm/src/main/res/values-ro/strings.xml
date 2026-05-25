@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Nume afișat</string>
     <string name="crm_auth_verification_failed">Verificarea a eșuat</string>
     <string name="crm_list_title">Proiecte</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Acces</string>
     <string name="crm_settings_tab_people">Persoane</string>
     <string name="crm_option_icon">Pictogramă</string>
+    <string name="crm_option_icon_placeholder">de ex. Check, Star, Flag</string>
     <string name="crm_settings_save">Salvează modificările</string>
     <string name="crm_settings_unsubscribe">Dezabonează-te</string>
     <string name="crm_settings_delete_crm">Șterge proiectul</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Nu mai urmări</string>
     <string name="crm_parent_label">Părinte</string>
     <string name="crm_parent_search_placeholder">Caută</string>
+    <string name="crm_links_title">Linkuri</string>
     <string name="crm_links_add">Adaugă link</string>
     <string name="crm_links_section_blocks">Blocuri</string>
     <string name="crm_links_section_blocked_by">Blocat de</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Atașează fișiere</string>
     <string name="crm_property_remove">Elimină</string>
     <string name="crm_property_option_none">Niciuna</string>
+    <string name="crm_attachments">Atașamente</string>
     <string name="crm_attachment_add">Adaugă atașament</string>
     <string name="crm_request_empty">Nicio cerere de merge</string>
     <string name="crm_request_status_draft">Ciornă</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Adaugă clasă</string>
     <string name="crm_classes_create">Creează</string>
     <string name="crm_class_name">Nume</string>
+    <string name="crm_class_save_name">Salvează numele</string>
     <string name="crm_class_title_field">Câmp titlu</string>
     <string name="crm_class_merge_requests">Cereri de îmbinare</string>
     <string name="crm_class_fields">Câmpuri</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Actualizat</string>
     <string name="crm_views_sort_rank">Rang</string>
     <string name="crm_not_found">Proiectul nu a fost găsit</string>
-    <string name="crm_option_icon_placeholder">de ex. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Mai mult</string>
+    <string name="crm_more">Mai mult</string>
+    <string name="crm_request_more">Mai mult</string>
+    <string name="crm_comment_send">Trimite</string>
 </resources>

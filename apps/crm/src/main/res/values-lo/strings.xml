@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ຊື່ສະແດງ</string>
     <string name="crm_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
     <string name="crm_list_title">ໂຄງການ</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">ການເຂົ້າເຖິງ</string>
     <string name="crm_settings_tab_people">ຄົນ</string>
     <string name="crm_option_icon">ໄອຄອນ</string>
+    <string name="crm_option_icon_placeholder">ຕ຺ືັກ. Check, Star, Flag</string>
     <string name="crm_settings_save">ບັນທຶກການປ່ຽນແປງ</string>
     <string name="crm_settings_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="crm_settings_delete_crm">ລົບໂຄງການ</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">ຢຸດການເບິ່ງ</string>
     <string name="crm_parent_label">ແມ່</string>
     <string name="crm_parent_search_placeholder">ຄົ້ນຫາ</string>
+    <string name="crm_links_title">ລິ້ງ</string>
     <string name="crm_links_add">ເພີ່ມລິ້ງ</string>
     <string name="crm_links_section_blocks">ບລັອກ</string>
     <string name="crm_links_section_blocked_by">ຖືກບລັອກໂດຍ</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ແນບໄຟລ໌</string>
     <string name="crm_property_remove">ລຶບອອກ</string>
     <string name="crm_property_option_none">ບໍ່ມີ</string>
+    <string name="crm_attachments">ໄຟລ໌ແນບ</string>
     <string name="crm_attachment_add">ເພີ່ມໄຟລ໌ແນບ</string>
     <string name="crm_request_empty">ບໍ່ມີຄຳຮ້ອງຂໍລວມ</string>
     <string name="crm_request_status_draft">ສະບັບຮ່າງ</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">ເພີ່ມຄລາສ</string>
     <string name="crm_classes_create">ສ້າງ</string>
     <string name="crm_class_name">ຊື່</string>
+    <string name="crm_class_save_name">ບັນທຶກຊື່</string>
     <string name="crm_class_title_field">ຊ່ອງຊື່ເລື່ອງ</string>
     <string name="crm_class_merge_requests">ຄຳຮ້ອງຂໍລວມ</string>
     <string name="crm_class_fields">ຊ່ອງ</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="crm_views_sort_rank">ອັນດັບ</string>
     <string name="crm_not_found">ບໍ່ພົບໂຄງການ</string>
-    <string name="crm_option_icon_placeholder">ຕ຺ືັກ. Check, Star, Flag</string>
-
+    <string name="crm_list_more">ເພີ່ມເຕີມ</string>
+    <string name="crm_more">ເພີ່ມເຕີມ</string>
+    <string name="crm_request_more">ເພີ່ມເຕີມ</string>
+    <string name="crm_comment_send">ສົ່ງ</string>
 </resources>

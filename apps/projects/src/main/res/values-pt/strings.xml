@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Nome a apresentar</string>
     <string name="projects_auth_verification_failed">Verificação falhou</string>
     <string name="projects_list_title">Projetos</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Acesso</string>
     <string name="projects_settings_tab_people">Pessoas</string>
     <string name="projects_option_icon">Ícone</string>
+    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
     <string name="projects_settings_save">Guardar alterações</string>
     <string name="projects_settings_unsubscribe">Cancelar subscrição</string>
     <string name="projects_settings_delete_project">Eliminar projeto</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Deixar de seguir</string>
     <string name="projects_parent_label">Pai</string>
     <string name="projects_parent_search_placeholder">Pesquisar</string>
+    <string name="projects_links_title">Ligações</string>
     <string name="projects_links_add">Adicionar ligação</string>
     <string name="projects_links_section_blocks">Bloqueia</string>
     <string name="projects_links_section_blocked_by">Bloqueado por</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Anexar ficheiros</string>
     <string name="projects_property_remove">Remover</string>
     <string name="projects_property_option_none">Nenhum</string>
+    <string name="projects_attachments">Anexos</string>
     <string name="projects_attachment_add">Adicionar anexo</string>
     <string name="projects_request_empty">Sem pedidos de integração</string>
     <string name="projects_request_status_draft">Rascunho</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Adicionar classe</string>
     <string name="projects_classes_create">Criar</string>
     <string name="projects_class_name">Nome</string>
+    <string name="projects_class_save_name">Guardar nome</string>
     <string name="projects_class_title_field">Campo do título</string>
     <string name="projects_class_merge_requests">Pedidos de integração</string>
     <string name="projects_class_fields">Campos</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Atualizado</string>
     <string name="projects_views_sort_rank">Classificação</string>
     <string name="projects_project_not_found">Projeto não encontrado</string>
-    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Mais</string>
+    <string name="projects_more">Mais</string>
+    <string name="projects_request_more">Mais</string>
+    <string name="projects_comment_send">Enviar</string>
 </resources>

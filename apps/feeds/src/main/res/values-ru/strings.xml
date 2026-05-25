@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Ленты</string>
     <string name="feeds_find_feeds">Найти ленты</string>
     <string name="feeds_create_feed">Создать ленту</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Участники</string>
     <string name="feeds_tab_ai">ИИ</string>
     <string name="feeds_feed_name">Название ленты</string>
+    <string name="feeds_save_name">Сохранить имя</string>
     <string name="feeds_banner">Баннер</string>
     <string name="feeds_banner_description">Необязательный markdown-баннер, отображаемый вверху вашей ленты.</string>
     <string name="feeds_clear">Очистить</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Лента Mochi</string>
     <string name="feeds_source_type_feed_memories">Воспоминания</string>
+    <string name="feeds_remove_source">Удалить источник</string>
     <string name="feeds_suggested_credibility_accept">Принять</string>
     <string name="feeds_rss_url_copied">URL RSS скопирован в буфер обмена</string>
     <string name="feeds_logout">Выйти</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Сбросить к значениям по умолчанию</string>
     <string name="feeds_feed_not_found">Лента не найдена</string>
     <string name="feeds_post_not_found">Публикация не найдена</string>
+    <string name="feeds_post_select_feed">Пожалуйста, выберите ленту</string>
+    <string name="feeds_post_empty_content">Пожалуйста, введите текст или прикрепите файл</string>
     <string name="feeds_settings_feed_renamed">Лента переименована</string>
+    <string name="feeds_settings_banner_saved">Баннер сохранён</string>
+    <string name="feeds_settings_banner_cleared">Баннер очищен</string>
     <string name="feeds_settings_source_added">Источник добавлен</string>
     <string name="feeds_settings_source_updated">Источник обновлён</string>
     <string name="feeds_settings_source_removed">Источник удалён</string>
+    <string name="feeds_settings_source_polling">Опрос источника…</string>
     <string name="feeds_settings_access_updated">Доступ обновлён</string>
+    <string name="feeds_settings_access_revoked">Доступ отозван</string>
     <string name="feeds_settings_member_added">Участник добавлен</string>
     <string name="feeds_settings_member_removed">Участник удалён</string>
-    <string name="feeds_settings_prompt_saved">Промпт сохранён</string>
-    <string name="feeds_settings_banner_saved">Баннер сохранён</string>
-    <string name="feeds_settings_banner_cleared">Баннер очищен</string>
-    <string name="feeds_settings_source_polling">Опрос источника…</string>
-    <string name="feeds_settings_access_revoked">Доступ отозван</string>
     <string name="feeds_settings_ai_mode_updated">Режим ИИ обновлён</string>
     <string name="feeds_settings_ai_account_updated">Аккаунт ИИ обновлён</string>
+    <string name="feeds_settings_prompt_saved">Промпт сохранён</string>
     <string name="feeds_settings_prompt_reset">Подсказка сброшена на значение по умолчанию</string>
-    <string name="feeds_post_select_feed">Пожалуйста, выберите ленту</string>
-    <string name="feeds_post_empty_content">Пожалуйста, введите текст или прикрепите файл</string>
-
+    <string name="feeds_send">Отправить</string>
 </resources>

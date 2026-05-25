@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="staff_accounts_cancel">Cancelá</string>
     <string name="staff_accounts_search_placeholder">Buscá</string>
     <string name="staff_appeals_cancel">Cancelá</string>
@@ -20,6 +19,7 @@
     <string name="staff_dashboard_kpi_open_disputes">Abrí las disputas</string>
     <string name="staff_disputes_cancel">Cancelá</string>
     <string name="staff_disputes_resolution_placeholder">Seleccioná una resolución</string>
+    <string name="staff_filter_label_query">Buscá</string>
     <string name="staff_listings_action_approve_title">Aprobá el aviso</string>
     <string name="staff_listings_action_reject_title">Rechazá el aviso</string>
     <string name="staff_listings_action_remove_title">Quitá el aviso</string>
@@ -45,5 +45,57 @@
     <string name="staff_team_remove_confirm">Quitá</string>
     <string name="staff_team_remove_desc">¿Quitás a este miembro del equipo de personal?</string>
     <string name="staff_team_remove_title">Quitá al miembro del equipo</string>
-
+    <string name="staff_categories_col_name">Nombre</string>
+    <string name="staff_categories_dialog_name">Nombre</string>
+    <string name="staff_dashboard_col_name">Nombre</string>
+    <string name="staff_categories_create">Crear</string>
+    <string name="staff_accounts_close">Cerrar</string>
+    <string name="staff_disputes_close">Cerrar</string>
+    <string name="staff_reports_close">Cerrar</string>
+    <string name="staff_disputes_view">Ver</string>
+    <string name="staff_reports_view">Ver</string>
+    <string name="staff_categories_dialog_parent_none">Ninguno</string>
+    <string name="staff_sidebar_settings">Configuración</string>
+    <string name="staff_accounts_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_appeals_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_categories_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_config_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_dashboard_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_disputes_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_listings_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_moderation_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_reports_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_reviews_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_team_open_sidebar">Abrir barra lateral</string>
+    <string name="staff_filter_label_type">Tipo</string>
+    <string name="staff_reports_filter_type_label">Tipo</string>
+    <string name="staff_reports_meta_type">Tipo</string>
+    <string name="staff_dashboard_col_title">Título</string>
+    <string name="staff_disputes_status_open">Abrir</string>
+    <string name="staff_status_open">Abrir</string>
+    <string name="staff_reports_type_user">Usuario</string>
+    <string name="staff_accounts_any_seller">Todos</string>
+    <string name="staff_accounts_any_status">Todos</string>
+    <string name="staff_accounts_filter_status_label">Estado</string>
+    <string name="staff_categories_col_status">Estado</string>
+    <string name="staff_dashboard_col_status">Estado</string>
+    <string name="staff_disputes_filter_status_label">Estado</string>
+    <string name="staff_filter_label_review_status">Estado</string>
+    <string name="staff_filter_label_status">Estado</string>
+    <string name="staff_listings_filter_status_label">Estado</string>
+    <string name="staff_reports_filter_status_label">Estado</string>
+    <string name="staff_reviews_col_status">Estado</string>
+    <string name="staff_reviews_filter_status">Estado</string>
+    <string name="staff_accounts_reason_label">Motivo</string>
+    <string name="staff_dashboard_col_reason">Motivo</string>
+    <string name="staff_disputes_meta_reason">Motivo</string>
+    <string name="staff_listings_reason_label">Motivo</string>
+    <string name="staff_reports_meta_reason">Motivo</string>
+    <string name="staff_disputes_reason_other">Otro</string>
+    <string name="staff_reports_reason_other">Otro</string>
+    <string name="staff_accounts_status_active">Activo</string>
+    <string name="staff_categories_dialog_active">Activo</string>
+    <string name="staff_categories_status_active">Activo</string>
+    <string name="staff_listings_status_active">Activo</string>
+    <string name="staff_status_active">Activo</string>
 </resources>

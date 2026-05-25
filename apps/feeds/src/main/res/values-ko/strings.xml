@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">피드</string>
     <string name="feeds_find_feeds">피드 찾기</string>
     <string name="feeds_create_feed">피드 생성</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">멤버</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">피드 이름</string>
+    <string name="feeds_save_name">이름 저장</string>
     <string name="feeds_banner">배너</string>
     <string name="feeds_banner_description">피드 상단에 표시되는 선택적 마크다운 배너예요.</string>
     <string name="feeds_clear">지우기</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi 피드</string>
     <string name="feeds_source_type_feed_memories">메모리</string>
+    <string name="feeds_remove_source">소스 제거</string>
     <string name="feeds_suggested_credibility_accept">수락</string>
     <string name="feeds_rss_url_copied">RSS URL이 클립보드에 복사되었어요</string>
     <string name="feeds_logout">로그아웃</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">기본값으로 재설정</string>
     <string name="feeds_feed_not_found">피드를 찾을 수 없어요</string>
     <string name="feeds_post_not_found">게시물을 찾을 수 없어요</string>
+    <string name="feeds_post_select_feed">피드를 선택해주세요</string>
+    <string name="feeds_post_empty_content">텍스트를 입력하거나 파일을 첨부해주세요</string>
     <string name="feeds_settings_feed_renamed">피드 이름이 변경되었어요</string>
+    <string name="feeds_settings_banner_saved">배너가 저장되었습니다</string>
+    <string name="feeds_settings_banner_cleared">배너가 삭제되었습니다</string>
     <string name="feeds_settings_source_added">소스가 추가되었어요</string>
     <string name="feeds_settings_source_updated">소스가 수정되었어요</string>
     <string name="feeds_settings_source_removed">소스가 삭제되었어요</string>
+    <string name="feeds_settings_source_polling">소스 가져오는 중…</string>
     <string name="feeds_settings_access_updated">접근이 업데이트되었어요</string>
+    <string name="feeds_settings_access_revoked">액세스가 취소되었습니다</string>
     <string name="feeds_settings_member_added">멤버가 추가되었어요</string>
     <string name="feeds_settings_member_removed">멤버가 제거되었어요</string>
-    <string name="feeds_settings_prompt_saved">프롬프트가 저장되었어요</string>
-    <string name="feeds_settings_banner_saved">배너가 저장되었습니다</string>
-    <string name="feeds_settings_banner_cleared">배너가 삭제되었습니다</string>
-    <string name="feeds_settings_source_polling">소스 가져오는 중…</string>
-    <string name="feeds_settings_access_revoked">액세스가 취소되었습니다</string>
     <string name="feeds_settings_ai_mode_updated">AI 모드가 업데이트되었습니다</string>
     <string name="feeds_settings_ai_account_updated">AI 계정이 업데이트되었습니다</string>
+    <string name="feeds_settings_prompt_saved">프롬프트가 저장되었어요</string>
     <string name="feeds_settings_prompt_reset">프롬프트가 기본값으로 재설정되었습니다</string>
-    <string name="feeds_post_select_feed">피드를 선택해주세요</string>
-    <string name="feeds_post_empty_content">텍스트를 입력하거나 파일을 첨부해주세요</string>
-
+    <string name="feeds_send">보내기</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Visingsnamn</string>
     <string name="crm_auth_verification_failed">Stadfesting mislukkast</string>
     <string name="crm_list_title">Prosjekt</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Tilgang</string>
     <string name="crm_settings_tab_people">Personar</string>
     <string name="crm_option_icon">Ikon</string>
+    <string name="crm_option_icon_placeholder">t.d. Check, Star, Flag</string>
     <string name="crm_settings_save">Lagre endringar</string>
     <string name="crm_settings_unsubscribe">Sei opp abonnement</string>
     <string name="crm_settings_delete_crm">Slett prosjekt</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Slutt å sjå på</string>
     <string name="crm_parent_label">Forelder</string>
     <string name="crm_parent_search_placeholder">Søk</string>
+    <string name="crm_links_title">Lenker</string>
     <string name="crm_links_add">Legg til lenkje</string>
     <string name="crm_links_section_blocks">Blokker</string>
     <string name="crm_links_section_blocked_by">Blokkert av</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Legg ved filer</string>
     <string name="crm_property_remove">Fjern</string>
     <string name="crm_property_option_none">Ingen</string>
+    <string name="crm_attachments">Vedlegg</string>
     <string name="crm_attachment_add">Legg til vedlegg</string>
     <string name="crm_request_empty">Ingen samanslåingsførespurnader</string>
     <string name="crm_request_status_draft">Utkast</string>
@@ -157,6 +159,8 @@
     <string name="crm_views_sort_updated">Oppdatert</string>
     <string name="crm_views_sort_rank">Rang</string>
     <string name="crm_not_found">Prosjekt ikkje funne</string>
-    <string name="crm_option_icon_placeholder">t.d. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Meir</string>
+    <string name="crm_more">Meir</string>
+    <string name="crm_request_more">Meir</string>
+    <string name="crm_comment_send">Send</string>
 </resources>

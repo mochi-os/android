@@ -31,4 +31,6 @@
     <string name="chat_members_you">आप</string>
     <string name="chat_chat_not_found">चैट नहीं मिली</string>
 
+    <string name="chat_list_more">और</string>
+    <string name="chat_message_send">भेजें</string>
 </resources>

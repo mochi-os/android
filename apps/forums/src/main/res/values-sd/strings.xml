@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">فورم نه مليو</string>
     <string name="forums_post_not_found">پوسٽ نه ملي</string>
 
+    <string name="forums_list_more">وڌيڪ</string>
+    <string name="forums_comment_send">موڪليو</string>
 </resources>

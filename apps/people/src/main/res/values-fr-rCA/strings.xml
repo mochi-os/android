@@ -5,4 +5,18 @@
     <string name="people_friends_message">Message</string>
     <string name="people_person_message">Message</string>
 
+    <string name="people_profile_name">Nom</string>
+    <string name="people_groups_add_member_confirm_back">Retour</string>
+    <string name="people_common_back">Retour</string>
+    <string name="people_common_close">Fermer</string>
+    <string name="people_common_cancel">Annuler</string>
+    <string name="people_profile_save">Enregistrer</string>
+    <string name="people_common_save">Enregistrer</string>
+    <string name="people_common_edit">Modifier</string>
+    <string name="people_common_delete">Supprimer</string>
+    <string name="people_person_state_self">Vous</string>
+    <string name="people_friends_more">Plus</string>
+    <string name="people_group_description">Description</string>
+    <string name="people_common_type">Type</string>
+    <string name="people_member_type_user">Utilisateur</string>
 </resources>

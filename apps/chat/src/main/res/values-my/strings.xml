@@ -31,4 +31,6 @@
     <string name="chat_members_you">သင်</string>
     <string name="chat_chat_not_found">စကားပြောခန်း မတွေ့ရှိပါ</string>
 
+    <string name="chat_list_more">နောက်ထပ်</string>
+    <string name="chat_message_send">ပို့</string>
 </resources>

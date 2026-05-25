@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Visningsnamn</string>
     <string name="projects_auth_verification_failed">Verifiering misslyckades</string>
     <string name="projects_list_title">Projekt</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Åtkomst</string>
     <string name="projects_settings_tab_people">Personer</string>
     <string name="projects_option_icon">Ikon</string>
+    <string name="projects_option_icon_placeholder">t.ex. Check, Star, Flag</string>
     <string name="projects_settings_save">Spara ändringar</string>
     <string name="projects_settings_unsubscribe">Avsluta prenumeration</string>
     <string name="projects_settings_delete_project">Ta bort projekt</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Sluta bevaka</string>
     <string name="projects_parent_label">Överordnad</string>
     <string name="projects_parent_search_placeholder">Sök</string>
+    <string name="projects_links_title">Länkar</string>
     <string name="projects_links_add">Lägg till länk</string>
     <string name="projects_links_section_blocks">Blockerar</string>
     <string name="projects_links_section_blocked_by">Blockerad av</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Bifoga filer</string>
     <string name="projects_property_remove">Ta bort</string>
     <string name="projects_property_option_none">Ingen</string>
+    <string name="projects_attachments">Bilagor</string>
     <string name="projects_attachment_add">Lägg till bilaga</string>
     <string name="projects_request_empty">Inga sammanfogningsförfrågningar</string>
     <string name="projects_request_status_draft">Utkast</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Lägg till klass</string>
     <string name="projects_classes_create">Skapa</string>
     <string name="projects_class_name">Namn</string>
+    <string name="projects_class_save_name">Spara namn</string>
     <string name="projects_class_title_field">Titelfält</string>
     <string name="projects_class_merge_requests">Sammanfogningsförfrågningar</string>
     <string name="projects_class_fields">Fält</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Uppdaterad</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">Projektet hittades inte</string>
-    <string name="projects_option_icon_placeholder">t.ex. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Mer</string>
+    <string name="projects_more">Mer</string>
+    <string name="projects_request_more">Mer</string>
+    <string name="projects_comment_send">Skicka</string>
 </resources>

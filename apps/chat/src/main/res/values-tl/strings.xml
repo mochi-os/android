@@ -31,4 +31,6 @@
     <string name="chat_members_you">Ikaw</string>
     <string name="chat_chat_not_found">Hindi nahanap ang chat</string>
 
+    <string name="chat_list_more">Higit pa</string>
+    <string name="chat_message_send">Ipadala</string>
 </resources>

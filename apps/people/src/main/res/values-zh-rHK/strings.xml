@@ -14,4 +14,17 @@
     <string name="people_friends_message">Message</string>
     <string name="people_person_message">Message</string>
 
+    <string name="people_profile_name">名稱</string>
+    <string name="people_groups_add_member_confirm_back">返回</string>
+    <string name="people_common_back">返回</string>
+    <string name="people_common_close">關閉</string>
+    <string name="people_common_cancel">取消</string>
+    <string name="people_profile_save">儲存</string>
+    <string name="people_common_save">儲存</string>
+    <string name="people_common_edit">編輯</string>
+    <string name="people_common_delete">刪除</string>
+    <string name="people_person_state_self">你</string>
+    <string name="people_friends_more">更多</string>
+    <string name="people_group_description">描述</string>
+    <string name="people_common_type">類型</string>
 </resources>

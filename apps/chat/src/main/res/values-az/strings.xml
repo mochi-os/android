@@ -31,4 +31,6 @@
     <string name="chat_members_you">Artıq söhbətiniz olanlar:</string>
     <string name="chat_chat_not_found">Söhbət tapılmadı</string>
 
+    <string name="chat_list_more">Daha çox</string>
+    <string name="chat_message_send">Göndər</string>
 </resources>

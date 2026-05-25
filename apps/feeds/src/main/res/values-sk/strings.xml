@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Kanály</string>
     <string name="feeds_find_feeds">Nájsť kanály</string>
     <string name="feeds_create_feed">Vytvoriť kanál</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Členovia</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Názov kanála</string>
+    <string name="feeds_save_name">Uložiť názov</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Voliteľný markdown banner zobrazený v hornej časti vášho kanála.</string>
     <string name="feeds_clear">Vymazať</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi kanál</string>
     <string name="feeds_source_type_feed_memories">Spomienky</string>
+    <string name="feeds_remove_source">Odstrániť zdroj</string>
     <string name="feeds_suggested_credibility_accept">Prijať</string>
     <string name="feeds_rss_url_copied">URL RSS skopírovaná do schránky</string>
     <string name="feeds_logout">Odhlásiť sa</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Obnoviť na predvolené</string>
     <string name="feeds_feed_not_found">Kanál sa nenašiel</string>
     <string name="feeds_post_not_found">Príspevok sa nenašiel</string>
+    <string name="feeds_post_select_feed">Vyberte prosím kanál</string>
+    <string name="feeds_post_empty_content">Zadajte prosím text alebo priložte súbor</string>
     <string name="feeds_settings_feed_renamed">Kanál premenovaný</string>
+    <string name="feeds_settings_banner_saved">Banner uložený</string>
+    <string name="feeds_settings_banner_cleared">Banner vymazaný</string>
     <string name="feeds_settings_source_added">Zdroj pridaný</string>
     <string name="feeds_settings_source_updated">Zdroj aktualizovaný</string>
     <string name="feeds_settings_source_removed">Zdroj odstránený</string>
+    <string name="feeds_settings_source_polling">Dopytuje sa zdroj…</string>
     <string name="feeds_settings_access_updated">Prístup aktualizovaný</string>
+    <string name="feeds_settings_access_revoked">Prístup zrušený</string>
     <string name="feeds_settings_member_added">Člen pridaný</string>
     <string name="feeds_settings_member_removed">Člen odstránený</string>
-    <string name="feeds_settings_prompt_saved">Prompt uložený</string>
-    <string name="feeds_settings_banner_saved">Banner uložený</string>
-    <string name="feeds_settings_banner_cleared">Banner vymazaný</string>
-    <string name="feeds_settings_source_polling">Dopytuje sa zdroj…</string>
-    <string name="feeds_settings_access_revoked">Prístup zrušený</string>
     <string name="feeds_settings_ai_mode_updated">Režim AI aktualizovaný</string>
     <string name="feeds_settings_ai_account_updated">Účet AI aktualizovaný</string>
+    <string name="feeds_settings_prompt_saved">Prompt uložený</string>
     <string name="feeds_settings_prompt_reset">Výzva obnovená na predvolenú</string>
-    <string name="feeds_post_select_feed">Vyberte prosím kanál</string>
-    <string name="feeds_post_empty_content">Zadajte prosím text alebo priložte súbor</string>
-
+    <string name="feeds_send">Odoslať</string>
 </resources>

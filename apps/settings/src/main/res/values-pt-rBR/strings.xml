@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="settings_home_title">Configurações</string>
     <string name="settings_home_logout">Sair</string>
     <string name="settings_home_display">Exibir</string>
@@ -46,7 +45,7 @@
     <string name="replication_approve">Aprovar</string>
     <string name="replication_deny">Negar</string>
     <string name="replication_hosts_title">Meus hosts</string>
-    <string name="replication_hosts_empty_hint">Para replicá-la em outro servidor, cadastre-se para uma conta lá e use a opção \"Replicar uma conta existente\".</string>
+    <string name="replication_hosts_empty_hint">Para replicá-la em outro servidor, cadastre-se para uma conta lá e use a opção \\"Replicar uma conta existente\\".</string>
     <string name="replication_remove">Remover host</string>
     <string name="replication_remove_title">Remover host?</string>
     <string name="settings_home_section_system">Sistema</string>
@@ -217,6 +216,7 @@
     <string name="system_setting_server_version">Versão do servidor</string>
     <string name="system_setting_signup_enabled">Permitir novos cadastros</string>
     <string name="system_users_title">Usuários</string>
+    <string name="system_users_add_user">Adicionar usuário</string>
     <string name="system_users_col_user">Usuário</string>
     <string name="system_users_col_status">Status</string>
     <string name="system_users_col_last">Último login</string>
@@ -258,5 +258,4 @@
     <string name="system_users_toast_delete_failed">Falha ao excluir usuário</string>
     <string name="system_users_toast_status_failed">Falha ao atualizar status do usuário</string>
     <string name="system_users_toast_revoke_failed">Falha ao revogar sessão</string>
-
 </resources>

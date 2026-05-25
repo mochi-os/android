@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feeds</string>
     <string name="feeds_find_feeds">Feeds zoeken</string>
     <string name="feeds_create_feed">Feed aanmaken</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Leden</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Feednaam</string>
+    <string name="feeds_save_name">Naam opslaan</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Optionele markdown-banner die bovenaan je feed wordt weergegeven.</string>
     <string name="feeds_clear">Wissen</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-feed</string>
     <string name="feeds_source_type_feed_memories">Herinneringen</string>
+    <string name="feeds_remove_source">Bron verwijderen</string>
     <string name="feeds_suggested_credibility_accept">Accepteren</string>
     <string name="feeds_rss_url_copied">RSS-URL gekopieerd naar het klembord</string>
     <string name="feeds_logout">Uitloggen</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Resetten naar standaard</string>
     <string name="feeds_feed_not_found">Feed niet gevonden</string>
     <string name="feeds_post_not_found">Post niet gevonden</string>
+    <string name="feeds_post_select_feed">Selecteer een feed</string>
+    <string name="feeds_post_empty_content">Voer tekst in of voeg een bestand toe</string>
     <string name="feeds_settings_feed_renamed">Feed hernoemd</string>
+    <string name="feeds_settings_banner_saved">Banner opgeslagen</string>
+    <string name="feeds_settings_banner_cleared">Banner gewist</string>
     <string name="feeds_settings_source_added">Bron toegevoegd</string>
     <string name="feeds_settings_source_updated">Bron bijgewerkt</string>
     <string name="feeds_settings_source_removed">Bron verwijderd</string>
+    <string name="feeds_settings_source_polling">Bron wordt opgevraagd…</string>
     <string name="feeds_settings_access_updated">Toegang bijgewerkt</string>
+    <string name="feeds_settings_access_revoked">Toegang ingetrokken</string>
     <string name="feeds_settings_member_added">Lid toegevoegd</string>
     <string name="feeds_settings_member_removed">Lid verwijderd</string>
-    <string name="feeds_settings_prompt_saved">Prompt opgeslagen</string>
-    <string name="feeds_settings_banner_saved">Banner opgeslagen</string>
-    <string name="feeds_settings_banner_cleared">Banner gewist</string>
-    <string name="feeds_settings_source_polling">Bron wordt opgevraagd…</string>
-    <string name="feeds_settings_access_revoked">Toegang ingetrokken</string>
     <string name="feeds_settings_ai_mode_updated">AI-modus bijgewerkt</string>
     <string name="feeds_settings_ai_account_updated">AI-account bijgewerkt</string>
+    <string name="feeds_settings_prompt_saved">Prompt opgeslagen</string>
     <string name="feeds_settings_prompt_reset">Prompt teruggezet op standaard</string>
-    <string name="feeds_post_select_feed">Selecteer een feed</string>
-    <string name="feeds_post_empty_content">Voer tekst in of voeg een bestand toe</string>
-
+    <string name="feeds_send">Verzenden</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ફીડ્સ</string>
     <string name="feeds_find_feeds">ફીડ્સ શોધો</string>
     <string name="feeds_create_feed">ફીડ બનાવો</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">સભ્યો</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ફીડનું નામ</string>
+    <string name="feeds_save_name">નામ સાચવો</string>
     <string name="feeds_banner">બૅનર</string>
     <string name="feeds_banner_description">તમારા ફીડની ટોચ પર દર્શાવાતું વૈકલ્પિક markdown બેનર.</string>
     <string name="feeds_clear">સાફ કરો</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ફીડ</string>
     <string name="feeds_source_type_feed_memories">સ્મૃતિઓ</string>
+    <string name="feeds_remove_source">સ્રોત દૂર કરો</string>
     <string name="feeds_suggested_credibility_accept">સ્વીકારો</string>
     <string name="feeds_rss_url_copied">RSS URL ક્લિપબોર્ડ પર કૉપિ થઈ</string>
     <string name="feeds_logout">લૉગ આઉટ કરો</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">ડિફૉલ્ટ પર રીસેટ કરો</string>
     <string name="feeds_feed_not_found">ફીડ મળ્યું નહીં</string>
     <string name="feeds_post_not_found">પોસ્ટ મળી નથી</string>
+    <string name="feeds_post_select_feed">કૃપા કરીને એક ફિડ પસંદ કરો</string>
+    <string name="feeds_post_empty_content">કૃપા કરીને કાંનું લષકું કે એક ફાઇલ જોડો</string>
     <string name="feeds_settings_feed_renamed">ફીડનું નામ બદલ્યું</string>
+    <string name="feeds_settings_banner_saved">બેનર સાન્વ્યો</string>
+    <string name="feeds_settings_banner_cleared">બેનર સાફ કર્યો</string>
     <string name="feeds_settings_source_added">સ્રોત ઉમેર્યો</string>
     <string name="feeds_settings_source_updated">સ્રોત અપડેટ કર્યો</string>
     <string name="feeds_settings_source_removed">સ્રોત દૂર કર્યો</string>
+    <string name="feeds_settings_source_polling">સ્રોત પોલ કરી રાષ્યુંછે…</string>
     <string name="feeds_settings_access_updated">ઍક્સેસ અપડેટ થયું</string>
+    <string name="feeds_settings_access_revoked">એક્સેસ રદ કર્યો</string>
     <string name="feeds_settings_member_added">સભ્ય ઉમેર્યા</string>
     <string name="feeds_settings_member_removed">સભ્ય દૂર કર્યા</string>
-    <string name="feeds_settings_prompt_saved">પ્રોમ્પ્ટ સાચવ્યું</string>
-    <string name="feeds_settings_banner_saved">બેનર સાન્વ્યો</string>
-    <string name="feeds_settings_banner_cleared">બેનર સાફ કર્યો</string>
-    <string name="feeds_settings_source_polling">સ્રોત પોલ કરી રાષ્યુંછે…</string>
-    <string name="feeds_settings_access_revoked">એક્સેસ રદ કર્યો</string>
     <string name="feeds_settings_ai_mode_updated">AI મોડ અપડેટ કર્યો</string>
     <string name="feeds_settings_ai_account_updated">AI ખાતું અપડેટ કર્યું</string>
+    <string name="feeds_settings_prompt_saved">પ્રોમ્પ્ટ સાચવ્યું</string>
     <string name="feeds_settings_prompt_reset">પ્રોમ્પને ડિફોલ્ટ પર રીસેટ કર્યું</string>
-    <string name="feeds_post_select_feed">કૃપા કરીને એક ફિડ પસંદ કરો</string>
-    <string name="feeds_post_empty_content">કૃપા કરીને કાંનું લષકું કે એક ફાઇલ જોડો</string>
-
+    <string name="feeds_send">મોકલો</string>
 </resources>

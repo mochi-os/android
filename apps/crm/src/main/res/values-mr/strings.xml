@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">प्रदर्शित नाव</string>
     <string name="crm_auth_verification_failed">पडताळणी अयशस्वी</string>
     <string name="crm_list_title">प्रोजेक्ट्स</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">प्रवेश</string>
     <string name="crm_settings_tab_people">लोक</string>
     <string name="crm_option_icon">आयकॉन</string>
+    <string name="crm_option_icon_placeholder">उदा. Check, Star, Flag</string>
     <string name="crm_settings_save">बदल जतन करा</string>
     <string name="crm_settings_unsubscribe">अनसबस्क्राइब करा</string>
     <string name="crm_settings_delete_crm">प्रकल्प हटवा</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">पाहणे थांबवा</string>
     <string name="crm_parent_label">पॅरेंट</string>
     <string name="crm_parent_search_placeholder">शोधा</string>
+    <string name="crm_links_title">लिंक्स</string>
     <string name="crm_links_add">लिंक जोडा</string>
     <string name="crm_links_section_blocks">ब्लॉक करते</string>
     <string name="crm_links_section_blocked_by">द्वारे ब्लॉक केले</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">फाइल्स संलग्न करा</string>
     <string name="crm_property_remove">काढा</string>
     <string name="crm_property_option_none">काहीही नाही</string>
+    <string name="crm_attachments">संलग्नके</string>
     <string name="crm_attachment_add">संलग्नक जोडा</string>
     <string name="crm_request_empty">मर्ज रिक्वेस्ट्स नाहीत</string>
     <string name="crm_request_status_draft">ड्राफ्ट</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">वर्ग जोडा</string>
     <string name="crm_classes_create">तयार करा</string>
     <string name="crm_class_name">नाव</string>
+    <string name="crm_class_save_name">नाव जतन करा</string>
     <string name="crm_class_title_field">शीर्षक फील्ड</string>
     <string name="crm_class_merge_requests">मर्ज रिक्वेस्ट्स</string>
     <string name="crm_class_fields">फील्ड्स</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">अपडेट केले</string>
     <string name="crm_views_sort_rank">क्रमांक</string>
     <string name="crm_not_found">प्रोजेक्ट सापडला नाही</string>
-    <string name="crm_option_icon_placeholder">उदा. Check, Star, Flag</string>
-
+    <string name="crm_list_more">अधिक</string>
+    <string name="crm_more">अधिक</string>
+    <string name="crm_request_more">अधिक</string>
+    <string name="crm_comment_send">पाठवा</string>
 </resources>

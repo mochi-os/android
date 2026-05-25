@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ప్రదర్శన పేరు</string>
     <string name="crm_auth_verification_failed">ధృవీకరణ విఫలమైంది</string>
     <string name="crm_list_title">ప్రాజెక్ట్‌లు</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">యాక్సెస్</string>
     <string name="crm_settings_tab_people">పీపుల్</string>
     <string name="crm_option_icon">ఐకాన్</string>
+    <string name="crm_option_icon_placeholder">ఉదా. Check, Star, Flag</string>
     <string name="crm_settings_save">మార్పులను సేవ్ చేయండి</string>
     <string name="crm_settings_unsubscribe">చందా మానివేయండి</string>
     <string name="crm_settings_delete_crm">ప్రాజెక్ట్‌ను తొలగించండి</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">చూడటం ఆపండి</string>
     <string name="crm_parent_label">పేరెంట్</string>
     <string name="crm_parent_search_placeholder">శోధన</string>
+    <string name="crm_links_title">లింక్‌లు</string>
     <string name="crm_links_add">లింక్‌ను జోడించండి</string>
     <string name="crm_links_section_blocks">నిరోధిస్తుంది</string>
     <string name="crm_links_section_blocked_by">నిరోధించినది</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ఫైల్‌లను జతచేయండి</string>
     <string name="crm_property_remove">తొలగించండి</string>
     <string name="crm_property_option_none">ఏదీ లేదు</string>
+    <string name="crm_attachments">అటాచ్‌మెంట్‌లు</string>
     <string name="crm_attachment_add">అటాచ్‌మెంట్‌ను జోడించండి</string>
     <string name="crm_request_empty">మెర్జ్ రిక్వెస్ట్‌లు లేవు</string>
     <string name="crm_request_status_draft">డ్రాఫ్ట్</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">క్లాస్‌ను జోడించండి</string>
     <string name="crm_classes_create">సృష్టించండి</string>
     <string name="crm_class_name">పేరు</string>
+    <string name="crm_class_save_name">పేరును భద్రపరచండి</string>
     <string name="crm_class_title_field">శీర్షిక ఫీల్డ్</string>
     <string name="crm_class_merge_requests">మెర్జ్ రిక్వెస్ట్‌లు</string>
     <string name="crm_class_fields">ఫీల్డ్‌లు</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">నవీకరించబడింది</string>
     <string name="crm_views_sort_rank">ర్యాంక్</string>
     <string name="crm_not_found">ప్రాజెక్ట్ కనుగొనబడలేదు</string>
-    <string name="crm_option_icon_placeholder">ఉదా. Check, Star, Flag</string>
-
+    <string name="crm_list_more">మరిన్ని</string>
+    <string name="crm_more">మరిన్ని</string>
+    <string name="crm_request_more">మరిన్ని</string>
+    <string name="crm_comment_send">పంపండి</string>
 </resources>

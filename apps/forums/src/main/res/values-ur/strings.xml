@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">فورم نہیں ملا</string>
     <string name="forums_post_not_found">پوسٹ نہیں ملی</string>
 
+    <string name="forums_list_more">مزید</string>
+    <string name="forums_comment_send">بھیجیں</string>
 </resources>

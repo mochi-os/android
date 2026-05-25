@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Стужкі</string>
     <string name="feeds_find_feeds">Знайсці стужкі</string>
     <string name="feeds_create_feed">Стварыць стужку</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Удзельнікі</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Назва стужкі</string>
+    <string name="feeds_save_name">Захаваць імя</string>
     <string name="feeds_banner">Банер</string>
     <string name="feeds_banner_description">Неабавязковы markdown-банер у верхняй частцы вашай стужкі.</string>
     <string name="feeds_clear">Ачысціць</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Успаміны</string>
+    <string name="feeds_remove_source">Выдаліць крыніцу</string>
     <string name="feeds_suggested_credibility_accept">Прыняць</string>
     <string name="feeds_rss_url_copied">URL RSS скапіраваны ў буфер абмену</string>
     <string name="feeds_logout">Выйсці</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Скінуць да змаўчання</string>
     <string name="feeds_feed_not_found">Стужка не знойдзена</string>
     <string name="feeds_post_not_found">Пост не знойдзены</string>
+    <string name="feeds_post_select_feed">Калі ласка, выберыце струмень</string>
+    <string name="feeds_post_empty_content">Калі ласка, ўвядзіце тэкст або дадайце файл</string>
     <string name="feeds_settings_feed_renamed">Стужка перайменавана</string>
+    <string name="feeds_settings_banner_saved">Банер захаваны</string>
+    <string name="feeds_settings_banner_cleared">Банер відалены</string>
     <string name="feeds_settings_source_added">Крыніца дададзена</string>
     <string name="feeds_settings_source_updated">Крыніца абноўлена</string>
     <string name="feeds_settings_source_removed">Крыніца выдалена</string>
+    <string name="feeds_settings_source_polling">Апытванне крыніцы…</string>
     <string name="feeds_settings_access_updated">Доступ абноўлены</string>
+    <string name="feeds_settings_access_revoked">Доступ адкліканы</string>
     <string name="feeds_settings_member_added">Удзельнік дададзены</string>
     <string name="feeds_settings_member_removed">Удзельнік выдалены</string>
-    <string name="feeds_settings_prompt_saved">Падказка захавана</string>
-    <string name="feeds_settings_banner_saved">Банер захаваны</string>
-    <string name="feeds_settings_banner_cleared">Банер відалены</string>
-    <string name="feeds_settings_source_polling">Апытванне крыніцы…</string>
-    <string name="feeds_settings_access_revoked">Доступ адкліканы</string>
     <string name="feeds_settings_ai_mode_updated">Рэжым ШІ абноўлены</string>
     <string name="feeds_settings_ai_account_updated">Акаўнт ШІ абноўлены</string>
+    <string name="feeds_settings_prompt_saved">Падказка захавана</string>
     <string name="feeds_settings_prompt_reset">Падказка скінута да змоўчання</string>
-    <string name="feeds_post_select_feed">Калі ласка, выберыце струмень</string>
-    <string name="feeds_post_empty_content">Калі ласка, ўвядзіце тэкст або дадайце файл</string>
-
+    <string name="feeds_send">Адправіць</string>
 </resources>

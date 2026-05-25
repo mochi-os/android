@@ -31,4 +31,6 @@
     <string name="chat_members_you">אתה</string>
     <string name="chat_chat_not_found">הצ\'אט לא נמצא</string>
 
+    <string name="chat_list_more">עוד</string>
+    <string name="chat_message_send">שלח</string>
 </resources>

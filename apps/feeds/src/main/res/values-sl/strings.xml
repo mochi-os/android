@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Viri</string>
     <string name="feeds_find_feeds">Najdi vire</string>
     <string name="feeds_create_feed">Ustvari vir</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Člani</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Ime vira</string>
+    <string name="feeds_save_name">Shrani ime</string>
     <string name="feeds_banner">Pasica</string>
     <string name="feeds_banner_description">Neobvezna markdown pasica, prikazana na vrhu vašega vira.</string>
     <string name="feeds_clear">Počisti</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi vir</string>
     <string name="feeds_source_type_feed_memories">Spomini</string>
+    <string name="feeds_remove_source">Odstrani vir</string>
     <string name="feeds_suggested_credibility_accept">Sprejmi</string>
     <string name="feeds_rss_url_copied">RSS URL kopiran v odložišče</string>
     <string name="feeds_logout">Odjava</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Ponastavi na privzeto</string>
     <string name="feeds_feed_not_found">Vir ni najden</string>
     <string name="feeds_post_not_found">Objave ni mogoče najti</string>
+    <string name="feeds_post_select_feed">Izberite vir</string>
+    <string name="feeds_post_empty_content">Vnesite besedilo ali pripnite datoteko</string>
     <string name="feeds_settings_feed_renamed">Vir preimenovan</string>
+    <string name="feeds_settings_banner_saved">Pasica shranjena</string>
+    <string name="feeds_settings_banner_cleared">Pasica izbrisana</string>
     <string name="feeds_settings_source_added">Vir dodan</string>
     <string name="feeds_settings_source_updated">Vir posodobljen</string>
     <string name="feeds_settings_source_removed">Vir odstranjen</string>
+    <string name="feeds_settings_source_polling">Poizvedovanje vira…</string>
     <string name="feeds_settings_access_updated">Dostop posodobljen</string>
+    <string name="feeds_settings_access_revoked">Dostop preklican</string>
     <string name="feeds_settings_member_added">Član dodan</string>
     <string name="feeds_settings_member_removed">Član odstranjen</string>
-    <string name="feeds_settings_prompt_saved">Poziv shranjen</string>
-    <string name="feeds_settings_banner_saved">Pasica shranjena</string>
-    <string name="feeds_settings_banner_cleared">Pasica izbrisana</string>
-    <string name="feeds_settings_source_polling">Poizvedovanje vira…</string>
-    <string name="feeds_settings_access_revoked">Dostop preklican</string>
     <string name="feeds_settings_ai_mode_updated">Način UI posodobljen</string>
     <string name="feeds_settings_ai_account_updated">Račun UI posodobljen</string>
+    <string name="feeds_settings_prompt_saved">Poziv shranjen</string>
     <string name="feeds_settings_prompt_reset">Poziv ponastavljen na privzeto</string>
-    <string name="feeds_post_select_feed">Izberite vir</string>
-    <string name="feeds_post_empty_content">Vnesite besedilo ali pripnite datoteko</string>
-
+    <string name="feeds_send">Pošlji</string>
 </resources>

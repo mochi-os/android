@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="settings_home_title">Instellingen</string>
     <string name="settings_home_logout">Uitloggen</string>
     <string name="settings_home_display">Weergave</string>
@@ -46,7 +45,7 @@
     <string name="replication_approve">Goedkeuren</string>
     <string name="replication_deny">Weigeren</string>
     <string name="replication_hosts_title">Mijn hosts</string>
-    <string name="replication_hosts_empty_hint">Om het naar een andere server te repliceren, maak daar een account aan en gebruik de optie \"Een bestaand account repliceren\".</string>
+    <string name="replication_hosts_empty_hint">Om het naar een andere server te repliceren, maak daar een account aan en gebruik de optie \\"Een bestaand account repliceren\\".</string>
     <string name="replication_remove">Host verwijderen</string>
     <string name="replication_remove_title">Host verwijderen?</string>
     <string name="settings_home_section_system">Systeem</string>
@@ -217,6 +216,7 @@
     <string name="system_setting_server_version">Serverversie</string>
     <string name="system_setting_signup_enabled">Nieuwe registraties toestaan</string>
     <string name="system_users_title">Gebruikers</string>
+    <string name="system_users_add_user">Gebruiker toevoegen</string>
     <string name="system_users_col_user">Gebruiker</string>
     <string name="system_users_col_status">Status</string>
     <string name="system_users_col_last">Laatste login</string>
@@ -258,5 +258,4 @@
     <string name="system_users_toast_delete_failed">Gebruiker verwijderen mislukt</string>
     <string name="system_users_toast_status_failed">Gebruikersstatus bijwerken mislukt</string>
     <string name="system_users_toast_revoke_failed">Sessie intrekken mislukt</string>
-
 </resources>

@@ -31,4 +31,6 @@
     <string name="chat_members_you">Шумо</string>
     <string name="chat_chat_not_found">Чат ёфт нашуд</string>
 
+    <string name="chat_list_more">Бештар</string>
+    <string name="chat_message_send">Фиристодан</string>
 </resources>

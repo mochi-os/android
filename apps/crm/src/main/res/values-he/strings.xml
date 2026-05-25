@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">שם תצוגה</string>
     <string name="crm_auth_verification_failed">האימות נכשל</string>
     <string name="crm_list_title">פרויקטים</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">גישה</string>
     <string name="crm_settings_tab_people">אנשים</string>
     <string name="crm_option_icon">אייקון</string>
+    <string name="crm_option_icon_placeholder">לדוגמה Check, Star, Flag</string>
     <string name="crm_settings_save">שמור שינויים</string>
     <string name="crm_settings_unsubscribe">בטל הרשמה</string>
     <string name="crm_settings_delete_crm">מחק פרויקט</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">הפסק לעקוב</string>
     <string name="crm_parent_label">אב</string>
     <string name="crm_parent_search_placeholder">חיפוש</string>
+    <string name="crm_links_title">קישורים</string>
     <string name="crm_links_add">הוסף קישור</string>
     <string name="crm_links_section_blocks">חוסם</string>
     <string name="crm_links_section_blocked_by">חסום על ידי</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">צרף קבצים</string>
     <string name="crm_property_remove">הסר</string>
     <string name="crm_property_option_none">ללא</string>
+    <string name="crm_attachments">קבצים מצורפים</string>
     <string name="crm_attachment_add">הוסף קובץ מצורף</string>
     <string name="crm_request_empty">אין בקשות מיזוג</string>
     <string name="crm_request_status_draft">טיוטה</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">הוסף מחלקה</string>
     <string name="crm_classes_create">צור</string>
     <string name="crm_class_name">שם</string>
+    <string name="crm_class_save_name">שמור שם</string>
     <string name="crm_class_title_field">שדה כותרת</string>
     <string name="crm_class_merge_requests">בקשות מיזוג</string>
     <string name="crm_class_fields">שדות</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">עודכן</string>
     <string name="crm_views_sort_rank">דירוג</string>
     <string name="crm_not_found">הפרויקט לא נמצא</string>
-    <string name="crm_option_icon_placeholder">לדוגמה Check, Star, Flag</string>
-
+    <string name="crm_list_more">עוד</string>
+    <string name="crm_more">עוד</string>
+    <string name="crm_request_more">עוד</string>
+    <string name="crm_comment_send">שלח</string>
 </resources>

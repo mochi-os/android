@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Nie znaleziono forum</string>
     <string name="forums_post_not_found">Nie znaleziono wpisu</string>
 
+    <string name="forums_list_more">Więcej</string>
+    <string name="forums_comment_send">Wyślij</string>
 </resources>

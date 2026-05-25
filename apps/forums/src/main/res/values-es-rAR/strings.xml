@@ -38,4 +38,20 @@
     <string name="forums_settings_delete">Eliminá el foro</string>
     <string name="forums_settings_delete_title">Eliminá el foro</string>
 
+    <string name="forums_create_name">Nombre</string>
+    <string name="forums_create_action">Crear</string>
+    <string name="forums_access_level_view">Ver</string>
+    <string name="forums_access_level_none">Ninguno</string>
+    <string name="forums_settings">Configuración</string>
+    <string name="forums_list_more">Más</string>
+    <string name="forums_comment_send">Enviar</string>
+    <string name="forums_moderation_restriction_type">Tipo</string>
+    <string name="forums_post_title_field">Título</string>
+    <string name="forums_post_edit_title_field">Título</string>
+    <string name="forums_sort_new">Nuevo</string>
+    <string name="forums_post_default_author">Usuario</string>
+    <string name="forums_moderation_reports_all">Todos</string>
+    <string name="forums_moderation_reports_status">Estado</string>
+    <string name="forums_report_reason">Motivo</string>
+    <string name="forums_report_reason_other">Otro</string>
 </resources>

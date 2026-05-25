@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feed</string>
     <string name="feeds_find_feeds">Trova feed</string>
     <string name="feeds_create_feed">Crea feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Membri</string>
     <string name="feeds_tab_ai">IA</string>
     <string name="feeds_feed_name">Nome del feed</string>
+    <string name="feeds_save_name">Salva nome</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner markdown facoltativo mostrato in cima al tuo feed.</string>
     <string name="feeds_clear">Cancella</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Ricordi</string>
+    <string name="feeds_remove_source">Rimuovi sorgente</string>
     <string name="feeds_suggested_credibility_accept">Accetta</string>
     <string name="feeds_rss_url_copied">URL RSS copiato negli appunti</string>
     <string name="feeds_logout">Esci</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Reimposta ai valori predefiniti</string>
     <string name="feeds_feed_not_found">Feed non trovato</string>
     <string name="feeds_post_not_found">Post non trovato</string>
+    <string name="feeds_post_select_feed">Seleziona un feed</string>
+    <string name="feeds_post_empty_content">Inserisci del testo o allega un file</string>
     <string name="feeds_settings_feed_renamed">Feed rinominato</string>
+    <string name="feeds_settings_banner_saved">Banner salvato</string>
+    <string name="feeds_settings_banner_cleared">Banner cancellato</string>
     <string name="feeds_settings_source_added">Sorgente aggiunta</string>
     <string name="feeds_settings_source_updated">Sorgente aggiornata</string>
     <string name="feeds_settings_source_removed">Sorgente rimossa</string>
+    <string name="feeds_settings_source_polling">Sondaggio dell\\'origine…</string>
     <string name="feeds_settings_access_updated">Accesso aggiornato</string>
+    <string name="feeds_settings_access_revoked">Accesso revocato</string>
     <string name="feeds_settings_member_added">Membro aggiunto</string>
     <string name="feeds_settings_member_removed">Membro rimosso</string>
-    <string name="feeds_settings_prompt_saved">Prompt salvato</string>
-    <string name="feeds_settings_banner_saved">Banner salvato</string>
-    <string name="feeds_settings_banner_cleared">Banner cancellato</string>
-    <string name="feeds_settings_source_polling">Sondaggio dell\'origine…</string>
-    <string name="feeds_settings_access_revoked">Accesso revocato</string>
     <string name="feeds_settings_ai_mode_updated">Modalità IA aggiornata</string>
     <string name="feeds_settings_ai_account_updated">Account IA aggiornato</string>
+    <string name="feeds_settings_prompt_saved">Prompt salvato</string>
     <string name="feeds_settings_prompt_reset">Prompt ripristinato al valore predefinito</string>
-    <string name="feeds_post_select_feed">Seleziona un feed</string>
-    <string name="feeds_post_empty_content">Inserisci del testo o allega un file</string>
-
+    <string name="feeds_send">Invia</string>
 </resources>

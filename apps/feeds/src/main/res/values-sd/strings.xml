@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">فيڊز</string>
     <string name="feeds_find_feeds">فيڊز ڳوليو</string>
     <string name="feeds_create_feed">فيڊ ٺاهيو</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">ميمبر</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">فيڊ نالو</string>
+    <string name="feeds_save_name">نالو محفوظ ڪريو</string>
     <string name="feeds_banner">بينر</string>
     <string name="feeds_banner_description">توهان جي feed جي مٿان ڏيکاريل اختياري markdown بينر.</string>
     <string name="feeds_clear">صاف ڪريو</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi فيڊ</string>
     <string name="feeds_source_type_feed_memories">يادون</string>
+    <string name="feeds_remove_source">ذريعو هٽايو</string>
     <string name="feeds_suggested_credibility_accept">قبول ڪريو</string>
     <string name="feeds_rss_url_copied">RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
     <string name="feeds_logout">لاگ آئوٽ</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">ڊفالٽ تي ري سيٽ ڪريو</string>
     <string name="feeds_feed_not_found">فيڊ نه ملي</string>
     <string name="feeds_post_not_found">پوسٽ نه ملي</string>
+    <string name="feeds_post_select_feed">مهربانی کری فیڈ چورو</string>
+    <string name="feeds_post_empty_content">مهربانی کری حرف درج کرو الا فائل لگائیو</string>
     <string name="feeds_settings_feed_renamed">فيڊ جو نالو تبديل ٿيو</string>
+    <string name="feeds_settings_banner_saved">بینر محفوظ تابیو</string>
+    <string name="feeds_settings_banner_cleared">بینر صاف ڈږایو</string>
     <string name="feeds_settings_source_added">ماخذ شامل ڪيو ويو</string>
     <string name="feeds_settings_source_updated">ماخذ تازو ڪيو ويو</string>
     <string name="feeds_settings_source_removed">ماخذ هٽايو ويو</string>
+    <string name="feeds_settings_source_polling">سر ٽرسجو پد پر اعتبر جیو وې…</string>
     <string name="feeds_settings_access_updated">رسائي اپڊيٽ ڪئي وئي</string>
+    <string name="feeds_settings_access_revoked">رسائی ژلائی ٽکدایو</string>
     <string name="feeds_settings_member_added">ميمبر شامل ٿيو</string>
     <string name="feeds_settings_member_removed">ميمبر هٽايو ويو</string>
-    <string name="feeds_settings_prompt_saved">پرامپٽ محفوظ ٿيو</string>
-    <string name="feeds_settings_banner_saved">بینر محفوظ تابیو</string>
-    <string name="feeds_settings_banner_cleared">بینر صاف ڈږایو</string>
-    <string name="feeds_settings_source_polling">سر ٽرسجو پد پر اعتبر جیو وې…</string>
-    <string name="feeds_settings_access_revoked">رسائی ژلائی ٽکدایو</string>
     <string name="feeds_settings_ai_mode_updated">AI وثیرو اپڈیت تابو</string>
     <string name="feeds_settings_ai_account_updated">AI سالاد اپڈیت تابو</string>
+    <string name="feeds_settings_prompt_saved">پرامپٽ محفوظ ٿيو</string>
     <string name="feeds_settings_prompt_reset">پرامپت پفر خالص چوردو ویو</string>
-    <string name="feeds_post_select_feed">مهربانی کری فیڈ چورو</string>
-    <string name="feeds_post_empty_content">مهربانی کری حرف درج کرو الا فائل لگائیو</string>
-
+    <string name="feeds_send">موڪليو</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Koʻrsatish nomi</string>
     <string name="projects_auth_verification_failed">Tasdiqlash muvaffaqiyatsiz</string>
     <string name="projects_list_title">Loyihalar</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Kirish</string>
     <string name="projects_settings_tab_people">Odamlar</string>
     <string name="projects_option_icon">Belgi</string>
+    <string name="projects_option_icon_placeholder">masalan. Check, Star, Flag</string>
     <string name="projects_settings_save">Oʻzgarishlarni saqlash</string>
     <string name="projects_settings_unsubscribe">Obunadan chiqish</string>
     <string name="projects_settings_delete_project">Loyihani oʻchirish</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Kuzatishni toʻxtatish</string>
     <string name="projects_parent_label">Ota</string>
     <string name="projects_parent_search_placeholder">Qidirish</string>
+    <string name="projects_links_title">Havolalar</string>
     <string name="projects_links_add">Havola qoʻshish</string>
     <string name="projects_links_section_blocks">Bloklar</string>
     <string name="projects_links_section_blocked_by">Bloklagan</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Fayl biriktirish</string>
     <string name="projects_property_remove">Olib tashlash</string>
     <string name="projects_property_option_none">Hech qanday</string>
+    <string name="projects_attachments">Biriktirmalar</string>
     <string name="projects_attachment_add">Ilova qoʻshish</string>
     <string name="projects_request_empty">Birlashtirish soʻrovlari yoʻq</string>
     <string name="projects_request_status_draft">Qoralama</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Sinf qoʻshish</string>
     <string name="projects_classes_create">Yaratish</string>
     <string name="projects_class_name">Nomi</string>
+    <string name="projects_class_save_name">Nomni saqlash</string>
     <string name="projects_class_title_field">Sarlavha maydoni</string>
     <string name="projects_class_merge_requests">Birlashtirish soʻrovlari</string>
     <string name="projects_class_fields">Maydonlar</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Yangilangan</string>
     <string name="projects_views_sort_rank">Reyting</string>
     <string name="projects_project_not_found">Loyiha topilmadi</string>
-    <string name="projects_option_icon_placeholder">masalan. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Ko‘proq</string>
+    <string name="projects_more">Ko‘proq</string>
+    <string name="projects_request_more">Ko‘proq</string>
+    <string name="projects_comment_send">Yuborish</string>
 </resources>

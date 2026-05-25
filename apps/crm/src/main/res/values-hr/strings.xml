@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Ime za prikaz</string>
     <string name="crm_auth_verification_failed">Provjera nije uspjela</string>
     <string name="crm_list_title">Projekti</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Pristup</string>
     <string name="crm_settings_tab_people">Osobe</string>
     <string name="crm_option_icon">Ikona</string>
+    <string name="crm_option_icon_placeholder">npr. Check, Star, Flag</string>
     <string name="crm_settings_save">Spremi promjene</string>
     <string name="crm_settings_unsubscribe">Otkaži pretplatu</string>
     <string name="crm_settings_delete_crm">Obriši projekt</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Prestani pratiti</string>
     <string name="crm_parent_label">Nadređeni</string>
     <string name="crm_parent_search_placeholder">Pretraži</string>
+    <string name="crm_links_title">Veze</string>
     <string name="crm_links_add">Dodaj poveznicu</string>
     <string name="crm_links_section_blocks">Blokovi</string>
     <string name="crm_links_section_blocked_by">Blokirao</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Priloži datoteke</string>
     <string name="crm_property_remove">Ukloni</string>
     <string name="crm_property_option_none">Ništa</string>
+    <string name="crm_attachments">Privitci</string>
     <string name="crm_attachment_add">Dodaj privitak</string>
     <string name="crm_request_empty">Nema merge requestova</string>
     <string name="crm_request_status_draft">Skica</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Dodaj klasu</string>
     <string name="crm_classes_create">Stvori</string>
     <string name="crm_class_name">Naziv</string>
+    <string name="crm_class_save_name">Spremi naziv</string>
     <string name="crm_class_title_field">Polje naslova</string>
     <string name="crm_class_merge_requests">Zahtjevi za spajanje</string>
     <string name="crm_class_fields">Polja</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Ažurirano</string>
     <string name="crm_views_sort_rank">Rang</string>
     <string name="crm_not_found">Projekt nije pronađen</string>
-    <string name="crm_option_icon_placeholder">npr. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Više</string>
+    <string name="crm_more">Više</string>
+    <string name="crm_request_more">Više</string>
+    <string name="crm_comment_send">Pošalji</string>
 </resources>

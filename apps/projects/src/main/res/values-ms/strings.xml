@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Nama paparan</string>
     <string name="projects_auth_verification_failed">Pengesahan gagal</string>
     <string name="projects_list_title">Projek</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Akses</string>
     <string name="projects_settings_tab_people">Orang</string>
     <string name="projects_option_icon">Ikon</string>
+    <string name="projects_option_icon_placeholder">cth. Check, Star, Flag</string>
     <string name="projects_settings_save">Simpan perubahan</string>
     <string name="projects_settings_unsubscribe">Berhenti melanggan</string>
     <string name="projects_settings_delete_project">Padam projek</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Berhenti memerhati</string>
     <string name="projects_parent_label">Induk</string>
     <string name="projects_parent_search_placeholder">Cari</string>
+    <string name="projects_links_title">Pautan</string>
     <string name="projects_links_add">Tambah pautan</string>
     <string name="projects_links_section_blocks">Sekat</string>
     <string name="projects_links_section_blocked_by">Disekat oleh</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Lampirkan fail</string>
     <string name="projects_property_remove">Alih keluar</string>
     <string name="projects_property_option_none">Tiada</string>
+    <string name="projects_attachments">Lampiran</string>
     <string name="projects_attachment_add">Tambah lampiran</string>
     <string name="projects_request_empty">Tiada permintaan gabung</string>
     <string name="projects_request_status_draft">Draf</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Tambah kelas</string>
     <string name="projects_classes_create">Cipta</string>
     <string name="projects_class_name">Nama</string>
+    <string name="projects_class_save_name">Simpan nama</string>
     <string name="projects_class_title_field">Medan tajuk</string>
     <string name="projects_class_merge_requests">Permintaan gabung</string>
     <string name="projects_class_fields">Medan</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Dikemas kini</string>
     <string name="projects_views_sort_rank">Pangkat</string>
     <string name="projects_project_not_found">Projek tidak dijumpai</string>
-    <string name="projects_option_icon_placeholder">cth. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Lagi</string>
+    <string name="projects_more">Lagi</string>
+    <string name="projects_request_more">Lagi</string>
+    <string name="projects_comment_send">Hantar</string>
 </resources>

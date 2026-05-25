@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Akışlar</string>
     <string name="feeds_find_feeds">Akış bul</string>
     <string name="feeds_create_feed">Feed oluştur</string>
     <string name="feeds_new_post">Yeni gönderi</string>
-    <string name="feeds_all_feeds">Tüm feed\'ler</string>
+    <string name="feeds_all_feeds">Tüm feed\\'ler</string>
     <string name="feeds_name">Ad</string>
     <string name="feeds_private">Özel</string>
     <string name="feeds_memories">Anılar</string>
@@ -52,10 +51,11 @@
     <string name="feeds_tab_members">Üyeler</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Akış adı</string>
+    <string name="feeds_save_name">Adı kaydet</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Akışınızın üstünde gösterilen isteğe bağlı markdown banner.</string>
     <string name="feeds_clear">Temizle</string>
-    <string name="feeds_delete_feed">Feed\'i sil</string>
+    <string name="feeds_delete_feed">Feed\\'i sil</string>
     <string name="feeds_add_member">Üye ekle</string>
     <string name="feeds_no_members">Üye yok</string>
     <string name="feeds_user">Kullanıcı</string>
@@ -70,8 +70,9 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi akışı</string>
     <string name="feeds_source_type_feed_memories">Anılar</string>
+    <string name="feeds_remove_source">Kaynağı kaldır</string>
     <string name="feeds_suggested_credibility_accept">Kabul et</string>
-    <string name="feeds_rss_url_copied">RSS URL\'si panoya kopyalandı</string>
+    <string name="feeds_rss_url_copied">RSS URL\\'si panoya kopyalandı</string>
     <string name="feeds_logout">Oturumu kapat</string>
     <string name="feeds_ai_account_default">Varsayılan hesap</string>
     <string name="feeds_ai_mode_off">Devre dışı</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Varsayılana sıfırla</string>
     <string name="feeds_feed_not_found">Akış bulunamadı</string>
     <string name="feeds_post_not_found">Gönderi bulunamadı</string>
+    <string name="feeds_post_select_feed">Lütfen bir besleme seçin</string>
+    <string name="feeds_post_empty_content">Lütfen metin girin veya bir dosya ekleyin</string>
     <string name="feeds_settings_feed_renamed">Akış yeniden adlandırıldı</string>
+    <string name="feeds_settings_banner_saved">Banner kaydedildi</string>
+    <string name="feeds_settings_banner_cleared">Banner temizlendi</string>
     <string name="feeds_settings_source_added">Kaynak eklendi</string>
     <string name="feeds_settings_source_updated">Kaynak güncellendi</string>
     <string name="feeds_settings_source_removed">Kaynak kaldırıldı</string>
+    <string name="feeds_settings_source_polling">Kaynak yoklaınıyor…</string>
     <string name="feeds_settings_access_updated">Erişim güncellendi</string>
+    <string name="feeds_settings_access_revoked">Erişim iptal edildi</string>
     <string name="feeds_settings_member_added">Üye eklendi</string>
     <string name="feeds_settings_member_removed">Üye kaldırıldı</string>
-    <string name="feeds_settings_prompt_saved">İstem kaydedildi</string>
-    <string name="feeds_settings_banner_saved">Banner kaydedildi</string>
-    <string name="feeds_settings_banner_cleared">Banner temizlendi</string>
-    <string name="feeds_settings_source_polling">Kaynak yoklaınıyor…</string>
-    <string name="feeds_settings_access_revoked">Erişim iptal edildi</string>
     <string name="feeds_settings_ai_mode_updated">AI modu güncellendi</string>
     <string name="feeds_settings_ai_account_updated">AI hesabı güncellendi</string>
+    <string name="feeds_settings_prompt_saved">İstem kaydedildi</string>
     <string name="feeds_settings_prompt_reset">Komut, varsayılana sıfırlandı</string>
-    <string name="feeds_post_select_feed">Lütfen bir besleme seçin</string>
-    <string name="feeds_post_empty_content">Lütfen metin girin veya bir dosya ekleyin</string>
-
+    <string name="feeds_send">Gönder</string>
 </resources>

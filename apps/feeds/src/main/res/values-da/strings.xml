@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feeds</string>
     <string name="feeds_find_feeds">Find feeds</string>
     <string name="feeds_create_feed">Opret feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Medlemmer</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Feednavn</string>
+    <string name="feeds_save_name">Gem navn</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Valgfrit markdown-banner vist øverst på dit feed.</string>
     <string name="feeds_clear">Ryd</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-feed</string>
     <string name="feeds_source_type_feed_memories">Minder</string>
+    <string name="feeds_remove_source">Fjern kilde</string>
     <string name="feeds_suggested_credibility_accept">Accepter</string>
     <string name="feeds_rss_url_copied">RSS-URL kopieret til udklipsholderen</string>
     <string name="feeds_logout">Log ud</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Nulstil til standard</string>
     <string name="feeds_feed_not_found">Feed ikke fundet</string>
     <string name="feeds_post_not_found">Indlæg ikke fundet</string>
+    <string name="feeds_post_select_feed">Vælg et feed</string>
+    <string name="feeds_post_empty_content">Indtast tekst eller vedhæft en fil</string>
     <string name="feeds_settings_feed_renamed">Feed omdøbt</string>
+    <string name="feeds_settings_banner_saved">Banner gemt</string>
+    <string name="feeds_settings_banner_cleared">Banner ryddet</string>
     <string name="feeds_settings_source_added">Kilde tilføjet</string>
     <string name="feeds_settings_source_updated">Kilde opdateret</string>
     <string name="feeds_settings_source_removed">Kilde fjernet</string>
+    <string name="feeds_settings_source_polling">Henter fra kilde…</string>
     <string name="feeds_settings_access_updated">Adgang opdateret</string>
+    <string name="feeds_settings_access_revoked">Adgang tilbagekaldt</string>
     <string name="feeds_settings_member_added">Medlem tilføjet</string>
     <string name="feeds_settings_member_removed">Medlem fjernet</string>
-    <string name="feeds_settings_prompt_saved">Prompt gemt</string>
-    <string name="feeds_settings_banner_saved">Banner gemt</string>
-    <string name="feeds_settings_banner_cleared">Banner ryddet</string>
-    <string name="feeds_settings_source_polling">Henter fra kilde…</string>
-    <string name="feeds_settings_access_revoked">Adgang tilbagekaldt</string>
     <string name="feeds_settings_ai_mode_updated">AI-tilstand opdateret</string>
     <string name="feeds_settings_ai_account_updated">AI-konto opdateret</string>
+    <string name="feeds_settings_prompt_saved">Prompt gemt</string>
     <string name="feeds_settings_prompt_reset">Prompt nulstillet til standard</string>
-    <string name="feeds_post_select_feed">Vælg et feed</string>
-    <string name="feeds_post_empty_content">Indtast tekst eller vedhæft en fil</string>
-
+    <string name="feeds_send">Send</string>
 </resources>

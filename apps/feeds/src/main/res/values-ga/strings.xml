@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Fothaí</string>
     <string name="feeds_find_feeds">Aimsigh fothaí</string>
     <string name="feeds_create_feed">Cruthaigh fotha</string>
@@ -52,8 +51,9 @@
     <string name="feeds_tab_members">Baill</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Ainm an fhotha</string>
+    <string name="feeds_save_name">Sábháil ainm</string>
     <string name="feeds_banner">Meirge</string>
-    <string name="feeds_banner_description">Meirge markdown roghnach a thaispeántar ag barr d\'fhotha.</string>
+    <string name="feeds_banner_description">Meirge markdown roghnach a thaispeántar ag barr d\\'fhotha.</string>
     <string name="feeds_clear">Glan</string>
     <string name="feeds_delete_feed">Scrios fotha</string>
     <string name="feeds_add_member">Cuir ball leis</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Fotha Mochi</string>
     <string name="feeds_source_type_feed_memories">Cuimhní</string>
+    <string name="feeds_remove_source">Bain foinse</string>
     <string name="feeds_suggested_credibility_accept">Glac leis</string>
     <string name="feeds_rss_url_copied">Cóipeáladh URL RSS chuig an ngearrthaisce</string>
     <string name="feeds_logout">Logáil amach</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Athshocraigh chuig réamhshocrú</string>
     <string name="feeds_feed_not_found">Níor aimsíodh an fotha</string>
     <string name="feeds_post_not_found">Níor aimsíodh an phostáil</string>
+    <string name="feeds_post_select_feed">Roghnaigh fotha le do thoil</string>
+    <string name="feeds_post_empty_content">Cuir téacs isteach nó ceangail comhad le do thoil</string>
     <string name="feeds_settings_feed_renamed">Fotha athainmnithe</string>
+    <string name="feeds_settings_banner_saved">Meirge sábháilte</string>
+    <string name="feeds_settings_banner_cleared">Meirge gléasta</string>
     <string name="feeds_settings_source_added">Foinse curtha leis</string>
     <string name="feeds_settings_source_updated">Foinse nuashonraithe</string>
     <string name="feeds_settings_source_removed">Foinse bainte</string>
+    <string name="feeds_settings_source_polling">Foinse á votáil…</string>
     <string name="feeds_settings_access_updated">Rochtain nuashonraithe</string>
+    <string name="feeds_settings_access_revoked">Cuireadh deireadh leis an rochtain</string>
     <string name="feeds_settings_member_added">Ball curtha leis</string>
     <string name="feeds_settings_member_removed">Ball bainte</string>
-    <string name="feeds_settings_prompt_saved">Leid sábháilte</string>
-    <string name="feeds_settings_banner_saved">Meirge sábháilte</string>
-    <string name="feeds_settings_banner_cleared">Meirge gléasta</string>
-    <string name="feeds_settings_source_polling">Foinse á votáil…</string>
-    <string name="feeds_settings_access_revoked">Cuireadh deireadh leis an rochtain</string>
     <string name="feeds_settings_ai_mode_updated">Modh IS nuashonraithe</string>
     <string name="feeds_settings_ai_account_updated">Cuntas IS nuashonraithe</string>
+    <string name="feeds_settings_prompt_saved">Leid sábháilte</string>
     <string name="feeds_settings_prompt_reset">Athshocraíodh an leid go luach réamhshocraithe</string>
-    <string name="feeds_post_select_feed">Roghnaigh fotha le do thoil</string>
-    <string name="feeds_post_empty_content">Cuir téacs isteach nó ceangail comhad le do thoil</string>
-
+    <string name="feeds_send">Seol</string>
 </resources>

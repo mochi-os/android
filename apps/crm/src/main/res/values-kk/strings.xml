@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Көрсетілетін атау</string>
     <string name="crm_auth_verification_failed">Тексеру сәтсіз</string>
     <string name="crm_list_title">Жобалар</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Қол жеткізу</string>
     <string name="crm_settings_tab_people">Адамдар</string>
     <string name="crm_option_icon">Белгіше</string>
+    <string name="crm_option_icon_placeholder">мыс. Check, Star, Flag</string>
     <string name="crm_settings_save">Өзгерістерді сақтау</string>
     <string name="crm_settings_unsubscribe">Жазылудан бас тарту</string>
     <string name="crm_settings_delete_crm">Жобаны жою</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Қарауды тоқтату</string>
     <string name="crm_parent_label">Ата-ана</string>
     <string name="crm_parent_search_placeholder">Іздеу</string>
+    <string name="crm_links_title">Сілтемелер</string>
     <string name="crm_links_add">Сілтеме қосу</string>
     <string name="crm_links_section_blocks">Bloks</string>
     <string name="crm_links_section_blocked_by">Бөгелді</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Файлдар тіркеу</string>
     <string name="crm_property_remove">Жою</string>
     <string name="crm_property_option_none">Жоқ</string>
+    <string name="crm_attachments">Тіркемелер</string>
     <string name="crm_attachment_add">Тіркеме қосу</string>
     <string name="crm_request_empty">Біріктіру сұраулары жоқ</string>
     <string name="crm_request_status_draft">Жоба</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Сынып қосу</string>
     <string name="crm_classes_create">Құру</string>
     <string name="crm_class_name">Аты</string>
+    <string name="crm_class_save_name">Атауды сақтау</string>
     <string name="crm_class_title_field">Тақырып өрісі</string>
     <string name="crm_class_merge_requests">Біріктіру сұраныстары</string>
     <string name="crm_class_fields">Өрістер</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Жаңартылды</string>
     <string name="crm_views_sort_rank">Дәреже</string>
     <string name="crm_not_found">Жоба табылмады</string>
-    <string name="crm_option_icon_placeholder">мыс. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Көбірек</string>
+    <string name="crm_more">Көбірек</string>
+    <string name="crm_request_more">Көбірек</string>
+    <string name="crm_comment_send">Жіберу</string>
 </resources>

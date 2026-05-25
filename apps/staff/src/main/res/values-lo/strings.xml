@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">ແບນບັນຊີ</string>
@@ -38,8 +37,8 @@
     <string name="staff_accounts_unnamed">ບໍ່ມີຊື່</string>
     <string name="staff_accounts_unsuspend">ຍົກເລີກການໂຈະ</string>
     <string name="staff_accounts_unsuspended_toast">ຍົກເລີກການລະງັບບັນຊີແລ້ວ</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">ຍົກເລີກ</string>
     <string name="staff_appeals_decide">ຕັດສິນ</string>
     <string name="staff_appeals_decide_failed">ຕັດສິນການອຸທອນລົ້ມເຫຼວ</string>
@@ -277,6 +276,7 @@
     <string name="staff_disputes_view">ເບິ່ງ</string>
     <string name="staff_filter_chip_remove">ລົບຕົວກອງ</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">ການກວດກາ</string>
     <string name="staff_filter_label_query">ຄົ້ນຫາ</string>
     <string name="staff_filter_label_review_status">ສະຖານະ</string>
     <string name="staff_filter_label_seller">ຜູ້ຂາຍ</string>
@@ -473,5 +473,4 @@
     <string name="staff_team_toast_removed">ຍ້າຍສະມາຊິກແລ້ວ</string>
     <string name="staff_team_toast_role_failed">ປັບປຸງບົດບາດບໍ່ສຳເລັດ</string>
     <string name="staff_team_toast_role_updated">ປັບປຸງບົດບາດແລ້ວ</string>
-
 </resources>

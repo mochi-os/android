@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Näyttönimi</string>
     <string name="crm_auth_verification_failed">Vahvistus epäonnistui</string>
     <string name="crm_list_title">Projektit</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Käyttöoikeus</string>
     <string name="crm_settings_tab_people">Henkilöt</string>
     <string name="crm_option_icon">Kuvake</string>
+    <string name="crm_option_icon_placeholder">esim. Check, Star, Flag</string>
     <string name="crm_settings_save">Tallenna muutokset</string>
     <string name="crm_settings_unsubscribe">Peru tilaus</string>
     <string name="crm_settings_delete_crm">Poista projekti</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Lopeta seuranta</string>
     <string name="crm_parent_label">Yläkohde</string>
     <string name="crm_parent_search_placeholder">Haku</string>
+    <string name="crm_links_title">Linkit</string>
     <string name="crm_links_add">Lisää linkki</string>
     <string name="crm_links_section_blocks">Estää</string>
     <string name="crm_links_section_blocked_by">Estää</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Liitä tiedostoja</string>
     <string name="crm_property_remove">Poista</string>
     <string name="crm_property_option_none">Ei mitään</string>
+    <string name="crm_attachments">Liitteet</string>
     <string name="crm_attachment_add">Lisää liite</string>
     <string name="crm_request_empty">Ei yhdistämispyyntöjä</string>
     <string name="crm_request_status_draft">Luonnos</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Lisää luokka</string>
     <string name="crm_classes_create">Luo</string>
     <string name="crm_class_name">Nimi</string>
+    <string name="crm_class_save_name">Tallenna nimi</string>
     <string name="crm_class_title_field">Otsikkokenttä</string>
     <string name="crm_class_merge_requests">Yhdistämispyynnöt</string>
     <string name="crm_class_fields">Kentät</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Päivitetty</string>
     <string name="crm_views_sort_rank">Sijoitus</string>
     <string name="crm_not_found">Projektia ei löytynyt</string>
-    <string name="crm_option_icon_placeholder">esim. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Lisää</string>
+    <string name="crm_more">Lisää</string>
+    <string name="crm_request_more">Lisää</string>
+    <string name="crm_comment_send">Lähetä</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Fonts</string>
     <string name="feeds_find_feeds">Cerca fonts</string>
     <string name="feeds_create_feed">Crea un canal</string>
@@ -11,7 +10,7 @@
     <string name="feeds_memories">Records</string>
     <string name="feeds_create">Crea</string>
     <string name="feeds_dismiss">Descarta</string>
-    <string name="feeds_no_feeds_found">No s\'ha trobat cap canal</string>
+    <string name="feeds_no_feeds_found">No s\\'ha trobat cap canal</string>
     <string name="feeds_feed_title_default">Font</string>
     <string name="feeds_mark_all_read">Marca-ho tot com a llegit</string>
     <string name="feeds_settings">Configuració</string>
@@ -43,7 +42,7 @@
     <string name="feeds_add_files">Afegeix fitxers</string>
     <string name="feeds_restore">Restaura</string>
     <string name="feeds_location">Ubicació</string>
-    <string name="feeds_check_in">Registre d\'entrada</string>
+    <string name="feeds_check_in">Registre d\\'entrada</string>
     <string name="feeds_travelling">Viatjant</string>
     <string name="feeds_tab_general">General</string>
     <string name="feeds_tab_sources">Orígens</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Membres</string>
     <string name="feeds_tab_ai">IA</string>
     <string name="feeds_feed_name">Nom de la font</string>
+    <string name="feeds_save_name">Desa el nom</string>
     <string name="feeds_banner">Bàner</string>
     <string name="feeds_banner_description">Bàner Markdown opcional que es mostra a la part superior del canal.</string>
     <string name="feeds_clear">Esborra</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Font de Mochi</string>
     <string name="feeds_source_type_feed_memories">Records</string>
+    <string name="feeds_remove_source">Suprimeix la font</string>
     <string name="feeds_suggested_credibility_accept">Accepta</string>
     <string name="feeds_rss_url_copied">URL RSS copiat al porta-retalls</string>
     <string name="feeds_logout">Tanca la sessió</string>
@@ -78,24 +79,24 @@
     <string name="feeds_ai_mode_tag">Etiqueta</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiqueta + deduplica</string>
     <string name="feeds_ai_reset_default">Restableix al valor per defecte</string>
-    <string name="feeds_feed_not_found">No s\'ha trobat la font</string>
+    <string name="feeds_feed_not_found">No s\\'ha trobat la font</string>
     <string name="feeds_post_not_found">Publicació no trobada</string>
+    <string name="feeds_post_select_feed">Seleccioneu un feed</string>
+    <string name="feeds_post_empty_content">Introduïu text o adjunteu un fitxer</string>
     <string name="feeds_settings_feed_renamed">Font reanomenada</string>
+    <string name="feeds_settings_banner_saved">Bandera desada</string>
+    <string name="feeds_settings_banner_cleared">Bandera esborrada</string>
     <string name="feeds_settings_source_added">Origen afegit</string>
     <string name="feeds_settings_source_updated">Origen actualitzat</string>
     <string name="feeds_settings_source_removed">Origen eliminat</string>
+    <string name="feeds_settings_source_polling">Sondeig de la font…</string>
     <string name="feeds_settings_access_updated">Accés actualitzat</string>
+    <string name="feeds_settings_access_revoked">Accés revocat</string>
     <string name="feeds_settings_member_added">Membre afegit</string>
     <string name="feeds_settings_member_removed">Membre retirat</string>
-    <string name="feeds_settings_prompt_saved">Sol·licitud desada</string>
-    <string name="feeds_settings_banner_saved">Bandera desada</string>
-    <string name="feeds_settings_banner_cleared">Bandera esborrada</string>
-    <string name="feeds_settings_source_polling">Sondeig de la font…</string>
-    <string name="feeds_settings_access_revoked">Accés revocat</string>
     <string name="feeds_settings_ai_mode_updated">Mode IA actualitzat</string>
     <string name="feeds_settings_ai_account_updated">Compte IA actualitzat</string>
+    <string name="feeds_settings_prompt_saved">Sol·licitud desada</string>
     <string name="feeds_settings_prompt_reset">Indicació restablerta al valor predeterminat</string>
-    <string name="feeds_post_select_feed">Seleccioneu un feed</string>
-    <string name="feeds_post_empty_content">Introduïu text o adjunteu un fitxer</string>
-
+    <string name="feeds_send">Envia</string>
 </resources>

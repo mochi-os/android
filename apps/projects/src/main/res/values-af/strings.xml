@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Vertoonnaam</string>
     <string name="projects_auth_verification_failed">Verifikasie het misluk</string>
     <string name="projects_list_title">Projekte</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Toegang</string>
     <string name="projects_settings_tab_people">Mense</string>
     <string name="projects_option_icon">Ikoon</string>
+    <string name="projects_option_icon_placeholder">bv. Check, Star, Flag</string>
     <string name="projects_settings_save">Stoor veranderinge</string>
     <string name="projects_settings_unsubscribe">Teken uit</string>
     <string name="projects_settings_delete_project">Verwyder projek</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Hou op kyk</string>
     <string name="projects_parent_label">Ouer</string>
     <string name="projects_parent_search_placeholder">Soek</string>
+    <string name="projects_links_title">Skakels</string>
     <string name="projects_links_add">Voeg skakel by</string>
     <string name="projects_links_section_blocks">Blokkeer</string>
     <string name="projects_links_section_blocked_by">Geblokkeer deur</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Heg lêers aan</string>
     <string name="projects_property_remove">Verwyder</string>
     <string name="projects_property_option_none">Geen</string>
+    <string name="projects_attachments">Aanhangsels</string>
     <string name="projects_attachment_add">Voeg aanhangsel by</string>
     <string name="projects_request_empty">Geen saamvoegversoeke nie</string>
     <string name="projects_request_status_draft">Konsep</string>
@@ -113,13 +115,14 @@
     <string name="projects_design_tab_classes">Klasse</string>
     <string name="projects_design_tab_views">Bekykings</string>
     <string name="projects_design_import_dialog_title">Voer ontwerp in</string>
-    <string name="projects_design_import_choose_template">Kies \'n sjabloon</string>
+    <string name="projects_design_import_choose_template">Kies \\'n sjabloon</string>
     <string name="projects_design_replace_title">Vervang ontwerp?</string>
     <string name="projects_design_replace">Vervang</string>
     <string name="projects_classes_add">Voeg klas by</string>
     <string name="projects_classes_add_dialog_title">Voeg klas by</string>
     <string name="projects_classes_create">Skep</string>
     <string name="projects_class_name">Naam</string>
+    <string name="projects_class_save_name">Stoor naam</string>
     <string name="projects_class_title_field">Titelveld</string>
     <string name="projects_class_merge_requests">Saamvoegversoeke</string>
     <string name="projects_class_fields">Velde</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Opgedateer</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Projek nie gevind nie</string>
-    <string name="projects_option_icon_placeholder">bv. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Meer</string>
+    <string name="projects_more">Meer</string>
+    <string name="projects_request_more">Meer</string>
+    <string name="projects_comment_send">Stuur</string>
 </resources>

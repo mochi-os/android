@@ -31,4 +31,6 @@
     <string name="chat_members_you">Ви</string>
     <string name="chat_chat_not_found">Чат не знайдено</string>
 
+    <string name="chat_list_more">Більше</string>
+    <string name="chat_message_send">Надіслати</string>
 </resources>

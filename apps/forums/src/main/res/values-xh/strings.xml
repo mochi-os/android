@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Iforamu ayifumanekanga</string>
     <string name="forums_post_not_found">Umyalezo awufumaneki</string>
 
+    <string name="forums_list_more">Okuninzi</string>
+    <string name="forums_comment_send">Thumela</string>
 </resources>

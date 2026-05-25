@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Display name</string>
     <string name="projects_auth_verification_failed">Nabigo ang beripikasyon</string>
     <string name="projects_list_title">Mga Proyekto</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Access</string>
     <string name="projects_settings_tab_people">Mga Tao</string>
     <string name="projects_option_icon">Icon</string>
+    <string name="projects_option_icon_placeholder">hal. Check, Star, Flag</string>
     <string name="projects_settings_save">I-save ang mga pagbabago</string>
     <string name="projects_settings_unsubscribe">Mag-unsubscribe</string>
     <string name="projects_settings_delete_project">I-delete ang project</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Itigil ang pagmamasid</string>
     <string name="projects_parent_label">Magulang</string>
     <string name="projects_parent_search_placeholder">Maghanap</string>
+    <string name="projects_links_title">Mga link</string>
     <string name="projects_links_add">Magdagdag ng link</string>
     <string name="projects_links_section_blocks">Hinaharangan</string>
     <string name="projects_links_section_blocked_by">Hinarang ng</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Mag-attach ng file</string>
     <string name="projects_property_remove">Alisin</string>
     <string name="projects_property_option_none">Wala</string>
+    <string name="projects_attachments">Mga attachment</string>
     <string name="projects_attachment_add">Magdagdag ng attachment</string>
     <string name="projects_request_empty">Walang merge request</string>
     <string name="projects_request_status_draft">Draft</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Magdagdag ng class</string>
     <string name="projects_classes_create">Gumawa</string>
     <string name="projects_class_name">Pangalan</string>
+    <string name="projects_class_save_name">I-save ang pangalan</string>
     <string name="projects_class_title_field">Field ng pamagat</string>
     <string name="projects_class_merge_requests">Mga merge request</string>
     <string name="projects_class_fields">Mga field</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Na-update</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">Hindi nahanap ang proyekto</string>
-    <string name="projects_option_icon_placeholder">hal. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Higit pa</string>
+    <string name="projects_more">Higit pa</string>
+    <string name="projects_request_more">Higit pa</string>
+    <string name="projects_comment_send">Ipadala</string>
 </resources>

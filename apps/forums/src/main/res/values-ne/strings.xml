@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">फोरम फेला परेन</string>
     <string name="forums_post_not_found">पोस्ट भेटिएन</string>
 
+    <string name="forums_list_more">थप</string>
+    <string name="forums_comment_send">पठाउनुहोस्</string>
 </resources>

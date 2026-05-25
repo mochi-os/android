@@ -31,4 +31,6 @@
     <string name="chat_members_you">U</string>
     <string name="chat_chat_not_found">Chat niet gevonden</string>
 
+    <string name="chat_list_more">Meer</string>
+    <string name="chat_message_send">Verzenden</string>
 </resources>

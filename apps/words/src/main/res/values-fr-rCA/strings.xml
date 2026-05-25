@@ -3,4 +3,7 @@
 
     <string name="words_detail_chat_title">Clavardage</string>
 
+    <string name="words_detail_cancel">Annuler</string>
+    <string name="words_list_logout">Déconnexion</string>
+    <string name="words_detail_label_you">Vous</string>
 </resources>

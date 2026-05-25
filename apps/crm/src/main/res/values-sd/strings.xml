@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ڏيکاري وارو نالو</string>
     <string name="crm_auth_verification_failed">تصديق ناڪام ٿي</string>
     <string name="crm_list_title">پروجيڪٽ</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">رسائي</string>
     <string name="crm_settings_tab_people">ماڻهو</string>
     <string name="crm_option_icon">آئڪن</string>
+    <string name="crm_option_icon_placeholder">مثل Check، Star، Flag</string>
     <string name="crm_settings_save">تبديليون محفوظ ڪريو</string>
     <string name="crm_settings_unsubscribe">ان سبسڪرائب ڪريو</string>
     <string name="crm_settings_delete_crm">پروجيڪٽ ختم ڪريو</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">ڏسڻ بند ڪريو</string>
     <string name="crm_parent_label">والدين</string>
     <string name="crm_parent_search_placeholder">ڳوليو</string>
+    <string name="crm_links_title">لنڪس</string>
     <string name="crm_links_add">لنڪ شامل ڪريو</string>
     <string name="crm_links_section_blocks">بلاڪ</string>
     <string name="crm_links_section_blocked_by">بلاڪ ڪندڙ</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">فائلون ڳنڍيو</string>
     <string name="crm_property_remove">هٽايو</string>
     <string name="crm_property_option_none">ڪا به نه</string>
+    <string name="crm_attachments">ڳنڍيل فائلون</string>
     <string name="crm_attachment_add">ڳنڍيل فائل شامل ڪريو</string>
     <string name="crm_request_empty">ڪا merge درخواست نه آهي</string>
     <string name="crm_request_status_draft">مسودو</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">ڪلاس شامل ڪريو</string>
     <string name="crm_classes_create">ٺاهيو</string>
     <string name="crm_class_name">نالو</string>
+    <string name="crm_class_save_name">نالو محفوظ ڪريو</string>
     <string name="crm_class_title_field">عنوان فيلڊ</string>
     <string name="crm_class_merge_requests">merge درخواستون</string>
     <string name="crm_class_fields">فيلڊز</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">اپڊيٽ ٿيو</string>
     <string name="crm_views_sort_rank">درجو</string>
     <string name="crm_not_found">پروجيڪٽ نه مليو</string>
-    <string name="crm_option_icon_placeholder">مثل Check، Star، Flag</string>
-
+    <string name="crm_list_more">وڌيڪ</string>
+    <string name="crm_more">وڌيڪ</string>
+    <string name="crm_request_more">وڌيڪ</string>
+    <string name="crm_comment_send">موڪليو</string>
 </resources>

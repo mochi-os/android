@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Таспалар</string>
     <string name="feeds_find_feeds">Таспаларды табу</string>
     <string name="feeds_create_feed">Арна құру</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Мүшелер</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Таспа атауы</string>
+    <string name="feeds_save_name">Атауды сақтау</string>
     <string name="feeds_banner">Баннер</string>
     <string name="feeds_banner_description">Арнаңыздың жоғарғы жағында көрсетілетін қосымша markdown баннері.</string>
     <string name="feeds_clear">Тазалау</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi таспасы</string>
     <string name="feeds_source_type_feed_memories">Жадтар</string>
+    <string name="feeds_remove_source">Дереккөзді жою</string>
     <string name="feeds_suggested_credibility_accept">Қабылдау</string>
     <string name="feeds_rss_url_copied">RSS URL алмасу буферіне көшірілді</string>
     <string name="feeds_logout">Шығу</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Әдепкіге қайтару</string>
     <string name="feeds_feed_not_found">Таспа табылмады</string>
     <string name="feeds_post_not_found">Жазба табылмады</string>
+    <string name="feeds_post_select_feed">Ләтіпен тасқынды таңдаңыз</string>
+    <string name="feeds_post_empty_content">Ләтіпен мәтін енгізіңіз немесе файл тіркеңіз</string>
     <string name="feeds_settings_feed_renamed">Таспаның атауы өзгертілді</string>
+    <string name="feeds_settings_banner_saved">Баннер сақталды</string>
+    <string name="feeds_settings_banner_cleared">Баннер тазаланды</string>
     <string name="feeds_settings_source_added">Дереккөз қосылды</string>
     <string name="feeds_settings_source_updated">Дереккөз жаңартылды</string>
     <string name="feeds_settings_source_removed">Дереккөз жойылды</string>
+    <string name="feeds_settings_source_polling">Дереккөзі сұралуда…</string>
     <string name="feeds_settings_access_updated">Қол жеткізу жаңартылды</string>
+    <string name="feeds_settings_access_revoked">Қатынасу жойылды</string>
     <string name="feeds_settings_member_added">Мүше қосылды</string>
     <string name="feeds_settings_member_removed">Мүше жойылды</string>
-    <string name="feeds_settings_prompt_saved">Сұрау сақталды</string>
-    <string name="feeds_settings_banner_saved">Баннер сақталды</string>
-    <string name="feeds_settings_banner_cleared">Баннер тазаланды</string>
-    <string name="feeds_settings_source_polling">Дереккөзі сұралуда…</string>
-    <string name="feeds_settings_access_revoked">Қатынасу жойылды</string>
     <string name="feeds_settings_ai_mode_updated">AI режимі жаңартылды</string>
     <string name="feeds_settings_ai_account_updated">AI тіркелгісі жаңартылды</string>
+    <string name="feeds_settings_prompt_saved">Сұрау сақталды</string>
     <string name="feeds_settings_prompt_reset">Нұсқаулық әдепкіге қалпына келтірілді</string>
-    <string name="feeds_post_select_feed">Ләтіпен тасқынды таңдаңыз</string>
-    <string name="feeds_post_empty_content">Ләтіпен мәтін енгізіңіз немесе файл тіркеңіз</string>
-
+    <string name="feeds_send">Жіберу</string>
 </resources>

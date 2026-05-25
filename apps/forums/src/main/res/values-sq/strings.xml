@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Forumi nuk u gjet</string>
     <string name="forums_post_not_found">Postimi s\'u gjet</string>
 
+    <string name="forums_list_more">Më shumë</string>
+    <string name="forums_comment_send">Dërgo</string>
 </resources>

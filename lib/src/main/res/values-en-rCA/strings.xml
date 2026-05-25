@@ -12,4 +12,23 @@
     <string name="common_saved">Saved</string>
     <string name="common_not_saved">Not saved</string>
     <string name="common_save_failed">Couldn\'t save your changes.</string>
+    <string name="auth_name">Name</string>
+    <string name="auth_create">Create</string>
+    <string name="common_back">Back</string>
+    <string name="common_close">Close</string>
+    <string name="about_close">Close</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_save">Save</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_add">Add</string>
+    <string name="common_logout">Log out</string>
+    <string name="common_subscribe">Subscribe</string>
+    <string name="access_level_view">View</string>
+    <string name="access_level_none">None</string>
+    <string name="settings_radius_none">None</string>
+    <string name="settings_background_off">None</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_open">Settings</string>
+    <string name="game_chat_subject_you">You</string>
 </resources>

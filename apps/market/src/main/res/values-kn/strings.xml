@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">ಮಾರ್ಕೆಟ್</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ಜೀವನಚರಿತ್ರೆ</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="market_account_status_banned_title">ಖಾತೆಯನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ</string>
     <string name="market_account_status_suspended_title">ಖಾತೆಯನ್ನು ಅಮಾನತುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="market_account_stripe_dashboard">Stripe ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೆರೆಯಿರಿ</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">ಖಾತೆ</string>
     <string name="market_appeal_dialog_cancel">ರದ್ದುಮಾಡಿ</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">ಸ್ಥಳ</string>
     <string name="market_listing_detail_message_seller">ಮಾರಾಟಗಾರರಿಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="market_listing_detail_not_found">ಲಿಸ್ಟಿಂಗ್ ಸಿಗಲಿಲ್ಲ</string>
+    <string name="market_listing_detail_place_bid">ಬಿಡ್ ಸಲ್ಲಿಸಿ</string>
     <string name="market_listing_detail_relist">ಮರು-ಲಿಸ್ಟ್ ಮಾಡಿ</string>
     <string name="market_listing_detail_report">ಲಿಸ್ಟಿಂಗ್ ರಿಪೋರ್ಟ್ ಮಾಡಿ</string>
     <string name="market_listing_detail_save">ಉಳಿಸಿ</string>

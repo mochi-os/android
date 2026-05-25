@@ -31,4 +31,6 @@
     <string name="chat_members_you">شما</string>
     <string name="chat_chat_not_found">گفت‌وگو پیدا نشد</string>
 
+    <string name="chat_list_more">بیشتر</string>
+    <string name="chat_message_send">ارسال</string>
 </resources>

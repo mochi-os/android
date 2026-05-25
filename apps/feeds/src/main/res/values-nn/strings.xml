@@ -98,4 +98,5 @@
     <string name="feeds_post_select_feed">Vel ein straum</string>
     <string name="feeds_post_empty_content">Skriv inn tekst eller legg ved ei fil</string>
 
+    <string name="feeds_send">Send</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Nom visible</string>
     <string name="projects_auth_verification_failed">La verificació ha fallat</string>
     <string name="projects_list_title">Projectes</string>
@@ -21,7 +20,7 @@
     <string name="projects_find_title">Cerca projectes</string>
     <string name="projects_find_recommended">Recomanat</string>
     <string name="projects_find_subscribe">Subscriu-te</string>
-    <string name="projects_loading">S\'està carregant…</string>
+    <string name="projects_loading">S\\'està carregant…</string>
     <string name="projects_watched">Seguit</string>
     <string name="projects_create_object">Crea un objecte</string>
     <string name="projects_search">Cerca</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Accés</string>
     <string name="projects_settings_tab_people">Persones</string>
     <string name="projects_option_icon">Icona</string>
+    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
     <string name="projects_settings_save">Desa els canvis</string>
     <string name="projects_settings_unsubscribe">Cancel·la la subscripció</string>
     <string name="projects_settings_delete_project">Suprimeix el projecte</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Deixa de seguir</string>
     <string name="projects_parent_label">Pare</string>
     <string name="projects_parent_search_placeholder">Cerca</string>
+    <string name="projects_links_title">Enllaços</string>
     <string name="projects_links_add">Afegeix un enllaç</string>
     <string name="projects_links_section_blocks">Blocs</string>
     <string name="projects_links_section_blocked_by">Bloquejat per</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Adjunta fitxers</string>
     <string name="projects_property_remove">Elimina</string>
     <string name="projects_property_option_none">Cap</string>
+    <string name="projects_attachments">Fitxers adjunts</string>
     <string name="projects_attachment_add">Afegeix un fitxer adjunt</string>
     <string name="projects_request_empty">Cap sol·licitud de fusió</string>
     <string name="projects_request_status_draft">Esborrany</string>
@@ -91,7 +93,7 @@
     <string name="projects_request_method">Mètode</string>
     <string name="projects_request_method_merge">Fusiona</string>
     <string name="projects_request_field_repository">Repositori</string>
-    <string name="projects_request_field_source">Branca d\'origen</string>
+    <string name="projects_request_field_source">Branca d\\'origen</string>
     <string name="projects_request_field_title">Títol</string>
     <string name="projects_request_field_description">Descripció</string>
     <string name="projects_request_field_draft">Esborrany</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Afegeix una classe</string>
     <string name="projects_classes_create">Crea</string>
     <string name="projects_class_name">Nom</string>
+    <string name="projects_class_save_name">Desa el nom</string>
     <string name="projects_class_title_field">Camp de títol</string>
     <string name="projects_class_merge_requests">Sol·licituds de fusió</string>
     <string name="projects_class_fields">Camps</string>
@@ -144,7 +147,7 @@
     <string name="projects_field_delete_title">Suprimeix el camp</string>
     <string name="projects_field_add_field_dialog_title">Afegeix un camp</string>
     <string name="projects_option_add">Afegeix una opció</string>
-    <string name="projects_option_edit">Edita l\'opció</string>
+    <string name="projects_option_edit">Edita l\\'opció</string>
     <string name="projects_views_add">Afegeix una vista</string>
     <string name="projects_views_add_dialog_title">Afegeix una vista</string>
     <string name="projects_views_edit_dialog_title">Edita la vista</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Actualitzat</string>
     <string name="projects_views_sort_rank">Posició</string>
     <string name="projects_project_not_found">Projecte no trobat</string>
-    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Més</string>
+    <string name="projects_more">Més</string>
+    <string name="projects_request_more">Més</string>
+    <string name="projects_comment_send">Envia</string>
 </resources>

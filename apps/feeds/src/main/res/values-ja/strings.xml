@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">フィード</string>
     <string name="feeds_find_feeds">フィードを検索</string>
     <string name="feeds_create_feed">フィードを作成</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">メンバー</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">フィード名</string>
+    <string name="feeds_save_name">名前を保存</string>
     <string name="feeds_banner">バナー</string>
     <string name="feeds_banner_description">フィード上部に表示するMarkdownバナー（任意）。</string>
     <string name="feeds_clear">クリア</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi フィード</string>
     <string name="feeds_source_type_feed_memories">メモリ</string>
+    <string name="feeds_remove_source">ソースを削除</string>
     <string name="feeds_suggested_credibility_accept">承認</string>
     <string name="feeds_rss_url_copied">RSS URL をクリップボードにコピーしました</string>
     <string name="feeds_logout">ログアウト</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">デフォルトに戻す</string>
     <string name="feeds_feed_not_found">フィードが見つかりません</string>
     <string name="feeds_post_not_found">投稿が見つかりません</string>
+    <string name="feeds_post_select_feed">フィードを選択してください</string>
+    <string name="feeds_post_empty_content">テキストを入力するか、ファイルを添付してください</string>
     <string name="feeds_settings_feed_renamed">フィードの名前を変更しました</string>
+    <string name="feeds_settings_banner_saved">バナーを保存しました</string>
+    <string name="feeds_settings_banner_cleared">バナーをクリアしました</string>
     <string name="feeds_settings_source_added">ソースを追加しました</string>
     <string name="feeds_settings_source_updated">ソースを更新しました</string>
     <string name="feeds_settings_source_removed">ソースを削除しました</string>
+    <string name="feeds_settings_source_polling">ソースをポリング中…</string>
     <string name="feeds_settings_access_updated">アクセスを更新しました</string>
+    <string name="feeds_settings_access_revoked">アクセスを取り消しました</string>
     <string name="feeds_settings_member_added">メンバーを追加しました</string>
     <string name="feeds_settings_member_removed">メンバーを削除しました</string>
-    <string name="feeds_settings_prompt_saved">プロンプトを保存しました</string>
-    <string name="feeds_settings_banner_saved">バナーを保存しました</string>
-    <string name="feeds_settings_banner_cleared">バナーをクリアしました</string>
-    <string name="feeds_settings_source_polling">ソースをポリング中…</string>
-    <string name="feeds_settings_access_revoked">アクセスを取り消しました</string>
     <string name="feeds_settings_ai_mode_updated">AIモードを更新しました</string>
     <string name="feeds_settings_ai_account_updated">AIアカウントを更新しました</string>
+    <string name="feeds_settings_prompt_saved">プロンプトを保存しました</string>
     <string name="feeds_settings_prompt_reset">プロンプトをデフォルトにリセットしました</string>
-    <string name="feeds_post_select_feed">フィードを選択してください</string>
-    <string name="feeds_post_empty_content">テキストを入力するか、ファイルを添付してください</string>
-
+    <string name="feeds_send">送信</string>
 </resources>

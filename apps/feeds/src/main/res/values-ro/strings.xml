@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Fluxuri</string>
     <string name="feeds_find_feeds">Găsește fluxuri</string>
     <string name="feeds_create_feed">Creează flux</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Membri</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Numele fluxului</string>
+    <string name="feeds_save_name">Salvează numele</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner markdown opțional afișat în partea de sus a fluxului tău.</string>
     <string name="feeds_clear">Golește</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Flux Mochi</string>
     <string name="feeds_source_type_feed_memories">Memorii</string>
+    <string name="feeds_remove_source">Elimină sursa</string>
     <string name="feeds_suggested_credibility_accept">Acceptă</string>
     <string name="feeds_rss_url_copied">URL RSS copiat în clipboard</string>
     <string name="feeds_logout">Deconectează-te</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Resetează la implicit</string>
     <string name="feeds_feed_not_found">Flux negăsit</string>
     <string name="feeds_post_not_found">Postarea nu a fost găsită</string>
+    <string name="feeds_post_select_feed">Selectati un flux</string>
+    <string name="feeds_post_empty_content">Introduceti un text sau atasati un fisier</string>
     <string name="feeds_settings_feed_renamed">Flux redenumit</string>
+    <string name="feeds_settings_banner_saved">Banner salvat</string>
+    <string name="feeds_settings_banner_cleared">Banner şters</string>
     <string name="feeds_settings_source_added">Sursă adăugată</string>
     <string name="feeds_settings_source_updated">Sursă actualizată</string>
     <string name="feeds_settings_source_removed">Sursă eliminată</string>
+    <string name="feeds_settings_source_polling">Se interoghează sursa…</string>
     <string name="feeds_settings_access_updated">Acces actualizat</string>
+    <string name="feeds_settings_access_revoked">Accesul a fost revocat</string>
     <string name="feeds_settings_member_added">Membru adăugat</string>
     <string name="feeds_settings_member_removed">Membru eliminat</string>
-    <string name="feeds_settings_prompt_saved">Prompt salvat</string>
-    <string name="feeds_settings_banner_saved">Banner salvat</string>
-    <string name="feeds_settings_banner_cleared">Banner şters</string>
-    <string name="feeds_settings_source_polling">Se interoghează sursa…</string>
-    <string name="feeds_settings_access_revoked">Accesul a fost revocat</string>
     <string name="feeds_settings_ai_mode_updated">Modul IA a fost actualizat</string>
     <string name="feeds_settings_ai_account_updated">Contul IA a fost actualizat</string>
+    <string name="feeds_settings_prompt_saved">Prompt salvat</string>
     <string name="feeds_settings_prompt_reset">Solicitarea a fost resetată la valoarea implicită</string>
-    <string name="feeds_post_select_feed">Selectati un flux</string>
-    <string name="feeds_post_empty_content">Introduceti un text sau atasati un fisier</string>
-
+    <string name="feeds_send">Trimite</string>
 </resources>

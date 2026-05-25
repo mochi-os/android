@@ -31,4 +31,6 @@
     <string name="chat_members_you">Nde</string>
     <string name="chat_chat_not_found">Chat ndojejuhúi</string>
 
+    <string name="chat_list_more">Hetave</string>
+    <string name="chat_message_send">Mondo</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feed-ови</string>
     <string name="feeds_find_feeds">Најди feed-ови</string>
     <string name="feeds_create_feed">Создај канал</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Членови</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Име на feed</string>
+    <string name="feeds_save_name">Зачувај име</string>
     <string name="feeds_banner">Банер</string>
     <string name="feeds_banner_description">Опционален markdown banner прикажан на врвот на вашиот feed.</string>
     <string name="feeds_clear">Исчисти</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Мемории</string>
+    <string name="feeds_remove_source">Отстрани извор</string>
     <string name="feeds_suggested_credibility_accept">Прифати</string>
     <string name="feeds_rss_url_copied">RSS URL е копиран во клипборд</string>
     <string name="feeds_logout">Одјави се</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Ресетирај на стандардно</string>
     <string name="feeds_feed_not_found">Feed не е најден</string>
     <string name="feeds_post_not_found">Објавата не е пронајдена</string>
+    <string name="feeds_post_select_feed">Ве молиме, изберете поток</string>
+    <string name="feeds_post_empty_content">Ве молиме, внесете текст или прикачете датотека</string>
     <string name="feeds_settings_feed_renamed">Feed е преименуван</string>
+    <string name="feeds_settings_banner_saved">Банерот е зачуван</string>
+    <string name="feeds_settings_banner_cleared">Банерот е исчистен</string>
     <string name="feeds_settings_source_added">Изворот е додаден</string>
     <string name="feeds_settings_source_updated">Изворот е ажуриран</string>
     <string name="feeds_settings_source_removed">Изворот е отстранет</string>
+    <string name="feeds_settings_source_polling">Испитување на изворот…</string>
     <string name="feeds_settings_access_updated">Пристапот е ажуриран</string>
+    <string name="feeds_settings_access_revoked">Пристапот е повлечен</string>
     <string name="feeds_settings_member_added">Членот е додаден</string>
     <string name="feeds_settings_member_removed">Членот е отстранет</string>
-    <string name="feeds_settings_prompt_saved">Поттикот е зачуван</string>
-    <string name="feeds_settings_banner_saved">Банерот е зачуван</string>
-    <string name="feeds_settings_banner_cleared">Банерот е исчистен</string>
-    <string name="feeds_settings_source_polling">Испитување на изворот…</string>
-    <string name="feeds_settings_access_revoked">Пристапот е повлечен</string>
     <string name="feeds_settings_ai_mode_updated">AI режимот е ажуриран</string>
     <string name="feeds_settings_ai_account_updated">AI сметката е ажурирана</string>
+    <string name="feeds_settings_prompt_saved">Поттикот е зачуван</string>
     <string name="feeds_settings_prompt_reset">Поттикнувањето е вратено на исходните поставки</string>
-    <string name="feeds_post_select_feed">Ве молиме, изберете поток</string>
-    <string name="feeds_post_empty_content">Ве молиме, внесете текст или прикачете датотека</string>
-
+    <string name="feeds_send">Испрати</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ຟີດ</string>
     <string name="feeds_find_feeds">ຄົ້ນຫາຟີດ</string>
     <string name="feeds_create_feed">ສ້າງຟີດ</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">ສະມາຊິກ</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ຊື່ຟີດ</string>
+    <string name="feeds_save_name">ບັນທຶກຊື່</string>
     <string name="feeds_banner">ປ້າຍ</string>
     <string name="feeds_banner_description">ແບນເນີ markdown ບໍ່ບັງຄັບທີ່ສະແດງຢູ່ດ້ານເທິງຂອງ feed ຂອງທ່ານ.</string>
     <string name="feeds_clear">ລ້າງ</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">ຟີດ Mochi</string>
     <string name="feeds_source_type_feed_memories">ຄວາມຊົງຈຳ</string>
+    <string name="feeds_remove_source">ລຶບແຫຼ່ງ</string>
     <string name="feeds_suggested_credibility_accept">ຍອມຮັບ</string>
     <string name="feeds_rss_url_copied">ຄັດລອກ RSS URL ໄປຄລິບບອດແລ້ວ</string>
     <string name="feeds_logout">ອອກຈາກລະບົບ</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
     <string name="feeds_feed_not_found">ບໍ່ພົບຟີດ</string>
     <string name="feeds_post_not_found">ບໍ່ພົບໂພສ</string>
+    <string name="feeds_post_select_feed">ກາລຸນາເລືດກສາ຺຺</string>
+    <string name="feeds_post_empty_content">ກາລຸນາົຽ຺຺ຂີ໣໣຺ຸ</string>
     <string name="feeds_settings_feed_renamed">ປ່ຽນຊື່ຟີດແລ້ວ</string>
+    <string name="feeds_settings_banner_saved">றສັນແນ຺ກສຳລັບໄວ້ແລ້ວ</string>
+    <string name="feeds_settings_banner_cleared">ລ຺ບສັນແນ຺ກແລ້ວ</string>
     <string name="feeds_settings_source_added">ແຫຼ່ງຖືກເພີ່ມແລ້ວ</string>
     <string name="feeds_settings_source_updated">ແຫຼ່ງຖືກອັບເດດແລ້ວ</string>
     <string name="feeds_settings_source_removed">ແຫຼ່ງຖືກລົບແລ້ວ</string>
+    <string name="feeds_settings_source_polling">ກຳລັງຠ຾ກໂຽ້ທີ່ມາຂອະງ ຂ້ົມ຺຺຺…</string>
     <string name="feeds_settings_access_updated">ອັບເດດການເຂົ້າເຖິງແລ້ວ</string>
+    <string name="feeds_settings_access_revoked">ການກ຺ົົາຣເສີບຖ້ມີໄດ້ຖືກຖ຾ກໂອ຺ກ</string>
     <string name="feeds_settings_member_added">ເພີ່ມສະມາຊິກແລ້ວ</string>
     <string name="feeds_settings_member_removed">ຍ້າຍສະມາຊິກແລ້ວ</string>
-    <string name="feeds_settings_prompt_saved">ບັນທຶກ prompt ແລ້ວ</string>
-    <string name="feeds_settings_banner_saved">றສັນແນ຺ກສຳລັບໄວ້ແລ້ວ</string>
-    <string name="feeds_settings_banner_cleared">ລ຺ບສັນແນ຺ກແລ້ວ</string>
-    <string name="feeds_settings_source_polling">ກຳລັງຠ຾ກໂຽ້ທີ່ມາຂອະງ ຂ້ົມ຺຺຺…</string>
-    <string name="feeds_settings_access_revoked">ການກ຺ົົາຣເສີບຖ້ມີໄດ້ຖືກຖ຾ກໂອ຺ກ</string>
     <string name="feeds_settings_ai_mode_updated">ການໃສ້ AI ຖືກສຳລັບໂດ຺຺</string>
     <string name="feeds_settings_ai_account_updated">ບ຺ົຄ຺ົນ AI ຖືກສຳລັບໂດ຺຺</string>
+    <string name="feeds_settings_prompt_saved">ບັນທຶກ prompt ແລ້ວ</string>
     <string name="feeds_settings_prompt_reset">ຄຳສັມ໠຀ົມ໧ຽ຾຺຺</string>
-    <string name="feeds_post_select_feed">ກາລຸນາເລືດກສາ຺຺</string>
-    <string name="feeds_post_empty_content">ກາລຸນາົຽ຺຺ຂີ໣໣຺ຸ</string>
-
+    <string name="feeds_send">ສົ່ງ</string>
 </resources>

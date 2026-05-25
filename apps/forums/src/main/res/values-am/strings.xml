@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">ፎረም አልተገኘም</string>
     <string name="forums_post_not_found">ልጥፍ አልተገኘም</string>
 
+    <string name="forums_list_more">ተጨማሪ</string>
+    <string name="forums_comment_send">ላክ</string>
 </resources>

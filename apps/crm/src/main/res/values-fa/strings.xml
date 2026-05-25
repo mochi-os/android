@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">نام نمایشی</string>
     <string name="crm_auth_verification_failed">تأیید ناموفق بود</string>
     <string name="crm_list_title">پروژه‌ها</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">دسترسی</string>
     <string name="crm_settings_tab_people">افراد</string>
     <string name="crm_option_icon">آیکون</string>
+    <string name="crm_option_icon_placeholder">مثلاً Check، Star، Flag</string>
     <string name="crm_settings_save">ذخیره تغییرات</string>
     <string name="crm_settings_unsubscribe">لغو اشتراک</string>
     <string name="crm_settings_delete_crm">حذف پروژه</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">توقف تماشا</string>
     <string name="crm_parent_label">والد</string>
     <string name="crm_parent_search_placeholder">جست‌وجو</string>
+    <string name="crm_links_title">لینک‌ها</string>
     <string name="crm_links_add">افزودن پیوند</string>
     <string name="crm_links_section_blocks">بلوک‌ها</string>
     <string name="crm_links_section_blocked_by">مسدود توسط</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">پیوست فایل‌ها</string>
     <string name="crm_property_remove">حذف</string>
     <string name="crm_property_option_none">هیچ‌کدام</string>
+    <string name="crm_attachments">پیوست‌ها</string>
     <string name="crm_attachment_add">افزودن پیوست</string>
     <string name="crm_request_empty">هیچ درخواست ادغامی وجود ندارد</string>
     <string name="crm_request_status_draft">پیش‌نویس</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">افزودن کلاس</string>
     <string name="crm_classes_create">ساختن</string>
     <string name="crm_class_name">نام</string>
+    <string name="crm_class_save_name">ذخیره نام</string>
     <string name="crm_class_title_field">فیلد عنوان</string>
     <string name="crm_class_merge_requests">Merge requests</string>
     <string name="crm_class_fields">فیلدها</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">به‌روزرسانی شد</string>
     <string name="crm_views_sort_rank">رتبه</string>
     <string name="crm_not_found">پروژه یافت نشد</string>
-    <string name="crm_option_icon_placeholder">مثلاً Check، Star، Flag</string>
-
+    <string name="crm_list_more">بیشتر</string>
+    <string name="crm_more">بیشتر</string>
+    <string name="crm_request_more">بیشتر</string>
+    <string name="crm_comment_send">ارسال</string>
 </resources>

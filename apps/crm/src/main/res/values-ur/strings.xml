@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ڈسپلے نام</string>
     <string name="crm_auth_verification_failed">تصدیق ناکام</string>
     <string name="crm_list_title">CRM</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">رسائی</string>
     <string name="crm_settings_tab_people">لوگ</string>
     <string name="crm_option_icon">آئیکن</string>
+    <string name="crm_option_icon_placeholder">مثال Check، Star، Flag</string>
     <string name="crm_settings_save">تبدیلیاں محفوظ کریں</string>
     <string name="crm_settings_unsubscribe">ان سبسکرائب کریں</string>
     <string name="crm_settings_delete_crm">پروجیکٹ حذف کریں</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">دیکھنا بند کریں</string>
     <string name="crm_parent_label">parent</string>
     <string name="crm_parent_search_placeholder">تلاش کریں</string>
+    <string name="crm_links_title">لنکس</string>
     <string name="crm_links_add">لنک شامل کریں</string>
     <string name="crm_links_section_blocks">بلاک کرتا ہے</string>
     <string name="crm_links_section_blocked_by">بلاک کردہ</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">فائلیں منسلک کریں</string>
     <string name="crm_property_remove">ہٹائیں</string>
     <string name="crm_property_option_none">کوئی نہیں</string>
+    <string name="crm_attachments">اٹیچمنٹس</string>
     <string name="crm_attachment_add">اٹیچمنٹ شامل کریں</string>
     <string name="crm_request_empty">کوئی merge requests نہیں</string>
     <string name="crm_request_status_draft">ڈرافٹ</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">کلاس شامل کریں</string>
     <string name="crm_classes_create">بنائیں</string>
     <string name="crm_class_name">نام</string>
+    <string name="crm_class_save_name">نام محفوظ کریں</string>
     <string name="crm_class_title_field">عنوان فیلڈ</string>
     <string name="crm_class_merge_requests">merge requests</string>
     <string name="crm_class_fields">فیلڈز</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="crm_views_sort_rank">رینک</string>
     <string name="crm_not_found">CRM نہیں ملا</string>
-    <string name="crm_option_icon_placeholder">مثال Check، Star، Flag</string>
-
+    <string name="crm_list_more">مزید</string>
+    <string name="crm_more">مزید</string>
+    <string name="crm_request_more">مزید</string>
+    <string name="crm_comment_send">بھیجیں</string>
 </resources>

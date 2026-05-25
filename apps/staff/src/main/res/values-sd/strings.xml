@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">اڪائونٽ تي پابندي</string>
@@ -37,8 +36,8 @@
     <string name="staff_accounts_unnamed">بي نام</string>
     <string name="staff_accounts_unsuspend">معطلي ھٽايو</string>
     <string name="staff_accounts_unsuspended_toast">اڪائونٽ بحال ڪيو ويو</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">منسوخ ڪريو</string>
     <string name="staff_appeals_decide">فيصلو ڪريو</string>
     <string name="staff_appeals_decide_failed">اپيل تي فيصلو ڪرڻ ۾ ناڪام</string>
@@ -275,6 +274,7 @@
     <string name="staff_disputes_view">ڏسو</string>
     <string name="staff_filter_chip_remove">فلٽر ختم ڪريو</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">اعتدال</string>
     <string name="staff_filter_label_query">ڳولها</string>
     <string name="staff_filter_label_review_status">حالت</string>
     <string name="staff_filter_label_seller">وڪرو ڪندڙ</string>
@@ -471,5 +471,4 @@
     <string name="staff_team_toast_removed">ميمبر هٽايو ويو</string>
     <string name="staff_team_toast_role_failed">ڪردار اپڊيٽ ڪرڻ ۾ ناڪامي</string>
     <string name="staff_team_toast_role_updated">ڪردار اپڊيٽ ٿيو</string>
-
 </resources>

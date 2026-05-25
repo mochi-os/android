@@ -3,4 +3,31 @@
 
     <string name="system_documents_tab_privacy">Privacy</string>
 
+    <string name="security_token_name">Name</string>
+    <string name="notifprefs_name_label">Name</string>
+    <string name="accounts_field_name">Name</string>
+    <string name="security_create">Erstellen</string>
+    <string name="security_cancel">Abbrechen</string>
+    <string name="security_save">Speichern</string>
+    <string name="route_save">Speichern</string>
+    <string name="document_save">Speichern</string>
+    <string name="system_documents_save">Speichern</string>
+    <string name="system_settings_save">Speichern</string>
+    <string name="notifprefs_edit">Bearbeiten</string>
+    <string name="security_delete">Löschen</string>
+    <string name="notifprefs_delete">Löschen</string>
+    <string name="domain_delegation_add">Hinzufügen</string>
+    <string name="interests_add">Hinzufügen</string>
+    <string name="settings_home_logout">Abmelden</string>
+    <string name="settings_home_title">Einstellungen</string>
+    <string name="accounts_settings">Einstellungen</string>
+    <string name="system_replication_remove">Entfernen</string>
+    <string name="notifprefs_remove">Entfernen</string>
+    <string name="accounts_remove">Entfernen</string>
+    <string name="accounts_type_label">Typ</string>
+    <string name="system_users_col_user">Benutzer</string>
+    <string name="system_users_role_user">Benutzer</string>
+    <string name="settings_home_system_status">Status</string>
+    <string name="system_status_title">Status</string>
+    <string name="system_users_col_status">Status</string>
 </resources>

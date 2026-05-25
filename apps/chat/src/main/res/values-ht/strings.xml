@@ -31,4 +31,6 @@
     <string name="chat_members_you">Ou</string>
     <string name="chat_chat_not_found">Chat pa jwenn</string>
 
+    <string name="chat_list_more">Plis</string>
+    <string name="chat_message_send">Voye</string>
 </resources>

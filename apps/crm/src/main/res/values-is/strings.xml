@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Birtingarnafn</string>
     <string name="crm_auth_verification_failed">Sannprófun mistókst</string>
     <string name="crm_list_title">Verkefni</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Aðgangur</string>
     <string name="crm_settings_tab_people">Fólk</string>
     <string name="crm_option_icon">Tákn</string>
+    <string name="crm_option_icon_placeholder">t.d. Check, Star, Flag</string>
     <string name="crm_settings_save">Vista breytingar</string>
     <string name="crm_settings_unsubscribe">Afskrá áskrift</string>
     <string name="crm_settings_delete_crm">Eyða verkefni</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Hætta að fylgjast með</string>
     <string name="crm_parent_label">Foreldri</string>
     <string name="crm_parent_search_placeholder">Leita</string>
+    <string name="crm_links_title">Tenglar</string>
     <string name="crm_links_add">Bæta við tengli</string>
     <string name="crm_links_section_blocks">Lokar</string>
     <string name="crm_links_section_blocked_by">Lokað af</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Hengja við skrár</string>
     <string name="crm_property_remove">Fjarlægja</string>
     <string name="crm_property_option_none">Ekkert</string>
+    <string name="crm_attachments">Viðhengi</string>
     <string name="crm_attachment_add">Bæta við viðhengi</string>
     <string name="crm_request_empty">Engar sameiningarbeiðnir</string>
     <string name="crm_request_status_draft">Drög</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Bæta við flokki</string>
     <string name="crm_classes_create">Búa til</string>
     <string name="crm_class_name">Nafn</string>
+    <string name="crm_class_save_name">Vista nafn</string>
     <string name="crm_class_title_field">Titilreitur</string>
     <string name="crm_class_merge_requests">Sameiningarbeiðnir</string>
     <string name="crm_class_fields">Reitir</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Uppfært</string>
     <string name="crm_views_sort_rank">Röð</string>
     <string name="crm_not_found">Verkefni fannst ekki</string>
-    <string name="crm_option_icon_placeholder">t.d. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Meira</string>
+    <string name="crm_more">Meira</string>
+    <string name="crm_request_more">Meira</string>
+    <string name="crm_comment_send">Senda</string>
 </resources>

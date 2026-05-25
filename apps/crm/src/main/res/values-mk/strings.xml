@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Име за прикажување</string>
     <string name="crm_auth_verification_failed">Потврдата не успеа</string>
     <string name="crm_list_title">Проекти</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Пристап</string>
     <string name="crm_settings_tab_people">Луѓе</string>
     <string name="crm_option_icon">Икона</string>
+    <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
     <string name="crm_settings_save">Зачувај промени</string>
     <string name="crm_settings_unsubscribe">Откажи претплата</string>
     <string name="crm_settings_delete_crm">Избриши проект</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Престани со следење</string>
     <string name="crm_parent_label">Родител</string>
     <string name="crm_parent_search_placeholder">Барај</string>
+    <string name="crm_links_title">Линкови</string>
     <string name="crm_links_add">Додај врска</string>
     <string name="crm_links_section_blocks">Блокови</string>
     <string name="crm_links_section_blocked_by">Блокирано од</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Прикачи датотеки</string>
     <string name="crm_property_remove">Отстрани</string>
     <string name="crm_property_option_none">Ништо</string>
+    <string name="crm_attachments">Прилози</string>
     <string name="crm_attachment_add">Додај прилог</string>
     <string name="crm_request_empty">Нема барања за спојување</string>
     <string name="crm_request_status_draft">Нацрт</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Додај класа</string>
     <string name="crm_classes_create">Создај</string>
     <string name="crm_class_name">Име</string>
+    <string name="crm_class_save_name">Зачувај име</string>
     <string name="crm_class_title_field">Поле за наслов</string>
     <string name="crm_class_merge_requests">Барања за спојување</string>
     <string name="crm_class_fields">Полиња</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Ажурирано</string>
     <string name="crm_views_sort_rank">Ранг</string>
     <string name="crm_not_found">Проектот не е пронајден</string>
-    <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Повеќе</string>
+    <string name="crm_more">Повеќе</string>
+    <string name="crm_request_more">Повеќе</string>
+    <string name="crm_comment_send">Испрати</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">फीड</string>
     <string name="feeds_find_feeds">फीड खोजीं</string>
     <string name="feeds_create_feed">फीड बनाईं</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">सदस्य</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">फीड के नाम</string>
+    <string name="feeds_save_name">नाम सहेजीं</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">रउआ feed के ऊपर देखावे वाला वैकल्पिक markdown बैनर।</string>
     <string name="feeds_clear">साफ करीं</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi फीड</string>
     <string name="feeds_source_type_feed_memories">यादें</string>
+    <string name="feeds_remove_source">स्रोत हटाईं</string>
     <string name="feeds_suggested_credibility_accept">स्वीकार करीं</string>
     <string name="feeds_rss_url_copied">RSS URL क्लिपबोर्ड पर कॉपी भइल</string>
     <string name="feeds_logout">लॉग आउट</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">डिफ़ॉल्ट पर रीसेट करीं</string>
     <string name="feeds_feed_not_found">फीड नइखे मिलल</string>
     <string name="feeds_post_not_found">पोस्ट ना मिलल</string>
+    <string name="feeds_post_select_feed">कृपया कोई फीड चुनीं</string>
+    <string name="feeds_post_empty_content">कृपया कुछ लिखीं या फाइल अटैच करीं</string>
     <string name="feeds_settings_feed_renamed">फीड के नाम बदल गइल</string>
+    <string name="feeds_settings_banner_saved">बैनर सहेजल</string>
+    <string name="feeds_settings_banner_cleared">बैनर साफ भइल</string>
     <string name="feeds_settings_source_added">स्रोत जोड़ल गइल</string>
     <string name="feeds_settings_source_updated">स्रोत अपडेट भइल</string>
     <string name="feeds_settings_source_removed">स्रोत हटावल गइल</string>
+    <string name="feeds_settings_source_polling">स्रोत टटोला जात बा…</string>
     <string name="feeds_settings_access_updated">पहुंच अद्यतन कइल गइल</string>
+    <string name="feeds_settings_access_revoked">पहुँच हटा देहल गइल</string>
     <string name="feeds_settings_member_added">सदस्य जुड़ल</string>
     <string name="feeds_settings_member_removed">सदस्य हटल</string>
-    <string name="feeds_settings_prompt_saved">प्रॉम्प्ट सहेजल गइल</string>
-    <string name="feeds_settings_banner_saved">बैनर सहेजल</string>
-    <string name="feeds_settings_banner_cleared">बैनर साफ भइल</string>
-    <string name="feeds_settings_source_polling">स्रोत टटोला जात बा…</string>
-    <string name="feeds_settings_access_revoked">पहुँच हटा देहल गइल</string>
     <string name="feeds_settings_ai_mode_updated">AI मोड अपडेट भइल</string>
     <string name="feeds_settings_ai_account_updated">AI खाता अपडेट भइल</string>
+    <string name="feeds_settings_prompt_saved">प्रॉम्प्ट सहेजल गइल</string>
     <string name="feeds_settings_prompt_reset">प्रॉम्पट डिफॉल्ट प रीसेट भइल</string>
-    <string name="feeds_post_select_feed">कृपया कोई फीड चुनीं</string>
-    <string name="feeds_post_empty_content">कृपया कुछ लिखीं या फाइल अटैच करीं</string>
-
+    <string name="feeds_send">भेजीं</string>
 </resources>

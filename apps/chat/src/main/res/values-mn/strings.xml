@@ -31,4 +31,6 @@
     <string name="chat_members_you">Та</string>
     <string name="chat_chat_not_found">Чат олдсонгүй</string>
 
+    <string name="chat_list_more">Илүү</string>
+    <string name="chat_message_send">Илгээх</string>
 </resources>

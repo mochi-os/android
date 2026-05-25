@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ஊட்டங்கள்</string>
     <string name="feeds_find_feeds">ஃபீடுகளைக் கண்டுபிடி</string>
     <string name="feeds_create_feed">ஃபீட் உருவாக்கு</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">உறுப்பினர்கள்</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ஃபீட் பெயர்</string>
+    <string name="feeds_save_name">பெயரைச் சேமி</string>
     <string name="feeds_banner">பேனர்</string>
     <string name="feeds_banner_description">உங்கள் ஃபீட்டின் மேற்பகுதியில் காட்டப்படும் விருப்ப markdown பேனர்.</string>
     <string name="feeds_clear">அழி</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ஃபீட்</string>
     <string name="feeds_source_type_feed_memories">நினைவுகள்</string>
+    <string name="feeds_remove_source">மூலத்தை அகற்று</string>
     <string name="feeds_suggested_credibility_accept">ஏற்றுக்கொள்</string>
     <string name="feeds_rss_url_copied">RSS URL clipboard-க்கு நகலெடுக்கப்பட்டது</string>
     <string name="feeds_logout">வெளியேறு</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">இயல்புநிலைக்கு மீட்டமை</string>
     <string name="feeds_feed_not_found">ஃபீட் கிடைக்கவில்லை</string>
     <string name="feeds_post_not_found">பதிவு கிடைக்கவில்லை</string>
+    <string name="feeds_post_select_feed">ஒரு பீடை தேர்வு செய்யவும்</string>
+    <string name="feeds_post_empty_content">தயவுகள் அறிமுகற்றை பழமோ அொலா பைலினை இலம்களை இணாமும்</string>
     <string name="feeds_settings_feed_renamed">ஃபீட் பெயர் மாற்றப்பட்டது</string>
+    <string name="feeds_settings_banner_saved">பதாகை சேமிக்கப்பட்டது</string>
+    <string name="feeds_settings_banner_cleared">பதாகை அழிக்கப்பட்டது</string>
     <string name="feeds_settings_source_added">மூலம் சேர்க்கப்பட்டது</string>
     <string name="feeds_settings_source_updated">மூலம் புதுப்பிக்கப்பட்டது</string>
     <string name="feeds_settings_source_removed">மூலம் நீக்கப்பட்டது</string>
+    <string name="feeds_settings_source_polling">மூலம் நூறப்ப்படுகிறது…</string>
     <string name="feeds_settings_access_updated">அணுகல் புதுப்பிக்கப்பட்டது</string>
+    <string name="feeds_settings_access_revoked">அணுகல் ரதுச்சையை மீண்டது</string>
     <string name="feeds_settings_member_added">உறுப்பினர் சேர்க்கப்பட்டார்</string>
     <string name="feeds_settings_member_removed">உறுப்பினர் அகற்றப்பட்டார்</string>
-    <string name="feeds_settings_prompt_saved">Prompt சேமிக்கப்பட்டது</string>
-    <string name="feeds_settings_banner_saved">பதாகை சேமிக்கப்பட்டது</string>
-    <string name="feeds_settings_banner_cleared">பதாகை அழிக்கப்பட்டது</string>
-    <string name="feeds_settings_source_polling">மூலம் நூறப்ப்படுகிறது…</string>
-    <string name="feeds_settings_access_revoked">அணுகல் ரதுச்சையை மீண்டது</string>
     <string name="feeds_settings_ai_mode_updated">AI பளமீது முடிவுசீல்கீலுமு</string>
     <string name="feeds_settings_ai_account_updated">AI கணக்கு முடிவுசீல்கீலுமு</string>
+    <string name="feeds_settings_prompt_saved">Prompt சேமிக்கப்பட்டது</string>
     <string name="feeds_settings_prompt_reset">வினாவை இயல்நிலைக்கு மீண்டம்மீடம்க்குமு</string>
-    <string name="feeds_post_select_feed">ஒரு பீடை தேர்வு செய்யவும்</string>
-    <string name="feeds_post_empty_content">தயவுகள் அறிமுகற்றை பழமோ அொலா பைலினை இலம்களை இணாமும்</string>
-
+    <string name="feeds_send">அனுப்பு</string>
 </resources>

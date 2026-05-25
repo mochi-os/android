@@ -3,4 +3,40 @@
 
     <string name="projects_create_privacy">Privacy</string>
 
+    <string name="projects_create_name">Nom</string>
+    <string name="projects_class_name">Nom</string>
+    <string name="projects_field_name">Nom</string>
+    <string name="projects_create_action">Créer</string>
+    <string name="projects_request_create_action">Créer</string>
+    <string name="projects_classes_create">Créer</string>
+    <string name="projects_request_close">Fermer</string>
+    <string name="projects_comment_save">Enregistrer</string>
+    <string name="projects_list_logout">Déconnexion</string>
+    <string name="projects_find_subscribe">S\'abonner</string>
+    <string name="projects_access_level_view">Voir</string>
+    <string name="projects_create_template_none">Aucun</string>
+    <string name="projects_access_level_none">Aucun</string>
+    <string name="projects_property_option_none">Aucun</string>
+    <string name="projects_settings">Paramètres</string>
+    <string name="projects_settings_title">Paramètres</string>
+    <string name="projects_list_search">Rechercher</string>
+    <string name="projects_search">Rechercher</string>
+    <string name="projects_parent_search_placeholder">Rechercher</string>
+    <string name="projects_list_more">Plus</string>
+    <string name="projects_more">Plus</string>
+    <string name="projects_request_more">Plus</string>
+    <string name="projects_comment_send">Envoyer</string>
+    <string name="projects_property_remove">Supprimer</string>
+    <string name="projects_create_description">Description</string>
+    <string name="projects_request_field_description">Description</string>
+    <string name="projects_create_object_type">Type</string>
+    <string name="projects_field_type">Type</string>
+    <string name="projects_views_type">Type</string>
+    <string name="projects_create_object_title_field">Titre</string>
+    <string name="projects_request_field_title">Titre</string>
+    <string name="projects_settings_unsubscribe">Se désabonner</string>
+    <string name="projects_settings_unsubscribe_title">Se désabonner</string>
+    <string name="projects_request_status_open">Ouvrir</string>
+    <string name="projects_board_new">Nouveau</string>
+    <string name="projects_field_type_user">Utilisateur</string>
 </resources>

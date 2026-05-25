@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feeder</string>
     <string name="feeds_find_feeds">Finn feeder</string>
     <string name="feeds_create_feed">Opprett strøm</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Medlemmer</string>
     <string name="feeds_tab_ai">KI</string>
     <string name="feeds_feed_name">Feed-navn</string>
+    <string name="feeds_save_name">Lagre navn</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Valgfri markdown-banner som vises øverst i strømmen din.</string>
     <string name="feeds_clear">Tøm</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-strøm</string>
     <string name="feeds_source_type_feed_memories">Minner</string>
+    <string name="feeds_remove_source">Fjern kilde</string>
     <string name="feeds_suggested_credibility_accept">Godta</string>
     <string name="feeds_rss_url_copied">RSS-URL kopiert til utklippstavlen</string>
     <string name="feeds_logout">Logg ut</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Tilbakestill til standard</string>
     <string name="feeds_feed_not_found">Feed ikke funnet</string>
     <string name="feeds_post_not_found">Innlegg ikke funnet</string>
+    <string name="feeds_post_select_feed">Velg en strøm</string>
+    <string name="feeds_post_empty_content">Skriv inn tekst eller legg ved en fil</string>
     <string name="feeds_settings_feed_renamed">Feed har fått nytt navn</string>
+    <string name="feeds_settings_banner_saved">Banner lagret</string>
+    <string name="feeds_settings_banner_cleared">Banner fjernet</string>
     <string name="feeds_settings_source_added">Kilde lagt til</string>
     <string name="feeds_settings_source_updated">Kilde oppdatert</string>
     <string name="feeds_settings_source_removed">Kilde fjernet</string>
+    <string name="feeds_settings_source_polling">Spør kilde…</string>
     <string name="feeds_settings_access_updated">Tilgang oppdatert</string>
+    <string name="feeds_settings_access_revoked">Tilgang opphevet</string>
     <string name="feeds_settings_member_added">Medlem lagt til</string>
     <string name="feeds_settings_member_removed">Medlem fjernet</string>
-    <string name="feeds_settings_prompt_saved">Ledetekst lagret</string>
-    <string name="feeds_settings_banner_saved">Banner lagret</string>
-    <string name="feeds_settings_banner_cleared">Banner fjernet</string>
-    <string name="feeds_settings_source_polling">Spør kilde…</string>
-    <string name="feeds_settings_access_revoked">Tilgang opphevet</string>
     <string name="feeds_settings_ai_mode_updated">AI-modus oppdatert</string>
     <string name="feeds_settings_ai_account_updated">AI-konto oppdatert</string>
+    <string name="feeds_settings_prompt_saved">Ledetekst lagret</string>
     <string name="feeds_settings_prompt_reset">Forespørsel tilbakestilt til standard</string>
-    <string name="feeds_post_select_feed">Velg en strøm</string>
-    <string name="feeds_post_empty_content">Skriv inn tekst eller legg ved en fil</string>
-
+    <string name="feeds_send">Send</string>
 </resources>

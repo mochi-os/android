@@ -8,4 +8,17 @@
     <string name="people_friends_close_search">Suche schliessen</string>
     <string name="people_person_message">Message</string>
 
+    <string name="people_profile_name">Name</string>
+    <string name="people_groups_add_member_confirm_back">Zurück</string>
+    <string name="people_common_back">Zurück</string>
+    <string name="people_common_cancel">Abbrechen</string>
+    <string name="people_profile_save">Speichern</string>
+    <string name="people_common_save">Speichern</string>
+    <string name="people_common_edit">Bearbeiten</string>
+    <string name="people_common_delete">Löschen</string>
+    <string name="people_person_state_self">Du</string>
+    <string name="people_friends_more">Mehr</string>
+    <string name="people_group_description">Beschreibung</string>
+    <string name="people_common_type">Typ</string>
+    <string name="people_member_type_user">Benutzer</string>
 </resources>

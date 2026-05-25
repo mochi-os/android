@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Weergavenaam</string>
     <string name="projects_auth_verification_failed">Verificatie mislukt</string>
     <string name="projects_list_title">Projecten</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Toegang</string>
     <string name="projects_settings_tab_people">Mensen</string>
     <string name="projects_option_icon">Icoon</string>
+    <string name="projects_option_icon_placeholder">bv. Check, Star, Flag</string>
     <string name="projects_settings_save">Wijzigingen opslaan</string>
     <string name="projects_settings_unsubscribe">Abonnement opzeggen</string>
     <string name="projects_settings_delete_project">Project verwijderen</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Stoppen met volgen</string>
     <string name="projects_parent_label">Bovenliggend</string>
     <string name="projects_parent_search_placeholder">Zoeken</string>
+    <string name="projects_links_title">Links</string>
     <string name="projects_links_add">Link toevoegen</string>
     <string name="projects_links_section_blocks">Blokkeert</string>
     <string name="projects_links_section_blocked_by">Geblokkeerd door</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Bestanden bijvoegen</string>
     <string name="projects_property_remove">Verwijderen</string>
     <string name="projects_property_option_none">Geen</string>
+    <string name="projects_attachments">Bijlagen</string>
     <string name="projects_attachment_add">Bijlage toevoegen</string>
     <string name="projects_request_empty">Geen merge requests</string>
     <string name="projects_request_status_draft">Concept</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Klasse toevoegen</string>
     <string name="projects_classes_create">Aanmaken</string>
     <string name="projects_class_name">Naam</string>
+    <string name="projects_class_save_name">Naam opslaan</string>
     <string name="projects_class_title_field">Titelveld</string>
     <string name="projects_class_merge_requests">Merge requests</string>
     <string name="projects_class_fields">Velden</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Bijgewerkt</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Project niet gevonden</string>
-    <string name="projects_option_icon_placeholder">bv. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Meer</string>
+    <string name="projects_more">Meer</string>
+    <string name="projects_request_more">Meer</string>
+    <string name="projects_comment_send">Verzenden</string>
 </resources>

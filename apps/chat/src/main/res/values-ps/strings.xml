@@ -31,4 +31,6 @@
     <string name="chat_members_you">تاسو</string>
     <string name="chat_chat_not_found">چټ ونه موندل شو</string>
 
+    <string name="chat_list_more">نور</string>
+    <string name="chat_message_send">لیږل</string>
 </resources>

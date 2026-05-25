@@ -34,4 +34,16 @@
     <string name="common_saved">Guardado</string>
     <string name="common_not_saved">No guardado</string>
     <string name="common_save_failed">No se pudieron guardar los cambios.</string>
+    <string name="auth_name">Nombre</string>
+    <string name="auth_create">Crear</string>
+    <string name="common_back">Atrás</string>
+    <string name="common_close">Cerrar</string>
+    <string name="about_close">Cerrar</string>
+    <string name="access_level_view">Ver</string>
+    <string name="access_level_none">Ninguno</string>
+    <string name="settings_radius_none">Ninguno</string>
+    <string name="settings_background_off">Ninguno</string>
+    <string name="settings_title">Configuración</string>
+    <string name="settings_open">Configuración</string>
+    <string name="game_chat_subject_you">Vos</string>
 </resources>

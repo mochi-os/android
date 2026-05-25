@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Iifidi</string>
     <string name="feeds_find_feeds">Fumana iifidi</string>
     <string name="feeds_create_feed">Yenza ifidi</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Amalungu</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Igama lefidi</string>
+    <string name="feeds_save_name">Gcina igama</string>
     <string name="feeds_banner">Ibhena</string>
     <string name="feeds_banner_description">I-banner ye-markdown yokukhetha eboniswa phezulu kwifidi yakho.</string>
     <string name="feeds_clear">Cima</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Ifidi ye-Mochi</string>
     <string name="feeds_source_type_feed_memories">Iinkumbulo</string>
+    <string name="feeds_remove_source">Susa umthombo</string>
     <string name="feeds_suggested_credibility_accept">Yamkela</string>
     <string name="feeds_rss_url_copied">I-URL ye-RSS ikhutshelwe ku-clipboard</string>
     <string name="feeds_logout">Phuma</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Buyisela kumiselweyo</string>
     <string name="feeds_feed_not_found">Ifidi ayifumanekanga</string>
     <string name="feeds_post_not_found">Umyalezo awufumaneki</string>
+    <string name="feeds_post_select_feed">Nceda khetha isiphakeli</string>
+    <string name="feeds_post_empty_content">Nceda ngenisa umbhalo okanye uqhoboshe ifayile</string>
     <string name="feeds_settings_feed_renamed">Ifidi inikwe igama elitsha</string>
+    <string name="feeds_settings_banner_saved">Ibhanara igciniwe</string>
+    <string name="feeds_settings_banner_cleared">Ibhanara icocekile</string>
     <string name="feeds_settings_source_added">Umthombo wongezwe</string>
     <string name="feeds_settings_source_updated">Umthombo uhlaziyiwe</string>
     <string name="feeds_settings_source_removed">Umthombo ususiwe</string>
+    <string name="feeds_settings_source_polling">Iyabuyisela umthombo…</string>
     <string name="feeds_settings_access_updated">Ufikelelo luhlaziyiwe</string>
+    <string name="feeds_settings_access_revoked">Ufikelelo lurhoxisiwe</string>
     <string name="feeds_settings_member_added">Ilungu lifakiwe</string>
     <string name="feeds_settings_member_removed">Ilungu lisusiwe</string>
-    <string name="feeds_settings_prompt_saved">Isikhumbuzi sigciniwe</string>
-    <string name="feeds_settings_banner_saved">Ibhanara igciniwe</string>
-    <string name="feeds_settings_banner_cleared">Ibhanara icocekile</string>
-    <string name="feeds_settings_source_polling">Iyabuyisela umthombo…</string>
-    <string name="feeds_settings_access_revoked">Ufikelelo lurhoxisiwe</string>
     <string name="feeds_settings_ai_mode_updated">Imo ye-AI ihlaziyiwe</string>
     <string name="feeds_settings_ai_account_updated">I-akhawunti ye-AI ihlaziyiwe</string>
+    <string name="feeds_settings_prompt_saved">Isikhumbuzi sigciniwe</string>
     <string name="feeds_settings_prompt_reset">Isikhokelo siphinde sasethwa ngokumiselweyo</string>
-    <string name="feeds_post_select_feed">Nceda khetha isiphakeli</string>
-    <string name="feeds_post_empty_content">Nceda ngenisa umbhalo okanye uqhoboshe ifayile</string>
-
+    <string name="feeds_send">Thumela</string>
 </resources>

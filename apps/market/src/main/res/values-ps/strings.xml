@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Market</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ژوندلیک</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">بدلونونه خوندي شول</string>
     <string name="market_account_status_banned_title">حساب بند شو</string>
     <string name="market_account_status_suspended_title">حساب وځنډول شو</string>
+    <string name="market_account_stripe_dashboard">د Stripe ډشبورډ خلاص کړئ</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">حساب</string>
     <string name="market_appeal_dialog_cancel">لغوه کول</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">موقعیت</string>
     <string name="market_listing_detail_message_seller">د پلورونکي ته پیغام</string>
     <string name="market_listing_detail_not_found">لیسټینګ ونه موندل شو</string>
+    <string name="market_listing_detail_place_bid">وړاندیز ولیکئ</string>
     <string name="market_listing_detail_relist">بیا لیست</string>
     <string name="market_listing_detail_report">د لیست راپور</string>
     <string name="market_listing_detail_save">خوندي کول</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ምግቦች</string>
     <string name="feeds_find_feeds">ፊዶችን ፈልግ</string>
     <string name="feeds_create_feed">ፊድ ፍጠር</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">አባላት</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">የፊድ ስም</string>
+    <string name="feeds_save_name">ስም አስቀምጥ</string>
     <string name="feeds_banner">ሰንደቅ</string>
     <string name="feeds_banner_description">በፊድዎ አናት ላይ የሚታይ አማራጭ የማርክዳውን ባነር።</string>
     <string name="feeds_clear">አጽዳ</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ምግብ</string>
     <string name="feeds_source_type_feed_memories">ትዝታዎች</string>
+    <string name="feeds_remove_source">ምንጭን አስወግድ</string>
     <string name="feeds_suggested_credibility_accept">ተቀበል</string>
     <string name="feeds_rss_url_copied">RSS ዩአርኤል ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
     <string name="feeds_logout">ውጣ</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">ወደ ነባሪ ዳግም አስጀምር</string>
     <string name="feeds_feed_not_found">ፊድ አልተገኘም</string>
     <string name="feeds_post_not_found">ልጥፍ አልተገኘም</string>
+    <string name="feeds_post_select_feed">እባክዎ ምንጭ ይምረጡ</string>
+    <string name="feeds_post_empty_content">እባክዎ ጭሑፍ ያስገቡ ወይም ፋይል ያያያዙ</string>
     <string name="feeds_settings_feed_renamed">ፊድ እንደገና ተሰይሟል</string>
+    <string name="feeds_settings_banner_saved">ባነር ተቀምጧል</string>
+    <string name="feeds_settings_banner_cleared">ባነር ተሰርዟል</string>
     <string name="feeds_settings_source_added">ምንጭ ተጨምሯል</string>
     <string name="feeds_settings_source_updated">ምንጭ ተዘምኗል</string>
     <string name="feeds_settings_source_removed">ምንጭ ተወግዷል</string>
+    <string name="feeds_settings_source_polling">ምንጭ አልሳል…</string>
     <string name="feeds_settings_access_updated">መዳረሻ ተዘምኗል</string>
+    <string name="feeds_settings_access_revoked">ጭቅም ተርሿል</string>
     <string name="feeds_settings_member_added">አባል ተጨምሯል</string>
     <string name="feeds_settings_member_removed">አባል ተወግዷል</string>
-    <string name="feeds_settings_prompt_saved">ጥያቄ ተቀምጧል</string>
-    <string name="feeds_settings_banner_saved">ባነር ተቀምጧል</string>
-    <string name="feeds_settings_banner_cleared">ባነር ተሰርዟል</string>
-    <string name="feeds_settings_source_polling">ምንጭ አልሳል…</string>
-    <string name="feeds_settings_access_revoked">ጭቅም ተርሿል</string>
     <string name="feeds_settings_ai_mode_updated">የአወቀ መረጃ (AI) ምቀረታ ተኵᜳል</string>
     <string name="feeds_settings_ai_account_updated">የአወቀ መረጃ (AI) አካውንት ተኵᜳል</string>
+    <string name="feeds_settings_prompt_saved">ጥያቄ ተቀምጧል</string>
     <string name="feeds_settings_prompt_reset">ሞብያ ወደ ነባብስታው ተመልሶአል</string>
-    <string name="feeds_post_select_feed">እባክዎ ምንጭ ይምረጡ</string>
-    <string name="feeds_post_empty_content">እባክዎ ጭሑፍ ያስገቡ ወይም ፋይል ያያያዙ</string>
-
+    <string name="feeds_send">ላክ</string>
 </resources>

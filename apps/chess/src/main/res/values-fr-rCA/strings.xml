@@ -4,4 +4,6 @@
     <string name="chess_chat_title">Clavardage</string>
 
     <string name="chess_move_played">%1$s a joué %2$s</string>
+    <string name="chess_move_subject_you">Vous</string>
+    <string name="chess_open_sidebar">Ouvrir la barre latérale</string>
 </resources>

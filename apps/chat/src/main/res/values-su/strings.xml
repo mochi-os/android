@@ -31,4 +31,6 @@
     <string name="chat_members_you">Anjeun</string>
     <string name="chat_chat_not_found">Chat teu kapanggih</string>
 
+    <string name="chat_list_more">Lianna</string>
+    <string name="chat_message_send">Kirim</string>
 </resources>

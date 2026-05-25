@@ -31,4 +31,6 @@
     <string name="chat_members_you">Sen</string>
     <string name="chat_chat_not_found">Sohbet bulunamadı</string>
 
+    <string name="chat_list_more">Daha fazla</string>
+    <string name="chat_message_send">Gönder</string>
 </resources>

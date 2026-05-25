@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Weergavenaam</string>
     <string name="crm_auth_verification_failed">Verificatie mislukt</string>
     <string name="crm_list_title">Projecten</string>
@@ -64,6 +63,7 @@
     <string name="crm_watchers_unwatch">Stoppen met volgen</string>
     <string name="crm_parent_label">Bovenliggend</string>
     <string name="crm_parent_search_placeholder">Zoeken</string>
+    <string name="crm_links_title">Links</string>
     <string name="crm_links_add">Link toevoegen</string>
     <string name="crm_links_section_blocks">Blokkeert</string>
     <string name="crm_links_section_blocked_by">Geblokkeerd door</string>
@@ -80,6 +80,7 @@
     <string name="crm_comment_attach">Bestanden bijvoegen</string>
     <string name="crm_property_remove">Verwijderen</string>
     <string name="crm_property_option_none">Geen</string>
+    <string name="crm_attachments">Bijlagen</string>
     <string name="crm_attachment_add">Bijlage toevoegen</string>
     <string name="crm_request_empty">Geen merge requests</string>
     <string name="crm_request_status_draft">Concept</string>
@@ -120,6 +121,7 @@
     <string name="crm_classes_add_dialog_title">Klasse toevoegen</string>
     <string name="crm_classes_create">Aanmaken</string>
     <string name="crm_class_name">Naam</string>
+    <string name="crm_class_save_name">Naam opslaan</string>
     <string name="crm_class_title_field">Titelveld</string>
     <string name="crm_class_merge_requests">Merge requests</string>
     <string name="crm_class_fields">Velden</string>
@@ -158,5 +160,8 @@
     <string name="crm_views_sort_updated">Bijgewerkt</string>
     <string name="crm_views_sort_rank">Rang</string>
     <string name="crm_not_found">CRM niet gevonden</string>
-
+    <string name="crm_list_more">Meer</string>
+    <string name="crm_more">Meer</string>
+    <string name="crm_request_more">Meer</string>
+    <string name="crm_comment_send">Verzenden</string>
 </resources>

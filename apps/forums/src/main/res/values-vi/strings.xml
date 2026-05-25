@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Không tìm thấy diễn đàn</string>
     <string name="forums_post_not_found">Không tìm thấy bài viết</string>
 
+    <string name="forums_list_more">Thêm</string>
+    <string name="forums_comment_send">Gửi</string>
 </resources>

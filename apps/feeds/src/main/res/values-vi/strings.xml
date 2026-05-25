@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Nguồn cấp</string>
     <string name="feeds_find_feeds">Tìm nguồn cấp</string>
     <string name="feeds_create_feed">Tạo feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Thành viên</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Tên nguồn cấp</string>
+    <string name="feeds_save_name">Lưu tên</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner markdown không bắt buộc hiển thị ở đầu feed của bạn.</string>
     <string name="feeds_clear">Xóa</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Ký ức</string>
+    <string name="feeds_remove_source">Xoá nguồn</string>
     <string name="feeds_suggested_credibility_accept">Chấp nhận</string>
     <string name="feeds_rss_url_copied">Đã sao chép URL RSS vào clipboard</string>
     <string name="feeds_logout">Đăng xuất</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Đặt lại về mặc định</string>
     <string name="feeds_feed_not_found">Không tìm thấy nguồn cấp</string>
     <string name="feeds_post_not_found">Không tìm thấy bài viết</string>
+    <string name="feeds_post_select_feed">Vui lòng chọn một nguồn cấp</string>
+    <string name="feeds_post_empty_content">Vui lòng nhập văn bản hoặc đính kèm tệp</string>
     <string name="feeds_settings_feed_renamed">Đã đổi tên nguồn cấp</string>
+    <string name="feeds_settings_banner_saved">Banner đã được lưu</string>
+    <string name="feeds_settings_banner_cleared">Banner đã được xoá</string>
     <string name="feeds_settings_source_added">Đã thêm nguồn</string>
     <string name="feeds_settings_source_updated">Đã cập nhật nguồn</string>
     <string name="feeds_settings_source_removed">Đã xóa nguồn</string>
+    <string name="feeds_settings_source_polling">Đang lấy dữ liệu từ nguồn…</string>
     <string name="feeds_settings_access_updated">Đã cập nhật truy cập</string>
+    <string name="feeds_settings_access_revoked">Quyền truy cập đã bị thu hồi</string>
     <string name="feeds_settings_member_added">Đã thêm thành viên</string>
     <string name="feeds_settings_member_removed">Đã xoá thành viên</string>
-    <string name="feeds_settings_prompt_saved">Đã lưu prompt</string>
-    <string name="feeds_settings_banner_saved">Banner đã được lưu</string>
-    <string name="feeds_settings_banner_cleared">Banner đã được xoá</string>
-    <string name="feeds_settings_source_polling">Đang lấy dữ liệu từ nguồn…</string>
-    <string name="feeds_settings_access_revoked">Quyền truy cập đã bị thu hồi</string>
     <string name="feeds_settings_ai_mode_updated">Đã cập nhật chế độ AI</string>
     <string name="feeds_settings_ai_account_updated">Đã cập nhật tài khoản AI</string>
+    <string name="feeds_settings_prompt_saved">Đã lưu prompt</string>
     <string name="feeds_settings_prompt_reset">Nhắc nhở đã được đặt lại về mặc định</string>
-    <string name="feeds_post_select_feed">Vui lòng chọn một nguồn cấp</string>
-    <string name="feeds_post_empty_content">Vui lòng nhập văn bản hoặc đính kèm tệp</string>
-
+    <string name="feeds_send">Gửi</string>
 </resources>

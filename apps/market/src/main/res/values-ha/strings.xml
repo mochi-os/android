@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Kasuwa</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Tarihin rayuwa</string>
@@ -102,7 +101,7 @@
     <string name="market_dispute_dialog_cancel">Soke</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Mai siye</string>
     <string name="market_dispute_dialog_evidence_role_seller">Mai sayarwa</string>
-    <string name="market_dispute_dialog_evidence_role_staff">Ma\'aikatan Mochi</string>
+    <string name="market_dispute_dialog_evidence_role_staff">Ma\\'aikatan Mochi</string>
     <string name="market_dispute_dialog_failed">An gaza miƙa amsa</string>
     <string name="market_dispute_dialog_response_label">Amsarku</string>
     <string name="market_dispute_dialog_submit">Aikawa</string>
@@ -158,7 +157,7 @@
     <string name="market_editor_title">Take</string>
     <string name="market_editor_title_edit">Gyara listing</string>
     <string name="market_editor_title_new">Sabuwar talla</string>
-    <string name="market_editor_type">Nau\'in talla</string>
+    <string name="market_editor_type">Nau\\'in talla</string>
     <string name="market_editor_type_digital">Dijital</string>
     <string name="market_editor_type_physical">Na zahiri</string>
     <string name="market_editor_zone_cancel">Soke</string>
@@ -205,7 +204,7 @@
     <string name="market_filter_sort_price_low">Farashi: daga ƙasa zuwa sama</string>
     <string name="market_filter_sort_recent">Mafi sabon</string>
     <string name="market_filter_title">Tacewa</string>
-    <string name="market_filter_type">Nau\'i</string>
+    <string name="market_filter_type">Nau\\'i</string>
     <string name="market_filter_type_digital">Dijital</string>
     <string name="market_filter_type_physical">Na zahiri</string>
     <string name="market_listing_detail_already_reported">An bayar da rahoto</string>
@@ -219,6 +218,7 @@
     <string name="market_listing_detail_location_heading">Wuri</string>
     <string name="market_listing_detail_message_seller">Aika saƙo ga mai sayarwa</string>
     <string name="market_listing_detail_not_found">Ba a samu listing ba</string>
+    <string name="market_listing_detail_place_bid">Sanya tayi</string>
     <string name="market_listing_detail_relist">Sake listing</string>
     <string name="market_listing_detail_report">Bayar da rahoton listing</string>
     <string name="market_listing_detail_save">Adana</string>
@@ -313,7 +313,7 @@
     <string name="market_purchase_delivery">Jigilarwa</string>
     <string name="market_purchase_dispute_details">Cikakkun bayananku</string>
     <string name="market_purchase_dispute_reason">Dalili</string>
-    <string name="market_purchase_dispute_resolution">Warwarewar ma\'aikata</string>
+    <string name="market_purchase_dispute_resolution">Warwarewar ma\\'aikata</string>
     <string name="market_purchase_dispute_title">Buƙatar mayar da kuɗi</string>
     <string name="market_purchase_download_failed">An gaza saukewa</string>
     <string name="market_purchase_download_section">Sayayya ɗinku tana shirye</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">खाता प्रतिबंधित करीं</string>
@@ -36,8 +35,8 @@
     <string name="staff_accounts_unnamed">बेनाम</string>
     <string name="staff_accounts_unsuspend">निलंबन हटाईं</string>
     <string name="staff_accounts_unsuspended_toast">खाता पर से निलंबन हटा दिहल गइल</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">रद्द करीं</string>
     <string name="staff_appeals_decide">तय करीं</string>
     <string name="staff_appeals_decide_failed">अपील के निर्णय करे में विफल</string>
@@ -274,6 +273,7 @@
     <string name="staff_disputes_view">देखीं</string>
     <string name="staff_filter_chip_remove">फिल्टर हटाईं</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">मॉडरेशन</string>
     <string name="staff_filter_label_query">खोजीं</string>
     <string name="staff_filter_label_review_status">स्थिति</string>
     <string name="staff_filter_label_seller">बेचवइया</string>
@@ -468,5 +468,4 @@
     <string name="staff_team_toast_removed">सदस्य हटल</string>
     <string name="staff_team_toast_role_failed">भूमिका अपडेट करे में विफल</string>
     <string name="staff_team_toast_role_updated">भूमिका अपडेट हो गइल</string>
-
 </resources>

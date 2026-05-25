@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">ชื่อที่แสดง</string>
     <string name="projects_auth_verification_failed">การยืนยันไม่สำเร็จ</string>
     <string name="projects_list_title">โปรเจกต์</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">การเข้าถึง</string>
     <string name="projects_settings_tab_people">ผู้คน</string>
     <string name="projects_option_icon">ไอคอน</string>
+    <string name="projects_option_icon_placeholder">เช่น Check, Star, Flag</string>
     <string name="projects_settings_save">บันทึกการเปลี่ยนแปลง</string>
     <string name="projects_settings_unsubscribe">ยกเลิกการติดตาม</string>
     <string name="projects_settings_delete_project">ลบโครงการ</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">หยุดติดตาม</string>
     <string name="projects_parent_label">แม่</string>
     <string name="projects_parent_search_placeholder">ค้นหา</string>
+    <string name="projects_links_title">ลิงก์</string>
     <string name="projects_links_add">เพิ่มลิงก์</string>
     <string name="projects_links_section_blocks">บล็อก</string>
     <string name="projects_links_section_blocked_by">ถูกบล็อกโดย</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">แนบไฟล์</string>
     <string name="projects_property_remove">ลบ</string>
     <string name="projects_property_option_none">ไม่มี</string>
+    <string name="projects_attachments">ไฟล์แนบ</string>
     <string name="projects_attachment_add">เพิ่มไฟล์แนบ</string>
     <string name="projects_request_empty">ไม่มีคำขอผสาน</string>
     <string name="projects_request_status_draft">ฉบับร่าง</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">เพิ่มคลาส</string>
     <string name="projects_classes_create">สร้าง</string>
     <string name="projects_class_name">ชื่อ</string>
+    <string name="projects_class_save_name">บันทึกชื่อ</string>
     <string name="projects_class_title_field">ฟิลด์ชื่อ</string>
     <string name="projects_class_merge_requests">คำขอผสาน</string>
     <string name="projects_class_fields">ฟิลด์</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">อัปเดตแล้ว</string>
     <string name="projects_views_sort_rank">อันดับ</string>
     <string name="projects_project_not_found">ไม่พบโปรเจกต์</string>
-    <string name="projects_option_icon_placeholder">เช่น Check, Star, Flag</string>
-
+    <string name="projects_list_more">เพิ่มเติม</string>
+    <string name="projects_more">เพิ่มเติม</string>
+    <string name="projects_request_more">เพิ่มเติม</string>
+    <string name="projects_comment_send">ส่ง</string>
 </resources>

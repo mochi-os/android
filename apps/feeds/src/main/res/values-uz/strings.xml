@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Tasmalar</string>
     <string name="feeds_find_feeds">Tasmalarni topish</string>
     <string name="feeds_create_feed">Feed yaratish</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Aʼzolar</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Tasma nomi</string>
+    <string name="feeds_save_name">Nomni saqlash</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Lentangiz tepasida koʻrsatiladigan ixtiyoriy markdown banner.</string>
     <string name="feeds_clear">Tozalash</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi tasmasi</string>
     <string name="feeds_source_type_feed_memories">Xotiralar</string>
+    <string name="feeds_remove_source">Manbani olib tashlash</string>
     <string name="feeds_suggested_credibility_accept">Qabul qilish</string>
     <string name="feeds_rss_url_copied">RSS URL klipboardga nusxalandi</string>
     <string name="feeds_logout">Chiqish</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Standartga qaytarish</string>
     <string name="feeds_feed_not_found">Tasma topilmadi</string>
     <string name="feeds_post_not_found">Post topilmadi</string>
+    <string name="feeds_post_select_feed">Iltimos, oqimni tanlang</string>
+    <string name="feeds_post_empty_content">Iltimos, matn kiriting yoki faylni biriktiring</string>
     <string name="feeds_settings_feed_renamed">Tasma nomi oʻzgartirildi</string>
+    <string name="feeds_settings_banner_saved">Banner saqlandi</string>
+    <string name="feeds_settings_banner_cleared">Banner tozalandi</string>
     <string name="feeds_settings_source_added">Manba qoʻshildi</string>
     <string name="feeds_settings_source_updated">Manba yangilandi</string>
     <string name="feeds_settings_source_removed">Manba olib tashlandi</string>
+    <string name="feeds_settings_source_polling">Manba soʻraladi…</string>
     <string name="feeds_settings_access_updated">Kirish yangilandi</string>
+    <string name="feeds_settings_access_revoked">Kirish bekor qilindi</string>
     <string name="feeds_settings_member_added">Aʼzo qoʻshildi</string>
     <string name="feeds_settings_member_removed">Aʼzo olib tashlandi</string>
-    <string name="feeds_settings_prompt_saved">Soʻrov saqlandi</string>
-    <string name="feeds_settings_banner_saved">Banner saqlandi</string>
-    <string name="feeds_settings_banner_cleared">Banner tozalandi</string>
-    <string name="feeds_settings_source_polling">Manba soʻraladi…</string>
-    <string name="feeds_settings_access_revoked">Kirish bekor qilindi</string>
     <string name="feeds_settings_ai_mode_updated">AI rejimi yangilandi</string>
     <string name="feeds_settings_ai_account_updated">AI hisobi yangilandi</string>
+    <string name="feeds_settings_prompt_saved">Soʻrov saqlandi</string>
     <string name="feeds_settings_prompt_reset">Soʻrov standartga qaytarildi</string>
-    <string name="feeds_post_select_feed">Iltimos, oqimni tanlang</string>
-    <string name="feeds_post_empty_content">Iltimos, matn kiriting yoki faylni biriktiring</string>
-
+    <string name="feeds_send">Yuborish</string>
 </resources>

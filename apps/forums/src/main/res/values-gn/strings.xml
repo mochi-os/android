@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Foro nojetopái</string>
     <string name="forums_post_not_found">Marandu ndojejuhúi</string>
 
+    <string name="forums_list_more">Hetave</string>
+    <string name="forums_comment_send">Mondo</string>
 </resources>

@@ -31,4 +31,6 @@
     <string name="chat_members_you">توھان</string>
     <string name="chat_chat_not_found">چيٽ نه ملي</string>
 
+    <string name="chat_list_more">وڌيڪ</string>
+    <string name="chat_message_send">موڪليو</string>
 </resources>

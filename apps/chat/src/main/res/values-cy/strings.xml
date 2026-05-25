@@ -31,4 +31,6 @@
     <string name="chat_members_you">Chi</string>
     <string name="chat_chat_not_found">Sgwrs heb ei chanfod</string>
 
+    <string name="chat_list_more">Mwy</string>
+    <string name="chat_message_send">Anfon</string>
 </resources>

@@ -31,4 +31,6 @@
     <string name="chat_members_you">Ти</string>
     <string name="chat_chat_not_found">Разговор није пронађен</string>
 
+    <string name="chat_list_more">Више</string>
+    <string name="chat_message_send">Пошаљи</string>
 </resources>

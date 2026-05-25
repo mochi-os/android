@@ -42,4 +42,31 @@
     <string name="crm_views_edit_dialog_title">Editá la vista</string>
     <string name="crm_views_delete_title">Eliminá la vista</string>
 
+    <string name="crm_create_name">Nombre</string>
+    <string name="crm_class_name">Nombre</string>
+    <string name="crm_field_name">Nombre</string>
+    <string name="crm_create_action">Crear</string>
+    <string name="crm_request_create_action">Crear</string>
+    <string name="crm_classes_create">Crear</string>
+    <string name="crm_request_close">Cerrar</string>
+    <string name="crm_access_level_view">Ver</string>
+    <string name="crm_create_template_none">Ninguno</string>
+    <string name="crm_access_level_none">Ninguno</string>
+    <string name="crm_property_option_none">Ninguno</string>
+    <string name="crm_settings">Configuración</string>
+    <string name="crm_settings_title">Configuración</string>
+    <string name="crm_list_more">Más</string>
+    <string name="crm_more">Más</string>
+    <string name="crm_request_more">Más</string>
+    <string name="crm_comment_send">Enviar</string>
+    <string name="crm_create_description">Descripción</string>
+    <string name="crm_request_field_description">Descripción</string>
+    <string name="crm_create_object_type">Tipo</string>
+    <string name="crm_field_type">Tipo</string>
+    <string name="crm_views_type">Tipo</string>
+    <string name="crm_create_object_title_field">Título</string>
+    <string name="crm_request_field_title">Título</string>
+    <string name="crm_request_status_open">Abrir</string>
+    <string name="crm_board_new">Nuevo</string>
+    <string name="crm_field_type_user">Usuario</string>
 </resources>

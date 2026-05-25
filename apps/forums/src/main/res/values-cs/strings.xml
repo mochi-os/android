@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Fórum nenalezeno</string>
     <string name="forums_post_not_found">Příspěvek nenalezen</string>
 
+    <string name="forums_list_more">Více</string>
+    <string name="forums_comment_send">Odeslat</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feedkuna</string>
     <string name="feeds_find_feeds">Feedkunata tariy</string>
     <string name="feeds_create_feed">Feed kamariy</string>
@@ -24,7 +23,7 @@
     <string name="feeds_sort_label">Allichay</string>
     <string name="feeds_sort_interests">Munakuykuna</string>
     <string name="feeds_sort_new">Musuq</string>
-    <string name="feeds_sort_hot">Q\'uñi</string>
+    <string name="feeds_sort_hot">Q\\'uñi</string>
     <string name="feeds_sort_top">Hawan</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Qillqa</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Miembrokuna</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Feed suti</string>
+    <string name="feeds_save_name">Sutita waqaychay</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Feedniyki patapi rikuriq munasqakaq markdown banner.</string>
     <string name="feeds_clear">Pichay</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Yuyaykuna</string>
+    <string name="feeds_remove_source">Pukyuta hurquy</string>
     <string name="feeds_suggested_credibility_accept">Chaskiy</string>
     <string name="feeds_rss_url_copied">RSS URL clipboardman copiasqa</string>
     <string name="feeds_logout">Lluqsiy</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Por defectoman kutichiy</string>
     <string name="feeds_feed_not_found">Feed mana tarisqachu</string>
     <string name="feeds_post_not_found">Qillqa mana tarisqachu</string>
+    <string name="feeds_post_select_feed">Ama hina kaspa, huñuna akllay</string>
+    <string name="feeds_post_empty_content">Ama hina kaspa, qillqana churay utaq archivuta apaykachay</string>
     <string name="feeds_settings_feed_renamed">Feed sutichasqa</string>
+    <string name="feeds_settings_banner_saved">Banner waqaychasqa</string>
+    <string name="feeds_settings_banner_cleared">Banner pichasqa</string>
     <string name="feeds_settings_source_added">Pukyu yapasqa</string>
     <string name="feeds_settings_source_updated">Pukyu musuqchasqa</string>
     <string name="feeds_settings_source_removed">Pukyu qichusqa</string>
+    <string name="feeds_settings_source_polling">Pukyuta tapurispa…</string>
     <string name="feeds_settings_access_updated">Yaykuy musuqchasqa</string>
+    <string name="feeds_settings_access_revoked">Yaykuna anchurisqa</string>
     <string name="feeds_settings_member_added">Miembro yapasqa</string>
     <string name="feeds_settings_member_removed">Miembro pichasqa</string>
-    <string name="feeds_settings_prompt_saved">Prompt waqaychasqa</string>
-    <string name="feeds_settings_banner_saved">Banner waqaychasqa</string>
-    <string name="feeds_settings_banner_cleared">Banner pichasqa</string>
-    <string name="feeds_settings_source_polling">Pukyuta tapurispa…</string>
-    <string name="feeds_settings_access_revoked">Yaykuna anchurisqa</string>
     <string name="feeds_settings_ai_mode_updated">AI modo musuqyachisqa</string>
     <string name="feeds_settings_ai_account_updated">AI cuenta musuqyachisqa</string>
+    <string name="feeds_settings_prompt_saved">Prompt waqaychasqa</string>
     <string name="feeds_settings_prompt_reset">Tapuna pakaykunamanta kutichisqa</string>
-    <string name="feeds_post_select_feed">Ama hina kaspa, huñuna akllay</string>
-    <string name="feeds_post_empty_content">Ama hina kaspa, qillqana churay utaq archivuta apaykachay</string>
-
+    <string name="feeds_send">Apachiy</string>
 </resources>

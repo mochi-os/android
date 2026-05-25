@@ -31,4 +31,6 @@
     <string name="chat_members_you">تۆ</string>
     <string name="chat_chat_not_found">گفتوگۆ نەدۆزرایەوە</string>
 
+    <string name="chat_list_more">زیاتر</string>
+    <string name="chat_message_send">ناردن</string>
 </resources>

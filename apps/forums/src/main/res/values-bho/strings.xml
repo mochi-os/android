@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">फोरम नइखे मिलल</string>
     <string name="forums_post_not_found">पोस्ट ना मिलल</string>
 
+    <string name="forums_list_more">और</string>
+    <string name="forums_comment_send">भेजीं</string>
 </resources>

@@ -31,4 +31,6 @@
     <string name="chat_members_you">Sina</string>
     <string name="chat_chat_not_found">Vestlust ei leitud</string>
 
+    <string name="chat_list_more">Veel</string>
+    <string name="chat_message_send">Saada</string>
 </resources>

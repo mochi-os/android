@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Nome de exibição</string>
     <string name="projects_auth_verification_failed">Falha na verificação</string>
     <string name="projects_list_title">Projetos</string>
@@ -64,6 +63,7 @@
     <string name="projects_watchers_unwatch">Parar de observar</string>
     <string name="projects_parent_label">Pai</string>
     <string name="projects_parent_search_placeholder">Pesquisar</string>
+    <string name="projects_links_title">Links</string>
     <string name="projects_links_add">Adicionar link</string>
     <string name="projects_links_section_blocks">Bloqueia</string>
     <string name="projects_links_section_blocked_by">Bloqueado por</string>
@@ -80,6 +80,7 @@
     <string name="projects_comment_attach">Anexar arquivos</string>
     <string name="projects_property_remove">Remover</string>
     <string name="projects_property_option_none">Nenhum</string>
+    <string name="projects_attachments">Anexos</string>
     <string name="projects_attachment_add">Adicionar anexo</string>
     <string name="projects_request_empty">Nenhuma solicitação de mesclagem</string>
     <string name="projects_request_status_draft">Rascunho</string>
@@ -120,6 +121,7 @@
     <string name="projects_classes_add_dialog_title">Adicionar classe</string>
     <string name="projects_classes_create">Criar</string>
     <string name="projects_class_name">Nome</string>
+    <string name="projects_class_save_name">Salvar nome</string>
     <string name="projects_class_title_field">Campo de título</string>
     <string name="projects_class_merge_requests">Solicitações de mesclagem</string>
     <string name="projects_class_fields">Campos</string>
@@ -158,5 +160,8 @@
     <string name="projects_views_sort_updated">Atualizado</string>
     <string name="projects_views_sort_rank">Classificação</string>
     <string name="projects_project_not_found">Projeto não encontrado</string>
-
+    <string name="projects_list_more">Mais</string>
+    <string name="projects_more">Mais</string>
+    <string name="projects_request_more">Mais</string>
+    <string name="projects_comment_send">Enviar</string>
 </resources>

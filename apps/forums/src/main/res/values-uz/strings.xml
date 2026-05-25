@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Forum topilmadi</string>
     <string name="forums_post_not_found">Post topilmadi</string>
 
+    <string name="forums_list_more">Ko‘proq</string>
+    <string name="forums_comment_send">Yuborish</string>
 </resources>

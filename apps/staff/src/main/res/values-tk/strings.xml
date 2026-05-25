@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Hasaby gadagan etmek</string>
@@ -38,8 +37,8 @@
     <string name="staff_accounts_unnamed">Atsyz</string>
     <string name="staff_accounts_unsuspend">Togtatmany ýatyr</string>
     <string name="staff_accounts_unsuspended_toast">Hasap dikeldildi</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Ýatyrmak</string>
     <string name="staff_appeals_decide">Karar</string>
     <string name="staff_appeals_decide_failed">Şikaýat çözülmedi</string>
@@ -276,6 +275,7 @@
     <string name="staff_disputes_view">Görkez</string>
     <string name="staff_filter_chip_remove">Süzgüçi aýyr</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">Moderasiýa</string>
     <string name="staff_filter_label_query">Gözle</string>
     <string name="staff_filter_label_review_status">Status</string>
     <string name="staff_filter_label_seller">Satyjy</string>
@@ -472,5 +472,4 @@
     <string name="staff_team_toast_removed">Agza aýryldy</string>
     <string name="staff_team_toast_role_failed">Roly täzeläp bolmady</string>
     <string name="staff_team_toast_role_updated">Rol täzelendi</string>
-
 </resources>

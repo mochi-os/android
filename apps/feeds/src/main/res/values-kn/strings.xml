@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ಫೀಡ್‌ಗಳು</string>
     <string name="feeds_find_feeds">ಫೀಡ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="feeds_create_feed">ಫೀಡ್ ರಚಿಸಿ</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">ಸದಸ್ಯರು</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ಫೀಡ್ ಹೆಸರು</string>
+    <string name="feeds_save_name">ಹೆಸರು ಉಳಿಸಿ</string>
     <string name="feeds_banner">ಬ್ಯಾನರ್</string>
     <string name="feeds_banner_description">ನಿಮ್ಮ ಫೀಡ್‌ನ ಮೇಲ್ಭಾಗದಲ್ಲಿ ತೋರಿಸಲಾಗುವ ಐಚ್ಛಿಕ markdown ಬ್ಯಾನರ್.</string>
     <string name="feeds_clear">ತೆರವುಗೊಳಿಸಿ</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ಫೀಡ್</string>
     <string name="feeds_source_type_feed_memories">ಸ್ಮೃತಿಗಳು</string>
+    <string name="feeds_remove_source">ಮೂಲವನ್ನು ತೆಗೆದುಹಾಕಿ</string>
     <string name="feeds_suggested_credibility_accept">ಸ್ವೀಕರಿಸಿ</string>
     <string name="feeds_rss_url_copied">RSS URL ಅನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ಕಾಪಿ ಮಾಡಲಾಗಿದೆ</string>
     <string name="feeds_logout">ಲಾಗ್ ಔಟ್</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">ಡೀಫಾಲ್ಟ್‌ಗೆ ರೀಸೆಟ್ ಮಾಡಿ</string>
     <string name="feeds_feed_not_found">ಫೀಡ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="feeds_post_not_found">ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
+    <string name="feeds_post_select_feed">ದಯವಿಟ್ಟು ಫೀಡ್ ಒಂದನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="feeds_post_empty_content">ದಯವಿಟ್ಟು ಒಂದ್ ಪಠ್ಯವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಸೇರಿಸಲಿ ಅಥವಾ ಫೈಲ್‌ಅನ್ನು ಲಗತ್ತಿಸಲಿ</string>
     <string name="feeds_settings_feed_renamed">ಫೀಡ್ ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_banner_saved">ಬ್ಯಾನರ್ ಸುರಕ್ಷಿತವಾಗಿದೆ</string>
+    <string name="feeds_settings_banner_cleared">ಬ್ಯಾನರ್ ತಕೆರಳಗಾಗಿದೆ</string>
     <string name="feeds_settings_source_added">ಮೂಲ ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_source_updated">ಮೂಲ ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_source_removed">ಮೂಲ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
+    <string name="feeds_settings_source_polling">ಮೂಲವನ್ನು ವಿಚಾರವಾಗುತ್ತಿದೆ…</string>
     <string name="feeds_settings_access_updated">ಪ್ರವೇಶ ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_member_added">ಸದಸ್ಯ ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_member_removed">ಸದಸ್ಯ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
-    <string name="feeds_settings_prompt_saved">ಪ್ರಾಂಪ್ಟ್ ಉಳಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_settings_banner_saved">ಬ್ಯಾನರ್ ಸುರಕ್ಷಿತವಾಗಿದೆ</string>
-    <string name="feeds_settings_banner_cleared">ಬ್ಯಾನರ್ ತಕೆರಳಗಾಗಿದೆ</string>
-    <string name="feeds_settings_source_polling">ಮೂಲವನ್ನು ವಿಚಾರವಾಗುತ್ತಿದೆ…</string>
-    <string name="feeds_settings_access_revoked">ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_ai_mode_updated">AI ವಿಧಾನವನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_ai_account_updated">AI ಖಾತೆಯನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_settings_prompt_saved">ಪ್ರಾಂಪ್ಟ್ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="feeds_settings_prompt_reset">ಪ್ರಾಂಪ್ಟ್ ಡೆಫಾಲ್ಟ್‌ಗೆ ಮರುಹೊಂದಿಸಲಾಗಿದೆ</string>
-    <string name="feeds_post_select_feed">ದಯವಿಟ್ಟು ಫೀಡ್ ಒಂದನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
-    <string name="feeds_post_empty_content">ದಯವಿಟ್ಟು ಒಂದ್ ಪಠ್ಯವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಸೇರಿಸಲಿ ಅಥವಾ ಫೈಲ್‌ಅನ್ನು ಲಗತ್ತಿಸಲಿ</string>
-
+    <string name="feeds_send">ಕಳುಹಿಸಿ</string>
 </resources>

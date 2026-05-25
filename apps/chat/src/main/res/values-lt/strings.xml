@@ -31,4 +31,6 @@
     <string name="chat_members_you">Jūs</string>
     <string name="chat_chat_not_found">Pokalbis nerastas</string>
 
+    <string name="chat_list_more">Daugiau</string>
+    <string name="chat_message_send">Siųsti</string>
 </resources>

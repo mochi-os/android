@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Nombre visible</string>
     <string name="crm_auth_verification_failed">La verificación ha fallado</string>
     <string name="crm_list_title">Proyectos</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Acceso</string>
     <string name="crm_settings_tab_people">Personas</string>
     <string name="crm_option_icon">Icono</string>
+    <string name="crm_option_icon_placeholder">p. ej. Check, Star, Flag</string>
     <string name="crm_settings_save">Guardar cambios</string>
     <string name="crm_settings_unsubscribe">Cancelar suscripción</string>
     <string name="crm_settings_delete_crm">Eliminar proyecto</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Dejar de seguir</string>
     <string name="crm_parent_label">Principal</string>
     <string name="crm_parent_search_placeholder">Buscar</string>
+    <string name="crm_links_title">Enlaces</string>
     <string name="crm_links_add">Añadir enlace</string>
     <string name="crm_links_section_blocks">Bloquea</string>
     <string name="crm_links_section_blocked_by">Bloqueado por</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Adjuntar ficheros</string>
     <string name="crm_property_remove">Eliminar</string>
     <string name="crm_property_option_none">Ninguno</string>
+    <string name="crm_attachments">Adjuntos</string>
     <string name="crm_attachment_add">Añadir adjunto</string>
     <string name="crm_request_empty">No hay solicitudes de combinación</string>
     <string name="crm_request_status_draft">Borrador</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Añadir clase</string>
     <string name="crm_classes_create">Crear</string>
     <string name="crm_class_name">Nombre</string>
+    <string name="crm_class_save_name">Guardar nombre</string>
     <string name="crm_class_title_field">Campo de título</string>
     <string name="crm_class_merge_requests">Solicitudes de combinación</string>
     <string name="crm_class_fields">Campos</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Actualizado</string>
     <string name="crm_views_sort_rank">Rango</string>
     <string name="crm_not_found">Proyecto no encontrado</string>
-    <string name="crm_option_icon_placeholder">p. ej. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Más</string>
+    <string name="crm_more">Más</string>
+    <string name="crm_request_more">Más</string>
+    <string name="crm_comment_send">Enviar</string>
 </resources>

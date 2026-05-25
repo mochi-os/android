@@ -14,4 +14,21 @@
     <string name="common_saved">Gespeichert</string>
     <string name="common_not_saved">Nicht gespeichert</string>
     <string name="common_save_failed">Deine Änderungen konnten nicht gespeichert werden.</string>
+    <string name="auth_name">Name</string>
+    <string name="auth_create">Erstellen</string>
+    <string name="common_back">Zurück</string>
+    <string name="common_cancel">Abbrechen</string>
+    <string name="common_save">Speichern</string>
+    <string name="common_edit">Bearbeiten</string>
+    <string name="common_delete">Löschen</string>
+    <string name="common_add">Hinzufügen</string>
+    <string name="common_logout">Abmelden</string>
+    <string name="common_subscribe">Abonnieren</string>
+    <string name="access_level_view">Anzeigen</string>
+    <string name="access_level_none">Keine</string>
+    <string name="settings_radius_none">Keine</string>
+    <string name="settings_background_off">Keine</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_open">Einstellungen</string>
+    <string name="game_chat_subject_you">Du</string>
 </resources>

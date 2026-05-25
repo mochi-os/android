@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Көрсетілетін атау</string>
     <string name="projects_auth_verification_failed">Тексеру сәтсіз</string>
     <string name="projects_list_title">Жобалар</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Қол жеткізу</string>
     <string name="projects_settings_tab_people">Адамдар</string>
     <string name="projects_option_icon">Белгіше</string>
+    <string name="projects_option_icon_placeholder">мыс. Check, Star, Flag</string>
     <string name="projects_settings_save">Өзгерістерді сақтау</string>
     <string name="projects_settings_unsubscribe">Жазылудан бас тарту</string>
     <string name="projects_settings_delete_project">Жобаны жою</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Қарауды тоқтату</string>
     <string name="projects_parent_label">Ата-ана</string>
     <string name="projects_parent_search_placeholder">Іздеу</string>
+    <string name="projects_links_title">Сілтемелер</string>
     <string name="projects_links_add">Сілтеме қосу</string>
     <string name="projects_links_section_blocks">Bloks</string>
     <string name="projects_links_section_blocked_by">Бөгелді</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Файлдар тіркеу</string>
     <string name="projects_property_remove">Жою</string>
     <string name="projects_property_option_none">Жоқ</string>
+    <string name="projects_attachments">Тіркемелер</string>
     <string name="projects_attachment_add">Тіркеме қосу</string>
     <string name="projects_request_empty">Біріктіру сұраулары жоқ</string>
     <string name="projects_request_status_draft">Жоба</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Сынып қосу</string>
     <string name="projects_classes_create">Құру</string>
     <string name="projects_class_name">Аты</string>
+    <string name="projects_class_save_name">Атауды сақтау</string>
     <string name="projects_class_title_field">Тақырып өрісі</string>
     <string name="projects_class_merge_requests">Біріктіру сұраныстары</string>
     <string name="projects_class_fields">Өрістер</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Жаңартылды</string>
     <string name="projects_views_sort_rank">Дәреже</string>
     <string name="projects_project_not_found">Жоба табылмады</string>
-    <string name="projects_option_icon_placeholder">мыс. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Көбірек</string>
+    <string name="projects_more">Көбірек</string>
+    <string name="projects_request_more">Көбірек</string>
+    <string name="projects_comment_send">Жіберу</string>
 </resources>

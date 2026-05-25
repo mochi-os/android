@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ฟีด</string>
     <string name="feeds_find_feeds">ค้นหาฟีด</string>
     <string name="feeds_create_feed">สร้างฟีด</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">สมาชิก</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ชื่อฟีด</string>
+    <string name="feeds_save_name">บันทึกชื่อ</string>
     <string name="feeds_banner">แบนเนอร์</string>
     <string name="feeds_banner_description">แบนเนอร์ markdown ที่ไม่บังคับ แสดงที่ด้านบนของฟีดของคุณ</string>
     <string name="feeds_clear">ล้าง</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">ฟีด Mochi</string>
     <string name="feeds_source_type_feed_memories">ความทรงจำ</string>
+    <string name="feeds_remove_source">ลบแหล่งที่มา</string>
     <string name="feeds_suggested_credibility_accept">ยอมรับ</string>
     <string name="feeds_rss_url_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
     <string name="feeds_logout">ออกจากระบบ</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">รีเซ็ตเป็นค่าเริ่มต้น</string>
     <string name="feeds_feed_not_found">ไม่พบฟีด</string>
     <string name="feeds_post_not_found">ไม่พบโพสต์</string>
+    <string name="feeds_post_select_feed">โปรดเลือกฟีด</string>
+    <string name="feeds_post_empty_content">โปรดป้อนข้อความหรือแนบไฟล์</string>
     <string name="feeds_settings_feed_renamed">เปลี่ยนชื่อฟีดแล้ว</string>
+    <string name="feeds_settings_banner_saved">บันทึกแบนเนอร์แล้ว</string>
+    <string name="feeds_settings_banner_cleared">ล้างแบนเนอร์แล้ว</string>
     <string name="feeds_settings_source_added">เพิ่มแหล่งที่มาแล้ว</string>
     <string name="feeds_settings_source_updated">อัปเดตแหล่งที่มาแล้ว</string>
     <string name="feeds_settings_source_removed">ลบแหล่งที่มาแล้ว</string>
+    <string name="feeds_settings_source_polling">กำลังสอบถามแหล่งที่มา…</string>
     <string name="feeds_settings_access_updated">อัปเดตการเข้าถึงแล้ว</string>
+    <string name="feeds_settings_access_revoked">เพิกถอนการเข้าถึงแล้ว</string>
     <string name="feeds_settings_member_added">เพิ่มสมาชิกแล้ว</string>
     <string name="feeds_settings_member_removed">ลบสมาชิกแล้ว</string>
-    <string name="feeds_settings_prompt_saved">บันทึก prompt แล้ว</string>
-    <string name="feeds_settings_banner_saved">บันทึกแบนเนอร์แล้ว</string>
-    <string name="feeds_settings_banner_cleared">ล้างแบนเนอร์แล้ว</string>
-    <string name="feeds_settings_source_polling">กำลังสอบถามแหล่งที่มา…</string>
-    <string name="feeds_settings_access_revoked">เพิกถอนการเข้าถึงแล้ว</string>
     <string name="feeds_settings_ai_mode_updated">อัปเดตโหมด AI แล้ว</string>
     <string name="feeds_settings_ai_account_updated">อัปเดตบัญชี AI แล้ว</string>
+    <string name="feeds_settings_prompt_saved">บันทึก prompt แล้ว</string>
     <string name="feeds_settings_prompt_reset">รีเซ็ตคำถามเป็นค่าเริ่มต้นแล้ว</string>
-    <string name="feeds_post_select_feed">โปรดเลือกฟีด</string>
-    <string name="feeds_post_empty_content">โปรดป้อนข้อความหรือแนบไฟล์</string>
-
+    <string name="feeds_send">ส่ง</string>
 </resources>

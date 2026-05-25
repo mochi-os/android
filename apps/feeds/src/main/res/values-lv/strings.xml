@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Plūsmas</string>
     <string name="feeds_find_feeds">Atrast plūsmas</string>
     <string name="feeds_create_feed">Izveidot plūsmu</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Dalībnieki</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Plūsmas nosaukums</string>
+    <string name="feeds_save_name">Saglabāt nosaukumu</string>
     <string name="feeds_banner">Baneris</string>
     <string name="feeds_banner_description">Pēc izvēles markdown baneris, kas tiek rādīts plūsmas augšdaļā.</string>
     <string name="feeds_clear">Notīrīt</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi plūsma</string>
     <string name="feeds_source_type_feed_memories">Atmiņas</string>
+    <string name="feeds_remove_source">Noņemt avotu</string>
     <string name="feeds_suggested_credibility_accept">Pieņemt</string>
     <string name="feeds_rss_url_copied">RSS URL nokopēts starpliktuvē</string>
     <string name="feeds_logout">Izrakstīties</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Atiestatīt uz noklusējumu</string>
     <string name="feeds_feed_not_found">Plūsma nav atrasta</string>
     <string name="feeds_post_not_found">Ieraksts nav atrasts</string>
+    <string name="feeds_post_select_feed">Lūdzu, atlasiet plūsmu</string>
+    <string name="feeds_post_empty_content">Lūdzu, ievadiet tekstu vai pievienojiet failu</string>
     <string name="feeds_settings_feed_renamed">Plūsma pārdēvēta</string>
+    <string name="feeds_settings_banner_saved">Banneris saglabāts</string>
+    <string name="feeds_settings_banner_cleared">Banneris notīrīts</string>
     <string name="feeds_settings_source_added">Avots pievienots</string>
     <string name="feeds_settings_source_updated">Avots atjaunināts</string>
     <string name="feeds_settings_source_removed">Avots noņemts</string>
+    <string name="feeds_settings_source_polling">Notiek avota aptājašana…</string>
     <string name="feeds_settings_access_updated">Piekļuve atjaunināta</string>
+    <string name="feeds_settings_access_revoked">Piekļuve atsaukta</string>
     <string name="feeds_settings_member_added">Dalībnieks pievienots</string>
     <string name="feeds_settings_member_removed">Dalībnieks noņemts</string>
-    <string name="feeds_settings_prompt_saved">Pamudinājums saglabāts</string>
-    <string name="feeds_settings_banner_saved">Banneris saglabāts</string>
-    <string name="feeds_settings_banner_cleared">Banneris notīrīts</string>
-    <string name="feeds_settings_source_polling">Notiek avota aptājašana…</string>
-    <string name="feeds_settings_access_revoked">Piekļuve atsaukta</string>
     <string name="feeds_settings_ai_mode_updated">AI režīms atjaunināts</string>
     <string name="feeds_settings_ai_account_updated">AI konts atjaunināts</string>
+    <string name="feeds_settings_prompt_saved">Pamudinājums saglabāts</string>
     <string name="feeds_settings_prompt_reset">Pamudinājums atiestatīts uz noklusēto</string>
-    <string name="feeds_post_select_feed">Lūdzu, atlasiet plūsmu</string>
-    <string name="feeds_post_empty_content">Lūdzu, ievadiet tekstu vai pievienojiet failu</string>
-
+    <string name="feeds_send">Sūtīt</string>
 </resources>

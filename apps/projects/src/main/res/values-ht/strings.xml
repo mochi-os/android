@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Non afichaj</string>
     <string name="projects_auth_verification_failed">Verifikasyon echwe</string>
     <string name="projects_list_title">Pwojè yo</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Aksè</string>
     <string name="projects_settings_tab_people">Moun</string>
     <string name="projects_option_icon">Ikon</string>
+    <string name="projects_option_icon_placeholder">egz. Check, Star, Flag</string>
     <string name="projects_settings_save">Sove chanjman</string>
     <string name="projects_settings_unsubscribe">Dezabòne</string>
     <string name="projects_settings_delete_project">Efase pwojè</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Sispann gade</string>
     <string name="projects_parent_label">Paran</string>
     <string name="projects_parent_search_placeholder">Chèche</string>
+    <string name="projects_links_title">Lyen</string>
     <string name="projects_links_add">Ajoute lyen</string>
     <string name="projects_links_section_blocks">Blòk</string>
     <string name="projects_links_section_blocked_by">Bloke pa</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Tache fichye</string>
     <string name="projects_property_remove">Retire</string>
     <string name="projects_property_option_none">Okenn</string>
+    <string name="projects_attachments">Atachman yo</string>
     <string name="projects_attachment_add">Ajoute atachman</string>
     <string name="projects_request_empty">Pa gen demand merge</string>
     <string name="projects_request_status_draft">Bouyon</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Ajoute klas</string>
     <string name="projects_classes_create">Kreye</string>
     <string name="projects_class_name">Non</string>
+    <string name="projects_class_save_name">Sove non</string>
     <string name="projects_class_title_field">Chan tit</string>
     <string name="projects_class_merge_requests">Demand Merge</string>
     <string name="projects_class_fields">Chan</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Mete ajou</string>
     <string name="projects_views_sort_rank">Klasman</string>
     <string name="projects_project_not_found">Pwojè pa jwenn</string>
-    <string name="projects_option_icon_placeholder">egz. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Plis</string>
+    <string name="projects_more">Plis</string>
+    <string name="projects_request_more">Plis</string>
+    <string name="projects_comment_send">Voye</string>
 </resources>

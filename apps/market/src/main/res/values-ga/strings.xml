@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Margadh</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Beathaisnéis</string>
@@ -102,7 +101,7 @@
     <string name="market_dispute_dialog_evidence_role_seller">Díoltóir</string>
     <string name="market_dispute_dialog_evidence_role_staff">Foireann Mochi</string>
     <string name="market_dispute_dialog_failed">Theip ar fhreagra a chur isteach</string>
-    <string name="market_dispute_dialog_response_label">D\'fhreagra</string>
+    <string name="market_dispute_dialog_response_label">D\\'fhreagra</string>
     <string name="market_dispute_dialog_submit">Cuir isteach</string>
     <string name="market_dispute_dialog_submitting">Á sheoladh…</string>
     <string name="market_dispute_dialog_title">Freagair an díospóid</string>
@@ -168,7 +167,7 @@
     <string name="market_editor_zone_worldwide">Ar fud an domhain</string>
     <string name="market_empty_title">Gan torthaí</string>
     <string name="market_fee_preview_item">Mír</string>
-    <string name="market_fee_preview_payout">D\'íocaíocht amach</string>
+    <string name="market_fee_preview_payout">D\\'íocaíocht amach</string>
     <string name="market_filter_all">Iomlán</string>
     <string name="market_filter_apply">Cuir i bhfeidhm</string>
     <string name="market_filter_category">Catagóir</string>
@@ -210,6 +209,7 @@
     <string name="market_listing_detail_location_heading">Suíomh</string>
     <string name="market_listing_detail_message_seller">Teachtaireacht chuig díoltóir</string>
     <string name="market_listing_detail_not_found">Níor aimsíodh an liostú</string>
+    <string name="market_listing_detail_place_bid">Déan tairiscint</string>
     <string name="market_listing_detail_relist">Athliostáil</string>
     <string name="market_listing_detail_report">Tuairiscigh liostáil</string>
     <string name="market_listing_detail_save">Sábháil</string>
@@ -341,7 +341,7 @@
     <string name="market_rating_no_reviews">Níl aon athbhreithniú fós</string>
     <string name="market_rating_reviews">(%1$d léirmheas)</string>
     <string name="market_refund_amount_label">Méid</string>
-    <string name="market_refund_body">Tabhair cúis le d\'iarratas aisíocaíochta.</string>
+    <string name="market_refund_body">Tabhair cúis le d\\'iarratas aisíocaíochta.</string>
     <string name="market_refund_details_label">Sonraí</string>
     <string name="market_refund_dialog_cancel">Cealaigh</string>
     <string name="market_refund_dialog_description_label">Cur síos</string>
@@ -388,9 +388,9 @@
     <string name="market_sale_load_failed">Theip ar luchtú ordaithe</string>
     <string name="market_sale_message_buyer">Teachtaireacht chuig ceannaitheoir</string>
     <string name="market_sale_refund_action">Eisigh aisíocaíocht</string>
-    <string name="market_sale_review_response_existing">D\'fhreagra</string>
+    <string name="market_sale_review_response_existing">D\\'fhreagra</string>
     <string name="market_sale_review_response_failed">Theip ar fhreagra a chur isteach</string>
-    <string name="market_sale_review_response_label">D\'fhreagra</string>
+    <string name="market_sale_review_response_label">D\\'fhreagra</string>
     <string name="market_sale_review_response_submit">Cuir freagra isteach</string>
     <string name="market_sale_section_audit">Gníomhaíocht</string>
     <string name="market_sale_section_dispute">Díospóid</string>

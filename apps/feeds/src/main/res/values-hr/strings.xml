@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feedovi</string>
     <string name="feeds_find_feeds">Pronađi feedove</string>
     <string name="feeds_create_feed">Stvori feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Članovi</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Naziv feeda</string>
+    <string name="feeds_save_name">Spremi naziv</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Neobavezni markdown banner prikazan na vrhu vašeg feeda.</string>
     <string name="feeds_clear">Očisti</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Memorije</string>
+    <string name="feeds_remove_source">Ukloni izvor</string>
     <string name="feeds_suggested_credibility_accept">Prihvati</string>
     <string name="feeds_rss_url_copied">RSS URL kopiran u međuspremnik</string>
     <string name="feeds_logout">Odjavi se</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Resetiraj na zadano</string>
     <string name="feeds_feed_not_found">Feed nije pronađen</string>
     <string name="feeds_post_not_found">Objava nije pronađena</string>
+    <string name="feeds_post_select_feed">Odaberite feed</string>
+    <string name="feeds_post_empty_content">Unesite tekst ili priključite datoteku</string>
     <string name="feeds_settings_feed_renamed">Feed preimenovan</string>
+    <string name="feeds_settings_banner_saved">Banner spremljen</string>
+    <string name="feeds_settings_banner_cleared">Banner obrisan</string>
     <string name="feeds_settings_source_added">Izvor dodan</string>
     <string name="feeds_settings_source_updated">Izvor ažuriran</string>
     <string name="feeds_settings_source_removed">Izvor uklonjen</string>
+    <string name="feeds_settings_source_polling">Provjera izvora…</string>
     <string name="feeds_settings_access_updated">Pristup ažuriran</string>
+    <string name="feeds_settings_access_revoked">Pristup opozvan</string>
     <string name="feeds_settings_member_added">Član dodan</string>
     <string name="feeds_settings_member_removed">Član uklonjen</string>
-    <string name="feeds_settings_prompt_saved">Prompt spremljen</string>
-    <string name="feeds_settings_banner_saved">Banner spremljen</string>
-    <string name="feeds_settings_banner_cleared">Banner obrisan</string>
-    <string name="feeds_settings_source_polling">Provjera izvora…</string>
-    <string name="feeds_settings_access_revoked">Pristup opozvan</string>
     <string name="feeds_settings_ai_mode_updated">AI način rada ažuriran</string>
     <string name="feeds_settings_ai_account_updated">AI račun ažuriran</string>
+    <string name="feeds_settings_prompt_saved">Prompt spremljen</string>
     <string name="feeds_settings_prompt_reset">Upit vraćen na zadano</string>
-    <string name="feeds_post_select_feed">Odaberite feed</string>
-    <string name="feeds_post_empty_content">Unesite tekst ili priključite datoteku</string>
-
+    <string name="feeds_send">Pošalji</string>
 </resources>

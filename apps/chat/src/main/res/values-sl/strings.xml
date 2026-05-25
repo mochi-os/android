@@ -31,4 +31,6 @@
     <string name="chat_members_you">Ti</string>
     <string name="chat_chat_not_found">Klepet ni najden</string>
 
+    <string name="chat_list_more">Več</string>
+    <string name="chat_message_send">Pošlji</string>
 </resources>

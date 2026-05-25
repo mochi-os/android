@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="chat_list_close_search">Suche schliessen</string>
-
+    <string name="chat_message_placeholder">Message</string>
+    <string name="chat_settings_save">Speichern</string>
+    <string name="chat_list_logout">Abmelden</string>
+    <string name="chat_members_you">Du</string>
+    <string name="chat_list_search">Suchen</string>
+    <string name="chat_list_more">Mehr</string>
+    <string name="chat_message_send">Senden</string>
+    <string name="chat_settings_remove_member">Entfernen</string>
 </resources>

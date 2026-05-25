@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Görünen ad</string>
     <string name="crm_auth_verification_failed">Doğrulama başarısız</string>
     <string name="crm_list_title">Projeler</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Erişim</string>
     <string name="crm_settings_tab_people">Kişiler</string>
     <string name="crm_option_icon">Simge</string>
+    <string name="crm_option_icon_placeholder">ör. Check, Star, Flag</string>
     <string name="crm_settings_save">Değişiklikleri kaydet</string>
     <string name="crm_settings_unsubscribe">Aboneliği iptal et</string>
     <string name="crm_settings_delete_crm">Projeyi sil</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">İzlemeyi bırak</string>
     <string name="crm_parent_label">Üst</string>
     <string name="crm_parent_search_placeholder">Ara</string>
+    <string name="crm_links_title">Bağlantılar</string>
     <string name="crm_links_add">Bağlantı ekle</string>
     <string name="crm_links_section_blocks">Bloklar</string>
     <string name="crm_links_section_blocked_by">Engelleyen</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Dosya ekle</string>
     <string name="crm_property_remove">Kaldır</string>
     <string name="crm_property_option_none">Yok</string>
+    <string name="crm_attachments">Ekler</string>
     <string name="crm_attachment_add">Ek ekle</string>
     <string name="crm_request_empty">Merge request yok</string>
     <string name="crm_request_status_draft">Taslak</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Sınıf ekle</string>
     <string name="crm_classes_create">Oluştur</string>
     <string name="crm_class_name">Ad</string>
+    <string name="crm_class_save_name">Adı kaydet</string>
     <string name="crm_class_title_field">Başlık alanı</string>
     <string name="crm_class_merge_requests">Birleştirme istekleri</string>
     <string name="crm_class_fields">Alanlar</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Güncellendi</string>
     <string name="crm_views_sort_rank">Sıralama</string>
     <string name="crm_not_found">Proje bulunamadı</string>
-    <string name="crm_option_icon_placeholder">ör. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Daha fazla</string>
+    <string name="crm_more">Daha fazla</string>
+    <string name="crm_request_more">Daha fazla</string>
+    <string name="crm_comment_send">Gönder</string>
 </resources>

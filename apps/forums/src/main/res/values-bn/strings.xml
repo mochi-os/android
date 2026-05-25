@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">ফোরাম পাওয়া যায়নি</string>
     <string name="forums_post_not_found">পোস্ট পাওয়া যায়নি</string>
 
+    <string name="forums_list_more">আরো</string>
+    <string name="forums_comment_send">পাঠান</string>
 </resources>

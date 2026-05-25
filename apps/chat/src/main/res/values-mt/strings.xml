@@ -31,4 +31,6 @@
     <string name="chat_members_you">Int</string>
     <string name="chat_chat_not_found">Chat ma nstabitx</string>
 
+    <string name="chat_list_more">Aktar</string>
+    <string name="chat_message_send">Ibgħat</string>
 </resources>

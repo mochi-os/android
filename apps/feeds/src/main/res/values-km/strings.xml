@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ព័ត៌មានបង្ហាញ</string>
     <string name="feeds_find_feeds">ស្វែងរកព័ត៌មានបង្ហាញ</string>
     <string name="feeds_create_feed">បង្កើតមតិព័ត៌មាន</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">សមាជិក</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ឈ្មោះព័ត៌មានបង្ហាញ</string>
+    <string name="feeds_save_name">រក្សាទុកឈ្មោះ</string>
     <string name="feeds_banner">បដា</string>
     <string name="feeds_banner_description">បដា markdown ស្រេចចិត្តដែលបង្ហាញនៅផ្នែកខាងលើនៃ feed របស់អ្នក។</string>
     <string name="feeds_clear">សម្អាត</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">ព័ត៌មានបង្ហាញ Mochi</string>
     <string name="feeds_source_type_feed_memories">ការចងចាំ</string>
+    <string name="feeds_remove_source">លុបប្រភព</string>
     <string name="feeds_suggested_credibility_accept">ទទួលយក</string>
     <string name="feeds_rss_url_copied">បានចម្លង RSS URL ទៅ clipboard</string>
     <string name="feeds_logout">ចាកចេញ</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">កំណត់ឡើងវិញទៅលំនាំដើម</string>
     <string name="feeds_feed_not_found">រកមិនឃើញព័ត៌មានបង្ហាញ</string>
     <string name="feeds_post_not_found">រកមិនឃើញប្រកាស</string>
+    <string name="feeds_post_select_feed">សូមជែវសុនមានបានឈៅសួរភែរ</string>
+    <string name="feeds_post_empty_content">សូមបុរានសវែរញឮសលបាដះពាសៀវបាទឬគានសុបដាសៀវពែលតា</string>
     <string name="feeds_settings_feed_renamed">បានប្ដូរឈ្មោះព័ត៌មានបង្ហាញ</string>
+    <string name="feeds_settings_banner_saved">បានរកុទុកនៅបានែរ</string>
+    <string name="feeds_settings_banner_cleared">បានលុបបានែរ</string>
     <string name="feeds_settings_source_added">បានបន្ថែមប្រភព</string>
     <string name="feeds_settings_source_updated">បានធ្វើបច្ចុប្បន្នភាពប្រភព</string>
     <string name="feeds_settings_source_removed">បានដកប្រភព</string>
+    <string name="feeds_settings_source_polling">កំពុងសួរានិយលូវ…</string>
     <string name="feeds_settings_access_updated">បានធ្វើបច្ចុប្បន្នភាពការចូលប្រើ</string>
+    <string name="feeds_settings_access_revoked">សិទ្ធិបែររបស៴គទែរ</string>
     <string name="feeds_settings_member_added">បានបន្ថែមសមាជិក</string>
     <string name="feeds_settings_member_removed">បានដកសមាជិក</string>
-    <string name="feeds_settings_prompt_saved">បានរក្សាទុក prompt</string>
-    <string name="feeds_settings_banner_saved">បានរកុទុកនៅបានែរ</string>
-    <string name="feeds_settings_banner_cleared">បានលុបបានែរ</string>
-    <string name="feeds_settings_source_polling">កំពុងសួរានិយលូវ…</string>
-    <string name="feeds_settings_access_revoked">សិទ្ធិបែររបស៴គទែរ</string>
     <string name="feeds_settings_ai_mode_updated">វិទី AI ទែររានបែរ</string>
     <string name="feeds_settings_ai_account_updated">គននៀ AI ទែររានបែរ</string>
+    <string name="feeds_settings_prompt_saved">បានរក្សាទុក prompt</string>
     <string name="feeds_settings_prompt_reset">លានដែលដាកះបញ្ឈារូគិនបុនពែលួមពាវ</string>
-    <string name="feeds_post_select_feed">សូមជែវសុនមានបានឈៅសួរភែរ</string>
-    <string name="feeds_post_empty_content">សូមបុរានសវែរញឮសលបាដះពាសៀវបាទឬគានសុបដាសៀវពែលតា</string>
-
+    <string name="feeds_send">ផ្ញើ</string>
 </resources>

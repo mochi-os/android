@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">फोरम सापडले नाही</string>
     <string name="forums_post_not_found">पोस्ट सापडली नाही</string>
 
+    <string name="forums_list_more">अधिक</string>
+    <string name="forums_comment_send">पाठवा</string>
 </resources>

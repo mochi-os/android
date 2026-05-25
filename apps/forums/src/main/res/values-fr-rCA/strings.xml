@@ -4,4 +4,32 @@
     <string name="forums_create_privacy">Privacy</string>
     <string name="forums_report_reason_spam">Pourriel</string>
 
+    <string name="forums_create_name">Nom</string>
+    <string name="forums_create_action">Créer</string>
+    <string name="forums_post_save">Enregistrer</string>
+    <string name="forums_comment_save">Enregistrer</string>
+    <string name="forums_settings_save">Enregistrer</string>
+    <string name="forums_list_logout">Déconnexion</string>
+    <string name="forums_find_subscribe">S\'abonner</string>
+    <string name="forums_access_level_view">Voir</string>
+    <string name="forums_access_level_none">Aucun</string>
+    <string name="forums_settings">Paramètres</string>
+    <string name="forums_list_search">Rechercher</string>
+    <string name="forums_list_more">Plus</string>
+    <string name="forums_comment_send">Envoyer</string>
+    <string name="forums_post_remove">Supprimer</string>
+    <string name="forums_comment_remove">Supprimer</string>
+    <string name="forums_moderation_restriction_remove">Supprimer</string>
+    <string name="forums_moderation_restriction_type">Type</string>
+    <string name="forums_post_title_field">Titre</string>
+    <string name="forums_post_edit_title_field">Titre</string>
+    <string name="forums_list_unsubscribe">Se désabonner</string>
+    <string name="forums_list_unsubscribe_title">Se désabonner</string>
+    <string name="forums_settings_unsubscribe">Se désabonner</string>
+    <string name="forums_sort_new">Nouveau</string>
+    <string name="forums_post_default_author">Utilisateur</string>
+    <string name="forums_moderation_reports_all">Tous</string>
+    <string name="forums_moderation_reports_status">Statut</string>
+    <string name="forums_report_reason">Motif</string>
+    <string name="forums_report_reason_other">Autre</string>
 </resources>

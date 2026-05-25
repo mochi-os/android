@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Suapan</string>
     <string name="feeds_find_feeds">Cari suapan</string>
     <string name="feeds_create_feed">Cipta suapan</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Ahli</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Nama suapan</string>
+    <string name="feeds_save_name">Simpan nama</string>
     <string name="feeds_banner">Sepanduk</string>
     <string name="feeds_banner_description">Sepanduk markdown pilihan dipaparkan di bahagian atas suapan anda.</string>
     <string name="feeds_clear">Kosongkan</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Suapan Mochi</string>
     <string name="feeds_source_type_feed_memories">Memori</string>
+    <string name="feeds_remove_source">Buang sumber</string>
     <string name="feeds_suggested_credibility_accept">Terima</string>
     <string name="feeds_rss_url_copied">URL RSS disalin ke papan keratan</string>
     <string name="feeds_logout">Log keluar</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Tetapkan semula kepada lalai</string>
     <string name="feeds_feed_not_found">Suapan tidak ditemui</string>
     <string name="feeds_post_not_found">Hantaran tidak dijumpai</string>
+    <string name="feeds_post_select_feed">Sila pilih suapan</string>
+    <string name="feeds_post_empty_content">Sila masukkan teks atau lampirkan fail</string>
     <string name="feeds_settings_feed_renamed">Suapan dinamakan semula</string>
+    <string name="feeds_settings_banner_saved">Sepanduk disimpan</string>
+    <string name="feeds_settings_banner_cleared">Sepanduk dikosongkan</string>
     <string name="feeds_settings_source_added">Sumber ditambah</string>
     <string name="feeds_settings_source_updated">Sumber dikemas kini</string>
     <string name="feeds_settings_source_removed">Sumber dialih keluar</string>
+    <string name="feeds_settings_source_polling">Mengundi sumber…</string>
     <string name="feeds_settings_access_updated">Akses dikemas kini</string>
+    <string name="feeds_settings_access_revoked">Akses dibatalkan</string>
     <string name="feeds_settings_member_added">Ahli ditambah</string>
     <string name="feeds_settings_member_removed">Ahli dialih keluar</string>
-    <string name="feeds_settings_prompt_saved">Gesaan disimpan</string>
-    <string name="feeds_settings_banner_saved">Sepanduk disimpan</string>
-    <string name="feeds_settings_banner_cleared">Sepanduk dikosongkan</string>
-    <string name="feeds_settings_source_polling">Mengundi sumber…</string>
-    <string name="feeds_settings_access_revoked">Akses dibatalkan</string>
     <string name="feeds_settings_ai_mode_updated">Mod AI dikemas kini</string>
     <string name="feeds_settings_ai_account_updated">Akaun AI dikemas kini</string>
+    <string name="feeds_settings_prompt_saved">Gesaan disimpan</string>
     <string name="feeds_settings_prompt_reset">Gesaan ditetapkan semula kepada lalai</string>
-    <string name="feeds_post_select_feed">Sila pilih suapan</string>
-    <string name="feeds_post_empty_content">Sila masukkan teks atau lampirkan fail</string>
-
+    <string name="feeds_send">Hantar</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">మార్కెట్</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">జీవిత చరిత్ర</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">మార్పులు సేవ్ చేయబడ్డాయి</string>
     <string name="market_account_status_banned_title">ఖాతా నిషేధించబడింది</string>
     <string name="market_account_status_suspended_title">ఖాతా సస్పెండ్ చేయబడింది</string>
+    <string name="market_account_stripe_dashboard">Stripe డాష్‌బోర్డ్ తెరవండి</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">ఖాతా</string>
     <string name="market_appeal_dialog_cancel">రద్దు చేయండి</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">స్థానం</string>
     <string name="market_listing_detail_message_seller">విక్రేతకు సందేశం పంపండి</string>
     <string name="market_listing_detail_not_found">లిస్టింగ్ కనుగొనబడలేదు</string>
+    <string name="market_listing_detail_place_bid">బిడ్ చేయండి</string>
     <string name="market_listing_detail_relist">రీలిస్ట్</string>
     <string name="market_listing_detail_report">లిస్టింగ్‌ను రిపోర్ట్ చేయండి</string>
     <string name="market_listing_detail_save">సేవ్ చేయండి</string>

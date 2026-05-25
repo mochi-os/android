@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Mga feed</string>
     <string name="feeds_find_feeds">Maghanap ng mga feed</string>
     <string name="feeds_create_feed">Gumawa ng feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Mga Miyembro</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Pangalan ng feed</string>
+    <string name="feeds_save_name">I-save ang pangalan</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Opsyonal na markdown banner na ipinapakita sa itaas ng iyong feed.</string>
     <string name="feeds_clear">Burahin</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Mga Alaala</string>
+    <string name="feeds_remove_source">Tanggalin ang pinagmulan</string>
     <string name="feeds_suggested_credibility_accept">Tanggapin</string>
     <string name="feeds_rss_url_copied">Nakopya ang RSS URL sa clipboard</string>
     <string name="feeds_logout">Mag-log out</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">I-reset sa default</string>
     <string name="feeds_feed_not_found">Hindi nahanap ang feed</string>
     <string name="feeds_post_not_found">Hindi nahanap ang post</string>
+    <string name="feeds_post_select_feed">Mangyaring pumili ng feed</string>
+    <string name="feeds_post_empty_content">Mangyaring magpasok ng teksto o maglakip ng file</string>
     <string name="feeds_settings_feed_renamed">Na-rename ang feed</string>
+    <string name="feeds_settings_banner_saved">Nai-save ang banner</string>
+    <string name="feeds_settings_banner_cleared">Naalis ang banner</string>
     <string name="feeds_settings_source_added">Naidagdag ang source</string>
     <string name="feeds_settings_source_updated">Na-update ang source</string>
     <string name="feeds_settings_source_removed">Tinanggal ang source</string>
+    <string name="feeds_settings_source_polling">Sinusuri ang pinagmulan…</string>
     <string name="feeds_settings_access_updated">Na-update ang access</string>
+    <string name="feeds_settings_access_revoked">Binawi ang access</string>
     <string name="feeds_settings_member_added">Naidagdag ang miyembro</string>
     <string name="feeds_settings_member_removed">Naalis ang miyembro</string>
-    <string name="feeds_settings_prompt_saved">Na-save ang prompt</string>
-    <string name="feeds_settings_banner_saved">Nai-save ang banner</string>
-    <string name="feeds_settings_banner_cleared">Naalis ang banner</string>
-    <string name="feeds_settings_source_polling">Sinusuri ang pinagmulan…</string>
-    <string name="feeds_settings_access_revoked">Binawi ang access</string>
     <string name="feeds_settings_ai_mode_updated">Na-update ang mode ng AI</string>
     <string name="feeds_settings_ai_account_updated">Na-update ang account ng AI</string>
+    <string name="feeds_settings_prompt_saved">Na-save ang prompt</string>
     <string name="feeds_settings_prompt_reset">Na-reset ang prompt sa default</string>
-    <string name="feeds_post_select_feed">Mangyaring pumili ng feed</string>
-    <string name="feeds_post_empty_content">Mangyaring magpasok ng teksto o maglakip ng file</string>
-
+    <string name="feeds_send">Ipadala</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">പ്രദർശന നാമം</string>
     <string name="crm_auth_verification_failed">സ്ഥിരീകരണം പരാജയപ്പെട്ടു</string>
     <string name="crm_list_title">prompt സേവ് ചെയ്തു</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">ആക്സസ്</string>
     <string name="crm_settings_tab_people">People</string>
     <string name="crm_option_icon">ഐക്കൺ</string>
+    <string name="crm_option_icon_placeholder">ഉദാ. Check, Star, Flag</string>
     <string name="crm_settings_save">മാറ്റങ്ങൾ സേവ് ചെയ്യുക</string>
     <string name="crm_settings_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="crm_settings_delete_crm">പ്രോജക്റ്റ് ഇല്ലാതാക്കുക</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">നിരീക്ഷണം നിർത്തുക</string>
     <string name="crm_parent_label">parent</string>
     <string name="crm_parent_search_placeholder">തിരയുക</string>
+    <string name="crm_links_title">ലിങ്കുകൾ</string>
     <string name="crm_links_add">ലിങ്ക് ചേർക്കുക</string>
     <string name="crm_links_section_blocks">തടയുന്നു</string>
     <string name="crm_links_section_blocked_by">തടഞ്ഞത്</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="crm_property_remove">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
     <string name="crm_property_option_none">ഒന്നുമില്ല</string>
+    <string name="crm_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="crm_attachment_add">അറ്റാച്ച്മെന്റ് ചേർക്കുക</string>
     <string name="crm_request_empty">merge requests-കളൊന്നുമില്ല</string>
     <string name="crm_request_status_draft">ഡ്രാഫ്റ്റ്</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">ക്ലാസ് ചേർക്കുക</string>
     <string name="crm_classes_create">സൃഷ്ടിക്കുക</string>
     <string name="crm_class_name">പേര്</string>
+    <string name="crm_class_save_name">പേര് സംരക്ഷിക്കുക</string>
     <string name="crm_class_title_field">തലക്കെട്ട് ഫീൽഡ്</string>
     <string name="crm_class_merge_requests">മെർജ് റിക്വസ്റ്റുകൾ</string>
     <string name="crm_class_fields">ഫീൽഡുകൾ</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="crm_views_sort_rank">Rate Limiting</string>
     <string name="crm_not_found">പ്രോജക്റ്റ് ലഭ്യമല്ല</string>
-    <string name="crm_option_icon_placeholder">ഉദാ. Check, Star, Flag</string>
-
+    <string name="crm_list_more">കൂടുതൽ</string>
+    <string name="crm_more">കൂടുതൽ</string>
+    <string name="crm_request_more">കൂടുതൽ</string>
+    <string name="crm_comment_send">അയയ്ക്കുക</string>
 </resources>

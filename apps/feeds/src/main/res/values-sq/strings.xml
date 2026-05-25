@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feeds</string>
     <string name="feeds_find_feeds">Gjej feeds</string>
     <string name="feeds_create_feed">Krijo feed</string>
@@ -11,7 +10,7 @@
     <string name="feeds_memories">Kujtimet</string>
     <string name="feeds_create">Krijo</string>
     <string name="feeds_dismiss">Hidhe</string>
-    <string name="feeds_no_feeds_found">S\'u gjet asnjë feed</string>
+    <string name="feeds_no_feeds_found">S\\'u gjet asnjë feed</string>
     <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_mark_all_read">Shëno të gjitha si të lexuara</string>
     <string name="feeds_settings">Cilësimet</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Anëtarët</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Emri i feed</string>
+    <string name="feeds_save_name">Ruaj emrin</string>
     <string name="feeds_banner">Banner-i</string>
     <string name="feeds_banner_description">Baner markdown opsional i shfaqur në krye të feed-it tuaj.</string>
     <string name="feeds_clear">Pastro</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Kujtimet</string>
+    <string name="feeds_remove_source">Hiq burimin</string>
     <string name="feeds_suggested_credibility_accept">Prano</string>
     <string name="feeds_rss_url_copied">URL e RSS u kopjua në clipboard</string>
     <string name="feeds_logout">Dilni</string>
@@ -79,23 +80,23 @@
     <string name="feeds_ai_mode_tag_deduplicate">Etiketo + duplikatat</string>
     <string name="feeds_ai_reset_default">Rivendos në parazgjedhje</string>
     <string name="feeds_feed_not_found">Feed nuk u gjet</string>
-    <string name="feeds_post_not_found">Postimi s\'u gjet</string>
+    <string name="feeds_post_not_found">Postimi s\\'u gjet</string>
+    <string name="feeds_post_select_feed">Ju lutemi zgjidhni një ushqim</string>
+    <string name="feeds_post_empty_content">Ju lutemi shkruani disa tekste ose bashkëngjisni një skedar</string>
     <string name="feeds_settings_feed_renamed">Feed u riemërua</string>
+    <string name="feeds_settings_banner_saved">Banneri u ruajt</string>
+    <string name="feeds_settings_banner_cleared">Banneri u pastrua</string>
     <string name="feeds_settings_source_added">Burimi u shtua</string>
     <string name="feeds_settings_source_updated">Burimi u përditësua</string>
     <string name="feeds_settings_source_removed">Burimi u hoq</string>
+    <string name="feeds_settings_source_polling">Po sondazhohet burimi…</string>
     <string name="feeds_settings_access_updated">Qasja u përditësua</string>
+    <string name="feeds_settings_access_revoked">Aksesi u revokua</string>
     <string name="feeds_settings_member_added">Anëtari u shtua</string>
     <string name="feeds_settings_member_removed">Anëtari u hoq</string>
-    <string name="feeds_settings_prompt_saved">Prompti u ruajt</string>
-    <string name="feeds_settings_banner_saved">Banneri u ruajt</string>
-    <string name="feeds_settings_banner_cleared">Banneri u pastrua</string>
-    <string name="feeds_settings_source_polling">Po sondazhohet burimi…</string>
-    <string name="feeds_settings_access_revoked">Aksesi u revokua</string>
     <string name="feeds_settings_ai_mode_updated">Modaliteti i IA u përditësua</string>
     <string name="feeds_settings_ai_account_updated">Llogaria e IA u përditësua</string>
+    <string name="feeds_settings_prompt_saved">Prompti u ruajt</string>
     <string name="feeds_settings_prompt_reset">Sugjerimi u rivendos në të parazgjedhurin</string>
-    <string name="feeds_post_select_feed">Ju lutemi zgjidhni një ushqim</string>
-    <string name="feeds_post_empty_content">Ju lutemi shkruani disa tekste ose bashkëngjisni një skedar</string>
-
+    <string name="feeds_send">Dërgo</string>
 </resources>

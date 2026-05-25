@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feeds</string>
     <string name="feeds_find_feeds">Vind feeds</string>
     <string name="feeds_create_feed">Skep feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Lede</string>
     <string name="feeds_tab_ai">KI</string>
     <string name="feeds_feed_name">Feed-naam</string>
+    <string name="feeds_save_name">Stoor naam</string>
     <string name="feeds_banner">Banier</string>
     <string name="feeds_banner_description">Opsionele markdown-banier wat boaan jou feed vertoon word.</string>
     <string name="feeds_clear">Maak skoon</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-feed</string>
     <string name="feeds_source_type_feed_memories">Herinneringe</string>
+    <string name="feeds_remove_source">Verwyder bron</string>
     <string name="feeds_suggested_credibility_accept">Aanvaar</string>
     <string name="feeds_rss_url_copied">RSS-URL na knipbord gekopieer</string>
     <string name="feeds_logout">Meld af</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Stel terug na verstek</string>
     <string name="feeds_feed_not_found">Feed nie gevind nie</string>
     <string name="feeds_post_not_found">Plasing nie gevind nie</string>
+    <string name="feeds_post_select_feed">Kies asseblief \\'n stroom</string>
+    <string name="feeds_post_empty_content">Voer asseblief teks in of heg \\'n lêer aan</string>
     <string name="feeds_settings_feed_renamed">Feed hernoem</string>
+    <string name="feeds_settings_banner_saved">Banier gestoor</string>
+    <string name="feeds_settings_banner_cleared">Banier verwyder</string>
     <string name="feeds_settings_source_added">Bron bygevoeg</string>
     <string name="feeds_settings_source_updated">Bron opgedateer</string>
     <string name="feeds_settings_source_removed">Bron verwyder</string>
+    <string name="feeds_settings_source_polling">Bron word gepol…</string>
     <string name="feeds_settings_access_updated">Toegang opgedateer</string>
+    <string name="feeds_settings_access_revoked">Toegang ingetrek</string>
     <string name="feeds_settings_member_added">Lid bygevoeg</string>
     <string name="feeds_settings_member_removed">Lid verwyder</string>
-    <string name="feeds_settings_prompt_saved">Aanwysing gestoor</string>
-    <string name="feeds_settings_banner_saved">Banier gestoor</string>
-    <string name="feeds_settings_banner_cleared">Banier verwyder</string>
-    <string name="feeds_settings_source_polling">Bron word gepol…</string>
-    <string name="feeds_settings_access_revoked">Toegang ingetrek</string>
     <string name="feeds_settings_ai_mode_updated">KI-modus bygewerk</string>
     <string name="feeds_settings_ai_account_updated">KI-rekening bygewerk</string>
+    <string name="feeds_settings_prompt_saved">Aanwysing gestoor</string>
     <string name="feeds_settings_prompt_reset">Aansporing teruggestel na standaard</string>
-    <string name="feeds_post_select_feed">Kies asseblief \'n stroom</string>
-    <string name="feeds_post_empty_content">Voer asseblief teks in of heg \'n lêer aan</string>
-
+    <string name="feeds_send">Stuur</string>
 </resources>

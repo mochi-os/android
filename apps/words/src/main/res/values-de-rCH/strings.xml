@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="words_detail_cancel">Abbrechen</string>
+    <string name="words_list_logout">Abmelden</string>
+    <string name="words_detail_label_you">Du</string>
+</resources>

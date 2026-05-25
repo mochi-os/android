@@ -31,4 +31,6 @@
     <string name="chat_members_you">Bạn</string>
     <string name="chat_chat_not_found">Không tìm thấy cuộc trò chuyện</string>
 
+    <string name="chat_list_more">Thêm</string>
+    <string name="chat_message_send">Gửi</string>
 </resources>

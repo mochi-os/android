@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Forum ni najden</string>
     <string name="forums_post_not_found">Objave ni mogoče najti</string>
 
+    <string name="forums_list_more">Več</string>
+    <string name="forums_comment_send">Pošlji</string>
 </resources>

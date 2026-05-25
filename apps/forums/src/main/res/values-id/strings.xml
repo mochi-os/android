@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Forum tidak ditemukan</string>
     <string name="forums_post_not_found">Postingan tidak ditemukan</string>
 
+    <string name="forums_list_more">Lainnya</string>
+    <string name="forums_comment_send">Kirim</string>
 </resources>

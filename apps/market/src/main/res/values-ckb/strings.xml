@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Market</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ژیاننامە</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">گۆڕانکارییەکان پاشەکەوت کران</string>
     <string name="market_account_status_banned_title">هەژمار بلۆککرا</string>
     <string name="market_account_status_suspended_title">هەژمار ڕاگیراوە</string>
+    <string name="market_account_stripe_dashboard">کردنەوەی داشبۆردی Stripe</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">هەژمار</string>
     <string name="market_appeal_dialog_cancel">هەڵوەشاندنەوە</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">شوێن</string>
     <string name="market_listing_detail_message_seller">پەیام بۆ فرۆشیار</string>
     <string name="market_listing_detail_not_found">ناونووسکراو نەدۆزرایەوە</string>
+    <string name="market_listing_detail_place_bid">پێشنیار</string>
     <string name="market_listing_detail_relist">دووبارە لیستکردن</string>
     <string name="market_listing_detail_report">ڕاپۆرتکردنی لیست</string>
     <string name="market_listing_detail_save">پاشەکەوتکردن</string>

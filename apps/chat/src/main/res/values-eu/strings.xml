@@ -31,4 +31,6 @@
     <string name="chat_members_you">Zu</string>
     <string name="chat_chat_not_found">Txata ez da aurkitu</string>
 
+    <string name="chat_list_more">Gehiago</string>
+    <string name="chat_message_send">Bidali</string>
 </resources>

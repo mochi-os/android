@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">포럼을 찾을 수 없어요</string>
     <string name="forums_post_not_found">게시물을 찾을 수 없어요</string>
 
+    <string name="forums_list_more">더 보기</string>
+    <string name="forums_comment_send">보내기</string>
 </resources>

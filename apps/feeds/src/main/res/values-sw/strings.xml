@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Mlisho</string>
     <string name="feeds_find_feeds">Tafuta mlisho</string>
     <string name="feeds_create_feed">Unda mlisho</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Wanachama</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Jina la mlisho</string>
+    <string name="feeds_save_name">Hifadhi jina</string>
     <string name="feeds_banner">Bango</string>
     <string name="feeds_banner_description">Bango la hiari la markdown linaloonyeshwa juu ya mlisho wako.</string>
     <string name="feeds_clear">Futa</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mlisho wa Mochi</string>
     <string name="feeds_source_type_feed_memories">Kumbukumbu</string>
+    <string name="feeds_remove_source">Ondoa chanzo</string>
     <string name="feeds_suggested_credibility_accept">Kubali</string>
     <string name="feeds_rss_url_copied">URL ya RSS imenakiliwa kwenye ubao wa kunakili</string>
     <string name="feeds_logout">Toka</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Weka upya kwa chaguo-msingi</string>
     <string name="feeds_feed_not_found">Mlisho haukupatikana</string>
     <string name="feeds_post_not_found">Chapisho halikupatikana</string>
+    <string name="feeds_post_select_feed">Tafadhali chagua mlisho</string>
+    <string name="feeds_post_empty_content">Tafadhali andika maandishi au ambatisha faili</string>
     <string name="feeds_settings_feed_renamed">Mlisho umebadilishwa jina</string>
+    <string name="feeds_settings_banner_saved">Bango limehifadhiwa</string>
+    <string name="feeds_settings_banner_cleared">Bango limefutwa</string>
     <string name="feeds_settings_source_added">Chanzo kimeongezwa</string>
     <string name="feeds_settings_source_updated">Chanzo kimesasishwa</string>
     <string name="feeds_settings_source_removed">Chanzo kimeondolewa</string>
+    <string name="feeds_settings_source_polling">Inahoji chanzo…</string>
     <string name="feeds_settings_access_updated">Ufikiaji umesasishwa</string>
+    <string name="feeds_settings_access_revoked">Ufikiaji umebatilishwa</string>
     <string name="feeds_settings_member_added">Mwanachama ameongezwa</string>
     <string name="feeds_settings_member_removed">Mwanachama ameondolewa</string>
-    <string name="feeds_settings_prompt_saved">Kidokezo kimehifadhiwa</string>
-    <string name="feeds_settings_banner_saved">Bango limehifadhiwa</string>
-    <string name="feeds_settings_banner_cleared">Bango limefutwa</string>
-    <string name="feeds_settings_source_polling">Inahoji chanzo…</string>
-    <string name="feeds_settings_access_revoked">Ufikiaji umebatilishwa</string>
     <string name="feeds_settings_ai_mode_updated">Hali ya AI imesasishwa</string>
     <string name="feeds_settings_ai_account_updated">Akaunti ya AI imesasishwa</string>
+    <string name="feeds_settings_prompt_saved">Kidokezo kimehifadhiwa</string>
     <string name="feeds_settings_prompt_reset">Kidokezo kimerejeshwa kwa chaguo-msingi</string>
-    <string name="feeds_post_select_feed">Tafadhali chagua mlisho</string>
-    <string name="feeds_post_empty_content">Tafadhali andika maandishi au ambatisha faili</string>
-
+    <string name="feeds_send">Tuma</string>
 </resources>

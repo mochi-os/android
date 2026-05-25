@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Rodomas vardas</string>
     <string name="crm_auth_verification_failed">Patvirtinimas nepavyko</string>
     <string name="crm_list_title">Projektai</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Prieiga</string>
     <string name="crm_settings_tab_people">Žmonės</string>
     <string name="crm_option_icon">Piktograma</string>
+    <string name="crm_option_icon_placeholder">pvz. Check, Star, Flag</string>
     <string name="crm_settings_save">Išsaugoti pakeitimus</string>
     <string name="crm_settings_unsubscribe">Atšaukti prenumeratą</string>
     <string name="crm_settings_delete_crm">Ištrinti projektą</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Nebestebėti</string>
     <string name="crm_parent_label">Tėvas</string>
     <string name="crm_parent_search_placeholder">Ieškoti</string>
+    <string name="crm_links_title">Nuorodos</string>
     <string name="crm_links_add">Pridėti nuorodą</string>
     <string name="crm_links_section_blocks">Blokai</string>
     <string name="crm_links_section_blocked_by">Užblokuota dėl</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Pridėti failus</string>
     <string name="crm_property_remove">Šalinti</string>
     <string name="crm_property_option_none">Nėra</string>
+    <string name="crm_attachments">Priedai</string>
     <string name="crm_attachment_add">Pridėti priedą</string>
     <string name="crm_request_empty">Nėra Merge Requestų</string>
     <string name="crm_request_status_draft">Juodraštis</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Pridėti klasę</string>
     <string name="crm_classes_create">Sukurti</string>
     <string name="crm_class_name">Pavadinimas</string>
+    <string name="crm_class_save_name">Išsaugoti pavadinimą</string>
     <string name="crm_class_title_field">Pavadinimo laukas</string>
     <string name="crm_class_merge_requests">Sujungimo užklausos</string>
     <string name="crm_class_fields">Laukai</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Atnaujinta</string>
     <string name="crm_views_sort_rank">Reitingas</string>
     <string name="crm_not_found">Projektas nerastas</string>
-    <string name="crm_option_icon_placeholder">pvz. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Daugiau</string>
+    <string name="crm_more">Daugiau</string>
+    <string name="crm_request_more">Daugiau</string>
+    <string name="crm_comment_send">Siųsti</string>
 </resources>

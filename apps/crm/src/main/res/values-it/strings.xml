@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Nome visualizzato</string>
     <string name="crm_auth_verification_failed">Verifica non riuscita</string>
     <string name="crm_list_title">Progetti</string>
@@ -42,12 +41,13 @@
     <string name="crm_settings_tab_access">Accesso</string>
     <string name="crm_settings_tab_people">Persone</string>
     <string name="crm_option_icon">Icona</string>
+    <string name="crm_option_icon_placeholder">es. Check, Star, Flag</string>
     <string name="crm_settings_save">Salva modifiche</string>
     <string name="crm_settings_unsubscribe">Annulla iscrizione</string>
     <string name="crm_settings_delete_crm">Elimina progetto</string>
     <string name="crm_settings_delete_confirm_title">Elimina progetto</string>
     <string name="crm_settings_unsubscribe_title">Annulla iscrizione</string>
-    <string name="crm_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo progetto?</string>
+    <string name="crm_settings_unsubscribe_message">Sei sicuro di voler annullare l\\'iscrizione a questo progetto?</string>
     <string name="crm_access_level_owner">Proprietario</string>
     <string name="crm_access_level_design">Progetta</string>
     <string name="crm_access_level_comment">Commento</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Smetti di seguire</string>
     <string name="crm_parent_label">Padre</string>
     <string name="crm_parent_search_placeholder">Cerca</string>
+    <string name="crm_links_title">Link</string>
     <string name="crm_links_add">Aggiungi link</string>
     <string name="crm_links_section_blocks">Blocca</string>
     <string name="crm_links_section_blocked_by">Bloccato da</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Allega file</string>
     <string name="crm_property_remove">Rimuovi</string>
     <string name="crm_property_option_none">Nessuno</string>
+    <string name="crm_attachments">Allegati</string>
     <string name="crm_attachment_add">Aggiungi allegato</string>
     <string name="crm_request_empty">Nessuna richiesta di unione</string>
     <string name="crm_request_status_draft">Bozza</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Aggiungi classe</string>
     <string name="crm_classes_create">Crea</string>
     <string name="crm_class_name">Nome</string>
+    <string name="crm_class_save_name">Salva nome</string>
     <string name="crm_class_title_field">Campo del titolo</string>
     <string name="crm_class_merge_requests">Richieste di unione</string>
     <string name="crm_class_fields">Campi</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Aggiornato</string>
     <string name="crm_views_sort_rank">Classifica</string>
     <string name="crm_not_found">Progetto non trovato</string>
-    <string name="crm_option_icon_placeholder">es. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Altro</string>
+    <string name="crm_more">Altro</string>
+    <string name="crm_request_more">Altro</string>
+    <string name="crm_comment_send">Invia</string>
 </resources>

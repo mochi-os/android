@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Kongamano halikupatikana</string>
     <string name="forums_post_not_found">Chapisho halikupatikana</string>
 
+    <string name="forums_list_more">Zaidi</string>
+    <string name="forums_comment_send">Tuma</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ಪ್ರದರ್ಶನ ಹೆಸರು</string>
     <string name="crm_auth_verification_failed">ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
     <string name="crm_list_title">ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">ಪ್ರವೇಶ</string>
     <string name="crm_settings_tab_people">People</string>
     <string name="crm_option_icon">ಐಕಾನ್</string>
+    <string name="crm_option_icon_placeholder">ಉದಾ. Check, Star, Flag</string>
     <string name="crm_settings_save">ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ</string>
     <string name="crm_settings_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="crm_settings_delete_crm">ಪ್ರಾಜೆಕ್ಟ್ ಅಳಿಸಿ</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">ವೀಕ್ಷಿಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ</string>
     <string name="crm_parent_label">ಪೋಷಕ</string>
     <string name="crm_parent_search_placeholder">ಹುಡುಕಿ</string>
+    <string name="crm_links_title">ಲಿಂಕ್‌ಗಳು</string>
     <string name="crm_links_add">ಲಿಂಕ್ ಸೇರಿಸಿ</string>
     <string name="crm_links_section_blocks">ತಡೆಯುತ್ತದೆ</string>
     <string name="crm_links_section_blocked_by">ರಿಂದ ತಡೆಯಲಾಗಿದೆ</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ಫೈಲ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ</string>
     <string name="crm_property_remove">ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_property_option_none">ಯಾವುದೂ ಇಲ್ಲ</string>
+    <string name="crm_attachments">ಲಗತ್ತುಗಳು</string>
     <string name="crm_attachment_add">ಲಗತ್ತು ಸೇರಿಸಿ</string>
     <string name="crm_request_empty">ಯಾವುದೇ ಮರ್ಜ್ ರಿಕ್ವೆಸ್ಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="crm_request_status_draft">ಡ್ರಾಫ್ಟ್</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">ಕ್ಲಾಸ್ ಸೇರಿಸಿ</string>
     <string name="crm_classes_create">ರಚಿಸಿ</string>
     <string name="crm_class_name">ಹೆಸರು</string>
+    <string name="crm_class_save_name">ಹೆಸರು ಉಳಿಸಿ</string>
     <string name="crm_class_title_field">ಶೀರ್ಷಿಕೆ ಫೀಲ್ಡ್</string>
     <string name="crm_class_merge_requests">ಮರ್ಜ್ ರಿಕ್ವೆಸ್ಟ್‌ಗಳು</string>
     <string name="crm_class_fields">ಫೀಲ್ಡ್‌ಗಳು</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="crm_views_sort_rank">ರ‍್ಯಾಂಕ್</string>
     <string name="crm_not_found">ಪ್ರಾಜೆಕ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
-    <string name="crm_option_icon_placeholder">ಉದಾ. Check, Star, Flag</string>
-
+    <string name="crm_list_more">ಇನ್ನಷ್ಟು</string>
+    <string name="crm_more">ಇನ್ನಷ್ಟು</string>
+    <string name="crm_request_more">ಇನ್ನಷ್ಟು</string>
+    <string name="crm_comment_send">ಕಳುಹಿಸಿ</string>
 </resources>

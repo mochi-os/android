@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Vertoonnaam</string>
     <string name="crm_auth_verification_failed">Verifikasie het misluk</string>
     <string name="crm_list_title">Projekte</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Toegang</string>
     <string name="crm_settings_tab_people">Mense</string>
     <string name="crm_option_icon">Ikoon</string>
+    <string name="crm_option_icon_placeholder">bv. Check, Star, Flag</string>
     <string name="crm_settings_save">Stoor veranderinge</string>
     <string name="crm_settings_unsubscribe">Teken uit</string>
     <string name="crm_settings_delete_crm">Verwyder projek</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Hou op kyk</string>
     <string name="crm_parent_label">Ouer</string>
     <string name="crm_parent_search_placeholder">Soek</string>
+    <string name="crm_links_title">Skakels</string>
     <string name="crm_links_add">Voeg skakel by</string>
     <string name="crm_links_section_blocks">Blokkeer</string>
     <string name="crm_links_section_blocked_by">Geblokkeer deur</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Heg lêers aan</string>
     <string name="crm_property_remove">Verwyder</string>
     <string name="crm_property_option_none">Geen</string>
+    <string name="crm_attachments">Aanhangsels</string>
     <string name="crm_attachment_add">Voeg aanhangsel by</string>
     <string name="crm_request_empty">Geen saamvoegversoeke nie</string>
     <string name="crm_request_status_draft">Konsep</string>
@@ -113,13 +115,14 @@
     <string name="crm_design_tab_classes">Klasse</string>
     <string name="crm_design_tab_views">Bekykings</string>
     <string name="crm_design_import_dialog_title">Voer ontwerp in</string>
-    <string name="crm_design_import_choose_template">Kies \'n sjabloon</string>
+    <string name="crm_design_import_choose_template">Kies \\'n sjabloon</string>
     <string name="crm_design_replace_title">Vervang ontwerp?</string>
     <string name="crm_design_replace">Vervang</string>
     <string name="crm_classes_add">Voeg klas by</string>
     <string name="crm_classes_add_dialog_title">Voeg klas by</string>
     <string name="crm_classes_create">Skep</string>
     <string name="crm_class_name">Naam</string>
+    <string name="crm_class_save_name">Stoor naam</string>
     <string name="crm_class_title_field">Titelveld</string>
     <string name="crm_class_merge_requests">Saamvoegversoeke</string>
     <string name="crm_class_fields">Velde</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Opgedateer</string>
     <string name="crm_views_sort_rank">Rang</string>
     <string name="crm_not_found">Projek nie gevind nie</string>
-    <string name="crm_option_icon_placeholder">bv. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Meer</string>
+    <string name="crm_more">Meer</string>
+    <string name="crm_request_more">Meer</string>
+    <string name="crm_comment_send">Stuur</string>
 </resources>

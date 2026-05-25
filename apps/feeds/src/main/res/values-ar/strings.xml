@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">التغذيات</string>
     <string name="feeds_find_feeds">البحث عن التغذيات</string>
     <string name="feeds_create_feed">إنشاء تغذية</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">الأعضاء</string>
     <string name="feeds_tab_ai">الذكاء الاصطناعي</string>
     <string name="feeds_feed_name">اسم التغذية</string>
+    <string name="feeds_save_name">حفظ الاسم</string>
     <string name="feeds_banner">اللافتة</string>
     <string name="feeds_banner_description">لافتة Markdown اختيارية تظهر في أعلى feed.</string>
     <string name="feeds_clear">مسح</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">feed Mochi</string>
     <string name="feeds_source_type_feed_memories">ذكريات</string>
+    <string name="feeds_remove_source">إزالة المصدر</string>
     <string name="feeds_suggested_credibility_accept">قبول</string>
     <string name="feeds_rss_url_copied">تم نسخ URL RSS إلى الحافظة</string>
     <string name="feeds_logout">تسجيل الخروج</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">إعادة تعيين إلى الافتراضي</string>
     <string name="feeds_feed_not_found">التغذية غير موجودة</string>
     <string name="feeds_post_not_found">المنشور غير موجود</string>
+    <string name="feeds_post_select_feed">يرجى تحديد خلاصة</string>
+    <string name="feeds_post_empty_content">يرجى إدخال نص أو إرفاق ملف</string>
     <string name="feeds_settings_feed_renamed">تمت إعادة تسمية التغذية</string>
+    <string name="feeds_settings_banner_saved">تم حفظ اللافتة</string>
+    <string name="feeds_settings_banner_cleared">تم مسح اللافتة</string>
     <string name="feeds_settings_source_added">تمت إضافة المصدر</string>
     <string name="feeds_settings_source_updated">تم تحديث المصدر</string>
     <string name="feeds_settings_source_removed">تمت إزالة المصدر</string>
+    <string name="feeds_settings_source_polling">جار استطلاع المصدر…</string>
     <string name="feeds_settings_access_updated">تم تحديث الوصول</string>
+    <string name="feeds_settings_access_revoked">تم إلغاء الوصول</string>
     <string name="feeds_settings_member_added">تمت إضافة العضو</string>
     <string name="feeds_settings_member_removed">تمت إزالة العضو</string>
-    <string name="feeds_settings_prompt_saved">تم حفظ الموجه</string>
-    <string name="feeds_settings_banner_saved">تم حفظ اللافتة</string>
-    <string name="feeds_settings_banner_cleared">تم مسح اللافتة</string>
-    <string name="feeds_settings_source_polling">جار استطلاع المصدر…</string>
-    <string name="feeds_settings_access_revoked">تم إلغاء الوصول</string>
     <string name="feeds_settings_ai_mode_updated">تم تحديث وضع الذكاء الاصطناعي</string>
     <string name="feeds_settings_ai_account_updated">تم تحديث حساب الذكاء الاصطناعي</string>
+    <string name="feeds_settings_prompt_saved">تم حفظ الموجه</string>
     <string name="feeds_settings_prompt_reset">تمت إعادة تعيين الموجّه إلى الإعداد الافتراضي</string>
-    <string name="feeds_post_select_feed">يرجى تحديد خلاصة</string>
-    <string name="feeds_post_empty_content">يرجى إدخال نص أو إرفاق ملف</string>
-
+    <string name="feeds_send">إرسال</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">表示名</string>
     <string name="projects_auth_verification_failed">確認に失敗しました</string>
     <string name="projects_list_title">プロジェクト</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">アクセス</string>
     <string name="projects_settings_tab_people">ピープル</string>
     <string name="projects_option_icon">アイコン</string>
+    <string name="projects_option_icon_placeholder">例： Check, Star, Flag</string>
     <string name="projects_settings_save">変更を保存</string>
     <string name="projects_settings_unsubscribe">購読解除</string>
     <string name="projects_settings_delete_project">プロジェクトを削除</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">ウォッチを停止</string>
     <string name="projects_parent_label">親</string>
     <string name="projects_parent_search_placeholder">検索</string>
+    <string name="projects_links_title">リンク</string>
     <string name="projects_links_add">リンクを追加</string>
     <string name="projects_links_section_blocks">ブロック</string>
     <string name="projects_links_section_blocked_by">ブロック元</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">ファイルを添付</string>
     <string name="projects_property_remove">削除</string>
     <string name="projects_property_option_none">なし</string>
+    <string name="projects_attachments">添付ファイル</string>
     <string name="projects_attachment_add">添付を追加</string>
     <string name="projects_request_empty">マージリクエストはありません</string>
     <string name="projects_request_status_draft">下書き</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">クラスを追加</string>
     <string name="projects_classes_create">作成</string>
     <string name="projects_class_name">名前</string>
+    <string name="projects_class_save_name">名前を保存</string>
     <string name="projects_class_title_field">タイトルフィールド</string>
     <string name="projects_class_merge_requests">マージリクエスト</string>
     <string name="projects_class_fields">フィールド</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">更新日</string>
     <string name="projects_views_sort_rank">ランク</string>
     <string name="projects_project_not_found">プロジェクトが見つかりません</string>
-    <string name="projects_option_icon_placeholder">例： Check, Star, Flag</string>
-
+    <string name="projects_list_more">その他</string>
+    <string name="projects_more">その他</string>
+    <string name="projects_request_more">その他</string>
+    <string name="projects_comment_send">送信</string>
 </resources>

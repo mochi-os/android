@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Forum nehat dîtin</string>
     <string name="forums_post_not_found">Poste nehat dîtin</string>
 
+    <string name="forums_list_more">Zêdetir</string>
+    <string name="forums_comment_send">Bişîne</string>
 </resources>

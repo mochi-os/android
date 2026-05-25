@@ -31,4 +31,6 @@
     <string name="chat_members_you">Դուք</string>
     <string name="chat_chat_not_found">Զրույցը պատրաստ է</string>
 
+    <string name="chat_list_more">Ավելին</string>
+    <string name="chat_message_send">Ուղարկել</string>
 </resources>

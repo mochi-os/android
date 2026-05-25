@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Форум табылмады</string>
     <string name="forums_post_not_found">Жазба табылмады</string>
 
+    <string name="forums_list_more">Көбірек</string>
+    <string name="forums_comment_send">Жіберу</string>
 </resources>

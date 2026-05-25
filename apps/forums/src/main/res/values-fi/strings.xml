@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Foorumia ei löytynyt</string>
     <string name="forums_post_not_found">Julkaisua ei löytynyt</string>
 
+    <string name="forums_list_more">Lisää</string>
+    <string name="forums_comment_send">Lähetä</string>
 </resources>

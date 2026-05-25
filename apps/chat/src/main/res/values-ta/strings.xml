@@ -31,4 +31,6 @@
     <string name="chat_members_you">நீங்கள்</string>
     <string name="chat_chat_not_found">அரட்டை கிடைக்கவில்லை</string>
 
+    <string name="chat_list_more">மேலும்</string>
+    <string name="chat_message_send">அனுப்பு</string>
 </resources>

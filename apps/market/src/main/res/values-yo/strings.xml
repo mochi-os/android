@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Ọjà</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Ìtàn ìgbésí ayé</string>
@@ -214,6 +213,7 @@
     <string name="market_listing_detail_location_heading">Ibi</string>
     <string name="market_listing_detail_message_seller">Fi ìránṣẹ́ ránṣẹ́ sí olùtà</string>
     <string name="market_listing_detail_not_found">A kò rí listing</string>
+    <string name="market_listing_detail_place_bid">Fún owó</string>
     <string name="market_listing_detail_relist">Tún tò</string>
     <string name="market_listing_detail_report">Ròyìn ìtòlẹ́</string>
     <string name="market_listing_detail_save">Fi pamọ́</string>

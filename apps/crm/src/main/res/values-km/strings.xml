@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ឈ្មោះបង្ហាញ</string>
     <string name="crm_auth_verification_failed">ការផ្ទៀងផ្ទាត់បរាជ័យ</string>
     <string name="crm_list_title">គម្រោង</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">ការចូលប្រើ</string>
     <string name="crm_settings_tab_people">មនុស្ស</string>
     <string name="crm_option_icon">រូបតំណាង</string>
+    <string name="crm_option_icon_placeholder">២.១. Check, Star, Flag</string>
     <string name="crm_settings_save">រក្សាទុកការផ្លាស់ប្តូរ</string>
     <string name="crm_settings_unsubscribe">ឈប់ជាវ</string>
     <string name="crm_settings_delete_crm">លុបគម្រោង</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">បញ្ឈប់ការតាមដាន</string>
     <string name="crm_parent_label">មេ</string>
     <string name="crm_parent_search_placeholder">ស្វែងរក</string>
+    <string name="crm_links_title">តំណ</string>
     <string name="crm_links_add">បន្ថែមតំណ</string>
     <string name="crm_links_section_blocks">ប្លុក</string>
     <string name="crm_links_section_blocked_by">ត្រូវបានរារាំងដោយ</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ភ្ជាប់ឯកសារ</string>
     <string name="crm_property_remove">យកចេញ</string>
     <string name="crm_property_option_none">គ្មាន</string>
+    <string name="crm_attachments">ឯកសារភ្ជាប់</string>
     <string name="crm_attachment_add">បន្ថែមឯកសារភ្ជាប់</string>
     <string name="crm_request_empty">មិនមានសំណើបញ្ចូល</string>
     <string name="crm_request_status_draft">សេចក្ដីព្រាង</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">បន្ថែមថ្នាក់</string>
     <string name="crm_classes_create">បង្កើត</string>
     <string name="crm_class_name">ឈ្មោះ</string>
+    <string name="crm_class_save_name">រក្សាទុកឈ្មោះ</string>
     <string name="crm_class_title_field">វាលចំណងជើង</string>
     <string name="crm_class_merge_requests">សំណើបញ្ចូល</string>
     <string name="crm_class_fields">វាល</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>
     <string name="crm_views_sort_rank">ចំណាត់ថ្នាក់</string>
     <string name="crm_not_found">រកមិនឃើញគម្រោង</string>
-    <string name="crm_option_icon_placeholder">២.១. Check, Star, Flag</string>
-
+    <string name="crm_list_more">បន្ថែម</string>
+    <string name="crm_more">បន្ថែម</string>
+    <string name="crm_request_more">បន្ថែម</string>
+    <string name="crm_comment_send">ផ្ញើ</string>
 </resources>

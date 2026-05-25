@@ -5,4 +5,8 @@
     <string name="go_chat_title">Clavardage</string>
     <string name="go_delete_title">Supprimer la partie?</string>
 
+    <string name="go_new_game_cancel">Annuler</string>
+    <string name="go_delete_confirm">Supprimer</string>
+    <string name="go_open_sidebar">Ouvrir la barre latérale</string>
+    <string name="go_status_active">Actif</string>
 </resources>

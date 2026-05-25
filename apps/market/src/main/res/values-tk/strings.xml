@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Bazar</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Biografiýa</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">Üýtgeşmeler ýatda saklandy</string>
     <string name="market_account_status_banned_title">Hasap gadagan edildi</string>
     <string name="market_account_status_suspended_title">Hasap togtadyldy</string>
+    <string name="market_account_stripe_dashboard">Stripe paneli aç</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">Hasap</string>
     <string name="market_appeal_dialog_cancel">Ýatyrmak</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">Ýerleşýän ýeri</string>
     <string name="market_listing_detail_message_seller">Satyja habar</string>
     <string name="market_listing_detail_not_found">Sanaw tapylmady</string>
+    <string name="market_listing_detail_place_bid">Teklip ber</string>
     <string name="market_listing_detail_relist">Gaýtadan sanaw döret</string>
     <string name="market_listing_detail_report">Sanawa şikaýat et</string>
     <string name="market_listing_detail_save">Saklaýyş</string>

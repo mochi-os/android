@@ -17,4 +17,23 @@
     <string name="common_saved">已儲存</string>
     <string name="common_not_saved">未儲存</string>
     <string name="common_save_failed">無法儲存您的變更。</string>
+    <string name="auth_name">名稱</string>
+    <string name="auth_create">建立</string>
+    <string name="common_back">返回</string>
+    <string name="common_close">關閉</string>
+    <string name="about_close">關閉</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_save">儲存</string>
+    <string name="common_edit">編輯</string>
+    <string name="common_delete">刪除</string>
+    <string name="common_add">新增</string>
+    <string name="common_logout">登出</string>
+    <string name="common_subscribe">訂閱</string>
+    <string name="access_level_view">檢視</string>
+    <string name="access_level_none">無</string>
+    <string name="settings_radius_none">無</string>
+    <string name="settings_background_off">無</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_open">設定</string>
+    <string name="game_chat_subject_you">你</string>
 </resources>

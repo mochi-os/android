@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">ਖਾਤੇ ਉੱਤੇ ਪਾਬੰਦੀ ਲਾਓ</string>
@@ -38,8 +37,8 @@
     <string name="staff_accounts_unnamed">ਬਿਨਾਂ ਨਾਮ</string>
     <string name="staff_accounts_unsuspend">ਮੁਅੱਤਲੀ ਹਟਾਓ</string>
     <string name="staff_accounts_unsuspended_toast">ਖਾਤਾ ਬਹਾਲ ਕੀਤਾ ਗਿਆ</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="staff_appeals_decide">ਫੈਸਲਾ ਕਰੋ</string>
     <string name="staff_appeals_decide_failed">ਅਪੀਲ ਉੱਤੇ ਫ਼ੈਸਲਾ ਲੈਣ ਵਿੱਚ ਅਸਫਲ</string>
@@ -105,7 +104,7 @@
     <string name="staff_audit_action_order_payment_failed">ਪੇਮੈਂਟ ਅਸਫਲ</string>
     <string name="staff_audit_action_order_refunded">ਰਿਫੰਡ ਕੀਤਾ</string>
     <string name="staff_audit_action_order_shipped">ਭੇਜਿਆ ਗਿਆ</string>
-    <string name="staff_audit_action_report_actioned">ਰਿਪੋਰਟ \'ਤੇ ਕਾਰਵਾਈ ਹੋਈ</string>
+    <string name="staff_audit_action_report_actioned">ਰਿਪੋਰਟ \\'ਤੇ ਕਾਰਵਾਈ ਹੋਈ</string>
     <string name="staff_audit_action_report_created">ਰਿਪੋਰਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="staff_audit_action_review_created">ਸਮੀਖਿਆ ਜਮ੍ਹਾਂ ਕੀਤੀ ਗਈ</string>
     <string name="staff_audit_action_review_hide">ਸਮੀਖਿਆ ਲੁਕਾਈ ਗਈ</string>
@@ -116,7 +115,7 @@
     <string name="staff_audit_action_staff_team_added">ਸਟਾਫ ਮੈਂਬਰ ਜੋੜਿਆ ਗਿਆ</string>
     <string name="staff_audit_action_staff_team_removed">ਸਟਾਫ ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="staff_audit_action_subscription_activated">ਮੈਂਬਰਸ਼ਿਪ ਸਰਗਰਮ ਕੀਤੀ ਗਈ</string>
-    <string name="staff_audit_action_subscription_active">ਸਰਗਰਮ \'ਤੇ ਵਾਪਸ ਆਇਆ</string>
+    <string name="staff_audit_action_subscription_active">ਸਰਗਰਮ \\'ਤੇ ਵਾਪਸ ਆਇਆ</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">ਰੱਦ ਕਰਨਾ ਅਨੁਸੂਚਿਤ</string>
     <string name="staff_audit_action_subscription_cancelled">ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
     <string name="staff_audit_action_subscription_chargeback">ਚਾਰਜਬੈਕ ਪ੍ਰਾਪਤ</string>
@@ -267,7 +266,7 @@
     <string name="staff_disputes_resolved_toast">ਵਿਵਾਦ ਹੱਲ ਹੋਇਆ</string>
     <string name="staff_disputes_resolving">ਹੱਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="staff_disputes_review">ਸਮੀਖਿਆ</string>
-    <string name="staff_disputes_status_escalated">ਉੱਚ ਪੱਧਰ \'ਤੇ ਭੇਜਿਆ ਗਿਆ</string>
+    <string name="staff_disputes_status_escalated">ਉੱਚ ਪੱਧਰ \\'ਤੇ ਭੇਜਿਆ ਗਿਆ</string>
     <string name="staff_disputes_status_open">ਖੋਲ੍ਹੋ</string>
     <string name="staff_disputes_status_resolved_buyer">ਹੱਲ (ਖਰੀਦਦਾਰ)</string>
     <string name="staff_disputes_status_resolved_seller">ਹੱਲ ਹੋਇਆ (ਵੇਚਣ ਵਾਲਾ)</string>
@@ -277,6 +276,7 @@
     <string name="staff_disputes_view">ਦੇਖੋ</string>
     <string name="staff_filter_chip_remove">ਫਿਲਟਰ ਹਟਾਓ</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">ਮਾਡਰੇਸ਼ਨ</string>
     <string name="staff_filter_label_query">ਖੋਜੋ</string>
     <string name="staff_filter_label_review_status">ਸਥਿਤੀ</string>
     <string name="staff_filter_label_seller">ਵਿਕਰੇਤਾ</string>
@@ -341,7 +341,7 @@
     <string name="staff_reports_any_type">ਸਾਰੀਆਂ ਕਿਸਮਾਂ</string>
     <string name="staff_reports_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="staff_reports_close">ਬੰਦ ਕਰੋ</string>
-    <string name="staff_reports_dialog_title_action">ਰਿਪੋਰਟ \'ਤੇ ਕਾਰਵਾਈ ਕਰੋ</string>
+    <string name="staff_reports_dialog_title_action">ਰਿਪੋਰਟ \\'ਤੇ ਕਾਰਵਾਈ ਕਰੋ</string>
     <string name="staff_reports_dialog_title_view">ਰਿਪੋਰਟ</string>
     <string name="staff_reports_empty">ਕੋਈ ਰਿਪੋਰਟਾਂ ਨਹੀਂ</string>
     <string name="staff_reports_filter_status_label">ਸਥਿਤੀ</string>
@@ -422,7 +422,7 @@
     <string name="staff_status_banned">ਪਾਬੰਦੀਸ਼ੁਦਾ</string>
     <string name="staff_status_dismissed">ਖਾਰਜ ਕੀਤਾ</string>
     <string name="staff_status_draft">ਡਰਾਫਟ</string>
-    <string name="staff_status_escalated">ਉੱਚ ਪੱਧਰ \'ਤੇ ਭੇਜਿਆ ਗਿਆ</string>
+    <string name="staff_status_escalated">ਉੱਚ ਪੱਧਰ \\'ਤੇ ਭੇਜਿਆ ਗਿਆ</string>
     <string name="staff_status_expired">ਸਮਾਪਤ</string>
     <string name="staff_status_hidden">ਲੁਕਾਇਆ ਗਿਆ</string>
     <string name="staff_status_hold">ਰੋਕੋ</string>
@@ -473,5 +473,4 @@
     <string name="staff_team_toast_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="staff_team_toast_role_failed">ਭੂਮਿਕਾ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="staff_team_toast_role_updated">ਭੂਮਿਕਾ ਅੱਪਡੇਟ ਹੋਈ</string>
-
 </resources>

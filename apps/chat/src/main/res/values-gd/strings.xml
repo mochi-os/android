@@ -31,4 +31,6 @@
     <string name="chat_members_you">Thusa</string>
     <string name="chat_chat_not_found">Cha deach an còmhradh a lorg</string>
 
+    <string name="chat_list_more">Barrachd</string>
+    <string name="chat_message_send">Cuir</string>
 </resources>

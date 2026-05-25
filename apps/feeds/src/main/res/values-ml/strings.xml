@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ഫീഡുകൾ</string>
     <string name="feeds_find_feeds">ഫീഡുകൾ കണ്ടെത്തുക</string>
     <string name="feeds_create_feed">ഫീഡ് സൃഷ്ടിക്കുക</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">അംഗങ്ങൾ</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ഫീഡ് നാമം</string>
+    <string name="feeds_save_name">പേര് സംരക്ഷിക്കുക</string>
     <string name="feeds_banner">ബാനർ</string>
     <string name="feeds_banner_description">നിങ്ങളുടെ ഫീഡിന്റെ മുകളിൽ കാണിക്കുന്ന ഓപ്ഷണൽ markdown ബാനർ.</string>
     <string name="feeds_clear">മായ്ക്കുക</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ഫീഡ്</string>
     <string name="feeds_source_type_feed_memories">ഓർമ്മകൾ</string>
+    <string name="feeds_remove_source">ഉറവിടം നീക്കം ചെയ്യുക</string>
     <string name="feeds_suggested_credibility_accept">സ്വീകരിക്കുക</string>
     <string name="feeds_rss_url_copied">RSS ഫീഡ്</string>
     <string name="feeds_logout">ലോഗ് ഔട്ട്</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യണോ?</string>
     <string name="feeds_feed_not_found">ഫീഡ് കണ്ടെത്തിയില്ല</string>
     <string name="feeds_post_not_found">പോസ്റ്റ് കണ്ടെത്തിയില്ല</string>
+    <string name="feeds_post_select_feed">ദയവായി ഒരു ഫീഡ് തെറඞ്ഞെඟുക്കുക</string>
+    <string name="feeds_post_empty_content">ദയവായി തീൽലിള്ඟ് ഹസ്ലി സർ കൟോഃജീൻ ദയവായി ഒരു ഫയൽ അറ്റാක്ක് කെയ്യുക</string>
     <string name="feeds_settings_feed_renamed">ഫീഡിന്റെ പേര് മാറ്റി</string>
+    <string name="feeds_settings_banner_saved">ബാനറ് സർക്ഷിක്කു</string>
+    <string name="feeds_settings_banner_cleared">ബാനറ് മായ്ක്කു</string>
     <string name="feeds_settings_source_added">സ്രോതസ്സ് ചേർത്തു</string>
     <string name="feeds_settings_source_updated">സ്രോതസ്സ് അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="feeds_settings_source_removed">സ്രോതസ്സ് നീക്കി</string>
+    <string name="feeds_settings_source_polling">സ്റോതസ്സിൻറെ ഈ സമയത്തു ഫറപ്പിക്കുന്നു…</string>
     <string name="feeds_settings_access_updated">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
+    <string name="feeds_settings_access_revoked">ആക്സസ്സ് റദ്ദാക്കി</string>
     <string name="feeds_settings_member_added">അംഗം ചേർത്തു</string>
     <string name="feeds_settings_member_removed">അംഗത്തെ നീക്കം ചെയ്തു</string>
-    <string name="feeds_settings_prompt_saved">നിങ്ങളുടെ റീഫണ്ട് അഭ്യർത്ഥനയ്ക്ക് ഒരു കാരണം നൽകുക.</string>
-    <string name="feeds_settings_banner_saved">ബാനറ് സർക്ഷിක്කു</string>
-    <string name="feeds_settings_banner_cleared">ബാനറ് മായ്ක്කു</string>
-    <string name="feeds_settings_source_polling">സ്റോതസ്സിൻറെ ഈ സമയത്തു ഫറപ്പിക്കുന്നു…</string>
-    <string name="feeds_settings_access_revoked">ആക്സസ്സ് റദ്ദാക്കി</string>
     <string name="feeds_settings_ai_mode_updated">AI മോഡ് അപ്ഡേറ്റ്ක്කു</string>
     <string name="feeds_settings_ai_account_updated">AI അക്കൌണ്ඟ് അപ്ഡേറ്റ്ක്කു</string>
+    <string name="feeds_settings_prompt_saved">നിങ്ങളുടെ റീഫണ്ട് അഭ്യർത്ഥനയ്ക്ക് ഒരു കാരണം നൽകുക.</string>
     <string name="feeds_settings_prompt_reset">പ്റോംപ്റ്റ് ഡിഫോർඟ്ඟിലേക്ക് റിസറ്റ് කെയ്തു</string>
-    <string name="feeds_post_select_feed">ദയവായി ഒരു ഫീഡ് തെറඞ്ഞെඟുക്കുക</string>
-    <string name="feeds_post_empty_content">ദയവായി തീൽലിള്ඟ് ഹസ്ലി സർ കൟോഃജീൻ ദയവായി ഒരു ഫയൽ അറ്റാක്ක് කെയ്യുക</string>
-
+    <string name="feeds_send">അയയ്ക്കുക</string>
 </resources>

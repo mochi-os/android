@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">פידים</string>
     <string name="feeds_find_feeds">חפש פידים</string>
     <string name="feeds_create_feed">צור פיד</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">חברים</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">שם הפיד</string>
+    <string name="feeds_save_name">שמור שם</string>
     <string name="feeds_banner">באנר</string>
     <string name="feeds_banner_description">באנר markdown אופציונלי שמוצג בראש הפיד שלך.</string>
     <string name="feeds_clear">נקה</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">פיד Mochi</string>
     <string name="feeds_source_type_feed_memories">זיכרונות</string>
+    <string name="feeds_remove_source">הסר מקור</string>
     <string name="feeds_suggested_credibility_accept">אישור</string>
     <string name="feeds_rss_url_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
     <string name="feeds_logout">התנתק</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">אפס לברירת מחדל</string>
     <string name="feeds_feed_not_found">הפיד לא נמצא</string>
     <string name="feeds_post_not_found">הפוסט לא נמצא</string>
+    <string name="feeds_post_select_feed">יש לבחור הזנה</string>
+    <string name="feeds_post_empty_content">יש להזין טקסט או לצרף קובץ</string>
     <string name="feeds_settings_feed_renamed">שם הפיד שונה</string>
+    <string name="feeds_settings_banner_saved">הבאנר נשמר</string>
+    <string name="feeds_settings_banner_cleared">הבאנר ננקה</string>
     <string name="feeds_settings_source_added">המקור נוסף</string>
     <string name="feeds_settings_source_updated">המקור עודכן</string>
     <string name="feeds_settings_source_removed">המקור הוסר</string>
+    <string name="feeds_settings_source_polling">בודק את המקור…</string>
     <string name="feeds_settings_access_updated">הגישה עודכנה</string>
+    <string name="feeds_settings_access_revoked">הגישה בוטלה</string>
     <string name="feeds_settings_member_added">החבר נוסף</string>
     <string name="feeds_settings_member_removed">החבר הוסר</string>
-    <string name="feeds_settings_prompt_saved">הפרומפט נשמר</string>
-    <string name="feeds_settings_banner_saved">הבאנר נשמר</string>
-    <string name="feeds_settings_banner_cleared">הבאנר ננקה</string>
-    <string name="feeds_settings_source_polling">בודק את המקור…</string>
-    <string name="feeds_settings_access_revoked">הגישה בוטלה</string>
     <string name="feeds_settings_ai_mode_updated">מצב הבינה המלאכותית עודכן</string>
     <string name="feeds_settings_ai_account_updated">חשבון הבינה המלאכותית עודכן</string>
+    <string name="feeds_settings_prompt_saved">הפרומפט נשמר</string>
     <string name="feeds_settings_prompt_reset">ההנחיה אופסה לברירת המחדל</string>
-    <string name="feeds_post_select_feed">יש לבחור הזנה</string>
-    <string name="feeds_post_empty_content">יש להזין טקסט או לצרף קובץ</string>
-
+    <string name="feeds_send">שלח</string>
 </resources>

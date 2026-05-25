@@ -31,4 +31,6 @@
     <string name="chat_members_you">તમે</string>
     <string name="chat_chat_not_found">ચેટ મળી નહીં</string>
 
+    <string name="chat_list_more">વધુ</string>
+    <string name="chat_message_send">મોકલો</string>
 </resources>

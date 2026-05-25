@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Parādāmais vārds</string>
     <string name="crm_auth_verification_failed">Verifikācija neizdevās</string>
     <string name="crm_list_title">Projekti</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Piekļuve</string>
     <string name="crm_settings_tab_people">Cilvēki</string>
     <string name="crm_option_icon">Ikona</string>
+    <string name="crm_option_icon_placeholder">piem. Check, Star, Flag</string>
     <string name="crm_settings_save">Saglabāt izmaiņas</string>
     <string name="crm_settings_unsubscribe">Atrakstīties</string>
     <string name="crm_settings_delete_crm">Dzēst projektu</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Pārtraukt skatīšanos</string>
     <string name="crm_parent_label">Vecāks</string>
     <string name="crm_parent_search_placeholder">Meklēt</string>
+    <string name="crm_links_title">Saites</string>
     <string name="crm_links_add">Pievienot saiti</string>
     <string name="crm_links_section_blocks">Bloki</string>
     <string name="crm_links_section_blocked_by">Bloķēja</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Pievienot failus</string>
     <string name="crm_property_remove">Noņemt</string>
     <string name="crm_property_option_none">Nav</string>
+    <string name="crm_attachments">Pielikumi</string>
     <string name="crm_attachment_add">Pievienot pielikumu</string>
     <string name="crm_request_empty">Nav merge pieprasījumu</string>
     <string name="crm_request_status_draft">Melnraksts</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Pievienot klasi</string>
     <string name="crm_classes_create">Izveidot</string>
     <string name="crm_class_name">Nosaukums</string>
+    <string name="crm_class_save_name">Saglabāt nosaukumu</string>
     <string name="crm_class_title_field">Virsraksta lauks</string>
     <string name="crm_class_merge_requests">Apvienošanas pieprasījumi</string>
     <string name="crm_class_fields">Lauki</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Atjaunināts</string>
     <string name="crm_views_sort_rank">Rangs</string>
     <string name="crm_not_found">Projekts nav atrasts</string>
-    <string name="crm_option_icon_placeholder">piem. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Vairāk</string>
+    <string name="crm_more">Vairāk</string>
+    <string name="crm_request_more">Vairāk</string>
+    <string name="crm_comment_send">Sūtīt</string>
 </resources>

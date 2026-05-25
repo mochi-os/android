@@ -31,4 +31,6 @@
     <string name="chat_members_you">អ្នក</string>
     <string name="chat_chat_not_found">រកមិនឃើញការជជែក</string>
 
+    <string name="chat_list_more">បន្ថែម</string>
+    <string name="chat_message_send">ផ្ញើ</string>
 </resources>

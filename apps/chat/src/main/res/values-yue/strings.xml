@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chat_message_placeholder">Message</string>
+    <string name="chat_settings_save">儲存</string>
+    <string name="chat_list_logout">登出</string>
+    <string name="chat_members_you">你</string>
+    <string name="chat_list_search">搜尋</string>
+    <string name="chat_list_more">更多</string>
+    <string name="chat_message_send">傳送</string>
+    <string name="chat_settings_remove_member">移除</string>
+</resources>

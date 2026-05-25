@@ -31,4 +31,6 @@
     <string name="chat_members_you">Ati</string>
     <string name="chat_chat_not_found">Chaattiin hin argamne</string>
 
+    <string name="chat_list_more">Caalaa</string>
+    <string name="chat_message_send">Ergi</string>
 </resources>

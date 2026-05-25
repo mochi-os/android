@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">ఖాతాను నిషేధించండి</string>
@@ -38,8 +37,8 @@
     <string name="staff_accounts_unnamed">పేరు లేని</string>
     <string name="staff_accounts_unsuspend">సస్పెండ్‌ను తీసివేయండి</string>
     <string name="staff_accounts_unsuspended_toast">ఖాతా సస్పెన్షన్ తొలగించబడింది</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">రద్దు చేయండి</string>
     <string name="staff_appeals_decide">నిర్ణయించండి</string>
     <string name="staff_appeals_decide_failed">అప్పీల్‌పై నిర్ణయం తీసుకోవడంలో విఫలమైంది</string>
@@ -277,6 +276,7 @@
     <string name="staff_disputes_view">వీక్షించండి</string>
     <string name="staff_filter_chip_remove">ఫిల్టర్ తొలగించు</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">మోడరేషన్</string>
     <string name="staff_filter_label_query">శోధించు</string>
     <string name="staff_filter_label_review_status">స్థితి</string>
     <string name="staff_filter_label_seller">విక్రేత</string>
@@ -473,5 +473,4 @@
     <string name="staff_team_toast_removed">సభ్యుడు తొలగించబడ్డారు</string>
     <string name="staff_team_toast_role_failed">పాత్రను నవీకరించడంలో విఫలమైంది</string>
     <string name="staff_team_toast_role_updated">పాత్ర నవీకరించబడింది</string>
-
 </resources>

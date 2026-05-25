@@ -31,4 +31,6 @@
     <string name="chat_members_you">Jy</string>
     <string name="chat_chat_not_found">Klets nie gevind nie</string>
 
+    <string name="chat_list_more">Meer</string>
+    <string name="chat_message_send">Stuur</string>
 </resources>

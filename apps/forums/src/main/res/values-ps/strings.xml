@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">فورم ونه موندل شو</string>
     <string name="forums_post_not_found">لیکنه ونه موندل شوه</string>
 
+    <string name="forums_list_more">نور</string>
+    <string name="forums_comment_send">لیږل</string>
 </resources>

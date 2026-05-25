@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">الاسم المعروض</string>
     <string name="projects_auth_verification_failed">فشل التحقق</string>
     <string name="projects_list_title">المشاريع</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">الوصول</string>
     <string name="projects_settings_tab_people">الأشخاص</string>
     <string name="projects_option_icon">أيقونة</string>
+    <string name="projects_option_icon_placeholder">مثل Check، Star، Flag</string>
     <string name="projects_settings_save">حفظ التغييرات</string>
     <string name="projects_settings_unsubscribe">إلغاء الاشتراك</string>
     <string name="projects_settings_delete_project">حذف المشروع</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">إيقاف المتابعة</string>
     <string name="projects_parent_label">الأصل</string>
     <string name="projects_parent_search_placeholder">بحث</string>
+    <string name="projects_links_title">الروابط</string>
     <string name="projects_links_add">إضافة رابط</string>
     <string name="projects_links_section_blocks">يحظر</string>
     <string name="projects_links_section_blocked_by">محظور بواسطة</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">إرفاق ملفات</string>
     <string name="projects_property_remove">إزالة</string>
     <string name="projects_property_option_none">لا شيء</string>
+    <string name="projects_attachments">المرفقات</string>
     <string name="projects_attachment_add">إضافة مرفق</string>
     <string name="projects_request_empty">لا توجد طلبات دمج</string>
     <string name="projects_request_status_draft">مسودة</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">إضافة فئة</string>
     <string name="projects_classes_create">إنشاء</string>
     <string name="projects_class_name">الاسم</string>
+    <string name="projects_class_save_name">حفظ الاسم</string>
     <string name="projects_class_title_field">حقل العنوان</string>
     <string name="projects_class_merge_requests">طلبات الدمج</string>
     <string name="projects_class_fields">الحقول</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">تم التحديث</string>
     <string name="projects_views_sort_rank">الترتيب</string>
     <string name="projects_project_not_found">المشروع غير موجود</string>
-    <string name="projects_option_icon_placeholder">مثل Check، Star، Flag</string>
-
+    <string name="projects_list_more">المزيد</string>
+    <string name="projects_more">المزيد</string>
+    <string name="projects_request_more">المزيد</string>
+    <string name="projects_comment_send">إرسال</string>
 </resources>

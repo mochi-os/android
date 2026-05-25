@@ -3,4 +3,32 @@
 
     <string name="forums_create_privacy">Privacy</string>
 
+    <string name="forums_create_name">名稱</string>
+    <string name="forums_create_action">建立</string>
+    <string name="forums_post_save">儲存</string>
+    <string name="forums_comment_save">儲存</string>
+    <string name="forums_settings_save">儲存</string>
+    <string name="forums_list_logout">登出</string>
+    <string name="forums_find_subscribe">訂閱</string>
+    <string name="forums_access_level_view">檢視</string>
+    <string name="forums_access_level_none">無</string>
+    <string name="forums_settings">設定</string>
+    <string name="forums_list_search">搜尋</string>
+    <string name="forums_list_more">更多</string>
+    <string name="forums_comment_send">傳送</string>
+    <string name="forums_post_remove">移除</string>
+    <string name="forums_comment_remove">移除</string>
+    <string name="forums_moderation_restriction_remove">移除</string>
+    <string name="forums_moderation_restriction_type">類型</string>
+    <string name="forums_post_title_field">標題</string>
+    <string name="forums_post_edit_title_field">標題</string>
+    <string name="forums_list_unsubscribe">取消訂閱</string>
+    <string name="forums_list_unsubscribe_title">取消訂閱</string>
+    <string name="forums_settings_unsubscribe">取消訂閱</string>
+    <string name="forums_sort_new">新增</string>
+    <string name="forums_post_default_author">用戶</string>
+    <string name="forums_moderation_reports_all">全部</string>
+    <string name="forums_moderation_reports_status">狀態</string>
+    <string name="forums_report_reason">原因</string>
+    <string name="forums_report_reason_other">其他</string>
 </resources>

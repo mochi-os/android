@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">ਫੀਡਾਂ</string>
     <string name="feeds_find_feeds">ਫੀਡ ਲੱਭੋ</string>
     <string name="feeds_create_feed">ਫੀਡ ਬਣਾਓ</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">ਮੈਂਬਰ</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">ਫੀਡ ਦਾ ਨਾਮ</string>
+    <string name="feeds_save_name">ਨਾਮ ਸੰਭਾਲੋ</string>
     <string name="feeds_banner">ਬੈਨਰ</string>
     <string name="feeds_banner_description">ਤੁਹਾਡੀ ਫੀਡ ਦੇ ਉੱਪਰ ਦਿਖਾਇਆ ਗਿਆ ਵਿਕਲਪਿਕ markdown ਬੈਨਰ।</string>
     <string name="feeds_clear">ਸਾਫ਼ ਕਰੋ</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi ਫੀਡ</string>
     <string name="feeds_source_type_feed_memories">ਯਾਦਾਂ</string>
+    <string name="feeds_remove_source">ਸਰੋਤ ਹਟਾਓ</string>
     <string name="feeds_suggested_credibility_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="feeds_rss_url_copied">RSS URL ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਹੋ ਗਿਆ</string>
     <string name="feeds_logout">ਲੌਗ ਆਊਟ</string>
@@ -77,25 +78,25 @@
     <string name="feeds_ai_mode_off">ਬੰਦ ਕੀਤਾ</string>
     <string name="feeds_ai_mode_tag">ਟੈਗ</string>
     <string name="feeds_ai_mode_tag_deduplicate">ਟੈਗ + ਡੁਪਲੀਕੇਟ ਹਟਾਓ</string>
-    <string name="feeds_ai_reset_default">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
+    <string name="feeds_ai_reset_default">ਡਿਫਾਲਟ \\'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="feeds_feed_not_found">ਫੀਡ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="feeds_post_not_found">ਪੋਸਟ ਨਹੀਂ ਮਿਲੀ</string>
+    <string name="feeds_post_select_feed">કਿਰਪਾ કਰકੇ ਇક ਫੀਡ ਚੁਣੋ</string>
+    <string name="feeds_post_empty_content">કਿਰਪਾ કਰકੇ કੋਈ ਟੈਕਸਟ ਦਰਜ કਰੋ ਜਾਂ ਇક ਫਾਇਲ ਨੁੰ ਨੱਥੀ કਰੋ</string>
     <string name="feeds_settings_feed_renamed">ਫੀਡ ਦਾ ਨਾਮ ਬਦਲਿਆ ਗਿਆ</string>
+    <string name="feeds_settings_banner_saved">ਬੈਨਰ ਸੈਵ ਹੋ ਗਿਆ</string>
+    <string name="feeds_settings_banner_cleared">ਬੈਨਰ ਸਾਫ કੀਤਾ ਗਿਆ</string>
     <string name="feeds_settings_source_added">ਸਰੋਤ ਜੋੜਿਆ ਗਿਆ</string>
     <string name="feeds_settings_source_updated">ਸਰੋਤ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="feeds_settings_source_removed">ਸਰੋਤ ਹਟਾਇਆ ਗਿਆ</string>
+    <string name="feeds_settings_source_polling">ਸਰੋਤ ਪੋਲ કੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="feeds_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
+    <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
     <string name="feeds_settings_member_added">ਮੈਂਬਰ ਜੋੜਿਆ ਗਿਆ</string>
     <string name="feeds_settings_member_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
-    <string name="feeds_settings_prompt_saved">ਪ੍ਰਾਂਪਟ ਸੇਵ ਹੋ ਗਿਆ</string>
-    <string name="feeds_settings_banner_saved">ਬੈਨਰ ਸੈਵ ਹੋ ਗਿਆ</string>
-    <string name="feeds_settings_banner_cleared">ਬੈਨਰ ਸਾਫ કੀਤਾ ਗਿਆ</string>
-    <string name="feeds_settings_source_polling">ਸਰੋਤ ਪੋਲ કੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
-    <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਰਦ કੀਤੀ ਗਈ</string>
     <string name="feeds_settings_ai_mode_updated">AI ਮੋਡ ਅਪਡੇਟ કੀਤਾ ਗਿਆ</string>
     <string name="feeds_settings_ai_account_updated">AI ਖਾਤਾ ਅਪਡੇਟ કੀਤਾ ਗਿਆ</string>
+    <string name="feeds_settings_prompt_saved">ਪ੍ਰਾਂਪਟ ਸੇਵ ਹੋ ਗਿਆ</string>
     <string name="feeds_settings_prompt_reset">ਪ੍ਰੋਮੁਟ ਡਿਫੌਲਟ ਤੇ ਰੀਸੈਟ કੀਤਾ ਗਿਆ</string>
-    <string name="feeds_post_select_feed">કਿਰਪਾ કਰકੇ ਇક ਫੀਡ ਚੁਣੋ</string>
-    <string name="feeds_post_empty_content">કਿਰਪਾ કਰકੇ કੋਈ ਟੈਕਸਟ ਦਰਜ કਰੋ ਜਾਂ ਇક ਫਾਇਲ ਨੁੰ ਨੱਥੀ કਰੋ</string>
-
+    <string name="feeds_send">ਭੇਜੋ</string>
 </resources>

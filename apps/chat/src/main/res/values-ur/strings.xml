@@ -31,4 +31,6 @@
     <string name="chat_members_you">آپ</string>
     <string name="chat_chat_not_found">چیٹ نہیں ملی</string>
 
+    <string name="chat_list_more">مزید</string>
+    <string name="chat_message_send">بھیجیں</string>
 </resources>

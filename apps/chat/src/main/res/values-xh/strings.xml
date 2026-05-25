@@ -31,4 +31,6 @@
     <string name="chat_members_you">Wena</string>
     <string name="chat_chat_not_found">Incoko ayifumanekanga</string>
 
+    <string name="chat_list_more">Okuninzi</string>
+    <string name="chat_message_send">Thumela</string>
 </resources>

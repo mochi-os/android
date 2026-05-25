@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">प्रदर्शन नाम</string>
     <string name="projects_auth_verification_failed">सत्यापन विफल भइल</string>
     <string name="projects_list_title">प्रोजेक्ट</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">पहुंच</string>
     <string name="projects_settings_tab_people">लोग</string>
     <string name="projects_option_icon">आइकन</string>
+    <string name="projects_option_icon_placeholder">जईसे. Check, Star, Flag</string>
     <string name="projects_settings_save">बदलाव सहेजीं</string>
     <string name="projects_settings_unsubscribe">सदस्यता रद्द करीं</string>
     <string name="projects_settings_delete_project">परियोजना मेटाईं</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">देखल बंद करीं</string>
     <string name="projects_parent_label">मूल</string>
     <string name="projects_parent_search_placeholder">खोजीं</string>
+    <string name="projects_links_title">लिंक</string>
     <string name="projects_links_add">लिंक जोड़ीं</string>
     <string name="projects_links_section_blocks">ब्लॉक</string>
     <string name="projects_links_section_blocked_by">द्वारा अवरुद्ध</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">फाइल संलग्न करीं</string>
     <string name="projects_property_remove">हटाईं</string>
     <string name="projects_property_option_none">कुछुओ ना</string>
+    <string name="projects_attachments">संलग्नक</string>
     <string name="projects_attachment_add">संलग्नक जोड़ीं</string>
     <string name="projects_request_empty">कौनो मर्ज अनुरोध नइखे</string>
     <string name="projects_request_status_draft">ड्राफ्ट</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">वर्ग जोड़ीं</string>
     <string name="projects_classes_create">बनाईं</string>
     <string name="projects_class_name">नाम</string>
+    <string name="projects_class_save_name">नाम सहेजीं</string>
     <string name="projects_class_title_field">शीर्षक फ़ील्ड</string>
     <string name="projects_class_merge_requests">मर्ज अनुरोध</string>
     <string name="projects_class_fields">फील्ड</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">अपडेट भइल</string>
     <string name="projects_views_sort_rank">रैंक</string>
     <string name="projects_project_not_found">प्रोजेक्ट ना मिलल</string>
-    <string name="projects_option_icon_placeholder">जईसे. Check, Star, Flag</string>
-
+    <string name="projects_list_more">और</string>
+    <string name="projects_more">और</string>
+    <string name="projects_request_more">और</string>
+    <string name="projects_comment_send">भेजीं</string>
 </resources>

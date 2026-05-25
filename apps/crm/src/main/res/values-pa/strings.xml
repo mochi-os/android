@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ਡਿਸਪਲੇ ਨਾਮ</string>
     <string name="crm_auth_verification_failed">ਪੁਸ਼ਟੀ ਅਸਫਲ</string>
     <string name="crm_list_title">ਪ੍ਰੋਜੈਕਟ</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">ਪਹੁੰਚ</string>
     <string name="crm_settings_tab_people">ਲੋਕ</string>
     <string name="crm_option_icon">ਆਈਕਨ</string>
+    <string name="crm_option_icon_placeholder">ਉਦਾ. Check, Star, Flag</string>
     <string name="crm_settings_save">ਤਬਦੀਲੀਆਂ ਸੰਭਾਲੋ</string>
     <string name="crm_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
     <string name="crm_settings_delete_crm">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">ਦੇਖਣਾ ਬੰਦ ਕਰੋ</string>
     <string name="crm_parent_label">ਪੇਰੈਂਟ</string>
     <string name="crm_parent_search_placeholder">ਖੋਜ</string>
+    <string name="crm_links_title">ਲਿਸਟਿੰਗ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="crm_links_add">ਲਿੰਕ ਜੋੜੋ</string>
     <string name="crm_links_section_blocks">ਬਲੌਕ ਕਰਦਾ ਹੈ</string>
     <string name="crm_links_section_blocked_by">ਦੁਆਰਾ ਬਲੌਕ ਕੀਤਾ</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ਫਾਈਲਾਂ ਨੱਥੀ ਕਰੋ</string>
     <string name="crm_property_remove">ਹਟਾਓ</string>
     <string name="crm_property_option_none">ਕੋਈ ਨਹੀਂ</string>
+    <string name="crm_attachments">ਅਟੈਚਮੈਂਟਾਂ</string>
     <string name="crm_attachment_add">ਅਟੈਚਮੈਂਟ ਜੋੜੋ</string>
     <string name="crm_request_empty">ਕੋਈ ਮਰਜ ਬੇਨਤੀਆਂ ਨਹੀਂ</string>
     <string name="crm_request_status_draft">ਡਰਾਫਟ</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">ਕਲਾਸ ਜੋੜੋ</string>
     <string name="crm_classes_create">ਬਣਾਓ</string>
     <string name="crm_class_name">ਨਾਮ</string>
+    <string name="crm_class_save_name">ਨਾਮ ਸੰਭਾਲੋ</string>
     <string name="crm_class_title_field">ਸਿਰਲੇਖ ਫੀਲਡ</string>
     <string name="crm_class_merge_requests">ਮਰਜ ਬੇਨਤੀਆਂ</string>
     <string name="crm_class_fields">ਫੀਲਡ</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="crm_views_sort_rank">ਰੈਂਕ</string>
     <string name="crm_not_found">ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਮਿਲਿਆ</string>
-    <string name="crm_option_icon_placeholder">ਉਦਾ. Check, Star, Flag</string>
-
+    <string name="crm_list_more">ਹੋਰ</string>
+    <string name="crm_more">ਹੋਰ</string>
+    <string name="crm_request_more">ਹੋਰ</string>
+    <string name="crm_comment_send">ਭੇਜੋ</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Görkeziş ady</string>
     <string name="crm_auth_verification_failed">Tassyklama şowsuz boldy</string>
     <string name="crm_list_title">Taslamalar</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Giriş</string>
     <string name="crm_settings_tab_people">Adamlar</string>
     <string name="crm_option_icon">Nyşan</string>
+    <string name="crm_option_icon_placeholder">mysal üçin. Check, Star, Flag</string>
     <string name="crm_settings_save">Üýtgeşiklikleri saklaýyş</string>
     <string name="crm_settings_unsubscribe">Abunadan çyk</string>
     <string name="crm_settings_delete_crm">Proýekt pozmak</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Synlamagy bes et</string>
     <string name="crm_parent_label">Ene-ata</string>
     <string name="crm_parent_search_placeholder">Gözle</string>
+    <string name="crm_links_title">Baglanyşyklar</string>
     <string name="crm_links_add">Baglanyşyk goşmak</string>
     <string name="crm_links_section_blocks">Bloklar</string>
     <string name="crm_links_section_blocked_by">Gabsalanan tarapyndan</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Faýllar goşmak</string>
     <string name="crm_property_remove">Aýyr</string>
     <string name="crm_property_option_none">Hiç biri</string>
+    <string name="crm_attachments">Goşundylar</string>
     <string name="crm_attachment_add">Goşundy goşmak</string>
     <string name="crm_request_empty">Birleşdirme haýyşlary ýok</string>
     <string name="crm_request_status_draft">Taslama</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Klass goşmak</string>
     <string name="crm_classes_create">Döretmek</string>
     <string name="crm_class_name">At</string>
+    <string name="crm_class_save_name">Ady ýatda sakla</string>
     <string name="crm_class_title_field">At meýdany</string>
     <string name="crm_class_merge_requests">Birleşdirme haýyşlary</string>
     <string name="crm_class_fields">Meýdanlar</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Täzelendi</string>
     <string name="crm_views_sort_rank">Reýting</string>
     <string name="crm_not_found">Taslama tapylmady</string>
-    <string name="crm_option_icon_placeholder">mysal üçin. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Has köp</string>
+    <string name="crm_more">Has köp</string>
+    <string name="crm_request_more">Has köp</string>
+    <string name="crm_comment_send">Iber</string>
 </resources>

@@ -31,4 +31,6 @@
     <string name="chat_members_you">Kai</string>
     <string name="chat_chat_not_found">Ba a sami chat ba</string>
 
+    <string name="chat_list_more">Ƙari</string>
+    <string name="chat_message_send">Aika</string>
 </resources>

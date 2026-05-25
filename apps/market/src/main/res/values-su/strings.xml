@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Pasar</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Biografi</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">Robahan diteundeun</string>
     <string name="market_account_status_banned_title">Akun diblokir</string>
     <string name="market_account_status_suspended_title">Akun diskors</string>
+    <string name="market_account_stripe_dashboard">Buka dasbor Stripe</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">Akun</string>
     <string name="market_appeal_dialog_cancel">Batalkeun</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">Lokasi</string>
     <string name="market_listing_detail_message_seller">Pesen ka nu ngajual</string>
     <string name="market_listing_detail_not_found">Listing teu kapanggih</string>
+    <string name="market_listing_detail_place_bid">Tawar harga</string>
     <string name="market_listing_detail_relist">Daptarkeun deui</string>
     <string name="market_listing_detail_report">Laporkeun daptaran</string>
     <string name="market_listing_detail_save">Simpen</string>

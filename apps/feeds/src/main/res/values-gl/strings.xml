@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Fontes</string>
     <string name="feeds_find_feeds">Buscar fontes</string>
     <string name="feeds_create_feed">Crear feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Membros</string>
     <string name="feeds_tab_ai">IA</string>
     <string name="feeds_feed_name">Nome da fonte</string>
+    <string name="feeds_save_name">Gardar o nome</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner opcional en markdown mostrado na parte superior do teu feed.</string>
     <string name="feeds_clear">Borrar</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Fonte de Mochi</string>
     <string name="feeds_source_type_feed_memories">Memorias</string>
+    <string name="feeds_remove_source">Eliminar fonte</string>
     <string name="feeds_suggested_credibility_accept">Aceptar</string>
     <string name="feeds_rss_url_copied">URL RSS copiada ao portapapeis</string>
     <string name="feeds_logout">Pechar sesión</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Restablecer ao valor por defecto</string>
     <string name="feeds_feed_not_found">Fonte non atopada</string>
     <string name="feeds_post_not_found">Publicación non atopada</string>
+    <string name="feeds_post_select_feed">Seleccione unha fonte</string>
+    <string name="feeds_post_empty_content">Introduza texto ou achegue un ficheiro</string>
     <string name="feeds_settings_feed_renamed">Fonte renomeada</string>
+    <string name="feeds_settings_banner_saved">Banner gardado</string>
+    <string name="feeds_settings_banner_cleared">Banner borrado</string>
     <string name="feeds_settings_source_added">Fonte engadida</string>
     <string name="feeds_settings_source_updated">Fonte actualizada</string>
     <string name="feeds_settings_source_removed">Fonte eliminada</string>
+    <string name="feeds_settings_source_polling">Sondaxe da fonte…</string>
     <string name="feeds_settings_access_updated">Acceso actualizado</string>
+    <string name="feeds_settings_access_revoked">Acceso revogado</string>
     <string name="feeds_settings_member_added">Membro engadido</string>
     <string name="feeds_settings_member_removed">Membro eliminado</string>
-    <string name="feeds_settings_prompt_saved">Indicación gardada</string>
-    <string name="feeds_settings_banner_saved">Banner gardado</string>
-    <string name="feeds_settings_banner_cleared">Banner borrado</string>
-    <string name="feeds_settings_source_polling">Sondaxe da fonte…</string>
-    <string name="feeds_settings_access_revoked">Acceso revogado</string>
     <string name="feeds_settings_ai_mode_updated">Modo IA actualizado</string>
     <string name="feeds_settings_ai_account_updated">Conta IA actualizada</string>
+    <string name="feeds_settings_prompt_saved">Indicación gardada</string>
     <string name="feeds_settings_prompt_reset">Suxestión restablecida ao valor predeterminado</string>
-    <string name="feeds_post_select_feed">Seleccione unha fonte</string>
-    <string name="feeds_post_empty_content">Introduza texto ou achegue un ficheiro</string>
-
+    <string name="feeds_send">Enviar</string>
 </resources>

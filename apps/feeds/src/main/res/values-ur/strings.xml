@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">فیڈز</string>
     <string name="feeds_find_feeds">فیڈز تلاش کریں</string>
     <string name="feeds_create_feed">فیڈ بنائیں</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">ممبران</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">فیڈ کا نام</string>
+    <string name="feeds_save_name">نام محفوظ کریں</string>
     <string name="feeds_banner">بینر</string>
     <string name="feeds_banner_description">اختیاری markdown banner جو آپ کی feed کے اوپر دکھایا جاتا ہے۔</string>
     <string name="feeds_clear">صاف کریں</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">یادیں</string>
+    <string name="feeds_remove_source">ماخذ ہٹائیں</string>
     <string name="feeds_suggested_credibility_accept">قبول کریں</string>
     <string name="feeds_rss_url_copied">RSS URL clipboard پر copy ہو گیا</string>
     <string name="feeds_logout">لاگ آؤٹ</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">ڈیفالٹ پر reset کریں</string>
     <string name="feeds_feed_not_found">فیڈ نہیں ملی</string>
     <string name="feeds_post_not_found">پوسٹ نہیں ملی</string>
+    <string name="feeds_post_select_feed">برائے کرم ایک فیڈ منتخب کریں</string>
+    <string name="feeds_post_empty_content">برائے کرم تحریر درج کریں یا دیکھائی جائیں فائل جوڑیں</string>
     <string name="feeds_settings_feed_renamed">فیڈ کا نام تبدیل ہو گیا</string>
+    <string name="feeds_settings_banner_saved">بینر محفوظ کر دیا گیا</string>
+    <string name="feeds_settings_banner_cleared">بینر صاف کر دیا گیا</string>
     <string name="feeds_settings_source_added">سورس شامل کر دیا گیا</string>
     <string name="feeds_settings_source_updated">سورس اپ ڈیٹ ہو گیا</string>
     <string name="feeds_settings_source_removed">سورس ہٹا دیا گیا</string>
+    <string name="feeds_settings_source_polling">ماخذ دیکھا جا رہا ہے…</string>
     <string name="feeds_settings_access_updated">رسائی اپ ڈیٹ ہو گئی</string>
+    <string name="feeds_settings_access_revoked">رسائی منسوخ کر دی گئی</string>
     <string name="feeds_settings_member_added">ممبر شامل ہو گیا</string>
     <string name="feeds_settings_member_removed">ممبر ہٹا دیا گیا</string>
-    <string name="feeds_settings_prompt_saved">prompt محفوظ ہو گیا</string>
-    <string name="feeds_settings_banner_saved">بینر محفوظ کر دیا گیا</string>
-    <string name="feeds_settings_banner_cleared">بینر صاف کر دیا گیا</string>
-    <string name="feeds_settings_source_polling">ماخذ دیکھا جا رہا ہے…</string>
-    <string name="feeds_settings_access_revoked">رسائی منسوخ کر دی گئی</string>
     <string name="feeds_settings_ai_mode_updated">AI موڈ اپڈیٹ کردیا گیا</string>
     <string name="feeds_settings_ai_account_updated">AI اکاؤنٹ اپڈیٹ کردیا گیا</string>
+    <string name="feeds_settings_prompt_saved">prompt محفوظ ہو گیا</string>
     <string name="feeds_settings_prompt_reset">پرومپٹ کو طرح دیکھا دوبارہ جوڑ کر دیا گیا</string>
-    <string name="feeds_post_select_feed">برائے کرم ایک فیڈ منتخب کریں</string>
-    <string name="feeds_post_empty_content">برائے کرم تحریر درج کریں یا دیکھائی جائیں فائل جوڑیں</string>
-
+    <string name="feeds_send">بھیجیں</string>
 </resources>

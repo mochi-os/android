@@ -31,4 +31,6 @@
     <string name="chat_members_you">คุณ</string>
     <string name="chat_chat_not_found">ไม่พบแชท</string>
 
+    <string name="chat_list_more">เพิ่มเติม</string>
+    <string name="chat_message_send">ส่ง</string>
 </resources>

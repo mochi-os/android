@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">找不到論壇</string>
     <string name="forums_post_not_found">找不到貼文</string>
 
+    <string name="forums_list_more">更多</string>
+    <string name="forums_comment_send">傳送</string>
 </resources>

@@ -31,4 +31,6 @@
     <string name="chat_members_you">איר</string>
     <string name="chat_chat_not_found">שמועס נישט געפֿונען</string>
 
+    <string name="chat_list_more">מער</string>
+    <string name="chat_message_send">שיקן</string>
 </resources>

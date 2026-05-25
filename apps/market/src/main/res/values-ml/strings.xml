@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">മാർക്കറ്റ്</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ജീവചരിത്രം</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">മാറ്റങ്ങൾ സംരക്ഷിച്ചു</string>
     <string name="market_account_status_banned_title">അക്കൗണ്ട് വിലക്കി</string>
     <string name="market_account_status_suspended_title">അക്കൗണ്ട് സസ്പെൻഡ് ചെയ്തു</string>
+    <string name="market_account_stripe_dashboard">Stripe ഡാഷ്‌ബോർഡ് തുറക്കുക</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">അക്കൗണ്ട്</string>
     <string name="market_appeal_dialog_cancel">റദ്ദാക്കുക</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">ലൊക്കേഷൻ</string>
     <string name="market_listing_detail_message_seller">വിൽക്കുന്നയാൾക്ക് സന്ദേശം അയയ്ക്കുക</string>
     <string name="market_listing_detail_not_found">ലിസ്റ്റിംഗ് കണ്ടെത്തിയില്ല</string>
+    <string name="market_listing_detail_place_bid">ബിഡ് ഇടുക</string>
     <string name="market_listing_detail_relist">വീണ്ടും ലിസ്റ്റ് ചെയ്തു</string>
     <string name="market_listing_detail_report">റിപ്പോർട്ട് പരിഹരിച്ചു</string>
     <string name="market_listing_detail_save">സേവ് ചെയ്യുക</string>

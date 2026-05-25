@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">הפורום לא נמצא</string>
     <string name="forums_post_not_found">הפוסט לא נמצא</string>
 
+    <string name="forums_list_more">עוד</string>
+    <string name="forums_comment_send">שלח</string>
 </resources>

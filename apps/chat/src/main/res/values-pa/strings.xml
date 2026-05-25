@@ -31,4 +31,6 @@
     <string name="chat_members_you">ਤੁਸੀਂ</string>
     <string name="chat_chat_not_found">ਚੈਟ ਨਹੀਂ ਮਿਲੀ</string>
 
+    <string name="chat_list_more">ਹੋਰ</string>
+    <string name="chat_message_send">ਭੇਜੋ</string>
 </resources>

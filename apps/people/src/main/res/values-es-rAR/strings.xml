@@ -43,4 +43,13 @@
     <string name="people_person_accept">Aceptá</string>
     <string name="people_person_decline">Rechazá</string>
 
+    <string name="people_profile_name">Nombre</string>
+    <string name="people_groups_add_member_confirm_back">Atrás</string>
+    <string name="people_common_back">Atrás</string>
+    <string name="people_common_close">Cerrar</string>
+    <string name="people_person_state_self">Vos</string>
+    <string name="people_friends_more">Más</string>
+    <string name="people_group_description">Descripción</string>
+    <string name="people_common_type">Tipo</string>
+    <string name="people_member_type_user">Usuario</string>
 </resources>

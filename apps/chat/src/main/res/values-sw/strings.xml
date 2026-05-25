@@ -31,4 +31,6 @@
     <string name="chat_members_you">Wewe</string>
     <string name="chat_chat_not_found">Gumzo halijapatikana</string>
 
+    <string name="chat_list_more">Zaidi</string>
+    <string name="chat_message_send">Tuma</string>
 </resources>

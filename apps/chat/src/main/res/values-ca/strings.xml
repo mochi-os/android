@@ -31,4 +31,6 @@
     <string name="chat_members_you">Tu</string>
     <string name="chat_chat_not_found">Xat no trobat</string>
 
+    <string name="chat_list_more">Més</string>
+    <string name="chat_message_send">Envia</string>
 </resources>

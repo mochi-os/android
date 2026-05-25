@@ -14,4 +14,15 @@
     <string name="feeds_post_select_feed">請選擇一個訊息來源</string>
     <string name="feeds_post_empty_content">請輸入文字或附上一個檔案</string>
 
+    <string name="feeds_name">名稱</string>
+    <string name="feeds_create">建立</string>
+    <string name="feeds_save_label">儲存</string>
+    <string name="feeds_suggested_interests_add">新增</string>
+    <string name="feeds_logout">登出</string>
+    <string name="feeds_settings">設定</string>
+    <string name="feeds_send">傳送</string>
+    <string name="feeds_remove">移除</string>
+    <string name="feeds_source_type">類型</string>
+    <string name="feeds_sort_new">新增</string>
+    <string name="feeds_filter_all">全部</string>
 </resources>

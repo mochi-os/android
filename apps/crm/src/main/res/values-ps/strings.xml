@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">د ښوون نوم</string>
     <string name="crm_auth_verification_failed">تصدیق ناکام شو</string>
     <string name="crm_list_title">پروژې</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">لاسرسی</string>
     <string name="crm_settings_tab_people">خلک</string>
     <string name="crm_option_icon">آیکون</string>
+    <string name="crm_option_icon_placeholder">لکه چېنه Check، Star، Flag</string>
     <string name="crm_settings_save">بدلونونه خوندي کړئ</string>
     <string name="crm_settings_unsubscribe">ګډون لغوه کول</string>
     <string name="crm_settings_delete_crm">پروژه ړنګه کړئ</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">کتل بند کړئ</string>
     <string name="crm_parent_label">مور</string>
     <string name="crm_parent_search_placeholder">لټون</string>
+    <string name="crm_links_title">لینکونه</string>
     <string name="crm_links_add">لینک اضافه کړئ</string>
     <string name="crm_links_section_blocks">بلاکونه</string>
     <string name="crm_links_section_blocked_by">بند شوی لخوا</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">فایلونه ضمیمه کړئ</string>
     <string name="crm_property_remove">لرې کول</string>
     <string name="crm_property_option_none">هیڅوک</string>
+    <string name="crm_attachments">ضمیمې</string>
     <string name="crm_attachment_add">ضمیمه اضافه کړئ</string>
     <string name="crm_request_empty">هیڅ ادغام غوښتنه نشته</string>
     <string name="crm_request_status_draft">مسوده</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">ټولګی اضافه کړئ</string>
     <string name="crm_classes_create">جوړ کړئ</string>
     <string name="crm_class_name">نوم</string>
+    <string name="crm_class_save_name">نوم وساتئ</string>
     <string name="crm_class_title_field">د سرلیک ساحه</string>
     <string name="crm_class_merge_requests">د یوځای کولو غوښتنې</string>
     <string name="crm_class_fields">ساحې</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">نوی شو</string>
     <string name="crm_views_sort_rank">درجه</string>
     <string name="crm_not_found">پروژه ونه موندل شوه</string>
-    <string name="crm_option_icon_placeholder">لکه چېنه Check، Star، Flag</string>
-
+    <string name="crm_list_more">نور</string>
+    <string name="crm_more">نور</string>
+    <string name="crm_request_more">نور</string>
+    <string name="crm_comment_send">لیږل</string>
 </resources>

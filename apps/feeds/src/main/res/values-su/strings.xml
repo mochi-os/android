@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feed</string>
     <string name="feeds_find_feeds">Téangan feed</string>
     <string name="feeds_create_feed">Jieun feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Anggota</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Ngaran feed</string>
+    <string name="feeds_save_name">Simpen ngaran</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner markdown opsional ditembongkeun di luhur feed anjeun.</string>
     <string name="feeds_clear">Bersihkeun</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Mémori</string>
+    <string name="feeds_remove_source">Pupus sumber</string>
     <string name="feeds_suggested_credibility_accept">Tarima</string>
     <string name="feeds_rss_url_copied">URL RSS disalin ka clipboard</string>
     <string name="feeds_logout">Kaluar</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Setel ulang ka baku</string>
     <string name="feeds_feed_not_found">Feed teu kapanggih</string>
     <string name="feeds_post_not_found">Pos teu kapanggih</string>
+    <string name="feeds_post_select_feed">Mangga pilih hiji feed</string>
+    <string name="feeds_post_empty_content">Mangga lebetkeun teks atanapi lampirkeun file</string>
     <string name="feeds_settings_feed_renamed">Ngaran feed diganti</string>
+    <string name="feeds_settings_banner_saved">Spanduk disimpen</string>
+    <string name="feeds_settings_banner_cleared">Spanduk dipupus</string>
     <string name="feeds_settings_source_added">Sumber ditambahkeun</string>
     <string name="feeds_settings_source_updated">Sumber diapdet</string>
     <string name="feeds_settings_source_removed">Sumber dipiceun</string>
+    <string name="feeds_settings_source_polling">Ngalongok sumber…</string>
     <string name="feeds_settings_access_updated">Aksés diropéa</string>
+    <string name="feeds_settings_access_revoked">Akses dicabut</string>
     <string name="feeds_settings_member_added">Anggota ditambahkeun</string>
     <string name="feeds_settings_member_removed">Anggota dipupus</string>
-    <string name="feeds_settings_prompt_saved">Prompt disimpen</string>
-    <string name="feeds_settings_banner_saved">Spanduk disimpen</string>
-    <string name="feeds_settings_banner_cleared">Spanduk dipupus</string>
-    <string name="feeds_settings_source_polling">Ngalongok sumber…</string>
-    <string name="feeds_settings_access_revoked">Akses dicabut</string>
     <string name="feeds_settings_ai_mode_updated">Mode AI diropea</string>
     <string name="feeds_settings_ai_account_updated">Akun AI diropea</string>
+    <string name="feeds_settings_prompt_saved">Prompt disimpen</string>
     <string name="feeds_settings_prompt_reset">Pitunjuk direset ka kadua</string>
-    <string name="feeds_post_select_feed">Mangga pilih hiji feed</string>
-    <string name="feeds_post_empty_content">Mangga lebetkeun teks atanapi lampirkeun file</string>
-
+    <string name="feeds_send">Kirim</string>
 </resources>

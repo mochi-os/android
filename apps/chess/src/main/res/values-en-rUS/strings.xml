@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chess_move_subject_you">You</string>
+    <string name="chess_open_sidebar">Open sidebar</string>
+</resources>

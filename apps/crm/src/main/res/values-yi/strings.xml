@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ווײַז נאָמען</string>
     <string name="crm_auth_verification_failed">פֿאַריפֿיקאַציע דורכגעפֿאַלן</string>
     <string name="crm_list_title">פּראָיעקטן</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">צוטריט</string>
     <string name="crm_settings_tab_people">מענטשן</string>
     <string name="crm_option_icon">איקאָנע</string>
+    <string name="crm_option_icon_placeholder">גיט א בײשפיל. Check, Star, Flag</string>
     <string name="crm_settings_save">היט ענדערונגען</string>
     <string name="crm_settings_unsubscribe">אַבאַבאָנירן</string>
     <string name="crm_settings_delete_crm">אויסמעקן פּראָיעקט</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">הער אויף נאָכקוקן</string>
     <string name="crm_parent_label">עלטער</string>
     <string name="crm_parent_search_placeholder">זוך</string>
+    <string name="crm_links_title">לינקס</string>
     <string name="crm_links_add">צולייגן לינק</string>
     <string name="crm_links_section_blocks">Blocks</string>
     <string name="crm_links_section_blocked_by">געבלאָקירט פֿון</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">צוהענקען פֿײַלן</string>
     <string name="crm_property_remove">אַראָפּנעמען</string>
     <string name="crm_property_option_none">קיינס</string>
+    <string name="crm_attachments">בײַלאַגעס</string>
     <string name="crm_attachment_add">צולייגן בײַלאַגע</string>
     <string name="crm_request_empty">קיין מערדזש פֿאָדערונגען</string>
     <string name="crm_request_status_draft">אָנטוואָרף</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">צולייגן קלאַס</string>
     <string name="crm_classes_create">באַשאַפֿן</string>
     <string name="crm_class_name">נאָמען</string>
+    <string name="crm_class_save_name">אָפּהיטן נאָמען</string>
     <string name="crm_class_title_field">קעפּל־פֿעלד</string>
     <string name="crm_class_merge_requests">merge־פֿאָדערונגען</string>
     <string name="crm_class_fields">פֿעלדער</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">באַנײַט</string>
     <string name="crm_views_sort_rank">ראַנג</string>
     <string name="crm_not_found">פּראָיעקט ניט געפֿונען</string>
-    <string name="crm_option_icon_placeholder">גיט א בײשפיל. Check, Star, Flag</string>
-
+    <string name="crm_list_more">מער</string>
+    <string name="crm_more">מער</string>
+    <string name="crm_request_more">מער</string>
+    <string name="crm_comment_send">שיקן</string>
 </resources>

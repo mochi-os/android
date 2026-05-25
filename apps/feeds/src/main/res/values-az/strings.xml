@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Lentlər</string>
     <string name="feeds_find_feeds">Lentləri tap</string>
     <string name="feeds_create_feed">Feed yarat</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Üzvlər</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Lent adı</string>
+    <string name="feeds_save_name">Adı saxla</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Feed-inizin yuxarısında göstərilən könüllü markdown banneri.</string>
     <string name="feeds_clear">Təmizlə</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi lenti</string>
     <string name="feeds_source_type_feed_memories">Yaddaşlar</string>
+    <string name="feeds_remove_source">Mənbəni sil</string>
     <string name="feeds_suggested_credibility_accept">Qəbul et</string>
     <string name="feeds_rss_url_copied">RSS URL panelə kopyalandı</string>
     <string name="feeds_logout">Çıx</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Standarta sıfırla</string>
     <string name="feeds_feed_not_found">Lent tapılmadı</string>
     <string name="feeds_post_not_found">Post tapılmadı</string>
+    <string name="feeds_post_select_feed">Lütfən bir lent seçin</string>
+    <string name="feeds_post_empty_content">Lütfən mətn daxil edin və ya bir fayl əlavə edin</string>
     <string name="feeds_settings_feed_renamed">Lentin adı dəyişdirildi</string>
+    <string name="feeds_settings_banner_saved">Banner yadda saxlandı</string>
+    <string name="feeds_settings_banner_cleared">Banner təmizləndi</string>
     <string name="feeds_settings_source_added">Mənbə əlavə edildi</string>
     <string name="feeds_settings_source_updated">Mənbə yeniləndi</string>
     <string name="feeds_settings_source_removed">Mənbə silindi</string>
+    <string name="feeds_settings_source_polling">Mənbə sorğulanır…</string>
     <string name="feeds_settings_access_updated">Giriş yeniləndi</string>
+    <string name="feeds_settings_access_revoked">İcaxə ləğv edildi</string>
     <string name="feeds_settings_member_added">Üzv əlavə edildi</string>
     <string name="feeds_settings_member_removed">Üzv silindi</string>
-    <string name="feeds_settings_prompt_saved">Sorğu saxlanıldı</string>
-    <string name="feeds_settings_banner_saved">Banner yadda saxlandı</string>
-    <string name="feeds_settings_banner_cleared">Banner təmizləndi</string>
-    <string name="feeds_settings_source_polling">Mənbə sorğulanır…</string>
-    <string name="feeds_settings_access_revoked">İcaxə ləğv edildi</string>
     <string name="feeds_settings_ai_mode_updated">AI rejimi yeniləndi</string>
     <string name="feeds_settings_ai_account_updated">AI hesabı yeniləndi</string>
+    <string name="feeds_settings_prompt_saved">Sorğu saxlanıldı</string>
     <string name="feeds_settings_prompt_reset">Göstəriş standarta sıfırlandı</string>
-    <string name="feeds_post_select_feed">Lütfən bir lent seçin</string>
-    <string name="feeds_post_empty_content">Lütfən mətn daxil edin və ya bir fayl əlavə edin</string>
-
+    <string name="feeds_send">Göndər</string>
 </resources>

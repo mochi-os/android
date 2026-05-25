@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Vood</string>
     <string name="feeds_find_feeds">Otsi voogusid</string>
     <string name="feeds_create_feed">Loo voog</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Liikmed</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Voo nimi</string>
+    <string name="feeds_save_name">Salvesta nimi</string>
     <string name="feeds_banner">Bänner</string>
     <string name="feeds_banner_description">Valikuline markdown-bänner sinu voo ülaosas.</string>
     <string name="feeds_clear">Tühjenda</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi voog</string>
     <string name="feeds_source_type_feed_memories">Mälud</string>
+    <string name="feeds_remove_source">Eemalda allikas</string>
     <string name="feeds_suggested_credibility_accept">Nõustu</string>
     <string name="feeds_rss_url_copied">RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="feeds_logout">Logi välja</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Lähtesta vaikeväärtusele</string>
     <string name="feeds_feed_not_found">Voogu ei leitud</string>
     <string name="feeds_post_not_found">Postitust ei leitud</string>
+    <string name="feeds_post_select_feed">Palun valige kanal</string>
+    <string name="feeds_post_empty_content">Palun sisestage teksti või lisage fail</string>
     <string name="feeds_settings_feed_renamed">Voog ümber nimetatud</string>
+    <string name="feeds_settings_banner_saved">Bannär salvestatud</string>
+    <string name="feeds_settings_banner_cleared">Bannär tehti tuhjaks</string>
     <string name="feeds_settings_source_added">Allikas lisatud</string>
     <string name="feeds_settings_source_updated">Allikas uuendatud</string>
     <string name="feeds_settings_source_removed">Allikas eemaldatud</string>
+    <string name="feeds_settings_source_polling">Allika küsitlemine…</string>
     <string name="feeds_settings_access_updated">Juurdepääs uuendatud</string>
+    <string name="feeds_settings_access_revoked">Juurdepääs tühistati</string>
     <string name="feeds_settings_member_added">Liige lisatud</string>
     <string name="feeds_settings_member_removed">Liige eemaldatud</string>
-    <string name="feeds_settings_prompt_saved">Viip salvestatud</string>
-    <string name="feeds_settings_banner_saved">Bannär salvestatud</string>
-    <string name="feeds_settings_banner_cleared">Bannär tehti tuhjaks</string>
-    <string name="feeds_settings_source_polling">Allika küsitlemine…</string>
-    <string name="feeds_settings_access_revoked">Juurdepääs tühistati</string>
     <string name="feeds_settings_ai_mode_updated">AI režiim uuendatud</string>
     <string name="feeds_settings_ai_account_updated">AI konto uuendatud</string>
+    <string name="feeds_settings_prompt_saved">Viip salvestatud</string>
     <string name="feeds_settings_prompt_reset">Viip lähtestati vaikeväärtusele</string>
-    <string name="feeds_post_select_feed">Palun valige kanal</string>
-    <string name="feeds_post_empty_content">Palun sisestage teksti või lisage fail</string>
-
+    <string name="feeds_send">Saada</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Fòfin de àkáǹtì</string>
@@ -36,8 +35,8 @@
     <string name="staff_accounts_unnamed">Aláìlórúkọ</string>
     <string name="staff_accounts_unsuspend">Yọ ìdádúró kúrò</string>
     <string name="staff_accounts_unsuspended_toast">A ti yọ ìdádúró àkáǹtì</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Fagilé</string>
     <string name="staff_appeals_decide">Pinnu</string>
     <string name="staff_appeals_decide_failed">Kò lè pinnu ẹjọ́</string>
@@ -274,6 +273,7 @@
     <string name="staff_disputes_view">Wo</string>
     <string name="staff_filter_chip_remove">Yọ àyàn kúrò</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">Ìṣàkóso</string>
     <string name="staff_filter_label_query">Wá</string>
     <string name="staff_filter_label_review_status">Ipo</string>
     <string name="staff_filter_label_seller">Olùtà</string>
@@ -468,5 +468,4 @@
     <string name="staff_team_toast_removed">Ọmọ ẹgbẹ́ ti yọ kúrò</string>
     <string name="staff_team_toast_role_failed">Ko le ṣe imudojuiwọn ipa naa</string>
     <string name="staff_team_toast_role_updated">Ipa ti ni imudojuiwọn</string>
-
 </resources>

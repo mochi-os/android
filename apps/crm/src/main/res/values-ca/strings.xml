@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Nom visible</string>
     <string name="crm_auth_verification_failed">La verificació ha fallat</string>
     <string name="crm_list_title">Projectes</string>
@@ -21,7 +20,7 @@
     <string name="crm_find_title">Cerca projectes</string>
     <string name="crm_find_recommended">Recomanat</string>
     <string name="crm_find_subscribe">Subscriu-te</string>
-    <string name="crm_loading">S\'està carregant…</string>
+    <string name="crm_loading">S\\'està carregant…</string>
     <string name="crm_watched">Seguit</string>
     <string name="crm_create_object">Crea un objecte</string>
     <string name="crm_search">Cerca</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Accés</string>
     <string name="crm_settings_tab_people">Persones</string>
     <string name="crm_option_icon">Icona</string>
+    <string name="crm_option_icon_placeholder">p. ex. Check, Star, Flag</string>
     <string name="crm_settings_save">Desa els canvis</string>
     <string name="crm_settings_unsubscribe">Cancel·la la subscripció</string>
     <string name="crm_settings_delete_crm">Suprimeix el projecte</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Deixa de seguir</string>
     <string name="crm_parent_label">Pare</string>
     <string name="crm_parent_search_placeholder">Cerca</string>
+    <string name="crm_links_title">Enllaços</string>
     <string name="crm_links_add">Afegeix un enllaç</string>
     <string name="crm_links_section_blocks">Blocs</string>
     <string name="crm_links_section_blocked_by">Bloquejat per</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Adjunta fitxers</string>
     <string name="crm_property_remove">Elimina</string>
     <string name="crm_property_option_none">Cap</string>
+    <string name="crm_attachments">Fitxers adjunts</string>
     <string name="crm_attachment_add">Afegeix un fitxer adjunt</string>
     <string name="crm_request_empty">Cap sol·licitud de fusió</string>
     <string name="crm_request_status_draft">Esborrany</string>
@@ -91,7 +93,7 @@
     <string name="crm_request_method">Mètode</string>
     <string name="crm_request_method_merge">Fusiona</string>
     <string name="crm_request_field_repository">Repositori</string>
-    <string name="crm_request_field_source">Branca d\'origen</string>
+    <string name="crm_request_field_source">Branca d\\'origen</string>
     <string name="crm_request_field_title">Títol</string>
     <string name="crm_request_field_description">Descripció</string>
     <string name="crm_request_field_draft">Esborrany</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Afegeix una classe</string>
     <string name="crm_classes_create">Crea</string>
     <string name="crm_class_name">Nom</string>
+    <string name="crm_class_save_name">Desa el nom</string>
     <string name="crm_class_title_field">Camp de títol</string>
     <string name="crm_class_merge_requests">Sol·licituds de fusió</string>
     <string name="crm_class_fields">Camps</string>
@@ -144,7 +147,7 @@
     <string name="crm_field_delete_title">Suprimeix el camp</string>
     <string name="crm_field_add_field_dialog_title">Afegeix un camp</string>
     <string name="crm_option_add">Afegeix una opció</string>
-    <string name="crm_option_edit">Edita l\'opció</string>
+    <string name="crm_option_edit">Edita l\\'opció</string>
     <string name="crm_views_add">Afegeix una vista</string>
     <string name="crm_views_add_dialog_title">Afegeix una vista</string>
     <string name="crm_views_edit_dialog_title">Edita la vista</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Actualitzat</string>
     <string name="crm_views_sort_rank">Posició</string>
     <string name="crm_not_found">Projecte no trobat</string>
-    <string name="crm_option_icon_placeholder">p. ex. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Més</string>
+    <string name="crm_more">Més</string>
+    <string name="crm_request_more">Més</string>
+    <string name="crm_comment_send">Envia</string>
 </resources>

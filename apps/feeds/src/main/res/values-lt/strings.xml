@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Srautai</string>
     <string name="feeds_find_feeds">Rasti srautus</string>
     <string name="feeds_create_feed">Sukurti srautą</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Nariai</string>
     <string name="feeds_tab_ai">DI</string>
     <string name="feeds_feed_name">Srauto pavadinimas</string>
+    <string name="feeds_save_name">Išsaugoti pavadinimą</string>
     <string name="feeds_banner">Reklamjuostė</string>
     <string name="feeds_banner_description">Neprivaloma markdown reklamjuostė, rodoma jūsų srauto viršuje.</string>
     <string name="feeds_clear">Išvalyti</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi srautas</string>
     <string name="feeds_source_type_feed_memories">Atmintys</string>
+    <string name="feeds_remove_source">Pašalinti šaltinį</string>
     <string name="feeds_suggested_credibility_accept">Priimti</string>
     <string name="feeds_rss_url_copied">RSS URL nukopijuotas į iškarpinę</string>
     <string name="feeds_logout">Atsijungti</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Atstatyti į numatytąjį</string>
     <string name="feeds_feed_not_found">Srautas nerastas</string>
     <string name="feeds_post_not_found">Įrašas nerastas</string>
+    <string name="feeds_post_select_feed">Pasirinkite srautą</string>
+    <string name="feeds_post_empty_content">Įveskite tekstą arba pridėkite failą</string>
     <string name="feeds_settings_feed_renamed">Srautas pervadintas</string>
+    <string name="feeds_settings_banner_saved">Reklamjuostė išsaugota</string>
+    <string name="feeds_settings_banner_cleared">Reklamjuostė išvalyta</string>
     <string name="feeds_settings_source_added">Šaltinis pridėtas</string>
     <string name="feeds_settings_source_updated">Šaltinis atnaujintas</string>
     <string name="feeds_settings_source_removed">Šaltinis pašalintas</string>
+    <string name="feeds_settings_source_polling">Apklausiamas šaltinis…</string>
     <string name="feeds_settings_access_updated">Prieiga atnaujinta</string>
+    <string name="feeds_settings_access_revoked">Prieiga atšaukta</string>
     <string name="feeds_settings_member_added">Narys pridėtas</string>
     <string name="feeds_settings_member_removed">Narys pašalintas</string>
-    <string name="feeds_settings_prompt_saved">Užklausa išsaugota</string>
-    <string name="feeds_settings_banner_saved">Reklamjuostė išsaugota</string>
-    <string name="feeds_settings_banner_cleared">Reklamjuostė išvalyta</string>
-    <string name="feeds_settings_source_polling">Apklausiamas šaltinis…</string>
-    <string name="feeds_settings_access_revoked">Prieiga atšaukta</string>
     <string name="feeds_settings_ai_mode_updated">DI režimas atnaujintas</string>
     <string name="feeds_settings_ai_account_updated">DI paskyra atnaujinta</string>
+    <string name="feeds_settings_prompt_saved">Užklausa išsaugota</string>
     <string name="feeds_settings_prompt_reset">Raginimas atstatytas į numatytąjį</string>
-    <string name="feeds_post_select_feed">Pasirinkite srautą</string>
-    <string name="feeds_post_empty_content">Įveskite tekstą arba pridėkite failą</string>
-
+    <string name="feeds_send">Siųsti</string>
 </resources>

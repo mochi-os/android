@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Foroa ez da aurkitu</string>
     <string name="forums_post_not_found">Ez da argitalpena aurkitu</string>
 
+    <string name="forums_list_more">Gehiago</string>
+    <string name="forums_comment_send">Bidali</string>
 </resources>

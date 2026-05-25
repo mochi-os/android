@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feed</string>
     <string name="feeds_find_feeds">Feedan bibîne</string>
     <string name="feeds_create_feed">Feed çêbike</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Endam</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Navê feedê</string>
+    <string name="feeds_save_name">Navê tomar bike</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Bannera markdown a vebijarkî ku li serê pelê te tê nîşandan.</string>
     <string name="feeds_clear">Paqij bike</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feeda Mochi</string>
     <string name="feeds_source_type_feed_memories">Bîranîn</string>
+    <string name="feeds_remove_source">Çavkaniyê rake</string>
     <string name="feeds_suggested_credibility_accept">Qebûl bike</string>
     <string name="feeds_rss_url_copied">URL ya RSS hate kopîkirin</string>
     <string name="feeds_logout">Derkeve</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Ber bi standard ve veguhêze</string>
     <string name="feeds_feed_not_found">Feed nehat dîtin</string>
     <string name="feeds_post_not_found">Poste nehat dîtin</string>
+    <string name="feeds_post_select_feed">Ji kerema xwe feedekê hilbijêre</string>
+    <string name="feeds_post_empty_content">Ji kerema xwe noqteyekê binûsî an pelekê pêva bike</string>
     <string name="feeds_settings_feed_renamed">Feed ji nû ve hat navlêkirin</string>
+    <string name="feeds_settings_banner_saved">Pankart hate tomarkirin</string>
+    <string name="feeds_settings_banner_cleared">Pankart hate pêvêna</string>
     <string name="feeds_settings_source_added">Çavkanî hat zêdekirin</string>
     <string name="feeds_settings_source_updated">Çavkanî hat nûkirin</string>
     <string name="feeds_settings_source_removed">Çavkanî hat rakirin</string>
+    <string name="feeds_settings_source_polling">Çavkanî tê xwendin…</string>
     <string name="feeds_settings_access_updated">Gihîştin hat nûkirin</string>
+    <string name="feeds_settings_access_revoked">Gihiştin hate betalkirin</string>
     <string name="feeds_settings_member_added">Endam hat zêdekirin</string>
     <string name="feeds_settings_member_removed">Endam hat rakirin</string>
-    <string name="feeds_settings_prompt_saved">Daxwaz hate tomarkirin</string>
-    <string name="feeds_settings_banner_saved">Pankart hate tomarkirin</string>
-    <string name="feeds_settings_banner_cleared">Pankart hate pêvêna</string>
-    <string name="feeds_settings_source_polling">Çavkanî tê xwendin…</string>
-    <string name="feeds_settings_access_revoked">Gihiştin hate betalkirin</string>
     <string name="feeds_settings_ai_mode_updated">Modêla AI hate nûkirin</string>
     <string name="feeds_settings_ai_account_updated">Hesabê AI hate nûkirin</string>
+    <string name="feeds_settings_prompt_saved">Daxwaz hate tomarkirin</string>
     <string name="feeds_settings_prompt_reset">Zêdebarê ji nuh ve hate vegerandin</string>
-    <string name="feeds_post_select_feed">Ji kerema xwe feedekê hilbijêre</string>
-    <string name="feeds_post_empty_content">Ji kerema xwe noqteyekê binûsî an pelekê pêva bike</string>
-
+    <string name="feeds_send">Bişîne</string>
 </resources>

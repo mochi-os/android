@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Zobrazované jméno</string>
     <string name="crm_auth_verification_failed">Ověření selhalo</string>
     <string name="crm_list_title">Projekty</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Přístup</string>
     <string name="crm_settings_tab_people">Lidé</string>
     <string name="crm_option_icon">Ikona</string>
+    <string name="crm_option_icon_placeholder">např. Check, Star, Flag</string>
     <string name="crm_settings_save">Uložit změny</string>
     <string name="crm_settings_unsubscribe">Zrušit odběr</string>
     <string name="crm_settings_delete_crm">Smazat projekt</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Přestat sledovat</string>
     <string name="crm_parent_label">Rodič</string>
     <string name="crm_parent_search_placeholder">Hledat</string>
+    <string name="crm_links_title">Odkazy</string>
     <string name="crm_links_add">Přidat odkaz</string>
     <string name="crm_links_section_blocks">Blokuje</string>
     <string name="crm_links_section_blocked_by">Blokováno</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Připojit soubory</string>
     <string name="crm_property_remove">Odebrat</string>
     <string name="crm_property_option_none">Žádné</string>
+    <string name="crm_attachments">Přílohy</string>
     <string name="crm_attachment_add">Přidat přílohu</string>
     <string name="crm_request_empty">Žádné žádosti o sloučení</string>
     <string name="crm_request_status_draft">Koncept</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Přidat třídu</string>
     <string name="crm_classes_create">Vytvořit</string>
     <string name="crm_class_name">Název</string>
+    <string name="crm_class_save_name">Uložit název</string>
     <string name="crm_class_title_field">Pole názvu</string>
     <string name="crm_class_merge_requests">Žádosti o sloučení</string>
     <string name="crm_class_fields">Pole</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Aktualizováno</string>
     <string name="crm_views_sort_rank">Pořadí</string>
     <string name="crm_not_found">Projekt nenalezen</string>
-    <string name="crm_option_icon_placeholder">např. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Více</string>
+    <string name="crm_more">Více</string>
+    <string name="crm_request_more">Více</string>
+    <string name="crm_comment_send">Odeslat</string>
 </resources>

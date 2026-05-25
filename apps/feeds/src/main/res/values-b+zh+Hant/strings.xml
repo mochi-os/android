@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">摘要</string>
     <string name="feeds_find_feeds">尋找摘要</string>
     <string name="feeds_create_feed">建立訊息來源</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">成員</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">摘要名稱</string>
+    <string name="feeds_save_name">儲存名稱</string>
     <string name="feeds_banner">橫幅</string>
     <string name="feeds_banner_description">在您的動態頂部顯示的選用 Markdown 橫幅。</string>
     <string name="feeds_clear">清除</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi 動態</string>
     <string name="feeds_source_type_feed_memories">回憶</string>
+    <string name="feeds_remove_source">移除來源</string>
     <string name="feeds_suggested_credibility_accept">接受</string>
     <string name="feeds_rss_url_copied">已複製 RSS URL 至剪貼簿</string>
     <string name="feeds_logout">登出</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">重設為預設值</string>
     <string name="feeds_feed_not_found">找不到摘要</string>
     <string name="feeds_post_not_found">找不到貼文</string>
+    <string name="feeds_post_select_feed">請選擇一個訊息來源</string>
+    <string name="feeds_post_empty_content">請輸入文字或附上一個檔案</string>
     <string name="feeds_settings_feed_renamed">摘要已重新命名</string>
+    <string name="feeds_settings_banner_saved">橫幅已儲存</string>
+    <string name="feeds_settings_banner_cleared">橫幅已清除</string>
     <string name="feeds_settings_source_added">來源已新增</string>
     <string name="feeds_settings_source_updated">來源已更新</string>
     <string name="feeds_settings_source_removed">來源已移除</string>
+    <string name="feeds_settings_source_polling">正在輪詢來源…</string>
     <string name="feeds_settings_access_updated">存取已更新</string>
+    <string name="feeds_settings_access_revoked">存取權限已撤銷</string>
     <string name="feeds_settings_member_added">已新增成員</string>
     <string name="feeds_settings_member_removed">已移除成員</string>
-    <string name="feeds_settings_prompt_saved">已儲存提示</string>
-    <string name="feeds_settings_banner_saved">橫幅已儲存</string>
-    <string name="feeds_settings_banner_cleared">橫幅已清除</string>
-    <string name="feeds_settings_source_polling">正在輪詢來源…</string>
-    <string name="feeds_settings_access_revoked">存取權限已撤銷</string>
     <string name="feeds_settings_ai_mode_updated">AI 模式已更新</string>
     <string name="feeds_settings_ai_account_updated">AI 帳號已更新</string>
+    <string name="feeds_settings_prompt_saved">已儲存提示</string>
     <string name="feeds_settings_prompt_reset">提示語已重置為預設</string>
-    <string name="feeds_post_select_feed">請選擇一個訊息來源</string>
-    <string name="feeds_post_empty_content">請輸入文字或附上一個檔案</string>
-
+    <string name="feeds_send">傳送</string>
 </resources>

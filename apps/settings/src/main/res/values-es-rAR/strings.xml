@@ -73,4 +73,16 @@
     <string name="system_users_sessions_description">Mirá y revocá las sesiones activas de este usuario.</string>
     <string name="system_users_empty_search_hint">Probá ajustando tus criterios de búsqueda</string>
 
+    <string name="security_token_name">Nombre</string>
+    <string name="notifprefs_name_label">Nombre</string>
+    <string name="accounts_field_name">Nombre</string>
+    <string name="security_create">Crear</string>
+    <string name="settings_home_title">Configuración</string>
+    <string name="accounts_settings">Configuración</string>
+    <string name="accounts_type_label">Tipo</string>
+    <string name="system_users_col_user">Usuario</string>
+    <string name="system_users_role_user">Usuario</string>
+    <string name="settings_home_system_status">Estado</string>
+    <string name="system_status_title">Estado</string>
+    <string name="system_users_col_status">Estado</string>
 </resources>

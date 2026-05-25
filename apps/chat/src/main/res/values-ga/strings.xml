@@ -31,4 +31,6 @@
     <string name="chat_members_you">Tusa</string>
     <string name="chat_chat_not_found">Comhrá gan aimsiú</string>
 
+    <string name="chat_list_more">Tuilleadh</string>
+    <string name="chat_message_send">Seol</string>
 </resources>

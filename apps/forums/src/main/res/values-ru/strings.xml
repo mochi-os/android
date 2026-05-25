@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Форум не найден</string>
     <string name="forums_post_not_found">Публикация не найдена</string>
 
+    <string name="forums_list_more">Ещё</string>
+    <string name="forums_comment_send">Отправить</string>
 </resources>

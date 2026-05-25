@@ -7,4 +7,32 @@
     <string name="forums_banner_dismiss">Banner schliessen</string>
     <string name="forums_moderation_report_dismiss">Schliessen</string>
 
+    <string name="forums_create_name">Name</string>
+    <string name="forums_create_action">Erstellen</string>
+    <string name="forums_post_save">Speichern</string>
+    <string name="forums_comment_save">Speichern</string>
+    <string name="forums_settings_save">Speichern</string>
+    <string name="forums_list_logout">Abmelden</string>
+    <string name="forums_find_subscribe">Abonnieren</string>
+    <string name="forums_access_level_view">Anzeigen</string>
+    <string name="forums_access_level_none">Keine</string>
+    <string name="forums_settings">Einstellungen</string>
+    <string name="forums_list_search">Suchen</string>
+    <string name="forums_list_more">Mehr</string>
+    <string name="forums_comment_send">Senden</string>
+    <string name="forums_post_remove">Entfernen</string>
+    <string name="forums_comment_remove">Entfernen</string>
+    <string name="forums_moderation_restriction_remove">Entfernen</string>
+    <string name="forums_moderation_restriction_type">Typ</string>
+    <string name="forums_post_title_field">Titel</string>
+    <string name="forums_post_edit_title_field">Titel</string>
+    <string name="forums_list_unsubscribe">Abbestellen</string>
+    <string name="forums_list_unsubscribe_title">Abbestellen</string>
+    <string name="forums_settings_unsubscribe">Abbestellen</string>
+    <string name="forums_sort_new">Neu</string>
+    <string name="forums_post_default_author">Benutzer</string>
+    <string name="forums_moderation_reports_all">Alle</string>
+    <string name="forums_moderation_reports_status">Status</string>
+    <string name="forums_report_reason">Grund</string>
+    <string name="forums_report_reason_other">Andere</string>
 </resources>

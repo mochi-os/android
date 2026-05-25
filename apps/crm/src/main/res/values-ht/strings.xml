@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Non afichaj</string>
     <string name="crm_auth_verification_failed">Verifikasyon echwe</string>
     <string name="crm_list_title">Pwojè yo</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Aksè</string>
     <string name="crm_settings_tab_people">Moun</string>
     <string name="crm_option_icon">Ikon</string>
+    <string name="crm_option_icon_placeholder">egz. Check, Star, Flag</string>
     <string name="crm_settings_save">Sove chanjman</string>
     <string name="crm_settings_unsubscribe">Dezabòne</string>
     <string name="crm_settings_delete_crm">Efase pwojè</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Sispann gade</string>
     <string name="crm_parent_label">Paran</string>
     <string name="crm_parent_search_placeholder">Chèche</string>
+    <string name="crm_links_title">Lyen</string>
     <string name="crm_links_add">Ajoute lyen</string>
     <string name="crm_links_section_blocks">Blòk</string>
     <string name="crm_links_section_blocked_by">Bloke pa</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Tache fichye</string>
     <string name="crm_property_remove">Retire</string>
     <string name="crm_property_option_none">Okenn</string>
+    <string name="crm_attachments">Atachman yo</string>
     <string name="crm_attachment_add">Ajoute atachman</string>
     <string name="crm_request_empty">Pa gen demand merge</string>
     <string name="crm_request_status_draft">Bouyon</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Ajoute klas</string>
     <string name="crm_classes_create">Kreye</string>
     <string name="crm_class_name">Non</string>
+    <string name="crm_class_save_name">Sove non</string>
     <string name="crm_class_title_field">Chan tit</string>
     <string name="crm_class_merge_requests">Demand Merge</string>
     <string name="crm_class_fields">Chan</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Mete ajou</string>
     <string name="crm_views_sort_rank">Klasman</string>
     <string name="crm_not_found">Pwojè pa jwenn</string>
-    <string name="crm_option_icon_placeholder">egz. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Plis</string>
+    <string name="crm_more">Plis</string>
+    <string name="crm_request_more">Plis</string>
+    <string name="crm_comment_send">Voye</string>
 </resources>

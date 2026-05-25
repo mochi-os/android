@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Εμφανιζόμενο όνομα</string>
     <string name="projects_auth_verification_failed">Η επαλήθευση απέτυχε</string>
     <string name="projects_list_title">Έργα</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Πρόσβαση</string>
     <string name="projects_settings_tab_people">Άτομα</string>
     <string name="projects_option_icon">Εικονίδιο</string>
+    <string name="projects_option_icon_placeholder">π.χ. Check, Star, Flag</string>
     <string name="projects_settings_save">Αποθήκευση αλλαγών</string>
     <string name="projects_settings_unsubscribe">Διαγραφή εγγραφής</string>
     <string name="projects_settings_delete_project">Διαγραφή έργου</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Διακοπή παρακολούθησης</string>
     <string name="projects_parent_label">Γονικό</string>
     <string name="projects_parent_search_placeholder">Αναζήτηση</string>
+    <string name="projects_links_title">Σύνδεσμοι</string>
     <string name="projects_links_add">Προσθήκη συνδέσμου</string>
     <string name="projects_links_section_blocks">Αποκλείει</string>
     <string name="projects_links_section_blocked_by">Αποκλείεται από</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Επισύναψη αρχείων</string>
     <string name="projects_property_remove">Αφαίρεση</string>
     <string name="projects_property_option_none">Κανένα</string>
+    <string name="projects_attachments">Συνημμένα</string>
     <string name="projects_attachment_add">Προσθήκη συνημμένου</string>
     <string name="projects_request_empty">Κανένα αίτημα συγχώνευσης</string>
     <string name="projects_request_status_draft">Πρόχειρο</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Προσθήκη κλάσης</string>
     <string name="projects_classes_create">Δημιουργία</string>
     <string name="projects_class_name">Όνομα</string>
+    <string name="projects_class_save_name">Αποθήκευση ονόματος</string>
     <string name="projects_class_title_field">Πεδίο τίτλου</string>
     <string name="projects_class_merge_requests">Αιτήματα συγχώνευσης</string>
     <string name="projects_class_fields">Πεδία</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Ενημερώθηκε</string>
     <string name="projects_views_sort_rank">Κατάταξη</string>
     <string name="projects_project_not_found">Το έργο δεν βρέθηκε</string>
-    <string name="projects_option_icon_placeholder">π.χ. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Περισσότερα</string>
+    <string name="projects_more">Περισσότερα</string>
+    <string name="projects_request_more">Περισσότερα</string>
+    <string name="projects_comment_send">Αποστολή</string>
 </resources>

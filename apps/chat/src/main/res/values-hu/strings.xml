@@ -31,4 +31,6 @@
     <string name="chat_members_you">Ön</string>
     <string name="chat_chat_not_found">A chat nem található</string>
 
+    <string name="chat_list_more">Több</string>
+    <string name="chat_message_send">Küldés</string>
 </resources>

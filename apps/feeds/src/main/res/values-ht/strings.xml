@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feed</string>
     <string name="feeds_find_feeds">Jwenn feed</string>
     <string name="feeds_create_feed">Kreye fil</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Manm</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Non feed</string>
+    <string name="feeds_save_name">Sove non</string>
     <string name="feeds_banner">Banyè</string>
     <string name="feeds_banner_description">Banyè markdown opsyonèl ki montre nan tèt flux ou.</string>
     <string name="feeds_clear">Efase</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Memwa</string>
+    <string name="feeds_remove_source">Retire sous</string>
     <string name="feeds_suggested_credibility_accept">Aksepte</string>
     <string name="feeds_rss_url_copied">URL RSS kopye nan clipboard</string>
     <string name="feeds_logout">Dekonekte</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Reset nan default</string>
     <string name="feeds_feed_not_found">Feed pa jwenn</string>
     <string name="feeds_post_not_found">Pòs pa jwenn</string>
+    <string name="feeds_post_select_feed">Tanpri chwazi yon flux</string>
+    <string name="feeds_post_empty_content">Tanpri tape tex oswa atache yon fichye</string>
     <string name="feeds_settings_feed_renamed">Feed rebatize</string>
+    <string name="feeds_settings_banner_saved">Banyè anrejistre</string>
+    <string name="feeds_settings_banner_cleared">Banyè efase</string>
     <string name="feeds_settings_source_added">Sous ajoute</string>
     <string name="feeds_settings_source_updated">Sous mete ajou</string>
     <string name="feeds_settings_source_removed">Sous retire</string>
+    <string name="feeds_settings_source_polling">Sous ap konsilte…</string>
     <string name="feeds_settings_access_updated">Aksè mete ajou</string>
+    <string name="feeds_settings_access_revoked">Akè retire</string>
     <string name="feeds_settings_member_added">Manm ajoute</string>
     <string name="feeds_settings_member_removed">Manm retire</string>
-    <string name="feeds_settings_prompt_saved">Prompt sove</string>
-    <string name="feeds_settings_banner_saved">Banyè anrejistre</string>
-    <string name="feeds_settings_banner_cleared">Banyè efase</string>
-    <string name="feeds_settings_source_polling">Sous ap konsilte…</string>
-    <string name="feeds_settings_access_revoked">Akè retire</string>
     <string name="feeds_settings_ai_mode_updated">Mod IA mete ajò</string>
     <string name="feeds_settings_ai_account_updated">Kont IA mete ajò</string>
+    <string name="feeds_settings_prompt_saved">Prompt sove</string>
     <string name="feeds_settings_prompt_reset">Ankourajman re-konfigire ann otomatik</string>
-    <string name="feeds_post_select_feed">Tanpri chwazi yon flux</string>
-    <string name="feeds_post_empty_content">Tanpri tape tex oswa atache yon fichye</string>
-
+    <string name="feeds_send">Voye</string>
 </resources>

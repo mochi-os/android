@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="words_detail_cancel">取消</string>
+    <string name="words_list_logout">登出</string>
+    <string name="words_detail_label_you">你</string>
+</resources>

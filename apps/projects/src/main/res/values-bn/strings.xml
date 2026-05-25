@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">প্রদর্শনের নাম</string>
     <string name="projects_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
     <string name="projects_list_title">প্রকল্প</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">অ্যাক্সেস</string>
     <string name="projects_settings_tab_people">ব্যক্তিরা</string>
     <string name="projects_option_icon">আইকন</string>
+    <string name="projects_option_icon_placeholder">যেমন. Check, Star, Flag</string>
     <string name="projects_settings_save">পরিবর্তন সংরক্ষণ করুন</string>
     <string name="projects_settings_unsubscribe">আনসাবস্ক্রাইব করুন</string>
     <string name="projects_settings_delete_project">প্রজেক্ট মুছুন</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">দেখা বন্ধ করুন</string>
     <string name="projects_parent_label">প্যারেন্ট</string>
     <string name="projects_parent_search_placeholder">অনুসন্ধান</string>
+    <string name="projects_links_title">লিঙ্কসমূহ</string>
     <string name="projects_links_add">লিঙ্ক যোগ করুন</string>
     <string name="projects_links_section_blocks">ব্লক করে</string>
     <string name="projects_links_section_blocked_by">ব্লক করেছে</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">ফাইল সংযুক্ত করুন</string>
     <string name="projects_property_remove">সরান</string>
     <string name="projects_property_option_none">কোনোটি নয়</string>
+    <string name="projects_attachments">অ্যাটাচমেন্ট</string>
     <string name="projects_attachment_add">অ্যাটাচমেন্ট যোগ করুন</string>
     <string name="projects_request_empty">কোনো মার্জ অনুরোধ নেই</string>
     <string name="projects_request_status_draft">খসড়া</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">ক্লাস যোগ করুন</string>
     <string name="projects_classes_create">তৈরি করুন</string>
     <string name="projects_class_name">নাম</string>
+    <string name="projects_class_save_name">নাম সংরক্ষণ করুন</string>
     <string name="projects_class_title_field">শিরোনাম ফিল্ড</string>
     <string name="projects_class_merge_requests">মার্জ অনুরোধ</string>
     <string name="projects_class_fields">ফিল্ডসমূহ</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">আপডেট হয়েছে</string>
     <string name="projects_views_sort_rank">র‍্যাঙ্ক</string>
     <string name="projects_project_not_found">প্রকল্প পাওয়া যায়নি</string>
-    <string name="projects_option_icon_placeholder">যেমন. Check, Star, Flag</string>
-
+    <string name="projects_list_more">আরো</string>
+    <string name="projects_more">আরো</string>
+    <string name="projects_request_more">আরো</string>
+    <string name="projects_comment_send">পাঠান</string>
 </resources>

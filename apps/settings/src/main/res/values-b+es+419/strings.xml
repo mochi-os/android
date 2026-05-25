@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="settings_home_title">Configuración</string>
     <string name="settings_home_logout">Cerrar sesión</string>
     <string name="settings_home_display">Mostrar</string>
@@ -46,7 +45,7 @@
     <string name="replication_approve">Aprobar</string>
     <string name="replication_deny">Denegar</string>
     <string name="replication_hosts_title">Mis anfitriones</string>
-    <string name="replication_hosts_empty_hint">Para replicarla a otro servidor, regístrate para crear una cuenta allí y usa la opción \"Replicar una cuenta existente\".</string>
+    <string name="replication_hosts_empty_hint">Para replicarla a otro servidor, regístrate para crear una cuenta allí y usa la opción \\"Replicar una cuenta existente\\".</string>
     <string name="replication_remove">Eliminar anfitrión</string>
     <string name="replication_remove_title">¿Eliminar anfitrión?</string>
     <string name="settings_home_section_system">Sistema</string>
@@ -217,6 +216,7 @@
     <string name="system_setting_server_version">Versión del servidor</string>
     <string name="system_setting_signup_enabled">Permitir nuevos registros</string>
     <string name="system_users_title">Usuarios</string>
+    <string name="system_users_add_user">Agregar usuario</string>
     <string name="system_users_col_user">Usuario</string>
     <string name="system_users_col_status">Estado</string>
     <string name="system_users_col_last">Último inicio de sesión</string>
@@ -258,5 +258,4 @@
     <string name="system_users_toast_delete_failed">Error al eliminar el usuario</string>
     <string name="system_users_toast_status_failed">Error al actualizar el estado del usuario</string>
     <string name="system_users_toast_revoke_failed">Error al revocar la sesión</string>
-
 </resources>

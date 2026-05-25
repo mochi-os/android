@@ -31,4 +31,6 @@
     <string name="chat_members_you">మీరు</string>
     <string name="chat_chat_not_found">చాట్ కనుగొనబడలేదు</string>
 
+    <string name="chat_list_more">మరిన్ని</string>
+    <string name="chat_message_send">పంపండి</string>
 </resources>

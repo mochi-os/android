@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Syötteet</string>
     <string name="feeds_find_feeds">Etsi syötteitä</string>
     <string name="feeds_create_feed">Luo syöte</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Jäsenet</string>
     <string name="feeds_tab_ai">Tekoäly</string>
     <string name="feeds_feed_name">Syötteen nimi</string>
+    <string name="feeds_save_name">Tallenna nimi</string>
     <string name="feeds_banner">Banneri</string>
     <string name="feeds_banner_description">Valinnainen markdown-banneri, joka näytetään syötteesi yläosassa.</string>
     <string name="feeds_clear">Tyhjennä</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-syöte</string>
     <string name="feeds_source_type_feed_memories">Muistot</string>
+    <string name="feeds_remove_source">Poista lähde</string>
     <string name="feeds_suggested_credibility_accept">Hyväksy</string>
     <string name="feeds_rss_url_copied">RSS-URL kopioitu leikepöydälle</string>
     <string name="feeds_logout">Kirjaudu ulos</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Palauta oletukseksi</string>
     <string name="feeds_feed_not_found">Syötettä ei löytynyt</string>
     <string name="feeds_post_not_found">Julkaisua ei löytynyt</string>
+    <string name="feeds_post_select_feed">Valitse syöte</string>
+    <string name="feeds_post_empty_content">Kirjoita tekstia tai liitä tiedosto</string>
     <string name="feeds_settings_feed_renamed">Syöte nimetty uudelleen</string>
+    <string name="feeds_settings_banner_saved">Banneri tallennettu</string>
+    <string name="feeds_settings_banner_cleared">Banneri tyhjennetty</string>
     <string name="feeds_settings_source_added">Lähde lisätty</string>
     <string name="feeds_settings_source_updated">Lähde päivitetty</string>
     <string name="feeds_settings_source_removed">Lähde poistettu</string>
+    <string name="feeds_settings_source_polling">Lähdettä noudetaan…</string>
     <string name="feeds_settings_access_updated">Käyttöoikeus päivitetty</string>
+    <string name="feeds_settings_access_revoked">Käyttöoikeus peruutettu</string>
     <string name="feeds_settings_member_added">Jäsen lisätty</string>
     <string name="feeds_settings_member_removed">Jäsen poistettu</string>
-    <string name="feeds_settings_prompt_saved">Kehote tallennettu</string>
-    <string name="feeds_settings_banner_saved">Banneri tallennettu</string>
-    <string name="feeds_settings_banner_cleared">Banneri tyhjennetty</string>
-    <string name="feeds_settings_source_polling">Lähdettä noudetaan…</string>
-    <string name="feeds_settings_access_revoked">Käyttöoikeus peruutettu</string>
     <string name="feeds_settings_ai_mode_updated">Tekoälytila päivitetty</string>
     <string name="feeds_settings_ai_account_updated">Tekoälytili päivitetty</string>
+    <string name="feeds_settings_prompt_saved">Kehote tallennettu</string>
     <string name="feeds_settings_prompt_reset">Kehote palautettu oletukseksi</string>
-    <string name="feeds_post_select_feed">Valitse syöte</string>
-    <string name="feeds_post_empty_content">Kirjoita tekstia tai liitä tiedosto</string>
-
+    <string name="feeds_send">Lähetä</string>
 </resources>

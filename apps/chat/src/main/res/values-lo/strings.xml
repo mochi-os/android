@@ -31,4 +31,6 @@
     <string name="chat_members_you">ທ່ານ</string>
     <string name="chat_chat_not_found">ບໍ່ພົບແຊັດ</string>
 
+    <string name="chat_list_more">ເພີ່ມເຕີມ</string>
+    <string name="chat_message_send">ສົ່ງ</string>
 </resources>

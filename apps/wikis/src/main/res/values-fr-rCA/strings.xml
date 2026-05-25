@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wikis_create_name_label">Nom</string>
+    <string name="wikis_attachments_sort_name">Nom</string>
+    <string name="wikis_settings_field_name">Nom</string>
+    <string name="wikis_create_submit">Créer</string>
+    <string name="wikis_redirect_create_action">Créer</string>
+    <string name="wikis_pageview_back">Retour</string>
+    <string name="wikis_create_cancel">Annuler</string>
+    <string name="wikis_comment_action_cancel">Annuler</string>
+    <string name="wikis_editor_cancel">Annuler</string>
+    <string name="wikis_delete_page_cancel">Annuler</string>
+    <string name="wikis_revert_page_cancel">Annuler</string>
+    <string name="wikis_rename_page_cancel">Annuler</string>
+    <string name="wikis_tag_dialog_cancel">Annuler</string>
+    <string name="wikis_comment_action_save">Enregistrer</string>
+    <string name="wikis_editor_save">Enregistrer</string>
+    <string name="wikis_page_action_edit">Modifier</string>
+    <string name="wikis_comment_action_edit">Modifier</string>
+    <string name="wikis_editor_edit">Modifier</string>
+    <string name="wikis_page_action_delete">Supprimer</string>
+    <string name="wikis_comment_action_delete">Supprimer</string>
+    <string name="wikis_delete_page_confirm">Supprimer</string>
+    <string name="wikis_attachments_delete">Supprimer</string>
+    <string name="wikis_redirects_add">Ajouter</string>
+    <string name="wikis_tag_dialog_add">Ajouter</string>
+    <string name="wikis_access_add_action">Ajouter</string>
+    <string name="wikis_subscribe_button">S\'abonner</string>
+    <string name="wikis_history_view_action">Voir</string>
+    <string name="wikis_page_action_settings">Paramètres</string>
+    <string name="wikis_settings_title">Paramètres</string>
+    <string name="wikis_settings_tab_settings">Paramètres</string>
+    <string name="wikis_page_action_search">Rechercher</string>
+    <string name="wikis_search_title">Rechercher</string>
+    <string name="wikis_comment_form_send">Envoyer</string>
+    <string name="wikis_replicas_remove_confirm_action">Supprimer</string>
+    <string name="wikis_open_sidebar">Ouvrir la barre latérale</string>
+    <string name="wikis_editor_title_label">Titre</string>
+    <string name="wikis_page_action_unsubscribe">Se désabonner</string>
+    <string name="wikis_unsubscribe_action">Se désabonner</string>
+    <string name="wikis_unsubscribe_confirm_title">Se désabonner</string>
+    <string name="wikis_attachments_open">Ouvrir</string>
+    <string name="wikis_access_add_subject_label">Utilisateur</string>
+</resources>

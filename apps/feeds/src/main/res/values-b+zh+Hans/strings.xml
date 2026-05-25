@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">信息流</string>
     <string name="feeds_find_feeds">查找信息流</string>
     <string name="feeds_create_feed">创建订阅源</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">成员</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">信息流名称</string>
+    <string name="feeds_save_name">保存名称</string>
     <string name="feeds_banner">横幅</string>
     <string name="feeds_banner_description">在你信息流顶部显示的可选 Markdown 横幅。</string>
     <string name="feeds_clear">清除</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi 信息流</string>
     <string name="feeds_source_type_feed_memories">回忆</string>
+    <string name="feeds_remove_source">移除来源</string>
     <string name="feeds_suggested_credibility_accept">接受</string>
     <string name="feeds_rss_url_copied">RSS URL 已复制到剪贴板</string>
     <string name="feeds_logout">退出登录</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">重置为默认</string>
     <string name="feeds_feed_not_found">信息流未找到</string>
     <string name="feeds_post_not_found">帖子未找到</string>
+    <string name="feeds_post_select_feed">请选择一个信息流</string>
+    <string name="feeds_post_empty_content">请输入一些文字或附加一个文件</string>
     <string name="feeds_settings_feed_renamed">已重命名信息流</string>
+    <string name="feeds_settings_banner_saved">横幅已保存</string>
+    <string name="feeds_settings_banner_cleared">横幅已清除</string>
     <string name="feeds_settings_source_added">已添加来源</string>
     <string name="feeds_settings_source_updated">已更新来源</string>
     <string name="feeds_settings_source_removed">已移除来源</string>
+    <string name="feeds_settings_source_polling">正在轮询源…</string>
     <string name="feeds_settings_access_updated">访问权限已更新</string>
+    <string name="feeds_settings_access_revoked">访问权限已撤销</string>
     <string name="feeds_settings_member_added">已添加成员</string>
     <string name="feeds_settings_member_removed">已移除成员</string>
-    <string name="feeds_settings_prompt_saved">提示词已保存</string>
-    <string name="feeds_settings_banner_saved">横幅已保存</string>
-    <string name="feeds_settings_banner_cleared">横幅已清除</string>
-    <string name="feeds_settings_source_polling">正在轮询源…</string>
-    <string name="feeds_settings_access_revoked">访问权限已撤销</string>
     <string name="feeds_settings_ai_mode_updated">AI 模式已更新</string>
     <string name="feeds_settings_ai_account_updated">AI 账号已更新</string>
+    <string name="feeds_settings_prompt_saved">提示词已保存</string>
     <string name="feeds_settings_prompt_reset">提示已重置为默认值</string>
-    <string name="feeds_post_select_feed">请选择一个信息流</string>
-    <string name="feeds_post_empty_content">请输入一些文字或附加一个文件</string>
-
+    <string name="feeds_send">发送</string>
 </resources>

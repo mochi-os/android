@@ -31,4 +31,6 @@
     <string name="chat_members_you">Εσείς</string>
     <string name="chat_chat_not_found">Η συνομιλία δεν βρέθηκε</string>
 
+    <string name="chat_list_more">Περισσότερα</string>
+    <string name="chat_message_send">Αποστολή</string>
 </resources>

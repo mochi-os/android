@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Nome de exibição</string>
     <string name="crm_auth_verification_failed">Falha na verificação</string>
     <string name="crm_list_title">Projetos</string>
@@ -64,6 +63,7 @@
     <string name="crm_watchers_unwatch">Parar de observar</string>
     <string name="crm_parent_label">Pai</string>
     <string name="crm_parent_search_placeholder">Pesquisar</string>
+    <string name="crm_links_title">Links</string>
     <string name="crm_links_add">Adicionar link</string>
     <string name="crm_links_section_blocks">Bloqueia</string>
     <string name="crm_links_section_blocked_by">Bloqueado por</string>
@@ -80,6 +80,7 @@
     <string name="crm_comment_attach">Anexar arquivos</string>
     <string name="crm_property_remove">Remover</string>
     <string name="crm_property_option_none">Nenhum</string>
+    <string name="crm_attachments">Anexos</string>
     <string name="crm_attachment_add">Adicionar anexo</string>
     <string name="crm_request_empty">Nenhuma solicitação de mesclagem</string>
     <string name="crm_request_status_draft">Rascunho</string>
@@ -120,6 +121,7 @@
     <string name="crm_classes_add_dialog_title">Adicionar classe</string>
     <string name="crm_classes_create">Criar</string>
     <string name="crm_class_name">Nome</string>
+    <string name="crm_class_save_name">Salvar nome</string>
     <string name="crm_class_title_field">Campo de título</string>
     <string name="crm_class_merge_requests">Solicitações de mesclagem</string>
     <string name="crm_class_fields">Campos</string>
@@ -158,5 +160,8 @@
     <string name="crm_views_sort_updated">Atualizado</string>
     <string name="crm_views_sort_rank">Classificação</string>
     <string name="crm_not_found">Projeto não encontrado</string>
-
+    <string name="crm_list_more">Mais</string>
+    <string name="crm_more">Mais</string>
+    <string name="crm_request_more">Mais</string>
+    <string name="crm_comment_send">Enviar</string>
 </resources>

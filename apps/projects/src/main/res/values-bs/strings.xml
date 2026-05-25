@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Ime za prikaz</string>
     <string name="projects_auth_verification_failed">Verifikacija neuspjela</string>
     <string name="projects_list_title">Projekti</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Pristup</string>
     <string name="projects_settings_tab_people">Ljudi</string>
     <string name="projects_option_icon">Ikona</string>
+    <string name="projects_option_icon_placeholder">npr. Check, Star, Flag</string>
     <string name="projects_settings_save">Sačuvaj promjene</string>
     <string name="projects_settings_unsubscribe">Otkaži pretplatu</string>
     <string name="projects_settings_delete_project">Obriši projekt</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Prestani pratiti</string>
     <string name="projects_parent_label">Nadređeni</string>
     <string name="projects_parent_search_placeholder">Pretraži</string>
+    <string name="projects_links_title">Veze</string>
     <string name="projects_links_add">Dodaj link</string>
     <string name="projects_links_section_blocks">Blokovi</string>
     <string name="projects_links_section_blocked_by">Blokirao</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Priloži fajlove</string>
     <string name="projects_property_remove">Ukloni</string>
     <string name="projects_property_option_none">Ništa</string>
+    <string name="projects_attachments">Prilozi</string>
     <string name="projects_attachment_add">Dodaj prilog</string>
     <string name="projects_request_empty">Nema merge zahtjeva</string>
     <string name="projects_request_status_draft">Skica</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Dodaj klasu</string>
     <string name="projects_classes_create">Kreiraj</string>
     <string name="projects_class_name">Ime</string>
+    <string name="projects_class_save_name">Sačuvaj naziv</string>
     <string name="projects_class_title_field">Polje naslova</string>
     <string name="projects_class_merge_requests">Zahtjevi za spajanje</string>
     <string name="projects_class_fields">Polja</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Ažurirano</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Projekat nije pronađen</string>
-    <string name="projects_option_icon_placeholder">npr. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Više</string>
+    <string name="projects_more">Više</string>
+    <string name="projects_request_more">Više</string>
+    <string name="projects_comment_send">Pošalji</string>
 </resources>

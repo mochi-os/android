@@ -31,4 +31,6 @@
     <string name="chat_members_you">Jūs</string>
     <string name="chat_chat_not_found">Saruna nav atrasta</string>
 
+    <string name="chat_list_more">Vairāk</string>
+    <string name="chat_message_send">Sūtīt</string>
 </resources>

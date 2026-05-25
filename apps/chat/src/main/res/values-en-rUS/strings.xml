@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chat_message_placeholder">Message</string>
+    <string name="chat_settings_save">Save</string>
+    <string name="chat_list_logout">Log out</string>
+    <string name="chat_members_you">You</string>
+    <string name="chat_list_search">Search</string>
+    <string name="chat_list_more">More</string>
+    <string name="chat_message_send">Send</string>
+    <string name="chat_settings_remove_member">Remove</string>
+</resources>

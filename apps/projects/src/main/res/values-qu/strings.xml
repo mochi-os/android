@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Qhaway suti</string>
     <string name="projects_auth_verification_failed">Qhawariy mana atikurqanchu</string>
     <string name="projects_list_title">Proyectokuna</string>
-    <string name="projects_list_close_search">Maskhay wichq\'ay</string>
+    <string name="projects_list_close_search">Maskhay wichq\\'ay</string>
     <string name="projects_list_search">Maskay</string>
     <string name="projects_list_find">Proyectokunata tariy</string>
     <string name="projects_list_logout">Lluqsiy</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Yaykuy</string>
     <string name="projects_settings_tab_people">Runakuna</string>
     <string name="projects_option_icon">Icono</string>
+    <string name="projects_option_icon_placeholder">kasun kaěunata. Check, Star, Flag</string>
     <string name="projects_settings_save">Cambiokunata waqaychay</string>
     <string name="projects_settings_unsubscribe">Suscripcionta saqiy</string>
     <string name="projects_settings_delete_project">Proyecto wischuy</string>
@@ -64,12 +64,13 @@
     <string name="projects_watchers_unwatch">Qhaway saqiy</string>
     <string name="projects_parent_label">Yaya</string>
     <string name="projects_parent_search_placeholder">Maskay</string>
+    <string name="projects_links_title">Enlacekuna</string>
     <string name="projects_links_add">Link yapay</string>
     <string name="projects_links_section_blocks">Bloques</string>
-    <string name="projects_links_section_blocked_by">Hark\'aq</string>
+    <string name="projects_links_section_blocked_by">Hark\\'aq</string>
     <string name="projects_links_section_duplicates">Iskaynisqakuna</string>
     <string name="projects_links_type_blocks">Bloques</string>
-    <string name="projects_links_type_blocked_by">Hark\'aq</string>
+    <string name="projects_links_type_blocked_by">Hark\\'aq</string>
     <string name="projects_links_type_duplicates">Iskaynisqakuna</string>
     <string name="projects_links_no_matches">Mana tupaq objetokuna</string>
     <string name="projects_field_yes">Arí</string>
@@ -80,13 +81,14 @@
     <string name="projects_comment_attach">Archivos churay</string>
     <string name="projects_property_remove">Qichuy</string>
     <string name="projects_property_option_none">Mana</string>
+    <string name="projects_attachments">Yapasqakuna</string>
     <string name="projects_attachment_add">Yapasqa yapay</string>
     <string name="projects_request_empty">Mana merge solicitudkuna</string>
     <string name="projects_request_status_draft">Wakichisqa</string>
     <string name="projects_request_status_open">Kicharisqa</string>
     <string name="projects_request_status_merged">Mergesqa</string>
     <string name="projects_request_merge">Merge</string>
-    <string name="projects_request_close">Wichq\'ay</string>
+    <string name="projects_request_close">Wichq\\'ay</string>
     <string name="projects_request_merge_dialog_title">Merge</string>
     <string name="projects_request_method">Método</string>
     <string name="projects_request_method_merge">Merge</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Clase yapay</string>
     <string name="projects_classes_create">Kamariy</string>
     <string name="projects_class_name">Sutin</string>
+    <string name="projects_class_save_name">Sutita waqaychay</string>
     <string name="projects_class_title_field">Sutinchay campo</string>
     <string name="projects_class_merge_requests">Merge mañaykuna</string>
     <string name="projects_class_fields">Campokuna</string>
@@ -129,7 +132,7 @@
     <string name="projects_field_type_text">Qillqa</string>
     <string name="projects_field_type_number">Yupay</string>
     <string name="projects_field_type_user">Apaykachaq</string>
-    <string name="projects_field_type_date">P\'unchaw</string>
+    <string name="projects_field_type_date">P\\'unchaw</string>
     <string name="projects_field_type_checklist">Lista</string>
     <string name="projects_field_name">Sutin</string>
     <string name="projects_field_type">Layan</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Musuqchasqa</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">Proyecto mana tarisqachu</string>
-    <string name="projects_option_icon_placeholder">kasun kaěunata. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Astawan</string>
+    <string name="projects_more">Astawan</string>
+    <string name="projects_request_more">Astawan</string>
+    <string name="projects_comment_send">Apachiy</string>
 </resources>

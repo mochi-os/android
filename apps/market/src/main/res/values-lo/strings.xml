@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">ຕະຫຼາດ</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ຊີວະປະຫວັດ</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">ບັນທຶກການປ່ຽນແປງແລ້ວ</string>
     <string name="market_account_status_banned_title">ບັນຊີຖືກແບນ</string>
     <string name="market_account_status_suspended_title">ບັນຊີຖືກລະງັບ</string>
+    <string name="market_account_stripe_dashboard">ເປີດແດັຊບອດ Stripe</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">ບັນຊີ</string>
     <string name="market_appeal_dialog_cancel">ຍົກເລີກ</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">ສະຖານທີ່</string>
     <string name="market_listing_detail_message_seller">ສົ່ງຂໍ້ຄວາມຫາຜູ້ຂາຍ</string>
     <string name="market_listing_detail_not_found">ບໍ່ພົບການລົງປະກາດຂາຍ</string>
+    <string name="market_listing_detail_place_bid">ສະເໜີລາຄາ</string>
     <string name="market_listing_detail_relist">ວາງລາຍການຂາຍໃໝ່</string>
     <string name="market_listing_detail_report">ລາຍງານລາຍການຂາຍ</string>
     <string name="market_listing_detail_save">ບັນທຶກ</string>

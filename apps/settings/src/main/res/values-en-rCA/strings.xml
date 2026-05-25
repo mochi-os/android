@@ -4,4 +4,31 @@
     <string name="system_documents_tab_privacy">Privacy</string>
     <string name="system_documents_customised">Customized</string>
 
+    <string name="security_token_name">Name</string>
+    <string name="notifprefs_name_label">Name</string>
+    <string name="accounts_field_name">Name</string>
+    <string name="security_create">Create</string>
+    <string name="security_cancel">Cancel</string>
+    <string name="security_save">Save</string>
+    <string name="route_save">Save</string>
+    <string name="document_save">Save</string>
+    <string name="system_documents_save">Save</string>
+    <string name="system_settings_save">Save</string>
+    <string name="notifprefs_edit">Edit</string>
+    <string name="security_delete">Delete</string>
+    <string name="notifprefs_delete">Delete</string>
+    <string name="domain_delegation_add">Add</string>
+    <string name="interests_add">Add</string>
+    <string name="settings_home_logout">Log out</string>
+    <string name="settings_home_title">Settings</string>
+    <string name="accounts_settings">Settings</string>
+    <string name="system_replication_remove">Remove</string>
+    <string name="notifprefs_remove">Remove</string>
+    <string name="accounts_remove">Remove</string>
+    <string name="accounts_type_label">Type</string>
+    <string name="system_users_col_user">User</string>
+    <string name="system_users_role_user">User</string>
+    <string name="settings_home_system_status">Status</string>
+    <string name="system_status_title">Status</string>
+    <string name="system_users_col_status">Status</string>
 </resources>

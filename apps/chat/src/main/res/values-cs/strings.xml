@@ -31,4 +31,6 @@
     <string name="chat_members_you">Vy</string>
     <string name="chat_chat_not_found">Chat nenalezen</string>
 
+    <string name="chat_list_more">Více</string>
+    <string name="chat_message_send">Odeslat</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">ნაჩვენები სახელი</string>
     <string name="crm_auth_verification_failed">შემოწმების კოდი გაიგზავნა</string>
     <string name="crm_list_title">პროექტები</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">წვდომა</string>
     <string name="crm_settings_tab_people">ხალხი</string>
     <string name="crm_option_icon">ხატულა</string>
+    <string name="crm_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
     <string name="crm_settings_save">ცვლილებების შენახვა</string>
     <string name="crm_settings_unsubscribe">ამოუცნობი ანგარიში</string>
     <string name="crm_settings_delete_crm">პროექტის წაშლა</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">ყურების შეწყვეტა</string>
     <string name="crm_parent_label">მშობელი</string>
     <string name="crm_parent_search_placeholder">ძიება</string>
+    <string name="crm_links_title">ბმულები</string>
     <string name="crm_links_add">ბმულის დამატება</string>
     <string name="crm_links_section_blocks">ბლოკები</string>
     <string name="crm_links_section_blocked_by">დაბლოკილია</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ფაილების მიმაგრება</string>
     <string name="crm_property_remove">წაშლა</string>
     <string name="crm_property_option_none">არცერთი</string>
+    <string name="crm_attachments">დანართები</string>
     <string name="crm_attachment_add">დანართის დამატება</string>
     <string name="crm_request_empty">merge მოთხოვნები არ არის</string>
     <string name="crm_request_status_draft">მონახაზი</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">კლასის დამატება</string>
     <string name="crm_classes_create">შექმნა</string>
     <string name="crm_class_name">სახელი</string>
+    <string name="crm_class_save_name">სახელის შენახვა</string>
     <string name="crm_class_title_field">სათაურის ველი</string>
     <string name="crm_class_merge_requests">შერწყმის მოთხოვნები</string>
     <string name="crm_class_fields">ველები</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">განაახლეთ ერთეულის დეტალები. ტიპი, ერთეული და ენა ვერ შეიცვლება.</string>
     <string name="crm_views_sort_rank">რანკი</string>
     <string name="crm_not_found">პროექტი ვერ მოიძებნა</string>
-    <string name="crm_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
-
+    <string name="crm_list_more">მეტი</string>
+    <string name="crm_more">მეტი</string>
+    <string name="crm_request_more">მეტი</string>
+    <string name="crm_comment_send">გაგზავნა</string>
 </resources>

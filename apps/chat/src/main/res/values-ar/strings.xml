@@ -31,4 +31,6 @@
     <string name="chat_members_you">أنت</string>
     <string name="chat_chat_not_found">الدردشة غير موجودة</string>
 
+    <string name="chat_list_more">المزيد</string>
+    <string name="chat_message_send">إرسال</string>
 </resources>

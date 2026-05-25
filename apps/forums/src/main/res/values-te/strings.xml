@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">ఫోరమ్ కనుగొనబడలేదు</string>
     <string name="forums_post_not_found">పోస్ట్ కనుగొనబడలేదు</string>
 
+    <string name="forums_list_more">మరిన్ని</string>
+    <string name="forums_comment_send">పంపండి</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Отображаемое имя</string>
     <string name="projects_auth_verification_failed">Подтверждение не удалось</string>
     <string name="projects_list_title">Проекты</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Доступ</string>
     <string name="projects_settings_tab_people">Люди</string>
     <string name="projects_option_icon">Значок</string>
+    <string name="projects_option_icon_placeholder">напр. Check, Star, Flag</string>
     <string name="projects_settings_save">Сохранить изменения</string>
     <string name="projects_settings_unsubscribe">Отписаться</string>
     <string name="projects_settings_delete_project">Удалить проект</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Прекратить отслеживание</string>
     <string name="projects_parent_label">Родитель</string>
     <string name="projects_parent_search_placeholder">Поиск</string>
+    <string name="projects_links_title">Ссылки</string>
     <string name="projects_links_add">Добавить ссылку</string>
     <string name="projects_links_section_blocks">Блокирует</string>
     <string name="projects_links_section_blocked_by">Блокируется</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Прикрепить файлы</string>
     <string name="projects_property_remove">Удалить</string>
     <string name="projects_property_option_none">Нет</string>
+    <string name="projects_attachments">Вложения</string>
     <string name="projects_attachment_add">Добавить вложение</string>
     <string name="projects_request_empty">Нет запросов на объединение</string>
     <string name="projects_request_status_draft">Черновик</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Добавить класс</string>
     <string name="projects_classes_create">Создать</string>
     <string name="projects_class_name">Имя</string>
+    <string name="projects_class_save_name">Сохранить имя</string>
     <string name="projects_class_title_field">Поле заголовка</string>
     <string name="projects_class_merge_requests">Запросы на объединение</string>
     <string name="projects_class_fields">Поля</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Обновлено</string>
     <string name="projects_views_sort_rank">Ранг</string>
     <string name="projects_project_not_found">Проект не найден</string>
-    <string name="projects_option_icon_placeholder">напр. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Ещё</string>
+    <string name="projects_more">Ещё</string>
+    <string name="projects_request_more">Ещё</string>
+    <string name="projects_comment_send">Отправить</string>
 </resources>

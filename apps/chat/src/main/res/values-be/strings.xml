@@ -31,4 +31,6 @@
     <string name="chat_members_you">Вы</string>
     <string name="chat_chat_not_found">Чат не знойдзены</string>
 
+    <string name="chat_list_more">Больш</string>
+    <string name="chat_message_send">Адправіць</string>
 </resources>

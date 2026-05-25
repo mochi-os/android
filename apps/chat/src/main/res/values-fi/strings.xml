@@ -31,4 +31,6 @@
     <string name="chat_members_you">Sinä</string>
     <string name="chat_chat_not_found">Chattia ei löydy</string>
 
+    <string name="chat_list_more">Lisää</string>
+    <string name="chat_message_send">Lähetä</string>
 </resources>

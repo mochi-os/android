@@ -31,4 +31,6 @@
     <string name="chat_members_you">तपाईं</string>
     <string name="chat_chat_not_found">च्याट फेला परेन</string>
 
+    <string name="chat_list_more">थप</string>
+    <string name="chat_message_send">पठाउनुहोस्</string>
 </resources>

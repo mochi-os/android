@@ -31,4 +31,6 @@
     <string name="chat_members_you">您</string>
     <string name="chat_chat_not_found">未找到聊天</string>
 
+    <string name="chat_list_more">更多</string>
+    <string name="chat_message_send">发送</string>
 </resources>

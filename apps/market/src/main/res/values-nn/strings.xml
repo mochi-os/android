@@ -414,4 +414,5 @@
     <string name="market_subscription_detail_not_found">Subscription not found</string>
     <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
     <string name="market_subscription_detail_started">Started %1$s</string>
+    <string name="market_messages_send">Send</string>
 </resources>

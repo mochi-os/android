@@ -42,4 +42,31 @@
     <string name="projects_views_edit_dialog_title">Editá la vista</string>
     <string name="projects_views_delete_title">Eliminá la vista</string>
 
+    <string name="projects_create_name">Nombre</string>
+    <string name="projects_class_name">Nombre</string>
+    <string name="projects_field_name">Nombre</string>
+    <string name="projects_create_action">Crear</string>
+    <string name="projects_request_create_action">Crear</string>
+    <string name="projects_classes_create">Crear</string>
+    <string name="projects_request_close">Cerrar</string>
+    <string name="projects_access_level_view">Ver</string>
+    <string name="projects_create_template_none">Ninguno</string>
+    <string name="projects_access_level_none">Ninguno</string>
+    <string name="projects_property_option_none">Ninguno</string>
+    <string name="projects_settings">Configuración</string>
+    <string name="projects_settings_title">Configuración</string>
+    <string name="projects_list_more">Más</string>
+    <string name="projects_more">Más</string>
+    <string name="projects_request_more">Más</string>
+    <string name="projects_comment_send">Enviar</string>
+    <string name="projects_create_description">Descripción</string>
+    <string name="projects_request_field_description">Descripción</string>
+    <string name="projects_create_object_type">Tipo</string>
+    <string name="projects_field_type">Tipo</string>
+    <string name="projects_views_type">Tipo</string>
+    <string name="projects_create_object_title_field">Título</string>
+    <string name="projects_request_field_title">Título</string>
+    <string name="projects_request_status_open">Abrir</string>
+    <string name="projects_board_new">Nuevo</string>
+    <string name="projects_field_type_user">Usuario</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Streymi</string>
     <string name="feeds_find_feeds">Finna streymi</string>
     <string name="feeds_create_feed">Búa til streymi</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Meðlimir</string>
     <string name="feeds_tab_ai">Gervigreind</string>
     <string name="feeds_feed_name">Nafn streymis</string>
+    <string name="feeds_save_name">Vista nafn</string>
     <string name="feeds_banner">Borði</string>
     <string name="feeds_banner_description">Valfrjáls markdown-borði sem birtist efst á straumnum þínum.</string>
     <string name="feeds_clear">Hreinsa</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-straumur</string>
     <string name="feeds_source_type_feed_memories">Minningar</string>
+    <string name="feeds_remove_source">Fjarlægja uppruna</string>
     <string name="feeds_suggested_credibility_accept">Samþykkja</string>
     <string name="feeds_rss_url_copied">RSS-vefslóð afrituð á klippiborð</string>
     <string name="feeds_logout">Skrá út</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Endurstilla á sjálfgefið</string>
     <string name="feeds_feed_not_found">Streymi fannst ekki</string>
     <string name="feeds_post_not_found">Færsla fannst ekki</string>
+    <string name="feeds_post_select_feed">Vinsamlegast veldu veitu</string>
+    <string name="feeds_post_empty_content">Vinsamlegast sláðu inn texta eða hengdu skrá við</string>
     <string name="feeds_settings_feed_renamed">Streymi endurnefnt</string>
+    <string name="feeds_settings_banner_saved">Borði vistaður</string>
+    <string name="feeds_settings_banner_cleared">Borði hreinsaður</string>
     <string name="feeds_settings_source_added">Uppruna bætt við</string>
     <string name="feeds_settings_source_updated">Uppruni uppfærður</string>
     <string name="feeds_settings_source_removed">Uppruni fjarlægður</string>
+    <string name="feeds_settings_source_polling">Sækir gögn úr veitu…</string>
     <string name="feeds_settings_access_updated">Aðgangur uppfærður</string>
+    <string name="feeds_settings_access_revoked">Aðgangur afturkallaður</string>
     <string name="feeds_settings_member_added">Meðlimi bætt við</string>
     <string name="feeds_settings_member_removed">Meðlimur fjarlægður</string>
-    <string name="feeds_settings_prompt_saved">Hvati vistaður</string>
-    <string name="feeds_settings_banner_saved">Borði vistaður</string>
-    <string name="feeds_settings_banner_cleared">Borði hreinsaður</string>
-    <string name="feeds_settings_source_polling">Sækir gögn úr veitu…</string>
-    <string name="feeds_settings_access_revoked">Aðgangur afturkallaður</string>
     <string name="feeds_settings_ai_mode_updated">Gervigreindarstilling uppfærð</string>
     <string name="feeds_settings_ai_account_updated">Gervigreindarreikningur uppfærður</string>
+    <string name="feeds_settings_prompt_saved">Hvati vistaður</string>
     <string name="feeds_settings_prompt_reset">Skipun núllstillt á sjálfgefið gildi</string>
-    <string name="feeds_post_select_feed">Vinsamlegast veldu veitu</string>
-    <string name="feeds_post_empty_content">Vinsamlegast sláðu inn texta eða hengdu skrá við</string>
-
+    <string name="feeds_send">Senda</string>
 </resources>

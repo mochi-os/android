@@ -31,4 +31,6 @@
     <string name="chat_members_you">እርስዎ</string>
     <string name="chat_chat_not_found">ውይይት አልተገኘም</string>
 
+    <string name="chat_list_more">ተጨማሪ</string>
+    <string name="chat_message_send">ላክ</string>
 </resources>

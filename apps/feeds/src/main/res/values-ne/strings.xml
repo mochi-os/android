@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">फिडहरू</string>
     <string name="feeds_find_feeds">फिडहरू खोज्नुहोस्</string>
     <string name="feeds_create_feed">फिड सिर्जना गर्नुहोस्</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">सदस्यहरू</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">फिड नाम</string>
+    <string name="feeds_save_name">नाम सुरक्षित गर्नुहोस्</string>
     <string name="feeds_banner">ब्यानर</string>
     <string name="feeds_banner_description">तपाईंको फिडको शीर्षमा देखाइने वैकल्पिक markdown ब्यानर।</string>
     <string name="feeds_clear">खाली गर्नुहोस्</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi फिड</string>
     <string name="feeds_source_type_feed_memories">स्मृतिहरू</string>
+    <string name="feeds_remove_source">स्रोत हटाउनुहोस्</string>
     <string name="feeds_suggested_credibility_accept">स्वीकार गर्नुहोस्</string>
     <string name="feeds_rss_url_copied">RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
     <string name="feeds_logout">लग आउट</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">पूर्वनिर्धारितमा रिसेट गर्नुहोस्</string>
     <string name="feeds_feed_not_found">फिड फेला परेन</string>
     <string name="feeds_post_not_found">पोस्ट भेटिएन</string>
+    <string name="feeds_post_select_feed">कृपया फिड छनौट गर्नुहोस्</string>
+    <string name="feeds_post_empty_content">कृपया केही पाठ राख्नुहोस् वा फाइल संलग्न गर्नुहोस्</string>
     <string name="feeds_settings_feed_renamed">फिडको नाम परिवर्तन भयो</string>
+    <string name="feeds_settings_banner_saved">ब्यानर बचाइयो</string>
+    <string name="feeds_settings_banner_cleared">ब्यानर खाली गरियो</string>
     <string name="feeds_settings_source_added">स्रोत थपियो</string>
     <string name="feeds_settings_source_updated">स्रोत अद्यावधिक गरियो</string>
     <string name="feeds_settings_source_removed">स्रोत हटाइयो</string>
+    <string name="feeds_settings_source_polling">स्रोत बिंटहरूू हुँदैछ…</string>
     <string name="feeds_settings_access_updated">पहुँच अद्यावधिक गरियो</string>
+    <string name="feeds_settings_access_revoked">पहुँच रद्द गरियो</string>
     <string name="feeds_settings_member_added">सदस्य थपियो</string>
     <string name="feeds_settings_member_removed">सदस्य हटाइयो</string>
-    <string name="feeds_settings_prompt_saved">प्रोम्प्ट बचत गरियो</string>
-    <string name="feeds_settings_banner_saved">ब्यानर बचाइयो</string>
-    <string name="feeds_settings_banner_cleared">ब्यानर खाली गरियो</string>
-    <string name="feeds_settings_source_polling">स्रोत बिंटहरूू हुँदैछ…</string>
-    <string name="feeds_settings_access_revoked">पहुँच रद्द गरियो</string>
     <string name="feeds_settings_ai_mode_updated">AI मोड अपडेट गरियो</string>
     <string name="feeds_settings_ai_account_updated">AI खाता अपडेट गरियो</string>
+    <string name="feeds_settings_prompt_saved">प्रोम्प्ट बचत गरियो</string>
     <string name="feeds_settings_prompt_reset">प्राम्पट पूर्वनिर्धारितमा रीसेट गरियो</string>
-    <string name="feeds_post_select_feed">कृपया फिड छनौट गर्नुहोस्</string>
-    <string name="feeds_post_empty_content">कृपया केही पाठ राख्नुहोस् वा फाइल संलग्न गर्नुहोस्</string>
-
+    <string name="feeds_send">पठाउनुहोस्</string>
 </resources>

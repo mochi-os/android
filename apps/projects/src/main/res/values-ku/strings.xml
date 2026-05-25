@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Navê xuyabûnê</string>
     <string name="projects_auth_verification_failed">Verifîkasyon têk çû</string>
     <string name="projects_list_title">Proje</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Gihîştin</string>
     <string name="projects_settings_tab_people">Kes</string>
     <string name="projects_option_icon">Wêneyê piçûk</string>
+    <string name="projects_option_icon_placeholder">wekî Check, Star, Flag</string>
     <string name="projects_settings_save">Guhertinan tomar bike</string>
     <string name="projects_settings_unsubscribe">Abone yî nebe</string>
     <string name="projects_settings_delete_project">Projeyê jê bibe</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Temaşekirinê rawestîne</string>
     <string name="projects_parent_label">Dêûbav</string>
     <string name="projects_parent_search_placeholder">Lêger</string>
+    <string name="projects_links_title">Lînka</string>
     <string name="projects_links_add">Girêdan zêde bike</string>
     <string name="projects_links_section_blocks">Blok</string>
     <string name="projects_links_section_blocked_by">Hat astengkirin ji aliyê</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Pelan pêve bike</string>
     <string name="projects_property_remove">Rake</string>
     <string name="projects_property_option_none">Tu</string>
+    <string name="projects_attachments">Pêvek</string>
     <string name="projects_attachment_add">Pêveka zêde bike</string>
     <string name="projects_request_empty">Tu daxwazên hevkirinê tune</string>
     <string name="projects_request_status_draft">Reşnivîs</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Pol zêde bike</string>
     <string name="projects_classes_create">Çêbike</string>
     <string name="projects_class_name">Nav</string>
+    <string name="projects_class_save_name">Navê tomar bike</string>
     <string name="projects_class_title_field">Qada sernav</string>
     <string name="projects_class_merge_requests">Daxwazên tevlîkirinê</string>
     <string name="projects_class_fields">Qadan</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Nûjen kirin</string>
     <string name="projects_views_sort_rank">Rêz</string>
     <string name="projects_project_not_found">Proje nehat dîtin</string>
-    <string name="projects_option_icon_placeholder">wekî Check, Star, Flag</string>
-
+    <string name="projects_list_more">Zêdetir</string>
+    <string name="projects_more">Zêdetir</string>
+    <string name="projects_request_more">Zêdetir</string>
+    <string name="projects_comment_send">Bişîne</string>
 </resources>

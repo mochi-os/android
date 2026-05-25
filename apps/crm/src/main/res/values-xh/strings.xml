@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Igama elibonisiweyo</string>
     <string name="crm_auth_verification_failed">Uqinisekiso lusilele</string>
     <string name="crm_list_title">Iiprojekthi</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Ufikelelo</string>
     <string name="crm_settings_tab_people">Abantu</string>
     <string name="crm_option_icon">Umfanekiso</string>
+    <string name="crm_option_icon_placeholder">umzekelo Check, Star, Flag</string>
     <string name="crm_settings_save">Gcina utshintsho</string>
     <string name="crm_settings_unsubscribe">Yeka ukurhuma</string>
     <string name="crm_settings_delete_crm">Cima iprojekthi</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Yeka ukubukela</string>
     <string name="crm_parent_label">Umzali</string>
     <string name="crm_parent_search_placeholder">Khangela</string>
+    <string name="crm_links_title">Amakhonkco</string>
     <string name="crm_links_add">Yongeza ikhonkco</string>
     <string name="crm_links_section_blocks">Iyavimba</string>
     <string name="crm_links_section_blocked_by">Ivinjelwe ngu</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Qhoboshela iifayile</string>
     <string name="crm_property_remove">Susa</string>
     <string name="crm_property_option_none">Akukho nanye</string>
+    <string name="crm_attachments">Iziqhotyoshelwa</string>
     <string name="crm_attachment_add">Yongeza isiqhotyoshelwa</string>
     <string name="crm_request_empty">Akukho zicelo zokudibanisa</string>
     <string name="crm_request_status_draft">Uyilo</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Yongeza iklasi</string>
     <string name="crm_classes_create">Yenza</string>
     <string name="crm_class_name">Igama</string>
+    <string name="crm_class_save_name">Gcina igama</string>
     <string name="crm_class_title_field">Indawo yesihloko</string>
     <string name="crm_class_merge_requests">Izicelo zokudibanisa</string>
     <string name="crm_class_fields">Iimbala</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Kuhlaziyiwe</string>
     <string name="crm_views_sort_rank">Inqanaba</string>
     <string name="crm_not_found">Iprojekthi ayifumaneki</string>
-    <string name="crm_option_icon_placeholder">umzekelo Check, Star, Flag</string>
-
+    <string name="crm_list_more">Okuninzi</string>
+    <string name="crm_more">Okuninzi</string>
+    <string name="crm_request_more">Okuninzi</string>
+    <string name="crm_comment_send">Thumela</string>
 </resources>

@@ -2,4 +2,8 @@
 <resources>
 
 
+    <string name="go_new_game_cancel">Cancel</string>
+    <string name="go_delete_confirm">Delete</string>
+    <string name="go_open_sidebar">Open sidebar</string>
+    <string name="go_status_active">Active</string>
 </resources>

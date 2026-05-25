@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">Hana asusu</string>
@@ -37,8 +36,8 @@
     <string name="staff_accounts_unnamed">Ba a sa wa suna ba</string>
     <string name="staff_accounts_unsuspend">Cire dakatarwa</string>
     <string name="staff_accounts_unsuspended_toast">An ɗage dakatar da asusu</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Soke</string>
     <string name="staff_appeals_decide">Yanke shawara</string>
     <string name="staff_appeals_decide_failed">An gaza yanke shawara kan appeal</string>
@@ -84,7 +83,7 @@
     <string name="staff_audit_action_dispute_responded">Mai sayarwa ya amsa</string>
     <string name="staff_audit_action_listing_appeal_decided">An yanke shawara kan roko</string>
     <string name="staff_audit_action_listing_appeal_submitted">An gabatar da roko</string>
-    <string name="staff_audit_action_listing_approved">An amince ta hannun ma\'aikata</string>
+    <string name="staff_audit_action_listing_approved">An amince ta hannun ma\\'aikata</string>
     <string name="staff_audit_action_listing_created">An ƙirƙiri listing</string>
     <string name="staff_audit_action_listing_deleted">An share listing</string>
     <string name="staff_audit_action_listing_expired">Ya ƙare</string>
@@ -112,8 +111,8 @@
     <string name="staff_audit_action_review_responded">An aika amsa</string>
     <string name="staff_audit_action_review_restore">An mayar da bita</string>
     <string name="staff_audit_action_review_revealed">An bayyana bita</string>
-    <string name="staff_audit_action_staff_team_added">An ƙara memba na ma\'aikata</string>
-    <string name="staff_audit_action_staff_team_removed">An cire memba na ma\'aikata</string>
+    <string name="staff_audit_action_staff_team_added">An ƙara memba na ma\\'aikata</string>
+    <string name="staff_audit_action_staff_team_removed">An cire memba na ma\\'aikata</string>
     <string name="staff_audit_action_subscription_activated">An kunna subscription</string>
     <string name="staff_audit_action_subscription_active">An mayar zuwa aiki</string>
     <string name="staff_audit_action_subscription_cancel_scheduled">An tsara sokewa</string>
@@ -137,7 +136,7 @@
     <string name="staff_categories_col_position">Matsayi</string>
     <string name="staff_categories_col_slug">Slug</string>
     <string name="staff_categories_col_status">Matsayi</string>
-    <string name="staff_categories_col_types">Nau\'o\'i</string>
+    <string name="staff_categories_col_types">Nau\\'o\\'i</string>
     <string name="staff_categories_create">Ƙirƙira</string>
     <string name="staff_categories_delete_confirm">Goge</string>
     <string name="staff_categories_delete_deleting">Ana goge…</string>
@@ -222,7 +221,7 @@
     <string name="staff_dashboard_kpi_sellers">Masu sayarwa</string>
     <string name="staff_dashboard_kpi_total_orders">Jimillar oda</string>
     <string name="staff_dashboard_listing_fallback">#%1$d</string>
-    <string name="staff_dashboard_no">A\'a</string>
+    <string name="staff_dashboard_no">A\\'a</string>
     <string name="staff_dashboard_open_sidebar">Bude gefe</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Bincike</string>
@@ -275,11 +274,12 @@
     <string name="staff_disputes_view">Kalla</string>
     <string name="staff_filter_chip_remove">Cire matatar</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">Moderation</string>
     <string name="staff_filter_label_query">Bincike</string>
     <string name="staff_filter_label_review_status">Matsayi</string>
     <string name="staff_filter_label_seller">Mai sayarwa</string>
     <string name="staff_filter_label_status">Matsayi</string>
-    <string name="staff_filter_label_type">Nau\'i</string>
+    <string name="staff_filter_label_type">Nau\\'i</string>
     <string name="staff_listings_action_approve_title">Amince da jeri</string>
     <string name="staff_listings_action_failed">An gaza moderate listing</string>
     <string name="staff_listings_action_reject_title">Ƙi listing</string>
@@ -336,21 +336,21 @@
     <string name="staff_reports_action_taken_toast">An ɗauki mataki kan rahoto</string>
     <string name="staff_reports_action_warn">Gargaɗi</string>
     <string name="staff_reports_any_status">Duk matsayi</string>
-    <string name="staff_reports_any_type">Duk nau\'i</string>
+    <string name="staff_reports_any_type">Duk nau\\'i</string>
     <string name="staff_reports_cancel">Soke</string>
     <string name="staff_reports_close">Rufe</string>
     <string name="staff_reports_dialog_title_action">Ɗauki mataki kan rahoto</string>
     <string name="staff_reports_dialog_title_view">Rahoto</string>
     <string name="staff_reports_empty">Babu rahotanni</string>
     <string name="staff_reports_filter_status_label">Matsayi</string>
-    <string name="staff_reports_filter_type_label">Nau\'i</string>
+    <string name="staff_reports_filter_type_label">Nau\\'i</string>
     <string name="staff_reports_history">Tarihin rahoto</string>
     <string name="staff_reports_meta_price">Farashi</string>
     <string name="staff_reports_meta_reason">Dalili</string>
     <string name="staff_reports_meta_reporter">Mai bayar da rahoto</string>
     <string name="staff_reports_meta_seller">Mai sayarwa</string>
     <string name="staff_reports_meta_target">Manufa</string>
-    <string name="staff_reports_meta_type">Nau\'i</string>
+    <string name="staff_reports_meta_type">Nau\\'i</string>
     <string name="staff_reports_notes_label">Bayanai</string>
     <string name="staff_reports_open_sidebar">Bude gefe</string>
     <string name="staff_reports_reason_counterfeit">Na bogi ko sata</string>
@@ -471,5 +471,4 @@
     <string name="staff_team_toast_removed">An cire memba</string>
     <string name="staff_team_toast_role_failed">An kasa sabunta matsayi</string>
     <string name="staff_team_toast_role_updated">An sabunta matsayi</string>
-
 </resources>

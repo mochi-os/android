@@ -31,4 +31,6 @@
     <string name="chat_members_you">본인</string>
     <string name="chat_chat_not_found">채팅을 찾을 수 없어요</string>
 
+    <string name="chat_list_more">더 보기</string>
+    <string name="chat_message_send">보내기</string>
 </resources>

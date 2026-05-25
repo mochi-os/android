@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Koʻrsatish nomi</string>
     <string name="crm_auth_verification_failed">Tasdiqlash muvaffaqiyatsiz</string>
     <string name="crm_list_title">Loyihalar</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Kirish</string>
     <string name="crm_settings_tab_people">Odamlar</string>
     <string name="crm_option_icon">Belgi</string>
+    <string name="crm_option_icon_placeholder">masalan. Check, Star, Flag</string>
     <string name="crm_settings_save">Oʻzgarishlarni saqlash</string>
     <string name="crm_settings_unsubscribe">Obunadan chiqish</string>
     <string name="crm_settings_delete_crm">Loyihani oʻchirish</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Kuzatishni toʻxtatish</string>
     <string name="crm_parent_label">Ota</string>
     <string name="crm_parent_search_placeholder">Qidirish</string>
+    <string name="crm_links_title">Havolalar</string>
     <string name="crm_links_add">Havola qoʻshish</string>
     <string name="crm_links_section_blocks">Bloklar</string>
     <string name="crm_links_section_blocked_by">Bloklagan</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Fayl biriktirish</string>
     <string name="crm_property_remove">Olib tashlash</string>
     <string name="crm_property_option_none">Hech qanday</string>
+    <string name="crm_attachments">Biriktirmalar</string>
     <string name="crm_attachment_add">Ilova qoʻshish</string>
     <string name="crm_request_empty">Birlashtirish soʻrovlari yoʻq</string>
     <string name="crm_request_status_draft">Qoralama</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Sinf qoʻshish</string>
     <string name="crm_classes_create">Yaratish</string>
     <string name="crm_class_name">Nomi</string>
+    <string name="crm_class_save_name">Nomni saqlash</string>
     <string name="crm_class_title_field">Sarlavha maydoni</string>
     <string name="crm_class_merge_requests">Birlashtirish soʻrovlari</string>
     <string name="crm_class_fields">Maydonlar</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Yangilangan</string>
     <string name="crm_views_sort_rank">Reyting</string>
     <string name="crm_not_found">Loyiha topilmadi</string>
-    <string name="crm_option_icon_placeholder">masalan. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Ko‘proq</string>
+    <string name="crm_more">Ko‘proq</string>
+    <string name="crm_request_more">Ko‘proq</string>
+    <string name="crm_comment_send">Yuborish</string>
 </resources>

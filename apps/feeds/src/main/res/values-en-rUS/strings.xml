@@ -4,4 +4,16 @@
     <string name="feeds_travelling">Traveling</string>
     <string name="feeds_tab_access">Access</string>
 
+    <string name="feeds_name">Name</string>
+    <string name="feeds_create">Create</string>
+    <string name="feeds_save_label">Save</string>
+    <string name="feeds_suggested_interests_add">Add</string>
+    <string name="feeds_logout">Log out</string>
+    <string name="feeds_settings">Settings</string>
+    <string name="feeds_send">Send</string>
+    <string name="feeds_remove">Remove</string>
+    <string name="feeds_source_type">Type</string>
+    <string name="feeds_sort_new">New</string>
+    <string name="feeds_user">User</string>
+    <string name="feeds_filter_all">All</string>
 </resources>

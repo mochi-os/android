@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">ਫੋਰਮ ਨਹੀਂ ਮਿਲਿਆ</string>
     <string name="forums_post_not_found">ਪੋਸਟ ਨਹੀਂ ਮਿਲੀ</string>
 
+    <string name="forums_list_more">ਹੋਰ</string>
+    <string name="forums_comment_send">ਭੇਜੋ</string>
 </resources>

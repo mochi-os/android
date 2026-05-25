@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">દર્શાવનાર નામ</string>
     <string name="projects_auth_verification_failed">ચકાસણી નિષ્ફળ</string>
     <string name="projects_list_title">પ્રોજેક્ટ્સ</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">ઍક્સેસ</string>
     <string name="projects_settings_tab_people">લોકો</string>
     <string name="projects_option_icon">આઇકોન</string>
+    <string name="projects_option_icon_placeholder">ઉદા.ત. Check, Star, Flag</string>
     <string name="projects_settings_save">ફેરફારો સાચવો</string>
     <string name="projects_settings_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="projects_settings_delete_project">પ્રોજેક્ટ કાઢી નાખો</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">જોવાનું બંધ કરો</string>
     <string name="projects_parent_label">પેરન્ટ</string>
     <string name="projects_parent_search_placeholder">શોધો</string>
+    <string name="projects_links_title">લિંક્સ</string>
     <string name="projects_links_add">લિંક ઉમેરો</string>
     <string name="projects_links_section_blocks">અવરોધે છે</string>
     <string name="projects_links_section_blocked_by">દ્વારા અવરોધિત</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">ફાઇલો જોડો</string>
     <string name="projects_property_remove">દૂર કરો</string>
     <string name="projects_property_option_none">કોઈ નહીં</string>
+    <string name="projects_attachments">જોડાણો</string>
     <string name="projects_attachment_add">જોડાણ ઉમેરો</string>
     <string name="projects_request_empty">કોઈ મર્જ વિનંતીઓ નથી</string>
     <string name="projects_request_status_draft">ડ્રાફ્ટ</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">ક્લાસ ઉમેરો</string>
     <string name="projects_classes_create">બનાવો</string>
     <string name="projects_class_name">નામ</string>
+    <string name="projects_class_save_name">નામ સાચવો</string>
     <string name="projects_class_title_field">શીર્ષક ફીલ્ડ</string>
     <string name="projects_class_merge_requests">મર્જ વિનંતીઓ</string>
     <string name="projects_class_fields">ફીલ્ડ્સ</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">અપડેટ કર્યું</string>
     <string name="projects_views_sort_rank">રેન્ક</string>
     <string name="projects_project_not_found">પ્રોજેક્ટ મળ્યો નથી</string>
-    <string name="projects_option_icon_placeholder">ઉદા.ત. Check, Star, Flag</string>
-
+    <string name="projects_list_more">વધુ</string>
+    <string name="projects_more">વધુ</string>
+    <string name="projects_request_more">વધુ</string>
+    <string name="projects_comment_send">મોકલો</string>
 </resources>

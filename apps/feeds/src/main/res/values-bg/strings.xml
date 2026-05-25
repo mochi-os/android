@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Емисии</string>
     <string name="feeds_find_feeds">Намери емисии</string>
     <string name="feeds_create_feed">Създай емисия</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Членове</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Име на емисия</string>
+    <string name="feeds_save_name">Запази името</string>
     <string name="feeds_banner">Банер</string>
     <string name="feeds_banner_description">Незадължителен markdown банер, показан в горната част на емисията.</string>
     <string name="feeds_clear">Изчисти</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi емисия</string>
     <string name="feeds_source_type_feed_memories">Спомени</string>
+    <string name="feeds_remove_source">Премахни източника</string>
     <string name="feeds_suggested_credibility_accept">Приеми</string>
     <string name="feeds_rss_url_copied">RSS URL е копиран в клипборда</string>
     <string name="feeds_logout">Изход</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Върни към подразбиране</string>
     <string name="feeds_feed_not_found">Емисията не е намерена</string>
     <string name="feeds_post_not_found">Публикацията не е намерена</string>
+    <string name="feeds_post_select_feed">Моля, изберете поток</string>
+    <string name="feeds_post_empty_content">Моля, въведете текст или прикачете файл</string>
     <string name="feeds_settings_feed_renamed">Емисията е преименувана</string>
+    <string name="feeds_settings_banner_saved">Банерът е запазен</string>
+    <string name="feeds_settings_banner_cleared">Банерът е изчистен</string>
     <string name="feeds_settings_source_added">Източникът е добавен</string>
     <string name="feeds_settings_source_updated">Източникът е обновен</string>
     <string name="feeds_settings_source_removed">Източникът е премахнат</string>
+    <string name="feeds_settings_source_polling">Извличане от източник…</string>
     <string name="feeds_settings_access_updated">Достъпът е обновен</string>
+    <string name="feeds_settings_access_revoked">Достъпът е отменен</string>
     <string name="feeds_settings_member_added">Членът е добавен</string>
     <string name="feeds_settings_member_removed">Членът е премахнат</string>
-    <string name="feeds_settings_prompt_saved">Промптът е запазен</string>
-    <string name="feeds_settings_banner_saved">Банерът е запазен</string>
-    <string name="feeds_settings_banner_cleared">Банерът е изчистен</string>
-    <string name="feeds_settings_source_polling">Извличане от източник…</string>
-    <string name="feeds_settings_access_revoked">Достъпът е отменен</string>
     <string name="feeds_settings_ai_mode_updated">Режимът на ИИ е актуализиран</string>
     <string name="feeds_settings_ai_account_updated">Акаунтът на ИИ е актуализиран</string>
+    <string name="feeds_settings_prompt_saved">Промптът е запазен</string>
     <string name="feeds_settings_prompt_reset">Подсказката е върната към началните настройки</string>
-    <string name="feeds_post_select_feed">Моля, изберете поток</string>
-    <string name="feeds_post_empty_content">Моля, въведете текст или прикачете файл</string>
-
+    <string name="feeds_send">Изпрати</string>
 </resources>

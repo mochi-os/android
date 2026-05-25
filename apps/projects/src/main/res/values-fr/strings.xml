@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="projects_auth_display_name">Nom d\'affichage</string>
+    <string name="projects_auth_display_name">Nom d\\'affichage</string>
     <string name="projects_auth_verification_failed">Échec de la vérification</string>
     <string name="projects_list_title">Projets</string>
     <string name="projects_list_close_search">Fermer la recherche</string>
@@ -20,7 +19,7 @@
     <string name="projects_create_action">Créer</string>
     <string name="projects_find_title">Trouver des projets</string>
     <string name="projects_find_recommended">Recommandé</string>
-    <string name="projects_find_subscribe">S\'abonner</string>
+    <string name="projects_find_subscribe">S\\'abonner</string>
     <string name="projects_loading">Chargement…</string>
     <string name="projects_watched">Surveillé</string>
     <string name="projects_create_object">Créer un objet</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Accès</string>
     <string name="projects_settings_tab_people">Personnes</string>
     <string name="projects_option_icon">Icône</string>
+    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
     <string name="projects_settings_save">Enregistrer les modifications</string>
     <string name="projects_settings_unsubscribe">Se désabonner</string>
     <string name="projects_settings_delete_project">Supprimer le projet</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Arrêter de suivre</string>
     <string name="projects_parent_label">Parent</string>
     <string name="projects_parent_search_placeholder">Rechercher</string>
+    <string name="projects_links_title">Liens</string>
     <string name="projects_links_add">Ajouter un lien</string>
     <string name="projects_links_section_blocks">Bloque</string>
     <string name="projects_links_section_blocked_by">Bloqué par</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Joindre des fichiers</string>
     <string name="projects_property_remove">Retirer</string>
     <string name="projects_property_option_none">Aucun</string>
+    <string name="projects_attachments">Pièces jointes</string>
     <string name="projects_attachment_add">Ajouter une pièce jointe</string>
     <string name="projects_request_empty">Aucune demande de fusion</string>
     <string name="projects_request_status_draft">Brouillon</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Ajouter une classe</string>
     <string name="projects_classes_create">Créer</string>
     <string name="projects_class_name">Nom</string>
+    <string name="projects_class_save_name">Enregistrer le nom</string>
     <string name="projects_class_title_field">Champ titre</string>
     <string name="projects_class_merge_requests">Demandes de fusion</string>
     <string name="projects_class_fields">Champs</string>
@@ -144,7 +147,7 @@
     <string name="projects_field_delete_title">Supprimer le champ</string>
     <string name="projects_field_add_field_dialog_title">Ajouter un champ</string>
     <string name="projects_option_add">Ajouter une option</string>
-    <string name="projects_option_edit">Modifier l\'option</string>
+    <string name="projects_option_edit">Modifier l\\'option</string>
     <string name="projects_views_add">Ajouter une vue</string>
     <string name="projects_views_add_dialog_title">Ajouter une vue</string>
     <string name="projects_views_edit_dialog_title">Modifier la vue</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Mis à jour</string>
     <string name="projects_views_sort_rank">Classement</string>
     <string name="projects_project_not_found">Projet introuvable</string>
-    <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Plus</string>
+    <string name="projects_more">Plus</string>
+    <string name="projects_request_more">Plus</string>
+    <string name="projects_comment_send">Envoyer</string>
 </resources>

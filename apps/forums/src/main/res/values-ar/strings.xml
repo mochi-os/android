@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">المنتدى غير موجود</string>
     <string name="forums_post_not_found">المنشور غير موجود</string>
 
+    <string name="forums_list_more">المزيد</string>
+    <string name="forums_comment_send">إرسال</string>
 </resources>

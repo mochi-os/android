@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">រកមិនឃើញវេទិកា</string>
     <string name="forums_post_not_found">រកមិនឃើញប្រកាស</string>
 
+    <string name="forums_list_more">បន្ថែម</string>
+    <string name="forums_comment_send">ផ្ញើ</string>
 </resources>

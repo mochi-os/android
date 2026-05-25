@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">የማሳያ ስም</string>
     <string name="crm_auth_verification_failed">ማረጋገጫ አልተሳካም</string>
     <string name="crm_list_title">ፕሮጀክቶች</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">መዳረሻ</string>
     <string name="crm_settings_tab_people">ሰዎች</string>
     <string name="crm_option_icon">አዶ</string>
+    <string name="crm_option_icon_placeholder">ምሳሌ. Check, Star, Flag</string>
     <string name="crm_settings_save">ለውጦችን ያስቀምጡ</string>
     <string name="crm_settings_unsubscribe">ምዝገባ ያቋርጡ</string>
     <string name="crm_settings_delete_crm">ፕሮጀክት ሰርዝ</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">መከታተል አቁም</string>
     <string name="crm_parent_label">ወላጅ</string>
     <string name="crm_parent_search_placeholder">ይፈልጉ</string>
+    <string name="crm_links_title">አገናኞች</string>
     <string name="crm_links_add">አገናኝ ጨምር</string>
     <string name="crm_links_section_blocks">ይገድባል</string>
     <string name="crm_links_section_blocked_by">የታገደው በ</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">ፋይሎችን አያይዝ</string>
     <string name="crm_property_remove">አስወግድ</string>
     <string name="crm_property_option_none">ምንም</string>
+    <string name="crm_attachments">አባሪዎች</string>
     <string name="crm_attachment_add">አባሪ ጨምር</string>
     <string name="crm_request_empty">ምንም የውህደት ጥያቄዎች የሉም</string>
     <string name="crm_request_status_draft">ረቂቅ</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">ክፍል ጨምር</string>
     <string name="crm_classes_create">ፍጠር</string>
     <string name="crm_class_name">ስም</string>
+    <string name="crm_class_save_name">ስም አስቀምጥ</string>
     <string name="crm_class_title_field">የርዕስ መስክ</string>
     <string name="crm_class_merge_requests">የውህደት ጥያቄዎች</string>
     <string name="crm_class_fields">መስኮች</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">ተዘምኗል</string>
     <string name="crm_views_sort_rank">ደረጃ</string>
     <string name="crm_not_found">ፕሮጀክት አልተገኘም</string>
-    <string name="crm_option_icon_placeholder">ምሳሌ. Check, Star, Flag</string>
-
+    <string name="crm_list_more">ተጨማሪ</string>
+    <string name="crm_more">ተጨማሪ</string>
+    <string name="crm_request_more">ተጨማሪ</string>
+    <string name="crm_comment_send">ላክ</string>
 </resources>

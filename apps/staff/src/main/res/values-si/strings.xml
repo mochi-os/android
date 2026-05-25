@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Staff</string>
     <string name="launcher_staff">Mochi Staff</string>
     <string name="staff_accounts_action_ban_title">ගිණුම තහනම් කරන්න</string>
@@ -38,8 +37,8 @@
     <string name="staff_accounts_unnamed">නම නැති</string>
     <string name="staff_accounts_unsuspend">අත්හිටුවීම ඉවත් කරන්න</string>
     <string name="staff_accounts_unsuspended_toast">ගිණුමේ අත්හිටුවීම ඉවත් කරන ලදී</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">අවලංගු කරන්න</string>
     <string name="staff_appeals_decide">තීරණය කරන්න</string>
     <string name="staff_appeals_decide_failed">අභියාචනය තීරණය කිරීමට අසමත් විය</string>
@@ -277,6 +276,7 @@
     <string name="staff_disputes_view">බලන්න</string>
     <string name="staff_filter_chip_remove">පෙරහන ඉවත් කරන්න</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
+    <string name="staff_filter_label_moderation">මෝඩරේෂන්</string>
     <string name="staff_filter_label_query">සොයන්න</string>
     <string name="staff_filter_label_review_status">තත්ත්වය</string>
     <string name="staff_filter_label_seller">විකුණුම්කරු</string>
@@ -473,5 +473,4 @@
     <string name="staff_team_toast_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
     <string name="staff_team_toast_role_failed">භූමිකාව යාවත්කාලීන කිරීමට අසමත් විය</string>
     <string name="staff_team_toast_role_updated">භූමිකාව යාවත්කාලීන කරන ලදී</string>
-
 </resources>

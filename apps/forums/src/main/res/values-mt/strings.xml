@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Il-forum ma nstabx</string>
     <string name="forums_post_not_found">Post mhux misjub</string>
 
+    <string name="forums_list_more">Aktar</string>
+    <string name="forums_comment_send">Ibgħat</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Isem li jidher</string>
     <string name="crm_auth_verification_failed">Verifika falliet</string>
     <string name="crm_list_title">Proġetti</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Aċċess</string>
     <string name="crm_settings_tab_people">Nies</string>
     <string name="crm_option_icon">Ikona</string>
+    <string name="crm_option_icon_placeholder">ez. Check, Star, Flag</string>
     <string name="crm_settings_save">Issejvja l-bidliet</string>
     <string name="crm_settings_unsubscribe">Iddiżabbona</string>
     <string name="crm_settings_delete_crm">Ħassar proġett</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Ieqaf segwi</string>
     <string name="crm_parent_label">Ġenitur</string>
     <string name="crm_parent_search_placeholder">Fittex</string>
+    <string name="crm_links_title">Links</string>
     <string name="crm_links_add">Żid link</string>
     <string name="crm_links_section_blocks">Blocks</string>
     <string name="crm_links_section_blocked_by">Imblokkat minn</string>
@@ -76,10 +77,11 @@
     <string name="crm_field_no">Le</string>
     <string name="crm_field_type_checkbox">Checkbox</string>
     <string name="crm_comment_save">Issejvja</string>
-    <string name="crm_comment_empty">L-ebda kummenti s\'issa</string>
+    <string name="crm_comment_empty">L-ebda kummenti s\\'issa</string>
     <string name="crm_comment_attach">Ehmeż files</string>
     <string name="crm_property_remove">Neħħi</string>
     <string name="crm_property_option_none">Xejn</string>
+    <string name="crm_attachments">Mehmużin</string>
     <string name="crm_attachment_add">Żid mehmuż</string>
     <string name="crm_request_empty">L-ebda merge requests</string>
     <string name="crm_request_status_draft">Abbozz</string>
@@ -120,8 +122,9 @@
     <string name="crm_classes_add_dialog_title">Żid klassi</string>
     <string name="crm_classes_create">Oħloq</string>
     <string name="crm_class_name">Isem</string>
+    <string name="crm_class_save_name">Issejvja l-isem</string>
     <string name="crm_class_title_field">Kamp tat-titlu</string>
-    <string name="crm_class_merge_requests">Talbiet ta\' merge</string>
+    <string name="crm_class_merge_requests">Talbiet ta\\' merge</string>
     <string name="crm_class_fields">Kampijiet</string>
     <string name="crm_class_add_field">Żid kamp</string>
     <string name="crm_class_delete">Ħassar klassi</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Aġġornat</string>
     <string name="crm_views_sort_rank">Rank</string>
     <string name="crm_not_found">Proġett mhux misjub</string>
-    <string name="crm_option_icon_placeholder">ez. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Aktar</string>
+    <string name="crm_more">Aktar</string>
+    <string name="crm_request_more">Aktar</string>
+    <string name="crm_comment_send">Ibgħat</string>
 </resources>

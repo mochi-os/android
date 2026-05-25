@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Imarike</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Ibhayografi</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">Iinguqu zigciniwe</string>
     <string name="market_account_status_banned_title">I-akhawunti ivaliwe</string>
     <string name="market_account_status_suspended_title">I-akhawunti inqunyanyisiwe</string>
+    <string name="market_account_stripe_dashboard">Vula i-dashboard ye-Stripe</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">I-akhawunti</string>
     <string name="market_appeal_dialog_cancel">Rhoxisa</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">Indawo</string>
     <string name="market_listing_detail_message_seller">Thumela umyalezo kumthengisi</string>
     <string name="market_listing_detail_not_found">Uluhlu alufumanekanga</string>
+    <string name="market_listing_detail_place_bid">Faka isabelo</string>
     <string name="market_listing_detail_relist">Faka kwakhona</string>
     <string name="market_listing_detail_report">Xela uluhlu</string>
     <string name="market_listing_detail_save">Gcina</string>

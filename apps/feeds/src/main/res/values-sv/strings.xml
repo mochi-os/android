@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Flöden</string>
     <string name="feeds_find_feeds">Hitta flöden</string>
     <string name="feeds_create_feed">Skapa flöde</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Medlemmar</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Flödesnamn</string>
+    <string name="feeds_save_name">Spara namn</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Valfri markdown-banner som visas högst upp i ditt flöde.</string>
     <string name="feeds_clear">Rensa</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-flöde</string>
     <string name="feeds_source_type_feed_memories">Minnen</string>
+    <string name="feeds_remove_source">Ta bort källa</string>
     <string name="feeds_suggested_credibility_accept">Acceptera</string>
     <string name="feeds_rss_url_copied">RSS-URL kopierad till urklipp</string>
     <string name="feeds_logout">Logga ut</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Återställ till standard</string>
     <string name="feeds_feed_not_found">Flöde hittades inte</string>
     <string name="feeds_post_not_found">Inlägget hittades inte</string>
+    <string name="feeds_post_select_feed">Välj ett flöde</string>
+    <string name="feeds_post_empty_content">Skriv in text eller bifoga en fil</string>
     <string name="feeds_settings_feed_renamed">Flöde omdöpt</string>
+    <string name="feeds_settings_banner_saved">Banner sparad</string>
+    <string name="feeds_settings_banner_cleared">Banner rensad</string>
     <string name="feeds_settings_source_added">Källa tillagd</string>
     <string name="feeds_settings_source_updated">Källa uppdaterad</string>
     <string name="feeds_settings_source_removed">Källa borttagen</string>
+    <string name="feeds_settings_source_polling">Avsöker källa…</string>
     <string name="feeds_settings_access_updated">Åtkomst uppdaterad</string>
+    <string name="feeds_settings_access_revoked">Åtkomst återkallad</string>
     <string name="feeds_settings_member_added">Medlem tillagd</string>
     <string name="feeds_settings_member_removed">Medlem borttagen</string>
-    <string name="feeds_settings_prompt_saved">Prompt sparad</string>
-    <string name="feeds_settings_banner_saved">Banner sparad</string>
-    <string name="feeds_settings_banner_cleared">Banner rensad</string>
-    <string name="feeds_settings_source_polling">Avsöker källa…</string>
-    <string name="feeds_settings_access_revoked">Åtkomst återkallad</string>
     <string name="feeds_settings_ai_mode_updated">AI-läge uppdaterat</string>
     <string name="feeds_settings_ai_account_updated">AI-konto uppdaterat</string>
+    <string name="feeds_settings_prompt_saved">Prompt sparad</string>
     <string name="feeds_settings_prompt_reset">Promt återställd till standard</string>
-    <string name="feeds_post_select_feed">Välj ett flöde</string>
-    <string name="feeds_post_empty_content">Skriv in text eller bifoga en fil</string>
-
+    <string name="feeds_send">Skicka</string>
 </resources>

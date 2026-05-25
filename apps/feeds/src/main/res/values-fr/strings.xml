@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Flux</string>
     <string name="feeds_find_feeds">Trouver des flux</string>
     <string name="feeds_create_feed">Créer un flux</string>
@@ -22,7 +21,7 @@
     <string name="feeds_unread">Non lus</string>
     <string name="feeds_filter_all">Tout</string>
     <string name="feeds_sort_label">Trier</string>
-    <string name="feeds_sort_interests">Centres d\'intérêt</string>
+    <string name="feeds_sort_interests">Centres d\\'intérêt</string>
     <string name="feeds_sort_new">Nouveau</string>
     <string name="feeds_sort_hot">Populaire</string>
     <string name="feeds_sort_top">Meilleur</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Membres</string>
     <string name="feeds_tab_ai">IA</string>
     <string name="feeds_feed_name">Nom du flux</string>
+    <string name="feeds_save_name">Enregistrer le nom</string>
     <string name="feeds_banner">Bannière</string>
     <string name="feeds_banner_description">Bannière Markdown optionnelle affichée en haut de votre feed.</string>
     <string name="feeds_clear">Effacer</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Flux Mochi</string>
     <string name="feeds_source_type_feed_memories">Souvenirs</string>
+    <string name="feeds_remove_source">Supprimer la source</string>
     <string name="feeds_suggested_credibility_accept">Accepter</string>
     <string name="feeds_rss_url_copied">URL RSS copiée dans le presse-papiers</string>
     <string name="feeds_logout">Se déconnecter</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Réinitialiser</string>
     <string name="feeds_feed_not_found">Flux introuvable</string>
     <string name="feeds_post_not_found">Publication introuvable</string>
+    <string name="feeds_post_select_feed">Veuillez sélectionner un flux</string>
+    <string name="feeds_post_empty_content">Veuillez saisir du texte ou joindre un fichier</string>
     <string name="feeds_settings_feed_renamed">Flux renommé</string>
+    <string name="feeds_settings_banner_saved">Bannière enregistrée</string>
+    <string name="feeds_settings_banner_cleared">Bannière effacée</string>
     <string name="feeds_settings_source_added">Source ajoutée</string>
     <string name="feeds_settings_source_updated">Source mise à jour</string>
     <string name="feeds_settings_source_removed">Source retirée</string>
+    <string name="feeds_settings_source_polling">Interrogation de la source…</string>
     <string name="feeds_settings_access_updated">Accès mis à jour</string>
+    <string name="feeds_settings_access_revoked">Accès révoqué</string>
     <string name="feeds_settings_member_added">Membre ajouté</string>
     <string name="feeds_settings_member_removed">Membre supprimé</string>
-    <string name="feeds_settings_prompt_saved">Invite enregistrée</string>
-    <string name="feeds_settings_banner_saved">Bannière enregistrée</string>
-    <string name="feeds_settings_banner_cleared">Bannière effacée</string>
-    <string name="feeds_settings_source_polling">Interrogation de la source…</string>
-    <string name="feeds_settings_access_revoked">Accès révoqué</string>
     <string name="feeds_settings_ai_mode_updated">Mode IA mis à jour</string>
     <string name="feeds_settings_ai_account_updated">Compte IA mis à jour</string>
+    <string name="feeds_settings_prompt_saved">Invite enregistrée</string>
     <string name="feeds_settings_prompt_reset">Invite réinitialisée à la valeur par défaut</string>
-    <string name="feeds_post_select_feed">Veuillez sélectionner un flux</string>
-    <string name="feeds_post_empty_content">Veuillez saisir du texte ou joindre un fichier</string>
-
+    <string name="feeds_send">Envoyer</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">ਮਾਰਕਿਟ</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">ਜੀਵਨੀ</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">ਬਦਲਾਅ ਸੇਵ ਕੀਤੇ ਗਏ</string>
     <string name="market_account_status_banned_title">ਖਾਤੇ ਉੱਤੇ ਪਾਬੰਦੀ ਲਾਈ ਗਈ</string>
     <string name="market_account_status_suspended_title">ਖਾਤਾ ਮੁਅੱਤਲ ਕੀਤਾ ਗਿਆ</string>
+    <string name="market_account_stripe_dashboard">Stripe ਡੈਸ਼ਬੋਰਡ ਖੋਲ੍ਹੋ</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">ਖਾਤਾ</string>
     <string name="market_appeal_dialog_cancel">ਰੱਦ ਕਰੋ</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">ਸਫਲਤਾਪੂਰਵਕ ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="market_listing_detail_message_seller">ਵਿਕਰੇਤਾ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="market_listing_detail_not_found">ਟੈਮਪਲੇਟ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
+    <string name="market_listing_detail_place_bid">ਬੋਲੀ ਲਗਾਓ</string>
     <string name="market_listing_detail_relist">ਮੁੜ-ਸੂਚੀਬੱਧ ਕਰੋ</string>
     <string name="market_listing_detail_report">ਲਿਸਟਿੰਗ ਰਿਪੋਰਟ ਕਰੋ</string>
     <string name="market_listing_detail_save">ਸੰਭਾਲੋ</string>
@@ -461,12 +462,12 @@
     <string name="market_subscriptions_action_reactivate">ਮੁੜ-ਸਰਗਰਮ ਕਰੋ</string>
     <string name="market_subscriptions_action_resubscribe">ਮੁੜ-ਸਬਸਕ੍ਰਾਈਬ ਕਰੋ</string>
     <string name="market_subscriptions_action_resume">ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
-    <string name="market_subscriptions_cancel_body">ਇਹ ਤੁਹਾਡੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। ਤੁਸੀਂ ਆਪਣੇ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਪੀਰੀਅਡ ਦੇ ਅੰਤ \'ਤੇ ਪਹੁੰਚ ਗੁਆ ਦਿਓਗੇ।</string>
+    <string name="market_subscriptions_cancel_body">ਇਹ ਤੁਹਾਡੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। ਤੁਸੀਂ ਆਪਣੇ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਪੀਰੀਅਡ ਦੇ ਅੰਤ \\'ਤੇ ਪਹੁੰਚ ਗੁਆ ਦਿਓਗੇ।</string>
     <string name="market_subscriptions_cancel_confirm">ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰੋ</string>
     <string name="market_subscriptions_cancel_failed">ਰੱਦ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_subscriptions_cancel_title">ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰੋ</string>
     <string name="market_subscriptions_cancelled">ਮੈਂਬਰਸ਼ਿਪ ਰੱਦ ਕੀਤੀ ਗਈ</string>
-    <string name="market_subscriptions_cancels_period_end">ਮੌਜੂਦਾ ਸਮੇਂ ਦੇ ਅੰਤ \'ਤੇ ਰੱਦ ਹੋਵੇਗਾ</string>
+    <string name="market_subscriptions_cancels_period_end">ਮੌਜੂਦਾ ਸਮੇਂ ਦੇ ਅੰਤ \\'ਤੇ ਰੱਦ ਹੋਵੇਗਾ</string>
     <string name="market_subscriptions_empty">ਕੋਈ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ</string>
     <string name="market_subscriptions_empty_body">ਮੈਂਬਰਸ਼ਿਪਾਂ ਆਵਰਤੀ ਖਰੀਦਾਂ ਹਨ — ਵੇਚਣ ਵਾਲੇ ਉਨ੍ਹਾਂ ਨੂੰ ਮਾਸਿਕ ਜਾਂ ਸਾਲਾਨਾ ਕੀਮਤ ਨਾਲ ਸੂਚੀਬੱਧ ਕਰਦੇ ਹਨ।</string>
     <string name="market_subscriptions_pause_failed">ਰੋਕਣ ਵਿੱਚ ਅਸਫਲ</string>

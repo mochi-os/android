@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Jerukan labarai</string>
     <string name="feeds_find_feeds">Nemo feeds</string>
     <string name="feeds_create_feed">Ƙirƙira feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Membobi</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Sunan feed</string>
+    <string name="feeds_save_name">Adana suna</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner na markdown na zaɓi da ake nunawa a saman feed ɗin ka.</string>
     <string name="feeds_clear">Share</string>
@@ -66,10 +66,11 @@
     <string name="feeds_no_sources">Babu tushen bayanai</string>
     <string name="feeds_edit_source">Gyara source</string>
     <string name="feeds_source_url">URL</string>
-    <string name="feeds_source_type">Nau\'i</string>
+    <string name="feeds_source_type">Nau\\'i</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Tunawa</string>
+    <string name="feeds_remove_source">Cire tushen</string>
     <string name="feeds_suggested_credibility_accept">Yarda</string>
     <string name="feeds_rss_url_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
     <string name="feeds_logout">Fita</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Mayar zuwa asali</string>
     <string name="feeds_feed_not_found">Ba a samu feed ba</string>
     <string name="feeds_post_not_found">Ba a sami post ba</string>
+    <string name="feeds_post_select_feed">Da fatan za a zabi feed</string>
+    <string name="feeds_post_empty_content">Da fatan za a shigar da rubutu ko a kara fayil</string>
     <string name="feeds_settings_feed_renamed">An sake suna feed</string>
+    <string name="feeds_settings_banner_saved">An ajiye fastoci</string>
+    <string name="feeds_settings_banner_cleared">An share fastoci</string>
     <string name="feeds_settings_source_added">An ƙara tushe</string>
     <string name="feeds_settings_source_updated">An sabunta tushe</string>
     <string name="feeds_settings_source_removed">An cire tushe</string>
+    <string name="feeds_settings_source_polling">Ana bincike majiyar…</string>
     <string name="feeds_settings_access_updated">An sabunta damar shiga</string>
+    <string name="feeds_settings_access_revoked">An hana shiga</string>
     <string name="feeds_settings_member_added">An ƙara memba</string>
     <string name="feeds_settings_member_removed">An cire memba</string>
-    <string name="feeds_settings_prompt_saved">An adana prompt</string>
-    <string name="feeds_settings_banner_saved">An ajiye fastoci</string>
-    <string name="feeds_settings_banner_cleared">An share fastoci</string>
-    <string name="feeds_settings_source_polling">Ana bincike majiyar…</string>
-    <string name="feeds_settings_access_revoked">An hana shiga</string>
     <string name="feeds_settings_ai_mode_updated">An sabunta yanayin AI</string>
     <string name="feeds_settings_ai_account_updated">An sabunta asusun AI</string>
+    <string name="feeds_settings_prompt_saved">An adana prompt</string>
     <string name="feeds_settings_prompt_reset">An sake saita umarni zuwa tsoho</string>
-    <string name="feeds_post_select_feed">Da fatan za a zabi feed</string>
-    <string name="feeds_post_empty_content">Da fatan za a shigar da rubutu ko a kara fayil</string>
-
+    <string name="feeds_send">Aika</string>
 </resources>

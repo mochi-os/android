@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">සංදර්ශන නාමය</string>
     <string name="projects_auth_verification_failed">සත්‍යාපනය අසාර්ථක විය</string>
     <string name="projects_list_title">ව්‍යාපෘති</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">ප්‍රවේශය</string>
     <string name="projects_settings_tab_people">පුද්ගලයන්</string>
     <string name="projects_option_icon">අයිකනය</string>
+    <string name="projects_option_icon_placeholder">වයදාහරණය ලෝෝස්. Check, Star, Flag</string>
     <string name="projects_settings_save">වෙනස්කම් සුරකින්න</string>
     <string name="projects_settings_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
     <string name="projects_settings_delete_project">project එක මකන්න</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">නැරඹීම නවත්වන්න</string>
     <string name="projects_parent_label">මව්</string>
     <string name="projects_parent_search_placeholder">සොයන්න</string>
+    <string name="projects_links_title">සබැඳි</string>
     <string name="projects_links_add">සබැඳියක් එක් කරන්න</string>
     <string name="projects_links_section_blocks">අවහිර කරයි</string>
     <string name="projects_links_section_blocked_by">අවහිර කළ</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">ගොනු අමුණන්න</string>
     <string name="projects_property_remove">ඉවත් කරන්න</string>
     <string name="projects_property_option_none">කිසිවක් නැත</string>
+    <string name="projects_attachments">ඇමුණුම්</string>
     <string name="projects_attachment_add">ඇමුණුමක් එක් කරන්න</string>
     <string name="projects_request_empty">ඒකාබද්ධ කිරීමේ ඉල්ලීම් නැත</string>
     <string name="projects_request_status_draft">කෙටුම්පත</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">පන්තියක් එක් කරන්න</string>
     <string name="projects_classes_create">නිර්මාණය කරන්න</string>
     <string name="projects_class_name">නම</string>
+    <string name="projects_class_save_name">නම සුරකින්න</string>
     <string name="projects_class_title_field">මාතෘකා ක්ෂේත්‍රය</string>
     <string name="projects_class_merge_requests">ඒකාබද්ධ කිරීමේ ඉල්ලීම්</string>
     <string name="projects_class_fields">ක්ෂේත්‍ර</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">යාවත්කාලීන කරන ලදී</string>
     <string name="projects_views_sort_rank">ශ්‍රේණිය</string>
     <string name="projects_project_not_found">ව්‍යාපෘතිය හමු නොවීය</string>
-    <string name="projects_option_icon_placeholder">වයදාහරණය ලෝෝස්. Check, Star, Flag</string>
-
+    <string name="projects_list_more">තවත්</string>
+    <string name="projects_more">තවත්</string>
+    <string name="projects_request_more">තවත්</string>
+    <string name="projects_comment_send">යවන්න</string>
 </resources>

@@ -31,4 +31,6 @@
     <string name="chat_members_you">Qan</string>
     <string name="chat_chat_not_found">Chat mana tarisqa</string>
 
+    <string name="chat_list_more">Astawan</string>
+    <string name="chat_message_send">Apachiy</string>
 </resources>

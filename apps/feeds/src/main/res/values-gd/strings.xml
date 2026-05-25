@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Inbhirean</string>
     <string name="feeds_find_feeds">Lorg inbhirean</string>
     <string name="feeds_create_feed">Cruthaich inbhir</string>
@@ -44,7 +43,7 @@
     <string name="feeds_restore">Aiseag</string>
     <string name="feeds_location">Àite</string>
     <string name="feeds_check_in">Clàraich a-steach</string>
-    <string name="feeds_travelling">A\' siubhal</string>
+    <string name="feeds_travelling">A\\' siubhal</string>
     <string name="feeds_tab_general">Coitcheann</string>
     <string name="feeds_tab_sources">Tùsan</string>
     <string name="feeds_sources_title">Tùsan</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Buill</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Ainm an inbhir</string>
+    <string name="feeds_save_name">Sàbhail an t-ainm</string>
     <string name="feeds_banner">Bratach</string>
     <string name="feeds_banner_description">Bratach mharkdown roghainneil air a shealltainn aig mullach do shrutha.</string>
     <string name="feeds_clear">Falamhaich</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Inbhir Mochi</string>
     <string name="feeds_source_type_feed_memories">Cuimhneachain</string>
+    <string name="feeds_remove_source">Thoir air falbh an stòr</string>
     <string name="feeds_suggested_credibility_accept">Gabh ris</string>
     <string name="feeds_rss_url_copied">Chaidh URL RSS a lethbhreacadh dhan stòr-bhòrd</string>
     <string name="feeds_logout">Clàraich a-mach</string>
@@ -77,25 +78,25 @@
     <string name="feeds_ai_mode_off">À comas</string>
     <string name="feeds_ai_mode_tag">Taga</string>
     <string name="feeds_ai_mode_tag_deduplicate">Taga + dì-dhùblaich</string>
-    <string name="feeds_ai_reset_default">Ath-shuidhich chun a\' bhun-tuiteamais</string>
+    <string name="feeds_ai_reset_default">Ath-shuidhich chun a\\' bhun-tuiteamais</string>
     <string name="feeds_feed_not_found">Cha deach an inbhir a lorg</string>
     <string name="feeds_post_not_found">Cha deach am post a lorg</string>
+    <string name="feeds_post_select_feed">Tagh inbhir, mas e do thoil e</string>
+    <string name="feeds_post_empty_content">Cuir a-steach teacsa no ceangail faidhle, mas e do thoil e</string>
     <string name="feeds_settings_feed_renamed">Chaidh an inbhir ath-ainmeachadh</string>
+    <string name="feeds_settings_banner_saved">Bratach air a shabhaladh</string>
+    <string name="feeds_settings_banner_cleared">Bratach air a glànadh</string>
     <string name="feeds_settings_source_added">Tùs air a chur ris</string>
     <string name="feeds_settings_source_updated">Tùs air ùrachadh</string>
     <string name="feeds_settings_source_removed">Tùs air a thoirt air falbh</string>
+    <string name="feeds_settings_source_polling">A’ toirt sgrudadh air an stoc…</string>
     <string name="feeds_settings_access_updated">Inntrigeadh air ùrachadh</string>
+    <string name="feeds_settings_access_revoked">Chaidh cothrom inntrigidh a thoirmeasg</string>
     <string name="feeds_settings_member_added">Chaidh ball a chur ris</string>
     <string name="feeds_settings_member_removed">Chaidh ball a thoirt air falbh</string>
-    <string name="feeds_settings_prompt_saved">Chaidh an t-iarrtas a shàbhaladh</string>
-    <string name="feeds_settings_banner_saved">Bratach air a shabhaladh</string>
-    <string name="feeds_settings_banner_cleared">Bratach air a glànadh</string>
-    <string name="feeds_settings_source_polling">A’ toirt sgrudadh air an stoc…</string>
-    <string name="feeds_settings_access_revoked">Chaidh cothrom inntrigidh a thoirmeasg</string>
     <string name="feeds_settings_ai_mode_updated">Modh IF air ùrachadh</string>
     <string name="feeds_settings_ai_account_updated">Cunntas IF air ùrachadh</string>
+    <string name="feeds_settings_prompt_saved">Chaidh an t-iarrtas a shàbhaladh</string>
     <string name="feeds_settings_prompt_reset">Chaidh am brodadh ath-shuidheachadh chun a’ ghnàthaich</string>
-    <string name="feeds_post_select_feed">Tagh inbhir, mas e do thoil e</string>
-    <string name="feeds_post_empty_content">Cuir a-steach teacsa no ceangail faidhle, mas e do thoil e</string>
-
+    <string name="feeds_send">Cuir</string>
 </resources>

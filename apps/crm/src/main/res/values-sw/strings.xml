@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Jina la kuonyesha</string>
     <string name="crm_auth_verification_failed">Uthibitishaji umeshindwa</string>
     <string name="crm_list_title">Miradi</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Ufikiaji</string>
     <string name="crm_settings_tab_people">Watu</string>
     <string name="crm_option_icon">Aikoni</string>
+    <string name="crm_option_icon_placeholder">mfano. Check, Star, Flag</string>
     <string name="crm_settings_save">Hifadhi mabadiliko</string>
     <string name="crm_settings_unsubscribe">Jiondoe</string>
     <string name="crm_settings_delete_crm">Futa mradi</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Acha kufuatilia</string>
     <string name="crm_parent_label">Mzazi</string>
     <string name="crm_parent_search_placeholder">Tafuta</string>
+    <string name="crm_links_title">Viungo</string>
     <string name="crm_links_add">Ongeza kiungo</string>
     <string name="crm_links_section_blocks">Inazuia</string>
     <string name="crm_links_section_blocked_by">Imezuiwa na</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Ambatisha faili</string>
     <string name="crm_property_remove">Ondoa</string>
     <string name="crm_property_option_none">Hakuna</string>
+    <string name="crm_attachments">Viambatisho</string>
     <string name="crm_attachment_add">Ongeza kiambatisho</string>
     <string name="crm_request_empty">Hakuna maombi ya kuunganisha</string>
     <string name="crm_request_status_draft">Rasimu</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Ongeza darasa</string>
     <string name="crm_classes_create">Unda</string>
     <string name="crm_class_name">Jina</string>
+    <string name="crm_class_save_name">Hifadhi jina</string>
     <string name="crm_class_title_field">Sehemu ya kichwa</string>
     <string name="crm_class_merge_requests">Maombi ya kuunganisha</string>
     <string name="crm_class_fields">Uga</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Imesasishwa</string>
     <string name="crm_views_sort_rank">Cheo</string>
     <string name="crm_not_found">Mradi haukupatikana</string>
-    <string name="crm_option_icon_placeholder">mfano. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Zaidi</string>
+    <string name="crm_more">Zaidi</string>
+    <string name="crm_request_more">Zaidi</string>
+    <string name="crm_comment_send">Tuma</string>
 </resources>

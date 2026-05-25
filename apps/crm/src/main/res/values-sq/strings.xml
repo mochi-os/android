@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Emri i shfaqur</string>
     <string name="crm_auth_verification_failed">Verifikimi dështoi</string>
     <string name="crm_list_title">Projektet</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Qasja</string>
     <string name="crm_settings_tab_people">Persona</string>
     <string name="crm_option_icon">Ikona</string>
+    <string name="crm_option_icon_placeholder">p.sh. Check, Star, Flag</string>
     <string name="crm_settings_save">Ruaj ndryshimet</string>
     <string name="crm_settings_unsubscribe">Çabonohu</string>
     <string name="crm_settings_delete_crm">Fshi projektin</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Ndalo shikimin</string>
     <string name="crm_parent_label">Prindi</string>
     <string name="crm_parent_search_placeholder">Kërko</string>
+    <string name="crm_links_title">Lidhjet</string>
     <string name="crm_links_add">Shto lidhje</string>
     <string name="crm_links_section_blocks">Blloqe</string>
     <string name="crm_links_section_blocked_by">Bllokuar nga</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Bashkëngjit skedarë</string>
     <string name="crm_property_remove">Hiq</string>
     <string name="crm_property_option_none">Asnjë</string>
+    <string name="crm_attachments">Bashkëngjitjet</string>
     <string name="crm_attachment_add">Shto bashkëngjitje</string>
     <string name="crm_request_empty">Asnjë kërkesë merge</string>
     <string name="crm_request_status_draft">Skicë</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Shto klasë</string>
     <string name="crm_classes_create">Krijo</string>
     <string name="crm_class_name">Emri</string>
+    <string name="crm_class_save_name">Ruaj emrin</string>
     <string name="crm_class_title_field">Fusha e titullit</string>
     <string name="crm_class_merge_requests">Kërkesat për bashkim</string>
     <string name="crm_class_fields">Fushat</string>
@@ -157,7 +160,9 @@
     <string name="crm_views_sort_created">U krijua</string>
     <string name="crm_views_sort_updated">U përditësua</string>
     <string name="crm_views_sort_rank">Renditja</string>
-    <string name="crm_not_found">Projekti s\'u gjet</string>
-    <string name="crm_option_icon_placeholder">p.sh. Check, Star, Flag</string>
-
+    <string name="crm_not_found">Projekti s\\'u gjet</string>
+    <string name="crm_list_more">Më shumë</string>
+    <string name="crm_more">Më shumë</string>
+    <string name="crm_request_more">Më shumë</string>
+    <string name="crm_comment_send">Dërgo</string>
 </resources>

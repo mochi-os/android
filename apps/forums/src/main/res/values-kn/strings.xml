@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">ಫೋರಮ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="forums_post_not_found">ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
 
+    <string name="forums_list_more">ಇನ್ನಷ್ಟು</string>
+    <string name="forums_comment_send">ಕಳುಹಿಸಿ</string>
 </resources>

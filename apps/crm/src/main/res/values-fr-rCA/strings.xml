@@ -3,4 +3,40 @@
 
     <string name="crm_create_privacy">Privacy</string>
 
+    <string name="crm_create_name">Nom</string>
+    <string name="crm_class_name">Nom</string>
+    <string name="crm_field_name">Nom</string>
+    <string name="crm_create_action">Créer</string>
+    <string name="crm_request_create_action">Créer</string>
+    <string name="crm_classes_create">Créer</string>
+    <string name="crm_request_close">Fermer</string>
+    <string name="crm_comment_save">Enregistrer</string>
+    <string name="crm_list_logout">Déconnexion</string>
+    <string name="crm_find_subscribe">S\'abonner</string>
+    <string name="crm_access_level_view">Voir</string>
+    <string name="crm_create_template_none">Aucun</string>
+    <string name="crm_access_level_none">Aucun</string>
+    <string name="crm_property_option_none">Aucun</string>
+    <string name="crm_settings">Paramètres</string>
+    <string name="crm_settings_title">Paramètres</string>
+    <string name="crm_list_search">Rechercher</string>
+    <string name="crm_search">Rechercher</string>
+    <string name="crm_parent_search_placeholder">Rechercher</string>
+    <string name="crm_list_more">Plus</string>
+    <string name="crm_more">Plus</string>
+    <string name="crm_request_more">Plus</string>
+    <string name="crm_comment_send">Envoyer</string>
+    <string name="crm_property_remove">Supprimer</string>
+    <string name="crm_create_description">Description</string>
+    <string name="crm_request_field_description">Description</string>
+    <string name="crm_create_object_type">Type</string>
+    <string name="crm_field_type">Type</string>
+    <string name="crm_views_type">Type</string>
+    <string name="crm_create_object_title_field">Titre</string>
+    <string name="crm_request_field_title">Titre</string>
+    <string name="crm_settings_unsubscribe">Se désabonner</string>
+    <string name="crm_settings_unsubscribe_title">Se désabonner</string>
+    <string name="crm_request_status_open">Ouvrir</string>
+    <string name="crm_board_new">Nouveau</string>
+    <string name="crm_field_type_user">Utilisateur</string>
 </resources>

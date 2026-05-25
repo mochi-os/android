@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Akymlar</string>
     <string name="feeds_find_feeds">Akymlary tap</string>
     <string name="feeds_create_feed">Feed döretmek</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Agzalar</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Akymyň ady</string>
+    <string name="feeds_save_name">Ady ýatda sakla</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Akymyňyzyň ýokarsynda görkezilýän hökman däl markdown banner.</string>
     <string name="feeds_clear">Arassalamak</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi akymy</string>
     <string name="feeds_source_type_feed_memories">Ýatlamalar</string>
+    <string name="feeds_remove_source">Çeşmäni aýyr</string>
     <string name="feeds_suggested_credibility_accept">Kabul etmek</string>
     <string name="feeds_rss_url_copied">RSS URL bufer ýadyna göçürildi</string>
     <string name="feeds_logout">Çyk</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Deslapky baha gaýtar</string>
     <string name="feeds_feed_not_found">Akym tapylmady</string>
     <string name="feeds_post_not_found">Post tapylmady</string>
+    <string name="feeds_post_select_feed">HaýyŞt bilen, akym saýlañ</string>
+    <string name="feeds_post_empty_content">HaýyŞt bilen, möhlet úak edijiñiz úün ú bermek ya da faýl úştremek bilen</string>
     <string name="feeds_settings_feed_renamed">Akymyň ady üýtgedildi</string>
+    <string name="feeds_settings_banner_saved">Baner saýlanyldy</string>
+    <string name="feeds_settings_banner_cleared">Baner arassalanyldy</string>
     <string name="feeds_settings_source_added">Çeşme goşuldy</string>
     <string name="feeds_settings_source_updated">Çeşme täzelendi</string>
     <string name="feeds_settings_source_removed">Çeşme aýryldy</string>
+    <string name="feeds_settings_source_polling">Çeşme ümsi eşitlenen…</string>
     <string name="feeds_settings_access_updated">Giriş täzelendi</string>
+    <string name="feeds_settings_access_revoked">Giriş ret edildi</string>
     <string name="feeds_settings_member_added">Agza goşuldy</string>
     <string name="feeds_settings_member_removed">Agza aýryldy</string>
-    <string name="feeds_settings_prompt_saved">Soraw saklandy</string>
-    <string name="feeds_settings_banner_saved">Baner saýlanyldy</string>
-    <string name="feeds_settings_banner_cleared">Baner arassalanyldy</string>
-    <string name="feeds_settings_source_polling">Çeşme ümsi eşitlenen…</string>
-    <string name="feeds_settings_access_revoked">Giriş ret edildi</string>
     <string name="feeds_settings_ai_mode_updated">AI režimi täzelendi</string>
     <string name="feeds_settings_ai_account_updated">AI hasaby täzelendi</string>
+    <string name="feeds_settings_prompt_saved">Soraw saklandy</string>
     <string name="feeds_settings_prompt_reset">Soraga adaty bahaa gaytarylan</string>
-    <string name="feeds_post_select_feed">HaýyŞt bilen, akym saýlañ</string>
-    <string name="feeds_post_empty_content">HaýyŞt bilen, möhlet úak edijiñiz úün ú bermek ya da faýl úştremek bilen</string>
-
+    <string name="feeds_send">Iber</string>
 </resources>

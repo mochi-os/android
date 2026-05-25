@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">පෝෂණයන්</string>
     <string name="feeds_find_feeds">පෝෂණ සොයන්න</string>
     <string name="feeds_create_feed">පෝෂණයක් නිර්මාණය කරන්න</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">සාමාජිකයින්</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">පෝෂණ නාමය</string>
+    <string name="feeds_save_name">නම සුරකින්න</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">ඔබේ පෝෂණයේ ඉහළින් පෙන්වන විකල්ප markdown බැනරයක්.</string>
     <string name="feeds_clear">හිස් කරන්න</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi පෝෂණය</string>
     <string name="feeds_source_type_feed_memories">මතකයන්</string>
+    <string name="feeds_remove_source">මූලාශ්‍රය ඉවත් කරන්න</string>
     <string name="feeds_suggested_credibility_accept">පිළිගන්න</string>
     <string name="feeds_rss_url_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="feeds_logout">ඉවත් වන්න</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">පෙරනිමියට reset කරන්න</string>
     <string name="feeds_feed_not_found">පෝෂණය හමු නොවීය</string>
     <string name="feeds_post_not_found">පළ කිරීම හමු නොවීය</string>
+    <string name="feeds_post_select_feed">උඪහ඾් ඇගඅ පෝෝවක් ඪවාගත්ති</string>
+    <string name="feeds_post_empty_content">උඪහ඾් ඐ ද෈ බෛඩ ිෘර ඇගයි ෟලම් ගණවඹ ඇගඅඨ ඪන්ෝඪියය</string>
     <string name="feeds_settings_feed_renamed">පෝෂණය නැවත නම් කරන ලදී</string>
+    <string name="feeds_settings_banner_saved">බ්‍යිනශව සහදො ගත්ති</string>
+    <string name="feeds_settings_banner_cleared">බ්‍යිනශව ඉවදදෝි</string>
     <string name="feeds_settings_source_added">මූලාරම්භය එක් කරන ලදී</string>
     <string name="feeds_settings_source_updated">මූලාරම්භය යාවත්කාලීන කරන ලදී</string>
     <string name="feeds_settings_source_removed">මූලාරම්භය ඉවත් කරන ලදී</string>
+    <string name="feeds_settings_source_polling">මුලින෍ජරය බජැර ඪය්ඩෙොන අච්​ජිරහය ගත්ති ​ ​ ​ ​…</string>
     <string name="feeds_settings_access_updated">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
+    <string name="feeds_settings_access_revoked">ප්‍රවේශය අයිඪ ගත්ති</string>
     <string name="feeds_settings_member_added">සාමාජිකයා එක් කරන ලදී</string>
     <string name="feeds_settings_member_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
-    <string name="feeds_settings_prompt_saved">prompt එක සුරකින ලදී</string>
-    <string name="feeds_settings_banner_saved">බ්‍යිනශව සහදො ගත්ති</string>
-    <string name="feeds_settings_banner_cleared">බ්‍යිනශව ඉවදදෝි</string>
-    <string name="feeds_settings_source_polling">මුලින෍ජරය බජැර ඪය්ඩෙොන අච්​ජිරහය ගත්ති ​ ​ ​ ​…</string>
-    <string name="feeds_settings_access_revoked">ප්‍රවේශය අයිඪ ගත්ති</string>
     <string name="feeds_settings_ai_mode_updated">AI විදීඇගඅවහ ජොෝව නවඨවා ගත්ති</string>
     <string name="feeds_settings_ai_account_updated">AI ගිණුම ජොෝව නවඨවා ගත්ති</string>
+    <string name="feeds_settings_prompt_saved">prompt එක සුරකින ලදී</string>
     <string name="feeds_settings_prompt_reset">පිෝරොම්ප්ජි ජෙවෙල ඉර්වි‌සැඩෝෞොල්ඩ් ඼ෝො ලෝෞොෞ‌ෞ‌ෞ</string>
-    <string name="feeds_post_select_feed">උඪහ඾් ඇගඅ පෝෝවක් ඪවාගත්ති</string>
-    <string name="feeds_post_empty_content">උඪහ඾් ඐ ද෈ බෛඩ ිෘර ඇගයි ෟලම් ගණවඹ ඇගඅඨ ඪන්ෝඪියය</string>
-
+    <string name="feeds_send">යවන්න</string>
 </resources>

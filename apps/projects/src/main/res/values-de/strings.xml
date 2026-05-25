@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Anzeigename</string>
     <string name="projects_auth_verification_failed">Verifizierung fehlgeschlagen</string>
     <string name="projects_list_title">Projekte</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Zugriff</string>
     <string name="projects_settings_tab_people">Personen</string>
     <string name="projects_option_icon">Symbol</string>
+    <string name="projects_option_icon_placeholder">z. B. Check, Star, Flag</string>
     <string name="projects_settings_save">Änderungen speichern</string>
     <string name="projects_settings_unsubscribe">Abbestellen</string>
     <string name="projects_settings_delete_project">Projekt löschen</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Nicht mehr beobachten</string>
     <string name="projects_parent_label">Übergeordnet</string>
     <string name="projects_parent_search_placeholder">Suchen</string>
+    <string name="projects_links_title">Links</string>
     <string name="projects_links_add">Link hinzufügen</string>
     <string name="projects_links_section_blocks">Blockiert</string>
     <string name="projects_links_section_blocked_by">Blockiert von</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">Dateien anhängen</string>
     <string name="projects_property_remove">Entfernen</string>
     <string name="projects_property_option_none">Keine</string>
+    <string name="projects_attachments">Anhänge</string>
     <string name="projects_attachment_add">Anhang hinzufügen</string>
     <string name="projects_request_empty">Keine Merge Requests</string>
     <string name="projects_request_status_draft">Entwurf</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Klasse hinzufügen</string>
     <string name="projects_classes_create">Erstellen</string>
     <string name="projects_class_name">Name</string>
+    <string name="projects_class_save_name">Namen speichern</string>
     <string name="projects_class_title_field">Titelfeld</string>
     <string name="projects_class_merge_requests">Merge Requests</string>
     <string name="projects_class_fields">Felder</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">Aktualisiert</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Projekt nicht gefunden</string>
-    <string name="projects_option_icon_placeholder">z. B. Check, Star, Flag</string>
-
+    <string name="projects_list_more">Mehr</string>
+    <string name="projects_more">Mehr</string>
+    <string name="projects_request_more">Mehr</string>
+    <string name="projects_comment_send">Senden</string>
 </resources>

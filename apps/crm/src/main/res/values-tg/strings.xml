@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Номи намоишӣ</string>
     <string name="crm_auth_verification_failed">Тасдиқ ноком шуд</string>
     <string name="crm_list_title">Лоиҳаҳо</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Дастрасӣ</string>
     <string name="crm_settings_tab_people">Шахсон</string>
     <string name="crm_option_icon">Нишона</string>
+    <string name="crm_option_icon_placeholder">мисол барои. Check, Star, Flag</string>
     <string name="crm_settings_save">Захираи тағйиротҳо</string>
     <string name="crm_settings_unsubscribe">Аз обуна баромадан</string>
     <string name="crm_settings_delete_crm">Нест кардани лоиҳа</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Назоратро қатъ кардан</string>
     <string name="crm_parent_label">Волидайн</string>
     <string name="crm_parent_search_placeholder">Ҷустуҷӯ</string>
+    <string name="crm_links_title">Пайвандҳо</string>
     <string name="crm_links_add">Иловаи пайванд</string>
     <string name="crm_links_section_blocks">Блокҳо</string>
     <string name="crm_links_section_blocked_by">Манъ карда шуд аз ҷониби</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Замимаи файлҳо</string>
     <string name="crm_property_remove">Хориҷ кардан</string>
     <string name="crm_property_option_none">Ҳеҷ кадом</string>
+    <string name="crm_attachments">Замимаҳо</string>
     <string name="crm_attachment_add">Иловаи замима</string>
     <string name="crm_request_empty">Ягон дархости merge нест</string>
     <string name="crm_request_status_draft">Сиёҳнавис</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Иловаи синф</string>
     <string name="crm_classes_create">Эҷод кардан</string>
     <string name="crm_class_name">Ном</string>
+    <string name="crm_class_save_name">Номро нигоҳ доштан</string>
     <string name="crm_class_title_field">Майдони сарлавҳа</string>
     <string name="crm_class_merge_requests">Дархостҳои муттаҳидсозӣ</string>
     <string name="crm_class_fields">Майдонҳо</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Навсозӣ шуд</string>
     <string name="crm_views_sort_rank">Дараҷа</string>
     <string name="crm_not_found">Лоиҳа ёфт нашуд</string>
-    <string name="crm_option_icon_placeholder">мисол барои. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Бештар</string>
+    <string name="crm_more">Бештар</string>
+    <string name="crm_request_more">Бештар</string>
+    <string name="crm_comment_send">Фиристодан</string>
 </resources>

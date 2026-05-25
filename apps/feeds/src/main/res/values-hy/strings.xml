@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Հոսքեր</string>
     <string name="feeds_find_feeds">Գտնել հոսքեր</string>
     <string name="feeds_create_feed">Ստեղծել ֆորում</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Հիշողությունների աղբյուրն ավելացվեց</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Հոսքի անուն</string>
+    <string name="feeds_save_name">Պահպանել անունը</string>
     <string name="feeds_banner">Բաններն հանված է</string>
     <string name="feeds_banner_description">Ոչ պարտադիր markdown բաններ՝ ցուցադրվող ձեր հոսքի վերևում։</string>
     <string name="feeds_clear">Մաքրել ամենը</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi-ն ներկայումս 0.3 տարբերակն է։ Այն պատրաստ է ամենօրյա օգտագործման համար, եթե դուք միջին մակարդակի տեխնիկապես պատրաստված եք և սխալների նկատմամբ հանդուրժող։ Եթե դուք ծրագրավորող եք, այն նաև պատրաստ է, որ դուք հավելվածներ ստեղծեք, քանի դեռ դեմ չեք մի քանի API փոփոխությունների։</string>
     <string name="feeds_source_type_feed_memories">Միաձուլել</string>
+    <string name="feeds_remove_source">Հեռացնել աղբյուրը</string>
     <string name="feeds_suggested_credibility_accept">Ընդունել</string>
     <string name="feeds_rss_url_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
     <string name="feeds_logout">Դուրս է եկել հաջողությամբ</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Վերականգնել լռելյայնին</string>
     <string name="feeds_feed_not_found">Հոսքը չի գտնվել</string>
     <string name="feeds_post_not_found">Գրառումը չի գտնվել</string>
+    <string name="feeds_post_select_feed">Խնդրում ենք ընտրել հոսք</string>
+    <string name="feeds_post_empty_content">Խնդրում ենք թեքստ մուտքագրել կամ կցիլ ֆայլ</string>
     <string name="feeds_settings_feed_renamed">Հոսքը վերանվանվեց</string>
+    <string name="feeds_settings_banner_saved">Պառատոմը պահպանված է</string>
+    <string name="feeds_settings_banner_cleared">Պառատոմը ջնջված է</string>
     <string name="feeds_settings_source_added">Աղբյուրը ավելացվեց</string>
     <string name="feeds_settings_source_updated">Աղբյուրը թարմացվեց</string>
     <string name="feeds_settings_source_removed">Աղբյուրը հեռացվեց</string>
+    <string name="feeds_settings_source_polling">Աղբյուրի հարցում…</string>
     <string name="feeds_settings_access_updated">Մուտքը թարմացված է</string>
+    <string name="feeds_settings_access_revoked">Մուտքը հետ է կանչված</string>
     <string name="feeds_settings_member_added">Անդամների քանակ</string>
     <string name="feeds_settings_member_removed">Հիշողություններ</string>
-    <string name="feeds_settings_prompt_saved">Հուշումը պահպանվեց</string>
-    <string name="feeds_settings_banner_saved">Պառատոմը պահպանված է</string>
-    <string name="feeds_settings_banner_cleared">Պառատոմը ջնջված է</string>
-    <string name="feeds_settings_source_polling">Աղբյուրի հարցում…</string>
-    <string name="feeds_settings_access_revoked">Մուտքը հետ է կանչված</string>
     <string name="feeds_settings_ai_mode_updated">Արհեստական անհատի ռեժիմը թարմացված է</string>
     <string name="feeds_settings_ai_account_updated">Արհեստական անհատի հաշիվը թարմացված է</string>
+    <string name="feeds_settings_prompt_saved">Հուշումը պահպանվեց</string>
     <string name="feeds_settings_prompt_reset">Հուշադրությունը վերակարգավի ճիշտ</string>
-    <string name="feeds_post_select_feed">Խնդրում ենք ընտրել հոսք</string>
-    <string name="feeds_post_empty_content">Խնդրում ենք թեքստ մուտքագրել կամ կցիլ ֆայլ</string>
-
+    <string name="feeds_send">Ուղարկել</string>
 </resources>

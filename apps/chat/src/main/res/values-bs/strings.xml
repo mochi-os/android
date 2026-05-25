@@ -31,4 +31,6 @@
     <string name="chat_members_you">Vi</string>
     <string name="chat_chat_not_found">Chat nije pronađen</string>
 
+    <string name="chat_list_more">Više</string>
+    <string name="chat_message_send">Pošalji</string>
 </resources>

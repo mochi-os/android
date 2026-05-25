@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">Sunan nunawa</string>
     <string name="projects_auth_verification_failed">Tabbatarwa ya gaza</string>
     <string name="projects_list_title">Projects</string>
@@ -15,7 +14,7 @@
     <string name="projects_create_prefix">Prefix</string>
     <string name="projects_create_privacy">Sirri</string>
     <string name="projects_create_private">Na sirri</string>
-    <string name="projects_create_public">Na jama\'a</string>
+    <string name="projects_create_public">Na jama\\'a</string>
     <string name="projects_create_template_none">Babu</string>
     <string name="projects_create_action">Ƙirƙira</string>
     <string name="projects_find_title">Nemo projects</string>
@@ -34,7 +33,7 @@
     <string name="projects_sort_created">An ƙirƙira</string>
     <string name="projects_sort_updated">An sabunta</string>
     <string name="projects_create_object_title">Ƙirƙira abu</string>
-    <string name="projects_create_object_type">Nau\'i</string>
+    <string name="projects_create_object_type">Nau\\'i</string>
     <string name="projects_create_object_title_field">Take</string>
     <string name="projects_create_object_parent">Iyaye</string>
     <string name="projects_settings_title">Saitunan</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">Damar shiga</string>
     <string name="projects_settings_tab_people">Mutane</string>
     <string name="projects_option_icon">Icon</string>
+    <string name="projects_option_icon_placeholder">misali Check, Star, Flag</string>
     <string name="projects_settings_save">Adana canje-canje</string>
     <string name="projects_settings_unsubscribe">Cire subscribe</string>
     <string name="projects_settings_delete_project">Goge project</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">Daina kallo</string>
     <string name="projects_parent_label">Iyaye</string>
     <string name="projects_parent_search_placeholder">Bincika</string>
+    <string name="projects_links_title">Links</string>
     <string name="projects_links_add">Ƙara hanyar haɗi</string>
     <string name="projects_links_section_blocks">Yana toshe</string>
     <string name="projects_links_section_blocked_by">An toshe ta</string>
@@ -73,13 +74,14 @@
     <string name="projects_links_type_duplicates">Yana ninkawa</string>
     <string name="projects_links_no_matches">Babu objects masu daidai</string>
     <string name="projects_field_yes">Ee</string>
-    <string name="projects_field_no">A\'a</string>
+    <string name="projects_field_no">A\\'a</string>
     <string name="projects_field_type_checkbox">Checkbox</string>
     <string name="projects_comment_save">Adana</string>
     <string name="projects_comment_empty">Babu sharhi tukuna</string>
     <string name="projects_comment_attach">Haɗa fayiloli</string>
     <string name="projects_property_remove">Cire</string>
     <string name="projects_property_option_none">Babu</string>
+    <string name="projects_attachments">Haɗawa</string>
     <string name="projects_attachment_add">Ƙara haɗewa</string>
     <string name="projects_request_empty">Babu merge requests</string>
     <string name="projects_request_status_draft">Draft</string>
@@ -90,7 +92,7 @@
     <string name="projects_request_merge_dialog_title">Merge</string>
     <string name="projects_request_method">Hanya</string>
     <string name="projects_request_method_merge">Merge</string>
-    <string name="projects_request_field_repository">Ma\'ajiya</string>
+    <string name="projects_request_field_repository">Ma\\'ajiya</string>
     <string name="projects_request_field_source">Source branch</string>
     <string name="projects_request_field_title">Take</string>
     <string name="projects_request_field_description">Bayani</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">Ƙara class</string>
     <string name="projects_classes_create">Ƙirƙira</string>
     <string name="projects_class_name">Suna</string>
+    <string name="projects_class_save_name">Adana suna</string>
     <string name="projects_class_title_field">Filin take</string>
     <string name="projects_class_merge_requests">Buƙatun merge</string>
     <string name="projects_class_fields">Fields</string>
@@ -132,7 +135,7 @@
     <string name="projects_field_type_date">Kwanan wata</string>
     <string name="projects_field_type_checklist">Checklist</string>
     <string name="projects_field_name">Suna</string>
-    <string name="projects_field_type">Nau\'i</string>
+    <string name="projects_field_type">Nau\\'i</string>
     <string name="projects_field_flags">Tutoci</string>
     <string name="projects_field_required">Ana buƙata</string>
     <string name="projects_field_position_default">Default</string>
@@ -149,7 +152,7 @@
     <string name="projects_views_add_dialog_title">Ƙara view</string>
     <string name="projects_views_edit_dialog_title">Gyara view</string>
     <string name="projects_views_delete_title">Goge view</string>
-    <string name="projects_views_type">Nau\'i</string>
+    <string name="projects_views_type">Nau\\'i</string>
     <string name="projects_views_type_board">Allo</string>
     <string name="projects_views_type_list">List</string>
     <string name="projects_views_direction">Hanya</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">An sabunta</string>
     <string name="projects_views_sort_rank">Rank</string>
     <string name="projects_project_not_found">Ba a sami project ba</string>
-    <string name="projects_option_icon_placeholder">misali Check, Star, Flag</string>
-
+    <string name="projects_list_more">Ƙari</string>
+    <string name="projects_more">Ƙari</string>
+    <string name="projects_request_more">Ƙari</string>
+    <string name="projects_comment_send">Aika</string>
 </resources>

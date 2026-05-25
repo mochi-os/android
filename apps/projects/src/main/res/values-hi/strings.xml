@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="projects_auth_display_name">प्रदर्शन नाम</string>
     <string name="projects_auth_verification_failed">वेरिफ़िकेशन विफल</string>
     <string name="projects_list_title">प्रोजेक्ट्स</string>
@@ -42,6 +41,7 @@
     <string name="projects_settings_tab_access">एक्सेस</string>
     <string name="projects_settings_tab_people">People</string>
     <string name="projects_option_icon">आइकन</string>
+    <string name="projects_option_icon_placeholder">उदा. Check, Star, Flag</string>
     <string name="projects_settings_save">बदलाव सेव करें</string>
     <string name="projects_settings_unsubscribe">अनसब्सक्राइब करें</string>
     <string name="projects_settings_delete_project">प्रोजेक्ट हटाएँ</string>
@@ -64,6 +64,7 @@
     <string name="projects_watchers_unwatch">देखना बंद करें</string>
     <string name="projects_parent_label">पैरेंट</string>
     <string name="projects_parent_search_placeholder">खोजें</string>
+    <string name="projects_links_title">लिंक</string>
     <string name="projects_links_add">लिंक जोड़ें</string>
     <string name="projects_links_section_blocks">अवरुद्ध करता है</string>
     <string name="projects_links_section_blocked_by">द्वारा अवरुद्ध</string>
@@ -80,6 +81,7 @@
     <string name="projects_comment_attach">फ़ाइलें अटैच करें</string>
     <string name="projects_property_remove">हटाएँ</string>
     <string name="projects_property_option_none">कोई नहीं</string>
+    <string name="projects_attachments">अटैचमेंट्स</string>
     <string name="projects_attachment_add">अटैचमेंट जोड़ें</string>
     <string name="projects_request_empty">कोई मर्ज रिक्वेस्ट नहीं</string>
     <string name="projects_request_status_draft">ड्राफ्ट</string>
@@ -120,6 +122,7 @@
     <string name="projects_classes_add_dialog_title">क्लास जोड़ें</string>
     <string name="projects_classes_create">बनाएँ</string>
     <string name="projects_class_name">नाम</string>
+    <string name="projects_class_save_name">नाम सहेजें</string>
     <string name="projects_class_title_field">टाइटल फ़ील्ड</string>
     <string name="projects_class_merge_requests">मर्ज रिक्वेस्ट्स</string>
     <string name="projects_class_fields">फ़ील्ड</string>
@@ -158,6 +161,8 @@
     <string name="projects_views_sort_updated">अपडेट किया गया</string>
     <string name="projects_views_sort_rank">रैंक</string>
     <string name="projects_project_not_found">प्रोजेक्ट नहीं मिला</string>
-    <string name="projects_option_icon_placeholder">उदा. Check, Star, Flag</string>
-
+    <string name="projects_list_more">और</string>
+    <string name="projects_more">और</string>
+    <string name="projects_request_more">और</string>
+    <string name="projects_comment_send">भेजें</string>
 </resources>

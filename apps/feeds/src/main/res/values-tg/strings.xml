@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Фидҳо</string>
     <string name="feeds_find_feeds">Фидҳоро ёбед</string>
     <string name="feeds_create_feed">Эҷоди навор</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Аъзоҳо</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Номи фид</string>
+    <string name="feeds_save_name">Номро нигоҳ доштан</string>
     <string name="feeds_banner">Баннер</string>
     <string name="feeds_banner_description">Баннери ихтиёрии markdown, ки дар болои фиди шумо нишон дода мешавад.</string>
     <string name="feeds_clear">Тоза кардан</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Фиди Mochi</string>
     <string name="feeds_source_type_feed_memories">Хотираҳо</string>
+    <string name="feeds_remove_source">Манбаъро тоза кардан</string>
     <string name="feeds_suggested_credibility_accept">Қабул кардан</string>
     <string name="feeds_rss_url_copied">URL-и RSS ба буфер нусха карда шуд</string>
     <string name="feeds_logout">Баромадан</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Барқарорсозӣ ба нобаёнӣ</string>
     <string name="feeds_feed_not_found">Фид ёфт нашуд</string>
     <string name="feeds_post_not_found">Пост ёфт нашуд</string>
+    <string name="feeds_post_select_feed">Лутфан фидро интихоб кунед</string>
+    <string name="feeds_post_empty_content">Лутфан матнро ворид кунед ё файлро пайваст кунед</string>
     <string name="feeds_settings_feed_renamed">Номи фид иваз шуд</string>
+    <string name="feeds_settings_banner_saved">Баннер захира шуд</string>
+    <string name="feeds_settings_banner_cleared">Баннер пок шуд</string>
     <string name="feeds_settings_source_added">Манбаъ илова карда шуд</string>
     <string name="feeds_settings_source_updated">Манбаъ навсозӣ шуд</string>
     <string name="feeds_settings_source_removed">Манбаъ хориҷ карда шуд</string>
+    <string name="feeds_settings_source_polling">Сарчашма пурсида шуда истадааст…</string>
     <string name="feeds_settings_access_updated">Дастрасӣ навсозӣ шуд</string>
+    <string name="feeds_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
     <string name="feeds_settings_member_added">Узв илова шуд</string>
     <string name="feeds_settings_member_removed">Узв бартараф шуд</string>
-    <string name="feeds_settings_prompt_saved">Дархост захира шуд</string>
-    <string name="feeds_settings_banner_saved">Баннер захира шуд</string>
-    <string name="feeds_settings_banner_cleared">Баннер пок шуд</string>
-    <string name="feeds_settings_source_polling">Сарчашма пурсида шуда истадааст…</string>
-    <string name="feeds_settings_access_revoked">Дастрасӣ бекор карда шуд</string>
     <string name="feeds_settings_ai_mode_updated">Режими AI нав карда шуд</string>
     <string name="feeds_settings_ai_account_updated">Ҳисоби AI нав карда шуд</string>
+    <string name="feeds_settings_prompt_saved">Дархост захира шуд</string>
     <string name="feeds_settings_prompt_reset">Дархост ба пешфарз баргардонида шуд</string>
-    <string name="feeds_post_select_feed">Лутфан фидро интихоб кунед</string>
-    <string name="feeds_post_empty_content">Лутфан матнро ворид кунед ё файлро пайваст кунед</string>
-
+    <string name="feeds_send">Фиристодан</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Imakethe</string>
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Umlandowempilo</string>
@@ -10,6 +9,7 @@
     <string name="market_account_saved">Izinguquko zilondoloziwe</string>
     <string name="market_account_status_banned_title">I-akhawunti ivinjelwe</string>
     <string name="market_account_status_suspended_title">I-akhawunti imisiwe okwesikhashana</string>
+    <string name="market_account_stripe_dashboard">Vula i-dashboard ye-Stripe</string>
     <string name="market_account_stripe_title">Stripe</string>
     <string name="market_account_title">I-akhawunti</string>
     <string name="market_appeal_dialog_cancel">Khansela</string>
@@ -205,6 +205,7 @@
     <string name="market_listing_detail_location_heading">Indawo</string>
     <string name="market_listing_detail_message_seller">Thumela umyalezo kumthengisi</string>
     <string name="market_listing_detail_not_found">Ushicilelo alutholakalanga</string>
+    <string name="market_listing_detail_place_bid">Faka isipho</string>
     <string name="market_listing_detail_relist">Faka kabusha</string>
     <string name="market_listing_detail_report">Bika okufakiwe</string>
     <string name="market_listing_detail_save">Londoloza</string>

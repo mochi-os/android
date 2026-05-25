@@ -125,4 +125,6 @@
     <string name="forums_forum_not_found">Hindi nahanap ang forum</string>
     <string name="forums_post_not_found">Hindi nahanap ang post</string>
 
+    <string name="forums_list_more">Higit pa</string>
+    <string name="forums_comment_send">Ipadala</string>
 </resources>

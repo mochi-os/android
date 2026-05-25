@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="feeds_title">Feed</string>
     <string name="feeds_find_feeds">Golèk feed</string>
     <string name="feeds_create_feed">Gawé feed</string>
@@ -52,6 +51,7 @@
     <string name="feeds_tab_members">Anggota</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Jeneng feed</string>
+    <string name="feeds_save_name">Simpen jeneng</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Banner markdown opsional sing dituduhaké ing ndhuwur feed-mu.</string>
     <string name="feeds_clear">Resiki</string>
@@ -70,6 +70,7 @@
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Feed Mochi</string>
     <string name="feeds_source_type_feed_memories">Memori</string>
+    <string name="feeds_remove_source">Busak sumber</string>
     <string name="feeds_suggested_credibility_accept">Trima</string>
     <string name="feeds_rss_url_copied">URL RSS disalin menyang clipboard</string>
     <string name="feeds_logout">Metu</string>
@@ -80,22 +81,22 @@
     <string name="feeds_ai_reset_default">Reset menyang default</string>
     <string name="feeds_feed_not_found">Feed ora ditemokaké</string>
     <string name="feeds_post_not_found">Postingan ora ditemokaké</string>
+    <string name="feeds_post_select_feed">Mangga pilih feed</string>
+    <string name="feeds_post_empty_content">Mangga lebokake teks utawa lampirake file</string>
     <string name="feeds_settings_feed_renamed">Jeneng feed wis diganti</string>
+    <string name="feeds_settings_banner_saved">Banner disimpen</string>
+    <string name="feeds_settings_banner_cleared">Banner dibusak</string>
     <string name="feeds_settings_source_added">Sumber ditambahaké</string>
     <string name="feeds_settings_source_updated">Sumber dianyari</string>
     <string name="feeds_settings_source_removed">Sumber dibusak</string>
+    <string name="feeds_settings_source_polling">Mlebu sumber…</string>
     <string name="feeds_settings_access_updated">Akses dianyari</string>
+    <string name="feeds_settings_access_revoked">Akses dibatalake</string>
     <string name="feeds_settings_member_added">Anggota ditambah</string>
     <string name="feeds_settings_member_removed">Anggota dibusak</string>
-    <string name="feeds_settings_prompt_saved">Prompt disimpen</string>
-    <string name="feeds_settings_banner_saved">Banner disimpen</string>
-    <string name="feeds_settings_banner_cleared">Banner dibusak</string>
-    <string name="feeds_settings_source_polling">Mlebu sumber…</string>
-    <string name="feeds_settings_access_revoked">Akses dibatalake</string>
     <string name="feeds_settings_ai_mode_updated">Mode AI dianyari</string>
     <string name="feeds_settings_ai_account_updated">Akun AI dianyari</string>
+    <string name="feeds_settings_prompt_saved">Prompt disimpen</string>
     <string name="feeds_settings_prompt_reset">Pinten dibalekake menyang default</string>
-    <string name="feeds_post_select_feed">Mangga pilih feed</string>
-    <string name="feeds_post_empty_content">Mangga lebokake teks utawa lampirake file</string>
-
+    <string name="feeds_send">Kirim</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="crm_auth_display_name">Igama lokubonisa</string>
     <string name="crm_auth_verification_failed">Ukuqinisekiswa kuhlulekile</string>
     <string name="crm_list_title">Amaphrojekthi</string>
@@ -42,6 +41,7 @@
     <string name="crm_settings_tab_access">Ukufinyelela</string>
     <string name="crm_settings_tab_people">Abantu</string>
     <string name="crm_option_icon">Isithonjana</string>
+    <string name="crm_option_icon_placeholder">isib. Check, Star, Flag</string>
     <string name="crm_settings_save">Londoloza izinguquko</string>
     <string name="crm_settings_unsubscribe">Susa ukubhalisa</string>
     <string name="crm_settings_delete_crm">Susa iprojekthi</string>
@@ -64,6 +64,7 @@
     <string name="crm_watchers_unwatch">Misa ukubuka</string>
     <string name="crm_parent_label">Umzali</string>
     <string name="crm_parent_search_placeholder">Sesha</string>
+    <string name="crm_links_title">Izixhumanisi</string>
     <string name="crm_links_add">Engeza isixhumanisi</string>
     <string name="crm_links_section_blocks">Iyavimba</string>
     <string name="crm_links_section_blocked_by">Ivinjelwe ngu</string>
@@ -80,6 +81,7 @@
     <string name="crm_comment_attach">Namathisela amafayela</string>
     <string name="crm_property_remove">Khipha</string>
     <string name="crm_property_option_none">Lutho</string>
+    <string name="crm_attachments">Okunamathiselwe</string>
     <string name="crm_attachment_add">Engeza okunamathiselwe</string>
     <string name="crm_request_empty">Azikho izicelo zokuhlanganisa</string>
     <string name="crm_request_status_draft">Idrafu</string>
@@ -120,6 +122,7 @@
     <string name="crm_classes_add_dialog_title">Engeza iklasi</string>
     <string name="crm_classes_create">Dala</string>
     <string name="crm_class_name">Igama</string>
+    <string name="crm_class_save_name">Londoloza igama</string>
     <string name="crm_class_title_field">Indawo yesihloko</string>
     <string name="crm_class_merge_requests">Izicelo zokuhlanganisa</string>
     <string name="crm_class_fields">Izinkambu</string>
@@ -158,6 +161,8 @@
     <string name="crm_views_sort_updated">Kubuyekeziwe</string>
     <string name="crm_views_sort_rank">Isigaba</string>
     <string name="crm_not_found">Iphrojekthi ayitholakali</string>
-    <string name="crm_option_icon_placeholder">isib. Check, Star, Flag</string>
-
+    <string name="crm_list_more">Okwengeziwe</string>
+    <string name="crm_more">Okwengeziwe</string>
+    <string name="crm_request_more">Okwengeziwe</string>
+    <string name="crm_comment_send">Thumela</string>
 </resources>
