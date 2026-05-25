@@ -50,4 +50,19 @@
     <string name="notifications_loading">載入中…</string>
     <string name="settings_font_system">系統</string>
     <string name="settings_theme_default">預設</string>
+    <string name="auth_verify">驗證</string>
+    <string name="auth_authenticator_app">驗證器應用程式</string>
+    <string name="auth_email_code">電郵驗證碼</string>
+    <string name="auth_link_rules">規則</string>
+    <string name="common_copy">複製</string>
+    <string name="comment_edited">(edited)</string>
+    <string name="discovery_subscribed">Subscribed</string>
+    <string name="access_revoke">撤銷</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">關於</string>
+    <string name="settings_language">語言</string>
+    <string name="settings_display_title">顯示</string>
+    <string name="profile_save_name">Save name</string>
+    <string name="profile_fingerprint">Fingerprint</string>
+    <string name="game_chat_move_played">%1$s 走了 %2$s</string>
 </resources>

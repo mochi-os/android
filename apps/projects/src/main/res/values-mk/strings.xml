@@ -166,4 +166,7 @@
     <string name="projects_request_more">Повеќе</string>
     <string name="projects_comment_send">Испрати</string>
     <string name="projects_field_position_body">Содржина</string>
+    <string name="projects_sort_field">Сортирај по</string>
+    <string name="projects_comment_remove_attachment">Отстрани прилог</string>
+    <string name="projects_views_sort_by">Сортирај по</string>
 </resources>

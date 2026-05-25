@@ -134,4 +134,17 @@
 
     <string name="common_not_saved">Ez da gorde</string>
     <string name="common_save_failed">Ezin izan dira zure aldaketak gorde.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Zerbitzariaren URLa</string>
+    <string name="auth_create_identity_title">Sortu zure identitatea</string>
+    <string name="auth_link_rules">Arauak</string>
+    <string name="common_change">Aldatu</string>
+    <string name="common_retry">Saiatu berriro</string>
+    <string name="access_add_rule_title">Gehitu sarbide araua</string>
+    <string name="access_level_manage">Kudeatu</string>
+    <string name="notifications_clear">Garbitu jakinarazpenak</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Honi buruz</string>
+    <string name="game_chat_load_more">Kargatu mezu zaharragoak</string>
+    <string name="game_chat_move_played">%1$s-(e)k %2$s jokatu du</string>
 </resources>

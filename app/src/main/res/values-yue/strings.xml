@@ -2,4 +2,9 @@
 <resources>
     <string name="launcher_settings">設定</string>
     <string name="launcher_people">用戶</string>
+    <string name="launcher_chat">聊天</string>
+    <string name="launcher_wikis">Wiki</string>
+    <string name="launcher_chess">國際象棋</string>
+    <string name="launcher_go">圍棋</string>
+    <string name="launcher_words">Words</string>
 </resources>

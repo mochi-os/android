@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Daha fazla</string>
     <string name="chat_message_send">Gönder</string>
+    <string name="chat_attachment_remove">Eki kaldır</string>
+    <string name="chat_message_remove_attachment">Eki kaldır</string>
 </resources>

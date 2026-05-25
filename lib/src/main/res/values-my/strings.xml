@@ -134,4 +134,10 @@
 
     <string name="common_not_saved">မသိမ်းဆည်းရသေးပါ</string>
     <string name="common_save_failed">သင့်အပြောင်းအလဲများကို သိမ်းဆည်း၍မရပါ။</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">ဆာဗာ URL</string>
+    <string name="auth_link_rules">စည်းမျဉ်းများ</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">အကြောင်း</string>
+    <string name="game_chat_move_played">%1$s က %2$s ကို ကစားခဲ့သည်</string>
 </resources>

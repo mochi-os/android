@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Soʻrov saqlandi</string>
     <string name="feeds_settings_prompt_reset">Soʻrov standartga qaytarildi</string>
     <string name="feeds_send">Yuborish</string>
+    <string name="feeds_tag_clear">Filtrni tozalash</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

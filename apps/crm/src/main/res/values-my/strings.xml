@@ -166,4 +166,7 @@
     <string name="crm_request_more">နောက်ထပ်</string>
     <string name="crm_comment_send">ပို့</string>
     <string name="crm_field_position_body">အကြောင်းအရာ</string>
+    <string name="crm_sort_field">အလိုက် စီရန်</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">အလိုက် စီရန်</string>
 </resources>

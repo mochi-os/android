@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Zapisano prompt</string>
     <string name="feeds_settings_prompt_reset">Monit przywrócony do wartości domyślnej</string>
     <string name="feeds_send">Wyślij</string>
+    <string name="feeds_tag_clear">Wyczyść filtr</string>
+    <string name="feeds_add_tag">Dodaj tag</string>
+    <string name="feeds_write_a_comment">Napisz komentarz…</string>
+    <string name="feeds_access_permission">Uprawnienie</string>
 </resources>

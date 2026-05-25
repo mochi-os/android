@@ -488,4 +488,11 @@
     <string name="market_type_physical">Fisik</string>
     <string name="market_warnings_title">Pengeling-eling</string>
     <string name="market_sale_review_response_submitting">Ngirim…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Busak saringan</string>
+    <string name="market_listing_detail_sales_count">%1$d dol</string>
+    <string name="market_listings_action_appeal">Banding pambusakan</string>
+    <string name="market_listings_share_chooser">Bagi iklan</string>
+    <string name="market_profile_sales_count">%1$d dol</string>
+    <string name="market_refund_dialog_amount_label">Jumlah</string>
 </resources>

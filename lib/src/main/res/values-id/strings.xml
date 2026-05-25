@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Belum disimpan</string>
     <string name="common_save_failed">Perubahan Anda tidak dapat disimpan.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL server</string>
+    <string name="auth_link_rules">Aturan</string>
+    <string name="game_chat_move_played">%1$s memainkan %2$s</string>
 </resources>

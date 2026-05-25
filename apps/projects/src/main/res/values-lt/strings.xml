@@ -166,4 +166,7 @@
     <string name="projects_request_more">Daugiau</string>
     <string name="projects_comment_send">Siųsti</string>
     <string name="projects_field_position_body">Tekstas</string>
+    <string name="projects_sort_field">Rūšiuoti pagal</string>
+    <string name="projects_comment_remove_attachment">Pašalinti priedą</string>
+    <string name="projects_views_sort_by">Rūšiuoti pagal</string>
 </resources>

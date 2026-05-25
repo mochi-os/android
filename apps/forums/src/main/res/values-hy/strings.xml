@@ -130,4 +130,13 @@
     <string name="forums_post_body_field">Բովանդակություն</string>
     <string name="forums_post_edit_body_field">Բովանդակություն</string>
     <string name="forums_comment_edit_body_field">Բովանդակություն</string>
+    <string name="forums_auth_login_failed">Մուտքը ձախողվեց</string>
+    <string name="forums_auth_create_identity_failed">Չհաջողվեց ստեղծել ինքնություն</string>
+    <string name="forums_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
+    <string name="forums_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
+    <string name="forums_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
+    <string name="forums_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
+    <string name="forums_tag_clear">Մաքրել զտիչը</string>
+    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_write_comment">Write a comment…</string>
 </resources>

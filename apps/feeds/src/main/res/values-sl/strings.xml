@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Poziv shranjen</string>
     <string name="feeds_settings_prompt_reset">Poziv ponastavljen na privzeto</string>
     <string name="feeds_send">Pošlji</string>
+    <string name="feeds_tag_clear">Počisti filter</string>
+    <string name="feeds_add_tag">Dodaj oznako</string>
+    <string name="feeds_write_a_comment">Napišite komentar…</string>
+    <string name="feeds_access_permission">Dovoljenje</string>
 </resources>

@@ -48,4 +48,22 @@
     <string name="forums_access_level_post">發布</string>
     <string name="forums_post_pending">待處理</string>
     <string name="forums_moderation_reports_pending">待處理</string>
+    <string name="forums_find_subscribed">已訂閱</string>
+    <string name="forums_sort_interests">興趣</string>
+    <string name="forums_post_attach">附加檔案</string>
+    <string name="forums_post_approve">批准</string>
+    <string name="forums_comment_approve">批准</string>
+    <string name="forums_post_tag_add">加入標籤</string>
+    <string name="forums_post_tag_label">標籤</string>
+    <string name="forums_tab_access">存取權</string>
+    <string name="forums_access_target">目標</string>
+    <string name="forums_ai_mode_tag">標籤</string>
+    <string name="forums_ai_prompt_reset">重設為預設</string>
+    <string name="forums_comments">留言</string>
+    <string name="forums_no_comments">重未有留言</string>
+    <string name="forums_write_comment">寫低留言…</string>
+    <string name="forums_comment_edit_attach">附加檔案</string>
+    <string name="forums_comment_delete">刪除留言</string>
+    <string name="forums_comment_delete_title">刪除留言</string>
+    <string name="forums_settings_rename">重新命名</string>
 </resources>

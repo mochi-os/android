@@ -134,4 +134,15 @@
 
     <string name="common_not_saved">Salvestamata</string>
     <string name="common_save_failed">Teie muudatusi ei õnnestunud salvestada.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Serveri URL</string>
+    <string name="auth_create_identity_title">Loo oma identiteet</string>
+    <string name="auth_link_rules">Reeglid</string>
+    <string name="common_change">Muuda</string>
+    <string name="common_retry">Proovi uuesti</string>
+    <string name="access_add_rule_title">Lisa juurdepääsureegel</string>
+    <string name="access_level_manage">Halda</string>
+    <string name="notifications_clear">Tühjenda teavitused</string>
+    <string name="game_chat_load_more">Laadi vanemaid sõnumeid</string>
+    <string name="game_chat_move_played">%1$s mängis %2$s</string>
 </resources>

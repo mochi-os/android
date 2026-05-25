@@ -130,4 +130,13 @@
     <string name="forums_post_body_field">Corp</string>
     <string name="forums_post_edit_body_field">Corp</string>
     <string name="forums_comment_edit_body_field">Corp</string>
+    <string name="forums_auth_login_failed">Theip ar logáil isteach</string>
+    <string name="forums_auth_create_identity_failed">Theip ar chéannacht a chruthú</string>
+    <string name="forums_auth_mfa_unsupported">Níl tacaíocht ag MFA san aip soghluaiste fós</string>
+    <string name="forums_auth_enter_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
+    <string name="forums_auth_create_identity">Cruthaigh do chéannacht</string>
+    <string name="forums_list_add_to_home">Cuir leis an scáileán baile</string>
+    <string name="forums_tag_clear">Glan scagaire</string>
+    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_write_comment">Write a comment…</string>
 </resources>

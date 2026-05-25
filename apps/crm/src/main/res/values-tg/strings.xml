@@ -166,4 +166,7 @@
     <string name="crm_request_more">Бештар</string>
     <string name="crm_comment_send">Фиристодан</string>
     <string name="crm_field_position_body">Матн</string>
+    <string name="crm_sort_field">Мураттаб кардан</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">Мураттаб кардан</string>
 </resources>

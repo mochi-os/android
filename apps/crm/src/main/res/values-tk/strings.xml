@@ -166,4 +166,7 @@
     <string name="crm_request_more">Has köp</string>
     <string name="crm_comment_send">Iber</string>
     <string name="crm_field_position_body">Tekst</string>
+    <string name="crm_sort_field">Tertiplemek</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">Tertiplemek</string>
 </resources>

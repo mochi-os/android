@@ -57,4 +57,16 @@
     <string name="projects_request_status_draft">草稿</string>
     <string name="projects_request_field_draft">草稿</string>
     <string name="projects_field_position_body">內容</string>
+    <string name="projects_settings_tab_access">Access</string>
+    <string name="projects_object_tab_comments">Comments</string>
+    <string name="projects_object_tab_attachments">Attachments</string>
+    <string name="projects_comment_empty">No comments yet</string>
+    <string name="projects_comment_attach">Attach files</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_attachments">Attachments</string>
+    <string name="projects_request_method">方式</string>
+    <string name="projects_board_rename">重新命名</string>
+    <string name="projects_move_current">Current</string>
+    <string name="projects_class_save_name">Save name</string>
+    <string name="projects_field_type_date">Date</string>
 </resources>

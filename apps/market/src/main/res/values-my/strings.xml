@@ -484,4 +484,9 @@
     <string name="market_type_physical">ရုပ်ပိုင်း</string>
     <string name="market_warnings_title">သတိပေးချက်များ</string>
     <string name="market_sale_review_response_submitting">တင်ပြနေသည်…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">စစ်ထုတ်မှု ဖယ်ပါ</string>
+    <string name="market_listings_action_appeal">ဖျက်ခြင်းကို အယူခံ</string>
+    <string name="market_listings_share_chooser">ကြော်ငြာ မျှဝေ</string>
+    <string name="market_refund_dialog_amount_label">ပမာဏ</string>
 </resources>

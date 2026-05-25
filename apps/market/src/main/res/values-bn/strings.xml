@@ -578,4 +578,9 @@
 
     <string name="market_appeal_dialog_submitting">জমা দেওয়া হচ্ছে…</string>
     <string name="market_dispute_dialog_submitting">জমা দেওয়া হচ্ছে…</string>
+    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_appeal_dialog_title">অপসারণের বিরুদ্ধে আপিল</string>
+    <string name="market_checkout_subscribing">সাবস্ক্রাইব হচ্ছে…</string>
+    <string name="market_editor_delete_confirm_title">লিস্টিং মুছবেন?</string>
+    <string name="market_editor_title_new">নতুন লিস্টিং</string>
 </resources>

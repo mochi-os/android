@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">और</string>
     <string name="chat_message_send">भेजें</string>
+    <string name="chat_attachment_remove">अनुलग्नक हटाएं</string>
+    <string name="chat_message_remove_attachment">अनुलग्नक हटाएं</string>
 </resources>

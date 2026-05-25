@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt сакталды</string>
     <string name="feeds_settings_prompt_reset">Суроо баштапкыга кайтарылды</string>
     <string name="feeds_send">Жөнөтүү</string>
+    <string name="feeds_tag_clear">Чыпканы тазалоо</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

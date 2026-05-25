@@ -134,4 +134,12 @@
 
     <string name="common_not_saved">સાચવ્યું નથી</string>
     <string name="common_save_failed">તમારા ફેરફારો સાચવી શકાયા નથી.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">સર્વર URL</string>
+    <string name="auth_create_identity_title">તમારી ઓળખ બનાવો</string>
+    <string name="auth_link_rules">નિયમો</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">વિશે</string>
+    <string name="game_chat_load_more">જૂના સંદેશા લોડ કરો</string>
+    <string name="game_chat_move_played">%1$sએ %2$s રમ્યું</string>
 </resources>

@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Kehote tallennettu</string>
     <string name="feeds_settings_prompt_reset">Kehote palautettu oletukseksi</string>
     <string name="feeds_send">Lähetä</string>
+    <string name="feeds_auth_email_code_sent">Syötä osoitteeseen %1$s lähetetty koodi</string>
+    <string name="feeds_add_to_home_screen">Lisää aloitusnäytölle</string>
+    <string name="feeds_tag_clear">Tyhjennä suodatin</string>
+    <string name="feeds_identity_fingerprint">Sormenjälki: %1$s</string>
+    <string name="feeds_delete_post_confirm">Haluatko varmasti poistaa tämän julkaisun? Tätä ei voi kumota.</string>
+    <string name="feeds_delete_comment_confirm">Haluatko varmasti poistaa tämän kommentin?</string>
+    <string name="feeds_add_tag">Lisää tunniste</string>
+    <string name="feeds_write_a_comment">Kirjoita kommentti…</string>
+    <string name="feeds_file">Tiedosto</string>
+    <string name="feeds_move_up">Siirrä ylös</string>
+    <string name="feeds_move_down">Siirrä alas</string>
+    <string name="feeds_danger_zone">Vaaravyöhyke</string>
+    <string name="feeds_access_permission">Käyttöoikeus</string>
+    <string name="feeds_ai_account">Tekoälytili</string>
 </resources>

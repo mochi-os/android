@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Ledetekst lagret</string>
     <string name="feeds_settings_prompt_reset">Forespørsel tilbakestilt til standard</string>
     <string name="feeds_send">Send</string>
+    <string name="feeds_tag_clear">Tøm filter</string>
+    <string name="feeds_add_tag">Legg til etikett</string>
+    <string name="feeds_write_a_comment">Skriv en kommentar…</string>
+    <string name="feeds_access_permission">Tillatelse</string>
 </resources>

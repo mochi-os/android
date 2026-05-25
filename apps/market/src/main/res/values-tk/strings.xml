@@ -484,4 +484,9 @@
     <string name="market_type_physical">Fiziki</string>
     <string name="market_warnings_title">Duýduryşlar</string>
     <string name="market_sale_review_response_submitting">Iberilýär…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Süzgüçi aýyr</string>
+    <string name="market_listings_action_appeal">Aýyrmaga garşy şikaýat</string>
+    <string name="market_listings_share_chooser">Bildirişi paýlaş</string>
+    <string name="market_refund_dialog_amount_label">Mukdar</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="projects_request_more">Więcej</string>
     <string name="projects_comment_send">Wyślij</string>
     <string name="projects_field_position_body">Treść</string>
+    <string name="projects_sort_field">Sortuj według</string>
+    <string name="projects_comment_remove_attachment">Usuń załącznik</string>
+    <string name="projects_views_sort_by">Sortuj według</string>
 </resources>

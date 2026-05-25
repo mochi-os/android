@@ -51,4 +51,21 @@
     <string name="forums_access_level_post">發佈</string>
     <string name="forums_post_pending">待處理</string>
     <string name="forums_moderation_reports_pending">待處理</string>
+    <string name="forums_find_subscribed">Subscribed</string>
+    <string name="forums_sort_interests">興趣</string>
+    <string name="forums_post_attach">Attach files</string>
+    <string name="forums_post_approve">批准</string>
+    <string name="forums_comment_approve">批准</string>
+    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_post_tag_label">Tag</string>
+    <string name="forums_tab_access">Access</string>
+    <string name="forums_access_target">目標</string>
+    <string name="forums_ai_mode_tag">Tag</string>
+    <string name="forums_comments">Comments</string>
+    <string name="forums_no_comments">No comments yet</string>
+    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_comment_edit_attach">Attach files</string>
+    <string name="forums_comment_delete">Delete comment</string>
+    <string name="forums_comment_delete_title">Delete comment</string>
+    <string name="forums_settings_rename">重新命名</string>
 </resources>

@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Na-save ang prompt</string>
     <string name="feeds_settings_prompt_reset">Na-reset ang prompt sa default</string>
     <string name="feeds_send">Ipadala</string>
+    <string name="feeds_tag_clear">Linisin ang filter</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

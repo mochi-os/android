@@ -57,4 +57,20 @@
     <string name="projects_request_status_draft">草稿</string>
     <string name="projects_request_field_draft">草稿</string>
     <string name="projects_field_position_body">內容</string>
+    <string name="projects_sort_field">排序方式</string>
+    <string name="projects_settings_tab_access">存取權</string>
+    <string name="projects_object_tab_comments">留言</string>
+    <string name="projects_object_tab_attachments">附件</string>
+    <string name="projects_comment_empty">重未有留言</string>
+    <string name="projects_comment_attach">附加檔案</string>
+    <string name="projects_comment_remove_attachment">移除附件</string>
+    <string name="projects_attachments">附件</string>
+    <string name="projects_request_method">方式</string>
+    <string name="projects_board_unassigned">未指派</string>
+    <string name="projects_board_rename">重新命名</string>
+    <string name="projects_move_current">目前</string>
+    <string name="projects_class_save_name">儲存名稱</string>
+    <string name="projects_field_type_date">日期</string>
+    <string name="projects_field_required">必須</string>
+    <string name="projects_views_sort_by">排序方式</string>
 </resources>

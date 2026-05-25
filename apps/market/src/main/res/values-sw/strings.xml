@@ -421,4 +421,10 @@
     <string name="market_appeal_dialog_submitting">Inawasilisha…</string>
     <string name="market_dispute_dialog_submitting">Inawasilisha…</string>
     <string name="market_sale_review_response_submitting">Inawasilisha…</string>
+    <string name="market_checkout_subscribing">Inajiandikisha…</string>
+    <string name="market_filter_remove">Ondoa kichujio</string>
+    <string name="market_listing_detail_sales_count">Mauzo %1$d</string>
+    <string name="market_profile_sales_count">Mauzo %1$d</string>
+    <string name="market_purchase_dispute_response">Jibu la muuzaji</string>
+    <string name="market_purchases_order_label">Agizo #%1$d</string>
 </resources>

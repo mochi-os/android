@@ -421,4 +421,10 @@
     <string name="market_appeal_dialog_submitting">กำลังส่ง…</string>
     <string name="market_dispute_dialog_submitting">กำลังส่ง…</string>
     <string name="market_sale_review_response_submitting">กำลังส่ง…</string>
+    <string name="market_checkout_subscribing">กำลังสมัครสมาชิก…</string>
+    <string name="market_filter_remove">ลบตัวกรอง</string>
+    <string name="market_listing_detail_sales_count">%1$d รายการขาย</string>
+    <string name="market_profile_sales_count">%1$d รายการขาย</string>
+    <string name="market_purchase_dispute_response">การตอบของผู้ขาย</string>
+    <string name="market_purchases_order_label">คำสั่งซื้อ #%1$d</string>
 </resources>

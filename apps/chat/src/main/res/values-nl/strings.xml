@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Meer</string>
     <string name="chat_message_send">Verzenden</string>
+    <string name="chat_attachment_remove">Bijlage verwijderen</string>
+    <string name="chat_message_remove_attachment">Bijlage verwijderen</string>
 </resources>

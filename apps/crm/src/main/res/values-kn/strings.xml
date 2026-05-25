@@ -166,4 +166,7 @@
     <string name="crm_request_more">ಇನ್ನಷ್ಟು</string>
     <string name="crm_comment_send">ಕಳುಹಿಸಿ</string>
     <string name="crm_field_position_body">ವಿಷಯ</string>
+    <string name="crm_sort_field">ವಿಂಗಡಿಸು</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">ವಿಂಗಡಿಸು</string>
 </resources>

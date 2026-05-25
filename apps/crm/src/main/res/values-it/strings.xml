@@ -166,4 +166,7 @@
     <string name="crm_request_more">Altro</string>
     <string name="crm_comment_send">Invia</string>
     <string name="crm_field_position_body">Testo</string>
+    <string name="crm_sort_field">Ordina per</string>
+    <string name="crm_comment_remove_attachment">Rimuovi allegato</string>
+    <string name="crm_views_sort_by">Ordina per</string>
 </resources>

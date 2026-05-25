@@ -24,4 +24,14 @@
     <string name="people_person_accept">接受</string>
     <string name="people_welcome_dismiss">關閉</string>
     <string name="people_friends_pending">待處理</string>
+    <string name="people_invitations_decline">拒絕</string>
+    <string name="people_profile_saving">儲存緊…</string>
+    <string name="people_profile_edit_name">編輯名稱</string>
+    <string name="people_profile_identity">身分</string>
+    <string name="people_profile_preview">預覽</string>
+    <string name="people_profile_uploading">上載緊…</string>
+    <string name="people_profile_clear">清除</string>
+    <string name="people_common_chat">聊天</string>
+    <string name="people_person_fingerprint_label">指紋</string>
+    <string name="people_person_decline">拒絕</string>
 </resources>

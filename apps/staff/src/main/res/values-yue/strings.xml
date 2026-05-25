@@ -109,4 +109,26 @@
     <string name="staff_dashboard_tab_listings">刊登</string>
     <string name="staff_listings_title">刊登</string>
     <string name="staff_sidebar_listings">刊登</string>
+    <string name="staff_accounts_history">歷史</string>
+    <string name="staff_accounts_sales">%1$d gin6 sou1sau3</string>
+    <string name="staff_accounts_search_clear">清除搜尋</string>
+    <string name="staff_accounts_status_suspended">已暫停</string>
+    <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_audit_title">歷史</string>
+    <string name="staff_categories_dialog_creating">建立緊…</string>
+    <string name="staff_categories_dialog_edit_title">編輯類別</string>
+    <string name="staff_categories_dialog_saving">儲存緊…</string>
+    <string name="staff_categories_title">類別</string>
+    <string name="staff_config_saving">儲存緊…</string>
+    <string name="staff_dashboard_col_date">日期</string>
+    <string name="staff_dashboard_kpi_revenue_currency">%1$s</string>
+    <string name="staff_dashboard_order_fallback">Deng6daan1 #%1$d</string>
+    <string name="staff_listings_approve">批准</string>
+    <string name="staff_listings_search_clear">清除搜尋</string>
+    <string name="staff_reports_meta_target">目標</string>
+    <string name="staff_reviews_col_date">日期</string>
+    <string name="staff_sidebar_categories">類別</string>
+    <string name="staff_status_suspended">已暫停</string>
+    <string name="staff_team_col_role">角色</string>
+    <string name="staff_team_dialog_role">角色</string>
 </resources>

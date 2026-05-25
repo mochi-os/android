@@ -471,4 +471,6 @@
     <string name="staff_team_toast_removed">Endam hat rakirin</string>
     <string name="staff_team_toast_role_failed">Nûvekirina rol bi ser neket</string>
     <string name="staff_team_toast_role_updated">Rol nûve bû</string>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">Fermandar #%1$d</string>
 </resources>

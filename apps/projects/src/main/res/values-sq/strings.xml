@@ -166,4 +166,7 @@
     <string name="projects_request_more">Më shumë</string>
     <string name="projects_comment_send">Dërgo</string>
     <string name="projects_field_position_body">Përmbajtja</string>
+    <string name="projects_sort_field">Rendit sipas</string>
+    <string name="projects_comment_remove_attachment">Hiq bashkëngjitjen</string>
+    <string name="projects_views_sort_by">Rendit sipas</string>
 </resources>

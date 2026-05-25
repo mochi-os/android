@@ -166,4 +166,7 @@
     <string name="projects_request_more">थप</string>
     <string name="projects_comment_send">पठाउनुहोस्</string>
     <string name="projects_field_position_body">मुख्य भाग</string>
+    <string name="projects_sort_field">क्रमबद्ध गर्नुहोस्</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_views_sort_by">क्रमबद्ध गर्नुहोस्</string>
 </resources>

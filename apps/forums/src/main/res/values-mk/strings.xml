@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Содржина</string>
     <string name="forums_post_edit_body_field">Содржина</string>
     <string name="forums_comment_edit_body_field">Содржина</string>
+    <string name="forums_tag_clear">Исчисти филтер</string>
+    <string name="forums_post_tag_add">Додај ознака</string>
+    <string name="forums_write_comment">Напишете коментар…</string>
 </resources>

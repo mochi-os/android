@@ -113,4 +113,31 @@
     <string name="feeds_ai_prompt_rank">ڕیزبەندی / خاڵدان</string>
     <string name="feeds_ai_prompt_credibility">هەڵسەنگاندنی متمانەپێکراوی</string>
 
+    <string name="feeds_auth_email_code_sent">ئەو کۆدە بنووسە کە بۆ %1$s نێردراوە</string>
+    <string name="feeds_add_to_home_screen">زیادکردن بۆ شاشەی سەرەکی</string>
+    <string name="feeds_tag_clear">پاککردنەوەی فلتەر</string>
+    <string name="feeds_identity_fingerprint">پەنجەمۆر: %1$s</string>
+    <string name="feeds_time_just_now">هەر ئێستا</string>
+    <string name="feeds_time_minutes_ago">%1$dخ پێش</string>
+    <string name="feeds_time_hours_ago">%1$dک پێش</string>
+    <string name="feeds_time_days_ago">%1$dڕ پێش</string>
+    <string name="feeds_time_weeks_ago">%1$dه پێش</string>
+    <string name="feeds_time_months_ago">%1$dم پێش</string>
+    <string name="feeds_time_years_ago">%1$dس پێش</string>
+    <string name="feeds_time_minutes_short">%1$dخ</string>
+    <string name="feeds_time_hours_short">%1$dک</string>
+    <string name="feeds_time_days_short">%1$dڕ</string>
+    <string name="feeds_time_weeks_short">%1$dه</string>
+    <string name="feeds_time_months_short">%1$dم</string>
+    <string name="feeds_time_years_short">%1$dس</string>
+    <string name="feeds_delete_post_confirm">دڵنیایت کە دەتەوێت ئەم پۆستە بسڕیتەوە؟ ئەمە ناتوانرێت بگەڕێنرێتەوە.</string>
+    <string name="feeds_delete_comment_confirm">دڵنیایت کە دەتەوێت ئەم لێدوانە بسڕیتەوە؟</string>
+    <string name="feeds_add_tag">زیادکردنی تاگ</string>
+    <string name="feeds_write_a_comment">لێدوانێک بنووسە…</string>
+    <string name="feeds_file">پەڕگە</string>
+    <string name="feeds_move_up">گواستنەوە بۆ سەرەوە</string>
+    <string name="feeds_move_down">گواستنەوە بۆ خوارەوە</string>
+    <string name="feeds_save_banner">پاشەکەوتکردنی بەنەر</string>
+    <string name="feeds_danger_zone">ناوچەی مەترسی</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

@@ -227,4 +227,17 @@
     <string name="system_users_save_changes">儲存變更</string>
     <string name="accounts_status_pending">待處理</string>
     <string name="document_saved">已儲存</string>
+    <string name="document_privacy_title">私隱政策</string>
+    <string name="document_rules_title">規則</string>
+    <string name="document_terms_title">服務條款</string>
+    <string name="system_status_copy">複製</string>
+    <string name="accounts_status_verified">已驗證</string>
+    <string name="accounts_verify">驗證</string>
+    <string name="accounts_verify_code">驗證碼</string>
+    <string name="system_documents_title">Documents</string>
+    <string name="system_documents_language">語言</string>
+    <string name="settings_home_system_documents">Documents</string>
+    <string name="system_settings_state_disabled">已停用</string>
+    <string name="system_users_last_never">Never</string>
+    <string name="system_users_revoke">撤銷</string>
 </resources>

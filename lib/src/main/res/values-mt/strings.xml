@@ -134,4 +134,10 @@
 
     <string name="common_not_saved">Mhux salvat</string>
     <string name="common_save_failed">Ma stajniex insalvaw il-bidliet tiegħek.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL tas-server</string>
+    <string name="auth_link_rules">Regoli</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Dwar</string>
+    <string name="game_chat_move_played">%1$s laqat %2$s</string>
 </resources>

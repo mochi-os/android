@@ -492,4 +492,9 @@
     <string name="market_type_physical">Tara</string>
     <string name="market_warnings_title">Ìkìlọ̀</string>
     <string name="market_sale_review_response_submitting">Nrans…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Yọ àyàn kúrò</string>
+    <string name="market_listings_action_appeal">Atampa ẹ̀sùn</string>
+    <string name="market_listings_share_chooser">Pín ìkéde</string>
+    <string name="market_refund_dialog_amount_label">Iye</string>
 </resources>

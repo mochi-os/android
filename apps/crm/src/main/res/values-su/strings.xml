@@ -166,4 +166,7 @@
     <string name="crm_request_more">Lianna</string>
     <string name="crm_comment_send">Kirim</string>
     <string name="crm_field_position_body">Eusi</string>
+    <string name="crm_sort_field">Sortir dumasar</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">Sortir dumasar</string>
 </resources>

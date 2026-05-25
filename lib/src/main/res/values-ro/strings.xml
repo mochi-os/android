@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Nesalvat</string>
     <string name="common_save_failed">Modificările tale nu au putut fi salvate.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL server</string>
+    <string name="auth_link_rules">Reguli</string>
+    <string name="game_chat_move_played">%1$s a jucat %2$s</string>
 </resources>

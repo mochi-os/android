@@ -166,4 +166,7 @@
     <string name="crm_request_more">ਹੋਰ</string>
     <string name="crm_comment_send">ਭੇਜੋ</string>
     <string name="crm_field_position_body">ਮੁੱਖ ਭਾਗ</string>
+    <string name="crm_sort_field">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
 </resources>

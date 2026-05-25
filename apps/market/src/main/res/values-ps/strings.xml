@@ -484,4 +484,9 @@
     <string name="market_type_physical">فزیکي</string>
     <string name="market_warnings_title">اخطارونه</string>
     <string name="market_sale_review_response_submitting">لیږل کیږي…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">فلټر لرې کړئ</string>
+    <string name="market_listings_action_appeal">د لیرې کولو اپیل</string>
+    <string name="market_listings_share_chooser">اعلان شریک کړئ</string>
+    <string name="market_refund_dialog_amount_label">اندازه</string>
 </resources>

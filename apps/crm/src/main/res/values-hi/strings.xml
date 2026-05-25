@@ -166,4 +166,7 @@
     <string name="crm_request_more">और</string>
     <string name="crm_comment_send">भेजें</string>
     <string name="crm_field_position_body">मुख्य पाठ</string>
+    <string name="crm_sort_field">क्रमित करें</string>
+    <string name="crm_comment_remove_attachment">अनुलग्नक हटाएं</string>
+    <string name="crm_views_sort_by">क्रमित करें</string>
 </resources>

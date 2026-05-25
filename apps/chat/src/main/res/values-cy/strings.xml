@@ -33,4 +33,15 @@
 
     <string name="chat_list_more">Mwy</string>
     <string name="chat_message_send">Anfon</string>
+    <string name="chat_auth_login_failed">Methodd y mewngofnodi</string>
+    <string name="chat_auth_create_identity_failed">Methwyd â chreu hunaniaeth</string>
+    <string name="chat_auth_mfa_unsupported">Nid yw MFA yn cael ei gefnogi eto yn yr ap symudol</string>
+    <string name="chat_auth_enter_code_sent">Rhowch y cod a anfonwyd at %1$s</string>
+    <string name="chat_auth_create_identity">Creu eich hunaniaeth</string>
+    <string name="chat_list_add_to_home">Ychwanegu at y sgrin gartref</string>
+    <string name="chat_messages_load_more">Llwytho negeseuon hŷn</string>
+    <string name="chat_attachment_remove">Tynnu atodiad</string>
+    <string name="chat_attachment_move_up">Symud i fyny</string>
+    <string name="chat_attachment_move_down">Symud i lawr</string>
+    <string name="chat_message_remove_attachment">Tynnu atodiad</string>
 </resources>

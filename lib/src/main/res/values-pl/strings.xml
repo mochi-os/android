@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Nie zapisano</string>
     <string name="common_save_failed">Nie udało się zapisać zmian.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL serwera</string>
+    <string name="auth_link_rules">Zasady</string>
+    <string name="game_chat_move_played">%1$s zagrał %2$s</string>
 </resources>

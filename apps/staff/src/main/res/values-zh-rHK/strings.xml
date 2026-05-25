@@ -122,4 +122,26 @@
     <string name="staff_dashboard_tab_listings">刊登</string>
     <string name="staff_listings_title">刊登</string>
     <string name="staff_sidebar_listings">刊登</string>
+    <string name="staff_accounts_history">History</string>
+    <string name="staff_accounts_sales">%1$d 件銷售</string>
+    <string name="staff_accounts_search_clear">Clear search</string>
+    <string name="staff_accounts_verified_level">v%1$d</string>
+    <string name="staff_audit_action_auction_bid_placed">出價成功</string>
+    <string name="staff_audit_action_auction_cancelled">拍卖取消</string>
+    <string name="staff_audit_action_listing_appeal_submitted">已提交申訴</string>
+    <string name="staff_audit_title">History</string>
+    <string name="staff_categories_dialog_creating">建立中…</string>
+    <string name="staff_categories_dialog_saving">正在儲存…</string>
+    <string name="staff_config_group_stripe">Stripe</string>
+    <string name="staff_config_saving">正在儲存…</string>
+    <string name="staff_dashboard_col_date">Date</string>
+    <string name="staff_dashboard_kpi_revenue_currency">%1$s</string>
+    <string name="staff_dashboard_order_fallback">訂單 #%1$d</string>
+    <string name="staff_disputes_meta_seller_response">賣家的回應</string>
+    <string name="staff_filter_chip_remove">移除篩選</string>
+    <string name="staff_listings_approve">批准</string>
+    <string name="staff_listings_search_clear">Clear search</string>
+    <string name="staff_reports_meta_target">目標</string>
+    <string name="staff_reviews_col_date">Date</string>
+    <string name="staff_sidebar_market">市場</string>
 </resources>

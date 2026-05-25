@@ -484,4 +484,9 @@
     <string name="market_type_physical">פֿיזיש</string>
     <string name="market_warnings_title">ווארענונגען</string>
     <string name="market_sale_review_response_submitting">שיקן…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">אַראָפּנעמען פֿילטער</string>
+    <string name="market_listings_action_appeal">אפעל פון ארויסנעמען</string>
+    <string name="market_listings_share_chooser">טייל רעקלאמע</string>
+    <string name="market_refund_dialog_amount_label">באטראג</string>
 </resources>

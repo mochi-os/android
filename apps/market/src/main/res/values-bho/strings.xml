@@ -576,4 +576,8 @@
     <string name="market_subscriptions_per_month">%1$s प्रति महीना</string>
     <string name="market_subscriptions_per_year">%1$s प्रति साल</string>
 
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_editor_delete_confirm_title">लिस्टिंग मेटाईं?</string>
+    <string name="market_fee_preview_mochi_fee">Mochi शुल्क</string>
+    <string name="market_filter_remove">फिल्टर हटाईं</string>
 </resources>

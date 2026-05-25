@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">ഉള്ളടക്കം</string>
     <string name="forums_post_edit_body_field">ഉള്ളടക്കം</string>
     <string name="forums_comment_edit_body_field">ഉള്ളടക്കം</string>
+    <string name="forums_tag_clear">ഫിൽട്ടർ മായ്ക്കുക</string>
+    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_write_comment">Write a comment…</string>
 </resources>

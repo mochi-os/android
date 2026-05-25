@@ -166,4 +166,20 @@
     <string name="crm_request_more">Gehiago</string>
     <string name="crm_comment_send">Bidali</string>
     <string name="crm_field_position_body">Edukia</string>
+    <string name="crm_auth_login_failed">Saio-hasierak huts egin du</string>
+    <string name="crm_auth_create_identity_failed">Ezin izan da identitatea sortu</string>
+    <string name="crm_auth_mfa_unsupported">MFA ez da oraindik onartzen aplikazio mugikorrean</string>
+    <string name="crm_auth_enter_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
+    <string name="crm_auth_create_identity">Sortu zure identitatea</string>
+    <string name="crm_list_add_to_home">Gehitu hasierako pantailara</string>
+    <string name="crm_sort_field">Ordenatu honen arabera</string>
+    <string name="crm_views_move_up">Eraman gora</string>
+    <string name="crm_views_move_down">Eraman behera</string>
+    <string name="crm_settings_danger_zone">Eremu arriskutsua</string>
+    <string name="crm_comment_replying_to">%1$s erabiltzaileari erantzuten</string>
+    <string name="crm_comment_clear_reply">Garbitu erantzuna</string>
+    <string name="crm_comment_remove_attachment">Kendu eranskina</string>
+    <string name="crm_class_move_up">Eraman gora</string>
+    <string name="crm_class_move_down">Eraman behera</string>
+    <string name="crm_views_sort_by">Ordenatu honen arabera</string>
 </resources>

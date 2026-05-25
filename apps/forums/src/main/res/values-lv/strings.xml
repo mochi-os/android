@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Teksts</string>
     <string name="forums_post_edit_body_field">Teksts</string>
     <string name="forums_comment_edit_body_field">Teksts</string>
+    <string name="forums_tag_clear">Notīrīt filtru</string>
+    <string name="forums_post_tag_add">Pievienot atzīmi</string>
+    <string name="forums_write_comment">Rakstiet komentāru…</string>
 </resources>

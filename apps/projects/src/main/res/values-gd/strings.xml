@@ -166,4 +166,17 @@
     <string name="projects_request_more">Barrachd</string>
     <string name="projects_comment_send">Cuir</string>
     <string name="projects_field_position_body">Bodhaig</string>
+    <string name="projects_auth_login_failed">Cha b\\' urrainn clàradh a-steach</string>
+    <string name="projects_auth_create_identity_failed">Cha b\\' urrainn dearbh-aithne a chruthachadh</string>
+    <string name="projects_auth_mfa_unsupported">Chan eil MFA ri fhaighinn fhathast san aplacaid mhobile</string>
+    <string name="projects_auth_enter_code_sent">Cuir a-steach an còd a chaidh a chur gu %1$s</string>
+    <string name="projects_auth_create_identity">Cruthaich do dhearbh-aithne</string>
+    <string name="projects_list_add_to_home">Cuir ris an sgrìn-dachaigh</string>
+    <string name="projects_sort_field">Seòrsaich a-rèir</string>
+    <string name="projects_views_move_up">Gluais suas</string>
+    <string name="projects_views_move_down">Gluais sìos</string>
+    <string name="projects_comment_remove_attachment">Thoir air falbh an ceanglachan</string>
+    <string name="projects_class_move_up">Gluais suas</string>
+    <string name="projects_class_move_down">Gluais sìos</string>
+    <string name="projects_views_sort_by">Seòrsaich a-rèir</string>
 </resources>

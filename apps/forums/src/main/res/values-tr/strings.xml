@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">İçerik</string>
     <string name="forums_post_edit_body_field">İçerik</string>
     <string name="forums_comment_edit_body_field">İçerik</string>
+    <string name="forums_tag_clear">Filtreyi temizle</string>
+    <string name="forums_post_tag_add">Etiket ekle</string>
+    <string name="forums_write_comment">Yorum yaz…</string>
 </resources>

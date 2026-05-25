@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Inhoud</string>
     <string name="forums_post_edit_body_field">Inhoud</string>
     <string name="forums_comment_edit_body_field">Inhoud</string>
+    <string name="forums_tag_clear">Filter wissen</string>
+    <string name="forums_post_tag_add">Tag toevoegen</string>
+    <string name="forums_write_comment">Schrijf een opmerking…</string>
 </resources>

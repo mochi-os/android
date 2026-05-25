@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Viip salvestatud</string>
     <string name="feeds_settings_prompt_reset">Viip lähtestati vaikeväärtusele</string>
     <string name="feeds_send">Saada</string>
+    <string name="feeds_auth_email_code_sent">Sisesta kood, mis saadeti aadressile %1$s</string>
+    <string name="feeds_add_to_home_screen">Lisa avakuvale</string>
+    <string name="feeds_tag_clear">Tühjenda filter</string>
+    <string name="feeds_identity_fingerprint">Sõrmejälg: %1$s</string>
+    <string name="feeds_delete_post_confirm">Kas oled kindel, et soovid selle postituse kustutada? Seda ei saa tagasi võtta.</string>
+    <string name="feeds_delete_comment_confirm">Kas oled kindel, et soovid selle kommentaari kustutada?</string>
+    <string name="feeds_add_tag">Lisa silt</string>
+    <string name="feeds_write_a_comment">Kirjuta kommentaar…</string>
+    <string name="feeds_file">Fail</string>
+    <string name="feeds_move_up">Liiguta üles</string>
+    <string name="feeds_move_down">Liiguta alla</string>
+    <string name="feeds_danger_zone">Ohutsoon</string>
+    <string name="feeds_access_permission">Õigus</string>
+    <string name="feeds_ai_account">AI konto</string>
 </resources>

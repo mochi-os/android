@@ -134,4 +134,15 @@
 
     <string name="common_not_saved">ذخیره نشد</string>
     <string name="common_save_failed">تغییرات شما ذخیره نشد.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">آدرس سرور</string>
+    <string name="auth_create_identity_title">هویت خود را ایجاد کنید</string>
+    <string name="auth_link_rules">قوانین</string>
+    <string name="common_change">تغییر</string>
+    <string name="common_retry">تلاش مجدد</string>
+    <string name="access_add_rule_title">افزودن قاعده دسترسی</string>
+    <string name="access_level_manage">مدیریت</string>
+    <string name="notifications_clear">پاک کردن اعلان‌ها</string>
+    <string name="game_chat_load_more">بارگذاری پیام‌های قدیمی‌تر</string>
+    <string name="game_chat_move_played">%1$s %2$s را بازی کرد</string>
 </resources>

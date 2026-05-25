@@ -576,4 +576,12 @@
     <string name="market_subscriptions_per_year">%1$s на година</string>
     <string name="market_warnings_title">Предупреждения</string>
 
+    <string name="market_fee_preview_mochi_fee">Такса на Mochi</string>
+    <string name="market_filter_remove">Премахни филтъра</string>
+    <string name="market_listing_detail_sales_count">%1$d продажби</string>
+    <string name="market_listings_action_appeal">Обжалване на премахването</string>
+    <string name="market_listings_delete_title">Изтриване на обявата?</string>
+    <string name="market_listings_new">Нова обява</string>
+    <string name="market_profile_biography">Относно</string>
+    <string name="market_profile_sales_count">%1$d продажби</string>
 </resources>

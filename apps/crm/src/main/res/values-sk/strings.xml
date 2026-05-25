@@ -166,4 +166,7 @@
     <string name="crm_request_more">Viac</string>
     <string name="crm_comment_send">Odoslať</string>
     <string name="crm_field_position_body">Text</string>
+    <string name="crm_sort_field">Zoradiť podľa</string>
+    <string name="crm_comment_remove_attachment">Odstrániť prílohu</string>
+    <string name="crm_views_sort_by">Zoradiť podľa</string>
 </resources>

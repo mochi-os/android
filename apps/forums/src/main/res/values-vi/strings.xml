@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Nội dung</string>
     <string name="forums_post_edit_body_field">Nội dung</string>
     <string name="forums_comment_edit_body_field">Nội dung</string>
+    <string name="forums_tag_clear">Xóa bộ lọc</string>
+    <string name="forums_post_tag_add">Thêm thẻ</string>
+    <string name="forums_write_comment">Viết bình luận…</string>
 </resources>

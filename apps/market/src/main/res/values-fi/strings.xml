@@ -421,4 +421,10 @@
     <string name="market_appeal_dialog_submitting">Lähetetään…</string>
     <string name="market_dispute_dialog_submitting">Lähetetään…</string>
     <string name="market_sale_review_response_submitting">Lähetetään…</string>
+    <string name="market_checkout_subscribing">Tilataan…</string>
+    <string name="market_filter_remove">Poista suodatin</string>
+    <string name="market_listing_detail_sales_count">%1$d myyntiä</string>
+    <string name="market_profile_sales_count">%1$d myyntiä</string>
+    <string name="market_purchase_dispute_response">Myyjän vastaus</string>
+    <string name="market_purchases_order_label">Tilaus #%1$d</string>
 </resources>

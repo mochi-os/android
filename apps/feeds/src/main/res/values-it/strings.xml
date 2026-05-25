@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt salvato</string>
     <string name="feeds_settings_prompt_reset">Prompt ripristinato al valore predefinito</string>
     <string name="feeds_send">Invia</string>
+    <string name="feeds_tag_clear">Cancella filtro</string>
+    <string name="feeds_add_tag">Aggiungi tag</string>
+    <string name="feeds_write_a_comment">Scrivi un commento…</string>
+    <string name="feeds_access_permission">Permesso</string>
 </resources>

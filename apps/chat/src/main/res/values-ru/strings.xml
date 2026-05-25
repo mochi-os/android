@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Ещё</string>
     <string name="chat_message_send">Отправить</string>
+    <string name="chat_attachment_remove">Удалить вложение</string>
+    <string name="chat_message_remove_attachment">Удалить вложение</string>
 </resources>

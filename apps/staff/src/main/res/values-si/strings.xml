@@ -473,4 +473,6 @@
     <string name="staff_team_toast_removed">සාමාජිකයා ඉවත් කරන ලදී</string>
     <string name="staff_team_toast_role_failed">භූමිකාව යාවත්කාලීන කිරීමට අසමත් විය</string>
     <string name="staff_team_toast_role_updated">භූමිකාව යාවත්කාලීන කරන ලදී</string>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">ඇණවුම #%1$d</string>
 </resources>

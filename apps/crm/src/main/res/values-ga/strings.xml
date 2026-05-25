@@ -166,4 +166,17 @@
     <string name="crm_request_more">Tuilleadh</string>
     <string name="crm_comment_send">Seol</string>
     <string name="crm_field_position_body">Corp</string>
+    <string name="crm_auth_login_failed">Theip ar logáil isteach</string>
+    <string name="crm_auth_create_identity_failed">Theip ar chéannacht a chruthú</string>
+    <string name="crm_auth_mfa_unsupported">Níl tacaíocht ag MFA san aip soghluaiste fós</string>
+    <string name="crm_auth_enter_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
+    <string name="crm_auth_create_identity">Cruthaigh do chéannacht</string>
+    <string name="crm_list_add_to_home">Cuir leis an scáileán baile</string>
+    <string name="crm_sort_field">Sórtáil de réir</string>
+    <string name="crm_views_move_up">Bog suas</string>
+    <string name="crm_views_move_down">Bog síos</string>
+    <string name="crm_comment_remove_attachment">Bain ceangaltán</string>
+    <string name="crm_class_move_up">Bog suas</string>
+    <string name="crm_class_move_down">Bog síos</string>
+    <string name="crm_views_sort_by">Sórtáil de réir</string>
 </resources>

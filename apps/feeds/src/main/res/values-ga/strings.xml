@@ -99,4 +99,13 @@
     <string name="feeds_settings_prompt_saved">Leid sábháilte</string>
     <string name="feeds_settings_prompt_reset">Athshocraíodh an leid go luach réamhshocraithe</string>
     <string name="feeds_send">Seol</string>
+    <string name="feeds_auth_email_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
+    <string name="feeds_add_to_home_screen">Cuir leis an scáileán baile</string>
+    <string name="feeds_tag_clear">Glan scagaire</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_file">Comhad</string>
+    <string name="feeds_move_up">Bog suas</string>
+    <string name="feeds_move_down">Bog síos</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

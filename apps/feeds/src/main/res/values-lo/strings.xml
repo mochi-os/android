@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">ບັນທຶກ prompt ແລ້ວ</string>
     <string name="feeds_settings_prompt_reset">ຄຳສັມ໠຀ົມ໧ຽ຾຺຺</string>
     <string name="feeds_send">ສົ່ງ</string>
+    <string name="feeds_tag_clear">ລ້າງຕົວກອງ</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

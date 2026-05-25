@@ -166,4 +166,17 @@
     <string name="projects_request_more">Ավելին</string>
     <string name="projects_comment_send">Ուղարկել</string>
     <string name="projects_field_position_body">Բովանդակություն</string>
+    <string name="projects_auth_login_failed">Մուտքը ձախողվեց</string>
+    <string name="projects_auth_create_identity_failed">Չհաջողվեց ստեղծել ինքնություն</string>
+    <string name="projects_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
+    <string name="projects_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
+    <string name="projects_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
+    <string name="projects_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
+    <string name="projects_sort_field">Տեսակավորել ըստ</string>
+    <string name="projects_views_move_up">Տեղափոխել վերև</string>
+    <string name="projects_views_move_down">Տեղափոխել ներքև</string>
+    <string name="projects_comment_remove_attachment">Հեռացնել կցորդը</string>
+    <string name="projects_class_move_up">Տեղափոխել վերև</string>
+    <string name="projects_class_move_down">Տեղափոխել ներքև</string>
+    <string name="projects_views_sort_by">Տեսակավորել ըստ</string>
 </resources>

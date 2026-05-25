@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Përmbajtja</string>
     <string name="forums_post_edit_body_field">Përmbajtja</string>
     <string name="forums_comment_edit_body_field">Përmbajtja</string>
+    <string name="forums_tag_clear">Pastro filtrin</string>
+    <string name="forums_post_tag_add">Shto etiketë</string>
+    <string name="forums_write_comment">Shkruaj një koment…</string>
 </resources>

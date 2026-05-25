@@ -134,4 +134,9 @@
 
     <string name="common_not_saved">Nehat tomarkirin</string>
     <string name="common_save_failed">Guhertinên te nehatin tomarkirin.</string>
+    <string name="auth_server_url">URLa pêşkêşkerê</string>
+    <string name="auth_link_rules">Rêbaz</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Derbarê</string>
+    <string name="game_chat_move_played">%1$s %2$s lîst</string>
 </resources>

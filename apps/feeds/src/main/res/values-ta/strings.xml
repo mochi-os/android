@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt சேமிக்கப்பட்டது</string>
     <string name="feeds_settings_prompt_reset">வினாவை இயல்நிலைக்கு மீண்டம்மீடம்க்குமு</string>
     <string name="feeds_send">அனுப்பு</string>
+    <string name="feeds_tag_clear">வடிகட்டியை அழி</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="crm_request_more">Vairāk</string>
     <string name="crm_comment_send">Sūtīt</string>
     <string name="crm_field_position_body">Teksts</string>
+    <string name="crm_sort_field">Kārtot pēc</string>
+    <string name="crm_comment_remove_attachment">Noņemt pielikumu</string>
+    <string name="crm_views_sort_by">Kārtot pēc</string>
 </resources>

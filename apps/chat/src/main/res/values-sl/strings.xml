@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Več</string>
     <string name="chat_message_send">Pošlji</string>
+    <string name="chat_attachment_remove">Odstrani prilogo</string>
+    <string name="chat_message_remove_attachment">Odstrani prilogo</string>
 </resources>

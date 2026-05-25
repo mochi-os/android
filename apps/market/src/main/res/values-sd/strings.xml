@@ -484,4 +484,9 @@
     <string name="market_type_physical">جسماني</string>
     <string name="market_warnings_title">خبردارون</string>
     <string name="market_sale_review_response_submitting">موڪليندي…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">فلٽر ختم ڪريو</string>
+    <string name="market_listings_action_appeal">هٽائڻ خلاف اپيل</string>
+    <string name="market_listings_share_chooser">اشتهار حصيداري ڪريو</string>
+    <string name="market_refund_dialog_amount_label">مقدار</string>
 </resources>

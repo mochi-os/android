@@ -166,4 +166,7 @@
     <string name="projects_request_more">더 보기</string>
     <string name="projects_comment_send">보내기</string>
     <string name="projects_field_position_body">본문</string>
+    <string name="projects_sort_field">정렬 기준</string>
+    <string name="projects_comment_remove_attachment">첨부 파일 제거</string>
+    <string name="projects_views_sort_by">정렬 기준</string>
 </resources>

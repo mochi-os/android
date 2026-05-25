@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Ikke lagret</string>
     <string name="common_save_failed">Endringene dine kunne ikke lagres.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Server-URL</string>
+    <string name="auth_link_rules">Regler</string>
+    <string name="game_chat_move_played">%1$s spilte %2$s</string>
 </resources>

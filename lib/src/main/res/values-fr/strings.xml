@@ -134,4 +134,15 @@
 
     <string name="common_not_saved">Non enregistré</string>
     <string name="common_save_failed">Impossible d\'enregistrer vos modifications.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL du serveur</string>
+    <string name="auth_create_identity_title">Créez votre identité</string>
+    <string name="auth_link_rules">Règles</string>
+    <string name="common_change">Modifier</string>
+    <string name="common_retry">Réessayer</string>
+    <string name="access_add_rule_title">Ajouter une règle d\\'accès</string>
+    <string name="access_level_manage">Gérer</string>
+    <string name="notifications_clear">Effacer les notifications</string>
+    <string name="game_chat_load_more">Charger les messages plus anciens</string>
+    <string name="game_chat_move_played">%1$s a joué %2$s</string>
 </resources>

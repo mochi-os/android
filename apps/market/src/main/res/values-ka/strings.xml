@@ -486,4 +486,11 @@
     <string name="market_type_physical">ფიზიკური</string>
     <string name="market_warnings_title">გაფრთხილებები</string>
     <string name="market_sale_review_response_submitting">იგზავნება…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">ფილტრის წაშლა</string>
+    <string name="market_listing_detail_sales_count">%1$d გაყიდვა</string>
+    <string name="market_listings_action_appeal">მოცილების გასაჩივრება</string>
+    <string name="market_listings_share_chooser">გაზიარება</string>
+    <string name="market_profile_sales_count">%1$d გაყიდვა</string>
+    <string name="market_refund_dialog_amount_label">თანხა</string>
 </resources>

@@ -166,4 +166,20 @@
     <string name="crm_request_more">Veel</string>
     <string name="crm_comment_send">Saada</string>
     <string name="crm_field_position_body">Sisu</string>
+    <string name="crm_auth_login_failed">Sisselogimine ebaõnnestus</string>
+    <string name="crm_auth_create_identity_failed">Identiteedi loomine ebaõnnestus</string>
+    <string name="crm_auth_mfa_unsupported">MFA-d ei toetata mobiilirakenduses veel</string>
+    <string name="crm_auth_enter_code_sent">Sisesta kood, mis saadeti aadressile %1$s</string>
+    <string name="crm_auth_create_identity">Loo oma identiteet</string>
+    <string name="crm_list_add_to_home">Lisa avakuvale</string>
+    <string name="crm_sort_field">Sorteeri</string>
+    <string name="crm_views_move_up">Liiguta üles</string>
+    <string name="crm_views_move_down">Liiguta alla</string>
+    <string name="crm_settings_danger_zone">Ohutsoon</string>
+    <string name="crm_comment_replying_to">Vastad kasutajale %1$s</string>
+    <string name="crm_comment_clear_reply">Tühjenda vastus</string>
+    <string name="crm_comment_remove_attachment">Eemalda manus</string>
+    <string name="crm_class_move_up">Liiguta üles</string>
+    <string name="crm_class_move_down">Liiguta alla</string>
+    <string name="crm_views_sort_by">Sorteeri</string>
 </resources>

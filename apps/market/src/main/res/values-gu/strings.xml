@@ -483,4 +483,9 @@
     <string name="market_type_physical">ભૌતિક</string>
     <string name="market_warnings_title">ચેતવણીઓ</string>
     <string name="market_sale_review_response_submitting">સબમિટ થઈ રહ્યું છે…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">ફિલ્ટર દૂર કરો</string>
+    <string name="market_listings_action_appeal">દૂર કરવાની અપીલ</string>
+    <string name="market_listings_share_chooser">જાહેરાત શેર કરો</string>
+    <string name="market_refund_dialog_amount_label">રકમ</string>
 </resources>

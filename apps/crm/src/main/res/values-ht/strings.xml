@@ -166,4 +166,17 @@
     <string name="crm_request_more">Plis</string>
     <string name="crm_comment_send">Voye</string>
     <string name="crm_field_position_body">Kontni</string>
+    <string name="crm_auth_login_failed">Koneksyon echwe</string>
+    <string name="crm_auth_create_identity_failed">Kreyasyon idantite echwe</string>
+    <string name="crm_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
+    <string name="crm_auth_enter_code_sent">Antre kòd ki voye nan %1$s la</string>
+    <string name="crm_auth_create_identity">Kreye idantite ou</string>
+    <string name="crm_list_add_to_home">Ajoute sou ekran akèy la</string>
+    <string name="crm_sort_field">Triye pa</string>
+    <string name="crm_views_move_up">Monte</string>
+    <string name="crm_views_move_down">Desann</string>
+    <string name="crm_comment_remove_attachment">Retire pyès jwenti</string>
+    <string name="crm_class_move_up">Monte</string>
+    <string name="crm_class_move_down">Desann</string>
+    <string name="crm_views_sort_by">Triye pa</string>
 </resources>

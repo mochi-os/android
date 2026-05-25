@@ -166,4 +166,7 @@
     <string name="crm_request_more">Більше</string>
     <string name="crm_comment_send">Надіслати</string>
     <string name="crm_field_position_body">Текст</string>
+    <string name="crm_sort_field">Сортувати за</string>
+    <string name="crm_comment_remove_attachment">Видалити вкладення</string>
+    <string name="crm_views_sort_by">Сортувати за</string>
 </resources>

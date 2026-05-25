@@ -484,4 +484,9 @@
     <string name="market_type_physical">Qaamaan</string>
     <string name="market_warnings_title">Akeekkachiisawwan</string>
     <string name="market_sale_review_response_submitting">Erguu jira…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Calaltuu balleessuu</string>
+    <string name="market_listings_action_appeal">Komii balleessuu</string>
+    <string name="market_listings_share_chooser">Tarree qoodi</string>
+    <string name="market_refund_dialog_amount_label">Hammama</string>
 </resources>

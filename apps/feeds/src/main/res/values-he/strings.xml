@@ -99,4 +99,13 @@
     <string name="feeds_settings_prompt_saved">הפרומפט נשמר</string>
     <string name="feeds_settings_prompt_reset">ההנחיה אופסה לברירת המחדל</string>
     <string name="feeds_send">שלח</string>
+    <string name="feeds_auth_email_code_sent">הזינו את הקוד שנשלח אל %1$s</string>
+    <string name="feeds_add_to_home_screen">הוספה למסך הבית</string>
+    <string name="feeds_tag_clear">ניקוי מסנן</string>
+    <string name="feeds_add_tag">הוסף תג</string>
+    <string name="feeds_write_a_comment">כתוב תגובה…</string>
+    <string name="feeds_file">קובץ</string>
+    <string name="feeds_move_up">הזזה למעלה</string>
+    <string name="feeds_move_down">הזזה למטה</string>
+    <string name="feeds_access_permission">הרשאה</string>
 </resources>

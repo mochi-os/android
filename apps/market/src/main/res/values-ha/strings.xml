@@ -497,4 +497,10 @@
     <string name="market_type_physical">Na zahiri</string>
     <string name="market_warnings_title">Gargaɗi</string>
     <string name="market_sale_review_response_submitting">Ana aikawa…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Cire matatar</string>
+    <string name="market_listings_action_appeal">Ƙorafin cirewa</string>
+    <string name="market_listings_delete_title">Share talla?</string>
+    <string name="market_listings_share_chooser">Raba talla</string>
+    <string name="market_refund_dialog_amount_label">Adadi</string>
 </resources>

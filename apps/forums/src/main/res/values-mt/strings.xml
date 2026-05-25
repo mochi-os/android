@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Korp</string>
     <string name="forums_post_edit_body_field">Korp</string>
     <string name="forums_comment_edit_body_field">Korp</string>
+    <string name="forums_tag_clear">Naddaf il-filtru</string>
+    <string name="forums_post_tag_add">Add tag</string>
+    <string name="forums_write_comment">Write a comment…</string>
 </resources>

@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Prompt ذخیره شد</string>
     <string name="feeds_settings_prompt_reset">دستور به حالت پیش‌فرض بازنشانی شد</string>
     <string name="feeds_send">ارسال</string>
+    <string name="feeds_auth_email_code_sent">کدی که به %1$s ارسال شد را وارد کنید</string>
+    <string name="feeds_add_to_home_screen">افزودن به صفحه اصلی</string>
+    <string name="feeds_tag_clear">پاک کردن فیلتر</string>
+    <string name="feeds_identity_fingerprint">اثر انگشت: %1$s</string>
+    <string name="feeds_delete_post_confirm">آیا مطمئن هستید که می‌خواهید این مطلب را حذف کنید؟ این عمل قابل بازگشت نیست.</string>
+    <string name="feeds_delete_comment_confirm">آیا مطمئن هستید که می‌خواهید این دیدگاه را حذف کنید؟</string>
+    <string name="feeds_add_tag">افزودن برچسب</string>
+    <string name="feeds_write_a_comment">دیدگاهی بنویسید…</string>
+    <string name="feeds_file">فایل</string>
+    <string name="feeds_move_up">انتقال به بالا</string>
+    <string name="feeds_move_down">انتقال به پایین</string>
+    <string name="feeds_danger_zone">منطقه خطر</string>
+    <string name="feeds_access_permission">مجوز</string>
+    <string name="feeds_ai_account">حساب هوش مصنوعی</string>
 </resources>

@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">متن</string>
     <string name="forums_post_edit_body_field">متن</string>
     <string name="forums_comment_edit_body_field">متن</string>
+    <string name="forums_tag_clear">فلٹر صاف کریں</string>
+    <string name="forums_post_tag_add">ٹیگ شامل کریں</string>
+    <string name="forums_write_comment">تبصرہ لکھیں…</string>
 </resources>

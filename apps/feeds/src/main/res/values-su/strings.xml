@@ -99,4 +99,7 @@
     <string name="feeds_settings_prompt_saved">Prompt disimpen</string>
     <string name="feeds_settings_prompt_reset">Pitunjuk direset ka kadua</string>
     <string name="feeds_send">Kirim</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

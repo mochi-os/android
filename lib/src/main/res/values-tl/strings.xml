@@ -134,4 +134,10 @@
 
     <string name="common_not_saved">Hindi naka-save</string>
     <string name="common_save_failed">Hindi ma-save ang iyong mga pagbabago.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL ng server</string>
+    <string name="auth_link_rules">Mga panuntunan</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Tungkol sa</string>
+    <string name="game_chat_move_played">Naglaro si %1$s ng %2$s</string>
 </resources>

@@ -421,4 +421,11 @@
     <string name="market_appeal_dialog_submitting">Sender…</string>
     <string name="market_dispute_dialog_submitting">Sender…</string>
     <string name="market_sale_review_response_submitting">Sender…</string>
+    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_checkout_subscribing">Abonnerer…</string>
+    <string name="market_filter_remove">Fjern filter</string>
+    <string name="market_listing_detail_sales_count">%1$d salg</string>
+    <string name="market_profile_sales_count">%1$d salg</string>
+    <string name="market_purchase_dispute_response">Sælgers svar</string>
+    <string name="market_purchases_order_label">Bestilling #%1$d</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="projects_request_more">បន្ថែម</string>
     <string name="projects_comment_send">ផ្ញើ</string>
     <string name="projects_field_position_body">តួអត្ថបទ</string>
+    <string name="projects_sort_field">តម្រៀបតាម</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_views_sort_by">តម្រៀបតាម</string>
 </resources>

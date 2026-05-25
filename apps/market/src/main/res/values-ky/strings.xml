@@ -485,4 +485,11 @@
     <string name="market_type_physical">Физикалык</string>
     <string name="market_warnings_title">Эскертүүлөр</string>
     <string name="market_sale_review_response_submitting">Жөнөтүлүүдө…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Чыпканы алып салуу</string>
+    <string name="market_listing_detail_sales_count">%1$d сатуу</string>
+    <string name="market_listings_action_appeal">Жок кылууга даттануу</string>
+    <string name="market_listings_share_chooser">Жарнаманы бөлүшүү</string>
+    <string name="market_profile_sales_count">%1$d сатуу</string>
+    <string name="market_refund_dialog_amount_label">Сумма</string>
 </resources>

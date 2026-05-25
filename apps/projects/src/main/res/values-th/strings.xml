@@ -166,4 +166,7 @@
     <string name="projects_request_more">เพิ่มเติม</string>
     <string name="projects_comment_send">ส่ง</string>
     <string name="projects_field_position_body">เนื้อหา</string>
+    <string name="projects_sort_field">จัดเรียงตาม</string>
+    <string name="projects_comment_remove_attachment">ลบไฟล์แนบ</string>
+    <string name="projects_views_sort_by">จัดเรียงตาม</string>
 </resources>

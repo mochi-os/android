@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Поттикот е зачуван</string>
     <string name="feeds_settings_prompt_reset">Поттикнувањето е вратено на исходните поставки</string>
     <string name="feeds_send">Испрати</string>
+    <string name="feeds_tag_clear">Исчисти филтер</string>
+    <string name="feeds_add_tag">Додај ознака</string>
+    <string name="feeds_write_a_comment">Напишете коментар…</string>
+    <string name="feeds_access_permission">Дозвола</string>
 </resources>

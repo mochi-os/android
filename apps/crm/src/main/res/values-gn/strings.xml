@@ -166,4 +166,17 @@
     <string name="crm_request_more">Hetave</string>
     <string name="crm_comment_send">Mondo</string>
     <string name="crm_field_position_body">Tete</string>
+    <string name="crm_auth_login_failed">Ndaikatúi eike</string>
+    <string name="crm_auth_create_identity_failed">Ndaikatúi ojejapo teratee</string>
+    <string name="crm_auth_mfa_unsupported">MFA ndoikói gueteri tembiporu pumbyrýpe</string>
+    <string name="crm_auth_enter_code_sent">Emoinge papapy oñemondo\\'akue %1$s-pe</string>
+    <string name="crm_auth_create_identity">Ejapo ne teratee</string>
+    <string name="crm_list_add_to_home">Embojuaju óga rovetãme</string>
+    <string name="crm_sort_field">Embysýi</string>
+    <string name="crm_views_move_up">Emonge\\'e yvate</string>
+    <string name="crm_views_move_down">Emonge\\'e yvy gotyo</string>
+    <string name="crm_comment_remove_attachment">Eipe\\'a jeitypa</string>
+    <string name="crm_class_move_up">Emonge\\'e yvate</string>
+    <string name="crm_class_move_down">Emonge\\'e yvy gotyo</string>
+    <string name="crm_views_sort_by">Embysýi</string>
 </resources>

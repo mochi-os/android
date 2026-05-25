@@ -134,4 +134,7 @@
 
     <string name="common_not_saved">محفوظ نہیں ہوا</string>
     <string name="common_save_failed">آپ کی تبدیلیاں محفوظ نہیں ہو سکیں۔</string>
+    <string name="auth_server_url">سرور URL</string>
+    <string name="auth_link_rules">اصول</string>
+    <string name="game_chat_move_played">%1$s نے %2$s کھیلا</string>
 </resources>

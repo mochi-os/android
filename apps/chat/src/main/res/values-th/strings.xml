@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">เพิ่มเติม</string>
     <string name="chat_message_send">ส่ง</string>
+    <string name="chat_attachment_remove">ลบไฟล์แนบ</string>
+    <string name="chat_message_remove_attachment">ลบไฟล์แนบ</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="projects_request_more">Viac</string>
     <string name="projects_comment_send">Odoslať</string>
     <string name="projects_field_position_body">Text</string>
+    <string name="projects_sort_field">Zoradiť podľa</string>
+    <string name="projects_comment_remove_attachment">Odstrániť prílohu</string>
+    <string name="projects_views_sort_by">Zoradiť podľa</string>
 </resources>

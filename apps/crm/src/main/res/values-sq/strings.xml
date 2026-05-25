@@ -166,4 +166,7 @@
     <string name="crm_request_more">Më shumë</string>
     <string name="crm_comment_send">Dërgo</string>
     <string name="crm_field_position_body">Përmbajtja</string>
+    <string name="crm_sort_field">Rendit sipas</string>
+    <string name="crm_comment_remove_attachment">Hiq bashkëngjitjen</string>
+    <string name="crm_views_sort_by">Rendit sipas</string>
 </resources>

@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">본문</string>
     <string name="forums_post_edit_body_field">본문</string>
     <string name="forums_comment_edit_body_field">본문</string>
+    <string name="forums_tag_clear">필터 지우기</string>
+    <string name="forums_post_tag_add">태그 추가</string>
+    <string name="forums_write_comment">댓글 작성…</string>
 </resources>

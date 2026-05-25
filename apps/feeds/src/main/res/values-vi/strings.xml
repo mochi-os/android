@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Đã lưu prompt</string>
     <string name="feeds_settings_prompt_reset">Nhắc nhở đã được đặt lại về mặc định</string>
     <string name="feeds_send">Gửi</string>
+    <string name="feeds_tag_clear">Xóa bộ lọc</string>
+    <string name="feeds_add_tag">Thêm thẻ</string>
+    <string name="feeds_write_a_comment">Viết bình luận…</string>
+    <string name="feeds_access_permission">Quyền</string>
 </resources>

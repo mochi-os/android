@@ -198,4 +198,18 @@
 
     <string name="settings_home_section_system">System</string>
     <string name="system_users_save_changes">Save changes</string>
+    <string name="system_replication_title">Replication</string>
+    <string name="system_replication_approve">Approve</string>
+    <string name="system_replication_deny">Deny</string>
+    <string name="domain_title">Domains</string>
+    <string name="domain_status_verified">Verified</string>
+    <string name="route_target">Target</string>
+    <string name="route_disabled">Disabled</string>
+    <string name="interests_title">Interests</string>
+    <string name="system_users_title">Users</string>
+    <string name="system_users_role_label">Role</string>
+    <string name="system_users_status_suspended">Suspended</string>
+    <string name="system_users_last_never">Never</string>
+    <string name="system_users_email_label">Email</string>
+    <string name="system_users_revoke">Revoke</string>
 </resources>

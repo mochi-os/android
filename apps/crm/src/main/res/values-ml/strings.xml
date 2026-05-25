@@ -166,4 +166,7 @@
     <string name="crm_request_more">കൂടുതൽ</string>
     <string name="crm_comment_send">അയയ്ക്കുക</string>
     <string name="crm_field_position_body">ഉള്ളടക്കം</string>
+    <string name="crm_sort_field">ഇതനുസരിച്ച് ക്രമീകരിക്കുക</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">ഇതനുസരിച്ച് ക്രമീകരിക്കുക</string>
 </resources>

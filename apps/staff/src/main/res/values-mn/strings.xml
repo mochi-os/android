@@ -486,4 +486,5 @@
     <string name="staff_team_toast_role_failed">Үүргийг шинэчилж чадсангүй</string>
     <string name="staff_team_toast_role_updated">Үүргийг шинэчиллээ</string>
 
+    <string name="staff_disputes_meta_seller_response">Худалдагчийн хариу</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="crm_request_more">Meer</string>
     <string name="crm_comment_send">Verzenden</string>
     <string name="crm_field_position_body">Inhoud</string>
+    <string name="crm_sort_field">Sorteren op</string>
+    <string name="crm_comment_remove_attachment">Bijlage verwijderen</string>
+    <string name="crm_views_sort_by">Sorteren op</string>
 </resources>

@@ -99,4 +99,13 @@
     <string name="feeds_settings_prompt_saved">Indicación gardada</string>
     <string name="feeds_settings_prompt_reset">Suxestión restablecida ao valor predeterminado</string>
     <string name="feeds_send">Enviar</string>
+    <string name="feeds_auth_email_code_sent">Introduce o código enviado a %1$s</string>
+    <string name="feeds_add_to_home_screen">Engadir á pantalla de inicio</string>
+    <string name="feeds_tag_clear">Limpar o filtro</string>
+    <string name="feeds_add_tag">Engadir etiqueta</string>
+    <string name="feeds_write_a_comment">Escribe un comentario…</string>
+    <string name="feeds_file">Ficheiro</string>
+    <string name="feeds_move_up">Mover arriba</string>
+    <string name="feeds_move_down">Mover abaixo</string>
+    <string name="feeds_access_permission">Permiso</string>
 </resources>

@@ -471,4 +471,6 @@
     <string name="staff_team_toast_removed">Ilungu likhishiwe</string>
     <string name="staff_team_toast_role_failed">Yehlulekile ukubuyekeza indima</string>
     <string name="staff_team_toast_role_updated">Indima ibuyekeziwe</string>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">I-oda #%1$d</string>
 </resources>

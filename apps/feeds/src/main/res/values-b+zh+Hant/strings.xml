@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">已儲存提示</string>
     <string name="feeds_settings_prompt_reset">提示語已重置為預設</string>
     <string name="feeds_send">傳送</string>
+    <string name="feeds_tag_clear">清除篩選</string>
+    <string name="feeds_add_tag">新增標籤</string>
+    <string name="feeds_write_a_comment">撰寫評論…</string>
+    <string name="feeds_access_permission">權限</string>
 </resources>

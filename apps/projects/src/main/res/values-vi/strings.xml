@@ -166,4 +166,7 @@
     <string name="projects_request_more">Thêm</string>
     <string name="projects_comment_send">Gửi</string>
     <string name="projects_field_position_body">Nội dung</string>
+    <string name="projects_sort_field">Sắp xếp theo</string>
+    <string name="projects_comment_remove_attachment">Xóa tệp đính kèm</string>
+    <string name="projects_views_sort_by">Sắp xếp theo</string>
 </resources>

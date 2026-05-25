@@ -166,4 +166,17 @@
     <string name="crm_request_more">Više</string>
     <string name="crm_comment_send">Pošalji</string>
     <string name="crm_field_position_body">Tekst</string>
+    <string name="crm_auth_login_failed">Prijava nije uspjela</string>
+    <string name="crm_auth_create_identity_failed">Stvaranje identiteta nije uspjelo</string>
+    <string name="crm_auth_mfa_unsupported">MFA još nije podržan u mobilnoj aplikaciji</string>
+    <string name="crm_auth_enter_code_sent">Unesite kod poslan na %1$s</string>
+    <string name="crm_auth_create_identity">Stvorite svoj identitet</string>
+    <string name="crm_list_add_to_home">Dodaj na početni zaslon</string>
+    <string name="crm_sort_field">Sortiraj po</string>
+    <string name="crm_views_move_up">Pomakni gore</string>
+    <string name="crm_views_move_down">Pomakni dolje</string>
+    <string name="crm_comment_remove_attachment">Ukloni privitak</string>
+    <string name="crm_class_move_up">Pomakni gore</string>
+    <string name="crm_class_move_down">Pomakni dolje</string>
+    <string name="crm_views_sort_by">Sortiraj po</string>
 </resources>

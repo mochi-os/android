@@ -134,4 +134,9 @@
 
     <string name="common_not_saved">Akugcinwanga</string>
     <string name="common_save_failed">Azikwazanga ukugcinwa iinguqu zakho.</string>
+    <string name="auth_server_url">I-URL yeseva</string>
+    <string name="auth_link_rules">Imithetho</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Malunga</string>
+    <string name="game_chat_move_played">%1$s udlale %2$s</string>
 </resources>

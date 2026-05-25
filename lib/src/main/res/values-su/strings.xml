@@ -134,4 +134,10 @@
 
     <string name="common_not_saved">Teu disimpen</string>
     <string name="common_save_failed">Parobahan anjeun teu tiasa disimpen.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL server</string>
+    <string name="auth_link_rules">Aturan</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Ngeunaan</string>
+    <string name="game_chat_move_played">%1$s maén %2$s</string>
 </resources>

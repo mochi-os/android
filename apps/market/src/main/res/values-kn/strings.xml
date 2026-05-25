@@ -484,4 +484,9 @@
     <string name="market_type_physical">ಭೌತಿಕ</string>
     <string name="market_warnings_title">ಎಚ್ಚರಿಕೆಗಳು</string>
     <string name="market_sale_review_response_submitting">ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">ಫಿಲ್ಟರ್ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="market_listings_action_appeal">ತೆಗೆಯುವಿಕೆ ಮನವಿ</string>
+    <string name="market_listings_share_chooser">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="market_refund_dialog_amount_label">ಮೊತ್ತ</string>
 </resources>

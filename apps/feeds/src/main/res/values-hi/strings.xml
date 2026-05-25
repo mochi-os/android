@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">प्रॉम्प्ट सहेजा गया</string>
     <string name="feeds_settings_prompt_reset">प्रॉम्पट डिफ़ॉल्ट पर रीसेट किया गया</string>
     <string name="feeds_send">भेजें</string>
+    <string name="feeds_tag_clear">फ़िल्टर साफ़ करें</string>
+    <string name="feeds_add_tag">टैग जोड़ें</string>
+    <string name="feeds_write_a_comment">टिप्पणी लिखें…</string>
+    <string name="feeds_access_permission">अनुमति</string>
 </resources>

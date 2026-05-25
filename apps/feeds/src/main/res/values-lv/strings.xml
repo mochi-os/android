@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Pamudinājums saglabāts</string>
     <string name="feeds_settings_prompt_reset">Pamudinājums atiestatīts uz noklusēto</string>
     <string name="feeds_send">Sūtīt</string>
+    <string name="feeds_tag_clear">Notīrīt filtru</string>
+    <string name="feeds_add_tag">Pievienot atzīmi</string>
+    <string name="feeds_write_a_comment">Rakstiet komentāru…</string>
+    <string name="feeds_access_permission">Atļauja</string>
 </resources>

@@ -485,4 +485,12 @@
     <string name="market_type_physical">Corporra</string>
     <string name="market_warnings_title">Rabhaidhean</string>
     <string name="market_sale_review_response_submitting">A\' cur a-null…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Thoir air falbh a\\\' chriathrag</string>
+    <string name="market_listing_detail_sales_count">%1$d reic</string>
+    <string name="market_listings_action_appeal">Tagradh thoirt air falbh</string>
+    <string name="market_listings_share_chooser">Co-roinn liosta</string>
+    <string name="market_profile_sales_count">%1$d reic</string>
+    <string name="market_purchase_dispute_response">Freagairt an reiceadair</string>
+    <string name="market_refund_dialog_amount_label">Suim</string>
 </resources>

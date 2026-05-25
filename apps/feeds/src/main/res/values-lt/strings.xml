@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Užklausa išsaugota</string>
     <string name="feeds_settings_prompt_reset">Raginimas atstatytas į numatytąjį</string>
     <string name="feeds_send">Siųsti</string>
+    <string name="feeds_tag_clear">Išvalyti filtrą</string>
+    <string name="feeds_add_tag">Pridėti žymą</string>
+    <string name="feeds_write_a_comment">Parašykite komentarą…</string>
+    <string name="feeds_access_permission">Leidimas</string>
 </resources>

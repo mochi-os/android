@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Lagi</string>
     <string name="chat_message_send">Hantar</string>
+    <string name="chat_attachment_remove">Buang lampiran</string>
+    <string name="chat_message_remove_attachment">Buang lampiran</string>
 </resources>

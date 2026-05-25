@@ -473,4 +473,6 @@
     <string name="staff_team_toast_removed">உறுப்பினர் அகற்றப்பட்டார்</string>
     <string name="staff_team_toast_role_failed">பணியை புதுப்பிக்க முடியவில்லை</string>
     <string name="staff_team_toast_role_updated">பணி புதுப்பிக்கப்பட்டது</string>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">ஆர்டர் #%1$d</string>
 </resources>

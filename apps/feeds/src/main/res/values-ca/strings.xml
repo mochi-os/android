@@ -181,4 +181,5 @@
     <string name="feeds_suggested_credibility_body">Mochi suggereix una credibilitat de %1$d. Accepteu-la?</string>
     <string name="feeds_suggested_credibility_keep">Mantén l\'actual</string>
 
+    <string name="feeds_ai_account">Compte d\\'IA</string>
 </resources>

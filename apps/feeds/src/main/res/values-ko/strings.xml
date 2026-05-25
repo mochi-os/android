@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">프롬프트가 저장되었어요</string>
     <string name="feeds_settings_prompt_reset">프롬프트가 기본값으로 재설정되었습니다</string>
     <string name="feeds_send">보내기</string>
+    <string name="feeds_tag_clear">필터 지우기</string>
+    <string name="feeds_add_tag">태그 추가</string>
+    <string name="feeds_write_a_comment">댓글 작성…</string>
+    <string name="feeds_access_permission">권한</string>
 </resources>

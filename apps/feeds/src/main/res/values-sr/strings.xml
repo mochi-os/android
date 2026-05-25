@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt сачуван</string>
     <string name="feeds_settings_prompt_reset">Упит је враћен на подразумевану вредност</string>
     <string name="feeds_send">Пошаљи</string>
+    <string name="feeds_tag_clear">Очисти филтер</string>
+    <string name="feeds_add_tag">Додај ознаку</string>
+    <string name="feeds_write_a_comment">Напишите коментар…</string>
+    <string name="feeds_access_permission">Дозвола</string>
 </resources>

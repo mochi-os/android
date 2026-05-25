@@ -166,4 +166,17 @@
     <string name="projects_request_more">Tuilleadh</string>
     <string name="projects_comment_send">Seol</string>
     <string name="projects_field_position_body">Corp</string>
+    <string name="projects_auth_login_failed">Theip ar logáil isteach</string>
+    <string name="projects_auth_create_identity_failed">Theip ar chéannacht a chruthú</string>
+    <string name="projects_auth_mfa_unsupported">Níl tacaíocht ag MFA san aip soghluaiste fós</string>
+    <string name="projects_auth_enter_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
+    <string name="projects_auth_create_identity">Cruthaigh do chéannacht</string>
+    <string name="projects_list_add_to_home">Cuir leis an scáileán baile</string>
+    <string name="projects_sort_field">Sórtáil de réir</string>
+    <string name="projects_views_move_up">Bog suas</string>
+    <string name="projects_views_move_down">Bog síos</string>
+    <string name="projects_comment_remove_attachment">Bain ceangaltán</string>
+    <string name="projects_class_move_up">Bog suas</string>
+    <string name="projects_class_move_down">Bog síos</string>
+    <string name="projects_views_sort_by">Sórtáil de réir</string>
 </resources>

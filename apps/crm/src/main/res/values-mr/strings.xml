@@ -166,4 +166,7 @@
     <string name="crm_request_more">अधिक</string>
     <string name="crm_comment_send">पाठवा</string>
     <string name="crm_field_position_body">मुख्य भाग</string>
+    <string name="crm_sort_field">क्रमवारीत लावा</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">क्रमवारीत लावा</string>
 </resources>

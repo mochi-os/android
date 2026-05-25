@@ -166,4 +166,17 @@
     <string name="projects_request_more">Više</string>
     <string name="projects_comment_send">Pošalji</string>
     <string name="projects_field_position_body">Tekst</string>
+    <string name="projects_auth_login_failed">Prijava nije uspjela</string>
+    <string name="projects_auth_create_identity_failed">Stvaranje identiteta nije uspjelo</string>
+    <string name="projects_auth_mfa_unsupported">MFA još nije podržan u mobilnoj aplikaciji</string>
+    <string name="projects_auth_enter_code_sent">Unesite kod poslan na %1$s</string>
+    <string name="projects_auth_create_identity">Stvorite svoj identitet</string>
+    <string name="projects_list_add_to_home">Dodaj na početni zaslon</string>
+    <string name="projects_sort_field">Sortiraj po</string>
+    <string name="projects_views_move_up">Pomakni gore</string>
+    <string name="projects_views_move_down">Pomakni dolje</string>
+    <string name="projects_comment_remove_attachment">Ukloni privitak</string>
+    <string name="projects_class_move_up">Pomakni gore</string>
+    <string name="projects_class_move_down">Pomakni dolje</string>
+    <string name="projects_views_sort_by">Sortiraj po</string>
 </resources>

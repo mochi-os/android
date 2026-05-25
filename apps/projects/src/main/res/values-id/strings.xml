@@ -166,4 +166,7 @@
     <string name="projects_request_more">Lainnya</string>
     <string name="projects_comment_send">Kirim</string>
     <string name="projects_field_position_body">Isi</string>
+    <string name="projects_sort_field">Urutkan berdasarkan</string>
+    <string name="projects_comment_remove_attachment">Hapus lampiran</string>
+    <string name="projects_views_sort_by">Urutkan berdasarkan</string>
 </resources>

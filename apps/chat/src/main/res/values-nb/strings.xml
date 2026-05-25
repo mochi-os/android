@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Mer</string>
     <string name="chat_message_send">Send</string>
+    <string name="chat_attachment_remove">Fjern vedlegg</string>
+    <string name="chat_message_remove_attachment">Fjern vedlegg</string>
 </resources>

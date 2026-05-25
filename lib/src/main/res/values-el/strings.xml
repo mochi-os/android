@@ -134,4 +134,15 @@
 
     <string name="common_not_saved">Δεν αποθηκεύτηκε</string>
     <string name="common_save_failed">Δεν ήταν δυνατή η αποθήκευση των αλλαγών σας.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL διακομιστή</string>
+    <string name="auth_create_identity_title">Δημιουργήστε την ταυτότητά σας</string>
+    <string name="auth_link_rules">Κανόνες</string>
+    <string name="common_change">Αλλαγή</string>
+    <string name="common_retry">Επανάληψη</string>
+    <string name="access_add_rule_title">Προσθήκη κανόνα πρόσβασης</string>
+    <string name="access_level_manage">Διαχείριση</string>
+    <string name="notifications_clear">Εκκαθάριση ειδοποιήσεων</string>
+    <string name="game_chat_load_more">Φόρτωση παλαιότερων μηνυμάτων</string>
+    <string name="game_chat_move_played">Ο/Η %1$s έπαιξε %2$s</string>
 </resources>

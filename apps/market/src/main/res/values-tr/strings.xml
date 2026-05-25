@@ -421,4 +421,10 @@
     <string name="market_appeal_dialog_submitting">Gönderiliyor…</string>
     <string name="market_dispute_dialog_submitting">Gönderiliyor…</string>
     <string name="market_sale_review_response_submitting">Gönderiliyor…</string>
+    <string name="market_checkout_subscribing">Abone olunuyor…</string>
+    <string name="market_filter_remove">Filtreyi kaldır</string>
+    <string name="market_listing_detail_sales_count">%1$d satış</string>
+    <string name="market_profile_sales_count">%1$d satış</string>
+    <string name="market_purchase_dispute_response">Satıcının yanıtı</string>
+    <string name="market_purchases_order_label">Sipariş #%1$d</string>
 </resources>

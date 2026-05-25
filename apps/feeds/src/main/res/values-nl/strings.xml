@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt opgeslagen</string>
     <string name="feeds_settings_prompt_reset">Prompt teruggezet op standaard</string>
     <string name="feeds_send">Verzenden</string>
+    <string name="feeds_tag_clear">Filter wissen</string>
+    <string name="feeds_add_tag">Tag toevoegen</string>
+    <string name="feeds_write_a_comment">Schrijf een opmerking…</string>
+    <string name="feeds_access_permission">Toestemming</string>
 </resources>

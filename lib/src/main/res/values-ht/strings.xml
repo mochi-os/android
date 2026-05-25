@@ -134,4 +134,12 @@
 
     <string name="common_not_saved">Pa anrejistre</string>
     <string name="common_save_failed">Nou pa t kapab anrejistre chanjman ou yo.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL sèvè</string>
+    <string name="auth_create_identity_title">Kreye idantite ou</string>
+    <string name="auth_link_rules">Règ</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Konsènan</string>
+    <string name="game_chat_load_more">Chaje ansyen mesaj</string>
+    <string name="game_chat_move_played">%1$s jwe %2$s</string>
 </resources>

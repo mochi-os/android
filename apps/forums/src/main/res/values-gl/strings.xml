@@ -130,4 +130,13 @@
     <string name="forums_post_body_field">Corpo</string>
     <string name="forums_post_edit_body_field">Corpo</string>
     <string name="forums_comment_edit_body_field">Corpo</string>
+    <string name="forums_auth_login_failed">Erro ao iniciar sesión</string>
+    <string name="forums_auth_create_identity_failed">Non se puido crear a identidade</string>
+    <string name="forums_auth_mfa_unsupported">MFA aínda non é compatible na aplicación móbil</string>
+    <string name="forums_auth_enter_code_sent">Introduce o código enviado a %1$s</string>
+    <string name="forums_auth_create_identity">Crea a túa identidade</string>
+    <string name="forums_list_add_to_home">Engadir á pantalla de inicio</string>
+    <string name="forums_tag_clear">Limpar o filtro</string>
+    <string name="forums_post_tag_add">Engadir etiqueta</string>
+    <string name="forums_write_comment">Escribe un comentario…</string>
 </resources>

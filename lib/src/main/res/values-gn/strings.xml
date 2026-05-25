@@ -132,4 +132,14 @@
     <string name="game_chat_send">Emondo marandu</string>
     <string name="game_chat_subject_you">Nde</string>
 
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Servidor URL</string>
+    <string name="auth_create_identity_title">Ejapo ne teratee</string>
+    <string name="auth_link_rules">Tekoita</string>
+    <string name="common_change">Emoambue</string>
+    <string name="common_retry">Eñeha\\'ã jey</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Mba\\\'erehe</string>
+    <string name="game_chat_load_more">Ehenduka marandu yma</string>
+    <string name="game_chat_move_played">%1$s ojapo %2$s</string>
 </resources>

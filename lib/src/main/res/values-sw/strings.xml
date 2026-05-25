@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Haijahifadhiwa</string>
     <string name="common_save_failed">Mabadiliko yako hayakuweza kuhifadhiwa.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL ya seva</string>
+    <string name="auth_link_rules">Sheria</string>
+    <string name="game_chat_move_played">%1$s amecheza %2$s</string>
 </resources>

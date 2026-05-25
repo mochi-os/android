@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompti u ruajt</string>
     <string name="feeds_settings_prompt_reset">Sugjerimi u rivendos në të parazgjedhurin</string>
     <string name="feeds_send">Dërgo</string>
+    <string name="feeds_tag_clear">Pastro filtrin</string>
+    <string name="feeds_add_tag">Shto etiketë</string>
+    <string name="feeds_write_a_comment">Shkruaj një koment…</string>
+    <string name="feeds_access_permission">Lejim</string>
 </resources>

@@ -486,4 +486,12 @@
     <string name="market_type_physical">Ֆիզիկական</string>
     <string name="market_warnings_title">Զգուշացումներ</string>
     <string name="market_sale_review_response_submitting">Ուղարկվում է…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Հեռացնել զտիչը</string>
+    <string name="market_listing_detail_sales_count">%1$d վաճառք</string>
+    <string name="market_listings_action_appeal">Հեռացման բողոք</string>
+    <string name="market_listings_share_chooser">Կիսվել ցուցակով</string>
+    <string name="market_profile_sales_count">%1$d վաճառք</string>
+    <string name="market_purchase_dispute_response">Վաճառողի պատասխանը</string>
+    <string name="market_refund_dialog_amount_label">Գումար</string>
 </resources>

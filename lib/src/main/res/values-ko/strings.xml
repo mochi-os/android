@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">저장되지 않음</string>
     <string name="common_save_failed">변경 사항을 저장하지 못했습니다.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">서버 URL</string>
+    <string name="auth_link_rules">규칙</string>
+    <string name="game_chat_move_played">%1$s이(가) %2$s을(를) 두었습니다</string>
 </resources>

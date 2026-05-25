@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">ప్రాంప్ట్ సేవ్ చేయబడింది</string>
     <string name="feeds_settings_prompt_reset">ప్రాంప్ಟ్ డిఫాల్ಟ్ పరిలక్కులికు రీసెಟ్ చేరెని</string>
     <string name="feeds_send">పంపండి</string>
+    <string name="feeds_tag_clear">ఫిల్టర్ క్లియర్ చేయి</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

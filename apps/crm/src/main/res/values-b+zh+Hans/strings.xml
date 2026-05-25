@@ -166,4 +166,7 @@
     <string name="crm_request_more">更多</string>
     <string name="crm_comment_send">发送</string>
     <string name="crm_field_position_body">正文</string>
+    <string name="crm_sort_field">排序方式</string>
+    <string name="crm_comment_remove_attachment">移除附件</string>
+    <string name="crm_views_sort_by">排序方式</string>
 </resources>

@@ -216,4 +216,6 @@
     <string name="reaction_add">Tilføj reaktion</string>
     <string name="push_service_channel">Mochi push</string>
 
+    <string name="game_chat_load_more">Indlæs ældre beskeder</string>
+    <string name="game_chat_move_played">%1$s spillede %2$s</string>
 </resources>

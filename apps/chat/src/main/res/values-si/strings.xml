@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">තවත්</string>
     <string name="chat_message_send">යවන්න</string>
+    <string name="chat_attachment_remove">Remove attachment</string>
+    <string name="chat_message_remove_attachment">Remove attachment</string>
 </resources>

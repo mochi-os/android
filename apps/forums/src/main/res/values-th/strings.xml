@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">เนื้อหา</string>
     <string name="forums_post_edit_body_field">เนื้อหา</string>
     <string name="forums_comment_edit_body_field">เนื้อหา</string>
+    <string name="forums_tag_clear">ล้างตัวกรอง</string>
+    <string name="forums_post_tag_add">เพิ่มแท็ก</string>
+    <string name="forums_write_comment">เขียนความคิดเห็น…</string>
 </resources>

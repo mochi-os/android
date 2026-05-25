@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Więcej</string>
     <string name="chat_message_send">Wyślij</string>
+    <string name="chat_attachment_remove">Usuń załącznik</string>
+    <string name="chat_message_remove_attachment">Usuń załącznik</string>
 </resources>

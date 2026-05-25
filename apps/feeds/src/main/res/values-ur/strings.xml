@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">prompt محفوظ ہو گیا</string>
     <string name="feeds_settings_prompt_reset">پرومپٹ کو طرح دیکھا دوبارہ جوڑ کر دیا گیا</string>
     <string name="feeds_send">بھیجیں</string>
+    <string name="feeds_tag_clear">فلٹر صاف کریں</string>
+    <string name="feeds_add_tag">ٹیگ شامل کریں</string>
+    <string name="feeds_write_a_comment">تبصرہ لکھیں…</string>
+    <string name="feeds_access_permission">اجازت</string>
 </resources>

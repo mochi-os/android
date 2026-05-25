@@ -166,4 +166,7 @@
     <string name="projects_request_more">Meer</string>
     <string name="projects_comment_send">Verzenden</string>
     <string name="projects_field_position_body">Inhoud</string>
+    <string name="projects_sort_field">Sorteren op</string>
+    <string name="projects_comment_remove_attachment">Bijlage verwijderen</string>
+    <string name="projects_views_sort_by">Sorteren op</string>
 </resources>

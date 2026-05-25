@@ -134,4 +134,7 @@
 
     <string name="common_not_saved">未保存</string>
     <string name="common_save_failed">无法保存您的更改。</string>
+    <string name="auth_server_url">服务器 URL</string>
+    <string name="auth_link_rules">规则</string>
+    <string name="game_chat_move_played">%1$s 走了 %2$s</string>
 </resources>

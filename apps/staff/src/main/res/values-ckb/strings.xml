@@ -480,4 +480,7 @@
     <string name="staff_team_toast_role_failed">نوێکردنەوەی ڕۆڵ سەرکەوتوو نەبوو</string>
     <string name="staff_team_toast_role_updated">ڕۆڵ نوێکرایەوە</string>
 
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">داواکاری #%1$d</string>
+    <string name="staff_disputes_meta_seller_response">وەڵامی فرۆشیار</string>
 </resources>

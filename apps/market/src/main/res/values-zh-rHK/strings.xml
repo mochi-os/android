@@ -393,4 +393,24 @@
     <string name="market_messages_thread_listing_chip">刊登</string>
     <string name="market_section_listings">刊登</string>
     <string name="market_sidebar_listings">刊登</string>
+    <string name="market_checkout_delivery_download">下載</string>
+    <string name="market_checkout_subscribe_failed">Failed to subscribe</string>
+    <string name="market_editor_appeal_submit">提交申訴</string>
+    <string name="market_editor_photo_uploading">Uploading…</string>
+    <string name="market_editor_pricing_subscription">订阅</string>
+    <string name="market_editor_saving">正在儲存…</string>
+    <string name="market_editor_section_location">位置</string>
+    <string name="market_editor_section_tags">Tags</string>
+    <string name="market_filter_delivery_download">下載</string>
+    <string name="market_filter_pricing_subscription">订阅</string>
+    <string name="market_listing_detail_location_heading">位置</string>
+    <string name="market_listing_detail_tags_heading">Tags</string>
+    <string name="market_listing_detail_verified">已驗證</string>
+    <string name="market_messages_inbox_title">消息</string>
+    <string name="market_profile_verified">已驗證</string>
+    <string name="market_sale_section_summary">摘要</string>
+    <string name="market_search_clear">Clear search</string>
+    <string name="market_sidebar_bids">我的出價</string>
+    <string name="market_sidebar_messages">消息</string>
+    <string name="market_title">市場</string>
 </resources>

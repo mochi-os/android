@@ -166,4 +166,7 @@
     <string name="projects_request_more">Vairāk</string>
     <string name="projects_comment_send">Sūtīt</string>
     <string name="projects_field_position_body">Teksts</string>
+    <string name="projects_sort_field">Kārtot pēc</string>
+    <string name="projects_comment_remove_attachment">Noņemt pielikumu</string>
+    <string name="projects_views_sort_by">Kārtot pēc</string>
 </resources>

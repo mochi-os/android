@@ -166,4 +166,7 @@
     <string name="projects_request_more">Zaidi</string>
     <string name="projects_comment_send">Tuma</string>
     <string name="projects_field_position_body">Mwili</string>
+    <string name="projects_sort_field">Panga kulingana na</string>
+    <string name="projects_comment_remove_attachment">Ondoa kiambatisho</string>
+    <string name="projects_views_sort_by">Panga kulingana na</string>
 </resources>

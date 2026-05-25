@@ -134,4 +134,14 @@
 
     <string name="common_not_saved">Gun sàbhaladh</string>
     <string name="common_save_failed">Cha b\' urrainn na h-atharrachaidhean agad a shàbhaladh.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL frithealaiche</string>
+    <string name="auth_create_identity_title">Cruthaich do dhearbh-aithne</string>
+    <string name="auth_link_rules">Riaghailtean</string>
+    <string name="common_change">Atharraich</string>
+    <string name="common_retry">Feuch a-rithist</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Mu dheidhinn</string>
+    <string name="game_chat_load_more">Luchdaich teachdaireachdan as sine</string>
+    <string name="game_chat_move_played">Chluich %1$s %2$s</string>
 </resources>

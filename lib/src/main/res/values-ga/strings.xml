@@ -134,4 +134,14 @@
 
     <string name="common_not_saved">Gan sábháil</string>
     <string name="common_save_failed">Níorbh fhéidir do chuid athruithe a shábháil.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL an fhreastalaí</string>
+    <string name="auth_create_identity_title">Cruthaigh do chéannacht</string>
+    <string name="auth_link_rules">Rialacha</string>
+    <string name="common_change">Athraigh</string>
+    <string name="common_retry">Atriail</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">Faoi</string>
+    <string name="game_chat_load_more">Lódáil teachtaireachtaí níos sine</string>
+    <string name="game_chat_move_played">Sheinn %1$s %2$s</string>
 </resources>

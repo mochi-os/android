@@ -132,4 +132,9 @@
 
     <string name="common_not_saved">Ikkje lagra</string>
     <string name="common_save_failed">Endringane dine kunne ikkje lagrast.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Tenar-URL</string>
+    <string name="auth_link_rules">Reglar</string>
+    <string name="profile_save_name">Lagre namn</string>
+    <string name="game_chat_move_played">%1$s spelte %2$s</string>
 </resources>

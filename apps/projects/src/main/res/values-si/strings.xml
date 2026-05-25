@@ -166,4 +166,7 @@
     <string name="projects_request_more">තවත්</string>
     <string name="projects_comment_send">යවන්න</string>
     <string name="projects_field_position_body">අන්තර්ගතය</string>
+    <string name="projects_sort_field">අනුව වර්ග කරන්න</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_views_sort_by">අනුව වර්ග කරන්න</string>
 </resources>

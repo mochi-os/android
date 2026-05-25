@@ -113,4 +113,31 @@
     <string name="feeds_ai_prompt_rank">Ранжыраванне / ацэньванне</string>
     <string name="feeds_ai_prompt_credibility">Ацэнка дакладнасці</string>
 
+    <string name="feeds_auth_email_code_sent">Увядзіце код, дасланы на %1$s</string>
+    <string name="feeds_add_to_home_screen">Дадаць на галоўны экран</string>
+    <string name="feeds_tag_clear">Ачысціць фільтр</string>
+    <string name="feeds_identity_fingerprint">Адбітак: %1$s</string>
+    <string name="feeds_time_just_now">Толькі што</string>
+    <string name="feeds_time_minutes_ago">%1$d хв таму</string>
+    <string name="feeds_time_hours_ago">%1$d г таму</string>
+    <string name="feeds_time_days_ago">%1$d д таму</string>
+    <string name="feeds_time_weeks_ago">%1$d тыд таму</string>
+    <string name="feeds_time_months_ago">%1$d мес таму</string>
+    <string name="feeds_time_years_ago">%1$d г таму</string>
+    <string name="feeds_time_minutes_short">%1$d хв</string>
+    <string name="feeds_time_hours_short">%1$d г</string>
+    <string name="feeds_time_days_short">%1$d д</string>
+    <string name="feeds_time_weeks_short">%1$d тыд</string>
+    <string name="feeds_time_months_short">%1$d мес</string>
+    <string name="feeds_time_years_short">%1$d г</string>
+    <string name="feeds_delete_post_confirm">Вы ўпэўнены, што хочаце выдаліць гэты допіс? Гэта дзеянне нельга адмяніць.</string>
+    <string name="feeds_delete_comment_confirm">Вы ўпэўнены, што хочаце выдаліць гэты каментар?</string>
+    <string name="feeds_add_tag">Дадаць тэг</string>
+    <string name="feeds_write_a_comment">Напішыце каментар…</string>
+    <string name="feeds_file">Файл</string>
+    <string name="feeds_move_up">Перамясціць уверх</string>
+    <string name="feeds_move_down">Перамясціць уніз</string>
+    <string name="feeds_save_banner">Захаваць банер</string>
+    <string name="feeds_danger_zone">Небяспечная зона</string>
+    <string name="feeds_access_permission">Дазвол</string>
 </resources>

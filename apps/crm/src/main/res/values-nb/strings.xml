@@ -166,4 +166,7 @@
     <string name="crm_request_more">Mer</string>
     <string name="crm_comment_send">Send</string>
     <string name="crm_field_position_body">Innhold</string>
+    <string name="crm_sort_field">Sorter etter</string>
+    <string name="crm_comment_remove_attachment">Fjern vedlegg</string>
+    <string name="crm_views_sort_by">Sorter etter</string>
 </resources>

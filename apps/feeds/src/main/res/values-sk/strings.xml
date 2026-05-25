@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt uložený</string>
     <string name="feeds_settings_prompt_reset">Výzva obnovená na predvolenú</string>
     <string name="feeds_send">Odoslať</string>
+    <string name="feeds_tag_clear">Vymazať filter</string>
+    <string name="feeds_add_tag">Pridať značku</string>
+    <string name="feeds_write_a_comment">Napíšte komentár…</string>
+    <string name="feeds_access_permission">Povolenie</string>
 </resources>

@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">內文</string>
     <string name="forums_post_edit_body_field">內文</string>
     <string name="forums_comment_edit_body_field">內文</string>
+    <string name="forums_tag_clear">清除篩選</string>
+    <string name="forums_post_tag_add">新增標籤</string>
+    <string name="forums_write_comment">撰寫評論…</string>
 </resources>

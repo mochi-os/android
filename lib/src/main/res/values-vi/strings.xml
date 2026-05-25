@@ -134,4 +134,7 @@
 
     <string name="common_not_saved">Chưa lưu</string>
     <string name="common_save_failed">Không thể lưu các thay đổi của bạn.</string>
+    <string name="auth_server_url">URL máy chủ</string>
+    <string name="auth_link_rules">Quy tắc</string>
+    <string name="game_chat_move_played">%1$s đã đi %2$s</string>
 </resources>

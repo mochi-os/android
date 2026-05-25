@@ -473,4 +473,6 @@
     <string name="staff_team_toast_removed">အဖွဲ့ဝင် ဖယ်ရှားပြီးပါပြီ</string>
     <string name="staff_team_toast_role_failed">ရာထူးကို အပ်ဒိတ်လုပ်၍ မရပါ</string>
     <string name="staff_team_toast_role_updated">ရာထူးကို အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">အမှာစာ #%1$d</string>
 </resources>

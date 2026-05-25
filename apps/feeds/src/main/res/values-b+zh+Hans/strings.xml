@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">提示词已保存</string>
     <string name="feeds_settings_prompt_reset">提示已重置为默认值</string>
     <string name="feeds_send">发送</string>
+    <string name="feeds_tag_clear">清除筛选</string>
+    <string name="feeds_add_tag">添加标签</string>
+    <string name="feeds_write_a_comment">写评论…</string>
+    <string name="feeds_access_permission">权限</string>
 </resources>

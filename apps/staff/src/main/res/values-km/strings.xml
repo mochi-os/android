@@ -473,4 +473,6 @@
     <string name="staff_team_toast_removed">បានដកសមាជិក</string>
     <string name="staff_team_toast_role_failed">បានបរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពតួនាទី</string>
     <string name="staff_team_toast_role_updated">បានធ្វើបច្ចុប្បន្នភាពតួនាទី</string>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">ការបញ្ជា #%1$d</string>
 </resources>

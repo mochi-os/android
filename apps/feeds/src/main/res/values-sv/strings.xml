@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt sparad</string>
     <string name="feeds_settings_prompt_reset">Promt återställd till standard</string>
     <string name="feeds_send">Skicka</string>
+    <string name="feeds_tag_clear">Rensa filter</string>
+    <string name="feeds_add_tag">Lägg till tagg</string>
+    <string name="feeds_write_a_comment">Skriv en kommentar…</string>
+    <string name="feeds_access_permission">Behörighet</string>
 </resources>

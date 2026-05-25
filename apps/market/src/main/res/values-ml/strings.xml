@@ -484,4 +484,9 @@
     <string name="market_type_physical">ഫിസിക്കൽ</string>
     <string name="market_warnings_title">മുന്നറിയിപ്പുകൾ</string>
     <string name="market_sale_review_response_submitting">സമർപ്പിക്കുന്നു…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">ഫിൽട്ടർ നീക്കം ചെയ്യുക</string>
+    <string name="market_listings_action_appeal">നീക്കം ചെയ്യൽ അപ്പീൽ</string>
+    <string name="market_listings_share_chooser">പട്ടിക പങ്കിടുക</string>
+    <string name="market_refund_dialog_amount_label">തുക</string>
 </resources>

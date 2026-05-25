@@ -166,4 +166,7 @@
     <string name="crm_request_more">Ещё</string>
     <string name="crm_comment_send">Отправить</string>
     <string name="crm_field_position_body">Текст</string>
+    <string name="crm_sort_field">Сортировать по</string>
+    <string name="crm_comment_remove_attachment">Удалить вложение</string>
+    <string name="crm_views_sort_by">Сортировать по</string>
 </resources>

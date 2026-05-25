@@ -473,4 +473,6 @@
     <string name="staff_team_toast_removed">સભ્ય દૂર કર્યા</string>
     <string name="staff_team_toast_role_failed">ભૂમિકા અપડેટ કરવામાં નિષ્ફળ</string>
     <string name="staff_team_toast_role_updated">ભૂમિકા અપડેટ થઈ</string>
+    <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+    <string name="staff_dashboard_order_fallback">ઓર્ડર #%1$d</string>
 </resources>

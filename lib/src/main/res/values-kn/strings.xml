@@ -134,4 +134,9 @@
 
     <string name="common_not_saved">ಉಳಿಸಲಾಗಿಲ್ಲ</string>
     <string name="common_save_failed">ನಿಮ್ಮ ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಲಾಗಲಿಲ್ಲ.</string>
+    <string name="auth_server_url">ಸರ್ವರ್ URL</string>
+    <string name="auth_link_rules">ನಿಯಮಗಳು</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">ಬಗ್ಗೆ</string>
+    <string name="game_chat_move_played">%1$s %2$s ಆಡಿದರು</string>
 </resources>

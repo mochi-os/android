@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">正文</string>
     <string name="forums_post_edit_body_field">正文</string>
     <string name="forums_comment_edit_body_field">正文</string>
+    <string name="forums_tag_clear">清除筛选</string>
+    <string name="forums_post_tag_add">添加标签</string>
+    <string name="forums_write_comment">写评论…</string>
 </resources>

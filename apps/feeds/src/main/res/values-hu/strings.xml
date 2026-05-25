@@ -99,4 +99,13 @@
     <string name="feeds_settings_prompt_saved">Prompt mentve</string>
     <string name="feeds_settings_prompt_reset">Utasítás visszaállítva az alapértelmezettre</string>
     <string name="feeds_send">Küldés</string>
+    <string name="feeds_auth_email_code_sent">Adja meg a(z) %1$s címre küldött kódot</string>
+    <string name="feeds_add_to_home_screen">Hozzáadás a kezdőképernyőhöz</string>
+    <string name="feeds_tag_clear">Szűrő törlése</string>
+    <string name="feeds_add_tag">Címke hozzáadása</string>
+    <string name="feeds_write_a_comment">Megjegyzés írása…</string>
+    <string name="feeds_file">Fájl</string>
+    <string name="feeds_move_up">Mozgatás felfelé</string>
+    <string name="feeds_move_down">Mozgatás lefelé</string>
+    <string name="feeds_access_permission">Engedély</string>
 </resources>

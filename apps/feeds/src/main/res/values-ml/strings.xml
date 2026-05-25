@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">നിങ്ങളുടെ റീഫണ്ട് അഭ്യർത്ഥനയ്ക്ക് ഒരു കാരണം നൽകുക.</string>
     <string name="feeds_settings_prompt_reset">പ്റോംപ്റ്റ് ഡിഫോർඟ്ඟിലേക്ക് റിസറ്റ് කെയ്തു</string>
     <string name="feeds_send">അയയ്ക്കുക</string>
+    <string name="feeds_tag_clear">ഫിൽട്ടർ മായ്ക്കുക</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="projects_request_more">Daha fazla</string>
     <string name="projects_comment_send">Gönder</string>
     <string name="projects_field_position_body">İçerik</string>
+    <string name="projects_sort_field">Sıralama</string>
+    <string name="projects_comment_remove_attachment">Eki kaldır</string>
+    <string name="projects_views_sort_by">Sıralama</string>
 </resources>

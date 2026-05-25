@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Gesaan disimpan</string>
     <string name="feeds_settings_prompt_reset">Gesaan ditetapkan semula kepada lalai</string>
     <string name="feeds_send">Hantar</string>
+    <string name="feeds_tag_clear">Kosongkan penapis</string>
+    <string name="feeds_add_tag">Tambah tag</string>
+    <string name="feeds_write_a_comment">Tulis komen…</string>
+    <string name="feeds_access_permission">Kebenaran</string>
 </resources>

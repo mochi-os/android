@@ -166,4 +166,7 @@
     <string name="crm_request_more">Mai mult</string>
     <string name="crm_comment_send">Trimite</string>
     <string name="crm_field_position_body">Conținut</string>
+    <string name="crm_sort_field">Sortează după</string>
+    <string name="crm_comment_remove_attachment">Elimină atașamentul</string>
+    <string name="crm_views_sort_by">Sortează după</string>
 </resources>

@@ -166,4 +166,17 @@
     <string name="crm_request_more">Ƙari</string>
     <string name="crm_comment_send">Aika</string>
     <string name="crm_field_position_body">Jiki</string>
+    <string name="crm_auth_login_failed">Shiga ya gaza</string>
+    <string name="crm_auth_create_identity_failed">An kasa ƙirƙirar shaida</string>
+    <string name="crm_auth_mfa_unsupported">Ba a goyi bayan MFA tukuna a aikace-aikacen wayar hannu ba</string>
+    <string name="crm_auth_enter_code_sent">Shigar da lambar da aka aiko zuwa %1$s</string>
+    <string name="crm_auth_create_identity">Ƙirƙiri shaidarka</string>
+    <string name="crm_list_add_to_home">Ƙara a allon gida</string>
+    <string name="crm_sort_field">Tsara ta</string>
+    <string name="crm_views_move_up">Matsa sama</string>
+    <string name="crm_views_move_down">Matsa ƙasa</string>
+    <string name="crm_comment_remove_attachment">Cire haɗe</string>
+    <string name="crm_class_move_up">Matsa sama</string>
+    <string name="crm_class_move_down">Matsa ƙasa</string>
+    <string name="crm_views_sort_by">Tsara ta</string>
 </resources>

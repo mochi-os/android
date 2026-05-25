@@ -194,4 +194,5 @@
     <string name="forums_settings_danger_zone">Zone de danger</string>
     <string name="forums_settings_delete">Supprimer le forum</string>
 
+    <string name="forums_settings_delete_title">Supprimer le forum</string>
 </resources>

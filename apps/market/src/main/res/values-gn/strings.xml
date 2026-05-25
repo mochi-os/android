@@ -477,4 +477,11 @@
     <string name="market_type_physical">Hete\\'ỹva</string>
     <string name="market_warnings_title">Mongetaha</string>
     <string name="market_sale_review_response_submitting">Omondóva…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Embogue mboheko</string>
+    <string name="market_listing_detail_sales_count">%1$d ñemu</string>
+    <string name="market_listings_share_chooser">Embokuaa</string>
+    <string name="market_profile_sales_count">%1$d ñemu</string>
+    <string name="market_purchase_dispute_response">Ñemuhára mbohovái</string>
+    <string name="market_refund_dialog_amount_label">Atýra</string>
 </resources>

@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Prompt သိမ်းပြီးပါပြီ</string>
     <string name="feeds_settings_prompt_reset">လမ်းညွှန်မှုကို မူလပဝန်သို့ ပြန်ထားပါပြီ</string>
     <string name="feeds_send">ပို့</string>
+    <string name="feeds_tag_clear">စစ်ထုတ်မှု ရှင်းပါ</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

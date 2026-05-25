@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Nav saglabāts</string>
     <string name="common_save_failed">Neizdevās saglabāt jūsu izmaiņas.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Servera URL</string>
+    <string name="auth_link_rules">Noteikumi</string>
+    <string name="game_chat_move_played">%1$s spēlēja %2$s</string>
 </resources>

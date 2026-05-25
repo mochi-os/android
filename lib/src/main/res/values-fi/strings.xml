@@ -134,4 +134,15 @@
 
     <string name="common_not_saved">Ei tallennettu</string>
     <string name="common_save_failed">Muutoksiasi ei voitu tallentaa.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Palvelimen URL</string>
+    <string name="auth_create_identity_title">Luo identiteettisi</string>
+    <string name="auth_link_rules">Säännöt</string>
+    <string name="common_change">Vaihda</string>
+    <string name="common_retry">Yritä uudelleen</string>
+    <string name="access_add_rule_title">Lisää käyttöoikeussääntö</string>
+    <string name="access_level_manage">Hallinnoi</string>
+    <string name="notifications_clear">Tyhjennä ilmoitukset</string>
+    <string name="game_chat_load_more">Lataa vanhempia viestejä</string>
+    <string name="game_chat_move_played">%1$s pelasi %2$s</string>
 </resources>

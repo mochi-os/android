@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Conteúdo</string>
     <string name="forums_post_edit_body_field">Conteúdo</string>
     <string name="forums_comment_edit_body_field">Conteúdo</string>
+    <string name="forums_tag_clear">Limpar filtro</string>
+    <string name="forums_post_tag_add">Adicionar etiqueta</string>
+    <string name="forums_write_comment">Escreva um comentário…</string>
 </resources>

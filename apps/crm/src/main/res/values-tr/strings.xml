@@ -166,4 +166,7 @@
     <string name="crm_request_more">Daha fazla</string>
     <string name="crm_comment_send">Gönder</string>
     <string name="crm_field_position_body">İçerik</string>
+    <string name="crm_sort_field">Sıralama</string>
+    <string name="crm_comment_remove_attachment">Eki kaldır</string>
+    <string name="crm_views_sort_by">Sıralama</string>
 </resources>

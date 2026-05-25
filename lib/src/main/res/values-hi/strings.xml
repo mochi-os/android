@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">सहेजा नहीं गया</string>
     <string name="common_save_failed">आपके परिवर्तन सहेजे नहीं जा सके।</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">सर्वर URL</string>
+    <string name="auth_link_rules">नियम</string>
+    <string name="game_chat_move_played">%1$s ने %2$s चला</string>
 </resources>

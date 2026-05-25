@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Prompt guardado</string>
     <string name="feeds_settings_prompt_reset">Indicación restablecida a los valores predeterminados</string>
     <string name="feeds_send">Enviar</string>
+    <string name="feeds_auth_email_code_sent">Introduzca el código enviado a %1$s</string>
+    <string name="feeds_add_to_home_screen">Añadir a la pantalla de inicio</string>
+    <string name="feeds_tag_clear">Limpiar filtro</string>
+    <string name="feeds_identity_fingerprint">Huella: %1$s</string>
+    <string name="feeds_delete_post_confirm">¿Seguro que quieres eliminar esta publicación? Esta acción no se puede deshacer.</string>
+    <string name="feeds_delete_comment_confirm">¿Seguro que quieres eliminar este comentario?</string>
+    <string name="feeds_add_tag">Añadir etiqueta</string>
+    <string name="feeds_write_a_comment">Escribe un comentario…</string>
+    <string name="feeds_file">Archivo</string>
+    <string name="feeds_move_up">Mover arriba</string>
+    <string name="feeds_move_down">Mover abajo</string>
+    <string name="feeds_danger_zone">Zona de peligro</string>
+    <string name="feeds_access_permission">Permiso</string>
+    <string name="feeds_ai_account">Cuenta de IA</string>
 </resources>

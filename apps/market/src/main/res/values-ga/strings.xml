@@ -488,4 +488,12 @@
     <string name="market_type_physical">Fisiciúil</string>
     <string name="market_warnings_title">Rabhaidh</string>
     <string name="market_sale_review_response_submitting">Á sheoladh…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Bain scagaire</string>
+    <string name="market_listing_detail_sales_count">%1$d díolacháin</string>
+    <string name="market_listings_action_appeal">Achomharc bainte</string>
+    <string name="market_listings_share_chooser">Roinn liosta</string>
+    <string name="market_profile_sales_count">%1$d díolacháin</string>
+    <string name="market_purchase_dispute_response">Freagra an díoltóra</string>
+    <string name="market_refund_dialog_amount_label">Méid</string>
 </resources>

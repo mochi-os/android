@@ -130,4 +130,7 @@
     <string name="forums_post_body_field">Text</string>
     <string name="forums_post_edit_body_field">Text</string>
     <string name="forums_comment_edit_body_field">Text</string>
+    <string name="forums_tag_clear">Vymazať filter</string>
+    <string name="forums_post_tag_add">Pridať značku</string>
+    <string name="forums_write_comment">Napíšte komentár…</string>
 </resources>

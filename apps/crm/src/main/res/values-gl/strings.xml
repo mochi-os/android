@@ -166,4 +166,17 @@
     <string name="crm_request_more">Máis</string>
     <string name="crm_comment_send">Enviar</string>
     <string name="crm_field_position_body">Corpo</string>
+    <string name="crm_auth_login_failed">Erro ao iniciar sesión</string>
+    <string name="crm_auth_create_identity_failed">Non se puido crear a identidade</string>
+    <string name="crm_auth_mfa_unsupported">MFA aínda non é compatible na aplicación móbil</string>
+    <string name="crm_auth_enter_code_sent">Introduce o código enviado a %1$s</string>
+    <string name="crm_auth_create_identity">Crea a túa identidade</string>
+    <string name="crm_list_add_to_home">Engadir á pantalla de inicio</string>
+    <string name="crm_sort_field">Ordenar por</string>
+    <string name="crm_views_move_up">Mover arriba</string>
+    <string name="crm_views_move_down">Mover abaixo</string>
+    <string name="crm_comment_remove_attachment">Eliminar anexo</string>
+    <string name="crm_class_move_up">Mover arriba</string>
+    <string name="crm_class_move_down">Mover abaixo</string>
+    <string name="crm_views_sort_by">Ordenar por</string>
 </resources>

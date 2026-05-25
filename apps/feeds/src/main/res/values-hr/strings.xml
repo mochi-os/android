@@ -99,4 +99,13 @@
     <string name="feeds_settings_prompt_saved">Prompt spremljen</string>
     <string name="feeds_settings_prompt_reset">Upit vraćen na zadano</string>
     <string name="feeds_send">Pošalji</string>
+    <string name="feeds_auth_email_code_sent">Unesite kod poslan na %1$s</string>
+    <string name="feeds_add_to_home_screen">Dodaj na početni zaslon</string>
+    <string name="feeds_tag_clear">Očisti filtar</string>
+    <string name="feeds_add_tag">Dodaj oznaku</string>
+    <string name="feeds_write_a_comment">Napišite komentar…</string>
+    <string name="feeds_file">Datoteka</string>
+    <string name="feeds_move_up">Pomakni gore</string>
+    <string name="feeds_move_down">Pomakni dolje</string>
+    <string name="feeds_access_permission">Dopuštenje</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="projects_request_more">Zêdetir</string>
     <string name="projects_comment_send">Bişîne</string>
     <string name="projects_field_position_body">Naverok</string>
+    <string name="projects_sort_field">Rêz bike li gor</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_views_sort_by">Rêz bike li gor</string>
 </resources>

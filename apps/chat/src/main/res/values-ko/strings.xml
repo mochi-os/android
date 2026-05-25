@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">더 보기</string>
     <string name="chat_message_send">보내기</string>
+    <string name="chat_attachment_remove">첨부 파일 제거</string>
+    <string name="chat_message_remove_attachment">첨부 파일 제거</string>
 </resources>

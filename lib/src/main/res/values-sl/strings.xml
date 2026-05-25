@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Ni shranjeno</string>
     <string name="common_save_failed">Vaših sprememb ni bilo mogoče shraniti.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL strežnika</string>
+    <string name="auth_link_rules">Pravila</string>
+    <string name="game_chat_move_played">%1$s odigral %2$s</string>
 </resources>

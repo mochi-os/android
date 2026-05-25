@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Prompt gespeichert</string>
     <string name="feeds_settings_prompt_reset">Prompt auf Standard zurückgesetzt</string>
     <string name="feeds_send">Senden</string>
+    <string name="feeds_auth_email_code_sent">Geben Sie den an %1$s gesendeten Code ein</string>
+    <string name="feeds_add_to_home_screen">Zum Startbildschirm hinzufügen</string>
+    <string name="feeds_tag_clear">Filter zurücksetzen</string>
+    <string name="feeds_identity_fingerprint">Fingerabdruck: %1$s</string>
+    <string name="feeds_delete_post_confirm">Möchten Sie diesen Beitrag wirklich löschen? Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="feeds_delete_comment_confirm">Möchten Sie diesen Kommentar wirklich löschen?</string>
+    <string name="feeds_add_tag">Tag hinzufügen</string>
+    <string name="feeds_write_a_comment">Kommentar schreiben…</string>
+    <string name="feeds_file">Datei</string>
+    <string name="feeds_move_up">Nach oben verschieben</string>
+    <string name="feeds_move_down">Nach unten verschieben</string>
+    <string name="feeds_danger_zone">Gefahrenbereich</string>
+    <string name="feeds_access_permission">Berechtigung</string>
+    <string name="feeds_ai_account">KI-Konto</string>
 </resources>

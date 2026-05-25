@@ -164,4 +164,8 @@
     <string name="projects_request_more">Meir</string>
     <string name="projects_comment_send">Send</string>
     <string name="projects_field_position_body">Innhald</string>
+    <string name="projects_sort_field">Sorter etter</string>
+    <string name="projects_comment_remove_attachment">Fjern vedlegg</string>
+    <string name="projects_class_save_name">Lagre namn</string>
+    <string name="projects_views_sort_by">Sorter etter</string>
 </resources>

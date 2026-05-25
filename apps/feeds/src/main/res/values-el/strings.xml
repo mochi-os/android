@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Το prompt αποθηκεύτηκε</string>
     <string name="feeds_settings_prompt_reset">Η οδηγία επαναφέρθηκε στην προεπιλογή</string>
     <string name="feeds_send">Αποστολή</string>
+    <string name="feeds_auth_email_code_sent">Εισαγάγετε τον κωδικό που στάλθηκε στο %1$s</string>
+    <string name="feeds_add_to_home_screen">Προσθήκη στην αρχική οθόνη</string>
+    <string name="feeds_tag_clear">Καθαρισμός φίλτρου</string>
+    <string name="feeds_identity_fingerprint">Αποτύπωμα: %1$s</string>
+    <string name="feeds_delete_post_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή την ανάρτηση; Η ενέργεια αυτή δεν μπορεί να αναιρεθεί.</string>
+    <string name="feeds_delete_comment_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το σχόλιο;</string>
+    <string name="feeds_add_tag">Προσθήκη ετικέτας</string>
+    <string name="feeds_write_a_comment">Γράψτε ένα σχόλιο…</string>
+    <string name="feeds_file">Αρχείο</string>
+    <string name="feeds_move_up">Μετακίνηση πάνω</string>
+    <string name="feeds_move_down">Μετακίνηση κάτω</string>
+    <string name="feeds_danger_zone">Ζώνη κινδύνου</string>
+    <string name="feeds_access_permission">Άδεια</string>
+    <string name="feeds_ai_account">Λογαριασμός AI</string>
 </resources>

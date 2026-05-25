@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Galdera-aukera gorde da</string>
     <string name="feeds_settings_prompt_reset">Galderaren lehenetsia berrezarri da</string>
     <string name="feeds_send">Bidali</string>
+    <string name="feeds_auth_email_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
+    <string name="feeds_add_to_home_screen">Gehitu hasierako pantailara</string>
+    <string name="feeds_tag_clear">Garbitu iragazkia</string>
+    <string name="feeds_identity_fingerprint">Hatz-marka: %1$s</string>
+    <string name="feeds_delete_post_confirm">Ziur bidalketa hau ezabatu nahi duzula? Ekintza hau ezin da desegin.</string>
+    <string name="feeds_delete_comment_confirm">Ziur iruzkin hau ezabatu nahi duzula?</string>
+    <string name="feeds_add_tag">Gehitu etiketa</string>
+    <string name="feeds_write_a_comment">Idatzi iruzkin bat…</string>
+    <string name="feeds_file">Fitxategia</string>
+    <string name="feeds_move_up">Eraman gora</string>
+    <string name="feeds_move_down">Eraman behera</string>
+    <string name="feeds_danger_zone">Eremu arriskutsua</string>
+    <string name="feeds_access_permission">Baimena</string>
+    <string name="feeds_ai_account">IA kontua</string>
 </resources>

@@ -166,4 +166,20 @@
     <string name="projects_request_more">Περισσότερα</string>
     <string name="projects_comment_send">Αποστολή</string>
     <string name="projects_field_position_body">Σώμα</string>
+    <string name="projects_auth_login_failed">Η σύνδεση απέτυχε</string>
+    <string name="projects_auth_create_identity_failed">Αποτυχία δημιουργίας ταυτότητας</string>
+    <string name="projects_auth_mfa_unsupported">Το MFA δεν υποστηρίζεται ακόμη στην εφαρμογή για κινητά</string>
+    <string name="projects_auth_enter_code_sent">Εισαγάγετε τον κωδικό που στάλθηκε στο %1$s</string>
+    <string name="projects_auth_create_identity">Δημιουργήστε την ταυτότητά σας</string>
+    <string name="projects_list_add_to_home">Προσθήκη στην αρχική οθόνη</string>
+    <string name="projects_sort_field">Ταξινόμηση κατά</string>
+    <string name="projects_views_move_up">Μετακίνηση πάνω</string>
+    <string name="projects_views_move_down">Μετακίνηση κάτω</string>
+    <string name="projects_settings_danger_zone">Ζώνη κινδύνου</string>
+    <string name="projects_comment_replying_to">Απάντηση στον/στην %1$s</string>
+    <string name="projects_comment_clear_reply">Καθαρισμός απάντησης</string>
+    <string name="projects_comment_remove_attachment">Αφαίρεση συνημμένου</string>
+    <string name="projects_class_move_up">Μετακίνηση πάνω</string>
+    <string name="projects_class_move_down">Μετακίνηση κάτω</string>
+    <string name="projects_views_sort_by">Ταξινόμηση κατά</string>
 </resources>

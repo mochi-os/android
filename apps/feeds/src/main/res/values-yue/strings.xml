@@ -21,4 +21,19 @@
     <string name="feeds_post_default_author">發布</string>
     <string name="feeds_post">發布</string>
     <string name="feeds_post_action">發布</string>
+    <string name="feeds_sort_interests">興趣</string>
+    <string name="feeds_image_preview">預覽</string>
+    <string name="feeds_comments">留言</string>
+    <string name="feeds_delete_comment">刪除留言</string>
+    <string name="feeds_tags">標籤</string>
+    <string name="feeds_add_tag">加入標籤</string>
+    <string name="feeds_write_a_comment">寫低留言…</string>
+    <string name="feeds_tab_access">存取權</string>
+    <string name="feeds_save_name">儲存名稱</string>
+    <string name="feeds_clear">清除</string>
+    <string name="feeds_access_users">用戶</string>
+    <string name="feeds_rss_url_copied">RSS 網址已複製到剪貼簿</string>
+    <string name="feeds_ai_mode_off">已停用</string>
+    <string name="feeds_ai_mode_tag">標籤</string>
+    <string name="feeds_ai_reset_default">重設為預設</string>
 </resources>

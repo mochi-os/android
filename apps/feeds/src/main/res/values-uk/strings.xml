@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Запит збережено</string>
     <string name="feeds_settings_prompt_reset">Підказку скинуто до значення за замовчуванням</string>
     <string name="feeds_send">Надіслати</string>
+    <string name="feeds_tag_clear">Очистити фільтр</string>
+    <string name="feeds_add_tag">Додати тег</string>
+    <string name="feeds_write_a_comment">Напишіть коментар…</string>
+    <string name="feeds_access_permission">Дозвіл</string>
 </resources>

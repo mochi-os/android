@@ -99,4 +99,18 @@
     <string name="feeds_settings_prompt_saved">Invite enregistrée</string>
     <string name="feeds_settings_prompt_reset">Invite réinitialisée à la valeur par défaut</string>
     <string name="feeds_send">Envoyer</string>
+    <string name="feeds_auth_email_code_sent">Saisissez le code envoyé à %1$s</string>
+    <string name="feeds_add_to_home_screen">Ajouter à l\\'écran d\\'accueil</string>
+    <string name="feeds_tag_clear">Effacer le filtre</string>
+    <string name="feeds_identity_fingerprint">Empreinte : %1$s</string>
+    <string name="feeds_delete_post_confirm">Voulez-vous vraiment supprimer cette publication ? Cette action est irréversible.</string>
+    <string name="feeds_delete_comment_confirm">Voulez-vous vraiment supprimer ce commentaire ?</string>
+    <string name="feeds_add_tag">Ajouter une étiquette</string>
+    <string name="feeds_write_a_comment">Écrire un commentaire…</string>
+    <string name="feeds_file">Fichier</string>
+    <string name="feeds_move_up">Déplacer vers le haut</string>
+    <string name="feeds_move_down">Déplacer vers le bas</string>
+    <string name="feeds_danger_zone">Zone sensible</string>
+    <string name="feeds_access_permission">Autorisation</string>
+    <string name="feeds_ai_account">Compte IA</string>
 </resources>

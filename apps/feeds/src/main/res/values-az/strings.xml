@@ -181,4 +181,5 @@
     <string name="feeds_suggested_credibility_body">Mochi %1$d etibarlılıq təklif edir. Qəbul olunsun?</string>
     <string name="feeds_suggested_credibility_keep">Cari saxlanılsın</string>
 
+    <string name="feeds_ai_account">AI hesabı</string>
 </resources>

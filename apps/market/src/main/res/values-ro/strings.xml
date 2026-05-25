@@ -421,4 +421,10 @@
     <string name="market_appeal_dialog_submitting">Se trimite…</string>
     <string name="market_dispute_dialog_submitting">Se trimite…</string>
     <string name="market_sale_review_response_submitting">Se trimite…</string>
+    <string name="market_checkout_subscribing">Se abonează…</string>
+    <string name="market_filter_remove">Elimină filtrul</string>
+    <string name="market_listing_detail_sales_count">%1$d vânzări</string>
+    <string name="market_profile_sales_count">%1$d vânzări</string>
+    <string name="market_purchase_dispute_response">Răspunsul vânzătorului</string>
+    <string name="market_purchases_order_label">Comanda nr. %1$d</string>
 </resources>

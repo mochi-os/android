@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Inte sparat</string>
     <string name="common_save_failed">Det gick inte att spara dina ändringar.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">Server-URL</string>
+    <string name="auth_link_rules">Regler</string>
+    <string name="game_chat_move_played">%1$s spelade %2$s</string>
 </resources>

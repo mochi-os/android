@@ -484,4 +484,9 @@
     <string name="market_type_physical">භෞතික</string>
     <string name="market_warnings_title">අනතුරු ඇඟවීම්</string>
     <string name="market_sale_review_response_submitting">ඉදිරිපත් කරයි…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">පෙරහන ඉවත් කරන්න</string>
+    <string name="market_listings_action_appeal">ඉවත් කිරීමේ අභියාචනය</string>
+    <string name="market_listings_share_chooser">ලැයිස්තුව බෙදා ගන්න</string>
+    <string name="market_refund_dialog_amount_label">මුදල</string>
 </resources>

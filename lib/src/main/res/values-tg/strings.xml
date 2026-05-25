@@ -134,4 +134,8 @@
 
     <string name="common_not_saved">Захира нашуд</string>
     <string name="common_save_failed">Тағйироти шумо захира нашуд.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL сервер</string>
+    <string name="auth_link_rules">Қоидаҳо</string>
+    <string name="game_chat_move_played">%1$s %2$s бозӣ кард</string>
 </resources>

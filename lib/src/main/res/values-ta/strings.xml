@@ -134,4 +134,10 @@
 
     <string name="common_not_saved">சேமிக்கப்படவில்லை</string>
     <string name="common_save_failed">உங்கள் மாற்றங்களைச் சேமிக்க முடியவில்லை.</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">சேவையக URL</string>
+    <string name="auth_link_rules">விதிகள்</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">பற்றி</string>
+    <string name="game_chat_move_played">%1$s %2$s விளையாடினார்</string>
 </resources>

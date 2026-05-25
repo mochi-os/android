@@ -484,4 +484,9 @@
     <string name="market_type_physical">Físico</string>
     <string name="market_warnings_title">Yuyaychaykuna</string>
     <string name="market_sale_review_response_submitting">Apachichkan…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Llaqwana hurquy</string>
+    <string name="market_listings_action_appeal">Qichuy mañakuy</string>
+    <string name="market_listings_share_chooser">Willay rakiy</string>
+    <string name="market_refund_dialog_amount_label">Chanin</string>
 </resources>

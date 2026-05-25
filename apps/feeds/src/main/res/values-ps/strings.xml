@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">پرامپټ خوندي شو</string>
     <string name="feeds_settings_prompt_reset">لارښود هغه بېرګه درجە ته بیرته شو</string>
     <string name="feeds_send">لیږل</string>
+    <string name="feeds_tag_clear">فلټر پاک کړئ</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

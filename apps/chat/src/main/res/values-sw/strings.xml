@@ -33,4 +33,6 @@
 
     <string name="chat_list_more">Zaidi</string>
     <string name="chat_message_send">Tuma</string>
+    <string name="chat_attachment_remove">Ondoa kiambatisho</string>
+    <string name="chat_message_remove_attachment">Ondoa kiambatisho</string>
 </resources>

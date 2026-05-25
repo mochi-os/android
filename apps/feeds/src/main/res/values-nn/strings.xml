@@ -99,4 +99,9 @@
     <string name="feeds_post_empty_content">Skriv inn tekst eller legg ved ei fil</string>
 
     <string name="feeds_send">Send</string>
+    <string name="feeds_tag_clear">Tøm filter</string>
+    <string name="feeds_add_tag">Legg til etikett</string>
+    <string name="feeds_write_a_comment">Skriv ein kommentar…</string>
+    <string name="feeds_save_name">Lagre namn</string>
+    <string name="feeds_access_permission">Løyve</string>
 </resources>

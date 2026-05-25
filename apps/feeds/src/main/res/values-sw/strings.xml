@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Kidokezo kimehifadhiwa</string>
     <string name="feeds_settings_prompt_reset">Kidokezo kimerejeshwa kwa chaguo-msingi</string>
     <string name="feeds_send">Tuma</string>
+    <string name="feeds_tag_clear">Futa kichujio</string>
+    <string name="feeds_add_tag">Ongeza lebo</string>
+    <string name="feeds_write_a_comment">Andika maoni…</string>
+    <string name="feeds_access_permission">Ruhusa</string>
 </resources>

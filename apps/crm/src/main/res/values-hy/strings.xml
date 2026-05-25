@@ -166,4 +166,17 @@
     <string name="crm_request_more">Ավելին</string>
     <string name="crm_comment_send">Ուղարկել</string>
     <string name="crm_field_position_body">Բովանդակություն</string>
+    <string name="crm_auth_login_failed">Մուտքը ձախողվեց</string>
+    <string name="crm_auth_create_identity_failed">Չհաջողվեց ստեղծել ինքնություն</string>
+    <string name="crm_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
+    <string name="crm_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
+    <string name="crm_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
+    <string name="crm_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
+    <string name="crm_sort_field">Տեսակավորել ըստ</string>
+    <string name="crm_views_move_up">Տեղափոխել վերև</string>
+    <string name="crm_views_move_down">Տեղափոխել ներքև</string>
+    <string name="crm_comment_remove_attachment">Հեռացնել կցորդը</string>
+    <string name="crm_class_move_up">Տեղափոխել վերև</string>
+    <string name="crm_class_move_down">Տեղափոխել ներքև</string>
+    <string name="crm_views_sort_by">Տեսակավորել ըստ</string>
 </resources>

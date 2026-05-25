@@ -99,4 +99,7 @@
     <string name="feeds_settings_prompt_saved">פּראָמפּט אויפֿגעהיט</string>
     <string name="feeds_settings_prompt_reset">פראמפט געגעלט צו סטאנדערט</string>
     <string name="feeds_send">שיקן</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

@@ -134,4 +134,10 @@
 
     <string name="common_not_saved">មិនបានរក្សាទុក</string>
     <string name="common_save_failed">មិនអាចរក្សាទុកការផ្លាស់ប្ដូររបស់អ្នកបានទេ។</string>
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL ម៉ាស៊ីនមេ</string>
+    <string name="auth_link_rules">ច្បាប់</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="about_label">អំពី</string>
+    <string name="game_chat_move_played">%1$s បានលេង %2$s</string>
 </resources>

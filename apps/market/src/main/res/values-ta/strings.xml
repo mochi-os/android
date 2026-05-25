@@ -484,4 +484,9 @@
     <string name="market_type_physical">உடல்நலம்</string>
     <string name="market_warnings_title">எச்சரிக்கைகள்</string>
     <string name="market_sale_review_response_submitting">சமர்ப்பிக்கிறது…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">வடிகட்டியை அகற்று</string>
+    <string name="market_listings_action_appeal">நீக்கம் மேல்முறையீடு</string>
+    <string name="market_listings_share_chooser">பட்டியலை பகிர்</string>
+    <string name="market_refund_dialog_amount_label">தொகை</string>
 </resources>

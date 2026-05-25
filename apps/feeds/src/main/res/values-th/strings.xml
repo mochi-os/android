@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">บันทึก prompt แล้ว</string>
     <string name="feeds_settings_prompt_reset">รีเซ็ตคำถามเป็นค่าเริ่มต้นแล้ว</string>
     <string name="feeds_send">ส่ง</string>
+    <string name="feeds_tag_clear">ล้างตัวกรอง</string>
+    <string name="feeds_add_tag">เพิ่มแท็ก</string>
+    <string name="feeds_write_a_comment">เขียนความคิดเห็น…</string>
+    <string name="feeds_access_permission">การอนุญาต</string>
 </resources>

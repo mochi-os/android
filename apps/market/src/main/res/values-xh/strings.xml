@@ -484,4 +484,9 @@
     <string name="market_type_physical">Eyokwenyani</string>
     <string name="market_warnings_title">Izilumkiso</string>
     <string name="market_sale_review_response_submitting">Iyathunyelwa…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Susa isihluzi</string>
+    <string name="market_listings_action_appeal">Ibhongolo lokususa</string>
+    <string name="market_listings_share_chooser">Yabelana ngoluhlu</string>
+    <string name="market_refund_dialog_amount_label">Imali</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="projects_request_more">Aktar</string>
     <string name="projects_comment_send">Ibgħat</string>
     <string name="projects_field_position_body">Korp</string>
+    <string name="projects_sort_field">Issortja skont</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_views_sort_by">Issortja skont</string>
 </resources>

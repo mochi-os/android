@@ -421,4 +421,10 @@
     <string name="market_appeal_dialog_submitting">Отправка…</string>
     <string name="market_dispute_dialog_submitting">Отправка…</string>
     <string name="market_sale_review_response_submitting">Отправка…</string>
+    <string name="market_checkout_subscribing">Подписка…</string>
+    <string name="market_filter_remove">Убрать фильтр</string>
+    <string name="market_listing_detail_sales_count">Продаж: %1$d</string>
+    <string name="market_profile_sales_count">Продаж: %1$d</string>
+    <string name="market_purchase_dispute_response">Ответ продавца</string>
+    <string name="market_purchases_order_label">Заказ № %1$d</string>
 </resources>

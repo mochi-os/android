@@ -439,4 +439,17 @@
     <string name="staff_audit_actor_system">Système</string>
     <string name="staff_audit_action_listing_removed">Supprimé</string>
     <string name="staff_audit_action_order_completed">Terminé</string>
+    <string name="staff_audit_action_listing_expired">Expirée</string>
+    <string name="staff_audit_action_order_refunded">Remboursé</string>
+    <string name="staff_audit_action_review_remove">Avis supprimé</string>
+    <string name="staff_audit_title">Historique</string>
+    <string name="staff_categories_dialog_creating">Création…</string>
+    <string name="staff_categories_dialog_edit_title">Modifier la catégorie</string>
+    <string name="staff_categories_dialog_saving">Enregistrement…</string>
+    <string name="staff_categories_title">Catégories</string>
+    <string name="staff_categories_toast_created">Catégorie créée</string>
+    <string name="staff_categories_toast_deleted">Catégorie supprimée</string>
+    <string name="staff_categories_toast_updated">Catégorie modifiée</string>
+    <string name="staff_categories_type_none">—</string>
+    <string name="staff_channel_name">Staff</string>
 </resources>

@@ -99,4 +99,13 @@
     <string name="feeds_settings_prompt_saved">An adana prompt</string>
     <string name="feeds_settings_prompt_reset">An sake saita umarni zuwa tsoho</string>
     <string name="feeds_send">Aika</string>
+    <string name="feeds_auth_email_code_sent">Shigar da lambar da aka aiko zuwa %1$s</string>
+    <string name="feeds_add_to_home_screen">Ƙara a allon gida</string>
+    <string name="feeds_tag_clear">Share matatar</string>
+    <string name="feeds_add_tag">Add tag</string>
+    <string name="feeds_write_a_comment">Write a comment…</string>
+    <string name="feeds_file">Fayil</string>
+    <string name="feeds_move_up">Matsa sama</string>
+    <string name="feeds_move_down">Matsa ƙasa</string>
+    <string name="feeds_access_permission">Permission</string>
 </resources>

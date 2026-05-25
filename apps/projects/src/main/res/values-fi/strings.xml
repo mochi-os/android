@@ -166,4 +166,20 @@
     <string name="projects_request_more">Lisää</string>
     <string name="projects_comment_send">Lähetä</string>
     <string name="projects_field_position_body">Sisältö</string>
+    <string name="projects_auth_login_failed">Kirjautuminen epäonnistui</string>
+    <string name="projects_auth_create_identity_failed">Identiteetin luominen epäonnistui</string>
+    <string name="projects_auth_mfa_unsupported">MFA:ta ei vielä tueta mobiilisovelluksessa</string>
+    <string name="projects_auth_enter_code_sent">Syötä osoitteeseen %1$s lähetetty koodi</string>
+    <string name="projects_auth_create_identity">Luo identiteettisi</string>
+    <string name="projects_list_add_to_home">Lisää aloitusnäytölle</string>
+    <string name="projects_sort_field">Lajitteluperuste</string>
+    <string name="projects_views_move_up">Siirrä ylös</string>
+    <string name="projects_views_move_down">Siirrä alas</string>
+    <string name="projects_settings_danger_zone">Vaaravyöhyke</string>
+    <string name="projects_comment_replying_to">Vastataan käyttäjälle %1$s</string>
+    <string name="projects_comment_clear_reply">Tyhjennä vastaus</string>
+    <string name="projects_comment_remove_attachment">Poista liite</string>
+    <string name="projects_class_move_up">Siirrä ylös</string>
+    <string name="projects_class_move_down">Siirrä alas</string>
+    <string name="projects_views_sort_by">Lajitteluperuste</string>
 </resources>

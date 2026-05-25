@@ -484,4 +484,11 @@
     <string name="market_type_physical">Jismoniy</string>
     <string name="market_warnings_title">Ogohlantirishlar</string>
     <string name="market_sale_review_response_submitting">Yuborilmoqda…</string>
+    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_filter_remove">Filtrni olib tashlash</string>
+    <string name="market_listing_detail_sales_count">%1$d sotuv</string>
+    <string name="market_listings_action_appeal">Olib tashlash apellyatsiyasi</string>
+    <string name="market_listings_share_chooser">Eʼlonni ulashish</string>
+    <string name="market_profile_sales_count">%1$d sotuv</string>
+    <string name="market_refund_dialog_amount_label">Miqdor</string>
 </resources>

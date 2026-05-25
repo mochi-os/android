@@ -113,4 +113,20 @@
     <string name="market_subscription_detail_listing">刊登</string>
     <string name="market_section_listings">刊登</string>
     <string name="market_sidebar_listings">刊登</string>
+    <string name="market_checkout_subscribe_failed">訂閱失敗</string>
+    <string name="market_checkout_subscribing">緊訂閱…</string>
+    <string name="market_editor_photo_uploading">上載緊…</string>
+    <string name="market_editor_pricing_subscription">訂閱</string>
+    <string name="market_editor_saving">儲存緊…</string>
+    <string name="market_editor_section_tags">標籤</string>
+    <string name="market_filter_pricing_subscription">訂閱</string>
+    <string name="market_listing_detail_tags_heading">標籤</string>
+    <string name="market_listing_detail_verified">已驗證</string>
+    <string name="market_notifications_title">通知偏好</string>
+    <string name="market_profile_status_suspended">已暫停</string>
+    <string name="market_profile_verified">已驗證</string>
+    <string name="market_sale_section_summary">摘要</string>
+    <string name="market_search_clear">清除搜尋</string>
+    <string name="market_section_categories">類別</string>
+    <string name="market_subscription_detail_title">訂閱</string>
 </resources>

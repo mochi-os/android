@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">Промпт сохранён</string>
     <string name="feeds_settings_prompt_reset">Подсказка сброшена на значение по умолчанию</string>
     <string name="feeds_send">Отправить</string>
+    <string name="feeds_tag_clear">Очистить фильтр</string>
+    <string name="feeds_add_tag">Добавить метку</string>
+    <string name="feeds_write_a_comment">Напишите комментарий…</string>
+    <string name="feeds_access_permission">Разрешение</string>
 </resources>

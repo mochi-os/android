@@ -166,4 +166,7 @@
     <string name="projects_request_more">Ko‘proq</string>
     <string name="projects_comment_send">Yuborish</string>
     <string name="projects_field_position_body">Matn</string>
+    <string name="projects_sort_field">Saralash</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_views_sort_by">Saralash</string>
 </resources>

@@ -166,4 +166,17 @@
     <string name="projects_request_more">עוד</string>
     <string name="projects_comment_send">שלח</string>
     <string name="projects_field_position_body">גוף</string>
+    <string name="projects_auth_login_failed">ההתחברות נכשלה</string>
+    <string name="projects_auth_create_identity_failed">יצירת הזהות נכשלה</string>
+    <string name="projects_auth_mfa_unsupported">אימות רב-שלבי אינו נתמך עדיין באפליקציה לנייד</string>
+    <string name="projects_auth_enter_code_sent">הזינו את הקוד שנשלח אל %1$s</string>
+    <string name="projects_auth_create_identity">יצירת הזהות שלכם</string>
+    <string name="projects_list_add_to_home">הוספה למסך הבית</string>
+    <string name="projects_sort_field">מיין לפי</string>
+    <string name="projects_views_move_up">הזזה למעלה</string>
+    <string name="projects_views_move_down">הזזה למטה</string>
+    <string name="projects_comment_remove_attachment">הסרת קובץ מצורף</string>
+    <string name="projects_class_move_up">הזזה למעלה</string>
+    <string name="projects_class_move_down">הזזה למטה</string>
+    <string name="projects_views_sort_by">מיין לפי</string>
 </resources>

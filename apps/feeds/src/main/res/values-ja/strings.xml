@@ -99,4 +99,8 @@
     <string name="feeds_settings_prompt_saved">プロンプトを保存しました</string>
     <string name="feeds_settings_prompt_reset">プロンプトをデフォルトにリセットしました</string>
     <string name="feeds_send">送信</string>
+    <string name="feeds_tag_clear">フィルターをクリア</string>
+    <string name="feeds_add_tag">タグを追加</string>
+    <string name="feeds_write_a_comment">コメントを書く…</string>
+    <string name="feeds_access_permission">権限</string>
 </resources>

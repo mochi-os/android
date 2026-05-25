@@ -165,4 +165,7 @@
     <string name="projects_request_more">Mais</string>
     <string name="projects_comment_send">Enviar</string>
     <string name="projects_field_position_body">Conteúdo</string>
+    <string name="projects_sort_field">Ordenar por</string>
+    <string name="projects_comment_remove_attachment">Remover anexo</string>
+    <string name="projects_views_sort_by">Ordenar por</string>
 </resources>

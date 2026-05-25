@@ -166,4 +166,7 @@
     <string name="projects_request_more">Mai mult</string>
     <string name="projects_comment_send">Trimite</string>
     <string name="projects_field_position_body">Conținut</string>
+    <string name="projects_sort_field">Sortează după</string>
+    <string name="projects_comment_remove_attachment">Elimină atașamentul</string>
+    <string name="projects_views_sort_by">Sortează după</string>
 </resources>

@@ -166,4 +166,7 @@
     <string name="crm_request_more">තවත්</string>
     <string name="crm_comment_send">යවන්න</string>
     <string name="crm_field_position_body">අන්තර්ගතය</string>
+    <string name="crm_sort_field">අනුව වර්ග කරන්න</string>
+    <string name="crm_comment_remove_attachment">Remove attachment</string>
+    <string name="crm_views_sort_by">අනුව වර්ග කරන්න</string>
 </resources>

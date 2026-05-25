@@ -166,4 +166,7 @@
     <string name="projects_request_more">მეტი</string>
     <string name="projects_comment_send">გაგზავნა</string>
     <string name="projects_field_position_body">შინაარსი</string>
+    <string name="projects_sort_field">დაალაგე</string>
+    <string name="projects_comment_remove_attachment">Remove attachment</string>
+    <string name="projects_views_sort_by">დაალაგე</string>
 </resources>

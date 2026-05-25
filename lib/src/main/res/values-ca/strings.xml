@@ -168,4 +168,31 @@
     <string name="game_chat_load_more">Carrega missatges anteriors</string>
     <string name="game_chat_move_played">%1$s ha jugat %2$s</string>
 
+    <string name="app_brand">Mochi</string>
+    <string name="auth_server_url">URL del servidor</string>
+    <string name="auth_create_identity_title">Creeu la vostra identitat</string>
+    <string name="auth_link_rules">Regles</string>
+    <string name="common_change">Canvia</string>
+    <string name="common_retry">Torna-ho a provar</string>
+    <string name="common_more_options">Més opcions</string>
+    <string name="common_collapse">Replega</string>
+    <string name="common_expand">Desplega</string>
+    <string name="access_add_rule_title">Afegeix una regla d\\'accés</string>
+    <string name="access_level_manage">Gestiona</string>
+    <string name="notifications_clear">Esborra les notificacions</string>
+    <string name="banner_save">Desa el bàner</string>
+    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="format_time_just_now">Ara mateix</string>
+    <string name="format_time_minutes_ago">fa %1$dm</string>
+    <string name="format_time_hours_ago">fa %1$dh</string>
+    <string name="format_time_days_ago">fa %1$dd</string>
+    <string name="format_time_weeks_ago">fa %1$dset</string>
+    <string name="format_time_months_ago">fa %1$dmes</string>
+    <string name="format_time_years_ago">fa %1$da</string>
+    <string name="format_time_minutes_short">%1$dm</string>
+    <string name="format_time_hours_short">%1$dh</string>
+    <string name="format_time_days_short">%1$dd</string>
+    <string name="format_time_weeks_short">%1$dset</string>
+    <string name="format_time_months_short">%1$dmes</string>
+    <string name="format_time_years_short">%1$da</string>
 </resources>
