@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">오름차순</string>
     <string name="projects_sort_direction_desc">내림차순</string>
     <string name="projects_views_direction_desc">내림차순</string>
+    <string name="projects_list_add_to_home">홈 화면에 추가</string>
+    <string name="projects_search_objects_placeholder">개체 검색</string>
+    <string name="projects_links_search_placeholder">개체 검색</string>
 </resources>

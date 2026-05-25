@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">چڑھتی</string>
     <string name="projects_sort_direction_desc">ڈھلتی</string>
     <string name="projects_views_direction_desc">ڈھلتی</string>
+    <string name="projects_list_add_to_home">ہوم اسکرین میں شامل کریں</string>
+    <string name="projects_search_objects_placeholder">اشیاء تلاش کریں</string>
+    <string name="projects_links_search_placeholder">اشیاء تلاش کریں</string>
 </resources>

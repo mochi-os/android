@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">ຈາກນ້ອຍຫາໃຫຍ່</string>
     <string name="projects_sort_direction_desc">ຈາກໃຫຍ່ຫານ້ອຍ</string>
     <string name="projects_views_direction_desc">ຈາກໃຫຍ່ຫານ້ອຍ</string>
+    <string name="projects_list_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
+    <string name="projects_search_objects_placeholder">ຄົ້ນຫາວັດຖຸ</string>
+    <string name="projects_links_search_placeholder">ຄົ້ນຫາວັດຖຸ</string>
 </resources>

@@ -120,4 +120,8 @@
     <string name="projects_request_merge">Zusammenführen</string>
     <string name="projects_request_merge_dialog_title">Zusammenführen</string>
     <string name="projects_request_method_merge">Zusammenführen</string>
+    <string name="projects_search_objects_placeholder">Objekte suchen</string>
+    <string name="projects_links_search_placeholder">Objekte suchen</string>
+    <string name="projects_create_object">Objekt erstellen</string>
+    <string name="projects_create_object_title">Objekt erstellen</string>
 </resources>

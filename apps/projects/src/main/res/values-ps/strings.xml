@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">پورته</string>
     <string name="projects_sort_direction_desc">ښکته</string>
     <string name="projects_views_direction_desc">ښکته</string>
+    <string name="projects_list_add_to_home">کور پاڼې ته اضافه کړئ</string>
+    <string name="projects_search_objects_placeholder">اشیا لټول</string>
+    <string name="projects_links_search_placeholder">اشیا لټول</string>
 </resources>

@@ -340,4 +340,5 @@
     <string name="accounts_verify_resend">Code opnieuw versturen</string>
     <string name="accounts_verify_hint">Voer de code in die naar %1$s is verstuurd.</string>
 
+    <string name="system_users_sort_by">Sorteren op</string>
 </resources>

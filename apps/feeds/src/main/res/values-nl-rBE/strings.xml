@@ -96,4 +96,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Omhoog verplaatsen</string>
     <string name="feeds_move_down">Omlaag verplaatsen</string>
+    <string name="feeds_add_to_home_screen">Toevoegen aan startscherm</string>
 </resources>

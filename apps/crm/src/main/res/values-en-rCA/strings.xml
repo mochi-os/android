@@ -116,4 +116,10 @@
     <string name="crm_request_merge">Merge</string>
     <string name="crm_request_merge_dialog_title">Merge</string>
     <string name="crm_request_method_merge">Merge</string>
+    <string name="crm_search_objects_placeholder">Search objects</string>
+    <string name="crm_links_search_placeholder">Search objects</string>
+    <string name="crm_create_object">Create object</string>
+    <string name="crm_create_object_title">Create object</string>
+    <string name="crm_sort_field">Sort by</string>
+    <string name="crm_views_sort_by">Sort by</string>
 </resources>

@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">लॉगिन अयशस्वी</string>
     <string name="chat_attachment_move_up">वर हलवा</string>
     <string name="chat_attachment_move_down">खाली हलवा</string>
+    <string name="chat_list_add_to_home">होम स्क्रीनवर जोडा</string>
 </resources>

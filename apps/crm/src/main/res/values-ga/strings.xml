@@ -183,4 +183,6 @@
     <string name="crm_views_direction_asc">Ardaitheach</string>
     <string name="crm_sort_direction_desc">Íslitheach</string>
     <string name="crm_views_direction_desc">Íslitheach</string>
+    <string name="crm_search_objects_placeholder">Cuardaigh oibiachtaí</string>
+    <string name="crm_links_search_placeholder">Cuardaigh oibiachtaí</string>
 </resources>

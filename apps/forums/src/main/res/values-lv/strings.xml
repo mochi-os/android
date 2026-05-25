@@ -134,4 +134,5 @@
     <string name="forums_post_tag_add">Pievienot atzīmi</string>
     <string name="forums_write_comment">Rakstiet komentāru…</string>
     <string name="forums_auth_login_failed">Pieteikšanās neizdevās</string>
+    <string name="forums_list_add_to_home">Pievienot sākuma ekrānam</string>
 </resources>

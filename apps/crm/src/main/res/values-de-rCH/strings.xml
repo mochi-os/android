@@ -119,4 +119,8 @@
     <string name="crm_request_merge">Zusammenführen</string>
     <string name="crm_request_merge_dialog_title">Zusammenführen</string>
     <string name="crm_request_method_merge">Zusammenführen</string>
+    <string name="crm_search_objects_placeholder">Objekte suchen</string>
+    <string name="crm_links_search_placeholder">Objekte suchen</string>
+    <string name="crm_create_object">Objekt erstellen</string>
+    <string name="crm_create_object_title">Objekt erstellen</string>
 </resources>

@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">ਉੱਪਰ ਜਾਓ</string>
     <string name="feeds_move_down">ਹੇਠਾਂ ਜਾਓ</string>
+    <string name="feeds_add_to_home_screen">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
 </resources>

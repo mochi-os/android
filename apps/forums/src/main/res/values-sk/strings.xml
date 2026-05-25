@@ -134,4 +134,5 @@
     <string name="forums_post_tag_add">Pridať značku</string>
     <string name="forums_write_comment">Napíšte komentár…</string>
     <string name="forums_auth_login_failed">Prihlásenie zlyhalo</string>
+    <string name="forums_list_add_to_home">Pridať na domovskú obrazovku</string>
 </resources>

@@ -183,4 +183,6 @@
     <string name="projects_views_direction_asc">Növekvő</string>
     <string name="projects_sort_direction_desc">Csökkenő</string>
     <string name="projects_views_direction_desc">Csökkenő</string>
+    <string name="projects_search_objects_placeholder">Objektumok keresése</string>
+    <string name="projects_links_search_placeholder">Objektumok keresése</string>
 </resources>

@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">權限</string>
     <string name="feeds_move_up">上移</string>
     <string name="feeds_move_down">下移</string>
+    <string name="feeds_add_to_home_screen">加到主畫面</string>
 </resources>

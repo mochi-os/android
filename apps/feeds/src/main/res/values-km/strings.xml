@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">ផ្លាស់ទីឡើងលើ</string>
     <string name="feeds_move_down">ផ្លាស់ទីចុះក្រោម</string>
+    <string name="feeds_add_to_home_screen">បន្ថែមទៅអេក្រង់ដើម</string>
 </resources>

@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Bibe jor</string>
     <string name="feeds_move_down">Bibe jêr</string>
+    <string name="feeds_add_to_home_screen">Li ekrana malê zêde bike</string>
 </resources>

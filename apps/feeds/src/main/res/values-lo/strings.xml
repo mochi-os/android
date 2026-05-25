@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">ຍ້າຍຂຶ້ນ</string>
     <string name="feeds_move_down">ຍ້າຍລົງ</string>
+    <string name="feeds_add_to_home_screen">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
 </resources>

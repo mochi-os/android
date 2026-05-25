@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">ಆರೋಹಣ</string>
     <string name="projects_sort_direction_desc">ಅವರೋಹಣ</string>
     <string name="projects_views_direction_desc">ಅವರೋಹಣ</string>
+    <string name="projects_list_add_to_home">ಮುಖಪುಟಕ್ಕೆ ಸೇರಿಸಿ</string>
+    <string name="projects_search_objects_placeholder">ವಸ್ತುಗಳನ್ನು ಹುಡುಕಿ</string>
+    <string name="projects_links_search_placeholder">ವಸ್ತುಗಳನ್ನು ಹುಡುಕಿ</string>
 </resources>

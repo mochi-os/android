@@ -134,4 +134,5 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Write a comment…</string>
     <string name="forums_auth_login_failed">ਲਾਗਇਨ ਅਸਫਲ</string>
+    <string name="forums_list_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
 </resources>

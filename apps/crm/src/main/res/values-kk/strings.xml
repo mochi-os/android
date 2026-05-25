@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Өсу</string>
     <string name="crm_sort_direction_desc">Төмен</string>
     <string name="crm_views_direction_desc">Төмен</string>
+    <string name="crm_list_add_to_home">Негізгі экранға қосу</string>
+    <string name="crm_search_objects_placeholder">Объектілерді іздеу</string>
+    <string name="crm_links_search_placeholder">Объектілерді іздеу</string>
 </resources>

@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Naék</string>
     <string name="crm_sort_direction_desc">Turun</string>
     <string name="crm_views_direction_desc">Turun</string>
+    <string name="crm_list_add_to_home">Tambihkeun ka layar imah</string>
+    <string name="crm_search_objects_placeholder">Teangan obyek</string>
+    <string name="crm_links_search_placeholder">Teangan obyek</string>
 </resources>

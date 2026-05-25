@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">چڙهيل</string>
     <string name="projects_sort_direction_desc">لاٿيل</string>
     <string name="projects_views_direction_desc">لاٿيل</string>
+    <string name="projects_list_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
+    <string name="projects_search_objects_placeholder">شيون ڳوليو</string>
+    <string name="projects_links_search_placeholder">شيون ڳوليو</string>
 </resources>

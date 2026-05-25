@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Сууда</string>
     <string name="crm_sort_direction_desc">Поён</string>
     <string name="crm_views_direction_desc">Поён</string>
+    <string name="crm_list_add_to_home">Ба экрани асосӣ илова кардан</string>
+    <string name="crm_search_objects_placeholder">Ҷустуҷӯи объектҳо</string>
+    <string name="crm_links_search_placeholder">Ҷустуҷӯи объектҳо</string>
 </resources>

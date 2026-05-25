@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">పైకి జరుపు</string>
     <string name="feeds_move_down">కిందికి జరుపు</string>
+    <string name="feeds_add_to_home_screen">హోమ్ స్క్రీన్‌కు జోడించండి</string>
 </resources>

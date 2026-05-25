@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Боло баровардан</string>
     <string name="feeds_move_down">Поён баровардан</string>
+    <string name="feeds_add_to_home_screen">Ба экрани асосӣ илова кардан</string>
 </resources>

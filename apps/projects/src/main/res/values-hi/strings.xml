@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">आरोही</string>
     <string name="projects_sort_direction_desc">अवरोही</string>
     <string name="projects_views_direction_desc">अवरोही</string>
+    <string name="projects_list_add_to_home">होम स्क्रीन पर जोड़ें</string>
+    <string name="projects_search_objects_placeholder">वस्तुएँ खोजें</string>
+    <string name="projects_links_search_placeholder">वस्तुएँ खोजें</string>
 </resources>

@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">จากน้อยไปมาก</string>
     <string name="projects_sort_direction_desc">จากมากไปน้อย</string>
     <string name="projects_views_direction_desc">จากมากไปน้อย</string>
+    <string name="projects_list_add_to_home">เพิ่มไปยังหน้าจอหลัก</string>
+    <string name="projects_search_objects_placeholder">ค้นหาวัตถุ</string>
+    <string name="projects_links_search_placeholder">ค้นหาวัตถุ</string>
 </resources>

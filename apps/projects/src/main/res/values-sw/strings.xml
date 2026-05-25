@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">Kupanda</string>
     <string name="projects_sort_direction_desc">Kushuka</string>
     <string name="projects_views_direction_desc">Kushuka</string>
+    <string name="projects_list_add_to_home">Ongeza kwenye skrini ya nyumbani</string>
+    <string name="projects_search_objects_placeholder">Tafuta vitu</string>
+    <string name="projects_links_search_placeholder">Tafuta vitu</string>
 </resources>

@@ -431,4 +431,14 @@
     <string name="market_purchase_refunded">已退款</string>
     <string name="market_status_refunded">已退款</string>
     <string name="market_shipping_notes">備註</string>
+    <string name="market_editor_type_digital">數碼</string>
+    <string name="market_filter_type_digital">數碼</string>
+    <string name="market_type_digital">數碼</string>
+    <string name="market_editor_type_physical">實體</string>
+    <string name="market_filter_type_physical">實體</string>
+    <string name="market_type_physical">實體</string>
+    <string name="market_profile_status_banned">已封禁</string>
+    <string name="market_profile_status_suspended">已暫停</string>
+    <string name="market_purchase_review_body">評論</string>
+    <string name="market_section_categories">分類</string>
 </resources>

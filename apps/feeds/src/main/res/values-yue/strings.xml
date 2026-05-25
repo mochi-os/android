@@ -42,4 +42,7 @@
     <string name="feeds_restore">還原</string>
     <string name="feeds_location">位置</string>
     <string name="feeds_access_groups">群組</string>
+    <string name="feeds_add_to_home_screen">加到主畫面</string>
+    <string name="feeds_add_member">加入成員</string>
+    <string name="feeds_no_members">沒有成員</string>
 </resources>

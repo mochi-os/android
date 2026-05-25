@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Oplopend</string>
     <string name="crm_sort_direction_desc">Aflopend</string>
     <string name="crm_views_direction_desc">Aflopend</string>
+    <string name="crm_list_add_to_home">Toevoegen aan startscherm</string>
+    <string name="crm_search_objects_placeholder">Objecten zoeken</string>
+    <string name="crm_links_search_placeholder">Objecten zoeken</string>
 </resources>

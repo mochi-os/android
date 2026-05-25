@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">По возрастанию</string>
     <string name="projects_sort_direction_desc">По убыванию</string>
     <string name="projects_views_direction_desc">По убыванию</string>
+    <string name="projects_list_add_to_home">Добавить на главный экран</string>
+    <string name="projects_search_objects_placeholder">Поиск объектов</string>
+    <string name="projects_links_search_placeholder">Поиск объектов</string>
 </resources>

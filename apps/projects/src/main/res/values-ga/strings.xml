@@ -183,4 +183,6 @@
     <string name="projects_views_direction_asc">Ardaitheach</string>
     <string name="projects_sort_direction_desc">Íslitheach</string>
     <string name="projects_views_direction_desc">Íslitheach</string>
+    <string name="projects_search_objects_placeholder">Cuardaigh oibiachtaí</string>
+    <string name="projects_links_search_placeholder">Cuardaigh oibiachtaí</string>
 </resources>

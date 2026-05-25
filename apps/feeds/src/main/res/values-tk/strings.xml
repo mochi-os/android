@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Ýokarlat</string>
     <string name="feeds_move_down">Aşaklat</string>
+    <string name="feeds_add_to_home_screen">Esasy ekrana goş</string>
 </resources>

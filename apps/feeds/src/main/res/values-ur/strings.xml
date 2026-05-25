@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">اجازت</string>
     <string name="feeds_move_up">اوپر منتقل کریں</string>
     <string name="feeds_move_down">نیچے منتقل کریں</string>
+    <string name="feeds_add_to_home_screen">ہوم اسکرین میں شامل کریں</string>
 </resources>

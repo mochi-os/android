@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">ზრდადობით</string>
     <string name="crm_sort_direction_desc">კლებადობით</string>
     <string name="crm_views_direction_desc">კლებადობით</string>
+    <string name="crm_list_add_to_home">მთავარ ეკრანზე დამატება</string>
+    <string name="crm_search_objects_placeholder">ობიექტების ძიება</string>
+    <string name="crm_links_search_placeholder">ობიექტების ძიება</string>
 </resources>

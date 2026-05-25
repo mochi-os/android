@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">တိုးတက်</string>
     <string name="crm_sort_direction_desc">လျော့ကျ</string>
     <string name="crm_views_direction_desc">လျော့ကျ</string>
+    <string name="crm_list_add_to_home">ပင်မစခရင် သို့ ထည့်</string>
+    <string name="crm_search_objects_placeholder">အရာဝတ္ထု ရှာ</string>
+    <string name="crm_links_search_placeholder">အရာဝတ္ထု ရှာ</string>
 </resources>

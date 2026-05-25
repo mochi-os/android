@@ -212,4 +212,5 @@
     <string name="system_users_last_never">Never</string>
     <string name="system_users_email_label">Email</string>
     <string name="system_users_revoke">Revoke</string>
+    <string name="system_users_sort_by">Sort by</string>
 </resources>

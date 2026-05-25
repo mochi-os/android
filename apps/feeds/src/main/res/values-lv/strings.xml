@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Atļauja</string>
     <string name="feeds_move_up">Pārvietot uz augšu</string>
     <string name="feeds_move_down">Pārvietot uz leju</string>
+    <string name="feeds_add_to_home_screen">Pievienot sākuma ekrānam</string>
 </resources>

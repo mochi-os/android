@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Дозвола</string>
     <string name="feeds_move_up">Премести нагоре</string>
     <string name="feeds_move_down">Премести надолу</string>
+    <string name="feeds_add_to_home_screen">Додај на почетен екран</string>
 </resources>

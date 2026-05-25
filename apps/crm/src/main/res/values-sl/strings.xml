@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Naraščajoče</string>
     <string name="crm_sort_direction_desc">Padajoče</string>
     <string name="crm_views_direction_desc">Padajoče</string>
+    <string name="crm_list_add_to_home">Dodaj na začetni zaslon</string>
+    <string name="crm_search_objects_placeholder">Iskanje objektov</string>
+    <string name="crm_links_search_placeholder">Iskanje objektov</string>
 </resources>

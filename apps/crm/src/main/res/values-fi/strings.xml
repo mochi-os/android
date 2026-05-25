@@ -186,4 +186,6 @@
     <string name="crm_views_direction_asc">Nouseva</string>
     <string name="crm_sort_direction_desc">Laskeva</string>
     <string name="crm_views_direction_desc">Laskeva</string>
+    <string name="crm_search_objects_placeholder">Hae kohteita</string>
+    <string name="crm_links_search_placeholder">Hae kohteita</string>
 </resources>

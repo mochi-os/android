@@ -128,4 +128,8 @@
     <string name="projects_request_merge_dialog_title">Merge</string>
     <string name="projects_request_method_merge">Merge</string>
     <string name="projects_move_position_top">Top</string>
+    <string name="projects_search_objects_placeholder">Search objects</string>
+    <string name="projects_links_search_placeholder">Search objects</string>
+    <string name="projects_create_object">Create object</string>
+    <string name="projects_create_object_title">Create object</string>
 </resources>

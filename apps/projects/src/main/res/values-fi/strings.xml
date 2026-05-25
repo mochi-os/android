@@ -186,4 +186,6 @@
     <string name="projects_views_direction_asc">Nouseva</string>
     <string name="projects_sort_direction_desc">Laskeva</string>
     <string name="projects_views_direction_desc">Laskeva</string>
+    <string name="projects_search_objects_placeholder">Hae kohteita</string>
+    <string name="projects_links_search_placeholder">Hae kohteita</string>
 </resources>

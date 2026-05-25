@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">Hækkandi</string>
     <string name="projects_sort_direction_desc">Lækkandi</string>
     <string name="projects_views_direction_desc">Lækkandi</string>
+    <string name="projects_list_add_to_home">Bæta við heimaskjá</string>
+    <string name="projects_search_objects_placeholder">Leita að hlutum</string>
+    <string name="projects_links_search_placeholder">Leita að hlutum</string>
 </resources>

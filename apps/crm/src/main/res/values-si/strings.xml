@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">ආරෝහණ</string>
     <string name="crm_sort_direction_desc">අවරෝහණ</string>
     <string name="crm_views_direction_desc">අවරෝහණ</string>
+    <string name="crm_list_add_to_home">මුල් තිරයට එක් කරන්න</string>
+    <string name="crm_search_objects_placeholder">වස්තූන් සොයන්න</string>
+    <string name="crm_links_search_placeholder">වස්තූන් සොයන්න</string>
 </resources>

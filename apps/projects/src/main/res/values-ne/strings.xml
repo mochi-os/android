@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">बढ्दो</string>
     <string name="projects_sort_direction_desc">घट्दो</string>
     <string name="projects_views_direction_desc">घट्दो</string>
+    <string name="projects_list_add_to_home">गृह स्क्रिनमा थप्नुहोस्</string>
+    <string name="projects_search_objects_placeholder">वस्तुहरू खोज्नुहोस्</string>
+    <string name="projects_links_search_placeholder">वस्तुहरू खोज्नुहोस्</string>
 </resources>

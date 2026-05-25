@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">മുകളിലേക്ക് നീക്കുക</string>
     <string name="feeds_move_down">താഴേക്ക് നീക്കുക</string>
+    <string name="feeds_add_to_home_screen">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
 </resources>

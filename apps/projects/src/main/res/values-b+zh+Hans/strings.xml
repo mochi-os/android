@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">升序</string>
     <string name="projects_sort_direction_desc">降序</string>
     <string name="projects_views_direction_desc">降序</string>
+    <string name="projects_list_add_to_home">添加到主屏幕</string>
+    <string name="projects_search_objects_placeholder">搜索对象</string>
+    <string name="projects_links_search_placeholder">搜索对象</string>
 </resources>

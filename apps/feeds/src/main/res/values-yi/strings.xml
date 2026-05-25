@@ -104,4 +104,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">באַוועגן אַרויף</string>
     <string name="feeds_move_down">באַוועגן אַראָפּ</string>
+    <string name="feeds_add_to_home_screen">לייגן צו היים עקראַן</string>
 </resources>

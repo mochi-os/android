@@ -134,4 +134,5 @@
     <string name="forums_post_tag_add">Додати тег</string>
     <string name="forums_write_comment">Напишіть коментар…</string>
     <string name="forums_auth_login_failed">Не вдалося увійти</string>
+    <string name="forums_list_add_to_home">Додати на головний екран</string>
 </resources>

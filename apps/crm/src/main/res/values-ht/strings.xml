@@ -183,4 +183,6 @@
     <string name="crm_views_direction_asc">Monte</string>
     <string name="crm_sort_direction_desc">Desann</string>
     <string name="crm_views_direction_desc">Desann</string>
+    <string name="crm_search_objects_placeholder">Chèche objè</string>
+    <string name="crm_links_search_placeholder">Chèche objè</string>
 </resources>

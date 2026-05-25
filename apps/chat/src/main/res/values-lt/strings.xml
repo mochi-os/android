@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">Prisijungti nepavyko</string>
     <string name="chat_attachment_move_up">Perkelti į viršų</string>
     <string name="chat_attachment_move_down">Perkelti į apačią</string>
+    <string name="chat_list_add_to_home">Pridėti į pradinį ekraną</string>
 </resources>

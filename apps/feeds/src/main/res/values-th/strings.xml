@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">การอนุญาต</string>
     <string name="feeds_move_up">เลื่อนขึ้น</string>
     <string name="feeds_move_down">เลื่อนลง</string>
+    <string name="feeds_add_to_home_screen">เพิ่มไปยังหน้าจอหลัก</string>
 </resources>

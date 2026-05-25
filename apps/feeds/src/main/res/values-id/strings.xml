@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Izin</string>
     <string name="feeds_move_up">Pindahkan ke atas</string>
     <string name="feeds_move_down">Pindahkan ke bawah</string>
+    <string name="feeds_add_to_home_screen">Tambahkan ke layar utama</string>
 </resources>

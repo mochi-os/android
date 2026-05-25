@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">Kirish bajarilmadi</string>
     <string name="chat_attachment_move_up">Yuqoriga ko‘chirish</string>
     <string name="chat_attachment_move_down">Pastga ko‘chirish</string>
+    <string name="chat_list_add_to_home">Bosh ekranga qo‘shish</string>
 </resources>

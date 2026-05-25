@@ -456,4 +456,8 @@
     <string name="staff_categories_dialog_parent">Parent</string>
     <string name="staff_categories_col_position">Position</string>
     <string name="staff_categories_dialog_position">Position</string>
+    <string name="staff_categories_dialog_digital">Numérique</string>
+    <string name="staff_categories_type_digital">Numérique</string>
+    <string name="staff_categories_dialog_physical">Physique</string>
+    <string name="staff_categories_type_physical">Physique</string>
 </resources>

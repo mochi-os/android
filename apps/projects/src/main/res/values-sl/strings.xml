@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">Naraščajoče</string>
     <string name="projects_sort_direction_desc">Padajoče</string>
     <string name="projects_views_direction_desc">Padajoče</string>
+    <string name="projects_list_add_to_home">Dodaj na začetni zaslon</string>
+    <string name="projects_search_objects_placeholder">Iskanje objektov</string>
+    <string name="projects_links_search_placeholder">Iskanje objektov</string>
 </resources>

@@ -208,4 +208,10 @@
     <string name="market_filter_delivery">Livraison</string>
     <string name="market_purchase_delivery">Livraison</string>
     <string name="market_shipping_days">Livraison</string>
+    <string name="market_editor_type_digital">Numérique</string>
+    <string name="market_filter_type_digital">Numérique</string>
+    <string name="market_type_digital">Numérique</string>
+    <string name="market_editor_type_physical">Physique</string>
+    <string name="market_filter_type_physical">Physique</string>
+    <string name="market_type_physical">Physique</string>
 </resources>

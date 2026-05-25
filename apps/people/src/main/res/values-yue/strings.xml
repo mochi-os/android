@@ -36,4 +36,7 @@
     <string name="people_person_decline">拒絕</string>
     <string name="people_groups_title">群組</string>
     <string name="people_friends_groups_menu">群組</string>
+    <string name="people_friends_close_search">關閉搜尋</string>
+    <string name="people_member_add">加入成員</string>
+    <string name="people_group_no_members">沒有成員</string>
 </resources>

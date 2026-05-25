@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Uprawnienie</string>
     <string name="feeds_move_up">Przenieś w górę</string>
     <string name="feeds_move_down">Przenieś w dół</string>
+    <string name="feeds_add_to_home_screen">Dodaj do ekranu głównego</string>
 </resources>

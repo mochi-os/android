@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">Сууда</string>
     <string name="projects_sort_direction_desc">Поён</string>
     <string name="projects_views_direction_desc">Поён</string>
+    <string name="projects_list_add_to_home">Ба экрани асосӣ илова кардан</string>
+    <string name="projects_search_objects_placeholder">Ҷустуҷӯи объектҳо</string>
+    <string name="projects_links_search_placeholder">Ҷустуҷӯи объектҳо</string>
 </resources>

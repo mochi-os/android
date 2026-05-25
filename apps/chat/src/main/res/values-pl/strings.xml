@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">Logowanie nieudane</string>
     <string name="chat_attachment_move_up">Przenieś w górę</string>
     <string name="chat_attachment_move_down">Przenieś w dół</string>
+    <string name="chat_list_add_to_home">Dodaj do ekranu głównego</string>
 </resources>

@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">ஏறுவரிசை</string>
     <string name="projects_sort_direction_desc">இறங்குவரிசை</string>
     <string name="projects_views_direction_desc">இறங்குவரிசை</string>
+    <string name="projects_list_add_to_home">முகப்புத் திரையில் சேர்</string>
+    <string name="projects_search_objects_placeholder">பொருட்களைத் தேடு</string>
+    <string name="projects_links_search_placeholder">பொருட்களைத் தேடு</string>
 </resources>

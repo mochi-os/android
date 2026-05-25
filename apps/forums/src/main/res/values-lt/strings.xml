@@ -134,4 +134,5 @@
     <string name="forums_post_tag_add">Pridėti žymą</string>
     <string name="forums_write_comment">Parašykite komentarą…</string>
     <string name="forums_auth_login_failed">Prisijungti nepavyko</string>
+    <string name="forums_list_add_to_home">Pridėti į pradinį ekraną</string>
 </resources>

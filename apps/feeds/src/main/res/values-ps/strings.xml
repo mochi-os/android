@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">پورته یوسئ</string>
     <string name="feeds_move_down">ښکته یوسئ</string>
+    <string name="feeds_add_to_home_screen">کور پاڼې ته اضافه کړئ</string>
 </resources>

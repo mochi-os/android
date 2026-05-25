@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Iyenyuka</string>
     <string name="crm_sort_direction_desc">Iyehla</string>
     <string name="crm_views_direction_desc">Iyehla</string>
+    <string name="crm_list_add_to_home">Engeza kwisikrini sasekhaya</string>
+    <string name="crm_search_objects_placeholder">Sesha izinto</string>
+    <string name="crm_links_search_placeholder">Sesha izinto</string>
 </resources>

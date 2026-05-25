@@ -18,4 +18,8 @@
     <string name="chat_auth_login_failed">登入失敗</string>
     <string name="chat_attachment_move_up">上移</string>
     <string name="chat_attachment_move_down">下移</string>
+    <string name="chat_list_close_search">關閉搜尋</string>
+    <string name="chat_list_add_to_home">加到主畫面</string>
+    <string name="chat_settings_add_member">加入成員</string>
+    <string name="chat_members_empty">沒有成員</string>
 </resources>

@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Behörighet</string>
     <string name="feeds_move_up">Flytta upp</string>
     <string name="feeds_move_down">Flytta ner</string>
+    <string name="feeds_add_to_home_screen">Lägg till på startskärmen</string>
 </resources>

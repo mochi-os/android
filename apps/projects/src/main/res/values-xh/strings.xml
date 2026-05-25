@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">Inyuka</string>
     <string name="projects_sort_direction_desc">Iyehla</string>
     <string name="projects_views_direction_desc">Iyehla</string>
+    <string name="projects_list_add_to_home">Yongeza kwiskrini yasekhaya</string>
+    <string name="projects_search_objects_placeholder">Khangela izinto</string>
+    <string name="projects_links_search_placeholder">Khangela izinto</string>
 </resources>

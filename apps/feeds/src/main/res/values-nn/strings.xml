@@ -106,4 +106,5 @@
     <string name="feeds_access_permission">Løyve</string>
     <string name="feeds_move_up">Flytt opp</string>
     <string name="feeds_move_down">Flytt ned</string>
+    <string name="feeds_add_to_home_screen">Legg til på startskjermen</string>
 </resources>

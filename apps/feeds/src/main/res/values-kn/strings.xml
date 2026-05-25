@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
     <string name="feeds_move_down">ಕೆಳಗೆ ಸರಿಸಿ</string>
+    <string name="feeds_add_to_home_screen">ಮುಖಪುಟಕ್ಕೆ ಸೇರಿಸಿ</string>
 </resources>

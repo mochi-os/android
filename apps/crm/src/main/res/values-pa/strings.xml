@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">ਚੜ੍ਹਦਾ</string>
     <string name="crm_sort_direction_desc">ਘਟਦਾ</string>
     <string name="crm_views_direction_desc">ਘਟਦਾ</string>
+    <string name="crm_list_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
+    <string name="crm_search_objects_placeholder">ਆਬਜੈਕਟ ਖੋਜੋ</string>
+    <string name="crm_links_search_placeholder">ਆਬਜੈਕਟ ਖੋਜੋ</string>
 </resources>

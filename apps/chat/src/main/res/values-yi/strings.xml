@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">לאָגין דורכגעפֿאַלן</string>
     <string name="chat_attachment_move_up">באַוועגן אַרויף</string>
     <string name="chat_attachment_move_down">באַוועגן אַראָפּ</string>
+    <string name="chat_list_add_to_home">לייגן צו היים עקראַן</string>
 </resources>

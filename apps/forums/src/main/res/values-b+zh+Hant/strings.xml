@@ -134,4 +134,5 @@
     <string name="forums_post_tag_add">新增標籤</string>
     <string name="forums_write_comment">撰寫評論…</string>
     <string name="forums_auth_login_failed">登入失敗</string>
+    <string name="forums_list_add_to_home">加到主畫面</string>
 </resources>

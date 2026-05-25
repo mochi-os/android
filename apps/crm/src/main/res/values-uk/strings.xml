@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">За зростанням</string>
     <string name="crm_sort_direction_desc">За спаданням</string>
     <string name="crm_views_direction_desc">За спаданням</string>
+    <string name="crm_list_add_to_home">Додати на головний екран</string>
+    <string name="crm_search_objects_placeholder">Шукати об\'єкти</string>
+    <string name="crm_links_search_placeholder">Шукати об\'єкти</string>
 </resources>

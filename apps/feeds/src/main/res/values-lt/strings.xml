@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Leidimas</string>
     <string name="feeds_move_up">Perkelti į viršų</string>
     <string name="feeds_move_down">Perkelti į apačią</string>
+    <string name="feeds_add_to_home_screen">Pridėti į pradinį ekraną</string>
 </resources>

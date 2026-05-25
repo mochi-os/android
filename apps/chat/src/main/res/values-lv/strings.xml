@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">Pieteikšanās neizdevās</string>
     <string name="chat_attachment_move_up">Pārvietot uz augšu</string>
     <string name="chat_attachment_move_down">Pārvietot uz leju</string>
+    <string name="chat_list_add_to_home">Pievienot sākuma ekrānam</string>
 </resources>

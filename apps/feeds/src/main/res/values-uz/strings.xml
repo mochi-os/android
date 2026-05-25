@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Yuqoriga ko‘chirish</string>
     <string name="feeds_move_down">Pastga ko‘chirish</string>
+    <string name="feeds_add_to_home_screen">Bosh ekranga qo‘shish</string>
 </resources>

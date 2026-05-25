@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Lejim</string>
     <string name="feeds_move_up">Lëviz lart</string>
     <string name="feeds_move_down">Lëviz poshtë</string>
+    <string name="feeds_add_to_home_screen">Shto në ekranin kryesor</string>
 </resources>

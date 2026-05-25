@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Quyền</string>
     <string name="feeds_move_up">Di chuyển lên</string>
     <string name="feeds_move_down">Di chuyển xuống</string>
+    <string name="feeds_add_to_home_screen">Thêm vào màn hình chính</string>
 </resources>

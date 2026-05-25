@@ -183,4 +183,6 @@
     <string name="projects_views_direction_asc">ઊભરતું</string>
     <string name="projects_sort_direction_desc">ઊતરતું</string>
     <string name="projects_views_direction_desc">ઊતરતું</string>
+    <string name="projects_search_objects_placeholder">વસ્તુઓ શોધો</string>
+    <string name="projects_links_search_placeholder">વસ્તુઓ શોધો</string>
 </resources>

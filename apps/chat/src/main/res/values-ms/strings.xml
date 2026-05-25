@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">Log masuk gagal</string>
     <string name="chat_attachment_move_up">Alihkan ke atas</string>
     <string name="chat_attachment_move_down">Alihkan ke bawah</string>
+    <string name="chat_list_add_to_home">Tambah ke skrin utama</string>
 </resources>

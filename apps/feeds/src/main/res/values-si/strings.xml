@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">ඉහළට ගෙනයන්න</string>
     <string name="feeds_move_down">පහළට ගෙනයන්න</string>
+    <string name="feeds_add_to_home_screen">මුල් තිරයට එක් කරන්න</string>
 </resources>

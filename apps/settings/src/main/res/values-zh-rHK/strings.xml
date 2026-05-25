@@ -240,4 +240,7 @@
     <string name="system_settings_state_disabled">已停用</string>
     <string name="system_users_last_never">Never</string>
     <string name="system_users_revoke">撤銷</string>
+    <string name="system_users_sort_by">排序方式</string>
+    <string name="system_users_status_suspended">已暫停</string>
+    <string name="notifprefs_tab_categories">分類</string>
 </resources>

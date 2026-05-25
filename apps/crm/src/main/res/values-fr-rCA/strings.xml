@@ -118,4 +118,8 @@
     <string name="crm_request_merge_dialog_title">Fusionner</string>
     <string name="crm_request_method_merge">Fusionner</string>
     <string name="crm_move_position">Position</string>
+    <string name="crm_search_objects_placeholder">Rechercher des objets</string>
+    <string name="crm_links_search_placeholder">Rechercher des objets</string>
+    <string name="crm_create_object">Créer un objet</string>
+    <string name="crm_create_object_title">Créer un objet</string>
 </resources>

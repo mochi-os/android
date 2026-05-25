@@ -183,4 +183,6 @@
     <string name="projects_views_direction_asc">Ojupíva</string>
     <string name="projects_sort_direction_desc">Oguejyva</string>
     <string name="projects_views_direction_desc">Oguejyva</string>
+    <string name="projects_search_objects_placeholder">Heka mba\'ekuéra</string>
+    <string name="projects_links_search_placeholder">Heka mba\'ekuéra</string>
 </resources>

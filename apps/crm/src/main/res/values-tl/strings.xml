@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Pataas</string>
     <string name="crm_sort_direction_desc">Pababa</string>
     <string name="crm_views_direction_desc">Pababa</string>
+    <string name="crm_list_add_to_home">Idagdag sa home screen</string>
+    <string name="crm_search_objects_placeholder">Maghanap ng mga bagay</string>
+    <string name="crm_links_search_placeholder">Maghanap ng mga bagay</string>
 </resources>

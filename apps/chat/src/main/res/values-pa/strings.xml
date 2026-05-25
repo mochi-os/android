@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">ਲਾਗਇਨ ਅਸਫਲ</string>
     <string name="chat_attachment_move_up">ਉੱਪਰ ਜਾਓ</string>
     <string name="chat_attachment_move_down">ਹੇਠਾਂ ਜਾਓ</string>
+    <string name="chat_list_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
 </resources>

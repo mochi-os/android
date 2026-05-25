@@ -186,4 +186,6 @@
     <string name="crm_views_direction_asc">Αύξουσα</string>
     <string name="crm_sort_direction_desc">Φθίνουσα</string>
     <string name="crm_views_direction_desc">Φθίνουσα</string>
+    <string name="crm_search_objects_placeholder">Αναζήτηση αντικειμένων</string>
+    <string name="crm_links_search_placeholder">Αναζήτηση αντικειμένων</string>
 </resources>

@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Ol guddataa</string>
     <string name="crm_sort_direction_desc">Gad bu\'aa</string>
     <string name="crm_views_direction_desc">Gad bu\'aa</string>
+    <string name="crm_list_add_to_home">Iskrii manaatti dabali</string>
+    <string name="crm_search_objects_placeholder">Wantoota barbaadi</string>
+    <string name="crm_links_search_placeholder">Wantoota barbaadi</string>
 </resources>

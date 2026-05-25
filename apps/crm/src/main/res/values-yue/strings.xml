@@ -106,4 +106,10 @@
     <string name="crm_request_method_merge">合併</string>
     <string name="crm_move_position">位置</string>
     <string name="crm_move_position_top">頂部</string>
+    <string name="crm_list_close_search">關閉搜尋</string>
+    <string name="crm_list_add_to_home">加到主畫面</string>
+    <string name="crm_search_objects_placeholder">搜尋對象</string>
+    <string name="crm_links_search_placeholder">搜尋對象</string>
+    <string name="crm_create_object">建立對象</string>
+    <string name="crm_create_object_title">建立對象</string>
 </resources>

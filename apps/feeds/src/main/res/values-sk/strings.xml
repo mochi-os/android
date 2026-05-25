@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Povolenie</string>
     <string name="feeds_move_up">Posunúť nahor</string>
     <string name="feeds_move_down">Posunúť nadol</string>
+    <string name="feeds_add_to_home_screen">Pridať na domovskú obrazovku</string>
 </resources>

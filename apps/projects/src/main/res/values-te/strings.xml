@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">పెరుగుదల</string>
     <string name="projects_sort_direction_desc">తగ్గుదల</string>
     <string name="projects_views_direction_desc">తగ్గుదల</string>
+    <string name="projects_list_add_to_home">హోమ్ స్క్రీన్‌కు జోడించండి</string>
+    <string name="projects_search_objects_placeholder">వస్తువులను శోధించండి</string>
+    <string name="projects_links_search_placeholder">వస్తువులను శోధించండి</string>
 </resources>

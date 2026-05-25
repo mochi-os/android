@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">Ösýän</string>
     <string name="projects_sort_direction_desc">Peselýän</string>
     <string name="projects_views_direction_desc">Peselýän</string>
+    <string name="projects_list_add_to_home">Esasy ekrana goş</string>
+    <string name="projects_search_objects_placeholder">Obýektleri gözle</string>
+    <string name="projects_links_search_placeholder">Obýektleri gözle</string>
 </resources>

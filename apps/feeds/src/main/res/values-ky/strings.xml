@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Жогору жылдыруу</string>
     <string name="feeds_move_down">Төмөн жылдыруу</string>
+    <string name="feeds_add_to_home_screen">Башкы экранга кошуу</string>
 </resources>

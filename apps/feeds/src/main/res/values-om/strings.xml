@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Permission</string>
     <string name="feeds_move_up">Gubbatti dabarsi</string>
     <string name="feeds_move_down">Gadi dabarsi</string>
+    <string name="feeds_add_to_home_screen">Iskrii manaatti dabali</string>
 </resources>

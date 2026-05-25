@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">İzin</string>
     <string name="feeds_move_up">Yukarı taşı</string>
     <string name="feeds_move_down">Aşağı taşı</string>
+    <string name="feeds_add_to_home_screen">Ana ekrana ekle</string>
 </resources>

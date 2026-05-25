@@ -73,4 +73,7 @@
     <string name="forums_post_restore">還原</string>
     <string name="forums_comment_restore">還原</string>
     <string name="forums_moderation_title">審核</string>
+    <string name="forums_list_close_search">關閉搜尋</string>
+    <string name="forums_list_add_to_home">加到主畫面</string>
+    <string name="forums_members_empty">沒有成員</string>
 </resources>

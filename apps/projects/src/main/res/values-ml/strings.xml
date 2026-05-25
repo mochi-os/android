@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">ആരോഹണം</string>
     <string name="projects_sort_direction_desc">അവരോഹണം</string>
     <string name="projects_views_direction_desc">അവരോഹണം</string>
+    <string name="projects_list_add_to_home">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
+    <string name="projects_search_objects_placeholder">ഒബ്ജക്റ്റുകൾ തിരയുക</string>
+    <string name="projects_links_search_placeholder">ഒബ്ജക്റ്റുകൾ തിരയുക</string>
 </resources>

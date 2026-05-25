@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">Iwọle kuna</string>
     <string name="chat_attachment_move_up">Gbe soke</string>
     <string name="chat_attachment_move_down">Gbe sokale</string>
+    <string name="chat_list_add_to_home">Fi sii loju iboju ile</string>
 </resources>

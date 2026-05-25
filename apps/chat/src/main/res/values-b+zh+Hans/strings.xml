@@ -38,4 +38,5 @@
     <string name="chat_auth_login_failed">登录失败</string>
     <string name="chat_attachment_move_up">上移</string>
     <string name="chat_attachment_move_down">下移</string>
+    <string name="chat_list_add_to_home">添加到主屏幕</string>
 </resources>

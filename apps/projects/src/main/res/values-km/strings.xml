@@ -178,4 +178,7 @@
     <string name="projects_views_direction_asc">តាមលំដាប់ឡើង</string>
     <string name="projects_sort_direction_desc">តាមលំដាប់ចុះ</string>
     <string name="projects_views_direction_desc">តាមលំដាប់ចុះ</string>
+    <string name="projects_list_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
+    <string name="projects_search_objects_placeholder">ស្វែងរកវត្ថុ</string>
+    <string name="projects_links_search_placeholder">ស្វែងរកវត្ថុ</string>
 </resources>

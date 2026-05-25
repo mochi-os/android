@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">권한</string>
     <string name="feeds_move_up">위로 이동</string>
     <string name="feeds_move_down">아래로 이동</string>
+    <string name="feeds_add_to_home_screen">홈 화면에 추가</string>
 </resources>

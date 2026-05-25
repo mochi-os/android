@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">Didėjančiai</string>
     <string name="crm_sort_direction_desc">Mažėjančiai</string>
     <string name="crm_views_direction_desc">Mažėjančiai</string>
+    <string name="crm_list_add_to_home">Pridėti į pradinį ekraną</string>
+    <string name="crm_search_objects_placeholder">Ieškoti objektų</string>
+    <string name="crm_links_search_placeholder">Ieškoti objektų</string>
 </resources>

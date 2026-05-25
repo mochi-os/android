@@ -105,4 +105,5 @@
     <string name="feeds_access_permission">Dovoljenje</string>
     <string name="feeds_move_up">Premakni navzgor</string>
     <string name="feeds_move_down">Premakni navzdol</string>
+    <string name="feeds_add_to_home_screen">Dodaj na začetni zaslon</string>
 </resources>

@@ -96,4 +96,5 @@
     <string name="feeds_access_permission">Permissão</string>
     <string name="feeds_move_up">Mover para cima</string>
     <string name="feeds_move_down">Mover para baixo</string>
+    <string name="feeds_add_to_home_screen">Adicionar à tela inicial</string>
 </resources>

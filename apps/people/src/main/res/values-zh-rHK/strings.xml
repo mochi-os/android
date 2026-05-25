@@ -44,4 +44,7 @@
     <string name="people_friends_groups_menu">Groups</string>
     <string name="people_person_fingerprint_label">Fingerprint</string>
     <string name="people_person_decline">拒絕</string>
+    <string name="people_friends_close_search">關閉搜尋</string>
+    <string name="people_member_add">加入成員</string>
+    <string name="people_group_no_members">沒有成員</string>
 </resources>

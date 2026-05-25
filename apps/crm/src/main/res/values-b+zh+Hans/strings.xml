@@ -178,4 +178,7 @@
     <string name="crm_views_direction_asc">升序</string>
     <string name="crm_sort_direction_desc">降序</string>
     <string name="crm_views_direction_desc">降序</string>
+    <string name="crm_list_add_to_home">添加到主屏幕</string>
+    <string name="crm_search_objects_placeholder">搜索对象</string>
+    <string name="crm_links_search_placeholder">搜索对象</string>
 </resources>

@@ -164,4 +164,15 @@
     <string name="staff_disputes_notes_label">備註</string>
     <string name="staff_listings_notes_label">備註</string>
     <string name="staff_reports_notes_label">備註</string>
+    <string name="staff_team_add_member">加入成員</string>
+    <string name="staff_categories_dialog_digital">數位</string>
+    <string name="staff_categories_type_digital">數位</string>
+    <string name="staff_categories_dialog_physical">實體</string>
+    <string name="staff_categories_type_physical">實體</string>
+    <string name="staff_accounts_status_banned">已封禁</string>
+    <string name="staff_audit_action_account_banned">已封禁</string>
+    <string name="staff_status_banned">已封禁</string>
+    <string name="staff_disputes_review">評論</string>
+    <string name="staff_listings_moderation_review">評論</string>
+    <string name="staff_status_review">評論</string>
 </resources>
