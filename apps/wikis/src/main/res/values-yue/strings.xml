@@ -287,4 +287,24 @@
     <string name="wikis_access_tab_users">用戶</string>
     <string name="wikis_replicas_never_synced">從未</string>
     <string name="wikis_access_tab_groups">群組</string>
+
+    <string name="wikis_access_level_label">權限</string>
+    <string name="wikis_access_level_edit">編輯同檢視</string>
+    <string name="wikis_access_level_view">只可檢視</string>
+    <string name="wikis_access_level_none">無權限</string>
+    <string name="wikis_access_no_groups">冇可用嘅群組</string>
+    <string name="wikis_access_set_success">權限已更新</string>
+    <string name="wikis_access_set_failed">更新權限失敗</string>
+    <string name="wikis_access_revoke_success">已移除權限</string>
+    <string name="wikis_access_revoke_failed">移除權限失敗</string>
+    <string name="wikis_replicas_empty_title">暫時冇副本</string>
+    <string name="wikis_replicas_empty_message">當其他 wiki 複製呢個 wiki 嗰陣，佢哋會喺度顯示。</string>
+    <string name="wikis_replicas_col_id">ID</string>
+    <string name="wikis_replicas_col_subscribed">訂閱：%1$s</string>
+    <string name="wikis_replicas_col_synced">最後同步：%1$s</string>
+    <string name="wikis_replicas_remove_confirm_title">移除副本？</string>
+    <string name="wikis_replicas_remove_confirm_message">咁樣會停止向 \"%1$s\" 發送更新。佢哋之後可以再次複製。</string>
+    <string name="wikis_replicas_removed_success">已移除副本</string>
+    <string name="wikis_replicas_remove_failed">移除副本失敗</string>
+
 </resources>

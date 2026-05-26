@@ -473,4 +473,45 @@
     <string name="staff_team_toast_role_updated">رول تازه شو</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">امر #%1$d</string>
+
+    <string name="staff_accounts_action_unsuspend_title">د بندیز پورته کول</string>
+    <string name="staff_accounts_reason_optional_label">دلیل (اختیاري)</string>
+    <string name="staff_accounts_sales">%1$d پلورنې</string>
+    <string name="staff_appeals_reason_label">د پلورونکي د استیناف دلیل</string>
+    <string name="staff_audit_action_staff_team_role_changed">د کارکوونکي رول بدل شو</string>
+    <string name="staff_categories_delete_desc">آیا „%1$s“ ړنګ کړئ؟ دا بیرته نه شي راګرځیدلی.</string>
+    <string name="staff_disputes_dialog_title_chargeback">بیرته اخیستنه: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">د شخړې کتنه</string>
+    <string name="staff_disputes_meta_buyer_details">د پیرودونکي تفصیلات</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">د Stripe له خوا ساتل شوي</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s بیرته ورکړل شو</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">بیرته ورکړل شو</string>
+    <string name="staff_disputes_meta_refunded_of">د %1$s څخه</string>
+    <string name="staff_disputes_meta_seller_response">د پلورونکي ځواب</string>
+    <string name="staff_disputes_refund_amount_label">د بیرته ورکړې اندازه (%1$s)</string>
+    <string name="staff_disputes_refund_help">د %1$s د بشپړې بیرته ورکړې لپاره خالي پریږدئ. د جزوي بیرته ورکړې لپاره کوچنۍ اندازه دننه کړئ.</string>
+    <string name="staff_disputes_resolving">د حل کولو په حال کې…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">بانک یې نشي پروسس کولی</string>
+    <string name="staff_disputes_stripe_check_returned">چک بیرته راستون شو</string>
+    <string name="staff_disputes_stripe_credit_not_processed">کریډیټ پروسس نه شو</string>
+    <string name="staff_disputes_stripe_customer_initiated">د پیرودونکي له خوا پیل شو</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ډیبیټ اجازه نه درلوده</string>
+    <string name="staff_disputes_stripe_duplicate">دوه ګونی تادیه</string>
+    <string name="staff_disputes_stripe_fraudulent">درغلیز</string>
+    <string name="staff_disputes_stripe_general">عمومي</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">د حساب ناسم تفصیلات</string>
+    <string name="staff_disputes_stripe_insufficient_funds">ناکافي پیسې</string>
+    <string name="staff_disputes_stripe_product_not_received">محصول ترلاسه نه شو</string>
+    <string name="staff_disputes_stripe_product_unacceptable">محصول د منلو وړ نه دی</string>
+    <string name="staff_disputes_stripe_subscription_canceled">ګډون لغوه شو</string>
+    <string name="staff_disputes_stripe_unrecognized">ناپیژندل شوې تادیه</string>
+    <string name="staff_listings_seller_unknown">ناپیژندل شوی پلورونکی</string>
+    <string name="staff_listings_seller_verified">تایید شوی پلورونکی</string>
+    <string name="staff_reports_listing_label">لیست #%1$d</string>
+    <string name="staff_reports_meta_details">د راپور ورکوونکي تفصیلات</string>
+    <string name="staff_reviews_order_label">ګدول #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s په %3$s کې. دا بیاکتنه د همیشه لپاره ړنګ کړئ؟ دا بیرته نه شي راګرځیدلی.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. دا بیاکتنه د همیشه لپاره ړنګ کړئ؟ دا بیرته نه شي راګرځیدلی.</string>
+    <string name="staff_team_dialog_search_placeholder">د نوم، ګوتې نښې، یا پیژند له مخې لټون…</string>
+
 </resources>
