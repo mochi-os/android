@@ -99,6 +99,16 @@ class MainActivity : ComponentActivity() {
         //     PushService (no "listening for notifications" status notif)
         //   - else: starts PushService for the UnifiedPush fallback
         handleMochiUri(intent)
+        // Surface any deep link that was pending across a process death (most
+        // commonly the post-install relaunch: notification tap → app launches
+        // → onResume fires the update installer → user accepts → process is
+        // killed → fresh launch via the default LAUNCHER intent carries no
+        // deep link, so without this restore the user lands at the home
+        // screen instead of the notification destination).
+        if (PendingDeepLink.link.value == null) {
+            lastActiveAppPrefs().getString(KEY_PENDING_DEEP_LINK, null)
+                ?.let { PendingDeepLink.set(it) }
+        }
         targetApp = resolveStartTargetApp(intent, savedInstanceState)
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
@@ -153,6 +163,7 @@ class MainActivity : ComponentActivity() {
                                     val link = pendingLink ?: return@LaunchedEffect
                                     navigateToLink(navController, link)
                                     PendingDeepLink.consume()
+                                    clearPersistedDeepLink()
                                 }
                                 val openNotifications: () -> Unit = {
                                     navController.navigate(SettingsApp.NOTIFICATIONS) { launchSingleTop = true }
@@ -290,6 +301,10 @@ class MainActivity : ComponentActivity() {
 
     private fun lastActiveAppPrefs() =
         getSharedPreferences("mochi_main_activity", MODE_PRIVATE)
+
+    private fun clearPersistedDeepLink() {
+        lastActiveAppPrefs().edit().remove(KEY_PENDING_DEEP_LINK).apply()
+    }
 
     override fun onResume() {
         super.onResume()
@@ -458,6 +473,10 @@ class MainActivity : ComponentActivity() {
     private fun setNotificationDeepLink(link: String?, id: String?) {
         link ?: return
         PendingDeepLink.set(link)
+        // Mirror to disk so the update-installer relaunch (or any other
+        // process-death window between tap and consume) can restore it.
+        // Cleared by the Compose LaunchedEffect after navigateToLink fires.
+        lastActiveAppPrefs().edit().putString(KEY_PENDING_DEEP_LINK, link).apply()
         // Tapping the system notification dismisses it on the device but
         // leaves the matching unread row on the server, so the web bell
         // keeps showing it. Hit -/read so the row is marked read and
@@ -596,6 +615,15 @@ class MainActivity : ComponentActivity() {
 
         /** SharedPreferences key holding the feature active at last onPause. */
         private const val KEY_LAST_ACTIVE_APP = "last_active_app"
+
+        /**
+         * SharedPreferences key holding a notification-tap deep link that
+         * hasn't yet been consumed by the Compose nav. Persisted so the
+         * link survives the process death between tapping a notification
+         * and accepting the system update installer that may pop in
+         * onResume.
+         */
+        private const val KEY_PENDING_DEEP_LINK = "pending_deep_link"
 
         /**
          * How long after a package update we treat a fresh launch as a
