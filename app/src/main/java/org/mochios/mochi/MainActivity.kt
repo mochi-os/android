@@ -534,7 +534,25 @@ class MainActivity : ComponentActivity() {
             }
             "projects" -> {
                 navController.navigate(ProjectsApp.HOME) { launchSingleTop = true }
-                if (id != null) navController.navigate(ProjectsApp.project(id)) { launchSingleTop = true }
+                if (id != null) {
+                    val objectId = parts.getOrNull(2)
+                    if (objectId != null) {
+                        navController.navigate(ProjectsApp.projectObject(id, objectId)) { launchSingleTop = true }
+                    } else {
+                        navController.navigate(ProjectsApp.project(id)) { launchSingleTop = true }
+                    }
+                }
+            }
+            "crm" -> {
+                navController.navigate(CrmsApp.HOME) { launchSingleTop = true }
+                if (id != null) {
+                    val objectId = parts.getOrNull(2)
+                    if (objectId != null) {
+                        navController.navigate(CrmsApp.crmObject(id, objectId)) { launchSingleTop = true }
+                    } else {
+                        navController.navigate(CrmsApp.crm(id)) { launchSingleTop = true }
+                    }
+                }
             }
             "market" -> {
                 navController.navigate(MarketApp.HOME) { launchSingleTop = true }
@@ -555,6 +573,41 @@ class MainActivity : ComponentActivity() {
                         launchSingleTop = true
                     }
                 }
+            }
+            "wikis" -> {
+                navController.navigate(WikisApp.HOME) { launchSingleTop = true }
+                if (id != null) {
+                    navController.navigate(WikisApp.wikiHome(id)) { launchSingleTop = true }
+                    val page = parts.getOrNull(2)
+                    if (page != null) {
+                        if (parts.getOrNull(3) == "comments") {
+                            navController.navigate(WikisApp.comments(id, page)) { launchSingleTop = true }
+                        } else {
+                            navController.navigate(WikisApp.pageView(id, page)) { launchSingleTop = true }
+                        }
+                    }
+                }
+            }
+            "people" -> {
+                navController.navigate(PeopleApp.HOME) { launchSingleTop = true }
+                if (id == "invitations") {
+                    navController.navigate(PeopleApp.INVITATIONS) { launchSingleTop = true }
+                }
+            }
+            "chess" -> {
+                navController.navigate(ChessApp.HOME) { launchSingleTop = true }
+                if (id != null) navController.navigate(ChessApp.gameDetail(id)) { launchSingleTop = true }
+            }
+            "go" -> {
+                navController.navigate(GoApp.HOME) { launchSingleTop = true }
+                if (id != null) navController.navigate(GoApp.gameDetail(id)) { launchSingleTop = true }
+            }
+            "words" -> {
+                navController.navigate(WordsApp.HOME) { launchSingleTop = true }
+                if (id != null) navController.navigate(WordsApp.gameDetail(id)) { launchSingleTop = true }
+            }
+            "staff" -> {
+                navController.navigate(StaffApp.HOME) { launchSingleTop = true }
             }
         }
     }
