@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Yuqoriga ko‘chirish</string>
     <string name="chat_attachment_move_down">Pastga ko‘chirish</string>
     <string name="chat_list_add_to_home">Bosh ekranga qo‘shish</string>
+
+    <string name="notification_channel_chat">Chat bildirishnomalari</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Identifikatsiyani yaratib bo\'lmadi</string>
+    <string name="chat_auth_mfa_unsupported">MFA mobil ilovada hali qo\'llab-quvvatlanmaydi</string>
+    <string name="chat_auth_enter_code_sent">%1$s ga yuborilgan kodni kiriting</string>
+    <string name="chat_auth_create_identity">Identifikatsiyangizni yarating</string>
+    <string name="chat_list_search_placeholder">Chatlarni qidirish</string>
+    <string name="chat_list_no_matching">Mos chatlar yo\'q</string>
+    <string name="chat_list_empty">Hozircha chatlar yo\'q</string>
+    <string name="chat_list_left_chat">Chiqdi</string>
+    <string name="chat_new_no_friends">Hozircha suhbatlashish uchun do\'stlar yo\'q</string>
+    <string name="chat_new_no_matches">Mos do\'stlar yo\'q</string>
+    <string name="chat_new_existing_chat">Mavjud chatni ochish</string>
+    <string name="chat_new_start">Chatni boshlash</string>
+    <string name="chat_new_start_group">Guruh chatini boshlash</string>
+    <string name="chat_messages_loading">Xabarlar yuklanmoqda…</string>
+    <string name="chat_messages_empty">Hozircha xabarlar yo\'q — salom ayting!</string>
+    <string name="chat_messages_load_more">Eski xabarlarni yuklash</string>
+    <string name="chat_attachment_label">Fayl</string>
+    <string name="chat_message_too_long">Xabar juda uzun</string>
+    <string name="chat_message_empty">Xabar bo\'sh bo\'lishi mumkin emas</string>
+    <string name="chat_settings_rename">Chat nomini o\'zgartirish</string>
+    <string name="chat_settings_add_member_empty">Qo\'shish uchun do\'stlar yo\'q</string>
+    <string name="chat_settings_remove_member_message">%1$s ushbu chatdan olib tashlansinmi?</string>
+    <string name="chat_settings_leave_message">Ushbu chatdan chiqasizmi? Boshqa a\'zolar sizning xabarlaringizni endi ko\'rmaydi.</string>
+    <string name="chat_settings_leave_and_delete">Chiqish va mahalliy o\'chirish</string>
+    <string name="chat_settings_delete">Mahalliy o\'chirish</string>
+    <string name="chat_settings_delete_message">Bu chat va uning xabarlarini faqat ushbu qurilmadan o\'chiradi.</string>
+
 </resources>

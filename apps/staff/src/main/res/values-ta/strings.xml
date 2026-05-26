@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">பணி புதுப்பிக்கப்பட்டது</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ஆர்டர் #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">காரணம் (விரும்பினால்)</string>
+    <string name="staff_accounts_sales">%1$d விற்பனைகள்</string>
+    <string name="staff_appeals_reason_label">விற்பனையாளரின் மேல்முறையீட்டு காரணம்</string>
+    <string name="staff_audit_action_staff_team_role_changed">பணியாளர் பங்கு மாற்றப்பட்டது</string>
+    <string name="staff_categories_delete_desc">“%1$s” ஐ நீக்கவா? இதை மீட்க முடியாது.</string>
+    <string name="staff_disputes_dialog_title_chargeback">கட்டண மறுப்பு: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">தகராறைப் பார்க்க</string>
+    <string name="staff_disputes_meta_buyer_details">வாங்குபவரின் விவரங்கள்</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe வைத்துக்கொண்டது</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s திருப்பித் தரப்பட்டது</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">திருப்பித் தரப்பட்டது</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s இல்</string>
+    <string name="staff_disputes_meta_seller_response">விற்பனையாளரின் பதில்</string>
+    <string name="staff_disputes_refund_amount_label">திருப்பித் தரும் தொகை (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s இன் முழுத் திருப்பத்திற்கு காலியாக விடவும். பகுதி திருப்பத்திற்கு குறைந்த தொகையை உள்ளிடவும்.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">வங்கியால் செயல்படுத்த முடியவில்லை</string>
+    <string name="staff_disputes_stripe_check_returned">காசோலை திருப்பப்பட்டது</string>
+    <string name="staff_disputes_stripe_credit_not_processed">வரவு செயல்படுத்தப்படவில்லை</string>
+    <string name="staff_disputes_stripe_customer_initiated">வாடிக்கையாளரால் தொடங்கப்பட்டது</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">பற்று அனுமதிக்கப்படவில்லை</string>
+    <string name="staff_disputes_stripe_duplicate">நகல் கட்டணம்</string>
+    <string name="staff_disputes_stripe_fraudulent">மோசடியானது</string>
+    <string name="staff_disputes_stripe_general">பொது</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">தவறான கணக்கு விவரங்கள்</string>
+    <string name="staff_disputes_stripe_insufficient_funds">போதிய நிதி இல்லை</string>
+    <string name="staff_disputes_stripe_product_not_received">பொருள் பெறப்படவில்லை</string>
+    <string name="staff_disputes_stripe_product_unacceptable">பொருள் ஏற்க முடியாதது</string>
+    <string name="staff_disputes_stripe_subscription_canceled">சந்தா ரத்து செய்யப்பட்டது</string>
+    <string name="staff_disputes_stripe_unrecognized">அடையாளம் தெரியாத கட்டணம்</string>
+    <string name="staff_listings_seller_unknown">தெரியாத விற்பனையாளர்</string>
+    <string name="staff_listings_seller_verified">சரிபார்க்கப்பட்ட விற்பனையாளர்</string>
+    <string name="staff_reports_listing_label">பட்டியல் #%1$d</string>
+    <string name="staff_reports_meta_details">புகார் அளித்தவரின் விவரங்கள்</string>
+    <string name="staff_reviews_order_label">ஆர்டர் #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s அன்று. இந்த மதிப்பாய்வை நிரந்தரமாக நீக்கவா? இதை மீட்க முடியாது.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. இந்த மதிப்பாய்வை நிரந்தரமாக நீக்கவா? இதை மீட்க முடியாது.</string>
+    <string name="staff_team_dialog_search_placeholder">பெயர், கைரேகை, அல்லது ID மூலம் தேடவும்…</string>
+
 </resources>

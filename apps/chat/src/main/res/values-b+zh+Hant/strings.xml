@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">上移</string>
     <string name="chat_attachment_move_down">下移</string>
     <string name="chat_list_add_to_home">加到主畫面</string>
+
+    <string name="notification_channel_chat">聊天通知</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">建立身分失敗</string>
+    <string name="chat_auth_mfa_unsupported">行動應用程式尚未支援多重要素驗證</string>
+    <string name="chat_auth_enter_code_sent">請輸入傳送至 %1$s 的驗證碼</string>
+    <string name="chat_auth_create_identity">建立您的身分</string>
+    <string name="chat_list_search_placeholder">搜尋聊天</string>
+    <string name="chat_list_no_matching">沒有符合的聊天</string>
+    <string name="chat_list_empty">尚無聊天</string>
+    <string name="chat_list_left_chat">已離開</string>
+    <string name="chat_new_no_friends">尚無可聊天的好友</string>
+    <string name="chat_new_no_matches">沒有符合的好友</string>
+    <string name="chat_new_existing_chat">開啟現有聊天</string>
+    <string name="chat_new_start">開始聊天</string>
+    <string name="chat_new_start_group">開始群組聊天</string>
+    <string name="chat_messages_loading">正在載入訊息…</string>
+    <string name="chat_messages_empty">尚無訊息 — 打個招呼吧!</string>
+    <string name="chat_messages_load_more">載入較舊訊息</string>
+    <string name="chat_attachment_label">檔案</string>
+    <string name="chat_message_too_long">訊息過長</string>
+    <string name="chat_message_empty">訊息不可為空</string>
+    <string name="chat_settings_rename">重新命名聊天</string>
+    <string name="chat_settings_add_member_empty">沒有可新增的好友</string>
+    <string name="chat_settings_remove_member_message">要將 %1$s 從此聊天中移除嗎?</string>
+    <string name="chat_settings_leave_message">要離開此聊天嗎?其他成員將無法再看到您的訊息。</string>
+    <string name="chat_settings_leave_and_delete">離開並從本機刪除</string>
+    <string name="chat_settings_delete">從本機刪除</string>
+    <string name="chat_settings_delete_message">這只會從此裝置移除聊天及其訊息。</string>
+
 </resources>

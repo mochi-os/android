@@ -473,4 +473,45 @@
     <string name="staff_team_toast_role_updated">Indima ibuyekeziwe</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">I-oda #%1$d</string>
+
+    <string name="staff_accounts_action_unsuspend_title">Susa ukumiswa</string>
+    <string name="staff_accounts_reason_optional_label">Isizathu (akudingekile)</string>
+    <string name="staff_accounts_sales">%1$d ukuthengiswa</string>
+    <string name="staff_appeals_reason_label">Isizathu sokudlulisa kukamthengisi</string>
+    <string name="staff_audit_action_staff_team_role_changed">Indima yesisebenzi ishintshiwe</string>
+    <string name="staff_categories_delete_desc">Susa “%1$s”? Lokhu ngeke kuhlehliswe.</string>
+    <string name="staff_disputes_dialog_title_chargeback">Ukubuyiselwa kwemali: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Buka impikiswano</string>
+    <string name="staff_disputes_meta_buyer_details">Imininingwane yomthengi</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">kugcinwe uStripe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s kubuyiselwe</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">kubuyiselwe</string>
+    <string name="staff_disputes_meta_refunded_of">kwa-%1$s</string>
+    <string name="staff_disputes_meta_seller_response">Impendulo kamthengisi</string>
+    <string name="staff_disputes_refund_amount_label">Inani lokubuyiselwa (%1$s)</string>
+    <string name="staff_disputes_refund_help">Shiya kungenalutho ukuze ubuyiselwe konke %1$s. Faka inani elincane ukubuyiselwa kwengxenye.</string>
+    <string name="staff_disputes_resolving">Iyaxazulula…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">ibhange alikwazanga ukucubungula</string>
+    <string name="staff_disputes_stripe_check_returned">isheke libuyisiwe</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ikhredithi ayicutshungulwanga</string>
+    <string name="staff_disputes_stripe_customer_initiated">kuqalwe umthengi</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">i-debit ayigunyaziwe</string>
+    <string name="staff_disputes_stripe_duplicate">umthwalo ophindiwe</string>
+    <string name="staff_disputes_stripe_fraudulent">okukhwabanisayo</string>
+    <string name="staff_disputes_stripe_general">okuvamile</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">imininingwane ye-akhawunti engalungile</string>
+    <string name="staff_disputes_stripe_insufficient_funds">imali engenele</string>
+    <string name="staff_disputes_stripe_product_not_received">umkhiqizo awutholakalanga</string>
+    <string name="staff_disputes_stripe_product_unacceptable">umkhiqizo ongamukeleki</string>
+    <string name="staff_disputes_stripe_subscription_canceled">ukubhalisa kukhanseliwe</string>
+    <string name="staff_disputes_stripe_unrecognized">umthwalo ongaziwa</string>
+    <string name="staff_listings_seller_unknown">Umthengisi ongaziwa</string>
+    <string name="staff_listings_seller_verified">Umthengisi oqinisekisiwe</string>
+    <string name="staff_reports_listing_label">Uhlu #%1$d</string>
+    <string name="staff_reports_meta_details">Imininingwane yombiki</string>
+    <string name="staff_reviews_order_label">i-oda #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s ngo-%3$s. Susa unomphela lokhu kubuyekezwa? Lokhu ngeke kuhlehliswe.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Susa unomphela lokhu kubuyekezwa? Lokhu ngeke kuhlehliswe.</string>
+    <string name="staff_team_dialog_search_placeholder">Sesha ngegama, izigxivizo zeminwe, noma i-ID…</string>
+
 </resources>

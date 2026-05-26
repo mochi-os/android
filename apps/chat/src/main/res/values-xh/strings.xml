@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Hambisa phezulu</string>
     <string name="chat_attachment_move_down">Hambisa ezantsi</string>
     <string name="chat_list_add_to_home">Yongeza kwiskrini yasekhaya</string>
+
+    <string name="notification_channel_chat">Izaziso zencoko</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Akuphumelelanga ukudala isazisi</string>
+    <string name="chat_auth_mfa_unsupported">I-MFA ayikaxhaswa kusetyenziso lwemfonomfono</string>
+    <string name="chat_auth_enter_code_sent">Faka ikhowudi ethunyelwe ku-%1$s</string>
+    <string name="chat_auth_create_identity">Dala isazisi sakho</string>
+    <string name="chat_list_search_placeholder">Khangela iincoko</string>
+    <string name="chat_list_no_matching">Akukho ncoko ihambelanayo</string>
+    <string name="chat_list_empty">Akukho ncoko okwangoku</string>
+    <string name="chat_list_left_chat">Ushiyile</string>
+    <string name="chat_new_no_friends">Akukho bahlobo bokuncokola nabo okwangoku</string>
+    <string name="chat_new_no_matches">Akukho bahlobo bahambelanayo</string>
+    <string name="chat_new_existing_chat">Vula incoko ekhoyo</string>
+    <string name="chat_new_start">Qala incoko</string>
+    <string name="chat_new_start_group">Qala incoko yeqela</string>
+    <string name="chat_messages_loading">Kulayishwa imiyalezo…</string>
+    <string name="chat_messages_empty">Akukho miyalezo okwangoku — yithi molo!</string>
+    <string name="chat_messages_load_more">Layisha imiyalezo emidala</string>
+    <string name="chat_attachment_label">Ifayile</string>
+    <string name="chat_message_too_long">Umyalezo mde kakhulu</string>
+    <string name="chat_message_empty">Umyalezo awunakuba ze</string>
+    <string name="chat_settings_rename">Thiya kwakhona incoko</string>
+    <string name="chat_settings_add_member_empty">Akukho bahlobo bokongezwa</string>
+    <string name="chat_settings_remove_member_message">Susa u-%1$s kule ncoko?</string>
+    <string name="chat_settings_leave_message">Shiya le ncoko? Amanye amalungu akasayi kuyibona imiyalezo yakho.</string>
+    <string name="chat_settings_leave_and_delete">Shiya kwaye ucime kule sixhobo</string>
+    <string name="chat_settings_delete">Cima kule sixhobo</string>
+    <string name="chat_settings_delete_message">Oku kususa incoko nemiyalezo yayo kule sixhobo kuphela.</string>
+
 </resources>

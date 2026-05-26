@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Pindahkeun ka luhur</string>
     <string name="chat_attachment_move_down">Pindahkeun ka handap</string>
     <string name="chat_list_add_to_home">Tambihkeun ka layar imah</string>
+
+    <string name="notification_channel_chat">Béwara obrolan</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Gagal nyieun identitas</string>
+    <string name="chat_auth_mfa_unsupported">MFA tacan dirojong dina aplikasi mobile</string>
+    <string name="chat_auth_enter_code_sent">Lebetkeun kode anu dikintun ka %1$s</string>
+    <string name="chat_auth_create_identity">Jieun identitas anjeun</string>
+    <string name="chat_list_search_placeholder">Pilarian obrolan</string>
+    <string name="chat_list_no_matching">Teu aya obrolan anu cocog</string>
+    <string name="chat_list_empty">Tacan aya obrolan</string>
+    <string name="chat_list_left_chat">Kaluar</string>
+    <string name="chat_new_no_friends">Tacan aya réréncangan pikeun ngobrol</string>
+    <string name="chat_new_no_matches">Teu aya réréncangan anu cocog</string>
+    <string name="chat_new_existing_chat">Buka obrolan anu tos aya</string>
+    <string name="chat_new_start">Mimitian obrolan</string>
+    <string name="chat_new_start_group">Mimitian obrolan grup</string>
+    <string name="chat_messages_loading">Ngamuat pesen…</string>
+    <string name="chat_messages_empty">Tacan aya pesen — wilujeng sumping!</string>
+    <string name="chat_messages_load_more">Muat pesen anu langkung lami</string>
+    <string name="chat_attachment_label">Berkas</string>
+    <string name="chat_message_too_long">Pesen kalintang panjang</string>
+    <string name="chat_message_empty">Pesen teu kenging kosong</string>
+    <string name="chat_settings_rename">Ganti ngaran obrolan</string>
+    <string name="chat_settings_add_member_empty">Teu aya réréncangan pikeun ditambihkeun</string>
+    <string name="chat_settings_remove_member_message">Cabut %1$s tina obrolan ieu?</string>
+    <string name="chat_settings_leave_message">Kaluar tina obrolan ieu? Anggota anu sanés moal tiasa ningali pesen anjeun deui.</string>
+    <string name="chat_settings_leave_and_delete">Kaluar sareng pupus lokal</string>
+    <string name="chat_settings_delete">Pupus lokal</string>
+    <string name="chat_settings_delete_message">Ieu ngahapus obrolan sareng pesenna ti alat ieu wungkul.</string>
+
 </resources>

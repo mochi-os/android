@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Боло баровардан</string>
     <string name="chat_attachment_move_down">Поён баровардан</string>
     <string name="chat_list_add_to_home">Ба экрани асосӣ илова кардан</string>
+
+    <string name="notification_channel_chat">Огоҳиномаҳои чат</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Эҷоди ҳувият ноком шуд</string>
+    <string name="chat_auth_mfa_unsupported">MFA дар барномаи мобилӣ ҳанӯз дастгирӣ намешавад</string>
+    <string name="chat_auth_enter_code_sent">Рамзи ба %1$s фиристодашударо ворид кунед</string>
+    <string name="chat_auth_create_identity">Ҳувияти худро эҷод кунед</string>
+    <string name="chat_list_search_placeholder">Ҷустуҷӯи чатҳо</string>
+    <string name="chat_list_no_matching">Чатҳои мувофиқ нест</string>
+    <string name="chat_list_empty">Ҳанӯз чате нест</string>
+    <string name="chat_list_left_chat">Тарк кардаед</string>
+    <string name="chat_new_no_friends">Ҳанӯз дӯстоне барои чат кардан нест</string>
+    <string name="chat_new_no_matches">Дӯстони мувофиқ нест</string>
+    <string name="chat_new_existing_chat">Кушодани чати мавҷуда</string>
+    <string name="chat_new_start">Оғози чат</string>
+    <string name="chat_new_start_group">Оғози чати гурӯҳӣ</string>
+    <string name="chat_messages_loading">Боргирии паёмҳо…</string>
+    <string name="chat_messages_empty">Ҳанӯз паёме нест — салом гӯед!</string>
+    <string name="chat_messages_load_more">Боргирии паёмҳои кӯҳнатар</string>
+    <string name="chat_attachment_label">Файл</string>
+    <string name="chat_message_too_long">Паём хеле дароз аст</string>
+    <string name="chat_message_empty">Паём набояд холӣ бошад</string>
+    <string name="chat_settings_rename">Тағйири номи чат</string>
+    <string name="chat_settings_add_member_empty">Дӯстоне барои илова кардан нест</string>
+    <string name="chat_settings_remove_member_message">%1$s-ро аз ин чат хориҷ мекунед?</string>
+    <string name="chat_settings_leave_message">Ин чатро тарк мекунед? Аъзои дигар паёмҳои шуморо дигар нахоҳанд дид.</string>
+    <string name="chat_settings_leave_and_delete">Тарк кардан ва нест кардан дар ин дастгоҳ</string>
+    <string name="chat_settings_delete">Нест кардан дар ин дастгоҳ</string>
+    <string name="chat_settings_delete_message">Ин чат ва паёмҳои онро танҳо аз ин дастгоҳ нест мекунад.</string>
+
 </resources>

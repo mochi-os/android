@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Posunúť nahor</string>
     <string name="chat_attachment_move_down">Posunúť nadol</string>
     <string name="chat_list_add_to_home">Pridať na domovskú obrazovku</string>
+
+    <string name="notification_channel_chat">Upozornenia chatu</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Vytvorenie identity zlyhalo</string>
+    <string name="chat_auth_mfa_unsupported">Viacfaktorové overenie zatiaľ nie je v mobilnej aplikácii podporované</string>
+    <string name="chat_auth_enter_code_sent">Zadajte kód odoslaný na %1$s</string>
+    <string name="chat_auth_create_identity">Vytvorte si identitu</string>
+    <string name="chat_list_search_placeholder">Hľadať chaty</string>
+    <string name="chat_list_no_matching">Žiadne zodpovedajúce chaty</string>
+    <string name="chat_list_empty">Zatiaľ žiadne chaty</string>
+    <string name="chat_list_left_chat">Opustené</string>
+    <string name="chat_new_no_friends">Zatiaľ žiadni priatelia na chatovanie</string>
+    <string name="chat_new_no_matches">Žiadni zodpovedajúci priatelia</string>
+    <string name="chat_new_existing_chat">Otvoriť existujúci chat</string>
+    <string name="chat_new_start">Začať chat</string>
+    <string name="chat_new_start_group">Začať skupinový chat</string>
+    <string name="chat_messages_loading">Načítavajú sa správy…</string>
+    <string name="chat_messages_empty">Zatiaľ žiadne správy — pozdravte sa!</string>
+    <string name="chat_messages_load_more">Načítať staršie správy</string>
+    <string name="chat_attachment_label">Súbor</string>
+    <string name="chat_message_too_long">Správa je príliš dlhá</string>
+    <string name="chat_message_empty">Správa nemôže byť prázdna</string>
+    <string name="chat_settings_rename">Premenovať chat</string>
+    <string name="chat_settings_add_member_empty">Žiadni priatelia na pridanie</string>
+    <string name="chat_settings_remove_member_message">Odstrániť používateľa %1$s z tohto chatu?</string>
+    <string name="chat_settings_leave_message">Opustiť tento chat? Ostatní členovia už neuvidia vaše správy.</string>
+    <string name="chat_settings_leave_and_delete">Opustiť a odstrániť lokálne</string>
+    <string name="chat_settings_delete">Odstrániť lokálne</string>
+    <string name="chat_settings_delete_message">Týmto sa chat a jeho správy odstránia iba z tohto zariadenia.</string>
+
 </resources>

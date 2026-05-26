@@ -500,4 +500,20 @@
     <string name="staff_team_toast_role_failed">Hindi ma-update ang papel</string>
     <string name="staff_team_toast_role_updated">Na-update ang papel</string>
 
+
+    <string name="staff_disputes_stripe_bank_cannot_process">hindi maproseso ng bangko</string>
+    <string name="staff_disputes_stripe_check_returned">ibinalik ang tseke</string>
+    <string name="staff_disputes_stripe_credit_not_processed">hindi naproseso ang credit</string>
+    <string name="staff_disputes_stripe_customer_initiated">inumpisahan ng customer</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">hindi pinahintulutang debit</string>
+    <string name="staff_disputes_stripe_duplicate">dobleng singil</string>
+    <string name="staff_disputes_stripe_fraudulent">mapanlinlang</string>
+    <string name="staff_disputes_stripe_general">pangkalahatan</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">maling detalye ng account</string>
+    <string name="staff_disputes_stripe_insufficient_funds">kulang sa pondo</string>
+    <string name="staff_disputes_stripe_product_not_received">hindi natanggap ang produkto</string>
+    <string name="staff_disputes_stripe_product_unacceptable">hindi katanggap-tanggap ang produkto</string>
+    <string name="staff_disputes_stripe_subscription_canceled">kinansela ang subscription</string>
+    <string name="staff_disputes_stripe_unrecognized">hindi nakikilalang singil</string>
+
 </resources>

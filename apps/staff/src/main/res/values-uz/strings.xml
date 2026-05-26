@@ -486,4 +486,34 @@
     <string name="staff_team_toast_role_failed">Rolni yangilab bo\'lmadi</string>
     <string name="staff_team_toast_role_updated">Rol yangilandi</string>
 
+
+    <string name="staff_disputes_dialog_title_chargeback">Chargeback: %1$s</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe tomonidan saqlab qolindi</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s qaytarildi</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">qaytarildi</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s dan</string>
+    <string name="staff_disputes_meta_seller_response">Sotuvchining javobi</string>
+    <string name="staff_disputes_refund_amount_label">Qaytarish summasi (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s ning toʻliq qaytarilishi uchun boʻsh qoldiring. Qisman qaytarish uchun kichikroq summani kiriting.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">bank ishlay olmadi</string>
+    <string name="staff_disputes_stripe_check_returned">chek qaytarildi</string>
+    <string name="staff_disputes_stripe_credit_not_processed">kredit qayta ishlanmadi</string>
+    <string name="staff_disputes_stripe_customer_initiated">mijoz tomonidan boshlangan</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debet ruxsat etilmagan</string>
+    <string name="staff_disputes_stripe_duplicate">takroriy toʻlov</string>
+    <string name="staff_disputes_stripe_fraudulent">firibgarlik</string>
+    <string name="staff_disputes_stripe_general">umumiy</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">notoʻgʻri hisob maʼlumotlari</string>
+    <string name="staff_disputes_stripe_insufficient_funds">mablagʻ yetarli emas</string>
+    <string name="staff_disputes_stripe_product_not_received">mahsulot olinmadi</string>
+    <string name="staff_disputes_stripe_product_unacceptable">mahsulot nomaqbul</string>
+    <string name="staff_disputes_stripe_subscription_canceled">obuna bekor qilindi</string>
+    <string name="staff_disputes_stripe_unrecognized">tanilmagan toʻlov</string>
+    <string name="staff_reports_listing_label">Eʼlon #%1$d</string>
+    <string name="staff_reports_meta_details">Xabar beruvchining maʼlumotlari</string>
+    <string name="staff_reviews_order_label">buyurtma #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s sanasida. Ushbu sharhni butunlay oʻchirib tashlaysizmi? Buni bekor qilib boʻlmaydi.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ushbu sharhni butunlay oʻchirib tashlaysizmi? Buni bekor qilib boʻlmaydi.</string>
+    <string name="staff_team_dialog_search_placeholder">Ism, barmoq izi yoki ID boʻyicha qidirish…</string>
+
 </resources>

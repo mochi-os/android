@@ -481,4 +481,39 @@
 
     <string name="staff_disputes_open_sidebar">Кушодани панели паҳлуӣ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
+
+    <string name="staff_audit_action_staff_team_role_changed">Нақши кормандон тағйир ёфт</string>
+    <string name="staff_dashboard_order_fallback">Фармоиш №%1$d</string>
+    <string name="staff_disputes_dialog_title_chargeback">Бозпардохт: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Дидани баҳс</string>
+    <string name="staff_disputes_meta_buyer_details">Тафсилоти харидор</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">аз ҷониби Stripe нигоҳ дошта шуд</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s баргардонида шуд</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">баргардонида шуд</string>
+    <string name="staff_disputes_meta_refunded_of">аз %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Ҷавоби фурӯшанда</string>
+    <string name="staff_disputes_refund_amount_label">Маблағи баргардонӣ (%1$s)</string>
+    <string name="staff_disputes_refund_help">Барои баргардонии пурраи %1$s холӣ гузоред. Барои баргардонии қисман маблағи камтар ворид кунед.</string>
+    <string name="staff_disputes_resolving">Дар ҳоли ҳалл…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">бонк коркард карда натавонист</string>
+    <string name="staff_disputes_stripe_check_returned">чек баргардонида шуд</string>
+    <string name="staff_disputes_stripe_credit_not_processed">кредит коркард нашуд</string>
+    <string name="staff_disputes_stripe_customer_initiated">аз ҷониби муштарӣ оғоз шуд</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">дебет иҷозат дода нашуд</string>
+    <string name="staff_disputes_stripe_duplicate">пардохти такрорӣ</string>
+    <string name="staff_disputes_stripe_fraudulent">қаллобӣ</string>
+    <string name="staff_disputes_stripe_general">умумӣ</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">тафсилоти ҳисоб нодуруст</string>
+    <string name="staff_disputes_stripe_insufficient_funds">маблағ кифоя нест</string>
+    <string name="staff_disputes_stripe_product_not_received">маҳсулот қабул нашуд</string>
+    <string name="staff_disputes_stripe_product_unacceptable">маҳсулот қобили қабул нест</string>
+    <string name="staff_disputes_stripe_subscription_canceled">обуна бекор карда шуд</string>
+    <string name="staff_disputes_stripe_unrecognized">пардохти номаълум</string>
+    <string name="staff_reports_listing_label">Эълон №%1$d</string>
+    <string name="staff_reports_meta_details">Тафсилоти шикоятгар</string>
+    <string name="staff_reviews_order_label">фармоиш №%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s дар %3$s. Ин баррасиро ба таври доимӣ нест кунем? Ин амалро бекор кардан мумкин нест.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ин баррасиро ба таври доимӣ нест кунем? Ин амалро бекор кардан мумкин нест.</string>
+    <string name="staff_team_dialog_search_placeholder">Ҷустуҷӯ аз рӯи ном, изи ангушт ё ID…</string>
+
 </resources>

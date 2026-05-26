@@ -475,4 +475,43 @@
     <string name="staff_team_toast_role_updated">పాత్ర నవీకరించబడింది</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">ఆర్డర్ #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">కారణం (ఐచ్ఛికం)</string>
+    <string name="staff_accounts_sales">%1$d అమ్మకాలు</string>
+    <string name="staff_appeals_reason_label">విక్రేత అప్పీలు కారణం</string>
+    <string name="staff_audit_action_staff_team_role_changed">సిబ్బంది పాత్ర మార్చబడింది</string>
+    <string name="staff_categories_delete_desc">“%1$s”ని తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
+    <string name="staff_disputes_dialog_title_chargeback">చార్జ్‌బ్యాక్: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">వివాదాన్ని వీక్షించండి</string>
+    <string name="staff_disputes_meta_buyer_details">కొనుగోలుదారు వివరాలు</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ద్వారా ఉంచబడింది</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s తిరిగి చెల్లించబడింది</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">తిరిగి చెల్లించబడింది</string>
+    <string name="staff_disputes_meta_refunded_of">%1$sలో</string>
+    <string name="staff_disputes_meta_seller_response">విక్రేత ప్రతిస్పందన</string>
+    <string name="staff_disputes_refund_amount_label">తిరిగి చెల్లింపు మొత్తం (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s పూర్తి తిరిగి చెల్లింపు కోసం ఖాళీగా ఉంచండి. పాక్షిక తిరిగి చెల్లింపు కోసం తక్కువ మొత్తాన్ని నమోదు చేయండి.</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">బ్యాంక్ ప్రాసెస్ చేయలేకపోయింది</string>
+    <string name="staff_disputes_stripe_check_returned">చెక్ తిరిగి వచ్చింది</string>
+    <string name="staff_disputes_stripe_credit_not_processed">క్రెడిట్ ప్రాసెస్ చేయబడలేదు</string>
+    <string name="staff_disputes_stripe_customer_initiated">ఖాతాదారు ప్రారంభించారు</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">డెబిట్ అనుమతించబడలేదు</string>
+    <string name="staff_disputes_stripe_duplicate">నకిలీ చార్జ్</string>
+    <string name="staff_disputes_stripe_fraudulent">మోసపూరిత</string>
+    <string name="staff_disputes_stripe_general">సాధారణ</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">తప్పు ఖాతా వివరాలు</string>
+    <string name="staff_disputes_stripe_insufficient_funds">సరిపోని నిధులు</string>
+    <string name="staff_disputes_stripe_product_not_received">ఉత్పత్తి అందలేదు</string>
+    <string name="staff_disputes_stripe_product_unacceptable">ఉత్పత్తి ఆమోదయోగ్యం కాదు</string>
+    <string name="staff_disputes_stripe_subscription_canceled">చందా రద్దు చేయబడింది</string>
+    <string name="staff_disputes_stripe_unrecognized">గుర్తించని చార్జ్</string>
+    <string name="staff_listings_seller_unknown">తెలియని విక్రేత</string>
+    <string name="staff_listings_seller_verified">ధృవీకరించబడిన విక్రేత</string>
+    <string name="staff_reports_listing_label">జాబితా #%1$d</string>
+    <string name="staff_reports_meta_details">నివేదిక చేసినవారి వివరాలు</string>
+    <string name="staff_reviews_order_label">ఆర్డర్ #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$sన. ఈ సమీక్షను శాశ్వతంగా తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ఈ సమీక్షను శాశ్వతంగా తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
+    <string name="staff_team_dialog_search_placeholder">పేరు, వేలిముద్ర లేదా ID ద్వారా శోధించండి…</string>
+
 </resources>

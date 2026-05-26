@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">مٿي منتقل ڪريو</string>
     <string name="chat_attachment_move_down">هيٺ منتقل ڪريو</string>
     <string name="chat_list_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
+
+    <string name="notification_channel_chat">چيٽ جون اطلاعون</string>
+    <string name="chat_auth_brand">Mochi چيٽ</string>
+    <string name="chat_auth_create_identity_failed">سڃاڻپ ٺاهڻ ۾ ناڪامي</string>
+    <string name="chat_auth_mfa_unsupported">MFA اڃا موبائل ايپ ۾ سپورٽ ٿيل ناهي</string>
+    <string name="chat_auth_enter_code_sent">%1$s ڏانهن موڪليل ڪوڊ داخل ڪريو</string>
+    <string name="chat_auth_create_identity">پنهنجي سڃاڻپ ٺاهيو</string>
+    <string name="chat_list_search_placeholder">چيٽ ڳوليو</string>
+    <string name="chat_list_no_matching">ڪابه ملندڙ چيٽ ناهي</string>
+    <string name="chat_list_empty">اڃا تائين ڪابه چيٽ ناهي</string>
+    <string name="chat_list_left_chat">ڇڏي ڏنو</string>
+    <string name="chat_new_no_friends">اڃا تائين چيٽ ڪرڻ لاءِ ڪوبه دوست ناهي</string>
+    <string name="chat_new_no_matches">ڪوبه ملندڙ دوست ناهي</string>
+    <string name="chat_new_existing_chat">موجوده چيٽ کوليو</string>
+    <string name="chat_new_start">چيٽ شروع ڪريو</string>
+    <string name="chat_new_start_group">گروپ چيٽ شروع ڪريو</string>
+    <string name="chat_messages_loading">پيغام لوڊ ٿي رهيا آهن…</string>
+    <string name="chat_messages_empty">اڃا تائين ڪوبه پيغام ناهي — سلام چئو!</string>
+    <string name="chat_messages_load_more">پراڻا پيغام لوڊ ڪريو</string>
+    <string name="chat_attachment_label">فائل</string>
+    <string name="chat_message_too_long">پيغام تمام ڊگهو آهي</string>
+    <string name="chat_message_empty">پيغام خالي نه ٿو ٿي سگهي</string>
+    <string name="chat_settings_rename">چيٽ جو نالو تبديل ڪريو</string>
+    <string name="chat_settings_add_member_empty">شامل ڪرڻ لاءِ ڪوبه دوست ناهي</string>
+    <string name="chat_settings_remove_member_message">%1$s کي هن چيٽ مان هٽايو؟</string>
+    <string name="chat_settings_leave_message">هي چيٽ ڇڏيو؟ ٻيا ميمبر توهان جا پيغام نه ڏسي سگهندا.</string>
+    <string name="chat_settings_leave_and_delete">ڇڏيو ۽ مقامي طور تي ختم ڪريو</string>
+    <string name="chat_settings_delete">مقامي طور تي ختم ڪريو</string>
+    <string name="chat_settings_delete_message">هي رڳو هن ڊوائيس تان چيٽ ۽ ان جا پيغام هٽائي ٿو.</string>
+
 </resources>

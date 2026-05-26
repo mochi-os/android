@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">באַוועגן אַרויף</string>
     <string name="chat_attachment_move_down">באַוועגן אַראָפּ</string>
     <string name="chat_list_add_to_home">לייגן צו היים עקראַן</string>
+
+    <string name="notification_channel_chat">שמועס־נאָטיפֿיקאַציעס</string>
+    <string name="chat_auth_brand">Mochi שמועס</string>
+    <string name="chat_auth_create_identity_failed">דורכפֿאַל בײַם שאַפֿן אידענטיטעט</string>
+    <string name="chat_auth_mfa_unsupported">MFA איז נאָך נישט געשטיצט אין דער מאָבילער אַפּ</string>
+    <string name="chat_auth_enter_code_sent">אַרײַנגעבן דעם קאָד וואָס איז געשיקט געוואָרן צו %1$s</string>
+    <string name="chat_auth_create_identity">שאַפֿט אײַער אידענטיטעט</string>
+    <string name="chat_list_search_placeholder">זוכן שמועסן</string>
+    <string name="chat_list_no_matching">קיין פּאַסיקע שמועסן</string>
+    <string name="chat_list_empty">נאָך קיין שמועסן</string>
+    <string name="chat_list_left_chat">אַוועקגעגאַנגען</string>
+    <string name="chat_new_no_friends">נאָך קיין פֿרײַנד צו שמועסן מיט</string>
+    <string name="chat_new_no_matches">קיין פּאַסיקע פֿרײַנד</string>
+    <string name="chat_new_existing_chat">עפֿענען בנימצא שמועס</string>
+    <string name="chat_new_start">אָנהייבן שמועס</string>
+    <string name="chat_new_start_group">אָנהייבן גרופּע־שמועס</string>
+    <string name="chat_messages_loading">לאָדן מעלדונגען…</string>
+    <string name="chat_messages_empty">נאָך קיין מעלדונגען — זאָגט שלום!</string>
+    <string name="chat_messages_load_more">לאָדן עלטערע מעלדונגען</string>
+    <string name="chat_attachment_label">טעקע</string>
+    <string name="chat_message_too_long">מעלדונג איז צו לאַנג</string>
+    <string name="chat_message_empty">מעלדונג קען נישט זײַן ליידיק</string>
+    <string name="chat_settings_rename">איבערנעמען שמועס</string>
+    <string name="chat_settings_add_member_empty">קיין פֿרײַנד צוצוגעבן</string>
+    <string name="chat_settings_remove_member_message">אַראָפּנעמען %1$s פֿון דעם שמועס?</string>
+    <string name="chat_settings_leave_message">אַוועקגיין פֿון דעם שמועס? אַנדערע מיטגלידער וועלן מער נישט זען אײַערע מעלדונגען.</string>
+    <string name="chat_settings_leave_and_delete">אַוועקגיין און אויסמעקן לאָקאַל</string>
+    <string name="chat_settings_delete">אויסמעקן לאָקאַל</string>
+    <string name="chat_settings_delete_message">דאָס נעמט אַראָפּ דעם שמועס און זײַנע מעלדונגען בלויז פֿון דעם אַפּאַראַט.</string>
+
 </resources>

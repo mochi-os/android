@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Patamanta apay</string>
     <string name="chat_attachment_move_down">Uramanta apay</string>
     <string name="chat_list_add_to_home">Wasi pantallaman yapay</string>
+
+    <string name="notification_channel_chat">Rimanakuy willaykuna</string>
+    <string name="chat_auth_brand">Mochi Rimanakuy</string>
+    <string name="chat_auth_create_identity_failed">Mana atikurqachu kikinkayta paqarichiyta</string>
+    <string name="chat_auth_mfa_unsupported">MFA manaraqmi mobile app nisqapi atikunchu</string>
+    <string name="chat_auth_enter_code_sent">%1$s nisqaman apachisqa kuditata churay</string>
+    <string name="chat_auth_create_identity">Kikinkaykita paqarichiy</string>
+    <string name="chat_list_search_placeholder">Rimanakuykunata maskay</string>
+    <string name="chat_list_no_matching">Mana tupaq rimanakuykunapas kanchu</string>
+    <string name="chat_list_empty">Manaraqmi rimanakuykuna kanchu</string>
+    <string name="chat_list_left_chat">Lluqsirqa</string>
+    <string name="chat_new_no_friends">Manaraqmi masikuna rimanakunapaq kanchu</string>
+    <string name="chat_new_no_matches">Mana tupaq masikuna kanchu</string>
+    <string name="chat_new_existing_chat">Kaq rimanakuyta kichay</string>
+    <string name="chat_new_start">Rimanakuyta qallariy</string>
+    <string name="chat_new_start_group">Huñu rimanakuyta qallariy</string>
+    <string name="chat_messages_loading">Willaykunata chaskichkan…</string>
+    <string name="chat_messages_empty">Manaraqmi willaykuna kanchu — napaykuy!</string>
+    <string name="chat_messages_load_more">Mawk\'a willaykunata chaskiy</string>
+    <string name="chat_attachment_label">Kawsay</string>
+    <string name="chat_message_too_long">Willay nishu suni</string>
+    <string name="chat_message_empty">Willay mana ch\'usaqchu kanan</string>
+    <string name="chat_settings_rename">Rimanakuyta sutichay</string>
+    <string name="chat_settings_add_member_empty">Manaña masikuna yapanapaq kanchu</string>
+    <string name="chat_settings_remove_member_message">¿%1$s runata kay rimanakuymanta hurquyta munankichu?</string>
+    <string name="chat_settings_leave_message">¿Kay rimanakuymanta lluqsiyta munankichu? Huk kaqkunaqa manañam willaykinikunata rikunqakuchu.</string>
+    <string name="chat_settings_leave_and_delete">Lluqsiy hinaspa kay dispositivumanta pichay</string>
+    <string name="chat_settings_delete">Kay dispositivullapi pichay</string>
+    <string name="chat_settings_delete_message">Kayqa rimanakuyta hinaspa willayninkunata kay dispositivollamantam pichan.</string>
+
 </resources>

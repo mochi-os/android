@@ -500,4 +500,20 @@
     <string name="staff_team_toast_role_failed">Imeshindwa kusasisha jukumu</string>
     <string name="staff_team_toast_role_updated">Jukumu limesasishwa</string>
 
+
+    <string name="staff_disputes_stripe_bank_cannot_process">benki haikuweza kushughulikia</string>
+    <string name="staff_disputes_stripe_check_returned">hundi imerudishwa</string>
+    <string name="staff_disputes_stripe_credit_not_processed">mkopo haujashughulikiwa</string>
+    <string name="staff_disputes_stripe_customer_initiated">imeanzishwa na mteja</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">malipo hayajaidhinishwa</string>
+    <string name="staff_disputes_stripe_duplicate">malipo yamerudiwa</string>
+    <string name="staff_disputes_stripe_fraudulent">ya udanganyifu</string>
+    <string name="staff_disputes_stripe_general">ya jumla</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">maelezo ya akaunti si sahihi</string>
+    <string name="staff_disputes_stripe_insufficient_funds">fedha hazitoshi</string>
+    <string name="staff_disputes_stripe_product_not_received">bidhaa haijapokelewa</string>
+    <string name="staff_disputes_stripe_product_unacceptable">bidhaa haikubaliki</string>
+    <string name="staff_disputes_stripe_subscription_canceled">usajili umefutwa</string>
+    <string name="staff_disputes_stripe_unrecognized">malipo hayatambuliki</string>
+
 </resources>

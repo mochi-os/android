@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Mutați sus</string>
     <string name="chat_attachment_move_down">Mutați jos</string>
     <string name="chat_list_add_to_home">Adaugă pe ecranul de pornire</string>
+
+    <string name="notification_channel_chat">Notificări chat</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Crearea identității a eșuat</string>
+    <string name="chat_auth_mfa_unsupported">MFA nu este încă acceptat în aplicația mobilă</string>
+    <string name="chat_auth_enter_code_sent">Introduceți codul trimis la %1$s</string>
+    <string name="chat_auth_create_identity">Creați-vă identitatea</string>
+    <string name="chat_list_search_placeholder">Căutați chaturi</string>
+    <string name="chat_list_no_matching">Niciun chat corespunzător</string>
+    <string name="chat_list_empty">Încă niciun chat</string>
+    <string name="chat_list_left_chat">Părăsit</string>
+    <string name="chat_new_no_friends">Încă niciun prieten cu care să discutați</string>
+    <string name="chat_new_no_matches">Niciun prieten corespunzător</string>
+    <string name="chat_new_existing_chat">Deschideți chatul existent</string>
+    <string name="chat_new_start">Începeți chatul</string>
+    <string name="chat_new_start_group">Începeți chat de grup</string>
+    <string name="chat_messages_loading">Se încarcă mesajele…</string>
+    <string name="chat_messages_empty">Încă niciun mesaj — salutați!</string>
+    <string name="chat_messages_load_more">Încărcați mesaje mai vechi</string>
+    <string name="chat_attachment_label">Fișier</string>
+    <string name="chat_message_too_long">Mesaj prea lung</string>
+    <string name="chat_message_empty">Mesajul nu poate fi gol</string>
+    <string name="chat_settings_rename">Redenumiți chatul</string>
+    <string name="chat_settings_add_member_empty">Niciun prieten de adăugat</string>
+    <string name="chat_settings_remove_member_message">Eliminați %1$s din acest chat?</string>
+    <string name="chat_settings_leave_message">Părăsiți acest chat? Ceilalți membri nu vă vor mai vedea mesajele.</string>
+    <string name="chat_settings_leave_and_delete">Părăsiți și ștergeți local</string>
+    <string name="chat_settings_delete">Ștergeți local</string>
+    <string name="chat_settings_delete_message">Aceasta elimină chatul și mesajele sale doar de pe acest dispozitiv.</string>
+
 </resources>

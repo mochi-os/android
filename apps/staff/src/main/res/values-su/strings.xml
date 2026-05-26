@@ -472,4 +472,46 @@
     <string name="staff_team_toast_role_updated">Pancén diropéa</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Pesenan #%1$d</string>
+
+    <string name="staff_accounts_action_unsuspend_title">Cabut panyepenan</string>
+    <string name="staff_accounts_reason_optional_label">Alesan (opsional)</string>
+    <string name="staff_accounts_sales">%1$d penjualan</string>
+    <string name="staff_appeals_reason_label">Alesan banding ti penjual</string>
+    <string name="staff_audit_action_staff_team_role_changed">Peran staf dirobah</string>
+    <string name="staff_categories_delete_desc">Hapus “%1$s”? Ieu teu bisa dibatalkeun.</string>
+    <string name="staff_disputes_dialog_title_chargeback">Chargeback: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Tempo sengketa</string>
+    <string name="staff_disputes_meta_buyer_details">Detil pameser</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">ditahan ku Stripe</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s dibalikkeun</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">dibalikkeun</string>
+    <string name="staff_disputes_meta_refunded_of">tina %1$s</string>
+    <string name="staff_disputes_meta_seller_response">Réspon penjual</string>
+    <string name="staff_disputes_refund_amount_label">Jumlah pangbalikan (%1$s)</string>
+    <string name="staff_disputes_refund_help">Kosongkeun pikeun pangbalikan pinuh %1$s. Asupkeun jumlah leuwih leutik pikeun pangbalikan parsial.</string>
+    <string name="staff_disputes_resolving">Ngarengsekeun…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">bank teu bisa ngolah</string>
+    <string name="staff_disputes_stripe_check_returned">cek dipulangkeun</string>
+    <string name="staff_disputes_stripe_credit_not_processed">kredit teu diolah</string>
+    <string name="staff_disputes_stripe_customer_initiated">diawitan ku palanggan</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debit teu diidinan</string>
+    <string name="staff_disputes_stripe_duplicate">muatan ganda</string>
+    <string name="staff_disputes_stripe_fraudulent">panipuan</string>
+    <string name="staff_disputes_stripe_general">umum</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">detil akun salah</string>
+    <string name="staff_disputes_stripe_insufficient_funds">dana teu cukup</string>
+    <string name="staff_disputes_stripe_product_not_received">produk teu ditampi</string>
+    <string name="staff_disputes_stripe_product_unacceptable">produk teu ditarima</string>
+    <string name="staff_disputes_stripe_subscription_canceled">langganan dibatalkeun</string>
+    <string name="staff_disputes_stripe_unrecognized">muatan teu dikenal</string>
+    <string name="staff_listings_seller_unknown">Penjual teu dikenal</string>
+    <string name="staff_listings_seller_verified">Penjual diverifikasi</string>
+    <string name="staff_moderation_filter_clear">Kosongkeun saringan</string>
+    <string name="staff_reports_listing_label">Daptaran #%1$d</string>
+    <string name="staff_reports_meta_details">Detil palapor</string>
+    <string name="staff_reviews_order_label">pesenan #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s dina %3$s. Hapus permanén ulasan ieu? Ieu teu bisa dibatalkeun.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Hapus permanén ulasan ieu? Ieu teu bisa dibatalkeun.</string>
+    <string name="staff_team_dialog_search_placeholder">Téangan ku ngaran, sidik ramo, atawa ID…</string>
+
 </resources>

@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Lëviz lart</string>
     <string name="chat_attachment_move_down">Lëviz poshtë</string>
     <string name="chat_list_add_to_home">Shto në ekranin kryesor</string>
+
+    <string name="notification_channel_chat">Njoftime bisede</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Krijimi i identitetit dështoi</string>
+    <string name="chat_auth_mfa_unsupported">MFA nuk mbështetet ende në aplikacionin celular</string>
+    <string name="chat_auth_enter_code_sent">Shkruani kodin e dërguar te %1$s</string>
+    <string name="chat_auth_create_identity">Krijoni identitetin tuaj</string>
+    <string name="chat_list_search_placeholder">Kërkoni biseda</string>
+    <string name="chat_list_no_matching">Asnjë bisedë përputhëse</string>
+    <string name="chat_list_empty">Ende asnjë bisedë</string>
+    <string name="chat_list_left_chat">Larguar</string>
+    <string name="chat_new_no_friends">Ende nuk ka miq për të biseduar</string>
+    <string name="chat_new_no_matches">Asnjë mik përputhës</string>
+    <string name="chat_new_existing_chat">Hap bisedën ekzistuese</string>
+    <string name="chat_new_start">Fillo bisedën</string>
+    <string name="chat_new_start_group">Fillo bisedën në grup</string>
+    <string name="chat_messages_loading">Po ngarkohen mesazhet…</string>
+    <string name="chat_messages_empty">Ende asnjë mesazh — përshëndetni!</string>
+    <string name="chat_messages_load_more">Ngarko mesazhet më të vjetra</string>
+    <string name="chat_attachment_label">Skedar</string>
+    <string name="chat_message_too_long">Mesazhi është shumë i gjatë</string>
+    <string name="chat_message_empty">Mesazhi nuk mund të jetë bosh</string>
+    <string name="chat_settings_rename">Riemërto bisedën</string>
+    <string name="chat_settings_add_member_empty">Nuk ka miq për të shtuar</string>
+    <string name="chat_settings_remove_member_message">Të hiqet %1$s nga kjo bisedë?</string>
+    <string name="chat_settings_leave_message">Të largoheni nga kjo bisedë? Anëtarët e tjerë nuk do t\'i shohin më mesazhet tuaja.</string>
+    <string name="chat_settings_leave_and_delete">Largohu dhe fshij lokalisht</string>
+    <string name="chat_settings_delete">Fshij lokalisht</string>
+    <string name="chat_settings_delete_message">Kjo heq bisedën dhe mesazhet e saj vetëm nga kjo pajisje.</string>
+
 </resources>

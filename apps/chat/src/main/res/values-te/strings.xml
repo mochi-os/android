@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">పైకి జరుపు</string>
     <string name="chat_attachment_move_down">కిందికి జరుపు</string>
     <string name="chat_list_add_to_home">హోమ్ స్క్రీన్‌కు జోడించండి</string>
+
+    <string name="notification_channel_chat">చాట్ నోటిఫికేషన్‌లు</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">గుర్తింపును సృష్టించడంలో విఫలమైంది</string>
+    <string name="chat_auth_mfa_unsupported">మొబైల్ యాప్‌లో MFA ఇంకా మద్దతు లేదు</string>
+    <string name="chat_auth_enter_code_sent">%1$sకి పంపిన కోడ్‌ను నమోదు చేయండి</string>
+    <string name="chat_auth_create_identity">మీ గుర్తింపును సృష్టించండి</string>
+    <string name="chat_list_search_placeholder">చాట్‌లను శోధించండి</string>
+    <string name="chat_list_no_matching">సరిపోలే చాట్‌లు లేవు</string>
+    <string name="chat_list_empty">ఇంకా చాట్‌లు లేవు</string>
+    <string name="chat_list_left_chat">వదిలారు</string>
+    <string name="chat_new_no_friends">ఇంకా చాట్ చేయడానికి స్నేహితులు లేరు</string>
+    <string name="chat_new_no_matches">సరిపోలే స్నేహితులు లేరు</string>
+    <string name="chat_new_existing_chat">ఇప్పటికే ఉన్న చాట్‌ను తెరవండి</string>
+    <string name="chat_new_start">చాట్ ప్రారంభించండి</string>
+    <string name="chat_new_start_group">గ్రూప్ చాట్ ప్రారంభించండి</string>
+    <string name="chat_messages_loading">సందేశాలను లోడ్ చేస్తోంది…</string>
+    <string name="chat_messages_empty">ఇంకా సందేశాలు లేవు — హాయ్ చెప్పండి!</string>
+    <string name="chat_messages_load_more">పాత సందేశాలను లోడ్ చేయండి</string>
+    <string name="chat_attachment_label">ఫైల్</string>
+    <string name="chat_message_too_long">సందేశం చాలా పొడవుగా ఉంది</string>
+    <string name="chat_message_empty">సందేశం ఖాళీగా ఉండకూడదు</string>
+    <string name="chat_settings_rename">చాట్ పేరు మార్చండి</string>
+    <string name="chat_settings_add_member_empty">జోడించడానికి స్నేహితులు లేరు</string>
+    <string name="chat_settings_remove_member_message">ఈ చాట్ నుండి %1$sను తీసివేయాలా?</string>
+    <string name="chat_settings_leave_message">ఈ చాట్‌ను వదలాలా? ఇతర సభ్యులు మీ సందేశాలను ఇకపై చూడలేరు.</string>
+    <string name="chat_settings_leave_and_delete">వదలి స్థానికంగా తొలగించండి</string>
+    <string name="chat_settings_delete">స్థానికంగా తొలగించండి</string>
+    <string name="chat_settings_delete_message">ఇది ఈ పరికరం నుండి మాత్రమే చాట్ మరియు దాని సందేశాలను తీసివేస్తుంది.</string>
+
 </resources>

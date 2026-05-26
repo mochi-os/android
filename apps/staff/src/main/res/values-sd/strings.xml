@@ -473,4 +473,45 @@
     <string name="staff_team_toast_role_updated">ڪردار اپڊيٽ ٿيو</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">آرڊر #%1$d</string>
+
+    <string name="staff_accounts_action_unsuspend_title">معطلي ختم ڪريو</string>
+    <string name="staff_accounts_reason_optional_label">سبب (اختياري)</string>
+    <string name="staff_accounts_sales">%1$d وڪرا</string>
+    <string name="staff_appeals_reason_label">وڪرو ڪندڙ جي اپيل جو سبب</string>
+    <string name="staff_audit_action_staff_team_role_changed">اسٽاف جو ڪردار تبديل ٿيو</string>
+    <string name="staff_categories_delete_desc">”%1$s“ ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
+    <string name="staff_disputes_dialog_title_chargeback">چارج بئڪ: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">تڪرار ڏسو</string>
+    <string name="staff_disputes_meta_buyer_details">خريدار جون تفصيلون</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe وٽ رکيل</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s واپس ڪيو ويو</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">واپس ڪيو ويو</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s مان</string>
+    <string name="staff_disputes_meta_seller_response">وڪرو ڪندڙ جو جواب</string>
+    <string name="staff_disputes_refund_amount_label">واپسي جي رقم (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s جي مڪمل واپسي لاءِ خالي ڇڏيو. جزوي واپسي لاءِ ننڍي رقم داخل ڪريو.</string>
+    <string name="staff_disputes_resolving">حل ٿي رهيو آهي…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">بئنڪ پروسيس نه ڪري سگهيو</string>
+    <string name="staff_disputes_stripe_check_returned">چيڪ واپس ٿيو</string>
+    <string name="staff_disputes_stripe_credit_not_processed">ڪريڊٽ پروسيس نه ٿيو</string>
+    <string name="staff_disputes_stripe_customer_initiated">گراهڪ شروع ڪيو</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">ڊيبٽ جي اجازت نه آهي</string>
+    <string name="staff_disputes_stripe_duplicate">نقل چارج</string>
+    <string name="staff_disputes_stripe_fraudulent">فراڊ</string>
+    <string name="staff_disputes_stripe_general">عام</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">غلط اڪائونٽ تفصيلون</string>
+    <string name="staff_disputes_stripe_insufficient_funds">ناڪافي رقم</string>
+    <string name="staff_disputes_stripe_product_not_received">پراڊڪٽ نه مليو</string>
+    <string name="staff_disputes_stripe_product_unacceptable">پراڊڪٽ ناقابل قبول</string>
+    <string name="staff_disputes_stripe_subscription_canceled">سبسڪرپشن منسوخ ٿيو</string>
+    <string name="staff_disputes_stripe_unrecognized">اڻ سڃاتل چارج</string>
+    <string name="staff_listings_seller_unknown">اڻ ڄاتل وڪرو ڪندڙ</string>
+    <string name="staff_listings_seller_verified">تصديق ٿيل وڪرو ڪندڙ</string>
+    <string name="staff_reports_listing_label">لسٽنگ #%1$d</string>
+    <string name="staff_reports_meta_details">رپورٽ ڪندڙ جون تفصيلون</string>
+    <string name="staff_reviews_order_label">آرڊر #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s تي. هي جائزو مستقل طور ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. هي جائزو مستقل طور ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
+    <string name="staff_team_dialog_search_placeholder">نالي، فنگر پرنٽ، يا ID سان ڳوليو…</string>
+
 </resources>

@@ -39,4 +39,34 @@
     <string name="chat_attachment_move_up">Yukarı taşı</string>
     <string name="chat_attachment_move_down">Aşağı taşı</string>
     <string name="chat_list_add_to_home">Ana ekrana ekle</string>
+
+    <string name="notification_channel_chat">Sohbet bildirimleri</string>
+    <string name="chat_auth_brand">Mochi Chat</string>
+    <string name="chat_auth_create_identity_failed">Kimlik oluşturulamadı</string>
+    <string name="chat_auth_mfa_unsupported">MFA mobil uygulamada henüz desteklenmiyor</string>
+    <string name="chat_auth_enter_code_sent">%1$s adresine gönderilen kodu girin</string>
+    <string name="chat_auth_create_identity">Kimliğinizi oluşturun</string>
+    <string name="chat_list_search_placeholder">Sohbetlerde ara</string>
+    <string name="chat_list_no_matching">Eşleşen sohbet yok</string>
+    <string name="chat_list_empty">Henüz sohbet yok</string>
+    <string name="chat_list_left_chat">Ayrıldı</string>
+    <string name="chat_new_no_friends">Sohbet edilecek arkadaş yok</string>
+    <string name="chat_new_no_matches">Eşleşen arkadaş yok</string>
+    <string name="chat_new_existing_chat">Mevcut sohbeti aç</string>
+    <string name="chat_new_start">Sohbet başlat</string>
+    <string name="chat_new_start_group">Grup sohbeti başlat</string>
+    <string name="chat_messages_loading">Mesajlar yükleniyor…</string>
+    <string name="chat_messages_empty">Henüz mesaj yok — selam verin!</string>
+    <string name="chat_messages_load_more">Daha eski mesajları yükle</string>
+    <string name="chat_attachment_label">Dosya</string>
+    <string name="chat_message_too_long">Mesaj çok uzun</string>
+    <string name="chat_message_empty">Mesaj boş olamaz</string>
+    <string name="chat_settings_rename">Sohbeti yeniden adlandır</string>
+    <string name="chat_settings_add_member_empty">Eklenecek arkadaş yok</string>
+    <string name="chat_settings_remove_member_message">%1$s bu sohbetten çıkarılsın mı?</string>
+    <string name="chat_settings_leave_message">Bu sohbetten ayrılmak istiyor musunuz? Diğer üyeler mesajlarınızı artık göremeyecek.</string>
+    <string name="chat_settings_leave_and_delete">Ayrıl ve yerel olarak sil</string>
+    <string name="chat_settings_delete">Yerel olarak sil</string>
+    <string name="chat_settings_delete_message">Bu işlem sohbeti ve mesajlarını yalnızca bu cihazdan kaldırır.</string>
+
 </resources>

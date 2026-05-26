@@ -474,4 +474,44 @@
     <string name="staff_team_toast_role_updated">Rol täzelendi</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
     <string name="staff_dashboard_order_fallback">Sargyt #%1$d</string>
+
+    <string name="staff_accounts_reason_optional_label">Sebäp (hökmany däl)</string>
+    <string name="staff_accounts_sales">%1$d satuw</string>
+    <string name="staff_appeals_reason_label">Satyjynyň şikaýat sebäbi</string>
+    <string name="staff_audit_action_staff_team_role_changed">Işgär roly üýtgedildi</string>
+    <string name="staff_categories_delete_desc">“%1$s” pozulsynmy? Bu yzyna gaýtaryp bolmaýar.</string>
+    <string name="staff_disputes_dialog_title_chargeback">Tölegden ýüz öwürmek: %1$s</string>
+    <string name="staff_disputes_dialog_title_view">Dawany görmek</string>
+    <string name="staff_disputes_meta_buyer_details">Alyjynyň maglumatlary</string>
+    <string name="staff_disputes_meta_chargeback_fee_kept">Stripe tarapyndan saklandy</string>
+    <string name="staff_disputes_meta_chargeback_fee_partial">%1$s yzyna gaýtaryldy</string>
+    <string name="staff_disputes_meta_chargeback_fee_refunded">yzyna gaýtaryldy</string>
+    <string name="staff_disputes_meta_refunded_of">%1$s-dan</string>
+    <string name="staff_disputes_meta_seller_response">Satyjynyň jogaby</string>
+    <string name="staff_disputes_refund_amount_label">Yzyna gaýtaryş mukdary (%1$s)</string>
+    <string name="staff_disputes_refund_help">%1$s mukdaryny doly yzyna gaýtarmak üçin boş goýuň. Bölekleýin yzyna gaýtarmak üçin kiçiräk mukdar giriziň.</string>
+    <string name="staff_disputes_resolving">Çözülýär…</string>
+    <string name="staff_disputes_stripe_bank_cannot_process">bank işläp bilmedi</string>
+    <string name="staff_disputes_stripe_check_returned">çek yzyna gaýtaryldy</string>
+    <string name="staff_disputes_stripe_credit_not_processed">karz işlenmedi</string>
+    <string name="staff_disputes_stripe_customer_initiated">müşderi tarapyndan başladyldy</string>
+    <string name="staff_disputes_stripe_debit_not_authorized">debet tassyklanmady</string>
+    <string name="staff_disputes_stripe_duplicate">gaýtalanan töleg</string>
+    <string name="staff_disputes_stripe_fraudulent">galp</string>
+    <string name="staff_disputes_stripe_general">umumy</string>
+    <string name="staff_disputes_stripe_incorrect_account_details">nädogry hasap maglumatlary</string>
+    <string name="staff_disputes_stripe_insufficient_funds">ýeterlik serişde ýok</string>
+    <string name="staff_disputes_stripe_product_not_received">haryt alynmady</string>
+    <string name="staff_disputes_stripe_product_unacceptable">haryt kabul ederliksiz</string>
+    <string name="staff_disputes_stripe_subscription_canceled">abuna ýatyryldy</string>
+    <string name="staff_disputes_stripe_unrecognized">tanalmaýan töleg</string>
+    <string name="staff_listings_seller_unknown">Näbelli satyjy</string>
+    <string name="staff_listings_seller_verified">Tassyklanan satyjy</string>
+    <string name="staff_reports_listing_label">Bildiriş #%1$d</string>
+    <string name="staff_reports_meta_details">Habar berijiniň maglumatlary</string>
+    <string name="staff_reviews_order_label">sargyt #%1$d</string>
+    <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Bu syny hemişelik pozmalymy? Bu yzyna gaýtaryp bolmaýar.</string>
+    <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Bu syny hemişelik pozmalymy? Bu yzyna gaýtaryp bolmaýar.</string>
+    <string name="staff_team_dialog_search_placeholder">Ady, barmak yzy ýa-da ID boýunça gözläň…</string>
+
 </resources>
