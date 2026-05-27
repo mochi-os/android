@@ -491,12 +491,15 @@ fun FeedScreen(
                                 state = pagerState,
                                 modifier = Modifier.fillMaxSize(),
                                 key = { page -> posts[page].id },
-                                // Default snap threshold is 50% of page —
-                                // feels stiff because a short flick doesn't
-                                // commit and the page rubber-bands back.
-                                // Drop to 20% so a confident-but-short swipe
-                                // turns the page; velocity-based fling
-                                // continues to handle quick flicks.
+                                // Default snap threshold is 50% of page;
+                                // even 20% still felt like work on a tall
+                                // phone where the thumb naturally moves
+                                // 60-80dp. Drop to 8% so any deliberate
+                                // upward gesture commits to the next post
+                                // and the mid-swipe rotation only rubber-
+                                // bands back on a clear flick-and-release-
+                                // back. Velocity-based fling continues to
+                                // handle quick flicks.
                                 //
                                 // snapAnimationSpec: default spring micro-
                                 // overshoots near the end and reads as a
@@ -505,7 +508,7 @@ fun FeedScreen(
                                 // mid-swipe rotation in FlipboardPage.
                                 flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
                                     state = pagerState,
-                                    snapPositionalThreshold = 0.2f,
+                                    snapPositionalThreshold = 0.08f,
                                     snapAnimationSpec = androidx.compose.animation.core.tween(
                                         durationMillis = 220,
                                         easing = androidx.compose.animation.core.FastOutSlowInEasing,
