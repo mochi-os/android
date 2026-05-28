@@ -14,16 +14,16 @@ import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.AdminPanelSettings
 import androidx.compose.material.icons.filled.Article
 import androidx.compose.material.icons.filled.Description
+import androidx.compose.material.icons.filled.Devices
 import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.Hub
+import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.MonitorHeart
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PrivacyTip
-import androidx.compose.material.icons.filled.Public
-import androidx.compose.material.icons.filled.Security
 import androidx.compose.material.icons.filled.SettingsApplications
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Sync
@@ -50,12 +50,13 @@ import org.mochios.settings.R
 @Composable
 fun SettingsHomeScreen(
     onBack: () -> Unit,
-    onOpenProfile: () -> Unit,
+    onOpenAccount: () -> Unit,
     onOpenPreferences: () -> Unit,
     onOpenDisplay: () -> Unit,
     onOpenNotifications: () -> Unit,
     onOpenNotificationPrefs: () -> Unit,
-    onOpenSecurity: () -> Unit,
+    onOpenSessions: () -> Unit,
+    onOpenTokens: () -> Unit,
     onOpenReplication: () -> Unit,
     onOpenSystemReplication: () -> Unit,
     onOpenSystemSettings: () -> Unit,
@@ -63,7 +64,6 @@ fun SettingsHomeScreen(
     onOpenSystemUsers: () -> Unit,
     onOpenInterests: () -> Unit,
     onOpenAccounts: () -> Unit,
-    onOpenDomains: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenSystemDocuments: () -> Unit,
     onLogout: () -> Unit,
@@ -84,14 +84,21 @@ fun SettingsHomeScreen(
         },
     ) { padding ->
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(padding),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding),
             contentPadding = PaddingValues(vertical = 8.dp),
         ) {
             item {
                 ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenProfile),
-                    headlineContent = { Text(stringResource(MochiR.string.profile_open)) },
-                    leadingContent = { Icon(Icons.Default.AccountCircle, contentDescription = null) },
+                    modifier = Modifier.clickable(onClick = onOpenAccount),
+                    headlineContent = { Text(stringResource(R.string.settings_home_account)) },
+                    leadingContent = {
+                        Icon(
+                            Icons.Default.AccountCircle,
+                            contentDescription = null
+                        )
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
@@ -99,7 +106,7 @@ fun SettingsHomeScreen(
             item {
                 ListItem(
                     modifier = Modifier.clickable(onClick = onOpenPreferences),
-                    headlineContent = { Text(stringResource(MochiR.string.settings_open)) },
+                    headlineContent = { Text(stringResource(R.string.settings_home_preferences)) },
                     leadingContent = { Icon(Icons.Default.Tune, contentDescription = null) },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
@@ -116,27 +123,9 @@ fun SettingsHomeScreen(
             }
             item {
                 ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenNotifications),
-                    headlineContent = { Text(stringResource(MochiR.string.notifications_open)) },
-                    leadingContent = { Icon(Icons.Default.Notifications, contentDescription = null) },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
-                HorizontalDivider()
-            }
-            item {
-                ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenNotificationPrefs),
-                    headlineContent = { Text(stringResource(R.string.settings_home_notification_prefs)) },
-                    leadingContent = { Icon(Icons.Default.NotificationsActive, contentDescription = null) },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
-                HorizontalDivider()
-            }
-            item {
-                ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenSecurity),
-                    headlineContent = { Text(stringResource(R.string.settings_home_security)) },
-                    leadingContent = { Icon(Icons.Default.Security, contentDescription = null) },
+                    modifier = Modifier.clickable(onClick = onOpenInterests),
+                    headlineContent = { Text(stringResource(R.string.settings_home_interests)) },
+                    leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
@@ -152,22 +141,51 @@ fun SettingsHomeScreen(
             }
             item {
                 ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenInterests),
-                    headlineContent = { Text(stringResource(R.string.settings_home_interests)) },
-                    leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
+                    modifier = Modifier.clickable(onClick = onOpenNotifications),
+                    headlineContent = { Text(stringResource(MochiR.string.notifications_open)) },
+                    leadingContent = {
+                        Icon(
+                            Icons.Default.Notifications,
+                            contentDescription = null
+                        )
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
             }
             item {
                 ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenDomains),
-                    headlineContent = { Text(stringResource(R.string.settings_home_domains)) },
-                    leadingContent = { Icon(Icons.Default.Public, contentDescription = null) },
+                    modifier = Modifier.clickable(onClick = onOpenNotificationPrefs),
+                    headlineContent = { Text(stringResource(R.string.settings_home_notification_prefs)) },
+                    leadingContent = {
+                        Icon(
+                            Icons.Default.NotificationsActive,
+                            contentDescription = null
+                        )
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
             }
+            item {
+                ListItem(
+                    modifier = Modifier.clickable(onClick = onOpenTokens),
+                    headlineContent = { Text(stringResource(R.string.settings_home_tokens)) },
+                    leadingContent = { Icon(Icons.Default.Key, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                )
+                HorizontalDivider()
+            }
+            item {
+                ListItem(
+                    modifier = Modifier.clickable(onClick = onOpenSessions),
+                    headlineContent = { Text(stringResource(R.string.settings_home_sessions)) },
+                    leadingContent = { Icon(Icons.Default.Devices, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                )
+                HorizontalDivider()
+            }
+
             item {
                 ListItem(
                     modifier = Modifier.clickable(onClick = onOpenReplication),
@@ -193,7 +211,12 @@ fun SettingsHomeScreen(
                 ListItem(
                     modifier = Modifier.clickable(onClick = onOpenSystemStatus),
                     headlineContent = { Text(stringResource(R.string.settings_home_system_status)) },
-                    leadingContent = { Icon(Icons.Default.MonitorHeart, contentDescription = null) },
+                    leadingContent = {
+                        Icon(
+                            Icons.Default.MonitorHeart,
+                            contentDescription = null
+                        )
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
@@ -202,7 +225,12 @@ fun SettingsHomeScreen(
                 ListItem(
                     modifier = Modifier.clickable(onClick = onOpenSystemUsers),
                     headlineContent = { Text(stringResource(R.string.settings_home_system_users)) },
-                    leadingContent = { Icon(Icons.Default.AdminPanelSettings, contentDescription = null) },
+                    leadingContent = {
+                        Icon(
+                            Icons.Default.AdminPanelSettings,
+                            contentDescription = null
+                        )
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
@@ -211,7 +239,12 @@ fun SettingsHomeScreen(
                 ListItem(
                     modifier = Modifier.clickable(onClick = onOpenSystemSettings),
                     headlineContent = { Text(stringResource(R.string.settings_home_system_settings)) },
-                    leadingContent = { Icon(Icons.Default.SettingsApplications, contentDescription = null) },
+                    leadingContent = {
+                        Icon(
+                            Icons.Default.SettingsApplications,
+                            contentDescription = null
+                        )
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
@@ -265,7 +298,12 @@ fun SettingsHomeScreen(
                 ListItem(
                     modifier = Modifier.clickable(onClick = onLogout),
                     headlineContent = { Text(stringResource(R.string.settings_home_logout)) },
-                    leadingContent = { Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null) },
+                    leadingContent = {
+                        Icon(
+                            Icons.AutoMirrored.Filled.Logout,
+                            contentDescription = null
+                        )
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
             }

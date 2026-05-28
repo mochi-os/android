@@ -3,99 +3,122 @@
     <!-- Settings app -->
     <string name="settings_app_label">Mochi Settings</string>
     <string name="settings_home_title">Settings</string>
+    <string name="settings_home_account">Account</string>
+    <string name="settings_home_preferences">Preferences</string>
     <string name="settings_home_logout">Log out</string>
     <string name="settings_home_display">Display</string>
-    <string name="settings_home_security">Security</string>
     <string name="settings_home_notification_prefs">Notification preferences</string>
     <string name="settings_home_accounts">Connected accounts</string>
     <string name="settings_home_interests">Interests</string>
-    <string name="settings_home_domains">Domains</string>
     <string name="settings_home_replication">Replication</string>
     <string name="settings_home_privacy">Privacy policy</string>
     <string name="settings_home_rules">Rules</string>
     <string name="settings_home_terms">Terms of service</string>
+    <string name="settings_home_sessions">Sessions</string>
+    <string name="settings_home_tokens">Tokens</string>
 
-    <!-- Security -->
-    <string name="security_title">Security</string>
-    <string name="security_section_methods">Login methods</string>
-    <string name="security_method_email">Email code</string>
-    <string name="security_method_passkey">Passkey</string>
-    <string name="security_method_totp">Authenticator app</string>
+    <!-- Account -->
+    <string name="account_title">Account</string>
+    <string name="account_section_identity">Identity</string>
+    <string name="account_identity_name">Name</string>
+    <string name="account_identity_username">Username</string>
+    <string name="account_identity_fingerprint">Fingerprint</string>
+    <string name="account_identity_identity">Identity</string>
+    <string name="account_identity_directory_toggle">Allow others to find you in directory</string>
+    <string name="account_method_passkey_subtitle">Register a passkey below to enable</string>
+    <string name="account_method_totp_subtitle">Set up an authenticator below to enable</string>
+    <string name="account_method_email_subtitle">Receive a verification code by email</string>
 
-    <string name="security_section_passkeys">Passkeys</string>
-    <string name="security_passkeys_empty">No passkeys registered.</string>
-    <string name="security_passkey_register">Add passkey</string>
-    <string name="security_passkey_register_title">Add a passkey</string>
-    <string name="security_passkey_register_message">Your device will prompt you to confirm. The passkey is bound to this device and used for future sign-ins.</string>
-    <string name="security_passkey_name_label">Name (optional)</string>
-    <string name="security_passkey_delete_title">Delete passkey?</string>
-    <string name="security_passkey_delete_message">"%1$s" will no longer sign you in.</string>
+    <string name="account_section_methods">Login methods</string>
+    <string name="account_method_email">Email code</string>
+    <string name="account_method_passkey">Passkey</string>
+    <string name="account_method_totp">Authenticator app</string>
 
-    <string name="security_section_totp">Authenticator app</string>
-    <string name="security_totp_description">Sign in with a 6-digit code from an authenticator app.</string>
-    <string name="security_totp_enabled">Authenticator is enabled.</string>
-    <string name="security_totp_setup">Set up authenticator</string>
-    <string name="security_totp_setup_title">Set up authenticator</string>
-    <string name="security_totp_setup_step1">Scan or enter this secret in your authenticator app.</string>
-    <string name="security_totp_setup_step2">Enter the 6-digit code your app shows.</string>
-    <string name="security_totp_code">Code</string>
-    <string name="security_totp_verify">Verify</string>
-    <string name="security_totp_disable_title">Disable authenticator?</string>
-    <string name="security_totp_disable_message">You won\'t be able to sign in with an authenticator code.</string>
+    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_passkeys_empty">No passkeys registered.</string>
+    <string name="account_passkey_register">Add passkey</string>
+    <string name="account_passkey_register_title">Add a passkey</string>
+    <string name="account_passkey_register_message">Your device will prompt you to confirm. The passkey is bound to this device and used for future sign-ins.</string>
+    <string name="account_passkey_name_label">Name (optional)</string>
+    <string name="account_passkey_delete_title">Delete passkey?</string>
+    <string name="account_passkey_delete_message">"%1$s" will no longer sign you in.</string>
 
-    <string name="security_section_recovery">Recovery codes</string>
-    <string name="security_recovery_none">No recovery codes generated.</string>
-    <string name="security_recovery_count">%1$d unused recovery codes.</string>
-    <string name="security_recovery_generate">Generate codes</string>
-    <string name="security_recovery_regenerate">Regenerate codes</string>
-    <string name="security_recovery_regen_title">Regenerate recovery codes?</string>
-    <string name="security_recovery_regen_message">Existing codes stop working immediately. Save the new ones somewhere safe.</string>
-    <string name="security_recovery_codes_title">Recovery codes</string>
-    <string name="security_recovery_codes_warning">Save these codes — each can only be used once. They won\'t be shown again.</string>
+    <string name="account_section_totp">Authenticator app</string>
+    <string name="account_totp_description">Sign in with a 6-digit code from an authenticator app.</string>
+    <string name="account_totp_enabled">Authenticator is enabled.</string>
+    <string name="account_totp_setup">Set up authenticator</string>
+    <string name="account_totp_setup_title">Set up authenticator</string>
+    <string name="account_totp_setup_step1">Scan or enter this secret in your authenticator app.</string>
+    <string name="account_totp_setup_step2">Enter the 6-digit code your app shows.</string>
+    <string name="account_totp_code">Code</string>
+    <string name="account_totp_verify">Verify</string>
+    <string name="account_totp_disable_title">Disable authenticator?</string>
+    <string name="account_totp_disable_message">You won\'t be able to sign in with an authenticator code.</string>
 
-    <string name="security_section_sessions">Active sessions</string>
-    <string name="security_sessions_empty">No active sessions.</string>
-    <string name="security_session_unknown_agent">Unknown device</string>
-    <string name="security_session_revoke_title">Revoke session?</string>
-    <string name="security_session_revoke_message">The device using this session will be signed out.</string>
+    <string name="account_section_recovery">Recovery codes</string>
+    <string name="account_recovery_none">No recovery codes generated.</string>
+    <string name="account_recovery_count">%1$d remaining recovery codes.</string>
+    <string name="account_recovery_generate">Generate codes</string>
+    <string name="account_recovery_regenerate">Regenerate codes</string>
+    <string name="account_recovery_regen_title">Regenerate recovery codes?</string>
+    <string name="account_recovery_regen_message">Existing codes stop working immediately. Save the new ones somewhere safe.</string>
+    <string name="account_recovery_codes_title">Recovery codes</string>
+    <string name="account_recovery_codes_warning">Save these codes — each can only be used once. They won\'t be shown again.</string>
 
-    <string name="security_section_oauth">Connected accounts</string>
-    <string name="security_oauth_empty">No connected accounts.</string>
-    <string name="security_oauth_link">Link account</string>
-    <string name="security_oauth_link_title">Link a provider</string>
-    <string name="security_oauth_unlink_title">Unlink account?</string>
-    <string name="security_oauth_unlink_message">You won\'t be able to sign in with %1$s.</string>
-    <string name="security_unlink">Unlink</string>
+    <string name="account_section_oauth">Third-party login</string>
+    <string name="account_oauth_empty">No accounts linked</string>
+    <string name="account_oauth_link">Link account</string>
+    <string name="account_oauth_link_title">Link a provider</string>
+    <string name="account_oauth_unlink_title">Unlink account?</string>
+    <string name="account_oauth_unlink_message">You won\'t be able to sign in with %1$s.</string>
+    <string name="account_unlink">Unlink</string>
 
-    <string name="security_section_tokens">API tokens</string>
-    <string name="security_tokens_empty">No API tokens.</string>
-    <string name="security_token_create">Create token</string>
-    <string name="security_token_create_title">New API token</string>
-    <string name="security_token_name">Name</string>
-    <string name="security_token_new_title">API token created</string>
-    <string name="security_token_new_warning">Copy this token now — it won\'t be shown again.</string>
-    <string name="security_token_delete_title">Delete token?</string>
-    <string name="security_token_delete_message">"%1$s" will no longer authenticate apps using it.</string>
+    <string name="account_cancel">Cancel</string>
+    <string name="account_save">Save</string>
+    <string name="account_done">Done</string>
+    <string name="account_delete">Delete</string>
+    <string name="account_rename">Rename</string>
+    <string name="account_disable">Disable</string>
+    <string name="account_copy">Copy</string>
+    <string name="account_copy_all">Copy all</string>
+    <string name="account_created_at">Created %1$s</string>
+    <string name="account_last_used">Last used %1$s</string>
 
-    <!-- Common (security) -->
-    <string name="security_create">Create</string>
-    <string name="security_cancel">Cancel</string>
-    <string name="security_save">Save</string>
-    <string name="security_done">Done</string>
-    <string name="security_delete">Delete</string>
-    <string name="security_rename">Rename</string>
-    <string name="security_revoke">Revoke</string>
-    <string name="security_disable">Disable</string>
-    <string name="security_copy">Copy</string>
-    <string name="security_copy_all">Copy all</string>
-    <string name="security_created_at">Created %1$s</string>
-    <string name="security_last_used">Last used %1$s</string>
-    <string name="security_token_scopes">Scopes: %1$s</string>
-    <string name="security_token_expires">Expires: %1$s</string>
-    <string name="security_session_current">(current)</string>
+    <!-- Sessions -->
+    <string name="sessions_title">Sessions</string>
+    <string name="sessions_section_title">Active sessions</string>
+    <string name="sessions_empty">No active sessions.</string>
+    <string name="sessions_unknown_agent">Unknown device</string>
+    <string name="sessions_current">(current)</string>
+    <string name="sessions_revoke_title">Revoke session?</string>
+    <string name="sessions_revoke_message">The device using this session will be signed out.</string>
+    <string name="sessions_revoke">Revoke</string>
+
+    <!-- Tokens -->
+    <string name="tokens_title">Authentication tokens</string>
+    <string name="tokens_section_title">API tokens</string>
+    <string name="tokens_empty">No API tokens.</string>
+    <string name="tokens_create">Create token</string>
+    <string name="tokens_create_title">New API token</string>
+    <string name="tokens_create_confirm">Create</string>
+    <string name="tokens_name">Name</string>
+    <string name="tokens_new_title">API token created</string>
+    <string name="tokens_new_warning">Copy this token now — it won\'t be shown again.</string>
+    <string name="tokens_delete_title">Delete token?</string>
+    <string name="tokens_delete_message">"%1$s" will no longer authenticate apps using it.</string>
+    <string name="tokens_scopes">Scopes: %1$s</string>
+    <string name="tokens_expires">Expires: %1$s</string>
+    <string name="tokens_never">Never</string>
 
     <!-- Replication -->
     <string name="replication_title">Replication</string>
+    <string name="replication_this_account_title">This account</string>
+    <string name="replication_this_account_subtitle">Enter both values on the destination server\'s sign-up form to replicate this account there.</string>
+    <string name="replication_username_label">Username</string>
+    <string name="replication_server_peer_id_label">Server peer ID</string>
+    <string name="replication_copy">Copy</string>
+    <string name="replication_copied">Copied</string>
+    <string name="replication_copy_failed">Failed to copy</string>
     <string name="replication_pending_title">Pending requests</string>
     <string name="replication_pending_subtitle">Another server is asking to host a copy of your account. Approve to send a copy.</string>
     <string name="replication_approve">Approve</string>
@@ -137,30 +160,6 @@
     <string name="system_replication_pair_remove_failed">Could not remove pair member</string>
 
     <!-- Domains -->
-    <string name="domain_title">Domains</string>
-    <string name="domain_add">Add domain</string>
-    <string name="domain_add_title">Add domain</string>
-    <string name="domain_name">Domain</string>
-    <string name="domain_status_verified">Verified</string>
-    <string name="domain_status_pending">Pending DNS verification</string>
-    <string name="domain_dns_hint">Create a TXT record:</string>
-    <string name="domain_verify">Verify DNS</string>
-    <string name="domain_https">Automatic HTTPS</string>
-    <string name="domain_delete">Delete domain</string>
-    <string name="domain_delete_title">Delete domain?</string>
-    <string name="domain_delete_message">This will permanently delete "%1$s" and all its routes.</string>
-    <string name="domain_empty_admin">No domains configured.</string>
-    <string name="domain_empty_user">You don\'t have access to any domains.</string>
-    <string name="domain_delegations">Delegations</string>
-    <string name="domain_delegations_empty">No delegations configured.</string>
-    <string name="domain_delegation_add">Add</string>
-    <string name="domain_delegation_add_title">Add delegation</string>
-    <string name="domain_delegation_user">User ID</string>
-    <string name="domain_delegation_path">Path</string>
-    <string name="domain_delegation_delete">Delete delegation</string>
-    <string name="domain_delegation_delete_title">Delete delegation?</string>
-    <string name="domain_delegation_delete_message">%1$s will no longer manage routes on this domain.</string>
-
     <!-- Routes -->
     <string name="route_section">Routes</string>
     <string name="route_add">Add route</string>
@@ -204,7 +203,7 @@
     <string name="document_saved">Saved</string>
 
     <!-- Notification preferences -->
-    <string name="notifprefs_title">Notifications</string>
+    <string name="notifprefs_title">Notification preferences</string>
     <string name="notifprefs_tab_categories">Categories</string>
     <string name="notifprefs_tab_topics">Topics</string>
     <string name="notifprefs_add_category">Add category</string>

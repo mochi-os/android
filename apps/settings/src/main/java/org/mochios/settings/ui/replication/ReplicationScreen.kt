@@ -1,5 +1,8 @@
 package org.mochios.settings.ui.replication
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,12 +13,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
@@ -27,10 +32,13 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -38,7 +46,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -57,6 +67,19 @@ fun ReplicationScreen(
     viewModel: ReplicationViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
+    val snackbar = remember { SnackbarHostState() }
+
+    val copiedOk = stringResource(R.string.replication_copied)
+    val copiedErr = stringResource(R.string.replication_copy_failed)
+    LaunchedEffect(viewModel) {
+        viewModel.events.collect { ev ->
+            when (ev) {
+                is ReplicationEvent.Copied -> snackbar.showSnackbar(if (ev.success) copiedOk else copiedErr)
+            }
+        }
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -68,6 +91,7 @@ fun ReplicationScreen(
                 },
             )
         },
+        snackbarHost = { SnackbarHost(snackbar) },
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
@@ -77,10 +101,47 @@ fun ReplicationScreen(
                     color = MaterialTheme.colorScheme.error,
                     modifier = Modifier.align(Alignment.Center).padding(16.dp),
                 )
+
                 else -> LazyColumn(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
+                    item("this-account-header") {
+                        SectionHeader(title = stringResource(R.string.replication_this_account_title))
+                    }
+
+                    item(key = "this-account-subtitle") {
+                        Text(
+                            stringResource(R.string.replication_this_account_subtitle),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+
+                    item("this-account-username") {
+                        AccountFieldRow(
+                            label = stringResource(R.string.replication_username_label),
+                            value = state.username,
+                            monospace = false,
+                            onCopy = {
+                                val ok = copyToClipboard(context, "username", state.username)
+                                viewModel.reportCopied(ok)
+                            },
+                        )
+                    }
+                    item("this-account-peer") {
+                        AccountFieldRow(
+                            label = stringResource(R.string.replication_server_peer_id_label),
+                            value = state.serverPeerId,
+                            monospace = true,
+                            onCopy = {
+                                val ok = copyToClipboard(context, "peer", state.serverPeerId)
+                                viewModel.reportCopied(ok)
+                            },
+                        )
+                        Spacer(Modifier.height(16.dp))
+                    }
+
                     if (state.links.isNotEmpty()) {
                         item("pending-header") {
                             SectionHeader(
@@ -122,6 +183,43 @@ fun ReplicationScreen(
                     }
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun AccountFieldRow(
+    label: String,
+    value: String,
+    monospace: Boolean,
+    onCopy: () -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.width(100.dp),
+        )
+        Card(
+            modifier = Modifier.weight(1f),
+            colors = CardDefaults.outlinedCardColors(),
+        ) {
+            Text(
+                text = value,
+                style = MaterialTheme.typography.bodySmall,
+                fontFamily = if (monospace) FontFamily.Monospace else FontFamily.Default,
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+            )
+        }
+        IconButton(onClick = onCopy, enabled = value.isNotBlank()) {
+            Icon(
+                Icons.Default.ContentCopy,
+                contentDescription = stringResource(R.string.replication_copy),
+            )
         }
     }
 }
@@ -208,4 +306,12 @@ private fun HostRow(host: ReplicationHost, onRemove: () -> Unit) {
             },
         )
     }
+}
+
+private fun copyToClipboard(context: Context, label: String, value: String): Boolean {
+    if (value.isBlank()) return false
+    val cb =
+        context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return false
+    cb.setPrimaryClip(ClipData.newPlainText(label, value))
+    return true
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="security_method_email">Code par courriel</string>
+    <string name="account_method_email">Code par courriel</string>
     <string name="accounts_field_email">Courriel</string>
     <string name="system_documents_tab_privacy">Privacy</string>
     <string name="system_setting_auth_email">Connexion avec un code par courriel</string>
