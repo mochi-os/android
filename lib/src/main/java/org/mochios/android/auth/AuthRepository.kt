@@ -34,6 +34,7 @@ data class Identity(
 @Singleton
 class AuthRepository @Inject constructor(
     private val authApi: AuthApi,
+    private val tokenApi: TokenApi,
     private val sessionManager: SessionManager
 ) {
     suspend fun beginLogin(email: String): BeginResult {
@@ -112,10 +113,12 @@ class AuthRepository @Inject constructor(
         return mapVerifyResponse(data)
     }
 
-    suspend fun fetchToken(app: String): String {
-        val response = authApi.fetchToken(TokenRequest(app)).unwrapRaw()
-        sessionManager.saveToken(app, response.token)
-        return response.token
+    suspend fun fetchToken(app: String): Result<String> {
+        return runCatching {
+            val response = tokenApi.fetchToken(TokenRequest(app)).unwrapRaw()
+            sessionManager.saveToken(app, response.token)
+            response.token
+        }
     }
 
     suspend fun createIdentity(name: String, privacy: String = "public") {

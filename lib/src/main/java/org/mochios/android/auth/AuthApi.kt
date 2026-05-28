@@ -30,10 +30,6 @@ data class PasskeyBeginResponse(
     val ceremony: String = ""
 )
 
-data class TokenResponse(
-    val token: String = ""
-)
-
 data class IdentityResponse(
     val success: Boolean = false
 )
@@ -106,7 +102,6 @@ data class PasskeyResponseData(
     val authenticatorData: String,
     val signature: String
 )
-data class TokenRequest(val app: String)
 data class IdentityRequest(val name: String, val privacy: String = "public")
 data class RecoveryRequest(val email: String, val code: String)
 
@@ -132,9 +127,6 @@ interface AuthApi {
 
     @POST("_/auth/passkey/finish")
     suspend fun passkeyFinish(@Body body: PasskeyFinishRequest): Response<VerifyResponse>
-
-    @POST("_/token")
-    suspend fun fetchToken(@Body body: TokenRequest): Response<TokenResponse>
 
     @POST("_/identity")
     suspend fun createIdentity(@Body body: IdentityRequest): Response<IdentityResponse>

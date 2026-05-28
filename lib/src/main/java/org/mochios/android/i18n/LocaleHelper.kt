@@ -20,11 +20,14 @@ object LocaleHelper {
     }
 
     fun apply(context: Context, tag: String?) {
-        if (tag.isNullOrBlank()) return
+        // A blank tag means "follow the device locale": clear the per-app
+        // override (TIRAMISU+) so the system reverts, and leave the JVM
+        // default untouched — the next process launch re-derives it.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            context.getSystemService(LocaleManager::class.java)
-                ?.applicationLocales = LocaleList.forLanguageTags(tag)
+            context.getSystemService(LocaleManager::class.java)?.applicationLocales =
+                if (tag.isNullOrBlank()) LocaleList.getEmptyLocaleList()
+                else LocaleList.forLanguageTags(tag)
         }
-        Locale.setDefault(Locale.forLanguageTag(tag))
+        if (!tag.isNullOrBlank()) Locale.setDefault(Locale.forLanguageTag(tag))
     }
 }

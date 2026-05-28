@@ -5,7 +5,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import org.mochios.settings.ui.profile.SettingsRetrofit
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.Field
@@ -14,9 +13,28 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import javax.inject.Singleton
 
-// ---------- DTOs ----------
+// ---------- Shared ----------
+
+/** Generic `{ "ok": true }` envelope used by mutate endpoints across all
+ *  settings APIs. Lives here because AccountApi defines the largest set of
+ *  endpoints that return it; TokensApi and SessionsApi import from here. */
+data class OkResponse(val ok: Boolean = false)
+
+// ---------- Identity ----------
+
+data class IdentityResponse(
+    @SerializedName("entity") val entity: String = "",
+    @SerializedName("fingerprint") val fingerprint: String = "",
+    @SerializedName("username") val username: String = "",
+    @SerializedName("name") val name: String = "",
+    @SerializedName("privacy") val privacy: String = "private",
+)
+
+// ---------- Login methods ----------
 
 data class MethodsResponse(val methods: List<String> = emptyList())
+
+// ---------- Passkeys ----------
 
 data class Passkey(
     val id: String = "",
@@ -36,6 +54,8 @@ data class PasskeyRegisterBegin(
     val options: com.google.gson.JsonObject = com.google.gson.JsonObject(),
 )
 
+// ---------- TOTP ----------
+
 data class TotpStatus(val enabled: Boolean = false)
 
 data class TotpSetupResponse(
@@ -45,22 +65,13 @@ data class TotpSetupResponse(
     val domain: String = "",
 )
 
-data class OkResponse(val ok: Boolean = false)
+// ---------- Recovery codes ----------
 
 data class RecoveryCountResponse(val count: Int = 0)
 
 data class RecoveryGenerateResponse(val codes: List<String> = emptyList())
 
-data class Session(
-    val id: String = "",
-    val address: String = "",
-    val agent: String = "",
-    val created: Long = 0,
-    val accessed: Long = 0,
-    val expires: Long = 0,
-)
-
-data class SessionsResponse(val sessions: List<Session> = emptyList())
+// ---------- OAuth identities ----------
 
 data class OAuthIdentity(
     val provider: String = "",
@@ -72,22 +83,21 @@ data class OAuthIdentity(
 
 data class OAuthIdentitiesResponse(val identities: List<OAuthIdentity> = emptyList())
 
-data class ApiToken(
-    val hash: String = "",
-    val name: String = "",
-    val scopes: String = "",
-    val created: Long = 0,
-    @SerializedName("last_used") val lastUsed: Long = 0,
-    val expires: String = "",
-)
-
-data class TokensResponse(val tokens: List<ApiToken> = emptyList())
-
-data class TokenCreateResponse(val token: String = "")
-
 // ---------- Retrofit ----------
 
-interface SecurityApi {
+interface AccountApi {
+    // Identity
+    @GET("settings/-/user/account/identity")
+    suspend fun getIdentity(): Response<IdentityResponse>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/identity/update")
+    suspend fun updateIdentity(
+        @Field("name") name: String? = null,
+        @Field("privacy") privacy: String? = null,
+    ): Response<Map<String, Any>>
+
+    // Login methods
     @GET("settings/-/user/account/methods")
     suspend fun getMethods(): Response<MethodsResponse>
 
@@ -142,14 +152,6 @@ interface SecurityApi {
     @POST("settings/-/user/account/recovery/generate")
     suspend fun generateRecovery(): Response<RecoveryGenerateResponse>
 
-    // Sessions
-    @GET("settings/-/user/account/sessions")
-    suspend fun listSessions(): Response<SessionsResponse>
-
-    @FormUrlEncoded
-    @POST("settings/-/user/account/session/revoke")
-    suspend fun revokeSession(@Field("id") id: String): Response<OkResponse>
-
     // OAuth identities
     @GET("settings/-/user/account/oauth")
     suspend fun listOAuth(): Response<OAuthIdentitiesResponse>
@@ -157,29 +159,13 @@ interface SecurityApi {
     @FormUrlEncoded
     @POST("settings/-/user/account/oauth/unlink")
     suspend fun unlinkOAuth(@Field("provider") provider: String): Response<OkResponse>
-
-    // API tokens
-    @GET("settings/-/user/account/tokens")
-    suspend fun listTokens(): Response<TokensResponse>
-
-    @FormUrlEncoded
-    @POST("settings/-/user/account/token/create")
-    suspend fun createToken(
-        @Field("name") name: String,
-        @Field("scopes") scopes: String? = null,
-        @Field("expires") expires: String? = null,
-    ): Response<TokenCreateResponse>
-
-    @FormUrlEncoded
-    @POST("settings/-/user/account/token/delete")
-    suspend fun deleteToken(@Field("hash") hash: String): Response<OkResponse>
 }
 
 @Module
 @InstallIn(SingletonComponent::class)
-object SecurityApiModule {
+object AccountApiModule {
     @Provides
     @Singleton
-    fun provideSecurityApi(@SettingsRetrofit retrofit: Retrofit): SecurityApi =
-        retrofit.create(SecurityApi::class.java)
+    fun provideAccountApi(@SettingsRetrofit retrofit: Retrofit): AccountApi =
+        retrofit.create(AccountApi::class.java)
 }

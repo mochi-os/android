@@ -1,33 +1,11 @@
 package org.mochios.android.ui.theme
 
 import org.mochios.android.auth.SessionManager
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.http.GET
-import retrofit2.http.Header
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
+import org.mochios.android.i18n.PreferencesApi
 import javax.inject.Inject
 import javax.inject.Singleton
-
-/** Response from GET /settings/-/user/preferences */
-private data class PreferencesResponse(
-    val preferences: Map<String, String>?,
-    val themes: List<ThemeData>?,
-    val default_theme: String?
-)
-
-private data class ThemeData(
-    val id: String?,
-    val hue: Double?,
-    val chroma: Double?,
-    val hue_bg: Double?
-)
-
-private interface SettingsApi {
-    @GET("settings/-/user/preferences/data")
-    suspend fun getPreferences(
-        @Header("Authorization") token: String
-    ): Response<PreferencesResponse>
-}
 
 /**
  * Fetches the user's color theme from the settings app and caches it locally.
@@ -35,13 +13,11 @@ private interface SettingsApi {
  * against the available themes list.
  */
 @Singleton
-class ThemeRepository @Inject constructor(
+class ThemeRepository @Inject internal constructor(
     private val sessionManager: SessionManager,
-    private val retrofit: Retrofit
+    private val tokenApi: TokenApi,
+    private val api: PreferencesApi,
 ) {
-    private val settingsApi: SettingsApi by lazy {
-        retrofit.create(SettingsApi::class.java)
-    }
 
     /**
      * Fetch the user's theme from the server and cache it in DataStore.
@@ -50,13 +26,12 @@ class ThemeRepository @Inject constructor(
     suspend fun fetchAndCacheTheme() {
         try {
             // Get a settings app token
-            val tokenResponse = retrofit.create(TokenApi::class.java)
-                .fetchToken(TokenRequest("settings"))
+            val tokenResponse = tokenApi.fetchToken(TokenRequest("settings"))
             val tokenBody = tokenResponse.body() ?: return
             val jwt = tokenBody.token
 
             // Fetch preferences with the settings token
-            val response = settingsApi.getPreferences("Bearer $jwt")
+            val response = api.getPreferences("Bearer $jwt")
             val data = response.body() ?: return
 
             // Resolve which theme is active
@@ -73,15 +48,4 @@ class ThemeRepository @Inject constructor(
             // Theme fetch is best-effort — cached values or defaults apply
         }
     }
-}
-
-/** Reuse the existing token endpoint format */
-private data class TokenRequest(val app: String)
-private data class TokenResponse(val token: String)
-
-private interface TokenApi {
-    @retrofit2.http.POST("_/token")
-    suspend fun fetchToken(
-        @retrofit2.http.Body request: TokenRequest
-    ): Response<TokenResponse>
 }

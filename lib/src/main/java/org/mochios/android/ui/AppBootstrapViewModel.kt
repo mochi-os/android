@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -112,11 +113,13 @@ class AppBootstrapViewModel @Inject constructor(
                             _stage.value = AuthStage.NeedsLogin
                         }
                     }
+
                     is AuthStage.NeedsLogin, is AuthStage.NeedsAccountChoice -> {
                         // Sibling login surfaced a new account — re-evaluate so
                         // we offer adoption.
                         if (accounts.isNotEmpty()) evaluate()
                     }
+
                     else -> Unit  // Booting / Bootstrapping — ignore.
                 }
             }
@@ -226,23 +229,29 @@ class AppBootstrapViewModel @Inject constructor(
 
         // Mint the per-app JWT. This is the single source of truth — if it
         // fails the session is dead, drop to login.
-        try {
-            authRepository.fetchToken(appName)
-        } catch (e: Exception) {
+
+        val result = authRepository.fetchToken(appName)
+        if (result.isFailure) {
             sessionManager.clearAll()
             _stage.value = AuthStage.NeedsLogin
             return
         }
 
+
         // Prefetch tokens for the client's other Mochi-apps so navigating
         // to them via the launchpad or a notification doesn't surface "app
-        // token required" on the first API call. Best-effort — a per-app
-        // mint failure (user lacks access to that app on this server, etc.)
-        // is logged but not fatal. The cold-start app's mint above is the
+        // token required" on the first API call. Fired off the bootstrap
+        // coroutine into its own IO-dispatched job so the main app reaches
+        // Ready as soon as the cold-start app's JWT (above) is in hand,
+        // instead of stalling on N extra token round-trips. Best-effort per
+        // app: a mint failure (user lacks access to that app on this server,
+        // etc.) is swallowed; the cold-start app's mint above is the
         // canonical session check.
-        for (other in prefetchApps) {
-            if (other == appName) continue
-            runCatching { authRepository.fetchToken(other) }
+        viewModelScope.launch(Dispatchers.IO) {
+            for (other in prefetchApps) {
+                if (other == appName) continue
+                authRepository.fetchToken(other)
+            }
         }
 
         // Reconcile AccountManager with our just-validated session. The local

@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import org.mochios.settings.ui.profile.SettingsRetrofit
+import org.mochios.settings.api.SettingsRetrofit
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.Field

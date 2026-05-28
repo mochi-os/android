@@ -2,6 +2,7 @@ package org.mochios.android.push
 
 import android.content.Context
 import android.util.Log
+import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
@@ -10,7 +11,10 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
 
 /**
  * Server-driven transport selection. After auth, the client asks the user's
@@ -76,8 +80,11 @@ object PushTransport {
             return
         }
 
+        val tokenApi = EntryPointAccessors
+            .fromApplication(context.applicationContext, PushEntryPoint::class.java)
+            .tokenApi()
         val setup = try {
-            fetchSetup(client, server)
+            fetchSetup(tokenApi, client, server)
         } catch (e: Exception) {
             Log.w(TAG, "fetchSetup($server) failed: ${e.javaClass.simpleName}: ${e.message}", e)
             null
@@ -165,8 +172,14 @@ object PushTransport {
             .apply()
     }
 
-    private fun fetchSetup(client: OkHttpClient, server: String): JSONObject? {
-        val appToken = mintAppToken(client, server, "notifications") ?: return null
+    private suspend fun fetchSetup(
+        tokenApi: TokenApi,
+        client: OkHttpClient,
+        server: String,
+    ): JSONObject? {
+        val appToken = runCatching {
+            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+        }.getOrNull() ?: return null
         val url = server.trimEnd('/') + "/notifications/-/push/setup"
         // GET — the action takes no parameters; server reads from settings.
         val request = Request.Builder()
@@ -194,20 +207,5 @@ object PushTransport {
             return null
         }
         return FcmRegistrar.FirebaseConfig(project, app, key, sender)
-    }
-
-    private fun mintAppToken(client: OkHttpClient, server: String, app: String): String? {
-        val url = server.trimEnd('/') + "/_/token"
-        val body = JSONObject().put("app", app).toString()
-            .toRequestBody("application/json".toMediaType())
-        val request = Request.Builder().url(url).post(body).build()
-        client.newCall(request).execute().use { resp ->
-            if (!resp.isSuccessful) return null
-            return try {
-                JSONObject(resp.body?.string().orEmpty()).optString("token").ifBlank { null }
-            } catch (_: Exception) {
-                null
-            }
-        }
     }
 }

@@ -9,6 +9,7 @@ import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
+import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,6 +26,11 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import org.mochios.android.account.MochiAccount
+import org.mochios.android.api.ApiClient
+import org.mochios.android.api.ApiException
+import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
 import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
@@ -56,6 +62,7 @@ class PushService : Service() {
 
     @Inject lateinit var webSocket: MochiWebSocket
     @Inject lateinit var okHttpClient: OkHttpClient
+    @Inject lateinit var gson: Gson
 
     private val store by lazy { DistributorStore(applicationContext) }
     // identity → subscriptionId. ConcurrentHashMap so reconcile() can claim
@@ -190,9 +197,8 @@ class PushService : Service() {
         }
     }
 
-    private fun mintToken(server: String, sessionCookie: String): String? {
-        val url = server.trimEnd('/') + "/_/token"
-        val httpUrl = url.toHttpUrl()
+    private suspend fun mintToken(server: String, sessionCookie: String): String? {
+        val httpUrl = (server.trimEnd('/') + "/").toHttpUrl()
         val cookie = Cookie.Builder()
             .domain(httpUrl.host)
             .path("/")
@@ -209,22 +215,19 @@ class PushService : Service() {
                 override fun loadForRequest(url: okhttp3.HttpUrl): List<Cookie> = listOf(cookie)
             })
             .build()
-        val body = JSONObject().put("app", "notifications").toString()
-            .toRequestBody("application/json".toMediaType())
-        val request = Request.Builder().url(url).post(body).build()
-        return runCatching {
-            tempClient.newCall(request).execute().use { resp ->
-                if (!resp.isSuccessful) {
-                    Log.w(TAG, "/_/token returned ${resp.code}")
-                    if (resp.code == 401) {
-                        Reauth.report401(applicationContext, server)
-                    }
-                    return@use null
-                }
-                Reauth.reportSuccess(applicationContext, server)
-                JSONObject(resp.body?.string().orEmpty()).optString("token").ifBlank { null }
+        val tokenApi = ApiClient.createRetrofit(server, tempClient, gson)
+            .create(TokenApi::class.java)
+        return try {
+            val token = tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+            Reauth.reportSuccess(applicationContext, server)
+            token.ifBlank { null }
+        } catch (e: Exception) {
+            Log.w(TAG, "/_/token failed: ${e.message}")
+            if (e is ApiException && e.code == 401) {
+                Reauth.report401(applicationContext, server)
             }
-        }.getOrNull()
+            null
+        }
     }
 
     private fun handleEvent(
