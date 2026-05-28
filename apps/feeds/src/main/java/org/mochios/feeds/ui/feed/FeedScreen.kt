@@ -127,6 +127,9 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
 import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.Tag
+import org.mochios.feeds.ui.post.AddTagDialog
+import org.mochios.feeds.ui.post.PostTagsButton
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
@@ -134,7 +137,7 @@ import org.mochios.android.R as MochiR
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FeedScreen(
-    onNavigateToPost: (feedId: String, postId: String, sourceUrl: String?) -> Unit,
+    onNavigateToPost: (feedId: String, postId: String, sourceUrl: String?, expandComments: Boolean) -> Unit,
     onNavigateToCreatePost: (String) -> Unit,
     onNavigateToEditPost: (String, String) -> Unit,
     onNavigateToSettings: (String) -> Unit,
@@ -182,6 +185,7 @@ fun FeedScreen(
     var showAbout by remember { mutableStateOf(false) }
     var showSuggestedInterests by remember { mutableStateOf(false) }
     var showDefaultSortDialog by remember { mutableStateOf(false) }
+    var addTagTarget by remember { mutableStateOf<String?>(null) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
     // Mark the current page's post as read as soon as the swipe settles on
@@ -528,10 +532,13 @@ fun FeedScreen(
                                         serverUrl = viewModel.serverUrl,
                                         fallbackFeedId = viewModel.feedId,
                                         canManage = permissions.manage,
-                                        onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl) },
+                                        onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
+                                        onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
                                         onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
                                         onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
-                                        onDelete = { pendingDelete = post }
+                                        onDelete = { pendingDelete = post },
+                                        onAddTag = { addTagTarget = post.id },
+                                        onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) }
                                     )
                                 }
                             }
@@ -619,6 +626,16 @@ fun FeedScreen(
             }
         )
     }
+
+    addTagTarget?.let { postId ->
+        AddTagDialog(
+            onDismiss = { addTagTarget = null },
+            onAdd = { label, qid ->
+                viewModel.addTag(postId, label, qid)
+                addTagTarget = null
+            }
+        )
+    }
     }
 }
 
@@ -629,9 +646,12 @@ private fun PostCard(
     fallbackFeedId: String,
     canManage: Boolean,
     onClick: () -> Unit,
+    onComments: () -> Unit,
     onReact: (String) -> Unit,
     onEdit: () -> Unit,
-    onDelete: () -> Unit
+    onDelete: () -> Unit,
+    onAddTag: () -> Unit,
+    onAdjustInterest: (Tag, String) -> Unit
 ) {
     // Lightbox open-state: (image urls list, starting index). null = closed.
     // Tapping an image populates this; the lightbox dialog renders above the
@@ -806,7 +826,7 @@ private fun PostCard(
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.primary,
                             fontWeight = FontWeight.Medium,
-                            modifier = Modifier.clickable(onClick = onClick)
+                            modifier = Modifier.clickable(onClick = onComments)
                         )
                     }
                 }
@@ -825,7 +845,12 @@ private fun PostCard(
                 onRemoveReaction = { onReact(post.myReaction) },
                 modifier = Modifier.weight(1f)
             )
-            IconButton(onClick = onClick, modifier = Modifier.size(32.dp)) {
+            PostTagsButton(
+                tags = post.tags,
+                onAddTag = onAddTag,
+                onAdjustInterest = onAdjustInterest,
+            )
+            IconButton(onClick = onComments, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.Default.ChatBubbleOutline,
                     contentDescription = stringResource(R.string.feeds_comments),

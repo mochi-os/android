@@ -27,7 +27,7 @@ object FeedsApp {
     const val ROUTER = "feeds/router"
     const val FEED = "feeds/feed/{feedId}"
     const val POST = "feeds/post/{feedId}/{postId}"
-    const val POST_SOURCE = "feeds/postSource/{feedId}/{postId}?url={url}"
+    const val POST_SOURCE = "feeds/postSource/{feedId}/{postId}?url={url}&expand={expand}"
     const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}"
     const val FIND_FEEDS = "feeds/findFeeds"
     const val FEED_SETTINGS = "feeds/feedSettings/{feedId}"
@@ -35,9 +35,9 @@ object FeedsApp {
 
     fun feed(feedId: String) = "feeds/feed/$feedId"
     fun post(feedId: String, postId: String) = "feeds/post/$feedId/$postId"
-    fun postSource(feedId: String, postId: String, url: String): String {
+    fun postSource(feedId: String, postId: String, url: String, expand: Boolean): String {
         val encoded = URLEncoder.encode(url, StandardCharsets.UTF_8.name())
-        return "feeds/postSource/$feedId/$postId?url=$encoded"
+        return "feeds/postSource/$feedId/$postId?url=$encoded&expand=$expand"
     }
     fun createPost(feedId: String? = null, postId: String? = null): String {
         val params = listOfNotNull(
@@ -68,9 +68,9 @@ fun NavGraphBuilder.feedsNavGraph(
         arguments = listOf(navArgument("feedId") { type = NavType.StringType })
     ) {
         FeedScreen(
-            onNavigateToPost = { feedId, postId, sourceUrl ->
+            onNavigateToPost = { feedId, postId, sourceUrl, expandComments ->
                 if (sourceUrl != null) {
-                    navController.navigate(FeedsApp.postSource(feedId, postId, sourceUrl))
+                    navController.navigate(FeedsApp.postSource(feedId, postId, sourceUrl, expandComments))
                 } else {
                     navController.navigate(FeedsApp.post(feedId, postId))
                 }
@@ -125,6 +125,10 @@ fun NavGraphBuilder.feedsNavGraph(
             navArgument("url") {
                 type = NavType.StringType
                 defaultValue = ""
+            },
+            navArgument("expand") {
+                type = NavType.BoolType
+                defaultValue = false
             }
         )
     ) { backStackEntry ->
@@ -134,6 +138,7 @@ fun NavGraphBuilder.feedsNavGraph(
         }.getOrDefault(encodedUrl)
         PostSourceScreen(
             sourceUrl = sourceUrl,
+            initiallyExpanded = backStackEntry.arguments?.getBoolean("expand") == true,
             onNavigateBack = { navController.popBackStack() },
             onEditPost = { feedId, postId ->
                 navController.navigate(FeedsApp.createPost(feedId = feedId, postId = postId))

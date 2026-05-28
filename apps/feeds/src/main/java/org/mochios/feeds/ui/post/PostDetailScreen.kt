@@ -36,6 +36,7 @@ import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
@@ -70,6 +71,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
@@ -571,17 +573,140 @@ private fun PostContent(
             }
         }
 
-        // Reactions
+        // Reactions, with the tags button on the trailing edge. In the source
+        // sheet (showBody = false) the tags button lives in the sheet header
+        // instead, so it stays reachable from the peek without expanding.
         Spacer(modifier = Modifier.height(12.dp))
-        ReactionBar(
-            reactions = toReactionCounts(post.reactions, post.myReaction),
-            onReact = onReact,
-            onRemoveReaction = { onReact(post.myReaction) }
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            ReactionBar(
+                reactions = toReactionCounts(post.reactions, post.myReaction),
+                onReact = onReact,
+                onRemoveReaction = { onReact(post.myReaction) },
+                modifier = Modifier.weight(1f)
+            )
+            if (showBody) {
+                PostTagsButton(
+                    tags = tags,
+                    onAddTag = onAddTag,
+                    onAdjustInterest = onAdjustInterest,
+                )
+            }
+        }
 
         Spacer(modifier = Modifier.height(8.dp))
         HorizontalDivider()
     }
+}
+
+// Web-parity tags affordance: a tag icon + count that opens a popup listing the
+// post's tags. Entity-backed (qid) tags expose interest tuning; an "Add tag"
+// action opens the add dialog. Mirrors web's PostTagsTooltip.
+@Composable
+internal fun PostTagsButton(
+    tags: List<Tag>,
+    onAddTag: () -> Unit,
+    onAdjustInterest: (Tag, String) -> Unit,
+) {
+    var open by remember { mutableStateOf(false) }
+    Box {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .clickable { open = true }
+                .padding(horizontal = 6.dp, vertical = 4.dp)
+        ) {
+            Icon(
+                Icons.Default.LocalOffer,
+                contentDescription = stringResource(R.string.feeds_tags),
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            if (tags.isNotEmpty()) {
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(
+                    text = "${tags.size}",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            tags.forEach { tag -> TagMenuRow(tag = tag, onAdjustInterest = onAdjustInterest) }
+            if (tags.isNotEmpty()) {
+                HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
+            }
+            DropdownMenuItem(
+                text = { Text(stringResource(R.string.feeds_add_tag)) },
+                leadingIcon = {
+                    Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                },
+                onClick = {
+                    open = false
+                    onAddTag()
+                }
+            )
+        }
+    }
+}
+
+@Composable
+private fun TagMenuRow(
+    tag: Tag,
+    onAdjustInterest: (Tag, String) -> Unit,
+) {
+    // Interest tuning only applies to entity-backed (qid) tags — these feed the
+    // user-global interest model. Free-text tags render as plain labels.
+    val tunable = !tag.qid.isNullOrEmpty()
+    val labelColor = tag.interest?.let { interestColor(it) } ?: MaterialTheme.colorScheme.onSurface
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .width(260.dp)
+            .padding(start = 12.dp, end = 4.dp, top = 2.dp, bottom = 2.dp)
+    ) {
+        Text(
+            text = "#${tag.label}",
+            style = MaterialTheme.typography.bodyMedium,
+            color = labelColor,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f)
+        )
+        if (tunable) {
+            IconButton(onClick = { onAdjustInterest(tag, "up") }, modifier = Modifier.size(36.dp)) {
+                Icon(
+                    Icons.Default.ThumbUp,
+                    contentDescription = stringResource(R.string.feeds_tag_more_up),
+                    modifier = Modifier.size(16.dp)
+                )
+            }
+            IconButton(onClick = { onAdjustInterest(tag, "down") }, modifier = Modifier.size(36.dp)) {
+                Icon(
+                    Icons.Default.ThumbDown,
+                    contentDescription = stringResource(R.string.feeds_tag_more_down),
+                    modifier = Modifier.size(16.dp)
+                )
+            }
+            IconButton(onClick = { onAdjustInterest(tag, "remove") }, modifier = Modifier.size(36.dp)) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.feeds_tag_remove),
+                    modifier = Modifier.size(16.dp)
+                )
+            }
+        }
+    }
+}
+
+// Continuous interest scale: red (-100) → blue (0) → green (+100). Mirrors the
+// web PostTags hue ramp so the same interest reads as the same colour on both.
+private fun interestColor(interest: Double): Color {
+    val hue = (240.0 - (interest / 100.0) * 120.0).toFloat().coerceIn(0f, 360f)
+    return Color.hsl(hue, 0.8f, 0.45f)
 }
 
 private fun toReactionCounts(reactions: List<Reaction>, myReaction: String): List<ReactionCount> =

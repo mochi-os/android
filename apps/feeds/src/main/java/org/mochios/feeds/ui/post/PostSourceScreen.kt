@@ -89,6 +89,7 @@ fun PostSourceScreen(
     sourceUrl: String,
     onNavigateBack: () -> Unit,
     onEditPost: (feedId: String, postId: String) -> Unit,
+    initiallyExpanded: Boolean = false,
     viewModel: PostDetailViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
@@ -99,6 +100,7 @@ fun PostSourceScreen(
     val isSendingComment by viewModel.isSendingComment.collectAsState()
     val replyingTo by viewModel.replyingTo.collectAsState()
     val actionError by viewModel.actionError.collectAsState()
+    val tags by viewModel.tags.collectAsState()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showDeleteCommentDialog by remember { mutableStateOf<String?>(null) }
@@ -112,7 +114,13 @@ fun PostSourceScreen(
     var reloadNonce by remember { mutableIntStateOf(0) }
 
     val snackbarHostState = remember { SnackbarHostState() }
-    val sheetState = rememberStandardBottomSheetState(initialValue = SheetValue.PartiallyExpanded)
+    // Open expanded when the user arrived via a comment affordance (comment
+    // icon / "view more comments"); collapsed (article-first) when they tapped
+    // the card body. Otherwise the comments + tags hide behind a thin peek
+    // under the full-screen article WebView and read as unreachable.
+    val sheetState = rememberStandardBottomSheetState(
+        initialValue = if (initiallyExpanded) SheetValue.Expanded else SheetValue.PartiallyExpanded
+    )
     val scaffoldState = rememberBottomSheetScaffoldState(bottomSheetState = sheetState)
     val coroutineScope = rememberCoroutineScope()
 
@@ -262,6 +270,8 @@ fun PostSourceScreen(
                 onCancelReply = { viewModel.setReplyingTo(null) },
                 onSearchMembers = { viewModel.searchMembers(it) },
                 commentCount = post?.let { countComments(it.comments) } ?: 0,
+                tags = tags,
+                onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) },
                 showAddTagDialog = { showAddTagDialog = true },
                 showDeleteCommentDialog = { showDeleteCommentDialog = it },
                 onExpand = {
@@ -499,6 +509,8 @@ private fun PostSourceSheet(
     onCancelReply: () -> Unit,
     onSearchMembers: suspend (String) -> List<org.mochios.android.ui.components.MentionSuggestion>,
     commentCount: Int,
+    tags: List<org.mochios.feeds.model.Tag>,
+    onAdjustInterest: (org.mochios.feeds.model.Tag, String) -> Unit,
     showAddTagDialog: () -> Unit,
     showDeleteCommentDialog: (String) -> Unit,
     onExpand: () -> Unit,
@@ -524,6 +536,11 @@ private fun PostSourceSheet(
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier.weight(1f)
+            )
+            PostTagsButton(
+                tags = tags,
+                onAddTag = showAddTagDialog,
+                onAdjustInterest = onAdjustInterest,
             )
             TextButton(onClick = onExpand) {
                 Text(stringResource(R.string.feeds_view_post))

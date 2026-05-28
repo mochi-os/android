@@ -360,6 +360,37 @@ class FeedViewModel @Inject constructor(
         }
     }
 
+    fun addTag(postId: String, label: String, qid: String? = null) {
+        viewModelScope.launch {
+            try {
+                repository.addTag(feedId, postId, label, qid)
+                // Refresh just this post's tags so the card's tag list reflects
+                // the addition without reloading the whole feed.
+                val updated = repository.getPostTags(feedId, postId)
+                _posts.value = _posts.value.map { post ->
+                    if (post.id == postId) post.copy(tags = updated) else post
+                }
+            } catch (_: Exception) {
+                // Best-effort, like reactToPost — a failed add simply doesn't appear.
+            }
+        }
+    }
+
+    fun adjustInterest(tag: Tag, direction: String) {
+        viewModelScope.launch {
+            try {
+                repository.adjustInterest(
+                    feedId,
+                    qid = tag.qid?.takeIf { it.isNotEmpty() },
+                    label = if (tag.qid.isNullOrEmpty()) tag.label else null,
+                    direction = direction
+                )
+            } catch (_: Exception) {
+                // Interest is user-global and best-effort; silent on failure.
+            }
+        }
+    }
+
     /**
      * Called when the bottom of [postId] has been continuously visible for
      * the threshold (currently 1s, enforced in the UI layer). Adds the post
