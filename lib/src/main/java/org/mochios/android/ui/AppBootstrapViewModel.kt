@@ -247,12 +247,13 @@ class AppBootstrapViewModel @Inject constructor(
         // app: a mint failure (user lacks access to that app on this server,
         // etc.) is swallowed; the cold-start app's mint above is the
         // canonical session check.
-        viewModelScope.launch(Dispatchers.IO) {
-            for (other in prefetchApps) {
-                if (other == appName) continue
-                authRepository.fetchToken(other)
+        prefetchApps
+            .filter { other -> other != appName }
+            .forEach { other ->
+                viewModelScope.launch(Dispatchers.IO) {
+                    authRepository.fetchToken(other)
+                }
             }
-        }
 
         // Reconcile AccountManager with our just-validated session. The local
         // session is canonical "is logged in"; AccountManager is for sharing.
