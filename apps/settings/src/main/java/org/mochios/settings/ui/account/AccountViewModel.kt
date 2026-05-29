@@ -1,4 +1,4 @@
-package org.mochios.settings.ui.security
+package org.mochios.settings.ui.account
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -14,38 +14,47 @@ import org.mochios.android.auth.OAuthPkce
 import org.mochios.android.auth.PasskeyManager
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
-import org.mochios.settings.api.ApiToken
+import org.mochios.settings.api.AccountApi
 import org.mochios.settings.api.OAuthIdentity
 import org.mochios.settings.api.Passkey
-import org.mochios.settings.api.SecurityApi
-import org.mochios.settings.api.Session
 import org.mochios.settings.api.TotpSetupResponse
+import retrofit2.Response
 import javax.inject.Inject
 
-data class SecurityUiState(
+data class Identity(
+    val entity: String = "",
+    val fingerprint: String = "",
+    val username: String = "",
+    val name: String = "",
+    val privacy: String = "private",
+)
+
+data class AccountUiState(
     val isLoading: Boolean = true,
+    val isSaving: Boolean = false,
     val error: MochiError? = null,
-    /** Sorted accessed-desc. */
-    val sessions: List<Session> = emptyList(),
+    val identity: Identity = Identity(),
+    val nameDraft: String = "",
     val passkeys: List<Passkey> = emptyList(),
     val totpEnabled: Boolean = false,
     /** Available factors as advertised by `-/user/account/methods` (current selected set). */
     val enabledMethods: Set<String> = emptySet(),
     val recoveryCount: Int = 0,
     val oauth: List<OAuthIdentity> = emptyList(),
-    val tokens: List<ApiToken> = emptyList(),
 )
 
 @HiltViewModel
-class SecurityViewModel @Inject constructor(
-    private val api: SecurityApi,
+class AccountViewModel @Inject constructor(
+    private val api: AccountApi,
     private val passkeyManager: PasskeyManager,
     private val authRepository: AuthRepository,
     private val sessionManager: SessionManager,
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(SecurityUiState())
-    val uiState: StateFlow<SecurityUiState> = _uiState.asStateFlow()
+    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
+
+    private val _uiState = MutableStateFlow(AccountUiState())
+    val uiState: StateFlow<AccountUiState> = _uiState.asStateFlow()
 
     /** Show-once data — emitted via separate flows so the UI can render the
      *  one-time display and clear after the user acknowledges. */
@@ -54,9 +63,6 @@ class SecurityViewModel @Inject constructor(
 
     private val _newRecoveryCodes = MutableStateFlow<List<String>?>(null)
     val newRecoveryCodes: StateFlow<List<String>?> = _newRecoveryCodes.asStateFlow()
-
-    private val _newApiToken = MutableStateFlow<String?>(null)
-    val newApiToken: StateFlow<String?> = _newApiToken.asStateFlow()
 
     /** Browser launch URL for an in-progress OAuth-link flow. The screen
      *  observes; consumes via consumeOAuthLaunchUrl() after firing an Intent. */
@@ -87,31 +93,78 @@ class SecurityViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             val state = _uiState.value
             try {
+                val identityBody = api.getIdentity().bodyOrThrow()
+                val identity = Identity(
+                    entity = identityBody.entity,
+                    fingerprint = identityBody.fingerprint,
+                    username = identityBody.username,
+                    name = identityBody.name,
+                    privacy = identityBody.privacy,
+                )
                 val methods = api.getMethods().bodyOrThrow().methods
                 val passkeys = api.listPasskeys().bodyOrThrow().passkeys
                     .sortedWith(compareBy(NaturalCompare) { it.name })
                 val totp = api.getTotp().bodyOrThrow().enabled
                 val recovery = api.recoveryCount().bodyOrThrow().count
-                val sessions = api.listSessions().bodyOrThrow().sessions.sortedByDescending { it.accessed }
                 val oauth = api.listOAuth().bodyOrThrow().identities
                     .sortedWith(compareBy(NaturalCompare) { it.provider })
-                val tokens = api.listTokens().bodyOrThrow().tokens
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = state.copy(
                     isLoading = false,
+                    identity = identity,
+                    nameDraft = identity.name,
                     enabledMethods = methods.toSet(),
                     passkeys = passkeys,
                     totpEnabled = totp,
                     recoveryCount = recovery,
-                    sessions = sessions,
                     oauth = oauth,
-                    tokens = tokens,
                 )
             } catch (e: Exception) {
                 _uiState.value = state.copy(isLoading = false, error = e.toMochiError())
             }
         }
     }
+
+    // ---------- Identity ----------
+
+    fun updateName(draft: String) {
+        _uiState.value = _uiState.value.copy(nameDraft = draft)
+    }
+
+    fun saveName() {
+        val name = _uiState.value.nameDraft.trim()
+        if (name.isBlank() || name == _uiState.value.identity.name) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isSaving = true, error = null)
+            try {
+                api.updateIdentity(name = name).bodyOrThrow()
+                _uiState.value = _uiState.value.copy(
+                    isSaving = false,
+                    identity = _uiState.value.identity.copy(name = name),
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    fun setPrivacy(privacy: String) {
+        if (privacy != "public" && privacy != "private") return
+        if (privacy == _uiState.value.identity.privacy) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isSaving = true, error = null)
+            try {
+                api.updateIdentity(privacy = privacy).bodyOrThrow()
+                _uiState.value = _uiState.value.copy(
+                    isSaving = false,
+                    identity = _uiState.value.identity.copy(privacy = privacy),
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    // ---------- Login methods ----------
 
     fun toggleMethod(method: String, enabled: Boolean) {
         viewModelScope.launch {
@@ -126,6 +179,8 @@ class SecurityViewModel @Inject constructor(
             }
         }
     }
+
+    // ---------- Passkeys ----------
 
     fun registerPasskey(name: String) = mutate {
         val begin = api.beginPasskeyRegister().bodyOrThrow()
@@ -146,6 +201,8 @@ class SecurityViewModel @Inject constructor(
         refresh()
     }
 
+    // ---------- TOTP ----------
+
     fun beginTotpSetup() = mutate {
         val setup = api.setupTotp().bodyOrThrow()
         _newTotpSetup.value = setup
@@ -158,9 +215,7 @@ class SecurityViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(totpEnabled = true)
             onSuccess()
         } else {
-            _uiState.value = _uiState.value.copy(
-                error = MochiError.Unknown("Invalid code"),
-            )
+            _uiState.value = _uiState.value.copy(error = MochiError.Unknown("Invalid code"))
         }
     }
 
@@ -173,6 +228,8 @@ class SecurityViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(totpEnabled = false)
     }
 
+    // ---------- Recovery codes ----------
+
     fun generateRecovery() = mutate {
         val codes = api.generateRecovery().bodyOrThrow().codes
         _newRecoveryCodes.value = codes
@@ -183,10 +240,7 @@ class SecurityViewModel @Inject constructor(
         _newRecoveryCodes.value = null
     }
 
-    fun revokeSession(id: String) = mutate {
-        api.revokeSession(id).bodyOrThrow()
-        refresh()
-    }
+    // ---------- OAuth identities ----------
 
     fun linkOAuth(provider: String) = mutate {
         val token = sessionManager.getToken("settings")
@@ -213,20 +267,7 @@ class SecurityViewModel @Inject constructor(
         refresh()
     }
 
-    fun createToken(name: String) = mutate {
-        val token = api.createToken(name).bodyOrThrow().token
-        _newApiToken.value = token
-        refresh()
-    }
-
-    fun acknowledgeNewToken() {
-        _newApiToken.value = null
-    }
-
-    fun deleteToken(hash: String) = mutate {
-        api.deleteToken(hash).bodyOrThrow()
-        refresh()
-    }
+    // ---------- Helpers ----------
 
     private fun mutate(block: suspend () -> Unit) {
         viewModelScope.launch {
@@ -238,7 +279,7 @@ class SecurityViewModel @Inject constructor(
         }
     }
 
-    private fun <T> retrofit2.Response<T>.bodyOrThrow(): T {
+    private fun <T> Response<T>.bodyOrThrow(): T {
         if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
         return body() ?: throw RuntimeException("empty body")
     }

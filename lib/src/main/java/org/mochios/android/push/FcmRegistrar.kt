@@ -6,12 +6,16 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
 import com.google.firebase.installations.FirebaseInstallations
 import com.google.firebase.messaging.FirebaseMessaging
+import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.suspendCancellableCoroutine
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
+import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
@@ -75,8 +79,12 @@ object FcmRegistrar {
             return false
         }
 
+        val tokenApi = EntryPointAccessors
+            .fromApplication(context.applicationContext, PushEntryPoint::class.java)
+            .tokenApi()
+
         return try {
-            postRegisterFcm(client, server, token, installId, DeviceName.resolve(context))
+            postRegisterFcm(tokenApi, client, server, token, installId, DeviceName.resolve(context))
             Log.i(TAG, "Registered FCM token with $server (install=$installId)")
             true
         } catch (e: Exception) {
@@ -145,8 +153,17 @@ object FcmRegistrar {
                 .addOnFailureListener { cont.resumeWithException(it) }
         }
 
-    private fun postRegisterFcm(client: OkHttpClient, server: String, token: String, installId: String, device: String) {
-        val appToken = mintAppToken(client, server, "notifications") ?: error("Could not mint notifications app token")
+    private suspend fun postRegisterFcm(
+        tokenApi: TokenApi,
+        client: OkHttpClient,
+        server: String,
+        token: String,
+        installId: String,
+        device: String,
+    ) {
+        val appToken = runCatching {
+            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+        }.getOrNull() ?: error("Could not mint notifications app token")
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
         val body = JSONObject()
             .put("token", token)
@@ -161,21 +178,6 @@ object FcmRegistrar {
             .build()
         client.newCall(request).execute().use { resp ->
             if (!resp.isSuccessful) error("/notifications/-/push/register/fcm returned ${resp.code}")
-        }
-    }
-
-    private fun mintAppToken(client: OkHttpClient, server: String, app: String): String? {
-        val url = server.trimEnd('/') + "/_/token"
-        val body = JSONObject().put("app", app).toString()
-            .toRequestBody("application/json".toMediaType())
-        val request = Request.Builder().url(url).post(body).build()
-        client.newCall(request).execute().use { resp ->
-            if (!resp.isSuccessful) return null
-            return try {
-                JSONObject(resp.body?.string().orEmpty()).optString("token").ifBlank { null }
-            } catch (_: Exception) {
-                null
-            }
         }
     }
 }

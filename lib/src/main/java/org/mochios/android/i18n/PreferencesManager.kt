@@ -5,13 +5,8 @@ import android.content.Context
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
 import java.time.DayOfWeek
 import java.time.temporal.WeekFields
 import java.util.Locale
@@ -27,48 +22,6 @@ data class ThemeInfo(
     val hueBg: Float,
 )
 
-private data class FullPrefsResponse(
-    val preferences: Map<String, String>?,
-    val themes: List<RawTheme>?,
-    val default_theme: String?,
-)
-
-private data class RawTheme(
-    val id: String?,
-    val hue: Double?,
-    val chroma: Double?,
-    val hue_bg: Double?,
-)
-
-private interface PreferencesApi {
-    @GET("settings/-/user/preferences/data")
-    suspend fun getPreferences(@Header("Authorization") token: String): Response<FullPrefsResponse>
-
-    @retrofit2.http.FormUrlEncoded
-    @POST("settings/-/user/preferences/set")
-    suspend fun setPreferences(
-        @Header("Authorization") token: String,
-        @retrofit2.http.FieldMap fields: Map<String, String>,
-    ): Response<Map<String, Any>>
-
-    @POST("settings/-/user/preferences/reset")
-    suspend fun resetPreferences(
-        @Header("Authorization") token: String,
-    ): Response<Map<String, Any>>
-}
-
-// Hosts (chat / feeds / forums / projects / …) mint their own app token at
-// bootstrap; the settings app's token isn't fetched for them. We mint it
-// here on demand so the preferences endpoint, which requires a settings
-// token, is reachable from every Mochi Android host.
-private data class TokenRequest(val app: String)
-private data class TokenResponse(val token: String)
-
-private interface TokenApi {
-    @POST("_/token")
-    suspend fun fetchToken(@Body request: TokenRequest): Response<TokenResponse>
-}
-
 /**
  * Mirror of web's `LocaleProvider`: holds a [StateFlow] of [UserPreferences]
  * resolved against the current device for any `auto` server values.
@@ -79,14 +32,12 @@ private interface TokenApi {
  * any changes the user made on the web settings page.
  */
 @Singleton
-class PreferencesManager @Inject constructor(
+class PreferencesManager @Inject internal constructor(
     @ApplicationContext private val context: Context,
     private val sessionManager: SessionManager,
-    private val retrofit: Retrofit
+    private val api: PreferencesApi,
+    private val authRepository: AuthRepository,
 ) {
-
-    private val api: PreferencesApi by lazy { retrofit.create(PreferencesApi::class.java) }
-    private val tokenApi: TokenApi by lazy { retrofit.create(TokenApi::class.java) }
 
     private val _preferences = MutableStateFlow(resolveAuto(emptyMap()))
     val preferences: StateFlow<UserPreferences> = _preferences.asStateFlow()
@@ -145,23 +96,22 @@ class PreferencesManager @Inject constructor(
         refresh()
     }
 
+    // Hosts (chat / feeds / forums / projects / …) mint their own app token at
+    // bootstrap; the settings app's token isn't fetched for them. We mint it
+    // here on demand so the preferences endpoint, which requires a settings
+    // token, is reachable from every Mochi Android host.
     private suspend fun settingsToken(): String? =
-        sessionManager.getToken("settings") ?: try {
-            tokenApi.fetchToken(TokenRequest("settings")).body()?.token
-        } catch (_: Exception) {
-            null
-        }
+        sessionManager.getToken("settings")
+            ?: authRepository.fetchToken("settings").getOrNull()
 
     suspend fun refresh() {
         // Cached "settings" token first (saves a round trip when this app
         // happens to be settings itself or has already minted one). Otherwise
         // mint a fresh one from the host's session — every Mochi user has a
         // settings app token available.
-        val token = sessionManager.getToken("settings") ?: try {
-            tokenApi.fetchToken(TokenRequest("settings")).body()?.token
-        } catch (_: Exception) {
-            null
-        } ?: return
+        val token = sessionManager.getToken("settings")
+            ?: authRepository.fetchToken("settings").getOrNull()
+            ?: return
         val resp = try {
             api.getPreferences("Bearer $token")
         } catch (_: Exception) {
@@ -179,6 +129,14 @@ class PreferencesManager @Inject constructor(
         }
         defaultThemeId = body.default_theme
         _preferences.value = resolveAuto(raw)
+
+        // Mirror the server's language onto the boot-time store and apply it to
+        // the running app. On Android 13+ this re-applies the per-app locale
+        // (no-op when unchanged; an actual change triggers an Activity
+        // recreate); older versions pick it up next launch via LanguageStore.
+        val languageTag = raw["language"]
+        LanguageStore.set(context, languageTag)
+        LocaleHelper.apply(context, languageTag)
     }
 
     private fun resolveAuto(raw: Map<String, String>): UserPreferences {

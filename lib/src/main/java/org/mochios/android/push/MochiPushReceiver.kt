@@ -2,20 +2,17 @@ package org.mochios.android.push
 
 import android.content.Context
 import android.util.Log
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
-import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.FormBody
-import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import org.mochios.android.auth.SessionManager
+import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
 import org.unifiedpush.android.connector.MessagingReceiver
 import org.unifiedpush.android.connector.data.PushEndpoint
 import org.unifiedpush.android.connector.data.PushMessage
@@ -43,15 +40,8 @@ abstract class MochiPushReceiver : MessagingReceiver() {
      */
     abstract fun deepLinkFor(context: Context, instance: String, link: String, id: String): android.net.Uri
 
-    @EntryPoint
-    @InstallIn(SingletonComponent::class)
-    interface PushDeps {
-        fun sessionManager(): SessionManager
-        fun okHttpClient(): OkHttpClient
-    }
-
-    private fun deps(context: Context): PushDeps =
-        EntryPointAccessors.fromApplication(context.applicationContext, PushDeps::class.java)
+    private fun deps(context: Context): PushEntryPoint =
+        EntryPointAccessors.fromApplication(context.applicationContext, PushEntryPoint::class.java)
 
     override fun onNewEndpoint(context: Context, endpoint: PushEndpoint, instance: String) {
         Log.i(TAG, "onNewEndpoint instance=$instance url=${endpoint.url}")
@@ -73,6 +63,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                 Log.i(TAG, "register: endpoint.url=${endpoint.url} server=$server collapsed=$endpointToSend")
                 val accountId = postPushRegister(
                     deps.okHttpClient(),
+                    deps.tokenApi(),
                     server = server,
                     label = DeviceName.resolve(context),
                     auth = keys.auth,
@@ -118,7 +109,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             try {
                 val deps = deps(context)
                 val server = deps.sessionManager().getServerUrlBlocking()
-                postPushAccountsRemove(deps.okHttpClient(), server, accountId)
+                postPushAccountsRemove(deps.okHttpClient(), deps.tokenApi(), server, accountId)
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to unregister endpoint from Mochi server: ${e.message}")
             } finally {
@@ -159,15 +150,18 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         postSystemNotification(context, instance, title, body, link, tag, app, id)
     }
 
-    private fun postPushRegister(
+    private suspend fun postPushRegister(
         client: OkHttpClient,
+        tokenApi: TokenApi,
         server: String,
         label: String,
         auth: String,
         p256dh: String,
         endpoint: String,
     ): Int? {
-        val token = mintAppToken(client, server, "notifications") ?: return null
+        val token = runCatching {
+            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+        }.getOrNull() ?: return null
         val url = server.trimEnd('/') + "/notifications/-/push/register"
         val form = FormBody.Builder()
             .add("label", label)
@@ -195,8 +189,15 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         }
     }
 
-    private fun postPushAccountsRemove(client: OkHttpClient, server: String, accountId: Int) {
-        val token = mintAppToken(client, server, "notifications") ?: return
+    private suspend fun postPushAccountsRemove(
+        client: OkHttpClient,
+        tokenApi: TokenApi,
+        server: String,
+        accountId: Int,
+    ) {
+        val token = runCatching {
+            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+        }.getOrNull() ?: return
         val url = server.trimEnd('/') + "/notifications/-/push/accounts/remove"
         val form = FormBody.Builder().add("id", accountId.toString()).build()
         val request = Request.Builder()
@@ -205,31 +206,6 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             .post(form)
             .build()
         client.newCall(request).execute().close()
-    }
-
-    /**
-     * Mint a JWT for the named app via POST /_/token. Authorised by the
-     * session cookie (already on the OkHttpClient's CookieJar from the
-     * per-app's login flow). Same pattern the web shell uses to issue
-     * tokens to its iframe SPAs.
-     */
-    private fun mintAppToken(client: OkHttpClient, server: String, app: String): String? {
-        val url = server.trimEnd('/') + "/_/token"
-        val body = JSONObject().put("app", app).toString()
-            .toRequestBody("application/json".toMediaType())
-        val request = Request.Builder().url(url).post(body).build()
-        client.newCall(request).execute().use { resp ->
-            if (!resp.isSuccessful) {
-                Log.w(TAG, "/_/token($app) returned ${resp.code}")
-                return null
-            }
-            return try {
-                JSONObject(resp.body?.string().orEmpty()).optString("token").ifBlank { null }
-            } catch (_: Exception) {
-                Log.w(TAG, "Could not parse /_/token response")
-                null
-            }
-        }
     }
 
     private fun storeAccountId(context: Context, instance: String, accountId: Int) {

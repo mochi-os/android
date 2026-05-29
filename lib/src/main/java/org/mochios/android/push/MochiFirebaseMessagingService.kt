@@ -9,10 +9,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
-import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -22,7 +19,9 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import org.mochios.android.auth.SessionManager
+import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.TokenApi
+import org.mochios.android.auth.TokenRequest
 
 /**
  * Receives FCM messages and posts the system notification on the matching
@@ -42,17 +41,10 @@ import org.mochios.android.auth.SessionManager
  */
 class MochiFirebaseMessagingService : FirebaseMessagingService() {
 
-    @EntryPoint
-    @InstallIn(SingletonComponent::class)
-    interface Deps {
-        fun sessionManager(): SessionManager
-        fun okHttpClient(): OkHttpClient
-    }
-
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
-    private fun deps(): Deps =
-        EntryPointAccessors.fromApplication(applicationContext, Deps::class.java)
+    private fun deps(): PushEntryPoint =
+        EntryPointAccessors.fromApplication(applicationContext, PushEntryPoint::class.java)
 
     override fun onMessageReceived(message: RemoteMessage) {
         val data = message.data
@@ -76,7 +68,7 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
             try {
                 val deps = deps()
                 val server = deps.sessionManager().getServerUrlBlocking()
-                postPushRegisterFcm(deps.okHttpClient(), applicationContext, server, token)
+                postPushRegisterFcm(deps.okHttpClient(), deps.tokenApi(), applicationContext, server, token)
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to register FCM token with Mochi server: ${e.message}")
             }
@@ -90,8 +82,16 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
      * token returned 400 and the cold-start race then fell back to
      * UnifiedPush, surfacing the "listening for notifications" status row.
      */
-    private fun postPushRegisterFcm(client: OkHttpClient, context: Context, server: String, token: String) {
-        val appToken = mintAppToken(client, server, "notifications") ?: return
+    private suspend fun postPushRegisterFcm(
+        client: OkHttpClient,
+        tokenApi: TokenApi,
+        context: Context,
+        server: String,
+        token: String,
+    ) {
+        val appToken = runCatching {
+            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
+        }.getOrNull() ?: return
         val installId = try {
             com.google.firebase.installations.FirebaseInstallations.getInstance().id
                 .let { task ->
@@ -116,24 +116,6 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         client.newCall(request).execute().use { resp ->
             if (!resp.isSuccessful) {
                 Log.w(TAG, "/notifications/-/push/register/fcm returned ${resp.code}")
-            }
-        }
-    }
-
-    private fun mintAppToken(client: OkHttpClient, server: String, app: String): String? {
-        val url = server.trimEnd('/') + "/_/token"
-        val body = JSONObject().put("app", app).toString()
-            .toRequestBody("application/json".toMediaType())
-        val request = Request.Builder().url(url).post(body).build()
-        client.newCall(request).execute().use { resp ->
-            if (!resp.isSuccessful) {
-                Log.w(TAG, "/_/token($app) returned ${resp.code}")
-                return null
-            }
-            return try {
-                JSONObject(resp.body?.string().orEmpty()).optString("token").ifBlank { null }
-            } catch (_: Exception) {
-                null
             }
         }
     }

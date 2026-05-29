@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import org.mochios.settings.ui.profile.SettingsRetrofit
+import org.mochios.settings.api.SettingsRetrofit
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.Field
@@ -30,9 +30,19 @@ data class ReplicationHost(
     val ack: Long = 0,
 )
 
+data class ReplicationServer(
+    @SerializedName("id") val id: String = "",
+)
+
+data class ReplicationUser(
+    @SerializedName("username") val username: String = "",
+)
+
 data class ReplicationData(
     @SerializedName("links") val links: List<ReplicationLink> = emptyList(),
     @SerializedName("hosts") val hosts: List<ReplicationHost> = emptyList(),
+    @SerializedName("server") val server: ReplicationServer = ReplicationServer(),
+    @SerializedName("user") val user: ReplicationUser = ReplicationUser(),
 )
 
 interface ReplicationApi {

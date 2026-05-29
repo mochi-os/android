@@ -2,8 +2,9 @@
 <resources>
 
     <string name="settings_home_accounts">已連接賬戶</string>
-    <string name="security_section_oauth">已連接賬戶</string>
-    <string name="security_oauth_link">關聯賬戶</string>
+    <string name="account_section_oauth">第三方登入</string>
+    <string name="account_oauth_empty">未連結任何帳戶</string>
+    <string name="account_oauth_link">關聯賬戶</string>
     <string name="accounts_title">已連接賬戶</string>
     <string name="accounts_add">新增賬戶</string>
     <string name="accounts_add_title">新增賬戶</string>

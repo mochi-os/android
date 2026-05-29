@@ -356,4 +356,6 @@
     <string name="system_users_toast_status_failed">Failed to update user status</string>
     <string name="system_users_toast_revoke_failed">Failed to revoke session</string>
 
+    <string name="account_section_oauth">Third-party login</string>
+    <string name="account_oauth_empty">No accounts linked</string>
 </resources>

@@ -3,7 +3,8 @@
 
     <string name="system_documents_tab_privacy">Privacy</string>
 
-    <string name="domain_empty_user">你冇任何網域嘅存取權限。</string>
+    <string name="account_section_oauth">第三方登入</string>
+    <string name="account_oauth_empty">未連結任何帳戶</string>
     <string name="security_token_name">名稱</string>
     <string name="notifprefs_name_label">名稱</string>
     <string name="accounts_field_name">名稱</string>

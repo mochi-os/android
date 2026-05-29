@@ -1,0 +1,55 @@
+package org.mochios.settings.api
+
+import com.google.gson.annotations.SerializedName
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
+import retrofit2.http.POST
+import javax.inject.Singleton
+
+data class ApiToken(
+    val hash: String = "",
+    val name: String = "",
+    val scopes: List<String> = emptyList(),
+    val created: Long = 0,
+    /** Epoch seconds of the last use, or 0 if never used. Server field is "used". */
+    @SerializedName("used") val lastUsed: Long = 0,
+    /** Epoch seconds of expiry, or 0 if the token never expires. */
+    val expires: Long = 0,
+)
+
+data class TokensResponse(val tokens: List<ApiToken> = emptyList())
+
+data class TokenCreateResponse(val token: String = "")
+
+interface TokensApi {
+    @GET("settings/-/user/account/tokens")
+    suspend fun listTokens(): Response<TokensResponse>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/token/create")
+    suspend fun createToken(
+        @Field("name") name: String,
+        @Field("scopes") scopes: String? = null,
+        @Field("expires") expires: String? = null,
+    ): Response<TokenCreateResponse>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/token/delete")
+    suspend fun deleteToken(@Field("hash") hash: String): Response<OkResponse>
+}
+
+@Module
+@InstallIn(SingletonComponent::class)
+object TokensApiModule {
+    @Provides
+    @Singleton
+    fun provideTokensApi(@SettingsRetrofit retrofit: Retrofit): TokensApi =
+        retrofit.create(TokensApi::class.java)
+}

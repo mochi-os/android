@@ -2,32 +2,23 @@
 <resources>
 
     <string name="settings_home_logout">Cerrá sesión</string>
-    <string name="security_passkey_register">Agregá una passkey</string>
-    <string name="security_passkey_delete_title">¿Eliminás la passkey?</string>
-    <string name="security_totp_setup">Configurá el autenticador</string>
-    <string name="security_totp_setup_title">Configurá el autenticador</string>
-    <string name="security_totp_verify">Verificá</string>
-    <string name="security_totp_disable_title">¿Desactivás el autenticador?</string>
-    <string name="security_token_create">Creá un token</string>
-    <string name="security_token_delete_title">¿Eliminás el token?</string>
-    <string name="security_cancel">Cancelá</string>
-    <string name="security_save">Guardá</string>
-    <string name="security_delete">Eliminá</string>
-    <string name="security_rename">Renombrá</string>
-    <string name="security_disable">Desactivá</string>
-    <string name="security_copy_all">Copiá todo</string>
+    <string name="account_passkey_register">Agregá una passkey</string>
+    <string name="account_passkey_delete_title">¿Eliminás la passkey?</string>
+    <string name="account_totp_setup">Configurá el autenticador</string>
+    <string name="account_totp_setup_title">Configurá el autenticador</string>
+    <string name="account_totp_verify">Verificá</string>
+    <string name="account_totp_disable_title">¿Desactivás el autenticador?</string>
+    <string name="tokens_create">Creá un token</string>
+    <string name="tokens_delete_title">¿Eliminás el token?</string>
+    <string name="account_cancel">Cancelá</string>
+    <string name="account_save">Guardá</string>
+    <string name="account_delete">Eliminá</string>
+    <string name="account_rename">Renombrá</string>
+    <string name="account_disable">Desactivá</string>
+    <string name="account_copy_all">Copiá todo</string>
     <string name="replication_approve">Aprobá</string>
     <string name="system_replication_approve">Aprobá</string>
     <string name="system_replication_remove">Quitá</string>
-    <string name="domain_add">Agregá un dominio</string>
-    <string name="domain_add_title">Agregá un dominio</string>
-    <string name="domain_verify">Verificá el DNS</string>
-    <string name="domain_delete">Eliminá el dominio</string>
-    <string name="domain_delete_title">¿Eliminás el dominio?</string>
-    <string name="domain_delegation_add">Agregá</string>
-    <string name="domain_delegation_add_title">Agregá una delegación</string>
-    <string name="domain_delegation_delete">Eliminá la delegación</string>
-    <string name="domain_delegation_delete_title">¿Eliminás la delegación?</string>
     <string name="route_add">Agregá una ruta</string>
     <string name="route_add_title">Agregá una ruta</string>
     <string name="route_edit">Editá la ruta</string>
@@ -356,4 +347,5 @@
     <string name="system_users_toast_status_failed">No se pudo actualizar el estado del usuario</string>
     <string name="system_users_toast_revoke_failed">No se pudo revocar la sesión</string>
 
+    <string name="account_identity_directory_toggle">Permití que otros te encuentren en el directorio</string>
 </resources>

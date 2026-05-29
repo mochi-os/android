@@ -5,18 +5,18 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
+import org.mochios.settings.ui.account.AccountScreen
 import org.mochios.settings.ui.accounts.ConnectedAccountsScreen
 import org.mochios.settings.ui.display.DisplayScreen
 import org.mochios.settings.ui.document.DocumentScreen
-import org.mochios.settings.ui.domains.DomainsScreen
 import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.interests.InterestsScreen
 import org.mochios.settings.ui.notificationprefs.NotificationPrefsScreen
 import org.mochios.settings.ui.notifications.NotificationsScreen
 import org.mochios.settings.ui.preferences.UserSettingsScreen
-import org.mochios.settings.ui.profile.ProfileScreen
 import org.mochios.settings.ui.replication.ReplicationScreen
-import org.mochios.settings.ui.security.SecurityScreen
+import org.mochios.settings.ui.sessions.SessionsScreen
+import org.mochios.settings.ui.tokens.TokensScreen
 import org.mochios.settings.ui.systemdocuments.SystemDocumentsScreen
 import org.mochios.settings.ui.systemreplication.SystemReplicationScreen
 import org.mochios.settings.ui.systemsettings.SystemSettingsScreen
@@ -25,12 +25,13 @@ import org.mochios.settings.ui.systemusers.SystemUsersScreen
 
 object SettingsApp {
     const val HOME = "settings/home"
-    const val PROFILE = "settings/profile"
+    const val ACCOUNT = "settings/account"
     const val PREFERENCES = "settings/preferences"
     const val DISPLAY = "settings/display"
     const val NOTIFICATIONS = "settings/notifications"
     const val NOTIFICATION_PREFS = "settings/notification-prefs"
-    const val SECURITY = "settings/security"
+    const val SESSIONS = "settings/sessions"
+    const val TOKENS = "settings/tokens"
     const val REPLICATION = "settings/replication"
     const val SYSTEM_REPLICATION = "settings/system/replication"
     const val SYSTEM_SETTINGS = "settings/system/settings"
@@ -38,7 +39,6 @@ object SettingsApp {
     const val SYSTEM_USERS = "settings/system/users"
     const val INTERESTS = "settings/interests"
     const val ACCOUNTS = "settings/accounts"
-    const val DOMAINS = "settings/domains"
     const val DOCUMENT = "settings/document/{kind}"
     const val SYSTEM_DOCUMENTS = "settings/system/documents"
 
@@ -53,12 +53,13 @@ fun NavGraphBuilder.settingsNavGraph(
     composable(SettingsApp.HOME) {
         SettingsHomeScreen(
             onBack = { navController.popBackStack() },
-            onOpenProfile = { navController.navigate(SettingsApp.PROFILE) },
+            onOpenAccount = { navController.navigate(SettingsApp.ACCOUNT) },
             onOpenPreferences = { navController.navigate(SettingsApp.PREFERENCES) },
             onOpenDisplay = { navController.navigate(SettingsApp.DISPLAY) },
             onOpenNotifications = { navController.navigate(SettingsApp.NOTIFICATIONS) },
             onOpenNotificationPrefs = { navController.navigate(SettingsApp.NOTIFICATION_PREFS) },
-            onOpenSecurity = { navController.navigate(SettingsApp.SECURITY) },
+            onOpenSessions = { navController.navigate(SettingsApp.SESSIONS) },
+            onOpenTokens = { navController.navigate(SettingsApp.TOKENS) },
             onOpenReplication = { navController.navigate(SettingsApp.REPLICATION) },
             onOpenSystemReplication = { navController.navigate(SettingsApp.SYSTEM_REPLICATION) },
             onOpenSystemSettings = { navController.navigate(SettingsApp.SYSTEM_SETTINGS) },
@@ -66,17 +67,19 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenSystemUsers = { navController.navigate(SettingsApp.SYSTEM_USERS) },
             onOpenInterests = { navController.navigate(SettingsApp.INTERESTS) },
             onOpenAccounts = { navController.navigate(SettingsApp.ACCOUNTS) },
-            onOpenDomains = { navController.navigate(SettingsApp.DOMAINS) },
             onOpenDocument = { kind -> navController.navigate(SettingsApp.document(kind)) },
             onOpenSystemDocuments = { navController.navigate(SettingsApp.SYSTEM_DOCUMENTS) },
             onLogout = onLogout,
         )
     }
-    composable(SettingsApp.SECURITY) {
-        SecurityScreen(onBack = { navController.popBackStack() })
+    composable(SettingsApp.ACCOUNT) {
+        AccountScreen(onBack = { navController.popBackStack() })
     }
-    composable(SettingsApp.PROFILE) {
-        ProfileScreen(onBack = { navController.popBackStack() })
+    composable(SettingsApp.SESSIONS) {
+        SessionsScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.TOKENS) {
+        TokensScreen(onBack = { navController.popBackStack() })
     }
     composable(SettingsApp.PREFERENCES) {
         UserSettingsScreen(onBack = { navController.popBackStack() })
@@ -113,9 +116,6 @@ fun NavGraphBuilder.settingsNavGraph(
     }
     composable(SettingsApp.ACCOUNTS) {
         ConnectedAccountsScreen(onBack = { navController.popBackStack() })
-    }
-    composable(SettingsApp.DOMAINS) {
-        DomainsScreen(onBack = { navController.popBackStack() })
     }
     composable(
         SettingsApp.DOCUMENT,
