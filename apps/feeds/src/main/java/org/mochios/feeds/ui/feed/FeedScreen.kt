@@ -117,7 +117,7 @@ import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipboardPage
 import org.mochios.android.ui.components.flipboardPaperTexture
-import org.mochios.android.ui.components.HtmlContent
+import org.mochios.feeds.ui.component.PostBody
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MediaGrid
@@ -754,8 +754,8 @@ private fun PostCard(
             // first line is the article title — bolded for scannability.
             if (post.body.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(8.dp))
-                HtmlContent(
-                    html = boldRssTitle(post),
+                PostBody(
+                    post = post,
                     maxLines = 6,
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onClick
@@ -944,15 +944,6 @@ private fun toReactionCounts(reactions: List<Reaction>, myReaction: String): Lis
         val type = ReactionType.fromString(reaction) ?: return@mapNotNull null
         ReactionCount(type, list.size, reaction.equals(myReaction, ignoreCase = true))
     }
-
-/** For RSS-source posts the body is `title \n\n description \n\n link`.
- *  Wrap the leading title in `**…**` so Markwon renders it bold. */
-private fun boldRssTitle(post: Post): String {
-    val title = post.data?.rss?.title.orEmpty()
-    val body = post.body
-    if (title.isEmpty() || !body.startsWith(title)) return body
-    return "**${title}**" + body.substring(title.length)
-}
 
 @Composable
 private fun InterestSuggestionsDialog(

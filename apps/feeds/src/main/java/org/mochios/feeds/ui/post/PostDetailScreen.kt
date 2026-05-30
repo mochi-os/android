@@ -93,6 +93,7 @@ import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
+import org.mochios.feeds.ui.component.PostBody
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
@@ -501,8 +502,8 @@ private fun PostContent(
         }
         if (showBody && post.body.isNotEmpty()) {
             Spacer(modifier = Modifier.height(12.dp))
-            HtmlContent(
-                html = boldRssTitle(post),
+            PostBody(
+                post = post,
                 modifier = Modifier.fillMaxWidth(),
                 onClick = onBodyClick
             )
@@ -1009,12 +1010,4 @@ private fun stripHtml(html: String): String {
         .trim()
 }
 
-/** For RSS-source posts the body is `title \n\n description \n\n link`.
- *  Wrap the leading title in `**…**` so Markwon renders it bold. */
-private fun boldRssTitle(post: Post): String {
-    val title = post.data?.rss?.title.orEmpty()
-    val body = post.body
-    if (title.isEmpty() || !body.startsWith(title)) return body
-    return "**${title}**" + body.substring(title.length)
-}
 
