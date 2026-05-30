@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ಇಮೇಲ್ ಮೂಲಕ ಪರಿಶೀಲನಾ ಕೋಡ್ ಪಡೆಯಿರಿ</string>
     <string name="account_method_totp_subtitle">ಸಕ್ರಿಯಗೊಳಿಸಲು ಕೆಳಗೆ ದೃಢೀಕರಣ ಸಾಧನ ಹೊಂದಿಸಿ</string>
     <string name="account_method_passkey_subtitle">ಸಕ್ರಿಯಗೊಳಿಸಲು ಕೆಳಗೆ ಪಾಸ್‌ಕೀ ನೋಂದಾಯಿಸಿ</string>
+    <string name="domain_add">ಡೊಮೇನ್ ಸೇರಿಸಿ</string>
+    <string name="domain_add_title">ಡೊಮೇನ್ ಸೇರಿಸಿ</string>
+    <string name="domain_delegation_add">ಸೇರಿಸಿ</string>
+    <string name="domain_delegation_add_title">ಡೆಲಿಗೇಶನ್ ಸೇರಿಸಿ</string>
+    <string name="domain_delegation_delete">ಡೆಲಿಗೇಶನ್ ಅಳಿಸಿ</string>
+    <string name="domain_delegation_delete_message">%1$s ಇನ್ನು ಮುಂದೆ ಈ ಡೊಮೇನ್‌ನಲ್ಲಿ ಮಾರ್ಗಗಳನ್ನು ನಿರ್ವಹಿಸುವುದಿಲ್ಲ.</string>
+    <string name="domain_delegation_delete_title">ಡೆಲಿಗೇಶನ್ ಅಳಿಸಬೇಕೆ?</string>
+    <string name="domain_delegation_path">ಪಥ</string>
+    <string name="domain_delegation_user">ಬಳಕೆದಾರ ID</string>
+    <string name="domain_delegations">ಡೆಲಿಗೇಶನ್‌ಗಳು</string>
+    <string name="domain_delegations_empty">ಯಾವುದೇ ಪ್ರತಿನಿಧಿಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</string>
+    <string name="domain_delete">ಡೊಮೇನ್ ಅಳಿಸಿ</string>
+    <string name="domain_delete_message">ಇದು ಶಾಶ್ವತವಾಗಿ \"%1$s\" ಮತ್ತು ಅದರ ಎಲ್ಲಾ ಮಾರ್ಗಗಳನ್ನು ಅಳಿಸುತ್ತದೆ.</string>
+    <string name="domain_delete_title">ಡೊಮೇನ್ ಅಳಿಸಬೇಕೆ?</string>
+    <string name="domain_dns_hint">TXT ದಾಖಲೆಯನ್ನು ರಚಿಸಿ:</string>
+    <string name="domain_empty_admin">ಯಾವುದೇ ಡೊಮೇನ್‌ಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</string>
+    <string name="domain_empty_user">ನಿಮಗೆ ಯಾವುದೇ ಡೊಮೇನ್‌ಗಳಿಗೆ ಪ್ರವೇಶವಿಲ್ಲ.</string>
+    <string name="domain_https">ಸ್ವಯಂಚಾಲಿತ HTTPS</string>
+    <string name="domain_name">ಡೊಮೇನ್</string>
+    <string name="domain_status_pending">DNS ಪರಿಶೀಲನೆ ಬಾಕಿ</string>
+    <string name="domain_status_verified">ಪರಿಶೀಲಿಸಲಾಗಿದೆ</string>
+    <string name="domain_title">ಡೊಮೇನ್‌ಗಳು</string>
+    <string name="domain_verify">DNS ಪರಿಶೀಲಿಸಿ</string>
+    <string name="settings_home_domains">ಡೊಮೇನ್‌ಗಳು</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
+        <item quantity="other">%1$d ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
+    </plurals>
 </resources>

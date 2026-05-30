@@ -352,4 +352,35 @@
     <string name="account_method_email_subtitle">Irċievi kodiċi ta\' verifika bl-email</string>
     <string name="account_method_totp_subtitle">Biex tippermetti, twaqqaf awtentikatur hawn taħt</string>
     <string name="account_method_passkey_subtitle">Biex tippermetti, irreġistra passkey hawn taħt</string>
+    <string name="domain_add">Żid dominju</string>
+    <string name="domain_add_title">Żid dominju</string>
+    <string name="domain_delegation_add">Żid</string>
+    <string name="domain_delegation_add_title">Żid delegazzjoni</string>
+    <string name="domain_delegation_delete">Ħassar delegazzjoni</string>
+    <string name="domain_delegation_delete_message">%1$s ma jamministrax aktar rotot f\'dan id-domain.</string>
+    <string name="domain_delegation_delete_title">Tħassar delegazzjoni?</string>
+    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_user">ID tal-utent</string>
+    <string name="domain_delegations">Delegazzjonijiet</string>
+    <string name="domain_delegations_empty">L-ebda delegazzjonijiet konfigurati.</string>
+    <string name="domain_delete">Ħassar dominju</string>
+    <string name="domain_delete_message">Dan se jħassar permanentement \"%1$s\" u r-rotot kollha tiegħu.</string>
+    <string name="domain_delete_title">Tħassar dominju?</string>
+    <string name="domain_dns_hint">Oħloq rekord TXT:</string>
+    <string name="domain_empty_admin">L-ebda domains konfigurati.</string>
+    <string name="domain_empty_user">M\'għandekx aċċess għal kwalunkwe domain.</string>
+    <string name="domain_https">HTTPS awtomatiku</string>
+    <string name="domain_name">Dominju</string>
+    <string name="domain_status_pending">Verifika DNS pendenti</string>
+    <string name="domain_status_verified">Ivverifikat</string>
+    <string name="domain_title">Dominji</string>
+    <string name="domain_verify">Ivverifika DNS</string>
+    <string name="settings_home_domains">Dominji</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Revokati %1$d sessjonijiet</item>
+        <item quantity="many">Revokati %1$d sessjonijiet</item>
+        <item quantity="one">Revokat 1 sessjoni</item>
+        <item quantity="other">Revokati %1$d sessjonijiet</item>
+        <item quantity="two">Revokati %1$d sessjonijiet</item>
+    </plurals>
 </resources>

@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Merr një kod verifikimi me email</string>
     <string name="account_method_totp_subtitle">Për ta aktivizuar, konfiguro një vërtetues më poshtë</string>
     <string name="account_method_passkey_subtitle">Për ta aktivizuar, regjistro një çelës hyrjeje më poshtë</string>
+    <string name="domain_add">Shto domenin</string>
+    <string name="domain_add_title">Shto domenin</string>
+    <string name="domain_delegation_add">Shto</string>
+    <string name="domain_delegation_add_title">Shto delegim</string>
+    <string name="domain_delegation_delete">Fshi delegimin</string>
+    <string name="domain_delegation_delete_message">%1$s nuk do të menaxhojë më rrugët në këtë domain.</string>
+    <string name="domain_delegation_delete_title">Të fshihet delegimi?</string>
+    <string name="domain_delegation_path">Shtegu</string>
+    <string name="domain_delegation_user">ID e përdoruesit</string>
+    <string name="domain_delegations">Delegimet</string>
+    <string name="domain_delegations_empty">Asnjë delegim i konfiguruar.</string>
+    <string name="domain_delete">Fshi domenin</string>
+    <string name="domain_delete_message">Kjo do të fshijë përgjithmonë \"%1$s\" dhe të gjitha rrugët e tij.</string>
+    <string name="domain_delete_title">Të fshihet domeni?</string>
+    <string name="domain_dns_hint">Krijoni një rekord TXT:</string>
+    <string name="domain_empty_admin">Asnjë domain i konfiguruar.</string>
+    <string name="domain_empty_user">Nuk ke akses në asnjë domen.</string>
+    <string name="domain_https">HTTPS automatik</string>
+    <string name="domain_name">Domeni</string>
+    <string name="domain_status_pending">Verifikimi DNS në pritje</string>
+    <string name="domain_status_verified">I verifikuar</string>
+    <string name="domain_title">Domenet</string>
+    <string name="domain_verify">Verifiko DNS</string>
+    <string name="settings_home_domains">Domenet</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">U revokua 1 sesion</item>
+        <item quantity="other">U revokuan %1$d sesione</item>
+    </plurals>
 </resources>

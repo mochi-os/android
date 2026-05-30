@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Jaso egiaztapen-kodea posta elektronikoz</string>
     <string name="account_method_totp_subtitle">Gaitzeko, konfiguratu autentifikatzaile bat behean</string>
     <string name="account_method_passkey_subtitle">Gaitzeko, erregistratu sarbide-gako bat behean</string>
+    <string name="domain_add">Gehitu domeinua</string>
+    <string name="domain_add_title">Gehitu domeinua</string>
+    <string name="domain_delegation_add">Gehitu</string>
+    <string name="domain_delegation_add_title">Gehitu eskuordetza</string>
+    <string name="domain_delegation_delete">Ezabatu eskuordetza</string>
+    <string name="domain_delegation_delete_message">%1$s-k ez ditu ibilbideak domeinu honetan kudeatuko.</string>
+    <string name="domain_delegation_delete_title">Ezabatu eskuordetza?</string>
+    <string name="domain_delegation_path">Bidea</string>
+    <string name="domain_delegation_user">Erabiltzaile-ID</string>
+    <string name="domain_delegations">Eskuordetzak</string>
+    <string name="domain_delegations_empty">Ez dago konfiguratutako eskuordetzerik.</string>
+    <string name="domain_delete">Ezabatu domeinua</string>
+    <string name="domain_delete_message">Honek behin betiko ezabatuko du \"%1$s\" eta bere ibilbide guztiak.</string>
+    <string name="domain_delete_title">Ezabatu domeinua?</string>
+    <string name="domain_dns_hint">Sortu TXT erregistroa:</string>
+    <string name="domain_empty_admin">Ez dago konfiguratutako domeinurik.</string>
+    <string name="domain_empty_user">Ez duzu domeinurik atzitzeko sarbiderik.</string>
+    <string name="domain_https">HTTPS automatikoa</string>
+    <string name="domain_name">Domeinua</string>
+    <string name="domain_status_pending">DNS egiaztapena zain</string>
+    <string name="domain_status_verified">Egiaztatuta</string>
+    <string name="domain_title">Domeinuak</string>
+    <string name="domain_verify">Egiaztatu DNSa</string>
+    <string name="settings_home_domains">Domeinuak</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 saio baliogabetuta</item>
+        <item quantity="other">%1$d saio baliogabetuta</item>
+    </plurals>
 </resources>

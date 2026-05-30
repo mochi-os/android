@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ਈਮੇਲ ਰਾਹੀਂ ਤਸਦੀਕ ਕੋਡ ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="account_method_totp_subtitle">ਚਾਲੂ ਕਰਨ ਲਈ ਹੇਠਾਂ ਪ੍ਰਮਾਣਕ ਸੈੱਟ ਕਰੋ</string>
     <string name="account_method_passkey_subtitle">ਚਾਲੂ ਕਰਨ ਲਈ ਹੇਠਾਂ ਪਾਸਕੀ ਰਜਿਸਟਰ ਕਰੋ</string>
+    <string name="domain_add">ਡੋਮੇਨ ਜੋੜੋ</string>
+    <string name="domain_add_title">ਡੋਮੇਨ ਜੋੜੋ</string>
+    <string name="domain_delegation_add">ਜੋੜੋ</string>
+    <string name="domain_delegation_add_title">ਡੈਲੀਗੇਸ਼ਨ ਜੋੜੋ</string>
+    <string name="domain_delegation_delete">ਡੈਲੀਗੇਸ਼ਨ ਮਿਟਾਓ</string>
+    <string name="domain_delegation_delete_message">%1$s ਹੁਣ ਇਸ ਡੋਮੇਨ \'ਤੇ ਰੂਟ ਪ੍ਰਬੰਧਿਤ ਨਹੀਂ ਕਰੇਗਾ।</string>
+    <string name="domain_delegation_delete_title">ਡੈਲੀਗੇਸ਼ਨ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="domain_delegation_path">ਪਾਥ</string>
+    <string name="domain_delegation_user">ਉਪਭੋਗਤਾ ID</string>
+    <string name="domain_delegations">ਡੈਲੀਗੇਸ਼ਨਾਂ</string>
+    <string name="domain_delegations_empty">ਕੋਈ ਡੈਲੀਗੇਸ਼ਨ ਕੌਨਫਿਗਰ ਨਹੀਂ ਹਨ।</string>
+    <string name="domain_delete">ਡੋਮੇਨ ਮਿਟਾਓ</string>
+    <string name="domain_delete_message">ਇਹ ਪੱਕੇ ਤੌਰ \'ਤੇ \"%1$s\" ਅਤੇ ਉਸਦੇ ਸਾਰੇ ਰੂਟ ਮਿਟਾ ਦੇਵੇਗਾ।</string>
+    <string name="domain_delete_title">ਡੋਮੇਨ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="domain_dns_hint">TXT ਰਿਕਾਰਡ ਬਣਾਓ:</string>
+    <string name="domain_empty_admin">ਕੋਈ ਡੋਮੇਨ ਕੌਨਫਿਗਰ ਨਹੀਂ ਹਨ।</string>
+    <string name="domain_empty_user">ਤੁਹਾਡੀ ਕਿਸੇ ਵੀ ਡੋਮੇਨ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੈ।</string>
+    <string name="domain_https">ਆਟੋਮੈਟਿਕ HTTPS</string>
+    <string name="domain_name">ਡੋਮੇਨ</string>
+    <string name="domain_status_pending">DNS ਜਾਂਚ ਬਾਕੀ</string>
+    <string name="domain_status_verified">ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ</string>
+    <string name="domain_title">ਡੋਮੇਨ</string>
+    <string name="domain_verify">DNS ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string name="settings_home_domains">ਡੋਮੇਨ</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 ਸੈਸ਼ਨ ਰੱਦ ਕੀਤਾ</item>
+        <item quantity="other">%1$d ਸੈਸ਼ਨ ਰੱਦ ਕੀਤੇ</item>
+    </plurals>
 </resources>

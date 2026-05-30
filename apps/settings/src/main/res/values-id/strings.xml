@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Terima kode verifikasi melalui email</string>
     <string name="account_method_totp_subtitle">Siapkan autentikator di bawah untuk mengaktifkan</string>
     <string name="account_method_passkey_subtitle">Daftarkan kunci sandi di bawah untuk mengaktifkan</string>
+    <string name="domain_add">Tambah domain</string>
+    <string name="domain_add_title">Tambah domain</string>
+    <string name="domain_delegation_add">Tambah</string>
+    <string name="domain_delegation_add_title">Tambah delegasi</string>
+    <string name="domain_delegation_delete">Hapus delegasi</string>
+    <string name="domain_delegation_delete_message">%1$s tidak akan lagi mengelola rute pada domain ini.</string>
+    <string name="domain_delegation_delete_title">Hapus delegasi?</string>
+    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_user">ID pengguna</string>
+    <string name="domain_delegations">Delegasi</string>
+    <string name="domain_delegations_empty">Tidak ada delegasi yang dikonfigurasi.</string>
+    <string name="domain_delete">Hapus domain</string>
+    <string name="domain_delete_message">Ini akan menghapus secara permanen \"%1$s\" dan semua rutenya.</string>
+    <string name="domain_delete_title">Hapus domain?</string>
+    <string name="domain_dns_hint">Buat catatan TXT:</string>
+    <string name="domain_empty_admin">Tidak ada domain yang dikonfigurasi.</string>
+    <string name="domain_empty_user">Anda tidak memiliki akses ke domain apa pun.</string>
+    <string name="domain_https">HTTPS otomatis</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">Menunggu verifikasi DNS</string>
+    <string name="domain_status_verified">Terverifikasi</string>
+    <string name="domain_title">Domain</string>
+    <string name="domain_verify">Verifikasi DNS</string>
+    <string name="settings_home_domains">Domain</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">%1$d sesi dicabut</item>
+    </plurals>
 </resources>

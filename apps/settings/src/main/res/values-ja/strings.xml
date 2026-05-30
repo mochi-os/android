@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">確認コードをメールで受け取る</string>
     <string name="account_method_totp_subtitle">有効にするには、下で認証アプリを設定してください</string>
     <string name="account_method_passkey_subtitle">有効にするには、下でパスキーを登録してください</string>
+    <string name="domain_add">ドメインを追加</string>
+    <string name="domain_add_title">ドメインを追加</string>
+    <string name="domain_delegation_add">追加</string>
+    <string name="domain_delegation_add_title">委任を追加</string>
+    <string name="domain_delegation_delete">委任を削除</string>
+    <string name="domain_delegation_delete_message">%1$s はこのドメインのルートを管理できなくなります。</string>
+    <string name="domain_delegation_delete_title">委任を削除しますか？</string>
+    <string name="domain_delegation_path">パス</string>
+    <string name="domain_delegation_user">ユーザー ID</string>
+    <string name="domain_delegations">委任</string>
+    <string name="domain_delegations_empty">委任は設定されていません。</string>
+    <string name="domain_delete">ドメインを削除</string>
+    <string name="domain_delete_message">「%1$s」とそのすべてのルートが完全に削除されます。</string>
+    <string name="domain_delete_title">ドメインを削除しますか？</string>
+    <string name="domain_dns_hint">TXT レコードを作成:</string>
+    <string name="domain_empty_admin">ドメインが設定されていません。</string>
+    <string name="domain_empty_user">アクセスできるドメインがありません。</string>
+    <string name="domain_https">自動 HTTPS</string>
+    <string name="domain_name">ドメイン</string>
+    <string name="domain_status_pending">DNS 確認待ち</string>
+    <string name="domain_status_verified">認証済み</string>
+    <string name="domain_title">ドメイン</string>
+    <string name="domain_verify">DNSを確認</string>
+    <string name="settings_home_domains">ドメイン</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">%1$d件のセッションを取り消しました</item>
+    </plurals>
 </resources>

@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Растау кодын электрондық пошта арқылы алыңыз</string>
     <string name="account_method_totp_subtitle">Қосу үшін төменде аутентификатор орнатыңыз</string>
     <string name="account_method_passkey_subtitle">Қосу үшін төменде кіру кілтін тіркеңіз</string>
+    <string name="domain_add">Домен қосу</string>
+    <string name="domain_add_title">Домен қосу</string>
+    <string name="domain_delegation_add">Қосу</string>
+    <string name="domain_delegation_add_title">Делегация қосу</string>
+    <string name="domain_delegation_delete">Делегацияны жою</string>
+    <string name="domain_delegation_delete_message">%1$s енді осы доменде маршруттарды басқармайды.</string>
+    <string name="domain_delegation_delete_title">Делегацияны жою керек пе?</string>
+    <string name="domain_delegation_path">Жол</string>
+    <string name="domain_delegation_user">Пайдаланушы ID</string>
+    <string name="domain_delegations">Делегациялар</string>
+    <string name="domain_delegations_empty">Конфигурацияланған өкілдіктер жоқ.</string>
+    <string name="domain_delete">Доменді жою</string>
+    <string name="domain_delete_message">Бұл біржола \"%1$s\" және оның барлық бағыттарын жояды.</string>
+    <string name="domain_delete_title">Доменді жою керек пе?</string>
+    <string name="domain_dns_hint">TXT жазбасын жасаңыз:</string>
+    <string name="domain_empty_admin">Конфигурацияланған домендер жоқ.</string>
+    <string name="domain_empty_user">Сізде ешбір доменге қолжетімділік жоқ.</string>
+    <string name="domain_https">Автоматты HTTPS</string>
+    <string name="domain_name">Домен</string>
+    <string name="domain_status_pending">DNS тексеру күтуде</string>
+    <string name="domain_status_verified">Тексерілді</string>
+    <string name="domain_title">Домендер</string>
+    <string name="domain_verify">DNS тексеру</string>
+    <string name="settings_home_domains">Домендер</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 сеанс қайтарып алынды</item>
+        <item quantity="other">%1$d сеанс қайтарып алынды</item>
+    </plurals>
 </resources>

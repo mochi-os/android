@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Ellenőrző kód fogadása e-mailben</string>
     <string name="account_method_totp_subtitle">Az engedélyezéshez állíts be hitelesítőt alább</string>
     <string name="account_method_passkey_subtitle">Az engedélyezéshez regisztrálj hozzáférési kulcsot alább</string>
+    <string name="domain_add">Tartomány hozzáadása</string>
+    <string name="domain_add_title">Tartomány hozzáadása</string>
+    <string name="domain_delegation_add">Hozzáadás</string>
+    <string name="domain_delegation_add_title">Delegálás hozzáadása</string>
+    <string name="domain_delegation_delete">Delegálás törlése</string>
+    <string name="domain_delegation_delete_message">%1$s többé nem fog útvonalakat kezelni ezen a tartományon.</string>
+    <string name="domain_delegation_delete_title">Törli a delegálást?</string>
+    <string name="domain_delegation_path">Útvonal</string>
+    <string name="domain_delegation_user">Felhasználói azonosító</string>
+    <string name="domain_delegations">Delegálások</string>
+    <string name="domain_delegations_empty">Nincsenek beállított delegálások.</string>
+    <string name="domain_delete">Tartomány törlése</string>
+    <string name="domain_delete_message">Ez véglegesen törli a(z) „%1$s\" tartományt és minden útvonalát.</string>
+    <string name="domain_delete_title">Törli a tartományt?</string>
+    <string name="domain_dns_hint">Hozzon létre TXT-rekordot:</string>
+    <string name="domain_empty_admin">Nincsenek beállított tartományok.</string>
+    <string name="domain_empty_user">Nincs hozzáférése egyetlen tartományhoz sem.</string>
+    <string name="domain_https">Automatikus HTTPS</string>
+    <string name="domain_name">Tartomány</string>
+    <string name="domain_status_pending">DNS-ellenőrzés függőben</string>
+    <string name="domain_status_verified">Ellenőrizve</string>
+    <string name="domain_title">Tartományok</string>
+    <string name="domain_verify">DNS ellenőrzése</string>
+    <string name="settings_home_domains">Tartományok</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 munkamenet visszavonva</item>
+        <item quantity="other">%1$d munkamenet visszavonva</item>
+    </plurals>
 </resources>

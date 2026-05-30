@@ -391,4 +391,28 @@
         <item quantity="one">Revoked 1 session</item>
         <item quantity="other">Revoked %1$d sessions</item>
     </plurals>
+    <string name="domain_add">Add domain</string>
+    <string name="domain_add_title">Add domain</string>
+    <string name="domain_delegation_add">Add</string>
+    <string name="domain_delegation_add_title">Add delegation</string>
+    <string name="domain_delegation_delete">Delete delegation</string>
+    <string name="domain_delegation_delete_message">%1$s will no longer manage routes on this domain.</string>
+    <string name="domain_delegation_delete_title">Delete delegation?</string>
+    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_user">User ID</string>
+    <string name="domain_delegations">Delegations</string>
+    <string name="domain_delegations_empty">No delegations configured.</string>
+    <string name="domain_delete">Delete domain</string>
+    <string name="domain_delete_message">This will permanently delete "%1$s" and all its routes.</string>
+    <string name="domain_delete_title">Delete domain?</string>
+    <string name="domain_dns_hint">Create a TXT record:</string>
+    <string name="domain_empty_admin">No domains configured.</string>
+    <string name="domain_empty_user">You don\'t have access to any domains.</string>
+    <string name="domain_https">Automatic HTTPS</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">Pending DNS verification</string>
+    <string name="domain_status_verified">Verified</string>
+    <string name="domain_title">Domains</string>
+    <string name="domain_verify">Verify DNS</string>
+    <string name="settings_home_domains">Domains</string>
 </resources>

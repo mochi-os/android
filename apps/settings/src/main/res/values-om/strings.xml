@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Koodii mirkaneessaa karaa imeelii argadhu</string>
     <string name="account_method_totp_subtitle">Dandeessisuuf, gad mirkaneessaa qopheessi</string>
     <string name="account_method_passkey_subtitle">Dandeessisuuf, gad furtuu seensaa galmeessi</string>
+    <string name="domain_add">Damee dabali</string>
+    <string name="domain_add_title">Damee dabali</string>
+    <string name="domain_delegation_add">Dabali</string>
+    <string name="domain_delegation_add_title">Bakka bu\'iinsa dabali</string>
+    <string name="domain_delegation_delete">Bakka bu\'iinsa haqi</string>
+    <string name="domain_delegation_delete_message">%1$s lammaffaa karoorawwan domainii kana irraa hin bulchu.</string>
+    <string name="domain_delegation_delete_title">Bakka bu\'iinsa haqu?</string>
+    <string name="domain_delegation_path">Daandii</string>
+    <string name="domain_delegation_user">ID fayyadamtuu</string>
+    <string name="domain_delegations">Bakka bu\'iinsa</string>
+    <string name="domain_delegations_empty">Delegasiyoniin qaroomfaman hin jiran.</string>
+    <string name="domain_delete">Damee haqi</string>
+    <string name="domain_delete_message">Kunis dhaabbii \"%1$s\" fi karoorawwan isaa hunda haqa.</string>
+    <string name="domain_delete_title">Damee haqu?</string>
+    <string name="domain_dns_hint">TXT galmee uumi:</string>
+    <string name="domain_empty_admin">Domainonni qaroomfaman hin jiran.</string>
+    <string name="domain_empty_user">Domeenotaaf ittigaltee hin qabdu.</string>
+    <string name="domain_https">HTTPS ofumaan</string>
+    <string name="domain_name">Domeenii</string>
+    <string name="domain_status_pending">Mirkaneessa DNS eegamaa jira</string>
+    <string name="domain_status_verified">Mirkanaa\'eera</string>
+    <string name="domain_title">Domeeniwwan</string>
+    <string name="domain_verify">DNS Mirkaneessi</string>
+    <string name="settings_home_domains">Domeeniwwan</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Yeroo turtii 1 kaafame</item>
+        <item quantity="other">Yeroowwan turtii %1$d kaafaman</item>
+    </plurals>
 </resources>

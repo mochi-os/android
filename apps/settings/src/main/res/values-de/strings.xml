@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Bestätigungscode per E-Mail erhalten</string>
     <string name="account_method_totp_subtitle">Richte unten einen Authentifikator ein, um zu aktivieren</string>
     <string name="account_method_passkey_subtitle">Registriere unten einen Passkey, um zu aktivieren</string>
+    <string name="domain_add">Domain hinzufügen</string>
+    <string name="domain_add_title">Domain hinzufügen</string>
+    <string name="domain_delegation_add">Hinzufügen</string>
+    <string name="domain_delegation_add_title">Delegation hinzufügen</string>
+    <string name="domain_delegation_delete">Delegation löschen</string>
+    <string name="domain_delegation_delete_message">%1$s wird keine Routen mehr auf dieser Domain verwalten.</string>
+    <string name="domain_delegation_delete_title">Delegation löschen?</string>
+    <string name="domain_delegation_path">Pfad</string>
+    <string name="domain_delegation_user">Benutzer-ID</string>
+    <string name="domain_delegations">Delegationen</string>
+    <string name="domain_delegations_empty">Keine Delegierungen konfiguriert.</string>
+    <string name="domain_delete">Domain löschen</string>
+    <string name="domain_delete_message">Dies löscht „%1$s\" und alle seine Routen dauerhaft.</string>
+    <string name="domain_delete_title">Domain löschen?</string>
+    <string name="domain_dns_hint">Erstelle einen TXT-Eintrag:</string>
+    <string name="domain_empty_admin">Keine Domains konfiguriert.</string>
+    <string name="domain_empty_user">Sie haben keinen Zugriff auf Domains.</string>
+    <string name="domain_https">Automatisches HTTPS</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">DNS-Verifizierung ausstehend</string>
+    <string name="domain_status_verified">Verifiziert</string>
+    <string name="domain_title">Domains</string>
+    <string name="domain_verify">DNS verifizieren</string>
+    <string name="settings_home_domains">Domains</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 Sitzung widerrufen</item>
+        <item quantity="other">%1$d Sitzungen widerrufen</item>
+    </plurals>
 </resources>

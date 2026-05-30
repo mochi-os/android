@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ईमेल द्वारा सत्यापन कोड प्राप्त करें</string>
     <string name="account_method_totp_subtitle">सक्षम करने के लिए नीचे प्रमाणक सेट करें</string>
     <string name="account_method_passkey_subtitle">सक्षम करने के लिए नीचे पासकी पंजीकृत करें</string>
+    <string name="domain_add">डोमेन जोड़ें</string>
+    <string name="domain_add_title">डोमेन जोड़ें</string>
+    <string name="domain_delegation_add">जोड़ें</string>
+    <string name="domain_delegation_add_title">डेलिगेशन जोड़ें</string>
+    <string name="domain_delegation_delete">डेलिगेशन हटाएँ</string>
+    <string name="domain_delegation_delete_message">%1$s अब इस डोमेन पर मार्गों का प्रबंधन नहीं करेगा।</string>
+    <string name="domain_delegation_delete_title">डेलिगेशन हटाएँ?</string>
+    <string name="domain_delegation_path">पाथ</string>
+    <string name="domain_delegation_user">उपयोगकर्ता ID</string>
+    <string name="domain_delegations">डेलिगेशन्स</string>
+    <string name="domain_delegations_empty">कोई प्रतिनिधि कॉन्फ़िगर नहीं किया गया।</string>
+    <string name="domain_delete">डोमेन हटाएँ</string>
+    <string name="domain_delete_message">यह स्थायी रूप से \"%1$s\" और उसके सभी मार्गों को हटा देगा।</string>
+    <string name="domain_delete_title">डोमेन हटाएँ?</string>
+    <string name="domain_dns_hint">एक TXT रिकॉर्ड बनाएं:</string>
+    <string name="domain_empty_admin">कोई डोमेन कॉन्फ़िगर नहीं किया गया।</string>
+    <string name="domain_empty_user">आपके पास किसी भी डोमेन का एक्सेस नहीं है।</string>
+    <string name="domain_https">स्वचालित HTTPS</string>
+    <string name="domain_name">डोमेन</string>
+    <string name="domain_status_pending">DNS सत्यापन लंबित</string>
+    <string name="domain_status_verified">वेरिफ़ाइड</string>
+    <string name="domain_title">डोमेन</string>
+    <string name="domain_verify">DNS सत्यापित करें</string>
+    <string name="settings_home_domains">डोमेन</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 सत्र निरस्त किया गया</item>
+        <item quantity="other">%1$d सत्र निरस्त किए गए</item>
+    </plurals>
 </resources>

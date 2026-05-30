@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Få en verifieringskod via e-post</string>
     <string name="account_method_totp_subtitle">Konfigurera en autentiserare nedan för att aktivera</string>
     <string name="account_method_passkey_subtitle">Registrera en nyckel nedan för att aktivera</string>
+    <string name="domain_add">Lägg till domän</string>
+    <string name="domain_add_title">Lägg till domän</string>
+    <string name="domain_delegation_add">Lägg till</string>
+    <string name="domain_delegation_add_title">Lägg till delegering</string>
+    <string name="domain_delegation_delete">Ta bort delegering</string>
+    <string name="domain_delegation_delete_message">%1$s kommer inte längre hantera rutter på denna domän.</string>
+    <string name="domain_delegation_delete_title">Ta bort delegering?</string>
+    <string name="domain_delegation_path">Sökväg</string>
+    <string name="domain_delegation_user">Användar-ID</string>
+    <string name="domain_delegations">Delegeringar</string>
+    <string name="domain_delegations_empty">Inga delegeringar konfigurerade.</string>
+    <string name="domain_delete">Ta bort domän</string>
+    <string name="domain_delete_message">Detta tar permanent bort \"%1$s\" och alla dess rutter.</string>
+    <string name="domain_delete_title">Ta bort domän?</string>
+    <string name="domain_dns_hint">Skapa en TXT-post:</string>
+    <string name="domain_empty_admin">Inga domäner konfigurerade.</string>
+    <string name="domain_empty_user">Du har inte åtkomst till några domäner.</string>
+    <string name="domain_https">Automatisk HTTPS</string>
+    <string name="domain_name">Domän</string>
+    <string name="domain_status_pending">DNS-verifiering väntar</string>
+    <string name="domain_status_verified">Verifierad</string>
+    <string name="domain_title">Domäner</string>
+    <string name="domain_verify">Verifiera DNS</string>
+    <string name="settings_home_domains">Domäner</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 session återkallad</item>
+        <item quantity="other">%1$d sessioner återkallade</item>
+    </plurals>
 </resources>

@@ -352,4 +352,34 @@
     <string name="account_method_email_subtitle">Otrzymaj kod weryfikacyjny e-mailem</string>
     <string name="account_method_totp_subtitle">Aby włączyć, skonfiguruj uwierzytelniacz poniżej</string>
     <string name="account_method_passkey_subtitle">Aby włączyć, zarejestruj klucz dostępu poniżej</string>
+    <string name="domain_add">Dodaj domenę</string>
+    <string name="domain_add_title">Dodaj domenę</string>
+    <string name="domain_delegation_add">Dodaj</string>
+    <string name="domain_delegation_add_title">Dodaj delegację</string>
+    <string name="domain_delegation_delete">Usuń delegację</string>
+    <string name="domain_delegation_delete_message">%1$s nie będzie już zarządzać trasami w tej domenie.</string>
+    <string name="domain_delegation_delete_title">Usunąć delegację?</string>
+    <string name="domain_delegation_path">Ścieżka</string>
+    <string name="domain_delegation_user">ID użytkownika</string>
+    <string name="domain_delegations">Delegacje</string>
+    <string name="domain_delegations_empty">Brak skonfigurowanych delegacji.</string>
+    <string name="domain_delete">Usuń domenę</string>
+    <string name="domain_delete_message">To trwale usunie „%1$s\" i wszystkie jego trasy.</string>
+    <string name="domain_delete_title">Usunąć domenę?</string>
+    <string name="domain_dns_hint">Utwórz rekord TXT:</string>
+    <string name="domain_empty_admin">Brak skonfigurowanych domen.</string>
+    <string name="domain_empty_user">Nie masz dostępu do żadnych domen.</string>
+    <string name="domain_https">Automatyczny HTTPS</string>
+    <string name="domain_name">Domena</string>
+    <string name="domain_status_pending">Oczekiwanie na weryfikację DNS</string>
+    <string name="domain_status_verified">Zweryfikowano</string>
+    <string name="domain_title">Domeny</string>
+    <string name="domain_verify">Zweryfikuj DNS</string>
+    <string name="settings_home_domains">Domeny</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Unieważniono %1$d sesje</item>
+        <item quantity="many">Unieważniono %1$d sesji</item>
+        <item quantity="one">Unieważniono 1 sesję</item>
+        <item quantity="other">Unieważniono %1$d sesji</item>
+    </plurals>
 </resources>

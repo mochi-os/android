@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">通过电子邮件接收验证码</string>
     <string name="account_method_totp_subtitle">在下方设置身份验证器以启用</string>
     <string name="account_method_passkey_subtitle">在下方注册通行密钥以启用</string>
+    <string name="domain_add">添加域名</string>
+    <string name="domain_add_title">添加域名</string>
+    <string name="domain_delegation_add">添加</string>
+    <string name="domain_delegation_add_title">添加委派</string>
+    <string name="domain_delegation_delete">删除委派</string>
+    <string name="domain_delegation_delete_message">%1$s 将不再管理此域名上的路由。</string>
+    <string name="domain_delegation_delete_title">删除委派吗?</string>
+    <string name="domain_delegation_path">路径</string>
+    <string name="domain_delegation_user">用户 ID</string>
+    <string name="domain_delegations">委派</string>
+    <string name="domain_delegations_empty">未配置任何委托。</string>
+    <string name="domain_delete">删除域名</string>
+    <string name="domain_delete_message">这将永久删除\"%1$s\"及其所有路由。</string>
+    <string name="domain_delete_title">删除域名吗?</string>
+    <string name="domain_dns_hint">创建 TXT 记录：</string>
+    <string name="domain_empty_admin">未配置任何域名。</string>
+    <string name="domain_empty_user">您无权访问任何域名。</string>
+    <string name="domain_https">自动 HTTPS</string>
+    <string name="domain_name">域名</string>
+    <string name="domain_status_pending">DNS 验证待处理</string>
+    <string name="domain_status_verified">已验证</string>
+    <string name="domain_title">域名</string>
+    <string name="domain_verify">验证 DNS</string>
+    <string name="settings_home_domains">域名</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">已撤销 %1$d 个会话</item>
+    </plurals>
 </resources>

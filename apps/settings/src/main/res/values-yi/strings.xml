@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">באַקומען אַ באַשטעטיקונג קאָד דורך ע-פּאָסט</string>
     <string name="account_method_totp_subtitle">צו ענייבאַלן, שטעלט אַ אַוטענטיקאַטאָר אונטן</string>
     <string name="account_method_passkey_subtitle">צו ענייבאַלן, רעגיסטרירט אַ דורכגאַנג שליסל אונטן</string>
+    <string name="domain_add">צולייגן דאָמיין</string>
+    <string name="domain_add_title">צולייגן דאָמיין</string>
+    <string name="domain_delegation_add">צולייגן</string>
+    <string name="domain_delegation_add_title">צולייגן דעלעגאַציע</string>
+    <string name="domain_delegation_delete">אויסמעקן דעלעגאַציע</string>
+    <string name="domain_delegation_delete_message">%1$s וועט מער ניט פֿאַרוואַלטן רעטעס אױף דעם דאָמייַן.</string>
+    <string name="domain_delegation_delete_title">אויסמעקן דעלעגאַציע?</string>
+    <string name="domain_delegation_path">וועג</string>
+    <string name="domain_delegation_user">באַניצער ID</string>
+    <string name="domain_delegations">דעלעגאַציעס</string>
+    <string name="domain_delegations_empty">קײנע דעלעגאַציעס פֿאַרקאָנפֿיגירט.</string>
+    <string name="domain_delete">אויסמעקן דאָמיין</string>
+    <string name="domain_delete_message">דאָס וועט אױסמעקן \"%1$s\" און אַלע זיינע רעטעס פֿאַר אייביק.</string>
+    <string name="domain_delete_title">אויסמעקן דאָמיין?</string>
+    <string name="domain_dns_hint">שאַף אַ TXT רעקאָרד:</string>
+    <string name="domain_empty_admin">קײנע דאָמייַנס פֿאַרקאָנפֿיגירט.</string>
+    <string name="domain_empty_user">איר האָט נישט קיין צוטריט צו קיין דאָמיינען.</string>
+    <string name="domain_https">אױטאָמאַטיש HTTPS</string>
+    <string name="domain_name">דאָמיין</string>
+    <string name="domain_status_pending">DNS פֿאַרגיכערן ווארטעט</string>
+    <string name="domain_status_verified">פֿאַריפֿיצירט</string>
+    <string name="domain_title">דאָמיינס</string>
+    <string name="domain_verify">פֿאַריפֿיצירן DNS</string>
+    <string name="settings_home_domains">דאָמיינס</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">אָפּגערופֿן 1 סעסיע</item>
+        <item quantity="other">אָפּגערופֿן %1$d סעסיעס</item>
+    </plurals>
 </resources>

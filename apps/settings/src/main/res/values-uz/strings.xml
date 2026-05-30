@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Tasdiqlash kodini e-pochta orqali oling</string>
     <string name="account_method_totp_subtitle">Yoqish uchun quyida autentifikator sozlang</string>
     <string name="account_method_passkey_subtitle">Yoqish uchun quyida kirish kalitini ro\'yxatdan o\'tkazing</string>
+    <string name="domain_add">Domen qoʻshish</string>
+    <string name="domain_add_title">Domen qoʻshish</string>
+    <string name="domain_delegation_add">Qoʻshish</string>
+    <string name="domain_delegation_add_title">Delegatsiya qoʻshish</string>
+    <string name="domain_delegation_delete">Delegatsiyani oʻchirish</string>
+    <string name="domain_delegation_delete_message">%1$s endi ushbu domendagi marshrutlarni boshqarmaydi.</string>
+    <string name="domain_delegation_delete_title">Delegatsiya oʻchirilsinmi?</string>
+    <string name="domain_delegation_path">Yoʻl</string>
+    <string name="domain_delegation_user">Foydalanuvchi ID</string>
+    <string name="domain_delegations">Delegatsiyalar</string>
+    <string name="domain_delegations_empty">Sozlangan delegatsiyalar yoʻq.</string>
+    <string name="domain_delete">Domenni oʻchirish</string>
+    <string name="domain_delete_message">Bu doimiy ravishda \"%1$s\" va uning barcha marshrutlarini oʻchiradi.</string>
+    <string name="domain_delete_title">Domen oʻchirilsinmi?</string>
+    <string name="domain_dns_hint">TXT yozuvini yarating:</string>
+    <string name="domain_empty_admin">Sozlangan domenlar yoʻq.</string>
+    <string name="domain_empty_user">Sizda hech qanday domenlarga kirish ruxsati yoʻq.</string>
+    <string name="domain_https">Avtomatik HTTPS</string>
+    <string name="domain_name">Domen</string>
+    <string name="domain_status_pending">DNS tekshiruvi kutilmoqda</string>
+    <string name="domain_status_verified">Tasdiqlangan</string>
+    <string name="domain_title">Domenlar</string>
+    <string name="domain_verify">DNS ni tasdiqlash</string>
+    <string name="settings_home_domains">Domenlar</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 sessiya bekor qilindi</item>
+        <item quantity="other">%1$d sessiya bekor qilindi</item>
+    </plurals>
 </resources>

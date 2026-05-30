@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">이메일로 인증 코드 받기</string>
     <string name="account_method_totp_subtitle">활성화하려면 아래에서 인증 앱을 설정하세요</string>
     <string name="account_method_passkey_subtitle">활성화하려면 아래에서 패스키를 등록하세요</string>
+    <string name="domain_add">도메인 추가</string>
+    <string name="domain_add_title">도메인 추가</string>
+    <string name="domain_delegation_add">추가</string>
+    <string name="domain_delegation_add_title">위임 추가</string>
+    <string name="domain_delegation_delete">위임 삭제</string>
+    <string name="domain_delegation_delete_message">%1$s은(는) 더 이상 이 도메인의 경로를 관리하지 않습니다.</string>
+    <string name="domain_delegation_delete_title">위임을 삭제할까요?</string>
+    <string name="domain_delegation_path">경로</string>
+    <string name="domain_delegation_user">사용자 ID</string>
+    <string name="domain_delegations">위임</string>
+    <string name="domain_delegations_empty">구성된 위임이 없습니다.</string>
+    <string name="domain_delete">도메인 삭제</string>
+    <string name="domain_delete_message">이 작업은 \"%1$s\"과(와) 모든 경로를 영구적으로 삭제합니다.</string>
+    <string name="domain_delete_title">도메인을 삭제할까요?</string>
+    <string name="domain_dns_hint">TXT 레코드 만들기:</string>
+    <string name="domain_empty_admin">구성된 도메인이 없습니다.</string>
+    <string name="domain_empty_user">어떤 도메인에도 접근 권한이 없어요.</string>
+    <string name="domain_https">자동 HTTPS</string>
+    <string name="domain_name">도메인</string>
+    <string name="domain_status_pending">DNS 확인 대기 중</string>
+    <string name="domain_status_verified">확인됨</string>
+    <string name="domain_title">도메인</string>
+    <string name="domain_verify">DNS 확인</string>
+    <string name="settings_home_domains">도메인</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">%1$d개의 세션이 취소되었습니다</item>
+    </plurals>
 </resources>

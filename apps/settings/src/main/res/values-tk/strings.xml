@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Tassyklama kodyny e-poçta arkaly alyň</string>
     <string name="account_method_totp_subtitle">Işjeňleşdirmek üçin aşakda autentifikator guruň</string>
     <string name="account_method_passkey_subtitle">Işjeňleşdirmek üçin aşakda giriş açaryny hasaba alyň</string>
+    <string name="domain_add">Domen goşmak</string>
+    <string name="domain_add_title">Domen goşmak</string>
+    <string name="domain_delegation_add">Goşmak</string>
+    <string name="domain_delegation_add_title">Wekilçilik goşmak</string>
+    <string name="domain_delegation_delete">Wekilçiligi pozmak</string>
+    <string name="domain_delegation_delete_message">%1$s indi bu domende ýollary dolandyrmaz.</string>
+    <string name="domain_delegation_delete_title">Wekilçiligi pozmaly?</string>
+    <string name="domain_delegation_path">Ýol</string>
+    <string name="domain_delegation_user">Ulanyjy ID</string>
+    <string name="domain_delegations">Wekilçilikler</string>
+    <string name="domain_delegations_empty">Sazlanan delegasiýalar ýok.</string>
+    <string name="domain_delete">Domeni pozmak</string>
+    <string name="domain_delete_message">Bu \"%1$s\" we onuň ähli ýollaryny hemişelik öçürer.</string>
+    <string name="domain_delete_title">Domeni pozmaly?</string>
+    <string name="domain_dns_hint">TXT ýazgyny dörediň:</string>
+    <string name="domain_empty_admin">Sazlanan domenler ýok.</string>
+    <string name="domain_empty_user">Hiç bir domene rugsadyň ýok.</string>
+    <string name="domain_https">Awtomatik HTTPS</string>
+    <string name="domain_name">Domen</string>
+    <string name="domain_status_pending">DNS barlanyşy garaşylýar</string>
+    <string name="domain_status_verified">Tassyklandy</string>
+    <string name="domain_title">Domenler</string>
+    <string name="domain_verify">DNS tassykla</string>
+    <string name="settings_home_domains">Domenler</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 sessiýa ýatyryldy</item>
+        <item quantity="other">%1$d sessiýa ýatyryldy</item>
+    </plurals>
 </resources>

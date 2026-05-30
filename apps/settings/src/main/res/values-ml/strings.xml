@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ഇമെയിൽ വഴി പരിശോധനാ കോഡ് സ്വീകരിക്കുക</string>
     <string name="account_method_totp_subtitle">പ്രവർത്തനക്ഷമമാക്കാൻ താഴെ ഒരു ഓതന്റിക്കേറ്റർ സജ്ജമാക്കുക</string>
     <string name="account_method_passkey_subtitle">പ്രവർത്തനക്ഷമമാക്കാൻ താഴെ ഒരു പാസ്കീ രജിസ്റ്റർ ചെയ്യുക</string>
+    <string name="domain_add">ഡൊമെയ്ൻ ചേർക്കുക</string>
+    <string name="domain_add_title">ഡൊമെയ്ൻ ചേർക്കുക</string>
+    <string name="domain_delegation_add">ചേർക്കുക</string>
+    <string name="domain_delegation_add_title">പ്രതിനിധിയാക്കൽ ചേർക്കുക</string>
+    <string name="domain_delegation_delete">പ്രതിനിധിയാക്കൽ ഇല്ലാതാക്കുക</string>
+    <string name="domain_delegation_delete_message">%1$s ഈ ഡൊമൈനിലെ റൂട്ടുകൾ ഇനി കൈകാര്യം ചെയ്യില്ല.</string>
+    <string name="domain_delegation_delete_title">പ്രതിനിധിയാക്കൽ ഇല്ലാതാക്കണോ?</string>
+    <string name="domain_delegation_path">പാത്ത്</string>
+    <string name="domain_delegation_user">ഉപയോക്തൃ ID</string>
+    <string name="domain_delegations">പ്രതിനിധിയാക്കലുകൾ</string>
+    <string name="domain_delegations_empty">പ്രതിനിധികൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല.</string>
+    <string name="domain_delete">ഡൊമെയ്ൻ ഇല്ലാതാക്കുക</string>
+    <string name="domain_delete_message">ഇത് \"%1$s\" ഉം അതിന്റെ എല്ലാ റൂട്ടുകളും ശാശ്വതമായി ഇല്ലാതാക്കും.</string>
+    <string name="domain_delete_title">ഡൊമെയ്ൻ ഇല്ലാതാക്കണോ?</string>
+    <string name="domain_dns_hint">ഒരു TXT റെക്കോർഡ് സൃഷ്ടിക്കുക:</string>
+    <string name="domain_empty_admin">ഡൊമൈനുകൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല.</string>
+    <string name="domain_empty_user">നിങ്ങൾക്ക് ഒരു ഡൊമെയ്നുകളിലേക്കും ആക്സസ് ഇല്ല.</string>
+    <string name="domain_https">സ്വയം HTTPS</string>
+    <string name="domain_name">ഡൊമെയിൻ</string>
+    <string name="domain_status_pending">DNS പരിശോധന തീരുമാനത്തിലാണ്</string>
+    <string name="domain_status_verified">സ്ഥിരീകരിച്ചു</string>
+    <string name="domain_title">ഡൊമെയിനുകൾ</string>
+    <string name="domain_verify">DNS സ്ഥിരീകരിക്കുക</string>
+    <string name="settings_home_domains">ഡൊമെയിനുകൾ</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 സെഷൻ റദ്ദാക്കി</item>
+        <item quantity="other">%1$d സെഷനുകൾ റദ്ദാക്കി</item>
+    </plurals>
 </resources>

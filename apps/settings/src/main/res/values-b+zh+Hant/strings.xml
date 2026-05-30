@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">透過電子郵件接收驗證碼</string>
     <string name="account_method_totp_subtitle">在下方設定驗證器以啟用</string>
     <string name="account_method_passkey_subtitle">在下方註冊通行金鑰以啟用</string>
+    <string name="domain_add">新增網域</string>
+    <string name="domain_add_title">新增網域</string>
+    <string name="domain_delegation_add">新增</string>
+    <string name="domain_delegation_add_title">新增委派</string>
+    <string name="domain_delegation_delete">刪除委派</string>
+    <string name="domain_delegation_delete_message">%1$s 將不再管理此網域的路由。</string>
+    <string name="domain_delegation_delete_title">刪除委派?</string>
+    <string name="domain_delegation_path">路徑</string>
+    <string name="domain_delegation_user">使用者 ID</string>
+    <string name="domain_delegations">委派</string>
+    <string name="domain_delegations_empty">未設定任何委派。</string>
+    <string name="domain_delete">刪除網域</string>
+    <string name="domain_delete_message">這會永久刪除\"%1$s\"及其所有路由。</string>
+    <string name="domain_delete_title">刪除網域?</string>
+    <string name="domain_dns_hint">建立 TXT 記錄：</string>
+    <string name="domain_empty_admin">未設定任何網域。</string>
+    <string name="domain_empty_user">您沒有任何網域的存取權。</string>
+    <string name="domain_https">自動 HTTPS</string>
+    <string name="domain_name">網域</string>
+    <string name="domain_status_pending">DNS 驗證待處理</string>
+    <string name="domain_status_verified">已驗證</string>
+    <string name="domain_title">網域</string>
+    <string name="domain_verify">驗證 DNS</string>
+    <string name="settings_home_domains">網域</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">已撤銷 %1$d 個工作階段</item>
+    </plurals>
 </resources>

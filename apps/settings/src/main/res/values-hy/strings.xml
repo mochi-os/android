@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Ստացեք հաստատման կոդ էլ. փոստով</string>
     <string name="account_method_totp_subtitle">Միացնելու համար ստորև կարգավորեք նույնականացուցիչ</string>
     <string name="account_method_passkey_subtitle">Միացնելու համար ստորև գրանցեք անցաբանալի</string>
+    <string name="domain_add">Ավելացնել դաշտ</string>
+    <string name="domain_add_title">Ավելացնել դաշտ</string>
+    <string name="domain_delegation_add">Ավելացնել Mochi հոսք</string>
+    <string name="domain_delegation_add_title">Ավելացնել տիրույթ</string>
+    <string name="domain_delegation_delete">Ջնջել պատվիրակությունը</string>
+    <string name="domain_delegation_delete_message">%1$s-ն այլևս չի կառավարի այս տիրույթի ուղիները։</string>
+    <string name="domain_delegation_delete_title">Ջնջե՞լ պատվիրակությունը։</string>
+    <string name="domain_delegation_path">Ուղի</string>
+    <string name="domain_delegation_user">Օգտատիրոջ ID</string>
+    <string name="domain_delegations">Պատվիրակություններ</string>
+    <string name="domain_delegations_empty">Կարգավորված պատվիրակություններ չկան։</string>
+    <string name="domain_delete">Ջնջել տիրույթը</string>
+    <string name="domain_delete_message">Սա մշտապես կջնջի \"%1$s\"-ը և նրա բոլոր ուղիները։</string>
+    <string name="domain_delete_title">Ջնջե՞լ տիրույթը։</string>
+    <string name="domain_dns_hint">Ստեղծեք TXT գրառում՝</string>
+    <string name="domain_empty_admin">Կարգավորված տիրույթներ չկան։</string>
+    <string name="domain_empty_user">Դուք մուտք չունեք որևէ տիրույթին:</string>
+    <string name="domain_https">Ավտոմատ HTTPS</string>
+    <string name="domain_name">Տիրույթ</string>
+    <string name="domain_status_pending">DNS-ի ստուգումն ընթացքի մեջ</string>
+    <string name="domain_status_verified">Ստուգված</string>
+    <string name="domain_title">Տիրույթներ</string>
+    <string name="domain_verify">Ստուգել DNS</string>
+    <string name="settings_home_domains">Տիրույթներ</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Չեղարկվեց 1 սեսիա</item>
+        <item quantity="other">Չեղարկվեցին %1$d սեսիա</item>
+    </plurals>
 </resources>

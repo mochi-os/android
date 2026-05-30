@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Рамзи тасдиқро тавассути почтаи электронӣ гиред</string>
     <string name="account_method_totp_subtitle">Барои фаъол кардан, дар поён аутентификаторро танзим кунед</string>
     <string name="account_method_passkey_subtitle">Барои фаъол кардан, дар поён калиди дастрасиро сабт кунед</string>
+    <string name="domain_add">Иловаи домен</string>
+    <string name="domain_add_title">Иловаи домен</string>
+    <string name="domain_delegation_add">Илова кардан</string>
+    <string name="domain_delegation_add_title">Иловаи делегатсия</string>
+    <string name="domain_delegation_delete">Нест кардани делегатсия</string>
+    <string name="domain_delegation_delete_message">%1$s дигар роҳҳоро дар ин домейн идора намекунад.</string>
+    <string name="domain_delegation_delete_title">Делегатсияро нест кунем?</string>
+    <string name="domain_delegation_path">Роҳ</string>
+    <string name="domain_delegation_user">ID корбар</string>
+    <string name="domain_delegations">Делегатсияҳо</string>
+    <string name="domain_delegations_empty">Уполномочии танзимшуда нестанд.</string>
+    <string name="domain_delete">Нест кардани домен</string>
+    <string name="domain_delete_message">Ин \"%1$s\" ва ҳамаи роҳҳои онро ҳамеша нест мекунад.</string>
+    <string name="domain_delete_title">Доменро нест кунем?</string>
+    <string name="domain_dns_hint">Сабти TXT эҷод кунед:</string>
+    <string name="domain_empty_admin">Домейнҳои танзимшуда нестанд.</string>
+    <string name="domain_empty_user">Шумо ба ягон домен дастрасӣ надоред.</string>
+    <string name="domain_https">HTTPS автоматӣ</string>
+    <string name="domain_name">Домен</string>
+    <string name="domain_status_pending">Санҷиши DNS дар интизорӣ</string>
+    <string name="domain_status_verified">Тасдиқ шуд</string>
+    <string name="domain_title">Доменҳо</string>
+    <string name="domain_verify">Тасдиқи DNS</string>
+    <string name="settings_home_domains">Доменҳо</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">%1$d сессия бекор карда шуд</item>
+    </plurals>
 </resources>

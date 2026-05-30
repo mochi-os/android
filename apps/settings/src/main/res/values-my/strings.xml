@@ -12,11 +12,11 @@
     <string name="settings_home_replication">ပုံတူပွားခြင်း</string>
     <string name="account_method_email">အီးမေးလ် ကုဒ်</string>
     <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator app</string>
+    <string name="account_method_totp">Authenticator အက်ပ်</string>
     <string name="account_section_passkeys">Passkey များ</string>
     <string name="account_passkey_register">passkey ထည့်မည်</string>
     <string name="account_passkey_delete_title">passkey ဖျက်မလား?</string>
-    <string name="account_section_totp">Authenticator app</string>
+    <string name="account_section_totp">Authenticator အက်ပ်</string>
     <string name="account_totp_setup">Authenticator တပ်ဆင်ပါ</string>
     <string name="account_totp_setup_title">Authenticator တပ်ဆင်ပါ</string>
     <string name="account_totp_verify">အတည်ပြုမည်</string>
@@ -287,7 +287,7 @@
     <string name="account_oauth_link_title">ဝန်ဆောင်မှုပေးသူ ချိတ်ဆက်ပါ</string>
     <string name="account_oauth_unlink_title">အကောင့်ကို ဖြုတ်မလား?</string>
     <string name="account_oauth_unlink_message">%1$s ဖြင့် ထပ်မံ ဝင်နိုင်တော့မည် မဟုတ်ပါ။</string>
-    <string name="tokens_section_title">API tokens</string>
+    <string name="tokens_section_title">API တိုကင်များ</string>
     <string name="tokens_title">အထောက်အထားစိစစ်မှု တိုကင်များ</string>
     <string name="tokens_empty">API tokens မရှိပါ။</string>
     <string name="tokens_create_title">API token အသစ်</string>
@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">အတည်ပြုကုဒ်ကို အီးမေးလ်ဖြင့် လက်ခံပါ</string>
     <string name="account_method_totp_subtitle">ဖွင့်ရန် အောက်တွင် authenticator ကို စနစ်ထည့်ပါ</string>
     <string name="account_method_passkey_subtitle">ဖွင့်ရန် အောက်တွင် passkey ကို မှတ်ပုံတင်ပါ</string>
+    <string name="domain_add">domain ထည့်မည်</string>
+    <string name="domain_add_title">domain ထည့်မည်</string>
+    <string name="domain_delegation_add">ထည့်မည်</string>
+    <string name="domain_delegation_add_title">လွှဲအပ်မှု ထည့်မည်</string>
+    <string name="domain_delegation_delete">လွှဲအပ်မှု ဖျက်မည်</string>
+    <string name="domain_delegation_delete_message">%1$s သည် ဤဒိုမိန်းပေါ်တွင် လမ်းကြောင်းများကို ထပ်မံ မစီမံတော့ပါ။</string>
+    <string name="domain_delegation_delete_title">လွှဲအပ်မှု ဖျက်မလား?</string>
+    <string name="domain_delegation_path">လမ်းကြောင်း</string>
+    <string name="domain_delegation_user">အသုံးပြုသူ ID</string>
+    <string name="domain_delegations">လွှဲအပ်မှုများ</string>
+    <string name="domain_delegations_empty">စီစဉ်ထားသော ကိုယ်စားလှယ်များ မရှိပါ။</string>
+    <string name="domain_delete">domain ဖျက်မည်</string>
+    <string name="domain_delete_message">ဤသည် \"%1$s\" နှင့် ၎င်း၏ လမ်းကြောင်းအားလုံးကို အပြီးအပိုင် ဖျက်ပါမည်။</string>
+    <string name="domain_delete_title">domain ဖျက်မလား?</string>
+    <string name="domain_dns_hint">TXT မှတ်တမ်း ဖန်တီးပါ-</string>
+    <string name="domain_empty_admin">စီစဉ်ထားသော ဒိုမိန်းများ မရှိပါ။</string>
+    <string name="domain_empty_user">သင့်တွင် မည်သည့် domain ကိုမှ ဝင်ခွင့်မရှိပါ။</string>
+    <string name="domain_https">အလိုအလျောက် HTTPS</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">DNS အတည်ပြုခြင်း စောင့်ဆိုင်းနေသည်</string>
+    <string name="domain_status_verified">အတည်ပြုပြီး</string>
+    <string name="domain_title">Domain များ</string>
+    <string name="domain_verify">DNS အတည်ပြုမည်</string>
+    <string name="settings_home_domains">Domain များ</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">Session %1$d ခုကို ရုပ်သိမ်းပြီး</item>
+    </plurals>
 </resources>

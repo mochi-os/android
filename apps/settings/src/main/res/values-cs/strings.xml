@@ -352,4 +352,34 @@
     <string name="account_method_email_subtitle">Získejte ověřovací kód e-mailem</string>
     <string name="account_method_totp_subtitle">Pro aktivaci níže nastavte autentizátor</string>
     <string name="account_method_passkey_subtitle">Pro aktivaci níže zaregistrujte přístupový klíč</string>
+    <string name="domain_add">Přidat doménu</string>
+    <string name="domain_add_title">Přidat doménu</string>
+    <string name="domain_delegation_add">Přidat</string>
+    <string name="domain_delegation_add_title">Přidat delegaci</string>
+    <string name="domain_delegation_delete">Smazat delegaci</string>
+    <string name="domain_delegation_delete_message">%1$s již nebude spravovat trasy na této doméně.</string>
+    <string name="domain_delegation_delete_title">Smazat delegaci?</string>
+    <string name="domain_delegation_path">Cesta</string>
+    <string name="domain_delegation_user">ID uživatele</string>
+    <string name="domain_delegations">Delegace</string>
+    <string name="domain_delegations_empty">Nejsou nakonfigurovány žádné delegace.</string>
+    <string name="domain_delete">Smazat doménu</string>
+    <string name="domain_delete_message">Tímto se trvale smaže \"%1$s\" a všechny jeho trasy.</string>
+    <string name="domain_delete_title">Smazat doménu?</string>
+    <string name="domain_dns_hint">Vytvořte záznam TXT:</string>
+    <string name="domain_empty_admin">Nejsou nakonfigurovány žádné domény.</string>
+    <string name="domain_empty_user">Nemáte přístup k žádným doménám.</string>
+    <string name="domain_https">Automatické HTTPS</string>
+    <string name="domain_name">Doména</string>
+    <string name="domain_status_pending">Čeká na ověření DNS</string>
+    <string name="domain_status_verified">Ověřeno</string>
+    <string name="domain_title">Domény</string>
+    <string name="domain_verify">Ověřit DNS</string>
+    <string name="settings_home_domains">Domény</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">%1$d relace zrušeny</item>
+        <item quantity="many">%1$d relací zrušeno</item>
+        <item quantity="one">1 relace zrušena</item>
+        <item quantity="other">%1$d relací zrušeno</item>
+    </plurals>
 </resources>

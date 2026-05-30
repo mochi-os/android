@@ -287,7 +287,7 @@
     <string name="account_oauth_link_title">ភ្ជាប់អ្នកផ្ដល់សេវា</string>
     <string name="account_oauth_unlink_title">ផ្ដាច់គណនី?</string>
     <string name="account_oauth_unlink_message">អ្នកនឹងលែងអាចចូលជាមួយ %1$s ទេ។</string>
-    <string name="tokens_section_title">API tokens</string>
+    <string name="tokens_section_title">API ថូខឹន</string>
     <string name="tokens_title">ថូខឹនការផ្ទៀងផ្ទាត់</string>
     <string name="tokens_empty">គ្មាន API tokens ទេ។</string>
     <string name="tokens_create_title">API token ថ្មី</string>
@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">ទទួលលេខកូដផ្ទៀងផ្ទាត់តាមអ៊ីមែល</string>
     <string name="account_method_totp_subtitle">ដើម្បីបើក សូមរៀបចំកម្មវិធីផ្ទៀងផ្ទាត់ខាងក្រោម</string>
     <string name="account_method_passkey_subtitle">ដើម្បីបើក សូមចុះឈ្មោះកូនសោចូលខាងក្រោម</string>
+    <string name="domain_add">បន្ថែមដែន</string>
+    <string name="domain_add_title">បន្ថែមដែន</string>
+    <string name="domain_delegation_add">បន្ថែម</string>
+    <string name="domain_delegation_add_title">បន្ថែមការផ្ទេរសិទ្ធិ</string>
+    <string name="domain_delegation_delete">លុបការផ្ទេរសិទ្ធិ</string>
+    <string name="domain_delegation_delete_message">%1$s នឹងលែងគ្រប់គ្រងផ្លូវនៅលើដែននេះទេ។</string>
+    <string name="domain_delegation_delete_title">លុបការផ្ទេរសិទ្ធិ?</string>
+    <string name="domain_delegation_path">ផ្លូវ</string>
+    <string name="domain_delegation_user">អត្តសញ្ញាណអ្នកប្រើ</string>
+    <string name="domain_delegations">ការផ្ទេរសិទ្ធិ</string>
+    <string name="domain_delegations_empty">គ្មានការផ្ទេរសិទ្ធិដែលបានកំណត់ទេ។</string>
+    <string name="domain_delete">លុបដែន</string>
+    <string name="domain_delete_message">វានឹងលុប \"%1$s\" និងផ្លូវរបស់វាទាំងអស់ជាអចិន្ត្រៃយ៍។</string>
+    <string name="domain_delete_title">លុបដែន?</string>
+    <string name="domain_dns_hint">បង្កើតកំណត់ត្រា TXT៖</string>
+    <string name="domain_empty_admin">គ្មានដែនដែលបានកំណត់ទេ។</string>
+    <string name="domain_empty_user">អ្នកមិនមានសិទ្ធិចូលប្រើដែនណាមួយទេ។</string>
+    <string name="domain_https">HTTPS ស្វ័យប្រវត្តិ</string>
+    <string name="domain_name">ដែន</string>
+    <string name="domain_status_pending">កំពុងរង់ចាំការផ្ទៀងផ្ទាត់ DNS</string>
+    <string name="domain_status_verified">បានផ្ទៀងផ្ទាត់</string>
+    <string name="domain_title">ដែន</string>
+    <string name="domain_verify">ផ្ទៀងផ្ទាត់ DNS</string>
+    <string name="settings_home_domains">ដែន</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">បានដកហូត %1$d វគ្គ</item>
+    </plurals>
 </resources>

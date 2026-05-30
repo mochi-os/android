@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Ontvang een verificatiecode per e-mail</string>
     <string name="account_method_totp_subtitle">Stel hieronder een authenticator in om in te schakelen</string>
     <string name="account_method_passkey_subtitle">Registreer hieronder een passkey om in te schakelen</string>
+    <string name="domain_add">Domein toevoegen</string>
+    <string name="domain_add_title">Domein toevoegen</string>
+    <string name="domain_delegation_add">Toevoegen</string>
+    <string name="domain_delegation_add_title">Delegatie toevoegen</string>
+    <string name="domain_delegation_delete">Delegatie verwijderen</string>
+    <string name="domain_delegation_delete_message">%1$s beheert geen routes meer op dit domein.</string>
+    <string name="domain_delegation_delete_title">Delegatie verwijderen?</string>
+    <string name="domain_delegation_path">Pad</string>
+    <string name="domain_delegation_user">Gebruikers-ID</string>
+    <string name="domain_delegations">Delegaties</string>
+    <string name="domain_delegations_empty">Geen delegaties geconfigureerd.</string>
+    <string name="domain_delete">Domein verwijderen</string>
+    <string name="domain_delete_message">Hiermee wordt «%1$s» en al zijn routes permanent verwijderd.</string>
+    <string name="domain_delete_title">Domein verwijderen?</string>
+    <string name="domain_dns_hint">Maak een TXT-record:</string>
+    <string name="domain_empty_admin">Geen domeinen geconfigureerd.</string>
+    <string name="domain_empty_user">Je hebt geen toegang tot domeinen.</string>
+    <string name="domain_https">Automatische HTTPS</string>
+    <string name="domain_name">Domein</string>
+    <string name="domain_status_pending">DNS-verificatie in afwachting</string>
+    <string name="domain_status_verified">Geverifieerd</string>
+    <string name="domain_title">Domeinen</string>
+    <string name="domain_verify">DNS verifiëren</string>
+    <string name="settings_home_domains">Domeinen</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 sessie ingetrokken</item>
+        <item quantity="other">%1$d sessies ingetrokken</item>
+    </plurals>
 </resources>

@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Баталгаажуулах кодыг имэйлээр авах</string>
     <string name="account_method_totp_subtitle">Идэвхжүүлэхийн тулд доор баталгаажуулагч тохируулна уу</string>
     <string name="account_method_passkey_subtitle">Идэвхжүүлэхийн тулд доор нэвтрэх түлхүүр бүртгүүлнэ үү</string>
+    <string name="domain_add">Домэйн нэмэх</string>
+    <string name="domain_add_title">Домэйн нэмэх</string>
+    <string name="domain_delegation_add">Нэмэх</string>
+    <string name="domain_delegation_add_title">Делегаци нэмэх</string>
+    <string name="domain_delegation_delete">Делегаци устгах</string>
+    <string name="domain_delegation_delete_message">%1$s цаашид энэ домэйн дээрх замыг удирдахгүй.</string>
+    <string name="domain_delegation_delete_title">Делегаци устгах уу?</string>
+    <string name="domain_delegation_path">Зам</string>
+    <string name="domain_delegation_user">Хэрэглэгчийн ID</string>
+    <string name="domain_delegations">Делегациуд</string>
+    <string name="domain_delegations_empty">Тохируулсан төлөөлөл алга.</string>
+    <string name="domain_delete">Домэйн устгах</string>
+    <string name="domain_delete_message">Энэ нь \"%1$s\" болон түүний бүх замуудыг бүрмөсөн устгана.</string>
+    <string name="domain_delete_title">Домэйн устгах уу?</string>
+    <string name="domain_dns_hint">TXT бичлэг үүсгэх:</string>
+    <string name="domain_empty_admin">Тохируулсан домэйн алга.</string>
+    <string name="domain_empty_user">Танд ямар ч домейнд хандах эрх алга.</string>
+    <string name="domain_https">Автомат HTTPS</string>
+    <string name="domain_name">Домэйн</string>
+    <string name="domain_status_pending">DNS шалгалт хүлээгдэж байна</string>
+    <string name="domain_status_verified">Баталгаажсан</string>
+    <string name="domain_title">Домэйнүүд</string>
+    <string name="domain_verify">DNS баталгаажуулах</string>
+    <string name="settings_home_domains">Домэйнүүд</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 сесс цуцалсан</item>
+        <item quantity="other">%1$d сесс цуцалсан</item>
+    </plurals>
 </resources>

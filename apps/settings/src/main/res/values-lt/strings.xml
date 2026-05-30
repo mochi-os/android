@@ -352,4 +352,34 @@
     <string name="account_method_email_subtitle">Gaukite patvirtinimo kodą el. paštu</string>
     <string name="account_method_totp_subtitle">Norėdami įjungti, nustatykite autentifikatorių žemiau</string>
     <string name="account_method_passkey_subtitle">Norėdami įjungti, užregistruokite slaptaraktį žemiau</string>
+    <string name="domain_add">Pridėti domeną</string>
+    <string name="domain_add_title">Pridėti domeną</string>
+    <string name="domain_delegation_add">Pridėti</string>
+    <string name="domain_delegation_add_title">Pridėti delegavimą</string>
+    <string name="domain_delegation_delete">Ištrinti delegavimą</string>
+    <string name="domain_delegation_delete_message">%1$s nebevaldys maršrutų šiame domene.</string>
+    <string name="domain_delegation_delete_title">Ištrinti delegavimą?</string>
+    <string name="domain_delegation_path">Kelias</string>
+    <string name="domain_delegation_user">Naudotojo ID</string>
+    <string name="domain_delegations">Delegavimai</string>
+    <string name="domain_delegations_empty">Nesukonfigūruota delegacijų.</string>
+    <string name="domain_delete">Ištrinti domeną</string>
+    <string name="domain_delete_message">Tai visam laikui ištrins \"%1$s\" ir visus jo maršrutus.</string>
+    <string name="domain_delete_title">Ištrinti domeną?</string>
+    <string name="domain_dns_hint">Sukurkite TXT įrašą:</string>
+    <string name="domain_empty_admin">Nesukonfigūruota domenų.</string>
+    <string name="domain_empty_user">Neturite prieigos prie jokių domenų.</string>
+    <string name="domain_https">Automatinis HTTPS</string>
+    <string name="domain_name">Domenas</string>
+    <string name="domain_status_pending">Laukiama DNS patikrinimo</string>
+    <string name="domain_status_verified">Patvirtinta</string>
+    <string name="domain_title">Domenai</string>
+    <string name="domain_verify">Patvirtinti DNS</string>
+    <string name="settings_home_domains">Domenai</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Atšauktos %1$d sesijos</item>
+        <item quantity="many">Atšaukta %1$d sesijų</item>
+        <item quantity="one">Atšaukta %1$d sesija</item>
+        <item quantity="other">Atšaukta %1$d sesijų</item>
+    </plurals>
 </resources>

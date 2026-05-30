@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">کۆدی پشتڕاستکردنەوە بە ئیمەیڵ وەربگرە</string>
     <string name="account_method_totp_subtitle">بۆ چالاککردن، لە خوارەوە ڕاستکەرەوەیەک دابنێ</string>
     <string name="account_method_passkey_subtitle">بۆ چالاککردن، لە خوارەوە پاسکیەک تۆمار بکە</string>
+    <string name="domain_add">زیادکردنی دۆمەین</string>
+    <string name="domain_add_title">زیادکردنی دۆمەین</string>
+    <string name="domain_delegation_add">زیادکردن</string>
+    <string name="domain_delegation_add_title">زیادکردنی نوێنەرایەتی</string>
+    <string name="domain_delegation_delete">سڕینەوەی نوێنەرایەتی</string>
+    <string name="domain_delegation_delete_message">%1$s چیتر ڕێگاکانی لەسەر ئەم دۆمەینە بەڕێوە نابات.</string>
+    <string name="domain_delegation_delete_title">نوێنەرایەتی بسڕەوە؟</string>
+    <string name="domain_delegation_path">ڕێگا</string>
+    <string name="domain_delegation_user">ناسنامەی بەکارھێنەر</string>
+    <string name="domain_delegations">نوێنەرایەتییەکان</string>
+    <string name="domain_delegations_empty">وەکالەتێک ڕێکخراو نییە.</string>
+    <string name="domain_delete">سڕینەوەی دۆمەین</string>
+    <string name="domain_delete_message">ئەمە بۆ ھەمیشە \"%1$s\" و ھەموو ڕێگاکانی دەسڕێتەوە.</string>
+    <string name="domain_delete_title">دۆمەین بسڕەوە؟</string>
+    <string name="domain_dns_hint">تۆماری TXT دروست بکە:</string>
+    <string name="domain_empty_admin">دۆمەینێک ڕێکخراو نییە.</string>
+    <string name="domain_empty_user">دەستڕاگەیشتنت بە هیچ دۆمەینێک نییە.</string>
+    <string name="domain_https">HTTPS خۆکار</string>
+    <string name="domain_name">دۆمەین</string>
+    <string name="domain_status_pending">پشکنینی DNS لە چاوەڕێدایە</string>
+    <string name="domain_status_verified">پشتڕاستکراوە</string>
+    <string name="domain_title">دۆمەینەکان</string>
+    <string name="domain_verify">DNS پشتڕاستبکە</string>
+    <string name="settings_home_domains">دۆمەینەکان</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">١ دانیشتن هەڵوەشایەوە</item>
+        <item quantity="other">%1$d دانیشتن هەڵوەشایەوە</item>
+    </plurals>
 </resources>

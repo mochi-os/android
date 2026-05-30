@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ईमेलद्वारे सत्यापन कोड मिळवा</string>
     <string name="account_method_totp_subtitle">सक्षम करण्यासाठी खाली ऑथेंटिकेटर सेट करा</string>
     <string name="account_method_passkey_subtitle">सक्षम करण्यासाठी खाली पासकी नोंदवा</string>
+    <string name="domain_add">डोमेन जोडा</string>
+    <string name="domain_add_title">डोमेन जोडा</string>
+    <string name="domain_delegation_add">जोडा</string>
+    <string name="domain_delegation_add_title">प्रतिनिधीत्व जोडा</string>
+    <string name="domain_delegation_delete">प्रतिनिधीत्व हटवा</string>
+    <string name="domain_delegation_delete_message">%1$s यापुढे या डोमेनवरील मार्ग व्यवस्थापित करणार नाही.</string>
+    <string name="domain_delegation_delete_title">प्रतिनिधीत्व हटवायचे?</string>
+    <string name="domain_delegation_path">पथ</string>
+    <string name="domain_delegation_user">वापरकर्ता ID</string>
+    <string name="domain_delegations">प्रतिनिधीत्व</string>
+    <string name="domain_delegations_empty">प्रतिनिधीत्व कॉन्फिगर केलेले नाहीत.</string>
+    <string name="domain_delete">डोमेन हटवा</string>
+    <string name="domain_delete_message">हे कायमस्वरूपी \"%1$s\" आणि त्याचे सर्व मार्ग हटवेल.</string>
+    <string name="domain_delete_title">डोमेन हटवायचे?</string>
+    <string name="domain_dns_hint">TXT रेकॉर्ड तयार करा:</string>
+    <string name="domain_empty_admin">डोमेन कॉन्फिगर केलेले नाहीत.</string>
+    <string name="domain_empty_user">तुम्हाला कोणत्याही डोमेनचा अॅक्सेस नाही.</string>
+    <string name="domain_https">स्वयंचलित HTTPS</string>
+    <string name="domain_name">डोमेन</string>
+    <string name="domain_status_pending">DNS पडताळणी प्रलंबित</string>
+    <string name="domain_status_verified">पडताळले</string>
+    <string name="domain_title">डोमेन</string>
+    <string name="domain_verify">DNS सत्यापित करा</string>
+    <string name="settings_home_domains">डोमेन</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 सत्र रद्द केले</item>
+        <item quantity="other">%1$d सत्रे रद्द केली</item>
+    </plurals>
 </resources>

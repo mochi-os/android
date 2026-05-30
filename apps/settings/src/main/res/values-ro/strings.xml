@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Primește un cod de verificare prin e-mail</string>
     <string name="account_method_totp_subtitle">Pentru activare, configurează un autentificator mai jos</string>
     <string name="account_method_passkey_subtitle">Pentru activare, înregistrează o cheie de acces mai jos</string>
+    <string name="domain_add">Adaugă domeniu</string>
+    <string name="domain_add_title">Adaugă domeniu</string>
+    <string name="domain_delegation_add">Adaugă</string>
+    <string name="domain_delegation_add_title">Adaugă delegare</string>
+    <string name="domain_delegation_delete">Șterge delegarea</string>
+    <string name="domain_delegation_delete_message">%1$s nu va mai gestiona rute pe acest domeniu.</string>
+    <string name="domain_delegation_delete_title">Ștergi delegarea?</string>
+    <string name="domain_delegation_path">Cale</string>
+    <string name="domain_delegation_user">ID utilizator</string>
+    <string name="domain_delegations">Delegări</string>
+    <string name="domain_delegations_empty">Nicio delegare configurată.</string>
+    <string name="domain_delete">Șterge domeniul</string>
+    <string name="domain_delete_message">Aceasta va șterge definitiv „%1$s\" și toate rutele sale.</string>
+    <string name="domain_delete_title">Ștergi domeniul?</string>
+    <string name="domain_dns_hint">Creați o înregistrare TXT:</string>
+    <string name="domain_empty_admin">Niciun domeniu configurat.</string>
+    <string name="domain_empty_user">Nu ai acces la niciun domeniu.</string>
+    <string name="domain_https">HTTPS automat</string>
+    <string name="domain_name">Domeniu</string>
+    <string name="domain_status_pending">Verificare DNS în așteptare</string>
+    <string name="domain_status_verified">Verificat</string>
+    <string name="domain_title">Domenii</string>
+    <string name="domain_verify">Verifică DNS</string>
+    <string name="settings_home_domains">Domenii</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">S-au revocat %1$d sesiuni</item>
+        <item quantity="one">S-a revocat 1 sesiune</item>
+        <item quantity="other">S-au revocat %1$d de sesiuni</item>
+    </plurals>
 </resources>

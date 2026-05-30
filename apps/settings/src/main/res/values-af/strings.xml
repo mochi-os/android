@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Ontvang \'n verifikasiekode per e-pos</string>
     <string name="account_method_totp_subtitle">Stel hieronder \'n verifikator op om te aktiveer</string>
     <string name="account_method_passkey_subtitle">Registreer hieronder \'n toegangsleutel om te aktiveer</string>
+    <string name="domain_add">Voeg domein by</string>
+    <string name="domain_add_title">Voeg domein by</string>
+    <string name="domain_delegation_add">Voeg by</string>
+    <string name="domain_delegation_add_title">Voeg delegasie by</string>
+    <string name="domain_delegation_delete">Verwyder delegasie</string>
+    <string name="domain_delegation_delete_message">%1$s sal nie meer roetes op hierdie domein bestuur nie.</string>
+    <string name="domain_delegation_delete_title">Verwyder delegasie?</string>
+    <string name="domain_delegation_path">Pad</string>
+    <string name="domain_delegation_user">Gebruiker-ID</string>
+    <string name="domain_delegations">Delegasies</string>
+    <string name="domain_delegations_empty">Geen delegasies gekonfigureer nie.</string>
+    <string name="domain_delete">Verwyder domein</string>
+    <string name="domain_delete_message">Hierdie sal \"%1$s\" en al sy roetes permanent uitvee.</string>
+    <string name="domain_delete_title">Verwyder domein?</string>
+    <string name="domain_dns_hint">Skep \'n TXT-rekord:</string>
+    <string name="domain_empty_admin">Geen domeine gekonfigureer nie.</string>
+    <string name="domain_empty_user">Jy het nie toegang tot enige domeine nie.</string>
+    <string name="domain_https">Outomatiese HTTPS</string>
+    <string name="domain_name">Domein</string>
+    <string name="domain_status_pending">DNS-verifikasie hangende</string>
+    <string name="domain_status_verified">Geverifieer</string>
+    <string name="domain_title">Domeine</string>
+    <string name="domain_verify">Verifieer DNS</string>
+    <string name="settings_home_domains">Domeine</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 sessie herroep</item>
+        <item quantity="other">%1$d sessies herroep</item>
+    </plurals>
 </resources>

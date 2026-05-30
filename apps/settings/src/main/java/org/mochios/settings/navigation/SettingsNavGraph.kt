@@ -9,6 +9,7 @@ import org.mochios.settings.ui.account.AccountScreen
 import org.mochios.settings.ui.accounts.ConnectedAccountsScreen
 import org.mochios.settings.ui.display.DisplayScreen
 import org.mochios.settings.ui.document.DocumentScreen
+import org.mochios.settings.ui.domains.DomainsScreen
 import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.interests.InterestsScreen
 import org.mochios.settings.ui.notificationprefs.NotificationPrefsScreen
@@ -39,6 +40,7 @@ object SettingsApp {
     const val SYSTEM_USERS = "settings/system/users"
     const val INTERESTS = "settings/interests"
     const val ACCOUNTS = "settings/accounts"
+    const val DOMAINS = "settings/domains"
     const val DOCUMENT = "settings/document/{kind}"
     const val SYSTEM_DOCUMENTS = "settings/system/documents"
 
@@ -67,6 +69,7 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenSystemUsers = { navController.navigate(SettingsApp.SYSTEM_USERS) },
             onOpenInterests = { navController.navigate(SettingsApp.INTERESTS) },
             onOpenAccounts = { navController.navigate(SettingsApp.ACCOUNTS) },
+            onOpenDomains = { navController.navigate(SettingsApp.DOMAINS) },
             onOpenDocument = { kind -> navController.navigate(SettingsApp.document(kind)) },
             onOpenSystemDocuments = { navController.navigate(SettingsApp.SYSTEM_DOCUMENTS) },
             onLogout = onLogout,
@@ -116,6 +119,9 @@ fun NavGraphBuilder.settingsNavGraph(
     }
     composable(SettingsApp.ACCOUNTS) {
         ConnectedAccountsScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.DOMAINS) {
+        DomainsScreen(onBack = { navController.popBackStack() })
     }
     composable(
         SettingsApp.DOCUMENT,

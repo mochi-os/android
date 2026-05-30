@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Nampa kode verifikasi liwat email</string>
     <string name="account_method_totp_subtitle">Setel authenticator ing ngisor kanggo ngaktifake</string>
     <string name="account_method_passkey_subtitle">Daftar passkey ing ngisor kanggo ngaktifake</string>
+    <string name="domain_add">Tambah domain</string>
+    <string name="domain_add_title">Tambah domain</string>
+    <string name="domain_delegation_add">Tambah</string>
+    <string name="domain_delegation_add_title">Tambah delegasi</string>
+    <string name="domain_delegation_delete">Busak delegasi</string>
+    <string name="domain_delegation_delete_message">%1$s ora bakal ngatur rute ing domain iki menèh.</string>
+    <string name="domain_delegation_delete_title">Busak delegasi?</string>
+    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_user">ID pangguna</string>
+    <string name="domain_delegations">Delegasi</string>
+    <string name="domain_delegations_empty">Ora ana delegasi sing dikonfigurasi.</string>
+    <string name="domain_delete">Busak domain</string>
+    <string name="domain_delete_message">Iki bakal mbusak \"%1$s\" lan kabeh rutene kanthi permanen.</string>
+    <string name="domain_delete_title">Busak domain?</string>
+    <string name="domain_dns_hint">Gawe rekam TXT:</string>
+    <string name="domain_empty_admin">Ora ana domain sing dikonfigurasi.</string>
+    <string name="domain_empty_user">Sampéyan ora duwé akses menyang domain apa wae.</string>
+    <string name="domain_https">HTTPS otomatis</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">Verifikasi DNS nunggu</string>
+    <string name="domain_status_verified">Diverifikasi</string>
+    <string name="domain_title">Domain</string>
+    <string name="domain_verify">Verifikasi DNS</string>
+    <string name="settings_home_domains">Domain</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">Mbatalaké %1$d sesi</item>
+    </plurals>
 </resources>

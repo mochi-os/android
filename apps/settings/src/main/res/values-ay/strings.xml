@@ -12,11 +12,11 @@
     <string name="settings_home_replication">Replicación</string>
     <string name="account_method_email">Email código</string>
     <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator app</string>
+    <string name="account_method_totp">Autenticador app</string>
     <string name="account_section_passkeys">Passkeyanaka</string>
     <string name="account_passkey_register">Passkey yapxataña</string>
     <string name="account_passkey_delete_title">Passkey chhaqtayaña?</string>
-    <string name="account_section_totp">Authenticator app</string>
+    <string name="account_section_totp">Autenticador app</string>
     <string name="account_totp_setup">Autenticador wakichaña</string>
     <string name="account_totp_setup_title">Autenticador wakichaña</string>
     <string name="account_totp_verify">Verificaña ukat habilitaña</string>
@@ -287,7 +287,7 @@
     <string name="account_oauth_link_title">Churir chinjañ</string>
     <string name="account_oauth_unlink_title">Cuenta jiqxataña?</string>
     <string name="account_oauth_unlink_message">Janiw %1$smpi mantantarakimti.</string>
-    <string name="tokens_section_title">API tokens</string>
+    <string name="tokens_section_title">API tokenanaka</string>
     <string name="tokens_title">Yäticha tokenanaka</string>
     <string name="tokens_empty">Janiw API tokensa kasarakichi.</string>
     <string name="tokens_create_title">Machaqa API token</string>
@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Email tuqi verificación código katuqañma</string>
     <string name="account_method_totp_subtitle">Wakichañataki, aynacha mä autenticador wakichama</string>
     <string name="account_method_passkey_subtitle">Wakichañataki, aynacha mä passkey qillqantama</string>
+    <string name="domain_add">Dominio yapxataña</string>
+    <string name="domain_add_title">Dominio yapxataña</string>
+    <string name="domain_delegation_add">Yapxataña</string>
+    <string name="domain_delegation_add_title">Delegación yapxataña</string>
+    <string name="domain_delegation_delete">Delegación chhaqtayaña</string>
+    <string name="domain_delegation_delete_message">%1$s janiw aka domain thakhinaka apnaqatarakini.</string>
+    <string name="domain_delegation_delete_title">Delegación chhaqtayaña?</string>
+    <string name="domain_delegation_path">Thakhi</string>
+    <string name="domain_delegation_user">Apnaqir ID</string>
+    <string name="domain_delegations">Delegacionanaka</string>
+    <string name="domain_delegations_empty">Janiw delegacionanaksa wakichxatanaka.</string>
+    <string name="domain_delete">Dominio chhaqtayaña</string>
+    <string name="domain_delete_message">Akax wiñayar \"%1$s\" jupanaka thakhinakapampi q\'awintani.</string>
+    <string name="domain_delete_title">Dominio chhaqtayaña?</string>
+    <string name="domain_dns_hint">Mä TXT qillqaña lurasi:</string>
+    <string name="domain_empty_admin">Janiw dominionaksa wakichxatanaka.</string>
+    <string name="domain_empty_user">Janïraw CRMs utjkiti.</string>
+    <string name="domain_https">Sapamä HTTPS</string>
+    <string name="domain_name">Dominio</string>
+    <string name="domain_status_pending">DNS verificación suyaski</string>
+    <string name="domain_status_verified">Verificaña</string>
+    <string name="domain_title">Dominionaka</string>
+    <string name="domain_verify">Verificaña ukat habilitaña</string>
+    <string name="settings_home_domains">Dominionaka</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">%1$d sesion jaktʼaywi</item>
+    </plurals>
 </resources>

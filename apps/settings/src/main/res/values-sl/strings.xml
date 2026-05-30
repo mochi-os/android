@@ -352,4 +352,34 @@
     <string name="account_method_email_subtitle">Prejmite potrditveno kodo po e-pošti</string>
     <string name="account_method_totp_subtitle">Za omogočenje spodaj nastavite overitelja</string>
     <string name="account_method_passkey_subtitle">Za omogočenje spodaj registrirajte ključ za dostop</string>
+    <string name="domain_add">Dodaj domeno</string>
+    <string name="domain_add_title">Dodaj domeno</string>
+    <string name="domain_delegation_add">Dodaj</string>
+    <string name="domain_delegation_add_title">Dodaj pooblastilo</string>
+    <string name="domain_delegation_delete">Izbriši pooblastilo</string>
+    <string name="domain_delegation_delete_message">%1$s ne bo več upravljal poti na tej domeni.</string>
+    <string name="domain_delegation_delete_title">Izbriši pooblastilo?</string>
+    <string name="domain_delegation_path">Pot</string>
+    <string name="domain_delegation_user">ID uporabnika</string>
+    <string name="domain_delegations">Pooblastila</string>
+    <string name="domain_delegations_empty">Ni konfiguriranih delegacij.</string>
+    <string name="domain_delete">Izbriši domeno</string>
+    <string name="domain_delete_message">To bo trajno izbrisalo „%1$s\" in vse njegove poti.</string>
+    <string name="domain_delete_title">Izbriši domeno?</string>
+    <string name="domain_dns_hint">Ustvarite TXT zapis:</string>
+    <string name="domain_empty_admin">Ni konfiguriranih domen.</string>
+    <string name="domain_empty_user">Nimaš dostopa do nobene domene.</string>
+    <string name="domain_https">Samodejni HTTPS</string>
+    <string name="domain_name">Domena</string>
+    <string name="domain_status_pending">Čaka preverjanje DNS</string>
+    <string name="domain_status_verified">Preverjeno</string>
+    <string name="domain_title">Domene</string>
+    <string name="domain_verify">Preveri DNS</string>
+    <string name="settings_home_domains">Domene</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Preklicane %1$d seje</item>
+        <item quantity="one">Preklicana %1$d seja</item>
+        <item quantity="other">Preklicanih %1$d sej</item>
+        <item quantity="two">Preklicani %1$d seji</item>
+    </plurals>
 </resources>

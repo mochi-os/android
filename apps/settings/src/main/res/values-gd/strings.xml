@@ -352,4 +352,34 @@
     <string name="account_method_email_subtitle">Faigh còd dearbhaidh tro phost-d</string>
     <string name="account_method_totp_subtitle">Suidhich dearbhadair gu h-ìosal gus a chur an comas</string>
     <string name="account_method_passkey_subtitle">Clàraich iuchair-inntrigidh gu h-ìosal gus a chur an comas</string>
+    <string name="domain_add">Cuir àrainn ris</string>
+    <string name="domain_add_title">Cuir àrainn ris</string>
+    <string name="domain_delegation_add">Cuir ris</string>
+    <string name="domain_delegation_add_title">Cuir tiomnadh ris</string>
+    <string name="domain_delegation_delete">Sguab às tiomnadh</string>
+    <string name="domain_delegation_delete_message">Cha riaghail %1$s slighean air an fhearann seo tuilleadh.</string>
+    <string name="domain_delegation_delete_title">Sguab às tiomnadh?</string>
+    <string name="domain_delegation_path">Slighe</string>
+    <string name="domain_delegation_user">ID a\' chleachdaiche</string>
+    <string name="domain_delegations">Tiomnaidhean</string>
+    <string name="domain_delegations_empty">Chan eil tiomnaidhean air an rèiteachadh.</string>
+    <string name="domain_delete">Sguab às àrainn</string>
+    <string name="domain_delete_message">Sguabaidh seo às \"%1$s\" agus a h-uile slighe gu buan.</string>
+    <string name="domain_delete_title">Sguab às àrainn?</string>
+    <string name="domain_dns_hint">Cruthaich clàr TXT:</string>
+    <string name="domain_empty_admin">Chan eil fearann sam bith air a rèiteachadh.</string>
+    <string name="domain_empty_user">Chan eil cead-inntrigidh agad gu àrainn sam bith.</string>
+    <string name="domain_https">HTTPS fèin-obrachail</string>
+    <string name="domain_name">Àrainn</string>
+    <string name="domain_status_pending">Tha dearbhadh DNS ri thighinn</string>
+    <string name="domain_status_verified">Dearbhte</string>
+    <string name="domain_title">Àrainnean</string>
+    <string name="domain_verify">Dearbh DNS</string>
+    <string name="settings_home_domains">Àrainnean</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Cùl-ghairmte %1$d seiseanan</item>
+        <item quantity="one">Cùl-ghairmte %1$d sheisean</item>
+        <item quantity="other">Cùl-ghairmte %1$d seiseanan</item>
+        <item quantity="two">Cùl-ghairmte %1$d sheisean</item>
+    </plurals>
 </resources>

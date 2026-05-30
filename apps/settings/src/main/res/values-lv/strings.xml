@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Saņemiet verifikācijas kodu e-pastā</string>
     <string name="account_method_totp_subtitle">Lai iespējotu, iestatiet autentifikatoru zemāk</string>
     <string name="account_method_passkey_subtitle">Lai iespējotu, reģistrējiet piekļuves atslēgu zemāk</string>
+    <string name="domain_add">Pievienot domēnu</string>
+    <string name="domain_add_title">Pievienot domēnu</string>
+    <string name="domain_delegation_add">Pievienot</string>
+    <string name="domain_delegation_add_title">Pievienot deleģējumu</string>
+    <string name="domain_delegation_delete">Dzēst deleģējumu</string>
+    <string name="domain_delegation_delete_message">%1$s vairs nepārvaldīs maršrutus šajā domēnā.</string>
+    <string name="domain_delegation_delete_title">Dzēst deleģējumu?</string>
+    <string name="domain_delegation_path">Ceļš</string>
+    <string name="domain_delegation_user">Lietotāja ID</string>
+    <string name="domain_delegations">Deleģējumi</string>
+    <string name="domain_delegations_empty">Nav konfigurētu deleģējumu.</string>
+    <string name="domain_delete">Dzēst domēnu</string>
+    <string name="domain_delete_message">Tas neatgriezeniski dzēsīs \"%1$s\" un visus tā maršrutus.</string>
+    <string name="domain_delete_title">Dzēst domēnu?</string>
+    <string name="domain_dns_hint">Izveidojiet TXT ierakstu:</string>
+    <string name="domain_empty_admin">Nav konfigurētu domēnu.</string>
+    <string name="domain_empty_user">Jums nav piekļuves nevienam domēnam.</string>
+    <string name="domain_https">Automātisks HTTPS</string>
+    <string name="domain_name">Domēns</string>
+    <string name="domain_status_pending">Gaida DNS pārbaudi</string>
+    <string name="domain_status_verified">Verificēts</string>
+    <string name="domain_title">Domēni</string>
+    <string name="domain_verify">Verificēt DNS</string>
+    <string name="settings_home_domains">Domēni</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Atsaukta %1$d sesija</item>
+        <item quantity="other">Atsauktas %1$d sesijas</item>
+        <item quantity="zero">Atsauktas %1$d sesijas</item>
+    </plurals>
 </resources>

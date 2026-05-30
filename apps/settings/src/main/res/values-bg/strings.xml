@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Получаване на код за потвърждение по имейл</string>
     <string name="account_method_totp_subtitle">Настройте удостоверител по-долу, за да активирате</string>
     <string name="account_method_passkey_subtitle">Регистрирайте ключ за достъп по-долу, за да активирате</string>
+    <string name="domain_add">Добави домейн</string>
+    <string name="domain_add_title">Добави домейн</string>
+    <string name="domain_delegation_add">Добави</string>
+    <string name="domain_delegation_add_title">Добави делегиране</string>
+    <string name="domain_delegation_delete">Изтрий делегирането</string>
+    <string name="domain_delegation_delete_message">%1$s вече няма да управлява маршрутите на този домейн.</string>
+    <string name="domain_delegation_delete_title">Изтриване на делегирането?</string>
+    <string name="domain_delegation_path">Път</string>
+    <string name="domain_delegation_user">Потребителски ID</string>
+    <string name="domain_delegations">Делегирания</string>
+    <string name="domain_delegations_empty">Няма конфигурирани делегации.</string>
+    <string name="domain_delete">Изтрий домейна</string>
+    <string name="domain_delete_message">Това ще изтрие завинаги „%1$s\" и всички негови маршрути.</string>
+    <string name="domain_delete_title">Изтриване на домейна?</string>
+    <string name="domain_dns_hint">Създайте TXT запис:</string>
+    <string name="domain_empty_admin">Няма конфигурирани домейни.</string>
+    <string name="domain_empty_user">Нямате достъп до никакви домейни.</string>
+    <string name="domain_https">Автоматичен HTTPS</string>
+    <string name="domain_name">Домейн</string>
+    <string name="domain_status_pending">Очаква се проверка на DNS</string>
+    <string name="domain_status_verified">Потвърдено</string>
+    <string name="domain_title">Домейни</string>
+    <string name="domain_verify">Потвърди DNS</string>
+    <string name="settings_home_domains">Домейни</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Отменена 1 сесия</item>
+        <item quantity="other">Отменени %1$d сесии</item>
+    </plurals>
 </resources>

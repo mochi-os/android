@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ای میل کے ذریعے تصدیقی کوڈ حاصل کریں</string>
     <string name="account_method_totp_subtitle">فعال کرنے کے لیے، نیچے ایک تصدیق کنندہ ترتیب دیں</string>
     <string name="account_method_passkey_subtitle">فعال کرنے کے لیے، نیچے ایک پاس کی رجسٹر کریں</string>
+    <string name="domain_add">ڈومین شامل کریں</string>
+    <string name="domain_add_title">ڈومین شامل کریں</string>
+    <string name="domain_delegation_add">شامل کریں</string>
+    <string name="domain_delegation_add_title">تفویض شامل کریں</string>
+    <string name="domain_delegation_delete">تفویض حذف کریں</string>
+    <string name="domain_delegation_delete_message">%1$s اب اس ڈومین پر راستوں کا انتظام نہیں کرے گا۔</string>
+    <string name="domain_delegation_delete_title">تفویض حذف کریں؟</string>
+    <string name="domain_delegation_path">path</string>
+    <string name="domain_delegation_user">صارف کی ID</string>
+    <string name="domain_delegations">تفویضات</string>
+    <string name="domain_delegations_empty">کوئی تفویض کنفیگر نہیں ہیں۔</string>
+    <string name="domain_delete">ڈومین حذف کریں</string>
+    <string name="domain_delete_message">یہ \"%1$s\" اور اس کے تمام راستے مستقل طور پر حذف کر دے گا۔</string>
+    <string name="domain_delete_title">ڈومین حذف کریں؟</string>
+    <string name="domain_dns_hint">TXT ریکارڈ بنائیں:</string>
+    <string name="domain_empty_admin">کوئی ڈومینز کنفیگر نہیں ہیں۔</string>
+    <string name="domain_empty_user">آپ کو کسی بھی ڈومین تک رسائی نہیں ہے۔</string>
+    <string name="domain_https">خودکار HTTPS</string>
+    <string name="domain_name">ڈومین</string>
+    <string name="domain_status_pending">DNS تصدیق زیر التواء</string>
+    <string name="domain_status_verified">تصدیق شدہ</string>
+    <string name="domain_title">ڈومینز</string>
+    <string name="domain_verify">DNS تصدیق کریں</string>
+    <string name="settings_home_domains">ڈومینز</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 سیشن منسوخ کیا</item>
+        <item quantity="other">%1$d سیشنز منسوخ کیے</item>
+    </plurals>
 </resources>

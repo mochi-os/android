@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Vastaanota vahvistuskoodi sähköpostitse</string>
     <string name="account_method_totp_subtitle">Ota käyttöön määrittämällä todennussovellus alla</string>
     <string name="account_method_passkey_subtitle">Ota käyttöön rekisteröimällä avainkoodi alla</string>
+    <string name="domain_add">Lisää verkkotunnus</string>
+    <string name="domain_add_title">Lisää verkkotunnus</string>
+    <string name="domain_delegation_add">Lisää</string>
+    <string name="domain_delegation_add_title">Lisää delegointi</string>
+    <string name="domain_delegation_delete">Poista delegointi</string>
+    <string name="domain_delegation_delete_message">%1$s ei enää hallinnoi reittejä tällä verkkotunnuksella.</string>
+    <string name="domain_delegation_delete_title">Poistetaanko delegointi?</string>
+    <string name="domain_delegation_path">Polku</string>
+    <string name="domain_delegation_user">Käyttäjätunnus</string>
+    <string name="domain_delegations">Delegoinnit</string>
+    <string name="domain_delegations_empty">Delegointeja ei ole määritetty.</string>
+    <string name="domain_delete">Poista verkkotunnus</string>
+    <string name="domain_delete_message">Tämä poistaa pysyvästi \"%1$s\":n ja kaikki sen reitit.</string>
+    <string name="domain_delete_title">Poistetaanko verkkotunnus?</string>
+    <string name="domain_dns_hint">Luo TXT-tietue:</string>
+    <string name="domain_empty_admin">Verkkotunnuksia ei ole määritetty.</string>
+    <string name="domain_empty_user">Sinulla ei ole pääsyä yhteenkään verkkotunnukseen.</string>
+    <string name="domain_https">Automaattinen HTTPS</string>
+    <string name="domain_name">Verkkotunnus</string>
+    <string name="domain_status_pending">DNS-vahvistus kesken</string>
+    <string name="domain_status_verified">Vahvistettu</string>
+    <string name="domain_title">Verkkotunnukset</string>
+    <string name="domain_verify">Vahvista DNS</string>
+    <string name="settings_home_domains">Verkkotunnukset</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 istunto peruutettu</item>
+        <item quantity="other">%1$d istuntoa peruutettu</item>
+    </plurals>
 </resources>

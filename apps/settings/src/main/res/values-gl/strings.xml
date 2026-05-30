@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Recibe un código de verificación por correo electrónico</string>
     <string name="account_method_totp_subtitle">Configura un autenticador a continuación para activalo</string>
     <string name="account_method_passkey_subtitle">Rexistra unha clave de acceso a continuación para activala</string>
+    <string name="domain_add">Engadir dominio</string>
+    <string name="domain_add_title">Engadir dominio</string>
+    <string name="domain_delegation_add">Engadir</string>
+    <string name="domain_delegation_add_title">Engadir delegación</string>
+    <string name="domain_delegation_delete">Eliminar delegación</string>
+    <string name="domain_delegation_delete_message">%1$s xa non xestionará rutas neste dominio.</string>
+    <string name="domain_delegation_delete_title">Eliminar delegación?</string>
+    <string name="domain_delegation_path">Ruta</string>
+    <string name="domain_delegation_user">ID de usuario</string>
+    <string name="domain_delegations">Delegacións</string>
+    <string name="domain_delegations_empty">Non hai delegacións configuradas.</string>
+    <string name="domain_delete">Eliminar dominio</string>
+    <string name="domain_delete_message">Isto eliminará permanentemente «%1$s» e todas as súas rutas.</string>
+    <string name="domain_delete_title">Eliminar dominio?</string>
+    <string name="domain_dns_hint">Crea un rexistro TXT:</string>
+    <string name="domain_empty_admin">Non hai dominios configurados.</string>
+    <string name="domain_empty_user">Non tes acceso a ningún dominio.</string>
+    <string name="domain_https">HTTPS automático</string>
+    <string name="domain_name">Dominio</string>
+    <string name="domain_status_pending">Verificación de DNS pendente</string>
+    <string name="domain_status_verified">Verificado</string>
+    <string name="domain_title">Dominios</string>
+    <string name="domain_verify">Verificar DNS</string>
+    <string name="settings_home_domains">Dominios</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Revogada 1 sesión</item>
+        <item quantity="other">Revogadas %1$d sesións</item>
+    </plurals>
 </resources>

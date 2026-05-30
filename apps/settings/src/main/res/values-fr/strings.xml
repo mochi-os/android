@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Recevez un code de vérification par e-mail</string>
     <string name="account_method_totp_subtitle">Configurez un authentificateur ci-dessous pour activer</string>
     <string name="account_method_passkey_subtitle">Enregistrez une clé d\'accès ci-dessous pour activer</string>
+    <string name="domain_add">Ajouter un domaine</string>
+    <string name="domain_add_title">Ajouter un domaine</string>
+    <string name="domain_delegation_add">Ajouter</string>
+    <string name="domain_delegation_add_title">Ajouter une délégation</string>
+    <string name="domain_delegation_delete">Supprimer la délégation</string>
+    <string name="domain_delegation_delete_message">%1$s ne gérera plus les routes sur ce domaine.</string>
+    <string name="domain_delegation_delete_title">Supprimer la délégation ?</string>
+    <string name="domain_delegation_path">Chemin</string>
+    <string name="domain_delegation_user">ID utilisateur</string>
+    <string name="domain_delegations">Délégations</string>
+    <string name="domain_delegations_empty">Aucune délégation configurée.</string>
+    <string name="domain_delete">Supprimer le domaine</string>
+    <string name="domain_delete_message">Cela supprimera définitivement « %1$s » et toutes ses routes.</string>
+    <string name="domain_delete_title">Supprimer le domaine ?</string>
+    <string name="domain_dns_hint">Créez un enregistrement TXT :</string>
+    <string name="domain_empty_admin">Aucun domaine configuré.</string>
+    <string name="domain_empty_user">Vous n\'avez accès à aucun domaine.</string>
+    <string name="domain_https">HTTPS automatique</string>
+    <string name="domain_name">Domaine</string>
+    <string name="domain_status_pending">Vérification DNS en attente</string>
+    <string name="domain_status_verified">Vérifié</string>
+    <string name="domain_title">Domaines</string>
+    <string name="domain_verify">Vérifier le DNS</string>
+    <string name="settings_home_domains">Domaines</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="many">%1$d sessions révoquées</item>
+        <item quantity="one">1 session révoquée</item>
+        <item quantity="other">%1$d sessions révoquées</item>
+    </plurals>
 </resources>

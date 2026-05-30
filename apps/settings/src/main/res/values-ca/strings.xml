@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Rep un codi de verificació per correu electrònic</string>
     <string name="account_method_totp_subtitle">Configura un autenticador a continuació per activar-ho</string>
     <string name="account_method_passkey_subtitle">Registra una clau d\'accés a continuació per activar-ho</string>
+    <string name="domain_add">Afegeix un domini</string>
+    <string name="domain_add_title">Afegeix un domini</string>
+    <string name="domain_delegation_add">Afegeix</string>
+    <string name="domain_delegation_add_title">Afegeix una delegació</string>
+    <string name="domain_delegation_delete">Suprimeix la delegació</string>
+    <string name="domain_delegation_delete_message">%1$s ja no gestionarà rutes en aquest domini.</string>
+    <string name="domain_delegation_delete_title">Vols suprimir la delegació?</string>
+    <string name="domain_delegation_path">Ruta</string>
+    <string name="domain_delegation_user">ID d\'usuari</string>
+    <string name="domain_delegations">Delegacions</string>
+    <string name="domain_delegations_empty">No hi ha delegacions configurades.</string>
+    <string name="domain_delete">Suprimeix el domini</string>
+    <string name="domain_delete_message">Això suprimirà permanentment «%1$s» i totes les seves rutes.</string>
+    <string name="domain_delete_title">Vols suprimir el domini?</string>
+    <string name="domain_dns_hint">Creeu un registre TXT:</string>
+    <string name="domain_empty_admin">No hi ha dominis configurats.</string>
+    <string name="domain_empty_user">No tens accés a cap domini.</string>
+    <string name="domain_https">HTTPS automàtic</string>
+    <string name="domain_name">Domini</string>
+    <string name="domain_status_pending">Verificació de DNS pendent</string>
+    <string name="domain_status_verified">Verificat</string>
+    <string name="domain_title">Dominis</string>
+    <string name="domain_verify">Verifica el DNS</string>
+    <string name="settings_home_domains">Dominis</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="many">S\'han revocat %1$d sessions</item>
+        <item quantity="one">S\'ha revocat 1 sessió</item>
+        <item quantity="other">S\'han revocat %1$d sessions</item>
+    </plurals>
 </resources>

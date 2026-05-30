@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Pokea msimbo wa uthibitishaji kwa barua pepe</string>
     <string name="account_method_totp_subtitle">Ili kuwasha, sanidi kithibitishaji hapa chini</string>
     <string name="account_method_passkey_subtitle">Ili kuwasha, sajili ufunguo wa kuingia hapa chini</string>
+    <string name="domain_add">Ongeza kikoa</string>
+    <string name="domain_add_title">Ongeza kikoa</string>
+    <string name="domain_delegation_add">Ongeza</string>
+    <string name="domain_delegation_add_title">Ongeza ukabidhi</string>
+    <string name="domain_delegation_delete">Futa ukabidhi</string>
+    <string name="domain_delegation_delete_message">%1$s haitasimamia tena njia kwenye kikoa hiki.</string>
+    <string name="domain_delegation_delete_title">Futa ukabidhi?</string>
+    <string name="domain_delegation_path">Njia</string>
+    <string name="domain_delegation_user">Kitambulisho cha mtumiaji</string>
+    <string name="domain_delegations">Ukabidhi</string>
+    <string name="domain_delegations_empty">Hakuna utowezi uliowekwa.</string>
+    <string name="domain_delete">Futa kikoa</string>
+    <string name="domain_delete_message">Hii itafuta kabisa \"%1$s\" na njia zake zote.</string>
+    <string name="domain_delete_title">Futa kikoa?</string>
+    <string name="domain_dns_hint">Unda rekodi ya TXT:</string>
+    <string name="domain_empty_admin">Hakuna vikoa vilivyowekwa.</string>
+    <string name="domain_empty_user">Huna ufikiaji wa vikoa vyovyote.</string>
+    <string name="domain_https">HTTPS otomatiki</string>
+    <string name="domain_name">Kikoa</string>
+    <string name="domain_status_pending">Uthibitishaji wa DNS unasubiri</string>
+    <string name="domain_status_verified">Imethibitishwa</string>
+    <string name="domain_title">Vikoa</string>
+    <string name="domain_verify">Thibitisha DNS</string>
+    <string name="settings_home_domains">Vikoa</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Imefuta kipindi 1</item>
+        <item quantity="other">Imefuta vipindi %1$d</item>
+    </plurals>
 </resources>

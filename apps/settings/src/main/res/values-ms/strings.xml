@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Terima kod pengesahan melalui e-mel</string>
     <string name="account_method_totp_subtitle">Sediakan pengesah di bawah untuk mendayakan</string>
     <string name="account_method_passkey_subtitle">Daftarkan kunci laluan di bawah untuk mendayakan</string>
+    <string name="domain_add">Tambah domain</string>
+    <string name="domain_add_title">Tambah domain</string>
+    <string name="domain_delegation_add">Tambah</string>
+    <string name="domain_delegation_add_title">Tambah delegasi</string>
+    <string name="domain_delegation_delete">Padam delegasi</string>
+    <string name="domain_delegation_delete_message">%1$s tidak akan menguruskan laluan pada domain ini lagi.</string>
+    <string name="domain_delegation_delete_title">Padam delegasi?</string>
+    <string name="domain_delegation_path">Laluan</string>
+    <string name="domain_delegation_user">ID pengguna</string>
+    <string name="domain_delegations">Delegasi</string>
+    <string name="domain_delegations_empty">Tiada delegasi dikonfigurasi.</string>
+    <string name="domain_delete">Padam domain</string>
+    <string name="domain_delete_message">Ini akan memadam secara kekal \"%1$s\" dan semua laluannya.</string>
+    <string name="domain_delete_title">Padam domain?</string>
+    <string name="domain_dns_hint">Cipta rekod TXT:</string>
+    <string name="domain_empty_admin">Tiada domain dikonfigurasi.</string>
+    <string name="domain_empty_user">Anda tidak mempunyai akses kepada mana-mana domain.</string>
+    <string name="domain_https">HTTPS automatik</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">Pengesahan DNS dalam proses</string>
+    <string name="domain_status_verified">Disahkan</string>
+    <string name="domain_title">Domain</string>
+    <string name="domain_verify">Sahkan DNS</string>
+    <string name="settings_home_domains">Domain</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">%1$d sesi dibatalkan</item>
+    </plurals>
 </resources>

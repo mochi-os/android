@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Primite kod za potvrdu e-poštom</string>
     <string name="account_method_totp_subtitle">Za omogućavanje postavite autentifikator u nastavku</string>
     <string name="account_method_passkey_subtitle">Za omogućavanje registrirajte pristupni ključ u nastavku</string>
+    <string name="domain_add">Dodaj domenu</string>
+    <string name="domain_add_title">Dodaj domenu</string>
+    <string name="domain_delegation_add">Dodaj</string>
+    <string name="domain_delegation_add_title">Dodaj delegaciju</string>
+    <string name="domain_delegation_delete">Obriši delegaciju</string>
+    <string name="domain_delegation_delete_message">%1$s više neće upravljati rutama na ovoj domeni.</string>
+    <string name="domain_delegation_delete_title">Obrisati delegaciju?</string>
+    <string name="domain_delegation_path">Putanja</string>
+    <string name="domain_delegation_user">ID korisnika</string>
+    <string name="domain_delegations">Delegacije</string>
+    <string name="domain_delegations_empty">Nema konfiguriranih delegacija.</string>
+    <string name="domain_delete">Obriši domenu</string>
+    <string name="domain_delete_message">Ovo će trajno izbrisati \"%1$s\" i sve njegove rute.</string>
+    <string name="domain_delete_title">Obrisati domenu?</string>
+    <string name="domain_dns_hint">Stvorite TXT zapis:</string>
+    <string name="domain_empty_admin">Nema konfiguriranih domena.</string>
+    <string name="domain_empty_user">Nemate pristup nijednoj domeni.</string>
+    <string name="domain_https">Automatski HTTPS</string>
+    <string name="domain_name">Domena</string>
+    <string name="domain_status_pending">DNS provjera u tijeku</string>
+    <string name="domain_status_verified">Provjereno</string>
+    <string name="domain_title">Domene</string>
+    <string name="domain_verify">Provjeri DNS</string>
+    <string name="settings_home_domains">Domene</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Opozvane %1$d sesije</item>
+        <item quantity="one">Opozvana %1$d sesija</item>
+        <item quantity="other">Opozvano %1$d sesija</item>
+    </plurals>
 </resources>

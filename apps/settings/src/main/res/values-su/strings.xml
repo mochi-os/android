@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Tarima kode verifikasi ngaliwatan email</string>
     <string name="account_method_totp_subtitle">Pikeun ngaktipkeun, setel authenticator di handap</string>
     <string name="account_method_passkey_subtitle">Pikeun ngaktipkeun, daptarkeun passkey di handap</string>
+    <string name="domain_add">Tambah doméin</string>
+    <string name="domain_add_title">Tambah doméin</string>
+    <string name="domain_delegation_add">Tambah</string>
+    <string name="domain_delegation_add_title">Tambah delegasi</string>
+    <string name="domain_delegation_delete">Hapus delegasi</string>
+    <string name="domain_delegation_delete_message">%1$s moal ngatur jalan dina domain ieu deui.</string>
+    <string name="domain_delegation_delete_title">Hapus delegasi?</string>
+    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_user">ID pamaké</string>
+    <string name="domain_delegations">Delegasi</string>
+    <string name="domain_delegations_empty">Henteu aya delegasi nu dikonfigurasi.</string>
+    <string name="domain_delete">Hapus doméin</string>
+    <string name="domain_delete_message">Ieu bakal mupus \"%1$s\" sareng sadaya jalanna kanggo salamina.</string>
+    <string name="domain_delete_title">Hapus doméin?</string>
+    <string name="domain_dns_hint">Jieun catetan TXT:</string>
+    <string name="domain_empty_admin">Henteu aya domain nu dikonfigurasi.</string>
+    <string name="domain_empty_user">Anjeun teu boga aksés ka domain naon waé.</string>
+    <string name="domain_https">HTTPS otomatis</string>
+    <string name="domain_name">Doméin</string>
+    <string name="domain_status_pending">Verifikasi DNS ngantosan</string>
+    <string name="domain_status_verified">Diverifikasi</string>
+    <string name="domain_title">Doméin</string>
+    <string name="domain_verify">Verifikasi DNS</string>
+    <string name="settings_home_domains">Doméin</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">Dicabut %1$d sési</item>
+    </plurals>
 </resources>

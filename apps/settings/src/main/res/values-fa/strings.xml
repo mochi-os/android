@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">دریافت کد تأیید از طریق ایمیل</string>
     <string name="account_method_totp_subtitle">برای فعال‌سازی، در پایین یک احرازکننده تنظیم کنید</string>
     <string name="account_method_passkey_subtitle">برای فعال‌سازی، در پایین یک کلید عبور ثبت کنید</string>
+    <string name="domain_add">افزودن دامنه</string>
+    <string name="domain_add_title">افزودن دامنه</string>
+    <string name="domain_delegation_add">افزودن</string>
+    <string name="domain_delegation_add_title">افزودن واگذاری</string>
+    <string name="domain_delegation_delete">حذف واگذاری</string>
+    <string name="domain_delegation_delete_message">%1$s دیگر مسیرها را در این دامنه مدیریت نخواهد کرد.</string>
+    <string name="domain_delegation_delete_title">حذف واگذاری؟</string>
+    <string name="domain_delegation_path">مسیر</string>
+    <string name="domain_delegation_user">شناسه کاربر</string>
+    <string name="domain_delegations">واگذاری‌ها</string>
+    <string name="domain_delegations_empty">هیچ واگذاری پیکربندی نشده است.</string>
+    <string name="domain_delete">حذف دامنه</string>
+    <string name="domain_delete_message">این به طور دائم «%1$s» و همه مسیرهای آن را حذف می‌کند.</string>
+    <string name="domain_delete_title">حذف دامنه؟</string>
+    <string name="domain_dns_hint">یک رکورد TXT ایجاد کنید:</string>
+    <string name="domain_empty_admin">هیچ دامنه‌ای پیکربندی نشده است.</string>
+    <string name="domain_empty_user">شما به هیچ دامنه‌ای دسترسی ندارید.</string>
+    <string name="domain_https">HTTPS خودکار</string>
+    <string name="domain_name">دامنه</string>
+    <string name="domain_status_pending">در انتظار تأیید DNS</string>
+    <string name="domain_status_verified">تأیید شد</string>
+    <string name="domain_title">دامنه‌ها</string>
+    <string name="domain_verify">تأیید DNS</string>
+    <string name="settings_home_domains">دامنه‌ها</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">۱ نشست لغو شد</item>
+        <item quantity="other">%1$d نشست لغو شد</item>
+    </plurals>
 </resources>

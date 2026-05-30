@@ -287,7 +287,7 @@
     <string name="account_oauth_link_title">ເຊື່ອມຕໍ່ຜູ້ໃຫ້ບໍລິການ</string>
     <string name="account_oauth_unlink_title">ຍົກເລີກການເຊື່ອມຕໍ່ບັນຊີ?</string>
     <string name="account_oauth_unlink_message">ທ່ານຈະບໍ່ສາມາດເຂົ້າສູ່ລະບົບດ້ວຍ %1$s ໄດ້ອີກ.</string>
-    <string name="tokens_section_title">API tokens</string>
+    <string name="tokens_section_title">API ໂທເຄນ</string>
     <string name="tokens_title">ໂທເຄນພິສູດຢືນຢັນ</string>
     <string name="tokens_empty">ບໍ່ມີ API tokens.</string>
     <string name="tokens_create_title">API token ໃໝ່</string>
@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">ຮັບລະຫັດຢືນຢັນທາງອີເມວ</string>
     <string name="account_method_totp_subtitle">ເພື່ອເປີດໃຊ້ ຕັ້ງຄ່າຕົວພິສູດຢືນຢັນຂ້າງລຸ່ມ</string>
     <string name="account_method_passkey_subtitle">ເພື່ອເປີດໃຊ້ ລົງທະບຽນກະແຈຜ່ານຂ້າງລຸ່ມ</string>
+    <string name="domain_add">ເພີ່ມໂດເມນ</string>
+    <string name="domain_add_title">ເພີ່ມໂດເມນ</string>
+    <string name="domain_delegation_add">ເພີ່ມ</string>
+    <string name="domain_delegation_add_title">ເພີ່ມການມອບສິດ</string>
+    <string name="domain_delegation_delete">ລົບການມອບສິດ</string>
+    <string name="domain_delegation_delete_message">%1$s ຈະບໍ່ຈັດການເສັ້ນທາງໃນໂດເມນນີ້ອີກ.</string>
+    <string name="domain_delegation_delete_title">ລົບການມອບສິດບໍ?</string>
+    <string name="domain_delegation_path">ເສັ້ນທາງ</string>
+    <string name="domain_delegation_user">ID ຜູ້ໃຊ້</string>
+    <string name="domain_delegations">ການມອບສິດ</string>
+    <string name="domain_delegations_empty">ບໍ່ມີການມອບໝາຍຖືກກໍານົດ.</string>
+    <string name="domain_delete">ລົບໂດເມນ</string>
+    <string name="domain_delete_message">ນີ້ຈະລົບ \"%1$s\" ແລະທຸກເສັ້ນທາງຂອງມັນຖາວອນ.</string>
+    <string name="domain_delete_title">ລົບໂດເມນບໍ?</string>
+    <string name="domain_dns_hint">ສ້າງບັນທຶກ TXT:</string>
+    <string name="domain_empty_admin">ບໍ່ມີໂດເມນຖືກກໍານົດ.</string>
+    <string name="domain_empty_user">ທ່ານບໍ່ມີສິດການເຂົ້າເຖິງ domain ໃດໆ.</string>
+    <string name="domain_https">HTTPS ອັດຕະໂນມັດ</string>
+    <string name="domain_name">ໂດເມນ</string>
+    <string name="domain_status_pending">ການກວດສອບ DNS ກໍາລັງລໍຖ້າ</string>
+    <string name="domain_status_verified">ຢືນຢັນແລ້ວ</string>
+    <string name="domain_title">ໂດເມນ</string>
+    <string name="domain_verify">ຢືນຢັນ DNS</string>
+    <string name="settings_home_domains">ໂດເມນ</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">ຖອນຄືນ %1$d sessions</item>
+    </plurals>
 </resources>

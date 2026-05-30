@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Motta en bekreftelseskode på e-post</string>
     <string name="account_method_totp_subtitle">Sett opp en autentisering nedenfor for å aktivere</string>
     <string name="account_method_passkey_subtitle">Registrer en tilgangsnøkkel nedenfor for å aktivere</string>
+    <string name="domain_add">Legg til domene</string>
+    <string name="domain_add_title">Legg til domene</string>
+    <string name="domain_delegation_add">Legg til</string>
+    <string name="domain_delegation_add_title">Legg til delegering</string>
+    <string name="domain_delegation_delete">Slett delegering</string>
+    <string name="domain_delegation_delete_message">%1$s vil ikke lenger administrere ruter på dette domenet.</string>
+    <string name="domain_delegation_delete_title">Slette delegering?</string>
+    <string name="domain_delegation_path">Sti</string>
+    <string name="domain_delegation_user">Bruker-ID</string>
+    <string name="domain_delegations">Delegeringer</string>
+    <string name="domain_delegations_empty">Ingen delegeringer konfigurert.</string>
+    <string name="domain_delete">Slett domene</string>
+    <string name="domain_delete_message">Dette vil permanent slette «%1$s» og alle dens ruter.</string>
+    <string name="domain_delete_title">Slette domene?</string>
+    <string name="domain_dns_hint">Opprett en TXT-post:</string>
+    <string name="domain_empty_admin">Ingen domener konfigurert.</string>
+    <string name="domain_empty_user">Du har ikke tilgang til noen domener.</string>
+    <string name="domain_https">Automatisk HTTPS</string>
+    <string name="domain_name">Domene</string>
+    <string name="domain_status_pending">Venter på DNS-verifisering</string>
+    <string name="domain_status_verified">Verifisert</string>
+    <string name="domain_title">Domener</string>
+    <string name="domain_verify">Bekreft DNS</string>
+    <string name="settings_home_domains">Domener</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 økt tilbakekalt</item>
+        <item quantity="other">%1$d økter tilbakekalt</item>
+    </plurals>
 </resources>

@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">மின்னஞ்சல் மூலம் சரிபார்ப்புக் குறியீட்டைப் பெறுங்கள்</string>
     <string name="account_method_totp_subtitle">இயக்க, கீழே ஒரு அங்கீகரிப்பானை அமைக்கவும்</string>
     <string name="account_method_passkey_subtitle">இயக்க, கீழே ஒரு கடவுச்சாவியைப் பதிவு செய்யவும்</string>
+    <string name="domain_add">டொமைன் சேர்</string>
+    <string name="domain_add_title">டொமைன் சேர்</string>
+    <string name="domain_delegation_add">சேர்</string>
+    <string name="domain_delegation_add_title">பிரதிநிதித்துவம் சேர்</string>
+    <string name="domain_delegation_delete">பிரதிநிதித்துவத்தை நீக்கு</string>
+    <string name="domain_delegation_delete_message">%1$s இனி இந்த டொமைனில் வழிகளை நிர்வகிக்காது.</string>
+    <string name="domain_delegation_delete_title">பிரதிநிதித்துவத்தை நீக்கவா?</string>
+    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_user">பயனர் ID</string>
+    <string name="domain_delegations">பிரதிநிதித்துவங்கள்</string>
+    <string name="domain_delegations_empty">கட்டமைக்கப்பட்ட வழங்கப்பட்டுள்ளவை இல்லை.</string>
+    <string name="domain_delete">டொமைனை நீக்கு</string>
+    <string name="domain_delete_message">இது நிரந்தரமாக \"%1$s\" மற்றும் அதன் அனைத்து வழிகளையும் நீக்கும்.</string>
+    <string name="domain_delete_title">டொமைனை நீக்கவா?</string>
+    <string name="domain_dns_hint">TXT பதிவை உருவாக்கவும்:</string>
+    <string name="domain_empty_admin">கட்டமைக்கப்பட்ட டொமைன்கள் இல்லை.</string>
+    <string name="domain_empty_user">உங்களுக்கு எந்த டொமைனுக்கும் அணுகல் இல்லை.</string>
+    <string name="domain_https">தானியங்கி HTTPS</string>
+    <string name="domain_name">டொமைன்</string>
+    <string name="domain_status_pending">DNS சரிபார்ப்பு நிலுவையில்</string>
+    <string name="domain_status_verified">சரிபார்க்கப்பட்டது</string>
+    <string name="domain_title">டொமைன்கள்</string>
+    <string name="domain_verify">DNS ஐ சரிபார்க்கவும்</string>
+    <string name="settings_home_domains">டொமைன்கள்</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 அமர்வு திரும்பப் பெறப்பட்டது</item>
+        <item quantity="other">%1$d அமர்வுகள் திரும்பப் பெறப்பட்டன</item>
+    </plurals>
 </resources>

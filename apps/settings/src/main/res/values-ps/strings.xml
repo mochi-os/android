@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">د بریښنالیک له لارې د تایید کوډ ترلاسه کړئ</string>
     <string name="account_method_totp_subtitle">د فعالولو لپاره، لاندې تصدیق کوونکی تنظیم کړئ</string>
     <string name="account_method_passkey_subtitle">د فعالولو لپاره، لاندې د لاسرسي کیلي ثبت کړئ</string>
+    <string name="domain_add">ډومین اضافه کړئ</string>
+    <string name="domain_add_title">ډومین اضافه کړئ</string>
+    <string name="domain_delegation_add">اضافه کړئ</string>
+    <string name="domain_delegation_add_title">وکالت اضافه کړئ</string>
+    <string name="domain_delegation_delete">وکالت ړنګ کړئ</string>
+    <string name="domain_delegation_delete_message">%1$s به نور په دې ډومین کې لارې اداره نکړي.</string>
+    <string name="domain_delegation_delete_title">وکالت ړنګ کړئ؟</string>
+    <string name="domain_delegation_path">لاره</string>
+    <string name="domain_delegation_user">کارن ID</string>
+    <string name="domain_delegations">وکالتونه</string>
+    <string name="domain_delegations_empty">هیڅ استازي تنظیم شوي نه دي.</string>
+    <string name="domain_delete">ډومین ړنګ کړئ</string>
+    <string name="domain_delete_message">دا به دایمي توګه \"%1$s\" او د هغې ټولې لارې حذف کړي.</string>
+    <string name="domain_delete_title">ډومین ړنګ کړئ؟</string>
+    <string name="domain_dns_hint">د TXT ریکارډ جوړ کړئ:</string>
+    <string name="domain_empty_admin">هیڅ ډومینونه نه دي تنظیم شوي.</string>
+    <string name="domain_empty_user">تاسو هیڅ ډومینونو ته لاسرسی نه لرئ.</string>
+    <string name="domain_https">اتومات HTTPS</string>
+    <string name="domain_name">ډومین</string>
+    <string name="domain_status_pending">د DNS تصدیق په تمه</string>
+    <string name="domain_status_verified">تصدیق شو</string>
+    <string name="domain_title">ډومینونه</string>
+    <string name="domain_verify">DNS تصدیق</string>
+    <string name="settings_home_domains">ډومینونه</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 ناسته لغوه شوه</item>
+        <item quantity="other">%1$d ناستې لغوه شوې</item>
+    </plurals>
 </resources>

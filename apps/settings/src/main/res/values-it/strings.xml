@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Ricevi un codice di verifica via email</string>
     <string name="account_method_totp_subtitle">Configura un autenticatore qui sotto per abilitare</string>
     <string name="account_method_passkey_subtitle">Registra una passkey qui sotto per abilitare</string>
+    <string name="domain_add">Aggiungi dominio</string>
+    <string name="domain_add_title">Aggiungi dominio</string>
+    <string name="domain_delegation_add">Aggiungi</string>
+    <string name="domain_delegation_add_title">Aggiungi delega</string>
+    <string name="domain_delegation_delete">Elimina delega</string>
+    <string name="domain_delegation_delete_message">%1$s non gestirà più i percorsi su questo dominio.</string>
+    <string name="domain_delegation_delete_title">Eliminare la delega?</string>
+    <string name="domain_delegation_path">Percorso</string>
+    <string name="domain_delegation_user">ID utente</string>
+    <string name="domain_delegations">Deleghe</string>
+    <string name="domain_delegations_empty">Nessuna delega configurata.</string>
+    <string name="domain_delete">Elimina dominio</string>
+    <string name="domain_delete_message">Questo eliminerà definitivamente «%1$s» e tutti i suoi percorsi.</string>
+    <string name="domain_delete_title">Eliminare il dominio?</string>
+    <string name="domain_dns_hint">Crea un record TXT:</string>
+    <string name="domain_empty_admin">Nessun dominio configurato.</string>
+    <string name="domain_empty_user">Non hai accesso ad alcun dominio.</string>
+    <string name="domain_https">HTTPS automatico</string>
+    <string name="domain_name">Dominio</string>
+    <string name="domain_status_pending">Verifica DNS in attesa</string>
+    <string name="domain_status_verified">Verificato</string>
+    <string name="domain_title">Domini</string>
+    <string name="domain_verify">Verifica DNS</string>
+    <string name="settings_home_domains">Domini</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="many">Revocate %1$d sessioni</item>
+        <item quantity="one">Revocata 1 sessione</item>
+        <item quantity="other">Revocate %1$d sessioni</item>
+    </plurals>
 </resources>

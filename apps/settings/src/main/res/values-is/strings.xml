@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Fáðu staðfestingarkóða með tölvupósti</string>
     <string name="account_method_totp_subtitle">Settu upp auðkenni hér að neðan til að virkja</string>
     <string name="account_method_passkey_subtitle">Skráðu aðgangslykil hér að neðan til að virkja</string>
+    <string name="domain_add">Bæta við léni</string>
+    <string name="domain_add_title">Bæta við léni</string>
+    <string name="domain_delegation_add">Bæta við</string>
+    <string name="domain_delegation_add_title">Bæta við umboði</string>
+    <string name="domain_delegation_delete">Eyða umboði</string>
+    <string name="domain_delegation_delete_message">%1$s mun ekki lengur stjórna slóðum á þessu léni.</string>
+    <string name="domain_delegation_delete_title">Eyða umboði?</string>
+    <string name="domain_delegation_path">Slóð</string>
+    <string name="domain_delegation_user">Notandi auðkenni</string>
+    <string name="domain_delegations">Umboð</string>
+    <string name="domain_delegations_empty">Engar úthlutanir stilltar.</string>
+    <string name="domain_delete">Eyða léni</string>
+    <string name="domain_delete_message">Þetta mun eyða \"%1$s\" og öllum slóðum þess varanlega.</string>
+    <string name="domain_delete_title">Eyða léni?</string>
+    <string name="domain_dns_hint">Búðu til TXT-færslu:</string>
+    <string name="domain_empty_admin">Engin lén stillt.</string>
+    <string name="domain_empty_user">Þú hefur ekki aðgang að neinum lénum.</string>
+    <string name="domain_https">Sjálfvirkt HTTPS</string>
+    <string name="domain_name">Lén</string>
+    <string name="domain_status_pending">Bíður DNS-staðfestingar</string>
+    <string name="domain_status_verified">Sannprófað</string>
+    <string name="domain_title">Lén</string>
+    <string name="domain_verify">Staðfesta DNS</string>
+    <string name="settings_home_domains">Lén</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">%1$d lota afturkölluð</item>
+        <item quantity="other">%1$d lotur afturkallaðar</item>
+    </plurals>
 </resources>

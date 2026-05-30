@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Saa kinnituskood e-posti teel</string>
     <string name="account_method_totp_subtitle">Lubamiseks seadista allpool autentija</string>
     <string name="account_method_passkey_subtitle">Lubamiseks registreeri allpool pääsuvõti</string>
+    <string name="domain_add">Lisa domeen</string>
+    <string name="domain_add_title">Lisa domeen</string>
+    <string name="domain_delegation_add">Lisa</string>
+    <string name="domain_delegation_add_title">Lisa delegeering</string>
+    <string name="domain_delegation_delete">Kustuta delegeerimine</string>
+    <string name="domain_delegation_delete_message">%1$s ei halda enam marsruute selles domeenis.</string>
+    <string name="domain_delegation_delete_title">Kustutada delegeerimine?</string>
+    <string name="domain_delegation_path">Tee</string>
+    <string name="domain_delegation_user">Kasutaja ID</string>
+    <string name="domain_delegations">Delegeerimised</string>
+    <string name="domain_delegations_empty">Delegeerimisi pole konfigureeritud.</string>
+    <string name="domain_delete">Kustuta domeen</string>
+    <string name="domain_delete_message">See kustutab jäädavalt \"%1$s\" ja kõik selle marsruudid.</string>
+    <string name="domain_delete_title">Kustutada domeen?</string>
+    <string name="domain_dns_hint">Loo TXT-kirje:</string>
+    <string name="domain_empty_admin">Domeene pole konfigureeritud.</string>
+    <string name="domain_empty_user">Sul pole juurdepääsu ühelegi domeenile.</string>
+    <string name="domain_https">Automaatne HTTPS</string>
+    <string name="domain_name">Domeen</string>
+    <string name="domain_status_pending">DNS-i kontroll ootel</string>
+    <string name="domain_status_verified">Kontrollitud</string>
+    <string name="domain_title">Domeenid</string>
+    <string name="domain_verify">Kontrolli DNS-i</string>
+    <string name="settings_home_domains">Domeenid</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Tühistatud 1 sessioon</item>
+        <item quantity="other">Tühistatud %1$d sessiooni</item>
+    </plurals>
 </resources>

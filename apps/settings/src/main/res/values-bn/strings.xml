@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ইমেলের মাধ্যমে যাচাইকরণ কোড গ্রহণ করুন</string>
     <string name="account_method_totp_subtitle">সক্রিয় করতে নিচে একটি অথেনটিকেটর সেট আপ করুন</string>
     <string name="account_method_passkey_subtitle">সক্রিয় করতে নিচে একটি পাসকি নিবন্ধন করুন</string>
+    <string name="domain_add">ডোমেইন যোগ করুন</string>
+    <string name="domain_add_title">ডোমেইন যোগ করুন</string>
+    <string name="domain_delegation_add">যোগ করুন</string>
+    <string name="domain_delegation_add_title">ডেলিগেশন যোগ করুন</string>
+    <string name="domain_delegation_delete">ডেলিগেশন মুছুন</string>
+    <string name="domain_delegation_delete_message">%1$s আর এই ডোমেইনে রুট পরিচালনা করবে না।</string>
+    <string name="domain_delegation_delete_title">ডেলিগেশন মুছবেন?</string>
+    <string name="domain_delegation_path">পাথ</string>
+    <string name="domain_delegation_user">ব্যবহারকারী আইডি</string>
+    <string name="domain_delegations">ডেলিগেশন</string>
+    <string name="domain_delegations_empty">কোনো অর্পণ কনফিগার করা নেই।</string>
+    <string name="domain_delete">ডোমেইন মুছুন</string>
+    <string name="domain_delete_message">এটি স্থায়ীভাবে \"%1$s\" এবং এর সমস্ত রুট মুছে ফেলবে।</string>
+    <string name="domain_delete_title">ডোমেইন মুছবেন?</string>
+    <string name="domain_dns_hint">একটি TXT রেকর্ড তৈরি করুন:</string>
+    <string name="domain_empty_admin">কোনো ডোমেইন কনফিগার করা নেই।</string>
+    <string name="domain_empty_user">আপনার কোন ডোমেনে অ্যাক্সেস নেই।</string>
+    <string name="domain_https">স্বয়ংক্রিয় HTTPS</string>
+    <string name="domain_name">ডোমেইন</string>
+    <string name="domain_status_pending">DNS যাচাইকরণ অপেক্ষমান</string>
+    <string name="domain_status_verified">যাচাই করা হয়েছে</string>
+    <string name="domain_title">ডোমেইনসমূহ</string>
+    <string name="domain_verify">DNS যাচাই করুন</string>
+    <string name="settings_home_domains">ডোমেইনসমূহ</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1টি সেশন প্রত্যাহার করা হয়েছে</item>
+        <item quantity="other">%1$d সেশন প্রত্যাহার করা হয়েছে</item>
+    </plurals>
 </resources>

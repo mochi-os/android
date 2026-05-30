@@ -352,4 +352,36 @@
     <string name="account_method_email_subtitle">استلام رمز التحقق عبر البريد الإلكتروني</string>
     <string name="account_method_totp_subtitle">قم بإعداد تطبيق مصادقة أدناه للتفعيل</string>
     <string name="account_method_passkey_subtitle">سجّل مفتاح مرور أدناه للتفعيل</string>
+    <string name="domain_add">إضافة نطاق</string>
+    <string name="domain_add_title">إضافة نطاق</string>
+    <string name="domain_delegation_add">إضافة</string>
+    <string name="domain_delegation_add_title">إضافة تفويض</string>
+    <string name="domain_delegation_delete">حذف التفويض</string>
+    <string name="domain_delegation_delete_message">لن يدير %1$s المسارات على هذا النطاق بعد الآن.</string>
+    <string name="domain_delegation_delete_title">حذف التفويض؟</string>
+    <string name="domain_delegation_path">المسار</string>
+    <string name="domain_delegation_user">معرّف المستخدم</string>
+    <string name="domain_delegations">التفويضات</string>
+    <string name="domain_delegations_empty">لا توجد تفويضات مُهيأة.</string>
+    <string name="domain_delete">حذف النطاق</string>
+    <string name="domain_delete_message">سيؤدي هذا إلى حذف \"%1$s\" وجميع مساراته نهائيًا.</string>
+    <string name="domain_delete_title">حذف النطاق؟</string>
+    <string name="domain_dns_hint">أنشئ سجل TXT:</string>
+    <string name="domain_empty_admin">لا توجد نطاقات مُهيأة.</string>
+    <string name="domain_empty_user">ليس لديك حق الوصول إلى أي نطاقات.</string>
+    <string name="domain_https">HTTPS تلقائي</string>
+    <string name="domain_name">النطاق</string>
+    <string name="domain_status_pending">التحقق من DNS معلّق</string>
+    <string name="domain_status_verified">تم التحقق</string>
+    <string name="domain_title">النطاقات</string>
+    <string name="domain_verify">تحقق من DNS</string>
+    <string name="settings_home_domains">النطاقات</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">تم إلغاء %1$d جلسات</item>
+        <item quantity="many">تم إلغاء %1$d جلسة</item>
+        <item quantity="one">تم إلغاء جلسة واحدة</item>
+        <item quantity="other">تم إلغاء %1$d جلسة</item>
+        <item quantity="two">تم إلغاء جلستين</item>
+        <item quantity="zero">لم يتم إلغاء أي جلسة</item>
+    </plurals>
 </resources>

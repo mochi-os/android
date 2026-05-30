@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Təsdiq kodunu e-poçtla alın</string>
     <string name="account_method_totp_subtitle">Aktivləşdirmək üçün aşağıda autentifikator qurun</string>
     <string name="account_method_passkey_subtitle">Aktivləşdirmək üçün aşağıda giriş açarı qeydiyyatdan keçirin</string>
+    <string name="domain_add">Domen əlavə et</string>
+    <string name="domain_add_title">Domen əlavə et</string>
+    <string name="domain_delegation_add">Əlavə et</string>
+    <string name="domain_delegation_add_title">Səlahiyyət əlavə et</string>
+    <string name="domain_delegation_delete">Səlahiyyəti sil</string>
+    <string name="domain_delegation_delete_message">%1$s artıq bu domendə marşrutları idarə etməyəcək.</string>
+    <string name="domain_delegation_delete_title">Səlahiyyət silinsin?</string>
+    <string name="domain_delegation_path">Yol</string>
+    <string name="domain_delegation_user">İstifadəçi ID</string>
+    <string name="domain_delegations">Səlahiyyətlər</string>
+    <string name="domain_delegations_empty">Konfiqurasiya edilmiş səlahiyyət yoxdur.</string>
+    <string name="domain_delete">Domeni sil</string>
+    <string name="domain_delete_message">Bu qalıcı olaraq \"%1$s\" və onun bütün marşrutlarını siləcək.</string>
+    <string name="domain_delete_title">Domen silinsin?</string>
+    <string name="domain_dns_hint">TXT qeyd yaradın:</string>
+    <string name="domain_empty_admin">Konfiqurasiya edilmiş domen yoxdur.</string>
+    <string name="domain_empty_user">Hələ heç bir lentiniz yoxdur.</string>
+    <string name="domain_https">Avtomatik HTTPS</string>
+    <string name="domain_name">Domen</string>
+    <string name="domain_status_pending">DNS yoxlaması gözləyir</string>
+    <string name="domain_status_verified">Yoxla və aktivləşdir</string>
+    <string name="domain_title">Domenlər</string>
+    <string name="domain_verify">E-poçt ünvanını yoxla</string>
+    <string name="settings_home_domains">Domenlər</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 sessiya ləğv edildi</item>
+        <item quantity="other">%1$d sessiya ləğv edildi</item>
+    </plurals>
 </resources>

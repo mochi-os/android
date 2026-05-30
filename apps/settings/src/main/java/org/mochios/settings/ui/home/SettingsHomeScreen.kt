@@ -24,6 +24,7 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PrivacyTip
+import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.SettingsApplications
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Sync
@@ -64,6 +65,7 @@ fun SettingsHomeScreen(
     onOpenSystemUsers: () -> Unit,
     onOpenInterests: () -> Unit,
     onOpenAccounts: () -> Unit,
+    onOpenDomains: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenSystemDocuments: () -> Unit,
     onLogout: () -> Unit,
@@ -186,6 +188,15 @@ fun SettingsHomeScreen(
                 HorizontalDivider()
             }
 
+            item {
+                ListItem(
+                    modifier = Modifier.clickable(onClick = onOpenDomains),
+                    headlineContent = { Text(stringResource(R.string.settings_home_domains)) },
+                    leadingContent = { Icon(Icons.Default.Public, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                )
+                HorizontalDivider()
+            }
             item {
                 ListItem(
                     modifier = Modifier.clickable(onClick = onOpenReplication),

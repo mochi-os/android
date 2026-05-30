@@ -352,4 +352,34 @@
     <string name="account_method_email_subtitle">Получить код подтверждения по электронной почте</string>
     <string name="account_method_totp_subtitle">Чтобы включить, настройте аутентификатор ниже</string>
     <string name="account_method_passkey_subtitle">Чтобы включить, зарегистрируйте ключ доступа ниже</string>
+    <string name="domain_add">Добавить домен</string>
+    <string name="domain_add_title">Добавить домен</string>
+    <string name="domain_delegation_add">Добавить</string>
+    <string name="domain_delegation_add_title">Добавить делегирование</string>
+    <string name="domain_delegation_delete">Удалить делегирование</string>
+    <string name="domain_delegation_delete_message">%1$s больше не будет управлять маршрутами на этом домене.</string>
+    <string name="domain_delegation_delete_title">Удалить делегирование?</string>
+    <string name="domain_delegation_path">Путь</string>
+    <string name="domain_delegation_user">ID пользователя</string>
+    <string name="domain_delegations">Делегирования</string>
+    <string name="domain_delegations_empty">Делегирования не настроены.</string>
+    <string name="domain_delete">Удалить домен</string>
+    <string name="domain_delete_message">Это окончательно удалит «%1$s» и все его маршруты.</string>
+    <string name="domain_delete_title">Удалить домен?</string>
+    <string name="domain_dns_hint">Создайте TXT-запись:</string>
+    <string name="domain_empty_admin">Домены не настроены.</string>
+    <string name="domain_empty_user">У вас нет доступа ни к одному домену.</string>
+    <string name="domain_https">Автоматический HTTPS</string>
+    <string name="domain_name">Домен</string>
+    <string name="domain_status_pending">Ожидается проверка DNS</string>
+    <string name="domain_status_verified">Подтверждено</string>
+    <string name="domain_title">Домены</string>
+    <string name="domain_verify">Проверить DNS</string>
+    <string name="settings_home_domains">Домены</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Отозвано %1$d сессии</item>
+        <item quantity="many">Отозвано %1$d сессий</item>
+        <item quantity="one">Отозвана %1$d сессия</item>
+        <item quantity="other">Отозвано %1$d сессии</item>
+    </plurals>
 </resources>

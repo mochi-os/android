@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Примете код за потврда преку е-пошта</string>
     <string name="account_method_totp_subtitle">За да овозможите, поставете автентикатор подолу</string>
     <string name="account_method_passkey_subtitle">За да овозможите, регистрирајте пристапен клуч подолу</string>
+    <string name="domain_add">Додај домен</string>
+    <string name="domain_add_title">Додај домен</string>
+    <string name="domain_delegation_add">Додај</string>
+    <string name="domain_delegation_add_title">Додај делегација</string>
+    <string name="domain_delegation_delete">Избриши делегација</string>
+    <string name="domain_delegation_delete_message">%1$s повеќе нема да управува со патеки на овој домен.</string>
+    <string name="domain_delegation_delete_title">Да се избрише делегацијата?</string>
+    <string name="domain_delegation_path">Патека</string>
+    <string name="domain_delegation_user">ID на корисник</string>
+    <string name="domain_delegations">Делегации</string>
+    <string name="domain_delegations_empty">Нема конфигурирани делегации.</string>
+    <string name="domain_delete">Избриши домен</string>
+    <string name="domain_delete_message">Ова трајно ќе го избрише „%1$s\" и сите негови патеки.</string>
+    <string name="domain_delete_title">Да се избрише доменот?</string>
+    <string name="domain_dns_hint">Создадете TXT запис:</string>
+    <string name="domain_empty_admin">Нема конфигурирани домени.</string>
+    <string name="domain_empty_user">Немате пристап до ниту еден домен.</string>
+    <string name="domain_https">Автоматски HTTPS</string>
+    <string name="domain_name">Домен</string>
+    <string name="domain_status_pending">DNS верификација во тек</string>
+    <string name="domain_status_verified">Потврдено</string>
+    <string name="domain_title">Домени</string>
+    <string name="domain_verify">Потврди DNS</string>
+    <string name="settings_home_domains">Домени</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Отповикана %1$d сесија</item>
+        <item quantity="other">Отповикани %1$d сесии</item>
+    </plurals>
 </resources>

@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ईमेल से सत्यापन कोड पाईं</string>
     <string name="account_method_totp_subtitle">चालू करे खातिर नीचे प्रमाणक सेट करीं</string>
     <string name="account_method_passkey_subtitle">चालू करे खातिर नीचे पासकी रजिस्टर करीं</string>
+    <string name="domain_add">डोमेन जोड़ीं</string>
+    <string name="domain_add_title">डोमेन जोड़ीं</string>
+    <string name="domain_delegation_add">जोड़ीं</string>
+    <string name="domain_delegation_add_title">प्रत्यायोजन जोड़ीं</string>
+    <string name="domain_delegation_delete">प्रत्यायोजन मेटाईं</string>
+    <string name="domain_delegation_delete_message">%1$s अब एह डोमेन पर रास्ता ना संभाली।</string>
+    <string name="domain_delegation_delete_title">प्रत्यायोजन मेटाईं?</string>
+    <string name="domain_delegation_path">पथ</string>
+    <string name="domain_delegation_user">उपयोगकर्ता ID</string>
+    <string name="domain_delegations">प्रत्यायोजन</string>
+    <string name="domain_delegations_empty">कौनो प्रतिनिधि कॉन्फिगर नइखे।</string>
+    <string name="domain_delete">डोमेन मेटाईं</string>
+    <string name="domain_delete_message">ई हमेशा खातिर \"%1$s\" अउर ओकरे सबन रास्ता के मिटा दीही।</string>
+    <string name="domain_delete_title">डोमेन मेटाईं?</string>
+    <string name="domain_dns_hint">TXT रिकॉर्ड बनाईं:</string>
+    <string name="domain_empty_admin">कौनो डोमेन कॉन्फिगर नइखे।</string>
+    <string name="domain_empty_user">आपके कवनो डोमेन के पहुँच नइखे।</string>
+    <string name="domain_https">स्वचालित HTTPS</string>
+    <string name="domain_name">डोमेन</string>
+    <string name="domain_status_pending">DNS सत्यापन बाकी बा</string>
+    <string name="domain_status_verified">सत्यापित</string>
+    <string name="domain_title">डोमेन</string>
+    <string name="domain_verify">DNS सत्यापित करीं</string>
+    <string name="settings_home_domains">डोमेन</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 सत्र निरस्त कइल गइल</item>
+        <item quantity="other">%1$d सत्र निरस्त कइल गइल</item>
+    </plurals>
 </resources>

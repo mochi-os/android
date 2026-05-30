@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ઇમેઇલ દ્વારા ચકાસણી કોડ મેળવો</string>
     <string name="account_method_totp_subtitle">સક્ષમ કરવા માટે નીચે ઑથેન્ટિકેટર સેટ કરો</string>
     <string name="account_method_passkey_subtitle">સક્ષમ કરવા માટે નીચે પાસકી નોંધો</string>
+    <string name="domain_add">ડોમેન ઉમેરો</string>
+    <string name="domain_add_title">ડોમેન ઉમેરો</string>
+    <string name="domain_delegation_add">ઉમેરો</string>
+    <string name="domain_delegation_add_title">ડેલિગેશન ઉમેરો</string>
+    <string name="domain_delegation_delete">ડેલિગેશન કાઢી નાખો</string>
+    <string name="domain_delegation_delete_message">%1$s હવે આ ડોમેન પરના માર્ગોનું સંચાલન કરશે નહીં.</string>
+    <string name="domain_delegation_delete_title">ડેલિગેશન કાઢી નાખવું છે?</string>
+    <string name="domain_delegation_path">પાથ</string>
+    <string name="domain_delegation_user">વપરાશકર્તા ID</string>
+    <string name="domain_delegations">ડેલિગેશન</string>
+    <string name="domain_delegations_empty">કોઈ પ્રતિનિધિ રૂપરેખાંકિત નથી.</string>
+    <string name="domain_delete">ડોમેન કાઢી નાખો</string>
+    <string name="domain_delete_message">આ કાયમ માટે \"%1$s\" અને તેના તમામ માર્ગો કાઢી નાખશે.</string>
+    <string name="domain_delete_title">ડોમેન કાઢી નાખવું છે?</string>
+    <string name="domain_dns_hint">TXT રેકોર્ડ બનાવો:</string>
+    <string name="domain_empty_admin">કોઈ ડોમેન રૂપરેખાંકિત નથી.</string>
+    <string name="domain_empty_user">તમારી પાસે કોઈપણ ડોમેન્સની ઍક્સેસ નથી.</string>
+    <string name="domain_https">સ્વયંસંચાલિત HTTPS</string>
+    <string name="domain_name">ડોમેન</string>
+    <string name="domain_status_pending">DNS ચકાસણી બાકી</string>
+    <string name="domain_status_verified">ચકાસેલ</string>
+    <string name="domain_title">ડોમેન્સ</string>
+    <string name="domain_verify">DNS ચકાસો</string>
+    <string name="settings_home_domains">ડોમેન્સ</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 સત્ર રદ કર્યું</item>
+        <item quantity="other">%1$d સત્રો રદ કર્યા</item>
+    </plurals>
 </resources>

@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Recibe un código de verificación por correo electrónico</string>
     <string name="account_method_totp_subtitle">Configura un autenticador a continuación para activarlo</string>
     <string name="account_method_passkey_subtitle">Registra una clave de acceso a continuación para activarla</string>
+    <string name="domain_add">Añadir dominio</string>
+    <string name="domain_add_title">Añadir dominio</string>
+    <string name="domain_delegation_add">Añadir</string>
+    <string name="domain_delegation_add_title">Añadir delegación</string>
+    <string name="domain_delegation_delete">Eliminar delegación</string>
+    <string name="domain_delegation_delete_message">%1$s ya no gestionará rutas en este dominio.</string>
+    <string name="domain_delegation_delete_title">¿Eliminar delegación?</string>
+    <string name="domain_delegation_path">Ruta</string>
+    <string name="domain_delegation_user">ID de usuario</string>
+    <string name="domain_delegations">Delegaciones</string>
+    <string name="domain_delegations_empty">No hay delegaciones configuradas.</string>
+    <string name="domain_delete">Eliminar dominio</string>
+    <string name="domain_delete_message">Esto eliminará permanentemente «%1$s» y todas sus rutas.</string>
+    <string name="domain_delete_title">¿Eliminar dominio?</string>
+    <string name="domain_dns_hint">Crea un registro TXT:</string>
+    <string name="domain_empty_admin">No hay dominios configurados.</string>
+    <string name="domain_empty_user">No tienes acceso a ningún dominio.</string>
+    <string name="domain_https">HTTPS automático</string>
+    <string name="domain_name">Dominio</string>
+    <string name="domain_status_pending">Verificación de DNS pendiente</string>
+    <string name="domain_status_verified">Verificado</string>
+    <string name="domain_title">Dominios</string>
+    <string name="domain_verify">Verificar DNS</string>
+    <string name="settings_home_domains">Dominios</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="many">Se revocaron %1$d sesiones</item>
+        <item quantity="one">Se revocó 1 sesión</item>
+        <item quantity="other">Se revocaron %1$d sesiones</item>
+    </plurals>
 </resources>

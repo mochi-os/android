@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Fumana ikhowudi yoqinisekiso nge-imeyile</string>
     <string name="account_method_totp_subtitle">Ukuze uvule, seta isiqinisekisi apha ngezantsi</string>
     <string name="account_method_passkey_subtitle">Ukuze uvule, bhalisa isitshixo sokufikelela apha ngezantsi</string>
+    <string name="domain_add">Yongeza idomeyini</string>
+    <string name="domain_add_title">Yongeza idomeyini</string>
+    <string name="domain_delegation_add">Yongeza</string>
+    <string name="domain_delegation_add_title">Yongeza ukuthunyelwa</string>
+    <string name="domain_delegation_delete">Cima ukuthunyelwa</string>
+    <string name="domain_delegation_delete_message">%1$s akusayi kulawula iindlela kule mimandla.</string>
+    <string name="domain_delegation_delete_title">Cima ukuthunyelwa?</string>
+    <string name="domain_delegation_path">Indlela</string>
+    <string name="domain_delegation_user">I-ID yomsebenzisi</string>
+    <string name="domain_delegations">Ukuthunyelwa</string>
+    <string name="domain_delegations_empty">Akukho zinikezelweyo zicwangcisiweyo.</string>
+    <string name="domain_delete">Cima idomeyini</string>
+    <string name="domain_delete_message">Oku kuya kucima \"%1$s\" nazo zonke iindlela zayo ngokugqibeleleyo.</string>
+    <string name="domain_delete_title">Cima idomeyini?</string>
+    <string name="domain_dns_hint">Yenza irekhodi ye-TXT:</string>
+    <string name="domain_empty_admin">Akukho ezimimandla zicwangcisiweyo.</string>
+    <string name="domain_empty_user">Awunalo ufikelelo kuyo nayiphi na idomeyini.</string>
+    <string name="domain_https">I-HTTPS engenakuziphathayo</string>
+    <string name="domain_name">Idomeyini</string>
+    <string name="domain_status_pending">Ukuqinisekiswa kwe-DNS kulindile</string>
+    <string name="domain_status_verified">Kuqinisekisiwe</string>
+    <string name="domain_title">Iidomeyini</string>
+    <string name="domain_verify">Qinisekisa i-DNS</string>
+    <string name="settings_home_domains">Iidomeyini</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">Kurhoxiswe iseshoni eyi-1</item>
+        <item quantity="other">Kurhoxiswe iiseshoni ezi-%1$d</item>
+    </plurals>
 </resources>

@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Gba koodu ìjẹ́rìísí nípasẹ̀ ímeèlì</string>
     <string name="account_method_totp_subtitle">Láti mú ṣiṣẹ́, ṣètò aṣèwádìí nísàlẹ̀</string>
     <string name="account_method_passkey_subtitle">Láti mú ṣiṣẹ́, forúkọ kọkọrọ àbáwọlé nísàlẹ̀</string>
+    <string name="domain_add">Fi domain kún</string>
+    <string name="domain_add_title">Fi domain kún</string>
+    <string name="domain_delegation_add">Fi kún</string>
+    <string name="domain_delegation_add_title">Fi ìfiṣẹ́ránṣẹ́ kún</string>
+    <string name="domain_delegation_delete">Pa ìfiṣẹ́ránṣẹ́ rẹ́</string>
+    <string name="domain_delegation_delete_message">%1$s kò ní ṣàkóso àwọn ọ̀nà lórí agbègbè yìí mọ́.</string>
+    <string name="domain_delegation_delete_title">Pa ìfiṣẹ́ránṣẹ́ rẹ́?</string>
+    <string name="domain_delegation_path">Ọ̀nà</string>
+    <string name="domain_delegation_user">ID Olùmúlò</string>
+    <string name="domain_delegations">Àwọn ìfiṣẹ́ránṣẹ́</string>
+    <string name="domain_delegations_empty">Kò sí àwọn àṣẹdélé tí a tò.</string>
+    <string name="domain_delete">Pa domain rẹ́</string>
+    <string name="domain_delete_message">Èyí yóò pa \"%1$s\" àti gbogbo àwọn ọ̀nà rẹ̀ rẹ́ pátápátá.</string>
+    <string name="domain_delete_title">Pa domain rẹ́?</string>
+    <string name="domain_dns_hint">Ṣe àkọsílẹ̀ TXT:</string>
+    <string name="domain_empty_admin">Kò sí àwọn agbègbè tí a tò.</string>
+    <string name="domain_empty_user">O kò ní ààyè sí domains kankan.</string>
+    <string name="domain_https">HTTPS Aládàádúró</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">Ìjẹ́rìísí DNS dúró</string>
+    <string name="domain_status_verified">Ti jẹ́rìí sí</string>
+    <string name="domain_title">Àwọn domain</string>
+    <string name="domain_verify">Ṣe ẹ̀rí DNS</string>
+    <string name="settings_home_domains">Àwọn domain</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">Gbé ìpàdé %1$d padà</item>
+    </plurals>
 </resources>

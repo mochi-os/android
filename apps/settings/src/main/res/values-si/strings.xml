@@ -12,11 +12,11 @@
     <string name="settings_home_replication">ප්‍රතිවර්තනය</string>
     <string name="account_method_email">ඊමේල් කේතය</string>
     <string name="account_method_passkey">ප්‍රවේශ යතුර</string>
-    <string name="account_method_totp">Authenticator app</string>
+    <string name="account_method_totp">සත්‍යාපන යෙදුම</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">passkey එකක් එක් කරන්න</string>
     <string name="account_passkey_delete_title">passkey එක මකන්නද?</string>
-    <string name="account_section_totp">Authenticator app</string>
+    <string name="account_section_totp">සත්‍යාපන යෙදුම</string>
     <string name="account_totp_setup">authenticator සකසන්න</string>
     <string name="account_totp_setup_title">authenticator සකසන්න</string>
     <string name="account_totp_verify">සත්‍යාපනය කරන්න</string>
@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ඊමේල් මගින් සත්‍යාපන කේතය ලබා ගන්න</string>
     <string name="account_method_totp_subtitle">සක්‍රිය කිරීමට පහත සත්‍යාපකයක් සකසන්න</string>
     <string name="account_method_passkey_subtitle">සක්‍රිය කිරීමට පහත මුරයතුරක් ලියාපදිංචි කරන්න</string>
+    <string name="domain_add">ඩොමේනයක් එක් කරන්න</string>
+    <string name="domain_add_title">ඩොමේනයක් එක් කරන්න</string>
+    <string name="domain_delegation_add">එක් කරන්න</string>
+    <string name="domain_delegation_add_title">පැවරුමක් එක් කරන්න</string>
+    <string name="domain_delegation_delete">පැවරුම මකන්න</string>
+    <string name="domain_delegation_delete_message">%1$s තවදුරටත් මෙම වසමේ මාර්ග කළමනාකරණය නොකරයි.</string>
+    <string name="domain_delegation_delete_title">පැවරුම මකන්නද?</string>
+    <string name="domain_delegation_path">මාර්ගය</string>
+    <string name="domain_delegation_user">පරිශීලක ID</string>
+    <string name="domain_delegations">පැවරුම්</string>
+    <string name="domain_delegations_empty">වින්‍යාසගත නියෝජනයන් නැත.</string>
+    <string name="domain_delete">ඩොමේනය මකන්න</string>
+    <string name="domain_delete_message">මෙය \"%1$s\" සහ එහි සියලුම මාර්ග ස්ථිරව මකා දමයි.</string>
+    <string name="domain_delete_title">ඩොමේනය මකන්නද?</string>
+    <string name="domain_dns_hint">TXT වාර්තාවක් සාදන්න:</string>
+    <string name="domain_empty_admin">වින්‍යාසගත වසම් නැත.</string>
+    <string name="domain_empty_user">ඔබට කිසිදු domains වෙත ප්‍රවේශය නොමැත.</string>
+    <string name="domain_https">ස්වයංක්‍රීය HTTPS</string>
+    <string name="domain_name">වසම</string>
+    <string name="domain_status_pending">DNS තහවුරු කිරීම පොරොත්තුවේ</string>
+    <string name="domain_status_verified">සත්‍යාපිතයි</string>
+    <string name="domain_title">වසම්</string>
+    <string name="domain_verify">DNS සත්‍යාපනය කරන්න</string>
+    <string name="settings_home_domains">වසම්</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">සැසි 1 අවලංගු කළා</item>
+        <item quantity="other">සැසි %1$d ක් අවලංගු කළා</item>
+    </plurals>
 </resources>

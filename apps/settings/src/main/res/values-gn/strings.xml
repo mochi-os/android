@@ -12,11 +12,11 @@
     <string name="settings_home_replication">Replicación</string>
     <string name="account_method_email">Código email</string>
     <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator app</string>
+    <string name="account_method_totp">Tekorosã app</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Embojuaju passkey</string>
     <string name="account_passkey_delete_title">Hundi passkey?</string>
-    <string name="account_section_totp">Authenticator app</string>
+    <string name="account_section_totp">Tekorosã app</string>
     <string name="account_totp_setup">Emboguata authenticator</string>
     <string name="account_totp_setup_title">Emboguata authenticator</string>
     <string name="account_totp_verify">Ehesa\'ỹijo</string>
@@ -287,7 +287,7 @@
     <string name="account_oauth_link_title">Mbojoaju proveedor</string>
     <string name="account_oauth_unlink_title">Embojuasahína cuenta?</string>
     <string name="account_oauth_unlink_message">Ndaipóri jeike %1$s rupive.</string>
-    <string name="tokens_section_title">API tokens</string>
+    <string name="tokens_section_title">API token-kuéra</string>
     <string name="tokens_title">Mba\'epykuéra ñembokatupyry</string>
     <string name="tokens_empty">Ndaipori API tokens.</string>
     <string name="tokens_create_title">API token pyahu</string>
@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Ehupyty verificación código email rupive</string>
     <string name="account_method_totp_subtitle">Emyendy hag̃ua, embosako\'i peteĩ autenticador guýpe</string>
     <string name="account_method_passkey_subtitle">Emyendy hag̃ua, emoĩ peteĩ passkey guýpe</string>
+    <string name="domain_add">Embojuaju domain</string>
+    <string name="domain_add_title">Embojuaju domain</string>
+    <string name="domain_delegation_add">Embojuaju</string>
+    <string name="domain_delegation_add_title">Embojuaju delegación</string>
+    <string name="domain_delegation_delete">Hundi delegación</string>
+    <string name="domain_delegation_delete_message">%1$s ndogerencia mo\'ã véima rutas ko dominio rehe.</string>
+    <string name="domain_delegation_delete_title">Hundi delegación?</string>
+    <string name="domain_delegation_path">Tape</string>
+    <string name="domain_delegation_user">Puruhára ID</string>
+    <string name="domain_delegations">Delegacioneskuéra</string>
+    <string name="domain_delegations_empty">Ndaipori delegación oñembokuéva.</string>
+    <string name="domain_delete">Hundi domain</string>
+    <string name="domain_delete_message">Kóva ohundijepe \"%1$s\" ha opa mba\'eapo umíva.</string>
+    <string name="domain_delete_title">Hundi domain?</string>
+    <string name="domain_dns_hint">Embokue peteĩ TXT registro:</string>
+    <string name="domain_empty_admin">Ndaipori dominio oñembokuéva.</string>
+    <string name="domain_empty_user">Ndereguerekói permiso domain mavavevevevehapere.</string>
+    <string name="domain_https">HTTPS ijeheguivéva</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">DNS verificación oñeha\'arõ hína</string>
+    <string name="domain_status_verified">Verificadopyre</string>
+    <string name="domain_title">Domains</string>
+    <string name="domain_verify">Ehesa\'ỹijo DNS</string>
+    <string name="settings_home_domains">Domains</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">Oñembogue %1$d sesiónkuéra</item>
+    </plurals>
 </resources>

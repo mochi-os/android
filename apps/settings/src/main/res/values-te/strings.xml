@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">ఇమెయిల్ ద్వారా ధృవీకరణ కోడ్ పొందండి</string>
     <string name="account_method_totp_subtitle">ప్రారంభించడానికి దిగువన ప్రామాణీకరణను సెటప్ చేయండి</string>
     <string name="account_method_passkey_subtitle">ప్రారంభించడానికి దిగువన పాస్‌కీని నమోదు చేయండి</string>
+    <string name="domain_add">డొమైన్‌ను జోడించండి</string>
+    <string name="domain_add_title">డొమైన్‌ను జోడించండి</string>
+    <string name="domain_delegation_add">జోడించండి</string>
+    <string name="domain_delegation_add_title">ప్రతినిధ్యాన్ని జోడించండి</string>
+    <string name="domain_delegation_delete">ప్రతినిధ్యాన్ని తొలగించండి</string>
+    <string name="domain_delegation_delete_message">%1$s ఇకపై ఈ డొమైన్‌లో మార్గాలను నిర్వహించదు.</string>
+    <string name="domain_delegation_delete_title">ప్రతినిధ్యాన్ని తొలగించాలా?</string>
+    <string name="domain_delegation_path">పాత్</string>
+    <string name="domain_delegation_user">వినియోగదారు ID</string>
+    <string name="domain_delegations">ప్రతినిధ్యాలు</string>
+    <string name="domain_delegations_empty">కాన్ఫిగర్ చేయబడిన ప్రతినిధులు లేరు.</string>
+    <string name="domain_delete">డొమైన్‌ను తొలగించండి</string>
+    <string name="domain_delete_message">ఇది శాశ్వతంగా \"%1$s\" మరియు దాని అన్ని మార్గాలను తొలగిస్తుంది.</string>
+    <string name="domain_delete_title">డొమైన్‌ను తొలగించాలా?</string>
+    <string name="domain_dns_hint">TXT రికార్డ్‌ను సృష్టించండి:</string>
+    <string name="domain_empty_admin">కాన్ఫిగర్ చేయబడిన డొమైన్‌లు లేవు.</string>
+    <string name="domain_empty_user">మీకు ఏ డొమైన్‌లకు యాక్సెస్ లేదు.</string>
+    <string name="domain_https">స్వయంచాలక HTTPS</string>
+    <string name="domain_name">డొమైన్</string>
+    <string name="domain_status_pending">DNS ధృవీకరణ పెండింగ్‌లో</string>
+    <string name="domain_status_verified">ధృవీకరించబడింది</string>
+    <string name="domain_title">డొమైన్‌లు</string>
+    <string name="domain_verify">DNSను ధృవీకరించండి</string>
+    <string name="settings_home_domains">డొమైన్‌లు</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 సెషన్ రద్దు చేయబడింది</item>
+        <item quantity="other">%1$d సెషన్‌లు రద్దు చేయబడ్డాయి</item>
+    </plurals>
 </resources>

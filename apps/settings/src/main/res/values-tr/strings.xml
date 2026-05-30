@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">E-posta ile doğrulama kodu alın</string>
     <string name="account_method_totp_subtitle">Etkinleştirmek için aşağıda bir kimlik doğrulayıcı ayarlayın</string>
     <string name="account_method_passkey_subtitle">Etkinleştirmek için aşağıda bir geçiş anahtarı kaydedin</string>
+    <string name="domain_add">Alan adı ekle</string>
+    <string name="domain_add_title">Alan adı ekle</string>
+    <string name="domain_delegation_add">Ekle</string>
+    <string name="domain_delegation_add_title">Yetkilendirme ekle</string>
+    <string name="domain_delegation_delete">Yetkilendirmeyi sil</string>
+    <string name="domain_delegation_delete_message">%1$s artık bu alan adındaki rotaları yönetmeyecek.</string>
+    <string name="domain_delegation_delete_title">Yetkilendirme silinsin mi?</string>
+    <string name="domain_delegation_path">Yol</string>
+    <string name="domain_delegation_user">Kullanıcı kimliği</string>
+    <string name="domain_delegations">Yetkilendirmeler</string>
+    <string name="domain_delegations_empty">Yapılandırılmış yetki devri yok.</string>
+    <string name="domain_delete">Alan adını sil</string>
+    <string name="domain_delete_message">Bu, \"%1$s\" ve tüm rotalarını kalıcı olarak silecek.</string>
+    <string name="domain_delete_title">Alan adı silinsin mi?</string>
+    <string name="domain_dns_hint">Bir TXT kaydı oluşturun:</string>
+    <string name="domain_empty_admin">Yapılandırılmış alan adı yok.</string>
+    <string name="domain_empty_user">Hiçbir alan adına erişimin yok.</string>
+    <string name="domain_https">Otomatik HTTPS</string>
+    <string name="domain_name">Alan adı</string>
+    <string name="domain_status_pending">DNS doğrulaması bekliyor</string>
+    <string name="domain_status_verified">Doğrulandı</string>
+    <string name="domain_title">Alan adları</string>
+    <string name="domain_verify">DNS doğrula</string>
+    <string name="settings_home_domains">Alan adları</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 oturum iptal edildi</item>
+        <item quantity="other">%1$d oturum iptal edildi</item>
+    </plurals>
 </resources>

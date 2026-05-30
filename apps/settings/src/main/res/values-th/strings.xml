@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">รับรหัสยืนยันทางอีเมล</string>
     <string name="account_method_totp_subtitle">ตั้งค่าตัวรับรองความถูกต้องด้านล่างเพื่อเปิดใช้งาน</string>
     <string name="account_method_passkey_subtitle">ลงทะเบียนพาสคีย์ด้านล่างเพื่อเปิดใช้งาน</string>
+    <string name="domain_add">เพิ่มโดเมน</string>
+    <string name="domain_add_title">เพิ่มโดเมน</string>
+    <string name="domain_delegation_add">เพิ่ม</string>
+    <string name="domain_delegation_add_title">เพิ่มการมอบอำนาจ</string>
+    <string name="domain_delegation_delete">ลบการมอบอำนาจ</string>
+    <string name="domain_delegation_delete_message">%1$s จะไม่จัดการเส้นทางบนโดเมนนี้อีกต่อไป</string>
+    <string name="domain_delegation_delete_title">ลบการมอบอำนาจหรือไม่?</string>
+    <string name="domain_delegation_path">Path</string>
+    <string name="domain_delegation_user">ID ผู้ใช้</string>
+    <string name="domain_delegations">การมอบอำนาจ</string>
+    <string name="domain_delegations_empty">ไม่มีการมอบหมายที่กำหนดค่าไว้</string>
+    <string name="domain_delete">ลบโดเมน</string>
+    <string name="domain_delete_message">การกระทำนี้จะลบ \"%1$s\" และเส้นทางทั้งหมดอย่างถาวร</string>
+    <string name="domain_delete_title">ลบโดเมนหรือไม่?</string>
+    <string name="domain_dns_hint">สร้างเรกคอร์ด TXT:</string>
+    <string name="domain_empty_admin">ไม่มีโดเมนที่กำหนดค่าไว้</string>
+    <string name="domain_empty_user">คุณไม่มีสิทธิ์เข้าถึงโดเมนใดๆ</string>
+    <string name="domain_https">HTTPS อัตโนมัติ</string>
+    <string name="domain_name">โดเมน</string>
+    <string name="domain_status_pending">รอการตรวจสอบ DNS</string>
+    <string name="domain_status_verified">ยืนยันแล้ว</string>
+    <string name="domain_title">โดเมน</string>
+    <string name="domain_verify">ตรวจสอบ DNS</string>
+    <string name="settings_home_domains">โดเมน</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">เพิกถอน %1$d เซสชัน</item>
+    </plurals>
 </resources>

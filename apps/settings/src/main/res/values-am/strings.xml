@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">በኢሜል የማረጋገጫ ኮድ ይቀበሉ</string>
     <string name="account_method_totp_subtitle">ለማንቃት ከታች አረጋጋጭ ያዋቅሩ</string>
     <string name="account_method_passkey_subtitle">ለማንቃት ከታች የይለፍ ቁልፍ ይመዝግቡ</string>
+    <string name="domain_add">ጎራ ጨምር</string>
+    <string name="domain_add_title">ጎራ ጨምር</string>
+    <string name="domain_delegation_add">ጨምር</string>
+    <string name="domain_delegation_add_title">ውክልና ጨምር</string>
+    <string name="domain_delegation_delete">ውክልና ሰርዝ</string>
+    <string name="domain_delegation_delete_message">%1$s ከአሁን በኋላ በዚህ ጎራ ላይ መንገዶችን አያስተዳድርም።</string>
+    <string name="domain_delegation_delete_title">ውክልና ይሰረዝ?</string>
+    <string name="domain_delegation_path">መንገድ</string>
+    <string name="domain_delegation_user">የተጠቃሚ መታወቂያ</string>
+    <string name="domain_delegations">ውክልናዎች</string>
+    <string name="domain_delegations_empty">የተዋቀሩ ውክልናዎች የሉም።</string>
+    <string name="domain_delete">ጎራ ሰርዝ</string>
+    <string name="domain_delete_message">ይህ \"%1$s\"ን እና ሁሉንም መንገዶቹን በቋሚነት ይሰርዛል።</string>
+    <string name="domain_delete_title">ጎራ ይሰረዝ?</string>
+    <string name="domain_dns_hint">የTXT መዝገብ ይፍጠሩ:</string>
+    <string name="domain_empty_admin">የተዋቀሩ ጎራዎች የሉም።</string>
+    <string name="domain_empty_user">ለማንኛውም ዶሜን መዳረሻ የለዎትም።</string>
+    <string name="domain_https">ራስ-ሰር HTTPS</string>
+    <string name="domain_name">ዶሜን</string>
+    <string name="domain_status_pending">የDNS ማረጋገጥ በመጠባበቅ ላይ</string>
+    <string name="domain_status_verified">ተረጋግጧል</string>
+    <string name="domain_title">ዶሜኖች</string>
+    <string name="domain_verify">DNS ያረጋግጡ</string>
+    <string name="settings_home_domains">ዶሜኖች</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 ክፍለ ጊዜ ተሰርዟል</item>
+        <item quantity="other">%1$d ክፍለ ጊዜዎች ተሰርዘዋል</item>
+    </plurals>
 </resources>

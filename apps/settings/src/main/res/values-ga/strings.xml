@@ -352,4 +352,35 @@
     <string name="account_method_email_subtitle">Faigh cód fíoraithe trí ríomhphost</string>
     <string name="account_method_totp_subtitle">Socraigh fíordheimhneoir thíos chun é a chumasú</string>
     <string name="account_method_passkey_subtitle">Cláraigh eochair rochtana thíos chun é a chumasú</string>
+    <string name="domain_add">Cuir fearann leis</string>
+    <string name="domain_add_title">Cuir fearann leis</string>
+    <string name="domain_delegation_add">Cuir leis</string>
+    <string name="domain_delegation_add_title">Cuir tarmligean leis</string>
+    <string name="domain_delegation_delete">Scrios tarmligean</string>
+    <string name="domain_delegation_delete_message">Ní bhainisteoidh %1$s cosáin ar an bhfearann ​​seo a thuilleadh.</string>
+    <string name="domain_delegation_delete_title">Scrios tarmligean?</string>
+    <string name="domain_delegation_path">Cosán</string>
+    <string name="domain_delegation_user">ID an úsáideora</string>
+    <string name="domain_delegations">Tarmligin</string>
+    <string name="domain_delegations_empty">Níl aon tarmligean cumraithe.</string>
+    <string name="domain_delete">Scrios fearann</string>
+    <string name="domain_delete_message">Scriosfaidh sé seo \"%1$s\" agus a chosáin go léir go buan.</string>
+    <string name="domain_delete_title">Scrios fearann?</string>
+    <string name="domain_dns_hint">Cruthaigh taifead TXT:</string>
+    <string name="domain_empty_admin">Níl aon fhearann ​​cumraithe.</string>
+    <string name="domain_empty_user">Níl rochtain agat ar aon fhearainn.</string>
+    <string name="domain_https">HTTPS uathoibríoch</string>
+    <string name="domain_name">Fearann</string>
+    <string name="domain_status_pending">Fíorú DNS ar feitheamh</string>
+    <string name="domain_status_verified">Fíoraithe</string>
+    <string name="domain_title">Fearainn</string>
+    <string name="domain_verify">Fíoraigh DNS</string>
+    <string name="settings_home_domains">Fearainn</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Cúlghaireadh %1$d sheisiún</item>
+        <item quantity="many">Cúlghaireadh %1$d seisiún</item>
+        <item quantity="one">Cúlghaireadh 1 seisiún</item>
+        <item quantity="other">Cúlghaireadh %1$d seisiúin</item>
+        <item quantity="two">Cúlghaireadh %1$d sheisiún</item>
+    </plurals>
 </resources>

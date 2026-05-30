@@ -352,4 +352,36 @@
     <string name="account_method_email_subtitle">Derbyn cod dilysu drwy e-bost</string>
     <string name="account_method_totp_subtitle">Sefydlwch ddilyswr isod i\'w alluogi</string>
     <string name="account_method_passkey_subtitle">Cofrestrwch allwedd mynediad isod i\'w alluogi</string>
+    <string name="domain_add">Ychwanegu parth</string>
+    <string name="domain_add_title">Ychwanegu parth</string>
+    <string name="domain_delegation_add">Ychwanegu</string>
+    <string name="domain_delegation_add_title">Ychwanegu dirprwyaeth</string>
+    <string name="domain_delegation_delete">Dileu dirprwyaeth</string>
+    <string name="domain_delegation_delete_message">Ni fydd %1$s yn rheoli llwybrau ar y parth hwn mwyach.</string>
+    <string name="domain_delegation_delete_title">Dileu dirprwyaeth?</string>
+    <string name="domain_delegation_path">Llwybr</string>
+    <string name="domain_delegation_user">ID defnyddiwr</string>
+    <string name="domain_delegations">Dirprwyaethau</string>
+    <string name="domain_delegations_empty">Dim dirprwyaethau wedi\'u ffurfweddu.</string>
+    <string name="domain_delete">Dileu parth</string>
+    <string name="domain_delete_message">Bydd hyn yn dileu \"%1$s\" a\'i holl lwybrau yn barhaol.</string>
+    <string name="domain_delete_title">Dileu parth?</string>
+    <string name="domain_dns_hint">Creu cofnod TXT:</string>
+    <string name="domain_empty_admin">Dim parthau wedi\'u ffurfweddu.</string>
+    <string name="domain_empty_user">Nid oes gennych fynediad i unrhyw barthau.</string>
+    <string name="domain_https">HTTPS awtomatig</string>
+    <string name="domain_name">Parth</string>
+    <string name="domain_status_pending">Dilysu DNS yn aros</string>
+    <string name="domain_status_verified">Wedi\'i ddilysu</string>
+    <string name="domain_title">Parthau</string>
+    <string name="domain_verify">Dilysu DNS</string>
+    <string name="settings_home_domains">Parthau</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Diddymwyd %1$d sesiwn</item>
+        <item quantity="many">Diddymwyd %1$d sesiwn</item>
+        <item quantity="one">Diddymwyd 1 sesiwn</item>
+        <item quantity="other">Diddymwyd %1$d sesiwn</item>
+        <item quantity="two">Diddymwyd %1$d sesiwn</item>
+        <item quantity="zero">Diddymwyd 1 sesiwn</item>
+    </plurals>
 </resources>

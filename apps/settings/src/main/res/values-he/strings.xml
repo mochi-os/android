@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">קבלת קוד אימות באימייל</string>
     <string name="account_method_totp_subtitle">להפעלה, הגדירו מאמת למטה</string>
     <string name="account_method_passkey_subtitle">להפעלה, רשמו מפתח גישה למטה</string>
+    <string name="domain_add">הוסף דומיין</string>
+    <string name="domain_add_title">הוסף דומיין</string>
+    <string name="domain_delegation_add">הוספה</string>
+    <string name="domain_delegation_add_title">הוסף האצלת סמכויות</string>
+    <string name="domain_delegation_delete">מחק האצלת סמכויות</string>
+    <string name="domain_delegation_delete_message">%1$s כבר לא ינהל מסלולים בדומיין זה.</string>
+    <string name="domain_delegation_delete_title">למחוק האצלת סמכויות?</string>
+    <string name="domain_delegation_path">נתיב</string>
+    <string name="domain_delegation_user">מזהה משתמש</string>
+    <string name="domain_delegations">האצלות סמכויות</string>
+    <string name="domain_delegations_empty">לא הוגדרו האצלות.</string>
+    <string name="domain_delete">מחק דומיין</string>
+    <string name="domain_delete_message">פעולה זו תמחק לצמיתות את \"%1$s\" ואת כל המסלולים שלו.</string>
+    <string name="domain_delete_title">למחוק דומיין?</string>
+    <string name="domain_dns_hint">צור רשומת TXT:</string>
+    <string name="domain_empty_admin">לא הוגדרו דומיינים.</string>
+    <string name="domain_empty_user">אין לך גישה לאף דומיין.</string>
+    <string name="domain_https">HTTPS אוטומטי</string>
+    <string name="domain_name">דומיין</string>
+    <string name="domain_status_pending">ממתין לאימות DNS</string>
+    <string name="domain_status_verified">מאומת</string>
+    <string name="domain_title">דומיינים</string>
+    <string name="domain_verify">אמת DNS</string>
+    <string name="settings_home_domains">דומיינים</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">הופסקה הפעלה אחת</item>
+        <item quantity="other">הופסקו %1$d הפעלות</item>
+        <item quantity="two">הופסקו 2 הפעלות</item>
+    </plurals>
 </resources>

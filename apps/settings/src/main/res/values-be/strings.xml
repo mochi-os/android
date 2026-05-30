@@ -352,4 +352,34 @@
     <string name="account_method_email_subtitle">Атрымаць код пацверджання па электроннай пошце</string>
     <string name="account_method_totp_subtitle">Каб уключыць, наладзьце аўтэнтыфікатар ніжэй</string>
     <string name="account_method_passkey_subtitle">Каб уключыць, зарэгіструйце ключ доступу ніжэй</string>
+    <string name="domain_add">Дадаць дамен</string>
+    <string name="domain_add_title">Дадаць дамен</string>
+    <string name="domain_delegation_add">Дадаць</string>
+    <string name="domain_delegation_add_title">Дадаць дэлегаванне</string>
+    <string name="domain_delegation_delete">Выдаліць дэлегаванне</string>
+    <string name="domain_delegation_delete_message">%1$s больш не будзе кіраваць маршрутамі на гэтым дамене.</string>
+    <string name="domain_delegation_delete_title">Выдаліць дэлегаванне?</string>
+    <string name="domain_delegation_path">Шлях</string>
+    <string name="domain_delegation_user">ID карыстальніка</string>
+    <string name="domain_delegations">Дэлегаванні</string>
+    <string name="domain_delegations_empty">Дэлегаванні не настроены.</string>
+    <string name="domain_delete">Выдаліць дамен</string>
+    <string name="domain_delete_message">Гэта назаўжды выдаліць \"%1$s\" і ўсе яго маршруты.</string>
+    <string name="domain_delete_title">Выдаліць дамен?</string>
+    <string name="domain_dns_hint">Стварыце запіс TXT:</string>
+    <string name="domain_empty_admin">Дамены не настроены.</string>
+    <string name="domain_empty_user">У вас няма доступу да ніводнага дамэна.</string>
+    <string name="domain_https">Аўтаматычны HTTPS</string>
+    <string name="domain_name">Дамен</string>
+    <string name="domain_status_pending">Чакаецца праверка DNS</string>
+    <string name="domain_status_verified">Пацверджана</string>
+    <string name="domain_title">Дамены</string>
+    <string name="domain_verify">Праверыць DNS</string>
+    <string name="settings_home_domains">Дамены</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="few">Адклікана %1$d сесіі</item>
+        <item quantity="many">Адклікана %1$d сесій</item>
+        <item quantity="one">Адклікана %1$d сесія</item>
+        <item quantity="other">Адклікана %1$d сесіі</item>
+    </plurals>
 </resources>

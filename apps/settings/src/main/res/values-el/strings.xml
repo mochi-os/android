@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Λάβετε κωδικό επαλήθευσης μέσω email</string>
     <string name="account_method_totp_subtitle">Ρυθμίστε έναν έλεγχο ταυτότητας παρακάτω για ενεργοποίηση</string>
     <string name="account_method_passkey_subtitle">Καταχωρίστε ένα κλειδί πρόσβασης παρακάτω για ενεργοποίηση</string>
+    <string name="domain_add">Προσθήκη τομέα</string>
+    <string name="domain_add_title">Προσθήκη τομέα</string>
+    <string name="domain_delegation_add">Προσθήκη</string>
+    <string name="domain_delegation_add_title">Προσθήκη ανάθεσης</string>
+    <string name="domain_delegation_delete">Διαγραφή ανάθεσης</string>
+    <string name="domain_delegation_delete_message">Ο %1$s δεν θα διαχειρίζεται πλέον διαδρομές σε αυτόν τον τομέα.</string>
+    <string name="domain_delegation_delete_title">Διαγραφή ανάθεσης;</string>
+    <string name="domain_delegation_path">Διαδρομή</string>
+    <string name="domain_delegation_user">Αναγνωριστικό χρήστη</string>
+    <string name="domain_delegations">Αναθέσεις</string>
+    <string name="domain_delegations_empty">Δεν έχουν διαμορφωθεί ανάθεσεις.</string>
+    <string name="domain_delete">Διαγραφή τομέα</string>
+    <string name="domain_delete_message">Αυτό θα διαγράψει οριστικά το \"%1$s\" και όλες τις διαδρομές του.</string>
+    <string name="domain_delete_title">Διαγραφή τομέα;</string>
+    <string name="domain_dns_hint">Δημιουργήστε μια εγγραφή TXT:</string>
+    <string name="domain_empty_admin">Δεν έχουν διαμορφωθεί τομείς.</string>
+    <string name="domain_empty_user">Δεν έχετε πρόσβαση σε κανέναν τομέα.</string>
+    <string name="domain_https">Αυτόματο HTTPS</string>
+    <string name="domain_name">Τομέας</string>
+    <string name="domain_status_pending">Εκκρεμεί επαλήθευση DNS</string>
+    <string name="domain_status_verified">Επαληθευμένο</string>
+    <string name="domain_title">Τομείς</string>
+    <string name="domain_verify">Επαλήθευση DNS</string>
+    <string name="settings_home_domains">Τομείς</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 συνεδρία ανακλήθηκε</item>
+        <item quantity="other">%1$d συνεδρίες ανακλήθηκαν</item>
+    </plurals>
 </resources>

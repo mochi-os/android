@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Ырастоо кодун электрондук почта аркылуу алыңыз</string>
     <string name="account_method_totp_subtitle">Иштетүү үчүн төмөндө аутентификатор орнотуңуз</string>
     <string name="account_method_passkey_subtitle">Иштетүү үчүн төмөндө кирүү ачкычын каттаңыз</string>
+    <string name="domain_add">Домен кошуу</string>
+    <string name="domain_add_title">Домен кошуу</string>
+    <string name="domain_delegation_add">Кошуу</string>
+    <string name="domain_delegation_add_title">Делегациялоо кошуу</string>
+    <string name="domain_delegation_delete">Делегациялоону жок кылуу</string>
+    <string name="domain_delegation_delete_message">%1$s эми бул доменде жолдорду башкарбайт.</string>
+    <string name="domain_delegation_delete_title">Делегациялоону жок кылабызбы?</string>
+    <string name="domain_delegation_path">Жол</string>
+    <string name="domain_delegation_user">Колдонуучу ID</string>
+    <string name="domain_delegations">Делегациялоолор</string>
+    <string name="domain_delegations_empty">Конфигурацияланган өкүлдөр жок.</string>
+    <string name="domain_delete">Доменди жок кылуу</string>
+    <string name="domain_delete_message">Бул \"%1$s\" жана анын бардык жолдорун биротоло жок кылат.</string>
+    <string name="domain_delete_title">Доменди жок кылабызбы?</string>
+    <string name="domain_dns_hint">TXT жазуу түзүңүз:</string>
+    <string name="domain_empty_admin">Конфигурацияланган домендер жок.</string>
+    <string name="domain_empty_user">Сизде эч бир доменге мүмкүнчүлүк жок.</string>
+    <string name="domain_https">Автоматтык HTTPS</string>
+    <string name="domain_name">Домен</string>
+    <string name="domain_status_pending">DNS текшерүү күтүүдө</string>
+    <string name="domain_status_verified">Текшерилди</string>
+    <string name="domain_title">Домендер</string>
+    <string name="domain_verify">DNSти текшерүү</string>
+    <string name="settings_home_domains">Домендер</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 сессия жокко чыгарылды</item>
+        <item quantity="other">%1$d сессия жокко чыгарылды</item>
+    </plurals>
 </resources>

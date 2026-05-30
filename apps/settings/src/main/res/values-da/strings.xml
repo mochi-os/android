@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Modtag en bekræftelseskode via e-mail</string>
     <string name="account_method_totp_subtitle">Opsæt en godkender nedenfor for at aktivere</string>
     <string name="account_method_passkey_subtitle">Registrer en adgangsnøgle nedenfor for at aktivere</string>
+    <string name="domain_add">Tilføj domæne</string>
+    <string name="domain_add_title">Tilføj domæne</string>
+    <string name="domain_delegation_add">Tilføj</string>
+    <string name="domain_delegation_add_title">Tilføj delegering</string>
+    <string name="domain_delegation_delete">Slet delegering</string>
+    <string name="domain_delegation_delete_message">%1$s vil ikke længere administrere ruter på dette domæne.</string>
+    <string name="domain_delegation_delete_title">Slet delegering?</string>
+    <string name="domain_delegation_path">Sti</string>
+    <string name="domain_delegation_user">Bruger-ID</string>
+    <string name="domain_delegations">Delegeringer</string>
+    <string name="domain_delegations_empty">Ingen delegeringer konfigureret.</string>
+    <string name="domain_delete">Slet domæne</string>
+    <string name="domain_delete_message">Dette sletter permanent \"%1$s\" og alle dets ruter.</string>
+    <string name="domain_delete_title">Slet domæne?</string>
+    <string name="domain_dns_hint">Opret en TXT-post:</string>
+    <string name="domain_empty_admin">Ingen domæner konfigureret.</string>
+    <string name="domain_empty_user">Du har ikke adgang til nogen domæner.</string>
+    <string name="domain_https">Automatisk HTTPS</string>
+    <string name="domain_name">Domæne</string>
+    <string name="domain_status_pending">Afventer DNS-verifikation</string>
+    <string name="domain_status_verified">Verificeret</string>
+    <string name="domain_title">Domæner</string>
+    <string name="domain_verify">Bekræft DNS</string>
+    <string name="settings_home_domains">Domæner</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 session tilbagekaldt</item>
+        <item quantity="other">%1$d sessioner tilbagekaldt</item>
+    </plurals>
 </resources>

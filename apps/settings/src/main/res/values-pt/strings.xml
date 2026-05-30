@@ -352,4 +352,33 @@
     <string name="account_method_email_subtitle">Receba um código de verificação por e-mail</string>
     <string name="account_method_totp_subtitle">Configure um autenticador abaixo para ativar</string>
     <string name="account_method_passkey_subtitle">Registe uma chave de acesso abaixo para ativar</string>
+    <string name="domain_add">Adicionar domínio</string>
+    <string name="domain_add_title">Adicionar domínio</string>
+    <string name="domain_delegation_add">Adicionar</string>
+    <string name="domain_delegation_add_title">Adicionar delegação</string>
+    <string name="domain_delegation_delete">Eliminar delegação</string>
+    <string name="domain_delegation_delete_message">%1$s já não vai gerir rotas neste domínio.</string>
+    <string name="domain_delegation_delete_title">Eliminar delegação?</string>
+    <string name="domain_delegation_path">Caminho</string>
+    <string name="domain_delegation_user">ID do utilizador</string>
+    <string name="domain_delegations">Delegações</string>
+    <string name="domain_delegations_empty">Nenhuma delegação configurada.</string>
+    <string name="domain_delete">Eliminar domínio</string>
+    <string name="domain_delete_message">Isto eliminará permanentemente «%1$s» e todas as suas rotas.</string>
+    <string name="domain_delete_title">Eliminar domínio?</string>
+    <string name="domain_dns_hint">Crie um registo TXT:</string>
+    <string name="domain_empty_admin">Nenhum domínio configurado.</string>
+    <string name="domain_empty_user">Não tem acesso a nenhum domínio.</string>
+    <string name="domain_https">HTTPS automático</string>
+    <string name="domain_name">Domínio</string>
+    <string name="domain_status_pending">Verificação DNS pendente</string>
+    <string name="domain_status_verified">Verificado</string>
+    <string name="domain_title">Domínios</string>
+    <string name="domain_verify">Verificar DNS</string>
+    <string name="settings_home_domains">Domínios</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="many">%1$d sessões revogadas</item>
+        <item quantity="one">1 sessão revogada</item>
+        <item quantity="other">%1$d sessões revogadas</item>
+    </plurals>
 </resources>

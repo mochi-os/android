@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">მიიღეთ დადასტურების კოდი ელფოსტით</string>
     <string name="account_method_totp_subtitle">ჩასართავად დააყენეთ ავთენტიფიკატორი ქვემოთ</string>
     <string name="account_method_passkey_subtitle">ჩასართავად დაარეგისტრირეთ წვდომის გასაღები ქვემოთ</string>
+    <string name="domain_add">დომენის დამატება</string>
+    <string name="domain_add_title">დომენის დამატება</string>
+    <string name="domain_delegation_add">დამატება</string>
+    <string name="domain_delegation_add_title">დელეგაციის დამატება</string>
+    <string name="domain_delegation_delete">დელეგაციის წაშლა</string>
+    <string name="domain_delegation_delete_message">%1$s აღარ მართავს მარშრუტებს ამ დომენზე.</string>
+    <string name="domain_delegation_delete_title">დელეგაციის წაშლა?</string>
+    <string name="domain_delegation_path">ბილიკი</string>
+    <string name="domain_delegation_user">მომხმარებლის ID</string>
+    <string name="domain_delegations">დელეგაციები</string>
+    <string name="domain_delegations_empty">კონფიგურირებული დელეგაცია არ არის.</string>
+    <string name="domain_delete">დომენის წაშლა</string>
+    <string name="domain_delete_message">ეს სამუდამოდ წაშლის \"%1$s\"-ს და მის ყველა მარშრუტს.</string>
+    <string name="domain_delete_title">დომენის წაშლა?</string>
+    <string name="domain_dns_hint">შექმენით TXT ჩანაწერი:</string>
+    <string name="domain_empty_admin">კონფიგურირებული დომენი არ არის.</string>
+    <string name="domain_empty_user">თქვენ ვერ შექმნით ან დაარედაქტირებთ ლისტინგებს და მყიდველები ვერ განათავსებენ ახალ შეკვეთებს, ფსონებს ან გამოწერებს თქვენს ლისტინგებზე. მაინც შეგიძლიათ შეიძინოთ სხვა გამყიდველებისგან.</string>
+    <string name="domain_https">ავტომატური HTTPS</string>
+    <string name="domain_name">დომენი</string>
+    <string name="domain_status_pending">DNS გადამოწმება მოლოდინში</string>
+    <string name="domain_status_verified">შემოწმება ვერ მოხერხდა</string>
+    <string name="domain_title">დომენები</string>
+    <string name="domain_verify">შემოწმება და ჩართვა</string>
+    <string name="settings_home_domains">დომენები</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 სესია გაუქმდა</item>
+        <item quantity="other">%1$d სესია გაუქმდა</item>
+    </plurals>
 </resources>

@@ -12,11 +12,11 @@
     <string name="settings_home_replication">Replicación</string>
     <string name="account_method_email">Email código</string>
     <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator app</string>
+    <string name="account_method_totp">Autenticador app</string>
     <string name="account_section_passkeys">Passkeykuna</string>
     <string name="account_passkey_register">Passkey yapay</string>
     <string name="account_passkey_delete_title">Passkey wischuy?</string>
-    <string name="account_section_totp">Authenticator app</string>
+    <string name="account_section_totp">Autenticador app</string>
     <string name="account_totp_setup">Autenticadorta wakichiy</string>
     <string name="account_totp_setup_title">Autenticadorta wakichiy</string>
     <string name="account_totp_verify">Qhaway</string>
@@ -352,4 +352,31 @@
     <string name="account_method_email_subtitle">Email nisqawan verificación código chaskiy</string>
     <string name="account_method_totp_subtitle">Llamk\'achinapaq, uraypi autenticador churay</string>
     <string name="account_method_passkey_subtitle">Llamk\'achinapaq, uraypi passkey qillqachiy</string>
+    <string name="domain_add">Dominio yapay</string>
+    <string name="domain_add_title">Dominio yapay</string>
+    <string name="domain_delegation_add">Yapay</string>
+    <string name="domain_delegation_add_title">Delegación yapay</string>
+    <string name="domain_delegation_delete">Delegación wischuy</string>
+    <string name="domain_delegation_delete_message">%1$s manaña ñankunata kay domainpi kamachiyqa.</string>
+    <string name="domain_delegation_delete_title">Delegación wischuy?</string>
+    <string name="domain_delegation_path">Ñan</string>
+    <string name="domain_delegation_user">Apaykachaq ID</string>
+    <string name="domain_delegations">Delegaciones</string>
+    <string name="domain_delegations_empty">Mana ima kachasqa churasqachu.</string>
+    <string name="domain_delete">Dominio wischuy</string>
+    <string name="domain_delete_message">Kayqa \"%1$s\" hinaspa lliw ñankunata wiñaypaqmi pichanqa.</string>
+    <string name="domain_delete_title">Dominio wischuy?</string>
+    <string name="domain_dns_hint">TXT qillqayta ruway:</string>
+    <string name="domain_empty_admin">Mana ima domain churasqachu.</string>
+    <string name="domain_empty_user">Mana ima domainkunamanpas yaykuyniyki kanchu.</string>
+    <string name="domain_https">Kikinmanta HTTPS</string>
+    <string name="domain_name">Dominio</string>
+    <string name="domain_status_pending">DNS verificacion suyachkan</string>
+    <string name="domain_status_verified">Qhawasqa</string>
+    <string name="domain_title">Dominios</string>
+    <string name="domain_verify">DNSta qhaway</string>
+    <string name="settings_home_domains">Dominios</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="other">%1$d sessionkuna qichusqa</item>
+    </plurals>
 </resources>

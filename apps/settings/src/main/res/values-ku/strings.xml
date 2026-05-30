@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Koda verastkirinê bi e-nameyê bistîne</string>
     <string name="account_method_totp_subtitle">Ji bo çalakkirinê, li jêr rastkerek saz bike</string>
     <string name="account_method_passkey_subtitle">Ji bo çalakkirinê, li jêr mifteyek gihîştinê tomar bike</string>
+    <string name="domain_add">Domain zêde bike</string>
+    <string name="domain_add_title">Domain zêde bike</string>
+    <string name="domain_delegation_add">Zêde bike</string>
+    <string name="domain_delegation_add_title">Wakîltî zêde bike</string>
+    <string name="domain_delegation_delete">Wakîltiyê jê bibe</string>
+    <string name="domain_delegation_delete_message">%1$s êdî riyên li ser vê domê rêvebir nake.</string>
+    <string name="domain_delegation_delete_title">Wakîltiyê jê bibe?</string>
+    <string name="domain_delegation_path">Rê</string>
+    <string name="domain_delegation_user">Nasnameya bikarhêner</string>
+    <string name="domain_delegations">Wakîltî</string>
+    <string name="domain_delegations_empty">Tu delegasyonên mîhengkirî nin.</string>
+    <string name="domain_delete">Domainê jê bibe</string>
+    <string name="domain_delete_message">Ev dê her û her \"%1$s\" û hemî riyên wê jêbibe.</string>
+    <string name="domain_delete_title">Domainê jê bibe?</string>
+    <string name="domain_dns_hint">Tomarê TXT biafirîne:</string>
+    <string name="domain_empty_admin">Tu domên mîhengkirî nin.</string>
+    <string name="domain_empty_user">Gihîştina te ji ti domênan re tune.</string>
+    <string name="domain_https">HTTPS otomatîk</string>
+    <string name="domain_name">Domain</string>
+    <string name="domain_status_pending">Verastkirina DNS li bendê</string>
+    <string name="domain_status_verified">Verifîkirî</string>
+    <string name="domain_title">Domain</string>
+    <string name="domain_verify">DNS verifîke bike</string>
+    <string name="settings_home_domains">Domain</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 danişîn hat betalkirin</item>
+        <item quantity="other">%1$d danişîn hatin betalkirin</item>
+    </plurals>
 </resources>

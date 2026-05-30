@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">Resevwa yon kòd verifikasyon pa imèl</string>
     <string name="account_method_totp_subtitle">Konfigire yon otantifikatè anba a pou aktive</string>
     <string name="account_method_passkey_subtitle">Anrejistre yon kle aksè anba a pou aktive</string>
+    <string name="domain_add">Ajoute domèn</string>
+    <string name="domain_add_title">Ajoute domèn</string>
+    <string name="domain_delegation_add">Ajoute</string>
+    <string name="domain_delegation_add_title">Ajoute delegasyon</string>
+    <string name="domain_delegation_delete">Efase delegasyon</string>
+    <string name="domain_delegation_delete_message">%1$s pap jere chemen sou domèn sa a ankò.</string>
+    <string name="domain_delegation_delete_title">Efase delegasyon?</string>
+    <string name="domain_delegation_path">Chemen</string>
+    <string name="domain_delegation_user">ID itilizatè</string>
+    <string name="domain_delegations">Delegasyon yo</string>
+    <string name="domain_delegations_empty">Pa gen delegasyon konfigire.</string>
+    <string name="domain_delete">Efase domèn</string>
+    <string name="domain_delete_message">Sa pral efase \"%1$s\" ak tout chemen li yo pou tout tan.</string>
+    <string name="domain_delete_title">Efase domèn?</string>
+    <string name="domain_dns_hint">Kreye yon dosye TXT:</string>
+    <string name="domain_empty_admin">Pa gen domèn konfigire.</string>
+    <string name="domain_empty_user">Ou pa gen aksè nan okenn domèn.</string>
+    <string name="domain_https">HTTPS otomatik</string>
+    <string name="domain_name">Domèn</string>
+    <string name="domain_status_pending">Verifikasyon DNS ap tann</string>
+    <string name="domain_status_verified">Verifye</string>
+    <string name="domain_title">Domèn yo</string>
+    <string name="domain_verify">Verifye DNS</string>
+    <string name="settings_home_domains">Domèn yo</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 sesyon revoke</item>
+        <item quantity="other">%1$d sesyon revoke</item>
+    </plurals>
 </resources>

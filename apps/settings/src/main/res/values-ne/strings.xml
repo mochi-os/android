@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">इमेल मार्फत प्रमाणीकरण कोड प्राप्त गर्नुहोस्</string>
     <string name="account_method_totp_subtitle">सक्षम गर्न तल प्रमाणकर्ता सेट गर्नुहोस्</string>
     <string name="account_method_passkey_subtitle">सक्षम गर्न तल पासकी दर्ता गर्नुहोस्</string>
+    <string name="domain_add">डोमेन थप्नुहोस्</string>
+    <string name="domain_add_title">डोमेन थप्नुहोस्</string>
+    <string name="domain_delegation_add">थप्नुहोस्</string>
+    <string name="domain_delegation_add_title">प्रतिनिधित्व थप्नुहोस्</string>
+    <string name="domain_delegation_delete">प्रतिनिधित्व मेटाउनुहोस्</string>
+    <string name="domain_delegation_delete_message">%1$s ले अब यो डोमेनमा मार्गहरू व्यवस्थापन गर्नेछैन।</string>
+    <string name="domain_delegation_delete_title">प्रतिनिधित्व मेटाउने?</string>
+    <string name="domain_delegation_path">पथ</string>
+    <string name="domain_delegation_user">प्रयोगकर्ता ID</string>
+    <string name="domain_delegations">प्रतिनिधित्वहरू</string>
+    <string name="domain_delegations_empty">कुनै प्रतिनिधित्वहरू कन्फिगर गरिएका छैनन्।</string>
+    <string name="domain_delete">डोमेन मेटाउनुहोस्</string>
+    <string name="domain_delete_message">यसले \"%1$s\" र यसका सबै मार्गहरू स्थायी रूपमा मेटाउनेछ।</string>
+    <string name="domain_delete_title">डोमेन मेटाउने?</string>
+    <string name="domain_dns_hint">TXT रेकर्ड सिर्जना गर्नुहोस्:</string>
+    <string name="domain_empty_admin">कुनै डोमेनहरू कन्फिगर गरिएका छैनन्।</string>
+    <string name="domain_empty_user">तपाईंलाई कुनै डोमेनमा पहुँच छैन।</string>
+    <string name="domain_https">स्वचालित HTTPS</string>
+    <string name="domain_name">डोमेन</string>
+    <string name="domain_status_pending">DNS प्रमाणीकरण बाँकी</string>
+    <string name="domain_status_verified">प्रमाणित</string>
+    <string name="domain_title">डोमेनहरू</string>
+    <string name="domain_verify">DNS प्रमाणित गर्नुहोस्</string>
+    <string name="settings_home_domains">डोमेनहरू</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 सत्र खारेज गरियो</item>
+        <item quantity="other">%1$d सत्रहरू खारेज गरियो</item>
+    </plurals>
 </resources>

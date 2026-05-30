@@ -352,4 +352,32 @@
     <string name="account_method_email_subtitle">اي ميل ذريعي تصديق ڪوڊ حاصل ڪريو</string>
     <string name="account_method_totp_subtitle">فعال ڪرڻ لاءِ، هيٺ تصديق ڪندڙ سيٽ ڪريو</string>
     <string name="account_method_passkey_subtitle">فعال ڪرڻ لاءِ، هيٺ پاس ڪي رجسٽر ڪريو</string>
+    <string name="domain_add">ڊومين شامل ڪريو</string>
+    <string name="domain_add_title">ڊومين شامل ڪريو</string>
+    <string name="domain_delegation_add">شامل ڪريو</string>
+    <string name="domain_delegation_add_title">نمائندگي شامل ڪريو</string>
+    <string name="domain_delegation_delete">نمائندگي ختم ڪريو</string>
+    <string name="domain_delegation_delete_message">%1$s هاڻي هن ڊومين تي رستن جو انتظام نه ڪندو.</string>
+    <string name="domain_delegation_delete_title">نمائندگي ختم ڪجي؟</string>
+    <string name="domain_delegation_path">رستو</string>
+    <string name="domain_delegation_user">يوزر ID</string>
+    <string name="domain_delegations">نمائندگيون</string>
+    <string name="domain_delegations_empty">ڪي به ڊيليگيشن ترتيب ڏنل نه آهن.</string>
+    <string name="domain_delete">ڊومين ختم ڪريو</string>
+    <string name="domain_delete_message">هي مستقل طور تي \"%1$s\" ۽ ان جا سڀ رستا ڊاهيندو.</string>
+    <string name="domain_delete_title">ڊومين ختم ڪجي؟</string>
+    <string name="domain_dns_hint">TXT رڪارڊ ٺاهيو:</string>
+    <string name="domain_empty_admin">ڪي به ڊومين ترتيب ڏنل نه آهن.</string>
+    <string name="domain_empty_user">توھان وٽ ڪنھن به ڊومين تائين رسائي نه آھي.</string>
+    <string name="domain_https">خودڪار HTTPS</string>
+    <string name="domain_name">ڊومين</string>
+    <string name="domain_status_pending">DNS تصديق منتظر</string>
+    <string name="domain_status_verified">تصديق ٿيل</string>
+    <string name="domain_title">ڊومينز</string>
+    <string name="domain_verify">DNS تصديق ڪريو</string>
+    <string name="settings_home_domains">ڊومينز</string>
+    <plurals name="system_users_sessions_revoked">
+        <item quantity="one">1 سيشن منسوخ ٿيو</item>
+        <item quantity="other">%1$d سيشن منسوخ ٿيا</item>
+    </plurals>
 </resources>
