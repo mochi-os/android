@@ -128,7 +128,7 @@ fun MoveObjectSheet(
                                 .fillMaxWidth()
                                 .clickable {
                                     if (!isSelected) {
-                                        viewModel.moveObject(obj.id, rowFieldId, option.id, null, option.id)
+                                        viewModel.moveObject(obj.id, rowField = rowFieldId, rowValue = option.id)
                                     }
                                     onDismiss()
                                 }

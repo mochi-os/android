@@ -196,12 +196,13 @@ class ProjectsRepository @Inject constructor(
         field: String? = null,
         value: String? = null,
         rank: Int? = null,
-        row: String? = null,
+        rowField: String? = null,
+        rowValue: String? = null,
         scopeParent: String? = null,
         promote: Boolean = false
     ) {
         api.moveObject(
-            projectId, objectId, field, value, rank, row,
+            projectId, objectId, field, value, rank, rowField, rowValue,
             scopeParent,
             if (promote) "true" else null
         ).unwrap()

@@ -106,7 +106,7 @@ interface ProjectsApi {
     suspend fun getTemplates(): Response<ApiResponse<TemplateListResponse>>
 
     @GET("-/directory/search")
-    suspend fun searchDirectory(@Query("q") query: String): Response<ApiResponse<ProjectListResponse>>
+    suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<ProjectListResponse>>
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<ProjectListResponse>>
@@ -134,7 +134,7 @@ interface ProjectsApi {
 
     @FormUrlEncoded
     @POST("-/users/search")
-    suspend fun searchUsers(@Field("query") query: String): Response<ApiResponse<UserSearchResponse>>
+    suspend fun searchUsers(@Field("search") query: String): Response<ApiResponse<UserSearchResponse>>
 
     @GET("-/groups")
     suspend fun getGroups(): Response<ApiResponse<GroupListResponse>>
@@ -176,7 +176,7 @@ interface ProjectsApi {
 
     @FormUrlEncoded
     @POST("-/diff/preference/set")
-    suspend fun setDiffPreference(@Field("preference") preference: String): Response<ApiResponse<SuccessResponse>>
+    suspend fun setDiffPreference(@Field("style") preference: String): Response<ApiResponse<SuccessResponse>>
 
     // ---- Entity-level endpoints ----
 
@@ -259,7 +259,8 @@ interface ProjectsApi {
         @Field("field") field: String?,
         @Field("value") value: String?,
         @Field("rank") rank: Int?,
-        @Field("row") row: String?,
+        @Field("row_field") rowField: String? = null,
+        @Field("row_value") rowValue: String? = null,
         @Field("scope_parent") scopeParent: String? = null,
         @Field("promote") promote: String? = null
     ): Response<ApiResponse<SuccessResponse>>

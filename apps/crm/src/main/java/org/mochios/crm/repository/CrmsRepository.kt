@@ -161,12 +161,13 @@ class CrmsRepository @Inject constructor(
         field: String? = null,
         value: String? = null,
         rank: Int? = null,
-        row: String? = null,
+        rowField: String? = null,
+        rowValue: String? = null,
         scopeParent: String? = null,
         promote: Boolean = false
     ) {
         api.moveObject(
-            crmId, objectId, field, value, rank, row,
+            crmId, objectId, field, value, rank, rowField, rowValue,
             scopeParent,
             if (promote) "true" else null
         ).unwrap()

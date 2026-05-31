@@ -448,7 +448,7 @@ interface ForumsApi {
     suspend fun resolveReport(
         @Path("forumId") forumId: String,
         @Path("reportId") reportId: String,
-        @Field("resolution") resolution: String,
+        @Field("action") resolution: String,
     ): Response<ApiResponse<SuccessResponse>>
 
     @GET("{forumId}/-/moderation/settings")

@@ -191,7 +191,7 @@ interface FeedsApi {
     @FormUrlEncoded
     @POST("-/users/search")
     suspend fun searchUsers(
-        @Field("query") query: String
+        @Field("search") query: String
     ): Response<ApiResponse<UserSearchResponse>>
 
     @GET("-/groups")
@@ -358,7 +358,7 @@ interface FeedsApi {
     @POST("{feedId}/-/sources/edit")
     suspend fun editSource(
         @Path("feedId") feedId: String,
-        @Field("id") id: String,
+        @Field("source") id: String,
         @Field("name") name: String?,
         @Field("credibility") credibility: Int?,
         @Field("transform") transform: String?
@@ -368,7 +368,7 @@ interface FeedsApi {
     @POST("{feedId}/-/sources/remove")
     suspend fun removeSource(
         @Path("feedId") feedId: String,
-        @Field("id") id: String,
+        @Field("source") id: String,
         @Field("delete_posts") deletePosts: Boolean?
     ): Response<ApiResponse<SuccessResponse>>
 
@@ -406,7 +406,7 @@ interface FeedsApi {
     suspend fun removeTag(
         @Path("feedId") feedId: String,
         @Path("postId") postId: String,
-        @Field("id") id: String
+        @Field("tag") id: String
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
