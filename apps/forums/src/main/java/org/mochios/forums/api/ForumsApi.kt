@@ -148,7 +148,7 @@ interface ForumsApi {
     @GET("-/list")
     suspend fun listForums(@Query("sort") sort: String? = null): Response<ApiResponse<ForumListResponse>>
 
-    @GET("-/info")
+    @GET("-/information")
     suspend fun getForumsInfo(): Response<ApiResponse<ForumListResponse>>
 
     @GET("-/new")
@@ -176,7 +176,7 @@ interface ForumsApi {
 
     // ---- Forum entity ----
 
-    @GET("{forumId}/-/info")
+    @GET("{forumId}/-/information")
     suspend fun getForumInfo(@Path("forumId") forumId: String): Response<ApiResponse<Map<String, Any>>>
 
     @GET("{forumId}/-/posts")
