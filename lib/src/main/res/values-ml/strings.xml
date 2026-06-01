@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">ഡയറക്ടറിയിൽ മറ്റുള്ളവർക്ക് നിങ്ങളെ കണ്ടെത്താൻ കഴിയുമോ എന്നത്.</string>
     <string name="game_chat_load_more">പഴയ സന്ദേശങ്ങൾ ലോഡ് ചെയ്യുക</string>
-
+    <string name="stepup_title">നിങ്ങളാണെന്ന് സ്ഥിരീകരിക്കുക</string>
+    <string name="stepup_description">ഇത് നിങ്ങളുടെ അക്കൗണ്ടിലെ ഒരു സുരക്ഷാ മാറ്റമാണ്. തുടരാൻ നിങ്ങളാണെന്ന് സ്ഥിരീകരിക്കുക.</string>
+    <string name="stepup_email_label">ഇമെയിൽ കോഡ്</string>
+    <string name="stepup_email_placeholder">നിങ്ങളുടെ ഇമെയിലിലെ കോഡ് നൽകുക</string>
+    <string name="stepup_totp_label">Authenticator കോഡ്</string>
+    <string name="stepup_totp_placeholder">നിങ്ങളുടെ ഓതെന്റിക്കേറ്റർ കോഡ് നൽകുക</string>
+    <string name="stepup_passkey_label">പാസ്കീ</string>
+    <string name="stepup_use_passkey">നിങ്ങളുടെ പാസ്‌കീ ഉപയോഗിക്കുക</string>
+    <string name="stepup_send_email">ഇമെയിൽ അയയ്ക്കുക</string>
+    <string name="stepup_resend_email">ഇമെയിൽ വീണ്ടും അയയ്ക്കുക</string>
+    <string name="stepup_verify">സ്ഥിരീകരിക്കുക</string>
+    <string name="stepup_continue_with">%1$s ഉപയോഗിച്ച് തുടരുക</string>
+    <string name="stepup_error_start">വീണ്ടും പരിശോധന ആരംഭിക്കാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="stepup_error_code">ആ കോഡ് തെറ്റാണ് അല്ലെങ്കിൽ കാലഹരണപ്പെട്ടു.</string>
+    <string name="stepup_error_passkey">പാസ്‌കീ പരിശോധന പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="stepup_error_oauth">ആ അക്കൗണ്ട് ഉപയോഗിച്ച് പരിശോധിക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
 </resources>

@@ -380,4 +380,11 @@
         <item quantity="one">1 სესია გაუქმდა</item>
         <item quantity="other">%1$d სესია გაუქმდა</item>
     </plurals>
+    <string name="login_title">შესვლა</string>
+    <string name="login_section_methods">შესვლის მეთოდები</string>
+    <string name="login_method_email">ელფოსტის კოდი</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator აპი</string>
+    <string name="login_method_oauth">მესამე მხარის შესვლა</string>
+    <string name="login_method_recovery">აღდგენის კოდები</string>
 </resources>

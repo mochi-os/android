@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">ຖອນຄືນ %1$d sessions</item>
     </plurals>
+    <string name="login_title">ເຂົ້າສູ່ລະບົບ</string>
+    <string name="login_section_methods">ວິທີເຂົ້າສູ່ລະບົບ</string>
+    <string name="login_method_email">ລະຫັດອີເມວ</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">ແອັບ authenticator</string>
+    <string name="login_method_oauth">ການເຂົ້າສູ່ລະບົບຂອງພາກສ່ວນທີສາມ</string>
+    <string name="login_method_recovery">ລະຫັດກູ້ຄືນ</string>
 </resources>

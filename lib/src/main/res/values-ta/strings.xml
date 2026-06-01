@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">மற்றவர்கள் அடைவில் உங்களைக் கண்டறிய முடியுமா என்பது.</string>
     <string name="game_chat_load_more">பழைய செய்திகளை ஏற்று</string>
-
+    <string name="stepup_title">இது நீங்கள்தான் என உறுதிப்படுத்தவும்</string>
+    <string name="stepup_description">இது உங்கள் கணக்கின் பாதுகாப்பு மாற்றம். தொடர இது நீங்கள்தான் என சரிபார்க்கவும்.</string>
+    <string name="stepup_email_label">மின்னஞ்சல் குறியீடு</string>
+    <string name="stepup_email_placeholder">உங்கள் மின்னஞ்சலில் உள்ள குறியீட்டை உள்ளிடவும்</string>
+    <string name="stepup_totp_label">அங்கீகரிப்பு குறியீடு</string>
+    <string name="stepup_totp_placeholder">உங்கள் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்</string>
+    <string name="stepup_passkey_label">கடவுக்குறி</string>
+    <string name="stepup_use_passkey">உங்கள் கடவுவிசையைப் பயன்படுத்தவும்</string>
+    <string name="stepup_send_email">மின்னஞ்சல் அனுப்பு</string>
+    <string name="stepup_resend_email">மின்னஞ்சலை மீண்டும் அனுப்பு</string>
+    <string name="stepup_verify">சரிபார்</string>
+    <string name="stepup_continue_with">%1$s மூலம் தொடரவும்</string>
+    <string name="stepup_error_start">மறுஅங்கீகாரத்தைத் தொடங்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="stepup_error_code">அந்தக் குறியீடு தவறானது அல்லது காலாவதியாகிவிட்டது.</string>
+    <string name="stepup_error_passkey">கடவுவிசை சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="stepup_error_oauth">அந்தக் கணக்கைச் சரிபார்க்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</string>
 </resources>

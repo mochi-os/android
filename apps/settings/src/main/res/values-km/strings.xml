@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">បានដកហូត %1$d វគ្គ</item>
     </plurals>
+    <string name="login_title">ចូល</string>
+    <string name="login_section_methods">វិធីសាស្ត្រចូល</string>
+    <string name="login_method_email">កូដអ៊ីមែល</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">កម្មវិធី Authenticator</string>
+    <string name="login_method_oauth">ការចូលពីភាគីទីបី</string>
+    <string name="login_method_recovery">កូដស្តារ</string>
 </resources>

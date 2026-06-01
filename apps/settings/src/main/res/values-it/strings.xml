@@ -381,4 +381,11 @@
         <item quantity="one">Revocata 1 sessione</item>
         <item quantity="other">Revocate %1$d sessioni</item>
     </plurals>
+    <string name="login_title">Accedi</string>
+    <string name="login_section_methods">Metodi di accesso</string>
+    <string name="login_method_email">Codice email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">App di autenticazione</string>
+    <string name="login_method_oauth">Accesso tramite terze parti</string>
+    <string name="login_method_recovery">Codici di recupero</string>
 </resources>

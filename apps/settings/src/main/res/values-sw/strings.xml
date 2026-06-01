@@ -380,4 +380,11 @@
         <item quantity="one">Imefuta kipindi 1</item>
         <item quantity="other">Imefuta vipindi %1$d</item>
     </plurals>
+    <string name="login_title">Ingia</string>
+    <string name="login_section_methods">Mbinu za kuingia</string>
+    <string name="login_method_email">Msimbo wa barua pepe</string>
+    <string name="login_method_passkey">Pasiki</string>
+    <string name="login_method_totp">Programu ya mthibitishaji</string>
+    <string name="login_method_oauth">Kuingia kwa mtu wa tatu</string>
+    <string name="login_method_recovery">Misimbo ya kurejesha</string>
 </resources>

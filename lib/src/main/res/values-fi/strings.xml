@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Absoluuttinen</string>
     <string name="settings_units_usa">Yhdysvallat</string>
     <string name="profile_privacy_description">Voivatko muut löytää sinut hakemistosta.</string>
-
+    <string name="stepup_title">Vahvista henkilöllisyytesi</string>
+    <string name="stepup_description">Tämä on tilisi tietoturvamuutos. Vahvista henkilöllisyytesi jatkaaksesi.</string>
+    <string name="stepup_email_label">Sähköpostikoodi</string>
+    <string name="stepup_email_placeholder">Anna sähköpostiisi saamasi koodi</string>
+    <string name="stepup_totp_label">Todennuskoodi</string>
+    <string name="stepup_totp_placeholder">Anna todennussovelluksen koodi</string>
+    <string name="stepup_passkey_label">Avainkoodi</string>
+    <string name="stepup_use_passkey">Käytä avainkoodiasi</string>
+    <string name="stepup_send_email">Lähetä sähköposti</string>
+    <string name="stepup_resend_email">Lähetä sähköposti uudelleen</string>
+    <string name="stepup_verify">Vahvista</string>
+    <string name="stepup_continue_with">Jatka käyttäen palvelua %1$s</string>
+    <string name="stepup_error_start">Uudelleentodennuksen aloittaminen ei onnistunut. Yritä uudelleen.</string>
+    <string name="stepup_error_code">Koodi on virheellinen tai vanhentunut.</string>
+    <string name="stepup_error_passkey">Avainkoodin vahvistus epäonnistui. Yritä uudelleen.</string>
+    <string name="stepup_error_oauth">Vahvistaminen tällä tilillä ei onnistunut. Yritä uudelleen.</string>
 </resources>

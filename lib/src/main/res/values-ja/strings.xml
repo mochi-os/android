@@ -247,5 +247,20 @@
     <string name="settings_units_usa">米国</string>
     <string name="profile_privacy_description">ディレクトリで他のユーザーから見つけられるかどうか。</string>
     <string name="game_chat_load_more">古いメッセージを読み込む</string>
-
+    <string name="stepup_title">本人確認</string>
+    <string name="stepup_description">これはアカウントのセキュリティに関する変更です。続行するには本人確認を行ってください。</string>
+    <string name="stepup_email_label">メールコード</string>
+    <string name="stepup_email_placeholder">メールに記載されたコードを入力してください</string>
+    <string name="stepup_totp_label">認証コード</string>
+    <string name="stepup_totp_placeholder">認証アプリのコードを入力</string>
+    <string name="stepup_passkey_label">パスキー</string>
+    <string name="stepup_use_passkey">パスキーを使用</string>
+    <string name="stepup_send_email">メールを送信</string>
+    <string name="stepup_resend_email">メールを再送信</string>
+    <string name="stepup_verify">認証</string>
+    <string name="stepup_continue_with">%1$s で続行</string>
+    <string name="stepup_error_start">再認証を開始できませんでした。もう一度お試しください。</string>
+    <string name="stepup_error_code">そのコードは正しくないか、有効期限が切れています。</string>
+    <string name="stepup_error_passkey">パスキーの認証に失敗しました。もう一度お試しください。</string>
+    <string name="stepup_error_oauth">そのアカウントで確認できませんでした。もう一度お試しください。</string>
 </resources>

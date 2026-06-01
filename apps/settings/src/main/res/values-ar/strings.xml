@@ -384,4 +384,11 @@
         <item quantity="two">تم إلغاء جلستين</item>
         <item quantity="zero">لم يتم إلغاء أي جلسة</item>
     </plurals>
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="login_section_methods">طرق تسجيل الدخول</string>
+    <string name="login_method_email">رمز البريد الإلكتروني</string>
+    <string name="login_method_passkey">مفتاح المرور</string>
+    <string name="login_method_totp">تطبيق المصادقة</string>
+    <string name="login_method_oauth">تسجيل دخول طرف ثالث</string>
+    <string name="login_method_recovery">رموز الاسترداد</string>
 </resources>

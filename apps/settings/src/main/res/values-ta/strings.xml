@@ -380,4 +380,11 @@
         <item quantity="one">1 அமர்வு திரும்பப் பெறப்பட்டது</item>
         <item quantity="other">%1$d அமர்வுகள் திரும்பப் பெறப்பட்டன</item>
     </plurals>
+    <string name="login_title">உள்நுழைவு</string>
+    <string name="login_section_methods">உள்நுழைவு முறைகள்</string>
+    <string name="login_method_email">மின்னஞ்சல் குறியீடு</string>
+    <string name="login_method_passkey">கடவுக்குறி</string>
+    <string name="login_method_totp">அங்கீகரிப்பு பயன்பாடு</string>
+    <string name="login_method_oauth">மூன்றாம் தரப்பு உள்நுழைவு</string>
+    <string name="login_method_recovery">மீட்பு குறியீடுகள்</string>
 </resources>

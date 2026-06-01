@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">Akka warri kaan galmee keessatti si argachuu danda\'an.</string>
     <string name="game_chat_load_more">Ergaa duraanii fe\'i</string>
-
+    <string name="stepup_title">Si akka taate mirkaneessi</string>
+    <string name="stepup_description">Kun jijjiirama nageenya akkaawuntii kee irratti taʼeedha. Itti fufuuf si akka taate mirkaneessi.</string>
+    <string name="stepup_email_label">Koodii imeelii</string>
+    <string name="stepup_email_placeholder">Koodii imeelii kee irraa galchi</string>
+    <string name="stepup_totp_label">Koodii mirkaneessaa</string>
+    <string name="stepup_totp_placeholder">Koodii mirkaneessaa kee galchi</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Passkey kee fayyadami</string>
+    <string name="stepup_send_email">Imeelii ergi</string>
+    <string name="stepup_resend_email">Imeelii irra deebi\'ii ergi</string>
+    <string name="stepup_verify">Mirkaneessi</string>
+    <string name="stepup_continue_with">%1$s waliin itti fufi</string>
+    <string name="stepup_error_start">Mirkaneessa irra deebiʼaa jalqabuu hin dandeenye. Maaloo irra deebiʼii yaali.</string>
+    <string name="stepup_error_code">Koodiin sun sirrii miti yookaan yeroon isaa darbeera.</string>
+    <string name="stepup_error_passkey">Mirkaneessi passkey hin milkoofne. Maaloo irra deebiʼii yaali.</string>
+    <string name="stepup_error_oauth">Akkaawuntii sana waliin mirkaneessuun hin danda\'amne. Maaloo irra deebi\'ii yaali.</string>
 </resources>

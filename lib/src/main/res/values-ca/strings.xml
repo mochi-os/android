@@ -249,5 +249,20 @@
     <string name="media_grid_more_count">+%1$d</string>
     <string name="reaction_add">Afegeix una reacció</string>
     <string name="push_service_channel">Notificacions de Mochi</string>
-
+    <string name="stepup_title">Confirmeu que sou vós</string>
+    <string name="stepup_description">Aquest és un canvi de seguretat al vostre compte. Verifiqueu que sou vós per continuar.</string>
+    <string name="stepup_email_label">Codi per correu</string>
+    <string name="stepup_email_placeholder">Introduïu el codi del vostre correu electrònic</string>
+    <string name="stepup_totp_label">Codi de l\'autenticador</string>
+    <string name="stepup_totp_placeholder">Introduïu el codi de l\'autenticador</string>
+    <string name="stepup_passkey_label">Clau d\'accés</string>
+    <string name="stepup_use_passkey">Utilitzeu la vostra clau d\'accés</string>
+    <string name="stepup_send_email">Envia el correu</string>
+    <string name="stepup_resend_email">Torna a enviar el correu</string>
+    <string name="stepup_verify">Verifica</string>
+    <string name="stepup_continue_with">Continua amb %1$s</string>
+    <string name="stepup_error_start">No s\'ha pogut iniciar la reautenticació. Torneu-ho a provar.</string>
+    <string name="stepup_error_code">Aquest codi és incorrecte o ha caducat.</string>
+    <string name="stepup_error_passkey">Ha fallat la verificació de la clau d\'accés. Torneu-ho a provar.</string>
+    <string name="stepup_error_oauth">No s\'ha pogut verificar amb aquest compte. Torneu-ho a provar.</string>
 </resources>

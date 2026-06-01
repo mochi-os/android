@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">డైరెక్టరీలో ఇతరులు మిమ్మల్ని కనుగొనగలరా అనేది.</string>
     <string name="game_chat_load_more">పాత సందేశాలను లోడ్ చేయండి</string>
-
+    <string name="stepup_title">ఇది మీరేనని నిర్ధారించండి</string>
+    <string name="stepup_description">ఇది మీ ఖాతాకు భద్రతా మార్పు. కొనసాగించడానికి ఇది మీరేనని ధృవీకరించండి.</string>
+    <string name="stepup_email_label">ఇమెయిల్ కోడ్</string>
+    <string name="stepup_email_placeholder">మీ ఇమెయిల్‌లోని కోడ్‌ను నమోదు చేయండి</string>
+    <string name="stepup_totp_label">ఆథెంటికేటర్ కోడ్</string>
+    <string name="stepup_totp_placeholder">మీ ప్రమాణీకరణ కోడ్‌ను నమోదు చేయండి</string>
+    <string name="stepup_passkey_label">పాస్‌కీ</string>
+    <string name="stepup_use_passkey">మీ పాస్‌కీని ఉపయోగించండి</string>
+    <string name="stepup_send_email">ఇమెయిల్ పంపండి</string>
+    <string name="stepup_resend_email">ఇమెయిల్‌ను మళ్లీ పంపండి</string>
+    <string name="stepup_verify">ధృవీకరించండి</string>
+    <string name="stepup_continue_with">%1$sతో కొనసాగించండి</string>
+    <string name="stepup_error_start">పునఃప్రమాణీకరణను ప్రారంభించడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="stepup_error_code">ఆ కోడ్ తప్పు లేదా గడువు ముగిసింది.</string>
+    <string name="stepup_error_passkey">పాస్‌కీ ధృవీకరణ విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="stepup_error_oauth">ఆ ఖాతాతో ధృవీకరించడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">Ці могуць іншыя знайсці вас у каталозе.</string>
     <string name="game_chat_load_more">Загрузіць больш ранейшыя паведамленні</string>
     <string name="game_chat_move_played">%1$s зрабіў ход %2$s</string>
-
+    <string name="stepup_title">Пацвердзіце, што гэта вы</string>
+    <string name="stepup_description">Гэта змена бяспекі вашага ўліковага запісу. Каб працягнуць, пацвердзіце, што гэта вы.</string>
+    <string name="stepup_email_label">Код па эл. пошце</string>
+    <string name="stepup_email_placeholder">Увядзіце код з вашай электроннай пошты</string>
+    <string name="stepup_totp_label">Код аўтэнтыфікатара</string>
+    <string name="stepup_totp_placeholder">Увядзіце код з праграмы-аўтэнтыфікатара</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Скарыстайцеся ключом доступу</string>
+    <string name="stepup_send_email">Адправіць эл. пошту</string>
+    <string name="stepup_resend_email">Адправіць ліст паўторна</string>
+    <string name="stepup_verify">Праверыць</string>
+    <string name="stepup_continue_with">Працягнуць з %1$s</string>
+    <string name="stepup_error_start">Не ўдалося пачаць паўторную аўтэнтыфікацыю. Калі ласка, паспрабуйце яшчэ раз.</string>
+    <string name="stepup_error_code">Гэты код няправільны або састарэў.</string>
+    <string name="stepup_error_passkey">Не ўдалося праверыць ключ доступу. Калі ласка, паспрабуйце яшчэ раз.</string>
+    <string name="stepup_error_oauth">Не ўдалося пацвердзіць з гэтым уліковым запісам. Калі ласка, паспрабуйце яшчэ раз.</string>
 </resources>

@@ -247,5 +247,8 @@
     <string name="settings_units_usa">USA</string>
     <string name="profile_privacy_description">Om andre kan finne deg i katalogen.</string>
     <string name="game_chat_load_more">Last inn eldre meldingar</string>
-
+    <string name="stepup_email_label">E-postkode</string>
+    <string name="stepup_totp_label">Autentiseringskode</string>
+    <string name="stepup_passkey_label">Nykel</string>
+    <string name="stepup_verify">Stadfest</string>
 </resources>

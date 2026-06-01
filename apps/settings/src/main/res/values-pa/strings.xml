@@ -380,4 +380,11 @@
         <item quantity="one">1 ਸੈਸ਼ਨ ਰੱਦ ਕੀਤਾ</item>
         <item quantity="other">%1$d ਸੈਸ਼ਨ ਰੱਦ ਕੀਤੇ</item>
     </plurals>
+    <string name="login_title">ਲੌਗਇਨ</string>
+    <string name="login_section_methods">ਲਾਗਇਨ ਤਰੀਕੇ</string>
+    <string name="login_method_email">ਈਮੇਲ ਕੋਡ</string>
+    <string name="login_method_passkey">ਪਾਸਕੀ</string>
+    <string name="login_method_totp">ਪ੍ਰਮਾਣਕ ਐਪ</string>
+    <string name="login_method_oauth">ਤੀਜੀ-ਧਿਰ ਲੌਗਇਨ</string>
+    <string name="login_method_recovery">ਰਿਕਵਰੀ ਕੋਡ</string>
 </resources>

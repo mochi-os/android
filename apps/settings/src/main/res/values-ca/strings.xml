@@ -381,4 +381,11 @@
         <item quantity="one">S\'ha revocat 1 sessió</item>
         <item quantity="other">S\'han revocat %1$d sessions</item>
     </plurals>
+    <string name="login_title">Inicia la sessió</string>
+    <string name="login_section_methods">Mètodes d\'inici de sessió</string>
+    <string name="login_method_email">Codi per correu</string>
+    <string name="login_method_passkey">Clau d\'accés</string>
+    <string name="login_method_totp">Aplicació autenticadora</string>
+    <string name="login_method_oauth">Inici de sessió de tercers</string>
+    <string name="login_method_recovery">Codis de recuperació</string>
 </resources>

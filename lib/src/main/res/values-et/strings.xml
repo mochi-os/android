@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Absoluutne</string>
     <string name="settings_units_usa">USA</string>
     <string name="profile_privacy_description">Kas teised saavad teid kataloogist leida.</string>
-
+    <string name="stepup_title">Kinnitage, et see olete teie</string>
+    <string name="stepup_description">See on teie konto turvamuudatus. Jätkamiseks kinnitage oma isik.</string>
+    <string name="stepup_email_label">E-posti kood</string>
+    <string name="stepup_email_placeholder">Sisesta e-kirjas saadud kood</string>
+    <string name="stepup_totp_label">Autentija kood</string>
+    <string name="stepup_totp_placeholder">Sisestage oma autentimisrakenduse kood</string>
+    <string name="stepup_passkey_label">Pääsuvõti</string>
+    <string name="stepup_use_passkey">Kasutage oma pääsuvõtit</string>
+    <string name="stepup_send_email">Saada e-kiri</string>
+    <string name="stepup_resend_email">Saada e-kiri uuesti</string>
+    <string name="stepup_verify">Kontrolli</string>
+    <string name="stepup_continue_with">Jätka teenusega %1$s</string>
+    <string name="stepup_error_start">Taasautentimist ei õnnestunud alustada. Proovige uuesti.</string>
+    <string name="stepup_error_code">See kood on vale või aegunud.</string>
+    <string name="stepup_error_passkey">Pääsuvõtmega kinnitamine ebaõnnestus. Proovige uuesti.</string>
+    <string name="stepup_error_oauth">Selle kontoga ei õnnestunud kinnitada. Palun proovi uuesti.</string>
 </resources>

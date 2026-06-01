@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">ຄົນອື່ນສາມາດຄົ້ນຫາທ່ານໃນລາຍຊື່ໄດ້ຫຼືບໍ່.</string>
     <string name="game_chat_load_more">ໂຫຼດຂໍ້ຄວາມເກົ່າກວ່າ</string>
-
+    <string name="stepup_title">ຢືນຢັນວ່າແມ່ນທ່ານ</string>
+    <string name="stepup_description">ນີ້ແມ່ນການປ່ຽນແປງດ້ານຄວາມປອດໄພຕໍ່ບັນຊີຂອງທ່ານ. ກະລຸນາຢືນຢັນວ່າແມ່ນທ່ານເພື່ອດໍາເນີນການຕໍ່.</string>
+    <string name="stepup_email_label">ລະຫັດອີເມວ</string>
+    <string name="stepup_email_placeholder">ປ້ອນລະຫັດຈາກອີເມວຂອງທ່ານ</string>
+    <string name="stepup_totp_label">ລະຫັດ authenticator</string>
+    <string name="stepup_totp_placeholder">ໃສ່ລະຫັດ authenticator ຂອງທ່ານ</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">ໃຊ້ passkey ຂອງທ່ານ</string>
+    <string name="stepup_send_email">ສົ່ງອີເມວ</string>
+    <string name="stepup_resend_email">ສົ່ງອີເມວອີກຄັ້ງ</string>
+    <string name="stepup_verify">ຢືນຢັນ</string>
+    <string name="stepup_continue_with">ສືບຕໍ່ດ້ວຍ %1$s</string>
+    <string name="stepup_error_start">ບໍ່ສາມາດເລີ່ມການຢືນຢັນຕົວຕົນຄືນໃໝ່ໄດ້. ກະລຸນາລອງອີກຄັ້ງ.</string>
+    <string name="stepup_error_code">ລະຫັດນັ້ນບໍ່ຖືກຕ້ອງ ຫຼື ໝົດອາຍຸແລ້ວ.</string>
+    <string name="stepup_error_passkey">ການຢືນຢັນ passkey ລົ້ມເຫລວ. ກະລຸນາລອງອີກຄັ້ງ.</string>
+    <string name="stepup_error_oauth">ບໍ່ສາມາດຢືນຢັນດ້ວຍບັນຊີນັ້ນໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ.</string>
 </resources>

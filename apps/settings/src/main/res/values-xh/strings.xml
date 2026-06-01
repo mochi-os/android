@@ -380,4 +380,11 @@
         <item quantity="one">Kurhoxiswe iseshoni eyi-1</item>
         <item quantity="other">Kurhoxiswe iiseshoni ezi-%1$d</item>
     </plurals>
+    <string name="login_title">Ngena</string>
+    <string name="login_section_methods">Iindlela zokungena</string>
+    <string name="login_method_email">Ikhowudi ye-imeyili</string>
+    <string name="login_method_passkey">Isitshixo sokungena</string>
+    <string name="login_method_totp">I-app yokuqinisekisa</string>
+    <string name="login_method_oauth">Ukungena kweqela lesithathu</string>
+    <string name="login_method_recovery">Iikhowudi zokubuyisa</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="settings_units_usa">აშშ</string>
     <string name="profile_privacy_description">შეუძლიათ თუ არა სხვებს თქვენი მოძებნა დირექტორიაში.</string>
     <string name="game_chat_load_more">ძველი შეტყობინებების ჩატვირთვა</string>
-
+    <string name="stepup_title">დაადასტურეთ, რომ ეs თქვენ ხართ</string>
+    <string name="stepup_description">ეს არის თქვენი ანგარიშის უსაფრთხოების ცვლილება. გასაგრძელებლად დაადასტურეთ, რომ ეს თქვენ ხართ.</string>
+    <string name="stepup_email_label">ელფოსტის კოდი</string>
+    <string name="stepup_email_placeholder">შეიყვანეთ კოდი თქვენი ელფოსტიდან</string>
+    <string name="stepup_totp_label">Authenticator-ის კოდი</string>
+    <string name="stepup_totp_placeholder">შეიყვანეთ თქვენი authenticator-ის კოდი</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">გამოიყენეთ თქვენი passkey</string>
+    <string name="stepup_send_email">ელფოსტის გაგზავნა</string>
+    <string name="stepup_resend_email">ელფოსტის ხელახლა გაგზავნა</string>
+    <string name="stepup_verify">შემოწმებული</string>
+    <string name="stepup_continue_with">გაგრძელება %1$s-ით</string>
+    <string name="stepup_error_start">ხელახალი ავთენტიფიკაციის დაწყება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.</string>
+    <string name="stepup_error_code">ეს კოდი არასწორია ან ვადაგასულია.</string>
+    <string name="stepup_error_passkey">passkey-ის გადამოწმება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.</string>
+    <string name="stepup_error_oauth">ამ ანგარიშით ვერ მოხერხდა გადამოწმება. გთხოვთ, სცადოთ თავიდან.</string>
 </resources>

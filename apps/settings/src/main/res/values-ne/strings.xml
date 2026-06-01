@@ -380,4 +380,11 @@
         <item quantity="one">1 सत्र खारेज गरियो</item>
         <item quantity="other">%1$d सत्रहरू खारेज गरियो</item>
     </plurals>
+    <string name="login_title">लगइन</string>
+    <string name="login_section_methods">लगइन विधिहरू</string>
+    <string name="login_method_email">इमेल कोड</string>
+    <string name="login_method_passkey">पासकी</string>
+    <string name="login_method_totp">Authenticator एप</string>
+    <string name="login_method_oauth">तेस्रो-पक्ष लगइन</string>
+    <string name="login_method_recovery">रिकभरी कोडहरू</string>
 </resources>

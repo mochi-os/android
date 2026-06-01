@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d sesion jaktʼaywi</item>
     </plurals>
+    <string name="login_title">Mantaña</string>
+    <string name="login_section_methods">Mantachañ thakhinaka</string>
+    <string name="login_method_email">Email código</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Aka CRM jichhax janiw apnaqayañ atikiti.</string>
+    <string name="login_method_recovery">Recovery códigonaka</string>
 </resources>

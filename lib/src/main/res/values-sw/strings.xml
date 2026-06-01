@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">Kama wengine wanaweza kukupata kwenye saraka.</string>
     <string name="game_chat_load_more">Pakia ujumbe wa zamani</string>
-
+    <string name="stepup_title">Thibitisha kuwa ni wewe</string>
+    <string name="stepup_description">Hili ni badiliko la usalama kwenye akaunti yako. Thibitisha kuwa ni wewe ili kuendelea.</string>
+    <string name="stepup_email_label">Msimbo wa barua pepe</string>
+    <string name="stepup_email_placeholder">Weka msimbo kutoka kwa barua pepe yako</string>
+    <string name="stepup_totp_label">Msimbo wa mthibitishaji</string>
+    <string name="stepup_totp_placeholder">Weka msimbo wako wa kithibitishaji</string>
+    <string name="stepup_passkey_label">Pasiki</string>
+    <string name="stepup_use_passkey">Tumia ufunguo wako</string>
+    <string name="stepup_send_email">Tuma barua pepe</string>
+    <string name="stepup_resend_email">Tuma barua pepe tena</string>
+    <string name="stepup_verify">Thibitisha</string>
+    <string name="stepup_continue_with">Endelea na %1$s</string>
+    <string name="stepup_error_start">Imeshindwa kuanza uthibitishaji upya. Tafadhali jaribu tena.</string>
+    <string name="stepup_error_code">Msimbo huo si sahihi au umekwisha muda wake.</string>
+    <string name="stepup_error_passkey">Uthibitishaji wa ufunguo umeshindwa. Tafadhali jaribu tena.</string>
+    <string name="stepup_error_oauth">Imeshindwa kuthibitisha kwa akaunti hiyo. Tafadhali jaribu tena.</string>
 </resources>

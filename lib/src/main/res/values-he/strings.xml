@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">מוחלט</string>
     <string name="settings_units_usa">ארה\"ב</string>
     <string name="profile_privacy_description">האם אחרים יכולים למצוא אותך בספרייה.</string>
-
+    <string name="stepup_title">אימות הזהות שלך</string>
+    <string name="stepup_description">זהו שינוי אבטחה בחשבון שלך. כדי להמשיך, אמת שזה אתה.</string>
+    <string name="stepup_email_label">קוד אימייל</string>
+    <string name="stepup_email_placeholder">הזן את הקוד מהאימייל שלך</string>
+    <string name="stepup_totp_label">קוד אימות</string>
+    <string name="stepup_totp_placeholder">הזן את הקוד מאפליקציית האימות</string>
+    <string name="stepup_passkey_label">מפתח גישה</string>
+    <string name="stepup_use_passkey">השתמש במפתח הגישה שלך</string>
+    <string name="stepup_send_email">שלח אימייל</string>
+    <string name="stepup_resend_email">שלח את האימייל שוב</string>
+    <string name="stepup_verify">אמת</string>
+    <string name="stepup_continue_with">המשך עם %1$s</string>
+    <string name="stepup_error_start">לא ניתן היה להתחיל את האימות מחדש. נסה שוב.</string>
+    <string name="stepup_error_code">הקוד שגוי או שתוקפו פג.</string>
+    <string name="stepup_error_passkey">אימות מפתח הגישה נכשל. נסה שוב.</string>
+    <string name="stepup_error_oauth">לא ניתן היה לאמת עם החשבון הזה. נסה שוב.</string>
 </resources>

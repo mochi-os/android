@@ -247,5 +247,20 @@
     <string name="settings_units_usa">ABŞ</string>
     <string name="profile_privacy_description">Başgalaryň sizi katalogda tapyp biljekdigi.</string>
     <string name="game_chat_load_more">Köne habarlary ýükle</string>
-
+    <string name="stepup_title">Bu siziň özüňizdigiňizi tassyklaň</string>
+    <string name="stepup_description">Bu hasabyňyzdaky howpsuzlyk üýtgemesidir. Dowam etmek üçin bu siziň özüňizdigiňizi barlaň.</string>
+    <string name="stepup_email_label">E-poçta kody</string>
+    <string name="stepup_email_placeholder">E-poçtaňyzdaky kody giriziň</string>
+    <string name="stepup_totp_label">Autentifikator kody</string>
+    <string name="stepup_totp_placeholder">Autentifikator koduňyzy giriziň</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Giriş açaryňyzy ulanyň</string>
+    <string name="stepup_send_email">E-poçt iber</string>
+    <string name="stepup_resend_email">E-poçtany gaýtadan iber</string>
+    <string name="stepup_verify">Tassykla</string>
+    <string name="stepup_continue_with">%1$s bilen dowam et</string>
+    <string name="stepup_error_start">Gaýtadan tassyklamany başlatmak başartmady. Täzeden synanyşyň.</string>
+    <string name="stepup_error_code">Ol kod nädogry ýa-da möhleti geçen.</string>
+    <string name="stepup_error_passkey">Giriş açary bilen tassyklamak şowsuz boldy. Täzeden synanyşyň.</string>
+    <string name="stepup_error_oauth">Şol hasap bilen barlap bolmady. Täzeden synanyşyň.</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">ডিরেক্টরিতে অন্যরা আপনাকে খুঁজে পেতে পারবে কিনা।</string>
     <string name="game_chat_load_more">পুরোনো বার্তা লোড করুন</string>
     <string name="game_chat_move_played">%1$s %2$s খেলেছেন</string>
-
+    <string name="stepup_title">এটি যে আপনি তা নিশ্চিত করুন</string>
+    <string name="stepup_description">এটি আপনার অ্যাকাউন্টের একটি নিরাপত্তা পরিবর্তন। চালিয়ে যেতে এটি যে আপনি তা যাচাই করুন।</string>
+    <string name="stepup_email_label">ইমেইল কোড</string>
+    <string name="stepup_email_placeholder">আপনার ইমেল থেকে পাওয়া কোডটি লিখুন</string>
+    <string name="stepup_totp_label">অথেন্টিকেটর কোড</string>
+    <string name="stepup_totp_placeholder">আপনার প্রমাণীকরণকারী কোড লিখুন</string>
+    <string name="stepup_passkey_label">পাসকি</string>
+    <string name="stepup_use_passkey">আপনার পাসকি ব্যবহার করুন</string>
+    <string name="stepup_send_email">ইমেইল পাঠান</string>
+    <string name="stepup_resend_email">ইমেল আবার পাঠান</string>
+    <string name="stepup_verify">যাচাই করুন</string>
+    <string name="stepup_continue_with">%1$s দিয়ে চালিয়ে যান</string>
+    <string name="stepup_error_start">পুনরায় প্রমাণীকরণ শুরু করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+    <string name="stepup_error_code">কোডটি ভুল বা এর মেয়াদ শেষ হয়ে গেছে।</string>
+    <string name="stepup_error_passkey">পাসকি যাচাই ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+    <string name="stepup_error_oauth">ওই অ্যাকাউন্ট দিয়ে যাচাই করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
 </resources>

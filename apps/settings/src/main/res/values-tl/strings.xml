@@ -380,4 +380,11 @@
         <item quantity="one">Pinawalang-bisa ang %1$d session</item>
         <item quantity="other">Pinawalang-bisa ang %1$d na session</item>
     </plurals>
+    <string name="login_title">Mag-login</string>
+    <string name="login_section_methods">Mga paraan ng pag-login</string>
+    <string name="login_method_email">Email code</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Third-party login</string>
+    <string name="login_method_recovery">Mga recovery code</string>
 </resources>

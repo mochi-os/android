@@ -384,4 +384,11 @@
         <item quantity="two">Diddymwyd %1$d sesiwn</item>
         <item quantity="zero">Diddymwyd 1 sesiwn</item>
     </plurals>
+    <string name="login_title">Mewngofnodi</string>
+    <string name="login_section_methods">Dulliau mewngofnodi</string>
+    <string name="login_method_email">Cod e-bost</string>
+    <string name="login_method_passkey">Pasallwedd</string>
+    <string name="login_method_totp">App dilyswr</string>
+    <string name="login_method_oauth">Mewngofnodi trydydd parti</string>
+    <string name="login_method_recovery">Codau adfer</string>
 </resources>

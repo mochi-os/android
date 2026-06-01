@@ -381,4 +381,11 @@
         <item quantity="one">S-a revocat 1 sesiune</item>
         <item quantity="other">S-au revocat %1$d de sesiuni</item>
     </plurals>
+    <string name="login_title">Autentificare</string>
+    <string name="login_section_methods">Metode de autentificare</string>
+    <string name="login_method_email">Cod email</string>
+    <string name="login_method_passkey">Cheie de acces</string>
+    <string name="login_method_totp">Aplicație de autentificare</string>
+    <string name="login_method_oauth">Conectare prin terți</string>
+    <string name="login_method_recovery">Coduri de recuperare</string>
 </resources>

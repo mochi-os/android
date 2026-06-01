@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Απόλυτη</string>
     <string name="settings_units_usa">ΗΠΑ</string>
     <string name="profile_privacy_description">Αν οι άλλοι μπορούν να σας βρουν στον κατάλογο.</string>
-
+    <string name="stepup_title">Επιβεβαιώστε ότι είστε εσείς</string>
+    <string name="stepup_description">Πρόκειται για αλλαγή ασφαλείας στον λογαριασμό σας. Επαληθεύστε την ταυτότητά σας για να συνεχίσετε.</string>
+    <string name="stepup_email_label">Κωδικός email</string>
+    <string name="stepup_email_placeholder">Εισαγάγετε τον κωδικό από το email σας</string>
+    <string name="stepup_totp_label">Κωδικός ελέγχου ταυτότητας</string>
+    <string name="stepup_totp_placeholder">Εισαγάγετε τον κωδικό της εφαρμογής ελέγχου ταυτότητας</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Χρησιμοποιήστε το κλειδί πρόσβασής σας</string>
+    <string name="stepup_send_email">Αποστολή email</string>
+    <string name="stepup_resend_email">Επαναποστολή email</string>
+    <string name="stepup_verify">Επαλήθευση</string>
+    <string name="stepup_continue_with">Συνέχεια με %1$s</string>
+    <string name="stepup_error_start">Δεν ήταν δυνατή η έναρξη του εκ νέου ελέγχου ταυτότητας. Δοκιμάστε ξανά.</string>
+    <string name="stepup_error_code">Αυτός ο κωδικός είναι λανθασμένος ή έχει λήξει.</string>
+    <string name="stepup_error_passkey">Η επαλήθευση με κλειδί πρόσβασης απέτυχε. Δοκιμάστε ξανά.</string>
+    <string name="stepup_error_oauth">Δεν ήταν δυνατή η επαλήθευση με αυτόν τον λογαριασμό. Δοκιμάστε ξανά.</string>
 </resources>

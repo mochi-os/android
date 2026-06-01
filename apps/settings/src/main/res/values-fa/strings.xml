@@ -380,4 +380,11 @@
         <item quantity="one">۱ نشست لغو شد</item>
         <item quantity="other">%1$d نشست لغو شد</item>
     </plurals>
+    <string name="login_title">ورود</string>
+    <string name="login_section_methods">روش‌های ورود</string>
+    <string name="login_method_email">کد ایمیل</string>
+    <string name="login_method_passkey">پسکی</string>
+    <string name="login_method_totp">برنامهٔ احراز هویت</string>
+    <string name="login_method_oauth">ورود از طریق شخص ثالث</string>
+    <string name="login_method_recovery">کدهای بازیابی</string>
 </resources>

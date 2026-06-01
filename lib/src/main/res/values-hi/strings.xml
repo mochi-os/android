@@ -247,5 +247,20 @@
     <string name="settings_units_usa">अमेरिकी</string>
     <string name="profile_privacy_description">क्या अन्य लोग आपको निर्देशिका में ढूँढ सकते हैं।</string>
     <string name="game_chat_load_more">पुराने संदेश लोड करें</string>
-
+    <string name="stepup_title">पुष्टि करें कि यह आप ही हैं</string>
+    <string name="stepup_description">यह आपके खाते में एक सुरक्षा परिवर्तन है। जारी रखने के लिए पुष्टि करें कि यह आप ही हैं।</string>
+    <string name="stepup_email_label">ईमेल कोड</string>
+    <string name="stepup_email_placeholder">अपने ईमेल से कोड दर्ज करें</string>
+    <string name="stepup_totp_label">ऑथेंटिकेटर कोड</string>
+    <string name="stepup_totp_placeholder">अपना प्रमाणक कोड दर्ज करें</string>
+    <string name="stepup_passkey_label">पासकी</string>
+    <string name="stepup_use_passkey">अपनी पासकी का उपयोग करें</string>
+    <string name="stepup_send_email">ईमेल भेजें</string>
+    <string name="stepup_resend_email">ईमेल फिर से भेजें</string>
+    <string name="stepup_verify">वेरिफ़ाई करें</string>
+    <string name="stepup_continue_with">%1$s के साथ जारी रखें</string>
+    <string name="stepup_error_start">पुनः प्रमाणीकरण शुरू नहीं किया जा सका। कृपया पुनः प्रयास करें।</string>
+    <string name="stepup_error_code">वह कोड गलत है या समाप्त हो चुका है।</string>
+    <string name="stepup_error_passkey">पासकी सत्यापन विफल रहा। कृपया पुनः प्रयास करें।</string>
+    <string name="stepup_error_oauth">उस खाते से सत्यापन नहीं हो सका। कृपया पुनः प्रयास करें।</string>
 </resources>

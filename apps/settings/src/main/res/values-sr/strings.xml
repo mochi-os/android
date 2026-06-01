@@ -381,4 +381,11 @@
         <item quantity="one">Опозвана %1$d сесија</item>
         <item quantity="other">Опозвано %1$d сесија</item>
     </plurals>
+    <string name="login_title">Пријава</string>
+    <string name="login_section_methods">Начини пријаве</string>
+    <string name="login_method_email">Код е-поште</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator апликација</string>
+    <string name="login_method_oauth">Пријава трећом страном</string>
+    <string name="login_method_recovery">Recovery кодови</string>
 </resources>

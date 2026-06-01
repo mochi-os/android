@@ -247,5 +247,20 @@
     <string name="settings_units_usa">АКШ</string>
     <string name="profile_privacy_description">Башкалар сизди каталогдон таба алабы.</string>
     <string name="game_chat_load_more">Эски билдирүүлөрдү жүктөө</string>
-
+    <string name="stepup_title">Бул сиз экениңизди ырастаңыз</string>
+    <string name="stepup_description">Бул — каттоо эсебиңиздин коопсуздук өзгөртүүсү. Улантуу үчүн бул сиз экениңизди ырастаңыз.</string>
+    <string name="stepup_email_label">Электрондук почта коду</string>
+    <string name="stepup_email_placeholder">Электрондук почтаңыздагы кодду киргизиңиз</string>
+    <string name="stepup_totp_label">Authenticator коду</string>
+    <string name="stepup_totp_placeholder">Authenticator кодун киргизиңиз</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Passkey колдонуңуз</string>
+    <string name="stepup_send_email">Электрондук почта жөнөтүү</string>
+    <string name="stepup_resend_email">Катты кайра жөнөтүү</string>
+    <string name="stepup_verify">Текшерүү</string>
+    <string name="stepup_continue_with">%1$s менен улантуу</string>
+    <string name="stepup_error_start">Кайра аутентификацияны баштоо мүмкүн болгон жок. Кайра аракет кылыңыз.</string>
+    <string name="stepup_error_code">Бул код туура эмес же мөөнөтү бүткөн.</string>
+    <string name="stepup_error_passkey">Passkey текшерүүсү ишке ашкан жок. Кайра аракет кылыңыз.</string>
+    <string name="stepup_error_oauth">Бул каттоо эсеби менен текшерүү мүмкүн болбоду. Кайра аракет кылыңыз.</string>
 </resources>

@@ -382,4 +382,11 @@
         <item quantity="one">Zrušená 1 relácia</item>
         <item quantity="other">Zrušených %1$d relácií</item>
     </plurals>
+    <string name="login_title">Prihlásenie</string>
+    <string name="login_section_methods">Spôsoby prihlásenia</string>
+    <string name="login_method_email">E-mailový kód</string>
+    <string name="login_method_passkey">Prístupový kľúč</string>
+    <string name="login_method_totp">Autentifikačná aplikácia</string>
+    <string name="login_method_oauth">Prihlásenie tretej strany</string>
+    <string name="login_method_recovery">Kódy na obnovenie</string>
 </resources>

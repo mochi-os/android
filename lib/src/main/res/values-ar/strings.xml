@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">ما إذا كان بإمكان الآخرين العثور عليك في الدليل.</string>
     <string name="game_chat_load_more">تحميل الرسائل الأقدم</string>
     <string name="game_chat_move_played">%1$s لعب %2$s</string>
-
+    <string name="stepup_title">أكّد أنك أنت</string>
+    <string name="stepup_description">هذا تغيير أمني على حسابك. تحقق من أنك أنت للمتابعة.</string>
+    <string name="stepup_email_label">رمز البريد الإلكتروني</string>
+    <string name="stepup_email_placeholder">أدخل الرمز من بريدك الإلكتروني</string>
+    <string name="stepup_totp_label">رمز المصادقة</string>
+    <string name="stepup_totp_placeholder">أدخل رمز تطبيق المصادقة</string>
+    <string name="stepup_passkey_label">مفتاح المرور</string>
+    <string name="stepup_use_passkey">استخدم مفتاح المرور الخاص بك</string>
+    <string name="stepup_send_email">إرسال بريد إلكتروني</string>
+    <string name="stepup_resend_email">إعادة إرسال البريد الإلكتروني</string>
+    <string name="stepup_verify">تحقق</string>
+    <string name="stepup_continue_with">المتابعة باستخدام %1$s</string>
+    <string name="stepup_error_start">تعذّر بدء إعادة المصادقة. يرجى المحاولة مرة أخرى.</string>
+    <string name="stepup_error_code">هذا الرمز غير صحيح أو انتهت صلاحيته.</string>
+    <string name="stepup_error_passkey">فشل التحقق من مفتاح المرور. يرجى المحاولة مرة أخرى.</string>
+    <string name="stepup_error_oauth">تعذّر التحقق باستخدام هذا الحساب. يرجى المحاولة مرة أخرى.</string>
 </resources>

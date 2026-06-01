@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">A all eraill ddod o hyd i chi yn y cyfeiriadur.</string>
     <string name="game_chat_load_more">Llwytho negeseuon hŷn</string>
     <string name="game_chat_move_played">Chwaraeodd %1$s %2$s</string>
-
+    <string name="stepup_title">Cadarnhau mai chi sydd yna</string>
+    <string name="stepup_description">Mae hwn yn newid diogelwch i\'ch cyfrif. Gwiriwch mai chi sydd yna i barhau.</string>
+    <string name="stepup_email_label">Cod e-bost</string>
+    <string name="stepup_email_placeholder">Rhowch y cod o\'ch e-bost</string>
+    <string name="stepup_totp_label">Cod dilyswr</string>
+    <string name="stepup_totp_placeholder">Rhowch god eich ap dilysu</string>
+    <string name="stepup_passkey_label">Pasallwedd</string>
+    <string name="stepup_use_passkey">Defnyddiwch eich allwedd mynediad</string>
+    <string name="stepup_send_email">Anfon e-bost</string>
+    <string name="stepup_resend_email">Ailanfon yr e-bost</string>
+    <string name="stepup_verify">Dilysu</string>
+    <string name="stepup_continue_with">Parhau gyda %1$s</string>
+    <string name="stepup_error_start">Methwyd dechrau ailddilysu. Rhowch gynnig arall arni.</string>
+    <string name="stepup_error_code">Mae\'r cod hwnnw\'n anghywir neu wedi dod i ben.</string>
+    <string name="stepup_error_passkey">Methodd dilysu\'r allwedd mynediad. Rhowch gynnig arall arni.</string>
+    <string name="stepup_error_oauth">Methwyd dilysu gyda\'r cyfrif hwnnw. Rhowch gynnig arall arni.</string>
 </resources>

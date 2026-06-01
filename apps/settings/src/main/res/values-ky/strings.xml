@@ -380,4 +380,11 @@
         <item quantity="one">1 сессия жокко чыгарылды</item>
         <item quantity="other">%1$d сессия жокко чыгарылды</item>
     </plurals>
+    <string name="login_title">Кирүү</string>
+    <string name="login_section_methods">Кирүү ыкмалары</string>
+    <string name="login_method_email">Электрондук почта коду</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator колдонмосу</string>
+    <string name="login_method_oauth">Үчүнчү жактын кирүүсү</string>
+    <string name="login_method_recovery">Калыбына келтирүү коддору</string>
 </resources>

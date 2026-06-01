@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">مطلق</string>
     <string name="settings_units_usa">آمریکا</string>
     <string name="profile_privacy_description">اینکه دیگران بتوانند شما را در فهرست پیدا کنند یا خیر.</string>
-
+    <string name="stepup_title">تأیید کنید که خودتان هستید</string>
+    <string name="stepup_description">این یک تغییر امنیتی در حساب شماست. برای ادامه هویت خود را تأیید کنید.</string>
+    <string name="stepup_email_label">کد ایمیل</string>
+    <string name="stepup_email_placeholder">کد دریافتی از ایمیل خود را وارد کنید</string>
+    <string name="stepup_totp_label">کد احراز هویت</string>
+    <string name="stepup_totp_placeholder">کد برنامه احرازکننده هویت خود را وارد کنید</string>
+    <string name="stepup_passkey_label">پسکی</string>
+    <string name="stepup_use_passkey">از کلید عبور خود استفاده کنید</string>
+    <string name="stepup_send_email">ارسال ایمیل</string>
+    <string name="stepup_resend_email">ارسال مجدد ایمیل</string>
+    <string name="stepup_verify">تأیید</string>
+    <string name="stepup_continue_with">ادامه با %1$s</string>
+    <string name="stepup_error_start">شروع احراز هویت مجدد ممکن نشد. لطفاً دوباره تلاش کنید.</string>
+    <string name="stepup_error_code">این کد نادرست است یا منقضی شده است.</string>
+    <string name="stepup_error_passkey">تأیید با کلید عبور ناموفق بود. لطفاً دوباره تلاش کنید.</string>
+    <string name="stepup_error_oauth">تأیید با آن حساب ممکن نشد. لطفاً دوباره تلاش کنید.</string>
 </resources>

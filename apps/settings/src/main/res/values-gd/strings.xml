@@ -382,4 +382,11 @@
         <item quantity="other">Cùl-ghairmte %1$d seiseanan</item>
         <item quantity="two">Cùl-ghairmte %1$d sheisean</item>
     </plurals>
+    <string name="login_title">Clàradh</string>
+    <string name="login_section_methods">Dòighean clàraidh a-steach</string>
+    <string name="login_method_email">Còd puist-d</string>
+    <string name="login_method_passkey">Pasgair</string>
+    <string name="login_method_totp">Aplacaid dhearbhachaidh</string>
+    <string name="login_method_oauth">Soidhnigeadh a-steach treas-phàrtaidh</string>
+    <string name="login_method_recovery">Còdaichean ath-shlànachaidh</string>
 </resources>

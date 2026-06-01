@@ -380,4 +380,11 @@
         <item quantity="one">Tühistatud 1 sessioon</item>
         <item quantity="other">Tühistatud %1$d sessiooni</item>
     </plurals>
+    <string name="login_title">Sisselogimine</string>
+    <string name="login_section_methods">Sisselogimismeetodid</string>
+    <string name="login_method_email">E-posti kood</string>
+    <string name="login_method_passkey">Pääsuvõti</string>
+    <string name="login_method_totp">Autentija rakendus</string>
+    <string name="login_method_oauth">Kolmanda osapoole sisselogimine</string>
+    <string name="login_method_recovery">Taastekoodid</string>
 </resources>

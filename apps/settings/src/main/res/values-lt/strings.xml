@@ -382,4 +382,11 @@
         <item quantity="one">Atšaukta %1$d sesija</item>
         <item quantity="other">Atšaukta %1$d sesijų</item>
     </plurals>
+    <string name="login_title">Prisijungimas</string>
+    <string name="login_section_methods">Prisijungimo būdai</string>
+    <string name="login_method_email">El. pašto kodas</string>
+    <string name="login_method_passkey">Slaptaraktis</string>
+    <string name="login_method_totp">Autentifikatoriaus programėlė</string>
+    <string name="login_method_oauth">Trečiosios šalies prisijungimas</string>
+    <string name="login_method_recovery">Atkūrimo kodai</string>
 </resources>

@@ -381,4 +381,11 @@
         <item quantity="one">1 session révoquée</item>
         <item quantity="other">%1$d sessions révoquées</item>
     </plurals>
+    <string name="login_title">Connexion</string>
+    <string name="login_section_methods">Méthodes de connexion</string>
+    <string name="login_method_email">Code par e-mail</string>
+    <string name="login_method_passkey">Clé d\'accès</string>
+    <string name="login_method_totp">Application d\'authentification</string>
+    <string name="login_method_oauth">Connexion via tiers</string>
+    <string name="login_method_recovery">Codes de récupération</string>
 </resources>

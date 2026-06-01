@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Dicabut %1$d sési</item>
     </plurals>
+    <string name="login_title">Asup</string>
+    <string name="login_section_methods">Cara asup</string>
+    <string name="login_method_email">Kode surélék</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Aplikasi authenticator</string>
+    <string name="login_method_oauth">Asup pihak katilu</string>
+    <string name="login_method_recovery">Kode pamulihan</string>
 </resources>

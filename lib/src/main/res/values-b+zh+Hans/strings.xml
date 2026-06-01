@@ -247,5 +247,20 @@
     <string name="settings_units_usa">美制</string>
     <string name="profile_privacy_description">其他人是否可以在目录中找到您。</string>
     <string name="game_chat_load_more">加载更早的消息</string>
-
+    <string name="stepup_title">确认是您本人</string>
+    <string name="stepup_description">这是对您账户的安全更改。请验证您的身份以继续。</string>
+    <string name="stepup_email_label">邮箱验证码</string>
+    <string name="stepup_email_placeholder">输入电子邮件中的验证码</string>
+    <string name="stepup_totp_label">身份验证码</string>
+    <string name="stepup_totp_placeholder">请输入您的身份验证器代码</string>
+    <string name="stepup_passkey_label">通行密钥</string>
+    <string name="stepup_use_passkey">使用您的通行密钥</string>
+    <string name="stepup_send_email">发送邮件</string>
+    <string name="stepup_resend_email">重新发送邮件</string>
+    <string name="stepup_verify">验证</string>
+    <string name="stepup_continue_with">使用 %1$s 继续</string>
+    <string name="stepup_error_start">无法开始重新验证。请重试。</string>
+    <string name="stepup_error_code">该代码不正确或已过期。</string>
+    <string name="stepup_error_passkey">通行密钥验证失败。请重试。</string>
+    <string name="stepup_error_oauth">无法使用该账户进行验证。请重试。</string>
 </resources>

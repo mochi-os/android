@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Mbatalaké %1$d sesi</item>
     </plurals>
+    <string name="login_title">Login</string>
+    <string name="login_section_methods">Cara mlebu</string>
+    <string name="login_method_email">Kode email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">App authenticator</string>
+    <string name="login_method_oauth">Login pihak katelu</string>
+    <string name="login_method_recovery">Kode pemulihan</string>
 </resources>

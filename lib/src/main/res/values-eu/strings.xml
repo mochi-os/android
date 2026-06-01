@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Absolutua</string>
     <string name="settings_units_usa">AEB</string>
     <string name="profile_privacy_description">Beste batzuek direktorioan aurki zaitzaketen ala ez.</string>
-
+    <string name="stepup_title">Berretsi zu zarela</string>
+    <string name="stepup_description">Hau zure kontuaren segurtasun-aldaketa bat da. Egiaztatu zure nortasuna jarraitzeko.</string>
+    <string name="stepup_email_label">Posta elektronikoko kodea</string>
+    <string name="stepup_email_placeholder">Sartu zure mezu elektronikoko kodea</string>
+    <string name="stepup_totp_label">Autentifikatzaile kodea</string>
+    <string name="stepup_totp_placeholder">Sartu zure autentifikazio-aplikazioaren kodea</string>
+    <string name="stepup_passkey_label">Passkey-a</string>
+    <string name="stepup_use_passkey">Erabili zure sarbide-gakoa</string>
+    <string name="stepup_send_email">Bidali emaila</string>
+    <string name="stepup_resend_email">Bidali mezua berriro</string>
+    <string name="stepup_verify">Egiaztatu</string>
+    <string name="stepup_continue_with">Jarraitu %1$s erabiliz</string>
+    <string name="stepup_error_start">Ezin izan da berrautentifikazioa hasi. Saiatu berriro.</string>
+    <string name="stepup_error_code">Kode hori okerra da edo iraungi egin da.</string>
+    <string name="stepup_error_passkey">Sarbide-gakoaren egiaztapenak huts egin du. Saiatu berriro.</string>
+    <string name="stepup_error_oauth">Ezin izan da kontu horrekin egiaztatu. Saiatu berriro.</string>
 </resources>

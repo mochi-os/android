@@ -19,6 +19,14 @@
 
     <!-- Account -->
     <string name="account_title">Account</string>
+    <!-- Login screen (per-user login factors; the tri-state grid reuses system_settings_state_*) -->
+    <string name="login_title">Login</string>
+    <string name="login_section_methods">Login methods</string>
+    <string name="login_method_email">Email code</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Third-party login</string>
+    <string name="login_method_recovery">Recovery codes</string>
     <string name="account_section_identity">Identity</string>
     <string name="account_identity_name">Name</string>
     <string name="account_identity_username">Username</string>

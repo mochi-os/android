@@ -247,5 +247,20 @@
     <string name="settings_units_usa">آمريڪي</string>
     <string name="profile_privacy_description">ٻيا توھان کي ڊائريڪٽري ۾ ڳولي سگھن ٿا يا نه.</string>
     <string name="game_chat_load_more">پراڻا پيغام لوڊ ڪريو</string>
-
+    <string name="stepup_title">تصديق ڪريو ته اهو توهان آهيو</string>
+    <string name="stepup_description">هي توهان جي اڪائونٽ ۾ هڪ سيڪيورٽي تبديلي آهي. جاري رکڻ لاءِ تصديق ڪريو ته اهو توهان آهيو.</string>
+    <string name="stepup_email_label">اي ميل ڪوڊ</string>
+    <string name="stepup_email_placeholder">پنھنجي اِيميل مان ڪوڊ داخل ڪريو</string>
+    <string name="stepup_totp_label">Authenticator ڪوڊ</string>
+    <string name="stepup_totp_placeholder">پنهنجو تصديق ڪندڙ ڪوڊ داخل ڪريو</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">پنهنجي پاس ڪي استعمال ڪريو</string>
+    <string name="stepup_send_email">اي ميل موڪليو</string>
+    <string name="stepup_resend_email">اي ميل ٻيهر موڪليو</string>
+    <string name="stepup_verify">تصديق ڪريو</string>
+    <string name="stepup_continue_with">%1$s سان جاري رکو</string>
+    <string name="stepup_error_start">ٻيهر تصديق شروع نه ٿي سگهي. مهرباني ڪري ٻيهر ڪوشش ڪريو.</string>
+    <string name="stepup_error_code">اهو ڪوڊ غلط آهي يا ختم ٿي ويو آهي.</string>
+    <string name="stepup_error_passkey">پاس ڪي جي تصديق ناڪام ٿي. مهرباني ڪري ٻيهر ڪوشش ڪريو.</string>
+    <string name="stepup_error_oauth">ان اڪائونٽ سان تصديق نه ٿي سگهي. مهرباني ڪري ٻيهر ڪوشش ڪريو.</string>
 </resources>

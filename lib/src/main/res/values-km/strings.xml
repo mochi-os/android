@@ -247,5 +247,20 @@
     <string name="settings_units_usa">សហរដ្ឋអាមេរិក</string>
     <string name="profile_privacy_description">ថាតើអ្នកដទៃអាចស្វែងរកអ្នកនៅក្នុងថតបញ្ជីបានឬទេ។</string>
     <string name="game_chat_load_more">ផ្ទុកសារចាស់ៗ</string>
-
+    <string name="stepup_title">បញ្ជាក់ថាជាអ្នក</string>
+    <string name="stepup_description">នេះគឺជាការផ្លាស់ប្ដូរសុវត្ថិភាពចំពោះគណនីរបស់អ្នក។ ផ្ទៀងផ្ទាត់ថាជាអ្នកដើម្បីបន្ត។</string>
+    <string name="stepup_email_label">កូដអ៊ីមែល</string>
+    <string name="stepup_email_placeholder">បញ្ចូលកូដពីអ៊ីមែលរបស់អ្នក</string>
+    <string name="stepup_totp_label">កូដ Authenticator</string>
+    <string name="stepup_totp_placeholder">បញ្ចូលកូដ authenticator របស់អ្នក</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">ប្រើ passkey របស់អ្នក</string>
+    <string name="stepup_send_email">ផ្ញើអ៊ីមែល</string>
+    <string name="stepup_resend_email">ផ្ញើអ៊ីមែលឡើងវិញ</string>
+    <string name="stepup_verify">ផ្ទៀងផ្ទាត់</string>
+    <string name="stepup_continue_with">បន្តជាមួយ %1$s</string>
+    <string name="stepup_error_start">មិនអាចចាប់ផ្ដើមការផ្ទៀងផ្ទាត់ឡើងវិញបានទេ។ សូមព្យាយាមម្ដងទៀត។</string>
+    <string name="stepup_error_code">កូដនោះមិនត្រឹមត្រូវ ឬផុតកំណត់ហើយ។</string>
+    <string name="stepup_error_passkey">ការផ្ទៀងផ្ទាត់ passkey បានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។</string>
+    <string name="stepup_error_oauth">មិនអាចផ្ទៀងផ្ទាត់ជាមួយគណនីនោះបានទេ។ សូមព្យាយាមម្តងទៀត។</string>
 </resources>

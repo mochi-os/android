@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Hetéva</string>
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">Ojekuaa térã nahániri ambuéva ikatútapa nde juhu tysýipe.</string>
-
+    <string name="stepup_title">Emoneʼẽ nde haʼeha</string>
+    <string name="stepup_description">Kóva haʼe peteĩ ñemoambue seguridad rehegua nde kuentápe. Emyatã nde haʼeha rehegua resegui hag̃ua.</string>
+    <string name="stepup_email_label">Código email</string>
+    <string name="stepup_email_placeholder">Emoinge code ne email-pegua</string>
+    <string name="stepup_totp_label">Authenticator código</string>
+    <string name="stepup_totp_placeholder">Emoinge nde código autenticador rehegua</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Eipuru nde passkey</string>
+    <string name="stepup_send_email">Emondo email</string>
+    <string name="stepup_resend_email">Embou jey ñe\'ẽveve</string>
+    <string name="stepup_verify">Ehesa\'ỹijo</string>
+    <string name="stepup_continue_with">Eku tenonde %1$s ndive</string>
+    <string name="stepup_error_start">Ndaikatúi oñepyrũ ñemoneʼẽ jey. Eñehaʼã jey.</string>
+    <string name="stepup_error_code">Upe código ndoikoporãi térã hiʼaravoʼimáma.</string>
+    <string name="stepup_error_passkey">Passkey ñemyatã ndoikói. Eñehaʼã jey.</string>
+    <string name="stepup_error_oauth">Ndaikatúi ojehechajey upe mba\'ete ndive. Eha\'ã jey.</string>
 </resources>

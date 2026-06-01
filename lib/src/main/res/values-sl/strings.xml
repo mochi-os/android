@@ -247,5 +247,20 @@
     <string name="settings_units_usa">ZDA</string>
     <string name="profile_privacy_description">Ali vas drugi lahko najdejo v imeniku.</string>
     <string name="game_chat_load_more">Naloži starejša sporočila</string>
-
+    <string name="stepup_title">Potrdite, da ste to vi</string>
+    <string name="stepup_description">To je varnostna sprememba vašega računa. Za nadaljevanje potrdite, da ste to vi.</string>
+    <string name="stepup_email_label">E-poštna koda</string>
+    <string name="stepup_email_placeholder">Vnesite kodo iz e-pošte</string>
+    <string name="stepup_totp_label">Koda avtentikacije</string>
+    <string name="stepup_totp_placeholder">Vnesite kodo iz aplikacije za preverjanje</string>
+    <string name="stepup_passkey_label">Geslo-ključ</string>
+    <string name="stepup_use_passkey">Uporabite svoj ključ za dostop</string>
+    <string name="stepup_send_email">Pošlji e-pošto</string>
+    <string name="stepup_resend_email">Znova pošlji e-pošto</string>
+    <string name="stepup_verify">Preveri</string>
+    <string name="stepup_continue_with">Nadaljuj z %1$s</string>
+    <string name="stepup_error_start">Ponovnega preverjanja ni bilo mogoče začeti. Poskusite znova.</string>
+    <string name="stepup_error_code">Ta koda je napačna ali je potekla.</string>
+    <string name="stepup_error_passkey">Preverjanje ključa za dostop ni uspelo. Poskusite znova.</string>
+    <string name="stepup_error_oauth">S tem računom ni bilo mogoče preveriti. Poskusite znova.</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="settings_units_usa">SHBA</string>
     <string name="profile_privacy_description">Nëse të tjerët mund t\'ju gjejnë në direktori.</string>
     <string name="game_chat_load_more">Ngarko mesazhet më të vjetra</string>
-
+    <string name="stepup_title">Konfirmoni se jeni ju</string>
+    <string name="stepup_description">Ky është një ndryshim sigurie në llogarinë tuaj. Verifikoni se jeni ju për të vazhduar.</string>
+    <string name="stepup_email_label">Kodi me email</string>
+    <string name="stepup_email_placeholder">Vendosni kodin nga email-i juaj</string>
+    <string name="stepup_totp_label">Kodi i autentikuesit</string>
+    <string name="stepup_totp_placeholder">Vendosni kodin e aplikacionit të vërtetimit</string>
+    <string name="stepup_passkey_label">Kyç</string>
+    <string name="stepup_use_passkey">Përdorni çelësin tuaj të hyrjes</string>
+    <string name="stepup_send_email">Dërgo email</string>
+    <string name="stepup_resend_email">Ridërgo email-in</string>
+    <string name="stepup_verify">Verifiko</string>
+    <string name="stepup_continue_with">Vazhdo me %1$s</string>
+    <string name="stepup_error_start">Rivërtetimi nuk mund të niste. Ju lutemi provoni përsëri.</string>
+    <string name="stepup_error_code">Ai kod është i pasaktë ose ka skaduar.</string>
+    <string name="stepup_error_passkey">Verifikimi i çelësit të hyrjes dështoi. Ju lutemi provoni përsëri.</string>
+    <string name="stepup_error_oauth">Nuk u verifikua dot me atë llogari. Ju lutemi provoni përsëri.</string>
 </resources>

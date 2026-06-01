@@ -380,4 +380,11 @@
         <item quantity="one">1 sessiya ləğv edildi</item>
         <item quantity="other">%1$d sessiya ləğv edildi</item>
     </plurals>
+    <string name="login_title">Daxil ol</string>
+    <string name="login_section_methods">Giriş üsulları</string>
+    <string name="login_method_email">E-poçt kodu</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator tətbiqi</string>
+    <string name="login_method_oauth">Bu CRM silinmiş ola bilər və ya sizin ona girişiniz yoxdur.</string>
+    <string name="login_method_recovery">Bərpa kodları</string>
 </resources>

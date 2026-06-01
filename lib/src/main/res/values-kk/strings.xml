@@ -247,5 +247,20 @@
     <string name="settings_units_usa">АҚШ</string>
     <string name="profile_privacy_description">Басқалар сізді каталогтан таба ала ма.</string>
     <string name="game_chat_load_more">Ескі хабарларды жүктеу</string>
-
+    <string name="stepup_title">Бұл сіз екеніңізді растаңыз</string>
+    <string name="stepup_description">Бұл — тіркелгіңіздің қауіпсіздік өзгерісі. Жалғастыру үшін бұл сіз екеніңізді растаңыз.</string>
+    <string name="stepup_email_label">Электрондық пошта коды</string>
+    <string name="stepup_email_placeholder">Электрондық поштаңыздағы кодты енгізіңіз</string>
+    <string name="stepup_totp_label">Authenticator коды</string>
+    <string name="stepup_totp_placeholder">Authenticator кодын енгізіңіз</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Passkey пайдаланыңыз</string>
+    <string name="stepup_send_email">Электрондық пошта жіберу</string>
+    <string name="stepup_resend_email">Хатты қайта жіберу</string>
+    <string name="stepup_verify">Тексеру</string>
+    <string name="stepup_continue_with">%1$s арқылы жалғастыру</string>
+    <string name="stepup_error_start">Қайта аутентификацияны бастау мүмкін болмады. Қайталап көріңіз.</string>
+    <string name="stepup_error_code">Бұл код қате немесе мерзімі өткен.</string>
+    <string name="stepup_error_passkey">Passkey тексеруі сәтсіз аяқталды. Қайталап көріңіз.</string>
+    <string name="stepup_error_oauth">Бұл тіркелгі арқылы тексеру мүмкін болмады. Қайталап көріңіз.</string>
 </resources>

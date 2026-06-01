@@ -380,4 +380,11 @@
         <item quantity="one">1 saio baliogabetuta</item>
         <item quantity="other">%1$d saio baliogabetuta</item>
     </plurals>
+    <string name="login_title">Saio-hasiera</string>
+    <string name="login_section_methods">Saio-hasiera metodoak</string>
+    <string name="login_method_email">Posta elektronikoko kodea</string>
+    <string name="login_method_passkey">Passkey-a</string>
+    <string name="login_method_totp">Autentifikatzaile aplikazioa</string>
+    <string name="login_method_oauth">Hirugarrenen saio-hasiera</string>
+    <string name="login_method_recovery">Berreskuratze-kodeak</string>
 </resources>

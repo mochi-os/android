@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">का दोसरा लोग रउआ के निर्देशिका में खोज सके।</string>
     <string name="game_chat_load_more">पुरान संदेश लोड करीं</string>
     <string name="game_chat_move_played">%1$s %2$s खेलल</string>
-
+    <string name="stepup_title">पुष्टि करीं कि ई रउआ बानी</string>
+    <string name="stepup_description">ई रउआ खाता में सुरक्षा बदलाव बा। आगे बढ़े खातिर पुष्टि करीं कि ई रउआ बानी।</string>
+    <string name="stepup_email_label">ईमेल कोड</string>
+    <string name="stepup_email_placeholder">आपन ईमेल से आइल कोड डालीं</string>
+    <string name="stepup_totp_label">Authenticator कोड</string>
+    <string name="stepup_totp_placeholder">आपन प्रमाणक कोड डालीं</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">आपन पासकी इस्तेमाल करीं</string>
+    <string name="stepup_send_email">ईमेल भेजीं</string>
+    <string name="stepup_resend_email">ईमेल फिर से भेजीं</string>
+    <string name="stepup_verify">सत्यापित करीं</string>
+    <string name="stepup_continue_with">%1$s के साथ आगे बढ़ीं</string>
+    <string name="stepup_error_start">फिर से प्रमाणीकरण शुरू ना हो सकल। कृपया फिर से कोशिश करीं।</string>
+    <string name="stepup_error_code">ऊ कोड गलत बा भा ओकर मियाद खतम हो गइल बा।</string>
+    <string name="stepup_error_passkey">पासकी सत्यापन विफल हो गइल। कृपया फिर से कोशिश करीं।</string>
+    <string name="stepup_error_oauth">ओह खाता से सत्यापन ना हो सकल। कृपया फेर से कोसिस करीं।</string>
 </resources>

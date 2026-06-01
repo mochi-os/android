@@ -380,4 +380,11 @@
         <item quantity="one">1 sessie herroep</item>
         <item quantity="other">%1$d sessies herroep</item>
     </plurals>
+    <string name="login_title">Meld aan</string>
+    <string name="login_section_methods">Aanmeldmetodes</string>
+    <string name="login_method_email">E-poskode</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Verifikasie-app</string>
+    <string name="login_method_oauth">Derde-party aanmelding</string>
+    <string name="login_method_recovery">Herstelkodes</string>
 </resources>

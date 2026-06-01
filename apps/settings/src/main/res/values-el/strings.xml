@@ -380,4 +380,11 @@
         <item quantity="one">1 συνεδρία ανακλήθηκε</item>
         <item quantity="other">%1$d συνεδρίες ανακλήθηκαν</item>
     </plurals>
+    <string name="login_title">Σύνδεση</string>
+    <string name="login_section_methods">Μέθοδοι σύνδεσης</string>
+    <string name="login_method_email">Κωδικός email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Εφαρμογή ελέγχου ταυτότητας</string>
+    <string name="login_method_oauth">Σύνδεση τρίτου παρόχου</string>
+    <string name="login_method_recovery">Κωδικοί ανάκτησης</string>
 </resources>

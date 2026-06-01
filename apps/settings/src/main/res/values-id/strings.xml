@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d sesi dicabut</item>
     </plurals>
+    <string name="login_title">Masuk</string>
+    <string name="login_section_methods">Metode masuk</string>
+    <string name="login_method_email">Kode email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Aplikasi authenticator</string>
+    <string name="login_method_oauth">Masuk pihak ketiga</string>
+    <string name="login_method_recovery">Kode pemulihan</string>
 </resources>

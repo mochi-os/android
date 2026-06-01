@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">已撤销 %1$d 个会话</item>
     </plurals>
+    <string name="login_title">登录</string>
+    <string name="login_section_methods">登录方式</string>
+    <string name="login_method_email">邮箱验证码</string>
+    <string name="login_method_passkey">通行密钥</string>
+    <string name="login_method_totp">身份验证器应用</string>
+    <string name="login_method_oauth">第三方登录</string>
+    <string name="login_method_recovery">恢复码</string>
 </resources>

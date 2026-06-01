@@ -380,4 +380,11 @@
         <item quantity="one">1 sesyon revoke</item>
         <item quantity="other">%1$d sesyon revoke</item>
     </plurals>
+    <string name="login_title">Login</string>
+    <string name="login_section_methods">Metòd koneksyon</string>
+    <string name="login_method_email">Kòd imèl</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">App otantifikatè</string>
+    <string name="login_method_oauth">Koneksyon twazyèm pati</string>
+    <string name="login_method_recovery">Kòd rekiperasyon</string>
 </resources>

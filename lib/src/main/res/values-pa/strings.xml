@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">ਕੀ ਹੋਰ ਲੋਕ ਤੁਹਾਨੂੰ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਲੱਭ ਸਕਦੇ ਹਨ।</string>
     <string name="game_chat_load_more">ਪੁਰਾਣੇ ਸੁਨੇਹੇ ਲੋਡ ਕਰੋ</string>
-
+    <string name="stepup_title">ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਇਹ ਤੁਸੀਂ ਹੋ</string>
+    <string name="stepup_description">ਇਹ ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚ ਸੁਰੱਖਿਆ ਤਬਦੀਲੀ ਹੈ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਇਹ ਤੁਸੀਂ ਹੋ।</string>
+    <string name="stepup_email_label">ਈਮੇਲ ਕੋਡ</string>
+    <string name="stepup_email_placeholder">ਆਪਣੀ ਈਮੇਲ ਵਿੱਚੋਂ ਕੋਡ ਦਾਖਲ ਕਰੋ</string>
+    <string name="stepup_totp_label">ਪ੍ਰਮਾਣਕ ਕੋਡ</string>
+    <string name="stepup_totp_placeholder">ਆਪਣਾ ਪ੍ਰਮਾਣੀਕਰਤਾ ਕੋਡ ਦਾਖਲ ਕਰੋ</string>
+    <string name="stepup_passkey_label">ਪਾਸਕੀ</string>
+    <string name="stepup_use_passkey">ਆਪਣੀ ਪਾਸਕੀ ਵਰਤੋ</string>
+    <string name="stepup_send_email">ਈਮੇਲ ਭੇਜੋ</string>
+    <string name="stepup_resend_email">ਈਮੇਲ ਦੁਬਾਰਾ ਭੇਜੋ</string>
+    <string name="stepup_verify">ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string name="stepup_continue_with">%1$s ਨਾਲ ਜਾਰੀ ਰੱਖੋ</string>
+    <string name="stepup_error_start">ਮੁੜ-ਪ੍ਰਮਾਣੀਕਰਨ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="stepup_error_code">ਉਹ ਕੋਡ ਗਲਤ ਹੈ ਜਾਂ ਇਸ ਦੀ ਮਿਆਦ ਖਤਮ ਹੋ ਗਈ ਹੈ।</string>
+    <string name="stepup_error_passkey">ਪਾਸਕੀ ਤਸਦੀਕ ਅਸਫਲ ਰਹੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="stepup_error_oauth">ਉਸ ਖਾਤੇ ਨਾਲ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
 </resources>

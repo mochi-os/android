@@ -247,5 +247,20 @@
     <string name="settings_units_usa">EE.UU.</string>
     <string name="profile_privacy_description">Hukkuna directoriopi tariyta atisunkichu icha mana.</string>
     <string name="game_chat_load_more">Ñawpaq willaykunata kachariy</string>
-
+    <string name="stepup_title">Qan kasqaykita takyachiy</string>
+    <string name="stepup_description">Kayqa cuentaykipi amachay tikraymi. Qan kasqaykita takyachiy qatinaykipaq.</string>
+    <string name="stepup_email_label">Email código</string>
+    <string name="stepup_email_placeholder">Email nikiymanta hamuq código yaykuchiy</string>
+    <string name="stepup_totp_label">Authenticator código</string>
+    <string name="stepup_totp_placeholder">Takyachiqniykiq codigonta yaykuchiy</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Yaykuna llaveykita llamk\'achiy</string>
+    <string name="stepup_send_email">Email apachiy</string>
+    <string name="stepup_resend_email">Correota kutiy apachiy</string>
+    <string name="stepup_verify">Qhaway</string>
+    <string name="stepup_continue_with">%1$s wan catiy</string>
+    <string name="stepup_error_start">Kutin yaykuy mana qallariy atikurqanchu. Ama hina kaspa watiqmanta ruway.</string>
+    <string name="stepup_error_code">Chay codigoqa mana allinchu utaq pisipasqañam.</string>
+    <string name="stepup_error_passkey">Yaykuna llaveq takyachiynin mana atikurqanchu. Ama hina kaspa watiqmanta ruway.</string>
+    <string name="stepup_error_oauth">Chay cuentawanqa mana takyachiyta atikurqachu. Ama hina kaspa watiqmanta llamk\'apuy.</string>
 </resources>

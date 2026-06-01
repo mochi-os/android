@@ -380,4 +380,11 @@
         <item quantity="one">1 сеанс қайтарып алынды</item>
         <item quantity="other">%1$d сеанс қайтарып алынды</item>
     </plurals>
+    <string name="login_title">Кіру</string>
+    <string name="login_section_methods">Кіру әдістері</string>
+    <string name="login_method_email">Электрондық пошта коды</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator қолданбасы</string>
+    <string name="login_method_oauth">Үшінші тарап арқылы кіру</string>
+    <string name="login_method_recovery">Қалпына келтіру кодтары</string>
 </resources>

@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d개의 세션이 취소되었습니다</item>
     </plurals>
+    <string name="login_title">로그인</string>
+    <string name="login_section_methods">로그인 방법</string>
+    <string name="login_method_email">이메일 코드</string>
+    <string name="login_method_passkey">패스키</string>
+    <string name="login_method_totp">인증 앱</string>
+    <string name="login_method_oauth">타사 로그인</string>
+    <string name="login_method_recovery">복구 코드</string>
 </resources>

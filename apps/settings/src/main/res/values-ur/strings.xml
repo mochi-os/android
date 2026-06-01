@@ -380,4 +380,11 @@
         <item quantity="one">1 سیشن منسوخ کیا</item>
         <item quantity="other">%1$d سیشنز منسوخ کیے</item>
     </plurals>
+    <string name="login_title">لاگ ان</string>
+    <string name="login_section_methods">لاگ ان کے طریقے</string>
+    <string name="login_method_email">ای میل کوڈ</string>
+    <string name="login_method_passkey">passkey</string>
+    <string name="login_method_totp">Authenticator ایپ</string>
+    <string name="login_method_oauth">تھرڈ پارٹی لاگ ان</string>
+    <string name="login_method_recovery">recovery کوڈز</string>
 </resources>

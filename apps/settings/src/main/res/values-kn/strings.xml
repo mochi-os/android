@@ -380,4 +380,11 @@
         <item quantity="one">1 ಸೆಷನ್ ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
         <item quantity="other">%1$d ಸೆಷನ್‌ಗಳನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</item>
     </plurals>
+    <string name="login_title">ಲಾಗಿನ್</string>
+    <string name="login_section_methods">ಲಾಗಿನ್ ವಿಧಾನಗಳು</string>
+    <string name="login_method_email">ಇಮೇಲ್ ಕೋಡ್</string>
+    <string name="login_method_passkey">ಪಾಸ್‌ಕೀ</string>
+    <string name="login_method_totp">Authenticator ಆ್ಯಪ್</string>
+    <string name="login_method_oauth">ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಲಾಗಿನ್</string>
+    <string name="login_method_recovery">ರಿಕವರಿ ಕೋಡ್‌ಗಳು</string>
 </resources>

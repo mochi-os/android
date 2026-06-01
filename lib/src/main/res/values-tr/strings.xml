@@ -247,5 +247,20 @@
     <string name="settings_units_usa">ABD</string>
     <string name="profile_privacy_description">Başkalarının sizi dizinde bulup bulamayacağı.</string>
     <string name="game_chat_load_more">Daha eski mesajları yükle</string>
-
+    <string name="stepup_title">Siz olduğunuzu doğrulayın</string>
+    <string name="stepup_description">Bu, hesabınızda yapılan bir güvenlik değişikliğidir. Devam etmek için siz olduğunuzu doğrulayın.</string>
+    <string name="stepup_email_label">E-posta kodu</string>
+    <string name="stepup_email_placeholder">E-postanızdaki kodu girin</string>
+    <string name="stepup_totp_label">Authenticator kodu</string>
+    <string name="stepup_totp_placeholder">Kimlik doğrulayıcı kodunuzu girin</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Geçiş anahtarınızı kullanın</string>
+    <string name="stepup_send_email">E-posta gönder</string>
+    <string name="stepup_resend_email">E-postayı yeniden gönder</string>
+    <string name="stepup_verify">Doğrula</string>
+    <string name="stepup_continue_with">%1$s ile devam et</string>
+    <string name="stepup_error_start">Yeniden kimlik doğrulama başlatılamadı. Lütfen tekrar deneyin.</string>
+    <string name="stepup_error_code">Bu kod yanlış veya süresi dolmuş.</string>
+    <string name="stepup_error_passkey">Geçiş anahtarı doğrulaması başarısız oldu. Lütfen tekrar deneyin.</string>
+    <string name="stepup_error_oauth">Bu hesapla doğrulama yapılamadı. Lütfen tekrar deneyin.</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="settings_units_usa">JAV</string>
     <string name="profile_privacy_description">Ar kiti gali jus rasti kataloge.</string>
     <string name="game_chat_load_more">Įkelti senesnes žinutes</string>
-
+    <string name="stepup_title">Patvirtinkite, kad tai jūs</string>
+    <string name="stepup_description">Tai jūsų paskyros saugumo pakeitimas. Norėdami tęsti, patvirtinkite, kad tai jūs.</string>
+    <string name="stepup_email_label">El. pašto kodas</string>
+    <string name="stepup_email_placeholder">Įveskite kodą iš savo el. laiško</string>
+    <string name="stepup_totp_label">Autentifikatoriaus kodas</string>
+    <string name="stepup_totp_placeholder">Įveskite autentifikatoriaus kodą</string>
+    <string name="stepup_passkey_label">Slaptaraktis</string>
+    <string name="stepup_use_passkey">Naudokite savo slaptaraktį</string>
+    <string name="stepup_send_email">Siųsti el. laišką</string>
+    <string name="stepup_resend_email">Siųsti el. laišką dar kartą</string>
+    <string name="stepup_verify">Patvirtinti</string>
+    <string name="stepup_continue_with">Tęsti su %1$s</string>
+    <string name="stepup_error_start">Nepavyko pradėti pakartotinio tapatybės patvirtinimo. Bandykite dar kartą.</string>
+    <string name="stepup_error_code">Šis kodas neteisingas arba nebegalioja.</string>
+    <string name="stepup_error_passkey">Slaptarakčio patvirtinimas nepavyko. Bandykite dar kartą.</string>
+    <string name="stepup_error_oauth">Nepavyko patvirtinti su ta paskyra. Bandykite dar kartą.</string>
 </resources>

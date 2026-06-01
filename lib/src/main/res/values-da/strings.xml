@@ -249,5 +249,20 @@
     <string name="settings_timestamp_absolute">Absolut</string>
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">Om andre kan finde dig i kataloget.</string>
-
+    <string name="stepup_title">Bekræft, at det er dig</string>
+    <string name="stepup_description">Dette er en sikkerhedsændring af din konto. Bekræft, at det er dig, for at fortsætte.</string>
+    <string name="stepup_email_label">E-mailkode</string>
+    <string name="stepup_email_placeholder">Indtast koden fra din e-mail</string>
+    <string name="stepup_totp_label">Authenticator-kode</string>
+    <string name="stepup_totp_placeholder">Indtast din autentificeringskode</string>
+    <string name="stepup_passkey_label">Adgangsnøgle</string>
+    <string name="stepup_use_passkey">Brug din adgangsnøgle</string>
+    <string name="stepup_send_email">Send e-mail</string>
+    <string name="stepup_resend_email">Send e-mail igen</string>
+    <string name="stepup_verify">Verificer</string>
+    <string name="stepup_continue_with">Fortsæt med %1$s</string>
+    <string name="stepup_error_start">Kunne ikke starte gentaget godkendelse. Prøv igen.</string>
+    <string name="stepup_error_code">Koden er forkert eller udløbet.</string>
+    <string name="stepup_error_passkey">Verificering med adgangsnøgle mislykkedes. Prøv igen.</string>
+    <string name="stepup_error_oauth">Kunne ikke verificere med den konto. Prøv venligst igen.</string>
 </resources>

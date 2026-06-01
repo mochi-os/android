@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Absoli</string>
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">Si lòt moun ka jwenn ou nan anyè a.</string>
-
+    <string name="stepup_title">Konfime se ou menm</string>
+    <string name="stepup_description">Sa a se yon chanjman sekirite nan kont ou. Verifye se ou menm pou kontinye.</string>
+    <string name="stepup_email_label">Kòd imèl</string>
+    <string name="stepup_email_placeholder">Antre kòd la ki nan imel ou</string>
+    <string name="stepup_totp_label">Kòd otantifikatè</string>
+    <string name="stepup_totp_placeholder">Antre kòd otantifikatè ou</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Sèvi ak passkey ou</string>
+    <string name="stepup_send_email">Voye imèl</string>
+    <string name="stepup_resend_email">Voye imèl la ankò</string>
+    <string name="stepup_verify">Verifye</string>
+    <string name="stepup_continue_with">Kontinye ak %1$s</string>
+    <string name="stepup_error_start">Nou pa t kapab kòmanse re-otantifikasyon an. Tanpri eseye ankò.</string>
+    <string name="stepup_error_code">Kòd sa a pa kòrèk oswa li ekspire.</string>
+    <string name="stepup_error_passkey">Verifikasyon passkey la echwe. Tanpri eseye ankò.</string>
+    <string name="stepup_error_oauth">Nou pa t kapab verifye ak kont sa a. Tanpri eseye ankò.</string>
 </resources>

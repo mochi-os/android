@@ -380,4 +380,11 @@
         <item quantity="one">Yeroo turtii 1 kaafame</item>
         <item quantity="other">Yeroowwan turtii %1$d kaafaman</item>
     </plurals>
+    <string name="login_title">Galmaa\'uu</string>
+    <string name="login_section_methods">Mala seenii</string>
+    <string name="login_method_email">Koodii imeelii</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Appii mirkaneessaa</string>
+    <string name="login_method_oauth">Galaa\'iinsa qaama sadaffaa</string>
+    <string name="login_method_recovery">Koodiwwan deebii</string>
 </resources>

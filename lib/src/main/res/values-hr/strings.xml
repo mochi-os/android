@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Apsolutno</string>
     <string name="settings_units_usa">SAD</string>
     <string name="profile_privacy_description">Mogu li vas drugi pronaći u imeniku.</string>
-
+    <string name="stepup_title">Potvrdite da ste to vi</string>
+    <string name="stepup_description">Ovo je sigurnosna promjena na vašem računu. Potvrdite svoj identitet za nastavak.</string>
+    <string name="stepup_email_label">Kod e-pošte</string>
+    <string name="stepup_email_placeholder">Unesite kôd iz svoje e-pošte</string>
+    <string name="stepup_totp_label">Kod autentifikatora</string>
+    <string name="stepup_totp_placeholder">Unesite kôd iz aplikacije za autentifikaciju</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Upotrijebite svoj pristupni ključ</string>
+    <string name="stepup_send_email">Pošalji e-poštu</string>
+    <string name="stepup_resend_email">Ponovno pošalji e-poštu</string>
+    <string name="stepup_verify">Provjeri</string>
+    <string name="stepup_continue_with">Nastavi s %1$s</string>
+    <string name="stepup_error_start">Pokretanje ponovne autentifikacije nije uspjelo. Pokušajte ponovno.</string>
+    <string name="stepup_error_code">Taj kôd nije ispravan ili je istekao.</string>
+    <string name="stepup_error_passkey">Provjera pristupnog ključa nije uspjela. Pokušajte ponovno.</string>
+    <string name="stepup_error_oauth">Provjera s tim računom nije uspjela. Pokušajte ponovno.</string>
 </resources>

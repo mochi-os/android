@@ -380,4 +380,11 @@
         <item quantity="one">U revokua 1 sesion</item>
         <item quantity="other">U revokuan %1$d sesione</item>
     </plurals>
+    <string name="login_title">Kyçja</string>
+    <string name="login_section_methods">Mënyrat e hyrjes</string>
+    <string name="login_method_email">Kodi me email</string>
+    <string name="login_method_passkey">Kyç</string>
+    <string name="login_method_totp">Aplikacion autentikues</string>
+    <string name="login_method_oauth">Hyrje me palë të tretë</string>
+    <string name="login_method_recovery">Kodet e rikuperimit</string>
 </resources>

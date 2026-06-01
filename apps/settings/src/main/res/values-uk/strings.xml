@@ -382,4 +382,11 @@
         <item quantity="one">Відкликано %1$d сесію</item>
         <item quantity="other">Відкликано %1$d сесії</item>
     </plurals>
+    <string name="login_title">Вхід</string>
+    <string name="login_section_methods">Способи входу</string>
+    <string name="login_method_email">Код електронної пошти</string>
+    <string name="login_method_passkey">Ключ доступу</string>
+    <string name="login_method_totp">Застосунок-автентифікатор</string>
+    <string name="login_method_oauth">Вхід через сторонні сервіси</string>
+    <string name="login_method_recovery">Резервні коди</string>
 </resources>

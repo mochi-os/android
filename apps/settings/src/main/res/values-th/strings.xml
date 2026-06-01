@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">เพิกถอน %1$d เซสชัน</item>
     </plurals>
+    <string name="login_title">เข้าสู่ระบบ</string>
+    <string name="login_section_methods">วิธีการเข้าสู่ระบบ</string>
+    <string name="login_method_email">รหัสอีเมล</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">แอป Authenticator</string>
+    <string name="login_method_oauth">เข้าสู่ระบบด้วยบุคคลที่สาม</string>
+    <string name="login_method_recovery">รหัสกู้คืน</string>
 </resources>

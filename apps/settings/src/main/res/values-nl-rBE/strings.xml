@@ -382,4 +382,11 @@
         <item quantity="one">1 sessie ingetrokken</item>
         <item quantity="other">%1$d sessies ingetrokken</item>
     </plurals>
+    <string name="login_title">Inloggen</string>
+    <string name="login_section_methods">Aanmeldmethoden</string>
+    <string name="login_method_email">E-mailcode</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator-app</string>
+    <string name="login_method_oauth">Inloggen via derden</string>
+    <string name="login_method_recovery">Herstelcodes</string>
 </resources>

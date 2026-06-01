@@ -380,4 +380,11 @@
         <item quantity="one">Отменена 1 сесия</item>
         <item quantity="other">Отменени %1$d сесии</item>
     </plurals>
+    <string name="login_title">Вход</string>
+    <string name="login_section_methods">Методи за вход</string>
+    <string name="login_method_email">Имейл код</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator приложение</string>
+    <string name="login_method_oauth">Вход чрез трета страна</string>
+    <string name="login_method_recovery">Кодове за възстановяване</string>
 </resources>

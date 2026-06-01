@@ -247,5 +247,20 @@
     <string name="settings_units_usa">SUA</string>
     <string name="profile_privacy_description">Dacă alții vă pot găsi în director.</string>
     <string name="game_chat_load_more">Încarcă mesajele mai vechi</string>
-
+    <string name="stepup_title">Confirmă că ești tu</string>
+    <string name="stepup_description">Aceasta este o modificare de securitate a contului tău. Confirmă că ești tu pentru a continua.</string>
+    <string name="stepup_email_label">Cod email</string>
+    <string name="stepup_email_placeholder">Introduceți codul din e-mailul dumneavoastră</string>
+    <string name="stepup_totp_label">Cod de autentificare</string>
+    <string name="stepup_totp_placeholder">Introdu codul din aplicația de autentificare</string>
+    <string name="stepup_passkey_label">Cheie de acces</string>
+    <string name="stepup_use_passkey">Folosește cheia de acces</string>
+    <string name="stepup_send_email">Trimite email</string>
+    <string name="stepup_resend_email">Retrimite e-mailul</string>
+    <string name="stepup_verify">Verifică</string>
+    <string name="stepup_continue_with">Continuă cu %1$s</string>
+    <string name="stepup_error_start">Reautentificarea nu a putut fi inițiată. Încearcă din nou.</string>
+    <string name="stepup_error_code">Acel cod este incorect sau a expirat.</string>
+    <string name="stepup_error_passkey">Verificarea cheii de acces a eșuat. Încearcă din nou.</string>
+    <string name="stepup_error_oauth">Nu s-a putut verifica cu acel cont. Încearcă din nou.</string>
 </resources>

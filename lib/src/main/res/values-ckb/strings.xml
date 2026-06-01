@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">ئایا ئەوانی تر دەتوانن لە پێڕستەکەدا بتدۆزنەوە.</string>
     <string name="game_chat_load_more">بارکردنی پەیامە کۆنەکان</string>
     <string name="game_chat_move_played">%1$s یاری کرد %2$s</string>
-
+    <string name="stepup_title">دڵنیای بکەرەوە کە خۆتیت</string>
+    <string name="stepup_description">ئەمە گۆڕانکارییەکی ئاسایشە لە هەژمارەکەت. بۆ بەردەوامبوون پشتڕاست بکەرەوە کە خۆتیت.</string>
+    <string name="stepup_email_label">کۆدی ئیمەیڵ</string>
+    <string name="stepup_email_placeholder">ئەو کۆدە بنووسە کە لە ئیمەیڵەکەتدا هاتووە</string>
+    <string name="stepup_totp_label">کۆدی پشتڕاستکەرەوە</string>
+    <string name="stepup_totp_placeholder">کۆدی ڕاستاندنەکەت بنووسە</string>
+    <string name="stepup_passkey_label">پاسکی</string>
+    <string name="stepup_use_passkey">کلیلی تێپەڕبوونەکەت بەکاربهێنە</string>
+    <string name="stepup_send_email">ئیمەیڵ بنێرە</string>
+    <string name="stepup_resend_email">ئیمەیڵ دووبارە بنێرە</string>
+    <string name="stepup_verify">پشتڕاستبکە</string>
+    <string name="stepup_continue_with">بەردەوامبە بە %1$s</string>
+    <string name="stepup_error_start">نەکرا ڕاستاندنەوە دەست پێ بکات. تکایە دووبارە هەوڵ بدەرەوە.</string>
+    <string name="stepup_error_code">ئەو کۆدە هەڵەیە یان بەسەرچووە.</string>
+    <string name="stepup_error_passkey">پشتڕاستکردنەوەی کلیلی تێپەڕبوون سەرکەوتوو نەبوو. تکایە دووبارە هەوڵ بدەرەوە.</string>
+    <string name="stepup_error_oauth">نەتوانرا بەو هەژمارە پشتڕاست بکرێتەوە. تکایە دووبارە هەوڵ بدەرەوە.</string>
 </resources>

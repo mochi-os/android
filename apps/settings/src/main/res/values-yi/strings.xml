@@ -380,4 +380,11 @@
         <item quantity="one">אָפּגערופֿן 1 סעסיע</item>
         <item quantity="other">אָפּגערופֿן %1$d סעסיעס</item>
     </plurals>
+    <string name="login_title">אַרײַנקום</string>
+    <string name="login_section_methods">אַרײַנגאַנג מעטאָדן</string>
+    <string name="login_method_email">בליצפּאָסט־קאָד</string>
+    <string name="login_method_passkey">פּאַסקיי</string>
+    <string name="login_method_totp">Authenticator אַפּ</string>
+    <string name="login_method_oauth">דריט־פּאַרטיי אַרײַנמעלדונג</string>
+    <string name="login_method_recovery">אומקער קאָדן</string>
 </resources>

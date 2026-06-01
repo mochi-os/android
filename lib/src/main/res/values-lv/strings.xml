@@ -247,5 +247,20 @@
     <string name="settings_units_usa">ASV</string>
     <string name="profile_privacy_description">Vai citi var jūs atrast direktorijā.</string>
     <string name="game_chat_load_more">Ielādēt vecākus ziņojumus</string>
-
+    <string name="stepup_title">Apstipriniet, ka tas esat jūs</string>
+    <string name="stepup_description">Šīs ir jūsu konta drošības izmaiņas. Lai turpinātu, apstipriniet, ka tas esat jūs.</string>
+    <string name="stepup_email_label">E-pasta kods</string>
+    <string name="stepup_email_placeholder">Ievadiet kodu no sava e-pasta</string>
+    <string name="stepup_totp_label">Authenticator kods</string>
+    <string name="stepup_totp_placeholder">Ievadiet autentifikatora kodu</string>
+    <string name="stepup_passkey_label">Piekļuves atslēga</string>
+    <string name="stepup_use_passkey">Izmantojiet savu piekļuves atslēgu</string>
+    <string name="stepup_send_email">Sūtīt e-pastu</string>
+    <string name="stepup_resend_email">Sūtīt e-pastu vēlreiz</string>
+    <string name="stepup_verify">Verificēt</string>
+    <string name="stepup_continue_with">Turpināt ar %1$s</string>
+    <string name="stepup_error_start">Neizdevās sākt atkārtotu autentifikāciju. Lūdzu, mēģiniet vēlreiz.</string>
+    <string name="stepup_error_code">Šis kods ir nepareizs vai tā derīguma termiņš ir beidzies.</string>
+    <string name="stepup_error_passkey">Piekļuves atslēgas pārbaude neizdevās. Lūdzu, mēģiniet vēlreiz.</string>
+    <string name="stepup_error_oauth">Neizdevās verificēt ar šo kontu. Lūdzu, mēģiniet vēlreiz.</string>
 </resources>

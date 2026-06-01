@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">අන් අයට ඔබව නාමාවලියෙහි සොයාගත හැකිද යන්න.</string>
     <string name="game_chat_load_more">පැරණි පණිවිඩ පූරණය කරන්න</string>
-
+    <string name="stepup_title">එය ඔබ බව තහවුරු කරන්න</string>
+    <string name="stepup_description">මෙය ඔබගේ ගිණුමට කරන ආරක්ෂක වෙනසකි. ඉදිරියට යාමට එය ඔබ බව තහවුරු කරන්න.</string>
+    <string name="stepup_email_label">ඊමේල් කේතය</string>
+    <string name="stepup_email_placeholder">ඔබේ විද්‍යුත් තැපෑලෙහි ඇති කේතය ඇතුළු කරන්න</string>
+    <string name="stepup_totp_label">Authenticator කේතය</string>
+    <string name="stepup_totp_placeholder">ඔබගේ සත්‍යාපන කේතය ඇතුළත් කරන්න</string>
+    <string name="stepup_passkey_label">ප්‍රවේශ යතුර</string>
+    <string name="stepup_use_passkey">ඔබගේ මුරයතුර භාවිතා කරන්න</string>
+    <string name="stepup_send_email">ඊමේල් යවන්න</string>
+    <string name="stepup_resend_email">විද්‍යුත් තැපෑල නැවත එවන්න</string>
+    <string name="stepup_verify">සත්‍යාපනය කරන්න</string>
+    <string name="stepup_continue_with">%1$s සමඟ ඉදිරියට යන්න</string>
+    <string name="stepup_error_start">නැවත සත්‍යාපනය ආරම්භ කළ නොහැකි විය. නැවත උත්සාහ කරන්න.</string>
+    <string name="stepup_error_code">එම කේතය වැරදියි හෝ කල් ඉකුත් වී ඇත.</string>
+    <string name="stepup_error_passkey">මුරයතුර සත්‍යාපනය අසාර්ථක විය. නැවත උත්සාහ කරන්න.</string>
+    <string name="stepup_error_oauth">එම ගිණුම සමඟ සත්‍යාපනය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.</string>
 </resources>

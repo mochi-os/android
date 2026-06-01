@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">इतरांना डिरेक्टरीमध्ये तुम्ही सापडू शकता का.</string>
     <string name="game_chat_load_more">जुने संदेश लोड करा</string>
-
+    <string name="stepup_title">तुम्हीच आहात याची खात्री करा</string>
+    <string name="stepup_description">हा तुमच्या खात्यातील सुरक्षा बदल आहे. सुरू ठेवण्यासाठी तुम्हीच आहात याची खात्री करा.</string>
+    <string name="stepup_email_label">ईमेल कोड</string>
+    <string name="stepup_email_placeholder">तुमच्या ईमेलमधील कोड प्रविष्ट करा</string>
+    <string name="stepup_totp_label">प्रमाणीकरण कोड</string>
+    <string name="stepup_totp_placeholder">तुमचा ऑथेंटिकेटर कोड टाका</string>
+    <string name="stepup_passkey_label">पासकी</string>
+    <string name="stepup_use_passkey">तुमची पासकी वापरा</string>
+    <string name="stepup_send_email">ईमेल पाठवा</string>
+    <string name="stepup_resend_email">ईमेल पुन्हा पाठवा</string>
+    <string name="stepup_verify">पडताळा</string>
+    <string name="stepup_continue_with">%1$s सह सुरू ठेवा</string>
+    <string name="stepup_error_start">पुन्हा पडताळणी सुरू करता आली नाही. कृपया पुन्हा प्रयत्न करा.</string>
+    <string name="stepup_error_code">तो कोड चुकीचा आहे किंवा त्याची मुदत संपली आहे.</string>
+    <string name="stepup_error_passkey">पासकी पडताळणी अयशस्वी झाली. कृपया पुन्हा प्रयत्न करा.</string>
+    <string name="stepup_error_oauth">त्या खात्याने पडताळणी करता आली नाही. कृपया पुन्हा प्रयत्न करा.</string>
 </resources>

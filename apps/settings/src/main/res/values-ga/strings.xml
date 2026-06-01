@@ -383,4 +383,11 @@
         <item quantity="other">Cúlghaireadh %1$d seisiúin</item>
         <item quantity="two">Cúlghaireadh %1$d sheisiún</item>
     </plurals>
+    <string name="login_title">Logáil isteach</string>
+    <string name="login_section_methods">Modhanna logála isteach</string>
+    <string name="login_method_email">Cód ríomhphoist</string>
+    <string name="login_method_passkey">Pasluiche</string>
+    <string name="login_method_totp">Aip fhíordheimhnitheora</string>
+    <string name="login_method_oauth">Logáil isteach tríú páirtí</string>
+    <string name="login_method_recovery">Cóid aisghabhála</string>
 </resources>

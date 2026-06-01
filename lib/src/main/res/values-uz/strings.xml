@@ -247,5 +247,20 @@
     <string name="settings_units_usa">AQSh</string>
     <string name="profile_privacy_description">Boshqalar sizni katalogdan topa olishi yoki yo\'qligi.</string>
     <string name="game_chat_load_more">Eski xabarlarni yuklash</string>
-
+    <string name="stepup_title">Bu siz ekanligingizni tasdiqlang</string>
+    <string name="stepup_description">Bu hisobingizdagi xavfsizlik o\'zgarishidir. Davom etish uchun bu siz ekanligingizni tasdiqlang.</string>
+    <string name="stepup_email_label">Email kodi</string>
+    <string name="stepup_email_placeholder">Elektron pochtangizdagi kodni kiriting</string>
+    <string name="stepup_totp_label">Autentifikator kodi</string>
+    <string name="stepup_totp_placeholder">Autentifikator kodingizni kiriting</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Kirish kalitingizdan foydalaning</string>
+    <string name="stepup_send_email">Email yuborish</string>
+    <string name="stepup_resend_email">Xatni qayta yuborish</string>
+    <string name="stepup_verify">Tasdiqlash</string>
+    <string name="stepup_continue_with">%1$s bilan davom etish</string>
+    <string name="stepup_error_start">Qayta autentifikatsiyani boshlab bo\'lmadi. Iltimos, qaytadan urinib ko\'ring.</string>
+    <string name="stepup_error_code">Bu kod noto\'g\'ri yoki muddati o\'tgan.</string>
+    <string name="stepup_error_passkey">Kirish kaliti tasdig\'i muvaffaqiyatsiz tugadi. Iltimos, qaytadan urinib ko\'ring.</string>
+    <string name="stepup_error_oauth">Ushbu hisob bilan tasdiqlab bo‘lmadi. Iltimos, qayta urinib ko‘ring.</string>
 </resources>

@@ -380,4 +380,11 @@
         <item quantity="one">සැසි 1 අවලංගු කළා</item>
         <item quantity="other">සැසි %1$d ක් අවලංගු කළා</item>
     </plurals>
+    <string name="login_title">පිවිසුම</string>
+    <string name="login_section_methods">පිවිසුම් ක්‍රම</string>
+    <string name="login_method_email">ඊමේල් කේතය</string>
+    <string name="login_method_passkey">ප්‍රවේශ යතුර</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">තෙවන පාර්ශවීය පුරනය වීම</string>
+    <string name="login_method_recovery">ප්‍රතිසාධන කේත</string>
 </resources>

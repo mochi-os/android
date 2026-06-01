@@ -247,5 +247,20 @@
     <string name="settings_units_usa">САД</string>
     <string name="profile_privacy_description">Дали другите можат да ве најдат во директориумот.</string>
     <string name="game_chat_load_more">Вчитај постари пораки</string>
-
+    <string name="stepup_title">Потврдете дека сте вие</string>
+    <string name="stepup_description">Ова е безбедносна промена на вашата сметка. Потврдете дека сте вие за да продолжите.</string>
+    <string name="stepup_email_label">Код за е-пошта</string>
+    <string name="stepup_email_placeholder">Внесете го кодот од вашата е-пошта</string>
+    <string name="stepup_totp_label">Код за автентикација</string>
+    <string name="stepup_totp_placeholder">Внесете го кодот од authenticator</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Користете го вашиот passkey</string>
+    <string name="stepup_send_email">Испрати е-пошта</string>
+    <string name="stepup_resend_email">Испрати ја е-поштата повторно</string>
+    <string name="stepup_verify">Потврди</string>
+    <string name="stepup_continue_with">Продолжи со %1$s</string>
+    <string name="stepup_error_start">Не може да се започне повторна автентикација. Обидете се повторно.</string>
+    <string name="stepup_error_code">Тој код е неточен или е истечен.</string>
+    <string name="stepup_error_passkey">Потврдата на passkey не успеа. Обидете се повторно.</string>
+    <string name="stepup_error_oauth">Не успеа верификацијата со таа сметка. Обидете се повторно.</string>
 </resources>

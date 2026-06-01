@@ -247,5 +247,20 @@
     <string name="settings_units_usa">Mỹ</string>
     <string name="profile_privacy_description">Liệu người khác có thể tìm thấy bạn trong danh bạ hay không.</string>
     <string name="game_chat_load_more">Tải tin nhắn cũ hơn</string>
-
+    <string name="stepup_title">Xác nhận đó là bạn</string>
+    <string name="stepup_description">Đây là một thay đổi bảo mật đối với tài khoản của bạn. Hãy xác minh đó là bạn để tiếp tục.</string>
+    <string name="stepup_email_label">Mã email</string>
+    <string name="stepup_email_placeholder">Nhập mã từ email của bạn</string>
+    <string name="stepup_totp_label">Mã xác thực</string>
+    <string name="stepup_totp_placeholder">Nhập mã từ ứng dụng xác thực của bạn</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Dùng mã khóa của bạn</string>
+    <string name="stepup_send_email">Gửi email</string>
+    <string name="stepup_resend_email">Gửi lại email</string>
+    <string name="stepup_verify">Xác minh</string>
+    <string name="stepup_continue_with">Tiếp tục với %1$s</string>
+    <string name="stepup_error_start">Không thể bắt đầu xác thực lại. Vui lòng thử lại.</string>
+    <string name="stepup_error_code">Mã đó không đúng hoặc đã hết hạn.</string>
+    <string name="stepup_error_passkey">Xác minh mã khóa không thành công. Vui lòng thử lại.</string>
+    <string name="stepup_error_oauth">Không thể xác minh bằng tài khoản đó. Vui lòng thử lại.</string>
 </resources>

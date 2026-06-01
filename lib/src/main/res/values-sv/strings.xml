@@ -247,5 +247,20 @@
     <string name="settings_units_usa">USA</string>
     <string name="profile_privacy_description">Om andra kan hitta dig i katalogen.</string>
     <string name="game_chat_load_more">Läs in äldre meddelanden</string>
-
+    <string name="stepup_title">Bekräfta att det är du</string>
+    <string name="stepup_description">Det här är en säkerhetsändring av ditt konto. Bekräfta att det är du för att fortsätta.</string>
+    <string name="stepup_email_label">E-postkod</string>
+    <string name="stepup_email_placeholder">Ange koden från ditt e-postmeddelande</string>
+    <string name="stepup_totp_label">Autentiseringskod</string>
+    <string name="stepup_totp_placeholder">Ange din autentiseringskod</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Använd din nyckel</string>
+    <string name="stepup_send_email">Skicka e-post</string>
+    <string name="stepup_resend_email">Skicka e-post igen</string>
+    <string name="stepup_verify">Verifiera</string>
+    <string name="stepup_continue_with">Fortsätt med %1$s</string>
+    <string name="stepup_error_start">Det gick inte att starta omautentiseringen. Försök igen.</string>
+    <string name="stepup_error_code">Koden är felaktig eller har upphört att gälla.</string>
+    <string name="stepup_error_passkey">Verifieringen med nyckel misslyckades. Försök igen.</string>
+    <string name="stepup_error_oauth">Det gick inte att verifiera med det kontot. Försök igen.</string>
 </resources>

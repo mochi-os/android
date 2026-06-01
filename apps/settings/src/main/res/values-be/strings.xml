@@ -382,4 +382,11 @@
         <item quantity="one">Адклікана %1$d сесія</item>
         <item quantity="other">Адклікана %1$d сесіі</item>
     </plurals>
+    <string name="login_title">Уваход</string>
+    <string name="login_section_methods">Спосабы ўваходу</string>
+    <string name="login_method_email">Код па эл. пошце</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Дадатак аўтэнтыфікатара</string>
+    <string name="login_method_oauth">Уваход праз іншыя сэрвісы</string>
+    <string name="login_method_recovery">Коды аднаўлення</string>
 </resources>

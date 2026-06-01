@@ -380,4 +380,11 @@
         <item quantity="one">1 సెషన్ రద్దు చేయబడింది</item>
         <item quantity="other">%1$d సెషన్‌లు రద్దు చేయబడ్డాయి</item>
     </plurals>
+    <string name="login_title">లాగిన్</string>
+    <string name="login_section_methods">లాగిన్ పద్ధతులు</string>
+    <string name="login_method_email">ఇమెయిల్ కోడ్</string>
+    <string name="login_method_passkey">పాస్‌కీ</string>
+    <string name="login_method_totp">ఆథెంటికేటర్ యాప్</string>
+    <string name="login_method_oauth">థర్డ్-పార్టీ లాగిన్</string>
+    <string name="login_method_recovery">రికవరీ కోడ్‌లు</string>
 </resources>

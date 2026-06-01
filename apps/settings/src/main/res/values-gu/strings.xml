@@ -380,4 +380,11 @@
         <item quantity="one">1 સત્ર રદ કર્યું</item>
         <item quantity="other">%1$d સત્રો રદ કર્યા</item>
     </plurals>
+    <string name="login_title">લૉગિન</string>
+    <string name="login_section_methods">લૉગિન પદ્ધતિઓ</string>
+    <string name="login_method_email">ઇમેઇલ કોડ</string>
+    <string name="login_method_passkey">પાસકી</string>
+    <string name="login_method_totp">Authenticator એપ્લિકેશન</string>
+    <string name="login_method_oauth">તૃતીય-પક્ષ લૉગિન</string>
+    <string name="login_method_recovery">રિકવરી કોડ્સ</string>
 </resources>

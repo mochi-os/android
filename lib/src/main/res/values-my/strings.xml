@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">လမ်းညွှန်တွင် အခြားသူများက သင့်ကို ရှာဖွေနိုင်ခြင်း ရှိ၊ မရှိ။</string>
     <string name="game_chat_load_more">ပိုဟောင်းသော မက်ဆေ့ဂျ်များ ဖွင့်ပါ</string>
-
+    <string name="stepup_title">သင်ဖြစ်ကြောင်း အတည်ပြုပါ</string>
+    <string name="stepup_description">ဤသည်မှာ သင့်အကောင့်၏ လုံခြုံရေးပြောင်းလဲမှုဖြစ်သည်။ ဆက်လက်ဆောင်ရွက်ရန် သင်ဖြစ်ကြောင်း အတည်ပြုပါ။</string>
+    <string name="stepup_email_label">အီးမေးလ် ကုဒ်</string>
+    <string name="stepup_email_placeholder">သင့်အီးမေးလ်မှ ကုဒ်ကို ထည့်ပါ</string>
+    <string name="stepup_totp_label">Authenticator ကုဒ်</string>
+    <string name="stepup_totp_placeholder">သင့်အထောက်အထားစိစစ်ရေးကုဒ်ကို ထည့်ပါ</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">သင့်ပတ်စ်ကီးကို သုံးပါ</string>
+    <string name="stepup_send_email">အီးမေးလ်ပို့ရန်</string>
+    <string name="stepup_resend_email">အီးမေးလ်ပြန်ပို့ရန်</string>
+    <string name="stepup_verify">အတည်ပြုမည်</string>
+    <string name="stepup_continue_with">%1$s ဖြင့် ဆက်လက်လုပ်ဆောင်ပါ</string>
+    <string name="stepup_error_start">ပြန်လည်အတည်ပြုခြင်းကို စတင်၍မရပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။</string>
+    <string name="stepup_error_code">ထိုကုဒ်မှားနေသည် သို့မဟုတ် သက်တမ်းကုန်သွားပြီ။</string>
+    <string name="stepup_error_passkey">ပတ်စ်ကီးအတည်ပြုခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။</string>
+    <string name="stepup_error_oauth">ထိုအကောင့်ဖြင့် အတည်ပြု၍မရပါ။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။</string>
 </resources>

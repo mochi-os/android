@@ -247,5 +247,5 @@
     <string name="settings_background_theme">Del tema</string>
     <string name="profile_privacy_description">Si otras personas pueden encontrarte en el directorio.</string>
     <string name="game_chat_empty">Todavía no hay mensajes</string>
-
+    <string name="stepup_verify">Verificá</string>
 </resources>

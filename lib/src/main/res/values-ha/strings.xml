@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Cikakke</string>
     <string name="settings_units_usa">Amurka</string>
     <string name="profile_privacy_description">Ko wasu za su iya samun ka a cikin kundin adireshi.</string>
-
+    <string name="stepup_title">Tabbatar da cewa kai ne</string>
+    <string name="stepup_description">Wannan canji ne na tsaro ga asusunka. Tabbatar da cewa kai ne don ci gaba.</string>
+    <string name="stepup_email_label">Email code</string>
+    <string name="stepup_email_placeholder">Shigar da lambar daga imel ɗinka</string>
+    <string name="stepup_totp_label">Code na authenticator</string>
+    <string name="stepup_totp_placeholder">Shigar da lambar mai tantancewarka</string>
+    <string name="stepup_passkey_label">Maɓallin shiga</string>
+    <string name="stepup_use_passkey">Yi amfani da maɓallin shiganka</string>
+    <string name="stepup_send_email">Aika email</string>
+    <string name="stepup_resend_email">Sake aika imel</string>
+    <string name="stepup_verify">Tabbatar</string>
+    <string name="stepup_continue_with">Ci gaba da %1$s</string>
+    <string name="stepup_error_start">An kasa fara sake tantancewa. Don Allah a sake gwadawa.</string>
+    <string name="stepup_error_code">Wannan lambar ba daidai ba ce ko kuma ta kare.</string>
+    <string name="stepup_error_passkey">Tantance maɓallin shiga ya gaza. Don Allah a sake gwadawa.</string>
+    <string name="stepup_error_oauth">An kasa tabbatar da wannan asusun. Da fatan za a sake gwadawa.</string>
 </resources>

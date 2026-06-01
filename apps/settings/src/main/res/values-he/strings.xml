@@ -381,4 +381,11 @@
         <item quantity="other">הופסקו %1$d הפעלות</item>
         <item quantity="two">הופסקו 2 הפעלות</item>
     </plurals>
+    <string name="login_title">התחברות</string>
+    <string name="login_section_methods">שיטות התחברות</string>
+    <string name="login_method_email">קוד אימייל</string>
+    <string name="login_method_passkey">מפתח גישה</string>
+    <string name="login_method_totp">אפליקציית אימות</string>
+    <string name="login_method_oauth">התחברות צד שלישי</string>
+    <string name="login_method_recovery">קודי שחזור</string>
 </resources>

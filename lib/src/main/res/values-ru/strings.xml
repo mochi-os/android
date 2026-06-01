@@ -247,5 +247,20 @@
     <string name="settings_units_usa">США</string>
     <string name="profile_privacy_description">Могут ли другие пользователи найти вас в каталоге.</string>
     <string name="game_chat_load_more">Загрузить более старые сообщения</string>
-
+    <string name="stepup_title">Подтвердите, что это вы</string>
+    <string name="stepup_description">Это изменение безопасности вашей учётной записи. Подтвердите, что это вы, чтобы продолжить.</string>
+    <string name="stepup_email_label">Код по электронной почте</string>
+    <string name="stepup_email_placeholder">Введите код из письма</string>
+    <string name="stepup_totp_label">Код аутентификатора</string>
+    <string name="stepup_totp_placeholder">Введите код из приложения-аутентификатора</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Используйте свой ключ доступа</string>
+    <string name="stepup_send_email">Отправить письмо</string>
+    <string name="stepup_resend_email">Отправить письмо повторно</string>
+    <string name="stepup_verify">Подтвердить</string>
+    <string name="stepup_continue_with">Продолжить с %1$s</string>
+    <string name="stepup_error_start">Не удалось начать повторную аутентификацию. Попробуйте ещё раз.</string>
+    <string name="stepup_error_code">Этот код неверен или истёк.</string>
+    <string name="stepup_error_passkey">Не удалось проверить ключ доступа. Попробуйте ещё раз.</string>
+    <string name="stepup_error_oauth">Не удалось выполнить проверку с этой учётной записью. Пожалуйста, попробуйте ещё раз.</string>
 </resources>

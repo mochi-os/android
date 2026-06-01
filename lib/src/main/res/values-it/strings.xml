@@ -247,5 +247,20 @@
     <string name="settings_units_usa">USA</string>
     <string name="profile_privacy_description">Se altri possono trovarti nella directory.</string>
     <string name="game_chat_load_more">Carica messaggi precedenti</string>
-
+    <string name="stepup_title">Conferma la tua identità</string>
+    <string name="stepup_description">Questa è una modifica di sicurezza al tuo account. Verifica la tua identità per continuare.</string>
+    <string name="stepup_email_label">Codice email</string>
+    <string name="stepup_email_placeholder">Inserisci il codice ricevuto via email</string>
+    <string name="stepup_totp_label">Codice dell\'autenticatore</string>
+    <string name="stepup_totp_placeholder">Inserisci il codice dell\'app di autenticazione</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Usa la tua passkey</string>
+    <string name="stepup_send_email">Invia email</string>
+    <string name="stepup_resend_email">Invia di nuovo l\'email</string>
+    <string name="stepup_verify">Verifica</string>
+    <string name="stepup_continue_with">Continua con %1$s</string>
+    <string name="stepup_error_start">Impossibile avviare la nuova autenticazione. Riprova.</string>
+    <string name="stepup_error_code">Il codice non è corretto o è scaduto.</string>
+    <string name="stepup_error_passkey">Verifica della passkey non riuscita. Riprova.</string>
+    <string name="stepup_error_oauth">Impossibile verificare con quell\'account. Riprova.</string>
 </resources>

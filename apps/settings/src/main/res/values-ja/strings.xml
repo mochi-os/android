@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d件のセッションを取り消しました</item>
     </plurals>
+    <string name="login_title">ログイン</string>
+    <string name="login_section_methods">ログイン方法</string>
+    <string name="login_method_email">メールコード</string>
+    <string name="login_method_passkey">パスキー</string>
+    <string name="login_method_totp">認証アプリ</string>
+    <string name="login_method_oauth">サードパーティログイン</string>
+    <string name="login_method_recovery">リカバリーコード</string>
 </resources>

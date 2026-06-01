@@ -380,4 +380,11 @@
         <item quantity="one">An soke 1 zaman</item>
         <item quantity="other">An soke zama %1$d</item>
     </plurals>
+    <string name="login_title">Shiga</string>
+    <string name="login_section_methods">Hanyoyin shiga</string>
+    <string name="login_method_email">Email code</string>
+    <string name="login_method_passkey">Maɓallin shiga</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Shigar wani ɓangare na uku</string>
+    <string name="login_method_recovery">Recovery codes</string>
 </resources>

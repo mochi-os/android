@@ -380,4 +380,11 @@
         <item quantity="one">١ دانیشتن هەڵوەشایەوە</item>
         <item quantity="other">%1$d دانیشتن هەڵوەشایەوە</item>
     </plurals>
+    <string name="login_title">چوونەژوورەوە</string>
+    <string name="login_section_methods">شێوازەکانی چوونەژوورەوە</string>
+    <string name="login_method_email">کۆدی ئیمەیڵ</string>
+    <string name="login_method_passkey">پاسکی</string>
+    <string name="login_method_totp">ئەپی پشتڕاستکەرەوە</string>
+    <string name="login_method_oauth">چوونەژوورەوەی لایەنی سێیەم</string>
+    <string name="login_method_recovery">کۆدەکانی گەڕانەوە</string>
 </resources>

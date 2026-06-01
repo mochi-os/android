@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">अरूले तपाईंलाई निर्देशिकामा भेट्न सक्छन् कि सक्दैनन्।</string>
     <string name="game_chat_load_more">पुराना सन्देशहरू लोड गर्नुहोस्</string>
-
+    <string name="stepup_title">तपाईं नै हो भनी पुष्टि गर्नुहोस्</string>
+    <string name="stepup_description">यो तपाईंको खातामा सुरक्षा परिवर्तन हो। जारी राख्न तपाईं नै हो भनी पुष्टि गर्नुहोस्।</string>
+    <string name="stepup_email_label">इमेल कोड</string>
+    <string name="stepup_email_placeholder">तपाईंको इमेलमा आएको कोड प्रविष्ट गर्नुहोस्</string>
+    <string name="stepup_totp_label">Authenticator कोड</string>
+    <string name="stepup_totp_placeholder">आफ्नो प्रमाणक कोड हाल्नुहोस्</string>
+    <string name="stepup_passkey_label">पासकी</string>
+    <string name="stepup_use_passkey">आफ्नो पासकी प्रयोग गर्नुहोस्</string>
+    <string name="stepup_send_email">इमेल पठाउनुहोस्</string>
+    <string name="stepup_resend_email">इमेल फेरि पठाउनुहोस्</string>
+    <string name="stepup_verify">प्रमाणित गर्नुहोस्</string>
+    <string name="stepup_continue_with">%1$s सँग जारी राख्नुहोस्</string>
+    <string name="stepup_error_start">पुन: प्रमाणीकरण सुरु गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।</string>
+    <string name="stepup_error_code">त्यो कोड गलत छ वा म्याद सकिएको छ।</string>
+    <string name="stepup_error_passkey">पासकी प्रमाणीकरण असफल भयो। कृपया फेरि प्रयास गर्नुहोस्।</string>
+    <string name="stepup_error_oauth">त्यो खातासँग प्रमाणित गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।</string>
 </resources>

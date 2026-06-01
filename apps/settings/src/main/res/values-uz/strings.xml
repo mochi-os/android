@@ -380,4 +380,11 @@
         <item quantity="one">1 sessiya bekor qilindi</item>
         <item quantity="other">%1$d sessiya bekor qilindi</item>
     </plurals>
+    <string name="login_title">Kirish</string>
+    <string name="login_section_methods">Kirish usullari</string>
+    <string name="login_method_email">Email kodi</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Autentifikator ilova</string>
+    <string name="login_method_oauth">Uchinchi tomon kirishi</string>
+    <string name="login_method_recovery">Tiklash kodlari</string>
 </resources>

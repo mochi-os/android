@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Gbé ìpàdé %1$d padà</item>
     </plurals>
+    <string name="login_title">Wọlé</string>
+    <string name="login_section_methods">Àwọn ọ̀nà ìwọlé</string>
+    <string name="login_method_email">Kóòdù ímẹ́ẹ̀lì</string>
+    <string name="login_method_passkey">Kọ́kọ́rọ́-ìwọlé</string>
+    <string name="login_method_totp">App olùfọwọ́sí</string>
+    <string name="login_method_oauth">Wíwọlé ti ẹnikẹta</string>
+    <string name="login_method_recovery">Àwọn kóòdù ìgbàpadà</string>
 </resources>

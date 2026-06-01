@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">Nokuba abanye banako na ukukufumana kuvimba weenkcukacha.</string>
     <string name="game_chat_load_more">Layisha imiyalezo emidala</string>
-
+    <string name="stepup_title">Qinisekisa ukuba nguwe</string>
+    <string name="stepup_description">Olu lutshintsho lokhuseleko kwiakhawunti yakho. Qinisekisa ukuba nguwe ukuze uqhubeke.</string>
+    <string name="stepup_email_label">Ikhowudi ye-imeyili</string>
+    <string name="stepup_email_placeholder">Faka ikhowudi evela kwi-imeyile yakho</string>
+    <string name="stepup_totp_label">Ikhowudi yokuqinisekisa</string>
+    <string name="stepup_totp_placeholder">Faka ikhowudi yakho yesiqinisekisi</string>
+    <string name="stepup_passkey_label">Isitshixo sokungena</string>
+    <string name="stepup_use_passkey">Sebenzisa i-passkey yakho</string>
+    <string name="stepup_send_email">Thumela i-imeyile</string>
+    <string name="stepup_resend_email">Thumela kwakhona i-imeyile</string>
+    <string name="stepup_verify">Qinisekisa</string>
+    <string name="stepup_continue_with">Qhubeka nge-%1$s</string>
+    <string name="stepup_error_start">Ayikwazanga ukuqalisa ukuqinisekiswa kwakhona. Nceda uzame kwakhona.</string>
+    <string name="stepup_error_code">Loo khowudi ayichanekanga okanye iphelelwe lixesha.</string>
+    <string name="stepup_error_passkey">Ukuqinisekiswa kwe-passkey akuphumelelanga. Nceda uzame kwakhona.</string>
+    <string name="stepup_error_oauth">Akukwazekanga ukuqinisekisa ngaloo akhawunti. Nceda uzame kwakhona.</string>
 </resources>

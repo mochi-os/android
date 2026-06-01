@@ -247,5 +247,11 @@
     <string name="game_chat_load_more">載入較舊的訊息</string>
     <string name="game_chat_input_placeholder">輸入訊息…</string>
     <string name="game_chat_send">傳送訊息</string>
-
+    <string name="stepup_title">確認是您本人</string>
+    <string name="stepup_description">這是對您帳戶的安全變更。請驗證您的身分以繼續。</string>
+    <string name="stepup_totp_placeholder">請輸入您的驗證器代碼</string>
+    <string name="stepup_use_passkey">使用您的通行金鑰</string>
+    <string name="stepup_error_start">無法開始重新驗證。請再試一次。</string>
+    <string name="stepup_error_code">該代碼不正確或已過期。</string>
+    <string name="stepup_error_passkey">通行金鑰驗證失敗。請再試一次。</string>
 </resources>

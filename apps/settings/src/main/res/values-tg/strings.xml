@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">%1$d сессия бекор карда шуд</item>
     </plurals>
+    <string name="login_title">Воридшавӣ</string>
+    <string name="login_section_methods">Усулҳои воридшавӣ</string>
+    <string name="login_method_email">Рамзи email</string>
+    <string name="login_method_passkey">Калиди дастрасӣ</string>
+    <string name="login_method_totp">Барномаи Authenticator</string>
+    <string name="login_method_oauth">Воридшавӣ аз тарафи сеюм</string>
+    <string name="login_method_recovery">Рамзҳои барқарорсозӣ</string>
 </resources>

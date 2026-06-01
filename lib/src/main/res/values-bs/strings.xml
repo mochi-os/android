@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">Mogu li vas drugi pronaći u direktoriju.</string>
     <string name="game_chat_load_more">Učitaj starije poruke</string>
     <string name="game_chat_move_played">%1$s je odigrao %2$s</string>
-
+    <string name="stepup_title">Potvrdite da ste to vi</string>
+    <string name="stepup_description">Ovo je sigurnosna promjena na vašem računu. Potvrdite da ste to vi da biste nastavili.</string>
+    <string name="stepup_email_label">Email kod</string>
+    <string name="stepup_email_placeholder">Unesite kod iz vaše e-pošte</string>
+    <string name="stepup_totp_label">Authenticator kod</string>
+    <string name="stepup_totp_placeholder">Unesite kod iz aplikacije za autentifikaciju</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Koristite svoj pristupni ključ</string>
+    <string name="stepup_send_email">Pošalji email</string>
+    <string name="stepup_resend_email">Ponovo pošalji e-poštu</string>
+    <string name="stepup_verify">Verifikuj</string>
+    <string name="stepup_continue_with">Nastavi s %1$s</string>
+    <string name="stepup_error_start">Pokretanje ponovne autentifikacije nije uspjelo. Molimo pokušajte ponovo.</string>
+    <string name="stepup_error_code">Taj kod je netačan ili je istekao.</string>
+    <string name="stepup_error_passkey">Provjera pristupnog ključa nije uspjela. Molimo pokušajte ponovo.</string>
+    <string name="stepup_error_oauth">Provjera s tim računom nije uspjela. Molimo pokušajte ponovo.</string>
 </resources>

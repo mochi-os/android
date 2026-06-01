@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Oñembogue %1$d sesiónkuéra</item>
     </plurals>
+    <string name="login_title">Login</string>
+    <string name="login_section_methods">Mba\'éichapa ñañepyrũ haguã</string>
+    <string name="login_method_email">Código email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Ñepyrũ ambue rupive</string>
+    <string name="login_method_recovery">Recuperación papapykuéra</string>
 </resources>

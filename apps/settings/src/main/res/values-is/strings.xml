@@ -380,4 +380,11 @@
         <item quantity="one">%1$d lota afturkölluð</item>
         <item quantity="other">%1$d lotur afturkallaðar</item>
     </plurals>
+    <string name="login_title">Innskráning</string>
+    <string name="login_section_methods">Innskráningaraðferðir</string>
+    <string name="login_method_email">Tölvupóstkóði</string>
+    <string name="login_method_passkey">Aðgangslykill</string>
+    <string name="login_method_totp">Auðkennisforrit</string>
+    <string name="login_method_oauth">Innskráning þriðja aðila</string>
+    <string name="login_method_recovery">Endurheimtarkóðar</string>
 </resources>

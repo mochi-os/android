@@ -247,5 +247,5 @@
     <string name="game_chat_empty">Aucun message pour le moment</string>
     <string name="game_chat_input_placeholder">Tapez un message…</string>
     <string name="game_chat_send">Envoyer le message</string>
-
+    <string name="stepup_email_label">Code par courriel</string>
 </resources>

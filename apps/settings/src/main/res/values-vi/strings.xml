@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Đã thu hồi %1$d phiên</item>
     </plurals>
+    <string name="login_title">Đăng nhập</string>
+    <string name="login_section_methods">Phương thức đăng nhập</string>
+    <string name="login_method_email">Mã email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Ứng dụng xác thực</string>
+    <string name="login_method_oauth">Đăng nhập bên thứ ba</string>
+    <string name="login_method_recovery">Mã khôi phục</string>
 </resources>

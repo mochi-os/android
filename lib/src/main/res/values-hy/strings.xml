@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Բացարձակ</string>
     <string name="settings_units_usa">ԱՄՆ</string>
     <string name="profile_privacy_description">Թե արդյոք ուրիշները կարող են գտնել ձեզ գրացուցակում։</string>
-
+    <string name="stepup_title">Հաստատեք, որ դա դուք եք</string>
+    <string name="stepup_description">Սա ձեր հաշվի անվտանգության փոփոխություն է։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
+    <string name="stepup_email_label">Էլ․ փոստի կոդ</string>
+    <string name="stepup_email_placeholder">Մուտքագրեք ձեր էլ. փոստից ստացած կոդը</string>
+    <string name="stepup_totp_label">Հեղինակ</string>
+    <string name="stepup_totp_placeholder">Մուտքագրեք ձեր նույնականացուցիչի կոդը</string>
+    <string name="stepup_passkey_label">Անցաբանալի</string>
+    <string name="stepup_use_passkey">Օգտագործեք ձեր անցաբանալին</string>
+    <string name="stepup_send_email">Ուղարկել էլ. փոստ</string>
+    <string name="stepup_resend_email">Կրկին ուղարկել նամակը</string>
+    <string name="stepup_verify">Ստուգել</string>
+    <string name="stepup_continue_with">Շարունակել %1$s-ով</string>
+    <string name="stepup_error_start">Չհաջողվեց սկսել վերանույնականացումը։ Խնդրում ենք նորից փորձել։</string>
+    <string name="stepup_error_code">Այդ կոդը սխալ է կամ ժամկետանց է։</string>
+    <string name="stepup_error_passkey">Անցաբանալու ստուգումը ձախողվեց։ Խնդրում ենք նորից փորձել։</string>
+    <string name="stepup_error_oauth">Չհաջողվեց ստուգել այդ հաշվով։ Խնդրում ենք նորից փորձել։</string>
 </resources>

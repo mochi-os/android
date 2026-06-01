@@ -247,5 +247,20 @@
     <string name="settings_units_usa">สหรัฐอเมริกา</string>
     <string name="profile_privacy_description">ระบุว่าผู้อื่นสามารถค้นพบคุณในไดเรกทอรีได้หรือไม่</string>
     <string name="game_chat_load_more">โหลดข้อความก่อนหน้า</string>
-
+    <string name="stepup_title">ยืนยันว่าเป็นคุณ</string>
+    <string name="stepup_description">นี่คือการเปลี่ยนแปลงด้านความปลอดภัยของบัญชีคุณ ยืนยันว่าเป็นคุณเพื่อดำเนินการต่อ</string>
+    <string name="stepup_email_label">รหัสอีเมล</string>
+    <string name="stepup_email_placeholder">ป้อนรหัสจากอีเมลของคุณ</string>
+    <string name="stepup_totp_label">รหัส Authenticator</string>
+    <string name="stepup_totp_placeholder">ป้อนรหัสจากแอปยืนยันตัวตนของคุณ</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">ใช้พาสคีย์ของคุณ</string>
+    <string name="stepup_send_email">ส่งอีเมล</string>
+    <string name="stepup_resend_email">ส่งอีเมลอีกครั้ง</string>
+    <string name="stepup_verify">ยืนยัน</string>
+    <string name="stepup_continue_with">ดำเนินการต่อด้วย %1$s</string>
+    <string name="stepup_error_start">เริ่มการยืนยันตัวตนอีกครั้งไม่สำเร็จ โปรดลองอีกครั้ง</string>
+    <string name="stepup_error_code">รหัสนั้นไม่ถูกต้องหรือหมดอายุแล้ว</string>
+    <string name="stepup_error_passkey">การยืนยันด้วยพาสคีย์ล้มเหลว โปรดลองอีกครั้ง</string>
+    <string name="stepup_error_oauth">ไม่สามารถยืนยันด้วยบัญชีนั้นได้ โปรดลองอีกครั้ง</string>
 </resources>

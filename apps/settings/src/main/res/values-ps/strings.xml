@@ -380,4 +380,11 @@
         <item quantity="one">1 ناسته لغوه شوه</item>
         <item quantity="other">%1$d ناستې لغوه شوې</item>
     </plurals>
+    <string name="login_title">لاګ ان</string>
+    <string name="login_section_methods">د ننوتلو لارې</string>
+    <string name="login_method_email">د بریښنالیک کوډ</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">د Authenticator اپلیکیشن</string>
+    <string name="login_method_oauth">د دریمې اړخ ننوتل</string>
+    <string name="login_method_recovery">د بیرته راګرځولو کوډونه</string>
 </resources>

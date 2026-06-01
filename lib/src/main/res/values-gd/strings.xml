@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Iomlan</string>
     <string name="settings_units_usa">SA</string>
     <string name="profile_privacy_description">Co-dhiù an urrainn do chàch do lorg san eòlaire.</string>
-
+    <string name="stepup_title">Dearbhaich gur tusa a th\' ann</string>
+    <string name="stepup_description">Seo atharrachadh tèarainteachd air a\' chunntas agad. Dearbhaich gur tusa a th\' ann gus leantainn air adhart.</string>
+    <string name="stepup_email_label">Còd puist-d</string>
+    <string name="stepup_email_placeholder">Cuir a-steach an còd on phost-d agad</string>
+    <string name="stepup_totp_label">Còd dearbhachaidh</string>
+    <string name="stepup_totp_placeholder">Cuir a-steach còd na h-aplacaid dearbhaidh agad</string>
+    <string name="stepup_passkey_label">Pasgair</string>
+    <string name="stepup_use_passkey">Cleachd an iuchair-inntrigidh agad</string>
+    <string name="stepup_send_email">Cuir post-d</string>
+    <string name="stepup_resend_email">Cuir am post-d a-rithist</string>
+    <string name="stepup_verify">Dearbh</string>
+    <string name="stepup_continue_with">Lean air adhart le %1$s</string>
+    <string name="stepup_error_start">Cha b\' urrainn ath-dhearbhadh a thòiseachadh. Feuch ris a-rithist.</string>
+    <string name="stepup_error_code">Tha an còd sin ceàrr no air a dhol à bann.</string>
+    <string name="stepup_error_passkey">Dh\'fhàillig dearbhadh na h-iuchrach-inntrigidh. Feuch ris a-rithist.</string>
+    <string name="stepup_error_oauth">Cha b\' urrainn dearbhadh leis a\' chunntas sin. Feuch ris a-rithist.</string>
 </resources>

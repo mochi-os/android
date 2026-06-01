@@ -20,6 +20,19 @@ import javax.inject.Singleton
  *  endpoints that return it; TokensApi and SessionsApi import from here. */
 data class OkResponse(val ok: Boolean = false)
 
+/** Step-up re-authentication result. A verify returns `token` once every
+ *  required factor is satisfied, otherwise `remaining` lists the factors still
+ *  outstanding. The TOTP verify endpoint doubles as the enrolment confirm and
+ *  then returns `ok` instead. */
+data class StepUpResponse(
+    val token: String? = null,
+    val remaining: List<String>? = null,
+    val ok: Boolean? = null,
+)
+
+/** `{ "url": "..." }` envelope for the OAuth step-up begin action. */
+data class UrlResponse(val url: String = "")
+
 // ---------- Identity ----------
 
 data class IdentityResponse(
@@ -30,9 +43,18 @@ data class IdentityResponse(
     @SerializedName("privacy") val privacy: String = "private",
 )
 
-// ---------- Login methods ----------
+// ---------- Login methods (per-method tri-state) ----------
 
-data class MethodsResponse(val methods: List<String> = emptyList())
+/** Per-method state plus the operator policy and credential availability, so
+ *  the UI can grey out options the user can't pick. Mirrors the web
+ *  MethodInfo. `state`/`system` are one of disabled/allowed/required. */
+data class MethodInfo(
+    val state: String = "disabled",
+    val system: String = "allowed",
+    val available: Boolean = false,
+)
+
+data class MethodsResponse(val methods: Map<String, MethodInfo> = emptyMap())
 
 // ---------- Passkeys ----------
 
@@ -47,9 +69,9 @@ data class Passkey(
 data class PasskeysResponse(val passkeys: List<Passkey> = emptyList())
 
 /** Server returns the WebAuthn ceremony options plus an opaque ceremony token
- *  the client must echo back to `register/finish`. `options` is the
- *  PublicKeyCredentialCreationOptions JSON the CredentialManager consumes. */
-data class PasskeyRegisterBegin(
+ *  the client must echo back to `register/finish` (or `verify/finish`).
+ *  `options` is the PublicKey...Options JSON the CredentialManager consumes. */
+data class PasskeyCeremony(
     val ceremony: String = "",
     val options: com.google.gson.JsonObject = com.google.gson.JsonObject(),
 )
@@ -101,20 +123,27 @@ interface AccountApi {
     @GET("settings/-/user/account/methods")
     suspend fun getMethods(): Response<MethodsResponse>
 
+    /** Set one method's state. Gated on step-up re-authentication. */
     @FormUrlEncoded
     @POST("settings/-/user/account/methods/set")
-    suspend fun setMethods(@Field("methods") methodsCsv: String): Response<MethodsResponse>
+    suspend fun configureMethod(
+        @Field("token") token: String,
+        @Field("method") method: String,
+        @Field("state") state: String,
+    ): Response<OkResponse>
 
     // Passkeys
     @GET("settings/-/user/account/passkeys")
     suspend fun listPasskeys(): Response<PasskeysResponse>
 
     @POST("settings/-/user/account/passkey/register/begin")
-    suspend fun beginPasskeyRegister(): Response<PasskeyRegisterBegin>
+    suspend fun beginPasskeyRegister(): Response<PasskeyCeremony>
 
+    /** Complete passkey registration. Gated on step-up re-authentication. */
     @FormUrlEncoded
     @POST("settings/-/user/account/passkey/register/finish")
     suspend fun finishPasskeyRegister(
+        @Field("token") token: String,
         @Field("ceremony") ceremony: String,
         @Field("credential") credential: String,
         @Field("name") name: String,
@@ -135,22 +164,28 @@ interface AccountApi {
     @GET("settings/-/user/account/totp")
     suspend fun getTotp(): Response<TotpStatus>
 
+    /** Begin authenticator enrolment. Gated on step-up re-authentication. */
+    @FormUrlEncoded
     @POST("settings/-/user/account/totp/setup")
-    suspend fun setupTotp(): Response<TotpSetupResponse>
+    suspend fun setupTotp(@Field("token") token: String): Response<TotpSetupResponse>
 
+    /** Confirm enrolment (returns ok) or re-verify as a step-up factor
+     *  (returns token/remaining). */
     @FormUrlEncoded
     @POST("settings/-/user/account/totp/verify")
-    suspend fun verifyTotp(@Field("code") code: String): Response<OkResponse>
+    suspend fun verifyTotp(@Field("code") code: String): Response<StepUpResponse>
 
+    @FormUrlEncoded
     @POST("settings/-/user/account/totp/disable")
-    suspend fun disableTotp(): Response<OkResponse>
+    suspend fun disableTotp(@Field("token") token: String): Response<OkResponse>
 
     // Recovery codes
     @GET("settings/-/user/account/recovery")
     suspend fun recoveryCount(): Response<RecoveryCountResponse>
 
+    @FormUrlEncoded
     @POST("settings/-/user/account/recovery/generate")
-    suspend fun generateRecovery(): Response<RecoveryGenerateResponse>
+    suspend fun generateRecovery(@Field("token") token: String): Response<RecoveryGenerateResponse>
 
     // OAuth identities
     @GET("settings/-/user/account/oauth")
@@ -159,6 +194,37 @@ interface AccountApi {
     @FormUrlEncoded
     @POST("settings/-/user/account/oauth/unlink")
     suspend fun unlinkOAuth(@Field("provider") provider: String): Response<OkResponse>
+
+    // ---------- Step-up re-authentication ----------
+
+    /** Email a step-up code. */
+    @POST("settings/-/user/account/code")
+    suspend fun sendCode(): Response<OkResponse>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/code/verify")
+    suspend fun verifyCode(@Field("code") code: String): Response<StepUpResponse>
+
+    @POST("settings/-/user/account/passkey/verify/begin")
+    suspend fun beginPasskeyVerify(): Response<PasskeyCeremony>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/passkey/verify/finish")
+    suspend fun finishPasskeyVerify(
+        @Field("ceremony") ceremony: String,
+        @Field("assertion") assertion: String,
+    ): Response<StepUpResponse>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/oauth/verify/begin")
+    suspend fun beginOauthVerify(
+        @Field("provider") provider: String,
+        @Field("challenge") challenge: String,
+    ): Response<UrlResponse>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/oauth/verify/finish")
+    suspend fun finishOauthVerify(@Field("verifier") verifier: String): Response<StepUpResponse>
 }
 
 @Module

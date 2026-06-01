@@ -380,4 +380,11 @@
         <item quantity="one">1 session återkallad</item>
         <item quantity="other">%1$d sessioner återkallade</item>
     </plurals>
+    <string name="login_title">Logga in</string>
+    <string name="login_section_methods">Inloggningsmetoder</string>
+    <string name="login_method_email">E-postkod</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Autentiseringsapp</string>
+    <string name="login_method_oauth">Tredjepartsinloggning</string>
+    <string name="login_method_recovery">Återställningskoder</string>
 </resources>

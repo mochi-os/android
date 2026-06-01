@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">Дали другите могат да ви намерят в указателя.</string>
     <string name="game_chat_load_more">Зареди по-стари съобщения</string>
     <string name="game_chat_move_played">%1$s изигра %2$s</string>
-
+    <string name="stepup_title">Потвърдете, че сте вие</string>
+    <string name="stepup_description">Това е промяна в сигурността на акаунта ви. Потвърдете, че сте вие, за да продължите.</string>
+    <string name="stepup_email_label">Имейл код</string>
+    <string name="stepup_email_placeholder">Въведете кода от имейла си</string>
+    <string name="stepup_totp_label">Код от authenticator</string>
+    <string name="stepup_totp_placeholder">Въведете кода от приложението за удостоверяване</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Използвайте своя ключ за достъп</string>
+    <string name="stepup_send_email">Изпрати имейл</string>
+    <string name="stepup_resend_email">Изпрати имейла отново</string>
+    <string name="stepup_verify">Потвърди</string>
+    <string name="stepup_continue_with">Продължи с %1$s</string>
+    <string name="stepup_error_start">Повторното удостоверяване не можа да започне. Моля, опитайте отново.</string>
+    <string name="stepup_error_code">Този код е неправилен или е изтекъл.</string>
+    <string name="stepup_error_passkey">Проверката на ключа за достъп беше неуспешна. Моля, опитайте отново.</string>
+    <string name="stepup_error_oauth">Потвърждаването с този акаунт не бе успешно. Моля, опитайте отново.</string>
 </resources>

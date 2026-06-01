@@ -380,4 +380,11 @@
         <item quantity="one">Չեղարկվեց 1 սեսիա</item>
         <item quantity="other">Չեղարկվեցին %1$d սեսիա</item>
     </plurals>
+    <string name="login_title">Մուտքի նիստի ժամկետը լրացել է, խնդրում ենք կրկին փորձել</string>
+    <string name="login_section_methods">Մուտքի եղանակներ</string>
+    <string name="login_method_email">Էլ․ փոստի կոդ</string>
+    <string name="login_method_passkey">Անցաբանալի</string>
+    <string name="login_method_totp">Authenticator հավելվածն անջատված է</string>
+    <string name="login_method_oauth">Երրորդ կողմի մուտք</string>
+    <string name="login_method_recovery">Վերականգնման կոդեր</string>
 </resources>

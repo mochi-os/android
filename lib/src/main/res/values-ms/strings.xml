@@ -247,5 +247,20 @@
     <string name="settings_units_usa">AS</string>
     <string name="profile_privacy_description">Sama ada orang lain boleh mencari anda dalam direktori.</string>
     <string name="game_chat_load_more">Muatkan mesej lama</string>
-
+    <string name="stepup_title">Sahkan ini anda</string>
+    <string name="stepup_description">Ini ialah perubahan keselamatan pada akaun anda. Sahkan ini anda untuk meneruskan.</string>
+    <string name="stepup_email_label">Kod e-mel</string>
+    <string name="stepup_email_placeholder">Masukkan kod dari e-mel anda</string>
+    <string name="stepup_totp_label">Kod authenticator</string>
+    <string name="stepup_totp_placeholder">Masukkan kod pengesah anda</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Gunakan kunci laluan anda</string>
+    <string name="stepup_send_email">Hantar e-mel</string>
+    <string name="stepup_resend_email">Hantar semula e-mel</string>
+    <string name="stepup_verify">Sahkan</string>
+    <string name="stepup_continue_with">Teruskan dengan %1$s</string>
+    <string name="stepup_error_start">Tidak dapat memulakan pengesahan semula. Sila cuba lagi.</string>
+    <string name="stepup_error_code">Kod itu tidak betul atau telah tamat tempoh.</string>
+    <string name="stepup_error_passkey">Pengesahan kunci laluan gagal. Sila cuba lagi.</string>
+    <string name="stepup_error_oauth">Tidak dapat mengesahkan dengan akaun itu. Sila cuba lagi.</string>
 </resources>

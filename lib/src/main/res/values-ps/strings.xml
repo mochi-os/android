@@ -247,5 +247,20 @@
     <string name="settings_units_usa">متحده ایالات</string>
     <string name="profile_privacy_description">آیا نور تاسو په لارښود کې موندلی شي.</string>
     <string name="game_chat_load_more">زاړه پیغامونه راوبارئ</string>
-
+    <string name="stepup_title">تایید کړئ چې تاسو یاست</string>
+    <string name="stepup_description">دا ستاسو د حساب امنیتي بدلون دی. د دوام لپاره تایید کړئ چې تاسو یاست.</string>
+    <string name="stepup_email_label">د بریښنالیک کوډ</string>
+    <string name="stepup_email_placeholder">هغه کوډ دننه کړئ چې ستاسو په برېښنالیک کې راغلی</string>
+    <string name="stepup_totp_label">د Authenticator کوډ</string>
+    <string name="stepup_totp_placeholder">د خپل تصدیق کوونکي کوډ دننه کړئ</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">خپله پاس کیلۍ وکاروئ</string>
+    <string name="stepup_send_email">بریښنالیک ولېږئ</string>
+    <string name="stepup_resend_email">بریښنالیک بیا واستوئ</string>
+    <string name="stepup_verify">تصدیق</string>
+    <string name="stepup_continue_with">د %1$s سره دوام ورکړئ</string>
+    <string name="stepup_error_start">بیا تصدیق پیلیدلی نشو. مهرباني وکړئ بیا هڅه وکړئ.</string>
+    <string name="stepup_error_code">هغه کوډ غلط دی یا یې موده تېره ده.</string>
+    <string name="stepup_error_passkey">د پاس کیلۍ تایید ناکام شو. مهرباني وکړئ بیا هڅه وکړئ.</string>
+    <string name="stepup_error_oauth">د دغه حساب سره تصدیق ونشو. مهرباني وکړئ بیا هڅه وکړئ.</string>
 </resources>

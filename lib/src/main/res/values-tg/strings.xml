@@ -247,5 +247,20 @@
     <string name="settings_units_usa">ИМА</string>
     <string name="profile_privacy_description">Оё дигарон метавонанд шуморо дар феҳрист пайдо кунанд.</string>
     <string name="game_chat_load_more">Боргирии паёмҳои кӯҳнатар</string>
-
+    <string name="stepup_title">Тасдиқ кунед, ки ин шумо ҳастед</string>
+    <string name="stepup_description">Ин тағйироти амниятӣ ба ҳисоби шумост. Барои идома тасдиқ кунед, ки ин шумо ҳастед.</string>
+    <string name="stepup_email_label">Рамзи email</string>
+    <string name="stepup_email_placeholder">Рамзро аз почтаи электронии худ ворид кунед</string>
+    <string name="stepup_totp_label">Коди Authenticator</string>
+    <string name="stepup_totp_placeholder">Рамзи аутентификатори худро ворид кунед</string>
+    <string name="stepup_passkey_label">Калиди дастрасӣ</string>
+    <string name="stepup_use_passkey">Калиди дастрасии худро истифода баред</string>
+    <string name="stepup_send_email">Имейл фиристодан</string>
+    <string name="stepup_resend_email">Мактубро дубора фиристед</string>
+    <string name="stepup_verify">Тасдиқ кардан</string>
+    <string name="stepup_continue_with">Бо %1$s идома диҳед</string>
+    <string name="stepup_error_start">Аз нав аутентификатсияро оғоз кардан имконнопазир буд. Лутфан, аз нав кӯшиш кунед.</string>
+    <string name="stepup_error_code">Он рамз нодуруст аст ё мӯҳлаташ гузаштааст.</string>
+    <string name="stepup_error_passkey">Тасдиқи калиди дастрасӣ ноком шуд. Лутфан, аз нав кӯшиш кунед.</string>
+    <string name="stepup_error_oauth">Бо он ҳисоб тасдиқ кардан имконнопазир буд. Лутфан, бори дигар кӯшиш кунед.</string>
 </resources>

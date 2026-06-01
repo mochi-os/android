@@ -247,5 +247,20 @@
     <string name="settings_units_usa">США</string>
     <string name="profile_privacy_description">Чи можуть інші знайти вас у каталозі.</string>
     <string name="game_chat_load_more">Завантажити старіші повідомлення</string>
-
+    <string name="stepup_title">Підтвердьте, що це ви</string>
+    <string name="stepup_description">Це зміна безпеки вашого облікового запису. Підтвердьте, що це ви, щоб продовжити.</string>
+    <string name="stepup_email_label">Код електронної пошти</string>
+    <string name="stepup_email_placeholder">Введіть код зі свого електронного листа</string>
+    <string name="stepup_totp_label">Код автентифікатора</string>
+    <string name="stepup_totp_placeholder">Введіть код з програми автентифікації</string>
+    <string name="stepup_passkey_label">Ключ доступу</string>
+    <string name="stepup_use_passkey">Скористайтеся ключем доступу</string>
+    <string name="stepup_send_email">Надіслати лист</string>
+    <string name="stepup_resend_email">Надіслати лист повторно</string>
+    <string name="stepup_verify">Перевірити</string>
+    <string name="stepup_continue_with">Продовжити з %1$s</string>
+    <string name="stepup_error_start">Не вдалося розпочати повторну автентифікацію. Спробуйте ще раз.</string>
+    <string name="stepup_error_code">Цей код неправильний або його термін дії минув.</string>
+    <string name="stepup_error_passkey">Не вдалося перевірити ключ доступу. Спробуйте ще раз.</string>
+    <string name="stepup_error_oauth">Не вдалося підтвердити за допомогою цього облікового запису. Спробуйте ще раз.</string>
 </resources>

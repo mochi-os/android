@@ -380,4 +380,11 @@
         <item quantity="one">1টি সেশন প্রত্যাহার করা হয়েছে</item>
         <item quantity="other">%1$d সেশন প্রত্যাহার করা হয়েছে</item>
     </plurals>
+    <string name="login_title">লগইন</string>
+    <string name="login_section_methods">লগইন পদ্ধতি</string>
+    <string name="login_method_email">ইমেইল কোড</string>
+    <string name="login_method_passkey">পাসকি</string>
+    <string name="login_method_totp">অথেন্টিকেটর অ্যাপ</string>
+    <string name="login_method_oauth">থার্ড-পার্টি লগইন</string>
+    <string name="login_method_recovery">রিকভারি কোড</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="settings_units_usa">USA</string>
     <string name="profile_privacy_description">Czy inni mogą znaleźć Cię w katalogu.</string>
     <string name="game_chat_load_more">Wczytaj starsze wiadomości</string>
-
+    <string name="stepup_title">Potwierdź swoją tożsamość</string>
+    <string name="stepup_description">To zmiana zabezpieczeń Twojego konta. Potwierdź swoją tożsamość, aby kontynuować.</string>
+    <string name="stepup_email_label">Kod e-mail</string>
+    <string name="stepup_email_placeholder">Wprowadź kod z wiadomości e-mail</string>
+    <string name="stepup_totp_label">Kod uwierzytelniający</string>
+    <string name="stepup_totp_placeholder">Wprowadź kod z aplikacji uwierzytelniającej</string>
+    <string name="stepup_passkey_label">Klucz dostępu</string>
+    <string name="stepup_use_passkey">Użyj klucza dostępu</string>
+    <string name="stepup_send_email">Wyślij e-mail</string>
+    <string name="stepup_resend_email">Wyślij e-mail ponownie</string>
+    <string name="stepup_verify">Weryfikuj</string>
+    <string name="stepup_continue_with">Kontynuuj z %1$s</string>
+    <string name="stepup_error_start">Nie udało się rozpocząć ponownego uwierzytelniania. Spróbuj ponownie.</string>
+    <string name="stepup_error_code">Ten kod jest nieprawidłowy lub wygasł.</string>
+    <string name="stepup_error_passkey">Weryfikacja kluczem dostępu nie powiodła się. Spróbuj ponownie.</string>
+    <string name="stepup_error_oauth">Nie udało się zweryfikować przy użyciu tego konta. Spróbuj ponownie.</string>
 </resources>

@@ -383,4 +383,11 @@
         <item quantity="other">Revokati %1$d sessjonijiet</item>
         <item quantity="two">Revokati %1$d sessjonijiet</item>
     </plurals>
+    <string name="login_title">Login</string>
+    <string name="login_section_methods">Metodi tal-login</string>
+    <string name="login_method_email">Kodiċi tal-email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">App tal-awtentikazzjoni</string>
+    <string name="login_method_oauth">Login minn parti terza</string>
+    <string name="login_method_recovery">Kodiċi ta\' rkupru</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="settings_units_usa">미국</string>
     <string name="profile_privacy_description">다른 사용자가 디렉터리에서 회원님을 찾을 수 있는지 여부입니다.</string>
     <string name="game_chat_load_more">이전 메시지 불러오기</string>
-
+    <string name="stepup_title">본인 확인</string>
+    <string name="stepup_description">계정의 보안 변경 사항입니다. 계속하려면 본인임을 확인하세요.</string>
+    <string name="stepup_email_label">이메일 코드</string>
+    <string name="stepup_email_placeholder">이메일로 받은 코드를 입력하세요</string>
+    <string name="stepup_totp_label">인증 코드</string>
+    <string name="stepup_totp_placeholder">인증 앱 코드를 입력하세요</string>
+    <string name="stepup_passkey_label">패스키</string>
+    <string name="stepup_use_passkey">패스키 사용</string>
+    <string name="stepup_send_email">이메일 보내기</string>
+    <string name="stepup_resend_email">이메일 다시 보내기</string>
+    <string name="stepup_verify">확인</string>
+    <string name="stepup_continue_with">%1$s(으)로 계속하기</string>
+    <string name="stepup_error_start">재인증을 시작할 수 없습니다. 다시 시도해 주세요.</string>
+    <string name="stepup_error_code">코드가 올바르지 않거나 만료되었습니다.</string>
+    <string name="stepup_error_passkey">패스키 인증에 실패했습니다. 다시 시도해 주세요.</string>
+    <string name="stepup_error_oauth">해당 계정으로 인증하지 못했습니다. 다시 시도해 주세요.</string>
 </resources>

@@ -380,4 +380,11 @@
         <item quantity="one">1 сесс цуцалсан</item>
         <item quantity="other">%1$d сесс цуцалсан</item>
     </plurals>
+    <string name="login_title">Нэвтрэх</string>
+    <string name="login_section_methods">Нэвтрэх аргууд</string>
+    <string name="login_method_email">Имэйл код</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator апп</string>
+    <string name="login_method_oauth">Гуравдагч талын нэвтрэлт</string>
+    <string name="login_method_recovery">Сэргээх кодууд</string>
 </resources>

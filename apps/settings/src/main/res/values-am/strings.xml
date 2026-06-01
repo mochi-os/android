@@ -380,4 +380,11 @@
         <item quantity="one">1 ክፍለ ጊዜ ተሰርዟል</item>
         <item quantity="other">%1$d ክፍለ ጊዜዎች ተሰርዘዋል</item>
     </plurals>
+    <string name="login_title">ግባ</string>
+    <string name="login_section_methods">የመግቢያ ዘዴዎች</string>
+    <string name="login_method_email">የኢሜይል ኮድ</string>
+    <string name="login_method_passkey">የይለፍ ቁልፍ</string>
+    <string name="login_method_totp">የማረጋገጫ መተግበሪያ</string>
+    <string name="login_method_oauth">የሶስተኛ ወገን መግቢያ</string>
+    <string name="login_method_recovery">የመልሶ ማግኛ ኮዶች</string>
 </resources>

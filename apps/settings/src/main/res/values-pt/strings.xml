@@ -381,4 +381,11 @@
         <item quantity="one">1 sessão revogada</item>
         <item quantity="other">%1$d sessões revogadas</item>
     </plurals>
+    <string name="login_title">Iniciar sessão</string>
+    <string name="login_section_methods">Métodos de início de sessão</string>
+    <string name="login_method_email">Código por email</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Aplicação autenticadora</string>
+    <string name="login_method_oauth">Início de sessão de terceiros</string>
+    <string name="login_method_recovery">Códigos de recuperação</string>
 </resources>

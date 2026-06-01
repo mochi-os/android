@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">已撤銷 %1$d 個工作階段</item>
     </plurals>
+    <string name="login_title">登入</string>
+    <string name="login_section_methods">登入方式</string>
+    <string name="login_method_email">電子郵件代碼</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">驗證器應用程式</string>
+    <string name="login_method_oauth">第三方登入</string>
+    <string name="login_method_recovery">復原代碼</string>
 </resources>

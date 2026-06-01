@@ -380,4 +380,11 @@
         <item quantity="one">Отповикана %1$d сесија</item>
         <item quantity="other">Отповикани %1$d сесии</item>
     </plurals>
+    <string name="login_title">Најава</string>
+    <string name="login_section_methods">Методи за најавување</string>
+    <string name="login_method_email">Код за е-пошта</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator апликација</string>
+    <string name="login_method_oauth">Најава од трета страна</string>
+    <string name="login_method_recovery">Кодови за обновување</string>
 </resources>

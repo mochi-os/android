@@ -380,4 +380,11 @@
         <item quantity="one">1 സെഷൻ റദ്ദാക്കി</item>
         <item quantity="other">%1$d സെഷനുകൾ റദ്ദാക്കി</item>
     </plurals>
+    <string name="login_title">ലോഗിൻ</string>
+    <string name="login_section_methods">ലോഗിൻ രീതികൾ</string>
+    <string name="login_method_email">ഇമെയിൽ കോഡ്</string>
+    <string name="login_method_passkey">പാസ്കീ</string>
+    <string name="login_method_totp">Authenticator ആപ്പ്</string>
+    <string name="login_method_oauth">തേർഡ്-പാർട്ടി ലോഗിൻ</string>
+    <string name="login_method_recovery">Redirect</string>
 </resources>

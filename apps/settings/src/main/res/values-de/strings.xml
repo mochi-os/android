@@ -380,4 +380,11 @@
         <item quantity="one">1 Sitzung widerrufen</item>
         <item quantity="other">%1$d Sitzungen widerrufen</item>
     </plurals>
+    <string name="login_title">Anmelden</string>
+    <string name="login_section_methods">Anmeldemethoden</string>
+    <string name="login_method_email">E-Mail-Code</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator-App</string>
+    <string name="login_method_oauth">Drittanbieter-Anmeldung</string>
+    <string name="login_method_recovery">Wiederherstellungscodes</string>
 </resources>

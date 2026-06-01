@@ -382,4 +382,11 @@
         <item quantity="one">1 relace zrušena</item>
         <item quantity="other">%1$d relací zrušeno</item>
     </plurals>
+    <string name="login_title">Přihlášení</string>
+    <string name="login_section_methods">Způsoby přihlášení</string>
+    <string name="login_method_email">E-mailový kód</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Autentizační aplikace</string>
+    <string name="login_method_oauth">Přihlášení třetí strany</string>
+    <string name="login_method_recovery">Obnovovací kódy</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="settings_units_usa">BNA</string>
     <string name="profile_privacy_description">Hvort aðrir geta fundið þig í skránni.</string>
     <string name="game_chat_load_more">Hlaða eldri skilaboðum</string>
-
+    <string name="stepup_title">Staðfestu að þetta sért þú</string>
+    <string name="stepup_description">Þetta er öryggisbreyting á reikningnum þínum. Staðfestu auðkenni þitt til að halda áfram.</string>
+    <string name="stepup_email_label">Tölvupóstkóði</string>
+    <string name="stepup_email_placeholder">Sláðu inn kóðann úr tölvupóstinum þínum</string>
+    <string name="stepup_totp_label">Auðkennisnúmer</string>
+    <string name="stepup_totp_placeholder">Sláðu inn auðkenniskóðann þinn</string>
+    <string name="stepup_passkey_label">Aðgangslykill</string>
+    <string name="stepup_use_passkey">Notaðu aðgangslykilinn þinn</string>
+    <string name="stepup_send_email">Senda tölvupóst</string>
+    <string name="stepup_resend_email">Senda tölvupóst aftur</string>
+    <string name="stepup_verify">Sannprófa</string>
+    <string name="stepup_continue_with">Halda áfram með %1$s</string>
+    <string name="stepup_error_start">Ekki tókst að hefja endurauðkenningu. Reyndu aftur.</string>
+    <string name="stepup_error_code">Þessi kóði er rangur eða útrunninn.</string>
+    <string name="stepup_error_passkey">Staðfesting aðgangslykils mistókst. Reyndu aftur.</string>
+    <string name="stepup_error_oauth">Ekki tókst að staðfesta með þeim reikningi. Reyndu aftur.</string>
 </resources>

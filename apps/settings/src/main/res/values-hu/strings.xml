@@ -380,4 +380,11 @@
         <item quantity="one">1 munkamenet visszavonva</item>
         <item quantity="other">%1$d munkamenet visszavonva</item>
     </plurals>
+    <string name="login_title">Bejelentkezés</string>
+    <string name="login_section_methods">Bejelentkezési módok</string>
+    <string name="login_method_email">E-mail kód</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Hitelesítő alkalmazás</string>
+    <string name="login_method_oauth">Harmadik fél általi bejelentkezés</string>
+    <string name="login_method_recovery">Helyreállítási kódok</string>
 </resources>

@@ -381,4 +381,11 @@
         <item quantity="other">Atsauktas %1$d sesijas</item>
         <item quantity="zero">Atsauktas %1$d sesijas</item>
     </plurals>
+    <string name="login_title">Pierakstīšanās</string>
+    <string name="login_section_methods">Pieteikšanās metodes</string>
+    <string name="login_method_email">E-pasta kods</string>
+    <string name="login_method_passkey">Piekļuves atslēga</string>
+    <string name="login_method_totp">Authenticator lietotne</string>
+    <string name="login_method_oauth">Trešās puses pieteikšanās</string>
+    <string name="login_method_recovery">Atjaunošanas kodi</string>
 </resources>

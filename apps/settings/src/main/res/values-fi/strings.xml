@@ -380,4 +380,11 @@
         <item quantity="one">1 istunto peruutettu</item>
         <item quantity="other">%1$d istuntoa peruutettu</item>
     </plurals>
+    <string name="login_title">Kirjaudu sisään</string>
+    <string name="login_section_methods">Kirjautumistavat</string>
+    <string name="login_method_email">Sähköpostikoodi</string>
+    <string name="login_method_passkey">Avainkoodi</string>
+    <string name="login_method_totp">Todennussovellus</string>
+    <string name="login_method_oauth">Kolmannen osapuolen kirjautuminen</string>
+    <string name="login_method_recovery">Palautuskoodit</string>
 </resources>

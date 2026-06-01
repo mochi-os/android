@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">ಡೈರೆಕ್ಟರಿಯಲ್ಲಿ ಇತರರು ನಿಮ್ಮನ್ನು ಹುಡುಕಬಹುದೇ ಎಂಬುದು.</string>
     <string name="game_chat_load_more">ಹಳೆಯ ಸಂದೇಶಗಳನ್ನು ಲೋಡ್ ಮಾಡಿ</string>
-
+    <string name="stepup_title">ಇದು ನೀವೇ ಎಂದು ದೃಢೀಕರಿಸಿ</string>
+    <string name="stepup_description">ಇದು ನಿಮ್ಮ ಖಾತೆಗೆ ಸಂಬಂಧಿಸಿದ ಸುರಕ್ಷತಾ ಬದಲಾವಣೆಯಾಗಿದೆ. ಮುಂದುವರಿಯಲು ಇದು ನೀವೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="stepup_email_label">ಇಮೇಲ್ ಕೋಡ್</string>
+    <string name="stepup_email_placeholder">ನಿಮ್ಮ ಇಮೇಲ್‌ನಿಂದ ಕೋಡ್ ನಮೂದಿಸಿ</string>
+    <string name="stepup_totp_label">Authenticator ಕೋಡ್</string>
+    <string name="stepup_totp_placeholder">ನಿಮ್ಮ authenticator ಕೋಡ್ ನಮೂದಿಸಿ</string>
+    <string name="stepup_passkey_label">ಪಾಸ್‌ಕೀ</string>
+    <string name="stepup_use_passkey">ನಿಮ್ಮ ಪಾಸ್‌ಕೀ ಬಳಸಿ</string>
+    <string name="stepup_send_email">ಇಮೇಲ್ ಕಳುಹಿಸಿ</string>
+    <string name="stepup_resend_email">ಇಮೇಲ್ ಮತ್ತೆ ಕಳುಹಿಸಿ</string>
+    <string name="stepup_verify">ಪರಿಶೀಲಿಸಿ</string>
+    <string name="stepup_continue_with">%1$s ಮೂಲಕ ಮುಂದುವರಿಸಿ</string>
+    <string name="stepup_error_start">ಮರು-ದೃಢೀಕರಣವನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="stepup_error_code">ಆ ಕೋಡ್ ತಪ್ಪಾಗಿದೆ ಅಥವಾ ಅವಧಿ ಮೀರಿದೆ.</string>
+    <string name="stepup_error_passkey">ಪಾಸ್‌ಕೀ ಪರಿಶೀಲನೆ ವಿಫಲವಾಯಿತು. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="stepup_error_oauth">ಆ ಖಾತೆಯೊಂದಿಗೆ ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
 </resources>

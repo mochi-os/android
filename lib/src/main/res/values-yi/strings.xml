@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">צי אַנדערע קענען אייך טרעפן אינעם פֿאַרצייכעניש.</string>
     <string name="game_chat_load_more">לאָדט עלטערע מעלדונגען</string>
-
+    <string name="stepup_title">באַשטעטיק אַז דאָס זײַט איר</string>
+    <string name="stepup_description">דאָס איז אַ זיכערקייט־ענדערונג צו אײַער קאָנטע. פֿאַריפֿיצירט אַז דאָס זײַט איר צו ממשיך זײַן.</string>
+    <string name="stepup_email_label">בליצפּאָסט־קאָד</string>
+    <string name="stepup_email_placeholder">גיט אַרײַן דעם קאָד פֿון אײַער בליצפּאָסט</string>
+    <string name="stepup_totp_label">Authenticator קאָד</string>
+    <string name="stepup_totp_placeholder">גיט אַרײַן אײַער אויטענטיפֿיקאַטאָר־קאָד</string>
+    <string name="stepup_passkey_label">פּאַסקיי</string>
+    <string name="stepup_use_passkey">ניצט אײַער passkey</string>
+    <string name="stepup_send_email">שיק בליצפּאָסט</string>
+    <string name="stepup_resend_email">שיק די בליצפּאָסט נאָך אַ מאָל</string>
+    <string name="stepup_verify">פֿאַריפֿיצירן</string>
+    <string name="stepup_continue_with">המשך מיט %1$s</string>
+    <string name="stepup_error_start">מע האָט נישט געקענט אָנהייבן ווידער־פֿאַריפֿיצירונג. ביטע פּרוביר ווידער.</string>
+    <string name="stepup_error_code">יענער קאָד איז אומריכטיק אָדער איז אויסגעגאַנגען.</string>
+    <string name="stepup_error_passkey">די passkey פֿאַריפֿיצירונג איז דורכגעפֿאַלן. ביטע פּרוביר ווידער.</string>
+    <string name="stepup_error_oauth">מע האָט נישט געקענט באַשטעטיקן מיט יענעם קאָנטע. ביטע פּרובירט נאָך אַ מאָל.</string>
 </resources>

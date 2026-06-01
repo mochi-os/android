@@ -247,5 +247,20 @@
     <string name="settings_units_usa">US</string>
     <string name="profile_privacy_description">Bóyá àwọn mìíràn lè rí ọ nínú ìwé-ìtọ́kasí.</string>
     <string name="game_chat_load_more">Kó àwọn ìránṣẹ́ àtijọ́ wọlé</string>
-
+    <string name="stepup_title">Jẹ́rìí sí pé ìwọ ni</string>
+    <string name="stepup_description">Èyí jẹ́ ìyípadà ààbò sí àkáǹtì rẹ. Jẹ́rìí sí pé ìwọ ni láti tẹ̀síwájú.</string>
+    <string name="stepup_email_label">Kóòdù ímẹ́ẹ̀lì</string>
+    <string name="stepup_email_placeholder">Tẹ koodu láti inú ímeèlì rẹ</string>
+    <string name="stepup_totp_label">Kóòdù olùfọwọ́sí</string>
+    <string name="stepup_totp_placeholder">Tẹ kóòdù authenticator rẹ</string>
+    <string name="stepup_passkey_label">Kọ́kọ́rọ́-ìwọlé</string>
+    <string name="stepup_use_passkey">Lo passkey rẹ</string>
+    <string name="stepup_send_email">Fi ímeèlì ránṣẹ́</string>
+    <string name="stepup_resend_email">Tún ìmélì náà ránṣẹ́</string>
+    <string name="stepup_verify">Jẹ́rìí sí</string>
+    <string name="stepup_continue_with">Tẹ̀síwájú pẹ̀lú %1$s</string>
+    <string name="stepup_error_start">Kò lè bẹ̀rẹ̀ ìjẹ́rìísí-padà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.</string>
+    <string name="stepup_error_code">Kóòdù yẹn kò tọ̀nà tàbí ó ti pé.</string>
+    <string name="stepup_error_passkey">Ìjẹ́rìísí passkey kùnà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.</string>
+    <string name="stepup_error_oauth">A kò lè fọwọ́sí pẹ̀lú àkàùntì yẹn. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kansí.</string>
 </resources>

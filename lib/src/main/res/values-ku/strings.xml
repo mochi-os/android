@@ -247,5 +247,20 @@
     <string name="settings_units_usa">DYA</string>
     <string name="profile_privacy_description">Ka yên din dikarin te di pelrêçeyê de bibînin an na.</string>
     <string name="game_chat_load_more">Peyamên kevntir bar bike</string>
-
+    <string name="stepup_title">Pejirîne ku ev tu yî</string>
+    <string name="stepup_description">Ev guhertinek ewlehiyê ya hesabê te ye. Ji bo berdewamkirinê verast bike ku ev tu yî.</string>
+    <string name="stepup_email_label">Koda e-nameyê</string>
+    <string name="stepup_email_placeholder">Koda ji e-nameya xwe binivîse</string>
+    <string name="stepup_totp_label">Koda rastandinê</string>
+    <string name="stepup_totp_placeholder">Koda authenticator-a xwe têkevê</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Passkey-ya xwe bikar bîne</string>
+    <string name="stepup_send_email">E-nameyê bişîne</string>
+    <string name="stepup_resend_email">Dîsa e-nameyê bişîne</string>
+    <string name="stepup_verify">Verifîke bike</string>
+    <string name="stepup_continue_with">Bi %1$s berdewam be</string>
+    <string name="stepup_error_start">Verastkirina ji nû ve nehate destpêkirin. Ji kerema xwe dîsa biceribîne.</string>
+    <string name="stepup_error_code">Ew kod çewt e an dema wê qediyaye.</string>
+    <string name="stepup_error_passkey">Verastkirina passkey têk çû. Ji kerema xwe dîsa biceribîne.</string>
+    <string name="stepup_error_oauth">Bi wê hesabê re piştrastkirin pêk nehat. Ji kerema xwe dîsa biceribîne.</string>
 </resources>

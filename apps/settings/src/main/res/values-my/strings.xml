@@ -379,4 +379,11 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">Session %1$d ခုကို ရုပ်သိမ်းပြီး</item>
     </plurals>
+    <string name="login_title">ဝင်ရောက်ခြင်း</string>
+    <string name="login_section_methods">လော့ဂ်အင်နည်းလမ်းများ</string>
+    <string name="login_method_email">အီးမေးလ် ကုဒ်</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator app</string>
+    <string name="login_method_oauth">Third-party ဝင်ရောက်ရေး</string>
+    <string name="login_method_recovery">Recovery code များ</string>
 </resources>

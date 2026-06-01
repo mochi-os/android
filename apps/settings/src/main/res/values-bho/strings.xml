@@ -380,4 +380,11 @@
         <item quantity="one">1 सत्र निरस्त कइल गइल</item>
         <item quantity="other">%1$d सत्र निरस्त कइल गइल</item>
     </plurals>
+    <string name="login_title">लॉगिन</string>
+    <string name="login_section_methods">लॉगिन के तरीका</string>
+    <string name="login_method_email">ईमेल कोड</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Authenticator ऐप</string>
+    <string name="login_method_oauth">तीसरा-पक्ष लॉगिन</string>
+    <string name="login_method_recovery">रिकवरी कोड</string>
 </resources>

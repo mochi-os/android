@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">Yaqhanakax direcciopanxa jumar jikxatasipchispati.</string>
     <string name="game_chat_load_more">Nayraqata yatiyäwinak apsuña</string>
     <string name="game_chat_move_played">%1$s anatayna %2$s</string>
-
+    <string name="stepup_title">Jumäwa sañ yatiyma</string>
+    <string name="stepup_description">Akax cuentaman mä jan walt\'awi jarktʼäwiwa. Sarantañataki jumäwa sañ yatiyma.</string>
+    <string name="stepup_email_label">Email código</string>
+    <string name="stepup_email_placeholder">Correo electrónico ukankir código uchma</string>
+    <string name="stepup_totp_label">Authenticator código</string>
+    <string name="stepup_totp_placeholder">Autenticador codigoma uchma</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Passkey ukma apnaqama</string>
+    <string name="stepup_send_email">Email apayaña</string>
+    <string name="stepup_resend_email">Correo mayampi apaña</string>
+    <string name="stepup_verify">Verificaña ukat habilitaña</string>
+    <string name="stepup_continue_with">%1$s ukampi sarantañani</string>
+    <string name="stepup_error_start">Janiw wasita yatiyaña qalltañ atkchiti. Mira wasitat yant\'asma.</string>
+    <string name="stepup_error_code">Uka codigox jan walikiti jan ukax tukutawa.</string>
+    <string name="stepup_error_passkey">Passkey yatiyañax jan walikiti. Mira wasitat yant\'asma.</string>
+    <string name="stepup_error_oauth">Uka cuentampi jan chiqañchasiñjamäkiti. Mayampi yant\'añamawa.</string>
 </resources>

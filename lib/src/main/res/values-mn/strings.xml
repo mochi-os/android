@@ -247,5 +247,20 @@
     <string name="settings_units_usa">АНУ</string>
     <string name="profile_privacy_description">Бусад хүмүүс таныг лавлахаас олж чадах эсэх.</string>
     <string name="game_chat_load_more">Хуучин мессежүүдийг ачаалах</string>
-
+    <string name="stepup_title">Энэ та мөн эсэхийг баталгаажуулна уу</string>
+    <string name="stepup_description">Энэ нь таны бүртгэлийн аюулгүй байдлын өөрчлөлт юм. Үргэлжлүүлэхийн тулд энэ та мөн эсэхийг баталгаажуулна уу.</string>
+    <string name="stepup_email_label">Имэйл код</string>
+    <string name="stepup_email_placeholder">Имэйлд ирсэн кодоо оруулна уу</string>
+    <string name="stepup_totp_label">Authenticator код</string>
+    <string name="stepup_totp_placeholder">Баталгаажуулагчийн кодоо оруулна уу</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Нэвтрэх түлхүүрээ ашиглах</string>
+    <string name="stepup_send_email">Имэйл илгээх</string>
+    <string name="stepup_resend_email">Имэйлийг дахин илгээх</string>
+    <string name="stepup_verify">Баталгаажуулах</string>
+    <string name="stepup_continue_with">%1$s-р үргэлжлүүлэх</string>
+    <string name="stepup_error_start">Дахин баталгаажуулалтыг эхлүүлж чадсангүй. Дахин оролдоно уу.</string>
+    <string name="stepup_error_code">Энэ код буруу эсвэл хугацаа нь дууссан байна.</string>
+    <string name="stepup_error_passkey">Нэвтрэх түлхүүрийн баталгаажуулалт амжилтгүй боллоо. Дахин оролдоно уу.</string>
+    <string name="stepup_error_oauth">Тэр бүртгэлээр баталгаажуулж чадсангүй. Дахин оролдоно уу.</string>
 </resources>

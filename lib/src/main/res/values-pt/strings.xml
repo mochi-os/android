@@ -247,5 +247,20 @@
     <string name="settings_units_usa">EUA</string>
     <string name="profile_privacy_description">Se outras pessoas podem encontrar você no diretório.</string>
     <string name="game_chat_load_more">Carregar mensagens anteriores</string>
-
+    <string name="stepup_title">Confirme que é você</string>
+    <string name="stepup_description">Esta é uma alteração de segurança na sua conta. Verifique que é você para continuar.</string>
+    <string name="stepup_email_label">Código por email</string>
+    <string name="stepup_email_placeholder">Introduza o código do seu e-mail</string>
+    <string name="stepup_totp_label">Código do autenticador</string>
+    <string name="stepup_totp_placeholder">Introduza o código do autenticador</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Usar a sua chave de acesso</string>
+    <string name="stepup_send_email">Enviar email</string>
+    <string name="stepup_resend_email">Reenviar e-mail</string>
+    <string name="stepup_verify">Verificar</string>
+    <string name="stepup_continue_with">Continuar com %1$s</string>
+    <string name="stepup_error_start">Não foi possível iniciar a reautenticação. Tente novamente.</string>
+    <string name="stepup_error_code">Esse código está incorreto ou expirou.</string>
+    <string name="stepup_error_passkey">A verificação da chave de acesso falhou. Tente novamente.</string>
+    <string name="stepup_error_oauth">Não foi possível verificar com essa conta. Tente novamente.</string>
 </resources>

@@ -247,5 +247,20 @@
     <string name="profile_privacy_description">ሌሎች በማውጫው ውስጥ ሊያገኙዎት ይችሉ እንደሆነ።</string>
     <string name="game_chat_load_more">የቆዩ መልዕክቶችን ጫን</string>
     <string name="game_chat_move_played">%1$s %2$s ተጫውቷል</string>
-
+    <string name="stepup_title">እርስዎ መሆንዎን ያረጋግጡ</string>
+    <string name="stepup_description">ይህ የመለያዎ የደህንነት ለውጥ ነው። ለመቀጠል እርስዎ መሆንዎን ያረጋግጡ።</string>
+    <string name="stepup_email_label">የኢሜይል ኮድ</string>
+    <string name="stepup_email_placeholder">ከኢሜይልዎ የመጣውን ኮድ ያስገቡ</string>
+    <string name="stepup_totp_label">የማረጋገጫ ኮድ</string>
+    <string name="stepup_totp_placeholder">የአረጋጋጭዎን ኮድ ያስገቡ</string>
+    <string name="stepup_passkey_label">የይለፍ ቁልፍ</string>
+    <string name="stepup_use_passkey">የይለፍ ቁልፍዎን ይጠቀሙ</string>
+    <string name="stepup_send_email">ኢሜይል ላክ</string>
+    <string name="stepup_resend_email">ኢሜይል እንደገና ላክ</string>
+    <string name="stepup_verify">ያረጋግጡ</string>
+    <string name="stepup_continue_with">በ%1$s ይቀጥሉ</string>
+    <string name="stepup_error_start">እንደገና ማረጋገጥን መጀመር አልተቻለም። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="stepup_error_code">ያ ኮድ የተሳሳተ ነው ወይም ጊዜው አልፎበታል።</string>
+    <string name="stepup_error_passkey">የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="stepup_error_oauth">በዚያ መለያ ማረጋገጥ አልተቻለም። እባክዎ እንደገና ይሞክሩ።</string>
 </resources>

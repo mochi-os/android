@@ -19,6 +19,7 @@ import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.Hub
 import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Link
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MonitorHeart
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
@@ -52,6 +53,7 @@ import org.mochios.settings.R
 fun SettingsHomeScreen(
     onBack: () -> Unit,
     onOpenAccount: () -> Unit,
+    onOpenLogin: () -> Unit,
     onOpenPreferences: () -> Unit,
     onOpenDisplay: () -> Unit,
     onOpenNotifications: () -> Unit,
@@ -107,6 +109,15 @@ fun SettingsHomeScreen(
             }
             item {
                 ListItem(
+                    modifier = Modifier.clickable(onClick = onOpenLogin),
+                    headlineContent = { Text(stringResource(R.string.login_title)) },
+                    leadingContent = { Icon(Icons.Default.Lock, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                )
+                HorizontalDivider()
+            }
+            item {
+                ListItem(
                     modifier = Modifier.clickable(onClick = onOpenPreferences),
                     headlineContent = { Text(stringResource(R.string.settings_home_preferences)) },
                     leadingContent = { Icon(Icons.Default.Tune, contentDescription = null) },
@@ -119,15 +130,6 @@ fun SettingsHomeScreen(
                     modifier = Modifier.clickable(onClick = onOpenDisplay),
                     headlineContent = { Text(stringResource(R.string.settings_home_display)) },
                     leadingContent = { Icon(Icons.Default.Palette, contentDescription = null) },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
-                HorizontalDivider()
-            }
-            item {
-                ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenInterests),
-                    headlineContent = { Text(stringResource(R.string.settings_home_interests)) },
-                    leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
@@ -202,6 +204,15 @@ fun SettingsHomeScreen(
                     modifier = Modifier.clickable(onClick = onOpenReplication),
                     headlineContent = { Text(stringResource(R.string.settings_home_replication)) },
                     leadingContent = { Icon(Icons.Default.Sync, contentDescription = null) },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                )
+                HorizontalDivider()
+            }
+            item {
+                ListItem(
+                    modifier = Modifier.clickable(onClick = onOpenInterests),
+                    headlineContent = { Text(stringResource(R.string.settings_home_interests)) },
+                    leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()

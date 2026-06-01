@@ -12,6 +12,7 @@ import org.mochios.settings.ui.document.DocumentScreen
 import org.mochios.settings.ui.domains.DomainsScreen
 import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.interests.InterestsScreen
+import org.mochios.settings.ui.login.LoginScreen
 import org.mochios.settings.ui.notificationprefs.NotificationPrefsScreen
 import org.mochios.settings.ui.notifications.NotificationsScreen
 import org.mochios.settings.ui.preferences.UserSettingsScreen
@@ -27,6 +28,7 @@ import org.mochios.settings.ui.systemusers.SystemUsersScreen
 object SettingsApp {
     const val HOME = "settings/home"
     const val ACCOUNT = "settings/account"
+    const val LOGIN = "settings/login"
     const val PREFERENCES = "settings/preferences"
     const val DISPLAY = "settings/display"
     const val NOTIFICATIONS = "settings/notifications"
@@ -56,6 +58,7 @@ fun NavGraphBuilder.settingsNavGraph(
         SettingsHomeScreen(
             onBack = { navController.popBackStack() },
             onOpenAccount = { navController.navigate(SettingsApp.ACCOUNT) },
+            onOpenLogin = { navController.navigate(SettingsApp.LOGIN) },
             onOpenPreferences = { navController.navigate(SettingsApp.PREFERENCES) },
             onOpenDisplay = { navController.navigate(SettingsApp.DISPLAY) },
             onOpenNotifications = { navController.navigate(SettingsApp.NOTIFICATIONS) },
@@ -77,6 +80,9 @@ fun NavGraphBuilder.settingsNavGraph(
     }
     composable(SettingsApp.ACCOUNT) {
         AccountScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.LOGIN) {
+        LoginScreen(onBack = { navController.popBackStack() })
     }
     composable(SettingsApp.SESSIONS) {
         SessionsScreen(onBack = { navController.popBackStack() })

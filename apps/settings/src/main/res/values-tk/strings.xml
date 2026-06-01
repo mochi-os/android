@@ -380,4 +380,11 @@
         <item quantity="one">1 sessiýa ýatyryldy</item>
         <item quantity="other">%1$d sessiýa ýatyryldy</item>
     </plurals>
+    <string name="login_title">Giriş</string>
+    <string name="login_section_methods">Girmek usullary</string>
+    <string name="login_method_email">E-poçta kody</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Autentifikator programma</string>
+    <string name="login_method_oauth">Üçünji tarap girişi</string>
+    <string name="login_method_recovery">Dikeldiş kodlary</string>
 </resources>

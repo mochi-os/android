@@ -55,18 +55,28 @@ class PasskeyManager @Inject constructor(
     }
 
     suspend fun authenticate(options: JsonObject): PasskeyCredentialResult {
-        val requestJson = options.toString()
-        val publicKeyOption = GetPublicKeyCredentialOption(
-            requestJson = requestJson
-        )
-        val request = GetCredentialRequest(
-            credentialOptions = listOf(publicKeyOption)
-        )
-        val response = credentialManager.getCredential(
-            context = context,
-            request = request
-        )
-        return extractCredential(response)
+        return extractCredential(getCredential(options))
+    }
+
+    /**
+     * Run the WebAuthn assertion ceremony and return the raw
+     * authenticationResponseJson (the navigator.credentials.get() result the
+     * server's step-up `passkey/verify/finish` expects as its `assertion`
+     * field, parsed by ParseCredentialRequestResponseBody).
+     */
+    suspend fun authenticateRaw(options: JsonObject): String {
+        val response = getCredential(options)
+        val credential = response.credential
+        if (credential !is PublicKeyCredential) {
+            throw IllegalStateException("Expected PublicKeyCredential but got ${credential.type}")
+        }
+        return credential.authenticationResponseJson
+    }
+
+    private suspend fun getCredential(options: JsonObject): GetCredentialResponse {
+        val publicKeyOption = GetPublicKeyCredentialOption(requestJson = options.toString())
+        val request = GetCredentialRequest(credentialOptions = listOf(publicKeyOption))
+        return credentialManager.getCredential(context = context, request = request)
     }
 
     private fun extractCredential(response: GetCredentialResponse): PasskeyCredentialResult {

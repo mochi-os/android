@@ -382,4 +382,11 @@
         <item quantity="one">Отозвана %1$d сессия</item>
         <item quantity="other">Отозвано %1$d сессии</item>
     </plurals>
+    <string name="login_title">Вход</string>
+    <string name="login_section_methods">Способы входа</string>
+    <string name="login_method_email">Код по электронной почте</string>
+    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_totp">Приложение-аутентификатор</string>
+    <string name="login_method_oauth">Сторонний вход</string>
+    <string name="login_method_recovery">Коды восстановления</string>
 </resources>

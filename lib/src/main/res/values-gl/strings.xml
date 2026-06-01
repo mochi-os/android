@@ -247,5 +247,20 @@
     <string name="settings_timestamp_absolute">Absoluta</string>
     <string name="settings_units_usa">EUA</string>
     <string name="profile_privacy_description">Se outras persoas poden atoparte no directorio.</string>
-
+    <string name="stepup_title">Confirma que es ti</string>
+    <string name="stepup_description">Este é un cambio de seguranza na túa conta. Verifica a túa identidade para continuar.</string>
+    <string name="stepup_email_label">Código por correo</string>
+    <string name="stepup_email_placeholder">Introduce o código do teu correo</string>
+    <string name="stepup_totp_label">Código de autenticación</string>
+    <string name="stepup_totp_placeholder">Introduce o código do autenticador</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Usa a túa clave de acceso</string>
+    <string name="stepup_send_email">Enviar correo</string>
+    <string name="stepup_resend_email">Reenviar o correo</string>
+    <string name="stepup_verify">Verificar</string>
+    <string name="stepup_continue_with">Continuar con %1$s</string>
+    <string name="stepup_error_start">Non se puido iniciar a reautenticación. Téntao de novo.</string>
+    <string name="stepup_error_code">Ese código é incorrecto ou caducou.</string>
+    <string name="stepup_error_passkey">Fallou a verificación da clave de acceso. Téntao de novo.</string>
+    <string name="stepup_error_oauth">Non se puido verificar con esa conta. Téntao de novo.</string>
 </resources>
