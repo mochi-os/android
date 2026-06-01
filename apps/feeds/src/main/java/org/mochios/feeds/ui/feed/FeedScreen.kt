@@ -95,6 +95,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlin.math.abs
@@ -757,6 +758,8 @@ private fun PostCard(
                 PostBody(
                     post = post,
                     maxLines = 6,
+                    titleFontSize = 20.sp,
+                    titleBodyGap = 8.dp,
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onClick
                 )

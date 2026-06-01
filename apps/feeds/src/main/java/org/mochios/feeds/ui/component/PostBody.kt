@@ -11,6 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.mochios.android.ui.components.HtmlContent
@@ -33,6 +35,8 @@ fun PostBody(
     post: Post,
     modifier: Modifier = Modifier,
     maxLines: Int = Int.MAX_VALUE,
+    titleFontSize: TextUnit = 18.sp,
+    titleBodyGap: Dp = 4.dp,
     onClick: (() -> Unit)? = null,
 ) {
     val rawTitle = post.data?.rss?.title.orEmpty()
@@ -56,13 +60,13 @@ fun PostBody(
             text = title,
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold,
-            fontSize = 18.sp,
+            fontSize = titleFontSize,
             maxLines = if (truncated) 2 else Int.MAX_VALUE,
             overflow = TextOverflow.Ellipsis,
             modifier = titleModifier,
         )
         if (rest.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(titleBodyGap))
             HtmlContent(
                 html = rest,
                 modifier = Modifier.fillMaxWidth(),

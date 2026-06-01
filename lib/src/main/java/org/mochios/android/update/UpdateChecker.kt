@@ -9,6 +9,7 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -52,6 +53,15 @@ class UpdateChecker(
         private const val TRACK = "production"
         private const val VERSIONS_URL = "https://packages.mochi-os.org/android/versions.json"
         private const val APK_URL = "https://packages.mochi-os.org/android/mochi.apk"
+
+        // The ~38 MB APK pull is the fragile step: on mobile data a single
+        // transfer often drops mid-stream (throttling, cell handoff, packet
+        // loss). The periodic worker masks this by returning Result.retry(),
+        // but checkNow's on-demand caller (the About dialog) is one-shot — so
+        // retry the download here too, else a single miss surfaces as a hard
+        // "download failed" when a second attempt would have succeeded.
+        private const val DOWNLOAD_ATTEMPTS = 3
+        private const val DOWNLOAD_RETRY_DELAY_MS = 2_000L
 
         /**
          * Idempotent daily schedule. Call from the host Application's
@@ -123,16 +133,25 @@ class UpdateChecker(
             // accumulate APKs from every release the user ever skipped.
             purgeStale(ctx, keep = latest)
 
-            try {
-                download(target)
-            } catch (e: Exception) {
-                Log.i(TAG, "APK download failed: ${e.message}")
+            var staged = false
+            for (attempt in 1..DOWNLOAD_ATTEMPTS) {
+                try {
+                    download(target)
+                    if (target.exists() && target.length() > 0L) {
+                        staged = true
+                        break
+                    }
+                    Log.w(TAG, "APK download produced empty file (attempt $attempt/$DOWNLOAD_ATTEMPTS)")
+                } catch (e: Exception) {
+                    Log.i(TAG, "APK download failed (attempt $attempt/$DOWNLOAD_ATTEMPTS): ${e.message}")
+                }
                 target.delete()
-                return@withContext CheckOutcome.DownloadFailed
+                if (attempt < DOWNLOAD_ATTEMPTS) {
+                    // Linear backoff: 2s, then 4s.
+                    delay(DOWNLOAD_RETRY_DELAY_MS * attempt)
+                }
             }
-            if (!target.exists() || target.length() == 0L) {
-                Log.w(TAG, "APK download produced empty file")
-                target.delete()
+            if (!staged) {
                 return@withContext CheckOutcome.DownloadFailed
             }
 
