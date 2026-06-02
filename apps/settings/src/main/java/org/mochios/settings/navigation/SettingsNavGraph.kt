@@ -56,7 +56,6 @@ fun NavGraphBuilder.settingsNavGraph(
 ) {
     composable(SettingsApp.HOME) {
         SettingsHomeScreen(
-            onBack = { navController.popBackStack() },
             onOpenAccount = { navController.navigate(SettingsApp.ACCOUNT) },
             onOpenLogin = { navController.navigate(SettingsApp.LOGIN) },
             onOpenPreferences = { navController.navigate(SettingsApp.PREFERENCES) },

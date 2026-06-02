@@ -735,6 +735,34 @@ private fun PostCard(
                   top = if (heroUrl != null) 12.dp else 16.dp,
               )
       ) {
+            // Header: source/feed name + timestamp, above the title.
+            // formatTimestamp obeys every timestamp preference (relative /
+            // absolute / auto, and the date+time+timezone format).
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                val defaultAuthor = stringResource(R.string.feeds_post_default_author)
+                val authorName = post.source?.name?.takeIf { it.isNotEmpty() }
+                    ?: post.feedName.takeIf { it.isNotEmpty() }
+                    ?: defaultAuthor
+                Text(
+                    text = authorName,
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = LocalFormat.current.formatTimestamp(post.created),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
             // Memory badge
             post.data?.memory?.let { memory ->
                 if (memory.yearsAgo > 0) {
@@ -860,37 +888,6 @@ private fun PostCard(
                     }
                 }
             }
-        }
-
-        // Source / feed name + timestamp, pinned just above the action bar.
-        // formatTimestamp obeys every timestamp preference: the relative /
-        // absolute / auto display choice, and the date+time+timezone format
-        // for the absolute case.
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 16.dp, end = 16.dp, top = 8.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            val defaultAuthor = stringResource(R.string.feeds_post_default_author)
-            val authorName = post.source?.name?.takeIf { it.isNotEmpty() }
-                ?: post.feedName.takeIf { it.isNotEmpty() }
-                ?: defaultAuthor
-            Text(
-                text = authorName,
-                style = MaterialTheme.typography.labelMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = LocalFormat.current.formatTimestamp(post.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
         }
 
         // Bottom action bar: reaction bar, then comment / edit / delete
