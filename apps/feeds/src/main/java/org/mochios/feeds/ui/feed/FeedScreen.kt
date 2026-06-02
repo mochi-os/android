@@ -116,7 +116,7 @@ import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
-import org.mochios.android.ui.components.FlipboardPage
+import org.mochios.android.ui.components.FlipBook
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
@@ -490,63 +490,72 @@ fun FeedScreen(
                                 )
                             }
                         } else {
-                            // Magazine-style vertical pager: one post per page,
-                            // with a 3D tilt + alpha falloff driven off the
-                            // page's offset from the current page (the "fold"
-                            // visual at the page edge). Not the full
-                            // Flipboard two-half book-fold but feels page-flippy
-                            // and is one composable rather than a custom
-                            // graphics-layer split.
-                            VerticalPager(
-                                state = pagerState,
-                                modifier = Modifier.fillMaxSize(),
-                                key = { page -> posts[page].id },
-                                // Default snap threshold is 50% of page;
-                                // even 20% still felt like work on a tall
-                                // phone where the thumb naturally moves
-                                // 60-80dp. Drop to 8% so any deliberate
-                                // upward gesture commits to the next post
-                                // and the mid-swipe rotation only rubber-
-                                // bands back on a clear flick-and-release-
-                                // back. Velocity-based fling continues to
-                                // handle quick flicks.
-                                //
-                                // snapAnimationSpec: default spring micro-
-                                // overshoots near the end and reads as a
-                                // bounce. A short FastOutSlowIn tween
-                                // settles cleanly, matching the eased
-                                // mid-swipe rotation in FlipboardPage.
-                                flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
-                                    state = pagerState,
-                                    snapPositionalThreshold = 0.08f,
-                                    snapAnimationSpec = androidx.compose.animation.core.tween(
-                                        durationMillis = 220,
-                                        easing = androidx.compose.animation.core.FastOutSlowInEasing,
-                                    ),
-                                ),
-                            ) { page ->
-                                val post = posts[page]
+                            // Magazine-style vertical pager: one post per page.
+                            // The pager itself handles gestures/fling and
+                            // renders the live (interactive) post. A FlipBook
+                            // overlay paints the Flipboard book-fold during a
+                            // transition (it draws nothing at rest, so the live
+                            // page shows through). The fold is hinged at the
+                            // mid-screen crease: the outgoing top half stays
+                            // put while a single leaf turns toward the viewer.
+                            val renderPost: @Composable (Int) -> Unit = { index ->
+                                val post = posts[index]
                                 val routeFeedId = post.feedFingerprint.ifEmpty { viewModel.feedId }
                                 // post.source.url is the RSS feed (XML) URL —
                                 // not the article URL. The article URL lives
                                 // in rss.link. Anything else falls through to
                                 // the standard post detail screen.
                                 val sourceUrl = post.data?.rss?.link?.takeIf { it.isNotEmpty() }
-                                FlipboardPage(pagerState = pagerState, page = page) {
-                                    PostCard(
-                                        post = post,
-                                        serverUrl = viewModel.serverUrl,
-                                        fallbackFeedId = viewModel.feedId,
-                                        canManage = permissions.manage,
-                                        onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
-                                        onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
-                                        onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
-                                        onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
-                                        onDelete = { pendingDelete = post },
-                                        onAddTag = { addTagTarget = post.id },
-                                        onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) }
-                                    )
+                                PostCard(
+                                    post = post,
+                                    serverUrl = viewModel.serverUrl,
+                                    fallbackFeedId = viewModel.feedId,
+                                    canManage = permissions.manage,
+                                    onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
+                                    onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
+                                    onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
+                                    onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
+                                    onDelete = { pendingDelete = post },
+                                    onAddTag = { addTagTarget = post.id },
+                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) }
+                                )
+                            }
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                VerticalPager(
+                                    state = pagerState,
+                                    modifier = Modifier.fillMaxSize(),
+                                    key = { page -> posts[page].id },
+                                    // Default snap threshold is 50% of page;
+                                    // even 20% still felt like work on a tall
+                                    // phone where the thumb naturally moves
+                                    // 60-80dp. Drop to 8% so any deliberate
+                                    // upward gesture commits to the next post
+                                    // and the fold only rubber-bands back on a
+                                    // clear flick-and-release-back. Velocity-
+                                    // based fling continues to handle flicks.
+                                    //
+                                    // snapAnimationSpec: default spring micro-
+                                    // overshoots near the end and reads as a
+                                    // bounce. A short FastOutSlowIn tween
+                                    // settles cleanly, matching the eased fold.
+                                    flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
+                                        state = pagerState,
+                                        snapPositionalThreshold = 0.08f,
+                                        snapAnimationSpec = androidx.compose.animation.core.tween(
+                                            durationMillis = 220,
+                                            easing = androidx.compose.animation.core.FastOutSlowInEasing,
+                                        ),
+                                    ),
+                                ) { page ->
+                                    renderPost(page)
                                 }
+                                // Drawn after the pager → on top; no pointer
+                                // input of its own, so drags pass through.
+                                FlipBook(
+                                    pagerState = pagerState,
+                                    pageCount = posts.size,
+                                    page = renderPost,
+                                )
                             }
                         }
                     }
