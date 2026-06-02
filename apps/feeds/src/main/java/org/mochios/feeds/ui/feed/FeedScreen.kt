@@ -117,7 +117,6 @@ import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipboardPage
-import org.mochios.android.ui.components.flipboardPaperTexture
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
@@ -142,7 +141,7 @@ fun FeedScreen(
     onNavigateToCreatePost: (String) -> Unit,
     onNavigateToEditPost: (String, String) -> Unit,
     onNavigateToSettings: (String) -> Unit,
-    onNavigateToSources: (String) -> Unit = {},
+    onNavigateToSources: (feedId: String, sourceUrl: String?) -> Unit = { _, _ -> },
     onSelectFeed: (String) -> Unit,
     onNavigateToFindFeeds: () -> Unit,
     onOpenNotifications: () -> Unit = {},
@@ -405,7 +404,13 @@ fun FeedScreen(
                                         Icon(Icons.Default.RssFeed, contentDescription = null)
                                     },
                                     onClick = {
-                                        onNavigateToSources(viewModel.feedId)
+                                        // Pass the source of the post the user is
+                                        // currently on so the Sources list opens
+                                        // scrolled to it.
+                                        onNavigateToSources(
+                                            viewModel.feedId,
+                                            posts.getOrNull(pagerState.currentPage)?.source?.url,
+                                        )
                                         showOverflowMenu = false
                                     }
                                 )
@@ -670,7 +675,6 @@ private fun PostCard(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surface)
-            .flipboardPaperTexture(MaterialTheme.colorScheme.onSurface)
             .padding(start = 16.dp, end = 4.dp, top = 16.dp, bottom = 16.dp)
     ) {
       Column(

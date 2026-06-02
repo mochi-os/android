@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -40,6 +41,7 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
@@ -60,7 +62,8 @@ import org.mochios.android.R as MochiR
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SourcesTab(
-    viewModel: FeedSettingsViewModel
+    viewModel: FeedSettingsViewModel,
+    scrollToSourceUrl: String? = null,
 ) {
     val sources by viewModel.sources.collectAsState()
     val isLoading by viewModel.isLoadingSources.collectAsState()
@@ -69,6 +72,23 @@ fun SourcesTab(
     var showAddDialog by remember { mutableStateOf(false) }
     var showEditDialog by remember { mutableStateOf<Source?>(null) }
     var showRemoveDialog by remember { mutableStateOf<Source?>(null) }
+
+    val listState = rememberLazyListState()
+    // When opened from a post's overflow menu, scroll the list to that
+    // post's source. Match on the source URL (the RSS XML feed URL the
+    // post carries). Once is enough — don't fight the user if they then
+    // scroll away, so guard with a flag that survives source reloads.
+    var scrolled by remember(scrollToSourceUrl) { mutableStateOf(false) }
+    LaunchedEffect(sources, scrollToSourceUrl) {
+        if (scrolled || scrollToSourceUrl.isNullOrEmpty() || sources.isEmpty()) {
+            return@LaunchedEffect
+        }
+        val index = sources.indexOfFirst { it.url == scrollToSourceUrl }
+        if (index >= 0) {
+            listState.animateScrollToItem(index)
+            scrolled = true
+        }
+    }
 
     Scaffold(
         floatingActionButton = {
@@ -104,6 +124,7 @@ fun SourcesTab(
             }
             else -> {
                 LazyColumn(
+                    state = listState,
                     modifier = Modifier.padding(innerPadding),
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)

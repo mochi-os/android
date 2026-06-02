@@ -29,6 +29,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun SourcesScreen(
     onNavigateBack: () -> Unit,
+    highlightSource: String? = null,
     viewModel: FeedSettingsViewModel = hiltViewModel(),
 ) {
     val feedInfo by viewModel.feedInfo.collectAsState()
@@ -59,7 +60,7 @@ fun SourcesScreen(
         },
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            SourcesTab(viewModel = viewModel)
+            SourcesTab(viewModel = viewModel, scrollToSourceUrl = highlightSource)
         }
     }
 }

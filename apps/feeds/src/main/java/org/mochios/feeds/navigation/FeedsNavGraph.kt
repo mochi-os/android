@@ -31,7 +31,7 @@ object FeedsApp {
     const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}"
     const val FIND_FEEDS = "feeds/findFeeds"
     const val FEED_SETTINGS = "feeds/feedSettings/{feedId}"
-    const val FEED_SOURCES = "feeds/feedSources/{feedId}"
+    const val FEED_SOURCES = "feeds/feedSources/{feedId}?source={source}"
 
     fun feed(feedId: String) = "feeds/feed/$feedId"
     fun post(feedId: String, postId: String) = "feeds/post/$feedId/$postId"
@@ -47,7 +47,13 @@ object FeedsApp {
         return if (params.isEmpty()) "feeds/createPost" else "feeds/createPost?${params.joinToString("&")}"
     }
     fun feedSettings(feedId: String) = "feeds/feedSettings/$feedId"
-    fun feedSources(feedId: String) = "feeds/feedSources/$feedId"
+    fun feedSources(feedId: String, source: String? = null): String {
+        val base = "feeds/feedSources/$feedId"
+        return source?.takeIf { it.isNotEmpty() }?.let {
+            val encoded = URLEncoder.encode(it, StandardCharsets.UTF_8.name())
+            "$base?source=$encoded"
+        } ?: base
+    }
 }
 
 fun NavGraphBuilder.feedsNavGraph(
@@ -84,8 +90,8 @@ fun NavGraphBuilder.feedsNavGraph(
             onNavigateToSettings = { feedId ->
                 navController.navigate(FeedsApp.feedSettings(feedId))
             },
-            onNavigateToSources = { feedId ->
-                navController.navigate(FeedsApp.feedSources(feedId))
+            onNavigateToSources = { feedId, sourceUrl ->
+                navController.navigate(FeedsApp.feedSources(feedId, sourceUrl))
             },
             onSelectFeed = { feedId ->
                 // Swap the current feed in-place rather than stacking — back
@@ -194,8 +200,21 @@ fun NavGraphBuilder.feedsNavGraph(
 
     composable(
         route = FeedsApp.FEED_SOURCES,
-        arguments = listOf(navArgument("feedId") { type = NavType.StringType })
-    ) {
-        SourcesScreen(onNavigateBack = { navController.popBackStack() })
+        arguments = listOf(
+            navArgument("feedId") { type = NavType.StringType },
+            navArgument("source") {
+                type = NavType.StringType
+                defaultValue = ""
+            }
+        )
+    ) { backStackEntry ->
+        val encodedSource = backStackEntry.arguments?.getString("source").orEmpty()
+        val highlightSource = runCatching {
+            java.net.URLDecoder.decode(encodedSource, StandardCharsets.UTF_8.name())
+        }.getOrDefault(encodedSource)
+        SourcesScreen(
+            highlightSource = highlightSource.takeIf { it.isNotEmpty() },
+            onNavigateBack = { navController.popBackStack() },
+        )
     }
 }

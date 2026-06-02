@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
@@ -21,7 +20,13 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import kotlin.math.abs
 import kotlin.math.max
-import kotlin.random.Random
+
+// Fold-cue strengths, all scaled by fold progress (0 at rest). Tuned
+// deliberately strong so the flip reads on all-white pages — soften
+// here once judged on-device.
+private const val FACE_SHADE_MAX = 0.5f // per-half self-shadow at edge-on
+private const val HINGE_BAND_MAX = 0.5f // mid-screen crease shadow
+private const val FOLD_EDGE_MAX = 0.3f // thin line on each half's fold edge
 
 /**
  * Flipboard-style page composable for use inside VerticalPager. Renders
@@ -45,12 +50,21 @@ import kotlin.random.Random
  * mirrored content of an outgoing half doesn't bleed through.
  *
  * Visual aids for text-heavy pages (mostly-white content where the
- * rotation alone is invisible):
- *   - Each rotating half carries a thin dark line at its fold edge so
- *     the silhouette is visible as the half tilts.
- *   - A soft mid-screen shadow band intensifies as rotation crosses
- *     0° → 90°, simulating the depth of the lifted half. Fades back
- *     to nothing at 180° (when the half is hidden).
+ * rotation alone is invisible). The dominant cue is the self-shadow:
+ *   - Each rotating half is shaded by a gradient that deepens toward
+ *     the lifting (hinge) edge and scales with how edge-on the half is
+ *     — 0 at rest, strongest near 90°, back to 0 at 180°. Because it's
+ *     drawn inside the rotating layer it tilts with the face, so a
+ *     white half visibly darkens and the shadow sweeps as it turns.
+ *     This is what makes the fold read on all-white content; the rest
+ *     are reinforcement.
+ *   - A thin dark line at each half's fold edge sharpens the silhouette.
+ *   - A soft mid-screen shadow band (fixed in screen space) deepens the
+ *     crease as the fold rises and fades back to nothing at 180°.
+ *
+ * All cue strengths live in the [FACE_SHADE_MAX] / [HINGE_BAND_MAX] /
+ * [FOLD_EDGE_MAX] constants — tuned deliberately strong so the flip is
+ * visible; soften there once judged on-device.
  */
 @Composable
 fun FlipboardPage(
@@ -95,11 +109,14 @@ fun FlipboardPage(
         }
     }
 
-    // Fold "depth" — peaks at 90° (half edge-on), fades back to 0 at
-    // both rest (0°) and fully-flipped (180°). Used to scale the
-    // mid-screen shadow so the hinge gets darker as the fold rises and
-    // lighter again as the back-face slides away.
-    val foldDepth = max(foldProgress(topAngle), foldProgress(bottomAngle))
+    // Per-half fold "progress" — peaks at 90° (half edge-on), fades back
+    // to 0 at both rest (0°) and fully-flipped (180°). Each half is
+    // shaded by its own progress (so only the half that's actually
+    // moving darkens). foldDepth is the max of the two, used for the
+    // hinge band and edge lines that aren't tied to a single half.
+    val topFold = foldProgress(topAngle)
+    val bottomFold = foldProgress(bottomAngle)
+    val foldDepth = max(topFold, bottomFold)
 
     Box(modifier = Modifier.fillMaxSize()) {
         // Top half — clipped, rotates about its top edge (screen top).
@@ -121,11 +138,29 @@ fun FlipboardPage(
                 }
                 .drawWithContent {
                     drawContent()
+                    val midY = size.height / 2f
+                    // Self-shadow over the whole top half, darkest at the
+                    // lifting (mid-screen) edge, scaled by how edge-on the
+                    // half is. Rotates with the face — the cue that makes
+                    // the fold visible on white pages.
+                    if (topFold > 0f) {
+                        drawRect(
+                            brush = Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    Color.Black.copy(alpha = FACE_SHADE_MAX * topFold),
+                                ),
+                                startY = 0f,
+                                endY = midY,
+                            ),
+                            topLeft = Offset(0f, 0f),
+                            size = Size(size.width, midY),
+                        )
+                    }
                     if (foldDepth > 0f) {
-                        val midY = size.height / 2f
                         val px = 1.5f.dp.toPx()
                         drawRect(
-                            color = Color.Black.copy(alpha = 0.18f * foldDepth),
+                            color = Color.Black.copy(alpha = FOLD_EDGE_MAX * foldDepth),
                             topLeft = Offset(0f, midY - px),
                             size = Size(size.width, px),
                         )
@@ -148,11 +183,28 @@ fun FlipboardPage(
                 }
                 .drawWithContent {
                     drawContent()
+                    val midY = size.height / 2f
+                    // Self-shadow over the whole bottom half, darkest at the
+                    // lifting (mid-screen) edge, scaled by how edge-on the
+                    // half is. Rotates with the face.
+                    if (bottomFold > 0f) {
+                        drawRect(
+                            brush = Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Black.copy(alpha = FACE_SHADE_MAX * bottomFold),
+                                    Color.Transparent,
+                                ),
+                                startY = midY,
+                                endY = size.height,
+                            ),
+                            topLeft = Offset(0f, midY),
+                            size = Size(size.width, size.height - midY),
+                        )
+                    }
                     if (foldDepth > 0f) {
-                        val midY = size.height / 2f
                         val px = 1.5f.dp.toPx()
                         drawRect(
-                            color = Color.Black.copy(alpha = 0.18f * foldDepth),
+                            color = Color.Black.copy(alpha = FOLD_EDGE_MAX * foldDepth),
                             topLeft = Offset(0f, midY),
                             size = Size(size.width, px),
                         )
@@ -179,7 +231,7 @@ fun FlipboardPage(
                             brush = Brush.verticalGradient(
                                 colors = listOf(
                                     Color.Transparent,
-                                    Color.Black.copy(alpha = 0.35f * foldDepth),
+                                    Color.Black.copy(alpha = HINGE_BAND_MAX * foldDepth),
                                     Color.Transparent,
                                 ),
                                 startY = midY - bandH,
@@ -208,46 +260,6 @@ private fun foldProgress(angle: Float): Float {
 private fun smoothstep(x: Float): Float {
     val t = x.coerceIn(0f, 1f)
     return t * t * (3f - 2f * t)
-}
-
-/**
- * Subtle paper-grain background for pages inside [FlipboardPage]. A flat
- * surface colour gives the rotating halves nothing to grip onto visually
- * — the fold reads as a faint shadow only. A fine stable noise pattern
- * supplies low-frequency reference points so the user's eye registers
- * the rotation even on otherwise-white content.
- *
- * [color] is multiplied by [alpha] and stamped as small dots over the
- * area. Pass `MaterialTheme.colorScheme.onSurface` so the grain
- * automatically inverts between light and dark themes.
- *
- * Stable across recompositions — the dot positions are computed once
- * from a fixed seed and reused.
- */
-fun Modifier.flipboardPaperTexture(
-    color: Color,
-    alpha: Float = 0.04f,
-): Modifier = this.drawBehind {
-    paperGrainDots.forEach { dot ->
-        drawCircle(
-            color = color.copy(alpha = alpha),
-            radius = dot.radius,
-            center = Offset(dot.x * size.width, dot.y * size.height),
-        )
-    }
-}
-
-private data class GrainDot(val x: Float, val y: Float, val radius: Float)
-
-private val paperGrainDots: List<GrainDot> = run {
-    val rng = Random(0x70617065724772L)
-    List(600) {
-        GrainDot(
-            x = rng.nextFloat(),
-            y = rng.nextFloat(),
-            radius = 0.6f + rng.nextFloat() * 1.2f,
-        )
-    }
 }
 
 private object TopHalfShape : Shape {
