@@ -10,7 +10,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.lifecycleScope
-import androidx.compose.animation.Crossfade
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
+import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -152,9 +156,19 @@ class MainActivity : ComponentActivity() {
                                 .fillMaxSize()
                                 .background(MaterialTheme.colorScheme.background)
                         ) {
-                            Crossfade(
+                            AnimatedContent(
                                 targetState = startApp,
-                                animationSpec = tween(durationMillis = 120),
+                                // The incoming app fades in over the theme
+                                // background; the outgoing app is removed
+                                // INSTANTLY (snap), not faded. A launcher-icon
+                                // swap reuses this singleTop instance via
+                                // onNewIntent, so a crossfade would keep the
+                                // previous app's content on screen for the whole
+                                // fade — snapping it out avoids that lingering.
+                                transitionSpec = {
+                                    fadeIn(animationSpec = tween(durationMillis = 120)) togetherWith
+                                        fadeOut(animationSpec = snap())
+                                },
                                 label = "alias-switch",
                             ) { app ->
                                 val navController = rememberNavController()

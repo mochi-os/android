@@ -237,15 +237,17 @@ private fun LoginRequirementsSection(
             if (!info.available) { add("allowed"); add("required") }
         }
 
-        Row(
+        // Stack the label above the state buttons (matching SystemSettings'
+        // SettingRow). Side-by-side, the three state buttons claim the row
+        // width and crush the label into a sliver on the left.
+        Column(
             modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp),
-            verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
                 text = methodLabel(row.method),
                 style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.weight(1f),
             )
+            Spacer(Modifier.height(6.dp))
             MethodStatePicker(
                 value = info.state,
                 slots = slots,

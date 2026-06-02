@@ -64,6 +64,13 @@ fun FlipBook(
 ) {
     if (pageCount == 0) return
 
+    // Only paint the fold while the pager is actually moving. Keying off the
+    // offset alone meant that if a scroll came to rest at a fractional position
+    // (an interrupted or incomplete settle), the half-folded overlay stayed
+    // frozen on screen. Tying it to active scrolling guarantees the overlay
+    // clears the instant motion stops and the live page takes over.
+    if (!pagerState.isScrollInProgress) return
+
     // Continuous scroll position across pages. position == an integer means a
     // page is settled (no fold). The pair being folded is (front, front+1)
     // with progress f ∈ (0,1).
