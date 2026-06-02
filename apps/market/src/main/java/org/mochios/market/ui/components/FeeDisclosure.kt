@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.market.R
 
 /**
@@ -43,7 +45,7 @@ fun FeeDisclosure(
             Text(
                 text = stringResource(
                     R.string.market_fee_disclosure_body,
-                    formatPercent(platformFeePercent),
+                    formatPercent(LocalFormat.current, platformFeePercent),
                 ),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -52,11 +54,11 @@ fun FeeDisclosure(
     }
 }
 
-private fun formatPercent(value: Double): String {
+private fun formatPercent(format: Format, value: Double): String {
     val whole = value.toLong()
     return if (kotlin.math.abs(value - whole) < 0.005) {
-        whole.toString()
+        format.formatNumber(whole, 0)
     } else {
-        String.format(java.util.Locale.US, "%.1f", value)
+        format.formatNumber(value, 1)
     }
 }

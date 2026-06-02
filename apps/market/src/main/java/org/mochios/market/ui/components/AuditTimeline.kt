@@ -1,6 +1,5 @@
 package org.mochios.market.ui.components
 
-import android.text.format.DateUtils
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,6 +18,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
 import org.mochios.market.model.AuditEvent
 
 /**
@@ -43,6 +44,13 @@ fun AuditTimeline(
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         events.forEach { event ->
+            // Precomputed in composable scope — formatTimestamp is @Composable
+            // and can't be called inside the buildString lambda below.
+            val timestampText = if (event.timestamp > 0L) {
+                LocalFormat.current.formatTimestamp(event.timestamp)
+            } else {
+                ""
+            }
             Row(
                 modifier = Modifier.padding(vertical = 4.dp),
                 verticalAlignment = Alignment.Top,
@@ -73,9 +81,9 @@ fun AuditTimeline(
                     )
                     val sub = buildString {
                         if (event.actorName.isNotBlank()) append(event.actorName)
-                        if (event.timestamp > 0L) {
+                        if (timestampText.isNotEmpty()) {
                             if (isNotEmpty()) append(" · ")
-                            append(relativeTime(event.timestamp))
+                            append(timestampText)
                         }
                     }
                     if (sub.isNotEmpty()) {
@@ -89,15 +97,4 @@ fun AuditTimeline(
             }
         }
     }
-}
-
-private fun relativeTime(epochSeconds: Long): String {
-    val now = System.currentTimeMillis()
-    val ms = if (epochSeconds < 1_000_000_000_000L) epochSeconds * 1000L else epochSeconds
-    return DateUtils.getRelativeTimeSpanString(
-        ms,
-        now,
-        DateUtils.MINUTE_IN_MILLIS,
-        DateUtils.FORMAT_ABBREV_RELATIVE,
-    ).toString()
 }

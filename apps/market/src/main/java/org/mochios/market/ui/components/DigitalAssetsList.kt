@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.market.R
 import org.mochios.market.model.Asset
 
@@ -66,7 +67,7 @@ fun DigitalAssetsList(
                     )
                     if (asset.size > 0L) {
                         Text(
-                            text = humanSize(asset.size),
+                            text = LocalFormat.current.formatFileSize(asset.size),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -81,18 +82,4 @@ fun DigitalAssetsList(
             }
         }
     }
-}
-
-private fun humanSize(bytes: Long): String {
-    if (bytes <= 0L) return ""
-    val units = arrayOf("B", "KB", "MB", "GB", "TB")
-    var size = bytes.toDouble()
-    var i = 0
-    while (size >= 1024.0 && i < units.size - 1) {
-        size /= 1024.0
-        i++
-    }
-    val numStr = if (i == 0) String.format(java.util.Locale.US, "%.0f", size)
-    else String.format(java.util.Locale.US, "%.1f", size)
-    return "$numStr ${units[i]}"
 }

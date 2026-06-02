@@ -1,6 +1,5 @@
 package org.mochios.market.ui.components
 
-import android.text.format.DateUtils
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,6 +19,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
 import org.mochios.market.R
 import org.mochios.market.model.Warning as WarningModel
 
@@ -69,7 +70,7 @@ fun WarningsSection(
                         )
                         if (w.created > 0L) {
                             Text(
-                                text = relativeTime(w.created),
+                                text = LocalFormat.current.formatTimestamp(w.created),
                                 style = MaterialTheme.typography.bodySmall,
                             )
                         }
@@ -78,15 +79,4 @@ fun WarningsSection(
             }
         }
     }
-}
-
-private fun relativeTime(epochSeconds: Long): String {
-    val now = System.currentTimeMillis()
-    val ms = if (epochSeconds < 1_000_000_000_000L) epochSeconds * 1000L else epochSeconds
-    return DateUtils.getRelativeTimeSpanString(
-        ms,
-        now,
-        DateUtils.MINUTE_IN_MILLIS,
-        DateUtils.FORMAT_ABBREV_RELATIVE,
-    ).toString()
 }

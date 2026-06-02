@@ -1,6 +1,5 @@
 package org.mochios.market.ui.components
 
-import android.text.format.DateUtils
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,6 +18,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
 import org.mochios.market.R
 import org.mochios.market.lib.formatFingerprint
 import org.mochios.market.lib.formatPrice
@@ -77,7 +78,7 @@ fun AuctionBidHistory(
                     else MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
-                    text = relativeTime(bid.created),
+                    text = LocalFormat.current.formatTimestamp(bid.created),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.weight(1f),
@@ -119,16 +120,4 @@ private fun formatRemaining(seconds: Long): String {
         h > 0 -> "${h}h ${m}m"
         else -> "${m}m"
     }
-}
-
-private fun relativeTime(epochSeconds: Long): String {
-    if (epochSeconds <= 0L) return ""
-    val now = System.currentTimeMillis()
-    val ms = if (epochSeconds < 1_000_000_000_000L) epochSeconds * 1000L else epochSeconds
-    return DateUtils.getRelativeTimeSpanString(
-        ms,
-        now,
-        DateUtils.MINUTE_IN_MILLIS,
-        DateUtils.FORMAT_ABBREV_RELATIVE,
-    ).toString()
 }
