@@ -18,9 +18,11 @@ import androidx.compose.ui.unit.LayoutDirection
 import kotlin.math.floor
 import kotlin.math.sin
 
-// Fold direction: -1 folds toward the viewer (out of the screen), +1 folds
-// away (into the screen). The page-flip should come toward you.
-private const val LEAF_FOLD_SIGN = -1f
+// Fold direction. In Compose a positive rotationX tilts the top edge AWAY from
+// the viewer, so content below the crease pivot (the leaf is the bottom half)
+// swings TOWARD the viewer. Hence +1 = fold out toward you, -1 = fold away into
+// the screen. The page-flip should come toward you.
+private const val LEAF_FOLD_SIGN = 1f
 // Higher = flatter perspective (less warp on the tall half-screen leaf).
 private const val LEAF_CAMERA_DISTANCE = 14f
 // Self-shadow on the rotating leaf, deepening as it goes edge-on so the

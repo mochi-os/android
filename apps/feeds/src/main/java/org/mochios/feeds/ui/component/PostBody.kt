@@ -61,7 +61,7 @@ fun PostBody(
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold,
             fontSize = titleFontSize,
-            maxLines = if (truncated) 2 else Int.MAX_VALUE,
+            maxLines = if (truncated) 3 else Int.MAX_VALUE,
             overflow = TextOverflow.Ellipsis,
             modifier = titleModifier,
         )

@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -89,6 +88,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -680,18 +680,59 @@ private fun PostCard(
     // of the screen — easier thumb reach on tall phones, and matches the
     // bottom-action-bar pattern Flipboard / Apple News use on full-screen
     // article pages.
+    // Primary ("hero") image for this post: the first attachment image, else
+    // the RSS preview image. When present it's lifted out of the scrolling
+    // text column and shown full-bleed across the top half of the page; the
+    // text follows below. When absent, the text stays at the top as usual.
+    val attachmentImages = post.attachments.filter { it.isImage }
+    val otherAttachments = post.attachments.filter { !it.isImage }
+    val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
+    val attachmentImageUrls = attachmentImages.map { att ->
+        resolveAttachmentUrl(serverUrl, att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}")
+    }
+    val rssImageUrl = post.data?.rss?.image?.takeIf { it.isNotEmpty() }
+    val heroFromAttachment = attachmentImageUrls.isNotEmpty()
+    val heroUrl = attachmentImageUrls.firstOrNull() ?: rssImageUrl
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surface)
-            .padding(start = 16.dp, end = 4.dp, top = 16.dp, bottom = 16.dp)
     ) {
+      if (heroUrl != null) {
+          // Full screen width, square corners, aspect ratio preserved — the
+          // height follows the image's own ratio (so the bottom usually sits
+          // above the half-way line). Capped at half the screen so an unusually
+          // tall image can't push the text off the page. Tap opens the
+          // lightbox (web parity).
+          val maxHeroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
+          AsyncImage(
+              model = heroUrl,
+              contentDescription = stringResource(R.string.feeds_image_preview),
+              modifier = Modifier
+                  .fillMaxWidth()
+                  .heightIn(max = maxHeroHeight)
+                  .clickable {
+                      lightboxState = if (heroFromAttachment) {
+                          attachmentImageUrls to 0
+                      } else {
+                          listOf(heroUrl) to 0
+                      }
+                  },
+              contentScale = ContentScale.FillWidth,
+          )
+      }
       Column(
           modifier = Modifier
               .weight(1f)
               .fillMaxWidth()
               .verticalScroll(rememberScrollState())
               .clickable(onClick = onClick)
+              .padding(
+                  start = 16.dp,
+                  end = 4.dp,
+                  top = if (heroUrl != null) 12.dp else 16.dp,
+              )
       ) {
             // Header: source/feed name + time + overflow menu
             Row(
@@ -778,45 +819,42 @@ private fun PostCard(
                 )
             }
 
-            // Attachment preview
-            if (post.attachments.isNotEmpty()) {
-                val images = post.attachments.filter { it.isImage }
-                val others = post.attachments.filter { !it.isImage }
-                val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
-                if (images.isNotEmpty()) {
-                    val imageUrls = images.map { att ->
-                        resolveAttachmentUrl(serverUrl, att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}")
-                    }
-                    Spacer(modifier = Modifier.height(8.dp))
-                    MediaGrid(
-                        urls = imageUrls,
-                        thumbnailUrls = images.map { att ->
-                            resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail")
-                        },
-                        contentDescriptions = images.map { it.name },
-                        onClick = { index -> lightboxState = imageUrls to index }
-                    )
-                }
-                if (others.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = pluralStringResource(R.plurals.feeds_attachment_count, others.size, others.size),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                }
+            // Remaining attachment images (the first is the hero on top).
+            // Indices are kept aligned to the full list so the lightbox still
+            // spans every image.
+            val gridStartIndex = if (heroFromAttachment) 1 else 0
+            val gridImages = attachmentImages.drop(gridStartIndex)
+            if (gridImages.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                MediaGrid(
+                    urls = attachmentImageUrls.drop(gridStartIndex),
+                    thumbnailUrls = gridImages.map { att ->
+                        resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail")
+                    },
+                    contentDescriptions = gridImages.map { it.name },
+                    onClick = { index -> lightboxState = attachmentImageUrls to (index + gridStartIndex) }
+                )
+            }
+            if (otherAttachments.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = pluralStringResource(R.plurals.feeds_attachment_count, otherAttachments.size, otherAttachments.size),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary
+                )
             }
 
-            // RSS preview image. Tapping opens the lightbox (web parity).
-            post.data?.rss?.image?.takeIf { it.isNotEmpty() }?.let { imageUrl ->
+            // RSS preview image — only when it isn't already the hero on top.
+            // Tapping opens the lightbox (web parity).
+            if (rssImageUrl != null && rssImageUrl != heroUrl) {
                 Spacer(modifier = Modifier.height(8.dp))
                 AsyncImage(
-                    model = imageUrl,
+                    model = rssImageUrl,
                     contentDescription = stringResource(R.string.feeds_image_preview),
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(8.dp))
-                        .clickable { lightboxState = listOf(imageUrl) to 0 },
+                        .clickable { lightboxState = listOf(rssImageUrl) to 0 },
                     contentScale = ContentScale.Fit
                 )
             }
@@ -854,7 +892,12 @@ private fun PostCard(
         // the user always knows where the menu is regardless of post
         // length. Spacer adds a thin top divider-ish gap above the row.
         Spacer(modifier = Modifier.height(8.dp))
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 16.dp, end = 4.dp, bottom = 16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             ReactionBar(
                 reactions = toReactionCounts(post.reactions, post.myReaction),
                 onReact = onReact,
