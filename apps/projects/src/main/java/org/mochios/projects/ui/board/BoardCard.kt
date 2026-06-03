@@ -98,6 +98,7 @@ fun BoardCard(
     } else null
 
     val projectDetails = viewModel.uiState.value.projectDetails
+    val people = viewModel.uiState.value.people
     val prefix = projectDetails?.project?.prefix ?: ""
     val cls = projectDetails?.classes?.find { it.id == obj.objectClass }
     val titleFieldId = cls?.title?.takeIf { it.isNotBlank() }
@@ -297,6 +298,20 @@ fun BoardCard(
                                                 overflow = TextOverflow.Ellipsis
                                             )
                                         }
+                                    }
+                                    "user" -> {
+                                        // Resolve the entity ID to a member name
+                                        // (matching the detail view and web);
+                                        // fall back to the raw value if unknown.
+                                        val resolved = people.find { it.id == value }
+                                            ?.name?.takeIf { it.isNotBlank() } ?: value
+                                        Text(
+                                            text = resolved,
+                                            fontSize = 10.sp,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis
+                                        )
                                     }
                                     else -> {
                                         Text(

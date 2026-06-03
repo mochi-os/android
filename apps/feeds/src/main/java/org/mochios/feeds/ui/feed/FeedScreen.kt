@@ -189,6 +189,22 @@ fun FeedScreen(
     var addTagTarget by remember { mutableStateOf<String?>(null) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
+    // Freeze guard for the page-flip overlay: if the pager ever comes to rest
+    // at a fractional offset (an interrupted/incomplete settle), snap it to the
+    // nearest page so the fold can't stay frozen mid-fold. Only fires once
+    // scrolling has stopped with a residual offset — a normal settle ends at
+    // ~0 and is left untouched.
+    LaunchedEffect(pagerState) {
+        snapshotFlow { pagerState.isScrollInProgress }
+            .collectLatest { inProgress ->
+                if (!inProgress &&
+                    kotlin.math.abs(pagerState.currentPageOffsetFraction) > 0.01f
+                ) {
+                    pagerState.scrollToPage(pagerState.currentPage)
+                }
+            }
+    }
+
     // Mark the current page's post as read as soon as the swipe settles on
     // it — no debounce. The pager's currentPage only flips once the user
     // has committed to that page (mid-swipe doesn't tick currentPage), so
@@ -314,6 +330,8 @@ fun FeedScreen(
                         overflow = TextOverflow.Ellipsis
                     )
                 },
+                // Slightly shorter than the 64dp default to reclaim vertical space.
+                expandedHeight = 52.dp,
                 navigationIcon = {
                     IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                         Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.feeds_title))
@@ -511,17 +529,15 @@ fun FeedScreen(
                                     post = post,
                                     serverUrl = viewModel.serverUrl,
                                     fallbackFeedId = viewModel.feedId,
-                                    canManage = permissions.manage,
                                     onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
                                     onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
-                                    onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
-                                    onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
-                                    onDelete = { pendingDelete = post },
-                                    onAddTag = { addTagTarget = post.id },
-                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) }
                                 )
                             }
-                            Box(modifier = Modifier.fillMaxSize()) {
+                            Box(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .fillMaxWidth()
+                            ) {
                                 VerticalPager(
                                     state = pagerState,
                                     modifier = Modifier.fillMaxSize(),
@@ -556,6 +572,24 @@ fun FeedScreen(
                                     pagerState = pagerState,
                                     pageCount = posts.size,
                                     page = renderPost,
+                                )
+                            }
+                            // Fixed action bar for the current post — outside
+                            // the pager/FlipBook, so it does NOT flip. It just
+                            // updates to the new post the moment the swipe
+                            // commits (currentPage only ticks on commit).
+                            posts.getOrNull(pagerState.currentPage)?.let { current ->
+                                val routeFeedId = current.feedFingerprint.ifEmpty { viewModel.feedId }
+                                val sourceUrl = current.data?.rss?.link?.takeIf { it.isNotEmpty() }
+                                PostActionBar(
+                                    post = current,
+                                    canManage = permissions.manage,
+                                    onReact = { reaction -> viewModel.reactToPost(current.id, reaction) },
+                                    onComments = { onNavigateToPost(routeFeedId, current.id, sourceUrl, true) },
+                                    onEdit = { onNavigateToEditPost(routeFeedId, current.id) },
+                                    onDelete = { pendingDelete = current },
+                                    onAddTag = { addTagTarget = current.id },
+                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) },
                                 )
                             }
                         }
@@ -660,14 +694,8 @@ private fun PostCard(
     post: Post,
     serverUrl: String,
     fallbackFeedId: String,
-    canManage: Boolean,
     onClick: () -> Unit,
     onComments: () -> Unit,
-    onReact: (String) -> Unit,
-    onEdit: () -> Unit,
-    onDelete: () -> Unit,
-    onAddTag: () -> Unit,
-    onAdjustInterest: (Tag, String) -> Unit
 ) {
     // Lightbox open-state: (image urls list, starting index). null = closed.
     // Tapping an image populates this; the lightbox dialog renders above the
@@ -890,55 +918,6 @@ private fun PostCard(
             }
         }
 
-        // Bottom action bar: reaction bar, then comment / edit / delete
-        // icon buttons. Pinned at the bottom of the full-screen page so
-        // the user always knows where the menu is regardless of post
-        // length. Spacer adds a thin top divider-ish gap above the row.
-        Spacer(modifier = Modifier.height(8.dp))
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 16.dp, end = 4.dp, bottom = 16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            ReactionBar(
-                reactions = toReactionCounts(post.reactions, post.myReaction),
-                onReact = onReact,
-                onRemoveReaction = { onReact(post.myReaction) },
-                modifier = Modifier.weight(1f)
-            )
-            PostTagsButton(
-                tags = post.tags,
-                onAddTag = onAddTag,
-                onAdjustInterest = onAdjustInterest,
-            )
-            IconButton(onClick = onComments, modifier = Modifier.size(32.dp)) {
-                Icon(
-                    Icons.Default.ChatBubbleOutline,
-                    contentDescription = stringResource(R.string.feeds_comments),
-                    modifier = Modifier.size(18.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            if (canManage) {
-                IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
-                    Icon(
-                        Icons.Default.Edit,
-                        contentDescription = stringResource(MochiR.string.common_edit),
-                        modifier = Modifier.size(18.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
-                    Icon(
-                        Icons.Default.Delete,
-                        contentDescription = stringResource(MochiR.string.common_delete),
-                        modifier = Modifier.size(18.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-        }
     }
 
     lightboxState?.let { (urls, index) ->
@@ -947,6 +926,68 @@ private fun PostCard(
             initialIndex = index,
             onDismiss = { lightboxState = null },
         )
+    }
+}
+
+// Bottom action bar: reaction bar, then comment / edit / delete icon buttons.
+// Lives outside the flipping page content so it stays put during the page-flip
+// and simply reflects whichever post is current (updating on swipe-commit),
+// rather than flipping along with the card.
+@Composable
+private fun PostActionBar(
+    post: Post,
+    canManage: Boolean,
+    onReact: (String) -> Unit,
+    onComments: () -> Unit,
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onAddTag: () -> Unit,
+    onAdjustInterest: (Tag, String) -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surface)
+            .padding(start = 16.dp, end = 4.dp, top = 8.dp, bottom = 16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        ReactionBar(
+            reactions = toReactionCounts(post.reactions, post.myReaction),
+            onReact = onReact,
+            onRemoveReaction = { onReact(post.myReaction) },
+            modifier = Modifier.weight(1f)
+        )
+        PostTagsButton(
+            tags = post.tags,
+            onAddTag = onAddTag,
+            onAdjustInterest = onAdjustInterest,
+        )
+        IconButton(onClick = onComments, modifier = Modifier.size(32.dp)) {
+            Icon(
+                Icons.Default.ChatBubbleOutline,
+                contentDescription = stringResource(R.string.feeds_comments),
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        if (canManage) {
+            IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
+                Icon(
+                    Icons.Default.Edit,
+                    contentDescription = stringResource(MochiR.string.common_edit),
+                    modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
+                Icon(
+                    Icons.Default.Delete,
+                    contentDescription = stringResource(MochiR.string.common_delete),
+                    modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
     }
 }
 

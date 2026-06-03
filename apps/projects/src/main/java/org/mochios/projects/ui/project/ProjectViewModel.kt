@@ -51,6 +51,8 @@ data class ProjectUiState(
     val sortDirByView: Map<String, String> = emptyMap(),
     /** True if the user has unread project notifications somewhere. */
     val hasNotifications: Boolean = false,
+    /** Project members, for resolving user-field display names on cards. */
+    val people: List<org.mochios.projects.model.Person> = emptyList(),
 )
 
 @HiltViewModel
@@ -114,11 +116,14 @@ class ProjectViewModel @Inject constructor(
             try {
                 val details = repository.getProjectInfo(projectId)
                 val objects = repository.getObjects(projectId)
+                val people = runCatching { repository.getPeople(projectId) }
+                    .getOrDefault(_uiState.value.people)
                 val activeViewId = _uiState.value.activeViewId
                     ?: details.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
                     objects = objects,
+                    people = people,
                     activeViewId = activeViewId,
                     isLoading = false
                 )
@@ -135,9 +140,12 @@ class ProjectViewModel @Inject constructor(
         try {
             val details = repository.getProjectInfo(projectId)
             val objects = repository.getObjects(projectId)
+            val people = runCatching { repository.getPeople(projectId) }
+                .getOrDefault(_uiState.value.people)
             _uiState.value = _uiState.value.copy(
                 projectDetails = details,
-                objects = objects
+                objects = objects,
+                people = people
             )
         } catch (_: Exception) {
             // Silent — cached data is still showing
@@ -150,9 +158,12 @@ class ProjectViewModel @Inject constructor(
             try {
                 val details = repository.getProjectInfo(projectId)
                 val objects = repository.getObjects(projectId)
+                val people = runCatching { repository.getPeople(projectId) }
+                    .getOrDefault(_uiState.value.people)
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
                     objects = objects,
+                    people = people,
                     isRefreshing = false,
                     error = null
                 )
