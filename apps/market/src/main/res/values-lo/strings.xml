@@ -404,8 +404,8 @@
     <string name="market_saved_title">ບັນທຶກແລ້ວ</string>
     <string name="market_search_clear">ລ້າງການຄົ້ນຫາ</string>
     <string name="market_search_placeholder">ຄົ້ນຫາໃນຕະຫຼາດ</string>
-    <string name="market_section_categories">ໝວດໝູ່</string>
-    <string name="market_section_listings">ການລົງປະກາດຂາຍ</string>
+    <string name="market_section_categories">ເບິ່ງໝວດໝູ່</string>
+    <string name="market_section_listings">ການລົງປະກາດຂາຍຫຼ້າສຸດ</string>
     <string name="market_section_recent">ເບິ່ງລ່າສຸດ</string>
     <string name="market_ship_dialog_cancel">ຍົກເລີກ</string>
     <string name="market_ship_dialog_submit">ຢືນຢັນ</string>

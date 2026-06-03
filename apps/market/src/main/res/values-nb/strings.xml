@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Sporingsnummer</string>
     <string name="market_saved_title">Lagret</string>
     <string name="market_search_clear">Tøm søk</string>
-    <string name="market_section_categories">Kategorier</string>
-    <string name="market_section_listings">Oppføringer</string>
+    <string name="market_section_categories">Bla i kategorier</string>
+    <string name="market_section_listings">Nylige oppføringer</string>
     <string name="market_section_recent">Nylig sett</string>
     <string name="market_ship_dialog_cancel">Avbryt</string>
     <string name="market_ship_dialog_submit">Bekreft</string>

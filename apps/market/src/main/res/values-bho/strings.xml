@@ -405,8 +405,8 @@
     <string name="market_saved_title">सहेजल गइल</string>
     <string name="market_search_clear">खोज साफ करीं</string>
     <string name="market_search_placeholder">बाजार में खोजीं</string>
-    <string name="market_section_categories">श्रेणी</string>
-    <string name="market_section_listings">लिस्टिंग</string>
+    <string name="market_section_categories">श्रेणी देखीं</string>
+    <string name="market_section_listings">हाल के लिस्टिंग</string>
     <string name="market_section_recent">हाल में देखल</string>
     <string name="market_ship_dialog_cancel">रद्द करीं</string>
     <string name="market_ship_dialog_submit">पुष्टि करीं</string>

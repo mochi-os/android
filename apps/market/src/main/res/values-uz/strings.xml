@@ -404,8 +404,8 @@
     <string name="market_saved_title">Saqlandi</string>
     <string name="market_search_clear">Qidiruvni tozalash</string>
     <string name="market_search_placeholder">Bozorda qidirish</string>
-    <string name="market_section_categories">Toifalar</string>
-    <string name="market_section_listings">Eʼlonlar</string>
+    <string name="market_section_categories">Toifalarni koʻrish</string>
+    <string name="market_section_listings">Soʻnggi eʼlonlar</string>
     <string name="market_section_recent">Yaqinda koʻrilgan</string>
     <string name="market_ship_dialog_cancel">Bekor qilish</string>
     <string name="market_ship_dialog_submit">Tasdiqlash</string>

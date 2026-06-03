@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Sekimo numeris</string>
     <string name="market_saved_title">Išsaugota</string>
     <string name="market_search_clear">Išvalyti paiešką</string>
-    <string name="market_section_categories">Kategorijos</string>
-    <string name="market_section_listings">Skelbimai</string>
+    <string name="market_section_categories">Naršyti kategorijas</string>
+    <string name="market_section_listings">Naujausi skelbimai</string>
     <string name="market_section_recent">Neseniai peržiūrėti</string>
     <string name="market_ship_dialog_cancel">Atšaukti</string>
     <string name="market_ship_dialog_submit">Patvirtinti</string>

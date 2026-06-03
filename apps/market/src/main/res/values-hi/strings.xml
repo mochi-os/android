@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">ट्रैकिंग नंबर</string>
     <string name="market_saved_title">सेव किया गया</string>
     <string name="market_search_clear">खोज साफ़ करें</string>
-    <string name="market_section_categories">श्रेणियाँ</string>
-    <string name="market_section_listings">लिस्टिंग</string>
+    <string name="market_section_categories">श्रेणियाँ ब्राउज़ करें</string>
+    <string name="market_section_listings">हाल की लिस्टिंग</string>
     <string name="market_section_recent">हाल ही में देखा गया</string>
     <string name="market_ship_dialog_cancel">रद्द करें</string>
     <string name="market_ship_dialog_submit">पुष्टि करें</string>

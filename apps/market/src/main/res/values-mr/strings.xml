@@ -404,8 +404,8 @@
     <string name="market_saved_title">जतन केले</string>
     <string name="market_search_clear">शोध साफ करा</string>
     <string name="market_search_placeholder">बाजारात शोधा</string>
-    <string name="market_section_categories">श्रेणी</string>
-    <string name="market_section_listings">लिस्टिंग्ज</string>
+    <string name="market_section_categories">श्रेणी पाहा</string>
+    <string name="market_section_listings">अलीकडील जाहिराती</string>
     <string name="market_section_recent">अलीकडे पाहिलेले</string>
     <string name="market_ship_dialog_cancel">रद्द करा</string>
     <string name="market_ship_dialog_submit">पुष्टी करा</string>

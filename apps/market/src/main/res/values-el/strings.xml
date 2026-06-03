@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Αριθμός παρακολούθησης</string>
     <string name="market_saved_title">Αποθηκεύτηκε</string>
     <string name="market_search_clear">Εκκαθάριση αναζήτησης</string>
-    <string name="market_section_categories">Κατηγορίες</string>
-    <string name="market_section_listings">Καταχωρίσεις</string>
+    <string name="market_section_categories">Περιήγηση κατηγοριών</string>
+    <string name="market_section_listings">Πρόσφατες καταχωρίσεις</string>
     <string name="market_section_recent">Πρόσφατα προβληθέντα</string>
     <string name="market_ship_dialog_cancel">Ακύρωση</string>
     <string name="market_ship_dialog_submit">Επιβεβαίωση</string>

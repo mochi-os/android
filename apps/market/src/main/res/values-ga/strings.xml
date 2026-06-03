@@ -408,8 +408,8 @@
     <string name="market_saved_title">Sábháilte</string>
     <string name="market_search_clear">Glan cuardach</string>
     <string name="market_search_placeholder">Cuardaigh an margadh</string>
-    <string name="market_section_categories">Catagóirí</string>
-    <string name="market_section_listings">Liostuithe</string>
+    <string name="market_section_categories">Brabhsáil catagóirí</string>
+    <string name="market_section_listings">Liostuithe le déanaí</string>
     <string name="market_section_recent">Féachta le déanaí</string>
     <string name="market_ship_dialog_cancel">Cealaigh</string>
     <string name="market_ship_dialog_submit">Deimhnigh</string>

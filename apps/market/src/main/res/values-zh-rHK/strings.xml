@@ -391,7 +391,7 @@
     <string name="market_sidebar_saved">已儲存</string>
     <string name="market_listing_detail_title">刊登</string>
     <string name="market_messages_thread_listing_chip">刊登</string>
-    <string name="market_section_listings">刊登</string>
+    <string name="market_section_listings">最新刊登</string>
     <string name="market_sidebar_listings">刊登</string>
     <string name="market_checkout_delivery_download">下載</string>
     <string name="market_checkout_subscribe_failed">Failed to subscribe</string>
@@ -440,7 +440,7 @@
     <string name="market_profile_status_banned">已封禁</string>
     <string name="market_profile_status_suspended">已暫停</string>
     <string name="market_purchase_review_body">評論</string>
-    <string name="market_section_categories">分類</string>
+    <string name="market_section_categories">瀏覽分類</string>
 
     <string name="market_account_status_restrictions">帳戶處於此狀態時，部分操作（包括建立新刊登及完成訂單）會受到限制。</string>
     <string name="market_chargeback_reason_check_returned">支票退票</string>

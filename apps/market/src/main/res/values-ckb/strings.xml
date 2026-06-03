@@ -404,8 +404,8 @@
     <string name="market_saved_title">پاشەکەوت کرا</string>
     <string name="market_search_clear">پاککردنەوەی گەڕان</string>
     <string name="market_search_placeholder">لە بازاڕ بگەڕێ</string>
-    <string name="market_section_categories">هاوپۆلەکان</string>
-    <string name="market_section_listings">ناونووسکراوەکان</string>
+    <string name="market_section_categories">گەڕان بە هاوپۆلەکاندا</string>
+    <string name="market_section_listings">دوایین ناونووسکراوەکان</string>
     <string name="market_section_recent">تازە بینراوە</string>
     <string name="market_ship_dialog_cancel">هەڵوەشاندنەوە</string>
     <string name="market_ship_dialog_submit">پشتڕاستکردنەوە</string>

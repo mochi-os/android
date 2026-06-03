@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Trackingnummer</string>
     <string name="market_saved_title">Opgeslagen</string>
     <string name="market_search_clear">Zoekopdracht wissen</string>
-    <string name="market_section_categories">Categorieën</string>
-    <string name="market_section_listings">Aanbiedingen</string>
+    <string name="market_section_categories">Categorieën verkennen</string>
+    <string name="market_section_listings">Recente advertenties</string>
     <string name="market_section_recent">Recent bekeken</string>
     <string name="market_ship_dialog_cancel">Annuleren</string>
     <string name="market_ship_dialog_submit">Bevestigen</string>

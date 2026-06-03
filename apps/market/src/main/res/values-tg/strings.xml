@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Рақами пайгирӣ</string>
     <string name="market_saved_title">Захирашуда</string>
     <string name="market_search_clear">Тоза кардани ҷустуҷӯ</string>
-    <string name="market_section_categories">Категорияҳо</string>
-    <string name="market_section_listings">Эълонҳо</string>
+    <string name="market_section_categories">Категорияҳоро тамошо кунед</string>
+    <string name="market_section_listings">Эълонҳои охирин</string>
     <string name="market_section_recent">Ба наздикӣ дидашуда</string>
     <string name="market_ship_dialog_cancel">Бекор кардан</string>
     <string name="market_ship_dialog_submit">Тасдиқ</string>

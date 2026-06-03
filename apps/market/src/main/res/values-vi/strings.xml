@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Số theo dõi</string>
     <string name="market_saved_title">Đã lưu</string>
     <string name="market_search_clear">Xóa tìm kiếm</string>
-    <string name="market_section_categories">Danh mục</string>
-    <string name="market_section_listings">Tin đăng</string>
+    <string name="market_section_categories">Duyệt danh mục</string>
+    <string name="market_section_listings">Tin đăng gần đây</string>
     <string name="market_section_recent">Đã xem gần đây</string>
     <string name="market_ship_dialog_cancel">Hủy</string>
     <string name="market_ship_dialog_submit">Xác nhận</string>

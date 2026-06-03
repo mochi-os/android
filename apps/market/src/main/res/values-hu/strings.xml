@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Követési szám</string>
     <string name="market_saved_title">Mentve</string>
     <string name="market_search_clear">Keresés törlése</string>
-    <string name="market_section_categories">Kategóriák</string>
-    <string name="market_section_listings">Hirdetések</string>
+    <string name="market_section_categories">Kategóriák böngészése</string>
+    <string name="market_section_listings">Legújabb hirdetések</string>
     <string name="market_section_recent">Nemrég megtekintett</string>
     <string name="market_ship_dialog_cancel">Mégse</string>
     <string name="market_ship_dialog_submit">Megerősítés</string>

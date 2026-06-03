@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">追踪单号</string>
     <string name="market_saved_title">已保存</string>
     <string name="market_search_clear">清除搜索</string>
-    <string name="market_section_categories">分类</string>
-    <string name="market_section_listings">商品</string>
+    <string name="market_section_categories">浏览分类</string>
+    <string name="market_section_listings">最新发布</string>
     <string name="market_section_recent">最近浏览</string>
     <string name="market_ship_dialog_cancel">取消</string>
     <string name="market_ship_dialog_submit">确认</string>

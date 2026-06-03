@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">ট্র্যাকিং নম্বর</string>
     <string name="market_saved_title">সংরক্ষিত</string>
     <string name="market_search_clear">অনুসন্ধান পরিষ্কার করুন</string>
-    <string name="market_section_categories">ক্যাটেগরি</string>
-    <string name="market_section_listings">তালিকাসমূহ</string>
+    <string name="market_section_categories">বিভাগ ব্রাউজ করুন</string>
+    <string name="market_section_listings">সাম্প্রতিক তালিকা</string>
     <string name="market_section_recent">সম্প্রতি দেখা</string>
     <string name="market_ship_dialog_cancel">বাতিল করুন</string>
     <string name="market_ship_dialog_submit">নিশ্চিত করুন</string>

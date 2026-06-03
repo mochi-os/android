@@ -134,7 +134,7 @@
     <string name="market_sidebar_saved">Gespeichert</string>
     <string name="market_listing_detail_title">Anzeige</string>
     <string name="market_messages_thread_listing_chip">Anzeige</string>
-    <string name="market_section_listings">Anzeigen</string>
+    <string name="market_section_listings">Neueste Anzeigen</string>
     <string name="market_sidebar_listings">Anzeigen</string>
     <string name="app_name">Markt</string>
     <string name="market_account_status_banned_title">Konto gesperrt</string>
@@ -201,7 +201,7 @@
     <string name="market_sale_section_summary">Zämmäfassig</string>
     <string name="market_sale_shipped_label">Versendet</string>
     <string name="market_search_clear">Suche löschen</string>
-    <string name="market_section_categories">Kategorien</string>
+    <string name="market_section_categories">Kategorien durchsuchen</string>
     <string name="market_shipping_notes">Notizen</string>
     <string name="market_shipping_price">Preis</string>
     <string name="market_sidebar_messages">Nachrichten</string>

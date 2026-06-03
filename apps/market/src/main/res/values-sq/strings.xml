@@ -404,8 +404,8 @@
     <string name="market_saved_title">I ruajtur</string>
     <string name="market_search_clear">Pastro kërkimin</string>
     <string name="market_search_placeholder">Kërko në treg</string>
-    <string name="market_section_categories">Kategoritë</string>
-    <string name="market_section_listings">Shpalljet</string>
+    <string name="market_section_categories">Shfleto kategoritë</string>
+    <string name="market_section_listings">Shpalljet e fundit</string>
     <string name="market_section_recent">Të parët së fundmi</string>
     <string name="market_ship_dialog_cancel">Anulo</string>
     <string name="market_ship_dialog_submit">Konfirmo</string>

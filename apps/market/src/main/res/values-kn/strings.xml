@@ -404,8 +404,8 @@
     <string name="market_saved_title">ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="market_search_clear">ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="market_search_placeholder">ಮಾರ್ಕೆಟ್ ಹುಡುಕಿ</string>
-    <string name="market_section_categories">ವರ್ಗಗಳು</string>
-    <string name="market_section_listings">ಲಿಸ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="market_section_categories">ವರ್ಗಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
+    <string name="market_section_listings">ಇತ್ತೀಚಿನ ಲಿಸ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="market_section_recent">ಇತ್ತೀಚೆಗೆ ವೀಕ್ಷಿಸಲಾಗಿದೆ</string>
     <string name="market_ship_dialog_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="market_ship_dialog_submit">ದೃಢೀಕರಿಸಿ</string>

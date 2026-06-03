@@ -404,8 +404,8 @@
     <string name="market_saved_title">சேமிக்கப்பட்டது</string>
     <string name="market_search_clear">தேடலை அழி</string>
     <string name="market_search_placeholder">சந்தையில் தேடு</string>
-    <string name="market_section_categories">வகைகள்</string>
-    <string name="market_section_listings">பட்டியல்கள்</string>
+    <string name="market_section_categories">வகைகளை உலாவுக</string>
+    <string name="market_section_listings">சமீபத்திய பட்டியல்கள்</string>
     <string name="market_section_recent">சமீபத்தில் பார்க்கப்பட்டவை</string>
     <string name="market_ship_dialog_cancel">ரத்துசெய்</string>
     <string name="market_ship_dialog_submit">உறுதிசெய்</string>

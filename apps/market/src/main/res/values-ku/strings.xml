@@ -404,8 +404,8 @@
     <string name="market_saved_title">Hatiye tomarkirin</string>
     <string name="market_search_clear">Lêgerînê paqij bike</string>
     <string name="market_search_placeholder">Li bazarê bigere</string>
-    <string name="market_section_categories">Kategorî</string>
-    <string name="market_section_listings">Lîste</string>
+    <string name="market_section_categories">Li Kategoriyan Bigere</string>
+    <string name="market_section_listings">Lîsteyên Dawî</string>
     <string name="market_section_recent">Vê dawiyê dîtî</string>
     <string name="market_ship_dialog_cancel">Betal bike</string>
     <string name="market_ship_dialog_submit">Piştrast bike</string>

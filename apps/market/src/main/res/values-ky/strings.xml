@@ -405,8 +405,8 @@
     <string name="market_saved_title">Сакталды</string>
     <string name="market_search_clear">Издөөнү тазалоо</string>
     <string name="market_search_placeholder">Базардан издөө</string>
-    <string name="market_section_categories">Категориялар</string>
-    <string name="market_section_listings">Жарнамалар</string>
+    <string name="market_section_categories">Категорияларды кароо</string>
+    <string name="market_section_listings">Акыркы жарнамалар</string>
     <string name="market_section_recent">Жакында көрүлгөн</string>
     <string name="market_ship_dialog_cancel">Жокко чыгаруу</string>
     <string name="market_ship_dialog_submit">Ырастоо</string>

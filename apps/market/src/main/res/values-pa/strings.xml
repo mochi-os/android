@@ -404,8 +404,8 @@
     <string name="market_saved_title">ਸੰਭਾਲਿਆ ਗਿਆ</string>
     <string name="market_search_clear">ਖੋਜ ਸਾਫ਼ ਕਰੋ</string>
     <string name="market_search_placeholder">ਮਾਰਕੀਟ ਵਿੱਚ ਖੋਜੋ</string>
-    <string name="market_section_categories">ਸ਼੍ਰੇਣੀਆਂ</string>
-    <string name="market_section_listings">ਲਿਸਟਿੰਗਾਂ</string>
+    <string name="market_section_categories">ਸ਼੍ਰੇਣੀਆਂ ਵੇਖੋ</string>
+    <string name="market_section_listings">ਤਾਜ਼ਾ ਲਿਸਟਿੰਗਾਂ</string>
     <string name="market_section_recent">ਹਾਲ ਹੀ ਵਿੱਚ ਦੇਖੇ ਗਏ</string>
     <string name="market_ship_dialog_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="market_ship_dialog_submit">ਪੁਸ਼ਟੀ ਕਰੋ</string>

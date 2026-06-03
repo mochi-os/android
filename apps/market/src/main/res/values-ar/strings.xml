@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">رقم التتبع</string>
     <string name="market_saved_title">تم الحفظ</string>
     <string name="market_search_clear">مسح البحث</string>
-    <string name="market_section_categories">الفئات</string>
-    <string name="market_section_listings">القوائم</string>
+    <string name="market_section_categories">تصفح الفئات</string>
+    <string name="market_section_listings">أحدث الإعلانات</string>
     <string name="market_section_recent">شوهدت مؤخرًا</string>
     <string name="market_ship_dialog_cancel">إلغاء</string>
     <string name="market_ship_dialog_submit">تأكيد</string>

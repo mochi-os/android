@@ -562,8 +562,8 @@
     <string name="market_saved_title">Захавана</string>
     <string name="market_search_clear">Ачысціць пошук</string>
     <string name="market_search_placeholder">Пошук на рынку</string>
-    <string name="market_section_categories">Катэгорыі</string>
-    <string name="market_section_listings">Аб\'явы</string>
+    <string name="market_section_categories">Агляд катэгорый</string>
+    <string name="market_section_listings">Апошнія аб\'явы</string>
     <string name="market_section_recent">Нядаўна прагледжана</string>
     <string name="market_ship_dialog_cancel">Адмена</string>
     <string name="market_ship_dialog_submit">Пацвердзіць</string>

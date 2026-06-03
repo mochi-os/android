@@ -428,8 +428,8 @@
     <string name="market_saved_title">Imaña</string>
     <string name="market_search_clear">Thaqaña q\'umachaña</string>
     <string name="market_search_placeholder">Mercado thaqaña</string>
-    <string name="market_section_categories">Kastanaka</string>
-    <string name="market_section_listings">Listadonaka</string>
+    <string name="market_section_categories">Kastanak thaqhaña</string>
+    <string name="market_section_listings">Jichha pacha listadonaka</string>
     <string name="market_section_recent">Jichhüru uñjata</string>
     <string name="market_ship_dialog_cancel">Jaytaña</string>
     <string name="market_ship_dialog_submit">Iyawsaña</string>

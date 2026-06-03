@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">מספר מעקב</string>
     <string name="market_saved_title">נשמר</string>
     <string name="market_search_clear">נקה חיפוש</string>
-    <string name="market_section_categories">קטגוריות</string>
-    <string name="market_section_listings">מודעות</string>
+    <string name="market_section_categories">עיון בקטגוריות</string>
+    <string name="market_section_listings">מודעות אחרונות</string>
     <string name="market_section_recent">נצפו לאחרונה</string>
     <string name="market_ship_dialog_cancel">ביטול</string>
     <string name="market_ship_dialog_submit">אישור</string>

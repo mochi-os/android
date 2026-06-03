@@ -404,8 +404,8 @@
     <string name="market_saved_title">Saklandy</string>
     <string name="market_search_clear">Gözlegi arassalamak</string>
     <string name="market_search_placeholder">Bazarda gözleg</string>
-    <string name="market_section_categories">Kategoriýalar</string>
-    <string name="market_section_listings">Sanawlar</string>
+    <string name="market_section_categories">Kategoriýalara göz aýla</string>
+    <string name="market_section_listings">Soňky bildirişler</string>
     <string name="market_section_recent">Ýakynda görlen</string>
     <string name="market_ship_dialog_cancel">Ýatyrmak</string>
     <string name="market_ship_dialog_submit">Tassyklamak</string>

@@ -406,8 +406,8 @@
     <string name="market_saved_title">შენახული</string>
     <string name="market_search_clear">ძიების გასუფთავება</string>
     <string name="market_search_placeholder">ბაზრის ძიება</string>
-    <string name="market_section_categories">კატეგორიები</string>
-    <string name="market_section_listings">ჩამონათვლები</string>
+    <string name="market_section_categories">კატეგორიების დათვალიერება</string>
+    <string name="market_section_listings">ბოლო განცხადებები</string>
     <string name="market_section_recent">ბოლო ნახვები</string>
     <string name="market_ship_dialog_cancel">გაუქმება</string>
     <string name="market_ship_dialog_submit">დადასტურება</string>

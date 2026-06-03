@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Sendungsnummer</string>
     <string name="market_saved_title">Gespeichert</string>
     <string name="market_search_clear">Suche leeren</string>
-    <string name="market_section_categories">Kategorien</string>
-    <string name="market_section_listings">Angebote</string>
+    <string name="market_section_categories">Kategorien durchsuchen</string>
+    <string name="market_section_listings">Neueste Anzeigen</string>
     <string name="market_section_recent">Zuletzt angesehen</string>
     <string name="market_ship_dialog_cancel">Abbrechen</string>
     <string name="market_ship_dialog_submit">Bestätigen</string>

@@ -562,8 +562,8 @@
     <string name="market_saved_title">Зачувано</string>
     <string name="market_search_clear">Исчисти пребарување</string>
     <string name="market_search_placeholder">Пребарајте го пазарот</string>
-    <string name="market_section_categories">Категории</string>
-    <string name="market_section_listings">Огласи</string>
+    <string name="market_section_categories">Прелистај категории</string>
+    <string name="market_section_listings">Неодамнешни огласи</string>
     <string name="market_section_recent">Неодамна прегледано</string>
     <string name="market_ship_dialog_cancel">Откажи</string>
     <string name="market_ship_dialog_submit">Потврди</string>

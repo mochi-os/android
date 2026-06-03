@@ -404,8 +404,8 @@
     <string name="market_saved_title">خوندي شو</string>
     <string name="market_search_clear">لټون پاک کړئ</string>
     <string name="market_search_placeholder">په بازار کې لټون</string>
-    <string name="market_section_categories">کټګورۍ</string>
-    <string name="market_section_listings">لیسټینګونه</string>
+    <string name="market_section_categories">کټګورۍ وپلټئ</string>
+    <string name="market_section_listings">وروستي لیسټینګونه</string>
     <string name="market_section_recent">په وروستیو کې لیدل شوي</string>
     <string name="market_ship_dialog_cancel">لغوه کول</string>
     <string name="market_ship_dialog_submit">تایید کړئ</string>

@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Номер отслеживания</string>
     <string name="market_saved_title">Сохранено</string>
     <string name="market_search_clear">Очистить поиск</string>
-    <string name="market_section_categories">Категории</string>
-    <string name="market_section_listings">Объявления</string>
+    <string name="market_section_categories">Просмотр категорий</string>
+    <string name="market_section_listings">Недавние объявления</string>
     <string name="market_section_recent">Недавно просмотренные</string>
     <string name="market_ship_dialog_cancel">Отмена</string>
     <string name="market_ship_dialog_submit">Подтвердить</string>

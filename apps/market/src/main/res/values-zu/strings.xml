@@ -404,8 +404,8 @@
     <string name="market_saved_title">Kulondoloziwe</string>
     <string name="market_search_clear">Sula usesho</string>
     <string name="market_search_placeholder">Sesha emakethe</string>
-    <string name="market_section_categories">Izigaba</string>
-    <string name="market_section_listings">Uhlu</string>
+    <string name="market_section_categories">Bheka izigaba</string>
+    <string name="market_section_listings">Uhlu lwakamuva</string>
     <string name="market_section_recent">Okubukwe muva</string>
     <string name="market_ship_dialog_cancel">Khansela</string>
     <string name="market_ship_dialog_submit">Qinisekisa</string>

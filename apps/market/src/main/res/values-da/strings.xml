@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Sporingsnummer</string>
     <string name="market_saved_title">Gemt</string>
     <string name="market_search_clear">Ryd søgning</string>
-    <string name="market_section_categories">Kategorier</string>
-    <string name="market_section_listings">Annoncer</string>
+    <string name="market_section_categories">Gennemse kategorier</string>
+    <string name="market_section_listings">Seneste annoncer</string>
     <string name="market_section_recent">Senest set</string>
     <string name="market_ship_dialog_cancel">Annuller</string>
     <string name="market_ship_dialog_submit">Bekræft</string>

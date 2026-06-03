@@ -404,8 +404,8 @@
     <string name="market_saved_title">सुरक्षित गरियो</string>
     <string name="market_search_clear">खोजी खाली गर्नुहोस्</string>
     <string name="market_search_placeholder">बजारमा खोज्नुहोस्</string>
-    <string name="market_section_categories">श्रेणीहरू</string>
-    <string name="market_section_listings">सूचीहरू</string>
+    <string name="market_section_categories">श्रेणीहरू हेर्नुहोस्</string>
+    <string name="market_section_listings">हालका सूचीहरू</string>
     <string name="market_section_recent">हालै हेरिएका</string>
     <string name="market_ship_dialog_cancel">रद्द गर्नुहोस्</string>
     <string name="market_ship_dialog_submit">पुष्टि गर्नुहोस्</string>

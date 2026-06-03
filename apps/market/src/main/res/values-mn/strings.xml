@@ -562,8 +562,8 @@
     <string name="market_saved_title">Хадгалагдсан</string>
     <string name="market_search_clear">Хайлтыг цэвэрлэх</string>
     <string name="market_search_placeholder">Зах зээлд хайх</string>
-    <string name="market_section_categories">Ангилал</string>
-    <string name="market_section_listings">Зарууд</string>
+    <string name="market_section_categories">Ангилал үзэх</string>
+    <string name="market_section_listings">Сүүлийн зарууд</string>
     <string name="market_section_recent">Сүүлд үзсэн</string>
     <string name="market_ship_dialog_cancel">Цуцлах</string>
     <string name="market_ship_dialog_submit">Баталгаажуулах</string>

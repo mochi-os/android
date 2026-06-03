@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Número de seguiment</string>
     <string name="market_saved_title">Desat</string>
     <string name="market_search_clear">Esborra la cerca</string>
-    <string name="market_section_categories">Categories</string>
-    <string name="market_section_listings">Anuncis</string>
+    <string name="market_section_categories">Explora les categories</string>
+    <string name="market_section_listings">Anuncis recents</string>
     <string name="market_section_recent">Vist recentment</string>
     <string name="market_ship_dialog_cancel">Cancel·la</string>
     <string name="market_ship_dialog_submit">Confirma</string>

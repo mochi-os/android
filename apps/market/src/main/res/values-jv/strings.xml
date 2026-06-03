@@ -408,8 +408,8 @@
     <string name="market_saved_title">Disimpen</string>
     <string name="market_search_clear">Resiki panggolékan</string>
     <string name="market_search_placeholder">Goleki pasar</string>
-    <string name="market_section_categories">Kategori</string>
-    <string name="market_section_listings">Listing</string>
+    <string name="market_section_categories">Telusuri Kategori</string>
+    <string name="market_section_listings">Listing Anyar</string>
     <string name="market_section_recent">Lagi waé didelok</string>
     <string name="market_ship_dialog_cancel">Batal</string>
     <string name="market_ship_dialog_submit">Konfirmasi</string>

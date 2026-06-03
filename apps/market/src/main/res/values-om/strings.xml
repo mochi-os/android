@@ -404,8 +404,8 @@
     <string name="market_saved_title">Olkaa\'ame</string>
     <string name="market_search_clear">Barbaadii cilliisi</string>
     <string name="market_search_placeholder">Gabaa keessa barbaadi</string>
-    <string name="market_section_categories">Ramaddilee</string>
-    <string name="market_section_listings">Tarreeffamtoota</string>
+    <string name="market_section_categories">Ramaddilee Sakatta\'i</string>
+    <string name="market_section_listings">Tarreeffamtoota Dhiyoo</string>
     <string name="market_section_recent">Dhiyeenya ilaalame</string>
     <string name="market_ship_dialog_cancel">Haquu</string>
     <string name="market_ship_dialog_submit">Mirkaneessi</string>

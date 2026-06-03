@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">ٹریکنگ نمبر</string>
     <string name="market_saved_title">محفوظ ہو گیا</string>
     <string name="market_search_clear">تلاش صاف کریں</string>
-    <string name="market_section_categories">زمرے</string>
-    <string name="market_section_listings">لسٹنگز</string>
+    <string name="market_section_categories">زمرے دیکھیں</string>
+    <string name="market_section_listings">حالیہ فہرستیں</string>
     <string name="market_section_recent">حال ہی میں دیکھے گئے</string>
     <string name="market_ship_dialog_cancel">منسوخ کریں</string>
     <string name="market_ship_dialog_submit">تصدیق کریں</string>

@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Număr de urmărire</string>
     <string name="market_saved_title">Salvat</string>
     <string name="market_search_clear">Golește căutarea</string>
-    <string name="market_section_categories">Categorii</string>
-    <string name="market_section_listings">Anunțuri</string>
+    <string name="market_section_categories">Explorează categoriile</string>
+    <string name="market_section_listings">Anunțuri recente</string>
     <string name="market_section_recent">Vizualizate recent</string>
     <string name="market_ship_dialog_cancel">Anulează</string>
     <string name="market_ship_dialog_submit">Confirmă</string>

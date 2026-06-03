@@ -405,8 +405,8 @@
     <string name="market_saved_title">Air a shàbhaladh</string>
     <string name="market_search_clear">Falamhaich an lorg</string>
     <string name="market_search_placeholder">Lorg sa mhargaid</string>
-    <string name="market_section_categories">Roinnean</string>
-    <string name="market_section_listings">Liostan</string>
+    <string name="market_section_categories">Rùraich roinnean</string>
+    <string name="market_section_listings">Liostan o chionn ghoirid</string>
     <string name="market_section_recent">Air an coimhead o chionn ghoirid</string>
     <string name="market_ship_dialog_cancel">Sguir dheth</string>
     <string name="market_ship_dialog_submit">Dearbhaich</string>

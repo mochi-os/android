@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Číslo sledovania</string>
     <string name="market_saved_title">Uložené</string>
     <string name="market_search_clear">Vymazať vyhľadávanie</string>
-    <string name="market_section_categories">Kategórie</string>
-    <string name="market_section_listings">Inzeráty</string>
+    <string name="market_section_categories">Prehľadávať kategórie</string>
+    <string name="market_section_listings">Najnovšie inzeráty</string>
     <string name="market_section_recent">Nedávno zobrazené</string>
     <string name="market_ship_dialog_cancel">Zrušiť</string>
     <string name="market_ship_dialog_submit">Potvrdiť</string>

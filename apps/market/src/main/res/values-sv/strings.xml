@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Spårningsnummer</string>
     <string name="market_saved_title">Sparad</string>
     <string name="market_search_clear">Rensa sökning</string>
-    <string name="market_section_categories">Kategorier</string>
-    <string name="market_section_listings">Annonser</string>
+    <string name="market_section_categories">Bläddra bland kategorier</string>
+    <string name="market_section_listings">Senaste annonser</string>
     <string name="market_section_recent">Nyligen visade</string>
     <string name="market_ship_dialog_cancel">Avbryt</string>
     <string name="market_ship_dialog_submit">Bekräfta</string>

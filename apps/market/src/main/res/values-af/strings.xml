@@ -562,8 +562,8 @@
     <string name="market_saved_title">Gestoor</string>
     <string name="market_search_clear">Maak soektog skoon</string>
     <string name="market_search_placeholder">Soek die mark</string>
-    <string name="market_section_categories">Kategorieë</string>
-    <string name="market_section_listings">Lyste</string>
+    <string name="market_section_categories">Blaai deur kategorieë</string>
+    <string name="market_section_listings">Onlangse lyste</string>
     <string name="market_section_recent">Onlangs bekyk</string>
     <string name="market_ship_dialog_cancel">Kanselleer</string>
     <string name="market_ship_dialog_submit">Bevestig</string>

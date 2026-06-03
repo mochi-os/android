@@ -417,8 +417,8 @@
     <string name="market_saved_title">Sove</string>
     <string name="market_search_clear">Efase rechèch</string>
     <string name="market_search_placeholder">Chèche mache a</string>
-    <string name="market_section_categories">Kategori</string>
-    <string name="market_section_listings">Lis</string>
+    <string name="market_section_categories">Gade kategori</string>
+    <string name="market_section_listings">Dènye anons yo</string>
     <string name="market_section_recent">Wè dènyèman</string>
     <string name="market_ship_dialog_cancel">Anile</string>
     <string name="market_ship_dialog_submit">Konfime</string>

@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Takip numarası</string>
     <string name="market_saved_title">Kaydedildi</string>
     <string name="market_search_clear">Aramayı temizle</string>
-    <string name="market_section_categories">Kategoriler</string>
-    <string name="market_section_listings">İlanlar</string>
+    <string name="market_section_categories">Kategorilere göz at</string>
+    <string name="market_section_listings">Son ilanlar</string>
     <string name="market_section_recent">Son görüntülenenler</string>
     <string name="market_ship_dialog_cancel">İptal</string>
     <string name="market_ship_dialog_submit">Onayla</string>

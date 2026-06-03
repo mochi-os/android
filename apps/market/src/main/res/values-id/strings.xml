@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Nomor pelacakan</string>
     <string name="market_saved_title">Tersimpan</string>
     <string name="market_search_clear">Bersihkan pencarian</string>
-    <string name="market_section_categories">Kategori</string>
-    <string name="market_section_listings">Daftar</string>
+    <string name="market_section_categories">Jelajahi Kategori</string>
+    <string name="market_section_listings">Daftar Terbaru</string>
     <string name="market_section_recent">Baru dilihat</string>
     <string name="market_ship_dialog_cancel">Batal</string>
     <string name="market_ship_dialog_submit">Konfirmasi</string>

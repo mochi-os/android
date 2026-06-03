@@ -562,8 +562,8 @@
     <string name="market_saved_title">ተቀምጧል</string>
     <string name="market_search_clear">ፍለጋ አጽዳ</string>
     <string name="market_search_placeholder">ገበያውን ይፈልጉ</string>
-    <string name="market_section_categories">ምድቦች</string>
-    <string name="market_section_listings">ዝርዝሮች</string>
+    <string name="market_section_categories">ምድቦችን ያስሱ</string>
+    <string name="market_section_listings">የቅርብ ጊዜ ዝርዝሮች</string>
     <string name="market_section_recent">በቅርቡ የታዩ</string>
     <string name="market_ship_dialog_cancel">ይቅር</string>
     <string name="market_ship_dialog_submit">አረጋግጥ</string>

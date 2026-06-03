@@ -141,7 +141,7 @@
     <string name="market_sidebar_saved">Saved</string>
     <string name="market_listing_detail_title">Listing</string>
     <string name="market_messages_thread_listing_chip">Listing</string>
-    <string name="market_section_listings">Listings</string>
+    <string name="market_section_listings">Recent Listings</string>
     <string name="market_sidebar_listings">Listings</string>
     <string name="app_name">Market</string>
     <string name="market_account_status_banned_title">Account banned</string>
@@ -207,7 +207,7 @@
     <string name="market_sale_section_summary">Summary</string>
     <string name="market_sale_shipped_label">Shipped</string>
     <string name="market_search_clear">Clear search</string>
-    <string name="market_section_categories">Categories</string>
+    <string name="market_section_categories">Browse Categories</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_shipping_price">Price</string>
     <string name="market_sidebar_messages">Messages</string>

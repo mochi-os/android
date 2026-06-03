@@ -404,8 +404,8 @@
     <string name="market_saved_title">אויפֿגעהיט</string>
     <string name="market_search_clear">רייניקן זוכן</string>
     <string name="market_search_placeholder">זוך אינעם מארק</string>
-    <string name="market_section_categories">קאַטעגאָריעס</string>
-    <string name="market_section_listings">רשימות</string>
+    <string name="market_section_categories">בלעטערן קאַטעגאָריעס</string>
+    <string name="market_section_listings">לעצטיקע רשימות</string>
     <string name="market_section_recent">לעצטנס געקוקט</string>
     <string name="market_ship_dialog_cancel">אָפּזאָגן</string>
     <string name="market_ship_dialog_submit">באַשטעטיקן</string>

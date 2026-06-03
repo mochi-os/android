@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Jälgimisnumber</string>
     <string name="market_saved_title">Salvestatud</string>
     <string name="market_search_clear">Tühjenda otsing</string>
-    <string name="market_section_categories">Kategooriad</string>
-    <string name="market_section_listings">Kuulutused</string>
+    <string name="market_section_categories">Sirvi kategooriaid</string>
+    <string name="market_section_listings">Hiljutised kuulutused</string>
     <string name="market_section_recent">Hiljuti vaadatud</string>
     <string name="market_ship_dialog_cancel">Tühista</string>
     <string name="market_ship_dialog_submit">Kinnita</string>

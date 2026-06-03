@@ -562,8 +562,8 @@
     <string name="market_saved_title">Saxlanıldı</string>
     <string name="market_search_clear">Axtarışı təmizlə</string>
     <string name="market_search_placeholder">Bazarda axtarın</string>
-    <string name="market_section_categories">Kateqoriyalar</string>
-    <string name="market_section_listings">Elanlar</string>
+    <string name="market_section_categories">Kateqoriyalara baxın</string>
+    <string name="market_section_listings">Son elanlar</string>
     <string name="market_section_recent">Bu yaxınlarda baxılan</string>
     <string name="market_ship_dialog_cancel">Ləğv et</string>
     <string name="market_ship_dialog_submit">Təsdiqlə</string>

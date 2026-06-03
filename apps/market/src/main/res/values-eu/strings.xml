@@ -562,8 +562,8 @@
     <string name="market_saved_title">Gordeta</string>
     <string name="market_search_clear">Garbitu bilaketa</string>
     <string name="market_search_placeholder">Bilatu merkatuan</string>
-    <string name="market_section_categories">Kategoriak</string>
-    <string name="market_section_listings">Zerrendapenak</string>
+    <string name="market_section_categories">Arakatu kategoriak</string>
+    <string name="market_section_listings">Azken iragarkiak</string>
     <string name="market_section_recent">Azkenaldian ikusiak</string>
     <string name="market_ship_dialog_cancel">Utzi</string>
     <string name="market_ship_dialog_submit">Berretsi</string>

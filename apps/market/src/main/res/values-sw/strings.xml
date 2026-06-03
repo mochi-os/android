@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Nambari ya ufuatiliaji</string>
     <string name="market_saved_title">Imehifadhiwa</string>
     <string name="market_search_clear">Futa utafutaji</string>
-    <string name="market_section_categories">Kategoria</string>
-    <string name="market_section_listings">Orodha</string>
+    <string name="market_section_categories">Vinjari kategoria</string>
+    <string name="market_section_listings">Orodha za hivi karibuni</string>
     <string name="market_section_recent">Zilizotazamwa hivi karibuni</string>
     <string name="market_ship_dialog_cancel">Ghairi</string>
     <string name="market_ship_dialog_submit">Thibitisha</string>

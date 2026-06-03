@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Číslo zásilky</string>
     <string name="market_saved_title">Uloženo</string>
     <string name="market_search_clear">Vymazat hledání</string>
-    <string name="market_section_categories">Kategorie</string>
-    <string name="market_section_listings">Nabídky</string>
+    <string name="market_section_categories">Procházet kategorie</string>
+    <string name="market_section_listings">Nedávné inzeráty</string>
     <string name="market_section_recent">Nedávno zobrazené</string>
     <string name="market_ship_dialog_cancel">Zrušit</string>
     <string name="market_ship_dialog_submit">Potvrdit</string>

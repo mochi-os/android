@@ -410,8 +410,8 @@
     <string name="market_saved_title">Gardado</string>
     <string name="market_search_clear">Borrar busca</string>
     <string name="market_search_placeholder">Buscar no mercado</string>
-    <string name="market_section_categories">Categorías</string>
-    <string name="market_section_listings">Anuncios</string>
+    <string name="market_section_categories">Explorar categorías</string>
+    <string name="market_section_listings">Anuncios recentes</string>
     <string name="market_section_recent">Vistos recentemente</string>
     <string name="market_ship_dialog_cancel">Cancelar</string>
     <string name="market_ship_dialog_submit">Confirmar</string>

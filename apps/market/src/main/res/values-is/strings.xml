@@ -410,8 +410,8 @@
     <string name="market_saved_title">Vistað</string>
     <string name="market_search_clear">Hreinsa leit</string>
     <string name="market_search_placeholder">Leita á markaði</string>
-    <string name="market_section_categories">Flokkar</string>
-    <string name="market_section_listings">Auglýsingar</string>
+    <string name="market_section_categories">Skoða flokka</string>
+    <string name="market_section_listings">Nýlegar auglýsingar</string>
     <string name="market_section_recent">Nýlega skoðað</string>
     <string name="market_ship_dialog_cancel">Hætta við</string>
     <string name="market_ship_dialog_submit">Staðfesta</string>

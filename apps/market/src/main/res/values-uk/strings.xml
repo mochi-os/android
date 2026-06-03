@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Номер відстеження</string>
     <string name="market_saved_title">Збережено</string>
     <string name="market_search_clear">Очистити пошук</string>
-    <string name="market_section_categories">Категорії</string>
-    <string name="market_section_listings">Оголошення</string>
+    <string name="market_section_categories">Огляд категорій</string>
+    <string name="market_section_listings">Останні оголошення</string>
     <string name="market_section_recent">Нещодавно переглянуті</string>
     <string name="market_ship_dialog_cancel">Скасувати</string>
     <string name="market_ship_dialog_submit">Підтвердити</string>

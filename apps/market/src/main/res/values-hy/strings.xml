@@ -406,8 +406,8 @@
     <string name="market_saved_title">Պահպանված է</string>
     <string name="market_search_clear">Մաքրել ընտրությունը</string>
     <string name="market_search_placeholder">Որոնել շուկայում</string>
-    <string name="market_section_categories">Կատեգորիա</string>
-    <string name="market_section_listings">Բեռնվում է diff-ը...</string>
+    <string name="market_section_categories">Դիտել կատեգորիաները</string>
+    <string name="market_section_listings">Վերջին հայտարարությունները</string>
     <string name="market_section_recent">Վերջերս դիտված</string>
     <string name="market_ship_dialog_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="market_ship_dialog_submit">Հաստատել ստացումը</string>

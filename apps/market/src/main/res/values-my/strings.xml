@@ -404,8 +404,8 @@
     <string name="market_saved_title">သိမ်းပြီး</string>
     <string name="market_search_clear">ရှာဖွေမှု ရှင်းမည်</string>
     <string name="market_search_placeholder">ဈေးကွက်တွင် ရှာ</string>
-    <string name="market_section_categories">အမျိုးအစားများ</string>
-    <string name="market_section_listings">စာရင်းများ</string>
+    <string name="market_section_categories">အမျိုးအစားများ ကြည့်ရှုရန်</string>
+    <string name="market_section_listings">မကြာသေးမီက ကြော်ငြာများ</string>
     <string name="market_section_recent">လတ်တလော ကြည့်ရှုခဲ့</string>
     <string name="market_ship_dialog_cancel">မလုပ်တော့ပါ</string>
     <string name="market_ship_dialog_submit">အတည်ပြုမည်</string>

@@ -412,8 +412,8 @@
     <string name="market_saved_title">Ti fi pamọ́</string>
     <string name="market_search_clear">Pa àwárí rẹ́</string>
     <string name="market_search_placeholder">Wá ọjà</string>
-    <string name="market_section_categories">Àwọn ẹ̀ka</string>
-    <string name="market_section_listings">Àwọn àkójọ</string>
+    <string name="market_section_categories">Ṣàwárí àwọn ẹ̀ka</string>
+    <string name="market_section_listings">Àwọn àkọsílẹ̀ tuntun</string>
     <string name="market_section_recent">Tí a wò láìpẹ́</string>
     <string name="market_ship_dialog_cancel">Fagilé</string>
     <string name="market_ship_dialog_submit">Fọwọ́sí</string>

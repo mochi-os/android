@@ -417,8 +417,8 @@
     <string name="market_saved_title">An adana</string>
     <string name="market_search_clear">Share bincike</string>
     <string name="market_search_placeholder">Bincika kasuwa</string>
-    <string name="market_section_categories">Rukuni</string>
-    <string name="market_section_listings">Tallace-tallace</string>
+    <string name="market_section_categories">Bincika rukunoni</string>
+    <string name="market_section_listings">Sabbin tallace-tallace</string>
     <string name="market_section_recent">An kalla kwanan nan</string>
     <string name="market_ship_dialog_cancel">Soke</string>
     <string name="market_ship_dialog_submit">Tabbatar</string>

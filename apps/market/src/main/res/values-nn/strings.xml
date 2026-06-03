@@ -299,8 +299,8 @@
     <string name="market_sale_tracking_label">Sporingsnummer</string>
     <string name="market_saved_title">Lagra</string>
     <string name="market_search_clear">Tøm søk</string>
-    <string name="market_section_categories">Kategoriar</string>
-    <string name="market_section_listings">Oppføringar</string>
+    <string name="market_section_categories">Bla i kategoriar</string>
+    <string name="market_section_listings">Nylege oppføringar</string>
     <string name="market_section_recent">Nyleg sett</string>
     <string name="market_ship_dialog_cancel">Avbryt</string>
     <string name="market_ship_dialog_submit">Stadfest</string>

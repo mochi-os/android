@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">شماره پیگیری</string>
     <string name="market_saved_title">ذخیره شد</string>
     <string name="market_search_clear">پاک کردن جست‌وجو</string>
-    <string name="market_section_categories">دسته‌ها</string>
-    <string name="market_section_listings">آگهی‌ها</string>
+    <string name="market_section_categories">مرور دسته‌ها</string>
+    <string name="market_section_listings">آگهی‌های اخیر</string>
     <string name="market_section_recent">اخیراً مشاهده‌شده</string>
     <string name="market_ship_dialog_cancel">لغو</string>
     <string name="market_ship_dialog_submit">تأیید</string>

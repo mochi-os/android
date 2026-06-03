@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Številka za sledenje</string>
     <string name="market_saved_title">Shranjeno</string>
     <string name="market_search_clear">Počisti iskanje</string>
-    <string name="market_section_categories">Kategorije</string>
-    <string name="market_section_listings">Oglasi</string>
+    <string name="market_section_categories">Prebrskaj kategorije</string>
+    <string name="market_section_listings">Nedavni oglasi</string>
     <string name="market_section_recent">Nedavno ogledano</string>
     <string name="market_ship_dialog_cancel">Prekliči</string>
     <string name="market_ship_dialog_submit">Potrdi</string>

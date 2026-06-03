@@ -404,8 +404,8 @@
     <string name="market_saved_title">បានរក្សាទុក</string>
     <string name="market_search_clear">សម្អាតការស្វែងរក</string>
     <string name="market_search_placeholder">ស្វែងរកនៅទីផ្សារ</string>
-    <string name="market_section_categories">ប្រភេទ</string>
-    <string name="market_section_listings">ការដាក់លក់</string>
+    <string name="market_section_categories">រកមើលប្រភេទ</string>
+    <string name="market_section_listings">ការដាក់លក់ថ្មីៗ</string>
     <string name="market_section_recent">បានមើលថ្មីៗ</string>
     <string name="market_ship_dialog_cancel">បោះបង់</string>
     <string name="market_ship_dialog_submit">បញ្ជាក់</string>

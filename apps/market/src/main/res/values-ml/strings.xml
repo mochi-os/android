@@ -404,8 +404,8 @@
     <string name="market_saved_title">സേവ് ചെയ്തു</string>
     <string name="market_search_clear">തിരയൽ മായ്ക്കുക</string>
     <string name="market_search_placeholder">മാർക്കറ്റിൽ തിരയുക</string>
-    <string name="market_section_categories">വിഭാഗങ്ങൾ</string>
-    <string name="market_section_listings">ലിസ്റ്റിംഗുകൾ</string>
+    <string name="market_section_categories">വിഭാഗങ്ങൾ ബ്രൗസ് ചെയ്യുക</string>
+    <string name="market_section_listings">സമീപകാല ലിസ്റ്റിംഗുകൾ</string>
     <string name="market_section_recent">ശുപാർശകൾ</string>
     <string name="market_ship_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_ship_dialog_submit">സ്ഥിരീകരിക്കുക</string>

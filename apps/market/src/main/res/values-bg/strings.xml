@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Номер за проследяване</string>
     <string name="market_saved_title">Запазено</string>
     <string name="market_search_clear">Изчисти търсенето</string>
-    <string name="market_section_categories">Категории</string>
-    <string name="market_section_listings">Обяви</string>
+    <string name="market_section_categories">Разгледай категориите</string>
+    <string name="market_section_listings">Скорошни обяви</string>
     <string name="market_section_recent">Наскоро прегледани</string>
     <string name="market_ship_dialog_cancel">Отказ</string>
     <string name="market_ship_dialog_submit">Потвърди</string>

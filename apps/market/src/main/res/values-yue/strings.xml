@@ -111,7 +111,7 @@
     <string name="market_listing_detail_title">刊登</string>
     <string name="market_messages_thread_listing_chip">刊登</string>
     <string name="market_subscription_detail_listing">刊登</string>
-    <string name="market_section_listings">刊登</string>
+    <string name="market_section_listings">最新刊登</string>
     <string name="market_sidebar_listings">刊登</string>
     <string name="market_checkout_subscribe_failed">訂閱失敗</string>
     <string name="market_checkout_subscribing">緊訂閱…</string>
@@ -127,7 +127,7 @@
     <string name="market_profile_verified">已驗證</string>
     <string name="market_sale_section_summary">摘要</string>
     <string name="market_search_clear">清除搜尋</string>
-    <string name="market_section_categories">類別</string>
+    <string name="market_section_categories">瀏覽類別</string>
     <string name="market_subscription_detail_title">訂閱</string>
     <string name="market_purchase_audit_section">動態</string>
     <string name="market_sale_section_audit">動態</string>

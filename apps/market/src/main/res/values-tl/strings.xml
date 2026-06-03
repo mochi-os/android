@@ -404,8 +404,8 @@
     <string name="market_saved_title">Na-save</string>
     <string name="market_search_clear">Burahin ang paghahanap</string>
     <string name="market_search_placeholder">Maghanap sa pamilihan</string>
-    <string name="market_section_categories">Mga category</string>
-    <string name="market_section_listings">Mga listing</string>
+    <string name="market_section_categories">Mag-browse ng mga kategorya</string>
+    <string name="market_section_listings">Pinakabagong listing</string>
     <string name="market_section_recent">Kamakailang tiningnan</string>
     <string name="market_ship_dialog_cancel">Kanselahin</string>
     <string name="market_ship_dialog_submit">Kumpirmahin</string>

@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">追跡番号</string>
     <string name="market_saved_title">保存しました</string>
     <string name="market_search_clear">検索をクリア</string>
-    <string name="market_section_categories">カテゴリ</string>
-    <string name="market_section_listings">リスティング</string>
+    <string name="market_section_categories">カテゴリを見る</string>
+    <string name="market_section_listings">最近の出品</string>
     <string name="market_section_recent">最近見た商品</string>
     <string name="market_ship_dialog_cancel">キャンセル</string>
     <string name="market_ship_dialog_submit">確認</string>

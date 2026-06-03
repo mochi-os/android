@@ -404,8 +404,8 @@
     <string name="market_saved_title">محفوظ ٿيو</string>
     <string name="market_search_clear">ڳولا صاف ڪريو</string>
     <string name="market_search_placeholder">مارڪيٽ ۾ ڳوليو</string>
-    <string name="market_section_categories">زمرا</string>
-    <string name="market_section_listings">لسٽنگون</string>
+    <string name="market_section_categories">زمرا ڏسو</string>
+    <string name="market_section_listings">تازيون لسٽنگون</string>
     <string name="market_section_recent">تازو ڏٺل</string>
     <string name="market_ship_dialog_cancel">منسوخ ڪريو</string>
     <string name="market_ship_dialog_submit">تصديق ڪريو</string>

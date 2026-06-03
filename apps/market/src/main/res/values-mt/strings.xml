@@ -404,8 +404,8 @@
     <string name="market_saved_title">Issejvjat</string>
     <string name="market_search_clear">Naddaf it-tiftix</string>
     <string name="market_search_placeholder">Fittex fis-suq</string>
-    <string name="market_section_categories">Kategoriji</string>
-    <string name="market_section_listings">Listings</string>
+    <string name="market_section_categories">Esplora l-Kategoriji</string>
+    <string name="market_section_listings">Elenki Riċenti</string>
     <string name="market_section_recent">Recently viewed</string>
     <string name="market_ship_dialog_cancel">Ikkanċella</string>
     <string name="market_ship_dialog_submit">Ikkonferma</string>

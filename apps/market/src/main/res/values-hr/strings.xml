@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Broj za praćenje</string>
     <string name="market_saved_title">Spremljeno</string>
     <string name="market_search_clear">Očisti pretragu</string>
-    <string name="market_section_categories">Kategorije</string>
-    <string name="market_section_listings">Oglasi</string>
+    <string name="market_section_categories">Pregledaj kategorije</string>
+    <string name="market_section_listings">Nedavni oglasi</string>
     <string name="market_section_recent">Nedavno pregledano</string>
     <string name="market_ship_dialog_cancel">Odustani</string>
     <string name="market_ship_dialog_submit">Potvrdi</string>

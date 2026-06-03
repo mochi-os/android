@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Seurantanumero</string>
     <string name="market_saved_title">Tallennettu</string>
     <string name="market_search_clear">Tyhjennä haku</string>
-    <string name="market_section_categories">Kategoriat</string>
-    <string name="market_section_listings">Ilmoitukset</string>
+    <string name="market_section_categories">Selaa kategorioita</string>
+    <string name="market_section_listings">Uusimmat ilmoitukset</string>
     <string name="market_section_recent">Viimeksi katsotut</string>
     <string name="market_ship_dialog_cancel">Peruuta</string>
     <string name="market_ship_dialog_submit">Vahvista</string>

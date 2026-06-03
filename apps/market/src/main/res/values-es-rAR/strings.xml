@@ -163,7 +163,7 @@
     <string name="market_sidebar_saved">Guardado</string>
     <string name="market_listing_detail_title">Anuncio</string>
     <string name="market_messages_thread_listing_chip">Anuncio</string>
-    <string name="market_section_listings">Anuncios</string>
+    <string name="market_section_listings">Avisos recientes</string>
     <string name="market_sidebar_listings">Anuncios</string>
     <string name="app_name">Mercado</string>
     <string name="market_account_status_banned_title">Cuenta baneada</string>
@@ -230,7 +230,7 @@
     <string name="market_sale_section_summary">Resumen</string>
     <string name="market_sale_shipped_label">Enviado</string>
     <string name="market_search_clear">Borrar búsqueda</string>
-    <string name="market_section_categories">Categorías</string>
+    <string name="market_section_categories">Explorar categorías</string>
     <string name="market_shipping_notes">Notas</string>
     <string name="market_shipping_price">Precio</string>
     <string name="market_sidebar_messages">Mensajes</string>

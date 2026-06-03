@@ -404,8 +404,8 @@
     <string name="market_saved_title">సేవ్ చేయబడింది</string>
     <string name="market_search_clear">శోధనను క్లియర్ చేయండి</string>
     <string name="market_search_placeholder">మార్కెట్‌లో శోధించండి</string>
-    <string name="market_section_categories">వర్గాలు</string>
-    <string name="market_section_listings">లిస్టింగ్‌లు</string>
+    <string name="market_section_categories">వర్గాలను విహరించండి</string>
+    <string name="market_section_listings">ఇటీవలి లిస్టింగ్‌లు</string>
     <string name="market_section_recent">ఇటీవల వీక్షించినవి</string>
     <string name="market_ship_dialog_cancel">రద్దు చేయండి</string>
     <string name="market_ship_dialog_submit">నిర్ధారించండి</string>

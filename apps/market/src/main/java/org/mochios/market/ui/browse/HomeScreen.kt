@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyRow
@@ -102,6 +101,11 @@ fun HomeScreen(
     // Debounce search input so the ViewModel doesn't fire a request per
     // keystroke. The web side debounces at 300 ms; match it here.
     var searchInput by remember { mutableStateOf(state.query) }
+    // Pull external query resets (e.g. Clear filters) back into the field;
+    // the debounce effect below only pushes local -> VM, never the reverse.
+    LaunchedEffect(state.query) {
+        if (state.query != searchInput) searchInput = state.query
+    }
     LaunchedEffect(searchInput) {
         delay(300L)
         if (searchInput != state.query) viewModel.setQuery(searchInput)
@@ -274,24 +278,6 @@ private fun HomeContent(
                     }
                 }
 
-                if (state.recentListings.isNotEmpty()) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        Text(
-                            text = stringResource(R.string.market_section_recent),
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier.padding(vertical = 8.dp),
-                        )
-                    }
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        RecentlyViewedStrip(
-                            listings = state.recentListings,
-                            categories = state.categories,
-                            onClick = onListingClick,
-                        )
-                    }
-                }
-
                 if (state.listings.isNotEmpty()) {
                     item(span = { GridItemSpan(maxLineSpan) }) {
                         Text(
@@ -455,28 +441,6 @@ private fun CategoryGrid(
                     }
                 }
                 repeat(3 - row.size) { Spacer(modifier = Modifier.weight(1f)) }
-            }
-        }
-    }
-}
-
-@Composable
-private fun RecentlyViewedStrip(
-    listings: List<Listing>,
-    categories: List<Category>,
-    onClick: (Listing) -> Unit,
-) {
-    LazyRow(
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        contentPadding = PaddingValues(vertical = 4.dp),
-    ) {
-        items(listings, key = { it.id }) { listing ->
-            Box(modifier = Modifier.width(170.dp)) {
-                org.mochios.market.ui.components.ListingCard(
-                    listing = listing,
-                    category = categories.firstOrNull { it.id == listing.category }?.name,
-                    onClick = { onClick(listing) },
-                )
             }
         }
     }

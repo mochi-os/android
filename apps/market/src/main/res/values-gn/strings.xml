@@ -397,8 +397,8 @@
     <string name="market_saved_title">Oñeñongatu</string>
     <string name="market_search_clear">Embopotĩ jeheka</string>
     <string name="market_search_placeholder">Eheka</string>
-    <string name="market_section_categories">Categoríakuéra</string>
-    <string name="market_section_listings">Listadokuéra</string>
+    <string name="market_section_categories">Ehecha categoríakuéra</string>
+    <string name="market_section_listings">Listado pyahu</string>
     <string name="market_section_recent">Ehecha va\'ekue ramoguáve</string>
     <string name="market_ship_dialog_cancel">Heja</string>
     <string name="market_ship_dialog_submit">Emoneĩ</string>

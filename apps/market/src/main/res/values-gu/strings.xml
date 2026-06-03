@@ -403,8 +403,8 @@
     <string name="market_saved_title">સાચવ્યું</string>
     <string name="market_search_clear">શોધ સાફ કરો</string>
     <string name="market_search_placeholder">બજારમાં શોધો</string>
-    <string name="market_section_categories">શ્રેણીઓ</string>
-    <string name="market_section_listings">લિસ્ટિંગ્સ</string>
+    <string name="market_section_categories">શ્રેણીઓ બ્રાઉઝ કરો</string>
+    <string name="market_section_listings">તાજેતરની યાદીઓ</string>
     <string name="market_section_recent">તાજેતરમાં જોયેલા</string>
     <string name="market_ship_dialog_cancel">રદ કરો</string>
     <string name="market_ship_dialog_submit">પુષ્ટિ કરો</string>

@@ -134,7 +134,7 @@
     <string name="market_sidebar_saved">Enregistré</string>
     <string name="market_listing_detail_title">Annonce</string>
     <string name="market_messages_thread_listing_chip">Annonce</string>
-    <string name="market_section_listings">Annonces</string>
+    <string name="market_section_listings">Annonces récentes</string>
     <string name="market_sidebar_listings">Annonces</string>
     <string name="app_name">Marché</string>
     <string name="market_account_status_banned_title">Compte banni</string>
@@ -192,7 +192,7 @@
     <string name="market_sale_dispute_state_resolved">Résolus</string>
     <string name="market_sale_section_summary">Résumé</string>
     <string name="market_search_clear">Effacer la recherche</string>
-    <string name="market_section_categories">Catégories</string>
+    <string name="market_section_categories">Parcourir les catégories</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_shipping_price">Prix</string>
     <string name="market_sidebar_messages">Messages</string>

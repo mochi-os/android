@@ -404,8 +404,8 @@
     <string name="market_saved_title">Igciniwe</string>
     <string name="market_search_clear">Cima ukukhangela</string>
     <string name="market_search_placeholder">Khangela kwimarike</string>
-    <string name="market_section_categories">Iindidi</string>
-    <string name="market_section_listings">Iiluhlu</string>
+    <string name="market_section_categories">Khangela iindidi</string>
+    <string name="market_section_listings">Uluhlu lwakutshanje</string>
     <string name="market_section_recent">Okubukwe kutsha nje</string>
     <string name="market_ship_dialog_cancel">Rhoxisa</string>
     <string name="market_ship_dialog_submit">Qinisekisa</string>

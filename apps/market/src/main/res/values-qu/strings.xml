@@ -404,8 +404,8 @@
     <string name="market_saved_title">Waqaychasqa</string>
     <string name="market_search_clear">Maskhay pichay</string>
     <string name="market_search_placeholder">Qhatupi maskhay</string>
-    <string name="market_section_categories">Categorías</string>
-    <string name="market_section_listings">Qhatuykuna</string>
+    <string name="market_section_categories">Categoríakunata maskay</string>
+    <string name="market_section_listings">Musuq qhatuykuna</string>
     <string name="market_section_recent">Yaqa pacha qhawasqa</string>
     <string name="market_ship_dialog_cancel">Mana ruway</string>
     <string name="market_ship_dialog_submit">Takyachiy</string>

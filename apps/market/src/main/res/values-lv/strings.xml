@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">Izsekošanas numurs</string>
     <string name="market_saved_title">Saglabāts</string>
     <string name="market_search_clear">Notīrīt meklēšanu</string>
-    <string name="market_section_categories">Kategorijas</string>
-    <string name="market_section_listings">Sludinājumi</string>
+    <string name="market_section_categories">Pārlūkot kategorijas</string>
+    <string name="market_section_listings">Jaunākie sludinājumi</string>
     <string name="market_section_recent">Nesen skatīts</string>
     <string name="market_ship_dialog_cancel">Atcelt</string>
     <string name="market_ship_dialog_submit">Apstiprināt</string>

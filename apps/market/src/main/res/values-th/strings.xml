@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">หมายเลขติดตาม</string>
     <string name="market_saved_title">บันทึกแล้ว</string>
     <string name="market_search_clear">ล้างการค้นหา</string>
-    <string name="market_section_categories">หมวดหมู่</string>
-    <string name="market_section_listings">ประกาศ</string>
+    <string name="market_section_categories">เรียกดูหมวดหมู่</string>
+    <string name="market_section_listings">ประกาศล่าสุด</string>
     <string name="market_section_recent">ดูล่าสุด</string>
     <string name="market_ship_dialog_cancel">ยกเลิก</string>
     <string name="market_ship_dialog_submit">ยืนยัน</string>

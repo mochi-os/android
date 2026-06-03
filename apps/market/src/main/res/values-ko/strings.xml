@@ -339,8 +339,8 @@
     <string name="market_sale_tracking_label">추적 번호</string>
     <string name="market_saved_title">저장됨</string>
     <string name="market_search_clear">검색 지우기</string>
-    <string name="market_section_categories">카테고리</string>
-    <string name="market_section_listings">목록</string>
+    <string name="market_section_categories">카테고리 둘러보기</string>
+    <string name="market_section_listings">최근 등록 상품</string>
     <string name="market_section_recent">최근 본 상품</string>
     <string name="market_ship_dialog_cancel">취소</string>
     <string name="market_ship_dialog_submit">확인</string>

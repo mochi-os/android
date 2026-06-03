@@ -404,8 +404,8 @@
     <string name="market_saved_title">සුරකින ලදී</string>
     <string name="market_search_clear">සෙවුම හිස් කරන්න</string>
     <string name="market_search_placeholder">වෙළඳපොළ සොයන්න</string>
-    <string name="market_section_categories">ප්‍රවර්ග</string>
-    <string name="market_section_listings">ලැයිස්තුගත කිරීම්</string>
+    <string name="market_section_categories">ප්‍රවර්ග පිරික්සන්න</string>
+    <string name="market_section_listings">මෑත ලැයිස්තු</string>
     <string name="market_section_recent">මෑත දී බැලූ</string>
     <string name="market_ship_dialog_cancel">අවලංගු කරන්න</string>
     <string name="market_ship_dialog_submit">තහවුරු කරන්න</string>

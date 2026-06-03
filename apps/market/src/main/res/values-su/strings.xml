@@ -404,8 +404,8 @@
     <string name="market_saved_title">Disimpen</string>
     <string name="market_search_clear">Bersihkeun panéangan</string>
     <string name="market_search_placeholder">Téangan di pasar</string>
-    <string name="market_section_categories">Katégori</string>
-    <string name="market_section_listings">Listing</string>
+    <string name="market_section_categories">Telusur Katégori</string>
+    <string name="market_section_listings">Listing Anyar</string>
     <string name="market_section_recent">Anu kakara ditempo</string>
     <string name="market_ship_dialog_cancel">Batalkeun</string>
     <string name="market_ship_dialog_submit">Konfirmasi</string>

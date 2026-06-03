@@ -562,8 +562,8 @@
     <string name="market_saved_title">Wedi\'i gadw</string>
     <string name="market_search_clear">Clirio chwiliad</string>
     <string name="market_search_placeholder">Chwilio\'r farchnad</string>
-    <string name="market_section_categories">Categorïau</string>
-    <string name="market_section_listings">Rhestriadau</string>
+    <string name="market_section_categories">Pori Categorïau</string>
+    <string name="market_section_listings">Rhestriadau Diweddar</string>
     <string name="market_section_recent">A welwyd yn ddiweddar</string>
     <string name="market_ship_dialog_cancel">Canslo</string>
     <string name="market_ship_dialog_submit">Cadarnhau</string>
