@@ -649,8 +649,6 @@
     <string name="market_subscriptions_resume_failed">መቀጠል አልተሳካም</string>
     <string name="market_subscriptions_resumed">ምዝገባ ቀጥሏል</string>
     <string name="market_subscriptions_title">ምዝገባዎች</string>
-    <string name="market_test_mode_banner">ይህ መተግበሪያ በሙከራ ሁኔታ ላይ ነው። ለእውነተኛ ሽያጭ ወይም ግዢ አይጠቀሙበት።</string>
-    <string name="market_test_mode_card">በካርድ 4242 4242 4242 4242፣ በማንኛውም የወደፊት ጊዜ ማብቂያ እና በማንኛውም የደህንነት ኮድ የሙከራ ግዢዎችን ያድርጉ።</string>
     <string name="market_title">ገበያ</string>
     <string name="market_type_digital">ዲጂታል</string>
     <string name="market_type_physical">አካላዊ</string>

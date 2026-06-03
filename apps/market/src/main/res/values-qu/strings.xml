@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Mana qatipayta atinchu</string>
     <string name="market_subscriptions_resumed">Subscripción kutirin</string>
     <string name="market_subscriptions_title">Subscripcionkuna</string>
-    <string name="market_test_mode_banner">Kay app pruebay modopi. Cheqap rantiykunapaq utaq rantiykunapaq ama apaykachaychu.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 cardwan test rantiykunata ruway, ima hamuq tukukuy hinaspa ima seguridad códigowan.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Físico</string>

@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Неуспешно възобновяване</string>
     <string name="market_subscriptions_resumed">Абонаментът е възобновен</string>
     <string name="market_subscriptions_title">Абонаменти</string>
-    <string name="market_test_mode_banner">Това приложение е в тестов режим. Не го използвайте за реални продажби или покупки.</string>
-    <string name="market_test_mode_card">Направете тестови покупки с карта 4242 4242 4242 4242, с произволна бъдеща дата на изтичане и произволен код за сигурност.</string>
     <string name="market_title">Пазар</string>
     <string name="market_type_digital">Дигитално</string>
     <string name="market_type_physical">Физически</string>

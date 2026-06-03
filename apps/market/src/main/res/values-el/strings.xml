@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Αποτυχία επανέναρξης</string>
     <string name="market_subscriptions_resumed">Η συνδρομή συνεχίστηκε</string>
     <string name="market_subscriptions_title">Συνδρομές</string>
-    <string name="market_test_mode_banner">Αυτή η εφαρμογή βρίσκεται σε λειτουργία δοκιμής. Μην την χρησιμοποιείτε για πραγματικές πωλήσεις ή αγορές.</string>
-    <string name="market_test_mode_card">Κάντε δοκιμαστικές αγορές με κάρτα 4242 4242 4242 4242, με οποιαδήποτε μελλοντική ημερομηνία λήξης και οποιονδήποτε κωδικό ασφαλείας.</string>
     <string name="market_title">Αγορά</string>
     <string name="market_type_digital">Ψηφιακό</string>
     <string name="market_type_physical">Φυσικό</string>

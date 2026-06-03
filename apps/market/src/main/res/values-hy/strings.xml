@@ -479,8 +479,6 @@
     <string name="market_subscriptions_resume_failed">Չհաջողվեց վերսկսել</string>
     <string name="market_subscriptions_resumed">Բաժանորդագրությունը վերականգնվեց</string>
     <string name="market_subscriptions_title">Բաժանորդագրություններ</string>
-    <string name="market_test_mode_banner">Այս հավելվածը թեստային ռեժիմում է: Մի օգտագործեք այն իրական վաճառքների կամ գնումների համար:</string>
-    <string name="market_test_mode_card">Կառավարեք տեղակայման միջավայրերը և դրանց տարբերակները</string>
     <string name="market_title">Առավելագույն առաջարկ (ընտրովի)</string>
     <string name="market_type_digital">Թվային</string>
     <string name="market_type_physical">Ֆիզիկական</string>

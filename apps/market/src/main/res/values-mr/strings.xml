@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">पुन्हा सुरू करण्यात अयशस्वी</string>
     <string name="market_subscriptions_resumed">सबस्क्रिप्शन पुन्हा सुरू केले</string>
     <string name="market_subscriptions_title">सबस्क्रिप्शन्स</string>
-    <string name="market_test_mode_banner">हे अॅप टेस्ट मोडमध्ये आहे. खऱ्या विक्री किंवा खरेदीसाठी ते वापरू नका.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 या कार्डाने, कोणत्याही भविष्यातील एक्सपायरी आणि कोणत्याही सिक्युरिटी कोडसह चाचणी खरेदी करा.</string>
     <string name="market_title">मार्केट</string>
     <string name="market_type_digital">डिजिटल</string>
     <string name="market_type_physical">भौतिक</string>

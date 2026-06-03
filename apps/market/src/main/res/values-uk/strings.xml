@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Не вдалося відновити</string>
     <string name="market_subscriptions_resumed">Підписку відновлено</string>
     <string name="market_subscriptions_title">Підписки</string>
-    <string name="market_test_mode_banner">Цей застосунок у тестовому режимі. Не використовуйте його для реальних продажів або покупок.</string>
-    <string name="market_test_mode_card">Здійснюйте тестові покупки з карткою 4242 4242 4242 4242, з будь-яким майбутнім терміном дії та будь-яким кодом безпеки.</string>
     <string name="market_title">Маркет</string>
     <string name="market_type_digital">Цифровий</string>
     <string name="market_type_physical">Фізичний</string>

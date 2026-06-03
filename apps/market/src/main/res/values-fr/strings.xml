@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Échec de la reprise</string>
     <string name="market_subscriptions_resumed">Abonnement repris</string>
     <string name="market_subscriptions_title">Abonnements</string>
-    <string name="market_test_mode_banner">Cette application est en mode test. Ne l\'utilisez pas pour des ventes ou des achats réels.</string>
-    <string name="market_test_mode_card">Faites des achats de test avec la carte 4242 4242 4242 4242, avec n\'importe quelle date d\'expiration future et n\'importe quel code de sécurité.</string>
     <string name="market_title">Place de marché</string>
     <string name="market_type_digital">Numérique</string>
     <string name="market_type_physical">Physique</string>

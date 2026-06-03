@@ -476,8 +476,6 @@
     <string name="market_subscriptions_resume_failed">ફરી શરૂ કરવામાં નિષ્ફળ</string>
     <string name="market_subscriptions_resumed">સબ્સ્ક્રિપ્શન ફરી શરૂ કર્યું</string>
     <string name="market_subscriptions_title">સબ્સ્ક્રિપ્શન્સ</string>
-    <string name="market_test_mode_banner">આ એપ ટેસ્ટ મોડમાં છે. તેનો વાસ્તવિક વેચાણ કે ખરીદી માટે ઉપયોગ કરશો નહીં.</string>
-    <string name="market_test_mode_card">કાર્ડ 4242 4242 4242 4242, કોઈપણ ભવિષ્યની એક્સ્પાયરી અને કોઈપણ સિક્યોરિટી કોડ સાથે ટેસ્ટ ખરીદી કરો.</string>
     <string name="market_title">માર્કેટ</string>
     <string name="market_type_digital">ડિજિટલ</string>
     <string name="market_type_physical">ભૌતિક</string>

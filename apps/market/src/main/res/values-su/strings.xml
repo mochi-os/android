@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Gagal nuluykeun</string>
     <string name="market_subscriptions_resumed">Langganan diteruskeun</string>
     <string name="market_subscriptions_title">Langganan</string>
-    <string name="market_test_mode_banner">App ieu dina mode tés. Tong dipaké pikeun pameseran atawa penjualan asli.</string>
-    <string name="market_test_mode_card">Jieun pameulian tés nganggo kartu 4242 4242 4242 4242, kalawan tanggal béak nu kahareup naon waé jeung kode kaamanan naon waé.</string>
     <string name="market_title">Pasar</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fisik</string>

@@ -490,8 +490,6 @@
     <string name="market_subscriptions_resume_failed">An gaza ci gaba</string>
     <string name="market_subscriptions_resumed">An ci gaba da subscription</string>
     <string name="market_subscriptions_title">Subscriptions</string>
-    <string name="market_test_mode_banner">Wannan app yana cikin yanayin gwaji. Kada ku yi amfani da shi don tallace-tallace ko sayayya na gaske.</string>
-    <string name="market_test_mode_card">Yi gwajin saye da kati 4242 4242 4242 4242, da kowane ranar ƙarewa ta gaba da kowane lambar tsaro.</string>
     <string name="market_title">Kasuwa</string>
     <string name="market_type_digital">Dijital</string>
     <string name="market_type_physical">Na zahiri</string>

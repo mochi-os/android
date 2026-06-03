@@ -479,8 +479,6 @@
     <string name="market_subscriptions_resume_failed">გაგრძელება ვერ მოხერხდა</string>
     <string name="market_subscriptions_resumed">გამოწერა განახლდა</string>
     <string name="market_subscriptions_title">გამოწერები</string>
-    <string name="market_test_mode_banner">ეს აპი ტესტ-რეჟიმშია. არ გამოიყენოთ რეალური გაყიდვებისთვის ან შესყიდვებისთვის.</string>
-    <string name="market_test_mode_card">გააკეთეთ სატესტო შესყიდვები ბარათით 4242 4242 4242 4242, ნებისმიერი მომავალი ვადით და ნებისმიერი უსაფრთხოების კოდით.</string>
     <string name="market_title">ბაზარი</string>
     <string name="market_type_digital">ციფრული</string>
     <string name="market_type_physical">ფიზიკური</string>

@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Gagal menyambung semula</string>
     <string name="market_subscriptions_resumed">Langganan disambung semula</string>
     <string name="market_subscriptions_title">Langganan</string>
-    <string name="market_test_mode_banner">Aplikasi ini dalam mod ujian. Jangan gunakannya untuk jualan atau pembelian sebenar.</string>
-    <string name="market_test_mode_card">Buat pembelian ujian dengan kad 4242 4242 4242 4242, dengan sebarang tarikh luput akan datang dan sebarang kod keselamatan.</string>
     <string name="market_title">Pasaran</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fizikal</string>

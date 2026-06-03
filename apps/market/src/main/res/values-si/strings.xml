@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">නැවත ආරම්භ කිරීමට අසමත් විය</string>
     <string name="market_subscriptions_resumed">දායකත්වය නැවත ආරම්භ කරන ලදී</string>
     <string name="market_subscriptions_title">දායකත්ව</string>
-    <string name="market_test_mode_banner">මෙම යෙදුම පරීක්ෂණ ආකාරයේ ඇත. සැබෑ විකුණුම් හෝ මිලදී ගැනීම් සඳහා එය භාවිතා නොකරන්න.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 කාඩ්පතෙන්, ඕනෑම අනාගත කල් ඉකුත්වීම් දිනයක් සහ ඕනෑම ආරක්ෂක කේතයක් සමඟ පරීක්ෂණ මිලදී ගැනීම් කරන්න.</string>
     <string name="market_title">වෙළඳපොළ</string>
     <string name="market_type_digital">ඩිජිටල්</string>
     <string name="market_type_physical">භෞතික</string>

@@ -478,8 +478,6 @@
     <string name="market_subscriptions_resume_failed">Cha b\' urrainn ath-thòiseachadh</string>
     <string name="market_subscriptions_resumed">Fo-sgrìobhadh air ath-thòiseachadh</string>
     <string name="market_subscriptions_title">Fo-sgrìobhaidhean</string>
-    <string name="market_test_mode_banner">Tha an aplacaid seo ann am modh deuchainn. Na cleachd e airson reic no ceannach fìor.</string>
-    <string name="market_test_mode_card">Dèan ceannachdan deuchainn leis a\' chairt 4242 4242 4242 4242, le ceann-latha sam bith san àm ri teachd agus còd tèarainteachd sam bith.</string>
     <string name="market_title">Margaidh</string>
     <string name="market_type_digital">Didseatach</string>
     <string name="market_type_physical">Corporra</string>

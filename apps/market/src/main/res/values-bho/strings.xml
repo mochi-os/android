@@ -478,8 +478,6 @@
     <string name="market_subscriptions_resume_failed">फेर शुरू करे में विफल</string>
     <string name="market_subscriptions_resumed">सदस्यता फेर से शुरू भइल</string>
     <string name="market_subscriptions_title">सदस्यता सब</string>
-    <string name="market_test_mode_banner">ई ऐप परीक्षण मोड में बा। एकरा के असली बिक्री या खरीद खातिर मत उपयोग करीं।</string>
-    <string name="market_test_mode_card">कार्ड 4242 4242 4242 4242 से टेस्ट खरीद करीं, कवनो भविष्य के समाप्ति आ कवनो सुरक्षा कोड के साथ।</string>
     <string name="market_title">मार्केट</string>
     <string name="market_type_digital">डिजिटल</string>
     <string name="market_type_physical">भौतिक</string>

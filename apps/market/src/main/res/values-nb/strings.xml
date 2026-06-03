@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Kunne ikke gjenoppta</string>
     <string name="market_subscriptions_resumed">Abonnement gjenopptatt</string>
     <string name="market_subscriptions_title">Abonnementer</string>
-    <string name="market_test_mode_banner">Denne appen er i testmodus. Ikke bruk den til ekte salg eller kjøp.</string>
-    <string name="market_test_mode_card">Gjør testkjøp med kort 4242 4242 4242 4242, med en valgfri framtidig utløpsdato og valgfri sikkerhetskode.</string>
     <string name="market_title">Marked</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fysisk</string>

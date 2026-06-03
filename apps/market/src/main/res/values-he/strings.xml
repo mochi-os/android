@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">החידוש נכשל</string>
     <string name="market_subscriptions_resumed">המנוי חודש</string>
     <string name="market_subscriptions_title">מנויים</string>
-    <string name="market_test_mode_banner">אפליקציה זו במצב בדיקה. אל תשתמש בה למכירות או רכישות אמיתיות.</string>
-    <string name="market_test_mode_card">בצע רכישות בדיקה עם כרטיס 4242 4242 4242 4242, עם כל תוקף עתידי וכל קוד אבטחה.</string>
     <string name="market_title">שוק</string>
     <string name="market_type_digital">דיגיטלי</string>
     <string name="market_type_physical">פיזי</string>

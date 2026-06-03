@@ -574,8 +574,6 @@
     <string name="market_subscriptions_resume_failed">Fortsetzen fehlgeschlagen</string>
     <string name="market_subscriptions_resumed">Abonnement fortgesetzt</string>
     <string name="market_subscriptions_title">Abonnements</string>
-    <string name="market_test_mode_banner">Diese App befindet sich im Testmodus. Verwenden Sie sie nicht für reale Verkäufe oder Käufe.</string>
-    <string name="market_test_mode_card">Tätigen Sie Testkäufe mit der Karte 4242 4242 4242 4242, mit einem beliebigen zukünftigen Ablaufdatum und einer beliebigen Prüfnummer.</string>
     <string name="market_warnings_title">Warnungen</string>
 
 

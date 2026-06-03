@@ -654,7 +654,5 @@
     <string name="market_subscriptions_resume_failed">繼續失敗</string>
     <string name="market_subscriptions_resumed">訂閱已繼續</string>
     <string name="market_subscriptions_title">訂閱</string>
-    <string name="market_test_mode_banner">此應用程式正在測試模式中。請勿用於真實的銷售或購買。</string>
-    <string name="market_test_mode_card">使用卡號 4242 4242 4242 4242 進行測試購買,可使用任何未來到期日及任何安全碼。</string>
 
 </resources>

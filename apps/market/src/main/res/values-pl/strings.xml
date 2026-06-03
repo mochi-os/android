@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Nie udało się wznowić</string>
     <string name="market_subscriptions_resumed">Subskrypcja wznowiona</string>
     <string name="market_subscriptions_title">Subskrypcje</string>
-    <string name="market_test_mode_banner">Ta aplikacja jest w trybie testowym. Nie używaj jej do prawdziwej sprzedaży ani zakupów.</string>
-    <string name="market_test_mode_card">Wykonaj testowe zakupy kartą 4242 4242 4242 4242 z dowolną przyszłą datą ważności i dowolnym kodem zabezpieczającym.</string>
     <string name="market_title">Rynek</string>
     <string name="market_type_digital">Cyfrowy</string>
     <string name="market_type_physical">Fizyczny</string>

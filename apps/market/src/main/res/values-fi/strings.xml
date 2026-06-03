@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Jatkaminen epäonnistui</string>
     <string name="market_subscriptions_resumed">Tilausta jatkettu</string>
     <string name="market_subscriptions_title">Tilaukset</string>
-    <string name="market_test_mode_banner">Tämä sovellus on testitilassa. Älä käytä sitä oikeisiin myynteihin tai ostoihin.</string>
-    <string name="market_test_mode_card">Tee testiostoksia kortilla 4242 4242 4242 4242 millä tahansa tulevalla voimassaoloajalla ja millä tahansa turvakoodilla.</string>
     <string name="market_title">Tori</string>
     <string name="market_type_digital">Digitaalinen</string>
     <string name="market_type_physical">Fyysinen</string>

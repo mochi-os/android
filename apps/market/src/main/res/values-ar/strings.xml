@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">فشل الاستئناف</string>
     <string name="market_subscriptions_resumed">تم استئناف الاشتراك</string>
     <string name="market_subscriptions_title">الاشتراكات</string>
-    <string name="market_test_mode_banner">هذا التطبيق في وضع الاختبار. لا تستخدمه للمبيعات أو المشتريات الحقيقية.</string>
-    <string name="market_test_mode_card">قم بإجراء عمليات شراء تجريبية ببطاقة 4242 4242 4242 4242، مع أي تاريخ انتهاء مستقبلي وأي رمز أمان.</string>
     <string name="market_title">السوق</string>
     <string name="market_type_digital">رقمي</string>
     <string name="market_type_physical">مادي</string>

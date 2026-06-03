@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">ਮੁੜ ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_subscriptions_resumed">ਮੈਂਬਰਸ਼ਿਪ ਮੁੜ ਸ਼ੁਰੂ ਕੀਤੀ ਗਈ</string>
     <string name="market_subscriptions_title">ਮੈਂਬਰਸ਼ਿਪਾਂ</string>
-    <string name="market_test_mode_banner">ਇਹ ਐਪ ਟੈਸਟ ਮੋਡ ਵਿੱਚ ਹੈ। ਇਸਨੂੰ ਅਸਲ ਵਿਕਰੀ ਜਾਂ ਖਰੀਦਦਾਰੀ ਲਈ ਨਾ ਵਰਤੋ।</string>
-    <string name="market_test_mode_card">ਕਾਰਡ 4242 4242 4242 4242, ਕਿਸੇ ਵੀ ਭਵਿੱਖ ਦੀ ਮਿਆਦ ਅਤੇ ਕਿਸੇ ਵੀ ਸੁਰੱਖਿਆ ਕੋਡ ਨਾਲ ਟੈਸਟ ਖਰੀਦਾਰੀ ਕਰੋ।</string>
     <string name="market_title">ਮਾਰਕਿਟ</string>
     <string name="market_type_digital">ਡਿਜੀਟਲ</string>
     <string name="market_type_physical">ਭੌਤਿਕ</string>

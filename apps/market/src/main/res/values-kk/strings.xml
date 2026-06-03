@@ -649,8 +649,6 @@
     <string name="market_subscriptions_resume_failed">Жалғастыру сәтсіз аяқталды</string>
     <string name="market_subscriptions_resumed">Жазылым жалғастырылды</string>
     <string name="market_subscriptions_title">Жазылымдар</string>
-    <string name="market_test_mode_banner">Бұл қолданба тестілеу режимінде. Оны нақты сату немесе сатып алу үшін пайдаланбаңыз.</string>
-    <string name="market_test_mode_card">Сынақ сатып алуларын 4242 4242 4242 4242 картасымен, кез келген болашақ мерзім аяқталуымен және кез келген қауіпсіздік кодымен жасаңыз.</string>
     <string name="market_title">Нарық</string>
     <string name="market_type_digital">Сандық</string>
     <string name="market_type_physical">Физикалық</string>

@@ -483,8 +483,6 @@
     <string name="market_subscriptions_resume_failed">Tókst ekki að halda áfram</string>
     <string name="market_subscriptions_resumed">Áskrift haldið áfram</string>
     <string name="market_subscriptions_title">Áskriftir</string>
-    <string name="market_test_mode_banner">Þetta forrit er í prófunarham. Ekki nota það fyrir raunverulegar sölur eða kaup.</string>
-    <string name="market_test_mode_card">Gerðu prófunarkaup með korti 4242 4242 4242 4242, með hvaða gildistíma sem er í framtíðinni og hvaða öryggiskóða sem er.</string>
     <string name="market_title">Markaður</string>
     <string name="market_type_digital">Stafrænt</string>
     <string name="market_type_physical">Áþreifanlegt</string>

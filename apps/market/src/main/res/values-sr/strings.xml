@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Настављање није успело</string>
     <string name="market_subscriptions_resumed">Претплата настављена</string>
     <string name="market_subscriptions_title">Претплате</string>
-    <string name="market_test_mode_banner">Ова апликација је у тест режиму. Не користи је за стварну продају или куповину.</string>
-    <string name="market_test_mode_card">Извршите тестне куповине картицом 4242 4242 4242 4242, са било којим будућим датумом истека и било којим сигурносним кодом.</string>
     <string name="market_title">Маркет</string>
     <string name="market_type_digital">Дигитално</string>
     <string name="market_type_physical">Физички</string>

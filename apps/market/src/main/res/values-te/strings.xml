@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">తిరిగి ప్రారంభించడంలో విఫలమైంది</string>
     <string name="market_subscriptions_resumed">చందా తిరిగి ప్రారంభించబడింది</string>
     <string name="market_subscriptions_title">చందాలు</string>
-    <string name="market_test_mode_banner">ఈ యాప్ టెస్ట్ మోడ్‌లో ఉంది. నిజమైన విక్రయాలు లేదా కొనుగోళ్ల కోసం దీన్ని ఉపయోగించవద్దు.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 కార్డుతో ఏదైనా భవిష్యత్ ఎక్స్‌పైరీ మరియు ఏదైనా సెక్యూరిటీ కోడ్‌తో టెస్ట్ కొనుగోళ్లు చేయండి.</string>
     <string name="market_title">మార్కెట్</string>
     <string name="market_type_digital">డిజిటల్</string>
     <string name="market_type_physical">ఫిజికల్</string>

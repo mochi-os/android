@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">പുനരാരംഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_subscriptions_resumed">സബ്സ്ക്രിപ്ഷൻ പുനരാരംഭിച്ചു</string>
     <string name="market_subscriptions_title">സബ്സ്ക്രിപ്ഷനുകൾ</string>
-    <string name="market_test_mode_banner">ഈ ആപ്പ് ടെസ്റ്റ് മോഡിലാണ്. യഥാർത്ഥ വിൽപ്പനയ്ക്കോ വാങ്ങലുകൾക്കോ ​​ഇത് ഉപയോഗിക്കരുത്.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 എന്ന കാർഡ് ഉപയോഗിച്ച്, ഏതെങ്കിലും ഭാവിയിലെ കാലാവധിയും ഏതെങ്കിലും സെക്യൂരിറ്റി കോഡും ഉപയോഗിച്ച് ടെസ്റ്റ് വാങ്ങലുകൾ നടത്തുക.</string>
     <string name="market_title">മാർക്കറ്റ്</string>
     <string name="market_type_digital">ഡിജിറ്റൽ</string>
     <string name="market_type_physical">ഫിസിക്കൽ</string>

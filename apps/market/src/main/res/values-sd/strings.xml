@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">ٻيهر شروع ڪرڻ ۾ ناڪام</string>
     <string name="market_subscriptions_resumed">سبسڪرپشن ٻيهر شروع ٿي</string>
     <string name="market_subscriptions_title">سبسڪرپشن</string>
-    <string name="market_test_mode_banner">ھي ايپ ٽيسٽ موڊ ۾ آھي. ان کي حقيقي وڪري يا خريداري لاءِ استعمال نه ڪريو.</string>
-    <string name="market_test_mode_card">ڪارڊ 4242 4242 4242 4242 سان ٽيسٽ خريداريون ڪريو، ڪنهن به مستقبل جي ميعاد ۽ ڪنهن به سيڪيورٽي ڪوڊ سان.</string>
     <string name="market_title">مارڪيٽ</string>
     <string name="market_type_digital">ڊجيٽل</string>
     <string name="market_type_physical">جسماني</string>

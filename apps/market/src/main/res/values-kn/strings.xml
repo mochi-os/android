@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">ಪುನರಾರಂಭಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_subscriptions_resumed">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್ ಮುಂದುವರಿಸಲಾಗಿದೆ</string>
     <string name="market_subscriptions_title">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್‌ಗಳು</string>
-    <string name="market_test_mode_banner">ಈ ಆ್ಯಪ್ ಪರೀಕ್ಷಾ ಮೋಡ್‌ನಲ್ಲಿದೆ. ನೈಜ ಮಾರಾಟ ಅಥವಾ ಖರೀದಿಗಾಗಿ ಇದನ್ನು ಬಳಸಬೇಡಿ.</string>
-    <string name="market_test_mode_card">ಕಾರ್ಡ್ 4242 4242 4242 4242, ಯಾವುದೇ ಭವಿಷ್ಯದ ಅವಧಿ ಮುಕ್ತಾಯ ಮತ್ತು ಯಾವುದೇ ಸೆಕ್ಯುರಿಟಿ ಕೋಡ್‌ನೊಂದಿಗೆ ಪರೀಕ್ಷಾ ಖರೀದಿಗಳನ್ನು ಮಾಡಿ.</string>
     <string name="market_title">ಮಾರ್ಕೆಟ್</string>
     <string name="market_type_digital">ಡಿಜಿಟಲ್</string>
     <string name="market_type_physical">ಭೌತಿಕ</string>

@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Rifillimi dështoi</string>
     <string name="market_subscriptions_resumed">Abonimi u rifilloi</string>
     <string name="market_subscriptions_title">Abonimet</string>
-    <string name="market_test_mode_banner">Ky aplikacion është në modalitet testi. Mos e përdor për shitje ose blerje reale.</string>
-    <string name="market_test_mode_card">Bëni blerje testimi me kartën 4242 4242 4242 4242, me çdo afat të ardhshëm dhe çdo kod sigurie.</string>
     <string name="market_title">Tregu</string>
     <string name="market_type_digital">Dixhitale</string>
     <string name="market_type_physical">Fizik</string>

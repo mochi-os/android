@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Hervatten mislukt</string>
     <string name="market_subscriptions_resumed">Abonnement hervat</string>
     <string name="market_subscriptions_title">Abonnementen</string>
-    <string name="market_test_mode_banner">Deze app staat in testmodus. Gebruik deze niet voor echte verkopen of aankopen.</string>
-    <string name="market_test_mode_card">Doe testaankopen met kaart 4242 4242 4242 4242, met een willekeurige toekomstige vervaldatum en een willekeurige beveiligingscode.</string>
     <string name="market_title">Markt</string>
     <string name="market_type_digital">Digitaal</string>
     <string name="market_type_physical">Fysiek</string>

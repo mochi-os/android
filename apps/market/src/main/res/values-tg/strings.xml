@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Идома ба анҷом нарасид</string>
     <string name="market_subscriptions_resumed">Обуна аз сар гирифта шуд</string>
     <string name="market_subscriptions_title">Обунаҳо</string>
-    <string name="market_test_mode_banner">Ин барнома дар ҳолати санҷиш аст. Барои фурӯш ё харидҳои ҳақиқӣ онро истифода набаред.</string>
-    <string name="market_test_mode_card">Бо корти 4242 4242 4242 4242, бо ягон мӯҳлати охири оянда ва ягон рамзи амният харидҳои санҷишӣ кунед.</string>
     <string name="market_title">Бозор</string>
     <string name="market_type_digital">Рақамӣ</string>
     <string name="market_type_physical">Ҷисмонӣ</string>

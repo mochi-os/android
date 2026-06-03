@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Nabigong i-resume</string>
     <string name="market_subscriptions_resumed">Ipinagpatuloy ang subscription</string>
     <string name="market_subscriptions_title">Mga subscription</string>
-    <string name="market_test_mode_banner">Ang app na ito ay nasa test mode. Huwag itong gamitin para sa totoong benta o pagbili.</string>
-    <string name="market_test_mode_card">Gumawa ng test na pagbili gamit ang card 4242 4242 4242 4242, na may anumang future expiry at anumang security code.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Pisikal</string>

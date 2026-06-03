@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">បរាជ័យក្នុងការបន្ត</string>
     <string name="market_subscriptions_resumed">បានបន្តការជាវ</string>
     <string name="market_subscriptions_title">ការជាវ</string>
-    <string name="market_test_mode_banner">កម្មវិធីនេះស្ថិតក្នុងរបៀបសាកល្បង។ កុំប្រើវាសម្រាប់ការលក់ ឬទិញពិតប្រាកដ។</string>
-    <string name="market_test_mode_card">ធ្វើការទិញសាកល្បងជាមួយកាត 4242 4242 4242 4242 ជាមួយកាលបរិច្ឆេទផុតកំណត់ណាមួយនាពេលអនាគត និងលេខសុវត្ថិភាពណាមួយ។</string>
     <string name="market_title">ទីផ្សារ</string>
     <string name="market_type_digital">ឌីជីថល</string>
     <string name="market_type_physical">រូបវន្ត</string>

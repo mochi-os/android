@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Impossibile riprendere</string>
     <string name="market_subscriptions_resumed">Abbonamento ripreso</string>
     <string name="market_subscriptions_title">Abbonamenti</string>
-    <string name="market_test_mode_banner">Questa app è in modalità test. Non utilizzarla per vendite o acquisti reali.</string>
-    <string name="market_test_mode_card">Effettua acquisti di prova con la carta 4242 4242 4242 4242, con qualsiasi data di scadenza futura e qualsiasi codice di sicurezza.</string>
     <string name="market_title">Mercato</string>
     <string name="market_type_digital">Digitale</string>
     <string name="market_type_physical">Fisico</string>

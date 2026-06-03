@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Reluarea a eșuat</string>
     <string name="market_subscriptions_resumed">Abonament reluat</string>
     <string name="market_subscriptions_title">Abonamente</string>
-    <string name="market_test_mode_banner">Această aplicație este în modul de testare. Nu o folosi pentru vânzări sau achiziții reale.</string>
-    <string name="market_test_mode_card">Fă achiziții de test cu cardul 4242 4242 4242 4242, cu orice dată viitoare de expirare și orice cod de securitate.</string>
     <string name="market_title">Magazin</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fizic</string>

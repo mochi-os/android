@@ -63,11 +63,4 @@ data class HomeUiState(
     val accountActive: Boolean = true,
     /** `true` while the activate-account request is in flight. */
     val activatingAccount: Boolean = false,
-    /**
-     * `true` when the Comptroller's Stripe secret key has the `sk_test_`
-     * prefix (the `stripe_testmode` field on the own-account response).
-     * Drives the sticky test-mode banner above the home screen, mirroring
-     * `apps/market/web/src/components/layout/market-layout.tsx`.
-     */
-    val testMode: Boolean = false,
 )

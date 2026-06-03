@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Devam ettirilemedi</string>
     <string name="market_subscriptions_resumed">Abonelik sürdürüldü</string>
     <string name="market_subscriptions_title">Abonelikler</string>
-    <string name="market_test_mode_banner">Bu uygulama test modunda. Gerçek satış veya alışverişler için kullanma.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 kartıyla, gelecekteki herhangi bir son kullanma tarihi ve herhangi bir güvenlik koduyla test satın almaları yapın.</string>
     <string name="market_title">Pazar</string>
     <string name="market_type_digital">Dijital</string>
     <string name="market_type_physical">Fiziksel</string>

@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Berdewamkirin neserkeftî bû</string>
     <string name="market_subscriptions_resumed">Abonetî hat dewamkirin</string>
     <string name="market_subscriptions_title">Abonetî</string>
-    <string name="market_test_mode_banner">Ev sepan di moda testê de ye. Wê ji bo firotin an kirroxên rastîn bi kar neyne.</string>
-    <string name="market_test_mode_card">Kirînên ceribandinê bi karta 4242 4242 4242 4242 bike, bi her tarîxek dahatî û her koda ewlekarîyê.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">Dîjîtal</string>
     <string name="market_type_physical">Fizîkî</string>

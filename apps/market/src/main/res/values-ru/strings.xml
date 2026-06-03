@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Не удалось возобновить</string>
     <string name="market_subscriptions_resumed">Подписка возобновлена</string>
     <string name="market_subscriptions_title">Подписки</string>
-    <string name="market_test_mode_banner">Это приложение в тестовом режиме. Не используйте его для реальных продаж или покупок.</string>
-    <string name="market_test_mode_card">Совершайте тестовые покупки с картой 4242 4242 4242 4242, с любым будущим сроком действия и любым кодом безопасности.</string>
     <string name="market_title">Маркет</string>
     <string name="market_type_digital">Цифровой</string>
     <string name="market_type_physical">Физический</string>

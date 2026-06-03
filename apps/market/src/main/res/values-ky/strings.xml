@@ -478,8 +478,6 @@
     <string name="market_subscriptions_resume_failed">Улантуу ишке ашкан жок</string>
     <string name="market_subscriptions_resumed">Жазылуу кайра жанданды</string>
     <string name="market_subscriptions_title">Жазылуулар</string>
-    <string name="market_test_mode_banner">Бул колдонмо тест режиминде. Аны чыныгы сатуу же сатып алуу үчүн колдонбоңуз.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 картасы менен сыноо сатып алууларын жасаңыз, келечектеги мөөнөт жана коопсуздук коду менен.</string>
     <string name="market_title">Базар</string>
     <string name="market_type_digital">Санариптик</string>
     <string name="market_type_physical">Физикалык</string>

@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">পুনরায় শুরু করতে ব্যর্থ</string>
     <string name="market_subscriptions_resumed">সাবস্ক্রিপশন পুনরায় শুরু হয়েছে</string>
     <string name="market_subscriptions_title">সাবস্ক্রিপশন</string>
-    <string name="market_test_mode_banner">এই অ্যাপ টেস্ট মোডে রয়েছে। প্রকৃত বিক্রয় বা ক্রয়ের জন্য এটি ব্যবহার করবেন না।</string>
-    <string name="market_test_mode_card">কার্ড 4242 4242 4242 4242 দিয়ে টেস্ট কেনাকাটা করুন, যেকোনো ভবিষ্যৎ মেয়াদ ও যেকোনো সিকিউরিটি কোড সহ।</string>
     <string name="market_title">মার্কেট</string>
     <string name="market_type_digital">ডিজিটাল</string>
     <string name="market_type_physical">ভৌত</string>

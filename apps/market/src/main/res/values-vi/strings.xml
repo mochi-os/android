@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Không tiếp tục được</string>
     <string name="market_subscriptions_resumed">Đã tiếp tục gói đăng ký</string>
     <string name="market_subscriptions_title">Các gói đăng ký</string>
-    <string name="market_test_mode_banner">Ứng dụng này đang ở chế độ kiểm tra. Không sử dụng cho việc mua bán thực tế.</string>
-    <string name="market_test_mode_card">Thực hiện mua thử nghiệm bằng thẻ 4242 4242 4242 4242, với ngày hết hạn bất kỳ trong tương lai và mã bảo mật bất kỳ.</string>
     <string name="market_title">Chợ</string>
     <string name="market_type_digital">Kỹ thuật số</string>
     <string name="market_type_physical">Vật lý</string>

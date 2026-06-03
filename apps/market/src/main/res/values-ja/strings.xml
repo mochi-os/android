@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">再開に失敗しました</string>
     <string name="market_subscriptions_resumed">サブスクリプションを再開しました</string>
     <string name="market_subscriptions_title">サブスクリプション</string>
-    <string name="market_test_mode_banner">このアプリはテストモードです。実際の販売や購入には使用しないでください。</string>
-    <string name="market_test_mode_card">カード番号 4242 4242 4242 4242、未来の有効期限、任意のセキュリティコードでテスト購入できます。</string>
     <string name="market_title">マーケット</string>
     <string name="market_type_digital">デジタル</string>
     <string name="market_type_physical">物理的</string>

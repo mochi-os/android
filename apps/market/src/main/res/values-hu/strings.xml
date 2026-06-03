@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Nem sikerült folytatni</string>
     <string name="market_subscriptions_resumed">Előfizetés folytatva</string>
     <string name="market_subscriptions_title">Előfizetések</string>
-    <string name="market_test_mode_banner">Ez az alkalmazás teszt módban van. Ne használja valós eladásokra vagy vásárlásokra.</string>
-    <string name="market_test_mode_card">Tesztvásárlások végzése a 4242 4242 4242 4242 kártyával, bármely jövőbeli lejárattal és bármilyen biztonsági kóddal.</string>
     <string name="market_title">Piactér</string>
     <string name="market_type_digital">Digitális</string>
     <string name="market_type_physical">Fizikai</string>

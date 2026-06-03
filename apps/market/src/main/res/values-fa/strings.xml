@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">ازسرگیری ناموفق بود</string>
     <string name="market_subscriptions_resumed">اشتراک از سر گرفته شد</string>
     <string name="market_subscriptions_title">اشتراک‌ها</string>
-    <string name="market_test_mode_banner">این اپ در حالت آزمایشی است. از آن برای فروش یا خرید واقعی استفاده نکنید.</string>
-    <string name="market_test_mode_card">خریدهای آزمایشی را با کارت ۴۲۴۲ ۴۲۴۲ ۴۲۴۲ ۴۲۴۲، با هر تاریخ انقضای آینده و هر کد امنیتی انجام دهید.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">دیجیتال</string>
     <string name="market_type_physical">فیزیکی</string>

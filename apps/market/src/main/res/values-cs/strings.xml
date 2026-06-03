@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Nepodařilo se obnovit</string>
     <string name="market_subscriptions_resumed">Předplatné obnoveno</string>
     <string name="market_subscriptions_title">Předplatné</string>
-    <string name="market_test_mode_banner">Tato aplikace je v testovacím režimu. Nepoužívejte ji pro skutečné prodeje nebo nákupy.</string>
-    <string name="market_test_mode_card">Provádějte testovací nákupy s kartou 4242 4242 4242 4242, s jakoukoli budoucí platností a libovolným bezpečnostním kódem.</string>
     <string name="market_title">Tržiště</string>
     <string name="market_type_digital">Digitální</string>
     <string name="market_type_physical">Fyzické</string>

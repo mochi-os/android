@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">ດຳເນີນຕໍ່ລົ້ມເຫຼວ</string>
     <string name="market_subscriptions_resumed">ການສະໝັກສະມາຊິກຖືກສືບຕໍ່</string>
     <string name="market_subscriptions_title">ການສະໝັກສະມາຊິກ</string>
-    <string name="market_test_mode_banner">ແອັບນີ້ຢູ່ໃນໂໝດທົດສອບ. ຢ່າໃຊ້ສຳລັບການຂາຍຫຼືການຊື້ຈິງ.</string>
-    <string name="market_test_mode_card">ຊື້ທົດສອບດ້ວຍບັດ 4242 4242 4242 4242, ດ້ວຍວັນໝົດອາຍຸໃນອະນາຄົດ ແລະ ລະຫັດຄວາມປອດໄພໃດກໍໄດ້.</string>
     <string name="market_title">ຕະຫຼາດ</string>
     <string name="market_type_digital">ດິຈິຕອນ</string>
     <string name="market_type_physical">ກາຍະພາບ</string>

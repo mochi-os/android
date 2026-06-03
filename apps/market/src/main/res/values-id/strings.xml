@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Gagal melanjutkan</string>
     <string name="market_subscriptions_resumed">Langganan dilanjutkan</string>
     <string name="market_subscriptions_title">Langganan</string>
-    <string name="market_test_mode_banner">Aplikasi ini dalam mode uji. Jangan gunakan untuk penjualan atau pembelian sungguhan.</string>
-    <string name="market_test_mode_card">Lakukan pembelian uji coba dengan kartu 4242 4242 4242 4242, dengan tanggal kedaluwarsa di masa depan dan kode keamanan apa pun.</string>
     <string name="market_title">Pasar</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fisik</string>

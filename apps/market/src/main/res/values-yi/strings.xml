@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">ניט געלונגען צו פֿאָרזעצן</string>
     <string name="market_subscriptions_resumed">אַבאָנעמענט אָנגעהויבן ווידער</string>
     <string name="market_subscriptions_title">אַבאָנעמענטן</string>
-    <string name="market_test_mode_banner">די אַפּ איז אין טעסט־מאָדע. ניצט עס נישט פֿאַר ווירקלעכע פֿאַרקויפֿן אָדער קויפֿן.</string>
-    <string name="market_test_mode_card">מאַכט פּרוּוו־קויפֿונגען מיט קאַרטל 4242 4242 4242 4242, מיט אַבי וועלכן צוקונפֿטיקן אויסלויף און אַבי וועלכן זיכערהייט־קאָד.</string>
     <string name="market_title">מאַרק</string>
     <string name="market_type_digital">דיגיטאַל</string>
     <string name="market_type_physical">פֿיזיש</string>

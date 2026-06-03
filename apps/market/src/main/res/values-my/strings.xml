@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">ပြန်စတင်၍ မရပါ</string>
     <string name="market_subscriptions_resumed">Subscription ပြန်စတင်ပြီး</string>
     <string name="market_subscriptions_title">Subscriptions</string>
-    <string name="market_test_mode_banner">ဤ app သည် စမ်းသပ်မုဒ်တွင် ရှိနေသည်။ အစစ်အမှန် ရောင်းချမှု သို့မဟုတ် ဝယ်ယူမှုအတွက် မသုံးပါနှင့်။</string>
-    <string name="market_test_mode_card">ကတ် 4242 4242 4242 4242 ဖြင့် မည်သည့် အနာဂတ် သက်တမ်းကုန်ရက်နှင့် မည်သည့် လုံခြုံရေးကုဒ်မဆို သုံး၍ စမ်းသပ် ဝယ်ယူပါ။</string>
     <string name="market_title">ဈေး</string>
     <string name="market_type_digital">ဒစ်ဂျစ်တယ်</string>
     <string name="market_type_physical">ရုပ်ပိုင်း</string>

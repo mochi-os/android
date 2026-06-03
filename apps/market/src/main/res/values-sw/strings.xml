@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Imeshindwa kuendelea</string>
     <string name="market_subscriptions_resumed">Usajili umeendelezwa</string>
     <string name="market_subscriptions_title">Usajili</string>
-    <string name="market_test_mode_banner">Programu hii iko katika hali ya jaribio. Usitumie kwa mauzo au manunuzi halisi.</string>
-    <string name="market_test_mode_card">Fanya manunuzi ya majaribio kwa kadi 4242 4242 4242 4242, kwa tarehe yoyote ya baadaye ya kuisha na msimbo wowote wa usalama.</string>
     <string name="market_title">Soko</string>
     <string name="market_type_digital">Kidijitali</string>
     <string name="market_type_physical">Kimwili</string>

@@ -214,9 +214,6 @@ private fun HomeContent(
 
     val isColdStart = state.query.isBlank() && state.filters.isEmpty()
     Column(modifier = Modifier.fillMaxSize().padding(padding)) {
-        if (state.testMode) {
-            TestModeBanner()
-        }
         if (!state.accountActive) {
             OnboardingCard(
                 activating = state.activatingAccount,
@@ -478,45 +475,6 @@ private fun RecentlyViewedStrip(
                     onClick = { onClick(listing) },
                 )
             }
-        }
-    }
-}
-
-/**
- * Sticky amber banner shown above the home screen when the Comptroller is
- * wired to Stripe's test environment (`stripe_testmode = true` on the
- * own-account response). Mirrors the web banner in
- * `apps/market/web/src/components/layout/market-layout.tsx`. No dismiss
- * button — it disappears automatically once the operator flips the platform
- * to a `sk_live_*` secret key.
- *
- * Uses `tertiaryContainer` so the banner picks up the user's chosen Mochi
- * theme. The label and the Stripe test-card number (a public Stripe-supplied
- * constant) live in `res/values/strings.xml` so locales can translate the
- * surrounding sentence; the digit groups themselves stay literal.
- */
-@Composable
-private fun TestModeBanner() {
-    Surface(
-        modifier = Modifier.fillMaxWidth(),
-        color = MaterialTheme.colorScheme.tertiaryContainer,
-        contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Text(
-                text = stringResource(R.string.market_test_mode_banner),
-                style = MaterialTheme.typography.bodySmall,
-                fontWeight = FontWeight.Medium,
-            )
-            Text(
-                text = stringResource(R.string.market_test_mode_card),
-                style = MaterialTheme.typography.bodySmall,
-            )
         }
     }
 }

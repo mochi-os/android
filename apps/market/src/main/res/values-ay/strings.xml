@@ -502,8 +502,6 @@
     <string name="market_subscriptions_resume_failed">Janiw sarayaña atinkti</string>
     <string name="market_subscriptions_resumed">Suscripción mayampi qalltata</string>
     <string name="market_subscriptions_title">Suscripcionanaka</string>
-    <string name="market_test_mode_banner">Aka appax sapa publisher ukatpach instalata, ukat janiw uñjatkiti. Inas malware kankaspa.</string>
-    <string name="market_test_mode_card">Yant\'awi alanak luraña 4242 4242 4242 4242 tarjeta ukamp, kuna jutïr expiración fechampis ukat kuna seguridad códigompis.</string>
     <string name="market_title">Mercado</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Físico</string>

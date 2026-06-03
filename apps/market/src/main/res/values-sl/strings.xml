@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Neuspešno nadaljevanje</string>
     <string name="market_subscriptions_resumed">Naročnina nadaljevana</string>
     <string name="market_subscriptions_title">Naročnine</string>
-    <string name="market_test_mode_banner">Ta aplikacija je v testnem načinu. Ne uporabljajte je za prave prodaje ali nakupe.</string>
-    <string name="market_test_mode_card">Opravite testne nakupe s kartico 4242 4242 4242 4242, s katerim koli prihodnjim datumom poteka in katero koli varnostno kodo.</string>
     <string name="market_title">Tržnica</string>
     <string name="market_type_digital">Digitalno</string>
     <string name="market_type_physical">Fizično</string>

@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Dowam edilmedi</string>
     <string name="market_subscriptions_resumed">Abuna dowam etdirildi</string>
     <string name="market_subscriptions_title">Abunalar</string>
-    <string name="market_test_mode_banner">Bu programma synag rejiminde. Hakyky satuw ýa-da satyn alyşlar üçin ulanma.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 kartoçkasy bilen, geljekki möhleti we islendik howpsuzlyk kody bilen synag satyn alyşlary ediň.</string>
     <string name="market_title">Bazar</string>
     <string name="market_type_digital">Sanly</string>
     <string name="market_type_physical">Fiziki</string>

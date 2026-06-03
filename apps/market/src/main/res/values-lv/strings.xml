@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Neizdevās atsākt</string>
     <string name="market_subscriptions_resumed">Abonements atjaunots</string>
     <string name="market_subscriptions_title">Abonementi</string>
-    <string name="market_test_mode_banner">Šī lietotne ir testa režīmā. Neizmantojiet to reālai pārdošanai vai pirkumiem.</string>
-    <string name="market_test_mode_card">Veiciet testa pirkumus ar karti 4242 4242 4242 4242, jebkuru nākotnes derīguma termiņu un jebkuru drošības kodu.</string>
     <string name="market_title">Tirgus</string>
     <string name="market_type_digital">Digitāls</string>
     <string name="market_type_physical">Fizisks</string>

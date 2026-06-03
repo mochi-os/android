@@ -362,8 +362,6 @@
     <string name="market_subscriptions_resume_failed">Klarte ikkje halda fram</string>
     <string name="market_subscriptions_resumed">Abonnement teke opp att</string>
     <string name="market_subscriptions_title">Abonnement</string>
-    <string name="market_test_mode_banner">Denne appen er i testmodus. Ikkje bruk han til verkelege sal eller kjøp.</string>
-    <string name="market_test_mode_card">Gjer testkjøp med kort 4242 4242 4242 4242, med ein utløpsdato i framtida og kva tryggleikskode som helst.</string>
     <string name="market_title">Marknad</string>
     <string name="market_type_digital">Digitalt</string>
     <string name="market_type_physical">Fysisk</string>

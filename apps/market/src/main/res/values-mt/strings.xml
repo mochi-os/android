@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Ma rnexxiex jitkompla</string>
     <string name="market_subscriptions_resumed">Abbonament reżumat</string>
     <string name="market_subscriptions_title">Abbonamenti</string>
-    <string name="market_test_mode_banner">Din l-app hija f\'modalità test. Tużahx għal bejgħ jew xiri reali.</string>
-    <string name="market_test_mode_card">Agħmel xirjiet ta\' test bil-kard 4242 4242 4242 4242, b\'kwalunkwe data ta\' skadenza fil-futur u kwalunkwe kodiċi ta\' sigurtà.</string>
     <string name="market_title">Suq</string>
     <string name="market_type_digital">Diġitali</string>
     <string name="market_type_physical">Fiżiku</string>

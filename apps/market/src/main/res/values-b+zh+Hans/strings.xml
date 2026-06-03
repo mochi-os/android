@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">恢复失败</string>
     <string name="market_subscriptions_resumed">订阅已恢复</string>
     <string name="market_subscriptions_title">订阅</string>
-    <string name="market_test_mode_banner">此应用处于测试模式。请勿用于真实销售或购买。</string>
-    <string name="market_test_mode_card">使用卡号 4242 4242 4242 4242 进行测试购买,有效期填任意未来日期,安全码任意。</string>
     <string name="market_title">市场</string>
     <string name="market_type_digital">数字</string>
     <string name="market_type_physical">实体</string>

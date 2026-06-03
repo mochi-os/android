@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">دوبارہ شروع کرنے میں ناکامی</string>
     <string name="market_subscriptions_resumed">سبسکرپشن دوبارہ شروع ہو گئی</string>
     <string name="market_subscriptions_title">سبسکرپشنز</string>
-    <string name="market_test_mode_banner">یہ ایپ ٹیسٹ موڈ میں ہے۔ اسے حقیقی سیلز یا خریداری کے لیے استعمال نہ کریں۔</string>
-    <string name="market_test_mode_card">کارڈ 4242 4242 4242 4242 سے ٹیسٹ خریداری کریں، کسی بھی مستقبل کی expiry اور کسی بھی security کوڈ کے ساتھ۔</string>
     <string name="market_title">مارکیٹ</string>
     <string name="market_type_digital">ڈیجیٹل</string>
     <string name="market_type_physical">فزیکل</string>

@@ -649,8 +649,6 @@
     <string name="market_subscriptions_resume_failed">Не ўдалося аднавіць</string>
     <string name="market_subscriptions_resumed">Падпіска адноўлена</string>
     <string name="market_subscriptions_title">Падпіскі</string>
-    <string name="market_test_mode_banner">Гэта праграма ў тэставым рэжыме. Не выкарыстоўвайце яе для рэальных продажаў або пакупак.</string>
-    <string name="market_test_mode_card">Зрабіце тэставыя пакупкі з картай 4242 4242 4242 4242, з любой будучай датай заканчэння тэрміну і любым кодам бяспекі.</string>
     <string name="market_title">Рынак</string>
     <string name="market_type_digital">Лічбавы</string>
     <string name="market_type_physical">Фізічны</string>

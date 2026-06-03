@@ -483,8 +483,6 @@
     <string name="market_subscriptions_resume_failed">Non se puido retomar</string>
     <string name="market_subscriptions_resumed">Subscrición reanudada</string>
     <string name="market_subscriptions_title">Subscricións</string>
-    <string name="market_test_mode_banner">Esta aplicación está en modo de proba. Non a uses para vendas ou compras reais.</string>
-    <string name="market_test_mode_card">Realiza compras de proba coa tarxeta 4242 4242 4242 4242, con calquera data de caducidade futura e calquera código de seguridade.</string>
     <string name="market_title">Mercado</string>
     <string name="market_type_digital">Dixital</string>
     <string name="market_type_physical">Físico</string>

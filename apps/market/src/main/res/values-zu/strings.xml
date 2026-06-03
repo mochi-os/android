@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Kuhlulekile ukuqhubeka</string>
     <string name="market_subscriptions_resumed">Ukubhalisa kuqhutshekisiwe</string>
     <string name="market_subscriptions_title">Ukubhalisa</string>
-    <string name="market_test_mode_banner">Lolu hlelo lokusebenza lukumodi yokuhlola. Ungalusebenzisi ekuthengiseni okuyikho noma ekuthengeni.</string>
-    <string name="market_test_mode_card">Yenza ukuthenga kokuhlola ngekhadi 4242 4242 4242 4242, nanoma yikuphi ukuphelelwa kwesikhathi kwesikhathi esizayo nanoma iyiphi ikhodi yokuphepha.</string>
     <string name="market_title">Imakethe</string>
     <string name="market_type_digital">Idijithali</string>
     <string name="market_type_physical">Okuphathekayo</string>

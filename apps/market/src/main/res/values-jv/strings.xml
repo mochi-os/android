@@ -481,8 +481,6 @@
     <string name="market_subscriptions_resume_failed">Gagal nerusaké</string>
     <string name="market_subscriptions_resumed">Langganan diteruske</string>
     <string name="market_subscriptions_title">Langganan</string>
-    <string name="market_test_mode_banner">App iki ana ing mode tes. Aja dienggo kanggo dodolan utawa tuku tenanan.</string>
-    <string name="market_test_mode_card">Tuku tès nganggo kartu 4242 4242 4242 4242, kanthi tanggal kadaluwarsa apa waé ing mbésuk lan kode keamanan apa waé.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fisik</string>

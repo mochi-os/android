@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">पुनः सुरु गर्न असफल</string>
     <string name="market_subscriptions_resumed">सदस्यता पुनः सुरु गरियो</string>
     <string name="market_subscriptions_title">सदस्यताहरू</string>
-    <string name="market_test_mode_banner">यो एप परीक्षण मोडमा छ। वास्तविक बिक्री वा किनमेलका लागि यो प्रयोग नगर्नुहोस्।</string>
-    <string name="market_test_mode_card">कार्ड 4242 4242 4242 4242, कुनै भविष्यको एक्स्पाइरी र कुनै सुरक्षा कोड प्रयोग गरेर परीक्षण किनमेल गर्नुहोस्।</string>
     <string name="market_title">मार्केट</string>
     <string name="market_type_digital">डिजिटल</string>
     <string name="market_type_physical">भौतिक</string>

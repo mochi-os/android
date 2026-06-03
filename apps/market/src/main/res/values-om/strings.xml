@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Itti fufuu hin dandeenye</string>
     <string name="market_subscriptions_resumed">Galaa\'iinsi itti fufeera</string>
     <string name="market_subscriptions_title">Galaa\'iinsoota</string>
-    <string name="market_test_mode_banner">Appiin kun haala qoraannoo keessa jira. Bittaa fi gurgurtaa dhugaaf hin fayyadamin.</string>
-    <string name="market_test_mode_card">Kaardii 4242 4242 4242 4242 fayyadamuun bittaa qormaata godhi, guyyaan dhumaa kamiyyuu fi koodii eegumsaa kamiyyuu waliin.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">Dijitaala</string>
     <string name="market_type_physical">Qaamaan</string>

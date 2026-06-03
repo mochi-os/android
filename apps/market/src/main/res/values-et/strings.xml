@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Jätkamine ebaõnnestus</string>
     <string name="market_subscriptions_resumed">Tellimus jätkus</string>
     <string name="market_subscriptions_title">Tellimused</string>
-    <string name="market_test_mode_banner">See rakendus on testrežiimis. Ära kasuta seda päris müügiks ega ostmiseks.</string>
-    <string name="market_test_mode_card">Tee testostud kaardiga 4242 4242 4242 4242, mis tahes tulevase aegumiskuupäeva ja mis tahes turvakoodiga.</string>
     <string name="market_title">Turg</string>
     <string name="market_type_digital">Digitaalne</string>
     <string name="market_type_physical">Füüsiline</string>

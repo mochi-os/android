@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">No s\'ha pogut reprendre</string>
     <string name="market_subscriptions_resumed">Subscripció represa</string>
     <string name="market_subscriptions_title">Subscripcions</string>
-    <string name="market_test_mode_banner">Aquesta aplicació està en mode de prova. No l\'utilitzis per a vendes o compres reals.</string>
-    <string name="market_test_mode_card">Fes compres de prova amb la targeta 4242 4242 4242 4242, amb qualsevol data de caducitat futura i qualsevol codi de seguretat.</string>
     <string name="market_title">Mercat</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Físic</string>

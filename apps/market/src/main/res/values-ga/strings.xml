@@ -481,8 +481,6 @@
     <string name="market_subscriptions_resume_failed">Theip ar atosú</string>
     <string name="market_subscriptions_resumed">Síntiús atosaithe</string>
     <string name="market_subscriptions_title">Síntiúis</string>
-    <string name="market_test_mode_banner">Tá an aip seo i mód tástála. Ná húsáid í le haghaidh fíor-dhíolacháin nó ceannacháin.</string>
-    <string name="market_test_mode_card">Déan ceannacháin tástála le cárta 4242 4242 4242 4242, le haon dáta éaga sa todhchaí agus aon chód slándála.</string>
     <string name="market_title">Margadh</string>
     <string name="market_type_digital">Digiteach</string>
     <string name="market_type_physical">Fisiciúil</string>

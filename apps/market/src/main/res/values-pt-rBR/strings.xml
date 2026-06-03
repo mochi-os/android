@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Falha ao retomar</string>
     <string name="market_subscriptions_resumed">Assinatura retomada</string>
     <string name="market_subscriptions_title">Assinaturas</string>
-    <string name="market_test_mode_banner">Este app está em modo de teste. Não o use para vendas ou compras reais.</string>
-    <string name="market_test_mode_card">Faça compras de teste com o cartão 4242 4242 4242 4242, com qualquer data de validade futura e qualquer código de segurança.</string>
     <string name="market_title">Mercado</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Físico</string>

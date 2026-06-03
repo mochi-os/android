@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">بەردەوامبوون سەرکەوتوو نەبوو</string>
     <string name="market_subscriptions_resumed">بەشداری دووبارە دەستپێکرایەوە</string>
     <string name="market_subscriptions_title">بەشدارییەکان</string>
-    <string name="market_test_mode_banner">ئەم ئەپە لە دۆخی تاقیکردنەوەدایە. بۆ فرۆشتن یان کڕینی ڕاستەقینە بەکاری مەهێنە.</string>
-    <string name="market_test_mode_card">تاقیکردنەوەی کڕین بکە لەگەڵ کارتی 4242 4242 4242 4242، لەگەڵ هەر بەسەرچوونێکی داهاتوو و هەر کۆدێکی پاراستن.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">دیجیتاڵ</string>
     <string name="market_type_physical">لەشی</string>

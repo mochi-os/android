@@ -649,8 +649,6 @@
     <string name="market_subscriptions_resume_failed">Ezin izan da berrekin</string>
     <string name="market_subscriptions_resumed">Harpidetza berriro hasi da</string>
     <string name="market_subscriptions_title">Harpidetzak</string>
-    <string name="market_test_mode_banner">Aplikazio hau proba moduan dago. Ez erabili benetako salmentetarako edo erosketetarako.</string>
-    <string name="market_test_mode_card">Egin proba-erosketak 4242 4242 4242 4242 txartelarekin, etorkizuneko edozein iraungitze-data eta edozein segurtasun-koderekin.</string>
     <string name="market_title">Merkatua</string>
     <string name="market_type_digital">Digitala</string>
     <string name="market_type_physical">Fisikoa</string>

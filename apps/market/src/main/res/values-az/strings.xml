@@ -649,8 +649,6 @@
     <string name="market_subscriptions_resume_failed">Davam etdirmək alınmadı</string>
     <string name="market_subscriptions_resumed">Abunə bərpa edildi</string>
     <string name="market_subscriptions_title">Abunələr</string>
-    <string name="market_test_mode_banner">Bu söhbət silinmiş ola bilər və ya sizin ona girişiniz yoxdur</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 kartı, hər hansı gələcək bitmə tarixi və hər hansı təhlükəsizlik kodu ilə test alışları edin.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">Rəqəmsal</string>
     <string name="market_type_physical">Fiziki</string>

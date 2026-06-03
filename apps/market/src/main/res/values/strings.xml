@@ -648,8 +648,6 @@
     <string name="market_subscriptions_resume_failed">Failed to resume</string>
     <string name="market_subscriptions_resumed">Subscription resumed</string>
     <string name="market_subscriptions_title">Subscriptions</string>
-    <string name="market_test_mode_banner">This app is in test mode. Do not use it for real sales or purchases.</string>
-    <string name="market_test_mode_card">Make test purchases with card 4242 4242 4242 4242, with any future expiry and any security code.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Physical</string>

@@ -490,8 +490,6 @@
     <string name="market_subscriptions_resume_failed">Echwe pou repran</string>
     <string name="market_subscriptions_resumed">Abònman repran</string>
     <string name="market_subscriptions_title">Abònman</string>
-    <string name="market_test_mode_banner">App sa nan mòd tès. Pa itilize l pou vrè vant oswa acha.</string>
-    <string name="market_test_mode_card">Fè acha tès ak kat 4242 4242 4242 4242, ak nenpòt dat ekspirasyon nan lavni ak nenpòt kòd sekirite.</string>
     <string name="market_title">Mache</string>
     <string name="market_type_digital">Dijital</string>
     <string name="market_type_physical">Fizik</string>

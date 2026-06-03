@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Kunne ikke genoptage</string>
     <string name="market_subscriptions_resumed">Abonnement genoptaget</string>
     <string name="market_subscriptions_title">Abonnementer</string>
-    <string name="market_test_mode_banner">Denne app er i testtilstand. Brug den ikke til rigtige salg eller køb.</string>
-    <string name="market_test_mode_card">Foretag testkøb med kort 4242 4242 4242 4242 med en hvilken som helst fremtidig udløbsdato og sikkerhedskode.</string>
     <string name="market_title">Marked</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fysisk</string>

@@ -654,8 +654,6 @@
     <string name="market_subscriptions_resume_failed">No se pudo reanudar</string>
     <string name="market_subscriptions_resumed">Suscripción reanudada</string>
     <string name="market_subscriptions_title">Suscripciones</string>
-    <string name="market_test_mode_banner">Esta aplicación está en modo de prueba. No la uses para ventas o compras reales.</string>
-    <string name="market_test_mode_card">Realizá compras de prueba con la tarjeta 4242 4242 4242 4242, con cualquier fecha de vencimiento futura y cualquier código de seguridad.</string>
     <string name="market_warnings_title">Advertencias</string>
 
 </resources>

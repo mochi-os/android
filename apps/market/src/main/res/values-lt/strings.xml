@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Nepavyko pratęsti</string>
     <string name="market_subscriptions_resumed">Prenumerata pratęsta</string>
     <string name="market_subscriptions_title">Prenumeratos</string>
-    <string name="market_test_mode_banner">Ši programėlė veikia bandymo režimu. Nenaudokite jos realiems pardavimams ar pirkimams.</string>
-    <string name="market_test_mode_card">Atlikite bandomuosius pirkimus su kortele 4242 4242 4242 4242, su bet kokia būsima galiojimo data ir bet kokiu saugos kodu.</string>
     <string name="market_title">Parduotuvė</string>
     <string name="market_type_digital">Skaitmeninis</string>
     <string name="market_type_physical">Fizinis</string>

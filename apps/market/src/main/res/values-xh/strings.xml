@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Ayiphumelelanga ukuqhubeka</string>
     <string name="market_subscriptions_resumed">Urhumo luqhubekile</string>
     <string name="market_subscriptions_title">Urhumo</string>
-    <string name="market_test_mode_banner">Le app ikwimo yovavanyo. Musa ukuyisebenzisela iintengiso okanye ukuthenga ngokwenene.</string>
-    <string name="market_test_mode_card">Yenza intengo zovavanyo ngekhadi 4242 4242 4242 4242, kunye naluphi na uphelo lwexesha lwexesha elizayo nayiphi na ikhowudi yokhuseleko.</string>
     <string name="market_title">Imarike</string>
     <string name="market_type_digital">Idijithali</string>
     <string name="market_type_physical">Eyokwenyani</string>

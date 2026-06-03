@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">ไม่สามารถดำเนินการต่อได้</string>
     <string name="market_subscriptions_resumed">ดำเนินการสมัครสมาชิกต่อ</string>
     <string name="market_subscriptions_title">การสมัครสมาชิก</string>
-    <string name="market_test_mode_banner">แอปนี้อยู่ในโหมดทดสอบ อย่าใช้สำหรับการขายหรือการซื้อจริง</string>
-    <string name="market_test_mode_card">ทดลองสั่งซื้อด้วยบัตรหมายเลข 4242 4242 4242 4242 พร้อมวันหมดอายุในอนาคตและรหัสความปลอดภัยใดก็ได้</string>
     <string name="market_title">ตลาด</string>
     <string name="market_type_digital">ดิจิทัล</string>
     <string name="market_type_physical">สินค้าจับต้องได้</string>

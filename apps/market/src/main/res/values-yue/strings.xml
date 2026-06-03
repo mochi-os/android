@@ -653,8 +653,6 @@
     <string name="market_subscriptions_resume_failed">恢復失敗</string>
     <string name="market_subscriptions_resumed">訂閱已恢復</string>
     <string name="market_subscriptions_title">訂閱</string>
-    <string name="market_test_mode_banner">呢個應用程式處於測試模式。請勿用嚟做真實買賣。</string>
-    <string name="market_test_mode_card">可以用卡號 4242 4242 4242 4242、任何將來嘅到期日同任何安全碼進行測試購買。</string>
     <string name="market_warnings_title">警告</string>
 
 </resources>

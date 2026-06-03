@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">Kunde inte återuppta</string>
     <string name="market_subscriptions_resumed">Prenumeration återupptagen</string>
     <string name="market_subscriptions_title">Prenumerationer</string>
-    <string name="market_test_mode_banner">Den här appen är i testläge. Använd den inte för riktiga försäljningar eller köp.</string>
-    <string name="market_test_mode_card">Gör testköp med kortet 4242 4242 4242 4242, med valfritt framtida utgångsdatum och valfri säkerhetskod.</string>
     <string name="market_title">Marknad</string>
     <string name="market_type_digital">Digital</string>
     <string name="market_type_physical">Fysisk</string>

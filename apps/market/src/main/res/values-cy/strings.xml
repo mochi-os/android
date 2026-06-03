@@ -649,8 +649,6 @@
     <string name="market_subscriptions_resume_failed">Methwyd ailddechrau</string>
     <string name="market_subscriptions_resumed">Tanysgrifiad wedi\'i ailddechrau</string>
     <string name="market_subscriptions_title">Tanysgrifiadau</string>
-    <string name="market_test_mode_banner">Mae\'r ap hwn yn y modd prawf. Peidiwch â\'i ddefnyddio ar gyfer gwerthiannau neu bryniannau go iawn.</string>
-    <string name="market_test_mode_card">Gwnewch bryniannau prawf gyda cherdyn 4242 4242 4242 4242, gydag unrhyw ddyddiad dod i ben yn y dyfodol ac unrhyw god diogelwch.</string>
     <string name="market_title">Marchnad</string>
     <string name="market_type_digital">Digidol</string>
     <string name="market_type_physical">Corfforol</string>

@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">தொடர முடியவில்லை</string>
     <string name="market_subscriptions_resumed">சந்தா தொடரப்பட்டது</string>
     <string name="market_subscriptions_title">சந்தாக்கள்</string>
-    <string name="market_test_mode_banner">இந்த ஆப் டெஸ்ட் மோடில் உள்ளது. உண்மையான விற்பனை அல்லது வாங்குதலுக்கு இதை பயன்படுத்த வேண்டாம்.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 கார்டைப் பயன்படுத்தி, எந்த எதிர்கால காலாவதி தேதி மற்றும் எந்த பாதுகாப்பு குறியீட்டுடனும் சோதனை வாங்குதல்களைச் செய்யவும்.</string>
     <string name="market_title">சந்தை</string>
     <string name="market_type_digital">டிஜிட்டல்</string>
     <string name="market_type_physical">உடல்நலம்</string>

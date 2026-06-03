@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">د دوام پاتې راغلل</string>
     <string name="market_subscriptions_resumed">ګډون بیا پیل شو</string>
     <string name="market_subscriptions_title">ګډونونه</string>
-    <string name="market_test_mode_banner">دا اپ په ازموینې حالت کې دی. دا د ریښتیني پلور یا پیرودنې لپاره مه کاروئ.</string>
-    <string name="market_test_mode_card">د 4242 4242 4242 4242 کارت سره د ازموینې پیرودنې وکړئ، د هر راتلونکي ختمیدو نېټې او هر امنیتي کوډ سره.</string>
     <string name="market_title">Market</string>
     <string name="market_type_digital">ډیجیټل</string>
     <string name="market_type_physical">فزیکي</string>

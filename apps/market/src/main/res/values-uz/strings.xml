@@ -477,8 +477,6 @@
     <string name="market_subscriptions_resume_failed">Davom ettirib boʻlmadi</string>
     <string name="market_subscriptions_resumed">Obuna davom ettirildi</string>
     <string name="market_subscriptions_title">Obunalar</string>
-    <string name="market_test_mode_banner">Bu ilova sinov rejimida. Uni haqiqiy savdo yoki xaridlar uchun ishlatmang.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 kartasi bilan, har qanday kelajakdagi muddat va har qanday xavfsizlik kodi bilan sinov xaridlarini amalga oshiring.</string>
     <string name="market_title">Bozor</string>
     <string name="market_type_digital">Raqamli</string>
     <string name="market_type_physical">Jismoniy</string>

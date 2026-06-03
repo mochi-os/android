@@ -412,8 +412,6 @@
     <string name="market_subscriptions_resume_failed">재개에 실패했어요</string>
     <string name="market_subscriptions_resumed">구독이 재개되었어요</string>
     <string name="market_subscriptions_title">구독</string>
-    <string name="market_test_mode_banner">이 앱은 테스트 모드예요. 실제 판매나 구매에 사용하지 마세요.</string>
-    <string name="market_test_mode_card">카드 번호 4242 4242 4242 4242, 미래의 아무 만료일과 아무 보안 코드로 테스트 결제를 진행하세요.</string>
     <string name="market_title">마켓</string>
     <string name="market_type_digital">디지털</string>
     <string name="market_type_physical">실물</string>

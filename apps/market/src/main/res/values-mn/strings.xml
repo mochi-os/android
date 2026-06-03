@@ -649,8 +649,6 @@
     <string name="market_subscriptions_resume_failed">Үргэлжлүүлж чадсангүй</string>
     <string name="market_subscriptions_resumed">Захиалга үргэлжилсэн</string>
     <string name="market_subscriptions_title">Захиалгууд</string>
-    <string name="market_test_mode_banner">Энэ программ туршилтын горимд байна. Бодит худалдаа хийхэд бүү ашигла.</string>
-    <string name="market_test_mode_card">4242 4242 4242 4242 картаар, ирээдүйн дуусах хугацаа болон ямар ч аюулгүй байдлын кодоор тест худалдан авалт хийнэ үү.</string>
     <string name="market_title">Маркет</string>
     <string name="market_type_digital">Дижитал</string>
     <string name="market_type_physical">Бодит биет</string>
