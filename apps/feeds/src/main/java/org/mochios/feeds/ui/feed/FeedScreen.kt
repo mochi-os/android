@@ -165,6 +165,9 @@ fun FeedScreen(
         if (viewModel.feedId.isNotBlank()) {
             LastViewedStore.set(context, FEEDS_FEATURE, viewModel.feedId)
             SystemNotifications.cancelFor(context, "feeds", viewModel.feedId)
+            // Mark the feed's notifications read on the server so the bell
+            // clears on web / other devices, not just the local tray.
+            viewModel.clearNotifications()
         }
     }
 

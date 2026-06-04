@@ -98,6 +98,21 @@ class FeedViewModel @Inject constructor(
         subscribeToWebSocket()
     }
 
+    // Mark this feed's notifications read on the server (clear/object), so the
+    // bell clears on web and other devices when the feed is opened — matching
+    // web's entity-feed-page. The local system tray is dismissed separately in
+    // FeedScreen. Skipped for the all-feeds aggregate (no real feed entity).
+    fun clearNotifications() {
+        if (isAllFeeds || feedId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                repository.clearNotifications(feedId)
+            } catch (_: Exception) {
+                // Best-effort — a failed clear shouldn't disrupt the feed view.
+            }
+        }
+    }
+
     fun loadFeed() {
         viewModelScope.launch {
             _error.value = null
