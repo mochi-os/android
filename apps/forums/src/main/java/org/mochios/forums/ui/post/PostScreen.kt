@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Close
@@ -679,7 +680,13 @@ private fun PostHeader(
                     }
                     if (canEdit) {
                         TextButton(onClick = { showAddTag = true }) {
-                            Text("+ " + stringResource(R.string.forums_post_tag_add))
+                            Icon(
+                                Icons.Default.Add,
+                                contentDescription = null,
+                                modifier = Modifier.size(18.dp)
+                            )
+                            Spacer(Modifier.width(4.dp))
+                            Text(stringResource(R.string.forums_post_tag_add))
                         }
                     }
                 }
@@ -712,7 +719,7 @@ private fun PostHeader(
                                   else MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-                    Text("${post.up - post.down}", style = MaterialTheme.typography.labelLarge)
+                    Text(LocalFormat.current.formatNumber(post.up - post.down), style = MaterialTheme.typography.labelLarge)
                     IconButton(onClick = { onVote(if (post.userVote == "down") "" else "down") }) {
                         Icon(
                             Icons.Default.ThumbDown,
@@ -943,7 +950,7 @@ private fun CommentCard(
                             modifier = Modifier.size(14.dp)
                         )
                     }
-                    Text("${comment.up - comment.down}", style = MaterialTheme.typography.labelSmall)
+                    Text(LocalFormat.current.formatNumber(comment.up - comment.down), style = MaterialTheme.typography.labelSmall)
                     IconButton(
                         onClick = { onVote(if (comment.userVote == "down") "" else "down") },
                         modifier = Modifier.size(28.dp)

@@ -16,7 +16,6 @@ import org.mochios.forums.api.MembersResponse
 import org.mochios.forums.api.ModerationLogResponse
 import org.mochios.forums.api.ModerationQueueResponse
 import org.mochios.forums.api.ModerationReportsResponse
-import org.mochios.forums.api.ProbeResponse
 import org.mochios.forums.api.RecommendationsResponse
 import org.mochios.forums.api.RestrictionsResponse
 import org.mochios.forums.api.RssTokenResponse
@@ -48,17 +47,11 @@ class ForumsRepository @Inject constructor(
         return r.fingerprint.ifEmpty { r.id }
     }
 
-    suspend fun findForums(): List<DirectoryEntry> =
-        api.findForums().unwrap().forums
-
     suspend fun searchForums(query: String): List<DirectoryEntry> =
         api.searchForums(query).unwrap().results
 
     suspend fun getRecommendations(): RecommendationsResponse =
         api.getRecommendations().unwrap()
-
-    suspend fun probeForum(url: String): ProbeResponse =
-        api.probeForum(url).unwrap()
 
     suspend fun subscribe(forumId: String, server: String? = null) {
         api.subscribe(forumId, forumId, server).unwrap()
@@ -239,10 +232,6 @@ class ForumsRepository @Inject constructor(
 
     suspend fun deleteComment(forumId: String, postId: String, commentId: String) {
         api.deleteComment(forumId, postId, commentId).unwrap()
-    }
-
-    suspend fun setDefaultSort(sort: String) {
-        api.setDefaultSort(sort).unwrap()
     }
 
     suspend fun setForumSort(forumId: String, sort: String) {

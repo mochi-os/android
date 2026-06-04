@@ -52,19 +52,10 @@ data class CreateForumResponse(
     val fingerprint: String = ""
 )
 
-data class FindForumsResponse(val forums: List<DirectoryEntry> = emptyList())
-
 data class SearchForumsResponse(val results: List<DirectoryEntry> = emptyList())
 
 data class RecommendationsResponse(val forums: List<RecommendedForum> = emptyList())
 
-data class ProbeResponse(
-    val id: String = "",
-    val name: String = "",
-    val fingerprint: String = "",
-    @com.google.gson.annotations.SerializedName("class") val klass: String = "",
-    val server: String = ""
-)
 
 data class SubscribeResponse(val already_subscribed: Boolean = false)
 
@@ -161,18 +152,12 @@ interface ForumsApi {
         @Field("privacy") privacy: String? = null
     ): Response<ApiResponse<CreateForumResponse>>
 
-    @GET("find")
-    suspend fun findForums(): Response<ApiResponse<FindForumsResponse>>
-
     @GET("-/directory/search")
     suspend fun searchForums(@Query("search") search: String): Response<ApiResponse<SearchForumsResponse>>
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<RecommendationsResponse>>
 
-    @FormUrlEncoded
-    @POST("-/probe")
-    suspend fun probeForum(@Field("url") url: String): Response<ApiResponse<ProbeResponse>>
 
     // ---- Forum entity ----
 
@@ -390,10 +375,6 @@ interface ForumsApi {
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Sort ----
-
-    @FormUrlEncoded
-    @POST("-/sort/set")
-    suspend fun setDefaultSort(@Field("sort") sort: String): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
     @POST("{forumId}/-/sort/set")
