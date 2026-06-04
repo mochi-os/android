@@ -391,17 +391,23 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    fun adjustInterest(tag: Tag, direction: String) {
+    // Interest is user-global, but the action is entity-scoped to a feed, so it
+    // must route through a real feed entity. In the all-feeds view feedId is the
+    // "__all__" sentinel (not an entity, so the action 404s and silently does
+    // nothing), so the caller passes the post's own feed — always valid — as the
+    // routing context. Mirrors web, which routes interest through a subscribed feed.
+    fun adjustInterest(feed: String, tag: Tag, direction: String) {
+        val target = feed.takeIf { it.isNotBlank() && it != "__all__" } ?: return
         viewModelScope.launch {
             try {
                 repository.adjustInterest(
-                    feedId,
+                    target,
                     qid = tag.qid?.takeIf { it.isNotEmpty() },
                     label = if (tag.qid.isNullOrEmpty()) tag.label else null,
                     direction = direction
                 )
             } catch (_: Exception) {
-                // Interest is user-global and best-effort; silent on failure.
+                // Best-effort; silent on failure.
             }
         }
     }

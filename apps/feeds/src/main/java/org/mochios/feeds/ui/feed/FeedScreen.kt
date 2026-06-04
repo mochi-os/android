@@ -592,7 +592,7 @@ fun FeedScreen(
                                     onEdit = { onNavigateToEditPost(routeFeedId, current.id) },
                                     onDelete = { pendingDelete = current },
                                     onAddTag = { addTagTarget = current.id },
-                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) },
+                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(routeFeedId, tag, direction) },
                                 )
                             }
                         }
