@@ -1,5 +1,6 @@
 package org.mochios.market.ui.buying
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -20,10 +21,12 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -31,9 +34,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
@@ -65,6 +71,16 @@ fun SavedListingsScreen(
     viewModel: SavedListingsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
+    val context = LocalContext.current
+    LaunchedEffect(Unit) {
+        viewModel.saveEvents.collect { saved ->
+            val message = context.getString(
+                if (saved) R.string.market_listing_save
+                else R.string.market_listing_unsave,
+            )
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        }
+    }
     Scaffold(
         topBar = {
             TopAppBar(
@@ -112,11 +128,13 @@ fun SavedListingsScreen(
                             listing = listing,
                             category = state.categories
                                 .firstOrNull { it.id == listing.category }?.name,
+                            saved = true,
                             onClick = {
                                 navController.navigate(
                                     MarketApp.listingDetail(listing.id.toString()),
                                 )
                             },
+                            onToggleSave = viewModel::toggleSave,
                         )
                     }
                 }
@@ -153,6 +171,13 @@ class SavedListingsViewModel @Inject constructor(
             initialValue = SavedListingsUiState(),
         )
 
+    /**
+     * One-shot save-toggle results for the screen to surface as a toast.
+     * `true` means the listing was just saved, `false` means it was removed.
+     */
+    private val _saveEvents = MutableSharedFlow<Boolean>(extraBufferCapacity = 4)
+    val saveEvents: SharedFlow<Boolean> = _saveEvents.asSharedFlow()
+
     init {
         observe()
         loadCategories()
@@ -171,6 +196,19 @@ class SavedListingsViewModel @Inject constructor(
     fun clearAll() {
         viewModelScope.launch {
             savedStore.clear()
+        }
+    }
+
+    /**
+     * Toggle a listing's saved state. On this screen the listing is always
+     * currently saved, so this removes it; the [saveEvents] emission lets the
+     * screen confirm with a toast.
+     */
+    fun toggleSave(listing: Listing) {
+        viewModelScope.launch {
+            val id = listing.id.toString()
+            savedStore.toggle(id)
+            _saveEvents.emit(savedStore.isSaved(id))
         }
     }
 

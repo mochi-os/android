@@ -34,6 +34,17 @@ fun marketBaseUrl(context: Context): String =
     ).sessionManager().getServerUrlBlocking().trimEnd('/')
 
 /**
+ * Current market app token, or null when unauthenticated. Coil image requests
+ * bypass the Retrofit `Authorization` interceptor, so gated asset URLs (e.g. a
+ * user's avatar) must carry the token as a `?token=` query parameter instead.
+ */
+fun marketToken(context: Context): String? =
+    EntryPointAccessors.fromApplication(
+        context.applicationContext,
+        PhotoUrlEntryPoint::class.java,
+    ).sessionManager().getTokenBlocking("market")
+
+/**
  * Absolute URL for a listing's primary photo, or null when it has none.
  *
  * Uses the server's `/thumbnail` variant (a small resized stream) rather than
@@ -55,5 +66,32 @@ fun rememberListingThumbnailUrl(listing: Listing): String? {
     val baseUrl = remember(context) { marketBaseUrl(context) }
     return remember(baseUrl, listing.photo?.id) {
         listingThumbnailUrl(listing, baseUrl)
+    }
+}
+
+/**
+ * Absolute URL for a market user's avatar asset, or null when [accountId] is
+ * blank. The asset endpoint is token-gated, so [token] is appended as a query
+ * parameter (Coil requests don't carry the Retrofit `Authorization` header). A
+ * user with no uploaded avatar yields a 404, which the caller's avatar
+ * component falls back to initials for.
+ */
+fun userAvatarUrl(accountId: String, baseUrl: String, token: String?): String? {
+    val id = accountId.takeIf { it.isNotBlank() } ?: return null
+    val url = "$baseUrl/market/-/user/$id/asset/avatar"
+    return if (token.isNullOrBlank()) url else "$url?token=$token"
+}
+
+/**
+ * Resolves the base URL and token once (remembered) and returns the avatar URL
+ * for [listing]'s seller, or null when the listing carries no seller id.
+ */
+@Composable
+fun rememberSellerAvatarUrl(listing: Listing): String? {
+    val context = LocalContext.current
+    val baseUrl = remember(context) { marketBaseUrl(context) }
+    val token = remember(context) { marketToken(context) }
+    return remember(baseUrl, token, listing.seller) {
+        userAvatarUrl(listing.seller, baseUrl, token)
     }
 }

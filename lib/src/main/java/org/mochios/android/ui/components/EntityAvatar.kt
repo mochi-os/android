@@ -42,6 +42,10 @@ import org.mochios.android.R
  *               a deterministic colour for the initials circle.
  * @param size   Avatar diameter.
  * @param accent Optional hex colour ("#rrggbb"). When set, drawn as a 2dp ring.
+ * @param containerColor Initials-circle fill. Null keeps the deterministic
+ *               seeded colour; pass an explicit colour for a flat themed avatar.
+ * @param contentColor Initials text colour (defaults to white for the seeded
+ *               circle; pair with [containerColor] for a light-on-dark swap).
  */
 @Composable
 fun EntityAvatar(
@@ -50,6 +54,8 @@ fun EntityAvatar(
     seed: String? = null,
     size: Dp = 24.dp,
     accent: String? = null,
+    containerColor: Color? = null,
+    contentColor: Color = Color.White,
     modifier: Modifier = Modifier,
 ) {
     var loadFailed by remember(src) { mutableStateOf(false) }
@@ -80,6 +86,8 @@ fun EntityAvatar(
             name = name,
             seed = seed ?: name,
             size = size,
+            containerColor = containerColor,
+            contentColor = contentColor,
             modifier = outer,
         )
     }
@@ -90,9 +98,11 @@ private fun InitialsPlaceholder(
     name: String,
     seed: String,
     size: Dp,
+    containerColor: Color?,
+    contentColor: Color,
     modifier: Modifier = Modifier,
 ) {
-    val bg = colourFromSeed(seed)
+    val bg = containerColor ?: colourFromSeed(seed)
     val initials = initialsOf(name)
     // Text size scales with the circle (~40% of diameter keeps initials snug).
     val fontSize = (size.value * 0.4f).coerceIn(8f, 28f).sp
@@ -102,7 +112,7 @@ private fun InitialsPlaceholder(
     ) {
         Text(
             text = initials,
-            color = Color.White,
+            color = contentColor,
             style = TextStyle(fontSize = fontSize, fontWeight = FontWeight.Medium),
         )
     }

@@ -47,6 +47,8 @@ data class HomeUiState(
     val categories: List<Category> = emptyList(),
     val listings: List<Listing> = emptyList(),
     val recentListings: List<Listing> = emptyList(),
+    /** String IDs of listings the user has saved locally; drives the card's bookmark fill. */
+    val savedIds: Set<String> = emptySet(),
     val isLoading: Boolean = false,
     val hasMore: Boolean = false,
     val error: MochiError? = null,

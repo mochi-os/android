@@ -4,10 +4,14 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.toMochiError
@@ -40,6 +44,13 @@ class HomeViewModel @Inject constructor(
     val state: StateFlow<HomeUiState> = _state.asStateFlow()
 
     /**
+     * One-shot save-toggle results for the screen to surface as a toast.
+     * `true` means the listing was just saved, `false` means it was removed.
+     */
+    private val _saveEvents = MutableSharedFlow<Boolean>(extraBufferCapacity = 4)
+    val saveEvents: SharedFlow<Boolean> = _saveEvents.asSharedFlow()
+
+    /**
      * Cache of listings we've already fetched by ID. Used to render the
      * recently-viewed strip without re-issuing a network request every time
      * the home screen mounts.
@@ -47,14 +58,24 @@ class HomeViewModel @Inject constructor(
     private val listingCache = mutableMapOf<String, Listing>()
 
     private var searchJob: Job? = null
-    private var pageOffset: Int = 0
+    private var currentPage: Int = 1
     private val pageLimit: Int = PAGE_LIMIT
 
     init {
         loadCategories()
         loadRecentlyViewed()
+        observeSaved()
         loadAccount()
         runSearch(reset = true)
+    }
+
+    /** Mirror the locally-saved listing IDs into state so cards fill the bookmark. */
+    private fun observeSaved() {
+        viewModelScope.launch {
+            savedStore.observe().collect { ids ->
+                _state.value = _state.value.copy(savedIds = ids)
+            }
+        }
     }
 
     private fun initialState(handle: SavedStateHandle): HomeUiState {
@@ -106,7 +127,9 @@ class HomeViewModel @Inject constructor(
 
     fun toggleSave(listing: Listing) {
         viewModelScope.launch {
-            savedStore.toggle(listing.id.toString())
+            val id = listing.id.toString()
+            savedStore.toggle(id)
+            _saveEvents.emit(savedStore.isSaved(id))
         }
     }
 
@@ -246,9 +269,9 @@ class HomeViewModel @Inject constructor(
 
     private fun runSearch(reset: Boolean) {
         searchJob?.cancel()
-        if (reset) pageOffset = 0
         val current = _state.value
         if (reset) {
+            currentPage = 1
             _state.value = current.copy(
                 listings = emptyList(),
                 isLoading = true,
@@ -256,14 +279,14 @@ class HomeViewModel @Inject constructor(
                 error = null,
             )
         } else {
+            currentPage += 1
             _state.value = current.copy(isLoading = true, error = null)
         }
         searchJob = viewModelScope.launch {
             // Tiny coalesce so the rapid setFilter/setQuery sequence at
             // session start fires one request instead of many.
             if (reset) delay(50L)
-            val pageNumber = (pageOffset / pageLimit) + 1
-            val params = buildParams(_state.value, page = pageNumber, limit = pageLimit)
+            val params = buildParams(_state.value, page = currentPage, limit = pageLimit)
             try {
                 val response = repo.searchListings(params)
                 val merged = if (reset) {
@@ -271,13 +294,17 @@ class HomeViewModel @Inject constructor(
                 } else {
                     _state.value.listings + response.listings
                 }
-                pageOffset = merged.size
                 _state.value = _state.value.copy(
                     listings = merged,
                     isLoading = false,
                     hasMore = merged.size.toLong() < response.total,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                // Undo the page advance so a retry re-requests this page
+                // rather than skipping it.
+                if (!reset) currentPage -= 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),

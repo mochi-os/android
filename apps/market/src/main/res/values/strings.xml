@@ -383,7 +383,7 @@
     <string name="market_onboarding_dismiss">Dismiss</string>
     <string name="market_onboarding_title">Welcome to Market</string>
     <string name="market_open_sidebar">Open menu</string>
-    <string name="market_price_from">from %1$s</string>
+    <string name="market_price_from">From %1$s</string>
     <string name="market_price_high_bid">High bid: %1$s</string>
     <string name="market_price_instant_buy">instant buy: %1$s</string>
     <string name="market_price_per_month">%1$s / month</string>

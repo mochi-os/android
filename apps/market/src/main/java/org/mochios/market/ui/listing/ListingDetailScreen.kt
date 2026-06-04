@@ -86,6 +86,7 @@ import org.mochios.android.ui.components.LocationMapView
 import org.mochios.market.R
 import org.mochios.market.lib.locationName
 import org.mochios.market.lib.parseLocation
+import org.mochios.market.lib.ratingStars
 import org.mochios.market.lib.toPlaceData
 import org.mochios.market.model.AccountSummary
 import org.mochios.market.model.Asset
@@ -225,7 +226,7 @@ fun ListingDetailScreen(
                         sellerName = seller.name.ifBlank {
                             stringResource(R.string.market_listing_detail_seller_heading)
                         },
-                        sellerRating = seller.rating.toFloat(),
+                        sellerRating = ratingStars(seller.rating),
                         sellerReviews = seller.reviews.toInt(),
                         sellerSales = seller.sales.toInt(),
                         sellerVerified = (seller.verified ?: 0) >= 2,

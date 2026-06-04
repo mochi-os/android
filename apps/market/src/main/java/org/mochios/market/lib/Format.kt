@@ -46,6 +46,17 @@ fun formatFingerprint(id: String): String =
     org.mochios.android.format.formatFingerprint(id)
 
 /**
+ * Convert an aggregate seller rating to a 0–5 star value.
+ *
+ * The server stores denormalised seller ratings as integer hundredths
+ * (`500` = 5.00, `233` = 2.33), so `Listing.seller_rating`,
+ * `Account.rating`, and `AccountSummary.rating` must be divided by 100
+ * before feeding `RatingStars`. Individual `Review.rating` values are
+ * already on the 0–5 scale and need no scaling.
+ */
+fun ratingStars(hundredths: Double): Float = (hundredths / 100.0).toFloat()
+
+/**
  * Parsed location payload. The market server stores `location` as a JSON
  * blob with at minimum `name`, optionally `country` / `region` /
  * `lat` / `lon`. When the value isn't valid JSON we synthesise a

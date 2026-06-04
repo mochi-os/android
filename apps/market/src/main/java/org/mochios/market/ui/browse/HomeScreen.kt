@@ -1,5 +1,6 @@
 package org.mochios.market.ui.browse
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -59,6 +60,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -97,6 +99,18 @@ fun HomeScreen(
     val state by viewModel.state.collectAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
+
+    // Confirm each save/unsave with a short toast.
+    val context = LocalContext.current
+    LaunchedEffect(Unit) {
+        viewModel.saveEvents.collect { saved ->
+            val message = context.getString(
+                if (saved) R.string.market_listing_save
+                else R.string.market_listing_unsave,
+            )
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        }
+    }
 
     // Debounce search input so the ViewModel doesn't fire a request per
     // keystroke. The web side debounces at 300 ms; match it here.
@@ -164,6 +178,7 @@ fun HomeScreen(
                     viewModel.viewListing(listing)
                     navController.navigate(MarketApp.listingDetail(listing.id.toString()))
                 },
+                onToggleSave = viewModel::toggleSave,
                 onCategoryClick = { category ->
                     viewModel.setFilter(Filter.CATEGORY, category.id.toString())
                 },
@@ -199,21 +214,28 @@ private fun HomeContent(
     onClearAll: () -> Unit,
     onLoadMore: () -> Unit,
     onListingClick: (Listing) -> Unit,
+    onToggleSave: (Listing) -> Unit,
     onCategoryClick: (Category) -> Unit,
     onActivateAccount: () -> Unit,
     onDismissOnboarding: () -> Unit,
 ) {
     val gridState = rememberLazyGridState()
-    val shouldLoadMore by remember {
+    // Only the scroll position is derived here — it depends solely on the
+    // stably-remembered gridState. The `hasMore`/`isLoading` flags are read
+    // fresh in the LaunchedEffect below; capturing them inside this remembered
+    // block would freeze them at their first-composition values.
+    val reachedEnd by remember {
         derivedStateOf {
             val info = gridState.layoutInfo
             val total = info.totalItemsCount
             val last = info.visibleItemsInfo.lastOrNull()?.index ?: 0
-            state.hasMore && !state.isLoading && last >= total - 6
+            total > 0 && last >= total - 6
         }
     }
-    LaunchedEffect(shouldLoadMore) {
-        if (shouldLoadMore) onLoadMore()
+    LaunchedEffect(reachedEnd, state.hasMore, state.isLoading) {
+        if (reachedEnd && state.hasMore && !state.isLoading) {
+            onLoadMore()
+        }
     }
 
     val isColdStart = state.query.isBlank() && state.filters.isEmpty()
@@ -294,7 +316,9 @@ private fun HomeContent(
                         listing = listing,
                         category = state.categories
                             .firstOrNull { it.id == listing.category }?.name,
+                        saved = listing.id.toString() in state.savedIds,
                         onClick = { onListingClick(listing) },
+                        onToggleSave = onToggleSave,
                     )
                 }
 
