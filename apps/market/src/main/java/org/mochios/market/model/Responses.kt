@@ -115,6 +115,25 @@ data class RemovalCheck(
     @SerializedName("has_active_orders") val hasActiveOrders: Boolean = false,
 )
 
+// ---- Saved --------------------------------------------------------------
+
+/**
+ * Result of `saved/list` — the current identity's saved (wishlisted)
+ * listings as full [Listing] rows, most-recent-first.
+ */
+data class SavedListResponse(
+    val saved: List<Listing> = emptyList(),
+    val total: Long = 0,
+)
+
+/**
+ * Result of `saved/add` and `saved/remove`. `saved` is the resulting state
+ * for the listing (`true` after add, `false` after remove).
+ */
+data class SavedToggleResponse(
+    val saved: Boolean = false,
+)
+
 // ---- Orders -------------------------------------------------------------
 
 /** Result of `orders/purchases` and `orders/sales`. */

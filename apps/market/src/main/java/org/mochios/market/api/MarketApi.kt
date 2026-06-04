@@ -34,6 +34,8 @@ import org.mochios.market.model.RelistResponse
 import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.model.ReviewsListResponse
+import org.mochios.market.model.SavedListResponse
+import org.mochios.market.model.SavedToggleResponse
 import org.mochios.market.model.SentReviewListResponse
 import org.mochios.market.model.StripeOnboardingResponse
 import org.mochios.market.model.StripeStatus
@@ -319,6 +321,30 @@ interface MarketApi {
         @Field("id") id: String,
         @Field("reason") reason: String,
     ): Response<ApiResponse<Listing>>
+
+    // ---- Saved ----
+
+    /** List the current identity's saved (wishlisted) listings. */
+    @GET("-/saved/list")
+    suspend fun listSaved(): Response<ApiResponse<SavedListResponse>>
+
+    /**
+     * Save a listing. `data` is the JSON-encoded [Listing] snapshot the
+     * server persists so the saved list can be rendered without re-fetching.
+     */
+    @FormUrlEncoded
+    @POST("-/saved/add")
+    suspend fun addSaved(
+        @Field("listing") listing: String,
+        @Field("data") data: String,
+    ): Response<ApiResponse<SavedToggleResponse>>
+
+    /** Remove a listing from the saved set. */
+    @FormUrlEncoded
+    @POST("-/saved/remove")
+    suspend fun removeSaved(
+        @Field("listing") listing: String,
+    ): Response<ApiResponse<SavedToggleResponse>>
 
     // ---- Shipping ----
 

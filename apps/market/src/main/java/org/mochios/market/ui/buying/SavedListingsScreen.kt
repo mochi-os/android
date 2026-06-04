@@ -40,28 +40,25 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import org.mochios.market.R
-import org.mochios.market.lib.SavedStore
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.repository.MarketRepository
+import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
 /**
- * Saved listings screen at [MarketApp.SAVED]. Reads the local saved set from
- * [SavedStore], resolves each ID against [MarketRepository.getListing], and
- * renders a 2-column [LazyVerticalGrid] of the shared
+ * Saved listings screen at [MarketApp.SAVED]. Mirrors the server-backed
+ * [SavedRepository.saved] set — which already carries the full [Listing]
+ * rows — into a 2-column [LazyVerticalGrid] of the shared
  * [org.mochios.market.ui.components.ListingCard]. Mirrors the web side's
  * "Saved" tab in `apps/market/web/src/routes/_authenticated/saved.tsx`.
  *
  * A "Clear all" action in the TopAppBar wipes the saved set. The Saved
- * screen is non-paginated — the store caps itself implicitly at whatever
+ * screen is non-paginated — the set caps itself implicitly at whatever
  * the user has explicitly saved (typically dozens, not thousands).
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -152,15 +149,8 @@ data class SavedListingsUiState(
 @HiltViewModel
 class SavedListingsViewModel @Inject constructor(
     private val repo: MarketRepository,
-    private val savedStore: SavedStore,
+    private val savedRepository: SavedRepository,
 ) : ViewModel() {
-
-    /**
-     * Cache of resolved listings by string ID. Avoids re-fetching the same
-     * listing every time the saved-IDs set updates (e.g. after the user
-     * un-saves one).
-     */
-    private val listingCache = mutableMapOf<String, Listing>()
 
     private val internalState = MutableStateFlow(SavedListingsUiState())
 
@@ -181,6 +171,7 @@ class SavedListingsViewModel @Inject constructor(
     init {
         observe()
         loadCategories()
+        refresh()
     }
 
     private fun loadCategories() {
@@ -195,7 +186,7 @@ class SavedListingsViewModel @Inject constructor(
 
     fun clearAll() {
         viewModelScope.launch {
-            savedStore.clear()
+            runCatching { savedRepository.clear() }
         }
     }
 
@@ -206,53 +197,30 @@ class SavedListingsViewModel @Inject constructor(
      */
     fun toggleSave(listing: Listing) {
         viewModelScope.launch {
-            val id = listing.id.toString()
-            savedStore.toggle(id)
-            _saveEvents.emit(savedStore.isSaved(id))
+            try {
+                val nowSaved = savedRepository.toggle(listing)
+                _saveEvents.emit(nowSaved)
+            } catch (_: Exception) {
+                // Optimistic update already reverted; nothing to surface.
+            }
         }
     }
 
+    /** Mirror the server-backed saved set (full listings) into screen state. */
     private fun observe() {
         viewModelScope.launch {
-            savedStore.observe().collect { idSet ->
-                val ids = idSet.toList()
-                internalState.value = internalState.value.copy(isLoading = true)
-                val resolved = arrayOfNulls<Listing>(ids.size)
-                val missingIndexes = mutableListOf<Int>()
-                val missingIds = mutableListOf<Long>()
-                ids.forEachIndexed { index, id ->
-                    val cached = listingCache[id]
-                    if (cached != null) {
-                        resolved[index] = cached
-                    } else {
-                        val longId = id.toLongOrNull() ?: return@forEachIndexed
-                        missingIndexes += index
-                        missingIds += longId
-                    }
-                }
-                if (missingIds.isNotEmpty()) {
-                    // Concurrent fan-out via the repo's batch helper, replacing
-                    // the previous N sequential round-trips on screen open.
-                    // Listings removed server-side fail individually inside the
-                    // helper and are dropped — the saved set is purged
-                    // opportunistically (permission changes are sometimes
-                    // temporary, so we don't aggressively prune).
-                    val fetched = repo.getListingsByIds(missingIds)
-                    val byId = fetched.associateBy { it.id.toString() }
-                    missingIndexes.forEach { slot ->
-                        val id = ids[slot]
-                        val listing = byId[id]
-                        if (listing != null) {
-                            listingCache[id] = listing
-                            resolved[slot] = listing
-                        }
-                    }
-                }
-                internalState.value = internalState.value.copy(
-                    isLoading = false,
-                    listings = resolved.filterNotNull(),
-                )
+            savedRepository.saved.collect { listings ->
+                internalState.value = internalState.value.copy(listings = listings)
             }
+        }
+    }
+
+    /** Pull the latest saved set from the server, toggling the load spinner. */
+    private fun refresh() {
+        viewModelScope.launch {
+            internalState.value = internalState.value.copy(isLoading = true)
+            runCatching { savedRepository.refresh() }
+            internalState.value = internalState.value.copy(isLoading = false)
         }
     }
 }

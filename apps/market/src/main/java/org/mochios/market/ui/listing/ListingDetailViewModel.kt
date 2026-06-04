@@ -16,7 +16,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
-import org.mochios.market.lib.SavedStore
+import org.mochios.market.repository.SavedRepository
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
@@ -56,8 +56,8 @@ data class ListingDetailSnackbar(
  * ViewModel for [ListingDetailScreen].
  *
  * Wraps [MarketRepository.getListing] for the initial load, exposes the
- * three on-device stores ([SavedStore], [RecentlyViewedStore],
- * [ReportedStore]) the screen needs for the save / report / recently-viewed
+ * server-backed [SavedRepository] plus the on-device [RecentlyViewedStore] /
+ * [ReportedStore] the screen needs for the save / report / recently-viewed
  * affordances, and re-fetches the listing after a relist so the new status /
  * id surface in the UI.
  *
@@ -68,7 +68,7 @@ data class ListingDetailSnackbar(
 @HiltViewModel
 class ListingDetailViewModel @Inject constructor(
     private val repository: MarketRepository,
-    private val savedStore: SavedStore,
+    private val savedRepository: SavedRepository,
     private val recentStore: RecentlyViewedStore,
     private val reportedStore: ReportedStore,
 ) : ViewModel() {
@@ -153,6 +153,9 @@ class ListingDetailViewModel @Inject constructor(
                 } catch (_: Exception) {
                     // ignore
                 }
+                // Hydrate the saved set so the bookmark toggle reflects the
+                // server state even when the user came straight to this screen.
+                runCatching { savedRepository.ensureHydrated() }
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
@@ -163,11 +166,11 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun toggleSave() {
-        val id = currentId
-        if (id == 0L) return
+        // The full listing is needed for the saved/add snapshot payload.
+        val listing = _state.value.listing?.listing ?: return
         viewModelScope.launch {
             try {
-                savedStore.toggle(id.toString())
+                savedRepository.toggle(listing)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(error = e.toMochiError())
             }
@@ -254,7 +257,7 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun isSaved(): Flow<Boolean> =
-        savedStore.observe().map { set -> currentId.toString() in set }
+        savedRepository.isSaved(currentId)
 
     fun isReported(): Flow<Boolean> =
         reportedStore.observe().map { set -> currentId.toString() in set }

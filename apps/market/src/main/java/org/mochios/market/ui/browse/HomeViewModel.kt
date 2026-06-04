@@ -16,9 +16,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.toMochiError
 import org.mochios.market.lib.RecentlyViewedStore
-import org.mochios.market.lib.SavedStore
 import org.mochios.market.model.Listing
 import org.mochios.market.repository.MarketRepository
+import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
 /**
@@ -35,7 +35,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repo: MarketRepository,
-    private val savedStore: SavedStore,
+    private val savedRepository: SavedRepository,
     private val recentStore: RecentlyViewedStore,
     savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
@@ -69,11 +69,14 @@ class HomeViewModel @Inject constructor(
         runSearch(reset = true)
     }
 
-    /** Mirror the locally-saved listing IDs into state so cards fill the bookmark. */
+    /** Mirror the server-saved listing IDs into state so cards fill the bookmark. */
     private fun observeSaved() {
         viewModelScope.launch {
-            savedStore.observe().collect { ids ->
-                _state.value = _state.value.copy(savedIds = ids)
+            // Hydrate once so freshly-opened sessions show the right bookmark
+            // state; the collect below then tracks live toggles.
+            runCatching { savedRepository.ensureHydrated() }
+            savedRepository.savedIds.collect { ids ->
+                _state.value = _state.value.copy(savedIds = ids.mapTo(HashSet()) { it.toString() })
             }
         }
     }
@@ -127,9 +130,13 @@ class HomeViewModel @Inject constructor(
 
     fun toggleSave(listing: Listing) {
         viewModelScope.launch {
-            val id = listing.id.toString()
-            savedStore.toggle(id)
-            _saveEvents.emit(savedStore.isSaved(id))
+            try {
+                val nowSaved = savedRepository.toggle(listing)
+                _saveEvents.emit(nowSaved)
+            } catch (_: Exception) {
+                // Write-through failed; the optimistic update already reverted,
+                // so the bookmark snaps back. No toast on failure.
+            }
         }
     }
 
