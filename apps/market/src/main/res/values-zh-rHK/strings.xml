@@ -403,6 +403,7 @@
     <string name="market_editor_section_tags">Tags</string>
     <string name="market_filter_delivery_download">下載</string>
     <string name="market_filter_pricing_subscription">订阅</string>
+    <string name="market_listing_detail_listed">刊登於 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
     <string name="market_listing_detail_tags_heading">Tags</string>
     <string name="market_listing_detail_verified">已驗證</string>
@@ -430,6 +431,7 @@
     <string name="market_sidebar_reviews">評論</string>
     <string name="market_purchase_refunded">已退款</string>
     <string name="market_status_refunded">已退款</string>
+    <string name="market_shipping_days_value">%1$s 日</string>
     <string name="market_shipping_notes">備註</string>
     <string name="market_editor_type_digital">數碼</string>
     <string name="market_filter_type_digital">數碼</string>
@@ -527,7 +529,9 @@
     <string name="market_listing_detail_assets_heading">數碼資產</string>
     <string name="market_listing_detail_bids_heading">出價紀錄</string>
     <string name="market_listing_detail_buy_now">立即購買</string>
+    <string name="market_listing_detail_information_heading">送貨資訊</string>
     <string name="market_listing_detail_load_failed">無法載入刊登</string>
+    <string name="market_listing_detail_message">訊息</string>
     <string name="market_listing_detail_message_seller">聯絡賣家</string>
     <string name="market_listing_detail_not_found">找不到刊登</string>
     <string name="market_listing_detail_relist">重新刊登</string>

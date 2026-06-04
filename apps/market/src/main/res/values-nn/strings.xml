@@ -158,8 +158,11 @@
     <string name="market_listing_detail_buy_now">Kjøp no</string>
     <string name="market_listing_detail_description_heading">Skildring</string>
     <string name="market_listing_detail_edit">Rediger</string>
+    <string name="market_listing_detail_information_heading">Leveringsinformasjon</string>
     <string name="market_listing_detail_load_failed">Klarte ikkje lasta oppføring</string>
+    <string name="market_listing_detail_listed">Lagt ut %1$s</string>
     <string name="market_listing_detail_location_heading">Stad</string>
+    <string name="market_listing_detail_message">Melding</string>
     <string name="market_listing_detail_message_seller">Send melding til seljar</string>
     <string name="market_listing_detail_not_found">Fann ikkje oppføringa</string>
     <string name="market_listing_detail_relist">Annonser på nytt</string>
@@ -306,6 +309,7 @@
     <string name="market_ship_dialog_submit">Stadfest</string>
     <string name="market_ship_dialog_title">Merk som sendt</string>
     <string name="market_shipping_days">Levering</string>
+    <string name="market_shipping_days_value">%1$s dagar</string>
     <string name="market_shipping_notes">Merknader</string>
     <string name="market_shipping_price">Pris</string>
     <string name="market_shipping_region">Region</string>

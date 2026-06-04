@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">Erosi orain</string>
     <string name="market_listing_detail_description_heading">Deskribapena</string>
     <string name="market_listing_detail_edit">Editatu</string>
+    <string name="market_listing_detail_information_heading">Bidalketa-informazioa</string>
     <string name="market_listing_detail_load_failed">Ezin izan da zerrendapena kargatu</string>
     <string name="market_listing_detail_loading">Zerrenda kargatzen</string>
+    <string name="market_listing_detail_listed">Argitaratua: %1$s</string>
     <string name="market_listing_detail_location_heading">Kokapena</string>
+    <string name="market_listing_detail_message">Mezua</string>
     <string name="market_listing_detail_message_seller">Bidali mezua saltzaileari</string>
     <string name="market_listing_detail_not_found">Zerrendapena ez da aurkitu</string>
     <string name="market_listing_detail_place_bid">Egin eskaintza</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">Berretsi</string>
     <string name="market_ship_dialog_title">Markatu bidalitzat</string>
     <string name="market_shipping_days">Bidalketa</string>
+    <string name="market_shipping_days_value">%1$s egun</string>
     <string name="market_shipping_notes">Oharrak</string>
     <string name="market_shipping_price">Prezioa</string>
     <string name="market_shipping_region">Eskualdea</string>

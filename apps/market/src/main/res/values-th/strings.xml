@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">ซื้อเลย</string>
     <string name="market_listing_detail_description_heading">คำอธิบาย</string>
     <string name="market_listing_detail_edit">แก้ไข</string>
+    <string name="market_listing_detail_information_heading">ข้อมูลการจัดส่ง</string>
     <string name="market_listing_detail_load_failed">ไม่สามารถโหลดประกาศได้</string>
+    <string name="market_listing_detail_listed">ลงประกาศเมื่อ %1$s</string>
     <string name="market_listing_detail_location_heading">ตำแหน่ง</string>
+    <string name="market_listing_detail_message">ข้อความ</string>
     <string name="market_listing_detail_message_seller">ส่งข้อความถึงผู้ขาย</string>
     <string name="market_listing_detail_not_found">ไม่พบประกาศ</string>
     <string name="market_listing_detail_place_bid">ประมูล</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">ยืนยัน</string>
     <string name="market_ship_dialog_title">ทำเครื่องหมายว่าจัดส่งแล้ว</string>
     <string name="market_shipping_days">การจัดส่ง</string>
+    <string name="market_shipping_days_value">%1$s วัน</string>
     <string name="market_shipping_notes">บันทึก</string>
     <string name="market_shipping_price">ราคา</string>
     <string name="market_shipping_region">ภูมิภาค</string>

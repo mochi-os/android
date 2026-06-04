@@ -202,6 +202,7 @@
     <string name="market_sale_shipped_label">Versendet</string>
     <string name="market_search_clear">Suche löschen</string>
     <string name="market_section_categories">Kategorien durchsuchen</string>
+    <string name="market_shipping_days_value">%1$s Tage</string>
     <string name="market_shipping_notes">Notizen</string>
     <string name="market_shipping_price">Preis</string>
     <string name="market_sidebar_messages">Nachrichten</string>
@@ -217,6 +218,7 @@
     <string name="market_sale_section_audit">Aktivität</string>
     <string name="market_account_location_label">Standort</string>
     <string name="market_editor_section_location">Standort</string>
+    <string name="market_listing_detail_listed">Eingestellt am %1$s</string>
     <string name="market_listing_detail_location_heading">Standort</string>
     <string name="market_editor_section_delivery">Lieferung</string>
     <string name="market_filter_delivery">Lieferung</string>
@@ -356,8 +358,10 @@
     <string name="market_listing_detail_bids_heading">Gebotsverlauf</string>
     <string name="market_listing_detail_buy">Kaufen</string>
     <string name="market_listing_detail_buy_now">Jetzt kaufen</string>
+    <string name="market_listing_detail_information_heading">Lieferinformationen</string>
     <string name="market_listing_detail_load_failed">Inserat konnte nicht geladen werden</string>
     <string name="market_listing_detail_loading">Inserat wird geladen</string>
+    <string name="market_listing_detail_message">Nachricht</string>
     <string name="market_listing_detail_message_seller">Verkäufer anschreiben</string>
     <string name="market_listing_detail_not_found">Inserat nicht gefunden</string>
     <string name="market_listing_detail_place_bid">Gebot abgeben</string>

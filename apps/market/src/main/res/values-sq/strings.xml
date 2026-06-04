@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Bli tani</string>
     <string name="market_listing_detail_description_heading">Përshkrimi</string>
     <string name="market_listing_detail_edit">Modifiko</string>
+    <string name="market_listing_detail_information_heading">Informacioni i dorëzimit</string>
     <string name="market_listing_detail_load_failed">Ngarkimi i shpalljes dështoi</string>
+    <string name="market_listing_detail_listed">Listuar më %1$s</string>
     <string name="market_listing_detail_location_heading">Vendndodhja</string>
+    <string name="market_listing_detail_message">Mesazh</string>
     <string name="market_listing_detail_message_seller">Dërgo mesazh shitësit</string>
     <string name="market_listing_detail_not_found">Shpallja nuk u gjet</string>
     <string name="market_listing_detail_place_bid">Bëj ofertë</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Konfirmo</string>
     <string name="market_ship_dialog_title">Shëno si i dërguar</string>
     <string name="market_shipping_days">Dorëzimi</string>
+    <string name="market_shipping_days_value">%1$s ditë</string>
     <string name="market_shipping_notes">Shënime</string>
     <string name="market_shipping_price">Çmimi</string>
     <string name="market_shipping_region">Rajoni</string>

@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">קנה עכשיו</string>
     <string name="market_listing_detail_description_heading">תיאור</string>
     <string name="market_listing_detail_edit">עריכה</string>
+    <string name="market_listing_detail_information_heading">פרטי משלוח</string>
     <string name="market_listing_detail_load_failed">טעינת המודעה נכשלה</string>
+    <string name="market_listing_detail_listed">פורסם %1$s</string>
     <string name="market_listing_detail_location_heading">מיקום</string>
+    <string name="market_listing_detail_message">הודעה</string>
     <string name="market_listing_detail_message_seller">שלח הודעה למוכר</string>
     <string name="market_listing_detail_not_found">המודעה לא נמצאה</string>
     <string name="market_listing_detail_place_bid">הגש הצעה</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">אישור</string>
     <string name="market_ship_dialog_title">סמן כנשלח</string>
     <string name="market_shipping_days">משלוח</string>
+    <string name="market_shipping_days_value">%1$s ימים</string>
     <string name="market_shipping_notes">הערות</string>
     <string name="market_shipping_price">מחיר</string>
     <string name="market_shipping_region">אזור</string>

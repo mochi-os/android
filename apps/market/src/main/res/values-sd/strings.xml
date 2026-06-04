@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ابھي خريد ڪريو</string>
     <string name="market_listing_detail_description_heading">تفصيل</string>
     <string name="market_listing_detail_edit">ترميم</string>
+    <string name="market_listing_detail_information_heading">ترسيل جي معلومات</string>
     <string name="market_listing_detail_load_failed">لسٽنگ لوڊ ڪرڻ ۾ ناڪام</string>
+    <string name="market_listing_detail_listed">فهرست ٿيل %1$s</string>
     <string name="market_listing_detail_location_heading">هنڌ</string>
+    <string name="market_listing_detail_message">پيغام</string>
     <string name="market_listing_detail_message_seller">وڪرو ڪندڙ کي پيغام</string>
     <string name="market_listing_detail_not_found">لسٽنگ نه ملي</string>
     <string name="market_listing_detail_place_bid">بِڊ پيش ڪريو</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">تصديق ڪريو</string>
     <string name="market_ship_dialog_title">موڪليل طور نشانبر ڪريو</string>
     <string name="market_shipping_days">ترسيل</string>
+    <string name="market_shipping_days_value">%1$s ڏينهن</string>
     <string name="market_shipping_notes">نوٽ</string>
     <string name="market_shipping_price">قيمت</string>
     <string name="market_shipping_region">علائقو</string>

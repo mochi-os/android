@@ -195,8 +195,11 @@
     <string name="market_listing_detail_buy_now">Ejogua ko\'ãnga</string>
     <string name="market_listing_detail_description_heading">Mbohekoha</string>
     <string name="market_listing_detail_edit">Embojuruja</string>
+    <string name="market_listing_detail_information_heading">Mbohasa marandu</string>
     <string name="market_listing_detail_load_failed">Ndaikatúi oñembogue listado</string>
+    <string name="market_listing_detail_listed">Oñemoĩ %1$s</string>
     <string name="market_listing_detail_location_heading">Tenda</string>
+    <string name="market_listing_detail_message">Marandu</string>
     <string name="market_listing_detail_message_seller">Mensaje ome\'ẽkue-pe</string>
     <string name="market_listing_detail_not_found">Listado nojetopái</string>
     <string name="market_listing_detail_place_bid">Emoĩ tepy</string>
@@ -404,6 +407,7 @@
     <string name="market_ship_dialog_submit">Emoneĩ</string>
     <string name="market_ship_dialog_title">Ehecha oguõva</string>
     <string name="market_shipping_days">Ñemog̃uahẽ</string>
+    <string name="market_shipping_days_value">%1$s ára</string>
     <string name="market_shipping_notes">Apuntes</string>
     <string name="market_shipping_price">Hepykue</string>
     <string name="market_shipping_region">Tetãvore</string>

@@ -219,8 +219,11 @@
     <string name="market_listing_detail_buy_now">Jichhakiy alaña</string>
     <string name="market_listing_detail_description_heading">Uñacht\'awi</string>
     <string name="market_listing_detail_edit">Askichaña</string>
+    <string name="market_listing_detail_information_heading">Apaña yatiyäwi</string>
     <string name="market_listing_detail_load_failed">Janiw listado apaqaña atinkti</string>
+    <string name="market_listing_detail_listed">Uskuta %1$s</string>
     <string name="market_listing_detail_location_heading">Cheqa</string>
+    <string name="market_listing_detail_message">Apaya</string>
     <string name="market_listing_detail_message_seller">Alxiriri mensaje</string>
     <string name="market_listing_detail_not_found">Janiw listado jikxatkti</string>
     <string name="market_listing_detail_place_bid">Chanini uchaña</string>
@@ -435,6 +438,7 @@
     <string name="market_ship_dialog_submit">Iyawsaña</string>
     <string name="market_ship_dialog_title">Apayatap uñacht\'ayaña</string>
     <string name="market_shipping_days">Apayaña</string>
+    <string name="market_shipping_days_value">%1$s uru</string>
     <string name="market_shipping_notes">Notanaka</string>
     <string name="market_shipping_price">Chanipa</string>
     <string name="market_shipping_region">Región</string>

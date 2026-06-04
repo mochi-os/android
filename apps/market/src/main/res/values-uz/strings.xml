@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Hozir sotib oling</string>
     <string name="market_listing_detail_description_heading">Tavsif</string>
     <string name="market_listing_detail_edit">Tahrirlash</string>
+    <string name="market_listing_detail_information_heading">Yetkazib berish ma\'lumotlari</string>
     <string name="market_listing_detail_load_failed">Eʼlonni yuklab boʻlmadi</string>
+    <string name="market_listing_detail_listed">Joylangan %1$s</string>
     <string name="market_listing_detail_location_heading">Joylashuv</string>
+    <string name="market_listing_detail_message">Xabar</string>
     <string name="market_listing_detail_message_seller">Sotuvchiga xabar yuborish</string>
     <string name="market_listing_detail_not_found">Eʼlon topilmadi</string>
     <string name="market_listing_detail_place_bid">Taklif berish</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Tasdiqlash</string>
     <string name="market_ship_dialog_title">Joʻnatildi deb belgilash</string>
     <string name="market_shipping_days">Yetkazib berish</string>
+    <string name="market_shipping_days_value">%1$s kun</string>
     <string name="market_shipping_notes">Eslatmalar</string>
     <string name="market_shipping_price">Narx</string>
     <string name="market_shipping_region">Hudud</string>

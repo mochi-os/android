@@ -5,10 +5,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -20,16 +22,16 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.ShippingOption
 
 /**
- * Compact table of per-region shipping options for a listing.
+ * Per-region shipping options for a listing, one outlined card each.
  *
- * Columns: region, price, delivery estimate, notes. Each row shrinks
- * gracefully on narrow screens — region and notes ellipsize, the price
- * column is fixed-width.
+ * Each card pairs the region (left) with its delivery estimate and price
+ * (right); any free-text notes wrap onto a second line. Mirrors the web detail
+ * page's card list rather than a dense table so the options stay readable on a
+ * phone-width column.
  *
  * `option.currency` is a raw string on the wire (the comptroller doesn't
- * constrain it to the [Currency] enum here), so we tolerate unknown
- * codes by falling back to GBP for formatting and surfacing the raw
- * code if [Currency.valueOf] doesn't match.
+ * constrain it to the [Currency] enum here), so we tolerate unknown codes by
+ * falling back to GBP for formatting.
  */
 @Composable
 fun ShippingOptionsTable(
@@ -37,56 +39,61 @@ fun ShippingOptionsTable(
     modifier: Modifier = Modifier,
 ) {
     if (options.isEmpty()) return
-    Column(modifier = modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            HeaderCell(stringResource(R.string.market_shipping_region), Modifier.weight(2f))
-            HeaderCell(stringResource(R.string.market_shipping_price), Modifier.weight(1f))
-            HeaderCell(stringResource(R.string.market_shipping_days), Modifier.weight(2f))
-            HeaderCell(stringResource(R.string.market_shipping_notes), Modifier.weight(2f))
-        }
-        HorizontalDivider()
-        options.forEachIndexed { index, opt ->
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                Cell(opt.region, Modifier.weight(2f))
-                Cell(formatPriceSafe(opt.price, opt.currency), Modifier.weight(1f))
-                Cell(opt.days, Modifier.weight(2f))
-                Cell(opt.notes, Modifier.weight(2f))
-            }
-            if (index < options.size - 1) HorizontalDivider()
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        options.forEach { option ->
+            ShippingOptionCard(option = option)
         }
     }
 }
 
 @Composable
-private fun HeaderCell(text: String, modifier: Modifier = Modifier) {
-    Text(
-        text = text,
-        style = MaterialTheme.typography.labelMedium,
-        fontWeight = FontWeight.SemiBold,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = modifier,
-    )
-}
-
-@Composable
-private fun Cell(text: String, modifier: Modifier = Modifier) {
-    Text(
-        text = text,
-        style = MaterialTheme.typography.bodySmall,
-        maxLines = 2,
-        overflow = TextOverflow.Ellipsis,
-        modifier = modifier,
-    )
+private fun ShippingOptionCard(option: ShippingOption) {
+    OutlinedCard(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(12.dp),
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                Text(
+                    text = option.region,
+                    style = MaterialTheme.typography.bodyLarge,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                if (option.days.isNotBlank()) {
+                    Text(
+                        text = stringResource(R.string.market_shipping_days_value, option.days),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    text = formatPriceSafe(option.price, option.currency),
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.SemiBold,
+                )
+            }
+            if (option.notes.isNotBlank()) {
+                Text(
+                    text = option.notes,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+    }
 }
 
 private fun formatPriceSafe(amount: Long, currency: String): String {

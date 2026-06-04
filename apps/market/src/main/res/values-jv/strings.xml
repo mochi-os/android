@@ -205,8 +205,11 @@
     <string name="market_listing_detail_buy_now">Tuku saiki</string>
     <string name="market_listing_detail_description_heading">Katrangan</string>
     <string name="market_listing_detail_edit">Owahi</string>
+    <string name="market_listing_detail_information_heading">Informasi pangiriman</string>
     <string name="market_listing_detail_load_failed">Gagal mbukak listing</string>
+    <string name="market_listing_detail_listed">Kadhaptar %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasi</string>
+    <string name="market_listing_detail_message">Pesen</string>
     <string name="market_listing_detail_message_seller">Kirim pesen menyang dol</string>
     <string name="market_listing_detail_not_found">Listing ora ditemokaké</string>
     <string name="market_listing_detail_place_bid">Tetep tawaran</string>
@@ -415,6 +418,7 @@
     <string name="market_ship_dialog_submit">Konfirmasi</string>
     <string name="market_ship_dialog_title">Tandhani wis dikirim</string>
     <string name="market_shipping_days">Pengiriman</string>
+    <string name="market_shipping_days_value">%1$s dina</string>
     <string name="market_shipping_notes">Cathetan</string>
     <string name="market_shipping_price">Rega</string>
     <string name="market_shipping_region">Wilayah</string>

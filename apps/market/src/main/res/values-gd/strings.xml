@@ -202,8 +202,11 @@
     <string name="market_listing_detail_buy_now">Ceannaich a-nis</string>
     <string name="market_listing_detail_description_heading">Tuairisgeul</string>
     <string name="market_listing_detail_edit">Deasaich</string>
+    <string name="market_listing_detail_information_heading">Fiosrachadh lìbhrigidh</string>
     <string name="market_listing_detail_load_failed">Cha b\' urrainn an liosta a luchdadh</string>
+    <string name="market_listing_detail_listed">Air a liostadh %1$s</string>
     <string name="market_listing_detail_location_heading">Àite</string>
+    <string name="market_listing_detail_message">Teachdaireachd</string>
     <string name="market_listing_detail_message_seller">Cuir teachdaireachd dhan reiceadair</string>
     <string name="market_listing_detail_not_found">Cha deach an liosta a lorg</string>
     <string name="market_listing_detail_place_bid">Cuir tairgse</string>
@@ -412,6 +415,7 @@
     <string name="market_ship_dialog_submit">Dearbhaich</string>
     <string name="market_ship_dialog_title">Comharraich mar luingearaichte</string>
     <string name="market_shipping_days">Lìbhrigeadh</string>
+    <string name="market_shipping_days_value">%1$s latha</string>
     <string name="market_shipping_notes">Notaichean</string>
     <string name="market_shipping_price">Prìs</string>
     <string name="market_shipping_region">Roinn</string>

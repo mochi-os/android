@@ -207,8 +207,11 @@
     <string name="market_listing_detail_buy_now">Kaupa núna</string>
     <string name="market_listing_detail_description_heading">Lýsing</string>
     <string name="market_listing_detail_edit">Breyta</string>
+    <string name="market_listing_detail_information_heading">Afhendingarupplýsingar</string>
     <string name="market_listing_detail_load_failed">Tókst ekki að hlaða auglýsingu</string>
+    <string name="market_listing_detail_listed">Skráð %1$s</string>
     <string name="market_listing_detail_location_heading">Staðsetning</string>
+    <string name="market_listing_detail_message">Skilaboð</string>
     <string name="market_listing_detail_message_seller">Skrifa seljanda</string>
     <string name="market_listing_detail_not_found">Auglýsing fannst ekki</string>
     <string name="market_listing_detail_place_bid">Bjóða</string>
@@ -417,6 +420,7 @@
     <string name="market_ship_dialog_submit">Staðfesta</string>
     <string name="market_ship_dialog_title">Merkja sem sent</string>
     <string name="market_shipping_days">Afhending</string>
+    <string name="market_shipping_days_value">%1$s dagar</string>
     <string name="market_shipping_notes">Athugasemdir</string>
     <string name="market_shipping_price">Verð</string>
     <string name="market_shipping_region">Svæði</string>

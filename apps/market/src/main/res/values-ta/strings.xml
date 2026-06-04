@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">இப்போதே வாங்கு</string>
     <string name="market_listing_detail_description_heading">விளக்கம்</string>
     <string name="market_listing_detail_edit">திருத்து</string>
+    <string name="market_listing_detail_information_heading">டெலிவரி தகவல்</string>
     <string name="market_listing_detail_load_failed">பட்டியலை ஏற்ற முடியவில்லை</string>
+    <string name="market_listing_detail_listed">பட்டியலிடப்பட்டது %1$s</string>
     <string name="market_listing_detail_location_heading">இடம்</string>
+    <string name="market_listing_detail_message">செய்தி</string>
     <string name="market_listing_detail_message_seller">விற்பனையாளருக்கு செய்தி அனுப்பு</string>
     <string name="market_listing_detail_not_found">பட்டியல் கிடைக்கவில்லை</string>
     <string name="market_listing_detail_place_bid">ஏலம் கொடு</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">உறுதிசெய்</string>
     <string name="market_ship_dialog_title">அனுப்பப்பட்டதாகக் குறிக்கவும்</string>
     <string name="market_shipping_days">விநியோகம்</string>
+    <string name="market_shipping_days_value">%1$s நாட்கள்</string>
     <string name="market_shipping_notes">குறிப்புகள்</string>
     <string name="market_shipping_price">விலை</string>
     <string name="market_shipping_region">பகுதி</string>

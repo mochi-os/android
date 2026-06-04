@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">Қазір сатып алу</string>
     <string name="market_listing_detail_description_heading">Сипаттама</string>
     <string name="market_listing_detail_edit">Өңдеу</string>
+    <string name="market_listing_detail_information_heading">Жеткізу туралы ақпарат</string>
     <string name="market_listing_detail_load_failed">Хабарландыруды жүктеу сәтсіз аяқталды</string>
     <string name="market_listing_detail_loading">Хабарландыру жүктелуде</string>
+    <string name="market_listing_detail_listed">Жарияланды %1$s</string>
     <string name="market_listing_detail_location_heading">Орналасуы</string>
+    <string name="market_listing_detail_message">Хабарлама</string>
     <string name="market_listing_detail_message_seller">Сатушыға хабарлама жіберу</string>
     <string name="market_listing_detail_not_found">Хабарландыру табылмады</string>
     <string name="market_listing_detail_place_bid">Ұсыныс беру</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">Растау</string>
     <string name="market_ship_dialog_title">Жөнелтілді деп белгілеу</string>
     <string name="market_shipping_days">Жеткізу</string>
+    <string name="market_shipping_days_value">%1$s күн</string>
     <string name="market_shipping_notes">Жазбалар</string>
     <string name="market_shipping_price">Бағасы</string>
     <string name="market_shipping_region">Аймақ</string>

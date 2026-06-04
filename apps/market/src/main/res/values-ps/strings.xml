@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">اوس یې واخله</string>
     <string name="market_listing_detail_description_heading">تفصیل</string>
     <string name="market_listing_detail_edit">سمول</string>
+    <string name="market_listing_detail_information_heading">د لیږد معلومات</string>
     <string name="market_listing_detail_load_failed">د لیسټینګ د بار کولو پاتې راغلل</string>
+    <string name="market_listing_detail_listed">لیست شوی %1$s</string>
     <string name="market_listing_detail_location_heading">موقعیت</string>
+    <string name="market_listing_detail_message">پیغام</string>
     <string name="market_listing_detail_message_seller">د پلورونکي ته پیغام</string>
     <string name="market_listing_detail_not_found">لیسټینګ ونه موندل شو</string>
     <string name="market_listing_detail_place_bid">وړاندیز ولیکئ</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">تایید کړئ</string>
     <string name="market_ship_dialog_title">د لیږل شوي په توګه نښه کړئ</string>
     <string name="market_shipping_days">لیږد</string>
+    <string name="market_shipping_days_value">%1$s ورځې</string>
     <string name="market_shipping_notes">یادښتونه</string>
     <string name="market_shipping_price">بیه</string>
     <string name="market_shipping_region">سیمه</string>

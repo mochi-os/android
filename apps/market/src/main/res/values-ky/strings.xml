@@ -202,8 +202,11 @@
     <string name="market_listing_detail_buy_now">Азыр сатып алуу</string>
     <string name="market_listing_detail_description_heading">Сүрөттөмө</string>
     <string name="market_listing_detail_edit">Түзөтүү</string>
+    <string name="market_listing_detail_information_heading">Жеткирүү маалыматы</string>
     <string name="market_listing_detail_load_failed">Жарнаманы жүктөө ишке ашкан жок</string>
+    <string name="market_listing_detail_listed">Жарыяланды %1$s</string>
     <string name="market_listing_detail_location_heading">Жайгашкан жери</string>
+    <string name="market_listing_detail_message">Билдирүү</string>
     <string name="market_listing_detail_message_seller">Сатуучуга билдирүү</string>
     <string name="market_listing_detail_not_found">Жарнама табылган жок</string>
     <string name="market_listing_detail_place_bid">Сунуш кылуу</string>
@@ -412,6 +415,7 @@
     <string name="market_ship_dialog_submit">Ырастоо</string>
     <string name="market_ship_dialog_title">Жөнөтүлдү деп белгилөө</string>
     <string name="market_shipping_days">Жеткирүү</string>
+    <string name="market_shipping_days_value">%1$s күн</string>
     <string name="market_shipping_notes">Эскертүүлөр</string>
     <string name="market_shipping_price">Баасы</string>
     <string name="market_shipping_region">Регион</string>

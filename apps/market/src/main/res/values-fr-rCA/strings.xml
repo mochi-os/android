@@ -193,6 +193,7 @@
     <string name="market_sale_section_summary">Résumé</string>
     <string name="market_search_clear">Effacer la recherche</string>
     <string name="market_section_categories">Parcourir les catégories</string>
+    <string name="market_shipping_days_value">%1$s jours</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_shipping_price">Prix</string>
     <string name="market_sidebar_messages">Messages</string>
@@ -203,6 +204,7 @@
     <string name="market_sale_section_audit">Activité</string>
     <string name="market_account_location_label">Emplacement</string>
     <string name="market_editor_section_location">Emplacement</string>
+    <string name="market_listing_detail_listed">Publié le %1$s</string>
     <string name="market_listing_detail_location_heading">Emplacement</string>
     <string name="market_editor_section_delivery">Livraison</string>
     <string name="market_filter_delivery">Livraison</string>
@@ -430,8 +432,10 @@
     <string name="market_listing_detail_bids_heading">Historique des enchères</string>
     <string name="market_listing_detail_buy">Acheter</string>
     <string name="market_listing_detail_buy_now">Acheter maintenant</string>
+    <string name="market_listing_detail_information_heading">Informations de livraison</string>
     <string name="market_listing_detail_load_failed">Échec du chargement de l\'annonce</string>
     <string name="market_listing_detail_loading">Chargement de l\'annonce</string>
+    <string name="market_listing_detail_message">Message</string>
     <string name="market_listing_detail_message_seller">Écrire au vendeur</string>
     <string name="market_listing_detail_not_found">Annonce introuvable</string>
     <string name="market_listing_detail_place_bid">Placer une enchère</string>

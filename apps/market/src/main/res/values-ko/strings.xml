@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">지금 구매</string>
     <string name="market_listing_detail_description_heading">설명</string>
     <string name="market_listing_detail_edit">편집</string>
+    <string name="market_listing_detail_information_heading">배송 정보</string>
     <string name="market_listing_detail_load_failed">목록 불러오기에 실패했어요</string>
+    <string name="market_listing_detail_listed">등록일 %1$s</string>
     <string name="market_listing_detail_location_heading">위치</string>
+    <string name="market_listing_detail_message">메시지</string>
     <string name="market_listing_detail_message_seller">판매자에게 메시지</string>
     <string name="market_listing_detail_not_found">목록을 찾을 수 없어요</string>
     <string name="market_listing_detail_place_bid">입찰</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">확인</string>
     <string name="market_ship_dialog_title">배송됨으로 표시</string>
     <string name="market_shipping_days">배송</string>
+    <string name="market_shipping_days_value">%1$s일</string>
     <string name="market_shipping_notes">메모</string>
     <string name="market_shipping_price">가격</string>
     <string name="market_shipping_region">지역</string>

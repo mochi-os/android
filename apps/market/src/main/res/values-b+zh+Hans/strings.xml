@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">立即购买</string>
     <string name="market_listing_detail_description_heading">描述</string>
     <string name="market_listing_detail_edit">编辑</string>
+    <string name="market_listing_detail_information_heading">配送信息</string>
     <string name="market_listing_detail_load_failed">加载商品失败</string>
+    <string name="market_listing_detail_listed">发布于 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
+    <string name="market_listing_detail_message">消息</string>
     <string name="market_listing_detail_message_seller">联系卖家</string>
     <string name="market_listing_detail_not_found">商品未找到</string>
     <string name="market_listing_detail_place_bid">出价</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">确认</string>
     <string name="market_ship_dialog_title">标记为已发货</string>
     <string name="market_shipping_days">配送</string>
+    <string name="market_shipping_days_value">%1$s 天</string>
     <string name="market_shipping_notes">备注</string>
     <string name="market_shipping_price">价格</string>
     <string name="market_shipping_region">地区</string>

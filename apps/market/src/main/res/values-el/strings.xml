@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Αγορά τώρα</string>
     <string name="market_listing_detail_description_heading">Περιγραφή</string>
     <string name="market_listing_detail_edit">Επεξεργασία</string>
+    <string name="market_listing_detail_information_heading">Στοιχεία παράδοσης</string>
     <string name="market_listing_detail_load_failed">Αποτυχία φόρτωσης καταχώρισης</string>
+    <string name="market_listing_detail_listed">Καταχωρήθηκε %1$s</string>
     <string name="market_listing_detail_location_heading">Τοποθεσία</string>
+    <string name="market_listing_detail_message">Μήνυμα</string>
     <string name="market_listing_detail_message_seller">Μήνυμα στον πωλητή</string>
     <string name="market_listing_detail_not_found">Η καταχώριση δεν βρέθηκε</string>
     <string name="market_listing_detail_place_bid">Υποβολή προσφοράς</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Επιβεβαίωση</string>
     <string name="market_ship_dialog_title">Σήμανση ως απεσταλμένο</string>
     <string name="market_shipping_days">Παράδοση</string>
+    <string name="market_shipping_days_value">%1$s ημέρες</string>
     <string name="market_shipping_notes">Σημειώσεις</string>
     <string name="market_shipping_price">Τιμή</string>
     <string name="market_shipping_region">Περιοχή</string>

@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">立即購買</string>
     <string name="market_listing_detail_description_heading">說明</string>
     <string name="market_listing_detail_edit">編輯</string>
+    <string name="market_listing_detail_information_heading">送貨資訊</string>
     <string name="market_listing_detail_load_failed">載入刊登失敗</string>
+    <string name="market_listing_detail_listed">刊登於 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
+    <string name="market_listing_detail_message">訊息</string>
     <string name="market_listing_detail_message_seller">傳訊給賣家</string>
     <string name="market_listing_detail_not_found">找不到刊登</string>
     <string name="market_listing_detail_place_bid">出價</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">確認</string>
     <string name="market_ship_dialog_title">標示為已出貨</string>
     <string name="market_shipping_days">運送</string>
+    <string name="market_shipping_days_value">%1$s 天</string>
     <string name="market_shipping_notes">備註</string>
     <string name="market_shipping_price">價格</string>
     <string name="market_shipping_region">區域</string>

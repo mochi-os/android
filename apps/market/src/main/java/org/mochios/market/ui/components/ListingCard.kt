@@ -272,7 +272,7 @@ fun ListingCard(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
-                        RatingStars(rating = rating, showCount = false, tint = RatingGold)
+                        RatingStars(rating = rating, showCount = false, tint = RatingStarGold)
                         if (reviews > 0) {
                             Text(
                                 text = "($reviews)",
@@ -288,21 +288,36 @@ fun ListingCard(
 }
 
 /** Green tick beside a verified / onboarded seller, matching the web accent. */
-private val VerifiedGreen = Color(0xFF22C55E)
-
-/** Gold fill for the listing rating stars. */
-private val RatingGold = Color(0xFFFBBF24)
+internal val VerifiedGreen = Color(0xFF22C55E)
 
 /** Fixed height reserved for the rating row so cards align in the grid. */
 private val RatingRowHeight = 18.dp
 
 /** Resolves the overlay label for noteworthy pricing models, or null for fixed. */
 @Composable
-private fun pricingLabel(pricing: PricingModel?): String? = when (pricing) {
+internal fun pricingLabel(pricing: PricingModel?): String? = when (pricing) {
     PricingModel.PWYW -> stringResource(R.string.market_filter_pricing_pwyw)
     PricingModel.SUBSCRIPTION -> stringResource(R.string.market_filter_pricing_subscription)
     PricingModel.AUCTION -> stringResource(R.string.market_filter_pricing_auction)
     else -> null
+}
+
+/** Dark translucent fill shared by the pricing pill / detail pricing chip. */
+internal val PricingFill = Color.Black.copy(alpha = 0.55f)
+
+/** Colour-coded condition fill: green (new), amber (used), blue (refurbished). */
+internal fun conditionBadgeColor(condition: Condition): Color = when (condition) {
+    Condition.NEW -> Color(0xFF16A34A)
+    Condition.USED -> Color(0xFFF59E0B)
+    Condition.REFURBISHED -> Color(0xFF2563EB)
+}
+
+/** Localised condition label shared by the badge / detail chip. */
+@Composable
+internal fun conditionLabel(condition: Condition): String = when (condition) {
+    Condition.NEW -> stringResource(R.string.market_condition_new)
+    Condition.USED -> stringResource(R.string.market_condition_used)
+    Condition.REFURBISHED -> stringResource(R.string.market_condition_refurbished)
 }
 
 /** Dark translucent pill naming the pricing model, overlaid on the photo. */
@@ -317,7 +332,7 @@ private fun PricingPill(label: String, modifier: Modifier = Modifier) {
         overflow = TextOverflow.Ellipsis,
         modifier = modifier
             .clip(RoundedCornerShape(999.dp))
-            .background(Color.Black.copy(alpha = 0.55f))
+            .background(PricingFill)
             .padding(horizontal = 10.dp, vertical = 4.dp),
     )
 }
@@ -328,24 +343,14 @@ private fun PricingPill(label: String, modifier: Modifier = Modifier) {
  */
 @Composable
 private fun ConditionOverlayBadge(condition: Condition, modifier: Modifier = Modifier) {
-    val label = when (condition) {
-        Condition.NEW -> stringResource(R.string.market_condition_new)
-        Condition.USED -> stringResource(R.string.market_condition_used)
-        Condition.REFURBISHED -> stringResource(R.string.market_condition_refurbished)
-    }
-    val background = when (condition) {
-        Condition.NEW -> Color(0xFF16A34A)
-        Condition.USED -> Color(0xFFF59E0B)
-        Condition.REFURBISHED -> Color(0xFF2563EB)
-    }
     Text(
-        text = label,
+        text = conditionLabel(condition),
         style = MaterialTheme.typography.labelSmall,
         fontWeight = FontWeight.SemiBold,
         color = Color.White,
         modifier = modifier
             .clip(RoundedCornerShape(6.dp))
-            .background(background)
+            .background(conditionBadgeColor(condition))
             .padding(horizontal = 8.dp, vertical = 3.dp),
     )
 }

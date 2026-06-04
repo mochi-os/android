@@ -214,8 +214,11 @@
     <string name="market_listing_detail_buy_now">Achte kounye a</string>
     <string name="market_listing_detail_description_heading">Deskripsyon</string>
     <string name="market_listing_detail_edit">Modifye</string>
+    <string name="market_listing_detail_information_heading">Enfòmasyon livrezon</string>
     <string name="market_listing_detail_load_failed">Echwe pou chaje lis</string>
+    <string name="market_listing_detail_listed">Liste %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasyon</string>
+    <string name="market_listing_detail_message">Mesaj</string>
     <string name="market_listing_detail_message_seller">Mesaj vandè</string>
     <string name="market_listing_detail_not_found">Lis pa jwenn</string>
     <string name="market_listing_detail_place_bid">Mete yon òf</string>
@@ -424,6 +427,7 @@
     <string name="market_ship_dialog_submit">Konfime</string>
     <string name="market_ship_dialog_title">Make kòm voye</string>
     <string name="market_shipping_days">Livrezon</string>
+    <string name="market_shipping_days_value">%1$s jou</string>
     <string name="market_shipping_notes">Nòt</string>
     <string name="market_shipping_price">Pri</string>
     <string name="market_shipping_region">Rejyon</string>

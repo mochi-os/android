@@ -20,6 +20,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.market.R
 
+/** Gold fill for rating stars, shared across listing cards and review lists. */
+internal val RatingStarGold = Color(0xFFFBBF24)
+
 /**
  * Five-star rating display with half-star precision.
  *

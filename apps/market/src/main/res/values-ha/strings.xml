@@ -214,8 +214,11 @@
     <string name="market_listing_detail_buy_now">Sayi yanzu</string>
     <string name="market_listing_detail_description_heading">Bayani</string>
     <string name="market_listing_detail_edit">Gyara</string>
+    <string name="market_listing_detail_information_heading">Bayanin isarwa</string>
     <string name="market_listing_detail_load_failed">An gaza loading listing</string>
+    <string name="market_listing_detail_listed">An jera %1$s</string>
     <string name="market_listing_detail_location_heading">Wuri</string>
+    <string name="market_listing_detail_message">Saƙo</string>
     <string name="market_listing_detail_message_seller">Aika saƙo ga mai sayarwa</string>
     <string name="market_listing_detail_not_found">Ba a samu listing ba</string>
     <string name="market_listing_detail_place_bid">Sanya tayi</string>
@@ -424,6 +427,7 @@
     <string name="market_ship_dialog_submit">Tabbatar</string>
     <string name="market_ship_dialog_title">Alama a matsayin an aika</string>
     <string name="market_shipping_days">Jigilarwa</string>
+    <string name="market_shipping_days_value">Kwanaki %1$s</string>
     <string name="market_shipping_notes">Bayanai</string>
     <string name="market_shipping_price">Farashi</string>
     <string name="market_shipping_region">Yanki</string>

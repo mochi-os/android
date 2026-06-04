@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">İndi al</string>
     <string name="market_listing_detail_description_heading">Təsvir</string>
     <string name="market_listing_detail_edit">Redaktə et</string>
+    <string name="market_listing_detail_information_heading">Çatdırılma məlumatı</string>
     <string name="market_listing_detail_load_failed">Elan yüklənmədi</string>
     <string name="market_listing_detail_loading">Elan yüklənir</string>
+    <string name="market_listing_detail_listed">Yerləşdirilib %1$s</string>
     <string name="market_listing_detail_location_heading">Yer</string>
+    <string name="market_listing_detail_message">Mesaj</string>
     <string name="market_listing_detail_message_seller">Satıcıya mesaj göndər</string>
     <string name="market_listing_detail_not_found">Elan tapılmadı</string>
     <string name="market_listing_detail_place_bid">Təklif ver</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">Təsdiqlə</string>
     <string name="market_ship_dialog_title">Göndərilmiş kimi işarələ</string>
     <string name="market_shipping_days">Çatdırılma</string>
+    <string name="market_shipping_days_value">%1$s gün</string>
     <string name="market_shipping_notes">Qeydlər</string>
     <string name="market_shipping_price">Qiymət</string>
     <string name="market_shipping_region">Bölgə</string>

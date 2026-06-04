@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ئێستا بیکڕە</string>
     <string name="market_listing_detail_description_heading">وەسف</string>
     <string name="market_listing_detail_edit">دەستکاری</string>
+    <string name="market_listing_detail_information_heading">زانیاری گەیاندن</string>
     <string name="market_listing_detail_load_failed">بارکردنی ناونووسکراو سەرکەوتوو نەبوو</string>
+    <string name="market_listing_detail_listed">بڵاوکرایەوە %1$s</string>
     <string name="market_listing_detail_location_heading">شوێن</string>
+    <string name="market_listing_detail_message">پەیام</string>
     <string name="market_listing_detail_message_seller">پەیام بۆ فرۆشیار</string>
     <string name="market_listing_detail_not_found">ناونووسکراو نەدۆزرایەوە</string>
     <string name="market_listing_detail_place_bid">پێشنیار</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">پشتڕاستکردنەوە</string>
     <string name="market_ship_dialog_title">نیشانەکردن وەک ناردراو</string>
     <string name="market_shipping_days">گەیاندن</string>
+    <string name="market_shipping_days_value">%1$s ڕۆژ</string>
     <string name="market_shipping_notes">تێبینییەکان</string>
     <string name="market_shipping_price">نرخ</string>
     <string name="market_shipping_region">ناوچە</string>

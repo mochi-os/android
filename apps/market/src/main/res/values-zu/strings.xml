@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Thenga manje</string>
     <string name="market_listing_detail_description_heading">Incazelo</string>
     <string name="market_listing_detail_edit">Hlela</string>
+    <string name="market_listing_detail_information_heading">Ulwazi lokulethwa</string>
     <string name="market_listing_detail_load_failed">Kuhlulekile ukulayisha ushicilelo</string>
+    <string name="market_listing_detail_listed">Kufakwe %1$s</string>
     <string name="market_listing_detail_location_heading">Indawo</string>
+    <string name="market_listing_detail_message">Umlayezo</string>
     <string name="market_listing_detail_message_seller">Thumela umyalezo kumthengisi</string>
     <string name="market_listing_detail_not_found">Ushicilelo alutholakalanga</string>
     <string name="market_listing_detail_place_bid">Faka isipho</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Qinisekisa</string>
     <string name="market_ship_dialog_title">Maka njengokuthunyelwe</string>
     <string name="market_shipping_days">Ukulethwa</string>
+    <string name="market_shipping_days_value">%1$s izinsuku</string>
     <string name="market_shipping_notes">Amanothi</string>
     <string name="market_shipping_price">Intengo</string>
     <string name="market_shipping_region">Isifunda</string>

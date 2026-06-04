@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Megvásárlás</string>
     <string name="market_listing_detail_description_heading">Leírás</string>
     <string name="market_listing_detail_edit">Szerkesztés</string>
+    <string name="market_listing_detail_information_heading">Szállítási információ</string>
     <string name="market_listing_detail_load_failed">Nem sikerült betölteni a hirdetést</string>
+    <string name="market_listing_detail_listed">Meghirdetve: %1$s</string>
     <string name="market_listing_detail_location_heading">Hely</string>
+    <string name="market_listing_detail_message">Üzenet</string>
     <string name="market_listing_detail_message_seller">Üzenet az eladónak</string>
     <string name="market_listing_detail_not_found">Hirdetés nem található</string>
     <string name="market_listing_detail_place_bid">Licit leadása</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Megerősítés</string>
     <string name="market_ship_dialog_title">Megjelölés feladottként</string>
     <string name="market_shipping_days">Szállítás</string>
+    <string name="market_shipping_days_value">%1$s nap</string>
     <string name="market_shipping_notes">Jegyzetek</string>
     <string name="market_shipping_price">Ár</string>
     <string name="market_shipping_region">Régió</string>

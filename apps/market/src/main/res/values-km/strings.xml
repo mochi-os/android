@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ទិញឥឡូវ</string>
     <string name="market_listing_detail_description_heading">ការពិពណ៌នា</string>
     <string name="market_listing_detail_edit">កែសម្រួល</string>
+    <string name="market_listing_detail_information_heading">ព័ត៌មានដឹកជញ្ជូន</string>
     <string name="market_listing_detail_load_failed">បរាជ័យក្នុងការផ្ទុកការដាក់លក់</string>
+    <string name="market_listing_detail_listed">បានចុះបញ្ជី %1$s</string>
     <string name="market_listing_detail_location_heading">ទីតាំង</string>
+    <string name="market_listing_detail_message">សារ</string>
     <string name="market_listing_detail_message_seller">ផ្ញើសារទៅអ្នកលក់</string>
     <string name="market_listing_detail_not_found">រកមិនឃើញការដាក់លក់</string>
     <string name="market_listing_detail_place_bid">ដាក់តម្លៃដេញ</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">បញ្ជាក់</string>
     <string name="market_ship_dialog_title">សម្គាល់ថាបានដឹកជញ្ជូន</string>
     <string name="market_shipping_days">ការដឹកជញ្ជូន</string>
+    <string name="market_shipping_days_value">%1$s ថ្ងៃ</string>
     <string name="market_shipping_notes">កំណត់ចំណាំ</string>
     <string name="market_shipping_price">តម្លៃ</string>
     <string name="market_shipping_region">តំបន់</string>

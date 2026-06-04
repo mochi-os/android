@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Kunan rantiy</string>
     <string name="market_listing_detail_description_heading">Willariy</string>
     <string name="market_listing_detail_edit">Hukchay</string>
+    <string name="market_listing_detail_information_heading">Apachina willakuy</string>
     <string name="market_listing_detail_load_failed">Mana qhatuyta wichachiyta atinchu</string>
+    <string name="market_listing_detail_listed">Churasqa %1$s</string>
     <string name="market_listing_detail_location_heading">Cheqaq</string>
+    <string name="market_listing_detail_message">Willay</string>
     <string name="market_listing_detail_message_seller">Qhatuqman willakuy</string>
     <string name="market_listing_detail_not_found">Qhatuy mana tarisqachu</string>
     <string name="market_listing_detail_place_bid">Chanin churay</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Takyachiy</string>
     <string name="market_ship_dialog_title">Apachisqaman churay</string>
     <string name="market_shipping_days">Apachiy</string>
+    <string name="market_shipping_days_value">%1$s p\'unchaw</string>
     <string name="market_shipping_notes">Qillqakuna</string>
     <string name="market_shipping_price">Chanin</string>
     <string name="market_shipping_region">Suyu</string>

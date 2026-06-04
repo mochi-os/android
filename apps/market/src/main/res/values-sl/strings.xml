@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Kupi zdaj</string>
     <string name="market_listing_detail_description_heading">Opis</string>
     <string name="market_listing_detail_edit">Uredi</string>
+    <string name="market_listing_detail_information_heading">Informacije o dostavi</string>
     <string name="market_listing_detail_load_failed">Neuspešno nalaganje oglasa</string>
+    <string name="market_listing_detail_listed">Objavljeno %1$s</string>
     <string name="market_listing_detail_location_heading">Lokacija</string>
+    <string name="market_listing_detail_message">Sporočilo</string>
     <string name="market_listing_detail_message_seller">Sporočilo prodajalcu</string>
     <string name="market_listing_detail_not_found">Oglas ni najden</string>
     <string name="market_listing_detail_place_bid">Oddaj ponudbo</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Potrdi</string>
     <string name="market_ship_dialog_title">Označi kot odposlano</string>
     <string name="market_shipping_days">Dostava</string>
+    <string name="market_shipping_days_value">%1$s dni</string>
     <string name="market_shipping_notes">Opombe</string>
     <string name="market_shipping_price">Cena</string>
     <string name="market_shipping_region">Regija</string>

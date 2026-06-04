@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Kúpiť teraz</string>
     <string name="market_listing_detail_description_heading">Popis</string>
     <string name="market_listing_detail_edit">Upraviť</string>
+    <string name="market_listing_detail_information_heading">Informácie o doručení</string>
     <string name="market_listing_detail_load_failed">Nepodarilo sa načítať inzerát</string>
+    <string name="market_listing_detail_listed">Pridané %1$s</string>
     <string name="market_listing_detail_location_heading">Poloha</string>
+    <string name="market_listing_detail_message">Správa</string>
     <string name="market_listing_detail_message_seller">Napísať predávajúcemu</string>
     <string name="market_listing_detail_not_found">Inzerát sa nenašiel</string>
     <string name="market_listing_detail_place_bid">Ponúknuť</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Potvrdiť</string>
     <string name="market_ship_dialog_title">Označiť ako odoslané</string>
     <string name="market_shipping_days">Doručenie</string>
+    <string name="market_shipping_days_value">%1$s dní</string>
     <string name="market_shipping_notes">Poznámky</string>
     <string name="market_shipping_price">Cena</string>
     <string name="market_shipping_region">Región</string>

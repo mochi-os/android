@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Amma bitadhu</string>
     <string name="market_listing_detail_description_heading">Ibsa</string>
     <string name="market_listing_detail_edit">Sirreessi</string>
+    <string name="market_listing_detail_information_heading">Odeeffannoo geejjibaa</string>
     <string name="market_listing_detail_load_failed">Tarreeffama fe\'achuu hin dandeenye</string>
+    <string name="market_listing_detail_listed">Tarreeffame %1$s</string>
     <string name="market_listing_detail_location_heading">Iddoo</string>
+    <string name="market_listing_detail_message">Ergaa</string>
     <string name="market_listing_detail_message_seller">Gurgurtaa ergaaf ergi</string>
     <string name="market_listing_detail_not_found">Tarreeffamni hin argamne</string>
     <string name="market_listing_detail_place_bid">Caasaa kennuu</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Mirkaneessi</string>
     <string name="market_ship_dialog_title">Erge jechuu mallatteessi</string>
     <string name="market_shipping_days">Geejjiba</string>
+    <string name="market_shipping_days_value">Guyyaa %1$s</string>
     <string name="market_shipping_notes">Yaadannoo</string>
     <string name="market_shipping_price">Gatii</string>
     <string name="market_shipping_region">Naannoo</string>

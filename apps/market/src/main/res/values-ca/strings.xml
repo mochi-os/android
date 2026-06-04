@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Compra ara</string>
     <string name="market_listing_detail_description_heading">Descripció</string>
     <string name="market_listing_detail_edit">Edita</string>
+    <string name="market_listing_detail_information_heading">Informació de lliurament</string>
     <string name="market_listing_detail_load_failed">No s\'ha pogut carregar l\'anunci</string>
+    <string name="market_listing_detail_listed">Publicat %1$s</string>
     <string name="market_listing_detail_location_heading">Ubicació</string>
+    <string name="market_listing_detail_message">Missatge</string>
     <string name="market_listing_detail_message_seller">Envia un missatge al venedor</string>
     <string name="market_listing_detail_not_found">No s\'ha trobat l\'anunci</string>
     <string name="market_listing_detail_place_bid">Fes una oferta</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Confirma</string>
     <string name="market_ship_dialog_title">Marca com a enviat</string>
     <string name="market_shipping_days">Lliurament</string>
+    <string name="market_shipping_days_value">%1$s dies</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_shipping_price">Preu</string>
     <string name="market_shipping_region">Regió</string>

@@ -133,6 +133,7 @@
     <string name="market_sale_section_audit">動態</string>
     <string name="market_account_location_label">位置</string>
     <string name="market_editor_section_location">位置</string>
+    <string name="market_listing_detail_listed">上架於 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
     <string name="app_name">市場</string>
     <string name="market_channel_name">市場</string>
@@ -152,6 +153,7 @@
     <string name="market_sidebar_reviews">評論</string>
     <string name="market_purchase_refunded">已退款</string>
     <string name="market_status_refunded">已退款</string>
+    <string name="market_shipping_days_value">%1$s 日</string>
     <string name="market_shipping_notes">備註</string>
     <string name="market_editor_type_digital">數位</string>
     <string name="market_filter_type_digital">數位</string>
@@ -367,8 +369,10 @@
     <string name="market_listing_detail_bids_heading">出價紀錄</string>
     <string name="market_listing_detail_buy">購買</string>
     <string name="market_listing_detail_buy_now">立即購買</string>
+    <string name="market_listing_detail_information_heading">送貨資訊</string>
     <string name="market_listing_detail_load_failed">無法載入上架資料</string>
     <string name="market_listing_detail_loading">正在載入上架資料</string>
+    <string name="market_listing_detail_message">訊息</string>
     <string name="market_listing_detail_message_seller">傳訊息畀賣家</string>
     <string name="market_listing_detail_not_found">搵唔到上架資料</string>
     <string name="market_listing_detail_place_bid">出價</string>

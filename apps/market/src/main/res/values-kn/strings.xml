@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ಈಗಲೇ ಖರೀದಿಸಿ</string>
     <string name="market_listing_detail_description_heading">ವಿವರಣೆ</string>
     <string name="market_listing_detail_edit">ಸಂಪಾದಿಸಿ</string>
+    <string name="market_listing_detail_information_heading">ವಿತರಣಾ ಮಾಹಿತಿ</string>
     <string name="market_listing_detail_load_failed">ಲಿಸ್ಟಿಂಗ್ ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="market_listing_detail_listed">ಪಟ್ಟಿ ಮಾಡಲಾಗಿದೆ %1$s</string>
     <string name="market_listing_detail_location_heading">ಸ್ಥಳ</string>
+    <string name="market_listing_detail_message">ಸಂದೇಶ</string>
     <string name="market_listing_detail_message_seller">ಮಾರಾಟಗಾರರಿಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
     <string name="market_listing_detail_not_found">ಲಿಸ್ಟಿಂಗ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="market_listing_detail_place_bid">ಬಿಡ್ ಸಲ್ಲಿಸಿ</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">ದೃಢೀಕರಿಸಿ</string>
     <string name="market_ship_dialog_title">ಶಿಪ್ ಮಾಡಲಾಗಿದೆ ಎಂದು ಮಾರ್ಕ್ ಮಾಡಿ</string>
     <string name="market_shipping_days">ಡೆಲಿವರಿ</string>
+    <string name="market_shipping_days_value">%1$s ದಿನಗಳು</string>
     <string name="market_shipping_notes">ನೋಟ್‌ಗಳು</string>
     <string name="market_shipping_price">ಬೆಲೆ</string>
     <string name="market_shipping_region">ಪ್ರದೇಶ</string>

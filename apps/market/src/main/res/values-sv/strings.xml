@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Köp nu</string>
     <string name="market_listing_detail_description_heading">Beskrivning</string>
     <string name="market_listing_detail_edit">Redigera</string>
+    <string name="market_listing_detail_information_heading">Leveransinformation</string>
     <string name="market_listing_detail_load_failed">Kunde inte läsa in annons</string>
+    <string name="market_listing_detail_listed">Publicerad %1$s</string>
     <string name="market_listing_detail_location_heading">Plats</string>
+    <string name="market_listing_detail_message">Meddelande</string>
     <string name="market_listing_detail_message_seller">Meddela säljare</string>
     <string name="market_listing_detail_not_found">Annons hittades inte</string>
     <string name="market_listing_detail_place_bid">Lägg bud</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Bekräfta</string>
     <string name="market_ship_dialog_title">Markera som skickad</string>
     <string name="market_shipping_days">Leverans</string>
+    <string name="market_shipping_days_value">%1$s dagar</string>
     <string name="market_shipping_notes">Anteckningar</string>
     <string name="market_shipping_price">Pris</string>
     <string name="market_shipping_region">Region</string>

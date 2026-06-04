@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">ابھی خریدیں</string>
     <string name="market_listing_detail_description_heading">تفصیل</string>
     <string name="market_listing_detail_edit">ترمیم</string>
+    <string name="market_listing_detail_information_heading">ترسیل کی معلومات</string>
     <string name="market_listing_detail_load_failed">لسٹنگ لوڈ کرنے میں ناکامی</string>
+    <string name="market_listing_detail_listed">فہرست شدہ %1$s</string>
     <string name="market_listing_detail_location_heading">مقام</string>
+    <string name="market_listing_detail_message">پیغام</string>
     <string name="market_listing_detail_message_seller">بیچنے والے کو پیغام بھیجیں</string>
     <string name="market_listing_detail_not_found">لسٹنگ نہیں ملی</string>
     <string name="market_listing_detail_place_bid">بولی لگائیں</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">تصدیق کریں</string>
     <string name="market_ship_dialog_title">بھیج دیا گیا نشان زد کریں</string>
     <string name="market_shipping_days">ڈیلیوری</string>
+    <string name="market_shipping_days_value">%1$s دن</string>
     <string name="market_shipping_notes">نوٹس</string>
     <string name="market_shipping_price">قیمت</string>
     <string name="market_shipping_region">ریجن</string>

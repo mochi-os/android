@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">Prynu nawr</string>
     <string name="market_listing_detail_description_heading">Disgrifiad</string>
     <string name="market_listing_detail_edit">Golygu</string>
+    <string name="market_listing_detail_information_heading">Gwybodaeth dosbarthu</string>
     <string name="market_listing_detail_load_failed">Methwyd llwytho\'r rhestriad</string>
     <string name="market_listing_detail_loading">Yn llwytho\'r rhestriad</string>
+    <string name="market_listing_detail_listed">Rhestrwyd %1$s</string>
     <string name="market_listing_detail_location_heading">Lleoliad</string>
+    <string name="market_listing_detail_message">Neges</string>
     <string name="market_listing_detail_message_seller">Anfon neges at y gwerthwr</string>
     <string name="market_listing_detail_not_found">Ni chanfuwyd y rhestriad</string>
     <string name="market_listing_detail_place_bid">Cyflwyno cynnig</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">Cadarnhau</string>
     <string name="market_ship_dialog_title">Marcio fel wedi\'i anfon</string>
     <string name="market_shipping_days">Danfoniad</string>
+    <string name="market_shipping_days_value">%1$s diwrnod</string>
     <string name="market_shipping_notes">Nodiadau</string>
     <string name="market_shipping_price">Pris</string>
     <string name="market_shipping_region">Rhanbarth</string>

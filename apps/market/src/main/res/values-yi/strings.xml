@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">קויפֿן איצט</string>
     <string name="market_listing_detail_description_heading">באַשרײַבונג</string>
     <string name="market_listing_detail_edit">רעדאַקטירן</string>
+    <string name="market_listing_detail_information_heading">ליווערונג אינפֿאָרמאַציע</string>
     <string name="market_listing_detail_load_failed">ניט געלונגען צו לאָדן רשימה</string>
+    <string name="market_listing_detail_listed">ארויפֿגעלייגט %1$s</string>
     <string name="market_listing_detail_location_heading">אָרט</string>
+    <string name="market_listing_detail_message">אָנזאָג</string>
     <string name="market_listing_detail_message_seller">שיקן בריוו צום פֿאַרקויפֿער</string>
     <string name="market_listing_detail_not_found">רשימה ניט געפֿונען</string>
     <string name="market_listing_detail_place_bid">מאַכן בעלע</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">באַשטעטיקן</string>
     <string name="market_ship_dialog_title">צייכענען ווי פֿאַרשיקט</string>
     <string name="market_shipping_days">צושטעלן</string>
+    <string name="market_shipping_days_value">%1$s טעג</string>
     <string name="market_shipping_notes">נאָטיצן</string>
     <string name="market_shipping_price">פּרײַז</string>
     <string name="market_shipping_region">ראַיאָן</string>

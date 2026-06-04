@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Beli ayeuna</string>
     <string name="market_listing_detail_description_heading">Pedaran</string>
     <string name="market_listing_detail_edit">Édit</string>
+    <string name="market_listing_detail_information_heading">Émbaran pangiriman</string>
     <string name="market_listing_detail_load_failed">Gagal mungkahan listing</string>
+    <string name="market_listing_detail_listed">Didaptarkeun %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasi</string>
+    <string name="market_listing_detail_message">Talatah</string>
     <string name="market_listing_detail_message_seller">Pesen ka nu ngajual</string>
     <string name="market_listing_detail_not_found">Listing teu kapanggih</string>
     <string name="market_listing_detail_place_bid">Tawar harga</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Konfirmasi</string>
     <string name="market_ship_dialog_title">Tandaan dikirim</string>
     <string name="market_shipping_days">Pangiriman</string>
+    <string name="market_shipping_days_value">%1$s poé</string>
     <string name="market_shipping_notes">Catetan</string>
     <string name="market_shipping_price">Harga</string>
     <string name="market_shipping_region">Daérah</string>

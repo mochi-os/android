@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">اشترِ الآن</string>
     <string name="market_listing_detail_description_heading">الوصف</string>
     <string name="market_listing_detail_edit">تعديل</string>
+    <string name="market_listing_detail_information_heading">معلومات التوصيل</string>
     <string name="market_listing_detail_load_failed">فشل تحميل القائمة</string>
+    <string name="market_listing_detail_listed">أُدرج %1$s</string>
     <string name="market_listing_detail_location_heading">الموقع</string>
+    <string name="market_listing_detail_message">رسالة</string>
     <string name="market_listing_detail_message_seller">مراسلة البائع</string>
     <string name="market_listing_detail_not_found">القائمة غير موجودة</string>
     <string name="market_listing_detail_place_bid">تقديم مزايدة</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">تأكيد</string>
     <string name="market_ship_dialog_title">وضع علامة مشحون</string>
     <string name="market_shipping_days">التسليم</string>
+    <string name="market_shipping_days_value">%1$s أيام</string>
     <string name="market_shipping_notes">ملاحظات</string>
     <string name="market_shipping_price">السعر</string>
     <string name="market_shipping_region">المنطقة</string>

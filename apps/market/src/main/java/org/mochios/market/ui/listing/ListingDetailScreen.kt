@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,30 +20,37 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.LocalShipping
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Message
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedCard
+import androidx.compose.material3.OutlinedIconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -60,6 +68,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -77,38 +87,46 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LoadingState
-import org.mochios.android.ui.components.LocationMapView
 import org.mochios.market.R
 import org.mochios.market.lib.locationName
 import org.mochios.market.lib.parseLocation
 import org.mochios.market.lib.ratingStars
-import org.mochios.market.lib.toPlaceData
+import org.mochios.market.lib.rememberSellerAvatarUrl
 import org.mochios.market.model.AccountSummary
 import org.mochios.market.model.Asset
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Bid
-import org.mochios.market.model.Category
+import org.mochios.market.model.Condition
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingStatus
 import org.mochios.market.model.ListingType
+import org.mochios.market.model.Photo
 import org.mochios.market.model.PricingModel
+import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.repository.MarketRepository
 import org.mochios.market.ui.components.AuctionBidHistory
 import org.mochios.market.ui.components.AuditTimeline
-import org.mochios.market.ui.components.ConditionBadge
 import org.mochios.market.ui.components.DigitalAssetsList
 import org.mochios.market.ui.components.PhotoCarousel
 import org.mochios.market.ui.components.PriceDisplay
+import org.mochios.market.ui.components.PricingFill
+import org.mochios.market.ui.components.conditionBadgeColor
+import org.mochios.market.ui.components.conditionLabel
+import org.mochios.market.ui.components.pricingLabel
+import org.mochios.market.ui.components.RatingStarGold
 import org.mochios.market.ui.components.RatingStars
+import org.mochios.market.ui.components.VerifiedGreen
+import org.mochios.market.ui.components.SellerReviewsSection
 import org.mochios.market.ui.components.ShippingOptionsTable
-import org.mochios.market.ui.components.StatusBadge
+import org.mochios.market.ui.components.knownStatusLabel
 import org.mochios.market.ui.components.WarningsSection
 import org.mochios.market.ui.dialog.PlaceBidDialog
 import org.mochios.market.ui.dialog.ReportListingDialog
@@ -193,35 +211,39 @@ fun ListingDetailScreen(
             )
         },
     ) { padding ->
-        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+        Box(modifier = Modifier
+            .fillMaxSize()
+            .padding(padding)) {
             when {
                 state.isLoading && state.listing == null -> {
                     LoadingState()
                 }
+
                 state.error != null && state.listing == null -> {
                     ErrorState(
                         error = state.error!!,
                         onRetry = { viewModel.load(listingId) },
                     )
                 }
+
                 state.listing == null -> {
                     EmptyState(
                         icon = Icons.Default.Inventory,
                         title = stringResource(R.string.market_listing_detail_not_found),
                     )
                 }
+
                 else -> {
                     val response = state.listing!!
                     val listing = response.listing
                     val seller = response.seller
                     val auction = response.auction
                     val isOwner = currentUserId != null && currentUserId == listing.seller
-                    val categoryName = state.categories
-                        .firstOrNull { it.id == listing.category }?.name
 
                     ListingDetailContent(
                         listing = listing,
                         detail = response,
+                        photos = state.photos,
                         seller = seller,
                         sellerName = seller.name.ifBlank {
                             stringResource(R.string.market_listing_detail_seller_heading)
@@ -229,13 +251,15 @@ fun ListingDetailScreen(
                         sellerRating = ratingStars(seller.rating),
                         sellerReviews = seller.reviews.toInt(),
                         sellerSales = seller.sales.toInt(),
-                        sellerVerified = (seller.verified ?: 0) >= 2,
-                        categoryId = listing.category,
-                        categoryName = categoryName,
+                        // Match ListingCard: show the verified tick once the
+                        // seller is onboarded (or explicitly verified).
+                        sellerVerified = (seller.onboarded ?: 0) > 0 ||
+                            (seller.verified ?: 0) >= 2,
                         auction = auction,
                         bids = response.bids,
                         assets = response.assets,
                         audit = state.audit,
+                        reviews = state.sellerReviews,
                         isOwner = isOwner,
                         isSaved = isSaved,
                         isReported = isReported,
@@ -247,9 +271,6 @@ fun ListingDetailScreen(
                         },
                         onSellerTap = {
                             navController.navigate(MarketApp.publicProfile(seller.id))
-                        },
-                        onCategoryTap = { id ->
-                            navController.navigate(MarketApp.homeWithCategory(id.toString()))
                         },
                         onTagTap = { tag ->
                             navController.navigate(MarketApp.homeWithTag(tag))
@@ -267,11 +288,13 @@ fun ListingDetailScreen(
                                     bidErrorMessage = null
                                     bidOpen = true
                                 }
+
                                 PricingModel.SUBSCRIPTION -> {
                                     navController.navigate(
                                         "${MarketApp.checkout(listing.id.toString())}?subscription=true",
                                     )
                                 }
+
                                 else -> {
                                     navController.navigate(
                                         MarketApp.checkout(listing.id.toString()),
@@ -309,10 +332,10 @@ fun ListingDetailScreen(
     }
 
     if (lightboxOpen) {
-        // The parallel photo agent landed PhotoCarousel taking `photoUrls`;
-        // we synthesise the same list here for the lightbox.
-        val urls = remember(state.listing) {
+        // Same photo list the carousel renders, reused for the lightbox.
+        val urls = remember(state.listing, state.photos) {
             buildPhotoUrls(
+                state.photos,
                 state.listing?.listing,
                 sessionManager.getServerUrlBlocking().trimEnd('/'),
             )
@@ -366,18 +389,18 @@ fun ListingDetailScreen(
 private fun ListingDetailContent(
     listing: Listing,
     detail: org.mochios.market.model.ListingDetailResponse,
+    photos: List<Photo>,
     seller: AccountSummary,
     sellerName: String,
     sellerRating: Float,
     sellerReviews: Int,
     sellerSales: Int,
     sellerVerified: Boolean,
-    categoryId: Long,
-    categoryName: String?,
     auction: org.mochios.market.model.Auction?,
     bids: List<Bid>,
     assets: List<Asset>,
     audit: List<AuditEvent>,
+    reviews: List<Review>,
     isOwner: Boolean,
     isSaved: Boolean,
     isReported: Boolean,
@@ -385,7 +408,6 @@ private fun ListingDetailContent(
     onToggleAudit: () -> Unit,
     onPhotoTap: (Int) -> Unit,
     onSellerTap: () -> Unit,
-    onCategoryTap: (Long) -> Unit,
     onTagTap: (String) -> Unit,
     onToggleSave: () -> Unit,
     onReport: () -> Unit,
@@ -399,21 +421,18 @@ private fun ListingDetailContent(
     val tags = remember(listing.tags) { parseTags(listing.tags) }
     val parsedLocation = remember(listing.location) { parseLocation(listing.location) }
     val locationDisplay = locationName(parsedLocation)
-    val mapPlace = remember(parsedLocation) { parsedLocation?.toPlaceData() }
+    val format = LocalFormat.current
     val context = LocalContext.current
-    val photoUrls = remember(detail.listing.id) {
-        // Best-effort. The full /-/photo/{id} URL list isn't on the listing
-        // detail payload — the screen normally calls photosApi.list() —
-        // but a stub from the embedded `photo` thumbnail keeps the carousel
-        // alive until the photos endpoint is wired in.
-        listingPrimaryPhotoUrl(detail.listing, baseUrlForContext(context))?.let { listOf(it) }
-            ?: emptyList()
+    val photoUrls = remember(detail.listing.id, photos) {
+        // Full /-/photo/{id} URL list from the photos endpoint, falling back
+        // to the listing's embedded primary photo when that list is empty.
+        buildPhotoUrls(photos, detail.listing, baseUrlForContext(context))
     }
     val sellerStatus = seller.status.orEmpty().lowercase()
     val sellerSuspended = sellerStatus == "suspended" || sellerStatus == "banned"
     val showAppealPending = detail.appealPending &&
-        currentUserId != null &&
-        currentUserId == seller.id
+            currentUserId != null &&
+            currentUserId == seller.id
 
     Column(
         modifier = Modifier
@@ -441,196 +460,33 @@ private fun ListingDetailContent(
             modifier = Modifier.fillMaxWidth(),
         )
 
-        // Title row with condition + status badges.
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.fillMaxWidth(),
-        ) {
-            Text(
-                text = listing.title,
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.weight(1f),
-            )
-            listing.condition?.let { ConditionBadge(condition = it) }
-        }
-
-        // Status + category + appeal-pending badges row.
+        // Condition + status + delivery-method badges row. Condition reuses the
+        // colour-coded ListingCard styling; the status badge always shows
+        // (including "active"); delivery chips mirror the listing's fulfilment.
         FlowRow(
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalArrangement = Arrangement.spacedBy(6.dp),
             modifier = Modifier.fillMaxWidth(),
         ) {
-            listing.status?.let {
-                if (it != ListingStatus.ACTIVE) {
-                    StatusBadge(status = it.name.lowercase())
-                }
-            }
+            listing.condition?.let { ConditionChip(condition = it) }
+            listing.status?.let { StatusChip(status = it.name.lowercase()) }
+            DeliveryMethodChips(listing = listing)
             if (showAppealPending) {
                 AppealPendingPill()
             }
-            if (categoryName != null && categoryId > 0L) {
-                AssistChip(
-                    onClick = { onCategoryTap(categoryId) },
-                    label = { Text(categoryName) },
-                )
-            }
         }
 
-        PriceDisplay(
-            listing = listing,
-            auction = auction,
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        // Seller row.
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable { onSellerTap() }
-                .padding(vertical = 4.dp),
-        ) {
-            EntityAvatar(name = sellerName, seed = seller.id, size = 32.dp)
-            Column(modifier = Modifier.weight(1f)) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
-                ) {
-                    Text(
-                        text = sellerName,
-                        style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.Medium,
-                    )
-                    if (sellerVerified) {
-                        Icon(
-                            imageVector = Icons.Default.Verified,
-                            contentDescription = stringResource(
-                                R.string.market_listing_detail_verified,
-                            ),
-                            tint = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.size(16.dp),
-                        )
-                    }
-                }
-                if (sellerReviews > 0 || sellerRating > 0f) {
-                    RatingStars(
-                        rating = sellerRating,
-                        count = sellerReviews,
-                        showCount = true,
-                    )
-                }
-                if (sellerSales > 0) {
-                    Text(
-                        text = stringResource(
-                            R.string.market_listing_detail_sales_count,
-                            sellerSales,
-                        ),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-        }
-
-        HorizontalDivider()
-
-        // Action row.
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            IconButton(onClick = onToggleSave) {
-                Icon(
-                    imageVector = if (isSaved) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
-                    contentDescription = stringResource(
-                        if (isSaved) R.string.market_listing_detail_unsave
-                        else R.string.market_listing_detail_save,
-                    ),
-                )
-            }
-            IconButton(
-                onClick = onReport,
-                enabled = !isReported,
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Flag,
-                    contentDescription = stringResource(
-                        if (isReported) R.string.market_listing_detail_already_reported
-                        else R.string.market_listing_detail_report,
-                    ),
-                )
-            }
-            IconButton(onClick = onMessageSeller) {
-                Icon(
-                    imageVector = Icons.Default.Message,
-                    contentDescription = stringResource(
-                        R.string.market_listing_detail_message_seller,
-                    ),
-                )
-            }
-            Spacer(modifier = Modifier.weight(1f))
-            if (isOwner) {
-                OutlinedButton(onClick = onEdit) {
-                    Icon(
-                        imageVector = Icons.Default.Edit,
-                        contentDescription = null,
-                        modifier = Modifier.size(16.dp),
-                    )
-                    Spacer(Modifier.width(4.dp))
-                    Text(stringResource(R.string.market_listing_detail_edit))
-                }
-            }
-            val showRelist = listing.status == ListingStatus.SOLD ||
-                listing.status == ListingStatus.EXPIRED
-            if (showRelist) {
-                OutlinedButton(onClick = onRelist) {
-                    Icon(
-                        imageVector = Icons.Default.Refresh,
-                        contentDescription = null,
-                        modifier = Modifier.size(16.dp),
-                    )
-                    Spacer(Modifier.width(4.dp))
-                    Text(stringResource(R.string.market_listing_detail_relist))
-                }
-            }
-            PrimaryCta(
-                pricing = listing.pricing,
-                onClick = onPrimaryCta,
-                enabled = !sellerSuspended,
-            )
-        }
-
-        if (sellerSuspended) {
-            Text(
-                text = stringResource(R.string.market_listing_detail_seller_suspended_cta_hint),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-
-        // Description.
+        // Description — rendered as plain body text (no heading) per the
+        // redesigned detail layout.
         if (listing.description.isNotBlank()) {
-            Text(
-                text = stringResource(R.string.market_listing_detail_description_heading),
-                style = MaterialTheme.typography.titleSmall,
-            )
             Text(
                 text = listing.description,
                 style = MaterialTheme.typography.bodyMedium,
             )
         }
 
-        // Tags.
+        // Tags — chips only, no heading.
         if (tags.isNotEmpty()) {
-            Text(
-                text = stringResource(R.string.market_listing_detail_tags_heading),
-                style = MaterialTheme.typography.titleSmall,
-            )
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp),
@@ -645,22 +501,18 @@ private fun ListingDetailContent(
             }
         }
 
-        // Location.
-        if (locationDisplay.isNotBlank()) {
+        // Delivery information — the listing's free-text fulfilment note (e.g.
+        // "Download link will be provided after purchase.").
+        if (listing.information.isNotBlank()) {
             Text(
-                text = stringResource(R.string.market_listing_detail_location_heading),
+                text = stringResource(R.string.market_listing_detail_information_heading),
                 style = MaterialTheme.typography.titleSmall,
             )
             Text(
-                text = locationDisplay,
+                text = listing.information,
                 style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            if (mapPlace != null) {
-                LocationMapView(
-                    checkin = mapPlace,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
         }
 
         // Shipping.
@@ -673,6 +525,264 @@ private fun ListingDetailContent(
                 options = detail.shipping,
                 modifier = Modifier.fillMaxWidth(),
             )
+        }
+
+        // Seller reviews.
+        if (reviews.isNotEmpty()) {
+            Text(
+                text = stringResource(R.string.market_listing_detail_seller_reviews_heading),
+                style = MaterialTheme.typography.titleSmall,
+            )
+            SellerReviewsSection(
+                reviews = reviews,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        }
+
+        // Primary info + actions card: title, price, location, listed date,
+        // the buy CTA + secondary actions, and the seller row, grouped into one
+        // card per the redesign.
+        OutlinedCard(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(12.dp),
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text(
+                    text = listing.title,
+                    style = MaterialTheme.typography.titleSmall,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+
+                PriceDisplay(
+                    listing = listing,
+                    auction = auction,
+                    compact = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+
+                // Location (pin + place) and listed date.
+                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    if (locationDisplay.isNotBlank()) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.LocationOn,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(16.dp),
+                            )
+                            Text(
+                                text = locationDisplay,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                    Text(
+                        text = stringResource(
+                            R.string.market_listing_detail_listed,
+                            format.formatDateTime(listing.created),
+                        ),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+
+                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    PrimaryCta(
+                        pricing = listing.pricing,
+                        onClick = onPrimaryCta,
+                        enabled = !sellerSuspended,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+
+                    if (sellerSuspended) {
+                        Text(
+                            text = stringResource(R.string.market_listing_detail_seller_suspended_cta_hint),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
+
+                    // Message + save + report.
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        OutlinedButton(
+                            onClick = onMessageSeller,
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Message,
+                                contentDescription = null,
+                                modifier = Modifier.size(18.dp),
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Text(stringResource(R.string.market_listing_detail_message))
+                        }
+                        IconButton(
+                            onClick = onToggleSave,
+                        ) {
+                            Icon(
+                                imageVector = if (isSaved) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
+                                contentDescription = stringResource(
+                                    if (isSaved) R.string.market_listing_detail_unsave
+                                    else R.string.market_listing_detail_save,
+                                ),
+                            )
+                        }
+                        OutlinedIconButton(
+                            onClick = onReport,
+                            enabled = !isReported,
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Flag,
+                                contentDescription = stringResource(
+                                    if (isReported) R.string.market_listing_detail_already_reported
+                                    else R.string.market_listing_detail_report,
+                                ),
+                            )
+                        }
+                    }
+
+                    // Owner controls.
+                    if (isOwner) {
+                        OutlinedButton(
+                            onClick = onEdit,
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Edit,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                            )
+                            Spacer(Modifier.width(4.dp))
+                            Text(stringResource(R.string.market_listing_detail_edit))
+                        }
+                    }
+                    val showRelist = listing.status == ListingStatus.SOLD ||
+                            listing.status == ListingStatus.EXPIRED
+                    if (showRelist) {
+                        OutlinedButton(
+                            onClick = onRelist,
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Refresh,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                            )
+                            Spacer(Modifier.width(4.dp))
+                            Text(stringResource(R.string.market_listing_detail_relist))
+                        }
+                    }
+                }
+            }
+        }
+
+        // Seller card — a "Seller" heading over the avatar/name row, with the
+        // rating and sales stacked beneath it (left-aligned to the card edge),
+        // per the redesign.
+        OutlinedCard(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(12.dp),
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onSellerTap() }
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                Text(
+                    text = stringResource(R.string.market_listing_detail_seller_heading),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+
+                // Avatar + name + verified tick.
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    // Flat white avatar with black initials and a hairline
+                    // outline, matching the seller avatar on ListingCard.
+                    EntityAvatar(
+                        name = sellerName,
+                        src = rememberSellerAvatarUrl(listing),
+                        seed = seller.id,
+                        size = 40.dp,
+                        containerColor = Color.White,
+                        contentColor = Color.Black,
+                        modifier = Modifier.border(
+                            width = 1.dp,
+                            color = MaterialTheme.colorScheme.outlineVariant,
+                            shape = CircleShape,
+                        ),
+                    )
+                    Text(
+                        text = sellerName,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Medium,
+                    )
+                    if (sellerVerified) {
+                        Icon(
+                            imageVector = Icons.Filled.Verified,
+                            contentDescription = stringResource(
+                                R.string.market_listing_detail_verified,
+                            ),
+                            tint = VerifiedGreen,
+                            modifier = Modifier.size(20.dp),
+                        )
+                    }
+                }
+
+                // Rating stars + (count), gold to match the listing card.
+                if (sellerReviews > 0 || sellerRating > 0f) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        RatingStars(
+                            rating = sellerRating,
+                            showCount = false,
+                            tint = RatingStarGold,
+                        )
+                        if (sellerReviews > 0) {
+                            Text(
+                                text = "($sellerReviews)",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                }
+
+                if (sellerSales > 0) {
+                    Text(
+                        text = stringResource(
+                            R.string.market_listing_detail_sales_count,
+                            sellerSales,
+                        ),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
         }
 
         // Digital assets.
@@ -721,6 +831,147 @@ private fun ListingDetailContent(
         }
 
         Spacer(modifier = Modifier.height(24.dp))
+    }
+}
+
+/**
+ * Delivery-method chips for the badges row, mirroring the listing's fulfilment
+ * setup: a digital listing shows "Download"; physical listings show "Shipping"
+ * and/or "Pickup" depending on which the seller enabled. Static (non-clickable)
+ * outlined pills with a leading icon, matching the web detail page.
+ */
+@Composable
+private fun DeliveryMethodChips(listing: Listing) {
+    if (listing.type == ListingType.DIGITAL) {
+        DeliveryMethodChip(
+            icon = Icons.Filled.Download,
+            label = stringResource(R.string.market_filter_delivery_download),
+        )
+        return
+    }
+    if (listing.shipping > 0L) {
+        DeliveryMethodChip(
+            icon = Icons.Filled.LocalShipping,
+            label = stringResource(R.string.market_filter_delivery_shipping),
+        )
+    }
+    if (listing.pickup > 0L) {
+        DeliveryMethodChip(
+            icon = Icons.Filled.Storefront,
+            label = stringResource(R.string.market_filter_delivery_pickup),
+        )
+    }
+}
+
+/**
+ * Status chip — a soft pill at the shared [DetailBadgeChip] size with a
+ * semantic light fill + dark label per [statusChipColors] and a neutral 1dp
+ * border (the same `outlineVariant` the delivery chip uses). The "active"
+ * green fill (#E2FBE8) and text (#2B6536) are sampled from the design.
+ */
+@Composable
+private fun StatusChip(status: String) {
+    val key = status.trim().lowercase()
+    val (fill, text) = statusChipColors(key)
+    DetailBadgeChip(
+        label = knownStatusLabel(key) ?: key,
+        containerColor = fill,
+        contentColor = text,
+        borderColor = MaterialTheme.colorScheme.outlineVariant,
+    )
+}
+
+/** Semantic (light fill, dark text) pair for a status chip: green / red / amber / grey. */
+private fun statusChipColors(key: String): Pair<Color, Color> = when (key) {
+    "active", "paid", "shipped", "delivered", "completed" ->
+        Color(0xFFE2FBE8) to Color(0xFF2B6536)
+
+    "disputed", "cancelled", "past_due" ->
+        Color(0xFFFBE2E2) to Color(0xFF7A2B2B)
+
+    "pending", "paused", "refunded" ->
+        Color(0xFFFBF3E2) to Color(0xFF7A5A2B)
+
+    else ->
+        Color(0xFFEDEDED) to Color(0xFF555555)
+}
+
+/** Condition chip — ListingCard colours at the shared [DetailBadgeChip] size. */
+@Composable
+private fun ConditionChip(condition: Condition) {
+    DetailBadgeChip(
+        label = conditionLabel(condition),
+        containerColor = conditionBadgeColor(condition),
+        contentColor = Color.White,
+    )
+}
+
+/** Pricing chip — ListingCard's dark fill at the shared [DetailBadgeChip] size. */
+@Composable
+private fun PricingChip(label: String) {
+    DetailBadgeChip(
+        label = label,
+        containerColor = PricingFill,
+        contentColor = Color.White,
+    )
+}
+
+@Composable
+private fun DeliveryMethodChip(icon: ImageVector, label: String) {
+    DetailBadgeChip(
+        label = label,
+        leadingIcon = icon,
+        containerColor = Color.Transparent,
+        contentColor = MaterialTheme.colorScheme.onSurface,
+        borderColor = MaterialTheme.colorScheme.outlineVariant,
+        iconTint = MaterialTheme.colorScheme.onSurfaceVariant,
+    )
+}
+
+/**
+ * Shared chip used for every badge in the detail row (condition, pricing,
+ * delivery method) so they resolve to one uniform size/shape — 8dp corners,
+ * h10/v5 padding, [labelMedium] text, optional 16dp leading icon. Only the
+ * fill, content colour, and optional border vary per badge.
+ */
+@Composable
+private fun DetailBadgeChip(
+    label: String,
+    containerColor: Color,
+    contentColor: Color,
+    leadingIcon: ImageVector? = null,
+    borderColor: Color? = null,
+    iconTint: Color = contentColor,
+) {
+    val shape = RoundedCornerShape(8.dp)
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        modifier = Modifier
+            .clip(shape)
+            .background(containerColor)
+            .then(
+                if (borderColor != null) {
+                    Modifier.border(width = 1.dp, color = borderColor, shape = shape)
+                } else {
+                    Modifier
+                },
+            )
+            .padding(horizontal = 10.dp, vertical = 5.dp),
+    ) {
+        if (leadingIcon != null) {
+            Icon(
+                imageVector = leadingIcon,
+                contentDescription = null,
+                tint = iconTint,
+                modifier = Modifier.size(16.dp),
+            )
+        }
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelMedium,
+            color = contentColor,
+        )
     }
 }
 
@@ -774,6 +1025,7 @@ private fun PrimaryCta(
     pricing: PricingModel?,
     onClick: () -> Unit,
     enabled: Boolean = true,
+    modifier: Modifier = Modifier,
 ) {
     val labelRes = when (pricing) {
         PricingModel.AUCTION -> R.string.market_listing_detail_place_bid
@@ -781,11 +1033,25 @@ private fun PrimaryCta(
         PricingModel.PWYW -> R.string.market_listing_detail_buy
         else -> R.string.market_listing_detail_buy_now
     }
+    // A cart fits the buy-style CTAs; auction / subscription read better label-only.
+    val icon = when (pricing) {
+        PricingModel.AUCTION, PricingModel.SUBSCRIPTION -> null
+        else -> Icons.Default.ShoppingCart
+    }
     Button(
         onClick = onClick,
         enabled = enabled,
         shape = RoundedCornerShape(10.dp),
+        modifier = modifier,
     ) {
+        if (icon != null) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                modifier = Modifier.size(18.dp),
+            )
+            Spacer(Modifier.width(8.dp))
+        }
         Text(stringResource(labelRes))
     }
 }
@@ -818,19 +1084,24 @@ private fun parseTags(json: String): List<String> {
     }
 }
 
+/**
+ * Absolute `/-/photo/{id}` URLs for the carousel, in display order.
+ *
+ * Prefers the full [photos] set fetched from `-/photos/list`; when that came
+ * back empty (a transient failure, say) it falls back to the [listing]'s
+ * embedded primary photo so the carousel still shows something.
+ */
 private fun buildPhotoUrls(
+    photos: List<Photo>,
     listing: Listing?,
     baseUrl: String,
 ): List<String> {
-    val photoId = listing?.photo?.id ?: return emptyList()
-    if (photoId.isBlank()) return emptyList()
+    val urls = photos.mapNotNull { photo ->
+        photo.id.takeIf { it.isNotBlank() }?.let { "$baseUrl/market/-/photo/$it" }
+    }
+    if (urls.isNotEmpty()) return urls
+    val photoId = listing?.photo?.id?.takeIf { it.isNotBlank() } ?: return emptyList()
     return listOf("$baseUrl/market/-/photo/$photoId")
-}
-
-private fun listingPrimaryPhotoUrl(listing: Listing?, baseUrl: String): String? {
-    val id = listing?.photo?.id ?: return null
-    if (id.isBlank()) return null
-    return "$baseUrl/market/-/photo/$id"
 }
 
 private fun baseUrlForContext(context: android.content.Context): String {

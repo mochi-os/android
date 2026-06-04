@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Mua ngay</string>
     <string name="market_listing_detail_description_heading">Mô tả</string>
     <string name="market_listing_detail_edit">Sửa</string>
+    <string name="market_listing_detail_information_heading">Thông tin giao hàng</string>
     <string name="market_listing_detail_load_failed">Không tải tin đăng được</string>
+    <string name="market_listing_detail_listed">Đăng ngày %1$s</string>
     <string name="market_listing_detail_location_heading">Vị trí</string>
+    <string name="market_listing_detail_message">Tin nhắn</string>
     <string name="market_listing_detail_message_seller">Nhắn tin cho người bán</string>
     <string name="market_listing_detail_not_found">Không tìm thấy tin đăng</string>
     <string name="market_listing_detail_place_bid">Đặt giá</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Xác nhận</string>
     <string name="market_ship_dialog_title">Đánh dấu đã gửi hàng</string>
     <string name="market_shipping_days">Giao hàng</string>
+    <string name="market_shipping_days_value">%1$s ngày</string>
     <string name="market_shipping_notes">Ghi chú</string>
     <string name="market_shipping_price">Giá</string>
     <string name="market_shipping_region">Khu vực</string>

@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Nu kopen</string>
     <string name="market_listing_detail_description_heading">Beschrijving</string>
     <string name="market_listing_detail_edit">Bewerken</string>
+    <string name="market_listing_detail_information_heading">Bezorginformatie</string>
     <string name="market_listing_detail_load_failed">Listing laden mislukt</string>
+    <string name="market_listing_detail_listed">Geplaatst op %1$s</string>
     <string name="market_listing_detail_location_heading">Locatie</string>
+    <string name="market_listing_detail_message">Bericht</string>
     <string name="market_listing_detail_message_seller">Bericht naar verkoper</string>
     <string name="market_listing_detail_not_found">Listing niet gevonden</string>
     <string name="market_listing_detail_place_bid">Bod plaatsen</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Bevestigen</string>
     <string name="market_ship_dialog_title">Markeren als verzonden</string>
     <string name="market_shipping_days">Levering</string>
+    <string name="market_shipping_days_value">%1$s dagen</string>
     <string name="market_shipping_notes">Notities</string>
     <string name="market_shipping_price">Prijs</string>
     <string name="market_shipping_region">Regio</string>

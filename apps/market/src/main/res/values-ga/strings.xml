@@ -205,8 +205,11 @@
     <string name="market_listing_detail_buy_now">Ceannaigh anois</string>
     <string name="market_listing_detail_description_heading">Cur síos</string>
     <string name="market_listing_detail_edit">Cuir in eagar</string>
+    <string name="market_listing_detail_information_heading">Eolas seachadta</string>
     <string name="market_listing_detail_load_failed">Theip ar luchtú liostaithe</string>
+    <string name="market_listing_detail_listed">Liostaithe %1$s</string>
     <string name="market_listing_detail_location_heading">Suíomh</string>
+    <string name="market_listing_detail_message">Teachtaireacht</string>
     <string name="market_listing_detail_message_seller">Teachtaireacht chuig díoltóir</string>
     <string name="market_listing_detail_not_found">Níor aimsíodh an liostú</string>
     <string name="market_listing_detail_place_bid">Déan tairiscint</string>
@@ -415,6 +418,7 @@
     <string name="market_ship_dialog_submit">Deimhnigh</string>
     <string name="market_ship_dialog_title">Marcáil mar sheolta</string>
     <string name="market_shipping_days">Seachadadh</string>
+    <string name="market_shipping_days_value">%1$s lá</string>
     <string name="market_shipping_notes">Nótaí</string>
     <string name="market_shipping_price">Praghas</string>
     <string name="market_shipping_region">Réigiún</string>

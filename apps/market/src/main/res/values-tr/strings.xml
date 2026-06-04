@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Şimdi satın al</string>
     <string name="market_listing_detail_description_heading">Açıklama</string>
     <string name="market_listing_detail_edit">Düzenle</string>
+    <string name="market_listing_detail_information_heading">Teslimat bilgileri</string>
     <string name="market_listing_detail_load_failed">İlan yüklenemedi</string>
+    <string name="market_listing_detail_listed">Yayınlanma %1$s</string>
     <string name="market_listing_detail_location_heading">Konum</string>
+    <string name="market_listing_detail_message">Mesaj</string>
     <string name="market_listing_detail_message_seller">Satıcıya mesaj gönder</string>
     <string name="market_listing_detail_not_found">İlan bulunamadı</string>
     <string name="market_listing_detail_place_bid">Teklif ver</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Onayla</string>
     <string name="market_ship_dialog_title">Kargoya verildi olarak işaretle</string>
     <string name="market_shipping_days">Teslimat</string>
+    <string name="market_shipping_days_value">%1$s gün</string>
     <string name="market_shipping_notes">Notlar</string>
     <string name="market_shipping_price">Fiyat</string>
     <string name="market_shipping_region">Bölge</string>

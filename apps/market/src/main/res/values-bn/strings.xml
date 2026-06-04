@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">এখনই কিনুন</string>
     <string name="market_listing_detail_description_heading">বিবরণ</string>
     <string name="market_listing_detail_edit">সম্পাদনা</string>
+    <string name="market_listing_detail_information_heading">ডেলিভারি তথ্য</string>
     <string name="market_listing_detail_load_failed">তালিকা লোড করতে ব্যর্থ</string>
+    <string name="market_listing_detail_listed">তালিকাভুক্ত %1$s</string>
     <string name="market_listing_detail_location_heading">অবস্থান</string>
+    <string name="market_listing_detail_message">বার্তা</string>
     <string name="market_listing_detail_message_seller">বিক্রেতাকে বার্তা পাঠান</string>
     <string name="market_listing_detail_not_found">তালিকা পাওয়া যায়নি</string>
     <string name="market_listing_detail_place_bid">দাম প্রস্তাব করুন</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">নিশ্চিত করুন</string>
     <string name="market_ship_dialog_title">প্রেরিত হিসেবে চিহ্নিত করুন</string>
     <string name="market_shipping_days">ডেলিভারি</string>
+    <string name="market_shipping_days_value">%1$s দিন</string>
     <string name="market_shipping_notes">নোট</string>
     <string name="market_shipping_price">মূল্য</string>
     <string name="market_shipping_region">অঞ্চল</string>

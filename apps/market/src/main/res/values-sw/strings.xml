@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Nunua sasa</string>
     <string name="market_listing_detail_description_heading">Maelezo</string>
     <string name="market_listing_detail_edit">Hariri</string>
+    <string name="market_listing_detail_information_heading">Maelezo ya uwasilishaji</string>
     <string name="market_listing_detail_load_failed">Imeshindwa kupakia orodha</string>
+    <string name="market_listing_detail_listed">Imeorodheshwa %1$s</string>
     <string name="market_listing_detail_location_heading">Eneo</string>
+    <string name="market_listing_detail_message">Ujumbe</string>
     <string name="market_listing_detail_message_seller">Tuma ujumbe kwa muuzaji</string>
     <string name="market_listing_detail_not_found">Orodha haikupatikana</string>
     <string name="market_listing_detail_place_bid">Toa zabuni</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Thibitisha</string>
     <string name="market_ship_dialog_title">Weka kama imesafirishwa</string>
     <string name="market_shipping_days">Usafirishaji</string>
+    <string name="market_shipping_days_value">Siku %1$s</string>
     <string name="market_shipping_notes">Maelezo</string>
     <string name="market_shipping_price">Bei</string>
     <string name="market_shipping_region">Eneo</string>

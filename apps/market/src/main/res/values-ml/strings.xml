@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ഇപ്പോൾ വാങ്ങുക</string>
     <string name="market_listing_detail_description_heading">വിവരണം</string>
     <string name="market_listing_detail_edit">എഡിറ്റ് ചെയ്യുക</string>
+    <string name="market_listing_detail_information_heading">ഡെലിവറി വിവരങ്ങൾ</string>
     <string name="market_listing_detail_load_failed">ലിസ്റ്റിംഗ് ലോഡുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="market_listing_detail_listed">ലിസ്റ്റ് ചെയ്തു %1$s</string>
     <string name="market_listing_detail_location_heading">ലൊക്കേഷൻ</string>
+    <string name="market_listing_detail_message">സന്ദേശം</string>
     <string name="market_listing_detail_message_seller">വിൽക്കുന്നയാൾക്ക് സന്ദേശം അയയ്ക്കുക</string>
     <string name="market_listing_detail_not_found">ലിസ്റ്റിംഗ് കണ്ടെത്തിയില്ല</string>
     <string name="market_listing_detail_place_bid">ബിഡ് ഇടുക</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">സ്ഥിരീകരിക്കുക</string>
     <string name="market_ship_dialog_title">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തുക</string>
     <string name="market_shipping_days">ഡെലിവറി</string>
+    <string name="market_shipping_days_value">%1$s ദിവസം</string>
     <string name="market_shipping_notes">കുറിപ്പുകൾ</string>
     <string name="market_shipping_price">വില പരിധി</string>
     <string name="market_shipping_region">പ്രാദേശികം</string>

@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Pirkti dabar</string>
     <string name="market_listing_detail_description_heading">Aprašymas</string>
     <string name="market_listing_detail_edit">Redaguoti</string>
+    <string name="market_listing_detail_information_heading">Pristatymo informacija</string>
     <string name="market_listing_detail_load_failed">Nepavyko įkelti skelbimo</string>
+    <string name="market_listing_detail_listed">Paskelbta %1$s</string>
     <string name="market_listing_detail_location_heading">Vieta</string>
+    <string name="market_listing_detail_message">Žinutė</string>
     <string name="market_listing_detail_message_seller">Rašyti pardavėjui</string>
     <string name="market_listing_detail_not_found">Skelbimas nerastas</string>
     <string name="market_listing_detail_place_bid">Pateikti pasiūlymą</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Patvirtinti</string>
     <string name="market_ship_dialog_title">Pažymėti kaip išsiųstą</string>
     <string name="market_shipping_days">Pristatymas</string>
+    <string name="market_shipping_days_value">%1$s d.</string>
     <string name="market_shipping_notes">Pastabos</string>
     <string name="market_shipping_price">Kaina</string>
     <string name="market_shipping_region">Regionas</string>

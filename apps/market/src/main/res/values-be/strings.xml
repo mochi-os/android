@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">Купіць зараз</string>
     <string name="market_listing_detail_description_heading">Апісанне</string>
     <string name="market_listing_detail_edit">Рэдагаваць</string>
+    <string name="market_listing_detail_information_heading">Інфармацыя пра дастаўку</string>
     <string name="market_listing_detail_load_failed">Не ўдалося загрузіць аб\'яву</string>
     <string name="market_listing_detail_loading">Загрузка аб’явы</string>
+    <string name="market_listing_detail_listed">Размешчана %1$s</string>
     <string name="market_listing_detail_location_heading">Месцазнаходжанне</string>
+    <string name="market_listing_detail_message">Паведамленне</string>
     <string name="market_listing_detail_message_seller">Напісаць прадаўцу</string>
     <string name="market_listing_detail_not_found">Аб\'ява не знойдзена</string>
     <string name="market_listing_detail_place_bid">Зрабіць стаўку</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">Пацвердзіць</string>
     <string name="market_ship_dialog_title">Адзначыць як адпраўлена</string>
     <string name="market_shipping_days">Дастаўка</string>
+    <string name="market_shipping_days_value">%1$s дзён</string>
     <string name="market_shipping_notes">Нататкі</string>
     <string name="market_shipping_price">Цана</string>
     <string name="market_shipping_region">Рэгіён</string>

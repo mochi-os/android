@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Niha bikire</string>
     <string name="market_listing_detail_description_heading">Şirove</string>
     <string name="market_listing_detail_edit">Sererast bike</string>
+    <string name="market_listing_detail_information_heading">Agahiyên gihandinê</string>
     <string name="market_listing_detail_load_failed">Barkirina lîsteyê neserkeftî bû</string>
+    <string name="market_listing_detail_listed">Hate navnîşkirin %1$s</string>
     <string name="market_listing_detail_location_heading">Cih</string>
+    <string name="market_listing_detail_message">Peyam</string>
     <string name="market_listing_detail_message_seller">Peyamê ji firoşkar re bişîne</string>
     <string name="market_listing_detail_not_found">Lîste nehat dîtin</string>
     <string name="market_listing_detail_place_bid">Pêşniyazê bike</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Piştrast bike</string>
     <string name="market_ship_dialog_title">Wek hatî şandin nîşan bike</string>
     <string name="market_shipping_days">Şandin</string>
+    <string name="market_shipping_days_value">%1$s roj</string>
     <string name="market_shipping_notes">Têbînî</string>
     <string name="market_shipping_price">Bedel</string>
     <string name="market_shipping_region">Herêm</string>

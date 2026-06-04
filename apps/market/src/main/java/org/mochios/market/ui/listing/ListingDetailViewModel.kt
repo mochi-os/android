@@ -21,6 +21,8 @@ import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
 import org.mochios.market.model.ListingDetailResponse
+import org.mochios.market.model.Photo
+import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
@@ -33,8 +35,10 @@ import javax.inject.Inject
 data class ListingDetailUiState(
     val isLoading: Boolean = true,
     val listing: ListingDetailResponse? = null,
+    val photos: List<Photo> = emptyList(),
     val audit: List<AuditEvent> = emptyList(),
     val categories: List<Category> = emptyList(),
+    val sellerReviews: List<Review> = emptyList(),
     val error: MochiError? = null,
 )
 
@@ -108,15 +112,38 @@ class ListingDetailViewModel @Inject constructor(
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
                 val resp = repository.getListing(parsed)
+                // Photos are best-effort: the detail payload only embeds the
+                // primary `photo`, so the full set comes from the public
+                // `-/photos/list` endpoint. A failure just falls back to the
+                // embedded photo (or an empty carousel). Sorted by rank so the
+                // carousel order matches the seller's arrangement.
+                val photos = runCatching {
+                    repository.listPhotos(parsed).sortedBy { it.rank }
+                }.getOrDefault(emptyList())
                 // Audit fetch is best-effort: regular buyers don't have read
                 // access, and a 403 must not blow up the detail render.
                 val audit = runCatching {
                     repository.auditObject(kind = "listing", objectId = parsed.toString()).audit
                 }.getOrDefault(emptyList())
+                // Seller reviews are best-effort: a fetch failure (or a seller
+                // with no public reviews) just hides the section. `role` is the
+                // reviewer's perspective, so to show reviews *of* this seller we
+                // want the ones written by buyers (buyer -> seller), not the
+                // seller's own authored reviews.
+                val reviews = runCatching {
+                    val sellerId = resp.seller.id
+                    if (sellerId.isBlank()) {
+                        emptyList()
+                    } else {
+                        repository.accountReviews(id = sellerId, role = "buyer").reviews
+                    }
+                }.getOrDefault(emptyList())
                 _state.value = _state.value.copy(
                     isLoading = false,
                     listing = resp,
+                    photos = photos,
                     audit = audit,
+                    sellerReviews = reviews,
                     error = null,
                 )
                 // Record the visit for the "recently viewed" rail. Best-effort —

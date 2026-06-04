@@ -209,8 +209,11 @@
     <string name="market_listing_detail_buy_now">Rà báyìí</string>
     <string name="market_listing_detail_description_heading">Àpèjúwe</string>
     <string name="market_listing_detail_edit">Ṣàtúnṣe</string>
+    <string name="market_listing_detail_information_heading">Alaye ifijiṣẹ</string>
     <string name="market_listing_detail_load_failed">Kò lè ṣí listing lọ̀</string>
+    <string name="market_listing_detail_listed">Ti ṣe atokọ %1$s</string>
     <string name="market_listing_detail_location_heading">Ibi</string>
+    <string name="market_listing_detail_message">Ifiranṣẹ</string>
     <string name="market_listing_detail_message_seller">Fi ìránṣẹ́ ránṣẹ́ sí olùtà</string>
     <string name="market_listing_detail_not_found">A kò rí listing</string>
     <string name="market_listing_detail_place_bid">Fún owó</string>
@@ -419,6 +422,7 @@
     <string name="market_ship_dialog_submit">Fọwọ́sí</string>
     <string name="market_ship_dialog_title">Sàmì sí gẹ́gẹ́ bí èyí tí a ti rán</string>
     <string name="market_shipping_days">Ìfijíṣẹ́</string>
+    <string name="market_shipping_days_value">Ọjọ %1$s</string>
     <string name="market_shipping_notes">Àkọsílẹ̀</string>
     <string name="market_shipping_price">Iye</string>
     <string name="market_shipping_region">Àgbègbè</string>

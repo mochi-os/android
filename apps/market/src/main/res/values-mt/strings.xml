@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Ixtri issa</string>
     <string name="market_listing_detail_description_heading">Deskrizzjoni</string>
     <string name="market_listing_detail_edit">Editja</string>
+    <string name="market_listing_detail_information_heading">Informazzjoni dwar il-konsenja</string>
     <string name="market_listing_detail_load_failed">Ma rnexxiex jitgħabba l-listing</string>
+    <string name="market_listing_detail_listed">Elenkat %1$s</string>
     <string name="market_listing_detail_location_heading">Post</string>
+    <string name="market_listing_detail_message">Messaġġ</string>
     <string name="market_listing_detail_message_seller">Ibgħat messaġġ lill-bejjiegħ</string>
     <string name="market_listing_detail_not_found">Il-listing ma nstabx</string>
     <string name="market_listing_detail_place_bid">Agħmel offerta</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Ikkonferma</string>
     <string name="market_ship_dialog_title">Immarka bħala mibgħut</string>
     <string name="market_shipping_days">Tbaħħir</string>
+    <string name="market_shipping_days_value">%1$s ijiem</string>
     <string name="market_shipping_notes">Noti</string>
     <string name="market_shipping_price">Prezz</string>
     <string name="market_shipping_region">Reġjun</string>

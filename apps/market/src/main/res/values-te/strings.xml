@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ఇప్పుడే కొనండి</string>
     <string name="market_listing_detail_description_heading">వివరణ</string>
     <string name="market_listing_detail_edit">సవరించండి</string>
+    <string name="market_listing_detail_information_heading">డెలివరీ సమాచారం</string>
     <string name="market_listing_detail_load_failed">లిస్టింగ్‌ను లోడ్ చేయడంలో విఫలమైంది</string>
+    <string name="market_listing_detail_listed">జాబితా చేయబడింది %1$s</string>
     <string name="market_listing_detail_location_heading">స్థానం</string>
+    <string name="market_listing_detail_message">సందేశం</string>
     <string name="market_listing_detail_message_seller">విక్రేతకు సందేశం పంపండి</string>
     <string name="market_listing_detail_not_found">లిస్టింగ్ కనుగొనబడలేదు</string>
     <string name="market_listing_detail_place_bid">బిడ్ చేయండి</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">నిర్ధారించండి</string>
     <string name="market_ship_dialog_title">షిప్ చేసినట్లు గుర్తించండి</string>
     <string name="market_shipping_days">డెలివరీ</string>
+    <string name="market_shipping_days_value">%1$s రోజులు</string>
     <string name="market_shipping_notes">నోట్‌లు</string>
     <string name="market_shipping_price">ధర</string>
     <string name="market_shipping_region">ప్రాంతం</string>

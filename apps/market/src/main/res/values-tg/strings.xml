@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Ҳозир харидан</string>
     <string name="market_listing_detail_description_heading">Тавсиф</string>
     <string name="market_listing_detail_edit">Таҳрир</string>
+    <string name="market_listing_detail_information_heading">Маълумоти расонидан</string>
     <string name="market_listing_detail_load_failed">Боркунии эълон ба анҷом нарасид</string>
+    <string name="market_listing_detail_listed">Нашр шуд %1$s</string>
     <string name="market_listing_detail_location_heading">Маҳал</string>
+    <string name="market_listing_detail_message">Паём</string>
     <string name="market_listing_detail_message_seller">Паём ба фурӯшанда</string>
     <string name="market_listing_detail_not_found">Эълон ёфт нашуд</string>
     <string name="market_listing_detail_place_bid">Пешниҳод кардан</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Тасдиқ</string>
     <string name="market_ship_dialog_title">Аломатгузорӣ ҳамчун ирсолшуда</string>
     <string name="market_shipping_days">Расонӣ</string>
+    <string name="market_shipping_days_value">%1$s рӯз</string>
     <string name="market_shipping_notes">Қайдҳо</string>
     <string name="market_shipping_price">Нарх</string>
     <string name="market_shipping_region">Минтақа</string>

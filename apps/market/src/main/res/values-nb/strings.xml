@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Kjøp nå</string>
     <string name="market_listing_detail_description_heading">Beskrivelse</string>
     <string name="market_listing_detail_edit">Rediger</string>
+    <string name="market_listing_detail_information_heading">Leveringsinformasjon</string>
     <string name="market_listing_detail_load_failed">Kunne ikke laste oppføring</string>
+    <string name="market_listing_detail_listed">Lagt ut %1$s</string>
     <string name="market_listing_detail_location_heading">Plassering</string>
+    <string name="market_listing_detail_message">Melding</string>
     <string name="market_listing_detail_message_seller">Send melding til selger</string>
     <string name="market_listing_detail_not_found">Fant ikke oppføring</string>
     <string name="market_listing_detail_place_bid">Legg inn bud</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Bekreft</string>
     <string name="market_ship_dialog_title">Merk som sendt</string>
     <string name="market_shipping_days">Levering</string>
+    <string name="market_shipping_days_value">%1$s dager</string>
     <string name="market_shipping_notes">Notater</string>
     <string name="market_shipping_price">Pris</string>
     <string name="market_shipping_region">Region</string>

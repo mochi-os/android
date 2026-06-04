@@ -203,8 +203,11 @@
     <string name="market_listing_detail_buy_now">ახლავე ყიდვა</string>
     <string name="market_listing_detail_description_heading">აღწერა</string>
     <string name="market_listing_detail_edit">რედაქტირება</string>
+    <string name="market_listing_detail_information_heading">მიწოდების ინფორმაცია</string>
     <string name="market_listing_detail_load_failed">ჩამონათვალის ჩატვირთვა ვერ მოხერხდა</string>
+    <string name="market_listing_detail_listed">გამოქვეყნდა %1$s</string>
     <string name="market_listing_detail_location_heading">მდებარეობა</string>
+    <string name="market_listing_detail_message">შეტყობინება</string>
     <string name="market_listing_detail_message_seller">გამყიდველთან შეტყობინება</string>
     <string name="market_listing_detail_not_found">ჩამონათვალი ვერ მოიძებნა</string>
     <string name="market_listing_detail_place_bid">ფსონის დადება</string>
@@ -413,6 +416,7 @@
     <string name="market_ship_dialog_submit">დადასტურება</string>
     <string name="market_ship_dialog_title">გაგზავნილად მონიშვნა</string>
     <string name="market_shipping_days">მიწოდება</string>
+    <string name="market_shipping_days_value">%1$s დღე</string>
     <string name="market_shipping_notes">შენიშვნები</string>
     <string name="market_shipping_price">ფასი</string>
     <string name="market_shipping_region">რეგიონი</string>

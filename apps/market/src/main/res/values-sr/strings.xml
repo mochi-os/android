@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Купи одмах</string>
     <string name="market_listing_detail_description_heading">Опис</string>
     <string name="market_listing_detail_edit">Уреди</string>
+    <string name="market_listing_detail_information_heading">Информације о испоруци</string>
     <string name="market_listing_detail_load_failed">Учитавање огласа није успело</string>
+    <string name="market_listing_detail_listed">Објављено %1$s</string>
     <string name="market_listing_detail_location_heading">Локација</string>
+    <string name="market_listing_detail_message">Порука</string>
     <string name="market_listing_detail_message_seller">Пошаљи поруку продавцу</string>
     <string name="market_listing_detail_not_found">Оглас није пронађен</string>
     <string name="market_listing_detail_place_bid">Понуди</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Потврди</string>
     <string name="market_ship_dialog_title">Означи као послато</string>
     <string name="market_shipping_days">Испорука</string>
+    <string name="market_shipping_days_value">%1$s дана</string>
     <string name="market_shipping_notes">Белешке</string>
     <string name="market_shipping_price">Цена</string>
     <string name="market_shipping_region">Регион</string>

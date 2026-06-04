@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">አሁን ግዛ</string>
     <string name="market_listing_detail_description_heading">መግለጫ</string>
     <string name="market_listing_detail_edit">አስተካክል</string>
+    <string name="market_listing_detail_information_heading">የማድረስ መረጃ</string>
     <string name="market_listing_detail_load_failed">ዝርዝርን መጫን አልተሳካም</string>
     <string name="market_listing_detail_loading">ዝርዝር በመጫን ላይ</string>
+    <string name="market_listing_detail_listed">ተዘርዝሯል %1$s</string>
     <string name="market_listing_detail_location_heading">አካባቢ</string>
+    <string name="market_listing_detail_message">መልእክት</string>
     <string name="market_listing_detail_message_seller">ሻጭን አነጋግር</string>
     <string name="market_listing_detail_not_found">ዝርዝር አልተገኘም</string>
     <string name="market_listing_detail_place_bid">ጨረታ አቅርብ</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">አረጋግጥ</string>
     <string name="market_ship_dialog_title">እንደተላከ ምልክት አድርግ</string>
     <string name="market_shipping_days">መላኪያ</string>
+    <string name="market_shipping_days_value">%1$s ቀናት</string>
     <string name="market_shipping_notes">ማስታወሻዎች</string>
     <string name="market_shipping_price">ዋጋ</string>
     <string name="market_shipping_region">ክልል</string>

@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">今すぐ購入</string>
     <string name="market_listing_detail_description_heading">説明</string>
     <string name="market_listing_detail_edit">編集</string>
+    <string name="market_listing_detail_information_heading">配送情報</string>
     <string name="market_listing_detail_load_failed">出品の読み込みに失敗しました</string>
+    <string name="market_listing_detail_listed">出品日 %1$s</string>
     <string name="market_listing_detail_location_heading">場所</string>
+    <string name="market_listing_detail_message">メッセージ</string>
     <string name="market_listing_detail_message_seller">販売者にメッセージ</string>
     <string name="market_listing_detail_not_found">リスティングが見つかりません</string>
     <string name="market_listing_detail_place_bid">入札する</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">確認</string>
     <string name="market_ship_dialog_title">発送済みとしてマーク</string>
     <string name="market_shipping_days">配送</string>
+    <string name="market_shipping_days_value">%1$s日</string>
     <string name="market_shipping_notes">メモ</string>
     <string name="market_shipping_price">価格</string>
     <string name="market_shipping_region">都道府県</string>

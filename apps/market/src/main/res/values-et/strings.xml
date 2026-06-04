@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Osta kohe</string>
     <string name="market_listing_detail_description_heading">Kirjeldus</string>
     <string name="market_listing_detail_edit">Muuda</string>
+    <string name="market_listing_detail_information_heading">Tarneteave</string>
     <string name="market_listing_detail_load_failed">Kuulutuse laadimine ebaõnnestus</string>
+    <string name="market_listing_detail_listed">Lisatud %1$s</string>
     <string name="market_listing_detail_location_heading">Asukoht</string>
+    <string name="market_listing_detail_message">Sõnum</string>
     <string name="market_listing_detail_message_seller">Sõnum müüjale</string>
     <string name="market_listing_detail_not_found">Kuulutust ei leitud</string>
     <string name="market_listing_detail_place_bid">Tee pakkumine</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Kinnita</string>
     <string name="market_ship_dialog_title">Märgi saadetuks</string>
     <string name="market_shipping_days">Tarne</string>
+    <string name="market_shipping_days_value">%1$s päeva</string>
     <string name="market_shipping_notes">Märkmed</string>
     <string name="market_shipping_price">Hind</string>
     <string name="market_shipping_region">Piirkond</string>

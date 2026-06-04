@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Bilhin ngayon</string>
     <string name="market_listing_detail_description_heading">Paglalarawan</string>
     <string name="market_listing_detail_edit">I-edit</string>
+    <string name="market_listing_detail_information_heading">Impormasyon sa paghahatid</string>
     <string name="market_listing_detail_load_failed">Nabigong i-load ang listing</string>
+    <string name="market_listing_detail_listed">Nakalista %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasyon</string>
+    <string name="market_listing_detail_message">Mensahe</string>
     <string name="market_listing_detail_message_seller">I-message ang seller</string>
     <string name="market_listing_detail_not_found">Hindi nahanap ang listing</string>
     <string name="market_listing_detail_place_bid">Mag-bid</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Kumpirmahin</string>
     <string name="market_ship_dialog_title">Markahan bilang naipadala</string>
     <string name="market_shipping_days">Delivery</string>
+    <string name="market_shipping_days_value">%1$s araw</string>
     <string name="market_shipping_notes">Mga Tala</string>
     <string name="market_shipping_price">Presyo</string>
     <string name="market_shipping_region">Rehiyon</string>

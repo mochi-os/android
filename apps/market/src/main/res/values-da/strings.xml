@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Køb nu</string>
     <string name="market_listing_detail_description_heading">Beskrivelse</string>
     <string name="market_listing_detail_edit">Redigér</string>
+    <string name="market_listing_detail_information_heading">Leveringsoplysninger</string>
     <string name="market_listing_detail_load_failed">Kunne ikke indlæse annonce</string>
+    <string name="market_listing_detail_listed">Oprettet %1$s</string>
     <string name="market_listing_detail_location_heading">Placering</string>
+    <string name="market_listing_detail_message">Besked</string>
     <string name="market_listing_detail_message_seller">Send besked til sælger</string>
     <string name="market_listing_detail_not_found">Annonce ikke fundet</string>
     <string name="market_listing_detail_place_bid">Byd</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Bekræft</string>
     <string name="market_ship_dialog_title">Markér som afsendt</string>
     <string name="market_shipping_days">Levering</string>
+    <string name="market_shipping_days_value">%1$s dage</string>
     <string name="market_shipping_notes">Noter</string>
     <string name="market_shipping_price">Pris</string>
     <string name="market_shipping_region">Region</string>

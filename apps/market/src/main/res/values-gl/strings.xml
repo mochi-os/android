@@ -207,8 +207,11 @@
     <string name="market_listing_detail_buy_now">Comprar agora</string>
     <string name="market_listing_detail_description_heading">Descrición</string>
     <string name="market_listing_detail_edit">Editar</string>
+    <string name="market_listing_detail_information_heading">Información de entrega</string>
     <string name="market_listing_detail_load_failed">Non se puido cargar o anuncio</string>
+    <string name="market_listing_detail_listed">Publicado %1$s</string>
     <string name="market_listing_detail_location_heading">Localización</string>
+    <string name="market_listing_detail_message">Mensaxe</string>
     <string name="market_listing_detail_message_seller">Enviar mensaxe ao vendedor</string>
     <string name="market_listing_detail_not_found">Anuncio non atopado</string>
     <string name="market_listing_detail_place_bid">Puxán</string>
@@ -417,6 +420,7 @@
     <string name="market_ship_dialog_submit">Confirmar</string>
     <string name="market_ship_dialog_title">Marcar como enviado</string>
     <string name="market_shipping_days">Entrega</string>
+    <string name="market_shipping_days_value">%1$s días</string>
     <string name="market_shipping_notes">Notas</string>
     <string name="market_shipping_price">Prezo</string>
     <string name="market_shipping_region">Rexión</string>

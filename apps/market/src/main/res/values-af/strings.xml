@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">Koop nou</string>
     <string name="market_listing_detail_description_heading">Beskrywing</string>
     <string name="market_listing_detail_edit">Wysig</string>
+    <string name="market_listing_detail_information_heading">Afleweringinligting</string>
     <string name="market_listing_detail_load_failed">Kon nie lys laai nie</string>
     <string name="market_listing_detail_loading">Laai lys</string>
+    <string name="market_listing_detail_listed">Gelys %1$s</string>
     <string name="market_listing_detail_location_heading">Ligging</string>
+    <string name="market_listing_detail_message">Boodskap</string>
     <string name="market_listing_detail_message_seller">Stuur boodskap aan verkoper</string>
     <string name="market_listing_detail_not_found">Lys nie gevind nie</string>
     <string name="market_listing_detail_place_bid">Plaas bod</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">Bevestig</string>
     <string name="market_ship_dialog_title">Merk as gestuur</string>
     <string name="market_shipping_days">Aflewering</string>
+    <string name="market_shipping_days_value">%1$s dae</string>
     <string name="market_shipping_notes">Notas</string>
     <string name="market_shipping_price">Prys</string>
     <string name="market_shipping_region">Streek</string>

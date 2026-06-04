@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Koupit teď</string>
     <string name="market_listing_detail_description_heading">Popis</string>
     <string name="market_listing_detail_edit">Upravit</string>
+    <string name="market_listing_detail_information_heading">Informace o doručení</string>
     <string name="market_listing_detail_load_failed">Nepodařilo se načíst nabídku</string>
+    <string name="market_listing_detail_listed">Zveřejněno %1$s</string>
     <string name="market_listing_detail_location_heading">Umístění</string>
+    <string name="market_listing_detail_message">Zpráva</string>
     <string name="market_listing_detail_message_seller">Napsat prodejci</string>
     <string name="market_listing_detail_not_found">Nabídka nenalezena</string>
     <string name="market_listing_detail_place_bid">Přihodit</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Potvrdit</string>
     <string name="market_ship_dialog_title">Označit jako odesláno</string>
     <string name="market_shipping_days">Doručení</string>
+    <string name="market_shipping_days_value">%1$s dní</string>
     <string name="market_shipping_notes">Poznámky</string>
     <string name="market_shipping_price">Cena</string>
     <string name="market_shipping_region">Region</string>

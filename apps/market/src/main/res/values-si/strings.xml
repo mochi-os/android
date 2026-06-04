@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">දැන් මිලදී ගන්න</string>
     <string name="market_listing_detail_description_heading">විස්තරය</string>
     <string name="market_listing_detail_edit">සංස්කරණය කරන්න</string>
+    <string name="market_listing_detail_information_heading">බෙදාහැරීමේ තොරතුරු</string>
     <string name="market_listing_detail_load_failed">ලැයිස්තුගත කිරීම පූරණය කිරීමට අසමත් විය</string>
+    <string name="market_listing_detail_listed">ලැයිස්තුගත කළ %1$s</string>
     <string name="market_listing_detail_location_heading">ස්ථානය</string>
+    <string name="market_listing_detail_message">පණිවිඩය</string>
     <string name="market_listing_detail_message_seller">විකුණුම්කරු වෙත පණිවිඩයක් යවන්න</string>
     <string name="market_listing_detail_not_found">ලැයිස්තුගත කිරීම හමු නොවීය</string>
     <string name="market_listing_detail_place_bid">ලංසුවක් තබන්න</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">තහවුරු කරන්න</string>
     <string name="market_ship_dialog_title">නැව්ගත කළ ලෙස සලකුණු කරන්න</string>
     <string name="market_shipping_days">බෙදාහැරීම</string>
+    <string name="market_shipping_days_value">දින %1$s</string>
     <string name="market_shipping_notes">සටහන්</string>
     <string name="market_shipping_price">මිල</string>
     <string name="market_shipping_region">කලාපය</string>

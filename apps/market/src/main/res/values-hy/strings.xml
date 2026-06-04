@@ -203,8 +203,11 @@
     <string name="market_listing_detail_buy_now">Գնորդ</string>
     <string name="market_listing_detail_description_heading">Նկարագրություն</string>
     <string name="market_listing_detail_edit">Խմբագրել</string>
+    <string name="market_listing_detail_information_heading">Առաքման տվյալներ</string>
     <string name="market_listing_detail_load_failed">Չհաջողվեց բեռնել ցուցակագրումը</string>
+    <string name="market_listing_detail_listed">Հրապարակվել է %1$s</string>
     <string name="market_listing_detail_location_heading">Մատյան</string>
+    <string name="market_listing_detail_message">Հաղորդագրություն</string>
     <string name="market_listing_detail_message_seller">Հաղորդագրություններ ({0})</string>
     <string name="market_listing_detail_not_found">Ցուցակագրումը հեռացվեց</string>
     <string name="market_listing_detail_place_bid">Ներկայացնել առաջարկ</string>
@@ -413,6 +416,7 @@
     <string name="market_ship_dialog_submit">Հաստատել ստացումը</string>
     <string name="market_ship_dialog_title">Շուկա</string>
     <string name="market_shipping_days">Առաքում</string>
+    <string name="market_shipping_days_value">%1$s օր</string>
     <string name="market_shipping_notes">Նշումներ</string>
     <string name="market_shipping_price">Գին</string>
     <string name="market_shipping_region">Տարածաշրջան</string>

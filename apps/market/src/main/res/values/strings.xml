@@ -279,9 +279,12 @@
     <string name="market_listing_detail_buy_now">Buy now</string>
     <string name="market_listing_detail_description_heading">Description</string>
     <string name="market_listing_detail_edit">Edit</string>
+    <string name="market_listing_detail_information_heading">Delivery information</string>
     <string name="market_listing_detail_load_failed">Failed to load listing</string>
     <string name="market_listing_detail_loading">Loading listing</string>
+    <string name="market_listing_detail_listed">Listed %1$s</string>
     <string name="market_listing_detail_location_heading">Location</string>
+    <string name="market_listing_detail_message">Message</string>
     <string name="market_listing_detail_message_seller">Message seller</string>
     <string name="market_listing_detail_not_found">Listing not found</string>
     <string name="market_listing_detail_place_bid">Place bid</string>
@@ -293,10 +296,12 @@
     <string name="market_listing_detail_save">Save</string>
     <string name="market_listing_detail_seller_banned_banner">This seller is banned. New orders cannot be placed.</string>
     <string name="market_listing_detail_seller_heading">Seller</string>
+    <string name="market_listing_detail_seller_response">Seller response</string>
+    <string name="market_listing_detail_seller_reviews_heading">Seller reviews</string>
     <string name="market_listing_detail_seller_suspended_banner">This seller is suspended. New orders are paused until the account is reinstated.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Buying is disabled while the seller\'s account is restricted.</string>
     <string name="market_listing_detail_share">Share listing</string>
-    <string name="market_listing_detail_shipping_heading">Shipping</string>
+    <string name="market_listing_detail_shipping_heading">Shipping options</string>
     <string name="market_listing_detail_subscribe">Subscribe</string>
     <string name="market_listing_detail_tags_heading">Tags</string>
     <string name="market_listing_detail_title">Listing</string>
@@ -568,6 +573,7 @@
     <string name="market_ship_dialog_submit">Confirm</string>
     <string name="market_ship_dialog_title">Mark as shipped</string>
     <string name="market_shipping_days">Delivery</string>
+    <string name="market_shipping_days_value">%1$s days</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_shipping_price">Price</string>
     <string name="market_shipping_region">Region</string>

@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Kup teraz</string>
     <string name="market_listing_detail_description_heading">Opis</string>
     <string name="market_listing_detail_edit">Edytuj</string>
+    <string name="market_listing_detail_information_heading">Informacje o dostawie</string>
     <string name="market_listing_detail_load_failed">Nie udało się załadować oferty</string>
+    <string name="market_listing_detail_listed">Dodano %1$s</string>
     <string name="market_listing_detail_location_heading">Lokalizacja</string>
+    <string name="market_listing_detail_message">Wiadomość</string>
     <string name="market_listing_detail_message_seller">Wyślij wiadomość do sprzedającego</string>
     <string name="market_listing_detail_not_found">Nie znaleziono oferty</string>
     <string name="market_listing_detail_place_bid">Złóż ofertę</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Potwierdź</string>
     <string name="market_ship_dialog_title">Oznacz jako wysłane</string>
     <string name="market_shipping_days">Dostawa</string>
+    <string name="market_shipping_days_value">%1$s dni</string>
     <string name="market_shipping_notes">Notatki</string>
     <string name="market_shipping_price">Cena</string>
     <string name="market_shipping_region">Region</string>

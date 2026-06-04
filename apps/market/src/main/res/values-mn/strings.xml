@@ -280,9 +280,12 @@
     <string name="market_listing_detail_buy_now">Одоо худалдан авах</string>
     <string name="market_listing_detail_description_heading">Тайлбар</string>
     <string name="market_listing_detail_edit">Засах</string>
+    <string name="market_listing_detail_information_heading">Хүргэлтийн мэдээлэл</string>
     <string name="market_listing_detail_load_failed">Зар ачаалж чадсангүй</string>
     <string name="market_listing_detail_loading">Зар ачааллаж байна</string>
+    <string name="market_listing_detail_listed">Нийтэлсэн %1$s</string>
     <string name="market_listing_detail_location_heading">Байршил</string>
+    <string name="market_listing_detail_message">Зурвас</string>
     <string name="market_listing_detail_message_seller">Худалдагчид мессеж</string>
     <string name="market_listing_detail_not_found">Зар олдсонгүй</string>
     <string name="market_listing_detail_place_bid">Санал гаргах</string>
@@ -569,6 +572,7 @@
     <string name="market_ship_dialog_submit">Баталгаажуулах</string>
     <string name="market_ship_dialog_title">Илгээгдсэн гэж тэмдэглэх</string>
     <string name="market_shipping_days">Хүргэлт</string>
+    <string name="market_shipping_days_value">%1$s өдөр</string>
     <string name="market_shipping_notes">Тэмдэглэл</string>
     <string name="market_shipping_price">Үнэ</string>
     <string name="market_shipping_region">Бүс</string>

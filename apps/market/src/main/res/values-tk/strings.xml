@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">Häzir satyn almak</string>
     <string name="market_listing_detail_description_heading">Düşündiriş</string>
     <string name="market_listing_detail_edit">Düzet</string>
+    <string name="market_listing_detail_information_heading">Eltip bermek maglumaty</string>
     <string name="market_listing_detail_load_failed">Sanaw ýüklenmedi</string>
+    <string name="market_listing_detail_listed">Sanawa goşuldy %1$s</string>
     <string name="market_listing_detail_location_heading">Ýerleşýän ýeri</string>
+    <string name="market_listing_detail_message">Habar</string>
     <string name="market_listing_detail_message_seller">Satyja habar</string>
     <string name="market_listing_detail_not_found">Sanaw tapylmady</string>
     <string name="market_listing_detail_place_bid">Teklip ber</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">Tassyklamak</string>
     <string name="market_ship_dialog_title">Iberildi diýip belgile</string>
     <string name="market_shipping_days">Eltip bermek</string>
+    <string name="market_shipping_days_value">%1$s gün</string>
     <string name="market_shipping_notes">Bellikler</string>
     <string name="market_shipping_price">Baha</string>
     <string name="market_shipping_region">Region</string>

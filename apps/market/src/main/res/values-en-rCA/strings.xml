@@ -195,6 +195,7 @@
     <string name="market_sale_shipped_label">Shipped</string>
     <string name="market_search_clear">Clear search</string>
     <string name="market_section_categories">Browse Categories</string>
+    <string name="market_shipping_days_value">%1$s days</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_sidebar_messages">Messages</string>
     <string name="market_sidebar_reviews">Reviews</string>
@@ -208,6 +209,7 @@
     <string name="market_sale_section_audit">Activity</string>
     <string name="market_account_location_label">Location</string>
     <string name="market_editor_section_location">Location</string>
+    <string name="market_listing_detail_listed">Listed %1$s</string>
     <string name="market_listing_detail_location_heading">Location</string>
     <string name="app_name">Market</string>
     <string name="market_channel_name">Market</string>
@@ -429,8 +431,10 @@
     <string name="market_listing_detail_bids_heading">Bid history</string>
     <string name="market_listing_detail_buy">Buy</string>
     <string name="market_listing_detail_buy_now">Buy now</string>
+    <string name="market_listing_detail_information_heading">Delivery information</string>
     <string name="market_listing_detail_load_failed">Failed to load listing</string>
     <string name="market_listing_detail_loading">Loading listing</string>
+    <string name="market_listing_detail_message">Message</string>
     <string name="market_listing_detail_message_seller">Message seller</string>
     <string name="market_listing_detail_not_found">Listing not found</string>
     <string name="market_listing_detail_place_bid">Place bid</string>

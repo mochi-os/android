@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ယခု ဝယ်မည်</string>
     <string name="market_listing_detail_description_heading">ဖော်ပြချက်</string>
     <string name="market_listing_detail_edit">တည်းဖြတ်</string>
+    <string name="market_listing_detail_information_heading">ပို့ဆောင်ရေး အချက်အလက်</string>
     <string name="market_listing_detail_load_failed">စာရင်း တင်၍ မရပါ</string>
+    <string name="market_listing_detail_listed">စာရင်းသွင်းသည် %1$s</string>
     <string name="market_listing_detail_location_heading">တည်နေရာ</string>
+    <string name="market_listing_detail_message">မက်ဆေ့ချ်</string>
     <string name="market_listing_detail_message_seller">ရောင်းသူကို မက်ဆေ့ဂျ်ပို့</string>
     <string name="market_listing_detail_not_found">စာရင်း မတွေ့ပါ</string>
     <string name="market_listing_detail_place_bid">ဈေးပေးခြင်း</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">အတည်ပြုမည်</string>
     <string name="market_ship_dialog_title">ပို့ဆောင်ပြီးအဖြစ် မှတ်</string>
     <string name="market_shipping_days">ပို့ဆောင်မှု</string>
+    <string name="market_shipping_days_value">%1$s ရက်</string>
     <string name="market_shipping_notes">မှတ်စုများ</string>
     <string name="market_shipping_price">စျေးနှုန်း</string>
     <string name="market_shipping_region">ဒေသ</string>

@@ -201,8 +201,11 @@
     <string name="market_listing_detail_buy_now">ຊື້ດຽວນີ້</string>
     <string name="market_listing_detail_description_heading">ລາຍລະອຽດ</string>
     <string name="market_listing_detail_edit">ແກ້ໄຂ</string>
+    <string name="market_listing_detail_information_heading">ຂໍ້ມູນການຈັດສົ່ງ</string>
     <string name="market_listing_detail_load_failed">ໂຫຼດການລົງປະກາດຂາຍລົ້ມເຫຼວ</string>
+    <string name="market_listing_detail_listed">ລົງລາຍການ %1$s</string>
     <string name="market_listing_detail_location_heading">ສະຖານທີ່</string>
+    <string name="market_listing_detail_message">ຂໍ້ຄວາມ</string>
     <string name="market_listing_detail_message_seller">ສົ່ງຂໍ້ຄວາມຫາຜູ້ຂາຍ</string>
     <string name="market_listing_detail_not_found">ບໍ່ພົບການລົງປະກາດຂາຍ</string>
     <string name="market_listing_detail_place_bid">ສະເໜີລາຄາ</string>
@@ -411,6 +414,7 @@
     <string name="market_ship_dialog_submit">ຢືນຢັນ</string>
     <string name="market_ship_dialog_title">ໝາຍວ່າຂົນສົ່ງແລ້ວ</string>
     <string name="market_shipping_days">ການຈັດສົ່ງ</string>
+    <string name="market_shipping_days_value">%1$s ມື້</string>
     <string name="market_shipping_notes">ບັນທຶກ</string>
     <string name="market_shipping_price">ລາຄາ</string>
     <string name="market_shipping_region">ພາກພື້ນ</string>

@@ -161,8 +161,11 @@
     <string name="market_listing_detail_buy_now">Купить сейчас</string>
     <string name="market_listing_detail_description_heading">Описание</string>
     <string name="market_listing_detail_edit">Изменить</string>
+    <string name="market_listing_detail_information_heading">Информация о доставке</string>
     <string name="market_listing_detail_load_failed">Не удалось загрузить объявление</string>
+    <string name="market_listing_detail_listed">Опубликовано %1$s</string>
     <string name="market_listing_detail_location_heading">Местоположение</string>
+    <string name="market_listing_detail_message">Сообщение</string>
     <string name="market_listing_detail_message_seller">Сообщение продавцу</string>
     <string name="market_listing_detail_not_found">Объявление не найдено</string>
     <string name="market_listing_detail_place_bid">Сделать ставку</string>
@@ -346,6 +349,7 @@
     <string name="market_ship_dialog_submit">Подтвердить</string>
     <string name="market_ship_dialog_title">Отметить как отправленное</string>
     <string name="market_shipping_days">Доставка</string>
+    <string name="market_shipping_days_value">%1$s дн.</string>
     <string name="market_shipping_notes">Заметки</string>
     <string name="market_shipping_price">Цена</string>
     <string name="market_shipping_region">Регион</string>
