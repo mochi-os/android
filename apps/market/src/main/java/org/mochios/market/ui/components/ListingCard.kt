@@ -39,6 +39,7 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.market.R
+import org.mochios.market.lib.rememberListingThumbnailUrl
 import org.mochios.market.model.Listing
 
 /**
@@ -55,8 +56,6 @@ import org.mochios.market.model.Listing
  * The card is themed via [CardDefaults.outlinedCardColors] so the
  * surrounding screen's Mochi theme stays in charge of palette.
  *
- * @param thumbnailUrl Absolute photo URL or null to render the no-photo
- *                     placeholder.
  * @param sellerName   Display name pulled from the search response.
  * @param sellerRating 0–5 rating from the search response.
  * @param sellerReviews Review count from the search response.
@@ -68,7 +67,6 @@ import org.mochios.market.model.Listing
 fun ListingCard(
     listing: Listing,
     modifier: Modifier = Modifier,
-    thumbnailUrl: String? = null,
     saved: Boolean = false,
     sellerName: String? = null,
     sellerAvatarUrl: String? = null,
@@ -90,13 +88,14 @@ fun ListingCard(
                 .fillMaxWidth()
                 .aspectRatio(1f),
         ) {
-            if (thumbnailUrl.isNullOrBlank()) {
+            val derivedUrl = rememberListingThumbnailUrl(listing)
+            if (derivedUrl.isNullOrBlank()) {
                 NoPhotoPlaceholder(modifier = Modifier.fillMaxSize())
             } else {
                 val context = LocalContext.current
                 AsyncImage(
                     model = ImageRequest.Builder(context)
-                        .data(thumbnailUrl)
+                        .data(derivedUrl)
                         .crossfade(true)
                         .build(),
                     contentDescription = stringResource(R.string.market_listing_photo),
