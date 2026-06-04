@@ -3,6 +3,7 @@ package org.mochios.market.ui.listing
 import android.content.Intent
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -41,6 +42,7 @@ import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -131,6 +133,7 @@ import org.mochios.market.ui.components.WarningsSection
 import org.mochios.market.ui.dialog.PlaceBidDialog
 import org.mochios.market.ui.dialog.ReportListingDialog
 import androidx.compose.material.icons.filled.Inventory
+import androidx.compose.material.icons.outlined.Flag
 
 /**
  * Detail view for a single market listing. Mirrors
@@ -622,6 +625,13 @@ private fun ListingDetailContent(
                             onClick = onMessageSeller,
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(10.dp),
+                            colors = ButtonDefaults.outlinedButtonColors(
+                                contentColor = Color.Black,
+                            ),
+                            border = BorderStroke(
+                                width = 1.dp,
+                                color = MaterialTheme.colorScheme.outlineVariant,
+                            ),
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Message,
@@ -646,9 +656,13 @@ private fun ListingDetailContent(
                             onClick = onReport,
                             enabled = !isReported,
                             shape = RoundedCornerShape(10.dp),
+                            border = BorderStroke(
+                                width = 1.dp,
+                                color = MaterialTheme.colorScheme.outlineVariant,
+                            ),
                         ) {
                             Icon(
-                                imageVector = Icons.Default.Flag,
+                                imageVector = Icons.Outlined.Flag,
                                 contentDescription = stringResource(
                                     if (isReported) R.string.market_listing_detail_already_reported
                                     else R.string.market_listing_detail_report,

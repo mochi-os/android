@@ -23,7 +23,7 @@ import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Label
+import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Menu
@@ -453,7 +453,7 @@ private fun CategoryGrid(
                         },
                         leadingIcon = {
                             Icon(
-                                imageVector = Icons.AutoMirrored.Filled.Label,
+                                imageVector = Icons.AutoMirrored.Outlined.Label,
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.size(AssistChipDefaults.IconSize),
