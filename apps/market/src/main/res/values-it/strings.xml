@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografia</string>
     <string name="market_account_location_label">Posizione</string>
     <string name="market_account_save">Salva</string>
+    <string name="market_account_seller_title">Diventa venditore</string>
+    <string name="market_account_seller_subtitle">Raggiungi gli acquirenti e vendi i tuoi articoli su Mochi. I pagamenti sono gestiti in modo sicuro tramite Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Attiva account venditore</string>
+    <string name="market_account_seller_step_activate_desc">Crea il tuo profilo venditore per iniziare a pubblicare articoli</string>
+    <string name="market_account_seller_step_stripe_desc">Collega un account Stripe per accettare pagamenti dagli acquirenti</string>
+    <string name="market_account_seller_fees_heading">Commissioni:</string>
+    <string name="market_account_seller_fees_mochi">Mochi trattiene il %1$s%% di ogni vendita.</string>
+    <string name="market_account_seller_fees_stripe">Stripe applica la propria commissione di elaborazione per transazione e una tariffa fissa per ogni storno. Le tariffe attuali per la tua valuta e regione sono indicate nella tua dashboard Stripe.</string>
+    <string name="market_account_seller_connect">Collega Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Collega Stripe</string>
+    <string name="market_account_seller_check_status">Verifica lo stato</string>
     <string name="market_account_status_banned_title">Account bandito</string>
     <string name="market_account_status_suspended_title">Account sospeso</string>
     <string name="market_account_stripe_dashboard">Apri dashboard Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Ordine n. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Racconta agli acquirenti qualcosa su di te…</string>
     <string name="market_account_load_failed">Impossibile caricare l\'account</string>
     <string name="market_account_save_failed">Impossibile salvare le modifiche</string>
     <string name="market_account_saved">Modifiche salvate</string>

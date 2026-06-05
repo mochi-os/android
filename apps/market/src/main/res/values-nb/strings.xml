@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_location_label">Plassering</string>
     <string name="market_account_save">Lagre</string>
+    <string name="market_account_seller_title">Bli selger</string>
+    <string name="market_account_seller_subtitle">Nå kjøpere og selg varene dine på Mochi. Betalinger håndteres sikkert via Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktiver selgerkonto</string>
+    <string name="market_account_seller_step_activate_desc">Opprett selgerprofilen din for å begynne å legge ut varer</string>
+    <string name="market_account_seller_step_stripe_desc">Koble til en Stripe-konto for å ta imot betalinger fra kjøpere</string>
+    <string name="market_account_seller_fees_heading">Gebyrer:</string>
+    <string name="market_account_seller_fees_mochi">Mochi tar %1$s%% av hvert salg.</string>
+    <string name="market_account_seller_fees_stripe">Stripe tar sitt eget behandlingsgebyr per transaksjon og et fast gebyr per tilbakeføring. Gjeldende satser for valutaen og regionen din er oppført i Stripe-dashbordet ditt.</string>
+    <string name="market_account_seller_connect">Koble til Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Koble til Stripe</string>
+    <string name="market_account_seller_check_status">Sjekk status</string>
     <string name="market_account_status_banned_title">Konto utestengt</string>
     <string name="market_account_status_suspended_title">Konto suspendert</string>
     <string name="market_account_stripe_dashboard">Åpne Stripe-dashbordet</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Ordre #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Fortell kjøpere om deg selv…</string>
     <string name="market_account_load_failed">Kunne ikke laste kontoen</string>
     <string name="market_account_save_failed">Kunne ikke lagre endringene</string>
     <string name="market_account_saved">Endringene er lagret</string>

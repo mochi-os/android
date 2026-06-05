@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">个人简介</string>
     <string name="market_account_location_label">位置</string>
     <string name="market_account_save">保存</string>
+    <string name="market_account_seller_title">成为卖家</string>
+    <string name="market_account_seller_subtitle">触达买家，在 Mochi 上出售你的商品。付款通过 Stripe 安全处理。</string>
+    <string name="market_account_seller_step_activate_title">激活卖家账户</string>
+    <string name="market_account_seller_step_activate_desc">创建你的卖家资料即可开始上架商品</string>
+    <string name="market_account_seller_step_stripe_desc">关联 Stripe 账户以接受买家付款</string>
+    <string name="market_account_seller_fees_heading">费用：</string>
+    <string name="market_account_seller_fees_mochi">Mochi 会从每笔销售中收取 %1$s%%。</string>
+    <string name="market_account_seller_fees_stripe">Stripe 会按每笔交易收取自己的处理费，并对每次退单收取固定费用。适用于你的货币和地区的当前费率会在你的 Stripe 控制台中列出。</string>
+    <string name="market_account_seller_connect">连接 Stripe</string>
+    <string name="market_account_seller_step_stripe_title">连接 Stripe</string>
+    <string name="market_account_seller_check_status">检查状态</string>
     <string name="market_account_status_banned_title">账户已封禁</string>
     <string name="market_account_status_suspended_title">账户已暂停</string>
     <string name="market_account_stripe_dashboard">打开 Stripe 控制台</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">订单 #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">向买家介绍一下你自己…</string>
     <string name="market_account_load_failed">无法加载账户</string>
     <string name="market_account_save_failed">无法保存更改</string>
     <string name="market_account_saved">更改已保存</string>

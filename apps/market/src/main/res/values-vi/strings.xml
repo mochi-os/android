@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Tiểu sử</string>
     <string name="market_account_location_label">Vị trí</string>
     <string name="market_account_save">Lưu</string>
+    <string name="market_account_seller_title">Trở thành người bán</string>
+    <string name="market_account_seller_subtitle">Tiếp cận người mua và bán sản phẩm của bạn trên Mochi. Thanh toán được xử lý an toàn qua Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Kích hoạt tài khoản người bán</string>
+    <string name="market_account_seller_step_activate_desc">Tạo hồ sơ người bán để bắt đầu đăng sản phẩm</string>
+    <string name="market_account_seller_step_stripe_desc">Liên kết tài khoản Stripe để nhận thanh toán từ người mua</string>
+    <string name="market_account_seller_fees_heading">Phí:</string>
+    <string name="market_account_seller_fees_mochi">Mochi thu %1$s%% trên mỗi lượt bán.</string>
+    <string name="market_account_seller_fees_stripe">Stripe tính phí xử lý riêng cho mỗi giao dịch và một khoản phí cố định cho mỗi lần bồi hoàn. Mức phí hiện tại cho đơn vị tiền tệ và khu vực của bạn được liệt kê trong Bảng điều khiển Stripe của bạn.</string>
+    <string name="market_account_seller_connect">Kết nối Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Kết nối Stripe</string>
+    <string name="market_account_seller_check_status">Kiểm tra trạng thái</string>
     <string name="market_account_status_banned_title">Đã cấm tài khoản</string>
     <string name="market_account_status_suspended_title">Đã tạm ngưng tài khoản</string>
     <string name="market_account_stripe_dashboard">Mở bảng điều khiển Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Đơn hàng #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Hãy giới thiệu về bạn cho người mua…</string>
     <string name="market_account_load_failed">Không thể tải tài khoản</string>
     <string name="market_account_save_failed">Không thể lưu thay đổi</string>
     <string name="market_account_saved">Đã lưu thay đổi</string>

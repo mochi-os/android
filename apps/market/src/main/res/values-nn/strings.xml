@@ -5,6 +5,17 @@
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_location_label">Stad</string>
     <string name="market_account_save">Lagre</string>
+    <string name="market_account_seller_title">Bli seljar</string>
+    <string name="market_account_seller_subtitle">Nå kjøparar og sel varene dine på Mochi. Betalingar vert handsama trygt via Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktiver seljarkonto</string>
+    <string name="market_account_seller_step_activate_desc">Lag seljarprofilen din for å byrje å leggje ut varer</string>
+    <string name="market_account_seller_step_stripe_desc">Kople til ein Stripe-konto for å ta imot betalingar frå kjøparar</string>
+    <string name="market_account_seller_fees_heading">Gebyr:</string>
+    <string name="market_account_seller_fees_mochi">Mochi tek %1$s%% av kvart sal.</string>
+    <string name="market_account_seller_fees_stripe">Stripe tek sitt eige handsamingsgebyr per transaksjon og eit fast gebyr per tilbakeføring. Gjeldande satsar for valutaen og regionen din er lista opp i Stripe-dashbordet ditt.</string>
+    <string name="market_account_seller_connect">Kople til Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Kople til Stripe</string>
+    <string name="market_account_seller_check_status">Sjekk status</string>
     <string name="market_account_status_banned_title">Konto utestengd</string>
     <string name="market_account_status_suspended_title">Konto suspendert</string>
     <string name="market_account_stripe_title">Stripe</string>
@@ -430,6 +441,7 @@
     <string name="market_purchases_order_label">Tinging #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Fortel kjøparar om deg sjølv…</string>
     <string name="market_account_load_failed">Kunne ikkje lasta kontoen</string>
     <string name="market_account_save_failed">Kunne ikkje lagra endringane</string>
     <string name="market_account_saved">Endringane er lagra</string>

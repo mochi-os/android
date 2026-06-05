@@ -137,6 +137,17 @@
     <string name="market_section_listings">Annonces récentes</string>
     <string name="market_sidebar_listings">Annonces</string>
     <string name="app_name">Marché</string>
+    <string name="market_account_seller_title">Devenir vendeur</string>
+    <string name="market_account_seller_subtitle">Touchez des acheteurs et vendez vos articles sur Mochi. Les paiements sont gérés en toute sécurité via Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Activer le compte vendeur</string>
+    <string name="market_account_seller_step_activate_desc">Créez votre profil vendeur pour commencer à publier des articles</string>
+    <string name="market_account_seller_step_stripe_desc">Connectez un compte Stripe pour accepter les paiements des acheteurs</string>
+    <string name="market_account_seller_fees_heading">Frais :</string>
+    <string name="market_account_seller_fees_mochi">Mochi prélève %1$s %% sur chaque vente.</string>
+    <string name="market_account_seller_fees_stripe">Stripe applique ses propres frais de traitement par transaction et des frais fixes par rétrofacturation. Les tarifs en vigueur pour votre devise et votre région figurent dans votre tableau de bord Stripe.</string>
+    <string name="market_account_seller_connect">Connecter Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Connecter Stripe</string>
+    <string name="market_account_seller_check_status">Vérifier l\'état</string>
     <string name="market_account_status_banned_title">Compte banni</string>
     <string name="market_account_status_suspended_title">Compte suspendu</string>
     <string name="market_account_stripe_title">Stripe</string>
@@ -219,6 +230,7 @@
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Biographie</string>
+    <string name="market_account_biography_placeholder">Parlez de vous aux acheteurs…</string>
     <string name="market_account_load_failed">Impossible de charger le compte</string>
     <string name="market_account_save_failed">Impossible d\'enregistrer les modifications</string>
     <string name="market_account_saved">Modifications enregistrées</string>

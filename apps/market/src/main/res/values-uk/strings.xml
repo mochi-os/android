@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Біографія</string>
     <string name="market_account_location_label">Розташування</string>
     <string name="market_account_save">Зберегти</string>
+    <string name="market_account_seller_title">Стати продавцем</string>
+    <string name="market_account_seller_subtitle">Залучайте покупців і продавайте свої товари на Mochi. Платежі безпечно обробляються через Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Активувати акаунт продавця</string>
+    <string name="market_account_seller_step_activate_desc">Створіть профіль продавця, щоб почати додавати товари</string>
+    <string name="market_account_seller_step_stripe_desc">Підключіть акаунт Stripe, щоб приймати платежі від покупців</string>
+    <string name="market_account_seller_fees_heading">Комісії:</string>
+    <string name="market_account_seller_fees_mochi">Mochi бере %1$s%% з кожного продажу.</string>
+    <string name="market_account_seller_fees_stripe">Stripe стягує власну комісію за обробку кожної транзакції та фіксовану плату за кожне повернення платежу. Поточні тарифи для вашої валюти й регіону наведені на вашій панелі Stripe.</string>
+    <string name="market_account_seller_connect">Підключити Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Підключити Stripe</string>
+    <string name="market_account_seller_check_status">Перевірити статус</string>
     <string name="market_account_status_banned_title">Обліковий запис заблоковано</string>
     <string name="market_account_status_suspended_title">Обліковий запис призупинено</string>
     <string name="market_account_stripe_dashboard">Відкрити панель Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Замовлення № %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Розкажіть покупцям про себе…</string>
     <string name="market_account_load_failed">Не вдалося завантажити обліковий запис</string>
     <string name="market_account_save_failed">Не вдалося зберегти зміни</string>
     <string name="market_account_saved">Зміни збережено</string>

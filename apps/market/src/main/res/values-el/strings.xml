@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Βιογραφία</string>
     <string name="market_account_location_label">Τοποθεσία</string>
     <string name="market_account_save">Αποθήκευση</string>
+    <string name="market_account_seller_title">Γίνετε πωλητής</string>
+    <string name="market_account_seller_subtitle">Προσεγγίστε αγοραστές και πουλήστε τα προϊόντα σας στο Mochi. Οι πληρωμές διεκπεραιώνονται με ασφάλεια μέσω Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Ενεργοποίηση λογαριασμού πωλητή</string>
+    <string name="market_account_seller_step_activate_desc">Δημιουργήστε το προφίλ πωλητή σας για να ξεκινήσετε να καταχωρείτε προϊόντα</string>
+    <string name="market_account_seller_step_stripe_desc">Συνδέστε έναν λογαριασμό Stripe για να δέχεστε πληρωμές από αγοραστές</string>
+    <string name="market_account_seller_fees_heading">Χρεώσεις:</string>
+    <string name="market_account_seller_fees_mochi">Το Mochi κρατά %1$s%% από κάθε πώληση.</string>
+    <string name="market_account_seller_fees_stripe">Το Stripe χρεώνει τη δική του προμήθεια επεξεργασίας ανά συναλλαγή και ένα σταθερό τέλος ανά αντιστροφή χρέωσης. Οι τρέχουσες χρεώσεις για το νόμισμα και την περιοχή σας αναφέρονται στον πίνακα ελέγχου Stripe.</string>
+    <string name="market_account_seller_connect">Σύνδεση Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Σύνδεση Stripe</string>
+    <string name="market_account_seller_check_status">Έλεγχος κατάστασης</string>
     <string name="market_account_status_banned_title">Ο λογαριασμός αποκλείστηκε</string>
     <string name="market_account_status_suspended_title">Ο λογαριασμός ανεστάλη</string>
     <string name="market_account_stripe_dashboard">Άνοιγμα πίνακα Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Παραγγελία #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Πείτε στους αγοραστές για εσάς…</string>
     <string name="market_account_load_failed">Δεν ήταν δυνατή η φόρτωση του λογαριασμού</string>
     <string name="market_account_save_failed">Δεν ήταν δυνατή η αποθήκευση των αλλαγών</string>
     <string name="market_account_saved">Οι αλλαγές αποθηκεύτηκαν</string>

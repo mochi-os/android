@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Životopis</string>
     <string name="market_account_location_label">Poloha</string>
     <string name="market_account_save">Uložiť</string>
+    <string name="market_account_seller_title">Staňte sa predajcom</string>
+    <string name="market_account_seller_subtitle">Oslovte kupujúcich a predávajte svoje položky na Mochi. Platby sa bezpečne spracúvajú cez Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktivovať účet predajcu</string>
+    <string name="market_account_seller_step_activate_desc">Vytvorte si profil predajcu a začnite pridávať položky</string>
+    <string name="market_account_seller_step_stripe_desc">Prepojte účet Stripe a prijímajte platby od kupujúcich</string>
+    <string name="market_account_seller_fees_heading">Poplatky:</string>
+    <string name="market_account_seller_fees_mochi">Mochi si berie %1$s%% z každého predaja.</string>
+    <string name="market_account_seller_fees_stripe">Stripe účtuje vlastný poplatok za spracovanie každej transakcie a pevný poplatok za každé spätné zúčtovanie. Aktuálne sadzby pre vašu menu a región nájdete vo svojom paneli Stripe.</string>
+    <string name="market_account_seller_connect">Pripojiť Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Pripojiť Stripe</string>
+    <string name="market_account_seller_check_status">Skontrolovať stav</string>
     <string name="market_account_status_banned_title">Účet zablokovaný</string>
     <string name="market_account_status_suspended_title">Účet pozastavený</string>
     <string name="market_account_stripe_dashboard">Otvoriť panel Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Objednávka č. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Povedzte kupujúcim o sebe…</string>
     <string name="market_account_load_failed">Účet sa nepodarilo načítať</string>
     <string name="market_account_save_failed">Zmeny sa nepodarilo uložiť</string>
     <string name="market_account_saved">Zmeny uložené</string>

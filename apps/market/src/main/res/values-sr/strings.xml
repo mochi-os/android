@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Биографија</string>
     <string name="market_account_location_label">Локација</string>
     <string name="market_account_save">Сачувај</string>
+    <string name="market_account_seller_title">Постаните продавац</string>
+    <string name="market_account_seller_subtitle">Доприте до купаца и продајте своје артикле на Mochi. Плаћања се безбедно обрађују путем Stripe-а.</string>
+    <string name="market_account_seller_step_activate_title">Активирај налог продавца</string>
+    <string name="market_account_seller_step_activate_desc">Направите профил продавца да бисте почели да објављујете артикле</string>
+    <string name="market_account_seller_step_stripe_desc">Повежите Stripe налог да бисте примали уплате од купаца</string>
+    <string name="market_account_seller_fees_heading">Накнаде:</string>
+    <string name="market_account_seller_fees_mochi">Mochi узима %1$s%% од сваке продаје.</string>
+    <string name="market_account_seller_fees_stripe">Stripe наплаћује сопствену накнаду за обраду по трансакцији и фиксну накнаду по повраћају средстава. Тренутне стопе за вашу валуту и регион наведене су на вашој Stripe контролној табли.</string>
+    <string name="market_account_seller_connect">Повежи Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Повежи Stripe</string>
+    <string name="market_account_seller_check_status">Провери статус</string>
     <string name="market_account_status_banned_title">Налог забрањен</string>
     <string name="market_account_status_suspended_title">Налог суспендован</string>
     <string name="market_account_stripe_dashboard">Отвори Stripe панел</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Поруџбина #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Реците купцима о себи…</string>
     <string name="market_account_load_failed">Učitavanje naloga nije uspelo</string>
     <string name="market_account_save_failed">Čuvanje izmena nije uspelo</string>
     <string name="market_account_saved">Izmene su sačuvane</string>

@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografie</string>
     <string name="market_account_location_label">Ort</string>
     <string name="market_account_save">Speichern</string>
+    <string name="market_account_seller_title">Verkäufer werden</string>
+    <string name="market_account_seller_subtitle">Erreiche Käufer und verkaufe deine Artikel auf Mochi. Zahlungen werden sicher über Stripe abgewickelt.</string>
+    <string name="market_account_seller_step_activate_title">Verkäuferkonto aktivieren</string>
+    <string name="market_account_seller_step_activate_desc">Erstelle dein Verkäuferprofil, um Artikel einzustellen</string>
+    <string name="market_account_seller_step_stripe_desc">Verbinde ein Stripe-Konto, um Zahlungen von Käufern zu akzeptieren</string>
+    <string name="market_account_seller_fees_heading">Gebühren:</string>
+    <string name="market_account_seller_fees_mochi">Mochi behält %1$s%% von jedem Verkauf.</string>
+    <string name="market_account_seller_fees_stripe">Stripe berechnet eine eigene Bearbeitungsgebühr pro Transaktion und eine Pauschalgebühr pro Rückbuchung. Die aktuellen Sätze für deine Währung und Region findest du in deinem Stripe-Dashboard.</string>
+    <string name="market_account_seller_connect">Stripe verbinden</string>
+    <string name="market_account_seller_step_stripe_title">Stripe verbinden</string>
+    <string name="market_account_seller_check_status">Status prüfen</string>
     <string name="market_account_status_banned_title">Konto gesperrt</string>
     <string name="market_account_status_suspended_title">Konto ausgesetzt</string>
     <string name="market_account_stripe_dashboard">Stripe-Dashboard öffnen</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Bestellung Nr. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Erzähle Käufern von dir…</string>
     <string name="market_account_load_failed">Konto konnte nicht geladen werden</string>
     <string name="market_account_save_failed">Änderungen konnten nicht gespeichert werden</string>
     <string name="market_account_saved">Änderungen gespeichert</string>

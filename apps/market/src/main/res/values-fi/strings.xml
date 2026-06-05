@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Elämäkerta</string>
     <string name="market_account_location_label">Sijainti</string>
     <string name="market_account_save">Tallenna</string>
+    <string name="market_account_seller_title">Ryhdy myyjäksi</string>
+    <string name="market_account_seller_subtitle">Tavoita ostajat ja myy tuotteitasi Mochissa. Maksut käsitellään turvallisesti Stripen kautta.</string>
+    <string name="market_account_seller_step_activate_title">Aktivoi myyjätili</string>
+    <string name="market_account_seller_step_activate_desc">Luo myyjäprofiili ja aloita tuotteiden lisääminen</string>
+    <string name="market_account_seller_step_stripe_desc">Yhdistä Stripe-tili ottaaksesi vastaan maksuja ostajilta</string>
+    <string name="market_account_seller_fees_heading">Maksut:</string>
+    <string name="market_account_seller_fees_mochi">Mochi ottaa %1$s%% jokaisesta myynnistä.</string>
+    <string name="market_account_seller_fees_stripe">Stripe veloittaa oman käsittelymaksunsa tapahtumaa kohden ja kiinteän maksun jokaisesta takaisinperinnästä. Valuuttasi ja alueesi nykyiset hinnat näkyvät Stripe-hallintapaneelissasi.</string>
+    <string name="market_account_seller_connect">Yhdistä Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Yhdistä Stripe</string>
+    <string name="market_account_seller_check_status">Tarkista tila</string>
     <string name="market_account_status_banned_title">Tili estetty</string>
     <string name="market_account_status_suspended_title">Tili jäädytetty</string>
     <string name="market_account_stripe_dashboard">Avaa Stripe-paneeli</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Tilaus #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Kerro ostajille itsestäsi…</string>
     <string name="market_account_load_failed">Tilin lataaminen epäonnistui</string>
     <string name="market_account_save_failed">Muutosten tallentaminen epäonnistui</string>
     <string name="market_account_saved">Muutokset tallennettu</string>

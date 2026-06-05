@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">السيرة الذاتية</string>
     <string name="market_account_location_label">الموقع</string>
     <string name="market_account_save">حفظ</string>
+    <string name="market_account_seller_title">كن بائعًا</string>
+    <string name="market_account_seller_subtitle">تواصل مع المشترين وبِع منتجاتك على Mochi. تتم معالجة المدفوعات بأمان عبر Stripe.</string>
+    <string name="market_account_seller_step_activate_title">تفعيل حساب البائع</string>
+    <string name="market_account_seller_step_activate_desc">أنشئ ملف البائع الخاص بك لبدء عرض المنتجات</string>
+    <string name="market_account_seller_step_stripe_desc">اربط حساب Stripe لقبول المدفوعات من المشترين</string>
+    <string name="market_account_seller_fees_heading">الرسوم:</string>
+    <string name="market_account_seller_fees_mochi">تأخذ Mochi %1$s%% من كل عملية بيع.</string>
+    <string name="market_account_seller_fees_stripe">تفرض Stripe رسوم المعالجة الخاصة بها لكل معاملة ورسمًا ثابتًا لكل ردّ مبالغ. تظهر الأسعار الحالية لعملتك ومنطقتك في لوحة تحكم Stripe.</string>
+    <string name="market_account_seller_connect">ربط Stripe</string>
+    <string name="market_account_seller_step_stripe_title">ربط Stripe</string>
+    <string name="market_account_seller_check_status">تحقق من الحالة</string>
     <string name="market_account_status_banned_title">تم حظر الحساب</string>
     <string name="market_account_status_suspended_title">تم تعليق الحساب</string>
     <string name="market_account_stripe_dashboard">فتح لوحة تحكم Stripe</string>
@@ -424,6 +435,7 @@
     <string name="market_messages_send">إرسال</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">عرّف المشترين بنفسك…</string>
     <string name="market_account_load_failed">تعذر تحميل الحساب</string>
     <string name="market_account_save_failed">تعذر حفظ التغييرات</string>
     <string name="market_account_saved">تم حفظ التغييرات</string>

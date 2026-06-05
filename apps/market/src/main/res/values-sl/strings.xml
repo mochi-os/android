@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografija</string>
     <string name="market_account_location_label">Lokacija</string>
     <string name="market_account_save">Shrani</string>
+    <string name="market_account_seller_title">Postanite prodajalec</string>
+    <string name="market_account_seller_subtitle">Dosezite kupce in prodajajte svoje izdelke na Mochi. Plačila se varno obdelujejo prek Stripa.</string>
+    <string name="market_account_seller_step_activate_title">Aktiviraj račun prodajalca</string>
+    <string name="market_account_seller_step_activate_desc">Ustvarite profil prodajalca, da začnete objavljati izdelke</string>
+    <string name="market_account_seller_step_stripe_desc">Povežite račun Stripe za sprejemanje plačil od kupcev</string>
+    <string name="market_account_seller_fees_heading">Pristojbine:</string>
+    <string name="market_account_seller_fees_mochi">Mochi vzame %1$s%% od vsake prodaje.</string>
+    <string name="market_account_seller_fees_stripe">Stripe zaračuna svojo provizijo za obdelavo na transakcijo in fiksno provizijo na vsako vračilo bremenitve. Trenutne stopnje za vašo valuto in regijo so navedene v vaši nadzorni plošči Stripe.</string>
+    <string name="market_account_seller_connect">Poveži Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Poveži Stripe</string>
+    <string name="market_account_seller_check_status">Preveri stanje</string>
     <string name="market_account_status_banned_title">Račun je prepovedan</string>
     <string name="market_account_status_suspended_title">Račun je suspendiran</string>
     <string name="market_account_stripe_dashboard">Odpri ploščo Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Naročilo #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Povejte kupcem o sebi…</string>
     <string name="market_account_load_failed">Računa ni mogoče naložiti</string>
     <string name="market_account_save_failed">Sprememb ni mogoče shraniti</string>
     <string name="market_account_saved">Spremembe shranjene</string>

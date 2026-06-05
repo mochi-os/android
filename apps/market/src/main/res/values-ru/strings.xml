@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Биография</string>
     <string name="market_account_location_label">Местоположение</string>
     <string name="market_account_save">Сохранить</string>
+    <string name="market_account_seller_title">Стать продавцом</string>
+    <string name="market_account_seller_subtitle">Привлекайте покупателей и продавайте товары на Mochi. Платежи безопасно обрабатываются через Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Активировать аккаунт продавца</string>
+    <string name="market_account_seller_step_activate_desc">Создайте профиль продавца, чтобы начать размещать товары</string>
+    <string name="market_account_seller_step_stripe_desc">Подключите аккаунт Stripe, чтобы принимать платежи от покупателей</string>
+    <string name="market_account_seller_fees_heading">Комиссии:</string>
+    <string name="market_account_seller_fees_mochi">Mochi берёт %1$s%% с каждой продажи.</string>
+    <string name="market_account_seller_fees_stripe">Stripe взимает собственную комиссию за обработку каждой транзакции и фиксированную плату за каждый возвратный платёж. Текущие тарифы для вашей валюты и региона указаны в панели управления Stripe.</string>
+    <string name="market_account_seller_connect">Подключить Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Подключить Stripe</string>
+    <string name="market_account_seller_check_status">Проверить статус</string>
     <string name="market_account_status_banned_title">Аккаунт заблокирован</string>
     <string name="market_account_status_suspended_title">Аккаунт приостановлен</string>
     <string name="market_account_stripe_dashboard">Открыть панель Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Заказ № %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Расскажите покупателям о себе…</string>
     <string name="market_account_load_failed">Не удалось загрузить аккаунт</string>
     <string name="market_account_save_failed">Не удалось сохранить изменения</string>
     <string name="market_account_saved">Изменения сохранены</string>

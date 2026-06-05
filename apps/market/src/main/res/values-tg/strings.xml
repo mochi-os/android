@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Тарҷумаи ҳол</string>
     <string name="market_account_location_label">Маҳал</string>
     <string name="market_account_save">Захира</string>
+    <string name="market_account_seller_title">Фурӯшанда шавед</string>
+    <string name="market_account_seller_subtitle">Ба харидорон бирасед ва молҳои худро дар Mochi фурӯшед. Пардохтҳо тавассути Stripe бехатар коркард мешаванд.</string>
+    <string name="market_account_seller_step_activate_title">Фаъол кардани ҳисоби фурӯшанда</string>
+    <string name="market_account_seller_step_activate_desc">Барои оғози рӯйхати молҳо профили фурӯшандаи худро созед</string>
+    <string name="market_account_seller_step_stripe_desc">Барои қабули пардохт аз харидорон ҳисоби Stripe-ро пайваст кунед</string>
+    <string name="market_account_seller_fees_heading">Пардохтҳо:</string>
+    <string name="market_account_seller_fees_mochi">Mochi аз ҳар фурӯш %1$s%% мегирад.</string>
+    <string name="market_account_seller_fees_stripe">Stripe барои ҳар муомила пардохти коркарди худ ва барои ҳар бозгашти пардохт пардохти муқарраршуда мегирад. Нархҳои ҷории асъор ва минтақаи шумо дар лавҳаи идоракунии Stripe нишон дода шудаанд.</string>
+    <string name="market_account_seller_connect">Пайвастшавӣ ба Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Пайвастшавӣ ба Stripe</string>
+    <string name="market_account_seller_check_status">Санҷиши ҳолат</string>
     <string name="market_account_status_banned_title">Ҳисоб манъ карда шуд</string>
     <string name="market_account_status_suspended_title">Ҳисоб боздошта шуд</string>
     <string name="market_account_stripe_dashboard">Кушодани панели Stripe</string>
@@ -431,6 +442,7 @@
     <string name="market_profile_sales_count">%1$d фурӯш</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Ба харидорон дар бораи худ нақл кунед…</string>
     <string name="market_account_load_failed">Ҳисобро бор кардан натавонист</string>
     <string name="market_account_save_failed">Тағйиротро захира кардан натавонист</string>
     <string name="market_account_saved">Тағйирот захира шуд</string>

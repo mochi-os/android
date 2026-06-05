@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">プロフィール</string>
     <string name="market_account_location_label">場所</string>
     <string name="market_account_save">保存</string>
+    <string name="market_account_seller_title">出品者になる</string>
+    <string name="market_account_seller_subtitle">購入者にリーチして、Mochi で商品を販売しましょう。支払いは Stripe を通じて安全に処理されます。</string>
+    <string name="market_account_seller_step_activate_title">出品者アカウントを有効化</string>
+    <string name="market_account_seller_step_activate_desc">出品を始めるには出品者プロフィールを作成してください</string>
+    <string name="market_account_seller_step_stripe_desc">購入者からの支払いを受け取るには Stripe アカウントを連携してください</string>
+    <string name="market_account_seller_fees_heading">手数料:</string>
+    <string name="market_account_seller_fees_mochi">Mochi は各販売の %1$s%% を受け取ります。</string>
+    <string name="market_account_seller_fees_stripe">Stripe は取引ごとに独自の処理手数料を、チャージバックごとに定額手数料を請求します。お住まいの通貨と地域の現在の料率は Stripe ダッシュボードに記載されています。</string>
+    <string name="market_account_seller_connect">Stripe を接続</string>
+    <string name="market_account_seller_step_stripe_title">Stripe を接続</string>
+    <string name="market_account_seller_check_status">ステータスを確認</string>
     <string name="market_account_status_banned_title">アカウントを BAN しました</string>
     <string name="market_account_status_suspended_title">アカウントを停止しました</string>
     <string name="market_account_stripe_dashboard">Stripeダッシュボードを開く</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">注文 #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">購入者に自己紹介をしましょう…</string>
     <string name="market_account_load_failed">アカウントを読み込めませんでした</string>
     <string name="market_account_save_failed">変更を保存できませんでした</string>
     <string name="market_account_saved">変更を保存しました</string>

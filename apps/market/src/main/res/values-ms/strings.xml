@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_location_label">Lokasi</string>
     <string name="market_account_save">Simpan</string>
+    <string name="market_account_seller_title">Jadi penjual</string>
+    <string name="market_account_seller_subtitle">Capai pembeli dan jual barang anda di Mochi. Pembayaran dikendalikan dengan selamat melalui Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktifkan akaun penjual</string>
+    <string name="market_account_seller_step_activate_desc">Cipta profil penjual anda untuk mula menyenaraikan barang</string>
+    <string name="market_account_seller_step_stripe_desc">Sambungkan akaun Stripe untuk menerima pembayaran daripada pembeli</string>
+    <string name="market_account_seller_fees_heading">Yuran:</string>
+    <string name="market_account_seller_fees_mochi">Mochi mengambil %1$s%% daripada setiap jualan.</string>
+    <string name="market_account_seller_fees_stripe">Stripe mengenakan yuran pemprosesannya sendiri bagi setiap transaksi dan yuran tetap bagi setiap caj balik. Kadar semasa untuk mata wang dan wilayah anda disenaraikan dalam Papan Pemuka Stripe anda.</string>
+    <string name="market_account_seller_connect">Sambungkan Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Sambungkan Stripe</string>
+    <string name="market_account_seller_check_status">Semak status</string>
     <string name="market_account_status_banned_title">Akaun diharamkan</string>
     <string name="market_account_status_suspended_title">Akaun digantung</string>
     <string name="market_account_stripe_dashboard">Buka papan pemuka Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Pesanan #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Beritahu pembeli tentang diri anda…</string>
     <string name="market_account_load_failed">Tidak dapat memuatkan akaun</string>
     <string name="market_account_save_failed">Tidak dapat menyimpan perubahan</string>
     <string name="market_account_saved">Perubahan disimpan</string>

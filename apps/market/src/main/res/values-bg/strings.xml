@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Биография</string>
     <string name="market_account_location_label">Местоположение</string>
     <string name="market_account_save">Запази</string>
+    <string name="market_account_seller_title">Станете продавач</string>
+    <string name="market_account_seller_subtitle">Достигайте до купувачи и продавайте артикулите си в Mochi. Плащанията се обработват сигурно чрез Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Активиране на акаунт на продавач</string>
+    <string name="market_account_seller_step_activate_desc">Създайте профил на продавач, за да започнете да публикувате артикули</string>
+    <string name="market_account_seller_step_stripe_desc">Свържете акаунт в Stripe, за да приемате плащания от купувачи</string>
+    <string name="market_account_seller_fees_heading">Такси:</string>
+    <string name="market_account_seller_fees_mochi">Mochi взема %1$s%% от всяка продажба.</string>
+    <string name="market_account_seller_fees_stripe">Stripe начислява собствена такса за обработка на транзакция и фиксирана такса за всяко оспорено плащане. Текущите тарифи за вашата валута и регион са посочени в таблото на Stripe.</string>
+    <string name="market_account_seller_connect">Свържи Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Свържи Stripe</string>
+    <string name="market_account_seller_check_status">Провери състоянието</string>
     <string name="market_account_status_banned_title">Акаунтът е блокиран</string>
     <string name="market_account_status_suspended_title">Акаунтът е спрян</string>
     <string name="market_account_stripe_dashboard">Отвори таблото на Stripe</string>
@@ -424,6 +435,7 @@
     <string name="market_messages_send">Изпрати</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Разкажете на купувачите за себе си…</string>
     <string name="market_account_load_failed">Акаунтът не може да бъде зареден</string>
     <string name="market_account_save_failed">Промените не могат да бъдат запазени</string>
     <string name="market_account_saved">Промените са запазени</string>

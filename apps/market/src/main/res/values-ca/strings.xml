@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografia</string>
     <string name="market_account_location_label">Ubicació</string>
     <string name="market_account_save">Desa</string>
+    <string name="market_account_seller_title">Fes-te venedor</string>
+    <string name="market_account_seller_subtitle">Arriba als compradors i ven els teus articles a Mochi. Els pagaments es gestionen de forma segura amb Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Activa el compte de venedor</string>
+    <string name="market_account_seller_step_activate_desc">Crea el teu perfil de venedor per començar a publicar articles</string>
+    <string name="market_account_seller_step_stripe_desc">Vincula un compte de Stripe per acceptar pagaments dels compradors</string>
+    <string name="market_account_seller_fees_heading">Comissions:</string>
+    <string name="market_account_seller_fees_mochi">Mochi es queda el %1$s%% de cada venda.</string>
+    <string name="market_account_seller_fees_stripe">Stripe cobra la seva pròpia comissió de processament per transacció i una tarifa fixa per devolució de càrrec. Les tarifes actuals per a la teva moneda i regió apareixen al tauler de Stripe.</string>
+    <string name="market_account_seller_connect">Connecta Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Connecta Stripe</string>
+    <string name="market_account_seller_check_status">Comprova l\'estat</string>
     <string name="market_account_status_banned_title">Compte vetat</string>
     <string name="market_account_status_suspended_title">Compte suspès</string>
     <string name="market_account_stripe_dashboard">Obre el tauler de Stripe</string>
@@ -424,6 +435,7 @@
     <string name="market_messages_send">Envia</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Explica als compradors coses sobre tu…</string>
     <string name="market_account_load_failed">No s\'ha pogut carregar el compte</string>
     <string name="market_account_save_failed">No s\'han pogut desar els canvis</string>
     <string name="market_account_saved">Canvis desats</string>

@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Életrajz</string>
     <string name="market_account_location_label">Hely</string>
     <string name="market_account_save">Mentés</string>
+    <string name="market_account_seller_title">Legyen eladó</string>
+    <string name="market_account_seller_subtitle">Érje el a vásárlókat, és adja el tárgyait a Mochin. A fizetéseket a Stripe biztonságosan kezeli.</string>
+    <string name="market_account_seller_step_activate_title">Eladói fiók aktiválása</string>
+    <string name="market_account_seller_step_activate_desc">Hozza létre eladói profilját, hogy elkezdhessen tárgyakat feltölteni</string>
+    <string name="market_account_seller_step_stripe_desc">Csatlakoztasson egy Stripe-fiókot, hogy fizetéseket fogadhasson a vásárlóktól</string>
+    <string name="market_account_seller_fees_heading">Díjak:</string>
+    <string name="market_account_seller_fees_mochi">A Mochi minden eladásból %1$s%%-ot vesz le.</string>
+    <string name="market_account_seller_fees_stripe">A Stripe saját feldolgozási díjat számít fel tranzakciónként, és fix díjat minden visszaterhelésért. A pénznemére és régiójára vonatkozó aktuális díjak a Stripe irányítópultján találhatók.</string>
+    <string name="market_account_seller_connect">Stripe csatlakoztatása</string>
+    <string name="market_account_seller_step_stripe_title">Stripe csatlakoztatása</string>
+    <string name="market_account_seller_check_status">Állapot ellenőrzése</string>
     <string name="market_account_status_banned_title">Fiók kitiltva</string>
     <string name="market_account_status_suspended_title">Fiók felfüggesztve</string>
     <string name="market_account_stripe_dashboard">Stripe vezérlőpult megnyitása</string>
@@ -582,6 +593,7 @@
 
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Meséljen magáról a vásárlóknak…</string>
     <string name="market_account_load_failed">A fiók betöltése sikertelen</string>
     <string name="market_account_save_failed">A módosítások mentése sikertelen</string>
     <string name="market_account_saved">Módosítások mentve</string>

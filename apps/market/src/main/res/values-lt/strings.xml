@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografija</string>
     <string name="market_account_location_label">Vieta</string>
     <string name="market_account_save">Išsaugoti</string>
+    <string name="market_account_seller_title">Tapkite pardavėju</string>
+    <string name="market_account_seller_subtitle">Pasiekite pirkėjus ir parduokite savo prekes „Mochi“. Mokėjimai saugiai tvarkomi per „Stripe“.</string>
+    <string name="market_account_seller_step_activate_title">Aktyvinti pardavėjo paskyrą</string>
+    <string name="market_account_seller_step_activate_desc">Sukurkite pardavėjo profilį, kad pradėtumėte skelbti prekes</string>
+    <string name="market_account_seller_step_stripe_desc">Susiekite „Stripe“ paskyrą, kad galėtumėte priimti pirkėjų mokėjimus</string>
+    <string name="market_account_seller_fees_heading">Mokesčiai:</string>
+    <string name="market_account_seller_fees_mochi">„Mochi“ paima %1$s%% nuo kiekvieno pardavimo.</string>
+    <string name="market_account_seller_fees_stripe">„Stripe“ ima savo apdorojimo mokestį už kiekvieną operaciją ir fiksuotą mokestį už kiekvieną grąžinamąjį mokėjimą. Dabartiniai jūsų valiutos ir regiono tarifai pateikiami jūsų „Stripe“ skydelyje.</string>
+    <string name="market_account_seller_connect">Prijungti Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Prijungti Stripe</string>
+    <string name="market_account_seller_check_status">Patikrinti būseną</string>
     <string name="market_account_status_banned_title">Paskyra užblokuota</string>
     <string name="market_account_status_suspended_title">Paskyra sustabdyta</string>
     <string name="market_account_stripe_dashboard">Atidaryti Stripe valdymo skydą</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Užsakymas Nr. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Papasakokite pirkėjams apie save…</string>
     <string name="market_account_load_failed">Nepavyko įkelti paskyros</string>
     <string name="market_account_save_failed">Nepavyko išsaugoti pakeitimų</string>
     <string name="market_account_saved">Pakeitimai išsaugoti</string>

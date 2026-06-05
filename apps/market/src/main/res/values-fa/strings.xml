@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">زندگی‌نامه</string>
     <string name="market_account_location_label">مکان</string>
     <string name="market_account_save">ذخیره</string>
+    <string name="market_account_seller_title">فروشنده شوید</string>
+    <string name="market_account_seller_subtitle">به خریداران دسترسی پیدا کنید و کالاهای خود را در Mochi بفروشید. پرداخت‌ها به‌صورت امن از طریق Stripe انجام می‌شوند.</string>
+    <string name="market_account_seller_step_activate_title">فعال‌سازی حساب فروشنده</string>
+    <string name="market_account_seller_step_activate_desc">نمایه فروشنده خود را بسازید تا فهرست‌کردن کالاها را آغاز کنید</string>
+    <string name="market_account_seller_step_stripe_desc">یک حساب Stripe متصل کنید تا پرداخت‌ها را از خریداران بپذیرید</string>
+    <string name="market_account_seller_fees_heading">کارمزدها:</string>
+    <string name="market_account_seller_fees_mochi">Mochi از هر فروش %1$s%% برمی‌دارد.</string>
+    <string name="market_account_seller_fees_stripe">Stripe کارمزد پردازش خود را برای هر تراکنش و یک کارمزد ثابت برای هر بازگشت وجه دریافت می‌کند. نرخ‌های فعلی برای ارز و منطقه شما در داشبورد Stripe فهرست شده‌اند.</string>
+    <string name="market_account_seller_connect">اتصال Stripe</string>
+    <string name="market_account_seller_step_stripe_title">اتصال Stripe</string>
+    <string name="market_account_seller_check_status">بررسی وضعیت</string>
     <string name="market_account_status_banned_title">حساب مسدود شد</string>
     <string name="market_account_status_suspended_title">حساب تعلیق شد</string>
     <string name="market_account_stripe_dashboard">باز کردن داشبورد Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">سفارش #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">درباره خودتان به خریداران بگویید…</string>
     <string name="market_account_load_failed">بارگذاری حساب ممکن نشد</string>
     <string name="market_account_save_failed">ذخیره تغییرات ممکن نشد</string>
     <string name="market_account_saved">تغییرات ذخیره شد</string>

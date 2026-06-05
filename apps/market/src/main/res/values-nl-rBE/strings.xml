@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografie</string>
     <string name="market_account_location_label">Locatie</string>
     <string name="market_account_save">Opslaan</string>
+    <string name="market_account_seller_title">Word verkoper</string>
+    <string name="market_account_seller_subtitle">Bereik kopers en verkoop je artikelen op Mochi. Betalingen worden veilig afgehandeld via Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Verkopersaccount activeren</string>
+    <string name="market_account_seller_step_activate_desc">Maak je verkopersprofiel aan om artikelen te plaatsen</string>
+    <string name="market_account_seller_step_stripe_desc">Koppel een Stripe-account om betalingen van kopers te accepteren</string>
+    <string name="market_account_seller_fees_heading">Kosten:</string>
+    <string name="market_account_seller_fees_mochi">Mochi houdt %1$s%% van elke verkoop in.</string>
+    <string name="market_account_seller_fees_stripe">Stripe brengt eigen verwerkingskosten per transactie in rekening en een vast bedrag per terugboeking. De actuele tarieven voor jouw valuta en regio staan in je Stripe-dashboard.</string>
+    <string name="market_account_seller_connect">Stripe koppelen</string>
+    <string name="market_account_seller_step_stripe_title">Stripe koppelen</string>
+    <string name="market_account_seller_check_status">Status controleren</string>
     <string name="market_account_status_banned_title">Account verbannen</string>
     <string name="market_account_status_suspended_title">Account opgeschort</string>
     <string name="market_account_stripe_dashboard">Stripe-dashboard openen</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Bestelling nr. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Vertel kopers iets over jezelf…</string>
     <string name="market_account_load_failed">Kan account niet laden</string>
     <string name="market_account_save_failed">Kan wijzigingen niet opslaan</string>
     <string name="market_account_saved">Wijzigingen opgeslagen</string>

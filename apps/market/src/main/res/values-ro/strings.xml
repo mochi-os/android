@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografie</string>
     <string name="market_account_location_label">Locație</string>
     <string name="market_account_save">Salvează</string>
+    <string name="market_account_seller_title">Deveniți vânzător</string>
+    <string name="market_account_seller_subtitle">Ajungeți la cumpărători și vindeți articolele pe Mochi. Plățile sunt gestionate în siguranță prin Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Activați contul de vânzător</string>
+    <string name="market_account_seller_step_activate_desc">Creați-vă profilul de vânzător pentru a începe să listați articole</string>
+    <string name="market_account_seller_step_stripe_desc">Conectați un cont Stripe pentru a accepta plăți de la cumpărători</string>
+    <string name="market_account_seller_fees_heading">Comisioane:</string>
+    <string name="market_account_seller_fees_mochi">Mochi reține %1$s%% din fiecare vânzare.</string>
+    <string name="market_account_seller_fees_stripe">Stripe percepe propriul comision de procesare per tranzacție și o taxă fixă per rambursare. Tarifele curente pentru moneda și regiunea dvs. sunt afișate în panoul Stripe.</string>
+    <string name="market_account_seller_connect">Conectează Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Conectează Stripe</string>
+    <string name="market_account_seller_check_status">Verifică starea</string>
     <string name="market_account_status_banned_title">Cont blocat</string>
     <string name="market_account_status_suspended_title">Cont suspendat</string>
     <string name="market_account_stripe_dashboard">Deschide panoul Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Comanda nr. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Spuneți cumpărătorilor despre dvs…</string>
     <string name="market_account_load_failed">Contul nu a putut fi încărcat</string>
     <string name="market_account_save_failed">Modificările nu au putut fi salvate</string>
     <string name="market_account_saved">Modificări salvate</string>

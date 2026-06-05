@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografia</string>
     <string name="market_account_location_label">Lokalizacja</string>
     <string name="market_account_save">Zapisz</string>
+    <string name="market_account_seller_title">Zostań sprzedawcą</string>
+    <string name="market_account_seller_subtitle">Docieraj do kupujących i sprzedawaj swoje przedmioty w Mochi. Płatności są bezpiecznie obsługiwane przez Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktywuj konto sprzedawcy</string>
+    <string name="market_account_seller_step_activate_desc">Utwórz profil sprzedawcy, aby zacząć wystawiać przedmioty</string>
+    <string name="market_account_seller_step_stripe_desc">Połącz konto Stripe, aby przyjmować płatności od kupujących</string>
+    <string name="market_account_seller_fees_heading">Opłaty:</string>
+    <string name="market_account_seller_fees_mochi">Mochi pobiera %1$s%% od każdej sprzedaży.</string>
+    <string name="market_account_seller_fees_stripe">Stripe pobiera własną opłatę za przetwarzanie każdej transakcji oraz stałą opłatę za każde obciążenie zwrotne. Aktualne stawki dla Twojej waluty i regionu są wymienione w Twoim panelu Stripe.</string>
+    <string name="market_account_seller_connect">Połącz Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Połącz Stripe</string>
+    <string name="market_account_seller_check_status">Sprawdź status</string>
     <string name="market_account_status_banned_title">Konto zbanowane</string>
     <string name="market_account_status_suspended_title">Konto zawieszone</string>
     <string name="market_account_stripe_dashboard">Otwórz panel Stripe</string>
@@ -433,6 +444,7 @@
     <string name="market_purchases_order_label">Zamówienie #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Opowiedz kupującym o sobie…</string>
     <string name="market_account_load_failed">Nie udało się załadować konta</string>
     <string name="market_account_save_failed">Nie udało się zapisać zmian</string>
     <string name="market_account_saved">Zmiany zapisane</string>
