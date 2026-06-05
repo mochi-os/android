@@ -532,15 +532,19 @@ fun FeedScreen(
                                     post = post,
                                     serverUrl = viewModel.serverUrl,
                                     fallbackFeedId = viewModel.feedId,
+                                    canManage = permissions.manage,
                                     onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
                                     onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
+                                    onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
+                                    onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
+                                    onDelete = { pendingDelete = post },
+                                    onAddTag = { addTagTarget = post.id },
+                                    // Route interest through the post's feed id
+                                    // (always present; fingerprint can be empty).
+                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(post.feed.ifEmpty { routeFeedId }, tag, direction) },
                                 )
                             }
-                            Box(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .fillMaxWidth()
-                            ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
                                 VerticalPager(
                                     state = pagerState,
                                     modifier = Modifier.fillMaxSize(),
@@ -575,28 +579,6 @@ fun FeedScreen(
                                     pagerState = pagerState,
                                     pageCount = posts.size,
                                     page = renderPost,
-                                )
-                            }
-                            // Fixed action bar for the current post — outside
-                            // the pager/FlipBook, so it does NOT flip. It just
-                            // updates to the new post the moment the swipe
-                            // commits (currentPage only ticks on commit).
-                            posts.getOrNull(pagerState.currentPage)?.let { current ->
-                                val routeFeedId = current.feedFingerprint.ifEmpty { viewModel.feedId }
-                                val sourceUrl = current.data?.rss?.link?.takeIf { it.isNotEmpty() }
-                                PostActionBar(
-                                    post = current,
-                                    canManage = permissions.manage,
-                                    onReact = { reaction -> viewModel.reactToPost(current.id, reaction) },
-                                    onComments = { onNavigateToPost(routeFeedId, current.id, sourceUrl, true) },
-                                    onEdit = { onNavigateToEditPost(routeFeedId, current.id) },
-                                    onDelete = { pendingDelete = current },
-                                    onAddTag = { addTagTarget = current.id },
-                                    // Route through the post's feed id (always
-                                    // populated) rather than the fingerprint,
-                                    // which is empty for some all-feeds posts and
-                                    // would fall back to the "__all__" sentinel.
-                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(current.feed.ifEmpty { routeFeedId }, tag, direction) },
                                 )
                             }
                         }
@@ -701,8 +683,14 @@ private fun PostCard(
     post: Post,
     serverUrl: String,
     fallbackFeedId: String,
+    canManage: Boolean,
     onClick: () -> Unit,
     onComments: () -> Unit,
+    onReact: (String) -> Unit,
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onAddTag: () -> Unit,
+    onAdjustInterest: (Tag, String) -> Unit,
 ) {
     // Lightbox open-state: (image urls list, starting index). null = closed.
     // Tapping an image populates this; the lightbox dialog renders above the
@@ -925,6 +913,16 @@ private fun PostCard(
             }
         }
 
+        PostActionBar(
+            post = post,
+            canManage = canManage,
+            onReact = onReact,
+            onComments = onComments,
+            onEdit = onEdit,
+            onDelete = onDelete,
+            onAddTag = onAddTag,
+            onAdjustInterest = onAdjustInterest,
+        )
     }
 
     lightboxState?.let { (urls, index) ->
