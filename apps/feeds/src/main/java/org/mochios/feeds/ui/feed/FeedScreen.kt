@@ -592,7 +592,11 @@ fun FeedScreen(
                                     onEdit = { onNavigateToEditPost(routeFeedId, current.id) },
                                     onDelete = { pendingDelete = current },
                                     onAddTag = { addTagTarget = current.id },
-                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(routeFeedId, tag, direction) },
+                                    // Route through the post's feed id (always
+                                    // populated) rather than the fingerprint,
+                                    // which is empty for some all-feeds posts and
+                                    // would fall back to the "__all__" sentinel.
+                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(current.feed.ifEmpty { routeFeedId }, tag, direction) },
                                 )
                             }
                         }
