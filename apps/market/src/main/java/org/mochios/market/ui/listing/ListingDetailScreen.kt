@@ -626,7 +626,7 @@ private fun ListingDetailContent(
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(10.dp),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                contentColor = Color.Black,
+                                contentColor = MaterialTheme.colorScheme.onSurface,
                             ),
                             border = BorderStroke(
                                 width = 1.dp,
