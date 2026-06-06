@@ -49,8 +49,6 @@ data class CrmUiState(
     val sortByView: Map<String, String> = emptyMap(),
     /** Sort direction per view id. "asc" or "desc". */
     val sortDirByView: Map<String, String> = emptyMap(),
-    /** True if the user has unread crm notifications somewhere. */
-    val hasNotifications: Boolean = false,
     /** CRM members, for resolving user-field display names in list/board views. */
     val people: List<org.mochios.crm.model.Person> = emptyList(),
 )
@@ -73,17 +71,6 @@ class CrmViewModel @Inject constructor(
     init {
         loadCrm()
         subscribeWebSocket()
-        checkNotifications()
-    }
-
-    fun checkNotifications() {
-        viewModelScope.launch {
-            try {
-                val hasUnread = repository.checkNotifications()
-                _uiState.value = _uiState.value.copy(hasNotifications = hasUnread)
-            } catch (_: Exception) {
-            }
-        }
     }
 
     override fun onCleared() {

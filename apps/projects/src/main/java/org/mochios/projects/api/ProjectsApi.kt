@@ -79,7 +79,6 @@ data class MergeCheckResponse(
     val behind: Int = 0
 )
 data class SuccessResponse(val success: Boolean = false)
-data class NotificationCheckResponse(val exists: Boolean = false)
 data class UserSearchResponse(val users: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
@@ -128,9 +127,6 @@ interface ProjectsApi {
         @Field("project") project: String,
         @Field("server") server: String?
     ): Response<ApiResponse<SuccessResponse>>
-
-    @GET("-/notifications/check")
-    suspend fun checkNotifications(): Response<ApiResponse<NotificationCheckResponse>>
 
     @FormUrlEncoded
     @POST("-/users/search")

@@ -245,15 +245,7 @@ private fun CrmContent(
                 },
                 navigationIcon = {
                     IconButton(onClick = onOpenDrawer) {
-                        if (uiState.hasNotifications) {
-                            androidx.compose.material3.BadgedBox(
-                                badge = { androidx.compose.material3.Badge() }
-                            ) {
-                                Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.crm_list_title))
-                            }
-                        } else {
-                            Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.crm_list_title))
-                        }
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.crm_list_title))
                     }
                 },
                 actions = {

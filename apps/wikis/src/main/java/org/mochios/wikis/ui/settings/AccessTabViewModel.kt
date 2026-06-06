@@ -112,7 +112,7 @@ class AccessTabViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _uiState.value = _uiState.value.copy(
-                    userSearchResults = repository.searchUsers(wikiId, query),
+                    userSearchResults = repository.searchUsers(query),
                 )
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(userSearchResults = emptyList())

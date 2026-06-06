@@ -232,7 +232,12 @@ class FeedViewModel @Inject constructor(
         val deferred = feedIds.map { fid ->
             viewModelScope.async {
                 try {
-                    repository.getPosts(feedId = fid, sort = _currentSort.value, limit = 10).posts
+                    repository.getPosts(
+                        feedId = fid,
+                        sort = _currentSort.value,
+                        limit = 10,
+                        unreadOnly = _unreadOnly.value
+                    ).posts
                 } catch (_: Exception) {
                     emptyList<Post>()
                 }
@@ -510,15 +515,23 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoading.value = true
             try {
-                val result = repository.getPosts(
-                    feedId = feedId,
-                    sort = _currentSort.value,
-                    tag = _currentTag.value,
-                    unreadOnly = _unreadOnly.value
-                )
-                _posts.value = result.posts
-                _hasMore.value = result.hasMore
-                nextCursor = result.nextCursor
+                if (isAllFeeds) {
+                    // The aggregate view fans out per feed (and honours
+                    // unreadOnly / sort there); "__all__" is not a real entity,
+                    // so a single getPosts() would just fail and silently keep
+                    // the stale list — making the toggles look like no-ops.
+                    loadAllFeeds()
+                } else {
+                    val result = repository.getPosts(
+                        feedId = feedId,
+                        sort = _currentSort.value,
+                        tag = _currentTag.value,
+                        unreadOnly = _unreadOnly.value
+                    )
+                    _posts.value = result.posts
+                    _hasMore.value = result.hasMore
+                    nextCursor = result.nextCursor
+                }
             } catch (_: Exception) {
                 // Keep existing data
             } finally {

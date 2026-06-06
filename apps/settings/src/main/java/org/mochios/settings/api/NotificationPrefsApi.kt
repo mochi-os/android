@@ -108,7 +108,7 @@ interface NotificationPrefsApi {
     suspend fun testCategory(@Field("id") id: Int): Response<TestEnvelope>
 
     @FormUrlEncoded
-    @POST("settings/-/notifications/topics/set_category")
+    @POST("settings/-/notifications/topics/set/category")
     suspend fun setTopicCategory(
         @Field("id") id: Int,
         @Field("category") category: String,

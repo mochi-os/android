@@ -144,7 +144,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun globalRssToken(mode: String): String {
         return try {
-            api.createClassRssToken(mode).unwrap().token
+            api.createRssToken("*", mode).unwrap().token
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -248,9 +248,9 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun searchUsers(wiki: String, query: String): List<User> {
+    suspend fun searchUsers(query: String): List<User> {
         return try {
-            api.searchUsers(wiki, query).unwrap().results
+            api.searchUsers(query).unwrap().results
         } catch (e: Exception) {
             throw e.toMochiError()
         }

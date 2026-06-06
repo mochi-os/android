@@ -63,7 +63,6 @@ data class OptionResponse(val option: FieldOption = FieldOption())
 data class ViewListResponse(val views: List<CrmView> = emptyList())
 data class ViewResponse(val view: CrmView = CrmView())
 data class SuccessResponse(val success: Boolean = false)
-data class NotificationCheckResponse(val exists: Boolean = false)
 data class UserSearchResponse(val users: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
@@ -112,9 +111,6 @@ interface CrmsApi {
         @Field("crm") crm: String,
         @Field("server") server: String?
     ): Response<ApiResponse<SuccessResponse>>
-
-    @GET("-/notifications/check")
-    suspend fun checkNotifications(): Response<ApiResponse<NotificationCheckResponse>>
 
     @FormUrlEncoded
     @POST("-/users/search")

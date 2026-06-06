@@ -248,15 +248,7 @@ private fun ProjectContent(
                 },
                 navigationIcon = {
                     IconButton(onClick = onOpenDrawer) {
-                        if (uiState.hasNotifications) {
-                            androidx.compose.material3.BadgedBox(
-                                badge = { androidx.compose.material3.Badge() }
-                            ) {
-                                Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
-                            }
-                        } else {
-                            Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
-                        }
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
                     }
                 },
                 actions = {

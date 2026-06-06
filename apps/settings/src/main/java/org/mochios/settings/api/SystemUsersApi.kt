@@ -70,31 +70,31 @@ interface SystemUsersApi {
     @FormUrlEncoded
     @POST("settings/-/system/users/update")
     suspend fun update(
-        @Field("id") id: Long,
+        @Field("uid") uid: Long,
         @Field("username") username: String?,
         @Field("role") role: String?,
     ): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/delete")
-    suspend fun delete(@Field("id") id: Long): Response<Map<String, Any>>
+    suspend fun delete(@Field("uid") uid: Long): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/suspend")
-    suspend fun suspendUser(@Field("id") id: Long): Response<Map<String, Any>>
+    suspend fun suspendUser(@Field("uid") uid: Long): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/activate")
-    suspend fun activate(@Field("id") id: Long): Response<Map<String, Any>>
+    suspend fun activate(@Field("uid") uid: Long): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/sessions")
-    suspend fun sessions(@Field("id") id: Long): Response<SystemUserSessions>
+    suspend fun sessions(@Field("uid") uid: Long): Response<SystemUserSessions>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/sessions/revoke")
     suspend fun revokeSessions(
-        @Field("id") id: Long,
+        @Field("uid") uid: Long,
         @Field("session_id") sessionId: String?,
     ): Response<RevokeSessionsResponse>
 }

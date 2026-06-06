@@ -86,9 +86,6 @@ class CrmsRepository @Inject constructor(
         api.unsubscribe(crm, server).unwrap()
     }
 
-    suspend fun checkNotifications(): Boolean =
-        api.checkNotifications().unwrap().exists
-
     suspend fun searchUsers(query: String): List<Person> =
         api.searchUsers(query).unwrap().users
 

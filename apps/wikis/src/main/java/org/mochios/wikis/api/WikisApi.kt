@@ -334,12 +334,10 @@ interface WikisApi {
 
     // ---- Cross-app proxies (users/groups) ----
 
-    /** Proxy to people.users/search via the wikis backend. */
-    
-    @GET("{wiki}/-/users/search")
+    /** Proxy to people.users/search via the wikis backend (class-level). */
+    @GET("-/users/search")
     suspend fun searchUsers(
-        @Path(value = "wiki", encoded = true) wiki: String,
-        @Query("q") query: String,
+        @Query("search") query: String,
     ): Response<ApiResponse<UsersSearchResponse>>
 
     /** Proxy to people.groups/list via the wikis backend. */
@@ -424,20 +422,15 @@ interface WikisApi {
 
     // ---- RSS tokens ----
 
-    /** Class-level RSS token covering the all-wikis feed. */
-    
+    /**
+     * RSS token. The endpoint is class-level; the `entity` field scopes the
+     * token — "*" covers the all-wikis feed, a wiki id/fingerprint scopes it to
+     * that wiki. There is no per-wiki token path; the server reads `entity`.
+     */
     @FormUrlEncoded
     @POST("-/rss/token")
-    suspend fun createClassRssToken(
-        @Field("mode") mode: String,
-    ): Response<ApiResponse<RssTokenResponse>>
-
-    /** Per-wiki RSS token. */
-    
-    @FormUrlEncoded
-    @POST("{wiki}/-/rss/token")
     suspend fun createRssToken(
-        @Path(value = "wiki", encoded = true) wiki: String,
+        @Field("entity") entity: String,
         @Field("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
 

@@ -49,8 +49,6 @@ data class ProjectUiState(
     val sortByView: Map<String, String> = emptyMap(),
     /** Sort direction per view id. "asc" or "desc". */
     val sortDirByView: Map<String, String> = emptyMap(),
-    /** True if the user has unread project notifications somewhere. */
-    val hasNotifications: Boolean = false,
     /** Project members, for resolving user-field display names on cards. */
     val people: List<org.mochios.projects.model.Person> = emptyList(),
 )
@@ -73,17 +71,6 @@ class ProjectViewModel @Inject constructor(
     init {
         loadProject()
         subscribeWebSocket()
-        checkNotifications()
-    }
-
-    fun checkNotifications() {
-        viewModelScope.launch {
-            try {
-                val hasUnread = repository.checkNotifications()
-                _uiState.value = _uiState.value.copy(hasNotifications = hasUnread)
-            } catch (_: Exception) {
-            }
-        }
     }
 
     override fun onCleared() {
