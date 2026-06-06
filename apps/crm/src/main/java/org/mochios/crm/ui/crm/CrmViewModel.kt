@@ -51,6 +51,8 @@ data class CrmUiState(
     val sortDirByView: Map<String, String> = emptyMap(),
     /** True if the user has unread crm notifications somewhere. */
     val hasNotifications: Boolean = false,
+    /** CRM members, for resolving user-field display names in list/board views. */
+    val people: List<org.mochios.crm.model.Person> = emptyList(),
 )
 
 @HiltViewModel
@@ -114,11 +116,14 @@ class CrmViewModel @Inject constructor(
             try {
                 val details = repository.getCrmInfo(crmId)
                 val objects = repository.getObjects(crmId)
+                val people = runCatching { repository.getPeople(crmId) }
+                    .getOrDefault(_uiState.value.people)
                 val activeViewId = _uiState.value.activeViewId
                     ?: details.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    people = people,
                     activeViewId = activeViewId,
                     isLoading = false
                 )
@@ -135,9 +140,12 @@ class CrmViewModel @Inject constructor(
         try {
             val details = repository.getCrmInfo(crmId)
             val objects = repository.getObjects(crmId)
+            val people = runCatching { repository.getPeople(crmId) }
+                .getOrDefault(_uiState.value.people)
             _uiState.value = _uiState.value.copy(
                 crmDetails = details,
-                objects = objects
+                objects = objects,
+                people = people
             )
         } catch (_: Exception) {
             // Silent — cached data is still showing
@@ -150,9 +158,12 @@ class CrmViewModel @Inject constructor(
             try {
                 val details = repository.getCrmInfo(crmId)
                 val objects = repository.getObjects(crmId)
+                val people = runCatching { repository.getPeople(crmId) }
+                    .getOrDefault(_uiState.value.people)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    people = people,
                     isRefreshing = false,
                     error = null
                 )

@@ -5,10 +5,17 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
@@ -17,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.feeds.model.Post
+import org.mochios.android.R as MochiR
 
 /**
  * Renders a post's body.
@@ -29,6 +37,9 @@ import org.mochios.feeds.model.Post
  * or surrounding punctuation breaks them, so the asterisks render literally.
  * Bolding structurally avoids that and matches the web client, which shows the
  * RSS title as a separate `text-lg font-semibold` element.
+ *
+ * Long-pressing an image shows its alt/title text (e.g. a web comic's
+ * punchline) in a dialog.
  */
 @Composable
 fun PostBody(
@@ -39,40 +50,61 @@ fun PostBody(
     titleBodyGap: Dp = 4.dp,
     onClick: (() -> Unit)? = null,
 ) {
+    var altText by remember { mutableStateOf<String?>(null) }
+    val showAlt: (String) -> Unit = { altText = it }
+
     val rawTitle = post.data?.rss?.title.orEmpty()
     val title = rawTitle.trim()
     val body = post.body
     val hasTitle = title.isNotEmpty() && body.startsWith(rawTitle)
 
     if (!hasTitle) {
-        HtmlContent(html = body, modifier = modifier, maxLines = maxLines, onClick = onClick)
-        return
+        HtmlContent(
+            html = body,
+            modifier = modifier,
+            maxLines = maxLines,
+            onClick = onClick,
+            onImageLongPress = showAlt,
+        )
+    } else {
+        val rest = body.substring(rawTitle.length).trimStart('\n', ' ')
+        val truncated = maxLines != Int.MAX_VALUE
+        val titleModifier = Modifier
+            .fillMaxWidth()
+            .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier)
+
+        Column(modifier = modifier) {
+            Text(
+                text = title,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Bold,
+                fontSize = titleFontSize,
+                maxLines = if (truncated) 3 else Int.MAX_VALUE,
+                overflow = TextOverflow.Ellipsis,
+                modifier = titleModifier,
+            )
+            if (rest.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(titleBodyGap))
+                HtmlContent(
+                    html = rest,
+                    modifier = Modifier.fillMaxWidth(),
+                    maxLines = maxLines,
+                    onClick = onClick,
+                    onImageLongPress = showAlt,
+                )
+            }
+        }
     }
 
-    val rest = body.substring(rawTitle.length).trimStart('\n', ' ')
-    val truncated = maxLines != Int.MAX_VALUE
-    val titleModifier = Modifier
-        .fillMaxWidth()
-        .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier)
-
-    Column(modifier = modifier) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.bodyLarge,
-            fontWeight = FontWeight.Bold,
-            fontSize = titleFontSize,
-            maxLines = if (truncated) 3 else Int.MAX_VALUE,
-            overflow = TextOverflow.Ellipsis,
-            modifier = titleModifier,
+    altText?.let { text ->
+        AlertDialog(
+            onDismissRequest = { altText = null },
+            text = { Text(text) },
+            confirmButton = {
+                TextButton(onClick = { altText = null }) {
+                    Text(stringResource(MochiR.string.common_close))
+                }
+            },
         )
-        if (rest.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(titleBodyGap))
-            HtmlContent(
-                html = rest,
-                modifier = Modifier.fillMaxWidth(),
-                maxLines = maxLines,
-                onClick = onClick,
-            )
-        }
     }
 }

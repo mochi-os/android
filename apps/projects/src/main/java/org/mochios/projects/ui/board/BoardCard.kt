@@ -186,9 +186,13 @@ fun BoardCard(
             .then(dragModifier)
             .then(visualModifier)
             .then(edgeBorderModifier)
-            .then(
-                if (borderColor != null) Modifier.border(1.dp, borderColor, MaterialTheme.shapes.small)
-                else Modifier
+            // Every card carries a visible outline (matching web, where each
+            // Card has a default border); the border-field colour overrides the
+            // default subtle outline when one is set.
+            .border(
+                1.dp,
+                borderColor ?: MaterialTheme.colorScheme.outlineVariant,
+                MaterialTheme.shapes.small,
             )
             .clickable(onClick = onClick),
         shape = MaterialTheme.shapes.small,

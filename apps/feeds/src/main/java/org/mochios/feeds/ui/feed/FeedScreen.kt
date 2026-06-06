@@ -724,11 +724,11 @@ private fun PostCard(
             .background(MaterialTheme.colorScheme.surface)
     ) {
       if (heroUrl != null) {
-          // Full screen width, square corners, aspect ratio preserved — the
-          // height follows the image's own ratio (so the bottom usually sits
-          // above the half-way line). Capped at half the screen so an unusually
-          // tall image can't push the text off the page. Tap opens the
-          // lightbox (web parity).
+          // Square corners; height follows the image's ratio up to a half-screen
+          // cap. ContentScale.Fit means a landscape image fills the width
+          // edge-to-edge, while a very tall image (e.g. a web comic) is shown
+          // whole, contained within the cap (with side margins), rather than
+          // cropped top and bottom. Tap opens the full-screen lightbox.
           val maxHeroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
           AsyncImage(
               model = heroUrl,
@@ -743,7 +743,7 @@ private fun PostCard(
                           listOf(heroUrl) to 0
                       }
                   },
-              contentScale = ContentScale.FillWidth,
+              contentScale = ContentScale.Fit,
           )
       }
       Column(

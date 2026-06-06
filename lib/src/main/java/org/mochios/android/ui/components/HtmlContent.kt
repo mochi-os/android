@@ -22,6 +22,7 @@ fun HtmlContent(
     modifier: Modifier = Modifier,
     maxLines: Int = Int.MAX_VALUE,
     onClick: (() -> Unit)? = null,
+    onImageLongPress: ((String) -> Unit)? = null,
     onTextViewReady: ((TextView) -> Unit)? = null
 ) {
     val context = LocalContext.current
@@ -39,6 +40,9 @@ fun HtmlContent(
     val spanned = remember(html) {
         markwon.toMarkdown(html)
     }
+    // Alt/title text per image URL, recovered from the source (the renderer
+    // keeps only the URL). Used for the long-press-shows-alt-text affordance.
+    val altByUrl = remember(html) { parseImageAlts(html) }
 
     AndroidView(
         factory = { ctx ->
@@ -64,9 +68,50 @@ fun HtmlContent(
                 textView.ellipsize = TextUtils.TruncateAt.END
             }
             (textView as ClickableLinkTextView).onNonLinkClick = onClick
+            textView.onImageLongPress = onImageLongPress
+            textView.imageAltByUrl = altByUrl
             markwon.setParsedMarkdown(textView, spanned)
             onTextViewReady?.invoke(textView)
         },
         modifier = modifier
     )
 }
+
+private val IMG_TAG = Regex("<img\\b[^>]*>", RegexOption.IGNORE_CASE)
+private val IMG_SRC = Regex("\\bsrc\\s*=\\s*[\"']([^\"']+)[\"']", RegexOption.IGNORE_CASE)
+private val IMG_TITLE = Regex("\\btitle\\s*=\\s*[\"']([^\"']*)[\"']", RegexOption.IGNORE_CASE)
+private val IMG_ALT = Regex("\\balt\\s*=\\s*[\"']([^\"']*)[\"']", RegexOption.IGNORE_CASE)
+private val MD_IMG = Regex("!\\[([^\\]]*)\\]\\(\\s*([^)\\s]+)(?:\\s+\"([^\"]*)\")?\\s*\\)")
+
+/**
+ * Recover per-image alt/title text from the source HTML/markdown, keyed by
+ * image URL (the rendered image span keeps only the URL). Prefers `title` (web
+ * comics put the punchline there) and falls back to `alt`.
+ */
+private fun parseImageAlts(source: String): Map<String, String> {
+    val map = HashMap<String, String>()
+    for (m in IMG_TAG.findAll(source)) {
+        val tag = m.value
+        val src = IMG_SRC.find(tag)?.groupValues?.get(1) ?: continue
+        val title = IMG_TITLE.find(tag)?.groupValues?.get(1)?.trim().orEmpty()
+        val alt = IMG_ALT.find(tag)?.groupValues?.get(1)?.trim().orEmpty()
+        val text = title.ifBlank { alt }
+        if (text.isNotBlank()) map[src] = decodeEntities(text)
+    }
+    for (m in MD_IMG.findAll(source)) {
+        val alt = m.groupValues[1].trim()
+        val url = m.groupValues[2]
+        val title = m.groupValues[3].trim()
+        val text = title.ifBlank { alt }
+        if (text.isNotBlank()) map.putIfAbsent(url, decodeEntities(text))
+    }
+    return map
+}
+
+private fun decodeEntities(s: String): String = s
+    .replace("&lt;", "<")
+    .replace("&gt;", ">")
+    .replace("&quot;", "\"")
+    .replace("&#39;", "'")
+    .replace("&apos;", "'")
+    .replace("&amp;", "&")

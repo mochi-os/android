@@ -30,7 +30,6 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -55,6 +54,7 @@ import org.mochios.android.ui.components.dnd.draggableItem
 import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.projects.R
+import org.mochios.projects.ui.board.parseColor
 import org.mochios.projects.ui.project.ProjectViewModel
 import org.mochios.android.R as MochiR
 
@@ -77,6 +77,7 @@ fun TreeRow(
     val projectDetails = viewModel.uiState.value.projectDetails
     val prefix = projectDetails?.project?.prefix ?: ""
     val cardFields = viewModel.getCardFields(obj.objectClass)
+    val people = viewModel.uiState.value.people
 
     val isBeingDragged = dragState != null && dragState.isDragging(obj.id)
     val isDropTarget = dragState != null &&
@@ -177,32 +178,57 @@ fun TreeRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            if (cardFields.isNotEmpty()) {
+            // Field values rendered inline (matching web's list columns and the
+            // board card) rather than as heavy chips: enumerated shows a colour
+            // dot + name, user resolves to the member name, everything else is
+            // plain secondary text.
+            val fieldsWithValues = cardFields.filter { obj.stringValue(it.id).isNotBlank() }
+            if (fieldsWithValues.isNotEmpty()) {
+                Spacer(modifier = Modifier.size(3.dp))
                 FlowRow(
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
-                    cardFields.forEach { field ->
+                    fieldsWithValues.forEach { field ->
                         val value = obj.stringValue(field.id)
-                        if (value.isNotBlank()) {
-                            val displayValue = when (field.fieldtype) {
-                                "enumerated" -> {
-                                    val options = viewModel.getAllOptionsForField(field.id)
-                                    options.find { it.id == value }?.name ?: value
-                                }
-                                else -> value
-                            }
-                            if (displayValue.isNotBlank()) {
-                                SuggestionChip(
-                                    onClick = { },
-                                    label = {
-                                        Text(
-                                            text = displayValue,
-                                            style = MaterialTheme.typography.labelSmall,
-                                            maxLines = 1,
-                                            overflow = TextOverflow.Ellipsis
+                        when (field.fieldtype) {
+                            "enumerated" -> {
+                                val opt = viewModel.getAllOptionsForField(field.id).find { it.id == value }
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    if (opt != null && opt.colour.isNotBlank()) {
+                                        Box(
+                                            modifier = Modifier
+                                                .size(8.dp)
+                                                .background(parseColor(opt.colour), MaterialTheme.shapes.extraSmall)
                                         )
+                                        Spacer(modifier = Modifier.width(4.dp))
                                     }
+                                    Text(
+                                        text = opt?.name ?: value,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis
+                                    )
+                                }
+                            }
+                            "user" -> {
+                                val resolved = people.find { it.id == value }?.name?.takeIf { it.isNotBlank() } ?: value
+                                Text(
+                                    text = resolved,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
+                            else -> {
+                                Text(
+                                    text = value,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
                                 )
                             }
                         }
