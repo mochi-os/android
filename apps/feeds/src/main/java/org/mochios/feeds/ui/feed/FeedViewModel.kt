@@ -362,10 +362,10 @@ class FeedViewModel @Inject constructor(
         reloadPosts()
     }
 
-    fun reactToPost(postId: String, reaction: String) {
+    fun reactToPost(feed: String, postId: String, reaction: String) {
         viewModelScope.launch {
             try {
-                repository.reactToPost(feedId, postId, reaction)
+                repository.reactToPost(feed, postId, reaction)
                 // Optimistically update the post's reaction
                 _posts.value = _posts.value.map { post ->
                     if (post.id == postId) {
@@ -491,7 +491,19 @@ class FeedViewModel @Inject constructor(
     fun markAllRead() {
         viewModelScope.launch {
             try {
-                repository.markAllRead(feedId)
+                if (isAllFeeds) {
+                    // No aggregate read-all endpoint exists ("__all__" isn't a
+                    // feed); mark each subscribed feed read, mirroring the
+                    // loadAllFeeds fan-out.
+                    repository.listFeeds().forEach { feed ->
+                        val fid = feed.fingerprint.ifEmpty { feed.id }
+                        if (fid.isNotEmpty()) {
+                            try { repository.markAllRead(fid) } catch (_: Exception) {}
+                        }
+                    }
+                } else {
+                    repository.markAllRead(feedId)
+                }
                 val now = System.currentTimeMillis() / 1000
                 // In "unread only" mode every visible post just became read,
                 // so they should disappear from the list immediately rather

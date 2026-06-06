@@ -522,7 +522,11 @@ fun FeedScreen(
                             // put while a single leaf turns toward the viewer.
                             val renderPost: @Composable (Int) -> Unit = { index ->
                                 val post = posts[index]
-                                val routeFeedId = post.feedFingerprint.ifEmpty { viewModel.feedId }
+                                // Prefer the fingerprint, but fall back to the feed's
+                                // entity id (always present on a post) before the
+                                // "__all__" aggregate sentinel — so react / interest /
+                                // open-post all reach a real entity in the aggregate view.
+                                val routeFeedId = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { viewModel.feedId }
                                 // post.source.url is the RSS feed (XML) URL —
                                 // not the article URL. The article URL lives
                                 // in rss.link. Anything else falls through to
@@ -535,13 +539,11 @@ fun FeedScreen(
                                     canManage = permissions.manage,
                                     onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
                                     onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
-                                    onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
+                                    onReact = { reaction -> viewModel.reactToPost(routeFeedId, post.id, reaction) },
                                     onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
                                     onDelete = { pendingDelete = post },
                                     onAddTag = { addTagTarget = post.id },
-                                    // Route interest through the post's feed id
-                                    // (always present; fingerprint can be empty).
-                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(post.feed.ifEmpty { routeFeedId }, tag, direction) },
+                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(routeFeedId, tag, direction) },
                                 )
                             }
                             Box(modifier = Modifier.fillMaxSize()) {
