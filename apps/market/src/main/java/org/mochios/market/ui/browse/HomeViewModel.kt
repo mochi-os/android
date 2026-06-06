@@ -167,6 +167,7 @@ class HomeViewModel @Inject constructor(
                 val account = repo.getAccount()
                 _state.value = _state.value.copy(
                     accountActive = !isInactiveAccount(account.status),
+                    isSeller = account.seller == 1,
                 )
             } catch (_: Exception) {
                 _state.value = _state.value.copy(accountActive = false)

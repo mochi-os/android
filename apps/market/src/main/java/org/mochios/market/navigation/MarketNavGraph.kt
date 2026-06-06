@@ -9,6 +9,7 @@ import androidx.navigation.navArgument
 import org.mochios.market.ui.account.AccountSettingsScreen
 import org.mochios.market.ui.account.NotificationPreferencesScreen
 import org.mochios.market.ui.account.PublicProfileScreen
+import org.mochios.market.ui.account.SellerSettingsScreen
 import org.mochios.market.ui.browse.HomeScreen
 import org.mochios.market.ui.buying.MyBidsScreen
 import org.mochios.market.ui.buying.MyPurchasesScreen
@@ -55,6 +56,7 @@ object MarketApp {
     const val MESSAGES = "market/messages"
     const val REVIEWS = "market/reviews"
     const val ACCOUNT = "market/account"
+    const val SELLER_SETTINGS = "market/account/seller"
 
     // ---- Detail route patterns ----
     const val LISTING_DETAIL = "market/listing/{id}"
@@ -119,6 +121,7 @@ fun NavGraphBuilder.marketNavGraph(navController: NavController) {
     composable(MarketApp.MESSAGES) { MessagesInboxScreen(navController = navController) }
     composable(MarketApp.REVIEWS) { ReviewsScreen(navController = navController) }
     composable(MarketApp.ACCOUNT) { AccountSettingsScreen(navController = navController) }
+    composable(MarketApp.SELLER_SETTINGS) { SellerSettingsScreen(navController = navController) }
 
     // ---- Detail routes ----
     composable(MarketApp.NEW_LISTING) { EditListingScreen(navController = navController) }

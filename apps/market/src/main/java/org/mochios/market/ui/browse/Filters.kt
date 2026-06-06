@@ -63,4 +63,11 @@ data class HomeUiState(
     val accountActive: Boolean = true,
     /** `true` while the activate-account request is in flight. */
     val activatingAccount: Boolean = false,
+    /**
+     * `true` once the caller's loaded account has `seller == 1`. Gates the
+     * Selling sidebar section and flips the seller-settings sidebar row label
+     * between "Become a seller" and "Seller settings". Defaults `false` until
+     * the account load completes.
+     */
+    val isSeller: Boolean = false,
 )

@@ -19,6 +19,7 @@ import androidx.compose.material.icons.filled.PointOfSale
 import androidx.compose.material.icons.filled.Receipt
 import androidx.compose.material.icons.filled.Repeat
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material3.Badge
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -115,17 +116,17 @@ fun MarketSidebar(
                 onClick = { onNavigate(MarketApp.SUBSCRIPTIONS) },
             )
 
-            // Selling
-            HorizontalDivider()
-            SectionHeader(R.string.market_sidebar_selling)
-            SidebarRow(
-                route = MarketApp.LISTINGS,
-                currentRoute = currentRoute,
-                icon = Icons.Default.Inventory,
-                labelRes = R.string.market_sidebar_listings,
-                onClick = { onNavigate(MarketApp.LISTINGS) },
-            )
+            // Selling (entire section gated behind seller status)
             if (isSeller) {
+                HorizontalDivider()
+                SectionHeader(R.string.market_sidebar_selling)
+                SidebarRow(
+                    route = MarketApp.LISTINGS,
+                    currentRoute = currentRoute,
+                    icon = Icons.Default.Inventory,
+                    labelRes = R.string.market_sidebar_listings,
+                    onClick = { onNavigate(MarketApp.LISTINGS) },
+                )
                 SidebarRow(
                     route = MarketApp.SALES,
                     currentRoute = currentRoute,
@@ -164,6 +165,17 @@ fun MarketSidebar(
             // Settings
             HorizontalDivider()
             SectionHeader(R.string.market_sidebar_settings)
+            SidebarRow(
+                route = MarketApp.SELLER_SETTINGS,
+                currentRoute = currentRoute,
+                icon = Icons.Default.Storefront,
+                labelRes = if (isSeller) {
+                    R.string.market_sidebar_seller_settings
+                } else {
+                    R.string.market_sidebar_become_seller
+                },
+                onClick = { onNavigate(MarketApp.SELLER_SETTINGS) },
+            )
             SidebarRow(
                 route = MarketApp.ACCOUNT,
                 currentRoute = currentRoute,

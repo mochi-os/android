@@ -113,6 +113,7 @@ fun HomeScreen(
             MarketSidebar(
                 currentRoute = MarketApp.HOME,
                 navController = navController,
+                isSeller = state.isSeller,
                 onNavigate = { route ->
                     drawerScope.launch { drawerState.close() }
                     if (route != MarketApp.HOME) navController.navigate(route)

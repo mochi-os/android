@@ -18,6 +18,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -32,6 +33,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -143,10 +145,23 @@ fun AccountSettingsScreen(
                 ) {
                     val account = state.account!!
                     val status = account.status.lowercase()
-                    if (status == "suspended" || status == "banned") {
+                    val restricted = status == "suspended" || status == "banned"
+                    if (restricted) {
                         SuspensionWarning(
                             status = status,
                             reason = account.reason,
+                        )
+                    }
+
+                    if (!restricted) {
+                        SellerStatusCard(
+                            isSeller = account.seller == 1,
+                            isOnboarded = account.onboarded == 1,
+                            onNavigate = {
+                                navController.navigate(
+                                    org.mochios.market.navigation.MarketApp.SELLER_SETTINGS,
+                                )
+                            },
                         )
                     }
 
@@ -158,6 +173,34 @@ fun AccountSettingsScreen(
                     LocationField(
                         place = state.placeDraft,
                         onChange = viewModel::updatePlace,
+                    )
+
+                    if (account.seller == 1) {
+                        BusinessDetailsSection(
+                            business = state.businessDraft,
+                            company = state.companyDraft,
+                            vat = state.vatDraft,
+                            onBusinessChange = viewModel::updateBusiness,
+                            onCompanyChange = viewModel::updateCompany,
+                            onVatChange = viewModel::updateVat,
+                        )
+                    }
+
+                    ShippingAddressSection(
+                        name = state.addressNameDraft,
+                        line1 = state.addressLine1Draft,
+                        line2 = state.addressLine2Draft,
+                        city = state.addressCityDraft,
+                        region = state.addressRegionDraft,
+                        postcode = state.addressPostcodeDraft,
+                        country = state.addressCountryDraft,
+                        onNameChange = viewModel::updateAddressName,
+                        onLine1Change = viewModel::updateAddressLine1,
+                        onLine2Change = viewModel::updateAddressLine2,
+                        onCityChange = viewModel::updateAddressCity,
+                        onRegionChange = viewModel::updateAddressRegion,
+                        onPostcodeChange = viewModel::updateAddressPostcode,
+                        onCountryChange = viewModel::updateAddressCountry,
                     )
 
                     if (account.onboarded == 1) {
@@ -367,5 +410,200 @@ private fun StatusRow(label: String, enabled: Boolean) {
         )
         Spacer(modifier = Modifier.width(6.dp))
         Text(text = label, style = MaterialTheme.typography.bodyMedium)
+    }
+}
+
+/**
+ * Compact seller-status card at the top of the Account screen. Mirrors web's
+ * `SellerStatusCard` — nudges non-sellers to activate, points active sellers
+ * at the seller-settings page, and flags incomplete Stripe onboarding. Hidden
+ * for suspended / banned accounts (the suspension warning takes precedence).
+ */
+@Composable
+private fun SellerStatusCard(
+    isSeller: Boolean,
+    isOnboarded: Boolean,
+    onNavigate: () -> Unit,
+) {
+    val (titleRes, bodyRes, actionRes) = when {
+        !isSeller -> Triple(
+            R.string.market_account_seller_card_start_title,
+            R.string.market_account_seller_card_start_body,
+            R.string.market_sidebar_become_seller,
+        )
+        isOnboarded -> Triple(
+            R.string.market_account_seller_card_active_title,
+            R.string.market_account_seller_card_active_body,
+            R.string.market_account_seller_card_view,
+        )
+        else -> Triple(
+            R.string.market_account_seller_card_incomplete_title,
+            R.string.market_account_seller_card_incomplete_body,
+            R.string.market_account_seller_card_continue,
+        )
+    }
+    Card(modifier = Modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.Top,
+        ) {
+            Icon(
+                imageVector = Icons.Filled.Storefront,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(24.dp),
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = stringResource(titleRes),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Text(
+                    text = stringResource(bodyRes),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Spacer(modifier = Modifier.size(8.dp))
+                OutlinedButton(onClick = onNavigate) {
+                    Text(stringResource(actionRes))
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun BusinessDetailsSection(
+    business: Boolean,
+    company: String,
+    vat: String,
+    onBusinessChange: (Boolean) -> Unit,
+    onCompanyChange: (String) -> Unit,
+    onVatChange: (String) -> Unit,
+) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(
+            text = stringResource(R.string.market_account_business_title),
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold,
+        )
+        Text(
+            text = stringResource(R.string.market_account_business_desc),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = stringResource(R.string.market_account_business_switch),
+                style = MaterialTheme.typography.bodyMedium,
+            )
+            Switch(checked = business, onCheckedChange = onBusinessChange)
+        }
+        OutlinedTextField(
+            value = company,
+            onValueChange = onCompanyChange,
+            label = { Text(stringResource(R.string.market_account_company_label)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = vat,
+            onValueChange = onVatChange,
+            label = { Text(stringResource(R.string.market_account_vat_label)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+private fun ShippingAddressSection(
+    name: String,
+    line1: String,
+    line2: String,
+    city: String,
+    region: String,
+    postcode: String,
+    country: String,
+    onNameChange: (String) -> Unit,
+    onLine1Change: (String) -> Unit,
+    onLine2Change: (String) -> Unit,
+    onCityChange: (String) -> Unit,
+    onRegionChange: (String) -> Unit,
+    onPostcodeChange: (String) -> Unit,
+    onCountryChange: (String) -> Unit,
+) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(
+            text = stringResource(R.string.market_account_address_title),
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold,
+        )
+        Text(
+            text = stringResource(R.string.market_account_address_desc),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        OutlinedTextField(
+            value = name,
+            onValueChange = onNameChange,
+            label = { Text(stringResource(R.string.market_checkout_address_name)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = line1,
+            onValueChange = onLine1Change,
+            label = { Text(stringResource(R.string.market_checkout_address_line1)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = line2,
+            onValueChange = onLine2Change,
+            label = { Text(stringResource(R.string.market_checkout_address_line2)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = city,
+            onValueChange = onCityChange,
+            label = { Text(stringResource(R.string.market_checkout_address_city)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = region,
+            onValueChange = onRegionChange,
+            label = { Text(stringResource(R.string.market_checkout_address_region)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = postcode,
+            onValueChange = onPostcodeChange,
+            label = { Text(stringResource(R.string.market_checkout_address_postcode)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = country,
+            onValueChange = onCountryChange,
+            label = { Text(stringResource(R.string.market_checkout_address_country)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
     }
 }
