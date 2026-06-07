@@ -179,8 +179,8 @@ class ProjectsRepository @Inject constructor(
     suspend fun getObject(projectId: String, objectId: String): ProjectObject =
         api.getObject(projectId, objectId).unwrap().`object`
 
-    suspend fun updateObject(projectId: String, objectId: String, title: String? = null, parent: String? = null) {
-        api.updateObject(projectId, objectId, title, parent).unwrap()
+    suspend fun updateObject(projectId: String, objectId: String, parent: String? = null) {
+        api.updateObject(projectId, objectId, parent).unwrap()
     }
 
     suspend fun deleteObject(projectId: String, objectId: String) {

@@ -182,7 +182,8 @@ interface CrmsApi {
     suspend fun updateObject(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
-        @Field("title") title: String?,
+        // Title is a field value (the class's title field), edited via value/set;
+        // object/update only handles parent/class. Do NOT add a title field here.
         @Field("parent") parent: String?
     ): Response<ApiResponse<SuccessResponse>>
 

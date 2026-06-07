@@ -76,6 +76,9 @@ fun PropertiesTab(
     val fields = crmDetails.fields[obj.objectClass] ?: emptyList()
     val classOptions = crmDetails.options[obj.objectClass] ?: emptyMap()
     val canWrite = canWriteAccess(uiState.access)
+    // The title field is rendered editable in the detail header (parity with
+    // web); exclude it here so it isn't shown twice.
+    val titleFieldId = crmDetails.classes.find { it.id == obj.objectClass }?.title
     // "Can this object have children?" — true when at least one class
     // lists obj.objectClass in its allowed parent classes.
     val canHaveChildren = remember(crmDetails.hierarchy, obj.objectClass) {
@@ -110,7 +113,7 @@ fun PropertiesTab(
         }
 
         // Dynamic fields
-        fields.sortedBy { it.rank }.forEach { field ->
+        fields.filter { it.id != titleFieldId }.sortedBy { it.rank }.forEach { field ->
             FieldEditor(
                 field = field,
                 value = obj.values[field.id],
@@ -174,7 +177,7 @@ fun PropertiesTab(
     }
 }
 
-private fun canWriteAccess(access: String): Boolean =
+internal fun canWriteAccess(access: String): Boolean =
     access == "owner" || access == "design" || access == "write"
 
 private fun collectDescendants(objects: List<CrmObject>, rootId: String): Set<String> {
@@ -292,7 +295,7 @@ private fun ParentPicker(
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
-private fun FieldEditor(
+internal fun FieldEditor(
     field: CrmField,
     value: Any?,
     options: List<FieldOption>,

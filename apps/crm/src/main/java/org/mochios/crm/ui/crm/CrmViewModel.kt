@@ -393,7 +393,7 @@ class CrmViewModel @Inject constructor(
     fun reparentObject(objectId: String, newParentId: String) {
         viewModelScope.launch {
             try {
-                repository.updateObject(crmId, objectId, null, newParentId)
+                repository.updateObject(crmId, objectId, newParentId)
                 refreshObjects()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

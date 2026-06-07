@@ -144,8 +144,8 @@ class CrmsRepository @Inject constructor(
     suspend fun getObject(crmId: String, objectId: String): CrmObject =
         api.getObject(crmId, objectId).unwrap().`object`
 
-    suspend fun updateObject(crmId: String, objectId: String, title: String? = null, parent: String? = null) {
-        api.updateObject(crmId, objectId, title, parent).unwrap()
+    suspend fun updateObject(crmId: String, objectId: String, parent: String? = null) {
+        api.updateObject(crmId, objectId, parent).unwrap()
     }
 
     suspend fun deleteObject(crmId: String, objectId: String) {
