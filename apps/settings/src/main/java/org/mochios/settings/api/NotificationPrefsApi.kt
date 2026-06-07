@@ -107,16 +107,24 @@ interface NotificationPrefsApi {
     @POST("settings/-/notifications/categories/test")
     suspend fun testCategory(@Field("id") id: Int): Response<TestEnvelope>
 
+    // Topics are identified by (app, topic, object), not a row id — that's the
+    // tuple the server reads (app="" for server-originated topics).
     @FormUrlEncoded
     @POST("settings/-/notifications/topics/set/category")
     suspend fun setTopicCategory(
-        @Field("id") id: Int,
+        @Field("app") app: String,
+        @Field("topic") topic: String,
+        @Field("object") obj: String,
         @Field("category") category: String,
     ): Response<Unit>
 
     @FormUrlEncoded
     @POST("settings/-/notifications/topics/delete")
-    suspend fun deleteTopic(@Field("id") id: Int): Response<Unit>
+    suspend fun deleteTopic(
+        @Field("app") app: String,
+        @Field("topic") topic: String,
+        @Field("object") obj: String,
+    ): Response<Unit>
 }
 
 @Module

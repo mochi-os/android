@@ -125,7 +125,7 @@ interface ProjectsApi {
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
         @Field("project") project: String,
-        @Field("server") server: String?
+        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded

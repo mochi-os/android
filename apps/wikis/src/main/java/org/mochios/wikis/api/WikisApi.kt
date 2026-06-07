@@ -400,7 +400,7 @@ interface WikisApi {
     @GET("{wiki}/-/attachment/list")
     suspend fun listAttachments(
         @Path(value = "wiki", encoded = true) wiki: String,
-        @Query("page") page: String,
+        @Query("page") page: String, // contract-ok: no server-side pagination for attachments; page ignored
     ): Response<ApiResponse<AttachmentsResponse>>
 
     

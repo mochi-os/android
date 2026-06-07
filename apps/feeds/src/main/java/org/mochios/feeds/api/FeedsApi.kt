@@ -178,7 +178,7 @@ interface FeedsApi {
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
         @Field("feed") feed: String,
-        @Field("server") server: String?
+        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
@@ -219,7 +219,7 @@ interface FeedsApi {
     @POST("{feedId}/-/delete")
     suspend fun deleteFeed(
         @Path("feedId") feedId: String,
-        @Field("confirm") confirm: Boolean = true
+        @Field("confirm") confirm: Boolean = true // contract-ok: client-side confirmation flag; not read server-side
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
@@ -398,7 +398,7 @@ interface FeedsApi {
         @Path("feedId") feedId: String,
         @Path("postId") postId: String,
         @Field("label") label: String,
-        @Field("qid") qid: String?
+        @Field("qid") qid: String? // contract-ok: server re-derives qid from label; provided qid is advisory
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
