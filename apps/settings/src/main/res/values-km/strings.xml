@@ -394,4 +394,9 @@
     <string name="route_target_app">កម្មវិធី</string>
     <string name="route_target_entity">អង្គភាព</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ទិន្នន័យរបស់អ្នក</string>
+    <string name="account_data_dialog_title">ទាញយកទិន្នន័យរបស់អ្នក</string>
+    <string name="account_data_dialog_body">នេះគឺជាការបម្រុងទុកពេញលេញដែលអ្នកអាចស្ដារឡើងវិញនៅលើម៉ាស៊ីនមេ Mochi នេះ ឬម៉ាស៊ីនមេ Mochi ផ្សេងទៀត។ ផ្ទៀងផ្ទាត់ថាជាអ្នកដើម្បីបន្ត។</string>
+    <string name="account_data_passphrase">ឃ្លាសម្ងាត់</string>
+    <string name="account_data_passphrase_hint">គន្លឹះឯកជនរបស់អ្នកត្រូវបានបញ្ចូល ត្រូវបានអ៊ិនគ្រីបជាមួយឃ្លាការបណ្ណនេះ។ រក្សាទុកវានៅកន្លែងដែលមានសុវត្ថិភាព។ អ្នកនឹងត្រូវការវាដើម្បីស្ដារ។</string>
 </resources>

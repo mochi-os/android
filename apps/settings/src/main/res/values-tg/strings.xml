@@ -394,4 +394,9 @@
     <string name="route_target_app">Барнома</string>
     <string name="route_target_entity">Объект</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Маълумоти шумо</string>
+    <string name="account_data_dialog_title">Маълумоти худро бор кунед</string>
+    <string name="account_data_dialog_body">Ин нусхаи пурраи эҳтиётист, ки шумо метавонед онро дар ҳамин ё дигар сервери Mochi барқарор кунед. Барои идома тасдиқ кунед, ки ин шумо ҳастед.</string>
+    <string name="account_data_passphrase">Ибораи рамзӣ</string>
+    <string name="account_data_passphrase_hint">Калидҳои хусусии шумо дохил карда шудаанд, бо ин ибораи рамзӣ рамзгузорӣ шудаанд. Онро дар ҷои амн нигоҳ доред. Барои барқарорсозӣ ба он ниёз хоҳед дошт.</string>
 </resources>

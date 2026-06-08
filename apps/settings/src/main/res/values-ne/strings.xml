@@ -395,4 +395,9 @@
     <string name="route_target_app">एप</string>
     <string name="route_target_entity">संस्था</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">तपाईंको डाटा</string>
+    <string name="account_data_dialog_title">आफ्नो डेटा डाउनलोड गर्नुहोस्</string>
+    <string name="account_data_dialog_body">यो एउटा पूर्ण ब्याकअप हो जुन तपाईंले यो वा अर्को Mochi सर्भरमा पुनर्स्थापना गर्न सक्नुहुन्छ। जारी राख्न तपाईं नै हो भनी पुष्टि गर्नुहोस्।</string>
+    <string name="account_data_passphrase">पासफ्रेज</string>
+    <string name="account_data_passphrase_hint">तपाईंका निजी कुञ्जीहरू समावेश छन्, यो पासफ्रेजले एन्क्रिप्ट गरिएको छ। यसलाई सुरक्षित राख्नुहोस्। पुनर्स्थापना गर्न तपाईंलाई यो चाहिनेछ।</string>
 </resources>

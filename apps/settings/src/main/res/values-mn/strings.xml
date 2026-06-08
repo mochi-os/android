@@ -395,4 +395,9 @@
     <string name="route_target_app">Апп</string>
     <string name="route_target_entity">Entity</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Таны өгөгдөл</string>
+    <string name="account_data_dialog_title">Өгөгдлөө татаж авах</string>
+    <string name="account_data_dialog_body">Энэ нь та энэ эсвэл өөр Mochi серверт сэргээж болох бүрэн нөөц юм. Үргэлжлүүлэхийн тулд энэ та мөн эсэхийг баталгаажуулна уу.</string>
+    <string name="account_data_passphrase">Нууц үг</string>
+    <string name="account_data_passphrase_hint">Таны хувийн түлхүүрүүд багтсан бөгөөд энэ нэвтрэх хэллэгээр шифрлэгдсэн. Аюулгүй газар хадгалаарай. Сэргээхэд танд хэрэгтэй болно.</string>
 </resources>

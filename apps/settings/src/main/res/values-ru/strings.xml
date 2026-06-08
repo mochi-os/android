@@ -397,4 +397,9 @@
     <string name="route_target_app">Приложение</string>
     <string name="route_target_entity">Сущность</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ваши данные</string>
+    <string name="account_data_dialog_title">Скачать свои данные</string>
+    <string name="account_data_dialog_body">Это полная резервная копия, которую можно восстановить на этом или другом сервере Mochi. Подтвердите, что это вы, чтобы продолжить.</string>
+    <string name="account_data_passphrase">Кодовая фраза</string>
+    <string name="account_data_passphrase_hint">Ваши закрытые ключи включены, зашифрованы этой парольной фразой. Храните её в безопасном месте. Она потребуется вам для восстановления.</string>
 </resources>

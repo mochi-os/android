@@ -395,4 +395,9 @@
     <string name="route_target_app">برنامه</string>
     <string name="route_target_entity">موجودیت</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">داده‌های شما</string>
+    <string name="account_data_dialog_title">دانلود داده‌های شما</string>
+    <string name="account_data_dialog_body">این یک پشتیبان کامل است که می‌توانید آن را روی همین سرور Mochi یا سرور دیگری بازیابی کنید. برای ادامه هویت خود را تأیید کنید.</string>
+    <string name="account_data_passphrase">عبارت عبور</string>
+    <string name="account_data_passphrase_hint">کلیدهای خصوصی شما شامل شده‌اند، با این عبارت عبور رمزگذاری شده‌اند. آن را در جای امنی نگهداری کنید. برای بازیابی به آن نیاز خواهید داشت.</string>
 </resources>

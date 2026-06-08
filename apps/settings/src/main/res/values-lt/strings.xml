@@ -397,4 +397,9 @@
     <string name="route_target_app">Programėlė</string>
     <string name="route_target_entity">Subjektas</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Jūsų duomenys</string>
+    <string name="account_data_dialog_title">Atsisiųskite savo duomenis</string>
+    <string name="account_data_dialog_body">Tai visa atsarginė kopija, kurią galite atkurti šiame arba kitame Mochi serveryje. Norėdami tęsti, patvirtinkite, kad tai jūs.</string>
+    <string name="account_data_passphrase">Slaptafrazė</string>
+    <string name="account_data_passphrase_hint">Jūsų privatūs raktai įtraukti, užšifruoti šia prieigos fraze. Laikykite ją saugioje vietoje. Jos prireiks atkūrimui.</string>
 </resources>

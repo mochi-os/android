@@ -395,4 +395,9 @@
     <string name="route_target_app">Колдонмо</string>
     <string name="route_target_entity">Субъект</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Сиздин дайындарыңыз</string>
+    <string name="account_data_dialog_title">Берилиштериңизди жүктөп алыңыз</string>
+    <string name="account_data_dialog_body">Бул — ушул же башка Mochi серверинде калыбына келтире ала турган толук резервдик көчүрмө. Улантуу үчүн бул сиз экениңизди ырастаңыз.</string>
+    <string name="account_data_passphrase">Купуя сөз айкашы</string>
+    <string name="account_data_passphrase_hint">Жеке ачкычтарыңыз камтылган, бул сырсөз сүйлөмү менен шифрленген. Аны коопсуз жерде сактаңыз. Калыбына келтирүү үчүн керек болот.</string>
 </resources>

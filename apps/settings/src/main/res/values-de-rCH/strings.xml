@@ -390,4 +390,7 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entität</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ihre Daten</string>
+    <string name="account_data_dialog_title">Eigene Daten herunterladen</string>
+    <string name="account_data_passphrase">Passphrase</string>
 </resources>

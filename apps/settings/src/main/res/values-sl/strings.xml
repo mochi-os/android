@@ -397,4 +397,9 @@
     <string name="route_target_app">Aplikacija</string>
     <string name="route_target_entity">Entiteta</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Vaši podatki</string>
+    <string name="account_data_dialog_title">Prenesite svoje podatke</string>
+    <string name="account_data_dialog_body">To je popolna varnostna kopija, ki jo lahko obnovite na tem ali drugem strežniku Mochi. Za nadaljevanje potrdite, da ste to vi.</string>
+    <string name="account_data_passphrase">Geslo</string>
+    <string name="account_data_passphrase_hint">Vaši zasebni ključi so vključeni, šifrirani s to dostopno frazo. Shranite jo na varnem mestu. Potrebovali jo boste za obnovitev.</string>
 </resources>

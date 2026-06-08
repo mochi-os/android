@@ -389,4 +389,8 @@
     <string name="route_target_app">應用程式</string>
     <string name="route_target_entity">實體</string>
     <string name="route_target_url">網址</string>
+    <string name="account_data_section">你的數據</string>
+    <string name="account_data_dialog_title">下載你的數據</string>
+    <string name="account_data_dialog_body">這是一份完整備份，您可以在本伺服器或其他 Mochi 伺服器上還原。請驗證您的身分以繼續。</string>
+    <string name="account_data_passphrase">密碼短語</string>
 </resources>

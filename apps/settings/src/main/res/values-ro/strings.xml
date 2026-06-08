@@ -396,4 +396,9 @@
     <string name="route_target_app">Aplicație</string>
     <string name="route_target_entity">Entitate</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Datele tale</string>
+    <string name="account_data_dialog_title">Descărcați datele dvs.</string>
+    <string name="account_data_dialog_body">Aceasta este o copie de rezervă completă pe care o poți restaura pe acest server Mochi sau pe altul. Confirmă că ești tu pentru a continua.</string>
+    <string name="account_data_passphrase">Frază de acces</string>
+    <string name="account_data_passphrase_hint">Cheile dvs. private sunt incluse, criptate cu această frază de acces. Păstrați-o în siguranță. Veți avea nevoie de ea pentru restaurare.</string>
 </resources>

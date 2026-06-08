@@ -395,4 +395,9 @@
     <string name="route_target_app">ആപ്പ്</string>
     <string name="route_target_entity">സ്ഥാപനം</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">നിങ്ങളുടെ ഡേറ്റ</string>
+    <string name="account_data_dialog_title">നിങ്ങളുടെ ഡേറ്റ ഡൗൺലോഡ് ചെയ്യുക</string>
+    <string name="account_data_dialog_body">ഇത് ഈ Mochi സെർവറിലോ മറ്റൊരു Mochi സെർവറിലോ പുനഃസ്ഥാപിക്കാവുന്ന ഒരു സമ്പൂർണ്ണ ബാക്കപ്പാണ്. തുടരാൻ നിങ്ങളാണെന്ന് സ്ഥിരീകരിക്കുക.</string>
+    <string name="account_data_passphrase">രഹസ്യ വാക്യം</string>
+    <string name="account_data_passphrase_hint">നിങ്ങളുടെ സ്വകാര്യ കീകൾ ഉൾപ്പെടുത്തിയിട്ടുണ്ട്, ഈ പാസ്ഫ്രേസ് ഉപയോഗിച്ച് എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു. ഇത് സുരക്ഷിതമായി സൂക്ഷിക്കുക. പുനഃസ്ഥാപിക്കാൻ നിങ്ങൾക്ക് ഇത് ആവശ്യമായിവരും.</string>
 </resources>

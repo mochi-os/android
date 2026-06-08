@@ -395,4 +395,9 @@
     <string name="route_target_app">I-app</string>
     <string name="route_target_entity">Uhlaka</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Idatha yakho</string>
+    <string name="account_data_dialog_title">Layisha idatha yakho</string>
+    <string name="account_data_dialog_body">Lokhu yikopi yokugcina epheleleyo ongayibuyisela kule noma kwenye iseva ye-Mochi. Qinisekisa ukuthi nguwe ukuze uqhubeke.</string>
+    <string name="account_data_passphrase">Umusho wephasiwedi</string>
+    <string name="account_data_passphrase_hint">Izihluthulelo zakho eziyimfihlo zifakiwe, zikhiyelwe nale mshwana wephasiwedi. Gcina ngokuphepha. Uzidinga ukuze ubuyisele.</string>
 </resources>

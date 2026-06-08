@@ -394,4 +394,9 @@
     <string name="route_target_app">外観</string>
     <string name="route_target_entity">エンティティ</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">あなたのデータ</string>
+    <string name="account_data_dialog_title">データをダウンロード</string>
+    <string name="account_data_dialog_body">これは、このサーバーまたは別の Mochi サーバーで復元できる完全なバックアップです。続行するには本人確認を行ってください。</string>
+    <string name="account_data_passphrase">パスフレーズ</string>
+    <string name="account_data_passphrase_hint">あなたの秘密鍵が含まれており、このパスフレーズで暗号化されています。安全な場所に保管してください。復元に必要になります。</string>
 </resources>

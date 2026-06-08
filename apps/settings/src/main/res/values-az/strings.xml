@@ -395,4 +395,9 @@
     <string name="route_target_app">Tətbiq</string>
     <string name="route_target_entity">Qurum</string>
     <string name="route_target_url">ABŞ dolları</string>
+    <string name="account_data_section">Məlumatlarınız</string>
+    <string name="account_data_dialog_title">Məlumatlarınızı yükləyin</string>
+    <string name="account_data_dialog_body">Bu, bu və ya başqa bir Mochi serverində bərpa edə biləcəyiniz tam ehtiyat nüsxədir. Davam etmək üçün bunun siz olduğunuzu doğrulayın.</string>
+    <string name="account_data_passphrase">Gizli söz</string>
+    <string name="account_data_passphrase_hint">Şəxsi açarlarınız daxildir, bu parolla şifrələnmişdir. Onu təhlükəsiz saxlayın. Bərpa etmək üçün lazım olacaq.</string>
 </resources>

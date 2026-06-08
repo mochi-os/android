@@ -395,4 +395,9 @@
     <string name="route_target_app">መተግበሪያ</string>
     <string name="route_target_entity">አካል</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ውሂብዎ</string>
+    <string name="account_data_dialog_title">ውሂብዎን ያውርዱ</string>
+    <string name="account_data_dialog_body">ይህ በዚህ ወይም በሌላ Mochi አገልጋይ ላይ መልሰው ሊጭኑት የሚችሉት ሙሉ ምትኬ ነው። ለመቀጠል እርስዎ መሆንዎን ያረጋግጡ።</string>
+    <string name="account_data_passphrase">የይለፍ ሐረግ</string>
+    <string name="account_data_passphrase_hint">የእርስዎ የግል ቁልፎች ተካትተዋል፣ በዚህ ሚስጥራዊ ሐረግ ተመስጥረዋል። በጥንቃቄ ያስቀምጡት። ለመልሰ ማቋቋም ያስፈልግዎታል።</string>
 </resources>

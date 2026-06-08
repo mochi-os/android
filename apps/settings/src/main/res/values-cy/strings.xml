@@ -399,4 +399,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Endid</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Eich data</string>
+    <string name="account_data_dialog_title">Lawrlwythwch eich data</string>
+    <string name="account_data_dialog_body">Mae hwn yn gopi wrth gefn cyflawn y gallwch ei adfer ar y gweinydd Mochi hwn neu un arall. Gwiriwch mai chi sydd yna i barhau.</string>
+    <string name="account_data_passphrase">Ymadrodd cyfrinachol</string>
+    <string name="account_data_passphrase_hint">Mae eich allweddi preifat wedi\'u cynnwys, wedi\'u hamgryptio â\'r cyfrinymadrodd hwn. Cadwch ef yn ddiogel. Bydd ei angen arnoch i adfer.</string>
 </resources>

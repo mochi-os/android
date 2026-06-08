@@ -395,4 +395,9 @@
     <string name="route_target_app">اپلیکیشن</string>
     <string name="route_target_entity">موجودیت</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ستاسو معلومات</string>
+    <string name="account_data_dialog_title">خپل ډاټا ډاونلوډ کړئ</string>
+    <string name="account_data_dialog_body">دا یوه بشپړه بیک اپ ده چې تاسو یې پدې یا بل Mochi سرور کې بیرته راوستلی شئ. د دوام لپاره تایید کړئ چې تاسو یاست.</string>
+    <string name="account_data_passphrase">پاسفریز</string>
+    <string name="account_data_passphrase_hint">ستاسو خصوصي کیلونه شامل دي، د دې پټ عبارت سره کوډ شوي. دا په خوندي ځای کې وساتئ. د بیرته راوبستلو لپاره به ورته اړتیا ولرئ.</string>
 </resources>

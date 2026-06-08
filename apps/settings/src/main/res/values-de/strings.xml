@@ -395,4 +395,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entität</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Deine Daten</string>
+    <string name="account_data_dialog_title">Eigene Daten herunterladen</string>
+    <string name="account_data_dialog_body">Dies ist eine vollständige Sicherung, die Sie auf diesem oder einem anderen Mochi-Server wiederherstellen können. Bestätigen Sie Ihre Identität, um fortzufahren.</string>
+    <string name="account_data_passphrase">Passphrase</string>
+    <string name="account_data_passphrase_hint">Ihre privaten Schlüssel sind enthalten, verschlüsselt mit dieser Passphrase. Bewahren Sie sie sicher auf. Sie benötigen sie zur Wiederherstellung.</string>
 </resources>

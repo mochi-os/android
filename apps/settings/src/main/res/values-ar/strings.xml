@@ -399,4 +399,9 @@
     <string name="route_target_app">التطبيق</string>
     <string name="route_target_entity">الكيان</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">بياناتك</string>
+    <string name="account_data_dialog_title">تنزيل بياناتك</string>
+    <string name="account_data_dialog_body">هذه نسخة احتياطية كاملة يمكنك استعادتها على هذا الخادم أو على خادم Mochi آخر. تحقق من أنك أنت للمتابعة.</string>
+    <string name="account_data_passphrase">عبارة المرور</string>
+    <string name="account_data_passphrase_hint">مفاتيحك الخاصة مُضمَّنة، مشفَّرة بعبارة المرور هذه. احفظها في مكان آمن. ستحتاجها للاستعادة.</string>
 </resources>

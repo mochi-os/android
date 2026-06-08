@@ -397,4 +397,9 @@
     <string name="route_target_app">Aplacaid</string>
     <string name="route_target_entity">Aonad</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Do dhàta</string>
+    <string name="account_data_dialog_title">Luchdaich a-nuas do chuid dàta</string>
+    <string name="account_data_dialog_body">Seo lethbhreac-glèidhidh iomlan as urrainn dhut aiseag air an fhrithealaiche Mochi seo no air fear eile. Dearbhaich gur tusa a th\' ann gus leantainn air adhart.</string>
+    <string name="account_data_passphrase">Abairt-fhaire</string>
+    <string name="account_data_passphrase_hint">Tha do chiachan prìobhaideach air an toirt a-steach, air an cripteachadh leis an abairt-fhacal-faire seo. Glèidh i gu sàbhailte. Bidh feum agad oirre ath-nuadhachadh.</string>
 </resources>

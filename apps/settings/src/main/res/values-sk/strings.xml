@@ -397,4 +397,9 @@
     <string name="route_target_app">Aplikácia</string>
     <string name="route_target_entity">Entita</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Vaše dáta</string>
+    <string name="account_data_dialog_title">Stiahnite svoje dáta</string>
+    <string name="account_data_dialog_body">Toto je úplná záloha, ktorú môžete obnoviť na tomto alebo inom serveri Mochi. Pokračujte overením, že ste to vy.</string>
+    <string name="account_data_passphrase">Heslová fráza</string>
+    <string name="account_data_passphrase_hint">Vaše súkromné kľúče sú zahrnuté, zašifrované touto prístupovou frázou. Uložte ju na bezpečné miesto. Budete ju potrebovať na obnovenie.</string>
 </resources>

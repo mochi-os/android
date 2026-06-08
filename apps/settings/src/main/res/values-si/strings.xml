@@ -395,4 +395,9 @@
     <string name="route_target_app">යෙදුම</string>
     <string name="route_target_entity">ආයතනය</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ඔබගේ දත්ත</string>
+    <string name="account_data_dialog_title">ඔබේ දත්ත බාගත කරන්න</string>
+    <string name="account_data_dialog_body">මෙය ඔබට මෙම හෝ වෙනත් Mochi සේවාදායකයක ප්‍රතිස්ථාපනය කළ හැකි සම්පූර්ණ උපස්ථයකි. ඉදිරියට යාමට එය ඔබ බව තහවුරු කරන්න.</string>
+    <string name="account_data_passphrase">රහස් ශ්‍රේණිය</string>
+    <string name="account_data_passphrase_hint">ඔබගේ පෞද්ගලික යතුරු ඇතුළත් කර ඇති අතර, මෙම ගුප්ත-වාක්‍ය ශ්‍රේණිය සමඟ සංකේතනය කර ඇත. එය ආරක්ෂිත ස්ථානයක ගබඩා කරන්න. යථා තත්ත්වයට පත් කිරීමට ඔබට එය අවශ්‍ය වේ.</string>
 </resources>

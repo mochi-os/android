@@ -394,4 +394,9 @@
     <string name="route_target_app">Apl</string>
     <string name="route_target_entity">Entiti</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Data anda</string>
+    <string name="account_data_dialog_title">Muat turun data anda</string>
+    <string name="account_data_dialog_body">Ini ialah sandaran lengkap yang boleh anda pulihkan pada pelayan Mochi ini atau pelayan Mochi lain. Sahkan ini anda untuk meneruskan.</string>
+    <string name="account_data_passphrase">Frasa laluan</string>
+    <string name="account_data_passphrase_hint">Kunci peribadi anda disertakan, disulitkan dengan frasa laluan ini. Simpannya dengan selamat. Anda memerlukannya untuk memulihkan.</string>
 </resources>

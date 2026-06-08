@@ -398,4 +398,9 @@
     <string name="route_target_app">Aip</string>
     <string name="route_target_entity">Aonán</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Do shonraí</string>
+    <string name="account_data_dialog_title">Íoslódáil do chuid sonraí</string>
+    <string name="account_data_dialog_body">Cúltaca iomlán é seo is féidir leat a athchóiriú ar an bhfreastalaí Mochi seo nó ar cheann eile. Fíoraigh gur tusa atá ann chun leanúint ar aghaidh.</string>
+    <string name="account_data_passphrase">Frása faire</string>
+    <string name="account_data_passphrase_hint">Tá do eochracha príobháideacha san áireamh, criptithe leis an abairt phasfhocail seo. Coinnigh í slán. Beidh sí ag teastáil uait chun a chur ar ais.</string>
 </resources>

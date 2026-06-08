@@ -394,4 +394,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entidad</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ne mba\'ekuaarã</string>
+    <string name="account_data_dialog_title">Embaja nde rekokue</string>
+    <string name="account_data_dialog_body">Kóva haʼe peteĩ kópia completa ikatúva remoĩjey ko servidor Mochi térã ambue ojehegui. Emyatã nde haʼeha rehegua resegui hag̃ua.</string>
+    <string name="account_data_passphrase">Ñemi ñe\'ẽ</string>
+    <string name="account_data_passphrase_hint">Nde llave privada oĩ, oĩ criptografíape ko frase ha\'e ndive. Ñongaturã porãme. Tekotevẽva ndéve ojapo aguã.</string>
 </resources>

@@ -391,4 +391,7 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entidad</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Tus datos</string>
+    <string name="account_data_dialog_title">Descargar tus datos</string>
+    <string name="account_data_passphrase">Frase de contraseña</string>
 </resources>

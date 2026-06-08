@@ -395,4 +395,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entity</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ang iyong data</string>
+    <string name="account_data_dialog_title">I-download ang iyong data</string>
+    <string name="account_data_dialog_body">Isa itong kumpletong backup na maaari mong i-restore sa server na ito o sa ibang Mochi server. Patunayan na ikaw ito para magpatuloy.</string>
+    <string name="account_data_passphrase">Passphrase</string>
+    <string name="account_data_passphrase_hint">Kasama ang iyong mga pribadong susi, naka-encrypt gamit ang passphrase na ito. Itago ito sa ligtas na lugar. Kakailanganin mo ito para ibalik.</string>
 </resources>

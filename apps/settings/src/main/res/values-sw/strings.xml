@@ -395,4 +395,9 @@
     <string name="route_target_app">Programu</string>
     <string name="route_target_entity">Kitengo</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Data yako</string>
+    <string name="account_data_dialog_title">Pakua data yako</string>
+    <string name="account_data_dialog_body">Hii ni nakala kamili rudufu unayoweza kurejesha kwenye seva hii au seva nyingine ya Mochi. Thibitisha kuwa ni wewe ili kuendelea.</string>
+    <string name="account_data_passphrase">Neno la siri</string>
+    <string name="account_data_passphrase_hint">Funguo zako za kibinafsi zimejumuishwa, zimesimbwa kwa neno hili la siri. Hifadhi mahali salama. Utahitaji kuirejesha.</string>
 </resources>

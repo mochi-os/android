@@ -395,4 +395,9 @@
     <string name="route_target_app">ऐप</string>
     <string name="route_target_entity">एंटिटी</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">आपन डेटा</string>
+    <string name="account_data_dialog_title">अपना डेटा डाउनलोड करीं</string>
+    <string name="account_data_dialog_body">ई एगो पूरा बैकअप बा जेके रउआ एह या कौनो दोसर Mochi सर्वर पर बहाल कर सकीलें। आगे बढ़े खातिर पुष्टि करीं कि ई रउआ बानी।</string>
+    <string name="account_data_passphrase">पासफ्रेज</string>
+    <string name="account_data_passphrase_hint">रउआ के प्राइवेट की शामिल बा, एह पासफ्रेज से एन्क्रिप्ट कइल गइल बा। एके सुरक्षित जगह रखीं। रिस्टोर करे खातिर एके जरूरत पड़ी।</string>
 </resources>

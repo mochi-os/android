@@ -395,4 +395,9 @@
     <string name="route_target_app">Қолданба</string>
     <string name="route_target_entity">Нысан</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Сіздің деректеріңіз</string>
+    <string name="account_data_dialog_title">Деректерді жүктеп алу</string>
+    <string name="account_data_dialog_body">Бұл — осы немесе басқа Mochi серверінде қалпына келтіруге болатын толық сақтық көшірме. Жалғастыру үшін бұл сіз екеніңізді растаңыз.</string>
+    <string name="account_data_passphrase">Кілт сөз тіркесі</string>
+    <string name="account_data_passphrase_hint">Жеке кілттеріңіз қосылған, осы парольдік тіркеспен шифрланған. Оны қауіпсіз сақтаңыз. Қалпына келтіру үшін қажет болады.</string>
 </resources>

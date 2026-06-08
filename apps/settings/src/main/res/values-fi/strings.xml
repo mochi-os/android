@@ -395,4 +395,9 @@
     <string name="route_target_app">Sovellus</string>
     <string name="route_target_entity">Entiteetti</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Tietosi</string>
+    <string name="account_data_dialog_title">Lataa tietosi</string>
+    <string name="account_data_dialog_body">Tämä on täydellinen varmuuskopio, jonka voit palauttaa tähän tai toiseen Mochi-palvelimeen. Vahvista henkilöllisyytesi jatkaaksesi.</string>
+    <string name="account_data_passphrase">Tunnuslause</string>
+    <string name="account_data_passphrase_hint">Yksityiset avaimesi on sisällytetty, salattu tällä salauslauseella. Säilytä se turvallisesti. Tarvitset sen palauttamiseen.</string>
 </resources>

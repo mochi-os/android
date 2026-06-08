@@ -395,4 +395,9 @@
     <string name="route_target_app">Programma</string>
     <string name="route_target_entity">Essas</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Seniň maglumatlaryň</string>
+    <string name="account_data_dialog_title">Maglumatlaryňyzy ýükläň</string>
+    <string name="account_data_dialog_body">Bu siziň şu ýa-da başga Mochi serwerinde dikeldip biljek doly ätiýaçlyk nusgaňyzdyr. Dowam etmek üçin bu siziň özüňizdigiňizi barlaň.</string>
+    <string name="account_data_passphrase">Parol söz düzümi</string>
+    <string name="account_data_passphrase_hint">Hususy açarlaryňyz goşulýar, bu açar söz bilen şifrlenýär. Ony howpsuz ýerde saklaň. Dikeltmek üçin gerek bolar.</string>
 </resources>

@@ -394,4 +394,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entitas</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Data sampeyan</string>
+    <string name="account_data_dialog_title">Unduh data sampeyan</string>
+    <string name="account_data_dialog_body">Iki cadangan lengkap sing bisa sampeyan pulihake ing server iki utawa server Mochi liyane. Verifikasi yen iki sampeyan kanggo nerusake.</string>
+    <string name="account_data_passphrase">Frasa sandi</string>
+    <string name="account_data_passphrase_hint">Kunci pribadi sampeyan kalebu, dienkripsi nganggo frasa sandhi iki. Simpen kanthi aman. Sampeyan bakal butuh kanggo mulihake.</string>
 </resources>

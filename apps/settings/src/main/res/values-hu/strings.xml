@@ -395,4 +395,9 @@
     <string name="route_target_app">Alkalmazás</string>
     <string name="route_target_entity">Entitás</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Az Ön adatai</string>
+    <string name="account_data_dialog_title">Adatok letöltése</string>
+    <string name="account_data_dialog_body">Ez egy teljes biztonsági mentés, amelyet visszaállíthat ezen vagy egy másik Mochi-kiszolgálón. A folytatáshoz igazolja, hogy ön az.</string>
+    <string name="account_data_passphrase">Jelmondat</string>
+    <string name="account_data_passphrase_hint">A személyes kulcsai benne vannak, ezzel a jelszó-mondattal titkosítva. Tárolja biztonságos helyen. Szüksége lesz rá a visszaállításhoz.</string>
 </resources>

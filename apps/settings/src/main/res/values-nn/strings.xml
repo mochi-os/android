@@ -396,4 +396,7 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entitet</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Dataa dine</string>
+    <string name="account_data_dialog_title">Last ned dataa dine</string>
+    <string name="account_data_passphrase">Passfrase</string>
 </resources>

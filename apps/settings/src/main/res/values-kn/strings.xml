@@ -395,4 +395,9 @@
     <string name="route_target_app">ಆ್ಯಪ್</string>
     <string name="route_target_entity">ಸಂಸ್ಥೆ</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ನಿಮ್ಮ ಡೇಟಾ</string>
+    <string name="account_data_dialog_title">ನಿಮ್ಮ ಡೇಟಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="account_data_dialog_body">ಇದು ಈ ಅಥವಾ ಇನ್ನೊಂದು Mochi ಸರ್ವರ್‌ನಲ್ಲಿ ನೀವು ಮರುಸ್ಥಾಪಿಸಬಹುದಾದ ಸಂಪೂರ್ಣ ಬ್ಯಾಕಪ್ ಆಗಿದೆ. ಮುಂದುವರಿಯಲು ಇದು ನೀವೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="account_data_passphrase">ಪಾಸ್‌ಫ್ರೇಸ್</string>
+    <string name="account_data_passphrase_hint">ನಿಮ್ಮ ಖಾಸಗಿ ಕೀಗಳು ಸೇರಿಸಲಾಗಿದೆ, ಈ ಪಾಸ್‌ಫ್ರೇಸ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ. ಅದನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಸಂಗ್ರಹಿಸಿ. ಮರುಸ್ಥಾಪಿಸಲು ನಿಮಗೆ ಅದರ ಅಗತ್ಯವಿರುತ್ತದೆ.</string>
 </resources>

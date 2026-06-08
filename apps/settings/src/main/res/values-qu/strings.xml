@@ -394,4 +394,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entity</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Willayniyki</string>
+    <string name="account_data_dialog_title">Willakuyniykita urquy</string>
+    <string name="account_data_dialog_body">Kayqa hunt\'asqa waqaychaymi, kay Mochi servidorpi utaq huk servidorpi kutichiyta atinki. Qan kasqaykita takyachiy qatinaykipaq.</string>
+    <string name="account_data_passphrase">Fraseyta</string>
+    <string name="account_data_passphrase_hint">Qhapaq llavesniykin yaykun, kay frase secretowan cipherakun. Allin cheqapi waqaychay. Kutichiptiyki nisiytiyki kaqtinmi munasunki.</string>
 </resources>

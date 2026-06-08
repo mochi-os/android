@@ -395,4 +395,9 @@
     <string name="route_target_app">యాప్</string>
     <string name="route_target_entity">సంస్థ</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">మీ డేటా</string>
+    <string name="account_data_dialog_title">మీ డేటాను డౌన్‌లోడ్ చేయండి</string>
+    <string name="account_data_dialog_body">ఇది మీరు ఈ లేదా మరో Mochi సర్వర్‌లో పునరుద్ధరించగల పూర్తి బ్యాకప్. కొనసాగించడానికి ఇది మీరేనని ధృవీకరించండి.</string>
+    <string name="account_data_passphrase">పాస్‌ఫ్రేజ్</string>
+    <string name="account_data_passphrase_hint">మీ ప్రైవేట్ కీలు చేర్చబడ్డాయి, ఈ పాస్‌ఫ్రేజ్‌తో గుప్తీకరించబడ్డాయి. దీన్ని సురక్షితంగా నిల్వ చేయండి. పునరుద్ధరించడానికి మీకు ఇది అవసరమవుతుంది.</string>
 </resources>

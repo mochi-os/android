@@ -398,4 +398,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entità</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Id-data tiegħek</string>
+    <string name="account_data_dialog_title">Niżżel id-data tiegħek</string>
+    <string name="account_data_dialog_body">Din hija backup sħiħa li tista\' tirrestawra fuq dan is-server Mochi jew fuq server Mochi ieħor. Ivverifika li int biex tkompli.</string>
+    <string name="account_data_passphrase">Frażi tal-password</string>
+    <string name="account_data_passphrase_hint">Il-kjavi privati tiegħek huma inklużi, enkriptati b\'din il-frażi ta\' aċċess. Ħażżinhom f\'post sigur. Se jkollok bżonnhom biex tirrestawra.</string>
 </resources>

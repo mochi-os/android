@@ -394,4 +394,9 @@
     <string name="route_target_app">Aplikasi</string>
     <string name="route_target_entity">Entitas</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Data Anda</string>
+    <string name="account_data_dialog_title">Unduh data Anda</string>
+    <string name="account_data_dialog_body">Ini adalah cadangan lengkap yang dapat Anda pulihkan di server Mochi ini atau lainnya. Verifikasi identitas Anda untuk melanjutkan.</string>
+    <string name="account_data_passphrase">Kata sandi</string>
+    <string name="account_data_passphrase_hint">Kunci privat Anda disertakan, dienkripsi dengan frasa sandi ini. Simpan dengan aman. Anda akan membutuhkannya untuk memulihkan.</string>
 </resources>

@@ -396,4 +396,9 @@
     <string name="route_target_app">Aplicativo</string>
     <string name="route_target_entity">Entidade</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Seus dados</string>
+    <string name="account_data_dialog_title">Baixar seus dados</string>
+    <string name="account_data_dialog_body">Este é um backup completo que você pode restaurar neste ou em outro servidor Mochi. Confirme que é você para continuar.</string>
+    <string name="account_data_passphrase">Frase secreta</string>
+    <string name="account_data_passphrase_hint">Suas chaves privadas estão incluídas, criptografadas com esta frase de acesso. Guarde-a em um lugar seguro. Você precisará dela para restaurar.</string>
 </resources>

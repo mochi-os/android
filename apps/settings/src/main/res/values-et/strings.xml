@@ -395,4 +395,9 @@
     <string name="route_target_app">Rakendus</string>
     <string name="route_target_entity">Olem</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Sinu andmed</string>
+    <string name="account_data_dialog_title">Laadige oma andmed alla</string>
+    <string name="account_data_dialog_body">See on täielik varukoopia, mille saate taastada sellesse või mõnda teise Mochi serverisse. Jätkamiseks kinnitage oma isik.</string>
+    <string name="account_data_passphrase">Paroolifraas</string>
+    <string name="account_data_passphrase_hint">Teie privaatvõtmed on kaasas, krüpteeritud selle paroolilausega. Hoidke seda turvaliselt. Vajate seda taastamiseks.</string>
 </resources>

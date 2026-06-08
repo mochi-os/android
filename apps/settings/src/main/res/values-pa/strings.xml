@@ -395,4 +395,9 @@
     <string name="route_target_app">ਐਪ</string>
     <string name="route_target_entity">ਇਕਾਈ</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ਤੁਹਾਡਾ ਡੇਟਾ</string>
+    <string name="account_data_dialog_title">ਆਪਣਾ ਡੇਟਾ ਡਾਊਨਲੋਡ ਕਰੋ</string>
+    <string name="account_data_dialog_body">ਇਹ ਇੱਕ ਪੂਰਾ ਬੈਕਅੱਪ ਹੈ ਜੋ ਤੁਸੀਂ ਇਸ ਜਾਂ ਕਿਸੇ ਹੋਰ Mochi ਸਰਵਰ \'ਤੇ ਮੁੜ-ਬਹਾਲ ਕਰ ਸਕਦੇ ਹੋ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਇਹ ਤੁਸੀਂ ਹੋ।</string>
+    <string name="account_data_passphrase">ਪਾਸਫ਼੍ਰੇਜ਼</string>
+    <string name="account_data_passphrase_hint">ਤੁਹਾਡੀਆਂ ਨਿੱਜੀ ਕੁੰਜੀਆਂ ਸ਼ਾਮਲ ਹਨ, ਇਸ ਪਾਸਫ਼ਰੇਜ਼ ਨਾਲ ਐਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ। ਇਸਨੂੰ ਸੁਰੱਖਿਅਤ ਥਾਂ ਤੇ ਰੱਖੋ। ਰੀਸਟੋਰ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਇਸਦੀ ਲੋੜ ਪਵੇਗੀ।</string>
 </resources>

@@ -397,4 +397,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entiteit</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Uw gegevens</string>
+    <string name="account_data_dialog_title">Download uw gegevens</string>
+    <string name="account_data_dialog_body">Dit is een volledige back-up die je kunt herstellen op deze of een andere Mochi-server. Bevestig dat jij het bent om verder te gaan.</string>
+    <string name="account_data_passphrase">Wachtwoordzin</string>
+    <string name="account_data_passphrase_hint">Jouw privésleutels zijn inbegrepen, versleuteld met deze wachtwoordzin. Bewaar hem op een veilige plek. Je hebt hem nodig om te herstellen.</string>
 </resources>

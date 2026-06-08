@@ -395,4 +395,9 @@
     <string name="route_target_app">Հավելվածի ID</string>
     <string name="route_target_entity">Անձ</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ձer tvyalnery</string>
+    <string name="account_data_dialog_title">Ներբեռնեք ձեր տվյալները</string>
+    <string name="account_data_dialog_body">Սա ամբողջական պահուստ է, որը կարող եք վերականգնել այս կամ մեկ այլ Mochi սերվերում։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
+    <string name="account_data_passphrase">Գաղtnapар</string>
+    <string name="account_data_passphrase_hint">Ձեր մասնավոր բանալիները ներառված են, գաղտնագրված այս գաղտնաբառ-արտահայտությամբ: Պահեք այն անվտանգ: Վերականգնման համար ձեզ անհրաժեշտ կլինի:</string>
 </resources>

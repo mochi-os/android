@@ -395,4 +395,9 @@
     <string name="route_target_app">ايپ</string>
     <string name="route_target_entity">اينٽٽي</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">توهان جي ڊيٽا</string>
+    <string name="account_data_dialog_title">پنهنجو ڊيٽا ڊائونلوڊ ڪريو</string>
+    <string name="account_data_dialog_body">هي هڪ مڪمل بئڪ اپ آهي جنهن کي توهان هن يا ڪنهن ٻئي Mochi سرور تي بحال ڪري سگهو ٿا. جاري رکڻ لاءِ تصديق ڪريو ته اهو توهان آهيو.</string>
+    <string name="account_data_passphrase">پاس فريز</string>
+    <string name="account_data_passphrase_hint">توهانجون خانگي چابيون شامل آهن، هن پاسفريز سان انڪرپٽ ٿيل آهن. ان کي محفوظ جڳهه تي رکو. بحال ڪرڻ لاءِ توهان کي ان جي ضرورت هوندي.</string>
 </resources>

@@ -395,4 +395,9 @@
     <string name="route_target_app">Appii</string>
     <string name="route_target_entity">Iddoo</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Daataa kee</string>
+    <string name="account_data_dialog_title">Daataa kee buusi</string>
+    <string name="account_data_dialog_body">Kun baackaappii guutuu sarvarii Mochi kana yookaan sarvarii Mochi biraa irratti deebistee fayyadamuu dandeessuudha. Itti fufuuf si akka taate mirkaneessi.</string>
+    <string name="account_data_passphrase">Jecha darbii</string>
+    <string name="account_data_passphrase_hint">Furtuu dhuunfaa kee ni hammatama, jecha darbii kanaatiin faayduu. Iddoo nagahaa keessa kuusi. Deebisuuf isatti ni barbaadda.</string>
 </resources>

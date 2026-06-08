@@ -394,4 +394,9 @@
     <string name="route_target_app">แอป</string>
     <string name="route_target_entity">Entity</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ข้อมูลของคุณ</string>
+    <string name="account_data_dialog_title">ดาวน์โหลดข้อมูลของคุณ</string>
+    <string name="account_data_dialog_body">นี่คือข้อมูลสำรองฉบับสมบูรณ์ที่คุณสามารถกู้คืนบนเซิร์ฟเวอร์ Mochi นี้หรือเครื่องอื่นได้ ยืนยันว่าเป็นคุณเพื่อดำเนินการต่อ</string>
+    <string name="account_data_passphrase">วลีรหัสผ่าน</string>
+    <string name="account_data_passphrase_hint">คีย์ส่วนตัวของคุณรวมอยู่ด้วย เข้ารหัสด้วยวลีรหัสผ่านนี้ เก็บไว้อย่างปลอดภัย คุณจะต้องใช้มันในการกู้คืน</string>
 </resources>

@@ -394,4 +394,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entidad</string>
     <string name="route_target_url">Ukar redirigita URL</string>
+    <string name="account_data_section">Nayra datos</string>
+    <string name="account_data_dialog_title">Datos amtawi uraqharu sartayaña</string>
+    <string name="account_data_dialog_body">Akax mä phuqhata qillqarawi, aka jan ukax yaqha Mochi servidoran kuttʼayasma. Sarantañataki jumäwa sañ yatiyma.</string>
+    <string name="account_data_passphrase">Contraseña parlana</string>
+    <string name="account_data_passphrase_hint">Amtawi llavenakamax uñstayatarakiwa, aka frasemp arst\'ayata. Allpachaxa ukaruw apañamawa. Ukar wakisirakiwa uñacht\'ayañataki.</string>
 </resources>

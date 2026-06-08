@@ -395,4 +395,9 @@
     <string name="route_target_app">Aplikacioni</string>
     <string name="route_target_entity">Entiteti</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Të dhënat tuaja</string>
+    <string name="account_data_dialog_title">Shkarko të dhënat tuaja</string>
+    <string name="account_data_dialog_body">Ky është një kopje rezervë e plotë që mund ta riktheni në këtë ose në një server tjetër Mochi. Verifikoni se jeni ju për të vazhduar.</string>
+    <string name="account_data_passphrase">Fjalëkalim</string>
+    <string name="account_data_passphrase_hint">Çelësat tuaj privatë janë të përfshirë, të koduar me këtë frazë kalimi. Ruajeni në vend të sigurt. Do ta keni nevojë për rivendosje.</string>
 </resources>

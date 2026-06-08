@@ -396,4 +396,9 @@
     <string name="route_target_app">אפליקציה</string>
     <string name="route_target_entity">ישות</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">הנתונים שלך</string>
+    <string name="account_data_dialog_title">הורד את הנתונים שלך</string>
+    <string name="account_data_dialog_body">זהו גיבוי מלא שניתן לשחזר בשרת Mochi זה או בשרת אחר. כדי להמשיך, אמת שזה אתה.</string>
+    <string name="account_data_passphrase">ביטוי סיסמה</string>
+    <string name="account_data_passphrase_hint">המפתחות הפרטיים שלך כלולים, מוצפנים עם ביטוי הסיסמה הזה. שמור אותו במקום בטוח. תזדקק לו לשחזור.</string>
 </resources>

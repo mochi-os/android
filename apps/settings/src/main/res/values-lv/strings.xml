@@ -396,4 +396,9 @@
     <string name="route_target_app">Lietotne</string>
     <string name="route_target_entity">Entītija</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Jūsu dati</string>
+    <string name="account_data_dialog_title">Lejupielādēt savus datus</string>
+    <string name="account_data_dialog_body">Šī ir pilna dublējumkopija, ko varat atjaunot šajā vai citā Mochi serverī. Lai turpinātu, apstipriniet, ka tas esat jūs.</string>
+    <string name="account_data_passphrase">Ieejas frāze</string>
+    <string name="account_data_passphrase_hint">Jūsu privātās atslēgas ir iekļautas, šifrētas ar šo paroles frāzi. Glabājiet to drošā vietā. Tā būs nepieciešama atjaunošanai.</string>
 </resources>

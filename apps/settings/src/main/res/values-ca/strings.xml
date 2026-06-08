@@ -396,4 +396,9 @@
     <string name="route_target_app">Aplicació</string>
     <string name="route_target_entity">Entitat</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Les vostres dades</string>
+    <string name="account_data_dialog_title">Descarrega les teves dades</string>
+    <string name="account_data_dialog_body">Aquesta és una còpia de seguretat completa que podeu restaurar en aquest servidor o en un altre servidor Mochi. Verifiqueu que sou vós per continuar.</string>
+    <string name="account_data_passphrase">Contrasenya mestra</string>
+    <string name="account_data_passphrase_hint">Les vostres claus privades estan incloses, xifrades amb aquesta frase de contrasenya. Guardeu-la en un lloc segur. La necessitareu per restaurar.</string>
 </resources>

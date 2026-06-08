@@ -395,4 +395,9 @@
     <string name="route_target_app">אַפּ</string>
     <string name="route_target_entity">ענטיטעט</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">אײַערע דאַטן</string>
+    <string name="account_data_dialog_title">אראָפּלאָדן דיינע דאַטן</string>
+    <string name="account_data_dialog_body">דאָס איז אַ פֿולשטענדיקע זיכערקאָפּיע וואָס איר קענט אויפֿשטעלן אויף דעם אָדער אַן אַנדער Mochi סערווער. פֿאַריפֿיצירט אַז דאָס זײַט איר צו ממשיך זײַן.</string>
+    <string name="account_data_passphrase">פּאַסזאַץ</string>
+    <string name="account_data_passphrase_hint">אײַערע פּריוואַטע שליסלען זײַנען אַרײַנגענומען, פֿאַרשלוסן מיט דעם פּאַראָל‑זאַץ. היט עס אין אַ זיכערן אָרט. איר וועט דאַרפֿן עס צו אַראָפּשטעלן.</string>
 </resources>

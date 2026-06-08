@@ -394,4 +394,9 @@
     <string name="route_target_app">应用</string>
     <string name="route_target_entity">实体</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">您的数据</string>
+    <string name="account_data_dialog_title">下载您的数据</string>
+    <string name="account_data_dialog_body">这是一份完整备份，您可以在本服务器或其他 Mochi 服务器上恢复。请验证您的身份以继续。</string>
+    <string name="account_data_passphrase">密码短语</string>
+    <string name="account_data_passphrase_hint">您的私钥已包含在内，使用此密码短语进行加密。请将其安全保存。恢复时需要用到它。</string>
 </resources>

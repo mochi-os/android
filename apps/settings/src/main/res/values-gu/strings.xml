@@ -395,4 +395,9 @@
     <string name="route_target_app">એપ્લિકેશન</string>
     <string name="route_target_entity">સંસ્થા</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">તમારો ડેટા</string>
+    <string name="account_data_dialog_title">તમારો ડેટા ડાઉનલોડ કરો</string>
+    <string name="account_data_dialog_body">આ એક સંપૂર્ણ બૅકઅપ છે જેને તમે આ અથવા બીજા Mochi સર્વર પર પુનઃસ્થાપિત કરી શકો છો. ચાલુ રાખવા માટે ખાતરી કરો કે આ તમે જ છો.</string>
+    <string name="account_data_passphrase">પાસ-ફ્રેઝ</string>
+    <string name="account_data_passphrase_hint">તમારી ખાનગી ચાવીઓ સામેલ છે, આ પ્રવેશ-વાક્ય સાથે એન્ક્રિપ્ટ કરેલી છે. તેને સુરક્ષિત રાખો. રીસ્ટોર કરવા માટે તમને તેની જરૂર પડશે.</string>
 </resources>

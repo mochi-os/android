@@ -394,4 +394,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Ẹ̀ka</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Data rẹ</string>
+    <string name="account_data_dialog_title">Gba data rẹ wọle</string>
+    <string name="account_data_dialog_body">Èyí jẹ́ ẹ̀dà ìpamọ́ pípé tí o lè mú padà sórí sáfà Mochi yìí tàbí òmíràn. Jẹ́rìí sí pé ìwọ ni láti tẹ̀síwájú.</string>
+    <string name="account_data_passphrase">Gbolohun ọrọ igbaniwọle</string>
+    <string name="account_data_passphrase_hint">Awọn bọtini aladani rẹ wa ninu, ti o wa ni koodu pẹlu gbolohun ọrọ igbaniwọle yii. Tọju rẹ ni ailewu. Iwọ yoo nilo rẹ lati mu pada.</string>
 </resources>

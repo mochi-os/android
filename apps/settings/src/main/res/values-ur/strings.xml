@@ -395,4 +395,9 @@
     <string name="route_target_app">ایپ</string>
     <string name="route_target_entity">اینٹٹی</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">آپ کا ڈیٹا</string>
+    <string name="account_data_dialog_title">اپنا ڈیٹا ڈاؤن لوڈ کریں</string>
+    <string name="account_data_dialog_body">یہ ایک مکمل بیک اپ ہے جسے آپ اس یا کسی دوسرے Mochi سرور پر بحال کر سکتے ہیں۔ جاری رکھنے کے لیے تصدیق کریں کہ یہ آپ ہیں۔</string>
+    <string name="account_data_passphrase">پاس فریز</string>
+    <string name="account_data_passphrase_hint">آپ کی نجی کلیدیں شامل ہیں، اس پاس فریز سے خفیہ کاری کی گئی ہیں۔ اسے محفوظ جگہ پر رکھیں۔ بحالی کے لیے آپ کو اس کی ضرورت ہوگی۔</string>
 </resources>

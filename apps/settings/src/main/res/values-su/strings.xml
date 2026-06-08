@@ -394,4 +394,9 @@
     <string name="route_target_app">Aplikasi</string>
     <string name="route_target_entity">Éntitas</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Data anjeun</string>
+    <string name="account_data_dialog_title">Unduh data anjeun</string>
+    <string name="account_data_dialog_body">Ieu mangrupa cadangan lengkep nu bisa dipulihkeun dina ieu atawa server Mochi sejen. Pariksa ieu anjeun pikeun neruskeun.</string>
+    <string name="account_data_passphrase">Frasa sandi</string>
+    <string name="account_data_passphrase_hint">Konci pribadi anjeun kaasup, diénkripsi ku frasa sandi ieu. Simpen kalayan aman. Anjeun peryogi éta pikeun mulihkeun.</string>
 </resources>

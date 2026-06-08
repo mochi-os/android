@@ -396,4 +396,9 @@
     <string name="route_target_app">Aplikacija</string>
     <string name="route_target_entity">Entitet</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Vaši podaci</string>
+    <string name="account_data_dialog_title">Preuzmite svoje podatke</string>
+    <string name="account_data_dialog_body">Ovo je potpuna sigurnosna kopija koju možete vratiti na ovom ili drugom Mochi serveru. Potvrdite da ste to vi da biste nastavili.</string>
+    <string name="account_data_passphrase">Zaporka</string>
+    <string name="account_data_passphrase_hint">Vaši privatni ključevi su uključeni, šifrovani ovom lozinkom-frazom. Čuvajte je na sigurnom. Trebat će vam za vraćanje.</string>
 </resources>

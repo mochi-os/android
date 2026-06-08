@@ -395,4 +395,9 @@
     <string name="route_target_app">Sepan</string>
     <string name="route_target_entity">Mîhengeh</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Daneyên we</string>
+    <string name="account_data_dialog_title">Daneyên xwe dakêşin</string>
+    <string name="account_data_dialog_body">Ev paşekêşeke temam e ku tu dikarî li ser vê an servereke din a Mochi vegerînî. Ji bo berdewamkirinê verast bike ku ev tu yî.</string>
+    <string name="account_data_passphrase">Pêvajo</string>
+    <string name="account_data_passphrase_hint">Mifteyên taybet ên te tê de ne, bi vê hevoka şîfreyê şîfrekirin. Wê bi ewlehî bihêlin. Ji bo vegerandinê pêwîst dibe.</string>
 </resources>

@@ -395,4 +395,9 @@
     <string name="route_target_app">Aplikazioa</string>
     <string name="route_target_entity">Entitatea</string>
     <string name="route_target_url">URLa</string>
+    <string name="account_data_section">Zure datuak</string>
+    <string name="account_data_dialog_title">Deskargatu zure datuak</string>
+    <string name="account_data_dialog_body">Hau babeskopia oso bat da, Mochi zerbitzari honetan edo beste batean lehengoratu dezakezuna. Egiaztatu zure nortasuna jarraitzeko.</string>
+    <string name="account_data_passphrase">Pasahitz-esaldia</string>
+    <string name="account_data_passphrase_hint">Zure gako pribatuak sartuta daude, pasahitz-esaldi honekin enkriptatuta. Gorde ezazu seguru. Berrezartzeko beharko duzu.</string>
 </resources>

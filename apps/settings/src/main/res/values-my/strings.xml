@@ -394,4 +394,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">အကောင့်</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">သင်၏ ဒေတာ</string>
+    <string name="account_data_dialog_title">သင်၏ဒေတာကိုဒေါင်းလုဒ်လုပ်ပါ</string>
+    <string name="account_data_dialog_body">ဤသည်မှာ ဤ Mochi ဆာဗာ သို့မဟုတ် အခြား Mochi ဆာဗာတွင် ပြန်လည်ရယူနိုင်သော ပြည့်စုံသည့် အရန်သိမ်းဆည်းမှုဖြစ်သည်။ ဆက်လက်ဆောင်ရွက်ရန် သင်ဖြစ်ကြောင်း အတည်ပြုပါ။</string>
+    <string name="account_data_passphrase">Passphrase</string>
+    <string name="account_data_passphrase_hint">သင်၏ ကိုယ်ပိုင်သော့များ ပါဝင်ပြီး ဤ ဝေါဟာရလျှို့ဝှက်နံပါတ်ဖြင့် ကုဒ်ဝှက်ထားသည်။ ၎င်းကို လုံခြုံစွာ သိမ်းဆည်းပါ။ ပြန်လည်ထူထောင်ရန် လိုအပ်ပါမည်။</string>
 </resources>

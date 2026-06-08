@@ -395,4 +395,9 @@
     <string name="route_target_app">Toepassing</string>
     <string name="route_target_entity">Entiteit</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Jou data</string>
+    <string name="account_data_dialog_title">Laai jou data af</string>
+    <string name="account_data_dialog_body">Dit is \'n volledige rugsteun wat jy op hierdie of \'n ander Mochi-bediener kan herstel. Bevestig dit is jy om voort te gaan.</string>
+    <string name="account_data_passphrase">Wagfrase</string>
+    <string name="account_data_passphrase_hint">Jou private sleutels is ingesluit, versleutel met hierdie wagfrase. Stoor dit veilig. Jy sal dit nodig hê om te herstel.</string>
 </resources>

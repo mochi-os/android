@@ -394,4 +394,9 @@
     <string name="route_target_app">ແອັບ</string>
     <string name="route_target_entity">ເອັນຕິຕີ້</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">ຂໍ້ມູນຂອງທ່ານ</string>
+    <string name="account_data_dialog_title">ດາວໂຫລດຂໍ້ມູນຂອງທ່ານ</string>
+    <string name="account_data_dialog_body">ນີ້ແມ່ນການສໍາຮອງຂໍ້ມູນທີ່ສົມບູນທີ່ທ່ານສາມາດກູ້ຄືນໄດ້ໃນເຊີບເວີນີ້ ຫຼື ເຊີບເວີ Mochi ອື່ນ. ກະລຸນາຢືນຢັນວ່າແມ່ນທ່ານເພື່ອດໍາເນີນການຕໍ່.</string>
+    <string name="account_data_passphrase">ລະຫັດຜ່ານ</string>
+    <string name="account_data_passphrase_hint">ລະຫັດສ່ວນຕົວຂອງທ່ານຖືກລວມໄວ້, ເຂົ້າລະຫັດດ້ວຍລະຫັດຜ່ານ-ປະໂຫຍກນີ້. ເກັບໄວ້ຢ່າງປອດໄພ. ທ່ານຈະຕ້ອງການມັນເພື່ອກູ້ຄືນ.</string>
 </resources>

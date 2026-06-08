@@ -397,4 +397,9 @@
     <string name="route_target_app">Aplikacja</string>
     <string name="route_target_entity">Encja</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Twoje dane</string>
+    <string name="account_data_dialog_title">Pobierz swoje dane</string>
+    <string name="account_data_dialog_body">To pełna kopia zapasowa, którą możesz przywrócić na tym lub innym serwerze Mochi. Potwierdź swoją tożsamość, aby kontynuować.</string>
+    <string name="account_data_passphrase">Hasło</string>
+    <string name="account_data_passphrase_hint">Twoje klucze prywatne są dołączone, zaszyfrowane tym hasłem-frazą. Przechowuj je w bezpiecznym miejscu. Będziesz ich potrzebować do przywrócenia.</string>
 </resources>

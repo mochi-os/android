@@ -395,4 +395,9 @@
     <string name="route_target_app">ئەپ</string>
     <string name="route_target_entity">ئەنتیتی</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">داتاکەت</string>
+    <string name="account_data_dialog_title">داتاکەت داگرە</string>
+    <string name="account_data_dialog_body">ئەمە پاڵپشتییەکی تەواوە کە دەتوانیت لەسەر ئەم ڕاژەیە یان ڕاژەیەکی Mochi تری بیگەڕێنیتەوە. بۆ بەردەوامبوون پشتڕاست بکەرەوە کە خۆتیت.</string>
+    <string name="account_data_passphrase">دەستەواژەی نهێنی</string>
+    <string name="account_data_passphrase_hint">کلیلە تایبەتەکانت تێدان، بە ئەم وتە-نهێنییە کۆد کراون. بەخۆشی پاراستنی بکە. پێویستت پێی دەبێت بۆ گەڕاندنەوە.</string>
 </resources>

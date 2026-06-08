@@ -394,4 +394,9 @@
     <string name="route_target_app">Ứng dụng</string>
     <string name="route_target_entity">Thực thể</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Dữ liệu của bạn</string>
+    <string name="account_data_dialog_title">Tải xuống dữ liệu của bạn</string>
+    <string name="account_data_dialog_body">Đây là bản sao lưu hoàn chỉnh mà bạn có thể khôi phục trên máy chủ Mochi này hoặc một máy chủ khác. Hãy xác minh đó là bạn để tiếp tục.</string>
+    <string name="account_data_passphrase">Cụm mật khẩu</string>
+    <string name="account_data_passphrase_hint">Các khóa riêng tư của bạn được bao gồm, được mã hóa bằng cụm mật khẩu này. Hãy lưu trữ nó an toàn. Bạn sẽ cần nó để khôi phục.</string>
 </resources>

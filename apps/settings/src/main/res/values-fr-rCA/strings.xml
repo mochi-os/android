@@ -387,4 +387,7 @@
     <string name="route_target_app">Application</string>
     <string name="route_target_entity">Entité</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Vos données</string>
+    <string name="account_data_dialog_title">Télécharger vos données</string>
+    <string name="account_data_passphrase">Phrase de passe</string>
 </resources>

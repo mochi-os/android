@@ -395,4 +395,9 @@
     <string name="route_target_app">Uygulama</string>
     <string name="route_target_entity">Varlık</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Verileriniz</string>
+    <string name="account_data_dialog_title">Verilerinizi indirin</string>
+    <string name="account_data_dialog_body">Bu, bu sunucuda veya başka bir Mochi sunucusunda geri yükleyebileceğiniz eksiksiz bir yedektir. Devam etmek için siz olduğunuzu doğrulayın.</string>
+    <string name="account_data_passphrase">Parola cümlesi</string>
+    <string name="account_data_passphrase_hint">Özel anahtarlarınız dahil edilmiştir, bu parola ifadesiyle şifrelenmiştir. Güvenli bir yerde saklayın. Geri yüklemek için ihtiyacınız olacak.</string>
 </resources>

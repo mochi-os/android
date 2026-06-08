@@ -397,4 +397,9 @@
     <string name="route_target_app">Дадатак</string>
     <string name="route_target_entity">Сутнасць</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Вашы дадзеныя</string>
+    <string name="account_data_dialog_title">Спампаваць вашы даныя</string>
+    <string name="account_data_dialog_body">Гэта поўная рэзервовая копія, якую вы можаце аднавіць на гэтым або іншым серверы Mochi. Каб працягнуць, пацвердзіце, што гэта вы.</string>
+    <string name="account_data_passphrase">Кодавая фраза</string>
+    <string name="account_data_passphrase_hint">Вашы прыватныя ключы ўключаны, зашыфраваны гэтай парольнай фразай. Захоўвайце яе ў бяспечным месцы. Яна спатрэбіцца для аднаўлення.</string>
 </resources>

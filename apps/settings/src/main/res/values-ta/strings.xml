@@ -395,4 +395,9 @@
     <string name="route_target_app">பயன்பாடு</string>
     <string name="route_target_entity">அமைப்பு</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">உங்கள் தரவு</string>
+    <string name="account_data_dialog_title">உங்கள் தரவை பதிவிறக்கவும்</string>
+    <string name="account_data_dialog_body">இது நீங்கள் இந்த அல்லது மற்றொரு Mochi சேவையகத்தில் மீட்டெடுக்கக்கூடிய முழுமையான காப்புப்பிரதி. தொடர இது நீங்கள்தான் என சரிபார்க்கவும்.</string>
+    <string name="account_data_passphrase">கடவுச்சொற்றொடர்</string>
+    <string name="account_data_passphrase_hint">உங்கள் தனிப்பட்ட விசைகள் சேர்க்கப்பட்டுள்ளன, இந்த கடவுச்சொற்றொடர் மூலம் மறைகுறியாக்கப்பட்டுள்ளன. இதை பாதுகாப்பான இடத்தில் சேமிக்கவும். மீட்டெடுக்க உங்களுக்கு இது தேவைப்படும்.</string>
 </resources>

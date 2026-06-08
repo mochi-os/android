@@ -395,4 +395,9 @@
     <string name="route_target_app">অ্যাপ</string>
     <string name="route_target_entity">সত্তা</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">আপনার ডেটা</string>
+    <string name="account_data_dialog_title">আপনার ডেটা ডাউনলোড করুন</string>
+    <string name="account_data_dialog_body">এটি একটি সম্পূর্ণ ব্যাকআপ যা আপনি এই বা অন্য কোনো Mochi সার্ভারে পুনরুদ্ধার করতে পারেন। চালিয়ে যেতে এটি যে আপনি তা যাচাই করুন।</string>
+    <string name="account_data_passphrase">পাসফ্রেজ</string>
+    <string name="account_data_passphrase_hint">আপনার প্রাইভেট কী অন্তর্ভুক্ত রয়েছে, এই পাসফ্রেজ দিয়ে এনক্রিপ্ট করা হয়েছে। এটি নিরাপদে সংরক্ষণ করুন। পুনরুদ্ধারের জন্য এটির প্রয়োজন হবে।</string>
 </resources>

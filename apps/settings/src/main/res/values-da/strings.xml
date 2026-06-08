@@ -395,4 +395,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entitet</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Dine data</string>
+    <string name="account_data_dialog_title">Download dine data</string>
+    <string name="account_data_dialog_body">Dette er en komplet sikkerhedskopi, som du kan gendanne på denne eller en anden Mochi-server. Bekræft, at det er dig, for at fortsætte.</string>
+    <string name="account_data_passphrase">Adgangssætning</string>
+    <string name="account_data_passphrase_hint">Dine private nøgler er inkluderet, krypteret med denne adgangssætning. Opbevar den sikkert. Du skal bruge den for at gendanne.</string>
 </resources>

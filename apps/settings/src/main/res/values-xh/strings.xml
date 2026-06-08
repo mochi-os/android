@@ -395,4 +395,9 @@
     <string name="route_target_app">I-app</string>
     <string name="route_target_entity">Iqumrhu</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Idatha yakho</string>
+    <string name="account_data_dialog_title">Khuphela idatha yakho</string>
+    <string name="account_data_dialog_body">Le yikopi epheleleyo yokugcina onokuyibuyisela kule okanye kwenye iseva yeMochi. Qinisekisa ukuba nguwe ukuze uqhubeke.</string>
+    <string name="account_data_passphrase">Igama-eligqithisiweyo</string>
+    <string name="account_data_passphrase_hint">Izikhiye zakho zobucala ziqukiwe, zikhushulwe ngalo msomiso wesigama. Zigcine ngokukhuselekileyo. Uzidinga ukuze ulungise.</string>
 </resources>

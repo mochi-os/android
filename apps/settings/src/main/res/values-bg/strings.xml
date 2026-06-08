@@ -395,4 +395,9 @@
     <string name="route_target_app">Приложение</string>
     <string name="route_target_entity">Обект</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Вашите данни</string>
+    <string name="account_data_dialog_title">Изтеглете данните си</string>
+    <string name="account_data_dialog_body">Това е пълно резервно копие, което можете да възстановите на този или на друг сървър на Mochi. Потвърдете, че сте вие, за да продължите.</string>
+    <string name="account_data_passphrase">Парола-фраза</string>
+    <string name="account_data_passphrase_hint">Вашите частни ключове са включени, криптирани с тази парола-фраза. Съхранявайте я на сигурно място. Ще ви трябва за възстановяване.</string>
 </resources>

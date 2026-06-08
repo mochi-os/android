@@ -395,4 +395,9 @@
     <string name="route_target_app">Forrit</string>
     <string name="route_target_entity">Eining</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Gögn þín</string>
+    <string name="account_data_dialog_title">Sæktu gögnin þín</string>
+    <string name="account_data_dialog_body">Þetta er heildaröryggisafrit sem þú getur endurheimt á þessum eða öðrum Mochi-þjóni. Staðfestu auðkenni þitt til að halda áfram.</string>
+    <string name="account_data_passphrase">Lykilsetning</string>
+    <string name="account_data_passphrase_hint">Einkalykillar þínir eru innifaldir, dulkóðaðir með þessari lykilsetningu. Geymdu hana á öruggum stað. Þú þarft hana til að endurheimta.</string>
 </resources>

@@ -395,4 +395,9 @@
     <string name="route_target_app">აპი</string>
     <string name="route_target_entity">ერთეული</string>
     <string name="route_target_url">გაერთიანებული სამეფოს ფუნტი</string>
+    <string name="account_data_section">თქვენი მონაცემები</string>
+    <string name="account_data_dialog_title">ჩამოტვირთეთ თქვენი მონაცემები</string>
+    <string name="account_data_dialog_body">ეს არის სრული სარეზერვო ასლი, რომელიც შეგიძლიათ აღადგინოთ ამ ან სხვა Mochi სერვერზე. გასაგრძელებლად დაადასტურეთ, რომ ეს თქვენ ხართ.</string>
+    <string name="account_data_passphrase">პაროლის ფრაზა</string>
+    <string name="account_data_passphrase_hint">თქვენი პირადი გასაღებები შეტანილია, დაშიფრული ამ პაროლ-ფრაზით. შეინახეთ უსაფრთხოდ. აღდგენისთვის დაგჭირდებათ.</string>
 </resources>

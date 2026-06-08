@@ -395,4 +395,9 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Antite</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Done ou</string>
+    <string name="account_data_dialog_title">Telechaje done ou</string>
+    <string name="account_data_dialog_body">Sa a se yon backup konplè ou ka restore sou sèvè Mochi sa a oswa yon lòt. Verifye se ou menm pou kontinye.</string>
+    <string name="account_data_passphrase">Fraz sekrè</string>
+    <string name="account_data_passphrase_hint">Kle prive ou yo enkli, chifre ak fraz sekrè sa a. Konsève li an sekirite. Ou pral bezwen li pou restore.</string>
 </resources>

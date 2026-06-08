@@ -395,4 +395,9 @@
     <string name="route_target_app">Ilova</string>
     <string name="route_target_entity">Obyekt</string>
     <string name="route_target_url">URL</string>
+    <string name="account_data_section">Sizning ma\'lumotlaringiz</string>
+    <string name="account_data_dialog_title">Ma\'lumotlaringizni yuklab oling</string>
+    <string name="account_data_dialog_body">Bu siz ushbu yoki boshqa Mochi serverida tiklashingiz mumkin bo\'lgan to\'liq zaxira nusxasidir. Davom etish uchun bu siz ekanligingizni tasdiqlang.</string>
+    <string name="account_data_passphrase">Parol iborasi</string>
+    <string name="account_data_passphrase_hint">Shaxsiy kalitlaringiz kiritilgan, ushbu parol iborasi bilan shifrlangan. Uni xavfsiz joyda saqlang. Tiklash uchun kerak bo\'ladi.</string>
 </resources>
