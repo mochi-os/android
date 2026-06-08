@@ -345,12 +345,13 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/disputes/review")
     suspend fun reviewDispute(
+        // staff.star forwards ["id", "status", "resolution", "amount"].
         @Field("id") id: Int,
+        // status is the OUTCOME — "resolved_buyer" or "resolved_seller" (required).
+        @Field("status") status: String,
+        // resolution is the free-text writeup (optional, <=5000 chars).
         @Field("resolution") resolution: String? = null,
-        // contract-ok: server records no note for dispute review (web parity); notes-UI decision pending
-        @Field("notes") notes: String? = null,
-        // staff.star forwards ["id", "status", "resolution", "amount"]; the
-        // refund value must be `amount`, not `refund_amount` (which the handler dropped).
+        // amount is the optional partial refund (minor units) for resolved_buyer.
         @Field("amount") refundAmount: String? = null,
     ): Response<ApiResponse<Dispute>>
 

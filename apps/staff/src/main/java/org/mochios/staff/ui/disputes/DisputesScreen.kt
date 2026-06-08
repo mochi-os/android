@@ -107,8 +107,8 @@ fun DisputesScreen(
             dispute = dispute,
             submitting = state.submitting,
             onDismiss = viewModel::dismissReview,
-            onSubmit = { resolution, notes, refund ->
-                viewModel.reviewDispute(resolution, notes, refund)
+            onSubmit = { status, resolution, refund ->
+                viewModel.reviewDispute(status, resolution, refund)
             },
             // Stripe chargebacks must be answered on Stripe's portal — the
             // dialog renders metadata + history only. Already-resolved

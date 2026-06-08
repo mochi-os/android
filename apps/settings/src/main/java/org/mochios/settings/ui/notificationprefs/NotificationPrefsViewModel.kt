@@ -77,7 +77,7 @@ class NotificationPrefsViewModel @Inject constructor(
         api.updateCategory(id = category.id, label = label.trim()).bodyOrThrow()
     }
 
-    fun deleteCategory(id: Int, reassignTo: Int) = mutate {
+    fun deleteCategory(id: String, reassignTo: String) = mutate {
         api.deleteCategory(id = id, reassignTo = reassignTo).bodyOrThrow()
     }
 
@@ -95,8 +95,8 @@ class NotificationPrefsViewModel @Inject constructor(
         ).bodyOrThrow()
     }
 
-    fun setTopicCategory(topic: NotifTopic, categoryId: Int?) = mutate {
-        val value = categoryId?.toString() ?: ""
+    fun setTopicCategory(topic: NotifTopic, categoryId: String?) = mutate {
+        val value = categoryId ?: ""
         api.setTopicCategory(
             app = topic.app, topic = topic.topic, obj = topic.`object`, category = value,
         ).bodyOrThrow()
