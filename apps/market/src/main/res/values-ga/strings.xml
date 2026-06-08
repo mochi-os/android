@@ -27,6 +27,10 @@
     <string name="market_back">Ar ais</string>
     <string name="market_bid_dialog_amount_label">Do thairiscint</string>
     <string name="market_bid_dialog_cancel">Cealaigh</string>
+    <string name="market_bid_dialog_ceiling_help">Ardóimid do thairiscint go huathoibríoch faoin méid is lú is gá chun fanacht chun tosaigh, suas go dtí an t-uasmhéid seo.</string>
+    <string name="market_bid_dialog_instant_win">Ceannach deimhnithe — críochnaigh an íocaíocht</string>
+    <string name="market_bid_dialog_invalid_ceiling">Caithfidh an t-uastairiscint a bheith ar a laghad méid do thairisceana</string>
+    <string name="market_bid_dialog_outbid">Cuireadh do thairiscint isteach ach sáraíodh láithreach í. Tá uasmhéid níos airde ag tairgeoir eile. Is é %1$s a thairiscint anois.</string>
     <string name="market_bid_dialog_submit">Cuir tairiscint</string>
     <string name="market_bid_dialog_success">Tairiscint déanta</string>
     <string name="market_bid_dialog_title">Cuir tairiscint</string>

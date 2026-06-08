@@ -263,4 +263,8 @@
     <string name="stepup_error_code">این کد نادرست است یا منقضی شده است.</string>
     <string name="stepup_error_passkey">تأیید با کلید عبور ناموفق بود. لطفاً دوباره تلاش کنید.</string>
     <string name="stepup_error_oauth">تأیید با آن حساب ممکن نشد. لطفاً دوباره تلاش کنید.</string>
+    <string name="game_system_resign">%1$s تسلیم شد</string>
+    <string name="game_system_draw_offer">%1$s پیشنهاد تساوی داد</string>
+    <string name="game_system_draw_accept">تساوی پذیرفته شد</string>
+    <string name="game_system_draw_decline">%1$s تساوی را رد کرد</string>
 </resources>

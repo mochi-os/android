@@ -16,6 +16,10 @@
     <string name="market_asset_download">Завантажити</string>
     <string name="market_back">Назад</string>
     <string name="market_bid_dialog_cancel">Скасувати</string>
+    <string name="market_bid_dialog_ceiling_help">Ми автоматично підвищимо вашу ставку на найменшу необхідну суму, щоб залишатися попереду, аж до цього максимуму.</string>
+    <string name="market_bid_dialog_instant_win">Покупку підтверджено — завершіть оплату</string>
+    <string name="market_bid_dialog_invalid_ceiling">Максимальна ставка має бути не меншою за вашу ставку</string>
+    <string name="market_bid_dialog_outbid">Вашу ставку зроблено, але одразу перебито. В іншого учасника вищий максимум. Його ставка тепер %1$s.</string>
     <string name="market_bid_dialog_submit">Зробити ставку</string>
     <string name="market_bid_dialog_success">Ставку зроблено</string>
     <string name="market_bid_dialog_title">Зробити ставку</string>

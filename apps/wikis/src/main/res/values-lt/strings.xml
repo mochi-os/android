@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Paskutinė sinchronizacija: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Tai sustabdys atnaujinimų siuntimą į „%1$s\". Jie gali vėl replikuoti, jei nori.</string>
     <string name="wikis_replicas_removed_success">Replika pašalinta</string>
+    <string name="wikis_load_more">Įkelti daugiau</string>
+    <string name="wikis_access_change_level">Prieigos lygis</string>
+    <string name="wikis_access_subject_anyone">Bet kas</string>
+    <string name="wikis_access_subject_authenticated">Autentifikuoti naudotojai</string>
 
 </resources>

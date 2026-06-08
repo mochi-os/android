@@ -263,4 +263,8 @@
     <string name="stepup_error_code">ထိုကုဒ်မှားနေသည် သို့မဟုတ် သက်တမ်းကုန်သွားပြီ။</string>
     <string name="stepup_error_passkey">ပတ်စ်ကီးအတည်ပြုခြင်း မအောင်မြင်ပါ။ ကျေးဇူးပြု၍ ထပ်စမ်းကြည့်ပါ။</string>
     <string name="stepup_error_oauth">ထိုအကောင့်ဖြင့် အတည်ပြု၍မရပါ။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။</string>
+    <string name="game_system_resign">%1$s အရှုံးပေးလိုက်သည်</string>
+    <string name="game_system_draw_offer">%1$s သရေကျရန် ကမ်းလှမ်းသည်</string>
+    <string name="game_system_draw_accept">သရေကျရန် သဘောတူသည်</string>
+    <string name="game_system_draw_decline">%1$s သရေကျရန် ငြင်းဆိုသည်</string>
 </resources>

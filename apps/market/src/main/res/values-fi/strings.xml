@@ -16,6 +16,10 @@
     <string name="market_asset_download">Lataa</string>
     <string name="market_back">Takaisin</string>
     <string name="market_bid_dialog_cancel">Peruuta</string>
+    <string name="market_bid_dialog_ceiling_help">Nostamme tarjoustasi automaattisesti pienimmällä määrällä, joka tarvitaan kärjessä pysymiseen, tähän enimmäismäärään asti.</string>
+    <string name="market_bid_dialog_instant_win">Osto vahvistettu — viimeistele maksu</string>
+    <string name="market_bid_dialog_invalid_ceiling">Enimmäistarjouksen on oltava vähintään tarjouksesi suuruinen</string>
+    <string name="market_bid_dialog_outbid">Tarjouksesi tehtiin, mutta se ohitettiin välittömästi. Toisella tarjoajalla on korkeampi enimmäismäärä. Hänen tarjouksensa on nyt %1$s.</string>
     <string name="market_bid_dialog_submit">Tee tarjous</string>
     <string name="market_bid_dialog_success">Tarjous tehty</string>
     <string name="market_bid_dialog_title">Tee tarjous</string>

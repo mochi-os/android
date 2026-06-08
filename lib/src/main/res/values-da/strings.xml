@@ -265,4 +265,8 @@
     <string name="stepup_error_code">Koden er forkert eller udløbet.</string>
     <string name="stepup_error_passkey">Verificering med adgangsnøgle mislykkedes. Prøv igen.</string>
     <string name="stepup_error_oauth">Kunne ikke verificere med den konto. Prøv venligst igen.</string>
+    <string name="game_system_resign">%1$s gav op</string>
+    <string name="game_system_draw_offer">%1$s tilbød remis</string>
+    <string name="game_system_draw_accept">Remis aftalt</string>
+    <string name="game_system_draw_decline">%1$s afslog remis</string>
 </resources>

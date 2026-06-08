@@ -16,6 +16,10 @@
     <string name="market_asset_download">تنزيل</string>
     <string name="market_back">رجوع</string>
     <string name="market_bid_dialog_cancel">إلغاء</string>
+    <string name="market_bid_dialog_ceiling_help">سنرفع عرضك تلقائياً بأقل مبلغ مطلوب للبقاء في المقدمة، حتى هذا الحد الأقصى.</string>
+    <string name="market_bid_dialog_instant_win">تم تأكيد الشراء — أكمل الدفع</string>
+    <string name="market_bid_dialog_invalid_ceiling">يجب أن يكون الحد الأقصى للمزايدة على الأقل مبلغ مزايدتك</string>
+    <string name="market_bid_dialog_outbid">تم تقديم عرضك لكن جرى تجاوزه فوراً. لدى مزايد آخر حد أقصى أعلى. عرضه الآن %1$s.</string>
     <string name="market_bid_dialog_submit">تقديم مزايدة</string>
     <string name="market_bid_dialog_success">تم تقديم المزايدة</string>
     <string name="market_bid_dialog_title">تقديم مزايدة</string>

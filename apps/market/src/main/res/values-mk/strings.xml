@@ -33,6 +33,10 @@
     <string name="market_back">Назад</string>
     <string name="market_bid_dialog_amount_label">Вашата понуда</string>
     <string name="market_bid_dialog_cancel">Откажи</string>
+    <string name="market_bid_dialog_ceiling_help">Ќе ја зголемуваме вашата понуда автоматски со најмалата потребна сума за да останете напред, до овој максимум.</string>
+    <string name="market_bid_dialog_instant_win">Купувањето е потврдено — завршете го плаќањето</string>
+    <string name="market_bid_dialog_invalid_ceiling">Максималната понуда мора да биде барем колку вашиот износ на понуда</string>
+    <string name="market_bid_dialog_outbid">Вашата понуда е поставена, но веднаш надмината. Друг учесник има повисок максимум. Неговата понуда сега е %1$s.</string>
     <string name="market_bid_dialog_current_high">Тековна највисока понуда: %1$s</string>
     <string name="market_bid_dialog_failed">Не може да се поднесе понуда</string>
     <string name="market_bid_dialog_invalid_amount">Внесете износ повисок од тековната понуда</string>

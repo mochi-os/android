@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Tá an cód sin mícheart nó tá sé imithe in éag.</string>
     <string name="stepup_error_passkey">Theip ar fhíorú na heochrach rochtana. Bain triail eile as.</string>
     <string name="stepup_error_oauth">Níorbh fhéidir fíorú leis an gcuntas sin. Bain triail eile as le do thoil.</string>
+    <string name="game_system_resign">Ghéill %1$s</string>
+    <string name="game_system_draw_offer">Thairg %1$s cothrom</string>
+    <string name="game_system_draw_accept">Cothrom comhaontaithe</string>
+    <string name="game_system_draw_decline">Dhiúltaigh %1$s an cothrom</string>
 </resources>

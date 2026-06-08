@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Injongo</string>
     <string name="forums_access_level_view">Bonisa</string>
+    <string name="forums_access_level_vote">Vota</string>
     <string name="forums_access_level_comment">Isiphawuli</string>
     <string name="forums_access_level_post">Umpapasho</string>
     <string name="forums_access_level_none">Akukho nanye</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">I-ID yendawo, @qela, * (wonke ubani), okanye + (amalungu)</string>
     <string name="forums_access_level">Inqanaba</string>
     <string name="forums_access_level_moderate">Lawula</string>
-    <string name="forums_access_level_manage">Phatha</string>
     <string name="forums_members_search">Hluza amalungu</string>
     <string name="forums_banner_description">I-Markdown eboniswa phezulu enkundleni.</string>
     <string name="forums_banner_placeholder">Wamkelekile kule nkundla…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Indawo eyingozi</string>
     <string name="forums_settings_delete_message">Oku kuya kuyicima ngonaphakade inkundla nazo zonke izithuba zayo. Oku akunakubuyiselwa.</string>
 
+    <string name="forums_tag_interest_up">Khulisa umdla</string>
+    <string name="forums_tag_interest_down">Nciphisa umnxili</string>
+    <string name="forums_tag_interest_remove">Susa umnxili</string>
 </resources>

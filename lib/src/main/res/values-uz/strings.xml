@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Bu kod noto\'g\'ri yoki muddati o\'tgan.</string>
     <string name="stepup_error_passkey">Kirish kaliti tasdig\'i muvaffaqiyatsiz tugadi. Iltimos, qaytadan urinib ko\'ring.</string>
     <string name="stepup_error_oauth">Ushbu hisob bilan tasdiqlab bo‘lmadi. Iltimos, qayta urinib ko‘ring.</string>
+    <string name="game_system_resign">%1$s taslim bo‘ldi</string>
+    <string name="game_system_draw_offer">%1$s durang taklif qildi</string>
+    <string name="game_system_draw_accept">Durang qabul qilindi</string>
+    <string name="game_system_draw_decline">%1$s durangni rad etdi</string>
 </resources>

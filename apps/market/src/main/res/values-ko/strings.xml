@@ -16,6 +16,10 @@
     <string name="market_asset_download">다운로드</string>
     <string name="market_back">뒤로</string>
     <string name="market_bid_dialog_cancel">취소</string>
+    <string name="market_bid_dialog_ceiling_help">이 최대 금액까지, 앞서 있는 데 필요한 최소 금액만큼 입찰가를 자동으로 올려드립니다.</string>
+    <string name="market_bid_dialog_instant_win">구매 확인됨 — 결제를 완료하세요</string>
+    <string name="market_bid_dialog_invalid_ceiling">최대 입찰가는 입찰 금액 이상이어야 해요</string>
+    <string name="market_bid_dialog_outbid">입찰이 완료되었지만 즉시 상회 입찰되었습니다. 다른 입찰자가 더 높은 최대 금액을 설정했습니다. 현재 입찰가는 %1$s입니다.</string>
     <string name="market_bid_dialog_submit">입찰</string>
     <string name="market_bid_dialog_success">입찰이 등록되었어요</string>
     <string name="market_bid_dialog_title">입찰</string>

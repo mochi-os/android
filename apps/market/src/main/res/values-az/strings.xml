@@ -33,6 +33,10 @@
     <string name="market_back">Geri</string>
     <string name="market_bid_dialog_amount_label">Sizin təklifiniz</string>
     <string name="market_bid_dialog_cancel">Ləğv et</string>
+    <string name="market_bid_dialog_ceiling_help">Bu maksimuma qədər, irəlidə qalmaq üçün lazım olan ən kiçik məbləğlə təklifinizi avtomatik olaraq artıracağıq.</string>
+    <string name="market_bid_dialog_instant_win">Alış təsdiqləndi — ödənişi tamamlayın</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimum təklif ən azı təklif məbləğiniz olmalıdır</string>
+    <string name="market_bid_dialog_outbid">Təklifiniz qəbul edildi, lakin dərhal üstələndi. Başqa təklifçi daha yüksək maksimuma malikdir. Onların təklifi indi %1$s.</string>
     <string name="market_bid_dialog_current_high">Hazırkı ən yüksək təklif: %1$s</string>
     <string name="market_bid_dialog_failed">Təklif verilə bilmədi</string>
     <string name="market_bid_dialog_invalid_amount">Cari təklifdən yüksək məbləğ daxil edin</string>

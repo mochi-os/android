@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Dak il-kodiċi mhux korrett jew skada.</string>
     <string name="stepup_error_passkey">Il-verifika tal-passkey falliet. Jekk jogħġbok erġa\' pprova.</string>
     <string name="stepup_error_oauth">Ma stajniex nivverifikaw b\'dak il-kont. Jekk jogħġbok erġa\' pprova.</string>
+    <string name="game_system_resign">%1$s irriżenja</string>
+    <string name="game_system_draw_offer">%1$s offra draw</string>
+    <string name="game_system_draw_accept">Draw maqbul</string>
+    <string name="game_system_draw_decline">%1$s ċaħad id-draw</string>
 </resources>

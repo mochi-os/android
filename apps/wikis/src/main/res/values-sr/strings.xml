@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Последња синхронизација: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ово ће зауставити слање ажурирања на „%1$s\". Могу поново репликовати ако желе.</string>
     <string name="wikis_replicas_removed_success">Реплика уклоњена</string>
+    <string name="wikis_load_more">Учитај још</string>
+    <string name="wikis_access_change_level">Ниво приступа</string>
+    <string name="wikis_access_subject_anyone">Било ко</string>
+    <string name="wikis_access_subject_authenticated">Аутентификовани корисници</string>
 
 </resources>

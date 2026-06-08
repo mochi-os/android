@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Ese código es incorrecto o ha caducado.</string>
     <string name="stepup_error_passkey">La verificación con la clave de acceso ha fallado. Inténtalo de nuevo.</string>
     <string name="stepup_error_oauth">No se pudo verificar con esa cuenta. Inténtalo de nuevo.</string>
+    <string name="game_system_resign">%1$s abandonó</string>
+    <string name="game_system_draw_offer">%1$s ofreció tablas</string>
+    <string name="game_system_draw_accept">Tablas acordadas</string>
+    <string name="game_system_draw_decline">%1$s rechazó las tablas</string>
 </resources>

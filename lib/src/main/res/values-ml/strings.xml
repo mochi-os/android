@@ -263,4 +263,8 @@
     <string name="stepup_error_code">ആ കോഡ് തെറ്റാണ് അല്ലെങ്കിൽ കാലഹരണപ്പെട്ടു.</string>
     <string name="stepup_error_passkey">പാസ്‌കീ പരിശോധന പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="stepup_error_oauth">ആ അക്കൗണ്ട് ഉപയോഗിച്ച് പരിശോധിക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="game_system_resign">%1$s കീഴടങ്ങി</string>
+    <string name="game_system_draw_offer">%1$s സമനില വാഗ്ദാനം ചെയ്തു</string>
+    <string name="game_system_draw_accept">സമനില അംഗീകരിച്ചു</string>
+    <string name="game_system_draw_decline">%1$s സമനില നിരസിച്ചു</string>
 </resources>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">该代码不正确或已过期。</string>
     <string name="stepup_error_passkey">通行密钥验证失败。请重试。</string>
     <string name="stepup_error_oauth">无法使用该账户进行验证。请重试。</string>
+    <string name="game_system_resign">%1$s 认输</string>
+    <string name="game_system_draw_offer">%1$s 提出和棋</string>
+    <string name="game_system_draw_accept">同意和棋</string>
+    <string name="game_system_draw_decline">%1$s 拒绝和棋</string>
 </resources>

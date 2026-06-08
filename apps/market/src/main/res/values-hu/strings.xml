@@ -16,6 +16,10 @@
     <string name="market_asset_download">Letöltés</string>
     <string name="market_back">Vissza</string>
     <string name="market_bid_dialog_cancel">Mégse</string>
+    <string name="market_bid_dialog_ceiling_help">Automatikusan a legkisebb szükséges összeggel emeljük az ajánlatát, hogy elöl maradjon, egészen eddig a maximumig.</string>
+    <string name="market_bid_dialog_instant_win">Vásárlás megerősítve — fizetés befejezése</string>
+    <string name="market_bid_dialog_invalid_ceiling">A maximális licitnek legalább akkorának kell lennie, mint az Ön licitje</string>
+    <string name="market_bid_dialog_outbid">Az ajánlatát leadta, de azonnal túllicitálták. Egy másik licitálónak magasabb maximuma van. Az ő ajánlata most %1$s.</string>
     <string name="market_bid_dialog_submit">Licit leadása</string>
     <string name="market_bid_dialog_success">Licit leadva</string>
     <string name="market_bid_dialog_title">Licit leadása</string>

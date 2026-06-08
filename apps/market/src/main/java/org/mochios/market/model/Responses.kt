@@ -115,6 +115,22 @@ data class RemovalCheck(
     @SerializedName("has_active_orders") val hasActiveOrders: Boolean = false,
 )
 
+/**
+ * Result of `saved/list`. Mirrors the inline shape in
+ * `apps/market/web/src/api/saved.ts` (`{ saved: Listing[]; total: number }`).
+ * The server stores a full Listing snapshot per saved row, so the list comes
+ * back fully hydrated — no per-id refetch needed.
+ */
+data class SavedListResponse(
+    val saved: List<Listing> = emptyList(),
+    val total: Long = 0,
+)
+
+/** Result of `saved/add`, `saved/remove`, `saved/clear`. */
+data class SavedToggleResponse(
+    val saved: Boolean = false,
+)
+
 // ---- Orders -------------------------------------------------------------
 
 /** Result of `orders/purchases` and `orders/sales`. */

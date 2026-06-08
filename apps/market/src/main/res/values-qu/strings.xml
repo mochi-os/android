@@ -23,6 +23,10 @@
     <string name="market_back">Kutichiy</string>
     <string name="market_bid_dialog_amount_label">Qanpa ofrecekuyniyki</string>
     <string name="market_bid_dialog_cancel">Mana ruway</string>
+    <string name="market_bid_dialog_ceiling_help">Kay maximum-kama, ñawpaqpi qhipanaykipaq aswan pisi qullqiwan ranti yapasqaykita kikinmanta hatunyachisaqku.</string>
+    <string name="market_bid_dialog_instant_win">Rantiy confirmasqa — pago tukuchiy</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maximo oferta ofertaykimanta pisi kanan</string>
+    <string name="market_bid_dialog_outbid">Qan ranti rurasqaykita churanki ichaqa kunallan aswan hatun ranti yapasqa karqan. Hukpiq ranti yapaqqa aswan hatun maximum-yuq. Paypa ranti yapasqanqa kunan %1$s.</string>
     <string name="market_bid_dialog_submit">Ofrecekuy churay</string>
     <string name="market_bid_dialog_success">Puha churasqa</string>
     <string name="market_bid_dialog_title">Ofrecekuy churay</string>

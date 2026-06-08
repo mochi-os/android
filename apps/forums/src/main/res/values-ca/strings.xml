@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">IA</string>
     <string name="forums_access_target">Destinació</string>
     <string name="forums_access_level_view">Visualitza</string>
+    <string name="forums_access_level_vote">Vota</string>
     <string name="forums_access_level_comment">Comentari</string>
     <string name="forums_access_level_post">Publicació</string>
     <string name="forums_access_level_none">Cap</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">ID d\'entitat, @grup, * (tothom) o + (membres)</string>
     <string name="forums_access_level">Nivell</string>
     <string name="forums_access_level_moderate">Modera</string>
-    <string name="forums_access_level_manage">Gestiona</string>
     <string name="forums_members_search">Filtra els membres</string>
     <string name="forums_banner_description">Markdown que es mostra a la part superior del fòrum.</string>
     <string name="forums_banner_placeholder">Us donem la benvinguda a aquest fòrum…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Zona de perill</string>
     <string name="forums_settings_delete_message">Això suprimirà permanentment el fòrum i totes les seves publicacions. Aquesta acció no es pot desfer.</string>
 
+    <string name="forums_tag_interest_up">Augmenta l\'interès</string>
+    <string name="forums_tag_interest_down">Redueix l\'interès</string>
+    <string name="forums_tag_interest_remove">Elimina l\'interès</string>
 </resources>

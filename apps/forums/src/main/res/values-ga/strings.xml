@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Sprioc</string>
     <string name="forums_access_level_view">Féach</string>
+    <string name="forums_access_level_vote">Vótáil</string>
     <string name="forums_access_level_comment">Nóta tráchta</string>
     <string name="forums_access_level_post">Postáil</string>
     <string name="forums_access_level_none">Faic</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Aitheantas aonáin, @grúpa, * (gach duine), nó + (baill)</string>
     <string name="forums_access_level">Leibhéal</string>
     <string name="forums_access_level_moderate">Modhnaigh</string>
-    <string name="forums_access_level_manage">Bainistigh</string>
     <string name="forums_members_search">Scag baill</string>
     <string name="forums_banner_description">Markdown a thaispeántar ag barr an fhóraim.</string>
     <string name="forums_banner_placeholder">Fáilte chuig an bhfóram seo…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Crios dainséir</string>
     <string name="forums_settings_delete_message">Scriosfaidh sé seo an fóram agus a phostálacha go léir go buan. Ní féidir é seo a chur ar ceal.</string>
 
+    <string name="forums_tag_interest_up">Spreag spéis</string>
+    <string name="forums_tag_interest_down">Laghdaigh spéis</string>
+    <string name="forums_tag_interest_remove">Bain spéis</string>
 </resources>

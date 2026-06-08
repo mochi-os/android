@@ -64,6 +64,8 @@
     <string name="market_editor_back">Back</string>
     <string name="market_appeal_dialog_cancel">Cancel</string>
     <string name="market_bid_dialog_cancel">Cancel</string>
+    <string name="market_bid_dialog_ceiling_help">We\'ll automatically raise your bid by the smallest amount needed to stay ahead, up to this maximum.</string>
+    <string name="market_bid_dialog_outbid">Your bid was placed but immediately outbid. Another bidder has a higher maximum. Their bid is now %1$s.</string>
     <string name="market_dispute_dialog_cancel">Cancel</string>
     <string name="market_editor_zone_cancel">Cancel</string>
     <string name="market_refund_dialog_cancel">Cancel</string>

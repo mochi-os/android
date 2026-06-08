@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">סנכרון אחרון: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">פעולה זו תפסיק לשלוח עדכונים אל „%1$s\". הם יכולים לשכפל שוב אם ירצו.</string>
     <string name="wikis_replicas_removed_success">העתק הוסר</string>
+    <string name="wikis_load_more">טען עוד</string>
+    <string name="wikis_access_change_level">רמת גישה</string>
+    <string name="wikis_access_subject_anyone">כל אחד</string>
+    <string name="wikis_access_subject_authenticated">משתמשים מאומתים</string>
 
 </resources>

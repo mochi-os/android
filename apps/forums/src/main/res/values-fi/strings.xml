@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">Tekoäly</string>
     <string name="forums_access_target">Kohde</string>
     <string name="forums_access_level_view">Näytä</string>
+    <string name="forums_access_level_vote">Äänestä</string>
     <string name="forums_access_level_comment">Kommentti</string>
     <string name="forums_access_level_post">Julkaisu</string>
     <string name="forums_access_level_none">Ei mitään</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">Entiteetin tunnus, @ryhmä, * (kaikki) tai + (jäsenet)</string>
     <string name="forums_access_level">Taso</string>
     <string name="forums_access_level_moderate">Valvo</string>
-    <string name="forums_access_level_manage">Hallinnoi</string>
     <string name="forums_members_search">Suodata jäseniä</string>
     <string name="forums_banner_description">Foorumin yläosassa näytettävä Markdown-teksti.</string>
     <string name="forums_banner_placeholder">Tervetuloa tälle foorumille…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Vaaravyöhyke</string>
     <string name="forums_settings_delete_message">Tämä poistaa foorumin ja kaikki sen julkaisut pysyvästi. Tätä ei voi kumota.</string>
 
+    <string name="forums_tag_interest_up">Korosta kiinnostusta</string>
+    <string name="forums_tag_interest_down">Vähennä kiinnostusta</string>
+    <string name="forums_tag_interest_remove">Poista kiinnostus</string>
 </resources>

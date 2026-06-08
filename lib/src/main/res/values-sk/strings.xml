@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Tento kód je nesprávny alebo vypršal.</string>
     <string name="stepup_error_passkey">Overenie prístupového kľúča zlyhalo. Skúste to znova.</string>
     <string name="stepup_error_oauth">S týmto účtom sa nepodarilo overiť. Skúste to znova.</string>
+    <string name="game_system_resign">%1$s sa vzdal</string>
+    <string name="game_system_draw_offer">%1$s ponúkol remízu</string>
+    <string name="game_system_draw_accept">Remíza dohodnutá</string>
+    <string name="game_system_draw_decline">%1$s odmietol remízu</string>
 </resources>

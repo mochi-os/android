@@ -16,6 +16,10 @@
     <string name="market_asset_download">Muat turun</string>
     <string name="market_back">Kembali</string>
     <string name="market_bid_dialog_cancel">Batal</string>
+    <string name="market_bid_dialog_ceiling_help">Kami akan menaikkan bidaan anda secara automatik dengan jumlah terkecil yang diperlukan untuk kekal di hadapan, sehingga maksimum ini.</string>
+    <string name="market_bid_dialog_instant_win">Pembelian disahkan — lengkapkan pembayaran</string>
+    <string name="market_bid_dialog_invalid_ceiling">Bidaan maksimum mestilah sekurang-kurangnya jumlah bidaan anda</string>
+    <string name="market_bid_dialog_outbid">Bidaan anda telah dibuat tetapi terus dilepasi. Pembida lain mempunyai maksimum yang lebih tinggi. Bidaan mereka kini ialah %1$s.</string>
     <string name="market_bid_dialog_submit">Letak bidaan</string>
     <string name="market_bid_dialog_success">Bida diletakkan</string>
     <string name="market_bid_dialog_title">Letak bidaan</string>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Ai kod është i pasaktë ose ka skaduar.</string>
     <string name="stepup_error_passkey">Verifikimi i çelësit të hyrjes dështoi. Ju lutemi provoni përsëri.</string>
     <string name="stepup_error_oauth">Nuk u verifikua dot me atë llogari. Ju lutemi provoni përsëri.</string>
+    <string name="game_system_resign">%1$s dorëzoi</string>
+    <string name="game_system_draw_offer">%1$s ofroi barazim</string>
+    <string name="game_system_draw_accept">Barazimi u pranua</string>
+    <string name="game_system_draw_decline">%1$s refuzoi barazimin</string>
 </resources>

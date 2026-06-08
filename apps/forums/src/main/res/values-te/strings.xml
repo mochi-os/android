@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">లక్ష్యం</string>
     <string name="forums_access_level_view">వీక్షించండి</string>
+    <string name="forums_access_level_vote">ఓటు వేయండి</string>
     <string name="forums_access_level_comment">వ్యాఖ్య</string>
     <string name="forums_access_level_post">పోస్ట్</string>
     <string name="forums_access_level_none">ఏదీ లేదు</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ఎంటిటీ ID, @group, * (అందరూ), లేదా + (సభ్యులు)</string>
     <string name="forums_access_level">స్థాయి</string>
     <string name="forums_access_level_moderate">మోడరేట్</string>
-    <string name="forums_access_level_manage">నిర్వహించండి</string>
     <string name="forums_members_search">సభ్యులను ఫిల్టర్ చేయండి</string>
     <string name="forums_banner_description">ఫోరమ్ ఎగువన చూపబడే మార్క్‌డౌన్.</string>
     <string name="forums_banner_placeholder">ఈ ఫోరమ్‌కు స్వాగతం…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">ప్రమాద జోన్</string>
     <string name="forums_settings_delete_message">ఇది ఫోరమ్‌ను మరియు దాని అన్ని పోస్ట్‌లను శాశ్వతంగా తొలగిస్తుంది. దీన్ని తిరిగి పొందలేరు.</string>
 
+    <string name="forums_tag_interest_up">ఆసక్తిని పెంచండి</string>
+    <string name="forums_tag_interest_down">ఆసక్తిని తగ్గించండి</string>
+    <string name="forums_tag_interest_remove">ఆసక్తిని తొలగించండి</string>
 </resources>

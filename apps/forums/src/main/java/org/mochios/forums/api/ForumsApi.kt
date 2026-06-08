@@ -536,6 +536,14 @@ interface ForumsApi {
         @Field("tag") tagId: String,
     ): Response<ApiResponse<SuccessResponse>>
 
+    @FormUrlEncoded
+    @POST("{forumId}/-/tags/interest")
+    suspend fun adjustTagInterest(
+        @Path("forumId") forumId: String,
+        @Field("qid") qid: String,
+        @Field("direction") direction: String,
+    ): Response<ApiResponse<Map<String, Any>>>
+
     @POST("{forumId}/-/notifications/clear")
     suspend fun clearNotifications(@Path("forumId") forumId: String): Response<ApiResponse<SuccessResponse>>
 

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Msimbo huo si sahihi au umekwisha muda wake.</string>
     <string name="stepup_error_passkey">Uthibitishaji wa ufunguo umeshindwa. Tafadhali jaribu tena.</string>
     <string name="stepup_error_oauth">Imeshindwa kuthibitisha kwa akaunti hiyo. Tafadhali jaribu tena.</string>
+    <string name="game_system_resign">%1$s alijiuzulu</string>
+    <string name="game_system_draw_offer">%1$s alipendekeza sare</string>
+    <string name="game_system_draw_accept">Sare imekubaliwa</string>
+    <string name="game_system_draw_decline">%1$s alikataa sare</string>
 </resources>

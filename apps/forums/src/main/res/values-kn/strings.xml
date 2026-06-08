@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ಗುರಿ</string>
     <string name="forums_access_level_view">ವೀಕ್ಷಿಸಿ</string>
+    <string name="forums_access_level_vote">ಮತ ಹಾಕಿ</string>
     <string name="forums_access_level_comment">ಕಾಮೆಂಟ್</string>
     <string name="forums_access_level_post">ಪೋಸ್ಟ್</string>
     <string name="forums_access_level_none">ಯಾವುದೂ ಇಲ್ಲ</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ಎಂಟಿಟಿ ID, @group, * (ಎಲ್ಲರೂ), ಅಥವಾ + (ಸದಸ್ಯರು)</string>
     <string name="forums_access_level">ಮಟ್ಟ</string>
     <string name="forums_access_level_moderate">ಮಾಡರೇಟ್</string>
-    <string name="forums_access_level_manage">ನಿರ್ವಹಿಸಿ</string>
     <string name="forums_members_search">ಸದಸ್ಯರನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="forums_banner_description">ಫೋರಂನ ಮೇಲ್ಭಾಗದಲ್ಲಿ ತೋರಿಸಲಾಗುವ ಮಾರ್ಕ್‌ಡೌನ್.</string>
     <string name="forums_banner_placeholder">ಈ ಫೋರಂಗೆ ಸ್ವಾಗತ…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">ಅಪಾಯಕಾರಿ ವಲಯ</string>
     <string name="forums_settings_delete_message">ಇದು ಫೋರಂ ಮತ್ತು ಅದರ ಎಲ್ಲಾ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ. ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
 
+    <string name="forums_tag_interest_up">ಆಸಕ್ತಿಯನ್ನು ಹೆಚ್ಚಿಸಿ</string>
+    <string name="forums_tag_interest_down">ಆಸಕ್ತಿ ಕಡಿಮೆಗೊಳಿಸಿ</string>
+    <string name="forums_tag_interest_remove">ಆಸಕ್ತಿ ತೆಗೆದುಹಾಕಿ</string>
 </resources>

@@ -29,6 +29,10 @@
     <string name="market_back">Til baka</string>
     <string name="market_bid_dialog_amount_label">Tilboð þitt</string>
     <string name="market_bid_dialog_cancel">Hætta við</string>
+    <string name="market_bid_dialog_ceiling_help">Við hækkum tilboð þitt sjálfkrafa um minnstu fjárhæð sem þarf til að halda forystu, allt að þessu hámarki.</string>
+    <string name="market_bid_dialog_instant_win">Kaup staðfest — ljúktu greiðslu</string>
+    <string name="market_bid_dialog_invalid_ceiling">Hámarksboð verður að vera að minnsta kosti tilboðsupphæðin þín</string>
+    <string name="market_bid_dialog_outbid">Tilboð þitt var sett fram en var strax slegið út. Annar bjóðandi er með hærra hámark. Tilboð hans er nú %1$s.</string>
     <string name="market_bid_dialog_submit">Setja tilboð</string>
     <string name="market_bid_dialog_success">Boð sett fram</string>
     <string name="market_bid_dialog_title">Setja tilboð</string>

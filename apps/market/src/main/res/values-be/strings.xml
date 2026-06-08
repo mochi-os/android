@@ -33,6 +33,10 @@
     <string name="market_back">Назад</string>
     <string name="market_bid_dialog_amount_label">Ваша стаўка</string>
     <string name="market_bid_dialog_cancel">Адмена</string>
+    <string name="market_bid_dialog_ceiling_help">Мы будзем аўтаматычна павышаць вашу стаўку на найменшую неабходную суму, каб заставацца наперадзе, да гэтага максімуму.</string>
+    <string name="market_bid_dialog_instant_win">Пакупка пацверджана — завяршыце аплату</string>
+    <string name="market_bid_dialog_invalid_ceiling">Максімальная стаўка павінна быць не меншай за вашу суму стаўкі</string>
+    <string name="market_bid_dialog_outbid">Ваша стаўка зроблена, але адразу перабіта. У іншага ўдзельніка вышэйшы максімум. Яго стаўка цяпер %1$s.</string>
     <string name="market_bid_dialog_current_high">Цяперашняя найвышэйшая стаўка: %1$s</string>
     <string name="market_bid_dialog_failed">Не ўдалося зрабіць стаўку</string>
     <string name="market_bid_dialog_invalid_amount">Увядзіце суму, большую за цяперашнюю стаўку</string>

@@ -23,6 +23,10 @@
     <string name="market_back">பின்</string>
     <string name="market_bid_dialog_amount_label">உங்கள் ஏலம்</string>
     <string name="market_bid_dialog_cancel">ரத்துசெய்</string>
+    <string name="market_bid_dialog_ceiling_help">இந்த அதிகபட்சம் வரை, முன்னிலையில் இருக்க தேவையான சிறிய தொகையில் உங்கள் ஏலத்தை தானாகவே உயர்த்துவோம்.</string>
+    <string name="market_bid_dialog_instant_win">வாங்குதல் உறுதிப்படுத்தப்பட்டது — கட்டணத்தை முடிக்கவும்</string>
+    <string name="market_bid_dialog_invalid_ceiling">அதிகபட்ச ஏலம் உங்கள் ஏலத் தொகையை விட குறைவாக இருக்கக்கூடாது</string>
+    <string name="market_bid_dialog_outbid">உங்கள் ஏலம் வைக்கப்பட்டது ஆனால் உடனடியாக மிஞ்சப்பட்டது. மற்றொரு ஏலதாரருக்கு அதிக அதிகபட்சம் உள்ளது. அவர்களின் ஏலம் இப்போது %1$s.</string>
     <string name="market_bid_dialog_submit">ஏலம் வை</string>
     <string name="market_bid_dialog_success">ஏலம் வைக்கப்பட்டது</string>
     <string name="market_bid_dialog_title">ஏலம் வை</string>

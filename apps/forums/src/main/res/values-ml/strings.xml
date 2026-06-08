@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ലക്ഷ്യം</string>
     <string name="forums_access_level_view">കാണുക</string>
+    <string name="forums_access_level_vote">വോട്ട് ചെയ്യുക</string>
     <string name="forums_access_level_comment">അഭിപ്രായം</string>
     <string name="forums_access_level_post">പോസ്റ്റ്</string>
     <string name="forums_access_level_none">ഒന്നുമില്ല</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">എന്റിറ്റി ഐഡി, @group, * (എല്ലാവർക്കും), അല്ലെങ്കിൽ + (അംഗങ്ങൾ)</string>
     <string name="forums_access_level">നില</string>
     <string name="forums_access_level_moderate">മോഡറേറ്റ് ചെയ്യുക</string>
-    <string name="forums_access_level_manage">നിയന്ത്രിക്കുക</string>
     <string name="forums_members_search">അംഗങ്ങളെ ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="forums_banner_description">ഫോറത്തിന്റെ മുകളിൽ കാണിക്കുന്ന മാർക്ക്ഡൗൺ.</string>
     <string name="forums_banner_placeholder">ഈ ഫോറത്തിലേക്ക് സ്വാഗതം…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">അപകട മേഖല</string>
     <string name="forums_settings_delete_message">ഇത് ഫോറവും അതിന്റെ എല്ലാ പോസ്റ്റുകളും ശാശ്വതമായി ഇല്ലാതാക്കും. ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
 
+    <string name="forums_tag_interest_up">താൽപ്പര്യം വർദ്ധിപ്പിക്കുക</string>
+    <string name="forums_tag_interest_down">പുതുക്കുക</string>
+    <string name="forums_tag_interest_remove">item നീക്കം ചെയ്യുക</string>
 </resources>

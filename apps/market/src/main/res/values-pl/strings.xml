@@ -16,6 +16,10 @@
     <string name="market_asset_download">Pobierz</string>
     <string name="market_back">Wstecz</string>
     <string name="market_bid_dialog_cancel">Anuluj</string>
+    <string name="market_bid_dialog_ceiling_help">Automatycznie podniesiemy Twoją ofertę o najmniejszą kwotę potrzebną, aby pozostać na czele, aż do tego maksimum.</string>
+    <string name="market_bid_dialog_instant_win">Zakup potwierdzony — dokończ płatność</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksymalna oferta musi być co najmniej równa kwocie Twojej oferty</string>
+    <string name="market_bid_dialog_outbid">Twoja oferta została złożona, ale od razu została przebita. Inny licytujący ma wyższe maksimum. Jego oferta wynosi teraz %1$s.</string>
     <string name="market_bid_dialog_submit">Złóż ofertę</string>
     <string name="market_bid_dialog_success">Oferta złożona</string>
     <string name="market_bid_dialog_title">Złóż ofertę</string>

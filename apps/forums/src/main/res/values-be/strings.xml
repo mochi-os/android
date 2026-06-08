@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Мэта</string>
     <string name="forums_access_level_view">Прагляд</string>
+    <string name="forums_access_level_vote">Галасаваць</string>
     <string name="forums_access_level_comment">Каментарый</string>
     <string name="forums_access_level_post">Апублікаваць</string>
     <string name="forums_access_level_none">Няма</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">ID сутнасці, @група, * (усе) ці + (удзельнікі)</string>
     <string name="forums_access_level">Узровень</string>
     <string name="forums_access_level_moderate">Мадэраваць</string>
-    <string name="forums_access_level_manage">Кіраваць</string>
     <string name="forums_members_search">Фільтр удзельнікаў</string>
     <string name="forums_banner_description">Markdown, які паказваецца ў верхняй частцы форуму.</string>
     <string name="forums_banner_placeholder">Сардэчна запрашаем на гэты форум…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Небяспечная зона</string>
     <string name="forums_settings_delete_message">Гэта назаўсёды выдаліць форум і ўсе яго допісы. Гэта дзеянне нельга адмяніць.</string>
 
+    <string name="forums_tag_interest_up">Узмацніць цікавасць</string>
+    <string name="forums_tag_interest_down">Зменшыць цікавасць</string>
+    <string name="forums_tag_interest_remove">Выдаліць цікавасць</string>
 </resources>

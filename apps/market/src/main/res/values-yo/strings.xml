@@ -29,6 +29,10 @@
     <string name="market_back">Padà</string>
     <string name="market_bid_dialog_amount_label">Ọfà rẹ</string>
     <string name="market_bid_dialog_cancel">Fagilé</string>
+    <string name="market_bid_dialog_ceiling_help">A ó gbé ìfowó-rà rẹ sókè laifọwọyi pẹlu iye tó kéré jùlọ tó nílò láti dúró nínú aaye iwájú, títí dé ìwọ̀n-òkè yìí.</string>
+    <string name="market_bid_dialog_instant_win">A ti jẹ́rìí rírà — parí ìsanwó</string>
+    <string name="market_bid_dialog_invalid_ceiling">Bid tó ga jùlọ gbọ́dọ̀ jẹ́ ó kéré tán iye bid rẹ</string>
+    <string name="market_bid_dialog_outbid">A gbe ìfowó-rà rẹ kalẹ̀ ṣùgbọ́n a kọjá rẹ̀ lẹ́sẹ̀kẹsẹ̀. Olufowó-rà mìíràn ní ìwọ̀n-òkè tó ga jù. Ìfowó-rà rẹ̀ ní báyìí ni %1$s.</string>
     <string name="market_bid_dialog_submit">Fi ọfà</string>
     <string name="market_bid_dialog_success">A ti gbé bid</string>
     <string name="market_bid_dialog_title">Fi ọfà</string>

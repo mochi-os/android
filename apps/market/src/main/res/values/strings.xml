@@ -47,10 +47,15 @@
     <string name="market_back">Back</string>
     <string name="market_bid_dialog_amount_label">Your bid</string>
     <string name="market_bid_dialog_cancel">Cancel</string>
+    <string name="market_bid_dialog_ceiling_help">We\'ll automatically raise your bid by the smallest amount needed to stay ahead, up to this maximum.</string>
+    <string name="market_bid_dialog_ceiling_label">Maximum bid (optional)</string>
     <string name="market_bid_dialog_current_high">Current high bid: %1$s</string>
     <string name="market_bid_dialog_failed">Could not place bid</string>
+    <string name="market_bid_dialog_instant_win">Purchase confirmed — complete payment</string>
     <string name="market_bid_dialog_invalid_amount">Enter an amount higher than the current bid</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maximum bid must be at least your bid amount</string>
     <string name="market_bid_dialog_no_bids_yet">No bids yet — starting bid %1$s</string>
+    <string name="market_bid_dialog_outbid">Your bid was placed but immediately outbid. Another bidder has a higher maximum. Their bid is now %1$s.</string>
     <string name="market_bid_dialog_submit">Place bid</string>
     <string name="market_bid_dialog_submitting">Placing bid</string>
     <string name="market_bid_dialog_success">Bid placed</string>

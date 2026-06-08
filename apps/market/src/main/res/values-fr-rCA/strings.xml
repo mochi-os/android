@@ -62,6 +62,8 @@
     <string name="market_editor_back">Retour</string>
     <string name="market_appeal_dialog_cancel">Annuler</string>
     <string name="market_bid_dialog_cancel">Annuler</string>
+    <string name="market_bid_dialog_ceiling_help">Nous augmenterons automatiquement votre enchère du plus petit montant nécessaire pour rester en tête, jusqu\'à ce maximum.</string>
+    <string name="market_bid_dialog_outbid">Votre enchère a été placée mais immédiatement dépassée. Un autre enchérisseur a un maximum plus élevé. Son enchère est maintenant de %1$s.</string>
     <string name="market_dispute_dialog_cancel">Annuler</string>
     <string name="market_editor_zone_cancel">Annuler</string>
     <string name="market_refund_dialog_cancel">Annuler</string>

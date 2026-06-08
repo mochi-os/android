@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Бұл код қате немесе мерзімі өткен.</string>
     <string name="stepup_error_passkey">Passkey тексеруі сәтсіз аяқталды. Қайталап көріңіз.</string>
     <string name="stepup_error_oauth">Бұл тіркелгі арқылы тексеру мүмкін болмады. Қайталап көріңіз.</string>
+    <string name="game_system_resign">%1$s берілді</string>
+    <string name="game_system_draw_offer">%1$s тең ойынды ұсынды</string>
+    <string name="game_system_draw_accept">Тең ойын келісілді</string>
+    <string name="game_system_draw_decline">%1$s тең ойыннан бас тартты</string>
 </resources>

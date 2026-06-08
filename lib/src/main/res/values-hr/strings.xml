@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Taj kôd nije ispravan ili je istekao.</string>
     <string name="stepup_error_passkey">Provjera pristupnog ključa nije uspjela. Pokušajte ponovno.</string>
     <string name="stepup_error_oauth">Provjera s tim računom nije uspjela. Pokušajte ponovno.</string>
+    <string name="game_system_resign">%1$s je predao</string>
+    <string name="game_system_draw_offer">%1$s je ponudio remi</string>
+    <string name="game_system_draw_accept">Remi dogovoren</string>
+    <string name="game_system_draw_decline">%1$s je odbio remi</string>
 </resources>

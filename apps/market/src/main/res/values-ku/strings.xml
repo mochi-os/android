@@ -23,6 +23,10 @@
     <string name="market_back">Vegere</string>
     <string name="market_bid_dialog_amount_label">Pêşniyara te</string>
     <string name="market_bid_dialog_cancel">Betal bike</string>
+    <string name="market_bid_dialog_ceiling_help">Em ê pêşniyara te bi mîqdara herî kêm a pêwîst bi xweber zêde bikin da ku tu li pêş bimînî, heta vê maksîmûmê.</string>
+    <string name="market_bid_dialog_instant_win">Kirîn hate erêkirin — dayînê temam bike</string>
+    <string name="market_bid_dialog_invalid_ceiling">Pêşniyariya herî zêde divê herî kêm bi qasî pêşniyariya te be</string>
+    <string name="market_bid_dialog_outbid">Pêşniyara te hat danîn lê tavilê hat derbaskirin. Pêşkêşkarekî din maksîmûmeke bilindtir heye. Pêşniyara wî niha %1$s e.</string>
     <string name="market_bid_dialog_submit">Pêşniyar bike</string>
     <string name="market_bid_dialog_success">Pêşkêş hat danîn</string>
     <string name="market_bid_dialog_title">Pêşniyar bike</string>

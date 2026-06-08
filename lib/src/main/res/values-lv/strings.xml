@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Šis kods ir nepareizs vai tā derīguma termiņš ir beidzies.</string>
     <string name="stepup_error_passkey">Piekļuves atslēgas pārbaude neizdevās. Lūdzu, mēģiniet vēlreiz.</string>
     <string name="stepup_error_oauth">Neizdevās verificēt ar šo kontu. Lūdzu, mēģiniet vēlreiz.</string>
+    <string name="game_system_resign">%1$s padevās</string>
+    <string name="game_system_draw_offer">%1$s piedāvāja neizšķirtu</string>
+    <string name="game_system_draw_accept">Neizšķirts pieņemts</string>
+    <string name="game_system_draw_decline">%1$s noraidīja neizšķirtu</string>
 </resources>

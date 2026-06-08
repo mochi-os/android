@@ -20,6 +20,10 @@
     <string name="market_back">Tapykuépe</string>
     <string name="market_bid_dialog_amount_label">Nde ñembojepy</string>
     <string name="market_bid_dialog_cancel">Heja</string>
+    <string name="market_bid_dialog_ceiling_help">Romomba\'éta ne ñembohepyrã automáticamente pe michĩvéva oñeikotevẽva oñembohovaike haĝua, ko tuichavéva peve.</string>
+    <string name="market_bid_dialog_instant_win">Jejogua oñemoneĩ — ehepyme\'ẽmba</string>
+    <string name="market_bid_dialog_invalid_ceiling">Oferta máxima ovaleve ne oferta amount</string>
+    <string name="market_bid_dialog_outbid">Ne ñembohepyrã oñemoĩ ha katu sapy\'aiteva ojeguerojera. Ambue oñembohepyhára oguereko peteĩ tuichavéva. Ko\'ágã iñembohepyrã ha\'e %1$s.</string>
     <string name="market_bid_dialog_submit">Embojepy</string>
     <string name="market_bid_dialog_success">Bid oñemoĩma</string>
     <string name="market_bid_dialog_title">Embojepy</string>

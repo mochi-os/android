@@ -17,6 +17,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
 import org.mochios.market.lib.SavedStore
+import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
@@ -83,6 +84,9 @@ class ListingDetailViewModel @Inject constructor(
 
     init {
         loadCategories()
+        // Hydrate the server-backed saved mirror so the bookmark toggle
+        // reflects cross-device saved state on first render.
+        viewModelScope.launch { savedStore.refresh() }
     }
 
     private fun loadCategories() {
@@ -136,11 +140,11 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun toggleSave() {
-        val id = currentId
-        if (id == 0L) return
+        val listing = _state.value.listing?.listing ?: return
+        if (listing.id == 0L) return
         viewModelScope.launch {
             try {
-                savedStore.toggle(id.toString())
+                savedStore.toggle(listing)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(error = e.toMochiError())
             }
@@ -182,18 +186,33 @@ class ListingDetailViewModel @Inject constructor(
 
     fun placeBid(
         amount: Long,
-        @Suppress("UNUSED_PARAMETER") currency: Currency,
+        ceiling: Long?,
+        currency: Currency,
         onSuccess: () -> Unit = {},
     ) {
         val auctionId = _state.value.listing?.auction?.id ?: return
         viewModelScope.launch {
             try {
-                repository.placeBid(auctionId, amount)
-                _snackbar.emit(
-                    ListingDetailSnackbar(
+                val result = repository.placeBid(auctionId, amount, ceiling)
+                // Branch on the server's bid outcome (matches the web listing
+                // page): an instant buy-it-now win, an immediate outbid by an
+                // existing proxy ceiling, or an ordinary accepted bid.
+                val snackbar = when {
+                    result.instant == true -> ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_bid_dialog_instant_win,
+                    )
+                    result.outbid == true -> {
+                        val newHigh = formatPrice(result.currentBid ?: amount, currency)
+                        ListingDetailSnackbar(
+                            org.mochios.market.R.string.market_bid_dialog_outbid,
+                            listOf(newHigh),
+                        )
+                    }
+                    else -> ListingDetailSnackbar(
                         org.mochios.market.R.string.market_bid_dialog_success,
                     )
-                )
+                }
+                _snackbar.emit(snackbar)
                 // Refresh so the new high bid and history surface immediately.
                 load(currentId.toString())
                 onSuccess()
@@ -227,7 +246,7 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun isSaved(): Flow<Boolean> =
-        savedStore.observe().map { set -> currentId.toString() in set }
+        savedStore.observeIds().map { set -> currentId.toString() in set }
 
     fun isReported(): Flow<Boolean> =
         reportedStore.observe().map { set -> currentId.toString() in set }

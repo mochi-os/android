@@ -16,6 +16,10 @@
     <string name="market_asset_download">Descargar</string>
     <string name="market_back">Atrás</string>
     <string name="market_bid_dialog_cancel">Cancelar</string>
+    <string name="market_bid_dialog_ceiling_help">Subiremos tu puja automáticamente la mínima cantidad necesaria para mantenerte en cabeza, hasta este máximo.</string>
+    <string name="market_bid_dialog_instant_win">Compra confirmada; completa el pago</string>
+    <string name="market_bid_dialog_invalid_ceiling">La puja máxima debe ser al menos el importe de tu puja</string>
+    <string name="market_bid_dialog_outbid">Tu puja se realizó pero fue superada de inmediato. Otro pujador tiene un máximo más alto. Su puja ahora es %1$s.</string>
     <string name="market_bid_dialog_submit">Pujar</string>
     <string name="market_bid_dialog_success">Puja realizada</string>
     <string name="market_bid_dialog_title">Pujar</string>

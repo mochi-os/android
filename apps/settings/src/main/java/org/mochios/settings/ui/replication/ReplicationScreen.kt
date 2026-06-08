@@ -59,6 +59,7 @@ import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.ReplicationHost
 import org.mochios.settings.api.ReplicationLink
+import org.mochios.settings.ui.login.StepUpHost
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -185,6 +186,8 @@ fun ReplicationScreen(
             }
         }
     }
+
+    StepUpHost(viewModel.stepUp)
 }
 
 @Composable

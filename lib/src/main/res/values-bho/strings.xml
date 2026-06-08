@@ -263,4 +263,8 @@
     <string name="stepup_error_code">ऊ कोड गलत बा भा ओकर मियाद खतम हो गइल बा।</string>
     <string name="stepup_error_passkey">पासकी सत्यापन विफल हो गइल। कृपया फिर से कोशिश करीं।</string>
     <string name="stepup_error_oauth">ओह खाता से सत्यापन ना हो सकल। कृपया फेर से कोसिस करीं।</string>
+    <string name="game_system_resign">%1$s हार मान लिहलें</string>
+    <string name="game_system_draw_offer">%1$s ड्रॉ के प्रस्ताव दिहलें</string>
+    <string name="game_system_draw_accept">ड्रॉ पर सहमति बनल</string>
+    <string name="game_system_draw_decline">%1$s ड्रॉ ठुकरा दिहलें</string>
 </resources>

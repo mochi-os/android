@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ターゲット</string>
     <string name="forums_access_level_view">ビュー</string>
+    <string name="forums_access_level_vote">投票</string>
     <string name="forums_access_level_comment">コメント</string>
     <string name="forums_access_level_post">投稿</string>
     <string name="forums_access_level_none">なし</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">エンティティ ID、@グループ、*（全員）、または +（メンバー）</string>
     <string name="forums_access_level">レベル</string>
     <string name="forums_access_level_moderate">モデレート</string>
-    <string name="forums_access_level_manage">管理</string>
     <string name="forums_members_search">メンバーを絞り込み</string>
     <string name="forums_banner_description">フォーラムの上部に表示される Markdown。</string>
     <string name="forums_banner_placeholder">このフォーラムへようこそ…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">危険ゾーン</string>
     <string name="forums_settings_delete_message">フォーラムとすべての投稿が完全に削除されます。この操作は取り消せません。</string>
 
+    <string name="forums_tag_interest_up">関心を高める</string>
+    <string name="forums_tag_interest_down">関心を下げる</string>
+    <string name="forums_tag_interest_remove">関心を削除</string>
 </resources>

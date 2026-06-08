@@ -16,5 +16,11 @@ data class GameMessage(
     val name: String = "",
     val body: String = "",
     val type: String = "message",
+    /**
+     * For `type == "system"` rows, the structured event kind (currently only
+     * `"resign"`) used to localise the notice per viewer. Empty for legacy
+     * rows / chat / move, in which case the renderer falls back to [body].
+     */
+    val event: String = "",
     val created: Long = 0,
 )

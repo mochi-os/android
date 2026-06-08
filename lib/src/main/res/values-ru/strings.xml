@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Этот код неверен или истёк.</string>
     <string name="stepup_error_passkey">Не удалось проверить ключ доступа. Попробуйте ещё раз.</string>
     <string name="stepup_error_oauth">Не удалось выполнить проверку с этой учётной записью. Пожалуйста, попробуйте ещё раз.</string>
+    <string name="game_system_resign">%1$s сдался</string>
+    <string name="game_system_draw_offer">%1$s предложил ничью</string>
+    <string name="game_system_draw_accept">Ничья согласована</string>
+    <string name="game_system_draw_decline">%1$s отклонил ничью</string>
 </resources>

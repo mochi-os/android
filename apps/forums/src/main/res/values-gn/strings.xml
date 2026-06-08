@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Apoukapy</string>
     <string name="forums_access_level_view">Ehecha</string>
+    <string name="forums_access_level_vote">Mbo\'e</string>
     <string name="forums_access_level_comment">Comentario</string>
     <string name="forums_access_level_post">Marandu</string>
     <string name="forums_access_level_none">Mba\'eve</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entidad ID, @atyguasu, * (opavave), térã + (mba\'apoharakuéra)</string>
     <string name="forums_access_level">Yvategua</string>
     <string name="forums_access_level_moderate">Moñangareko</string>
-    <string name="forums_access_level_manage">Ñangareko</string>
     <string name="forums_members_search">Embogue mba\'apoharakuéra</string>
     <string name="forums_banner_description">Markdown ojehechaukáva foro ru\'ãme.</string>
     <string name="forums_banner_placeholder">Eg̃uahẽporãite ko foro-pe…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Apañuái renda</string>
     <string name="forums_settings_delete_message">Kóva oguete\'ỹreíta foro ha opa iñe\'ẽmondokuéra. Kóva ndaikatúi ojejapojey.</string>
 
+    <string name="forums_tag_interest_up">Boost mba\'erekohápe</string>
+    <string name="forums_tag_interest_down">Embogue ñembyeko\'ói</string>
+    <string name="forums_tag_interest_remove">Embogue ñembyeko\'ói</string>
 </resources>

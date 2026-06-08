@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">آخر مزامنة: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">سيؤدي هذا إلى إيقاف إرسال التحديثات إلى «%1$s». يمكنهم إعادة النسخ المتماثل إذا أرادوا.</string>
     <string name="wikis_replicas_removed_success">تمت إزالة النسخة المتماثلة</string>
+    <string name="wikis_load_more">تحميل المزيد</string>
+    <string name="wikis_access_change_level">مستوى الوصول</string>
+    <string name="wikis_access_subject_anyone">أي شخص</string>
+    <string name="wikis_access_subject_authenticated">المستخدمون المُوثَّقون</string>
 
 </resources>

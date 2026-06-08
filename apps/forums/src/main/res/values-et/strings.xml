@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Siht</string>
     <string name="forums_access_level_view">Vaata</string>
+    <string name="forums_access_level_vote">Hääleta</string>
     <string name="forums_access_level_comment">Kommentaar</string>
     <string name="forums_access_level_post">Postita</string>
     <string name="forums_access_level_none">Puudub</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">Olemi ID, @grupp, * (kõik) või + (liikmed)</string>
     <string name="forums_access_level">Tase</string>
     <string name="forums_access_level_moderate">Modereeri</string>
-    <string name="forums_access_level_manage">Halda</string>
     <string name="forums_members_search">Filtreeri liikmeid</string>
     <string name="forums_banner_description">Foorumi ülaosas kuvatav Markdown.</string>
     <string name="forums_banner_placeholder">Tere tulemast sellesse foorumisse…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Ohutsoon</string>
     <string name="forums_settings_delete_message">See kustutab foorumi ja kõik selle postitused jäädavalt. Seda ei saa tagasi võtta.</string>
 
+    <string name="forums_tag_interest_up">Tõsta huvi</string>
+    <string name="forums_tag_interest_down">Vähenda huvi</string>
+    <string name="forums_tag_interest_remove">Eemalda huvi</string>
 </resources>

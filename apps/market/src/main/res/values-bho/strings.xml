@@ -24,6 +24,10 @@
     <string name="market_back">वापस</string>
     <string name="market_bid_dialog_amount_label">रउआ के बोली</string>
     <string name="market_bid_dialog_cancel">रद्द करीं</string>
+    <string name="market_bid_dialog_ceiling_help">हम रउआ के बोली अपने आप ओतने कम रकम से बढ़ाइब जतना आगे रहे खातिर जरूरी बा, ई अधिकतम तक।</string>
+    <string name="market_bid_dialog_instant_win">खरीदारी पुष्ट भइल — भुगतान पूरा करीं</string>
+    <string name="market_bid_dialog_invalid_ceiling">अधिकतम बोली कम से कम रउवा के बोली रकम के बराबर होखे के चाहीं</string>
+    <string name="market_bid_dialog_outbid">रउआ बोली लगा देहल बा बाकिर तुरंते आगे बढ़ गइल। दूसरा बोली लगावे वाला के ज्यादा अधिकतम बा। ओकर बोली अब %1$s बा।</string>
     <string name="market_bid_dialog_submit">बोली लगाईं</string>
     <string name="market_bid_dialog_success">बोली लगावल गइल</string>
     <string name="market_bid_dialog_title">बोली लगाईं</string>

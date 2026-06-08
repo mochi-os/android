@@ -44,6 +44,8 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -157,6 +159,20 @@ fun ListingDetailScreen(
     val isSaved by viewModel.isSaved().collectAsState(initial = false)
     val isReported by viewModel.isReported().collectAsState(initial = false)
 
+    val snackbarHostState = remember { SnackbarHostState() }
+    val snackbarContext = LocalContext.current
+    // Surface the view model's one-shot bid / report messages (e.g. instant
+    // buy-it-now win, immediate proxy outbid) via the scaffold snackbar.
+    LaunchedEffect(viewModel) {
+        viewModel.snackbar.collect { message ->
+            val text = snackbarContext.getString(
+                message.messageRes,
+                *message.args.toTypedArray(),
+            )
+            snackbarHostState.showSnackbar(text)
+        }
+    }
+
     var lightboxOpen by remember { mutableStateOf(false) }
     var lightboxIndex by remember { mutableIntStateOf(0) }
     var reportOpen by remember { mutableStateOf(false) }
@@ -170,6 +186,7 @@ fun ListingDetailScreen(
     val currentListingId = state.listing?.listing?.id
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -344,9 +361,9 @@ fun ListingDetailScreen(
         currency = state.listing?.listing?.currency ?: Currency.GBP,
         submitting = submittingBid,
         errorMessage = bidErrorMessage,
-        onSubmit = { amount, currency ->
+        onSubmit = { amount, ceiling, currency ->
             submittingBid = true
-            viewModel.placeBid(amount, currency) {
+            viewModel.placeBid(amount, ceiling, currency) {
                 submittingBid = false
                 bidOpen = false
             }

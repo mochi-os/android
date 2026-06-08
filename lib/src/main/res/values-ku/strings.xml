@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Ew kod çewt e an dema wê qediyaye.</string>
     <string name="stepup_error_passkey">Verastkirina passkey têk çû. Ji kerema xwe dîsa biceribîne.</string>
     <string name="stepup_error_oauth">Bi wê hesabê re piştrastkirin pêk nehat. Ji kerema xwe dîsa biceribîne.</string>
+    <string name="game_system_resign">%1$s dev kir</string>
+    <string name="game_system_draw_offer">%1$s pêşniyara wekheviyê kir</string>
+    <string name="game_system_draw_accept">Li ser wekheviyê li hev hat</string>
+    <string name="game_system_draw_decline">%1$s wekhevî red kir</string>
 </resources>

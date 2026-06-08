@@ -263,4 +263,8 @@
     <string name="stepup_error_code">יענער קאָד איז אומריכטיק אָדער איז אויסגעגאַנגען.</string>
     <string name="stepup_error_passkey">די passkey פֿאַריפֿיצירונג איז דורכגעפֿאַלן. ביטע פּרוביר ווידער.</string>
     <string name="stepup_error_oauth">מע האָט נישט געקענט באַשטעטיקן מיט יענעם קאָנטע. ביטע פּרובירט נאָך אַ מאָל.</string>
+    <string name="game_system_resign">%1$s האָט זיך אונטערגעגעבן</string>
+    <string name="game_system_draw_offer">%1$s האָט פֿאָרגעלייגט אַ גלײַך</string>
+    <string name="game_system_draw_accept">מסכים געווען אויף אַ גלײַך</string>
+    <string name="game_system_draw_decline">%1$s האָט אָפּגעזאָגט דעם גלײַך</string>
 </resources>

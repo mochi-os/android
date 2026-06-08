@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Ta koda je napačna ali je potekla.</string>
     <string name="stepup_error_passkey">Preverjanje ključa za dostop ni uspelo. Poskusite znova.</string>
     <string name="stepup_error_oauth">S tem računom ni bilo mogoče preveriti. Poskusite znova.</string>
+    <string name="game_system_resign">%1$s se je predal</string>
+    <string name="game_system_draw_offer">%1$s je ponudil remi</string>
+    <string name="game_system_draw_accept">Remi sprejet</string>
+    <string name="game_system_draw_decline">%1$s je zavrnil remi</string>
 </resources>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Upe código ndoikoporãi térã hiʼaravoʼimáma.</string>
     <string name="stepup_error_passkey">Passkey ñemyatã ndoikói. Eñehaʼã jey.</string>
     <string name="stepup_error_oauth">Ndaikatúi ojehechajey upe mba\'ete ndive. Eha\'ã jey.</string>
+    <string name="game_system_resign">%1$s oñembotove</string>
+    <string name="game_system_draw_offer">%1$s oikuave\'ẽ pe\'ã</string>
+    <string name="game_system_draw_accept">Pe\'ã oñemoneĩ</string>
+    <string name="game_system_draw_decline">%1$s ndoguerohorýi pe\'ã</string>
 </resources>

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">KI</string>
     <string name="forums_access_target">Mål</string>
     <string name="forums_access_level_view">Vis</string>
+    <string name="forums_access_level_vote">Stem</string>
     <string name="forums_access_level_comment">Kommentar</string>
     <string name="forums_access_level_post">Innlegg</string>
     <string name="forums_access_level_none">Ingen</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entitets-ID, @gruppe, * (alle), eller + (medlemmer)</string>
     <string name="forums_access_level">Nivå</string>
     <string name="forums_access_level_moderate">Moderer</string>
-    <string name="forums_access_level_manage">Administrer</string>
     <string name="forums_members_search">Filtrer medlemmer</string>
     <string name="forums_banner_description">Markdown vises øverst i forumet.</string>
     <string name="forums_banner_placeholder">Velkommen til dette forumet…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Faresone</string>
     <string name="forums_settings_delete_message">Dette vil slette forumet og alle innleggene permanent. Dette kan ikke angres.</string>
 
+    <string name="forums_tag_interest_up">Øk interesse</string>
+    <string name="forums_tag_interest_down">Reduser interesse</string>
+    <string name="forums_tag_interest_remove">Fjern interesse</string>
 </resources>

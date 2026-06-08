@@ -303,4 +303,8 @@
     <string name="wikis_replicas_col_synced">শেষ সিঙ্ক: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">এটি „%1$s\" এ আপডেট পাঠানো বন্ধ করবে। তারা চাইলে আবার রেপ্লিকেট করতে পারে।</string>
     <string name="wikis_replicas_removed_success">রেপ্লিকা সরানো হয়েছে</string>
+    <string name="wikis_load_more">আরও লোড করুন</string>
+    <string name="wikis_access_change_level">অ্যাক্সেস লেভেল</string>
+    <string name="wikis_access_subject_anyone">যে কেউ</string>
+    <string name="wikis_access_subject_authenticated">প্রমাণীকৃত ব্যবহারকারী</string>
 </resources>

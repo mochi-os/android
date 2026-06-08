@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Зорилт</string>
     <string name="forums_access_level_view">Үзэх</string>
+    <string name="forums_access_level_vote">Санал өгөх</string>
     <string name="forums_access_level_comment">Сэтгэгдэл</string>
     <string name="forums_access_level_post">Нийтлэл</string>
     <string name="forums_access_level_none">Алга</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Бүртгэлийн ID, @бүлэг, * (бүгд), эсвэл + (гишүүд)</string>
     <string name="forums_access_level">Түвшин</string>
     <string name="forums_access_level_moderate">Зохицуулах</string>
-    <string name="forums_access_level_manage">Удирдах</string>
     <string name="forums_members_search">Гишүүдийг шүүх</string>
     <string name="forums_banner_description">Форумын дээд хэсэгт харуулах Markdown.</string>
     <string name="forums_banner_placeholder">Энэ форумд тавтай морилно уу…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Аюултай бүс</string>
     <string name="forums_settings_delete_message">Энэ нь форум болон түүний бүх нийтлэлийг бүрмөсөн устгана. Үүнийг буцаах боломжгүй.</string>
 
+    <string name="forums_tag_interest_up">Сонирхлыг идэвхжүүлэх</string>
+    <string name="forums_tag_interest_down">Хүүг бууруулах</string>
+    <string name="forums_tag_interest_remove">Сонирхол хасах</string>
 </resources>

@@ -36,6 +36,8 @@
     <string name="market_editor_back">返回</string>
     <string name="market_appeal_dialog_cancel">取消</string>
     <string name="market_bid_dialog_cancel">取消</string>
+    <string name="market_bid_dialog_ceiling_help">我哋會自動將你嘅出價提高至所需嘅最低金額以保持領先,最高去到呢個上限。</string>
+    <string name="market_bid_dialog_outbid">你嘅出價已經提交,但即刻俾人壓過。另一位競投者設咗更高嘅上限。佢哋而家嘅出價係 %1$s。</string>
     <string name="market_dispute_dialog_cancel">取消</string>
     <string name="market_editor_zone_cancel">取消</string>
     <string name="market_refund_dialog_cancel">取消</string>

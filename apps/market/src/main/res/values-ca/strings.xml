@@ -16,6 +16,10 @@
     <string name="market_asset_download">Descarrega</string>
     <string name="market_back">Enrere</string>
     <string name="market_bid_dialog_cancel">Cancel·la</string>
+    <string name="market_bid_dialog_ceiling_help">Pujarem automàticament la vostra oferta amb la quantitat més petita necessària per anar al capdavant, fins a aquest màxim.</string>
+    <string name="market_bid_dialog_instant_win">Compra confirmada: completa el pagament</string>
+    <string name="market_bid_dialog_invalid_ceiling">L\'oferta màxima ha de ser com a mínim el teu import d\'oferta</string>
+    <string name="market_bid_dialog_outbid">La vostra oferta s\'ha enviat però ha estat superada immediatament. Un altre licitador té un màxim més alt. La seva oferta ara és %1$s.</string>
     <string name="market_bid_dialog_submit">Fes una oferta</string>
     <string name="market_bid_dialog_success">Puja realitzada</string>
     <string name="market_bid_dialog_title">Fes una oferta</string>

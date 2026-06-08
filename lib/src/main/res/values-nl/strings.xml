@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Die code is onjuist of verlopen.</string>
     <string name="stepup_error_passkey">Verificatie met passkey is mislukt. Probeer het opnieuw.</string>
     <string name="stepup_error_oauth">Kan niet verifiëren met dat account. Probeer het opnieuw.</string>
+    <string name="game_system_resign">%1$s gaf op</string>
+    <string name="game_system_draw_offer">%1$s bood remise aan</string>
+    <string name="game_system_draw_accept">Remise overeengekomen</string>
+    <string name="game_system_draw_decline">%1$s weigerde de remise</string>
 </resources>

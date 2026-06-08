@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Wannan lambar ba daidai ba ce ko kuma ta kare.</string>
     <string name="stepup_error_passkey">Tantance maɓallin shiga ya gaza. Don Allah a sake gwadawa.</string>
     <string name="stepup_error_oauth">An kasa tabbatar da wannan asusun. Da fatan za a sake gwadawa.</string>
+    <string name="game_system_resign">%1$s ya ja da</string>
+    <string name="game_system_draw_offer">%1$s ya ba da shawarar canjaras</string>
+    <string name="game_system_draw_accept">An yarda da canjaras</string>
+    <string name="game_system_draw_decline">%1$s ya ki canjaras</string>
 </resources>

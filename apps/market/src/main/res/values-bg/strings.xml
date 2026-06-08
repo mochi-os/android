@@ -16,6 +16,10 @@
     <string name="market_asset_download">Изтегляне</string>
     <string name="market_back">Назад</string>
     <string name="market_bid_dialog_cancel">Отказ</string>
+    <string name="market_bid_dialog_ceiling_help">Ще повишаваме автоматично офертата ви с най-малката сума, необходима да останете отпред, до този максимум.</string>
+    <string name="market_bid_dialog_instant_win">Покупката е потвърдена — завършете плащането</string>
+    <string name="market_bid_dialog_invalid_ceiling">Максималната оферта трябва да е поне сумата на офертата ви</string>
+    <string name="market_bid_dialog_outbid">Офертата ви беше подадена, но веднага надмината. Друг участник има по-висок максимум. Неговата оферта вече е %1$s.</string>
     <string name="market_bid_dialog_submit">Подай оферта</string>
     <string name="market_bid_dialog_success">Офертата е подадена</string>
     <string name="market_bid_dialog_title">Подай оферта</string>

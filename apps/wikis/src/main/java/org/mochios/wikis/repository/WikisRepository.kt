@@ -10,7 +10,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.wikis.api.WikisApi
 import org.mochios.wikis.model.AccessRule
 import org.mochios.wikis.model.Attachment
-import org.mochios.wikis.model.Change
+import org.mochios.wikis.model.ChangesResponse
 import org.mochios.wikis.model.CommentCreateResponse
 import org.mochios.wikis.model.CommentEditResponse
 import org.mochios.wikis.model.CommentsResponse
@@ -376,9 +376,9 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun getHistory(wiki: String, slug: String): PageHistoryResponse {
+    suspend fun getHistory(wiki: String, slug: String, limit: Int, offset: Int): PageHistoryResponse {
         return try {
-            api.getPageHistory(wiki, slug).unwrap()
+            api.getPageHistory(wiki, slug, limit, offset).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -440,9 +440,9 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun getChanges(wiki: String): List<Change> {
+    suspend fun getChanges(wiki: String, limit: Int, offset: Int): ChangesResponse {
         return try {
-            api.getChanges(wiki).unwrap().changes
+            api.getChanges(wiki, limit, offset).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -514,13 +514,11 @@ class WikisRepository @Inject constructor(
 
     suspend fun uploadAttachments(
         wiki: String,
-        slug: String,
         files: List<File>,
     ): List<Attachment> {
         return try {
-            val pagePart = slug.toRequestBody(text)
             val fileParts = files.map { multipart("files", it) }
-            api.uploadAttachments(wiki, pagePart, fileParts).unwrap().attachments
+            api.uploadAttachments(wiki, fileParts).unwrap().attachments
         } catch (e: Exception) {
             throw e.toMochiError()
         }

@@ -33,6 +33,10 @@
     <string name="market_back">Yn ôl</string>
     <string name="market_bid_dialog_amount_label">Eich cynnig</string>
     <string name="market_bid_dialog_cancel">Canslo</string>
+    <string name="market_bid_dialog_ceiling_help">Byddwn yn codi eich cynnig yn awtomatig o\'r swm lleiaf sydd ei angen i aros ar y blaen, hyd at yr uchafswm hwn.</string>
+    <string name="market_bid_dialog_instant_win">Pryniant wedi\'i gadarnhau — cwblhewch y taliad</string>
+    <string name="market_bid_dialog_invalid_ceiling">Rhaid i\'r cynnig uchaf fod o leiaf eich swm cynnig</string>
+    <string name="market_bid_dialog_outbid">Cafodd eich cynnig ei osod ond ei drechu ar unwaith. Mae gan gynigydd arall uchafswm uwch. Eu cynnig nawr yw %1$s.</string>
     <string name="market_bid_dialog_current_high">Cynnig uchaf cyfredol: %1$s</string>
     <string name="market_bid_dialog_failed">Methwyd cyflwyno cynnig</string>
     <string name="market_bid_dialog_invalid_amount">Rhowch swm uwch na\'r cynnig cyfredol</string>

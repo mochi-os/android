@@ -240,7 +240,7 @@ class AttachmentsViewModel @Inject constructor(
                     } ?: throw IllegalStateException("Cannot open $uri")
                     tempFiles.add(temp)
                 }
-                val uploaded = repository.uploadAttachments(wikiId, slug, tempFiles)
+                val uploaded = repository.uploadAttachments(wikiId, tempFiles)
                 _uiState.value = _uiState.value.copy(
                     isUploading = false,
                     attachments = mergeAttachments(_uiState.value.attachments, uploaded),

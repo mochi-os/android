@@ -25,6 +25,10 @@
     <string name="market_back">Հետ դեպի CRM</string>
     <string name="market_bid_dialog_amount_label">Ձեր առաջարկը</string>
     <string name="market_bid_dialog_cancel">Չեղարկել մեկնաբանությունը</string>
+    <string name="market_bid_dialog_ceiling_help">Մենք ավտոմատ կերպով կբարձրացնենք ձեր առաջարկը հնարավորինս փոքր գումարով՝ առջևում մնալու համար, մինչև այս առավելագույնը։</string>
+    <string name="market_bid_dialog_instant_win">Գնումը հաստատված է — ավարտեք վճարումը</string>
+    <string name="market_bid_dialog_invalid_ceiling">Անդամն ավելացվեց</string>
+    <string name="market_bid_dialog_outbid">Ձեր առաջարկը ներկայացվել է, բայց անմիջապես գերազանցվել է։ Մյուս առաջարկողն ավելի բարձր առավելագույն ունի։ Նրա առաջարկն այժմ %1$s է։</string>
     <string name="market_bid_dialog_submit">Անել առաջարկ</string>
     <string name="market_bid_dialog_success">Գնահարցեր</string>
     <string name="market_bid_dialog_title">Անել առաջարկ</string>

@@ -33,6 +33,10 @@
     <string name="market_back">Atzera</string>
     <string name="market_bid_dialog_amount_label">Zure eskaintza</string>
     <string name="market_bid_dialog_cancel">Utzi</string>
+    <string name="market_bid_dialog_ceiling_help">Zure eskaintza automatikoki igoko dugu aurretik egoteko behar den kopururik txikienarekin, gehienezko honetara arte.</string>
+    <string name="market_bid_dialog_instant_win">Erosketa berretsita — burutu ordainketa</string>
+    <string name="market_bid_dialog_invalid_ceiling">Gehieneko eskaintzak gutxienez zure eskaintza-zenbatekoa izan behar du</string>
+    <string name="market_bid_dialog_outbid">Zure eskaintza egin da baina berehala gainditu da. Beste eskaintzaile batek gehienezko handiagoa du. Bere eskaintza orain %1$s da.</string>
     <string name="market_bid_dialog_current_high">Oraingo eskaintzarik altuena: %1$s</string>
     <string name="market_bid_dialog_failed">Ezin izan da eskaintza egin</string>
     <string name="market_bid_dialog_invalid_amount">Sartu uneko eskaintza baino altuagoa den zenbatekoa</string>

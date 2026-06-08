@@ -760,6 +760,7 @@ private fun GameChatColumn(
                 name = msg.name,
                 body = msg.body,
                 type = msg.type,
+                event = msg.event,
                 created = msg.created,
             )
         }
@@ -806,7 +807,7 @@ private fun GameChatColumn(
                 },
                 systemMessageRenderer = { msg ->
                     {
-                        WordsSystemRow(body = msg.body)
+                        WordsSystemRow(msg)
                     }
                 },
                 modifier = Modifier.fillMaxSize(),
@@ -851,7 +852,14 @@ private fun WordsMoveRow(msg: GameChatMessage, isSent: Boolean) {
 }
 
 @Composable
-private fun WordsSystemRow(body: String) {
+private fun WordsSystemRow(message: GameChatMessage) {
+    // Localise per viewer from the structured event kind; legacy rows (and
+    // REST-loaded resigns, which don't persist the event column) fall back to
+    // the server-stored English body. Words only emits a resign system event.
+    val text = when (message.event) {
+        "resign" -> stringResource(MochiR.string.game_system_resign, message.name)
+        else -> message.body
+    }
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -859,7 +867,7 @@ private fun WordsSystemRow(body: String) {
         horizontalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = body,
+            text = text,
             style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
             textAlign = TextAlign.Center,

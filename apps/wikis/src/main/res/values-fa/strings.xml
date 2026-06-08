@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">آخرین همگام‌سازی: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">این ارسال به‌روزرسانی‌ها به «%1$s» را متوقف می‌کند. در صورت تمایل می‌توانند دوباره تکثیر کنند.</string>
     <string name="wikis_replicas_removed_success">تکثیر حذف شد</string>
+    <string name="wikis_load_more">بارگذاری بیشتر</string>
+    <string name="wikis_access_change_level">سطح دسترسی</string>
+    <string name="wikis_access_subject_anyone">هر کسی</string>
+    <string name="wikis_access_subject_authenticated">کاربران احراز هویت‌شده</string>
 
 </resources>

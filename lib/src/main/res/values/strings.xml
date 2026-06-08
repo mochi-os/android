@@ -305,6 +305,11 @@
     <string name="game_chat_send">Send message</string>
     <string name="game_chat_subject_you">You</string>
     <string name="game_chat_move_played">%1$s played %2$s</string>
+    <!-- Game chat system notices (resign / draw). %1$s is the acting player's name. -->
+    <string name="game_system_resign">%1$s resigned</string>
+    <string name="game_system_draw_offer">%1$s offered a draw</string>
+    <string name="game_system_draw_accept">Draw agreed</string>
+    <string name="game_system_draw_decline">%1$s declined the draw</string>
 
     <!-- Step-up re-authentication dialog (re-verifies a login factor before a security change) -->
     <string name="stepup_title">Confirm it\'s you</string>

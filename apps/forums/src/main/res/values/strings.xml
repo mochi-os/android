@@ -100,6 +100,9 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_post_tag_remove">Remove tag</string>
     <string name="forums_post_tag_label">Tag</string>
+    <string name="forums_tag_interest_up">Boost interest</string>
+    <string name="forums_tag_interest_down">Reduce interest</string>
+    <string name="forums_tag_interest_remove">Remove interest</string>
 
     <!-- Settings tabs -->
     <string name="forums_tab_general">General</string>
@@ -115,10 +118,10 @@
     <string name="forums_access_target_hint">Entity ID, @group, * (everyone), or + (members)</string>
     <string name="forums_access_level">Level</string>
     <string name="forums_access_level_view">View</string>
+    <string name="forums_access_level_vote">Vote</string>
     <string name="forums_access_level_comment">Comment</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_moderate">Moderate</string>
-    <string name="forums_access_level_manage">Manage</string>
     <string name="forums_access_level_none">None</string>
 
     <!-- Members tab -->

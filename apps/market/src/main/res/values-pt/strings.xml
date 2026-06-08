@@ -16,6 +16,10 @@
     <string name="market_asset_download">Transferir</string>
     <string name="market_back">Voltar</string>
     <string name="market_bid_dialog_cancel">Cancelar</string>
+    <string name="market_bid_dialog_ceiling_help">Aumentaremos a sua licitação automaticamente pelo menor valor necessário para manter-se à frente, até este máximo.</string>
+    <string name="market_bid_dialog_instant_win">Compra confirmada — conclua o pagamento</string>
+    <string name="market_bid_dialog_invalid_ceiling">A licitação máxima tem de ser, pelo menos, o valor da sua licitação</string>
+    <string name="market_bid_dialog_outbid">A sua licitação foi colocada, mas imediatamente superada. Outro licitante tem um máximo mais alto. A licitação dele agora é %1$s.</string>
     <string name="market_bid_dialog_submit">Licitar</string>
     <string name="market_bid_dialog_success">Licitação efetuada</string>
     <string name="market_bid_dialog_title">Licitar</string>

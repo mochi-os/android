@@ -32,6 +32,8 @@
     <string name="market_back">返回</string>
     <string name="market_bid_dialog_amount_label">你的出價</string>
     <string name="market_bid_dialog_cancel">取消</string>
+    <string name="market_bid_dialog_ceiling_help">我哋會自動將您嘅出價提高至保持領先所需嘅最低金額,最高至此上限。</string>
+    <string name="market_bid_dialog_outbid">您嘅出價已提交,但即時被超越。另一位競標者設定咗更高嘅上限。佢哋目前嘅出價為 %1$s。</string>
     <string name="market_bid_dialog_current_high">目前最高出價: %1$s</string>
     <string name="market_bid_dialog_failed">無法出價</string>
     <string name="market_bid_dialog_invalid_amount">請輸入高於目前出價的金額</string>

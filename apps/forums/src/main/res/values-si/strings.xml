@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ඉලක්කය</string>
     <string name="forums_access_level_view">බලන්න</string>
+    <string name="forums_access_level_vote">ඡන්දය දෙන්න</string>
     <string name="forums_access_level_comment">අදහස</string>
     <string name="forums_access_level_post">පළ කිරීම</string>
     <string name="forums_access_level_none">කිසිවක් නැත</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ආයතන ID, @group, * (සියලුදෙනා), හෝ + (සාමාජිකයන්)</string>
     <string name="forums_access_level">මට්ටම</string>
     <string name="forums_access_level_moderate">පාලනය</string>
-    <string name="forums_access_level_manage">කළමනාකරණය</string>
     <string name="forums_members_search">සාමාජිකයන් පෙරහන් කරන්න</string>
     <string name="forums_banner_description">සංසදයේ ඉහළින් පෙන්වන Markdown.</string>
     <string name="forums_banner_placeholder">මෙම සංසදයට සාදරයෙන් පිළිගනිමු…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">අවදානම් කලාපය</string>
     <string name="forums_settings_delete_message">මෙය සංසදය සහ එහි සියලුම පළ කිරීම් ස්ථිරවම මකා දමයි. මෙය ආපසු හැරවිය නොහැක.</string>
 
+    <string name="forums_tag_interest_up">කැමැත්ත වැඩි කරන්න</string>
+    <string name="forums_tag_interest_down">උනන්දුව අඩු කරන්න</string>
+    <string name="forums_tag_interest_remove">උනන්දුව ඉවත් කරන්න</string>
 </resources>

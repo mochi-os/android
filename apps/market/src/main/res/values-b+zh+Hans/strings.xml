@@ -16,6 +16,10 @@
     <string name="market_asset_download">下载</string>
     <string name="market_back">返回</string>
     <string name="market_bid_dialog_cancel">取消</string>
+    <string name="market_bid_dialog_ceiling_help">我们将自动将您的出价提高至保持领先所需的最小金额,最高至此上限。</string>
+    <string name="market_bid_dialog_instant_win">购买已确认,请完成支付</string>
+    <string name="market_bid_dialog_invalid_ceiling">最高出价必须不低于你的出价金额</string>
+    <string name="market_bid_dialog_outbid">您的出价已提交,但立即被超越。另一位竞拍者设置了更高的上限。他们现在的出价为 %1$s。</string>
     <string name="market_bid_dialog_submit">出价</string>
     <string name="market_bid_dialog_success">出价已提交</string>
     <string name="market_bid_dialog_title">出价</string>

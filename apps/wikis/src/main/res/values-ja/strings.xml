@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">最終同期：%1$s</string>
     <string name="wikis_replicas_remove_confirm_message">「%1$s」への更新の送信を停止します。希望すれば再度レプリケートできます。</string>
     <string name="wikis_replicas_removed_success">レプリカを削除しました</string>
+    <string name="wikis_load_more">もっと読み込む</string>
+    <string name="wikis_access_change_level">アクセスレベル</string>
+    <string name="wikis_access_subject_anyone">全員</string>
+    <string name="wikis_access_subject_authenticated">認証済みユーザー</string>
 
 </resources>

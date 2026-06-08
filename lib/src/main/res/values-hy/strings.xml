@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Այդ կոդը սխալ է կամ ժամկետանց է։</string>
     <string name="stepup_error_passkey">Անցաբանալու ստուգումը ձախողվեց։ Խնդրում ենք նորից փորձել։</string>
     <string name="stepup_error_oauth">Չհաջողվեց ստուգել այդ հաշվով։ Խնդրում ենք նորից փորձել։</string>
+    <string name="game_system_resign">%1$s-ը հանձնվեց</string>
+    <string name="game_system_draw_offer">%1$s-ը ոչ-ոքի առաջարկեց</string>
+    <string name="game_system_draw_accept">Ոչ-ոքի համաձայնեցվեց</string>
+    <string name="game_system_draw_decline">%1$s-ը մերժեց ոչ-ոքին</string>
 </resources>

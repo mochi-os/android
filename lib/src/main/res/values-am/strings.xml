@@ -263,4 +263,8 @@
     <string name="stepup_error_code">ያ ኮድ የተሳሳተ ነው ወይም ጊዜው አልፎበታል።</string>
     <string name="stepup_error_passkey">የይለፍ ቁልፍ ማረጋገጫ አልተሳካም። እባክዎ እንደገና ይሞክሩ።</string>
     <string name="stepup_error_oauth">በዚያ መለያ ማረጋገጥ አልተቻለም። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="game_system_resign">%1$s እጅ ሰጠ</string>
+    <string name="game_system_draw_offer">%1$s አቻ ጨዋታ አቀረበ</string>
+    <string name="game_system_draw_accept">አቻ ጨዋታ ተስማምቷል</string>
+    <string name="game_system_draw_decline">%1$s አቻ ጨዋታውን አልተቀበለም</string>
 </resources>

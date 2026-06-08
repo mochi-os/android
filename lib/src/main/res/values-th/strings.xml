@@ -263,4 +263,8 @@
     <string name="stepup_error_code">รหัสนั้นไม่ถูกต้องหรือหมดอายุแล้ว</string>
     <string name="stepup_error_passkey">การยืนยันด้วยพาสคีย์ล้มเหลว โปรดลองอีกครั้ง</string>
     <string name="stepup_error_oauth">ไม่สามารถยืนยันด้วยบัญชีนั้นได้ โปรดลองอีกครั้ง</string>
+    <string name="game_system_resign">%1$s ยอมแพ้</string>
+    <string name="game_system_draw_offer">%1$s เสนอเสมอ</string>
+    <string name="game_system_draw_accept">ตกลงเสมอ</string>
+    <string name="game_system_draw_decline">%1$s ปฏิเสธการเสมอ</string>
 </resources>

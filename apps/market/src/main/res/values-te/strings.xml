@@ -23,6 +23,10 @@
     <string name="market_back">వెనుకకు</string>
     <string name="market_bid_dialog_amount_label">మీ బిడ్</string>
     <string name="market_bid_dialog_cancel">రద్దు చేయండి</string>
+    <string name="market_bid_dialog_ceiling_help">ఈ గరిష్టం వరకు, ముందుండడానికి అవసరమైన అతి తక్కువ మొత్తంతో మేము మీ బిడ్‌ను స్వయంచాలకంగా పెంచుతాము.</string>
+    <string name="market_bid_dialog_instant_win">కొనుగోలు నిర్ధారించబడింది — పేమెంట్ పూర్తి చేయండి</string>
+    <string name="market_bid_dialog_invalid_ceiling">గరిష్ఠ బిడ్ కనీసం మీ బిడ్ మొత్తం ఉండాలి</string>
+    <string name="market_bid_dialog_outbid">మీ బిడ్ ఉంచబడింది కానీ వెంటనే మించిపోయింది. మరొక బిడ్డర్‌కి అధిక గరిష్టం ఉంది. వారి బిడ్ ఇప్పుడు %1$s.</string>
     <string name="market_bid_dialog_submit">బిడ్ చేయండి</string>
     <string name="market_bid_dialog_success">బిడ్ ఉంచబడింది</string>
     <string name="market_bid_dialog_title">బిడ్ చేయండి</string>

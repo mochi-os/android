@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Viimeisin synkronointi: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Tämä lopettaa päivitysten lähettämisen kohteeseen \"%1$s\". He voivat replikoida uudelleen halutessaan.</string>
     <string name="wikis_replicas_removed_success">Replika poistettu</string>
+    <string name="wikis_load_more">Lataa lisää</string>
+    <string name="wikis_access_change_level">Käyttöoikeustaso</string>
+    <string name="wikis_access_subject_anyone">Kuka tahansa</string>
+    <string name="wikis_access_subject_authenticated">Todennetut käyttäjät</string>
 
 </resources>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Dieser Code ist falsch oder abgelaufen.</string>
     <string name="stepup_error_passkey">Die Passkey-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
     <string name="stepup_error_oauth">Verifizierung mit diesem Konto fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
+    <string name="game_system_resign">%1$s hat aufgegeben</string>
+    <string name="game_system_draw_offer">%1$s hat ein Remis angeboten</string>
+    <string name="game_system_draw_accept">Remis vereinbart</string>
+    <string name="game_system_draw_decline">%1$s hat das Remis abgelehnt</string>
 </resources>

@@ -41,6 +41,7 @@ import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.LoadMoreButton
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Change
 import org.mochios.wikis.navigation.WikisApp
@@ -118,6 +119,9 @@ fun ChangesListScreen(
                     CompositionLocalProvider(LocalWikiContext provides wikiCtx) {
                         ChangesBody(
                             changes = state.changes,
+                            hasMore = state.hasMore,
+                            isLoadingMore = state.isLoadingMore,
+                            onLoadMore = { viewModel.loadMore() },
                             onOpenPage = { slug ->
                                 navController.navigate(
                                     WikisApp.pageView(viewModel.wikiId, slug)
@@ -134,6 +138,9 @@ fun ChangesListScreen(
 @Composable
 private fun ChangesBody(
     changes: List<Change>,
+    hasMore: Boolean,
+    isLoadingMore: Boolean,
+    onLoadMore: () -> Unit,
     onOpenPage: (String) -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
@@ -180,6 +187,15 @@ private fun ChangesBody(
                         onClick = { onOpenPage(change.slug) },
                     )
                     HorizontalDivider()
+                }
+                if (hasMore) {
+                    item(key = "load-more") {
+                        LoadMoreButton(
+                            label = stringResource(R.string.wikis_load_more),
+                            isLoading = isLoadingMore,
+                            onClick = onLoadMore,
+                        )
+                    }
                 }
             }
         }

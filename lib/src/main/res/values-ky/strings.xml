@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Бул код туура эмес же мөөнөтү бүткөн.</string>
     <string name="stepup_error_passkey">Passkey текшерүүсү ишке ашкан жок. Кайра аракет кылыңыз.</string>
     <string name="stepup_error_oauth">Бул каттоо эсеби менен текшерүү мүмкүн болбоду. Кайра аракет кылыңыз.</string>
+    <string name="game_system_resign">%1$s баш тартты</string>
+    <string name="game_system_draw_offer">%1$s тең оюн сунуштады</string>
+    <string name="game_system_draw_accept">Тең оюнга макул болушту</string>
+    <string name="game_system_draw_decline">%1$s тең оюндан баш тартты</string>
 </resources>

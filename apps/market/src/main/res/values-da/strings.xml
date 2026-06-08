@@ -16,6 +16,10 @@
     <string name="market_asset_download">Download</string>
     <string name="market_back">Tilbage</string>
     <string name="market_bid_dialog_cancel">Annuller</string>
+    <string name="market_bid_dialog_ceiling_help">Vi hæver automatisk dit bud med det mindste beløb, der er nødvendigt for at forblive foran, op til dette maksimum.</string>
+    <string name="market_bid_dialog_instant_win">Køb bekræftet — gennemfør betaling</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimumbud skal mindst være lig med dit budbeløb</string>
+    <string name="market_bid_dialog_outbid">Dit bud blev afgivet, men straks overgået. En anden byder har et højere maksimum. Deres bud er nu %1$s.</string>
     <string name="market_bid_dialog_submit">Byd</string>
     <string name="market_bid_dialog_success">Bud afgivet</string>
     <string name="market_bid_dialog_title">Byd</string>

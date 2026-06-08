@@ -16,6 +16,10 @@
     <string name="market_asset_download">Descarcă</string>
     <string name="market_back">Înapoi</string>
     <string name="market_bid_dialog_cancel">Anulează</string>
+    <string name="market_bid_dialog_ceiling_help">Vom majora automat oferta dvs. cu cea mai mică sumă necesară pentru a rămâne în frunte, până la acest maxim.</string>
+    <string name="market_bid_dialog_instant_win">Achiziție confirmată — finalizează plata</string>
+    <string name="market_bid_dialog_invalid_ceiling">Oferta maximă trebuie să fie cel puțin egală cu suma ofertei tale</string>
+    <string name="market_bid_dialog_outbid">Oferta dvs. a fost plasată, dar a fost depășită imediat. Un alt licitator are un maxim mai mare. Oferta lui acum este %1$s.</string>
     <string name="market_bid_dialog_submit">Licitează</string>
     <string name="market_bid_dialog_success">Ofertă plasată</string>
     <string name="market_bid_dialog_title">Licitează</string>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">वह कोड गलत है या समाप्त हो चुका है।</string>
     <string name="stepup_error_passkey">पासकी सत्यापन विफल रहा। कृपया पुनः प्रयास करें।</string>
     <string name="stepup_error_oauth">उस खाते से सत्यापन नहीं हो सका। कृपया पुनः प्रयास करें।</string>
+    <string name="game_system_resign">%1$s ने हार मानी</string>
+    <string name="game_system_draw_offer">%1$s ने ड्रॉ का प्रस्ताव दिया</string>
+    <string name="game_system_draw_accept">ड्रॉ पर सहमति बनी</string>
+    <string name="game_system_draw_decline">%1$s ने ड्रॉ अस्वीकार किया</string>
 </resources>

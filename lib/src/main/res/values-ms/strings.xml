@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Kod itu tidak betul atau telah tamat tempoh.</string>
     <string name="stepup_error_passkey">Pengesahan kunci laluan gagal. Sila cuba lagi.</string>
     <string name="stepup_error_oauth">Tidak dapat mengesahkan dengan akaun itu. Sila cuba lagi.</string>
+    <string name="game_system_resign">%1$s mengaku kalah</string>
+    <string name="game_system_draw_offer">%1$s menawarkan seri</string>
+    <string name="game_system_draw_accept">Seri dipersetujui</string>
+    <string name="game_system_draw_decline">%1$s menolak seri</string>
 </resources>

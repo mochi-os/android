@@ -16,6 +16,10 @@
     <string name="market_asset_download">ดาวน์โหลด</string>
     <string name="market_back">ย้อนกลับ</string>
     <string name="market_bid_dialog_cancel">ยกเลิก</string>
+    <string name="market_bid_dialog_ceiling_help">เราจะเพิ่มการประมูลของคุณโดยอัตโนมัติด้วยจำนวนเงินน้อยที่สุดที่จำเป็นเพื่อให้นำหน้า สูงสุดถึงราคาสูงสุดนี้</string>
+    <string name="market_bid_dialog_instant_win">ยืนยันการสั่งซื้อแล้ว — โปรดชำระเงินให้เสร็จสิ้น</string>
+    <string name="market_bid_dialog_invalid_ceiling">ราคาประมูลสูงสุดต้องไม่น้อยกว่ายอดประมูลของคุณ</string>
+    <string name="market_bid_dialog_outbid">วางการประมูลของคุณแล้วแต่ถูกแซงทันที ผู้ประมูลรายอื่นตั้งราคาสูงสุดไว้สูงกว่า ขณะนี้ราคาประมูลของเขาคือ %1$s</string>
     <string name="market_bid_dialog_submit">ประมูล</string>
     <string name="market_bid_dialog_success">ประมูลแล้ว</string>
     <string name="market_bid_dialog_title">ประมูล</string>

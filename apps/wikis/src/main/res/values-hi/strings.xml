@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">अंतिम सिंक: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">यह \"%1$s\" को अपडेट भेजना बंद कर देगा। यदि वे चाहें तो वे फिर से दोहरा सकते हैं।</string>
     <string name="wikis_replicas_removed_success">प्रतिकृति हटाई गई</string>
+    <string name="wikis_load_more">और लोड करें</string>
+    <string name="wikis_access_change_level">एक्सेस स्तर</string>
+    <string name="wikis_access_subject_anyone">कोई भी</string>
+    <string name="wikis_access_subject_authenticated">प्रमाणित उपयोगकर्ता</string>
 
 </resources>

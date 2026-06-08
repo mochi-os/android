@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Cieľ</string>
     <string name="forums_access_level_view">Zobraziť</string>
+    <string name="forums_access_level_vote">Hlasovať</string>
     <string name="forums_access_level_comment">Komentár</string>
     <string name="forums_access_level_post">Príspevok</string>
     <string name="forums_access_level_none">Žiadne</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID entity, @skupina, * (všetci) alebo + (členovia)</string>
     <string name="forums_access_level">Úroveň</string>
     <string name="forums_access_level_moderate">Moderovať</string>
-    <string name="forums_access_level_manage">Spravovať</string>
     <string name="forums_members_search">Filtrovať členov</string>
     <string name="forums_banner_description">Markdown zobrazený v hornej časti fóra.</string>
     <string name="forums_banner_placeholder">Vitajte na tomto fóre…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Nebezpečná zóna</string>
     <string name="forums_settings_delete_message">Týmto sa natrvalo odstráni fórum a všetky jeho príspevky. Túto akciu nie je možné vrátiť späť.</string>
 
+    <string name="forums_tag_interest_up">Zvýšiť záujem</string>
+    <string name="forums_tag_interest_down">Znížiť záujem</string>
+    <string name="forums_tag_interest_remove">Odstrániť záujem</string>
 </resources>

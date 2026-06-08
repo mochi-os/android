@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Ten kod jest nieprawidłowy lub wygasł.</string>
     <string name="stepup_error_passkey">Weryfikacja kluczem dostępu nie powiodła się. Spróbuj ponownie.</string>
     <string name="stepup_error_oauth">Nie udało się zweryfikować przy użyciu tego konta. Spróbuj ponownie.</string>
+    <string name="game_system_resign">%1$s poddał się</string>
+    <string name="game_system_draw_offer">%1$s zaproponował remis</string>
+    <string name="game_system_draw_accept">Uzgodniono remis</string>
+    <string name="game_system_draw_decline">%1$s odrzucił remis</string>
 </resources>

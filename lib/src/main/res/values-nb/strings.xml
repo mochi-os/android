@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Den koden er feil eller har utløpt.</string>
     <string name="stepup_error_passkey">Verifisering med passnøkkel mislyktes. Prøv igjen.</string>
     <string name="stepup_error_oauth">Kunne ikke verifisere med den kontoen. Prøv igjen.</string>
+    <string name="game_system_resign">%1$s ga opp</string>
+    <string name="game_system_draw_offer">%1$s tilbød remis</string>
+    <string name="game_system_draw_accept">Remis avtalt</string>
+    <string name="game_system_draw_decline">%1$s avslo remis</string>
 </resources>

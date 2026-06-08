@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Loo khowudi ayichanekanga okanye iphelelwe lixesha.</string>
     <string name="stepup_error_passkey">Ukuqinisekiswa kwe-passkey akuphumelelanga. Nceda uzame kwakhona.</string>
     <string name="stepup_error_oauth">Akukwazekanga ukuqinisekisa ngaloo akhawunti. Nceda uzame kwakhona.</string>
+    <string name="game_system_resign">%1$s unikele</string>
+    <string name="game_system_draw_offer">%1$s ucebise ukulingana</string>
+    <string name="game_system_draw_accept">Kuvunyelwene ngokulingana</string>
+    <string name="game_system_draw_decline">%1$s wala ukulingana</string>
 </resources>

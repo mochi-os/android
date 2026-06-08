@@ -16,6 +16,10 @@
     <string name="market_asset_download">Downloaden</string>
     <string name="market_back">Terug</string>
     <string name="market_bid_dialog_cancel">Annuleren</string>
+    <string name="market_bid_dialog_ceiling_help">We verhogen je bod automatisch met het kleinste bedrag dat nodig is om voorop te blijven, tot dit maximum.</string>
+    <string name="market_bid_dialog_instant_win">Aankoop bevestigd — voltooi de betaling</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maximumbod moet minstens gelijk zijn aan je bod</string>
+    <string name="market_bid_dialog_outbid">Je bod is geplaatst, maar werd direct overboden. Een andere bieder heeft een hoger maximum. Zijn bod is nu %1$s.</string>
     <string name="market_bid_dialog_submit">Bod plaatsen</string>
     <string name="market_bid_dialog_success">Bod geplaatst</string>
     <string name="market_bid_dialog_title">Bod plaatsen</string>

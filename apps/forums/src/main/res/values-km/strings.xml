@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">គោលដៅ</string>
     <string name="forums_access_level_view">មើល</string>
+    <string name="forums_access_level_vote">បោះឆ្នោត</string>
     <string name="forums_access_level_comment">មតិយោបល់</string>
     <string name="forums_access_level_post">ប្រកាស</string>
     <string name="forums_access_level_none">គ្មាន</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">លេខសម្គាល់អង្គភាព, @group, * (មនុស្សគ្រប់គ្នា), ឬ + (សមាជិក)</string>
     <string name="forums_access_level">កម្រិត</string>
     <string name="forums_access_level_moderate">សម្របសម្រួល</string>
-    <string name="forums_access_level_manage">គ្រប់គ្រង</string>
     <string name="forums_members_search">ច្រោះសមាជិក</string>
     <string name="forums_banner_description">Markdown ដែលបង្ហាញនៅផ្នែកខាងលើនៃវេទិកា។</string>
     <string name="forums_banner_placeholder">សូមស្វាគមន៍មកកាន់វេទិកានេះ…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">តំបន់គ្រោះថ្នាក់</string>
     <string name="forums_settings_delete_message">វានឹងលុបវេទិកា និងការប្រកាសទាំងអស់របស់វាជាអចិន្ត្រៃយ៍។ វាមិនអាចត្រឡប់វិញបានទេ។</string>
 
+    <string name="forums_tag_interest_up">បង្កើនចំណាប់អារម្មណ៍</string>
+    <string name="forums_tag_interest_down">កាត់បន្ថយចំណាប់អារម្មណ៍</string>
+    <string name="forums_tag_interest_remove">យកចំណាប់អារម្មណ៍ចេញ</string>
 </resources>

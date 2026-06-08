@@ -33,6 +33,10 @@
     <string name="market_back">Буцах</string>
     <string name="market_bid_dialog_amount_label">Таны санал</string>
     <string name="market_bid_dialog_cancel">Цуцлах</string>
+    <string name="market_bid_dialog_ceiling_help">Бид таны саналыг урд нь үлдэхэд шаардлагатай хамгийн бага дүнгээр автоматаар нэмэгдүүлнэ, энэ дээд хязгаар хүртэл.</string>
+    <string name="market_bid_dialog_instant_win">Худалдан авалт батлагдсан — төлбөрөө дуусгана уу</string>
+    <string name="market_bid_dialog_invalid_ceiling">Хамгийн дээд үнийн санал нь үнийн саналаас доошгүй байх ёстой</string>
+    <string name="market_bid_dialog_outbid">Таны санал тавигдсан боловч шууд давагдсан. Өөр оролцогч илүү өндөр дээд хязгаартай байна. Түүний санал одоо %1$s байна.</string>
     <string name="market_bid_dialog_current_high">Одоогийн дээд санал: %1$s</string>
     <string name="market_bid_dialog_failed">Санал гаргаж чадсангүй</string>
     <string name="market_bid_dialog_invalid_amount">Одоогийн саналаас өндөр дүн оруулна уу</string>

@@ -23,6 +23,10 @@
     <string name="market_back">Emuva</string>
     <string name="market_bid_dialog_amount_label">Isipho sakho</string>
     <string name="market_bid_dialog_cancel">Khansela</string>
+    <string name="market_bid_dialog_ceiling_help">Sizokwenyusa inzuzo yakho ngokuzenzakalelayo ngenani elincane elidingekayo ukuze uhlale phambili, kuze kufike kuleli nani eliphezulu.</string>
+    <string name="market_bid_dialog_instant_win">Ukuthenga kuqinisekisiwe — qedela inkokhelo</string>
+    <string name="market_bid_dialog_invalid_ceiling">Inani lokucathama eliphezulu kufanele okungenani libe inani lakho lokucathama</string>
+    <string name="market_bid_dialog_outbid">Inzuzo yakho ifakiwe kodwa idluliswe ngokushesha. Omunye umfaki-mali unenani eliphezulu kakhulu. Inzuzo yakhe manje ingu-%1$s.</string>
     <string name="market_bid_dialog_submit">Faka isipho</string>
     <string name="market_bid_dialog_success">Ukuncintisana kufakiwe</string>
     <string name="market_bid_dialog_title">Faka isipho</string>

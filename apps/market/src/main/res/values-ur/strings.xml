@@ -16,6 +16,10 @@
     <string name="market_asset_download">ڈاؤن لوڈ</string>
     <string name="market_back">واپس</string>
     <string name="market_bid_dialog_cancel">منسوخ کریں</string>
+    <string name="market_bid_dialog_ceiling_help">اس زیادہ سے زیادہ حد تک، آگے رہنے کے لیے درکار سب سے کم رقم سے ہم آپ کی بولی خودکار طور پر بڑھائیں گے۔</string>
+    <string name="market_bid_dialog_instant_win">خریداری کی تصدیق ہو گئی — payment مکمل کریں</string>
+    <string name="market_bid_dialog_invalid_ceiling">زیادہ سے زیادہ بولی کم از کم آپ کی بولی کی رقم کے برابر ہونی چاہیے</string>
+    <string name="market_bid_dialog_outbid">آپ کی بولی لگائی گئی لیکن فوراً پیچھے رہ گئی۔ دوسرے بولی دہندہ کے پاس زیادہ زیادہ سے زیادہ حد ہے۔ ان کی بولی اب %1$s ہے۔</string>
     <string name="market_bid_dialog_submit">بولی لگائیں</string>
     <string name="market_bid_dialog_success">بولی لگا دی گئی</string>
     <string name="market_bid_dialog_title">بولی لگائیں</string>

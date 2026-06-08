@@ -16,6 +16,10 @@
     <string name="market_asset_download">İndir</string>
     <string name="market_back">Geri</string>
     <string name="market_bid_dialog_cancel">İptal</string>
+    <string name="market_bid_dialog_ceiling_help">Bu maksimuma kadar, önde kalmanız için gereken en küçük miktarla teklifinizi otomatik olarak yükseltiriz.</string>
+    <string name="market_bid_dialog_instant_win">Satın alma onaylandı — ödemeyi tamamlayın</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimum teklif en az teklif tutarınız kadar olmalıdır</string>
+    <string name="market_bid_dialog_outbid">Teklifiniz verildi ancak hemen geçildi. Başka bir teklif sahibinin daha yüksek bir maksimumu var. Onun teklifi şimdi %1$s.</string>
     <string name="market_bid_dialog_submit">Teklif ver</string>
     <string name="market_bid_dialog_success">Teklif verildi</string>
     <string name="market_bid_dialog_title">Teklif ver</string>

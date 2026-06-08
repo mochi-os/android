@@ -23,6 +23,10 @@
     <string name="market_back">ආපසු</string>
     <string name="market_bid_dialog_amount_label">ඔබේ ලංසුව</string>
     <string name="market_bid_dialog_cancel">අවලංගු කරන්න</string>
+    <string name="market_bid_dialog_ceiling_help">මෙම උපරිමය දක්වා, ඉදිරියෙන් සිටීමට අවශ්‍ය කුඩාම මුදලින් අපි ස්වයංක්‍රීයව ඔබේ ලංසුව වැඩි කරන්නෙමු.</string>
+    <string name="market_bid_dialog_instant_win">මිලදී ගැනීම තහවුරු කරන ලදී — ගෙවීම සම්පූර්ණ කරන්න</string>
+    <string name="market_bid_dialog_invalid_ceiling">උපරිම ලංසුව අවම වශයෙන් ඔබේ ලංසු මුදල විය යුතුය</string>
+    <string name="market_bid_dialog_outbid">ඔබේ ලංසුව තැබුවද වහාම පසුකරගෙන ගියේය. තවත් ලංසුකරුවෙකුට ඉහළ උපරිමයක් ඇත. ඔවුන්ගේ ලංසුව දැන් %1$s වේ.</string>
     <string name="market_bid_dialog_submit">ලංසුව තබන්න</string>
     <string name="market_bid_dialog_success">ලංසුව තබන ලදී</string>
     <string name="market_bid_dialog_title">ලංසුව තබන්න</string>

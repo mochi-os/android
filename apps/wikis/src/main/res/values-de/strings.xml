@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Zuletzt synchronisiert: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Dies stoppt das Senden von Aktualisierungen an „%1$s\". Sie können erneut replizieren, wenn sie möchten.</string>
     <string name="wikis_replicas_removed_success">Replik entfernt</string>
+    <string name="wikis_load_more">Mehr laden</string>
+    <string name="wikis_access_change_level">Zugriffsebene</string>
+    <string name="wikis_access_subject_anyone">Jeder</string>
+    <string name="wikis_access_subject_authenticated">Authentifizierte Benutzer</string>
 
 </resources>

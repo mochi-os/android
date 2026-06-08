@@ -16,6 +16,10 @@
     <string name="market_asset_download">Preuzmi</string>
     <string name="market_back">Natrag</string>
     <string name="market_bid_dialog_cancel">Odustani</string>
+    <string name="market_bid_dialog_ceiling_help">Automatski ćemo povisiti vašu ponudu za najmanji potrebni iznos kako biste ostali u prednosti, do ovog maksimuma.</string>
+    <string name="market_bid_dialog_instant_win">Kupnja potvrđena — dovršite plaćanje</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimalna ponuda mora biti barem vaš iznos ponude</string>
+    <string name="market_bid_dialog_outbid">Vaša ponuda je postavljena, ali odmah nadmašena. Drugi ponuditelj ima viši maksimum. Njegova ponuda je sada %1$s.</string>
     <string name="market_bid_dialog_submit">Daj ponudu</string>
     <string name="market_bid_dialog_success">Ponuda dana</string>
     <string name="market_bid_dialog_title">Daj ponudu</string>

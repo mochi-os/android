@@ -23,6 +23,10 @@
     <string name="market_back">Bumalik</string>
     <string name="market_bid_dialog_amount_label">Iyong alok</string>
     <string name="market_bid_dialog_cancel">Kanselahin</string>
+    <string name="market_bid_dialog_ceiling_help">Awtomatiko naming itataas ang iyong alok sa pinakamaliit na halagang kailangan upang manatiling nangunguna, hanggang sa maximum na ito.</string>
+    <string name="market_bid_dialog_instant_win">Nakumpirma ang pagbili — kumpletuhin ang pagbabayad</string>
+    <string name="market_bid_dialog_invalid_ceiling">Ang maximum bid ay dapat hindi bababa sa iyong bid amount</string>
+    <string name="market_bid_dialog_outbid">Naipasok ang iyong alok pero kaagad na nilampasan. May mas mataas na maximum ang ibang nag-aalok. Ang alok niya ngayon ay %1$s.</string>
     <string name="market_bid_dialog_submit">Maglagay ng alok</string>
     <string name="market_bid_dialog_success">Nailagay ang bid</string>
     <string name="market_bid_dialog_title">Maglagay ng alok</string>

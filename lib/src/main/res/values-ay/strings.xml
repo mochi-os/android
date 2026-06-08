@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Uka codigox jan walikiti jan ukax tukutawa.</string>
     <string name="stepup_error_passkey">Passkey yatiyañax jan walikiti. Mira wasitat yant\'asma.</string>
     <string name="stepup_error_oauth">Uka cuentampi jan chiqañchasiñjamäkiti. Mayampi yant\'añamawa.</string>
+    <string name="game_system_resign">%1$s jaytawayi</string>
+    <string name="game_system_draw_offer">%1$s kikipa anatañ amuyt\'awayi</string>
+    <string name="game_system_draw_accept">Kikipa anatañ amuyt\'awi</string>
+    <string name="game_system_draw_decline">%1$s kikipa anatañ jani munkiti</string>
 </resources>

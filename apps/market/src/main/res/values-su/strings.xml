@@ -23,6 +23,10 @@
     <string name="market_back">Tukang</string>
     <string name="market_bid_dialog_amount_label">Tawaran anjeun</string>
     <string name="market_bid_dialog_cancel">Batalkeun</string>
+    <string name="market_bid_dialog_ceiling_help">Kami bakal naékkeun tawaran anjeun otomatis ku jumlah panghandapna nu diperlukeun pikeun tetep payun, dugi ka maksimum ieu.</string>
+    <string name="market_bid_dialog_instant_win">Pameseran dikonfirmasi — réngsékeun pembayaran</string>
+    <string name="market_bid_dialog_invalid_ceiling">Tawaran maksimum kudu sahanteuna sajumlah tawaran anjeun</string>
+    <string name="market_bid_dialog_outbid">Tawaran anjeun parantos diasupkeun tapi langsung dilangkungan. Penawar séjén gaduh maksimum anu langkung luhur. Tawaran maranéhanana ayeuna nyaéta %1$s.</string>
     <string name="market_bid_dialog_submit">Pasang tawaran</string>
     <string name="market_bid_dialog_success">Bid disimpen</string>
     <string name="market_bid_dialog_title">Pasang tawaran</string>

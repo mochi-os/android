@@ -23,6 +23,10 @@
     <string name="market_back">Buyela</string>
     <string name="market_bid_dialog_amount_label">Inkqubo yakho</string>
     <string name="market_bid_dialog_cancel">Rhoxisa</string>
+    <string name="market_bid_dialog_ceiling_help">Siza kuphakamisa inzala yakho ngokuzenzekelayo ngeyona mali incinci efunekayo ukuhlala phambili, kude kufike kweli nani liphezulu.</string>
+    <string name="market_bid_dialog_instant_win">Ukuthenga kuqinisekisiwe — gqibezela intlawulo</string>
+    <string name="market_bid_dialog_invalid_ceiling">Isabelo esikhulu kufuneka okungenani sibe yimali yesabelo sakho</string>
+    <string name="market_bid_dialog_outbid">Inzala yakho ifakiwe kodwa yagqithwa ngokukhawuleza. Omnye umfaki-zala unenani eliphezulu ngakumbi. Inzala yakhe ngoku yi-%1$s.</string>
     <string name="market_bid_dialog_submit">Faka inkqubo</string>
     <string name="market_bid_dialog_success">Ibhidi ibekiwe</string>
     <string name="market_bid_dialog_title">Faka inkqubo</string>

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Target</string>
     <string name="forums_access_level_view">Tingnan</string>
+    <string name="forums_access_level_vote">Bumoto</string>
     <string name="forums_access_level_comment">Komento</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Wala</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entity ID, @group, * (lahat), o + (mga miyembro)</string>
     <string name="forums_access_level">Antas</string>
     <string name="forums_access_level_moderate">Mag-moderate</string>
-    <string name="forums_access_level_manage">Mamahala</string>
     <string name="forums_members_search">I-filter ang mga miyembro</string>
     <string name="forums_banner_description">Markdown na ipinapakita sa itaas ng forum.</string>
     <string name="forums_banner_placeholder">Maligayang pagdating sa forum na ito…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Mapanganib na bahagi</string>
     <string name="forums_settings_delete_message">Permanenteng matatanggal nito ang forum at lahat ng mga post nito. Hindi ito mababawi.</string>
 
+    <string name="forums_tag_interest_up">Palakasin ang interes</string>
+    <string name="forums_tag_interest_down">Bawasan ang interes</string>
+    <string name="forums_tag_interest_remove">Alisin ang interes</string>
 </resources>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">هذا الرمز غير صحيح أو انتهت صلاحيته.</string>
     <string name="stepup_error_passkey">فشل التحقق من مفتاح المرور. يرجى المحاولة مرة أخرى.</string>
     <string name="stepup_error_oauth">تعذّر التحقق باستخدام هذا الحساب. يرجى المحاولة مرة أخرى.</string>
+    <string name="game_system_resign">استسلم %1$s</string>
+    <string name="game_system_draw_offer">عرض %1$s التعادل</string>
+    <string name="game_system_draw_accept">تم الاتفاق على التعادل</string>
+    <string name="game_system_draw_decline">رفض %1$s التعادل</string>
 </resources>

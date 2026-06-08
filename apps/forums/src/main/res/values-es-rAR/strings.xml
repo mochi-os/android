@@ -41,6 +41,7 @@
     <string name="forums_create_name">Nombre</string>
     <string name="forums_create_action">Crear</string>
     <string name="forums_access_level_view">Ver</string>
+    <string name="forums_access_level_vote">Votar</string>
     <string name="forums_access_level_none">Ninguno</string>
     <string name="forums_settings">Configuración</string>
     <string name="forums_list_more">Más</string>
@@ -122,7 +123,6 @@
     <string name="forums_access_level_comment">Comentar</string>
     <string name="forums_access_level_post">Publicar</string>
     <string name="forums_access_level_moderate">Moderar</string>
-    <string name="forums_access_level_manage">Administrar</string>
     <string name="forums_members_search">Filtrar miembros</string>
     <string name="forums_members_empty">Sin miembros</string>
     <string name="forums_banner_description">Markdown que se muestra en la parte superior del foro.</string>
@@ -198,4 +198,7 @@
     <string name="forums_forum_not_found">Foro no encontrado</string>
     <string name="forums_post_not_found">Publicación no encontrada</string>
 
+    <string name="forums_tag_interest_up">Aumentar interés</string>
+    <string name="forums_tag_interest_down">Reducir interés</string>
+    <string name="forums_tag_interest_remove">Eliminar interés</string>
 </resources>

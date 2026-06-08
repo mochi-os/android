@@ -15,6 +15,8 @@ import org.mochios.android.api.toMochiError
 import org.mochios.settings.api.BootstrapEntry
 import org.mochios.settings.api.PendingJoin
 import org.mochios.settings.api.SystemReplicationApi
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -37,6 +39,7 @@ sealed class SystemReplicationEvent {
 @HiltViewModel
 class SystemReplicationViewModel @Inject constructor(
     private val api: SystemReplicationApi,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SystemReplicationUiState())
@@ -44,6 +47,14 @@ class SystemReplicationViewModel @Inject constructor(
 
     private val _events = MutableSharedFlow<SystemReplicationEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<SystemReplicationEvent> = _events.asSharedFlow()
+
+    /** Step-up gate: approving a join replicates every user's private keys to
+     *  the peer, so the operator re-verifies their login factor(s) first. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.value = _uiState.value.copy(error = e.toMochiError()) },
+    )
 
     init { refresh() }
 
@@ -65,16 +76,14 @@ class SystemReplicationViewModel @Inject constructor(
         }
     }
 
-    fun approveJoin(peer: String) {
-        viewModelScope.launch {
-            try {
-                api.approveJoin(peer).bodyOrThrow()
-                _events.emit(SystemReplicationEvent.JoinApproved(true))
-                refresh()
-            } catch (e: Exception) {
-                _events.emit(SystemReplicationEvent.JoinApproved(false))
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
+    fun approveJoin(peer: String) = stepUp.request { token ->
+        try {
+            api.approveJoin(peer, token).bodyOrThrow()
+            _events.emit(SystemReplicationEvent.JoinApproved(true))
+            refresh()
+        } catch (e: Exception) {
+            _events.emit(SystemReplicationEvent.JoinApproved(false))
+            _uiState.value = _uiState.value.copy(error = e.toMochiError())
         }
     }
 

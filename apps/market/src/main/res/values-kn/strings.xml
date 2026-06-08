@@ -23,6 +23,10 @@
     <string name="market_back">ಹಿಂದೆ</string>
     <string name="market_bid_dialog_amount_label">ನಿಮ್ಮ ಬಿಡ್</string>
     <string name="market_bid_dialog_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="market_bid_dialog_ceiling_help">ಈ ಗರಿಷ್ಠವರೆಗೆ, ಮುಂದಿರಲು ಬೇಕಾದ ಕನಿಷ್ಠ ಮೊತ್ತದಿಂದ ನಾವು ನಿಮ್ಮ ಬಿಡ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹೆಚ್ಚಿಸುತ್ತೇವೆ.</string>
+    <string name="market_bid_dialog_instant_win">ಖರೀದಿ ದೃಢೀಕೃತ — ಪಾವತಿ ಪೂರ್ಣಗೊಳಿಸಿ</string>
+    <string name="market_bid_dialog_invalid_ceiling">ಗರಿಷ್ಠ ಬಿಡ್ ಕನಿಷ್ಠ ನಿಮ್ಮ ಬಿಡ್ ಮೊತ್ತದಷ್ಟಿರಬೇಕು</string>
+    <string name="market_bid_dialog_outbid">ನಿಮ್ಮ ಬಿಡ್ ಸಲ್ಲಿಸಲಾಯಿತು ಆದರೆ ತಕ್ಷಣವೇ ಮೀರಿಸಲಾಯಿತು. ಮತ್ತೊಬ್ಬ ಬಿಡ್ದಾರನ ಗರಿಷ್ಠವು ಹೆಚ್ಚಿದೆ. ಅವರ ಬಿಡ್ ಈಗ %1$s.</string>
     <string name="market_bid_dialog_submit">ಬಿಡ್ ಇಡಿ</string>
     <string name="market_bid_dialog_success">ಬಿಡ್ ಇಡಲಾಗಿದೆ</string>
     <string name="market_bid_dialog_title">ಬಿಡ್ ಇಡಿ</string>

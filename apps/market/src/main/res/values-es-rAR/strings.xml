@@ -6,6 +6,8 @@
     <string name="market_appeal_dialog_submit">Enviá la apelación</string>
     <string name="market_asset_download">Descargá</string>
     <string name="market_bid_dialog_cancel">Cancelá</string>
+    <string name="market_bid_dialog_ceiling_help">Subiremos tu oferta automáticamente con la mínima cantidad necesaria para mantenerte adelante, hasta este máximo.</string>
+    <string name="market_bid_dialog_outbid">Tu oferta se realizó pero fue superada de inmediato. Otro postor tiene un máximo más alto. Su oferta ahora es %1$s.</string>
     <string name="market_checkout_buy_it_now">Comprá ahora</string>
     <string name="market_checkout_delivery_download">Descargá</string>
     <string name="market_checkout_get_free">Conseguilo gratis</string>

@@ -16,6 +16,10 @@
     <string name="market_asset_download">下載</string>
     <string name="market_back">返回</string>
     <string name="market_bid_dialog_cancel">取消</string>
+    <string name="market_bid_dialog_ceiling_help">我們將自動把您的出價提高至保持領先所需的最小金額,最高至此上限。</string>
+    <string name="market_bid_dialog_instant_win">購買已確認 — 完成付款</string>
+    <string name="market_bid_dialog_invalid_ceiling">最高出價必須至少為您的出價金額</string>
+    <string name="market_bid_dialog_outbid">您的出價已提交,但立即被超越。另一位競標者設定了更高的上限。他們現在的出價為 %1$s。</string>
     <string name="market_bid_dialog_submit">出價</string>
     <string name="market_bid_dialog_success">競標已下標</string>
     <string name="market_bid_dialog_title">出價</string>

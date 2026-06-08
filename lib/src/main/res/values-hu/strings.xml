@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Ez a kód helytelen vagy lejárt.</string>
     <string name="stepup_error_passkey">A hozzáférési kulcs ellenőrzése sikertelen. Próbálja újra.</string>
     <string name="stepup_error_oauth">Nem sikerült ellenőrizni azzal a fiókkal. Kérjük, próbálja újra.</string>
+    <string name="game_system_resign">%1$s feladta</string>
+    <string name="game_system_draw_offer">%1$s döntetlent ajánlott</string>
+    <string name="game_system_draw_accept">Döntetlen elfogadva</string>
+    <string name="game_system_draw_decline">%1$s elutasította a döntetlent</string>
 </resources>

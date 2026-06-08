@@ -263,4 +263,8 @@
     <string name="stepup_error_code">එම කේතය වැරදියි හෝ කල් ඉකුත් වී ඇත.</string>
     <string name="stepup_error_passkey">මුරයතුර සත්‍යාපනය අසාර්ථක විය. නැවත උත්සාහ කරන්න.</string>
     <string name="stepup_error_oauth">එම ගිණුම සමඟ සත්‍යාපනය කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න.</string>
+    <string name="game_system_resign">%1$s ඉල්ලා අස්විය</string>
+    <string name="game_system_draw_offer">%1$s ජය පරාජයක් නැති බව යෝජනා කළේය</string>
+    <string name="game_system_draw_accept">ජය පරාජයක් නැති බව එකඟ විය</string>
+    <string name="game_system_draw_decline">%1$s ජය පරාජයක් නැති බව ප්‍රතික්ෂේප කළේය</string>
 </resources>

@@ -16,6 +16,10 @@
     <string name="market_asset_download">डाउनलोड</string>
     <string name="market_back">वापस</string>
     <string name="market_bid_dialog_cancel">रद्द करें</string>
+    <string name="market_bid_dialog_ceiling_help">इस अधिकतम तक, आगे बने रहने के लिए आवश्यक सबसे छोटी राशि से हम आपकी बोली स्वचालित रूप से बढ़ाएंगे।</string>
+    <string name="market_bid_dialog_instant_win">खरीदारी की पुष्टि हुई — पेमेंट पूरा करें</string>
+    <string name="market_bid_dialog_invalid_ceiling">अधिकतम बोली कम से कम आपकी बोली राशि होनी चाहिए</string>
+    <string name="market_bid_dialog_outbid">आपकी बोली लगाई गई लेकिन तुरंत ही पीछे रह गई। दूसरे बोलीदार के पास अधिक अधिकतम राशि है। उनकी बोली अब %1$s है।</string>
     <string name="market_bid_dialog_submit">बोली लगाएँ</string>
     <string name="market_bid_dialog_success">बोली लगाई गई</string>
     <string name="market_bid_dialog_title">बोली लगाएँ</string>

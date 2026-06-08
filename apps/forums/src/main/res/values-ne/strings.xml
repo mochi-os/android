@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">लक्ष्य</string>
     <string name="forums_access_level_view">हेर्नुहोस्</string>
+    <string name="forums_access_level_vote">मत दिनुहोस्</string>
     <string name="forums_access_level_comment">टिप्पणी</string>
     <string name="forums_access_level_post">पोस्ट</string>
     <string name="forums_access_level_none">कुनै पनि होइन</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">एन्टिटी ID, @समूह, * (सबैजना), वा + (सदस्यहरू)</string>
     <string name="forums_access_level">स्तर</string>
     <string name="forums_access_level_moderate">मध्यस्थता</string>
-    <string name="forums_access_level_manage">व्यवस्थापन</string>
     <string name="forums_members_search">सदस्यहरू फिल्टर गर्नुहोस्</string>
     <string name="forums_banner_description">फोरमको शीर्षमा देखाइने Markdown।</string>
     <string name="forums_banner_placeholder">यस फोरममा स्वागत छ…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">खतरा क्षेत्र</string>
     <string name="forums_settings_delete_message">यसले फोरम र यसका सबै पोस्टहरू स्थायी रूपमा मेटाउनेछ। यो पूर्ववत गर्न सकिँदैन।</string>
 
+    <string name="forums_tag_interest_up">रुचि बढाउनुहोस्</string>
+    <string name="forums_tag_interest_down">रुचि घटाउनुहोस्</string>
+    <string name="forums_tag_interest_remove">रुचि हटाउनुहोस्</string>
 </resources>

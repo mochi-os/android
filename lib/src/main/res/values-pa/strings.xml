@@ -263,4 +263,8 @@
     <string name="stepup_error_code">ਉਹ ਕੋਡ ਗਲਤ ਹੈ ਜਾਂ ਇਸ ਦੀ ਮਿਆਦ ਖਤਮ ਹੋ ਗਈ ਹੈ।</string>
     <string name="stepup_error_passkey">ਪਾਸਕੀ ਤਸਦੀਕ ਅਸਫਲ ਰਹੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
     <string name="stepup_error_oauth">ਉਸ ਖਾਤੇ ਨਾਲ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="game_system_resign">%1$s ਨੇ ਹਾਰ ਮੰਨ ਲਈ</string>
+    <string name="game_system_draw_offer">%1$s ਨੇ ਡਰਾਅ ਦੀ ਪੇਸ਼ਕਸ਼ ਕੀਤੀ</string>
+    <string name="game_system_draw_accept">ਡਰਾਅ ਤੇ ਸਹਿਮਤੀ ਹੋਈ</string>
+    <string name="game_system_draw_decline">%1$s ਨੇ ਡਰਾਅ ਠੁਕਰਾ ਦਿੱਤਾ</string>
 </resources>

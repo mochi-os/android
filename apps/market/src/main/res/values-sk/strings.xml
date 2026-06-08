@@ -16,6 +16,10 @@
     <string name="market_asset_download">Stiahnuť</string>
     <string name="market_back">Späť</string>
     <string name="market_bid_dialog_cancel">Zrušiť</string>
+    <string name="market_bid_dialog_ceiling_help">Vašu ponuku budeme automaticky zvyšovať o najmenšiu potrebnú sumu, aby ste zostali vpredu, až do tohto maxima.</string>
+    <string name="market_bid_dialog_instant_win">Nákup potvrdený — dokončite platbu</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maximálna ponuka musí byť aspoň vaša suma ponuky</string>
+    <string name="market_bid_dialog_outbid">Vaša ponuka bola podaná, ale okamžite prekonaná. Iný účastník má vyššie maximum. Jeho ponuka je teraz %1$s.</string>
     <string name="market_bid_dialog_submit">Ponúknuť</string>
     <string name="market_bid_dialog_success">Ponuka podaná</string>
     <string name="market_bid_dialog_title">Ponúknuť</string>

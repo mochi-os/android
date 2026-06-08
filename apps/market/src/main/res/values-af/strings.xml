@@ -33,6 +33,10 @@
     <string name="market_back">Terug</string>
     <string name="market_bid_dialog_amount_label">Jou bod</string>
     <string name="market_bid_dialog_cancel">Kanselleer</string>
+    <string name="market_bid_dialog_ceiling_help">Ons sal jou bod outomaties met die kleinste bedrag verhoog wat nodig is om voor te bly, tot by hierdie maksimum.</string>
+    <string name="market_bid_dialog_instant_win">Aankoop bevestig — voltooi betaling</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimum bod moet ten minste jou bodbedrag wees</string>
+    <string name="market_bid_dialog_outbid">Jou bod is geplaas maar onmiddellik oortroef. \'n Ander bieder het \'n hoër maksimum. Hul bod is nou %1$s.</string>
     <string name="market_bid_dialog_current_high">Huidige hoogste bod: %1$s</string>
     <string name="market_bid_dialog_failed">Kon nie bod plaas nie</string>
     <string name="market_bid_dialog_invalid_amount">Voer \'n bedrag hoër as die huidige bod in</string>

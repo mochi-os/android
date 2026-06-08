@@ -16,6 +16,10 @@
     <string name="market_asset_download">Scarica</string>
     <string name="market_back">Indietro</string>
     <string name="market_bid_dialog_cancel">Annulla</string>
+    <string name="market_bid_dialog_ceiling_help">Aumenteremo automaticamente la tua offerta dell\'importo minimo necessario per restare in testa, fino a questo massimo.</string>
+    <string name="market_bid_dialog_instant_win">Acquisto confermato — completa il pagamento</string>
+    <string name="market_bid_dialog_invalid_ceiling">L\'offerta massima deve essere almeno pari al tuo importo di offerta</string>
+    <string name="market_bid_dialog_outbid">La tua offerta è stata piazzata ma immediatamente superata. Un altro offerente ha un massimo più alto. La sua offerta è ora di %1$s.</string>
     <string name="market_bid_dialog_submit">Offri</string>
     <string name="market_bid_dialog_success">Offerta presentata</string>
     <string name="market_bid_dialog_title">Offri</string>

@@ -16,6 +16,10 @@
     <string name="market_asset_download">دانلود</string>
     <string name="market_back">بازگشت</string>
     <string name="market_bid_dialog_cancel">لغو</string>
+    <string name="market_bid_dialog_ceiling_help">پیشنهاد شما را به‌طور خودکار با کمترین مبلغ لازم برای جلو ماندن افزایش می‌دهیم، تا این حداکثر.</string>
+    <string name="market_bid_dialog_instant_win">خرید تأیید شد — پرداخت را تکمیل کنید</string>
+    <string name="market_bid_dialog_invalid_ceiling">حداکثر پیشنهاد باید حداقل برابر مبلغ پیشنهاد شما باشد</string>
+    <string name="market_bid_dialog_outbid">پیشنهاد شما ثبت شد اما بلافاصله از آن پیشی گرفته شد. پیشنهاد‌دهنده دیگری حداکثر بالاتری دارد. پیشنهاد او اکنون %1$s است.</string>
     <string name="market_bid_dialog_submit">ثبت پیشنهاد</string>
     <string name="market_bid_dialog_success">پیشنهاد ثبت شد</string>
     <string name="market_bid_dialog_title">ثبت پیشنهاد</string>

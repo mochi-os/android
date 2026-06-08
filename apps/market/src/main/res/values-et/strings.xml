@@ -16,6 +16,10 @@
     <string name="market_asset_download">Laadi alla</string>
     <string name="market_back">Tagasi</string>
     <string name="market_bid_dialog_cancel">Tühista</string>
+    <string name="market_bid_dialog_ceiling_help">Tõstame teie pakkumist automaatselt väikseima summa võrra, mis on vajalik ettepoole jäämiseks, kuni selle maksimumini.</string>
+    <string name="market_bid_dialog_instant_win">Ost kinnitatud — vii makse lõpule</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimaalne pakkumine peab olema vähemalt sinu pakkumise summa</string>
+    <string name="market_bid_dialog_outbid">Teie pakkumine esitati, kuid see ületati kohe. Teisel pakkujal on kõrgem maksimum. Tema pakkumine on nüüd %1$s.</string>
     <string name="market_bid_dialog_submit">Tee pakkumine</string>
     <string name="market_bid_dialog_success">Pakkumine tehtud</string>
     <string name="market_bid_dialog_title">Tee pakkumine</string>

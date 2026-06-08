@@ -263,4 +263,8 @@
     <string name="stepup_error_code">هغه کوډ غلط دی یا یې موده تېره ده.</string>
     <string name="stepup_error_passkey">د پاس کیلۍ تایید ناکام شو. مهرباني وکړئ بیا هڅه وکړئ.</string>
     <string name="stepup_error_oauth">د دغه حساب سره تصدیق ونشو. مهرباني وکړئ بیا هڅه وکړئ.</string>
+    <string name="game_system_resign">%1$s ماتې ومنله</string>
+    <string name="game_system_draw_offer">%1$s د مساوي وړاندیز وکړ</string>
+    <string name="game_system_draw_accept">په مساوي موافقه وشوه</string>
+    <string name="game_system_draw_decline">%1$s مساوي رد کړ</string>
 </resources>

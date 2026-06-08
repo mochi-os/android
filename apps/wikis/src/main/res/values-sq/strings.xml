@@ -303,4 +303,8 @@
     <string name="wikis_replicas_col_synced">Sinkronizimi i fundit: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Kjo do të ndalojë dërgimin e përditësimeve te „%1$s\". Mund të riprodhojnë përsëri nëse duan.</string>
     <string name="wikis_replicas_removed_success">Replika u hoq</string>
+    <string name="wikis_load_more">Ngarko më shumë</string>
+    <string name="wikis_access_change_level">Niveli i qasjes</string>
+    <string name="wikis_access_subject_anyone">Kushdo</string>
+    <string name="wikis_access_subject_authenticated">Përdorues të vërtetuar</string>
 </resources>

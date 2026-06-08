@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Ibi àfojúsùn</string>
     <string name="forums_access_level_view">Wo</string>
+    <string name="forums_access_level_vote">Dìbò</string>
     <string name="forums_access_level_comment">Àlàyé</string>
     <string name="forums_access_level_post">Ìfìránṣẹ́</string>
     <string name="forums_access_level_none">Kòsí</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID ẹ̀ka, @ẹgbẹ́, * (gbogbo ènìyàn), tàbí + (àwọn ọmọ ẹgbẹ́)</string>
     <string name="forums_access_level">Ipele</string>
     <string name="forums_access_level_moderate">Ṣàkóso</string>
-    <string name="forums_access_level_manage">Bójútó</string>
     <string name="forums_members_search">Yẹ àwọn ọmọ ẹgbẹ́ wò</string>
     <string name="forums_banner_description">Markdown tí ó hàn ní orí àpérò.</string>
     <string name="forums_banner_placeholder">Káàbọ̀ sí àpérò yìí…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Agbègbè ewu</string>
     <string name="forums_settings_delete_message">Èyí yóò pa àpérò àti gbogbo àwọn àkọsílẹ̀ rẹ̀ rẹ́ pátápátá. Èyí kò ṣeé yí padà.</string>
 
+    <string name="forums_tag_interest_up">Mú ìfẹ́ pọ̀</string>
+    <string name="forums_tag_interest_down">Dín ìfẹ́ kù</string>
+    <string name="forums_tag_interest_remove">Yọ ìfẹ́ kúrò</string>
 </resources>

@@ -23,6 +23,10 @@
     <string name="market_back">گەڕانەوە</string>
     <string name="market_bid_dialog_amount_label">نرخی تۆ</string>
     <string name="market_bid_dialog_cancel">هەڵوەشاندنەوە</string>
+    <string name="market_bid_dialog_ceiling_help">بە شێوەی خۆکار نرخەکەت بە بچووکترین بڕی پێویست بەرز دەکەینەوە بۆ مانەوە لە پێشەوە، تا ئەم سنوورە.</string>
+    <string name="market_bid_dialog_instant_win">کڕین پشتڕاستکرایەوە — پارەدان تەواو بکە</string>
+    <string name="market_bid_dialog_invalid_ceiling">زۆرترین نرخ پێشنیار دەبێت لانی کەم بڕی نرخ پێشنیارەکەت بێت</string>
+    <string name="market_bid_dialog_outbid">نرخەکەت دانرا بەڵام دەستبەجێ تێپەڕێندرا. نرخدێرێکی تر سنووری بەرزتری هەیە. نرخەکەی ئێستا %1$s.</string>
     <string name="market_bid_dialog_submit">نرخ بنێ</string>
     <string name="market_bid_dialog_success">نرخ دانرا</string>
     <string name="market_bid_dialog_title">نرخ بنێ</string>

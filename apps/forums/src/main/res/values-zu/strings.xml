@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">I-AI</string>
     <string name="forums_access_target">Okuqondiwe</string>
     <string name="forums_access_level_view">Buka</string>
+    <string name="forums_access_level_vote">Vota</string>
     <string name="forums_access_level_comment">Umbono</string>
     <string name="forums_access_level_post">Okuthunyelwe</string>
     <string name="forums_access_level_none">Lutho</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">I-ID yonhlangothi, @iqembu, * (wonke umuntu), noma + (amalungu)</string>
     <string name="forums_access_level">Izinga</string>
     <string name="forums_access_level_moderate">Lawula</string>
-    <string name="forums_access_level_manage">Phatha</string>
     <string name="forums_members_search">Hlunga amalungu</string>
     <string name="forums_banner_description">I-Markdown eboniswa phezulu kwenkundla.</string>
     <string name="forums_banner_placeholder">Siyakwamukela kule nkundla…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Indawo eyingozi</string>
     <string name="forums_settings_delete_message">Lokhu kuzosusa unaphakade inkundla nakho konke okuthunyelwe kuyo. Lokhu ngeke kubuyiselwe.</string>
 
+    <string name="forums_tag_interest_up">Khulisa intshisekelo</string>
+    <string name="forums_tag_interest_down">Yehlisa intshisekelo</string>
+    <string name="forums_tag_interest_remove">Khipha intshisekelo</string>
 </resources>

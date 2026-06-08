@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Максат</string>
     <string name="forums_access_level_view">Көрүү</string>
+    <string name="forums_access_level_vote">Добуш берүү</string>
     <string name="forums_access_level_comment">Комментарий</string>
     <string name="forums_access_level_post">Пост</string>
     <string name="forums_access_level_none">Эч кимиси</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Объекттин ID, @топ, * (баары), же + (мүчөлөр)</string>
     <string name="forums_access_level">Деңгээл</string>
     <string name="forums_access_level_moderate">Модерациялоо</string>
-    <string name="forums_access_level_manage">Башкаруу</string>
     <string name="forums_members_search">Мүчөлөрдү чыпкалоо</string>
     <string name="forums_banner_description">Форумдун жогору жагында көрсөтүлүүчү Markdown.</string>
     <string name="forums_banner_placeholder">Бул форумга кош келиңиз…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Кооптуу зона</string>
     <string name="forums_settings_delete_message">Бул форумду жана анын бардык жазууларын биротоло жок кылат. Бул аракетти артка кайтарууга болбойт.</string>
 
+    <string name="forums_tag_interest_up">Кызыгууну күчөтүү</string>
+    <string name="forums_tag_interest_down">Кызыгууну азайтуу</string>
+    <string name="forums_tag_interest_remove">Кызыгууну алуу</string>
 </resources>

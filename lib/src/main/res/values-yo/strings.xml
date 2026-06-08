@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Kóòdù yẹn kò tọ̀nà tàbí ó ti pé.</string>
     <string name="stepup_error_passkey">Ìjẹ́rìísí passkey kùnà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.</string>
     <string name="stepup_error_oauth">A kò lè fọwọ́sí pẹ̀lú àkàùntì yẹn. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kansí.</string>
+    <string name="game_system_resign">%1$s jọwọ́ ara rẹ̀</string>
+    <string name="game_system_draw_offer">%1$s dábàá ìfòyebánilọ́pọ̀</string>
+    <string name="game_system_draw_accept">Ìfòyebánilọ́pọ̀ ti gbà</string>
+    <string name="game_system_draw_decline">%1$s kọ ìfòyebánilọ́pọ̀</string>
 </resources>

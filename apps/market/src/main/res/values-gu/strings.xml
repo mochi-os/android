@@ -23,6 +23,10 @@
     <string name="market_back">પાછળ</string>
     <string name="market_bid_dialog_amount_label">તમારી બોલી</string>
     <string name="market_bid_dialog_cancel">રદ કરો</string>
+    <string name="market_bid_dialog_ceiling_help">આ મહત્તમ રકમ સુધી, આગળ રહેવા માટે જરૂરી ન્યૂનતમ રકમ વડે અમે તમારી બોલી આપમેળે વધારીશું.</string>
+    <string name="market_bid_dialog_instant_win">ખરીદી પુષ્ટિ થઈ — પેમેન્ટ પૂર્ણ કરો</string>
+    <string name="market_bid_dialog_invalid_ceiling">મહત્તમ બિડ ઓછામાં ઓછી તમારી બિડ રકમ જેટલી હોવી જોઈએ</string>
+    <string name="market_bid_dialog_outbid">તમારી બોલી મૂકવામાં આવી પણ તરત જ બીજાએ વધારે બોલી લગાવી. બીજા બોલીકારની મહત્તમ રકમ વધારે છે. તેમની બોલી હવે %1$s છે.</string>
     <string name="market_bid_dialog_submit">બોલી લગાવો</string>
     <string name="market_bid_dialog_success">બોલી મૂકી</string>
     <string name="market_bid_dialog_title">બોલી લગાવો</string>

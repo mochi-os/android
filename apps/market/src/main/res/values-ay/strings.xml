@@ -30,6 +30,10 @@
     <string name="market_back">Kutta</string>
     <string name="market_bid_dialog_amount_label">Jumäsa ofertama</string>
     <string name="market_bid_dialog_cancel">Jaytaña</string>
+    <string name="market_bid_dialog_ceiling_help">Nayrar sarayañatakix juk\'a jisk\'aki bid-mam jach\'achapxañani, aka maximum-kama.</string>
+    <string name="market_bid_dialog_instant_win">Alasiwi confirmata — phuqhayaña tukuyma</string>
+    <string name="market_bid_dialog_invalid_ceiling">Máximo ofertax kawkhaspas ofertama jakhunjamapuni</string>
+    <string name="market_bid_dialog_outbid">Bid-mam churatawa ukampis jankakiw yaqhamp pasayatax. Yaqha bidirix juk\'amp jach\'a maximum ukan utji. Jupan bidipax jichhax %1$s.</string>
     <string name="market_bid_dialog_submit">Ofertaña uchaña</string>
     <string name="market_bid_dialog_success">Bid uchata</string>
     <string name="market_bid_dialog_title">Ofertaña uchaña</string>

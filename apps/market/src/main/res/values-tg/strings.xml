@@ -16,6 +16,10 @@
     <string name="market_asset_download">Боргирӣ</string>
     <string name="market_back">Бозгашт</string>
     <string name="market_bid_dialog_cancel">Бекор кардан</string>
+    <string name="market_bid_dialog_ceiling_help">Мо пешниҳоди шуморо ба таври худкор ба миқдори камтарини зарурӣ барои дар пешо мондан баланд мебардорем, то ин максимум.</string>
+    <string name="market_bid_dialog_instant_win">Харид тасдиқ шуд — пардохтро анҷом диҳед</string>
+    <string name="market_bid_dialog_invalid_ceiling">Пешниҳоди ҳадди ниҳоӣ бояд камтар аз маблағи пешниҳоди шумо набошад</string>
+    <string name="market_bid_dialog_outbid">Пешниҳоди шумо гузошта шуд, аммо дарҳол гузаронида шуд. Иштирокчии дигар максимуми баландтар дорад. Пешниҳоди ӯ ҳоло %1$s аст.</string>
     <string name="market_bid_dialog_submit">Пешниҳод кардан</string>
     <string name="market_bid_dialog_success">Нарх гузошта шуд</string>
     <string name="market_bid_dialog_title">Пешниҳод кардан</string>

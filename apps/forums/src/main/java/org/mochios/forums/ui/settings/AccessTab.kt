@@ -92,10 +92,10 @@ private fun accessLevelLabel(operation: String, grant: Int): String {
     if (grant == 0) return stringResource(R.string.forums_access_level_none)
     return when (operation) {
         "view" -> stringResource(R.string.forums_access_level_view)
+        "vote" -> stringResource(R.string.forums_access_level_vote)
         "comment" -> stringResource(R.string.forums_access_level_comment)
         "post" -> stringResource(R.string.forums_access_level_post)
         "moderate" -> stringResource(R.string.forums_access_level_moderate)
-        "manage" -> stringResource(R.string.forums_access_level_manage)
         else -> operation
     }
 }
@@ -111,10 +111,10 @@ private fun AddAccessDialog(
     var levelExpanded by remember { mutableStateOf(false) }
     val levels = listOf(
         "view" to stringResource(R.string.forums_access_level_view),
+        "vote" to stringResource(R.string.forums_access_level_vote),
         "comment" to stringResource(R.string.forums_access_level_comment),
         "post" to stringResource(R.string.forums_access_level_post),
         "moderate" to stringResource(R.string.forums_access_level_moderate),
-        "manage" to stringResource(R.string.forums_access_level_manage),
         "none" to stringResource(R.string.forums_access_level_none),
     )
     val levelLabel = levels.firstOrNull { it.first == level }?.second ?: ""

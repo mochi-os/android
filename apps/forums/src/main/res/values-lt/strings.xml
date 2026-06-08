@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">DI</string>
     <string name="forums_access_target">Tikslas</string>
     <string name="forums_access_level_view">Peržiūrėti</string>
+    <string name="forums_access_level_vote">Balsuoti</string>
     <string name="forums_access_level_comment">Komentaras</string>
     <string name="forums_access_level_post">Įrašas</string>
     <string name="forums_access_level_none">Nėra</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Subjekto ID, @grupė, * (visi) arba + (nariai)</string>
     <string name="forums_access_level">Lygis</string>
     <string name="forums_access_level_moderate">Moderuoti</string>
-    <string name="forums_access_level_manage">Valdyti</string>
     <string name="forums_members_search">Filtruoti narius</string>
     <string name="forums_banner_description">Markdown rodomas forumo viršuje.</string>
     <string name="forums_banner_placeholder">Sveiki atvykę į šį forumą…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Pavojaus zona</string>
     <string name="forums_settings_delete_message">Tai visam laikui ištrins forumą ir visus jo įrašus. To atšaukti nebus galima.</string>
 
+    <string name="forums_tag_interest_up">Padidinti susidomėjimą</string>
+    <string name="forums_tag_interest_down">Sumažinti susidomėjimą</string>
+    <string name="forums_tag_interest_remove">Šalinti susidomėjimą</string>
 </resources>

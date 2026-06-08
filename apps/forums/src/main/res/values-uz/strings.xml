@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Maqsad</string>
     <string name="forums_access_level_view">Koʻrish</string>
+    <string name="forums_access_level_vote">Ovoz berish</string>
     <string name="forums_access_level_comment">Izoh</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Hech qanday</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Obyekt IDsi, @guruh, * (hamma) yoki + (aʼzolar)</string>
     <string name="forums_access_level">Daraja</string>
     <string name="forums_access_level_moderate">Moderatsiya qilish</string>
-    <string name="forums_access_level_manage">Boshqarish</string>
     <string name="forums_members_search">Aʼzolarni filtrlash</string>
     <string name="forums_banner_description">Forum yuqorisida koʻrsatiladigan Markdown.</string>
     <string name="forums_banner_placeholder">Ushbu forumga xush kelibsiz…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Xavfli zona</string>
     <string name="forums_settings_delete_message">Bu forumni va uning barcha postlarini butunlay oʻchirib tashlaydi. Bu amalni bekor qilib boʻlmaydi.</string>
 
+    <string name="forums_tag_interest_up">Qiziqishni kuchaytirish</string>
+    <string name="forums_tag_interest_down">Qiziqishni kamaytirish</string>
+    <string name="forums_tag_interest_remove">Qiziqishni olib tashlash</string>
 </resources>

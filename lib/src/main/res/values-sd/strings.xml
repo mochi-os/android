@@ -263,4 +263,8 @@
     <string name="stepup_error_code">اهو ڪوڊ غلط آهي يا ختم ٿي ويو آهي.</string>
     <string name="stepup_error_passkey">پاس ڪي جي تصديق ناڪام ٿي. مهرباني ڪري ٻيهر ڪوشش ڪريو.</string>
     <string name="stepup_error_oauth">ان اڪائونٽ سان تصديق نه ٿي سگهي. مهرباني ڪري ٻيهر ڪوشش ڪريو.</string>
+    <string name="game_system_resign">%1$s هار مڃي</string>
+    <string name="game_system_draw_offer">%1$s برابري جي آڇ ڪئي</string>
+    <string name="game_system_draw_accept">برابري تي اتفاق ٿيو</string>
+    <string name="game_system_draw_decline">%1$s برابري رد ڪئي</string>
 </resources>

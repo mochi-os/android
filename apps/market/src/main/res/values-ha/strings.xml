@@ -29,6 +29,10 @@
     <string name="market_back">Komawa</string>
     <string name="market_bid_dialog_amount_label">Tayinka</string>
     <string name="market_bid_dialog_cancel">Soke</string>
+    <string name="market_bid_dialog_ceiling_help">Za mu ɗaga bidinka ta atomatik da ƙaramin adadin da ake buƙata don ci gaba da kasancewa a gaba, har zuwa wannan iyakar.</string>
+    <string name="market_bid_dialog_instant_win">An tabbatar da siye — kammala biyan kuɗi</string>
+    <string name="market_bid_dialog_invalid_ceiling">Tayin mafi girma dole ya zama aƙalla yawan tayin ka</string>
+    <string name="market_bid_dialog_outbid">An sanya bidinka amma nan da nan an wuce shi. Wani mai bidi yana da iyaka mafi girma. Bidinsa yanzu shine %1$s.</string>
     <string name="market_bid_dialog_submit">Yi tayi</string>
     <string name="market_bid_dialog_success">An sanya bid</string>
     <string name="market_bid_dialog_title">Yi tayi</string>

@@ -16,6 +16,10 @@
     <string name="market_asset_download">Λήψη</string>
     <string name="market_back">Πίσω</string>
     <string name="market_bid_dialog_cancel">Ακύρωση</string>
+    <string name="market_bid_dialog_ceiling_help">Θα αυξήσουμε αυτόματα την προσφορά σας κατά το μικρότερο ποσό που απαιτείται για να παραμείνετε μπροστά, έως αυτό το μέγιστο.</string>
+    <string name="market_bid_dialog_instant_win">Η αγορά επιβεβαιώθηκε — ολοκληρώστε την πληρωμή</string>
+    <string name="market_bid_dialog_invalid_ceiling">Η μέγιστη προσφορά πρέπει να είναι τουλάχιστον το ποσό της προσφοράς σας</string>
+    <string name="market_bid_dialog_outbid">Η προσφορά σας υποβλήθηκε αλλά υπερβλήθηκε αμέσως. Ένας άλλος πλειοδότης έχει υψηλότερο μέγιστο. Η προσφορά του είναι τώρα %1$s.</string>
     <string name="market_bid_dialog_submit">Υποβολή προσφοράς</string>
     <string name="market_bid_dialog_success">Η προσφορά καταχωρίστηκε</string>
     <string name="market_bid_dialog_title">Υποβολή προσφοράς</string>

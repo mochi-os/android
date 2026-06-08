@@ -265,4 +265,8 @@
     <string name="stepup_error_code">Aquest codi és incorrecte o ha caducat.</string>
     <string name="stepup_error_passkey">Ha fallat la verificació de la clau d\'accés. Torneu-ho a provar.</string>
     <string name="stepup_error_oauth">No s\'ha pogut verificar amb aquest compte. Torneu-ho a provar.</string>
+    <string name="game_system_resign">%1$s ha abandonat</string>
+    <string name="game_system_draw_offer">%1$s ha ofert taules</string>
+    <string name="game_system_draw_accept">Taules acordades</string>
+    <string name="game_system_draw_decline">%1$s ha rebutjat les taules</string>
 </resources>

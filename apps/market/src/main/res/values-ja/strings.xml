@@ -16,6 +16,10 @@
     <string name="market_asset_download">ダウンロード</string>
     <string name="market_back">戻る</string>
     <string name="market_bid_dialog_cancel">キャンセル</string>
+    <string name="market_bid_dialog_ceiling_help">この上限まで、最小限の金額で自動的に入札額を引き上げてリードを維持します。</string>
+    <string name="market_bid_dialog_instant_win">購入が確認されました — 支払いを完了してください</string>
+    <string name="market_bid_dialog_invalid_ceiling">最大入札額は入札額以上でなければなりません</string>
+    <string name="market_bid_dialog_outbid">入札しましたが、すぐに上回られました。他の入札者がより高い上限を設定しています。現在の入札額は %1$s です。</string>
     <string name="market_bid_dialog_submit">入札する</string>
     <string name="market_bid_dialog_success">入札しました</string>
     <string name="market_bid_dialog_title">入札する</string>

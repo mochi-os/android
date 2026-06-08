@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">IA</string>
     <string name="forums_access_target">Destinazione</string>
     <string name="forums_access_level_view">Visualizza</string>
+    <string name="forums_access_level_vote">Vota</string>
     <string name="forums_access_level_comment">Commento</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Nessuno</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID entità, @gruppo, * (tutti) o + (membri)</string>
     <string name="forums_access_level">Livello</string>
     <string name="forums_access_level_moderate">Modera</string>
-    <string name="forums_access_level_manage">Gestisci</string>
     <string name="forums_members_search">Filtra membri</string>
     <string name="forums_banner_description">Markdown mostrato in cima al forum.</string>
     <string name="forums_banner_placeholder">Benvenuti in questo forum…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Zona pericolosa</string>
     <string name="forums_settings_delete_message">Il forum e tutti i suoi post verranno eliminati definitivamente. L\'operazione non può essere annullata.</string>
 
+    <string name="forums_tag_interest_up">Aumenta l\'interesse</string>
+    <string name="forums_tag_interest_down">Riduci interesse</string>
+    <string name="forums_tag_interest_remove">Rimuovi interesse</string>
 </resources>

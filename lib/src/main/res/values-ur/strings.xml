@@ -263,4 +263,8 @@
     <string name="stepup_error_code">وہ کوڈ غلط ہے یا اس کی میعاد ختم ہو چکی ہے۔</string>
     <string name="stepup_error_passkey">پاس کی کی تصدیق ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔</string>
     <string name="stepup_error_oauth">اس اکاؤنٹ سے تصدیق نہیں ہو سکی۔ براہ کرم دوبارہ کوشش کریں۔</string>
+    <string name="game_system_resign">%1$s نے ہار مان لی</string>
+    <string name="game_system_draw_offer">%1$s نے برابری کی پیشکش کی</string>
+    <string name="game_system_draw_accept">برابری پر اتفاق ہوا</string>
+    <string name="game_system_draw_decline">%1$s نے برابری مسترد کر دی</string>
 </resources>

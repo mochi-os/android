@@ -12,6 +12,7 @@
     <string name="forums_list_logout">Déconnexion</string>
     <string name="forums_find_subscribe">S\'abonner</string>
     <string name="forums_access_level_view">Voir</string>
+    <string name="forums_access_level_vote">Voter</string>
     <string name="forums_access_level_none">Aucun</string>
     <string name="forums_settings">Paramètres</string>
     <string name="forums_list_search">Rechercher</string>
@@ -112,7 +113,6 @@
     <string name="forums_access_level_comment">Commenter</string>
     <string name="forums_access_level_post">Publier</string>
     <string name="forums_access_level_moderate">Modérer</string>
-    <string name="forums_access_level_manage">Gérer</string>
     <string name="forums_members_search">Filtrer les membres</string>
     <string name="forums_members_empty">Aucun membre</string>
     <string name="forums_banner_description">Markdown affiché en haut du forum.</string>
@@ -200,4 +200,7 @@
     <string name="forums_forum_not_found">Forum introuvable</string>
     <string name="forums_post_not_found">Publication introuvable</string>
 
+    <string name="forums_tag_interest_up">Augmenter l\'intérêt</string>
+    <string name="forums_tag_interest_down">Réduire l\'intérêt</string>
+    <string name="forums_tag_interest_remove">Supprimer l\'intérêt</string>
 </resources>

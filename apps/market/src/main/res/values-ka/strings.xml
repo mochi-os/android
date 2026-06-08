@@ -25,6 +25,10 @@
     <string name="market_back">უკან</string>
     <string name="market_bid_dialog_amount_label">თქვენი ფსონი</string>
     <string name="market_bid_dialog_cancel">გაუქმება</string>
+    <string name="market_bid_dialog_ceiling_help">ჩვენ ავტომატურად გავზრდით თქვენს შემოთავაზებას ყველაზე ნაკლები საჭირო თანხით წინ დარჩენისთვის, ამ მაქსიმუმამდე.</string>
+    <string name="market_bid_dialog_instant_win">შესყიდვა დადასტურდა — დაასრულეთ გადახდა</string>
+    <string name="market_bid_dialog_invalid_ceiling">მაქსიმალური შეთავაზება უნდა იყოს მინიმუმ თქვენი შეთავაზების ოდენობა</string>
+    <string name="market_bid_dialog_outbid">თქვენი შემოთავაზება განთავსდა, მაგრამ მაშინვე გადააჭარბეს. სხვა მონაწილეს უფრო მაღალი მაქსიმუმი აქვს. მისი შემოთავაზება ახლა %1$s-ია.</string>
     <string name="market_bid_dialog_submit">ფსონის დადება</string>
     <string name="market_bid_dialog_success">ფსონი განთავსდა</string>
     <string name="market_bid_dialog_title">ფსონის დადება</string>

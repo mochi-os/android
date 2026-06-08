@@ -305,5 +305,9 @@
     <string name="wikis_replicas_remove_confirm_action">Remove</string>
     <string name="wikis_replicas_removed_success">Replica removed</string>
     <string name="wikis_replicas_remove_failed">Failed to remove replica</string>
+    <string name="wikis_load_more">載入更多</string>
+    <string name="wikis_access_change_level">更改存取層級</string>
+    <string name="wikis_access_subject_anyone">任何人</string>
+    <string name="wikis_access_subject_authenticated">已驗證用戶</string>
 
 </resources>

@@ -16,6 +16,10 @@
     <string name="market_asset_download">Last ned</string>
     <string name="market_back">Tilbake</string>
     <string name="market_bid_dialog_cancel">Avbryt</string>
+    <string name="market_bid_dialog_ceiling_help">Vi hever automatisk bodet ditt med den minste summen som trengst for å halda deg framme, opp til dette maksimumet.</string>
+    <string name="market_bid_dialog_instant_win">Kjøp stadfesta — fullfør betaling</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksbod må vera minst like stort som bodet ditt</string>
+    <string name="market_bid_dialog_outbid">Bodet ditt vart plassert, men vart straks slått. Ein annan bydar har eit høgare maksimum. Bodet hans er no %1$s.</string>
     <string name="market_bid_dialog_success">Bod lagt inn</string>
     <string name="market_bid_ended">Auksjon avslutta</string>
     <string name="market_bids_empty">Ingen bod</string>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">ఆ కోడ్ తప్పు లేదా గడువు ముగిసింది.</string>
     <string name="stepup_error_passkey">పాస్‌కీ ధృవీకరణ విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
     <string name="stepup_error_oauth">ఆ ఖాతాతో ధృవీకరించడం సాధ్యం కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="game_system_resign">%1$s ఓటమిని అంగీకరించారు</string>
+    <string name="game_system_draw_offer">%1$s డ్రా ప్రతిపాదించారు</string>
+    <string name="game_system_draw_accept">డ్రాకు అంగీకరించారు</string>
+    <string name="game_system_draw_decline">%1$s డ్రాను తిరస్కరించారు</string>
 </resources>

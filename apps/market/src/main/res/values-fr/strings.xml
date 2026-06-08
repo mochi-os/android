@@ -16,6 +16,10 @@
     <string name="market_asset_download">Télécharger</string>
     <string name="market_back">Retour</string>
     <string name="market_bid_dialog_cancel">Annuler</string>
+    <string name="market_bid_dialog_ceiling_help">Nous augmenterons automatiquement votre enchère du plus petit montant nécessaire pour rester en tête, jusqu\'à ce maximum.</string>
+    <string name="market_bid_dialog_instant_win">Achat confirmé — finalisez le paiement</string>
+    <string name="market_bid_dialog_invalid_ceiling">L\'enchère maximale doit être au moins égale à votre montant d\'enchère</string>
+    <string name="market_bid_dialog_outbid">Votre enchère a été placée mais immédiatement dépassée. Un autre enchérisseur a un maximum plus élevé. Son enchère est maintenant de %1$s.</string>
     <string name="market_bid_dialog_submit">Enchérir</string>
     <string name="market_bid_dialog_success">Enchère placée</string>
     <string name="market_bid_dialog_title">Enchérir</string>

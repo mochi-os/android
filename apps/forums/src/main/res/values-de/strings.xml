@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">KI</string>
     <string name="forums_access_target">Ziel</string>
     <string name="forums_access_level_view">Ansicht</string>
+    <string name="forums_access_level_vote">Abstimmen</string>
     <string name="forums_access_level_comment">Kommentar</string>
     <string name="forums_access_level_post">Beitrag</string>
     <string name="forums_access_level_none">Keine</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">Entitäts-ID, @gruppe, * (alle) oder + (Mitglieder)</string>
     <string name="forums_access_level">Stufe</string>
     <string name="forums_access_level_moderate">Moderieren</string>
-    <string name="forums_access_level_manage">Verwalten</string>
     <string name="forums_members_search">Mitglieder filtern</string>
     <string name="forums_banner_description">Markdown, das oben im Forum angezeigt wird.</string>
     <string name="forums_banner_placeholder">Willkommen in diesem Forum…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Gefahrenzone</string>
     <string name="forums_settings_delete_message">Dies löscht das Forum und alle seine Beiträge dauerhaft. Dies kann nicht rückgängig gemacht werden.</string>
 
+    <string name="forums_tag_interest_up">Interesse hervorheben</string>
+    <string name="forums_tag_interest_down">Interesse reduzieren</string>
+    <string name="forums_tag_interest_remove">Interesse entfernen</string>
 </resources>

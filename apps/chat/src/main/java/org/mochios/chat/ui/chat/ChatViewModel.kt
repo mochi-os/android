@@ -172,7 +172,7 @@ class ChatViewModel @Inject constructor(
                             chat = _uiState.value.chat.copy(name = newName)
                         )
                     }
-                    ev == "leave" || ev == "member_remove" -> {
+                    ev == "leave" || ev == "member/remove" -> {
                         val memberId = event.member ?: return@subscribe
                         _uiState.value = _uiState.value.copy(
                             chat = _uiState.value.chat.copy(
@@ -185,7 +185,7 @@ class ChatViewModel @Inject constructor(
                             chat = _uiState.value.chat.copy(left = 2)
                         )
                     }
-                    ev == "member_add" -> {
+                    ev == "member/add" -> {
                         // Refresh members from server
                         viewModelScope.launch {
                             try {

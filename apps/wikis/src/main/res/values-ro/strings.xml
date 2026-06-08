@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Ultima sincronizare: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Aceasta va opri trimiterea actualizărilor către „%1$s\". Pot replica din nou dacă doresc.</string>
     <string name="wikis_replicas_removed_success">Replică eliminată</string>
+    <string name="wikis_load_more">Încarcă mai multe</string>
+    <string name="wikis_access_change_level">Nivel de acces</string>
+    <string name="wikis_access_subject_anyone">Oricine</string>
+    <string name="wikis_access_subject_authenticated">Utilizatori autentificați</string>
 
 </resources>

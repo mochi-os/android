@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ເປົ້າໝາຍ</string>
     <string name="forums_access_level_view">ເບິ່ງ</string>
+    <string name="forums_access_level_vote">ລົງຄະແນນ</string>
     <string name="forums_access_level_comment">ຄຳເຫັນ</string>
     <string name="forums_access_level_post">ໂພສ</string>
     <string name="forums_access_level_none">ບໍ່ມີ</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID ຕົວຕົນ, @ກຸ່ມ, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
     <string name="forums_access_level">ລະດັບ</string>
     <string name="forums_access_level_moderate">ກວດສອບ</string>
-    <string name="forums_access_level_manage">ຈັດການ</string>
     <string name="forums_members_search">ກັ່ນຕອງສະມາຊິກ</string>
     <string name="forums_banner_description">Markdown ທີ່ສະແດງຢູ່ດ້ານເທິງຂອງກະດານສົນທະນາ.</string>
     <string name="forums_banner_placeholder">ຍິນດີຕ້ອນຮັບສູ່ກະດານສົນທະນານີ້…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">ເຂດອັນຕະລາຍ</string>
     <string name="forums_settings_delete_message">ການກະທຳນີ້ຈະລຶບກະດານສົນທະນາ ແລະ ໂພສທັງໝົດຢ່າງຖາວອນ. ບໍ່ສາມາດກູ້ຄືນໄດ້.</string>
 
+    <string name="forums_tag_interest_up">ເພີ່ມຄວາມສົນໃຈ</string>
+    <string name="forums_tag_interest_down">ຫຼຸດດອກເບ້ຍ</string>
+    <string name="forums_tag_interest_remove">ລຶບຄວາມສົນໃຈ</string>
 </resources>

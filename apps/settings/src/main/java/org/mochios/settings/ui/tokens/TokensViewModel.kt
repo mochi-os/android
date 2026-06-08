@@ -12,6 +12,8 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.api.ApiToken
 import org.mochios.settings.api.TokensApi
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -24,10 +26,19 @@ data class TokensUiState(
 @HiltViewModel
 class TokensViewModel @Inject constructor(
     private val api: TokensApi,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(TokensUiState())
     val uiState: StateFlow<TokensUiState> = _uiState.asStateFlow()
+
+    /** Step-up gate: creating an API token re-verifies the user's login
+     *  factor(s), since the token is a long-lived bearer credential. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.value = _uiState.value.copy(error = e.toMochiError()) },
+    )
 
     /** Show-once: the freshly-minted plaintext token. The server only
      *  returns it once; the UI displays + lets the user copy, then clears. */
@@ -49,15 +60,13 @@ class TokensViewModel @Inject constructor(
         }
     }
 
-    fun create(name: String) {
-        viewModelScope.launch {
-            try {
-                val token = api.createToken(name).bodyOrThrow().token
-                _newApiToken.value = token
-                refresh()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
+    fun create(name: String) = stepUp.request { proof ->
+        try {
+            val token = api.createToken(proof, name).bodyOrThrow().data.token
+            _newApiToken.value = token
+            refresh()
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = e.toMochiError())
         }
     }
 

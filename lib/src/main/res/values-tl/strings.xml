@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Mali ang code na iyon o nag-expire na.</string>
     <string name="stepup_error_passkey">Nabigo ang pag-verify ng passkey. Pakisubukang muli.</string>
     <string name="stepup_error_oauth">Hindi ma-verify gamit ang account na iyon. Pakisubukang muli.</string>
+    <string name="game_system_resign">Sumuko si %1$s</string>
+    <string name="game_system_draw_offer">Nag-alok ng tabla si %1$s</string>
+    <string name="game_system_draw_accept">Napagkasunduang tabla</string>
+    <string name="game_system_draw_decline">Tinanggihan ni %1$s ang tabla</string>
 </resources>

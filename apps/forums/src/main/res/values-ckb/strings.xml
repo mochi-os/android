@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ئامانج</string>
     <string name="forums_access_level_view">بینین</string>
+    <string name="forums_access_level_vote">دەنگدان</string>
     <string name="forums_access_level_comment">لێدوان</string>
     <string name="forums_access_level_post">پۆست</string>
     <string name="forums_access_level_none">هیچ</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">ناسنامەی بەرکار، @group، * (هەمووان)، یان + (ئەندامان)</string>
     <string name="forums_access_level">ئاست</string>
     <string name="forums_access_level_moderate">چاودێری</string>
-    <string name="forums_access_level_manage">بەڕێوەبردن</string>
     <string name="forums_members_search">فلتەرکردنی ئەندامان</string>
     <string name="forums_banner_description">Markdown کە لە سەرەوەی فۆڕەمەکەدا پیشان دەدرێت.</string>
     <string name="forums_banner_placeholder">بەخێربێیت بۆ ئەم فۆڕەمە…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">ناوچەی مەترسی</string>
     <string name="forums_settings_delete_message">ئەمە بە شێوەی هەمیشەیی فۆڕەمەکە و هەموو پۆستەکانی دەسڕێتەوە. ئەمە ناتوانرێت بگەڕێنرێتەوە.</string>
 
+    <string name="forums_tag_interest_up">بەهێزکردنی بایەخ</string>
+    <string name="forums_tag_interest_down">کەمکردنەوەی بەرژەوەندی</string>
+    <string name="forums_tag_interest_remove">لابردنی بەرژەوەندی</string>
 </resources>

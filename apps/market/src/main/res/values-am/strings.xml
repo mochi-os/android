@@ -33,6 +33,10 @@
     <string name="market_back">ተመለስ</string>
     <string name="market_bid_dialog_amount_label">የእርስዎ ጨረታ</string>
     <string name="market_bid_dialog_cancel">ይቅር</string>
+    <string name="market_bid_dialog_ceiling_help">በዚህ ጣሪያ እስከ ድረስ፣ ቀዳሚ ሆነው ለመቆየት በሚያስፈልገው አነስተኛ መጠን ጨረታዎን በራስ-ሰር እንጨምራለን።</string>
+    <string name="market_bid_dialog_instant_win">ግዢ ተረጋግጧል — ክፍያን ያጠናቅቁ</string>
+    <string name="market_bid_dialog_invalid_ceiling">ከፍተኛ ጨረታ ቢያንስ የጨረታ መጠንዎ መሆን አለበት</string>
+    <string name="market_bid_dialog_outbid">ጨረታዎ ቀርቧል ግን ወዲያውኑ በሌላ ተሻለ። ሌላ ተጫራች ከፍተኛ ጣሪያ አለው። የእነሱ ጨረታ አሁን %1$s ነው።</string>
     <string name="market_bid_dialog_current_high">የአሁኑ ከፍተኛ ጨረታ፦ %1$s</string>
     <string name="market_bid_dialog_failed">ጨረታ ማቅረብ አልተቻለም</string>
     <string name="market_bid_dialog_invalid_amount">ከአሁኑ ጨረታ የበለጠ መጠን ያስገቡ</string>

@@ -23,6 +23,10 @@
     <string name="market_back">နောက်သို့</string>
     <string name="market_bid_dialog_amount_label">သင်၏ ဈေးပြုခြင်း</string>
     <string name="market_bid_dialog_cancel">မလုပ်တော့ပါ</string>
+    <string name="market_bid_dialog_ceiling_help">ဤအမြင့်ဆုံးပမာဏအထိ၊ ရှေ့ဆုံးတွင်ဆက်လက်ရှိနေရန် လိုအပ်သော အနည်းဆုံးပမာဏဖြင့် သင်၏လေလံစျေးကို အလိုအလျောက် တိုးပေးပါမည်။</string>
+    <string name="market_bid_dialog_instant_win">ဝယ်ယူမှု အတည်ပြုပြီး — ငွေပေးချေမှု ပြီးအောင် လုပ်ဆောင်ပါ</string>
+    <string name="market_bid_dialog_invalid_ceiling">အများဆုံး လေလံသည် သင်၏ လေလံပမာဏအနည်းဆုံး ဖြစ်ရမည်</string>
+    <string name="market_bid_dialog_outbid">သင်၏လေလံစျေးကိုပေးခဲ့သော်လည်း ချက်ချင်းကျော်လွန်ခံရသည်။ အခြားလေလံဆွဲသူတွင် ပိုမြင့်သော အမြင့်ဆုံးပမာဏရှိသည်။ သူ၏လေလံစျေးမှာ ယခု %1$s ဖြစ်သည်။</string>
     <string name="market_bid_dialog_submit">ဈေးပြုပါ</string>
     <string name="market_bid_dialog_success">လေလံ တင်ပြီး</string>
     <string name="market_bid_dialog_title">ဈေးပြုပါ</string>

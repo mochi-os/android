@@ -163,6 +163,8 @@ interface WikisApi {
     suspend fun getPageHistory(
         @Path(value = "wiki", encoded = true) wiki: String,
         @Path(value = "page", encoded = true) page: String,
+        @Query("limit") limit: Int, // contract-ok: read via pagination(a) helper
+        @Query("offset") offset: Int, // contract-ok: read via pagination(a) helper
     ): Response<ApiResponse<PageHistoryResponse>>
 
     
@@ -239,6 +241,8 @@ interface WikisApi {
     @GET("{wiki}/-/changes")
     suspend fun getChanges(
         @Path(value = "wiki", encoded = true) wiki: String,
+        @Query("limit") limit: Int, // contract-ok: read via pagination(a) helper
+        @Query("offset") offset: Int, // contract-ok: read via pagination(a) helper
     ): Response<ApiResponse<ChangesResponse>>
 
     // ---- Redirects ----
@@ -408,7 +412,6 @@ interface WikisApi {
     @POST("{wiki}/-/attachment/upload")
     suspend fun uploadAttachments(
         @Path(value = "wiki", encoded = true) wiki: String,
-        @Part("page") page: RequestBody,
         @Part files: List<MultipartBody.Part>,
     ): Response<ApiResponse<AttachmentUploadResponse>>
 

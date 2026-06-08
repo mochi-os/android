@@ -16,6 +16,10 @@
     <string name="market_asset_download">Unduh</string>
     <string name="market_back">Kembali</string>
     <string name="market_bid_dialog_cancel">Batal</string>
+    <string name="market_bid_dialog_ceiling_help">Kami akan menaikkan tawaran Anda secara otomatis dengan jumlah terkecil yang diperlukan untuk tetap unggul, hingga maksimum ini.</string>
+    <string name="market_bid_dialog_instant_win">Pembelian dikonfirmasi — selesaikan pembayaran</string>
+    <string name="market_bid_dialog_invalid_ceiling">Tawaran maksimum harus minimal sebesar jumlah tawaran Anda</string>
+    <string name="market_bid_dialog_outbid">Tawaran Anda telah ditempatkan tetapi langsung dilampaui. Penawar lain memiliki maksimum yang lebih tinggi. Tawaran mereka sekarang %1$s.</string>
     <string name="market_bid_dialog_submit">Pasang tawaran</string>
     <string name="market_bid_dialog_success">Penawaran diajukan</string>
     <string name="market_bid_dialog_title">Pasang tawaran</string>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">কোডটি ভুল বা এর মেয়াদ শেষ হয়ে গেছে।</string>
     <string name="stepup_error_passkey">পাসকি যাচাই ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
     <string name="stepup_error_oauth">ওই অ্যাকাউন্ট দিয়ে যাচাই করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+    <string name="game_system_resign">%1$s হার মেনে নিয়েছেন</string>
+    <string name="game_system_draw_offer">%1$s ড্র-এর প্রস্তাব দিয়েছেন</string>
+    <string name="game_system_draw_accept">ড্র মেনে নেওয়া হয়েছে</string>
+    <string name="game_system_draw_decline">%1$s ড্র প্রত্যাখ্যান করেছেন</string>
 </resources>

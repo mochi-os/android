@@ -28,11 +28,17 @@ import javax.inject.Inject
  */
 data class ChangesUiState(
     val isLoading: Boolean = true,
+    val isLoadingMore: Boolean = false,
     val changes: List<Change> = emptyList(),
+    val total: Int = 0,
+    val offset: Int = 0,
     val wiki: WikiInfo? = null,
     val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
-)
+) {
+    /** True when more changes remain on the server beyond what's loaded. */
+    val hasMore: Boolean get() = changes.size < total
+}
 
 /**
  * ViewModel for [ChangesListScreen]. Reads `wikiId` from [SavedStateHandle]
@@ -77,10 +83,12 @@ class ChangesViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val changes = repository.getChanges(wikiId)
+                val response = repository.getChanges(wikiId, PAGE_SIZE, 0)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    changes = changes,
+                    changes = response.changes,
+                    total = response.total,
+                    offset = response.changes.size,
                     error = null,
                 )
             } catch (e: Exception) {
@@ -90,5 +98,34 @@ class ChangesViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    fun loadMore() {
+        val current = _uiState.value
+        if (current.isLoadingMore || !current.hasMore) return
+        viewModelScope.launch {
+            _uiState.value = current.copy(isLoadingMore = true)
+            try {
+                val response = repository.getChanges(wikiId, PAGE_SIZE, current.offset)
+                // De-dup against already-loaded ids in case rows shifted between pages.
+                val seen = current.changes.mapTo(mutableSetOf()) { it.id }
+                val merged = current.changes + response.changes.filter { it.id !in seen }
+                _uiState.value = _uiState.value.copy(
+                    isLoadingMore = false,
+                    changes = merged,
+                    total = response.total,
+                    offset = current.offset + response.changes.size,
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isLoadingMore = false,
+                    error = e.toMochiError(),
+                )
+            }
+        }
+    }
+
+    companion object {
+        private const val PAGE_SIZE = 50
     }
 }

@@ -24,6 +24,10 @@
     <string name="market_back">Артка</string>
     <string name="market_bid_dialog_amount_label">Сиздин сунушуңуз</string>
     <string name="market_bid_dialog_cancel">Жокко чыгаруу</string>
+    <string name="market_bid_dialog_ceiling_help">Биз сиздин сунушуңузду алдыда калуу үчүн керектүү эң аз сумма менен автоматтык түрдө көтөрөбүз, ушул максимумга чейин.</string>
+    <string name="market_bid_dialog_instant_win">Сатып алуу ырасталды — төлөмдү аяктаңыз</string>
+    <string name="market_bid_dialog_invalid_ceiling">Максималдуу сунуш сиздин сунуш суммасынан кем эмес болушу керек</string>
+    <string name="market_bid_dialog_outbid">Сиздин сунушуңуз коюлду, бирок дароо басып озулду. Башка катышуучунун максимуму жогору. Анын сунушу азыр %1$s.</string>
     <string name="market_bid_dialog_submit">Сунуш кылуу</string>
     <string name="market_bid_dialog_success">Соода коюлду</string>
     <string name="market_bid_dialog_title">Сунуш кылуу</string>

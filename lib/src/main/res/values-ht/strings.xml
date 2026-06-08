@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Kòd sa a pa kòrèk oswa li ekspire.</string>
     <string name="stepup_error_passkey">Verifikasyon passkey la echwe. Tanpri eseye ankò.</string>
     <string name="stepup_error_oauth">Nou pa t kapab verifye ak kont sa a. Tanpri eseye ankò.</string>
+    <string name="game_system_resign">%1$s bay legen</string>
+    <string name="game_system_draw_offer">%1$s ofri yon egalite</string>
+    <string name="game_system_draw_accept">Egalite dakò</string>
+    <string name="game_system_draw_decline">%1$s refize egalite a</string>
 </resources>

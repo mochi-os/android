@@ -29,6 +29,10 @@
     <string name="market_back">Atrás</string>
     <string name="market_bid_dialog_amount_label">A túa puxa</string>
     <string name="market_bid_dialog_cancel">Cancelar</string>
+    <string name="market_bid_dialog_ceiling_help">Subiremos a túa puxa automaticamente coa cantidade mínima necesaria para manterte en cabeza, ata este máximo.</string>
+    <string name="market_bid_dialog_instant_win">Compra confirmada — completa o pago</string>
+    <string name="market_bid_dialog_invalid_ceiling">A oferta máxima debe ser polo menos a túa cantidade de oferta</string>
+    <string name="market_bid_dialog_outbid">A túa puxa realizouse pero foi superada inmediatamente. Outro puxador ten un máximo máis alto. A súa puxa agora é %1$s.</string>
     <string name="market_bid_dialog_submit">Facer puxa</string>
     <string name="market_bid_dialog_success">Poxa realizada</string>
     <string name="market_bid_dialog_title">Facer puxa</string>

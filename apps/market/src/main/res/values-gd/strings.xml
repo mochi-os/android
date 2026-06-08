@@ -25,6 +25,10 @@
     <string name="market_back">Air ais</string>
     <string name="market_bid_dialog_amount_label">Do thairgse</string>
     <string name="market_bid_dialog_cancel">Sguir dheth</string>
+    <string name="market_bid_dialog_ceiling_help">Togaidh sinn do thairgse gu fèin-ghluasadach leis a\' mhèid as lugha a tha riatanach gus fuireach air thoiseach, suas chun an tairgse as àirde seo.</string>
+    <string name="market_bid_dialog_instant_win">Chaidh an ceannach a dhearbhadh — coileanaich am pàigheadh</string>
+    <string name="market_bid_dialog_invalid_ceiling">Feumaidh an tairgse as motha a bhith co-dhiù do shuim tairgse</string>
+    <string name="market_bid_dialog_outbid">Chaidh do thairgse a chur a-steach ach chaidh a thoirt seachad sa bhad. Tha tairgse nas àirde aig tairgear eile. Tha an tairgse aca a-nis %1$s.</string>
     <string name="market_bid_dialog_submit">Cuir tairgse</string>
     <string name="market_bid_dialog_success">Tairgse air a cur</string>
     <string name="market_bid_dialog_title">Cuir tairgse</string>

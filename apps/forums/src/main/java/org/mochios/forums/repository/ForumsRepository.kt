@@ -333,6 +333,10 @@ class ForumsRepository @Inject constructor(
         api.removePostTag(forumId, postId, tagId).unwrap()
     }
 
+    suspend fun adjustTagInterest(forumId: String, qid: String, direction: String) {
+        api.adjustTagInterest(forumId, qid, direction).unwrap()
+    }
+
     suspend fun clearNotifications(forumId: String) {
         api.clearNotifications(forumId).unwrap()
     }

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">そのコードは正しくないか、有効期限が切れています。</string>
     <string name="stepup_error_passkey">パスキーの認証に失敗しました。もう一度お試しください。</string>
     <string name="stepup_error_oauth">そのアカウントで確認できませんでした。もう一度お試しください。</string>
+    <string name="game_system_resign">%1$sが投了しました</string>
+    <string name="game_system_draw_offer">%1$sが引き分けを提案しました</string>
+    <string name="game_system_draw_accept">引き分けが成立しました</string>
+    <string name="game_system_draw_decline">%1$sが引き分けを拒否しました</string>
 </resources>

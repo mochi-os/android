@@ -263,4 +263,8 @@
     <string name="stepup_error_code">அந்தக் குறியீடு தவறானது அல்லது காலாவதியாகிவிட்டது.</string>
     <string name="stepup_error_passkey">கடவுவிசை சரிபார்ப்பு தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்.</string>
     <string name="stepup_error_oauth">அந்தக் கணக்கைச் சரிபார்க்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="game_system_resign">%1$s விட்டுக்கொடுத்தார்</string>
+    <string name="game_system_draw_offer">%1$s சமநிலையை முன்மொழிந்தார்</string>
+    <string name="game_system_draw_accept">சமநிலை ஒப்புக்கொள்ளப்பட்டது</string>
+    <string name="game_system_draw_decline">%1$s சமநிலையை மறுத்தார்</string>
 </resources>

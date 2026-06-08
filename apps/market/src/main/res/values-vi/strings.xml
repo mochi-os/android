@@ -16,6 +16,10 @@
     <string name="market_asset_download">Tải xuống</string>
     <string name="market_back">Quay lại</string>
     <string name="market_bid_dialog_cancel">Hủy</string>
+    <string name="market_bid_dialog_ceiling_help">Chúng tôi sẽ tự động nâng đặt cược của bạn lên khoản nhỏ nhất cần thiết để giữ vị trí dẫn đầu, lên tới mức tối đa này.</string>
+    <string name="market_bid_dialog_instant_win">Đã xác nhận mua — hoàn tất thanh toán</string>
+    <string name="market_bid_dialog_invalid_ceiling">Mức đặt giá tối đa phải ít nhất bằng số tiền đặt giá của bạn</string>
+    <string name="market_bid_dialog_outbid">Đặt cược của bạn đã được đặt nhưng ngay lập tức bị vượt qua. Người đặt cược khác có mức tối đa cao hơn. Đặt cược của họ bây giờ là %1$s.</string>
     <string name="market_bid_dialog_submit">Đặt giá</string>
     <string name="market_bid_dialog_success">Đã đặt giá</string>
     <string name="market_bid_dialog_title">Đặt giá</string>

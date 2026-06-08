@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Apayaña</string>
     <string name="forums_access_level_view">Taqi uñjaña</string>
+    <string name="forums_access_level_vote">Ajlliña</string>
     <string name="forums_access_level_comment">Comentaña</string>
     <string name="forums_access_level_post">Qillqata</string>
     <string name="forums_access_level_none">Janiwa</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">Uñt\'awi ID, @tama, * (taqi), jan ukax + (uskutanaka)</string>
     <string name="forums_access_level">Pacha</string>
     <string name="forums_access_level_moderate">Apnaqaña</string>
-    <string name="forums_access_level_manage">Irnaqayaña</string>
     <string name="forums_members_search">Uskutanak chhijllaña</string>
     <string name="forums_banner_description">Markdown ukax foron patxana uñstayatawa.</string>
     <string name="forums_banner_placeholder">Aka foror suma jutawa…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Jan walja chiqa</string>
     <string name="forums_settings_delete_message">Akax forot taqi qillqatanakapampi wiñayatakiw chhaqtayani. Janiw kutiyañjamäkiti.</string>
 
+    <string name="forums_tag_interest_up">Munawi jiltayaña</string>
+    <string name="forums_tag_interest_down">Interés pisi tukuyma</string>
+    <string name="forums_tag_interest_remove">Interés aparma</string>
 </resources>

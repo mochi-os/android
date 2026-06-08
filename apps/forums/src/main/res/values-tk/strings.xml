@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Maksat</string>
     <string name="forums_access_level_view">Görkez</string>
+    <string name="forums_access_level_vote">Ses ber</string>
     <string name="forums_access_level_comment">Teswir</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Hiç biri</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Şahsyýet ID, @topar, * (hemmesi) ýa-da + (agzalar)</string>
     <string name="forums_access_level">Derejesi</string>
     <string name="forums_access_level_moderate">Moderasiýa</string>
-    <string name="forums_access_level_manage">Dolandyryş</string>
     <string name="forums_members_search">Agzalary süzmek</string>
     <string name="forums_banner_description">Forumyň ýokarsynda görkezilýän Markdown.</string>
     <string name="forums_banner_placeholder">Bu foruma hoş geldiňiz…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Howply zolak</string>
     <string name="forums_settings_delete_message">Bu forumy we onuň ähli ýazgylaryny hemişelik pozar. Bu yzyna gaýtarylyp bilinmez.</string>
 
+    <string name="forums_tag_interest_up">Gyzyklanmany ýokarlandyrmak</string>
+    <string name="forums_tag_interest_down">Gyzyklanmany azalt</string>
+    <string name="forums_tag_interest_remove">Gyzyklanmany aýyr</string>
 </resources>

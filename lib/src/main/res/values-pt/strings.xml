@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Esse código está incorreto ou expirou.</string>
     <string name="stepup_error_passkey">A verificação da chave de acesso falhou. Tente novamente.</string>
     <string name="stepup_error_oauth">Não foi possível verificar com essa conta. Tente novamente.</string>
+    <string name="game_system_resign">%1$s desistiu</string>
+    <string name="game_system_draw_offer">%1$s ofereceu empate</string>
+    <string name="game_system_draw_accept">Empate acordado</string>
+    <string name="game_system_draw_decline">%1$s recusou o empate</string>
 </resources>

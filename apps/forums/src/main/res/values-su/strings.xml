@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Target</string>
     <string name="forums_access_level_view">Tingali</string>
+    <string name="forums_access_level_vote">Milih</string>
     <string name="forums_access_level_comment">Koméntar</string>
     <string name="forums_access_level_post">Pos</string>
     <string name="forums_access_level_none">Euweuh</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID éntitas, @grup, * (sadayana), atawa + (anggota)</string>
     <string name="forums_access_level">Tingkat</string>
     <string name="forums_access_level_moderate">Moderasi</string>
-    <string name="forums_access_level_manage">Atur</string>
     <string name="forums_members_search">Saring anggota</string>
     <string name="forums_banner_description">Markdown anu ditembongkeun di luhureun forum.</string>
     <string name="forums_banner_placeholder">Wilujeng sumping ka forum ieu…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Wilayah bahaya</string>
     <string name="forums_settings_delete_message">Ieu bakal miceun forum sareng sadaya posna sacara permanén. Ieu teu tiasa dibalikeun deui.</string>
 
+    <string name="forums_tag_interest_up">Tingkatkeun minat</string>
+    <string name="forums_tag_interest_down">Kurangan minat</string>
+    <string name="forums_tag_interest_remove">Cabut minat</string>
 </resources>

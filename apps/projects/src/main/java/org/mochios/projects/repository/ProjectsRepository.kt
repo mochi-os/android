@@ -38,6 +38,8 @@ class ProjectsRepository @Inject constructor(
     // In-memory cache
     private val projectInfoCache = mutableMapOf<String, Pair<ProjectDetails, Long>>()
     private val objectsCache = mutableMapOf<String, Pair<List<ProjectObject>, Long>>()
+    // Watched object ids for the local user, keyed by project, from the last objects fetch.
+    private val watchedCache = mutableMapOf<String, List<String>>()
     private val cacheMaxAge = 60_000L // 1 minute
 
     fun getCachedProjectInfo(projectId: String): ProjectDetails? {
@@ -55,6 +57,7 @@ class ProjectsRepository @Inject constructor(
     fun invalidateCache(projectId: String) {
         projectInfoCache.remove(projectId)
         objectsCache.remove(projectId)
+        watchedCache.remove(projectId)
     }
 
     // ---- Projects ----
@@ -168,13 +171,18 @@ class ProjectsRepository @Inject constructor(
     // ---- Objects ----
 
     suspend fun getObjects(projectId: String): List<ProjectObject> {
-        val objects = api.getObjects(projectId).unwrap().objects
-        objectsCache[projectId] = objects to System.currentTimeMillis()
-        return objects
+        val response = api.getObjects(projectId).unwrap()
+        objectsCache[projectId] = response.objects to System.currentTimeMillis()
+        watchedCache[projectId] = response.watched
+        return response.objects
     }
 
-    suspend fun createObject(projectId: String, classId: String, parent: String? = null, title: String): ProjectObject =
-        api.createObject(projectId, classId, parent, title).unwrap().`object`
+    /** Watched object ids for the local user from the last [getObjects] fetch. */
+    fun getWatched(projectId: String): List<String> = watchedCache[projectId] ?: emptyList()
+
+    /** Returns the new object's id (the create endpoint returns a flat id/number/readable body). */
+    suspend fun createObject(projectId: String, classId: String, parent: String? = null, title: String): String =
+        api.createObject(projectId, classId, parent, title).unwrap().id
 
     suspend fun getObject(projectId: String, objectId: String): ProjectObject =
         api.getObject(projectId, objectId).unwrap().`object`

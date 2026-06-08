@@ -16,6 +16,10 @@
     <string name="market_asset_download">Baixar</string>
     <string name="market_back">Voltar</string>
     <string name="market_bid_dialog_cancel">Cancelar</string>
+    <string name="market_bid_dialog_ceiling_help">Aumentaremos seu lance automaticamente com o menor valor necessário para manter-se à frente, até este máximo.</string>
+    <string name="market_bid_dialog_instant_win">Compra confirmada — conclua o pagamento</string>
+    <string name="market_bid_dialog_invalid_ceiling">O lance máximo deve ser pelo menos o valor do seu lance</string>
+    <string name="market_bid_dialog_outbid">Seu lance foi feito, mas foi superado imediatamente. Outro participante tem um máximo mais alto. O lance dele agora é %1$s.</string>
     <string name="market_bid_dialog_submit">Dar lance</string>
     <string name="market_bid_dialog_success">Lance feito</string>
     <string name="market_bid_dialog_title">Dar lance</string>

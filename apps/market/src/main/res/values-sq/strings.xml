@@ -23,6 +23,10 @@
     <string name="market_back">Mbrapa</string>
     <string name="market_bid_dialog_amount_label">Oferta juaj</string>
     <string name="market_bid_dialog_cancel">Anulo</string>
+    <string name="market_bid_dialog_ceiling_help">Do ta ngremë ofertën tuaj automatikisht me shumën më të vogël të nevojshme për të qëndruar përpara, deri në këtë maksimum.</string>
+    <string name="market_bid_dialog_instant_win">Blerja u konfirmua — përfundoni pagesën</string>
+    <string name="market_bid_dialog_invalid_ceiling">Oferta maksimale duhet të jetë të paktën sa shuma e ofertës tuaj</string>
+    <string name="market_bid_dialog_outbid">Oferta juaj u vendos, por u kalua menjëherë. Një ofrues tjetër ka një maksimum më të lartë. Oferta e tij tani është %1$s.</string>
     <string name="market_bid_dialog_submit">Bëj ofertë</string>
     <string name="market_bid_dialog_success">Oferta u vendos</string>
     <string name="market_bid_dialog_title">Bëj ofertë</string>

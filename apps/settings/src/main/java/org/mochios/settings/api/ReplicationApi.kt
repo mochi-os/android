@@ -49,9 +49,14 @@ interface ReplicationApi {
     @GET("settings/-/user/replication/data")
     suspend fun getReplication(): Response<ReplicationData>
 
+    // Approving replicates the user's private keys to the peer, so the server
+    // gates it on step-up re-authentication (the proof token).
     @FormUrlEncoded
     @POST("settings/-/user/replication/approve")
-    suspend fun approveLink(@Field("peer") peer: String): Response<Unit>
+    suspend fun approveLink(
+        @Field("peer") peer: String,
+        @Field("token") token: String,
+    ): Response<Unit>
 
     @FormUrlEncoded
     @POST("settings/-/user/replication/deny")

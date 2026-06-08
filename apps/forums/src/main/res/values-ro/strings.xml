@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Țintă</string>
     <string name="forums_access_level_view">Vizualizează</string>
+    <string name="forums_access_level_vote">Votează</string>
     <string name="forums_access_level_comment">Comentează</string>
     <string name="forums_access_level_post">Postare</string>
     <string name="forums_access_level_none">Niciuna</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID entitate, @grup, * (toți) sau + (membri)</string>
     <string name="forums_access_level">Nivel</string>
     <string name="forums_access_level_moderate">Moderare</string>
-    <string name="forums_access_level_manage">Gestionare</string>
     <string name="forums_members_search">Filtrați membrii</string>
     <string name="forums_banner_description">Markdown afișat în partea de sus a forumului.</string>
     <string name="forums_banner_placeholder">Bine ați venit pe acest forum…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Zonă cu risc</string>
     <string name="forums_settings_delete_message">Aceasta va șterge permanent forumul și toate postările sale. Această acțiune nu poate fi anulată.</string>
 
+    <string name="forums_tag_interest_up">Promovează interesul</string>
+    <string name="forums_tag_interest_down">Reduce interesul</string>
+    <string name="forums_tag_interest_remove">Elimină interesul</string>
 </resources>

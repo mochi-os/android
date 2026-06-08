@@ -44,6 +44,7 @@ import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.LoadMoreButton
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Revision
 import org.mochios.wikis.navigation.WikisApp
@@ -124,6 +125,9 @@ fun PageHistoryScreen(
                             wikiId = viewModel.wikiId,
                             revisions = state.revisions,
                             currentVersion = state.currentVersion,
+                            hasMore = state.hasMore,
+                            isLoadingMore = state.isLoadingMore,
+                            onLoadMore = { viewModel.loadMore() },
                             onView = { version ->
                                 navController.navigate(
                                     WikisApp.pageRevision(viewModel.wikiId, viewModel.slug, version)
@@ -148,6 +152,9 @@ private fun PageHistoryBody(
     wikiId: String,
     revisions: List<Revision>,
     currentVersion: Int,
+    hasMore: Boolean,
+    isLoadingMore: Boolean,
+    onLoadMore: () -> Unit,
     onView: (Int) -> Unit,
     onRevert: (Int) -> Unit,
 ) {
@@ -201,6 +208,15 @@ private fun PageHistoryBody(
                         onRevert = { onRevert(revision.version) },
                     )
                     HorizontalDivider()
+                }
+                if (hasMore) {
+                    item(key = "load-more") {
+                        LoadMoreButton(
+                            label = stringResource(R.string.wikis_load_more),
+                            isLoading = isLoadingMore,
+                            onClick = onLoadMore,
+                        )
+                    }
                 }
             }
         }

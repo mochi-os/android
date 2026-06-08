@@ -106,7 +106,12 @@ class HomeViewModel @Inject constructor(
 
     fun toggleSave(listing: Listing) {
         viewModelScope.launch {
-            savedStore.toggle(listing.id.toString())
+            try {
+                savedStore.toggle(listing)
+            } catch (_: Exception) {
+                // Optimistic rollback already restored the saved mirror; the
+                // bookmark UI re-renders from the observed flow.
+            }
         }
     }
 

@@ -23,6 +23,10 @@
     <string name="market_back">Lura</string>
     <string name="market_bid_dialog_amount_label">L-offerta tiegħek</string>
     <string name="market_bid_dialog_cancel">Ikkanċella</string>
+    <string name="market_bid_dialog_ceiling_help">Aħna ngħollu l-offerta tiegħek awtomatikament bl-iżgħar ammont meħtieġ biex tibqa\' fuq quddiem, sa dan il-massimu.</string>
+    <string name="market_bid_dialog_instant_win">Xirja kkonfermata — lesti l-ħlas</string>
+    <string name="market_bid_dialog_invalid_ceiling">L-offerta massima trid tkun mill-inqas l-ammont tal-offerta tiegħek</string>
+    <string name="market_bid_dialog_outbid">L-offerta tiegħek tpoġġiet imma ġiet superata mill-ewwel. Offerent ieħor għandu massimu ogħla. L-offerta tiegħu issa hi %1$s.</string>
     <string name="market_bid_dialog_submit">Agħmel offerta</string>
     <string name="market_bid_dialog_success">Offerta sottomessa</string>
     <string name="market_bid_dialog_title">Agħmel offerta</string>

@@ -23,6 +23,10 @@
     <string name="market_back">Duuba</string>
     <string name="market_bid_dialog_amount_label">Caasaan kee</string>
     <string name="market_bid_dialog_cancel">Haquu</string>
+    <string name="market_bid_dialog_ceiling_help">Hanga olaanaa kanaatti, fuula duraa turuuf hangi gadi aanaa barbaachisu tarsiifannaa kee ofumaan ol kaasna.</string>
+    <string name="market_bid_dialog_instant_win">Bittaan mirkanaa\'e — kaffaltii xumuri</string>
+    <string name="market_bid_dialog_invalid_ceiling">Bittaan olaanaa yoo xiqqaate hanga bittaa kee ta\'uu qaba</string>
+    <string name="market_bid_dialog_outbid">Tarsiifannaan kee galmaa\'eera garuu yeruma sana ol darbameera. Tarsiisaan biraa hanga olaanaa kan caalu qaba. Tarsiifannaan isaanii amma %1$s dha.</string>
     <string name="market_bid_dialog_submit">Caasaa fudhadhu</string>
     <string name="market_bid_dialog_success">Iyyannoon kaa\'ame</string>
     <string name="market_bid_dialog_title">Caasaa fudhadhu</string>

@@ -29,6 +29,10 @@
     <string name="market_back">Atrás</string>
     <string name="market_bid_dialog_amount_label">Tu oferta</string>
     <string name="market_bid_dialog_cancel">Cancelar</string>
+    <string name="market_bid_dialog_ceiling_help">Subiremos tu oferta automáticamente con la mínima cantidad necesaria para mantenerte en cabeza, hasta este máximo.</string>
+    <string name="market_bid_dialog_instant_win">Compra confirmada — completa el pago</string>
+    <string name="market_bid_dialog_invalid_ceiling">La oferta máxima debe ser al menos el monto de tu oferta</string>
+    <string name="market_bid_dialog_outbid">Tu oferta se realizó pero fue superada de inmediato. Otro postor tiene un máximo más alto. Su oferta ahora es %1$s.</string>
     <string name="market_bid_dialog_submit">Hacer oferta</string>
     <string name="market_bid_dialog_success">Puja realizada</string>
     <string name="market_bid_dialog_title">Hacer oferta</string>

@@ -16,6 +16,10 @@
     <string name="market_asset_download">Pakua</string>
     <string name="market_back">Rudi</string>
     <string name="market_bid_dialog_cancel">Ghairi</string>
+    <string name="market_bid_dialog_ceiling_help">Tutakuza zabuni yako kiotomatiki kwa kiasi kidogo zaidi kinachohitajika ili ubaki mbele, hadi kiwango hiki cha juu.</string>
+    <string name="market_bid_dialog_instant_win">Ununuzi umethibitishwa — kamilisha malipo</string>
+    <string name="market_bid_dialog_invalid_ceiling">Zabuni ya juu lazima iwe angalau kiasi cha zabuni yako</string>
+    <string name="market_bid_dialog_outbid">Zabuni yako iliwekwa lakini ikapitwa mara moja. Mzabuni mwingine ana kiwango cha juu zaidi. Zabuni yake sasa ni %1$s.</string>
     <string name="market_bid_dialog_submit">Toa zabuni</string>
     <string name="market_bid_dialog_success">Zabuni imewekwa</string>
     <string name="market_bid_dialog_title">Toa zabuni</string>

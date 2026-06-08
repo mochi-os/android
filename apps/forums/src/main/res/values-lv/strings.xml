@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Mērķis</string>
     <string name="forums_access_level_view">Skatīt</string>
+    <string name="forums_access_level_vote">Balsot</string>
     <string name="forums_access_level_comment">Komentārs</string>
     <string name="forums_access_level_post">Ieraksts</string>
     <string name="forums_access_level_none">Nav</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entītijas ID, @grupa, * (visi) vai + (dalībnieki)</string>
     <string name="forums_access_level">Līmenis</string>
     <string name="forums_access_level_moderate">Moderēt</string>
-    <string name="forums_access_level_manage">Pārvaldīt</string>
     <string name="forums_members_search">Filtrēt dalībniekus</string>
     <string name="forums_banner_description">Markdown, kas tiek rādīts foruma augšpusē.</string>
     <string name="forums_banner_placeholder">Laipni lūdzam šajā forumā…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Bīstamā zona</string>
     <string name="forums_settings_delete_message">Tas neatgriezeniski dzēsīs forumu un visus tā ierakstus. Šo darbību nevar atsaukt.</string>
 
+    <string name="forums_tag_interest_up">Veicināt interesi</string>
+    <string name="forums_tag_interest_down">Samazināt interesi</string>
+    <string name="forums_tag_interest_remove">Noņemt interesi</string>
 </resources>

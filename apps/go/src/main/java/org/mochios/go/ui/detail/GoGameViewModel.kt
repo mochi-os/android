@@ -292,6 +292,10 @@ class GoGameViewModel @Inject constructor(
                 // Re-fetch so server-side capture / ko bookkeeping replaces
                 // our optimistic state.
                 loadGame()
+                // Also refresh the move/chat log so our own move row appears
+                // immediately; the websocket frame for our own move isn't
+                // echoed back to us. Web invalidates messages on own move.
+                loadMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isMoving = false) }
                 _events.tryEmit(
@@ -342,6 +346,9 @@ class GoGameViewModel @Inject constructor(
                 )
                 _state.update { it.copy(isPassing = false) }
                 loadGame()
+                // Refresh the move/chat log so our own pass row appears
+                // immediately; our own websocket frame isn't echoed back.
+                loadMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isPassing = false) }
                 _events.tryEmit(

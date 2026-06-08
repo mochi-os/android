@@ -33,6 +33,11 @@ import org.mochios.market.model.Currency
  * no bids exist yet), accepts a free-text amount, validates that it
  * exceeds the current high, then calls back with the minor-unit value.
  *
+ * An optional "Maximum bid" field sets the proxy-bid ceiling: the
+ * Comptroller automatically raises the bid by the smallest increment
+ * needed to stay ahead, up to this maximum. When left blank, no ceiling
+ * is sent and the bid is a plain one-shot bid.
+ *
  * The dialog owns its own validation and submitting state; the network
  * call lives in [org.mochios.market.ui.listing.ListingDetailViewModel.placeBid].
  * An external error message ([errorMessage]) is rendered below the input
@@ -45,12 +50,13 @@ fun PlaceBidDialog(
     currency: Currency,
     submitting: Boolean = false,
     errorMessage: String? = null,
-    onSubmit: (amount: Long, currency: Currency) -> Unit,
+    onSubmit: (amount: Long, ceiling: Long?, currency: Currency) -> Unit,
     onDismiss: () -> Unit,
 ) {
     if (!open || auction == null) return
 
     var amountInput by remember { mutableStateOf("") }
+    var ceilingInput by remember { mutableStateOf("") }
     var validationError by remember { mutableStateOf<String?>(null) }
 
     val hasBids = auction.bids > 0
@@ -59,11 +65,13 @@ fun PlaceBidDialog(
     LaunchedEffect(open, auction.id) {
         if (open) {
             amountInput = ""
+            ceilingInput = ""
             validationError = null
         }
     }
 
     val invalidAmountText = stringResource(R.string.market_bid_dialog_invalid_amount)
+    val invalidCeilingText = stringResource(R.string.market_bid_dialog_invalid_ceiling)
 
     AlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
@@ -97,6 +105,23 @@ fun PlaceBidDialog(
                     },
                     modifier = Modifier.fillMaxWidth(),
                 )
+                Spacer(Modifier.height(12.dp))
+                OutlinedTextField(
+                    value = ceilingInput,
+                    onValueChange = {
+                        ceilingInput = it
+                        validationError = null
+                    },
+                    label = { Text(stringResource(R.string.market_bid_dialog_ceiling_label)) },
+                    singleLine = true,
+                    enabled = !submitting,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                    isError = validationError != null,
+                    supportingText = {
+                        Text(stringResource(R.string.market_bid_dialog_ceiling_help))
+                    },
+                    modifier = Modifier.fillMaxWidth(),
+                )
             }
         },
         confirmButton = {
@@ -108,7 +133,17 @@ fun PlaceBidDialog(
                         validationError = invalidAmountText
                         return@TextButton
                     }
-                    onSubmit(minor, currency)
+                    val ceiling = if (ceilingInput.isBlank()) {
+                        null
+                    } else {
+                        val c = toMinorUnits(ceilingInput, currency)
+                        if (c < minor) {
+                            validationError = invalidCeilingText
+                            return@TextButton
+                        }
+                        c
+                    }
+                    onSubmit(minor, ceiling, currency)
                 },
             ) {
                 if (submitting) {

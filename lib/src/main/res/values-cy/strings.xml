@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Mae\'r cod hwnnw\'n anghywir neu wedi dod i ben.</string>
     <string name="stepup_error_passkey">Methodd dilysu\'r allwedd mynediad. Rhowch gynnig arall arni.</string>
     <string name="stepup_error_oauth">Methwyd dilysu gyda\'r cyfrif hwnnw. Rhowch gynnig arall arni.</string>
+    <string name="game_system_resign">Ildiodd %1$s</string>
+    <string name="game_system_draw_offer">Cynigiodd %1$s gyfartal</string>
+    <string name="game_system_draw_accept">Cytunwyd ar gyfartal</string>
+    <string name="game_system_draw_decline">Gwrthododd %1$s y cyfartal</string>
 </resources>

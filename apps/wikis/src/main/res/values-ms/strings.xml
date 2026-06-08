@@ -303,4 +303,8 @@
     <string name="wikis_replicas_col_synced">Penyegerakan terakhir: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ini akan menghentikan penghantaran kemas kini ke „%1$s\". Mereka boleh meniru semula jika mahu.</string>
     <string name="wikis_replicas_removed_success">Replika dibuang</string>
+    <string name="wikis_load_more">Muatkan lagi</string>
+    <string name="wikis_access_change_level">Tahap akses</string>
+    <string name="wikis_access_subject_anyone">Sesiapa</string>
+    <string name="wikis_access_subject_authenticated">Pengguna disahkan</string>
 </resources>

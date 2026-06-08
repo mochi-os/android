@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Kode kasebut salah utawa wis kadaluwarsa.</string>
     <string name="stepup_error_passkey">Verifikasi passkey gagal. Coba maneh.</string>
     <string name="stepup_error_oauth">Ora bisa verifikasi nganggo akun kasebut. Mangga coba maneh.</string>
+    <string name="game_system_resign">%1$s nyerah</string>
+    <string name="game_system_draw_offer">%1$s nawakake remis</string>
+    <string name="game_system_draw_accept">Remis disarujuki</string>
+    <string name="game_system_draw_decline">%1$s nolak remis</string>
 </resources>

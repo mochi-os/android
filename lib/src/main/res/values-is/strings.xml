@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Þessi kóði er rangur eða útrunninn.</string>
     <string name="stepup_error_passkey">Staðfesting aðgangslykils mistókst. Reyndu aftur.</string>
     <string name="stepup_error_oauth">Ekki tókst að staðfesta með þeim reikningi. Reyndu aftur.</string>
+    <string name="game_system_resign">%1$s gafst upp</string>
+    <string name="game_system_draw_offer">%1$s bauð jafntefli</string>
+    <string name="game_system_draw_accept">Jafntefli samþykkt</string>
+    <string name="game_system_draw_decline">%1$s hafnaði jafntefli</string>
 </resources>

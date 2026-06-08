@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Kode tersebut salah atau telah kedaluwarsa.</string>
     <string name="stepup_error_passkey">Verifikasi kunci sandi gagal. Silakan coba lagi.</string>
     <string name="stepup_error_oauth">Tidak dapat memverifikasi dengan akun tersebut. Silakan coba lagi.</string>
+    <string name="game_system_resign">%1$s menyerah</string>
+    <string name="game_system_draw_offer">%1$s menawarkan remis</string>
+    <string name="game_system_draw_accept">Remis disepakati</string>
+    <string name="game_system_draw_decline">%1$s menolak remis</string>
 </resources>

@@ -23,6 +23,10 @@
     <string name="market_back">شاته</string>
     <string name="market_bid_dialog_amount_label">ستاسو وړاندیز</string>
     <string name="market_bid_dialog_cancel">لغوه کول</string>
+    <string name="market_bid_dialog_ceiling_help">موږ به ستاسو وړاندیز په اتوماتيک ډول د هغه کم ترین مقدار له مخې لوړ کړو چې د مخکې پاتې کیدو لپاره اړین وي، تر دې اعظمي حد پورې.</string>
+    <string name="market_bid_dialog_instant_win">پیرودنه تایید شوه — تادیه بشپړه کړئ</string>
+    <string name="market_bid_dialog_invalid_ceiling">اعظمي بولۍ باید لږ تر لږه ستاسو د بولۍ اندازه وي</string>
+    <string name="market_bid_dialog_outbid">ستاسو وړاندیز کیښودل شو خو سمدلاسه ترې مخکې شو. بل وړاندیز کوونکی لوړ اعظمي حد لري. د هغه وړاندیز اوس %1$s دی.</string>
     <string name="market_bid_dialog_submit">وړاندیز وکړئ</string>
     <string name="market_bid_dialog_success">بولۍ کېښودل شوه</string>
     <string name="market_bid_dialog_title">وړاندیز وکړئ</string>

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">الذكاء الاصطناعي</string>
     <string name="forums_access_target">الهدف</string>
     <string name="forums_access_level_view">عرض</string>
+    <string name="forums_access_level_vote">تصويت</string>
     <string name="forums_access_level_comment">تعليق</string>
     <string name="forums_access_level_post">نشر</string>
     <string name="forums_access_level_none">لا شيء</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">معرّف الكيان، @مجموعة، * (الجميع)، أو + (الأعضاء)</string>
     <string name="forums_access_level">المستوى</string>
     <string name="forums_access_level_moderate">إشراف</string>
-    <string name="forums_access_level_manage">إدارة</string>
     <string name="forums_members_search">تصفية الأعضاء</string>
     <string name="forums_banner_description">نص Markdown يُعرض في أعلى المنتدى.</string>
     <string name="forums_banner_placeholder">مرحبًا بك في هذا المنتدى…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">منطقة الخطر</string>
     <string name="forums_settings_delete_message">سيؤدي هذا إلى حذف المنتدى وجميع منشوراته نهائيًا. لا يمكن التراجع عن هذا الإجراء.</string>
 
+    <string name="forums_tag_interest_up">تعزيز الاهتمام</string>
+    <string name="forums_tag_interest_down">تقليل الاهتمام</string>
+    <string name="forums_tag_interest_remove">إزالة الاهتمام</string>
 </resources>

@@ -27,6 +27,10 @@
     <string name="market_back">Bali</string>
     <string name="market_bid_dialog_amount_label">Tawaranmu</string>
     <string name="market_bid_dialog_cancel">Batal</string>
+    <string name="market_bid_dialog_ceiling_help">Kita bakal ngundhakake tawaran sampeyan kanthi otomatis kanthi jumlah paling sithik sing dibutuhake supaya tetep ana ing ngarep, nganti maksimum iki.</string>
+    <string name="market_bid_dialog_instant_win">Tuku dikonfirmasi — rampungaké pembayaran</string>
+    <string name="market_bid_dialog_invalid_ceiling">Tawaran maksimum kudu paling ora padha karo jumlah tawaran sampéyan</string>
+    <string name="market_bid_dialog_outbid">Tawaran sampeyan wis dipasang nanging langsung dilewati. Penawar liyane duwe maksimum sing luwih dhuwur. Tawarane saiki %1$s.</string>
     <string name="market_bid_dialog_submit">Pasang tawaran</string>
     <string name="market_bid_dialog_success">Penawaran wis dipasang</string>
     <string name="market_bid_dialog_title">Pasang tawaran</string>

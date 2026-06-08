@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Doel</string>
     <string name="forums_access_level_view">Bekijken</string>
+    <string name="forums_access_level_vote">Stemmen</string>
     <string name="forums_access_level_comment">Reactie</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Geen</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entiteits-ID, @groep, * (iedereen), of + (leden)</string>
     <string name="forums_access_level">Niveau</string>
     <string name="forums_access_level_moderate">Modereren</string>
-    <string name="forums_access_level_manage">Beheren</string>
     <string name="forums_members_search">Leden filteren</string>
     <string name="forums_banner_description">Markdown weergegeven bovenaan het forum.</string>
     <string name="forums_banner_placeholder">Welkom op dit forum…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Gevarenzone</string>
     <string name="forums_settings_delete_message">Hiermee wordt het forum en alle berichten permanent verwijderd. Dit kan niet ongedaan worden gemaakt.</string>
 
+    <string name="forums_tag_interest_up">Interesse versterken</string>
+    <string name="forums_tag_interest_down">Interesse verminderen</string>
+    <string name="forums_tag_interest_remove">Interesse verwijderen</string>
 </resources>

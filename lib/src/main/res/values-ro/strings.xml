@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Acel cod este incorect sau a expirat.</string>
     <string name="stepup_error_passkey">Verificarea cheii de acces a eșuat. Încearcă din nou.</string>
     <string name="stepup_error_oauth">Nu s-a putut verifica cu acel cont. Încearcă din nou.</string>
+    <string name="game_system_resign">%1$s a abandonat</string>
+    <string name="game_system_draw_offer">%1$s a oferit remiză</string>
+    <string name="game_system_draw_accept">Remiză acceptată</string>
+    <string name="game_system_draw_decline">%1$s a refuzat remiza</string>
 </resources>

@@ -263,4 +263,8 @@
     <string name="stepup_error_code">ລະຫັດນັ້ນບໍ່ຖືກຕ້ອງ ຫຼື ໝົດອາຍຸແລ້ວ.</string>
     <string name="stepup_error_passkey">ການຢືນຢັນ passkey ລົ້ມເຫລວ. ກະລຸນາລອງອີກຄັ້ງ.</string>
     <string name="stepup_error_oauth">ບໍ່ສາມາດຢືນຢັນດ້ວຍບັນຊີນັ້ນໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ.</string>
+    <string name="game_system_resign">%1$s ຍອມແພ້</string>
+    <string name="game_system_draw_offer">%1$s ສະເໜີເສມີ</string>
+    <string name="game_system_draw_accept">ຕົກລົງເສມີ</string>
+    <string name="game_system_draw_decline">%1$s ປະຕິເສດການເສມີ</string>
 </resources>

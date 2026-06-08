@@ -23,6 +23,10 @@
     <string name="market_back">ਵਾਪਸ</string>
     <string name="market_bid_dialog_amount_label">ਤੁਹਾਡੀ ਬੋਲੀ</string>
     <string name="market_bid_dialog_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="market_bid_dialog_ceiling_help">ਇਸ ਅਧਿਕਤਮ ਤੱਕ, ਅੱਗੇ ਰਹਿਣ ਲਈ ਲੋੜੀਂਦੀ ਸਭ ਤੋਂ ਛੋਟੀ ਰਕਮ ਨਾਲ ਅਸੀਂ ਆਪਣੇ ਆਪ ਤੁਹਾਡੀ ਬੋਲੀ ਵਧਾਵਾਂਗੇ।</string>
+    <string name="market_bid_dialog_instant_win">ਖਰੀਦਾਰੀ ਦੀ ਪੁਸ਼ਟੀ ਹੋ ਗਈ — ਪੇਮੈਂਟ ਪੂਰੀ ਕਰੋ</string>
+    <string name="market_bid_dialog_invalid_ceiling">ਵੱਧ ਤੋਂ ਵੱਧ ਬੋਲੀ ਘੱਟੋ-ਘੱਟ ਤੁਹਾਡੀ ਬੋਲੀ ਰਕਮ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ</string>
+    <string name="market_bid_dialog_outbid">ਤੁਹਾਡੀ ਬੋਲੀ ਲਾਈ ਗਈ ਪਰ ਤੁਰੰਤ ਪਿੱਛੇ ਰਹਿ ਗਈ। ਦੂਜੇ ਬੋਲੀਕਾਰ ਕੋਲ ਉੱਚਾ ਅਧਿਕਤਮ ਹੈ। ਉਹਨਾਂ ਦੀ ਬੋਲੀ ਹੁਣ %1$s ਹੈ।</string>
     <string name="market_bid_dialog_submit">ਬੋਲੀ ਲਗਾਓ</string>
     <string name="market_bid_dialog_success">ਬੋਲੀ ਲਾਈ ਗਈ</string>
     <string name="market_bid_dialog_title">ਬੋਲੀ ਲਗਾਓ</string>

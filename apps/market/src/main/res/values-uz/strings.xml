@@ -23,6 +23,10 @@
     <string name="market_back">Orqaga</string>
     <string name="market_bid_dialog_amount_label">Sizning takflingiz</string>
     <string name="market_bid_dialog_cancel">Bekor qilish</string>
+    <string name="market_bid_dialog_ceiling_help">Ushbu maksimumgacha, oldinda qolish uchun zarur bo\'lgan eng kichik miqdor bilan taklifingizni avtomatik ravishda oshiramiz.</string>
+    <string name="market_bid_dialog_instant_win">Xarid tasdiqlandi — toʻlovni yakunlang</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimum taklif kamida sizning taklif miqdoringiz boʻlishi kerak</string>
+    <string name="market_bid_dialog_outbid">Taklifingiz qabul qilindi, ammo darhol o\'zib ketildi. Boshqa ishtirokchining maksimumi yuqori. Uning taklifi hozir %1$s.</string>
     <string name="market_bid_dialog_submit">Taklif berish</string>
     <string name="market_bid_dialog_success">Taklif qabul qilindi</string>
     <string name="market_bid_dialog_title">Taklif berish</string>

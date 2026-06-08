@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Mål</string>
     <string name="forums_access_level_view">Visa</string>
+    <string name="forums_access_level_vote">Rösta</string>
     <string name="forums_access_level_comment">Kommentera</string>
     <string name="forums_access_level_post">Inlägg</string>
     <string name="forums_access_level_none">Ingen</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entitets-ID, @grupp, * (alla) eller + (medlemmar)</string>
     <string name="forums_access_level">Nivå</string>
     <string name="forums_access_level_moderate">Moderera</string>
-    <string name="forums_access_level_manage">Hantera</string>
     <string name="forums_members_search">Filtrera medlemmar</string>
     <string name="forums_banner_description">Markdown som visas högst upp i forumet.</string>
     <string name="forums_banner_placeholder">Välkommen till det här forumet…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Riskzon</string>
     <string name="forums_settings_delete_message">Detta tar bort forumet och alla dess inlägg permanent. Detta kan inte ångras.</string>
 
+    <string name="forums_tag_interest_up">Öka intresse</string>
+    <string name="forums_tag_interest_down">Minska intresse</string>
+    <string name="forums_tag_interest_remove">Ta bort intresse</string>
 </resources>

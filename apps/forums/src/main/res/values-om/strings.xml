@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Galma</string>
     <string name="forums_access_level_view">Daawwadhu</string>
+    <string name="forums_access_level_vote">Sagalee kenni</string>
     <string name="forums_access_level_comment">Yaada</string>
     <string name="forums_access_level_post">Maxxansa</string>
     <string name="forums_access_level_none">Tokko illee</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Eenyummaa entiitii, @gareen, * (hunda), yookaan + (miseensota)</string>
     <string name="forums_access_level">Sadarkaa</string>
     <string name="forums_access_level_moderate">To\'achuu</string>
-    <string name="forums_access_level_manage">Bulchuu</string>
     <string name="forums_members_search">Miseensota gulaali</string>
     <string name="forums_banner_description">Markdown gubbaa marichaa irratti mul\'atu.</string>
     <string name="forums_banner_placeholder">Marii kanatti baga nagaan dhuftan…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Naannoo balaa qabu</string>
     <string name="forums_settings_delete_message">Kun marichaa fi maxxansa isaa hunda hanga dhumaatti haqa. Kun deebi\'ee fooyya\'uu hin danda\'u.</string>
 
+    <string name="forums_tag_interest_up">Fedhii cimsi</string>
+    <string name="forums_tag_interest_down">Dantaa hir\'isi</string>
+    <string name="forums_tag_interest_remove">Dantaa haqi</string>
 </resources>

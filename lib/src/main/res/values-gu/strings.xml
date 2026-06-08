@@ -263,4 +263,8 @@
     <string name="stepup_error_code">તે કોડ ખોટો છે અથવા સમયસમાપ્ત થઈ ગયો છે.</string>
     <string name="stepup_error_passkey">પાસકી ચકાસણી નિષ્ફળ ગઈ. કૃપા કરીને ફરી પ્રયાસ કરો.</string>
     <string name="stepup_error_oauth">તે ખાતા વડે ચકાસણી કરી શકાઈ નહીં. કૃપા કરીને ફરી પ્રયાસ કરો.</string>
+    <string name="game_system_resign">%1$sએ રાજીનામું આપ્યું</string>
+    <string name="game_system_draw_offer">%1$sએ ડ્રોની દરખાસ્ત કરી</string>
+    <string name="game_system_draw_accept">ડ્રો સ્વીકારાયો</string>
+    <string name="game_system_draw_decline">%1$sએ ડ્રો નકાર્યો</string>
 </resources>

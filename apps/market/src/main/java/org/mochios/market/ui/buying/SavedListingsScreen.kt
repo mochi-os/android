@@ -137,13 +137,6 @@ class SavedListingsViewModel @Inject constructor(
     private val savedStore: SavedStore,
 ) : ViewModel() {
 
-    /**
-     * Cache of resolved listings by string ID. Avoids re-fetching the same
-     * listing every time the saved-IDs set updates (e.g. after the user
-     * un-saves one).
-     */
-    private val listingCache = mutableMapOf<String, Listing>()
-
     private val internalState = MutableStateFlow(SavedListingsUiState())
 
     val state: StateFlow<SavedListingsUiState> = internalState
@@ -156,6 +149,7 @@ class SavedListingsViewModel @Inject constructor(
     init {
         observe()
         loadCategories()
+        refresh()
     }
 
     private fun loadCategories() {
@@ -170,50 +164,33 @@ class SavedListingsViewModel @Inject constructor(
 
     fun clearAll() {
         viewModelScope.launch {
-            savedStore.clear()
+            try {
+                savedStore.clear()
+            } catch (_: Exception) {
+                // Optimistic rollback already restored the mirror; the
+                // observed flow re-renders the restored list.
+            }
         }
     }
 
+    /** Hydrate the saved mirror from the server on screen entry. */
+    private fun refresh() {
+        viewModelScope.launch {
+            internalState.value = internalState.value.copy(isLoading = true)
+            savedStore.refresh()
+            internalState.value = internalState.value.copy(isLoading = false)
+        }
+    }
+
+    /**
+     * The server returns each saved row as a full [Listing] snapshot, so
+     * the screen renders straight from the store's mirror — no per-id
+     * refetch needed.
+     */
     private fun observe() {
         viewModelScope.launch {
-            savedStore.observe().collect { idSet ->
-                val ids = idSet.toList()
-                internalState.value = internalState.value.copy(isLoading = true)
-                val resolved = arrayOfNulls<Listing>(ids.size)
-                val missingIndexes = mutableListOf<Int>()
-                val missingIds = mutableListOf<Long>()
-                ids.forEachIndexed { index, id ->
-                    val cached = listingCache[id]
-                    if (cached != null) {
-                        resolved[index] = cached
-                    } else {
-                        val longId = id.toLongOrNull() ?: return@forEachIndexed
-                        missingIndexes += index
-                        missingIds += longId
-                    }
-                }
-                if (missingIds.isNotEmpty()) {
-                    // Concurrent fan-out via the repo's batch helper, replacing
-                    // the previous N sequential round-trips on screen open.
-                    // Listings removed server-side fail individually inside the
-                    // helper and are dropped — the saved set is purged
-                    // opportunistically (permission changes are sometimes
-                    // temporary, so we don't aggressively prune).
-                    val fetched = repo.getListingsByIds(missingIds)
-                    val byId = fetched.associateBy { it.id.toString() }
-                    missingIndexes.forEach { slot ->
-                        val id = ids[slot]
-                        val listing = byId[id]
-                        if (listing != null) {
-                            listingCache[id] = listing
-                            resolved[slot] = listing
-                        }
-                    }
-                }
-                internalState.value = internalState.value.copy(
-                    isLoading = false,
-                    listings = resolved.filterNotNull(),
-                )
+            savedStore.saved.collect { listings ->
+                internalState.value = internalState.value.copy(listings = listings)
             }
         }
     }

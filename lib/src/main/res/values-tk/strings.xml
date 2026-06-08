@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Ol kod nädogry ýa-da möhleti geçen.</string>
     <string name="stepup_error_passkey">Giriş açary bilen tassyklamak şowsuz boldy. Täzeden synanyşyň.</string>
     <string name="stepup_error_oauth">Şol hasap bilen barlap bolmady. Täzeden synanyşyň.</string>
+    <string name="game_system_resign">%1$s boýun egdi</string>
+    <string name="game_system_draw_offer">%1$s deňlik teklip etdi</string>
+    <string name="game_system_draw_accept">Deňlik kabul edildi</string>
+    <string name="game_system_draw_decline">%1$s deňligi ret etdi</string>
 </resources>

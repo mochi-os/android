@@ -23,6 +23,10 @@
     <string name="market_back">צוריק</string>
     <string name="market_bid_dialog_amount_label">דיין ארויסזאג</string>
     <string name="market_bid_dialog_cancel">אָפּזאָגן</string>
+    <string name="market_bid_dialog_ceiling_help">מיר וועלן אויטאמאטיש אויפהייבן אייער ליציטאציע מיט דעם קלענסטן סכום וואס איז נייטיג צו בלייבן אינדערפרא, ביז דעם מאקסימום.</string>
+    <string name="market_bid_dialog_instant_win">אײַנקויף באַשטעטיקט — פֿאַרענדיק באַצאָלונג</string>
+    <string name="market_bid_dialog_invalid_ceiling">מאַקסימאַלער געבאָט מוז זײַן צום ווייניקסטן אײַער געבאָט־סכום</string>
+    <string name="market_bid_dialog_outbid">אייער ליציטאציע איז געלייגט געווארן אבער גלייך אריבערגעשפרינגען. אן אנדערער ליציטאטאר האט א העכערן מאקסימום. זיין ליציטאציע איז יעצט %1$s.</string>
     <string name="market_bid_dialog_submit">שטעל ארויסזאג</string>
     <string name="market_bid_dialog_success">אָפֿערט אַרײַנגעלייגט</string>
     <string name="market_bid_dialog_title">שטעל ארויסזאג</string>

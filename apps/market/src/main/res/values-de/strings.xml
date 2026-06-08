@@ -16,6 +16,10 @@
     <string name="market_asset_download">Herunterladen</string>
     <string name="market_back">Zurück</string>
     <string name="market_bid_dialog_cancel">Abbrechen</string>
+    <string name="market_bid_dialog_ceiling_help">Wir erhöhen Ihr Gebot automatisch um den kleinsten Betrag, der nötig ist, um vorne zu bleiben, bis zu diesem Maximum.</string>
+    <string name="market_bid_dialog_instant_win">Kauf bestätigt — Zahlung abschließen</string>
+    <string name="market_bid_dialog_invalid_ceiling">Das Höchstgebot muss mindestens Ihrem Gebotsbetrag entsprechen</string>
+    <string name="market_bid_dialog_outbid">Ihr Gebot wurde abgegeben, aber sofort überboten. Ein anderer Bieter hat ein höheres Maximum. Sein Gebot beträgt jetzt %1$s.</string>
     <string name="market_bid_dialog_submit">Bieten</string>
     <string name="market_bid_dialog_success">Gebot abgegeben</string>
     <string name="market_bid_dialog_title">Bieten</string>

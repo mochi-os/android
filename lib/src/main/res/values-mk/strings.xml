@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Тој код е неточен или е истечен.</string>
     <string name="stepup_error_passkey">Потврдата на passkey не успеа. Обидете се повторно.</string>
     <string name="stepup_error_oauth">Не успеа верификацијата со таа сметка. Обидете се повторно.</string>
+    <string name="game_system_resign">%1$s се предаде</string>
+    <string name="game_system_draw_offer">%1$s понуди реми</string>
+    <string name="game_system_draw_accept">Договорено реми</string>
+    <string name="game_system_draw_decline">%1$s го одби ремито</string>
 </resources>

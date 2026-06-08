@@ -33,6 +33,10 @@
     <string name="market_back">Артқа</string>
     <string name="market_bid_dialog_amount_label">Сіздің ұсынысыңыз</string>
     <string name="market_bid_dialog_cancel">Болдырмау</string>
+    <string name="market_bid_dialog_ceiling_help">Біз сіздің ұсынысыңызды алда қалу үшін қажетті ең аз сомаға автоматты түрде көтереміз, осы максимумға дейін.</string>
+    <string name="market_bid_dialog_instant_win">Сатып алу расталды — төлемді аяқтаңыз</string>
+    <string name="market_bid_dialog_invalid_ceiling">Ең жоғары баға кемінде сіздің баға сомаңыздан болуы керек</string>
+    <string name="market_bid_dialog_outbid">Сіздің ұсынысыңыз қойылды, бірақ бірден асып түсілді. Басқа қатысушының жоғары максимумы бар. Оның ұсынысы қазір %1$s.</string>
     <string name="market_bid_dialog_current_high">Қазіргі ең жоғары ұсыныс: %1$s</string>
     <string name="market_bid_dialog_failed">Ұсыныс беру мүмкін болмады</string>
     <string name="market_bid_dialog_invalid_amount">Қазіргі ұсыныстан жоғары сома енгізіңіз</string>

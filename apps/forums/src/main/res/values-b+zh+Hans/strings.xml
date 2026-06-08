@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">目标</string>
     <string name="forums_access_level_view">查看</string>
+    <string name="forums_access_level_vote">投票</string>
     <string name="forums_access_level_comment">评论</string>
     <string name="forums_access_level_post">发布</string>
     <string name="forums_access_level_none">无</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">实体 ID、@群组、*(所有人)或 +(成员)</string>
     <string name="forums_access_level">级别</string>
     <string name="forums_access_level_moderate">审核</string>
-    <string name="forums_access_level_manage">管理</string>
     <string name="forums_members_search">筛选成员</string>
     <string name="forums_banner_description">显示在论坛顶部的 Markdown 内容。</string>
     <string name="forums_banner_placeholder">欢迎来到本论坛…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">危险操作区</string>
     <string name="forums_settings_delete_message">这将永久删除该论坛及其所有帖子。此操作无法撤销。</string>
 
+    <string name="forums_tag_interest_up">提升兴趣</string>
+    <string name="forums_tag_interest_down">降低兴趣</string>
+    <string name="forums_tag_interest_remove">移除兴趣</string>
 </resources>

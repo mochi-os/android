@@ -16,6 +16,10 @@
     <string name="market_asset_download">ডাউনলোড</string>
     <string name="market_back">ফিরে যান</string>
     <string name="market_bid_dialog_cancel">বাতিল করুন</string>
+    <string name="market_bid_dialog_ceiling_help">এই সর্বোচ্চ সীমা পর্যন্ত, এগিয়ে থাকার জন্য প্রয়োজনীয় সবচেয়ে ছোট পরিমাণে আমরা আপনার বিড স্বয়ংক্রিয়ভাবে বাড়াব।</string>
+    <string name="market_bid_dialog_instant_win">কেনাকাটা নিশ্চিত হয়েছে — পেমেন্ট সম্পূর্ণ করুন</string>
+    <string name="market_bid_dialog_invalid_ceiling">সর্বোচ্চ বিড আপনার বিডের পরিমাণের চেয়ে কম হতে পারবে না</string>
+    <string name="market_bid_dialog_outbid">আপনার বিড দেওয়া হয়েছে কিন্তু সাথে সাথে অতিক্রম করা হয়েছে। অন্য একজন বিডারের উচ্চতর সর্বোচ্চ সীমা আছে। তার বিড এখন %1$s।</string>
     <string name="market_bid_dialog_submit">দাম প্রস্তাব করুন</string>
     <string name="market_bid_dialog_success">বিড স্থাপন করা হয়েছে</string>
     <string name="market_bid_dialog_title">দাম প্রস্তাব করুন</string>

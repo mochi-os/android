@@ -48,8 +48,17 @@ data class ProjectInfoResponse(
     val hierarchy: Map<String, List<String>> = emptyMap()
 )
 data class TemplateListResponse(val templates: List<Template> = emptyList())
-data class ObjectListResponse(val objects: List<ProjectObject> = emptyList())
+data class ObjectListResponse(
+    val objects: List<ProjectObject> = emptyList(),
+    val watched: List<String> = emptyList()
+)
 data class ObjectResponse(val `object`: ProjectObject = ProjectObject())
+// objects/create returns a flat body (id/number/readable), not a wrapped object.
+data class ObjectCreateResponse(
+    val id: String = "",
+    val number: Int = 0,
+    val readable: String = ""
+)
 data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class CommentResponse(val comment: Comment = Comment(id = ""))
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
@@ -82,7 +91,7 @@ data class SuccessResponse(val success: Boolean = false)
 data class UserSearchResponse(val users: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
-data class PreferenceResponse(val preference: String = "")
+data class PreferenceResponse(@SerializedName("style") val preference: String = "unified")
 
 interface ProjectsApi {
 
@@ -224,7 +233,7 @@ interface ProjectsApi {
         @Field("class") classId: String,
         @Field("parent") parent: String?,
         @Field("title") title: String
-    ): Response<ApiResponse<ObjectResponse>>
+    ): Response<ApiResponse<ObjectCreateResponse>>
 
     @GET("{projectId}/-/objects/{objectId}")
     suspend fun getObject(

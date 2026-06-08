@@ -28,6 +28,8 @@ data class ProjectUiState(
     val activeViewId: String? = null,
     val searchQuery: String = "",
     val watchedOnly: Boolean = false,
+    /** Object ids the local user watches, from the server objects/list response. */
+    val watched: List<String> = emptyList(),
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
@@ -110,6 +112,7 @@ class ProjectViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
                     objects = objects,
+                    watched = repository.getWatched(projectId),
                     people = people,
                     activeViewId = activeViewId,
                     isLoading = false
@@ -132,6 +135,7 @@ class ProjectViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(
                 projectDetails = details,
                 objects = objects,
+                watched = repository.getWatched(projectId),
                 people = people
             )
         } catch (_: Exception) {
@@ -150,6 +154,7 @@ class ProjectViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
                     objects = objects,
+                    watched = repository.getWatched(projectId),
                     people = people,
                     isRefreshing = false,
                     error = null
@@ -276,9 +281,9 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreatingObject = true)
             try {
-                val obj = repository.createObject(projectId, classId, parent, title)
+                val objectId = repository.createObject(projectId, classId, parent, title)
                 if (initialValues.isNotEmpty()) {
-                    repository.setValues(projectId, obj.id, initialValues)
+                    repository.setValues(projectId, objectId, initialValues)
                 }
                 _uiState.value = _uiState.value.copy(
                     isCreatingObject = false,
@@ -333,7 +338,10 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val objects = repository.getObjects(projectId)
-                _uiState.value = _uiState.value.copy(objects = objects)
+                _uiState.value = _uiState.value.copy(
+                    objects = objects,
+                    watched = repository.getWatched(projectId)
+                )
             } catch (_: Exception) { }
         }
     }
@@ -513,6 +521,12 @@ class ProjectViewModel @Inject constructor(
                 val filterValue = parts[1]
                 objects = objects.filter { it.stringValue(filterFieldId) == filterValue }
             }
+        }
+
+        // Filter to watched objects only
+        if (state.watchedOnly) {
+            val watchedSet = state.watched.toSet()
+            objects = objects.filter { watchedSet.contains(it.id) }
         }
 
         return sortObjects(objects)

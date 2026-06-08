@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ਟੀਚਾ</string>
     <string name="forums_access_level_view">ਦੇਖੋ</string>
+    <string name="forums_access_level_vote">ਵੋਟ ਪਾਓ</string>
     <string name="forums_access_level_comment">ਟਿੱਪਣੀ</string>
     <string name="forums_access_level_post">ਪੋਸਟ</string>
     <string name="forums_access_level_none">ਕੋਈ ਨਹੀਂ</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ਇਕਾਈ ID, @group, * (ਹਰ ਕੋਈ), ਜਾਂ + (ਮੈਂਬਰ)</string>
     <string name="forums_access_level">ਪੱਧਰ</string>
     <string name="forums_access_level_moderate">ਸੰਚਾਲਨ</string>
-    <string name="forums_access_level_manage">ਪ੍ਰਬੰਧਨ</string>
     <string name="forums_members_search">ਮੈਂਬਰ ਫਿਲਟਰ ਕਰੋ</string>
     <string name="forums_banner_description">ਫੋਰਮ ਦੇ ਸਿਖਰ \'ਤੇ ਦਿਖਾਇਆ ਜਾਣ ਵਾਲਾ Markdown।</string>
     <string name="forums_banner_placeholder">ਇਸ ਫੋਰਮ ਵਿੱਚ ਜੀ ਆਇਆਂ ਨੂੰ…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">ਖ਼ਤਰੇ ਵਾਲਾ ਖੇਤਰ</string>
     <string name="forums_settings_delete_message">ਇਹ ਫੋਰਮ ਅਤੇ ਇਸ ਦੀਆਂ ਸਾਰੀਆਂ ਪੋਸਟਾਂ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾ ਦੇਵੇਗਾ। ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
 
+    <string name="forums_tag_interest_up">ਦਿਲਚਸਪੀ ਵਧਾਓ</string>
+    <string name="forums_tag_interest_down">ਦਿਲਚਸਪੀ ਘਟਾਓ</string>
+    <string name="forums_tag_interest_remove">ਦਿਲਚਸਪੀ ਹਟਾਓ</string>
 </resources>

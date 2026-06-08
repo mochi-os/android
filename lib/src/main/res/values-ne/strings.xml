@@ -263,4 +263,8 @@
     <string name="stepup_error_code">त्यो कोड गलत छ वा म्याद सकिएको छ।</string>
     <string name="stepup_error_passkey">पासकी प्रमाणीकरण असफल भयो। कृपया फेरि प्रयास गर्नुहोस्।</string>
     <string name="stepup_error_oauth">त्यो खातासँग प्रमाणित गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।</string>
+    <string name="game_system_resign">%1$s ले हार स्वीकार गर्‍यो</string>
+    <string name="game_system_draw_offer">%1$s ले बराबरीको प्रस्ताव गर्‍यो</string>
+    <string name="game_system_draw_accept">बराबरी सहमति भयो</string>
+    <string name="game_system_draw_decline">%1$s ले बराबरी अस्वीकार गर्‍यो</string>
 </resources>

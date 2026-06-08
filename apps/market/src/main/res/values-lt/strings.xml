@@ -16,6 +16,10 @@
     <string name="market_asset_download">Atsisiųsti</string>
     <string name="market_back">Atgal</string>
     <string name="market_bid_dialog_cancel">Atšaukti</string>
+    <string name="market_bid_dialog_ceiling_help">Automatiškai didinsime jūsų pasiūlymą mažiausia suma, kurios reikia likti priekyje, iki šio maksimumo.</string>
+    <string name="market_bid_dialog_instant_win">Pirkimas patvirtintas — užbaikite mokėjimą</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimalus pasiūlymas turi būti bent jūsų pasiūlymo dydžio</string>
+    <string name="market_bid_dialog_outbid">Jūsų pasiūlymas pateiktas, bet iškart aplenktas. Kitas dalyvis turi didesnį maksimumą. Jo pasiūlymas dabar yra %1$s.</string>
     <string name="market_bid_dialog_submit">Pateikti pasiūlymą</string>
     <string name="market_bid_dialog_success">Pasiūlymas pateiktas</string>
     <string name="market_bid_dialog_title">Pateikti pasiūlymą</string>

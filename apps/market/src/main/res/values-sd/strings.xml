@@ -23,6 +23,10 @@
     <string name="market_back">واپس</string>
     <string name="market_bid_dialog_amount_label">توهان جي بولي</string>
     <string name="market_bid_dialog_cancel">منسوخ ڪريو</string>
+    <string name="market_bid_dialog_ceiling_help">ھن وڌ ۾ وڌ حد تائين، اڳتي رھڻ لاءِ گھربل گھٽ ۾ گھٽ رقم سان اسان توھان جي بولي خودڪار طور تي وڌائينداسين.</string>
+    <string name="market_bid_dialog_instant_win">خريداري تصديق ٿي — ادائيگي مڪمل ڪريو</string>
+    <string name="market_bid_dialog_invalid_ceiling">وڌ ۾ وڌ بِڊ گهٽ ۾ گهٽ توهان جي بِڊ جي رقم برابر هجڻ گهرجي</string>
+    <string name="market_bid_dialog_outbid">توھان جي بولي رکي وئي پر فوراً وڌيڪ ٻولي ڏني وئي. ٻئي ٻولي ڏيندڙ وٽ وڌيڪ بلند حد آھي. سندس بولي ھاڻ %1$s آھي.</string>
     <string name="market_bid_dialog_submit">بولي ڏيو</string>
     <string name="market_bid_dialog_success">بولي ڏني وئي</string>
     <string name="market_bid_dialog_title">بولي ڏيو</string>

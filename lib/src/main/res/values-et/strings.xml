@@ -263,4 +263,8 @@
     <string name="stepup_error_code">See kood on vale või aegunud.</string>
     <string name="stepup_error_passkey">Pääsuvõtmega kinnitamine ebaõnnestus. Proovige uuesti.</string>
     <string name="stepup_error_oauth">Selle kontoga ei õnnestunud kinnitada. Palun proovi uuesti.</string>
+    <string name="game_system_resign">%1$s alistus</string>
+    <string name="game_system_draw_offer">%1$s pakkus viiki</string>
+    <string name="game_system_draw_accept">Viik kokku lepitud</string>
+    <string name="game_system_draw_decline">%1$s keeldus viigist</string>
 </resources>

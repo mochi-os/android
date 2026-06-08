@@ -11,6 +11,7 @@
     <string name="forums_list_logout">登出</string>
     <string name="forums_find_subscribe">訂閱</string>
     <string name="forums_access_level_view">檢視</string>
+    <string name="forums_access_level_vote">投票</string>
     <string name="forums_access_level_none">無</string>
     <string name="forums_settings">設定</string>
     <string name="forums_list_search">搜尋</string>
@@ -126,7 +127,6 @@
     <string name="forums_access_target_hint">實體 ID、@群組、*(所有人)或 +(成員)</string>
     <string name="forums_access_level">層級</string>
     <string name="forums_access_level_moderate">管理員</string>
-    <string name="forums_access_level_manage">管理</string>
     <string name="forums_members_search">篩選成員</string>
     <string name="forums_banner_description">顯示喺論壇頂部嘅 Markdown 內容。</string>
     <string name="forums_banner_placeholder">歡迎嚟到呢個論壇…</string>
@@ -198,4 +198,7 @@
     <string name="forums_forum_not_found">搵唔到討論區</string>
     <string name="forums_post_not_found">搵唔到帖文</string>
 
+    <string name="forums_tag_interest_up">提升興趣</string>
+    <string name="forums_tag_interest_down">降低興趣</string>
+    <string name="forums_tag_interest_remove">移除興趣</string>
 </resources>

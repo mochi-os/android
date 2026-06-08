@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">Gervigreind</string>
     <string name="forums_access_target">Markmið</string>
     <string name="forums_access_level_view">Skoða</string>
+    <string name="forums_access_level_vote">Kjósa</string>
     <string name="forums_access_level_comment">Athugasemd</string>
     <string name="forums_access_level_post">Færsla</string>
     <string name="forums_access_level_none">Ekkert</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Auðkenni einingar, @hópur, * (allir), eða + (meðlimir)</string>
     <string name="forums_access_level">Stig</string>
     <string name="forums_access_level_moderate">Umsjón</string>
-    <string name="forums_access_level_manage">Stjórna</string>
     <string name="forums_members_search">Sía meðlimi</string>
     <string name="forums_banner_description">Markdown sem birtist efst á spjallborðinu.</string>
     <string name="forums_banner_placeholder">Velkomin á þetta spjallborð…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Hættusvæði</string>
     <string name="forums_settings_delete_message">Þetta mun eyða spjallborðinu og öllum færslum þess varanlega. Þetta er ekki hægt að afturkalla.</string>
 
+    <string name="forums_tag_interest_up">Auka áhuga</string>
+    <string name="forums_tag_interest_down">Minnka áhuga</string>
+    <string name="forums_tag_interest_remove">Fjarlægja áhuga</string>
 </resources>

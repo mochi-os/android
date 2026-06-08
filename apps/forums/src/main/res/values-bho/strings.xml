@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">लक्ष्य</string>
     <string name="forums_access_level_view">देखीं</string>
+    <string name="forums_access_level_vote">वोट दीं</string>
     <string name="forums_access_level_comment">टिप्पणी</string>
     <string name="forums_access_level_post">पोस्ट</string>
     <string name="forums_access_level_none">कुछुओ ना</string>
@@ -140,7 +141,6 @@
     <string name="forums_tag_clear">फिल्टर हटाईं</string>
     <string name="forums_post_tag_add">टैग जोड़ीं</string>
     <string name="forums_access_add">पहुँच नियम जोड़ीं</string>
-    <string name="forums_access_level_manage">प्रबंधन</string>
     <string name="forums_ai_account">AI खाता</string>
     <string name="forums_settings_fingerprint">फिंगरप्रिंट: %1$s</string>
     <string name="forums_settings_clear_notifications">सूचना साफ करीं</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_rename_label">फोरम के नाम</string>
     <string name="forums_settings_delete_message">एसे फोरम आ ओकर सब पोस्ट हमेशा खातिर मेटा जाई। एके वापस ना कइल जा सके।</string>
 
+    <string name="forums_tag_interest_up">रुचि बढ़ाईं</string>
+    <string name="forums_tag_interest_down">रुचि कम करीं</string>
+    <string name="forums_tag_interest_remove">रुचि हटाईं</string>
 </resources>

@@ -158,7 +158,7 @@ fun GoGameDetailScreen(
                     // Synthesise a GameMessage row for chat/move/system events
                     // so the chat panel updates without waiting for the
                     // round-trip refresh that applyWsEvent kicks off.
-                    val msg = synthesiseMessage(ev.type, ev.body, ev.member, ev.name, ev.created)
+                    val msg = synthesiseMessage(ev.type, ev.body, ev.member, ev.name, ev.event, ev.created)
                     viewModel.applyWsEvent(ev.type, msg)
                 }
             }
@@ -661,6 +661,16 @@ private fun GoMoveMessageRow(message: GameChatMessage, isSent: Boolean) {
 
 @Composable
 private fun DefaultSystemMessage(message: GameChatMessage) {
+    // Localise per viewer from the structured event kind; legacy rows (no
+    // event) fall back to the server-stored English body. Mirrors web's
+    // chat-message-list system branch.
+    val text = when (message.event) {
+        "resign" -> stringResource(MochiR.string.game_system_resign, message.name)
+        "draw_offer" -> stringResource(MochiR.string.game_system_draw_offer, message.name)
+        "draw_accept" -> stringResource(MochiR.string.game_system_draw_accept)
+        "draw_decline" -> stringResource(MochiR.string.game_system_draw_decline, message.name)
+        else -> message.body
+    }
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -668,7 +678,7 @@ private fun DefaultSystemMessage(message: GameChatMessage) {
         horizontalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = message.body,
+            text = text,
             style = MaterialTheme.typography.labelSmall.copy(
                 fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
             ),
@@ -769,6 +779,7 @@ private fun GameMessage.toChatMessage(): GameChatMessage = GameChatMessage(
     name = name,
     body = body,
     type = type,
+    event = event,
     created = created,
 )
 
@@ -783,6 +794,7 @@ private fun synthesiseMessage(
     body: String?,
     member: String?,
     name: String?,
+    event: String?,
     created: Long,
 ): GameMessage? {
     if (type != "message" && type != "move" && type != "system") return null
@@ -798,6 +810,7 @@ private fun synthesiseMessage(
         name = name.orEmpty(),
         body = resolvedBody,
         type = type,
+        event = event.orEmpty(),
         created = created,
     )
 }

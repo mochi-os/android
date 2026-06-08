@@ -16,6 +16,10 @@
     <string name="market_asset_download">Last ned</string>
     <string name="market_back">Tilbake</string>
     <string name="market_bid_dialog_cancel">Avbryt</string>
+    <string name="market_bid_dialog_ceiling_help">Vi hever automatisk budet ditt med det minste beløpet som trengs for å holde deg foran, opp til dette maksimum.</string>
+    <string name="market_bid_dialog_instant_win">Kjøp bekreftet – fullfør betalingen</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksbud må være minst like høyt som ditt bud</string>
+    <string name="market_bid_dialog_outbid">Budet ditt ble plassert, men ble straks slått. En annen budgiver har et høyere maksimum. Budet hans er nå %1$s.</string>
     <string name="market_bid_dialog_submit">Legg inn bud</string>
     <string name="market_bid_dialog_success">Bud lagt inn</string>
     <string name="market_bid_dialog_title">Legg inn bud</string>

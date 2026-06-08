@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Mira</string>
     <string name="forums_access_level_view">Ara</string>
+    <string name="forums_access_level_vote">Ivvota</string>
     <string name="forums_access_level_comment">Kumment</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Xejn</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID tal-entità, @grupp, * (kulħadd), jew + (membri)</string>
     <string name="forums_access_level">Livell</string>
     <string name="forums_access_level_moderate">Moderazzjoni</string>
-    <string name="forums_access_level_manage">Ġestjoni</string>
     <string name="forums_members_search">Iffiltra l-membri</string>
     <string name="forums_banner_description">Markdown muri fuq nett tal-forum.</string>
     <string name="forums_banner_placeholder">Merħba f\'dan il-forum…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Żona ta\' periklu</string>
     <string name="forums_settings_delete_message">Dan se jħassar il-forum u l-posts kollha tiegħu b\'mod permanenti. Dan ma jistax jitreġġa\' lura.</string>
 
+    <string name="forums_tag_interest_up">Saħħaħ l-interess</string>
+    <string name="forums_tag_interest_down">Naqqas l-interess</string>
+    <string name="forums_tag_interest_remove">Neħħi interess</string>
 </resources>

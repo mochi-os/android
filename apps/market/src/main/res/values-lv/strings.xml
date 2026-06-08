@@ -16,6 +16,10 @@
     <string name="market_asset_download">Lejupielādēt</string>
     <string name="market_back">Atpakaļ</string>
     <string name="market_bid_dialog_cancel">Atcelt</string>
+    <string name="market_bid_dialog_ceiling_help">Mēs automātiski palielināsim jūsu piedāvājumu ar mazāko nepieciešamo summu, lai paliktu priekšā, līdz šim maksimumam.</string>
+    <string name="market_bid_dialog_instant_win">Pirkums apstiprināts — pabeidziet maksājumu</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimālajam piedāvājumam jābūt vismaz jūsu piedāvājuma summai</string>
+    <string name="market_bid_dialog_outbid">Jūsu piedāvājums ir iesniegts, bet uzreiz pārspēts. Citam piedāvātājam ir augstāks maksimums. Viņa piedāvājums tagad ir %1$s.</string>
     <string name="market_bid_dialog_submit">Iesniegt piedāvājumu</string>
     <string name="market_bid_dialog_success">Solījums veikts</string>
     <string name="market_bid_dialog_title">Iesniegt piedāvājumu</string>

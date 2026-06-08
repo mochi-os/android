@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Viimane sünkroonimine: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">See peatab värskenduste saatmise „%1$s\". Nad saavad uuesti replitseerida, kui soovivad.</string>
     <string name="wikis_replicas_removed_success">Replika eemaldatud</string>
+    <string name="wikis_load_more">Lae rohkem</string>
+    <string name="wikis_access_change_level">Juurdepääsu tase</string>
+    <string name="wikis_access_subject_anyone">Kõik</string>
+    <string name="wikis_access_subject_authenticated">Autenditud kasutajad</string>
 
 </resources>

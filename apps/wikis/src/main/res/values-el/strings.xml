@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Τελευταίος συγχρονισμός: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Αυτό θα σταματήσει την αποστολή ενημερώσεων στο «%1$s». Μπορούν να αναπαραγάγουν ξανά αν θέλουν.</string>
     <string name="wikis_replicas_removed_success">Η αντίγραφο αφαιρέθηκε</string>
+    <string name="wikis_load_more">Φόρτωση περισσότερων</string>
+    <string name="wikis_access_change_level">Επίπεδο πρόσβασης</string>
+    <string name="wikis_access_subject_anyone">Οποιοσδήποτε</string>
+    <string name="wikis_access_subject_authenticated">Πιστοποιημένοι χρήστες</string>
 
 </resources>

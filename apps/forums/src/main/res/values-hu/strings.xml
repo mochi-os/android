@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">MI</string>
     <string name="forums_access_target">Cél</string>
     <string name="forums_access_level_view">Megtekintés</string>
+    <string name="forums_access_level_vote">Szavazás</string>
     <string name="forums_access_level_comment">Megjegyzés</string>
     <string name="forums_access_level_post">Bejegyzés</string>
     <string name="forums_access_level_none">Nincs</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entitásazonosító, @csoport, * (mindenki) vagy + (tagok)</string>
     <string name="forums_access_level">Szint</string>
     <string name="forums_access_level_moderate">Moderálás</string>
-    <string name="forums_access_level_manage">Kezelés</string>
     <string name="forums_members_search">Tagok szűrése</string>
     <string name="forums_banner_description">A fórum tetején megjelenő Markdown.</string>
     <string name="forums_banner_placeholder">Üdvözöljük ezen a fórumon…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Veszélyzóna</string>
     <string name="forums_settings_delete_message">Ez véglegesen törli a fórumot és minden bejegyzését. Ez a művelet nem vonható vissza.</string>
 
+    <string name="forums_tag_interest_up">Érdeklődés növelése</string>
+    <string name="forums_tag_interest_down">Érdeklődés csökkentése</string>
+    <string name="forums_tag_interest_remove">Érdeklődés eltávolítása</string>
 </resources>

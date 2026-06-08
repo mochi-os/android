@@ -29,6 +29,10 @@
     <string name="market_back">Retounen</string>
     <string name="market_bid_dialog_amount_label">Òf ou</string>
     <string name="market_bid_dialog_cancel">Anile</string>
+    <string name="market_bid_dialog_ceiling_help">Nou pral ogmante òf ou otomatikman ak pi piti kantite ki nesesè pou rete devan, jiska maksimòm sa a.</string>
+    <string name="market_bid_dialog_instant_win">Acha konfime — fini peman</string>
+    <string name="market_bid_dialog_invalid_ceiling">Òf maksimòm dwe omwen kantite òf ou a</string>
+    <string name="market_bid_dialog_outbid">Òf ou a te plase men li te depase imedyatman. Yon lòt mizè gen yon maksimòm pi wo. Òf li kounye a se %1$s.</string>
     <string name="market_bid_dialog_submit">Fè òf</string>
     <string name="market_bid_dialog_success">Enchè plase</string>
     <string name="market_bid_dialog_title">Fè òf</string>

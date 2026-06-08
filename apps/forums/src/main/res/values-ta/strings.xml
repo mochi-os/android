@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">இலக்கு</string>
     <string name="forums_access_level_view">காட்டு</string>
+    <string name="forums_access_level_vote">வாக்களி</string>
     <string name="forums_access_level_comment">கருத்து</string>
     <string name="forums_access_level_post">பதிவு</string>
     <string name="forums_access_level_none">ஒன்றுமில்லை</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">நிறுவன ID, @group, * (அனைவரும்), அல்லது + (உறுப்பினர்கள்)</string>
     <string name="forums_access_level">நிலை</string>
     <string name="forums_access_level_moderate">மட்டுப்படுத்து</string>
-    <string name="forums_access_level_manage">நிர்வகி</string>
     <string name="forums_members_search">உறுப்பினர்களை வடிகட்டவும்</string>
     <string name="forums_banner_description">மன்றத்தின் மேல் காட்டப்படும் மார்க்டவுன்.</string>
     <string name="forums_banner_placeholder">இந்த மன்றத்திற்கு வரவேற்கிறோம்…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">ஆபத்தான பகுதி</string>
     <string name="forums_settings_delete_message">இது மன்றத்தையும் அதன் அனைத்து இடுகைகளையும் நிரந்தரமாக நீக்கும். இதைச் செயல்தவிர்க்க முடியாது.</string>
 
+    <string name="forums_tag_interest_up">ஆர்வத்தை அதிகரி</string>
+    <string name="forums_tag_interest_down">ஆர்வத்தைக் குறைக்கவும்</string>
+    <string name="forums_tag_interest_remove">ஆர்வத்தை அகற்று</string>
 </resources>

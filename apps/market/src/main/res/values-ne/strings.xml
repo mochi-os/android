@@ -23,6 +23,10 @@
     <string name="market_back">पछाडि</string>
     <string name="market_bid_dialog_amount_label">तपाईंको बोली</string>
     <string name="market_bid_dialog_cancel">रद्द गर्नुहोस्</string>
+    <string name="market_bid_dialog_ceiling_help">यो अधिकतमसम्म, अगाडि रहनका लागि आवश्यक न्यूनतम रकमबाट हामी स्वचालित रूपमा तपाईंको बोली बढाउनेछौं।</string>
+    <string name="market_bid_dialog_instant_win">किनमेल पुष्टि भयो — भुक्तानी पूरा गर्नुहोस्</string>
+    <string name="market_bid_dialog_invalid_ceiling">अधिकतम बोली कम्तीमा तपाईंको बोली रकम बराबर हुनुपर्छ</string>
+    <string name="market_bid_dialog_outbid">तपाईंको बोली राखियो तर तुरुन्तै पछि परियो। अर्को बोलीकर्ताको अधिकतम बढी छ। उनको बोली अहिले %1$s छ।</string>
     <string name="market_bid_dialog_submit">बोली राख्नुहोस्</string>
     <string name="market_bid_dialog_success">बोली राखियो</string>
     <string name="market_bid_dialog_title">बोली राख्नुहोस्</string>

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AA</string>
     <string name="forums_access_target">Helburua</string>
     <string name="forums_access_level_view">Ikusi</string>
+    <string name="forums_access_level_vote">Bozkatu</string>
     <string name="forums_access_level_comment">Iruzkina</string>
     <string name="forums_access_level_post">Argitalpena</string>
     <string name="forums_access_level_none">Bat ere ez</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">Entitate IDa, @taldea, * (denak), edo + (kideak)</string>
     <string name="forums_access_level">Maila</string>
     <string name="forums_access_level_moderate">Moderatu</string>
-    <string name="forums_access_level_manage">Kudeatu</string>
     <string name="forums_members_search">Iragazi kideak</string>
     <string name="forums_banner_description">Foroaren goialdean erakusten den Markdown edukia.</string>
     <string name="forums_banner_placeholder">Ongi etorri foro honetara…</string>
@@ -198,4 +198,7 @@
     <string name="forums_settings_danger_zone">Eremu arriskutsua</string>
     <string name="forums_settings_delete_message">Honek foroa eta bere bidalketa guztiak betiko ezabatuko ditu. Ekintza hau ezin da desegin.</string>
 
+    <string name="forums_tag_interest_up">Bultzatu interesa</string>
+    <string name="forums_tag_interest_down">Murriztu interesa</string>
+    <string name="forums_tag_interest_remove">Kendu interesa</string>
 </resources>

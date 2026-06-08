@@ -263,4 +263,8 @@
     <string name="stepup_error_code">Αυτός ο κωδικός είναι λανθασμένος ή έχει λήξει.</string>
     <string name="stepup_error_passkey">Η επαλήθευση με κλειδί πρόσβασης απέτυχε. Δοκιμάστε ξανά.</string>
     <string name="stepup_error_oauth">Δεν ήταν δυνατή η επαλήθευση με αυτόν τον λογαριασμό. Δοκιμάστε ξανά.</string>
+    <string name="game_system_resign">Ο/Η %1$s παραιτήθηκε</string>
+    <string name="game_system_draw_offer">Ο/Η %1$s πρότεινε ισοπαλία</string>
+    <string name="game_system_draw_accept">Συμφωνήθηκε ισοπαλία</string>
+    <string name="game_system_draw_decline">Ο/Η %1$s απέρριψε την ισοπαλία</string>
 </resources>

@@ -23,6 +23,10 @@
     <string name="market_back">Yza</string>
     <string name="market_bid_dialog_amount_label">Siziň teklipiňiz</string>
     <string name="market_bid_dialog_cancel">Ýatyrmak</string>
+    <string name="market_bid_dialog_ceiling_help">Biz teklibiňizi öňde galmak üçin gerek bolan iň az mukdar bilen awtomatik usulda galdyrarys, bu maksimuma çenli.</string>
+    <string name="market_bid_dialog_instant_win">Satyn alyş tassyklandy — tölegi tamamla</string>
+    <string name="market_bid_dialog_invalid_ceiling">Maksimum teklip teklip möçberiňizden iň azyndan deň bolmalydyr</string>
+    <string name="market_bid_dialog_outbid">Teklibiniz goýuldy, ýöne derrew aşa geçildi. Başga bir teklipçide has ýokary maksimum bar. Onuň teklibi indi %1$s.</string>
     <string name="market_bid_dialog_submit">Teklip beriň</string>
     <string name="market_bid_dialog_success">Teklip goýuldy</string>
     <string name="market_bid_dialog_title">Teklip beriň</string>

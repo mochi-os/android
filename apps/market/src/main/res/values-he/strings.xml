@@ -16,6 +16,10 @@
     <string name="market_asset_download">הורדה</string>
     <string name="market_back">חזור</string>
     <string name="market_bid_dialog_cancel">ביטול</string>
+    <string name="market_bid_dialog_ceiling_help">נעלה את ההצעה שלך אוטומטית בסכום הקטן ביותר הנדרש כדי להישאר בראש, עד למקסימום זה.</string>
+    <string name="market_bid_dialog_instant_win">הרכישה אושרה — השלם את התשלום</string>
+    <string name="market_bid_dialog_invalid_ceiling">ההצעה המרבית חייבת להיות לפחות בגובה סכום ההצעה שלך</string>
+    <string name="market_bid_dialog_outbid">ההצעה שלך הוגשה אך נעקפה מיד. למציע אחר יש מקסימום גבוה יותר. הצעתו כעת היא %1$s.</string>
     <string name="market_bid_dialog_submit">הגש הצעה</string>
     <string name="market_bid_dialog_success">הצעה הוגשה</string>
     <string name="market_bid_dialog_title">הגש הצעה</string>

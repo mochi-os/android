@@ -23,6 +23,10 @@
     <string name="market_back">ກັບຄືນ</string>
     <string name="market_bid_dialog_amount_label">ການປະມູນຂອງທ່ານ</string>
     <string name="market_bid_dialog_cancel">ຍົກເລີກ</string>
+    <string name="market_bid_dialog_ceiling_help">ພວກເຮົາຈະຍົກສູງການປະມູນຂອງທ່ານໂດຍອັດຕະໂນມັດດ້ວຍຈໍານວນທີ່ນ້ອຍທີ່ສຸດທີ່ຈໍາເປັນເພື່ອນໍາໜ້າ, ສູງສຸດເຖິງຈໍານວນນີ້.</string>
+    <string name="market_bid_dialog_instant_win">ຢືນຢັນການຊື້ — ຊຳລະເງິນສຳເລັດ</string>
+    <string name="market_bid_dialog_invalid_ceiling">ການປະມູນສູງສຸດຕ້ອງເທົ່າກັບຫຼືສູງກວ່າຈຳນວນການປະມູນຂອງທ່ານ</string>
+    <string name="market_bid_dialog_outbid">ການປະມູນຂອງທ່ານໄດ້ຮັບການວາງແຕ່ໄດ້ຮັບການເກີນທັນທີ. ຜູ້ປະມູນຄົນອື່ນມີຈໍານວນສູງສຸດທີ່ສູງກວ່າ. ການປະມູນຂອງເຂົາເຈົ້າຕອນນີ້ແມ່ນ %1$s.</string>
     <string name="market_bid_dialog_submit">ປະມູນ</string>
     <string name="market_bid_dialog_success">ປະມູນແລ້ວ</string>
     <string name="market_bid_dialog_title">ປະມູນ</string>
