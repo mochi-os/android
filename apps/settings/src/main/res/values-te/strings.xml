@@ -387,4 +387,12 @@
     <string name="login_method_totp">ఆథెంటికేటర్ యాప్</string>
     <string name="login_method_oauth">థర్డ్-పార్టీ లాగిన్</string>
     <string name="login_method_recovery">రికవరీ కోడ్‌లు</string>
+    <string name="account_close_section">ఖాతాను మూసివేయి</string>
+    <string name="account_close_action">ఖాతాను మూసివేయి</string>
+    <string name="account_close_confirm_title">మీ ఖాతాను మూసివేయాలా?</string>
+    <string name="account_close_confirm_body">మీ ఖాతా తొలగింపు కోసం షెడ్యూల్ చేయబడుతుంది మరియు మీరు సైన్ అవుట్ చేయబడతారు. తొలగింపు తేదీకి ముందు ఎప్పుడైనా తిరిగి లాగిన్ చేయడం ద్వారా మీరు రద్దు చేయవచ్చు.</string>
+    <string name="account_data_download">డౌన్‌లోడ్</string>
+    <string name="route_target_app">యాప్</string>
+    <string name="route_target_entity">సంస్థ</string>
+    <string name="route_target_url">URL</string>
 </resources>

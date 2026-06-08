@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator tətbiqi</string>
     <string name="login_method_oauth">Bu CRM silinmiş ola bilər və ya sizin ona girişiniz yoxdur.</string>
     <string name="login_method_recovery">Bərpa kodları</string>
+    <string name="account_close_section">Hesabı bağla</string>
+    <string name="account_close_action">Hesabı bağla</string>
+    <string name="account_close_confirm_title">Hesabınızı bağlamaq istəyirsiniz?</string>
+    <string name="account_close_confirm_body">Hesabınız silinmək üçün planlaşdırılacaq və hesabdan çıxarılacaqsınız. Silinmə tarixindən əvvəl istənilən vaxt yenidən daxil olaraq ləğv edə bilərsiniz.</string>
+    <string name="account_data_download">Yüklə</string>
+    <string name="route_target_app">Tətbiq</string>
+    <string name="route_target_entity">Qurum</string>
+    <string name="route_target_url">ABŞ dolları</string>
 </resources>

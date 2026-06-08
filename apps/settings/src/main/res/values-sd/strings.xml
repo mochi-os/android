@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator ايپ</string>
     <string name="login_method_oauth">ٽئين پارٽي لاگ ان</string>
     <string name="login_method_recovery">بحالي ڪوڊ</string>
+    <string name="account_close_section">اڪائونٽ بند ڪريو</string>
+    <string name="account_close_action">اڪائونٽ بند ڪريو</string>
+    <string name="account_close_confirm_title">پنهنجو اڪائونٽ بند ڪجي؟</string>
+    <string name="account_close_confirm_body">توهان جو اڪائونٽ ختم ڪرڻ لاءِ مقرر ڪيو ويندو ۽ توهان کي سائن آئوٽ ڪيو ويندو. توهان ختم ٿيڻ جي تاريخ کان اڳ ڪنهن به وقت ٻيهر لاگ ان ڪري ان کي منسوخ ڪري سگهو ٿا.</string>
+    <string name="account_data_download">ڊائون لوڊ</string>
+    <string name="route_target_app">ايپ</string>
+    <string name="route_target_entity">اينٽٽي</string>
+    <string name="route_target_url">URL</string>
 </resources>

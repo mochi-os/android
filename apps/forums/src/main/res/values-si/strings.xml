@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">කැමැත්ත වැඩි කරන්න</string>
     <string name="forums_tag_interest_down">උනන්දුව අඩු කරන්න</string>
     <string name="forums_tag_interest_remove">උනන්දුව ඉවත් කරන්න</string>
+    <string name="forums_list_default_sort">පෙරනිමි වර්ග කිරීම</string>
+    <string name="forums_access_tab_users">පරිශීලකයන්</string>
+    <string name="forums_access_tab_groups">කණ්ඩායම්</string>
+    <string name="forums_access_tab_manual">අතින්</string>
+    <string name="forums_access_search_users">පරිශීලකයින් සොයන්න</string>
+    <string name="forums_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
 </resources>

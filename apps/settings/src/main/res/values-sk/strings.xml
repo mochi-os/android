@@ -389,4 +389,12 @@
     <string name="login_method_totp">Autentifikačná aplikácia</string>
     <string name="login_method_oauth">Prihlásenie tretej strany</string>
     <string name="login_method_recovery">Kódy na obnovenie</string>
+    <string name="account_close_section">Zatvoriť účet</string>
+    <string name="account_close_action">Zatvoriť účet</string>
+    <string name="account_close_confirm_title">Zatvoriť váš účet?</string>
+    <string name="account_close_confirm_body">Váš účet bude naplánovaný na odstránenie a budete odhlásení. Zrušiť to môžete kedykoľvek pred dátumom odstránenia opätovným prihlásením.</string>
+    <string name="account_data_download">Stiahnuť</string>
+    <string name="route_target_app">Aplikácia</string>
+    <string name="route_target_entity">Entita</string>
+    <string name="route_target_url">URL</string>
 </resources>

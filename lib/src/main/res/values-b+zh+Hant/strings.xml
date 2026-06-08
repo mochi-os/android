@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s 提出和棋</string>
     <string name="game_system_draw_accept">同意和棋</string>
     <string name="game_system_draw_decline">%1$s 拒絕和棋</string>
+    <string name="reactivation_title">你的帳戶已排定刪除</string>
+    <string name="reactivation_body">你的帳戶已排定刪除。你現在可以取消並還原完整存取權限。</string>
+    <string name="reactivation_body_dated">你的帳戶及其所有資料將於 %1$s 永久刪除。你現在可以取消並還原完整存取權限。</string>
+    <string name="reactivation_reactivate">重新啟用我的帳戶</string>
+    <string name="reactivation_sign_out">繼續關閉並登出</string>
 </resources>

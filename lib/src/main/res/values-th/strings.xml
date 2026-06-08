@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s เสนอเสมอ</string>
     <string name="game_system_draw_accept">ตกลงเสมอ</string>
     <string name="game_system_draw_decline">%1$s ปฏิเสธการเสมอ</string>
+    <string name="reactivation_title">บัญชีของคุณถูกกำหนดให้ลบ</string>
+    <string name="reactivation_body">บัญชีของคุณถูกกำหนดให้ลบ คุณสามารถยกเลิกและกู้คืนการเข้าถึงทั้งหมดได้ทันที</string>
+    <string name="reactivation_body_dated">บัญชีของคุณและข้อมูลทั้งหมดจะถูกลบอย่างถาวรในวันที่ %1$s คุณสามารถยกเลิกและกู้คืนการเข้าถึงทั้งหมดได้ทันที</string>
+    <string name="reactivation_reactivate">เปิดใช้งานบัญชีของฉันอีกครั้ง</string>
+    <string name="reactivation_sign_out">ดำเนินการปิดต่อและออกจากระบบ</string>
 </resources>

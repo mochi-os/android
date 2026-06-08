@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Ενίσχυση ενδιαφέροντος</string>
     <string name="forums_tag_interest_down">Μείωση ενδιαφέροντος</string>
     <string name="forums_tag_interest_remove">Αφαίρεση ενδιαφέροντος</string>
+    <string name="forums_list_default_sort">Προεπιλεγμένη ταξινόμηση</string>
+    <string name="forums_access_tab_users">Χρήστες</string>
+    <string name="forums_access_tab_groups">Ομάδες</string>
+    <string name="forums_access_tab_manual">Χειροκίνητο</string>
+    <string name="forums_access_search_users">Αναζήτηση χρηστών</string>
+    <string name="forums_access_no_groups">Δεν υπάρχουν διαθέσιμες ομάδες</string>
 </resources>

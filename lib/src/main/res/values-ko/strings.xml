@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s 무승부 제안함</string>
     <string name="game_system_draw_accept">무승부 합의됨</string>
     <string name="game_system_draw_decline">%1$s 무승부 거절함</string>
+    <string name="reactivation_title">회원님의 계정이 삭제 예정입니다</string>
+    <string name="reactivation_body">회원님의 계정이 삭제 예정입니다. 지금 취소하고 전체 액세스를 복원할 수 있습니다.</string>
+    <string name="reactivation_body_dated">회원님의 계정과 모든 데이터는 %1$s에 영구적으로 삭제됩니다. 지금 취소하고 전체 액세스를 복원할 수 있습니다.</string>
+    <string name="reactivation_reactivate">내 계정 다시 활성화</string>
+    <string name="reactivation_sign_out">닫기를 계속하고 로그아웃</string>
 </resources>

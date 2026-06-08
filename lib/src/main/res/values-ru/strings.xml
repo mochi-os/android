@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s предложил ничью</string>
     <string name="game_system_draw_accept">Ничья согласована</string>
     <string name="game_system_draw_decline">%1$s отклонил ничью</string>
+    <string name="reactivation_title">Ваш аккаунт запланирован к удалению</string>
+    <string name="reactivation_body">Ваш аккаунт запланирован к удалению. Вы можете отменить это и восстановить полный доступ прямо сейчас.</string>
+    <string name="reactivation_body_dated">Ваш аккаунт и все его данные будут безвозвратно удалены %1$s. Вы можете отменить это и восстановить полный доступ прямо сейчас.</string>
+    <string name="reactivation_reactivate">Повторно активировать мой аккаунт</string>
+    <string name="reactivation_sign_out">Продолжить закрытие и выйти</string>
 </resources>

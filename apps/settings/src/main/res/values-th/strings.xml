@@ -386,4 +386,12 @@
     <string name="login_method_totp">แอป Authenticator</string>
     <string name="login_method_oauth">เข้าสู่ระบบด้วยบุคคลที่สาม</string>
     <string name="login_method_recovery">รหัสกู้คืน</string>
+    <string name="account_close_section">ปิดบัญชี</string>
+    <string name="account_close_action">ปิดบัญชี</string>
+    <string name="account_close_confirm_title">ปิดบัญชีของคุณหรือไม่?</string>
+    <string name="account_close_confirm_body">บัญชีของคุณจะถูกกำหนดให้ลบและคุณจะถูกออกจากระบบ คุณสามารถยกเลิกได้ทุกเมื่อก่อนถึงวันที่ลบโดยการเข้าสู่ระบบอีกครั้ง</string>
+    <string name="account_data_download">ดาวน์โหลด</string>
+    <string name="route_target_app">แอป</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
 </resources>

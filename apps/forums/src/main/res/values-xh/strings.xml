@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Khulisa umdla</string>
     <string name="forums_tag_interest_down">Nciphisa umnxili</string>
     <string name="forums_tag_interest_remove">Susa umnxili</string>
+    <string name="forums_list_default_sort">Ukuhlela koqobo</string>
+    <string name="forums_access_tab_users">Abasebenzisi</string>
+    <string name="forums_access_tab_groups">Amaqela</string>
+    <string name="forums_access_tab_manual">Ngesandla</string>
+    <string name="forums_access_search_users">Khangela abasebenzisi</string>
+    <string name="forums_access_no_groups">Akukho maqela afumanekayo</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="login_method_totp">ऑथेंटिकेटर ऐप</string>
     <string name="login_method_oauth">थर्ड-पार्टी लॉगिन</string>
     <string name="login_method_recovery">रिकवरी कोड्स</string>
+    <string name="account_close_section">खाता बंद करें</string>
+    <string name="account_close_action">खाता बंद करें</string>
+    <string name="account_close_confirm_title">अपना खाता बंद करें?</string>
+    <string name="account_close_confirm_body">आपका खाता हटाने के लिए निर्धारित किया जाएगा और आपको साइन आउट कर दिया जाएगा. हटाने की तारीख से पहले किसी भी समय दोबारा लॉग इन करके आप इसे रद्द कर सकते हैं.</string>
+    <string name="account_data_download">डाउनलोड</string>
+    <string name="route_target_app">ऐप</string>
+    <string name="route_target_entity">एंटिटी</string>
+    <string name="route_target_url">URL</string>
 </resources>

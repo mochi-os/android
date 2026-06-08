@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s డ్రా ప్రతిపాదించారు</string>
     <string name="game_system_draw_accept">డ్రాకు అంగీకరించారు</string>
     <string name="game_system_draw_decline">%1$s డ్రాను తిరస్కరించారు</string>
+    <string name="reactivation_title">మీ ఖాతా తొలగింపు కోసం షెడ్యూల్ చేయబడింది</string>
+    <string name="reactivation_body">మీ ఖాతా తొలగింపు కోసం షెడ్యూల్ చేయబడింది. మీరు ఇప్పుడు రద్దు చేసి పూర్తి యాక్సెస్‌ను పునరుద్ధరించవచ్చు.</string>
+    <string name="reactivation_body_dated">మీ ఖాతా మరియు దాని మొత్తం డేటా %1$s నాడు శాశ్వతంగా తొలగించబడుతుంది. మీరు ఇప్పుడు రద్దు చేసి పూర్తి యాక్సెస్‌ను పునరుద్ధరించవచ్చు.</string>
+    <string name="reactivation_reactivate">నా ఖాతాను తిరిగి సక్రియం చేయి</string>
+    <string name="reactivation_sign_out">మూసివేయడం కొనసాగించి సైన్ అవుట్ చేయండి</string>
 </resources>

@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$sが引き分けを提案しました</string>
     <string name="game_system_draw_accept">引き分けが成立しました</string>
     <string name="game_system_draw_decline">%1$sが引き分けを拒否しました</string>
+    <string name="reactivation_title">お客様のアカウントは削除予定です</string>
+    <string name="reactivation_body">お客様のアカウントは削除予定です。今すぐ取り消して、すべてのアクセスを復元できます。</string>
+    <string name="reactivation_body_dated">お客様のアカウントとそのすべてのデータは %1$s に完全に削除されます。今すぐ取り消して、すべてのアクセスを復元できます。</string>
+    <string name="reactivation_reactivate">アカウントを再有効化</string>
+    <string name="reactivation_sign_out">閉鎖を続行してサインアウト</string>
 </resources>

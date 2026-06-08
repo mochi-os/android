@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Augmenta l\'interès</string>
     <string name="forums_tag_interest_down">Redueix l\'interès</string>
     <string name="forums_tag_interest_remove">Elimina l\'interès</string>
+    <string name="forums_list_default_sort">Ordre per defecte</string>
+    <string name="forums_access_tab_users">Usuaris</string>
+    <string name="forums_access_tab_groups">Grups</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Cerca usuaris</string>
+    <string name="forums_access_no_groups">No hi ha cap grup disponible</string>
 </resources>

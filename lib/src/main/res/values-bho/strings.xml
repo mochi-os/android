@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ड्रॉ के प्रस्ताव दिहलें</string>
     <string name="game_system_draw_accept">ड्रॉ पर सहमति बनल</string>
     <string name="game_system_draw_decline">%1$s ड्रॉ ठुकरा दिहलें</string>
+    <string name="reactivation_title">रउआ के खाता मिटावे खातिर तय बा</string>
+    <string name="reactivation_body">रउआ के खाता मिटावे खातिर तय बा। रउआ अबहीं रद्द क के पूरा पहुँच वापस पा सकेनी।</string>
+    <string name="reactivation_body_dated">रउआ के खाता आ ओकर सभ डेटा %1$s के हमेशा खातिर मिटा दिहल जाई। रउआ अबहीं रद्द क के पूरा पहुँच वापस पा सकेनी।</string>
+    <string name="reactivation_reactivate">हमार खाता फेर से चालू करीं</string>
+    <string name="reactivation_sign_out">बंद करत रहीं आ साइन आउट करीं</string>
 </resources>

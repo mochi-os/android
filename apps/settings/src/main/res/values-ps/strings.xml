@@ -387,4 +387,12 @@
     <string name="login_method_totp">د Authenticator اپلیکیشن</string>
     <string name="login_method_oauth">د دریمې اړخ ننوتل</string>
     <string name="login_method_recovery">د بیرته راګرځولو کوډونه</string>
+    <string name="account_close_section">حساب وتړئ</string>
+    <string name="account_close_action">حساب وتړئ</string>
+    <string name="account_close_confirm_title">خپل حساب وتړئ؟</string>
+    <string name="account_close_confirm_body">ستاسو حساب به د حذف لپاره وټاکل شي او تاسو به وویستل شئ. تاسو کولی شئ د حذف د نېټې نه مخکې په هر وخت کې بیا ننوتلو سره دا لغوه کړئ.</string>
+    <string name="account_data_download">ډاونلوډ</string>
+    <string name="route_target_app">اپلیکیشن</string>
+    <string name="route_target_entity">موجودیت</string>
+    <string name="route_target_url">URL</string>
 </resources>

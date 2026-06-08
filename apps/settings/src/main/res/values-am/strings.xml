@@ -387,4 +387,12 @@
     <string name="login_method_totp">የማረጋገጫ መተግበሪያ</string>
     <string name="login_method_oauth">የሶስተኛ ወገን መግቢያ</string>
     <string name="login_method_recovery">የመልሶ ማግኛ ኮዶች</string>
+    <string name="account_close_section">መለያ ዝጋ</string>
+    <string name="account_close_action">መለያ ዝጋ</string>
+    <string name="account_close_confirm_title">መለያዎን ይዝጉ?</string>
+    <string name="account_close_confirm_body">መለያዎ ለመሰረዝ ይያዛል እና ከመለያ ይወጣሉ። ከመሰረዣ ቀኑ በፊት በማንኛውም ጊዜ መልሰው በመግባት መሰረዙን መሰረዝ ይችላሉ።</string>
+    <string name="account_data_download">አውርድ</string>
+    <string name="route_target_app">መተግበሪያ</string>
+    <string name="route_target_entity">አካል</string>
+    <string name="route_target_url">URL</string>
 </resources>

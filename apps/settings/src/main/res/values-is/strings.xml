@@ -387,4 +387,12 @@
     <string name="login_method_totp">Auðkennisforrit</string>
     <string name="login_method_oauth">Innskráning þriðja aðila</string>
     <string name="login_method_recovery">Endurheimtarkóðar</string>
+    <string name="account_close_section">Loka reikningi</string>
+    <string name="account_close_action">Loka reikningi</string>
+    <string name="account_close_confirm_title">Loka reikningnum þínum?</string>
+    <string name="account_close_confirm_body">Reikningurinn þinn verður settur á dagskrá til eyðingar og þú verður skráð(ur) út. Þú getur hætt við hvenær sem er fyrir eyðingardaginn með því að skrá þig inn aftur.</string>
+    <string name="account_data_download">Hlaða niður</string>
+    <string name="route_target_app">Forrit</string>
+    <string name="route_target_entity">Eining</string>
+    <string name="route_target_url">URL</string>
 </resources>

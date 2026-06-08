@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Veicināt interesi</string>
     <string name="forums_tag_interest_down">Samazināt interesi</string>
     <string name="forums_tag_interest_remove">Noņemt interesi</string>
+    <string name="forums_list_default_sort">Noklusētā kārtošana</string>
+    <string name="forums_access_tab_users">Lietotāji</string>
+    <string name="forums_access_tab_groups">Grupas</string>
+    <string name="forums_access_tab_manual">Manuāls</string>
+    <string name="forums_access_search_users">Meklēt lietotājus</string>
+    <string name="forums_access_no_groups">Nav pieejamu grupu</string>
 </resources>

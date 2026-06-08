@@ -387,4 +387,12 @@
     <string name="login_method_totp">அங்கீகரிப்பு பயன்பாடு</string>
     <string name="login_method_oauth">மூன்றாம் தரப்பு உள்நுழைவு</string>
     <string name="login_method_recovery">மீட்பு குறியீடுகள்</string>
+    <string name="account_close_section">கணக்கை மூடு</string>
+    <string name="account_close_action">கணக்கை மூடு</string>
+    <string name="account_close_confirm_title">உங்கள் கணக்கை மூடவா?</string>
+    <string name="account_close_confirm_body">உங்கள் கணக்கு நீக்குவதற்குத் திட்டமிடப்படும், மேலும் நீங்கள் வெளியேற்றப்படுவீர்கள். நீக்கும் தேதிக்கு முன் எந்த நேரத்திலும் மீண்டும் உள்நுழைவதன் மூலம் ரத்து செய்யலாம்.</string>
+    <string name="account_data_download">பதிவிறக்கு</string>
+    <string name="route_target_app">பயன்பாடு</string>
+    <string name="route_target_entity">அமைப்பு</string>
+    <string name="route_target_url">URL</string>
 </resources>

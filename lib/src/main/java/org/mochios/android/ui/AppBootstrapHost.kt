@@ -71,6 +71,12 @@ fun AppBootstrapHost(
 
         is AuthStage.Bootstrapping -> Loading()
 
+        is AuthStage.NeedsReactivation -> ReactivationScreen(
+            purge = s.purge,
+            onReactivate = viewModel::reactivate,
+            onSignOut = viewModel::logout,
+        )
+
         is AuthStage.Ready -> {
             if (s.recreateForLocale) {
                 LaunchedEffect(Unit) { onLocaleChangeRequested() }
@@ -95,6 +101,50 @@ fun AppBootstrapHost(
 private fun Loading() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         CircularProgressIndicator()
+    }
+}
+
+/**
+ * Reactivation interstitial for a soft-deleted ("closing") account. Mirrors
+ * the web /login/closing page: the user cancels the pending closure to restore
+ * full access, or continues closing and signs out.
+ */
+@Composable
+private fun ReactivationScreen(
+    purge: Long,
+    onReactivate: () -> Unit,
+    onSignOut: () -> Unit,
+) {
+    Box(
+        modifier = Modifier.fillMaxSize().padding(24.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            Text(
+                text = stringResource(R.string.reactivation_title),
+                style = MaterialTheme.typography.titleLarge,
+            )
+            val body = if (purge > 0) {
+                val date = java.text.DateFormat
+                    .getDateInstance(java.text.DateFormat.LONG)
+                    .format(java.util.Date(purge * 1000))
+                stringResource(R.string.reactivation_body_dated, date)
+            } else {
+                stringResource(R.string.reactivation_body)
+            }
+            Text(text = body, style = MaterialTheme.typography.bodyMedium)
+            Spacer(Modifier.height(8.dp))
+            Button(onClick = onReactivate, modifier = Modifier.fillMaxWidth()) {
+                Text(stringResource(R.string.reactivation_reactivate))
+            }
+            OutlinedButton(onClick = onSignOut, modifier = Modifier.fillMaxWidth()) {
+                Text(stringResource(R.string.reactivation_sign_out))
+            }
+        }
     }
 }
 

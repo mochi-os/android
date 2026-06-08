@@ -388,4 +388,12 @@
     <string name="login_method_totp">Aplikacija autentifikatora</string>
     <string name="login_method_oauth">Prijava treće strane</string>
     <string name="login_method_recovery">Kodovi za oporavak</string>
+    <string name="account_close_section">Zatvori račun</string>
+    <string name="account_close_action">Zatvori račun</string>
+    <string name="account_close_confirm_title">Zatvoriti vaš račun?</string>
+    <string name="account_close_confirm_body">Vaš će račun biti zakazan za brisanje i bit ćete odjavljeni. Možete ga otkazati u bilo kojem trenutku prije datuma brisanja ponovnom prijavom.</string>
+    <string name="account_data_download">Preuzmi</string>
+    <string name="route_target_app">Aplikacija</string>
+    <string name="route_target_entity">Entitet</string>
+    <string name="route_target_url">URL</string>
 </resources>

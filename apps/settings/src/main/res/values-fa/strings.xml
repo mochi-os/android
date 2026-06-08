@@ -387,4 +387,12 @@
     <string name="login_method_totp">برنامهٔ احراز هویت</string>
     <string name="login_method_oauth">ورود از طریق شخص ثالث</string>
     <string name="login_method_recovery">کدهای بازیابی</string>
+    <string name="account_close_section">بستن حساب</string>
+    <string name="account_close_action">بستن حساب</string>
+    <string name="account_close_confirm_title">حساب خود را می‌بندید؟</string>
+    <string name="account_close_confirm_body">حساب شما برای حذف زمان‌بندی می‌شود و از حساب خارج خواهید شد. می‌توانید هر زمان پیش از تاریخ حذف با ورود مجدد آن را لغو کنید.</string>
+    <string name="account_data_download">دانلود</string>
+    <string name="route_target_app">برنامه</string>
+    <string name="route_target_entity">موجودیت</string>
+    <string name="route_target_url">URL</string>
 </resources>

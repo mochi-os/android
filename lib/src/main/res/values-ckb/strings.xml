@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s پێشنیاری یەکسانی کرد</string>
     <string name="game_system_draw_accept">ڕێککەوتن لەسەر یەکسانی</string>
     <string name="game_system_draw_decline">%1$s یەکسانیەکەی ڕەتکردەوە</string>
+    <string name="reactivation_title">هەژمارەکەت بۆ سڕینەوە خشتەبەند کراوە</string>
+    <string name="reactivation_body">هەژمارەکەت بۆ سڕینەوە خشتەبەند کراوە. ئێستا دەتوانیت هەڵیبوەشێنیتەوە و دەستگەیشتنی تەواو بگەڕێنیتەوە.</string>
+    <string name="reactivation_body_dated">هەژمارەکەت و هەموو داتاکانی بە تەواوەتی لە %1$s دەسڕێنەوە. ئێستا دەتوانیت هەڵیبوەشێنیتەوە و دەستگەیشتنی تەواو بگەڕێنیتەوە.</string>
+    <string name="reactivation_reactivate">هەژمارەکەم دووبارە چالاک بکەرەوە</string>
+    <string name="reactivation_sign_out">بەردەوامبە لە داخستن و بچۆ دەرەوە</string>
 </resources>

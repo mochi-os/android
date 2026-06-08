@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Zvýšiť záujem</string>
     <string name="forums_tag_interest_down">Znížiť záujem</string>
     <string name="forums_tag_interest_remove">Odstrániť záujem</string>
+    <string name="forums_list_default_sort">Predvolené triedenie</string>
+    <string name="forums_access_tab_users">Používatelia</string>
+    <string name="forums_access_tab_groups">Skupiny</string>
+    <string name="forums_access_tab_manual">Manuálne</string>
+    <string name="forums_access_search_users">Hľadať používateľov</string>
+    <string name="forums_access_no_groups">Nie sú dostupné žiadne skupiny</string>
 </resources>

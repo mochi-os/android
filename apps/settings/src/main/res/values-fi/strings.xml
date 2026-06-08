@@ -387,4 +387,12 @@
     <string name="login_method_totp">Todennussovellus</string>
     <string name="login_method_oauth">Kolmannen osapuolen kirjautuminen</string>
     <string name="login_method_recovery">Palautuskoodit</string>
+    <string name="account_close_section">Sulje tili</string>
+    <string name="account_close_action">Sulje tili</string>
+    <string name="account_close_confirm_title">Suljetaanko tilisi?</string>
+    <string name="account_close_confirm_body">Tilisi määrätään poistettavaksi ja sinut kirjataan ulos. Voit peruuttaa milloin tahansa ennen poistopäivää kirjautumalla takaisin sisään.</string>
+    <string name="account_data_download">Lataa</string>
+    <string name="route_target_app">Sovellus</string>
+    <string name="route_target_entity">Entiteetti</string>
+    <string name="route_target_url">URL</string>
 </resources>

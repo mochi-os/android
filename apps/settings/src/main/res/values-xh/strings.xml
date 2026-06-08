@@ -387,4 +387,12 @@
     <string name="login_method_totp">I-app yokuqinisekisa</string>
     <string name="login_method_oauth">Ukungena kweqela lesithathu</string>
     <string name="login_method_recovery">Iikhowudi zokubuyisa</string>
+    <string name="account_close_section">Vala iakhawunti</string>
+    <string name="account_close_action">Vala iakhawunti</string>
+    <string name="account_close_confirm_title">Vala iakhawunti yakho?</string>
+    <string name="account_close_confirm_body">Iakhawunti yakho iya kucwangciselwa ukucinywa kwaye uya kuphuma. Ungayirhoxisa nanini na phambi komhla wokucinywa ngokungena kwakhona.</string>
+    <string name="account_data_download">Khuphela</string>
+    <string name="route_target_app">I-app</string>
+    <string name="route_target_entity">Iqumrhu</string>
+    <string name="route_target_url">URL</string>
 </resources>

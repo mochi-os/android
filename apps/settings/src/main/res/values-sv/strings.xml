@@ -387,4 +387,12 @@
     <string name="login_method_totp">Autentiseringsapp</string>
     <string name="login_method_oauth">Tredjepartsinloggning</string>
     <string name="login_method_recovery">Återställningskoder</string>
+    <string name="account_close_section">Stäng konto</string>
+    <string name="account_close_action">Stäng konto</string>
+    <string name="account_close_confirm_title">Stänga ditt konto?</string>
+    <string name="account_close_confirm_body">Ditt konto kommer att schemaläggas för radering och du loggas ut. Du kan avbryta när som helst före raderingsdatumet genom att logga in igen.</string>
+    <string name="account_data_download">Ladda ner</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entitet</string>
+    <string name="route_target_url">URL</string>
 </resources>

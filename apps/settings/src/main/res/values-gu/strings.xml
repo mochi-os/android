@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator એપ્લિકેશન</string>
     <string name="login_method_oauth">તૃતીય-પક્ષ લૉગિન</string>
     <string name="login_method_recovery">રિકવરી કોડ્સ</string>
+    <string name="account_close_section">ખાતું બંધ કરો</string>
+    <string name="account_close_action">ખાતું બંધ કરો</string>
+    <string name="account_close_confirm_title">તમારું ખાતું બંધ કરવું છે?</string>
+    <string name="account_close_confirm_body">તમારું ખાતું કાઢી નાખવા માટે નિર્ધારિત કરવામાં આવશે અને તમને સાઇન આઉટ કરવામાં આવશે. કાઢી નાખવાની તારીખ પહેલાં ગમે ત્યારે ફરી લોગ ઇન કરીને તમે તેને રદ કરી શકો છો.</string>
+    <string name="account_data_download">ડાઉનલોડ કરો</string>
+    <string name="route_target_app">એપ્લિકેશન</string>
+    <string name="route_target_entity">સંસ્થા</string>
+    <string name="route_target_url">URL</string>
 </resources>

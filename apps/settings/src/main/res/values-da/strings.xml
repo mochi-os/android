@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator-app</string>
     <string name="login_method_oauth">Tredjeparts-login</string>
     <string name="login_method_recovery">Gendannelseskoder</string>
+    <string name="account_close_section">Luk konto</string>
+    <string name="account_close_action">Luk konto</string>
+    <string name="account_close_confirm_title">Vil du lukke din konto?</string>
+    <string name="account_close_confirm_body">Din konto vil blive planlagt til sletning, og du bliver logget ud. Du kan annullere når som helst inden sletningsdatoen ved at logge ind igen.</string>
+    <string name="account_data_download">Download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entitet</string>
+    <string name="route_target_url">URL</string>
 </resources>

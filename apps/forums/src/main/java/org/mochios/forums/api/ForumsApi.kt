@@ -132,6 +132,25 @@ data class ForumTagsResponse(
     val tags: List<ForumTagCount> = emptyList(),
 )
 
+data class UserSearchResponse(
+    val results: List<org.mochios.forums.model.User> = emptyList(),
+)
+
+data class GroupListResponse(
+    val groups: List<org.mochios.forums.model.Group> = emptyList(),
+)
+
+// action_probe returns a directory-like entry for a forum found by URL.
+data class ProbeForumResponse(
+    val id: String = "",
+    val name: String = "",
+    val fingerprint: String = "",
+    @com.google.gson.annotations.SerializedName("class") val klass: String = "",
+    val server: String = "",
+)
+
+data class SortResponse(val sort: String = "")
+
 interface ForumsApi {
 
     // ---- Forum list / discovery ----
@@ -157,6 +176,19 @@ interface ForumsApi {
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<RecommendationsResponse>>
+
+    // Find a forum by pasted URL (proxies to the owning server via P2P).
+    @GET("-/probe")
+    suspend fun probe(@Query("url") url: String): Response<ApiResponse<ProbeForumResponse>>
+
+    // Proxy to people.users/search via the forums backend (class-level).
+    @FormUrlEncoded
+    @POST("-/users/search")
+    suspend fun searchUsers(@Field("search") query: String): Response<ApiResponse<UserSearchResponse>>
+
+    // Proxy to people.groups/list via the forums backend (class-level).
+    @GET("-/groups")
+    suspend fun getGroups(): Response<ApiResponse<GroupListResponse>>
 
 
     // ---- Forum entity ----
@@ -383,6 +415,14 @@ interface ForumsApi {
         @Field("sort") sort: String
     ): Response<ApiResponse<SuccessResponse>>
 
+    // Class-level default post sort (applied to the list and to forums with no
+    // override). Distinct from the per-forum override above.
+    @FormUrlEncoded
+    @POST("-/sort/set")
+    suspend fun setDefaultSort(
+        @Field("sort") sort: String
+    ): Response<ApiResponse<SortResponse>>
+
     // ---- Moderation centre ----
 
     @GET("{forumId}/-/moderation/queue")
@@ -547,8 +587,13 @@ interface ForumsApi {
     @POST("{forumId}/-/notifications/clear")
     suspend fun clearNotifications(@Path("forumId") forumId: String): Response<ApiResponse<SuccessResponse>>
 
+    // entity scopes the token (a forum id); mode is "posts" or "all" — both
+    // required by the server (action_rss_token).
     @GET("-/rss/token")
-    suspend fun getRssToken(): Response<ApiResponse<RssTokenResponse>>
+    suspend fun getRssToken(
+        @Query("entity") entity: String,
+        @Query("mode") mode: String,
+    ): Response<ApiResponse<RssTokenResponse>>
 
     @GET("{forumId}/-/tags")
     suspend fun getForumTags(@Path("forumId") forumId: String): Response<ApiResponse<ForumTagsResponse>>

@@ -386,4 +386,12 @@
     <string name="login_method_totp">認証アプリ</string>
     <string name="login_method_oauth">サードパーティログイン</string>
     <string name="login_method_recovery">リカバリーコード</string>
+    <string name="account_close_section">アカウントを閉鎖</string>
+    <string name="account_close_action">アカウントを閉鎖</string>
+    <string name="account_close_confirm_title">アカウントを閉鎖しますか？</string>
+    <string name="account_close_confirm_body">お客様のアカウントは削除予定となり、サインアウトされます。削除日より前であれば、再度ログインすることでいつでも取り消すことができます。</string>
+    <string name="account_data_download">ダウンロード</string>
+    <string name="route_target_app">外観</string>
+    <string name="route_target_entity">エンティティ</string>
+    <string name="route_target_url">URL</string>
 </resources>

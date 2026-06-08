@@ -387,4 +387,12 @@
     <string name="login_method_totp">Hitelesítő alkalmazás</string>
     <string name="login_method_oauth">Harmadik fél általi bejelentkezés</string>
     <string name="login_method_recovery">Helyreállítási kódok</string>
+    <string name="account_close_section">Fiók bezárása</string>
+    <string name="account_close_action">Fiók bezárása</string>
+    <string name="account_close_confirm_title">Bezárja a fiókját?</string>
+    <string name="account_close_confirm_body">Fiókja törlésre lesz ütemezve, és kijelentkeztetjük. A törlés időpontja előtt bármikor megszakíthatja, ha újra bejelentkezik.</string>
+    <string name="account_data_download">Letöltés</string>
+    <string name="route_target_app">Alkalmazás</string>
+    <string name="route_target_entity">Entitás</string>
+    <string name="route_target_url">URL</string>
 </resources>

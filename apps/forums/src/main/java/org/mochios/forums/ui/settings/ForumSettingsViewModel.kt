@@ -34,6 +34,8 @@ data class ForumSettingsUiState(
     val aiAccounts: List<org.mochios.android.model.Account> = emptyList(),
     val rssToken: String = "",
     val rssUrl: String = "",
+    val userSearchResults: List<org.mochios.forums.model.User> = emptyList(),
+    val groups: List<org.mochios.forums.model.Group> = emptyList(),
 )
 
 @HiltViewModel
@@ -120,6 +122,35 @@ class ForumSettingsViewModel @Inject constructor(
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun searchUsers(query: String) {
+        if (query.trim().length < 2) {
+            _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
+            return
+        }
+        viewModelScope.launch {
+            try {
+                _uiState.value = _uiState.value.copy(
+                    userSearchResults = repository.searchUsers(query.trim()),
+                )
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
+            }
+        }
+    }
+
+    fun loadGroups() {
+        viewModelScope.launch {
+            try {
+                _uiState.value = _uiState.value.copy(
+                    groups = repository.listGroups()
+                        .sortedWith(compareBy(NaturalCompare) { it.name }),
+                )
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(groups = emptyList())
             }
         }
     }
@@ -255,7 +286,7 @@ class ForumSettingsViewModel @Inject constructor(
     fun loadRssToken() {
         viewModelScope.launch {
             try {
-                val r = repository.getRssToken()
+                val r = repository.getRssToken(forumId, "posts")
                 _uiState.value = _uiState.value.copy(rssToken = r.token, rssUrl = r.url)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

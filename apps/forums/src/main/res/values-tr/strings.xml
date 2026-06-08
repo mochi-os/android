@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">İlgiyi artır</string>
     <string name="forums_tag_interest_down">İlgiyi azalt</string>
     <string name="forums_tag_interest_remove">İlgiyi kaldır</string>
+    <string name="forums_list_default_sort">Varsayılan sıralama</string>
+    <string name="forums_access_tab_users">Kullanıcılar</string>
+    <string name="forums_access_tab_groups">Gruplar</string>
+    <string name="forums_access_tab_manual">Elle</string>
+    <string name="forums_access_search_users">Kullanıcılarda ara</string>
+    <string name="forums_access_no_groups">Grup yok</string>
 </resources>

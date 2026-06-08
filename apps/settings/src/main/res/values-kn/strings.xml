@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator ಆ್ಯಪ್</string>
     <string name="login_method_oauth">ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಲಾಗಿನ್</string>
     <string name="login_method_recovery">ರಿಕವರಿ ಕೋಡ್‌ಗಳು</string>
+    <string name="account_close_section">ಖಾತೆ ಮುಚ್ಚಿ</string>
+    <string name="account_close_action">ಖಾತೆ ಮುಚ್ಚಿ</string>
+    <string name="account_close_confirm_title">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಮುಚ್ಚಬೇಕೆ?</string>
+    <string name="account_close_confirm_body">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನಿಗದಿಪಡಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮನ್ನು ಸೈನ್ ಔಟ್ ಮಾಡಲಾಗುತ್ತದೆ. ಅಳಿಸುವ ದಿನಾಂಕಕ್ಕೂ ಮೊದಲು ಯಾವ ಸಮಯದಲ್ಲಾದರೂ ಮತ್ತೆ ಲಾಗಿನ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ರದ್ದುಗೊಳಿಸಬಹುದು.</string>
+    <string name="account_data_download">ಡೌನ್‌ಲೋಡ್</string>
+    <string name="route_target_app">ಆ್ಯಪ್</string>
+    <string name="route_target_entity">ಸಂಸ್ಥೆ</string>
+    <string name="route_target_url">URL</string>
 </resources>

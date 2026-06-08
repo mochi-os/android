@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Сонирхлыг идэвхжүүлэх</string>
     <string name="forums_tag_interest_down">Хүүг бууруулах</string>
     <string name="forums_tag_interest_remove">Сонирхол хасах</string>
+    <string name="forums_list_default_sort">Үндсэн эрэмбэлэлт</string>
+    <string name="forums_access_tab_users">Хэрэглэгчид</string>
+    <string name="forums_access_tab_groups">Бүлгүүд</string>
+    <string name="forums_access_tab_manual">Гар аргаар</string>
+    <string name="forums_access_search_users">Хэрэглэгчид хайх</string>
+    <string name="forums_access_no_groups">Боломжит групп байхгүй</string>
 </resources>

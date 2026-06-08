@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Öka intresse</string>
     <string name="forums_tag_interest_down">Minska intresse</string>
     <string name="forums_tag_interest_remove">Ta bort intresse</string>
+    <string name="forums_list_default_sort">Standardsortering</string>
+    <string name="forums_access_tab_users">Användare</string>
+    <string name="forums_access_tab_groups">Grupper</string>
+    <string name="forums_access_tab_manual">Manuell</string>
+    <string name="forums_access_search_users">Sök användare</string>
+    <string name="forums_access_no_groups">Inga grupper tillgängliga</string>
 </resources>

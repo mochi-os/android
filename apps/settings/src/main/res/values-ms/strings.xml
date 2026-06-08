@@ -386,4 +386,12 @@
     <string name="login_method_totp">Apl authenticator</string>
     <string name="login_method_oauth">Log masuk pihak ketiga</string>
     <string name="login_method_recovery">Kod pemulihan</string>
+    <string name="account_close_section">Tutup akaun</string>
+    <string name="account_close_action">Tutup akaun</string>
+    <string name="account_close_confirm_title">Tutup akaun anda?</string>
+    <string name="account_close_confirm_body">Akaun anda akan dijadualkan untuk dipadamkan dan anda akan dilog keluar. Anda boleh membatalkan pada bila-bila masa sebelum tarikh pemadaman dengan log masuk semula.</string>
+    <string name="account_data_download">Muat turun</string>
+    <string name="route_target_app">Apl</string>
+    <string name="route_target_entity">Entiti</string>
+    <string name="route_target_url">URL</string>
 </resources>

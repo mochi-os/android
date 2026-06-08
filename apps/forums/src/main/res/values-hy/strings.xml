@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Եզրագծի գույն</string>
     <string name="forums_tag_interest_down">Նվազեցնել հետաքրքրությունը</string>
     <string name="forums_tag_interest_remove">Հեռացնել հետաքրքրությունը</string>
+    <string name="forums_list_default_sort">Լռելյայն տեսակավորում</string>
+    <string name="forums_access_tab_users">Օգտատերեր</string>
+    <string name="forums_access_tab_groups">Խմբեր</string>
+    <string name="forums_access_tab_manual">Նշել բոլորը կարդացված</string>
+    <string name="forums_access_search_users">Որոնել օգտատերեր</string>
+    <string name="forums_access_no_groups">Հասանելի խմբեր չկան</string>
 </resources>

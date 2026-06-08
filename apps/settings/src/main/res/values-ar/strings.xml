@@ -391,4 +391,12 @@
     <string name="login_method_totp">تطبيق المصادقة</string>
     <string name="login_method_oauth">تسجيل دخول طرف ثالث</string>
     <string name="login_method_recovery">رموز الاسترداد</string>
+    <string name="account_close_section">إغلاق الحساب</string>
+    <string name="account_close_action">إغلاق الحساب</string>
+    <string name="account_close_confirm_title">إغلاق حسابك؟</string>
+    <string name="account_close_confirm_body">ستتم جدولة حسابك للحذف وسيتم تسجيل خروجك. يمكنك الإلغاء في أي وقت قبل تاريخ الحذف عن طريق تسجيل الدخول مجددًا.</string>
+    <string name="account_data_download">تنزيل</string>
+    <string name="route_target_app">التطبيق</string>
+    <string name="route_target_entity">الكيان</string>
+    <string name="route_target_url">URL</string>
 </resources>

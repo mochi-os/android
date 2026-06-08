@@ -387,4 +387,12 @@
     <string name="login_method_totp">ਪ੍ਰਮਾਣਕ ਐਪ</string>
     <string name="login_method_oauth">ਤੀਜੀ-ਧਿਰ ਲੌਗਇਨ</string>
     <string name="login_method_recovery">ਰਿਕਵਰੀ ਕੋਡ</string>
+    <string name="account_close_section">ਖਾਤਾ ਬੰਦ ਕਰੋ</string>
+    <string name="account_close_action">ਖਾਤਾ ਬੰਦ ਕਰੋ</string>
+    <string name="account_close_confirm_title">ਆਪਣਾ ਖਾਤਾ ਬੰਦ ਕਰਨਾ ਹੈ?</string>
+    <string name="account_close_confirm_body">ਤੁਹਾਡਾ ਖਾਤਾ ਮਿਟਾਉਣ ਲਈ ਤੈਅ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ ਤੁਹਾਨੂੰ ਸਾਈਨ ਆਊਟ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਮਿਟਾਉਣ ਦੀ ਤਾਰੀਖ਼ ਤੋਂ ਪਹਿਲਾਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਮੁੜ ਲੌਗ ਇਨ ਕਰਕੇ ਤੁਸੀਂ ਇਸ ਨੂੰ ਰੱਦ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string name="account_data_download">ਡਾਊਨਲੋਡ</string>
+    <string name="route_target_app">ਐਪ</string>
+    <string name="route_target_entity">ਇਕਾਈ</string>
+    <string name="route_target_url">URL</string>
 </resources>

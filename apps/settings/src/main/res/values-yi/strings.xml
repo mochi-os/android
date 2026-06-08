@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator אַפּ</string>
     <string name="login_method_oauth">דריט־פּאַרטיי אַרײַנמעלדונג</string>
     <string name="login_method_recovery">אומקער קאָדן</string>
+    <string name="account_close_section">פֿאַרמאַך קאָנטע</string>
+    <string name="account_close_action">פֿאַרמאַך קאָנטע</string>
+    <string name="account_close_confirm_title">פֿאַרמאַכן אײַער קאָנטע?</string>
+    <string name="account_close_confirm_body">אײַער קאָנטע וועט ווערן צוגעשטעלט צו ווערן אויסגעמעקט און איר וועט ווערן אַרויסלאָגירט. איר קענט אַנולירן ווען עס איז פֿאַר דעם אויסמעקן־דאַטע דורך אַרײַנלאָגירן צוריק.</string>
+    <string name="account_data_download">אַראָפּלאָדן</string>
+    <string name="route_target_app">אַפּ</string>
+    <string name="route_target_entity">ענטיטעט</string>
+    <string name="route_target_url">URL</string>
 </resources>

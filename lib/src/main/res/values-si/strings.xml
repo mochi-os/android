@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ජය පරාජයක් නැති බව යෝජනා කළේය</string>
     <string name="game_system_draw_accept">ජය පරාජයක් නැති බව එකඟ විය</string>
     <string name="game_system_draw_decline">%1$s ජය පරාජයක් නැති බව ප්‍රතික්ෂේප කළේය</string>
+    <string name="reactivation_title">ඔබේ ගිණුම මැකීමට නියමිතය</string>
+    <string name="reactivation_body">ඔබේ ගිණුම මැකීමට නියමිතය. ඔබට දැන් මෙය අවලංගු කර සම්පූර්ණ ප්‍රවේශය නැවත ලබා ගත හැකිය.</string>
+    <string name="reactivation_body_dated">ඔබේ ගිණුම සහ එහි සියලුම දත්ත %1$s දින ස්ථිරවම මකා දැමෙනු ඇත. ඔබට දැන් මෙය අවලංගු කර සම්පූර්ණ ප්‍රවේශය නැවත ලබා ගත හැකිය.</string>
+    <string name="reactivation_reactivate">මගේ ගිණුම නැවත සක්‍රිය කරන්න</string>
+    <string name="reactivation_sign_out">වැසීම දිගටම කරගෙන පිටවන්න</string>
 </resources>

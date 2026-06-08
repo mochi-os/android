@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s சமநிலையை முன்மொழிந்தார்</string>
     <string name="game_system_draw_accept">சமநிலை ஒப்புக்கொள்ளப்பட்டது</string>
     <string name="game_system_draw_decline">%1$s சமநிலையை மறுத்தார்</string>
+    <string name="reactivation_title">உங்கள் கணக்கு நீக்குவதற்குத் திட்டமிடப்பட்டுள்ளது</string>
+    <string name="reactivation_body">உங்கள் கணக்கு நீக்குவதற்குத் திட்டமிடப்பட்டுள்ளது. இப்போது ரத்து செய்து முழு அணுகலை மீட்டெடுக்கலாம்.</string>
+    <string name="reactivation_body_dated">உங்கள் கணக்கும் அதன் அனைத்து தரவும் %1$s அன்று நிரந்தரமாக நீக்கப்படும். இப்போது ரத்து செய்து முழு அணுகலை மீட்டெடுக்கலாம்.</string>
+    <string name="reactivation_reactivate">என் கணக்கை மீண்டும் செயல்படுத்து</string>
+    <string name="reactivation_sign_out">மூடுவதைத் தொடர்ந்து வெளியேறு</string>
 </resources>

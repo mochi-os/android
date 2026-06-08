@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -78,16 +79,20 @@ fun FindForumsScreen(
                     imeAction = ImeAction.Search,
                     keyboardType = KeyboardType.Text
                 ),
+                keyboardActions = KeyboardActions(onSearch = { viewModel.search() }),
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)
             )
 
             when {
-                uiState.isLoading && uiState.recommended.isEmpty() && uiState.results.isEmpty() -> {
+                (uiState.isLoading || uiState.isProbing) &&
+                    uiState.recommended.isEmpty() && uiState.results.isEmpty() &&
+                    uiState.probeResult == null -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         CircularProgressIndicator()
                     }
                 }
-                uiState.error != null && uiState.recommended.isEmpty() && uiState.results.isEmpty() -> {
+                uiState.error != null && uiState.recommended.isEmpty() && uiState.results.isEmpty() &&
+                    uiState.probeResult == null -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Text(uiState.error!!.userMessage(), color = MaterialTheme.colorScheme.error)
                     }
@@ -98,7 +103,27 @@ fun FindForumsScreen(
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        if (uiState.results.isNotEmpty()) {
+                        val probe = uiState.probeResult
+                        if (probe != null) {
+                            item {
+                                Text(
+                                    stringResource(R.string.forums_find_found_by_url),
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                            }
+                            item {
+                                val probeId = probe.fingerprint.ifEmpty { probe.id }
+                                ForumDirectoryRow(
+                                    name = probe.name,
+                                    isSubscribed = probeId in uiState.subscribed ||
+                                        probe.id in uiState.subscribed,
+                                    onSubscribe = {
+                                        viewModel.subscribe(probe.id, probe.server)
+                                        onForumSubscribed()
+                                    }
+                                )
+                            }
+                        } else if (uiState.results.isNotEmpty()) {
                             items(uiState.results, key = { it.id }) { entry ->
                                 ForumDirectoryRow(
                                     name = entry.name,

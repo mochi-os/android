@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Auka áhuga</string>
     <string name="forums_tag_interest_down">Minnka áhuga</string>
     <string name="forums_tag_interest_remove">Fjarlægja áhuga</string>
+    <string name="forums_list_default_sort">Sjálfgefin röðun</string>
+    <string name="forums_access_tab_users">Notendur</string>
+    <string name="forums_access_tab_groups">Hópar</string>
+    <string name="forums_access_tab_manual">Handvirkt</string>
+    <string name="forums_access_search_users">Leita að notendum</string>
+    <string name="forums_access_no_groups">Engir hópar tiltækir</string>
 </resources>

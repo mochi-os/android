@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ofri yon egalite</string>
     <string name="game_system_draw_accept">Egalite dakò</string>
     <string name="game_system_draw_decline">%1$s refize egalite a</string>
+    <string name="reactivation_title">Kont ou an pwograme pou efase</string>
+    <string name="reactivation_body">Kont ou an pwograme pou efase. Ou kapab anile epi retabli aksè konplè kounye a.</string>
+    <string name="reactivation_body_dated">Kont ou an ak tout done li yo ap efase nèt nan dat %1$s. Ou kapab anile epi retabli aksè konplè kounye a.</string>
+    <string name="reactivation_reactivate">Reaktive kont mwen an</string>
+    <string name="reactivation_sign_out">Kontinye fèmen an epi dekonekte</string>
 </resources>

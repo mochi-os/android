@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">تقویت علاقه</string>
     <string name="forums_tag_interest_down">کاهش علاقه</string>
     <string name="forums_tag_interest_remove">حذف علاقه</string>
+    <string name="forums_list_default_sort">مرتب‌سازی پیش‌فرض</string>
+    <string name="forums_access_tab_users">کاربران</string>
+    <string name="forums_access_tab_groups">گروه‌ها</string>
+    <string name="forums_access_tab_manual">دستی</string>
+    <string name="forums_access_search_users">جست‌وجوی کاربران</string>
+    <string name="forums_access_no_groups">هیچ گروهی در دسترس نیست</string>
 </resources>

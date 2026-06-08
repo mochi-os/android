@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s kikllachakuyta rikuchirqa</string>
     <string name="game_system_draw_accept">Kikllachakuy ari nisqa</string>
     <string name="game_system_draw_decline">%1$s kikllachakuyta mana munarqachu</string>
+    <string name="reactivation_title">Cuentaykita pichanapaq churasqaña</string>
+    <string name="reactivation_body">Cuentaykita pichanapaq churasqaña. Kunanmi sayachiyta hinaspa llapan yaykuyta kutichiyta atinki.</string>
+    <string name="reactivation_body_dated">Cuentaykitawan llapan datosninwan %1$s punchawpi wiñaypaq pichakunqa. Kunanmi sayachiyta hinaspa llapan yaykuyta kutichiyta atinki.</string>
+    <string name="reactivation_reactivate">Cuentayta kawsarichiy</string>
+    <string name="reactivation_sign_out">Wichqayta katiy hinaspa lluqsiy</string>
 </resources>

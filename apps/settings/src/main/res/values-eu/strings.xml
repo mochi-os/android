@@ -387,4 +387,12 @@
     <string name="login_method_totp">Autentifikatzaile aplikazioa</string>
     <string name="login_method_oauth">Hirugarrenen saio-hasiera</string>
     <string name="login_method_recovery">Berreskuratze-kodeak</string>
+    <string name="account_close_section">Itxi kontua</string>
+    <string name="account_close_action">Itxi kontua</string>
+    <string name="account_close_confirm_title">Zure kontua itxi nahi duzu?</string>
+    <string name="account_close_confirm_body">Zure kontua ezabatzeko programatuko da eta saioa itxiko zaizu. Ezabaketa-data baino lehen edozein unetan utz dezakezu bertan behera, berriro saioa hasita.</string>
+    <string name="account_data_download">Deskargatu</string>
+    <string name="route_target_app">Aplikazioa</string>
+    <string name="route_target_entity">Entitatea</string>
+    <string name="route_target_url">URLa</string>
 </resources>

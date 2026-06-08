@@ -388,4 +388,12 @@
     <string name="login_method_totp">Aplicație de autentificare</string>
     <string name="login_method_oauth">Conectare prin terți</string>
     <string name="login_method_recovery">Coduri de recuperare</string>
+    <string name="account_close_section">Închide contul</string>
+    <string name="account_close_action">Închide contul</string>
+    <string name="account_close_confirm_title">Închizi contul?</string>
+    <string name="account_close_confirm_body">Contul tău va fi programat pentru ștergere și vei fi deconectat. Poți anula oricând înainte de data ștergerii autentificându-te din nou.</string>
+    <string name="account_data_download">Descarcă</string>
+    <string name="route_target_app">Aplicație</string>
+    <string name="route_target_entity">Entitate</string>
+    <string name="route_target_url">URL</string>
 </resources>

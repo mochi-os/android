@@ -388,4 +388,12 @@
     <string name="login_method_totp">אפליקציית אימות</string>
     <string name="login_method_oauth">התחברות צד שלישי</string>
     <string name="login_method_recovery">קודי שחזור</string>
+    <string name="account_close_section">סגירת חשבון</string>
+    <string name="account_close_action">סגירת חשבון</string>
+    <string name="account_close_confirm_title">לסגור את החשבון שלך?</string>
+    <string name="account_close_confirm_body">החשבון שלך יתוזמן למחיקה ותתנתק. תוכל לבטל בכל עת לפני מועד המחיקה על ידי התחברות מחדש.</string>
+    <string name="account_data_download">הורדה</string>
+    <string name="route_target_app">אפליקציה</string>
+    <string name="route_target_entity">ישות</string>
+    <string name="route_target_url">URL</string>
 </resources>

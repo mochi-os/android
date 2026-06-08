@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ले बराबरीको प्रस्ताव गर्‍यो</string>
     <string name="game_system_draw_accept">बराबरी सहमति भयो</string>
     <string name="game_system_draw_decline">%1$s ले बराबरी अस्वीकार गर्‍यो</string>
+    <string name="reactivation_title">तपाईंको खाता मेटाउन तालिका गरिएको छ</string>
+    <string name="reactivation_body">तपाईंको खाता मेटाउन तालिका गरिएको छ। तपाईं अहिले रद्द गरी पूर्ण पहुँच पुनर्स्थापना गर्न सक्नुहुन्छ।</string>
+    <string name="reactivation_body_dated">तपाईंको खाता र यसका सबै डेटा %1$s मा स्थायी रूपमा मेटाइनेछ। तपाईं अहिले रद्द गरी पूर्ण पहुँच पुनर्स्थापना गर्न सक्नुहुन्छ।</string>
+    <string name="reactivation_reactivate">मेरो खाता पुनः सक्रिय गर्नुहोस्</string>
+    <string name="reactivation_sign_out">बन्द गर्न जारी राख्नुहोस् र साइन आउट गर्नुहोस्</string>
 </resources>

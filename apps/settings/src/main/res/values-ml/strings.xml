@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator ആപ്പ്</string>
     <string name="login_method_oauth">തേർഡ്-പാർട്ടി ലോഗിൻ</string>
     <string name="login_method_recovery">Redirect</string>
+    <string name="account_close_section">അക്കൗണ്ട് അടയ്ക്കുക</string>
+    <string name="account_close_action">അക്കൗണ്ട് അടയ്ക്കുക</string>
+    <string name="account_close_confirm_title">നിങ്ങളുടെ അക്കൗണ്ട് അടയ്ക്കണോ?</string>
+    <string name="account_close_confirm_body">നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കാൻ ഷെഡ്യൂൾ ചെയ്യപ്പെടും, നിങ്ങൾ സൈൻ ഔട്ട് ചെയ്യപ്പെടും. ഇല്ലാതാക്കൽ തീയതിക്ക് മുമ്പ് എപ്പോൾ വേണമെങ്കിലും വീണ്ടും ലോഗിൻ ചെയ്ത് നിങ്ങൾക്ക് റദ്ദാക്കാം.</string>
+    <string name="account_data_download">ഡൗൺലോഡ്</string>
+    <string name="route_target_app">ആപ്പ്</string>
+    <string name="route_target_entity">സ്ഥാപനം</string>
+    <string name="route_target_url">URL</string>
 </resources>

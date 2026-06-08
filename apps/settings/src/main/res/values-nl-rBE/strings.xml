@@ -389,4 +389,12 @@
     <string name="login_method_totp">Authenticator-app</string>
     <string name="login_method_oauth">Inloggen via derden</string>
     <string name="login_method_recovery">Herstelcodes</string>
+    <string name="account_close_section">Account sluiten</string>
+    <string name="account_close_action">Account sluiten</string>
+    <string name="account_close_confirm_title">Uw account sluiten?</string>
+    <string name="account_close_confirm_body">Uw account wordt gepland om verwijderd te worden en u wordt afgemeld. U kunt op elk moment vóór de verwijderingsdatum annuleren door opnieuw in te loggen.</string>
+    <string name="account_data_download">Downloaden</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entiteit</string>
+    <string name="route_target_url">URL</string>
 </resources>

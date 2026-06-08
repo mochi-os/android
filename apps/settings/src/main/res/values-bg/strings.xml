@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator приложение</string>
     <string name="login_method_oauth">Вход чрез трета страна</string>
     <string name="login_method_recovery">Кодове за възстановяване</string>
+    <string name="account_close_section">Закриване на акаунт</string>
+    <string name="account_close_action">Закриване на акаунт</string>
+    <string name="account_close_confirm_title">Да закриете ли акаунта си?</string>
+    <string name="account_close_confirm_body">Акаунтът ви ще бъде насрочен за изтриване и ще бъдете отписани. Можете да отмените по всяко време преди датата на изтриване, като влезете отново.</string>
+    <string name="account_data_download">Изтегляне</string>
+    <string name="route_target_app">Приложение</string>
+    <string name="route_target_entity">Обект</string>
+    <string name="route_target_url">URL</string>
 </resources>

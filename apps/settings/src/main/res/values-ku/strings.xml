@@ -387,4 +387,12 @@
     <string name="login_method_totp">Sepana rastandinê</string>
     <string name="login_method_oauth">Têketina aliyê sêyem</string>
     <string name="login_method_recovery">Kodên vegerê</string>
+    <string name="account_close_section">Girtina hesabê</string>
+    <string name="account_close_action">Girtina hesabê</string>
+    <string name="account_close_confirm_title">Hesabê xwe bigirin?</string>
+    <string name="account_close_confirm_body">Hesabê we dê ji bo jêbirinê were plankirin û hûn ê ji hesab derkevin. Hûn dikarin berî dîroka jêbirinê her dem bi têketinê dîsa betal bikin.</string>
+    <string name="account_data_download">Daxe</string>
+    <string name="route_target_app">Sepan</string>
+    <string name="route_target_entity">Mîhengeh</string>
+    <string name="route_target_url">URL</string>
 </resources>

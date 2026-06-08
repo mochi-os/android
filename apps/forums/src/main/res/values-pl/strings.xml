@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Zwiększ zainteresowanie</string>
     <string name="forums_tag_interest_down">Zmniejsz zainteresowanie</string>
     <string name="forums_tag_interest_remove">Usuń zainteresowanie</string>
+    <string name="forums_list_default_sort">Domyślne sortowanie</string>
+    <string name="forums_access_tab_users">Użytkownicy</string>
+    <string name="forums_access_tab_groups">Grupy</string>
+    <string name="forums_access_tab_manual">Ręczny</string>
+    <string name="forums_access_search_users">Szukaj użytkowników</string>
+    <string name="forums_access_no_groups">Brak dostępnych grup</string>
 </resources>

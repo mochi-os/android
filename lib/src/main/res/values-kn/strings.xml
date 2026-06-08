@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ಡ್ರಾ ಪ್ರಸ್ತಾಪಿಸಿದರು</string>
     <string name="game_system_draw_accept">ಡ್ರಾ ಒಪ್ಪಿಗೆಯಾಯಿತು</string>
     <string name="game_system_draw_decline">%1$s ಡ್ರಾ ನಿರಾಕರಿಸಿದರು</string>
+    <string name="reactivation_title">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನಿಗದಿಪಡಿಸಲಾಗಿದೆ</string>
+    <string name="reactivation_body">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನಿಗದಿಪಡಿಸಲಾಗಿದೆ. ನೀವು ಈಗ ರದ್ದುಗೊಳಿಸಿ ಪೂರ್ಣ ಪ್ರವೇಶವನ್ನು ಮರುಸ್ಥಾಪಿಸಬಹುದು.</string>
+    <string name="reactivation_body_dated">ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ಅದರ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು %1$s ರಂದು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ. ನೀವು ಈಗ ರದ್ದುಗೊಳಿಸಿ ಪೂರ್ಣ ಪ್ರವೇಶವನ್ನು ಮರುಸ್ಥಾಪಿಸಬಹುದು.</string>
+    <string name="reactivation_reactivate">ನನ್ನ ಖಾತೆಯನ್ನು ಮರುಸಕ್ರಿಯಗೊಳಿಸಿ</string>
+    <string name="reactivation_sign_out">ಮುಚ್ಚುವುದನ್ನು ಮುಂದುವರಿಸಿ ಮತ್ತು ಸೈನ್ ಔಟ್ ಮಾಡಿ</string>
 </resources>

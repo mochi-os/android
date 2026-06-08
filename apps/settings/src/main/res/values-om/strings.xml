@@ -387,4 +387,12 @@
     <string name="login_method_totp">Appii mirkaneessaa</string>
     <string name="login_method_oauth">Galaa\'iinsa qaama sadaffaa</string>
     <string name="login_method_recovery">Koodiwwan deebii</string>
+    <string name="account_close_section">Akaawuntii cufi</string>
+    <string name="account_close_action">Akaawuntii cufi</string>
+    <string name="account_close_confirm_title">Akaawuntii kee cufuu barbaaddaa?</string>
+    <string name="account_close_confirm_body">Akaawuntiin kee haquuf ni qophaaʼa, atis ni baata. Guyyaa haqiinsaa dura yeroo barbaaddetti deebitee seenuun dhaabuu dandeessa.</string>
+    <string name="account_data_download">Buufadhu</string>
+    <string name="route_target_app">Appii</string>
+    <string name="route_target_entity">Iddoo</string>
+    <string name="route_target_url">URL</string>
 </resources>

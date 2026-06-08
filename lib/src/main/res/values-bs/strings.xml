@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s je ponudio/la remi</string>
     <string name="game_system_draw_accept">Remi dogovoren</string>
     <string name="game_system_draw_decline">%1$s je odbio/la remi</string>
+    <string name="reactivation_title">Vaš račun je zakazan za brisanje</string>
+    <string name="reactivation_body">Vaš račun je zakazan za brisanje. Sada možete otkazati i vratiti puni pristup.</string>
+    <string name="reactivation_body_dated">Vaš račun i svi njegovi podaci biće trajno izbrisani %1$s. Sada možete otkazati i vratiti puni pristup.</string>
+    <string name="reactivation_reactivate">Ponovo aktiviraj moj račun</string>
+    <string name="reactivation_sign_out">Nastavi sa zatvaranjem i odjavi se</string>
 </resources>

@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Đẩy mạnh sở thích</string>
     <string name="forums_tag_interest_down">Giảm sự quan tâm</string>
     <string name="forums_tag_interest_remove">Xoá sở thích</string>
+    <string name="forums_list_default_sort">Sắp xếp mặc định</string>
+    <string name="forums_access_tab_users">Người dùng</string>
+    <string name="forums_access_tab_groups">Nhóm</string>
+    <string name="forums_access_tab_manual">Thủ công</string>
+    <string name="forums_access_search_users">Tìm kiếm người dùng</string>
+    <string name="forums_access_no_groups">Không có nhóm nào</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="login_method_totp">Aplikacion autentikues</string>
     <string name="login_method_oauth">Hyrje me palë të tretë</string>
     <string name="login_method_recovery">Kodet e rikuperimit</string>
+    <string name="account_close_section">Mbyll llogarinë</string>
+    <string name="account_close_action">Mbyll llogarinë</string>
+    <string name="account_close_confirm_title">Të mbyllet llogaria juaj?</string>
+    <string name="account_close_confirm_body">Llogaria juaj do të planifikohet për fshirje dhe do të dilni nga llogaria. Mund ta anuloni në çdo kohë para datës së fshirjes duke hyrë sërish.</string>
+    <string name="account_data_download">Shkarko</string>
+    <string name="route_target_app">Aplikacioni</string>
+    <string name="route_target_entity">Entiteti</string>
+    <string name="route_target_url">URL</string>
 </resources>

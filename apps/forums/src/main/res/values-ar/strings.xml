@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">تعزيز الاهتمام</string>
     <string name="forums_tag_interest_down">تقليل الاهتمام</string>
     <string name="forums_tag_interest_remove">إزالة الاهتمام</string>
+    <string name="forums_list_default_sort">الترتيب الافتراضي</string>
+    <string name="forums_access_tab_users">المستخدمون</string>
+    <string name="forums_access_tab_groups">المجموعات</string>
+    <string name="forums_access_tab_manual">يدوي</string>
+    <string name="forums_access_search_users">البحث عن مستخدمين</string>
+    <string name="forums_access_no_groups">لا توجد مجموعات متاحة</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator апликација</string>
     <string name="login_method_oauth">Најава од трета страна</string>
     <string name="login_method_recovery">Кодови за обновување</string>
+    <string name="account_close_section">Затвори сметка</string>
+    <string name="account_close_action">Затвори сметка</string>
+    <string name="account_close_confirm_title">Да ја затворите вашата сметка?</string>
+    <string name="account_close_confirm_body">Вашата сметка ќе биде закажана за бришење и ќе бидете одјавени. Можете да откажете во секое време пред датумот на бришење со повторно најавување.</string>
+    <string name="account_data_download">Преземи</string>
+    <string name="route_target_app">Апликација</string>
+    <string name="route_target_entity">Ентитет</string>
+    <string name="route_target_url">URL</string>
 </resources>

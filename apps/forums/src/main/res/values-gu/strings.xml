@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">રુચિ વધારો</string>
     <string name="forums_tag_interest_down">રસ ઘટાડો</string>
     <string name="forums_tag_interest_remove">રસ દૂર કરો</string>
+    <string name="forums_list_default_sort">ડિફૉલ્ટ સૉર્ટ</string>
+    <string name="forums_access_tab_users">વપરાશકર્તાઓ</string>
+    <string name="forums_access_tab_groups">ગ્રુપ્સ</string>
+    <string name="forums_access_tab_manual">મેન્યુઅલ</string>
+    <string name="forums_access_search_users">વપરાશકર્તાઓ શોધો</string>
+    <string name="forums_access_no_groups">કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી</string>
 </resources>

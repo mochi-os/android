@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s тең ойынды ұсынды</string>
     <string name="game_system_draw_accept">Тең ойын келісілді</string>
     <string name="game_system_draw_decline">%1$s тең ойыннан бас тартты</string>
+    <string name="reactivation_title">Тіркелгіңіз жойылуға жоспарланған</string>
+    <string name="reactivation_body">Тіркелгіңіз жойылуға жоспарланған. Қазір бас тартып, толық қол жеткізуді қалпына келтіре аласыз.</string>
+    <string name="reactivation_body_dated">Тіркелгіңіз бен оның барлық деректері %1$s күні біржола жойылады. Қазір бас тартып, толық қол жеткізуді қалпына келтіре аласыз.</string>
+    <string name="reactivation_reactivate">Тіркелгімді қайта белсендіру</string>
+    <string name="reactivation_sign_out">Жабуды жалғастыру және шығу</string>
 </resources>

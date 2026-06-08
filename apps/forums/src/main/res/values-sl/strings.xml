@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Povečaj zanimanje</string>
     <string name="forums_tag_interest_down">Zmanjšaj zanimanje</string>
     <string name="forums_tag_interest_remove">Odstrani interes</string>
+    <string name="forums_list_default_sort">Privzeto razvrščanje</string>
+    <string name="forums_access_tab_users">Uporabniki</string>
+    <string name="forums_access_tab_groups">Skupine</string>
+    <string name="forums_access_tab_manual">Ročno</string>
+    <string name="forums_access_search_users">Iskanje uporabnikov</string>
+    <string name="forums_access_no_groups">Ni razpoložljivih skupin</string>
 </resources>

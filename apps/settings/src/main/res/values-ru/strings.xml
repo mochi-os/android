@@ -389,4 +389,12 @@
     <string name="login_method_totp">Приложение-аутентификатор</string>
     <string name="login_method_oauth">Сторонний вход</string>
     <string name="login_method_recovery">Коды восстановления</string>
+    <string name="account_close_section">Закрыть аккаунт</string>
+    <string name="account_close_action">Закрыть аккаунт</string>
+    <string name="account_close_confirm_title">Закрыть ваш аккаунт?</string>
+    <string name="account_close_confirm_body">Ваш аккаунт будет запланирован к удалению, и вы выйдете из системы. Вы можете отменить это в любой момент до даты удаления, снова войдя в систему.</string>
+    <string name="account_data_download">Скачать</string>
+    <string name="route_target_app">Приложение</string>
+    <string name="route_target_entity">Сущность</string>
+    <string name="route_target_url">URL</string>
 </resources>

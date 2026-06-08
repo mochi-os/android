@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Ƙara sha\'awa</string>
     <string name="forums_tag_interest_down">Rage sha\'awa</string>
     <string name="forums_tag_interest_remove">Cire sha\'awa</string>
+    <string name="forums_list_default_sort">Default sort</string>
+    <string name="forums_access_tab_users">Masu amfani</string>
+    <string name="forums_access_tab_groups">Groups</string>
+    <string name="forums_access_tab_manual">Hannu</string>
+    <string name="forums_access_search_users">Bincika masu amfani</string>
+    <string name="forums_access_no_groups">Babu ƙungiyoyi</string>
 </resources>

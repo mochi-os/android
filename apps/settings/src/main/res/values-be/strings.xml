@@ -389,4 +389,12 @@
     <string name="login_method_totp">Дадатак аўтэнтыфікатара</string>
     <string name="login_method_oauth">Уваход праз іншыя сэрвісы</string>
     <string name="login_method_recovery">Коды аднаўлення</string>
+    <string name="account_close_section">Закрыць рахунак</string>
+    <string name="account_close_action">Закрыць рахунак</string>
+    <string name="account_close_confirm_title">Закрыць ваш рахунак?</string>
+    <string name="account_close_confirm_body">Ваш рахунак будзе запланаваны да выдалення, і вы будзеце выйдзены з сістэмы. Вы можаце скасаваць у любы час да даты выдалення, зноў увайшоўшы ў сістэму.</string>
+    <string name="account_data_download">Спампаваць</string>
+    <string name="route_target_app">Дадатак</string>
+    <string name="route_target_entity">Сутнасць</string>
+    <string name="route_target_url">URL</string>
 </resources>

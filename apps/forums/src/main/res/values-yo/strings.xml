@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Mú ìfẹ́ pọ̀</string>
     <string name="forums_tag_interest_down">Dín ìfẹ́ kù</string>
     <string name="forums_tag_interest_remove">Yọ ìfẹ́ kúrò</string>
+    <string name="forums_list_default_sort">Ìtò àìpé</string>
+    <string name="forums_access_tab_users">Àwọn user</string>
+    <string name="forums_access_tab_groups">Àwọn àwùjọ</string>
+    <string name="forums_access_tab_manual">Ìwé ìtọ́nisọ́nà</string>
+    <string name="forums_access_search_users">Wá àwọn user</string>
+    <string name="forums_access_no_groups">Kò sí ẹgbẹ́ tó wà</string>
 </resources>

@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Ogmante enterè</string>
     <string name="forums_tag_interest_down">Diminye enterè</string>
     <string name="forums_tag_interest_remove">Retire enterè</string>
+    <string name="forums_list_default_sort">Klasman defo</string>
+    <string name="forums_access_tab_users">Itilizatè</string>
+    <string name="forums_access_tab_groups">Gwoup</string>
+    <string name="forums_access_tab_manual">Manyèl</string>
+    <string name="forums_access_search_users">Chèche itilizatè</string>
+    <string name="forums_access_no_groups">Pa gen gwoup disponib</string>
 </resources>

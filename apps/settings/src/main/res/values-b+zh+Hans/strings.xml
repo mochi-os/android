@@ -386,4 +386,12 @@
     <string name="login_method_totp">身份验证器应用</string>
     <string name="login_method_oauth">第三方登录</string>
     <string name="login_method_recovery">恢复码</string>
+    <string name="account_close_section">关闭账户</string>
+    <string name="account_close_action">关闭账户</string>
+    <string name="account_close_confirm_title">关闭你的账户？</string>
+    <string name="account_close_confirm_body">你的账户将被安排删除，并且你将被登出。在删除日期之前，你随时可以重新登录以取消。</string>
+    <string name="account_data_download">下载</string>
+    <string name="route_target_app">应用</string>
+    <string name="route_target_entity">实体</string>
+    <string name="route_target_url">URL</string>
 </resources>

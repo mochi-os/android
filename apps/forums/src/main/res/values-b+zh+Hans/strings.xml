@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">提升兴趣</string>
     <string name="forums_tag_interest_down">降低兴趣</string>
     <string name="forums_tag_interest_remove">移除兴趣</string>
+    <string name="forums_list_default_sort">默认排序</string>
+    <string name="forums_access_tab_users">用户</string>
+    <string name="forums_access_tab_groups">群组</string>
+    <string name="forums_access_tab_manual">手动</string>
+    <string name="forums_access_search_users">搜索用户</string>
+    <string name="forums_access_no_groups">无可用群组</string>
 </resources>

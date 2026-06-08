@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s kikipa anatañ amuyt\'awayi</string>
     <string name="game_system_draw_accept">Kikipa anatañ amuyt\'awi</string>
     <string name="game_system_draw_decline">%1$s kikipa anatañ jani munkiti</string>
+    <string name="reactivation_title">Cuentamax chhaqtayañatakiw wakichata</string>
+    <string name="reactivation_body">Cuentamax chhaqtayañatakiw wakichata. Jichhax jay sasin taqpach mantañ kutt\'ayañ atkta.</string>
+    <string name="reactivation_body_dated">Cuentamasa taqi datonakapasa %1$s urunx wiñayatakiw chhaqtayasini. Jichhax jay sasin taqpach mantañ kutt\'ayañ atkta.</string>
+    <string name="reactivation_reactivate">Cuentaja wasitat q\'añchayaña</string>
+    <string name="reactivation_sign_out">Jist\'antaña sarantayañ ukatx mistsuña</string>
 </resources>

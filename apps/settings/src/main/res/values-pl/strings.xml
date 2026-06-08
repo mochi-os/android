@@ -389,4 +389,12 @@
     <string name="login_method_totp">Aplikacja uwierzytelniająca</string>
     <string name="login_method_oauth">Logowanie zewnętrzne</string>
     <string name="login_method_recovery">Kody odzyskiwania</string>
+    <string name="account_close_section">Zamknij konto</string>
+    <string name="account_close_action">Zamknij konto</string>
+    <string name="account_close_confirm_title">Zamknąć konto?</string>
+    <string name="account_close_confirm_body">Twoje konto zostanie zaplanowane do usunięcia, a Ty zostaniesz wylogowany. Możesz anulować w dowolnym momencie przed datą usunięcia, logując się ponownie.</string>
+    <string name="account_data_download">Pobierz</string>
+    <string name="route_target_app">Aplikacja</string>
+    <string name="route_target_entity">Encja</string>
+    <string name="route_target_url">URL</string>
 </resources>

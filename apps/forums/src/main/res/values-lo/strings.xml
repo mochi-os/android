@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">ເພີ່ມຄວາມສົນໃຈ</string>
     <string name="forums_tag_interest_down">ຫຼຸດດອກເບ້ຍ</string>
     <string name="forums_tag_interest_remove">ລຶບຄວາມສົນໃຈ</string>
+    <string name="forums_list_default_sort">ການຈັດລຽງເລີ່ມຕົ້ນ</string>
+    <string name="forums_access_tab_users">ຜູ້ໃຊ້</string>
+    <string name="forums_access_tab_groups">ກຸ່ມ</string>
+    <string name="forums_access_tab_manual">ດ້ວຍຕົນເອງ</string>
+    <string name="forums_access_search_users">ຄົ້ນຫາຜູ້ໃຊ້</string>
+    <string name="forums_access_no_groups">ບໍ່ມີກຸ່ມທີ່ມີຢູ່</string>
 </resources>

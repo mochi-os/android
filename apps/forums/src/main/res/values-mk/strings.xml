@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Поттикни интерес</string>
     <string name="forums_tag_interest_down">Намали интерес</string>
     <string name="forums_tag_interest_remove">Отстрани интерес</string>
+    <string name="forums_list_default_sort">Стандардно подредување</string>
+    <string name="forums_access_tab_users">Корисници</string>
+    <string name="forums_access_tab_groups">Групи</string>
+    <string name="forums_access_tab_manual">Рачно</string>
+    <string name="forums_access_search_users">Пребарај корисници</string>
+    <string name="forums_access_no_groups">Нема достапни групи</string>
 </resources>

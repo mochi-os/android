@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator აპი</string>
     <string name="login_method_oauth">მესამე მხარის შესვლა</string>
     <string name="login_method_recovery">აღდგენის კოდები</string>
+    <string name="account_close_section">ანგარიშის დახურვა</string>
+    <string name="account_close_action">ანგარიშის დახურვა</string>
+    <string name="account_close_confirm_title">დავხუროთ თქვენი ანგარიში?</string>
+    <string name="account_close_confirm_body">თქვენი ანგარიში დაიგეგმება წასაშლელად და სისტემიდან გამოხვალთ. წაშლის თარიღამდე ნებისმიერ დროს შეგიძლიათ გააუქმოთ ხელახლა შესვლით.</string>
+    <string name="account_data_download">ჩამოტვირთვა</string>
+    <string name="route_target_app">აპი</string>
+    <string name="route_target_entity">ერთეული</string>
+    <string name="route_target_url">გაერთიანებული სამეფოს ფუნტი</string>
 </resources>

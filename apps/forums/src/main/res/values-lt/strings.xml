@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Padidinti susidomėjimą</string>
     <string name="forums_tag_interest_down">Sumažinti susidomėjimą</string>
     <string name="forums_tag_interest_remove">Šalinti susidomėjimą</string>
+    <string name="forums_list_default_sort">Numatytasis rūšiavimas</string>
+    <string name="forums_access_tab_users">Vartotojai</string>
+    <string name="forums_access_tab_groups">Grupės</string>
+    <string name="forums_access_tab_manual">Rankinis</string>
+    <string name="forums_access_search_users">Ieškoti vartotojų</string>
+    <string name="forums_access_no_groups">Grupių nėra</string>
 </resources>

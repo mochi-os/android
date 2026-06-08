@@ -269,4 +269,9 @@
     <string name="game_system_draw_offer">%1$s ha ofert taules</string>
     <string name="game_system_draw_accept">Taules acordades</string>
     <string name="game_system_draw_decline">%1$s ha rebutjat les taules</string>
+    <string name="reactivation_title">El compte està programat per a la supressió</string>
+    <string name="reactivation_body">El compte està programat per a la supressió. Podeu cancel·lar-ho i restaurar l\'accés complet ara.</string>
+    <string name="reactivation_body_dated">El compte i totes les seves dades se suprimiran definitivament el %1$s. Podeu cancel·lar-ho i restaurar l\'accés complet ara.</string>
+    <string name="reactivation_reactivate">Reactivar el meu compte</string>
+    <string name="reactivation_sign_out">Continuar amb el tancament i tancar la sessió</string>
 </resources>

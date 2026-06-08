@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">פֿאַרשטאַרקן אינטערעס</string>
     <string name="forums_tag_interest_down">פֿאַרמינער אינטערעס</string>
     <string name="forums_tag_interest_remove">אַראָפּנעמען אינטערעס</string>
+    <string name="forums_list_default_sort">פֿאַרשטאַנדלעך סאָרט</string>
+    <string name="forums_access_tab_users">באַניצערס</string>
+    <string name="forums_access_tab_groups">גרופּעס</string>
+    <string name="forums_access_tab_manual">מאַנואַל</string>
+    <string name="forums_access_search_users">זוך באַניצערס</string>
+    <string name="forums_access_no_groups">קיין גרופּעס פֿאַראַן</string>
 </resources>

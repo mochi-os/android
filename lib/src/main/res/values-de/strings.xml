@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s hat ein Remis angeboten</string>
     <string name="game_system_draw_accept">Remis vereinbart</string>
     <string name="game_system_draw_decline">%1$s hat das Remis abgelehnt</string>
+    <string name="reactivation_title">Ihr Konto ist zur Löschung vorgemerkt</string>
+    <string name="reactivation_body">Ihr Konto ist zur Löschung vorgemerkt. Sie können den Vorgang jetzt abbrechen und den vollen Zugriff wiederherstellen.</string>
+    <string name="reactivation_body_dated">Ihr Konto und alle zugehörigen Daten werden am %1$s endgültig gelöscht. Sie können den Vorgang jetzt abbrechen und den vollen Zugriff wiederherstellen.</string>
+    <string name="reactivation_reactivate">Mein Konto reaktivieren</string>
+    <string name="reactivation_sign_out">Schließen fortsetzen und abmelden</string>
 </resources>

@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Korosta kiinnostusta</string>
     <string name="forums_tag_interest_down">Vähennä kiinnostusta</string>
     <string name="forums_tag_interest_remove">Poista kiinnostus</string>
+    <string name="forums_list_default_sort">Oletuslajittelu</string>
+    <string name="forums_access_tab_users">Käyttäjät</string>
+    <string name="forums_access_tab_groups">Ryhmät</string>
+    <string name="forums_access_tab_manual">Manuaalinen</string>
+    <string name="forums_access_search_users">Hae käyttäjiä</string>
+    <string name="forums_access_no_groups">Ei saatavilla olevia ryhmiä</string>
 </resources>

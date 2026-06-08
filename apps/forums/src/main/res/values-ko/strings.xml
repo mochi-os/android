@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">관심도 부스트</string>
     <string name="forums_tag_interest_down">관심사 줄이기</string>
     <string name="forums_tag_interest_remove">관심사 제거</string>
+    <string name="forums_list_default_sort">기본 정렬</string>
+    <string name="forums_access_tab_users">사용자</string>
+    <string name="forums_access_tab_groups">그룹</string>
+    <string name="forums_access_tab_manual">수동</string>
+    <string name="forums_access_search_users">사용자 검색</string>
+    <string name="forums_access_no_groups">이용 가능한 그룹이 없어요</string>
 </resources>

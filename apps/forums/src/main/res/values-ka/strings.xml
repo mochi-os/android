@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">ინტერესის გაძლიერება</string>
     <string name="forums_tag_interest_down">ინტერესის შემცირება</string>
     <string name="forums_tag_interest_remove">ინტერესის წაშლა</string>
+    <string name="forums_list_default_sort">ნაგულისხმევი დახარისხება</string>
+    <string name="forums_access_tab_users">მომხმარებლის სახელი</string>
+    <string name="forums_access_tab_groups">ჯგუფები</string>
+    <string name="forums_access_tab_manual">სახელმძღვანელო</string>
+    <string name="forums_access_search_users">მომხმარებლების ძიება</string>
+    <string name="forums_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
 </resources>

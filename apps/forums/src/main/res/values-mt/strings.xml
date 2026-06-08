@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Saħħaħ l-interess</string>
     <string name="forums_tag_interest_down">Naqqas l-interess</string>
     <string name="forums_tag_interest_remove">Neħħi interess</string>
+    <string name="forums_list_default_sort">Ssortjar default</string>
+    <string name="forums_access_tab_users">Utenti</string>
+    <string name="forums_access_tab_groups">Gruppi</string>
+    <string name="forums_access_tab_manual">Manwali</string>
+    <string name="forums_access_search_users">Fittex utenti</string>
+    <string name="forums_access_no_groups">L-ebda gruppi disponibbli</string>
 </resources>

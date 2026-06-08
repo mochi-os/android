@@ -387,4 +387,12 @@
     <string name="login_method_totp">Verifikasie-app</string>
     <string name="login_method_oauth">Derde-party aanmelding</string>
     <string name="login_method_recovery">Herstelkodes</string>
+    <string name="account_close_section">Sluit rekening</string>
+    <string name="account_close_action">Sluit rekening</string>
+    <string name="account_close_confirm_title">Sluit jou rekening?</string>
+    <string name="account_close_confirm_body">Jou rekening sal vir verwydering geskeduleer word en jy sal afgemeld word. Jy kan enige tyd voor die verwyderingsdatum kanselleer deur weer aan te meld.</string>
+    <string name="account_data_download">Laai af</string>
+    <string name="route_target_app">Toepassing</string>
+    <string name="route_target_entity">Entiteit</string>
+    <string name="route_target_url">URL</string>
 </resources>

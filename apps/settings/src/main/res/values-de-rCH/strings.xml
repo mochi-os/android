@@ -382,4 +382,12 @@
         <item quantity="one">1 Sitzung widerrufen</item>
         <item quantity="other">%1$d Sitzungen widerrufen</item>
     </plurals>
+    <string name="account_close_section">Konto schliessen</string>
+    <string name="account_close_action">Konto schliessen</string>
+    <string name="account_close_confirm_title">Konto schliessen?</string>
+    <string name="account_close_confirm_body">Ihr Konto wird zur Löschung vorgemerkt und Sie werden abgemeldet. Sie können den Vorgang jederzeit vor dem Löschdatum abbrechen, indem Sie sich erneut anmelden.</string>
+    <string name="account_data_download">Download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entität</string>
+    <string name="route_target_url">URL</string>
 </resources>

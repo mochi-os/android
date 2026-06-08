@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Fedhii cimsi</string>
     <string name="forums_tag_interest_down">Dantaa hir\'isi</string>
     <string name="forums_tag_interest_remove">Dantaa haqi</string>
+    <string name="forums_list_default_sort">Tartiiba idilee</string>
+    <string name="forums_access_tab_users">Fayyadamtoota</string>
+    <string name="forums_access_tab_groups">Garee</string>
+    <string name="forums_access_tab_manual">Harkaan</string>
+    <string name="forums_access_search_users">Fayyadamtoota barbaadi</string>
+    <string name="forums_access_no_groups">Garreen hin jiran</string>
 </resources>

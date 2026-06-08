@@ -386,4 +386,12 @@
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Aka CRM jichhax janiw apnaqayañ atikiti.</string>
     <string name="login_method_recovery">Recovery códigonaka</string>
+    <string name="account_close_section">Cuenta jist\'antaña</string>
+    <string name="account_close_action">Cuenta jist\'antaña</string>
+    <string name="account_close_confirm_title">¿Cuentamax jist\'antañ munta?</string>
+    <string name="account_close_confirm_body">Cuentamax chhaqtayañatakiw wakichasini ukatx mistsuñamawa. Chhaqtayañ urut nayrarux kunapachasa jay sasin wasitat mantasaw cancelañ atkta.</string>
+    <string name="account_data_download">Apaqaña</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entidad</string>
+    <string name="route_target_url">Ukar redirigita URL</string>
 </resources>

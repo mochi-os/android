@@ -387,4 +387,12 @@
     <string name="login_method_totp">ئەپی پشتڕاستکەرەوە</string>
     <string name="login_method_oauth">چوونەژوورەوەی لایەنی سێیەم</string>
     <string name="login_method_recovery">کۆدەکانی گەڕانەوە</string>
+    <string name="account_close_section">داخستنی هەژمار</string>
+    <string name="account_close_action">داخستنی هەژمار</string>
+    <string name="account_close_confirm_title">هەژمارەکەت دابخەیت؟</string>
+    <string name="account_close_confirm_body">هەژمارەکەت بۆ سڕینەوە خشتەبەند دەکرێت و دەردەچیتە دەرەوە. دەتوانیت لە هەر کاتێکدا پێش ڕێکەوتی سڕینەوە بە چوونەوەژوورەوەی دووبارە هەڵیبوەشێنیتەوە.</string>
+    <string name="account_data_download">داگرتن</string>
+    <string name="route_target_app">ئەپ</string>
+    <string name="route_target_entity">ئەنتیتی</string>
+    <string name="route_target_url">URL</string>
 </resources>

@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s баробариро пешниҳод кард</string>
     <string name="game_system_draw_accept">Баробарӣ қабул шуд</string>
     <string name="game_system_draw_decline">%1$s баробариро рад кард</string>
+    <string name="reactivation_title">Ҳисоби шумо барои нест кардан ба нақша гирифта шудааст</string>
+    <string name="reactivation_body">Ҳисоби шумо барои нест кардан ба нақша гирифта шудааст. Шумо метавонед ҳозир бекор кунед ва дастрасии пурраро барқарор кунед.</string>
+    <string name="reactivation_body_dated">Ҳисоби шумо ва ҳамаи маълумоти он дар %1$s ба таври доимӣ нест карда мешавад. Шумо метавонед ҳозир бекор кунед ва дастрасии пурраро барқарор кунед.</string>
+    <string name="reactivation_reactivate">Ҳисоби маро аз нав фаъол кунед</string>
+    <string name="reactivation_sign_out">Бастанро идома диҳед ва бароед</string>
 </resources>

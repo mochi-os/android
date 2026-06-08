@@ -21,7 +21,18 @@ data class FindForumsUiState(
     val isSearching: Boolean = false,
     val isLoading: Boolean = false,
     val subscribed: Set<String> = emptySet(),
+    // A forum found by pasting its URL (probe), distinct from directory results.
+    val probeResult: ProbeForum? = null,
+    val isProbing: Boolean = false,
     val error: MochiError? = null
+)
+
+/** A forum resolved from a pasted URL via `-/probe`. */
+data class ProbeForum(
+    val id: String,
+    val name: String,
+    val fingerprint: String,
+    val server: String,
 )
 
 @HiltViewModel
@@ -52,16 +63,48 @@ class FindForumsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(searchQuery = q)
     }
 
+    private fun looksLikeUrl(q: String): Boolean =
+        q.startsWith("http://", ignoreCase = true) ||
+            q.startsWith("https://", ignoreCase = true)
+
     fun search() {
         val q = _uiState.value.searchQuery.trim()
         if (q.isBlank()) return
+        if (looksLikeUrl(q)) {
+            probe(q)
+            return
+        }
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSearching = true, error = null)
+            _uiState.value = _uiState.value.copy(
+                isSearching = true, error = null, probeResult = null,
+            )
             try {
                 val r = repository.searchForums(q)
                 _uiState.value = _uiState.value.copy(results = r, isSearching = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSearching = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    private fun probe(url: String) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(
+                isProbing = true, error = null, results = emptyList(), probeResult = null,
+            )
+            try {
+                val r = repository.probe(url)
+                _uiState.value = _uiState.value.copy(
+                    isProbing = false,
+                    probeResult = ProbeForum(
+                        id = r.id,
+                        name = r.name,
+                        fingerprint = r.fingerprint,
+                        server = r.server,
+                    ),
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isProbing = false, error = e.toMochiError())
             }
         }
     }

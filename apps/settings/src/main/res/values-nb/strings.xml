@@ -387,4 +387,12 @@
     <string name="login_method_totp">Autentiseringsapp</string>
     <string name="login_method_oauth">Innlogging fra tredjepart</string>
     <string name="login_method_recovery">Gjenopprettingskoder</string>
+    <string name="account_close_section">Lukk konto</string>
+    <string name="account_close_action">Lukk konto</string>
+    <string name="account_close_confirm_title">Vil du lukke kontoen din?</string>
+    <string name="account_close_confirm_body">Kontoen din vil bli planlagt slettet, og du blir logget ut. Du kan avbryte når som helst før slettedatoen ved å logge inn igjen.</string>
+    <string name="account_data_download">Last ned</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entitet</string>
+    <string name="route_target_url">URL</string>
 </resources>

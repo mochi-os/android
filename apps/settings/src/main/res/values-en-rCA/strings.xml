@@ -384,4 +384,12 @@
         <item quantity="one">Revoked 1 session</item>
         <item quantity="other">Revoked %1$d sessions</item>
     </plurals>
+    <string name="account_close_section">Close account</string>
+    <string name="account_close_action">Close account</string>
+    <string name="account_close_confirm_title">Close your account?</string>
+    <string name="account_close_confirm_body">Your account will be scheduled for deletion and you\'ll be signed out. You can cancel any time before the deletion date by logging back in.</string>
+    <string name="account_data_download">Download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
 </resources>

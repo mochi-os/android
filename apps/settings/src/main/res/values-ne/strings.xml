@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator एप</string>
     <string name="login_method_oauth">तेस्रो-पक्ष लगइन</string>
     <string name="login_method_recovery">रिकभरी कोडहरू</string>
+    <string name="account_close_section">खाता बन्द गर्नुहोस्</string>
+    <string name="account_close_action">खाता बन्द गर्नुहोस्</string>
+    <string name="account_close_confirm_title">तपाईंको खाता बन्द गर्ने?</string>
+    <string name="account_close_confirm_body">तपाईंको खाता मेटाउन तालिका गरिनेछ र तपाईं साइन आउट हुनुहुनेछ। मेटाउने मिति अघि कुनै पनि बेला फेरि लग इन गरेर तपाईंले रद्द गर्न सक्नुहुन्छ।</string>
+    <string name="account_data_download">डाउनलोड</string>
+    <string name="route_target_app">एप</string>
+    <string name="route_target_entity">संस्था</string>
+    <string name="route_target_url">URL</string>
 </resources>

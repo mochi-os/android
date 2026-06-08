@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ofereceu empate</string>
     <string name="game_system_draw_accept">Empate acordado</string>
     <string name="game_system_draw_decline">%1$s recusou o empate</string>
+    <string name="reactivation_title">Sua conta está programada para exclusão</string>
+    <string name="reactivation_body">Sua conta está programada para exclusão. Você pode cancelar e restaurar o acesso completo agora.</string>
+    <string name="reactivation_body_dated">Sua conta e todos os seus dados serão excluídos permanentemente em %1$s. Você pode cancelar e restaurar o acesso completo agora.</string>
+    <string name="reactivation_reactivate">Reativar minha conta</string>
+    <string name="reactivation_sign_out">Continuar o encerramento e sair</string>
 </resources>

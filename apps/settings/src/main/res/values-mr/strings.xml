@@ -387,4 +387,12 @@
     <string name="login_method_totp">प्रमाणीकरण अॅप</string>
     <string name="login_method_oauth">थर्ड-पार्टी लॉगिन</string>
     <string name="login_method_recovery">रिकव्हरी कोड्स</string>
+    <string name="account_close_section">खाते बंद करा</string>
+    <string name="account_close_action">खाते बंद करा</string>
+    <string name="account_close_confirm_title">तुमचे खाते बंद करायचे?</string>
+    <string name="account_close_confirm_body">तुमचे खाते हटवण्यासाठी नियोजित केले जाईल आणि तुम्हाला साइन आउट केले जाईल. हटवण्याच्या तारखेपूर्वी पुन्हा लॉग इन करून तुम्ही केव्हाही रद्द करू शकता.</string>
+    <string name="account_data_download">डाउनलोड</string>
+    <string name="route_target_app">अॅप</string>
+    <string name="route_target_entity">संस्था</string>
+    <string name="route_target_url">URL</string>
 </resources>

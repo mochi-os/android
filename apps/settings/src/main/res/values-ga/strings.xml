@@ -390,4 +390,12 @@
     <string name="login_method_totp">Aip fhíordheimhnitheora</string>
     <string name="login_method_oauth">Logáil isteach tríú páirtí</string>
     <string name="login_method_recovery">Cóid aisghabhála</string>
+    <string name="account_close_section">Dún an cuntas</string>
+    <string name="account_close_action">Dún an cuntas</string>
+    <string name="account_close_confirm_title">Dún do chuntas?</string>
+    <string name="account_close_confirm_body">Sceidealófar do chuntas lena scriosadh agus síneofar amach thú. Is féidir leat é a chealú am ar bith roimh dháta an scriosta trí logáil isteach arís.</string>
+    <string name="account_data_download">Íoslódáil</string>
+    <string name="route_target_app">Aip</string>
+    <string name="route_target_entity">Aonán</string>
+    <string name="route_target_url">URL</string>
 </resources>

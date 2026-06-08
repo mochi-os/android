@@ -386,4 +386,12 @@
     <string name="login_method_totp">인증 앱</string>
     <string name="login_method_oauth">타사 로그인</string>
     <string name="login_method_recovery">복구 코드</string>
+    <string name="account_close_section">계정 닫기</string>
+    <string name="account_close_action">계정 닫기</string>
+    <string name="account_close_confirm_title">계정을 닫으시겠습니까?</string>
+    <string name="account_close_confirm_body">회원님의 계정이 삭제 예정으로 지정되고 로그아웃됩니다. 삭제일 전에는 언제든지 다시 로그인하여 취소할 수 있습니다.</string>
+    <string name="account_data_download">다운로드</string>
+    <string name="route_target_app">앱</string>
+    <string name="route_target_entity">엔티티</string>
+    <string name="route_target_url">URL</string>
 </resources>

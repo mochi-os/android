@@ -248,4 +248,9 @@
     <string name="profile_privacy_description">Si otras personas pueden encontrarte en el directorio.</string>
     <string name="game_chat_empty">Todavía no hay mensajes</string>
     <string name="stepup_verify">Verificá</string>
+    <string name="reactivation_title">Tu cuenta está programada para eliminarse</string>
+    <string name="reactivation_body">Tu cuenta está programada para eliminarse. Podés cancelar y restaurar el acceso completo ahora.</string>
+    <string name="reactivation_body_dated">Tu cuenta y todos sus datos se eliminarán de forma permanente el %1$s. Podés cancelar y restaurar el acceso completo ahora.</string>
+    <string name="reactivation_reactivate">Reactivar mi cuenta</string>
+    <string name="reactivation_sign_out">Continuar con el cierre y cerrar sesión</string>
 </resources>

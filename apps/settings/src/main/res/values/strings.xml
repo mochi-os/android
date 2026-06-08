@@ -85,6 +85,19 @@
     <string name="account_save">Save</string>
     <string name="account_done">Done</string>
     <string name="account_delete">Delete</string>
+
+    <string name="account_close_section">Close account</string>
+    <string name="account_close_action">Close account</string>
+    <string name="account_close_confirm_title">Close your account?</string>
+    <string name="account_close_confirm_body">Your account will be scheduled for deletion and you\'ll be signed out. You can cancel any time before the deletion date by logging back in.</string>
+
+    <string name="account_data_section">Your data</string>
+    <string name="account_data_description">Download a complete backup you can restore on this or another Mochi server.</string>
+    <string name="account_data_download">Download</string>
+    <string name="account_data_dialog_title">Download your data</string>
+    <string name="account_data_dialog_body">This is a complete backup you can restore on this or another Mochi server. Verify it\'s you to continue.</string>
+    <string name="account_data_passphrase">Passphrase</string>
+    <string name="account_data_passphrase_hint">Your private keys are included, encrypted with this passphrase. Store it safely. You\'ll need it to restore.</string>
     <string name="account_rename">Rename</string>
     <string name="account_disable">Disable</string>
     <string name="account_copy">Copy</string>
@@ -181,6 +194,11 @@
     <string name="route_empty">No routes configured.</string>
     <string name="route_path">Path</string>
     <string name="route_target">Target</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
+    <string name="route_target_select">Select</string>
+    <string name="route_target_none">No targets available</string>
     <string name="route_method">Method</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entity</string>
@@ -407,7 +425,7 @@
     <string name="domain_delegation_delete_message">%1$s will no longer manage routes on this domain.</string>
     <string name="domain_delegation_delete_title">Delete delegation?</string>
     <string name="domain_delegation_path">Path</string>
-    <string name="domain_delegation_user">User ID</string>
+    <string name="domain_delegation_user">User</string>
     <string name="domain_delegations">Delegations</string>
     <string name="domain_delegations_empty">No delegations configured.</string>
     <string name="domain_delete">Delete domain</string>

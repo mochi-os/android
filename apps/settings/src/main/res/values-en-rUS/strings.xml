@@ -378,4 +378,12 @@
     <string name="domain_title">Domains</string>
     <string name="domain_verify">Verify DNS</string>
     <string name="settings_home_domains">Domains</string>
+    <string name="account_close_section">Close account</string>
+    <string name="account_close_action">Close account</string>
+    <string name="account_close_confirm_title">Close your account?</string>
+    <string name="account_close_confirm_body">Your account will be scheduled for deletion and you\'ll be signed out. You can cancel any time before the deletion date by logging back in.</string>
+    <string name="account_data_download">Download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
 </resources>

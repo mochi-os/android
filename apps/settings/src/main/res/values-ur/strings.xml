@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator ایپ</string>
     <string name="login_method_oauth">تھرڈ پارٹی لاگ ان</string>
     <string name="login_method_recovery">recovery کوڈز</string>
+    <string name="account_close_section">اکاؤنٹ بند کریں</string>
+    <string name="account_close_action">اکاؤنٹ بند کریں</string>
+    <string name="account_close_confirm_title">اپنا اکاؤنٹ بند کریں؟</string>
+    <string name="account_close_confirm_body">آپ کے اکاؤنٹ کو حذف کرنے کے لیے شیڈول کیا جائے گا اور آپ کو سائن آؤٹ کر دیا جائے گا۔ آپ حذف کی تاریخ سے پہلے کسی بھی وقت دوبارہ لاگ اِن کر کے اسے منسوخ کر سکتے ہیں۔</string>
+    <string name="account_data_download">ڈاؤن لوڈ</string>
+    <string name="route_target_app">ایپ</string>
+    <string name="route_target_entity">اینٹٹی</string>
+    <string name="route_target_url">URL</string>
 </resources>

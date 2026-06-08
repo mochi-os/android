@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator апп</string>
     <string name="login_method_oauth">Гуравдагч талын нэвтрэлт</string>
     <string name="login_method_recovery">Сэргээх кодууд</string>
+    <string name="account_close_section">Бүртгэл хаах</string>
+    <string name="account_close_action">Бүртгэл хаах</string>
+    <string name="account_close_confirm_title">Бүртгэлээ хаах уу?</string>
+    <string name="account_close_confirm_body">Таны бүртгэлийг устгахаар товлох бөгөөд та системээс гарна. Устгах огнооноос өмнө хэдийд ч дахин нэвтэрч цуцалж болно.</string>
+    <string name="account_data_download">Татах</string>
+    <string name="route_target_app">Апп</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
 </resources>

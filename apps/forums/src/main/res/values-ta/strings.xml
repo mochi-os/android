@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">ஆர்வத்தை அதிகரி</string>
     <string name="forums_tag_interest_down">ஆர்வத்தைக் குறைக்கவும்</string>
     <string name="forums_tag_interest_remove">ஆர்வத்தை அகற்று</string>
+    <string name="forums_list_default_sort">இயல்புநிலை வரிசை</string>
+    <string name="forums_access_tab_users">பயனர்கள்</string>
+    <string name="forums_access_tab_groups">குழுக்கள்</string>
+    <string name="forums_access_tab_manual">கைமுறை</string>
+    <string name="forums_access_search_users">பயனர்களைத் தேடு</string>
+    <string name="forums_access_no_groups">குழுக்கள் கிடைக்கவில்லை</string>
 </resources>

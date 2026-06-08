@@ -386,4 +386,12 @@
     <string name="login_method_totp">App olùfọwọ́sí</string>
     <string name="login_method_oauth">Wíwọlé ti ẹnikẹta</string>
     <string name="login_method_recovery">Àwọn kóòdù ìgbàpadà</string>
+    <string name="account_close_section">Pa àkáǹtì</string>
+    <string name="account_close_action">Pa àkáǹtì</string>
+    <string name="account_close_confirm_title">Pa àkáǹtì rẹ?</string>
+    <string name="account_close_confirm_body">A óò ṣètò àkáǹtì rẹ láti pa rẹ́ a sì máa mú ọ jáde. O lè fagilé e nígbàkígbà kí ọjọ́ pípa rẹ́ tó dé nípa wíwọlé padà.</string>
+    <string name="account_data_download">Gbà sílẹ̀</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Ẹ̀ka</string>
+    <string name="route_target_url">URL</string>
 </resources>

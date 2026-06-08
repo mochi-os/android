@@ -386,4 +386,12 @@
     <string name="login_method_totp">ແອັບ authenticator</string>
     <string name="login_method_oauth">ການເຂົ້າສູ່ລະບົບຂອງພາກສ່ວນທີສາມ</string>
     <string name="login_method_recovery">ລະຫັດກູ້ຄືນ</string>
+    <string name="account_close_section">ປິດບັນຊີ</string>
+    <string name="account_close_action">ປິດບັນຊີ</string>
+    <string name="account_close_confirm_title">ປິດບັນຊີຂອງທ່ານບໍ?</string>
+    <string name="account_close_confirm_body">ບັນຊີຂອງທ່ານຈະຖືກກຳນົດໃຫ້ລຶບ ແລະ ທ່ານຈະຖືກອອກຈາກລະບົບ. ທ່ານສາມາດຍົກເລີກໄດ້ທຸກເວລາກ່ອນວັນທີລຶບ ໂດຍການເຂົ້າສູ່ລະບົບຄືນ.</string>
+    <string name="account_data_download">ດາວໂຫຼດ</string>
+    <string name="route_target_app">ແອັບ</string>
+    <string name="route_target_entity">ເອັນຕິຕີ້</string>
+    <string name="route_target_url">URL</string>
 </resources>

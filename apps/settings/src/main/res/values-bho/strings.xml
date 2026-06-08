@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator ऐप</string>
     <string name="login_method_oauth">तीसरा-पक्ष लॉगिन</string>
     <string name="login_method_recovery">रिकवरी कोड</string>
+    <string name="account_close_section">खाता बंद करीं</string>
+    <string name="account_close_action">खाता बंद करीं</string>
+    <string name="account_close_confirm_title">रउआ आपन खाता बंद करे के बानी?</string>
+    <string name="account_close_confirm_body">रउआ के खाता मिटावे खातिर तय कइल जाई आ रउआ साइन आउट हो जाईं। मिटावे के तारीख से पहिले कवनो समय फेर से लॉग इन क के रउआ रद्द क सकेनी।</string>
+    <string name="account_data_download">डाउनलोड</string>
+    <string name="route_target_app">ऐप</string>
+    <string name="route_target_entity">एंटिटी</string>
+    <string name="route_target_url">URL</string>
 </resources>

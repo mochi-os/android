@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator հավելվածն անջատված է</string>
     <string name="login_method_oauth">Երրորդ կողմի մուտք</string>
     <string name="login_method_recovery">Վերականգնման կոդեր</string>
+    <string name="account_close_section">Փակել հաշիվը</string>
+    <string name="account_close_action">Փակել հաշիվը</string>
+    <string name="account_close_confirm_title">Փակե՞լ ձեր հաշիվը։</string>
+    <string name="account_close_confirm_body">Ձեր հաշիվը կնախատեսվի ջնջման, և դուք դուրս կգրվեք համակարգից։ Կարող եք չեղարկել ցանկացած պահի մինչ ջնջման ամսաթիվը՝ կրկին մուտք գործելով։</string>
+    <string name="account_data_download">Ներբեռնել</string>
+    <string name="route_target_app">Հավելվածի ID</string>
+    <string name="route_target_entity">Անձ</string>
+    <string name="route_target_url">URL</string>
 </resources>

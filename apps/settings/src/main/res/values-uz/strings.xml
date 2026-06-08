@@ -387,4 +387,12 @@
     <string name="login_method_totp">Autentifikator ilova</string>
     <string name="login_method_oauth">Uchinchi tomon kirishi</string>
     <string name="login_method_recovery">Tiklash kodlari</string>
+    <string name="account_close_section">Hisobni yopish</string>
+    <string name="account_close_action">Hisobni yopish</string>
+    <string name="account_close_confirm_title">Hisobingizni yopasizmi?</string>
+    <string name="account_close_confirm_body">Hisobingiz o\'chirilishi uchun rejalashtiriladi va tizimdan chiqarilasiz. O\'chirish sanasidan oldin istalgan vaqtda qaytadan tizimga kirib, buni bekor qilishingiz mumkin.</string>
+    <string name="account_data_download">Yuklab olish</string>
+    <string name="route_target_app">Ilova</string>
+    <string name="route_target_entity">Obyekt</string>
+    <string name="route_target_url">URL</string>
 </resources>

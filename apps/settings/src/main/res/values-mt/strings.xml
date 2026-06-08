@@ -390,4 +390,12 @@
     <string name="login_method_totp">App tal-awtentikazzjoni</string>
     <string name="login_method_oauth">Login minn parti terza</string>
     <string name="login_method_recovery">Kodiċi ta\' rkupru</string>
+    <string name="account_close_section">Agħlaq il-kont</string>
+    <string name="account_close_action">Agħlaq il-kont</string>
+    <string name="account_close_confirm_title">Tagħlaq il-kont tiegħek?</string>
+    <string name="account_close_confirm_body">Il-kont tiegħek se jiġi skedat biex jitħassar u tinħareġ mis-sistema. Tista\' tikkanċella f\'kull ħin qabel id-data tat-tħassir billi terġa\' tidħol.</string>
+    <string name="account_data_download">Niżżel</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entità</string>
+    <string name="route_target_url">URL</string>
 </resources>

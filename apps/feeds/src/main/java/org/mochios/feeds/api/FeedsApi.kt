@@ -122,7 +122,7 @@ data class MemberSearchResponse(
 )
 
 data class UserSearchResponse(
-    val users: List<User> = emptyList()
+    @SerializedName("results") val results: List<User> = emptyList()
 )
 
 data class GroupListResponse(

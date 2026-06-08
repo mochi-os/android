@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Hybu diddordeb</string>
     <string name="forums_tag_interest_down">Lleihau diddordeb</string>
     <string name="forums_tag_interest_remove">Tynnu diddordeb</string>
+    <string name="forums_list_default_sort">Trefnu diofyn</string>
+    <string name="forums_access_tab_users">Defnyddwyr</string>
+    <string name="forums_access_tab_groups">Grwpiau</string>
+    <string name="forums_access_tab_manual">Llawlyfr</string>
+    <string name="forums_access_search_users">Chwilio defnyddwyr</string>
+    <string name="forums_access_no_groups">Dim grwpiau ar gael</string>
 </resources>

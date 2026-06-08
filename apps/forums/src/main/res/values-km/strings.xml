@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">បង្កើនចំណាប់អារម្មណ៍</string>
     <string name="forums_tag_interest_down">កាត់បន្ថយចំណាប់អារម្មណ៍</string>
     <string name="forums_tag_interest_remove">យកចំណាប់អារម្មណ៍ចេញ</string>
+    <string name="forums_list_default_sort">ការតម្រៀបលំនាំដើម</string>
+    <string name="forums_access_tab_users">អ្នកប្រើប្រាស់</string>
+    <string name="forums_access_tab_groups">ក្រុម</string>
+    <string name="forums_access_tab_manual">សៀវភៅណែនាំ</string>
+    <string name="forums_access_search_users">ស្វែងរកអ្នកប្រើ</string>
+    <string name="forums_access_no_groups">មិនមានក្រុម</string>
 </resources>

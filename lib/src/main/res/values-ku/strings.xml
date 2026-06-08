@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s pêşniyara wekheviyê kir</string>
     <string name="game_system_draw_accept">Li ser wekheviyê li hev hat</string>
     <string name="game_system_draw_decline">%1$s wekhevî red kir</string>
+    <string name="reactivation_title">Hesabê we ji bo jêbirinê hatiye plankirin</string>
+    <string name="reactivation_body">Hesabê we ji bo jêbirinê hatiye plankirin. Hûn dikarin niha betal bikin û gihîştina temam vegerînin.</string>
+    <string name="reactivation_body_dated">Hesabê we û hemû daneyên wê dê di %1$s de bi mayînde were jêbirin. Hûn dikarin niha betal bikin û gihîştina temam vegerînin.</string>
+    <string name="reactivation_reactivate">Hesabê min ji nû ve çalak bike</string>
+    <string name="reactivation_sign_out">Berdewamiya girtinê û derketin</string>
 </resources>

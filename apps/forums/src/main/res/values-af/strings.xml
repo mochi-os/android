@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Versterk belangstelling</string>
     <string name="forums_tag_interest_down">Verminder belangstelling</string>
     <string name="forums_tag_interest_remove">Verwyder belangstelling</string>
+    <string name="forums_list_default_sort">Verstek sortering</string>
+    <string name="forums_access_tab_users">Gebruikers</string>
+    <string name="forums_access_tab_groups">Groepe</string>
+    <string name="forums_access_tab_manual">Handmatig</string>
+    <string name="forums_access_search_users">Soek gebruikers</string>
+    <string name="forums_access_no_groups">Geen groepe beskikbaar nie</string>
 </resources>

@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ofroi barazim</string>
     <string name="game_system_draw_accept">Barazimi u pranua</string>
     <string name="game_system_draw_decline">%1$s refuzoi barazimin</string>
+    <string name="reactivation_title">Llogaria juaj është planifikuar për fshirje</string>
+    <string name="reactivation_body">Llogaria juaj është planifikuar për fshirje. Mund ta anuloni dhe të rivendosni qasjen e plotë tani.</string>
+    <string name="reactivation_body_dated">Llogaria juaj dhe të gjitha të dhënat e saj do të fshihen përgjithmonë më %1$s. Mund ta anuloni dhe të rivendosni qasjen e plotë tani.</string>
+    <string name="reactivation_reactivate">Riaktivizo llogarinë time</string>
+    <string name="reactivation_sign_out">Vazhdo mbylljen dhe dil</string>
 </resources>

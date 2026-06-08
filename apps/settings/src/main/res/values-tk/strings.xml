@@ -387,4 +387,12 @@
     <string name="login_method_totp">Autentifikator programma</string>
     <string name="login_method_oauth">Üçünji tarap girişi</string>
     <string name="login_method_recovery">Dikeldiş kodlary</string>
+    <string name="account_close_section">Hasaby ýap</string>
+    <string name="account_close_action">Hasaby ýap</string>
+    <string name="account_close_confirm_title">Hasabyňyzy ýapmakçymy?</string>
+    <string name="account_close_confirm_body">Hasabyňyz pozulmaga meýilleşdiriler we ulgamdan çykarylarsyňyz. Pozulýan senesinden öň islendik wagt täzeden ulgama girip ony ýatyryp bilersiňiz.</string>
+    <string name="account_data_download">Ýükläp al</string>
+    <string name="route_target_app">Programma</string>
+    <string name="route_target_entity">Essas</string>
+    <string name="route_target_url">URL</string>
 </resources>

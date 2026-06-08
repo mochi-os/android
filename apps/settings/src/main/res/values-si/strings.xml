@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">තෙවන පාර්ශවීය පුරනය වීම</string>
     <string name="login_method_recovery">ප්‍රතිසාධන කේත</string>
+    <string name="account_close_section">ගිණුම වසන්න</string>
+    <string name="account_close_action">ගිණුම වසන්න</string>
+    <string name="account_close_confirm_title">ඔබේ ගිණුම වසන්නද?</string>
+    <string name="account_close_confirm_body">ඔබේ ගිණුම මැකීමට නියම කරනු ඇති අතර ඔබව පිටවී යනු ඇත. මැකීමේ දිනයට පෙර ඕනෑම වේලාවක නැවත පුරනය වීමෙන් ඔබට මෙය අවලංගු කළ හැකිය.</string>
+    <string name="account_data_download">බාගත කරන්න</string>
+    <string name="route_target_app">යෙදුම</string>
+    <string name="route_target_entity">ආයතනය</string>
+    <string name="route_target_url">URL</string>
 </resources>

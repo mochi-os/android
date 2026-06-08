@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">ਦਿਲਚਸਪੀ ਵਧਾਓ</string>
     <string name="forums_tag_interest_down">ਦਿਲਚਸਪੀ ਘਟਾਓ</string>
     <string name="forums_tag_interest_remove">ਦਿਲਚਸਪੀ ਹਟਾਓ</string>
+    <string name="forums_list_default_sort">ਡਿਫਾਲਟ ਛਾਂਟ</string>
+    <string name="forums_access_tab_users">ਉਪਭੋਗਤਾ</string>
+    <string name="forums_access_tab_groups">ਗਰੁੱਪ</string>
+    <string name="forums_access_tab_manual">ਮੈਨੁਅਲ</string>
+    <string name="forums_access_search_users">ਉਪਭੋਗਤਾ ਖੋਜੋ</string>
+    <string name="forums_access_no_groups">ਕੋਈ ਗਰੁੱਪ ਉਪਲਬਧ ਨਹੀਂ</string>
 </resources>

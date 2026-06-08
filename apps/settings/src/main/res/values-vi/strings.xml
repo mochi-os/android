@@ -386,4 +386,12 @@
     <string name="login_method_totp">Ứng dụng xác thực</string>
     <string name="login_method_oauth">Đăng nhập bên thứ ba</string>
     <string name="login_method_recovery">Mã khôi phục</string>
+    <string name="account_close_section">Đóng tài khoản</string>
+    <string name="account_close_action">Đóng tài khoản</string>
+    <string name="account_close_confirm_title">Đóng tài khoản của bạn?</string>
+    <string name="account_close_confirm_body">Tài khoản của bạn sẽ được lên lịch xóa và bạn sẽ bị đăng xuất. Bạn có thể hủy bất cứ lúc nào trước ngày xóa bằng cách đăng nhập lại.</string>
+    <string name="account_data_download">Tải xuống</string>
+    <string name="route_target_app">Ứng dụng</string>
+    <string name="route_target_entity">Thực thể</string>
+    <string name="route_target_url">URL</string>
 </resources>

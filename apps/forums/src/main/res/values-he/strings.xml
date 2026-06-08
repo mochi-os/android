@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">הגבר עניין</string>
     <string name="forums_tag_interest_down">הפחת עניין</string>
     <string name="forums_tag_interest_remove">הסר עניין</string>
+    <string name="forums_list_default_sort">מיון ברירת מחדל</string>
+    <string name="forums_access_tab_users">משתמשים</string>
+    <string name="forums_access_tab_groups">קבוצות</string>
+    <string name="forums_access_tab_manual">ידני</string>
+    <string name="forums_access_search_users">חפש משתמשים</string>
+    <string name="forums_access_no_groups">אין קבוצות זמינות</string>
 </resources>

@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Кызыгууну күчөтүү</string>
     <string name="forums_tag_interest_down">Кызыгууну азайтуу</string>
     <string name="forums_tag_interest_remove">Кызыгууну алуу</string>
+    <string name="forums_list_default_sort">Демейки иргөө</string>
+    <string name="forums_access_tab_users">Колдонуучулар</string>
+    <string name="forums_access_tab_groups">Топтор</string>
+    <string name="forums_access_tab_manual">Кол менен</string>
+    <string name="forums_access_search_users">Колдонуучуларды издөө</string>
+    <string name="forums_access_no_groups">Топтор жеткиликсиз</string>
 </resources>

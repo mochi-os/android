@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Berjewendiyê zêde bike</string>
     <string name="forums_tag_interest_down">Balkêşî kêm bike</string>
     <string name="forums_tag_interest_remove">Balkêşiyê rake</string>
+    <string name="forums_list_default_sort">Rêzkirina standard</string>
+    <string name="forums_access_tab_users">Bikarhêner</string>
+    <string name="forums_access_tab_groups">Kom</string>
+    <string name="forums_access_tab_manual">Destî</string>
+    <string name="forums_access_search_users">Li bikarhêneran bigere</string>
+    <string name="forums_access_no_groups">Tu kom berdest nîn in</string>
 </resources>

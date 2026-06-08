@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s הציע תיקו</string>
     <string name="game_system_draw_accept">הוסכם על תיקו</string>
     <string name="game_system_draw_decline">%1$s דחה את התיקו</string>
+    <string name="reactivation_title">החשבון שלך מתוזמן למחיקה</string>
+    <string name="reactivation_body">החשבון שלך מתוזמן למחיקה. ניתן לבטל ולשחזר גישה מלאה כעת.</string>
+    <string name="reactivation_body_dated">החשבון שלך וכל הנתונים שבו יימחקו לצמיתות בתאריך %1$s. ניתן לבטל ולשחזר גישה מלאה כעת.</string>
+    <string name="reactivation_reactivate">הפעל מחדש את החשבון שלי</string>
+    <string name="reactivation_sign_out">המשך בסגירה והתנתק</string>
 </resources>

@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$sએ ડ્રોની દરખાસ્ત કરી</string>
     <string name="game_system_draw_accept">ડ્રો સ્વીકારાયો</string>
     <string name="game_system_draw_decline">%1$sએ ડ્રો નકાર્યો</string>
+    <string name="reactivation_title">તમારું ખાતું કાઢી નાખવા માટે નિર્ધારિત છે</string>
+    <string name="reactivation_body">તમારું ખાતું કાઢી નાખવા માટે નિર્ધારિત છે. તમે હમણાં જ રદ કરીને સંપૂર્ણ ઍક્સેસ પુનઃસ્થાપિત કરી શકો છો.</string>
+    <string name="reactivation_body_dated">તમારું ખાતું અને તેનો બધો ડેટા %1$s ના રોજ કાયમ માટે કાઢી નાખવામાં આવશે. તમે હમણાં જ રદ કરીને સંપૂર્ણ ઍક્સેસ પુનઃસ્થાપિત કરી શકો છો.</string>
+    <string name="reactivation_reactivate">મારું ખાતું ફરી સક્રિય કરો</string>
+    <string name="reactivation_sign_out">બંધ કરવાનું ચાલુ રાખો અને સાઇન આઉટ કરો</string>
 </resources>

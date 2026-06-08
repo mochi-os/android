@@ -386,4 +386,12 @@
     <string name="login_method_totp">កម្មវិធី Authenticator</string>
     <string name="login_method_oauth">ការចូលពីភាគីទីបី</string>
     <string name="login_method_recovery">កូដស្តារ</string>
+    <string name="account_close_section">បិទគណនី</string>
+    <string name="account_close_action">បិទគណនី</string>
+    <string name="account_close_confirm_title">បិទគណនីរបស់អ្នក?</string>
+    <string name="account_close_confirm_body">គណនីរបស់អ្នកនឹងត្រូវកំណត់ពេលលុប ហើយអ្នកនឹងត្រូវចេញពីគណនី។ អ្នកអាចបោះបង់នៅពេលណាក៏បានមុនកាលបរិច្ឆេទលុប ដោយចូលគណនីឡើងវិញ។</string>
+    <string name="account_data_download">ទាញយក</string>
+    <string name="route_target_app">កម្មវិធី</string>
+    <string name="route_target_entity">អង្គភាព</string>
+    <string name="route_target_url">URL</string>
 </resources>

@@ -389,4 +389,12 @@
     <string name="login_method_totp">Autentizační aplikace</string>
     <string name="login_method_oauth">Přihlášení třetí strany</string>
     <string name="login_method_recovery">Obnovovací kódy</string>
+    <string name="account_close_section">Zrušit účet</string>
+    <string name="account_close_action">Zrušit účet</string>
+    <string name="account_close_confirm_title">Zrušit váš účet?</string>
+    <string name="account_close_confirm_body">Váš účet bude naplánován ke smazání a budete odhlášeni. Smazání můžete kdykoli před datem smazání zrušit opětovným přihlášením.</string>
+    <string name="account_data_download">Stáhnout</string>
+    <string name="route_target_app">Aplikace</string>
+    <string name="route_target_entity">Entita</string>
+    <string name="route_target_url">URL</string>
 </resources>

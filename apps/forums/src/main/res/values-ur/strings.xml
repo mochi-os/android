@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">دلچسپی بڑھائیں</string>
     <string name="forums_tag_interest_down">دلچسپی کم کریں</string>
     <string name="forums_tag_interest_remove">دلچسپی ہٹائیں</string>
+    <string name="forums_list_default_sort">ڈیفالٹ ترتیب</string>
+    <string name="forums_access_tab_users">صارفین</string>
+    <string name="forums_access_tab_groups">گروپس</string>
+    <string name="forums_access_tab_manual">دستی</string>
+    <string name="forums_access_search_users">صارفین تلاش کریں</string>
+    <string name="forums_access_no_groups">کوئی گروپ دستیاب نہیں</string>
 </resources>

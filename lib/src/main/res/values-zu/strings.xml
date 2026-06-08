@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s uhlongoze ukulingana</string>
     <string name="game_system_draw_accept">Kuvunyelwene ngokulingana</string>
     <string name="game_system_draw_decline">%1$s wenqabe ukulingana</string>
+    <string name="reactivation_title">I-akhawunti yakho ihlelelwe ukususwa</string>
+    <string name="reactivation_body">I-akhawunti yakho ihlelelwe ukususwa. Ungakhansela futhi ubuyisele ukufinyelela okugcwele manje.</string>
+    <string name="reactivation_body_dated">I-akhawunti yakho nayo yonke idatha yayo izosuswa unomphela ngo-%1$s. Ungakhansela futhi ubuyisele ukufinyelela okugcwele manje.</string>
+    <string name="reactivation_reactivate">Phinda uvuselele i-akhawunti yami</string>
+    <string name="reactivation_sign_out">Qhubeka uvale uphinde uphume</string>
 </resources>

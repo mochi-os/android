@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Munawi jiltayaña</string>
     <string name="forums_tag_interest_down">Interés pisi tukuyma</string>
     <string name="forums_tag_interest_remove">Interés aparma</string>
+    <string name="forums_list_default_sort">Default ch\'ulluwi</string>
+    <string name="forums_access_tab_users">Aka tamar mantapki uka apnaqirinakampi tamanakampi</string>
+    <string name="forums_access_tab_groups">Gruponaka</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Usuarionak thaqhama</string>
+    <string name="forums_access_no_groups">Jan tamanak utjki</string>
 </resources>

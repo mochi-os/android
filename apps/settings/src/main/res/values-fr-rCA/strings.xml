@@ -379,4 +379,12 @@
     <string name="domain_verify">Vérifier le DNS</string>
     <string name="settings_home_domains">Domaines</string>
     <string name="login_method_email">Code par courriel</string>
+    <string name="account_close_section">Fermer le compte</string>
+    <string name="account_close_action">Fermer le compte</string>
+    <string name="account_close_confirm_title">Fermer votre compte ?</string>
+    <string name="account_close_confirm_body">La suppression de votre compte sera planifiée et vous serez déconnecté. Vous pouvez l\'annuler en tout temps avant la date de suppression en vous reconnectant.</string>
+    <string name="account_data_download">Télécharger</string>
+    <string name="route_target_app">Application</string>
+    <string name="route_target_entity">Entité</string>
+    <string name="route_target_url">URL</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="login_method_totp">অথেন্টিকেটর অ্যাপ</string>
     <string name="login_method_oauth">থার্ড-পার্টি লগইন</string>
     <string name="login_method_recovery">রিকভারি কোড</string>
+    <string name="account_close_section">অ্যাকাউন্ট বন্ধ করুন</string>
+    <string name="account_close_action">অ্যাকাউন্ট বন্ধ করুন</string>
+    <string name="account_close_confirm_title">আপনার অ্যাকাউন্ট বন্ধ করবেন?</string>
+    <string name="account_close_confirm_body">আপনার অ্যাকাউন্ট মুছে ফেলার জন্য নির্ধারিত হবে এবং আপনাকে সাইন আউট করা হবে। মুছে ফেলার তারিখের আগে যেকোনো সময় আবার লগ ইন করে আপনি বাতিল করতে পারেন।</string>
+    <string name="account_data_download">ডাউনলোড</string>
+    <string name="route_target_app">অ্যাপ</string>
+    <string name="route_target_entity">সত্তা</string>
+    <string name="route_target_url">URL</string>
 </resources>

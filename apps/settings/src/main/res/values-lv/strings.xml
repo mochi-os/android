@@ -388,4 +388,12 @@
     <string name="login_method_totp">Authenticator lietotne</string>
     <string name="login_method_oauth">Trešās puses pieteikšanās</string>
     <string name="login_method_recovery">Atjaunošanas kodi</string>
+    <string name="account_close_section">Slēgt kontu</string>
+    <string name="account_close_action">Slēgt kontu</string>
+    <string name="account_close_confirm_title">Slēgt jūsu kontu?</string>
+    <string name="account_close_confirm_body">Jūsu kontu paredzēs dzēst, un jūs tiksiet izrakstīts. Jūs varat atcelt jebkurā laikā pirms dzēšanas datuma, atkārtoti pierakstoties.</string>
+    <string name="account_data_download">Lejupielādēt</string>
+    <string name="route_target_app">Lietotne</string>
+    <string name="route_target_entity">Entītija</string>
+    <string name="route_target_url">URL</string>
 </resources>

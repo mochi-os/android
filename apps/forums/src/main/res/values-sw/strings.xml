@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Ongeza mvuto</string>
     <string name="forums_tag_interest_down">Punguza shauku</string>
     <string name="forums_tag_interest_remove">Ondoa shauku</string>
+    <string name="forums_list_default_sort">Mpangilio chaguo-msingi</string>
+    <string name="forums_access_tab_users">Watumiaji</string>
+    <string name="forums_access_tab_groups">Vikundi</string>
+    <string name="forums_access_tab_manual">Mwongozo</string>
+    <string name="forums_access_search_users">Tafuta watumiaji</string>
+    <string name="forums_access_no_groups">Hakuna vikundi vinavyopatikana</string>
 </resources>

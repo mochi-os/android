@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">ఆసక్తిని పెంచండి</string>
     <string name="forums_tag_interest_down">ఆసక్తిని తగ్గించండి</string>
     <string name="forums_tag_interest_remove">ఆసక్తిని తొలగించండి</string>
+    <string name="forums_list_default_sort">డిఫాల్ట్ క్రమబద్ధీకరణ</string>
+    <string name="forums_access_tab_users">యూజర్‌లు</string>
+    <string name="forums_access_tab_groups">గ్రూపులు</string>
+    <string name="forums_access_tab_manual">మాన్యువల్</string>
+    <string name="forums_access_search_users">యూజర్లను శోధించండి</string>
+    <string name="forums_access_no_groups">గ్రూపులు అందుబాటులో లేవు</string>
 </resources>

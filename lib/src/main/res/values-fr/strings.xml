@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s a proposé la nulle</string>
     <string name="game_system_draw_accept">Nulle acceptée</string>
     <string name="game_system_draw_decline">%1$s a refusé la nulle</string>
+    <string name="reactivation_title">La suppression de votre compte est planifiée</string>
+    <string name="reactivation_body">La suppression de votre compte est planifiée. Vous pouvez annuler et rétablir l\'accès complet dès maintenant.</string>
+    <string name="reactivation_body_dated">Votre compte et toutes ses données seront supprimés définitivement le %1$s. Vous pouvez annuler et rétablir l\'accès complet dès maintenant.</string>
+    <string name="reactivation_reactivate">Réactiver mon compte</string>
+    <string name="reactivation_sign_out">Continuer la fermeture et se déconnecter</string>
 </resources>

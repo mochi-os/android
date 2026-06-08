@@ -4,14 +4,19 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -20,6 +25,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -78,6 +86,7 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
 
     if (showAdd) {
         AddAccessDialog(
+            viewModel = viewModel,
             onConfirm = { target, level ->
                 viewModel.setAccess(target, level)
                 showAdd = false
@@ -100,13 +109,26 @@ private fun accessLevelLabel(operation: String, grant: Int): String {
     }
 }
 
+/**
+ * Add-access dialog mirroring web's `AccessDialog`: pick the subject as a
+ * searched user (entity id), a friend group (`@id`), or a manually-typed
+ * target (entity id / @group / * / +), then choose the level. Users are
+ * searched live via the forums `users/search` proxy; groups are fetched once
+ * on first switch into the Groups tab.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AddAccessDialog(
+    viewModel: ForumSettingsViewModel,
     onConfirm: (target: String, level: String) -> Unit,
     onDismiss: () -> Unit,
 ) {
-    var target by remember { mutableStateOf("") }
+    val uiState by viewModel.uiState.collectAsState()
+    var selectedTab by remember { mutableStateOf(0) }
+    var userQuery by remember { mutableStateOf("") }
+    var manualTarget by remember { mutableStateOf("") }
+    var selectedSubject by remember { mutableStateOf("") }
+    var selectedName by remember { mutableStateOf("") }
     var level by remember { mutableStateOf("view") }
     var levelExpanded by remember { mutableStateOf(false) }
     val levels = listOf(
@@ -119,24 +141,151 @@ private fun AddAccessDialog(
     )
     val levelLabel = levels.firstOrNull { it.first == level }?.second ?: ""
 
+    // Load groups on first switch into the Groups tab.
+    LaunchedEffect(selectedTab) {
+        if (selectedTab == 1 && uiState.groups.isEmpty()) {
+            viewModel.loadGroups()
+        }
+    }
+
+    // The effective target depends on the active tab: searched/grouped picks
+    // produce selectedSubject; the Manual tab uses the typed value directly.
+    val effectiveTarget = if (selectedTab == 2) manualTarget.trim() else selectedSubject
+
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.forums_access_add)) },
         text = {
             Column {
-                OutlinedTextField(
-                    value = target,
-                    onValueChange = { target = it },
-                    label = { Text(stringResource(R.string.forums_access_target)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                Text(
-                    stringResource(R.string.forums_access_target_hint),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Spacer(Modifier.height(8.dp))
+                TabRow(selectedTabIndex = selectedTab) {
+                    Tab(
+                        selected = selectedTab == 0,
+                        onClick = {
+                            selectedTab = 0
+                            selectedSubject = ""
+                            selectedName = ""
+                        },
+                        text = { Text(stringResource(R.string.forums_access_tab_users)) },
+                    )
+                    Tab(
+                        selected = selectedTab == 1,
+                        onClick = {
+                            selectedTab = 1
+                            selectedSubject = ""
+                            selectedName = ""
+                        },
+                        text = { Text(stringResource(R.string.forums_access_tab_groups)) },
+                    )
+                    Tab(
+                        selected = selectedTab == 2,
+                        onClick = {
+                            selectedTab = 2
+                            selectedSubject = ""
+                            selectedName = ""
+                        },
+                        text = { Text(stringResource(R.string.forums_access_tab_manual)) },
+                    )
+                }
+
+                Spacer(Modifier.height(12.dp))
+
+                when (selectedTab) {
+                    0 -> {
+                        OutlinedTextField(
+                            value = if (selectedName.isNotEmpty()) selectedName else userQuery,
+                            onValueChange = {
+                                userQuery = it
+                                selectedSubject = ""
+                                selectedName = ""
+                                viewModel.searchUsers(it)
+                            },
+                            label = { Text(stringResource(R.string.forums_access_search_users)) },
+                            singleLine = true,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                        if (uiState.userSearchResults.isNotEmpty() && selectedSubject.isEmpty()) {
+                            Spacer(Modifier.height(4.dp))
+                            Card(
+                                modifier = Modifier.fillMaxWidth(),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                                ),
+                            ) {
+                                Column {
+                                    uiState.userSearchResults.take(5).forEach { user ->
+                                        TextButton(
+                                            onClick = {
+                                                selectedSubject = user.id
+                                                selectedName = user.name
+                                            },
+                                            modifier = Modifier.fillMaxWidth(),
+                                        ) {
+                                            Text(user.name, modifier = Modifier.fillMaxWidth())
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    1 -> {
+                        if (uiState.groups.isEmpty()) {
+                            Text(
+                                stringResource(R.string.forums_access_no_groups),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(vertical = 8.dp),
+                            )
+                        } else {
+                            Card(
+                                modifier = Modifier.fillMaxWidth(),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                                ),
+                            ) {
+                                Column {
+                                    uiState.groups.forEach { group ->
+                                        TextButton(
+                                            onClick = {
+                                                // Groups are subjects prefixed with @.
+                                                selectedSubject = "@${group.id}"
+                                                selectedName = group.name
+                                            },
+                                            modifier = Modifier.fillMaxWidth(),
+                                        ) {
+                                            Row(
+                                                modifier = Modifier.fillMaxWidth(),
+                                                verticalAlignment = Alignment.CenterVertically,
+                                            ) {
+                                                RadioButton(
+                                                    selected = selectedSubject == "@${group.id}",
+                                                    onClick = null,
+                                                )
+                                                Spacer(Modifier.width(8.dp))
+                                                Text(group.name)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else -> {
+                        OutlinedTextField(
+                            value = manualTarget,
+                            onValueChange = { manualTarget = it },
+                            label = { Text(stringResource(R.string.forums_access_target)) },
+                            singleLine = true,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                        Text(
+                            stringResource(R.string.forums_access_target_hint),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(16.dp))
                 ExposedDropdownMenuBox(
                     expanded = levelExpanded,
                     onExpandedChange = { levelExpanded = it },
@@ -167,11 +316,11 @@ private fun AddAccessDialog(
             }
         },
         confirmButton = {
-            TextButton(
-                onClick = { onConfirm(target.trim(), level) },
-                enabled = target.isNotBlank(),
+            Button(
+                onClick = { onConfirm(effectiveTarget, level) },
+                enabled = effectiveTarget.isNotBlank(),
             ) {
-                Text(stringResource(MochiR.string.common_save))
+                Text(stringResource(MochiR.string.common_add))
             }
         },
         dismissButton = {

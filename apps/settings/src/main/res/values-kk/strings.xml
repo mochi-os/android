@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator қолданбасы</string>
     <string name="login_method_oauth">Үшінші тарап арқылы кіру</string>
     <string name="login_method_recovery">Қалпына келтіру кодтары</string>
+    <string name="account_close_section">Тіркелгіні жабу</string>
+    <string name="account_close_action">Тіркелгіні жабу</string>
+    <string name="account_close_confirm_title">Тіркелгіңізді жабасыз ба?</string>
+    <string name="account_close_confirm_body">Тіркелгіңіз жойылуға жоспарланады және жүйеден шығасыз. Жою күніне дейін кез келген уақытта қайта кіру арқылы бас тарта аласыз.</string>
+    <string name="account_data_download">Жүктеп алу</string>
+    <string name="route_target_app">Қолданба</string>
+    <string name="route_target_entity">Нысан</string>
+    <string name="route_target_url">URL</string>
 </resources>

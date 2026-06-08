@@ -388,4 +388,12 @@
     <string name="login_method_totp">App di autenticazione</string>
     <string name="login_method_oauth">Accesso tramite terze parti</string>
     <string name="login_method_recovery">Codici di recupero</string>
+    <string name="account_close_section">Chiudi account</string>
+    <string name="account_close_action">Chiudi account</string>
+    <string name="account_close_confirm_title">Chiudere il tuo account?</string>
+    <string name="account_close_confirm_body">L\'eliminazione del tuo account verrà programmata e verrai disconnesso. Puoi annullare in qualsiasi momento prima della data di eliminazione effettuando nuovamente l\'accesso.</string>
+    <string name="account_data_download">Scarica</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entità</string>
+    <string name="route_target_url">URL</string>
 </resources>

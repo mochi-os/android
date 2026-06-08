@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Қызығушылықты арттыру</string>
     <string name="forums_tag_interest_down">Қызығушылықты азайту</string>
     <string name="forums_tag_interest_remove">Қызығушылықты жою</string>
+    <string name="forums_list_default_sort">Әдепкі сұрыптау</string>
+    <string name="forums_access_tab_users">Пайдаланушылар</string>
+    <string name="forums_access_tab_groups">Топтар</string>
+    <string name="forums_access_tab_manual">Қолмен</string>
+    <string name="forums_access_search_users">Қолданушыларды іздеу</string>
+    <string name="forums_access_no_groups">Топтар қолжетімсіз</string>
 </resources>

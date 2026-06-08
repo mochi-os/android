@@ -387,4 +387,12 @@
     <string name="login_method_totp">Autentija rakendus</string>
     <string name="login_method_oauth">Kolmanda osapoole sisselogimine</string>
     <string name="login_method_recovery">Taastekoodid</string>
+    <string name="account_close_section">Sulge konto</string>
+    <string name="account_close_action">Sulge konto</string>
+    <string name="account_close_confirm_title">Kas sulgeda teie konto?</string>
+    <string name="account_close_confirm_body">Teie konto kavandatakse kustutamiseks ja teid logitakse välja. Saate kustutamise igal ajal enne kustutamiskuupäeva tühistada, logides uuesti sisse.</string>
+    <string name="account_data_download">Laadi alla</string>
+    <string name="route_target_app">Rakendus</string>
+    <string name="route_target_entity">Olem</string>
+    <string name="route_target_url">URL</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator uygulaması</string>
     <string name="login_method_oauth">Üçüncü taraf girişi</string>
     <string name="login_method_recovery">Kurtarma kodları</string>
+    <string name="account_close_section">Hesabı kapat</string>
+    <string name="account_close_action">Hesabı kapat</string>
+    <string name="account_close_confirm_title">Hesabınızı kapatmak istiyor musunuz?</string>
+    <string name="account_close_confirm_body">Hesabınızın silinmesi planlanacak ve oturumunuz kapatılacak. Silme tarihinden önce herhangi bir zamanda yeniden giriş yaparak işlemi iptal edebilirsiniz.</string>
+    <string name="account_data_download">İndir</string>
+    <string name="route_target_app">Uygulama</string>
+    <string name="route_target_entity">Varlık</string>
+    <string name="route_target_url">URL</string>
 </resources>

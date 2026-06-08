@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Підвищити інтерес</string>
     <string name="forums_tag_interest_down">Зменшити інтерес</string>
     <string name="forums_tag_interest_remove">Видалити інтерес</string>
+    <string name="forums_list_default_sort">Сортування за замовчуванням</string>
+    <string name="forums_access_tab_users">Користувачі</string>
+    <string name="forums_access_tab_groups">Групи</string>
+    <string name="forums_access_tab_manual">Вручну</string>
+    <string name="forums_access_search_users">Пошук користувачів</string>
+    <string name="forums_access_no_groups">Немає доступних груп</string>
 </resources>

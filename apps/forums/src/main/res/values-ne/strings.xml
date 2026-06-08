@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">रुचि बढाउनुहोस्</string>
     <string name="forums_tag_interest_down">रुचि घटाउनुहोस्</string>
     <string name="forums_tag_interest_remove">रुचि हटाउनुहोस्</string>
+    <string name="forums_list_default_sort">पूर्वनिर्धारित क्रमबद्ध</string>
+    <string name="forums_access_tab_users">प्रयोगकर्ताहरू</string>
+    <string name="forums_access_tab_groups">समूहहरू</string>
+    <string name="forums_access_tab_manual">म्यानुअल</string>
+    <string name="forums_access_search_users">प्रयोगकर्ताहरू खोज्नुहोस्</string>
+    <string name="forums_access_no_groups">कुनै समूह उपलब्ध छैन</string>
 </resources>

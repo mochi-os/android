@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Усили интереса</string>
     <string name="forums_tag_interest_down">Намали лихвата</string>
     <string name="forums_tag_interest_remove">Премахни интерес</string>
+    <string name="forums_list_default_sort">Сортиране по подразбиране</string>
+    <string name="forums_access_tab_users">Потребители</string>
+    <string name="forums_access_tab_groups">Групи</string>
+    <string name="forums_access_tab_manual">Ръчно</string>
+    <string name="forums_access_search_users">Търси потребители</string>
+    <string name="forums_access_no_groups">Няма налични групи</string>
 </resources>

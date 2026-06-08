@@ -386,4 +386,12 @@
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Hukpaq yaykuy</string>
     <string name="login_method_recovery">Recuperación códigokuna</string>
+    <string name="account_close_section">Cuentata wichqay</string>
+    <string name="account_close_action">Cuentata wichqay</string>
+    <string name="account_close_confirm_title">¿Cuentaykita wichqaytachu munanki?</string>
+    <string name="account_close_confirm_body">Cuentaykitam pichanapaq churanqaku, hinaspa lluqsichisqa kanki. Pichana punchawmanta ñawpaqta mayqin pachapipas yapamanta yaykuspa sayachiyta atinki.</string>
+    <string name="account_data_download">Uray chaskiy</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
 </resources>

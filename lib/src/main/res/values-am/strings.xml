@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s አቻ ጨዋታ አቀረበ</string>
     <string name="game_system_draw_accept">አቻ ጨዋታ ተስማምቷል</string>
     <string name="game_system_draw_decline">%1$s አቻ ጨዋታውን አልተቀበለም</string>
+    <string name="reactivation_title">መለያዎ ለመሰረዝ ተይዟል</string>
+    <string name="reactivation_body">መለያዎ ለመሰረዝ ተይዟል። አሁን መሰረዙን ሰርዘው ሙሉ መዳረሻ መመለስ ይችላሉ።</string>
+    <string name="reactivation_body_dated">መለያዎ እና ሁሉም ውሂቡ በ%1$s በቋሚነት ይሰረዛል። አሁን መሰረዙን ሰርዘው ሙሉ መዳረሻ መመለስ ይችላሉ።</string>
+    <string name="reactivation_reactivate">መለያዬን እንደገና አንቃ</string>
+    <string name="reactivation_sign_out">መዝጋቱን ይቀጥሉ እና ይውጡ</string>
 </resources>

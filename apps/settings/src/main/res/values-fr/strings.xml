@@ -388,4 +388,12 @@
     <string name="login_method_totp">Application d\'authentification</string>
     <string name="login_method_oauth">Connexion via tiers</string>
     <string name="login_method_recovery">Codes de récupération</string>
+    <string name="account_close_section">Fermer le compte</string>
+    <string name="account_close_action">Fermer le compte</string>
+    <string name="account_close_confirm_title">Fermer votre compte ?</string>
+    <string name="account_close_confirm_body">La suppression de votre compte sera planifiée et vous serez déconnecté. Vous pouvez l\'annuler à tout moment avant la date de suppression en vous reconnectant.</string>
+    <string name="account_data_download">Télécharger</string>
+    <string name="route_target_app">Apparence</string>
+    <string name="route_target_entity">Entité</string>
+    <string name="route_target_url">URL</string>
 </resources>

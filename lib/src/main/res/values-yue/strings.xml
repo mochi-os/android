@@ -254,4 +254,9 @@
     <string name="stepup_error_start">無法開始重新驗證。請再試一次。</string>
     <string name="stepup_error_code">該代碼不正確或已過期。</string>
     <string name="stepup_error_passkey">通行金鑰驗證失敗。請再試一次。</string>
+    <string name="reactivation_title">你嘅帳戶已排定刪除</string>
+    <string name="reactivation_body">你嘅帳戶已排定刪除。你而家可以取消並回復完整存取權限。</string>
+    <string name="reactivation_body_dated">你嘅帳戶同埋所有資料將會喺 %1$s 永久刪除。你而家可以取消並回復完整存取權限。</string>
+    <string name="reactivation_reactivate">重新啟用我嘅帳戶</string>
+    <string name="reactivation_sign_out">繼續關閉並登出</string>
 </resources>

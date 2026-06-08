@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">Ο/Η %1$s πρότεινε ισοπαλία</string>
     <string name="game_system_draw_accept">Συμφωνήθηκε ισοπαλία</string>
     <string name="game_system_draw_decline">Ο/Η %1$s απέρριψε την ισοπαλία</string>
+    <string name="reactivation_title">Ο λογαριασμός σας έχει προγραμματιστεί για διαγραφή</string>
+    <string name="reactivation_body">Ο λογαριασμός σας έχει προγραμματιστεί για διαγραφή. Μπορείτε να ακυρώσετε και να αποκαταστήσετε την πλήρη πρόσβαση τώρα.</string>
+    <string name="reactivation_body_dated">Ο λογαριασμός σας και όλα τα δεδομένα του θα διαγραφούν οριστικά στις %1$s. Μπορείτε να ακυρώσετε και να αποκαταστήσετε την πλήρη πρόσβαση τώρα.</string>
+    <string name="reactivation_reactivate">Επανενεργοποίηση του λογαριασμού μου</string>
+    <string name="reactivation_sign_out">Συνέχεια κλεισίματος και αποσύνδεση</string>
 </resources>

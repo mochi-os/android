@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s a oferit remiză</string>
     <string name="game_system_draw_accept">Remiză acceptată</string>
     <string name="game_system_draw_decline">%1$s a refuzat remiza</string>
+    <string name="reactivation_title">Contul tău este programat pentru ștergere</string>
+    <string name="reactivation_body">Contul tău este programat pentru ștergere. Poți anula și restabili accesul complet acum.</string>
+    <string name="reactivation_body_dated">Contul tău și toate datele sale vor fi șterse definitiv la %1$s. Poți anula și restabili accesul complet acum.</string>
+    <string name="reactivation_reactivate">Reactivează-mi contul</string>
+    <string name="reactivation_sign_out">Continuă închiderea și deconectează-te</string>
 </resources>

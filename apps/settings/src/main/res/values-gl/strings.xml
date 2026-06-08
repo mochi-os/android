@@ -387,4 +387,12 @@
     <string name="login_method_totp">Aplicación de autenticación</string>
     <string name="login_method_oauth">Inicio de sesión de terceiros</string>
     <string name="login_method_recovery">Códigos de recuperación</string>
+    <string name="account_close_section">Pechar a conta</string>
+    <string name="account_close_action">Pechar a conta</string>
+    <string name="account_close_confirm_title">Pechar a túa conta?</string>
+    <string name="account_close_confirm_body">A túa conta programarase para a súa eliminación e pecharase a túa sesión. Podes cancelala en calquera momento antes da data de eliminación volvendo iniciar sesión.</string>
+    <string name="account_data_download">Descargar</string>
+    <string name="route_target_app">Aplicación</string>
+    <string name="route_target_entity">Entidade</string>
+    <string name="route_target_url">URL</string>
 </resources>

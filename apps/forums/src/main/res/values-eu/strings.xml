@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Bultzatu interesa</string>
     <string name="forums_tag_interest_down">Murriztu interesa</string>
     <string name="forums_tag_interest_remove">Kendu interesa</string>
+    <string name="forums_list_default_sort">Lehenetsitako ordena</string>
+    <string name="forums_access_tab_users">Erabiltzaileak</string>
+    <string name="forums_access_tab_groups">Taldeak</string>
+    <string name="forums_access_tab_manual">Eskuz</string>
+    <string name="forums_access_search_users">Bilatu erabiltzaileak</string>
+    <string name="forums_access_no_groups">Ez dago talde erabilgarririk</string>
 </resources>

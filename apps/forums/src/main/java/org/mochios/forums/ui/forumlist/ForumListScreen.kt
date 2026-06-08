@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Explore
@@ -28,6 +29,7 @@ import androidx.compose.material.icons.filled.HomeMax
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -83,6 +85,7 @@ fun ForumListScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     var showOverflow by remember { mutableStateOf(false) }
+    var showSortMenu by remember { mutableStateOf(false) }
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -110,6 +113,41 @@ fun ForumListScreen(
                     }
                     IconButton(onClick = onFindForums) {
                         Icon(Icons.Default.Explore, contentDescription = stringResource(R.string.forums_list_find))
+                    }
+                    Box {
+                        IconButton(onClick = { showSortMenu = true }) {
+                            Icon(
+                                Icons.Default.Sort,
+                                contentDescription = stringResource(R.string.forums_list_default_sort)
+                            )
+                        }
+                        DropdownMenu(
+                            expanded = showSortMenu,
+                            onDismissRequest = { showSortMenu = false }
+                        ) {
+                            // The list-level control sets the user's GLOBAL default
+                            // post sort, distinct from a per-forum override.
+                            listOf(
+                                "interests" to R.string.forums_sort_interests,
+                                "new" to R.string.forums_sort_new,
+                                "hot" to R.string.forums_sort_hot,
+                                "top" to R.string.forums_sort_top
+                            ).forEach { (key, labelRes) ->
+                                val current = uiState.defaultSort.ifEmpty { "new" }
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(labelRes)) },
+                                    trailingIcon = {
+                                        if (key == current) {
+                                            Icon(Icons.Default.Check, contentDescription = null)
+                                        }
+                                    },
+                                    onClick = {
+                                        showSortMenu = false
+                                        viewModel.setDefaultSort(key)
+                                    }
+                                )
+                            }
+                        }
                     }
                     Box {
                         IconButton(onClick = { showOverflow = true }) {

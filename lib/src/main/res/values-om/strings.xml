@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s qixxaa dhiheesse</string>
     <string name="game_system_draw_accept">Qixxaan walii galame</string>
     <string name="game_system_draw_decline">%1$s qixxaa dide</string>
+    <string name="reactivation_title">Akaawuntiin kee haquuf qophaaʼeera</string>
+    <string name="reactivation_body">Akaawuntiin kee haquuf qophaaʼeera. Amma dhaabuun dandeenya guutuu deebisuu dandeessa.</string>
+    <string name="reactivation_body_dated">Akaawuntiin keefi daataan isaa hundi guyyaa %1$s dhaabbiidhaan haqamu. Amma dhaabuun dandeenya guutuu deebisuu dandeessa.</string>
+    <string name="reactivation_reactivate">Akaawuntii koo deebisii hojjechiisi</string>
+    <string name="reactivation_sign_out">Cufuu itti fufiitii baʼi</string>
 </resources>

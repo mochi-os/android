@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Palakasin ang interes</string>
     <string name="forums_tag_interest_down">Bawasan ang interes</string>
     <string name="forums_tag_interest_remove">Alisin ang interes</string>
+    <string name="forums_list_default_sort">Default na sort</string>
+    <string name="forums_access_tab_users">Mga user</string>
+    <string name="forums_access_tab_groups">Mga group</string>
+    <string name="forums_access_tab_manual">Manwal</string>
+    <string name="forums_access_search_users">Maghanap ng user</string>
+    <string name="forums_access_no_groups">Walang available na grupo</string>
 </resources>

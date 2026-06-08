@@ -389,4 +389,12 @@
     <string name="login_method_totp">Autentifikatoriaus programėlė</string>
     <string name="login_method_oauth">Trečiosios šalies prisijungimas</string>
     <string name="login_method_recovery">Atkūrimo kodai</string>
+    <string name="account_close_section">Uždaryti paskyrą</string>
+    <string name="account_close_action">Uždaryti paskyrą</string>
+    <string name="account_close_confirm_title">Uždaryti paskyrą?</string>
+    <string name="account_close_confirm_body">Jūsų paskyra bus numatyta ištrinti ir būsite atjungti. Galite atšaukti bet kada iki ištrynimo datos vėl prisijungę.</string>
+    <string name="account_data_download">Atsisiųsti</string>
+    <string name="route_target_app">Programėlė</string>
+    <string name="route_target_entity">Subjektas</string>
+    <string name="route_target_url">URL</string>
 </resources>

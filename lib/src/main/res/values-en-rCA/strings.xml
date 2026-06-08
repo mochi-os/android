@@ -248,4 +248,9 @@
     <string name="game_chat_input_placeholder">Type a message…</string>
     <string name="game_chat_send">Send message</string>
 
+    <string name="reactivation_title">Your account is scheduled for deletion</string>
+    <string name="reactivation_body">Your account is scheduled for deletion. You can cancel and restore full access now.</string>
+    <string name="reactivation_body_dated">Your account and all its data will be permanently deleted on %1$s. You can cancel and restore full access now.</string>
+    <string name="reactivation_reactivate">Reactivate my account</string>
+    <string name="reactivation_sign_out">Continue closing and sign out</string>
 </resources>

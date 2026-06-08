@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Tambah minat</string>
     <string name="forums_tag_interest_down">Kurangi minat</string>
     <string name="forums_tag_interest_remove">Cabut minat</string>
+    <string name="forums_list_default_sort">Urutan standar</string>
+    <string name="forums_access_tab_users">Panganggo</string>
+    <string name="forums_access_tab_groups">Grup</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Goleki pangguna</string>
+    <string name="forums_access_no_groups">Ora ana grup kasedhiya</string>
 </resources>

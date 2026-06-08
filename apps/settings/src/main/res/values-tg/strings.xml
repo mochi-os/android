@@ -386,4 +386,12 @@
     <string name="login_method_totp">Барномаи Authenticator</string>
     <string name="login_method_oauth">Воридшавӣ аз тарафи сеюм</string>
     <string name="login_method_recovery">Рамзҳои барқарорсозӣ</string>
+    <string name="account_close_section">Ҳисобро бастан</string>
+    <string name="account_close_action">Ҳисобро бастан</string>
+    <string name="account_close_confirm_title">Ҳисоби худро мебандед?</string>
+    <string name="account_close_confirm_body">Ҳисоби шумо барои нест кардан ба нақша гирифта мешавад ва шумо аз система мебароед. Шумо метавонед ҳар вақт пеш аз санаи нест кардан тавассути дубора ворид шудан бекор кунед.</string>
+    <string name="account_data_download">Боргирӣ</string>
+    <string name="route_target_app">Барнома</string>
+    <string name="route_target_entity">Объект</string>
+    <string name="route_target_url">URL</string>
 </resources>

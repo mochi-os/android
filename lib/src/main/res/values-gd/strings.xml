@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">Thairg %1$s geall-cothrom</string>
     <string name="game_system_draw_accept">Geall-cothrom aontaichte</string>
     <string name="game_system_draw_decline">Dhiùlt %1$s an geall-cothrom</string>
+    <string name="reactivation_title">Tha do chunntas clàraichte airson a sguabadh às</string>
+    <string name="reactivation_body">Tha do chunntas clàraichte airson a sguabadh às. \'S urrainn dhut a chur dheth agus làn-inntrigeadh ath-shuidheachadh a-nis.</string>
+    <string name="reactivation_body_dated">Thèid do chunntas agus a dhàta gu lèir a sguabadh às gu buan air %1$s. \'S urrainn dhut a chur dheth agus làn-inntrigeadh ath-shuidheachadh a-nis.</string>
+    <string name="reactivation_reactivate">Ath-ghnìomhaich mo chunntas</string>
+    <string name="reactivation_sign_out">Lean air an dùnadh agus clàraich a-mach</string>
 </resources>

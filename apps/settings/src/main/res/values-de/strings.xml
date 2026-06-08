@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator-App</string>
     <string name="login_method_oauth">Drittanbieter-Anmeldung</string>
     <string name="login_method_recovery">Wiederherstellungscodes</string>
+    <string name="account_close_section">Konto schließen</string>
+    <string name="account_close_action">Konto schließen</string>
+    <string name="account_close_confirm_title">Konto schließen?</string>
+    <string name="account_close_confirm_body">Ihr Konto wird zur Löschung vorgemerkt und Sie werden abgemeldet. Sie können den Vorgang jederzeit vor dem Löschdatum abbrechen, indem Sie sich erneut anmelden.</string>
+    <string name="account_data_download">Herunterladen</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entität</string>
+    <string name="route_target_url">URL</string>
 </resources>

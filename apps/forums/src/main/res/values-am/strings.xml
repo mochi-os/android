@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">ፍላጎትን አሳድግ</string>
     <string name="forums_tag_interest_down">ፍላጎትን ቀንስ</string>
     <string name="forums_tag_interest_remove">ፍላጎት አስወግድ</string>
+    <string name="forums_list_default_sort">ነባሪ ቅደም ተከተል</string>
+    <string name="forums_access_tab_users">ተጠቃሚዎች</string>
+    <string name="forums_access_tab_groups">ቡድኖች</string>
+    <string name="forums_access_tab_manual">በእጅ</string>
+    <string name="forums_access_search_users">ተጠቃሚዎችን ይፈልጉ</string>
+    <string name="forums_access_no_groups">ምንም ቡድኖች የሉም</string>
 </resources>

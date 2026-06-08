@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Munay yapay</string>
     <string name="forums_tag_interest_down">Munayta pisichiy</string>
     <string name="forums_tag_interest_remove">Munayta qichuy</string>
+    <string name="forums_list_default_sort">Default sort</string>
+    <string name="forums_access_tab_users">Apaykachaqkuna</string>
+    <string name="forums_access_tab_groups">Huñukuna</string>
+    <string name="forums_access_tab_manual">Maki ruway</string>
+    <string name="forums_access_search_users">Usuariokunata maskay</string>
+    <string name="forums_access_no_groups">Mana grupokuna atikuq</string>
 </resources>

@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">بەهێزکردنی بایەخ</string>
     <string name="forums_tag_interest_down">کەمکردنەوەی بەرژەوەندی</string>
     <string name="forums_tag_interest_remove">لابردنی بەرژەوەندی</string>
+    <string name="forums_list_default_sort">ڕیزکردنی بنەڕەت</string>
+    <string name="forums_access_tab_users">بەکارهێنەران</string>
+    <string name="forums_access_tab_groups">گرووپەکان</string>
+    <string name="forums_access_tab_manual">دەستی</string>
+    <string name="forums_access_search_users">گەڕانی بەکارهێنەران</string>
+    <string name="forums_access_no_groups">هیچ گرووپێک بەردەست نییە</string>
 </resources>

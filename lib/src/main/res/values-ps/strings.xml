@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s د مساوي وړاندیز وکړ</string>
     <string name="game_system_draw_accept">په مساوي موافقه وشوه</string>
     <string name="game_system_draw_decline">%1$s مساوي رد کړ</string>
+    <string name="reactivation_title">ستاسو حساب د حذف لپاره ټاکل شوی دی</string>
+    <string name="reactivation_body">ستاسو حساب د حذف لپاره ټاکل شوی دی. تاسو کولی شئ اوس دا لغوه کړئ او بشپړ لاسرسی بیرته ترلاسه کړئ.</string>
+    <string name="reactivation_body_dated">ستاسو حساب او د هغه ټول ډاټا به د %1$s په نېټه د تل لپاره حذف شي. تاسو کولی شئ اوس دا لغوه کړئ او بشپړ لاسرسی بیرته ترلاسه کړئ.</string>
+    <string name="reactivation_reactivate">زما حساب بیا فعال کړئ</string>
+    <string name="reactivation_sign_out">تړل دوام ورکړئ او ووځئ</string>
 </resources>

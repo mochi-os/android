@@ -78,7 +78,7 @@ fun NavGraphBuilder.settingsNavGraph(
         )
     }
     composable(SettingsApp.ACCOUNT) {
-        AccountScreen(onBack = { navController.popBackStack() })
+        AccountScreen(onBack = { navController.popBackStack() }, onClosed = onLogout)
     }
     composable(SettingsApp.LOGIN) {
         LoginScreen(onBack = { navController.popBackStack() })

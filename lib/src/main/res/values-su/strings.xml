@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s nawarkeun seri</string>
     <string name="game_system_draw_accept">Seri disatujuan</string>
     <string name="game_system_draw_decline">%1$s nampik seri</string>
+    <string name="reactivation_title">Akun anjeun dijadwalkeun pikeun dihapus</string>
+    <string name="reactivation_body">Akun anjeun dijadwalkeun pikeun dihapus. Anjeun tiasa ngabolaykeun sareng mulangkeun aksés pinuh ayeuna.</string>
+    <string name="reactivation_body_dated">Akun anjeun sareng sadaya datana bakal dihapus permanén dina %1$s. Anjeun tiasa ngabolaykeun sareng mulangkeun aksés pinuh ayeuna.</string>
+    <string name="reactivation_reactivate">Aktipkeun deui akun abdi</string>
+    <string name="reactivation_sign_out">Teraskeun nutup sareng kaluar</string>
 </resources>

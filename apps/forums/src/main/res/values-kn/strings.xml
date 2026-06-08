@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">ಆಸಕ್ತಿಯನ್ನು ಹೆಚ್ಚಿಸಿ</string>
     <string name="forums_tag_interest_down">ಆಸಕ್ತಿ ಕಡಿಮೆಗೊಳಿಸಿ</string>
     <string name="forums_tag_interest_remove">ಆಸಕ್ತಿ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="forums_list_default_sort">ಡೀಫಾಲ್ಟ್ ವಿಂಗಡಣೆ</string>
+    <string name="forums_access_tab_users">ಬಳಕೆದಾರರು</string>
+    <string name="forums_access_tab_groups">ಗುಂಪುಗಳು</string>
+    <string name="forums_access_tab_manual">ಮ್ಯಾನುಯಲ್</string>
+    <string name="forums_access_search_users">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ</string>
+    <string name="forums_access_no_groups">ಯಾವುದೇ ಗ್ರೂಪ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
 </resources>

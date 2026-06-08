@@ -387,4 +387,12 @@
     <string name="login_method_totp">Programu ya mthibitishaji</string>
     <string name="login_method_oauth">Kuingia kwa mtu wa tatu</string>
     <string name="login_method_recovery">Misimbo ya kurejesha</string>
+    <string name="account_close_section">Funga akaunti</string>
+    <string name="account_close_action">Funga akaunti</string>
+    <string name="account_close_confirm_title">Ungependa kufunga akaunti yako?</string>
+    <string name="account_close_confirm_body">Akaunti yako itapangwa kufutwa na utatolewa nje. Unaweza kughairi wakati wowote kabla ya tarehe ya kufutwa kwa kuingia tena.</string>
+    <string name="account_data_download">Pakua</string>
+    <string name="route_target_app">Programu</string>
+    <string name="route_target_entity">Kitengo</string>
+    <string name="route_target_url">URL</string>
 </resources>

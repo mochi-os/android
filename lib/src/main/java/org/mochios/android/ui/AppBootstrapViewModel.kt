@@ -49,6 +49,14 @@ sealed class AuthStage {
     data object Bootstrapping : AuthStage()
 
     /**
+     * The account is pending self-service closure (soft-deleted): the session
+     * is valid but every app action is refused server-side. The user lands on
+     * the reactivation interstitial to cancel the closure or sign out.
+     * [purge] is the unix-seconds deletion deadline (0 if unknown).
+     */
+    data class NeedsReactivation(val purge: Long) : AuthStage()
+
+    /**
      * Fully ready. [recreateForLocale] is true iff the language fetched
      * during bootstrap differs from what the host activity was using; the
      * activity should call `recreate()` once.
@@ -195,6 +203,16 @@ class AppBootstrapViewModel @Inject constructor(
         }
     }
 
+    /** Cancel a pending account closure from the reactivation interstitial,
+     *  then re-run bootstrap so the now-active session lands in the app. */
+    fun reactivate() {
+        _stage.value = AuthStage.Bootstrapping
+        viewModelScope.launch {
+            runCatching { authRepository.cancelClose() }
+            bootstrap()
+        }
+    }
+
     private suspend fun evaluate() {
         val hasSession = sessionManager.currentToken.first() != null
         if (hasSession) {
@@ -234,6 +252,16 @@ class AppBootstrapViewModel @Inject constructor(
         if (result.isFailure) {
             sessionManager.clearAll()
             _stage.value = AuthStage.NeedsLogin
+            return
+        }
+
+        // A soft-deleted ("closing") account has a valid session but every app
+        // action is refused server-side. Route to the reactivation interstitial
+        // instead of into the app. Best-effort: a failed status check shouldn't
+        // wedge the launch, so fall through to the normal Ready path.
+        val status = runCatching { authRepository.accountStatus() }.getOrNull()
+        if (status?.status == "closing") {
+            _stage.value = AuthStage.NeedsReactivation(status.purge)
             return
         }
 

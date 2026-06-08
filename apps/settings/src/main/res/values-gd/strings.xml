@@ -389,4 +389,12 @@
     <string name="login_method_totp">Aplacaid dhearbhachaidh</string>
     <string name="login_method_oauth">Soidhnigeadh a-steach treas-phàrtaidh</string>
     <string name="login_method_recovery">Còdaichean ath-shlànachaidh</string>
+    <string name="account_close_section">Dùin an cunntas</string>
+    <string name="account_close_action">Dùin an cunntas</string>
+    <string name="account_close_confirm_title">A bheil thu airson do chunntas a dhùnadh?</string>
+    <string name="account_close_confirm_body">Thèid do chunntas a chlàradh airson a sguabadh às agus thèid do chlàradh a-mach. \'S urrainn dhut a chur dheth uair sam bith ron cheann-latha sguabaidh às le bhith a\' clàradh a-steach a-rithist.</string>
+    <string name="account_data_download">Luchdaich a-nuas</string>
+    <string name="route_target_app">Aplacaid</string>
+    <string name="route_target_entity">Aonad</string>
+    <string name="route_target_url">URL</string>
 </resources>

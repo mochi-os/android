@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Tingkatkan minat</string>
     <string name="forums_tag_interest_down">Kurangi minat</string>
     <string name="forums_tag_interest_remove">Hapus minat</string>
+    <string name="forums_list_default_sort">Pengurutan default</string>
+    <string name="forums_access_tab_users">Pengguna</string>
+    <string name="forums_access_tab_groups">Grup</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Cari pengguna</string>
+    <string name="forums_access_no_groups">Tidak ada grup yang tersedia</string>
 </resources>

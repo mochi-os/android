@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ສະເໜີເສມີ</string>
     <string name="game_system_draw_accept">ຕົກລົງເສມີ</string>
     <string name="game_system_draw_decline">%1$s ປະຕິເສດການເສມີ</string>
+    <string name="reactivation_title">ບັນຊີຂອງທ່ານຖືກກຳນົດໃຫ້ລຶບ</string>
+    <string name="reactivation_body">ບັນຊີຂອງທ່ານຖືກກຳນົດໃຫ້ລຶບ. ທ່ານສາມາດຍົກເລີກ ແລະ ກູ້ຄືນການເຂົ້າເຖິງເຕັມຮູບແບບໄດ້ດຽວນີ້.</string>
+    <string name="reactivation_body_dated">ບັນຊີຂອງທ່ານ ແລະ ຂໍ້ມູນທັງໝົດຂອງມັນຈະຖືກລຶບຖາວອນໃນວັນທີ %1$s. ທ່ານສາມາດຍົກເລີກ ແລະ ກູ້ຄືນການເຂົ້າເຖິງເຕັມຮູບແບບໄດ້ດຽວນີ້.</string>
+    <string name="reactivation_reactivate">ເປີດໃຊ້ບັນຊີຂອງຂ້ອຍຄືນ</string>
+    <string name="reactivation_sign_out">ສືບຕໍ່ປິດ ແລະ ອອກຈາກລະບົບ</string>
 </resources>

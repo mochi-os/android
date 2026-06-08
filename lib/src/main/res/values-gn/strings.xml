@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s oikuave\'ẽ pe\'ã</string>
     <string name="game_system_draw_accept">Pe\'ã oñemoneĩ</string>
     <string name="game_system_draw_decline">%1$s ndoguerohorýi pe\'ã</string>
+    <string name="reactivation_title">Nde mba\'ete oñembosako\'i oñemboguarã</string>
+    <string name="reactivation_body">Nde mba\'ete oñembosako\'i oñemboguarã. Ikatu rejeheja ha rembojevy opaite jeike ko\'ág̃a.</string>
+    <string name="reactivation_body_dated">Nde mba\'ete ha opaite imba\'ekuaarã oñemboguete tapiaguarã %1$s. Ikatu rejeheja ha rembojevy opaite jeike ko\'ág̃a.</string>
+    <string name="reactivation_reactivate">Embojevy che mba\'ete</string>
+    <string name="reactivation_sign_out">Ku\'e jeýta emboty ha esẽ</string>
 </resources>

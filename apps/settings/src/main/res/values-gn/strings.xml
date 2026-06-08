@@ -386,4 +386,12 @@
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Ñepyrũ ambue rupive</string>
     <string name="login_method_recovery">Recuperación papapykuéra</string>
+    <string name="account_close_section">Emboty mba\'ete</string>
+    <string name="account_close_action">Emboty mba\'ete</string>
+    <string name="account_close_confirm_title">¿Emboty nde mba\'ete?</string>
+    <string name="account_close_confirm_body">Nde mba\'ete oñembosako\'íta oñemboguarã ha resẽta. Ikatu rejeheja jave reikese jeývo, oĩ aja gueteri ára oñemboguarã mboyve.</string>
+    <string name="account_data_download">Emboguejy</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entidad</string>
+    <string name="route_target_url">URL</string>
 </resources>

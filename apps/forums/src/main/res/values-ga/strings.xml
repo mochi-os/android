@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Spreag spéis</string>
     <string name="forums_tag_interest_down">Laghdaigh spéis</string>
     <string name="forums_tag_interest_remove">Bain spéis</string>
+    <string name="forums_list_default_sort">Sórtáil réamhshocraithe</string>
+    <string name="forums_access_tab_users">Úsáideoirí</string>
+    <string name="forums_access_tab_groups">Grúpaí</string>
+    <string name="forums_access_tab_manual">Láimhe</string>
+    <string name="forums_access_search_users">Cuardaigh úsáideoirí</string>
+    <string name="forums_access_no_groups">Níl aon ghrúpa ar fáil</string>
 </resources>

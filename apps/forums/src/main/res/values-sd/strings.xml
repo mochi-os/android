@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">دلچسپي وڌايو</string>
     <string name="forums_tag_interest_down">دلچسپي گهٽايو</string>
     <string name="forums_tag_interest_remove">دلچسپي هٽايو</string>
+    <string name="forums_list_default_sort">ڊفالٽ ترتيب</string>
+    <string name="forums_access_tab_users">صارف</string>
+    <string name="forums_access_tab_groups">گروپ</string>
+    <string name="forums_access_tab_manual">دستي</string>
+    <string name="forums_access_search_users">يوزر ڳوليو</string>
+    <string name="forums_access_no_groups">ڪو گروپ دستياب ناهي</string>
 </resources>

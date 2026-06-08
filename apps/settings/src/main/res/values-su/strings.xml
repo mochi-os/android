@@ -386,4 +386,12 @@
     <string name="login_method_totp">Aplikasi authenticator</string>
     <string name="login_method_oauth">Asup pihak katilu</string>
     <string name="login_method_recovery">Kode pamulihan</string>
+    <string name="account_close_section">Tutup akun</string>
+    <string name="account_close_action">Tutup akun</string>
+    <string name="account_close_confirm_title">Tutup akun anjeun?</string>
+    <string name="account_close_confirm_body">Akun anjeun bakal dijadwalkeun pikeun dihapus sareng anjeun bakal kaluar. Anjeun tiasa ngabolaykeun iraha waé sateuacan tanggal panghapusan ku cara lebet deui.</string>
+    <string name="account_data_download">Unduh</string>
+    <string name="route_target_app">Aplikasi</string>
+    <string name="route_target_entity">Éntitas</string>
+    <string name="route_target_url">URL</string>
 </resources>

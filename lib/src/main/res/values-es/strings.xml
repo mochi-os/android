@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ofreció tablas</string>
     <string name="game_system_draw_accept">Tablas acordadas</string>
     <string name="game_system_draw_decline">%1$s rechazó las tablas</string>
+    <string name="reactivation_title">Tu cuenta está programada para eliminarse</string>
+    <string name="reactivation_body">Tu cuenta está programada para eliminarse. Puedes cancelar y restaurar el acceso completo ahora.</string>
+    <string name="reactivation_body_dated">Tu cuenta y todos sus datos se eliminarán de forma permanente el %1$s. Puedes cancelar y restaurar el acceso completo ahora.</string>
+    <string name="reactivation_reactivate">Reactivar mi cuenta</string>
+    <string name="reactivation_sign_out">Continuar con el cierre y cerrar sesión</string>
 </resources>

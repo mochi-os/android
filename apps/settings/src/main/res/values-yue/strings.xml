@@ -381,4 +381,12 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">已撤銷 %1$d 個工作階段</item>
     </plurals>
+    <string name="account_close_section">關閉帳戶</string>
+    <string name="account_close_action">關閉帳戶</string>
+    <string name="account_close_confirm_title">關閉你嘅帳戶？</string>
+    <string name="account_close_confirm_body">你嘅帳戶會排定刪除，而且你會被登出。喺刪除日期之前，你隨時可以重新登入嚟取消。</string>
+    <string name="account_data_download">下載</string>
+    <string name="route_target_app">應用程式</string>
+    <string name="route_target_entity">實體</string>
+    <string name="route_target_url">網址</string>
 </resources>

@@ -387,4 +387,12 @@
     <string name="login_method_totp">Εφαρμογή ελέγχου ταυτότητας</string>
     <string name="login_method_oauth">Σύνδεση τρίτου παρόχου</string>
     <string name="login_method_recovery">Κωδικοί ανάκτησης</string>
+    <string name="account_close_section">Κλείσιμο λογαριασμού</string>
+    <string name="account_close_action">Κλείσιμο λογαριασμού</string>
+    <string name="account_close_confirm_title">Κλείσιμο του λογαριασμού σας;</string>
+    <string name="account_close_confirm_body">Ο λογαριασμός σας θα προγραμματιστεί για διαγραφή και θα αποσυνδεθείτε. Μπορείτε να ακυρώσετε οποιαδήποτε στιγμή πριν από την ημερομηνία διαγραφής συνδεόμενοι ξανά.</string>
+    <string name="account_data_download">Λήψη</string>
+    <string name="route_target_app">Εφαρμογή</string>
+    <string name="route_target_entity">Οντότητα</string>
+    <string name="route_target_url">URL</string>
 </resources>

@@ -267,4 +267,9 @@
     <string name="game_system_draw_offer">%1$s ya ba da shawarar canjaras</string>
     <string name="game_system_draw_accept">An yarda da canjaras</string>
     <string name="game_system_draw_decline">%1$s ya ki canjaras</string>
+    <string name="reactivation_title">An tsara goge asusunka</string>
+    <string name="reactivation_body">An tsara goge asusunka. Kana iya soke shi kuma maido da cikakken samun dama yanzu.</string>
+    <string name="reactivation_body_dated">Za a goge asusunka da dukkan bayananka har abada a %1$s. Kana iya soke shi kuma maido da cikakken samun dama yanzu.</string>
+    <string name="reactivation_reactivate">Sake kunna asusuna</string>
+    <string name="reactivation_sign_out">Ci gaba da rufewa kuma fita</string>
 </resources>

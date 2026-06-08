@@ -387,4 +387,12 @@
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Third-party login</string>
     <string name="login_method_recovery">Mga recovery code</string>
+    <string name="account_close_section">Isara ang account</string>
+    <string name="account_close_action">Isara ang account</string>
+    <string name="account_close_confirm_title">Isara ang iyong account?</string>
+    <string name="account_close_confirm_body">Itatakda nang burahin ang iyong account at masa-sign out ka. Maaari mong kanselahin anumang oras bago ang petsa ng pagbura sa pamamagitan ng muling pag-log in.</string>
+    <string name="account_data_download">I-download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
 </resources>

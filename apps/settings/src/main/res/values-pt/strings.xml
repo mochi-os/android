@@ -388,4 +388,12 @@
     <string name="login_method_totp">Aplicação autenticadora</string>
     <string name="login_method_oauth">Início de sessão de terceiros</string>
     <string name="login_method_recovery">Códigos de recuperação</string>
+    <string name="account_close_section">Encerrar conta</string>
+    <string name="account_close_action">Encerrar conta</string>
+    <string name="account_close_confirm_title">Encerrar a sua conta?</string>
+    <string name="account_close_confirm_body">A sua conta será agendada para eliminação e a sua sessão será terminada. Pode cancelar a qualquer momento antes da data de eliminação, iniciando sessão novamente.</string>
+    <string name="account_data_download">Transferir</string>
+    <string name="route_target_app">Aplicação</string>
+    <string name="route_target_entity">Entidade</string>
+    <string name="route_target_url">URL</string>
 </resources>

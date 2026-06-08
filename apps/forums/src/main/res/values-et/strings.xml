@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">Tõsta huvi</string>
     <string name="forums_tag_interest_down">Vähenda huvi</string>
     <string name="forums_tag_interest_remove">Eemalda huvi</string>
+    <string name="forums_list_default_sort">Vaikimisi sortimine</string>
+    <string name="forums_access_tab_users">Kasutajad</string>
+    <string name="forums_access_tab_groups">Grupid</string>
+    <string name="forums_access_tab_manual">Käsitsi</string>
+    <string name="forums_access_search_users">Otsi kasutajaid</string>
+    <string name="forums_access_no_groups">Saadaolevaid gruppe pole</string>
 </resources>

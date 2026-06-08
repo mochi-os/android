@@ -329,4 +329,11 @@
     <string name="stepup_error_passkey">Passkey verification failed. Please try again.</string>
     <string name="stepup_error_oauth">Couldn\'t verify with that account. Please try again.</string>
 
+    <!-- Account-closure reactivation interstitial -->
+    <string name="reactivation_title">Your account is scheduled for deletion</string>
+    <string name="reactivation_body">Your account is scheduled for deletion. You can cancel and restore full access now.</string>
+    <string name="reactivation_body_dated">Your account and all its data will be permanently deleted on %1$s. You can cancel and restore full access now.</string>
+    <string name="reactivation_reactivate">Reactivate my account</string>
+    <string name="reactivation_sign_out">Continue closing and sign out</string>
+
 </resources>

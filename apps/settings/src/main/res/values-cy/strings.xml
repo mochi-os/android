@@ -391,4 +391,12 @@
     <string name="login_method_totp">App dilyswr</string>
     <string name="login_method_oauth">Mewngofnodi trydydd parti</string>
     <string name="login_method_recovery">Codau adfer</string>
+    <string name="account_close_section">Cau\'r cyfrif</string>
+    <string name="account_close_action">Cau\'r cyfrif</string>
+    <string name="account_close_confirm_title">Cau eich cyfrif?</string>
+    <string name="account_close_confirm_body">Bydd eich cyfrif yn cael ei drefnu i\'w ddileu a byddwch yn cael eich allgofnodi. Gallwch ganslo unrhyw bryd cyn y dyddiad dileu drwy fewngofnodi\'n ôl.</string>
+    <string name="account_data_download">Lawrlwytho</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Endid</string>
+    <string name="route_target_url">URL</string>
 </resources>

@@ -388,4 +388,12 @@
     <string name="login_method_totp">Aplicació autenticadora</string>
     <string name="login_method_oauth">Inici de sessió de tercers</string>
     <string name="login_method_recovery">Codis de recuperació</string>
+    <string name="account_close_section">Tancar el compte</string>
+    <string name="account_close_action">Tancar el compte</string>
+    <string name="account_close_confirm_title">Voleu tancar el compte?</string>
+    <string name="account_close_confirm_body">El compte es programarà per a la supressió i se us tancarà la sessió. Podeu cancel·lar-la en qualsevol moment abans de la data de supressió tornant a iniciar sessió.</string>
+    <string name="account_data_download">Descarrega</string>
+    <string name="route_target_app">Aplicació</string>
+    <string name="route_target_entity">Entitat</string>
+    <string name="route_target_url">URL</string>
 </resources>

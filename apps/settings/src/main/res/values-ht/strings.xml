@@ -387,4 +387,12 @@
     <string name="login_method_totp">App otantifikatè</string>
     <string name="login_method_oauth">Koneksyon twazyèm pati</string>
     <string name="login_method_recovery">Kòd rekiperasyon</string>
+    <string name="account_close_section">Fèmen kont lan</string>
+    <string name="account_close_action">Fèmen kont lan</string>
+    <string name="account_close_confirm_title">Fèmen kont ou an?</string>
+    <string name="account_close_confirm_body">Kont ou an pral pwograme pou efase epi y ap dekonekte ou. Ou kapab anile li nenpòt lè anvan dat efasman an lè ou rekonekte.</string>
+    <string name="account_data_download">Telechaje</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Antite</string>
+    <string name="route_target_url">URL</string>
 </resources>

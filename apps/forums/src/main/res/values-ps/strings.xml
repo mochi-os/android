@@ -201,4 +201,10 @@
     <string name="forums_tag_interest_up">دلچسپي ډیره کړه</string>
     <string name="forums_tag_interest_down">د سود کمول</string>
     <string name="forums_tag_interest_remove">علاقه لرې کړئ</string>
+    <string name="forums_list_default_sort">ډیفالټ ترتیب</string>
+    <string name="forums_access_tab_users">کاروونکي</string>
+    <string name="forums_access_tab_groups">ګروپونه</string>
+    <string name="forums_access_tab_manual">لاسي</string>
+    <string name="forums_access_search_users">کاروونکي وپلټئ</string>
+    <string name="forums_access_no_groups">هیڅ ډلې شتون نلري</string>
 </resources>
