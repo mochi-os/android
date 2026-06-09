@@ -56,8 +56,8 @@
     <string name="replication_deny">Татгалзах</string>
     <string name="replication_hosts_title">Миний хостууд</string>
     <string name="replication_hosts_empty_hint">Үүнийг өөр серверт хуулбарлахын тулд, тэнд бүртгэл үүсгээд \"Одоо байгаа бүртгэлийг хуулбарлах\" сонголтыг ашиглана уу.</string>
-    <string name="replication_remove">Хост устгах</string>
-    <string name="replication_remove_title">Хост устгах уу?</string>
+    <string name="replication_remove">Энэ хувийг устгах</string>
+    <string name="replication_remove_title">Энэ хувийг устгах уу?</string>
     <string name="settings_home_section_system">Систем</string>
     <string name="system_replication_title">Хуулбарлал</string>
     <string name="system_replication_this_server">Энэ сервер</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Хэзээ ч</string>
     <string name="replication_hosts_empty">Энэ бүртгэл зөвхөн энэ серверт байна.</string>
     <string name="replication_added">Нэмсэн %1$s</string>
-    <string name="replication_remove_message">Энэ сервер таны бүртгэлийг тэр хост руу хуулбарлахаа болино.</string>
+    <string name="replication_remove_message">Энэ хост дээрх таны акаунтын өгөгдөл бүрмөсөн устгагдана. Таны акаунт бусад хост дээр хэвээр үлдэнэ.</string>
     <string name="settings_home_system_replication">Хуулбарлалт (сервер)</string>
     <string name="system_replication_pair_empty_hint">Шинэ серверт \"mochictl replica join &lt;existing-peer-id&gt;\" ашиглан өөр шинэ суулгасан сервертэй хослуулна уу.</string>
     <string name="route_delete_message">Энэ нь \"%1$s\" замын маршрутыг арилгана.</string>

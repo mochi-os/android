@@ -56,8 +56,8 @@
     <string name="replication_deny">मना करीं</string>
     <string name="replication_hosts_title">हमार होस्ट</string>
     <string name="replication_hosts_empty_hint">एकरा के दोसर सर्वर पर प्रतिकृति बनावे खातिर, ओहिजा एगो खाता बनाईं अउरी \"एगो मौजूदा खाता के प्रतिकृति बनाईं\" विकल्प के उपयोग करीं।</string>
-    <string name="replication_remove">होस्ट हटाईं</string>
-    <string name="replication_remove_title">होस्ट हटाईं?</string>
+    <string name="replication_remove">ई प्रतिलिपि मेटाईं</string>
+    <string name="replication_remove_title">ई प्रतिलिपि मेटाईं?</string>
     <string name="settings_home_section_system">सिस्टम</string>
     <string name="system_replication_title">प्रतिकृति</string>
     <string name="system_replication_this_server">ई सर्वर</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">कबो ना</string>
     <string name="replication_hosts_empty">ई खाता खाली एह सर्वर पर बा।</string>
     <string name="replication_added">जोड़ल %1$s</string>
-    <string name="replication_remove_message">ई सर्वर रउरा खाता के ओह होस्ट पर कॉपी करल बंद कर दीही।</string>
+    <string name="replication_remove_message">एह होस्ट पर रउरा खाता के डेटा स्थायी रूप से मेटा दिहल जाई। रउरा खाता रउरा दोसर होस्ट पर बनल रही।</string>
     <string name="settings_home_system_replication">प्रतिकृति (सर्वर)</string>
     <string name="system_replication_pair_empty_hint">नया सर्वर पर \"mochictl replica join &lt;existing-peer-id&gt;\" इस्तेमाल कर के कौनो अउरी ताज़ा इंस्टॉल कइल सर्वर से जोड़ीं।</string>
     <string name="route_delete_message">ई \"%1$s\" रास्ता खातिर रूट मिटा दी।</string>

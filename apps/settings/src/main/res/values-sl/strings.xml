@@ -56,8 +56,8 @@
     <string name="replication_deny">Zavrni</string>
     <string name="replication_hosts_title">Moji gostitelji</string>
     <string name="replication_hosts_empty_hint">Za replikacijo na drug strežnik se tam prijavite za račun in uporabite možnost \"Repliciraj obstoječi račun\".</string>
-    <string name="replication_remove">Odstrani gostitelja</string>
-    <string name="replication_remove_title">Odstraniti gostitelja?</string>
+    <string name="replication_remove">Izbriši to repliko</string>
+    <string name="replication_remove_title">Izbrišem to repliko?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikacija</string>
     <string name="system_replication_this_server">Ta strežnik</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nikoli</string>
     <string name="replication_hosts_empty">Ta račun je samo na tem strežniku.</string>
     <string name="replication_added">Dodano %1$s</string>
-    <string name="replication_remove_message">Ta strežnik bo nehal replicirati vaš račun na tega gostitelja.</string>
+    <string name="replication_remove_message">Podatki vašega računa na tem gostitelju bodo trajno izbrisani. Vaš račun ostane na vaših drugih gostiteljih.</string>
     <string name="settings_home_system_replication">Replikacija (strežnik)</string>
     <string name="system_replication_pair_empty_hint">Združite z drugim sveže nameščenim strežnikom z uporabo „mochictl replica join &lt;existing-peer-id&gt;\" na novem strežniku.</string>
     <string name="route_delete_message">To bo odstranilo pot za pot „%1$s\".</string>

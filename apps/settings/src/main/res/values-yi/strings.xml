@@ -56,8 +56,8 @@
     <string name="replication_deny">אָפּזאָגן</string>
     <string name="replication_hosts_title">מיינע האסטס</string>
     <string name="replication_hosts_empty_hint">צו רעפליצירן עס צו אן אנדער סערווער, רעגיסטרירט פאר א חשבון דארטן און ניצט די אפציע \"רעפליצירן אן עקזיסטירנדיגן חשבון\".</string>
-    <string name="replication_remove">אראפנעמען האסט</string>
-    <string name="replication_remove_title">אראפנעמען האסט?</string>
+    <string name="replication_remove">מעק אויס די רעפּליקע</string>
+    <string name="replication_remove_title">מעק אויס די רעפּליקע?</string>
     <string name="settings_home_section_system">סיסטעם</string>
     <string name="system_replication_title">רעפליקאציע</string>
     <string name="system_replication_this_server">דער סערווער</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">קיינמאָל</string>
     <string name="replication_hosts_empty">דער חשבון איז נאָר אויף דעם סערווער.</string>
     <string name="replication_added">צוגעלייגט %1$s</string>
-    <string name="replication_remove_message">דער סערווער וועט אױפֿהערן ריפּליצירן דיין חשבון צו דעם האָסט.</string>
+    <string name="replication_remove_message">אײַער קאָנטעס דאַטן אויף דעם האָסט וועלן ווערן שטענדיק אויסגעמעקט. אײַער קאָנטע בלײַבט אויף אײַערע אַנדערע האָסטן.</string>
     <string name="settings_home_system_replication">ריפּליקאַציע (סערווער)</string>
     <string name="system_replication_pair_empty_hint">פּעיר מיט אַן אַנדער פֿריש אינסטאַלירטן סערווער ניצנדיק \"mochictl replica join &lt;existing-peer-id&gt;\" אױף דעם נײַעם סערווער.</string>
     <string name="route_delete_message">דאָס וועט אַרױסנעמען די רוט פֿאַר וועג \"%1$s\".</string>

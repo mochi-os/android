@@ -56,8 +56,8 @@
     <string name="replication_deny">Negar</string>
     <string name="replication_hosts_title">Os meus anfitriões</string>
     <string name="replication_hosts_empty_hint">Para a replicar para outro servidor, registe-se para uma conta lá e use a opção \"Replicar uma conta existente\".</string>
-    <string name="replication_remove">Remover anfitrião</string>
-    <string name="replication_remove_title">Remover anfitrião?</string>
+    <string name="replication_remove">Eliminar esta réplica</string>
+    <string name="replication_remove_title">Eliminar esta réplica?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicação</string>
     <string name="system_replication_this_server">Este servidor</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nunca</string>
     <string name="replication_hosts_empty">Esta conta está só neste servidor.</string>
     <string name="replication_added">Adicionado %1$s</string>
-    <string name="replication_remove_message">Este servidor deixará de replicar a sua conta para esse anfitrião.</string>
+    <string name="replication_remove_message">Os dados da sua conta neste anfitrião serão eliminados permanentemente. A sua conta permanece nos seus outros anfitriões.</string>
     <string name="settings_home_system_replication">Replicação (servidor)</string>
     <string name="system_replication_pair_empty_hint">Emparelhe com outro servidor recém-instalado usando «mochictl replica join &lt;existing-peer-id&gt;» no novo servidor.</string>
     <string name="route_delete_message">Isto removerá a rota para o caminho «%1$s».</string>

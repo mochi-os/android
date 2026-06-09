@@ -111,9 +111,9 @@
     <string name="replication_hosts_empty">This account is on this server only.</string>
     <string name="replication_hosts_empty_hint">To replicate it to another server, sign up for an account there and use the \"Replicate an existing account\" option.</string>
     <string name="replication_added">Added %1$s</string>
-    <string name="replication_remove">Remove host</string>
-    <string name="replication_remove_title">Remove host?</string>
-    <string name="replication_remove_message">This server will stop replicating your account to that host.</string>
+    <string name="replication_remove">Delete this replica</string>
+    <string name="replication_remove_title">Delete this replica?</string>
+    <string name="replication_remove_message">Your account\'s data on this host will be permanently deleted. Your account stays on your other hosts.</string>
     <string name="settings_home_system_replication">Replication (server)</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replication</string>

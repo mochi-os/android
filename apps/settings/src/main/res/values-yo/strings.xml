@@ -56,8 +56,8 @@
     <string name="replication_deny">Kọ̀</string>
     <string name="replication_hosts_title">Àwọn ọmọ-orí mi</string>
     <string name="replication_hosts_empty_hint">Lati ṣàdà rẹ̀ sí olupin míràn, fọwọ́sí àkáǹtì níbẹ̀ kí o sì lo àyàn \"Ṣàdà àkáǹtì tó wà\".</string>
-    <string name="replication_remove">Yọ ọmọ-orí kúrò</string>
-    <string name="replication_remove_title">Yọ ọmọ-orí kúrò?</string>
+    <string name="replication_remove">Pa ẹ̀dà yìí rẹ́</string>
+    <string name="replication_remove_title">Pa ẹ̀dà yìí rẹ́?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Àtúnṣe</string>
     <string name="system_replication_this_server">Olùpèsè yìí</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Láéláé</string>
     <string name="replication_hosts_empty">Àkáǹtì yìí wà lórí olùṣẹ́ yìí nìkan.</string>
     <string name="replication_added">A fi kún %1$s</string>
-    <string name="replication_remove_message">Olùṣẹ́ yìí yóò dáwọ́ ìṣẹ̀dúpọ̀ àkáǹtì rẹ sí ọlọ́gbà yẹn dúró.</string>
+    <string name="replication_remove_message">A óò pa dátà àkàǹtì rẹ lórí ọ̀nà-àjọ yìí rẹ́ pátápátá. Àkàǹtì rẹ yóò wà lórí àwọn ọ̀nà-àjọ rẹ yòókù.</string>
     <string name="settings_home_system_replication">Ìṣẹ̀dúpọ̀ (olùṣẹ́)</string>
     <string name="system_replication_pair_empty_hint">Bá olùṣẹ́ tuntun mìíràn tí a ti fi sí ẹnu pẹ̀lú \"mochictl replica join &lt;existing-peer-id&gt;\" lórí olùṣẹ́ tuntun.</string>
     <string name="route_delete_message">Èyí yóò mú ọ̀nà fún ọ̀nà \"%1$s\" kúrò.</string>

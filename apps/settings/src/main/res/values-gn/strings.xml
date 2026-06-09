@@ -56,8 +56,8 @@
     <string name="replication_deny">Heja</string>
     <string name="replication_hosts_title">Che mohendaha kuéra</string>
     <string name="replication_hosts_empty_hint">Embojaeve hag̃ua ambue mohendaharãme, ejehecha pe kuentarã ha eipuru \"Replicar una cuenta existente\" jeporavo.</string>
-    <string name="replication_remove">Mboykete mohendaha</string>
-    <string name="replication_remove_title">¿Mboykete mohendaha?</string>
+    <string name="replication_remove">Embogue ko replica</string>
+    <string name="replication_remove_title">¿Embogue ko replica?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>
     <string name="system_replication_this_server">Ko servidor</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Araka\'eve</string>
     <string name="replication_hosts_empty">Ko cuenta ko servidor reheve aenteveo.</string>
     <string name="replication_added">Oñembojoapy %1$s</string>
-    <string name="replication_remove_message">Ko servidor ndorepilcái mo\'ã nde cuenta upe host rehe.</string>
+    <string name="replication_remove_message">Nde mba\'ete mba\'ekuaarã ko óga peguáva oñemboguepáta. Nde mba\'ete opyta nde óga ambuekuérape.</string>
     <string name="settings_home_system_replication">Mbohape (servidor)</string>
     <string name="system_replication_pair_empty_hint">Mbojoaju ambue servidor pyahu rendive eipurúvo \"mochictl replica join &lt;existing-peer-id&gt;\" servidor pyahúpe.</string>
     <string name="route_delete_message">Kóva oipe\'a tape \"%1$s\" ru ruta.</string>

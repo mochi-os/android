@@ -56,8 +56,8 @@
     <string name="replication_deny">Kataa</string>
     <string name="replication_hosts_title">Wenyeji wangu</string>
     <string name="replication_hosts_empty_hint">Ili kuiga kwa seva nyingine, jisajili kwa akaunti hapo na utumie chaguo la \"Iga akaunti iliyopo\".</string>
-    <string name="replication_remove">Ondoa mwenyeji</string>
-    <string name="replication_remove_title">Ondoa mwenyeji?</string>
+    <string name="replication_remove">Futa nakala hii</string>
+    <string name="replication_remove_title">Futa nakala hii?</string>
     <string name="settings_home_section_system">Mfumo</string>
     <string name="system_replication_title">Uigaji</string>
     <string name="system_replication_this_server">Seva hii</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Kamwe</string>
     <string name="replication_hosts_empty">Akaunti hii iko kwenye seva hii tu.</string>
     <string name="replication_added">Imeongezwa %1$s</string>
-    <string name="replication_remove_message">Seva hii itaacha kuiga akaunti yako kwa mwenyeji huyo.</string>
+    <string name="replication_remove_message">Data ya akaunti yako kwenye mwenyeji huyu itafutwa kabisa. Akaunti yako inabaki kwenye wenyeji wako wengine.</string>
     <string name="settings_home_system_replication">Uigaji (seva)</string>
     <string name="system_replication_pair_empty_hint">Unganisha na seva nyingine mpya iliyosanikishwa kwa kutumia \"mochictl replica join &lt;existing-peer-id&gt;\" kwenye seva mpya.</string>
     <string name="route_delete_message">Hii itaondoa njia ya njia \"%1$s\".</string>

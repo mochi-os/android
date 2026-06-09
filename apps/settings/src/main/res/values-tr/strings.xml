@@ -56,8 +56,8 @@
     <string name="replication_deny">Reddet</string>
     <string name="replication_hosts_title">Sunucularım</string>
     <string name="replication_hosts_empty_hint">Başka bir sunucuya çoğaltmak için orada bir hesap açın ve \"Mevcut bir hesabı çoğalt\" seçeneğini kullanın.</string>
-    <string name="replication_remove">Sunucuyu kaldır</string>
-    <string name="replication_remove_title">Sunucu kaldırılsın mı?</string>
+    <string name="replication_remove">Bu kopyayı sil</string>
+    <string name="replication_remove_title">Bu kopya silinsin mi?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Yineleme</string>
     <string name="system_replication_this_server">Bu sunucu</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Asla</string>
     <string name="replication_hosts_empty">Bu hesap yalnızca bu sunucudadır.</string>
     <string name="replication_added">Eklendi %1$s</string>
-    <string name="replication_remove_message">Bu sunucu hesabınızı o ana bilgisayara çoğaltmayı durduracak.</string>
+    <string name="replication_remove_message">Bu ana bilgisayardaki hesap verileriniz kalıcı olarak silinecek. Hesabınız diğer ana bilgisayarlarınızda kalır.</string>
     <string name="settings_home_system_replication">Çoğaltma (sunucu)</string>
     <string name="system_replication_pair_empty_hint">Yeni sunucuda \"mochictl replica join &lt;existing-peer-id&gt;\" kullanarak yeni kurulmuş başka bir sunucuyla eşleyin.</string>
     <string name="route_delete_message">Bu, \"%1$s\" yolu için rotayı kaldıracak.</string>

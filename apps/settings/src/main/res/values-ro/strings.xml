@@ -56,8 +56,8 @@
     <string name="replication_deny">Refuză</string>
     <string name="replication_hosts_title">Gazdele mele</string>
     <string name="replication_hosts_empty_hint">Pentru a-l replica pe un alt server, înscrie-te pentru un cont acolo și folosește opțiunea \"Replică un cont existent\".</string>
-    <string name="replication_remove">Eliminați gazda</string>
-    <string name="replication_remove_title">Eliminați gazda?</string>
+    <string name="replication_remove">Șterge această replică</string>
+    <string name="replication_remove_title">Ștergi această replică?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replicare</string>
     <string name="system_replication_this_server">Acest server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Niciodată</string>
     <string name="replication_hosts_empty">Acest cont este doar pe acest server.</string>
     <string name="replication_added">Adăugat %1$s</string>
-    <string name="replication_remove_message">Acest server va înceta replicarea contului dvs. către acea gazdă.</string>
+    <string name="replication_remove_message">Datele contului tău de pe această gazdă vor fi șterse definitiv. Contul tău rămâne pe celelalte gazde ale tale.</string>
     <string name="settings_home_system_replication">Replicare (server)</string>
     <string name="system_replication_pair_empty_hint">Asociați cu un alt server proaspăt instalat folosind „mochictl replica join &lt;existing-peer-id&gt;\" pe noul server.</string>
     <string name="route_delete_message">Aceasta va elimina ruta pentru calea „%1$s\".</string>

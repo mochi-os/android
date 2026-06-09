@@ -56,8 +56,8 @@
     <string name="replication_deny">Diùlt</string>
     <string name="replication_hosts_title">Mo òstairean</string>
     <string name="replication_hosts_empty_hint">Gus a mhac-shamhlachadh gu frithealaiche eile, clàraich airson cunntas an sin agus cleachd an roghainn \"Mac-shamhlaich cunntas a tha ann\".</string>
-    <string name="replication_remove">Thoir an t-òstair air falbh</string>
-    <string name="replication_remove_title">An toir thu an t-òstair air falbh?</string>
+    <string name="replication_remove">Sguab às am mac-samhail seo</string>
+    <string name="replication_remove_title">Sguab às am mac-samhail seo?</string>
     <string name="settings_home_section_system">Siostam</string>
     <string name="system_replication_title">Mac-shamhlachadh</string>
     <string name="system_replication_this_server">Am frithealaiche seo</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Chaoidh</string>
     <string name="replication_hosts_empty">Tha an cunntas seo air an fhrithealaiche seo a-mhàin.</string>
     <string name="replication_added">Chuir %1$s</string>
-    <string name="replication_remove_message">Sguiridh an frithealaiche seo a\' macasamhlachadh do chunntas dhan òstair sin.</string>
+    <string name="replication_remove_message">Thèid dàta a\' chunntais agad air an òstair seo a sguabadh às gu buan. Fanaidh an cunntas agad air na h-òstairean eile agad.</string>
     <string name="settings_home_system_replication">Macasamhlachadh (frithealaiche)</string>
     <string name="system_replication_pair_empty_hint">Càraidich le frithealaiche eile a chaidh a stàladh ùr le bhith a\' cleachdadh \"mochictl replica join &lt;existing-peer-id&gt;\" air an fhrithealaiche ùr.</string>
     <string name="route_delete_message">Bheir seo air falbh an t-slighe airson na slighe \"%1$s\".</string>

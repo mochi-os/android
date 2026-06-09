@@ -56,8 +56,8 @@
     <string name="replication_deny">رد کړئ</string>
     <string name="replication_hosts_title">زما کوربه</string>
     <string name="replication_hosts_empty_hint">د دې لپاره چې دا نورو سرور ته نقل کړئ، هلته د حساب لپاره راجستر شئ او د \"د موجوده حساب نقل کول\" انتخاب وکاروئ.</string>
-    <string name="replication_remove">کوربه لرې کړئ</string>
-    <string name="replication_remove_title">کوربه لرې کړئ؟</string>
+    <string name="replication_remove">دا بدل ړنګ کړئ</string>
+    <string name="replication_remove_title">دا بدل ړنګ کړئ؟</string>
     <string name="settings_home_section_system">سیسټم</string>
     <string name="system_replication_title">نقل</string>
     <string name="system_replication_this_server">دا سرور</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">هیڅکله</string>
     <string name="replication_hosts_empty">دا حساب یوازې په دې سرور کې دی.</string>
     <string name="replication_added">اضافه شو %1$s</string>
-    <string name="replication_remove_message">دا سرور به ستاسو حساب په دې کوربه نقل کول ودروي.</string>
+    <string name="replication_remove_message">پر دې کوربه ستاسو د حساب معلومات به د تل لپاره ړنګ شي. ستاسو حساب به ستاسو په نورو کوربو پاتې شي.</string>
     <string name="settings_home_system_replication">نقل (سرور)</string>
     <string name="system_replication_pair_empty_hint">په نوي سرور کې د \"mochictl replica join &lt;existing-peer-id&gt;\" کارولو سره د بل نوي نصب شوي سرور سره جوړ کړئ.</string>
     <string name="route_delete_message">دا به د \"%1$s\" لارې لپاره روټ لرې کړي.</string>

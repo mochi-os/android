@@ -56,8 +56,8 @@
     <string name="replication_deny">অস্বীকার করুন</string>
     <string name="replication_hosts_title">আমার হোস্ট</string>
     <string name="replication_hosts_empty_hint">এটিকে অন্য সার্ভারে প্রতিলিপি করতে, সেখানে একটি অ্যাকাউন্টের জন্য সাইন আপ করুন এবং \"একটি বিদ্যমান অ্যাকাউন্ট প্রতিলিপি করুন\" বিকল্পটি ব্যবহার করুন।</string>
-    <string name="replication_remove">হোস্ট সরান</string>
-    <string name="replication_remove_title">হোস্ট সরাবেন?</string>
+    <string name="replication_remove">এই রেপ্লিকা মুছুন</string>
+    <string name="replication_remove_title">এই রেপ্লিকা মুছবেন?</string>
     <string name="settings_home_section_system">সিস্টেম</string>
     <string name="system_replication_title">প্রতিলিপি</string>
     <string name="system_replication_this_server">এই সার্ভার</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">কখনই না</string>
     <string name="replication_hosts_empty">এই অ্যাকাউন্ট শুধুমাত্র এই সার্ভারে আছে।</string>
     <string name="replication_added">যোগ করা হয়েছে %1$s</string>
-    <string name="replication_remove_message">এই সার্ভার ঐ হোস্টে আপনার অ্যাকাউন্ট প্রতিলিপি করা বন্ধ করবে।</string>
+    <string name="replication_remove_message">এই হোস্টে আপনার অ্যাকাউন্টের ডেটা স্থায়ীভাবে মুছে ফেলা হবে। আপনার অ্যাকাউন্ট আপনার অন্যান্য হোস্টে থেকে যাবে।</string>
     <string name="settings_home_system_replication">প্রতিলিপি (সার্ভার)</string>
     <string name="system_replication_pair_empty_hint">নতুন সার্ভারে \"mochictl replica join &lt;existing-peer-id&gt;\" ব্যবহার করে অন্য একটি তাজা ইনস্টল করা সার্ভারের সাথে যুক্ত হন।</string>
     <string name="route_delete_message">এটি \"%1$s\" পথের রুট মুছে ফেলবে।</string>

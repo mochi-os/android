@@ -56,8 +56,8 @@
     <string name="replication_deny">Verweigern</string>
     <string name="replication_hosts_title">Meine Hosts</string>
     <string name="replication_hosts_empty_hint">Um es auf einen anderen Server zu replizieren, registriere dort ein Konto und verwende die Option \"Ein bestehendes Konto replizieren\".</string>
-    <string name="replication_remove">Host entfernen</string>
-    <string name="replication_remove_title">Host entfernen?</string>
+    <string name="replication_remove">Diese Replik löschen</string>
+    <string name="replication_remove_title">Diese Replik löschen?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikation</string>
     <string name="system_replication_this_server">Dieser Server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nie</string>
     <string name="replication_hosts_empty">Dieses Konto befindet sich nur auf diesem Server.</string>
     <string name="replication_added">Hinzugefügt %1$s</string>
-    <string name="replication_remove_message">Dieser Server hört auf, dein Konto auf diesen Host zu replizieren.</string>
+    <string name="replication_remove_message">Die Daten Ihres Kontos auf diesem Host werden dauerhaft gelöscht. Ihr Konto bleibt auf Ihren anderen Hosts erhalten.</string>
     <string name="settings_home_system_replication">Replikation (Server)</string>
     <string name="system_replication_pair_empty_hint">Pair mit einem anderen frisch installierten Server mit „mochictl replica join &lt;existing-peer-id&gt;\" auf dem neuen Server.</string>
     <string name="route_delete_message">Dies entfernt die Route für den Pfad „%1$s\".</string>

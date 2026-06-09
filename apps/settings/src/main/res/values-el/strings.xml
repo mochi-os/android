@@ -56,8 +56,8 @@
     <string name="replication_deny">Άρνηση</string>
     <string name="replication_hosts_title">Οι οικοδεσπότες μου</string>
     <string name="replication_hosts_empty_hint">Για να το αναπαράγετε σε άλλον διακομιστή, εγγραφείτε για λογαριασμό εκεί και χρησιμοποιήστε την επιλογή \"Αναπαραγωγή υπάρχοντος λογαριασμού\".</string>
-    <string name="replication_remove">Αφαίρεση οικοδεσπότη</string>
-    <string name="replication_remove_title">Αφαίρεση οικοδεσπότη;</string>
+    <string name="replication_remove">Διαγραφή αυτού του αντιγράφου</string>
+    <string name="replication_remove_title">Διαγραφή αυτού του αντιγράφου;</string>
     <string name="settings_home_section_system">Σύστημα</string>
     <string name="system_replication_title">Αναπαραγωγή</string>
     <string name="system_replication_this_server">Αυτός ο διακομιστής</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Ποτέ</string>
     <string name="replication_hosts_empty">Αυτός ο λογαριασμός υπάρχει μόνο σε αυτόν τον διακομιστή.</string>
     <string name="replication_added">Προστέθηκε %1$s</string>
-    <string name="replication_remove_message">Αυτός ο διακομιστής θα σταματήσει την αναπαραγωγή του λογαριασμού σας σε εκείνον τον κεντρικό υπολογιστή.</string>
+    <string name="replication_remove_message">Τα δεδομένα του λογαριασμού σας σε αυτόν τον κεντρικό υπολογιστή θα διαγραφούν οριστικά. Ο λογαριασμός σας παραμένει στους άλλους κεντρικούς υπολογιστές σας.</string>
     <string name="settings_home_system_replication">Αναπαραγωγή (διακομιστής)</string>
     <string name="system_replication_pair_empty_hint">Ζευγαρώστε με έναν άλλο νεοεγκατεστημένο διακομιστή χρησιμοποιώντας \"mochictl replica join &lt;existing-peer-id&gt;\" στον νέο διακομιστή.</string>
     <string name="route_delete_message">Αυτό θα αφαιρέσει τη διαδρομή για το μονοπάτι \"%1$s\".</string>

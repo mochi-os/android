@@ -56,8 +56,8 @@
     <string name="replication_deny">Odbij</string>
     <string name="replication_hosts_title">Moji hostovi</string>
     <string name="replication_hosts_empty_hint">Da biste ga replicirali na drugi server, registrirajte se za račun tamo i koristite opciju \"Repliciraj postojeći račun\".</string>
-    <string name="replication_remove">Ukloni host</string>
-    <string name="replication_remove_title">Ukloniti host?</string>
+    <string name="replication_remove">Izbriši ovu repliku</string>
+    <string name="replication_remove_title">Izbrisati ovu repliku?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikacija</string>
     <string name="system_replication_this_server">Ovaj server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nikad</string>
     <string name="replication_hosts_empty">Ovaj račun je samo na ovom serveru.</string>
     <string name="replication_added">Dodano %1$s</string>
-    <string name="replication_remove_message">Ovaj server će prestati replicirati vaš račun na taj host.</string>
+    <string name="replication_remove_message">Podaci vašeg računa na ovom hostu bit će trajno izbrisani. Vaš račun ostaje na vašim drugim hostovima.</string>
     <string name="settings_home_system_replication">Replikacija (server)</string>
     <string name="system_replication_pair_empty_hint">Uparite sa drugim svježe instaliranim serverom koristeći \"mochictl replica join &lt;existing-peer-id&gt;\" na novom serveru.</string>
     <string name="route_delete_message">Ovo će ukloniti rutu za putanju \"%1$s\".</string>

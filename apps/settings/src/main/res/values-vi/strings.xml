@@ -56,8 +56,8 @@
     <string name="replication_deny">Từ chối</string>
     <string name="replication_hosts_title">Máy chủ của tôi</string>
     <string name="replication_hosts_empty_hint">Để sao chép nó sang một máy chủ khác, đăng ký một tài khoản ở đó và sử dụng tùy chọn \"Sao chép tài khoản hiện có\".</string>
-    <string name="replication_remove">Xóa máy chủ</string>
-    <string name="replication_remove_title">Xóa máy chủ?</string>
+    <string name="replication_remove">Xóa bản sao này</string>
+    <string name="replication_remove_title">Xóa bản sao này?</string>
     <string name="settings_home_section_system">Hệ thống</string>
     <string name="system_replication_title">Sao chép</string>
     <string name="system_replication_this_server">Máy chủ này</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Không bao giờ</string>
     <string name="replication_hosts_empty">Tài khoản này chỉ có trên máy chủ này.</string>
     <string name="replication_added">Đã thêm %1$s</string>
-    <string name="replication_remove_message">Máy chủ này sẽ ngừng sao chép tài khoản của bạn đến máy chủ đó.</string>
+    <string name="replication_remove_message">Dữ liệu tài khoản của bạn trên máy chủ này sẽ bị xóa vĩnh viễn. Tài khoản của bạn vẫn còn trên các máy chủ khác của bạn.</string>
     <string name="settings_home_system_replication">Sao chép (máy chủ)</string>
     <string name="system_replication_pair_empty_hint">Ghép nối với một máy chủ mới cài đặt khác bằng \"mochictl replica join &lt;existing-peer-id&gt;\" trên máy chủ mới.</string>
     <string name="route_delete_message">Việc này sẽ xóa tuyến cho đường dẫn \"%1$s\".</string>

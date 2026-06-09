@@ -56,8 +56,8 @@
     <string name="replication_deny">拒绝</string>
     <string name="replication_hosts_title">我的主机</string>
     <string name="replication_hosts_empty_hint">要将其复制到另一台服务器,请在该服务器注册账户,并使用\"复制现有账户\"选项。</string>
-    <string name="replication_remove">移除主机</string>
-    <string name="replication_remove_title">移除主机?</string>
+    <string name="replication_remove">删除此副本</string>
+    <string name="replication_remove_title">删除此副本？</string>
     <string name="settings_home_section_system">系统</string>
     <string name="system_replication_title">复制</string>
     <string name="system_replication_this_server">此服务器</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">从不</string>
     <string name="replication_hosts_empty">此账户仅在此服务器上。</string>
     <string name="replication_added">添加 %1$s</string>
-    <string name="replication_remove_message">此服务器将停止把您的账户复制到该主机。</string>
+    <string name="replication_remove_message">您的账户在此主机上的数据将被永久删除。您的账户仍保留在其他主机上。</string>
     <string name="settings_home_system_replication">复制（服务器）</string>
     <string name="system_replication_pair_empty_hint">在新服务器上使用\"mochictl replica join &lt;existing-peer-id&gt;\"与另一台全新安装的服务器配对。</string>
     <string name="route_delete_message">这将删除路径\"%1$s\"的路由。</string>

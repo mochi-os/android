@@ -56,8 +56,8 @@
     <string name="replication_deny">Nægt</string>
     <string name="replication_hosts_title">Mine værter</string>
     <string name="replication_hosts_empty_hint">For at replikere det til en anden server, opret en konto der og brug \"Replikér en eksisterende konto\"-indstillingen.</string>
-    <string name="replication_remove">Fjern vært</string>
-    <string name="replication_remove_title">Fjern vært?</string>
+    <string name="replication_remove">Slet denne replika</string>
+    <string name="replication_remove_title">Slet denne replika?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikering</string>
     <string name="system_replication_this_server">Denne server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Aldrig</string>
     <string name="replication_hosts_empty">Denne konto er kun på denne server.</string>
     <string name="replication_added">Tilføjet %1$s</string>
-    <string name="replication_remove_message">Denne server holder op med at replikere din konto til den vært.</string>
+    <string name="replication_remove_message">Din kontos data på denne vært slettes permanent. Din konto forbliver på dine andre værter.</string>
     <string name="settings_home_system_replication">Replikering (server)</string>
     <string name="system_replication_pair_empty_hint">Par med en anden nyinstalleret server ved at bruge \"mochictl replica join &lt;existing-peer-id&gt;\" på den nye server.</string>
     <string name="route_delete_message">Dette fjerner ruten for stien \"%1$s\".</string>

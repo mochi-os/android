@@ -56,8 +56,8 @@
     <string name="replication_deny">नाकारा</string>
     <string name="replication_hosts_title">माझे होस्ट</string>
     <string name="replication_hosts_empty_hint">ते दुसर्‍या सर्व्हरवर प्रतिकृत करण्यासाठी, तेथे एक खाते साइन अप करा आणि \"विद्यमान खात्याची प्रतिकृती करा\" पर्याय वापरा.</string>
-    <string name="replication_remove">होस्ट काढा</string>
-    <string name="replication_remove_title">होस्ट काढायचा?</string>
+    <string name="replication_remove">ही प्रतिकृती हटवा</string>
+    <string name="replication_remove_title">ही प्रतिकृती हटवायची?</string>
     <string name="settings_home_section_system">सिस्टम</string>
     <string name="system_replication_title">प्रतिकृती</string>
     <string name="system_replication_this_server">हा सर्व्हर</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">कधीही नाही</string>
     <string name="replication_hosts_empty">हे खाते केवळ या सर्व्हरवर आहे.</string>
     <string name="replication_added">जोडले %1$s</string>
-    <string name="replication_remove_message">हा सर्व्हर त्या होस्टवर तुमचे खाते प्रतिकृती करणे थांबवेल.</string>
+    <string name="replication_remove_message">या होस्टवरील तुमच्या खात्याचा डेटा कायमचा हटवला जाईल. तुमचे खाते तुमच्या इतर होस्टवर कायम राहील.</string>
     <string name="settings_home_system_replication">प्रतिकृती (सर्व्हर)</string>
     <string name="system_replication_pair_empty_hint">नवीन सर्व्हरवर \"mochictl replica join &lt;existing-peer-id&gt;\" वापरून दुसर्‍या नवीन स्थापित सर्व्हरसह जोडा.</string>
     <string name="route_delete_message">हे मार्ग \"%1$s\" साठीचा मार्ग काढून टाकेल.</string>

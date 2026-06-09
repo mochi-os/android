@@ -56,8 +56,8 @@
     <string name="replication_deny">Weier</string>
     <string name="replication_hosts_title">My gashere</string>
     <string name="replication_hosts_empty_hint">Om dit na \'n ander bediener te repliseer, registreer vir \'n rekening daar en gebruik die \"Repliseer \'n bestaande rekening\"-opsie.</string>
-    <string name="replication_remove">Verwyder gasheer</string>
-    <string name="replication_remove_title">Verwyder gasheer?</string>
+    <string name="replication_remove">Verwyder hierdie replika</string>
+    <string name="replication_remove_title">Verwyder hierdie replika?</string>
     <string name="settings_home_section_system">Stelsel</string>
     <string name="system_replication_title">Replikasie</string>
     <string name="system_replication_this_server">Hierdie bediener</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nooit</string>
     <string name="replication_hosts_empty">Hierdie rekening is slegs op hierdie bediener.</string>
     <string name="replication_added">Bygevoeg %1$s</string>
-    <string name="replication_remove_message">Hierdie bediener sal ophou om jou rekening na daardie gasheer te repliseer.</string>
+    <string name="replication_remove_message">Jou rekening se data op hierdie gasheer sal permanent verwyder word. Jou rekening bly op jou ander gashere.</string>
     <string name="settings_home_system_replication">Replikasie (bediener)</string>
     <string name="system_replication_pair_empty_hint">Verbind met \'n ander vars geïnstalleerde bediener deur \"mochictl replica join &lt;existing-peer-id&gt;\" op die nuwe bediener te gebruik.</string>
     <string name="route_delete_message">Hierdie sal die roete vir die pad \"%1$s\" verwyder.</string>

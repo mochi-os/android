@@ -109,9 +109,9 @@
     <string name="replication_hosts_empty">呢個帳戶淨係喺呢部伺服器上面。</string>
     <string name="replication_hosts_empty_hint">如果想複製去另一部伺服器，請喺嗰部伺服器度註冊一個帳戶，然後用「複製現有帳戶」選項。</string>
     <string name="replication_added">已新增 %1$s</string>
-    <string name="replication_remove">移除主機</string>
-    <string name="replication_remove_title">移除主機？</string>
-    <string name="replication_remove_message">呢部伺服器會停止將你嘅帳戶複製去嗰部主機。</string>
+    <string name="replication_remove">刪除此複本</string>
+    <string name="replication_remove_title">刪除此複本？</string>
+    <string name="replication_remove_message">你喺呢個主機上嘅帳戶資料將會永久刪除。你嘅帳戶會繼續保留喺你其他主機上。</string>
     <string name="settings_home_system_replication">複製（伺服器）</string>
     <string name="settings_home_section_system">系統</string>
     <string name="system_replication_title">複製</string>

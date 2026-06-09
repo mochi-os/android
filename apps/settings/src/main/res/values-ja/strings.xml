@@ -56,8 +56,8 @@
     <string name="replication_deny">拒否</string>
     <string name="replication_hosts_title">マイホスト</string>
     <string name="replication_hosts_empty_hint">別のサーバーに複製するには、そこでアカウントを登録し、「既存のアカウントを複製」オプションを使用してください。</string>
-    <string name="replication_remove">ホストを削除</string>
-    <string name="replication_remove_title">ホストを削除しますか?</string>
+    <string name="replication_remove">このレプリカを削除</string>
+    <string name="replication_remove_title">このレプリカを削除しますか？</string>
     <string name="settings_home_section_system">システム</string>
     <string name="system_replication_title">レプリケーション</string>
     <string name="system_replication_this_server">このサーバー</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">なし</string>
     <string name="replication_hosts_empty">このアカウントはこのサーバーのみにあります。</string>
     <string name="replication_added">追加 %1$s</string>
-    <string name="replication_remove_message">このサーバーは、そのホストへのアカウントのレプリケーションを停止します。</string>
+    <string name="replication_remove_message">このホスト上のアカウントのデータは完全に削除されます。アカウントは他のホストには残ります。</string>
     <string name="settings_home_system_replication">レプリケーション（サーバー）</string>
     <string name="system_replication_pair_empty_hint">新しいサーバーで「mochictl replica join &lt;existing-peer-id&gt;」を使用して、別の新規インストール済みサーバーとペアリングします。</string>
     <string name="route_delete_message">パス「%1$s」のルートが削除されます。</string>

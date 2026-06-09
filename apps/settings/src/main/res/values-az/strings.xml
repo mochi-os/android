@@ -56,8 +56,8 @@
     <string name="replication_deny">Rədd et</string>
     <string name="replication_hosts_title">Hostlarım</string>
     <string name="replication_hosts_empty_hint">Onu başqa servera replikasiya etmək üçün, orada hesab açın və \"Mövcud hesabı replikasiya et\" seçimindən istifadə edin.</string>
-    <string name="replication_remove">Hostu sil</string>
-    <string name="replication_remove_title">Host silinsin?</string>
+    <string name="replication_remove">Bu replikanı sil</string>
+    <string name="replication_remove_title">Bu replika silinsin?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikasiya</string>
     <string name="system_replication_this_server">Bu server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Heç vaxt</string>
     <string name="replication_hosts_empty">Bu hesab yalnız bu serverdədir.</string>
     <string name="replication_added">Əlavə edildi %1$s</string>
-    <string name="replication_remove_message">Bu server hesabınızı həmin hosta replika etməyi dayandıracaq.</string>
+    <string name="replication_remove_message">Hesabınızın bu hostdakı verilənləri birdəfəlik silinəcək. Hesabınız digər hostlarınızda qalır.</string>
     <string name="settings_home_system_replication">Replikasiya (server)</string>
     <string name="system_replication_pair_empty_hint">Yeni serverdə \"mochictl replica join &lt;existing-peer-id&gt;\" istifadə edərək başqa təzə quraşdırılmış serverlə cütləşdirin.</string>
     <string name="route_delete_message">Bu \"%1$s\" yolu üçün marşrutu çıxaracaq.</string>

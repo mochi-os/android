@@ -56,8 +56,8 @@
     <string name="replication_deny">Denega</string>
     <string name="replication_hosts_title">Els meus amfitrions</string>
     <string name="replication_hosts_empty_hint">Per replicar-lo a un altre servidor, registreu-vos a un compte allà i utilitzeu l\'opció \"Replica un compte existent\".</string>
-    <string name="replication_remove">Treu l\'amfitrió</string>
-    <string name="replication_remove_title">Voleu treure l\'amfitrió?</string>
+    <string name="replication_remove">Elimina aquesta rèplica</string>
+    <string name="replication_remove_title">Voleu eliminar aquesta rèplica?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicació</string>
     <string name="system_replication_this_server">Aquest servidor</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Mai</string>
     <string name="replication_hosts_empty">Aquest compte només és en aquest servidor.</string>
     <string name="replication_added">Afegit %1$s</string>
-    <string name="replication_remove_message">Aquest servidor deixarà de replicar el vostre compte a aquell amfitrió.</string>
+    <string name="replication_remove_message">Les dades del vostre compte en aquest amfitrió s\'eliminaran permanentment. El vostre compte es manté en els vostres altres amfitrions.</string>
     <string name="settings_home_system_replication">Replicació (servidor)</string>
     <string name="system_replication_pair_empty_hint">Empareu amb un altre servidor recent instal·lat usant «mochictl replica join &lt;existing-peer-id&gt;» al nou servidor.</string>
     <string name="route_delete_message">Això eliminarà la ruta per al camí «%1$s».</string>

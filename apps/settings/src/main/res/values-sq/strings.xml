@@ -56,8 +56,8 @@
     <string name="replication_deny">Mohoj</string>
     <string name="replication_hosts_title">Hostat e mi</string>
     <string name="replication_hosts_empty_hint">Për ta replikuar atë në një server tjetër, regjistrohu për një llogari atje dhe përdor opsionin \"Replikoni një llogari ekzistuese\".</string>
-    <string name="replication_remove">Hiq hostin</string>
-    <string name="replication_remove_title">Të hiqet hosti?</string>
+    <string name="replication_remove">Fshi këtë replikë</string>
+    <string name="replication_remove_title">Të fshihet kjo replikë?</string>
     <string name="settings_home_section_system">Sistemi</string>
     <string name="system_replication_title">Replikim</string>
     <string name="system_replication_this_server">Ky server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Asnjëherë</string>
     <string name="replication_hosts_empty">Kjo llogari është vetëm në këtë server.</string>
     <string name="replication_added">Shtuar %1$s</string>
-    <string name="replication_remove_message">Ky server do të ndalojë replikimin e llogarisë suaj në atë host.</string>
+    <string name="replication_remove_message">Të dhënat e llogarisë suaj në këtë host do të fshihen përgjithmonë. Llogaria juaj qëndron në hostet tuaja të tjera.</string>
     <string name="settings_home_system_replication">Replikimi (server)</string>
     <string name="system_replication_pair_empty_hint">Çiftoni me një tjetër server të sapo-instaluar duke përdorur \"mochictl replica join &lt;existing-peer-id&gt;\" në serverin e ri.</string>
     <string name="route_delete_message">Kjo do të heqë rrugën për shtegun \"%1$s\".</string>

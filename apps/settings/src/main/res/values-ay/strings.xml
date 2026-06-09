@@ -56,8 +56,8 @@
     <string name="replication_deny">Jark\'aña</string>
     <string name="replication_hosts_title">Nayan wasitirinaka</string>
     <string name="replication_hosts_empty_hint">Yaqha servidorataki replicaña, ukan cuenta uchasa ukatx \"Replicar una cuenta existente\" opciónx apnaqaña.</string>
-    <string name="replication_remove">Wasitiri apaqaña</string>
-    <string name="replication_remove_title">¿Wasitiri apaqañati?</string>
+    <string name="replication_remove">Aka replica pichxaña</string>
+    <string name="replication_remove_title">¿Aka replica pichxañati?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>
     <string name="system_replication_this_server">Aka servidor</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Janipuni</string>
     <string name="replication_hosts_empty">Aka cuenta sapaki aka servidoranxa.</string>
     <string name="replication_added">Yapxatata %1$s</string>
-    <string name="replication_remove_message">Aka servidorax uka hosturuxa cuentamax replicantasä apsuni.</string>
+    <string name="replication_remove_message">Cuentaman datapaxa aka hostan wiñayataki pichxatani. Cuentamaxa yaqha hostanakaman qhipari.</string>
     <string name="settings_home_system_replication">Replicación (servidor)</string>
     <string name="system_replication_pair_empty_hint">Yaqha machaqa instalata servidorampi parijasi machaqa servidorpi \"mochictl replica join &lt;existing-peer-id&gt;\" apnaqasa.</string>
     <string name="route_delete_message">Akax \"%1$s\" thakhi sat thakhi apsuni.</string>

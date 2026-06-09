@@ -56,8 +56,8 @@
     <string name="replication_deny">Red bike</string>
     <string name="replication_hosts_title">Mêvandarên min</string>
     <string name="replication_hosts_empty_hint">Ji bo ku wê li serverekî din dubare bikin, li wir ji bo hesabekî qeyd bikin û vebijarka \"Hesabê heyî dubare bike\" bikar bînin.</string>
-    <string name="replication_remove">Mêvandar rake</string>
-    <string name="replication_remove_title">Mêvandar rabikim?</string>
+    <string name="replication_remove">Vê replîkayê jê bibe</string>
+    <string name="replication_remove_title">Vê replîkayê jê bibe?</string>
     <string name="settings_home_section_system">Pergal</string>
     <string name="system_replication_title">Replîkasyon</string>
     <string name="system_replication_this_server">Ev rajekar</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Tu car</string>
     <string name="replication_hosts_empty">Ev hesab tenê li ser vê pêşkêşkerê ye.</string>
     <string name="replication_added">Hate zêdekirin %1$s</string>
-    <string name="replication_remove_message">Ev pêşkêşker dê hesabê we ji wî mêvandarî kopî kirinê rawestîne.</string>
+    <string name="replication_remove_message">Daneyên hesabê te yên li ser vê mêvandarê dê bi awayekî herheyî were jêbirin. Hesabê te li ser mêvandarên te yên din dimîne.</string>
     <string name="settings_home_system_replication">Kopîkirin (pêşkêşker)</string>
     <string name="system_replication_pair_empty_hint">Li ser pêşkêşkera nû \"mochictl replica join &lt;existing-peer-id&gt;\" bikar bîne û bi pêşkêşkerek nû sazkirî re cot bike.</string>
     <string name="route_delete_message">Ev dê riya rêya \"%1$s\" jêbibe.</string>

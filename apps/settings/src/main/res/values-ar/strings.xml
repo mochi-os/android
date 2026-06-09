@@ -56,8 +56,8 @@
     <string name="replication_deny">رفض</string>
     <string name="replication_hosts_title">مضيفاتي</string>
     <string name="replication_hosts_empty_hint">لاستنساخه إلى خادم آخر، أنشئ حسابًا هناك واستخدم خيار \"استنساخ حساب موجود\".</string>
-    <string name="replication_remove">إزالة المضيف</string>
-    <string name="replication_remove_title">إزالة المضيف؟</string>
+    <string name="replication_remove">حذف هذه النسخة</string>
+    <string name="replication_remove_title">حذف هذه النسخة؟</string>
     <string name="settings_home_section_system">النظام</string>
     <string name="system_replication_title">النسخ المتماثل</string>
     <string name="system_replication_this_server">هذا الخادم</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">أبداً</string>
     <string name="replication_hosts_empty">هذا الحساب موجود على هذا الخادم فقط.</string>
     <string name="replication_added">تمت الإضافة %1$s</string>
-    <string name="replication_remove_message">سيتوقف هذا الخادم عن تكرار حسابك إلى ذلك المضيف.</string>
+    <string name="replication_remove_message">سيتم حذف بيانات حسابك على هذا المضيف نهائيًا. يبقى حسابك على مضيفيك الآخرين.</string>
     <string name="settings_home_system_replication">النسخ المتماثل (الخادم)</string>
     <string name="system_replication_pair_empty_hint">أقرن مع خادم آخر مثبّت حديثًا باستخدام \"mochictl replica join &lt;existing-peer-id&gt;\" على الخادم الجديد.</string>
     <string name="route_delete_message">سيؤدي هذا إلى إزالة المسار للمسار \"%1$s\".</string>

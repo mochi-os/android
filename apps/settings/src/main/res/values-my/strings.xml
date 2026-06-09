@@ -56,8 +56,8 @@
     <string name="replication_deny">ငြင်းပယ်မည်</string>
     <string name="replication_hosts_title">ကျွန်ုပ်၏ဟို့စ်များ</string>
     <string name="replication_hosts_empty_hint">အခြားဆာဗာသို့ ပုံတူပွားရန် ထိုနေရာတွင် အကောင့်တစ်ခု အကောင့်ဖွင့်ပြီး \"ရှိနေပြီးသား အကောင့်ကို ပုံတူပွားရန်\" ရွေးချယ်စရာကို သုံးပါ။</string>
-    <string name="replication_remove">ဟို့စ်ကို ဖယ်ရှားပါ</string>
-    <string name="replication_remove_title">ဟို့စ်ကို ဖယ်ရှားမည်လား?</string>
+    <string name="replication_remove">ဤပုံတူကို ဖျက်ရန်</string>
+    <string name="replication_remove_title">ဤပုံတူကို ဖျက်မလား။</string>
     <string name="settings_home_section_system">စနစ်</string>
     <string name="system_replication_title">ပုံတူပွားခြင်း</string>
     <string name="system_replication_this_server">ဤဆာဗာ</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ဘယ်တော့မှ မဟုတ်</string>
     <string name="replication_hosts_empty">ဤအကောင့်သည် ဤဆာဗာတွင်သာ ရှိသည်။</string>
     <string name="replication_added">ထည့်ပြီးပါပြီ %1$s</string>
-    <string name="replication_remove_message">ဤဆာဗာသည် သင့်အကောင့်ကို ထို host သို့ ထပ်ပွားမှု ရပ်တန့်ပါမည်။</string>
+    <string name="replication_remove_message">ဤဟို့စ်ပေါ်ရှိ သင့်အကောင့်၏ ဒေတာကို အပြီးတိုင်ဖျက်ပါမည်။ သင့်အကောင့်သည် သင့်အခြားဟို့စ်များတွင် ဆက်လက်တည်ရှိနေပါမည်။</string>
     <string name="settings_home_system_replication">ထပ်ပွားမှု (ဆာဗာ)</string>
     <string name="system_replication_pair_empty_hint">ဆာဗာသစ်တွင် \"mochictl replica join &lt;existing-peer-id&gt;\" ကို အသုံးပြုပြီး အသစ်ထည့်သွင်းထားသော အခြားဆာဗာတစ်ခုနှင့် တွဲဖက်ပါ။</string>
     <string name="route_delete_message">ဤသည် လမ်းကြောင်း \"%1$s\" အတွက် လမ်းကြောင်းကို ဖယ်ရှားပါမည်။</string>

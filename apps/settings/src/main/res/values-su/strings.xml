@@ -56,8 +56,8 @@
     <string name="replication_deny">Tolak</string>
     <string name="replication_hosts_title">Host abdi</string>
     <string name="replication_hosts_empty_hint">Pikeun ngarepliksi kana pangladén sanés, daptar pikeun akun di dinya sareng pake pilihan \"Replikasi akun nu aya\".</string>
-    <string name="replication_remove">Hapus host</string>
-    <string name="replication_remove_title">Hapus host?</string>
+    <string name="replication_remove">Pupus replika ieu</string>
+    <string name="replication_remove_title">Pupus replika ieu?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Réplikasi</string>
     <string name="system_replication_this_server">Server ieu</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Tara</string>
     <string name="replication_hosts_empty">Akun ieu ngan dina server ieu.</string>
     <string name="replication_added">Ditambahkeun %1$s</string>
-    <string name="replication_remove_message">Server ieu bakal eureun nyalin akun anjeun ka host éta.</string>
+    <string name="replication_remove_message">Data akun anjeun dina host ieu bakal dipupus permanén. Akun anjeun tetep aya dina host anjeun anu sanés.</string>
     <string name="settings_home_system_replication">Salinan (server)</string>
     <string name="system_replication_pair_empty_hint">Pasangkeun jeung server séjén nu anyar dipasang nganggo \"mochictl replica join &lt;existing-peer-id&gt;\" dina server anyar.</string>
     <string name="route_delete_message">Ieu bakal nyabut rute pikeun jalan \"%1$s\".</string>

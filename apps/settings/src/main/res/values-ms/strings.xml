@@ -56,8 +56,8 @@
     <string name="replication_deny">Tolak</string>
     <string name="replication_hosts_title">Hos saya</string>
     <string name="replication_hosts_empty_hint">Untuk mereplikasinya ke pelayan lain, daftar untuk akaun di sana dan gunakan pilihan \"Replikasi akaun sedia ada\".</string>
-    <string name="replication_remove">Buang hos</string>
-    <string name="replication_remove_title">Buang hos?</string>
+    <string name="replication_remove">Padamkan replika ini</string>
+    <string name="replication_remove_title">Padamkan replika ini?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikasi</string>
     <string name="system_replication_this_server">Pelayan ini</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Tidak pernah</string>
     <string name="replication_hosts_empty">Akaun ini hanya pada pelayan ini.</string>
     <string name="replication_added">Ditambah %1$s</string>
-    <string name="replication_remove_message">Pelayan ini akan berhenti mereplikasi akaun anda ke hos itu.</string>
+    <string name="replication_remove_message">Data akaun anda pada hos ini akan dipadamkan secara kekal. Akaun anda kekal pada hos anda yang lain.</string>
     <string name="settings_home_system_replication">Replikasi (pelayan)</string>
     <string name="system_replication_pair_empty_hint">Pasangkan dengan pelayan lain yang baru dipasang menggunakan \"mochictl replica join &lt;existing-peer-id&gt;\" pada pelayan baru.</string>
     <string name="route_delete_message">Ini akan mengalih keluar laluan bagi laluan \"%1$s\".</string>

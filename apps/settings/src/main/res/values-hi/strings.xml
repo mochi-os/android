@@ -56,8 +56,8 @@
     <string name="replication_deny">अस्वीकार करें</string>
     <string name="replication_hosts_title">मेरे होस्ट</string>
     <string name="replication_hosts_empty_hint">इसे दूसरे सर्वर पर प्रतिकृति बनाने के लिए, वहाँ एक खाते के लिए साइन अप करें और \"मौजूदा खाते की प्रतिकृति बनाएँ\" विकल्प का उपयोग करें।</string>
-    <string name="replication_remove">होस्ट हटाएँ</string>
-    <string name="replication_remove_title">होस्ट हटाएँ?</string>
+    <string name="replication_remove">इस प्रतिकृति को हटाएं</string>
+    <string name="replication_remove_title">इस प्रतिकृति को हटाएं?</string>
     <string name="settings_home_section_system">सिस्टम</string>
     <string name="system_replication_title">प्रतिकृति</string>
     <string name="system_replication_this_server">यह सर्वर</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">कभी नहीं</string>
     <string name="replication_hosts_empty">यह खाता केवल इस सर्वर पर है।</string>
     <string name="replication_added">जोड़ा गया %1$s</string>
-    <string name="replication_remove_message">यह सर्वर आपके खाते को उस होस्ट पर दोहराना बंद कर देगा।</string>
+    <string name="replication_remove_message">इस होस्ट पर आपके खाते का डेटा स्थायी रूप से हटा दिया जाएगा। आपका खाता आपके अन्य होस्ट पर बना रहता है।</string>
     <string name="settings_home_system_replication">प्रतिकृति (सर्वर)</string>
     <string name="system_replication_pair_empty_hint">नए सर्वर पर \"mochictl replica join &lt;existing-peer-id&gt;\" का उपयोग करके किसी अन्य नए स्थापित सर्वर के साथ जोड़ें।</string>
     <string name="route_delete_message">यह पथ \"%1$s\" के लिए मार्ग हटा देगा।</string>

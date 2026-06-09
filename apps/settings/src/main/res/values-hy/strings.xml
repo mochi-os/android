@@ -56,8 +56,8 @@
     <string name="replication_deny">Մերժել</string>
     <string name="replication_hosts_title">Իմ հոսթերը</string>
     <string name="replication_hosts_empty_hint">Այն մեկ այլ սերվեր կրկնապատկելու համար, գրանցվեք այնտեղ հաշվի համար և օգտագործեք \"Կրկնապատկել գոյություն ունեցող հաշիվը\" տարբերակը:</string>
-    <string name="replication_remove">Հեռացնել հոսթը</string>
-    <string name="replication_remove_title">Հեռացնե՞լ հոսթը։</string>
+    <string name="replication_remove">Ջնջել այս կրկնօրինակը</string>
+    <string name="replication_remove_title">Ջնջե՞լ այս կրկնօրինակը</string>
     <string name="settings_home_section_system">Համակարգ</string>
     <string name="system_replication_title">Կրկնապատկում</string>
     <string name="system_replication_this_server">Այս սերվերը</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Երբեք</string>
     <string name="replication_hosts_empty">Այս հաշիվը միայն այս սերվերում է։</string>
     <string name="replication_added">Ավելացվել է %1$s</string>
-    <string name="replication_remove_message">Այս սերվերը կդադարեցնի ձեր հաշվի կրկնօրինակումը այդ հոստի վրա։</string>
+    <string name="replication_remove_message">Այս հոսթի վրա ձեր հաշվի տվյալները մշտապես կջնջվեն։ Ձեր հաշիվը մնում է ձեր մյուս հոսթերի վրա։</string>
     <string name="settings_home_system_replication">Կրկնօրինակում (սերվեր)</string>
     <string name="system_replication_pair_empty_hint">Միացրեք մեկ այլ թարմ տեղակայված սերվերի հետ՝ օգտագործելով \"mochictl replica join &lt;existing-peer-id&gt;\" նոր սերվերում։</string>
     <string name="route_delete_message">Սա կհեռացնի ուղին \"%1$s\" արահետի համար։</string>

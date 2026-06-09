@@ -56,8 +56,8 @@
     <string name="replication_deny">Tanggihan</string>
     <string name="replication_hosts_title">Mga host ko</string>
     <string name="replication_hosts_empty_hint">Upang i-replicate ito sa ibang server, mag-sign up para sa account doon at gamitin ang opsyon na \"I-replicate ang isang umiiral nang account\".</string>
-    <string name="replication_remove">Alisin ang host</string>
-    <string name="replication_remove_title">Alisin ang host?</string>
+    <string name="replication_remove">Burahin ang replica na ito</string>
+    <string name="replication_remove_title">Burahin ang replica na ito?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Pagpaparami</string>
     <string name="system_replication_this_server">Ang server na ito</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Hindi kailanman</string>
     <string name="replication_hosts_empty">Ang account na ito ay nasa server lamang na ito.</string>
     <string name="replication_added">Nadagdag %1$s</string>
-    <string name="replication_remove_message">Ihihinto ng server na ito ang pagre-replicate ng iyong account sa host na iyon.</string>
+    <string name="replication_remove_message">Permanenteng buburahin ang data ng iyong account sa host na ito. Mananatili ang iyong account sa iyong iba pang mga host.</string>
     <string name="settings_home_system_replication">Replikasyon (server)</string>
     <string name="system_replication_pair_empty_hint">Magpares sa isa pang bagong na-install na server gamit ang \"mochictl replica join &lt;existing-peer-id&gt;\" sa bagong server.</string>
     <string name="route_delete_message">Aalisin nito ang ruta para sa path na \"%1$s\".</string>

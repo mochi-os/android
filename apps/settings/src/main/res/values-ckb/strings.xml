@@ -56,8 +56,8 @@
     <string name="replication_deny">ڕەتکردنەوە</string>
     <string name="replication_hosts_title">میوانداڕەکانم</string>
     <string name="replication_hosts_empty_hint">بۆ ئاراستەکردنی بۆ ڕاژەکارێکی تر، لەوێ هەژمارێک دروست بکە و هەڵبژاردەی \"ڕیپلیکەیشنی هەژمارێکی هەبوو\" بەکاربهێنە.</string>
-    <string name="replication_remove">میوانداڕ لاببە</string>
-    <string name="replication_remove_title">میوانداڕ لاببرێت؟</string>
+    <string name="replication_remove">ئەم وێنەکراوە بسڕەوە</string>
+    <string name="replication_remove_title">ئەم وێنەکراوە بسڕێتەوە؟</string>
     <string name="settings_home_section_system">سیستەم</string>
     <string name="system_replication_title">ڕیپلیکەیشن</string>
     <string name="system_replication_this_server">ئەم ڕاژەکارە</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">هەرگیز</string>
     <string name="replication_hosts_empty">ئەم ھەژمارە تەنھا لەسەر ئەم سێرڤەرەیە.</string>
     <string name="replication_added">زیادکرا %1$s</string>
-    <string name="replication_remove_message">ئەم سێرڤەرە کۆپیکردنی ھەژمارەکەت بۆ ئەو خانەوادە ڕادەوەستێنێت.</string>
+    <string name="replication_remove_message">داتای هەژمارەکەت لەسەر ئەم هۆستە بە هەمیشەیی دەسڕێتەوە. هەژمارەکەت لەسەر هۆستە دیکەکانت دەمێنێتەوە.</string>
     <string name="settings_home_system_replication">کۆپیکردن (سێرڤەر)</string>
     <string name="system_replication_pair_empty_hint">لەسەر سێرڤەری نوێ \"mochictl replica join &lt;existing-peer-id&gt;\" بەکاربھێنە بۆ جووتکردن لەگەڵ سێرڤەرێکی تری تازە دامەزراو.</string>
     <string name="route_delete_message">ئەمە ڕێگای \"%1$s\" لادەبات.</string>

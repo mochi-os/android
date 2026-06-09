@@ -56,8 +56,8 @@
     <string name="replication_deny">Рад кардан</string>
     <string name="replication_hosts_title">Мизбонҳои ман</string>
     <string name="replication_hosts_empty_hint">Барои такрорсозии он ба сервери дигар, дар он ҷо ҳисоб эҷод кунед ва аз гузинаи \"Такрорсозии ҳисоби мавҷуда\" истифода баред.</string>
-    <string name="replication_remove">Мизбонро тоза кардан</string>
-    <string name="replication_remove_title">Мизбонро тоза кунем?</string>
+    <string name="replication_remove">Ин нусхаро нест кунед</string>
+    <string name="replication_remove_title">Ин нусхаро нест мекунед?</string>
     <string name="settings_home_section_system">Система</string>
     <string name="system_replication_title">Такрорсозӣ</string>
     <string name="system_replication_this_server">Ин сервер</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Ҳеҷ гоҳ</string>
     <string name="replication_hosts_empty">Ин ҳисоб танҳо дар ин сервер аст.</string>
     <string name="replication_added">Илова шуд %1$s</string>
-    <string name="replication_remove_message">Ин сервер нусхабардории ҳисоби шуморо ба он хост қатъ мекунад.</string>
+    <string name="replication_remove_message">Маълумоти ҳисоби шумо дар ин мизбон ба таври доимӣ нест карда мешавад. Ҳисоби шумо дар мизбонҳои дигаратон боқӣ мемонад.</string>
     <string name="settings_home_system_replication">Нусхабардорӣ (сервер)</string>
     <string name="system_replication_pair_empty_hint">Дар сервери нав бо \"mochictl replica join &lt;existing-peer-id&gt;\" истифода карда бо сервери дигари тоза насбшуда ҷуфт кунед.</string>
     <string name="route_delete_message">Ин роҳро барои масири \"%1$s\" нест мекунад.</string>

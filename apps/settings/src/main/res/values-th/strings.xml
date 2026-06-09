@@ -56,8 +56,8 @@
     <string name="replication_deny">ปฏิเสธ</string>
     <string name="replication_hosts_title">โฮสต์ของฉัน</string>
     <string name="replication_hosts_empty_hint">เพื่อทำซ้ำไปยังเซิร์ฟเวอร์อื่น ลงทะเบียนบัญชีที่นั่นและใช้ตัวเลือก \"ทำซ้ำบัญชีที่มีอยู่\"</string>
-    <string name="replication_remove">ลบโฮสต์</string>
-    <string name="replication_remove_title">ลบโฮสต์?</string>
+    <string name="replication_remove">ลบเรพลิกานี้</string>
+    <string name="replication_remove_title">ลบเรพลิกานี้หรือไม่?</string>
     <string name="settings_home_section_system">ระบบ</string>
     <string name="system_replication_title">การจำลอง</string>
     <string name="system_replication_this_server">เซิร์ฟเวอร์นี้</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ไม่เลย</string>
     <string name="replication_hosts_empty">บัญชีนี้อยู่บนเซิร์ฟเวอร์นี้เท่านั้น</string>
     <string name="replication_added">เพิ่ม %1$s</string>
-    <string name="replication_remove_message">เซิร์ฟเวอร์นี้จะหยุดทำซ้ำบัญชีของคุณไปยังโฮสต์นั้น</string>
+    <string name="replication_remove_message">ข้อมูลบัญชีของคุณบนโฮสต์นี้จะถูกลบอย่างถาวร บัญชีของคุณยังคงอยู่บนโฮสต์อื่นของคุณ</string>
     <string name="settings_home_system_replication">การทำซ้ำ (เซิร์ฟเวอร์)</string>
     <string name="system_replication_pair_empty_hint">จับคู่กับเซิร์ฟเวอร์ที่ติดตั้งใหม่อื่นโดยใช้ \"mochictl replica join &lt;existing-peer-id&gt;\" บนเซิร์ฟเวอร์ใหม่</string>
     <string name="route_delete_message">การกระทำนี้จะลบเส้นทางสำหรับเส้นทาง \"%1$s\"</string>

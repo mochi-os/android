@@ -56,8 +56,8 @@
     <string name="replication_deny">નકારો</string>
     <string name="replication_hosts_title">મારા હોસ્ટ</string>
     <string name="replication_hosts_empty_hint">તેને બીજા સર્વર પર પ્રતિકૃતિ બનાવવા માટે, ત્યાં એક એકાઉન્ટ માટે સાઇન અપ કરો અને \"હાલના એકાઉન્ટની પ્રતિકૃતિ બનાવો\" વિકલ્પનો ઉપયોગ કરો.</string>
-    <string name="replication_remove">હોસ્ટ દૂર કરો</string>
-    <string name="replication_remove_title">હોસ્ટ દૂર કરવો?</string>
+    <string name="replication_remove">આ પ્રતિકૃતિ કાઢી નાખો</string>
+    <string name="replication_remove_title">આ પ્રતિકૃતિ કાઢી નાખવી છે?</string>
     <string name="settings_home_section_system">સિસ્ટમ</string>
     <string name="system_replication_title">પ્રતિકૃતિ</string>
     <string name="system_replication_this_server">આ સર્વર</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ક્યારેય નહીં</string>
     <string name="replication_hosts_empty">આ ખાતું માત્ર આ સર્વર પર છે.</string>
     <string name="replication_added">ઉમેર્યું %1$s</string>
-    <string name="replication_remove_message">આ સર્વર તે હોસ્ટ પર તમારા ખાતાની નકલ બંધ કરશે.</string>
+    <string name="replication_remove_message">આ હોસ્ટ પરનો તમારા ખાતાનો ડેટા કાયમ માટે કાઢી નાખવામાં આવશે. તમારું ખાતું તમારા અન્ય હોસ્ટ પર રહે છે.</string>
     <string name="settings_home_system_replication">નકલ (સર્વર)</string>
     <string name="system_replication_pair_empty_hint">નવા સર્વર પર \"mochictl replica join &lt;existing-peer-id&gt;\" નો ઉપયોગ કરીને બીજા તાજા ઇન્સ્ટોલ થયેલ સર્વર સાથે જોડો.</string>
     <string name="route_delete_message">આ માર્ગ \"%1$s\" માટેનો રૂટ દૂર કરશે.</string>

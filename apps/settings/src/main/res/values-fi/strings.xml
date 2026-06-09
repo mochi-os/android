@@ -56,8 +56,8 @@
     <string name="replication_deny">Estä</string>
     <string name="replication_hosts_title">Omat isäntäni</string>
     <string name="replication_hosts_empty_hint">Replikoidaksesi sen toiselle palvelimelle, rekisteröi siellä tili ja käytä \"Replikoi olemassa oleva tili\" -vaihtoehtoa.</string>
-    <string name="replication_remove">Poista isäntä</string>
-    <string name="replication_remove_title">Poistetaanko isäntä?</string>
+    <string name="replication_remove">Poista tämä repliikka</string>
+    <string name="replication_remove_title">Poistetaanko tämä repliikka?</string>
     <string name="settings_home_section_system">Järjestelmä</string>
     <string name="system_replication_title">Replikointi</string>
     <string name="system_replication_this_server">Tämä palvelin</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Ei koskaan</string>
     <string name="replication_hosts_empty">Tämä tili on vain tällä palvelimella.</string>
     <string name="replication_added">Lisätty %1$s</string>
-    <string name="replication_remove_message">Tämä palvelin lopettaa tilisi replikoinnin tuolle isännälle.</string>
+    <string name="replication_remove_message">Tilisi tiedot tällä isännällä poistetaan pysyvästi. Tilisi säilyy muilla isännilläsi.</string>
     <string name="settings_home_system_replication">Replikointi (palvelin)</string>
     <string name="system_replication_pair_empty_hint">Pariliitä toisen vasta-asennetun palvelimen kanssa käyttämällä \"mochictl replica join &lt;existing-peer-id&gt;\" uudessa palvelimessa.</string>
     <string name="route_delete_message">Tämä poistaa reitin polulle \"%1$s\".</string>

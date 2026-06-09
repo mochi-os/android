@@ -56,8 +56,8 @@
     <string name="replication_deny">Nega</string>
     <string name="replication_hosts_title">I miei host</string>
     <string name="replication_hosts_empty_hint">Per replicarlo su un altro server, registrati per un account lì e usa l\'opzione \"Replica un account esistente\".</string>
-    <string name="replication_remove">Rimuovi host</string>
-    <string name="replication_remove_title">Rimuovere l\'host?</string>
+    <string name="replication_remove">Elimina questa replica</string>
+    <string name="replication_remove_title">Eliminare questa replica?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicazione</string>
     <string name="system_replication_this_server">Questo server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Mai</string>
     <string name="replication_hosts_empty">Questo account è solo su questo server.</string>
     <string name="replication_added">Aggiunto %1$s</string>
-    <string name="replication_remove_message">Questo server smetterà di replicare il tuo account a quell\'host.</string>
+    <string name="replication_remove_message">I dati del tuo account su questo host saranno eliminati definitivamente. Il tuo account rimane sugli altri host.</string>
     <string name="settings_home_system_replication">Replica (server)</string>
     <string name="system_replication_pair_empty_hint">Accoppia con un altro server appena installato usando «mochictl replica join &lt;existing-peer-id&gt;» sul nuovo server.</string>
     <string name="route_delete_message">Questo rimuoverà il percorso per il path «%1$s».</string>

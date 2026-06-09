@@ -56,8 +56,8 @@
     <string name="replication_deny">Бас тарту</string>
     <string name="replication_hosts_title">Менің хосттарым</string>
     <string name="replication_hosts_empty_hint">Оны басқа серверге репликациялау үшін, сонда тіркелгі ашыңыз және \"Бар тіркелгіні репликациялау\" опциясын пайдаланыңыз.</string>
-    <string name="replication_remove">Хостты жою</string>
-    <string name="replication_remove_title">Хостты жою керек пе?</string>
+    <string name="replication_remove">Бұл репликаны жою</string>
+    <string name="replication_remove_title">Бұл репликаны жою керек пе?</string>
     <string name="settings_home_section_system">Жүйе</string>
     <string name="system_replication_title">Репликация</string>
     <string name="system_replication_this_server">Бұл сервер</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Ешқашан</string>
     <string name="replication_hosts_empty">Бұл тіркелгі тек осы серверде.</string>
     <string name="replication_added">Қосылды %1$s</string>
-    <string name="replication_remove_message">Бұл сервер сіздің тіркелгіңізді ол хостқа репликалауды тоқтатады.</string>
+    <string name="replication_remove_message">Осы хосттағы тіркелгіңіздің деректері біржола жойылады. Тіркелгіңіз басқа хосттарда қалады.</string>
     <string name="settings_home_system_replication">Репликация (сервер)</string>
     <string name="system_replication_pair_empty_hint">Жаңа серверде \"mochictl replica join &lt;existing-peer-id&gt;\" пайдалану арқылы басқа жаңа орнатылған сервермен жұптастырыңыз.</string>
     <string name="route_delete_message">Бұл \"%1$s\" жолы үшін бағытты жояды.</string>

@@ -56,8 +56,8 @@
     <string name="replication_deny">Zamítnout</string>
     <string name="replication_hosts_title">Moji hostitelé</string>
     <string name="replication_hosts_empty_hint">Chcete-li jej replikovat na jiný server, zaregistrujte se tam k účtu a použijte volbu \"Replikovat existující účet\".</string>
-    <string name="replication_remove">Odebrat hostitele</string>
-    <string name="replication_remove_title">Odebrat hostitele?</string>
+    <string name="replication_remove">Smazat tuto repliku</string>
+    <string name="replication_remove_title">Smazat tuto repliku?</string>
     <string name="settings_home_section_system">Systém</string>
     <string name="system_replication_title">Replikace</string>
     <string name="system_replication_this_server">Tento server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nikdy</string>
     <string name="replication_hosts_empty">Tento účet je pouze na tomto serveru.</string>
     <string name="replication_added">Přidáno %1$s</string>
-    <string name="replication_remove_message">Tento server přestane replikovat váš účet na toho hostitele.</string>
+    <string name="replication_remove_message">Data vašeho účtu na tomto hostiteli budou trvale smazána. Váš účet zůstane na vašich ostatních hostitelích.</string>
     <string name="settings_home_system_replication">Replikace (server)</string>
     <string name="system_replication_pair_empty_hint">Spárujte s jiným čerstvě nainstalovaným serverem pomocí \"mochictl replica join &lt;existing-peer-id&gt;\" na novém serveru.</string>
     <string name="route_delete_message">Tímto se odstraní trasa pro cestu \"%1$s\".</string>

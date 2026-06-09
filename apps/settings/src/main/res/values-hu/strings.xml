@@ -56,8 +56,8 @@
     <string name="replication_deny">Megtagadás</string>
     <string name="replication_hosts_title">Saját gazdagépeim</string>
     <string name="replication_hosts_empty_hint">Egy másik szerverre való replikációhoz regisztrálj egy fiókot ott, és használd a \"Meglévő fiók replikációja\" opciót.</string>
-    <string name="replication_remove">Gazdagép eltávolítása</string>
-    <string name="replication_remove_title">Eltávolítja a gazdagépet?</string>
+    <string name="replication_remove">Replika törlése</string>
+    <string name="replication_remove_title">Törli ezt a replikát?</string>
     <string name="settings_home_section_system">Rendszer</string>
     <string name="system_replication_title">Replikáció</string>
     <string name="system_replication_this_server">Ez a kiszolgáló</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Soha</string>
     <string name="replication_hosts_empty">Ez a fiók csak ezen a szerveren van.</string>
     <string name="replication_added">Hozzáadva %1$s</string>
-    <string name="replication_remove_message">Ez a szerver leállítja a fiók replikálását arra a gazdára.</string>
+    <string name="replication_remove_message">Fiókja ezen a kiszolgálón tárolt adatait véglegesen töröljük. Fiókja megmarad a többi kiszolgálóján.</string>
     <string name="settings_home_system_replication">Replikáció (szerver)</string>
     <string name="system_replication_pair_empty_hint">Párosítsa egy másik frissen telepített szerverrel a „mochictl replica join &lt;existing-peer-id&gt;\" parancs használatával az új szerveren.</string>
     <string name="route_delete_message">Ez eltávolítja az útvonalat a(z) „%1$s\" útvonalhoz.</string>

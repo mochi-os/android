@@ -56,8 +56,8 @@
     <string name="replication_deny">Gwrthod</string>
     <string name="replication_hosts_title">Fy ngwesteion</string>
     <string name="replication_hosts_empty_hint">I\'w atgynhyrchu i weinydd arall, cofrestrwch ar gyfer cyfrif yno a defnyddiwch yr opsiwn \"Atgynhyrchu cyfrif sy\'n bodoli\".</string>
-    <string name="replication_remove">Tynnu\'r gwesteiwr</string>
-    <string name="replication_remove_title">Tynnu\'r gwesteiwr?</string>
+    <string name="replication_remove">Dileu\'r replica hwn</string>
+    <string name="replication_remove_title">Dileu\'r replica hwn?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Atgynhyrchu</string>
     <string name="system_replication_this_server">Y gweinydd hwn</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Byth</string>
     <string name="replication_hosts_empty">Mae\'r cyfrif hwn ar y gweinydd hwn yn unig.</string>
     <string name="replication_added">Ychwanegwyd %1$s</string>
-    <string name="replication_remove_message">Bydd y gweinydd hwn yn rhoi\'r gorau i ddyblygu eich cyfrif i\'r gwesteiwr hwnnw.</string>
+    <string name="replication_remove_message">Bydd data eich cyfrif ar y gwesteiwr hwn yn cael ei ddileu\'n barhaol. Mae eich cyfrif yn aros ar eich gwesteiwyr eraill.</string>
     <string name="settings_home_system_replication">Dyblygu (gweinydd)</string>
     <string name="system_replication_pair_empty_hint">Parwch gyda gweinydd arall newydd wedi\'i osod gan ddefnyddio \"mochictl replica join &lt;existing-peer-id&gt;\" ar y gweinydd newydd.</string>
     <string name="route_delete_message">Bydd hyn yn tynnu\'r llwybr ar gyfer y llwybr \"%1$s\".</string>

@@ -56,8 +56,8 @@
     <string name="replication_deny">నిరాకరించండి</string>
     <string name="replication_hosts_title">నా హోస్ట్‌లు</string>
     <string name="replication_hosts_empty_hint">దానిని మరొక సర్వర్‌కు ప్రతిరూపించడానికి, అక్కడ ఖాతా కోసం సైన్ అప్ చేయండి మరియు \"ఇప్పటికే ఉన్న ఖాతాను ప్రతిరూపించండి\" ఎంపికను ఉపయోగించండి.</string>
-    <string name="replication_remove">హోస్ట్ తొలగించండి</string>
-    <string name="replication_remove_title">హోస్ట్‌ను తొలగించాలా?</string>
+    <string name="replication_remove">ఈ ప్రతిరూపాన్ని తొలగించు</string>
+    <string name="replication_remove_title">ఈ ప్రతిరూపాన్ని తొలగించాలా?</string>
     <string name="settings_home_section_system">సిస్టమ్</string>
     <string name="system_replication_title">ప్రతిరూపణ</string>
     <string name="system_replication_this_server">ఈ సర్వర్</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ఎప్పుడూ లేదు</string>
     <string name="replication_hosts_empty">ఈ ఖాతా ఈ సర్వర్‌లో మాత్రమే ఉంది.</string>
     <string name="replication_added">జోడించబడింది %1$s</string>
-    <string name="replication_remove_message">ఈ సర్వర్ ఆ హోస్ట్‌కి మీ ఖాతాను నకలు చేయడం ఆపివేస్తుంది.</string>
+    <string name="replication_remove_message">ఈ హోస్ట్‌లోని మీ ఖాతా డేటా శాశ్వతంగా తొలగించబడుతుంది. మీ ఖాతా మీ ఇతర హోస్ట్‌లలో ఉంటుంది.</string>
     <string name="settings_home_system_replication">నకలు (సర్వర్)</string>
     <string name="system_replication_pair_empty_hint">కొత్త సర్వర్‌లో \"mochictl replica join &lt;existing-peer-id&gt;\" ఉపయోగించి మరొక తాజాగా ఇన్‌స్టాల్ చేయబడిన సర్వర్‌తో జతచేయండి.</string>
     <string name="route_delete_message">ఇది మార్గం \"%1$s\" కోసం రూట్‌ను తొలగిస్తుంది.</string>

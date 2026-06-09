@@ -56,8 +56,8 @@
     <string name="replication_deny">Yenqaba</string>
     <string name="replication_hosts_title">Abasingathi bami</string>
     <string name="replication_hosts_empty_hint">Ukuze uyiphindaphinde kwenye iseva, bhalisela i-akhawunti lapho bese usebenzisa inketho yokuthi \"Phindaphinda i-akhawunti ekhona\".</string>
-    <string name="replication_remove">Susa umsingathi</string>
-    <string name="replication_remove_title">Susa umsingathi?</string>
+    <string name="replication_remove">Susa le khophi</string>
+    <string name="replication_remove_title">Susa le khophi?</string>
     <string name="settings_home_section_system">Isistimu</string>
     <string name="system_replication_title">Ukuphindaphinda</string>
     <string name="system_replication_this_server">Le seva</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Akekho</string>
     <string name="replication_hosts_empty">Le akhawunti ikulesi seva kuphela.</string>
     <string name="replication_added">Kwengeziwe %1$s</string>
-    <string name="replication_remove_message">Le seva izoyeka ukukopisha i-akhawunti yakho kulowo mhleli.</string>
+    <string name="replication_remove_message">Idatha ye-akhawunti yakho kule host izosuswa unomphela. I-akhawunti yakho ihlala kwamanye ama-host akho.</string>
     <string name="settings_home_system_replication">Ukukopisha (iseva)</string>
     <string name="system_replication_pair_empty_hint">Hlanganisa neyo enye iseva entsha efakwe nge-\"mochictl replica join &lt;existing-peer-id&gt;\" kwiseva entsha.</string>
     <string name="route_delete_message">Lokhu kuzosusa irawudi yendlela \"%1$s\".</string>

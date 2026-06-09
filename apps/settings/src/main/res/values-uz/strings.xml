@@ -56,8 +56,8 @@
     <string name="replication_deny">Rad etish</string>
     <string name="replication_hosts_title">Mening hostlarim</string>
     <string name="replication_hosts_empty_hint">Uni boshqa serverga ko\'chirish uchun, u yerda hisob ochib, \"Mavjud hisobni replikatsiya qilish\" variantidan foydalaning.</string>
-    <string name="replication_remove">Hostni o\'chirish</string>
-    <string name="replication_remove_title">Host o\'chirilsinmi?</string>
+    <string name="replication_remove">Bu nusxani oʻchirish</string>
+    <string name="replication_remove_title">Bu nusxa oʻchirilsinmi?</string>
     <string name="settings_home_section_system">Tizim</string>
     <string name="system_replication_title">Replikatsiya</string>
     <string name="system_replication_this_server">Ushbu server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Hech qachon</string>
     <string name="replication_hosts_empty">Bu hisob faqat shu serverda.</string>
     <string name="replication_added">Qoʻshildi %1$s</string>
-    <string name="replication_remove_message">Ushbu server hisobingizni oʻsha hostga replikatsiyalashni toʻxtatadi.</string>
+    <string name="replication_remove_message">Bu xostdagi hisob maʼlumotlaringiz butunlay oʻchiriladi. Hisobingiz boshqa xostlaringizda saqlanib qoladi.</string>
     <string name="settings_home_system_replication">Replikatsiya (server)</string>
     <string name="system_replication_pair_empty_hint">Yangi serverda \"mochictl replica join &lt;existing-peer-id&gt;\" yordamida boshqa yangi oʻrnatilgan server bilan juftlang.</string>
     <string name="route_delete_message">Bu yoʻl \"%1$s\" uchun marshrutni olib tashlaydi.</string>

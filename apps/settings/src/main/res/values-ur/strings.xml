@@ -56,8 +56,8 @@
     <string name="replication_deny">مسترد کریں</string>
     <string name="replication_hosts_title">میرے ہوسٹ</string>
     <string name="replication_hosts_empty_hint">اسے کسی دوسرے سرور پر نقل کرنے کے لیے، وہاں اکاؤنٹ کے لیے سائن اپ کریں اور \"موجودہ اکاؤنٹ کو نقل کریں\" آپشن استعمال کریں۔</string>
-    <string name="replication_remove">ہوسٹ ہٹائیں</string>
-    <string name="replication_remove_title">ہوسٹ ہٹائیں؟</string>
+    <string name="replication_remove">یہ ریپلیکا حذف کریں</string>
+    <string name="replication_remove_title">یہ ریپلیکا حذف کریں؟</string>
     <string name="settings_home_section_system">سسٹم</string>
     <string name="system_replication_title">نقل</string>
     <string name="system_replication_this_server">یہ سرور</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">کبھی نہیں</string>
     <string name="replication_hosts_empty">یہ اکاؤنٹ صرف اس سرور پر ہے۔</string>
     <string name="replication_added">شامل کیا %1$s</string>
-    <string name="replication_remove_message">یہ سرور آپ کے اکاؤنٹ کو اس میزبان پر نقل کرنا بند کر دے گا۔</string>
+    <string name="replication_remove_message">اس ہوسٹ پر آپ کے اکاؤنٹ کا ڈیٹا مستقل طور پر حذف کر دیا جائے گا۔ آپ کا اکاؤنٹ آپ کے دیگر ہوسٹس پر برقرار رہے گا۔</string>
     <string name="settings_home_system_replication">نقل (سرور)</string>
     <string name="system_replication_pair_empty_hint">نئے سرور پر \"mochictl replica join &lt;existing-peer-id&gt;\" استعمال کرکے کسی دوسرے تازہ نصب شدہ سرور کے ساتھ جوڑیں۔</string>
     <string name="route_delete_message">یہ راستے \"%1$s\" کا روٹ ہٹا دے گا۔</string>

@@ -56,8 +56,8 @@
     <string name="replication_deny">ਇਨਕਾਰ ਕਰੋ</string>
     <string name="replication_hosts_title">ਮੇਰੇ ਹੋਸਟ</string>
     <string name="replication_hosts_empty_hint">ਇਸਨੂੰ ਕਿਸੇ ਹੋਰ ਸਰਵਰ ਉੱਤੇ ਪ੍ਰਤੀਕ੍ਰਿਤੀ ਬਣਾਉਣ ਲਈ, ਉੱਥੇ ਖਾਤੇ ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ ਅਤੇ \"ਮੌਜੂਦਾ ਖਾਤੇ ਦੀ ਪ੍ਰਤੀਕ੍ਰਿਤੀ ਬਣਾਓ\" ਵਿਕਲਪ ਵਰਤੋ।</string>
-    <string name="replication_remove">ਹੋਸਟ ਹਟਾਓ</string>
-    <string name="replication_remove_title">ਹੋਸਟ ਹਟਾਉਣਾ ਹੈ?</string>
+    <string name="replication_remove">ਇਹ ਰਿਪਲੀਕਾ ਮਿਟਾਓ</string>
+    <string name="replication_remove_title">ਇਹ ਰਿਪਲੀਕਾ ਮਿਟਾਉਣੀ ਹੈ?</string>
     <string name="settings_home_section_system">ਸਿਸਟਮ</string>
     <string name="system_replication_title">ਪ੍ਰਤੀਕ੍ਰਿਤੀ</string>
     <string name="system_replication_this_server">ਇਹ ਸਰਵਰ</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ਕਦੇ ਨਹੀਂ</string>
     <string name="replication_hosts_empty">ਇਹ ਖਾਤਾ ਸਿਰਫ਼ ਇਸ ਸਰਵਰ \'ਤੇ ਹੈ।</string>
     <string name="replication_added">ਜੋੜਿਆ ਗਿਆ %1$s</string>
-    <string name="replication_remove_message">ਇਹ ਸਰਵਰ ਉਸ ਹੋਸਟ \'ਤੇ ਤੁਹਾਡੇ ਖਾਤੇ ਦੀ ਨਕਲ ਕਰਨਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ।</string>
+    <string name="replication_remove_message">ਇਸ ਹੋਸਟ \'ਤੇ ਤੁਹਾਡੇ ਖਾਤੇ ਦਾ ਡੇਟਾ ਪੱਕੇ ਤੌਰ \'ਤੇ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਤੁਹਾਡਾ ਖਾਤਾ ਤੁਹਾਡੇ ਹੋਰ ਹੋਸਟਾਂ \'ਤੇ ਬਣਿਆ ਰਹੇਗਾ।</string>
     <string name="settings_home_system_replication">ਨਕਲ (ਸਰਵਰ)</string>
     <string name="system_replication_pair_empty_hint">ਨਵੇਂ ਸਰਵਰ \'ਤੇ \"mochictl replica join &lt;existing-peer-id&gt;\" ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕਿਸੇ ਹੋਰ ਨਵੇਂ ਸਥਾਪਿਤ ਸਰਵਰ ਨਾਲ ਜੋੜੀ ਬਣਾਓ।</string>
     <string name="route_delete_message">ਇਹ ਮਾਰਗ \"%1$s\" ਲਈ ਰੂਟ ਹਟਾ ਦੇਵੇਗਾ।</string>

@@ -56,8 +56,8 @@
     <string name="replication_deny">ප්‍රතික්ෂේප කරන්න</string>
     <string name="replication_hosts_title">මගේ සත්කාරක</string>
     <string name="replication_hosts_empty_hint">එය වෙනත් සර්වරයකට ප්‍රතිවර්තනය කිරීමට, එහි ගිණුමක් සඳහා ලියාපදිංචි වී \"පවතින ගිණුමක් ප්‍රතිවර්තනය කරන්න\" විකල්පය භාවිතා කරන්න.</string>
-    <string name="replication_remove">සත්කාරකය ඉවත් කරන්න</string>
-    <string name="replication_remove_title">සත්කාරකය ඉවත් කරන්නද?</string>
+    <string name="replication_remove">මෙම අනුරුව මකන්න</string>
+    <string name="replication_remove_title">මෙම අනුරුව මකන්නද?</string>
     <string name="settings_home_section_system">පද්ධතිය</string>
     <string name="system_replication_title">ප්‍රතිවර්තනය</string>
     <string name="system_replication_this_server">මෙම සේවාදායකය</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">කවදාවත්</string>
     <string name="replication_hosts_empty">මෙම ගිණුම මෙම සේවාදායකයේ පමණි.</string>
     <string name="replication_added">එකතු විය %1$s</string>
-    <string name="replication_remove_message">මෙම සේවාදායකය ඔබේ ගිණුම එම සත්කාරක වෙත අනුකරණය කිරීම නවත්වයි.</string>
+    <string name="replication_remove_message">මෙම ධාරකයේ ඇති ඔබගේ ගිණුමේ දත්ත ස්ථිරවම මකා දැමෙනු ඇත. ඔබගේ ගිණුම ඔබගේ අනෙකුත් ධාරක මත පවතී.</string>
     <string name="settings_home_system_replication">අනුකරණය (සේවාදායකය)</string>
     <string name="system_replication_pair_empty_hint">නව සේවාදායකයේ \"mochictl replica join &lt;existing-peer-id&gt;\" භාවිතයෙන් වෙනත් අලුතින් ස්ථාපනය කරන ලද සේවාදායකයකට යුගල කරන්න.</string>
     <string name="route_delete_message">මෙය \"%1$s\" මාර්ගය සඳහා රාවුට් එක ඉවත් කරයි.</string>

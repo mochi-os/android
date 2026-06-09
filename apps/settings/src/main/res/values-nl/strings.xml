@@ -56,8 +56,8 @@
     <string name="replication_deny">Weigeren</string>
     <string name="replication_hosts_title">Mijn hosts</string>
     <string name="replication_hosts_empty_hint">Om het naar een andere server te repliceren, maak daar een account aan en gebruik de optie \"Een bestaand account repliceren\".</string>
-    <string name="replication_remove">Host verwijderen</string>
-    <string name="replication_remove_title">Host verwijderen?</string>
+    <string name="replication_remove">Deze replica verwijderen</string>
+    <string name="replication_remove_title">Deze replica verwijderen?</string>
     <string name="settings_home_section_system">Systeem</string>
     <string name="system_replication_title">Replicatie</string>
     <string name="system_replication_this_server">Deze server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nooit</string>
     <string name="replication_hosts_empty">Dit account staat alleen op deze server.</string>
     <string name="replication_added">Toegevoegd %1$s</string>
-    <string name="replication_remove_message">Deze server stopt met het repliceren van je account naar die host.</string>
+    <string name="replication_remove_message">De gegevens van je account op deze host worden definitief verwijderd. Je account blijft op je andere hosts bestaan.</string>
     <string name="settings_home_system_replication">Replicatie (server)</string>
     <string name="system_replication_pair_empty_hint">Koppel met een andere vers geïnstalleerde server met «mochictl replica join &lt;existing-peer-id&gt;» op de nieuwe server.</string>
     <string name="route_delete_message">Hiermee wordt de route voor pad «%1$s» verwijderd.</string>

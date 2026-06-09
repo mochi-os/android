@@ -56,8 +56,8 @@
     <string name="replication_deny">மறு</string>
     <string name="replication_hosts_title">என் ஹோஸ்ட்கள்</string>
     <string name="replication_hosts_empty_hint">அதை மற்றொரு சேவையகத்திற்கு நகலெடுக்க, அங்கே ஒரு கணக்கிற்கு பதிவுசெய்து, \"ஏற்கனவே உள்ள கணக்கை நகலெடு\" விருப்பத்தைப் பயன்படுத்தவும்.</string>
-    <string name="replication_remove">ஹோஸ்டை அகற்று</string>
-    <string name="replication_remove_title">ஹோஸ்டை அகற்றவா?</string>
+    <string name="replication_remove">இந்த நகலை நீக்கு</string>
+    <string name="replication_remove_title">இந்த நகலை நீக்கவா?</string>
     <string name="settings_home_section_system">சிஸ்டம்</string>
     <string name="system_replication_title">நகலெடுப்பு</string>
     <string name="system_replication_this_server">இந்த சேவையகம்</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ஒருபோதும் இல்லை</string>
     <string name="replication_hosts_empty">இந்த கணக்கு இந்த சேவையகத்தில் மட்டுமே உள்ளது.</string>
     <string name="replication_added">சேர்க்கப்பட்டது %1$s</string>
-    <string name="replication_remove_message">இந்த சேவையகம் உங்கள் கணக்கை அந்த ஹோஸ்டிற்கு பிரதிபலிக்க நிறுத்தும்.</string>
+    <string name="replication_remove_message">இந்த ஓம்புநரில் உள்ள உங்கள் கணக்குத் தரவு நிரந்தரமாக நீக்கப்படும். உங்கள் கணக்கு உங்கள் மற்ற ஓம்புநர்களில் இருக்கும்.</string>
     <string name="settings_home_system_replication">பிரதிபலிப்பு (சேவையகம்)</string>
     <string name="system_replication_pair_empty_hint">புதிய சேவையகத்தில் \"mochictl replica join &lt;existing-peer-id&gt;\" பயன்படுத்தி மற்றொரு புதிதாக நிறுவப்பட்ட சேவையகத்துடன் இணைக்கவும்.</string>
     <string name="route_delete_message">இது பாதை \"%1$s\" க்கான வழியை அகற்றும்.</string>

@@ -272,9 +272,9 @@
     <string name="replication_hosts_empty">Denne kontoen finst berre på denne tenaren.</string>
     <string name="replication_hosts_empty_hint">For å replikere han til ein annan tenar, registrer ein konto der og bruk valet \"Replikere ein eksisterande konto\".</string>
     <string name="replication_added">Lagt til %1$s</string>
-    <string name="replication_remove">Fjern vert</string>
-    <string name="replication_remove_title">Fjerne vert?</string>
-    <string name="replication_remove_message">Denne tenaren vil slutte å replikere kontoen din til den verten.</string>
+    <string name="replication_remove">Slett denne replikaen</string>
+    <string name="replication_remove_title">Slette denne replikaen?</string>
+    <string name="replication_remove_message">Kontodataa di på denne verten blir sletta permanent. Kontoen din blir verande på dei andre vertane dine.</string>
     <string name="settings_home_system_replication">Replikering (tenar)</string>
     <string name="system_replication_title">Replikering</string>
     <string name="system_replication_this_server">Denne tenaren</string>

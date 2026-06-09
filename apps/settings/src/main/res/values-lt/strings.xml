@@ -56,8 +56,8 @@
     <string name="replication_deny">Atmesti</string>
     <string name="replication_hosts_title">Mano kompiuteriai</string>
     <string name="replication_hosts_empty_hint">Norėdami jį replikuoti į kitą serverį, užregistruokite ten paskyrą ir naudokite parinktį \"Replikuoti esamą paskyrą\".</string>
-    <string name="replication_remove">Pašalinti pagrindinį kompiuterį</string>
-    <string name="replication_remove_title">Pašalinti pagrindinį kompiuterį?</string>
+    <string name="replication_remove">Ištrinti šią repliką</string>
+    <string name="replication_remove_title">Ištrinti šią repliką?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replikacija</string>
     <string name="system_replication_this_server">Šis serveris</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Niekada</string>
     <string name="replication_hosts_empty">Ši paskyra yra tik šiame serveryje.</string>
     <string name="replication_added">Pridėta %1$s</string>
-    <string name="replication_remove_message">Šis serveris nustos kopijuoti jūsų paskyrą į tą serverį.</string>
+    <string name="replication_remove_message">Jūsų paskyros duomenys šiame serveryje bus visam laikui ištrinti. Jūsų paskyra lieka kituose serveriuose.</string>
     <string name="settings_home_system_replication">Replikacija (serveris)</string>
     <string name="system_replication_pair_empty_hint">Suporkite su kitu naujai įdiegtu serveriu naudodami \"mochictl replica join &lt;existing-peer-id&gt;\" naujame serveryje.</string>
     <string name="route_delete_message">Tai pašalins maršrutą kelio \"%1$s\".</string>

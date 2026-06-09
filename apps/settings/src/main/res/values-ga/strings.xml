@@ -56,8 +56,8 @@
     <string name="replication_deny">Diúltaigh</string>
     <string name="replication_hosts_title">Mo óstaigh</string>
     <string name="replication_hosts_empty_hint">Chun é a mhacasamhlú chuig freastalaí eile, cláraigh le haghaidh cuntais ann agus úsáid an rogha \"Cuntas atá ann a mhacasamhlú\".</string>
-    <string name="replication_remove">Bain an t-óstach</string>
-    <string name="replication_remove_title">An t-óstach a bhaint?</string>
+    <string name="replication_remove">Scrios an mhacasamhail seo</string>
+    <string name="replication_remove_title">Scrios an mhacasamhail seo?</string>
     <string name="settings_home_section_system">Córas</string>
     <string name="system_replication_title">Macasamhlú</string>
     <string name="system_replication_this_server">An freastalaí seo</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Riamh</string>
     <string name="replication_hosts_empty">Tá an cuntas seo ar an bhfreastalaí seo amháin.</string>
     <string name="replication_added">Curtha leis %1$s</string>
-    <string name="replication_remove_message">Stopfaidh an freastalaí seo do chuntas a mhacasamhlú chuig an óstach sin.</string>
+    <string name="replication_remove_message">Scriosfar sonraí do chuntais ar an óstach seo go buan. Fanann do chuntas ar do óstaigh eile.</string>
     <string name="settings_home_system_replication">Macasamhlú (freastalaí)</string>
     <string name="system_replication_pair_empty_hint">Péireáil le freastalaí eile a suiteáladh go nua le \"mochictl replica join &lt;existing-peer-id&gt;\" ar an bhfreastalaí nua.</string>
     <string name="route_delete_message">Bainfidh sé seo an cosán don chonair \"%1$s\".</string>

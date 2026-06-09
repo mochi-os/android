@@ -56,8 +56,8 @@
     <string name="replication_deny">ನಿರಾಕರಿಸಿ</string>
     <string name="replication_hosts_title">ನನ್ನ ಹೋಸ್ಟ್‌ಗಳು</string>
     <string name="replication_hosts_empty_hint">ಅದನ್ನು ಬೇರೆ ಸರ್ವರ್‌ಗೆ ಪ್ರತಿಕೃತಿ ಮಾಡಲು, ಅಲ್ಲಿ ಖಾತೆಗೆ ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು \"ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಖಾತೆಯನ್ನು ಪ್ರತಿಕೃತಿ ಮಾಡಿ\" ಆಯ್ಕೆಯನ್ನು ಬಳಸಿ.</string>
-    <string name="replication_remove">ಹೋಸ್ಟ್ ತೆಗೆದುಹಾಕಿ</string>
-    <string name="replication_remove_title">ಹೋಸ್ಟ್ ತೆಗೆದುಹಾಕುವುದೇ?</string>
+    <string name="replication_remove">ಈ ಪ್ರತಿಯನ್ನು ಅಳಿಸಿ</string>
+    <string name="replication_remove_title">ಈ ಪ್ರತಿಯನ್ನು ಅಳಿಸಬೇಕೆ?</string>
     <string name="settings_home_section_system">ಸಿಸ್ಟಮ್</string>
     <string name="system_replication_title">ಪ್ರತಿಕೃತಿ</string>
     <string name="system_replication_this_server">ಈ ಸರ್ವರ್</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>
     <string name="replication_hosts_empty">ಈ ಖಾತೆ ಈ ಸರ್ವರ್‌ನಲ್ಲಿ ಮಾತ್ರವಿದೆ.</string>
     <string name="replication_added">ಸೇರಿಸಲಾಗಿದೆ %1$s</string>
-    <string name="replication_remove_message">ಈ ಸರ್ವರ್ ಆ ಹೋಸ್ಟ್‌ಗೆ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪ್ರತಿಕೃತಿ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ.</string>
+    <string name="replication_remove_message">ಈ ಹೋಸ್ಟ್‌ನಲ್ಲಿನ ನಿಮ್ಮ ಖಾತೆಯ ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ಖಾತೆ ನಿಮ್ಮ ಇತರ ಹೋಸ್ಟ್‌ಗಳಲ್ಲಿ ಉಳಿಯುತ್ತದೆ.</string>
     <string name="settings_home_system_replication">ಪ್ರತಿಕೃತಿ (ಸರ್ವರ್)</string>
     <string name="system_replication_pair_empty_hint">ಹೊಸ ಸರ್ವರ್‌ನಲ್ಲಿ \"mochictl replica join &lt;existing-peer-id&gt;\" ಬಳಸಿಕೊಂಡು ಇನ್ನೊಂದು ಹೊಸದಾಗಿ ಸ್ಥಾಪಿಸಲಾದ ಸರ್ವರ್‌ನೊಂದಿಗೆ ಜೋಡಿಸಿ.</string>
     <string name="route_delete_message">ಇದು ಮಾರ್ಗ \"%1$s\" ಗಾಗಿನ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>

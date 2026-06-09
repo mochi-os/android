@@ -56,8 +56,8 @@
     <string name="replication_deny">უარყოფა</string>
     <string name="replication_hosts_title">ჩემი ჰოსტები</string>
     <string name="replication_hosts_empty_hint">სხვა სერვერზე მის რეპლიკაციისთვის დარეგისტრირდით იქ ანგარიშზე და გამოიყენეთ ვარიანტი \"არსებული ანგარიშის რეპლიკაცია\".</string>
-    <string name="replication_remove">ჰოსტის წაშლა</string>
-    <string name="replication_remove_title">ჰოსტი წაიშალოს?</string>
+    <string name="replication_remove">ამ რეპლიკის წაშლა</string>
+    <string name="replication_remove_title">წავშალოთ ეს რეპლიკა?</string>
     <string name="settings_home_section_system">სისტემა</string>
     <string name="system_replication_title">რეპლიკაცია</string>
     <string name="system_replication_this_server">ეს სერვერი</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">არასოდეს</string>
     <string name="replication_hosts_empty">ეს ანგარიში მხოლოდ ამ სერვერზეა.</string>
     <string name="replication_added">დამატებულია %1$s</string>
-    <string name="replication_remove_message">ეს სერვერი შეწყვეტს თქვენი ანგარიშის რეპლიკაციას იმ ჰოსტზე.</string>
+    <string name="replication_remove_message">თქვენი ანგარიშის მონაცემები ამ ჰოსტზე სამუდამოდ წაიშლება. თქვენი ანგარიში რჩება სხვა ჰოსტებზე.</string>
     <string name="settings_home_system_replication">რეპლიკაცია (სერვერი)</string>
     <string name="system_replication_pair_empty_hint">დააწყვილეთ სხვა ახლად დაყენებულ სერვერთან \"mochictl replica join &lt;existing-peer-id&gt;\" გამოყენებით ახალ სერვერზე.</string>
     <string name="route_delete_message">ეს წაშლის მარშრუტს გზისთვის \"%1$s\".</string>

@@ -113,9 +113,9 @@
     <string name="replication_hosts_empty">Ce compte se trouve uniquement sur ce serveur.</string>
     <string name="replication_hosts_empty_hint">Pour le répliquer sur un autre serveur, créez-y un compte et utilisez l\'option « Répliquer un compte existant ».</string>
     <string name="replication_added">Ajouté %1$s</string>
-    <string name="replication_remove">Retirer l\'hôte</string>
-    <string name="replication_remove_title">Retirer l\'hôte?</string>
-    <string name="replication_remove_message">Ce serveur cessera de répliquer votre compte vers cet hôte.</string>
+    <string name="replication_remove">Supprimer cette réplique</string>
+    <string name="replication_remove_title">Supprimer cette réplique?</string>
+    <string name="replication_remove_message">Les données de votre compte sur cet hôte seront supprimées définitivement. Votre compte demeure sur vos autres hôtes.</string>
     <string name="settings_home_system_replication">Réplication (serveur)</string>
     <string name="settings_home_section_system">Système</string>
     <string name="system_replication_title">Réplication</string>

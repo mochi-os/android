@@ -56,8 +56,8 @@
     <string name="replication_deny">Tolak</string>
     <string name="replication_hosts_title">Host kula</string>
     <string name="replication_hosts_empty_hint">Kanggo replikasi menyang server liyane, daftar akun ing kana lan gunakake opsi \"Replikasi akun sing ana\".</string>
-    <string name="replication_remove">Busak host</string>
-    <string name="replication_remove_title">Busak host?</string>
+    <string name="replication_remove">Busak replika iki</string>
+    <string name="replication_remove_title">Busak replika iki?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikasi</string>
     <string name="system_replication_this_server">Server iki</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Ora tau</string>
     <string name="replication_hosts_empty">Akun iki mung ana ing server iki.</string>
     <string name="replication_added">Ditambah %1$s</string>
-    <string name="replication_remove_message">Server iki bakal mandheg replikasi akun sampeyan menyang host kasebut.</string>
+    <string name="replication_remove_message">Data akun panjenengan ing host iki bakal dibusak permanen. Akun panjenengan tetep ana ing host liyane.</string>
     <string name="settings_home_system_replication">Replikasi (server)</string>
     <string name="system_replication_pair_empty_hint">Pair karo server liyane sing baru diinstal nggunakake \"mochictl replica join &lt;existing-peer-id&gt;\" ing server anyar.</string>
     <string name="route_delete_message">Iki bakal mbusak rute kanggo path \"%1$s\".</string>

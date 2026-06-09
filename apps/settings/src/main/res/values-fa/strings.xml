@@ -56,8 +56,8 @@
     <string name="replication_deny">رد</string>
     <string name="replication_hosts_title">میزبان‌های من</string>
     <string name="replication_hosts_empty_hint">برای تکثیر آن به سرور دیگری، در آنجا یک حساب ایجاد کنید و از گزینه \"تکثیر یک حساب موجود\" استفاده کنید.</string>
-    <string name="replication_remove">حذف میزبان</string>
-    <string name="replication_remove_title">میزبان حذف شود؟</string>
+    <string name="replication_remove">حذف این نسخه‌ی همتا</string>
+    <string name="replication_remove_title">این نسخه‌ی همتا حذف شود؟</string>
     <string name="settings_home_section_system">سیستم</string>
     <string name="system_replication_title">تکثیر</string>
     <string name="system_replication_this_server">این سرور</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">هرگز</string>
     <string name="replication_hosts_empty">این حساب فقط روی این سرور است.</string>
     <string name="replication_added">افزوده شد %1$s</string>
-    <string name="replication_remove_message">این سرور تکرار حساب شما به آن میزبان را متوقف خواهد کرد.</string>
+    <string name="replication_remove_message">داده‌های حساب شما روی این میزبان برای همیشه حذف خواهد شد. حساب شما روی میزبان‌های دیگرتان باقی می‌ماند.</string>
     <string name="settings_home_system_replication">تکرار (سرور)</string>
     <string name="system_replication_pair_empty_hint">با سرور تازه نصب‌شده دیگری با استفاده از «mochictl replica join &lt;existing-peer-id&gt;» در سرور جدید جفت شوید.</string>
     <string name="route_delete_message">این مسیر برای مسیر «%1$s» را حذف می‌کند.</string>

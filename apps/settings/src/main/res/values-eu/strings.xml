@@ -56,8 +56,8 @@
     <string name="replication_deny">Ukatu</string>
     <string name="replication_hosts_title">Nire ostalariak</string>
     <string name="replication_hosts_empty_hint">Beste zerbitzari batera errepikatzeko, izena eman bertan kontu bat sortzeko eta erabili \"Lehendik dagoen kontu bat errepikatu\" aukera.</string>
-    <string name="replication_remove">Kendu ostalaria</string>
-    <string name="replication_remove_title">Ostalaria kendu?</string>
+    <string name="replication_remove">Ezabatu erreplika hau</string>
+    <string name="replication_remove_title">Erreplika hau ezabatu?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Errepikapena</string>
     <string name="system_replication_this_server">Zerbitzari hau</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Inoiz ez</string>
     <string name="replication_hosts_empty">Kontu hau zerbitzari honetan bakarrik dago.</string>
     <string name="replication_added">Gehituta %1$s</string>
-    <string name="replication_remove_message">Zerbitzari honek zure kontua ostatu horretara errepikatzeari utziko dio.</string>
+    <string name="replication_remove_message">Ostalari honetako zure kontuaren datuak behin betiko ezabatuko dira. Zure kontuak zure beste ostalarietan jarraituko du.</string>
     <string name="settings_home_system_replication">Errepikapena (zerbitzaria)</string>
     <string name="system_replication_pair_empty_hint">Lotu instalatutako beste zerbitzari berri batekin \"mochictl replica join &lt;existing-peer-id&gt;\" erabiliz zerbitzari berrian.</string>
     <string name="route_delete_message">Honek \"%1$s\" bidearen ibilbidea kenduko du.</string>

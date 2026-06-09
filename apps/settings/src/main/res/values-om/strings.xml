@@ -56,8 +56,8 @@
     <string name="replication_deny">Dhorki</string>
     <string name="replication_hosts_title">Hostota koo</string>
     <string name="replication_hosts_empty_hint">Akkaawuntii kana gara sarvarii biraatti hir\'isuuf, achitti akkaawuntii galmaa\'i fi filannoo \"Akkaawuntii jiru hir\'isi\" fayyadami.</string>
-    <string name="replication_remove">Hostii haqi</string>
-    <string name="replication_remove_title">Hostii haqi?</string>
+    <string name="replication_remove">Garagalcha kana haqi</string>
+    <string name="replication_remove_title">Garagalcha kana haqxuu?</string>
     <string name="settings_home_section_system">Sirna</string>
     <string name="system_replication_title">Hir\'ina</string>
     <string name="system_replication_this_server">Sarvariin kun</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Gonkumaa</string>
     <string name="replication_hosts_empty">Akkountii kun seerverii kana qofarra jira.</string>
     <string name="replication_added">Dabalameera %1$s</string>
-    <string name="replication_remove_message">Seerverii kun akkountii kee gara host sanaatti garaggaluu dhaaba.</string>
+    <string name="replication_remove_message">Daataan akkaawuntii keetii host kana irra jiru bara baraan ni haqama. Akkaawuntiin kee host kee kan biroo irratti ni hafa.</string>
     <string name="settings_home_system_replication">Garaggalfama (seerverii)</string>
     <string name="system_replication_pair_empty_hint">Seerverii haaraa irratti \"mochictl replica join &lt;existing-peer-id&gt;\" fayyadamuun seerverii kan biraa haarawa fakkaachuu kaa\'i wajjin walitti firoomi.</string>
     <string name="route_delete_message">Kunis karoora karoora \"%1$s\" haqa.</string>

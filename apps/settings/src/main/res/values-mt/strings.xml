@@ -56,8 +56,8 @@
     <string name="replication_deny">Iċħad</string>
     <string name="replication_hosts_title">Il-hosts tiegħi</string>
     <string name="replication_hosts_empty_hint">Biex tirreplikaha lejn server ieħor, irreġistra għal kont hemm u uża l-għażla \"Irreplika kont eżistenti\".</string>
-    <string name="replication_remove">Neħħi l-host</string>
-    <string name="replication_remove_title">Tneħħi l-host?</string>
+    <string name="replication_remove">Ħassar din ir-replika</string>
+    <string name="replication_remove_title">Tħassar din ir-replika?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replikazzjoni</string>
     <string name="system_replication_this_server">Dan is-server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Qatt</string>
     <string name="replication_hosts_empty">Dan il-kont huwa biss fuq dan is-server.</string>
     <string name="replication_added">Miżjud %1$s</string>
-    <string name="replication_remove_message">Dan is-server se jieqaf jirreplika l-kont tiegħek f\'dak il-host.</string>
+    <string name="replication_remove_message">Id-data tal-kont tiegħek fuq dan il-host se titħassar b\'mod permanenti. Il-kont tiegħek jibqa\' fuq il-hosts l-oħra tiegħek.</string>
     <string name="settings_home_system_replication">Replikazzjoni (server)</string>
     <string name="system_replication_pair_empty_hint">Iggħaqqad ma\' server ieħor installat ġdid permezz ta\' \"mochictl replica join &lt;existing-peer-id&gt;\" fuq is-server il-ġdid.</string>
     <string name="route_delete_message">Dan se jneħħi r-rotta għall-passaġġ \"%1$s\".</string>

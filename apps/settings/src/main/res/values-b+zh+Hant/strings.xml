@@ -56,8 +56,8 @@
     <string name="replication_deny">拒絕</string>
     <string name="replication_hosts_title">我的主機</string>
     <string name="replication_hosts_empty_hint">要將其複製到另一台伺服器,請在該伺服器註冊帳戶,並使用「複製現有帳戶」選項。</string>
-    <string name="replication_remove">移除主機</string>
-    <string name="replication_remove_title">移除主機?</string>
+    <string name="replication_remove">刪除此副本</string>
+    <string name="replication_remove_title">刪除此副本？</string>
     <string name="settings_home_section_system">系統</string>
     <string name="system_replication_title">複寫</string>
     <string name="system_replication_this_server">此伺服器</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">永不</string>
     <string name="replication_hosts_empty">此帳號僅在此伺服器上。</string>
     <string name="replication_added">已新增 %1$s</string>
-    <string name="replication_remove_message">此伺服器將停止將您的帳號複製到該主機。</string>
+    <string name="replication_remove_message">您的帳戶在此主機上的資料將被永久刪除。您的帳戶仍保留在其他主機上。</string>
     <string name="settings_home_system_replication">複製（伺服器）</string>
     <string name="system_replication_pair_empty_hint">在新伺服器上使用\"mochictl replica join &lt;existing-peer-id&gt;\"與另一台全新安裝的伺服器配對。</string>
     <string name="route_delete_message">這會移除路徑\"%1$s\"的路由。</string>

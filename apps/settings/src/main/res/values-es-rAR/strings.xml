@@ -143,9 +143,9 @@
     <string name="replication_hosts_empty">Esta cuenta está solo en este servidor.</string>
     <string name="replication_hosts_empty_hint">Para replicarla en otro servidor, registrate ahí y usá la opción \"Replicar una cuenta existente\".</string>
     <string name="replication_added">Agregado %1$s</string>
-    <string name="replication_remove">Quitar servidor</string>
-    <string name="replication_remove_title">¿Quitar el servidor?</string>
-    <string name="replication_remove_message">Este servidor dejará de replicar tu cuenta en ese servidor.</string>
+    <string name="replication_remove">Eliminar esta réplica</string>
+    <string name="replication_remove_title">¿Eliminar esta réplica?</string>
+    <string name="replication_remove_message">Los datos de tu cuenta en este host se eliminarán de forma permanente. Tu cuenta permanece en tus otros hosts.</string>
     <string name="settings_home_system_replication">Replicación (servidor)</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>

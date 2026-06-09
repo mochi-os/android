@@ -56,8 +56,8 @@
     <string name="replication_deny">Hafna</string>
     <string name="replication_hosts_title">Hýslarnir mínir</string>
     <string name="replication_hosts_empty_hint">Til að afrita hann á annan þjón skaltu skrá þig fyrir reikningi þar og nota valkostinn \"Afrita fyrirliggjandi reikning\".</string>
-    <string name="replication_remove">Fjarlægja hýsil</string>
-    <string name="replication_remove_title">Fjarlægja hýsil?</string>
+    <string name="replication_remove">Eyða þessari eftirmynd</string>
+    <string name="replication_remove_title">Eyða þessari eftirmynd?</string>
     <string name="settings_home_section_system">Kerfi</string>
     <string name="system_replication_title">Eftirgerð</string>
     <string name="system_replication_this_server">Þessi netþjónn</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Aldrei</string>
     <string name="replication_hosts_empty">Þessi reikningur er aðeins á þessum þjóni.</string>
     <string name="replication_added">Bætt við %1$s</string>
-    <string name="replication_remove_message">Þessi þjónn mun hætta að afrita reikning þinn til þess gestgjafa.</string>
+    <string name="replication_remove_message">Gögnum reikningsins þíns á þessum hýsil verður eytt varanlega. Reikningurinn þinn verður áfram á öðrum hýslum þínum.</string>
     <string name="settings_home_system_replication">Afritun (þjónn)</string>
     <string name="system_replication_pair_empty_hint">Paraðu við annan nýuppsettan þjón með \"mochictl replica join &lt;existing-peer-id&gt;\" á nýja þjóninum.</string>
     <string name="route_delete_message">Þetta mun fjarlægja slóðina fyrir leiðina \"%1$s\".</string>

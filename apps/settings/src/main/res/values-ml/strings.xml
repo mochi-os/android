@@ -56,8 +56,8 @@
     <string name="replication_deny">നിഷേധിക്കുക</string>
     <string name="replication_hosts_title">എന്റെ ഹോസ്റ്റുകൾ</string>
     <string name="replication_hosts_empty_hint">ഇത് മറ്റൊരു സെർവറിലേക്ക് റെപ്ലിക്കേറ്റ് ചെയ്യാൻ, അവിടെ ഒരു അക്കൗണ്ടിന് സൈൻ അപ്പ് ചെയ്യുകയും \"നിലവിലുള്ള ഒരു അക്കൗണ്ട് റെപ്ലിക്കേറ്റ് ചെയ്യുക\" ഓപ്ഷൻ ഉപയോഗിക്കുകയും ചെയ്യുക.</string>
-    <string name="replication_remove">ഹോസ്റ്റ് നീക്കം ചെയ്യുക</string>
-    <string name="replication_remove_title">ഹോസ്റ്റ് നീക്കം ചെയ്യണോ?</string>
+    <string name="replication_remove">ഈ റെപ്ലിക്ക ഇല്ലാതാക്കുക</string>
+    <string name="replication_remove_title">ഈ റെപ്ലിക്ക ഇല്ലാതാക്കണോ?</string>
     <string name="settings_home_section_system">സിസ്റ്റം</string>
     <string name="system_replication_title">പകർപ്പുണ്ടാക്കൽ</string>
     <string name="system_replication_this_server">ഈ സെർവർ</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ഒരിക്കലുമില്ല</string>
     <string name="replication_hosts_empty">ഈ അക്കൗണ്ട് ഈ സെർവറിൽ മാത്രമാണ്.</string>
     <string name="replication_added">ചേർത്തു %1$s</string>
-    <string name="replication_remove_message">ഈ സെർവർ ആ ഹോസ്റ്റിലേക്ക് നിങ്ങളുടെ അക്കൗണ്ട് പകർത്തുന്നത് നിർത്തും.</string>
+    <string name="replication_remove_message">ഈ ഹോസ്റ്റിലെ നിങ്ങളുടെ അക്കൗണ്ടിന്റെ ഡാറ്റ ശാശ്വതമായി ഇല്ലാതാക്കും. നിങ്ങളുടെ അക്കൗണ്ട് നിങ്ങളുടെ മറ്റ് ഹോസ്റ്റുകളിൽ തുടരും.</string>
     <string name="settings_home_system_replication">പകർപ്പ് (സെർവർ)</string>
     <string name="system_replication_pair_empty_hint">പുതിയ സെർവറിൽ \"mochictl replica join &lt;existing-peer-id&gt;\" ഉപയോഗിച്ച് മറ്റൊരു പുതുതായി ഇൻസ്റ്റാൾ ചെയ്ത സെർവറുമായി ജോടിയാക്കുക.</string>
     <string name="route_delete_message">ഇത് പാത \"%1$s\" നായുള്ള റൂട്ട് നീക്കം ചെയ്യും.</string>

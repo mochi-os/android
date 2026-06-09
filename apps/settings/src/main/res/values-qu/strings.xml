@@ -56,8 +56,8 @@
     <string name="replication_deny">Mana saqiy</string>
     <string name="replication_hosts_title">Hostnikuna</string>
     <string name="replication_hosts_empty_hint">Huk servidorman replicananpaq, chaypi cuentata kicharqamuy hina \"Kasqan cuentata replicay\" opcionata utilizay.</string>
-    <string name="replication_remove">Hostta horqoy</string>
-    <string name="replication_remove_title">¿Hostta horqoy?</string>
+    <string name="replication_remove">Kay replicata pichay</string>
+    <string name="replication_remove_title">Kay replicata pichay?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>
     <string name="system_replication_this_server">Kay servidor</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Mana hayk\'aqpas</string>
     <string name="replication_hosts_empty">Kay cuenta kay seridorllapi kachkan.</string>
     <string name="replication_added">Yapasqa %1$s</string>
-    <string name="replication_remove_message">Kay seridor cuentaykita chay hostpi llank\'ay tukuy.</string>
+    <string name="replication_remove_message">Cuentaykip willaynin kay anfitrionpi wiñaypaq pichasqa kanqa. Cuentaykiqa huk anfitrionniykikunapim qhipakun.</string>
     <string name="settings_home_system_replication">Llank\'ay (seridor)</string>
     <string name="system_replication_pair_empty_hint">Musuq seridorpi \"mochictl replica join &lt;existing-peer-id&gt;\" apaykachay huk musuq churasqa seridorwan watanaykipaq.</string>
     <string name="route_delete_message">Kayqa \"%1$s\" ñan ñanta urqunqa.</string>

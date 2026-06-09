@@ -56,8 +56,8 @@
     <string name="replication_deny">דחייה</string>
     <string name="replication_hosts_title">המארחים שלי</string>
     <string name="replication_hosts_empty_hint">כדי לשכפל אותו לשרת אחר, הירשם לחשבון שם והשתמש באפשרות \"שכפל חשבון קיים\".</string>
-    <string name="replication_remove">הסר מארח</string>
-    <string name="replication_remove_title">להסיר את המארח?</string>
+    <string name="replication_remove">מחק עותק זה</string>
+    <string name="replication_remove_title">למחוק עותק זה?</string>
     <string name="settings_home_section_system">מערכת</string>
     <string name="system_replication_title">שכפול</string>
     <string name="system_replication_this_server">שרת זה</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">אף פעם</string>
     <string name="replication_hosts_empty">חשבון זה נמצא רק בשרת זה.</string>
     <string name="replication_added">נוסף %1$s</string>
-    <string name="replication_remove_message">שרת זה יפסיק לשכפל את חשבונך למארח זה.</string>
+    <string name="replication_remove_message">נתוני החשבון שלך במארח זה יימחקו לצמיתות. החשבון שלך נשאר במארחים האחרים שלך.</string>
     <string name="settings_home_system_replication">שכפול (שרת)</string>
     <string name="system_replication_pair_empty_hint">זווג עם שרת אחר שהותקן רק לאחרונה באמצעות \"mochictl replica join &lt;existing-peer-id&gt;\" בשרת החדש.</string>
     <string name="route_delete_message">פעולה זו תסיר את המסלול עבור הנתיב \"%1$s\".</string>

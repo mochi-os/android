@@ -56,8 +56,8 @@
     <string name="replication_deny">Четке кагуу</string>
     <string name="replication_hosts_title">Менин хосттарым</string>
     <string name="replication_hosts_empty_hint">Аны башка серверге репликациялоо үчүн, ал жерден каттоо эсебин ачыңыз жана \"Бар каттоо эсебин репликациялоо\" опциясын колдонуңуз.</string>
-    <string name="replication_remove">Хостту алып салуу</string>
-    <string name="replication_remove_title">Хостту алып салынабы?</string>
+    <string name="replication_remove">Бул репликаны өчүрүү</string>
+    <string name="replication_remove_title">Бул репликаны өчүрөсүзбү?</string>
     <string name="settings_home_section_system">Системалык</string>
     <string name="system_replication_title">Репликация</string>
     <string name="system_replication_this_server">Бул сервер</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Эч качан</string>
     <string name="replication_hosts_empty">Бул эсеп ушул серверде гана.</string>
     <string name="replication_added">Кошулду %1$s</string>
-    <string name="replication_remove_message">Бул сервер эсебиңизди ал хостко көчүрүүнү токтотот.</string>
+    <string name="replication_remove_message">Бул хосттогу каттоо эсебиңиздин маалыматтары биротоло өчүрүлөт. Каттоо эсебиңиз башка хосттордо калат.</string>
     <string name="settings_home_system_replication">Көчүрмөлөө (сервер)</string>
     <string name="system_replication_pair_empty_hint">Жаңы серверде \"mochictl replica join &lt;existing-peer-id&gt;\" колдонуу менен башка жаңы орнотулган сервер менен жуптаңыз.</string>
     <string name="route_delete_message">Бул \"%1$s\" жолу үчүн маршрутту алып салат.</string>

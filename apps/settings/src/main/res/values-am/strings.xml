@@ -56,8 +56,8 @@
     <string name="replication_deny">ተከለከል</string>
     <string name="replication_hosts_title">የእኔ አስተናጋጆች</string>
     <string name="replication_hosts_empty_hint">ወደ ሌላ አገልጋይ ለማባዛት፣ እዚያ መለያ ይመዝገቡ እና \"ያለ መለያ ማባዛት\" አማራጭን ይጠቀሙ።</string>
-    <string name="replication_remove">አስተናጋጁን አስወግድ</string>
-    <string name="replication_remove_title">አስተናጋጁን ይወገድ?</string>
+    <string name="replication_remove">ይህን ቅጂ ሰርዝ</string>
+    <string name="replication_remove_title">ይህን ቅጂ ይሰረዝ?</string>
     <string name="settings_home_section_system">ስርዓት</string>
     <string name="system_replication_title">ድግግሞሽ</string>
     <string name="system_replication_this_server">ይህ አገልጋይ</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">በፍፁም</string>
     <string name="replication_hosts_empty">ይህ ሂሳብ በዚህ አገልጋይ ላይ ብቻ ነው።</string>
     <string name="replication_added">ተጨምሯል %1$s</string>
-    <string name="replication_remove_message">ይህ አገልጋይ ሂሳብዎን ወደ ያ ሆስት መድገም ያቆማል።</string>
+    <string name="replication_remove_message">የመለያዎ ውሂብ በዚህ አስተናጋጅ ላይ በቋሚነት ይሰረዛል። መለያዎ በሌሎች አስተናጋጆችዎ ላይ ይቆያል።</string>
     <string name="settings_home_system_replication">ድግግሞሽ (አገልጋይ)</string>
     <string name="system_replication_pair_empty_hint">በአዲሱ አገልጋይ ላይ \"mochictl replica join &lt;existing-peer-id&gt;\" በመጠቀም ከሌላ አዲስ የተጫነ አገልጋይ ጋር ያጣምሩ።</string>
     <string name="route_delete_message">ይህ ለ \"%1$s\" መንገድ ሩትን ያስወግዳል።</string>

@@ -56,8 +56,8 @@
     <string name="replication_deny">Ret etmek</string>
     <string name="replication_hosts_title">Hostlarym</string>
     <string name="replication_hosts_empty_hint">Ony başga serwere replikasiýalamak üçin, ol ýerde hasap üçin agza boluň we \"Bar bolan hasaby replikasiýalaň\" wariantyny ulanyň.</string>
-    <string name="replication_remove">Hosty aýyr</string>
-    <string name="replication_remove_title">Hosty aýyrjakmy?</string>
+    <string name="replication_remove">Bu nusgany poz</string>
+    <string name="replication_remove_title">Bu nusgany pozmaly?</string>
     <string name="settings_home_section_system">Ulgam</string>
     <string name="system_replication_title">Replikasiýa</string>
     <string name="system_replication_this_server">Şu serwer</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Hiç haçan</string>
     <string name="replication_hosts_empty">Bu hasap diňe bu serverde.</string>
     <string name="replication_added">Goşuldy %1$s</string>
-    <string name="replication_remove_message">Bu server hasabyňyzy şol hosta köpeltmegi bes eder.</string>
+    <string name="replication_remove_message">Bu hostdaky hasabyňyzyň maglumatlary hemişelik pozular. Hasabyňyz beýleki hostlaryňyzda galýar.</string>
     <string name="settings_home_system_replication">Köpeldiş (server)</string>
     <string name="system_replication_pair_empty_hint">Täze serverde \"mochictl replica join &lt;existing-peer-id&gt;\" ulanyp, başga bir täze gurnalan server bilen jübütleşiň.</string>
     <string name="route_delete_message">Bu \"%1$s\" ýolu üçin marşruty aýyrar.</string>

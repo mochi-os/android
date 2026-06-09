@@ -56,8 +56,8 @@
     <string name="replication_deny">رد ڪريو</string>
     <string name="replication_hosts_title">منهنجا ميزبان</string>
     <string name="replication_hosts_empty_hint">ان کي ٻئي سرور تي نقل ڪرڻ لاءِ، اتي اڪائونٽ لاءِ سائن اپ ڪريو ۽ \"موجوده اڪائونٽ کي نقل ڪريو\" آپشن استعمال ڪريو.</string>
-    <string name="replication_remove">ميزبان هٽايو</string>
-    <string name="replication_remove_title">ميزبان هٽايو؟</string>
+    <string name="replication_remove">هي ريپليڪا ختم ڪريو</string>
+    <string name="replication_remove_title">هي ريپليڪا ختم ڪجي؟</string>
     <string name="settings_home_section_system">سسٽم</string>
     <string name="system_replication_title">نقل</string>
     <string name="system_replication_this_server">هي سرور</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">ڪڏهن به نه</string>
     <string name="replication_hosts_empty">هي اڪائونٽ صرف هن سرور تي آهي.</string>
     <string name="replication_added">شامل ڪيو ويو %1$s</string>
-    <string name="replication_remove_message">هي سرور اوهان جي اڪائونٽ کي ان ميزبان ڏانهن نقل ڪرڻ بند ڪندو.</string>
+    <string name="replication_remove_message">هن ميزبان تي توهان جي اڪائونٽ جو ڊيٽا مستقل طور تي ختم ڪيو ويندو. توهان جو اڪائونٽ توهان جي ٻين ميزبانن تي رهندو.</string>
     <string name="settings_home_system_replication">نقل (سرور)</string>
     <string name="system_replication_pair_empty_hint">نئين سرور تي \"mochictl replica join &lt;existing-peer-id&gt;\" استعمال ڪندي ٻيو نئون نصب ٿيل سرور سان جوڙيو.</string>
     <string name="route_delete_message">هي رستي \"%1$s\" لاء روٽ هٽائيندو.</string>

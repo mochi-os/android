@@ -56,8 +56,8 @@
     <string name="replication_deny">Liegt</string>
     <string name="replication_hosts_title">Mani resursdatori</string>
     <string name="replication_hosts_empty_hint">Lai to replicētu uz citu serveri, reģistrējiet tur kontu un izmantojiet opciju \"Replicēt esošu kontu\".</string>
-    <string name="replication_remove">Noņemt resursdatoru</string>
-    <string name="replication_remove_title">Noņemt resursdatoru?</string>
+    <string name="replication_remove">Dzēst šo repliku</string>
+    <string name="replication_remove_title">Dzēst šo repliku?</string>
     <string name="settings_home_section_system">Sistēma</string>
     <string name="system_replication_title">Replikācija</string>
     <string name="system_replication_this_server">Šis serveris</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Nekad</string>
     <string name="replication_hosts_empty">Šis konts ir tikai šajā serverī.</string>
     <string name="replication_added">Pievienots %1$s</string>
-    <string name="replication_remove_message">Šis serveris pārtrauks kopēt jūsu kontu uz šo resursdatoru.</string>
+    <string name="replication_remove_message">Jūsu konta dati šajā resursdatorā tiks neatgriezeniski dzēsti. Jūsu konts paliek citos resursdatoros.</string>
     <string name="settings_home_system_replication">Replikācija (serveris)</string>
     <string name="system_replication_pair_empty_hint">Savienojiet pārī ar citu tikko instalētu serveri, izmantojot \"mochictl replica join &lt;existing-peer-id&gt;\" jaunajā serverī.</string>
     <string name="route_delete_message">Tas noņems maršrutu ceļam \"%1$s\".</string>

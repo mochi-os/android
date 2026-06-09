@@ -56,8 +56,8 @@
     <string name="replication_deny">Neka</string>
     <string name="replication_hosts_title">Mina värdar</string>
     <string name="replication_hosts_empty_hint">För att replikera det till en annan server, registrera ett konto där och använd alternativet \"Replikera ett befintligt konto\".</string>
-    <string name="replication_remove">Ta bort värd</string>
-    <string name="replication_remove_title">Ta bort värd?</string>
+    <string name="replication_remove">Ta bort denna replika</string>
+    <string name="replication_remove_title">Ta bort denna replika?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikering</string>
     <string name="system_replication_this_server">Denna server</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Aldrig</string>
     <string name="replication_hosts_empty">Detta konto finns endast på denna server.</string>
     <string name="replication_added">Tillagd %1$s</string>
-    <string name="replication_remove_message">Denna server slutar replikera ditt konto till den värden.</string>
+    <string name="replication_remove_message">Ditt kontos data på denna värd kommer att raderas permanent. Ditt konto finns kvar på dina andra värdar.</string>
     <string name="settings_home_system_replication">Replikering (server)</string>
     <string name="system_replication_pair_empty_hint">Parkoppla med en annan nyinstallerad server med \"mochictl replica join &lt;existing-peer-id&gt;\" på den nya servern.</string>
     <string name="route_delete_message">Detta tar bort rutten för sökvägen \"%1$s\".</string>

@@ -56,8 +56,8 @@
     <string name="replication_deny">Refize</string>
     <string name="replication_hosts_title">Lotèl mwen yo</string>
     <string name="replication_hosts_empty_hint">Pou replike li sou yon lòt sèvè, enskri pou yon kont la epi sèvi ak opsyon \"Replike yon kont ki egziste\".</string>
-    <string name="replication_remove">Retire lotèl</string>
-    <string name="replication_remove_title">Retire lotèl?</string>
+    <string name="replication_remove">Efase replika sa a</string>
+    <string name="replication_remove_title">Efase replika sa a?</string>
     <string name="settings_home_section_system">Sistèm</string>
     <string name="system_replication_title">Repliyasyon</string>
     <string name="system_replication_this_server">Sèvè sa a</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Janmen</string>
     <string name="replication_hosts_empty">Kont sa a sèlman sou sèvè sa a.</string>
     <string name="replication_added">Ajoute %1$s</string>
-    <string name="replication_remove_message">Sèvè sa a pral sispann reprodwi kont ou nan hot sa a.</string>
+    <string name="replication_remove_message">Done kont ou sou òt sa a pral efase nèt. Kont ou rete sou lòt òt ou yo.</string>
     <string name="settings_home_system_replication">Replikasyon (sèvè)</string>
     <string name="system_replication_pair_empty_hint">Jwenn parad ak yon lòt sèvè nouvèlman enstale sèvi ak \"mochictl replica join &lt;existing-peer-id&gt;\" sou nouvo sèvè a.</string>
     <string name="route_delete_message">Sa pral retire wout pou chemen \"%1$s\".</string>

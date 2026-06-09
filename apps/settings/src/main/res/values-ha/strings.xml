@@ -56,8 +56,8 @@
     <string name="replication_deny">Ƙi</string>
     <string name="replication_hosts_title">Masaukina</string>
     <string name="replication_hosts_empty_hint">Don kwafa zuwa wani sabar, yi rajistar asusu a wurin kuma yi amfani da zaɓi na \"Kwafa asusu da yake akwai\".</string>
-    <string name="replication_remove">Cire mai masaukin</string>
-    <string name="replication_remove_title">Cire mai masaukin?</string>
+    <string name="replication_remove">Goge wannan kwafin</string>
+    <string name="replication_remove_title">Goge wannan kwafin?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Kwafi</string>
     <string name="system_replication_this_server">Wannan sabar</string>
@@ -301,7 +301,7 @@
     <string name="tokens_never">Babu lokaci</string>
     <string name="replication_hosts_empty">Wannan asusun yana wannan uwar garken ne kawai.</string>
     <string name="replication_added">An ƙara %1$s</string>
-    <string name="replication_remove_message">Wannan uwar garken zai daina kwafa asusunka zuwa wannan mai masaukin.</string>
+    <string name="replication_remove_message">Za a goge bayanan asusunka a kan wannan mai masaukin na dindindin. Asusunka yana nan a kan sauran masu masaukinka.</string>
     <string name="settings_home_system_replication">Kwafi (uwar garken)</string>
     <string name="system_replication_pair_empty_hint">Haɗa tare da wani sabuwar uwar garken sabuwar shigarwa ta amfani da \"mochictl replica join &lt;existing-peer-id&gt;\" akan sabuwar uwar garken.</string>
     <string name="route_delete_message">Wannan zai cire hanya don hanyar \"%1$s\".</string>
