@@ -56,8 +56,6 @@
     <string name="replication_deny">Четке кагуу</string>
     <string name="replication_hosts_title">Менин хосттарым</string>
     <string name="replication_hosts_empty_hint">Аны башка серверге репликациялоо үчүн, ал жерден каттоо эсебин ачыңыз жана \"Бар каттоо эсебин репликациялоо\" опциясын колдонуңуз.</string>
-    <string name="replication_remove">Бул репликаны өчүрүү</string>
-    <string name="replication_remove_title">Бул репликаны өчүрөсүзбү?</string>
     <string name="settings_home_section_system">Системалык</string>
     <string name="system_replication_title">Репликация</string>
     <string name="system_replication_this_server">Бул сервер</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Эч качан</string>
     <string name="replication_hosts_empty">Бул эсеп ушул серверде гана.</string>
     <string name="replication_added">Кошулду %1$s</string>
-    <string name="replication_remove_message">Бул хосттогу каттоо эсебиңиздин маалыматтары биротоло өчүрүлөт. Каттоо эсебиңиз башка хосттордо калат.</string>
     <string name="settings_home_system_replication">Көчүрмөлөө (сервер)</string>
     <string name="system_replication_pair_empty_hint">Жаңы серверде \"mochictl replica join &lt;existing-peer-id&gt;\" колдонуу менен башка жаңы орнотулган сервер менен жуптаңыз.</string>
     <string name="route_delete_message">Бул \"%1$s\" жолу үчүн маршрутту алып салат.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Бул — ушул же башка Mochi серверинде калыбына келтире ала турган толук резервдик көчүрмө. Улантуу үчүн бул сиз экениңизди ырастаңыз.</string>
     <string name="account_data_passphrase">Купуя сөз айкашы</string>
     <string name="account_data_passphrase_hint">Жеке ачкычтарыңыз камтылган, бул сырсөз сүйлөмү менен шифрленген. Аны коопсуз жерде сактаңыз. Калыбына келтирүү үчүн керек болот.</string>
+    <string name="replication_hosts_subtitle">Каттоо эсебиңиздин көчүрмөсүн да сактаган башка серверлер. Бирин өчүрүү үчүн ошол серверге кириңиз да, «Каттоо эсебимди бул серверден өчүрүү» дегенди колдонуңуз.</string>
+    <string name="replication_irreparable">Калыбына келтирилгис</string>
+    <string name="replication_leave">Каттоо эсебимди бул серверден өчүрүү</string>
+    <string name="replication_leave_title">Каттоо эсебиңизди бул серверден өчүрөсүзбү?</string>
+    <string name="replication_leave_message">Бул серверддеги каттоо эсебиңиздин маалыматтары биротоло өчүрүлөт жана сиз бул жерден чыгасыз. Каттоо эсебиңиз башка серверлериңизде калат, ал эми бул серверди кийинчерээк кайра кошо аласыз.</string>
+    <string name="replication_leave_confirm">Алуу</string>
+    <string name="replication_forget">Бул жеткиликсиз хостту унутуу</string>
+    <string name="replication_forget_title">Бул жеткиликсиз хост унутулсунбу?</string>
+    <string name="replication_forget_message">Ал сиздин репликалар топтомуңуздан өчүрүлөт жана кайра туташканда көчүрмөсүн жоюуга буйрук берилет. Жеткиликтүү серверди өчүрүү үчүн ал жерге кириңиз да, «Каттоо эсебимди бул серверден өчүрүү» дегенди колдонуңуз. Улантуу үчүн бул сиз экениңизди ырастаңыз.</string>
+    <string name="replication_offline">Желиден тышкары</string>
+    <string name="replication_forget_confirm">Унутуу</string>
 </resources>

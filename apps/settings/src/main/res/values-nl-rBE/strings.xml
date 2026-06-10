@@ -55,8 +55,6 @@
     <string name="replication_deny">Weigeren</string>
     <string name="replication_hosts_title">Mijn hosts</string>
     <string name="replication_hosts_empty_hint">Om het naar een andere server te repliceren, maak daar een account aan en gebruik de optie \\"Een bestaand account repliceren\\".</string>
-    <string name="replication_remove">Deze replica verwijderen</string>
-    <string name="replication_remove_title">Deze replica verwijderen?</string>
     <string name="settings_home_section_system">Systeem</string>
     <string name="system_replication_title">Replicatie</string>
     <string name="system_replication_this_server">Deze server</string>
@@ -296,7 +294,6 @@
     <string name="tokens_expires">Verloopt: %1$s</string>
     <string name="replication_hosts_empty">Dit account staat enkel op deze server.</string>
     <string name="replication_added">Toegevoegd %1$s</string>
-    <string name="replication_remove_message">De gegevens van je account op deze host worden definitief verwijderd. Je account blijft op je andere hosts bestaan.</string>
     <string name="settings_home_system_replication">Replicatie (server)</string>
     <string name="system_replication_pair_empty_hint">Koppel met een andere pas geïnstalleerde server via \"mochictl replica join &lt;existing-peer-id&gt;\" op de nieuwe server.</string>
     <string name="route_delete_message">Hiermee wordt de route voor pad \"%1$s\" verwijderd.</string>
@@ -402,4 +399,15 @@
     <string name="account_data_dialog_body">Dit is een volledige back-up die je kunt herstellen op deze of een andere Mochi-server. Bevestig dat jij het bent om verder te gaan.</string>
     <string name="account_data_passphrase">Wachtwoordzin</string>
     <string name="account_data_passphrase_hint">Jouw privésleutels zijn inbegrepen, versleuteld met deze wachtwoordzin. Bewaar hem op een veilige plek. Je hebt hem nodig om te herstellen.</string>
+    <string name="replication_hosts_subtitle">Andere servers die ook een kopie van uw account bewaren. Om er een te verwijderen, meldt u zich aan op die server en gebruikt u \"Mijn account van deze server verwijderen\".</string>
+    <string name="replication_irreparable">Onherstelbaar</string>
+    <string name="replication_leave">Mijn account van deze server verwijderen</string>
+    <string name="replication_leave_title">Uw account van deze server verwijderen?</string>
+    <string name="replication_leave_message">De gegevens van uw account op deze server worden permanent verwijderd en u wordt hier afgemeld. Uw account blijft op uw andere servers staan en u kunt deze later opnieuw toevoegen.</string>
+    <string name="replication_leave_confirm">Verwijderen</string>
+    <string name="replication_forget">Deze onbereikbare host vergeten</string>
+    <string name="replication_forget_title">Deze onbereikbare host vergeten?</string>
+    <string name="replication_forget_message">De host wordt uit uw replicaset verwijderd en krijgt de opdracht om zijn kopie te verwijderen zodra hij opnieuw verbinding maakt. Om een bereikbare server te verwijderen, meldt u zich daar aan en gebruikt u \"Mijn account van deze server verwijderen\". Bevestig dat u het bent om verder te gaan.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Vergeten</string>
 </resources>

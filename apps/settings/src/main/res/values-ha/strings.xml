@@ -56,8 +56,6 @@
     <string name="replication_deny">Ƙi</string>
     <string name="replication_hosts_title">Masaukina</string>
     <string name="replication_hosts_empty_hint">Don kwafa zuwa wani sabar, yi rajistar asusu a wurin kuma yi amfani da zaɓi na \"Kwafa asusu da yake akwai\".</string>
-    <string name="replication_remove">Goge wannan kwafin</string>
-    <string name="replication_remove_title">Goge wannan kwafin?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Kwafi</string>
     <string name="system_replication_this_server">Wannan sabar</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Babu lokaci</string>
     <string name="replication_hosts_empty">Wannan asusun yana wannan uwar garken ne kawai.</string>
     <string name="replication_added">An ƙara %1$s</string>
-    <string name="replication_remove_message">Za a goge bayanan asusunka a kan wannan mai masaukin na dindindin. Asusunka yana nan a kan sauran masu masaukinka.</string>
     <string name="settings_home_system_replication">Kwafi (uwar garken)</string>
     <string name="system_replication_pair_empty_hint">Haɗa tare da wani sabuwar uwar garken sabuwar shigarwa ta amfani da \"mochictl replica join &lt;existing-peer-id&gt;\" akan sabuwar uwar garken.</string>
     <string name="route_delete_message">Wannan zai cire hanya don hanyar \"%1$s\".</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Wannan cikakken ajiya ne wanda za ka iya maido da shi a wannan ko wani sabar Mochi. Tabbatar da cewa kai ne don ci gaba.</string>
     <string name="account_data_passphrase">Kalmar sirri</string>
     <string name="account_data_passphrase_hint">An haɗa makullinku na sirri, mai ɓoye da wannan jumla ta sirri. Ajiye shi a aminci. Za ka bukata shi don maido.</string>
+    <string name="replication_hosts_subtitle">Sauran uwayen garke da su ma suke riƙe da kwafin asusunka. Don cire ɗaya, ka shiga wannan uwar garke sannan ka yi amfani da \"Cire asusuna daga wannan uwar garke\".</string>
+    <string name="replication_irreparable">Ba a iya gyara</string>
+    <string name="replication_leave">Cire asusuna daga wannan uwar garke</string>
+    <string name="replication_leave_title">A cire asusunka daga wannan uwar garke?</string>
+    <string name="replication_leave_message">Za a share bayanan asusunka a wannan uwar garke har abada kuma za a fitar da kai daga nan. Asusunka zai ci gaba da kasancewa a sauran uwayen garken ka, kuma za ka iya sake ƙara wannan daga baya.</string>
+    <string name="replication_leave_confirm">Cire</string>
+    <string name="replication_forget">Manta da wannan uwar garke da ba a iya isa gare ta</string>
+    <string name="replication_forget_title">A manta da wannan uwar garke da ba a iya isa gare ta?</string>
+    <string name="replication_forget_message">Za a cire ta daga tarin kwafinka kuma a gaya mata ta share kwafinta lokacin da ta sake haɗawa. Don cire uwar garke da za a iya isa gare ta, ka shiga can sannan ka yi amfani da \"Cire asusuna daga wannan uwar garke\". Tabbatar da kai ne don ci gaba.</string>
+    <string name="replication_offline">Babu kan layi</string>
+    <string name="replication_forget_confirm">Manta</string>
 </resources>

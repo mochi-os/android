@@ -56,8 +56,6 @@
     <string name="replication_deny">Татгалзах</string>
     <string name="replication_hosts_title">Миний хостууд</string>
     <string name="replication_hosts_empty_hint">Үүнийг өөр серверт хуулбарлахын тулд, тэнд бүртгэл үүсгээд \"Одоо байгаа бүртгэлийг хуулбарлах\" сонголтыг ашиглана уу.</string>
-    <string name="replication_remove">Энэ хувийг устгах</string>
-    <string name="replication_remove_title">Энэ хувийг устгах уу?</string>
     <string name="settings_home_section_system">Систем</string>
     <string name="system_replication_title">Хуулбарлал</string>
     <string name="system_replication_this_server">Энэ сервер</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Хэзээ ч</string>
     <string name="replication_hosts_empty">Энэ бүртгэл зөвхөн энэ серверт байна.</string>
     <string name="replication_added">Нэмсэн %1$s</string>
-    <string name="replication_remove_message">Энэ хост дээрх таны акаунтын өгөгдөл бүрмөсөн устгагдана. Таны акаунт бусад хост дээр хэвээр үлдэнэ.</string>
     <string name="settings_home_system_replication">Хуулбарлалт (сервер)</string>
     <string name="system_replication_pair_empty_hint">Шинэ серверт \"mochictl replica join &lt;existing-peer-id&gt;\" ашиглан өөр шинэ суулгасан сервертэй хослуулна уу.</string>
     <string name="route_delete_message">Энэ нь \"%1$s\" замын маршрутыг арилгана.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Энэ нь та энэ эсвэл өөр Mochi серверт сэргээж болох бүрэн нөөц юм. Үргэлжлүүлэхийн тулд энэ та мөн эсэхийг баталгаажуулна уу.</string>
     <string name="account_data_passphrase">Нууц үг</string>
     <string name="account_data_passphrase_hint">Таны хувийн түлхүүрүүд багтсан бөгөөд энэ нэвтрэх хэллэгээр шифрлэгдсэн. Аюулгүй газар хадгалаарай. Сэргээхэд танд хэрэгтэй болно.</string>
+    <string name="replication_hosts_subtitle">Таны бүртгэлийн хуулбарыг бас хадгалдаг бусад серверүүд. Нэгийг нь хасахын тулд тухайн серверт нэвтэрч, «Миний бүртгэлийг энэ серверээс хасах» гэснийг ашиглана уу.</string>
+    <string name="replication_irreparable">Засашгүй</string>
+    <string name="replication_leave">Миний бүртгэлийг энэ серверээс хасах</string>
+    <string name="replication_leave_title">Таны бүртгэлийг энэ серверээс хасах уу?</string>
+    <string name="replication_leave_message">Энэ сервер дэх таны бүртгэлийн өгөгдөл бүрмөсөн устгагдаж, та эндээс гарна. Таны бүртгэл бусад серверүүд дээр тань хэвээр үлдэх бөгөөд та энэ серверийг дараа дахин нэмж болно.</string>
+    <string name="replication_leave_confirm">Хасах</string>
+    <string name="replication_forget">Энэ холбогдох боломжгүй хостыг устгах</string>
+    <string name="replication_forget_title">Энэ холбогдох боломжгүй хостыг устгах уу?</string>
+    <string name="replication_forget_message">Энэ нь таны хуулбарын багцаас хасагдаж, дахин холбогдох үед өөрийн хуулбарыг устгахыг даалгана. Холбогдох боломжтой серверийг хасахын тулд тэнд нэвтэрч, «Миний бүртгэлийг энэ серверээс хасах» гэснийг ашиглана уу. Үргэлжлүүлэхийн тулд энэ нь та мөн эсэхийг баталгаажуулна уу.</string>
+    <string name="replication_offline">Офлайн</string>
+    <string name="replication_forget_confirm">Мартах</string>
 </resources>

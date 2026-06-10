@@ -28,6 +28,10 @@ data class ReplicationHost(
     val peer: String = "",
     val added: Long = 0,
     val ack: Long = 0,
+    // irreparable: the host can never be reached again (operator told us);
+    // offline: unix seconds since it was last reachable (0 when reachable).
+    val irreparable: Boolean = false,
+    val offline: Long = 0,
 )
 
 data class ReplicationServer(
@@ -62,9 +66,19 @@ interface ReplicationApi {
     @POST("settings/-/user/replication/deny")
     suspend fun denyLink(@Field("peer") peer: String): Response<Unit>
 
+    // Remove the account from THIS server (leave the replica set). Step-up
+    // gated; the local copy is purged, the account stays on other servers.
+    @FormUrlEncoded
+    @POST("settings/-/user/replication/leave")
+    suspend fun leave(@Field("token") token: String): Response<Unit>
+
+    // Advanced: forget an unreachable host. Step-up gated.
     @FormUrlEncoded
     @POST("settings/-/user/replication/remove")
-    suspend fun removeHost(@Field("peer") peer: String): Response<Unit>
+    suspend fun removeHost(
+        @Field("peer") peer: String,
+        @Field("token") token: String,
+    ): Response<Unit>
 }
 
 @Module

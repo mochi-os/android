@@ -56,8 +56,6 @@
     <string name="replication_deny">拒否</string>
     <string name="replication_hosts_title">マイホスト</string>
     <string name="replication_hosts_empty_hint">別のサーバーに複製するには、そこでアカウントを登録し、「既存のアカウントを複製」オプションを使用してください。</string>
-    <string name="replication_remove">このレプリカを削除</string>
-    <string name="replication_remove_title">このレプリカを削除しますか？</string>
     <string name="settings_home_section_system">システム</string>
     <string name="system_replication_title">レプリケーション</string>
     <string name="system_replication_this_server">このサーバー</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">なし</string>
     <string name="replication_hosts_empty">このアカウントはこのサーバーのみにあります。</string>
     <string name="replication_added">追加 %1$s</string>
-    <string name="replication_remove_message">このホスト上のアカウントのデータは完全に削除されます。アカウントは他のホストには残ります。</string>
     <string name="settings_home_system_replication">レプリケーション（サーバー）</string>
     <string name="system_replication_pair_empty_hint">新しいサーバーで「mochictl replica join &lt;existing-peer-id&gt;」を使用して、別の新規インストール済みサーバーとペアリングします。</string>
     <string name="route_delete_message">パス「%1$s」のルートが削除されます。</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">これは、このサーバーまたは別の Mochi サーバーで復元できる完全なバックアップです。続行するには本人確認を行ってください。</string>
     <string name="account_data_passphrase">パスフレーズ</string>
     <string name="account_data_passphrase_hint">あなたの秘密鍵が含まれており、このパスフレーズで暗号化されています。安全な場所に保管してください。復元に必要になります。</string>
+    <string name="replication_hosts_subtitle">アカウントのコピーを保持している他のサーバーです。いずれかを削除するには、そのサーバーにサインインして「このサーバーからアカウントを削除」を使用してください。</string>
+    <string name="replication_irreparable">修復不能</string>
+    <string name="replication_leave">このサーバーからアカウントを削除</string>
+    <string name="replication_leave_title">このサーバーからアカウントを削除しますか？</string>
+    <string name="replication_leave_message">このサーバー上のアカウントデータは完全に削除され、ここからサインアウトされます。アカウントは他のサーバーに残り、このサーバーは後で再び追加できます。</string>
+    <string name="replication_leave_confirm">削除</string>
+    <string name="replication_forget">この到達不能なホストを忘れる</string>
+    <string name="replication_forget_title">この到達不能なホストを忘れますか？</string>
+    <string name="replication_forget_message">レプリカセットから削除され、再接続時にコピーを削除するよう指示されます。到達可能なサーバーを削除するには、そのサーバーにサインインして「このサーバーからアカウントを削除」を使用してください。続行するには本人確認を行ってください。</string>
+    <string name="replication_offline">オフライン</string>
+    <string name="replication_forget_confirm">削除</string>
 </resources>

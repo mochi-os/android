@@ -208,9 +208,6 @@
     <string name="replication_hosts_empty">This account is on this server only.</string>
     <string name="replication_hosts_empty_hint">To replicate it to another server, sign up for an account there and use the \"Replicate an existing account\" option.</string>
     <string name="replication_added">Added %1$s</string>
-    <string name="replication_remove">Delete this replica</string>
-    <string name="replication_remove_title">Delete this replica?</string>
-    <string name="replication_remove_message">Your account\'s data on this host will be permanently deleted. Your account stays on your other hosts.</string>
     <string name="settings_home_system_replication">Replication (server)</string>
     <string name="system_replication_this_server">This server</string>
     <string name="system_replication_copy_peer_id">Copy peer id</string>
@@ -392,4 +389,15 @@
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entity</string>
     <string name="route_target_url">URL</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Forget</string>
+    <string name="replication_hosts_subtitle">Other servers that also hold a copy of your account. To remove one, sign in on that server and use \"Remove my account from this server\".</string>
+    <string name="replication_irreparable">Irreparable</string>
+    <string name="replication_leave">Remove my account from this server</string>
+    <string name="replication_leave_title">Remove your account from this server?</string>
+    <string name="replication_leave_message">Your account\'s data on this server will be permanently deleted and you\'ll be signed out here. Your account stays on your other servers, and you can re-add this one later.</string>
+    <string name="replication_leave_confirm">Remove</string>
+    <string name="replication_forget">Forget this unreachable host</string>
+    <string name="replication_forget_title">Forget this unreachable host?</string>
+    <string name="replication_forget_message">It will be removed from your replica set and told to delete its copy when it reconnects. To remove a reachable server, sign in there and use \"Remove my account from this server\". Verify it\'s you to continue.</string>
 </resources>

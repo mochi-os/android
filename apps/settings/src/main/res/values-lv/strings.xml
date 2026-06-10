@@ -56,8 +56,6 @@
     <string name="replication_deny">Liegt</string>
     <string name="replication_hosts_title">Mani resursdatori</string>
     <string name="replication_hosts_empty_hint">Lai to replicētu uz citu serveri, reģistrējiet tur kontu un izmantojiet opciju \"Replicēt esošu kontu\".</string>
-    <string name="replication_remove">Dzēst šo repliku</string>
-    <string name="replication_remove_title">Dzēst šo repliku?</string>
     <string name="settings_home_section_system">Sistēma</string>
     <string name="system_replication_title">Replikācija</string>
     <string name="system_replication_this_server">Šis serveris</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nekad</string>
     <string name="replication_hosts_empty">Šis konts ir tikai šajā serverī.</string>
     <string name="replication_added">Pievienots %1$s</string>
-    <string name="replication_remove_message">Jūsu konta dati šajā resursdatorā tiks neatgriezeniski dzēsti. Jūsu konts paliek citos resursdatoros.</string>
     <string name="settings_home_system_replication">Replikācija (serveris)</string>
     <string name="system_replication_pair_empty_hint">Savienojiet pārī ar citu tikko instalētu serveri, izmantojot \"mochictl replica join &lt;existing-peer-id&gt;\" jaunajā serverī.</string>
     <string name="route_delete_message">Tas noņems maršrutu ceļam \"%1$s\".</string>
@@ -401,4 +398,15 @@
     <string name="account_data_dialog_body">Šī ir pilna dublējumkopija, ko varat atjaunot šajā vai citā Mochi serverī. Lai turpinātu, apstipriniet, ka tas esat jūs.</string>
     <string name="account_data_passphrase">Ieejas frāze</string>
     <string name="account_data_passphrase_hint">Jūsu privātās atslēgas ir iekļautas, šifrētas ar šo paroles frāzi. Glabājiet to drošā vietā. Tā būs nepieciešama atjaunošanai.</string>
+    <string name="replication_hosts_subtitle">Citi serveri, kuros arī glabājas jūsu konta kopija. Lai noņemtu kādu, piesakieties tajā serverī un izmantojiet “Noņemt manu kontu no šī servera”.</string>
+    <string name="replication_irreparable">Nelabojams</string>
+    <string name="replication_leave">Noņemt manu kontu no šī servera</string>
+    <string name="replication_leave_title">Noņemt jūsu kontu no šī servera?</string>
+    <string name="replication_leave_message">Jūsu konta dati šajā serverī tiks neatgriezeniski dzēsti, un jūs tiksiet šeit izrakstīts. Jūsu konts paliek jūsu citos serveros, un šo serveri vēlāk varēsiet pievienot atkārtoti.</string>
+    <string name="replication_leave_confirm">Noņemt</string>
+    <string name="replication_forget">Aizmirst šo nesasniedzamo resursdatoru</string>
+    <string name="replication_forget_title">Aizmirst šo nesasniedzamo resursdatoru?</string>
+    <string name="replication_forget_message">Tas tiks noņemts no jūsu kopiju kopas, un, atkārtoti izveidojot savienojumu, tam tiks dots norādījums dzēst savu kopiju. Lai noņemtu sasniedzamu serveri, piesakieties tajā un izmantojiet “Noņemt manu kontu no šī servera”. Lai turpinātu, apstipriniet, ka tas esat jūs.</string>
+    <string name="replication_offline">Bezsaistē</string>
+    <string name="replication_forget_confirm">Aizmirst</string>
 </resources>

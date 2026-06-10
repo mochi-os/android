@@ -56,8 +56,6 @@
     <string name="replication_deny">Tolak</string>
     <string name="replication_hosts_title">Host saya</string>
     <string name="replication_hosts_empty_hint">Untuk mereplikasinya ke server lain, daftarkan akun di sana dan gunakan opsi \"Replikasi akun yang ada\".</string>
-    <string name="replication_remove">Hapus replika ini</string>
-    <string name="replication_remove_title">Hapus replika ini?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikasi</string>
     <string name="system_replication_this_server">Server ini</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Tidak pernah</string>
     <string name="replication_hosts_empty">Akun ini hanya pada server ini.</string>
     <string name="replication_added">Ditambahkan %1$s</string>
-    <string name="replication_remove_message">Data akun Anda di host ini akan dihapus secara permanen. Akun Anda tetap ada di host Anda yang lain.</string>
     <string name="settings_home_system_replication">Replikasi (server)</string>
     <string name="system_replication_pair_empty_hint">Pasangkan dengan server lain yang baru dipasang menggunakan \"mochictl replica join &lt;existing-peer-id&gt;\" di server baru.</string>
     <string name="route_delete_message">Ini akan menghapus rute untuk jalur \"%1$s\".</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">Ini adalah cadangan lengkap yang dapat Anda pulihkan di server Mochi ini atau lainnya. Verifikasi identitas Anda untuk melanjutkan.</string>
     <string name="account_data_passphrase">Kata sandi</string>
     <string name="account_data_passphrase_hint">Kunci privat Anda disertakan, dienkripsi dengan frasa sandi ini. Simpan dengan aman. Anda akan membutuhkannya untuk memulihkan.</string>
+    <string name="replication_hosts_subtitle">Server lain yang juga menyimpan salinan akun Anda. Untuk menghapus salah satunya, masuk ke server tersebut dan gunakan \"Hapus akun saya dari server ini\".</string>
+    <string name="replication_irreparable">Tidak dapat diperbaiki</string>
+    <string name="replication_leave">Hapus akun saya dari server ini</string>
+    <string name="replication_leave_title">Hapus akun Anda dari server ini?</string>
+    <string name="replication_leave_message">Data akun Anda di server ini akan dihapus permanen dan Anda akan keluar di sini. Akun Anda tetap ada di server lain Anda, dan Anda dapat menambahkan kembali server ini nanti.</string>
+    <string name="replication_leave_confirm">Hapus</string>
+    <string name="replication_forget">Lupakan host yang tidak dapat dijangkau ini</string>
+    <string name="replication_forget_title">Lupakan host yang tidak dapat dijangkau ini?</string>
+    <string name="replication_forget_message">Host akan dihapus dari set replika Anda dan diminta menghapus salinannya saat tersambung kembali. Untuk menghapus server yang dapat dijangkau, masuklah di sana dan gunakan \"Hapus akun saya dari server ini\". Verifikasi bahwa ini Anda untuk melanjutkan.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Lupakan</string>
 </resources>

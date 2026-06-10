@@ -56,8 +56,6 @@
     <string name="replication_deny">Откажи</string>
     <string name="replication_hosts_title">Моите хостове</string>
     <string name="replication_hosts_empty_hint">За да го репликирате към друг сървър, регистрирайте се за акаунт там и използвайте опцията \"Репликирай съществуващ акаунт\".</string>
-    <string name="replication_remove">Изтриване на тази реплика</string>
-    <string name="replication_remove_title">Да се изтрие ли тази реплика?</string>
     <string name="settings_home_section_system">Система</string>
     <string name="system_replication_title">Репликация</string>
     <string name="system_replication_this_server">Този сървър</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Никога</string>
     <string name="replication_hosts_empty">Този акаунт е само на този сървър.</string>
     <string name="replication_added">Добавен %1$s</string>
-    <string name="replication_remove_message">Данните на акаунта ви на този хост ще бъдат изтрити окончателно. Акаунтът ви остава на другите ви хостове.</string>
     <string name="settings_home_system_replication">Репликация (сървър)</string>
     <string name="system_replication_pair_empty_hint">Сдвоете с друг новоинсталиран сървър, използвайки „mochictl replica join &lt;existing-peer-id&gt;\" на новия сървър.</string>
     <string name="route_delete_message">Това ще премахне маршрута за пътя „%1$s\".</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Това е пълно резервно копие, което можете да възстановите на този или на друг сървър на Mochi. Потвърдете, че сте вие, за да продължите.</string>
     <string name="account_data_passphrase">Парола-фраза</string>
     <string name="account_data_passphrase_hint">Вашите частни ключове са включени, криптирани с тази парола-фраза. Съхранявайте я на сигурно място. Ще ви трябва за възстановяване.</string>
+    <string name="replication_hosts_subtitle">Други сървъри, които също съхраняват копие на профила ви. За да премахнете някой, влезте в този сървър и използвайте „Премахване на профила ми от този сървър“.</string>
+    <string name="replication_irreparable">Невъзстановим</string>
+    <string name="replication_leave">Премахване на профила ми от този сървър</string>
+    <string name="replication_leave_title">Да се премахне ли профилът ви от този сървър?</string>
+    <string name="replication_leave_message">Данните на профила ви на този сървър ще бъдат изтрити окончателно и ще бъдете отписани тук. Профилът ви остава на другите ви сървъри и можете да добавите този отново по-късно.</string>
+    <string name="replication_leave_confirm">Премахни</string>
+    <string name="replication_forget">Забравяне на този недостъпен хост</string>
+    <string name="replication_forget_title">Да се забрави ли този недостъпен хост?</string>
+    <string name="replication_forget_message">Той ще бъде премахнат от вашия набор от реплики и ще му бъде указано да изтрие копието си при повторно свързване. За да премахнете достъпен сървър, влезте там и използвайте „Премахване на профила ми от този сървър“. Потвърдете, че сте вие, за да продължите.</string>
+    <string name="replication_offline">Офлайн</string>
+    <string name="replication_forget_confirm">Забрави</string>
 </resources>

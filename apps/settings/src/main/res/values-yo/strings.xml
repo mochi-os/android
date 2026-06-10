@@ -56,8 +56,6 @@
     <string name="replication_deny">Kọ̀</string>
     <string name="replication_hosts_title">Àwọn ọmọ-orí mi</string>
     <string name="replication_hosts_empty_hint">Lati ṣàdà rẹ̀ sí olupin míràn, fọwọ́sí àkáǹtì níbẹ̀ kí o sì lo àyàn \"Ṣàdà àkáǹtì tó wà\".</string>
-    <string name="replication_remove">Pa ẹ̀dà yìí rẹ́</string>
-    <string name="replication_remove_title">Pa ẹ̀dà yìí rẹ́?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Àtúnṣe</string>
     <string name="system_replication_this_server">Olùpèsè yìí</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Láéláé</string>
     <string name="replication_hosts_empty">Àkáǹtì yìí wà lórí olùṣẹ́ yìí nìkan.</string>
     <string name="replication_added">A fi kún %1$s</string>
-    <string name="replication_remove_message">A óò pa dátà àkàǹtì rẹ lórí ọ̀nà-àjọ yìí rẹ́ pátápátá. Àkàǹtì rẹ yóò wà lórí àwọn ọ̀nà-àjọ rẹ yòókù.</string>
     <string name="settings_home_system_replication">Ìṣẹ̀dúpọ̀ (olùṣẹ́)</string>
     <string name="system_replication_pair_empty_hint">Bá olùṣẹ́ tuntun mìíràn tí a ti fi sí ẹnu pẹ̀lú \"mochictl replica join &lt;existing-peer-id&gt;\" lórí olùṣẹ́ tuntun.</string>
     <string name="route_delete_message">Èyí yóò mú ọ̀nà fún ọ̀nà \"%1$s\" kúrò.</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">Èyí jẹ́ ẹ̀dà ìpamọ́ pípé tí o lè mú padà sórí sáfà Mochi yìí tàbí òmíràn. Jẹ́rìí sí pé ìwọ ni láti tẹ̀síwájú.</string>
     <string name="account_data_passphrase">Gbolohun ọrọ igbaniwọle</string>
     <string name="account_data_passphrase_hint">Awọn bọtini aladani rẹ wa ninu, ti o wa ni koodu pẹlu gbolohun ọrọ igbaniwọle yii. Tọju rẹ ni ailewu. Iwọ yoo nilo rẹ lati mu pada.</string>
+    <string name="replication_hosts_subtitle">Àwọn sáfà mìíràn tí wọ́n tún ní àdàkọ àkáǹtì rẹ. Láti yọ ọ̀kan kúrò, wọlé sí sáfà yẹn kí o sì lo \"Yọ àkáǹtì mi kúrò ní sáfà yìí\".</string>
+    <string name="replication_irreparable">Kò ṣeé túnṣe</string>
+    <string name="replication_leave">Yọ àkáǹtì mi kúrò ní sáfà yìí</string>
+    <string name="replication_leave_title">Yọ àkáǹtì rẹ kúrò ní sáfà yìí?</string>
+    <string name="replication_leave_message">A óò pa dátà àkáǹtì rẹ ní sáfà yìí rẹ́ pátápátá, a óò sì jáde rẹ kúrò níhìn-ín. Àkáǹtì rẹ yóò dúró lórí àwọn sáfà rẹ mìíràn, o sì lè tún fi èyí kún padà lẹ́yìn náà.</string>
+    <string name="replication_leave_confirm">Yọ kúrò</string>
+    <string name="replication_forget">Gbàgbé ìpèsè tí kò ṣeé dé yìí</string>
+    <string name="replication_forget_title">Gbàgbé ìpèsè tí kò ṣeé dé yìí?</string>
+    <string name="replication_forget_message">A óò yọ ọ́ kúrò nínú ìṣètò àdàkọ rẹ, a óò sì sọ fún un láti pa àdàkọ rẹ̀ rẹ́ nígbà tí ó bá tún so pọ̀. Láti yọ sáfà tí ó ṣeé dé kúrò, wọlé síbẹ̀ kí o sì lo \"Yọ àkáǹtì mi kúrò ní sáfà yìí\". Jẹ́rìí sí i pé ìwọ ni láti tẹ̀síwájú.</string>
+    <string name="replication_offline">Aisinmọ́lẹ̀</string>
+    <string name="replication_forget_confirm">Gbàgbé</string>
 </resources>

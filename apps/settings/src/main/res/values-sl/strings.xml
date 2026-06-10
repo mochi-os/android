@@ -56,8 +56,6 @@
     <string name="replication_deny">Zavrni</string>
     <string name="replication_hosts_title">Moji gostitelji</string>
     <string name="replication_hosts_empty_hint">Za replikacijo na drug strežnik se tam prijavite za račun in uporabite možnost \"Repliciraj obstoječi račun\".</string>
-    <string name="replication_remove">Izbriši to repliko</string>
-    <string name="replication_remove_title">Izbrišem to repliko?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikacija</string>
     <string name="system_replication_this_server">Ta strežnik</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nikoli</string>
     <string name="replication_hosts_empty">Ta račun je samo na tem strežniku.</string>
     <string name="replication_added">Dodano %1$s</string>
-    <string name="replication_remove_message">Podatki vašega računa na tem gostitelju bodo trajno izbrisani. Vaš račun ostane na vaših drugih gostiteljih.</string>
     <string name="settings_home_system_replication">Replikacija (strežnik)</string>
     <string name="system_replication_pair_empty_hint">Združite z drugim sveže nameščenim strežnikom z uporabo „mochictl replica join &lt;existing-peer-id&gt;\" na novem strežniku.</string>
     <string name="route_delete_message">To bo odstranilo pot za pot „%1$s\".</string>
@@ -402,4 +399,15 @@
     <string name="account_data_dialog_body">To je popolna varnostna kopija, ki jo lahko obnovite na tem ali drugem strežniku Mochi. Za nadaljevanje potrdite, da ste to vi.</string>
     <string name="account_data_passphrase">Geslo</string>
     <string name="account_data_passphrase_hint">Vaši zasebni ključi so vključeni, šifrirani s to dostopno frazo. Shranite jo na varnem mestu. Potrebovali jo boste za obnovitev.</string>
+    <string name="replication_hosts_subtitle">Drugi strežniki, ki prav tako hranijo kopijo vašega računa. Za odstranitev enega se prijavite v ta strežnik in uporabite \"Odstrani moj račun s tega strežnika\".</string>
+    <string name="replication_irreparable">Nepopravljivo</string>
+    <string name="replication_leave">Odstrani moj račun s tega strežnika</string>
+    <string name="replication_leave_title">Odstranim vaš račun s tega strežnika?</string>
+    <string name="replication_leave_message">Podatki vašega računa na tem strežniku bodo trajno izbrisani in tukaj boste odjavljeni. Vaš račun ostane na vaših drugih strežnikih in tega lahko pozneje znova dodate.</string>
+    <string name="replication_leave_confirm">Odstrani</string>
+    <string name="replication_forget">Pozabi tega nedosegljivega gostitelja</string>
+    <string name="replication_forget_title">Pozabim tega nedosegljivega gostitelja?</string>
+    <string name="replication_forget_message">Odstranjen bo iz vašega nabora replik in ob ponovni povezavi bo prejel navodilo, naj izbriše svojo kopijo. Za odstranitev dosegljivega strežnika se prijavite vanj in uporabite \"Odstrani moj račun s tega strežnika\". Za nadaljevanje potrdite, da ste to vi.</string>
+    <string name="replication_offline">Brez povezave</string>
+    <string name="replication_forget_confirm">Pozabi</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">Megtagadás</string>
     <string name="replication_hosts_title">Saját gazdagépeim</string>
     <string name="replication_hosts_empty_hint">Egy másik szerverre való replikációhoz regisztrálj egy fiókot ott, és használd a \"Meglévő fiók replikációja\" opciót.</string>
-    <string name="replication_remove">Replika törlése</string>
-    <string name="replication_remove_title">Törli ezt a replikát?</string>
     <string name="settings_home_section_system">Rendszer</string>
     <string name="system_replication_title">Replikáció</string>
     <string name="system_replication_this_server">Ez a kiszolgáló</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Soha</string>
     <string name="replication_hosts_empty">Ez a fiók csak ezen a szerveren van.</string>
     <string name="replication_added">Hozzáadva %1$s</string>
-    <string name="replication_remove_message">Fiókja ezen a kiszolgálón tárolt adatait véglegesen töröljük. Fiókja megmarad a többi kiszolgálóján.</string>
     <string name="settings_home_system_replication">Replikáció (szerver)</string>
     <string name="system_replication_pair_empty_hint">Párosítsa egy másik frissen telepített szerverrel a „mochictl replica join &lt;existing-peer-id&gt;\" parancs használatával az új szerveren.</string>
     <string name="route_delete_message">Ez eltávolítja az útvonalat a(z) „%1$s\" útvonalhoz.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Ez egy teljes biztonsági mentés, amelyet visszaállíthat ezen vagy egy másik Mochi-kiszolgálón. A folytatáshoz igazolja, hogy ön az.</string>
     <string name="account_data_passphrase">Jelmondat</string>
     <string name="account_data_passphrase_hint">A személyes kulcsai benne vannak, ezzel a jelszó-mondattal titkosítva. Tárolja biztonságos helyen. Szüksége lesz rá a visszaállításhoz.</string>
+    <string name="replication_hosts_subtitle">Más kiszolgálók, amelyek szintén tárolnak egy másolatot a fiókodról. Egy eltávolításához jelentkezz be az adott kiszolgálóra, és használd a „Fiókom eltávolítása erről a kiszolgálóról” lehetőséget.</string>
+    <string name="replication_irreparable">Helyrehozhatatlan</string>
+    <string name="replication_leave">Fiókom eltávolítása erről a kiszolgálóról</string>
+    <string name="replication_leave_title">Eltávolítod a fiókodat erről a kiszolgálóról?</string>
+    <string name="replication_leave_message">A fiókod adatai ezen a kiszolgálón véglegesen törlődnek, és itt kijelentkeztetünk. A fiókod megmarad a többi kiszolgálódon, és ezt később újra hozzáadhatod.</string>
+    <string name="replication_leave_confirm">Eltávolítás</string>
+    <string name="replication_forget">Az elérhetetlen kiszolgáló elfelejtése</string>
+    <string name="replication_forget_title">Elfelejted ezt az elérhetetlen kiszolgálót?</string>
+    <string name="replication_forget_message">Eltávolítjuk a replikakészletedből, és újracsatlakozáskor felkérjük a másolata törlésére. Elérhető kiszolgáló eltávolításához jelentkezz be oda, és használd a „Fiókom eltávolítása erről a kiszolgálóról” lehetőséget. A folytatáshoz igazold, hogy te vagy az.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Elfelejtés</string>
 </resources>

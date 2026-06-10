@@ -56,8 +56,6 @@
     <string name="replication_deny">Адмовіць</string>
     <string name="replication_hosts_title">Мае хасты</string>
     <string name="replication_hosts_empty_hint">Каб скапіраваць яго на іншы сервер, зарэгіструйце там акаўнт і скарыстайцеся опцыяй \"Рэпліцыраваць існуючы акаўнт\".</string>
-    <string name="replication_remove">Выдаліць гэту рэпліку</string>
-    <string name="replication_remove_title">Выдаліць гэту рэпліку?</string>
     <string name="settings_home_section_system">Сістэма</string>
     <string name="system_replication_title">Рэплікацыя</string>
     <string name="system_replication_this_server">Гэты сервер</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Ніколі</string>
     <string name="replication_hosts_empty">Гэты ўліковы запіс толькі на гэтым серверы.</string>
     <string name="replication_added">Дададзена %1$s</string>
-    <string name="replication_remove_message">Даныя вашага ўліковага запісу на гэтым хосце будуць назаўсёды выдалены. Ваш уліковы запіс застаецца на іншых вашых хостах.</string>
     <string name="settings_home_system_replication">Рэплікацыя (сервер)</string>
     <string name="system_replication_pair_empty_hint">Аб\'яднайце з іншым свежа ўсталяваным серверам, выкарыстоўваючы \"mochictl replica join &lt;existing-peer-id&gt;\" на новым серверы.</string>
     <string name="route_delete_message">Гэта выдаліць маршрут для шляху \"%1$s\".</string>
@@ -402,4 +399,15 @@
     <string name="account_data_dialog_body">Гэта поўная рэзервовая копія, якую вы можаце аднавіць на гэтым або іншым серверы Mochi. Каб працягнуць, пацвердзіце, што гэта вы.</string>
     <string name="account_data_passphrase">Кодавая фраза</string>
     <string name="account_data_passphrase_hint">Вашы прыватныя ключы ўключаны, зашыфраваны гэтай парольнай фразай. Захоўвайце яе ў бяспечным месцы. Яна спатрэбіцца для аднаўлення.</string>
+    <string name="replication_hosts_subtitle">Іншыя серверы, якія таксама захоўваюць копію вашага ўліковага запісу. Каб выдаліць адзін, увайдзіце на гэты сервер і скарыстайцеся «Выдаліць мой уліковы запіс з гэтага сервера».</string>
+    <string name="replication_irreparable">Непапраўны</string>
+    <string name="replication_leave">Выдаліць мой уліковы запіс з гэтага сервера</string>
+    <string name="replication_leave_title">Выдаліць ваш уліковы запіс з гэтага сервера?</string>
+    <string name="replication_leave_message">Дадзеныя вашага ўліковага запісу на гэтым серверы будуць назаўсёды выдалены, і вы выйдзеце тут. Ваш уліковы запіс застаецца на вашых іншых серверах, і вы можаце паўторна дадаць гэты пазней.</string>
+    <string name="replication_leave_confirm">Выдаліць</string>
+    <string name="replication_forget">Забыць гэты недасягальны хост</string>
+    <string name="replication_forget_title">Забыць гэты недасягальны хост?</string>
+    <string name="replication_forget_message">Ён будзе выдалены з вашага набору рэплік, і яму будзе загадана выдаліць сваю копію пры паўторным падключэнні. Каб выдаліць дасягальны сервер, увайдзіце там і скарыстайцеся «Выдаліць мой уліковы запіс з гэтага сервера». Пацвердзіце, што гэта вы, каб працягнуць.</string>
+    <string name="replication_offline">Не ў сетцы</string>
+    <string name="replication_forget_confirm">Забыць</string>
 </resources>

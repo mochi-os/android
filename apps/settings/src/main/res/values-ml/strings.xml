@@ -56,8 +56,6 @@
     <string name="replication_deny">നിഷേധിക്കുക</string>
     <string name="replication_hosts_title">എന്റെ ഹോസ്റ്റുകൾ</string>
     <string name="replication_hosts_empty_hint">ഇത് മറ്റൊരു സെർവറിലേക്ക് റെപ്ലിക്കേറ്റ് ചെയ്യാൻ, അവിടെ ഒരു അക്കൗണ്ടിന് സൈൻ അപ്പ് ചെയ്യുകയും \"നിലവിലുള്ള ഒരു അക്കൗണ്ട് റെപ്ലിക്കേറ്റ് ചെയ്യുക\" ഓപ്ഷൻ ഉപയോഗിക്കുകയും ചെയ്യുക.</string>
-    <string name="replication_remove">ഈ റെപ്ലിക്ക ഇല്ലാതാക്കുക</string>
-    <string name="replication_remove_title">ഈ റെപ്ലിക്ക ഇല്ലാതാക്കണോ?</string>
     <string name="settings_home_section_system">സിസ്റ്റം</string>
     <string name="system_replication_title">പകർപ്പുണ്ടാക്കൽ</string>
     <string name="system_replication_this_server">ഈ സെർവർ</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ഒരിക്കലുമില്ല</string>
     <string name="replication_hosts_empty">ഈ അക്കൗണ്ട് ഈ സെർവറിൽ മാത്രമാണ്.</string>
     <string name="replication_added">ചേർത്തു %1$s</string>
-    <string name="replication_remove_message">ഈ ഹോസ്റ്റിലെ നിങ്ങളുടെ അക്കൗണ്ടിന്റെ ഡാറ്റ ശാശ്വതമായി ഇല്ലാതാക്കും. നിങ്ങളുടെ അക്കൗണ്ട് നിങ്ങളുടെ മറ്റ് ഹോസ്റ്റുകളിൽ തുടരും.</string>
     <string name="settings_home_system_replication">പകർപ്പ് (സെർവർ)</string>
     <string name="system_replication_pair_empty_hint">പുതിയ സെർവറിൽ \"mochictl replica join &lt;existing-peer-id&gt;\" ഉപയോഗിച്ച് മറ്റൊരു പുതുതായി ഇൻസ്റ്റാൾ ചെയ്ത സെർവറുമായി ജോടിയാക്കുക.</string>
     <string name="route_delete_message">ഇത് പാത \"%1$s\" നായുള്ള റൂട്ട് നീക്കം ചെയ്യും.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">ഇത് ഈ Mochi സെർവറിലോ മറ്റൊരു Mochi സെർവറിലോ പുനഃസ്ഥാപിക്കാവുന്ന ഒരു സമ്പൂർണ്ണ ബാക്കപ്പാണ്. തുടരാൻ നിങ്ങളാണെന്ന് സ്ഥിരീകരിക്കുക.</string>
     <string name="account_data_passphrase">രഹസ്യ വാക്യം</string>
     <string name="account_data_passphrase_hint">നിങ്ങളുടെ സ്വകാര്യ കീകൾ ഉൾപ്പെടുത്തിയിട്ടുണ്ട്, ഈ പാസ്ഫ്രേസ് ഉപയോഗിച്ച് എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു. ഇത് സുരക്ഷിതമായി സൂക്ഷിക്കുക. പുനഃസ്ഥാപിക്കാൻ നിങ്ങൾക്ക് ഇത് ആവശ്യമായിവരും.</string>
+    <string name="replication_hosts_subtitle">നിങ്ങളുടെ അക്കൗണ്ടിന്റെ ഒരു പകർപ്പ് സൂക്ഷിക്കുന്ന മറ്റ് സെർവറുകൾ. ഒന്ന് നീക്കം ചെയ്യാൻ, ആ സെർവറിൽ സൈൻ ഇൻ ചെയ്ത് \"ഈ സെർവറിൽ നിന്ന് എന്റെ അക്കൗണ്ട് നീക്കം ചെയ്യുക\" ഉപയോഗിക്കുക.</string>
+    <string name="replication_irreparable">പരിഹരിക്കാനാവാത്തത്</string>
+    <string name="replication_leave">ഈ സെർവറിൽ നിന്ന് എന്റെ അക്കൗണ്ട് നീക്കം ചെയ്യുക</string>
+    <string name="replication_leave_title">ഈ സെർവറിൽ നിന്ന് നിങ്ങളുടെ അക്കൗണ്ട് നീക്കം ചെയ്യണോ?</string>
+    <string name="replication_leave_message">ഈ സെർവറിലുള്ള നിങ്ങളുടെ അക്കൗണ്ടിന്റെ ഡാറ്റ ശാശ്വതമായി ഇല്ലാതാക്കപ്പെടും, നിങ്ങളെ ഇവിടെ നിന്ന് സൈൻ ഔട്ട് ചെയ്യും. നിങ്ങളുടെ അക്കൗണ്ട് നിങ്ങളുടെ മറ്റ് സെർവറുകളിൽ തുടരും, ഈ സെർവർ പിന്നീട് വീണ്ടും ചേർക്കാം.</string>
+    <string name="replication_leave_confirm">നീക്കം ചെയ്യുക (അടുത്ത അറിയിപ്പിൽ വീണ്ടും സൃഷ്ടിക്കുക)</string>
+    <string name="replication_forget">എത്തിച്ചേരാനാകാത്ത ഈ ഹോസ്റ്റ് മറക്കുക</string>
+    <string name="replication_forget_title">എത്തിച്ചേരാനാകാത്ത ഈ ഹോസ്റ്റ് മറക്കണോ?</string>
+    <string name="replication_forget_message">ഇത് നിങ്ങളുടെ പകർപ്പ് സെറ്റിൽ നിന്ന് നീക്കം ചെയ്യപ്പെടും, വീണ്ടും കണക്റ്റ് ചെയ്യുമ്പോൾ അതിന്റെ പകർപ്പ് ഇല്ലാതാക്കാൻ നിർദ്ദേശിക്കും. എത്തിച്ചേരാവുന്ന ഒരു സെർവർ നീക്കം ചെയ്യാൻ, അവിടെ സൈൻ ഇൻ ചെയ്ത് \"ഈ സെർവറിൽ നിന്ന് എന്റെ അക്കൗണ്ട് നീക്കം ചെയ്യുക\" ഉപയോഗിക്കുക. തുടരാൻ ഇത് നിങ്ങളാണെന്ന് സ്ഥിരീകരിക്കുക.</string>
+    <string name="replication_offline">ഓഫ്‌ലൈൻ</string>
+    <string name="replication_forget_confirm">മറക്കുക</string>
 </resources>

@@ -105,7 +105,7 @@ fun NavGraphBuilder.settingsNavGraph(
         NotificationPrefsScreen(onBack = { navController.popBackStack() })
     }
     composable(SettingsApp.REPLICATION) {
-        ReplicationScreen(onBack = { navController.popBackStack() })
+        ReplicationScreen(onBack = { navController.popBackStack() }, onLeft = onLogout)
     }
     composable(SettingsApp.SYSTEM_REPLICATION) {
         SystemReplicationScreen(onBack = { navController.popBackStack() })

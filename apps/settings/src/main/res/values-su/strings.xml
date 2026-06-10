@@ -56,8 +56,6 @@
     <string name="replication_deny">Tolak</string>
     <string name="replication_hosts_title">Host abdi</string>
     <string name="replication_hosts_empty_hint">Pikeun ngarepliksi kana pangladén sanés, daptar pikeun akun di dinya sareng pake pilihan \"Replikasi akun nu aya\".</string>
-    <string name="replication_remove">Pupus replika ieu</string>
-    <string name="replication_remove_title">Pupus replika ieu?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Réplikasi</string>
     <string name="system_replication_this_server">Server ieu</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Tara</string>
     <string name="replication_hosts_empty">Akun ieu ngan dina server ieu.</string>
     <string name="replication_added">Ditambahkeun %1$s</string>
-    <string name="replication_remove_message">Data akun anjeun dina host ieu bakal dipupus permanén. Akun anjeun tetep aya dina host anjeun anu sanés.</string>
     <string name="settings_home_system_replication">Salinan (server)</string>
     <string name="system_replication_pair_empty_hint">Pasangkeun jeung server séjén nu anyar dipasang nganggo \"mochictl replica join &lt;existing-peer-id&gt;\" dina server anyar.</string>
     <string name="route_delete_message">Ieu bakal nyabut rute pikeun jalan \"%1$s\".</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">Ieu mangrupa cadangan lengkep nu bisa dipulihkeun dina ieu atawa server Mochi sejen. Pariksa ieu anjeun pikeun neruskeun.</string>
     <string name="account_data_passphrase">Frasa sandi</string>
     <string name="account_data_passphrase_hint">Konci pribadi anjeun kaasup, diénkripsi ku frasa sandi ieu. Simpen kalayan aman. Anjeun peryogi éta pikeun mulihkeun.</string>
+    <string name="replication_hosts_subtitle">Server séjén nu ogé nyimpen salinan akun anjeun. Pikeun miceun salah sahiji, asup ka server éta sarta paké \"Piceun akun kuring tina server ieu\".</string>
+    <string name="replication_irreparable">Teu bisa dilereskeun</string>
+    <string name="replication_leave">Piceun akun kuring tina server ieu</string>
+    <string name="replication_leave_title">Piceun akun anjeun tina server ieu?</string>
+    <string name="replication_leave_message">Data akun anjeun dina server ieu bakal dipupus salawasna sarta anjeun bakal kaluar di dieu. Akun anjeun tetep aya dina server séjén anjeun, sarta anjeun bisa nambahkeun deui nu ieu engké.</string>
+    <string name="replication_leave_confirm">Pupus</string>
+    <string name="replication_forget">Pohokeun host nu teu kahontal ieu</string>
+    <string name="replication_forget_title">Pohokeun host nu teu kahontal ieu?</string>
+    <string name="replication_forget_message">Ieu bakal dipiceun tina susunan replika anjeun sarta dititah ngahapus salinanana basa nyambung deui. Pikeun miceun server nu kahontal, asup ka dinya sarta paké \"Piceun akun kuring tina server ieu\". Pastikeun yén éta anjeun pikeun neruskeun.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Hilapkeun</string>
 </resources>

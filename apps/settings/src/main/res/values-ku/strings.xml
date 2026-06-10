@@ -56,8 +56,6 @@
     <string name="replication_deny">Red bike</string>
     <string name="replication_hosts_title">Mêvandarên min</string>
     <string name="replication_hosts_empty_hint">Ji bo ku wê li serverekî din dubare bikin, li wir ji bo hesabekî qeyd bikin û vebijarka \"Hesabê heyî dubare bike\" bikar bînin.</string>
-    <string name="replication_remove">Vê replîkayê jê bibe</string>
-    <string name="replication_remove_title">Vê replîkayê jê bibe?</string>
     <string name="settings_home_section_system">Pergal</string>
     <string name="system_replication_title">Replîkasyon</string>
     <string name="system_replication_this_server">Ev rajekar</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Tu car</string>
     <string name="replication_hosts_empty">Ev hesab tenê li ser vê pêşkêşkerê ye.</string>
     <string name="replication_added">Hate zêdekirin %1$s</string>
-    <string name="replication_remove_message">Daneyên hesabê te yên li ser vê mêvandarê dê bi awayekî herheyî were jêbirin. Hesabê te li ser mêvandarên te yên din dimîne.</string>
     <string name="settings_home_system_replication">Kopîkirin (pêşkêşker)</string>
     <string name="system_replication_pair_empty_hint">Li ser pêşkêşkera nû \"mochictl replica join &lt;existing-peer-id&gt;\" bikar bîne û bi pêşkêşkerek nû sazkirî re cot bike.</string>
     <string name="route_delete_message">Ev dê riya rêya \"%1$s\" jêbibe.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Ev paşekêşeke temam e ku tu dikarî li ser vê an servereke din a Mochi vegerînî. Ji bo berdewamkirinê verast bike ku ev tu yî.</string>
     <string name="account_data_passphrase">Pêvajo</string>
     <string name="account_data_passphrase_hint">Mifteyên taybet ên te tê de ne, bi vê hevoka şîfreyê şîfrekirin. Wê bi ewlehî bihêlin. Ji bo vegerandinê pêwîst dibe.</string>
+    <string name="replication_hosts_subtitle">Rajekarên din ku herwiha kopiyek ji hesabê te digirin. Ji bo rakirina yekî, li wî rajekarî têkeve û \"Hesabê min ji vî rajekarî rake\" bikar bîne.</string>
+    <string name="replication_irreparable">Nayê sererastkirin</string>
+    <string name="replication_leave">Hesabê min ji vî rajekarî rake</string>
+    <string name="replication_leave_title">Hesabê te ji vî rajekarî rake?</string>
+    <string name="replication_leave_message">Daneyên hesabê te yên li ser vî rajekarî dê bi domdarî werin jêbirin û tu yê li vir bêyî derxistin. Hesabê te li ser rajekarên te yên din dimîne, û tu dikarî vî rajekarî paşê ji nû ve lê zêde bikî.</string>
+    <string name="replication_leave_confirm">Rake</string>
+    <string name="replication_forget">Vê hosta negihîştî ji bîr bike</string>
+    <string name="replication_forget_title">Vê hosta negihîştî ji bîr bikî?</string>
+    <string name="replication_forget_message">Ew ê ji koma kopiyên te were rakirin û jê re were gotin ku dema ku ji nû ve girêdide kopiya xwe jê bibe. Ji bo rakirina rajekarekî gihîştî, li wir têkeve û \"Hesabê min ji vî rajekarî rake\" bikar bîne. Ji bo berdewamiyê piştrast bike ku ev tu yî.</string>
+    <string name="replication_offline">Negirêdayî</string>
+    <string name="replication_forget_confirm">Jibîrbike</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">拒絕</string>
     <string name="replication_hosts_title">我的主機</string>
     <string name="replication_hosts_empty_hint">要將其複製到另一台伺服器,請在該伺服器註冊帳戶,並使用「複製現有帳戶」選項。</string>
-    <string name="replication_remove">刪除此副本</string>
-    <string name="replication_remove_title">刪除此副本？</string>
     <string name="settings_home_section_system">系統</string>
     <string name="system_replication_title">複寫</string>
     <string name="system_replication_this_server">此伺服器</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">永不</string>
     <string name="replication_hosts_empty">此帳號僅在此伺服器上。</string>
     <string name="replication_added">已新增 %1$s</string>
-    <string name="replication_remove_message">您的帳戶在此主機上的資料將被永久刪除。您的帳戶仍保留在其他主機上。</string>
     <string name="settings_home_system_replication">複製（伺服器）</string>
     <string name="system_replication_pair_empty_hint">在新伺服器上使用\"mochictl replica join &lt;existing-peer-id&gt;\"與另一台全新安裝的伺服器配對。</string>
     <string name="route_delete_message">這會移除路徑\"%1$s\"的路由。</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">這是一份完整備份，您可以在本伺服器或其他 Mochi 伺服器上還原。請驗證您的身分以繼續。</string>
     <string name="account_data_passphrase">密語</string>
     <string name="account_data_passphrase_hint">您的私鑰已包含在內，使用此密碼短語加密。請妥善保存。還原時將需要用到它。</string>
+    <string name="replication_hosts_subtitle">同樣保存著你帳戶副本的其他伺服器。若要移除其中一個，請在該伺服器上登入並使用「從此伺服器移除我的帳戶」。</string>
+    <string name="replication_irreparable">無法修復</string>
+    <string name="replication_leave">從此伺服器移除我的帳戶</string>
+    <string name="replication_leave_title">要從此伺服器移除你的帳戶嗎？</string>
+    <string name="replication_leave_message">你在此伺服器上的帳戶資料將被永久刪除，且你將在此處登出。你的帳戶仍保留在其他伺服器上，稍後你可以重新新增此伺服器。</string>
+    <string name="replication_leave_confirm">移除</string>
+    <string name="replication_forget">忘記此無法連線的主機</string>
+    <string name="replication_forget_title">要忘記此無法連線的主機嗎？</string>
+    <string name="replication_forget_message">它將從你的副本集中移除，並在重新連線時被要求刪除其副本。若要移除可連線的伺服器，請在該伺服器上登入並使用「從此伺服器移除我的帳戶」。請驗證你的身分以繼續。</string>
+    <string name="replication_offline">離線</string>
+    <string name="replication_forget_confirm">忘記</string>
 </resources>

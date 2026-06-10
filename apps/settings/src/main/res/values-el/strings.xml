@@ -56,8 +56,6 @@
     <string name="replication_deny">Άρνηση</string>
     <string name="replication_hosts_title">Οι οικοδεσπότες μου</string>
     <string name="replication_hosts_empty_hint">Για να το αναπαράγετε σε άλλον διακομιστή, εγγραφείτε για λογαριασμό εκεί και χρησιμοποιήστε την επιλογή \"Αναπαραγωγή υπάρχοντος λογαριασμού\".</string>
-    <string name="replication_remove">Διαγραφή αυτού του αντιγράφου</string>
-    <string name="replication_remove_title">Διαγραφή αυτού του αντιγράφου;</string>
     <string name="settings_home_section_system">Σύστημα</string>
     <string name="system_replication_title">Αναπαραγωγή</string>
     <string name="system_replication_this_server">Αυτός ο διακομιστής</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Ποτέ</string>
     <string name="replication_hosts_empty">Αυτός ο λογαριασμός υπάρχει μόνο σε αυτόν τον διακομιστή.</string>
     <string name="replication_added">Προστέθηκε %1$s</string>
-    <string name="replication_remove_message">Τα δεδομένα του λογαριασμού σας σε αυτόν τον κεντρικό υπολογιστή θα διαγραφούν οριστικά. Ο λογαριασμός σας παραμένει στους άλλους κεντρικούς υπολογιστές σας.</string>
     <string name="settings_home_system_replication">Αναπαραγωγή (διακομιστής)</string>
     <string name="system_replication_pair_empty_hint">Ζευγαρώστε με έναν άλλο νεοεγκατεστημένο διακομιστή χρησιμοποιώντας \"mochictl replica join &lt;existing-peer-id&gt;\" στον νέο διακομιστή.</string>
     <string name="route_delete_message">Αυτό θα αφαιρέσει τη διαδρομή για το μονοπάτι \"%1$s\".</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Πρόκειται για ένα πλήρες αντίγραφο ασφαλείας που μπορείτε να επαναφέρετε σε αυτόν ή σε άλλον διακομιστή Mochi. Επαληθεύστε την ταυτότητά σας για να συνεχίσετε.</string>
     <string name="account_data_passphrase">Φράση πρόσβασης</string>
     <string name="account_data_passphrase_hint">Τα ιδιωτικά σας κλειδιά περιλαμβάνονται, κρυπτογραφημένα με αυτή τη φράση πρόσβασης. Αποθηκεύστε την με ασφάλεια. Θα τη χρειαστείτε για την επαναφορά.</string>
+    <string name="replication_hosts_subtitle">Άλλοι διακομιστές που διατηρούν επίσης ένα αντίγραφο του λογαριασμού σας. Για να αφαιρέσετε έναν, συνδεθείτε σε αυτόν τον διακομιστή και χρησιμοποιήστε «Αφαίρεση του λογαριασμού μου από αυτόν τον διακομιστή».</string>
+    <string name="replication_irreparable">Μη επιδιορθώσιμο</string>
+    <string name="replication_leave">Αφαίρεση του λογαριασμού μου από αυτόν τον διακομιστή</string>
+    <string name="replication_leave_title">Αφαίρεση του λογαριασμού σας από αυτόν τον διακομιστή;</string>
+    <string name="replication_leave_message">Τα δεδομένα του λογαριασμού σας σε αυτόν τον διακομιστή θα διαγραφούν οριστικά και θα αποσυνδεθείτε εδώ. Ο λογαριασμός σας παραμένει στους άλλους διακομιστές σας και μπορείτε να προσθέσετε ξανά αυτόν αργότερα.</string>
+    <string name="replication_leave_confirm">Αφαίρεση</string>
+    <string name="replication_forget">Διαγραφή αυτού του μη προσβάσιμου κεντρικού υπολογιστή</string>
+    <string name="replication_forget_title">Διαγραφή αυτού του μη προσβάσιμου κεντρικού υπολογιστή;</string>
+    <string name="replication_forget_message">Θα αφαιρεθεί από το σύνολο αντιγράφων σας και θα του ζητηθεί να διαγράψει το αντίγραφό του όταν επανασυνδεθεί. Για να αφαιρέσετε έναν προσβάσιμο διακομιστή, συνδεθείτε εκεί και χρησιμοποιήστε «Αφαίρεση του λογαριασμού μου από αυτόν τον διακομιστή». Επαληθεύστε ότι είστε εσείς για να συνεχίσετε.</string>
+    <string name="replication_offline">Εκτός σύνδεσης</string>
+    <string name="replication_forget_confirm">Διαγραφή</string>
 </resources>

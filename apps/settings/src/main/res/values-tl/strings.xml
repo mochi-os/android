@@ -56,8 +56,6 @@
     <string name="replication_deny">Tanggihan</string>
     <string name="replication_hosts_title">Mga host ko</string>
     <string name="replication_hosts_empty_hint">Upang i-replicate ito sa ibang server, mag-sign up para sa account doon at gamitin ang opsyon na \"I-replicate ang isang umiiral nang account\".</string>
-    <string name="replication_remove">Burahin ang replica na ito</string>
-    <string name="replication_remove_title">Burahin ang replica na ito?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Pagpaparami</string>
     <string name="system_replication_this_server">Ang server na ito</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Hindi kailanman</string>
     <string name="replication_hosts_empty">Ang account na ito ay nasa server lamang na ito.</string>
     <string name="replication_added">Nadagdag %1$s</string>
-    <string name="replication_remove_message">Permanenteng buburahin ang data ng iyong account sa host na ito. Mananatili ang iyong account sa iyong iba pang mga host.</string>
     <string name="settings_home_system_replication">Replikasyon (server)</string>
     <string name="system_replication_pair_empty_hint">Magpares sa isa pang bagong na-install na server gamit ang \"mochictl replica join &lt;existing-peer-id&gt;\" sa bagong server.</string>
     <string name="route_delete_message">Aalisin nito ang ruta para sa path na \"%1$s\".</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Isa itong kumpletong backup na maaari mong i-restore sa server na ito o sa ibang Mochi server. Patunayan na ikaw ito para magpatuloy.</string>
     <string name="account_data_passphrase">Passphrase</string>
     <string name="account_data_passphrase_hint">Kasama ang iyong mga pribadong susi, naka-encrypt gamit ang passphrase na ito. Itago ito sa ligtas na lugar. Kakailanganin mo ito para ibalik.</string>
+    <string name="replication_hosts_subtitle">Iba pang mga server na may hawak ding kopya ng iyong account. Para mag-alis ng isa, mag-sign in sa server na iyon at gamitin ang \"Alisin ang aking account mula sa server na ito\".</string>
+    <string name="replication_irreparable">Hindi na maaayos</string>
+    <string name="replication_leave">Alisin ang aking account mula sa server na ito</string>
+    <string name="replication_leave_title">Alisin ang iyong account mula sa server na ito?</string>
+    <string name="replication_leave_message">Permanenteng tatanggalin ang data ng iyong account sa server na ito at masa-sign out ka rito. Mananatili ang iyong account sa iba mong mga server, at maaari mong idagdag muli ito sa ibang pagkakataon.</string>
+    <string name="replication_leave_confirm">Alisin</string>
+    <string name="replication_forget">Kalimutan ang hindi naa-access na host na ito</string>
+    <string name="replication_forget_title">Kalimutan ang hindi naa-access na host na ito?</string>
+    <string name="replication_forget_message">Aalisin ito sa iyong replica set at sasabihang tanggalin ang kopya nito kapag muling kumonekta. Para mag-alis ng naa-access na server, mag-sign in doon at gamitin ang \"Alisin ang aking account mula sa server na ito\". Patunayan na ikaw ito para magpatuloy.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Kalimutan</string>
 </resources>

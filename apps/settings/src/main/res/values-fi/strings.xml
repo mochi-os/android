@@ -56,8 +56,6 @@
     <string name="replication_deny">Estä</string>
     <string name="replication_hosts_title">Omat isäntäni</string>
     <string name="replication_hosts_empty_hint">Replikoidaksesi sen toiselle palvelimelle, rekisteröi siellä tili ja käytä \"Replikoi olemassa oleva tili\" -vaihtoehtoa.</string>
-    <string name="replication_remove">Poista tämä repliikka</string>
-    <string name="replication_remove_title">Poistetaanko tämä repliikka?</string>
     <string name="settings_home_section_system">Järjestelmä</string>
     <string name="system_replication_title">Replikointi</string>
     <string name="system_replication_this_server">Tämä palvelin</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Ei koskaan</string>
     <string name="replication_hosts_empty">Tämä tili on vain tällä palvelimella.</string>
     <string name="replication_added">Lisätty %1$s</string>
-    <string name="replication_remove_message">Tilisi tiedot tällä isännällä poistetaan pysyvästi. Tilisi säilyy muilla isännilläsi.</string>
     <string name="settings_home_system_replication">Replikointi (palvelin)</string>
     <string name="system_replication_pair_empty_hint">Pariliitä toisen vasta-asennetun palvelimen kanssa käyttämällä \"mochictl replica join &lt;existing-peer-id&gt;\" uudessa palvelimessa.</string>
     <string name="route_delete_message">Tämä poistaa reitin polulle \"%1$s\".</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Tämä on täydellinen varmuuskopio, jonka voit palauttaa tähän tai toiseen Mochi-palvelimeen. Vahvista henkilöllisyytesi jatkaaksesi.</string>
     <string name="account_data_passphrase">Tunnuslause</string>
     <string name="account_data_passphrase_hint">Yksityiset avaimesi on sisällytetty, salattu tällä salauslauseella. Säilytä se turvallisesti. Tarvitset sen palauttamiseen.</string>
+    <string name="replication_hosts_subtitle">Muut palvelimet, joilla on myös kopio tilistäsi. Poistaaksesi jonkin kirjaudu kyseiselle palvelimelle ja käytä toimintoa \"Poista tilini tältä palvelimelta\".</string>
+    <string name="replication_irreparable">Korjauskelvoton</string>
+    <string name="replication_leave">Poista tilini tältä palvelimelta</string>
+    <string name="replication_leave_title">Poistetaanko tilisi tältä palvelimelta?</string>
+    <string name="replication_leave_message">Tilisi tiedot tällä palvelimella poistetaan pysyvästi ja sinut kirjataan ulos täältä. Tilisi säilyy muilla palvelimillasi, ja voit lisätä tämän takaisin myöhemmin.</string>
+    <string name="replication_leave_confirm">Poista</string>
+    <string name="replication_forget">Unohda tämä tavoittamaton isäntä</string>
+    <string name="replication_forget_title">Unohdetaanko tämä tavoittamaton isäntä?</string>
+    <string name="replication_forget_message">Se poistetaan replikajoukostasi ja sitä pyydetään poistamaan kopionsa, kun se yhdistää uudelleen. Tavoitettavissa olevan palvelimen poistat kirjautumalla siihen ja käyttämällä toimintoa \"Poista tilini tältä palvelimelta\". Vahvista henkilöllisyytesi jatkaaksesi.</string>
+    <string name="replication_offline">Offline-tilassa</string>
+    <string name="replication_forget_confirm">Unohda</string>
 </resources>

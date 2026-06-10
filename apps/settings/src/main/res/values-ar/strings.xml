@@ -56,8 +56,6 @@
     <string name="replication_deny">رفض</string>
     <string name="replication_hosts_title">مضيفاتي</string>
     <string name="replication_hosts_empty_hint">لاستنساخه إلى خادم آخر، أنشئ حسابًا هناك واستخدم خيار \"استنساخ حساب موجود\".</string>
-    <string name="replication_remove">حذف هذه النسخة</string>
-    <string name="replication_remove_title">حذف هذه النسخة؟</string>
     <string name="settings_home_section_system">النظام</string>
     <string name="system_replication_title">النسخ المتماثل</string>
     <string name="system_replication_this_server">هذا الخادم</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">أبداً</string>
     <string name="replication_hosts_empty">هذا الحساب موجود على هذا الخادم فقط.</string>
     <string name="replication_added">تمت الإضافة %1$s</string>
-    <string name="replication_remove_message">سيتم حذف بيانات حسابك على هذا المضيف نهائيًا. يبقى حسابك على مضيفيك الآخرين.</string>
     <string name="settings_home_system_replication">النسخ المتماثل (الخادم)</string>
     <string name="system_replication_pair_empty_hint">أقرن مع خادم آخر مثبّت حديثًا باستخدام \"mochictl replica join &lt;existing-peer-id&gt;\" على الخادم الجديد.</string>
     <string name="route_delete_message">سيؤدي هذا إلى إزالة المسار للمسار \"%1$s\".</string>
@@ -404,4 +401,15 @@
     <string name="account_data_dialog_body">هذه نسخة احتياطية كاملة يمكنك استعادتها على هذا الخادم أو على خادم Mochi آخر. تحقق من أنك أنت للمتابعة.</string>
     <string name="account_data_passphrase">عبارة المرور</string>
     <string name="account_data_passphrase_hint">مفاتيحك الخاصة مُضمَّنة، مشفَّرة بعبارة المرور هذه. احفظها في مكان آمن. ستحتاجها للاستعادة.</string>
+    <string name="replication_hosts_subtitle">خوادم أخرى تحتفظ أيضًا بنسخة من حسابك. لإزالة أحدها، سجّل الدخول على ذلك الخادم واستخدم \"إزالة حسابي من هذا الخادم\".</string>
+    <string name="replication_irreparable">غير قابل للإصلاح</string>
+    <string name="replication_leave">إزالة حسابي من هذا الخادم</string>
+    <string name="replication_leave_title">إزالة حسابك من هذا الخادم؟</string>
+    <string name="replication_leave_message">ستُحذف بيانات حسابك على هذا الخادم نهائيًا وسيتم تسجيل خروجك هنا. يبقى حسابك على خوادمك الأخرى، ويمكنك إعادة إضافة هذا الخادم لاحقًا.</string>
+    <string name="replication_leave_confirm">إزالة</string>
+    <string name="replication_forget">نسيان هذا المضيف غير القابل للوصول</string>
+    <string name="replication_forget_title">نسيان هذا المضيف غير القابل للوصول؟</string>
+    <string name="replication_forget_message">ستتم إزالته من مجموعة النسخ المتماثلة وسيُطلب منه حذف نسخته عند إعادة الاتصال. لإزالة خادم يمكن الوصول إليه، سجّل الدخول هناك واستخدم \"إزالة حسابي من هذا الخادم\". تحقق من هويتك للمتابعة.</string>
+    <string name="replication_offline">غير متصل</string>
+    <string name="replication_forget_confirm">نسيان</string>
 </resources>

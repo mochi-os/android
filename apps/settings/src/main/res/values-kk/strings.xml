@@ -56,8 +56,6 @@
     <string name="replication_deny">Бас тарту</string>
     <string name="replication_hosts_title">Менің хосттарым</string>
     <string name="replication_hosts_empty_hint">Оны басқа серверге репликациялау үшін, сонда тіркелгі ашыңыз және \"Бар тіркелгіні репликациялау\" опциясын пайдаланыңыз.</string>
-    <string name="replication_remove">Бұл репликаны жою</string>
-    <string name="replication_remove_title">Бұл репликаны жою керек пе?</string>
     <string name="settings_home_section_system">Жүйе</string>
     <string name="system_replication_title">Репликация</string>
     <string name="system_replication_this_server">Бұл сервер</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Ешқашан</string>
     <string name="replication_hosts_empty">Бұл тіркелгі тек осы серверде.</string>
     <string name="replication_added">Қосылды %1$s</string>
-    <string name="replication_remove_message">Осы хосттағы тіркелгіңіздің деректері біржола жойылады. Тіркелгіңіз басқа хосттарда қалады.</string>
     <string name="settings_home_system_replication">Репликация (сервер)</string>
     <string name="system_replication_pair_empty_hint">Жаңа серверде \"mochictl replica join &lt;existing-peer-id&gt;\" пайдалану арқылы басқа жаңа орнатылған сервермен жұптастырыңыз.</string>
     <string name="route_delete_message">Бұл \"%1$s\" жолы үшін бағытты жояды.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Бұл — осы немесе басқа Mochi серверінде қалпына келтіруге болатын толық сақтық көшірме. Жалғастыру үшін бұл сіз екеніңізді растаңыз.</string>
     <string name="account_data_passphrase">Кілт сөз тіркесі</string>
     <string name="account_data_passphrase_hint">Жеке кілттеріңіз қосылған, осы парольдік тіркеспен шифрланған. Оны қауіпсіз сақтаңыз. Қалпына келтіру үшін қажет болады.</string>
+    <string name="replication_hosts_subtitle">Тіркелгіңіздің көшірмесін де сақтайтын басқа серверлер. Біреуін жою үшін сол серверге кіріңіз де, «Тіркелгімді осы серверден жою» пәрменін пайдаланыңыз.</string>
+    <string name="replication_irreparable">Қалпына келтірілмейді</string>
+    <string name="replication_leave">Тіркелгімді осы серверден жою</string>
+    <string name="replication_leave_title">Тіркелгіңізді осы серверден жою керек пе?</string>
+    <string name="replication_leave_message">Осы сервердегі тіркелгіңіздің деректері біржола жойылады және сіз осы жерден шығасыз. Тіркелгіңіз басқа серверлеріңізде қалады, ал бұл серверді кейінірек қайта қоса аласыз.</string>
+    <string name="replication_leave_confirm">Жою</string>
+    <string name="replication_forget">Бұл қолжетімсіз хостты ұмыту</string>
+    <string name="replication_forget_title">Бұл қолжетімсіз хостты ұмыту керек пе?</string>
+    <string name="replication_forget_message">Ол сіздің репликалар жиынынан жойылады және қайта қосылғанда көшірмесін жою тапсырылады. Қолжетімді серверді жою үшін сол жерде кіріңіз де, «Тіркелгімді осы серверден жою» пәрменін пайдаланыңыз. Жалғастыру үшін бұл сіз екеніңізді растаңыз.</string>
+    <string name="replication_offline">Желіден тыс</string>
+    <string name="replication_forget_confirm">Ұмыту</string>
 </resources>

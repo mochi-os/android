@@ -56,8 +56,6 @@
     <string name="replication_deny">Zamietnuť</string>
     <string name="replication_hosts_title">Moji hostitelia</string>
     <string name="replication_hosts_empty_hint">Ak ho chcete replikovať na iný server, zaregistrujte si tam účet a použite možnosť \"Replikovať existujúci účet\".</string>
-    <string name="replication_remove">Vymazať túto repliku</string>
-    <string name="replication_remove_title">Vymazať túto repliku?</string>
     <string name="settings_home_section_system">Systém</string>
     <string name="system_replication_title">Replikácia</string>
     <string name="system_replication_this_server">Tento server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nikdy</string>
     <string name="replication_hosts_empty">Tento účet je len na tomto serveri.</string>
     <string name="replication_added">Pridané %1$s</string>
-    <string name="replication_remove_message">Údaje vášho účtu na tomto hostiteľovi budú natrvalo vymazané. Váš účet zostane na vašich ostatných hostiteľoch.</string>
     <string name="settings_home_system_replication">Replikácia (server)</string>
     <string name="system_replication_pair_empty_hint">Spárujte s iným čerstvo nainštalovaným serverom pomocou \"mochictl replica join &lt;existing-peer-id&gt;\" na novom serveri.</string>
     <string name="route_delete_message">Týmto sa odstráni trasa pre cestu \"%1$s\".</string>
@@ -402,4 +399,15 @@
     <string name="account_data_dialog_body">Toto je úplná záloha, ktorú môžete obnoviť na tomto alebo inom serveri Mochi. Pokračujte overením, že ste to vy.</string>
     <string name="account_data_passphrase">Heslová fráza</string>
     <string name="account_data_passphrase_hint">Vaše súkromné kľúče sú zahrnuté, zašifrované touto prístupovou frázou. Uložte ju na bezpečné miesto. Budete ju potrebovať na obnovenie.</string>
+    <string name="replication_hosts_subtitle">Ďalšie servery, ktoré tiež uchovávajú kópiu vášho účtu. Ak chcete niektorý odstrániť, prihláste sa na ten server a použite možnosť \"Odstrániť môj účet z tohto servera\".</string>
+    <string name="replication_irreparable">Neopraviteľné</string>
+    <string name="replication_leave">Odstrániť môj účet z tohto servera</string>
+    <string name="replication_leave_title">Odstrániť váš účet z tohto servera?</string>
+    <string name="replication_leave_message">Údaje vášho účtu na tomto serveri budú natrvalo odstránené a budete tu odhlásený. Váš účet zostáva na vašich ostatných serveroch a tento môžete neskôr znova pridať.</string>
+    <string name="replication_leave_confirm">Odstrániť</string>
+    <string name="replication_forget">Zabudnúť tohto nedostupného hostiteľa</string>
+    <string name="replication_forget_title">Zabudnúť tohto nedostupného hostiteľa?</string>
+    <string name="replication_forget_message">Bude odstránený z vašej sady replík a po opätovnom pripojení dostane pokyn odstrániť svoju kópiu. Ak chcete odstrániť dostupný server, prihláste sa naň a použite možnosť \"Odstrániť môj účet z tohto servera\". Pokračujte potvrdením, že ste to vy.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Zabudnúť</string>
 </resources>

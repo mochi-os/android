@@ -56,8 +56,6 @@
     <string name="replication_deny">Mana saqiy</string>
     <string name="replication_hosts_title">Hostnikuna</string>
     <string name="replication_hosts_empty_hint">Huk servidorman replicananpaq, chaypi cuentata kicharqamuy hina \"Kasqan cuentata replicay\" opcionata utilizay.</string>
-    <string name="replication_remove">Kay replicata pichay</string>
-    <string name="replication_remove_title">Kay replicata pichay?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>
     <string name="system_replication_this_server">Kay servidor</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Mana hayk\'aqpas</string>
     <string name="replication_hosts_empty">Kay cuenta kay seridorllapi kachkan.</string>
     <string name="replication_added">Yapasqa %1$s</string>
-    <string name="replication_remove_message">Cuentaykip willaynin kay anfitrionpi wiñaypaq pichasqa kanqa. Cuentaykiqa huk anfitrionniykikunapim qhipakun.</string>
     <string name="settings_home_system_replication">Llank\'ay (seridor)</string>
     <string name="system_replication_pair_empty_hint">Musuq seridorpi \"mochictl replica join &lt;existing-peer-id&gt;\" apaykachay huk musuq churasqa seridorwan watanaykipaq.</string>
     <string name="route_delete_message">Kayqa \"%1$s\" ñan ñanta urqunqa.</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">Kayqa hunt\'asqa waqaychaymi, kay Mochi servidorpi utaq huk servidorpi kutichiyta atinki. Qan kasqaykita takyachiy qatinaykipaq.</string>
     <string name="account_data_passphrase">Fraseyta</string>
     <string name="account_data_passphrase_hint">Qhapaq llavesniykin yaykun, kay frase secretowan cipherakun. Allin cheqapi waqaychay. Kutichiptiyki nisiytiyki kaqtinmi munasunki.</string>
+    <string name="replication_hosts_subtitle">Wak servidorkuna cuentaykipa copianta hatallikuqkuna. Hukta hurqunapaq, chay servidorpi yaykuy hinaspa \"Cuentayta kay servidormanta hurquy\" nisqata servichikuy.</string>
+    <string name="replication_irreparable">Mana allichay atina</string>
+    <string name="replication_leave">Cuentayta kay servidormanta hurquy</string>
+    <string name="replication_leave_title">¿Cuentaykita kay servidormanta hurquyta munankichu?</string>
+    <string name="replication_leave_message">Cuentaykipa datosnin kay servidorpi wiñaypaq pichasqa kanqa, kaypitaq lluqsichisqa kanki. Cuentaykiqa wak servidorkunaykipi qhipakun, kaytataq qhipaman watiqmanta yapayta atinki.</string>
+    <string name="replication_leave_confirm">Qichuy</string>
+    <string name="replication_forget">Kay mana chayanapaq hostta qunquriy</string>
+    <string name="replication_forget_title">¿Kay mana chayanapaq hostta qunquriyta munankichu?</string>
+    <string name="replication_forget_message">Replica set nisqaykimanta hurqusqa kanqa, kutimuptintaq copianta pichanapaq nisqa kanqa. Huk chayana servidorta hurqunapaq, chaypi yaykuy hinaspa \"Cuentayta kay servidormanta hurquy\" nisqata servichikuy. Qatinaykipaq qam kasqaykita takyachiy.</string>
+    <string name="replication_offline">Mana tinkisqa</string>
+    <string name="replication_forget_confirm">Qonqay</string>
 </resources>

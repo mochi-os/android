@@ -56,8 +56,6 @@
     <string name="replication_deny">નકારો</string>
     <string name="replication_hosts_title">મારા હોસ્ટ</string>
     <string name="replication_hosts_empty_hint">તેને બીજા સર્વર પર પ્રતિકૃતિ બનાવવા માટે, ત્યાં એક એકાઉન્ટ માટે સાઇન અપ કરો અને \"હાલના એકાઉન્ટની પ્રતિકૃતિ બનાવો\" વિકલ્પનો ઉપયોગ કરો.</string>
-    <string name="replication_remove">આ પ્રતિકૃતિ કાઢી નાખો</string>
-    <string name="replication_remove_title">આ પ્રતિકૃતિ કાઢી નાખવી છે?</string>
     <string name="settings_home_section_system">સિસ્ટમ</string>
     <string name="system_replication_title">પ્રતિકૃતિ</string>
     <string name="system_replication_this_server">આ સર્વર</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ક્યારેય નહીં</string>
     <string name="replication_hosts_empty">આ ખાતું માત્ર આ સર્વર પર છે.</string>
     <string name="replication_added">ઉમેર્યું %1$s</string>
-    <string name="replication_remove_message">આ હોસ્ટ પરનો તમારા ખાતાનો ડેટા કાયમ માટે કાઢી નાખવામાં આવશે. તમારું ખાતું તમારા અન્ય હોસ્ટ પર રહે છે.</string>
     <string name="settings_home_system_replication">નકલ (સર્વર)</string>
     <string name="system_replication_pair_empty_hint">નવા સર્વર પર \"mochictl replica join &lt;existing-peer-id&gt;\" નો ઉપયોગ કરીને બીજા તાજા ઇન્સ્ટોલ થયેલ સર્વર સાથે જોડો.</string>
     <string name="route_delete_message">આ માર્ગ \"%1$s\" માટેનો રૂટ દૂર કરશે.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">આ એક સંપૂર્ણ બૅકઅપ છે જેને તમે આ અથવા બીજા Mochi સર્વર પર પુનઃસ્થાપિત કરી શકો છો. ચાલુ રાખવા માટે ખાતરી કરો કે આ તમે જ છો.</string>
     <string name="account_data_passphrase">પાસ-ફ્રેઝ</string>
     <string name="account_data_passphrase_hint">તમારી ખાનગી ચાવીઓ સામેલ છે, આ પ્રવેશ-વાક્ય સાથે એન્ક્રિપ્ટ કરેલી છે. તેને સુરક્ષિત રાખો. રીસ્ટોર કરવા માટે તમને તેની જરૂર પડશે.</string>
+    <string name="replication_hosts_subtitle">અન્ય સર્વર જે તમારા ખાતાની નકલ પણ રાખે છે. એક દૂર કરવા માટે, તે સર્વર પર સાઇન ઇન કરો અને \"આ સર્વરમાંથી મારું ખાતું દૂર કરો\" વાપરો.</string>
+    <string name="replication_irreparable">અસુધાર્ય</string>
+    <string name="replication_leave">આ સર્વરમાંથી મારું ખાતું દૂર કરો</string>
+    <string name="replication_leave_title">આ સર્વરમાંથી તમારું ખાતું દૂર કરવું છે?</string>
+    <string name="replication_leave_message">આ સર્વર પરનો તમારા ખાતાનો ડેટા કાયમ માટે કાઢી નાખવામાં આવશે અને તમને અહીંથી સાઇન આઉટ કરવામાં આવશે. તમારું ખાતું તમારા અન્ય સર્વર પર રહે છે, અને તમે આ ફરીથી પછી ઉમેરી શકો છો.</string>
+    <string name="replication_leave_confirm">દૂર કરો</string>
+    <string name="replication_forget">આ અપ્રાપ્ય હોસ્ટને ભૂલી જાઓ</string>
+    <string name="replication_forget_title">આ અપ્રાપ્ય હોસ્ટને ભૂલી જવો છે?</string>
+    <string name="replication_forget_message">તેને તમારા પ્રતિકૃતિ સમૂહમાંથી દૂર કરવામાં આવશે અને ફરી જોડાય ત્યારે તેની નકલ કાઢી નાખવાનું કહેવામાં આવશે. પ્રાપ્ય સર્વર દૂર કરવા માટે, ત્યાં સાઇન ઇન કરો અને \"આ સર્વરમાંથી મારું ખાતું દૂર કરો\" વાપરો. ચાલુ રાખવા માટે તમે જ છો તેની ખાતરી કરો.</string>
+    <string name="replication_offline">ઑફલાઇન</string>
+    <string name="replication_forget_confirm">ભૂલી જાઓ</string>
 </resources>

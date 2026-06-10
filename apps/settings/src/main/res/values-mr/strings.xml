@@ -56,8 +56,6 @@
     <string name="replication_deny">नाकारा</string>
     <string name="replication_hosts_title">माझे होस्ट</string>
     <string name="replication_hosts_empty_hint">ते दुसर्‍या सर्व्हरवर प्रतिकृत करण्यासाठी, तेथे एक खाते साइन अप करा आणि \"विद्यमान खात्याची प्रतिकृती करा\" पर्याय वापरा.</string>
-    <string name="replication_remove">ही प्रतिकृती हटवा</string>
-    <string name="replication_remove_title">ही प्रतिकृती हटवायची?</string>
     <string name="settings_home_section_system">सिस्टम</string>
     <string name="system_replication_title">प्रतिकृती</string>
     <string name="system_replication_this_server">हा सर्व्हर</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">कधीही नाही</string>
     <string name="replication_hosts_empty">हे खाते केवळ या सर्व्हरवर आहे.</string>
     <string name="replication_added">जोडले %1$s</string>
-    <string name="replication_remove_message">या होस्टवरील तुमच्या खात्याचा डेटा कायमचा हटवला जाईल. तुमचे खाते तुमच्या इतर होस्टवर कायम राहील.</string>
     <string name="settings_home_system_replication">प्रतिकृती (सर्व्हर)</string>
     <string name="system_replication_pair_empty_hint">नवीन सर्व्हरवर \"mochictl replica join &lt;existing-peer-id&gt;\" वापरून दुसर्‍या नवीन स्थापित सर्व्हरसह जोडा.</string>
     <string name="route_delete_message">हे मार्ग \"%1$s\" साठीचा मार्ग काढून टाकेल.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">हा एक संपूर्ण बॅकअप आहे जो तुम्ही या किंवा दुसऱ्या Mochi सर्व्हरवर पुनर्संचयित करू शकता. सुरू ठेवण्यासाठी तुम्हीच आहात याची खात्री करा.</string>
     <string name="account_data_passphrase">पासफ्रेज</string>
     <string name="account_data_passphrase_hint">तुमच्या खाजगी किल्ली समाविष्ट आहेत, या पासफ्रेजने एन्क्रिप्ट केलेल्या आहेत. त्या सुरक्षित ठेवा. पुनर्संचयित करण्यासाठी तुम्हाला त्यांची आवश्यकता असेल.</string>
+    <string name="replication_hosts_subtitle">तुमच्या खात्याची प्रत असलेले इतर सर्व्हर. एक काढण्यासाठी, त्या सर्व्हरवर साइन इन करा आणि \"या सर्व्हरवरून माझे खाते काढा\" वापरा.</string>
+    <string name="replication_irreparable">दुरुस्त न होणारे</string>
+    <string name="replication_leave">या सर्व्हरवरून माझे खाते काढा</string>
+    <string name="replication_leave_title">या सर्व्हरवरून तुमचे खाते काढायचे?</string>
+    <string name="replication_leave_message">या सर्व्हरवरील तुमच्या खात्याचा डेटा कायमचा हटवला जाईल आणि तुम्ही येथून साइन आउट व्हाल. तुमचे खाते तुमच्या इतर सर्व्हरवर राहते आणि तुम्ही हा सर्व्हर नंतर पुन्हा जोडू शकता.</string>
+    <string name="replication_leave_confirm">काढा</string>
+    <string name="replication_forget">हा अगम्य होस्ट विसरा</string>
+    <string name="replication_forget_title">हा अगम्य होस्ट विसरायचा?</string>
+    <string name="replication_forget_message">तो तुमच्या प्रतिकृती संचातून काढला जाईल आणि पुन्हा कनेक्ट झाल्यावर त्याची प्रत हटवण्यास सांगितले जाईल. पोहोचता येणारा सर्व्हर काढण्यासाठी, तेथे साइन इन करा आणि \"या सर्व्हरवरून माझे खाते काढा\" वापरा. सुरू ठेवण्यासाठी हे तुम्हीच आहात याची खात्री करा.</string>
+    <string name="replication_offline">ऑफलाइन</string>
+    <string name="replication_forget_confirm">विसरा</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">மறு</string>
     <string name="replication_hosts_title">என் ஹோஸ்ட்கள்</string>
     <string name="replication_hosts_empty_hint">அதை மற்றொரு சேவையகத்திற்கு நகலெடுக்க, அங்கே ஒரு கணக்கிற்கு பதிவுசெய்து, \"ஏற்கனவே உள்ள கணக்கை நகலெடு\" விருப்பத்தைப் பயன்படுத்தவும்.</string>
-    <string name="replication_remove">இந்த நகலை நீக்கு</string>
-    <string name="replication_remove_title">இந்த நகலை நீக்கவா?</string>
     <string name="settings_home_section_system">சிஸ்டம்</string>
     <string name="system_replication_title">நகலெடுப்பு</string>
     <string name="system_replication_this_server">இந்த சேவையகம்</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ஒருபோதும் இல்லை</string>
     <string name="replication_hosts_empty">இந்த கணக்கு இந்த சேவையகத்தில் மட்டுமே உள்ளது.</string>
     <string name="replication_added">சேர்க்கப்பட்டது %1$s</string>
-    <string name="replication_remove_message">இந்த ஓம்புநரில் உள்ள உங்கள் கணக்குத் தரவு நிரந்தரமாக நீக்கப்படும். உங்கள் கணக்கு உங்கள் மற்ற ஓம்புநர்களில் இருக்கும்.</string>
     <string name="settings_home_system_replication">பிரதிபலிப்பு (சேவையகம்)</string>
     <string name="system_replication_pair_empty_hint">புதிய சேவையகத்தில் \"mochictl replica join &lt;existing-peer-id&gt;\" பயன்படுத்தி மற்றொரு புதிதாக நிறுவப்பட்ட சேவையகத்துடன் இணைக்கவும்.</string>
     <string name="route_delete_message">இது பாதை \"%1$s\" க்கான வழியை அகற்றும்.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">இது நீங்கள் இந்த அல்லது மற்றொரு Mochi சேவையகத்தில் மீட்டெடுக்கக்கூடிய முழுமையான காப்புப்பிரதி. தொடர இது நீங்கள்தான் என சரிபார்க்கவும்.</string>
     <string name="account_data_passphrase">கடவுச்சொற்றொடர்</string>
     <string name="account_data_passphrase_hint">உங்கள் தனிப்பட்ட விசைகள் சேர்க்கப்பட்டுள்ளன, இந்த கடவுச்சொற்றொடர் மூலம் மறைகுறியாக்கப்பட்டுள்ளன. இதை பாதுகாப்பான இடத்தில் சேமிக்கவும். மீட்டெடுக்க உங்களுக்கு இது தேவைப்படும்.</string>
+    <string name="replication_hosts_subtitle">உங்கள் கணக்கின் நகலை வைத்திருக்கும் பிற சேவையகங்கள். ஒன்றை அகற்ற, அந்தச் சேவையகத்தில் உள்நுழைந்து \"இந்தச் சேவையகத்திலிருந்து என் கணக்கை அகற்று\" என்பதைப் பயன்படுத்தவும்.</string>
+    <string name="replication_irreparable">சரிசெய்ய முடியாது</string>
+    <string name="replication_leave">இந்தச் சேவையகத்திலிருந்து என் கணக்கை அகற்று</string>
+    <string name="replication_leave_title">இந்தச் சேவையகத்திலிருந்து உங்கள் கணக்கை அகற்றவா?</string>
+    <string name="replication_leave_message">இந்தச் சேவையகத்தில் உள்ள உங்கள் கணக்கின் தரவு நிரந்தரமாக அழிக்கப்படும், இங்கு நீங்கள் வெளியேற்றப்படுவீர்கள். உங்கள் கணக்கு உங்கள் பிற சேவையகங்களில் இருக்கும், இதை பின்னர் மீண்டும் சேர்க்கலாம்.</string>
+    <string name="replication_leave_confirm">அகற்று</string>
+    <string name="replication_forget">அணுக முடியாத இந்த ஓம்புநரை மறக்கவும்</string>
+    <string name="replication_forget_title">அணுக முடியாத இந்த ஓம்புநரை மறக்கவா?</string>
+    <string name="replication_forget_message">இது உங்கள் நகல் தொகுப்பிலிருந்து அகற்றப்படும், மீண்டும் இணையும்போது அதன் நகலை அழிக்கச் சொல்லப்படும். அணுகக்கூடிய சேவையகத்தை அகற்ற, அங்கு உள்நுழைந்து \"இந்தச் சேவையகத்திலிருந்து என் கணக்கை அகற்று\" என்பதைப் பயன்படுத்தவும். தொடர உங்களை உறுதிப்படுத்தவும்.</string>
+    <string name="replication_offline">ஆஃப்லைன்</string>
+    <string name="replication_forget_confirm">மறந்துவிடு</string>
 </resources>

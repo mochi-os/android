@@ -55,8 +55,6 @@
     <string name="replication_deny">Denegar</string>
     <string name="replication_hosts_title">Mis anfitriones</string>
     <string name="replication_hosts_empty_hint">Para replicarla a otro servidor, regístrate para crear una cuenta allí y usa la opción \\"Replicar una cuenta existente\\".</string>
-    <string name="replication_remove">Eliminar esta réplica</string>
-    <string name="replication_remove_title">¿Eliminar esta réplica?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>
     <string name="system_replication_this_server">Este servidor</string>
@@ -296,7 +294,6 @@
     <string name="tokens_expires">Expira: %1$s</string>
     <string name="replication_hosts_empty">Esta cuenta está solo en este servidor.</string>
     <string name="replication_added">Agregado %1$s</string>
-    <string name="replication_remove_message">Los datos de tu cuenta en este host se eliminarán de forma permanente. Tu cuenta permanece en tus otros hosts.</string>
     <string name="settings_home_system_replication">Replicación (servidor)</string>
     <string name="system_replication_pair_empty_hint">Empareja con otro servidor recién instalado ejecutando \"mochictl replica join &lt;existing-peer-id&gt;\" en el servidor nuevo.</string>
     <string name="route_delete_message">Esto quitará la ruta de la ubicación \"%1$s\".</string>
@@ -401,4 +398,15 @@
     <string name="account_data_dialog_body">Es un respaldo completo que puedes restaurar en este u otro servidor Mochi. Verifica tu identidad para continuar.</string>
     <string name="account_data_passphrase">Frase de contraseña</string>
     <string name="account_data_passphrase_hint">Tus claves privadas están incluidas, cifradas con esta frase de contraseña. Guardala en un lugar seguro. La vas a necesitar para restaurar.</string>
+    <string name="replication_hosts_subtitle">Otros servidores que también guardan una copia de tu cuenta. Para quitar uno, inicia sesión en ese servidor y usa «Quitar mi cuenta de este servidor».</string>
+    <string name="replication_irreparable">Irrecuperable</string>
+    <string name="replication_leave">Quitar mi cuenta de este servidor</string>
+    <string name="replication_leave_title">¿Quitar tu cuenta de este servidor?</string>
+    <string name="replication_leave_message">Los datos de tu cuenta en este servidor se eliminarán permanentemente y se cerrará tu sesión aquí. Tu cuenta permanece en tus otros servidores y puedes volver a agregar este más adelante.</string>
+    <string name="replication_leave_confirm">Eliminar</string>
+    <string name="replication_forget">Olvidar este host inaccesible</string>
+    <string name="replication_forget_title">¿Olvidar este host inaccesible?</string>
+    <string name="replication_forget_message">Se quitará de tu conjunto de réplicas y se le indicará que borre su copia cuando vuelva a conectarse. Para quitar un servidor accesible, inicia sesión allí y usa «Quitar mi cuenta de este servidor». Verifica que eres tú para continuar.</string>
+    <string name="replication_offline">Sin conexión</string>
+    <string name="replication_forget_confirm">Olvidar</string>
 </resources>

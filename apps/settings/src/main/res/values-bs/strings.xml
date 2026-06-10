@@ -56,8 +56,6 @@
     <string name="replication_deny">Odbij</string>
     <string name="replication_hosts_title">Moji hostovi</string>
     <string name="replication_hosts_empty_hint">Da biste ga replicirali na drugi server, registrirajte se za račun tamo i koristite opciju \"Repliciraj postojeći račun\".</string>
-    <string name="replication_remove">Izbriši ovu repliku</string>
-    <string name="replication_remove_title">Izbrisati ovu repliku?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikacija</string>
     <string name="system_replication_this_server">Ovaj server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nikad</string>
     <string name="replication_hosts_empty">Ovaj račun je samo na ovom serveru.</string>
     <string name="replication_added">Dodano %1$s</string>
-    <string name="replication_remove_message">Podaci vašeg računa na ovom hostu bit će trajno izbrisani. Vaš račun ostaje na vašim drugim hostovima.</string>
     <string name="settings_home_system_replication">Replikacija (server)</string>
     <string name="system_replication_pair_empty_hint">Uparite sa drugim svježe instaliranim serverom koristeći \"mochictl replica join &lt;existing-peer-id&gt;\" na novom serveru.</string>
     <string name="route_delete_message">Ovo će ukloniti rutu za putanju \"%1$s\".</string>
@@ -401,4 +398,15 @@
     <string name="account_data_dialog_body">Ovo je potpuna sigurnosna kopija koju možete vratiti na ovom ili drugom Mochi serveru. Potvrdite da ste to vi da biste nastavili.</string>
     <string name="account_data_passphrase">Zaporka</string>
     <string name="account_data_passphrase_hint">Vaši privatni ključevi su uključeni, šifrovani ovom lozinkom-frazom. Čuvajte je na sigurnom. Trebat će vam za vraćanje.</string>
+    <string name="replication_hosts_subtitle">Drugi serveri koji također čuvaju kopiju vašeg računa. Da biste uklonili jedan, prijavite se na taj server i koristite „Ukloni moj račun s ovog servera“.</string>
+    <string name="replication_irreparable">Nepopravljivo</string>
+    <string name="replication_leave">Ukloni moj račun s ovog servera</string>
+    <string name="replication_leave_title">Ukloniti vaš račun s ovog servera?</string>
+    <string name="replication_leave_message">Podaci vašeg računa na ovom serveru bit će trajno izbrisani i bit ćete odjavljeni ovdje. Vaš račun ostaje na vašim drugim serverima i možete ovaj ponovo dodati kasnije.</string>
+    <string name="replication_leave_confirm">Ukloni</string>
+    <string name="replication_forget">Zaboravi ovaj nedostupni host</string>
+    <string name="replication_forget_title">Zaboraviti ovaj nedostupni host?</string>
+    <string name="replication_forget_message">Bit će uklonjen iz vašeg skupa replika i bit će mu rečeno da izbriše svoju kopiju kada se ponovo poveže. Da biste uklonili dostupan server, prijavite se tamo i koristite „Ukloni moj račun s ovog servera“. Potvrdite da ste to vi kako biste nastavili.</string>
+    <string name="replication_offline">Van mreže</string>
+    <string name="replication_forget_confirm">Zaboravi</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">Odbij</string>
     <string name="replication_hosts_title">Moji domaćini</string>
     <string name="replication_hosts_empty_hint">Da biste ga replicirali na drugi poslužitelj, registrirajte se za račun tamo i upotrijebite opciju \"Repliciraj postojeći račun\".</string>
-    <string name="replication_remove">Izbriši ovu repliku</string>
-    <string name="replication_remove_title">Izbrisati ovu repliku?</string>
     <string name="settings_home_section_system">Sustav</string>
     <string name="system_replication_title">Replikacija</string>
     <string name="system_replication_this_server">Ovaj poslužitelj</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nikad</string>
     <string name="replication_hosts_empty">Ovaj račun je samo na ovom poslužitelju.</string>
     <string name="replication_added">Dodano %1$s</string>
-    <string name="replication_remove_message">Podaci vašeg računa na ovom poslužitelju bit će trajno izbrisani. Vaš račun ostaje na vašim ostalim poslužiteljima.</string>
     <string name="settings_home_system_replication">Replikacija (poslužitelj)</string>
     <string name="system_replication_pair_empty_hint">Uparite s drugim svježe instaliranim poslužiteljem koristeći \"mochictl replica join &lt;existing-peer-id&gt;\" na novom poslužitelju.</string>
     <string name="route_delete_message">Ovo će ukloniti rutu za putanju \"%1$s\".</string>
@@ -401,4 +398,15 @@
     <string name="account_data_dialog_body">Ovo je potpuna sigurnosna kopija koju možete vratiti na ovaj ili drugi Mochi poslužitelj. Potvrdite svoj identitet za nastavak.</string>
     <string name="account_data_passphrase">Zaporna fraza</string>
     <string name="account_data_passphrase_hint">Vaši privatni ključevi su uključeni, šifrirani ovom lozinkom-frazom. Čuvajte je na sigurnom. Trebat će vam za obnovu.</string>
+    <string name="replication_hosts_subtitle">Drugi poslužitelji koji također drže kopiju vašeg računa. Da biste uklonili jedan, prijavite se na taj poslužitelj i upotrijebite „Ukloni moj račun s ovog poslužitelja”.</string>
+    <string name="replication_irreparable">Nepopravljivo</string>
+    <string name="replication_leave">Ukloni moj račun s ovog poslužitelja</string>
+    <string name="replication_leave_title">Ukloniti vaš račun s ovog poslužitelja?</string>
+    <string name="replication_leave_message">Podaci vašeg računa na ovom poslužitelju bit će trajno izbrisani i bit ćete odjavljeni ovdje. Vaš račun ostaje na vašim drugim poslužiteljima i ovaj možete ponovno dodati kasnije.</string>
+    <string name="replication_leave_confirm">Ukloni</string>
+    <string name="replication_forget">Zaboravi ovaj nedostupni poslužitelj</string>
+    <string name="replication_forget_title">Zaboraviti ovaj nedostupni poslužitelj?</string>
+    <string name="replication_forget_message">Bit će uklonjen iz vašeg skupa replika i zatražit će se da izbriše svoju kopiju kada se ponovno poveže. Da biste uklonili dostupan poslužitelj, prijavite se na njega i upotrijebite „Ukloni moj račun s ovog poslužitelja”. Potvrdite da ste to vi za nastavak.</string>
+    <string name="replication_offline">Izvan mreže</string>
+    <string name="replication_forget_confirm">Zaboravi</string>
 </resources>

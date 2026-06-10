@@ -56,8 +56,6 @@
     <string name="replication_deny">অস্বীকার করুন</string>
     <string name="replication_hosts_title">আমার হোস্ট</string>
     <string name="replication_hosts_empty_hint">এটিকে অন্য সার্ভারে প্রতিলিপি করতে, সেখানে একটি অ্যাকাউন্টের জন্য সাইন আপ করুন এবং \"একটি বিদ্যমান অ্যাকাউন্ট প্রতিলিপি করুন\" বিকল্পটি ব্যবহার করুন।</string>
-    <string name="replication_remove">এই রেপ্লিকা মুছুন</string>
-    <string name="replication_remove_title">এই রেপ্লিকা মুছবেন?</string>
     <string name="settings_home_section_system">সিস্টেম</string>
     <string name="system_replication_title">প্রতিলিপি</string>
     <string name="system_replication_this_server">এই সার্ভার</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">কখনই না</string>
     <string name="replication_hosts_empty">এই অ্যাকাউন্ট শুধুমাত্র এই সার্ভারে আছে।</string>
     <string name="replication_added">যোগ করা হয়েছে %1$s</string>
-    <string name="replication_remove_message">এই হোস্টে আপনার অ্যাকাউন্টের ডেটা স্থায়ীভাবে মুছে ফেলা হবে। আপনার অ্যাকাউন্ট আপনার অন্যান্য হোস্টে থেকে যাবে।</string>
     <string name="settings_home_system_replication">প্রতিলিপি (সার্ভার)</string>
     <string name="system_replication_pair_empty_hint">নতুন সার্ভারে \"mochictl replica join &lt;existing-peer-id&gt;\" ব্যবহার করে অন্য একটি তাজা ইনস্টল করা সার্ভারের সাথে যুক্ত হন।</string>
     <string name="route_delete_message">এটি \"%1$s\" পথের রুট মুছে ফেলবে।</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">এটি একটি সম্পূর্ণ ব্যাকআপ যা আপনি এই বা অন্য কোনো Mochi সার্ভারে পুনরুদ্ধার করতে পারেন। চালিয়ে যেতে এটি যে আপনি তা যাচাই করুন।</string>
     <string name="account_data_passphrase">পাসফ্রেজ</string>
     <string name="account_data_passphrase_hint">আপনার প্রাইভেট কী অন্তর্ভুক্ত রয়েছে, এই পাসফ্রেজ দিয়ে এনক্রিপ্ট করা হয়েছে। এটি নিরাপদে সংরক্ষণ করুন। পুনরুদ্ধারের জন্য এটির প্রয়োজন হবে।</string>
+    <string name="replication_hosts_subtitle">অন্যান্য সার্ভার যেগুলিতেও আপনার অ্যাকাউন্টের একটি কপি রয়েছে। একটি সরাতে, সেই সার্ভারে সাইন ইন করুন এবং \"এই সার্ভার থেকে আমার অ্যাকাউন্ট সরান\" ব্যবহার করুন।</string>
+    <string name="replication_irreparable">মেরামত অযোগ্য</string>
+    <string name="replication_leave">এই সার্ভার থেকে আমার অ্যাকাউন্ট সরান</string>
+    <string name="replication_leave_title">এই সার্ভার থেকে আপনার অ্যাকাউন্ট সরাবেন?</string>
+    <string name="replication_leave_message">এই সার্ভারে আপনার অ্যাকাউন্টের ডেটা স্থায়ীভাবে মুছে ফেলা হবে এবং আপনাকে এখানে সাইন আউট করা হবে। আপনার অ্যাকাউন্ট আপনার অন্যান্য সার্ভারে থাকবে এবং আপনি পরে এটি আবার যোগ করতে পারবেন।</string>
+    <string name="replication_leave_confirm">সরান</string>
+    <string name="replication_forget">এই অগম্য হোস্টটি ভুলে যান</string>
+    <string name="replication_forget_title">এই অগম্য হোস্টটি ভুলে যাবেন?</string>
+    <string name="replication_forget_message">এটি আপনার রেপ্লিকা সেট থেকে সরিয়ে দেওয়া হবে এবং পুনরায় সংযুক্ত হলে এর কপি মুছে ফেলতে বলা হবে। একটি অ্যাক্সেসযোগ্য সার্ভার সরাতে, সেখানে সাইন ইন করুন এবং \"এই সার্ভার থেকে আমার অ্যাকাউন্ট সরান\" ব্যবহার করুন। চালিয়ে যেতে আপনি যে আপনিই তা যাচাই করুন।</string>
+    <string name="replication_offline">অফলাইন</string>
+    <string name="replication_forget_confirm">ভুলে যান</string>
 </resources>

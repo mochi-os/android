@@ -32,6 +32,9 @@ data class ReplicationUiState(
 
 sealed class ReplicationEvent {
     data class Copied(val success: Boolean) : ReplicationEvent()
+
+    /** The account was removed from this server; the screen signs out. */
+    data object Left : ReplicationEvent()
 }
 
 @HiltViewModel
@@ -83,7 +86,27 @@ class ReplicationViewModel @Inject constructor(
         }
     }
     fun deny(peer: String) = mutate { api.denyLink(peer).bodyOrThrow() }
-    fun remove(peer: String) = mutate { api.removeHost(peer).bodyOrThrow() }
+
+    /** Advanced: forget an unreachable host. Step-up gated. */
+    fun remove(peer: String) = stepUp.request { token ->
+        try {
+            api.removeHost(peer, token).bodyOrThrow()
+            refresh()
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = e.toMochiError())
+        }
+    }
+
+    /** Remove the account from THIS server. Step-up gated; on success the
+     *  screen signs out (this server's copy, and its sessions, are gone). */
+    fun leave() = stepUp.request { token ->
+        try {
+            api.leave(token).bodyOrThrow()
+            _events.emit(ReplicationEvent.Left)
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = e.toMochiError())
+        }
+    }
 
     fun reportCopied(success: Boolean) {
         viewModelScope.launch { _events.emit(ReplicationEvent.Copied(success)) }

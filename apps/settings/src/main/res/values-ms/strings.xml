@@ -56,8 +56,6 @@
     <string name="replication_deny">Tolak</string>
     <string name="replication_hosts_title">Hos saya</string>
     <string name="replication_hosts_empty_hint">Untuk mereplikasinya ke pelayan lain, daftar untuk akaun di sana dan gunakan pilihan \"Replikasi akaun sedia ada\".</string>
-    <string name="replication_remove">Padamkan replika ini</string>
-    <string name="replication_remove_title">Padamkan replika ini?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikasi</string>
     <string name="system_replication_this_server">Pelayan ini</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Tidak pernah</string>
     <string name="replication_hosts_empty">Akaun ini hanya pada pelayan ini.</string>
     <string name="replication_added">Ditambah %1$s</string>
-    <string name="replication_remove_message">Data akaun anda pada hos ini akan dipadamkan secara kekal. Akaun anda kekal pada hos anda yang lain.</string>
     <string name="settings_home_system_replication">Replikasi (pelayan)</string>
     <string name="system_replication_pair_empty_hint">Pasangkan dengan pelayan lain yang baru dipasang menggunakan \"mochictl replica join &lt;existing-peer-id&gt;\" pada pelayan baru.</string>
     <string name="route_delete_message">Ini akan mengalih keluar laluan bagi laluan \"%1$s\".</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">Ini ialah sandaran lengkap yang boleh anda pulihkan pada pelayan Mochi ini atau pelayan Mochi lain. Sahkan ini anda untuk meneruskan.</string>
     <string name="account_data_passphrase">Frasa laluan</string>
     <string name="account_data_passphrase_hint">Kunci peribadi anda disertakan, disulitkan dengan frasa laluan ini. Simpannya dengan selamat. Anda memerlukannya untuk memulihkan.</string>
+    <string name="replication_hosts_subtitle">Pelayan lain yang turut menyimpan salinan akaun anda. Untuk mengalih keluar satu, log masuk pada pelayan itu dan gunakan \"Alih keluar akaun saya daripada pelayan ini\".</string>
+    <string name="replication_irreparable">Tidak dapat dibaiki</string>
+    <string name="replication_leave">Alih keluar akaun saya daripada pelayan ini</string>
+    <string name="replication_leave_title">Alih keluar akaun anda daripada pelayan ini?</string>
+    <string name="replication_leave_message">Data akaun anda pada pelayan ini akan dipadamkan secara kekal dan anda akan dilog keluar di sini. Akaun anda kekal pada pelayan anda yang lain, dan anda boleh menambah semula pelayan ini kemudian.</string>
+    <string name="replication_leave_confirm">Alih keluar</string>
+    <string name="replication_forget">Lupakan hos yang tidak boleh dicapai ini</string>
+    <string name="replication_forget_title">Lupakan hos yang tidak boleh dicapai ini?</string>
+    <string name="replication_forget_message">Ia akan dialih keluar daripada set replika anda dan diarahkan untuk memadamkan salinannya apabila ia bersambung semula. Untuk mengalih keluar pelayan yang boleh dicapai, log masuk di sana dan gunakan \"Alih keluar akaun saya daripada pelayan ini\". Sahkan bahawa ini anda untuk meneruskan.</string>
+    <string name="replication_offline">Luar talian</string>
+    <string name="replication_forget_confirm">Lupakan</string>
 </resources>

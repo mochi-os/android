@@ -56,8 +56,6 @@
     <string name="replication_deny">Gwrthod</string>
     <string name="replication_hosts_title">Fy ngwesteion</string>
     <string name="replication_hosts_empty_hint">I\'w atgynhyrchu i weinydd arall, cofrestrwch ar gyfer cyfrif yno a defnyddiwch yr opsiwn \"Atgynhyrchu cyfrif sy\'n bodoli\".</string>
-    <string name="replication_remove">Dileu\'r replica hwn</string>
-    <string name="replication_remove_title">Dileu\'r replica hwn?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Atgynhyrchu</string>
     <string name="system_replication_this_server">Y gweinydd hwn</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Byth</string>
     <string name="replication_hosts_empty">Mae\'r cyfrif hwn ar y gweinydd hwn yn unig.</string>
     <string name="replication_added">Ychwanegwyd %1$s</string>
-    <string name="replication_remove_message">Bydd data eich cyfrif ar y gwesteiwr hwn yn cael ei ddileu\'n barhaol. Mae eich cyfrif yn aros ar eich gwesteiwyr eraill.</string>
     <string name="settings_home_system_replication">Dyblygu (gweinydd)</string>
     <string name="system_replication_pair_empty_hint">Parwch gyda gweinydd arall newydd wedi\'i osod gan ddefnyddio \"mochictl replica join &lt;existing-peer-id&gt;\" ar y gweinydd newydd.</string>
     <string name="route_delete_message">Bydd hyn yn tynnu\'r llwybr ar gyfer y llwybr \"%1$s\".</string>
@@ -404,4 +401,15 @@
     <string name="account_data_dialog_body">Mae hwn yn gopi wrth gefn cyflawn y gallwch ei adfer ar y gweinydd Mochi hwn neu un arall. Gwiriwch mai chi sydd yna i barhau.</string>
     <string name="account_data_passphrase">Ymadrodd cyfrinachol</string>
     <string name="account_data_passphrase_hint">Mae eich allweddi preifat wedi\'u cynnwys, wedi\'u hamgryptio â\'r cyfrinymadrodd hwn. Cadwch ef yn ddiogel. Bydd ei angen arnoch i adfer.</string>
+    <string name="replication_hosts_subtitle">Gweinyddion eraill sydd hefyd yn dal copi o\'ch cyfrif. I dynnu un, mewngofnodwch ar y gweinydd hwnnw a defnyddiwch \"Tynnu fy nghyfrif oddi ar y gweinydd hwn\".</string>
+    <string name="replication_irreparable">Anadferadwy</string>
+    <string name="replication_leave">Tynnu fy nghyfrif oddi ar y gweinydd hwn</string>
+    <string name="replication_leave_title">Tynnu eich cyfrif oddi ar y gweinydd hwn?</string>
+    <string name="replication_leave_message">Caiff data eich cyfrif ar y gweinydd hwn ei ddileu\'n barhaol a chewch eich allgofnodi yma. Mae eich cyfrif yn aros ar eich gweinyddion eraill, a gallwch ailychwanegu hwn yn nes ymlaen.</string>
+    <string name="replication_leave_confirm">Tynnu</string>
+    <string name="replication_forget">Anghofio\'r gwesteiwr anghyraeddadwy hwn</string>
+    <string name="replication_forget_title">Anghofio\'r gwesteiwr anghyraeddadwy hwn?</string>
+    <string name="replication_forget_message">Caiff ei dynnu o\'ch set o atgynyrchiadau a dywedir wrtho i ddileu ei gopi pan fydd yn ailgysylltu. I dynnu gweinydd cyraeddadwy, mewngofnodwch yno a defnyddiwch \"Tynnu fy nghyfrif oddi ar y gweinydd hwn\". Cadarnhewch mai chi sydd yno i barhau.</string>
+    <string name="replication_offline">All-lein</string>
+    <string name="replication_forget_confirm">Anghofio</string>
 </resources>

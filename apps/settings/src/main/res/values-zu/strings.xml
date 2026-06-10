@@ -56,8 +56,6 @@
     <string name="replication_deny">Yenqaba</string>
     <string name="replication_hosts_title">Abasingathi bami</string>
     <string name="replication_hosts_empty_hint">Ukuze uyiphindaphinde kwenye iseva, bhalisela i-akhawunti lapho bese usebenzisa inketho yokuthi \"Phindaphinda i-akhawunti ekhona\".</string>
-    <string name="replication_remove">Susa le khophi</string>
-    <string name="replication_remove_title">Susa le khophi?</string>
     <string name="settings_home_section_system">Isistimu</string>
     <string name="system_replication_title">Ukuphindaphinda</string>
     <string name="system_replication_this_server">Le seva</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Akekho</string>
     <string name="replication_hosts_empty">Le akhawunti ikulesi seva kuphela.</string>
     <string name="replication_added">Kwengeziwe %1$s</string>
-    <string name="replication_remove_message">Idatha ye-akhawunti yakho kule host izosuswa unomphela. I-akhawunti yakho ihlala kwamanye ama-host akho.</string>
     <string name="settings_home_system_replication">Ukukopisha (iseva)</string>
     <string name="system_replication_pair_empty_hint">Hlanganisa neyo enye iseva entsha efakwe nge-\"mochictl replica join &lt;existing-peer-id&gt;\" kwiseva entsha.</string>
     <string name="route_delete_message">Lokhu kuzosusa irawudi yendlela \"%1$s\".</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">Lokhu yikopi yokugcina epheleleyo ongayibuyisela kule noma kwenye iseva ye-Mochi. Qinisekisa ukuthi nguwe ukuze uqhubeke.</string>
     <string name="account_data_passphrase">Umusho wephasiwedi</string>
     <string name="account_data_passphrase_hint">Izihluthulelo zakho eziyimfihlo zifakiwe, zikhiyelwe nale mshwana wephasiwedi. Gcina ngokuphepha. Uzidinga ukuze ubuyisele.</string>
+    <string name="replication_hosts_subtitle">Ezinye iziseva nazo eziphethe ikhophi ye-akhawunti yakho. Ukususa enye, ngena kuleyo seva bese usebenzisa \"Susa i-akhawunti yami kule seva\".</string>
+    <string name="replication_irreparable">Akulungiseki</string>
+    <string name="replication_leave">Susa i-akhawunti yami kule seva</string>
+    <string name="replication_leave_title">Susa i-akhawunti yakho kule seva?</string>
+    <string name="replication_leave_message">Idatha ye-akhawunti yakho kule seva izosuswa unomphela futhi uzophuma lapha. I-akhawunti yakho ihlala kwezinye iziseva zakho, futhi ungayingeza futhi le seva ngokuhamba kwesikhathi.</string>
+    <string name="replication_leave_confirm">Khipha</string>
+    <string name="replication_forget">Khohlwa lo msingathi ongafinyeleleki</string>
+    <string name="replication_forget_title">Khohlwa lo msingathi ongafinyeleleki?</string>
+    <string name="replication_forget_message">Izosuswa kusethi yakho yekhophi futhi itshelwe ukuthi isule ikhophi yayo lapho iphinda ixhumana. Ukususa iseva efinyelelekayo, ngena kuyo bese usebenzisa \"Susa i-akhawunti yami kule seva\". Qinisekisa ukuthi nguwe ukuze uqhubeke.</string>
+    <string name="replication_offline">Awuxhunyiwe ku-inthanethi</string>
+    <string name="replication_forget_confirm">Khohlwa</string>
 </resources>

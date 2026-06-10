@@ -56,8 +56,6 @@
     <string name="replication_deny">Рад кардан</string>
     <string name="replication_hosts_title">Мизбонҳои ман</string>
     <string name="replication_hosts_empty_hint">Барои такрорсозии он ба сервери дигар, дар он ҷо ҳисоб эҷод кунед ва аз гузинаи \"Такрорсозии ҳисоби мавҷуда\" истифода баред.</string>
-    <string name="replication_remove">Ин нусхаро нест кунед</string>
-    <string name="replication_remove_title">Ин нусхаро нест мекунед?</string>
     <string name="settings_home_section_system">Система</string>
     <string name="system_replication_title">Такрорсозӣ</string>
     <string name="system_replication_this_server">Ин сервер</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Ҳеҷ гоҳ</string>
     <string name="replication_hosts_empty">Ин ҳисоб танҳо дар ин сервер аст.</string>
     <string name="replication_added">Илова шуд %1$s</string>
-    <string name="replication_remove_message">Маълумоти ҳисоби шумо дар ин мизбон ба таври доимӣ нест карда мешавад. Ҳисоби шумо дар мизбонҳои дигаратон боқӣ мемонад.</string>
     <string name="settings_home_system_replication">Нусхабардорӣ (сервер)</string>
     <string name="system_replication_pair_empty_hint">Дар сервери нав бо \"mochictl replica join &lt;existing-peer-id&gt;\" истифода карда бо сервери дигари тоза насбшуда ҷуфт кунед.</string>
     <string name="route_delete_message">Ин роҳро барои масири \"%1$s\" нест мекунад.</string>
@@ -399,4 +396,15 @@
     <string name="account_data_dialog_body">Ин нусхаи пурраи эҳтиётист, ки шумо метавонед онро дар ҳамин ё дигар сервери Mochi барқарор кунед. Барои идома тасдиқ кунед, ки ин шумо ҳастед.</string>
     <string name="account_data_passphrase">Ибораи рамзӣ</string>
     <string name="account_data_passphrase_hint">Калидҳои хусусии шумо дохил карда шудаанд, бо ин ибораи рамзӣ рамзгузорӣ шудаанд. Онро дар ҷои амн нигоҳ доред. Барои барқарорсозӣ ба он ниёз хоҳед дошт.</string>
+    <string name="replication_hosts_subtitle">Серверҳои дигаре, ки нусхаи ҳисоби шуморо нигоҳ медоранд. Барои хориҷ кардани яке, дар он сервер ворид шавед ва \"Ҳисоби маро аз ин сервер хориҷ кунед\"-ро истифода баред.</string>
+    <string name="replication_irreparable">Барқарорнашаванда</string>
+    <string name="replication_leave">Ҳисоби маро аз ин сервер хориҷ кунед</string>
+    <string name="replication_leave_title">Ҳисоби худро аз ин сервер хориҷ мекунед?</string>
+    <string name="replication_leave_message">Маълумоти ҳисоби шумо дар ин сервер ба таври доимӣ нест карда мешавад ва шумо аз ин ҷо хориҷ мешавед. Ҳисоби шумо дар серверҳои дигаратон мемонад ва шумо метавонед инро баъдтар дубора илова кунед.</string>
+    <string name="replication_leave_confirm">Хориҷ кардан</string>
+    <string name="replication_forget">Ин хости дастнорасро фаромӯш кунед</string>
+    <string name="replication_forget_title">Ин хости дастнорасро фаромӯш мекунед?</string>
+    <string name="replication_forget_message">Он аз маҷмӯи нусхаҳои шумо хориҷ карда мешавад ва ҳангоми бозпайвастшавӣ ба он гуфта мешавад, ки нусхаи худро нест кунад. Барои хориҷ кардани сервери дастрас, дар он ҷо ворид шавед ва \"Ҳисоби маро аз ин сервер хориҷ кунед\"-ро истифода баред. Барои идома худро тасдиқ кунед.</string>
+    <string name="replication_offline">Ғайрифаъол</string>
+    <string name="replication_forget_confirm">Фаромӯш кардан</string>
 </resources>

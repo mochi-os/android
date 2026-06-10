@@ -56,8 +56,6 @@
     <string name="replication_deny">Denega</string>
     <string name="replication_hosts_title">Els meus amfitrions</string>
     <string name="replication_hosts_empty_hint">Per replicar-lo a un altre servidor, registreu-vos a un compte allà i utilitzeu l\'opció \"Replica un compte existent\".</string>
-    <string name="replication_remove">Elimina aquesta rèplica</string>
-    <string name="replication_remove_title">Voleu eliminar aquesta rèplica?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicació</string>
     <string name="system_replication_this_server">Aquest servidor</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Mai</string>
     <string name="replication_hosts_empty">Aquest compte només és en aquest servidor.</string>
     <string name="replication_added">Afegit %1$s</string>
-    <string name="replication_remove_message">Les dades del vostre compte en aquest amfitrió s\'eliminaran permanentment. El vostre compte es manté en els vostres altres amfitrions.</string>
     <string name="settings_home_system_replication">Replicació (servidor)</string>
     <string name="system_replication_pair_empty_hint">Empareu amb un altre servidor recent instal·lat usant «mochictl replica join &lt;existing-peer-id&gt;» al nou servidor.</string>
     <string name="route_delete_message">Això eliminarà la ruta per al camí «%1$s».</string>
@@ -401,4 +398,15 @@
     <string name="account_data_dialog_body">Aquesta és una còpia de seguretat completa que podeu restaurar en aquest servidor o en un altre servidor Mochi. Verifiqueu que sou vós per continuar.</string>
     <string name="account_data_passphrase">Contrasenya mestra</string>
     <string name="account_data_passphrase_hint">Les vostres claus privades estan incloses, xifrades amb aquesta frase de contrasenya. Guardeu-la en un lloc segur. La necessitareu per restaurar.</string>
+    <string name="replication_hosts_subtitle">Altres servidors que també tenen una còpia del vostre compte. Per eliminar-ne un, inicieu la sessió en aquest servidor i utilitzeu «Elimina el meu compte d\'aquest servidor».</string>
+    <string name="replication_irreparable">Irrecuperable</string>
+    <string name="replication_leave">Elimina el meu compte d\'aquest servidor</string>
+    <string name="replication_leave_title">Voleu eliminar el vostre compte d\'aquest servidor?</string>
+    <string name="replication_leave_message">Les dades del vostre compte en aquest servidor s\'eliminaran permanentment i se us tancarà la sessió aquí. El vostre compte es manté als vostres altres servidors i podeu tornar a afegir aquest més endavant.</string>
+    <string name="replication_leave_confirm">Elimina</string>
+    <string name="replication_forget">Oblida aquest amfitrió inaccessible</string>
+    <string name="replication_forget_title">Voleu oblidar aquest amfitrió inaccessible?</string>
+    <string name="replication_forget_message">S\'eliminarà del vostre conjunt de rèpliques i se li indicarà que esborri la seva còpia quan es torni a connectar. Per eliminar un servidor accessible, inicieu-hi la sessió i utilitzeu «Elimina el meu compte d\'aquest servidor». Verifiqueu que sou vós per continuar.</string>
+    <string name="replication_offline">Sense connexió</string>
+    <string name="replication_forget_confirm">Oblida</string>
 </resources>

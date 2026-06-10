@@ -56,8 +56,6 @@
     <string name="replication_deny">मना करीं</string>
     <string name="replication_hosts_title">हमार होस्ट</string>
     <string name="replication_hosts_empty_hint">एकरा के दोसर सर्वर पर प्रतिकृति बनावे खातिर, ओहिजा एगो खाता बनाईं अउरी \"एगो मौजूदा खाता के प्रतिकृति बनाईं\" विकल्प के उपयोग करीं।</string>
-    <string name="replication_remove">ई प्रतिलिपि मेटाईं</string>
-    <string name="replication_remove_title">ई प्रतिलिपि मेटाईं?</string>
     <string name="settings_home_section_system">सिस्टम</string>
     <string name="system_replication_title">प्रतिकृति</string>
     <string name="system_replication_this_server">ई सर्वर</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">कबो ना</string>
     <string name="replication_hosts_empty">ई खाता खाली एह सर्वर पर बा।</string>
     <string name="replication_added">जोड़ल %1$s</string>
-    <string name="replication_remove_message">एह होस्ट पर रउरा खाता के डेटा स्थायी रूप से मेटा दिहल जाई। रउरा खाता रउरा दोसर होस्ट पर बनल रही।</string>
     <string name="settings_home_system_replication">प्रतिकृति (सर्वर)</string>
     <string name="system_replication_pair_empty_hint">नया सर्वर पर \"mochictl replica join &lt;existing-peer-id&gt;\" इस्तेमाल कर के कौनो अउरी ताज़ा इंस्टॉल कइल सर्वर से जोड़ीं।</string>
     <string name="route_delete_message">ई \"%1$s\" रास्ता खातिर रूट मिटा दी।</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">ई एगो पूरा बैकअप बा जेके रउआ एह या कौनो दोसर Mochi सर्वर पर बहाल कर सकीलें। आगे बढ़े खातिर पुष्टि करीं कि ई रउआ बानी।</string>
     <string name="account_data_passphrase">पासफ्रेज</string>
     <string name="account_data_passphrase_hint">रउआ के प्राइवेट की शामिल बा, एह पासफ्रेज से एन्क्रिप्ट कइल गइल बा। एके सुरक्षित जगह रखीं। रिस्टोर करे खातिर एके जरूरत पड़ी।</string>
+    <string name="replication_hosts_subtitle">दोसर सर्वर जे रउआ खाता के कॉपी भी राखेला। केहू के हटावे खातिर, ओह सर्वर पर साइन इन करीं आ \"एह सर्वर से हमार खाता हटाईं\" के इस्तेमाल करीं।</string>
+    <string name="replication_irreparable">ठीक ना होखे वाला</string>
+    <string name="replication_leave">एह सर्वर से हमार खाता हटाईं</string>
+    <string name="replication_leave_title">का एह सर्वर से रउआ खाता हटाइल जाव?</string>
+    <string name="replication_leave_message">एह सर्वर पर रउआ खाता के डेटा हमेशा खातिर मिटा दिहल जाई आ रउआ इहाँ से साइन आउट हो जाईब। रउआ खाता रउआ दोसर सर्वर पर बनल रही, आ रउआ एकरा के बाद में फेर से जोड़ सकीलें।</string>
+    <string name="replication_leave_confirm">हटाईं</string>
+    <string name="replication_forget">एह अगम्य होस्ट के भुलाईं</string>
+    <string name="replication_forget_title">का एह अगम्य होस्ट के भुलाइल जाव?</string>
+    <string name="replication_forget_message">ई रउआ रेप्लिका सेट से हटा दिहल जाई आ फेर से जुड़ला पर एकरा के आपन कॉपी मिटावे के कहल जाई। कौनो पहुँच वाला सर्वर के हटावे खातिर, ओहिजा साइन इन करीं आ \"एह सर्वर से हमार खाता हटाईं\" के इस्तेमाल करीं। आगे बढ़े खातिर पुष्टि करीं कि ई रउआ बानी।</string>
+    <string name="replication_offline">ऑफलाइन</string>
+    <string name="replication_forget_confirm">भुलाईं</string>
 </resources>

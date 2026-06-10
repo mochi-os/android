@@ -56,8 +56,6 @@
     <string name="replication_deny">Atmesti</string>
     <string name="replication_hosts_title">Mano kompiuteriai</string>
     <string name="replication_hosts_empty_hint">Norėdami jį replikuoti į kitą serverį, užregistruokite ten paskyrą ir naudokite parinktį \"Replikuoti esamą paskyrą\".</string>
-    <string name="replication_remove">Ištrinti šią repliką</string>
-    <string name="replication_remove_title">Ištrinti šią repliką?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replikacija</string>
     <string name="system_replication_this_server">Šis serveris</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Niekada</string>
     <string name="replication_hosts_empty">Ši paskyra yra tik šiame serveryje.</string>
     <string name="replication_added">Pridėta %1$s</string>
-    <string name="replication_remove_message">Jūsų paskyros duomenys šiame serveryje bus visam laikui ištrinti. Jūsų paskyra lieka kituose serveriuose.</string>
     <string name="settings_home_system_replication">Replikacija (serveris)</string>
     <string name="system_replication_pair_empty_hint">Suporkite su kitu naujai įdiegtu serveriu naudodami \"mochictl replica join &lt;existing-peer-id&gt;\" naujame serveryje.</string>
     <string name="route_delete_message">Tai pašalins maršrutą kelio \"%1$s\".</string>
@@ -402,4 +399,15 @@
     <string name="account_data_dialog_body">Tai visa atsarginė kopija, kurią galite atkurti šiame arba kitame Mochi serveryje. Norėdami tęsti, patvirtinkite, kad tai jūs.</string>
     <string name="account_data_passphrase">Slaptafrazė</string>
     <string name="account_data_passphrase_hint">Jūsų privatūs raktai įtraukti, užšifruoti šia prieigos fraze. Laikykite ją saugioje vietoje. Jos prireiks atkūrimui.</string>
+    <string name="replication_hosts_subtitle">Kiti serveriai, kuriuose taip pat saugoma jūsų paskyros kopija. Norėdami pašalinti vieną, prisijunkite prie to serverio ir naudokite „Pašalinti mano paskyrą iš šio serverio“.</string>
+    <string name="replication_irreparable">Nepataisoma</string>
+    <string name="replication_leave">Pašalinti mano paskyrą iš šio serverio</string>
+    <string name="replication_leave_title">Pašalinti jūsų paskyrą iš šio serverio?</string>
+    <string name="replication_leave_message">Jūsų paskyros duomenys šiame serveryje bus visam laikui ištrinti, o jūs būsite čia atjungti. Jūsų paskyra lieka kituose jūsų serveriuose, o šį serverį galėsite pridėti iš naujo vėliau.</string>
+    <string name="replication_leave_confirm">Šalinti</string>
+    <string name="replication_forget">Pamiršti šį nepasiekiamą pagrindinį kompiuterį</string>
+    <string name="replication_forget_title">Pamiršti šį nepasiekiamą pagrindinį kompiuterį?</string>
+    <string name="replication_forget_message">Jis bus pašalintas iš jūsų kopijų rinkinio ir, vėl prisijungęs, gaus nurodymą ištrinti savo kopiją. Norėdami pašalinti pasiekiamą serverį, prisijunkite prie jo ir naudokite „Pašalinti mano paskyrą iš šio serverio“. Norėdami tęsti, patvirtinkite, kad tai jūs.</string>
+    <string name="replication_offline">Neprisijungus</string>
+    <string name="replication_forget_confirm">Pamiršti</string>
 </resources>

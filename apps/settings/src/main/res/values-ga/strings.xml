@@ -56,8 +56,6 @@
     <string name="replication_deny">Diúltaigh</string>
     <string name="replication_hosts_title">Mo óstaigh</string>
     <string name="replication_hosts_empty_hint">Chun é a mhacasamhlú chuig freastalaí eile, cláraigh le haghaidh cuntais ann agus úsáid an rogha \"Cuntas atá ann a mhacasamhlú\".</string>
-    <string name="replication_remove">Scrios an mhacasamhail seo</string>
-    <string name="replication_remove_title">Scrios an mhacasamhail seo?</string>
     <string name="settings_home_section_system">Córas</string>
     <string name="system_replication_title">Macasamhlú</string>
     <string name="system_replication_this_server">An freastalaí seo</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Riamh</string>
     <string name="replication_hosts_empty">Tá an cuntas seo ar an bhfreastalaí seo amháin.</string>
     <string name="replication_added">Curtha leis %1$s</string>
-    <string name="replication_remove_message">Scriosfar sonraí do chuntais ar an óstach seo go buan. Fanann do chuntas ar do óstaigh eile.</string>
     <string name="settings_home_system_replication">Macasamhlú (freastalaí)</string>
     <string name="system_replication_pair_empty_hint">Péireáil le freastalaí eile a suiteáladh go nua le \"mochictl replica join &lt;existing-peer-id&gt;\" ar an bhfreastalaí nua.</string>
     <string name="route_delete_message">Bainfidh sé seo an cosán don chonair \"%1$s\".</string>
@@ -403,4 +400,15 @@
     <string name="account_data_dialog_body">Cúltaca iomlán é seo is féidir leat a athchóiriú ar an bhfreastalaí Mochi seo nó ar cheann eile. Fíoraigh gur tusa atá ann chun leanúint ar aghaidh.</string>
     <string name="account_data_passphrase">Frása faire</string>
     <string name="account_data_passphrase_hint">Tá do eochracha príobháideacha san áireamh, criptithe leis an abairt phasfhocail seo. Coinnigh í slán. Beidh sí ag teastáil uait chun a chur ar ais.</string>
+    <string name="replication_hosts_subtitle">Freastalaithe eile a choinníonn cóip de do chuntas freisin. Chun ceann a bhaint, sínigh isteach ar an bhfreastalaí sin agus úsáid \"Bain mo chuntas den fhreastalaí seo\".</string>
+    <string name="replication_irreparable">Dodheisithe</string>
+    <string name="replication_leave">Bain mo chuntas den fhreastalaí seo</string>
+    <string name="replication_leave_title">An mbainfear do chuntas den fhreastalaí seo?</string>
+    <string name="replication_leave_message">Scriosfar sonraí do chuntais ar an bhfreastalaí seo go buan agus síneofar amach anseo thú. Fanann do chuntas ar do fhreastalaithe eile, agus is féidir leat an ceann seo a chur leis arís níos déanaí.</string>
+    <string name="replication_leave_confirm">Bain</string>
+    <string name="replication_forget">Déan dearmad ar an óstach do-rochtana seo</string>
+    <string name="replication_forget_title">An ndéanfar dearmad ar an óstach do-rochtana seo?</string>
+    <string name="replication_forget_message">Bainfear é de do thacar macasamhla agus iarrfar air a chóip a scriosadh nuair a athnascann sé. Chun freastalaí inrochtana a bhaint, sínigh isteach ann agus úsáid \"Bain mo chuntas den fhreastalaí seo\". Deimhnigh gur tusa atá ann chun leanúint ar aghaidh.</string>
+    <string name="replication_offline">As líne</string>
+    <string name="replication_forget_confirm">Déan dearmad</string>
 </resources>

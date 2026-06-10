@@ -56,8 +56,6 @@
     <string name="replication_deny">ڕەتکردنەوە</string>
     <string name="replication_hosts_title">میوانداڕەکانم</string>
     <string name="replication_hosts_empty_hint">بۆ ئاراستەکردنی بۆ ڕاژەکارێکی تر، لەوێ هەژمارێک دروست بکە و هەڵبژاردەی \"ڕیپلیکەیشنی هەژمارێکی هەبوو\" بەکاربهێنە.</string>
-    <string name="replication_remove">ئەم وێنەکراوە بسڕەوە</string>
-    <string name="replication_remove_title">ئەم وێنەکراوە بسڕێتەوە؟</string>
     <string name="settings_home_section_system">سیستەم</string>
     <string name="system_replication_title">ڕیپلیکەیشن</string>
     <string name="system_replication_this_server">ئەم ڕاژەکارە</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">هەرگیز</string>
     <string name="replication_hosts_empty">ئەم ھەژمارە تەنھا لەسەر ئەم سێرڤەرەیە.</string>
     <string name="replication_added">زیادکرا %1$s</string>
-    <string name="replication_remove_message">داتای هەژمارەکەت لەسەر ئەم هۆستە بە هەمیشەیی دەسڕێتەوە. هەژمارەکەت لەسەر هۆستە دیکەکانت دەمێنێتەوە.</string>
     <string name="settings_home_system_replication">کۆپیکردن (سێرڤەر)</string>
     <string name="system_replication_pair_empty_hint">لەسەر سێرڤەری نوێ \"mochictl replica join &lt;existing-peer-id&gt;\" بەکاربھێنە بۆ جووتکردن لەگەڵ سێرڤەرێکی تری تازە دامەزراو.</string>
     <string name="route_delete_message">ئەمە ڕێگای \"%1$s\" لادەبات.</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">ئەمە پاڵپشتییەکی تەواوە کە دەتوانیت لەسەر ئەم ڕاژەیە یان ڕاژەیەکی Mochi تری بیگەڕێنیتەوە. بۆ بەردەوامبوون پشتڕاست بکەرەوە کە خۆتیت.</string>
     <string name="account_data_passphrase">دەستەواژەی نهێنی</string>
     <string name="account_data_passphrase_hint">کلیلە تایبەتەکانت تێدان، بە ئەم وتە-نهێنییە کۆد کراون. بەخۆشی پاراستنی بکە. پێویستت پێی دەبێت بۆ گەڕاندنەوە.</string>
+    <string name="replication_hosts_subtitle">ڕاژەکاری تر کە کۆپییەک لە هەژمارەکەشت هەڵدەگرن. بۆ لابردنی یەکێکیان، بچۆ ژوورەوە لەو ڕاژەکارە و \"هەژمارەکەم لەم ڕاژەکارە لاببە\" بەکاربهێنە.</string>
+    <string name="replication_irreparable">چاکنەکراو</string>
+    <string name="replication_leave">هەژمارەکەم لەم ڕاژەکارە لاببە</string>
+    <string name="replication_leave_title">هەژمارەکەت لەم ڕاژەکارە لاببردرێت؟</string>
+    <string name="replication_leave_message">داتای هەژمارەکەت لەسەر ئەم ڕاژەکارە بە هەمیشەیی دەسڕێتەوە و لێرە دەردەچیت. هەژمارەکەت لەسەر ڕاژەکارەکانی ترت دەمێنێتەوە، و دەتوانیت دواتر ئەمە دووبارە زیاد بکەیتەوە.</string>
+    <string name="replication_leave_confirm">لابردن</string>
+    <string name="replication_forget">ئەم میوانداریە نەگەیشتووە لەبیر بکە</string>
+    <string name="replication_forget_title">ئەم میوانداریە نەگەیشتووە لەبیر بکرێت؟</string>
+    <string name="replication_forget_message">لە کۆمەڵە لەبەرگرتنەوەکەت لادەبردرێت و پێی دەوترێت کاتێک دووبارە پەیوەندی دەکاتەوە کۆپییەکەی بسڕێتەوە. بۆ لابردنی ڕاژەکارێکی گەیشتوو، لەوێ بچۆ ژوورەوە و \"هەژمارەکەم لەم ڕاژەکارە لاببە\" بەکاربهێنە. بۆ بەردەوامبوون پشتڕاست بکەرەوە کە خۆتی.</string>
+    <string name="replication_offline">دەرهێڵ</string>
+    <string name="replication_forget_confirm">لەبیرکردن</string>
 </resources>

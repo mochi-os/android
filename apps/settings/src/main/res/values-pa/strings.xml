@@ -56,8 +56,6 @@
     <string name="replication_deny">ਇਨਕਾਰ ਕਰੋ</string>
     <string name="replication_hosts_title">ਮੇਰੇ ਹੋਸਟ</string>
     <string name="replication_hosts_empty_hint">ਇਸਨੂੰ ਕਿਸੇ ਹੋਰ ਸਰਵਰ ਉੱਤੇ ਪ੍ਰਤੀਕ੍ਰਿਤੀ ਬਣਾਉਣ ਲਈ, ਉੱਥੇ ਖਾਤੇ ਲਈ ਸਾਈਨ ਅੱਪ ਕਰੋ ਅਤੇ \"ਮੌਜੂਦਾ ਖਾਤੇ ਦੀ ਪ੍ਰਤੀਕ੍ਰਿਤੀ ਬਣਾਓ\" ਵਿਕਲਪ ਵਰਤੋ।</string>
-    <string name="replication_remove">ਇਹ ਰਿਪਲੀਕਾ ਮਿਟਾਓ</string>
-    <string name="replication_remove_title">ਇਹ ਰਿਪਲੀਕਾ ਮਿਟਾਉਣੀ ਹੈ?</string>
     <string name="settings_home_section_system">ਸਿਸਟਮ</string>
     <string name="system_replication_title">ਪ੍ਰਤੀਕ੍ਰਿਤੀ</string>
     <string name="system_replication_this_server">ਇਹ ਸਰਵਰ</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ਕਦੇ ਨਹੀਂ</string>
     <string name="replication_hosts_empty">ਇਹ ਖਾਤਾ ਸਿਰਫ਼ ਇਸ ਸਰਵਰ \'ਤੇ ਹੈ।</string>
     <string name="replication_added">ਜੋੜਿਆ ਗਿਆ %1$s</string>
-    <string name="replication_remove_message">ਇਸ ਹੋਸਟ \'ਤੇ ਤੁਹਾਡੇ ਖਾਤੇ ਦਾ ਡੇਟਾ ਪੱਕੇ ਤੌਰ \'ਤੇ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਤੁਹਾਡਾ ਖਾਤਾ ਤੁਹਾਡੇ ਹੋਰ ਹੋਸਟਾਂ \'ਤੇ ਬਣਿਆ ਰਹੇਗਾ।</string>
     <string name="settings_home_system_replication">ਨਕਲ (ਸਰਵਰ)</string>
     <string name="system_replication_pair_empty_hint">ਨਵੇਂ ਸਰਵਰ \'ਤੇ \"mochictl replica join &lt;existing-peer-id&gt;\" ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕਿਸੇ ਹੋਰ ਨਵੇਂ ਸਥਾਪਿਤ ਸਰਵਰ ਨਾਲ ਜੋੜੀ ਬਣਾਓ।</string>
     <string name="route_delete_message">ਇਹ ਮਾਰਗ \"%1$s\" ਲਈ ਰੂਟ ਹਟਾ ਦੇਵੇਗਾ।</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">ਇਹ ਇੱਕ ਪੂਰਾ ਬੈਕਅੱਪ ਹੈ ਜੋ ਤੁਸੀਂ ਇਸ ਜਾਂ ਕਿਸੇ ਹੋਰ Mochi ਸਰਵਰ \'ਤੇ ਮੁੜ-ਬਹਾਲ ਕਰ ਸਕਦੇ ਹੋ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਇਹ ਤੁਸੀਂ ਹੋ।</string>
     <string name="account_data_passphrase">ਪਾਸਫ਼੍ਰੇਜ਼</string>
     <string name="account_data_passphrase_hint">ਤੁਹਾਡੀਆਂ ਨਿੱਜੀ ਕੁੰਜੀਆਂ ਸ਼ਾਮਲ ਹਨ, ਇਸ ਪਾਸਫ਼ਰੇਜ਼ ਨਾਲ ਐਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ। ਇਸਨੂੰ ਸੁਰੱਖਿਅਤ ਥਾਂ ਤੇ ਰੱਖੋ। ਰੀਸਟੋਰ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਇਸਦੀ ਲੋੜ ਪਵੇਗੀ।</string>
+    <string name="replication_hosts_subtitle">ਹੋਰ ਸਰਵਰ ਜੋ ਤੁਹਾਡੇ ਖਾਤੇ ਦੀ ਇੱਕ ਕਾਪੀ ਵੀ ਰੱਖਦੇ ਹਨ। ਕਿਸੇ ਇੱਕ ਨੂੰ ਹਟਾਉਣ ਲਈ, ਉਸ ਸਰਵਰ ਉੱਤੇ ਸਾਈਨ ਇਨ ਕਰੋ ਅਤੇ \"ਇਸ ਸਰਵਰ ਤੋਂ ਮੇਰਾ ਖਾਤਾ ਹਟਾਓ\" ਵਰਤੋ।</string>
+    <string name="replication_irreparable">ਠੀਕ ਨਾ ਹੋਣ ਯੋਗ</string>
+    <string name="replication_leave">ਇਸ ਸਰਵਰ ਤੋਂ ਮੇਰਾ ਖਾਤਾ ਹਟਾਓ</string>
+    <string name="replication_leave_title">ਇਸ ਸਰਵਰ ਤੋਂ ਆਪਣਾ ਖਾਤਾ ਹਟਾਉਣਾ ਹੈ?</string>
+    <string name="replication_leave_message">ਇਸ ਸਰਵਰ ਉੱਤੇ ਤੁਹਾਡੇ ਖਾਤੇ ਦਾ ਡਾਟਾ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਅਤੇ ਤੁਹਾਨੂੰ ਇੱਥੇ ਸਾਈਨ ਆਊਟ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਤੁਹਾਡਾ ਖਾਤਾ ਤੁਹਾਡੇ ਹੋਰ ਸਰਵਰਾਂ ਉੱਤੇ ਰਹਿੰਦਾ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਮੁੜ ਜੋੜ ਸਕਦੇ ਹੋ।</string>
+    <string name="replication_leave_confirm">ਹਟਾਓ</string>
+    <string name="replication_forget">ਇਸ ਅਪਹੁੰਚ ਹੋਸਟ ਨੂੰ ਭੁੱਲ ਜਾਓ</string>
+    <string name="replication_forget_title">ਇਸ ਅਪਹੁੰਚ ਹੋਸਟ ਨੂੰ ਭੁੱਲ ਜਾਣਾ ਹੈ?</string>
+    <string name="replication_forget_message">ਇਸਨੂੰ ਤੁਹਾਡੇ ਰੈਪਲਿਕਾ ਸੈੱਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਅਤੇ ਜਦੋਂ ਇਹ ਮੁੜ ਜੁੜੇਗਾ ਤਾਂ ਆਪਣੀ ਕਾਪੀ ਮਿਟਾਉਣ ਲਈ ਕਿਹਾ ਜਾਵੇਗਾ। ਪਹੁੰਚਯੋਗ ਸਰਵਰ ਹਟਾਉਣ ਲਈ, ਉੱਥੇ ਸਾਈਨ ਇਨ ਕਰੋ ਅਤੇ \"ਇਸ ਸਰਵਰ ਤੋਂ ਮੇਰਾ ਖਾਤਾ ਹਟਾਓ\" ਵਰਤੋ। ਅੱਗੇ ਵਧਣ ਲਈ ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਇਹ ਤੁਸੀਂ ਹੋ।</string>
+    <string name="replication_offline">ਆਫ਼ਲਾਈਨ</string>
+    <string name="replication_forget_confirm">ਭੁੱਲ ਜਾਓ</string>
 </resources>

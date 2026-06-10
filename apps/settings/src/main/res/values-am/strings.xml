@@ -56,8 +56,6 @@
     <string name="replication_deny">ተከለከል</string>
     <string name="replication_hosts_title">የእኔ አስተናጋጆች</string>
     <string name="replication_hosts_empty_hint">ወደ ሌላ አገልጋይ ለማባዛት፣ እዚያ መለያ ይመዝገቡ እና \"ያለ መለያ ማባዛት\" አማራጭን ይጠቀሙ።</string>
-    <string name="replication_remove">ይህን ቅጂ ሰርዝ</string>
-    <string name="replication_remove_title">ይህን ቅጂ ይሰረዝ?</string>
     <string name="settings_home_section_system">ስርዓት</string>
     <string name="system_replication_title">ድግግሞሽ</string>
     <string name="system_replication_this_server">ይህ አገልጋይ</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">በፍፁም</string>
     <string name="replication_hosts_empty">ይህ ሂሳብ በዚህ አገልጋይ ላይ ብቻ ነው።</string>
     <string name="replication_added">ተጨምሯል %1$s</string>
-    <string name="replication_remove_message">የመለያዎ ውሂብ በዚህ አስተናጋጅ ላይ በቋሚነት ይሰረዛል። መለያዎ በሌሎች አስተናጋጆችዎ ላይ ይቆያል።</string>
     <string name="settings_home_system_replication">ድግግሞሽ (አገልጋይ)</string>
     <string name="system_replication_pair_empty_hint">በአዲሱ አገልጋይ ላይ \"mochictl replica join &lt;existing-peer-id&gt;\" በመጠቀም ከሌላ አዲስ የተጫነ አገልጋይ ጋር ያጣምሩ።</string>
     <string name="route_delete_message">ይህ ለ \"%1$s\" መንገድ ሩትን ያስወግዳል።</string>
@@ -400,4 +397,15 @@
     <string name="account_data_dialog_body">ይህ በዚህ ወይም በሌላ Mochi አገልጋይ ላይ መልሰው ሊጭኑት የሚችሉት ሙሉ ምትኬ ነው። ለመቀጠል እርስዎ መሆንዎን ያረጋግጡ።</string>
     <string name="account_data_passphrase">የይለፍ ሐረግ</string>
     <string name="account_data_passphrase_hint">የእርስዎ የግል ቁልፎች ተካትተዋል፣ በዚህ ሚስጥራዊ ሐረግ ተመስጥረዋል። በጥንቃቄ ያስቀምጡት። ለመልሰ ማቋቋም ያስፈልግዎታል።</string>
+    <string name="replication_hosts_subtitle">የመለያዎን ቅጂ የያዙ ሌሎች አገልጋዮች። አንዱን ለማስወገድ፣ በዚያ አገልጋይ ላይ ይግቡና \"መለያዬን ከዚህ አገልጋይ አስወግድ\" ይጠቀሙ።</string>
+    <string name="replication_irreparable">የማይጠገን</string>
+    <string name="replication_leave">መለያዬን ከዚህ አገልጋይ አስወግድ</string>
+    <string name="replication_leave_title">መለያዎን ከዚህ አገልጋይ ይወገድ?</string>
+    <string name="replication_leave_message">የመለያዎ ውሂብ በዚህ አገልጋይ ላይ በቋሚነት ይሰረዛል እና እዚህ ይወጣሉ። መለያዎ በሌሎች አገልጋዮችዎ ላይ ይቆያል፣ እና ይህንን አገልጋይ በኋላ እንደገና ማከል ይችላሉ።</string>
+    <string name="replication_leave_confirm">አስወግድ</string>
+    <string name="replication_forget">ይህን ተደራሽ ያልሆነ አስተናጋጅ እርሳ</string>
+    <string name="replication_forget_title">ይህን ተደራሽ ያልሆነ አስተናጋጅ ይረሳ?</string>
+    <string name="replication_forget_message">ከቅጂ ስብስብዎ ይወገዳል እና እንደገና ሲገናኝ ቅጂውን እንዲሰርዝ ይነገረዋል። ተደራሽ የሆነ አገልጋይ ለማስወገድ፣ እዚያ ይግቡና \"መለያዬን ከዚህ አገልጋይ አስወግድ\" ይጠቀሙ። ለመቀጠል እርስዎ መሆንዎን ያረጋግጡ።</string>
+    <string name="replication_offline">ከመስመር ውጭ</string>
+    <string name="replication_forget_confirm">እርሳ</string>
 </resources>
