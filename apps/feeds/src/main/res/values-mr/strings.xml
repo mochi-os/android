@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">क्रमवारी / गुणांकन</string>
     <string name="feeds_ai_prompt_credibility">विश्वासार्हता मूल्यांकन</string>
 
+    <string name="feeds_refresh">रीफ्रेश करा</string>
 </resources>

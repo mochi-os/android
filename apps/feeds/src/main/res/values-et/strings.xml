@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Järjestamine / hindamine</string>
     <string name="feeds_ai_prompt_credibility">Usaldusväärsuse hindamine</string>
 
+    <string name="feeds_refresh">Värskenda</string>
 </resources>

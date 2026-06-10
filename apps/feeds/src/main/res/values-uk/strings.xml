@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Ранжування / оцінювання</string>
     <string name="feeds_ai_prompt_credibility">Оцінка достовірності</string>
 
+    <string name="feeds_refresh">Оновити</string>
 </resources>

@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Xếp hạng / chấm điểm</string>
     <string name="feeds_ai_prompt_credibility">Đánh giá độ tin cậy</string>
 
+    <string name="feeds_refresh">Làm mới</string>
 </resources>

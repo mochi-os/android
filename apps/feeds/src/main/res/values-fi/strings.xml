@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Järjestäminen / pisteytys</string>
     <string name="feeds_ai_prompt_credibility">Uskottavuuden arviointi</string>
 
+    <string name="feeds_refresh">Päivitä</string>
 </resources>

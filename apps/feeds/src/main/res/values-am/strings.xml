@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">ደረጃ አሰጣጥ / ነጥብ አሰጣጥ</string>
     <string name="feeds_ai_prompt_credibility">የተአማኒነት ግምገማ</string>
 
+    <string name="feeds_refresh">አድስ</string>
 </resources>

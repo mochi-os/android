@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">درجه بندي / ارزونه</string>
     <string name="feeds_ai_prompt_credibility">د اعتبار ارزونه</string>
 
+    <string name="feeds_refresh">تازه کول</string>
 </resources>

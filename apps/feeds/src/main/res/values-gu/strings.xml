@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">ક્રમાંકન / સ્કોરિંગ</string>
     <string name="feeds_ai_prompt_credibility">વિશ્વસનીયતા મૂલ્યાંકન</string>
 
+    <string name="feeds_refresh">રિફ્રેશ કરો</string>
 </resources>

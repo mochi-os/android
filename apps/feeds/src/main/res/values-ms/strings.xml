@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Kedudukan / pemarkahan</string>
     <string name="feeds_ai_prompt_credibility">Penilaian kebolehpercayaan</string>
 
+    <string name="feeds_refresh">Muat semula</string>
 </resources>

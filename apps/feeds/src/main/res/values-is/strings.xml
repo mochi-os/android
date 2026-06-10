@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Röðun / einkunnagjöf</string>
     <string name="feeds_ai_prompt_credibility">Trúverðugleikamat</string>
 
+    <string name="feeds_refresh">Endurnýja</string>
 </resources>

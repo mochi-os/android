@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Դասակարգում / գնահատում</string>
     <string name="feeds_ai_prompt_credibility">Արժանահավատության գնահատում</string>
 
+    <string name="feeds_refresh">Թարմացնել</string>
 </resources>

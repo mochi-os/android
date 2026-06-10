@@ -195,4 +195,5 @@
     <string name="feeds_ai_prompt_rank">Rangering / poenggjeving</string>
     <string name="feeds_ai_prompt_credibility">Vurdering av truverde</string>
 
+    <string name="feeds_refresh">Oppdater</string>
 </resources>

@@ -193,4 +193,5 @@
     <string name="feeds_settings_prompt_saved">Invite enregistrée</string>
     <string name="feeds_settings_prompt_reset">Invite réinitialisée par défaut</string>
 
+    <string name="feeds_refresh">Actualiser</string>
 </resources>

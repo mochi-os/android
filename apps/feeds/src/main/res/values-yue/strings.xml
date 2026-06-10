@@ -193,4 +193,5 @@
     <string name="feeds_settings_prompt_saved">已儲存提示</string>
     <string name="feeds_settings_prompt_reset">已將提示重設為預設值</string>
 
+    <string name="feeds_refresh">重新整理</string>
 </resources>

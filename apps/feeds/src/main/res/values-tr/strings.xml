@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Sıralama / puanlama</string>
     <string name="feeds_ai_prompt_credibility">Güvenilirlik değerlendirmesi</string>
 
+    <string name="feeds_refresh">Yenile</string>
 </resources>

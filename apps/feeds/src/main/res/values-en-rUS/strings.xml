@@ -195,4 +195,5 @@
     <string name="feeds_settings_prompt_saved">Prompt saved</string>
     <string name="feeds_settings_prompt_reset">Prompt reset to default</string>
 
+    <string name="feeds_refresh">Refresh</string>
 </resources>

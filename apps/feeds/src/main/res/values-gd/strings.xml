@@ -195,4 +195,5 @@
     <string name="feeds_ai_prompt_rank">Rangachadh / sgòradh</string>
     <string name="feeds_ai_prompt_credibility">Measadh creideis</string>
 
+    <string name="feeds_refresh">Ath-nuadhaich</string>
 </resources>

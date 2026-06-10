@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Рейтинг / баа берүү</string>
     <string name="feeds_ai_prompt_credibility">Ишенимдүүлүктү баалоо</string>
 
+    <string name="feeds_refresh">Жаңыртуу</string>
 </resources>

@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Pemeringkatan / penilaian</string>
     <string name="feeds_ai_prompt_credibility">Penilaian kredibilitas</string>
 
+    <string name="feeds_refresh">Seger</string>
 </resources>

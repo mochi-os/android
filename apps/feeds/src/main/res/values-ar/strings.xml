@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">الترتيب / التقييم</string>
     <string name="feeds_ai_prompt_credibility">تقييم المصداقية</string>
 
+    <string name="feeds_refresh">تحديث</string>
 </resources>

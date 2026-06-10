@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">순위 / 점수</string>
     <string name="feeds_ai_prompt_credibility">신뢰도 평가</string>
 
+    <string name="feeds_refresh">새로고침</string>
 </resources>

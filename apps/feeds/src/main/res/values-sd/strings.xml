@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">درجابندي / اسڪورنگ</string>
     <string name="feeds_ai_prompt_credibility">اعتبار جو جائزو</string>
 
+    <string name="feeds_refresh">ريفريش</string>
 </resources>

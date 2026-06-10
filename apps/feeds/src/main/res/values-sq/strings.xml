@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Renditja / vlerësimi</string>
     <string name="feeds_ai_prompt_credibility">Vlerësimi i besueshmërisë</string>
 
+    <string name="feeds_refresh">Rifresko</string>
 </resources>

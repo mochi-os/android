@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">排名 / 评分</string>
     <string name="feeds_ai_prompt_credibility">可信度评估</string>
 
+    <string name="feeds_refresh">刷新</string>
 </resources>

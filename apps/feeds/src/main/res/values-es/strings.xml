@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Clasificación / puntuación</string>
     <string name="feeds_ai_prompt_credibility">Evaluación de credibilidad</string>
 
+    <string name="feeds_refresh">Actualizar</string>
 </resources>

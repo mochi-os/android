@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Κατάταξη / βαθμολόγηση</string>
     <string name="feeds_ai_prompt_credibility">Αξιολόγηση αξιοπιστίας</string>
 
+    <string name="feeds_refresh">Ανανέωση</string>
 </resources>

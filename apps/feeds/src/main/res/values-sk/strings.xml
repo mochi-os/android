@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Hodnotenie / skóre</string>
     <string name="feeds_ai_prompt_credibility">Posúdenie dôveryhodnosti</string>
 
+    <string name="feeds_refresh">Obnoviť</string>
 </resources>

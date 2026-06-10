@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">درجہ بندی / اسکورنگ</string>
     <string name="feeds_ai_prompt_credibility">ساکھ کا جائزہ</string>
 
+    <string name="feeds_refresh">refresh کریں</string>
 </resources>

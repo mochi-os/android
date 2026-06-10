@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Ranžēšana / vērtēšana</string>
     <string name="feeds_ai_prompt_credibility">Uzticamības novērtējums</string>
 
+    <string name="feeds_refresh">Atsvaidzināt</string>
 </resources>

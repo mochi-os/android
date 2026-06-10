@@ -193,4 +193,5 @@
     <string name="feeds_settings_ai_account_updated">Conta de IA atualizada</string>
     <string name="feeds_settings_prompt_reset">Prompt redefinido para o padrão</string>
 
+    <string name="feeds_refresh">Atualizar</string>
 </resources>

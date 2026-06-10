@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Эрэмбэлэлт / оноожуулалт</string>
     <string name="feeds_ai_prompt_credibility">Найдвартай байдлын үнэлгээ</string>
 
+    <string name="feeds_refresh">Сэргээх</string>
 </resources>

@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">தரவரிசை / மதிப்பெண்</string>
     <string name="feeds_ai_prompt_credibility">நம்பகத்தன்மை மதிப்பீடு</string>
 
+    <string name="feeds_refresh">புதுப்பி</string>
 </resources>

@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Rangering / poenggivning</string>
     <string name="feeds_ai_prompt_credibility">Troverdighetsvurdering</string>
 
+    <string name="feeds_refresh">Oppdater</string>
 </resources>

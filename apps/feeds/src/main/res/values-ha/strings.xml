@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Matsayi / kimantawa</string>
     <string name="feeds_ai_prompt_credibility">Kimanta amincewa</string>
 
+    <string name="feeds_refresh">Sabuntawa</string>
 </resources>

@@ -45,7 +45,9 @@ import androidx.compose.material.icons.filled.ImportExport
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
@@ -66,6 +68,7 @@ import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -341,6 +344,12 @@ fun FeedScreen(
                     }
                 },
                 actions = {
+                    IconButton(onClick = { viewModel.refresh() }) {
+                        Icon(
+                            Icons.Default.Refresh,
+                            contentDescription = stringResource(R.string.feeds_refresh)
+                        )
+                    }
                     NotificationBell(onClick = onOpenNotifications)
                     if (permissions.manage) {
                         IconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
@@ -454,6 +463,20 @@ fun FeedScreen(
                     containerColor = MaterialTheme.colorScheme.surface
                 )
             )
+        },
+        floatingActionButton = {
+            // Reachable refresh/jump deep in the feed: a scroll-to-top button
+            // appears once a few posts in (pull-to-refresh only works at page 0).
+            if (pagerState.currentPage > 2) {
+                SmallFloatingActionButton(
+                    onClick = { drawerScope.launch { pagerState.animateScrollToPage(0) } }
+                ) {
+                    Icon(
+                        Icons.Default.KeyboardArrowUp,
+                        contentDescription = stringResource(R.string.feeds_scroll_to_top)
+                    )
+                }
+            }
         }
     ) { paddingValues ->
         PullToRefreshBox(

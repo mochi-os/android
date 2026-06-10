@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Rangiranje / ocjenjivanje</string>
     <string name="feeds_ai_prompt_credibility">Procjena vjerodostojnosti</string>
 
+    <string name="feeds_refresh">Osvježi</string>
 </resources>

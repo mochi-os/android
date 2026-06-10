@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">র‍্যাঙ্কিং / স্কোরিং</string>
     <string name="feeds_ai_prompt_credibility">বিশ্বাসযোগ্যতা মূল্যায়ন</string>
 
+    <string name="feeds_refresh">রিফ্রেশ</string>
 </resources>

@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">ランキング / スコアリング</string>
     <string name="feeds_ai_prompt_credibility">信頼性評価</string>
 
+    <string name="feeds_refresh">更新</string>
 </resources>

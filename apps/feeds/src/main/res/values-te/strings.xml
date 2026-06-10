@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">ర్యాంకింగ్ / స్కోరింగ్</string>
     <string name="feeds_ai_prompt_credibility">విశ్వసనీయత మూల్యాంకనం</string>
 
+    <string name="feeds_refresh">రిఫ్రెష్</string>
 </resources>

@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">रैंकिंग / स्कोरिंग</string>
     <string name="feeds_ai_prompt_credibility">विश्वसनीयता के मूल्यांकन</string>
 
+    <string name="feeds_refresh">रिफ्रेश करीं</string>
 </resources>

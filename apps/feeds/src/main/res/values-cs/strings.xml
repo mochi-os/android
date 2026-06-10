@@ -193,4 +193,5 @@
     <string name="feeds_ai_prompt_rank">Řazení / hodnocení</string>
     <string name="feeds_ai_prompt_credibility">Posouzení důvěryhodnosti</string>
 
+    <string name="feeds_refresh">Obnovit</string>
 </resources>
