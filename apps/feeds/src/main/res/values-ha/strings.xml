@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Kimanta amincewa</string>
 
     <string name="feeds_refresh">Sabuntawa</string>
+    <string name="feeds_interest_boosted">An ƙarawa interest</string>
+    <string name="feeds_interest_reduced">An rage interest</string>
+    <string name="feeds_interest_removed">An cire interest</string>
+    <string name="feeds_interest_failed">An gaza daidaita interest</string>
 </resources>

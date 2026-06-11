@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">विश्वसनीयता मूल्यांकन</string>
 
     <string name="feeds_refresh">रिफ्रेस गर्नुहोस्</string>
+    <string name="feeds_interest_boosted">रुचि बढाइयो</string>
+    <string name="feeds_interest_reduced">रुचि घटाइयो</string>
+    <string name="feeds_interest_removed">रुचि हटाइयो</string>
+    <string name="feeds_interest_failed">रुचि समायोजन गर्न असफल</string>
 </resources>

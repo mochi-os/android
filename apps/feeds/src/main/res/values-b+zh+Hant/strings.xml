@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">可信度評估</string>
 
     <string name="feeds_refresh">重新整理</string>
+    <string name="feeds_interest_boosted">興趣已提高</string>
+    <string name="feeds_interest_reduced">興趣已降低</string>
+    <string name="feeds_interest_removed">興趣已移除</string>
+    <string name="feeds_interest_failed">調整興趣失敗</string>
 </resources>

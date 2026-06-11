@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">ការវាយតម្លៃភាពអាចជឿទុកចិត្តបាន</string>
 
     <string name="feeds_refresh">ផ្ទុកឡើងវិញ</string>
+    <string name="feeds_interest_boosted">បានបង្កើនចំណាប់អារម្មណ៍</string>
+    <string name="feeds_interest_reduced">បានបន្ថយចំណាប់អារម្មណ៍</string>
+    <string name="feeds_interest_removed">បានដកចំណាប់អារម្មណ៍</string>
+    <string name="feeds_interest_failed">បរាជ័យក្នុងការកែតម្រូវចំណាប់អារម្មណ៍</string>
 </resources>

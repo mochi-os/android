@@ -12,6 +12,9 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -28,6 +31,12 @@ import javax.inject.Inject
 
 private const val PREFS = "mochi_feeds"
 private const val KEY_UNREAD_ONLY = "unread_only"
+
+/** One-shot feedback for an interest thumb tap, surfaced to the user as a toast. */
+sealed interface InterestFeedback {
+    data class Success(val direction: String) : InterestFeedback
+    data class Failure(val error: MochiError?) : InterestFeedback
+}
 
 @HiltViewModel
 class FeedViewModel @Inject constructor(
@@ -54,6 +63,10 @@ class FeedViewModel @Inject constructor(
 
     private val _tags = MutableStateFlow<List<Tag>>(emptyList())
     val tags: StateFlow<List<Tag>> = _tags.asStateFlow()
+
+    // One-shot interest-thumb feedback (boosted/reduced/removed, or the error).
+    private val _interestFeedback = MutableSharedFlow<InterestFeedback>(extraBufferCapacity = 8)
+    val interestFeedback: SharedFlow<InterestFeedback> = _interestFeedback.asSharedFlow()
 
     private val _suggestedInterests = MutableStateFlow<List<InterestSuggestion>>(emptyList())
     val suggestedInterests: StateFlow<List<InterestSuggestion>> = _suggestedInterests.asStateFlow()
@@ -402,7 +415,11 @@ class FeedViewModel @Inject constructor(
     // nothing), so the caller passes the post's own feed — always valid — as the
     // routing context. Mirrors web, which routes interest through a subscribed feed.
     fun adjustInterest(feed: String, tag: Tag, direction: String) {
-        val target = feed.takeIf { it.isNotBlank() && it != "__all__" } ?: return
+        val target = feed.takeIf { it.isNotBlank() && it != "__all__" }
+        if (target == null) {
+            _interestFeedback.tryEmit(InterestFeedback.Failure(null))
+            return
+        }
         viewModelScope.launch {
             try {
                 repository.adjustInterest(
@@ -411,8 +428,9 @@ class FeedViewModel @Inject constructor(
                     label = if (tag.qid.isNullOrEmpty()) tag.label else null,
                     direction = direction
                 )
-            } catch (_: Exception) {
-                // Best-effort; silent on failure.
+                _interestFeedback.tryEmit(InterestFeedback.Success(direction))
+            } catch (e: Exception) {
+                _interestFeedback.tryEmit(InterestFeedback.Failure(e.toMochiError()))
             }
         }
     }

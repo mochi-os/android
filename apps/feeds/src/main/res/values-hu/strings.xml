@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Hitelesség értékelése</string>
 
     <string name="feeds_refresh">Frissítés</string>
+    <string name="feeds_interest_boosted">Érdeklődés növelve</string>
+    <string name="feeds_interest_reduced">Érdeklődés csökkentve</string>
+    <string name="feeds_interest_removed">Érdeklődés eltávolítva</string>
+    <string name="feeds_interest_failed">Nem sikerült módosítani az érdeklődést</string>
 </resources>

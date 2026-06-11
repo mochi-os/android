@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">ساکھ کا جائزہ</string>
 
     <string name="feeds_refresh">refresh کریں</string>
+    <string name="feeds_interest_boosted">دلچسپی بڑھا دی گئی</string>
+    <string name="feeds_interest_reduced">دلچسپی کم کر دی گئی</string>
+    <string name="feeds_interest_removed">دلچسپی ہٹا دی گئی</string>
+    <string name="feeds_interest_failed">دلچسپی ایڈجسٹ کرنے میں ناکامی</string>
 </resources>

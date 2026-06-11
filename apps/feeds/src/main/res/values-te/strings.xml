@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">విశ్వసనీయత మూల్యాంకనం</string>
 
     <string name="feeds_refresh">రిఫ్రెష్</string>
+    <string name="feeds_interest_boosted">ఆసక్తి పెంచబడింది</string>
+    <string name="feeds_interest_reduced">ఆసక్తి తగ్గించబడింది</string>
+    <string name="feeds_interest_removed">ఆసక్తి తీసివేయబడింది</string>
+    <string name="feeds_interest_failed">ఆసక్తిని సర్దుబాటు చేయడంలో విఫలమైంది</string>
 </resources>

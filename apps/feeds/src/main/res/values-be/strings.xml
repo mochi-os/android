@@ -196,4 +196,8 @@
     <string name="feeds_suggested_credibility_keep">Пакінуць бягучы</string>
 
     <string name="feeds_refresh">Абнавіць</string>
+    <string name="feeds_interest_boosted">Цікавасць павышана</string>
+    <string name="feeds_interest_reduced">Цікавасць зніжана</string>
+    <string name="feeds_interest_removed">Цікавасць выдалена</string>
+    <string name="feeds_interest_failed">Не ўдалося скарэктаваць інтарэс</string>
 </resources>

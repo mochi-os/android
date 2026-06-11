@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Procena kredibiliteta</string>
 
     <string name="feeds_refresh">Освежи</string>
+    <string name="feeds_interest_boosted">Интересовање појачано</string>
+    <string name="feeds_interest_reduced">Интересовање смањено</string>
+    <string name="feeds_interest_removed">Интересовање уклоњено</string>
+    <string name="feeds_interest_failed">Подешавање интересовања није успело</string>
 </resources>

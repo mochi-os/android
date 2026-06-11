@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">სანდოობის შეფასება</string>
 
     <string name="feeds_refresh">განახლება</string>
+    <string name="feeds_interest_boosted">ინტერესი გაიზარდა</string>
+    <string name="feeds_interest_reduced">ინტერესი შემცირდა</string>
+    <string name="feeds_interest_removed">ინტერესი წაიშალა</string>
+    <string name="feeds_interest_failed">ინტერესის კორექტირება ვერ მოხერხდა</string>
 </resources>

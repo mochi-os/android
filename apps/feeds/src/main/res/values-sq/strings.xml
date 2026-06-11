@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Vlerësimi i besueshmërisë</string>
 
     <string name="feeds_refresh">Rifresko</string>
+    <string name="feeds_interest_boosted">Interesi u rrit</string>
+    <string name="feeds_interest_reduced">Interesi u zvogëlua</string>
+    <string name="feeds_interest_removed">Interesi u hoq</string>
+    <string name="feeds_interest_failed">Rregullimi i interesit dështoi</string>
 </resources>

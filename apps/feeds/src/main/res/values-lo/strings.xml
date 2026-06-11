@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">ການປະເມີນຄວາມໜ້າເຊື່ອຖື</string>
 
     <string name="feeds_refresh">ໂຫຼດໃໝ່</string>
+    <string name="feeds_interest_boosted">ເພີ່ມຄວາມສົນໃຈແລ້ວ</string>
+    <string name="feeds_interest_reduced">ຫຼຸດຄວາມສົນໃຈແລ້ວ</string>
+    <string name="feeds_interest_removed">ຍ້າຍຄວາມສົນໃຈແລ້ວ</string>
+    <string name="feeds_interest_failed">ປັບຄວາມສົນໃຈລົ້ມເຫຼວ</string>
 </resources>

@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Uvavanyo lokuthembeka</string>
 
     <string name="feeds_refresh">Vuselela</string>
+    <string name="feeds_interest_boosted">Umdla wandisiwe</string>
+    <string name="feeds_interest_reduced">Umdla uncitshisiwe</string>
+    <string name="feeds_interest_removed">Umdla ususiwe</string>
+    <string name="feeds_interest_failed">Ayiphumelelanga ukulungisa umdla</string>
 </resources>

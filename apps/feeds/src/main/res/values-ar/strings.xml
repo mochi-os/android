@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">تقييم المصداقية</string>
 
     <string name="feeds_refresh">تحديث</string>
+    <string name="feeds_interest_boosted">تم تعزيز الاهتمام</string>
+    <string name="feeds_interest_reduced">تم تقليل الاهتمام</string>
+    <string name="feeds_interest_removed">تمت إزالة الاهتمام</string>
+    <string name="feeds_interest_failed">فشل ضبط الاهتمام</string>
 </resources>

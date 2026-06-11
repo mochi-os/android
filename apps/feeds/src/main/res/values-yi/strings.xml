@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">גלייבווערדיקייט אָפּשאַצונג</string>
 
     <string name="feeds_refresh">דערפֿריש</string>
+    <string name="feeds_interest_boosted">אינטערעס פֿאַרשטאַרקט</string>
+    <string name="feeds_interest_reduced">אינטערעס פֿאַרקלענערט</string>
+    <string name="feeds_interest_removed">אינטערעס אַראָפּגענומען</string>
+    <string name="feeds_interest_failed">ניט געלונגען צו רעגולירן אינטערעס</string>
 </resources>

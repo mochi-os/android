@@ -92,6 +92,7 @@ import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import android.widget.Toast
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -164,6 +165,27 @@ fun FeedScreen(
     // clear/object marks the bell row read, but Android's tray only
     // clears via AUTO_CANCEL on tap; opening the feed directly without
     // tapping the push needs a manual cancel.
+
+    // Interest-thumb feedback: confirm boosted/reduced/removed, or surface the
+    // actual error — previously the result was silently swallowed, so taps
+    // looked dead even when the call failed.
+    val interestBoosted = stringResource(R.string.feeds_interest_boosted)
+    val interestReduced = stringResource(R.string.feeds_interest_reduced)
+    val interestRemoved = stringResource(R.string.feeds_interest_removed)
+    val interestFailed = stringResource(R.string.feeds_interest_failed)
+    LaunchedEffect(Unit) {
+        viewModel.interestFeedback.collectLatest { fb ->
+            val msg = when (fb) {
+                is InterestFeedback.Success -> when (fb.direction) {
+                    "up" -> interestBoosted
+                    "down" -> interestReduced
+                    else -> interestRemoved
+                }
+                is InterestFeedback.Failure -> fb.error?.message ?: interestFailed
+            }
+            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+        }
+    }
     LaunchedEffect(viewModel.feedId) {
         if (viewModel.feedId.isNotBlank()) {
             LastViewedStore.set(context, FEEDS_FEATURE, viewModel.feedId)

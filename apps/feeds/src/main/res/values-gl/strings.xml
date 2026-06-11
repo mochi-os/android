@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Avaliación de credibilidade</string>
 
     <string name="feeds_refresh">Actualizar</string>
+    <string name="feeds_interest_boosted">Interese aumentado</string>
+    <string name="feeds_interest_reduced">Interese reducido</string>
+    <string name="feeds_interest_removed">Interese eliminado</string>
+    <string name="feeds_interest_failed">Non se puido axustar o interese</string>
 </resources>

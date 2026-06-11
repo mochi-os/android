@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Сенімділікті бағалау</string>
 
     <string name="feeds_refresh">Жаңарту</string>
+    <string name="feeds_interest_boosted">Қызығушылық арттырылды</string>
+    <string name="feeds_interest_reduced">Қызығушылық азайтылды</string>
+    <string name="feeds_interest_removed">Қызығушылық жойылды</string>
+    <string name="feeds_interest_failed">Қызығушылықты реттеу сәтсіз аяқталды</string>
 </resources>

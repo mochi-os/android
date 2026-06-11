@@ -194,4 +194,8 @@
     <string name="feeds_settings_prompt_reset">Prompt redefinido para o padrão</string>
 
     <string name="feeds_refresh">Atualizar</string>
+    <string name="feeds_interest_boosted">Interesse aumentado</string>
+    <string name="feeds_interest_reduced">Interesse reduzido</string>
+    <string name="feeds_interest_removed">Interesse removido</string>
+    <string name="feeds_interest_failed">Falha ao ajustar interesse</string>
 </resources>

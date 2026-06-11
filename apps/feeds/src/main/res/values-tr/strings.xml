@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Güvenilirlik değerlendirmesi</string>
 
     <string name="feeds_refresh">Yenile</string>
+    <string name="feeds_interest_boosted">İlgi alanı öne çıkarıldı</string>
+    <string name="feeds_interest_reduced">İlgi alanı azaltıldı</string>
+    <string name="feeds_interest_removed">İlgi alanı kaldırıldı</string>
+    <string name="feeds_interest_failed">İlgi alanı ayarlanamadı</string>
 </resources>

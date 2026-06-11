@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Posúdenie dôveryhodnosti</string>
 
     <string name="feeds_refresh">Obnoviť</string>
+    <string name="feeds_interest_boosted">Záujem zvýšený</string>
+    <string name="feeds_interest_reduced">Záujem znížený</string>
+    <string name="feeds_interest_removed">Záujem odstránený</string>
+    <string name="feeds_interest_failed">Nepodarilo sa upraviť záujem</string>
 </resources>

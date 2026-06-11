@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Ìgbéléwọ̀n ìgbẹ́kẹ̀lé</string>
 
     <string name="feeds_refresh">Tún kí</string>
+    <string name="feeds_interest_boosted">A ti gbé ìfẹ́ sókè</string>
+    <string name="feeds_interest_reduced">A ti dín ìfẹ́ kù</string>
+    <string name="feeds_interest_removed">A ti mú ìfẹ́ kúrò</string>
+    <string name="feeds_interest_failed">Kò lè ṣàtúnṣe ìfẹ́</string>
 </resources>

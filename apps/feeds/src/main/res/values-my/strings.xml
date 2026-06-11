@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">ယုံကြည်စိတ်ချရမှု အကဲဖြတ်ခြင်း</string>
 
     <string name="feeds_refresh">ပြန်စစ်ဆေး</string>
+    <string name="feeds_interest_boosted">စိတ်ဝင်စားမှု မြှင့်ပြီးပါပြီ</string>
+    <string name="feeds_interest_reduced">စိတ်ဝင်စားမှု လျှော့ပြီးပါပြီ</string>
+    <string name="feeds_interest_removed">စိတ်ဝင်စားမှု ဖယ်ရှားပြီးပါပြီ</string>
+    <string name="feeds_interest_failed">စိတ်ဝင်စားမှု ချိန်ညှိ၍ မရပါ</string>
 </resources>

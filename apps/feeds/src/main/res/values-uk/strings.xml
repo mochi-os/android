@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Оцінка достовірності</string>
 
     <string name="feeds_refresh">Оновити</string>
+    <string name="feeds_interest_boosted">Інтерес підвищено</string>
+    <string name="feeds_interest_reduced">Інтерес знижено</string>
+    <string name="feeds_interest_removed">Інтерес видалено</string>
+    <string name="feeds_interest_failed">Не вдалося скоригувати інтерес</string>
 </resources>

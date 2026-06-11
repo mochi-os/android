@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Ишенимдүүлүктү баалоо</string>
 
     <string name="feeds_refresh">Жаңыртуу</string>
+    <string name="feeds_interest_boosted">Кызыкчылык күчөтүлдү</string>
+    <string name="feeds_interest_reduced">Кызыкчылык азайтылды</string>
+    <string name="feeds_interest_removed">Кызыкчылык алынып салынды</string>
+    <string name="feeds_interest_failed">Кызыкчылыкты тууралоо ишке ашкан жок</string>
 </resources>

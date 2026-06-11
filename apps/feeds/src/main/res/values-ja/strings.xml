@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">信頼性評価</string>
 
     <string name="feeds_refresh">更新</string>
+    <string name="feeds_interest_boosted">興味を強めました</string>
+    <string name="feeds_interest_reduced">興味を弱めました</string>
+    <string name="feeds_interest_removed">興味を削除しました</string>
+    <string name="feeds_interest_failed">興味の調整に失敗しました</string>
 </resources>

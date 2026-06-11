@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">વિશ્વસનીયતા મૂલ્યાંકન</string>
 
     <string name="feeds_refresh">રિફ્રેશ કરો</string>
+    <string name="feeds_interest_boosted">રુચિ વધારી</string>
+    <string name="feeds_interest_reduced">રુચિ ઘટાડી</string>
+    <string name="feeds_interest_removed">રુચિ દૂર કરી</string>
+    <string name="feeds_interest_failed">રુચિ ગોઠવવામાં નિષ્ફળ</string>
 </resources>

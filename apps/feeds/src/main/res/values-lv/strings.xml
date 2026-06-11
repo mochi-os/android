@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Uzticamības novērtējums</string>
 
     <string name="feeds_refresh">Atsvaidzināt</string>
+    <string name="feeds_interest_boosted">Interese palielināta</string>
+    <string name="feeds_interest_reduced">Interese samazināta</string>
+    <string name="feeds_interest_removed">Interese noņemta</string>
+    <string name="feeds_interest_failed">Neizdevās pielāgot interesi</string>
 </resources>

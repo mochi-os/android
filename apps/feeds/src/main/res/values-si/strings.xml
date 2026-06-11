@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">විශ්වසනීයත්ව තක්සේරුව</string>
 
     <string name="feeds_refresh">අලුත් කරන්න</string>
+    <string name="feeds_interest_boosted">උනන්දුව වැඩි කරන ලදී</string>
+    <string name="feeds_interest_reduced">උනන්දුව අඩු කරන ලදී</string>
+    <string name="feeds_interest_removed">උනන්දුව ඉවත් කරන ලදී</string>
+    <string name="feeds_interest_failed">උනන්දුව සකස් කිරීමට අසමත් විය</string>
 </resources>

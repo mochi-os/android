@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Trúverðugleikamat</string>
 
     <string name="feeds_refresh">Endurnýja</string>
+    <string name="feeds_interest_boosted">Áhugaefni eflt</string>
+    <string name="feeds_interest_reduced">Áhugaefni minnkað</string>
+    <string name="feeds_interest_removed">Áhugaefni fjarlægt</string>
+    <string name="feeds_interest_failed">Tókst ekki að breyta áhugaefni</string>
 </resources>

@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Geloofwaardigheidsbepaling</string>
 
     <string name="feeds_refresh">Verfris</string>
+    <string name="feeds_interest_boosted">Belang versterk</string>
+    <string name="feeds_interest_reduced">Belang verminder</string>
+    <string name="feeds_interest_removed">Belang verwyder</string>
+    <string name="feeds_interest_failed">Kon nie belang aanpas nie</string>
 </resources>

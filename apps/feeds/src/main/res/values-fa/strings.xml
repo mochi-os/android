@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">ارزیابی اعتبار</string>
 
     <string name="feeds_refresh">تازه‌سازی</string>
+    <string name="feeds_interest_boosted">علاقه‌مندی تقویت شد</string>
+    <string name="feeds_interest_reduced">علاقه‌مندی کاهش یافت</string>
+    <string name="feeds_interest_removed">علاقه‌مندی حذف شد</string>
+    <string name="feeds_interest_failed">تنظیم علاقه‌مندی ناموفق بود</string>
 </resources>

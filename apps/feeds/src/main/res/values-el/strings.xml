@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Αξιολόγηση αξιοπιστίας</string>
 
     <string name="feeds_refresh">Ανανέωση</string>
+    <string name="feeds_interest_boosted">Το ενδιαφέρον ενισχύθηκε</string>
+    <string name="feeds_interest_reduced">Το ενδιαφέρον μειώθηκε</string>
+    <string name="feeds_interest_removed">Το ενδιαφέρον αφαιρέθηκε</string>
+    <string name="feeds_interest_failed">Αποτυχία ρύθμισης ενδιαφέροντος</string>
 </resources>

@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Sinesgarritasunaren ebaluazioa</string>
 
     <string name="feeds_refresh">Freskatu</string>
+    <string name="feeds_interest_boosted">Interesa handituta</string>
+    <string name="feeds_interest_reduced">Interesa murriztuta</string>
+    <string name="feeds_interest_removed">Interesa kenduta</string>
+    <string name="feeds_interest_failed">Ezin izan da interesa doitu</string>
 </resources>

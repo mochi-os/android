@@ -194,4 +194,8 @@
     <string name="feeds_ai_prompt_credibility">Evalyasyon kredibilite</string>
 
     <string name="feeds_refresh">Rafrechi</string>
+    <string name="feeds_interest_boosted">Enterè ogmante</string>
+    <string name="feeds_interest_reduced">Enterè diminye</string>
+    <string name="feeds_interest_removed">Enterè retire</string>
+    <string name="feeds_interest_failed">Echwe pou ajiste enterè</string>
 </resources>
