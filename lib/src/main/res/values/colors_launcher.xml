@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Adaptive-icon background for every module's launcher icon. Defined
+         once here so each app module's own resource link (including test
+         variants) resolves it without the :app merge. -->
+    <color name="ic_launcher_background">#00000000</color>
+</resources>
