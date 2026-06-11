@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopiraj ID partnera</string>
     <string name="system_replication_peer_id_copied">ID partnera kopiran</string>
     <string name="system_replication_copy_failed">Kopiranje nije uspjelo</string>
+    <string name="system_replication_addresses">Adrese</string>
+    <string name="system_replication_copy_address">Kopiraj adresu</string>
+    <string name="system_replication_address_copied">Adresa kopirana</string>
     <string name="system_replication_pending_title">Zahtjevi za pridruživanje na čekanju</string>
     <string name="system_replication_pending_subtitle">Drugi poslužitelj traži uparivanje s ovim. Odobrite kako biste ga registrirali kao potpunog partnera za replikaciju.</string>
     <string name="system_replication_approve">Odobri</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Preuzmi instalacijski program</string>
     <string name="system_status_download_from_packages">Preuzmi s packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiraj</string>
+    <string name="system_status_peers">Ravnopravni</string>
+    <string name="system_status_peer_connected">Povezano</string>
+    <string name="system_status_peer_disconnected">Nije povezano</string>
+    <string name="system_status_peer_queued">Poruke u redu čekanja</string>
+    <string name="system_status_peer_oldest">Najstarija poruka u redu čekanja</string>
     <string name="accounts_title">Povezani računi</string>
     <string name="accounts_add">Dodaj račun</string>
     <string name="accounts_add_title">Dodaj račun</string>
@@ -409,4 +417,16 @@
     <string name="replication_forget_message">Bit će uklonjen iz vašeg skupa replika i zatražit će se da izbriše svoju kopiju kada se ponovno poveže. Da biste uklonili dostupan poslužitelj, prijavite se na njega i upotrijebite „Ukloni moj račun s ovog poslužitelja”. Potvrdite da ste to vi za nastavak.</string>
     <string name="replication_offline">Izvan mreže</string>
     <string name="replication_forget_confirm">Zaboravi</string>
+    <string name="system_status_peer_unreachable">Nedostupan</string>
+    <string name="system_status_peer_address">Adresa</string>
+    <string name="system_status_peer_seen">Zadnji put viđen</string>
+    <string name="system_status_users">Korisnici</string>
+    <string name="system_status_entities">Entiteti</string>
+    <string name="system_status_reachability">Dostupnost</string>
+    <string name="system_status_reachability_public">Javno</string>
+    <string name="system_status_reachability_private">Privatno</string>
+    <string name="system_status_reachability_unknown">Nepoznato</string>
+    <string name="system_status_relay">Putem releja</string>
+    <string name="system_status_mesh">Mesh ravnopravni</string>
+    <string name="system_status_broadcast">Posljednje emitiranje</string>
 </resources>

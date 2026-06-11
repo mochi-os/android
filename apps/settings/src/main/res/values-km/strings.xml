@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">ចម្លងលេខសម្គាល់ដៃគូ</string>
     <string name="system_replication_peer_id_copied">បានចម្លងលេខសម្គាល់ដៃគូ</string>
     <string name="system_replication_copy_failed">បរាជ័យក្នុងការចម្លង</string>
+    <string name="system_replication_addresses">អាសយដ្ឋាន</string>
+    <string name="system_replication_copy_address">ចម្លងអាសយដ្ឋាន</string>
+    <string name="system_replication_address_copied">បានចម្លងអាសយដ្ឋាន</string>
     <string name="system_replication_pending_title">សំណើចូលរួមដែលកំពុងរង់ចាំ</string>
     <string name="system_replication_pending_subtitle">ម៉ាស៊ីនមេមួយផ្សេងទៀតកំពុងស្នើផ្គូផ្គងជាមួយម៉ាស៊ីននេះ។ អនុម័តដើម្បីចុះឈ្មោះវាជាដៃគូចម្លងពេញលេញ។</string>
     <string name="system_replication_approve">យល់ព្រម</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ទាញយកកម្មវិធីដំឡើង</string>
     <string name="system_status_download_from_packages">ទាញយកពី packages.mochi-os.org</string>
     <string name="system_status_copy">ចម្លង</string>
+    <string name="system_status_peers">មិត្តស្មើ</string>
+    <string name="system_status_peer_connected">បានភ្ជាប់</string>
+    <string name="system_status_peer_disconnected">បានផ្ដាច់</string>
+    <string name="system_status_peer_queued">សារក្នុងជួរ</string>
+    <string name="system_status_peer_oldest">សារចាស់បំផុតក្នុងជួរ</string>
     <string name="accounts_title">គណនីដែលបានភ្ជាប់</string>
     <string name="accounts_add">បន្ថែមគណនី</string>
     <string name="accounts_add_title">បន្ថែមគណនី</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">វានឹងត្រូវបានដកចេញពីសំណុំចម្លងរបស់អ្នក ហើយត្រូវបានប្រាប់ឱ្យលុបច្បាប់ចម្លងរបស់វានៅពេលវាភ្ជាប់ឡើងវិញ។ ដើម្បីដកម៉ាស៊ីនមេដែលអាចភ្ជាប់បាន សូមចូលនៅទីនោះ ហើយប្រើ «លុបគណនីរបស់ខ្ញុំចេញពីម៉ាស៊ីនមេនេះ»។ សូមផ្ទៀងផ្ទាត់ថាជាអ្នកដើម្បីបន្ត។</string>
     <string name="replication_offline">ក្រៅបណ្ដាញ</string>
     <string name="replication_forget_confirm">បំភ្លេច</string>
+    <string name="system_status_peer_unreachable">មិនអាចទៅដល់</string>
+    <string name="system_status_peer_address">អាសយដ្ឋាន</string>
+    <string name="system_status_peer_seen">ឃើញចុងក្រោយ</string>
+    <string name="system_status_users">អ្នកប្រើប្រាស់</string>
+    <string name="system_status_entities">អង្គភាព</string>
+    <string name="system_status_reachability">លទ្ធភាពទៅដល់</string>
+    <string name="system_status_reachability_public">សាធារណៈ</string>
+    <string name="system_status_reachability_private">ឯកជន</string>
+    <string name="system_status_reachability_unknown">មិនស្គាល់</string>
+    <string name="system_status_relay">តាមរយៈ relay</string>
+    <string name="system_status_mesh">មិត្តស្មើ mesh</string>
+    <string name="system_status_broadcast">ការផ្សាយចុងក្រោយ</string>
 </resources>

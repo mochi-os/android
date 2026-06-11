@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Embokopia peer ID</string>
     <string name="system_replication_peer_id_copied">Peer ID ojekopiáma</string>
     <string name="system_replication_copy_failed">Ndaikatúi oñemonguatia</string>
+    <string name="system_replication_addresses">Dirección-kuéra</string>
+    <string name="system_replication_copy_address">Embokopia dirección</string>
+    <string name="system_replication_address_copied">Dirección ojekopiáma</string>
     <string name="system_replication_pending_title">Jeike jerure oha\'arõva</string>
     <string name="system_replication_pending_subtitle">Ambue servidor ojerure ojejoaju hagua ko ndive. Emoneĩ embokuatia hagua replicación irũnguérakomopa.</string>
     <string name="system_replication_approve">Emoneĩ</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Emboguejy instalador</string>
     <string name="system_status_download_from_packages">Emboguejy packages.mochi-os.org-gui</string>
     <string name="system_status_copy">Kopia</string>
+    <string name="system_status_peers">Mboja-kuéra</string>
+    <string name="system_status_peer_connected">Oñembojuaju</string>
+    <string name="system_status_peer_disconnected">Ndojuajúi</string>
+    <string name="system_status_peer_queued">Marandu oha\'arõva</string>
+    <string name="system_status_peer_oldest">Marandu oha\'arõva ymaveguáre</string>
     <string name="accounts_title">Tetãyguakuéra oñembojuajúva</string>
     <string name="accounts_add">Embojuaju tetãygua</string>
     <string name="accounts_add_title">Embojuaju tetãygua</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">Oñemboguéta ne aty replica-gui ha ojejeruréta chupe ombogue hag̃ua ikopia oñembojoaju jeývo. Embogue hag̃ua peteĩ servidor oñehupytýva, eike upépe ha eipuru «Embogue che kuénta ko servidor-gui». Emoneĩ nde hína ne añeteha eku\'e hag̃ua.</string>
     <string name="replication_offline">Mboriahúgua</string>
     <string name="replication_forget_confirm">Tesarái</string>
+    <string name="system_status_peer_unreachable">Ndaikatúi og̃uahẽ</string>
+    <string name="system_status_peer_address">Dirección</string>
+    <string name="system_status_peer_seen">Ojehechahague paha</string>
+    <string name="system_status_users">Mboapurevaharakuéra</string>
+    <string name="system_status_entities">Entidad-kuéra</string>
+    <string name="system_status_reachability">Ñeg̃uahẽkuaa</string>
+    <string name="system_status_reachability_public">Ojeikéva</string>
+    <string name="system_status_reachability_private">Ñemiguáva</string>
+    <string name="system_status_reachability_unknown">Ojekuaa\'ỹva</string>
+    <string name="system_status_relay">Relay rupive</string>
+    <string name="system_status_mesh">Mboja mesh-pegua</string>
+    <string name="system_status_broadcast">Ñemyasãi paha</string>
 </resources>

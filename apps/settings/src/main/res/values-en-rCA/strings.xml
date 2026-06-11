@@ -134,6 +134,11 @@
     <string name="system_status_download_installer">Download installer</string>
     <string name="system_status_download_from_packages">Download from packages.mochi-os.org</string>
     <string name="system_status_copy">Copy</string>
+    <string name="system_status_peers">Peers</string>
+    <string name="system_status_peer_connected">Connected</string>
+    <string name="system_status_peer_disconnected">Disconnected</string>
+    <string name="system_status_peer_queued">Queued messages</string>
+    <string name="system_status_peer_oldest">Oldest queued message</string>
     <string name="accounts_title">Connected accounts</string>
     <string name="accounts_add">Add account</string>
     <string name="accounts_add_title">Add account</string>
@@ -213,6 +218,9 @@
     <string name="system_replication_copy_peer_id">Copy peer id</string>
     <string name="system_replication_peer_id_copied">Peer id copied</string>
     <string name="system_replication_copy_failed">Failed to copy</string>
+    <string name="system_replication_addresses">Addresses</string>
+    <string name="system_replication_copy_address">Copy address</string>
+    <string name="system_replication_address_copied">Address copied</string>
     <string name="system_replication_pending_title">Pending join requests</string>
     <string name="system_replication_pending_subtitle">Another server is asking to pair with this one. Approve to enrol it as a full replication peer.</string>
     <string name="system_replication_join_approved">Join request approved</string>

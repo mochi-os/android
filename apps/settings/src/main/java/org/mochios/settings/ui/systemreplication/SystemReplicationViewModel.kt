@@ -23,6 +23,7 @@ import javax.inject.Inject
 data class SystemReplicationUiState(
     val isLoading: Boolean = true,
     val peer: String = "",
+    val addresses: List<String> = emptyList(),
     val pair: List<String> = emptyList(),
     val joins: List<PendingJoin> = emptyList(),
     val bootstrap: List<BootstrapEntry> = emptyList(),
@@ -34,6 +35,7 @@ sealed class SystemReplicationEvent {
     data class JoinDenied(val success: Boolean) : SystemReplicationEvent()
     data class PairRemoved(val success: Boolean) : SystemReplicationEvent()
     data class PeerCopied(val success: Boolean) : SystemReplicationEvent()
+    data class AddressCopied(val success: Boolean) : SystemReplicationEvent()
 }
 
 @HiltViewModel
@@ -66,6 +68,7 @@ class SystemReplicationViewModel @Inject constructor(
                 _uiState.value = SystemReplicationUiState(
                     isLoading = false,
                     peer = data.peer,
+                    addresses = data.addresses,
                     pair = data.pair,
                     joins = data.joins,
                     bootstrap = data.bootstrap,
@@ -115,6 +118,10 @@ class SystemReplicationViewModel @Inject constructor(
 
     fun reportPeerCopied(success: Boolean) {
         viewModelScope.launch { _events.emit(SystemReplicationEvent.PeerCopied(success)) }
+    }
+
+    fun reportAddressCopied(success: Boolean) {
+        viewModelScope.launch { _events.emit(SystemReplicationEvent.AddressCopied(success)) }
     }
 
     private fun <T> Response<T>.bodyOrThrow(): T {

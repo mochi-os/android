@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Eenyumessa michuu garagalchi</string>
     <string name="system_replication_peer_id_copied">Eenyumessi michuu garagalfame</string>
     <string name="system_replication_copy_failed">Garagalchuu hin dandeenye</string>
+    <string name="system_replication_addresses">Teessoowwan</string>
+    <string name="system_replication_copy_address">Teessoo garagalchi</string>
+    <string name="system_replication_address_copied">Teessoon garagalfame</string>
     <string name="system_replication_pending_title">Iyyannoota makamuu eegamaa jiran</string>
     <string name="system_replication_pending_subtitle">Sarvarri biraa kana waliin walitti hidhamuu gaafachaa jira. Akka michuu garagalcha guutuu galmeessisuuf mirkaneessi.</string>
     <string name="system_replication_approve">Mirkaneessi</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Sirreessaa buufadhu</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org irraa buufadhu</string>
     <string name="system_status_copy">Garagalchi</string>
+    <string name="system_status_peers">Hiriyoota</string>
+    <string name="system_status_peer_connected">Walitti hidhame</string>
+    <string name="system_status_peer_disconnected">Hidhaan citeera</string>
+    <string name="system_status_peer_queued">Ergaawwan tartiiba keessaa</string>
+    <string name="system_status_peer_oldest">Ergaa durii caalu tartiiba keessaa</string>
     <string name="accounts_title">Akkaawuntiilee walitti hidhaman</string>
     <string name="accounts_add">Akkaawuntii dabali</string>
     <string name="accounts_add_title">Akkaawuntii dabali</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Inni tarree riplikaa kee irraa ni balleeffama, yeroo deebi\'ee walqunnamtu garagalcha isaa akka balleessu itti himama. Saarvara gahamu balleessuuf, achitti seenii \"Akkaawuntii koo saarvarii kana irraa balleessi\" fayyadami. Itti fufuuf akka ati taate mirkaneessi.</string>
     <string name="replication_offline">Sarara ala</string>
     <string name="replication_forget_confirm">Irraanfadhu</string>
+    <string name="system_status_peer_unreachable">Hin dhaqqabamu</string>
+    <string name="system_status_peer_address">Teessoo</string>
+    <string name="system_status_peer_seen">Yeroo dhumaaf mul\'ate</string>
+    <string name="system_status_users">Fayyadamtoota</string>
+    <string name="system_status_entities">Qaamota</string>
+    <string name="system_status_reachability">Dhaqqabummaa</string>
+    <string name="system_status_reachability_public">Ifa</string>
+    <string name="system_status_reachability_private">Dhuunfaa</string>
+    <string name="system_status_reachability_unknown">Hin beekamu</string>
+    <string name="system_status_relay">Karaa relay</string>
+    <string name="system_status_mesh">Hiriyoota mesh</string>
+    <string name="system_status_broadcast">Tamsaasa dhumaa</string>
 </resources>

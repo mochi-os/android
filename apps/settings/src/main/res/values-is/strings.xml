@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Afrita auðkenni jafningja</string>
     <string name="system_replication_peer_id_copied">Auðkenni jafningja afritað</string>
     <string name="system_replication_copy_failed">Tókst ekki að afrita</string>
+    <string name="system_replication_addresses">Vistföng</string>
+    <string name="system_replication_copy_address">Afrita vistfang</string>
+    <string name="system_replication_address_copied">Vistfang afritað</string>
     <string name="system_replication_pending_title">Tengingarbeiðnir í bið</string>
     <string name="system_replication_pending_subtitle">Annar netþjónn biður um pörun við þennan. Samþykktu til að skrá hann sem fullgildan eftirmyndunarjafningja.</string>
     <string name="system_replication_approve">Samþykkja</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Hlaða niður uppsetningarforriti</string>
     <string name="system_status_download_from_packages">Hlaða niður frá packages.mochi-os.org</string>
     <string name="system_status_copy">Afrita</string>
+    <string name="system_status_peers">Jafningjar</string>
+    <string name="system_status_peer_connected">Tengt</string>
+    <string name="system_status_peer_disconnected">Aftengt</string>
+    <string name="system_status_peer_queued">Skilaboð í biðröð</string>
+    <string name="system_status_peer_oldest">Elstu skilaboð í biðröð</string>
     <string name="accounts_title">Tengdir reikningar</string>
     <string name="accounts_add">Bæta við reikningi</string>
     <string name="accounts_add_title">Bæta við reikningi</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Hann verður fjarlægður úr eftirmyndasafninu þínu og beðinn um að eyða afriti sínu þegar hann tengist aftur. Til að fjarlægja náanlegan vefþjón skaltu skrá þig inn þar og nota „Fjarlægja reikninginn minn af þessum vefþjóni”. Staðfestu að þetta sért þú til að halda áfram.</string>
     <string name="replication_offline">Ótengt</string>
     <string name="replication_forget_confirm">Gleyma</string>
+    <string name="system_status_peer_unreachable">Ónáanlegur</string>
+    <string name="system_status_peer_address">Vistfang</string>
+    <string name="system_status_peer_seen">Síðast séð</string>
+    <string name="system_status_users">Notendur</string>
+    <string name="system_status_entities">Einingar</string>
+    <string name="system_status_reachability">Aðgengi</string>
+    <string name="system_status_reachability_public">Opinbert</string>
+    <string name="system_status_reachability_private">Einkamál</string>
+    <string name="system_status_reachability_unknown">Óþekkt</string>
+    <string name="system_status_relay">Um endurvarpa</string>
+    <string name="system_status_mesh">Mesh-jafningjar</string>
+    <string name="system_status_broadcast">Síðasta útsending</string>
 </resources>

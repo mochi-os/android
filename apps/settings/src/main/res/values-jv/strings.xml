@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Salin ID kanca</string>
     <string name="system_replication_peer_id_copied">ID kanca disalin</string>
     <string name="system_replication_copy_failed">Gagal nyalin</string>
+    <string name="system_replication_addresses">Alamat</string>
+    <string name="system_replication_copy_address">Salin alamat</string>
+    <string name="system_replication_address_copied">Alamat disalin</string>
     <string name="system_replication_pending_title">Panyuwun gabung sing ngenteni</string>
     <string name="system_replication_pending_subtitle">Server liyane njaluk dipasangake karo iki. Setujui kanggo nyathet minangka kanca replikasi sing lengkap.</string>
     <string name="system_replication_approve">Setujoni</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Download installer</string>
     <string name="system_status_download_from_packages">Download saka packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
+    <string name="system_status_peers">Kanca</string>
+    <string name="system_status_peer_connected">Wis nyambung</string>
+    <string name="system_status_peer_disconnected">Pedhot</string>
+    <string name="system_status_peer_queued">Pesen ing antrean</string>
+    <string name="system_status_peer_oldest">Pesen paling lawas ing antrean</string>
     <string name="accounts_title">Akun sing nyambung</string>
     <string name="accounts_add">Tambah akun</string>
     <string name="accounts_add_title">Tambah akun</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">Iki bakal dibusak saka set replika sampéyan lan dikongkon mbusak salinané nalika nyambung manèh. Kanggo mbusak server sing bisa diakses, mlebua ing kana lan gunakaké \"Busak akunku saka server iki\". Verifikasi yèn iki sampéyan kanggo nerusaké.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Lalèkna</string>
+    <string name="system_status_peer_unreachable">Ora bisa digayuh</string>
+    <string name="system_status_peer_address">Alamat</string>
+    <string name="system_status_peer_seen">Pungkasan katon</string>
+    <string name="system_status_users">Panganggo</string>
+    <string name="system_status_entities">Entitas</string>
+    <string name="system_status_reachability">Kagayuh</string>
+    <string name="system_status_reachability_public">Publik</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Ora dimangerteni</string>
+    <string name="system_status_relay">Liwat relay</string>
+    <string name="system_status_mesh">Kanca mesh</string>
+    <string name="system_status_broadcast">Siaran pungkasan</string>
 </resources>

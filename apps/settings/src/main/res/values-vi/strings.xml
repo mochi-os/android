@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Sao chép ID máy ngang hàng</string>
     <string name="system_replication_peer_id_copied">Đã sao chép ID máy ngang hàng</string>
     <string name="system_replication_copy_failed">Không sao chép được</string>
+    <string name="system_replication_addresses">Địa chỉ</string>
+    <string name="system_replication_copy_address">Sao chép địa chỉ</string>
+    <string name="system_replication_address_copied">Đã sao chép địa chỉ</string>
     <string name="system_replication_pending_title">Yêu cầu tham gia đang chờ xử lý</string>
     <string name="system_replication_pending_subtitle">Một máy chủ khác đang yêu cầu ghép cặp với máy chủ này. Phê duyệt để đăng ký nó làm máy ngang hàng sao chép đầy đủ.</string>
     <string name="system_replication_approve">Phê duyệt</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Tải xuống trình cài đặt</string>
     <string name="system_status_download_from_packages">Tải xuống từ packages.mochi-os.org</string>
     <string name="system_status_copy">Sao chép</string>
+    <string name="system_status_peers">Ngang hàng</string>
+    <string name="system_status_peer_connected">Đã kết nối</string>
+    <string name="system_status_peer_disconnected">Đã ngắt kết nối</string>
+    <string name="system_status_peer_queued">Tin nhắn trong hàng đợi</string>
+    <string name="system_status_peer_oldest">Tin nhắn cũ nhất trong hàng đợi</string>
     <string name="accounts_title">Tài khoản đã kết nối</string>
     <string name="accounts_add">Thêm tài khoản</string>
     <string name="accounts_add_title">Thêm tài khoản</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">Nó sẽ bị xóa khỏi tập bản sao của bạn và được yêu cầu xóa bản sao của mình khi kết nối lại. Để xóa một máy chủ có thể kết nối, hãy đăng nhập vào đó và sử dụng \"Xóa tài khoản của tôi khỏi máy chủ này\". Xác minh đó là bạn để tiếp tục.</string>
     <string name="replication_offline">Ngoại tuyến</string>
     <string name="replication_forget_confirm">Quên</string>
+    <string name="system_status_peer_unreachable">Không thể tiếp cận</string>
+    <string name="system_status_peer_address">Địa chỉ</string>
+    <string name="system_status_peer_seen">Lần cuối nhìn thấy</string>
+    <string name="system_status_users">Người dùng</string>
+    <string name="system_status_entities">Thực thể</string>
+    <string name="system_status_reachability">Khả năng tiếp cận</string>
+    <string name="system_status_reachability_public">Công khai</string>
+    <string name="system_status_reachability_private">Riêng tư</string>
+    <string name="system_status_reachability_unknown">Không rõ</string>
+    <string name="system_status_relay">Qua relay</string>
+    <string name="system_status_mesh">Máy ngang hàng mesh</string>
+    <string name="system_status_broadcast">Bản phát gần nhất</string>
 </resources>

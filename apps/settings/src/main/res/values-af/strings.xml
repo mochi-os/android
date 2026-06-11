@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopieer eweknie-ID</string>
     <string name="system_replication_peer_id_copied">Eweknie-ID gekopieer</string>
     <string name="system_replication_copy_failed">Kon nie kopieer nie</string>
+    <string name="system_replication_addresses">Adresse</string>
+    <string name="system_replication_copy_address">Kopieer adres</string>
+    <string name="system_replication_address_copied">Adres gekopieer</string>
     <string name="system_replication_pending_title">Hangende aansluitingsversoeke</string>
     <string name="system_replication_pending_subtitle">\'n Ander bediener vra om met hierdie een gepaar te word. Keur goed om dit as \'n volledige replikasie-eweknie te registreer.</string>
     <string name="system_replication_approve">Keur goed</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Laai installeerder af</string>
     <string name="system_status_download_from_packages">Laai af van packages.mochi-os.org</string>
     <string name="system_status_copy">Kopieer</string>
+    <string name="system_status_peers">Eweknieë</string>
+    <string name="system_status_peer_connected">Verbind</string>
+    <string name="system_status_peer_disconnected">Ontkoppel</string>
+    <string name="system_status_peer_queued">Boodskappe in tou</string>
+    <string name="system_status_peer_oldest">Oudste boodskap in tou</string>
     <string name="accounts_title">Verbinde rekeninge</string>
     <string name="accounts_add">Voeg rekening by</string>
     <string name="accounts_add_title">Voeg rekening by</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Dit sal uit jou replikastel verwyder word en aangesê word om sy kopie te skrap wanneer dit weer verbind. Om \'n bereikbare bediener te verwyder, meld daar aan en gebruik \"Verwyder my rekening van hierdie bediener\". Bevestig dis jy om voort te gaan.</string>
     <string name="replication_offline">Aflyn</string>
     <string name="replication_forget_confirm">Vergeet</string>
+    <string name="system_status_peer_unreachable">Onbereikbaar</string>
+    <string name="system_status_peer_address">Adres</string>
+    <string name="system_status_peer_seen">Laas gesien</string>
+    <string name="system_status_users">Gebruikers</string>
+    <string name="system_status_entities">Entiteite</string>
+    <string name="system_status_reachability">Bereikbaarheid</string>
+    <string name="system_status_reachability_public">Publiek</string>
+    <string name="system_status_reachability_private">Privaat</string>
+    <string name="system_status_reachability_unknown">Onbekend</string>
+    <string name="system_status_relay">Via relay</string>
+    <string name="system_status_mesh">Mesh-eweknieë</string>
+    <string name="system_status_broadcast">Laaste uitsending</string>
 </resources>

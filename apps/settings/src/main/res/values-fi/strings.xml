@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopioi vertaistunniste</string>
     <string name="system_replication_peer_id_copied">Vertaistunniste kopioitu</string>
     <string name="system_replication_copy_failed">Kopiointi epäonnistui</string>
+    <string name="system_replication_addresses">Osoitteet</string>
+    <string name="system_replication_copy_address">Kopioi osoite</string>
+    <string name="system_replication_address_copied">Osoite kopioitu</string>
     <string name="system_replication_pending_title">Odottavat liittymispyynnöt</string>
     <string name="system_replication_pending_subtitle">Toinen palvelin pyytää muodostamaan parin tämän kanssa. Hyväksy, jotta se rekisteröidään täysivaltaiseksi replikointivertaiseksi.</string>
     <string name="system_replication_approve">Hyväksy</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Lataa asennusohjelma</string>
     <string name="system_status_download_from_packages">Lataa osoitteesta packages.mochi-os.org</string>
     <string name="system_status_copy">Kopioi</string>
+    <string name="system_status_peers">Vertaiset</string>
+    <string name="system_status_peer_connected">Yhdistetty</string>
+    <string name="system_status_peer_disconnected">Ei yhteyttä</string>
+    <string name="system_status_peer_queued">Jonossa olevat viestit</string>
+    <string name="system_status_peer_oldest">Vanhin jonossa oleva viesti</string>
     <string name="accounts_title">Yhdistetyt tilit</string>
     <string name="accounts_add">Lisää tili</string>
     <string name="accounts_add_title">Lisää tili</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Se poistetaan replikajoukostasi ja sitä pyydetään poistamaan kopionsa, kun se yhdistää uudelleen. Tavoitettavissa olevan palvelimen poistat kirjautumalla siihen ja käyttämällä toimintoa \"Poista tilini tältä palvelimelta\". Vahvista henkilöllisyytesi jatkaaksesi.</string>
     <string name="replication_offline">Offline-tilassa</string>
     <string name="replication_forget_confirm">Unohda</string>
+    <string name="system_status_peer_unreachable">Tavoittamattomissa</string>
+    <string name="system_status_peer_address">Osoite</string>
+    <string name="system_status_peer_seen">Viimeksi nähty</string>
+    <string name="system_status_users">Käyttäjät</string>
+    <string name="system_status_entities">Entiteetit</string>
+    <string name="system_status_reachability">Tavoitettavuus</string>
+    <string name="system_status_reachability_public">Julkinen</string>
+    <string name="system_status_reachability_private">Yksityinen</string>
+    <string name="system_status_reachability_unknown">Tuntematon</string>
+    <string name="system_status_relay">Releen kautta</string>
+    <string name="system_status_mesh">Mesh-vertaiset</string>
+    <string name="system_status_broadcast">Viimeisin lähetys</string>
 </resources>

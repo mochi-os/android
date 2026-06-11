@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">העתקת מזהה עמית</string>
     <string name="system_replication_peer_id_copied">מזהה העמית הועתק</string>
     <string name="system_replication_copy_failed">ההעתקה נכשלה</string>
+    <string name="system_replication_addresses">כתובות</string>
+    <string name="system_replication_copy_address">העתקת כתובת</string>
+    <string name="system_replication_address_copied">הכתובת הועתקה</string>
     <string name="system_replication_pending_title">בקשות הצטרפות בהמתנה</string>
     <string name="system_replication_pending_subtitle">שרת אחר מבקש להזדווג עם שרת זה. אשרו כדי לרשום אותו כעמית שכפול מלא.</string>
     <string name="system_replication_approve">אישור</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">הורד את המתקין</string>
     <string name="system_status_download_from_packages">הורד מ-packages.mochi-os.org</string>
     <string name="system_status_copy">העתק</string>
+    <string name="system_status_peers">עמיתים</string>
+    <string name="system_status_peer_connected">מחובר</string>
+    <string name="system_status_peer_disconnected">מנותק</string>
+    <string name="system_status_peer_queued">הודעות בתור</string>
+    <string name="system_status_peer_oldest">ההודעה הישנה ביותר בתור</string>
     <string name="accounts_title">חשבונות מחוברים</string>
     <string name="accounts_add">הוסף חשבון</string>
     <string name="accounts_add_title">הוסף חשבון</string>
@@ -409,4 +417,16 @@
     <string name="replication_forget_message">הוא יוסר מקבוצת העותקים שלך ויתבקש למחוק את העותק שלו כשיתחבר מחדש. כדי להסיר שרת נגיש, היכנס אליו והשתמש ב\"הסר את החשבון שלי משרת זה\". אמת שזה אתה כדי להמשיך.</string>
     <string name="replication_offline">לא מקוון</string>
     <string name="replication_forget_confirm">שכח</string>
+    <string name="system_status_peer_unreachable">לא ניתן להשגה</string>
+    <string name="system_status_peer_address">כתובת</string>
+    <string name="system_status_peer_seen">נראה לאחרונה</string>
+    <string name="system_status_users">משתמשים</string>
+    <string name="system_status_entities">ישויות</string>
+    <string name="system_status_reachability">נגישות</string>
+    <string name="system_status_reachability_public">ציבורי</string>
+    <string name="system_status_reachability_private">פרטי</string>
+    <string name="system_status_reachability_unknown">לא ידוע</string>
+    <string name="system_status_relay">דרך ממסר</string>
+    <string name="system_status_mesh">עמיתי רשת</string>
+    <string name="system_status_broadcast">שידור אחרון</string>
 </resources>

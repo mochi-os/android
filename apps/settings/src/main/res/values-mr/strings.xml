@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">पीयर ID कॉपी करा</string>
     <string name="system_replication_peer_id_copied">पीयर ID कॉपी झाले</string>
     <string name="system_replication_copy_failed">कॉपी करण्यात अयशस्वी</string>
+    <string name="system_replication_addresses">पत्ते</string>
+    <string name="system_replication_copy_address">पत्ता कॉपी करा</string>
+    <string name="system_replication_address_copied">पत्ता कॉपी झाला</string>
     <string name="system_replication_pending_title">प्रलंबित सहभाग विनंत्या</string>
     <string name="system_replication_pending_subtitle">दुसरा सर्व्हर याच्याशी जोडी करण्याची विनंती करत आहे. पूर्ण प्रतिकृती समकक्ष म्हणून नोंदणी करण्यासाठी मंजूर करा.</string>
     <string name="system_replication_approve">मंजूर करा</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">इन्स्टॉलर डाउनलोड करा</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org वरून डाउनलोड करा</string>
     <string name="system_status_copy">कॉपी करा</string>
+    <string name="system_status_peers">समकक्ष</string>
+    <string name="system_status_peer_connected">कनेक्ट केले</string>
+    <string name="system_status_peer_disconnected">डिस्कनेक्ट केले</string>
+    <string name="system_status_peer_queued">रांगेतील संदेश</string>
+    <string name="system_status_peer_oldest">रांगेतील सर्वात जुना संदेश</string>
     <string name="accounts_title">कनेक्ट केलेली खाती</string>
     <string name="accounts_add">खाते जोडा</string>
     <string name="accounts_add_title">खाते जोडा</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">तो तुमच्या प्रतिकृती संचातून काढला जाईल आणि पुन्हा कनेक्ट झाल्यावर त्याची प्रत हटवण्यास सांगितले जाईल. पोहोचता येणारा सर्व्हर काढण्यासाठी, तेथे साइन इन करा आणि \"या सर्व्हरवरून माझे खाते काढा\" वापरा. सुरू ठेवण्यासाठी हे तुम्हीच आहात याची खात्री करा.</string>
     <string name="replication_offline">ऑफलाइन</string>
     <string name="replication_forget_confirm">विसरा</string>
+    <string name="system_status_peer_unreachable">पोहोचण्यापलीकडे</string>
+    <string name="system_status_peer_address">पत्ता</string>
+    <string name="system_status_peer_seen">शेवटचे पाहिले</string>
+    <string name="system_status_users">वापरकर्ते</string>
+    <string name="system_status_entities">घटक</string>
+    <string name="system_status_reachability">पोहोचक्षमता</string>
+    <string name="system_status_reachability_public">सार्वजनिक</string>
+    <string name="system_status_reachability_private">खाजगी</string>
+    <string name="system_status_reachability_unknown">अज्ञात</string>
+    <string name="system_status_relay">रिलेद्वारे</string>
+    <string name="system_status_mesh">मेश समकक्ष</string>
+    <string name="system_status_broadcast">शेवटचे प्रसारण</string>
 </resources>

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Копировать идентификатор узла</string>
     <string name="system_replication_peer_id_copied">Идентификатор узла скопирован</string>
     <string name="system_replication_copy_failed">Не удалось скопировать</string>
+    <string name="system_replication_addresses">Адреса</string>
+    <string name="system_replication_copy_address">Копировать адрес</string>
+    <string name="system_replication_address_copied">Адрес скопирован</string>
     <string name="system_replication_pending_title">Ожидающие запросы на присоединение</string>
     <string name="system_replication_pending_subtitle">Другой сервер запрашивает сопряжение с этим. Одобрите, чтобы зарегистрировать его как полноценного партнёра репликации.</string>
     <string name="system_replication_approve">Одобрить</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Загрузить установщик</string>
     <string name="system_status_download_from_packages">Загрузить с packages.mochi-os.org</string>
     <string name="system_status_copy">Копировать</string>
+    <string name="system_status_peers">Узлы</string>
+    <string name="system_status_peer_connected">Подключено</string>
+    <string name="system_status_peer_disconnected">Отключено</string>
+    <string name="system_status_peer_queued">Сообщения в очереди</string>
+    <string name="system_status_peer_oldest">Самое старое сообщение в очереди</string>
     <string name="accounts_title">Подключённые аккаунты</string>
     <string name="accounts_add">Добавить аккаунт</string>
     <string name="accounts_add_title">Добавить аккаунт</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">Он будет удалён из вашего набора реплик и получит указание удалить свою копию при повторном подключении. Чтобы удалить доступный сервер, войдите на нём и используйте «Удалить мою учётную запись с этого сервера». Подтвердите, что это вы, чтобы продолжить.</string>
     <string name="replication_offline">Не в сети</string>
     <string name="replication_forget_confirm">Забыть</string>
+    <string name="system_status_peer_unreachable">Недостижим</string>
+    <string name="system_status_peer_address">Адрес</string>
+    <string name="system_status_peer_seen">Последний раз замечен</string>
+    <string name="system_status_users">Пользователи</string>
+    <string name="system_status_entities">Сущности</string>
+    <string name="system_status_reachability">Достижимость</string>
+    <string name="system_status_reachability_public">Публичный</string>
+    <string name="system_status_reachability_private">Приватный</string>
+    <string name="system_status_reachability_unknown">Неизвестно</string>
+    <string name="system_status_relay">Через реле</string>
+    <string name="system_status_mesh">Узлы mesh</string>
+    <string name="system_status_broadcast">Последняя трансляция</string>
 </resources>

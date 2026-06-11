@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Скапіраваць ID партнёра</string>
     <string name="system_replication_peer_id_copied">ID партнёра скапіраваны</string>
     <string name="system_replication_copy_failed">Не ўдалося скапіяваць</string>
+    <string name="system_replication_addresses">Адрасы</string>
+    <string name="system_replication_copy_address">Скапіраваць адрас</string>
+    <string name="system_replication_address_copied">Адрас скапіраваны</string>
     <string name="system_replication_pending_title">Чаканыя запыты на далучэнне</string>
     <string name="system_replication_pending_subtitle">Іншы сервер просіць спалучыцца з гэтым. Зацвердзіце, каб зарэгістраваць яго як паўнавартаснага партнёра рэплікацыі.</string>
     <string name="system_replication_approve">Ухваліць</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Спампаваць усталёўшчык</string>
     <string name="system_status_download_from_packages">Спампаваць з packages.mochi-os.org</string>
     <string name="system_status_copy">Капіраваць</string>
+    <string name="system_status_peers">Партнёры</string>
+    <string name="system_status_peer_connected">Падключана</string>
+    <string name="system_status_peer_disconnected">Адключана</string>
+    <string name="system_status_peer_queued">Паведамленні ў чарзе</string>
+    <string name="system_status_peer_oldest">Найстарэйшае паведамленне ў чарзе</string>
     <string name="accounts_title">Падключаныя ўліковыя запісы</string>
     <string name="accounts_add">Дадаць уліковы запіс</string>
     <string name="accounts_add_title">Дадаць уліковы запіс</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">Ён будзе выдалены з вашага набору рэплік, і яму будзе загадана выдаліць сваю копію пры паўторным падключэнні. Каб выдаліць дасягальны сервер, увайдзіце там і скарыстайцеся «Выдаліць мой уліковы запіс з гэтага сервера». Пацвердзіце, што гэта вы, каб працягнуць.</string>
     <string name="replication_offline">Не ў сетцы</string>
     <string name="replication_forget_confirm">Забыць</string>
+    <string name="system_status_peer_unreachable">Недасяжны</string>
+    <string name="system_status_peer_address">Адрас</string>
+    <string name="system_status_peer_seen">Апошні раз бачылі</string>
+    <string name="system_status_users">Карыстальнікі</string>
+    <string name="system_status_entities">Сутнасці</string>
+    <string name="system_status_reachability">Дасяжнасць</string>
+    <string name="system_status_reachability_public">Публічны</string>
+    <string name="system_status_reachability_private">Прыватны</string>
+    <string name="system_status_reachability_unknown">Невядома</string>
+    <string name="system_status_relay">Праз рэтранслятар</string>
+    <string name="system_status_mesh">Удзельнікі mesh</string>
+    <string name="system_status_broadcast">Апошняя трансляцыя</string>
 </resources>

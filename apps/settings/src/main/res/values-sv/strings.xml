@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopiera peer-id</string>
     <string name="system_replication_peer_id_copied">Peer-id kopierat</string>
     <string name="system_replication_copy_failed">Kunde inte kopiera</string>
+    <string name="system_replication_addresses">Adresser</string>
+    <string name="system_replication_copy_address">Kopiera adress</string>
+    <string name="system_replication_address_copied">Adress kopierad</string>
     <string name="system_replication_pending_title">Väntande anslutningsbegäranden</string>
     <string name="system_replication_pending_subtitle">En annan server begär att paras ihop med denna. Godkänn för att registrera den som en fullvärdig replikeringskompis.</string>
     <string name="system_replication_approve">Godkänn</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Hämta installationsprogram</string>
     <string name="system_status_download_from_packages">Hämta från packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiera</string>
+    <string name="system_status_peers">Peers</string>
+    <string name="system_status_peer_connected">Ansluten</string>
+    <string name="system_status_peer_disconnected">Frånkopplad</string>
+    <string name="system_status_peer_queued">Meddelanden i kö</string>
+    <string name="system_status_peer_oldest">Äldsta meddelandet i kö</string>
     <string name="accounts_title">Anslutna konton</string>
     <string name="accounts_add">Lägg till konto</string>
     <string name="accounts_add_title">Lägg till konto</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Den tas bort från din replikuppsättning och uppmanas att radera sin kopia när den återansluter. För att ta bort en nåbar server loggar du in där och använder \"Ta bort mitt konto från den här servern\". Bekräfta att det är du för att fortsätta.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Glöm</string>
+    <string name="system_status_peer_unreachable">Onåbar</string>
+    <string name="system_status_peer_address">Adress</string>
+    <string name="system_status_peer_seen">Senast sedd</string>
+    <string name="system_status_users">Användare</string>
+    <string name="system_status_entities">Entiteter</string>
+    <string name="system_status_reachability">Nåbarhet</string>
+    <string name="system_status_reachability_public">Offentlig</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Okänd</string>
+    <string name="system_status_relay">Via relä</string>
+    <string name="system_status_mesh">Mesh-peers</string>
+    <string name="system_status_broadcast">Senaste utsändning</string>
 </resources>

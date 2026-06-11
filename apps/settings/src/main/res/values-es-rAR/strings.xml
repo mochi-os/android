@@ -150,6 +150,9 @@
     <string name="system_replication_copy_peer_id">Copiar id del par</string>
     <string name="system_replication_peer_id_copied">ID de par copiado</string>
     <string name="system_replication_copy_failed">No se pudo copiar</string>
+    <string name="system_replication_addresses">Direcciones</string>
+    <string name="system_replication_copy_address">Copiar dirección</string>
+    <string name="system_replication_address_copied">Dirección copiada</string>
     <string name="system_replication_pending_title">Solicitudes de unión pendientes</string>
     <string name="system_replication_pending_subtitle">Otro servidor está pidiendo emparejarse con este. Aprobá para incorporarlo como par de replicación completo.</string>
     <string name="system_replication_deny">Rechazar</string>
@@ -208,6 +211,11 @@
     <string name="system_status_update_available">Mochi %1$s está disponible</string>
     <string name="system_status_installing">Instalando %1$s…</string>
     <string name="system_status_copy">Copiar</string>
+    <string name="system_status_peers">Pares</string>
+    <string name="system_status_peer_connected">Conectado</string>
+    <string name="system_status_peer_disconnected">Desconectado</string>
+    <string name="system_status_peer_queued">Mensajes en cola</string>
+    <string name="system_status_peer_oldest">Mensaje en cola más antiguo</string>
     <string name="accounts_title">Cuentas conectadas</string>
     <string name="accounts_empty">No hay cuentas conectadas</string>
     <string name="accounts_field_email">Correo electrónico</string>
@@ -402,4 +410,16 @@
     <string name="replication_forget">Olvidar este host inaccesible</string>
     <string name="replication_forget_title">¿Olvidar este host inaccesible?</string>
     <string name="replication_forget_message">Se eliminará de tu conjunto de réplicas y se le indicará que borre su copia cuando vuelva a conectarse. Para eliminar un servidor accesible, iniciá sesión allí y usá «Eliminar mi cuenta de este servidor». Verificá que sos vos para continuar.</string>
+    <string name="system_status_peer_unreachable">Inaccesible</string>
+    <string name="system_status_peer_address">Dirección</string>
+    <string name="system_status_peer_seen">Visto por última vez</string>
+    <string name="system_status_users">Usuarios</string>
+    <string name="system_status_entities">Entidades</string>
+    <string name="system_status_reachability">Accesibilidad</string>
+    <string name="system_status_reachability_public">Público</string>
+    <string name="system_status_reachability_private">Privado</string>
+    <string name="system_status_reachability_unknown">Desconocido</string>
+    <string name="system_status_relay">Vía relay</string>
+    <string name="system_status_mesh">Pares de la malla</string>
+    <string name="system_status_broadcast">Última difusión</string>
 </resources>

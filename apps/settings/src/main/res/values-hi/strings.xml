@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">पीयर ID कॉपी करें</string>
     <string name="system_replication_peer_id_copied">पीयर ID कॉपी की गई</string>
     <string name="system_replication_copy_failed">कॉपी करने में विफल</string>
+    <string name="system_replication_addresses">पते</string>
+    <string name="system_replication_copy_address">पता कॉपी करें</string>
+    <string name="system_replication_address_copied">पता कॉपी किया गया</string>
     <string name="system_replication_pending_title">लंबित जुड़ने के अनुरोध</string>
     <string name="system_replication_pending_subtitle">एक अन्य सर्वर इस सर्वर के साथ युग्मन के लिए अनुरोध कर रहा है। पूर्ण प्रतिकृति पीयर के रूप में नामांकित करने के लिए स्वीकृत करें।</string>
     <string name="system_replication_approve">स्वीकृत करें</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">इंस्टॉलर डाउनलोड करें</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org से डाउनलोड करें</string>
     <string name="system_status_copy">कॉपी करें</string>
+    <string name="system_status_peers">पीयर्स</string>
+    <string name="system_status_peer_connected">कनेक्ट किया गया</string>
+    <string name="system_status_peer_disconnected">डिस्कनेक्ट किया गया</string>
+    <string name="system_status_peer_queued">कतार में संदेश</string>
+    <string name="system_status_peer_oldest">कतार में सबसे पुराना संदेश</string>
     <string name="accounts_title">कनेक्टेड अकाउंट्स</string>
     <string name="accounts_add">अकाउंट जोड़ें</string>
     <string name="accounts_add_title">अकाउंट जोड़ें</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">इसे आपके प्रतिकृति समूह से हटा दिया जाएगा और दोबारा जुड़ने पर इसकी प्रति हटाने के लिए कहा जाएगा. किसी पहुँच योग्य सर्वर को हटाने के लिए, वहाँ साइन इन करें और \"इस सर्वर से मेरा खाता हटाएँ\" का उपयोग करें. जारी रखने के लिए सत्यापित करें कि यह आप ही हैं.</string>
     <string name="replication_offline">ऑफ़लाइन</string>
     <string name="replication_forget_confirm">भूल जाएं</string>
+    <string name="system_status_peer_unreachable">पहुँच से बाहर</string>
+    <string name="system_status_peer_address">पता</string>
+    <string name="system_status_peer_seen">अंतिम बार देखा गया</string>
+    <string name="system_status_users">यूज़र</string>
+    <string name="system_status_entities">इकाइयाँ</string>
+    <string name="system_status_reachability">पहुँच-योग्यता</string>
+    <string name="system_status_reachability_public">सार्वजनिक</string>
+    <string name="system_status_reachability_private">निजी</string>
+    <string name="system_status_reachability_unknown">अज्ञात</string>
+    <string name="system_status_relay">रिले के माध्यम से</string>
+    <string name="system_status_mesh">मेश पीयर्स</string>
+    <string name="system_status_broadcast">अंतिम प्रसारण</string>
 </resources>

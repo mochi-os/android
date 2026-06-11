@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">പിയർ ID പകർത്തുക</string>
     <string name="system_replication_peer_id_copied">പിയർ ID പകർത്തി</string>
     <string name="system_replication_copy_failed">പകർത്തുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="system_replication_addresses">വിലാസങ്ങൾ</string>
+    <string name="system_replication_copy_address">വിലാസം പകർത്തുക</string>
+    <string name="system_replication_address_copied">വിലാസം പകർത്തി</string>
     <string name="system_replication_pending_title">തീരുമാനമെടുക്കാത്ത ചേരൽ അഭ്യർത്ഥനകൾ</string>
     <string name="system_replication_pending_subtitle">മറ്റൊരു സെർവർ ഇതുമായി ജോഡിയാകാൻ അഭ്യർത്ഥിക്കുന്നു. പൂർണ്ണ പ്രതിലിപി പങ്കാളിയായി രജിസ്റ്റർ ചെയ്യാൻ അംഗീകരിക്കുക.</string>
     <string name="system_replication_approve">അംഗീകരിക്കുക</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ഇൻസ്റ്റാളർ ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org-ൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="system_status_copy">പകർത്തുക</string>
+    <string name="system_status_peers">സമപ്രായക്കാർ</string>
+    <string name="system_status_peer_connected">കണക്റ്റ് ചെയ്തു</string>
+    <string name="system_status_peer_disconnected">വിച്ഛേദിച്ചു</string>
+    <string name="system_status_peer_queued">ക്യൂവിലുള്ള സന്ദേശങ്ങൾ</string>
+    <string name="system_status_peer_oldest">ക്യൂവിലെ ഏറ്റവും പഴയ സന്ദേശം</string>
     <string name="accounts_title">കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുകൾ</string>
     <string name="accounts_add">അക്കൗണ്ട് ചേർക്കുക</string>
     <string name="accounts_add_title">അക്കൗണ്ട് ചേർക്കുക</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">ഇത് നിങ്ങളുടെ പകർപ്പ് സെറ്റിൽ നിന്ന് നീക്കം ചെയ്യപ്പെടും, വീണ്ടും കണക്റ്റ് ചെയ്യുമ്പോൾ അതിന്റെ പകർപ്പ് ഇല്ലാതാക്കാൻ നിർദ്ദേശിക്കും. എത്തിച്ചേരാവുന്ന ഒരു സെർവർ നീക്കം ചെയ്യാൻ, അവിടെ സൈൻ ഇൻ ചെയ്ത് \"ഈ സെർവറിൽ നിന്ന് എന്റെ അക്കൗണ്ട് നീക്കം ചെയ്യുക\" ഉപയോഗിക്കുക. തുടരാൻ ഇത് നിങ്ങളാണെന്ന് സ്ഥിരീകരിക്കുക.</string>
     <string name="replication_offline">ഓഫ്‌ലൈൻ</string>
     <string name="replication_forget_confirm">മറക്കുക</string>
+    <string name="system_status_peer_unreachable">എത്തിച്ചേരാനാകില്ല</string>
+    <string name="system_status_peer_address">വിലാസം</string>
+    <string name="system_status_peer_seen">അവസാനം കണ്ടത്</string>
+    <string name="system_status_users">ഉപയോക്താക്കൾ</string>
+    <string name="system_status_entities">എന്റിറ്റികൾ</string>
+    <string name="system_status_reachability">എത്തിച്ചേരൽ</string>
+    <string name="system_status_reachability_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
+    <string name="system_status_reachability_private">തുടരുക</string>
+    <string name="system_status_reachability_unknown">അജ്ഞാതം</string>
+    <string name="system_status_relay">റിലേ വഴി</string>
+    <string name="system_status_mesh">മെഷ് സമപ്രായക്കാർ</string>
+    <string name="system_status_broadcast">അവസാന ബ്രോഡ്കാസ്റ്റ്</string>
 </resources>

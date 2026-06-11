@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">ID-и ҳамкорро нусхабардорӣ кунед</string>
     <string name="system_replication_peer_id_copied">ID-и ҳамкор нусхабардорӣ шуд</string>
     <string name="system_replication_copy_failed">Нусхабардорӣ ба анҷом нарасид</string>
+    <string name="system_replication_addresses">Суроғаҳо</string>
+    <string name="system_replication_copy_address">Суроғаро нусхабардорӣ кунед</string>
+    <string name="system_replication_address_copied">Суроға нусхабардорӣ шуд</string>
     <string name="system_replication_pending_title">Дархостҳои ҳамроҳшавии интизорӣ</string>
     <string name="system_replication_pending_subtitle">Сервери дигар хоҳиш мекунад, ки бо ин ҷуфт шавад. Барои ҳамчун ҳамкори пурраи такрории сабт кардан тасдиқ кунед.</string>
     <string name="system_replication_approve">Тасдиқ кардан</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Насбкунандаро боргирӣ кунед</string>
     <string name="system_status_download_from_packages">Аз packages.mochi-os.org боргирӣ кунед</string>
     <string name="system_status_copy">Нусхабардорӣ</string>
+    <string name="system_status_peers">Ҳамтарафҳо</string>
+    <string name="system_status_peer_connected">Пайваст шуда</string>
+    <string name="system_status_peer_disconnected">Ҷудо шуда</string>
+    <string name="system_status_peer_queued">Паёмҳои дар навбат</string>
+    <string name="system_status_peer_oldest">Кӯҳнатарин паёми дар навбат</string>
     <string name="accounts_title">Ҳисобҳои пайвастшуда</string>
     <string name="accounts_add">Иловаи ҳисоб</string>
     <string name="accounts_add_title">Иловаи ҳисоб</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">Он аз маҷмӯи нусхаҳои шумо хориҷ карда мешавад ва ҳангоми бозпайвастшавӣ ба он гуфта мешавад, ки нусхаи худро нест кунад. Барои хориҷ кардани сервери дастрас, дар он ҷо ворид шавед ва \"Ҳисоби маро аз ин сервер хориҷ кунед\"-ро истифода баред. Барои идома худро тасдиқ кунед.</string>
     <string name="replication_offline">Ғайрифаъол</string>
     <string name="replication_forget_confirm">Фаромӯш кардан</string>
+    <string name="system_status_peer_unreachable">Дастнорас</string>
+    <string name="system_status_peer_address">Суроға</string>
+    <string name="system_status_peer_seen">Бори охир дида шуд</string>
+    <string name="system_status_users">Корбарон</string>
+    <string name="system_status_entities">Мавҷудиятҳо</string>
+    <string name="system_status_reachability">Дастрасӣ</string>
+    <string name="system_status_reachability_public">Ҷамъиятӣ</string>
+    <string name="system_status_reachability_private">Хусусӣ</string>
+    <string name="system_status_reachability_unknown">Номаълум</string>
+    <string name="system_status_relay">Тавассути реле</string>
+    <string name="system_status_mesh">Ҳамтарафҳои mesh</string>
+    <string name="system_status_broadcast">Пахши охирин</string>
 </resources>

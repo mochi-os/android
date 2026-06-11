@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopēt vienādranga ID</string>
     <string name="system_replication_peer_id_copied">Vienādranga ID nokopēts</string>
     <string name="system_replication_copy_failed">Neizdevās kopēt</string>
+    <string name="system_replication_addresses">Adreses</string>
+    <string name="system_replication_copy_address">Kopēt adresi</string>
+    <string name="system_replication_address_copied">Adrese nokopēta</string>
     <string name="system_replication_pending_title">Pievienošanās pieprasījumi gaidīšanā</string>
     <string name="system_replication_pending_subtitle">Cits serveris lūdz savienoties pārī ar šo. Apstipriniet, lai reģistrētu to kā pilntiesīgu replikācijas vienādranga partneri.</string>
     <string name="system_replication_approve">Apstiprināt</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Lejupielādēt instalētāju</string>
     <string name="system_status_download_from_packages">Lejupielādēt no packages.mochi-os.org</string>
     <string name="system_status_copy">Kopēt</string>
+    <string name="system_status_peers">Vienlīdzīgie</string>
+    <string name="system_status_peer_connected">Savienots</string>
+    <string name="system_status_peer_disconnected">Atvienots</string>
+    <string name="system_status_peer_queued">Ziņojumi rindā</string>
+    <string name="system_status_peer_oldest">Vecākais ziņojums rindā</string>
     <string name="accounts_title">Savienotie konti</string>
     <string name="accounts_add">Pievienot kontu</string>
     <string name="accounts_add_title">Pievienot kontu</string>
@@ -409,4 +417,16 @@
     <string name="replication_forget_message">Tas tiks noņemts no jūsu kopiju kopas, un, atkārtoti izveidojot savienojumu, tam tiks dots norādījums dzēst savu kopiju. Lai noņemtu sasniedzamu serveri, piesakieties tajā un izmantojiet “Noņemt manu kontu no šī servera”. Lai turpinātu, apstipriniet, ka tas esat jūs.</string>
     <string name="replication_offline">Bezsaistē</string>
     <string name="replication_forget_confirm">Aizmirst</string>
+    <string name="system_status_peer_unreachable">Nesasniedzams</string>
+    <string name="system_status_peer_address">Adrese</string>
+    <string name="system_status_peer_seen">Pēdējoreiz redzēts</string>
+    <string name="system_status_users">Lietotāji</string>
+    <string name="system_status_entities">Entītijas</string>
+    <string name="system_status_reachability">Sasniedzamība</string>
+    <string name="system_status_reachability_public">Publisks</string>
+    <string name="system_status_reachability_private">Privāts</string>
+    <string name="system_status_reachability_unknown">Nezināms</string>
+    <string name="system_status_relay">Caur releju</string>
+    <string name="system_status_mesh">Mesh vienlīdzīgie</string>
+    <string name="system_status_broadcast">Pēdējā apraide</string>
 </resources>

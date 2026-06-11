@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Társazonosító másolása</string>
     <string name="system_replication_peer_id_copied">Társazonosító másolva</string>
     <string name="system_replication_copy_failed">Nem sikerült másolni</string>
+    <string name="system_replication_addresses">Címek</string>
+    <string name="system_replication_copy_address">Cím másolása</string>
+    <string name="system_replication_address_copied">Cím másolva</string>
     <string name="system_replication_pending_title">Függőben lévő csatlakozási kérelmek</string>
     <string name="system_replication_pending_subtitle">Egy másik kiszolgáló párosítást kér ezzel a kiszolgálóval. Hagyja jóvá, hogy teljes körű replikációs partnerként rögzítse.</string>
     <string name="system_replication_approve">Jóváhagyás</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Telepítő letöltése</string>
     <string name="system_status_download_from_packages">Letöltés a packages.mochi-os.org címről</string>
     <string name="system_status_copy">Másolás</string>
+    <string name="system_status_peers">Társak</string>
+    <string name="system_status_peer_connected">Csatlakoztatva</string>
+    <string name="system_status_peer_disconnected">Leválasztva</string>
+    <string name="system_status_peer_queued">Sorban álló üzenetek</string>
+    <string name="system_status_peer_oldest">Legrégebbi sorban álló üzenet</string>
     <string name="accounts_title">Csatlakoztatott fiókok</string>
     <string name="accounts_add">Fiók hozzáadása</string>
     <string name="accounts_add_title">Fiók hozzáadása</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Eltávolítjuk a replikakészletedből, és újracsatlakozáskor felkérjük a másolata törlésére. Elérhető kiszolgáló eltávolításához jelentkezz be oda, és használd a „Fiókom eltávolítása erről a kiszolgálóról” lehetőséget. A folytatáshoz igazold, hogy te vagy az.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Elfelejtés</string>
+    <string name="system_status_peer_unreachable">Elérhetetlen</string>
+    <string name="system_status_peer_address">Cím</string>
+    <string name="system_status_peer_seen">Utoljára látva</string>
+    <string name="system_status_users">Felhasználók</string>
+    <string name="system_status_entities">Entitások</string>
+    <string name="system_status_reachability">Elérhetőség</string>
+    <string name="system_status_reachability_public">Nyilvános</string>
+    <string name="system_status_reachability_private">Privát</string>
+    <string name="system_status_reachability_unknown">Ismeretlen</string>
+    <string name="system_status_relay">Relén keresztül</string>
+    <string name="system_status_mesh">Mesh társak</string>
+    <string name="system_status_broadcast">Utolsó közvetítés</string>
 </resources>

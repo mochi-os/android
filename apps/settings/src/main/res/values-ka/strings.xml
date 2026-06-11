@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">თანატოლის ID-ის კოპირება</string>
     <string name="system_replication_peer_id_copied">თანატოლის ID დაკოპირდა</string>
     <string name="system_replication_copy_failed">კოპირება ვერ მოხერხდა</string>
+    <string name="system_replication_addresses">მისამართები</string>
+    <string name="system_replication_copy_address">მისამართის კოპირება</string>
+    <string name="system_replication_address_copied">მისამართი დაკოპირდა</string>
     <string name="system_replication_pending_title">მოლოდინში მყოფი შემოერთების მოთხოვნები</string>
     <string name="system_replication_pending_subtitle">სხვა სერვერი ითხოვს ამ სერვერთან დაწყვილებას. დაამოწმეთ, რომ ის სრულუფლებიანი რეპლიკაციის თანატოლად დარეგისტრირდეს.</string>
     <string name="system_replication_approve">დამტკიცება</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ინსტალერის ჩამოტვირთვა</string>
     <string name="system_status_download_from_packages">ჩამოტვირთვა packages.mochi-os.org-დან</string>
     <string name="system_status_copy">კოპირება</string>
+    <string name="system_status_peers">თანატოლები</string>
+    <string name="system_status_peer_connected">დაკავშირებულია</string>
+    <string name="system_status_peer_disconnected">გათიშულია</string>
+    <string name="system_status_peer_queued">რიგში მყოფი შეტყობინებები</string>
+    <string name="system_status_peer_oldest">რიგის უძველესი შეტყობინება</string>
     <string name="accounts_title">დაკავშირებული ანგარიშები</string>
     <string name="accounts_add">ანგარიშის დამატება</string>
     <string name="accounts_add_title">ანგარიშის დამატება</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">ის ამოიშლება თქვენი რეპლიკების ნაკრებიდან და მისი ასლის წაშლა დაევალება ხელახლა დაკავშირებისას. მისაწვდომი სერვერის წასაშლელად, შედით იქ და გამოიყენეთ „წაშალე ჩემი ანგარიში ამ სერვერიდან“. გასაგრძელებლად დაადასტურეთ, რომ ეს თქვენ ხართ.</string>
     <string name="replication_offline">ხაზგარეშე</string>
     <string name="replication_forget_confirm">დავიწყება</string>
+    <string name="system_status_peer_unreachable">მიუწვდომელი</string>
+    <string name="system_status_peer_address">მისამართი</string>
+    <string name="system_status_peer_seen">ბოლოს ნანახი</string>
+    <string name="system_status_users">მომხმარებლის სახელი</string>
+    <string name="system_status_entities">ერთეულები</string>
+    <string name="system_status_reachability">მიწვდომადობა</string>
+    <string name="system_status_reachability_public">საჯარო</string>
+    <string name="system_status_reachability_private">პირადი</string>
+    <string name="system_status_reachability_unknown">ერთეულები</string>
+    <string name="system_status_relay">რელეს მეშვეობით</string>
+    <string name="system_status_mesh">ბადის თანატოლები</string>
+    <string name="system_status_broadcast">ბოლო მაუწყებლობა</string>
 </resources>

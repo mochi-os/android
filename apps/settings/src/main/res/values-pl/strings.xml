@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Skopiuj identyfikator węzła</string>
     <string name="system_replication_peer_id_copied">Identyfikator węzła skopiowany</string>
     <string name="system_replication_copy_failed">Nie udało się skopiować</string>
+    <string name="system_replication_addresses">Adresy</string>
+    <string name="system_replication_copy_address">Skopiuj adres</string>
+    <string name="system_replication_address_copied">Adres skopiowany</string>
     <string name="system_replication_pending_title">Oczekujące prośby o dołączenie</string>
     <string name="system_replication_pending_subtitle">Inny serwer prosi o sparowanie z tym. Zatwierdź, aby zarejestrować go jako pełnoprawnego partnera replikacji.</string>
     <string name="system_replication_approve">Zatwierdź</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Pobierz instalator</string>
     <string name="system_status_download_from_packages">Pobierz z packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiuj</string>
+    <string name="system_status_peers">Węzły</string>
+    <string name="system_status_peer_connected">Połączono</string>
+    <string name="system_status_peer_disconnected">Rozłączono</string>
+    <string name="system_status_peer_queued">Wiadomości w kolejce</string>
+    <string name="system_status_peer_oldest">Najstarsza wiadomość w kolejce</string>
     <string name="accounts_title">Połączone konta</string>
     <string name="accounts_add">Dodaj konto</string>
     <string name="accounts_add_title">Dodaj konto</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">Zostanie usunięty z Twojego zestawu replik i otrzyma polecenie usunięcia swojej kopii, gdy ponownie się połączy. Aby usunąć osiągalny serwer, zaloguj się na nim i użyj opcji \"Usuń moje konto z tego serwera\". Potwierdź, że to Ty, aby kontynuować.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Zapomnij</string>
+    <string name="system_status_peer_unreachable">Nieosiągalny</string>
+    <string name="system_status_peer_address">Adres</string>
+    <string name="system_status_peer_seen">Ostatnio widziany</string>
+    <string name="system_status_users">Użytkownicy</string>
+    <string name="system_status_entities">Encje</string>
+    <string name="system_status_reachability">Osiągalność</string>
+    <string name="system_status_reachability_public">Publiczny</string>
+    <string name="system_status_reachability_private">Prywatny</string>
+    <string name="system_status_reachability_unknown">Nieznany</string>
+    <string name="system_status_relay">Przez przekaźnik</string>
+    <string name="system_status_mesh">Węzły mesh</string>
+    <string name="system_status_broadcast">Ostatnia transmisja</string>
 </resources>

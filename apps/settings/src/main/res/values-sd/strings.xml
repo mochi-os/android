@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">ساٿي ID ڪاپي ڪريو</string>
     <string name="system_replication_peer_id_copied">ساٿي ID ڪاپي ٿيو</string>
     <string name="system_replication_copy_failed">نقل ڪرڻ ۾ ناڪام</string>
+    <string name="system_replication_addresses">پتا</string>
+    <string name="system_replication_copy_address">پتو ڪاپي ڪريو</string>
+    <string name="system_replication_address_copied">پتو ڪاپي ٿيو</string>
     <string name="system_replication_pending_title">زير التواء شامل ٿيڻ جون درخواستون</string>
     <string name="system_replication_pending_subtitle">ٻيو سرور ھن سان جوڙي ٺاهڻ جي درخواست ڪري رهيو آهي. ان کي مڪمل نقل واري ساٿي طور درج ڪرڻ لاءِ منظوري ڏيو.</string>
     <string name="system_replication_approve">منظور ڪريو</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">انسٽالر ڊائون لوڊ ڪريو</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org تان ڊائون لوڊ ڪريو</string>
     <string name="system_status_copy">ڪاپي ڪريو</string>
+    <string name="system_status_peers">هم پايا</string>
+    <string name="system_status_peer_connected">ڳنڍيل</string>
+    <string name="system_status_peer_disconnected">ڳنڍيل ناهي</string>
+    <string name="system_status_peer_queued">قطار ۾ پيغام</string>
+    <string name="system_status_peer_oldest">قطار ۾ سڀ کان پراڻو پيغام</string>
     <string name="accounts_title">ڳنڍيل اڪائونٽ</string>
     <string name="accounts_add">اڪائونٽ شامل ڪريو</string>
     <string name="accounts_add_title">اڪائونٽ شامل ڪريو</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">اهو توهان جي رپليڪا سيٽ تان هٽائي ويندو ۽ ٻيهر ڳنڍجڻ تي ان کي پنهنجي ڪاپي ختم ڪرڻ لاءِ چيو ويندو. ڪنهن رسائي لائق سرور کي هٽائڻ لاءِ، اتي سائن ان ڪريو ۽ \"منهنجو اڪائونٽ هن سرور تان هٽايو\" استعمال ڪريو. جاري رکڻ لاءِ تصديق ڪريو ته اهو توهان آهيو.</string>
     <string name="replication_offline">آف لائن</string>
     <string name="replication_forget_confirm">وساري ڇڏيو</string>
+    <string name="system_status_peer_unreachable">پهچ کان ٻاهر</string>
+    <string name="system_status_peer_address">پتو</string>
+    <string name="system_status_peer_seen">آخري ڀيرو ڏٺو ويو</string>
+    <string name="system_status_users">صارف</string>
+    <string name="system_status_entities">هستيون</string>
+    <string name="system_status_reachability">پهچ</string>
+    <string name="system_status_reachability_public">عوامي</string>
+    <string name="system_status_reachability_private">نجي</string>
+    <string name="system_status_reachability_unknown">اڻڄاتل</string>
+    <string name="system_status_relay">رلي ذريعي</string>
+    <string name="system_status_mesh">mesh ساٿي</string>
+    <string name="system_status_broadcast">آخري نشريات</string>
 </resources>

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Хамтрагч ID хуулах</string>
     <string name="system_replication_peer_id_copied">Хамтрагч ID хуулагдсан</string>
     <string name="system_replication_copy_failed">Хуулж чадсангүй</string>
+    <string name="system_replication_addresses">Хаягууд</string>
+    <string name="system_replication_copy_address">Хаяг хуулах</string>
+    <string name="system_replication_address_copied">Хаяг хуулагдсан</string>
     <string name="system_replication_pending_title">Хүлээгдэж буй нэгдэх хүсэлтүүд</string>
     <string name="system_replication_pending_subtitle">Өөр сервер энэ серверт хослох хүсэлт гаргаж байна. Бүрэн хуулбарлалтын түнш болгон бүртгэхийн тулд зөвшөөрнө үү.</string>
     <string name="system_replication_approve">Зөвшөөрөх</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Суулгагч татах</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org-оос татах</string>
     <string name="system_status_copy">Хуулах</string>
+    <string name="system_status_peers">Үеүүд</string>
+    <string name="system_status_peer_connected">Холбогдсон</string>
+    <string name="system_status_peer_disconnected">Салгагдсан</string>
+    <string name="system_status_peer_queued">Дараалалд буй зурвасууд</string>
+    <string name="system_status_peer_oldest">Дараалалд буй хамгийн хуучин зурвас</string>
     <string name="accounts_title">Холбогдсон бүртгэлүүд</string>
     <string name="accounts_add">Бүртгэл нэмэх</string>
     <string name="accounts_add_title">Бүртгэл нэмэх</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Энэ нь таны хуулбарын багцаас хасагдаж, дахин холбогдох үед өөрийн хуулбарыг устгахыг даалгана. Холбогдох боломжтой серверийг хасахын тулд тэнд нэвтэрч, «Миний бүртгэлийг энэ серверээс хасах» гэснийг ашиглана уу. Үргэлжлүүлэхийн тулд энэ нь та мөн эсэхийг баталгаажуулна уу.</string>
     <string name="replication_offline">Офлайн</string>
     <string name="replication_forget_confirm">Мартах</string>
+    <string name="system_status_peer_unreachable">Хүрэх боломжгүй</string>
+    <string name="system_status_peer_address">Хаяг</string>
+    <string name="system_status_peer_seen">Сүүлд харагдсан</string>
+    <string name="system_status_users">Хэрэглэгчид</string>
+    <string name="system_status_entities">Нэгжүүд</string>
+    <string name="system_status_reachability">Хүрэх боломж</string>
+    <string name="system_status_reachability_public">Нийтийн</string>
+    <string name="system_status_reachability_private">Хувийн</string>
+    <string name="system_status_reachability_unknown">Үл мэдэгдэх</string>
+    <string name="system_status_relay">Релегээр дамжуулан</string>
+    <string name="system_status_mesh">Mesh үеүүд</string>
+    <string name="system_status_broadcast">Сүүлийн цацалт</string>
 </resources>

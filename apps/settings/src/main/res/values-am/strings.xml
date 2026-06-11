@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">የአቻ መታወቂያን ቅዳ</string>
     <string name="system_replication_peer_id_copied">የአቻ መታወቂያ ተቀድቷል</string>
     <string name="system_replication_copy_failed">መቅዳት አልተሳካም</string>
+    <string name="system_replication_addresses">አድራሻዎች</string>
+    <string name="system_replication_copy_address">አድራሻ ቅዳ</string>
+    <string name="system_replication_address_copied">አድራሻ ተቀድቷል</string>
     <string name="system_replication_pending_title">የተጠባባቂ የመቀላቀል ጥያቄዎች</string>
     <string name="system_replication_pending_subtitle">ሌላ አገልጋይ ከዚህ ጋር መጣመር ይጠይቃል። እንደ ሙሉ ቅጂ አጋር ለመመዝገብ ያረጋግጡ።</string>
     <string name="system_replication_approve">አጽድቅ</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ጫኝ አውርድ</string>
     <string name="system_status_download_from_packages">ከ packages.mochi-os.org አውርድ</string>
     <string name="system_status_copy">ቅዳ</string>
+    <string name="system_status_peers">አቻዎች</string>
+    <string name="system_status_peer_connected">ተገናኝቷል</string>
+    <string name="system_status_peer_disconnected">ተቋርጧል</string>
+    <string name="system_status_peer_queued">በሰልፍ ላይ ያሉ መልዕክቶች</string>
+    <string name="system_status_peer_oldest">በሰልፍ ላይ ያለ በጣም የቆየ መልዕክት</string>
     <string name="accounts_title">የተገናኙ መለያዎች</string>
     <string name="accounts_add">መለያ ጨምር</string>
     <string name="accounts_add_title">መለያ ጨምር</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">ከቅጂ ስብስብዎ ይወገዳል እና እንደገና ሲገናኝ ቅጂውን እንዲሰርዝ ይነገረዋል። ተደራሽ የሆነ አገልጋይ ለማስወገድ፣ እዚያ ይግቡና \"መለያዬን ከዚህ አገልጋይ አስወግድ\" ይጠቀሙ። ለመቀጠል እርስዎ መሆንዎን ያረጋግጡ።</string>
     <string name="replication_offline">ከመስመር ውጭ</string>
     <string name="replication_forget_confirm">እርሳ</string>
+    <string name="system_status_peer_unreachable">ሊደረስበት አይችልም</string>
+    <string name="system_status_peer_address">አድራሻ</string>
+    <string name="system_status_peer_seen">መጨረሻ የታየው</string>
+    <string name="system_status_users">ተጠቃሚዎች</string>
+    <string name="system_status_entities">አካላት</string>
+    <string name="system_status_reachability">ተደራሽነት</string>
+    <string name="system_status_reachability_public">ሕዝባዊ</string>
+    <string name="system_status_reachability_private">የግል</string>
+    <string name="system_status_reachability_unknown">ያልታወቀ</string>
+    <string name="system_status_relay">በሪሌይ በኩል</string>
+    <string name="system_status_mesh">የመሽ አቻዎች</string>
+    <string name="system_status_broadcast">የመጨረሻ ስርጭት</string>
 </resources>

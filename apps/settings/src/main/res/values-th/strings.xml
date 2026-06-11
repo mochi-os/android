@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">คัดลอกรหัสเพียร์</string>
     <string name="system_replication_peer_id_copied">คัดลอกรหัสเพียร์แล้ว</string>
     <string name="system_replication_copy_failed">ไม่สามารถคัดลอกได้</string>
+    <string name="system_replication_addresses">ที่อยู่</string>
+    <string name="system_replication_copy_address">คัดลอกที่อยู่</string>
+    <string name="system_replication_address_copied">คัดลอกที่อยู่แล้ว</string>
     <string name="system_replication_pending_title">คำขอเข้าร่วมที่รอดำเนินการ</string>
     <string name="system_replication_pending_subtitle">เซิร์ฟเวอร์อื่นกำลังขอจับคู่กับเซิร์ฟเวอร์นี้ อนุมัติเพื่อลงทะเบียนเป็นเพียร์การจำลองแบบเต็มรูปแบบ</string>
     <string name="system_replication_approve">อนุมัติ</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ดาวน์โหลดตัวติดตั้ง</string>
     <string name="system_status_download_from_packages">ดาวน์โหลดจาก packages.mochi-os.org</string>
     <string name="system_status_copy">คัดลอก</string>
+    <string name="system_status_peers">พีร์</string>
+    <string name="system_status_peer_connected">เชื่อมต่อแล้ว</string>
+    <string name="system_status_peer_disconnected">ตัดการเชื่อมต่อแล้ว</string>
+    <string name="system_status_peer_queued">ข้อความในคิว</string>
+    <string name="system_status_peer_oldest">ข้อความเก่าที่สุดในคิว</string>
     <string name="accounts_title">บัญชีที่เชื่อมต่อ</string>
     <string name="accounts_add">เพิ่มบัญชี</string>
     <string name="accounts_add_title">เพิ่มบัญชี</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">โฮสต์จะถูกนำออกจากชุดเรพลิกาของคุณ และจะถูกสั่งให้ลบสำเนาเมื่อเชื่อมต่อใหม่ หากต้องการนำเซิร์ฟเวอร์ที่ติดต่อได้ออก ให้ลงชื่อเข้าใช้ที่นั่นแล้วใช้ \"นำบัญชีของฉันออกจากเซิร์ฟเวอร์นี้\" ยืนยันว่าเป็นคุณเพื่อดำเนินการต่อ</string>
     <string name="replication_offline">ออฟไลน์</string>
     <string name="replication_forget_confirm">ลืม</string>
+    <string name="system_status_peer_unreachable">เข้าถึงไม่ได้</string>
+    <string name="system_status_peer_address">ที่อยู่</string>
+    <string name="system_status_peer_seen">เห็นล่าสุด</string>
+    <string name="system_status_users">ผู้ใช้</string>
+    <string name="system_status_entities">เอนทิตี</string>
+    <string name="system_status_reachability">ความสามารถในการเข้าถึง</string>
+    <string name="system_status_reachability_public">สาธารณะ</string>
+    <string name="system_status_reachability_private">ส่วนตัว</string>
+    <string name="system_status_reachability_unknown">ไม่ทราบ</string>
+    <string name="system_status_relay">ผ่านรีเลย์</string>
+    <string name="system_status_mesh">พีร์ mesh</string>
+    <string name="system_status_broadcast">บรอดแคสต์ล่าสุด</string>
 </resources>

@@ -61,6 +61,9 @@
     <string name="system_replication_copy_peer_id">Peer-id kopiëren</string>
     <string name="system_replication_peer_id_copied">Peer-id gekopieerd</string>
     <string name="system_replication_copy_failed">Kopiëren mislukt</string>
+    <string name="system_replication_addresses">Adressen</string>
+    <string name="system_replication_copy_address">Adres kopiëren</string>
+    <string name="system_replication_address_copied">Adres gekopieerd</string>
     <string name="system_replication_pending_title">Openstaande aansluitverzoeken</string>
     <string name="system_replication_pending_subtitle">Een andere server vraagt om met deze te koppelen. Keur het goed om hem in te schrijven als volledige replicatiepeer.</string>
     <string name="system_replication_approve">Goedkeuren</string>
@@ -128,6 +131,11 @@
     <string name="system_status_download_installer">Installatieprogramma downloaden</string>
     <string name="system_status_download_from_packages">Downloaden van packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiëren</string>
+    <string name="system_status_peers">Peers</string>
+    <string name="system_status_peer_connected">Verbonden</string>
+    <string name="system_status_peer_disconnected">Verbinding verbroken</string>
+    <string name="system_status_peer_queued">Berichten in wachtrij</string>
+    <string name="system_status_peer_oldest">Oudste bericht in wachtrij</string>
     <string name="accounts_title">Gekoppelde accounts</string>
     <string name="accounts_add">Account toevoegen</string>
     <string name="accounts_add_title">Account toevoegen</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">De host wordt uit uw replicaset verwijderd en krijgt de opdracht om zijn kopie te verwijderen zodra hij opnieuw verbinding maakt. Om een bereikbare server te verwijderen, meldt u zich daar aan en gebruikt u \"Mijn account van deze server verwijderen\". Bevestig dat u het bent om verder te gaan.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Vergeten</string>
+    <string name="system_status_peer_unreachable">Onbereikbaar</string>
+    <string name="system_status_peer_address">Adres</string>
+    <string name="system_status_peer_seen">Laatst gezien</string>
+    <string name="system_status_users">Gebruikers</string>
+    <string name="system_status_entities">Entiteiten</string>
+    <string name="system_status_reachability">Bereikbaarheid</string>
+    <string name="system_status_reachability_public">Publiek</string>
+    <string name="system_status_reachability_private">Privé</string>
+    <string name="system_status_reachability_unknown">Onbekend</string>
+    <string name="system_status_relay">Via relay</string>
+    <string name="system_status_mesh">Mesh-peers</string>
+    <string name="system_status_broadcast">Laatste uitzending</string>
 </resources>

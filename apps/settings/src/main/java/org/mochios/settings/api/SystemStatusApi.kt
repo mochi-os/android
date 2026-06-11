@@ -30,12 +30,44 @@ data class SystemUpdateInfo(
     val pending: String = "",
 )
 
+data class PeerEntry(
+    val peer: String = "",
+    val connected: Boolean = false,
+    val unreachable: Boolean = false,
+    val address: String = "",
+    val seen: Long = 0,
+    val addresses: Int = 0,
+    val queued: Int = 0,
+    val oldest: Long = 0,
+)
+
+data class NetworkInfo(
+    val reachability: String = "",
+    val relay: Boolean = false,
+    val mesh: Int = 0,
+    val last: Long = 0,
+)
+
+data class ServerCounts(
+    val users: Int = 0,
+    val entities: Int = 0,
+)
+
+data class SystemPeersData(
+    val peers: List<PeerEntry> = emptyList(),
+    val network: NetworkInfo? = null,
+    val counts: ServerCounts? = null,
+)
+
 interface SystemStatusApi {
     @GET("settings/-/system/settings/list")
     suspend fun listSettings(): Response<SystemSettingsData>
 
     @GET("settings/-/system/update")
     suspend fun getUpdate(): Response<SystemUpdateInfo>
+
+    @GET("settings/-/system/peers")
+    suspend fun getPeers(): Response<SystemPeersData>
 
     @FormUrlEncoded
     @POST("settings/-/system/update")

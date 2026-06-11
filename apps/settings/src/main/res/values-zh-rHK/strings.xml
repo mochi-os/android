@@ -144,6 +144,9 @@
     <string name="system_replication_copy_peer_id">複製對等節點 ID</string>
     <string name="system_replication_peer_id_copied">已複製對等節點 ID</string>
     <string name="system_replication_copy_failed">複製失敗</string>
+    <string name="system_replication_addresses">地址</string>
+    <string name="system_replication_copy_address">複製地址</string>
+    <string name="system_replication_address_copied">已複製地址</string>
     <string name="system_replication_pending_title">待處理的加入請求</string>
     <string name="system_replication_pending_subtitle">另一部伺服器要求與此伺服器配對。批准以將其登記為完整的複製對等節點。</string>
     <string name="system_replication_approve">批准</string>
@@ -200,6 +203,11 @@
     <string name="document_rules_title">規則</string>
     <string name="document_terms_title">服務條款</string>
     <string name="system_status_copy">複製</string>
+    <string name="system_status_peers">對等節點</string>
+    <string name="system_status_peer_connected">已連結</string>
+    <string name="system_status_peer_disconnected">已斷線</string>
+    <string name="system_status_peer_queued">佇列中的訊息</string>
+    <string name="system_status_peer_oldest">最舊的佇列訊息</string>
     <string name="accounts_status_verified">已驗證</string>
     <string name="accounts_verify">驗證</string>
     <string name="accounts_verify_code">驗證碼</string>
@@ -403,4 +411,16 @@
     <string name="replication_forget">忘記此無法連線的主機</string>
     <string name="replication_forget_title">要忘記此無法連線的主機嗎？</string>
     <string name="replication_forget_message">它將從你的副本集中移除，並在重新連線時被要求刪除其副本。若要移除可連線的伺服器，請在該伺服器上登入並使用「從此伺服器移除我的帳戶」。請驗證你的身分以繼續。</string>
+    <string name="system_status_peer_unreachable">無法到達</string>
+    <string name="system_status_peer_address">地址</string>
+    <string name="system_status_peer_seen">最後看到</string>
+    <string name="system_status_users">用戶</string>
+    <string name="system_status_entities">實體</string>
+    <string name="system_status_reachability">可達性</string>
+    <string name="system_status_reachability_public">公開</string>
+    <string name="system_status_reachability_private">私人</string>
+    <string name="system_status_reachability_unknown">未知</string>
+    <string name="system_status_relay">經由中繼</string>
+    <string name="system_status_mesh">Mesh 對等節點</string>
+    <string name="system_status_broadcast">最後廣播</string>
 </resources>

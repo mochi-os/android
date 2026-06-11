@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">ناسنامەی هاوبەش لەبەربگرە</string>
     <string name="system_replication_peer_id_copied">ناسنامەی هاوبەش لەبەرگیرایەوە</string>
     <string name="system_replication_copy_failed">لەبەرگیرایەوە سەرکەوتوو نەبوو</string>
+    <string name="system_replication_addresses">ناونیشانەکان</string>
+    <string name="system_replication_copy_address">ناونیشان لەبەربگرە</string>
+    <string name="system_replication_address_copied">ناونیشان لەبەرگیرایەوە</string>
     <string name="system_replication_pending_title">داواکارییە چاوەڕوانەکانی پەیوەستبوون</string>
     <string name="system_replication_pending_subtitle">ڕاژەکارێکی تر داوای جووتکردن دەکات لەگەڵ ئەمە. پەسەندی بکە بۆ تۆمارکردنی وەک هاوبەشێکی تەواوی هاوسەنگکردن.</string>
     <string name="system_replication_approve">پەسەندکردن</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">داگرتنی دامەزرێنەر</string>
     <string name="system_status_download_from_packages">داگرتن لە packages.mochi-os.org</string>
     <string name="system_status_copy">کۆپیکردن</string>
+    <string name="system_status_peers">هاوتاکان</string>
+    <string name="system_status_peer_connected">پەیوەستکراو</string>
+    <string name="system_status_peer_disconnected">پەیوەست نییە</string>
+    <string name="system_status_peer_queued">پەیامەکانی ناو ڕیز</string>
+    <string name="system_status_peer_oldest">کۆنترین پەیامی ناو ڕیز</string>
     <string name="accounts_title">هەژمارە پەیوەستکراوەکان</string>
     <string name="accounts_add">زیادکردنی هەژمار</string>
     <string name="accounts_add_title">زیادکردنی هەژمار</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">لە کۆمەڵە لەبەرگرتنەوەکەت لادەبردرێت و پێی دەوترێت کاتێک دووبارە پەیوەندی دەکاتەوە کۆپییەکەی بسڕێتەوە. بۆ لابردنی ڕاژەکارێکی گەیشتوو، لەوێ بچۆ ژوورەوە و \"هەژمارەکەم لەم ڕاژەکارە لاببە\" بەکاربهێنە. بۆ بەردەوامبوون پشتڕاست بکەرەوە کە خۆتی.</string>
     <string name="replication_offline">دەرهێڵ</string>
     <string name="replication_forget_confirm">لەبیرکردن</string>
+    <string name="system_status_peer_unreachable">دەستی پێ ناگات</string>
+    <string name="system_status_peer_address">ناونیشان</string>
+    <string name="system_status_peer_seen">دوایین جار بینرا</string>
+    <string name="system_status_users">بەکارهێنەران</string>
+    <string name="system_status_entities">بوونەوەرەکان</string>
+    <string name="system_status_reachability">گەیشتن</string>
+    <string name="system_status_reachability_public">گشتی</string>
+    <string name="system_status_reachability_private">تایبەت</string>
+    <string name="system_status_reachability_unknown">نەناسراو</string>
+    <string name="system_status_relay">لە ڕێگەی relay</string>
+    <string name="system_status_mesh">هاوتاکانی mesh</string>
+    <string name="system_status_broadcast">دوایین بڵاوکردنەوە</string>
 </resources>

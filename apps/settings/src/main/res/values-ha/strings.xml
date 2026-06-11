@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kwafi peer id</string>
     <string name="system_replication_peer_id_copied">An kwafi peer id</string>
     <string name="system_replication_copy_failed">An gaza kwafewa</string>
+    <string name="system_replication_addresses">Adireshoshi</string>
+    <string name="system_replication_copy_address">Kwafi adireshi</string>
+    <string name="system_replication_address_copied">An kwafi adireshi</string>
     <string name="system_replication_pending_title">Buƙatun shiga da ke jiran</string>
     <string name="system_replication_pending_subtitle">Wani sabar yana neman haɗawa da wannan. Amince don rajista shi a matsayin cikakken abokin tarayya na sake yi.</string>
     <string name="system_replication_approve">Amince</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Sauke mai shigarwa</string>
     <string name="system_status_download_from_packages">Sauke daga packages.mochi-os.org</string>
     <string name="system_status_copy">Kwafi</string>
+    <string name="system_status_peers">Takwarori</string>
+    <string name="system_status_peer_connected">An haɗa</string>
+    <string name="system_status_peer_disconnected">An cire haɗi</string>
+    <string name="system_status_peer_queued">Saƙonni a jerin gwano</string>
+    <string name="system_status_peer_oldest">Saƙo mafi tsufa a jerin gwano</string>
     <string name="accounts_title">Asusai da aka haɗa</string>
     <string name="accounts_add">Ƙara asusu</string>
     <string name="accounts_add_title">Ƙara asusu</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Za a cire ta daga tarin kwafinka kuma a gaya mata ta share kwafinta lokacin da ta sake haɗawa. Don cire uwar garke da za a iya isa gare ta, ka shiga can sannan ka yi amfani da \"Cire asusuna daga wannan uwar garke\". Tabbatar da kai ne don ci gaba.</string>
     <string name="replication_offline">Babu kan layi</string>
     <string name="replication_forget_confirm">Manta</string>
+    <string name="system_status_peer_unreachable">Ba a iya kaiwa</string>
+    <string name="system_status_peer_address">Adireshi</string>
+    <string name="system_status_peer_seen">Ganin ƙarshe</string>
+    <string name="system_status_users">Masu amfani</string>
+    <string name="system_status_entities">Abubuwa</string>
+    <string name="system_status_reachability">Samun dama</string>
+    <string name="system_status_reachability_public">Na jama\'a</string>
+    <string name="system_status_reachability_private">Na sirri</string>
+    <string name="system_status_reachability_unknown">Ba a sani ba</string>
+    <string name="system_status_relay">Ta hanyar relay</string>
+    <string name="system_status_mesh">Takwarorin mesh</string>
+    <string name="system_status_broadcast">Watsa na ƙarshe</string>
 </resources>

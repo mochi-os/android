@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">पियर ID कपी गर्नुहोस्</string>
     <string name="system_replication_peer_id_copied">पियर ID कपी भयो</string>
     <string name="system_replication_copy_failed">प्रतिलिपि गर्न असफल</string>
+    <string name="system_replication_addresses">ठेगानाहरू</string>
+    <string name="system_replication_copy_address">ठेगाना कपी गर्नुहोस्</string>
+    <string name="system_replication_address_copied">ठेगाना कपी भयो</string>
     <string name="system_replication_pending_title">बाँकी रहेका सामेल हुने अनुरोधहरू</string>
     <string name="system_replication_pending_subtitle">अर्को सर्भरले यससँग जोडा बनाउन अनुरोध गरिरहेको छ। पूर्ण प्रतिकृति समकक्षको रूपमा दर्ता गर्न स्वीकृत गर्नुहोस्।</string>
     <string name="system_replication_approve">स्वीकृत गर्नुहोस्</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">इन्स्टलर डाउनलोड गर्नुहोस्</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org बाट डाउनलोड गर्नुहोस्</string>
     <string name="system_status_copy">प्रतिलिपि</string>
+    <string name="system_status_peers">समकक्षहरू</string>
+    <string name="system_status_peer_connected">जडित</string>
+    <string name="system_status_peer_disconnected">जडान विच्छेद</string>
+    <string name="system_status_peer_queued">लाममा रहेका सन्देशहरू</string>
+    <string name="system_status_peer_oldest">लाममा सबैभन्दा पुरानो सन्देश</string>
     <string name="accounts_title">जडित खाताहरू</string>
     <string name="accounts_add">खाता थप्नुहोस्</string>
     <string name="accounts_add_title">खाता थप्नुहोस्</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">यो तपाईंको प्रतिलिपि सेटबाट हटाइनेछ र पुनः जडान हुँदा यसको प्रतिलिपि मेट्न भनिनेछ। पहुँचयोग्य सर्भर हटाउन, त्यहाँ साइन इन गर्नुहोस् र \"यो सर्भरबाट मेरो खाता हटाउनुहोस्\" प्रयोग गर्नुहोस्। जारी राख्न यो तपाईं नै हो भनी प्रमाणित गर्नुहोस्।</string>
     <string name="replication_offline">अफलाइन</string>
     <string name="replication_forget_confirm">बिर्सनुहोस्</string>
+    <string name="system_status_peer_unreachable">पहुँच बाहिर</string>
+    <string name="system_status_peer_address">ठेगाना</string>
+    <string name="system_status_peer_seen">पछिल्लो पटक देखिएको</string>
+    <string name="system_status_users">प्रयोगकर्ताहरू</string>
+    <string name="system_status_entities">निकायहरू</string>
+    <string name="system_status_reachability">पहुँचयोग्यता</string>
+    <string name="system_status_reachability_public">सार्वजनिक</string>
+    <string name="system_status_reachability_private">निजी</string>
+    <string name="system_status_reachability_unknown">अज्ञात</string>
+    <string name="system_status_relay">रिले मार्फत</string>
+    <string name="system_status_mesh">मेश समकक्षहरू</string>
+    <string name="system_status_broadcast">पछिल्लो प्रसारण</string>
 </resources>

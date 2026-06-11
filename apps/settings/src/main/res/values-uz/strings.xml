@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Hamkor IDsini nusxalash</string>
     <string name="system_replication_peer_id_copied">Hamkor IDsi nusxalandi</string>
     <string name="system_replication_copy_failed">Nusxalab boʻlmadi</string>
+    <string name="system_replication_addresses">Manzillar</string>
+    <string name="system_replication_copy_address">Manzilni nusxalash</string>
+    <string name="system_replication_address_copied">Manzil nusxalandi</string>
     <string name="system_replication_pending_title">Kutilayotgan qo\'shilish so\'rovlari</string>
     <string name="system_replication_pending_subtitle">Boshqa server shu server bilan juftlashishni so\'rayapti. To\'liq replikatsiya hamkori sifatida ro\'yxatga olish uchun tasdiqlang.</string>
     <string name="system_replication_approve">Tasdiqlash</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Oʻrnatuvchini yuklab oling</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org dan yuklab oling</string>
     <string name="system_status_copy">Nusxalash</string>
+    <string name="system_status_peers">Hamkorlar</string>
+    <string name="system_status_peer_connected">Ulangan</string>
+    <string name="system_status_peer_disconnected">Uzilgan</string>
+    <string name="system_status_peer_queued">Navbatdagi xabarlar</string>
+    <string name="system_status_peer_oldest">Navbatdagi eng eski xabar</string>
     <string name="accounts_title">Ulangan hisoblar</string>
     <string name="accounts_add">Hisob qoʻshish</string>
     <string name="accounts_add_title">Hisob qoʻshish</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">U replika to‘plamingizdan olib tashlanadi va qayta ulanganda nusxasini o‘chirish buyuriladi. Yetib boriladigan serverni olib tashlash uchun u yerda tizimga kiring va \"Hisobimni ushbu serverdan olib tashlash\" dan foydalaning. Davom etish uchun o‘zingizligingizni tasdiqlang.</string>
     <string name="replication_offline">Oflayn</string>
     <string name="replication_forget_confirm">Unutish</string>
+    <string name="system_status_peer_unreachable">Erishib bo‘lmaydi</string>
+    <string name="system_status_peer_address">Manzil</string>
+    <string name="system_status_peer_seen">Oxirgi marta ko‘rilgan</string>
+    <string name="system_status_users">Foydalanuvchilar</string>
+    <string name="system_status_entities">Obyektlar</string>
+    <string name="system_status_reachability">Erishuvchanlik</string>
+    <string name="system_status_reachability_public">Ommaviy</string>
+    <string name="system_status_reachability_private">Shaxsiy</string>
+    <string name="system_status_reachability_unknown">Nomaʼlum</string>
+    <string name="system_status_relay">Rele orqali</string>
+    <string name="system_status_mesh">Mesh hamkorlari</string>
+    <string name="system_status_broadcast">Oxirgi uzatish</string>
 </resources>

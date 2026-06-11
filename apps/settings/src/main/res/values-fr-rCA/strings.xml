@@ -120,6 +120,9 @@
     <string name="system_replication_copy_peer_id">Copier l\'identifiant du pair</string>
     <string name="system_replication_peer_id_copied">Identifiant du pair copié</string>
     <string name="system_replication_copy_failed">Échec de la copie</string>
+    <string name="system_replication_addresses">Adresses</string>
+    <string name="system_replication_copy_address">Copier l\'adresse</string>
+    <string name="system_replication_address_copied">Adresse copiée</string>
     <string name="system_replication_pending_title">Demandes de jumelage en attente</string>
     <string name="system_replication_pending_subtitle">Un autre serveur demande à se jumeler avec celui-ci. Approuvez pour l\'inscrire comme pair de réplication complet.</string>
     <string name="system_replication_approve">Approuver</string>
@@ -194,6 +197,11 @@
     <string name="system_status_download_installer">Télécharger le programme d\'installation</string>
     <string name="system_status_download_from_packages">Télécharger depuis packages.mochi-os.org</string>
     <string name="system_status_copy">Copier</string>
+    <string name="system_status_peers">Pairs</string>
+    <string name="system_status_peer_connected">Connecté</string>
+    <string name="system_status_peer_disconnected">Déconnecté</string>
+    <string name="system_status_peer_queued">Messages en file d\'attente</string>
+    <string name="system_status_peer_oldest">Message en file d\'attente le plus ancien</string>
     <string name="accounts_title">Comptes connectés</string>
     <string name="accounts_add">Ajouter un compte</string>
     <string name="accounts_add_title">Ajouter un compte</string>
@@ -398,4 +406,16 @@
     <string name="replication_forget">Oublier cet hôte injoignable</string>
     <string name="replication_forget_title">Oublier cet hôte injoignable ?</string>
     <string name="replication_forget_message">Il sera retiré de votre ensemble de réplicas et invité à supprimer sa copie lors de sa reconnexion. Pour retirer un serveur joignable, connectez-vous dessus et utilisez « Retirer mon compte de ce serveur ». Vérifiez votre identité pour continuer.</string>
+    <string name="system_status_peer_unreachable">Injoignable</string>
+    <string name="system_status_peer_address">Adresse</string>
+    <string name="system_status_peer_seen">Vu pour la dernière fois</string>
+    <string name="system_status_users">Utilisateurs</string>
+    <string name="system_status_entities">Entités</string>
+    <string name="system_status_reachability">Joignabilité</string>
+    <string name="system_status_reachability_public">Public</string>
+    <string name="system_status_reachability_private">Privé</string>
+    <string name="system_status_reachability_unknown">Inconnu</string>
+    <string name="system_status_relay">Via relais</string>
+    <string name="system_status_mesh">Pairs du maillage</string>
+    <string name="system_status_broadcast">Dernière diffusion</string>
 </resources>

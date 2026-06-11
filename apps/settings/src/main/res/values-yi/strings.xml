@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">קאפיר באגלייטער ID</string>
     <string name="system_replication_peer_id_copied">באגלייטער ID קאפירט</string>
     <string name="system_replication_copy_failed">ניט געלונגען צו קאָפּירן</string>
+    <string name="system_replication_addresses">אַדרעסן</string>
+    <string name="system_replication_copy_address">קאפיר אַדרעס</string>
+    <string name="system_replication_address_copied">אַדרעס קאפירט</string>
     <string name="system_replication_pending_title">ווארטנדע פארלאנגן צו אריינטרעטן</string>
     <string name="system_replication_pending_subtitle">אן אנדערער סערווער בעט זיך צו פארפארן מיט דעם אינעם. אנדערס וויל מען רעגיסטרירן אים אלץ א פולשטענדיקן רעפליקאציע-באגלייטער.</string>
     <string name="system_replication_approve">באַשטעטיקן</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">לאָדט אַראָפּ אינסטאַלירער</string>
     <string name="system_status_download_from_packages">לאָדט אַראָפּ פֿון packages.mochi-os.org</string>
     <string name="system_status_copy">קאָפּירן</string>
+    <string name="system_status_peers">גלייכע</string>
+    <string name="system_status_peer_connected">פֿאַרבונדן</string>
+    <string name="system_status_peer_disconnected">אפגעשניטן</string>
+    <string name="system_status_peer_queued">מעלדונגען אין ריי</string>
+    <string name="system_status_peer_oldest">עלטסטע מעלדונג אין ריי</string>
     <string name="accounts_title">פֿאַרבונדענע קאָנטעס</string>
     <string name="accounts_add">צולייגן קאָנטע</string>
     <string name="accounts_add_title">צולייגן קאָנטע</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">עס וועט אַראָפּגענומען ווערן פֿון אײַער רעפּליקע-סעט און מע וועט אים זאָגן אויסצומעקן זײַן קאָפּיע ווען ער פֿאַרבינדט זיך ווידער. צו אַראָפּנעמען אַ דערגרײכלעכן סערווער, מעלדט זיך אָן דאָרטן און ניצט \"נעמט אַראָפּ מײַן קאָנטע פֿון דעם סערווער\". באַשטעטיקט אַז דאָס זײַט איר כּדי צו פֿאָרזעצן.</string>
     <string name="replication_offline">אפֿליין</string>
     <string name="replication_forget_confirm">פֿאַרגעסן</string>
+    <string name="system_status_peer_unreachable">נישט דערגרייכבאר</string>
+    <string name="system_status_peer_address">אַדרעס</string>
+    <string name="system_status_peer_seen">לעצט געזען</string>
+    <string name="system_status_users">באַניצערס</string>
+    <string name="system_status_entities">ענטיטעטן</string>
+    <string name="system_status_reachability">דערגרייכבארקייט</string>
+    <string name="system_status_reachability_public">עפֿנטלעך</string>
+    <string name="system_status_reachability_private">פּריוואַט</string>
+    <string name="system_status_reachability_unknown">אומבאַקאַנט</string>
+    <string name="system_status_relay">דורך רעלע</string>
+    <string name="system_status_mesh">mesh גלייכע</string>
+    <string name="system_status_broadcast">לעצטע בראָדקאַסט</string>
 </resources>

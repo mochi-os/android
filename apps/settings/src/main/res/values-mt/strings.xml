@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Ikkopja l-identifikatur tas-sieħeb</string>
     <string name="system_replication_peer_id_copied">L-identifikatur tas-sieħeb ġie kkupjat</string>
     <string name="system_replication_copy_failed">Ma rnexxiex jiġi kkupjat</string>
+    <string name="system_replication_addresses">Indirizzi</string>
+    <string name="system_replication_copy_address">Ikkopja l-indirizz</string>
+    <string name="system_replication_address_copied">L-indirizz ġie kkupjat</string>
     <string name="system_replication_pending_title">Talbiet pendenti biex jingħaqdu</string>
     <string name="system_replication_pending_subtitle">Server ieħor qed jitlob li jiġi ppejrjat ma\' dan. Approva biex jiġi rreġistrat bħala sieħeb replikazzjoni sħiħ.</string>
     <string name="system_replication_approve">Approva</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Niżżel l-installer</string>
     <string name="system_status_download_from_packages">Niżżel minn packages.mochi-os.org</string>
     <string name="system_status_copy">Ikkupja</string>
+    <string name="system_status_peers">Pari</string>
+    <string name="system_status_peer_connected">Konness</string>
+    <string name="system_status_peer_disconnected">Skonness</string>
+    <string name="system_status_peer_queued">Messaġġi fil-kju</string>
+    <string name="system_status_peer_oldest">L-eqdem messaġġ fil-kju</string>
     <string name="accounts_title">Kontijiet konnessi</string>
     <string name="accounts_add">Żid kont</string>
     <string name="accounts_add_title">Żid kont</string>
@@ -411,4 +419,16 @@
     <string name="replication_forget_message">Se jitneħħa mis-sett ta\' replika tiegħek u jingħata struzzjoni biex iħassar il-kopja tiegħu meta jerġa\' jikkonnettja. Biex tneħħi server li jista\' jintlaħaq, idħol hemm u uża \"Neħħi l-kont tiegħi minn dan is-server\". Ivverifika li int biex tkompli.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Insa</string>
+    <string name="system_status_peer_unreachable">Ma jintlaħaqx</string>
+    <string name="system_status_peer_address">Indirizz</string>
+    <string name="system_status_peer_seen">L-aħħar li deher</string>
+    <string name="system_status_users">Utenti</string>
+    <string name="system_status_entities">Entitajiet</string>
+    <string name="system_status_reachability">Aċċessibbiltà</string>
+    <string name="system_status_reachability_public">Pubbliku</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Mhux magħruf</string>
+    <string name="system_status_relay">Permezz ta\' relay</string>
+    <string name="system_status_mesh">Pari tal-mesh</string>
+    <string name="system_status_broadcast">L-aħħar xandira</string>
 </resources>

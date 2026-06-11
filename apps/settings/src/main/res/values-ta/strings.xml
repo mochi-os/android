@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">சகா ID-ஐ நகலெடு</string>
     <string name="system_replication_peer_id_copied">சகா ID நகலெடுக்கப்பட்டது</string>
     <string name="system_replication_copy_failed">நகலெடுக்க முடியவில்லை</string>
+    <string name="system_replication_addresses">முகவரிகள்</string>
+    <string name="system_replication_copy_address">முகவரியை நகலெடு</string>
+    <string name="system_replication_address_copied">முகவரி நகலெடுக்கப்பட்டது</string>
     <string name="system_replication_pending_title">நிலுவையில் உள்ள சேர்தல் கோரிக்கைகள்</string>
     <string name="system_replication_pending_subtitle">மற்றொரு சேவையகம் இதனுடன் இணைய கோருகிறது. முழுமையான பிரதியெடுப்பு இணையாக பதிவு செய்ய அங்கீகரிக்கவும்.</string>
     <string name="system_replication_approve">அங்கீகரி</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">நிறுவியை பதிவிறக்கு</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org இலிருந்து பதிவிறக்கு</string>
     <string name="system_status_copy">நகலெடு</string>
+    <string name="system_status_peers">பீர்கள்</string>
+    <string name="system_status_peer_connected">இணைக்கப்பட்டது</string>
+    <string name="system_status_peer_disconnected">துண்டிக்கப்பட்டது</string>
+    <string name="system_status_peer_queued">வரிசையில் உள்ள செய்திகள்</string>
+    <string name="system_status_peer_oldest">வரிசையில் மிகப் பழைய செய்தி</string>
     <string name="accounts_title">இணைக்கப்பட்ட கணக்குகள்</string>
     <string name="accounts_add">கணக்கு சேர்</string>
     <string name="accounts_add_title">கணக்கு சேர்</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">இது உங்கள் நகல் தொகுப்பிலிருந்து அகற்றப்படும், மீண்டும் இணையும்போது அதன் நகலை அழிக்கச் சொல்லப்படும். அணுகக்கூடிய சேவையகத்தை அகற்ற, அங்கு உள்நுழைந்து \"இந்தச் சேவையகத்திலிருந்து என் கணக்கை அகற்று\" என்பதைப் பயன்படுத்தவும். தொடர உங்களை உறுதிப்படுத்தவும்.</string>
     <string name="replication_offline">ஆஃப்லைன்</string>
     <string name="replication_forget_confirm">மறந்துவிடு</string>
+    <string name="system_status_peer_unreachable">சென்றடைய முடியவில்லை</string>
+    <string name="system_status_peer_address">முகவரி</string>
+    <string name="system_status_peer_seen">கடைசியாகக் காணப்பட்டது</string>
+    <string name="system_status_users">பயனர்கள்</string>
+    <string name="system_status_entities">என்டிட்டிகள்</string>
+    <string name="system_status_reachability">சென்றடையும் தன்மை</string>
+    <string name="system_status_reachability_public">பொது</string>
+    <string name="system_status_reachability_private">தனிப்பட்டது</string>
+    <string name="system_status_reachability_unknown">தெரியாதது</string>
+    <string name="system_status_relay">ரிலே வழியாக</string>
+    <string name="system_status_mesh">மெஷ் பீர்கள்</string>
+    <string name="system_status_broadcast">கடைசி ஒலிபரப்பு</string>
 </resources>

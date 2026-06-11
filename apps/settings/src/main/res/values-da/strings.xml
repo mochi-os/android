@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopiér peer-id</string>
     <string name="system_replication_peer_id_copied">Peer-id kopieret</string>
     <string name="system_replication_copy_failed">Kunne ikke kopiere</string>
+    <string name="system_replication_addresses">Adresser</string>
+    <string name="system_replication_copy_address">Kopiér adresse</string>
+    <string name="system_replication_address_copied">Adresse kopieret</string>
     <string name="system_replication_pending_title">Ventende tilslutningsanmodninger</string>
     <string name="system_replication_pending_subtitle">En anden server beder om at parre sig med denne. Godkend for at registrere den som en fuldgyldig replikeringspartner.</string>
     <string name="system_replication_approve">Godkend</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Download installer</string>
     <string name="system_status_download_from_packages">Download fra packages.mochi-os.org</string>
     <string name="system_status_copy">Kopier</string>
+    <string name="system_status_peers">Peers</string>
+    <string name="system_status_peer_connected">Forbundet</string>
+    <string name="system_status_peer_disconnected">Afbrudt</string>
+    <string name="system_status_peer_queued">Beskeder i kø</string>
+    <string name="system_status_peer_oldest">Ældste besked i kø</string>
     <string name="accounts_title">Forbundne konti</string>
     <string name="accounts_add">Tilføj konto</string>
     <string name="accounts_add_title">Tilføj konto</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Den fjernes fra dit replikasæt og bliver bedt om at slette sin kopi, når den genopretter forbindelsen. For at fjerne en tilgængelig server skal du logge ind der og bruge \"Fjern min konto fra denne server\". Bekræft, at det er dig, for at fortsætte.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Glem</string>
+    <string name="system_status_peer_unreachable">Kan ikke nås</string>
+    <string name="system_status_peer_address">Adresse</string>
+    <string name="system_status_peer_seen">Sidst set</string>
+    <string name="system_status_users">Brugere</string>
+    <string name="system_status_entities">Entiteter</string>
+    <string name="system_status_reachability">Tilgængelighed</string>
+    <string name="system_status_reachability_public">Offentlig</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Ukendt</string>
+    <string name="system_status_relay">Via relæ</string>
+    <string name="system_status_mesh">Mesh-peers</string>
+    <string name="system_status_broadcast">Seneste udsendelse</string>
 </resources>

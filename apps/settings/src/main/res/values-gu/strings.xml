@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">પીયર ID કૉપિ કરો</string>
     <string name="system_replication_peer_id_copied">પીયર ID કૉપિ કર્યું</string>
     <string name="system_replication_copy_failed">કૉપિ કરવામાં નિષ્ફળ</string>
+    <string name="system_replication_addresses">સરનામાં</string>
+    <string name="system_replication_copy_address">સરનામું કૉપિ કરો</string>
+    <string name="system_replication_address_copied">સરનામું કૉપિ કર્યું</string>
     <string name="system_replication_pending_title">બાકી રહેલી જોડાવાની વિનંતીઓ</string>
     <string name="system_replication_pending_subtitle">બીજો સર્વર આની સાથે જોડાવા માટે વિનંતી કરી રહ્યો છે. તેને સંપૂર્ણ પ્રતિકૃતિ પીયર તરીકે નોંધાવવા માટે મંજૂર કરો.</string>
     <string name="system_replication_approve">મંજૂર કરો</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ઇન્સ્ટોલર ડાઉનલોડ કરો</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org માંથી ડાઉનલોડ કરો</string>
     <string name="system_status_copy">કૉપિ કરો</string>
+    <string name="system_status_peers">પીઅર્સ</string>
+    <string name="system_status_peer_connected">જોડાયેલ</string>
+    <string name="system_status_peer_disconnected">ડિસ્કનેક્ટેડ</string>
+    <string name="system_status_peer_queued">કતારમાં સંદેશા</string>
+    <string name="system_status_peer_oldest">કતારમાં સૌથી જૂનો સંદેશ</string>
     <string name="accounts_title">જોડાયેલા ખાતાઓ</string>
     <string name="accounts_add">ખાતું ઉમેરો</string>
     <string name="accounts_add_title">ખાતું ઉમેરો</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">તેને તમારા પ્રતિકૃતિ સમૂહમાંથી દૂર કરવામાં આવશે અને ફરી જોડાય ત્યારે તેની નકલ કાઢી નાખવાનું કહેવામાં આવશે. પ્રાપ્ય સર્વર દૂર કરવા માટે, ત્યાં સાઇન ઇન કરો અને \"આ સર્વરમાંથી મારું ખાતું દૂર કરો\" વાપરો. ચાલુ રાખવા માટે તમે જ છો તેની ખાતરી કરો.</string>
     <string name="replication_offline">ઑફલાઇન</string>
     <string name="replication_forget_confirm">ભૂલી જાઓ</string>
+    <string name="system_status_peer_unreachable">પહોંચની બહાર</string>
+    <string name="system_status_peer_address">સરનામું</string>
+    <string name="system_status_peer_seen">છેલ્લે જોવાયું</string>
+    <string name="system_status_users">વપરાશકર્તાઓ</string>
+    <string name="system_status_entities">એન્ટિટીઓ</string>
+    <string name="system_status_reachability">પહોંચક્ષમતા</string>
+    <string name="system_status_reachability_public">જાહેર</string>
+    <string name="system_status_reachability_private">ખાનગી</string>
+    <string name="system_status_reachability_unknown">અજાણ્યું</string>
+    <string name="system_status_relay">રિલે દ્વારા</string>
+    <string name="system_status_mesh">મેશ પીઅર્સ</string>
+    <string name="system_status_broadcast">છેલ્લું પ્રસારણ</string>
 </resources>

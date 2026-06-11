@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Peer-ID kopieren</string>
     <string name="system_replication_peer_id_copied">Peer-ID kopiert</string>
     <string name="system_replication_copy_failed">Kopieren fehlgeschlagen</string>
+    <string name="system_replication_addresses">Adressen</string>
+    <string name="system_replication_copy_address">Adresse kopieren</string>
+    <string name="system_replication_address_copied">Adresse kopiert</string>
     <string name="system_replication_pending_title">Ausstehende Beitrittsanfragen</string>
     <string name="system_replication_pending_subtitle">Ein anderer Server fragt an, sich mit diesem zu koppeln. Genehmigen Sie, um ihn als vollständigen Replikations-Peer einzutragen.</string>
     <string name="system_replication_approve">Genehmigen</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Installer herunterladen</string>
     <string name="system_status_download_from_packages">Von packages.mochi-os.org herunterladen</string>
     <string name="system_status_copy">Kopieren</string>
+    <string name="system_status_peers">Peers</string>
+    <string name="system_status_peer_connected">Verbunden</string>
+    <string name="system_status_peer_disconnected">Getrennt</string>
+    <string name="system_status_peer_queued">Nachrichten in Warteschlange</string>
+    <string name="system_status_peer_oldest">Älteste Nachricht in Warteschlange</string>
     <string name="accounts_title">Verbundene Konten</string>
     <string name="accounts_add">Konto hinzufügen</string>
     <string name="accounts_add_title">Konto hinzufügen</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Er wird aus deiner Replikatgruppe entfernt und angewiesen, seine Kopie zu löschen, sobald er sich wieder verbindet. Um einen erreichbaren Server zu entfernen, melde dich dort an und verwende „Mein Konto von diesem Server entfernen“. Bestätige zum Fortfahren, dass du es bist.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Entfernen</string>
+    <string name="system_status_peer_unreachable">Nicht erreichbar</string>
+    <string name="system_status_peer_address">Adresse</string>
+    <string name="system_status_peer_seen">Zuletzt gesehen</string>
+    <string name="system_status_users">Benutzer</string>
+    <string name="system_status_entities">Entitäten</string>
+    <string name="system_status_reachability">Erreichbarkeit</string>
+    <string name="system_status_reachability_public">Öffentlich</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Unbekannt</string>
+    <string name="system_status_relay">Über Relay</string>
+    <string name="system_status_mesh">Mesh-Peers</string>
+    <string name="system_status_broadcast">Letzter Broadcast</string>
 </resources>

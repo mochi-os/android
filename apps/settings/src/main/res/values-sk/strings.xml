@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopírovať ID partnera</string>
     <string name="system_replication_peer_id_copied">ID partnera skopírované</string>
     <string name="system_replication_copy_failed">Nepodarilo sa skopírovať</string>
+    <string name="system_replication_addresses">Adresy</string>
+    <string name="system_replication_copy_address">Kopírovať adresu</string>
+    <string name="system_replication_address_copied">Adresa skopírovaná</string>
     <string name="system_replication_pending_title">Čakajúce žiadosti o pripojenie</string>
     <string name="system_replication_pending_subtitle">Iný server žiada o spárovanie s týmto. Schválením ho zaregistrujete ako plnohodnotného replikačného partnera.</string>
     <string name="system_replication_approve">Schváliť</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Stiahnuť inštalátor</string>
     <string name="system_status_download_from_packages">Stiahnuť z packages.mochi-os.org</string>
     <string name="system_status_copy">Kopírovať</string>
+    <string name="system_status_peers">Vrstevníci</string>
+    <string name="system_status_peer_connected">Pripojené</string>
+    <string name="system_status_peer_disconnected">Odpojené</string>
+    <string name="system_status_peer_queued">Správy vo fronte</string>
+    <string name="system_status_peer_oldest">Najstaršia správa vo fronte</string>
     <string name="accounts_title">Pripojené účty</string>
     <string name="accounts_add">Pridať účet</string>
     <string name="accounts_add_title">Pridať účet</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">Bude odstránený z vašej sady replík a po opätovnom pripojení dostane pokyn odstrániť svoju kópiu. Ak chcete odstrániť dostupný server, prihláste sa naň a použite možnosť \"Odstrániť môj účet z tohto servera\". Pokračujte potvrdením, že ste to vy.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Zabudnúť</string>
+    <string name="system_status_peer_unreachable">Nedosiahnuteľný</string>
+    <string name="system_status_peer_address">Adresa</string>
+    <string name="system_status_peer_seen">Naposledy videný</string>
+    <string name="system_status_users">Používatelia</string>
+    <string name="system_status_entities">Entity</string>
+    <string name="system_status_reachability">Dosiahnuteľnosť</string>
+    <string name="system_status_reachability_public">Verejné</string>
+    <string name="system_status_reachability_private">Súkromné</string>
+    <string name="system_status_reachability_unknown">Neznáme</string>
+    <string name="system_status_relay">Cez relay</string>
+    <string name="system_status_mesh">Mesh vrstevníci</string>
+    <string name="system_status_broadcast">Posledné vysielanie</string>
 </resources>

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Dèan lethbhreac de ID an t-seise</string>
     <string name="system_replication_peer_id_copied">Chaidh ID an t-seise a chopaigeadh</string>
     <string name="system_replication_copy_failed">Cha b\' urrainn copaigeadh</string>
+    <string name="system_replication_addresses">Seòlaidhean</string>
+    <string name="system_replication_copy_address">Dèan lethbhreac dhen t-seòladh</string>
+    <string name="system_replication_address_copied">Chaidh an seòladh a chopaigeadh</string>
     <string name="system_replication_pending_title">Iarrtasan ballrachd ri thighinn</string>
     <string name="system_replication_pending_subtitle">Tha frithealaiche eile ag iarraidh paidhreachadh ris an fhear seo. Aontaich gus a chlàradh mar sheaìreadh leth-bhreac iomlan.</string>
     <string name="system_replication_approve">Aontaich</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Luchdaich a-nuas an stàlaichear</string>
     <string name="system_status_download_from_packages">Luchdaich a-nuas o packages.mochi-os.org</string>
     <string name="system_status_copy">Dèan lethbhreac</string>
+    <string name="system_status_peers">Co-aoisean</string>
+    <string name="system_status_peer_connected">Ceangailte</string>
+    <string name="system_status_peer_disconnected">Gun cheangal</string>
+    <string name="system_status_peer_queued">Teachdaireachdan sa chiutha</string>
+    <string name="system_status_peer_oldest">An teachdaireachd as sine sa chiutha</string>
     <string name="accounts_title">Cunntasan ceangailte</string>
     <string name="accounts_add">Cuir cunntas ris</string>
     <string name="accounts_add_title">Cuir cunntas ris</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">Thèid a thoirt air falbh on t-seata mac-samhail agad agus thèid iarraidh air an lethbhreac aige a sguabadh às nuair a cheanglas e a-rithist. Gus frithealaiche ruigsinneach a thoirt air falbh, clàraich a-steach an sin agus cleachd \"Thoir an cunntas agam air falbh on fhrithealaiche seo\". Dearbh gur tusa a th\' ann gus leantainn air adhart.</string>
     <string name="replication_offline">Far loidhne</string>
     <string name="replication_forget_confirm">Dìochuimhnich</string>
+    <string name="system_status_peer_unreachable">Do-ruigsinn</string>
+    <string name="system_status_peer_address">Seòladh</string>
+    <string name="system_status_peer_seen">Air fhaicinn mu dheireadh</string>
+    <string name="system_status_users">Cleachdaichean</string>
+    <string name="system_status_entities">Eintiteasan</string>
+    <string name="system_status_reachability">Ruigsinneachd</string>
+    <string name="system_status_reachability_public">Poblach</string>
+    <string name="system_status_reachability_private">Prìobhaideach</string>
+    <string name="system_status_reachability_unknown">Neo-aithnichte</string>
+    <string name="system_status_relay">Tro ath-sheachadan</string>
+    <string name="system_status_mesh">Co-aoisean a\' mhogail</string>
+    <string name="system_status_broadcast">An craoladh mu dheireadh</string>
 </resources>

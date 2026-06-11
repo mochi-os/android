@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">ಪೀರ್ ID ನಕಲಿಸಿ</string>
     <string name="system_replication_peer_id_copied">ಪೀರ್ ID ನಕಲಿಸಲಾಗಿದೆ</string>
     <string name="system_replication_copy_failed">ನಕಲಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="system_replication_addresses">ವಿಳಾಸಗಳು</string>
+    <string name="system_replication_copy_address">ವಿಳಾಸ ನಕಲಿಸಿ</string>
+    <string name="system_replication_address_copied">ವಿಳಾಸ ನಕಲಿಸಲಾಗಿದೆ</string>
     <string name="system_replication_pending_title">ಬಾಕಿ ಉಳಿದಿರುವ ಸೇರಲು ಕೋರಿಕೆಗಳು</string>
     <string name="system_replication_pending_subtitle">ಮತ್ತೊಂದು ಸರ್ವರ್ ಇದರೊಂದಿಗೆ ಜೋಡಿಯಾಗಲು ಕೋರುತ್ತಿದೆ. ಪೂರ್ಣ ಪ್ರತಿಕೃತಿ ಸಮಾನವಾಗಿ ನೋಂದಾಯಿಸಲು ಅನುಮೋದಿಸಿ.</string>
     <string name="system_replication_approve">ಅನುಮೋದಿಸಿ</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ಅನುಸ್ಥಾಪಕವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org ನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="system_status_copy">ನಕಲಿಸಿ</string>
+    <string name="system_status_peers">ಸಮಾನರು</string>
+    <string name="system_status_peer_connected">ಸಂಪರ್ಕಿತ</string>
+    <string name="system_status_peer_disconnected">ಸಂಪರ್ಕ ಕಡಿತಗೊಂಡಿದೆ</string>
+    <string name="system_status_peer_queued">ಸರದಿಯಲ್ಲಿರುವ ಸಂದೇಶಗಳು</string>
+    <string name="system_status_peer_oldest">ಸರದಿಯಲ್ಲಿರುವ ಅತ್ಯಂತ ಹಳೆಯ ಸಂದೇಶ</string>
     <string name="accounts_title">ಸಂಪರ್ಕಿತ ಖಾತೆಗಳು</string>
     <string name="accounts_add">ಖಾತೆ ಸೇರಿಸಿ</string>
     <string name="accounts_add_title">ಖಾತೆ ಸೇರಿಸಿ</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">ಅದು ನಿಮ್ಮ ಪ್ರತಿಕೃತಿ ಗುಂಪಿನಿಂದ ತೆಗೆದುಹಾಕಲ್ಪಡುತ್ತದೆ ಮತ್ತು ಮರುಸಂಪರ್ಕಗೊಂಡಾಗ ಅದರ ಪ್ರತಿಯನ್ನು ಅಳಿಸಲು ಸೂಚಿಸಲಾಗುತ್ತದೆ. ತಲುಪಬಹುದಾದ ಸರ್ವರ್ ಅನ್ನು ತೆಗೆದುಹಾಕಲು, ಅಲ್ಲಿ ಸೈನ್ ಇನ್ ಮಾಡಿ ಮತ್ತು \"ಈ ಸರ್ವರ್‌ನಿಂದ ನನ್ನ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ\" ಬಳಸಿ. ಮುಂದುವರಿಸಲು ಇದು ನೀವೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.</string>
     <string name="replication_offline">ಆಫ್‌ಲೈನ್</string>
     <string name="replication_forget_confirm">ಮರೆತುಬಿಡಿ</string>
+    <string name="system_status_peer_unreachable">ತಲುಪಲಾಗದು</string>
+    <string name="system_status_peer_address">ವಿಳಾಸ</string>
+    <string name="system_status_peer_seen">ಕೊನೆಯದಾಗಿ ಕಂಡದ್ದು</string>
+    <string name="system_status_users">ಬಳಕೆದಾರರು</string>
+    <string name="system_status_entities">ಘಟಕಗಳು</string>
+    <string name="system_status_reachability">ತಲುಪುವಿಕೆ</string>
+    <string name="system_status_reachability_public">ಸಾರ್ವಜನಿಕ</string>
+    <string name="system_status_reachability_private">ಖಾಸಗಿ</string>
+    <string name="system_status_reachability_unknown">ಅಜ್ಞಾತ</string>
+    <string name="system_status_relay">ರಿಲೇ ಮೂಲಕ</string>
+    <string name="system_status_mesh">ಮೆಶ್ ಸಮಾನರು</string>
+    <string name="system_status_broadcast">ಕೊನೆಯ ಪ್ರಸಾರ</string>
 </resources>

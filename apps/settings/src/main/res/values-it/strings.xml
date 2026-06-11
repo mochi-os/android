@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Copia identificatore peer</string>
     <string name="system_replication_peer_id_copied">Identificatore peer copiato</string>
     <string name="system_replication_copy_failed">Impossibile copiare</string>
+    <string name="system_replication_addresses">Indirizzi</string>
+    <string name="system_replication_copy_address">Copia indirizzo</string>
+    <string name="system_replication_address_copied">Indirizzo copiato</string>
     <string name="system_replication_pending_title">Richieste di adesione in sospeso</string>
     <string name="system_replication_pending_subtitle">Un altro server chiede di accoppiarsi con questo. Approva per registrarlo come peer di replica completo.</string>
     <string name="system_replication_approve">Approva</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Scarica installer</string>
     <string name="system_status_download_from_packages">Scarica da packages.mochi-os.org</string>
     <string name="system_status_copy">Copia</string>
+    <string name="system_status_peers">Peer</string>
+    <string name="system_status_peer_connected">Connesso</string>
+    <string name="system_status_peer_disconnected">Disconnesso</string>
+    <string name="system_status_peer_queued">Messaggi in coda</string>
+    <string name="system_status_peer_oldest">Messaggio in coda più vecchio</string>
     <string name="accounts_title">Account collegati</string>
     <string name="accounts_add">Aggiungi account</string>
     <string name="accounts_add_title">Aggiungi account</string>
@@ -409,4 +417,16 @@
     <string name="replication_forget_message">Verrà rimosso dal tuo set di repliche e gli verrà chiesto di eliminare la sua copia quando si riconnetterà. Per rimuovere un server raggiungibile, accedi a quel server e usa «Rimuovi il mio account da questo server». Verifica la tua identità per continuare.</string>
     <string name="replication_offline">Non in linea</string>
     <string name="replication_forget_confirm">Dimentica</string>
+    <string name="system_status_peer_unreachable">Irraggiungibile</string>
+    <string name="system_status_peer_address">Indirizzo</string>
+    <string name="system_status_peer_seen">Visto l\'ultima volta</string>
+    <string name="system_status_users">Utenti</string>
+    <string name="system_status_entities">Entità</string>
+    <string name="system_status_reachability">Raggiungibilità</string>
+    <string name="system_status_reachability_public">Pubblico</string>
+    <string name="system_status_reachability_private">Privato</string>
+    <string name="system_status_reachability_unknown">Sconosciuto</string>
+    <string name="system_status_relay">Tramite relay</string>
+    <string name="system_status_mesh">Peer della mesh</string>
+    <string name="system_status_broadcast">Ultima trasmissione</string>
 </resources>

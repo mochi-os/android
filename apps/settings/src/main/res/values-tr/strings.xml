@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Eş kimliğini kopyala</string>
     <string name="system_replication_peer_id_copied">Eş kimliği kopyalandı</string>
     <string name="system_replication_copy_failed">Kopyalanamadı</string>
+    <string name="system_replication_addresses">Adresler</string>
+    <string name="system_replication_copy_address">Adresi kopyala</string>
+    <string name="system_replication_address_copied">Adres kopyalandı</string>
     <string name="system_replication_pending_title">Bekleyen katılım istekleri</string>
     <string name="system_replication_pending_subtitle">Başka bir sunucu bu sunucuyla eşleşmek istiyor. Onaylayarak tam çoğaltma eşi olarak kaydedin.</string>
     <string name="system_replication_approve">Onayla</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Yükleyiciyi indir</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org adresinden indirin</string>
     <string name="system_status_copy">Kopyala</string>
+    <string name="system_status_peers">Eşler</string>
+    <string name="system_status_peer_connected">Bağlandı</string>
+    <string name="system_status_peer_disconnected">Bağlantı kesildi</string>
+    <string name="system_status_peer_queued">Kuyruktaki mesajlar</string>
+    <string name="system_status_peer_oldest">Kuyruktaki en eski mesaj</string>
     <string name="accounts_title">Bağlı hesaplar</string>
     <string name="accounts_add">Hesap ekle</string>
     <string name="accounts_add_title">Hesap ekle</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Çoğaltma kümenizden kaldırılacak ve yeniden bağlandığında kopyasını silmesi istenecektir. Erişilebilir bir sunucuyu kaldırmak için orada oturum açın ve \"Hesabımı bu sunucudan kaldır\" seçeneğini kullanın. Devam etmek için kimliğinizi doğrulayın.</string>
     <string name="replication_offline">Çevrimdışı</string>
     <string name="replication_forget_confirm">Unut</string>
+    <string name="system_status_peer_unreachable">Erişilemiyor</string>
+    <string name="system_status_peer_address">Adres</string>
+    <string name="system_status_peer_seen">Son görülme</string>
+    <string name="system_status_users">Kullanıcılar</string>
+    <string name="system_status_entities">Varlıklar</string>
+    <string name="system_status_reachability">Erişilebilirlik</string>
+    <string name="system_status_reachability_public">Herkese açık</string>
+    <string name="system_status_reachability_private">Özel</string>
+    <string name="system_status_reachability_unknown">Bilinmiyor</string>
+    <string name="system_status_relay">Aktarıcı üzerinden</string>
+    <string name="system_status_mesh">Mesh eşleri</string>
+    <string name="system_status_broadcast">Son yayın</string>
 </resources>

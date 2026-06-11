@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">සහචර ID පිටපත් කරන්න</string>
     <string name="system_replication_peer_id_copied">සහචර ID පිටපත් කරන ලදී</string>
     <string name="system_replication_copy_failed">පිටපත් කිරීමට අසමත් විය</string>
+    <string name="system_replication_addresses">ලිපින</string>
+    <string name="system_replication_copy_address">ලිපිනය පිටපත් කරන්න</string>
+    <string name="system_replication_address_copied">ලිපිනය පිටපත් කරන ලදී</string>
     <string name="system_replication_pending_title">පොරොත්තු එක්වීමේ ඉල්ලීම්</string>
     <string name="system_replication_pending_subtitle">තවත් සේවාදායකයක් මෙය සමඟ යුගල කිරීමට ඉල්ලයි. සම්පූර්ණ අනුවර්තන සහචරයෙකු ලෙස ලියාපදිංචි කිරීමට අනුමත කරන්න.</string>
     <string name="system_replication_approve">අනුමත කරන්න</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ස්ථාපකය බාගන්න</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org වෙතින් බාගත කරන්න</string>
     <string name="system_status_copy">පිටපත් කරන්න</string>
+    <string name="system_status_peers">සම</string>
+    <string name="system_status_peer_connected">සම්බන්ධිතයි</string>
+    <string name="system_status_peer_disconnected">විසන්ධියි</string>
+    <string name="system_status_peer_queued">පෝලිමේ පණිවිඩ</string>
+    <string name="system_status_peer_oldest">පෝලිමේ පැරණිතම පණිවිඩය</string>
     <string name="accounts_title">සම්බන්ධිත ගිණුම්</string>
     <string name="accounts_add">ගිණුමක් එක් කරන්න</string>
     <string name="accounts_add_title">ගිණුමක් එක් කරන්න</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">එය ඔබේ පිටපත් කට්ටලයෙන් ඉවත් කරනු ලබන අතර, නැවත සම්බන්ධ වූ විට එහි පිටපත මැකීමට උපදෙස් දෙනු ලැබේ. ළඟා විය හැකි සේවාදායකයක් ඉවත් කිරීමට, එහි පුරනය වී \"මෙම සේවාදායකයෙන් මගේ ගිණුම ඉවත් කරන්න\" භාවිතා කරන්න. ඉදිරියට යාමට එය ඔබ බව තහවුරු කරන්න.</string>
     <string name="replication_offline">නොබැඳි</string>
     <string name="replication_forget_confirm">අමතක කරන්න</string>
+    <string name="system_status_peer_unreachable">ළඟා විය නොහැක</string>
+    <string name="system_status_peer_address">ලිපිනය</string>
+    <string name="system_status_peer_seen">අවසන් වරට දුටුවේ</string>
+    <string name="system_status_users">පරිශීලකයන්</string>
+    <string name="system_status_entities">ඒකක</string>
+    <string name="system_status_reachability">ළඟාවීමේ හැකියාව</string>
+    <string name="system_status_reachability_public">ප්‍රසිද්ධ</string>
+    <string name="system_status_reachability_private">පෞද්ගලික</string>
+    <string name="system_status_reachability_unknown">නොදන්නා</string>
+    <string name="system_status_relay">රිලේ හරහා</string>
+    <string name="system_status_mesh">Mesh සම</string>
+    <string name="system_status_broadcast">අවසන් විකාශය</string>
 </resources>

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Salin ID rakan</string>
     <string name="system_replication_peer_id_copied">ID rakan disalin</string>
     <string name="system_replication_copy_failed">Gagal menyalin</string>
+    <string name="system_replication_addresses">Alamat</string>
+    <string name="system_replication_copy_address">Salin alamat</string>
+    <string name="system_replication_address_copied">Alamat disalin</string>
     <string name="system_replication_pending_title">Permintaan sertai yang menunggu</string>
     <string name="system_replication_pending_subtitle">Pelayan lain meminta untuk berpasangan dengan pelayan ini. Luluskan untuk mendaftarkannya sebagai rakan replikasi penuh.</string>
     <string name="system_replication_approve">Lulus</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Muat turun pemasang</string>
     <string name="system_status_download_from_packages">Muat turun dari packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
+    <string name="system_status_peers">Rakan</string>
+    <string name="system_status_peer_connected">Disambungkan</string>
+    <string name="system_status_peer_disconnected">Terputus</string>
+    <string name="system_status_peer_queued">Mesej dalam baris gilir</string>
+    <string name="system_status_peer_oldest">Mesej tertua dalam baris gilir</string>
     <string name="accounts_title">Akaun disambungkan</string>
     <string name="accounts_add">Tambah akaun</string>
     <string name="accounts_add_title">Tambah akaun</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">Ia akan dialih keluar daripada set replika anda dan diarahkan untuk memadamkan salinannya apabila ia bersambung semula. Untuk mengalih keluar pelayan yang boleh dicapai, log masuk di sana dan gunakan \"Alih keluar akaun saya daripada pelayan ini\". Sahkan bahawa ini anda untuk meneruskan.</string>
     <string name="replication_offline">Luar talian</string>
     <string name="replication_forget_confirm">Lupakan</string>
+    <string name="system_status_peer_unreachable">Tidak boleh dicapai</string>
+    <string name="system_status_peer_address">Alamat</string>
+    <string name="system_status_peer_seen">Kali terakhir dilihat</string>
+    <string name="system_status_users">Pengguna</string>
+    <string name="system_status_entities">Entiti</string>
+    <string name="system_status_reachability">Kebolehcapaian</string>
+    <string name="system_status_reachability_public">Awam</string>
+    <string name="system_status_reachability_private">Peribadi</string>
+    <string name="system_status_reachability_unknown">Tidak diketahui</string>
+    <string name="system_status_relay">Melalui relay</string>
+    <string name="system_status_mesh">Rakan mesh</string>
+    <string name="system_status_broadcast">Siaran terakhir</string>
 </resources>

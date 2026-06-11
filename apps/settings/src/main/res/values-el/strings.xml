@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Αντιγραφή αναγνωριστικού ομότιμου</string>
     <string name="system_replication_peer_id_copied">Το αναγνωριστικό ομότιμου αντιγράφηκε</string>
     <string name="system_replication_copy_failed">Αποτυχία αντιγραφής</string>
+    <string name="system_replication_addresses">Διευθύνσεις</string>
+    <string name="system_replication_copy_address">Αντιγραφή διεύθυνσης</string>
+    <string name="system_replication_address_copied">Η διεύθυνση αντιγράφηκε</string>
     <string name="system_replication_pending_title">Εκκρεμή αιτήματα ένταξης</string>
     <string name="system_replication_pending_subtitle">Ένας άλλος διακομιστής ζητά τη σύζευξη με αυτόν. Εγκρίνετε για να τον καταγράψετε ως πλήρη ομότιμο αναπαραγωγής.</string>
     <string name="system_replication_approve">Έγκριση</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Λήψη εγκαταστάτη</string>
     <string name="system_status_download_from_packages">Λήψη από packages.mochi-os.org</string>
     <string name="system_status_copy">Αντιγραφή</string>
+    <string name="system_status_peers">Ομότιμοι</string>
+    <string name="system_status_peer_connected">Συνδεδεμένο</string>
+    <string name="system_status_peer_disconnected">Αποσυνδεδεμένο</string>
+    <string name="system_status_peer_queued">Μηνύματα σε αναμονή</string>
+    <string name="system_status_peer_oldest">Παλαιότερο μήνυμα σε αναμονή</string>
     <string name="accounts_title">Συνδεδεμένοι λογαριασμοί</string>
     <string name="accounts_add">Προσθήκη λογαριασμού</string>
     <string name="accounts_add_title">Προσθήκη λογαριασμού</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Θα αφαιρεθεί από το σύνολο αντιγράφων σας και θα του ζητηθεί να διαγράψει το αντίγραφό του όταν επανασυνδεθεί. Για να αφαιρέσετε έναν προσβάσιμο διακομιστή, συνδεθείτε εκεί και χρησιμοποιήστε «Αφαίρεση του λογαριασμού μου από αυτόν τον διακομιστή». Επαληθεύστε ότι είστε εσείς για να συνεχίσετε.</string>
     <string name="replication_offline">Εκτός σύνδεσης</string>
     <string name="replication_forget_confirm">Διαγραφή</string>
+    <string name="system_status_peer_unreachable">Μη προσβάσιμο</string>
+    <string name="system_status_peer_address">Διεύθυνση</string>
+    <string name="system_status_peer_seen">Τελευταία εμφάνιση</string>
+    <string name="system_status_users">Χρήστες</string>
+    <string name="system_status_entities">Οντότητες</string>
+    <string name="system_status_reachability">Προσβασιμότητα</string>
+    <string name="system_status_reachability_public">Δημόσιο</string>
+    <string name="system_status_reachability_private">Ιδιωτικό</string>
+    <string name="system_status_reachability_unknown">Άγνωστο</string>
+    <string name="system_status_relay">Μέσω αναμεταδότη</string>
+    <string name="system_status_mesh">Ομότιμοι πλέγματος</string>
+    <string name="system_status_broadcast">Τελευταία μετάδοση</string>
 </resources>

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">د همکار پېژند کاپي کړئ</string>
     <string name="system_replication_peer_id_copied">د همکار پېژند کاپي شو</string>
     <string name="system_replication_copy_failed">د کاپي کولو پاتې راغلل</string>
+    <string name="system_replication_addresses">پتې</string>
+    <string name="system_replication_copy_address">پته کاپي کړئ</string>
+    <string name="system_replication_address_copied">پته کاپي شوه</string>
     <string name="system_replication_pending_title">د ګډون په تمه غوښتنې</string>
     <string name="system_replication_pending_subtitle">بل سرور د دې سرور سره د جوړې جوړولو غوښتنه کوي. د بشپړ نقل کولو همکار په توګه د ثبتولو لپاره تصویب کړئ.</string>
     <string name="system_replication_approve">ومنه</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">د نصب کوونکي ډاونلوډ</string>
     <string name="system_status_download_from_packages">د packages.mochi-os.org څخه ډاونلوډ کړئ</string>
     <string name="system_status_copy">کاپي کړئ</string>
+    <string name="system_status_peers">ملګري</string>
+    <string name="system_status_peer_connected">وصل شو</string>
+    <string name="system_status_peer_disconnected">پرېکړل شوی</string>
+    <string name="system_status_peer_queued">په کتار کې پیغامونه</string>
+    <string name="system_status_peer_oldest">په کتار کې تر ټولو زوړ پیغام</string>
     <string name="accounts_title">وصل شوي حسابونه</string>
     <string name="accounts_add">حساب اضافه کړئ</string>
     <string name="accounts_add_title">حساب اضافه کړئ</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">دا به ستاسو د نقل له سیټ څخه لرې شي او کله چې بیا وصل شي ورته به وویل شي چې خپله کاپي ړنګه کړي. د یوه رسېدونکي سرور د لرې کولو لپاره، هلته ننوځئ او \"زما حساب له دې سرور څخه لرې کړئ\" وکاروئ. د دوام لپاره تایید کړئ چې دا تاسو یاست.</string>
     <string name="replication_offline">آفلاین</string>
     <string name="replication_forget_confirm">هېرول</string>
+    <string name="system_status_peer_unreachable">لاسرسی نشته</string>
+    <string name="system_status_peer_address">پته</string>
+    <string name="system_status_peer_seen">وروستی ځل لیدل شوی</string>
+    <string name="system_status_users">کاروونکي</string>
+    <string name="system_status_entities">موجودیتونه</string>
+    <string name="system_status_reachability">لاسرسی</string>
+    <string name="system_status_reachability_public">عامه</string>
+    <string name="system_status_reachability_private">خصوصي</string>
+    <string name="system_status_reachability_unknown">نامعلوم</string>
+    <string name="system_status_relay">د ریلې له لارې</string>
+    <string name="system_status_mesh">د mesh ملګري</string>
+    <string name="system_status_broadcast">وروستۍ خپرونه</string>
 </resources>

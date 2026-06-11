@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopyahin ang peer id</string>
     <string name="system_replication_peer_id_copied">Nakopya ang peer id</string>
     <string name="system_replication_copy_failed">Nabigong kumopya</string>
+    <string name="system_replication_addresses">Mga address</string>
+    <string name="system_replication_copy_address">Kopyahin ang address</string>
+    <string name="system_replication_address_copied">Nakopya ang address</string>
     <string name="system_replication_pending_title">Mga nakabinbing kahilingan sa pagsali</string>
     <string name="system_replication_pending_subtitle">Humihiling ang ibang server na maipares sa server na ito. Aprubahan upang irehistro ito bilang ganap na replication peer.</string>
     <string name="system_replication_approve">Aprubahan</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">I-download ang installer</string>
     <string name="system_status_download_from_packages">I-download mula sa packages.mochi-os.org</string>
     <string name="system_status_copy">Kopyahin</string>
+    <string name="system_status_peers">Mga peer</string>
+    <string name="system_status_peer_connected">Konektado</string>
+    <string name="system_status_peer_disconnected">Nadiskonekta</string>
+    <string name="system_status_peer_queued">Mga mensaheng nakapila</string>
+    <string name="system_status_peer_oldest">Pinakalumang mensaheng nakapila</string>
     <string name="accounts_title">Mga konektadong account</string>
     <string name="accounts_add">Magdagdag ng account</string>
     <string name="accounts_add_title">Magdagdag ng account</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Aalisin ito sa iyong replica set at sasabihang tanggalin ang kopya nito kapag muling kumonekta. Para mag-alis ng naa-access na server, mag-sign in doon at gamitin ang \"Alisin ang aking account mula sa server na ito\". Patunayan na ikaw ito para magpatuloy.</string>
     <string name="replication_offline">Offline</string>
     <string name="replication_forget_confirm">Kalimutan</string>
+    <string name="system_status_peer_unreachable">Hindi maabot</string>
+    <string name="system_status_peer_address">Address</string>
+    <string name="system_status_peer_seen">Huling nakita</string>
+    <string name="system_status_users">Mga user</string>
+    <string name="system_status_entities">Mga entity</string>
+    <string name="system_status_reachability">Naaabot</string>
+    <string name="system_status_reachability_public">Pampubliko</string>
+    <string name="system_status_reachability_private">Pribado</string>
+    <string name="system_status_reachability_unknown">Hindi alam</string>
+    <string name="system_status_relay">Sa pamamagitan ng relay</string>
+    <string name="system_status_mesh">Mga peer ng mesh</string>
+    <string name="system_status_broadcast">Huling broadcast</string>
 </resources>

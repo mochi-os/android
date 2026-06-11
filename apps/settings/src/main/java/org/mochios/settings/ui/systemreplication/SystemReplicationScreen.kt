@@ -76,6 +76,7 @@ fun SystemReplicationScreen(
     val pairRemovedErr = stringResource(R.string.system_replication_pair_remove_failed)
     val peerCopiedOk = stringResource(R.string.system_replication_peer_id_copied)
     val peerCopiedErr = stringResource(R.string.system_replication_copy_failed)
+    val addressCopiedOk = stringResource(R.string.system_replication_address_copied)
 
     LaunchedEffect(viewModel) {
         viewModel.events.collect { ev ->
@@ -84,6 +85,7 @@ fun SystemReplicationScreen(
                 is SystemReplicationEvent.JoinDenied -> if (ev.success) joinDeniedOk else joinDeniedErr
                 is SystemReplicationEvent.PairRemoved -> if (ev.success) pairRemovedOk else pairRemovedErr
                 is SystemReplicationEvent.PeerCopied -> if (ev.success) peerCopiedOk else peerCopiedErr
+                is SystemReplicationEvent.AddressCopied -> if (ev.success) addressCopiedOk else peerCopiedErr
             }
             snackbar.showSnackbar(msg)
         }
@@ -125,8 +127,23 @@ fun SystemReplicationScreen(
                                 viewModel.reportPeerCopied(ok)
                             },
                         )
-                        Spacer(Modifier.height(16.dp))
                     }
+                    if (state.addresses.isNotEmpty()) {
+                        item("addresses-header") {
+                            Spacer(Modifier.height(8.dp))
+                            SectionHeader(title = stringResource(R.string.system_replication_addresses))
+                        }
+                        items(state.addresses, key = { "address-$it" }) { address ->
+                            AddressRow(
+                                address = address,
+                                onCopy = {
+                                    val ok = copyToClipboard(context, "address", address)
+                                    viewModel.reportAddressCopied(ok)
+                                },
+                            )
+                        }
+                    }
+                    item("this-server-spacer") { Spacer(Modifier.height(16.dp)) }
 
                     if (state.joins.isNotEmpty()) {
                         item("joins-header") {
@@ -215,6 +232,26 @@ private fun ThisServerRow(peer: String, onCopy: () -> Unit) {
                 Icon(
                     Icons.Default.ContentCopy,
                     contentDescription = stringResource(R.string.system_replication_copy_peer_id),
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AddressRow(address: String, onCopy: () -> Unit) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = address,
+                style = MaterialTheme.typography.bodySmall,
+                fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                modifier = Modifier.weight(1f),
+            )
+            IconButton(onClick = onCopy) {
+                Icon(
+                    Icons.Default.ContentCopy,
+                    contentDescription = stringResource(R.string.system_replication_copy_address),
                 )
             }
         }

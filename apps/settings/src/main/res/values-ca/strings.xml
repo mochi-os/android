@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Copia l\'identificador del parell</string>
     <string name="system_replication_peer_id_copied">Identificador del parell copiat</string>
     <string name="system_replication_copy_failed">No s\'ha pogut copiar</string>
+    <string name="system_replication_addresses">Adreces</string>
+    <string name="system_replication_copy_address">Copia l\'adreça</string>
+    <string name="system_replication_address_copied">Adreça copiada</string>
     <string name="system_replication_pending_title">Sol·licituds d\'adhesió pendents</string>
     <string name="system_replication_pending_subtitle">Un altre servidor sol·licita aparellar-se amb aquest. Aproveu-lo per inscriure\'l com a parell de replicació complet.</string>
     <string name="system_replication_approve">Aprova</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Descarrega l\'instal·lador</string>
     <string name="system_status_download_from_packages">Descarrega des de packages.mochi-os.org</string>
     <string name="system_status_copy">Copia</string>
+    <string name="system_status_peers">Iguals</string>
+    <string name="system_status_peer_connected">Connectat</string>
+    <string name="system_status_peer_disconnected">Desconnectat</string>
+    <string name="system_status_peer_queued">Missatges en cua</string>
+    <string name="system_status_peer_oldest">Missatge en cua més antic</string>
     <string name="accounts_title">Comptes connectats</string>
     <string name="accounts_add">Afegeix un compte</string>
     <string name="accounts_add_title">Afegeix un compte</string>
@@ -409,4 +417,16 @@
     <string name="replication_forget_message">S\'eliminarà del vostre conjunt de rèpliques i se li indicarà que esborri la seva còpia quan es torni a connectar. Per eliminar un servidor accessible, inicieu-hi la sessió i utilitzeu «Elimina el meu compte d\'aquest servidor». Verifiqueu que sou vós per continuar.</string>
     <string name="replication_offline">Sense connexió</string>
     <string name="replication_forget_confirm">Oblida</string>
+    <string name="system_status_peer_unreachable">Inaccessible</string>
+    <string name="system_status_peer_address">Adreça</string>
+    <string name="system_status_peer_seen">Vist per última vegada</string>
+    <string name="system_status_users">Usuaris</string>
+    <string name="system_status_entities">Entitats</string>
+    <string name="system_status_reachability">Accessibilitat</string>
+    <string name="system_status_reachability_public">Públic</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Desconegut</string>
+    <string name="system_status_relay">Mitjançant relay</string>
+    <string name="system_status_mesh">Iguals de la malla</string>
+    <string name="system_status_broadcast">Última difusió</string>
 </resources>

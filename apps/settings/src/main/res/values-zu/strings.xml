@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopisha i-ID yomngane</string>
     <string name="system_replication_peer_id_copied">I-ID yomngane ikopishelwe</string>
     <string name="system_replication_copy_failed">Kuhlulekile ukukopisha</string>
+    <string name="system_replication_addresses">Amakheli</string>
+    <string name="system_replication_copy_address">Kopisha ikheli</string>
+    <string name="system_replication_address_copied">Ikheli likopishiwe</string>
     <string name="system_replication_pending_title">Izicelo zokujoyina ezisalindele</string>
     <string name="system_replication_pending_subtitle">Eyinye iseva icela ukubhanqana naleli. Vumela ukulibhalisa njengomngane wokuphindaphinda ophelele.</string>
     <string name="system_replication_approve">Phasisa</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Landa isifaki</string>
     <string name="system_status_download_from_packages">Landa kusuka ku-packages.mochi-os.org</string>
     <string name="system_status_copy">Kopisha</string>
+    <string name="system_status_peers">Abalinganayo</string>
+    <string name="system_status_peer_connected">Kuxhunyiwe</string>
+    <string name="system_status_peer_disconnected">Kunqanyuliwe</string>
+    <string name="system_status_peer_queued">Imilayezo kulayini</string>
+    <string name="system_status_peer_oldest">Umlayezo omdala kakhulu kulayini</string>
     <string name="accounts_title">Ama-akhawunti axhunyiwe</string>
     <string name="accounts_add">Engeza i-akhawunti</string>
     <string name="accounts_add_title">Engeza i-akhawunti</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Izosuswa kusethi yakho yekhophi futhi itshelwe ukuthi isule ikhophi yayo lapho iphinda ixhumana. Ukususa iseva efinyelelekayo, ngena kuyo bese usebenzisa \"Susa i-akhawunti yami kule seva\". Qinisekisa ukuthi nguwe ukuze uqhubeke.</string>
     <string name="replication_offline">Awuxhunyiwe ku-inthanethi</string>
     <string name="replication_forget_confirm">Khohlwa</string>
+    <string name="system_status_peer_unreachable">Ayifinyeleleki</string>
+    <string name="system_status_peer_address">Ikheli</string>
+    <string name="system_status_peer_seen">Igcine ukubonwa</string>
+    <string name="system_status_users">Abasebenzisi</string>
+    <string name="system_status_entities">Izinto</string>
+    <string name="system_status_reachability">Ukufinyeleleka</string>
+    <string name="system_status_reachability_public">Emphakathini</string>
+    <string name="system_status_reachability_private">Okuyimfihlo</string>
+    <string name="system_status_reachability_unknown">Akwaziwa</string>
+    <string name="system_status_relay">Nge-relay</string>
+    <string name="system_status_mesh">Abalinganayo be-mesh</string>
+    <string name="system_status_broadcast">Ukusakaza kokugcina</string>
 </resources>

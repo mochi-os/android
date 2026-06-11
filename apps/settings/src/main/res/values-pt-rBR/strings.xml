@@ -61,6 +61,9 @@
     <string name="system_replication_copy_peer_id">Copiar identificador do par</string>
     <string name="system_replication_peer_id_copied">Identificador do par copiado</string>
     <string name="system_replication_copy_failed">Falha ao copiar</string>
+    <string name="system_replication_addresses">Endereços</string>
+    <string name="system_replication_copy_address">Copiar endereço</string>
+    <string name="system_replication_address_copied">Endereço copiado</string>
     <string name="system_replication_pending_title">Pedidos de adesão pendentes</string>
     <string name="system_replication_pending_subtitle">Outro servidor está pedindo para emparelhar com este. Aprove para registrá-lo como par de replicação completo.</string>
     <string name="system_replication_approve">Aprovar</string>
@@ -128,6 +131,11 @@
     <string name="system_status_download_installer">Baixar instalador</string>
     <string name="system_status_download_from_packages">Baixar de packages.mochi-os.org</string>
     <string name="system_status_copy">Copiar</string>
+    <string name="system_status_peers">Pares</string>
+    <string name="system_status_peer_connected">Conectado</string>
+    <string name="system_status_peer_disconnected">Desconectado</string>
+    <string name="system_status_peer_queued">Mensagens na fila</string>
+    <string name="system_status_peer_oldest">Mensagem mais antiga na fila</string>
     <string name="accounts_title">Contas conectadas</string>
     <string name="accounts_add">Adicionar conta</string>
     <string name="accounts_add_title">Adicionar conta</string>
@@ -409,4 +417,16 @@
     <string name="replication_forget_message">Ele será removido do seu conjunto de réplicas e instruído a excluir sua cópia quando se reconectar. Para remover um servidor acessível, entre nele e use \"Remover minha conta deste servidor\". Confirme que é você para continuar.</string>
     <string name="replication_offline">Off-line</string>
     <string name="replication_forget_confirm">Esquecer</string>
+    <string name="system_status_peer_unreachable">Inacessível</string>
+    <string name="system_status_peer_address">Endereço</string>
+    <string name="system_status_peer_seen">Visto pela última vez</string>
+    <string name="system_status_users">Usuários</string>
+    <string name="system_status_entities">Entidades</string>
+    <string name="system_status_reachability">Acessibilidade</string>
+    <string name="system_status_reachability_public">Público</string>
+    <string name="system_status_reachability_private">Privado</string>
+    <string name="system_status_reachability_unknown">Desconhecido</string>
+    <string name="system_status_relay">Via relay</string>
+    <string name="system_status_mesh">Pares da malha</string>
+    <string name="system_status_broadcast">Última transmissão</string>
 </resources>

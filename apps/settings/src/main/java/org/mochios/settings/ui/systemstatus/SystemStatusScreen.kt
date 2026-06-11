@@ -27,6 +27,8 @@ import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -112,6 +114,44 @@ fun SystemStatusScreen(
                         value = formatSystemTimestamp(state.serverStarted),
                         valueMono = true,
                     )
+                    val counts = state.counts
+                    if (counts != null) {
+                        StatusRow(
+                            label = stringResource(R.string.system_status_users),
+                            value = counts.users.toString(),
+                        )
+                        StatusRow(
+                            label = stringResource(R.string.system_status_entities),
+                            value = counts.entities.toString(),
+                        )
+                    }
+                    val network = state.network
+                    if (network != null) {
+                        val reachability = when (network.reachability) {
+                            "public" -> stringResource(R.string.system_status_reachability_public)
+                            "private" -> stringResource(R.string.system_status_reachability_private)
+                            else -> stringResource(R.string.system_status_reachability_unknown)
+                        }
+                        StatusRow(
+                            label = stringResource(R.string.system_status_reachability),
+                            value = if (network.relay) {
+                                "$reachability · ${stringResource(R.string.system_status_relay)}"
+                            } else {
+                                reachability
+                            },
+                        )
+                        StatusRow(
+                            label = stringResource(R.string.system_status_mesh),
+                            value = network.mesh.toString(),
+                        )
+                        if (network.last > 0) {
+                            StatusRow(
+                                label = stringResource(R.string.system_status_broadcast),
+                                value = formatSystemTimestamp(network.last),
+                                valueMono = true,
+                            )
+                        }
+                    }
                     val update = state.update
                     if (update != null && (update.available || update.pending.isNotBlank())) {
                         UpdateBlock(
@@ -123,8 +163,73 @@ fun SystemStatusScreen(
                             onOpen = { openUrl(context, it) },
                         )
                     }
+                    if (state.peers.isNotEmpty()) {
+                        Text(
+                            text = stringResource(R.string.system_status_peers),
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.SemiBold,
+                            modifier = Modifier.padding(top = 8.dp),
+                        )
+                        Text(
+                            text = listOf(
+                                "${stringResource(R.string.system_status_peers)} ${state.peers.size}",
+                                "${stringResource(R.string.system_status_peer_connected)} ${state.peers.count { it.connected }}",
+                                "${stringResource(R.string.system_status_peer_queued)} ${state.peers.sumOf { it.queued }}",
+                            ).joinToString(" · "),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        state.peers.forEach { peer -> PeerCard(peer) }
+                    }
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+        Column(modifier = Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(
+                text = peer.peer,
+                style = MaterialTheme.typography.bodySmall,
+                fontFamily = FontFamily.Monospace,
+            )
+            Text(
+                text = stringResource(
+                    when {
+                        peer.connected -> R.string.system_status_peer_connected
+                        peer.unreachable -> R.string.system_status_peer_unreachable
+                        else -> R.string.system_status_peer_disconnected
+                    },
+                ),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            if (peer.address.isNotBlank()) {
+                StatusRow(
+                    label = stringResource(R.string.system_status_peer_address),
+                    value = peer.address,
+                    valueMono = true,
+                )
+            }
+            if (peer.seen > 0) {
+                StatusRow(
+                    label = stringResource(R.string.system_status_peer_seen),
+                    value = formatSystemTimestamp(peer.seen),
+                    valueMono = true,
+                )
+            }
+            StatusRow(
+                label = stringResource(R.string.system_status_peer_queued),
+                value = peer.queued.toString(),
+            )
+            StatusRow(
+                label = stringResource(R.string.system_status_peer_oldest),
+                value = if (peer.queued > 0) formatSystemTimestamp(peer.oldest) else "-",
+                valueMono = true,
+            )
         }
     }
 }

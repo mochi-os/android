@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Hyzmatdaşyň ID-sini göçür</string>
     <string name="system_replication_peer_id_copied">Hyzmatdaşyň ID-si göçürildi</string>
     <string name="system_replication_copy_failed">Göçürilmedi</string>
+    <string name="system_replication_addresses">Salgylar</string>
+    <string name="system_replication_copy_address">Salgyny göçür</string>
+    <string name="system_replication_address_copied">Salgy göçürildi</string>
     <string name="system_replication_pending_title">Garaşýan goşulmak haýyşlary</string>
     <string name="system_replication_pending_subtitle">Başga bir serwer şu serwer bilen jübütleşmegi haýyş edýär. Doly nusgalama hyzmatdaşy hökmünde hasaba almak üçin tassyklaň.</string>
     <string name="system_replication_approve">Tassyklamak</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Gurnaýjyny ýükläp al</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org sahypasyndan ýükläp alyň</string>
     <string name="system_status_copy">Nusgalamak</string>
+    <string name="system_status_peers">Deňler</string>
+    <string name="system_status_peer_connected">Baglandy</string>
+    <string name="system_status_peer_disconnected">Aýryldy</string>
+    <string name="system_status_peer_queued">Nobatdaky habarlar</string>
+    <string name="system_status_peer_oldest">Nobatdaky iň köne habar</string>
     <string name="accounts_title">Baglanan hasaplar</string>
     <string name="accounts_add">Hasap goşmak</string>
     <string name="accounts_add_title">Hasap goşmak</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Ol replika toplumyňyzdan aýrylar we gaýtadan birikende öz nusgasyny pozmaga buýrular. Elýeterli serweri aýyrmak üçin şol ýerde ulgama giriň we \"Hasabymy bu serwerden aýyr\" ulanyň. Dowam etmek üçin özüňizdigini tassyklaň.</string>
     <string name="replication_offline">Awtonom</string>
     <string name="replication_forget_confirm">Unut</string>
+    <string name="system_status_peer_unreachable">Elýetersiz</string>
+    <string name="system_status_peer_address">Salgy</string>
+    <string name="system_status_peer_seen">Soňky gezek görüldi</string>
+    <string name="system_status_users">Ulanyjylar</string>
+    <string name="system_status_entities">Obýektler</string>
+    <string name="system_status_reachability">Elýeterlilik</string>
+    <string name="system_status_reachability_public">Köpçülige açyk</string>
+    <string name="system_status_reachability_private">Şahsy</string>
+    <string name="system_status_reachability_unknown">Näbelli</string>
+    <string name="system_status_relay">Releý arkaly</string>
+    <string name="system_status_mesh">Mesh deňleri</string>
+    <string name="system_status_broadcast">Soňky ýaýlym</string>
 </resources>

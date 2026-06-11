@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Պատճենել հասակակցի ID-ն</string>
     <string name="system_replication_peer_id_copied">Հասակակցի ID-ն պատճենվեց</string>
     <string name="system_replication_copy_failed">Չհաջողվեց պատճենել</string>
+    <string name="system_replication_addresses">Հասցեներ</string>
+    <string name="system_replication_copy_address">Պատճենել հասցեն</string>
+    <string name="system_replication_address_copied">Հասցեն պատճենվեց</string>
     <string name="system_replication_pending_title">Միանալու սպասող հարցումներ</string>
     <string name="system_replication_pending_subtitle">Մեկ այլ սերվեր խնդրում է զուգակցվել սրա հետ։ Հաստատեք՝ որպես լիարժեք կրկնօրինակման հասակակցի գրանցելու համար։</string>
     <string name="system_replication_approve">Հաստատել ցուցակը</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Ներբեռնել տեղադրիչը</string>
     <string name="system_status_download_from_packages">Ներբեռնել packages.mochi-os.org-ից</string>
     <string name="system_status_copy">Պատճենել ամենը</string>
+    <string name="system_status_peers">Հասակակիցներ</string>
+    <string name="system_status_peer_connected">Միացված</string>
+    <string name="system_status_peer_disconnected">Անջատված</string>
+    <string name="system_status_peer_queued">Հերթում գտնվող հաղորդագրություններ</string>
+    <string name="system_status_peer_oldest">Հերթի ամենահին հաղորդագրությունը</string>
     <string name="accounts_title">Կապվեք ադմինիստրատորի հետ պատվիրակություն ստանալու համար։</string>
     <string name="accounts_add">Ավելացնել հաշիվ ծանուցումներ ստանալու և ծառայություններ օգտագործելու համար։</string>
     <string name="accounts_add_title">Ավելացնել հաշիվ ծանուցումներ ստանալու և ծառայություններ օգտագործելու համար։</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Այն կհեռացվի ձեր կրկնօրինակների խմբից, և վերամիանալիս նրան կհանձնարարվի ջնջել իր պատճենը։ Հասանելի սերվեր հեռացնելու համար մուտք գործեք այնտեղ և օգտագործեք «Հեռացնել իմ հաշիվն այս սերվերից»։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
     <string name="replication_offline">Անցանց</string>
     <string name="replication_forget_confirm">Մոռանալ</string>
+    <string name="system_status_peer_unreachable">Անհասանելի</string>
+    <string name="system_status_peer_address">Հասցե</string>
+    <string name="system_status_peer_seen">Վերջին անգամ տեսնված</string>
+    <string name="system_status_users">Օգտատերեր</string>
+    <string name="system_status_entities">Էություններ</string>
+    <string name="system_status_reachability">Հասանելիություն</string>
+    <string name="system_status_reachability_public">Հանրային</string>
+    <string name="system_status_reachability_private">Մասնավոր</string>
+    <string name="system_status_reachability_unknown">Անհայտ</string>
+    <string name="system_status_relay">Ռելեի միջոցով</string>
+    <string name="system_status_mesh">Ցանցի հասակակիցներ</string>
+    <string name="system_status_broadcast">Վերջին հեռարձակում</string>
 </resources>

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Peer ID ကိုကူးယူပါ</string>
     <string name="system_replication_peer_id_copied">Peer ID ကို ကူးယူပြီး</string>
     <string name="system_replication_copy_failed">ကူးယူ၍ မရပါ</string>
+    <string name="system_replication_addresses">လိပ်စာများ</string>
+    <string name="system_replication_copy_address">လိပ်စာကိုကူးယူပါ</string>
+    <string name="system_replication_address_copied">လိပ်စာကို ကူးယူပြီး</string>
     <string name="system_replication_pending_title">စောင့်ဆိုင်းဆဲ ပူးပေါင်းရန် တောင်းဆိုမှုများ</string>
     <string name="system_replication_pending_subtitle">အခြားဆာဗာတစ်ခုက ဤဆာဗာနှင့် တွဲဖက်ရန် တောင်းဆိုနေသည်။ ပြည့်စုံသော ပွားယူမှု partner အဖြစ် မှတ်ပုံတင်ရန် အတည်ပြုပါ။</string>
     <string name="system_replication_approve">အတည်ပြုမည်</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ထည့်သွင်းကိရိယာ ဒေါင်းလုဒ်</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org မှ ဒေါင်းလုဒ်လုပ်ပါ</string>
     <string name="system_status_copy">ကူးမည်</string>
+    <string name="system_status_peers">ပီယာများ</string>
+    <string name="system_status_peer_connected">ချိတ်ဆက်ပြီး</string>
+    <string name="system_status_peer_disconnected">ချိတ်ဆက်မှု ပြတ်တောက်ပြီး</string>
+    <string name="system_status_peer_queued">တန်းစီထားသော မက်ဆေ့ဂျ်များ</string>
+    <string name="system_status_peer_oldest">တန်းစီထားသော အဟောင်းဆုံး မက်ဆေ့ဂျ်</string>
     <string name="accounts_title">ချိတ်ဆက်ထားသော အကောင့်များ</string>
     <string name="accounts_add">အကောင့် ထည့်မည်</string>
     <string name="accounts_add_title">အကောင့် ထည့်မည်</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">၎င်းကို သင့်ပွားအစုမှ ဖယ်ရှားမည်ဖြစ်ပြီး ပြန်ချိတ်ဆက်သည့်အခါ ၎င်း၏မိတ္တူကို ဖျက်ရန် ညွှန်ကြားပါမည်။ ဆက်သွယ်၍ရသော ဆာဗာတစ်ခုကို ဖယ်ရှားရန် ထိုဆာဗာတွင် ဝင်ရောက်ပြီး \"ဤဆာဗာမှ ကျွန်ုပ်၏အကောင့်ကို ဖယ်ရှားပါ\" ကို အသုံးပြုပါ။ ဆက်လုပ်ရန် သင်ဖြစ်ကြောင်း အတည်ပြုပါ။</string>
     <string name="replication_offline">အော့ဖ်လိုင်း</string>
     <string name="replication_forget_confirm">မေ့ပါ</string>
+    <string name="system_status_peer_unreachable">မရောက်ရှိနိုင်ပါ</string>
+    <string name="system_status_peer_address">လိပ်စာ</string>
+    <string name="system_status_peer_seen">နောက်ဆုံးတွေ့</string>
+    <string name="system_status_users">သုံးစွဲသူများ</string>
+    <string name="system_status_entities">အရာများ</string>
+    <string name="system_status_reachability">ရောက်ရှိနိုင်မှု</string>
+    <string name="system_status_reachability_public">အများသုံး</string>
+    <string name="system_status_reachability_private">သီးသန့်</string>
+    <string name="system_status_reachability_unknown">မသိရသော</string>
+    <string name="system_status_relay">Relay မှတဆင့်</string>
+    <string name="system_status_mesh">Mesh ပီယာများ</string>
+    <string name="system_status_broadcast">နောက်ဆုံး ထုတ်လွှင့်မှု</string>
 </resources>

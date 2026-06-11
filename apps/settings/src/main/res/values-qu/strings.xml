@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Mast\'i ID kopiay</string>
     <string name="system_replication_peer_id_copied">Mast\'i ID kopiasqa</string>
     <string name="system_replication_copy_failed">Mana kikinchayta atinchu</string>
+    <string name="system_replication_addresses">Direccionkuna</string>
+    <string name="system_replication_copy_address">Dirección kopiay</string>
+    <string name="system_replication_address_copied">Dirección kopiasqa</string>
     <string name="system_replication_pending_title">Suyachkaq yaykuy mañakuykuna</string>
     <string name="system_replication_pending_subtitle">Huk hina servidorqa kayman tinkukunanpaq mañakuchkan. Hunt\'asqa replikakuy mast\'isqa hinata qillqachinapaq ari nichay.</string>
     <string name="system_replication_approve">Chaskiy</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Sipiqta uray chaskiy</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org-manta uray chaskiy</string>
     <string name="system_status_copy">Copiay</string>
+    <string name="system_status_peers">Khuyaqkuna</string>
+    <string name="system_status_peer_connected">Tinkichisqa</string>
+    <string name="system_status_peer_disconnected">Mana tinkichisqa</string>
+    <string name="system_status_peer_queued">Suyana siq\'ipi willakuykuna</string>
+    <string name="system_status_peer_oldest">Suyana siq\'ipi ñawpaq willakuy</string>
     <string name="accounts_title">Tinkichisqa cuentas</string>
     <string name="accounts_add">Cuenta yapay</string>
     <string name="accounts_add_title">Cuenta yapay</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">Replica set nisqaykimanta hurqusqa kanqa, kutimuptintaq copianta pichanapaq nisqa kanqa. Huk chayana servidorta hurqunapaq, chaypi yaykuy hinaspa \"Cuentayta kay servidormanta hurquy\" nisqata servichikuy. Qatinaykipaq qam kasqaykita takyachiy.</string>
     <string name="replication_offline">Mana tinkisqa</string>
     <string name="replication_forget_confirm">Qonqay</string>
+    <string name="system_status_peer_unreachable">Mana chayana atiy</string>
+    <string name="system_status_peer_address">Dirección</string>
+    <string name="system_status_peer_seen">Qhipa kaq rikusqa</string>
+    <string name="system_status_users">Apaykachaqkuna</string>
+    <string name="system_status_entities">Kaqkuna</string>
+    <string name="system_status_reachability">Chayana atiy</string>
+    <string name="system_status_reachability_public">Público</string>
+    <string name="system_status_reachability_private">Pakasqa</string>
+    <string name="system_status_reachability_unknown">Mana riqsisqa</string>
+    <string name="system_status_relay">Relay nisqawan</string>
+    <string name="system_status_mesh">Mesh khuyaqkuna</string>
+    <string name="system_status_broadcast">Qhipa ch\'eqechiy</string>
 </resources>

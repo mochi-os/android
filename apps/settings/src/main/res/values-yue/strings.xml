@@ -116,6 +116,9 @@
     <string name="system_replication_copy_peer_id">複製對等點 ID</string>
     <string name="system_replication_peer_id_copied">已複製對等點 ID</string>
     <string name="system_replication_copy_failed">複製失敗</string>
+    <string name="system_replication_addresses">地址</string>
+    <string name="system_replication_copy_address">複製地址</string>
+    <string name="system_replication_address_copied">已複製地址</string>
     <string name="system_replication_pending_title">等待中嘅加入請求</string>
     <string name="system_replication_pending_subtitle">另一部伺服器想同呢部配對。批准就可以將佢登記為完整嘅複製對等點。</string>
     <string name="system_replication_approve">批准</string>
@@ -190,6 +193,11 @@
     <string name="system_status_download_installer">下載安裝程式</string>
     <string name="system_status_download_from_packages">由 packages.mochi-os.org 下載</string>
     <string name="system_status_copy">複製</string>
+    <string name="system_status_peers">對等節點</string>
+    <string name="system_status_peer_connected">已連接</string>
+    <string name="system_status_peer_disconnected">已斷開</string>
+    <string name="system_status_peer_queued">排隊中嘅訊息</string>
+    <string name="system_status_peer_oldest">排隊中最舊嘅訊息</string>
     <string name="accounts_title">已連結帳戶</string>
     <string name="accounts_add">新增帳戶</string>
     <string name="accounts_add_title">新增帳戶</string>
@@ -401,4 +409,16 @@
     <string name="replication_forget">忘記此無法連線嘅主機</string>
     <string name="replication_forget_title">要忘記此無法連線嘅主機嗎？</string>
     <string name="replication_forget_message">佢將會從你嘅副本集中移除，並喺重新連線時被要求刪除佢嘅副本。若要移除可連線嘅伺服器，請喺嗰個伺服器上登入並使用「將我嘅帳戶從此伺服器移除」。請驗證你嘅身分以繼續。</string>
+    <string name="system_status_peer_unreachable">無法到達</string>
+    <string name="system_status_peer_address">地址</string>
+    <string name="system_status_peer_seen">最後見到</string>
+    <string name="system_status_users">用戶</string>
+    <string name="system_status_entities">實體</string>
+    <string name="system_status_reachability">可達性</string>
+    <string name="system_status_reachability_public">公開</string>
+    <string name="system_status_reachability_private">私人</string>
+    <string name="system_status_reachability_unknown">未知</string>
+    <string name="system_status_relay">經中繼</string>
+    <string name="system_status_mesh">Mesh 對等節點</string>
+    <string name="system_status_broadcast">最後廣播</string>
 </resources>

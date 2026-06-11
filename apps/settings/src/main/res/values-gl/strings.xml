@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Copiar identificador do par</string>
     <string name="system_replication_peer_id_copied">Identificador do par copiado</string>
     <string name="system_replication_copy_failed">Non se puido copiar</string>
+    <string name="system_replication_addresses">Enderezos</string>
+    <string name="system_replication_copy_address">Copiar enderezo</string>
+    <string name="system_replication_address_copied">Enderezo copiado</string>
     <string name="system_replication_pending_title">Solicitudes de adhesión pendentes</string>
     <string name="system_replication_pending_subtitle">Outro servidor está pedindo emparellarse con este. Aprobe para inscribilo como par de replicación completo.</string>
     <string name="system_replication_approve">Aprobar</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Descargar instalador</string>
     <string name="system_status_download_from_packages">Descargar desde packages.mochi-os.org</string>
     <string name="system_status_copy">Copiar</string>
+    <string name="system_status_peers">Pares</string>
+    <string name="system_status_peer_connected">Conectado</string>
+    <string name="system_status_peer_disconnected">Desconectado</string>
+    <string name="system_status_peer_queued">Mensaxes en cola</string>
+    <string name="system_status_peer_oldest">Mensaxe en cola máis antiga</string>
     <string name="accounts_title">Contas conectadas</string>
     <string name="accounts_add">Engadir conta</string>
     <string name="accounts_add_title">Engadir conta</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Eliminarase do teu conxunto de réplicas e pediráselle que elimine a súa copia cando se reconecte. Para eliminar un servidor alcanzable, inicia sesión nel e usa «Eliminar a miña conta deste servidor». Verifica que es ti para continuar.</string>
     <string name="replication_offline">Sen conexión</string>
     <string name="replication_forget_confirm">Esquecer</string>
+    <string name="system_status_peer_unreachable">Inaccesible</string>
+    <string name="system_status_peer_address">Enderezo</string>
+    <string name="system_status_peer_seen">Visto por última vez</string>
+    <string name="system_status_users">Usuarios</string>
+    <string name="system_status_entities">Entidades</string>
+    <string name="system_status_reachability">Accesibilidade</string>
+    <string name="system_status_reachability_public">Público</string>
+    <string name="system_status_reachability_private">Privado</string>
+    <string name="system_status_reachability_unknown">Descoñecido</string>
+    <string name="system_status_relay">Vía relay</string>
+    <string name="system_status_mesh">Pares da malla</string>
+    <string name="system_status_broadcast">Última difusión</string>
 </resources>

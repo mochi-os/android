@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">ピアIDをコピー</string>
     <string name="system_replication_peer_id_copied">ピアIDをコピーしました</string>
     <string name="system_replication_copy_failed">コピーに失敗しました</string>
+    <string name="system_replication_addresses">アドレス</string>
+    <string name="system_replication_copy_address">アドレスをコピー</string>
+    <string name="system_replication_address_copied">アドレスをコピーしました</string>
     <string name="system_replication_pending_title">保留中の参加要求</string>
     <string name="system_replication_pending_subtitle">別のサーバーがこのサーバーとのペアリングを要求しています。承認すると、完全なレプリケーションピアとして登録されます。</string>
     <string name="system_replication_approve">承認</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">インストーラーをダウンロード</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org からダウンロード</string>
     <string name="system_status_copy">コピー</string>
+    <string name="system_status_peers">ピア</string>
+    <string name="system_status_peer_connected">接続済み</string>
+    <string name="system_status_peer_disconnected">切断済み</string>
+    <string name="system_status_peer_queued">キュー内のメッセージ</string>
+    <string name="system_status_peer_oldest">キュー内の最も古いメッセージ</string>
     <string name="accounts_title">連携アカウント</string>
     <string name="accounts_add">アカウントを追加</string>
     <string name="accounts_add_title">アカウントを追加</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">レプリカセットから削除され、再接続時にコピーを削除するよう指示されます。到達可能なサーバーを削除するには、そのサーバーにサインインして「このサーバーからアカウントを削除」を使用してください。続行するには本人確認を行ってください。</string>
     <string name="replication_offline">オフライン</string>
     <string name="replication_forget_confirm">削除</string>
+    <string name="system_status_peer_unreachable">到達不能</string>
+    <string name="system_status_peer_address">アドレス</string>
+    <string name="system_status_peer_seen">最終確認</string>
+    <string name="system_status_users">ユーザー</string>
+    <string name="system_status_entities">エンティティ</string>
+    <string name="system_status_reachability">到達性</string>
+    <string name="system_status_reachability_public">公開</string>
+    <string name="system_status_reachability_private">非公開</string>
+    <string name="system_status_reachability_unknown">不明</string>
+    <string name="system_status_relay">リレー経由</string>
+    <string name="system_status_mesh">メッシュピア</string>
+    <string name="system_status_broadcast">最後のブロードキャスト</string>
 </resources>

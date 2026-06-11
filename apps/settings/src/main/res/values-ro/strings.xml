@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Copiază identificatorul partenerului</string>
     <string name="system_replication_peer_id_copied">Identificator partener copiat</string>
     <string name="system_replication_copy_failed">Copierea a eșuat</string>
+    <string name="system_replication_addresses">Adrese</string>
+    <string name="system_replication_copy_address">Copiază adresa</string>
+    <string name="system_replication_address_copied">Adresă copiată</string>
     <string name="system_replication_pending_title">Cereri de aderare în așteptare</string>
     <string name="system_replication_pending_subtitle">Un alt server solicită asocierea cu acesta. Aprobați pentru a-l înregistra ca partener complet de replicare.</string>
     <string name="system_replication_approve">Aprobă</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Descarcă programul de instalare</string>
     <string name="system_status_download_from_packages">Descarcă de pe packages.mochi-os.org</string>
     <string name="system_status_copy">Copiază</string>
+    <string name="system_status_peers">Egali</string>
+    <string name="system_status_peer_connected">Conectat</string>
+    <string name="system_status_peer_disconnected">Deconectat</string>
+    <string name="system_status_peer_queued">Mesaje în coadă</string>
+    <string name="system_status_peer_oldest">Cel mai vechi mesaj din coadă</string>
     <string name="accounts_title">Conturi conectate</string>
     <string name="accounts_add">Adaugă cont</string>
     <string name="accounts_add_title">Adaugă cont</string>
@@ -409,4 +417,16 @@
     <string name="replication_forget_message">Va fi eliminată din setul tău de replici și i se va cere să își șteargă copia atunci când se reconectează. Pentru a elimina un server accesibil, conectează-te acolo și folosește \"Elimină contul meu de pe acest server\". Confirmă că ești tu pentru a continua.</string>
     <string name="replication_offline">Deconectat</string>
     <string name="replication_forget_confirm">Uită</string>
+    <string name="system_status_peer_unreachable">Inaccesibil</string>
+    <string name="system_status_peer_address">Adresă</string>
+    <string name="system_status_peer_seen">Văzut ultima dată</string>
+    <string name="system_status_users">Utilizatori</string>
+    <string name="system_status_entities">Entități</string>
+    <string name="system_status_reachability">Accesibilitate</string>
+    <string name="system_status_reachability_public">Public</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Necunoscut</string>
+    <string name="system_status_relay">Prin releu</string>
+    <string name="system_status_mesh">Egali în mesh</string>
+    <string name="system_status_broadcast">Ultima difuzare</string>
 </resources>

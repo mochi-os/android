@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">نسخ معرف النظير</string>
     <string name="system_replication_peer_id_copied">تم نسخ معرف النظير</string>
     <string name="system_replication_copy_failed">فشل النسخ</string>
+    <string name="system_replication_addresses">العناوين</string>
+    <string name="system_replication_copy_address">نسخ العنوان</string>
+    <string name="system_replication_address_copied">تم نسخ العنوان</string>
     <string name="system_replication_pending_title">طلبات الانضمام المعلقة</string>
     <string name="system_replication_pending_subtitle">يطلب خادم آخر الاقتران بهذا الخادم. وافق لتسجيله بوصفه نظيرًا كاملًا للنسخ المتماثل.</string>
     <string name="system_replication_approve">موافقة</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">تنزيل المثبت</string>
     <string name="system_status_download_from_packages">تنزيل من packages.mochi-os.org</string>
     <string name="system_status_copy">نسخ</string>
+    <string name="system_status_peers">الأنداد</string>
+    <string name="system_status_peer_connected">متصل</string>
+    <string name="system_status_peer_disconnected">غير متصل</string>
+    <string name="system_status_peer_queued">الرسائل في قائمة الانتظار</string>
+    <string name="system_status_peer_oldest">أقدم رسالة في قائمة الانتظار</string>
     <string name="accounts_title">الحسابات المتصلة</string>
     <string name="accounts_add">إضافة حساب</string>
     <string name="accounts_add_title">إضافة حساب</string>
@@ -412,4 +420,16 @@
     <string name="replication_forget_message">ستتم إزالته من مجموعة النسخ المتماثلة وسيُطلب منه حذف نسخته عند إعادة الاتصال. لإزالة خادم يمكن الوصول إليه، سجّل الدخول هناك واستخدم \"إزالة حسابي من هذا الخادم\". تحقق من هويتك للمتابعة.</string>
     <string name="replication_offline">غير متصل</string>
     <string name="replication_forget_confirm">نسيان</string>
+    <string name="system_status_peer_unreachable">يتعذر الوصول إليه</string>
+    <string name="system_status_peer_address">العنوان</string>
+    <string name="system_status_peer_seen">آخر ظهور</string>
+    <string name="system_status_users">المستخدمون</string>
+    <string name="system_status_entities">الكيانات</string>
+    <string name="system_status_reachability">إمكانية الوصول</string>
+    <string name="system_status_reachability_public">عام</string>
+    <string name="system_status_reachability_private">خاص</string>
+    <string name="system_status_reachability_unknown">غير معروف</string>
+    <string name="system_status_relay">عبر المرحّل</string>
+    <string name="system_status_mesh">أنداد الشبكة</string>
+    <string name="system_status_broadcast">آخر بث</string>
 </resources>

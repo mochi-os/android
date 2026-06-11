@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">పీర్ ID కాపీ చేయి</string>
     <string name="system_replication_peer_id_copied">పీర్ ID కాపీ అయింది</string>
     <string name="system_replication_copy_failed">కాపీ చేయడంలో విఫలమైంది</string>
+    <string name="system_replication_addresses">చిరునామాలు</string>
+    <string name="system_replication_copy_address">చిరునామా కాపీ చేయి</string>
+    <string name="system_replication_address_copied">చిరునామా కాపీ అయింది</string>
     <string name="system_replication_pending_title">పెండింగ్‌లో ఉన్న చేరిక అభ్యర్థనలు</string>
     <string name="system_replication_pending_subtitle">మరొక సర్వర్ దీనితో జతకట్టడానికి అభ్యర్థిస్తోంది. పూర్తి ప్రతిరూపణ సహచరిగా నమోదు చేయడానికి ఆమోదించండి.</string>
     <string name="system_replication_approve">ఆమోదించండి</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ఇన్‌స్టాలర్ డౌన్‌లోడ్ చేయండి</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org నుండి డౌన్‌లోడ్ చేయండి</string>
     <string name="system_status_copy">కాపీ చేయండి</string>
+    <string name="system_status_peers">పీర్లు</string>
+    <string name="system_status_peer_connected">కనెక్ట్ చేయబడింది</string>
+    <string name="system_status_peer_disconnected">డిస్‌కనెక్ట్ అయింది</string>
+    <string name="system_status_peer_queued">క్యూలో ఉన్న సందేశాలు</string>
+    <string name="system_status_peer_oldest">క్యూలో అత్యంత పాత సందేశం</string>
     <string name="accounts_title">కనెక్ట్ చేయబడిన ఖాతాలు</string>
     <string name="accounts_add">ఖాతాను జోడించండి</string>
     <string name="accounts_add_title">ఖాతాను జోడించండి</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">ఇది మీ ప్రతిరూప సమితి నుండి తీసివేయబడుతుంది, తిరిగి కనెక్ట్ అయినప్పుడు దాని కాపీని తొలగించమని చెప్పబడుతుంది. చేరుకోగల సర్వర్‌ను తీసివేయడానికి, అక్కడ సైన్ ఇన్ చేసి \"ఈ సర్వర్ నుండి నా ఖాతాను తీసివేయి\" ఉపయోగించండి. కొనసాగడానికి మీరేనని నిర్ధారించండి.</string>
     <string name="replication_offline">ఆఫ్‌లైన్</string>
     <string name="replication_forget_confirm">మర్చిపో</string>
+    <string name="system_status_peer_unreachable">చేరుకోలేనిది</string>
+    <string name="system_status_peer_address">చిరునామా</string>
+    <string name="system_status_peer_seen">చివరిసారి కనిపించింది</string>
+    <string name="system_status_users">యూజర్‌లు</string>
+    <string name="system_status_entities">ఎంటిటీలు</string>
+    <string name="system_status_reachability">చేరుకోగలిగే స్థితి</string>
+    <string name="system_status_reachability_public">పబ్లిక్</string>
+    <string name="system_status_reachability_private">ప్రైవేట్</string>
+    <string name="system_status_reachability_unknown">తెలియదు</string>
+    <string name="system_status_relay">రిలే ద్వారా</string>
+    <string name="system_status_mesh">మెష్ పీర్లు</string>
+    <string name="system_status_broadcast">చివరి ప్రసారం</string>
 </resources>

@@ -9,6 +9,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.settings.api.NetworkInfo
+import org.mochios.settings.api.PeerEntry
+import org.mochios.settings.api.ServerCounts
 import org.mochios.settings.api.SystemStatusApi
 import org.mochios.settings.api.SystemUpdateInfo
 import retrofit2.Response
@@ -20,6 +23,9 @@ data class SystemStatusUiState(
     val serverVersion: String = "",
     val serverStarted: Long = 0,
     val update: SystemUpdateInfo? = null,
+    val peers: List<PeerEntry> = emptyList(),
+    val network: NetworkInfo? = null,
+    val counts: ServerCounts? = null,
     val error: MochiError? = null,
     val installError: MochiError? = null,
 )
@@ -48,11 +54,22 @@ class SystemStatusViewModel @Inject constructor(
                 } catch (_: Exception) {
                     null
                 }
+                // Peers / network / counts are optional for the same reason
+                // (older servers don't expose the endpoint).
+                val peersData = try {
+                    api.getPeers().bodyOrNull()
+                } catch (_: Exception) {
+                    null
+                }
                 _uiState.value = SystemStatusUiState(
                     isLoading = false,
                     serverVersion = version,
                     serverStarted = started,
                     update = update,
+                    peers = (peersData?.peers ?: emptyList())
+                        .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.peer }),
+                    network = peersData?.network,
+                    counts = peersData?.counts,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())

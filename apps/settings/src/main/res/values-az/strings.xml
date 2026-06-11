@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Eş ID-sini kopyala</string>
     <string name="system_replication_peer_id_copied">Eş ID-si kopyalandı</string>
     <string name="system_replication_copy_failed">Kopyalamaq alınmadı</string>
+    <string name="system_replication_addresses">Ünvanlar</string>
+    <string name="system_replication_copy_address">Ünvanı kopyala</string>
+    <string name="system_replication_address_copied">Ünvan kopyalandı</string>
     <string name="system_replication_pending_title">Gözləyən qoşulma sorğuları</string>
     <string name="system_replication_pending_subtitle">Başqa bir server bununla cütləşmək istəyir. Tam replikasiya tərəfdaşı kimi qeydiyyatdan keçirmək üçün təsdiqləyin.</string>
     <string name="system_replication_approve">Təsdiqlə</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Quraşdırıcını yüklə</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org saytından yükləyin</string>
     <string name="system_status_copy">Kopyala</string>
+    <string name="system_status_peers">Taylar</string>
+    <string name="system_status_peer_connected">Qoşuldu</string>
+    <string name="system_status_peer_disconnected">Bağlantı kəsilib</string>
+    <string name="system_status_peer_queued">Növbədəki mesajlar</string>
+    <string name="system_status_peer_oldest">Növbədəki ən köhnə mesaj</string>
     <string name="accounts_title">Qoşulmuş hesablar</string>
     <string name="accounts_add">Hesab əlavə et</string>
     <string name="accounts_add_title">Hesab əlavə et</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">O, replika dəstinizdən silinəcək və yenidən qoşulduqda öz nüsxəsini silməsi tapşırılacaq. Əlçatan bir serveri silmək üçün orada daxil olun və \"Hesabımı bu serverdən sil\" seçimindən istifadə edin. Davam etmək üçün özünüz olduğunuzu təsdiqləyin.</string>
     <string name="replication_offline">Oflayn</string>
     <string name="replication_forget_confirm">Unut</string>
+    <string name="system_status_peer_unreachable">Əlçatmaz</string>
+    <string name="system_status_peer_address">Ünvan</string>
+    <string name="system_status_peer_seen">Son görülmə</string>
+    <string name="system_status_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="system_status_entities">Varlıqlar</string>
+    <string name="system_status_reachability">Əlçatanlıq</string>
+    <string name="system_status_reachability_public">Açıq</string>
+    <string name="system_status_reachability_private">Şəxsi</string>
+    <string name="system_status_reachability_unknown">Naməlum cihaz</string>
+    <string name="system_status_relay">Relay vasitəsilə</string>
+    <string name="system_status_mesh">Mesh tayları</string>
+    <string name="system_status_broadcast">Son yayım</string>
 </resources>

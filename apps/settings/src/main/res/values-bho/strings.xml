@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">पीयर ID कॉपी करीं</string>
     <string name="system_replication_peer_id_copied">पीयर ID कॉपी हो गइल</string>
     <string name="system_replication_copy_failed">कॉपी करे में विफल</string>
+    <string name="system_replication_addresses">पता सभ</string>
+    <string name="system_replication_copy_address">पता कॉपी करीं</string>
+    <string name="system_replication_address_copied">पता कॉपी हो गइल</string>
     <string name="system_replication_pending_title">लंबित जुड़े के अनुरोध</string>
     <string name="system_replication_pending_subtitle">एगो दोसर सर्वर ए सर्वर के साथे जोड़ी बनावे के अनुरोध करत बा। पूरा प्रतिकृति पीयर के रूप में नामांकित करे खातिर मंजूरी दीं।</string>
     <string name="system_replication_approve">स्वीकृत करीं</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">इंस्टॉलर डाउनलोड करीं</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org से डाउनलोड करीं</string>
     <string name="system_status_copy">कॉपी करीं</string>
+    <string name="system_status_peers">साथी लोग</string>
+    <string name="system_status_peer_connected">जुड़ल बा</string>
+    <string name="system_status_peer_disconnected">जुड़ल नइखे</string>
+    <string name="system_status_peer_queued">कतार में संदेश</string>
+    <string name="system_status_peer_oldest">कतार में सबसे पुरान संदेश</string>
     <string name="accounts_title">जुड़ल खाता</string>
     <string name="accounts_add">खाता जोड़ीं</string>
     <string name="accounts_add_title">खाता जोड़ीं</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">ई रउआ रेप्लिका सेट से हटा दिहल जाई आ फेर से जुड़ला पर एकरा के आपन कॉपी मिटावे के कहल जाई। कौनो पहुँच वाला सर्वर के हटावे खातिर, ओहिजा साइन इन करीं आ \"एह सर्वर से हमार खाता हटाईं\" के इस्तेमाल करीं। आगे बढ़े खातिर पुष्टि करीं कि ई रउआ बानी।</string>
     <string name="replication_offline">ऑफलाइन</string>
     <string name="replication_forget_confirm">भुलाईं</string>
+    <string name="system_status_peer_unreachable">पहुँच से बाहर</string>
+    <string name="system_status_peer_address">पता</string>
+    <string name="system_status_peer_seen">आखिरी बेर देखल गइल</string>
+    <string name="system_status_users">उपयोगकर्ता सब</string>
+    <string name="system_status_entities">इकाई सब</string>
+    <string name="system_status_reachability">पहुँच</string>
+    <string name="system_status_reachability_public">सार्वजनिक</string>
+    <string name="system_status_reachability_private">निजी</string>
+    <string name="system_status_reachability_unknown">अनजान</string>
+    <string name="system_status_relay">रिले के जरिए</string>
+    <string name="system_status_mesh">मेश साथी</string>
+    <string name="system_status_broadcast">आखिरी प्रसारण</string>
 </resources>

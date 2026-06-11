@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Nakili kitambulisho cha rika</string>
     <string name="system_replication_peer_id_copied">Kitambulisho cha rika kimenakiliwa</string>
     <string name="system_replication_copy_failed">Imeshindwa kunakili</string>
+    <string name="system_replication_addresses">Anwani</string>
+    <string name="system_replication_copy_address">Nakili anwani</string>
+    <string name="system_replication_address_copied">Anwani imenakiliwa</string>
     <string name="system_replication_pending_title">Maombi ya kujiunga yanayosubiri</string>
     <string name="system_replication_pending_subtitle">Seva nyingine inaomba kuoanishwa na hii. Idhinisha ili kuiandikisha kama rika kamili la unakili.</string>
     <string name="system_replication_approve">Idhinisha</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Pakua kisakinishi</string>
     <string name="system_status_download_from_packages">Pakua kutoka packages.mochi-os.org</string>
     <string name="system_status_copy">Nakili</string>
+    <string name="system_status_peers">Rika</string>
+    <string name="system_status_peer_connected">Imeunganishwa</string>
+    <string name="system_status_peer_disconnected">Imetenganishwa</string>
+    <string name="system_status_peer_queued">Jumbe kwenye foleni</string>
+    <string name="system_status_peer_oldest">Ujumbe wa zamani zaidi kwenye foleni</string>
     <string name="accounts_title">Akaunti zilizounganishwa</string>
     <string name="accounts_add">Ongeza akaunti</string>
     <string name="accounts_add_title">Ongeza akaunti</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Itaondolewa kwenye seti yako ya nakala na kuelekezwa kufuta nakala yake itakapounganishwa tena. Ili kuondoa seva inayofikika, ingia humo na utumie \"Ondoa akaunti yangu kwenye seva hii\". Thibitisha kuwa ni wewe ili kuendelea.</string>
     <string name="replication_offline">Nje ya mtandao</string>
     <string name="replication_forget_confirm">Sahau</string>
+    <string name="system_status_peer_unreachable">Haifikiki</string>
+    <string name="system_status_peer_address">Anwani</string>
+    <string name="system_status_peer_seen">Ilionekana mara ya mwisho</string>
+    <string name="system_status_users">Watumiaji</string>
+    <string name="system_status_entities">Huluki</string>
+    <string name="system_status_reachability">Ufikikaji</string>
+    <string name="system_status_reachability_public">Ya umma</string>
+    <string name="system_status_reachability_private">Ya faragha</string>
+    <string name="system_status_reachability_unknown">Haijulikani</string>
+    <string name="system_status_relay">Kupitia relay</string>
+    <string name="system_status_mesh">Rika za mesh</string>
+    <string name="system_status_broadcast">Matangazo ya mwisho</string>
 </resources>

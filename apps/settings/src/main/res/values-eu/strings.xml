@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopiatu kidearen IDa</string>
     <string name="system_replication_peer_id_copied">Kidearen IDa kopiatu da</string>
     <string name="system_replication_copy_failed">Ezin izan da kopiatu</string>
+    <string name="system_replication_addresses">Helbideak</string>
+    <string name="system_replication_copy_address">Kopiatu helbidea</string>
+    <string name="system_replication_address_copied">Helbidea kopiatu da</string>
     <string name="system_replication_pending_title">Elkartzeko eskaera zain</string>
     <string name="system_replication_pending_subtitle">Beste zerbitzari batek hau berarekin parekatzeko eskaera egiten du. Onartu erreplikazio-kide oso gisa erregistratzeko.</string>
     <string name="system_replication_approve">Onartu</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Deskargatu instalatzailea</string>
     <string name="system_status_download_from_packages">Deskargatu packages.mochi-os.org-etik</string>
     <string name="system_status_copy">Kopiatu</string>
+    <string name="system_status_peers">Parekoak</string>
+    <string name="system_status_peer_connected">Konektatua</string>
+    <string name="system_status_peer_disconnected">Deskonektatuta</string>
+    <string name="system_status_peer_queued">Ilarako mezuak</string>
+    <string name="system_status_peer_oldest">Ilarako mezurik zaharrena</string>
     <string name="accounts_title">Konektatutako kontuak</string>
     <string name="accounts_add">Gehitu kontua</string>
     <string name="accounts_add_title">Gehitu kontua</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Zure erreplika-multzotik kenduko da eta bere kopia ezabatzeko esango zaio berriz konektatzean. Eskuragarri dagoen zerbitzari bat kentzeko, hasi saioa bertan eta erabili \"Kendu nire kontua zerbitzari honetatik\". Egiaztatu zu zarela jarraitzeko.</string>
     <string name="replication_offline">Lineaz kanpo</string>
     <string name="replication_forget_confirm">Ahaztu</string>
+    <string name="system_status_peer_unreachable">Ezin da iritsi</string>
+    <string name="system_status_peer_address">Helbidea</string>
+    <string name="system_status_peer_seen">Azkenekoz ikusia</string>
+    <string name="system_status_users">Erabiltzaileak</string>
+    <string name="system_status_entities">Entitateak</string>
+    <string name="system_status_reachability">Irisgarritasuna</string>
+    <string name="system_status_reachability_public">Publikoa</string>
+    <string name="system_status_reachability_private">Pribatua</string>
+    <string name="system_status_reachability_unknown">Ezezaguna</string>
+    <string name="system_status_relay">Relay bidez</string>
+    <string name="system_status_mesh">Mesh parekoak</string>
+    <string name="system_status_broadcast">Azken igorpena</string>
 </resources>

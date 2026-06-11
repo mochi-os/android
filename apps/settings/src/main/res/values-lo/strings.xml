@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">ສຳເນົາ ID ເພຍ</string>
     <string name="system_replication_peer_id_copied">ສຳເນົາ ID ເພຍແລ້ວ</string>
     <string name="system_replication_copy_failed">ສຳເນົາລົ້ມເຫຼວ</string>
+    <string name="system_replication_addresses">ທີ່ຢູ່</string>
+    <string name="system_replication_copy_address">ສຳເນົາທີ່ຢູ່</string>
+    <string name="system_replication_address_copied">ສຳເນົາທີ່ຢູ່ແລ້ວ</string>
     <string name="system_replication_pending_title">ການຮ້ອງຂໍເຂົ້າຮ່ວມທີ່ກຳລັງລໍຖ້າ</string>
     <string name="system_replication_pending_subtitle">ເຊີບເວີອື່ນກຳລັງຮ້ອງຂໍຈັບຄູ່ກັບເຊີບເວີນີ້. ອະນຸມັດເພື່ອລົງທະບຽນເປັນເພຍສຳເນົາແບບເຕັມຮູບແບບ.</string>
     <string name="system_replication_approve">ອະນຸມັດ</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ດາວໂຫຼດຕົວຕິດຕັ້ງ</string>
     <string name="system_status_download_from_packages">ດາວໂຫຼດຈາກ packages.mochi-os.org</string>
     <string name="system_status_copy">ສຳເນົາ</string>
+    <string name="system_status_peers">ເພຍ</string>
+    <string name="system_status_peer_connected">ເຊື່ອມຕໍ່ແລ້ວ</string>
+    <string name="system_status_peer_disconnected">ຕັດການເຊື່ອມຕໍ່ແລ້ວ</string>
+    <string name="system_status_peer_queued">ຂໍ້ຄວາມໃນຄິວ</string>
+    <string name="system_status_peer_oldest">ຂໍ້ຄວາມເກົ່າທີ່ສຸດໃນຄິວ</string>
     <string name="accounts_title">ບັນຊີທີ່ເຊື່ອມຕໍ່</string>
     <string name="accounts_add">ເພີ່ມບັນຊີ</string>
     <string name="accounts_add_title">ເພີ່ມບັນຊີ</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">ມັນຈະຖືກລຶບອອກຈາກຊຸດສຳເນົາຂອງທ່ານ ແລະຖືກສັ່ງໃຫ້ລຶບສຳເນົາຂອງມັນເມື່ອມັນເຊື່ອມຕໍ່ຄືນ. ເພື່ອລຶບເຊີບເວີທີ່ເຂົ້າເຖິງໄດ້, ໃຫ້ເຂົ້າສູ່ລະບົບຢູ່ບ່ອນນັ້ນ ແລະໃຊ້ \"ລຶບບັນຊີຂອງຂ້ອຍອອກຈາກເຊີບເວີນີ້\". ກວດສອບວ່າເປັນທ່ານເພື່ອສືບຕໍ່.</string>
     <string name="replication_offline">ອອບລາຍ</string>
     <string name="replication_forget_confirm">ລືມ</string>
+    <string name="system_status_peer_unreachable">ເຂົ້າເຖິງບໍ່ໄດ້</string>
+    <string name="system_status_peer_address">ທີ່ຢູ່</string>
+    <string name="system_status_peer_seen">ເຫັນຫຼ້າສຸດ</string>
+    <string name="system_status_users">ຜູ້ໃຊ້</string>
+    <string name="system_status_entities">ເອນທິຕີ</string>
+    <string name="system_status_reachability">ການເຂົ້າເຖິງໄດ້</string>
+    <string name="system_status_reachability_public">ສາທາລະນະ</string>
+    <string name="system_status_reachability_private">ສ່ວນຕົວ</string>
+    <string name="system_status_reachability_unknown">ບໍ່ຮູ້ຈັກ</string>
+    <string name="system_status_relay">ຜ່ານ relay</string>
+    <string name="system_status_mesh">ເພຍ mesh</string>
+    <string name="system_status_broadcast">ການອອກອາກາດຫຼ້າສຸດ</string>
 </resources>

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">پیئر آئی ڈی کاپی کریں</string>
     <string name="system_replication_peer_id_copied">پیئر آئی ڈی کاپی ہو گئی</string>
     <string name="system_replication_copy_failed">کاپی کرنے میں ناکامی</string>
+    <string name="system_replication_addresses">پتے</string>
+    <string name="system_replication_copy_address">پتہ کاپی کریں</string>
+    <string name="system_replication_address_copied">پتہ کاپی ہو گیا</string>
     <string name="system_replication_pending_title">زیرِ التواء شمولیت کی درخواستیں</string>
     <string name="system_replication_pending_subtitle">ایک اور سرور اس کے ساتھ جوڑا بنانے کی درخواست کر رہا ہے۔ منظوری دیں تاکہ اسے مکمل ریپلیکیشن پیئر کے طور پر درج کیا جا سکے۔</string>
     <string name="system_replication_approve">منظور کریں</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">انسٹالر ڈاؤن لوڈ کریں</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org سے ڈاؤن لوڈ کریں</string>
     <string name="system_status_copy">کاپی کریں</string>
+    <string name="system_status_peers">ساتھی</string>
+    <string name="system_status_peer_connected">کنیکٹ ہو گیا</string>
+    <string name="system_status_peer_disconnected">منقطع</string>
+    <string name="system_status_peer_queued">قطار میں پیغامات</string>
+    <string name="system_status_peer_oldest">قطار میں سب سے پرانا پیغام</string>
     <string name="accounts_title">کنیکٹ شدہ اکاؤنٹس</string>
     <string name="accounts_add">اکاؤنٹ شامل کریں</string>
     <string name="accounts_add_title">اکاؤنٹ شامل کریں</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">اسے آپ کے نقل سیٹ سے ہٹا دیا جائے گا اور دوبارہ جڑنے پر اپنی نقل حذف کرنے کو کہا جائے گا۔ کسی قابلِ رسائی سرور کو ہٹانے کے لیے، وہاں سائن ان کریں اور \"میرا اکاؤنٹ اس سرور سے ہٹائیں\" استعمال کریں۔ جاری رکھنے کے لیے تصدیق کریں کہ یہ آپ ہیں۔</string>
     <string name="replication_offline">آف لائن</string>
     <string name="replication_forget_confirm">بھول جائیں</string>
+    <string name="system_status_peer_unreachable">ناقابل رسائی</string>
+    <string name="system_status_peer_address">پتہ</string>
+    <string name="system_status_peer_seen">آخری بار دیکھا گیا</string>
+    <string name="system_status_users">صارفین</string>
+    <string name="system_status_entities">ہستیاں</string>
+    <string name="system_status_reachability">رسائی</string>
+    <string name="system_status_reachability_public">عوامی</string>
+    <string name="system_status_reachability_private">نجی</string>
+    <string name="system_status_reachability_unknown">نامعلوم</string>
+    <string name="system_status_relay">ریلے کے ذریعے</string>
+    <string name="system_status_mesh">میش ساتھی</string>
+    <string name="system_status_broadcast">آخری نشریات</string>
 </resources>

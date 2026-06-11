@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">کپی شناسهٔ همتا</string>
     <string name="system_replication_peer_id_copied">شناسهٔ همتا کپی شد</string>
     <string name="system_replication_copy_failed">کپی ناموفق بود</string>
+    <string name="system_replication_addresses">آدرس‌ها</string>
+    <string name="system_replication_copy_address">کپی آدرس</string>
+    <string name="system_replication_address_copied">آدرس کپی شد</string>
     <string name="system_replication_pending_title">درخواست‌های پیوستن در انتظار</string>
     <string name="system_replication_pending_subtitle">سرور دیگری درخواست جفت‌شدن با این سرور را دارد. تأیید کنید تا به‌عنوان همتای کامل تکثیر ثبت شود.</string>
     <string name="system_replication_approve">تأیید</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">دانلود نصب‌کننده</string>
     <string name="system_status_download_from_packages">دانلود از packages.mochi-os.org</string>
     <string name="system_status_copy">کپی</string>
+    <string name="system_status_peers">همتاها</string>
+    <string name="system_status_peer_connected">متصل</string>
+    <string name="system_status_peer_disconnected">قطع شده</string>
+    <string name="system_status_peer_queued">پیام‌های در صف</string>
+    <string name="system_status_peer_oldest">قدیمی‌ترین پیام در صف</string>
     <string name="accounts_title">حساب‌های متصل</string>
     <string name="accounts_add">افزودن حساب</string>
     <string name="accounts_add_title">افزودن حساب</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">از مجموعه نسخه‌های شما حذف می‌شود و هنگام اتصال مجدد از آن خواسته می‌شود نسخه‌اش را حذف کند. برای حذف یک سرور در دسترس، در آنجا وارد شوید و از «حذف حساب من از این سرور» استفاده کنید. برای ادامه هویت خود را تأیید کنید.</string>
     <string name="replication_offline">آفلاین</string>
     <string name="replication_forget_confirm">فراموش کردن</string>
+    <string name="system_status_peer_unreachable">غیرقابل دسترس</string>
+    <string name="system_status_peer_address">آدرس</string>
+    <string name="system_status_peer_seen">آخرین بازدید</string>
+    <string name="system_status_users">کاربران</string>
+    <string name="system_status_entities">موجودیت‌ها</string>
+    <string name="system_status_reachability">دسترس‌پذیری</string>
+    <string name="system_status_reachability_public">عمومی</string>
+    <string name="system_status_reachability_private">خصوصی</string>
+    <string name="system_status_reachability_unknown">ناشناخته</string>
+    <string name="system_status_relay">از طریق رله</string>
+    <string name="system_status_mesh">همتاهای مش</string>
+    <string name="system_status_broadcast">آخرین پخش</string>
 </resources>

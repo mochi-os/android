@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Peer id qillqa</string>
     <string name="system_replication_peer_id_copied">Peer id qillqatawa</string>
     <string name="system_replication_copy_failed">Janiw copia luraña atinkti</string>
+    <string name="system_replication_addresses">Direccionanaka</string>
+    <string name="system_replication_copy_address">Dirección qillqa</string>
+    <string name="system_replication_address_copied">Dirección qillqatawa</string>
     <string name="system_replication_pending_title">Mantañ mayitanaka suyt\'asipki</string>
     <string name="system_replication_pending_subtitle">Yaqha servidoraxa akampi mayni chika lurañ muni. Phuqhata replicación parejaru phuqhañataki uñt\'ayma.</string>
     <string name="system_replication_approve">Iyawsaña</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Instalador apaqaña</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org ukat apaqaña</string>
     <string name="system_status_copy">Copiaña</string>
+    <string name="system_status_peers">Compañeronaka</string>
+    <string name="system_status_peer_connected">Chinjata</string>
+    <string name="system_status_peer_disconnected">Jan chinjata</string>
+    <string name="system_status_peer_queued">Suyt\'aski qillqatanaka</string>
+    <string name="system_status_peer_oldest">Nayra suyt\'aski qillqata</string>
     <string name="accounts_title">Chinjat cuentanaka</string>
     <string name="accounts_add">Cuenta yapxataña</string>
     <string name="accounts_add_title">Cuenta yapxataña</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">Uka replica tantachäwimat apsutaniwa ukat copiapa pichaña satañani mayampi mayachasisin. Mä jikxatasiñ servidor apsuñataki, ukan mantam ukat \"Cuentajx aka servidorat apsuña\" apnaqam. Sarantañatakixa jumätam uñakipt\'am.</string>
     <string name="replication_offline">Jaya t\'aqata</string>
     <string name="replication_forget_confirm">Armaña</string>
+    <string name="system_status_peer_unreachable">Jan puriñjama</string>
+    <string name="system_status_peer_address">Dirección</string>
+    <string name="system_status_peer_seen">Qhipa uñjata</string>
+    <string name="system_status_users">Aka tamar mantapki uka apnaqirinakampi tamanakampi</string>
+    <string name="system_status_entities">Entidadanaka</string>
+    <string name="system_status_reachability">Puriñjama</string>
+    <string name="system_status_reachability_public">Taqiniru</string>
+    <string name="system_status_reachability_private">Imantata</string>
+    <string name="system_status_reachability_unknown">Janiw yatxatat browser</string>
+    <string name="system_status_relay">Relay tuqi</string>
+    <string name="system_status_mesh">Mesh compañeronaka</string>
+    <string name="system_status_broadcast">Qhipa difusión</string>
 </resources>

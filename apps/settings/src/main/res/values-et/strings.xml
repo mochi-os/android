@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopeeri partneri ID</string>
     <string name="system_replication_peer_id_copied">Partneri ID kopeeritud</string>
     <string name="system_replication_copy_failed">Kopeerimine ebaõnnestus</string>
+    <string name="system_replication_addresses">Aadressid</string>
+    <string name="system_replication_copy_address">Kopeeri aadress</string>
+    <string name="system_replication_address_copied">Aadress kopeeritud</string>
     <string name="system_replication_pending_title">Ootel liitumistaotlused</string>
     <string name="system_replication_pending_subtitle">Teine server soovib selle serveriga paaristuda. Heakskiitmisel registreeritakse see täieõigusliku replitseerimispartnerina.</string>
     <string name="system_replication_approve">Kinnita</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Laadi installer alla</string>
     <string name="system_status_download_from_packages">Laadi alla aadressilt packages.mochi-os.org</string>
     <string name="system_status_copy">Kopeeri</string>
+    <string name="system_status_peers">Eakaaslased</string>
+    <string name="system_status_peer_connected">Ühendatud</string>
+    <string name="system_status_peer_disconnected">Ühendus puudub</string>
+    <string name="system_status_peer_queued">Järjekorras sõnumid</string>
+    <string name="system_status_peer_oldest">Vanim järjekorras sõnum</string>
     <string name="accounts_title">Ühendatud kontod</string>
     <string name="accounts_add">Lisa konto</string>
     <string name="accounts_add_title">Lisa konto</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">See eemaldatakse teie koopiakogumist ja sellel kästakse uuesti ühenduse loomisel oma koopia kustutada. Kättesaadava serveri eemaldamiseks logige seal sisse ja kasutage valikut „Eemalda minu konto sellest serverist“. Jätkamiseks kinnitage, et see olete teie.</string>
     <string name="replication_offline">Võrguühenduseta</string>
     <string name="replication_forget_confirm">Unusta</string>
+    <string name="system_status_peer_unreachable">Kättesaamatu</string>
+    <string name="system_status_peer_address">Aadress</string>
+    <string name="system_status_peer_seen">Viimati nähtud</string>
+    <string name="system_status_users">Kasutajad</string>
+    <string name="system_status_entities">Olemid</string>
+    <string name="system_status_reachability">Kättesaadavus</string>
+    <string name="system_status_reachability_public">Avalik</string>
+    <string name="system_status_reachability_private">Privaatne</string>
+    <string name="system_status_reachability_unknown">Tundmatu</string>
+    <string name="system_status_relay">Relee kaudu</string>
+    <string name="system_status_mesh">Mesh-eakaaslased</string>
+    <string name="system_status_broadcast">Viimane edastus</string>
 </resources>

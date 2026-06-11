@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopijuoti porininko ID</string>
     <string name="system_replication_peer_id_copied">Porininko ID nukopijuotas</string>
     <string name="system_replication_copy_failed">Nepavyko nukopijuoti</string>
+    <string name="system_replication_addresses">Adresai</string>
+    <string name="system_replication_copy_address">Kopijuoti adresą</string>
+    <string name="system_replication_address_copied">Adresas nukopijuotas</string>
     <string name="system_replication_pending_title">Laukiančios prisijungimo užklausos</string>
     <string name="system_replication_pending_subtitle">Kitas serveris prašo susieti su šiuo. Patvirtinkite, kad užregistruotumėte jį kaip visateisį replikacijos porininką.</string>
     <string name="system_replication_approve">Patvirtinti</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Atsisiųsti diegimo programą</string>
     <string name="system_status_download_from_packages">Atsisiųsti iš packages.mochi-os.org</string>
     <string name="system_status_copy">Kopijuoti</string>
+    <string name="system_status_peers">Lygiaverčiai</string>
+    <string name="system_status_peer_connected">Prijungta</string>
+    <string name="system_status_peer_disconnected">Atjungta</string>
+    <string name="system_status_peer_queued">Žinutės eilėje</string>
+    <string name="system_status_peer_oldest">Seniausia žinutė eilėje</string>
     <string name="accounts_title">Susietos paskyros</string>
     <string name="accounts_add">Pridėti paskyrą</string>
     <string name="accounts_add_title">Pridėti paskyrą</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">Jis bus pašalintas iš jūsų kopijų rinkinio ir, vėl prisijungęs, gaus nurodymą ištrinti savo kopiją. Norėdami pašalinti pasiekiamą serverį, prisijunkite prie jo ir naudokite „Pašalinti mano paskyrą iš šio serverio“. Norėdami tęsti, patvirtinkite, kad tai jūs.</string>
     <string name="replication_offline">Neprisijungus</string>
     <string name="replication_forget_confirm">Pamiršti</string>
+    <string name="system_status_peer_unreachable">Nepasiekiamas</string>
+    <string name="system_status_peer_address">Adresas</string>
+    <string name="system_status_peer_seen">Paskutinį kartą matytas</string>
+    <string name="system_status_users">Vartotojai</string>
+    <string name="system_status_entities">Esybės</string>
+    <string name="system_status_reachability">Pasiekiamumas</string>
+    <string name="system_status_reachability_public">Viešas</string>
+    <string name="system_status_reachability_private">Privatus</string>
+    <string name="system_status_reachability_unknown">Nežinoma</string>
+    <string name="system_status_relay">Per retransliatorių</string>
+    <string name="system_status_mesh">Mesh lygiaverčiai</string>
+    <string name="system_status_broadcast">Paskutinė transliacija</string>
 </resources>

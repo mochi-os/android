@@ -32,6 +32,7 @@ data class BootstrapEntry(
 
 data class SystemReplicationData(
     @SerializedName("peer") val peer: String = "",
+    @SerializedName("addresses") val addresses: List<String> = emptyList(),
     @SerializedName("pair") val pair: List<String> = emptyList(),
     @SerializedName("joins") val joins: List<PendingJoin> = emptyList(),
     @SerializedName("bootstrap") val bootstrap: List<BootstrapEntry> = emptyList(),

@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">পিয়ার ID কপি করুন</string>
     <string name="system_replication_peer_id_copied">পিয়ার ID কপি করা হয়েছে</string>
     <string name="system_replication_copy_failed">কপি করতে ব্যর্থ</string>
+    <string name="system_replication_addresses">ঠিকানাসমূহ</string>
+    <string name="system_replication_copy_address">ঠিকানা কপি করুন</string>
+    <string name="system_replication_address_copied">ঠিকানা কপি করা হয়েছে</string>
     <string name="system_replication_pending_title">অপেক্ষমাণ যোগদানের অনুরোধ</string>
     <string name="system_replication_pending_subtitle">অন্য একটি সার্ভার এই সার্ভারের সঙ্গে জোড়ার অনুরোধ করছে। সম্পূর্ণ প্রতিরূপ পিয়ার হিসেবে নথিভুক্ত করতে অনুমোদন করুন।</string>
     <string name="system_replication_approve">অনুমোদন করুন</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">ইনস্টলার ডাউনলোড করুন</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org থেকে ডাউনলোড করুন</string>
     <string name="system_status_copy">কপি করুন</string>
+    <string name="system_status_peers">পিয়ারসমূহ</string>
+    <string name="system_status_peer_connected">সংযুক্ত</string>
+    <string name="system_status_peer_disconnected">সংযোগ বিচ্ছিন্ন</string>
+    <string name="system_status_peer_queued">সারিতে থাকা বার্তা</string>
+    <string name="system_status_peer_oldest">সারিতে থাকা সবচেয়ে পুরনো বার্তা</string>
     <string name="accounts_title">সংযুক্ত অ্যাকাউন্ট</string>
     <string name="accounts_add">অ্যাকাউন্ট যোগ করুন</string>
     <string name="accounts_add_title">অ্যাকাউন্ট যোগ করুন</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">এটি আপনার রেপ্লিকা সেট থেকে সরিয়ে দেওয়া হবে এবং পুনরায় সংযুক্ত হলে এর কপি মুছে ফেলতে বলা হবে। একটি অ্যাক্সেসযোগ্য সার্ভার সরাতে, সেখানে সাইন ইন করুন এবং \"এই সার্ভার থেকে আমার অ্যাকাউন্ট সরান\" ব্যবহার করুন। চালিয়ে যেতে আপনি যে আপনিই তা যাচাই করুন।</string>
     <string name="replication_offline">অফলাইন</string>
     <string name="replication_forget_confirm">ভুলে যান</string>
+    <string name="system_status_peer_unreachable">অগম্য</string>
+    <string name="system_status_peer_address">ঠিকানা</string>
+    <string name="system_status_peer_seen">সর্বশেষ দেখা</string>
+    <string name="system_status_users">ব্যবহারকারী</string>
+    <string name="system_status_entities">সত্তাসমূহ</string>
+    <string name="system_status_reachability">পৌঁছানোর যোগ্যতা</string>
+    <string name="system_status_reachability_public">সর্বজনীন</string>
+    <string name="system_status_reachability_private">প্রাইভেট</string>
+    <string name="system_status_reachability_unknown">অজানা</string>
+    <string name="system_status_relay">রিলের মাধ্যমে</string>
+    <string name="system_status_mesh">মেশ পিয়ার</string>
+    <string name="system_status_broadcast">সর্বশেষ সম্প্রচার</string>
 </resources>

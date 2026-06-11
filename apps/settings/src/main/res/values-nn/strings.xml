@@ -43,6 +43,9 @@
     <string name="replication_deny">Nekt</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_copy_failed">Klarte ikkje kopiera</string>
+    <string name="system_replication_addresses">Adresser</string>
+    <string name="system_replication_copy_address">Kopier adresse</string>
+    <string name="system_replication_address_copied">Adresse kopiert</string>
     <string name="system_replication_approve">Godkjenn</string>
     <string name="system_replication_deny">Nekt</string>
     <string name="system_replication_remove">Fjern</string>
@@ -95,6 +98,11 @@
     <string name="system_status_download_installer">Last ned installasjonsprogram</string>
     <string name="system_status_download_from_packages">Last ned frå packages.mochi-os.org</string>
     <string name="system_status_copy">Kopier</string>
+    <string name="system_status_peers">Likemenn</string>
+    <string name="system_status_peer_connected">Tilkopla</string>
+    <string name="system_status_peer_disconnected">Fråkopla</string>
+    <string name="system_status_peer_queued">Meldingar i kø</string>
+    <string name="system_status_peer_oldest">Eldste melding i kø</string>
     <string name="accounts_title">Tilkopla kontoar</string>
     <string name="accounts_add">Legg til konto</string>
     <string name="accounts_add_title">Legg til konto</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget">Gløym denne utilgjengelege verten</string>
     <string name="replication_forget_title">Gløyme denne utilgjengelege verten?</string>
     <string name="replication_forget_message">Han blir fjerna frå replikasettet ditt og beden om å slette kopien sin når han koplar til att. For å fjerne ein tilgjengeleg server, logg inn der og bruk «Fjern kontoen min frå denne serveren». Stadfest at det er deg for å halde fram.</string>
+    <string name="system_status_peer_unreachable">Kan ikkje nåast</string>
+    <string name="system_status_peer_address">Adresse</string>
+    <string name="system_status_peer_seen">Sist sett</string>
+    <string name="system_status_users">Brukarar</string>
+    <string name="system_status_entities">Entitetar</string>
+    <string name="system_status_reachability">Tilgjenge</string>
+    <string name="system_status_reachability_public">Offentleg</string>
+    <string name="system_status_reachability_private">Privat</string>
+    <string name="system_status_reachability_unknown">Ukjend</string>
+    <string name="system_status_relay">Via relé</string>
+    <string name="system_status_mesh">Mesh-likemenn</string>
+    <string name="system_status_broadcast">Siste kringkasting</string>
 </resources>

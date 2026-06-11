@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Daakọ ID alábàákẹ́gbẹ́</string>
     <string name="system_replication_peer_id_copied">ID alábàákẹ́gbẹ́ ti dáakọ̀</string>
     <string name="system_replication_copy_failed">Kò lè dà</string>
+    <string name="system_replication_addresses">Àwọn àdírẹ́sì</string>
+    <string name="system_replication_copy_address">Daakọ àdírẹ́sì</string>
+    <string name="system_replication_address_copied">Àdírẹ́sì ti dáakọ̀</string>
     <string name="system_replication_pending_title">Àwọn ìbéèrè láti dara pọ̀ tí ń dúró</string>
     <string name="system_replication_pending_subtitle">Olùpèsè òmíràn ń béèrè láti so pọ̀ pẹ̀lú èyí. Fọwọ́sí láti forúkọ sílẹ̀ gẹ́gẹ́ bí alábàákẹ́gbẹ́ aṣèdàkọ̀ pípé.</string>
     <string name="system_replication_approve">Fọwọ́sí</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Gba aṣakojọpọ</string>
     <string name="system_status_download_from_packages">Gba lati packages.mochi-os.org</string>
     <string name="system_status_copy">Ṣe àdàkọ</string>
+    <string name="system_status_peers">Àwọn èkànná</string>
+    <string name="system_status_peer_connected">Tí a so pọ̀</string>
+    <string name="system_status_peer_disconnected">Ti ge asopọ̀</string>
+    <string name="system_status_peer_queued">Àwọn ìfiránṣẹ́ nínú ìlà</string>
+    <string name="system_status_peer_oldest">Ìfiránṣẹ́ àtijọ́ jùlọ nínú ìlà</string>
     <string name="accounts_title">Àwọn àkáǹtì tí a so pọ̀</string>
     <string name="accounts_add">Fi àkáǹtì kún</string>
     <string name="accounts_add_title">Fi àkáǹtì kún</string>
@@ -407,4 +415,16 @@
     <string name="replication_forget_message">A óò yọ ọ́ kúrò nínú ìṣètò àdàkọ rẹ, a óò sì sọ fún un láti pa àdàkọ rẹ̀ rẹ́ nígbà tí ó bá tún so pọ̀. Láti yọ sáfà tí ó ṣeé dé kúrò, wọlé síbẹ̀ kí o sì lo \"Yọ àkáǹtì mi kúrò ní sáfà yìí\". Jẹ́rìí sí i pé ìwọ ni láti tẹ̀síwájú.</string>
     <string name="replication_offline">Aisinmọ́lẹ̀</string>
     <string name="replication_forget_confirm">Gbàgbé</string>
+    <string name="system_status_peer_unreachable">Kò ṣeé dé</string>
+    <string name="system_status_peer_address">Àdírẹ́sì</string>
+    <string name="system_status_peer_seen">Tí a rí kẹ́yìn</string>
+    <string name="system_status_users">Àwọn user</string>
+    <string name="system_status_entities">Àwọn nǹkan</string>
+    <string name="system_status_reachability">Lílè dé</string>
+    <string name="system_status_reachability_public">Gbangba</string>
+    <string name="system_status_reachability_private">Aṣírí</string>
+    <string name="system_status_reachability_unknown">Aláìmọ̀</string>
+    <string name="system_status_relay">Nípasẹ̀ relay</string>
+    <string name="system_status_mesh">Àwọn èkànná mesh</string>
+    <string name="system_status_broadcast">Ìgbóhùnsáfẹ́fẹ́ tó kẹ́yìn</string>
 </resources>

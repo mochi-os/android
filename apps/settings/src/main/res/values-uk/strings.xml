@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Копіювати ідентифікатор вузла</string>
     <string name="system_replication_peer_id_copied">Ідентифікатор вузла скопійовано</string>
     <string name="system_replication_copy_failed">Не вдалося скопіювати</string>
+    <string name="system_replication_addresses">Адреси</string>
+    <string name="system_replication_copy_address">Копіювати адресу</string>
+    <string name="system_replication_address_copied">Адресу скопійовано</string>
     <string name="system_replication_pending_title">Очікувані запити на приєднання</string>
     <string name="system_replication_pending_subtitle">Інший сервер запитує сполучення з цим. Підтвердьте, щоб зареєструвати його як повноцінного партнера реплікації.</string>
     <string name="system_replication_approve">Схвалити</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Завантажити інсталятор</string>
     <string name="system_status_download_from_packages">Завантажити з packages.mochi-os.org</string>
     <string name="system_status_copy">Копіювати</string>
+    <string name="system_status_peers">Вузли</string>
+    <string name="system_status_peer_connected">Підключено</string>
+    <string name="system_status_peer_disconnected">Відключено</string>
+    <string name="system_status_peer_queued">Повідомлення в черзі</string>
+    <string name="system_status_peer_oldest">Найстаріше повідомлення в черзі</string>
     <string name="accounts_title">Підключені облікові записи</string>
     <string name="accounts_add">Додати обліковий запис</string>
     <string name="accounts_add_title">Додати обліковий запис</string>
@@ -410,4 +418,16 @@
     <string name="replication_forget_message">Його буде видалено з вашого набору реплік, і йому буде наказано видалити свою копію після повторного підключення. Щоб видалити доступний сервер, увійдіть на ньому та скористайтеся пунктом «Видалити мій обліковий запис із цього сервера». Підтвердьте, що це ви, щоб продовжити.</string>
     <string name="replication_offline">Не в мережі</string>
     <string name="replication_forget_confirm">Забути</string>
+    <string name="system_status_peer_unreachable">Недосяжний</string>
+    <string name="system_status_peer_address">Адреса</string>
+    <string name="system_status_peer_seen">Востаннє бачено</string>
+    <string name="system_status_users">Користувачі</string>
+    <string name="system_status_entities">Сутності</string>
+    <string name="system_status_reachability">Досяжність</string>
+    <string name="system_status_reachability_public">Публічний</string>
+    <string name="system_status_reachability_private">Приватний</string>
+    <string name="system_status_reachability_unknown">Невідомо</string>
+    <string name="system_status_relay">Через ретранслятор</string>
+    <string name="system_status_mesh">Вузли mesh</string>
+    <string name="system_status_broadcast">Остання трансляція</string>
 </resources>

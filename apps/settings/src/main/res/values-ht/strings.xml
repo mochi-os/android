@@ -62,6 +62,9 @@
     <string name="system_replication_copy_peer_id">Kopye id konpayèl la</string>
     <string name="system_replication_peer_id_copied">Id konpayèl la kopye</string>
     <string name="system_replication_copy_failed">Echwe pou kopye</string>
+    <string name="system_replication_addresses">Adrès yo</string>
+    <string name="system_replication_copy_address">Kopye adrès la</string>
+    <string name="system_replication_address_copied">Adrès la kopye</string>
     <string name="system_replication_pending_title">Demand pou rantre k ap tann</string>
     <string name="system_replication_pending_subtitle">Yon lòt sèvè ap mande pou marye ak sa a. Apwouve pou anrejistre li kòm yon konpayèl replikasyon konplè.</string>
     <string name="system_replication_approve">Apwouve</string>
@@ -129,6 +132,11 @@
     <string name="system_status_download_installer">Telechaje enstalatè</string>
     <string name="system_status_download_from_packages">Telechaje soti nan packages.mochi-os.org</string>
     <string name="system_status_copy">Kopye</string>
+    <string name="system_status_peers">Patnè yo</string>
+    <string name="system_status_peer_connected">Konekte</string>
+    <string name="system_status_peer_disconnected">Dekonekte</string>
+    <string name="system_status_peer_queued">Mesaj nan keu</string>
+    <string name="system_status_peer_oldest">Mesaj ki pi ansyen nan keu a</string>
     <string name="accounts_title">Kont konekte</string>
     <string name="accounts_add">Ajoute kont</string>
     <string name="accounts_add_title">Ajoute kont</string>
@@ -408,4 +416,16 @@
     <string name="replication_forget_message">Y ap retire l nan ansanm replik ou a epi y ap mande l efase kopi li lè l rekonekte. Pou retire yon sèvè ki aksesib, konekte la epi sèvi ak \"Retire kont mwen sou sèvè sa a\". Verifye se ou menm pou kontinye.</string>
     <string name="replication_offline">Andeyò liy</string>
     <string name="replication_forget_confirm">Bliye</string>
+    <string name="system_status_peer_unreachable">Pa ka jwenn li</string>
+    <string name="system_status_peer_address">Adrès</string>
+    <string name="system_status_peer_seen">Dènye fwa yo wè l</string>
+    <string name="system_status_users">Itilizatè</string>
+    <string name="system_status_entities">Antite yo</string>
+    <string name="system_status_reachability">Aksesibilite</string>
+    <string name="system_status_reachability_public">Piblik</string>
+    <string name="system_status_reachability_private">Prive</string>
+    <string name="system_status_reachability_unknown">Enkoni</string>
+    <string name="system_status_relay">Atravè relè</string>
+    <string name="system_status_mesh">Patnè mesh yo</string>
+    <string name="system_status_broadcast">Dènye difizyon</string>
 </resources>
