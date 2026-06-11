@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Scarica da packages.mochi-os.org</string>
     <string name="system_status_copy">Copia</string>
     <string name="system_status_peers">Peer</string>
+    <string name="system_status_known">Conosciuti</string>
     <string name="system_status_peer_connected">Connesso</string>
     <string name="system_status_peer_disconnected">Disconnesso</string>
     <string name="system_status_peer_queued">Messaggi in coda</string>
@@ -427,6 +428,7 @@
     <string name="system_status_reachability_private">Privato</string>
     <string name="system_status_reachability_unknown">Sconosciuto</string>
     <string name="system_status_relay">Tramite relay</string>
-    <string name="system_status_mesh">Peer della mesh</string>
+    <string name="system_status_mesh">Mesh di trasmissione</string>
     <string name="system_status_broadcast">Ultima trasmissione</string>
+    <string name="system_status_queued_broadcasts">Trasmissioni in coda</string>
 </resources>

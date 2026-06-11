@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Niżżel minn packages.mochi-os.org</string>
     <string name="system_status_copy">Ikkupja</string>
     <string name="system_status_peers">Pari</string>
+    <string name="system_status_known">Magħrufa</string>
     <string name="system_status_peer_connected">Konness</string>
     <string name="system_status_peer_disconnected">Skonness</string>
     <string name="system_status_peer_queued">Messaġġi fil-kju</string>
@@ -429,6 +430,7 @@
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Mhux magħruf</string>
     <string name="system_status_relay">Permezz ta\' relay</string>
-    <string name="system_status_mesh">Pari tal-mesh</string>
+    <string name="system_status_mesh">Mesh tax-xandir</string>
     <string name="system_status_broadcast">L-aħħar xandira</string>
+    <string name="system_status_queued_broadcasts">Xandiriet fil-kju</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org ukat apaqaña</string>
     <string name="system_status_copy">Copiaña</string>
     <string name="system_status_peers">Compañeronaka</string>
+    <string name="system_status_known">Uñt\'ata</string>
     <string name="system_status_peer_connected">Chinjata</string>
     <string name="system_status_peer_disconnected">Jan chinjata</string>
     <string name="system_status_peer_queued">Suyt\'aski qillqatanaka</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Imantata</string>
     <string name="system_status_reachability_unknown">Janiw yatxatat browser</string>
     <string name="system_status_relay">Relay tuqi</string>
-    <string name="system_status_mesh">Mesh compañeronaka</string>
+    <string name="system_status_mesh">Difusión mesh</string>
     <string name="system_status_broadcast">Qhipa difusión</string>
+    <string name="system_status_queued_broadcasts">Suyt\'aski difusionanaka</string>
 </resources>

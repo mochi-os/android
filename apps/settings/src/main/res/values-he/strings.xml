@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">הורד מ-packages.mochi-os.org</string>
     <string name="system_status_copy">העתק</string>
     <string name="system_status_peers">עמיתים</string>
+    <string name="system_status_known">מוכרים</string>
     <string name="system_status_peer_connected">מחובר</string>
     <string name="system_status_peer_disconnected">מנותק</string>
     <string name="system_status_peer_queued">הודעות בתור</string>
@@ -427,6 +428,7 @@
     <string name="system_status_reachability_private">פרטי</string>
     <string name="system_status_reachability_unknown">לא ידוע</string>
     <string name="system_status_relay">דרך ממסר</string>
-    <string name="system_status_mesh">עמיתי רשת</string>
+    <string name="system_status_mesh">רשת שידור</string>
     <string name="system_status_broadcast">שידור אחרון</string>
+    <string name="system_status_queued_broadcasts">שידורים בתור</string>
 </resources>

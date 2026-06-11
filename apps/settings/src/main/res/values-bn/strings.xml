@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org থেকে ডাউনলোড করুন</string>
     <string name="system_status_copy">কপি করুন</string>
     <string name="system_status_peers">পিয়ারসমূহ</string>
+    <string name="system_status_known">পরিচিত</string>
     <string name="system_status_peer_connected">সংযুক্ত</string>
     <string name="system_status_peer_disconnected">সংযোগ বিচ্ছিন্ন</string>
     <string name="system_status_peer_queued">সারিতে থাকা বার্তা</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">প্রাইভেট</string>
     <string name="system_status_reachability_unknown">অজানা</string>
     <string name="system_status_relay">রিলের মাধ্যমে</string>
-    <string name="system_status_mesh">মেশ পিয়ার</string>
+    <string name="system_status_mesh">সম্প্রচার মেশ</string>
     <string name="system_status_broadcast">সর্বশেষ সম্প্রচার</string>
+    <string name="system_status_queued_broadcasts">সারিতে থাকা সম্প্রচার</string>
 </resources>

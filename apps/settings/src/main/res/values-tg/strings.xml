@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Аз packages.mochi-os.org боргирӣ кунед</string>
     <string name="system_status_copy">Нусхабардорӣ</string>
     <string name="system_status_peers">Ҳамтарафҳо</string>
+    <string name="system_status_known">Маълум</string>
     <string name="system_status_peer_connected">Пайваст шуда</string>
     <string name="system_status_peer_disconnected">Ҷудо шуда</string>
     <string name="system_status_peer_queued">Паёмҳои дар навбат</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Хусусӣ</string>
     <string name="system_status_reachability_unknown">Номаълум</string>
     <string name="system_status_relay">Тавассути реле</string>
-    <string name="system_status_mesh">Ҳамтарафҳои mesh</string>
+    <string name="system_status_mesh">Mesh-и пахш</string>
     <string name="system_status_broadcast">Пахши охирин</string>
+    <string name="system_status_queued_broadcasts">Пахшҳои дар навбат</string>
 </resources>

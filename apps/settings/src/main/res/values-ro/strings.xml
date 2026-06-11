@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Descarcă de pe packages.mochi-os.org</string>
     <string name="system_status_copy">Copiază</string>
     <string name="system_status_peers">Egali</string>
+    <string name="system_status_known">Cunoscuți</string>
     <string name="system_status_peer_connected">Conectat</string>
     <string name="system_status_peer_disconnected">Deconectat</string>
     <string name="system_status_peer_queued">Mesaje în coadă</string>
@@ -427,6 +428,7 @@
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Necunoscut</string>
     <string name="system_status_relay">Prin releu</string>
-    <string name="system_status_mesh">Egali în mesh</string>
+    <string name="system_status_mesh">Mesh de difuzare</string>
     <string name="system_status_broadcast">Ultima difuzare</string>
+    <string name="system_status_queued_broadcasts">Difuzări în coadă</string>
 </resources>

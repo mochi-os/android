@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org से डाउनलोड करें</string>
     <string name="system_status_copy">कॉपी करें</string>
     <string name="system_status_peers">पीयर्स</string>
+    <string name="system_status_known">ज्ञात</string>
     <string name="system_status_peer_connected">कनेक्ट किया गया</string>
     <string name="system_status_peer_disconnected">डिस्कनेक्ट किया गया</string>
     <string name="system_status_peer_queued">कतार में संदेश</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">निजी</string>
     <string name="system_status_reachability_unknown">अज्ञात</string>
     <string name="system_status_relay">रिले के माध्यम से</string>
-    <string name="system_status_mesh">मेश पीयर्स</string>
+    <string name="system_status_mesh">प्रसारण मेश</string>
     <string name="system_status_broadcast">अंतिम प्रसारण</string>
+    <string name="system_status_queued_broadcasts">कतार में प्रसारण</string>
 </resources>

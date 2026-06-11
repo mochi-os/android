@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org இலிருந்து பதிவிறக்கு</string>
     <string name="system_status_copy">நகலெடு</string>
     <string name="system_status_peers">பீர்கள்</string>
+    <string name="system_status_known">அறியப்பட்டவை</string>
     <string name="system_status_peer_connected">இணைக்கப்பட்டது</string>
     <string name="system_status_peer_disconnected">துண்டிக்கப்பட்டது</string>
     <string name="system_status_peer_queued">வரிசையில் உள்ள செய்திகள்</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">தனிப்பட்டது</string>
     <string name="system_status_reachability_unknown">தெரியாதது</string>
     <string name="system_status_relay">ரிலே வழியாக</string>
-    <string name="system_status_mesh">மெஷ் பீர்கள்</string>
+    <string name="system_status_mesh">ஒலிபரப்பு மெஷ்</string>
     <string name="system_status_broadcast">கடைசி ஒலிபரப்பு</string>
+    <string name="system_status_queued_broadcasts">வரிசையில் உள்ள ஒலிபரப்புகள்</string>
 </resources>

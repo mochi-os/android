@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Завантажити з packages.mochi-os.org</string>
     <string name="system_status_copy">Копіювати</string>
     <string name="system_status_peers">Вузли</string>
+    <string name="system_status_known">Відомі</string>
     <string name="system_status_peer_connected">Підключено</string>
     <string name="system_status_peer_disconnected">Відключено</string>
     <string name="system_status_peer_queued">Повідомлення в черзі</string>
@@ -428,6 +429,7 @@
     <string name="system_status_reachability_private">Приватний</string>
     <string name="system_status_reachability_unknown">Невідомо</string>
     <string name="system_status_relay">Через ретранслятор</string>
-    <string name="system_status_mesh">Вузли mesh</string>
+    <string name="system_status_mesh">Mesh трансляції</string>
     <string name="system_status_broadcast">Остання трансляція</string>
+    <string name="system_status_queued_broadcasts">Трансляції в черзі</string>
 </resources>

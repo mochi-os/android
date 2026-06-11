@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Lawrlwytho o packages.mochi-os.org</string>
     <string name="system_status_copy">Copïo</string>
     <string name="system_status_peers">Cymheiriaid</string>
+    <string name="system_status_known">Hysbys</string>
     <string name="system_status_peer_connected">Wedi cysylltu</string>
     <string name="system_status_peer_disconnected">Wedi datgysylltu</string>
     <string name="system_status_peer_queued">Negeseuon mewn ciw</string>
@@ -430,6 +431,7 @@
     <string name="system_status_reachability_private">Preifat</string>
     <string name="system_status_reachability_unknown">Anhysbys</string>
     <string name="system_status_relay">Trwy relái</string>
-    <string name="system_status_mesh">Cymheiriaid mesh</string>
+    <string name="system_status_mesh">Mesh darlledu</string>
     <string name="system_status_broadcast">Darllediad diwethaf</string>
+    <string name="system_status_queued_broadcasts">Darllediadau mewn ciw</string>
 </resources>

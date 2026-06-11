@@ -140,10 +140,6 @@ fun SystemStatusScreen(
                                 reachability
                             },
                         )
-                        StatusRow(
-                            label = stringResource(R.string.system_status_mesh),
-                            value = network.mesh.toString(),
-                        )
                         if (network.last > 0) {
                             StatusRow(
                                 label = stringResource(R.string.system_status_broadcast),
@@ -170,12 +166,20 @@ fun SystemStatusScreen(
                             fontWeight = FontWeight.SemiBold,
                             modifier = Modifier.padding(top = 8.dp),
                         )
+                        val knownLabel = stringResource(R.string.system_status_known)
+                        val connectedLabel = stringResource(R.string.system_status_peer_connected)
+                        val meshLabel = stringResource(R.string.system_status_mesh)
+                        val queuedLabel = stringResource(R.string.system_status_peer_queued)
+                        val broadcastsLabel = stringResource(R.string.system_status_queued_broadcasts)
+                        val totals = mutableListOf(
+                            "$knownLabel ${state.peers.size}",
+                            "$connectedLabel ${state.peers.count { it.connected }}",
+                        )
+                        state.network?.let { totals.add("$meshLabel ${it.mesh}") }
+                        totals.add("$queuedLabel ${state.peers.sumOf { it.queued }}")
+                        state.network?.let { totals.add("$broadcastsLabel ${it.queued}") }
                         Text(
-                            text = listOf(
-                                "${stringResource(R.string.system_status_peers)} ${state.peers.size}",
-                                "${stringResource(R.string.system_status_peer_connected)} ${state.peers.count { it.connected }}",
-                                "${stringResource(R.string.system_status_peer_queued)} ${state.peers.sumOf { it.queued }}",
-                            ).joinToString(" · "),
+                            text = totals.joinToString(" · "),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )

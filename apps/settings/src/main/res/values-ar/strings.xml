@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">تنزيل من packages.mochi-os.org</string>
     <string name="system_status_copy">نسخ</string>
     <string name="system_status_peers">الأنداد</string>
+    <string name="system_status_known">معروف</string>
     <string name="system_status_peer_connected">متصل</string>
     <string name="system_status_peer_disconnected">غير متصل</string>
     <string name="system_status_peer_queued">الرسائل في قائمة الانتظار</string>
@@ -430,6 +431,7 @@
     <string name="system_status_reachability_private">خاص</string>
     <string name="system_status_reachability_unknown">غير معروف</string>
     <string name="system_status_relay">عبر المرحّل</string>
-    <string name="system_status_mesh">أنداد الشبكة</string>
+    <string name="system_status_mesh">شبكة البث</string>
     <string name="system_status_broadcast">آخر بث</string>
+    <string name="system_status_queued_broadcasts">عمليات البث في قائمة الانتظار</string>
 </resources>

@@ -132,6 +132,7 @@
     <string name="system_status_download_from_packages">Downloaden van packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiëren</string>
     <string name="system_status_peers">Peers</string>
+    <string name="system_status_known">Bekend</string>
     <string name="system_status_peer_connected">Verbonden</string>
     <string name="system_status_peer_disconnected">Verbinding verbroken</string>
     <string name="system_status_peer_queued">Berichten in wachtrij</string>
@@ -428,6 +429,7 @@
     <string name="system_status_reachability_private">Privé</string>
     <string name="system_status_reachability_unknown">Onbekend</string>
     <string name="system_status_relay">Via relay</string>
-    <string name="system_status_mesh">Mesh-peers</string>
+    <string name="system_status_mesh">Broadcast-mesh</string>
     <string name="system_status_broadcast">Laatste uitzending</string>
+    <string name="system_status_queued_broadcasts">Broadcasts in wachtrij</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Ներբեռնել packages.mochi-os.org-ից</string>
     <string name="system_status_copy">Պատճենել ամենը</string>
     <string name="system_status_peers">Հասակակիցներ</string>
+    <string name="system_status_known">Հայտնի</string>
     <string name="system_status_peer_connected">Միացված</string>
     <string name="system_status_peer_disconnected">Անջատված</string>
     <string name="system_status_peer_queued">Հերթում գտնվող հաղորդագրություններ</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Մասնավոր</string>
     <string name="system_status_reachability_unknown">Անհայտ</string>
     <string name="system_status_relay">Ռելեի միջոցով</string>
-    <string name="system_status_mesh">Ցանցի հասակակիցներ</string>
+    <string name="system_status_mesh">Հեռարձակման ցանց</string>
     <string name="system_status_broadcast">Վերջին հեռարձակում</string>
+    <string name="system_status_queued_broadcasts">Հերթում գտնվող հեռարձակումներ</string>
 </resources>

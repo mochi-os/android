@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Lataa osoitteesta packages.mochi-os.org</string>
     <string name="system_status_copy">Kopioi</string>
     <string name="system_status_peers">Vertaiset</string>
+    <string name="system_status_known">Tunnetut</string>
     <string name="system_status_peer_connected">Yhdistetty</string>
     <string name="system_status_peer_disconnected">Ei yhteyttä</string>
     <string name="system_status_peer_queued">Jonossa olevat viestit</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Yksityinen</string>
     <string name="system_status_reachability_unknown">Tuntematon</string>
     <string name="system_status_relay">Releen kautta</string>
-    <string name="system_status_mesh">Mesh-vertaiset</string>
+    <string name="system_status_mesh">Lähetysmesh</string>
     <string name="system_status_broadcast">Viimeisin lähetys</string>
+    <string name="system_status_queued_broadcasts">Jonossa olevat lähetykset</string>
 </resources>

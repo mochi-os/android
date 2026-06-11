@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">ჩამოტვირთვა packages.mochi-os.org-დან</string>
     <string name="system_status_copy">კოპირება</string>
     <string name="system_status_peers">თანატოლები</string>
+    <string name="system_status_known">ცნობილი</string>
     <string name="system_status_peer_connected">დაკავშირებულია</string>
     <string name="system_status_peer_disconnected">გათიშულია</string>
     <string name="system_status_peer_queued">რიგში მყოფი შეტყობინებები</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">პირადი</string>
     <string name="system_status_reachability_unknown">ერთეულები</string>
     <string name="system_status_relay">რელეს მეშვეობით</string>
-    <string name="system_status_mesh">ბადის თანატოლები</string>
+    <string name="system_status_mesh">მაუწყებლობის ბადე</string>
     <string name="system_status_broadcast">ბოლო მაუწყებლობა</string>
+    <string name="system_status_queued_broadcasts">რიგში მყოფი მაუწყებლობები</string>
 </resources>

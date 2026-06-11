@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Изтегляне от packages.mochi-os.org</string>
     <string name="system_status_copy">Копирай</string>
     <string name="system_status_peers">Равноправни партньори</string>
+    <string name="system_status_known">Известни</string>
     <string name="system_status_peer_connected">Свързано</string>
     <string name="system_status_peer_disconnected">Несвързано</string>
     <string name="system_status_peer_queued">Съобщения в опашка</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Частен</string>
     <string name="system_status_reachability_unknown">Неизвестно</string>
     <string name="system_status_relay">Чрез реле</string>
-    <string name="system_status_mesh">Mesh партньори</string>
+    <string name="system_status_mesh">Мрежа за излъчване</string>
     <string name="system_status_broadcast">Последно излъчване</string>
+    <string name="system_status_queued_broadcasts">Излъчвания в опашка</string>
 </resources>

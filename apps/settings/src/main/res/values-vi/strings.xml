@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Tải xuống từ packages.mochi-os.org</string>
     <string name="system_status_copy">Sao chép</string>
     <string name="system_status_peers">Ngang hàng</string>
+    <string name="system_status_known">Đã biết</string>
     <string name="system_status_peer_connected">Đã kết nối</string>
     <string name="system_status_peer_disconnected">Đã ngắt kết nối</string>
     <string name="system_status_peer_queued">Tin nhắn trong hàng đợi</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Riêng tư</string>
     <string name="system_status_reachability_unknown">Không rõ</string>
     <string name="system_status_relay">Qua relay</string>
-    <string name="system_status_mesh">Máy ngang hàng mesh</string>
+    <string name="system_status_mesh">Lưới phát sóng</string>
     <string name="system_status_broadcast">Bản phát gần nhất</string>
+    <string name="system_status_queued_broadcasts">Bản phát trong hàng đợi</string>
 </resources>

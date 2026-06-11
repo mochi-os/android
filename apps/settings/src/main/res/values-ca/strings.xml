@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Descarrega des de packages.mochi-os.org</string>
     <string name="system_status_copy">Copia</string>
     <string name="system_status_peers">Iguals</string>
+    <string name="system_status_known">Coneguts</string>
     <string name="system_status_peer_connected">Connectat</string>
     <string name="system_status_peer_disconnected">Desconnectat</string>
     <string name="system_status_peer_queued">Missatges en cua</string>
@@ -427,6 +428,7 @@
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Desconegut</string>
     <string name="system_status_relay">Mitjançant relay</string>
-    <string name="system_status_mesh">Iguals de la malla</string>
+    <string name="system_status_mesh">Malla de difusió</string>
     <string name="system_status_broadcast">Última difusió</string>
+    <string name="system_status_queued_broadcasts">Difusions en cua</string>
 </resources>

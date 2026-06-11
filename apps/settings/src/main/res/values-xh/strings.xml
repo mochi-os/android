@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Khuphela kwi-packages.mochi-os.org</string>
     <string name="system_status_copy">Kotshela</string>
     <string name="system_status_peers">Abalinganayo</string>
+    <string name="system_status_known">Eyaziwayo</string>
     <string name="system_status_peer_connected">Idibene</string>
     <string name="system_status_peer_disconnected">Iqhawukile</string>
     <string name="system_status_peer_queued">Imiyalezo kuluhlu lokulinda</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Yangasese</string>
     <string name="system_status_reachability_unknown">Akwaziwa</string>
     <string name="system_status_relay">Nge-relay</string>
-    <string name="system_status_mesh">Abalinganayo be-mesh</string>
+    <string name="system_status_mesh">I-mesh yosasazo</string>
     <string name="system_status_broadcast">Usasazo lokugqibela</string>
+    <string name="system_status_queued_broadcasts">Usasazo kuluhlu lokulinda</string>
 </resources>

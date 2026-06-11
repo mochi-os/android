@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org-оос татах</string>
     <string name="system_status_copy">Хуулах</string>
     <string name="system_status_peers">Үеүүд</string>
+    <string name="system_status_known">Мэдэгдсэн</string>
     <string name="system_status_peer_connected">Холбогдсон</string>
     <string name="system_status_peer_disconnected">Салгагдсан</string>
     <string name="system_status_peer_queued">Дараалалд буй зурвасууд</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Хувийн</string>
     <string name="system_status_reachability_unknown">Үл мэдэгдэх</string>
     <string name="system_status_relay">Релегээр дамжуулан</string>
-    <string name="system_status_mesh">Mesh үеүүд</string>
+    <string name="system_status_mesh">Цацалтын mesh</string>
     <string name="system_status_broadcast">Сүүлийн цацалт</string>
+    <string name="system_status_queued_broadcasts">Дараалалд буй цацалтууд</string>
 </resources>

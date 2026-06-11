@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org sahypasyndan ýükläp alyň</string>
     <string name="system_status_copy">Nusgalamak</string>
     <string name="system_status_peers">Deňler</string>
+    <string name="system_status_known">Belli</string>
     <string name="system_status_peer_connected">Baglandy</string>
     <string name="system_status_peer_disconnected">Aýryldy</string>
     <string name="system_status_peer_queued">Nobatdaky habarlar</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Şahsy</string>
     <string name="system_status_reachability_unknown">Näbelli</string>
     <string name="system_status_relay">Releý arkaly</string>
-    <string name="system_status_mesh">Mesh deňleri</string>
+    <string name="system_status_mesh">Ýaýlym mesh</string>
     <string name="system_status_broadcast">Soňky ýaýlym</string>
+    <string name="system_status_queued_broadcasts">Nobatdaky ýaýlymlar</string>
 </resources>

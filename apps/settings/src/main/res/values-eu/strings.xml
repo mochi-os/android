@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Deskargatu packages.mochi-os.org-etik</string>
     <string name="system_status_copy">Kopiatu</string>
     <string name="system_status_peers">Parekoak</string>
+    <string name="system_status_known">Ezagunak</string>
     <string name="system_status_peer_connected">Konektatua</string>
     <string name="system_status_peer_disconnected">Deskonektatuta</string>
     <string name="system_status_peer_queued">Ilarako mezuak</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Pribatua</string>
     <string name="system_status_reachability_unknown">Ezezaguna</string>
     <string name="system_status_relay">Relay bidez</string>
-    <string name="system_status_mesh">Mesh parekoak</string>
+    <string name="system_status_mesh">Igorpen mesh</string>
     <string name="system_status_broadcast">Azken igorpena</string>
+    <string name="system_status_queued_broadcasts">Ilarako igorpenak</string>
 </resources>

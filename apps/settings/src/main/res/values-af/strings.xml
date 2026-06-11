@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Laai af van packages.mochi-os.org</string>
     <string name="system_status_copy">Kopieer</string>
     <string name="system_status_peers">Eweknieë</string>
+    <string name="system_status_known">Bekend</string>
     <string name="system_status_peer_connected">Verbind</string>
     <string name="system_status_peer_disconnected">Ontkoppel</string>
     <string name="system_status_peer_queued">Boodskappe in tou</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Privaat</string>
     <string name="system_status_reachability_unknown">Onbekend</string>
     <string name="system_status_relay">Via relay</string>
-    <string name="system_status_mesh">Mesh-eweknieë</string>
+    <string name="system_status_mesh">Uitsaai-mesh</string>
     <string name="system_status_broadcast">Laaste uitsending</string>
+    <string name="system_status_queued_broadcasts">Uitsendings in tou</string>
 </resources>

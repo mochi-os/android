@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Download saka packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
     <string name="system_status_peers">Kanca</string>
+    <string name="system_status_known">Dikenal</string>
     <string name="system_status_peer_connected">Wis nyambung</string>
     <string name="system_status_peer_disconnected">Pedhot</string>
     <string name="system_status_peer_queued">Pesen ing antrean</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Ora dimangerteni</string>
     <string name="system_status_relay">Liwat relay</string>
-    <string name="system_status_mesh">Kanca mesh</string>
+    <string name="system_status_mesh">Mesh siaran</string>
     <string name="system_status_broadcast">Siaran pungkasan</string>
+    <string name="system_status_queued_broadcasts">Siaran ing antrean</string>
 </resources>

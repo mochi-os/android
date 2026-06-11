@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org-ൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="system_status_copy">പകർത്തുക</string>
     <string name="system_status_peers">സമപ്രായക്കാർ</string>
+    <string name="system_status_known">അറിയപ്പെടുന്നവ</string>
     <string name="system_status_peer_connected">കണക്റ്റ് ചെയ്തു</string>
     <string name="system_status_peer_disconnected">വിച്ഛേദിച്ചു</string>
     <string name="system_status_peer_queued">ക്യൂവിലുള്ള സന്ദേശങ്ങൾ</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">തുടരുക</string>
     <string name="system_status_reachability_unknown">അജ്ഞാതം</string>
     <string name="system_status_relay">റിലേ വഴി</string>
-    <string name="system_status_mesh">മെഷ് സമപ്രായക്കാർ</string>
+    <string name="system_status_mesh">ബ്രോഡ്കാസ്റ്റ് മെഷ്</string>
     <string name="system_status_broadcast">അവസാന ബ്രോഡ്കാസ്റ്റ്</string>
+    <string name="system_status_queued_broadcasts">ക്യൂവിലുള്ള ബ്രോഡ്കാസ്റ്റുകൾ</string>
 </resources>

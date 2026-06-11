@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Shkarko nga packages.mochi-os.org</string>
     <string name="system_status_copy">Kopjo</string>
     <string name="system_status_peers">Pairs</string>
+    <string name="system_status_known">Të njohur</string>
     <string name="system_status_peer_connected">I lidhur</string>
     <string name="system_status_peer_disconnected">I shkëputur</string>
     <string name="system_status_peer_queued">Mesazhe në radhë</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">I panjohur</string>
     <string name="system_status_relay">Me rele</string>
-    <string name="system_status_mesh">Pairs në mesh</string>
+    <string name="system_status_mesh">Mesh i transmetimit</string>
     <string name="system_status_broadcast">Transmetimi i fundit</string>
+    <string name="system_status_queued_broadcasts">Transmetime në radhë</string>
 </resources>

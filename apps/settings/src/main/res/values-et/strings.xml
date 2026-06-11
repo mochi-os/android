@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Laadi alla aadressilt packages.mochi-os.org</string>
     <string name="system_status_copy">Kopeeri</string>
     <string name="system_status_peers">Eakaaslased</string>
+    <string name="system_status_known">Teada</string>
     <string name="system_status_peer_connected">Ühendatud</string>
     <string name="system_status_peer_disconnected">Ühendus puudub</string>
     <string name="system_status_peer_queued">Järjekorras sõnumid</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Privaatne</string>
     <string name="system_status_reachability_unknown">Tundmatu</string>
     <string name="system_status_relay">Relee kaudu</string>
-    <string name="system_status_mesh">Mesh-eakaaslased</string>
+    <string name="system_status_mesh">Edastus-mesh</string>
     <string name="system_status_broadcast">Viimane edastus</string>
+    <string name="system_status_queued_broadcasts">Järjekorras edastused</string>
 </resources>

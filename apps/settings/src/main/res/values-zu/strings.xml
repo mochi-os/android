@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Landa kusuka ku-packages.mochi-os.org</string>
     <string name="system_status_copy">Kopisha</string>
     <string name="system_status_peers">Abalinganayo</string>
+    <string name="system_status_known">Eyaziwayo</string>
     <string name="system_status_peer_connected">Kuxhunyiwe</string>
     <string name="system_status_peer_disconnected">Kunqanyuliwe</string>
     <string name="system_status_peer_queued">Imilayezo kulayini</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Okuyimfihlo</string>
     <string name="system_status_reachability_unknown">Akwaziwa</string>
     <string name="system_status_relay">Nge-relay</string>
-    <string name="system_status_mesh">Abalinganayo be-mesh</string>
+    <string name="system_status_mesh">I-mesh yokusakaza</string>
     <string name="system_status_broadcast">Ukusakaza kokugcina</string>
+    <string name="system_status_queued_broadcasts">Ukusakaza kulayini</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Λήψη από packages.mochi-os.org</string>
     <string name="system_status_copy">Αντιγραφή</string>
     <string name="system_status_peers">Ομότιμοι</string>
+    <string name="system_status_known">Γνωστοί</string>
     <string name="system_status_peer_connected">Συνδεδεμένο</string>
     <string name="system_status_peer_disconnected">Αποσυνδεδεμένο</string>
     <string name="system_status_peer_queued">Μηνύματα σε αναμονή</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Ιδιωτικό</string>
     <string name="system_status_reachability_unknown">Άγνωστο</string>
     <string name="system_status_relay">Μέσω αναμεταδότη</string>
-    <string name="system_status_mesh">Ομότιμοι πλέγματος</string>
+    <string name="system_status_mesh">Πλέγμα μετάδοσης</string>
     <string name="system_status_broadcast">Τελευταία μετάδοση</string>
+    <string name="system_status_queued_broadcasts">Μεταδόσεις σε αναμονή</string>
 </resources>

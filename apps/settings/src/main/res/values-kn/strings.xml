@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org ನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="system_status_copy">ನಕಲಿಸಿ</string>
     <string name="system_status_peers">ಸಮಾನರು</string>
+    <string name="system_status_known">ತಿಳಿದಿರುವ</string>
     <string name="system_status_peer_connected">ಸಂಪರ್ಕಿತ</string>
     <string name="system_status_peer_disconnected">ಸಂಪರ್ಕ ಕಡಿತಗೊಂಡಿದೆ</string>
     <string name="system_status_peer_queued">ಸರದಿಯಲ್ಲಿರುವ ಸಂದೇಶಗಳು</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">ಖಾಸಗಿ</string>
     <string name="system_status_reachability_unknown">ಅಜ್ಞಾತ</string>
     <string name="system_status_relay">ರಿಲೇ ಮೂಲಕ</string>
-    <string name="system_status_mesh">ಮೆಶ್ ಸಮಾನರು</string>
+    <string name="system_status_mesh">ಪ್ರಸಾರ ಮೆಶ್</string>
     <string name="system_status_broadcast">ಕೊನೆಯ ಪ್ರಸಾರ</string>
+    <string name="system_status_queued_broadcasts">ಸರದಿಯಲ್ಲಿರುವ ಪ್ರಸಾರಗಳು</string>
 </resources>

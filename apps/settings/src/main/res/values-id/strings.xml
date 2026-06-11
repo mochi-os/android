@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Unduh dari packages.mochi-os.org</string>
     <string name="system_status_copy">Salin</string>
     <string name="system_status_peers">Rekan</string>
+    <string name="system_status_known">Dikenal</string>
     <string name="system_status_peer_connected">Terhubung</string>
     <string name="system_status_peer_disconnected">Terputus</string>
     <string name="system_status_peer_queued">Pesan dalam antrean</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Pribadi</string>
     <string name="system_status_reachability_unknown">Tidak diketahui</string>
     <string name="system_status_relay">Melalui relay</string>
-    <string name="system_status_mesh">Rekan mesh</string>
+    <string name="system_status_mesh">Mesh siaran</string>
     <string name="system_status_broadcast">Siaran terakhir</string>
+    <string name="system_status_queued_broadcasts">Siaran dalam antrean</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">د packages.mochi-os.org څخه ډاونلوډ کړئ</string>
     <string name="system_status_copy">کاپي کړئ</string>
     <string name="system_status_peers">ملګري</string>
+    <string name="system_status_known">پېژندل شوي</string>
     <string name="system_status_peer_connected">وصل شو</string>
     <string name="system_status_peer_disconnected">پرېکړل شوی</string>
     <string name="system_status_peer_queued">په کتار کې پیغامونه</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">خصوصي</string>
     <string name="system_status_reachability_unknown">نامعلوم</string>
     <string name="system_status_relay">د ریلې له لارې</string>
-    <string name="system_status_mesh">د mesh ملګري</string>
+    <string name="system_status_mesh">د خپرونې mesh</string>
     <string name="system_status_broadcast">وروستۍ خپرونه</string>
+    <string name="system_status_queued_broadcasts">په کتار کې خپرونې</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Íoslódáil ó packages.mochi-os.org</string>
     <string name="system_status_copy">Cóipeáil</string>
     <string name="system_status_peers">Piaraí</string>
+    <string name="system_status_known">Ar eolas</string>
     <string name="system_status_peer_connected">Ceangailte</string>
     <string name="system_status_peer_disconnected">Dícheangailte</string>
     <string name="system_status_peer_queued">Teachtaireachtaí sa scuaine</string>
@@ -429,6 +430,7 @@
     <string name="system_status_reachability_private">Príobháideach</string>
     <string name="system_status_reachability_unknown">Anaithnid</string>
     <string name="system_status_relay">Trí athsheachadán</string>
-    <string name="system_status_mesh">Piaraí mogalra</string>
+    <string name="system_status_mesh">Mogalra craolacháin</string>
     <string name="system_status_broadcast">Craoladh deireanach</string>
+    <string name="system_status_queued_broadcasts">Craoltaí sa scuaine</string>
 </resources>

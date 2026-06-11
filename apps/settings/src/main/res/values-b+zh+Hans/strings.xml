@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">从 packages.mochi-os.org 下载</string>
     <string name="system_status_copy">复制</string>
     <string name="system_status_peers">对等节点</string>
+    <string name="system_status_known">已知</string>
     <string name="system_status_peer_connected">已连接</string>
     <string name="system_status_peer_disconnected">已断开</string>
     <string name="system_status_peer_queued">队列中的消息</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">私有</string>
     <string name="system_status_reachability_unknown">未知</string>
     <string name="system_status_relay">经由中继</string>
-    <string name="system_status_mesh">Mesh 对等节点</string>
+    <string name="system_status_mesh">广播 Mesh</string>
     <string name="system_status_broadcast">最后广播</string>
+    <string name="system_status_queued_broadcasts">队列中的广播</string>
 </resources>

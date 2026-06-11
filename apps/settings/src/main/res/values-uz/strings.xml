@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org dan yuklab oling</string>
     <string name="system_status_copy">Nusxalash</string>
     <string name="system_status_peers">Hamkorlar</string>
+    <string name="system_status_known">Ma\'lum</string>
     <string name="system_status_peer_connected">Ulangan</string>
     <string name="system_status_peer_disconnected">Uzilgan</string>
     <string name="system_status_peer_queued">Navbatdagi xabarlar</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Shaxsiy</string>
     <string name="system_status_reachability_unknown">Nomaʼlum</string>
     <string name="system_status_relay">Rele orqali</string>
-    <string name="system_status_mesh">Mesh hamkorlari</string>
+    <string name="system_status_mesh">Translyatsiya mesh</string>
     <string name="system_status_broadcast">Oxirgi uzatish</string>
+    <string name="system_status_queued_broadcasts">Navbatdagi uzatishlar</string>
 </resources>

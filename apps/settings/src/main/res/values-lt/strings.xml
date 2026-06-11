@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Atsisiųsti iš packages.mochi-os.org</string>
     <string name="system_status_copy">Kopijuoti</string>
     <string name="system_status_peers">Lygiaverčiai</string>
+    <string name="system_status_known">Žinomi</string>
     <string name="system_status_peer_connected">Prijungta</string>
     <string name="system_status_peer_disconnected">Atjungta</string>
     <string name="system_status_peer_queued">Žinutės eilėje</string>
@@ -428,6 +429,7 @@
     <string name="system_status_reachability_private">Privatus</string>
     <string name="system_status_reachability_unknown">Nežinoma</string>
     <string name="system_status_relay">Per retransliatorių</string>
-    <string name="system_status_mesh">Mesh lygiaverčiai</string>
+    <string name="system_status_mesh">Transliacijos mesh</string>
     <string name="system_status_broadcast">Paskutinė transliacija</string>
+    <string name="system_status_queued_broadcasts">Transliacijos eilėje</string>
 </resources>

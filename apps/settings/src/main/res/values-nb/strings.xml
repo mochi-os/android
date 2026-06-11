@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Last ned fra packages.mochi-os.org</string>
     <string name="system_status_copy">Kopier</string>
     <string name="system_status_peers">Likemenn</string>
+    <string name="system_status_known">Kjente</string>
     <string name="system_status_peer_connected">Tilkoblet</string>
     <string name="system_status_peer_disconnected">Frakoblet</string>
     <string name="system_status_peer_queued">Meldinger i kø</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Ukjent</string>
     <string name="system_status_relay">Via relé</string>
-    <string name="system_status_mesh">Mesh-likemenn</string>
+    <string name="system_status_mesh">Kringkastingsmesh</string>
     <string name="system_status_broadcast">Siste kringkasting</string>
+    <string name="system_status_queued_broadcasts">Kringkastinger i kø</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Gba lati packages.mochi-os.org</string>
     <string name="system_status_copy">Ṣe àdàkọ</string>
     <string name="system_status_peers">Àwọn èkànná</string>
+    <string name="system_status_known">Tí a mọ̀</string>
     <string name="system_status_peer_connected">Tí a so pọ̀</string>
     <string name="system_status_peer_disconnected">Ti ge asopọ̀</string>
     <string name="system_status_peer_queued">Àwọn ìfiránṣẹ́ nínú ìlà</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Aṣírí</string>
     <string name="system_status_reachability_unknown">Aláìmọ̀</string>
     <string name="system_status_relay">Nípasẹ̀ relay</string>
-    <string name="system_status_mesh">Àwọn èkànná mesh</string>
+    <string name="system_status_mesh">Mesh ìgbóhùnsáfẹ́fẹ́</string>
     <string name="system_status_broadcast">Ìgbóhùnsáfẹ́fẹ́ tó kẹ́yìn</string>
+    <string name="system_status_queued_broadcasts">Àwọn ìgbóhùnsáfẹ́fẹ́ nínú ìlà</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Pakua kutoka packages.mochi-os.org</string>
     <string name="system_status_copy">Nakili</string>
     <string name="system_status_peers">Rika</string>
+    <string name="system_status_known">Zinazojulikana</string>
     <string name="system_status_peer_connected">Imeunganishwa</string>
     <string name="system_status_peer_disconnected">Imetenganishwa</string>
     <string name="system_status_peer_queued">Jumbe kwenye foleni</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Ya faragha</string>
     <string name="system_status_reachability_unknown">Haijulikani</string>
     <string name="system_status_relay">Kupitia relay</string>
-    <string name="system_status_mesh">Rika za mesh</string>
+    <string name="system_status_mesh">Mesh ya matangazo</string>
     <string name="system_status_broadcast">Matangazo ya mwisho</string>
+    <string name="system_status_queued_broadcasts">Matangazo kwenye foleni</string>
 </resources>

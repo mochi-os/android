@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Emboguejy packages.mochi-os.org-gui</string>
     <string name="system_status_copy">Kopia</string>
     <string name="system_status_peers">Mboja-kuéra</string>
+    <string name="system_status_known">Ojekuaáva</string>
     <string name="system_status_peer_connected">Oñembojuaju</string>
     <string name="system_status_peer_disconnected">Ndojuajúi</string>
     <string name="system_status_peer_queued">Marandu oha\'arõva</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Ñemiguáva</string>
     <string name="system_status_reachability_unknown">Ojekuaa\'ỹva</string>
     <string name="system_status_relay">Relay rupive</string>
-    <string name="system_status_mesh">Mboja mesh-pegua</string>
+    <string name="system_status_mesh">Mesh ñemyasãi</string>
     <string name="system_status_broadcast">Ñemyasãi paha</string>
+    <string name="system_status_queued_broadcasts">Ñemyasãi oha\'arõva</string>
 </resources>

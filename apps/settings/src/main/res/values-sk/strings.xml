@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Stiahnuť z packages.mochi-os.org</string>
     <string name="system_status_copy">Kopírovať</string>
     <string name="system_status_peers">Vrstevníci</string>
+    <string name="system_status_known">Známe</string>
     <string name="system_status_peer_connected">Pripojené</string>
     <string name="system_status_peer_disconnected">Odpojené</string>
     <string name="system_status_peer_queued">Správy vo fronte</string>
@@ -428,6 +429,7 @@
     <string name="system_status_reachability_private">Súkromné</string>
     <string name="system_status_reachability_unknown">Neznáme</string>
     <string name="system_status_relay">Cez relay</string>
-    <string name="system_status_mesh">Mesh vrstevníci</string>
+    <string name="system_status_mesh">Vysielací mesh</string>
     <string name="system_status_broadcast">Posledné vysielanie</string>
+    <string name="system_status_queued_broadcasts">Vysielania vo fronte</string>
 </resources>

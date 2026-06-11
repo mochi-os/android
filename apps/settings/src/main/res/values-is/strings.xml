@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Hlaða niður frá packages.mochi-os.org</string>
     <string name="system_status_copy">Afrita</string>
     <string name="system_status_peers">Jafningjar</string>
+    <string name="system_status_known">Þekktir</string>
     <string name="system_status_peer_connected">Tengt</string>
     <string name="system_status_peer_disconnected">Aftengt</string>
     <string name="system_status_peer_queued">Skilaboð í biðröð</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Einkamál</string>
     <string name="system_status_reachability_unknown">Óþekkt</string>
     <string name="system_status_relay">Um endurvarpa</string>
-    <string name="system_status_mesh">Mesh-jafningjar</string>
+    <string name="system_status_mesh">Útsendingar-mesh</string>
     <string name="system_status_broadcast">Síðasta útsending</string>
+    <string name="system_status_queued_broadcasts">Útsendingar í biðröð</string>
 </resources>

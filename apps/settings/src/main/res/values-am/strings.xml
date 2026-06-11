@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">ከ packages.mochi-os.org አውርድ</string>
     <string name="system_status_copy">ቅዳ</string>
     <string name="system_status_peers">አቻዎች</string>
+    <string name="system_status_known">የታወቁ</string>
     <string name="system_status_peer_connected">ተገናኝቷል</string>
     <string name="system_status_peer_disconnected">ተቋርጧል</string>
     <string name="system_status_peer_queued">በሰልፍ ላይ ያሉ መልዕክቶች</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">የግል</string>
     <string name="system_status_reachability_unknown">ያልታወቀ</string>
     <string name="system_status_relay">በሪሌይ በኩል</string>
-    <string name="system_status_mesh">የመሽ አቻዎች</string>
+    <string name="system_status_mesh">የስርጭት መሽ</string>
     <string name="system_status_broadcast">የመጨረሻ ስርጭት</string>
+    <string name="system_status_queued_broadcasts">በሰልፍ ላይ ያሉ ስርጭቶች</string>
 </resources>

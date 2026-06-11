@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org-manta uray chaskiy</string>
     <string name="system_status_copy">Copiay</string>
     <string name="system_status_peers">Khuyaqkuna</string>
+    <string name="system_status_known">Riqsisqa</string>
     <string name="system_status_peer_connected">Tinkichisqa</string>
     <string name="system_status_peer_disconnected">Mana tinkichisqa</string>
     <string name="system_status_peer_queued">Suyana siq\'ipi willakuykuna</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">Pakasqa</string>
     <string name="system_status_reachability_unknown">Mana riqsisqa</string>
     <string name="system_status_relay">Relay nisqawan</string>
-    <string name="system_status_mesh">Mesh khuyaqkuna</string>
+    <string name="system_status_mesh">Ch\'eqechiy mesh</string>
     <string name="system_status_broadcast">Qhipa ch\'eqechiy</string>
+    <string name="system_status_queued_broadcasts">Suyana siq\'ipi ch\'eqechiykuna</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Спампаваць з packages.mochi-os.org</string>
     <string name="system_status_copy">Капіраваць</string>
     <string name="system_status_peers">Партнёры</string>
+    <string name="system_status_known">Вядомыя</string>
     <string name="system_status_peer_connected">Падключана</string>
     <string name="system_status_peer_disconnected">Адключана</string>
     <string name="system_status_peer_queued">Паведамленні ў чарзе</string>
@@ -428,6 +429,7 @@
     <string name="system_status_reachability_private">Прыватны</string>
     <string name="system_status_reachability_unknown">Невядома</string>
     <string name="system_status_relay">Праз рэтранслятар</string>
-    <string name="system_status_mesh">Удзельнікі mesh</string>
+    <string name="system_status_mesh">Сетка трансляцыі</string>
     <string name="system_status_broadcast">Апошняя трансляцыя</string>
+    <string name="system_status_queued_broadcasts">Трансляцыі ў чарзе</string>
 </resources>

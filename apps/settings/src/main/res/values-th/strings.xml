@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">ดาวน์โหลดจาก packages.mochi-os.org</string>
     <string name="system_status_copy">คัดลอก</string>
     <string name="system_status_peers">พีร์</string>
+    <string name="system_status_known">รู้จัก</string>
     <string name="system_status_peer_connected">เชื่อมต่อแล้ว</string>
     <string name="system_status_peer_disconnected">ตัดการเชื่อมต่อแล้ว</string>
     <string name="system_status_peer_queued">ข้อความในคิว</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">ส่วนตัว</string>
     <string name="system_status_reachability_unknown">ไม่ทราบ</string>
     <string name="system_status_relay">ผ่านรีเลย์</string>
-    <string name="system_status_mesh">พีร์ mesh</string>
+    <string name="system_status_mesh">เมชบรอดแคสต์</string>
     <string name="system_status_broadcast">บรอดแคสต์ล่าสุด</string>
+    <string name="system_status_queued_broadcasts">บรอดแคสต์ในคิว</string>
 </resources>

@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Sauke daga packages.mochi-os.org</string>
     <string name="system_status_copy">Kwafi</string>
     <string name="system_status_peers">Takwarori</string>
+    <string name="system_status_known">Sananne</string>
     <string name="system_status_peer_connected">An haɗa</string>
     <string name="system_status_peer_disconnected">An cire haɗi</string>
     <string name="system_status_peer_queued">Saƙonni a jerin gwano</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Na sirri</string>
     <string name="system_status_reachability_unknown">Ba a sani ba</string>
     <string name="system_status_relay">Ta hanyar relay</string>
-    <string name="system_status_mesh">Takwarorin mesh</string>
+    <string name="system_status_mesh">Mesh na watsawa</string>
     <string name="system_status_broadcast">Watsa na ƙarshe</string>
+    <string name="system_status_queued_broadcasts">Watsawa a jerin gwano</string>
 </resources>

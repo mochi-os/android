@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Telechaje soti nan packages.mochi-os.org</string>
     <string name="system_status_copy">Kopye</string>
     <string name="system_status_peers">Patnè yo</string>
+    <string name="system_status_known">Konnen</string>
     <string name="system_status_peer_connected">Konekte</string>
     <string name="system_status_peer_disconnected">Dekonekte</string>
     <string name="system_status_peer_queued">Mesaj nan keu</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Prive</string>
     <string name="system_status_reachability_unknown">Enkoni</string>
     <string name="system_status_relay">Atravè relè</string>
-    <string name="system_status_mesh">Patnè mesh yo</string>
+    <string name="system_status_mesh">Mesh difizyon</string>
     <string name="system_status_broadcast">Dènye difizyon</string>
+    <string name="system_status_queued_broadcasts">Difizyon nan keu</string>
 </resources>

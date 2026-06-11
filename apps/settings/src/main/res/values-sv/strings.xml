@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Hämta från packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiera</string>
     <string name="system_status_peers">Peers</string>
+    <string name="system_status_known">Kända</string>
     <string name="system_status_peer_connected">Ansluten</string>
     <string name="system_status_peer_disconnected">Frånkopplad</string>
     <string name="system_status_peer_queued">Meddelanden i kö</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Okänd</string>
     <string name="system_status_relay">Via relä</string>
-    <string name="system_status_mesh">Mesh-peers</string>
+    <string name="system_status_mesh">Broadcast-mesh</string>
     <string name="system_status_broadcast">Senaste utsändning</string>
+    <string name="system_status_queued_broadcasts">Utsändningar i kö</string>
 </resources>

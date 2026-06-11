@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org වෙතින් බාගත කරන්න</string>
     <string name="system_status_copy">පිටපත් කරන්න</string>
     <string name="system_status_peers">සම</string>
+    <string name="system_status_known">දන්නා</string>
     <string name="system_status_peer_connected">සම්බන්ධිතයි</string>
     <string name="system_status_peer_disconnected">විසන්ධියි</string>
     <string name="system_status_peer_queued">පෝලිමේ පණිවිඩ</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">පෞද්ගලික</string>
     <string name="system_status_reachability_unknown">නොදන්නා</string>
     <string name="system_status_relay">රිලේ හරහා</string>
-    <string name="system_status_mesh">Mesh සම</string>
+    <string name="system_status_mesh">විකාශ mesh</string>
     <string name="system_status_broadcast">අවසන් විකාශය</string>
+    <string name="system_status_queued_broadcasts">පෝලිමේ විකාශ</string>
 </resources>

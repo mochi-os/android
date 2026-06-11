@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org saytından yükləyin</string>
     <string name="system_status_copy">Kopyala</string>
     <string name="system_status_peers">Taylar</string>
+    <string name="system_status_known">Məlum</string>
     <string name="system_status_peer_connected">Qoşuldu</string>
     <string name="system_status_peer_disconnected">Bağlantı kəsilib</string>
     <string name="system_status_peer_queued">Növbədəki mesajlar</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Şəxsi</string>
     <string name="system_status_reachability_unknown">Naməlum cihaz</string>
     <string name="system_status_relay">Relay vasitəsilə</string>
-    <string name="system_status_mesh">Mesh tayları</string>
+    <string name="system_status_mesh">Yayım mesh</string>
     <string name="system_status_broadcast">Son yayım</string>
+    <string name="system_status_queued_broadcasts">Növbədəki yayımlar</string>
 </resources>

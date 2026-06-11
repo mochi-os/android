@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">داگرتن لە packages.mochi-os.org</string>
     <string name="system_status_copy">کۆپیکردن</string>
     <string name="system_status_peers">هاوتاکان</string>
+    <string name="system_status_known">ناسراو</string>
     <string name="system_status_peer_connected">پەیوەستکراو</string>
     <string name="system_status_peer_disconnected">پەیوەست نییە</string>
     <string name="system_status_peer_queued">پەیامەکانی ناو ڕیز</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">تایبەت</string>
     <string name="system_status_reachability_unknown">نەناسراو</string>
     <string name="system_status_relay">لە ڕێگەی relay</string>
-    <string name="system_status_mesh">هاوتاکانی mesh</string>
+    <string name="system_status_mesh">تۆڕی بڵاوکردنەوە</string>
     <string name="system_status_broadcast">دوایین بڵاوکردنەوە</string>
+    <string name="system_status_queued_broadcasts">بڵاوکردنەوەکانی ناو ڕیز</string>
 </resources>

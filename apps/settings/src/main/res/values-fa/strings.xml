@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">دانلود از packages.mochi-os.org</string>
     <string name="system_status_copy">کپی</string>
     <string name="system_status_peers">همتاها</string>
+    <string name="system_status_known">شناخته‌شده</string>
     <string name="system_status_peer_connected">متصل</string>
     <string name="system_status_peer_disconnected">قطع شده</string>
     <string name="system_status_peer_queued">پیام‌های در صف</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">خصوصی</string>
     <string name="system_status_reachability_unknown">ناشناخته</string>
     <string name="system_status_relay">از طریق رله</string>
-    <string name="system_status_mesh">همتاهای مش</string>
+    <string name="system_status_mesh">مش پخش</string>
     <string name="system_status_broadcast">آخرین پخش</string>
+    <string name="system_status_queued_broadcasts">پخش‌های در صف</string>
 </resources>

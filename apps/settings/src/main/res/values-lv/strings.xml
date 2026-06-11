@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Lejupielādēt no packages.mochi-os.org</string>
     <string name="system_status_copy">Kopēt</string>
     <string name="system_status_peers">Vienlīdzīgie</string>
+    <string name="system_status_known">Zināmie</string>
     <string name="system_status_peer_connected">Savienots</string>
     <string name="system_status_peer_disconnected">Atvienots</string>
     <string name="system_status_peer_queued">Ziņojumi rindā</string>
@@ -427,6 +428,7 @@
     <string name="system_status_reachability_private">Privāts</string>
     <string name="system_status_reachability_unknown">Nezināms</string>
     <string name="system_status_relay">Caur releju</string>
-    <string name="system_status_mesh">Mesh vienlīdzīgie</string>
+    <string name="system_status_mesh">Apraides mesh</string>
     <string name="system_status_broadcast">Pēdējā apraide</string>
+    <string name="system_status_queued_broadcasts">Apraides rindā</string>
 </resources>

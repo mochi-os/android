@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org မှ ဒေါင်းလုဒ်လုပ်ပါ</string>
     <string name="system_status_copy">ကူးမည်</string>
     <string name="system_status_peers">ပီယာများ</string>
+    <string name="system_status_known">သိရှိ</string>
     <string name="system_status_peer_connected">ချိတ်ဆက်ပြီး</string>
     <string name="system_status_peer_disconnected">ချိတ်ဆက်မှု ပြတ်တောက်ပြီး</string>
     <string name="system_status_peer_queued">တန်းစီထားသော မက်ဆေ့ဂျ်များ</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">သီးသန့်</string>
     <string name="system_status_reachability_unknown">မသိရသော</string>
     <string name="system_status_relay">Relay မှတဆင့်</string>
-    <string name="system_status_mesh">Mesh ပီယာများ</string>
+    <string name="system_status_mesh">ထုတ်လွှင့်မှု mesh</string>
     <string name="system_status_broadcast">နောက်ဆုံး ထုတ်လွှင့်မှု</string>
+    <string name="system_status_queued_broadcasts">တန်းစီထားသော ထုတ်လွှင့်မှုများ</string>
 </resources>

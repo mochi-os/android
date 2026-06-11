@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Ji packages.mochi-os.org daxe</string>
     <string name="system_status_copy">Kopî bike</string>
     <string name="system_status_peers">Hevpişk</string>
+    <string name="system_status_known">Naskirî</string>
     <string name="system_status_peer_connected">Girêdayî</string>
     <string name="system_status_peer_disconnected">Veqetandî</string>
     <string name="system_status_peer_queued">Peyamên di dorê de</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Taybet</string>
     <string name="system_status_reachability_unknown">Nediyar</string>
     <string name="system_status_relay">Bi rêya relay</string>
-    <string name="system_status_mesh">Hevpişkên mesh</string>
+    <string name="system_status_mesh">Mesh-a weşanê</string>
     <string name="system_status_broadcast">Weşana dawî</string>
+    <string name="system_status_queued_broadcasts">Weşanên di dorê de</string>
 </resources>

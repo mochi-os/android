@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Descargar desde packages.mochi-os.org</string>
     <string name="system_status_copy">Copiar</string>
     <string name="system_status_peers">Pares</string>
+    <string name="system_status_known">Conocidos</string>
     <string name="system_status_peer_connected">Conectado</string>
     <string name="system_status_peer_disconnected">Desconectado</string>
     <string name="system_status_peer_queued">Mensajes en cola</string>
@@ -427,6 +428,7 @@
     <string name="system_status_reachability_private">Privado</string>
     <string name="system_status_reachability_unknown">Desconocido</string>
     <string name="system_status_relay">Vía relay</string>
-    <string name="system_status_mesh">Pares de la malla</string>
+    <string name="system_status_mesh">Malla de difusión</string>
     <string name="system_status_broadcast">Última difusión</string>
+    <string name="system_status_queued_broadcasts">Difusiones en cola</string>
 </resources>

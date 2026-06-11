@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">ទាញយកពី packages.mochi-os.org</string>
     <string name="system_status_copy">ចម្លង</string>
     <string name="system_status_peers">មិត្តស្មើ</string>
+    <string name="system_status_known">ស្គាល់</string>
     <string name="system_status_peer_connected">បានភ្ជាប់</string>
     <string name="system_status_peer_disconnected">បានផ្ដាច់</string>
     <string name="system_status_peer_queued">សារក្នុងជួរ</string>
@@ -425,6 +426,7 @@
     <string name="system_status_reachability_private">ឯកជន</string>
     <string name="system_status_reachability_unknown">មិនស្គាល់</string>
     <string name="system_status_relay">តាមរយៈ relay</string>
-    <string name="system_status_mesh">មិត្តស្មើ mesh</string>
+    <string name="system_status_mesh">Mesh ផ្សាយ</string>
     <string name="system_status_broadcast">ការផ្សាយចុងក្រោយ</string>
+    <string name="system_status_queued_broadcasts">ការផ្សាយក្នុងជួរ</string>
 </resources>

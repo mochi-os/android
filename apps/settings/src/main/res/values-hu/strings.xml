@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Letöltés a packages.mochi-os.org címről</string>
     <string name="system_status_copy">Másolás</string>
     <string name="system_status_peers">Társak</string>
+    <string name="system_status_known">Ismert</string>
     <string name="system_status_peer_connected">Csatlakoztatva</string>
     <string name="system_status_peer_disconnected">Leválasztva</string>
     <string name="system_status_peer_queued">Sorban álló üzenetek</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Privát</string>
     <string name="system_status_reachability_unknown">Ismeretlen</string>
     <string name="system_status_relay">Relén keresztül</string>
-    <string name="system_status_mesh">Mesh társak</string>
+    <string name="system_status_mesh">Közvetítési mesh</string>
     <string name="system_status_broadcast">Utolsó közvetítés</string>
+    <string name="system_status_queued_broadcasts">Sorban álló közvetítések</string>
 </resources>

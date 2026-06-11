@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Luchdaich a-nuas o packages.mochi-os.org</string>
     <string name="system_status_copy">Dèan lethbhreac</string>
     <string name="system_status_peers">Co-aoisean</string>
+    <string name="system_status_known">Aithnichte</string>
     <string name="system_status_peer_connected">Ceangailte</string>
     <string name="system_status_peer_disconnected">Gun cheangal</string>
     <string name="system_status_peer_queued">Teachdaireachdan sa chiutha</string>
@@ -428,6 +429,7 @@
     <string name="system_status_reachability_private">Prìobhaideach</string>
     <string name="system_status_reachability_unknown">Neo-aithnichte</string>
     <string name="system_status_relay">Tro ath-sheachadan</string>
-    <string name="system_status_mesh">Co-aoisean a\' mhogail</string>
+    <string name="system_status_mesh">Mogal craolaidh</string>
     <string name="system_status_broadcast">An craoladh mu dheireadh</string>
+    <string name="system_status_queued_broadcasts">Craolaidhean sa chiutha</string>
 </resources>

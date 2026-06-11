@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">Preuzmite sa packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiraj</string>
     <string name="system_status_peers">Ravnopravni</string>
+    <string name="system_status_known">Poznato</string>
     <string name="system_status_peer_connected">Povezano</string>
     <string name="system_status_peer_disconnected">Nije povezano</string>
     <string name="system_status_peer_queued">Poruke u redu čekanja</string>
@@ -427,6 +428,7 @@
     <string name="system_status_reachability_private">Privatno</string>
     <string name="system_status_reachability_unknown">Nepoznato</string>
     <string name="system_status_relay">Putem releja</string>
-    <string name="system_status_mesh">Mesh ravnopravni</string>
+    <string name="system_status_mesh">Mesh emitiranja</string>
     <string name="system_status_broadcast">Posljednje emitiranje</string>
+    <string name="system_status_queued_broadcasts">Emitiranja u redu čekanja</string>
 </resources>

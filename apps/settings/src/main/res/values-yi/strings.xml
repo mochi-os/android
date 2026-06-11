@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">לאָדט אַראָפּ פֿון packages.mochi-os.org</string>
     <string name="system_status_copy">קאָפּירן</string>
     <string name="system_status_peers">גלייכע</string>
+    <string name="system_status_known">באקאנט</string>
     <string name="system_status_peer_connected">פֿאַרבונדן</string>
     <string name="system_status_peer_disconnected">אפגעשניטן</string>
     <string name="system_status_peer_queued">מעלדונגען אין ריי</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">פּריוואַט</string>
     <string name="system_status_reachability_unknown">אומבאַקאַנט</string>
     <string name="system_status_relay">דורך רעלע</string>
-    <string name="system_status_mesh">mesh גלייכע</string>
+    <string name="system_status_mesh">בראָדקאַסט mesh</string>
     <string name="system_status_broadcast">לעצטע בראָדקאַסט</string>
+    <string name="system_status_queued_broadcasts">בראָדקאַסטן אין ריי</string>
 </resources>

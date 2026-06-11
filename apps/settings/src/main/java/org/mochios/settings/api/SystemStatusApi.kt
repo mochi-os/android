@@ -46,6 +46,7 @@ data class NetworkInfo(
     val relay: Boolean = false,
     val mesh: Int = 0,
     val last: Long = 0,
+    val queued: Int = 0,
 )
 
 data class ServerCounts(

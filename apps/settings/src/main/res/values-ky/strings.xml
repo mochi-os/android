@@ -133,6 +133,7 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org дарегинен жүктөп алуу</string>
     <string name="system_status_copy">Көчүрүү</string>
     <string name="system_status_peers">Теңдер</string>
+    <string name="system_status_known">Белгилүү</string>
     <string name="system_status_peer_connected">Байланышты</string>
     <string name="system_status_peer_disconnected">Ажыратылды</string>
     <string name="system_status_peer_queued">Кезектеги билдирүүлөр</string>
@@ -426,6 +427,7 @@
     <string name="system_status_reachability_private">Купуя</string>
     <string name="system_status_reachability_unknown">Белгисиз</string>
     <string name="system_status_relay">Реле аркылуу</string>
-    <string name="system_status_mesh">Mesh теңдери</string>
+    <string name="system_status_mesh">Берүү mesh</string>
     <string name="system_status_broadcast">Акыркы берүү</string>
+    <string name="system_status_queued_broadcasts">Кезектеги берүүлөр</string>
 </resources>
