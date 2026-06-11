@@ -72,6 +72,7 @@ fun AuthNavigation(
                 onToggleRecovery = viewModel::toggleRecovery,
                 onUpdateRecoveryCode = viewModel::updateRecoveryCode,
                 onVerifyRecovery = viewModel::verifyRecoveryCode,
+                onBack = viewModel::backToEmailEntry,
                 oauthScheme = oauthScheme,
                 onStartOAuth = viewModel::startOAuth
             )

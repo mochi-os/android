@@ -41,6 +41,16 @@
     <string name="auth_authenticator_code">Authenticator code</string>
     <string name="auth_recovery_code">Recovery code</string>
     <string name="auth_recover_account">Recover account</string>
+    <string name="auth_login_title">Log in to Mochi</string>
+    <string name="auth_next">Next</string>
+    <string name="auth_or_log_in_with">Or log in with</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Use a passkey</string>
+    <string name="auth_email_me_a_code">Email me a code</string>
+    <string name="auth_or_enter_authenticator_code">Or enter authenticator code</string>
+    <string name="auth_log_in">Log in</string>
+    <string name="auth_back">Back</string>
+    <string name="auth_lost_access_recovery">Lost access? Use a recovery code</string>
 
     <!-- Auth: identity creation -->
     <string name="auth_create_identity_title">Create your identity</string>

@@ -1,6 +1,7 @@
 package org.mochios.android.ui.auth
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -9,14 +10,21 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -25,13 +33,30 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.CodeInputBoxes
 
+/**
+ * Sign-in screen rendered entirely from the server's method config.
+ *
+ * Two states share this composable:
+ *  - **Initial** (`beginResult == null`): global [AuthUiState.methods]
+ *    ([org.mochios.android.auth.MethodsResponse]) drives the email field,
+ *    passkey button and one button per enabled OAuth provider.
+ *  - **Per-account** (`beginResult != null`): the account's
+ *    [BeginResult.allowed] list drives the email-code / authenticator / passkey
+ *    options, with recovery gated on the global `recovery` flag.
+ *
+ * The MFA continuation (`mfaPartial != null`) keeps its own section.
+ */
 @Composable
 fun LoginScreen(
     uiState: AuthUiState,
@@ -46,14 +71,10 @@ fun LoginScreen(
     onToggleRecovery: () -> Unit,
     onUpdateRecoveryCode: (String) -> Unit,
     onVerifyRecovery: () -> Unit,
+    onBack: () -> Unit,
     oauthScheme: String? = null,
     onStartOAuth: (String, String) -> Unit = { _, _ -> }
 ) {
-    val oauthProviders = uiState.methods?.oauth.orEmpty()
-        .filterValues { it }
-        .keys
-        .toList()
-        .sorted()
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -63,84 +84,53 @@ fun LoginScreen(
     ) {
         Spacer(modifier = Modifier.height(48.dp))
 
-        Text(
-            text = stringResource(R.string.auth_sign_in),
-            style = MaterialTheme.typography.headlineMedium
-        )
-
-        Spacer(modifier = Modifier.height(32.dp))
-
-        if (uiState.beginResult == null) {
-            EmailEntry(
-                email = uiState.email,
-                isLoading = uiState.isLoading,
-                onUpdateEmail = onUpdateEmail,
-                onContinue = onBeginLogin
-            )
-            if (oauthProviders.isNotEmpty() && oauthScheme != null) {
-                Spacer(modifier = Modifier.height(16.dp))
-                DividerWithText(stringResource(R.string.common_or))
-                Spacer(modifier = Modifier.height(16.dp))
-                oauthProviders.forEach { provider ->
-                    OutlinedButton(
-                        onClick = { onStartOAuth(provider, oauthScheme) },
-                        enabled = !uiState.isLoading,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Text(providerLabel(provider))
-                    }
-                    Spacer(modifier = Modifier.height(8.dp))
-                }
+        when {
+            uiState.mfaPartial != null -> {
+                Text(
+                    text = stringResource(R.string.auth_sign_in),
+                    style = MaterialTheme.typography.headlineMedium
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+                MfaSection(uiState = uiState)
             }
-        } else if (uiState.mfaPartial != null) {
-            MfaSection(
-                uiState = uiState,
-                onUpdateEmailCode = { /* handled through parent */ },
-                onUpdateTotpCode = { /* handled through parent */ },
-                onComplete = { /* handled through parent */ }
-            )
-        } else {
-            val methods = uiState.beginResult.methods
-            val hasEmail = methods.contains("email")
-            val hasTotp = methods.contains("totp")
-            val hasPasskey = uiState.beginResult.hasPasskey
 
-            if (hasEmail) {
-                EmailCodeSection(
+            uiState.beginResult == null -> {
+                Text(
+                    text = stringResource(R.string.auth_login_title),
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+                InitialMethods(
+                    uiState = uiState,
+                    onUpdateEmail = onUpdateEmail,
+                    onBeginLogin = onBeginLogin,
+                    onBeginPasskey = onBeginPasskey,
+                    oauthScheme = oauthScheme,
+                    onStartOAuth = onStartOAuth
+                )
+            }
+
+            else -> {
+                Text(
+                    text = uiState.email,
+                    style = MaterialTheme.typography.titleLarge,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+                AccountMethods(
                     uiState = uiState,
                     onRequestCode = onRequestCode,
                     onUpdateCode = onUpdateCode,
-                    onVerifyCode = onVerifyCode
+                    onVerifyCode = onVerifyCode,
+                    onUpdateTotpCode = onUpdateTotpCode,
+                    onVerifyTotp = onVerifyTotp,
+                    onBeginPasskey = onBeginPasskey,
+                    onToggleRecovery = onToggleRecovery,
+                    onUpdateRecoveryCode = onUpdateRecoveryCode,
+                    onVerifyRecovery = onVerifyRecovery,
+                    onBack = onBack
                 )
-            }
-
-            if (hasTotp) {
-                if (hasEmail) {
-                    Spacer(modifier = Modifier.height(16.dp))
-                    DividerWithText(stringResource(R.string.common_or))
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                TotpSection(
-                    totpCode = uiState.totpCode,
-                    isLoading = uiState.isLoading,
-                    onUpdateCode = onUpdateTotpCode,
-                    onVerify = onVerifyTotp
-                )
-            }
-
-            if (hasPasskey) {
-                if (hasEmail || hasTotp) {
-                    Spacer(modifier = Modifier.height(16.dp))
-                    DividerWithText(stringResource(R.string.common_or))
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-                OutlinedButton(
-                    onClick = onBeginPasskey,
-                    enabled = !uiState.isLoading,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(stringResource(R.string.auth_sign_in_with_passkey))
-                }
             }
         }
 
@@ -148,183 +138,211 @@ fun LoginScreen(
             Spacer(modifier = Modifier.height(12.dp))
             AuthErrorBanner(error = uiState.error)
         }
-
-        if (uiState.beginResult != null) {
-            Spacer(modifier = Modifier.height(24.dp))
-            TextButton(onClick = onToggleRecovery) {
-                Text(
-                    if (uiState.showRecovery) stringResource(R.string.auth_back_to_sign_in)
-                    else stringResource(R.string.auth_use_recovery_code)
-                )
-            }
-
-            if (uiState.showRecovery) {
-                RecoverySection(
-                    recoveryCode = uiState.recoveryCode,
-                    email = uiState.email,
-                    isLoading = uiState.isLoading,
-                    onUpdateCode = onUpdateRecoveryCode,
-                    onVerify = onVerifyRecovery
-                )
-            }
-        }
     }
 }
 
 @Composable
-private fun EmailEntry(
-    email: String,
-    isLoading: Boolean,
+private fun InitialMethods(
+    uiState: AuthUiState,
     onUpdateEmail: (String) -> Unit,
-    onContinue: () -> Unit
+    onBeginLogin: () -> Unit,
+    onBeginPasskey: () -> Unit,
+    oauthScheme: String?,
+    onStartOAuth: (String, String) -> Unit
 ) {
-    OutlinedTextField(
-        value = email,
-        onValueChange = onUpdateEmail,
-        label = { Text(stringResource(R.string.auth_email)) },
-        singleLine = true,
-        keyboardOptions = KeyboardOptions(
-            keyboardType = KeyboardType.Email,
-            imeAction = ImeAction.Go
-        ),
-        keyboardActions = KeyboardActions(onGo = { onContinue() }),
-        modifier = Modifier.fillMaxWidth()
-    )
+    val methods = uiState.methods
+    val showEmail = methods?.email ?: true
+    val showPasskey = methods?.passkey ?: false
+    val oauthProviders = methods?.oauth.orEmpty()
+        .filterValues { enabled -> enabled }
+        .keys
+        .toList()
+        .sorted()
 
-    Spacer(modifier = Modifier.height(16.dp))
+    if (showEmail) {
+        OutlinedTextField(
+            value = uiState.email,
+            onValueChange = onUpdateEmail,
+            label = { Text(stringResource(R.string.auth_email)) },
+            singleLine = true,
+            keyboardOptions = KeyboardOptions(
+                keyboardType = KeyboardType.Email,
+                imeAction = ImeAction.Go
+            ),
+            keyboardActions = KeyboardActions(onGo = { onBeginLogin() }),
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        PrimaryButton(
+            text = stringResource(R.string.auth_next),
+            isLoading = uiState.isLoading,
+            enabled = uiState.email.isNotBlank(),
+            trailingIcon = Icons.AutoMirrored.Filled.ArrowForward,
+            onClick = onBeginLogin
+        )
+    }
 
-    Button(
-        onClick = onContinue,
-        enabled = !isLoading && email.isNotBlank(),
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        if (isLoading) {
-            CircularProgressIndicator(
-                modifier = Modifier.height(20.dp),
-                strokeWidth = 2.dp,
-                color = MaterialTheme.colorScheme.onPrimary
+    val hasAlternatives = showPasskey || (oauthProviders.isNotEmpty() && oauthScheme != null)
+    if (hasAlternatives) {
+        if (showEmail) {
+            Spacer(modifier = Modifier.height(16.dp))
+            DividerWithText(stringResource(R.string.auth_or_log_in_with))
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+        if (showPasskey) {
+            MethodButton(
+                text = stringResource(R.string.auth_passkey),
+                iconRes = R.drawable.ic_passkey,
+                enabled = !uiState.isLoading,
+                onClick = onBeginPasskey
             )
-        } else {
-            Text(stringResource(R.string.auth_continue))
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+        if (oauthScheme != null) {
+            oauthProviders.forEach { provider ->
+                MethodButton(
+                    text = providerLabel(provider),
+                    iconRes = providerIcon(provider),
+                    iconVector = if (providerIcon(provider) == null) {
+                        Icons.Default.AccountCircle
+                    } else {
+                        null
+                    },
+                    enabled = !uiState.isLoading,
+                    onClick = { onStartOAuth(provider, oauthScheme) }
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+            }
         }
     }
 }
 
 @Composable
-private fun EmailCodeSection(
+private fun AccountMethods(
     uiState: AuthUiState,
     onRequestCode: () -> Unit,
     onUpdateCode: (String) -> Unit,
-    onVerifyCode: () -> Unit
+    onVerifyCode: () -> Unit,
+    onUpdateTotpCode: (String) -> Unit,
+    onVerifyTotp: () -> Unit,
+    onBeginPasskey: () -> Unit,
+    onToggleRecovery: () -> Unit,
+    onUpdateRecoveryCode: (String) -> Unit,
+    onVerifyRecovery: () -> Unit,
+    onBack: () -> Unit
 ) {
-    if (!uiState.codeSent) {
-        Text(
-            text = stringResource(R.string.auth_sign_in_with_email_code),
-            style = MaterialTheme.typography.titleSmall
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        Button(
-            onClick = onRequestCode,
-            enabled = !uiState.isLoading,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            if (uiState.isLoading) {
-                CircularProgressIndicator(
-                    modifier = Modifier.height(20.dp),
-                    strokeWidth = 2.dp,
-                    color = MaterialTheme.colorScheme.onPrimary
-                )
-            } else {
-                Text(stringResource(R.string.auth_send_code))
-            }
-        }
-    } else {
-        Text(
-            text = stringResource(R.string.auth_check_email),
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(modifier = Modifier.height(12.dp))
-        OutlinedTextField(
-            value = uiState.code,
-            onValueChange = onUpdateCode,
-            label = { Text(stringResource(R.string.auth_verification_code)) },
-            singleLine = true,
-            keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Text,
-                imeAction = ImeAction.Go
-            ),
-            keyboardActions = KeyboardActions(onGo = { onVerifyCode() }),
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(modifier = Modifier.height(12.dp))
-        Button(
-            onClick = onVerifyCode,
-            enabled = !uiState.isLoading && uiState.code.isNotBlank(),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            if (uiState.isLoading) {
-                CircularProgressIndicator(
-                    modifier = Modifier.height(20.dp),
-                    strokeWidth = 2.dp,
-                    color = MaterialTheme.colorScheme.onPrimary
-                )
-            } else {
-                Text(stringResource(R.string.auth_verify))
-            }
-        }
-    }
-}
+    val begin = uiState.beginResult ?: return
+    val hasEmail = begin.allowed.contains("email")
+    val hasTotp = begin.allowed.contains("totp")
+    val showPasskey = begin.hasPasskey && begin.allowed.contains("passkey")
+    val hasRecovery = uiState.methods?.recovery ?: false
+    // The single Log-in button verifies whichever factor the user engaged: the
+    // email code once it's been requested, otherwise the authenticator code.
+    val emailActive = uiState.codeSent
 
-@Composable
-private fun TotpSection(
-    totpCode: String,
-    isLoading: Boolean,
-    onUpdateCode: (String) -> Unit,
-    onVerify: () -> Unit
-) {
-    Text(
-        text = stringResource(R.string.auth_authenticator_app),
-        style = MaterialTheme.typography.titleSmall
-    )
-    Spacer(modifier = Modifier.height(8.dp))
-    OutlinedTextField(
-        value = totpCode,
-        onValueChange = onUpdateCode,
-        label = { Text(stringResource(R.string.auth_six_digit_code)) },
-        singleLine = true,
-        keyboardOptions = KeyboardOptions(
-            keyboardType = KeyboardType.Number,
-            imeAction = ImeAction.Go
-        ),
-        keyboardActions = KeyboardActions(onGo = { onVerify() }),
-        modifier = Modifier.fillMaxWidth()
-    )
-    Spacer(modifier = Modifier.height(12.dp))
-    Button(
-        onClick = onVerify,
-        enabled = !isLoading && totpCode.length == 6,
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        if (isLoading) {
-            CircularProgressIndicator(
-                modifier = Modifier.height(20.dp),
-                strokeWidth = 2.dp,
-                color = MaterialTheme.colorScheme.onPrimary
+    if (hasEmail) {
+        if (!uiState.codeSent) {
+            MethodButton(
+                text = stringResource(R.string.auth_email_me_a_code),
+                iconVector = Icons.Default.MailOutline,
+                enabled = !uiState.isLoading,
+                onClick = onRequestCode
             )
         } else {
-            Text(stringResource(R.string.auth_verify))
+            Text(
+                text = stringResource(R.string.auth_check_email),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+            OutlinedTextField(
+                value = uiState.code,
+                onValueChange = onUpdateCode,
+                label = { Text(stringResource(R.string.auth_verification_code)) },
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(
+                    keyboardType = KeyboardType.Text,
+                    imeAction = ImeAction.Go
+                ),
+                keyboardActions = KeyboardActions(onGo = { onVerifyCode() }),
+                modifier = Modifier.fillMaxWidth()
+            )
         }
+    }
+
+    if (hasTotp) {
+        if (hasEmail) {
+            Spacer(modifier = Modifier.height(16.dp))
+            DividerWithText(stringResource(R.string.auth_or_enter_authenticator_code))
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+        CodeInputBoxes(
+            value = uiState.totpCode,
+            onValueChange = onUpdateTotpCode,
+            enabled = !uiState.isLoading,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+
+    if (hasEmail || hasTotp) {
+        Spacer(modifier = Modifier.height(16.dp))
+        PrimaryButton(
+            text = stringResource(R.string.auth_log_in),
+            isLoading = uiState.isLoading,
+            enabled = if (emailActive) {
+                uiState.code.isNotBlank()
+            } else {
+                uiState.totpCode.length == 6
+            },
+            trailingIcon = Icons.AutoMirrored.Filled.ArrowForward,
+            onClick = { if (emailActive) onVerifyCode() else onVerifyTotp() }
+        )
+    }
+
+    if (showPasskey) {
+        Spacer(modifier = Modifier.height(16.dp))
+        DividerWithText(stringResource(R.string.auth_or_log_in_with))
+        Spacer(modifier = Modifier.height(16.dp))
+        MethodButton(
+            text = stringResource(R.string.auth_use_passkey),
+            iconRes = R.drawable.ic_passkey,
+            enabled = !uiState.isLoading,
+            onClick = onBeginPasskey
+        )
+    }
+
+    if (hasRecovery) {
+        Spacer(modifier = Modifier.height(16.dp))
+        TextButton(onClick = onToggleRecovery) {
+            Text(
+                if (uiState.showRecovery) stringResource(R.string.auth_back_to_sign_in)
+                else stringResource(R.string.auth_lost_access_recovery)
+            )
+        }
+        if (uiState.showRecovery) {
+            RecoverySection(
+                recoveryCode = uiState.recoveryCode,
+                isLoading = uiState.isLoading,
+                onUpdateCode = onUpdateRecoveryCode,
+                onVerify = onVerifyRecovery
+            )
+        }
+    }
+
+    Spacer(modifier = Modifier.height(16.dp))
+    TextButton(onClick = onBack) {
+        Icon(
+            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+            contentDescription = null,
+            modifier = Modifier.size(18.dp)
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(stringResource(R.string.auth_back))
     }
 }
 
 @Composable
-private fun MfaSection(
-    uiState: AuthUiState,
-    onUpdateEmailCode: (String) -> Unit,
-    onUpdateTotpCode: (String) -> Unit,
-    onComplete: () -> Unit
-) {
+private fun MfaSection(uiState: AuthUiState) {
     Text(
         text = stringResource(R.string.auth_mfa_title),
         style = MaterialTheme.typography.titleMedium
@@ -341,7 +359,7 @@ private fun MfaSection(
     if (remaining.contains("email")) {
         OutlinedTextField(
             value = uiState.mfaEmailCode,
-            onValueChange = onUpdateEmailCode,
+            onValueChange = { /* handled through parent */ },
             label = { Text(stringResource(R.string.auth_email_code)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth()
@@ -351,7 +369,7 @@ private fun MfaSection(
     if (remaining.contains("totp")) {
         OutlinedTextField(
             value = uiState.mfaTotpCode,
-            onValueChange = onUpdateTotpCode,
+            onValueChange = { /* handled through parent */ },
             label = { Text(stringResource(R.string.auth_authenticator_code)) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -359,28 +377,11 @@ private fun MfaSection(
         )
         Spacer(modifier = Modifier.height(12.dp))
     }
-
-    Button(
-        onClick = onComplete,
-        enabled = !uiState.isLoading,
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        if (uiState.isLoading) {
-            CircularProgressIndicator(
-                modifier = Modifier.height(20.dp),
-                strokeWidth = 2.dp,
-                color = MaterialTheme.colorScheme.onPrimary
-            )
-        } else {
-            Text(stringResource(R.string.auth_continue))
-        }
-    }
 }
 
 @Composable
 private fun RecoverySection(
     recoveryCode: String,
-    email: String,
     isLoading: Boolean,
     onUpdateCode: (String) -> Unit,
     onVerify: () -> Unit
@@ -395,9 +396,25 @@ private fun RecoverySection(
         modifier = Modifier.fillMaxWidth()
     )
     Spacer(modifier = Modifier.height(12.dp))
+    PrimaryButton(
+        text = stringResource(R.string.auth_recover_account),
+        isLoading = isLoading,
+        enabled = recoveryCode.isNotBlank(),
+        onClick = onVerify
+    )
+}
+
+@Composable
+private fun PrimaryButton(
+    text: String,
+    isLoading: Boolean,
+    enabled: Boolean,
+    onClick: () -> Unit,
+    trailingIcon: ImageVector? = null
+) {
     Button(
-        onClick = onVerify,
-        enabled = !isLoading && recoveryCode.isNotBlank(),
+        onClick = onClick,
+        enabled = !isLoading && enabled,
         modifier = Modifier.fillMaxWidth()
     ) {
         if (isLoading) {
@@ -407,7 +424,56 @@ private fun RecoverySection(
                 color = MaterialTheme.colorScheme.onPrimary
             )
         } else {
-            Text(stringResource(R.string.auth_recover_account))
+            Text(text)
+            if (trailingIcon != null) {
+                Spacer(modifier = Modifier.width(8.dp))
+                Icon(
+                    imageVector = trailingIcon,
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp)
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Outlined alternative-method button with a leading icon, matching the
+ * "OR LOG IN WITH" rows. Supply exactly one of [iconRes] (vector drawable) or
+ * [iconVector] (Material icon).
+ */
+@Composable
+private fun MethodButton(
+    text: String,
+    enabled: Boolean,
+    onClick: () -> Unit,
+    iconRes: Int? = null,
+    iconVector: ImageVector? = null
+) {
+    OutlinedButton(
+        onClick = onClick,
+        enabled = enabled,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            when {
+                iconRes != null -> Icon(
+                    painter = painterResource(iconRes),
+                    contentDescription = null,
+                    modifier = Modifier.size(20.dp)
+                )
+                iconVector != null -> Icon(
+                    imageVector = iconVector,
+                    contentDescription = null,
+                    modifier = Modifier.size(20.dp)
+                )
+            }
+            Spacer(modifier = Modifier.width(12.dp))
+            Text(text)
         }
     }
 }
@@ -415,7 +481,16 @@ private fun RecoverySection(
 private fun providerLabel(name: String): String = when (name.lowercase()) {
     "github" -> "GitHub"
     "x" -> "X"
-    else -> name.replaceFirstChar { it.uppercase() }
+    else -> name.replaceFirstChar { char -> char.uppercase() }
+}
+
+private fun providerIcon(name: String): Int? = when (name.lowercase()) {
+    "github" -> R.drawable.ic_provider_github
+    "google" -> R.drawable.ic_provider_google
+    "microsoft" -> R.drawable.ic_provider_microsoft
+    "facebook" -> R.drawable.ic_provider_facebook
+    "x" -> R.drawable.ic_provider_x
+    else -> null
 }
 
 /**

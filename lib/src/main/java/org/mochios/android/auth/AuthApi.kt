@@ -8,7 +8,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 data class BeginResponse(
-    val methods: List<String> = emptyList(),
+    val allowed: List<String> = emptyList(),
     @SerializedName("has_passkey") val hasPasskey: Boolean = false,
     val new: Boolean = false
 )

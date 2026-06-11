@@ -14,7 +14,7 @@ sealed class AuthResult {
 }
 
 data class BeginResult(
-    val methods: List<String>,
+    val allowed: List<String>,
     val hasPasskey: Boolean,
     val isNew: Boolean
 )
@@ -40,7 +40,7 @@ class AuthRepository @Inject constructor(
     suspend fun beginLogin(email: String): BeginResult {
         val response = authApi.begin(EmailRequest(email)).unwrapRaw()
         return BeginResult(
-            methods = response.methods,
+            allowed = response.allowed,
             hasPasskey = response.hasPasskey,
             isNew = response.new
         )

@@ -119,6 +119,21 @@ class AuthViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(recoveryCode = code, error = null)
     }
 
+    /** Return from the per-account method step to email entry, keeping the
+     *  typed email and the server method config but clearing any in-progress
+     *  code/recovery input. Mirrors the mockup's "Back" affordance. */
+    fun backToEmailEntry() {
+        _uiState.value = _uiState.value.copy(
+            beginResult = null,
+            codeSent = false,
+            code = "",
+            totpCode = "",
+            recoveryCode = "",
+            showRecovery = false,
+            error = null
+        )
+    }
+
     fun toggleRecovery() {
         _uiState.value = _uiState.value.copy(
             showRecovery = !_uiState.value.showRecovery,
@@ -171,9 +186,10 @@ class AuthViewModel @Inject constructor(
                     isLoading = false,
                     beginResult = result
                 )
-                // Match the web flow: auto-send the email code so the user
-                // doesn't see an extra "Send code" tap before the input.
-                if (result.methods.contains("email") && !result.hasPasskey) {
+                // When email code is the only allowed factor there's no choice
+                // to make, so send the code immediately and drop the user
+                // straight onto the code input.
+                if (result.allowed.singleOrNull() == "email") {
                     requestEmailCode()
                 }
             } catch (e: Exception) {
