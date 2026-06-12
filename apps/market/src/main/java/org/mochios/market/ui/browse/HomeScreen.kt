@@ -1,5 +1,6 @@
 package org.mochios.market.ui.browse
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -8,11 +9,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyRow
@@ -24,15 +23,15 @@ import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material3.AssistChip
+import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -60,8 +59,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -99,9 +100,26 @@ fun HomeScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
 
+    // Confirm each save/unsave with a short toast.
+    val context = LocalContext.current
+    LaunchedEffect(Unit) {
+        viewModel.saveEvents.collect { saved ->
+            val message = context.getString(
+                if (saved) R.string.market_listing_save
+                else R.string.market_listing_unsave,
+            )
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        }
+    }
+
     // Debounce search input so the ViewModel doesn't fire a request per
     // keystroke. The web side debounces at 300 ms; match it here.
     var searchInput by remember { mutableStateOf(state.query) }
+    // Pull external query resets (e.g. Clear filters) back into the field;
+    // the debounce effect below only pushes local -> VM, never the reverse.
+    LaunchedEffect(state.query) {
+        if (state.query != searchInput) searchInput = state.query
+    }
     LaunchedEffect(searchInput) {
         delay(300L)
         if (searchInput != state.query) viewModel.setQuery(searchInput)
@@ -161,6 +179,7 @@ fun HomeScreen(
                     viewModel.viewListing(listing)
                     navController.navigate(MarketApp.listingDetail(listing.id.toString()))
                 },
+                onToggleSave = viewModel::toggleSave,
                 onCategoryClick = { category ->
                     viewModel.setFilter(Filter.CATEGORY, category.id.toString())
                 },
@@ -196,21 +215,28 @@ private fun HomeContent(
     onClearAll: () -> Unit,
     onLoadMore: () -> Unit,
     onListingClick: (Listing) -> Unit,
+    onToggleSave: (Listing) -> Unit,
     onCategoryClick: (Category) -> Unit,
     onActivateAccount: () -> Unit,
     onDismissOnboarding: () -> Unit,
 ) {
     val gridState = rememberLazyGridState()
-    val shouldLoadMore by remember {
+    // Only the scroll position is derived here — it depends solely on the
+    // stably-remembered gridState. The `hasMore`/`isLoading` flags are read
+    // fresh in the LaunchedEffect below; capturing them inside this remembered
+    // block would freeze them at their first-composition values.
+    val reachedEnd by remember {
         derivedStateOf {
             val info = gridState.layoutInfo
             val total = info.totalItemsCount
             val last = info.visibleItemsInfo.lastOrNull()?.index ?: 0
-            state.hasMore && !state.isLoading && last >= total - 6
+            total > 0 && last >= total - 6
         }
     }
-    LaunchedEffect(shouldLoadMore) {
-        if (shouldLoadMore) onLoadMore()
+    LaunchedEffect(reachedEnd, state.hasMore, state.isLoading) {
+        if (reachedEnd && state.hasMore && !state.isLoading) {
+            onLoadMore()
+        }
     }
 
     val isColdStart = state.query.isBlank() && state.filters.isEmpty()
@@ -272,24 +298,6 @@ private fun HomeContent(
                     }
                 }
 
-                if (state.recentListings.isNotEmpty()) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        Text(
-                            text = stringResource(R.string.market_section_recent),
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier.padding(vertical = 8.dp),
-                        )
-                    }
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        RecentlyViewedStrip(
-                            listings = state.recentListings,
-                            categories = state.categories,
-                            onClick = onListingClick,
-                        )
-                    }
-                }
-
                 if (state.listings.isNotEmpty()) {
                     item(span = { GridItemSpan(maxLineSpan) }) {
                         Text(
@@ -306,7 +314,9 @@ private fun HomeContent(
                         listing = listing,
                         category = state.categories
                             .firstOrNull { it.id == listing.category }?.name,
+                        saved = listing.id.toString() in state.savedIds,
                         onClick = { onListingClick(listing) },
+                        onToggleSave = onToggleSave,
                     )
                 }
 
@@ -422,59 +432,34 @@ private fun CategoryGrid(
     // web cold-start surface shows above the fold.
     val capped = categories.take(12)
     val rows = capped.chunked(3)
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
         for (row in rows) {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 for (category in row) {
-                    Card(
+                    AssistChip(
                         onClick = { onClick(category) },
-                        modifier = Modifier
-                            .weight(1f)
-                            .heightIn(min = 64.dp),
-                        shape = RoundedCornerShape(10.dp),
-                        colors = CardDefaults.cardColors(
-                            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-                        ),
-                    ) {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .padding(8.dp),
-                            contentAlignment = Alignment.Center,
-                        ) {
+                        modifier = Modifier.weight(1f),
+                        label = {
                             Text(
                                 text = category.name,
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.Medium,
+                                style = MaterialTheme.typography.bodySmall,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
                             )
-                        }
-                    }
+                        },
+                        leadingIcon = {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Outlined.Label,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(AssistChipDefaults.IconSize),
+                            )
+                        },
+                    )
                 }
                 repeat(3 - row.size) { Spacer(modifier = Modifier.weight(1f)) }
-            }
-        }
-    }
-}
-
-@Composable
-private fun RecentlyViewedStrip(
-    listings: List<Listing>,
-    categories: List<Category>,
-    onClick: (Listing) -> Unit,
-) {
-    LazyRow(
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        contentPadding = PaddingValues(vertical = 4.dp),
-    ) {
-        items(listings, key = { it.id }) { listing ->
-            Box(modifier = Modifier.width(170.dp)) {
-                org.mochios.market.ui.components.ListingCard(
-                    listing = listing,
-                    category = categories.firstOrNull { it.id == listing.category }?.name,
-                    onClick = { onClick(listing) },
-                )
             }
         }
     }

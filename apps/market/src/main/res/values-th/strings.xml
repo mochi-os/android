@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">ประวัติส่วนตัว</string>
     <string name="market_account_location_label">ตำแหน่ง</string>
     <string name="market_account_save">บันทึก</string>
+    <string name="market_account_seller_title">มาเป็นผู้ขาย</string>
+    <string name="market_account_seller_subtitle">เข้าถึงผู้ซื้อและขายสินค้าของคุณบน Mochi การชำระเงินได้รับการจัดการอย่างปลอดภัยผ่าน Stripe</string>
+    <string name="market_account_seller_step_activate_title">เปิดใช้งานบัญชีผู้ขาย</string>
+    <string name="market_account_seller_step_activate_desc">สร้างโปรไฟล์ผู้ขายของคุณเพื่อเริ่มลงรายการสินค้า</string>
+    <string name="market_account_seller_step_stripe_desc">เชื่อมต่อบัญชี Stripe เพื่อรับการชำระเงินจากผู้ซื้อ</string>
+    <string name="market_account_seller_fees_heading">ค่าธรรมเนียม:</string>
+    <string name="market_account_seller_fees_mochi">Mochi หัก %1$s%% จากการขายแต่ละครั้ง</string>
+    <string name="market_account_seller_fees_stripe">Stripe เรียกเก็บค่าธรรมเนียมการประมวลผลของตนเองต่อธุรกรรมและค่าธรรมเนียมคงที่ต่อการเรียกเงินคืน อัตราปัจจุบันสำหรับสกุลเงินและภูมิภาคของคุณแสดงอยู่ใน Stripe Dashboard ของคุณ</string>
+    <string name="market_account_seller_connect">เชื่อมต่อ Stripe</string>
+    <string name="market_account_seller_step_stripe_title">เชื่อมต่อ Stripe</string>
+    <string name="market_account_seller_check_status">ตรวจสอบสถานะ</string>
     <string name="market_account_status_banned_title">แบนบัญชีแล้ว</string>
     <string name="market_account_status_suspended_title">ระงับบัญชีแล้ว</string>
     <string name="market_account_stripe_dashboard">เปิดแดชบอร์ด Stripe</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">ซื้อเลย</string>
     <string name="market_listing_detail_description_heading">คำอธิบาย</string>
     <string name="market_listing_detail_edit">แก้ไข</string>
+    <string name="market_listing_detail_information_heading">ข้อมูลการจัดส่ง</string>
     <string name="market_listing_detail_load_failed">ไม่สามารถโหลดประกาศได้</string>
+    <string name="market_listing_detail_listed">ลงประกาศเมื่อ %1$s</string>
     <string name="market_listing_detail_location_heading">ตำแหน่ง</string>
+    <string name="market_listing_detail_message">ข้อความ</string>
     <string name="market_listing_detail_message_seller">ส่งข้อความถึงผู้ขาย</string>
     <string name="market_listing_detail_not_found">ไม่พบประกาศ</string>
     <string name="market_listing_detail_place_bid">ประมูล</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">หมายเลขติดตาม</string>
     <string name="market_saved_title">บันทึกแล้ว</string>
     <string name="market_search_clear">ล้างการค้นหา</string>
-    <string name="market_section_categories">หมวดหมู่</string>
-    <string name="market_section_listings">ประกาศ</string>
+    <string name="market_section_categories">เรียกดูหมวดหมู่</string>
+    <string name="market_section_listings">ประกาศล่าสุด</string>
     <string name="market_section_recent">ดูล่าสุด</string>
     <string name="market_ship_dialog_cancel">ยกเลิก</string>
     <string name="market_ship_dialog_submit">ยืนยัน</string>
     <string name="market_ship_dialog_title">ทำเครื่องหมายว่าจัดส่งแล้ว</string>
     <string name="market_shipping_days">การจัดส่ง</string>
+    <string name="market_shipping_days_value">%1$s วัน</string>
     <string name="market_shipping_notes">บันทึก</string>
     <string name="market_shipping_price">ราคา</string>
     <string name="market_shipping_region">ภูมิภาค</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">คำสั่งซื้อ #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">บอกผู้ซื้อเกี่ยวกับตัวคุณ…</string>
     <string name="market_account_load_failed">ไม่สามารถโหลดบัญชีได้</string>
     <string name="market_account_save_failed">ไม่สามารถบันทึกการเปลี่ยนแปลงได้</string>
     <string name="market_account_saved">บันทึกการเปลี่ยนแปลงแล้ว</string>

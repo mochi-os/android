@@ -141,9 +141,20 @@
     <string name="market_sidebar_saved">Saved</string>
     <string name="market_listing_detail_title">Listing</string>
     <string name="market_messages_thread_listing_chip">Listing</string>
-    <string name="market_section_listings">Listings</string>
+    <string name="market_section_listings">Recent Listings</string>
     <string name="market_sidebar_listings">Listings</string>
     <string name="app_name">Market</string>
+    <string name="market_account_seller_title">Become a seller</string>
+    <string name="market_account_seller_subtitle">Reach buyers and sell your items on Mochi. Payments are handled securely via Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Activate seller account</string>
+    <string name="market_account_seller_step_activate_desc">Create your seller profile to start listing items</string>
+    <string name="market_account_seller_step_stripe_desc">Link a Stripe account to accept payments from buyers</string>
+    <string name="market_account_seller_fees_heading">Fees:</string>
+    <string name="market_account_seller_fees_mochi">Mochi takes %1$s%% of each sale.</string>
+    <string name="market_account_seller_fees_stripe">Stripe charges its own processing fee per transaction and a flat fee per chargeback. Current rates for your currency and region are listed in your Stripe Dashboard.</string>
+    <string name="market_account_seller_connect">Connect Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Connect Stripe</string>
+    <string name="market_account_seller_check_status">Check status</string>
     <string name="market_account_status_banned_title">Account banned</string>
     <string name="market_account_status_suspended_title">Account suspended</string>
     <string name="market_account_stripe_title">Stripe</string>
@@ -207,7 +218,8 @@
     <string name="market_sale_section_summary">Summary</string>
     <string name="market_sale_shipped_label">Shipped</string>
     <string name="market_search_clear">Clear search</string>
-    <string name="market_section_categories">Categories</string>
+    <string name="market_section_categories">Browse Categories</string>
+    <string name="market_shipping_days_value">%1$s days</string>
     <string name="market_shipping_notes">Notes</string>
     <string name="market_shipping_price">Price</string>
     <string name="market_sidebar_messages">Messages</string>
@@ -220,6 +232,7 @@
     <string name="market_type_physical">Physical</string>
     <string name="market_account_location_label">Location</string>
     <string name="market_editor_section_location">Location</string>
+    <string name="market_listing_detail_listed">Listed %1$s</string>
     <string name="market_listing_detail_location_heading">Location</string>
     <string name="market_editor_section_delivery">Delivery</string>
     <string name="market_filter_delivery">Delivery</string>
@@ -228,6 +241,7 @@
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_label">Biography</string>
+    <string name="market_account_biography_placeholder">Tell buyers about yourself…</string>
     <string name="market_account_load_failed">Could not load account</string>
     <string name="market_account_save_failed">Could not save changes</string>
     <string name="market_account_saved">Changes saved</string>
@@ -436,8 +450,10 @@
     <string name="market_listing_detail_bids_heading">Bid history</string>
     <string name="market_listing_detail_buy">Buy</string>
     <string name="market_listing_detail_buy_now">Buy now</string>
+    <string name="market_listing_detail_information_heading">Delivery information</string>
     <string name="market_listing_detail_load_failed">Failed to load listing</string>
     <string name="market_listing_detail_loading">Loading listing</string>
+    <string name="market_listing_detail_message">Message</string>
     <string name="market_listing_detail_message_seller">Message seller</string>
     <string name="market_listing_detail_not_found">Listing not found</string>
     <string name="market_listing_detail_place_bid">Place bid</string>

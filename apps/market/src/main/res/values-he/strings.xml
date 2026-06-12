@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">ביוגרפיה</string>
     <string name="market_account_location_label">מיקום</string>
     <string name="market_account_save">שמור</string>
+    <string name="market_account_seller_title">הפכו למוכרים</string>
+    <string name="market_account_seller_subtitle">הגיעו לקונים ומכרו את הפריטים שלכם ב-Mochi. התשלומים מטופלים באופן מאובטח באמצעות Stripe.</string>
+    <string name="market_account_seller_step_activate_title">הפעלת חשבון מוכר</string>
+    <string name="market_account_seller_step_activate_desc">צרו פרופיל מוכר כדי להתחיל לפרסם פריטים</string>
+    <string name="market_account_seller_step_stripe_desc">חברו חשבון Stripe כדי לקבל תשלומים מקונים</string>
+    <string name="market_account_seller_fees_heading">עמלות:</string>
+    <string name="market_account_seller_fees_mochi">Mochi גובה %1$s%% מכל מכירה.</string>
+    <string name="market_account_seller_fees_stripe">Stripe גובה עמלת עיבוד משלה לכל עסקה ועמלה קבועה לכל החזר חיוב. התעריפים הנוכחיים למטבע ולאזור שלכם מופיעים בלוח הבקרה של Stripe.</string>
+    <string name="market_account_seller_connect">חבר Stripe</string>
+    <string name="market_account_seller_step_stripe_title">חבר Stripe</string>
+    <string name="market_account_seller_check_status">בדוק סטטוס</string>
     <string name="market_account_status_banned_title">החשבון נחסם</string>
     <string name="market_account_status_suspended_title">החשבון הושעה</string>
     <string name="market_account_stripe_dashboard">פתח לוח בקרה של Stripe</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">קנה עכשיו</string>
     <string name="market_listing_detail_description_heading">תיאור</string>
     <string name="market_listing_detail_edit">עריכה</string>
+    <string name="market_listing_detail_information_heading">פרטי משלוח</string>
     <string name="market_listing_detail_load_failed">טעינת המודעה נכשלה</string>
+    <string name="market_listing_detail_listed">פורסם %1$s</string>
     <string name="market_listing_detail_location_heading">מיקום</string>
+    <string name="market_listing_detail_message">הודעה</string>
     <string name="market_listing_detail_message_seller">שלח הודעה למוכר</string>
     <string name="market_listing_detail_not_found">המודעה לא נמצאה</string>
     <string name="market_listing_detail_place_bid">הגש הצעה</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">מספר מעקב</string>
     <string name="market_saved_title">נשמר</string>
     <string name="market_search_clear">נקה חיפוש</string>
-    <string name="market_section_categories">קטגוריות</string>
-    <string name="market_section_listings">מודעות</string>
+    <string name="market_section_categories">עיון בקטגוריות</string>
+    <string name="market_section_listings">מודעות אחרונות</string>
     <string name="market_section_recent">נצפו לאחרונה</string>
     <string name="market_ship_dialog_cancel">ביטול</string>
     <string name="market_ship_dialog_submit">אישור</string>
     <string name="market_ship_dialog_title">סמן כנשלח</string>
     <string name="market_shipping_days">משלוח</string>
+    <string name="market_shipping_days_value">%1$s ימים</string>
     <string name="market_shipping_notes">הערות</string>
     <string name="market_shipping_price">מחיר</string>
     <string name="market_shipping_region">אזור</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">הזמנה #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">ספרו לקונים על עצמכם…</string>
     <string name="market_account_load_failed">טעינת החשבון נכשלה</string>
     <string name="market_account_save_failed">שמירת השינויים נכשלה</string>
     <string name="market_account_saved">השינויים נשמרו</string>

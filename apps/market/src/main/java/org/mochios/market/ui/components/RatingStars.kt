@@ -14,10 +14,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.market.R
+
+/** Gold fill for rating stars, shared across listing cards and review lists. */
+internal val RatingStarGold = Color(0xFFFBBF24)
 
 /**
  * Five-star rating display with half-star precision.
@@ -26,6 +30,7 @@ import org.mochios.market.R
  * @param count   Number of reviews used in the optional `(N reviews)` suffix.
  * @param showCount Whether to append the count suffix.
  * @param size    Icon size for each star.
+ * @param tint    Star colour; defaults to the theme primary.
  */
 @Composable
 fun RatingStars(
@@ -34,6 +39,7 @@ fun RatingStars(
     count: Int = 0,
     showCount: Boolean = true,
     size: Dp = 14.dp,
+    tint: Color = MaterialTheme.colorScheme.primary,
 ) {
     val clamped = rating.coerceIn(0f, 5f)
     val halved = (kotlin.math.round(clamped * 2f) / 2f).coerceIn(0f, 5f)
@@ -41,7 +47,7 @@ fun RatingStars(
     val hasHalf = (halved - full) >= 0.5f
     val empty = 5 - full - (if (hasHalf) 1 else 0)
 
-    val starColor = MaterialTheme.colorScheme.primary
+    val starColor = tint
 
     Row(
         modifier = modifier,

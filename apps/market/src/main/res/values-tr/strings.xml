@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biyografi</string>
     <string name="market_account_location_label">Konum</string>
     <string name="market_account_save">Kaydet</string>
+    <string name="market_account_seller_title">Satıcı olun</string>
+    <string name="market_account_seller_subtitle">Alıcılara ulaşın ve ürünlerinizi Mochi’de satın. Ödemeler Stripe aracılığıyla güvenli bir şekilde yönetilir.</string>
+    <string name="market_account_seller_step_activate_title">Satıcı hesabını etkinleştir</string>
+    <string name="market_account_seller_step_activate_desc">Ürünleri listelemeye başlamak için satıcı profilinizi oluşturun</string>
+    <string name="market_account_seller_step_stripe_desc">Alıcılardan ödeme kabul etmek için bir Stripe hesabı bağlayın</string>
+    <string name="market_account_seller_fees_heading">Ücretler:</string>
+    <string name="market_account_seller_fees_mochi">Mochi her satıştan %1$s%% alır.</string>
+    <string name="market_account_seller_fees_stripe">Stripe her işlem için kendi işlem ücretini ve her ters ibraz için sabit bir ücret alır. Para biriminiz ve bölgeniz için güncel oranlar Stripe Kontrol Panelinizde listelenir.</string>
+    <string name="market_account_seller_connect">Stripe\'a bağlan</string>
+    <string name="market_account_seller_step_stripe_title">Stripe\'a bağlan</string>
+    <string name="market_account_seller_check_status">Durumu kontrol et</string>
     <string name="market_account_status_banned_title">Hesap yasaklandı</string>
     <string name="market_account_status_suspended_title">Hesap askıya alındı</string>
     <string name="market_account_stripe_dashboard">Stripe panelini aç</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Şimdi satın al</string>
     <string name="market_listing_detail_description_heading">Açıklama</string>
     <string name="market_listing_detail_edit">Düzenle</string>
+    <string name="market_listing_detail_information_heading">Teslimat bilgileri</string>
     <string name="market_listing_detail_load_failed">İlan yüklenemedi</string>
+    <string name="market_listing_detail_listed">Yayınlanma %1$s</string>
     <string name="market_listing_detail_location_heading">Konum</string>
+    <string name="market_listing_detail_message">Mesaj</string>
     <string name="market_listing_detail_message_seller">Satıcıya mesaj gönder</string>
     <string name="market_listing_detail_not_found">İlan bulunamadı</string>
     <string name="market_listing_detail_place_bid">Teklif ver</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Takip numarası</string>
     <string name="market_saved_title">Kaydedildi</string>
     <string name="market_search_clear">Aramayı temizle</string>
-    <string name="market_section_categories">Kategoriler</string>
-    <string name="market_section_listings">İlanlar</string>
+    <string name="market_section_categories">Kategorilere göz at</string>
+    <string name="market_section_listings">Son ilanlar</string>
     <string name="market_section_recent">Son görüntülenenler</string>
     <string name="market_ship_dialog_cancel">İptal</string>
     <string name="market_ship_dialog_submit">Onayla</string>
     <string name="market_ship_dialog_title">Kargoya verildi olarak işaretle</string>
     <string name="market_shipping_days">Teslimat</string>
+    <string name="market_shipping_days_value">%1$s gün</string>
     <string name="market_shipping_notes">Notlar</string>
     <string name="market_shipping_price">Fiyat</string>
     <string name="market_shipping_region">Bölge</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Sipariş #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Alıcılara kendinizden bahsedin…</string>
     <string name="market_account_load_failed">Hesap yüklenemedi</string>
     <string name="market_account_save_failed">Değişiklikler kaydedilemedi</string>
     <string name="market_account_saved">Değişiklikler kaydedildi</string>

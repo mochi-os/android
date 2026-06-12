@@ -89,18 +89,18 @@ fun MessageThreadScreen(
     val listState = rememberLazyListState()
     val snackbarHostState = remember { SnackbarHostState() }
 
-    // Subscribe to the per-thread WebSocket. The helper closes the socket
-    // on dispose, so navigating away unwinds it for us.
+    // Subscribe to the per-thread WebSocket once the thread id is known. When
+    // the screen is opened from a listing the route arg is "new", so we key on
+    // the resolved thread id from state rather than the raw arg — the socket
+    // attaches as soon as the thread is created/loaded. The helper closes the
+    // socket on dispose, so navigating away unwinds it for us.
+    val threadId = state.thread?.id?.takeIf { it != 0L }
     val socket = rememberGameWebSocket(
-        gameKey = if (viewModel.threadId.isNotBlank()) {
-            "market-thread-${viewModel.threadId}"
-        } else {
-            null
-        },
+        gameKey = threadId?.let { "market-thread-$it" },
     )
-    LaunchedEffect(socket) {
+    LaunchedEffect(socket, threadId) {
         socket?.events?.collectLatest { event ->
-            val message = event.toMessage(viewModel.threadIdLong) ?: return@collectLatest
+            val message = event.toMessage(threadId ?: 0L) ?: return@collectLatest
             viewModel.ingestRemote(message)
         }
     }

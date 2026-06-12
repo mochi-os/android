@@ -1,4 +1,4 @@
-package org.mochios.market.lib
+package org.mochios.market.repository
 
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
@@ -16,26 +16,21 @@ import javax.inject.Singleton
 /**
  * Server-backed store for the user's saved (wishlisted) market listings.
  *
- * Mirrors the web side's `lib/saved.ts`: saved state lives in the market
- * app's own per-user DB (`-/saved/list|add|remove|clear`) so it survives
- * reloads and logout and syncs across the user's devices via Mochi's
- * per-app replication. This store keeps a synchronous in-memory mirror
- * ([StateFlow]) so the rest of the app can read the saved set without
- * awaiting, while mutations apply optimistically and reconcile with the
- * server in the background.
+ * Replaces the old on-device DataStore: the Comptroller now persists the
+ * saved set behind `-/saved/list|add|remove`, so this holds an in-memory
+ * reactive mirror hydrated from the server. Reads come from the cache for
+ * instant, reactive UI (bookmark fills, the Saved grid); mutations write
+ * through to the server with an optimistic local update that reverts if the
+ * call fails.
  *
- * Application-scoped ([Singleton]) so every screen observes the same
- * mirror. Call [refresh] after login (and on entering a saved-aware
- * screen) to hydrate it from the server. The store holds full [Listing]
- * snapshots — the server persists one per saved row and `saved/list`
- * returns them fully hydrated, so the saved screen renders without a
- * per-id refetch.
+ * `saved/list` returns full [Listing] rows, so the Saved screen renders
+ * directly off [saved] without the per-id `listings/get` fan-out the local
+ * store used to need.
  */
 @Singleton
-class SavedStore @Inject constructor(
-    private val api: MarketApi,
+class SavedRepository @Inject constructor(
+    private val api: MarketApi
 ) {
-
     private val gson = Gson()
     private val mutex = Mutex()
 

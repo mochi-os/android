@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_location_label">Placering</string>
     <string name="market_account_save">Gem</string>
+    <string name="market_account_seller_title">Bliv sælger</string>
+    <string name="market_account_seller_subtitle">Nå ud til købere, og sælg dine varer på Mochi. Betalinger håndteres sikkert via Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktivér sælgerkonto</string>
+    <string name="market_account_seller_step_activate_desc">Opret din sælgerprofil for at begynde at oprette varer</string>
+    <string name="market_account_seller_step_stripe_desc">Forbind en Stripe-konto for at modtage betalinger fra købere</string>
+    <string name="market_account_seller_fees_heading">Gebyrer:</string>
+    <string name="market_account_seller_fees_mochi">Mochi tager %1$s%% af hvert salg.</string>
+    <string name="market_account_seller_fees_stripe">Stripe opkræver sit eget behandlingsgebyr pr. transaktion og et fast gebyr pr. tilbageførsel. Aktuelle satser for din valuta og region er angivet i dit Stripe-dashboard.</string>
+    <string name="market_account_seller_connect">Forbind Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Forbind Stripe</string>
+    <string name="market_account_seller_check_status">Tjek status</string>
     <string name="market_account_status_banned_title">Konto bortvist</string>
     <string name="market_account_status_suspended_title">Konto suspenderet</string>
     <string name="market_account_stripe_dashboard">Åbn Stripe-dashboard</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Køb nu</string>
     <string name="market_listing_detail_description_heading">Beskrivelse</string>
     <string name="market_listing_detail_edit">Redigér</string>
+    <string name="market_listing_detail_information_heading">Leveringsoplysninger</string>
     <string name="market_listing_detail_load_failed">Kunne ikke indlæse annonce</string>
+    <string name="market_listing_detail_listed">Oprettet %1$s</string>
     <string name="market_listing_detail_location_heading">Placering</string>
+    <string name="market_listing_detail_message">Besked</string>
     <string name="market_listing_detail_message_seller">Send besked til sælger</string>
     <string name="market_listing_detail_not_found">Annonce ikke fundet</string>
     <string name="market_listing_detail_place_bid">Byd</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Sporingsnummer</string>
     <string name="market_saved_title">Gemt</string>
     <string name="market_search_clear">Ryd søgning</string>
-    <string name="market_section_categories">Kategorier</string>
-    <string name="market_section_listings">Annoncer</string>
+    <string name="market_section_categories">Gennemse kategorier</string>
+    <string name="market_section_listings">Seneste annoncer</string>
     <string name="market_section_recent">Senest set</string>
     <string name="market_ship_dialog_cancel">Annuller</string>
     <string name="market_ship_dialog_submit">Bekræft</string>
     <string name="market_ship_dialog_title">Markér som afsendt</string>
     <string name="market_shipping_days">Levering</string>
+    <string name="market_shipping_days_value">%1$s dage</string>
     <string name="market_shipping_notes">Noter</string>
     <string name="market_shipping_price">Pris</string>
     <string name="market_shipping_region">Region</string>
@@ -431,6 +446,7 @@
     <string name="market_purchase_dispute_response">Sælgers svar</string>
     <string name="market_purchases_order_label">Bestilling #%1$d</string>
 
+    <string name="market_account_biography_placeholder">Fortæl købere om dig selv…</string>
     <string name="market_account_load_failed">Kunne ikke indlæse kontoen</string>
     <string name="market_account_save_failed">Kunne ikke gemme ændringerne</string>
     <string name="market_account_saved">Ændringer gemt</string>

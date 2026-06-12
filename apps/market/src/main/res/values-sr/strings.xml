@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Биографија</string>
     <string name="market_account_location_label">Локација</string>
     <string name="market_account_save">Сачувај</string>
+    <string name="market_account_seller_title">Постаните продавац</string>
+    <string name="market_account_seller_subtitle">Доприте до купаца и продајте своје артикле на Mochi. Плаћања се безбедно обрађују путем Stripe-а.</string>
+    <string name="market_account_seller_step_activate_title">Активирај налог продавца</string>
+    <string name="market_account_seller_step_activate_desc">Направите профил продавца да бисте почели да објављујете артикле</string>
+    <string name="market_account_seller_step_stripe_desc">Повежите Stripe налог да бисте примали уплате од купаца</string>
+    <string name="market_account_seller_fees_heading">Накнаде:</string>
+    <string name="market_account_seller_fees_mochi">Mochi узима %1$s%% од сваке продаје.</string>
+    <string name="market_account_seller_fees_stripe">Stripe наплаћује сопствену накнаду за обраду по трансакцији и фиксну накнаду по повраћају средстава. Тренутне стопе за вашу валуту и регион наведене су на вашој Stripe контролној табли.</string>
+    <string name="market_account_seller_connect">Повежи Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Повежи Stripe</string>
+    <string name="market_account_seller_check_status">Провери статус</string>
     <string name="market_account_status_banned_title">Налог забрањен</string>
     <string name="market_account_status_suspended_title">Налог суспендован</string>
     <string name="market_account_stripe_dashboard">Отвори Stripe панел</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Купи одмах</string>
     <string name="market_listing_detail_description_heading">Опис</string>
     <string name="market_listing_detail_edit">Уреди</string>
+    <string name="market_listing_detail_information_heading">Информације о испоруци</string>
     <string name="market_listing_detail_load_failed">Учитавање огласа није успело</string>
+    <string name="market_listing_detail_listed">Објављено %1$s</string>
     <string name="market_listing_detail_location_heading">Локација</string>
+    <string name="market_listing_detail_message">Порука</string>
     <string name="market_listing_detail_message_seller">Пошаљи поруку продавцу</string>
     <string name="market_listing_detail_not_found">Оглас није пронађен</string>
     <string name="market_listing_detail_place_bid">Понуди</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Број за праћење</string>
     <string name="market_saved_title">Сачувано</string>
     <string name="market_search_clear">Очисти претрагу</string>
-    <string name="market_section_categories">Категорије</string>
-    <string name="market_section_listings">Огласи</string>
+    <string name="market_section_categories">Прегледај категорије</string>
+    <string name="market_section_listings">Недавни огласи</string>
     <string name="market_section_recent">Недавно прегледано</string>
     <string name="market_ship_dialog_cancel">Откажи</string>
     <string name="market_ship_dialog_submit">Потврди</string>
     <string name="market_ship_dialog_title">Означи као послато</string>
     <string name="market_shipping_days">Испорука</string>
+    <string name="market_shipping_days_value">%1$s дана</string>
     <string name="market_shipping_notes">Белешке</string>
     <string name="market_shipping_price">Цена</string>
     <string name="market_shipping_region">Регион</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Поруџбина #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Реците купцима о себи…</string>
     <string name="market_account_load_failed">Učitavanje naloga nije uspelo</string>
     <string name="market_account_save_failed">Čuvanje izmena nije uspelo</string>
     <string name="market_account_saved">Izmene su sačuvane</string>

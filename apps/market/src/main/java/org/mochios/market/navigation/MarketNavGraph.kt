@@ -7,7 +7,6 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.market.ui.account.AccountSettingsScreen
-import org.mochios.market.ui.account.NotificationPreferencesScreen
 import org.mochios.market.ui.account.PublicProfileScreen
 import org.mochios.market.ui.account.SellerSettingsScreen
 import org.mochios.market.ui.browse.HomeScreen
@@ -57,6 +56,7 @@ object MarketApp {
     const val REVIEWS = "market/reviews"
     const val ACCOUNT = "market/account"
     const val SELLER_SETTINGS = "market/account/seller"
+    const val NOTIFICATION_PREFERENCES = "market/account/notifications"
 
     // ---- Detail route patterns ----
     const val LISTING_DETAIL = "market/listing/{id}"
@@ -68,7 +68,6 @@ object MarketApp {
     const val MESSAGE_THREAD = "market/messages/{listingId}/{threadId}"
     const val PROFILE_PATTERN = "market/account/{accountId}"
     const val SUBSCRIPTION_DETAIL = "market/subscriptions/{id}"
-    const val NOTIFICATION_PREFERENCES = "market/account/notifications"
 
     // ---- Detail route builders ----
     fun listingDetail(id: String) = "market/listing/$id"

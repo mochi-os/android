@@ -36,6 +36,7 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -102,6 +103,13 @@ fun PlacePicker(
 
     val mapView = remember {
         MapView(context).apply {
+            // Pin the native view to 250.dp so it can't measure taller than the
+            // AndroidView slot and bleed over the surrounding Compose content.
+            val heightPx = (250 * context.resources.displayMetrics.density).toInt()
+            layoutParams = android.view.ViewGroup.LayoutParams(
+                android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+                heightPx,
+            )
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)
             controller.setZoom(5.0)
@@ -319,6 +327,10 @@ fun PlacePicker(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(250.dp)
+                // osmdroid draws tiles/overlays past its bounds; clip so the
+                // map can't bleed over the search field above or the controls
+                // below it in the scrolling column.
+                .clipToBounds()
                 .background(MaterialTheme.colorScheme.surfaceVariant)
         )
     }

@@ -322,6 +322,35 @@ interface MarketApi {
         @Field("reason") reason: String,
     ): Response<ApiResponse<Listing>>
 
+    // ---- Saved (wishlist) ----
+
+    /** List the current identity's saved (wishlisted) listings. */
+    @GET("-/saved/list")
+    suspend fun listSaved(): Response<ApiResponse<SavedListResponse>>
+
+    /**
+     * Save a listing. `data` is the JSON-encoded [Listing] snapshot the
+     * server persists so the saved list can be rendered without re-fetching.
+     */
+    @FormUrlEncoded
+    @POST("-/saved/add")
+    suspend fun addSaved(
+        @Field("listing") listing: String,
+        @Field("data") data: String,
+    ): Response<ApiResponse<SavedToggleResponse>>
+
+    /** Remove a listing from the saved set. */
+    @FormUrlEncoded
+    @POST("-/saved/remove")
+    suspend fun removeSaved(
+        @Field("listing") listing: String,
+    ): Response<ApiResponse<SavedToggleResponse>>
+
+
+    /** Remove all of the current identity's saved listings. */
+    @POST("-/saved/clear")
+    suspend fun clearSaved(): Response<ApiResponse<SavedToggleResponse>>
+
     // ---- Shipping ----
 
     /**
@@ -445,40 +474,6 @@ interface MarketApi {
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<BidsListResponse>>
-
-    // ---- Saved (wishlist) ----
-
-    /**
-     * List the current identity's saved (wishlisted) listings, most
-     * recently saved first. Each row is a full [Listing] snapshot the
-     * server persisted at save time, so no per-id refetch is needed.
-     */
-    @FormUrlEncoded
-    @POST("-/saved/list")
-    suspend fun listSaved(): Response<ApiResponse<SavedListResponse>>
-
-    /**
-     * Save a listing (idempotent). `listing` is the numeric id; `data` is
-     * the JSON-encoded [Listing] snapshot the saved page renders later.
-     */
-    @FormUrlEncoded
-    @POST("-/saved/add")
-    suspend fun addSaved(
-        @Field("listing") listing: String, // contract-ok: read via _saved_listing_id(a) helper
-        @Field("data") data: String,
-    ): Response<ApiResponse<SavedToggleResponse>>
-
-    /** Remove a saved listing by id. */
-    @FormUrlEncoded
-    @POST("-/saved/remove")
-    suspend fun removeSaved(
-        @Field("listing") listing: String, // contract-ok: read via _saved_listing_id(a) helper
-    ): Response<ApiResponse<SavedToggleResponse>>
-
-    /** Remove all of the current identity's saved listings. */
-    @FormUrlEncoded
-    @POST("-/saved/clear")
-    suspend fun clearSaved(): Response<ApiResponse<SavedToggleResponse>>
 
     // ---- Orders ----
 

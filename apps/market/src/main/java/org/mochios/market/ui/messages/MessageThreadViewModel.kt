@@ -69,8 +69,14 @@ class MessageThreadViewModel @Inject constructor(
 
     val listingId: String = savedStateHandle.get<String>("listingId").orEmpty()
     val threadId: String = savedStateHandle.get<String>("threadId").orEmpty()
-    val threadIdLong: Long = threadId.toLongOrNull() ?: 0L
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
+
+    /**
+     * Thread id used for every thread-scoped call. Seeded from the route arg;
+     * when the screen is opened from a listing the arg is the sentinel "new"
+     * (→ 0), and [refresh] fills this in via `threads/create` before loading.
+     */
+    private var resolvedThreadId: Long = threadId.toLongOrNull() ?: 0L
 
     private val _state = MutableStateFlow(MessageThreadUiState())
     val state: StateFlow<MessageThreadUiState> = _state.asStateFlow()
@@ -86,7 +92,16 @@ class MessageThreadViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
-                val response = repo.getThread(threadIdLong)
+                // Opened from a listing? The route carries threadId="new", so
+                // open (or reuse) the thread for this listing first — the
+                // server returns the existing thread when one already exists.
+                // Mirrors the web flow's threads/create → threads/get sequence.
+                if (resolvedThreadId == 0L) {
+                    val listing = listingId.toLongOrNull()
+                        ?: throw IllegalStateException("Missing listing id for new thread")
+                    resolvedThreadId = repo.createThread(listing).id
+                }
+                val response = repo.getThread(resolvedThreadId)
                 _state.value = _state.value.copy(
                     thread = response.thread,
                     listing = response.listing,
@@ -106,7 +121,7 @@ class MessageThreadViewModel @Inject constructor(
     private fun markRead() {
         viewModelScope.launch {
             try {
-                repo.markMessagesRead(threadIdLong)
+                repo.markMessagesRead(resolvedThreadId)
             } catch (_: Exception) {
                 // Non-fatal — read-state syncs the next time the thread loads.
             }
@@ -123,7 +138,7 @@ class MessageThreadViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(isSending = true)
             try {
-                val saved = repo.sendMessage(threadIdLong, trimmed)
+                val saved = repo.sendMessage(resolvedThreadId, trimmed)
                 _state.value = _state.value.copy(
                     draft = "",
                     isSending = false,

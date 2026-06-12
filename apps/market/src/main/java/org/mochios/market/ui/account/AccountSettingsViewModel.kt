@@ -16,6 +16,7 @@ import org.mochios.android.model.PlaceData
 import org.mochios.market.lib.ParsedLocation
 import org.mochios.market.lib.parseLocation
 import org.mochios.market.model.Account
+import org.mochios.market.model.AccountFees
 import org.mochios.market.model.StripeStatus
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
@@ -43,6 +44,8 @@ data class AccountSettingsUiState(
     val addressCountryDraft: String = "",
     val stripeStatus: StripeStatus? = null,
     val stripeStatusLoading: Boolean = false,
+    val stripeConnecting: Boolean = false,
+    val fees: AccountFees? = null,
     val error: MochiError? = null,
 )
 
@@ -88,12 +91,21 @@ class AccountSettingsViewModel @Inject constructor(
                 if (account.onboarded == 1) {
                     refreshStripe()
                 }
+                loadFees()
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
                 )
             }
+        }
+    }
+
+    /** Platform fee % for the "Become a seller" disclosure. Best-effort. */
+    private fun loadFees() {
+        viewModelScope.launch {
+            val fees = runCatching { repo.getFees() }.getOrNull() ?: return@launch
+            _state.value = _state.value.copy(fees = fees)
         }
     }
 
@@ -174,6 +186,62 @@ class AccountSettingsViewModel @Inject constructor(
                 _events.send(AccountSettingsEvent.Saved)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(isSaving = false)
+                _events.send(AccountSettingsEvent.Error(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Activate the seller account (if needed) then fetch a one-time Stripe
+     * onboarding URL and hand it back via [onUrl] for the screen to open in a
+     * Custom Tab. Stripe onboarding requires an activated account, so we run
+     * `accounts/activate` first when the caller isn't a seller yet.
+     */
+    fun connectStripe(returnUrl: String, onUrl: (String) -> Unit) {
+        if (_state.value.stripeConnecting) return
+        viewModelScope.launch {
+            _state.value = _state.value.copy(stripeConnecting = true)
+            try {
+                var account = _state.value.account
+                if (account == null || account.seller != 1) {
+                    account = repo.activateAccount(returnUrl)
+                    _state.value = _state.value.copy(account = account)
+                }
+                val resp = repo.stripeOnboarding(returnUrl)
+                if (resp.url.isNotBlank()) {
+                    onUrl(resp.url)
+                } else {
+                    _events.send(
+                        AccountSettingsEvent.Error(MochiError.Unknown("Could not open Stripe")),
+                    )
+                }
+            } catch (e: Exception) {
+                _events.send(AccountSettingsEvent.Error(e.toMochiError()))
+            } finally {
+                _state.value = _state.value.copy(stripeConnecting = false)
+            }
+        }
+    }
+
+    /**
+     * Re-fetch the account plus Stripe capability flags so the seller card
+     * reflects onboarding completed off-device. Unlike [refreshStripe] this
+     * also reloads the account row (to pick up `seller` / `onboarded`).
+     */
+    fun checkStripeStatus() {
+        if (_state.value.stripeStatusLoading) return
+        viewModelScope.launch {
+            _state.value = _state.value.copy(stripeStatusLoading = true)
+            try {
+                val account = repo.getAccount()
+                val status = runCatching { repo.stripeStatus() }.getOrNull()
+                _state.value = _state.value.copy(
+                    account = account,
+                    stripeStatus = status ?: _state.value.stripeStatus,
+                    stripeStatusLoading = false,
+                )
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(stripeStatusLoading = false)
                 _events.send(AccountSettingsEvent.Error(e.toMochiError()))
             }
         }

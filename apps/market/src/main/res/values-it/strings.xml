@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografia</string>
     <string name="market_account_location_label">Posizione</string>
     <string name="market_account_save">Salva</string>
+    <string name="market_account_seller_title">Diventa venditore</string>
+    <string name="market_account_seller_subtitle">Raggiungi gli acquirenti e vendi i tuoi articoli su Mochi. I pagamenti sono gestiti in modo sicuro tramite Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Attiva account venditore</string>
+    <string name="market_account_seller_step_activate_desc">Crea il tuo profilo venditore per iniziare a pubblicare articoli</string>
+    <string name="market_account_seller_step_stripe_desc">Collega un account Stripe per accettare pagamenti dagli acquirenti</string>
+    <string name="market_account_seller_fees_heading">Commissioni:</string>
+    <string name="market_account_seller_fees_mochi">Mochi trattiene il %1$s%% di ogni vendita.</string>
+    <string name="market_account_seller_fees_stripe">Stripe applica la propria commissione di elaborazione per transazione e una tariffa fissa per ogni storno. Le tariffe attuali per la tua valuta e regione sono indicate nella tua dashboard Stripe.</string>
+    <string name="market_account_seller_connect">Collega Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Collega Stripe</string>
+    <string name="market_account_seller_check_status">Verifica lo stato</string>
     <string name="market_account_status_banned_title">Account bandito</string>
     <string name="market_account_status_suspended_title">Account sospeso</string>
     <string name="market_account_stripe_dashboard">Apri dashboard Stripe</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Acquista ora</string>
     <string name="market_listing_detail_description_heading">Descrizione</string>
     <string name="market_listing_detail_edit">Modifica</string>
+    <string name="market_listing_detail_information_heading">Informazioni di consegna</string>
     <string name="market_listing_detail_load_failed">Impossibile caricare l\'annuncio</string>
+    <string name="market_listing_detail_listed">Pubblicato il %1$s</string>
     <string name="market_listing_detail_location_heading">Posizione</string>
+    <string name="market_listing_detail_message">Messaggio</string>
     <string name="market_listing_detail_message_seller">Invia messaggio al venditore</string>
     <string name="market_listing_detail_not_found">Annuncio non trovato</string>
     <string name="market_listing_detail_place_bid">Offri</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Numero di tracciamento</string>
     <string name="market_saved_title">Salvato</string>
     <string name="market_search_clear">Cancella ricerca</string>
-    <string name="market_section_categories">Categorie</string>
-    <string name="market_section_listings">Annunci</string>
+    <string name="market_section_categories">Sfoglia le categorie</string>
+    <string name="market_section_listings">Annunci recenti</string>
     <string name="market_section_recent">Visti di recente</string>
     <string name="market_ship_dialog_cancel">Annulla</string>
     <string name="market_ship_dialog_submit">Conferma</string>
     <string name="market_ship_dialog_title">Segna come spedito</string>
     <string name="market_shipping_days">Consegna</string>
+    <string name="market_shipping_days_value">%1$s giorni</string>
     <string name="market_shipping_notes">Note</string>
     <string name="market_shipping_price">Prezzo</string>
     <string name="market_shipping_region">Regione</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Ordine n. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Racconta agli acquirenti qualcosa su di te…</string>
     <string name="market_account_load_failed">Impossibile caricare l\'account</string>
     <string name="market_account_save_failed">Impossibile salvare le modifiche</string>
     <string name="market_account_saved">Modifiche salvate</string>

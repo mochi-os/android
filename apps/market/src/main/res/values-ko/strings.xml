@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">약력</string>
     <string name="market_account_location_label">위치</string>
     <string name="market_account_save">저장</string>
+    <string name="market_account_seller_title">판매자 되기</string>
+    <string name="market_account_seller_subtitle">구매자에게 다가가 Mochi에서 상품을 판매하세요. 결제는 Stripe를 통해 안전하게 처리됩니다.</string>
+    <string name="market_account_seller_step_activate_title">판매자 계정 활성화</string>
+    <string name="market_account_seller_step_activate_desc">상품 등록을 시작하려면 판매자 프로필을 만드세요</string>
+    <string name="market_account_seller_step_stripe_desc">구매자로부터 결제를 받으려면 Stripe 계정을 연결하세요</string>
+    <string name="market_account_seller_fees_heading">수수료:</string>
+    <string name="market_account_seller_fees_mochi">Mochi는 판매마다 %1$s%%를 가져갑니다.</string>
+    <string name="market_account_seller_fees_stripe">Stripe는 거래마다 자체 처리 수수료를, 지불 거절마다 고정 수수료를 부과합니다. 통화 및 지역에 대한 현재 요율은 Stripe 대시보드에 표시됩니다.</string>
+    <string name="market_account_seller_connect">Stripe 연결</string>
+    <string name="market_account_seller_step_stripe_title">Stripe 연결</string>
+    <string name="market_account_seller_check_status">상태 확인</string>
     <string name="market_account_status_banned_title">계정이 차단되었어요</string>
     <string name="market_account_status_suspended_title">계정이 정지되었어요</string>
     <string name="market_account_stripe_dashboard">Stripe 대시보드 열기</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">지금 구매</string>
     <string name="market_listing_detail_description_heading">설명</string>
     <string name="market_listing_detail_edit">편집</string>
+    <string name="market_listing_detail_information_heading">배송 정보</string>
     <string name="market_listing_detail_load_failed">목록 불러오기에 실패했어요</string>
+    <string name="market_listing_detail_listed">등록일 %1$s</string>
     <string name="market_listing_detail_location_heading">위치</string>
+    <string name="market_listing_detail_message">메시지</string>
     <string name="market_listing_detail_message_seller">판매자에게 메시지</string>
     <string name="market_listing_detail_not_found">목록을 찾을 수 없어요</string>
     <string name="market_listing_detail_place_bid">입찰</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">추적 번호</string>
     <string name="market_saved_title">저장됨</string>
     <string name="market_search_clear">검색 지우기</string>
-    <string name="market_section_categories">카테고리</string>
-    <string name="market_section_listings">목록</string>
+    <string name="market_section_categories">카테고리 둘러보기</string>
+    <string name="market_section_listings">최근 등록 상품</string>
     <string name="market_section_recent">최근 본 상품</string>
     <string name="market_ship_dialog_cancel">취소</string>
     <string name="market_ship_dialog_submit">확인</string>
     <string name="market_ship_dialog_title">배송됨으로 표시</string>
     <string name="market_shipping_days">배송</string>
+    <string name="market_shipping_days_value">%1$s일</string>
     <string name="market_shipping_notes">메모</string>
     <string name="market_shipping_price">가격</string>
     <string name="market_shipping_region">지역</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">주문 #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">구매자에게 자신을 소개하세요…</string>
     <string name="market_account_load_failed">계정을 불러올 수 없습니다</string>
     <string name="market_account_save_failed">변경 사항을 저장할 수 없습니다</string>
     <string name="market_account_saved">변경 사항이 저장되었습니다</string>

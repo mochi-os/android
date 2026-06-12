@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografia</string>
     <string name="market_account_location_label">Localização</string>
     <string name="market_account_save">Guardar</string>
+    <string name="market_account_seller_title">Tornar-se vendedor</string>
+    <string name="market_account_seller_subtitle">Alcance compradores e venda os seus artigos no Mochi. Os pagamentos são processados em segurança através do Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Ativar conta de vendedor</string>
+    <string name="market_account_seller_step_activate_desc">Crie o seu perfil de vendedor para começar a publicar artigos</string>
+    <string name="market_account_seller_step_stripe_desc">Associe uma conta Stripe para aceitar pagamentos dos compradores</string>
+    <string name="market_account_seller_fees_heading">Taxas:</string>
+    <string name="market_account_seller_fees_mochi">O Mochi fica com %1$s%% de cada venda.</string>
+    <string name="market_account_seller_fees_stripe">O Stripe cobra a sua própria taxa de processamento por transação e uma taxa fixa por estorno. As tarifas atuais para a sua moeda e região constam no seu painel do Stripe.</string>
+    <string name="market_account_seller_connect">Ligar Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Ligar Stripe</string>
+    <string name="market_account_seller_check_status">Verificar estado</string>
     <string name="market_account_status_banned_title">Conta banida</string>
     <string name="market_account_status_suspended_title">Conta suspensa</string>
     <string name="market_account_stripe_dashboard">Abrir painel da Stripe</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Comprar agora</string>
     <string name="market_listing_detail_description_heading">Descrição</string>
     <string name="market_listing_detail_edit">Editar</string>
+    <string name="market_listing_detail_information_heading">Informações de entrega</string>
     <string name="market_listing_detail_load_failed">Falha ao carregar anúncio</string>
+    <string name="market_listing_detail_listed">Publicado em %1$s</string>
     <string name="market_listing_detail_location_heading">Localização</string>
+    <string name="market_listing_detail_message">Mensagem</string>
     <string name="market_listing_detail_message_seller">Enviar mensagem ao vendedor</string>
     <string name="market_listing_detail_not_found">Anúncio não encontrado</string>
     <string name="market_listing_detail_place_bid">Licitar</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Número de seguimento</string>
     <string name="market_saved_title">Guardado</string>
     <string name="market_search_clear">Limpar pesquisa</string>
-    <string name="market_section_categories">Categorias</string>
-    <string name="market_section_listings">Anúncios</string>
+    <string name="market_section_categories">Explorar categorias</string>
+    <string name="market_section_listings">Anúncios recentes</string>
     <string name="market_section_recent">Vistos recentemente</string>
     <string name="market_ship_dialog_cancel">Cancelar</string>
     <string name="market_ship_dialog_submit">Confirmar</string>
     <string name="market_ship_dialog_title">Marcar como enviado</string>
     <string name="market_shipping_days">Entrega</string>
+    <string name="market_shipping_days_value">%1$s dias</string>
     <string name="market_shipping_notes">Notas</string>
     <string name="market_shipping_price">Preço</string>
     <string name="market_shipping_region">Região</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Encomenda n.º %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Fale sobre si aos compradores…</string>
     <string name="market_account_load_failed">Não foi possível carregar a conta</string>
     <string name="market_account_save_failed">Não foi possível guardar as alterações</string>
     <string name="market_account_saved">Alterações guardadas</string>

@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_location_label">Lokasi</string>
     <string name="market_account_save">Simpan</string>
+    <string name="market_account_seller_title">Jadi penjual</string>
+    <string name="market_account_seller_subtitle">Jangkau pembeli dan jual barang Anda di Mochi. Pembayaran ditangani dengan aman melalui Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktifkan akun penjual</string>
+    <string name="market_account_seller_step_activate_desc">Buat profil penjual Anda untuk mulai memasang barang</string>
+    <string name="market_account_seller_step_stripe_desc">Hubungkan akun Stripe untuk menerima pembayaran dari pembeli</string>
+    <string name="market_account_seller_fees_heading">Biaya:</string>
+    <string name="market_account_seller_fees_mochi">Mochi mengambil %1$s%% dari setiap penjualan.</string>
+    <string name="market_account_seller_fees_stripe">Stripe mengenakan biaya pemrosesannya sendiri per transaksi dan biaya tetap per tolak bayar. Tarif terkini untuk mata uang dan wilayah Anda tercantum di Dasbor Stripe Anda.</string>
+    <string name="market_account_seller_connect">Hubungkan Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Hubungkan Stripe</string>
+    <string name="market_account_seller_check_status">Periksa status</string>
     <string name="market_account_status_banned_title">Akun diblokir</string>
     <string name="market_account_status_suspended_title">Akun ditangguhkan</string>
     <string name="market_account_stripe_dashboard">Buka dasbor Stripe</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Beli sekarang</string>
     <string name="market_listing_detail_description_heading">Deskripsi</string>
     <string name="market_listing_detail_edit">Edit</string>
+    <string name="market_listing_detail_information_heading">Informasi pengiriman</string>
     <string name="market_listing_detail_load_failed">Gagal memuat daftar</string>
+    <string name="market_listing_detail_listed">Diposting %1$s</string>
     <string name="market_listing_detail_location_heading">Lokasi</string>
+    <string name="market_listing_detail_message">Pesan</string>
     <string name="market_listing_detail_message_seller">Kirim pesan ke penjual</string>
     <string name="market_listing_detail_not_found">Daftar tidak ditemukan</string>
     <string name="market_listing_detail_place_bid">Pasang tawaran</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Nomor pelacakan</string>
     <string name="market_saved_title">Tersimpan</string>
     <string name="market_search_clear">Bersihkan pencarian</string>
-    <string name="market_section_categories">Kategori</string>
-    <string name="market_section_listings">Daftar</string>
+    <string name="market_section_categories">Jelajahi Kategori</string>
+    <string name="market_section_listings">Daftar Terbaru</string>
     <string name="market_section_recent">Baru dilihat</string>
     <string name="market_ship_dialog_cancel">Batal</string>
     <string name="market_ship_dialog_submit">Konfirmasi</string>
     <string name="market_ship_dialog_title">Tandai sebagai dikirim</string>
     <string name="market_shipping_days">Pengiriman</string>
+    <string name="market_shipping_days_value">%1$s hari</string>
     <string name="market_shipping_notes">Catatan</string>
     <string name="market_shipping_price">Harga</string>
     <string name="market_shipping_region">Wilayah</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Pesanan #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Ceritakan tentang diri Anda kepada pembeli…</string>
     <string name="market_account_load_failed">Tidak dapat memuat akun</string>
     <string name="market_account_save_failed">Tidak dapat menyimpan perubahan</string>
     <string name="market_account_saved">Perubahan disimpan</string>

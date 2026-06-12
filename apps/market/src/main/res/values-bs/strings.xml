@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografija</string>
     <string name="market_account_location_label">Lokacija</string>
     <string name="market_account_save">Sačuvaj</string>
+    <string name="market_account_seller_title">Postanite prodavač</string>
+    <string name="market_account_seller_subtitle">Dosegnite kupce i prodajte svoje artikle na Mochi. Plaćanja se sigurno obrađuju putem Stripea.</string>
+    <string name="market_account_seller_step_activate_title">Aktivirajte račun prodavača</string>
+    <string name="market_account_seller_step_activate_desc">Kreirajte profil prodavača da biste počeli objavljivati artikle</string>
+    <string name="market_account_seller_step_stripe_desc">Povežite Stripe račun da biste primali uplate od kupaca</string>
+    <string name="market_account_seller_fees_heading">Naknade:</string>
+    <string name="market_account_seller_fees_mochi">Mochi uzima %1$s%% od svake prodaje.</string>
+    <string name="market_account_seller_fees_stripe">Stripe naplaćuje vlastitu naknadu za obradu po transakciji i fiksnu naknadu po povratu sredstava. Trenutne stope za vašu valutu i regiju navedene su na vašoj Stripe nadzornoj ploči.</string>
+    <string name="market_account_seller_connect">Poveži Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Poveži Stripe</string>
+    <string name="market_account_seller_check_status">Provjeri status</string>
     <string name="market_account_status_banned_title">Račun zabranjen</string>
     <string name="market_account_status_suspended_title">Račun suspendovan</string>
     <string name="market_account_stripe_dashboard">Otvori Stripe panel</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Kupi sada</string>
     <string name="market_listing_detail_description_heading">Opis</string>
     <string name="market_listing_detail_edit">Uredi</string>
+    <string name="market_listing_detail_information_heading">Informacije o dostavi</string>
     <string name="market_listing_detail_load_failed">Učitavanje oglasa nije uspjelo</string>
+    <string name="market_listing_detail_listed">Objavljeno %1$s</string>
     <string name="market_listing_detail_location_heading">Lokacija</string>
+    <string name="market_listing_detail_message">Poruka</string>
     <string name="market_listing_detail_message_seller">Poruka prodavaču</string>
     <string name="market_listing_detail_not_found">Oglas nije pronađen</string>
     <string name="market_listing_detail_place_bid">Daj ponudu</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Broj za praćenje</string>
     <string name="market_saved_title">Sačuvano</string>
     <string name="market_search_clear">Očisti pretragu</string>
-    <string name="market_section_categories">Kategorije</string>
-    <string name="market_section_listings">Oglasi</string>
+    <string name="market_section_categories">Pregledaj kategorije</string>
+    <string name="market_section_listings">Nedavni oglasi</string>
     <string name="market_section_recent">Nedavno pregledano</string>
     <string name="market_ship_dialog_cancel">Otkaži</string>
     <string name="market_ship_dialog_submit">Potvrdi</string>
     <string name="market_ship_dialog_title">Označi kao poslano</string>
     <string name="market_shipping_days">Dostava</string>
+    <string name="market_shipping_days_value">%1$s dana</string>
     <string name="market_shipping_notes">Bilješke</string>
     <string name="market_shipping_price">Cijena</string>
     <string name="market_shipping_region">Region</string>
@@ -422,6 +437,7 @@
     <string name="market_messages_send">Pošalji</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Recite kupcima o sebi…</string>
     <string name="market_account_load_failed">Učitavanje računa nije uspjelo</string>
     <string name="market_account_save_failed">Spremanje izmjena nije uspjelo</string>
     <string name="market_account_saved">Izmjene spremljene</string>

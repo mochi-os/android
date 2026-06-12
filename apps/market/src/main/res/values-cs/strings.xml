@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Životopis</string>
     <string name="market_account_location_label">Umístění</string>
     <string name="market_account_save">Uložit</string>
+    <string name="market_account_seller_title">Staňte se prodejcem</string>
+    <string name="market_account_seller_subtitle">Oslovte kupující a prodávejte své položky na Mochi. Platby jsou bezpečně zpracovávány přes Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktivovat účet prodejce</string>
+    <string name="market_account_seller_step_activate_desc">Vytvořte si profil prodejce a začněte nabízet položky</string>
+    <string name="market_account_seller_step_stripe_desc">Propojte účet Stripe a přijímejte platby od kupujících</string>
+    <string name="market_account_seller_fees_heading">Poplatky:</string>
+    <string name="market_account_seller_fees_mochi">Mochi si bere %1$s%% z každého prodeje.</string>
+    <string name="market_account_seller_fees_stripe">Stripe účtuje vlastní poplatek za zpracování každé transakce a pevný poplatek za každé zpětné zúčtování. Aktuální sazby pro vaši měnu a region najdete na svém panelu Stripe.</string>
+    <string name="market_account_seller_connect">Připojit Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Připojit Stripe</string>
+    <string name="market_account_seller_check_status">Zkontrolovat stav</string>
     <string name="market_account_status_banned_title">Účet zablokován</string>
     <string name="market_account_status_suspended_title">Účet pozastaven</string>
     <string name="market_account_stripe_dashboard">Otevřít panel Stripe</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Koupit teď</string>
     <string name="market_listing_detail_description_heading">Popis</string>
     <string name="market_listing_detail_edit">Upravit</string>
+    <string name="market_listing_detail_information_heading">Informace o doručení</string>
     <string name="market_listing_detail_load_failed">Nepodařilo se načíst nabídku</string>
+    <string name="market_listing_detail_listed">Zveřejněno %1$s</string>
     <string name="market_listing_detail_location_heading">Umístění</string>
+    <string name="market_listing_detail_message">Zpráva</string>
     <string name="market_listing_detail_message_seller">Napsat prodejci</string>
     <string name="market_listing_detail_not_found">Nabídka nenalezena</string>
     <string name="market_listing_detail_place_bid">Přihodit</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Číslo zásilky</string>
     <string name="market_saved_title">Uloženo</string>
     <string name="market_search_clear">Vymazat hledání</string>
-    <string name="market_section_categories">Kategorie</string>
-    <string name="market_section_listings">Nabídky</string>
+    <string name="market_section_categories">Procházet kategorie</string>
+    <string name="market_section_listings">Nedávné inzeráty</string>
     <string name="market_section_recent">Nedávno zobrazené</string>
     <string name="market_ship_dialog_cancel">Zrušit</string>
     <string name="market_ship_dialog_submit">Potvrdit</string>
     <string name="market_ship_dialog_title">Označit jako odesláno</string>
     <string name="market_shipping_days">Doručení</string>
+    <string name="market_shipping_days_value">%1$s dní</string>
     <string name="market_shipping_notes">Poznámky</string>
     <string name="market_shipping_price">Cena</string>
     <string name="market_shipping_region">Region</string>
@@ -422,6 +437,7 @@
     <string name="market_messages_send">Odeslat</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Řekněte kupujícím něco o sobě…</string>
     <string name="market_account_load_failed">Účet se nepodařilo načíst</string>
     <string name="market_account_save_failed">Změny se nepodařilo uložit</string>
     <string name="market_account_saved">Změny uloženy</string>

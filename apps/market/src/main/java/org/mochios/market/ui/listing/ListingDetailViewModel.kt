@@ -16,13 +16,15 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
-import org.mochios.market.lib.SavedStore
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
 import org.mochios.market.model.ListingDetailResponse
+import org.mochios.market.model.Photo
+import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
+import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
 /**
@@ -34,8 +36,10 @@ import javax.inject.Inject
 data class ListingDetailUiState(
     val isLoading: Boolean = true,
     val listing: ListingDetailResponse? = null,
+    val photos: List<Photo> = emptyList(),
     val audit: List<AuditEvent> = emptyList(),
     val categories: List<Category> = emptyList(),
+    val sellerReviews: List<Review> = emptyList(),
     val error: MochiError? = null,
 )
 
@@ -53,7 +57,7 @@ data class ListingDetailSnackbar(
  * ViewModel for [ListingDetailScreen].
  *
  * Wraps [MarketRepository.getListing] for the initial load, exposes the
- * three on-device stores ([SavedStore], [RecentlyViewedStore],
+ * three on-device stores ([SavedRepository], [RecentlyViewedStore],
  * [ReportedStore]) the screen needs for the save / report / recently-viewed
  * affordances, and re-fetches the listing after a relist so the new status /
  * id surface in the UI.
@@ -65,7 +69,7 @@ data class ListingDetailSnackbar(
 @HiltViewModel
 class ListingDetailViewModel @Inject constructor(
     private val repository: MarketRepository,
-    private val savedStore: SavedStore,
+    private val savedRepository: SavedRepository,
     private val recentStore: RecentlyViewedStore,
     private val reportedStore: ReportedStore,
 ) : ViewModel() {
@@ -86,7 +90,7 @@ class ListingDetailViewModel @Inject constructor(
         loadCategories()
         // Hydrate the server-backed saved mirror so the bookmark toggle
         // reflects cross-device saved state on first render.
-        viewModelScope.launch { savedStore.refresh() }
+        viewModelScope.launch { savedRepository.refresh() }
     }
 
     private fun loadCategories() {
@@ -112,15 +116,38 @@ class ListingDetailViewModel @Inject constructor(
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
                 val resp = repository.getListing(parsed)
+                // Photos are best-effort: the detail payload only embeds the
+                // primary `photo`, so the full set comes from the public
+                // `-/photos/list` endpoint. A failure just falls back to the
+                // embedded photo (or an empty carousel). Sorted by rank so the
+                // carousel order matches the seller's arrangement.
+                val photos = runCatching {
+                    repository.listPhotos(parsed).sortedBy { it.rank }
+                }.getOrDefault(emptyList())
                 // Audit fetch is best-effort: regular buyers don't have read
                 // access, and a 403 must not blow up the detail render.
                 val audit = runCatching {
                     repository.auditObject(kind = "listing", objectId = parsed.toString()).audit
                 }.getOrDefault(emptyList())
+                // Seller reviews are best-effort: a fetch failure (or a seller
+                // with no public reviews) just hides the section. `role` is the
+                // reviewer's perspective, so to show reviews *of* this seller we
+                // want the ones written by buyers (buyer -> seller), not the
+                // seller's own authored reviews.
+                val reviews = runCatching {
+                    val sellerId = resp.seller.id
+                    if (sellerId.isBlank()) {
+                        emptyList()
+                    } else {
+                        repository.accountReviews(id = sellerId, role = "buyer").reviews
+                    }
+                }.getOrDefault(emptyList())
                 _state.value = _state.value.copy(
                     isLoading = false,
                     listing = resp,
+                    photos = photos,
                     audit = audit,
+                    sellerReviews = reviews,
                     error = null,
                 )
                 // Record the visit for the "recently viewed" rail. Best-effort —
@@ -130,6 +157,7 @@ class ListingDetailViewModel @Inject constructor(
                 } catch (_: Exception) {
                     // ignore
                 }
+                savedRepository.refresh()
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
@@ -144,7 +172,7 @@ class ListingDetailViewModel @Inject constructor(
         if (listing.id == 0L) return
         viewModelScope.launch {
             try {
-                savedStore.toggle(listing)
+                savedRepository.toggle(listing)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(error = e.toMochiError())
             }
@@ -246,7 +274,7 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun isSaved(): Flow<Boolean> =
-        savedStore.observeIds().map { set -> currentId.toString() in set }
+        savedRepository.observeIds().map { set -> currentId.toString() in set }
 
     fun isReported(): Flow<Boolean> =
         reportedStore.observe().map { set -> currentId.toString() in set }

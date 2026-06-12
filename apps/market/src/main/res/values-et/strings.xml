@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biograafia</string>
     <string name="market_account_location_label">Asukoht</string>
     <string name="market_account_save">Salvesta</string>
+    <string name="market_account_seller_title">Hakka müüjaks</string>
+    <string name="market_account_seller_subtitle">Jõua ostjateni ja müü oma tooteid Mochis. Makseid töödeldakse turvaliselt Stripe’i kaudu.</string>
+    <string name="market_account_seller_step_activate_title">Aktiveeri müüjakonto</string>
+    <string name="market_account_seller_step_activate_desc">Loo müüjaprofiil, et alustada toodete lisamist</string>
+    <string name="market_account_seller_step_stripe_desc">Ühenda Stripe’i konto, et võtta ostjatelt makseid vastu</string>
+    <string name="market_account_seller_fees_heading">Tasud:</string>
+    <string name="market_account_seller_fees_mochi">Mochi võtab igalt müügilt %1$s%%.</string>
+    <string name="market_account_seller_fees_stripe">Stripe võtab iga tehingu eest oma töötlustasu ja iga tagasimakse eest fikseeritud tasu. Sinu valuuta ja piirkonna praegused määrad on toodud sinu Stripe’i juhtpaneelil.</string>
+    <string name="market_account_seller_connect">Ühenda Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Ühenda Stripe</string>
+    <string name="market_account_seller_check_status">Kontrolli olekut</string>
     <string name="market_account_status_banned_title">Konto blokeeritud</string>
     <string name="market_account_status_suspended_title">Konto peatatud</string>
     <string name="market_account_stripe_dashboard">Ava Stripe’i juhtpaneel</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Osta kohe</string>
     <string name="market_listing_detail_description_heading">Kirjeldus</string>
     <string name="market_listing_detail_edit">Muuda</string>
+    <string name="market_listing_detail_information_heading">Tarneteave</string>
     <string name="market_listing_detail_load_failed">Kuulutuse laadimine ebaõnnestus</string>
+    <string name="market_listing_detail_listed">Lisatud %1$s</string>
     <string name="market_listing_detail_location_heading">Asukoht</string>
+    <string name="market_listing_detail_message">Sõnum</string>
     <string name="market_listing_detail_message_seller">Sõnum müüjale</string>
     <string name="market_listing_detail_not_found">Kuulutust ei leitud</string>
     <string name="market_listing_detail_place_bid">Tee pakkumine</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Jälgimisnumber</string>
     <string name="market_saved_title">Salvestatud</string>
     <string name="market_search_clear">Tühjenda otsing</string>
-    <string name="market_section_categories">Kategooriad</string>
-    <string name="market_section_listings">Kuulutused</string>
+    <string name="market_section_categories">Sirvi kategooriaid</string>
+    <string name="market_section_listings">Hiljutised kuulutused</string>
     <string name="market_section_recent">Hiljuti vaadatud</string>
     <string name="market_ship_dialog_cancel">Tühista</string>
     <string name="market_ship_dialog_submit">Kinnita</string>
     <string name="market_ship_dialog_title">Märgi saadetuks</string>
     <string name="market_shipping_days">Tarne</string>
+    <string name="market_shipping_days_value">%1$s päeva</string>
     <string name="market_shipping_notes">Märkmed</string>
     <string name="market_shipping_price">Hind</string>
     <string name="market_shipping_region">Piirkond</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Tellimus #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Rääkige ostjatele endast…</string>
     <string name="market_account_load_failed">Konto laadimine ebaõnnestus</string>
     <string name="market_account_save_failed">Muudatuste salvestamine ebaõnnestus</string>
     <string name="market_account_saved">Muudatused salvestatud</string>

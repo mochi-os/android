@@ -113,7 +113,7 @@
     <string name="market_listing_detail_title">刊登</string>
     <string name="market_messages_thread_listing_chip">刊登</string>
     <string name="market_subscription_detail_listing">刊登</string>
-    <string name="market_section_listings">刊登</string>
+    <string name="market_section_listings">最新刊登</string>
     <string name="market_sidebar_listings">刊登</string>
     <string name="market_checkout_subscribe_failed">訂閱失敗</string>
     <string name="market_checkout_subscribing">緊訂閱…</string>
@@ -129,12 +129,13 @@
     <string name="market_profile_verified">已驗證</string>
     <string name="market_sale_section_summary">摘要</string>
     <string name="market_search_clear">清除搜尋</string>
-    <string name="market_section_categories">類別</string>
+    <string name="market_section_categories">瀏覽類別</string>
     <string name="market_subscription_detail_title">訂閱</string>
     <string name="market_purchase_audit_section">動態</string>
     <string name="market_sale_section_audit">動態</string>
     <string name="market_account_location_label">位置</string>
     <string name="market_editor_section_location">位置</string>
+    <string name="market_listing_detail_listed">上架於 %1$s</string>
     <string name="market_listing_detail_location_heading">位置</string>
     <string name="app_name">市場</string>
     <string name="market_channel_name">市場</string>
@@ -154,6 +155,7 @@
     <string name="market_sidebar_reviews">評論</string>
     <string name="market_purchase_refunded">已退款</string>
     <string name="market_status_refunded">已退款</string>
+    <string name="market_shipping_days_value">%1$s 日</string>
     <string name="market_shipping_notes">備註</string>
     <string name="market_editor_type_digital">數位</string>
     <string name="market_filter_type_digital">數位</string>
@@ -165,9 +167,21 @@
     <string name="market_purchase_review_body">評論</string>
 
     <string name="market_account_biography_label">簡介</string>
+    <string name="market_account_biography_placeholder">向買家介紹一下你自己…</string>
     <string name="market_account_load_failed">無法載入帳戶</string>
     <string name="market_account_save_failed">無法儲存變更</string>
     <string name="market_account_saved">變更已儲存</string>
+    <string name="market_account_seller_title">成為賣家</string>
+    <string name="market_account_seller_subtitle">接觸買家，喺 Mochi 上出售你嘅商品。付款透過 Stripe 安全處理。</string>
+    <string name="market_account_seller_step_activate_title">啟用賣家帳戶</string>
+    <string name="market_account_seller_step_activate_desc">建立你嘅賣家資料即可開始刊登商品</string>
+    <string name="market_account_seller_step_stripe_desc">連結 Stripe 帳戶以接受買家付款</string>
+    <string name="market_account_seller_fees_heading">費用：</string>
+    <string name="market_account_seller_fees_mochi">Mochi 會從每筆銷售中收取 %1$s%%。</string>
+    <string name="market_account_seller_fees_stripe">Stripe 會就每筆交易收取自己嘅處理費，並對每次退款收取固定費用。適用於你嘅貨幣同地區嘅目前費率會列喺你嘅 Stripe 控制台中。</string>
+    <string name="market_account_seller_connect">連接 Stripe</string>
+    <string name="market_account_seller_step_stripe_title">連接 Stripe</string>
+    <string name="market_account_seller_check_status">檢查狀態</string>
     <string name="market_account_status_banned_title">帳戶已被封禁</string>
     <string name="market_account_status_restrictions">當您嘅帳戶處於此狀態時,部分操作會受到限制,包括建立新刊登同完成訂單。</string>
     <string name="market_account_status_suspended_title">帳戶已被暫停</string>
@@ -369,8 +383,10 @@
     <string name="market_listing_detail_bids_heading">出價紀錄</string>
     <string name="market_listing_detail_buy">購買</string>
     <string name="market_listing_detail_buy_now">立即購買</string>
+    <string name="market_listing_detail_information_heading">送貨資訊</string>
     <string name="market_listing_detail_load_failed">無法載入上架資料</string>
     <string name="market_listing_detail_loading">正在載入上架資料</string>
+    <string name="market_listing_detail_message">訊息</string>
     <string name="market_listing_detail_message_seller">傳訊息畀賣家</string>
     <string name="market_listing_detail_not_found">搵唔到上架資料</string>
     <string name="market_listing_detail_place_bid">出價</string>

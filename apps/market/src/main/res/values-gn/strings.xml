@@ -5,6 +5,17 @@
     <string name="market_account_biography_label">Tekove rembiasakue</string>
     <string name="market_account_location_label">Tenda</string>
     <string name="market_account_save">Ñongatu</string>
+    <string name="market_account_seller_title">Eñemu hag̃ua</string>
+    <string name="market_account_seller_subtitle">Eguahẽ tovahára kuérape ha eñemu nde mba’e kuéra Mochi-pe. Tepykue oñemyatyrõ tekorosãme Stripe rupive.</string>
+    <string name="market_account_seller_step_activate_title">Embojuruja ñemuha kuenta</string>
+    <string name="market_account_seller_step_activate_desc">Ejapo ne ñemuha perfil eñepyrũ hag̃ua remoĩ mba’e kuéra</string>
+    <string name="market_account_seller_step_stripe_desc">Embojoaju Stripe kuenta eñembohepy hag̃ua tovahára kuéragui</string>
+    <string name="market_account_seller_fees_heading">Tepykue:</string>
+    <string name="market_account_seller_fees_mochi">Mochi ogueraha %1$s%% peteĩteĩ ñemuhágui.</string>
+    <string name="market_account_seller_fees_stripe">Stripe ojerure imba’e procesamiento repykue peteĩteĩ transacción rehe ha peteĩ tepykue ijatýva peteĩteĩ jehepyme’ẽjey rehe. Pe tepy ag̃agua nde viru ha nde tetãme oĩ nde Stripe Dashboard-pe.</string>
+    <string name="market_account_seller_connect">Embojuaju Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Embojuaju Stripe</string>
+    <string name="market_account_seller_check_status">Ehecha estado</string>
     <string name="market_account_status_banned_title">Tetãygua ojejokóma</string>
     <string name="market_account_status_suspended_title">Tetãygua oñepe\'ã</string>
     <string name="market_account_stripe_dashboard">Eipe’a Stripe panel</string>
@@ -199,8 +210,11 @@
     <string name="market_listing_detail_buy_now">Ejogua ko\'ãnga</string>
     <string name="market_listing_detail_description_heading">Mbohekoha</string>
     <string name="market_listing_detail_edit">Embojuruja</string>
+    <string name="market_listing_detail_information_heading">Mbohasa marandu</string>
     <string name="market_listing_detail_load_failed">Ndaikatúi oñembogue listado</string>
+    <string name="market_listing_detail_listed">Oñemoĩ %1$s</string>
     <string name="market_listing_detail_location_heading">Tenda</string>
+    <string name="market_listing_detail_message">Marandu</string>
     <string name="market_listing_detail_message_seller">Mensaje ome\'ẽkue-pe</string>
     <string name="market_listing_detail_not_found">Listado nojetopái</string>
     <string name="market_listing_detail_place_bid">Emoĩ tepy</string>
@@ -401,13 +415,14 @@
     <string name="market_saved_title">Oñeñongatu</string>
     <string name="market_search_clear">Embopotĩ jeheka</string>
     <string name="market_search_placeholder">Eheka</string>
-    <string name="market_section_categories">Categoríakuéra</string>
-    <string name="market_section_listings">Listadokuéra</string>
+    <string name="market_section_categories">Ehecha categoríakuéra</string>
+    <string name="market_section_listings">Listado pyahu</string>
     <string name="market_section_recent">Ehecha va\'ekue ramoguáve</string>
     <string name="market_ship_dialog_cancel">Heja</string>
     <string name="market_ship_dialog_submit">Emoneĩ</string>
     <string name="market_ship_dialog_title">Ehecha oguõva</string>
     <string name="market_shipping_days">Ñemog̃uahẽ</string>
+    <string name="market_shipping_days_value">%1$s ára</string>
     <string name="market_shipping_notes">Apuntes</string>
     <string name="market_shipping_price">Hepykue</string>
     <string name="market_shipping_region">Tetãvore</string>
@@ -487,6 +502,7 @@
     <string name="market_purchase_dispute_response">Ñemuhára mbohovái</string>
     <string name="market_refund_dialog_amount_label">Atýra</string>
 
+    <string name="market_account_biography_placeholder">Emombe’u jehe tovahára kuérape…</string>
     <string name="market_account_load_failed">Ndaikatúi ojehupi pe mba\'ete</string>
     <string name="market_account_save_failed">Ndaikatúi oñeñongatu umi moambue</string>
     <string name="market_account_saved">Oñeñongatu umi moambue</string>

@@ -127,11 +127,15 @@ fun MyListingsScreen(
             TopAppBar(title = { Text(stringResource(R.string.market_listings_title)) })
         },
         floatingActionButton = {
-            ExtendedFloatingActionButton(
-                onClick = { navController.navigate(MarketApp.newListing()) },
-                icon = { Icon(Icons.Default.Add, contentDescription = null) },
-                text = { Text(stringResource(R.string.market_listings_new)) },
-            )
+            // Only sellers fully connected to Stripe can create listings.
+            val stripe = state.stripeStatus
+            if (stripe != null && stripe.chargesEnabled && stripe.payoutsEnabled) {
+                ExtendedFloatingActionButton(
+                    onClick = { navController.navigate(MarketApp.newListing()) },
+                    icon = { Icon(Icons.Default.Add, contentDescription = null) },
+                    text = { Text(stringResource(R.string.market_listings_new)) },
+                )
+            }
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { padding ->

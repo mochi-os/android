@@ -45,10 +45,10 @@ fun StatusBadge(
     )
 }
 
-private data class StatusTone(val background: Color, val foreground: Color)
+internal data class StatusTone(val background: Color, val foreground: Color)
 
 @Composable
-private fun statusTone(key: String): StatusTone {
+internal fun statusTone(key: String): StatusTone {
     val scheme = MaterialTheme.colorScheme
     return when (key) {
         "paid", "shipped", "active" ->
@@ -63,7 +63,7 @@ private fun statusTone(key: String): StatusTone {
 }
 
 @Composable
-private fun knownStatusLabel(key: String): String? = when (key) {
+internal fun knownStatusLabel(key: String): String? = when (key) {
     "pending" -> stringResource(R.string.market_status_pending)
     "paid" -> stringResource(R.string.market_status_paid)
     "shipped" -> stringResource(R.string.market_status_shipped)

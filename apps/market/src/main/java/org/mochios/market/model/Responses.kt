@@ -115,6 +115,7 @@ data class RemovalCheck(
     @SerializedName("has_active_orders") val hasActiveOrders: Boolean = false,
 )
 
+// ---- Saved --------------------------------------------------------------
 /**
  * Result of `saved/list`. Mirrors the inline shape in
  * `apps/market/web/src/api/saved.ts` (`{ saved: Listing[]; total: number }`).

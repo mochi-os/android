@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">سوانح عمری</string>
     <string name="market_account_location_label">مقام</string>
     <string name="market_account_save">محفوظ کریں</string>
+    <string name="market_account_seller_title">بیچنے والے بنیں</string>
+    <string name="market_account_seller_subtitle">خریداروں تک پہنچیں اور Mochi پر اپنی اشیاء بیچیں۔ ادائیگیاں Stripe کے ذریعے محفوظ طریقے سے سنبھالی جاتی ہیں۔</string>
+    <string name="market_account_seller_step_activate_title">بیچنے والے کا اکاؤنٹ فعال کریں</string>
+    <string name="market_account_seller_step_activate_desc">اشیاء درج کرنا شروع کرنے کے لیے اپنا بیچنے والے کا پروفائل بنائیں</string>
+    <string name="market_account_seller_step_stripe_desc">خریداروں سے ادائیگیاں قبول کرنے کے لیے Stripe اکاؤنٹ منسلک کریں</string>
+    <string name="market_account_seller_fees_heading">فیسیں:</string>
+    <string name="market_account_seller_fees_mochi">Mochi ہر فروخت سے %1$s%% لیتا ہے۔</string>
+    <string name="market_account_seller_fees_stripe">Stripe ہر لین دین پر اپنی پروسیسنگ فیس اور ہر چارج بیک پر ایک مقررہ فیس وصول کرتا ہے۔ آپ کی کرنسی اور خطے کے لیے موجودہ نرخیں آپ کے Stripe ڈیش بورڈ میں درج ہیں۔</string>
+    <string name="market_account_seller_connect">Stripe کنیکٹ کریں</string>
+    <string name="market_account_seller_step_stripe_title">Stripe کنیکٹ کریں</string>
+    <string name="market_account_seller_check_status">حیثیت چیک کریں</string>
     <string name="market_account_status_banned_title">اکاؤنٹ پر پابندی لگائی گئی</string>
     <string name="market_account_status_suspended_title">اکاؤنٹ معطل</string>
     <string name="market_account_stripe_dashboard">Stripe ڈیش بورڈ کھولیں</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">ابھی خریدیں</string>
     <string name="market_listing_detail_description_heading">تفصیل</string>
     <string name="market_listing_detail_edit">ترمیم</string>
+    <string name="market_listing_detail_information_heading">ترسیل کی معلومات</string>
     <string name="market_listing_detail_load_failed">لسٹنگ لوڈ کرنے میں ناکامی</string>
+    <string name="market_listing_detail_listed">فہرست شدہ %1$s</string>
     <string name="market_listing_detail_location_heading">مقام</string>
+    <string name="market_listing_detail_message">پیغام</string>
     <string name="market_listing_detail_message_seller">بیچنے والے کو پیغام بھیجیں</string>
     <string name="market_listing_detail_not_found">لسٹنگ نہیں ملی</string>
     <string name="market_listing_detail_place_bid">بولی لگائیں</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">ٹریکنگ نمبر</string>
     <string name="market_saved_title">محفوظ ہو گیا</string>
     <string name="market_search_clear">تلاش صاف کریں</string>
-    <string name="market_section_categories">زمرے</string>
-    <string name="market_section_listings">لسٹنگز</string>
+    <string name="market_section_categories">زمرے دیکھیں</string>
+    <string name="market_section_listings">حالیہ فہرستیں</string>
     <string name="market_section_recent">حال ہی میں دیکھے گئے</string>
     <string name="market_ship_dialog_cancel">منسوخ کریں</string>
     <string name="market_ship_dialog_submit">تصدیق کریں</string>
     <string name="market_ship_dialog_title">بھیج دیا گیا نشان زد کریں</string>
     <string name="market_shipping_days">ڈیلیوری</string>
+    <string name="market_shipping_days_value">%1$s دن</string>
     <string name="market_shipping_notes">نوٹس</string>
     <string name="market_shipping_price">قیمت</string>
     <string name="market_shipping_region">ریجن</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">آرڈر #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">خریداروں کو اپنے بارے میں بتائیں…</string>
     <string name="market_account_load_failed">اکاؤنٹ لوڈ نہیں ہو سکا</string>
     <string name="market_account_save_failed">تبدیلیاں محفوظ نہیں ہو سکیں</string>
     <string name="market_account_saved">تبدیلیاں محفوظ ہو گئیں</string>

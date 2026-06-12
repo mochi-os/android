@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Elämäkerta</string>
     <string name="market_account_location_label">Sijainti</string>
     <string name="market_account_save">Tallenna</string>
+    <string name="market_account_seller_title">Ryhdy myyjäksi</string>
+    <string name="market_account_seller_subtitle">Tavoita ostajat ja myy tuotteitasi Mochissa. Maksut käsitellään turvallisesti Stripen kautta.</string>
+    <string name="market_account_seller_step_activate_title">Aktivoi myyjätili</string>
+    <string name="market_account_seller_step_activate_desc">Luo myyjäprofiili ja aloita tuotteiden lisääminen</string>
+    <string name="market_account_seller_step_stripe_desc">Yhdistä Stripe-tili ottaaksesi vastaan maksuja ostajilta</string>
+    <string name="market_account_seller_fees_heading">Maksut:</string>
+    <string name="market_account_seller_fees_mochi">Mochi ottaa %1$s%% jokaisesta myynnistä.</string>
+    <string name="market_account_seller_fees_stripe">Stripe veloittaa oman käsittelymaksunsa tapahtumaa kohden ja kiinteän maksun jokaisesta takaisinperinnästä. Valuuttasi ja alueesi nykyiset hinnat näkyvät Stripe-hallintapaneelissasi.</string>
+    <string name="market_account_seller_connect">Yhdistä Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Yhdistä Stripe</string>
+    <string name="market_account_seller_check_status">Tarkista tila</string>
     <string name="market_account_status_banned_title">Tili estetty</string>
     <string name="market_account_status_suspended_title">Tili jäädytetty</string>
     <string name="market_account_stripe_dashboard">Avaa Stripe-paneeli</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Osta nyt</string>
     <string name="market_listing_detail_description_heading">Kuvaus</string>
     <string name="market_listing_detail_edit">Muokkaa</string>
+    <string name="market_listing_detail_information_heading">Toimitustiedot</string>
     <string name="market_listing_detail_load_failed">Ilmoituksen lataus epäonnistui</string>
+    <string name="market_listing_detail_listed">Lisätty %1$s</string>
     <string name="market_listing_detail_location_heading">Sijainti</string>
+    <string name="market_listing_detail_message">Viesti</string>
     <string name="market_listing_detail_message_seller">Lähetä viesti myyjälle</string>
     <string name="market_listing_detail_not_found">Ilmoitusta ei löytynyt</string>
     <string name="market_listing_detail_place_bid">Tee tarjous</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Seurantanumero</string>
     <string name="market_saved_title">Tallennettu</string>
     <string name="market_search_clear">Tyhjennä haku</string>
-    <string name="market_section_categories">Kategoriat</string>
-    <string name="market_section_listings">Ilmoitukset</string>
+    <string name="market_section_categories">Selaa kategorioita</string>
+    <string name="market_section_listings">Uusimmat ilmoitukset</string>
     <string name="market_section_recent">Viimeksi katsotut</string>
     <string name="market_ship_dialog_cancel">Peruuta</string>
     <string name="market_ship_dialog_submit">Vahvista</string>
     <string name="market_ship_dialog_title">Merkitse toimitetuksi</string>
     <string name="market_shipping_days">Toimitus</string>
+    <string name="market_shipping_days_value">%1$s päivää</string>
     <string name="market_shipping_notes">Muistiinpanot</string>
     <string name="market_shipping_price">Hinta</string>
     <string name="market_shipping_region">Alue</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Tilaus #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Kerro ostajille itsestäsi…</string>
     <string name="market_account_load_failed">Tilin lataaminen epäonnistui</string>
     <string name="market_account_save_failed">Muutosten tallentaminen epäonnistui</string>
     <string name="market_account_saved">Muutokset tallennettu</string>

@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">জীবনী</string>
     <string name="market_account_location_label">অবস্থান</string>
     <string name="market_account_save">সংরক্ষণ করুন</string>
+    <string name="market_account_seller_title">বিক্রেতা হন</string>
+    <string name="market_account_seller_subtitle">ক্রেতাদের কাছে পৌঁছান এবং Mochi-তে আপনার পণ্য বিক্রি করুন। পেমেন্ট Stripe-এর মাধ্যমে নিরাপদে পরিচালিত হয়।</string>
+    <string name="market_account_seller_step_activate_title">বিক্রেতা অ্যাকাউন্ট সক্রিয় করুন</string>
+    <string name="market_account_seller_step_activate_desc">পণ্য তালিকাভুক্ত করা শুরু করতে আপনার বিক্রেতা প্রোফাইল তৈরি করুন</string>
+    <string name="market_account_seller_step_stripe_desc">ক্রেতাদের কাছ থেকে পেমেন্ট নিতে একটি Stripe অ্যাকাউন্ট সংযুক্ত করুন</string>
+    <string name="market_account_seller_fees_heading">ফি:</string>
+    <string name="market_account_seller_fees_mochi">Mochi প্রতিটি বিক্রয় থেকে %1$s%% নেয়।</string>
+    <string name="market_account_seller_fees_stripe">Stripe প্রতিটি লেনদেনে নিজস্ব প্রসেসিং ফি এবং প্রতিটি চার্জব্যাকে একটি নির্দিষ্ট ফি নেয়। আপনার মুদ্রা ও অঞ্চলের বর্তমান হার আপনার Stripe ড্যাশবোর্ডে তালিকাভুক্ত থাকে।</string>
+    <string name="market_account_seller_connect">Stripe সংযোগ করুন</string>
+    <string name="market_account_seller_step_stripe_title">Stripe সংযোগ করুন</string>
+    <string name="market_account_seller_check_status">স্ট্যাটাস চেক করুন</string>
     <string name="market_account_status_banned_title">অ্যাকাউন্ট নিষিদ্ধ করা হয়েছে</string>
     <string name="market_account_status_suspended_title">অ্যাকাউন্ট স্থগিত করা হয়েছে</string>
     <string name="market_account_stripe_dashboard">Stripe ড্যাশবোর্ড খুলুন</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">এখনই কিনুন</string>
     <string name="market_listing_detail_description_heading">বিবরণ</string>
     <string name="market_listing_detail_edit">সম্পাদনা</string>
+    <string name="market_listing_detail_information_heading">ডেলিভারি তথ্য</string>
     <string name="market_listing_detail_load_failed">তালিকা লোড করতে ব্যর্থ</string>
+    <string name="market_listing_detail_listed">তালিকাভুক্ত %1$s</string>
     <string name="market_listing_detail_location_heading">অবস্থান</string>
+    <string name="market_listing_detail_message">বার্তা</string>
     <string name="market_listing_detail_message_seller">বিক্রেতাকে বার্তা পাঠান</string>
     <string name="market_listing_detail_not_found">তালিকা পাওয়া যায়নি</string>
     <string name="market_listing_detail_place_bid">দাম প্রস্তাব করুন</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">ট্র্যাকিং নম্বর</string>
     <string name="market_saved_title">সংরক্ষিত</string>
     <string name="market_search_clear">অনুসন্ধান পরিষ্কার করুন</string>
-    <string name="market_section_categories">ক্যাটেগরি</string>
-    <string name="market_section_listings">তালিকাসমূহ</string>
+    <string name="market_section_categories">বিভাগ ব্রাউজ করুন</string>
+    <string name="market_section_listings">সাম্প্রতিক তালিকা</string>
     <string name="market_section_recent">সম্প্রতি দেখা</string>
     <string name="market_ship_dialog_cancel">বাতিল করুন</string>
     <string name="market_ship_dialog_submit">নিশ্চিত করুন</string>
     <string name="market_ship_dialog_title">প্রেরিত হিসেবে চিহ্নিত করুন</string>
     <string name="market_shipping_days">ডেলিভারি</string>
+    <string name="market_shipping_days_value">%1$s দিন</string>
     <string name="market_shipping_notes">নোট</string>
     <string name="market_shipping_price">মূল্য</string>
     <string name="market_shipping_region">অঞ্চল</string>
@@ -586,6 +601,7 @@
     <string name="market_editor_delete_confirm_title">লিস্টিং মুছবেন?</string>
     <string name="market_editor_title_new">নতুন লিস্টিং</string>
 
+    <string name="market_account_biography_placeholder">ক্রেতাদের নিজের সম্পর্কে বলুন…</string>
     <string name="market_account_load_failed">অ্যাকাউন্ট লোড করা যায়নি</string>
     <string name="market_account_save_failed">পরিবর্তনগুলি সংরক্ষণ করা যায়নি</string>
     <string name="market_account_saved">পরিবর্তনগুলি সংরক্ষিত হয়েছে</string>

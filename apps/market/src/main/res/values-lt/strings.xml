@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Biografija</string>
     <string name="market_account_location_label">Vieta</string>
     <string name="market_account_save">Išsaugoti</string>
+    <string name="market_account_seller_title">Tapkite pardavėju</string>
+    <string name="market_account_seller_subtitle">Pasiekite pirkėjus ir parduokite savo prekes „Mochi“. Mokėjimai saugiai tvarkomi per „Stripe“.</string>
+    <string name="market_account_seller_step_activate_title">Aktyvinti pardavėjo paskyrą</string>
+    <string name="market_account_seller_step_activate_desc">Sukurkite pardavėjo profilį, kad pradėtumėte skelbti prekes</string>
+    <string name="market_account_seller_step_stripe_desc">Susiekite „Stripe“ paskyrą, kad galėtumėte priimti pirkėjų mokėjimus</string>
+    <string name="market_account_seller_fees_heading">Mokesčiai:</string>
+    <string name="market_account_seller_fees_mochi">„Mochi“ paima %1$s%% nuo kiekvieno pardavimo.</string>
+    <string name="market_account_seller_fees_stripe">„Stripe“ ima savo apdorojimo mokestį už kiekvieną operaciją ir fiksuotą mokestį už kiekvieną grąžinamąjį mokėjimą. Dabartiniai jūsų valiutos ir regiono tarifai pateikiami jūsų „Stripe“ skydelyje.</string>
+    <string name="market_account_seller_connect">Prijungti Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Prijungti Stripe</string>
+    <string name="market_account_seller_check_status">Patikrinti būseną</string>
     <string name="market_account_status_banned_title">Paskyra užblokuota</string>
     <string name="market_account_status_suspended_title">Paskyra sustabdyta</string>
     <string name="market_account_stripe_dashboard">Atidaryti Stripe valdymo skydą</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Pirkti dabar</string>
     <string name="market_listing_detail_description_heading">Aprašymas</string>
     <string name="market_listing_detail_edit">Redaguoti</string>
+    <string name="market_listing_detail_information_heading">Pristatymo informacija</string>
     <string name="market_listing_detail_load_failed">Nepavyko įkelti skelbimo</string>
+    <string name="market_listing_detail_listed">Paskelbta %1$s</string>
     <string name="market_listing_detail_location_heading">Vieta</string>
+    <string name="market_listing_detail_message">Žinutė</string>
     <string name="market_listing_detail_message_seller">Rašyti pardavėjui</string>
     <string name="market_listing_detail_not_found">Skelbimas nerastas</string>
     <string name="market_listing_detail_place_bid">Pateikti pasiūlymą</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Sekimo numeris</string>
     <string name="market_saved_title">Išsaugota</string>
     <string name="market_search_clear">Išvalyti paiešką</string>
-    <string name="market_section_categories">Kategorijos</string>
-    <string name="market_section_listings">Skelbimai</string>
+    <string name="market_section_categories">Naršyti kategorijas</string>
+    <string name="market_section_listings">Naujausi skelbimai</string>
     <string name="market_section_recent">Neseniai peržiūrėti</string>
     <string name="market_ship_dialog_cancel">Atšaukti</string>
     <string name="market_ship_dialog_submit">Patvirtinti</string>
     <string name="market_ship_dialog_title">Pažymėti kaip išsiųstą</string>
     <string name="market_shipping_days">Pristatymas</string>
+    <string name="market_shipping_days_value">%1$s d.</string>
     <string name="market_shipping_notes">Pastabos</string>
     <string name="market_shipping_price">Kaina</string>
     <string name="market_shipping_region">Regionas</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Užsakymas Nr. %1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Papasakokite pirkėjams apie save…</string>
     <string name="market_account_load_failed">Nepavyko įkelti paskyros</string>
     <string name="market_account_save_failed">Nepavyko išsaugoti pakeitimų</string>
     <string name="market_account_saved">Pakeitimai išsaugoti</string>

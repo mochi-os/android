@@ -5,6 +5,17 @@
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_location_label">Stad</string>
     <string name="market_account_save">Lagre</string>
+    <string name="market_account_seller_title">Bli seljar</string>
+    <string name="market_account_seller_subtitle">Nå kjøparar og sel varene dine på Mochi. Betalingar vert handsama trygt via Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Aktiver seljarkonto</string>
+    <string name="market_account_seller_step_activate_desc">Lag seljarprofilen din for å byrje å leggje ut varer</string>
+    <string name="market_account_seller_step_stripe_desc">Kople til ein Stripe-konto for å ta imot betalingar frå kjøparar</string>
+    <string name="market_account_seller_fees_heading">Gebyr:</string>
+    <string name="market_account_seller_fees_mochi">Mochi tek %1$s%% av kvart sal.</string>
+    <string name="market_account_seller_fees_stripe">Stripe tek sitt eige handsamingsgebyr per transaksjon og eit fast gebyr per tilbakeføring. Gjeldande satsar for valutaen og regionen din er lista opp i Stripe-dashbordet ditt.</string>
+    <string name="market_account_seller_connect">Kople til Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Kople til Stripe</string>
+    <string name="market_account_seller_check_status">Sjekk status</string>
     <string name="market_account_status_banned_title">Konto utestengd</string>
     <string name="market_account_status_suspended_title">Konto suspendert</string>
     <string name="market_account_stripe_title">Stripe</string>
@@ -162,8 +173,11 @@
     <string name="market_listing_detail_buy_now">Kjøp no</string>
     <string name="market_listing_detail_description_heading">Skildring</string>
     <string name="market_listing_detail_edit">Rediger</string>
+    <string name="market_listing_detail_information_heading">Leveringsinformasjon</string>
     <string name="market_listing_detail_load_failed">Klarte ikkje lasta oppføring</string>
+    <string name="market_listing_detail_listed">Lagt ut %1$s</string>
     <string name="market_listing_detail_location_heading">Stad</string>
+    <string name="market_listing_detail_message">Melding</string>
     <string name="market_listing_detail_message_seller">Send melding til seljar</string>
     <string name="market_listing_detail_not_found">Fann ikkje oppføringa</string>
     <string name="market_listing_detail_relist">Annonser på nytt</string>
@@ -303,13 +317,14 @@
     <string name="market_sale_tracking_label">Sporingsnummer</string>
     <string name="market_saved_title">Lagra</string>
     <string name="market_search_clear">Tøm søk</string>
-    <string name="market_section_categories">Kategoriar</string>
-    <string name="market_section_listings">Oppføringar</string>
+    <string name="market_section_categories">Bla i kategoriar</string>
+    <string name="market_section_listings">Nylege oppføringar</string>
     <string name="market_section_recent">Nyleg sett</string>
     <string name="market_ship_dialog_cancel">Avbryt</string>
     <string name="market_ship_dialog_submit">Stadfest</string>
     <string name="market_ship_dialog_title">Merk som sendt</string>
     <string name="market_shipping_days">Levering</string>
+    <string name="market_shipping_days_value">%1$s dagar</string>
     <string name="market_shipping_notes">Merknader</string>
     <string name="market_shipping_price">Pris</string>
     <string name="market_shipping_region">Region</string>
@@ -428,6 +443,7 @@
     <string name="market_purchases_order_label">Tinging #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Fortel kjøparar om deg sjølv…</string>
     <string name="market_account_load_failed">Kunne ikkje lasta kontoen</string>
     <string name="market_account_save_failed">Kunne ikkje lagra endringane</string>
     <string name="market_account_saved">Endringane er lagra</string>

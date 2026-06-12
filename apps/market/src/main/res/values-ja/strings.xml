@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">プロフィール</string>
     <string name="market_account_location_label">場所</string>
     <string name="market_account_save">保存</string>
+    <string name="market_account_seller_title">出品者になる</string>
+    <string name="market_account_seller_subtitle">購入者にリーチして、Mochi で商品を販売しましょう。支払いは Stripe を通じて安全に処理されます。</string>
+    <string name="market_account_seller_step_activate_title">出品者アカウントを有効化</string>
+    <string name="market_account_seller_step_activate_desc">出品を始めるには出品者プロフィールを作成してください</string>
+    <string name="market_account_seller_step_stripe_desc">購入者からの支払いを受け取るには Stripe アカウントを連携してください</string>
+    <string name="market_account_seller_fees_heading">手数料:</string>
+    <string name="market_account_seller_fees_mochi">Mochi は各販売の %1$s%% を受け取ります。</string>
+    <string name="market_account_seller_fees_stripe">Stripe は取引ごとに独自の処理手数料を、チャージバックごとに定額手数料を請求します。お住まいの通貨と地域の現在の料率は Stripe ダッシュボードに記載されています。</string>
+    <string name="market_account_seller_connect">Stripe を接続</string>
+    <string name="market_account_seller_step_stripe_title">Stripe を接続</string>
+    <string name="market_account_seller_check_status">ステータスを確認</string>
     <string name="market_account_status_banned_title">アカウントを BAN しました</string>
     <string name="market_account_status_suspended_title">アカウントを停止しました</string>
     <string name="market_account_stripe_dashboard">Stripeダッシュボードを開く</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">今すぐ購入</string>
     <string name="market_listing_detail_description_heading">説明</string>
     <string name="market_listing_detail_edit">編集</string>
+    <string name="market_listing_detail_information_heading">配送情報</string>
     <string name="market_listing_detail_load_failed">出品の読み込みに失敗しました</string>
+    <string name="market_listing_detail_listed">出品日 %1$s</string>
     <string name="market_listing_detail_location_heading">場所</string>
+    <string name="market_listing_detail_message">メッセージ</string>
     <string name="market_listing_detail_message_seller">販売者にメッセージ</string>
     <string name="market_listing_detail_not_found">リスティングが見つかりません</string>
     <string name="market_listing_detail_place_bid">入札する</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">追跡番号</string>
     <string name="market_saved_title">保存しました</string>
     <string name="market_search_clear">検索をクリア</string>
-    <string name="market_section_categories">カテゴリ</string>
-    <string name="market_section_listings">リスティング</string>
+    <string name="market_section_categories">カテゴリを見る</string>
+    <string name="market_section_listings">最近の出品</string>
     <string name="market_section_recent">最近見た商品</string>
     <string name="market_ship_dialog_cancel">キャンセル</string>
     <string name="market_ship_dialog_submit">確認</string>
     <string name="market_ship_dialog_title">発送済みとしてマーク</string>
     <string name="market_shipping_days">配送</string>
+    <string name="market_shipping_days_value">%1$s日</string>
     <string name="market_shipping_notes">メモ</string>
     <string name="market_shipping_price">価格</string>
     <string name="market_shipping_region">都道府県</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">注文 #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">購入者に自己紹介をしましょう…</string>
     <string name="market_account_load_failed">アカウントを読み込めませんでした</string>
     <string name="market_account_save_failed">変更を保存できませんでした</string>
     <string name="market_account_saved">変更を保存しました</string>

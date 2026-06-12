@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">Wasifu</string>
     <string name="market_account_location_label">Eneo</string>
     <string name="market_account_save">Hifadhi</string>
+    <string name="market_account_seller_title">Kuwa muuzaji</string>
+    <string name="market_account_seller_subtitle">Fikia wanunuzi na uuze bidhaa zako kwenye Mochi. Malipo hushughulikiwa kwa usalama kupitia Stripe.</string>
+    <string name="market_account_seller_step_activate_title">Washa akaunti ya muuzaji</string>
+    <string name="market_account_seller_step_activate_desc">Unda wasifu wako wa muuzaji ili kuanza kuorodhesha bidhaa</string>
+    <string name="market_account_seller_step_stripe_desc">Unganisha akaunti ya Stripe ili kukubali malipo kutoka kwa wanunuzi</string>
+    <string name="market_account_seller_fees_heading">Ada:</string>
+    <string name="market_account_seller_fees_mochi">Mochi huchukua %1$s%% ya kila mauzo.</string>
+    <string name="market_account_seller_fees_stripe">Stripe hutoza ada yake ya uchakataji kwa kila muamala na ada isiyobadilika kwa kila urejeshaji wa malipo. Viwango vya sasa vya sarafu na eneo lako vimeorodheshwa kwenye Dashibodi yako ya Stripe.</string>
+    <string name="market_account_seller_connect">Unganisha Stripe</string>
+    <string name="market_account_seller_step_stripe_title">Unganisha Stripe</string>
+    <string name="market_account_seller_check_status">Angalia hali</string>
     <string name="market_account_status_banned_title">Akaunti imepigwa marufuku</string>
     <string name="market_account_status_suspended_title">Akaunti imesimamishwa</string>
     <string name="market_account_stripe_dashboard">Fungua dashibodi ya Stripe</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">Nunua sasa</string>
     <string name="market_listing_detail_description_heading">Maelezo</string>
     <string name="market_listing_detail_edit">Hariri</string>
+    <string name="market_listing_detail_information_heading">Maelezo ya uwasilishaji</string>
     <string name="market_listing_detail_load_failed">Imeshindwa kupakia orodha</string>
+    <string name="market_listing_detail_listed">Imeorodheshwa %1$s</string>
     <string name="market_listing_detail_location_heading">Eneo</string>
+    <string name="market_listing_detail_message">Ujumbe</string>
     <string name="market_listing_detail_message_seller">Tuma ujumbe kwa muuzaji</string>
     <string name="market_listing_detail_not_found">Orodha haikupatikana</string>
     <string name="market_listing_detail_place_bid">Toa zabuni</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">Nambari ya ufuatiliaji</string>
     <string name="market_saved_title">Imehifadhiwa</string>
     <string name="market_search_clear">Futa utafutaji</string>
-    <string name="market_section_categories">Kategoria</string>
-    <string name="market_section_listings">Orodha</string>
+    <string name="market_section_categories">Vinjari kategoria</string>
+    <string name="market_section_listings">Orodha za hivi karibuni</string>
     <string name="market_section_recent">Zilizotazamwa hivi karibuni</string>
     <string name="market_ship_dialog_cancel">Ghairi</string>
     <string name="market_ship_dialog_submit">Thibitisha</string>
     <string name="market_ship_dialog_title">Weka kama imesafirishwa</string>
     <string name="market_shipping_days">Usafirishaji</string>
+    <string name="market_shipping_days_value">Siku %1$s</string>
     <string name="market_shipping_notes">Maelezo</string>
     <string name="market_shipping_price">Bei</string>
     <string name="market_shipping_region">Eneo</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">Agizo #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">Waeleze wanunuzi kukuhusu…</string>
     <string name="market_account_load_failed">Imeshindwa kupakia akaunti</string>
     <string name="market_account_save_failed">Imeshindwa kuhifadhi mabadiliko</string>
     <string name="market_account_saved">Mabadiliko yamehifadhiwa</string>

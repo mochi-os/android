@@ -4,6 +4,17 @@
     <string name="market_account_biography_label">जीवनी</string>
     <string name="market_account_location_label">स्थान</string>
     <string name="market_account_save">सेव करें</string>
+    <string name="market_account_seller_title">विक्रेता बनें</string>
+    <string name="market_account_seller_subtitle">खरीदारों तक पहुंचें और Mochi पर अपनी वस्तुएं बेचें। भुगतान Stripe के ज़रिए सुरक्षित रूप से संभाले जाते हैं।</string>
+    <string name="market_account_seller_step_activate_title">विक्रेता खाता सक्रिय करें</string>
+    <string name="market_account_seller_step_activate_desc">वस्तुएं सूचीबद्ध करना शुरू करने के लिए अपनी विक्रेता प्रोफ़ाइल बनाएं</string>
+    <string name="market_account_seller_step_stripe_desc">खरीदारों से भुगतान स्वीकार करने के लिए Stripe खाता कनेक्ट करें</string>
+    <string name="market_account_seller_fees_heading">शुल्क:</string>
+    <string name="market_account_seller_fees_mochi">Mochi हर बिक्री से %1$s%% लेता है।</string>
+    <string name="market_account_seller_fees_stripe">Stripe हर लेनदेन पर अपना प्रोसेसिंग शुल्क और हर चार्जबैक पर एक निश्चित शुल्क लेता है। आपकी मुद्रा और क्षेत्र के लिए मौजूदा दरें आपके Stripe डैशबोर्ड में सूचीबद्ध हैं।</string>
+    <string name="market_account_seller_connect">Stripe कनेक्ट करें</string>
+    <string name="market_account_seller_step_stripe_title">Stripe कनेक्ट करें</string>
+    <string name="market_account_seller_check_status">स्थिति जाँचें</string>
     <string name="market_account_status_banned_title">अकाउंट बैन किया गया</string>
     <string name="market_account_status_suspended_title">अकाउंट निलंबित</string>
     <string name="market_account_stripe_dashboard">Stripe डैशबोर्ड खोलें</string>
@@ -165,8 +176,11 @@
     <string name="market_listing_detail_buy_now">अभी खरीदें</string>
     <string name="market_listing_detail_description_heading">विवरण</string>
     <string name="market_listing_detail_edit">संपादित करें</string>
+    <string name="market_listing_detail_information_heading">डिलीवरी जानकारी</string>
     <string name="market_listing_detail_load_failed">लिस्टिंग लोड करने में विफल</string>
+    <string name="market_listing_detail_listed">सूचीबद्ध %1$s</string>
     <string name="market_listing_detail_location_heading">स्थान</string>
+    <string name="market_listing_detail_message">संदेश</string>
     <string name="market_listing_detail_message_seller">विक्रेता को संदेश भेजें</string>
     <string name="market_listing_detail_not_found">लिस्टिंग नहीं मिली</string>
     <string name="market_listing_detail_place_bid">बोली लगाएँ</string>
@@ -343,13 +357,14 @@
     <string name="market_sale_tracking_label">ट्रैकिंग नंबर</string>
     <string name="market_saved_title">सेव किया गया</string>
     <string name="market_search_clear">खोज साफ़ करें</string>
-    <string name="market_section_categories">श्रेणियाँ</string>
-    <string name="market_section_listings">लिस्टिंग</string>
+    <string name="market_section_categories">श्रेणियाँ ब्राउज़ करें</string>
+    <string name="market_section_listings">हाल की लिस्टिंग</string>
     <string name="market_section_recent">हाल ही में देखा गया</string>
     <string name="market_ship_dialog_cancel">रद्द करें</string>
     <string name="market_ship_dialog_submit">पुष्टि करें</string>
     <string name="market_ship_dialog_title">शिप किया गया मार्क करें</string>
     <string name="market_shipping_days">डिलीवरी</string>
+    <string name="market_shipping_days_value">%1$s दिन</string>
     <string name="market_shipping_notes">नोट्स</string>
     <string name="market_shipping_price">कीमत</string>
     <string name="market_shipping_region">क्षेत्र</string>
@@ -431,6 +446,7 @@
     <string name="market_purchases_order_label">ऑर्डर #%1$d</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_placeholder">खरीदारों को अपने बारे में बताएं…</string>
     <string name="market_account_load_failed">खाता लोड नहीं किया जा सका</string>
     <string name="market_account_save_failed">बदलाव सहेजे नहीं जा सके</string>
     <string name="market_account_saved">बदलाव सहेजे गए</string>
