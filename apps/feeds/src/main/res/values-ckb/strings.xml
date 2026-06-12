@@ -195,4 +195,9 @@
     <string name="feeds_suggested_credibility_body">موچی متمانەی %1$d پێشنیار دەکات. وەردەگیرێت؟</string>
     <string name="feeds_suggested_credibility_keep">هەمانە بهێڵەرەوە</string>
 
+    <string name="feeds_refresh">نوێکردنەوە</string>
+    <string name="feeds_interest_boosted">ئارەزوو زیادکرا</string>
+    <string name="feeds_interest_reduced">ئارەزوو کەمکرایەوە</string>
+    <string name="feeds_interest_removed">ئارەزوو لابرا</string>
+    <string name="feeds_interest_failed">ڕێکخستنی ئارەزوو سەرکەوتوو نەبوو</string>
 </resources>

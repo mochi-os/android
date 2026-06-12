@@ -56,8 +56,6 @@
     <string name="replication_deny">Rədd et</string>
     <string name="replication_hosts_title">Hostlarım</string>
     <string name="replication_hosts_empty_hint">Onu başqa servera replikasiya etmək üçün, orada hesab açın və \"Mövcud hesabı replikasiya et\" seçimindən istifadə edin.</string>
-    <string name="replication_remove">Hostu sil</string>
-    <string name="replication_remove_title">Host silinsin?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikasiya</string>
     <string name="system_replication_this_server">Bu server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Heç vaxt</string>
     <string name="replication_hosts_empty">Bu hesab yalnız bu serverdədir.</string>
     <string name="replication_added">Əlavə edildi %1$s</string>
-    <string name="replication_remove_message">Bu server hesabınızı həmin hosta replika etməyi dayandıracaq.</string>
     <string name="settings_home_system_replication">Replikasiya (server)</string>
     <string name="system_replication_pair_empty_hint">Yeni serverdə \"mochictl replica join &lt;existing-peer-id&gt;\" istifadə edərək başqa təzə quraşdırılmış serverlə cütləşdirin.</string>
     <string name="route_delete_message">Bu \"%1$s\" yolu üçün marşrutu çıxaracaq.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator tətbiqi</string>
     <string name="login_method_oauth">Bu CRM silinmiş ola bilər və ya sizin ona girişiniz yoxdur.</string>
     <string name="login_method_recovery">Bərpa kodları</string>
+    <string name="account_close_section">Hesabı bağla</string>
+    <string name="account_close_action">Hesabı bağla</string>
+    <string name="account_close_confirm_title">Hesabınızı bağlamaq istəyirsiniz?</string>
+    <string name="account_close_confirm_body">Hesabınız silinmək üçün planlaşdırılacaq və hesabdan çıxarılacaqsınız. Silinmə tarixindən əvvəl istənilən vaxt yenidən daxil olaraq ləğv edə bilərsiniz.</string>
+    <string name="account_data_download">Yüklə</string>
+    <string name="route_target_app">Tətbiq</string>
+    <string name="route_target_entity">Qurum</string>
+    <string name="route_target_url">ABŞ dolları</string>
+    <string name="account_data_section">Məlumatlarınız</string>
+    <string name="account_data_dialog_title">Məlumatlarınızı yükləyin</string>
+    <string name="account_data_dialog_body">Bu, bu və ya başqa bir Mochi serverində bərpa edə biləcəyiniz tam ehtiyat nüsxədir. Davam etmək üçün bunun siz olduğunuzu doğrulayın.</string>
+    <string name="account_data_passphrase">Gizli söz</string>
+    <string name="account_data_passphrase_hint">Şəxsi açarlarınız daxildir, bu parolla şifrələnmişdir. Onu təhlükəsiz saxlayın. Bərpa etmək üçün lazım olacaq.</string>
+    <string name="replication_hosts_subtitle">Hesabınızın bir nüsxəsini saxlayan digər serverlər. Birini silmək üçün həmin serverdə daxil olun və \"Hesabımı bu serverdən sil\" seçimindən istifadə edin.</string>
+    <string name="replication_irreparable">Bərpaolunmaz</string>
+    <string name="replication_leave">Hesabımı bu serverdən sil</string>
+    <string name="replication_leave_title">Hesabınız bu serverdən silinsin?</string>
+    <string name="replication_leave_message">Hesabınızın bu serverdəki məlumatları həmişəlik silinəcək və burada hesabdan çıxarılacaqsınız. Hesabınız digər serverlərinizdə qalır və bu serveri sonradan yenidən əlavə edə bilərsiniz.</string>
+    <string name="replication_leave_confirm">Sil</string>
+    <string name="replication_forget">Bu əlçatmaz hostu unut</string>
+    <string name="replication_forget_title">Bu əlçatmaz host unudulsun?</string>
+    <string name="replication_forget_message">O, replika dəstinizdən silinəcək və yenidən qoşulduqda öz nüsxəsini silməsi tapşırılacaq. Əlçatan bir serveri silmək üçün orada daxil olun və \"Hesabımı bu serverdən sil\" seçimindən istifadə edin. Davam etmək üçün özünüz olduğunuzu təsdiqləyin.</string>
+    <string name="replication_offline">Oflayn</string>
+    <string name="replication_forget_confirm">Unut</string>
 </resources>

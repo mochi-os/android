@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Kedudukan / pemarkahan</string>
     <string name="feeds_ai_prompt_credibility">Penilaian kebolehpercayaan</string>
 
+    <string name="feeds_refresh">Muat semula</string>
+    <string name="feeds_interest_boosted">Minat ditingkatkan</string>
+    <string name="feeds_interest_reduced">Minat dikurangkan</string>
+    <string name="feeds_interest_removed">Minat dialih keluar</string>
+    <string name="feeds_interest_failed">Gagal melaraskan minat</string>
 </resources>

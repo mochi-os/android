@@ -55,8 +55,6 @@
     <string name="replication_deny">Negar</string>
     <string name="replication_hosts_title">Meus hosts</string>
     <string name="replication_hosts_empty_hint">Para replicá-la em outro servidor, cadastre-se para uma conta lá e use a opção \\"Replicar uma conta existente\\".</string>
-    <string name="replication_remove">Remover host</string>
-    <string name="replication_remove_title">Remover host?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicação</string>
     <string name="system_replication_this_server">Este servidor</string>
@@ -296,7 +294,6 @@
     <string name="tokens_expires">Expira em: %1$s</string>
     <string name="replication_hosts_empty">Esta conta está apenas neste servidor.</string>
     <string name="replication_added">Adicionado em %1$s</string>
-    <string name="replication_remove_message">Este servidor deixará de replicar sua conta para aquele host.</string>
     <string name="settings_home_system_replication">Replicação (servidor)</string>
     <string name="system_replication_pair_empty_hint">Pareie com outro servidor recém-instalado usando \"mochictl replica join &lt;existing-peer-id&gt;\" no novo servidor.</string>
     <string name="route_delete_message">Isto removerá a rota para o caminho \"%1$s\".</string>
@@ -388,4 +385,28 @@
     <string name="login_method_totp">Aplicativo autenticador</string>
     <string name="login_method_oauth">Login de terceiros</string>
     <string name="login_method_recovery">Códigos de recuperação</string>
+    <string name="account_close_section">Encerrar conta</string>
+    <string name="account_close_action">Encerrar conta</string>
+    <string name="account_close_confirm_title">Encerrar sua conta?</string>
+    <string name="account_close_confirm_body">Sua conta será programada para exclusão e você será desconectado. Você pode cancelar a qualquer momento antes da data de exclusão fazendo login novamente.</string>
+    <string name="account_data_download">Baixar</string>
+    <string name="route_target_app">Aplicativo</string>
+    <string name="route_target_entity">Entidade</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Seus dados</string>
+    <string name="account_data_dialog_title">Baixar seus dados</string>
+    <string name="account_data_dialog_body">Este é um backup completo que você pode restaurar neste ou em outro servidor Mochi. Confirme que é você para continuar.</string>
+    <string name="account_data_passphrase">Frase secreta</string>
+    <string name="account_data_passphrase_hint">Suas chaves privadas estão incluídas, criptografadas com esta frase de acesso. Guarde-a em um lugar seguro. Você precisará dela para restaurar.</string>
+    <string name="replication_hosts_subtitle">Outros servidores que também guardam uma cópia da sua conta. Para remover um, entre nesse servidor e use \"Remover minha conta deste servidor\".</string>
+    <string name="replication_irreparable">Irreparável</string>
+    <string name="replication_leave">Remover minha conta deste servidor</string>
+    <string name="replication_leave_title">Remover sua conta deste servidor?</string>
+    <string name="replication_leave_message">Os dados da sua conta neste servidor serão excluídos permanentemente e você será desconectado aqui. Sua conta permanece nos seus outros servidores e você pode adicionar este novamente mais tarde.</string>
+    <string name="replication_leave_confirm">Remover</string>
+    <string name="replication_forget">Esquecer este host inacessível</string>
+    <string name="replication_forget_title">Esquecer este host inacessível?</string>
+    <string name="replication_forget_message">Ele será removido do seu conjunto de réplicas e instruído a excluir sua cópia quando se reconectar. Para remover um servidor acessível, entre nele e use \"Remover minha conta deste servidor\". Confirme que é você para continuar.</string>
+    <string name="replication_offline">Off-line</string>
+    <string name="replication_forget_confirm">Esquecer</string>
 </resources>

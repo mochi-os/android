@@ -56,8 +56,6 @@
     <string name="replication_deny">Nægt</string>
     <string name="replication_hosts_title">Mine værter</string>
     <string name="replication_hosts_empty_hint">For at replikere det til en anden server, opret en konto der og brug \"Replikér en eksisterende konto\"-indstillingen.</string>
-    <string name="replication_remove">Fjern vært</string>
-    <string name="replication_remove_title">Fjern vært?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikering</string>
     <string name="system_replication_this_server">Denne server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Aldrig</string>
     <string name="replication_hosts_empty">Denne konto er kun på denne server.</string>
     <string name="replication_added">Tilføjet %1$s</string>
-    <string name="replication_remove_message">Denne server holder op med at replikere din konto til den vært.</string>
     <string name="settings_home_system_replication">Replikering (server)</string>
     <string name="system_replication_pair_empty_hint">Par med en anden nyinstalleret server ved at bruge \"mochictl replica join &lt;existing-peer-id&gt;\" på den nye server.</string>
     <string name="route_delete_message">Dette fjerner ruten for stien \"%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator-app</string>
     <string name="login_method_oauth">Tredjeparts-login</string>
     <string name="login_method_recovery">Gendannelseskoder</string>
+    <string name="account_close_section">Luk konto</string>
+    <string name="account_close_action">Luk konto</string>
+    <string name="account_close_confirm_title">Vil du lukke din konto?</string>
+    <string name="account_close_confirm_body">Din konto vil blive planlagt til sletning, og du bliver logget ud. Du kan annullere når som helst inden sletningsdatoen ved at logge ind igen.</string>
+    <string name="account_data_download">Download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entitet</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Dine data</string>
+    <string name="account_data_dialog_title">Download dine data</string>
+    <string name="account_data_dialog_body">Dette er en komplet sikkerhedskopi, som du kan gendanne på denne eller en anden Mochi-server. Bekræft, at det er dig, for at fortsætte.</string>
+    <string name="account_data_passphrase">Adgangssætning</string>
+    <string name="account_data_passphrase_hint">Dine private nøgler er inkluderet, krypteret med denne adgangssætning. Opbevar den sikkert. Du skal bruge den for at gendanne.</string>
+    <string name="replication_hosts_subtitle">Andre servere, der også har en kopi af din konto. For at fjerne en skal du logge ind på den server og bruge \"Fjern min konto fra denne server\".</string>
+    <string name="replication_irreparable">Uoprettelig</string>
+    <string name="replication_leave">Fjern min konto fra denne server</string>
+    <string name="replication_leave_title">Fjern din konto fra denne server?</string>
+    <string name="replication_leave_message">Din kontos data på denne server slettes permanent, og du bliver logget ud her. Din konto forbliver på dine andre servere, og du kan tilføje denne igen senere.</string>
+    <string name="replication_leave_confirm">Fjern</string>
+    <string name="replication_forget">Glem denne utilgængelige vært</string>
+    <string name="replication_forget_title">Glem denne utilgængelige vært?</string>
+    <string name="replication_forget_message">Den fjernes fra dit replikasæt og bliver bedt om at slette sin kopi, når den genopretter forbindelsen. For at fjerne en tilgængelig server skal du logge ind der og bruge \"Fjern min konto fra denne server\". Bekræft, at det er dig, for at fortsætte.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Glem</string>
 </resources>

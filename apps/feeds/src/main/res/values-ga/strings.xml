@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Rangú / scórú</string>
     <string name="feeds_ai_prompt_credibility">Measúnú inchreidteachta</string>
 
+    <string name="feeds_refresh">Athnuaigh</string>
+    <string name="feeds_interest_boosted">Suim borrtha</string>
+    <string name="feeds_interest_reduced">Suim laghdaithe</string>
+    <string name="feeds_interest_removed">Suim bainte</string>
+    <string name="feeds_interest_failed">Theip ar shuim a choigeartú</string>
 </resources>

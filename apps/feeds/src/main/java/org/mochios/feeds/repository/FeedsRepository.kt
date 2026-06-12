@@ -161,7 +161,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun searchUsers(query: String): List<User> {
         return try {
-            api.searchUsers(query).unwrap().users
+            api.searchUsers(query).unwrap().results
         } catch (e: Exception) {
             throw e.toMochiError()
         }

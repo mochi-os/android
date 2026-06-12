@@ -56,8 +56,6 @@
     <string name="replication_deny">Verweigern</string>
     <string name="replication_hosts_title">Meine Hosts</string>
     <string name="replication_hosts_empty_hint">Um es auf einen anderen Server zu replizieren, registriere dort ein Konto und verwende die Option \"Ein bestehendes Konto replizieren\".</string>
-    <string name="replication_remove">Host entfernen</string>
-    <string name="replication_remove_title">Host entfernen?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikation</string>
     <string name="system_replication_this_server">Dieser Server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nie</string>
     <string name="replication_hosts_empty">Dieses Konto befindet sich nur auf diesem Server.</string>
     <string name="replication_added">Hinzugefügt %1$s</string>
-    <string name="replication_remove_message">Dieser Server hört auf, dein Konto auf diesen Host zu replizieren.</string>
     <string name="settings_home_system_replication">Replikation (Server)</string>
     <string name="system_replication_pair_empty_hint">Pair mit einem anderen frisch installierten Server mit „mochictl replica join &lt;existing-peer-id&gt;\" auf dem neuen Server.</string>
     <string name="route_delete_message">Dies entfernt die Route für den Pfad „%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator-App</string>
     <string name="login_method_oauth">Drittanbieter-Anmeldung</string>
     <string name="login_method_recovery">Wiederherstellungscodes</string>
+    <string name="account_close_section">Konto schließen</string>
+    <string name="account_close_action">Konto schließen</string>
+    <string name="account_close_confirm_title">Konto schließen?</string>
+    <string name="account_close_confirm_body">Ihr Konto wird zur Löschung vorgemerkt und Sie werden abgemeldet. Sie können den Vorgang jederzeit vor dem Löschdatum abbrechen, indem Sie sich erneut anmelden.</string>
+    <string name="account_data_download">Herunterladen</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entität</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Deine Daten</string>
+    <string name="account_data_dialog_title">Eigene Daten herunterladen</string>
+    <string name="account_data_dialog_body">Dies ist eine vollständige Sicherung, die Sie auf diesem oder einem anderen Mochi-Server wiederherstellen können. Bestätigen Sie Ihre Identität, um fortzufahren.</string>
+    <string name="account_data_passphrase">Passphrase</string>
+    <string name="account_data_passphrase_hint">Ihre privaten Schlüssel sind enthalten, verschlüsselt mit dieser Passphrase. Bewahren Sie sie sicher auf. Sie benötigen sie zur Wiederherstellung.</string>
+    <string name="replication_hosts_subtitle">Andere Server, die ebenfalls eine Kopie deines Kontos vorhalten. Um einen zu entfernen, melde dich auf diesem Server an und verwende „Mein Konto von diesem Server entfernen“.</string>
+    <string name="replication_irreparable">Nicht behebbar</string>
+    <string name="replication_leave">Mein Konto von diesem Server entfernen</string>
+    <string name="replication_leave_title">Dein Konto von diesem Server entfernen?</string>
+    <string name="replication_leave_message">Die Daten deines Kontos auf diesem Server werden dauerhaft gelöscht und du wirst hier abgemeldet. Dein Konto bleibt auf deinen anderen Servern, und du kannst diesen später erneut hinzufügen.</string>
+    <string name="replication_leave_confirm">Entfernen</string>
+    <string name="replication_forget">Diesen nicht erreichbaren Host vergessen</string>
+    <string name="replication_forget_title">Diesen nicht erreichbaren Host vergessen?</string>
+    <string name="replication_forget_message">Er wird aus deiner Replikatgruppe entfernt und angewiesen, seine Kopie zu löschen, sobald er sich wieder verbindet. Um einen erreichbaren Server zu entfernen, melde dich dort an und verwende „Mein Konto von diesem Server entfernen“. Bestätige zum Fortfahren, dass du es bist.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Entfernen</string>
 </resources>

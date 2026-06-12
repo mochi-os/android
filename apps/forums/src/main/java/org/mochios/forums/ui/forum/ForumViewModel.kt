@@ -52,6 +52,22 @@ class ForumViewModel @Inject constructor(
     init {
         load()
         loadTags()
+        clearNotifications()
+    }
+
+    // Mark this forum's notifications read on the server (clear/object) when the
+    // forum is opened, so the bell clears on web / other devices — matching
+    // web's entity-forum-page. Local tray dismissal happens separately in
+    // ForumScreen.
+    fun clearNotifications() {
+        if (forumId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                repository.clearNotifications(forumId)
+            } catch (_: Exception) {
+                // Best-effort — a failed clear shouldn't disrupt the forum view.
+            }
+        }
     }
 
     private fun subscribeWebSocket(forumKey: String) {

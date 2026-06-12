@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Razvrščanje / točkovanje</string>
     <string name="feeds_ai_prompt_credibility">Ocena verodostojnosti</string>
 
+    <string name="feeds_refresh">Osveži</string>
+    <string name="feeds_interest_boosted">Zanimanje povečano</string>
+    <string name="feeds_interest_reduced">Zanimanje zmanjšano</string>
+    <string name="feeds_interest_removed">Zanimanje odstranjeno</string>
+    <string name="feeds_interest_failed">Neuspešna prilagoditev zanimanja</string>
 </resources>

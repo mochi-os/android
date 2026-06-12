@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Peringkat / skor</string>
     <string name="feeds_ai_prompt_credibility">Penilaian kredibilitas</string>
 
+    <string name="feeds_refresh">Refresh</string>
+    <string name="feeds_interest_boosted">Minat ditambah</string>
+    <string name="feeds_interest_reduced">Minat dikurangi</string>
+    <string name="feeds_interest_removed">Minat dibusak</string>
+    <string name="feeds_interest_failed">Gagal nyetel minat</string>
 </resources>

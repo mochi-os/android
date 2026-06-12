@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Ese código es incorrecto o expiró.</string>
     <string name="stepup_error_passkey">Falló la verificación con la llave de acceso. Inténtalo de nuevo.</string>
     <string name="stepup_error_oauth">No se pudo verificar con esa cuenta. Vuelve a intentarlo.</string>
+    <string name="game_system_resign">%1$s abandonó</string>
+    <string name="game_system_draw_offer">%1$s ofreció tablas</string>
+    <string name="game_system_draw_accept">Tablas acordadas</string>
+    <string name="game_system_draw_decline">%1$s rechazó las tablas</string>
+    <string name="reactivation_title">Tu cuenta está programada para eliminarse</string>
+    <string name="reactivation_body">Tu cuenta está programada para eliminarse. Puedes cancelar y restaurar el acceso completo ahora.</string>
+    <string name="reactivation_body_dated">Tu cuenta y todos sus datos se eliminarán de forma permanente el %1$s. Puedes cancelar y restaurar el acceso completo ahora.</string>
+    <string name="reactivation_reactivate">Reactivar mi cuenta</string>
+    <string name="reactivation_sign_out">Continuar con el cierre y cerrar sesión</string>
 </resources>

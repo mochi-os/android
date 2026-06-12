@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Ten kod jest nieprawidłowy lub wygasł.</string>
     <string name="stepup_error_passkey">Weryfikacja kluczem dostępu nie powiodła się. Spróbuj ponownie.</string>
     <string name="stepup_error_oauth">Nie udało się zweryfikować przy użyciu tego konta. Spróbuj ponownie.</string>
+    <string name="game_system_resign">%1$s poddał się</string>
+    <string name="game_system_draw_offer">%1$s zaproponował remis</string>
+    <string name="game_system_draw_accept">Uzgodniono remis</string>
+    <string name="game_system_draw_decline">%1$s odrzucił remis</string>
+    <string name="reactivation_title">Twoje konto jest zaplanowane do usunięcia</string>
+    <string name="reactivation_body">Twoje konto jest zaplanowane do usunięcia. Możesz teraz anulować i przywrócić pełny dostęp.</string>
+    <string name="reactivation_body_dated">Twoje konto i wszystkie jego dane zostaną trwale usunięte w dniu %1$s. Możesz teraz anulować i przywrócić pełny dostęp.</string>
+    <string name="reactivation_reactivate">Ponownie aktywuj moje konto</string>
+    <string name="reactivation_sign_out">Kontynuuj zamykanie i wyloguj się</string>
 </resources>

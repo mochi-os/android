@@ -10,6 +10,12 @@
     <string name="feeds_find_feeds">Find feeds</string>
     <string name="feeds_create_feed">Create feed</string>
     <string name="feeds_new_post">New post</string>
+    <string name="feeds_refresh">Refresh</string>
+    <string name="feeds_scroll_to_top">Back to top</string>
+    <string name="feeds_interest_boosted">Interest boosted</string>
+    <string name="feeds_interest_reduced">Interest reduced</string>
+    <string name="feeds_interest_removed">Interest removed</string>
+    <string name="feeds_interest_failed">Failed to adjust interest</string>
     <string name="feeds_no_feeds_yet">No feeds yet</string>
     <string name="feeds_no_feeds_yet_headline">Welcome! Find feeds to follow.</string>
     <string name="feeds_find_feeds_to_subscribe">Find feeds to subscribe to</string>

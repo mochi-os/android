@@ -56,8 +56,6 @@
     <string name="replication_deny">Denegar</string>
     <string name="replication_hosts_title">Os meus anfitrións</string>
     <string name="replication_hosts_empty_hint">Para replicala a outro servidor, rexístrate para crear unha conta alí e usa a opción \"Replicar unha conta existente\".</string>
-    <string name="replication_remove">Eliminar anfitrión</string>
-    <string name="replication_remove_title">Eliminar anfitrión?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>
     <string name="system_replication_this_server">Este servidor</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nunca</string>
     <string name="replication_hosts_empty">Esta conta só está neste servidor.</string>
     <string name="replication_added">Engadido %1$s</string>
-    <string name="replication_remove_message">Este servidor deixará de replicar a túa conta a ese host.</string>
     <string name="settings_home_system_replication">Replicación (servidor)</string>
     <string name="system_replication_pair_empty_hint">Empareza con outro servidor instalado recentemente usando «mochictl replica join &lt;existing-peer-id&gt;» no novo servidor.</string>
     <string name="route_delete_message">Isto eliminará a ruta para o camiño «%1$s».</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Aplicación de autenticación</string>
     <string name="login_method_oauth">Inicio de sesión de terceiros</string>
     <string name="login_method_recovery">Códigos de recuperación</string>
+    <string name="account_close_section">Pechar a conta</string>
+    <string name="account_close_action">Pechar a conta</string>
+    <string name="account_close_confirm_title">Pechar a túa conta?</string>
+    <string name="account_close_confirm_body">A túa conta programarase para a súa eliminación e pecharase a túa sesión. Podes cancelala en calquera momento antes da data de eliminación volvendo iniciar sesión.</string>
+    <string name="account_data_download">Descargar</string>
+    <string name="route_target_app">Aplicación</string>
+    <string name="route_target_entity">Entidade</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Os teus datos</string>
+    <string name="account_data_dialog_title">Descargar os teus datos</string>
+    <string name="account_data_dialog_body">Esta é unha copia de seguranza completa que podes restaurar neste ou noutro servidor Mochi. Verifica a túa identidade para continuar.</string>
+    <string name="account_data_passphrase">Frase de paso</string>
+    <string name="account_data_passphrase_hint">As túas claves privadas están incluídas, cifradas con esta frase de contrasinal. Gárdaa nun lugar seguro. Necesitarala para restaurar.</string>
+    <string name="replication_hosts_subtitle">Outros servidores que tamén gardan unha copia da túa conta. Para eliminar un, inicia sesión nese servidor e usa «Eliminar a miña conta deste servidor».</string>
+    <string name="replication_irreparable">Irrecuperable</string>
+    <string name="replication_leave">Eliminar a miña conta deste servidor</string>
+    <string name="replication_leave_title">Eliminar a túa conta deste servidor?</string>
+    <string name="replication_leave_message">Os datos da túa conta neste servidor eliminaranse permanentemente e pecharase a túa sesión aquí. A túa conta permanece nos teus outros servidores, e podes engadir este de novo máis tarde.</string>
+    <string name="replication_leave_confirm">Eliminar</string>
+    <string name="replication_forget">Esquecer este servidor inalcanzable</string>
+    <string name="replication_forget_title">Esquecer este servidor inalcanzable?</string>
+    <string name="replication_forget_message">Eliminarase do teu conxunto de réplicas e pediráselle que elimine a súa copia cando se reconecte. Para eliminar un servidor alcanzable, inicia sesión nel e usa «Eliminar a miña conta deste servidor». Verifica que es ti para continuar.</string>
+    <string name="replication_offline">Sen conexión</string>
+    <string name="replication_forget_confirm">Esquecer</string>
 </resources>

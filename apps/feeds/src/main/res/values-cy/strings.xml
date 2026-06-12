@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Graddio / sgorio</string>
     <string name="feeds_ai_prompt_credibility">Asesu hygrededd</string>
 
+    <string name="feeds_refresh">Adnewyddu</string>
+    <string name="feeds_interest_boosted">Diddordeb wedi\'i hybu</string>
+    <string name="feeds_interest_reduced">Diddordeb wedi\'i leihau</string>
+    <string name="feeds_interest_removed">Diddordeb wedi\'i ddileu</string>
+    <string name="feeds_interest_failed">Methwyd addasu diddordeb</string>
 </resources>

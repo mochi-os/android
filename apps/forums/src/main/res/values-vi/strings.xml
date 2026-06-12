@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Mục tiêu</string>
     <string name="forums_access_level_view">Xem</string>
+    <string name="forums_access_level_vote">Bình chọn</string>
     <string name="forums_access_level_comment">Bình luận</string>
     <string name="forums_access_level_post">Bài viết</string>
     <string name="forums_access_level_none">Không có</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID thực thể, @group, * (mọi người), hoặc + (thành viên)</string>
     <string name="forums_access_level">Cấp độ</string>
     <string name="forums_access_level_moderate">Kiểm duyệt</string>
-    <string name="forums_access_level_manage">Quản lý</string>
     <string name="forums_members_search">Lọc thành viên</string>
     <string name="forums_banner_description">Markdown hiển thị ở đầu diễn đàn.</string>
     <string name="forums_banner_placeholder">Chào mừng đến với diễn đàn này…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Khu vực nguy hiểm</string>
     <string name="forums_settings_delete_message">Hành động này sẽ xóa vĩnh viễn diễn đàn và tất cả bài đăng của nó. Không thể hoàn tác.</string>
 
+    <string name="forums_tag_interest_up">Đẩy mạnh sở thích</string>
+    <string name="forums_tag_interest_down">Giảm sự quan tâm</string>
+    <string name="forums_tag_interest_remove">Xoá sở thích</string>
+    <string name="forums_list_default_sort">Sắp xếp mặc định</string>
+    <string name="forums_access_tab_users">Người dùng</string>
+    <string name="forums_access_tab_groups">Nhóm</string>
+    <string name="forums_access_tab_manual">Thủ công</string>
+    <string name="forums_access_search_users">Tìm kiếm người dùng</string>
+    <string name="forums_access_no_groups">Không có nhóm nào</string>
 </resources>

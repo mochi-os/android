@@ -48,8 +48,17 @@ data class ProjectInfoResponse(
     val hierarchy: Map<String, List<String>> = emptyMap()
 )
 data class TemplateListResponse(val templates: List<Template> = emptyList())
-data class ObjectListResponse(val objects: List<ProjectObject> = emptyList())
+data class ObjectListResponse(
+    val objects: List<ProjectObject> = emptyList(),
+    val watched: List<String> = emptyList()
+)
 data class ObjectResponse(val `object`: ProjectObject = ProjectObject())
+// objects/create returns a flat body (id/number/readable), not a wrapped object.
+data class ObjectCreateResponse(
+    val id: String = "",
+    val number: Int = 0,
+    val readable: String = ""
+)
 data class CommentListResponse(val comments: List<Comment> = emptyList())
 data class CommentResponse(val comment: Comment = Comment(id = ""))
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
@@ -79,11 +88,10 @@ data class MergeCheckResponse(
     val behind: Int = 0
 )
 data class SuccessResponse(val success: Boolean = false)
-data class NotificationCheckResponse(val exists: Boolean = false)
 data class UserSearchResponse(val users: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
-data class PreferenceResponse(val preference: String = "")
+data class PreferenceResponse(@SerializedName("style") val preference: String = "unified")
 
 interface ProjectsApi {
 
@@ -126,11 +134,8 @@ interface ProjectsApi {
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
         @Field("project") project: String,
-        @Field("server") server: String?
+        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
     ): Response<ApiResponse<SuccessResponse>>
-
-    @GET("-/notifications/check")
-    suspend fun checkNotifications(): Response<ApiResponse<NotificationCheckResponse>>
 
     @FormUrlEncoded
     @POST("-/users/search")
@@ -228,7 +233,7 @@ interface ProjectsApi {
         @Field("class") classId: String,
         @Field("parent") parent: String?,
         @Field("title") title: String
-    ): Response<ApiResponse<ObjectResponse>>
+    ): Response<ApiResponse<ObjectCreateResponse>>
 
     @GET("{projectId}/-/objects/{objectId}")
     suspend fun getObject(
@@ -241,7 +246,8 @@ interface ProjectsApi {
     suspend fun updateObject(
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
-        @Field("title") title: String?,
+        // Title is a field value (the class's title field), edited via value/set;
+        // object/update only handles parent/class. Do NOT add a title field here.
         @Field("parent") parent: String?
     ): Response<ApiResponse<SuccessResponse>>
 

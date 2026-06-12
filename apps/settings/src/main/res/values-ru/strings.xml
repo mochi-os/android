@@ -56,8 +56,6 @@
     <string name="replication_deny">Отклонить</string>
     <string name="replication_hosts_title">Мои хосты</string>
     <string name="replication_hosts_empty_hint">Чтобы реплицировать его на другой сервер, зарегистрируйте там аккаунт и используйте опцию \"Реплицировать существующий аккаунт\".</string>
-    <string name="replication_remove">Удалить хост</string>
-    <string name="replication_remove_title">Удалить хост?</string>
     <string name="settings_home_section_system">Система</string>
     <string name="system_replication_title">Репликация</string>
     <string name="system_replication_this_server">Этот сервер</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Никогда</string>
     <string name="replication_hosts_empty">Эта учётная запись только на этом сервере.</string>
     <string name="replication_added">Добавлено %1$s</string>
-    <string name="replication_remove_message">Этот сервер прекратит реплицировать вашу учётную запись на тот хост.</string>
     <string name="settings_home_system_replication">Репликация (сервер)</string>
     <string name="system_replication_pair_empty_hint">Свяжите с другим только что установленным сервером с помощью «mochictl replica join &lt;existing-peer-id&gt;» на новом сервере.</string>
     <string name="route_delete_message">Это удалит маршрут для пути «%1$s».</string>
@@ -389,4 +386,28 @@
     <string name="login_method_totp">Приложение-аутентификатор</string>
     <string name="login_method_oauth">Сторонний вход</string>
     <string name="login_method_recovery">Коды восстановления</string>
+    <string name="account_close_section">Закрыть аккаунт</string>
+    <string name="account_close_action">Закрыть аккаунт</string>
+    <string name="account_close_confirm_title">Закрыть ваш аккаунт?</string>
+    <string name="account_close_confirm_body">Ваш аккаунт будет запланирован к удалению, и вы выйдете из системы. Вы можете отменить это в любой момент до даты удаления, снова войдя в систему.</string>
+    <string name="account_data_download">Скачать</string>
+    <string name="route_target_app">Приложение</string>
+    <string name="route_target_entity">Сущность</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ваши данные</string>
+    <string name="account_data_dialog_title">Скачать свои данные</string>
+    <string name="account_data_dialog_body">Это полная резервная копия, которую можно восстановить на этом или другом сервере Mochi. Подтвердите, что это вы, чтобы продолжить.</string>
+    <string name="account_data_passphrase">Кодовая фраза</string>
+    <string name="account_data_passphrase_hint">Ваши закрытые ключи включены, зашифрованы этой парольной фразой. Храните её в безопасном месте. Она потребуется вам для восстановления.</string>
+    <string name="replication_hosts_subtitle">Другие серверы, которые также хранят копию вашей учётной записи. Чтобы удалить один из них, войдите на этом сервере и используйте «Удалить мою учётную запись с этого сервера».</string>
+    <string name="replication_irreparable">Невосстановимо</string>
+    <string name="replication_leave">Удалить мою учётную запись с этого сервера</string>
+    <string name="replication_leave_title">Удалить вашу учётную запись с этого сервера?</string>
+    <string name="replication_leave_message">Данные вашей учётной записи на этом сервере будут безвозвратно удалены, и вы будете выведены из системы здесь. Ваша учётная запись остаётся на других ваших серверах, и позже вы сможете снова добавить этот сервер.</string>
+    <string name="replication_leave_confirm">Удалить</string>
+    <string name="replication_forget">Забыть этот недоступный хост</string>
+    <string name="replication_forget_title">Забыть этот недоступный хост?</string>
+    <string name="replication_forget_message">Он будет удалён из вашего набора реплик и получит указание удалить свою копию при повторном подключении. Чтобы удалить доступный сервер, войдите на нём и используйте «Удалить мою учётную запись с этого сервера». Подтвердите, что это вы, чтобы продолжить.</string>
+    <string name="replication_offline">Не в сети</string>
+    <string name="replication_forget_confirm">Забыть</string>
 </resources>

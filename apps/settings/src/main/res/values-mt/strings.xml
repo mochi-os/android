@@ -56,8 +56,6 @@
     <string name="replication_deny">Iċħad</string>
     <string name="replication_hosts_title">Il-hosts tiegħi</string>
     <string name="replication_hosts_empty_hint">Biex tirreplikaha lejn server ieħor, irreġistra għal kont hemm u uża l-għażla \"Irreplika kont eżistenti\".</string>
-    <string name="replication_remove">Neħħi l-host</string>
-    <string name="replication_remove_title">Tneħħi l-host?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replikazzjoni</string>
     <string name="system_replication_this_server">Dan is-server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Qatt</string>
     <string name="replication_hosts_empty">Dan il-kont huwa biss fuq dan is-server.</string>
     <string name="replication_added">Miżjud %1$s</string>
-    <string name="replication_remove_message">Dan is-server se jieqaf jirreplika l-kont tiegħek f\'dak il-host.</string>
     <string name="settings_home_system_replication">Replikazzjoni (server)</string>
     <string name="system_replication_pair_empty_hint">Iggħaqqad ma\' server ieħor installat ġdid permezz ta\' \"mochictl replica join &lt;existing-peer-id&gt;\" fuq is-server il-ġdid.</string>
     <string name="route_delete_message">Dan se jneħħi r-rotta għall-passaġġ \"%1$s\".</string>
@@ -390,4 +387,28 @@
     <string name="login_method_totp">App tal-awtentikazzjoni</string>
     <string name="login_method_oauth">Login minn parti terza</string>
     <string name="login_method_recovery">Kodiċi ta\' rkupru</string>
+    <string name="account_close_section">Agħlaq il-kont</string>
+    <string name="account_close_action">Agħlaq il-kont</string>
+    <string name="account_close_confirm_title">Tagħlaq il-kont tiegħek?</string>
+    <string name="account_close_confirm_body">Il-kont tiegħek se jiġi skedat biex jitħassar u tinħareġ mis-sistema. Tista\' tikkanċella f\'kull ħin qabel id-data tat-tħassir billi terġa\' tidħol.</string>
+    <string name="account_data_download">Niżżel</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entità</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Id-data tiegħek</string>
+    <string name="account_data_dialog_title">Niżżel id-data tiegħek</string>
+    <string name="account_data_dialog_body">Din hija backup sħiħa li tista\' tirrestawra fuq dan is-server Mochi jew fuq server Mochi ieħor. Ivverifika li int biex tkompli.</string>
+    <string name="account_data_passphrase">Frażi tal-password</string>
+    <string name="account_data_passphrase_hint">Il-kjavi privati tiegħek huma inklużi, enkriptati b\'din il-frażi ta\' aċċess. Ħażżinhom f\'post sigur. Se jkollok bżonnhom biex tirrestawra.</string>
+    <string name="replication_hosts_subtitle">Servers oħra li jżommu wkoll kopja tal-kont tiegħek. Biex tneħħi wieħed, idħol f\'dak is-server u uża \"Neħħi l-kont tiegħi minn dan is-server\".</string>
+    <string name="replication_irreparable">Irreparabbli</string>
+    <string name="replication_leave">Neħħi l-kont tiegħi minn dan is-server</string>
+    <string name="replication_leave_title">Tneħħi l-kont tiegħek minn dan is-server?</string>
+    <string name="replication_leave_message">Id-data tal-kont tiegħek fuq dan is-server se titħassar għal dejjem u int se toħroġ minn hawn. Il-kont tiegħek jibqa\' fuq is-servers l-oħra tiegħek, u tista\' żżid dan is-server mill-ġdid aktar tard.</string>
+    <string name="replication_leave_confirm">Neħħi</string>
+    <string name="replication_forget">Insa dan il-host li ma jistax jintlaħaq</string>
+    <string name="replication_forget_title">Tinsa dan il-host li ma jistax jintlaħaq?</string>
+    <string name="replication_forget_message">Se jitneħħa mis-sett ta\' replika tiegħek u jingħata struzzjoni biex iħassar il-kopja tiegħu meta jerġa\' jikkonnettja. Biex tneħħi server li jista\' jintlaħaq, idħol hemm u uża \"Neħħi l-kont tiegħi minn dan is-server\". Ivverifika li int biex tkompli.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Insa</string>
 </resources>

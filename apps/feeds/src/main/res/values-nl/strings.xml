@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Rangschikking / scoring</string>
     <string name="feeds_ai_prompt_credibility">Geloofwaardigheidsbeoordeling</string>
 
+    <string name="feeds_refresh">Vernieuwen</string>
+    <string name="feeds_interest_boosted">Interesse versterkt</string>
+    <string name="feeds_interest_reduced">Interesse verminderd</string>
+    <string name="feeds_interest_removed">Interesse verwijderd</string>
+    <string name="feeds_interest_failed">Interesse aanpassen mislukt</string>
 </resources>

@@ -78,7 +78,7 @@ fun NavGraphBuilder.settingsNavGraph(
         )
     }
     composable(SettingsApp.ACCOUNT) {
-        AccountScreen(onBack = { navController.popBackStack() })
+        AccountScreen(onBack = { navController.popBackStack() }, onClosed = onLogout)
     }
     composable(SettingsApp.LOGIN) {
         LoginScreen(onBack = { navController.popBackStack() })
@@ -105,7 +105,7 @@ fun NavGraphBuilder.settingsNavGraph(
         NotificationPrefsScreen(onBack = { navController.popBackStack() })
     }
     composable(SettingsApp.REPLICATION) {
-        ReplicationScreen(onBack = { navController.popBackStack() })
+        ReplicationScreen(onBack = { navController.popBackStack() }, onLeft = onLogout)
     }
     composable(SettingsApp.SYSTEM_REPLICATION) {
         SystemReplicationScreen(onBack = { navController.popBackStack() })

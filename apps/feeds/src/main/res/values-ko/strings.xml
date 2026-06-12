@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">순위 / 점수</string>
     <string name="feeds_ai_prompt_credibility">신뢰도 평가</string>
 
+    <string name="feeds_refresh">새로고침</string>
+    <string name="feeds_interest_boosted">관심사가 강화되었어요</string>
+    <string name="feeds_interest_reduced">관심사가 줄어들었어요</string>
+    <string name="feeds_interest_removed">관심사가 제거되었어요</string>
+    <string name="feeds_interest_failed">관심사 조정에 실패했어요</string>
 </resources>

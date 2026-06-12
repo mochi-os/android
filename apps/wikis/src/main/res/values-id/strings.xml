@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Sinkronisasi terakhir: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ini akan menghentikan pengiriman pembaruan ke \"%1$s\". Mereka dapat mereplikasi lagi jika mau.</string>
     <string name="wikis_replicas_removed_success">Replika dihapus</string>
+    <string name="wikis_load_more">Muat lebih banyak</string>
+    <string name="wikis_access_change_level">Tingkat akses</string>
+    <string name="wikis_access_subject_anyone">Siapa saja</string>
+    <string name="wikis_access_subject_authenticated">Pengguna terautentikasi</string>
 
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">Keeldu</string>
     <string name="replication_hosts_title">Minu hostid</string>
     <string name="replication_hosts_empty_hint">Selle replikatsiooniks teisele serverile registreerige seal konto ja kasutage valikut \"Replikatsioon olemasolevast kontost\".</string>
-    <string name="replication_remove">Eemalda host</string>
-    <string name="replication_remove_title">Eemaldada host?</string>
     <string name="settings_home_section_system">Süsteem</string>
     <string name="system_replication_title">Replikatsioon</string>
     <string name="system_replication_this_server">See server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Mitte kunagi</string>
     <string name="replication_hosts_empty">See konto on ainult sellel serveris.</string>
     <string name="replication_added">Lisatud %1$s</string>
-    <string name="replication_remove_message">See server lõpetab teie konto replikatsiooni sellele hostile.</string>
     <string name="settings_home_system_replication">Replikatsioon (server)</string>
     <string name="system_replication_pair_empty_hint">Paaritage teise värskelt installitud serveriga, kasutades \"mochictl replica join &lt;existing-peer-id&gt;\" uues serveris.</string>
     <string name="route_delete_message">See eemaldab marsruudi tee \"%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Autentija rakendus</string>
     <string name="login_method_oauth">Kolmanda osapoole sisselogimine</string>
     <string name="login_method_recovery">Taastekoodid</string>
+    <string name="account_close_section">Sulge konto</string>
+    <string name="account_close_action">Sulge konto</string>
+    <string name="account_close_confirm_title">Kas sulgeda teie konto?</string>
+    <string name="account_close_confirm_body">Teie konto kavandatakse kustutamiseks ja teid logitakse välja. Saate kustutamise igal ajal enne kustutamiskuupäeva tühistada, logides uuesti sisse.</string>
+    <string name="account_data_download">Laadi alla</string>
+    <string name="route_target_app">Rakendus</string>
+    <string name="route_target_entity">Olem</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Sinu andmed</string>
+    <string name="account_data_dialog_title">Laadige oma andmed alla</string>
+    <string name="account_data_dialog_body">See on täielik varukoopia, mille saate taastada sellesse või mõnda teise Mochi serverisse. Jätkamiseks kinnitage oma isik.</string>
+    <string name="account_data_passphrase">Paroolifraas</string>
+    <string name="account_data_passphrase_hint">Teie privaatvõtmed on kaasas, krüpteeritud selle paroolilausega. Hoidke seda turvaliselt. Vajate seda taastamiseks.</string>
+    <string name="replication_hosts_subtitle">Muud serverid, mis samuti hoiavad teie konto koopiat. Ühe eemaldamiseks logige sellesse serverisse sisse ja kasutage valikut „Eemalda minu konto sellest serverist“.</string>
+    <string name="replication_irreparable">Parandamatu</string>
+    <string name="replication_leave">Eemalda minu konto sellest serverist</string>
+    <string name="replication_leave_title">Kas eemaldada teie konto sellest serverist?</string>
+    <string name="replication_leave_message">Teie konto andmed sellel serveril kustutatakse jäädavalt ja teid logitakse siin välja. Teie konto jääb teie teistesse serveritesse alles ja saate selle hiljem uuesti lisada.</string>
+    <string name="replication_leave_confirm">Eemalda</string>
+    <string name="replication_forget">Unusta see kättesaamatu host</string>
+    <string name="replication_forget_title">Kas unustada see kättesaamatu host?</string>
+    <string name="replication_forget_message">See eemaldatakse teie koopiakogumist ja sellel kästakse uuesti ühenduse loomisel oma koopia kustutada. Kättesaadava serveri eemaldamiseks logige seal sisse ja kasutage valikut „Eemalda minu konto sellest serverist“. Jätkamiseks kinnitage, et see olete teie.</string>
+    <string name="replication_offline">Võrguühenduseta</string>
+    <string name="replication_forget_confirm">Unusta</string>
 </resources>

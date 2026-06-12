@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">টার্গেট</string>
     <string name="forums_access_level_view">দেখুন</string>
+    <string name="forums_access_level_vote">ভোট দিন</string>
     <string name="forums_access_level_comment">মন্তব্য</string>
     <string name="forums_access_level_post">পোস্ট</string>
     <string name="forums_access_level_none">কোনোটি নয়</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">সত্তা আইডি, @group, * (সবাই), বা + (সদস্যরা)</string>
     <string name="forums_access_level">স্তর</string>
     <string name="forums_access_level_moderate">পরিমিত</string>
-    <string name="forums_access_level_manage">পরিচালনা</string>
     <string name="forums_members_search">সদস্য ফিল্টার করুন</string>
     <string name="forums_banner_description">ফোরামের শীর্ষে দেখানো মার্কডাউন।</string>
     <string name="forums_banner_placeholder">এই ফোরামে স্বাগতম…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">ঝুঁকিপূর্ণ এলাকা</string>
     <string name="forums_settings_delete_message">এটি ফোরাম এবং এর সমস্ত পোস্ট স্থায়ীভাবে মুছে ফেলবে। এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
 
+    <string name="forums_tag_interest_up">আগ্রহ বৃদ্ধি করুন</string>
+    <string name="forums_tag_interest_down">আগ্রহ কমান</string>
+    <string name="forums_tag_interest_remove">আগ্রহ সরান</string>
+    <string name="forums_list_default_sort">ডিফল্ট সাজানো</string>
+    <string name="forums_access_tab_users">ব্যবহারকারী</string>
+    <string name="forums_access_tab_groups">গ্রুপসমূহ</string>
+    <string name="forums_access_tab_manual">ম্যানুয়াল</string>
+    <string name="forums_access_search_users">ব্যবহারকারী অনুসন্ধান করুন</string>
+    <string name="forums_access_no_groups">কোনো গ্রুপ উপলব্ধ নেই</string>
 </resources>

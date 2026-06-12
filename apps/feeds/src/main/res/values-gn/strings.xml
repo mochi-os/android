@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Ñemboheko / mboʼeha</string>
     <string name="feeds_ai_prompt_credibility">Jeroviaha jehecha</string>
 
+    <string name="feeds_refresh">Embohekopyahu</string>
+    <string name="feeds_interest_boosted">Oikoteveva oñemyendyve</string>
+    <string name="feeds_interest_reduced">Oikoteveva oñembogue\'i</string>
+    <string name="feeds_interest_removed">Oikoteveva oñembogue</string>
+    <string name="feeds_interest_failed">Ndaikatúi oñemyatyrõ oikoteveva</string>
 </resources>

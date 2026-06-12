@@ -74,9 +74,8 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             // Hydrate once so freshly-opened sessions show the right bookmark
             // state; the collect below then tracks live toggles.
-            runCatching { savedRepository.ensureHydrated() }
-            savedRepository.savedIds.collect { ids ->
-                _state.value = _state.value.copy(savedIds = ids.mapTo(HashSet()) { it.toString() })
+            savedRepository.observeIds().collect { ids ->
+                _state.value = _state.value.copy(savedIds = ids)
             }
         }
     }
@@ -186,12 +185,10 @@ class HomeViewModel @Inject constructor(
 
     /**
      * Resolve the caller's market account so the home screen can decide
-     * whether to render the activation onboarding card and the test-mode
-     * banner. Treats the absence of an account row (404 / network failure)
-     * the same as `inactive` — better to nudge the user than to silently
-     * hide the card on a first visit when the call hadn't completed yet.
-     * `stripe_testmode` is part of the own-account response and only set
-     * when the Comptroller's Stripe secret key has the `sk_test_` prefix.
+     * whether to render the activation onboarding card. Treats the absence
+     * of an account row (404 / network failure) the same as `inactive` —
+     * better to nudge the user than to silently hide the card on a first
+     * visit when the call hadn't completed yet.
      */
     private fun loadAccount() {
         viewModelScope.launch {
@@ -199,7 +196,7 @@ class HomeViewModel @Inject constructor(
                 val account = repo.getAccount()
                 _state.value = _state.value.copy(
                     accountActive = !isInactiveAccount(account.status),
-                    testMode = account.stripeTestmode,
+                    isSeller = account.seller == 1,
                 )
             } catch (_: Exception) {
                 _state.value = _state.value.copy(accountActive = false)

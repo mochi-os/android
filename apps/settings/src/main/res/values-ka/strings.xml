@@ -56,8 +56,6 @@
     <string name="replication_deny">უარყოფა</string>
     <string name="replication_hosts_title">ჩემი ჰოსტები</string>
     <string name="replication_hosts_empty_hint">სხვა სერვერზე მის რეპლიკაციისთვის დარეგისტრირდით იქ ანგარიშზე და გამოიყენეთ ვარიანტი \"არსებული ანგარიშის რეპლიკაცია\".</string>
-    <string name="replication_remove">ჰოსტის წაშლა</string>
-    <string name="replication_remove_title">ჰოსტი წაიშალოს?</string>
     <string name="settings_home_section_system">სისტემა</string>
     <string name="system_replication_title">რეპლიკაცია</string>
     <string name="system_replication_this_server">ეს სერვერი</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">არასოდეს</string>
     <string name="replication_hosts_empty">ეს ანგარიში მხოლოდ ამ სერვერზეა.</string>
     <string name="replication_added">დამატებულია %1$s</string>
-    <string name="replication_remove_message">ეს სერვერი შეწყვეტს თქვენი ანგარიშის რეპლიკაციას იმ ჰოსტზე.</string>
     <string name="settings_home_system_replication">რეპლიკაცია (სერვერი)</string>
     <string name="system_replication_pair_empty_hint">დააწყვილეთ სხვა ახლად დაყენებულ სერვერთან \"mochictl replica join &lt;existing-peer-id&gt;\" გამოყენებით ახალ სერვერზე.</string>
     <string name="route_delete_message">ეს წაშლის მარშრუტს გზისთვის \"%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator აპი</string>
     <string name="login_method_oauth">მესამე მხარის შესვლა</string>
     <string name="login_method_recovery">აღდგენის კოდები</string>
+    <string name="account_close_section">ანგარიშის დახურვა</string>
+    <string name="account_close_action">ანგარიშის დახურვა</string>
+    <string name="account_close_confirm_title">დავხუროთ თქვენი ანგარიში?</string>
+    <string name="account_close_confirm_body">თქვენი ანგარიში დაიგეგმება წასაშლელად და სისტემიდან გამოხვალთ. წაშლის თარიღამდე ნებისმიერ დროს შეგიძლიათ გააუქმოთ ხელახლა შესვლით.</string>
+    <string name="account_data_download">ჩამოტვირთვა</string>
+    <string name="route_target_app">აპი</string>
+    <string name="route_target_entity">ერთეული</string>
+    <string name="route_target_url">გაერთიანებული სამეფოს ფუნტი</string>
+    <string name="account_data_section">თქვენი მონაცემები</string>
+    <string name="account_data_dialog_title">ჩამოტვირთეთ თქვენი მონაცემები</string>
+    <string name="account_data_dialog_body">ეს არის სრული სარეზერვო ასლი, რომელიც შეგიძლიათ აღადგინოთ ამ ან სხვა Mochi სერვერზე. გასაგრძელებლად დაადასტურეთ, რომ ეს თქვენ ხართ.</string>
+    <string name="account_data_passphrase">პაროლის ფრაზა</string>
+    <string name="account_data_passphrase_hint">თქვენი პირადი გასაღებები შეტანილია, დაშიფრული ამ პაროლ-ფრაზით. შეინახეთ უსაფრთხოდ. აღდგენისთვის დაგჭირდებათ.</string>
+    <string name="replication_hosts_subtitle">სხვა სერვერები, რომლებიც ასევე ინახავენ თქვენი ანგარიშის ასლს. ერთის წასაშლელად, შედით იმ სერვერზე და გამოიყენეთ „წაშალე ჩემი ანგარიში ამ სერვერიდან“.</string>
+    <string name="replication_irreparable">გამოუსწორებელი</string>
+    <string name="replication_leave">წაშალე ჩემი ანგარიში ამ სერვერიდან</string>
+    <string name="replication_leave_title">წაშალოთ თქვენი ანგარიში ამ სერვერიდან?</string>
+    <string name="replication_leave_message">თქვენი ანგარიშის მონაცემები ამ სერვერზე სამუდამოდ წაიშლება და თქვენ აქედან გამოხვალთ. თქვენი ანგარიში რჩება თქვენს სხვა სერვერებზე და ამ სერვერის ხელახლა დამატება მოგვიანებით შეგიძლიათ.</string>
+    <string name="replication_leave_confirm">წაშლა</string>
+    <string name="replication_forget">დაივიწყეთ ეს მიუწვდომელი ჰოსტი</string>
+    <string name="replication_forget_title">დაივიწყოთ ეს მიუწვდომელი ჰოსტი?</string>
+    <string name="replication_forget_message">ის ამოიშლება თქვენი რეპლიკების ნაკრებიდან და მისი ასლის წაშლა დაევალება ხელახლა დაკავშირებისას. მისაწვდომი სერვერის წასაშლელად, შედით იქ და გამოიყენეთ „წაშალე ჩემი ანგარიში ამ სერვერიდან“. გასაგრძელებლად დაადასტურეთ, რომ ეს თქვენ ხართ.</string>
+    <string name="replication_offline">ხაზგარეშე</string>
+    <string name="replication_forget_confirm">დავიწყება</string>
 </resources>

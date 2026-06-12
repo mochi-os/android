@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Cheqachiy / chaninchay</string>
     <string name="feeds_ai_prompt_credibility">Iñiy chaninchay</string>
 
+    <string name="feeds_refresh">Musuqchay</string>
+    <string name="feeds_interest_boosted">Munakuy wichachisqa</string>
+    <string name="feeds_interest_reduced">Munakuy pisiyachisqa</string>
+    <string name="feeds_interest_removed">Munakuy pichasqa</string>
+    <string name="feeds_interest_failed">Mana munakuyta tupachiyta atinchu</string>
 </resources>

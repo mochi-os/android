@@ -309,11 +309,11 @@ private fun ReportCard(report: ModerationReport, onResolve: (String) -> Unit) {
             if (report.status == "pending") {
                 Spacer(Modifier.height(8.dp))
                 Row {
-                    OutlinedButton(onClick = { onResolve("dismissed") }) {
+                    OutlinedButton(onClick = { onResolve("ignored") }) {
                         Text(stringResource(R.string.forums_moderation_report_dismiss))
                     }
                     Spacer(Modifier.width(8.dp))
-                    OutlinedButton(onClick = { onResolve("acted") }) {
+                    OutlinedButton(onClick = { onResolve("removed") }) {
                         Text(stringResource(R.string.forums_moderation_report_acted))
                     }
                 }

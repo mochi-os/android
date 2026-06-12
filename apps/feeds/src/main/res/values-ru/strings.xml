@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Ранжирование / оценка</string>
     <string name="feeds_ai_prompt_credibility">Оценка достоверности</string>
 
+    <string name="feeds_refresh">Обновить</string>
+    <string name="feeds_interest_boosted">Интерес повышен</string>
+    <string name="feeds_interest_reduced">Интерес снижен</string>
+    <string name="feeds_interest_removed">Интерес удалён</string>
+    <string name="feeds_interest_failed">Не удалось скорректировать интерес</string>
 </resources>

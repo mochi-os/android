@@ -56,8 +56,6 @@
     <string name="replication_deny">ನಿರಾಕರಿಸಿ</string>
     <string name="replication_hosts_title">ನನ್ನ ಹೋಸ್ಟ್‌ಗಳು</string>
     <string name="replication_hosts_empty_hint">ಅದನ್ನು ಬೇರೆ ಸರ್ವರ್‌ಗೆ ಪ್ರತಿಕೃತಿ ಮಾಡಲು, ಅಲ್ಲಿ ಖಾತೆಗೆ ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು \"ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಖಾತೆಯನ್ನು ಪ್ರತಿಕೃತಿ ಮಾಡಿ\" ಆಯ್ಕೆಯನ್ನು ಬಳಸಿ.</string>
-    <string name="replication_remove">ಹೋಸ್ಟ್ ತೆಗೆದುಹಾಕಿ</string>
-    <string name="replication_remove_title">ಹೋಸ್ಟ್ ತೆಗೆದುಹಾಕುವುದೇ?</string>
     <string name="settings_home_section_system">ಸಿಸ್ಟಮ್</string>
     <string name="system_replication_title">ಪ್ರತಿಕೃತಿ</string>
     <string name="system_replication_this_server">ಈ ಸರ್ವರ್</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>
     <string name="replication_hosts_empty">ಈ ಖಾತೆ ಈ ಸರ್ವರ್‌ನಲ್ಲಿ ಮಾತ್ರವಿದೆ.</string>
     <string name="replication_added">ಸೇರಿಸಲಾಗಿದೆ %1$s</string>
-    <string name="replication_remove_message">ಈ ಸರ್ವರ್ ಆ ಹೋಸ್ಟ್‌ಗೆ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪ್ರತಿಕೃತಿ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ.</string>
     <string name="settings_home_system_replication">ಪ್ರತಿಕೃತಿ (ಸರ್ವರ್)</string>
     <string name="system_replication_pair_empty_hint">ಹೊಸ ಸರ್ವರ್‌ನಲ್ಲಿ \"mochictl replica join &lt;existing-peer-id&gt;\" ಬಳಸಿಕೊಂಡು ಇನ್ನೊಂದು ಹೊಸದಾಗಿ ಸ್ಥಾಪಿಸಲಾದ ಸರ್ವರ್‌ನೊಂದಿಗೆ ಜೋಡಿಸಿ.</string>
     <string name="route_delete_message">ಇದು ಮಾರ್ಗ \"%1$s\" ಗಾಗಿನ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator ಆ್ಯಪ್</string>
     <string name="login_method_oauth">ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಲಾಗಿನ್</string>
     <string name="login_method_recovery">ರಿಕವರಿ ಕೋಡ್‌ಗಳು</string>
+    <string name="account_close_section">ಖಾತೆ ಮುಚ್ಚಿ</string>
+    <string name="account_close_action">ಖಾತೆ ಮುಚ್ಚಿ</string>
+    <string name="account_close_confirm_title">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಮುಚ್ಚಬೇಕೆ?</string>
+    <string name="account_close_confirm_body">ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ನಿಗದಿಪಡಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮನ್ನು ಸೈನ್ ಔಟ್ ಮಾಡಲಾಗುತ್ತದೆ. ಅಳಿಸುವ ದಿನಾಂಕಕ್ಕೂ ಮೊದಲು ಯಾವ ಸಮಯದಲ್ಲಾದರೂ ಮತ್ತೆ ಲಾಗಿನ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ರದ್ದುಗೊಳಿಸಬಹುದು.</string>
+    <string name="account_data_download">ಡೌನ್‌ಲೋಡ್</string>
+    <string name="route_target_app">ಆ್ಯಪ್</string>
+    <string name="route_target_entity">ಸಂಸ್ಥೆ</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">ನಿಮ್ಮ ಡೇಟಾ</string>
+    <string name="account_data_dialog_title">ನಿಮ್ಮ ಡೇಟಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="account_data_dialog_body">ಇದು ಈ ಅಥವಾ ಇನ್ನೊಂದು Mochi ಸರ್ವರ್‌ನಲ್ಲಿ ನೀವು ಮರುಸ್ಥಾಪಿಸಬಹುದಾದ ಸಂಪೂರ್ಣ ಬ್ಯಾಕಪ್ ಆಗಿದೆ. ಮುಂದುವರಿಯಲು ಇದು ನೀವೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="account_data_passphrase">ಪಾಸ್‌ಫ್ರೇಸ್</string>
+    <string name="account_data_passphrase_hint">ನಿಮ್ಮ ಖಾಸಗಿ ಕೀಗಳು ಸೇರಿಸಲಾಗಿದೆ, ಈ ಪಾಸ್‌ಫ್ರೇಸ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ. ಅದನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಸಂಗ್ರಹಿಸಿ. ಮರುಸ್ಥಾಪಿಸಲು ನಿಮಗೆ ಅದರ ಅಗತ್ಯವಿರುತ್ತದೆ.</string>
+    <string name="replication_hosts_subtitle">ನಿಮ್ಮ ಖಾತೆಯ ಪ್ರತಿಯನ್ನು ಸಹ ಹೊಂದಿರುವ ಇತರ ಸರ್ವರ್‌ಗಳು. ಒಂದನ್ನು ತೆಗೆದುಹಾಕಲು, ಆ ಸರ್ವರ್‌ನಲ್ಲಿ ಸೈನ್ ಇನ್ ಮಾಡಿ ಮತ್ತು \"ಈ ಸರ್ವರ್‌ನಿಂದ ನನ್ನ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ\" ಬಳಸಿ.</string>
+    <string name="replication_irreparable">ಸರಿಪಡಿಸಲಾಗದು</string>
+    <string name="replication_leave">ಈ ಸರ್ವರ್‌ನಿಂದ ನನ್ನ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ</string>
+    <string name="replication_leave_title">ಈ ಸರ್ವರ್‌ನಿಂದ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
+    <string name="replication_leave_message">ಈ ಸರ್ವರ್‌ನಲ್ಲಿರುವ ನಿಮ್ಮ ಖಾತೆಯ ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮನ್ನು ಇಲ್ಲಿಂದ ಸೈನ್ ಔಟ್ ಮಾಡಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ಖಾತೆ ನಿಮ್ಮ ಇತರ ಸರ್ವರ್‌ಗಳಲ್ಲಿ ಉಳಿಯುತ್ತದೆ, ಮತ್ತು ನೀವು ಈ ಸರ್ವರ್ ಅನ್ನು ನಂತರ ಮತ್ತೆ ಸೇರಿಸಬಹುದು.</string>
+    <string name="replication_leave_confirm">ತೆಗೆದುಹಾಕಿ</string>
+    <string name="replication_forget">ತಲುಪಲಾಗದ ಈ ಹೋಸ್ಟ್ ಅನ್ನು ಮರೆಯಿರಿ</string>
+    <string name="replication_forget_title">ತಲುಪಲಾಗದ ಈ ಹೋಸ್ಟ್ ಅನ್ನು ಮರೆಯಬೇಕೆ?</string>
+    <string name="replication_forget_message">ಅದು ನಿಮ್ಮ ಪ್ರತಿಕೃತಿ ಗುಂಪಿನಿಂದ ತೆಗೆದುಹಾಕಲ್ಪಡುತ್ತದೆ ಮತ್ತು ಮರುಸಂಪರ್ಕಗೊಂಡಾಗ ಅದರ ಪ್ರತಿಯನ್ನು ಅಳಿಸಲು ಸೂಚಿಸಲಾಗುತ್ತದೆ. ತಲುಪಬಹುದಾದ ಸರ್ವರ್ ಅನ್ನು ತೆಗೆದುಹಾಕಲು, ಅಲ್ಲಿ ಸೈನ್ ಇನ್ ಮಾಡಿ ಮತ್ತು \"ಈ ಸರ್ವರ್‌ನಿಂದ ನನ್ನ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ\" ಬಳಸಿ. ಮುಂದುವರಿಸಲು ಇದು ನೀವೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="replication_offline">ಆಫ್‌ಲೈನ್</string>
+    <string name="replication_forget_confirm">ಮರೆತುಬಿಡಿ</string>
 </resources>

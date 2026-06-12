@@ -303,4 +303,8 @@
     <string name="wikis_replicas_col_synced">Última sincronización: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Isto deterá o envío de actualizacións a «%1$s». Poden replicar de novo se queren.</string>
     <string name="wikis_replicas_removed_success">Réplica eliminada</string>
+    <string name="wikis_load_more">Cargar máis</string>
+    <string name="wikis_access_change_level">Nivel de acceso</string>
+    <string name="wikis_access_subject_anyone">Calquera</string>
+    <string name="wikis_access_subject_authenticated">Usuarios autenticados</string>
 </resources>

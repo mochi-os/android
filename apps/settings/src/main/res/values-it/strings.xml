@@ -56,8 +56,6 @@
     <string name="replication_deny">Nega</string>
     <string name="replication_hosts_title">I miei host</string>
     <string name="replication_hosts_empty_hint">Per replicarlo su un altro server, registrati per un account lì e usa l\'opzione \"Replica un account esistente\".</string>
-    <string name="replication_remove">Rimuovi host</string>
-    <string name="replication_remove_title">Rimuovere l\'host?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicazione</string>
     <string name="system_replication_this_server">Questo server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Mai</string>
     <string name="replication_hosts_empty">Questo account è solo su questo server.</string>
     <string name="replication_added">Aggiunto %1$s</string>
-    <string name="replication_remove_message">Questo server smetterà di replicare il tuo account a quell\'host.</string>
     <string name="settings_home_system_replication">Replica (server)</string>
     <string name="system_replication_pair_empty_hint">Accoppia con un altro server appena installato usando «mochictl replica join &lt;existing-peer-id&gt;» sul nuovo server.</string>
     <string name="route_delete_message">Questo rimuoverà il percorso per il path «%1$s».</string>
@@ -388,4 +385,28 @@
     <string name="login_method_totp">App di autenticazione</string>
     <string name="login_method_oauth">Accesso tramite terze parti</string>
     <string name="login_method_recovery">Codici di recupero</string>
+    <string name="account_close_section">Chiudi account</string>
+    <string name="account_close_action">Chiudi account</string>
+    <string name="account_close_confirm_title">Chiudere il tuo account?</string>
+    <string name="account_close_confirm_body">L\'eliminazione del tuo account verrà programmata e verrai disconnesso. Puoi annullare in qualsiasi momento prima della data di eliminazione effettuando nuovamente l\'accesso.</string>
+    <string name="account_data_download">Scarica</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entità</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">I tuoi dati</string>
+    <string name="account_data_dialog_title">Scarica i tuoi dati</string>
+    <string name="account_data_dialog_body">Questo è un backup completo che puoi ripristinare su questo o su un altro server Mochi. Verifica la tua identità per continuare.</string>
+    <string name="account_data_passphrase">Passphrase</string>
+    <string name="account_data_passphrase_hint">Le tue chiavi private sono incluse, crittografate con questa frase d\'accesso. Conservala in un luogo sicuro. Ti servirà per il ripristino.</string>
+    <string name="replication_hosts_subtitle">Altri server che conservano anch\'essi una copia del tuo account. Per rimuoverne uno, accedi a quel server e usa «Rimuovi il mio account da questo server».</string>
+    <string name="replication_irreparable">Irreparabile</string>
+    <string name="replication_leave">Rimuovi il mio account da questo server</string>
+    <string name="replication_leave_title">Rimuovere il tuo account da questo server?</string>
+    <string name="replication_leave_message">I dati del tuo account su questo server verranno eliminati definitivamente e verrai disconnesso qui. Il tuo account rimane sugli altri tuoi server e potrai aggiungere di nuovo questo in seguito.</string>
+    <string name="replication_leave_confirm">Rimuovi</string>
+    <string name="replication_forget">Dimentica questo host irraggiungibile</string>
+    <string name="replication_forget_title">Dimenticare questo host irraggiungibile?</string>
+    <string name="replication_forget_message">Verrà rimosso dal tuo set di repliche e gli verrà chiesto di eliminare la sua copia quando si riconnetterà. Per rimuovere un server raggiungibile, accedi a quel server e usa «Rimuovi il mio account da questo server». Verifica la tua identità per continuare.</string>
+    <string name="replication_offline">Non in linea</string>
+    <string name="replication_forget_confirm">Dimentica</string>
 </resources>

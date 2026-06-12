@@ -45,7 +45,9 @@ import androidx.compose.material.icons.filled.ImportExport
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
@@ -66,6 +68,7 @@ import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -89,6 +92,7 @@ import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import android.widget.Toast
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -161,10 +165,34 @@ fun FeedScreen(
     // clear/object marks the bell row read, but Android's tray only
     // clears via AUTO_CANCEL on tap; opening the feed directly without
     // tapping the push needs a manual cancel.
+
+    // Interest-thumb feedback: confirm boosted/reduced/removed, or surface the
+    // actual error — previously the result was silently swallowed, so taps
+    // looked dead even when the call failed.
+    val interestBoosted = stringResource(R.string.feeds_interest_boosted)
+    val interestReduced = stringResource(R.string.feeds_interest_reduced)
+    val interestRemoved = stringResource(R.string.feeds_interest_removed)
+    val interestFailed = stringResource(R.string.feeds_interest_failed)
+    LaunchedEffect(Unit) {
+        viewModel.interestFeedback.collectLatest { fb ->
+            val msg = when (fb) {
+                is InterestFeedback.Success -> when (fb.direction) {
+                    "up" -> interestBoosted
+                    "down" -> interestReduced
+                    else -> interestRemoved
+                }
+                is InterestFeedback.Failure -> fb.error?.message ?: interestFailed
+            }
+            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+        }
+    }
     LaunchedEffect(viewModel.feedId) {
         if (viewModel.feedId.isNotBlank()) {
             LastViewedStore.set(context, FEEDS_FEATURE, viewModel.feedId)
             SystemNotifications.cancelFor(context, "feeds", viewModel.feedId)
+            // Mark the feed's notifications read on the server so the bell
+            // clears on web / other devices, not just the local tray.
+            viewModel.clearNotifications()
         }
     }
 
@@ -188,6 +216,22 @@ fun FeedScreen(
     var showDefaultSortDialog by remember { mutableStateOf(false) }
     var addTagTarget by remember { mutableStateOf<String?>(null) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
+
+    // Freeze guard for the page-flip overlay: if the pager ever comes to rest
+    // at a fractional offset (an interrupted/incomplete settle), snap it to the
+    // nearest page so the fold can't stay frozen mid-fold. Only fires once
+    // scrolling has stopped with a residual offset — a normal settle ends at
+    // ~0 and is left untouched.
+    LaunchedEffect(pagerState) {
+        snapshotFlow { pagerState.isScrollInProgress }
+            .collectLatest { inProgress ->
+                if (!inProgress &&
+                    kotlin.math.abs(pagerState.currentPageOffsetFraction) > 0.01f
+                ) {
+                    pagerState.scrollToPage(pagerState.currentPage)
+                }
+            }
+    }
 
     // Mark the current page's post as read as soon as the swipe settles on
     // it — no debounce. The pager's currentPage only flips once the user
@@ -314,12 +358,20 @@ fun FeedScreen(
                         overflow = TextOverflow.Ellipsis
                     )
                 },
+                // Slightly shorter than the 64dp default to reclaim vertical space.
+                expandedHeight = 52.dp,
                 navigationIcon = {
                     IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                         Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.feeds_title))
                     }
                 },
                 actions = {
+                    IconButton(onClick = { viewModel.refresh() }) {
+                        Icon(
+                            Icons.Default.Refresh,
+                            contentDescription = stringResource(R.string.feeds_refresh)
+                        )
+                    }
                     NotificationBell(onClick = onOpenNotifications)
                     if (permissions.manage) {
                         IconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
@@ -433,6 +485,20 @@ fun FeedScreen(
                     containerColor = MaterialTheme.colorScheme.surface
                 )
             )
+        },
+        floatingActionButton = {
+            // Reachable refresh/jump deep in the feed: a scroll-to-top button
+            // appears once a few posts in (pull-to-refresh only works at page 0).
+            if (pagerState.currentPage > 2) {
+                SmallFloatingActionButton(
+                    onClick = { drawerScope.launch { pagerState.animateScrollToPage(0) } }
+                ) {
+                    Icon(
+                        Icons.Default.KeyboardArrowUp,
+                        contentDescription = stringResource(R.string.feeds_scroll_to_top)
+                    )
+                }
+            }
         }
     ) { paddingValues ->
         PullToRefreshBox(
@@ -501,7 +567,11 @@ fun FeedScreen(
                             // put while a single leaf turns toward the viewer.
                             val renderPost: @Composable (Int) -> Unit = { index ->
                                 val post = posts[index]
-                                val routeFeedId = post.feedFingerprint.ifEmpty { viewModel.feedId }
+                                // Prefer the fingerprint, but fall back to the feed's
+                                // entity id (always present on a post) before the
+                                // "__all__" aggregate sentinel — so react / interest /
+                                // open-post all reach a real entity in the aggregate view.
+                                val routeFeedId = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { viewModel.feedId }
                                 // post.source.url is the RSS feed (XML) URL —
                                 // not the article URL. The article URL lives
                                 // in rss.link. Anything else falls through to
@@ -514,11 +584,11 @@ fun FeedScreen(
                                     canManage = permissions.manage,
                                     onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
                                     onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
-                                    onReact = { reaction -> viewModel.reactToPost(post.id, reaction) },
+                                    onReact = { reaction -> viewModel.reactToPost(routeFeedId, post.id, reaction) },
                                     onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
                                     onDelete = { pendingDelete = post },
                                     onAddTag = { addTagTarget = post.id },
-                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(tag, direction) }
+                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(routeFeedId, tag, direction) },
                                 )
                             }
                             Box(modifier = Modifier.fillMaxSize()) {
@@ -667,7 +737,7 @@ private fun PostCard(
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     onAddTag: () -> Unit,
-    onAdjustInterest: (Tag, String) -> Unit
+    onAdjustInterest: (Tag, String) -> Unit,
 ) {
     // Lightbox open-state: (image urls list, starting index). null = closed.
     // Tapping an image populates this; the lightbox dialog renders above the
@@ -701,11 +771,11 @@ private fun PostCard(
             .background(MaterialTheme.colorScheme.surface)
     ) {
       if (heroUrl != null) {
-          // Full screen width, square corners, aspect ratio preserved — the
-          // height follows the image's own ratio (so the bottom usually sits
-          // above the half-way line). Capped at half the screen so an unusually
-          // tall image can't push the text off the page. Tap opens the
-          // lightbox (web parity).
+          // Square corners; height follows the image's ratio up to a half-screen
+          // cap. ContentScale.Fit means a landscape image fills the width
+          // edge-to-edge, while a very tall image (e.g. a web comic) is shown
+          // whole, contained within the cap (with side margins), rather than
+          // cropped top and bottom. Tap opens the full-screen lightbox.
           val maxHeroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
           AsyncImage(
               model = heroUrl,
@@ -720,7 +790,7 @@ private fun PostCard(
                           listOf(heroUrl) to 0
                       }
                   },
-              contentScale = ContentScale.FillWidth,
+              contentScale = ContentScale.Fit,
           )
       }
       Column(
@@ -890,55 +960,16 @@ private fun PostCard(
             }
         }
 
-        // Bottom action bar: reaction bar, then comment / edit / delete
-        // icon buttons. Pinned at the bottom of the full-screen page so
-        // the user always knows where the menu is regardless of post
-        // length. Spacer adds a thin top divider-ish gap above the row.
-        Spacer(modifier = Modifier.height(8.dp))
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 16.dp, end = 4.dp, bottom = 16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            ReactionBar(
-                reactions = toReactionCounts(post.reactions, post.myReaction),
-                onReact = onReact,
-                onRemoveReaction = { onReact(post.myReaction) },
-                modifier = Modifier.weight(1f)
-            )
-            PostTagsButton(
-                tags = post.tags,
-                onAddTag = onAddTag,
-                onAdjustInterest = onAdjustInterest,
-            )
-            IconButton(onClick = onComments, modifier = Modifier.size(32.dp)) {
-                Icon(
-                    Icons.Default.ChatBubbleOutline,
-                    contentDescription = stringResource(R.string.feeds_comments),
-                    modifier = Modifier.size(18.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            if (canManage) {
-                IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
-                    Icon(
-                        Icons.Default.Edit,
-                        contentDescription = stringResource(MochiR.string.common_edit),
-                        modifier = Modifier.size(18.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
-                    Icon(
-                        Icons.Default.Delete,
-                        contentDescription = stringResource(MochiR.string.common_delete),
-                        modifier = Modifier.size(18.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-        }
+        PostActionBar(
+            post = post,
+            canManage = canManage,
+            onReact = onReact,
+            onComments = onComments,
+            onEdit = onEdit,
+            onDelete = onDelete,
+            onAddTag = onAddTag,
+            onAdjustInterest = onAdjustInterest,
+        )
     }
 
     lightboxState?.let { (urls, index) ->
@@ -947,6 +978,68 @@ private fun PostCard(
             initialIndex = index,
             onDismiss = { lightboxState = null },
         )
+    }
+}
+
+// Bottom action bar: reaction bar, then comment / edit / delete icon buttons.
+// Lives outside the flipping page content so it stays put during the page-flip
+// and simply reflects whichever post is current (updating on swipe-commit),
+// rather than flipping along with the card.
+@Composable
+private fun PostActionBar(
+    post: Post,
+    canManage: Boolean,
+    onReact: (String) -> Unit,
+    onComments: () -> Unit,
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onAddTag: () -> Unit,
+    onAdjustInterest: (Tag, String) -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surface)
+            .padding(start = 16.dp, end = 4.dp, top = 8.dp, bottom = 16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        ReactionBar(
+            reactions = toReactionCounts(post.reactions, post.myReaction),
+            onReact = onReact,
+            onRemoveReaction = { onReact(post.myReaction) },
+            modifier = Modifier.weight(1f)
+        )
+        PostTagsButton(
+            tags = post.tags,
+            onAddTag = onAddTag,
+            onAdjustInterest = onAdjustInterest,
+        )
+        IconButton(onClick = onComments, modifier = Modifier.size(32.dp)) {
+            Icon(
+                Icons.Default.ChatBubbleOutline,
+                contentDescription = stringResource(R.string.feeds_comments),
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        if (canManage) {
+            IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
+                Icon(
+                    Icons.Default.Edit,
+                    contentDescription = stringResource(MochiR.string.common_edit),
+                    modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
+                Icon(
+                    Icons.Default.Delete,
+                    contentDescription = stringResource(MochiR.string.common_delete),
+                    modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
     }
 }
 

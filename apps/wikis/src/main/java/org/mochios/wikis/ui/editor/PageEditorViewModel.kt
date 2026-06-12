@@ -273,7 +273,9 @@ class PageEditorViewModel @Inject constructor(
         uploadFailed: String,
     ) {
         if (uris.isEmpty()) return
-        val slug = _uiState.value.slug.ifEmpty { initialSlug ?: return }
+        // Attachments are wiki-scoped on the server, but the editor only allows
+        // uploads once the page exists (matching web), so guard on a known slug.
+        if (_uiState.value.slug.isEmpty() && initialSlug == null) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isUploading = true)
             val tempFiles = mutableListOf<File>()
@@ -286,7 +288,7 @@ class PageEditorViewModel @Inject constructor(
                     } ?: throw IllegalStateException("Cannot open $uri")
                     tempFiles.add(temp)
                 }
-                val uploaded = repository.uploadAttachments(wikiId, slug, tempFiles)
+                val uploaded = repository.uploadAttachments(wikiId, tempFiles)
                 _uiState.value = _uiState.value.copy(
                     isUploading = false,
                     attachments = mergeAttachments(_uiState.value.attachments, uploaded),

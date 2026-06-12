@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Ukulinganisa / ukunika amaphuzu</string>
     <string name="feeds_ai_prompt_credibility">Ukuhlolwa kokwethembeka</string>
 
+    <string name="feeds_refresh">Vuselela</string>
+    <string name="feeds_interest_boosted">Intshisekelo ikhushuliwe</string>
+    <string name="feeds_interest_reduced">Intshisekelo inciphisiwe</string>
+    <string name="feeds_interest_removed">Intshisekelo isusiwe</string>
+    <string name="feeds_interest_failed">Kuhlulekile ukulungisa intshisekelo</string>
 </resources>

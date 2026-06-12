@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Última sincronització: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Això aturarà l\'enviament d\'actualitzacions a «%1$s». Poden replicar de nou si volen.</string>
     <string name="wikis_replicas_removed_success">Rèplica eliminada</string>
+    <string name="wikis_load_more">Carrega\'n més</string>
+    <string name="wikis_access_change_level">Nivell d\'accés</string>
+    <string name="wikis_access_subject_anyone">Qualsevol</string>
+    <string name="wikis_access_subject_authenticated">Usuaris autenticats</string>
 
 </resources>

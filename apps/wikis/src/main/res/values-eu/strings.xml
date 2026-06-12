@@ -303,4 +303,8 @@
     <string name="wikis_replicas_col_synced">Azken sinkronizazioa: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Honek «%1$s»ra eguneraketak bidaltzeari utziko dio. Berriz erreplikatu dezakete nahi badute.</string>
     <string name="wikis_replicas_removed_success">Erreplika kendu da</string>
+    <string name="wikis_load_more">Kargatu gehiago</string>
+    <string name="wikis_access_change_level">Sarbide maila</string>
+    <string name="wikis_access_subject_anyone">Edonor</string>
+    <string name="wikis_access_subject_authenticated">Autentifikatutako erabiltzaileak</string>
 </resources>

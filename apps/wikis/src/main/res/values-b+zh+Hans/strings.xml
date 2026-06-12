@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">上次同步:%1$s</string>
     <string name="wikis_replicas_remove_confirm_message">这将停止向\"%1$s\"发送更新。他们可以根据需要再次复制。</string>
     <string name="wikis_replicas_removed_success">副本已移除</string>
+    <string name="wikis_load_more">加载更多</string>
+    <string name="wikis_access_change_level">更改访问级别</string>
+    <string name="wikis_access_subject_anyone">任何人</string>
+    <string name="wikis_access_subject_authenticated">已认证用户</string>
 
 </resources>

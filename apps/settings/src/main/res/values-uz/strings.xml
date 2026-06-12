@@ -56,8 +56,6 @@
     <string name="replication_deny">Rad etish</string>
     <string name="replication_hosts_title">Mening hostlarim</string>
     <string name="replication_hosts_empty_hint">Uni boshqa serverga ko\'chirish uchun, u yerda hisob ochib, \"Mavjud hisobni replikatsiya qilish\" variantidan foydalaning.</string>
-    <string name="replication_remove">Hostni o\'chirish</string>
-    <string name="replication_remove_title">Host o\'chirilsinmi?</string>
     <string name="settings_home_section_system">Tizim</string>
     <string name="system_replication_title">Replikatsiya</string>
     <string name="system_replication_this_server">Ushbu server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Hech qachon</string>
     <string name="replication_hosts_empty">Bu hisob faqat shu serverda.</string>
     <string name="replication_added">Qoʻshildi %1$s</string>
-    <string name="replication_remove_message">Ushbu server hisobingizni oʻsha hostga replikatsiyalashni toʻxtatadi.</string>
     <string name="settings_home_system_replication">Replikatsiya (server)</string>
     <string name="system_replication_pair_empty_hint">Yangi serverda \"mochictl replica join &lt;existing-peer-id&gt;\" yordamida boshqa yangi oʻrnatilgan server bilan juftlang.</string>
     <string name="route_delete_message">Bu yoʻl \"%1$s\" uchun marshrutni olib tashlaydi.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Autentifikator ilova</string>
     <string name="login_method_oauth">Uchinchi tomon kirishi</string>
     <string name="login_method_recovery">Tiklash kodlari</string>
+    <string name="account_close_section">Hisobni yopish</string>
+    <string name="account_close_action">Hisobni yopish</string>
+    <string name="account_close_confirm_title">Hisobingizni yopasizmi?</string>
+    <string name="account_close_confirm_body">Hisobingiz o\'chirilishi uchun rejalashtiriladi va tizimdan chiqarilasiz. O\'chirish sanasidan oldin istalgan vaqtda qaytadan tizimga kirib, buni bekor qilishingiz mumkin.</string>
+    <string name="account_data_download">Yuklab olish</string>
+    <string name="route_target_app">Ilova</string>
+    <string name="route_target_entity">Obyekt</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Sizning ma\'lumotlaringiz</string>
+    <string name="account_data_dialog_title">Ma\'lumotlaringizni yuklab oling</string>
+    <string name="account_data_dialog_body">Bu siz ushbu yoki boshqa Mochi serverida tiklashingiz mumkin bo\'lgan to\'liq zaxira nusxasidir. Davom etish uchun bu siz ekanligingizni tasdiqlang.</string>
+    <string name="account_data_passphrase">Parol iborasi</string>
+    <string name="account_data_passphrase_hint">Shaxsiy kalitlaringiz kiritilgan, ushbu parol iborasi bilan shifrlangan. Uni xavfsiz joyda saqlang. Tiklash uchun kerak bo\'ladi.</string>
+    <string name="replication_hosts_subtitle">Hisobingiz nusxasini saqlaydigan boshqa serverlar. Birini olib tashlash uchun o‘sha serverda tizimga kiring va \"Hisobimni ushbu serverdan olib tashlash\" dan foydalaning.</string>
+    <string name="replication_irreparable">Tuzatib bo‘lmaydi</string>
+    <string name="replication_leave">Hisobimni ushbu serverdan olib tashlash</string>
+    <string name="replication_leave_title">Hisobingiz ushbu serverdan olib tashlansinmi?</string>
+    <string name="replication_leave_message">Ushbu serverdagi hisobingiz ma\'lumotlari butunlay o‘chiriladi va siz bu yerda tizimdan chiqarilasiz. Hisobingiz boshqa serverlaringizda saqlanib qoladi va keyinchalik buni qayta qo‘shishingiz mumkin.</string>
+    <string name="replication_leave_confirm">Olib tashlash</string>
+    <string name="replication_forget">Bu yetib bo‘lmaydigan xostni unuting</string>
+    <string name="replication_forget_title">Bu yetib bo‘lmaydigan xost unutilsinmi?</string>
+    <string name="replication_forget_message">U replika to‘plamingizdan olib tashlanadi va qayta ulanganda nusxasini o‘chirish buyuriladi. Yetib boriladigan serverni olib tashlash uchun u yerda tizimga kiring va \"Hisobimni ushbu serverdan olib tashlash\" dan foydalaning. Davom etish uchun o‘zingizligingizni tasdiqlang.</string>
+    <string name="replication_offline">Oflayn</string>
+    <string name="replication_forget_confirm">Unutish</string>
 </resources>

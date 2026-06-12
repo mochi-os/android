@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Msimbo huo si sahihi au umekwisha muda wake.</string>
     <string name="stepup_error_passkey">Uthibitishaji wa ufunguo umeshindwa. Tafadhali jaribu tena.</string>
     <string name="stepup_error_oauth">Imeshindwa kuthibitisha kwa akaunti hiyo. Tafadhali jaribu tena.</string>
+    <string name="game_system_resign">%1$s alijiuzulu</string>
+    <string name="game_system_draw_offer">%1$s alipendekeza sare</string>
+    <string name="game_system_draw_accept">Sare imekubaliwa</string>
+    <string name="game_system_draw_decline">%1$s alikataa sare</string>
+    <string name="reactivation_title">Akaunti yako imepangwa kufutwa</string>
+    <string name="reactivation_body">Akaunti yako imepangwa kufutwa. Unaweza kughairi na kurejesha ufikiaji kamili sasa.</string>
+    <string name="reactivation_body_dated">Akaunti yako na data yake yote itafutwa kabisa tarehe %1$s. Unaweza kughairi na kurejesha ufikiaji kamili sasa.</string>
+    <string name="reactivation_reactivate">Washa upya akaunti yangu</string>
+    <string name="reactivation_sign_out">Endelea kufunga na utoke</string>
 </resources>

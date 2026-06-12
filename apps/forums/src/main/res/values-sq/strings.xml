@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Objektivi</string>
     <string name="forums_access_level_view">Shiko</string>
+    <string name="forums_access_level_vote">Voto</string>
     <string name="forums_access_level_comment">Komenti</string>
     <string name="forums_access_level_post">Posto</string>
     <string name="forums_access_level_none">Asnjë</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID entiteti, @grup, * (të gjithë), ose + (anëtarët)</string>
     <string name="forums_access_level">Niveli</string>
     <string name="forums_access_level_moderate">Moderim</string>
-    <string name="forums_access_level_manage">Menaxhim</string>
     <string name="forums_members_search">Filtroni anëtarët</string>
     <string name="forums_banner_description">Markdown që shfaqet në krye të forumit.</string>
     <string name="forums_banner_placeholder">Mirë se vini në këtë forum…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Zona e rrezikut</string>
     <string name="forums_settings_delete_message">Ky veprim do ta fshijë përgjithmonë forumin dhe të gjitha postimet e tij. Ky veprim s\'mund të zhbëhet.</string>
 
+    <string name="forums_tag_interest_up">Rrit interesin</string>
+    <string name="forums_tag_interest_down">Zvogëlo interesin</string>
+    <string name="forums_tag_interest_remove">Hiq interesin</string>
+    <string name="forums_list_default_sort">Renditja e parazgjedhur</string>
+    <string name="forums_access_tab_users">Përdoruesit</string>
+    <string name="forums_access_tab_groups">Grupet</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Kërko përdorues</string>
+    <string name="forums_access_no_groups">Asnjë grup i disponueshëm</string>
 </resources>

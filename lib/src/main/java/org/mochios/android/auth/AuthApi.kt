@@ -41,7 +41,13 @@ data class IdentityInfoResponse(
 
 data class IdentityUserNode(
     val email: String = "",
-    val name: String = ""
+    val name: String = "",
+    /** Account lifecycle status. "closing" means the account is soft-deleted
+     *  and pending purge; the app routes such sessions to the reactivation
+     *  interstitial. */
+    val status: String = "",
+    /** Unix-seconds purge deadline when [status] is "closing". */
+    val purge: Long = 0
 )
 
 data class IdentityEntityNode(
@@ -155,4 +161,8 @@ interface AuthApi {
 
     @POST("_/auth/oauth/exchange")
     suspend fun oauthExchange(@Body body: OAuthExchangeRequest): Response<VerifyResponse>
+
+    /** Cancel a pending self-service closure, reactivating the account. */
+    @POST("_/auth/close/cancel")
+    suspend fun cancelClose(): Response<Unit>
 }

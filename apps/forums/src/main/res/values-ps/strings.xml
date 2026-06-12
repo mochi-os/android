@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">هدف</string>
     <string name="forums_access_level_view">ولید</string>
+    <string name="forums_access_level_vote">رايه ورکول</string>
     <string name="forums_access_level_comment">تبصره</string>
     <string name="forums_access_level_post">لیکنه</string>
     <string name="forums_access_level_none">هیڅوک</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">د موجودیت ID، @ګروپ، * (هرڅوک)، یا + (غړي)</string>
     <string name="forums_access_level">کچه</string>
     <string name="forums_access_level_moderate">اعتدال</string>
-    <string name="forums_access_level_manage">اداره کول</string>
     <string name="forums_members_search">د غړو فلټر</string>
     <string name="forums_banner_description">مارک‌ډاون چې د فورم په سر کې ښودل کیږي.</string>
     <string name="forums_banner_placeholder">دې فورم ته ښه راغلاست…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">د خطر ساحه</string>
     <string name="forums_settings_delete_message">دا به فورم او ټول پوسټونه یې په دایمي توګه ړنګ کړي. دا نه شي بېرته راګرځیدلی.</string>
 
+    <string name="forums_tag_interest_up">دلچسپي ډیره کړه</string>
+    <string name="forums_tag_interest_down">د سود کمول</string>
+    <string name="forums_tag_interest_remove">علاقه لرې کړئ</string>
+    <string name="forums_list_default_sort">ډیفالټ ترتیب</string>
+    <string name="forums_access_tab_users">کاروونکي</string>
+    <string name="forums_access_tab_groups">ګروپونه</string>
+    <string name="forums_access_tab_manual">لاسي</string>
+    <string name="forums_access_search_users">کاروونکي وپلټئ</string>
+    <string name="forums_access_no_groups">هیڅ ډلې شتون نلري</string>
 </resources>

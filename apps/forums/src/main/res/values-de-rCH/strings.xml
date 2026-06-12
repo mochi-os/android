@@ -15,6 +15,7 @@
     <string name="forums_list_logout">Abmelden</string>
     <string name="forums_find_subscribe">Abonnieren</string>
     <string name="forums_access_level_view">Anzeigen</string>
+    <string name="forums_access_level_vote">Abstimmen</string>
     <string name="forums_access_level_none">Keine</string>
     <string name="forums_settings">Einstellungen</string>
     <string name="forums_list_search">Suchen</string>
@@ -113,7 +114,6 @@
     <string name="forums_access_level_comment">Kommentieren</string>
     <string name="forums_access_level_post">Veröffentlichen</string>
     <string name="forums_access_level_moderate">Moderieren</string>
-    <string name="forums_access_level_manage">Verwalten</string>
     <string name="forums_members_search">Mitglieder filtern</string>
     <string name="forums_members_empty">Keine Mitglieder</string>
     <string name="forums_banner_description">Markdown, das oben im Forum angezeigt wird.</string>
@@ -198,4 +198,13 @@
     <string name="forums_forum_not_found">Forum nicht gefunden</string>
     <string name="forums_post_not_found">Beitrag nicht gefunden</string>
 
+    <string name="forums_tag_interest_up">Interesse hervorheben</string>
+    <string name="forums_tag_interest_down">Interesse reduzieren</string>
+    <string name="forums_tag_interest_remove">Interesse entfernen</string>
+    <string name="forums_list_default_sort">Standardsortierung</string>
+    <string name="forums_access_tab_users">Benutzer</string>
+    <string name="forums_access_tab_groups">Gruppen</string>
+    <string name="forums_access_tab_manual">Manuell</string>
+    <string name="forums_access_search_users">Benutzer suchen</string>
+    <string name="forums_access_no_groups">No groups available</string>
 </resources>

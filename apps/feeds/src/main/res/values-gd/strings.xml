@@ -195,4 +195,9 @@
     <string name="feeds_ai_prompt_rank">Rangachadh / sgòradh</string>
     <string name="feeds_ai_prompt_credibility">Measadh creideis</string>
 
+    <string name="feeds_refresh">Ath-nuadhaich</string>
+    <string name="feeds_interest_boosted">Chaidh an ùidh àrdachadh</string>
+    <string name="feeds_interest_reduced">Chaidh an ùidh ìsleachadh</string>
+    <string name="feeds_interest_removed">Chaidh an ùidh a thoirt air falbh</string>
+    <string name="feeds_interest_failed">Cha b\' urrainn an ùidh atharrachadh</string>
 </resources>

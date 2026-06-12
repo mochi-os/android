@@ -56,8 +56,6 @@
     <string name="replication_deny">Refuser</string>
     <string name="replication_hosts_title">Mes hôtes</string>
     <string name="replication_hosts_empty_hint">Pour le répliquer sur un autre serveur, créez un compte là-bas et utilisez l\'option \"Répliquer un compte existant\".</string>
-    <string name="replication_remove">Supprimer l\'hôte</string>
-    <string name="replication_remove_title">Supprimer l\'hôte ?</string>
     <string name="settings_home_section_system">Système</string>
     <string name="system_replication_title">Réplication</string>
     <string name="system_replication_this_server">Ce serveur</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Jamais</string>
     <string name="replication_hosts_empty">Ce compte n\'est que sur ce serveur.</string>
     <string name="replication_added">Ajouté %1$s</string>
-    <string name="replication_remove_message">Ce serveur cessera de répliquer votre compte vers cet hôte.</string>
     <string name="settings_home_system_replication">Réplication (serveur)</string>
     <string name="system_replication_pair_empty_hint">Associez-vous à un autre serveur fraîchement installé en utilisant « mochictl replica join &lt;existing-peer-id&gt; » sur le nouveau serveur.</string>
     <string name="route_delete_message">Cela supprimera la route pour le chemin « %1$s ».</string>
@@ -388,4 +385,28 @@
     <string name="login_method_totp">Application d\'authentification</string>
     <string name="login_method_oauth">Connexion via tiers</string>
     <string name="login_method_recovery">Codes de récupération</string>
+    <string name="account_close_section">Fermer le compte</string>
+    <string name="account_close_action">Fermer le compte</string>
+    <string name="account_close_confirm_title">Fermer votre compte ?</string>
+    <string name="account_close_confirm_body">La suppression de votre compte sera planifiée et vous serez déconnecté. Vous pouvez l\'annuler à tout moment avant la date de suppression en vous reconnectant.</string>
+    <string name="account_data_download">Télécharger</string>
+    <string name="route_target_app">Apparence</string>
+    <string name="route_target_entity">Entité</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Vos données</string>
+    <string name="account_data_dialog_title">Télécharger vos données</string>
+    <string name="account_data_dialog_body">Il s\'agit d\'une sauvegarde complète que vous pouvez restaurer sur ce serveur Mochi ou un autre. Vérifiez votre identité pour continuer.</string>
+    <string name="account_data_passphrase">Phrase secrète</string>
+    <string name="account_data_passphrase_hint">Vos clés privées sont incluses, chiffrées avec cette phrase secrète. Conservez-la en lieu sûr. Vous en aurez besoin pour restaurer.</string>
+    <string name="replication_hosts_subtitle">Autres serveurs qui détiennent également une copie de votre compte. Pour en retirer un, connectez-vous sur ce serveur et utilisez « Retirer mon compte de ce serveur ».</string>
+    <string name="replication_irreparable">Irréparable</string>
+    <string name="replication_leave">Retirer mon compte de ce serveur</string>
+    <string name="replication_leave_title">Retirer votre compte de ce serveur ?</string>
+    <string name="replication_leave_message">Les données de votre compte sur ce serveur seront définitivement supprimées et vous serez déconnecté ici. Votre compte reste sur vos autres serveurs, et vous pourrez rajouter celui-ci plus tard.</string>
+    <string name="replication_leave_confirm">Retirer</string>
+    <string name="replication_forget">Oublier cet hôte injoignable</string>
+    <string name="replication_forget_title">Oublier cet hôte injoignable ?</string>
+    <string name="replication_forget_message">Il sera retiré de votre ensemble de réplicas et invité à supprimer sa copie lors de sa reconnexion. Pour retirer un serveur joignable, connectez-vous dessus et utilisez « Retirer mon compte de ce serveur ». Vérifiez votre identité pour continuer.</string>
+    <string name="replication_offline">Hors ligne</string>
+    <string name="replication_forget_confirm">Oublier</string>
 </resources>

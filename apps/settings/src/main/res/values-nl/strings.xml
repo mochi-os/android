@@ -56,8 +56,6 @@
     <string name="replication_deny">Weigeren</string>
     <string name="replication_hosts_title">Mijn hosts</string>
     <string name="replication_hosts_empty_hint">Om het naar een andere server te repliceren, maak daar een account aan en gebruik de optie \"Een bestaand account repliceren\".</string>
-    <string name="replication_remove">Host verwijderen</string>
-    <string name="replication_remove_title">Host verwijderen?</string>
     <string name="settings_home_section_system">Systeem</string>
     <string name="system_replication_title">Replicatie</string>
     <string name="system_replication_this_server">Deze server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nooit</string>
     <string name="replication_hosts_empty">Dit account staat alleen op deze server.</string>
     <string name="replication_added">Toegevoegd %1$s</string>
-    <string name="replication_remove_message">Deze server stopt met het repliceren van je account naar die host.</string>
     <string name="settings_home_system_replication">Replicatie (server)</string>
     <string name="system_replication_pair_empty_hint">Koppel met een andere vers geïnstalleerde server met «mochictl replica join &lt;existing-peer-id&gt;» op de nieuwe server.</string>
     <string name="route_delete_message">Hiermee wordt de route voor pad «%1$s» verwijderd.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator-app</string>
     <string name="login_method_oauth">Login via derde partij</string>
     <string name="login_method_recovery">Herstelcodes</string>
+    <string name="account_close_section">Account sluiten</string>
+    <string name="account_close_action">Account sluiten</string>
+    <string name="account_close_confirm_title">Uw account sluiten?</string>
+    <string name="account_close_confirm_body">Uw account wordt gepland voor verwijdering en u wordt afgemeld. U kunt dit op elk moment vóór de verwijderingsdatum annuleren door opnieuw in te loggen.</string>
+    <string name="account_data_download">Downloaden</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entiteit</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Jouw gegevens</string>
+    <string name="account_data_dialog_title">Download uw gegevens</string>
+    <string name="account_data_dialog_body">Dit is een volledige back-up die je kunt herstellen op deze of een andere Mochi-server. Bevestig dat jij het bent om door te gaan.</string>
+    <string name="account_data_passphrase">Wachtzin</string>
+    <string name="account_data_passphrase_hint">Uw privésleutels zijn inbegrepen, versleuteld met deze wachtwoordzin. Bewaar hem op een veilige plek. U hebt hem nodig om te herstellen.</string>
+    <string name="replication_hosts_subtitle">Andere servers die ook een kopie van je account bewaren. Om er een te verwijderen, meld je je aan op die server en gebruik je \"Mijn account van deze server verwijderen\".</string>
+    <string name="replication_irreparable">Onherstelbaar</string>
+    <string name="replication_leave">Mijn account van deze server verwijderen</string>
+    <string name="replication_leave_title">Je account van deze server verwijderen?</string>
+    <string name="replication_leave_message">De gegevens van je account op deze server worden permanent verwijderd en je wordt hier afgemeld. Je account blijft op je andere servers staan en je kunt deze later opnieuw toevoegen.</string>
+    <string name="replication_leave_confirm">Verwijderen</string>
+    <string name="replication_forget">Deze onbereikbare host vergeten</string>
+    <string name="replication_forget_title">Deze onbereikbare host vergeten?</string>
+    <string name="replication_forget_message">De host wordt uit je replicaset verwijderd en krijgt de opdracht om zijn kopie te verwijderen zodra hij opnieuw verbinding maakt. Om een bereikbare server te verwijderen, meld je daar aan en gebruik je \"Mijn account van deze server verwijderen\". Bevestig dat jij het bent om door te gaan.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Vergeten</string>
 </resources>

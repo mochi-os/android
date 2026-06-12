@@ -265,4 +265,13 @@
     <string name="stepup_error_code">Koden er forkert eller udløbet.</string>
     <string name="stepup_error_passkey">Verificering med adgangsnøgle mislykkedes. Prøv igen.</string>
     <string name="stepup_error_oauth">Kunne ikke verificere med den konto. Prøv venligst igen.</string>
+    <string name="game_system_resign">%1$s gav op</string>
+    <string name="game_system_draw_offer">%1$s tilbød remis</string>
+    <string name="game_system_draw_accept">Remis aftalt</string>
+    <string name="game_system_draw_decline">%1$s afslog remis</string>
+    <string name="reactivation_title">Din konto er planlagt til sletning</string>
+    <string name="reactivation_body">Din konto er planlagt til sletning. Du kan annullere og gendanne fuld adgang nu.</string>
+    <string name="reactivation_body_dated">Din konto og alle dens data slettes permanent den %1$s. Du kan annullere og gendanne fuld adgang nu.</string>
+    <string name="reactivation_reactivate">Genaktivér min konto</string>
+    <string name="reactivation_sign_out">Fortsæt med at lukke og log ud</string>
 </resources>

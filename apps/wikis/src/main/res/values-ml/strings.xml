@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Last synced: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">This will stop sending updates to \"%1$s\". They can replicate again if they want.</string>
     <string name="wikis_replicas_removed_success">Replica removed</string>
+    <string name="wikis_load_more">കൂടുതൽ ലോഡുചെയ്യുക</string>
+    <string name="wikis_access_change_level">ആക്സസ് ലെവൽ</string>
+    <string name="wikis_access_subject_anyone">ആർക്കും</string>
+    <string name="wikis_access_subject_authenticated">പ്രാമാണീകരിച്ച ഉപയോക്താക്കൾ</string>
 
 </resources>

@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Reitingavimas / vertinimas</string>
     <string name="feeds_ai_prompt_credibility">Patikimumo vertinimas</string>
 
+    <string name="feeds_refresh">Atnaujinti</string>
+    <string name="feeds_interest_boosted">Pomėgis padidintas</string>
+    <string name="feeds_interest_reduced">Pomėgis sumažintas</string>
+    <string name="feeds_interest_removed">Pomėgis pašalintas</string>
+    <string name="feeds_interest_failed">Nepavyko pakoreguoti pomėgio</string>
 </resources>

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">ИИ</string>
     <string name="forums_access_target">Цель</string>
     <string name="forums_access_level_view">Просмотр</string>
+    <string name="forums_access_level_vote">Голосовать</string>
     <string name="forums_access_level_comment">Комментарий</string>
     <string name="forums_access_level_post">Публикация</string>
     <string name="forums_access_level_none">Нет</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID сущности, @группа, * (все) или + (участники)</string>
     <string name="forums_access_level">Уровень</string>
     <string name="forums_access_level_moderate">Модерировать</string>
-    <string name="forums_access_level_manage">Управлять</string>
     <string name="forums_members_search">Фильтр участников</string>
     <string name="forums_banner_description">Markdown, отображаемый вверху форума.</string>
     <string name="forums_banner_placeholder">Добро пожаловать на форум…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Опасная зона</string>
     <string name="forums_settings_delete_message">Это действие навсегда удалит форум и все его записи. Это действие необратимо.</string>
 
+    <string name="forums_tag_interest_up">Усилить интерес</string>
+    <string name="forums_tag_interest_down">Снизить интерес</string>
+    <string name="forums_tag_interest_remove">Удалить интерес</string>
+    <string name="forums_list_default_sort">Сортировка по умолчанию</string>
+    <string name="forums_access_tab_users">Пользователи</string>
+    <string name="forums_access_tab_groups">Группы</string>
+    <string name="forums_access_tab_manual">Вручную</string>
+    <string name="forums_access_search_users">Поиск пользователей</string>
+    <string name="forums_access_no_groups">Нет доступных групп</string>
 </resources>

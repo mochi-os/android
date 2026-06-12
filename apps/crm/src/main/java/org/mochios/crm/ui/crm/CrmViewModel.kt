@@ -49,8 +49,8 @@ data class CrmUiState(
     val sortByView: Map<String, String> = emptyMap(),
     /** Sort direction per view id. "asc" or "desc". */
     val sortDirByView: Map<String, String> = emptyMap(),
-    /** True if the user has unread crm notifications somewhere. */
-    val hasNotifications: Boolean = false,
+    /** CRM members, for resolving user-field display names in list/board views. */
+    val people: List<org.mochios.crm.model.Person> = emptyList(),
 )
 
 @HiltViewModel
@@ -71,17 +71,6 @@ class CrmViewModel @Inject constructor(
     init {
         loadCrm()
         subscribeWebSocket()
-        checkNotifications()
-    }
-
-    fun checkNotifications() {
-        viewModelScope.launch {
-            try {
-                val hasUnread = repository.checkNotifications()
-                _uiState.value = _uiState.value.copy(hasNotifications = hasUnread)
-            } catch (_: Exception) {
-            }
-        }
     }
 
     override fun onCleared() {
@@ -114,11 +103,14 @@ class CrmViewModel @Inject constructor(
             try {
                 val details = repository.getCrmInfo(crmId)
                 val objects = repository.getObjects(crmId)
+                val people = runCatching { repository.getPeople(crmId) }
+                    .getOrDefault(_uiState.value.people)
                 val activeViewId = _uiState.value.activeViewId
                     ?: details.views.firstOrNull()?.id
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    people = people,
                     activeViewId = activeViewId,
                     isLoading = false
                 )
@@ -135,9 +127,12 @@ class CrmViewModel @Inject constructor(
         try {
             val details = repository.getCrmInfo(crmId)
             val objects = repository.getObjects(crmId)
+            val people = runCatching { repository.getPeople(crmId) }
+                .getOrDefault(_uiState.value.people)
             _uiState.value = _uiState.value.copy(
                 crmDetails = details,
-                objects = objects
+                objects = objects,
+                people = people
             )
         } catch (_: Exception) {
             // Silent — cached data is still showing
@@ -150,9 +145,12 @@ class CrmViewModel @Inject constructor(
             try {
                 val details = repository.getCrmInfo(crmId)
                 val objects = repository.getObjects(crmId)
+                val people = runCatching { repository.getPeople(crmId) }
+                    .getOrDefault(_uiState.value.people)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
+                    people = people,
                     isRefreshing = false,
                     error = null
                 )
@@ -395,7 +393,7 @@ class CrmViewModel @Inject constructor(
     fun reparentObject(objectId: String, newParentId: String) {
         viewModelScope.launch {
             try {
-                repository.updateObject(crmId, objectId, null, newParentId)
+                repository.updateObject(crmId, objectId, newParentId)
                 refreshObjects()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

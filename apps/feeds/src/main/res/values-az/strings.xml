@@ -195,4 +195,9 @@
     <string name="feeds_ai_prompt_rank">Sıralama / qiymətləndirmə</string>
     <string name="feeds_ai_prompt_credibility">Etibarlılıq qiymətləndirməsi</string>
 
+    <string name="feeds_refresh">Yenilə</string>
+    <string name="feeds_interest_boosted">Maraq artırıldı</string>
+    <string name="feeds_interest_reduced">Maraq azaldıldı</string>
+    <string name="feeds_interest_removed">Maraq silindi</string>
+    <string name="feeds_interest_failed">Marağı tənzimləmək alınmadı</string>
 </resources>

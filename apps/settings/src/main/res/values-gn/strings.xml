@@ -56,8 +56,6 @@
     <string name="replication_deny">Heja</string>
     <string name="replication_hosts_title">Che mohendaha kuéra</string>
     <string name="replication_hosts_empty_hint">Embojaeve hag̃ua ambue mohendaharãme, ejehecha pe kuentarã ha eipuru \"Replicar una cuenta existente\" jeporavo.</string>
-    <string name="replication_remove">Mboykete mohendaha</string>
-    <string name="replication_remove_title">¿Mboykete mohendaha?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Replicación</string>
     <string name="system_replication_this_server">Ko servidor</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Araka\'eve</string>
     <string name="replication_hosts_empty">Ko cuenta ko servidor reheve aenteveo.</string>
     <string name="replication_added">Oñembojoapy %1$s</string>
-    <string name="replication_remove_message">Ko servidor ndorepilcái mo\'ã nde cuenta upe host rehe.</string>
     <string name="settings_home_system_replication">Mbohape (servidor)</string>
     <string name="system_replication_pair_empty_hint">Mbojoaju ambue servidor pyahu rendive eipurúvo \"mochictl replica join &lt;existing-peer-id&gt;\" servidor pyahúpe.</string>
     <string name="route_delete_message">Kóva oipe\'a tape \"%1$s\" ru ruta.</string>
@@ -386,4 +383,28 @@
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Ñepyrũ ambue rupive</string>
     <string name="login_method_recovery">Recuperación papapykuéra</string>
+    <string name="account_close_section">Emboty mba\'ete</string>
+    <string name="account_close_action">Emboty mba\'ete</string>
+    <string name="account_close_confirm_title">¿Emboty nde mba\'ete?</string>
+    <string name="account_close_confirm_body">Nde mba\'ete oñembosako\'íta oñemboguarã ha resẽta. Ikatu rejeheja jave reikese jeývo, oĩ aja gueteri ára oñemboguarã mboyve.</string>
+    <string name="account_data_download">Emboguejy</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entidad</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ne mba\'ekuaarã</string>
+    <string name="account_data_dialog_title">Embaja nde rekokue</string>
+    <string name="account_data_dialog_body">Kóva haʼe peteĩ kópia completa ikatúva remoĩjey ko servidor Mochi térã ambue ojehegui. Emyatã nde haʼeha rehegua resegui hag̃ua.</string>
+    <string name="account_data_passphrase">Ñemi ñe\'ẽ</string>
+    <string name="account_data_passphrase_hint">Nde llave privada oĩ, oĩ criptografíape ko frase ha\'e ndive. Ñongaturã porãme. Tekotevẽva ndéve ojapo aguã.</string>
+    <string name="replication_hosts_subtitle">Ambue servidor oguerekóva avei peteĩ kopia ne kuénta. Embogue hag̃ua peteĩ, eike upe servidor-pe ha eipuru «Embogue che kuénta ko servidor-gui».</string>
+    <string name="replication_irreparable">Ndaikatúiva oñemyatyrõ</string>
+    <string name="replication_leave">Embogue che kuénta ko servidor-gui</string>
+    <string name="replication_leave_title">¿Embogue ne kuénta ko servidor-gui?</string>
+    <string name="replication_leave_message">Ne kuénta datos ko servidor-pe oñembogue opa árape ha resẽta ko\'águi. Ne kuénta opyta ambue ne servidor-pe, ha ikatu emoĩ jey kóva uperire.</string>
+    <string name="replication_leave_confirm">Embogue</string>
+    <string name="replication_forget">Nesarái ko servidor noñehupytýiva</string>
+    <string name="replication_forget_title">¿Nesaráita ko servidor noñehupytýiva?</string>
+    <string name="replication_forget_message">Oñemboguéta ne aty replica-gui ha ojejeruréta chupe ombogue hag̃ua ikopia oñembojoaju jeývo. Embogue hag̃ua peteĩ servidor oñehupytýva, eike upépe ha eipuru «Embogue che kuénta ko servidor-gui». Emoneĩ nde hína ne añeteha eku\'e hag̃ua.</string>
+    <string name="replication_offline">Mboriahúgua</string>
+    <string name="replication_forget_confirm">Tesarái</string>
 </resources>

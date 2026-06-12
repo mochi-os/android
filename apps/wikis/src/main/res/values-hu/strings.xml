@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Utolsó szinkronizálás: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Ez leállítja a frissítések küldését a következőre: „%1$s\". Újra replikálhatnak, ha szeretnék.</string>
     <string name="wikis_replicas_removed_success">Replika eltávolítva</string>
+    <string name="wikis_load_more">Továbbiak betöltése</string>
+    <string name="wikis_access_change_level">Hozzáférési szint</string>
+    <string name="wikis_access_subject_anyone">Bárki</string>
+    <string name="wikis_access_subject_authenticated">Hitelesített felhasználók</string>
 
 </resources>

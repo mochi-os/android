@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Този код е неправилен или е изтекъл.</string>
     <string name="stepup_error_passkey">Проверката на ключа за достъп беше неуспешна. Моля, опитайте отново.</string>
     <string name="stepup_error_oauth">Потвърждаването с този акаунт не бе успешно. Моля, опитайте отново.</string>
+    <string name="game_system_resign">%1$s се предаде</string>
+    <string name="game_system_draw_offer">%1$s предложи реми</string>
+    <string name="game_system_draw_accept">Договорено реми</string>
+    <string name="game_system_draw_decline">%1$s отказа ремито</string>
+    <string name="reactivation_title">Акаунтът ви е насрочен за изтриване</string>
+    <string name="reactivation_body">Акаунтът ви е насрочен за изтриване. Можете да отмените и да възстановите пълния достъп сега.</string>
+    <string name="reactivation_body_dated">Акаунтът ви и всички негови данни ще бъдат окончателно изтрити на %1$s. Можете да отмените и да възстановите пълния достъп сега.</string>
+    <string name="reactivation_reactivate">Реактивиране на акаунта ми</string>
+    <string name="reactivation_sign_out">Продължете със закриването и излезте</string>
 </resources>

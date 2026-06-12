@@ -56,8 +56,6 @@
     <string name="replication_deny">Weier</string>
     <string name="replication_hosts_title">My gashere</string>
     <string name="replication_hosts_empty_hint">Om dit na \'n ander bediener te repliseer, registreer vir \'n rekening daar en gebruik die \"Repliseer \'n bestaande rekening\"-opsie.</string>
-    <string name="replication_remove">Verwyder gasheer</string>
-    <string name="replication_remove_title">Verwyder gasheer?</string>
     <string name="settings_home_section_system">Stelsel</string>
     <string name="system_replication_title">Replikasie</string>
     <string name="system_replication_this_server">Hierdie bediener</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nooit</string>
     <string name="replication_hosts_empty">Hierdie rekening is slegs op hierdie bediener.</string>
     <string name="replication_added">Bygevoeg %1$s</string>
-    <string name="replication_remove_message">Hierdie bediener sal ophou om jou rekening na daardie gasheer te repliseer.</string>
     <string name="settings_home_system_replication">Replikasie (bediener)</string>
     <string name="system_replication_pair_empty_hint">Verbind met \'n ander vars geïnstalleerde bediener deur \"mochictl replica join &lt;existing-peer-id&gt;\" op die nuwe bediener te gebruik.</string>
     <string name="route_delete_message">Hierdie sal die roete vir die pad \"%1$s\" verwyder.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Verifikasie-app</string>
     <string name="login_method_oauth">Derde-party aanmelding</string>
     <string name="login_method_recovery">Herstelkodes</string>
+    <string name="account_close_section">Sluit rekening</string>
+    <string name="account_close_action">Sluit rekening</string>
+    <string name="account_close_confirm_title">Sluit jou rekening?</string>
+    <string name="account_close_confirm_body">Jou rekening sal vir verwydering geskeduleer word en jy sal afgemeld word. Jy kan enige tyd voor die verwyderingsdatum kanselleer deur weer aan te meld.</string>
+    <string name="account_data_download">Laai af</string>
+    <string name="route_target_app">Toepassing</string>
+    <string name="route_target_entity">Entiteit</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Jou data</string>
+    <string name="account_data_dialog_title">Laai jou data af</string>
+    <string name="account_data_dialog_body">Dit is \'n volledige rugsteun wat jy op hierdie of \'n ander Mochi-bediener kan herstel. Bevestig dit is jy om voort te gaan.</string>
+    <string name="account_data_passphrase">Wagfrase</string>
+    <string name="account_data_passphrase_hint">Jou private sleutels is ingesluit, versleutel met hierdie wagfrase. Stoor dit veilig. Jy sal dit nodig hê om te herstel.</string>
+    <string name="replication_hosts_subtitle">Ander bedieners wat ook \'n kopie van jou rekening hou. Om een te verwyder, meld op daardie bediener aan en gebruik \"Verwyder my rekening van hierdie bediener\".</string>
+    <string name="replication_irreparable">Onherstelbaar</string>
+    <string name="replication_leave">Verwyder my rekening van hierdie bediener</string>
+    <string name="replication_leave_title">Verwyder jou rekening van hierdie bediener?</string>
+    <string name="replication_leave_message">Jou rekening se data op hierdie bediener sal permanent geskrap word en jy sal hier afgemeld word. Jou rekening bly op jou ander bedieners, en jy kan hierdie een later weer byvoeg.</string>
+    <string name="replication_leave_confirm">Verwyder</string>
+    <string name="replication_forget">Vergeet hierdie onbereikbare gasheer</string>
+    <string name="replication_forget_title">Vergeet hierdie onbereikbare gasheer?</string>
+    <string name="replication_forget_message">Dit sal uit jou replikastel verwyder word en aangesê word om sy kopie te skrap wanneer dit weer verbind. Om \'n bereikbare bediener te verwyder, meld daar aan en gebruik \"Verwyder my rekening van hierdie bediener\". Bevestig dis jy om voort te gaan.</string>
+    <string name="replication_offline">Aflyn</string>
+    <string name="replication_forget_confirm">Vergeet</string>
 </resources>

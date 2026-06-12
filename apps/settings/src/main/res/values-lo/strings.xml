@@ -56,8 +56,6 @@
     <string name="replication_deny">ປະຕິເສດ</string>
     <string name="replication_hosts_title">ໂຮສຂອງຂ້ອຍ</string>
     <string name="replication_hosts_empty_hint">ເພື່ອເຮັດສຳເນົາໄປຫາເຊີບເວີອື່ນ, ລົງທະບຽນບັນຊີຢູ່ທີ່ນັ້ນ ແລະ ໃຊ້ຕົວເລືອກ \"ເຮັດສຳເນົາບັນຊີທີ່ມີຢູ່ແລ້ວ\".</string>
-    <string name="replication_remove">ລຶບໂຮສ</string>
-    <string name="replication_remove_title">ລຶບໂຮສບໍ?</string>
     <string name="settings_home_section_system">ລະບົບ</string>
     <string name="system_replication_title">ການເຮັດສຳເນົາ</string>
     <string name="system_replication_this_server">ເຊີບເວີນີ້</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ບໍ່ເຄີຍ</string>
     <string name="replication_hosts_empty">ບັນຊີນີ້ມີຢູ່ໃນເຊີບເວີນີ້ເທົ່ານັ້ນ.</string>
     <string name="replication_added">ເພີ່ມແລ້ວ %1$s</string>
-    <string name="replication_remove_message">ເຊີບເວີນີ້ຈະຢຸດການຈໍາລອງບັນຊີຂອງທ່ານໄປຫາ host ນັ້ນ.</string>
     <string name="settings_home_system_replication">ການຈໍາລອງ (ເຊີບເວີ)</string>
     <string name="system_replication_pair_empty_hint">ຈັບຄູ່ກັບເຊີບເວີໃໝ່ທີ່ຕິດຕັ້ງໂດຍໃຊ້ \"mochictl replica join &lt;existing-peer-id&gt;\" ໃນເຊີບເວີໃໝ່.</string>
     <string name="route_delete_message">ນີ້ຈະລົບເສັ້ນທາງສຳລັບເສັ້ນທາງ \"%1$s\".</string>
@@ -386,4 +383,28 @@
     <string name="login_method_totp">ແອັບ authenticator</string>
     <string name="login_method_oauth">ການເຂົ້າສູ່ລະບົບຂອງພາກສ່ວນທີສາມ</string>
     <string name="login_method_recovery">ລະຫັດກູ້ຄືນ</string>
+    <string name="account_close_section">ປິດບັນຊີ</string>
+    <string name="account_close_action">ປິດບັນຊີ</string>
+    <string name="account_close_confirm_title">ປິດບັນຊີຂອງທ່ານບໍ?</string>
+    <string name="account_close_confirm_body">ບັນຊີຂອງທ່ານຈະຖືກກຳນົດໃຫ້ລຶບ ແລະ ທ່ານຈະຖືກອອກຈາກລະບົບ. ທ່ານສາມາດຍົກເລີກໄດ້ທຸກເວລາກ່ອນວັນທີລຶບ ໂດຍການເຂົ້າສູ່ລະບົບຄືນ.</string>
+    <string name="account_data_download">ດາວໂຫຼດ</string>
+    <string name="route_target_app">ແອັບ</string>
+    <string name="route_target_entity">ເອັນຕິຕີ້</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">ຂໍ້ມູນຂອງທ່ານ</string>
+    <string name="account_data_dialog_title">ດາວໂຫລດຂໍ້ມູນຂອງທ່ານ</string>
+    <string name="account_data_dialog_body">ນີ້ແມ່ນການສໍາຮອງຂໍ້ມູນທີ່ສົມບູນທີ່ທ່ານສາມາດກູ້ຄືນໄດ້ໃນເຊີບເວີນີ້ ຫຼື ເຊີບເວີ Mochi ອື່ນ. ກະລຸນາຢືນຢັນວ່າແມ່ນທ່ານເພື່ອດໍາເນີນການຕໍ່.</string>
+    <string name="account_data_passphrase">ລະຫັດຜ່ານ</string>
+    <string name="account_data_passphrase_hint">ລະຫັດສ່ວນຕົວຂອງທ່ານຖືກລວມໄວ້, ເຂົ້າລະຫັດດ້ວຍລະຫັດຜ່ານ-ປະໂຫຍກນີ້. ເກັບໄວ້ຢ່າງປອດໄພ. ທ່ານຈະຕ້ອງການມັນເພື່ອກູ້ຄືນ.</string>
+    <string name="replication_hosts_subtitle">ເຊີບເວີອື່ນທີ່ເກັບສຳເນົາບັນຊີຂອງທ່ານໄວ້ເຊັ່ນກັນ. ເພື່ອລຶບອັນໜຶ່ງ, ໃຫ້ເຂົ້າສູ່ລະບົບຢູ່ເຊີບເວີນັ້ນ ແລະໃຊ້ \"ລຶບບັນຊີຂອງຂ້ອຍອອກຈາກເຊີບເວີນີ້\".</string>
+    <string name="replication_irreparable">ບໍ່ສາມາດກູ້ຄືນໄດ້</string>
+    <string name="replication_leave">ລຶບບັນຊີຂອງຂ້ອຍອອກຈາກເຊີບເວີນີ້</string>
+    <string name="replication_leave_title">ລຶບບັນຊີຂອງທ່ານອອກຈາກເຊີບເວີນີ້ບໍ?</string>
+    <string name="replication_leave_message">ຂໍ້ມູນບັນຊີຂອງທ່ານຢູ່ເຊີບເວີນີ້ຈະຖືກລຶບຢ່າງຖາວອນ ແລະທ່ານຈະຖືກອອກຈາກລະບົບຢູ່ບ່ອນນີ້. ບັນຊີຂອງທ່ານຍັງຄົງຢູ່ໃນເຊີບເວີອື່ນຂອງທ່ານ, ແລະທ່ານສາມາດເພີ່ມເຊີບເວີນີ້ຄືນພາຍຫຼັງໄດ້.</string>
+    <string name="replication_leave_confirm">ລຶບອອກ</string>
+    <string name="replication_forget">ລືມໂຮສທີ່ເຂົ້າເຖິງບໍ່ໄດ້ນີ້</string>
+    <string name="replication_forget_title">ລືມໂຮສທີ່ເຂົ້າເຖິງບໍ່ໄດ້ນີ້ບໍ?</string>
+    <string name="replication_forget_message">ມັນຈະຖືກລຶບອອກຈາກຊຸດສຳເນົາຂອງທ່ານ ແລະຖືກສັ່ງໃຫ້ລຶບສຳເນົາຂອງມັນເມື່ອມັນເຊື່ອມຕໍ່ຄືນ. ເພື່ອລຶບເຊີບເວີທີ່ເຂົ້າເຖິງໄດ້, ໃຫ້ເຂົ້າສູ່ລະບົບຢູ່ບ່ອນນັ້ນ ແລະໃຊ້ \"ລຶບບັນຊີຂອງຂ້ອຍອອກຈາກເຊີບເວີນີ້\". ກວດສອບວ່າເປັນທ່ານເພື່ອສືບຕໍ່.</string>
+    <string name="replication_offline">ອອບລາຍ</string>
+    <string name="replication_forget_confirm">ລືມ</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">Ukatu</string>
     <string name="replication_hosts_title">Nire ostalariak</string>
     <string name="replication_hosts_empty_hint">Beste zerbitzari batera errepikatzeko, izena eman bertan kontu bat sortzeko eta erabili \"Lehendik dagoen kontu bat errepikatu\" aukera.</string>
-    <string name="replication_remove">Kendu ostalaria</string>
-    <string name="replication_remove_title">Ostalaria kendu?</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="system_replication_title">Errepikapena</string>
     <string name="system_replication_this_server">Zerbitzari hau</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Inoiz ez</string>
     <string name="replication_hosts_empty">Kontu hau zerbitzari honetan bakarrik dago.</string>
     <string name="replication_added">Gehituta %1$s</string>
-    <string name="replication_remove_message">Zerbitzari honek zure kontua ostatu horretara errepikatzeari utziko dio.</string>
     <string name="settings_home_system_replication">Errepikapena (zerbitzaria)</string>
     <string name="system_replication_pair_empty_hint">Lotu instalatutako beste zerbitzari berri batekin \"mochictl replica join &lt;existing-peer-id&gt;\" erabiliz zerbitzari berrian.</string>
     <string name="route_delete_message">Honek \"%1$s\" bidearen ibilbidea kenduko du.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Autentifikatzaile aplikazioa</string>
     <string name="login_method_oauth">Hirugarrenen saio-hasiera</string>
     <string name="login_method_recovery">Berreskuratze-kodeak</string>
+    <string name="account_close_section">Itxi kontua</string>
+    <string name="account_close_action">Itxi kontua</string>
+    <string name="account_close_confirm_title">Zure kontua itxi nahi duzu?</string>
+    <string name="account_close_confirm_body">Zure kontua ezabatzeko programatuko da eta saioa itxiko zaizu. Ezabaketa-data baino lehen edozein unetan utz dezakezu bertan behera, berriro saioa hasita.</string>
+    <string name="account_data_download">Deskargatu</string>
+    <string name="route_target_app">Aplikazioa</string>
+    <string name="route_target_entity">Entitatea</string>
+    <string name="route_target_url">URLa</string>
+    <string name="account_data_section">Zure datuak</string>
+    <string name="account_data_dialog_title">Deskargatu zure datuak</string>
+    <string name="account_data_dialog_body">Hau babeskopia oso bat da, Mochi zerbitzari honetan edo beste batean lehengoratu dezakezuna. Egiaztatu zure nortasuna jarraitzeko.</string>
+    <string name="account_data_passphrase">Pasahitz-esaldia</string>
+    <string name="account_data_passphrase_hint">Zure gako pribatuak sartuta daude, pasahitz-esaldi honekin enkriptatuta. Gorde ezazu seguru. Berrezartzeko beharko duzu.</string>
+    <string name="replication_hosts_subtitle">Zure kontuaren kopia bat ere gordetzen duten beste zerbitzari batzuk. Bat kentzeko, hasi saioa zerbitzari horretan eta erabili \"Kendu nire kontua zerbitzari honetatik\".</string>
+    <string name="replication_irreparable">Konponezina</string>
+    <string name="replication_leave">Kendu nire kontua zerbitzari honetatik</string>
+    <string name="replication_leave_title">Kendu zure kontua zerbitzari honetatik?</string>
+    <string name="replication_leave_message">Zerbitzari honetako zure kontuaren datuak betiko ezabatuko dira eta hemen saioa itxiko zaizu. Zure kontuak zure beste zerbitzarietan jarraituko du, eta hau geroago berriz gehitu dezakezu.</string>
+    <string name="replication_leave_confirm">Kendu</string>
+    <string name="replication_forget">Ahaztu eskuraezin den ostalari hau</string>
+    <string name="replication_forget_title">Ahaztu eskuraezin den ostalari hau?</string>
+    <string name="replication_forget_message">Zure erreplika-multzotik kenduko da eta bere kopia ezabatzeko esango zaio berriz konektatzean. Eskuragarri dagoen zerbitzari bat kentzeko, hasi saioa bertan eta erabili \"Kendu nire kontua zerbitzari honetatik\". Egiaztatu zu zarela jarraitzeko.</string>
+    <string name="replication_offline">Lineaz kanpo</string>
+    <string name="replication_forget_confirm">Ahaztu</string>
 </resources>

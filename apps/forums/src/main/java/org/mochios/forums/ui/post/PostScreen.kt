@@ -15,9 +15,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
@@ -153,6 +156,7 @@ fun PostScreen(
                                 onQuote = { draft = quoteText(uiState.post.bodyMarkdown.ifBlank { uiState.post.body }, draft) },
                                 onAddTag = { label -> viewModel.addPostTag(label) },
                                 onRemoveTag = { tagId -> viewModel.removePostTag(tagId) },
+                                onTagInterest = { qid, direction -> viewModel.adjustTagInterest(qid, direction) },
                             )
                         }
                         if (uiState.comments.isEmpty()) {
@@ -547,6 +551,7 @@ private fun PostHeader(
     onQuote: () -> Unit,
     onAddTag: (String) -> Unit,
     onRemoveTag: (String) -> Unit,
+    onTagInterest: (qid: String, direction: String) -> Unit,
 ) {
     var showAddTag by remember { mutableStateOf(false) }
     val format = LocalFormat.current
@@ -661,25 +666,65 @@ private fun PostHeader(
                     verticalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
                     post.tags.forEach { tag ->
-                        androidx.compose.material3.AssistChip(
-                            onClick = { if (canEdit) onRemoveTag(tag.id) },
-                            label = {
-                                Text(tag.label, style = MaterialTheme.typography.labelSmall)
-                            },
-                            trailingIcon = if (canEdit) {
-                                {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            androidx.compose.material3.AssistChip(
+                                onClick = { if (canEdit) onRemoveTag(tag.id) },
+                                label = {
+                                    Text(tag.label, style = MaterialTheme.typography.labelSmall)
+                                },
+                                trailingIcon = if (canEdit) {
+                                    {
+                                        Icon(
+                                            Icons.Default.Close,
+                                            contentDescription = stringResource(R.string.forums_post_tag_remove),
+                                            modifier = Modifier.size(14.dp),
+                                        )
+                                    }
+                                } else null,
+                            )
+                            if (tag.qid.isNotBlank()) {
+                                IconButton(
+                                    onClick = { onTagInterest(tag.qid, "up") },
+                                    modifier = Modifier.size(28.dp),
+                                ) {
                                     Icon(
-                                        Icons.Default.Close,
-                                        contentDescription = stringResource(R.string.forums_post_tag_remove),
-                                        modifier = Modifier.size(14.dp),
+                                        Icons.Default.KeyboardArrowUp,
+                                        contentDescription = stringResource(R.string.forums_tag_interest_up),
+                                        modifier = Modifier.size(18.dp),
                                     )
                                 }
-                            } else null,
-                        )
+                                IconButton(
+                                    onClick = { onTagInterest(tag.qid, "down") },
+                                    modifier = Modifier.size(28.dp),
+                                ) {
+                                    Icon(
+                                        Icons.Default.KeyboardArrowDown,
+                                        contentDescription = stringResource(R.string.forums_tag_interest_down),
+                                        modifier = Modifier.size(18.dp),
+                                    )
+                                }
+                                IconButton(
+                                    onClick = { onTagInterest(tag.qid, "remove") },
+                                    modifier = Modifier.size(28.dp),
+                                ) {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = stringResource(R.string.forums_tag_interest_remove),
+                                        modifier = Modifier.size(16.dp),
+                                    )
+                                }
+                            }
+                        }
                     }
                     if (canEdit) {
                         TextButton(onClick = { showAddTag = true }) {
-                            Text("+ " + stringResource(R.string.forums_post_tag_add))
+                            Icon(
+                                Icons.Default.Add,
+                                contentDescription = null,
+                                modifier = Modifier.size(18.dp)
+                            )
+                            Spacer(Modifier.width(4.dp))
+                            Text(stringResource(R.string.forums_post_tag_add))
                         }
                     }
                 }
@@ -712,7 +757,7 @@ private fun PostHeader(
                                   else MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-                    Text("${post.up - post.down}", style = MaterialTheme.typography.labelLarge)
+                    Text(LocalFormat.current.formatNumber(post.up - post.down), style = MaterialTheme.typography.labelLarge)
                     IconButton(onClick = { onVote(if (post.userVote == "down") "" else "down") }) {
                         Icon(
                             Icons.Default.ThumbDown,
@@ -943,7 +988,7 @@ private fun CommentCard(
                             modifier = Modifier.size(14.dp)
                         )
                     }
-                    Text("${comment.up - comment.down}", style = MaterialTheme.typography.labelSmall)
+                    Text(LocalFormat.current.formatNumber(comment.up - comment.down), style = MaterialTheme.typography.labelSmall)
                     IconButton(
                         onClick = { onVote(if (comment.userVote == "down") "" else "down") },
                         modifier = Modifier.size(28.dp)

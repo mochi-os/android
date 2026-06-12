@@ -56,8 +56,6 @@
     <string name="replication_deny">ප්‍රතික්ෂේප කරන්න</string>
     <string name="replication_hosts_title">මගේ සත්කාරක</string>
     <string name="replication_hosts_empty_hint">එය වෙනත් සර්වරයකට ප්‍රතිවර්තනය කිරීමට, එහි ගිණුමක් සඳහා ලියාපදිංචි වී \"පවතින ගිණුමක් ප්‍රතිවර්තනය කරන්න\" විකල්පය භාවිතා කරන්න.</string>
-    <string name="replication_remove">සත්කාරකය ඉවත් කරන්න</string>
-    <string name="replication_remove_title">සත්කාරකය ඉවත් කරන්නද?</string>
     <string name="settings_home_section_system">පද්ධතිය</string>
     <string name="system_replication_title">ප්‍රතිවර්තනය</string>
     <string name="system_replication_this_server">මෙම සේවාදායකය</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">කවදාවත්</string>
     <string name="replication_hosts_empty">මෙම ගිණුම මෙම සේවාදායකයේ පමණි.</string>
     <string name="replication_added">එකතු විය %1$s</string>
-    <string name="replication_remove_message">මෙම සේවාදායකය ඔබේ ගිණුම එම සත්කාරක වෙත අනුකරණය කිරීම නවත්වයි.</string>
     <string name="settings_home_system_replication">අනුකරණය (සේවාදායකය)</string>
     <string name="system_replication_pair_empty_hint">නව සේවාදායකයේ \"mochictl replica join &lt;existing-peer-id&gt;\" භාවිතයෙන් වෙනත් අලුතින් ස්ථාපනය කරන ලද සේවාදායකයකට යුගල කරන්න.</string>
     <string name="route_delete_message">මෙය \"%1$s\" මාර්ගය සඳහා රාවුට් එක ඉවත් කරයි.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">තෙවන පාර්ශවීය පුරනය වීම</string>
     <string name="login_method_recovery">ප්‍රතිසාධන කේත</string>
+    <string name="account_close_section">ගිණුම වසන්න</string>
+    <string name="account_close_action">ගිණුම වසන්න</string>
+    <string name="account_close_confirm_title">ඔබේ ගිණුම වසන්නද?</string>
+    <string name="account_close_confirm_body">ඔබේ ගිණුම මැකීමට නියම කරනු ඇති අතර ඔබව පිටවී යනු ඇත. මැකීමේ දිනයට පෙර ඕනෑම වේලාවක නැවත පුරනය වීමෙන් ඔබට මෙය අවලංගු කළ හැකිය.</string>
+    <string name="account_data_download">බාගත කරන්න</string>
+    <string name="route_target_app">යෙදුම</string>
+    <string name="route_target_entity">ආයතනය</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">ඔබගේ දත්ත</string>
+    <string name="account_data_dialog_title">ඔබේ දත්ත බාගත කරන්න</string>
+    <string name="account_data_dialog_body">මෙය ඔබට මෙම හෝ වෙනත් Mochi සේවාදායකයක ප්‍රතිස්ථාපනය කළ හැකි සම්පූර්ණ උපස්ථයකි. ඉදිරියට යාමට එය ඔබ බව තහවුරු කරන්න.</string>
+    <string name="account_data_passphrase">රහස් ශ්‍රේණිය</string>
+    <string name="account_data_passphrase_hint">ඔබගේ පෞද්ගලික යතුරු ඇතුළත් කර ඇති අතර, මෙම ගුප්ත-වාක්‍ය ශ්‍රේණිය සමඟ සංකේතනය කර ඇත. එය ආරක්ෂිත ස්ථානයක ගබඩා කරන්න. යථා තත්ත්වයට පත් කිරීමට ඔබට එය අවශ්‍ය වේ.</string>
+    <string name="replication_hosts_subtitle">ඔබේ ගිණුමේ පිටපතක් ද රඳවා ගෙන සිටින වෙනත් සේවාදායක. එකක් ඉවත් කිරීමට, එම සේවාදායකයට පුරනය වී \"මෙම සේවාදායකයෙන් මගේ ගිණුම ඉවත් කරන්න\" භාවිතා කරන්න.</string>
+    <string name="replication_irreparable">අළුත්වැඩියා කළ නොහැකි</string>
+    <string name="replication_leave">මෙම සේවාදායකයෙන් මගේ ගිණුම ඉවත් කරන්න</string>
+    <string name="replication_leave_title">ඔබේ ගිණුම මෙම සේවාදායකයෙන් ඉවත් කරන්නද?</string>
+    <string name="replication_leave_message">මෙම සේවාදායකයේ ඇති ඔබේ ගිණුමේ දත්ත ස්ථිරවම මකා දමනු ලබන අතර, ඔබව මෙතැනින් පිටවී යනු ඇත. ඔබේ ගිණුම ඔබේ අනෙකුත් සේවාදායකවල පවතින අතර, ඔබට පසුව මෙය නැවත එක් කළ හැකිය.</string>
+    <string name="replication_leave_confirm">ඉවත් කරන්න</string>
+    <string name="replication_forget">මෙම ළඟා විය නොහැකි හෝස්ට් එක අමතක කරන්න</string>
+    <string name="replication_forget_title">මෙම ළඟා විය නොහැකි හෝස්ට් එක අමතක කරන්නද?</string>
+    <string name="replication_forget_message">එය ඔබේ පිටපත් කට්ටලයෙන් ඉවත් කරනු ලබන අතර, නැවත සම්බන්ධ වූ විට එහි පිටපත මැකීමට උපදෙස් දෙනු ලැබේ. ළඟා විය හැකි සේවාදායකයක් ඉවත් කිරීමට, එහි පුරනය වී \"මෙම සේවාදායකයෙන් මගේ ගිණුම ඉවත් කරන්න\" භාවිතා කරන්න. ඉදිරියට යාමට එය ඔබ බව තහවුරු කරන්න.</string>
+    <string name="replication_offline">නොබැඳි</string>
+    <string name="replication_forget_confirm">අමතක කරන්න</string>
 </resources>

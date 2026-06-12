@@ -22,7 +22,10 @@ data class ForumListUiState(
     val error: MochiError? = null,
     val searchQuery: String = "",
     val showSearch: Boolean = false,
-    val showCreateDialog: Boolean = false
+    val showCreateDialog: Boolean = false,
+    // The user's global default post sort, from the list response's settings.
+    // "" means no explicit default (server falls back to "new").
+    val defaultSort: String = ""
 )
 
 @HiltViewModel
@@ -43,7 +46,9 @@ class ForumListViewModel @Inject constructor(
             try {
                 val r = repository.listForums()
                 val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(forums = sorted, isLoading = false)
+                _uiState.value = _uiState.value.copy(
+                    forums = sorted, isLoading = false, defaultSort = r.settings.sort,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -56,9 +61,28 @@ class ForumListViewModel @Inject constructor(
             try {
                 val r = repository.listForums()
                 val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(forums = sorted, isRefreshing = false, error = null)
+                _uiState.value = _uiState.value.copy(
+                    forums = sorted, isRefreshing = false, error = null,
+                    defaultSort = r.settings.sort,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /**
+     * Set the user's global default post sort (applied to forums with no
+     * per-forum override). Distinct from the per-forum override on the forum
+     * screen. Mirrors web's forums-list `setDefaultSort`.
+     */
+    fun setDefaultSort(sort: String) {
+        _uiState.value = _uiState.value.copy(defaultSort = sort)
+        viewModelScope.launch {
+            try {
+                repository.setDefaultSort(sort)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }

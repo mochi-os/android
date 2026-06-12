@@ -56,8 +56,6 @@
     <string name="replication_deny">నిరాకరించండి</string>
     <string name="replication_hosts_title">నా హోస్ట్‌లు</string>
     <string name="replication_hosts_empty_hint">దానిని మరొక సర్వర్‌కు ప్రతిరూపించడానికి, అక్కడ ఖాతా కోసం సైన్ అప్ చేయండి మరియు \"ఇప్పటికే ఉన్న ఖాతాను ప్రతిరూపించండి\" ఎంపికను ఉపయోగించండి.</string>
-    <string name="replication_remove">హోస్ట్ తొలగించండి</string>
-    <string name="replication_remove_title">హోస్ట్‌ను తొలగించాలా?</string>
     <string name="settings_home_section_system">సిస్టమ్</string>
     <string name="system_replication_title">ప్రతిరూపణ</string>
     <string name="system_replication_this_server">ఈ సర్వర్</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ఎప్పుడూ లేదు</string>
     <string name="replication_hosts_empty">ఈ ఖాతా ఈ సర్వర్‌లో మాత్రమే ఉంది.</string>
     <string name="replication_added">జోడించబడింది %1$s</string>
-    <string name="replication_remove_message">ఈ సర్వర్ ఆ హోస్ట్‌కి మీ ఖాతాను నకలు చేయడం ఆపివేస్తుంది.</string>
     <string name="settings_home_system_replication">నకలు (సర్వర్)</string>
     <string name="system_replication_pair_empty_hint">కొత్త సర్వర్‌లో \"mochictl replica join &lt;existing-peer-id&gt;\" ఉపయోగించి మరొక తాజాగా ఇన్‌స్టాల్ చేయబడిన సర్వర్‌తో జతచేయండి.</string>
     <string name="route_delete_message">ఇది మార్గం \"%1$s\" కోసం రూట్‌ను తొలగిస్తుంది.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">ఆథెంటికేటర్ యాప్</string>
     <string name="login_method_oauth">థర్డ్-పార్టీ లాగిన్</string>
     <string name="login_method_recovery">రికవరీ కోడ్‌లు</string>
+    <string name="account_close_section">ఖాతాను మూసివేయి</string>
+    <string name="account_close_action">ఖాతాను మూసివేయి</string>
+    <string name="account_close_confirm_title">మీ ఖాతాను మూసివేయాలా?</string>
+    <string name="account_close_confirm_body">మీ ఖాతా తొలగింపు కోసం షెడ్యూల్ చేయబడుతుంది మరియు మీరు సైన్ అవుట్ చేయబడతారు. తొలగింపు తేదీకి ముందు ఎప్పుడైనా తిరిగి లాగిన్ చేయడం ద్వారా మీరు రద్దు చేయవచ్చు.</string>
+    <string name="account_data_download">డౌన్‌లోడ్</string>
+    <string name="route_target_app">యాప్</string>
+    <string name="route_target_entity">సంస్థ</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">మీ డేటా</string>
+    <string name="account_data_dialog_title">మీ డేటాను డౌన్‌లోడ్ చేయండి</string>
+    <string name="account_data_dialog_body">ఇది మీరు ఈ లేదా మరో Mochi సర్వర్‌లో పునరుద్ధరించగల పూర్తి బ్యాకప్. కొనసాగించడానికి ఇది మీరేనని ధృవీకరించండి.</string>
+    <string name="account_data_passphrase">పాస్‌ఫ్రేజ్</string>
+    <string name="account_data_passphrase_hint">మీ ప్రైవేట్ కీలు చేర్చబడ్డాయి, ఈ పాస్‌ఫ్రేజ్‌తో గుప్తీకరించబడ్డాయి. దీన్ని సురక్షితంగా నిల్వ చేయండి. పునరుద్ధరించడానికి మీకు ఇది అవసరమవుతుంది.</string>
+    <string name="replication_hosts_subtitle">మీ ఖాతా కాపీని కలిగి ఉన్న ఇతర సర్వర్‌లు. ఒకదాన్ని తీసివేయడానికి, ఆ సర్వర్‌లో సైన్ ఇన్ చేసి \"ఈ సర్వర్ నుండి నా ఖాతాను తీసివేయి\" ఉపయోగించండి.</string>
+    <string name="replication_irreparable">సరిచేయలేనిది</string>
+    <string name="replication_leave">ఈ సర్వర్ నుండి నా ఖాతాను తీసివేయి</string>
+    <string name="replication_leave_title">ఈ సర్వర్ నుండి మీ ఖాతాను తీసివేయాలా?</string>
+    <string name="replication_leave_message">ఈ సర్వర్‌లోని మీ ఖాతా డేటా శాశ్వతంగా తొలగించబడుతుంది, ఇక్కడ మీరు సైన్ అవుట్ చేయబడతారు. మీ ఖాతా మీ ఇతర సర్వర్‌లలో ఉంటుంది, దీన్ని తర్వాత మళ్లీ జోడించవచ్చు.</string>
+    <string name="replication_leave_confirm">తొలగించండి</string>
+    <string name="replication_forget">చేరుకోలేని ఈ హోస్ట్‌ను మర్చిపో</string>
+    <string name="replication_forget_title">చేరుకోలేని ఈ హోస్ట్‌ను మర్చిపోవాలా?</string>
+    <string name="replication_forget_message">ఇది మీ ప్రతిరూప సమితి నుండి తీసివేయబడుతుంది, తిరిగి కనెక్ట్ అయినప్పుడు దాని కాపీని తొలగించమని చెప్పబడుతుంది. చేరుకోగల సర్వర్‌ను తీసివేయడానికి, అక్కడ సైన్ ఇన్ చేసి \"ఈ సర్వర్ నుండి నా ఖాతాను తీసివేయి\" ఉపయోగించండి. కొనసాగడానికి మీరేనని నిర్ధారించండి.</string>
+    <string name="replication_offline">ఆఫ్‌లైన్</string>
+    <string name="replication_forget_confirm">మర్చిపో</string>
 </resources>

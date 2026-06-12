@@ -56,8 +56,6 @@
     <string name="replication_deny">דחייה</string>
     <string name="replication_hosts_title">המארחים שלי</string>
     <string name="replication_hosts_empty_hint">כדי לשכפל אותו לשרת אחר, הירשם לחשבון שם והשתמש באפשרות \"שכפל חשבון קיים\".</string>
-    <string name="replication_remove">הסר מארח</string>
-    <string name="replication_remove_title">להסיר את המארח?</string>
     <string name="settings_home_section_system">מערכת</string>
     <string name="system_replication_title">שכפול</string>
     <string name="system_replication_this_server">שרת זה</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">אף פעם</string>
     <string name="replication_hosts_empty">חשבון זה נמצא רק בשרת זה.</string>
     <string name="replication_added">נוסף %1$s</string>
-    <string name="replication_remove_message">שרת זה יפסיק לשכפל את חשבונך למארח זה.</string>
     <string name="settings_home_system_replication">שכפול (שרת)</string>
     <string name="system_replication_pair_empty_hint">זווג עם שרת אחר שהותקן רק לאחרונה באמצעות \"mochictl replica join &lt;existing-peer-id&gt;\" בשרת החדש.</string>
     <string name="route_delete_message">פעולה זו תסיר את המסלול עבור הנתיב \"%1$s\".</string>
@@ -388,4 +385,28 @@
     <string name="login_method_totp">אפליקציית אימות</string>
     <string name="login_method_oauth">התחברות צד שלישי</string>
     <string name="login_method_recovery">קודי שחזור</string>
+    <string name="account_close_section">סגירת חשבון</string>
+    <string name="account_close_action">סגירת חשבון</string>
+    <string name="account_close_confirm_title">לסגור את החשבון שלך?</string>
+    <string name="account_close_confirm_body">החשבון שלך יתוזמן למחיקה ותתנתק. תוכל לבטל בכל עת לפני מועד המחיקה על ידי התחברות מחדש.</string>
+    <string name="account_data_download">הורדה</string>
+    <string name="route_target_app">אפליקציה</string>
+    <string name="route_target_entity">ישות</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">הנתונים שלך</string>
+    <string name="account_data_dialog_title">הורד את הנתונים שלך</string>
+    <string name="account_data_dialog_body">זהו גיבוי מלא שניתן לשחזר בשרת Mochi זה או בשרת אחר. כדי להמשיך, אמת שזה אתה.</string>
+    <string name="account_data_passphrase">ביטוי סיסמה</string>
+    <string name="account_data_passphrase_hint">המפתחות הפרטיים שלך כלולים, מוצפנים עם ביטוי הסיסמה הזה. שמור אותו במקום בטוח. תזדקק לו לשחזור.</string>
+    <string name="replication_hosts_subtitle">שרתים אחרים שמחזיקים גם הם עותק של החשבון שלך. כדי להסיר אחד, היכנס לאותו שרת והשתמש ב\"הסר את החשבון שלי משרת זה\".</string>
+    <string name="replication_irreparable">לא ניתן לתיקון</string>
+    <string name="replication_leave">הסר את החשבון שלי משרת זה</string>
+    <string name="replication_leave_title">להסיר את החשבון שלך משרת זה?</string>
+    <string name="replication_leave_message">נתוני החשבון שלך בשרת זה יימחקו לצמיתות ותנותק כאן. החשבון שלך נשאר בשרתים האחרים שלך, ותוכל להוסיף שרת זה מחדש מאוחר יותר.</string>
+    <string name="replication_leave_confirm">הסר</string>
+    <string name="replication_forget">שכח מארח לא נגיש זה</string>
+    <string name="replication_forget_title">לשכוח מארח לא נגיש זה?</string>
+    <string name="replication_forget_message">הוא יוסר מקבוצת העותקים שלך ויתבקש למחוק את העותק שלו כשיתחבר מחדש. כדי להסיר שרת נגיש, היכנס אליו והשתמש ב\"הסר את החשבון שלי משרת זה\". אמת שזה אתה כדי להמשיך.</string>
+    <string name="replication_offline">לא מקוון</string>
+    <string name="replication_forget_confirm">שכח</string>
 </resources>

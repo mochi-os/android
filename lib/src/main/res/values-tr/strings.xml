@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Bu kod yanlış veya süresi dolmuş.</string>
     <string name="stepup_error_passkey">Geçiş anahtarı doğrulaması başarısız oldu. Lütfen tekrar deneyin.</string>
     <string name="stepup_error_oauth">Bu hesapla doğrulama yapılamadı. Lütfen tekrar deneyin.</string>
+    <string name="game_system_resign">%1$s pes etti</string>
+    <string name="game_system_draw_offer">%1$s beraberlik teklif etti</string>
+    <string name="game_system_draw_accept">Beraberlik kabul edildi</string>
+    <string name="game_system_draw_decline">%1$s beraberliği reddetti</string>
+    <string name="reactivation_title">Hesabınızın silinmesi planlanıyor</string>
+    <string name="reactivation_body">Hesabınızın silinmesi planlanıyor. Şimdi iptal edip tam erişimi geri yükleyebilirsiniz.</string>
+    <string name="reactivation_body_dated">Hesabınız ve tüm verileri %1$s tarihinde kalıcı olarak silinecek. Şimdi iptal edip tam erişimi geri yükleyebilirsiniz.</string>
+    <string name="reactivation_reactivate">Hesabımı yeniden etkinleştir</string>
+    <string name="reactivation_sign_out">Kapatmaya devam et ve oturumu kapat</string>
 </resources>

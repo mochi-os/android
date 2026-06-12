@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Son senkronizasyon: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Bu, \"%1$s\"\'e güncelleme gönderimini durduracak. İsterlerse tekrar çoğaltabilirler.</string>
     <string name="wikis_replicas_removed_success">Çoğaltma kaldırıldı</string>
+    <string name="wikis_load_more">Daha fazla yükle</string>
+    <string name="wikis_access_change_level">Erişim düzeyi</string>
+    <string name="wikis_access_subject_anyone">Herkes</string>
+    <string name="wikis_access_subject_authenticated">Kimliği doğrulanmış kullanıcılar</string>
 
 </resources>

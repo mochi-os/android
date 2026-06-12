@@ -251,4 +251,9 @@
     <string name="stepup_totp_label">Autentiseringskode</string>
     <string name="stepup_passkey_label">Nykel</string>
     <string name="stepup_verify">Stadfest</string>
+    <string name="reactivation_title">Kontoen din er planlagd sletta</string>
+    <string name="reactivation_body">Kontoen din er planlagd sletta. Du kan avbryte og gjenopprette full tilgang no.</string>
+    <string name="reactivation_body_dated">Kontoen din og alle dataa knytte til han blir permanent sletta %1$s. Du kan avbryte og gjenopprette full tilgang no.</string>
+    <string name="reactivation_reactivate">Reaktiver kontoen min</string>
+    <string name="reactivation_sign_out">Hald fram med å lukke og logg ut</string>
 </resources>

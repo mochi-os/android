@@ -263,4 +263,13 @@
     <string name="stepup_error_code">این کد نادرست است یا منقضی شده است.</string>
     <string name="stepup_error_passkey">تأیید با کلید عبور ناموفق بود. لطفاً دوباره تلاش کنید.</string>
     <string name="stepup_error_oauth">تأیید با آن حساب ممکن نشد. لطفاً دوباره تلاش کنید.</string>
+    <string name="game_system_resign">%1$s تسلیم شد</string>
+    <string name="game_system_draw_offer">%1$s پیشنهاد تساوی داد</string>
+    <string name="game_system_draw_accept">تساوی پذیرفته شد</string>
+    <string name="game_system_draw_decline">%1$s تساوی را رد کرد</string>
+    <string name="reactivation_title">حساب شما برای حذف زمان‌بندی شده است</string>
+    <string name="reactivation_body">حساب شما برای حذف زمان‌بندی شده است. می‌توانید اکنون آن را لغو کرده و دسترسی کامل را بازیابی کنید.</string>
+    <string name="reactivation_body_dated">حساب شما و همه داده‌های آن در %1$s برای همیشه حذف خواهند شد. می‌توانید اکنون آن را لغو کرده و دسترسی کامل را بازیابی کنید.</string>
+    <string name="reactivation_reactivate">فعال‌سازی مجدد حساب من</string>
+    <string name="reactivation_sign_out">ادامه بستن و خروج از حساب</string>
 </resources>

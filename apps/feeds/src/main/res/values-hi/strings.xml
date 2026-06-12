@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">रैंकिंग / स्कोरिंग</string>
     <string name="feeds_ai_prompt_credibility">विश्वसनीयता मूल्यांकन</string>
 
+    <string name="feeds_refresh">रिफ़्रेश</string>
+    <string name="feeds_interest_boosted">रुचि बढ़ाई गई</string>
+    <string name="feeds_interest_reduced">रुचि घटाई गई</string>
+    <string name="feeds_interest_removed">रुचि हटाई गई</string>
+    <string name="feeds_interest_failed">रुचि समायोजित करने में विफल</string>
 </resources>

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Цел</string>
     <string name="forums_access_level_view">Преглед</string>
+    <string name="forums_access_level_vote">Гласувай</string>
     <string name="forums_access_level_comment">Коментар</string>
     <string name="forums_access_level_post">Публикация</string>
     <string name="forums_access_level_none">Няма</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">ID на обект, @група, * (всички) или + (членове)</string>
     <string name="forums_access_level">Ниво</string>
     <string name="forums_access_level_moderate">Модериране</string>
-    <string name="forums_access_level_manage">Управление</string>
     <string name="forums_members_search">Филтриране на членове</string>
     <string name="forums_banner_description">Markdown, показан в горната част на форума.</string>
     <string name="forums_banner_placeholder">Добре дошли в този форум…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Опасна зона</string>
     <string name="forums_settings_delete_message">Това ще изтрие завинаги форума и всички негови публикации. Това действие е необратимо.</string>
 
+    <string name="forums_tag_interest_up">Усили интереса</string>
+    <string name="forums_tag_interest_down">Намали лихвата</string>
+    <string name="forums_tag_interest_remove">Премахни интерес</string>
+    <string name="forums_list_default_sort">Сортиране по подразбиране</string>
+    <string name="forums_access_tab_users">Потребители</string>
+    <string name="forums_access_tab_groups">Групи</string>
+    <string name="forums_access_tab_manual">Ръчно</string>
+    <string name="forums_access_search_users">Търси потребители</string>
+    <string name="forums_access_no_groups">Няма налични групи</string>
 </resources>

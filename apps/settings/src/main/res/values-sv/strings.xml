@@ -56,8 +56,6 @@
     <string name="replication_deny">Neka</string>
     <string name="replication_hosts_title">Mina värdar</string>
     <string name="replication_hosts_empty_hint">För att replikera det till en annan server, registrera ett konto där och använd alternativet \"Replikera ett befintligt konto\".</string>
-    <string name="replication_remove">Ta bort värd</string>
-    <string name="replication_remove_title">Ta bort värd?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikering</string>
     <string name="system_replication_this_server">Denna server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Aldrig</string>
     <string name="replication_hosts_empty">Detta konto finns endast på denna server.</string>
     <string name="replication_added">Tillagd %1$s</string>
-    <string name="replication_remove_message">Denna server slutar replikera ditt konto till den värden.</string>
     <string name="settings_home_system_replication">Replikering (server)</string>
     <string name="system_replication_pair_empty_hint">Parkoppla med en annan nyinstallerad server med \"mochictl replica join &lt;existing-peer-id&gt;\" på den nya servern.</string>
     <string name="route_delete_message">Detta tar bort rutten för sökvägen \"%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Autentiseringsapp</string>
     <string name="login_method_oauth">Tredjepartsinloggning</string>
     <string name="login_method_recovery">Återställningskoder</string>
+    <string name="account_close_section">Stäng konto</string>
+    <string name="account_close_action">Stäng konto</string>
+    <string name="account_close_confirm_title">Stänga ditt konto?</string>
+    <string name="account_close_confirm_body">Ditt konto kommer att schemaläggas för radering och du loggas ut. Du kan avbryta när som helst före raderingsdatumet genom att logga in igen.</string>
+    <string name="account_data_download">Ladda ner</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entitet</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Dina data</string>
+    <string name="account_data_dialog_title">Ladda ner dina data</string>
+    <string name="account_data_dialog_body">Det här är en fullständig säkerhetskopia som du kan återställa på den här eller en annan Mochi-server. Bekräfta att det är du för att fortsätta.</string>
+    <string name="account_data_passphrase">Lösenfras</string>
+    <string name="account_data_passphrase_hint">Dina privata nycklar är inkluderade, krypterade med den här lösenfrasen. Förvara den säkert. Du behöver den för att återställa.</string>
+    <string name="replication_hosts_subtitle">Andra servrar som också har en kopia av ditt konto. För att ta bort en loggar du in på den servern och använder \"Ta bort mitt konto från den här servern\".</string>
+    <string name="replication_irreparable">Oåterställbar</string>
+    <string name="replication_leave">Ta bort mitt konto från den här servern</string>
+    <string name="replication_leave_title">Ta bort ditt konto från den här servern?</string>
+    <string name="replication_leave_message">Ditt kontos data på den här servern raderas permanent och du loggas ut här. Ditt konto finns kvar på dina andra servrar och du kan lägga till den här igen senare.</string>
+    <string name="replication_leave_confirm">Ta bort</string>
+    <string name="replication_forget">Glöm den här onåbara värden</string>
+    <string name="replication_forget_title">Glömma den här onåbara värden?</string>
+    <string name="replication_forget_message">Den tas bort från din replikuppsättning och uppmanas att radera sin kopia när den återansluter. För att ta bort en nåbar server loggar du in där och använder \"Ta bort mitt konto från den här servern\". Bekräfta att det är du för att fortsätta.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Glöm</string>
 </resources>

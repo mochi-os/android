@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Posledná synchronizácia: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Tým sa zastaví odosielanie aktualizácií do „%1$s\". Ak chcú, môžu replikovať znova.</string>
     <string name="wikis_replicas_removed_success">Replika odstránená</string>
+    <string name="wikis_load_more">Načítať viac</string>
+    <string name="wikis_access_change_level">Úroveň prístupu</string>
+    <string name="wikis_access_subject_anyone">Ktokoľvek</string>
+    <string name="wikis_access_subject_authenticated">Overení používatelia</string>
 
 </resources>

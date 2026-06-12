@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">IA</string>
     <string name="forums_access_target">Obxectivo</string>
     <string name="forums_access_level_view">Ver</string>
+    <string name="forums_access_level_vote">Votar</string>
     <string name="forums_access_level_comment">Comentario</string>
     <string name="forums_access_level_post">Publicar</string>
     <string name="forums_access_level_none">Ningún</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID de entidade, @grupo, * (todos) ou + (membros)</string>
     <string name="forums_access_level">Nivel</string>
     <string name="forums_access_level_moderate">Moderar</string>
-    <string name="forums_access_level_manage">Xestionar</string>
     <string name="forums_members_search">Filtrar membros</string>
     <string name="forums_banner_description">Markdown que aparece na parte superior do foro.</string>
     <string name="forums_banner_placeholder">Benvido a este foro…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Zona de perigo</string>
     <string name="forums_settings_delete_message">Isto eliminará permanentemente o foro e todas as súas publicacións. Non se pode desfacer.</string>
 
+    <string name="forums_tag_interest_up">Impulsar interese</string>
+    <string name="forums_tag_interest_down">Reducir interese</string>
+    <string name="forums_tag_interest_remove">Eliminar interese</string>
+    <string name="forums_list_default_sort">Orde predeterminada</string>
+    <string name="forums_access_tab_users">Usuarios</string>
+    <string name="forums_access_tab_groups">Grupos</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Buscar usuarios</string>
+    <string name="forums_access_no_groups">Non hai grupos dispoñibles</string>
 </resources>

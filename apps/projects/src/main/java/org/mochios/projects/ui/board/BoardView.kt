@@ -277,7 +277,7 @@ private fun BoardColumn(
                 MaterialTheme.shapes.medium
             )
             .then(columnDropModifier)
-            .padding(8.dp)
+            .padding(6.dp)
             .alpha(if (isColumnDragging) 0.6f else 1f)
     ) {
         // Column header — draggable for column reorder when enabled.
@@ -319,7 +319,7 @@ private fun BoardColumn(
                 .then(headerDragModifier)
                 .then(edgeBorderModifier)
                 .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
-                .padding(horizontal = 8.dp, vertical = 6.dp)
+                .padding(horizontal = 8.dp, vertical = 2.dp)
         ) {
             if (option.colour.isNotBlank()) {
                 Box(
@@ -338,10 +338,11 @@ private fun BoardColumn(
                 modifier = Modifier.weight(1f)
             )
             if (onCreateInColumn != null) {
-                IconButton(onClick = onCreateInColumn) {
+                IconButton(onClick = onCreateInColumn, modifier = Modifier.size(32.dp)) {
                     Icon(
                         Icons.Default.Add,
-                        contentDescription = stringResource(R.string.projects_board_new)
+                        contentDescription = stringResource(R.string.projects_board_new),
+                        modifier = Modifier.size(18.dp)
                     )
                 }
             }
@@ -349,10 +350,11 @@ private fun BoardColumn(
                 var showMenu by remember { mutableStateOf(false) }
                 var showRenameDialog by remember { mutableStateOf(false) }
                 Box {
-                    IconButton(onClick = { showMenu = true }) {
+                    IconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
                         Icon(
                             Icons.Default.MoreHoriz,
-                            contentDescription = stringResource(MochiR.string.common_more_options)
+                            contentDescription = stringResource(MochiR.string.common_more_options),
+                            modifier = Modifier.size(18.dp)
                         )
                     }
                     DropdownMenu(
@@ -411,7 +413,7 @@ private fun BoardColumn(
             }
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(4.dp))
 
         // Column body
         if (rowFieldId != null && rowOptions.isNotEmpty()) {

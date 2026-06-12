@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Энэ код буруу эсвэл хугацаа нь дууссан байна.</string>
     <string name="stepup_error_passkey">Нэвтрэх түлхүүрийн баталгаажуулалт амжилтгүй боллоо. Дахин оролдоно уу.</string>
     <string name="stepup_error_oauth">Тэр бүртгэлээр баталгаажуулж чадсангүй. Дахин оролдоно уу.</string>
+    <string name="game_system_resign">%1$s бууж өгсөн</string>
+    <string name="game_system_draw_offer">%1$s тэнцэх санал тавьсан</string>
+    <string name="game_system_draw_accept">Тэнцэхээр тохиролцов</string>
+    <string name="game_system_draw_decline">%1$s тэнцэхээс татгалзсан</string>
+    <string name="reactivation_title">Таны бүртгэлийг устгахаар товлосон</string>
+    <string name="reactivation_body">Таны бүртгэлийг устгахаар товлосон. Та одоо цуцалж, бүрэн хандалтыг сэргээж болно.</string>
+    <string name="reactivation_body_dated">Таны бүртгэл болон түүний бүх өгөгдөл %1$s-нд бүрмөсөн устгагдана. Та одоо цуцалж, бүрэн хандалтыг сэргээж болно.</string>
+    <string name="reactivation_reactivate">Миний бүртгэлийг дахин идэвхжүүлэх</string>
+    <string name="reactivation_sign_out">Хаахаа үргэлжлүүлж, системээс гарах</string>
 </resources>

@@ -322,7 +322,7 @@ interface MarketApi {
         @Field("reason") reason: String,
     ): Response<ApiResponse<Listing>>
 
-    // ---- Saved ----
+    // ---- Saved (wishlist) ----
 
     /** List the current identity's saved (wishlisted) listings. */
     @GET("-/saved/list")
@@ -345,6 +345,11 @@ interface MarketApi {
     suspend fun removeSaved(
         @Field("listing") listing: String,
     ): Response<ApiResponse<SavedToggleResponse>>
+
+
+    /** Remove all of the current identity's saved listings. */
+    @POST("-/saved/clear")
+    suspend fun clearSaved(): Response<ApiResponse<SavedToggleResponse>>
 
     // ---- Shipping ----
 

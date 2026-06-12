@@ -32,7 +32,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 // Response wrappers
-data class CrmListResponse(val crm: List<Crm> = emptyList())
+data class CrmListResponse(@SerializedName("crms") val crms: List<Crm> = emptyList())
 data class CrmResponse(val crm: Crm = Crm())
 data class CrmInfoResponse(
     val crm: Crm = Crm(),
@@ -63,8 +63,7 @@ data class OptionResponse(val option: FieldOption = FieldOption())
 data class ViewListResponse(val views: List<CrmView> = emptyList())
 data class ViewResponse(val view: CrmView = CrmView())
 data class SuccessResponse(val success: Boolean = false)
-data class NotificationCheckResponse(val exists: Boolean = false)
-data class UserSearchResponse(val users: List<Person> = emptyList())
+data class UserSearchResponse(@SerializedName("results") val results: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
 data class HierarchyResponse(val parents: List<String> = emptyList())
 data class PreferenceResponse(val preference: String = "")
@@ -81,16 +80,17 @@ interface CrmsApi {
     suspend fun createCrm(
         @Field("name") name: String,
         @Field("description") description: String?,
-        @Field("prefix") prefix: String?,
+        @Field("prefix") prefix: String?, // contract-ok: crm create ignores prefix server-side (no prefix on create)
         @Field("privacy") privacy: String,
-        @Field("template") template: String?
+        @Field("template") template: String? // contract-ok: templates applied via design-import, not create
     ): Response<ApiResponse<CrmResponse>>
 
     @GET("-/templates")
     suspend fun getTemplates(): Response<ApiResponse<TemplateListResponse>>
 
+    // directory/search returns a bare array in `data`, not a {crms:[...]} object.
     @GET("-/directory/search")
-    suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<CrmListResponse>>
+    suspend fun searchDirectory(@Query("search") query: String): Response<ApiResponse<List<Crm>>>
 
     @GET("-/recommendations")
     suspend fun getRecommendations(): Response<ApiResponse<CrmListResponse>>
@@ -110,11 +110,8 @@ interface CrmsApi {
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
         @Field("crm") crm: String,
-        @Field("server") server: String?
+        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
     ): Response<ApiResponse<SuccessResponse>>
-
-    @GET("-/notifications/check")
-    suspend fun checkNotifications(): Response<ApiResponse<NotificationCheckResponse>>
 
     @FormUrlEncoded
     @POST("-/users/search")
@@ -134,7 +131,7 @@ interface CrmsApi {
         @Path("crmId") crmId: String,
         @Field("name") name: String?,
         @Field("description") description: String?,
-        @Field("prefix") prefix: String?
+        @Field("prefix") prefix: String? // contract-ok: crm update reads name/description only; prefix not server-supported
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/delete")
@@ -186,7 +183,8 @@ interface CrmsApi {
     suspend fun updateObject(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
-        @Field("title") title: String?,
+        // Title is a field value (the class's title field), edited via value/set;
+        // object/update only handles parent/class. Do NOT add a title field here.
         @Field("parent") parent: String?
     ): Response<ApiResponse<SuccessResponse>>
 

@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Эрэмбэлэлт / оноожуулалт</string>
     <string name="feeds_ai_prompt_credibility">Найдвартай байдлын үнэлгээ</string>
 
+    <string name="feeds_refresh">Сэргээх</string>
+    <string name="feeds_interest_boosted">Сонирхол нэмэгдсэн</string>
+    <string name="feeds_interest_reduced">Сонирхол багассан</string>
+    <string name="feeds_interest_removed">Сонирхол устгагдсан</string>
+    <string name="feeds_interest_failed">Сонирхлыг тохируулж чадсангүй</string>
 </resources>

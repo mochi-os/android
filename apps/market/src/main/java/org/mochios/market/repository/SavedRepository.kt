@@ -8,8 +8,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import org.mochios.android.api.toMochiError
-import org.mochios.android.api.unwrap
 import org.mochios.market.api.MarketApi
 import org.mochios.market.model.Listing
 import javax.inject.Inject
@@ -31,97 +29,78 @@ import javax.inject.Singleton
  */
 @Singleton
 class SavedRepository @Inject constructor(
-    private val api: MarketApi,
+    private val api: MarketApi
 ) {
-
     private val gson = Gson()
+    private val mutex = Mutex()
 
     private val _saved = MutableStateFlow<List<Listing>>(emptyList())
 
-    /** Full saved listings, most-recent-first as returned by the server. */
+    /** The current saved listings, most recently saved first. */
     val saved: StateFlow<List<Listing>> = _saved.asStateFlow()
 
-    /** Reactive saved-id set for filling the bookmark toggle on cards/grids. */
-    val savedIds: Flow<Set<Long>> = saved.map { list -> list.mapTo(HashSet()) { it.id } }
-
-    private val hydrateMutex = Mutex()
-
-    @Volatile
-    private var hydrated = false
-
-    /** Reactive "is this listing saved", derived from the cache. */
-    fun isSaved(id: Long): Flow<Boolean> = saved.map { list -> list.any { it.id == id } }
-
-    private fun contains(id: Long): Boolean = _saved.value.any { it.id == id }
+    /** Stream of the saved listing ids as strings (for save-toggle UI on cards). */
+    fun observeIds(): Flow<Set<String>> =
+        _saved.map { list -> list.mapTo(mutableSetOf()) { it.id.toString() } }
 
     /**
-     * Pull the saved set from the server once. Cheap no-op after the first
-     * successful load — call it wherever a screen needs the saved state to be
-     * accurate (listing detail, home grid) without forcing a refresh.
+     * Fetch the saved list from the server and populate the mirror. Errors
+     * (transient network blip, or a 401 before login completes) are
+     * swallowed so the bookmark UI degrades gracefully rather than throwing.
      */
-    suspend fun ensureHydrated() {
-        if (hydrated) return
-        hydrateMutex.withLock {
-            if (hydrated) return
-            refresh()
-        }
-    }
-
-    /** Force a re-fetch of the saved set from the server. */
     suspend fun refresh() {
         try {
-            _saved.value = api.listSaved().unwrap().saved
-            hydrated = true
-        } catch (e: Exception) {
-            throw e.toMochiError()
+            val response = api.listSaved().body()?.data ?: return
+            _saved.value = response.saved
+        } catch (_: Exception) {
+            // Leave the existing mirror untouched on failure.
         }
     }
 
-    /** Toggle [listing]'s saved state, returning the new state (true = saved). */
-    suspend fun toggle(listing: Listing): Boolean =
-        if (contains(listing.id)) {
-            remove(listing.id)
-            false
-        } else {
-            add(listing)
-            true
-        }
-
-    /** Save [listing]. Optimistic — the cache reverts if the call fails. */
-    suspend fun add(listing: Listing) {
-        if (!contains(listing.id)) {
-            _saved.value = listOf(listing) + _saved.value
-        }
-        try {
-            api.addSaved(listing.id.toString(), gson.toJson(listing)).unwrap()
-        } catch (e: Exception) {
-            _saved.value = _saved.value.filterNot { it.id == listing.id }
-            throw e.toMochiError()
-        }
-    }
-
-    /** Un-save the listing with [id]. Optimistic — reverts if the call fails. */
-    suspend fun remove(id: Long) {
-        val previous = _saved.value
-        _saved.value = previous.filterNot { it.id == id }
-        try {
-            api.removeSaved(id.toString()).unwrap()
-        } catch (e: Exception) {
-            _saved.value = previous
-            throw e.toMochiError()
-        }
-    }
+    /** True if the given listing id is in the saved set. */
+    fun isSaved(listingId: String): Boolean =
+        _saved.value.any { it.id.toString() == listingId }
 
     /**
-     * Remove every saved listing. There's no bulk endpoint, so this fans the
-     * per-id removes out and tolerates individual failures — the local cache
-     * is cleared up front so the grid empties immediately.
+     * Toggle the saved state for [listing]. Applies optimistically to the
+     * mirror, then calls the server; on failure the optimistic change is
+     * rolled back. Returns the new saved state. Requires the full [Listing]
+     * because the server persists a snapshot for the saved page to render.
      */
-    suspend fun clear() {
-        val ids = _saved.value.map { it.id }
+    suspend fun toggle(listing: Listing): Boolean = mutex.withLock {
+        val id = listing.id
+        val idString = id.toString()
+        val previous = _saved.value
+        return if (previous.any { it.id == id }) {
+            _saved.value = previous.filterNot { it.id == id }
+            try {
+                api.removeSaved(idString)
+            } catch (e: Exception) {
+                _saved.value = previous
+                throw e
+            }
+            false
+        } else {
+            _saved.value = listOf(listing) + previous
+            try {
+                api.addSaved(idString, gson.toJson(listing))
+            } catch (e: Exception) {
+                _saved.value = previous
+                throw e
+            }
+            true
+        }
+    }
+
+    /** Remove every saved listing. Optimistic, with rollback on failure. */
+    suspend fun clear() = mutex.withLock {
+        val previous = _saved.value
         _saved.value = emptyList()
-        ids.forEach { id ->
-            runCatching { api.removeSaved(id.toString()).unwrap() }
+        try {
+            api.clearSaved()
+        } catch (e: Exception) {
+            _saved.value = previous
+            throw e
         }
     }
 }

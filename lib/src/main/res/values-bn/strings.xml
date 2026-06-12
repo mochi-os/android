@@ -263,4 +263,13 @@
     <string name="stepup_error_code">কোডটি ভুল বা এর মেয়াদ শেষ হয়ে গেছে।</string>
     <string name="stepup_error_passkey">পাসকি যাচাই ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
     <string name="stepup_error_oauth">ওই অ্যাকাউন্ট দিয়ে যাচাই করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+    <string name="game_system_resign">%1$s হার মেনে নিয়েছেন</string>
+    <string name="game_system_draw_offer">%1$s ড্র-এর প্রস্তাব দিয়েছেন</string>
+    <string name="game_system_draw_accept">ড্র মেনে নেওয়া হয়েছে</string>
+    <string name="game_system_draw_decline">%1$s ড্র প্রত্যাখ্যান করেছেন</string>
+    <string name="reactivation_title">আপনার অ্যাকাউন্ট মুছে ফেলার জন্য নির্ধারিত হয়েছে</string>
+    <string name="reactivation_body">আপনার অ্যাকাউন্ট মুছে ফেলার জন্য নির্ধারিত হয়েছে। আপনি এখনই বাতিল করে সম্পূর্ণ অ্যাক্সেস পুনরুদ্ধার করতে পারেন।</string>
+    <string name="reactivation_body_dated">আপনার অ্যাকাউন্ট এবং এর সমস্ত ডেটা %1$s তারিখে স্থায়ীভাবে মুছে ফেলা হবে। আপনি এখনই বাতিল করে সম্পূর্ণ অ্যাক্সেস পুনরুদ্ধার করতে পারেন।</string>
+    <string name="reactivation_reactivate">আমার অ্যাকাউন্ট পুনরায় সক্রিয় করুন</string>
+    <string name="reactivation_sign_out">বন্ধ করা চালিয়ে যান এবং সাইন আউট করুন</string>
 </resources>

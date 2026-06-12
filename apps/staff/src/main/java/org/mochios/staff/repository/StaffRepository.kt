@@ -328,12 +328,12 @@ class StaffRepository @Inject constructor(
 
     suspend fun reviewDispute(
         id: Int,
+        status: String,
         resolution: String? = null,
-        notes: String? = null,
         refundAmount: Long? = null,
     ): Dispute {
         return try {
-            api.reviewDispute(id, resolution, notes, refundAmount?.toString()).unwrap()
+            api.reviewDispute(id, status, resolution, refundAmount?.toString()).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

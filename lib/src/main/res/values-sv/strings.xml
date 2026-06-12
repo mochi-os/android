@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Koden är felaktig eller har upphört att gälla.</string>
     <string name="stepup_error_passkey">Verifieringen med nyckel misslyckades. Försök igen.</string>
     <string name="stepup_error_oauth">Det gick inte att verifiera med det kontot. Försök igen.</string>
+    <string name="game_system_resign">%1$s gav upp</string>
+    <string name="game_system_draw_offer">%1$s erbjöd remi</string>
+    <string name="game_system_draw_accept">Remi överenskommen</string>
+    <string name="game_system_draw_decline">%1$s avböjde remin</string>
+    <string name="reactivation_title">Ditt konto är schemalagt att raderas</string>
+    <string name="reactivation_body">Ditt konto är schemalagt att raderas. Du kan avbryta och återställa full åtkomst nu.</string>
+    <string name="reactivation_body_dated">Ditt konto och all dess data raderas permanent den %1$s. Du kan avbryta och återställa full åtkomst nu.</string>
+    <string name="reactivation_reactivate">Återaktivera mitt konto</string>
+    <string name="reactivation_sign_out">Fortsätt stänga och logga ut</string>
 </resources>

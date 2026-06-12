@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Tá an cód sin mícheart nó tá sé imithe in éag.</string>
     <string name="stepup_error_passkey">Theip ar fhíorú na heochrach rochtana. Bain triail eile as.</string>
     <string name="stepup_error_oauth">Níorbh fhéidir fíorú leis an gcuntas sin. Bain triail eile as le do thoil.</string>
+    <string name="game_system_resign">Ghéill %1$s</string>
+    <string name="game_system_draw_offer">Thairg %1$s cothrom</string>
+    <string name="game_system_draw_accept">Cothrom comhaontaithe</string>
+    <string name="game_system_draw_decline">Dhiúltaigh %1$s an cothrom</string>
+    <string name="reactivation_title">Tá do chuntas sceidealaithe lena scriosadh</string>
+    <string name="reactivation_body">Tá do chuntas sceidealaithe lena scriosadh. Is féidir leat é a chealú agus rochtain iomlán a athbhunú anois.</string>
+    <string name="reactivation_body_dated">Scriosfar do chuntas agus a chuid sonraí go léir go buan ar %1$s. Is féidir leat é a chealú agus rochtain iomlán a athbhunú anois.</string>
+    <string name="reactivation_reactivate">Athghníomhachtaigh mo chuntas</string>
+    <string name="reactivation_sign_out">Lean ar aghaidh leis an dúnadh agus sínigh amach</string>
 </resources>

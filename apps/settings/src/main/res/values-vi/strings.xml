@@ -56,8 +56,6 @@
     <string name="replication_deny">Từ chối</string>
     <string name="replication_hosts_title">Máy chủ của tôi</string>
     <string name="replication_hosts_empty_hint">Để sao chép nó sang một máy chủ khác, đăng ký một tài khoản ở đó và sử dụng tùy chọn \"Sao chép tài khoản hiện có\".</string>
-    <string name="replication_remove">Xóa máy chủ</string>
-    <string name="replication_remove_title">Xóa máy chủ?</string>
     <string name="settings_home_section_system">Hệ thống</string>
     <string name="system_replication_title">Sao chép</string>
     <string name="system_replication_this_server">Máy chủ này</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Không bao giờ</string>
     <string name="replication_hosts_empty">Tài khoản này chỉ có trên máy chủ này.</string>
     <string name="replication_added">Đã thêm %1$s</string>
-    <string name="replication_remove_message">Máy chủ này sẽ ngừng sao chép tài khoản của bạn đến máy chủ đó.</string>
     <string name="settings_home_system_replication">Sao chép (máy chủ)</string>
     <string name="system_replication_pair_empty_hint">Ghép nối với một máy chủ mới cài đặt khác bằng \"mochictl replica join &lt;existing-peer-id&gt;\" trên máy chủ mới.</string>
     <string name="route_delete_message">Việc này sẽ xóa tuyến cho đường dẫn \"%1$s\".</string>
@@ -386,4 +383,28 @@
     <string name="login_method_totp">Ứng dụng xác thực</string>
     <string name="login_method_oauth">Đăng nhập bên thứ ba</string>
     <string name="login_method_recovery">Mã khôi phục</string>
+    <string name="account_close_section">Đóng tài khoản</string>
+    <string name="account_close_action">Đóng tài khoản</string>
+    <string name="account_close_confirm_title">Đóng tài khoản của bạn?</string>
+    <string name="account_close_confirm_body">Tài khoản của bạn sẽ được lên lịch xóa và bạn sẽ bị đăng xuất. Bạn có thể hủy bất cứ lúc nào trước ngày xóa bằng cách đăng nhập lại.</string>
+    <string name="account_data_download">Tải xuống</string>
+    <string name="route_target_app">Ứng dụng</string>
+    <string name="route_target_entity">Thực thể</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Dữ liệu của bạn</string>
+    <string name="account_data_dialog_title">Tải xuống dữ liệu của bạn</string>
+    <string name="account_data_dialog_body">Đây là bản sao lưu hoàn chỉnh mà bạn có thể khôi phục trên máy chủ Mochi này hoặc một máy chủ khác. Hãy xác minh đó là bạn để tiếp tục.</string>
+    <string name="account_data_passphrase">Cụm mật khẩu</string>
+    <string name="account_data_passphrase_hint">Các khóa riêng tư của bạn được bao gồm, được mã hóa bằng cụm mật khẩu này. Hãy lưu trữ nó an toàn. Bạn sẽ cần nó để khôi phục.</string>
+    <string name="replication_hosts_subtitle">Các máy chủ khác cũng giữ một bản sao tài khoản của bạn. Để xóa một máy chủ, hãy đăng nhập vào máy chủ đó và sử dụng \"Xóa tài khoản của tôi khỏi máy chủ này\".</string>
+    <string name="replication_irreparable">Không thể khôi phục</string>
+    <string name="replication_leave">Xóa tài khoản của tôi khỏi máy chủ này</string>
+    <string name="replication_leave_title">Xóa tài khoản của bạn khỏi máy chủ này?</string>
+    <string name="replication_leave_message">Dữ liệu tài khoản của bạn trên máy chủ này sẽ bị xóa vĩnh viễn và bạn sẽ bị đăng xuất tại đây. Tài khoản của bạn vẫn còn trên các máy chủ khác và bạn có thể thêm lại máy chủ này sau.</string>
+    <string name="replication_leave_confirm">Xoá</string>
+    <string name="replication_forget">Quên máy chủ không thể kết nối này</string>
+    <string name="replication_forget_title">Quên máy chủ không thể kết nối này?</string>
+    <string name="replication_forget_message">Nó sẽ bị xóa khỏi tập bản sao của bạn và được yêu cầu xóa bản sao của mình khi kết nối lại. Để xóa một máy chủ có thể kết nối, hãy đăng nhập vào đó và sử dụng \"Xóa tài khoản của tôi khỏi máy chủ này\". Xác minh đó là bạn để tiếp tục.</string>
+    <string name="replication_offline">Ngoại tuyến</string>
+    <string name="replication_forget_confirm">Quên</string>
 </resources>

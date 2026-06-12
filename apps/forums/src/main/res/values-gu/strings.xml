@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">લક્ષ્ય</string>
     <string name="forums_access_level_view">જુઓ</string>
+    <string name="forums_access_level_vote">મત આપો</string>
     <string name="forums_access_level_comment">ટિપ્પણી</string>
     <string name="forums_access_level_post">પોસ્ટ</string>
     <string name="forums_access_level_none">કોઈ નહીં</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">એન્ટિટી ID, @group, * (દરેક), અથવા + (સભ્યો)</string>
     <string name="forums_access_level">સ્તર</string>
     <string name="forums_access_level_moderate">મધ્યસ્થી</string>
-    <string name="forums_access_level_manage">વ્યવસ્થાપન</string>
     <string name="forums_members_search">સભ્યો ફિલ્ટર કરો</string>
     <string name="forums_banner_description">ફોરમની ટોચ પર બતાવેલ Markdown.</string>
     <string name="forums_banner_placeholder">આ ફોરમમાં આપનું સ્વાગત છે…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">જોખમ ઝોન</string>
     <string name="forums_settings_delete_message">આ ફોરમ અને તેની બધી પોસ્ટ્સ કાયમી ધોરણે કાઢી નાખશે. આ પૂર્વવત્ કરી શકાતું નથી.</string>
 
+    <string name="forums_tag_interest_up">રુચિ વધારો</string>
+    <string name="forums_tag_interest_down">રસ ઘટાડો</string>
+    <string name="forums_tag_interest_remove">રસ દૂર કરો</string>
+    <string name="forums_list_default_sort">ડિફૉલ્ટ સૉર્ટ</string>
+    <string name="forums_access_tab_users">વપરાશકર્તાઓ</string>
+    <string name="forums_access_tab_groups">ગ્રુપ્સ</string>
+    <string name="forums_access_tab_manual">મેન્યુઅલ</string>
+    <string name="forums_access_search_users">વપરાશકર્તાઓ શોધો</string>
+    <string name="forums_access_no_groups">કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી</string>
 </resources>

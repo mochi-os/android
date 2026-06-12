@@ -265,4 +265,13 @@
     <string name="stepup_error_code">Daardie kode is verkeerd of het verval.</string>
     <string name="stepup_error_passkey">Wagsleutel-verifikasie het misluk. Probeer asseblief weer.</string>
     <string name="stepup_error_oauth">Kon nie met daardie rekening verifieer nie. Probeer asseblief weer.</string>
+    <string name="game_system_resign">%1$s het oorgegee</string>
+    <string name="game_system_draw_offer">%1$s het \'n gelykop aangebied</string>
+    <string name="game_system_draw_accept">Gelykop ooreengekom</string>
+    <string name="game_system_draw_decline">%1$s het die gelykop van die hand gewys</string>
+    <string name="reactivation_title">Jou rekening is geskeduleer vir verwydering</string>
+    <string name="reactivation_body">Jou rekening is geskeduleer vir verwydering. Jy kan nou kanselleer en volle toegang herstel.</string>
+    <string name="reactivation_body_dated">Jou rekening en al sy data sal permanent verwyder word op %1$s. Jy kan nou kanselleer en volle toegang herstel.</string>
+    <string name="reactivation_reactivate">Heraktiveer my rekening</string>
+    <string name="reactivation_sign_out">Gaan voort met sluit en meld af</string>
 </resources>

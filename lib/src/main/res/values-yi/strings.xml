@@ -263,4 +263,13 @@
     <string name="stepup_error_code">יענער קאָד איז אומריכטיק אָדער איז אויסגעגאַנגען.</string>
     <string name="stepup_error_passkey">די passkey פֿאַריפֿיצירונג איז דורכגעפֿאַלן. ביטע פּרוביר ווידער.</string>
     <string name="stepup_error_oauth">מע האָט נישט געקענט באַשטעטיקן מיט יענעם קאָנטע. ביטע פּרובירט נאָך אַ מאָל.</string>
+    <string name="game_system_resign">%1$s האָט זיך אונטערגעגעבן</string>
+    <string name="game_system_draw_offer">%1$s האָט פֿאָרגעלייגט אַ גלײַך</string>
+    <string name="game_system_draw_accept">מסכים געווען אויף אַ גלײַך</string>
+    <string name="game_system_draw_decline">%1$s האָט אָפּגעזאָגט דעם גלײַך</string>
+    <string name="reactivation_title">אײַער קאָנטע איז צוגעשטעלט צו ווערן אויסגעמעקט</string>
+    <string name="reactivation_body">אײַער קאָנטע איז צוגעשטעלט צו ווערן אויסגעמעקט. איר קענט אַנולירן און צוריקשטעלן פֿולן צוטריט איצט.</string>
+    <string name="reactivation_body_dated">אײַער קאָנטע און אַלע אירע דאַטן וועלן ווערן שטענדיק אויסגעמעקט אויף %1$s. איר קענט אַנולירן און צוריקשטעלן פֿולן צוטריט איצט.</string>
+    <string name="reactivation_reactivate">ווידער אַקטיווירן מײַן קאָנטע</string>
+    <string name="reactivation_sign_out">המשך פֿאַרמאַכן און לאָגיר אַרויס</string>
 </resources>

@@ -459,7 +459,7 @@ private fun PostCard(
                         modifier = Modifier.size(18.dp)
                     )
                 }
-                Text("${post.up - post.down}", style = MaterialTheme.typography.labelMedium)
+                Text(LocalFormat.current.formatNumber(post.up - post.down), style = MaterialTheme.typography.labelMedium)
                 IconButton(
                     onClick = { onVote(if (post.userVote == "down") "" else "down") },
                     modifier = Modifier.size(32.dp)

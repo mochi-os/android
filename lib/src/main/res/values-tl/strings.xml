@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Mali ang code na iyon o nag-expire na.</string>
     <string name="stepup_error_passkey">Nabigo ang pag-verify ng passkey. Pakisubukang muli.</string>
     <string name="stepup_error_oauth">Hindi ma-verify gamit ang account na iyon. Pakisubukang muli.</string>
+    <string name="game_system_resign">Sumuko si %1$s</string>
+    <string name="game_system_draw_offer">Nag-alok ng tabla si %1$s</string>
+    <string name="game_system_draw_accept">Napagkasunduang tabla</string>
+    <string name="game_system_draw_decline">Tinanggihan ni %1$s ang tabla</string>
+    <string name="reactivation_title">Nakatakda nang burahin ang iyong account</string>
+    <string name="reactivation_body">Nakatakda nang burahin ang iyong account. Maaari mong kanselahin at ibalik ang buong access ngayon.</string>
+    <string name="reactivation_body_dated">Permanenteng buburahin ang iyong account at lahat ng data nito sa %1$s. Maaari mong kanselahin at ibalik ang buong access ngayon.</string>
+    <string name="reactivation_reactivate">I-reactivate ang aking account</string>
+    <string name="reactivation_sign_out">Magpatuloy sa pagsasara at mag-sign out</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">Mohoj</string>
     <string name="replication_hosts_title">Hostat e mi</string>
     <string name="replication_hosts_empty_hint">Për ta replikuar atë në një server tjetër, regjistrohu për një llogari atje dhe përdor opsionin \"Replikoni një llogari ekzistuese\".</string>
-    <string name="replication_remove">Hiq hostin</string>
-    <string name="replication_remove_title">Të hiqet hosti?</string>
     <string name="settings_home_section_system">Sistemi</string>
     <string name="system_replication_title">Replikim</string>
     <string name="system_replication_this_server">Ky server</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Asnjëherë</string>
     <string name="replication_hosts_empty">Kjo llogari është vetëm në këtë server.</string>
     <string name="replication_added">Shtuar %1$s</string>
-    <string name="replication_remove_message">Ky server do të ndalojë replikimin e llogarisë suaj në atë host.</string>
     <string name="settings_home_system_replication">Replikimi (server)</string>
     <string name="system_replication_pair_empty_hint">Çiftoni me një tjetër server të sapo-instaluar duke përdorur \"mochictl replica join &lt;existing-peer-id&gt;\" në serverin e ri.</string>
     <string name="route_delete_message">Kjo do të heqë rrugën për shtegun \"%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Aplikacion autentikues</string>
     <string name="login_method_oauth">Hyrje me palë të tretë</string>
     <string name="login_method_recovery">Kodet e rikuperimit</string>
+    <string name="account_close_section">Mbyll llogarinë</string>
+    <string name="account_close_action">Mbyll llogarinë</string>
+    <string name="account_close_confirm_title">Të mbyllet llogaria juaj?</string>
+    <string name="account_close_confirm_body">Llogaria juaj do të planifikohet për fshirje dhe do të dilni nga llogaria. Mund ta anuloni në çdo kohë para datës së fshirjes duke hyrë sërish.</string>
+    <string name="account_data_download">Shkarko</string>
+    <string name="route_target_app">Aplikacioni</string>
+    <string name="route_target_entity">Entiteti</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Të dhënat tuaja</string>
+    <string name="account_data_dialog_title">Shkarko të dhënat tuaja</string>
+    <string name="account_data_dialog_body">Ky është një kopje rezervë e plotë që mund ta riktheni në këtë ose në një server tjetër Mochi. Verifikoni se jeni ju për të vazhduar.</string>
+    <string name="account_data_passphrase">Fjalëkalim</string>
+    <string name="account_data_passphrase_hint">Çelësat tuaj privatë janë të përfshirë, të koduar me këtë frazë kalimi. Ruajeni në vend të sigurt. Do ta keni nevojë për rivendosje.</string>
+    <string name="replication_hosts_subtitle">Serverë të tjerë që gjithashtu mbajnë një kopje të llogarisë suaj. Për të hequr njërin, identifikohu në atë server dhe përdor \"Hiqe llogarinë time nga ky server\".</string>
+    <string name="replication_irreparable">I pariparueshëm</string>
+    <string name="replication_leave">Hiqe llogarinë time nga ky server</string>
+    <string name="replication_leave_title">Të hiqet llogaria juaj nga ky server?</string>
+    <string name="replication_leave_message">Të dhënat e llogarisë suaj në këtë server do të fshihen përgjithmonë dhe do të dilni nga llogaria këtu. Llogaria juaj mbetet në serverët tuaj të tjerë dhe mund ta rishtoni këtë më vonë.</string>
+    <string name="replication_leave_confirm">Hiq</string>
+    <string name="replication_forget">Harro këtë pritës të paarritshëm</string>
+    <string name="replication_forget_title">Të harrohet ky pritës i paarritshëm?</string>
+    <string name="replication_forget_message">Do të hiqet nga grupi juaj i replikave dhe do t\'i kërkohet të fshijë kopjen e tij kur të rilidhet. Për të hequr një server të arritshëm, identifikohu atje dhe përdor \"Hiqe llogarinë time nga ky server\". Verifiko se je ti për të vazhduar.</string>
+    <string name="replication_offline">Jashtë linje</string>
+    <string name="replication_forget_confirm">Harroje</string>
 </resources>

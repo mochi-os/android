@@ -263,4 +263,13 @@
     <string name="stepup_error_code">កូដនោះមិនត្រឹមត្រូវ ឬផុតកំណត់ហើយ។</string>
     <string name="stepup_error_passkey">ការផ្ទៀងផ្ទាត់ passkey បានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។</string>
     <string name="stepup_error_oauth">មិនអាចផ្ទៀងផ្ទាត់ជាមួយគណនីនោះបានទេ។ សូមព្យាយាមម្តងទៀត។</string>
+    <string name="game_system_resign">%1$s បានចុះចាញ់</string>
+    <string name="game_system_draw_offer">%1$s បានស្នើស្មើ</string>
+    <string name="game_system_draw_accept">បានយល់ព្រមស្មើ</string>
+    <string name="game_system_draw_decline">%1$s បានបដិសេធការស្មើ</string>
+    <string name="reactivation_title">គណនីរបស់អ្នកត្រូវបានកំណត់ពេលលុប</string>
+    <string name="reactivation_body">គណនីរបស់អ្នកត្រូវបានកំណត់ពេលលុប។ អ្នកអាចបោះបង់ និងស្តារសិទ្ធិចូលប្រើពេញលេញឥឡូវនេះ។</string>
+    <string name="reactivation_body_dated">គណនីរបស់អ្នក និងទិន្នន័យទាំងអស់របស់វានឹងត្រូវលុបជាអចិន្ត្រៃយ៍នៅថ្ងៃទី %1$s។ អ្នកអាចបោះបង់ និងស្តារសិទ្ធិចូលប្រើពេញលេញឥឡូវនេះ។</string>
+    <string name="reactivation_reactivate">បើកដំណើរការគណនីរបស់ខ្ញុំឡើងវិញ</string>
+    <string name="reactivation_sign_out">បន្តការបិទ និងចេញ</string>
 </resources>

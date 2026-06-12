@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">דירוג / ניקוד</string>
     <string name="feeds_ai_prompt_credibility">הערכת אמינות</string>
 
+    <string name="feeds_refresh">רענן</string>
+    <string name="feeds_interest_boosted">תחום העניין הוגבר</string>
+    <string name="feeds_interest_reduced">תחום העניין הופחת</string>
+    <string name="feeds_interest_removed">תחום העניין הוסר</string>
+    <string name="feeds_interest_failed">התאמת תחום העניין נכשלה</string>
 </resources>

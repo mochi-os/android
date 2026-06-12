@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Targed</string>
     <string name="forums_access_level_view">Gweld</string>
+    <string name="forums_access_level_vote">Pleidleisio</string>
     <string name="forums_access_level_comment">Sylw</string>
     <string name="forums_access_level_post">Postio</string>
     <string name="forums_access_level_none">Dim</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">ID endid, @grŵp, * (pawb), neu + (aelodau)</string>
     <string name="forums_access_level">Lefel</string>
     <string name="forums_access_level_moderate">Cymedroli</string>
-    <string name="forums_access_level_manage">Rheoli</string>
     <string name="forums_members_search">Hidlo aelodau</string>
     <string name="forums_banner_description">Markdown a ddangosir ar frig y fforwm.</string>
     <string name="forums_banner_placeholder">Croeso i\'r fforwm hwn…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Parth peryglus</string>
     <string name="forums_settings_delete_message">Bydd hyn yn dileu\'r fforwm a\'i holl bostiadau yn barhaol. Ni ellir dadwneud hyn.</string>
 
+    <string name="forums_tag_interest_up">Hybu diddordeb</string>
+    <string name="forums_tag_interest_down">Lleihau diddordeb</string>
+    <string name="forums_tag_interest_remove">Tynnu diddordeb</string>
+    <string name="forums_list_default_sort">Trefnu diofyn</string>
+    <string name="forums_access_tab_users">Defnyddwyr</string>
+    <string name="forums_access_tab_groups">Grwpiau</string>
+    <string name="forums_access_tab_manual">Llawlyfr</string>
+    <string name="forums_access_search_users">Chwilio defnyddwyr</string>
+    <string name="forums_access_no_groups">Dim grwpiau ar gael</string>
 </resources>

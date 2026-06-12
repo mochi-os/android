@@ -56,7 +56,7 @@ class CrmsRepository @Inject constructor(
     // ---- Crms ----
 
     suspend fun listCrms(): List<Crm> =
-        api.listCrms().unwrap().crm
+        api.listCrms().unwrap().crms
 
     suspend fun createCrm(
         name: String,
@@ -70,10 +70,10 @@ class CrmsRepository @Inject constructor(
         api.getTemplates().unwrap().templates
 
     suspend fun searchDirectory(query: String): List<Crm> =
-        api.searchDirectory(query).unwrap().crm
+        api.searchDirectory(query).unwrap()
 
     suspend fun getRecommendations(): List<Crm> =
-        api.getRecommendations().unwrap().crm
+        api.getRecommendations().unwrap().crms
 
     suspend fun probe(url: String): Crm =
         api.probe(url).unwrap().crm
@@ -86,11 +86,8 @@ class CrmsRepository @Inject constructor(
         api.unsubscribe(crm, server).unwrap()
     }
 
-    suspend fun checkNotifications(): Boolean =
-        api.checkNotifications().unwrap().exists
-
     suspend fun searchUsers(query: String): List<Person> =
-        api.searchUsers(query).unwrap().users
+        api.searchUsers(query).unwrap().results
 
     suspend fun getGroups(): List<Group> =
         api.getGroups().unwrap().groups
@@ -147,8 +144,8 @@ class CrmsRepository @Inject constructor(
     suspend fun getObject(crmId: String, objectId: String): CrmObject =
         api.getObject(crmId, objectId).unwrap().`object`
 
-    suspend fun updateObject(crmId: String, objectId: String, title: String? = null, parent: String? = null) {
-        api.updateObject(crmId, objectId, title, parent).unwrap()
+    suspend fun updateObject(crmId: String, objectId: String, parent: String? = null) {
+        api.updateObject(crmId, objectId, parent).unwrap()
     }
 
     suspend fun deleteObject(crmId: String, objectId: String) {

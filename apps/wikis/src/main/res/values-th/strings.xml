@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">ซิงค์ล่าสุด: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">การกระทำนี้จะหยุดส่งการอัปเดตไปยัง \"%1$s\" พวกเขาสามารถจำลองอีกครั้งได้หากต้องการ</string>
     <string name="wikis_replicas_removed_success">ลบแบบจำลองแล้ว</string>
+    <string name="wikis_load_more">โหลดเพิ่ม</string>
+    <string name="wikis_access_change_level">ระดับการเข้าถึง</string>
+    <string name="wikis_access_subject_anyone">ใครก็ได้</string>
+    <string name="wikis_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>
 
 </resources>

@@ -263,4 +263,13 @@
     <string name="stepup_error_code">وہ کوڈ غلط ہے یا اس کی میعاد ختم ہو چکی ہے۔</string>
     <string name="stepup_error_passkey">پاس کی کی تصدیق ناکام ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔</string>
     <string name="stepup_error_oauth">اس اکاؤنٹ سے تصدیق نہیں ہو سکی۔ براہ کرم دوبارہ کوشش کریں۔</string>
+    <string name="game_system_resign">%1$s نے ہار مان لی</string>
+    <string name="game_system_draw_offer">%1$s نے برابری کی پیشکش کی</string>
+    <string name="game_system_draw_accept">برابری پر اتفاق ہوا</string>
+    <string name="game_system_draw_decline">%1$s نے برابری مسترد کر دی</string>
+    <string name="reactivation_title">آپ کے اکاؤنٹ کو حذف کرنے کے لیے شیڈول کیا گیا ہے</string>
+    <string name="reactivation_body">آپ کے اکاؤنٹ کو حذف کرنے کے لیے شیڈول کیا گیا ہے۔ آپ ابھی منسوخ کر کے مکمل رسائی بحال کر سکتے ہیں۔</string>
+    <string name="reactivation_body_dated">آپ کا اکاؤنٹ اور اس کا تمام ڈیٹا %1$s کو مستقل طور پر حذف کر دیا جائے گا۔ آپ ابھی منسوخ کر کے مکمل رسائی بحال کر سکتے ہیں۔</string>
+    <string name="reactivation_reactivate">میرا اکاؤنٹ دوبارہ فعال کریں</string>
+    <string name="reactivation_sign_out">بند کرنا جاری رکھیں اور سائن آؤٹ کریں</string>
 </resources>

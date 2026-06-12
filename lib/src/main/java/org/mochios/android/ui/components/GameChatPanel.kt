@@ -70,6 +70,10 @@ import java.util.TimeZone
  *                  go, the placed word for words).
  * @param type      `"message"` for regular chat bubbles, `"move"` for
  *                  centred move strips, `"system"` for italic muted notices.
+ * @param event     For `"system"` rows, the structured event kind (e.g.
+ *                  `"resign"`, `"draw_offer"`) used to localise the notice
+ *                  per viewer. Empty for legacy rows / chat / move; the
+ *                  default system renderer then falls back to [body].
  * @param created   Epoch seconds.
  */
 data class GameChatMessage(
@@ -79,6 +83,7 @@ data class GameChatMessage(
     val name: String,
     val body: String,
     val type: String,
+    val event: String = "",
     val created: Long,
 )
 
@@ -232,7 +237,7 @@ fun GameChatPanel(
                                 if (slot != null) {
                                     slot()
                                 } else {
-                                    SystemMessageRow(message.body)
+                                    SystemMessageRow(message)
                                 }
                             }
                             "move" -> {
@@ -397,13 +402,23 @@ private fun DateSeparator(epochSeconds: Long) {
 }
 
 @Composable
-private fun SystemMessageRow(body: String) {
+private fun SystemMessageRow(message: GameChatMessage) {
+    // Localise per viewer from the structured event kind; legacy rows (no
+    // event) fall back to the server-stored English body. Mirrors web's
+    // chat-message-list system branch.
+    val text = when (message.event) {
+        "resign" -> stringResource(R.string.game_system_resign, message.name)
+        "draw_offer" -> stringResource(R.string.game_system_draw_offer, message.name)
+        "draw_accept" -> stringResource(R.string.game_system_draw_accept)
+        "draw_decline" -> stringResource(R.string.game_system_draw_decline, message.name)
+        else -> message.body
+    }
     Row(
         modifier = Modifier.fillMaxWidth().padding(vertical = 2.dp),
         horizontalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = body,
+            text = text,
             style = MaterialTheme.typography.labelSmall.copy(
                 fontSize = 11.sp,
                 fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,

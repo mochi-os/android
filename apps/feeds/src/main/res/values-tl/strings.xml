@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Pagra-rank / pag-iiskor</string>
     <string name="feeds_ai_prompt_credibility">Pagtatasa ng kredibilidad</string>
 
+    <string name="feeds_refresh">I-refresh</string>
+    <string name="feeds_interest_boosted">Na-boost ang interest</string>
+    <string name="feeds_interest_reduced">Nabawasan ang interest</string>
+    <string name="feeds_interest_removed">Natanggal ang interest</string>
+    <string name="feeds_interest_failed">Nabigong i-adjust ang interest</string>
 </resources>

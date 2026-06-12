@@ -64,16 +64,13 @@ fun FlipBook(
 ) {
     if (pageCount == 0) return
 
-    // Only paint the fold while the pager is actually moving. Keying off the
-    // offset alone meant that if a scroll came to rest at a fractional position
-    // (an interrupted or incomplete settle), the half-folded overlay stayed
-    // frozen on screen. Tying it to active scrolling guarantees the overlay
-    // clears the instant motion stops and the live page takes over.
-    if (!pagerState.isScrollInProgress) return
-
     // Continuous scroll position across pages. position == an integer means a
     // page is settled (no fold). The pair being folded is (front, front+1)
-    // with progress f ∈ (0,1).
+    // with progress f ∈ (0,1). Rendering off the offset (rather than
+    // isScrollInProgress) keeps the fold smooth across the whole gesture —
+    // drag AND settle. The freeze guard lives at the call site: if the pager
+    // ever rests at a fractional offset, it is snapped to the nearest page so
+    // f returns to ~0 and this overlay clears.
     val position = pagerState.currentPage + pagerState.currentPageOffsetFraction
     if (position <= 0f) return // first page / over-scroll below: no leaf
     val front = floor(position).toInt()

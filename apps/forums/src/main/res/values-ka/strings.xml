@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">სამიზნე</string>
     <string name="forums_access_level_view">ვიდეოს ესკიზი</string>
+    <string name="forums_access_level_vote">ხმის მიცემა</string>
     <string name="forums_access_level_comment">კომენტარი</string>
     <string name="forums_access_level_post">პოსტი</string>
     <string name="forums_access_level_none">არცერთი</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ერთეულის ID, @ჯგუფი, * (ყველა) ან + (წევრები)</string>
     <string name="forums_access_level">დონე</string>
     <string name="forums_access_level_moderate">მოდერაცია</string>
-    <string name="forums_access_level_manage">მართვა</string>
     <string name="forums_members_search">წევრების ფილტრი</string>
     <string name="forums_banner_description">Markdown, რომელიც ნაჩვენებია ფორუმის თავში.</string>
     <string name="forums_banner_placeholder">კეთილი იყოს თქვენი მობრძანება ამ ფორუმზე…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">სახიფათო ზონა</string>
     <string name="forums_settings_delete_message">ეს სამუდამოდ წაშლის ფორუმს და მის ყველა პოსტს. ეს ქმედება შეუქცევადია.</string>
 
+    <string name="forums_tag_interest_up">ინტერესის გაძლიერება</string>
+    <string name="forums_tag_interest_down">ინტერესის შემცირება</string>
+    <string name="forums_tag_interest_remove">ინტერესის წაშლა</string>
+    <string name="forums_list_default_sort">ნაგულისხმევი დახარისხება</string>
+    <string name="forums_access_tab_users">მომხმარებლის სახელი</string>
+    <string name="forums_access_tab_groups">ჯგუფები</string>
+    <string name="forums_access_tab_manual">სახელმძღვანელო</string>
+    <string name="forums_access_search_users">მომხმარებლების ძიება</string>
+    <string name="forums_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
 </resources>

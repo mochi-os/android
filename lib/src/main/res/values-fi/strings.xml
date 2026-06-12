@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Koodi on virheellinen tai vanhentunut.</string>
     <string name="stepup_error_passkey">Avainkoodin vahvistus epäonnistui. Yritä uudelleen.</string>
     <string name="stepup_error_oauth">Vahvistaminen tällä tilillä ei onnistunut. Yritä uudelleen.</string>
+    <string name="game_system_resign">%1$s luovutti</string>
+    <string name="game_system_draw_offer">%1$s tarjosi tasapeliä</string>
+    <string name="game_system_draw_accept">Tasapeli sovittu</string>
+    <string name="game_system_draw_decline">%1$s hylkäsi tasapelin</string>
+    <string name="reactivation_title">Tilisi on määrätty poistettavaksi</string>
+    <string name="reactivation_body">Tilisi on määrätty poistettavaksi. Voit peruuttaa ja palauttaa täyden käyttöoikeuden nyt.</string>
+    <string name="reactivation_body_dated">Tilisi ja kaikki sen tiedot poistetaan pysyvästi %1$s. Voit peruuttaa ja palauttaa täyden käyttöoikeuden nyt.</string>
+    <string name="reactivation_reactivate">Aktivoi tilini uudelleen</string>
+    <string name="reactivation_sign_out">Jatka sulkemista ja kirjaudu ulos</string>
 </resources>

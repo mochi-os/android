@@ -56,8 +56,6 @@
     <string name="replication_deny">ปฏิเสธ</string>
     <string name="replication_hosts_title">โฮสต์ของฉัน</string>
     <string name="replication_hosts_empty_hint">เพื่อทำซ้ำไปยังเซิร์ฟเวอร์อื่น ลงทะเบียนบัญชีที่นั่นและใช้ตัวเลือก \"ทำซ้ำบัญชีที่มีอยู่\"</string>
-    <string name="replication_remove">ลบโฮสต์</string>
-    <string name="replication_remove_title">ลบโฮสต์?</string>
     <string name="settings_home_section_system">ระบบ</string>
     <string name="system_replication_title">การจำลอง</string>
     <string name="system_replication_this_server">เซิร์ฟเวอร์นี้</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ไม่เลย</string>
     <string name="replication_hosts_empty">บัญชีนี้อยู่บนเซิร์ฟเวอร์นี้เท่านั้น</string>
     <string name="replication_added">เพิ่ม %1$s</string>
-    <string name="replication_remove_message">เซิร์ฟเวอร์นี้จะหยุดทำซ้ำบัญชีของคุณไปยังโฮสต์นั้น</string>
     <string name="settings_home_system_replication">การทำซ้ำ (เซิร์ฟเวอร์)</string>
     <string name="system_replication_pair_empty_hint">จับคู่กับเซิร์ฟเวอร์ที่ติดตั้งใหม่อื่นโดยใช้ \"mochictl replica join &lt;existing-peer-id&gt;\" บนเซิร์ฟเวอร์ใหม่</string>
     <string name="route_delete_message">การกระทำนี้จะลบเส้นทางสำหรับเส้นทาง \"%1$s\"</string>
@@ -386,4 +383,28 @@
     <string name="login_method_totp">แอป Authenticator</string>
     <string name="login_method_oauth">เข้าสู่ระบบด้วยบุคคลที่สาม</string>
     <string name="login_method_recovery">รหัสกู้คืน</string>
+    <string name="account_close_section">ปิดบัญชี</string>
+    <string name="account_close_action">ปิดบัญชี</string>
+    <string name="account_close_confirm_title">ปิดบัญชีของคุณหรือไม่?</string>
+    <string name="account_close_confirm_body">บัญชีของคุณจะถูกกำหนดให้ลบและคุณจะถูกออกจากระบบ คุณสามารถยกเลิกได้ทุกเมื่อก่อนถึงวันที่ลบโดยการเข้าสู่ระบบอีกครั้ง</string>
+    <string name="account_data_download">ดาวน์โหลด</string>
+    <string name="route_target_app">แอป</string>
+    <string name="route_target_entity">Entity</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">ข้อมูลของคุณ</string>
+    <string name="account_data_dialog_title">ดาวน์โหลดข้อมูลของคุณ</string>
+    <string name="account_data_dialog_body">นี่คือข้อมูลสำรองฉบับสมบูรณ์ที่คุณสามารถกู้คืนบนเซิร์ฟเวอร์ Mochi นี้หรือเครื่องอื่นได้ ยืนยันว่าเป็นคุณเพื่อดำเนินการต่อ</string>
+    <string name="account_data_passphrase">วลีรหัสผ่าน</string>
+    <string name="account_data_passphrase_hint">คีย์ส่วนตัวของคุณรวมอยู่ด้วย เข้ารหัสด้วยวลีรหัสผ่านนี้ เก็บไว้อย่างปลอดภัย คุณจะต้องใช้มันในการกู้คืน</string>
+    <string name="replication_hosts_subtitle">เซิร์ฟเวอร์อื่นที่เก็บสำเนาบัญชีของคุณไว้ด้วย หากต้องการนำออกหนึ่งรายการ ให้ลงชื่อเข้าใช้บนเซิร์ฟเวอร์นั้นแล้วใช้ \"นำบัญชีของฉันออกจากเซิร์ฟเวอร์นี้\"</string>
+    <string name="replication_irreparable">ไม่สามารถกู้คืนได้</string>
+    <string name="replication_leave">นำบัญชีของฉันออกจากเซิร์ฟเวอร์นี้</string>
+    <string name="replication_leave_title">นำบัญชีของคุณออกจากเซิร์ฟเวอร์นี้หรือไม่?</string>
+    <string name="replication_leave_message">ข้อมูลบัญชีของคุณบนเซิร์ฟเวอร์นี้จะถูกลบอย่างถาวร และคุณจะถูกออกจากระบบที่นี่ บัญชีของคุณยังคงอยู่บนเซิร์ฟเวอร์อื่นของคุณ และคุณสามารถเพิ่มเซิร์ฟเวอร์นี้กลับได้ในภายหลัง</string>
+    <string name="replication_leave_confirm">ลบ</string>
+    <string name="replication_forget">ลืมโฮสต์ที่ติดต่อไม่ได้นี้</string>
+    <string name="replication_forget_title">ลืมโฮสต์ที่ติดต่อไม่ได้นี้หรือไม่?</string>
+    <string name="replication_forget_message">โฮสต์จะถูกนำออกจากชุดเรพลิกาของคุณ และจะถูกสั่งให้ลบสำเนาเมื่อเชื่อมต่อใหม่ หากต้องการนำเซิร์ฟเวอร์ที่ติดต่อได้ออก ให้ลงชื่อเข้าใช้ที่นั่นแล้วใช้ \"นำบัญชีของฉันออกจากเซิร์ฟเวอร์นี้\" ยืนยันว่าเป็นคุณเพื่อดำเนินการต่อ</string>
+    <string name="replication_offline">ออฟไลน์</string>
+    <string name="replication_forget_confirm">ลืม</string>
 </resources>

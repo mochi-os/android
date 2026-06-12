@@ -14,13 +14,16 @@ import org.mochios.settings.api.DocumentApi
 import retrofit2.Response
 import javax.inject.Inject
 
+/**
+ * Read-only view-model for the legal-document viewer: it loads and exposes one
+ * document (privacy / rules / terms) for display. There is intentionally no
+ * edit/save path here — operator editing lives in SystemDocumentsScreen (which
+ * also carries the per-language dimension). See [DocumentApi].
+ */
 data class DocumentUiState(
     val kind: String = "",
     val isLoading: Boolean = true,
-    val isSaving: Boolean = false,
-    val savedContent: String = "",
-    val draft: String = "",
-    val savedToast: Boolean = false,
+    val body: String = "",
     val error: MochiError? = null,
 )
 
@@ -41,49 +44,18 @@ class DocumentViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                // `body` is the markdown source; HtmlContent renders it. (The
+                // response also carries server-rendered `html` if ever needed.)
                 val data = api.getDocument(kind).bodyOrThrow()
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    savedContent = data.content,
-                    draft = data.content,
-                )
+                _uiState.value = _uiState.value.copy(isLoading = false, body = data.body)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
     }
 
-    fun onDraftChange(content: String) {
-        _uiState.value = _uiState.value.copy(draft = content)
-    }
-
-    fun save() {
-        val draft = _uiState.value.draft
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSaving = true, error = null, savedToast = false)
-            try {
-                api.updateDocument(kind, draft).bodyOrThrowUnit()
-                _uiState.value = _uiState.value.copy(
-                    isSaving = false,
-                    savedContent = draft,
-                    savedToast = true,
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
-            }
-        }
-    }
-
-    fun consumeSavedToast() {
-        _uiState.value = _uiState.value.copy(savedToast = false)
-    }
-
     private fun <T> Response<T>.bodyOrThrow(): T {
         if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
         return body() ?: throw RuntimeException("empty body")
-    }
-
-    private fun Response<Unit>.bodyOrThrowUnit() {
-        if (!isSuccessful) throw RuntimeException("HTTP ${code()}")
     }
 }

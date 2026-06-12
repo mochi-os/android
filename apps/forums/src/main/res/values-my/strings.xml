@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ဦးတည်ရာ</string>
     <string name="forums_access_level_view">ကြည့်ရှုမည်</string>
+    <string name="forums_access_level_vote">မဲပေးပါ</string>
     <string name="forums_access_level_comment">မှတ်ချက်</string>
     <string name="forums_access_level_post">ပို့စ်</string>
     <string name="forums_access_level_none">မရှိ</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Entity ID, @group, * (လူတိုင်း), သို့မဟုတ် + (အဖွဲ့ဝင်များ)</string>
     <string name="forums_access_level">အဆင့်</string>
     <string name="forums_access_level_moderate">ထိန်းညှိပါ</string>
-    <string name="forums_access_level_manage">စီမံပါ</string>
     <string name="forums_members_search">အဖွဲ့ဝင်များကို စစ်ထုတ်ပါ</string>
     <string name="forums_banner_description">ဖိုရမ်၏ ထိပ်တွင် ပြသမည့် Markdown။</string>
     <string name="forums_banner_placeholder">ဤဖိုရမ်သို့ ကြိုဆိုပါသည်…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">အန္တရာယ်ဇုန်</string>
     <string name="forums_settings_delete_message">၎င်းသည် ဖိုရမ်နှင့် ၎င်း၏ ပို့စ်အားလုံးကို အပြီးတိုင် ဖျက်ပါမည်။ ၎င်းကို ပြန်လည်ပြုပြင်၍ မရပါ။</string>
 
+    <string name="forums_tag_interest_up">စိတ်ဝင်စားမှု မြှင့်တင်မည်</string>
+    <string name="forums_tag_interest_down">စိတ်ဝင်စားမှု လျှော့ချ</string>
+    <string name="forums_tag_interest_remove">စိတ်ဝင်စားမှု ဖယ်ရှား</string>
+    <string name="forums_list_default_sort">မူရင်း sort</string>
+    <string name="forums_access_tab_users">သုံးစွဲသူများ</string>
+    <string name="forums_access_tab_groups">အုပ်စုများ</string>
+    <string name="forums_access_tab_manual">ကိုယ်တိုင်</string>
+    <string name="forums_access_search_users">သုံးစွဲသူများ ရှာဖွေ</string>
+    <string name="forums_access_no_groups">အုပ်စုများ မရရှိနိုင်ပါ</string>
 </resources>

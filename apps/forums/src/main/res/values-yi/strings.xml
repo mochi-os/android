@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ציל</string>
     <string name="forums_access_level_view">בליק</string>
+    <string name="forums_access_level_vote">שטים</string>
     <string name="forums_access_level_comment">קאָמענטאַר</string>
     <string name="forums_access_level_post">פּאָסט</string>
     <string name="forums_access_level_none">קיינס</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ענטיטעט־ID, @גרופּע, * (אַלעמען), אָדער + (מיטגלידער)</string>
     <string name="forums_access_level">מדרגה</string>
     <string name="forums_access_level_moderate">מאָדערירן</string>
-    <string name="forums_access_level_manage">פֿאַרוואַלטן</string>
     <string name="forums_members_search">פֿילטרירן מיטגלידער</string>
     <string name="forums_banner_description">Markdown וואָס ווערט געוויזן אויבן אין פֿאָרום.</string>
     <string name="forums_banner_placeholder">ברוכים הבאים צו דעם פֿאָרום…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">סכּנה־געגנט</string>
     <string name="forums_settings_delete_message">דאָס וועט תּמיד אויסמעקן דעם פֿאָרום און אַלע זײַנע פּאָסטן. דאָס קען מען נישט אומקערן.</string>
 
+    <string name="forums_tag_interest_up">פֿאַרשטאַרקן אינטערעס</string>
+    <string name="forums_tag_interest_down">פֿאַרמינער אינטערעס</string>
+    <string name="forums_tag_interest_remove">אַראָפּנעמען אינטערעס</string>
+    <string name="forums_list_default_sort">פֿאַרשטאַנדלעך סאָרט</string>
+    <string name="forums_access_tab_users">באַניצערס</string>
+    <string name="forums_access_tab_groups">גרופּעס</string>
+    <string name="forums_access_tab_manual">מאַנואַל</string>
+    <string name="forums_access_search_users">זוך באַניצערס</string>
+    <string name="forums_access_no_groups">קיין גרופּעס פֿאַראַן</string>
 </resources>

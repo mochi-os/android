@@ -66,10 +66,10 @@ data class HomeUiState(
     /** `true` while the activate-account request is in flight. */
     val activatingAccount: Boolean = false,
     /**
-     * `true` when the Comptroller's Stripe secret key has the `sk_test_`
-     * prefix (the `stripe_testmode` field on the own-account response).
-     * Drives the sticky test-mode banner above the home screen, mirroring
-     * `apps/market/web/src/components/layout/market-layout.tsx`.
+     * `true` once the caller's loaded account has `seller == 1`. Gates the
+     * Selling sidebar section and flips the seller-settings sidebar row label
+     * between "Become a seller" and "Seller settings". Defaults `false` until
+     * the account load completes.
      */
-    val testMode: Boolean = false,
+    val isSeller: Boolean = false,
 )

@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Þessi kóði er rangur eða útrunninn.</string>
     <string name="stepup_error_passkey">Staðfesting aðgangslykils mistókst. Reyndu aftur.</string>
     <string name="stepup_error_oauth">Ekki tókst að staðfesta með þeim reikningi. Reyndu aftur.</string>
+    <string name="game_system_resign">%1$s gafst upp</string>
+    <string name="game_system_draw_offer">%1$s bauð jafntefli</string>
+    <string name="game_system_draw_accept">Jafntefli samþykkt</string>
+    <string name="game_system_draw_decline">%1$s hafnaði jafntefli</string>
+    <string name="reactivation_title">Reikningurinn þinn er á dagskrá til eyðingar</string>
+    <string name="reactivation_body">Reikningurinn þinn er á dagskrá til eyðingar. Þú getur hætt við og endurheimt fullan aðgang núna.</string>
+    <string name="reactivation_body_dated">Reikningurinn þinn og öll gögn hans verða endanlega eytt þann %1$s. Þú getur hætt við og endurheimt fullan aðgang núna.</string>
+    <string name="reactivation_reactivate">Endurvirkja reikninginn minn</string>
+    <string name="reactivation_sign_out">Halda áfram að loka og skrá út</string>
 </resources>

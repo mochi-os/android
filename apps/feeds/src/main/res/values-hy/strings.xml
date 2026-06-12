@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Դասակարգում / գնահատում</string>
     <string name="feeds_ai_prompt_credibility">Արժանահավատության գնահատում</string>
 
+    <string name="feeds_refresh">Թարմացնել</string>
+    <string name="feeds_interest_boosted">Հետաքրքրություններ</string>
+    <string name="feeds_interest_reduced">Միջակայք</string>
+    <string name="feeds_interest_removed">Անվավեր JSON ֆայլ</string>
+    <string name="feeds_interest_failed">Չհաջողվեց կարգավորել հետաքրքրությունը</string>
 </resources>

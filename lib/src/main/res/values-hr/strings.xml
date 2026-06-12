@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Taj kôd nije ispravan ili je istekao.</string>
     <string name="stepup_error_passkey">Provjera pristupnog ključa nije uspjela. Pokušajte ponovno.</string>
     <string name="stepup_error_oauth">Provjera s tim računom nije uspjela. Pokušajte ponovno.</string>
+    <string name="game_system_resign">%1$s je predao</string>
+    <string name="game_system_draw_offer">%1$s je ponudio remi</string>
+    <string name="game_system_draw_accept">Remi dogovoren</string>
+    <string name="game_system_draw_decline">%1$s je odbio remi</string>
+    <string name="reactivation_title">Vaš je račun zakazan za brisanje</string>
+    <string name="reactivation_body">Vaš je račun zakazan za brisanje. Sada možete otkazati i vratiti potpuni pristup.</string>
+    <string name="reactivation_body_dated">Vaš račun i svi njegovi podaci bit će trajno izbrisani %1$s. Sada možete otkazati i vratiti potpuni pristup.</string>
+    <string name="reactivation_reactivate">Ponovno aktiviraj moj račun</string>
+    <string name="reactivation_sign_out">Nastavi sa zatvaranjem i odjavi se</string>
 </resources>

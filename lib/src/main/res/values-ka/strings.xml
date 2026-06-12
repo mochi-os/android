@@ -263,4 +263,13 @@
     <string name="stepup_error_code">ეს კოდი არასწორია ან ვადაგასულია.</string>
     <string name="stepup_error_passkey">passkey-ის გადამოწმება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.</string>
     <string name="stepup_error_oauth">ამ ანგარიშით ვერ მოხერხდა გადამოწმება. გთხოვთ, სცადოთ თავიდან.</string>
+    <string name="game_system_resign">%1$s-მა დანებდა</string>
+    <string name="game_system_draw_offer">%1$s-მა ფრე შესთავაზა</string>
+    <string name="game_system_draw_accept">ფრე შეთანხმდა</string>
+    <string name="game_system_draw_decline">%1$s-მა ფრე უარყო</string>
+    <string name="reactivation_title">თქვენი ანგარიში დაგეგმილია წასაშლელად</string>
+    <string name="reactivation_body">თქვენი ანგარიში დაგეგმილია წასაშლელად. ახლა შეგიძლიათ გააუქმოთ და სრულად აღადგინოთ წვდომა.</string>
+    <string name="reactivation_body_dated">თქვენი ანგარიში და მისი ყველა მონაცემი სამუდამოდ წაიშლება %1$s-ს. ახლა შეგიძლიათ გააუქმოთ და სრულად აღადგინოთ წვდომა.</string>
+    <string name="reactivation_reactivate">ჩემი ანგარიშის ხელახლა გააქტიურება</string>
+    <string name="reactivation_sign_out">დახურვის გაგრძელება და გასვლა</string>
 </resources>

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Cilj</string>
     <string name="forums_access_level_view">Pogled</string>
+    <string name="forums_access_level_vote">Glasaj</string>
     <string name="forums_access_level_comment">Komentar</string>
     <string name="forums_access_level_post">Objavi</string>
     <string name="forums_access_level_none">Ništa</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID entiteta, @grupa, * (svi) ili + (članovi)</string>
     <string name="forums_access_level">Razina</string>
     <string name="forums_access_level_moderate">Moderiraj</string>
-    <string name="forums_access_level_manage">Upravljaj</string>
     <string name="forums_members_search">Filtriraj članove</string>
     <string name="forums_banner_description">Markdown prikazan na vrhu foruma.</string>
     <string name="forums_banner_placeholder">Dobro došli na ovaj forum…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Opasna zona</string>
     <string name="forums_settings_delete_message">Ovo će trajno izbrisati forum i sve njegove objave. Ovo se ne može poništiti.</string>
 
+    <string name="forums_tag_interest_up">Pojačaj interes</string>
+    <string name="forums_tag_interest_down">Smanji interes</string>
+    <string name="forums_tag_interest_remove">Ukloni interes</string>
+    <string name="forums_list_default_sort">Zadano sortiranje</string>
+    <string name="forums_access_tab_users">Korisnici</string>
+    <string name="forums_access_tab_groups">Grupe</string>
+    <string name="forums_access_tab_manual">Ručno</string>
+    <string name="forums_access_search_users">Pretraži korisnike</string>
+    <string name="forums_access_no_groups">Nema dostupnih grupa</string>
 </resources>

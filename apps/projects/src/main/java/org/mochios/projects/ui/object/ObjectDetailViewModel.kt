@@ -211,19 +211,9 @@ class ObjectDetailViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(selectedTab = index)
     }
 
-    // ---- Title ----
-
-    fun updateTitle(title: String) {
-        val obj = _uiState.value.obj ?: return
-        _uiState.value = _uiState.value.copy(
-            obj = obj.copy(readable = title)
-        )
-        scheduleSave("title") {
-            repository.updateObject(currentProjectId, currentObjectId, title = title)
-        }
-    }
-
     // ---- Values ----
+    // (The title is just the class's title field — edited via setValue below,
+    // the same as web. There is no separate title-update path.)
 
     fun setValue(fieldId: String, value: String) {
         val obj = _uiState.value.obj ?: return

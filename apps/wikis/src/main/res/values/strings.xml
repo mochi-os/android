@@ -248,6 +248,9 @@
     <string name="wikis_changes_subtitle">Recent edits across all pages in this wiki.</string>
     <string name="wikis_changes_empty">No changes yet</string>
 
+    <!-- Pagination -->
+    <string name="wikis_load_more">Load more</string>
+
     <!-- Wiki content search screen -->
     <string name="wikis_search_title">Search</string>
     <string name="wikis_search_pages_placeholder">Search pages by title or content…</string>
@@ -419,6 +422,9 @@
     <string name="wikis_access_level_view">View only</string>
     <string name="wikis_access_level_none">No access</string>
     <string name="wikis_access_owner_label">Owner</string>
+    <string name="wikis_access_subject_anyone">Anyone</string>
+    <string name="wikis_access_subject_authenticated">Authenticated users</string>
+    <string name="wikis_access_change_level">Change access level</string>
     <string name="wikis_access_tab_users">Users</string>
     <string name="wikis_access_tab_groups">Groups</string>
     <string name="wikis_access_no_groups">No groups available</string>

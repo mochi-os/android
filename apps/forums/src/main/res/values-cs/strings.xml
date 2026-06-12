@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Cíl</string>
     <string name="forums_access_level_view">Zobrazit</string>
+    <string name="forums_access_level_vote">Hlasovat</string>
     <string name="forums_access_level_comment">Komentář</string>
     <string name="forums_access_level_post">Příspěvek</string>
     <string name="forums_access_level_none">Žádné</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">ID entity, @skupina, * (všichni) nebo + (členové)</string>
     <string name="forums_access_level">Úroveň</string>
     <string name="forums_access_level_moderate">Moderovat</string>
-    <string name="forums_access_level_manage">Spravovat</string>
     <string name="forums_members_search">Filtrovat členy</string>
     <string name="forums_banner_description">Markdown zobrazený v horní části fóra.</string>
     <string name="forums_banner_placeholder">Vítejte na tomto fóru…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Nebezpečná zóna</string>
     <string name="forums_settings_delete_message">Tímto trvale smažete fórum a všechny jeho příspěvky. Tuto akci nelze vrátit zpět.</string>
 
+    <string name="forums_tag_interest_up">Zvýšit zájem</string>
+    <string name="forums_tag_interest_down">Snížit zájem</string>
+    <string name="forums_tag_interest_remove">Odebrat zájem</string>
+    <string name="forums_list_default_sort">Výchozí řazení</string>
+    <string name="forums_access_tab_users">Uživatelé</string>
+    <string name="forums_access_tab_groups">Skupiny</string>
+    <string name="forums_access_tab_manual">Ručně</string>
+    <string name="forums_access_search_users">Hledat uživatele</string>
+    <string name="forums_access_no_groups">Žádné skupiny k dispozici</string>
 </resources>

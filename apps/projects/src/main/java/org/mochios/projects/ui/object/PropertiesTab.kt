@@ -76,6 +76,9 @@ fun PropertiesTab(
     val fields = projectDetails.fields[obj.objectClass] ?: emptyList()
     val classOptions = projectDetails.options[obj.objectClass] ?: emptyMap()
     val canWrite = canWriteAccess(uiState.access)
+    // The title field is rendered editable in the detail header (parity with
+    // web); exclude it here so it isn't shown twice.
+    val titleFieldId = projectDetails.classes.find { it.id == obj.objectClass }?.title
     // "Can this object have children?" — true when at least one class
     // lists obj.objectClass in its allowed parent classes.
     val canHaveChildren = remember(projectDetails.hierarchy, obj.objectClass) {
@@ -109,8 +112,8 @@ fun PropertiesTab(
             Spacer(modifier = Modifier.height(12.dp))
         }
 
-        // Dynamic fields
-        fields.sortedBy { it.rank }.forEach { field ->
+        // Dynamic fields (title is shown in the header, not here)
+        fields.filter { it.id != titleFieldId }.sortedBy { it.rank }.forEach { field ->
             FieldEditor(
                 field = field,
                 value = obj.values[field.id],
@@ -176,7 +179,7 @@ fun PropertiesTab(
     }
 }
 
-private fun canWriteAccess(access: String): Boolean =
+internal fun canWriteAccess(access: String): Boolean =
     access == "owner" || access == "design" || access == "write"
 
 private fun collectDescendants(objects: List<ProjectObject>, rootId: String): Set<String> {
@@ -294,7 +297,7 @@ private fun ParentPicker(
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
-private fun FieldEditor(
+internal fun FieldEditor(
     field: ProjectField,
     value: Any?,
     options: List<FieldOption>,

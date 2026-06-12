@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">റാങ്കിംഗ് / സ്കോറിംഗ്</string>
     <string name="feeds_ai_prompt_credibility">വിശ്വാസ്യതാ വിലയിരുത്തൽ</string>
 
+    <string name="feeds_refresh">റീഫണ്ട് തുക ഓർഡർ മൊത്തത്തെ കവിയുന്നു</string>
+    <string name="feeds_interest_boosted">താൽപ്പര്യം വർദ്ധിപ്പിച്ചു</string>
+    <string name="feeds_interest_reduced">താൽപ്പര്യം കുറച്ചു</string>
+    <string name="feeds_interest_removed">താൽപ്പര്യം നീക്കം ചെയ്തു</string>
+    <string name="feeds_interest_failed">താൽപ്പര്യം ക്രമീകരിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
 </resources>

@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Šis kodas neteisingas arba nebegalioja.</string>
     <string name="stepup_error_passkey">Slaptarakčio patvirtinimas nepavyko. Bandykite dar kartą.</string>
     <string name="stepup_error_oauth">Nepavyko patvirtinti su ta paskyra. Bandykite dar kartą.</string>
+    <string name="game_system_resign">%1$s pasidavė</string>
+    <string name="game_system_draw_offer">%1$s pasiūlė lygiąsias</string>
+    <string name="game_system_draw_accept">Sutarta dėl lygiųjų</string>
+    <string name="game_system_draw_decline">%1$s atmetė lygiąsias</string>
+    <string name="reactivation_title">Jūsų paskyrą numatyta ištrinti</string>
+    <string name="reactivation_body">Jūsų paskyrą numatyta ištrinti. Galite atšaukti ir dabar atkurti visą prieigą.</string>
+    <string name="reactivation_body_dated">Jūsų paskyra ir visi jos duomenys bus visam laikui ištrinti %1$s. Galite atšaukti ir dabar atkurti visą prieigą.</string>
+    <string name="reactivation_reactivate">Vėl suaktyvinti mano paskyrą</string>
+    <string name="reactivation_sign_out">Tęsti uždarymą ir atsijungti</string>
 </resources>

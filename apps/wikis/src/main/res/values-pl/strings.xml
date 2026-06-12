@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Ostatnia synchronizacja: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">To zatrzyma wysyłanie aktualizacji do „%1$s\". Mogą replikować ponownie, jeśli chcą.</string>
     <string name="wikis_replicas_removed_success">Replika usunięta</string>
+    <string name="wikis_load_more">Załaduj więcej</string>
+    <string name="wikis_access_change_level">Poziom dostępu</string>
+    <string name="wikis_access_subject_anyone">Każdy</string>
+    <string name="wikis_access_subject_authenticated">Uwierzytelnieni użytkownicy</string>
 
 </resources>

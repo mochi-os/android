@@ -115,7 +115,13 @@ fun DomainsScreen(
                             details = state.details[domain.domain],
                             isLoadingDetails = state.loadingDetails.contains(domain.domain),
                             isAdmin = state.isAdmin,
+                            apps = state.apps,
+                            entities = state.entities,
+                            userResults = state.userResults,
                             onExpand = { viewModel.loadDetails(domain.domain) },
+                            onLoadRouteTargets = { viewModel.loadRouteTargets() },
+                            onUserSearch = { viewModel.searchUsers(it) },
+                            onClearUserResults = { viewModel.clearUserResults() },
                             onVerify = { viewModel.verifyDomain(domain.domain) },
                             onTls = { viewModel.setTls(domain.domain, it) },
                             onDelete = { viewModel.deleteDomain(domain.domain) },
@@ -156,15 +162,21 @@ private fun DomainCard(
     details: DomainDetailsData?,
     isLoadingDetails: Boolean,
     isAdmin: Boolean,
+    apps: List<org.mochios.settings.api.RouteApp>,
+    entities: List<org.mochios.settings.api.RouteEntity>,
+    userResults: List<org.mochios.settings.api.UserSearchResult>,
     onExpand: () -> Unit,
+    onLoadRouteTargets: () -> Unit,
+    onUserSearch: (String) -> Unit,
+    onClearUserResults: () -> Unit,
     onVerify: () -> Unit,
     onTls: (Boolean) -> Unit,
     onDelete: () -> Unit,
     onRouteCreate: (path: String, method: String, target: String, priority: Int) -> Unit,
     onRouteUpdate: (path: String, method: String, target: String, priority: Int, enabled: Boolean) -> Unit,
     onRouteDelete: (path: String) -> Unit,
-    onDelegationCreate: (path: String, owner: Long) -> Unit,
-    onDelegationDelete: (path: String, owner: Long) -> Unit,
+    onDelegationCreate: (path: String, owner: String) -> Unit,
+    onDelegationDelete: (path: String, owner: String) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
     var showDeleteDomain by remember { mutableStateOf(false) }
@@ -242,7 +254,7 @@ private fun DomainCard(
                             fontWeight = FontWeight.SemiBold,
                             modifier = Modifier.weight(1f),
                         )
-                        OutlinedButton(onClick = { showAddRoute = true }) {
+                        OutlinedButton(onClick = { onLoadRouteTargets(); showAddRoute = true }) {
                             Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
                             Spacer(Modifier.width(4.dp))
                             Text(stringResource(R.string.route_add))
@@ -260,7 +272,7 @@ private fun DomainCard(
                         details.routes.forEach { route ->
                             RouteRow(
                                 route = route,
-                                onEdit = { editRoute = route },
+                                onEdit = { onLoadRouteTargets(); editRoute = route },
                                 onDelete = { onRouteDelete(route.path) },
                             )
                         }
@@ -339,6 +351,8 @@ private fun DomainCard(
     if (showAddRoute) {
         RouteDialog(
             initial = null,
+            apps = apps,
+            entities = entities,
             onDismiss = { showAddRoute = false },
             onConfirm = { path, method, target, priority, _ ->
                 showAddRoute = false
@@ -349,6 +363,8 @@ private fun DomainCard(
     editRoute?.let { route ->
         RouteDialog(
             initial = route,
+            apps = apps,
+            entities = entities,
             onDismiss = { editRoute = null },
             onConfirm = { _, method, target, priority, enabled ->
                 editRoute = null
@@ -358,8 +374,11 @@ private fun DomainCard(
     }
     if (showAddDelegation) {
         DelegationDialog(
-            onDismiss = { showAddDelegation = false },
+            userResults = userResults,
+            onSearch = onUserSearch,
+            onDismiss = { onClearUserResults(); showAddDelegation = false },
             onConfirm = { path, owner ->
+                onClearUserResults()
                 showAddDelegation = false
                 onDelegationCreate(path, owner)
             },
@@ -521,6 +540,8 @@ private fun AddDomainDialog(onConfirm: (String) -> Unit, onDismiss: () -> Unit) 
 @Composable
 private fun RouteDialog(
     initial: Route?,
+    apps: List<org.mochios.settings.api.RouteApp>,
+    entities: List<org.mochios.settings.api.RouteEntity>,
     onDismiss: () -> Unit,
     onConfirm: (path: String, method: String, target: String, priority: Int, enabled: Boolean) -> Unit,
 ) {
@@ -547,13 +568,30 @@ private fun RouteDialog(
                 Spacer(Modifier.height(8.dp))
                 MethodPicker(method, onChange = { method = it; target = "" })
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
-                    value = target,
-                    onValueChange = { target = it },
-                    singleLine = true,
-                    label = { Text(stringResource(R.string.route_target)) },
-                    modifier = Modifier.fillMaxWidth(),
-                )
+                // App and entity targets pick from the server-provided lists so
+                // the user never types a raw id; redirect targets stay free-text
+                // (an arbitrary URL).
+                when (method) {
+                    "app" -> TargetPicker(
+                        label = stringResource(R.string.route_target_app),
+                        selectedLabel = apps.firstOrNull { it.id == target }?.name,
+                        options = apps.map { it.id to it.name },
+                        onSelect = { target = it },
+                    )
+                    "entity" -> TargetPicker(
+                        label = stringResource(R.string.route_target_entity),
+                        selectedLabel = entities.firstOrNull { it.id == target }?.name,
+                        options = entities.map { it.id to it.name },
+                        onSelect = { target = it },
+                    )
+                    else -> OutlinedTextField(
+                        value = target,
+                        onValueChange = { target = it },
+                        singleLine = true,
+                        label = { Text(stringResource(R.string.route_target_url)) },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
                 Spacer(Modifier.height(8.dp))
                 OutlinedTextField(
                     value = priority,
@@ -617,25 +655,89 @@ private fun MethodPicker(value: String, onChange: (String) -> Unit) {
     }
 }
 
+/**
+ * A dropdown that selects a route target from a server-provided list (apps or
+ * entities), so the user picks a name rather than typing a raw id. Falls back to
+ * a disabled-looking prompt when nothing is selected.
+ */
+@Composable
+private fun TargetPicker(
+    label: String,
+    selectedLabel: String?,
+    options: List<Pair<String, String>>,
+    onSelect: (String) -> Unit,
+) {
+    var open by remember { mutableStateOf(false) }
+    Box {
+        OutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
+            Text(label + ": " + (selectedLabel ?: stringResource(R.string.route_target_select)))
+        }
+        DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            if (options.isEmpty()) {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.route_target_none)) },
+                    onClick = { open = false },
+                    enabled = false,
+                )
+            }
+            options.forEach { (id, name) ->
+                DropdownMenuItem(
+                    text = { Text(name) },
+                    onClick = { onSelect(id); open = false },
+                    trailingIcon = { if (selectedLabel == name) Icon(Icons.Default.Check, null) },
+                )
+            }
+        }
+    }
+}
+
 @Composable
 private fun DelegationDialog(
+    userResults: List<org.mochios.settings.api.UserSearchResult>,
+    onSearch: (String) -> Unit,
     onDismiss: () -> Unit,
-    onConfirm: (path: String, owner: Long) -> Unit,
+    onConfirm: (path: String, owner: String) -> Unit,
 ) {
     var path by remember { mutableStateOf("") }
-    var owner by remember { mutableStateOf("") }
+    var query by remember { mutableStateOf("") }
+    // The picked user: null until a search result is tapped. Selecting clears the
+    // dropdown; editing the query again re-opens the search.
+    var selected by remember { mutableStateOf<org.mochios.settings.api.UserSearchResult?>(null) }
+
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.domain_delegation_add_title)) },
         text = {
             Column {
                 OutlinedTextField(
-                    value = owner,
-                    onValueChange = { owner = it.filter(Char::isDigit) },
+                    value = query,
+                    onValueChange = {
+                        query = it
+                        selected = null
+                        onSearch(it)
+                    },
                     singleLine = true,
                     label = { Text(stringResource(R.string.domain_delegation_user)) },
                     modifier = Modifier.fillMaxWidth(),
                 )
+                // Show matches while the user is typing and hasn't picked one yet.
+                if (selected == null && userResults.isNotEmpty()) {
+                    Spacer(Modifier.height(4.dp))
+                    userResults.forEach { user ->
+                        TextButton(
+                            onClick = {
+                                selected = user
+                                query = user.username
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            Text(
+                                text = user.username,
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
+                    }
+                }
                 Spacer(Modifier.height(8.dp))
                 OutlinedTextField(
                     value = path,
@@ -649,10 +751,10 @@ private fun DelegationDialog(
         confirmButton = {
             TextButton(
                 onClick = {
-                    val id = owner.toLongOrNull() ?: return@TextButton
-                    onConfirm(path.trim(), id)
+                    val uid = selected?.uid ?: return@TextButton
+                    onConfirm(path.trim(), uid)
                 },
-                enabled = owner.toLongOrNull() != null,
+                enabled = selected != null,
             ) { Text(stringResource(R.string.domain_delegation_add)) }
         },
         dismissButton = {

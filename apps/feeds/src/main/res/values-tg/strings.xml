@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Рейтинг / арзёбӣ</string>
     <string name="feeds_ai_prompt_credibility">Арзёбии эътимоднокӣ</string>
 
+    <string name="feeds_refresh">Нав кардан</string>
+    <string name="feeds_interest_boosted">Шавқ зиёд карда шуд</string>
+    <string name="feeds_interest_reduced">Шавқ кам карда шуд</string>
+    <string name="feeds_interest_removed">Шавқ бартараф карда шуд</string>
+    <string name="feeds_interest_failed">Танзими шавқ ба анҷом нарасид</string>
 </resources>

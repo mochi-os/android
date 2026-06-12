@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Lengo</string>
     <string name="forums_access_level_view">Tazama</string>
+    <string name="forums_access_level_vote">Piga kura</string>
     <string name="forums_access_level_comment">Maoni</string>
     <string name="forums_access_level_post">Chapisho</string>
     <string name="forums_access_level_none">Hakuna</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Kitambulisho cha huluki, @kikundi, * (kila mtu), au + (wanachama)</string>
     <string name="forums_access_level">Kiwango</string>
     <string name="forums_access_level_moderate">Simamia</string>
-    <string name="forums_access_level_manage">Dhibiti</string>
     <string name="forums_members_search">Chuja wanachama</string>
     <string name="forums_banner_description">Markdown inayoonyeshwa juu ya jukwaa.</string>
     <string name="forums_banner_placeholder">Karibu kwenye jukwaa hili…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Eneo la hatari</string>
     <string name="forums_settings_delete_message">Hii itafuta jukwaa na machapisho yake yote kabisa. Hili haliwezi kutenduliwa.</string>
 
+    <string name="forums_tag_interest_up">Ongeza mvuto</string>
+    <string name="forums_tag_interest_down">Punguza shauku</string>
+    <string name="forums_tag_interest_remove">Ondoa shauku</string>
+    <string name="forums_list_default_sort">Mpangilio chaguo-msingi</string>
+    <string name="forums_access_tab_users">Watumiaji</string>
+    <string name="forums_access_tab_groups">Vikundi</string>
+    <string name="forums_access_tab_manual">Mwongozo</string>
+    <string name="forums_access_search_users">Tafuta watumiaji</string>
+    <string name="forums_access_no_groups">Hakuna vikundi vinavyopatikana</string>
 </resources>

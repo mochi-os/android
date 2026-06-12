@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Mã đó không đúng hoặc đã hết hạn.</string>
     <string name="stepup_error_passkey">Xác minh mã khóa không thành công. Vui lòng thử lại.</string>
     <string name="stepup_error_oauth">Không thể xác minh bằng tài khoản đó. Vui lòng thử lại.</string>
+    <string name="game_system_resign">%1$s đã xin thua</string>
+    <string name="game_system_draw_offer">%1$s đã đề nghị hòa</string>
+    <string name="game_system_draw_accept">Đã đồng ý hòa</string>
+    <string name="game_system_draw_decline">%1$s đã từ chối hòa</string>
+    <string name="reactivation_title">Tài khoản của bạn được lên lịch xóa</string>
+    <string name="reactivation_body">Tài khoản của bạn được lên lịch xóa. Bạn có thể hủy và khôi phục toàn bộ quyền truy cập ngay bây giờ.</string>
+    <string name="reactivation_body_dated">Tài khoản của bạn và toàn bộ dữ liệu của nó sẽ bị xóa vĩnh viễn vào %1$s. Bạn có thể hủy và khôi phục toàn bộ quyền truy cập ngay bây giờ.</string>
+    <string name="reactivation_reactivate">Kích hoạt lại tài khoản của tôi</string>
+    <string name="reactivation_sign_out">Tiếp tục đóng và đăng xuất</string>
 </resources>

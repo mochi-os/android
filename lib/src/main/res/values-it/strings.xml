@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Il codice non è corretto o è scaduto.</string>
     <string name="stepup_error_passkey">Verifica della passkey non riuscita. Riprova.</string>
     <string name="stepup_error_oauth">Impossibile verificare con quell\'account. Riprova.</string>
+    <string name="game_system_resign">%1$s ha abbandonato</string>
+    <string name="game_system_draw_offer">%1$s ha proposto la patta</string>
+    <string name="game_system_draw_accept">Patta concordata</string>
+    <string name="game_system_draw_decline">%1$s ha rifiutato la patta</string>
+    <string name="reactivation_title">L\'eliminazione del tuo account è programmata</string>
+    <string name="reactivation_body">L\'eliminazione del tuo account è programmata. Puoi annullare e ripristinare l\'accesso completo ora.</string>
+    <string name="reactivation_body_dated">Il tuo account e tutti i suoi dati verranno eliminati definitivamente il %1$s. Puoi annullare e ripristinare l\'accesso completo ora.</string>
+    <string name="reactivation_reactivate">Riattiva il mio account</string>
+    <string name="reactivation_sign_out">Continua la chiusura ed esci</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">Tolak</string>
     <string name="replication_hosts_title">Host kula</string>
     <string name="replication_hosts_empty_hint">Kanggo replikasi menyang server liyane, daftar akun ing kana lan gunakake opsi \"Replikasi akun sing ana\".</string>
-    <string name="replication_remove">Busak host</string>
-    <string name="replication_remove_title">Busak host?</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="system_replication_title">Replikasi</string>
     <string name="system_replication_this_server">Server iki</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Ora tau</string>
     <string name="replication_hosts_empty">Akun iki mung ana ing server iki.</string>
     <string name="replication_added">Ditambah %1$s</string>
-    <string name="replication_remove_message">Server iki bakal mandheg replikasi akun sampeyan menyang host kasebut.</string>
     <string name="settings_home_system_replication">Replikasi (server)</string>
     <string name="system_replication_pair_empty_hint">Pair karo server liyane sing baru diinstal nggunakake \"mochictl replica join &lt;existing-peer-id&gt;\" ing server anyar.</string>
     <string name="route_delete_message">Iki bakal mbusak rute kanggo path \"%1$s\".</string>
@@ -386,4 +383,28 @@
     <string name="login_method_totp">App authenticator</string>
     <string name="login_method_oauth">Login pihak katelu</string>
     <string name="login_method_recovery">Kode pemulihan</string>
+    <string name="account_close_section">Tutup akun</string>
+    <string name="account_close_action">Tutup akun</string>
+    <string name="account_close_confirm_title">Tutup akun panjenengan?</string>
+    <string name="account_close_confirm_body">Akun panjenengan bakal dijadwalake kanggo dibusak lan panjenengan bakal metu. Panjenengan bisa mbatalake kapan wae sadurunge tanggal pambusakan kanthi mlebu maneh.</string>
+    <string name="account_data_download">Download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entitas</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Data sampeyan</string>
+    <string name="account_data_dialog_title">Unduh data sampeyan</string>
+    <string name="account_data_dialog_body">Iki cadangan lengkap sing bisa sampeyan pulihake ing server iki utawa server Mochi liyane. Verifikasi yen iki sampeyan kanggo nerusake.</string>
+    <string name="account_data_passphrase">Frasa sandi</string>
+    <string name="account_data_passphrase_hint">Kunci pribadi sampeyan kalebu, dienkripsi nganggo frasa sandhi iki. Simpen kanthi aman. Sampeyan bakal butuh kanggo mulihake.</string>
+    <string name="replication_hosts_subtitle">Server liyané sing uga nyimpen salinan akun sampéyan. Kanggo mbusak salah siji, mlebua ing server kuwi lan gunakaké \"Busak akunku saka server iki\".</string>
+    <string name="replication_irreparable">Ora bisa didandani</string>
+    <string name="replication_leave">Busak akunku saka server iki</string>
+    <string name="replication_leave_title">Busak akun sampéyan saka server iki?</string>
+    <string name="replication_leave_message">Data akun sampéyan ing server iki bakal dibusak kanthi permanèn lan sampéyan bakal metu saka kéné. Akun sampéyan tetep ana ing server liyané, lan sampéyan bisa nambahaké server iki manèh mengko.</string>
+    <string name="replication_leave_confirm">Cabut</string>
+    <string name="replication_forget">Lalèkaké host sing ora bisa diakses iki</string>
+    <string name="replication_forget_title">Lalèkaké host sing ora bisa diakses iki?</string>
+    <string name="replication_forget_message">Iki bakal dibusak saka set replika sampéyan lan dikongkon mbusak salinané nalika nyambung manèh. Kanggo mbusak server sing bisa diakses, mlebua ing kana lan gunakaké \"Busak akunku saka server iki\". Verifikasi yèn iki sampéyan kanggo nerusaké.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Lalèkna</string>
 </resources>

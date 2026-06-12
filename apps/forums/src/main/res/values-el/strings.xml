@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Στόχος</string>
     <string name="forums_access_level_view">Προβολή</string>
+    <string name="forums_access_level_vote">Ψήφος</string>
     <string name="forums_access_level_comment">Σχόλιο</string>
     <string name="forums_access_level_post">Ανάρτηση</string>
     <string name="forums_access_level_none">Κανένα</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">Αναγνωριστικό οντότητας, @ομάδα, * (όλοι) ή + (μέλη)</string>
     <string name="forums_access_level">Επίπεδο</string>
     <string name="forums_access_level_moderate">Συντονισμός</string>
-    <string name="forums_access_level_manage">Διαχείριση</string>
     <string name="forums_members_search">Φιλτράρισμα μελών</string>
     <string name="forums_banner_description">Markdown που εμφανίζεται στην κορυφή του φόρουμ.</string>
     <string name="forums_banner_placeholder">Καλώς ορίσατε σε αυτό το φόρουμ…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Ζώνη κινδύνου</string>
     <string name="forums_settings_delete_message">Αυτό θα διαγράψει οριστικά το φόρουμ και όλες τις αναρτήσεις του. Η ενέργεια αυτή δεν μπορεί να αναιρεθεί.</string>
 
+    <string name="forums_tag_interest_up">Ενίσχυση ενδιαφέροντος</string>
+    <string name="forums_tag_interest_down">Μείωση ενδιαφέροντος</string>
+    <string name="forums_tag_interest_remove">Αφαίρεση ενδιαφέροντος</string>
+    <string name="forums_list_default_sort">Προεπιλεγμένη ταξινόμηση</string>
+    <string name="forums_access_tab_users">Χρήστες</string>
+    <string name="forums_access_tab_groups">Ομάδες</string>
+    <string name="forums_access_tab_manual">Χειροκίνητο</string>
+    <string name="forums_access_search_users">Αναζήτηση χρηστών</string>
+    <string name="forums_access_no_groups">Δεν υπάρχουν διαθέσιμες ομάδες</string>
 </resources>

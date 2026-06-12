@@ -16,6 +16,8 @@ import org.mochios.settings.api.ReplicationApi
 import org.mochios.settings.api.ReplicationData
 import org.mochios.settings.api.ReplicationHost
 import org.mochios.settings.api.ReplicationLink
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -30,15 +32,27 @@ data class ReplicationUiState(
 
 sealed class ReplicationEvent {
     data class Copied(val success: Boolean) : ReplicationEvent()
+
+    /** The account was removed from this server; the screen signs out. */
+    data object Left : ReplicationEvent()
 }
 
 @HiltViewModel
 class ReplicationViewModel @Inject constructor(
     private val api: ReplicationApi,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ReplicationUiState())
     val uiState: StateFlow<ReplicationUiState> = _uiState.asStateFlow()
+
+    /** Step-up gate: approving a link replicates the user's private keys to
+     *  the peer, so the user re-verifies their login factor(s) first. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.value = _uiState.value.copy(error = e.toMochiError()) },
+    )
 
     private val _events = MutableSharedFlow<ReplicationEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<ReplicationEvent> = _events.asSharedFlow()
@@ -63,9 +77,36 @@ class ReplicationViewModel @Inject constructor(
         }
     }
 
-    fun approve(peer: String) = mutate { api.approveLink(peer).bodyOrThrow() }
+    fun approve(peer: String) = stepUp.request { token ->
+        try {
+            api.approveLink(peer, token).bodyOrThrow()
+            refresh()
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = e.toMochiError())
+        }
+    }
     fun deny(peer: String) = mutate { api.denyLink(peer).bodyOrThrow() }
-    fun remove(peer: String) = mutate { api.removeHost(peer).bodyOrThrow() }
+
+    /** Advanced: forget an unreachable host. Step-up gated. */
+    fun remove(peer: String) = stepUp.request { token ->
+        try {
+            api.removeHost(peer, token).bodyOrThrow()
+            refresh()
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = e.toMochiError())
+        }
+    }
+
+    /** Remove the account from THIS server. Step-up gated; on success the
+     *  screen signs out (this server's copy, and its sessions, are gone). */
+    fun leave() = stepUp.request { token ->
+        try {
+            api.leave(token).bodyOrThrow()
+            _events.emit(ReplicationEvent.Left)
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = e.toMochiError())
+        }
+    }
 
     fun reportCopied(success: Boolean) {
         viewModelScope.launch { _events.emit(ReplicationEvent.Copied(success)) }

@@ -188,7 +188,7 @@ private fun CategoriesList(
     onTest: (NotifCategory) -> Unit,
     onToggleDest: (NotifCategory, DestinationRow, Boolean) -> Unit,
 ) {
-    val visible = categories.filter { it.id != 0 }
+    val visible = categories.filter { it.id != "0" }
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -301,7 +301,7 @@ private fun DestinationRows(
 private fun TopicsList(
     topics: List<NotifTopic>,
     categories: List<NotifCategory>,
-    onSetCategory: (NotifTopic, Int?) -> Unit,
+    onSetCategory: (NotifTopic, String?) -> Unit,
     onRemove: (NotifTopic) -> Unit,
 ) {
     if (topics.isEmpty()) {
@@ -318,7 +318,7 @@ private fun TopicsList(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        items(topics, key = { it.id }) { topic ->
+        items(topics, key = { "${it.app}/${it.topic}/${it.`object`}" }) { topic ->
             TopicRow(topic = topic, categories = categories, onSetCategory = onSetCategory, onRemove = onRemove)
         }
     }
@@ -328,7 +328,7 @@ private fun TopicsList(
 private fun TopicRow(
     topic: NotifTopic,
     categories: List<NotifCategory>,
-    onSetCategory: (NotifTopic, Int?) -> Unit,
+    onSetCategory: (NotifTopic, String?) -> Unit,
     onRemove: (NotifTopic) -> Unit,
 ) {
     var menu by remember { mutableStateOf(false) }
@@ -423,10 +423,10 @@ private fun DeleteCategoryDialog(
     category: NotifCategory,
     others: List<NotifCategory>,
     onDismiss: () -> Unit,
-    onConfirm: (Int) -> Unit,
+    onConfirm: (String) -> Unit,
 ) {
-    val preferred = others.firstOrNull { it.default == 1 } ?: others.firstOrNull { it.id != 0 } ?: others.firstOrNull()
-    var target by remember { mutableStateOf(preferred?.id ?: 0) }
+    val preferred = others.firstOrNull { it.default == 1 } ?: others.firstOrNull { it.id != "0" } ?: others.firstOrNull()
+    var target by remember { mutableStateOf(preferred?.id ?: "0") }
     var menu by remember { mutableStateOf(false) }
     AlertDialog(
         onDismissRequest = onDismiss,

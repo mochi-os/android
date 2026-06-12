@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">র‍্যাঙ্কিং / স্কোরিং</string>
     <string name="feeds_ai_prompt_credibility">বিশ্বাসযোগ্যতা মূল্যায়ন</string>
 
+    <string name="feeds_refresh">রিফ্রেশ</string>
+    <string name="feeds_interest_boosted">আগ্রহ বাড়ানো হয়েছে</string>
+    <string name="feeds_interest_reduced">আগ্রহ কমানো হয়েছে</string>
+    <string name="feeds_interest_removed">আগ্রহ সরানো হয়েছে</string>
+    <string name="feeds_interest_failed">আগ্রহ সামঞ্জস্য করতে ব্যর্থ</string>
 </resources>

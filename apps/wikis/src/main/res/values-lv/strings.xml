@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Pēdējā sinhronizācija: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Tas apturēs atjauninājumu sūtīšanu uz „%1$s\". Viņi var atkārtoti replicēt, ja vēlas.</string>
     <string name="wikis_replicas_removed_success">Replikācija noņemta</string>
+    <string name="wikis_load_more">Ielādēt vairāk</string>
+    <string name="wikis_access_change_level">Piekļuves līmenis</string>
+    <string name="wikis_access_subject_anyone">Jebkurš</string>
+    <string name="wikis_access_subject_authenticated">Autentificēti lietotāji</string>
 
 </resources>

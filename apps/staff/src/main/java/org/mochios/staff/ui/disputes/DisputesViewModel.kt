@@ -162,14 +162,14 @@ class DisputesViewModel @Inject constructor(
      *   - amount <= dispute.total (rejected via [DisputesEvent.RefundExceedsTotal]).
      */
     fun reviewDispute(
+        status: String,
         resolution: String,
-        notes: String,
         refundAmountMinor: Long?,
     ) {
         val current = _state.value.reviewDialog ?: return
         if (_state.value.submitting) return
 
-        if (resolution == "resolved_buyer" && refundAmountMinor != null) {
+        if (status == "resolved_buyer" && refundAmountMinor != null) {
             if (refundAmountMinor <= 0) {
                 _events.tryEmit(DisputesEvent.RefundMustBePositive)
                 return
@@ -185,8 +185,8 @@ class DisputesViewModel @Inject constructor(
             try {
                 repository.reviewDispute(
                     id = current.id.toInt(),
-                    resolution = resolution,
-                    notes = notes.takeIf { it.isNotBlank() },
+                    status = status,
+                    resolution = resolution.takeIf { it.isNotBlank() },
                     refundAmount = refundAmountMinor,
                 )
                 val before = _state.value.disputes

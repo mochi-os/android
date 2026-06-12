@@ -55,6 +55,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.settings.R
 import org.mochios.settings.api.ApiToken
+import org.mochios.settings.ui.login.StepUpHost
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -131,6 +132,8 @@ fun TokensScreen(
             onDone = viewModel::acknowledgeNewToken,
         )
     }
+
+    StepUpHost(viewModel.stepUp)
 }
 
 @Composable

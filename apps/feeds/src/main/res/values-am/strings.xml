@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">ደረጃ አሰጣጥ / ነጥብ አሰጣጥ</string>
     <string name="feeds_ai_prompt_credibility">የተአማኒነት ግምገማ</string>
 
+    <string name="feeds_refresh">አድስ</string>
+    <string name="feeds_interest_boosted">ፍላጎት ተጨምሯል</string>
+    <string name="feeds_interest_reduced">ፍላጎት ቀንሷል</string>
+    <string name="feeds_interest_removed">ፍላጎት ተወግዷል</string>
+    <string name="feeds_interest_failed">ፍላጎትን ማስተካከል አልተሳካም</string>
 </resources>

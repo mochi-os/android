@@ -13,4 +13,7 @@ data class Change(
 
 data class ChangesResponse(
     val changes: List<Change> = emptyList(),
+    val total: Int = 0,
+    val limit: Int = 0,
+    val offset: Int = 0,
 )

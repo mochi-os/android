@@ -183,6 +183,25 @@ fun ObjectDetailSheet(
                         }
                     }
 
+                    // Editable title in the header (parity with web), backed by
+                    // the class's title field. Hidden from the Properties tab.
+                    val titleField = crmDetails.fields[obj.objectClass]
+                        ?.find { it.id == objClass?.title }
+                    if (titleField != null) {
+                        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+                            FieldEditor(
+                                field = titleField,
+                                value = obj.values[titleField.id],
+                                options = emptyList(),
+                                canWrite = canWriteAccess(uiState.access),
+                                people = uiState.people,
+                                onValueChange = { viewModel.setValue(titleField.id, it) },
+                                onMultiValueChange = { viewModel.setMultiValue(titleField.id, it) },
+                                onSearchUsers = { query -> viewModel.searchPeople(query) }
+                            )
+                        }
+                    }
+
                     Spacer(modifier = Modifier.height(8.dp))
 
                     SaveStatusIndicator(

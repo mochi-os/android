@@ -56,8 +56,6 @@
     <string name="replication_deny">رد ڪريو</string>
     <string name="replication_hosts_title">منهنجا ميزبان</string>
     <string name="replication_hosts_empty_hint">ان کي ٻئي سرور تي نقل ڪرڻ لاءِ، اتي اڪائونٽ لاءِ سائن اپ ڪريو ۽ \"موجوده اڪائونٽ کي نقل ڪريو\" آپشن استعمال ڪريو.</string>
-    <string name="replication_remove">ميزبان هٽايو</string>
-    <string name="replication_remove_title">ميزبان هٽايو؟</string>
     <string name="settings_home_section_system">سسٽم</string>
     <string name="system_replication_title">نقل</string>
     <string name="system_replication_this_server">هي سرور</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">ڪڏهن به نه</string>
     <string name="replication_hosts_empty">هي اڪائونٽ صرف هن سرور تي آهي.</string>
     <string name="replication_added">شامل ڪيو ويو %1$s</string>
-    <string name="replication_remove_message">هي سرور اوهان جي اڪائونٽ کي ان ميزبان ڏانهن نقل ڪرڻ بند ڪندو.</string>
     <string name="settings_home_system_replication">نقل (سرور)</string>
     <string name="system_replication_pair_empty_hint">نئين سرور تي \"mochictl replica join &lt;existing-peer-id&gt;\" استعمال ڪندي ٻيو نئون نصب ٿيل سرور سان جوڙيو.</string>
     <string name="route_delete_message">هي رستي \"%1$s\" لاء روٽ هٽائيندو.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator ايپ</string>
     <string name="login_method_oauth">ٽئين پارٽي لاگ ان</string>
     <string name="login_method_recovery">بحالي ڪوڊ</string>
+    <string name="account_close_section">اڪائونٽ بند ڪريو</string>
+    <string name="account_close_action">اڪائونٽ بند ڪريو</string>
+    <string name="account_close_confirm_title">پنهنجو اڪائونٽ بند ڪجي؟</string>
+    <string name="account_close_confirm_body">توهان جو اڪائونٽ ختم ڪرڻ لاءِ مقرر ڪيو ويندو ۽ توهان کي سائن آئوٽ ڪيو ويندو. توهان ختم ٿيڻ جي تاريخ کان اڳ ڪنهن به وقت ٻيهر لاگ ان ڪري ان کي منسوخ ڪري سگهو ٿا.</string>
+    <string name="account_data_download">ڊائون لوڊ</string>
+    <string name="route_target_app">ايپ</string>
+    <string name="route_target_entity">اينٽٽي</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">توهان جي ڊيٽا</string>
+    <string name="account_data_dialog_title">پنهنجو ڊيٽا ڊائونلوڊ ڪريو</string>
+    <string name="account_data_dialog_body">هي هڪ مڪمل بئڪ اپ آهي جنهن کي توهان هن يا ڪنهن ٻئي Mochi سرور تي بحال ڪري سگهو ٿا. جاري رکڻ لاءِ تصديق ڪريو ته اهو توهان آهيو.</string>
+    <string name="account_data_passphrase">پاس فريز</string>
+    <string name="account_data_passphrase_hint">توهانجون خانگي چابيون شامل آهن، هن پاسفريز سان انڪرپٽ ٿيل آهن. ان کي محفوظ جڳهه تي رکو. بحال ڪرڻ لاءِ توهان کي ان جي ضرورت هوندي.</string>
+    <string name="replication_hosts_subtitle">ٻيا سرور جيڪي توهان جي اڪائونٽ جي ڪاپي به رکن ٿا. ڪنهن هڪ کي هٽائڻ لاءِ، ان سرور تي سائن ان ڪريو ۽ \"منهنجو اڪائونٽ هن سرور تان هٽايو\" استعمال ڪريو.</string>
+    <string name="replication_irreparable">ناقابل مرمت</string>
+    <string name="replication_leave">منهنجو اڪائونٽ هن سرور تان هٽايو</string>
+    <string name="replication_leave_title">توهان جو اڪائونٽ هن سرور تان هٽايون؟</string>
+    <string name="replication_leave_message">هن سرور تي توهان جي اڪائونٽ جي ڊيٽا مستقل طور تي ختم ڪئي ويندي ۽ توهان کي هتان سائن آئوٽ ڪيو ويندو. توهان جو اڪائونٽ توهان جي ٻين سرورن تي رهندو، ۽ توهان هن کي بعد ۾ ٻيهر شامل ڪري سگھو ٿا.</string>
+    <string name="replication_leave_confirm">هٽايو</string>
+    <string name="replication_forget">هن ناقابلِ رسائي ميزبان کي وساريو</string>
+    <string name="replication_forget_title">هن ناقابلِ رسائي ميزبان کي وساريون؟</string>
+    <string name="replication_forget_message">اهو توهان جي رپليڪا سيٽ تان هٽائي ويندو ۽ ٻيهر ڳنڍجڻ تي ان کي پنهنجي ڪاپي ختم ڪرڻ لاءِ چيو ويندو. ڪنهن رسائي لائق سرور کي هٽائڻ لاءِ، اتي سائن ان ڪريو ۽ \"منهنجو اڪائونٽ هن سرور تان هٽايو\" استعمال ڪريو. جاري رکڻ لاءِ تصديق ڪريو ته اهو توهان آهيو.</string>
+    <string name="replication_offline">آف لائن</string>
+    <string name="replication_forget_confirm">وساري ڇڏيو</string>
 </resources>

@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Ese código é incorrecto ou caducou.</string>
     <string name="stepup_error_passkey">Fallou a verificación da clave de acceso. Téntao de novo.</string>
     <string name="stepup_error_oauth">Non se puido verificar con esa conta. Téntao de novo.</string>
+    <string name="game_system_resign">%1$s abandonou</string>
+    <string name="game_system_draw_offer">%1$s ofreceu táboas</string>
+    <string name="game_system_draw_accept">Táboas acordadas</string>
+    <string name="game_system_draw_decline">%1$s rexeitou as táboas</string>
+    <string name="reactivation_title">A túa conta está programada para a súa eliminación</string>
+    <string name="reactivation_body">A túa conta está programada para a súa eliminación. Podes cancelar e restaurar o acceso completo agora.</string>
+    <string name="reactivation_body_dated">A túa conta e todos os seus datos eliminaranse permanentemente o %1$s. Podes cancelar e restaurar o acceso completo agora.</string>
+    <string name="reactivation_reactivate">Reactivar a miña conta</string>
+    <string name="reactivation_sign_out">Continuar o peche e pechar sesión</string>
 </resources>

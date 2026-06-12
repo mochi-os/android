@@ -116,20 +116,18 @@ data class RemovalCheck(
 )
 
 // ---- Saved --------------------------------------------------------------
-
 /**
- * Result of `saved/list` — the current identity's saved (wishlisted)
- * listings as full [Listing] rows, most-recent-first.
+ * Result of `saved/list`. Mirrors the inline shape in
+ * `apps/market/web/src/api/saved.ts` (`{ saved: Listing[]; total: number }`).
+ * The server stores a full Listing snapshot per saved row, so the list comes
+ * back fully hydrated — no per-id refetch needed.
  */
 data class SavedListResponse(
     val saved: List<Listing> = emptyList(),
     val total: Long = 0,
 )
 
-/**
- * Result of `saved/add` and `saved/remove`. `saved` is the resulting state
- * for the listing (`true` after add, `false` after remove).
- */
+/** Result of `saved/add`, `saved/remove`, `saved/clear`. */
 data class SavedToggleResponse(
     val saved: Boolean = false,
 )

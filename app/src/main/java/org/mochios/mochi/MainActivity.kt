@@ -9,6 +9,8 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.lifecycleScope
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
@@ -22,9 +24,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
@@ -131,6 +135,27 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                     val startApp = targetApp
+                    // While the activity is backgrounded, cover its content
+                    // with the theme background. When it's brought forward to
+                    // launch a different app (this singleTop instance is reused
+                    // via onNewIntent), the OS would otherwise flash the
+                    // previous app's last frame before onNewIntent swaps in the
+                    // new one. Cover on ON_STOP — after the recents snapshot is
+                    // already taken, so the recents thumbnail still shows real
+                    // content — and clear on ON_RESUME, by which point
+                    // onNewIntent has set the new target app.
+                    var backgroundedCover by remember { mutableStateOf(false) }
+                    DisposableEffect(Unit) {
+                        val observer = LifecycleEventObserver { _, event ->
+                            when (event) {
+                                Lifecycle.Event.ON_STOP -> backgroundedCover = true
+                                Lifecycle.Event.ON_RESUME -> backgroundedCover = false
+                                else -> {}
+                            }
+                        }
+                        this@MainActivity.lifecycle.addObserver(observer)
+                        onDispose { this@MainActivity.lifecycle.removeObserver(observer) }
+                    }
                     AppBootstrapHost(
                         appName = startApp ?: "feeds",
                         oauthScheme = "mochi",
@@ -246,6 +271,13 @@ class MainActivity : ComponentActivity() {
                                     marketNavGraph(navController)
                                     staffNavGraph(navController)
                                 }
+                            }
+                            if (backgroundedCover) {
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxSize()
+                                        .background(MaterialTheme.colorScheme.background),
+                                )
                             }
                         }
                     }

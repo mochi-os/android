@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Ҳадаф</string>
     <string name="forums_access_level_view">Намоиш</string>
+    <string name="forums_access_level_vote">Овоз додан</string>
     <string name="forums_access_level_comment">Шарҳ</string>
     <string name="forums_access_level_post">Пост</string>
     <string name="forums_access_level_none">Ҳеҷ кадом</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Идентификатори обйект, @гурӯҳ, * (ҳама), ё + (аъзоён)</string>
     <string name="forums_access_level">Сатҳ</string>
     <string name="forums_access_level_moderate">Модератсия</string>
-    <string name="forums_access_level_manage">Идора</string>
     <string name="forums_members_search">Филтр кардани аъзоён</string>
     <string name="forums_banner_description">Markdown, ки дар болои форум нишон дода мешавад.</string>
     <string name="forums_banner_placeholder">Хуш омадед ба ин форум…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Минтақаи хатарнок</string>
     <string name="forums_settings_delete_message">Ин форум ва ҳамаи паёмҳои онро бебозгашт нест мекунад. Инро баргардонидан мумкин нест.</string>
 
+    <string name="forums_tag_interest_up">Афзоиши таваҷҷуҳ</string>
+    <string name="forums_tag_interest_down">Кам кардани шавқу ҳавас</string>
+    <string name="forums_tag_interest_remove">Хориҷ кардани шавқу ҳавас</string>
+    <string name="forums_list_default_sort">Ҷобаҷогузории пешфарз</string>
+    <string name="forums_access_tab_users">Корбарон</string>
+    <string name="forums_access_tab_groups">Гурӯҳҳо</string>
+    <string name="forums_access_tab_manual">Дастӣ</string>
+    <string name="forums_access_search_users">Ҷустуҷӯи корбарон</string>
+    <string name="forums_access_no_groups">Ягон гурӯҳ дастрас нест</string>
 </resources>

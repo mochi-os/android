@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Мақсат</string>
     <string name="forums_access_level_view">Көру</string>
+    <string name="forums_access_level_vote">Дауыс беру</string>
     <string name="forums_access_level_comment">Пікір</string>
     <string name="forums_access_level_post">Жариялау</string>
     <string name="forums_access_level_none">Жоқ</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Нысан идентификаторы, @топ, * (барлығы) немесе + (мүшелер)</string>
     <string name="forums_access_level">Деңгей</string>
     <string name="forums_access_level_moderate">Модерациялау</string>
-    <string name="forums_access_level_manage">Басқару</string>
     <string name="forums_members_search">Мүшелерді сүзу</string>
     <string name="forums_banner_description">Форумның жоғарғы жағында көрсетілетін Markdown.</string>
     <string name="forums_banner_placeholder">Бұл форумға қош келдіңіз…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Қауіпті аймақ</string>
     <string name="forums_settings_delete_message">Бұл форумды және оның барлық жазбаларын біржола жояды. Мұны қайтару мүмкін емес.</string>
 
+    <string name="forums_tag_interest_up">Қызығушылықты арттыру</string>
+    <string name="forums_tag_interest_down">Қызығушылықты азайту</string>
+    <string name="forums_tag_interest_remove">Қызығушылықты жою</string>
+    <string name="forums_list_default_sort">Әдепкі сұрыптау</string>
+    <string name="forums_access_tab_users">Пайдаланушылар</string>
+    <string name="forums_access_tab_groups">Топтар</string>
+    <string name="forums_access_tab_manual">Қолмен</string>
+    <string name="forums_access_search_users">Қолданушыларды іздеу</string>
+    <string name="forums_access_no_groups">Топтар қолжетімсіз</string>
 </resources>

@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Kode hori okerra da edo iraungi egin da.</string>
     <string name="stepup_error_passkey">Sarbide-gakoaren egiaztapenak huts egin du. Saiatu berriro.</string>
     <string name="stepup_error_oauth">Ezin izan da kontu horrekin egiaztatu. Saiatu berriro.</string>
+    <string name="game_system_resign">%1$s amore eman du</string>
+    <string name="game_system_draw_offer">%1$s(e)k berdinketa eskaini du</string>
+    <string name="game_system_draw_accept">Berdinketa adostuta</string>
+    <string name="game_system_draw_decline">%1$s(e)k berdinketa ukatu du</string>
+    <string name="reactivation_title">Zure kontua ezabatzeko programatuta dago</string>
+    <string name="reactivation_body">Zure kontua ezabatzeko programatuta dago. Orain bertan behera utzi eta sarbide osoa berreskura dezakezu.</string>
+    <string name="reactivation_body_dated">Zure kontua eta bere datu guztiak betiko ezabatuko dira %1$s. Orain bertan behera utzi eta sarbide osoa berreskura dezakezu.</string>
+    <string name="reactivation_reactivate">Berraktibatu nire kontua</string>
+    <string name="reactivation_sign_out">Jarraitu ixten eta amaitu saioa</string>
 </resources>

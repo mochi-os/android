@@ -124,7 +124,7 @@ data class ModerationReport(
     val resolver: String = "",
     @SerializedName("resolver_name") val resolverName: String = "",
     val resolved: Long = 0,
-    val resolution: String = "",
+    @SerializedName("action") val resolution: String = "",
     @SerializedName("content_title") val contentTitle: String = "",
     @SerializedName("content_preview") val contentPreview: String = "",
     val attachments: List<PostAttachment> = emptyList(),

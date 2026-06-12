@@ -56,8 +56,6 @@
     <string name="replication_deny">رد کړئ</string>
     <string name="replication_hosts_title">زما کوربه</string>
     <string name="replication_hosts_empty_hint">د دې لپاره چې دا نورو سرور ته نقل کړئ، هلته د حساب لپاره راجستر شئ او د \"د موجوده حساب نقل کول\" انتخاب وکاروئ.</string>
-    <string name="replication_remove">کوربه لرې کړئ</string>
-    <string name="replication_remove_title">کوربه لرې کړئ؟</string>
     <string name="settings_home_section_system">سیسټم</string>
     <string name="system_replication_title">نقل</string>
     <string name="system_replication_this_server">دا سرور</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">هیڅکله</string>
     <string name="replication_hosts_empty">دا حساب یوازې په دې سرور کې دی.</string>
     <string name="replication_added">اضافه شو %1$s</string>
-    <string name="replication_remove_message">دا سرور به ستاسو حساب په دې کوربه نقل کول ودروي.</string>
     <string name="settings_home_system_replication">نقل (سرور)</string>
     <string name="system_replication_pair_empty_hint">په نوي سرور کې د \"mochictl replica join &lt;existing-peer-id&gt;\" کارولو سره د بل نوي نصب شوي سرور سره جوړ کړئ.</string>
     <string name="route_delete_message">دا به د \"%1$s\" لارې لپاره روټ لرې کړي.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">د Authenticator اپلیکیشن</string>
     <string name="login_method_oauth">د دریمې اړخ ننوتل</string>
     <string name="login_method_recovery">د بیرته راګرځولو کوډونه</string>
+    <string name="account_close_section">حساب وتړئ</string>
+    <string name="account_close_action">حساب وتړئ</string>
+    <string name="account_close_confirm_title">خپل حساب وتړئ؟</string>
+    <string name="account_close_confirm_body">ستاسو حساب به د حذف لپاره وټاکل شي او تاسو به وویستل شئ. تاسو کولی شئ د حذف د نېټې نه مخکې په هر وخت کې بیا ننوتلو سره دا لغوه کړئ.</string>
+    <string name="account_data_download">ډاونلوډ</string>
+    <string name="route_target_app">اپلیکیشن</string>
+    <string name="route_target_entity">موجودیت</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">ستاسو معلومات</string>
+    <string name="account_data_dialog_title">خپل ډاټا ډاونلوډ کړئ</string>
+    <string name="account_data_dialog_body">دا یوه بشپړه بیک اپ ده چې تاسو یې پدې یا بل Mochi سرور کې بیرته راوستلی شئ. د دوام لپاره تایید کړئ چې تاسو یاست.</string>
+    <string name="account_data_passphrase">پاسفریز</string>
+    <string name="account_data_passphrase_hint">ستاسو خصوصي کیلونه شامل دي، د دې پټ عبارت سره کوډ شوي. دا په خوندي ځای کې وساتئ. د بیرته راوبستلو لپاره به ورته اړتیا ولرئ.</string>
+    <string name="replication_hosts_subtitle">نور سرورونه چې ستاسو د حساب یوه کاپي یې هم ساتلې ده. د یوه د لرې کولو لپاره، په هغه سرور کې ننوځئ او \"زما حساب له دې سرور څخه لرې کړئ\" وکاروئ.</string>
+    <string name="replication_irreparable">نه ترمیمیدونکی</string>
+    <string name="replication_leave">زما حساب له دې سرور څخه لرې کړئ</string>
+    <string name="replication_leave_title">ستاسو حساب له دې سرور څخه لرې کړئ؟</string>
+    <string name="replication_leave_message">پر دې سرور باندې ستاسو د حساب معلومات به په دایمي توګه ړنګ شي او تاسو به دلته وتل وشي. ستاسو حساب پر نورو سرورونو باندې پاتې کېږي او تاسو دا یو وروسته بیا اضافه کولی شئ.</string>
+    <string name="replication_leave_confirm">لرې کول</string>
+    <string name="replication_forget">دا نه‌رسېدونکی کوربند هیر کړئ</string>
+    <string name="replication_forget_title">دا نه‌رسېدونکی کوربند هیر کړئ؟</string>
+    <string name="replication_forget_message">دا به ستاسو د نقل له سیټ څخه لرې شي او کله چې بیا وصل شي ورته به وویل شي چې خپله کاپي ړنګه کړي. د یوه رسېدونکي سرور د لرې کولو لپاره، هلته ننوځئ او \"زما حساب له دې سرور څخه لرې کړئ\" وکاروئ. د دوام لپاره تایید کړئ چې دا تاسو یاست.</string>
+    <string name="replication_offline">آفلاین</string>
+    <string name="replication_forget_confirm">هېرول</string>
 </resources>

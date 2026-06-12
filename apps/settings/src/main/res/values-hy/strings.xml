@@ -56,8 +56,6 @@
     <string name="replication_deny">Մերժել</string>
     <string name="replication_hosts_title">Իմ հոսթերը</string>
     <string name="replication_hosts_empty_hint">Այն մեկ այլ սերվեր կրկնապատկելու համար, գրանցվեք այնտեղ հաշվի համար և օգտագործեք \"Կրկնապատկել գոյություն ունեցող հաշիվը\" տարբերակը:</string>
-    <string name="replication_remove">Հեռացնել հոսթը</string>
-    <string name="replication_remove_title">Հեռացնե՞լ հոսթը։</string>
     <string name="settings_home_section_system">Համակարգ</string>
     <string name="system_replication_title">Կրկնապատկում</string>
     <string name="system_replication_this_server">Այս սերվերը</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Երբեք</string>
     <string name="replication_hosts_empty">Այս հաշիվը միայն այս սերվերում է։</string>
     <string name="replication_added">Ավելացվել է %1$s</string>
-    <string name="replication_remove_message">Այս սերվերը կդադարեցնի ձեր հաշվի կրկնօրինակումը այդ հոստի վրա։</string>
     <string name="settings_home_system_replication">Կրկնօրինակում (սերվեր)</string>
     <string name="system_replication_pair_empty_hint">Միացրեք մեկ այլ թարմ տեղակայված սերվերի հետ՝ օգտագործելով \"mochictl replica join &lt;existing-peer-id&gt;\" նոր սերվերում։</string>
     <string name="route_delete_message">Սա կհեռացնի ուղին \"%1$s\" արահետի համար։</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator հավելվածն անջատված է</string>
     <string name="login_method_oauth">Երրորդ կողմի մուտք</string>
     <string name="login_method_recovery">Վերականգնման կոդեր</string>
+    <string name="account_close_section">Փակել հաշիվը</string>
+    <string name="account_close_action">Փակել հաշիվը</string>
+    <string name="account_close_confirm_title">Փակե՞լ ձեր հաշիվը։</string>
+    <string name="account_close_confirm_body">Ձեր հաշիվը կնախատեսվի ջնջման, և դուք դուրս կգրվեք համակարգից։ Կարող եք չեղարկել ցանկացած պահի մինչ ջնջման ամսաթիվը՝ կրկին մուտք գործելով։</string>
+    <string name="account_data_download">Ներբեռնել</string>
+    <string name="route_target_app">Հավելվածի ID</string>
+    <string name="route_target_entity">Անձ</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ձer tvyalnery</string>
+    <string name="account_data_dialog_title">Ներբեռնեք ձեր տվյալները</string>
+    <string name="account_data_dialog_body">Սա ամբողջական պահուստ է, որը կարող եք վերականգնել այս կամ մեկ այլ Mochi սերվերում։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
+    <string name="account_data_passphrase">Գաղtnapар</string>
+    <string name="account_data_passphrase_hint">Ձեր մասնավոր բանալիները ներառված են, գաղտնագրված այս գաղտնաբառ-արտահայտությամբ: Պահեք այն անվտանգ: Վերականգնման համար ձեզ անհրաժեշտ կլինի:</string>
+    <string name="replication_hosts_subtitle">Այլ սերվերներ, որոնք նույնպես պահում են ձեր հաշվի պատճենը։ Մեկը հեռացնելու համար մուտք գործեք այդ սերվեր և օգտագործեք «Հեռացնել իմ հաշիվն այս սերվերից»։</string>
+    <string name="replication_irreparable">Անվերականգնելի</string>
+    <string name="replication_leave">Հեռացնել իմ հաշիվն այս սերվերից</string>
+    <string name="replication_leave_title">Հեռացնե՞լ ձեր հաշիվն այս սերվերից</string>
+    <string name="replication_leave_message">Ձեր հաշվի տվյալներն այս սերվերում ընդմիշտ կջնջվեն, և դուք այստեղից դուրս կգաք։ Ձեր հաշիվը մնում է ձեր մյուս սերվերներում, և դուք կարող եք այս մեկը հետո նորից ավելացնել։</string>
+    <string name="replication_leave_confirm">Հեռացնել</string>
+    <string name="replication_forget">Մոռանալ այս անհասանելի սերվերը</string>
+    <string name="replication_forget_title">Մոռանա՞լ այս անհասանելի սերվերը</string>
+    <string name="replication_forget_message">Այն կհեռացվի ձեր կրկնօրինակների խմբից, և վերամիանալիս նրան կհանձնարարվի ջնջել իր պատճենը։ Հասանելի սերվեր հեռացնելու համար մուտք գործեք այնտեղ և օգտագործեք «Հեռացնել իմ հաշիվն այս սերվերից»։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
+    <string name="replication_offline">Անցանց</string>
+    <string name="replication_forget_confirm">Մոռանալ</string>
 </resources>

@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Tento kód je nesprávny alebo vypršal.</string>
     <string name="stepup_error_passkey">Overenie prístupového kľúča zlyhalo. Skúste to znova.</string>
     <string name="stepup_error_oauth">S týmto účtom sa nepodarilo overiť. Skúste to znova.</string>
+    <string name="game_system_resign">%1$s sa vzdal</string>
+    <string name="game_system_draw_offer">%1$s ponúkol remízu</string>
+    <string name="game_system_draw_accept">Remíza dohodnutá</string>
+    <string name="game_system_draw_decline">%1$s odmietol remízu</string>
+    <string name="reactivation_title">Váš účet je naplánovaný na odstránenie</string>
+    <string name="reactivation_body">Váš účet je naplánovaný na odstránenie. Teraz to môžete zrušiť a obnoviť úplný prístup.</string>
+    <string name="reactivation_body_dated">Váš účet a všetky jeho údaje budú natrvalo odstránené dňa %1$s. Teraz to môžete zrušiť a obnoviť úplný prístup.</string>
+    <string name="reactivation_reactivate">Znova aktivovať môj účet</string>
+    <string name="reactivation_sign_out">Pokračovať v zatváraní a odhlásiť sa</string>
 </resources>

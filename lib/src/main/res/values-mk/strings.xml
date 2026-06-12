@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Тој код е неточен или е истечен.</string>
     <string name="stepup_error_passkey">Потврдата на passkey не успеа. Обидете се повторно.</string>
     <string name="stepup_error_oauth">Не успеа верификацијата со таа сметка. Обидете се повторно.</string>
+    <string name="game_system_resign">%1$s се предаде</string>
+    <string name="game_system_draw_offer">%1$s понуди реми</string>
+    <string name="game_system_draw_accept">Договорено реми</string>
+    <string name="game_system_draw_decline">%1$s го одби ремито</string>
+    <string name="reactivation_title">Вашата сметка е закажана за бришење</string>
+    <string name="reactivation_body">Вашата сметка е закажана за бришење. Можете да откажете и да го вратите целосниот пристап сега.</string>
+    <string name="reactivation_body_dated">Вашата сметка и сите нејзини податоци ќе бидат трајно избришани на %1$s. Можете да откажете и да го вратите целосниот пристап сега.</string>
+    <string name="reactivation_reactivate">Повторно активирај ја мојата сметка</string>
+    <string name="reactivation_sign_out">Продолжи со затворање и одјави се</string>
 </resources>

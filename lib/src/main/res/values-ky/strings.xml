@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Бул код туура эмес же мөөнөтү бүткөн.</string>
     <string name="stepup_error_passkey">Passkey текшерүүсү ишке ашкан жок. Кайра аракет кылыңыз.</string>
     <string name="stepup_error_oauth">Бул каттоо эсеби менен текшерүү мүмкүн болбоду. Кайра аракет кылыңыз.</string>
+    <string name="game_system_resign">%1$s баш тартты</string>
+    <string name="game_system_draw_offer">%1$s тең оюн сунуштады</string>
+    <string name="game_system_draw_accept">Тең оюнга макул болушту</string>
+    <string name="game_system_draw_decline">%1$s тең оюндан баш тартты</string>
+    <string name="reactivation_title">Эсебиңиз өчүрүлүүгө пландалган</string>
+    <string name="reactivation_body">Эсебиңиз өчүрүлүүгө пландалган. Азыр жокко чыгарып, толук мүмкүнчүлүктү калыбына келтире аласыз.</string>
+    <string name="reactivation_body_dated">Эсебиңиз жана анын бардык маалыматтары %1$s күнү биротоло өчүрүлөт. Азыр жокко чыгарып, толук мүмкүнчүлүктү калыбына келтире аласыз.</string>
+    <string name="reactivation_reactivate">Эсебимди кайра иштетүү</string>
+    <string name="reactivation_sign_out">Жабууну улантып, чыгуу</string>
 </resources>

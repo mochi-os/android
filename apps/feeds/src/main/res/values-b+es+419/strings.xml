@@ -193,4 +193,9 @@
     <string name="feeds_settings_ai_account_updated">Cuenta de IA actualizada</string>
     <string name="feeds_settings_prompt_reset">Indicación restablecida al valor predeterminado</string>
 
+    <string name="feeds_refresh">Actualizar</string>
+    <string name="feeds_interest_boosted">Interés aumentado</string>
+    <string name="feeds_interest_reduced">Interés reducido</string>
+    <string name="feeds_interest_removed">Interés eliminado</string>
+    <string name="feeds_interest_failed">Error al ajustar el interés</string>
 </resources>

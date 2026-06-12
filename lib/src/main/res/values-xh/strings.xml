@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Loo khowudi ayichanekanga okanye iphelelwe lixesha.</string>
     <string name="stepup_error_passkey">Ukuqinisekiswa kwe-passkey akuphumelelanga. Nceda uzame kwakhona.</string>
     <string name="stepup_error_oauth">Akukwazekanga ukuqinisekisa ngaloo akhawunti. Nceda uzame kwakhona.</string>
+    <string name="game_system_resign">%1$s unikele</string>
+    <string name="game_system_draw_offer">%1$s ucebise ukulingana</string>
+    <string name="game_system_draw_accept">Kuvunyelwene ngokulingana</string>
+    <string name="game_system_draw_decline">%1$s wala ukulingana</string>
+    <string name="reactivation_title">Iakhawunti yakho icwangciselwe ukucinywa</string>
+    <string name="reactivation_body">Iakhawunti yakho icwangciselwe ukucinywa. Ungayirhoxisa kwaye ubuyisele ufikelelo olupheleleyo ngoku.</string>
+    <string name="reactivation_body_dated">Iakhawunti yakho nayo yonke idatha yayo iya kucinywa ngokupheleleyo ngo-%1$s. Ungayirhoxisa kwaye ubuyisele ufikelelo olupheleleyo ngoku.</string>
+    <string name="reactivation_reactivate">Phinda uvuselele iakhawunti yam</string>
+    <string name="reactivation_sign_out">Qhubeka uvale uze uphume</string>
 </resources>

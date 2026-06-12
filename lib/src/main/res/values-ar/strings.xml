@@ -263,4 +263,13 @@
     <string name="stepup_error_code">هذا الرمز غير صحيح أو انتهت صلاحيته.</string>
     <string name="stepup_error_passkey">فشل التحقق من مفتاح المرور. يرجى المحاولة مرة أخرى.</string>
     <string name="stepup_error_oauth">تعذّر التحقق باستخدام هذا الحساب. يرجى المحاولة مرة أخرى.</string>
+    <string name="game_system_resign">استسلم %1$s</string>
+    <string name="game_system_draw_offer">عرض %1$s التعادل</string>
+    <string name="game_system_draw_accept">تم الاتفاق على التعادل</string>
+    <string name="game_system_draw_decline">رفض %1$s التعادل</string>
+    <string name="reactivation_title">تمت جدولة حسابك للحذف</string>
+    <string name="reactivation_body">تمت جدولة حسابك للحذف. يمكنك الإلغاء واستعادة الوصول الكامل الآن.</string>
+    <string name="reactivation_body_dated">سيتم حذف حسابك وجميع بياناته نهائيًا في %1$s. يمكنك الإلغاء واستعادة الوصول الكامل الآن.</string>
+    <string name="reactivation_reactivate">إعادة تنشيط حسابي</string>
+    <string name="reactivation_sign_out">متابعة الإغلاق وتسجيل الخروج</string>
 </resources>

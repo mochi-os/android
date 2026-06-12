@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Xếp hạng / chấm điểm</string>
     <string name="feeds_ai_prompt_credibility">Đánh giá độ tin cậy</string>
 
+    <string name="feeds_refresh">Làm mới</string>
+    <string name="feeds_interest_boosted">Đã tăng sở thích</string>
+    <string name="feeds_interest_reduced">Đã giảm sở thích</string>
+    <string name="feeds_interest_removed">Đã xoá sở thích</string>
+    <string name="feeds_interest_failed">Không điều chỉnh sở thích được</string>
 </resources>

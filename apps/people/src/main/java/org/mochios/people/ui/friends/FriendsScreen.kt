@@ -224,6 +224,10 @@ fun FriendsScreen(
                             .padding(horizontal = 16.dp, vertical = 8.dp),
                     )
 
+                    if (uiState.showWelcome) {
+                        WelcomeBanner(onDismiss = { viewModel.dismissWelcome() })
+                    }
+
                     FriendsContent(
                         state = uiState,
                         serverUrl = viewModel.serverUrl,
@@ -259,6 +263,48 @@ fun FriendsScreen(
             onConfirm = { viewModel.confirmRemoveFriend() },
             onDismiss = { viewModel.cancelRemoveFriend() },
         )
+    }
+}
+
+@Composable
+private fun WelcomeBanner(onDismiss: () -> Unit) {
+    Card(
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+        ),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 16.dp, top = 12.dp, end = 8.dp, bottom = 12.dp),
+            verticalAlignment = Alignment.Top,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = stringResource(R.string.people_welcome_title),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = stringResource(R.string.people_welcome_body),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                )
+            }
+            IconButton(onClick = onDismiss) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.people_welcome_dismiss),
+                    tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                )
+            }
+        }
     }
 }
 

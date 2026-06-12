@@ -41,6 +41,7 @@ data class IdentityResponse(
     @SerializedName("username") val username: String = "",
     @SerializedName("name") val name: String = "",
     @SerializedName("privacy") val privacy: String = "private",
+    @SerializedName("role") val role: String = "",
 )
 
 // ---------- Login methods (per-method tri-state) ----------
@@ -104,6 +105,14 @@ data class OAuthIdentity(
 )
 
 data class OAuthIdentitiesResponse(val identities: List<OAuthIdentity> = emptyList())
+
+/** Self-service account closure result: the unix-seconds timestamp at which
+ *  the soft-deleted account will be hard-purged. */
+data class CloseResponse(val purge: Long = 0)
+
+/** Data-export build result: the server-side on-disk filename of the bundle,
+ *  which the client then streams via the public export/download action. */
+data class ExportResponse(val filename: String = "")
 
 // ---------- Retrofit ----------
 
@@ -194,6 +203,24 @@ interface AccountApi {
     @FormUrlEncoded
     @POST("settings/-/user/account/oauth/unlink")
     suspend fun unlinkOAuth(@Field("provider") provider: String): Response<OkResponse>
+
+    /** Close the user's own account (soft delete + grace period). Gated on
+     *  step-up re-authentication. Returns the purge timestamp. */
+    @FormUrlEncoded
+    @POST("settings/-/user/account/close")
+    suspend fun closeAccount(@Field("token") token: String): Response<CloseResponse>
+
+    /** Build a complete, restorable backup bundle (user data plus the
+     *  passphrase-encrypted private keys). Gated on step-up re-authentication.
+     *  Returns the on-disk filename; the bundle bytes are fetched separately
+     *  via the public export/download action so multi-GB files are never
+     *  buffered in memory. */
+    @FormUrlEncoded
+    @POST("settings/-/user/account/export")
+    suspend fun exportData(
+        @Field("token") token: String,
+        @Field("passphrase") passphrase: String,
+    ): Response<ExportResponse>
 
     // ---------- Step-up re-authentication ----------
 

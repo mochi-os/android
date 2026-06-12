@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Цей код неправильний або його термін дії минув.</string>
     <string name="stepup_error_passkey">Не вдалося перевірити ключ доступу. Спробуйте ще раз.</string>
     <string name="stepup_error_oauth">Не вдалося підтвердити за допомогою цього облікового запису. Спробуйте ще раз.</string>
+    <string name="game_system_resign">%1$s здався</string>
+    <string name="game_system_draw_offer">%1$s запропонував нічию</string>
+    <string name="game_system_draw_accept">Нічию узгоджено</string>
+    <string name="game_system_draw_decline">%1$s відхилив нічию</string>
+    <string name="reactivation_title">Ваш акаунт заплановано до видалення</string>
+    <string name="reactivation_body">Ваш акаунт заплановано до видалення. Ви можете скасувати це й відновити повний доступ зараз.</string>
+    <string name="reactivation_body_dated">Ваш акаунт і всі його дані будуть остаточно видалені %1$s. Ви можете скасувати це й відновити повний доступ зараз.</string>
+    <string name="reactivation_reactivate">Повторно активувати мій акаунт</string>
+    <string name="reactivation_sign_out">Продовжити закриття та вийти</string>
 </resources>

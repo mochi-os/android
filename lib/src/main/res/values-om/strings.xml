@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Koodiin sun sirrii miti yookaan yeroon isaa darbeera.</string>
     <string name="stepup_error_passkey">Mirkaneessi passkey hin milkoofne. Maaloo irra deebiʼii yaali.</string>
     <string name="stepup_error_oauth">Akkaawuntii sana waliin mirkaneessuun hin danda\'amne. Maaloo irra deebi\'ii yaali.</string>
+    <string name="game_system_resign">%1$s harka kenne</string>
+    <string name="game_system_draw_offer">%1$s qixxaa dhiheesse</string>
+    <string name="game_system_draw_accept">Qixxaan walii galame</string>
+    <string name="game_system_draw_decline">%1$s qixxaa dide</string>
+    <string name="reactivation_title">Akaawuntiin kee haquuf qophaaʼeera</string>
+    <string name="reactivation_body">Akaawuntiin kee haquuf qophaaʼeera. Amma dhaabuun dandeenya guutuu deebisuu dandeessa.</string>
+    <string name="reactivation_body_dated">Akaawuntiin keefi daataan isaa hundi guyyaa %1$s dhaabbiidhaan haqamu. Amma dhaabuun dandeenya guutuu deebisuu dandeessa.</string>
+    <string name="reactivation_reactivate">Akaawuntii koo deebisii hojjechiisi</string>
+    <string name="reactivation_sign_out">Cufuu itti fufiitii baʼi</string>
 </resources>

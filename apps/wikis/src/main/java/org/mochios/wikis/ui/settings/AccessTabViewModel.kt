@@ -26,13 +26,68 @@ import javax.inject.Inject
  * from `GET {wiki}/-/access`. User-search and group-list results back the
  * Add Access dialog.
  */
+/**
+ * One row in the access list: a subject and its derived access level.
+ *
+ * The server stores access as raw permission rules — a single `allow` rule
+ * (operation = "view" / "edit") for granted subjects, or one `deny` rule per
+ * operation for explicitly-blocked ("none") subjects. We group those raw rules
+ * back to one row per subject and derive the level the same way web's
+ * `AccessList` does: any deny rule means "none"; otherwise the granted
+ * operation is the level.
+ */
+data class AccessSubject(
+    val subject: String,
+    val level: String,
+    val name: String? = null,
+    val isOwner: Boolean = false,
+)
+
 data class AccessTabUiState(
     val isLoading: Boolean = true,
-    val rules: List<AccessRule> = emptyList(),
+    val subjects: List<AccessSubject> = emptyList(),
     val error: MochiError? = null,
     val userSearchResults: List<User> = emptyList(),
     val groups: List<Group> = emptyList(),
 )
+
+/**
+ * Group the raw access rules into one [AccessSubject] per subject and derive
+ * each subject's level. Mirrors web's grouping in `access-list.tsx`:
+ * `grant == 0` (a deny rule) collapses the whole subject to "none"; otherwise
+ * the granted operation is the level. Subjects are sorted owners-first then
+ * by display name.
+ */
+internal fun groupAccessRules(rules: List<AccessRule>): List<AccessSubject> {
+    val order = mutableListOf<String>()
+    val grouped = linkedMapOf<String, MutableList<AccessRule>>()
+    for (rule in rules) {
+        val bucket = grouped.getOrPut(rule.subject) {
+            order.add(rule.subject)
+            mutableListOf()
+        }
+        bucket.add(rule)
+    }
+    return order.map { subject ->
+        val subjectRules = grouped.getValue(subject)
+        val denied = subjectRules.any { it.grant == 0 }
+        val level = if (denied) {
+            "none"
+        } else {
+            // The granted operation is the level (server stores one allow rule).
+            subjectRules.firstOrNull { it.grant != 0 }?.operation ?: "none"
+        }
+        AccessSubject(
+            subject = subject,
+            level = level,
+            name = subjectRules.firstNotNullOfOrNull { it.name },
+            isOwner = subjectRules.any { it.isOwner == true },
+        )
+    }.sortedWith(
+        compareByDescending<AccessSubject> { it.isOwner }
+            .thenComparing({ it.name ?: it.subject }, NaturalCompare),
+    )
+}
 
 /** Snackbar message dispatched by [AccessTabViewModel]. */
 data class AccessTabSnackbar(
@@ -62,11 +117,10 @@ class AccessTabViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val list = repository.getAccess(wikiId)
-                    .sortedWith(compareBy(NaturalCompare) { it.name ?: it.subject })
+                val subjects = groupAccessRules(repository.getAccess(wikiId))
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    rules = list,
+                    subjects = subjects,
                     error = null,
                 )
             } catch (e: Exception) {
@@ -112,7 +166,7 @@ class AccessTabViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _uiState.value = _uiState.value.copy(
-                    userSearchResults = repository.searchUsers(wikiId, query),
+                    userSearchResults = repository.searchUsers(query),
                 )
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(userSearchResults = emptyList())

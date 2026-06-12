@@ -694,6 +694,7 @@ private fun ChatPanel(
                     name = m.name,
                     body = m.body,
                     type = m.type,
+                    event = m.event,
                     created = m.created,
                 )
             }
@@ -756,12 +757,22 @@ private fun ChessMoveRow(message: GameChatMessage, isSent: Boolean) {
 
 @Composable
 private fun ChessSystemRow(message: GameChatMessage) {
+    // Localise per viewer from the structured event kind; legacy rows (no
+    // event) fall back to the server-stored English body. Mirrors web's
+    // chat-message-list system branch.
+    val text = when (message.event) {
+        "resign" -> stringResource(MochiR.string.game_system_resign, message.name)
+        "draw_offer" -> stringResource(MochiR.string.game_system_draw_offer, message.name)
+        "draw_accept" -> stringResource(MochiR.string.game_system_draw_accept)
+        "draw_decline" -> stringResource(MochiR.string.game_system_draw_decline, message.name)
+        else -> message.body
+    }
     Row(
         modifier = Modifier.fillMaxWidth().padding(vertical = 2.dp),
         horizontalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = message.body,
+            text = text,
             style = MaterialTheme.typography.labelSmall.copy(
                 fontSize = 11.sp,
                 fontStyle = FontStyle.Italic,

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">هوش مصنوعی</string>
     <string name="forums_access_target">هدف</string>
     <string name="forums_access_level_view">نمایش</string>
+    <string name="forums_access_level_vote">رأی دادن</string>
     <string name="forums_access_level_comment">نظر</string>
     <string name="forums_access_level_post">ارسال</string>
     <string name="forums_access_level_none">هیچ‌کدام</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">شناسه موجودیت، @گروه، * (همه)، یا + (اعضا)</string>
     <string name="forums_access_level">سطح</string>
     <string name="forums_access_level_moderate">نظارت</string>
-    <string name="forums_access_level_manage">مدیریت</string>
     <string name="forums_members_search">فیلتر اعضا</string>
     <string name="forums_banner_description">متن مارک‌داون که در بالای انجمن نمایش داده می‌شود.</string>
     <string name="forums_banner_placeholder">به این انجمن خوش آمدید…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">منطقه خطر</string>
     <string name="forums_settings_delete_message">این کار انجمن و تمام مطالب آن را برای همیشه حذف می‌کند. این عمل قابل بازگشت نیست.</string>
 
+    <string name="forums_tag_interest_up">تقویت علاقه</string>
+    <string name="forums_tag_interest_down">کاهش علاقه</string>
+    <string name="forums_tag_interest_remove">حذف علاقه</string>
+    <string name="forums_list_default_sort">مرتب‌سازی پیش‌فرض</string>
+    <string name="forums_access_tab_users">کاربران</string>
+    <string name="forums_access_tab_groups">گروه‌ها</string>
+    <string name="forums_access_tab_manual">دستی</string>
+    <string name="forums_access_search_users">جست‌وجوی کاربران</string>
+    <string name="forums_access_no_groups">هیچ گروهی در دسترس نیست</string>
 </resources>

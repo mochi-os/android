@@ -303,4 +303,8 @@
     <string name="wikis_replicas_col_synced">آخری ہم آہنگی: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">یہ „%1$s\" کو اپ ڈیٹس بھیجنا بند کر دے گا۔ اگر وہ چاہیں تو دوبارہ نقل کر سکتے ہیں۔</string>
     <string name="wikis_replicas_removed_success">نقل ہٹا دی گئی</string>
+    <string name="wikis_load_more">مزید لوڈ کریں</string>
+    <string name="wikis_access_change_level">رسائی کی سطح</string>
+    <string name="wikis_access_subject_anyone">کوئی بھی</string>
+    <string name="wikis_access_subject_authenticated">تصدیق شدہ صارفین</string>
 </resources>

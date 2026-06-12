@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Sasaran</string>
     <string name="forums_access_level_view">Lihat</string>
+    <string name="forums_access_level_vote">Undi</string>
     <string name="forums_access_level_comment">Komen</string>
     <string name="forums_access_level_post">Hantar</string>
     <string name="forums_access_level_none">Tiada</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID entiti, @kumpulan, * (semua orang), atau + (ahli)</string>
     <string name="forums_access_level">Tahap</string>
     <string name="forums_access_level_moderate">Sederhana</string>
-    <string name="forums_access_level_manage">Urus</string>
     <string name="forums_members_search">Tapis ahli</string>
     <string name="forums_banner_description">Markdown yang dipaparkan di bahagian atas forum.</string>
     <string name="forums_banner_placeholder">Selamat datang ke forum ini…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Zon bahaya</string>
     <string name="forums_settings_delete_message">Ini akan memadamkan forum dan semua hantarannya secara kekal. Tindakan ini tidak boleh dibatalkan.</string>
 
+    <string name="forums_tag_interest_up">Tingkatkan minat</string>
+    <string name="forums_tag_interest_down">Kurangkan minat</string>
+    <string name="forums_tag_interest_remove">Alih keluar minat</string>
+    <string name="forums_list_default_sort">Susunan lalai</string>
+    <string name="forums_access_tab_users">Pengguna</string>
+    <string name="forums_access_tab_groups">Kumpulan</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Cari pengguna</string>
+    <string name="forums_access_no_groups">Tiada kumpulan tersedia</string>
 </resources>

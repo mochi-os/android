@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Sortierung / Bewertung</string>
     <string name="feeds_ai_prompt_credibility">Bewertung der Glaubwürdigkeit</string>
 
+    <string name="feeds_refresh">Aktualisieren</string>
+    <string name="feeds_interest_boosted">Interesse erhöht</string>
+    <string name="feeds_interest_reduced">Interesse reduziert</string>
+    <string name="feeds_interest_removed">Interesse entfernt</string>
+    <string name="feeds_interest_failed">Interesse konnte nicht angepasst werden</string>
 </resources>

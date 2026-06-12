@@ -108,9 +108,6 @@
     <string name="replication_hosts_empty">Das Konto isch nume uf dèm Server.</string>
     <string name="replication_hosts_empty_hint">Zum\'s uf en andere Server z\'replizierä, mälded Si sich dèt für es Konto a und brûched d\'Option \"Bestehends Konto replizierä\".</string>
     <string name="replication_added">Hinzuegfüegt %1$s</string>
-    <string name="replication_remove">Host entfernä</string>
-    <string name="replication_remove_title">Host entfernä?</string>
-    <string name="replication_remove_message">Dèè Server hört uf, Ihres Konto uf dèè Host z\'replizierä.</string>
     <string name="settings_home_system_replication">Replikation (Server)</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikation</string>
@@ -382,4 +379,26 @@
         <item quantity="one">1 Sitzung widerrufen</item>
         <item quantity="other">%1$d Sitzungen widerrufen</item>
     </plurals>
+    <string name="account_close_section">Konto schliessen</string>
+    <string name="account_close_action">Konto schliessen</string>
+    <string name="account_close_confirm_title">Konto schliessen?</string>
+    <string name="account_close_confirm_body">Ihr Konto wird zur Löschung vorgemerkt und Sie werden abgemeldet. Sie können den Vorgang jederzeit vor dem Löschdatum abbrechen, indem Sie sich erneut anmelden.</string>
+    <string name="account_data_download">Download</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entität</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Ihre Daten</string>
+    <string name="account_data_dialog_title">Eigene Daten herunterladen</string>
+    <string name="account_data_passphrase">Passphrase</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Entfernen</string>
+    <string name="replication_hosts_subtitle">Andere Server, die ebenfalls eine Kopie deines Kontos vorhalten. Um einen zu entfernen, melde dich auf diesem Server an und verwende «Mein Konto von diesem Server entfernen».</string>
+    <string name="replication_irreparable">Nicht behebbar</string>
+    <string name="replication_leave">Mein Konto von diesem Server entfernen</string>
+    <string name="replication_leave_title">Dein Konto von diesem Server entfernen?</string>
+    <string name="replication_leave_message">Die Daten deines Kontos auf diesem Server werden dauerhaft gelöscht und du wirst hier abgemeldet. Dein Konto bleibt auf deinen anderen Servern, und du kannst diesen später erneut hinzufügen.</string>
+    <string name="replication_leave_confirm">Entfernen</string>
+    <string name="replication_forget">Diesen nicht erreichbaren Host vergessen</string>
+    <string name="replication_forget_title">Diesen nicht erreichbaren Host vergessen?</string>
+    <string name="replication_forget_message">Er wird aus deiner Replikatgruppe entfernt und angewiesen, seine Kopie zu löschen, sobald er sich wieder verbindet. Um einen erreichbaren Server zu entfernen, melde dich dort an und verwende «Mein Konto von diesem Server entfernen». Bestätige zum Fortfahren, dass du es bist.</string>
 </resources>

@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Đồng bộ lần cuối: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Điều này sẽ ngừng gửi cập nhật đến \"%1$s\". Họ có thể sao chép lại nếu muốn.</string>
     <string name="wikis_replicas_removed_success">Đã xóa bản sao</string>
+    <string name="wikis_load_more">Tải thêm</string>
+    <string name="wikis_access_change_level">Cấp độ truy cập</string>
+    <string name="wikis_access_subject_anyone">Bất kỳ ai</string>
+    <string name="wikis_access_subject_authenticated">Người dùng đã xác thực</string>
 
 </resources>

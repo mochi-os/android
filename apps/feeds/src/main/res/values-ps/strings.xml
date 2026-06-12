@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">درجه بندي / ارزونه</string>
     <string name="feeds_ai_prompt_credibility">د اعتبار ارزونه</string>
 
+    <string name="feeds_refresh">تازه کول</string>
+    <string name="feeds_interest_boosted">علاقه پیاوړې شوه</string>
+    <string name="feeds_interest_reduced">علاقه کمه شوه</string>
+    <string name="feeds_interest_removed">علاقه لیرې شوه</string>
+    <string name="feeds_interest_failed">د علاقې تنظیمولو پاتې راغلل</string>
 </resources>

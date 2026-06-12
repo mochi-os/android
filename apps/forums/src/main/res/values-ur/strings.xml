@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ٹارگٹ</string>
     <string name="forums_access_level_view">دیکھیں</string>
+    <string name="forums_access_level_vote">ووٹ دیں</string>
     <string name="forums_access_level_comment">تبصرہ</string>
     <string name="forums_access_level_post">پوسٹ</string>
     <string name="forums_access_level_none">کوئی نہیں</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">اینٹیٹی ID، @گروپ، * (سب)، یا + (ممبران)</string>
     <string name="forums_access_level">سطح</string>
     <string name="forums_access_level_moderate">اعتدال</string>
-    <string name="forums_access_level_manage">انتظام</string>
     <string name="forums_members_search">ممبران فلٹر کریں</string>
     <string name="forums_banner_description">مارک ڈاؤن جو فورم کے اوپر دکھایا جائے گا۔</string>
     <string name="forums_banner_placeholder">اس فورم میں خوش آمدید…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">خطرے کا علاقہ</string>
     <string name="forums_settings_delete_message">اس سے فورم اور اس کی تمام پوسٹس مستقل طور پر حذف ہو جائیں گی۔ یہ کارروائی واپس نہیں ہو سکتی۔</string>
 
+    <string name="forums_tag_interest_up">دلچسپی بڑھائیں</string>
+    <string name="forums_tag_interest_down">دلچسپی کم کریں</string>
+    <string name="forums_tag_interest_remove">دلچسپی ہٹائیں</string>
+    <string name="forums_list_default_sort">ڈیفالٹ ترتیب</string>
+    <string name="forums_access_tab_users">صارفین</string>
+    <string name="forums_access_tab_groups">گروپس</string>
+    <string name="forums_access_tab_manual">دستی</string>
+    <string name="forums_access_search_users">صارفین تلاش کریں</string>
+    <string name="forums_access_no_groups">کوئی گروپ دستیاب نہیں</string>
 </resources>

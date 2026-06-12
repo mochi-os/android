@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Rankning / poängsättning</string>
     <string name="feeds_ai_prompt_credibility">Trovärdighetsbedömning</string>
 
+    <string name="feeds_refresh">Uppdatera</string>
+    <string name="feeds_interest_boosted">Intresse förstärkt</string>
+    <string name="feeds_interest_reduced">Intresse minskat</string>
+    <string name="feeds_interest_removed">Intresse borttaget</string>
+    <string name="feeds_interest_failed">Kunde inte justera intresse</string>
 </resources>

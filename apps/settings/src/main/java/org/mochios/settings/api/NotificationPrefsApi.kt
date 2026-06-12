@@ -24,7 +24,7 @@ data class DestinationRow(
 )
 
 data class NotifCategory(
-    val id: Int = 0,
+    val id: String = "",  // base58 uid (server categories.id is text); "0" = "No notifications"
     val label: String = "",
     val default: Int = 0,
     val created: Long = 0,
@@ -51,14 +51,14 @@ data class DestinationsAvailable(
 )
 
 data class NotifTopic(
-    val id: Int = 0,
+    // No id: topics are keyed by (app, topic, object) server-side.
     val app: String = "",
     @SerializedName("app_name") val appName: String = "",
     val topic: String = "",
     val `object`: String = "",
     @SerializedName("object_name") val objectName: String = "",
     val label: String = "",
-    val category: Int? = null,
+    val category: String? = null,
     val created: Long = 0,
 )
 
@@ -90,7 +90,7 @@ interface NotificationPrefsApi {
     @FormUrlEncoded
     @POST("settings/-/notifications/categories/update")
     suspend fun updateCategory(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("label") label: String? = null,
         @Field("destinations") destinations: String? = null,
         @Field("default") default: String? = null,
@@ -99,24 +99,32 @@ interface NotificationPrefsApi {
     @FormUrlEncoded
     @POST("settings/-/notifications/categories/delete")
     suspend fun deleteCategory(
-        @Field("id") id: Int,
-        @Field("reassign_to") reassignTo: Int,
+        @Field("id") id: String,
+        @Field("reassign_to") reassignTo: String,
     ): Response<Unit>
 
     @FormUrlEncoded
     @POST("settings/-/notifications/categories/test")
-    suspend fun testCategory(@Field("id") id: Int): Response<TestEnvelope>
+    suspend fun testCategory(@Field("id") id: String): Response<TestEnvelope>
 
+    // Topics are identified by (app, topic, object), not a row id — that's the
+    // tuple the server reads (app="" for server-originated topics).
     @FormUrlEncoded
-    @POST("settings/-/notifications/topics/set_category")
+    @POST("settings/-/notifications/topics/set/category")
     suspend fun setTopicCategory(
-        @Field("id") id: Int,
+        @Field("app") app: String,
+        @Field("topic") topic: String,
+        @Field("object") obj: String,
         @Field("category") category: String,
     ): Response<Unit>
 
     @FormUrlEncoded
     @POST("settings/-/notifications/topics/delete")
-    suspend fun deleteTopic(@Field("id") id: Int): Response<Unit>
+    suspend fun deleteTopic(
+        @Field("app") app: String,
+        @Field("topic") topic: String,
+        @Field("object") obj: String,
+    ): Response<Unit>
 }
 
 @Module

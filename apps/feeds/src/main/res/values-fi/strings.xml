@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Järjestäminen / pisteytys</string>
     <string name="feeds_ai_prompt_credibility">Uskottavuuden arviointi</string>
 
+    <string name="feeds_refresh">Päivitä</string>
+    <string name="feeds_interest_boosted">Kiinnostusta lisätty</string>
+    <string name="feeds_interest_reduced">Kiinnostusta vähennetty</string>
+    <string name="feeds_interest_removed">Kiinnostus poistettu</string>
+    <string name="feeds_interest_failed">Kiinnostuksen kohteen säätäminen epäonnistui</string>
 </resources>

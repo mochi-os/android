@@ -263,4 +263,13 @@
     <string name="stepup_error_code">See kood on vale või aegunud.</string>
     <string name="stepup_error_passkey">Pääsuvõtmega kinnitamine ebaõnnestus. Proovige uuesti.</string>
     <string name="stepup_error_oauth">Selle kontoga ei õnnestunud kinnitada. Palun proovi uuesti.</string>
+    <string name="game_system_resign">%1$s alistus</string>
+    <string name="game_system_draw_offer">%1$s pakkus viiki</string>
+    <string name="game_system_draw_accept">Viik kokku lepitud</string>
+    <string name="game_system_draw_decline">%1$s keeldus viigist</string>
+    <string name="reactivation_title">Teie konto on kavandatud kustutamiseks</string>
+    <string name="reactivation_body">Teie konto on kavandatud kustutamiseks. Saate selle nüüd tühistada ja täieliku juurdepääsu taastada.</string>
+    <string name="reactivation_body_dated">Teie konto ja kõik selle andmed kustutatakse jäädavalt %1$s. Saate selle nüüd tühistada ja täieliku juurdepääsu taastada.</string>
+    <string name="reactivation_reactivate">Taasaktiveeri minu konto</string>
+    <string name="reactivation_sign_out">Jätka sulgemist ja logi välja</string>
 </resources>

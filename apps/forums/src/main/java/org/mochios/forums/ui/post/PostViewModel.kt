@@ -259,6 +259,16 @@ class PostViewModel @Inject constructor(
         repository.removePostTag(forumId, postId, tagId)
     }
 
+    fun adjustTagInterest(qid: String, direction: String) {
+        viewModelScope.launch {
+            try {
+                repository.adjustTagInterest(forumId, qid, direction)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
     private fun moderate(block: suspend () -> Unit) {
         viewModelScope.launch {
             try {

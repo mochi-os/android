@@ -137,9 +137,6 @@
     <string name="replication_hosts_empty">此帳戶僅存在於這台伺服器。</string>
     <string name="replication_hosts_empty_hint">要將其複製到另一台伺服器,請在該伺服器註冊帳戶,並使用「複製現有帳戶」選項。</string>
     <string name="replication_added">已新增 %1$s</string>
-    <string name="replication_remove">移除主機</string>
-    <string name="replication_remove_title">移除主機？</string>
-    <string name="replication_remove_message">此伺服器將停止將你的帳戶複製到該主機。</string>
     <string name="settings_home_system_replication">複製（伺服器）</string>
     <string name="settings_home_section_system">系統</string>
     <string name="system_replication_title">複製</string>
@@ -383,4 +380,27 @@
     <plurals name="system_users_sessions_revoked">
         <item quantity="other">已撤銷 %1$d 個工作階段</item>
     </plurals>
+    <string name="account_close_section">關閉帳戶</string>
+    <string name="account_close_action">關閉帳戶</string>
+    <string name="account_close_confirm_title">關閉你的帳戶？</string>
+    <string name="account_close_confirm_body">你的帳戶將被排定刪除，而且你將被登出。在刪除日期之前，你隨時可以重新登入以取消。</string>
+    <string name="account_data_download">下載</string>
+    <string name="route_target_app">應用程式</string>
+    <string name="route_target_entity">實體</string>
+    <string name="route_target_url">網址</string>
+    <string name="account_data_section">您的數據</string>
+    <string name="account_data_dialog_title">下載你的資料</string>
+    <string name="account_data_dialog_body">這是一份完整備份，您可以在本伺服器或其他 Mochi 伺服器上還原。請驗證您的身分以繼續。</string>
+    <string name="account_data_passphrase">密語</string>
+    <string name="replication_offline">離線</string>
+    <string name="replication_forget_confirm">忘記</string>
+    <string name="replication_hosts_subtitle">同樣保存著你帳戶副本的其他伺服器。若要移除其中一個，請在該伺服器上登入並使用「從此伺服器移除我的帳戶」。</string>
+    <string name="replication_irreparable">無法修復</string>
+    <string name="replication_leave">從此伺服器移除我的帳戶</string>
+    <string name="replication_leave_title">要從此伺服器移除你的帳戶嗎？</string>
+    <string name="replication_leave_message">你在此伺服器上的帳戶資料將被永久刪除，且你將在此處登出。你的帳戶仍保留在其他伺服器上，稍後你可以重新新增此伺服器。</string>
+    <string name="replication_leave_confirm">移除</string>
+    <string name="replication_forget">忘記此無法連線的主機</string>
+    <string name="replication_forget_title">要忘記此無法連線的主機嗎？</string>
+    <string name="replication_forget_message">它將從你的副本集中移除，並在重新連線時被要求刪除其副本。若要移除可連線的伺服器，請在該伺服器上登入並使用「從此伺服器移除我的帳戶」。請驗證你的身分以繼續。</string>
 </resources>

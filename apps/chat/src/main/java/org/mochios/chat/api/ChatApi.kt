@@ -108,14 +108,14 @@ interface ChatApi {
     suspend fun deleteChat(@Path("chatId") chatId: String): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
-    @POST("{chatId}/-/member_add")
+    @POST("{chatId}/-/member/add")
     suspend fun addMember(
         @Path("chatId") chatId: String,
         @Field("member") member: String
     ): Response<ApiResponse<MemberAddResponse>>
 
     @FormUrlEncoded
-    @POST("{chatId}/-/member_remove")
+    @POST("{chatId}/-/member/remove")
     suspend fun removeMember(
         @Path("chatId") chatId: String,
         @Field("member") member: String

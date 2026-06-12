@@ -263,4 +263,13 @@
     <string name="stepup_error_code">اهو ڪوڊ غلط آهي يا ختم ٿي ويو آهي.</string>
     <string name="stepup_error_passkey">پاس ڪي جي تصديق ناڪام ٿي. مهرباني ڪري ٻيهر ڪوشش ڪريو.</string>
     <string name="stepup_error_oauth">ان اڪائونٽ سان تصديق نه ٿي سگهي. مهرباني ڪري ٻيهر ڪوشش ڪريو.</string>
+    <string name="game_system_resign">%1$s هار مڃي</string>
+    <string name="game_system_draw_offer">%1$s برابري جي آڇ ڪئي</string>
+    <string name="game_system_draw_accept">برابري تي اتفاق ٿيو</string>
+    <string name="game_system_draw_decline">%1$s برابري رد ڪئي</string>
+    <string name="reactivation_title">توهان جو اڪائونٽ ختم ڪرڻ لاءِ مقرر آهي</string>
+    <string name="reactivation_body">توهان جو اڪائونٽ ختم ڪرڻ لاءِ مقرر آهي. توهان هاڻي ان کي منسوخ ڪري ۽ مڪمل رسائي بحال ڪري سگهو ٿا.</string>
+    <string name="reactivation_body_dated">توهان جو اڪائونٽ ۽ ان جو سمورو ڊيٽا %1$s تي مستقل طور تي ختم ڪيو ويندو. توهان هاڻي ان کي منسوخ ڪري ۽ مڪمل رسائي بحال ڪري سگهو ٿا.</string>
+    <string name="reactivation_reactivate">منهنجو اڪائونٽ ٻيهر فعال ڪريو</string>
+    <string name="reactivation_sign_out">بند ڪرڻ جاري رکو ۽ سائن آئوٽ ڪريو</string>
 </resources>

@@ -43,7 +43,10 @@ data class Delegation(
     val id: Long = 0,
     val domain: String = "",
     val path: String = "",
-    val owner: Long = 0,
+    // String UID, not an integer. The server's domains layer
+    // (mochi.domain.delegation.*) takes and stores owner as a string user UID;
+    // the delegation list enriches each row with the resolved username.
+    val owner: String = "",
     val username: String = "",
 )
 
@@ -63,6 +66,43 @@ data class DomainDetailsData(
 
 data class VerifyResponse(
     @SerializedName("verified") val verified: Boolean = false,
+)
+
+/** A user match for the delegation autocomplete (admin only). The identifier is
+ *  the string UID (mochi.user.search selects `uid`), used as the delegation
+ *  owner. */
+data class UserSearchResult(
+    @SerializedName("uid") val uid: String = "",
+    @SerializedName("username") val username: String = "",
+    @SerializedName("role") val role: String = "",
+)
+
+data class UserSearchResponse(
+    @SerializedName("users") val users: List<UserSearchResult> = emptyList(),
+)
+
+/** An installed app available as a route target (method = "app"). */
+data class RouteApp(
+    @SerializedName("id") val id: String = "",
+    @SerializedName("name") val name: String = "",
+    @SerializedName("latest") val latest: String = "",
+)
+
+data class RouteAppsResponse(
+    @SerializedName("apps") val apps: List<RouteApp> = emptyList(),
+)
+
+/** An entity owned by the current user, available as a route target
+ *  (method = "entity"). */
+data class RouteEntity(
+    @SerializedName("id") val id: String = "",
+    @SerializedName("fingerprint") val fingerprint: String = "",
+    @SerializedName("class") val className: String = "",
+    @SerializedName("name") val name: String = "",
+)
+
+data class RouteEntitiesResponse(
+    @SerializedName("entities") val entities: List<RouteEntity> = emptyList(),
 )
 
 interface DomainsApi {
@@ -125,7 +165,7 @@ interface DomainsApi {
     suspend fun createDelegation(
         @Field("domain") domain: String,
         @Field("path") path: String,
-        @Field("owner") owner: Long,
+        @Field("owner") owner: String,
     ): Response<Unit>
 
     @FormUrlEncoded
@@ -133,8 +173,20 @@ interface DomainsApi {
     suspend fun deleteDelegation(
         @Field("domain") domain: String,
         @Field("path") path: String,
-        @Field("owner") owner: Long,
+        @Field("owner") owner: String,
     ): Response<Unit>
+
+    /** Search users by username for the delegation autocomplete (admin only). */
+    @GET("settings/-/domains/user/search")
+    suspend fun searchUsers(@Query("query") query: String): Response<UserSearchResponse>
+
+    /** List installed apps available as route targets. */
+    @GET("settings/-/domains/apps")
+    suspend fun listApps(): Response<RouteAppsResponse>
+
+    /** List entities owned by the current user, available as route targets. */
+    @GET("settings/-/domains/entities")
+    suspend fun listEntities(): Response<RouteEntitiesResponse>
 }
 
 @Module

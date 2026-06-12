@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Тај код је нетачан или је истекао.</string>
     <string name="stepup_error_passkey">Провера приступног кључа није успела. Покушајте поново.</string>
     <string name="stepup_error_oauth">Није било могуће извршити проверу са тим налогом. Покушајте поново.</string>
+    <string name="game_system_resign">%1$s се предао</string>
+    <string name="game_system_draw_offer">%1$s понудио реми</string>
+    <string name="game_system_draw_accept">Реми прихваћен</string>
+    <string name="game_system_draw_decline">%1$s одбио реми</string>
+    <string name="reactivation_title">Ваш налог је заказан за брисање</string>
+    <string name="reactivation_body">Ваш налог је заказан за брисање. Сада можете отказати и вратити пун приступ.</string>
+    <string name="reactivation_body_dated">Ваш налог и сви његови подаци биће трајно избрисани %1$s. Сада можете отказати и вратити пун приступ.</string>
+    <string name="reactivation_reactivate">Поново активирај мој налог</string>
+    <string name="reactivation_sign_out">Настави са затварањем и одјави се</string>
 </resources>

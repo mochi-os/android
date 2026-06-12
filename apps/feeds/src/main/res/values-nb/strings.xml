@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Rangering / poenggivning</string>
     <string name="feeds_ai_prompt_credibility">Troverdighetsvurdering</string>
 
+    <string name="feeds_refresh">Oppdater</string>
+    <string name="feeds_interest_boosted">Interesse økt</string>
+    <string name="feeds_interest_reduced">Interesse redusert</string>
+    <string name="feeds_interest_removed">Interesse fjernet</string>
+    <string name="feeds_interest_failed">Kunne ikke justere interesse</string>
 </resources>

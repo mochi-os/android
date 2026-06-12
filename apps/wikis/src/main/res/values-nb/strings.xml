@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">Sist synkronisert: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Dette stopper sending av oppdateringer til \"%1$s\". De kan replikere igjen hvis de ønsker.</string>
     <string name="wikis_replicas_removed_success">Replika fjernet</string>
+    <string name="wikis_load_more">Last inn flere</string>
+    <string name="wikis_access_change_level">Tilgangsnivå</string>
+    <string name="wikis_access_subject_anyone">Alle</string>
+    <string name="wikis_access_subject_authenticated">Autentiserte brukere</string>
 
 </resources>

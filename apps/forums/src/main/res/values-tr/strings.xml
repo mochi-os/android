@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Hedef</string>
     <string name="forums_access_level_view">Görüntüle</string>
+    <string name="forums_access_level_vote">Oy ver</string>
     <string name="forums_access_level_comment">Yorum</string>
     <string name="forums_access_level_post">Gönderi</string>
     <string name="forums_access_level_none">Yok</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Varlık kimliği, @grup, * (herkes) veya + (üyeler)</string>
     <string name="forums_access_level">Düzey</string>
     <string name="forums_access_level_moderate">Moderasyon</string>
-    <string name="forums_access_level_manage">Yönetim</string>
     <string name="forums_members_search">Üyeleri filtrele</string>
     <string name="forums_banner_description">Forumun üstünde gösterilen Markdown.</string>
     <string name="forums_banner_placeholder">Bu foruma hoş geldiniz…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Tehlikeli alan</string>
     <string name="forums_settings_delete_message">Bu işlem, forumu ve tüm gönderilerini kalıcı olarak siler. Bu işlem geri alınamaz.</string>
 
+    <string name="forums_tag_interest_up">İlgiyi artır</string>
+    <string name="forums_tag_interest_down">İlgiyi azalt</string>
+    <string name="forums_tag_interest_remove">İlgiyi kaldır</string>
+    <string name="forums_list_default_sort">Varsayılan sıralama</string>
+    <string name="forums_access_tab_users">Kullanıcılar</string>
+    <string name="forums_access_tab_groups">Gruplar</string>
+    <string name="forums_access_tab_manual">Elle</string>
+    <string name="forums_access_search_users">Kullanıcılarda ara</string>
+    <string name="forums_access_no_groups">Grup yok</string>
 </resources>

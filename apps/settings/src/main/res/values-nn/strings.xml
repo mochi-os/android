@@ -272,9 +272,6 @@
     <string name="replication_hosts_empty">Denne kontoen finst berre på denne tenaren.</string>
     <string name="replication_hosts_empty_hint">For å replikere han til ein annan tenar, registrer ein konto der og bruk valet \"Replikere ein eksisterande konto\".</string>
     <string name="replication_added">Lagt til %1$s</string>
-    <string name="replication_remove">Fjern vert</string>
-    <string name="replication_remove_title">Fjerne vert?</string>
-    <string name="replication_remove_message">Denne tenaren vil slutte å replikere kontoen din til den verten.</string>
     <string name="settings_home_system_replication">Replikering (tenar)</string>
     <string name="system_replication_title">Replikering</string>
     <string name="system_replication_this_server">Denne tenaren</string>
@@ -388,4 +385,26 @@
     <string name="login_method_totp">Autentiseringsapp</string>
     <string name="login_method_oauth">Tredjeparts-innlogging</string>
     <string name="login_method_recovery">Gjenopprettingskodar</string>
+    <string name="account_close_section">Lukk konto</string>
+    <string name="account_close_action">Lukk konto</string>
+    <string name="account_close_confirm_title">Lukke kontoen din?</string>
+    <string name="account_close_confirm_body">Kontoen din vil bli planlagd sletta, og du blir logga ut. Du kan avbryte når som helst før slettedatoen ved å logge inn att.</string>
+    <string name="account_data_download">Last ned</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Entitet</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Dataa dine</string>
+    <string name="account_data_dialog_title">Last ned dataa dine</string>
+    <string name="account_data_passphrase">Passfrase</string>
+    <string name="replication_irreparable">Uoppretteleg</string>
+    <string name="replication_leave_confirm">Fjern</string>
+    <string name="replication_offline">Fråkopla</string>
+    <string name="replication_forget_confirm">Gløym</string>
+    <string name="replication_hosts_subtitle">Andre serverar som også har ein kopi av kontoen din. For å fjerne ein, logg inn på den serveren og bruk «Fjern kontoen min frå denne serveren».</string>
+    <string name="replication_leave">Fjern kontoen min frå denne serveren</string>
+    <string name="replication_leave_title">Fjerne kontoen din frå denne serveren?</string>
+    <string name="replication_leave_message">Kontodataa dine på denne serveren blir sletta for godt, og du blir logga ut her. Kontoen din blir verande på dei andre serverane dine, og du kan leggje til denne på nytt seinare.</string>
+    <string name="replication_forget">Gløym denne utilgjengelege verten</string>
+    <string name="replication_forget_title">Gløyme denne utilgjengelege verten?</string>
+    <string name="replication_forget_message">Han blir fjerna frå replikasettet ditt og beden om å slette kopien sin når han koplar til att. For å fjerne ein tilgjengeleg server, logg inn der og bruk «Fjern kontoen min frå denne serveren». Stadfest at det er deg for å halde fram.</string>
 </resources>

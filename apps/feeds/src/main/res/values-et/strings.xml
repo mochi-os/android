@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Järjestamine / hindamine</string>
     <string name="feeds_ai_prompt_credibility">Usaldusväärsuse hindamine</string>
 
+    <string name="feeds_refresh">Värskenda</string>
+    <string name="feeds_interest_boosted">Huvi suurendatud</string>
+    <string name="feeds_interest_reduced">Huvi vähendatud</string>
+    <string name="feeds_interest_removed">Huvi eemaldatud</string>
+    <string name="feeds_interest_failed">Huvi kohandamine ebaõnnestus</string>
 </resources>

@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Sadarkeessuu / qabxii kennuu</string>
     <string name="feeds_ai_prompt_credibility">Madaallii amanamummaa</string>
 
+    <string name="feeds_refresh">Haaromsi</string>
+    <string name="feeds_interest_boosted">Fedha dabalame</string>
+    <string name="feeds_interest_reduced">Fedha hir\'isame</string>
+    <string name="feeds_interest_removed">Fedha haqame</string>
+    <string name="feeds_interest_failed">Fedha sirreessuu hin dandeenye</string>
 </resources>

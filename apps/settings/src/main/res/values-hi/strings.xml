@@ -56,8 +56,6 @@
     <string name="replication_deny">अस्वीकार करें</string>
     <string name="replication_hosts_title">मेरे होस्ट</string>
     <string name="replication_hosts_empty_hint">इसे दूसरे सर्वर पर प्रतिकृति बनाने के लिए, वहाँ एक खाते के लिए साइन अप करें और \"मौजूदा खाते की प्रतिकृति बनाएँ\" विकल्प का उपयोग करें।</string>
-    <string name="replication_remove">होस्ट हटाएँ</string>
-    <string name="replication_remove_title">होस्ट हटाएँ?</string>
     <string name="settings_home_section_system">सिस्टम</string>
     <string name="system_replication_title">प्रतिकृति</string>
     <string name="system_replication_this_server">यह सर्वर</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">कभी नहीं</string>
     <string name="replication_hosts_empty">यह खाता केवल इस सर्वर पर है।</string>
     <string name="replication_added">जोड़ा गया %1$s</string>
-    <string name="replication_remove_message">यह सर्वर आपके खाते को उस होस्ट पर दोहराना बंद कर देगा।</string>
     <string name="settings_home_system_replication">प्रतिकृति (सर्वर)</string>
     <string name="system_replication_pair_empty_hint">नए सर्वर पर \"mochictl replica join &lt;existing-peer-id&gt;\" का उपयोग करके किसी अन्य नए स्थापित सर्वर के साथ जोड़ें।</string>
     <string name="route_delete_message">यह पथ \"%1$s\" के लिए मार्ग हटा देगा।</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">ऑथेंटिकेटर ऐप</string>
     <string name="login_method_oauth">थर्ड-पार्टी लॉगिन</string>
     <string name="login_method_recovery">रिकवरी कोड्स</string>
+    <string name="account_close_section">खाता बंद करें</string>
+    <string name="account_close_action">खाता बंद करें</string>
+    <string name="account_close_confirm_title">अपना खाता बंद करें?</string>
+    <string name="account_close_confirm_body">आपका खाता हटाने के लिए निर्धारित किया जाएगा और आपको साइन आउट कर दिया जाएगा. हटाने की तारीख से पहले किसी भी समय दोबारा लॉग इन करके आप इसे रद्द कर सकते हैं.</string>
+    <string name="account_data_download">डाउनलोड</string>
+    <string name="route_target_app">ऐप</string>
+    <string name="route_target_entity">एंटिटी</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">आपका डेटा</string>
+    <string name="account_data_dialog_title">अपना डेटा डाउनलोड करें</string>
+    <string name="account_data_dialog_body">यह एक संपूर्ण बैकअप है जिसे आप इस या किसी अन्य Mochi सर्वर पर पुनर्स्थापित कर सकते हैं। जारी रखने के लिए पुष्टि करें कि यह आप ही हैं।</string>
+    <string name="account_data_passphrase">पासफ़्रेज़</string>
+    <string name="account_data_passphrase_hint">आपकी निजी कुंजियाँ शामिल हैं, इस पासफ्रेज़ से एन्क्रिप्ट की गई हैं। इसे सुरक्षित रखें। पुनर्स्थापित करने के लिए आपको इसकी आवश्यकता होगी।</string>
+    <string name="replication_hosts_subtitle">अन्य सर्वर जो आपके खाते की एक प्रति भी रखते हैं. किसी एक को हटाने के लिए, उस सर्वर पर साइन इन करें और \"इस सर्वर से मेरा खाता हटाएँ\" का उपयोग करें.</string>
+    <string name="replication_irreparable">अपूरणीय</string>
+    <string name="replication_leave">इस सर्वर से मेरा खाता हटाएँ</string>
+    <string name="replication_leave_title">इस सर्वर से अपना खाता हटाएँ?</string>
+    <string name="replication_leave_message">इस सर्वर पर आपके खाते का डेटा स्थायी रूप से हटा दिया जाएगा और आप यहाँ से साइन आउट हो जाएँगे. आपका खाता आपके अन्य सर्वरों पर बना रहता है, और आप इसे बाद में फिर से जोड़ सकते हैं.</string>
+    <string name="replication_leave_confirm">हटाएँ</string>
+    <string name="replication_forget">इस अगम्य होस्ट को भूल जाएँ</string>
+    <string name="replication_forget_title">इस अगम्य होस्ट को भूल जाएँ?</string>
+    <string name="replication_forget_message">इसे आपके प्रतिकृति समूह से हटा दिया जाएगा और दोबारा जुड़ने पर इसकी प्रति हटाने के लिए कहा जाएगा. किसी पहुँच योग्य सर्वर को हटाने के लिए, वहाँ साइन इन करें और \"इस सर्वर से मेरा खाता हटाएँ\" का उपयोग करें. जारी रखने के लिए सत्यापित करें कि यह आप ही हैं.</string>
+    <string name="replication_offline">ऑफ़लाइन</string>
+    <string name="replication_forget_confirm">भूल जाएं</string>
 </resources>

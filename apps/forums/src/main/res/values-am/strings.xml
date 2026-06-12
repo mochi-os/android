@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ዒላማ</string>
     <string name="forums_access_level_view">ይመልከቱ</string>
+    <string name="forums_access_level_vote">ድምፅ ይስጡ</string>
     <string name="forums_access_level_comment">አስተያየት</string>
     <string name="forums_access_level_post">ልጥፍ</string>
     <string name="forums_access_level_none">ምንም</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">የማንነት መታወቂያ፣ @ቡድን፣ * (ሁሉም)፣ ወይም + (አባላት)</string>
     <string name="forums_access_level">ደረጃ</string>
     <string name="forums_access_level_moderate">አወያይ</string>
-    <string name="forums_access_level_manage">አስተዳድር</string>
     <string name="forums_members_search">አባላትን አጣራ</string>
     <string name="forums_banner_description">በመድረኩ አናት ላይ የሚታይ Markdown።</string>
     <string name="forums_banner_placeholder">ወደዚህ መድረክ እንኳን ደህና መጡ…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">የአደጋ ቀጠና</string>
     <string name="forums_settings_delete_message">ይህ መድረኩን እና ሁሉንም ልጥፎቹን በቋሚነት ይሰርዛል። ይህ መቀልበስ አይቻልም።</string>
 
+    <string name="forums_tag_interest_up">ፍላጎትን አሳድግ</string>
+    <string name="forums_tag_interest_down">ፍላጎትን ቀንስ</string>
+    <string name="forums_tag_interest_remove">ፍላጎት አስወግድ</string>
+    <string name="forums_list_default_sort">ነባሪ ቅደም ተከተል</string>
+    <string name="forums_access_tab_users">ተጠቃሚዎች</string>
+    <string name="forums_access_tab_groups">ቡድኖች</string>
+    <string name="forums_access_tab_manual">በእጅ</string>
+    <string name="forums_access_search_users">ተጠቃሚዎችን ይፈልጉ</string>
+    <string name="forums_access_no_groups">ምንም ቡድኖች የሉም</string>
 </resources>

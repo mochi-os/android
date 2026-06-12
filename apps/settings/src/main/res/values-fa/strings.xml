@@ -56,8 +56,6 @@
     <string name="replication_deny">رد</string>
     <string name="replication_hosts_title">میزبان‌های من</string>
     <string name="replication_hosts_empty_hint">برای تکثیر آن به سرور دیگری، در آنجا یک حساب ایجاد کنید و از گزینه \"تکثیر یک حساب موجود\" استفاده کنید.</string>
-    <string name="replication_remove">حذف میزبان</string>
-    <string name="replication_remove_title">میزبان حذف شود؟</string>
     <string name="settings_home_section_system">سیستم</string>
     <string name="system_replication_title">تکثیر</string>
     <string name="system_replication_this_server">این سرور</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">هرگز</string>
     <string name="replication_hosts_empty">این حساب فقط روی این سرور است.</string>
     <string name="replication_added">افزوده شد %1$s</string>
-    <string name="replication_remove_message">این سرور تکرار حساب شما به آن میزبان را متوقف خواهد کرد.</string>
     <string name="settings_home_system_replication">تکرار (سرور)</string>
     <string name="system_replication_pair_empty_hint">با سرور تازه نصب‌شده دیگری با استفاده از «mochictl replica join &lt;existing-peer-id&gt;» در سرور جدید جفت شوید.</string>
     <string name="route_delete_message">این مسیر برای مسیر «%1$s» را حذف می‌کند.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">برنامهٔ احراز هویت</string>
     <string name="login_method_oauth">ورود از طریق شخص ثالث</string>
     <string name="login_method_recovery">کدهای بازیابی</string>
+    <string name="account_close_section">بستن حساب</string>
+    <string name="account_close_action">بستن حساب</string>
+    <string name="account_close_confirm_title">حساب خود را می‌بندید؟</string>
+    <string name="account_close_confirm_body">حساب شما برای حذف زمان‌بندی می‌شود و از حساب خارج خواهید شد. می‌توانید هر زمان پیش از تاریخ حذف با ورود مجدد آن را لغو کنید.</string>
+    <string name="account_data_download">دانلود</string>
+    <string name="route_target_app">برنامه</string>
+    <string name="route_target_entity">موجودیت</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">داده‌های شما</string>
+    <string name="account_data_dialog_title">دانلود داده‌های شما</string>
+    <string name="account_data_dialog_body">این یک پشتیبان کامل است که می‌توانید آن را روی همین سرور Mochi یا سرور دیگری بازیابی کنید. برای ادامه هویت خود را تأیید کنید.</string>
+    <string name="account_data_passphrase">عبارت عبور</string>
+    <string name="account_data_passphrase_hint">کلیدهای خصوصی شما شامل شده‌اند، با این عبارت عبور رمزگذاری شده‌اند. آن را در جای امنی نگهداری کنید. برای بازیابی به آن نیاز خواهید داشت.</string>
+    <string name="replication_hosts_subtitle">سرورهای دیگری که نسخه‌ای از حساب شما را نیز نگه می‌دارند. برای حذف یکی، در آن سرور وارد شوید و از «حذف حساب من از این سرور» استفاده کنید.</string>
+    <string name="replication_irreparable">غیرقابل‌بازیابی</string>
+    <string name="replication_leave">حذف حساب من از این سرور</string>
+    <string name="replication_leave_title">حساب شما از این سرور حذف شود؟</string>
+    <string name="replication_leave_message">داده‌های حساب شما روی این سرور برای همیشه حذف می‌شود و از اینجا خارج خواهید شد. حساب شما روی سرورهای دیگرتان باقی می‌ماند و می‌توانید بعداً این یکی را دوباره اضافه کنید.</string>
+    <string name="replication_leave_confirm">حذف</string>
+    <string name="replication_forget">فراموش کردن این میزبان در دسترس‌نبودنی</string>
+    <string name="replication_forget_title">این میزبان در دسترس‌نبودنی فراموش شود؟</string>
+    <string name="replication_forget_message">از مجموعه نسخه‌های شما حذف می‌شود و هنگام اتصال مجدد از آن خواسته می‌شود نسخه‌اش را حذف کند. برای حذف یک سرور در دسترس، در آنجا وارد شوید و از «حذف حساب من از این سرور» استفاده کنید. برای ادامه هویت خود را تأیید کنید.</string>
+    <string name="replication_offline">آفلاین</string>
+    <string name="replication_forget_confirm">فراموش کردن</string>
 </resources>

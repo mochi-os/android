@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">יעד</string>
     <string name="forums_access_level_view">הצג</string>
+    <string name="forums_access_level_vote">הצבע</string>
     <string name="forums_access_level_comment">תגובה</string>
     <string name="forums_access_level_post">פוסט</string>
     <string name="forums_access_level_none">ללא</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">מזהה ישות, @group, * (כולם), או + (חברים)</string>
     <string name="forums_access_level">רמה</string>
     <string name="forums_access_level_moderate">ניהול תוכן</string>
-    <string name="forums_access_level_manage">ניהול</string>
     <string name="forums_members_search">סינון חברים</string>
     <string name="forums_banner_description">Markdown המוצג בראש הפורום.</string>
     <string name="forums_banner_placeholder">ברוכים הבאים לפורום זה…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">אזור מסוכן</string>
     <string name="forums_settings_delete_message">פעולה זו תמחק לצמיתות את הפורום ואת כל הפוסטים שבו. לא ניתן לבטל פעולה זו.</string>
 
+    <string name="forums_tag_interest_up">הגבר עניין</string>
+    <string name="forums_tag_interest_down">הפחת עניין</string>
+    <string name="forums_tag_interest_remove">הסר עניין</string>
+    <string name="forums_list_default_sort">מיון ברירת מחדל</string>
+    <string name="forums_access_tab_users">משתמשים</string>
+    <string name="forums_access_tab_groups">קבוצות</string>
+    <string name="forums_access_tab_manual">ידני</string>
+    <string name="forums_access_search_users">חפש משתמשים</string>
+    <string name="forums_access_no_groups">אין קבוצות זמינות</string>
 </resources>

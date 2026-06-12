@@ -56,8 +56,6 @@
     <string name="replication_deny">Odmów</string>
     <string name="replication_hosts_title">Moje hosty</string>
     <string name="replication_hosts_empty_hint">Aby zreplikować go na inny serwer, zarejestruj się tam i użyj opcji \"Replikuj istniejące konto\".</string>
-    <string name="replication_remove">Usuń hosta</string>
-    <string name="replication_remove_title">Usunąć hosta?</string>
     <string name="settings_home_section_system">System</string>
     <string name="system_replication_title">Replikacja</string>
     <string name="system_replication_this_server">Ten serwer</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Nigdy</string>
     <string name="replication_hosts_empty">To konto jest tylko na tym serwerze.</string>
     <string name="replication_added">Dodano %1$s</string>
-    <string name="replication_remove_message">Ten serwer przestanie replikować twoje konto na tego hosta.</string>
     <string name="settings_home_system_replication">Replikacja (serwer)</string>
     <string name="system_replication_pair_empty_hint">Sparuj z innym świeżo zainstalowanym serwerem używając „mochictl replica join &lt;existing-peer-id&gt;\" na nowym serwerze.</string>
     <string name="route_delete_message">To usunie trasę dla ścieżki „%1$s\".</string>
@@ -389,4 +386,28 @@
     <string name="login_method_totp">Aplikacja uwierzytelniająca</string>
     <string name="login_method_oauth">Logowanie zewnętrzne</string>
     <string name="login_method_recovery">Kody odzyskiwania</string>
+    <string name="account_close_section">Zamknij konto</string>
+    <string name="account_close_action">Zamknij konto</string>
+    <string name="account_close_confirm_title">Zamknąć konto?</string>
+    <string name="account_close_confirm_body">Twoje konto zostanie zaplanowane do usunięcia, a Ty zostaniesz wylogowany. Możesz anulować w dowolnym momencie przed datą usunięcia, logując się ponownie.</string>
+    <string name="account_data_download">Pobierz</string>
+    <string name="route_target_app">Aplikacja</string>
+    <string name="route_target_entity">Encja</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Twoje dane</string>
+    <string name="account_data_dialog_title">Pobierz swoje dane</string>
+    <string name="account_data_dialog_body">To pełna kopia zapasowa, którą możesz przywrócić na tym lub innym serwerze Mochi. Potwierdź swoją tożsamość, aby kontynuować.</string>
+    <string name="account_data_passphrase">Hasło</string>
+    <string name="account_data_passphrase_hint">Twoje klucze prywatne są dołączone, zaszyfrowane tym hasłem-frazą. Przechowuj je w bezpiecznym miejscu. Będziesz ich potrzebować do przywrócenia.</string>
+    <string name="replication_hosts_subtitle">Inne serwery, które również przechowują kopię Twojego konta. Aby usunąć któryś, zaloguj się na tym serwerze i użyj opcji \"Usuń moje konto z tego serwera\".</string>
+    <string name="replication_irreparable">Nie do naprawy</string>
+    <string name="replication_leave">Usuń moje konto z tego serwera</string>
+    <string name="replication_leave_title">Usunąć Twoje konto z tego serwera?</string>
+    <string name="replication_leave_message">Dane Twojego konta na tym serwerze zostaną trwale usunięte, a Ty zostaniesz tutaj wylogowany. Twoje konto pozostaje na pozostałych serwerach i możesz ten serwer dodać ponownie później.</string>
+    <string name="replication_leave_confirm">Usuń</string>
+    <string name="replication_forget">Zapomnij ten nieosiągalny host</string>
+    <string name="replication_forget_title">Zapomnieć ten nieosiągalny host?</string>
+    <string name="replication_forget_message">Zostanie usunięty z Twojego zestawu replik i otrzyma polecenie usunięcia swojej kopii, gdy ponownie się połączy. Aby usunąć osiągalny serwer, zaloguj się na nim i użyj opcji \"Usuń moje konto z tego serwera\". Potwierdź, że to Ty, aby kontynuować.</string>
+    <string name="replication_offline">Offline</string>
+    <string name="replication_forget_confirm">Zapomnij</string>
 </resources>

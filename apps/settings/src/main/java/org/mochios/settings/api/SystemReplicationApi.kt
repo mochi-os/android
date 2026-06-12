@@ -42,9 +42,14 @@ interface SystemReplicationApi {
     @GET("settings/-/system/replication/data")
     suspend fun getSystemReplication(): Response<SystemReplicationData>
 
+    // Approving a join replicates every user's private keys to the peer, so the
+    // server gates it on operator step-up re-authentication (the proof token).
     @FormUrlEncoded
     @POST("settings/-/system/replication/join/approve")
-    suspend fun approveJoin(@Field("peer") peer: String): Response<Unit>
+    suspend fun approveJoin(
+        @Field("peer") peer: String,
+        @Field("token") token: String,
+    ): Response<Unit>
 
     @FormUrlEncoded
     @POST("settings/-/system/replication/join/deny")

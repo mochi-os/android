@@ -345,10 +345,14 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/disputes/review")
     suspend fun reviewDispute(
+        // staff.star forwards ["id", "status", "resolution", "amount"].
         @Field("id") id: Int,
+        // status is the OUTCOME — "resolved_buyer" or "resolved_seller" (required).
+        @Field("status") status: String,
+        // resolution is the free-text writeup (optional, <=5000 chars).
         @Field("resolution") resolution: String? = null,
-        @Field("notes") notes: String? = null,
-        @Field("refund_amount") refundAmount: String? = null,
+        // amount is the optional partial refund (minor units) for resolved_buyer.
+        @Field("amount") refundAmount: String? = null,
     ): Response<ApiResponse<Dispute>>
 
     // ---- Metrics ----
@@ -359,15 +363,14 @@ interface StaffApi {
 
     /**
      * Marketplace activity log feed. `tab` selects the activity view
-     * (`listings` / `orders` / `disputes` / `reports`); `skip` and
-     * `limit` are offset-style pagination. (staff.star also accepts
-     * `page` / `limit` for callers that prefer page-style pagination —
-     * both shapes round-trip.)
+     * (`listings` / `orders` / `disputes` / `reports`); pagination is
+     * `page` / `limit` — staff.star forwards `["tab", "page", "limit"]`, so
+     * the offset field must be `page` (the handler ignores anything else).
      */
     @GET("-/metrics/activity")
     suspend fun getMetricsActivity(
         @Query("tab") tab: String? = null,
-        @Query("skip") skip: Int? = null,
+        @Query("page") skip: Int? = null,
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<ActivityData>>
 
@@ -425,14 +428,15 @@ interface StaffApi {
 
     /**
      * Decide on a listing appeal. `decision` is `approve` /
-     * `reject` / `escalate` (the Comptroller validates). `listing_id`
-     * is the integer listing id the appeal is filed against — staff.star
-     * forwards as `id` to the Comptroller's appeals/decide event.
+     * `reject` / `escalate` (the Comptroller validates). The field is sent as
+     * `id` (the integer listing id the appeal is filed against) — staff.star
+     * forwards `["id", "decision", "notes"]` verbatim, so it must be `id`, not
+     * `listing_id` (which the handler would silently drop).
      */
     @FormUrlEncoded
     @POST("-/appeals/decide")
     suspend fun decideAppeal(
-        @Field("listing_id") listingId: Int,
+        @Field("id") listingId: Int,
         @Field("decision") decision: String,
         @Field("notes") notes: String? = null,
     ): Response<ApiResponse<OkResponse>>

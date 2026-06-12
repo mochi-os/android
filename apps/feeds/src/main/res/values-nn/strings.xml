@@ -195,4 +195,9 @@
     <string name="feeds_ai_prompt_rank">Rangering / poenggjeving</string>
     <string name="feeds_ai_prompt_credibility">Vurdering av truverde</string>
 
+    <string name="feeds_refresh">Oppdater</string>
+    <string name="feeds_interest_boosted">Interesse auka</string>
+    <string name="feeds_interest_reduced">Interesse redusert</string>
+    <string name="feeds_interest_removed">Interesse fjerna</string>
+    <string name="feeds_interest_failed">Klarte ikkje justera interesse</string>
 </resources>

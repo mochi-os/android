@@ -305,5 +305,9 @@
     <string name="wikis_replicas_col_synced">마지막 동기화: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">이렇게 하면 「%1$s」(으)로 업데이트 전송이 중지됩니다. 그들이 원하면 다시 복제할 수 있습니다.</string>
     <string name="wikis_replicas_removed_success">복제본이 제거되었습니다</string>
+    <string name="wikis_load_more">더 보기</string>
+    <string name="wikis_access_change_level">접근 수준</string>
+    <string name="wikis_access_subject_anyone">누구나</string>
+    <string name="wikis_access_subject_authenticated">인증된 사용자</string>
 
 </resources>

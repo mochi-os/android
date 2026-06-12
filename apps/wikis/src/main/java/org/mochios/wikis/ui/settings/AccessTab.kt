@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -26,6 +27,7 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedTextField
@@ -45,12 +47,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import org.mochios.android.ui.components.AccessRuleCard
 import org.mochios.wikis.R
-import org.mochios.wikis.model.AccessRule as WikiAccessRule
-import org.mochios.android.model.AccessRule as LibAccessRule
 import org.mochios.android.R as MochiR
 
 /**
@@ -87,7 +88,7 @@ fun AccessTab(
         },
     ) { innerPadding ->
         when {
-            state.isLoading && state.rules.isEmpty() -> {
+            state.isLoading && state.subjects.isEmpty() -> {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
@@ -97,7 +98,7 @@ fun AccessTab(
                     CircularProgressIndicator()
                 }
             }
-            state.rules.isEmpty() -> {
+            state.subjects.isEmpty() -> {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
@@ -117,11 +118,11 @@ fun AccessTab(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    items(state.rules, key = { it.id ?: it.subject.hashCode() }) { rule ->
-                        AccessRuleCard(
-                            rule = rule.toLibRule(),
-                            levelLabel = { op -> wikiAccessLevelLabel(op) },
-                            onRevoke = { viewModel.revokeAccess(rule.subject) },
+                    items(state.subjects, key = { it.subject }) { subject ->
+                        AccessSubjectCard(
+                            subject = subject,
+                            onLevelChange = { level -> viewModel.setAccess(subject.subject, level) },
+                            onRevoke = { viewModel.revokeAccess(subject.subject) },
                         )
                     }
                 }
@@ -142,18 +143,111 @@ fun AccessTab(
 }
 
 /**
- * Convert the wikis-specific AccessRule (with nullable id and isOwner) into
- * the shared lib AccessRule shape that [AccessRuleCard] consumes. The shared
- * card has no opinion about how the rule was produced.
+ * A single grouped access row: the subject with its derived level, an inline
+ * dropdown to change the level, and a revoke button. Mirrors web's
+ * `AccessList` row (one row per subject, derived level, inline level Select).
+ * The owner row is read-only — its level isn't editable and it can't be
+ * revoked.
  */
-private fun WikiAccessRule.toLibRule(): LibAccessRule = LibAccessRule(
-    id = id ?: 0,
-    subject = subject,
-    operation = operation,
-    grant = grant,
-    name = name,
-    isOwner = isOwner == true,
-)
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun AccessSubjectCard(
+    subject: AccessSubject,
+    onLevelChange: (String) -> Unit,
+    onRevoke: () -> Unit,
+) {
+    val levels = listOf("edit", "view", "none")
+    var levelExpanded by remember { mutableStateOf(false) }
+
+    Card(modifier = Modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = accessSubjectLabel(subject),
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontWeight = FontWeight.Medium,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                if (subject.isOwner) {
+                    Text(
+                        text = stringResource(MochiR.string.access_owner),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.width(8.dp))
+
+            if (subject.isOwner) {
+                // Owner level is fixed (full access); render a static label.
+                Text(
+                    text = wikiAccessLevelLabel("manage"),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            } else {
+                ExposedDropdownMenuBox(
+                    expanded = levelExpanded,
+                    onExpandedChange = { levelExpanded = it },
+                    modifier = Modifier.width(170.dp),
+                ) {
+                    OutlinedTextField(
+                        value = wikiAccessLevelLabel(subject.level),
+                        onValueChange = {},
+                        readOnly = true,
+                        singleLine = true,
+                        label = { Text(stringResource(R.string.wikis_access_change_level)) },
+                        trailingIcon = {
+                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded)
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .menuAnchor(MenuAnchorType.PrimaryNotEditable),
+                    )
+                    ExposedDropdownMenu(
+                        expanded = levelExpanded,
+                        onDismissRequest = { levelExpanded = false },
+                    ) {
+                        levels.forEach { lvl ->
+                            DropdownMenuItem(
+                                text = { Text(wikiAccessLevelLabel(lvl)) },
+                                onClick = {
+                                    levelExpanded = false
+                                    if (lvl != subject.level) onLevelChange(lvl)
+                                },
+                            )
+                        }
+                    }
+                }
+                IconButton(onClick = onRevoke) {
+                    Icon(
+                        Icons.Default.Close,
+                        contentDescription = stringResource(MochiR.string.access_revoke),
+                        tint = MaterialTheme.colorScheme.error,
+                    )
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Display label for an access subject. Maps the special wildcard subjects to
+ * friendly names (mirroring web's `SUBJECT_LABELS`); otherwise prefers the
+ * resolved name, falling back to the raw subject id.
+ */
+@Composable
+private fun accessSubjectLabel(subject: AccessSubject): String = when (subject.subject) {
+    "*" -> stringResource(R.string.wikis_access_subject_anyone)
+    "+" -> stringResource(R.string.wikis_access_subject_authenticated)
+    else -> subject.name?.takeIf { it.isNotBlank() } ?: subject.subject
+}
 
 /** Localised label for a wiki access level (edit/view/none). */
 @Composable

@@ -26,7 +26,10 @@ data class ApiToken(
 
 data class TokensResponse(val tokens: List<ApiToken> = emptyList())
 
-data class TokenCreateResponse(val token: String = "")
+// token/create wraps its payload in `{data: {token, name}}` (the settings app
+// envelope); the plaintext token is one level down.
+data class TokenCreated(val token: String = "", val name: String = "")
+data class TokenCreateResponse(val data: TokenCreated = TokenCreated())
 
 interface TokensApi {
     @GET("settings/-/user/account/tokens")
@@ -35,6 +38,7 @@ interface TokensApi {
     @FormUrlEncoded
     @POST("settings/-/user/account/token/create")
     suspend fun createToken(
+        @Field("token") token: String,
         @Field("name") name: String,
         @Field("scopes") scopes: String? = null,
         @Field("expires") expires: String? = null,

@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">ਰੈਂਕਿੰਗ / ਸਕੋਰਿੰਗ</string>
     <string name="feeds_ai_prompt_credibility">ਭਰੋਸੇਯੋਗਤਾ ਮੁਲਾਂਕਣ</string>
 
+    <string name="feeds_refresh">ਰਿਫਰੈਸ਼</string>
+    <string name="feeds_interest_boosted">ਦਿਲਚਸਪੀ ਵਧਾਈ ਗਈ</string>
+    <string name="feeds_interest_reduced">ਦਿਲਚਸਪੀ ਘਟਾਈ ਗਈ</string>
+    <string name="feeds_interest_removed">ਦਿਲਚਸਪੀ ਹਟਾਈ ਗਈ</string>
+    <string name="feeds_interest_failed">ਦਿਲਚਸਪੀ ਨੂੰ ਅਡਜਸਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
 </resources>

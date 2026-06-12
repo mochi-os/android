@@ -304,5 +304,9 @@
     <string name="wikis_replicas_remove_confirm_message">Cela cessera d\'envoyer les mises à jour à \"%1$s\". Ils pourront répliquer de nouveau s\'ils le souhaitent.</string>
     <string name="wikis_replicas_removed_success">Réplique retirée</string>
     <string name="wikis_replicas_remove_failed">Échec du retrait de la réplique</string>
+    <string name="wikis_load_more">Charger plus</string>
+    <string name="wikis_access_change_level">Niveau d\'accès</string>
+    <string name="wikis_access_subject_anyone">Tout le monde</string>
+    <string name="wikis_access_subject_authenticated">Utilisateurs authentifiés</string>
 
 </resources>

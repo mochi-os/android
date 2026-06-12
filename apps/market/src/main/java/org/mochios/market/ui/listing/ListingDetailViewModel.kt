@@ -16,7 +16,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
-import org.mochios.market.repository.SavedRepository
+import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
@@ -24,6 +24,7 @@ import org.mochios.market.model.ListingDetailResponse
 import org.mochios.market.model.Photo
 import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
+import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
 /**
@@ -56,8 +57,8 @@ data class ListingDetailSnackbar(
  * ViewModel for [ListingDetailScreen].
  *
  * Wraps [MarketRepository.getListing] for the initial load, exposes the
- * server-backed [SavedRepository] plus the on-device [RecentlyViewedStore] /
- * [ReportedStore] the screen needs for the save / report / recently-viewed
+ * three on-device stores ([SavedRepository], [RecentlyViewedStore],
+ * [ReportedStore]) the screen needs for the save / report / recently-viewed
  * affordances, and re-fetches the listing after a relist so the new status /
  * id surface in the UI.
  *
@@ -87,6 +88,9 @@ class ListingDetailViewModel @Inject constructor(
 
     init {
         loadCategories()
+        // Hydrate the server-backed saved mirror so the bookmark toggle
+        // reflects cross-device saved state on first render.
+        viewModelScope.launch { savedRepository.refresh() }
     }
 
     private fun loadCategories() {
@@ -153,9 +157,7 @@ class ListingDetailViewModel @Inject constructor(
                 } catch (_: Exception) {
                     // ignore
                 }
-                // Hydrate the saved set so the bookmark toggle reflects the
-                // server state even when the user came straight to this screen.
-                runCatching { savedRepository.ensureHydrated() }
+                savedRepository.refresh()
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
@@ -166,8 +168,8 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun toggleSave() {
-        // The full listing is needed for the saved/add snapshot payload.
         val listing = _state.value.listing?.listing ?: return
+        if (listing.id == 0L) return
         viewModelScope.launch {
             try {
                 savedRepository.toggle(listing)
@@ -212,18 +214,33 @@ class ListingDetailViewModel @Inject constructor(
 
     fun placeBid(
         amount: Long,
-        @Suppress("UNUSED_PARAMETER") currency: Currency,
+        ceiling: Long?,
+        currency: Currency,
         onSuccess: () -> Unit = {},
     ) {
         val auctionId = _state.value.listing?.auction?.id ?: return
         viewModelScope.launch {
             try {
-                repository.placeBid(auctionId, amount)
-                _snackbar.emit(
-                    ListingDetailSnackbar(
+                val result = repository.placeBid(auctionId, amount, ceiling)
+                // Branch on the server's bid outcome (matches the web listing
+                // page): an instant buy-it-now win, an immediate outbid by an
+                // existing proxy ceiling, or an ordinary accepted bid.
+                val snackbar = when {
+                    result.instant == true -> ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_bid_dialog_instant_win,
+                    )
+                    result.outbid == true -> {
+                        val newHigh = formatPrice(result.currentBid ?: amount, currency)
+                        ListingDetailSnackbar(
+                            org.mochios.market.R.string.market_bid_dialog_outbid,
+                            listOf(newHigh),
+                        )
+                    }
+                    else -> ListingDetailSnackbar(
                         org.mochios.market.R.string.market_bid_dialog_success,
                     )
-                )
+                }
+                _snackbar.emit(snackbar)
                 // Refresh so the new high bid and history surface immediately.
                 load(currentId.toString())
                 onSuccess()
@@ -257,7 +274,7 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun isSaved(): Flow<Boolean> =
-        savedRepository.isSaved(currentId)
+        savedRepository.observeIds().map { set -> currentId.toString() in set }
 
     fun isReported(): Flow<Boolean> =
         reportedStore.observe().map { set -> currentId.toString() in set }

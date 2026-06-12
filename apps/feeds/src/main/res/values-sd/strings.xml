@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">درجابندي / اسڪورنگ</string>
     <string name="feeds_ai_prompt_credibility">اعتبار جو جائزو</string>
 
+    <string name="feeds_refresh">ريفريش</string>
+    <string name="feeds_interest_boosted">دلچسپي وڌي</string>
+    <string name="feeds_interest_reduced">دلچسپي گهٽ ٿي</string>
+    <string name="feeds_interest_removed">دلچسپي هٽائي وئي</string>
+    <string name="feeds_interest_failed">دلچسپي ترتيب ڏيڻ ۾ ناڪام</string>
 </resources>

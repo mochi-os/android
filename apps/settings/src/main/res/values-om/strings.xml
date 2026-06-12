@@ -56,8 +56,6 @@
     <string name="replication_deny">Dhorki</string>
     <string name="replication_hosts_title">Hostota koo</string>
     <string name="replication_hosts_empty_hint">Akkaawuntii kana gara sarvarii biraatti hir\'isuuf, achitti akkaawuntii galmaa\'i fi filannoo \"Akkaawuntii jiru hir\'isi\" fayyadami.</string>
-    <string name="replication_remove">Hostii haqi</string>
-    <string name="replication_remove_title">Hostii haqi?</string>
     <string name="settings_home_section_system">Sirna</string>
     <string name="system_replication_title">Hir\'ina</string>
     <string name="system_replication_this_server">Sarvariin kun</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Gonkumaa</string>
     <string name="replication_hosts_empty">Akkountii kun seerverii kana qofarra jira.</string>
     <string name="replication_added">Dabalameera %1$s</string>
-    <string name="replication_remove_message">Seerverii kun akkountii kee gara host sanaatti garaggaluu dhaaba.</string>
     <string name="settings_home_system_replication">Garaggalfama (seerverii)</string>
     <string name="system_replication_pair_empty_hint">Seerverii haaraa irratti \"mochictl replica join &lt;existing-peer-id&gt;\" fayyadamuun seerverii kan biraa haarawa fakkaachuu kaa\'i wajjin walitti firoomi.</string>
     <string name="route_delete_message">Kunis karoora karoora \"%1$s\" haqa.</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Appii mirkaneessaa</string>
     <string name="login_method_oauth">Galaa\'iinsa qaama sadaffaa</string>
     <string name="login_method_recovery">Koodiwwan deebii</string>
+    <string name="account_close_section">Akaawuntii cufi</string>
+    <string name="account_close_action">Akaawuntii cufi</string>
+    <string name="account_close_confirm_title">Akaawuntii kee cufuu barbaaddaa?</string>
+    <string name="account_close_confirm_body">Akaawuntiin kee haquuf ni qophaaʼa, atis ni baata. Guyyaa haqiinsaa dura yeroo barbaaddetti deebitee seenuun dhaabuu dandeessa.</string>
+    <string name="account_data_download">Buufadhu</string>
+    <string name="route_target_app">Appii</string>
+    <string name="route_target_entity">Iddoo</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Daataa kee</string>
+    <string name="account_data_dialog_title">Daataa kee buusi</string>
+    <string name="account_data_dialog_body">Kun baackaappii guutuu sarvarii Mochi kana yookaan sarvarii Mochi biraa irratti deebistee fayyadamuu dandeessuudha. Itti fufuuf si akka taate mirkaneessi.</string>
+    <string name="account_data_passphrase">Jecha darbii</string>
+    <string name="account_data_passphrase_hint">Furtuu dhuunfaa kee ni hammatama, jecha darbii kanaatiin faayduu. Iddoo nagahaa keessa kuusi. Deebisuuf isatti ni barbaadda.</string>
+    <string name="replication_hosts_subtitle">Saarvaroonni biroo kanneen garagalcha akkaawuntii kee qaban. Tokko balleessuuf, saarvara sana irratti seenii \"Akkaawuntii koo saarvarii kana irraa balleessi\" fayyadami.</string>
+    <string name="replication_irreparable">Hin suphamu</string>
+    <string name="replication_leave">Akkaawuntii koo saarvarii kana irraa balleessi</string>
+    <string name="replication_leave_title">Akkaawuntii kee saarvarii kana irraa balleessuu?</string>
+    <string name="replication_leave_message">Deetaan akkaawuntii kee kan saarvarii kana irra jiru bara baraan ni balleeffama, asittis ni baata. Akkaawuntiin kee saarvaroota kee biroo irra ni tura, kana booddee deebistee dabaluu dandeessa.</string>
+    <string name="replication_leave_confirm">Haqi</string>
+    <string name="replication_forget">Hoosticha hin gahamne kana dagadhu</string>
+    <string name="replication_forget_title">Hoosticha hin gahamne kana dagachuu?</string>
+    <string name="replication_forget_message">Inni tarree riplikaa kee irraa ni balleeffama, yeroo deebi\'ee walqunnamtu garagalcha isaa akka balleessu itti himama. Saarvara gahamu balleessuuf, achitti seenii \"Akkaawuntii koo saarvarii kana irraa balleessi\" fayyadami. Itti fufuuf akka ati taate mirkaneessi.</string>
+    <string name="replication_offline">Sarara ala</string>
+    <string name="replication_forget_confirm">Irraanfadhu</string>
 </resources>

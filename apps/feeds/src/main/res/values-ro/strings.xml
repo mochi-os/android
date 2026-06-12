@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Clasificare / punctare</string>
     <string name="feeds_ai_prompt_credibility">Evaluarea credibilității</string>
 
+    <string name="feeds_refresh">Reîmprospătează</string>
+    <string name="feeds_interest_boosted">Interes amplificat</string>
+    <string name="feeds_interest_reduced">Interes redus</string>
+    <string name="feeds_interest_removed">Interes eliminat</string>
+    <string name="feeds_interest_failed">Ajustarea interesului a eșuat</string>
 </resources>

@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Tertipleşdirmek / bahalandyrmak</string>
     <string name="feeds_ai_prompt_credibility">Ynamlylyk baholamasy</string>
 
+    <string name="feeds_refresh">Täzele</string>
+    <string name="feeds_interest_boosted">Gyzyklanma artdyryldy</string>
+    <string name="feeds_interest_reduced">Gyzyklanma azaldyldy</string>
+    <string name="feeds_interest_removed">Gyzyklanma aýryldy</string>
+    <string name="feeds_interest_failed">Gyzyklanma sazlanmady</string>
 </resources>

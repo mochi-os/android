@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">लक्ष्य</string>
     <string name="forums_access_level_view">पहा</string>
+    <string name="forums_access_level_vote">मत द्या</string>
     <string name="forums_access_level_comment">टिप्पणी</string>
     <string name="forums_access_level_post">पोस्ट</string>
     <string name="forums_access_level_none">काहीही नाही</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">एंटिटी ID, @group, * (प्रत्येकजण), किंवा + (सदस्य)</string>
     <string name="forums_access_level">स्तर</string>
     <string name="forums_access_level_moderate">नियंत्रण</string>
-    <string name="forums_access_level_manage">व्यवस्थापन</string>
     <string name="forums_members_search">सदस्य फिल्टर करा</string>
     <string name="forums_banner_description">मंचाच्या शीर्षस्थानी दर्शविलेले Markdown.</string>
     <string name="forums_banner_placeholder">या मंचावर स्वागत आहे…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">धोका क्षेत्र</string>
     <string name="forums_settings_delete_message">हे मंच आणि त्याच्या सर्व पोस्ट कायमचे हटवेल. हे पूर्ववत करता येणार नाही.</string>
 
+    <string name="forums_tag_interest_up">रुची वाढवा</string>
+    <string name="forums_tag_interest_down">स्वारस्य कमी करा</string>
+    <string name="forums_tag_interest_remove">स्वारस्य काढा</string>
+    <string name="forums_list_default_sort">डीफॉल्ट क्रमवारी</string>
+    <string name="forums_access_tab_users">वापरकर्ते</string>
+    <string name="forums_access_tab_groups">गट</string>
+    <string name="forums_access_tab_manual">मॅन्युअल</string>
+    <string name="forums_access_search_users">वापरकर्ते शोधा</string>
+    <string name="forums_access_no_groups">गट उपलब्ध नाहीत</string>
 </resources>

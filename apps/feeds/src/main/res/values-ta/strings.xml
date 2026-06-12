@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">தரவரிசை / மதிப்பெண்</string>
     <string name="feeds_ai_prompt_credibility">நம்பகத்தன்மை மதிப்பீடு</string>
 
+    <string name="feeds_refresh">புதுப்பி</string>
+    <string name="feeds_interest_boosted">ஆர்வம் அதிகரிக்கப்பட்டது</string>
+    <string name="feeds_interest_reduced">ஆர்வம் குறைக்கப்பட்டது</string>
+    <string name="feeds_interest_removed">ஆர்வம் நீக்கப்பட்டது</string>
+    <string name="feeds_interest_failed">ஆர்வத்தைச் சரிசெய்ய முடியவில்லை</string>
 </resources>

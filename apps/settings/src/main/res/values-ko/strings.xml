@@ -56,8 +56,6 @@
     <string name="replication_deny">거부</string>
     <string name="replication_hosts_title">내 호스트</string>
     <string name="replication_hosts_empty_hint">다른 서버에 복제하려면 그곳에서 계정을 만들고 \"기존 계정 복제\" 옵션을 사용하세요.</string>
-    <string name="replication_remove">호스트 제거</string>
-    <string name="replication_remove_title">호스트를 제거하시겠습니까?</string>
     <string name="settings_home_section_system">시스템</string>
     <string name="system_replication_title">복제</string>
     <string name="system_replication_this_server">이 서버</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">안 함</string>
     <string name="replication_hosts_empty">이 계정은 이 서버에만 있습니다.</string>
     <string name="replication_added">추가 %1$s</string>
-    <string name="replication_remove_message">이 서버는 해당 호스트로 계정 복제를 중지합니다.</string>
     <string name="settings_home_system_replication">복제(서버)</string>
     <string name="system_replication_pair_empty_hint">새 서버에서 \"mochictl replica join &lt;existing-peer-id&gt;\"을(를) 사용하여 다른 새로 설치된 서버와 페어링합니다.</string>
     <string name="route_delete_message">경로 \"%1$s\"에 대한 라우트가 제거됩니다.</string>
@@ -386,4 +383,28 @@
     <string name="login_method_totp">인증 앱</string>
     <string name="login_method_oauth">타사 로그인</string>
     <string name="login_method_recovery">복구 코드</string>
+    <string name="account_close_section">계정 닫기</string>
+    <string name="account_close_action">계정 닫기</string>
+    <string name="account_close_confirm_title">계정을 닫으시겠습니까?</string>
+    <string name="account_close_confirm_body">회원님의 계정이 삭제 예정으로 지정되고 로그아웃됩니다. 삭제일 전에는 언제든지 다시 로그인하여 취소할 수 있습니다.</string>
+    <string name="account_data_download">다운로드</string>
+    <string name="route_target_app">앱</string>
+    <string name="route_target_entity">엔티티</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">내 데이터</string>
+    <string name="account_data_dialog_title">데이터 다운로드</string>
+    <string name="account_data_dialog_body">이 백업은 이 서버 또는 다른 Mochi 서버에서 복원할 수 있는 전체 백업입니다. 계속하려면 본인임을 확인하세요.</string>
+    <string name="account_data_passphrase">암호 문구</string>
+    <string name="account_data_passphrase_hint">개인 키가 포함되어 있으며, 이 패스프레이즈로 암호화되어 있습니다. 안전한 곳에 보관하세요. 복원하려면 필요합니다.</string>
+    <string name="replication_hosts_subtitle">계정의 복사본을 함께 보유하고 있는 다른 서버입니다. 하나를 제거하려면 해당 서버에 로그인하여 \"이 서버에서 내 계정 제거\"를 사용하세요.</string>
+    <string name="replication_irreparable">복구 불가</string>
+    <string name="replication_leave">이 서버에서 내 계정 제거</string>
+    <string name="replication_leave_title">이 서버에서 계정을 제거하시겠습니까?</string>
+    <string name="replication_leave_message">이 서버에 있는 계정 데이터가 영구적으로 삭제되며 여기에서 로그아웃됩니다. 계정은 다른 서버에 그대로 유지되며, 이 서버는 나중에 다시 추가할 수 있습니다.</string>
+    <string name="replication_leave_confirm">제거</string>
+    <string name="replication_forget">연결할 수 없는 이 호스트 삭제</string>
+    <string name="replication_forget_title">연결할 수 없는 이 호스트를 삭제하시겠습니까?</string>
+    <string name="replication_forget_message">이 호스트는 복제본 집합에서 제거되며, 다시 연결될 때 자체 복사본을 삭제하도록 지시됩니다. 연결 가능한 서버를 제거하려면 해당 서버에 로그인하여 \"이 서버에서 내 계정 제거\"를 사용하세요. 계속하려면 본인 확인을 해주세요.</string>
+    <string name="replication_offline">오프라인</string>
+    <string name="replication_forget_confirm">삭제</string>
 </resources>

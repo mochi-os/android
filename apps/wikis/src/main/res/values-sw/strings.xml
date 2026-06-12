@@ -303,4 +303,8 @@
     <string name="wikis_replicas_col_synced">Maingiliano ya mwisho: %1$s</string>
     <string name="wikis_replicas_remove_confirm_message">Hii itasitisha kutuma sasisho kwa „%1$s\". Wanaweza kufuata tena ikiwa wanataka.</string>
     <string name="wikis_replicas_removed_success">Nakala imeondolewa</string>
+    <string name="wikis_load_more">Pakia zaidi</string>
+    <string name="wikis_access_change_level">Kiwango cha ufikiaji</string>
+    <string name="wikis_access_subject_anyone">Mtu yeyote</string>
+    <string name="wikis_access_subject_authenticated">Watumiaji waliothibitishwa</string>
 </resources>

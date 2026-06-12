@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Bu kod noto\'g\'ri yoki muddati o\'tgan.</string>
     <string name="stepup_error_passkey">Kirish kaliti tasdig\'i muvaffaqiyatsiz tugadi. Iltimos, qaytadan urinib ko\'ring.</string>
     <string name="stepup_error_oauth">Ushbu hisob bilan tasdiqlab bo‘lmadi. Iltimos, qayta urinib ko‘ring.</string>
+    <string name="game_system_resign">%1$s taslim bo‘ldi</string>
+    <string name="game_system_draw_offer">%1$s durang taklif qildi</string>
+    <string name="game_system_draw_accept">Durang qabul qilindi</string>
+    <string name="game_system_draw_decline">%1$s durangni rad etdi</string>
+    <string name="reactivation_title">Hisobingiz o\'chirilishi rejalashtirilgan</string>
+    <string name="reactivation_body">Hisobingiz o\'chirilishi rejalashtirilgan. Hozir bekor qilib, to\'liq kirishni tiklashingiz mumkin.</string>
+    <string name="reactivation_body_dated">Hisobingiz va uning barcha ma\'lumotlari %1$s sanasida butunlay o\'chiriladi. Hozir bekor qilib, to\'liq kirishni tiklashingiz mumkin.</string>
+    <string name="reactivation_reactivate">Hisobimni qayta faollashtirish</string>
+    <string name="reactivation_sign_out">Yopishni davom ettirish va tizimdan chiqish</string>
 </resources>

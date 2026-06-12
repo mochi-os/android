@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Manufa</string>
     <string name="forums_access_level_view">Kalla</string>
+    <string name="forums_access_level_vote">Kada kuri\'a</string>
     <string name="forums_access_level_comment">Sharhi</string>
     <string name="forums_access_level_post">Sako</string>
     <string name="forums_access_level_none">Babu</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID ɗin mahaɗi, @ƙungiya, * (kowa), ko + (mambobi)</string>
     <string name="forums_access_level">Matakin</string>
     <string name="forums_access_level_moderate">Sarrafa</string>
-    <string name="forums_access_level_manage">Tafiyar da</string>
     <string name="forums_members_search">Tace mambobi</string>
     <string name="forums_banner_description">Markdown da ake nunawa a saman taron tattaunawa.</string>
     <string name="forums_banner_placeholder">Barka da zuwa wannan taron tattaunawa…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Yankin haɗari</string>
     <string name="forums_settings_delete_message">Wannan zai share taron tattaunawa da dukkan saƙonninsa har abada. Ba za a iya warware wannan ba.</string>
 
+    <string name="forums_tag_interest_up">Ƙara sha\'awa</string>
+    <string name="forums_tag_interest_down">Rage sha\'awa</string>
+    <string name="forums_tag_interest_remove">Cire sha\'awa</string>
+    <string name="forums_list_default_sort">Default sort</string>
+    <string name="forums_access_tab_users">Masu amfani</string>
+    <string name="forums_access_tab_groups">Groups</string>
+    <string name="forums_access_tab_manual">Hannu</string>
+    <string name="forums_access_search_users">Bincika masu amfani</string>
+    <string name="forums_access_no_groups">Babu ƙungiyoyi</string>
 </resources>

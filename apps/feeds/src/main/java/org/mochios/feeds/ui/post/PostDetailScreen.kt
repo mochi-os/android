@@ -636,7 +636,8 @@ internal fun PostTagsButton(
             }
         }
         DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
-            tags.forEach { tag -> TagMenuRow(tag = tag, onAdjustInterest = onAdjustInterest) }
+            // Close the menu after a thumb tap so the action visibly registers.
+            tags.forEach { tag -> TagMenuRow(tag = tag, onAdjustInterest = { t, d -> onAdjustInterest(t, d); open = false }) }
             if (tags.isNotEmpty()) {
                 HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
             }

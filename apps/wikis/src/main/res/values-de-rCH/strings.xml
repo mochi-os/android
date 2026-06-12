@@ -305,5 +305,9 @@
     <string name="wikis_replicas_remove_confirm_action">Remove</string>
     <string name="wikis_replicas_removed_success">Replica removed</string>
     <string name="wikis_replicas_remove_failed">Failed to remove replica</string>
+    <string name="wikis_load_more">Mehr laden</string>
+    <string name="wikis_access_change_level">Zugriffsebene</string>
+    <string name="wikis_access_subject_anyone">Jeder</string>
+    <string name="wikis_access_subject_authenticated">Authentifizierte Benutzer</string>
 
 </resources>

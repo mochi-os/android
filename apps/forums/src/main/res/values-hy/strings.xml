@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Թիրախ</string>
     <string name="forums_access_level_view">Դիտել</string>
+    <string name="forums_access_level_vote">Քվեարկել</string>
     <string name="forums_access_level_comment">Մեկնաբանել և դիտել</string>
     <string name="forums_access_level_post">Գրառում</string>
     <string name="forums_access_level_none">Ոչ մեկը</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Էության ID, @խումբ, * (բոլորը), կամ + (անդամներ)</string>
     <string name="forums_access_level">Մակարդակ</string>
     <string name="forums_access_level_moderate">Մոդերացնել</string>
-    <string name="forums_access_level_manage">Կառավարել</string>
     <string name="forums_members_search">Զտել անդամներին</string>
     <string name="forums_banner_description">Markdown, որը ցուցադրվում է ֆորումի վերևում:</string>
     <string name="forums_banner_placeholder">Բարի գալուստ այս ֆորում…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Վտանգավոր գոտի</string>
     <string name="forums_settings_delete_message">Սա մշտապես կջնջի ֆորումը և նրա բոլոր գրառումները: Սա հնարավոր չէ հետարկել:</string>
 
+    <string name="forums_tag_interest_up">Եզրագծի գույն</string>
+    <string name="forums_tag_interest_down">Նվազեցնել հետաքրքրությունը</string>
+    <string name="forums_tag_interest_remove">Հեռացնել հետաքրքրությունը</string>
+    <string name="forums_list_default_sort">Լռելյայն տեսակավորում</string>
+    <string name="forums_access_tab_users">Օգտատերեր</string>
+    <string name="forums_access_tab_groups">Խմբեր</string>
+    <string name="forums_access_tab_manual">Նշել բոլորը կարդացված</string>
+    <string name="forums_access_search_users">Որոնել օգտատերեր</string>
+    <string name="forums_access_no_groups">Հասանելի խմբեր չկան</string>
 </resources>

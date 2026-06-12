@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Armanc</string>
     <string name="forums_access_level_view">Bibîne</string>
+    <string name="forums_access_level_vote">Deng bide</string>
     <string name="forums_access_level_comment">Şîrove</string>
     <string name="forums_access_level_post">Poste</string>
     <string name="forums_access_level_none">Tu</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">Nasnameya saziyê, @kom, * (her kes), an + (endam)</string>
     <string name="forums_access_level">Ast</string>
     <string name="forums_access_level_moderate">Rêvebirin</string>
-    <string name="forums_access_level_manage">Birêvebirin</string>
     <string name="forums_members_search">Endaman parz bike</string>
     <string name="forums_banner_description">Markdown ku li jora forumê tê nîşandan.</string>
     <string name="forums_banner_placeholder">Bi xêr hatî vê forumê…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Devera xeternak</string>
     <string name="forums_settings_delete_message">Ev ê forumê û hemû şandiyên wê herdem jê bibe. Ev nayê vegerandin.</string>
 
+    <string name="forums_tag_interest_up">Berjewendiyê zêde bike</string>
+    <string name="forums_tag_interest_down">Balkêşî kêm bike</string>
+    <string name="forums_tag_interest_remove">Balkêşiyê rake</string>
+    <string name="forums_list_default_sort">Rêzkirina standard</string>
+    <string name="forums_access_tab_users">Bikarhêner</string>
+    <string name="forums_access_tab_groups">Kom</string>
+    <string name="forums_access_tab_manual">Destî</string>
+    <string name="forums_access_search_users">Li bikarhêneran bigere</string>
+    <string name="forums_access_no_groups">Tu kom berdest nîn in</string>
 </resources>

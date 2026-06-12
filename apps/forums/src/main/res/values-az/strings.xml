@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Hədəf</string>
     <string name="forums_access_level_view">Bütün bildirişlərə bax</string>
+    <string name="forums_access_level_vote">Səs ver</string>
     <string name="forums_access_level_comment">Şərh</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Heç biri</string>
@@ -157,7 +158,6 @@
     <string name="forums_access_target_hint">Subyekt ID, @qrup, * (hamı) və ya + (üzvlər)</string>
     <string name="forums_access_level">Səviyyə</string>
     <string name="forums_access_level_moderate">Moderasiya</string>
-    <string name="forums_access_level_manage">İdarəetmə</string>
     <string name="forums_members_search">Üzvləri filtrlə</string>
     <string name="forums_banner_description">Forumun yuxarısında göstərilən Markdown.</string>
     <string name="forums_banner_placeholder">Bu foruma xoş gəlmisiniz…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Təhlükəli zona</string>
     <string name="forums_settings_delete_message">Bu forumu və onun bütün yazılarını qalıcı olaraq siləcək. Bu geri qaytarıla bilməz.</string>
 
+    <string name="forums_tag_interest_up">Marağı artır</string>
+    <string name="forums_tag_interest_down">Marağı azalt</string>
+    <string name="forums_tag_interest_remove">Marağı sil</string>
+    <string name="forums_list_default_sort">Default sıralama</string>
+    <string name="forums_access_tab_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="forums_access_tab_groups">Qruplar</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">İstifadəçi axtar</string>
+    <string name="forums_access_no_groups">Mövcud qrup yoxdur</string>
 </resources>

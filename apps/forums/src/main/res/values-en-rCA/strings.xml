@@ -11,6 +11,7 @@
     <string name="forums_list_logout">Log out</string>
     <string name="forums_find_subscribe">Subscribe</string>
     <string name="forums_access_level_view">View</string>
+    <string name="forums_access_level_vote">Vote</string>
     <string name="forums_access_level_none">None</string>
     <string name="forums_settings">Settings</string>
     <string name="forums_list_search">Search</string>
@@ -111,7 +112,6 @@
     <string name="forums_access_level_comment">Comment</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_moderate">Moderate</string>
-    <string name="forums_access_level_manage">Manage</string>
     <string name="forums_members_search">Filter members</string>
     <string name="forums_members_empty">No members</string>
     <string name="forums_banner_description">Markdown shown at the top of the forum.</string>
@@ -198,4 +198,13 @@
     <string name="forums_forum_not_found">Forum not found</string>
     <string name="forums_post_not_found">Post not found</string>
 
+    <string name="forums_tag_interest_up">Boost interest</string>
+    <string name="forums_tag_interest_down">Reduce interest</string>
+    <string name="forums_tag_interest_remove">Remove interest</string>
+    <string name="forums_list_default_sort">Default sort</string>
+    <string name="forums_access_tab_users">Users</string>
+    <string name="forums_access_tab_groups">Groups</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Search users</string>
+    <string name="forums_access_no_groups">No groups available</string>
 </resources>

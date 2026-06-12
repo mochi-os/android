@@ -56,8 +56,6 @@
     <string name="replication_deny">Одбиј</string>
     <string name="replication_hosts_title">Моите хостови</string>
     <string name="replication_hosts_empty_hint">За да го реплицирате на друг сервер, регистрирајте се за сметка таму и користете ја опцијата \"Реплицирај постоечка сметка\".</string>
-    <string name="replication_remove">Отстрани хост</string>
-    <string name="replication_remove_title">Отстрани го хостот?</string>
     <string name="settings_home_section_system">Систем</string>
     <string name="system_replication_title">Репликација</string>
     <string name="system_replication_this_server">Овој сервер</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Никогаш</string>
     <string name="replication_hosts_empty">Оваа сметка е само на овој сервер.</string>
     <string name="replication_added">Додадено %1$s</string>
-    <string name="replication_remove_message">Овој сервер ќе престане да ја реплицира вашата сметка на тој хост.</string>
     <string name="settings_home_system_replication">Репликација (сервер)</string>
     <string name="system_replication_pair_empty_hint">Спарете со друг свеж инсталиран сервер користејќи „mochictl replica join &lt;existing-peer-id&gt;\" на новиот сервер.</string>
     <string name="route_delete_message">Ова ќе ја отстрани патеката за патот „%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator апликација</string>
     <string name="login_method_oauth">Најава од трета страна</string>
     <string name="login_method_recovery">Кодови за обновување</string>
+    <string name="account_close_section">Затвори сметка</string>
+    <string name="account_close_action">Затвори сметка</string>
+    <string name="account_close_confirm_title">Да ја затворите вашата сметка?</string>
+    <string name="account_close_confirm_body">Вашата сметка ќе биде закажана за бришење и ќе бидете одјавени. Можете да откажете во секое време пред датумот на бришење со повторно најавување.</string>
+    <string name="account_data_download">Преземи</string>
+    <string name="route_target_app">Апликација</string>
+    <string name="route_target_entity">Ентитет</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Вашите податоци</string>
+    <string name="account_data_dialog_title">Преземете ги вашите податоци</string>
+    <string name="account_data_dialog_body">Ова е целосна резервна копија што можете да ја вратите на овој или на друг Mochi сервер. Потврдете дека сте вие за да продолжите.</string>
+    <string name="account_data_passphrase">Лозинка</string>
+    <string name="account_data_passphrase_hint">Вашите приватни клучеви се вклучени, шифрирани со оваа лозинка-фраза. Чувајте ја на безбедно место. Ќе ви треба за враќање.</string>
+    <string name="replication_hosts_subtitle">Други сервери што исто така чуваат копија од вашата сметка. За да отстраните еден, најавете се на тој сервер и користете „Отстрани ја мојата сметка од овој сервер“.</string>
+    <string name="replication_irreparable">Непоправливо</string>
+    <string name="replication_leave">Отстрани ја мојата сметка од овој сервер</string>
+    <string name="replication_leave_title">Да се отстрани вашата сметка од овој сервер?</string>
+    <string name="replication_leave_message">Податоците на вашата сметка на овој сервер ќе бидат трајно избришани и ќе бидете одјавени тука. Вашата сметка останува на вашите други сервери, и подоцна можете повторно да го додадете овој сервер.</string>
+    <string name="replication_leave_confirm">Отстрани</string>
+    <string name="replication_forget">Заборави го овој недостапен хост</string>
+    <string name="replication_forget_title">Да се заборави овој недостапен хост?</string>
+    <string name="replication_forget_message">Тој ќе биде отстранет од вашиот сет реплики и ќе му биде кажано да ја избрише својата копија кога повторно ќе се поврзе. За да отстраните достапен сервер, најавете се на него и користете „Отстрани ја мојата сметка од овој сервер“. Потврдете дека сте вие за да продолжите.</string>
+    <string name="replication_offline">Офлајн</string>
+    <string name="replication_forget_confirm">Заборави</string>
 </resources>

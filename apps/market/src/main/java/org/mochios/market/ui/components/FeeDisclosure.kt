@@ -54,7 +54,7 @@ fun FeeDisclosure(
     }
 }
 
-private fun formatPercent(format: Format, value: Double): String {
+internal fun formatPercent(format: Format, value: Double): String {
     val whole = value.toLong()
     return if (kotlin.math.abs(value - whole) < 0.005) {
         format.formatNumber(whole, 0)

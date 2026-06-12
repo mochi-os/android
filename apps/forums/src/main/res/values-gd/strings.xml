@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Targaid</string>
     <string name="forums_access_level_view">Seall</string>
+    <string name="forums_access_level_vote">Bhòt</string>
     <string name="forums_access_level_comment">Beachd</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_none">Chan eil gin</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID neach-dèilig, @buidheann, * (a h-uile duine), no + (buill)</string>
     <string name="forums_access_level">Ìre</string>
     <string name="forums_access_level_moderate">Modaraich</string>
-    <string name="forums_access_level_manage">Stiùirich</string>
     <string name="forums_members_search">Criathraich na buill</string>
     <string name="forums_banner_description">Markdown a thèid a shealltainn aig mullach an fhòraim.</string>
     <string name="forums_banner_placeholder">Fàilte gun fhòram seo…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Raon cunnartach</string>
     <string name="forums_settings_delete_message">Sguabaidh seo às am fòram agus a h-uile post a tha ann gu buan. Cha ghabh seo a neo-dhèanamh.</string>
 
+    <string name="forums_tag_interest_up">Brosnaich ùidh</string>
+    <string name="forums_tag_interest_down">Lùghdaich an ùidh</string>
+    <string name="forums_tag_interest_remove">Thoir an ùidh air falbh</string>
+    <string name="forums_list_default_sort">Seòrsachadh bunaiteach</string>
+    <string name="forums_access_tab_users">Cleachdaichean</string>
+    <string name="forums_access_tab_groups">Buidhnean</string>
+    <string name="forums_access_tab_manual">Le làimh</string>
+    <string name="forums_access_search_users">Lorg cleachdaichean</string>
+    <string name="forums_access_no_groups">Chan eil buidhnean rim faotainn</string>
 </resources>

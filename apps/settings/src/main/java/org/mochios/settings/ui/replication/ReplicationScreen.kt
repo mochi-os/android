@@ -3,6 +3,7 @@ package org.mochios.settings.ui.replication
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
@@ -59,11 +61,13 @@ import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.ReplicationHost
 import org.mochios.settings.api.ReplicationLink
+import org.mochios.settings.ui.login.StepUpHost
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReplicationScreen(
     onBack: () -> Unit,
+    onLeft: () -> Unit,
     viewModel: ReplicationViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -76,6 +80,8 @@ fun ReplicationScreen(
         viewModel.events.collect { ev ->
             when (ev) {
                 is ReplicationEvent.Copied -> snackbar.showSnackbar(if (ev.success) copiedOk else copiedErr)
+                // The account's copy on this server is gone; sign out.
+                is ReplicationEvent.Left -> onLeft()
             }
         }
     }
@@ -142,6 +148,15 @@ fun ReplicationScreen(
                         Spacer(Modifier.height(16.dp))
                     }
 
+                    // Removing a replica is operated on the server whose copy
+                    // you're deleting: only shown when other hosts exist.
+                    if (state.hosts.isNotEmpty()) {
+                        item("leave-this-server") {
+                            LeaveThisServer(onLeave = { viewModel.leave() })
+                            Spacer(Modifier.height(16.dp))
+                        }
+                    }
+
                     if (state.links.isNotEmpty()) {
                         item("pending-header") {
                             SectionHeader(
@@ -160,7 +175,11 @@ fun ReplicationScreen(
                     }
 
                     item("hosts-header") {
-                        SectionHeader(title = stringResource(R.string.replication_hosts_title))
+                        SectionHeader(
+                            title = stringResource(R.string.replication_hosts_title),
+                            subtitle = if (state.hosts.isEmpty()) null
+                                else stringResource(R.string.replication_hosts_subtitle),
+                        )
                     }
                     if (state.hosts.isEmpty()) {
                         item("hosts-empty") {
@@ -178,13 +197,15 @@ fun ReplicationScreen(
                         }
                     } else {
                         items(state.hosts, key = { it.peer }) { host ->
-                            HostRow(host = host, onRemove = { viewModel.remove(host.peer) })
+                            HostRow(host = host, onForget = { viewModel.remove(host.peer) })
                         }
                     }
                 }
             }
         }
     }
+
+    StepUpHost(viewModel.stepUp)
 }
 
 @Composable
@@ -265,14 +286,32 @@ private fun PendingRow(
     }
 }
 
+// A host in the set is informational. To remove a *reachable* replica the user
+// signs in on that server and uses "Remove my account from this server". Only an
+// *unreachable* host gets an advanced "forget" here (you can't sign in to a down
+// server), which removes it and tells it to purge when it reconnects.
 @Composable
-private fun HostRow(host: ReplicationHost, onRemove: () -> Unit) {
+private fun HostRow(host: ReplicationHost, onForget: () -> Unit) {
     val format = LocalFormat.current
     var confirm by remember(host.peer) { mutableStateOf(false) }
+    val unreachable = host.irreparable || offlineActive(host.offline)
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
-                Text(host.peer, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        host.peer,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.Medium,
+                    )
+                    if (host.irreparable) {
+                        Spacer(Modifier.width(8.dp))
+                        StatusBadge(stringResource(R.string.replication_irreparable))
+                    } else if (offlineActive(host.offline)) {
+                        Spacer(Modifier.width(8.dp))
+                        StatusBadge(stringResource(R.string.replication_offline))
+                    }
+                }
                 if (host.added > 0) {
                     Text(
                         text = stringResource(R.string.replication_added, format.formatRelativeTime(host.added)),
@@ -281,31 +320,82 @@ private fun HostRow(host: ReplicationHost, onRemove: () -> Unit) {
                     )
                 }
             }
-            IconButton(onClick = { confirm = true }) {
-                Icon(
-                    Icons.Default.Delete,
-                    contentDescription = stringResource(R.string.replication_remove),
-                    tint = MaterialTheme.colorScheme.error,
-                )
+            if (unreachable) {
+                IconButton(onClick = { confirm = true }) {
+                    Icon(
+                        Icons.Default.Delete,
+                        contentDescription = stringResource(R.string.replication_forget),
+                        tint = MaterialTheme.colorScheme.error,
+                    )
+                }
             }
         }
     }
     if (confirm) {
         AlertDialog(
             onDismissRequest = { confirm = false },
-            title = { Text(stringResource(R.string.replication_remove_title)) },
-            text = { Text(stringResource(R.string.replication_remove_message)) },
+            title = { Text(stringResource(R.string.replication_forget_title)) },
+            text = { Text(stringResource(R.string.replication_forget_message)) },
             confirmButton = {
                 TextButton(onClick = {
                     confirm = false
-                    onRemove()
-                }) { Text(stringResource(R.string.replication_remove)) }
+                    onForget()
+                }) { Text(stringResource(R.string.replication_forget_confirm)) }
             },
             dismissButton = {
                 TextButton(onClick = { confirm = false }) { Text(stringResource(MochiR.string.common_cancel)) }
             },
         )
     }
+}
+
+// "Remove my account from this server" — the primary, local way to drop a
+// replica. Confirm, then the ViewModel runs the step-up gate before leaving.
+@Composable
+private fun LeaveThisServer(onLeave: () -> Unit) {
+    var confirm by remember { mutableStateOf(false) }
+    OutlinedButton(onClick = { confirm = true }) {
+        Icon(Icons.Default.Delete, contentDescription = null)
+        Spacer(Modifier.width(8.dp))
+        Text(stringResource(R.string.replication_leave))
+    }
+    if (confirm) {
+        AlertDialog(
+            onDismissRequest = { confirm = false },
+            title = { Text(stringResource(R.string.replication_leave_title)) },
+            text = { Text(stringResource(R.string.replication_leave_message)) },
+            confirmButton = {
+                TextButton(onClick = {
+                    confirm = false
+                    onLeave()
+                }) { Text(stringResource(R.string.replication_leave_confirm)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { confirm = false }) { Text(stringResource(MochiR.string.common_cancel)) }
+            },
+        )
+    }
+}
+
+@Composable
+private fun StatusBadge(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelSmall,
+        color = MaterialTheme.colorScheme.error,
+        modifier = Modifier
+            .border(1.dp, MaterialTheme.colorScheme.error, RoundedCornerShape(4.dp))
+            .padding(horizontal = 6.dp, vertical = 2.dp),
+    )
+}
+
+// Mirror of web's offlineActive: show the badge only once a host has been
+// unreachable past the threshold (rides out a restart or blip).
+private const val offlineBadgeSeconds = 3600L
+
+private fun offlineActive(since: Long): Boolean {
+    if (since <= 0) return false
+    return System.currentTimeMillis() / 1000 - since > offlineBadgeSeconds
 }
 
 private fun copyToClipboard(context: Context, label: String, value: String): Boolean {

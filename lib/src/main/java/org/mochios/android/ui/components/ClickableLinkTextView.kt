@@ -8,7 +8,10 @@ import android.view.MotionEvent
 import android.view.ViewConfiguration
 import android.widget.TextView
 import io.noties.markwon.ext.tables.TableRowSpan
+import io.noties.markwon.image.AsyncDrawableSpan
 import kotlin.math.abs
+import kotlin.math.max
+import kotlin.math.min
 
 class ClickableLinkTextView @JvmOverloads constructor(
     context: Context,
@@ -17,32 +20,133 @@ class ClickableLinkTextView @JvmOverloads constructor(
 
     var onNonLinkClick: (() -> Unit)? = null
 
+    /** Invoked on a long-press over an image that has alt/title text. */
+    var onImageLongPress: ((String) -> Unit)? = null
+
+    /** Image URL (AsyncDrawable destination) -> its alt/title text. */
+    var imageAltByUrl: Map<String, String> = emptyMap()
+
     private var downX = 0f
     private var downY = 0f
-    private var touchedLink = false
+    private var pendingLink: ClickableSpan? = null
+    private var touchedTableRow = false
+    private var imageAlt: String? = null
+    private var longPressFired = false
     private val touchSlop = ViewConfiguration.get(context).scaledTouchSlop
+    private val longPressTimeout = ViewConfiguration.getLongPressTimeout().toLong()
+
+    private val longPressRunnable = Runnable {
+        imageAlt?.let { alt ->
+            longPressFired = true
+            onImageLongPress?.invoke(alt)
+        }
+    }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 downX = event.x
                 downY = event.y
-                touchedLink = hitsLink(event)
+                longPressFired = false
+                // Only engage the image path when a handler is wired, so other
+                // HtmlContent callers keep their existing behaviour untouched.
+                imageAlt = if (onImageLongPress != null) imageAltAt(event) else null
+                if (imageAlt != null) {
+                    pendingLink = null
+                    touchedTableRow = false
+                    postDelayed(longPressRunnable, longPressTimeout)
+                } else {
+                    pendingLink = linkAt(event)
+                    touchedTableRow = pendingLink == null && tableRowAt(event)
+                }
+            }
+            MotionEvent.ACTION_MOVE -> {
+                if (imageAlt != null &&
+                    (abs(event.x - downX) > touchSlop || abs(event.y - downY) > touchSlop)
+                ) {
+                    // Became a scroll/drag — cancel the pending long-press.
+                    removeCallbacks(longPressRunnable)
+                    imageAlt = null
+                }
             }
             MotionEvent.ACTION_UP -> {
                 val moved = abs(event.x - downX) > touchSlop || abs(event.y - downY) > touchSlop
-                if (!touchedLink && !moved) {
-                    onNonLinkClick?.invoke()
+                if (imageAlt != null) {
+                    removeCallbacks(longPressRunnable)
+                    // A quick tap on an image (no long-press) falls through to
+                    // the card handler, matching prior behaviour.
+                    if (!longPressFired && !moved) onNonLinkClick?.invoke()
+                } else if (!moved) {
+                    val link = pendingLink
+                    when {
+                        link != null -> link.onClick(this)
+                        !touchedTableRow -> onNonLinkClick?.invoke()
+                    }
                 }
             }
+            MotionEvent.ACTION_CANCEL -> {
+                removeCallbacks(longPressRunnable)
+                imageAlt = null
+            }
         }
-        if (touchedLink) {
-            return super.onTouchEvent(event)
-        }
+        // Over an image with alt text: we own the gesture (tap + long-press).
+        if (imageAlt != null) return true
+        // Regular link tap: consume so we fire it ourselves on UP.
+        if (pendingLink != null) return true
+        // Table rows: let TableAwareMovementMethod dispatch into the cell.
+        if (touchedTableRow) return super.onTouchEvent(event)
+        // Non-link: unchanged — consume only when a card-level handler is set;
+        // otherwise defer to the TextView (text selection).
         return onNonLinkClick != null
     }
 
-    private fun hitsLink(event: MotionEvent): Boolean {
+    private fun imageAltAt(event: MotionEvent): String? {
+        if (imageAltByUrl.isEmpty()) return null
+        val spanned = text as? Spanned ?: return null
+        val layout = layout ?: return null
+        val x = event.x.toInt() - totalPaddingLeft + scrollX
+        val y = event.y.toInt() - totalPaddingTop + scrollY
+        val line = layout.getLineForVertical(y)
+        if (x < layout.getLineLeft(line) || x > layout.getLineRight(line)) return null
+        val offset = layout.getOffsetForHorizontal(line, x.toFloat())
+        for (span in spanned.getSpans(offset, offset, AsyncDrawableSpan::class.java)) {
+            val url = span.drawable.destination ?: continue
+            val alt = imageAltByUrl[url]
+            if (!alt.isNullOrBlank()) return alt
+        }
+        return null
+    }
+
+    /**
+     * Find a link span near the touch. The default per-glyph hit test makes
+     * short links / URLs very hard to tap, so widen the hit area by the touch
+     * slop on each side: a near-miss still opens the link.
+     */
+    private fun linkAt(event: MotionEvent): ClickableSpan? {
+        val spanned = text as? Spanned ?: return null
+        val layout = layout ?: return null
+        val x = event.x - totalPaddingLeft + scrollX
+        val y = event.y.toInt() - totalPaddingTop + scrollY
+        val line = layout.getLineForVertical(y)
+        val left = layout.getLineLeft(line)
+        val right = layout.getLineRight(line)
+        // Reject taps clearly off the line's text (beyond one slop of either end).
+        if (x < left - touchSlop || x > right + touchSlop) return null
+        val xLeft = (x - touchSlop).coerceIn(left, right)
+        val xRight = (x + touchSlop).coerceIn(left, right)
+        val o1 = layout.getOffsetForHorizontal(line, xLeft)
+        val o2 = layout.getOffsetForHorizontal(line, xRight)
+        return spanned.getSpans(min(o1, o2), max(o1, o2), ClickableSpan::class.java).firstOrNull()
+    }
+
+    /**
+     * Markwon renders each table row as a TableRowSpan (a ReplacementSpan);
+     * links inside cells are ClickableSpans held in the cell's own text,
+     * invisible to this outer layout. Treat any tap on a table row as a link
+     * tap so the event reaches TableAwareMovementMethod, which dispatches into
+     * the cell and fires the link if one is there.
+     */
+    private fun tableRowAt(event: MotionEvent): Boolean {
         val spanned = text as? Spanned ?: return false
         val layout = layout ?: return false
         val x = event.x.toInt() - totalPaddingLeft + scrollX
@@ -50,12 +154,6 @@ class ClickableLinkTextView @JvmOverloads constructor(
         val line = layout.getLineForVertical(y)
         if (x < layout.getLineLeft(line) || x > layout.getLineRight(line)) return false
         val offset = layout.getOffsetForHorizontal(line, x.toFloat())
-        if (spanned.getSpans(offset, offset, ClickableSpan::class.java).isNotEmpty()) return true
-        // Markwon renders each table row as a TableRowSpan (a ReplacementSpan);
-        // links inside cells are ClickableSpans held in the cell's own text,
-        // invisible to this outer layout. Treat any tap on a table row as a
-        // link tap so the event reaches TableAwareMovementMethod, which
-        // dispatches into the cell and fires the link if one is there.
         return spanned.getSpans(offset, offset, TableRowSpan::class.java).isNotEmpty()
     }
 }

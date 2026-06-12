@@ -31,6 +31,13 @@ data class Identity(
     val fingerprint: String
 )
 
+/** Account lifecycle status plus the purge deadline used by the reactivation
+ *  interstitial. */
+data class AccountStatus(
+    val status: String,
+    val purge: Long
+)
+
 @Singleton
 class AuthRepository @Inject constructor(
     private val authApi: AuthApi,
@@ -134,6 +141,19 @@ class AuthRepository @Inject constructor(
             email = response.user.email,
             fingerprint = response.identity?.fingerprint.orEmpty()
         )
+    }
+
+    /** Account lifecycle status + purge deadline (unix seconds, 0 when not
+     *  closing). Read at bootstrap to route a soft-deleted ("closing")
+     *  session to the reactivation interstitial. */
+    suspend fun accountStatus(): AccountStatus {
+        val response = authApi.getIdentity().unwrapRaw()
+        return AccountStatus(response.user.status, response.user.purge)
+    }
+
+    /** Cancel a pending closure, reactivating the account. */
+    suspend fun cancelClose() {
+        authApi.cancelClose().unwrapRaw()
     }
 
     suspend fun getAvailableMethods(): MethodsResponse {

@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Ціль</string>
     <string name="forums_access_level_view">Переглянути</string>
+    <string name="forums_access_level_vote">Голосувати</string>
     <string name="forums_access_level_comment">Коментар</string>
     <string name="forums_access_level_post">Допис</string>
     <string name="forums_access_level_none">Немає</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID сутності, @група, * (всі) або + (учасники)</string>
     <string name="forums_access_level">Рівень</string>
     <string name="forums_access_level_moderate">Модерувати</string>
-    <string name="forums_access_level_manage">Керувати</string>
     <string name="forums_members_search">Фільтрувати учасників</string>
     <string name="forums_banner_description">Markdown, що відображається у верхній частині форуму.</string>
     <string name="forums_banner_placeholder">Ласкаво просимо до цього форуму…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Небезпечна зона</string>
     <string name="forums_settings_delete_message">Це назавжди видалить форум та всі його публікації. Цю дію не можна скасувати.</string>
 
+    <string name="forums_tag_interest_up">Підвищити інтерес</string>
+    <string name="forums_tag_interest_down">Зменшити інтерес</string>
+    <string name="forums_tag_interest_remove">Видалити інтерес</string>
+    <string name="forums_list_default_sort">Сортування за замовчуванням</string>
+    <string name="forums_access_tab_users">Користувачі</string>
+    <string name="forums_access_tab_groups">Групи</string>
+    <string name="forums_access_tab_manual">Вручну</string>
+    <string name="forums_access_search_users">Пошук користувачів</string>
+    <string name="forums_access_no_groups">Немає доступних груп</string>
 </resources>

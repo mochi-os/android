@@ -28,12 +28,18 @@ import javax.inject.Inject
  */
 data class PageHistoryUiState(
     val isLoading: Boolean = true,
+    val isLoadingMore: Boolean = false,
     val revisions: List<Revision> = emptyList(),
     val currentVersion: Int = 0,
+    val total: Int = 0,
+    val offset: Int = 0,
     val wiki: WikiInfo? = null,
     val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
-)
+) {
+    /** True when more revisions remain on the server beyond what's loaded. */
+    val hasMore: Boolean get() = revisions.size < total
+}
 
 /**
  * ViewModel for [PageHistoryScreen]. Reads `wikiId` and `page` from
@@ -85,12 +91,14 @@ class PageHistoryViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val response = repository.getHistory(wikiId, slug)
+                val response = repository.getHistory(wikiId, slug, PAGE_SIZE, 0)
                 val current = response.revisions.maxOfOrNull { it.version } ?: 0
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     revisions = response.revisions,
                     currentVersion = current,
+                    total = response.total,
+                    offset = response.revisions.size,
                     error = null,
                 )
             } catch (e: Exception) {
@@ -100,5 +108,35 @@ class PageHistoryViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    fun loadMore() {
+        val state = _uiState.value
+        if (state.isLoadingMore || !state.hasMore) return
+        viewModelScope.launch {
+            _uiState.value = state.copy(isLoadingMore = true)
+            try {
+                val response = repository.getHistory(wikiId, slug, PAGE_SIZE, state.offset)
+                // De-dup against already-loaded versions in case rows shifted between pages.
+                val seen = state.revisions.mapTo(mutableSetOf()) { it.version }
+                val merged = state.revisions + response.revisions.filter { it.version !in seen }
+                _uiState.value = _uiState.value.copy(
+                    isLoadingMore = false,
+                    revisions = merged,
+                    currentVersion = merged.maxOfOrNull { it.version } ?: state.currentVersion,
+                    total = response.total,
+                    offset = state.offset + response.revisions.size,
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isLoadingMore = false,
+                    error = e.toMochiError(),
+                )
+            }
+        }
+    }
+
+    companion object {
+        private const val PAGE_SIZE = 50
     }
 }

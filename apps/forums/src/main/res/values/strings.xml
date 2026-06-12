@@ -44,6 +44,7 @@
     <string name="forums_find_subscribe">Subscribe</string>
     <string name="forums_find_subscribed">Subscribed</string>
     <string name="forums_find_no_results">No forums found</string>
+    <string name="forums_find_found_by_url">Found by URL</string>
 
     <!-- Forum screen -->
     <string name="forums_loading">Loading…</string>
@@ -58,6 +59,7 @@
     <string name="forums_sort_hot">Hot</string>
     <string name="forums_sort_top">Top</string>
     <string name="forums_sort_interests">Interests</string>
+    <string name="forums_list_default_sort">Default sort</string>
 
     <!-- Post -->
     <string name="forums_post_title_field">Title</string>
@@ -100,6 +102,9 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_post_tag_remove">Remove tag</string>
     <string name="forums_post_tag_label">Tag</string>
+    <string name="forums_tag_interest_up">Boost interest</string>
+    <string name="forums_tag_interest_down">Reduce interest</string>
+    <string name="forums_tag_interest_remove">Remove interest</string>
 
     <!-- Settings tabs -->
     <string name="forums_tab_general">General</string>
@@ -115,11 +120,16 @@
     <string name="forums_access_target_hint">Entity ID, @group, * (everyone), or + (members)</string>
     <string name="forums_access_level">Level</string>
     <string name="forums_access_level_view">View</string>
+    <string name="forums_access_level_vote">Vote</string>
     <string name="forums_access_level_comment">Comment</string>
     <string name="forums_access_level_post">Post</string>
     <string name="forums_access_level_moderate">Moderate</string>
-    <string name="forums_access_level_manage">Manage</string>
     <string name="forums_access_level_none">None</string>
+    <string name="forums_access_tab_users">Users</string>
+    <string name="forums_access_tab_groups">Groups</string>
+    <string name="forums_access_tab_manual">Manual</string>
+    <string name="forums_access_search_users">Search users</string>
+    <string name="forums_access_no_groups">No groups available</string>
 
     <!-- Members tab -->
     <string name="forums_members_search">Filter members</string>

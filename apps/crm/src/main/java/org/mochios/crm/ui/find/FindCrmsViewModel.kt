@@ -108,7 +108,8 @@ class FindCrmsViewModel @Inject constructor(
     }
 
     fun subscribe(crm: Crm, onSuccess: () -> Unit) {
-        val id = crm.fingerprint.ifEmpty { crm.id }
+        // subscribe requires the full entity id (server rejects a fingerprint).
+        val id = crm.id
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = id)
             try {

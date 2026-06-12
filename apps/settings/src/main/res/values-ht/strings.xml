@@ -56,8 +56,6 @@
     <string name="replication_deny">Refize</string>
     <string name="replication_hosts_title">Lotèl mwen yo</string>
     <string name="replication_hosts_empty_hint">Pou replike li sou yon lòt sèvè, enskri pou yon kont la epi sèvi ak opsyon \"Replike yon kont ki egziste\".</string>
-    <string name="replication_remove">Retire lotèl</string>
-    <string name="replication_remove_title">Retire lotèl?</string>
     <string name="settings_home_section_system">Sistèm</string>
     <string name="system_replication_title">Repliyasyon</string>
     <string name="system_replication_this_server">Sèvè sa a</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Janmen</string>
     <string name="replication_hosts_empty">Kont sa a sèlman sou sèvè sa a.</string>
     <string name="replication_added">Ajoute %1$s</string>
-    <string name="replication_remove_message">Sèvè sa a pral sispann reprodwi kont ou nan hot sa a.</string>
     <string name="settings_home_system_replication">Replikasyon (sèvè)</string>
     <string name="system_replication_pair_empty_hint">Jwenn parad ak yon lòt sèvè nouvèlman enstale sèvi ak \"mochictl replica join &lt;existing-peer-id&gt;\" sou nouvo sèvè a.</string>
     <string name="route_delete_message">Sa pral retire wout pou chemen \"%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">App otantifikatè</string>
     <string name="login_method_oauth">Koneksyon twazyèm pati</string>
     <string name="login_method_recovery">Kòd rekiperasyon</string>
+    <string name="account_close_section">Fèmen kont lan</string>
+    <string name="account_close_action">Fèmen kont lan</string>
+    <string name="account_close_confirm_title">Fèmen kont ou an?</string>
+    <string name="account_close_confirm_body">Kont ou an pral pwograme pou efase epi y ap dekonekte ou. Ou kapab anile li nenpòt lè anvan dat efasman an lè ou rekonekte.</string>
+    <string name="account_data_download">Telechaje</string>
+    <string name="route_target_app">App</string>
+    <string name="route_target_entity">Antite</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Done ou</string>
+    <string name="account_data_dialog_title">Telechaje done ou</string>
+    <string name="account_data_dialog_body">Sa a se yon backup konplè ou ka restore sou sèvè Mochi sa a oswa yon lòt. Verifye se ou menm pou kontinye.</string>
+    <string name="account_data_passphrase">Fraz sekrè</string>
+    <string name="account_data_passphrase_hint">Kle prive ou yo enkli, chifre ak fraz sekrè sa a. Konsève li an sekirite. Ou pral bezwen li pou restore.</string>
+    <string name="replication_hosts_subtitle">Lòt sèvè ki gen yon kopi kont ou tou. Pou retire youn, konekte sou sèvè sa a epi sèvi ak \"Retire kont mwen sou sèvè sa a\".</string>
+    <string name="replication_irreparable">Pa ka repare</string>
+    <string name="replication_leave">Retire kont mwen sou sèvè sa a</string>
+    <string name="replication_leave_title">Retire kont ou sou sèvè sa a?</string>
+    <string name="replication_leave_message">Done kont ou yo sou sèvè sa a ap efase pou tout tan epi w ap dekonekte isit la. Kont ou rete sou lòt sèvè ou yo, epi ou ka ajoute sa a ankò pita.</string>
+    <string name="replication_leave_confirm">Retire</string>
+    <string name="replication_forget">Bliye sèvè sa a ki pa aksesib</string>
+    <string name="replication_forget_title">Bliye sèvè sa a ki pa aksesib?</string>
+    <string name="replication_forget_message">Y ap retire l nan ansanm replik ou a epi y ap mande l efase kopi li lè l rekonekte. Pou retire yon sèvè ki aksesib, konekte la epi sèvi ak \"Retire kont mwen sou sèvè sa a\". Verifye se ou menm pou kontinye.</string>
+    <string name="replication_offline">Andeyò liy</string>
+    <string name="replication_forget_confirm">Bliye</string>
 </resources>

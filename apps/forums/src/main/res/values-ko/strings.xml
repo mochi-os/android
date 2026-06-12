@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">대상</string>
     <string name="forums_access_level_view">보기</string>
+    <string name="forums_access_level_vote">투표</string>
     <string name="forums_access_level_comment">댓글</string>
     <string name="forums_access_level_post">게시물</string>
     <string name="forums_access_level_none">없음</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">엔티티 ID, @그룹, * (모두), 또는 + (구성원)</string>
     <string name="forums_access_level">수준</string>
     <string name="forums_access_level_moderate">조정</string>
-    <string name="forums_access_level_manage">관리</string>
     <string name="forums_members_search">구성원 필터</string>
     <string name="forums_banner_description">포럼 상단에 표시되는 Markdown입니다.</string>
     <string name="forums_banner_placeholder">이 포럼에 오신 것을 환영합니다…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">위험 구역</string>
     <string name="forums_settings_delete_message">포럼과 모든 게시물이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.</string>
 
+    <string name="forums_tag_interest_up">관심도 부스트</string>
+    <string name="forums_tag_interest_down">관심사 줄이기</string>
+    <string name="forums_tag_interest_remove">관심사 제거</string>
+    <string name="forums_list_default_sort">기본 정렬</string>
+    <string name="forums_access_tab_users">사용자</string>
+    <string name="forums_access_tab_groups">그룹</string>
+    <string name="forums_access_tab_manual">수동</string>
+    <string name="forums_access_search_users">사용자 검색</string>
+    <string name="forums_access_no_groups">이용 가능한 그룹이 없어요</string>
 </resources>

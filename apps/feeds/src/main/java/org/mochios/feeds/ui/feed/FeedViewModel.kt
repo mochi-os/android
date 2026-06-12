@@ -12,6 +12,9 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -28,6 +31,12 @@ import javax.inject.Inject
 
 private const val PREFS = "mochi_feeds"
 private const val KEY_UNREAD_ONLY = "unread_only"
+
+/** One-shot feedback for an interest thumb tap, surfaced to the user as a toast. */
+sealed interface InterestFeedback {
+    data class Success(val direction: String) : InterestFeedback
+    data class Failure(val error: MochiError?) : InterestFeedback
+}
 
 @HiltViewModel
 class FeedViewModel @Inject constructor(
@@ -54,6 +63,10 @@ class FeedViewModel @Inject constructor(
 
     private val _tags = MutableStateFlow<List<Tag>>(emptyList())
     val tags: StateFlow<List<Tag>> = _tags.asStateFlow()
+
+    // One-shot interest-thumb feedback (boosted/reduced/removed, or the error).
+    private val _interestFeedback = MutableSharedFlow<InterestFeedback>(extraBufferCapacity = 8)
+    val interestFeedback: SharedFlow<InterestFeedback> = _interestFeedback.asSharedFlow()
 
     private val _suggestedInterests = MutableStateFlow<List<InterestSuggestion>>(emptyList())
     val suggestedInterests: StateFlow<List<InterestSuggestion>> = _suggestedInterests.asStateFlow()
@@ -96,6 +109,21 @@ class FeedViewModel @Inject constructor(
     init {
         loadFeed()
         subscribeToWebSocket()
+    }
+
+    // Mark this feed's notifications read on the server (clear/object), so the
+    // bell clears on web and other devices when the feed is opened — matching
+    // web's entity-feed-page. The local system tray is dismissed separately in
+    // FeedScreen. Skipped for the all-feeds aggregate (no real feed entity).
+    fun clearNotifications() {
+        if (isAllFeeds || feedId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                repository.clearNotifications(feedId)
+            } catch (_: Exception) {
+                // Best-effort — a failed clear shouldn't disrupt the feed view.
+            }
+        }
     }
 
     fun loadFeed() {
@@ -217,7 +245,12 @@ class FeedViewModel @Inject constructor(
         val deferred = feedIds.map { fid ->
             viewModelScope.async {
                 try {
-                    repository.getPosts(feedId = fid, sort = _currentSort.value, limit = 10).posts
+                    repository.getPosts(
+                        feedId = fid,
+                        sort = _currentSort.value,
+                        limit = 10,
+                        unreadOnly = _unreadOnly.value
+                    ).posts
                 } catch (_: Exception) {
                     emptyList<Post>()
                 }
@@ -342,10 +375,10 @@ class FeedViewModel @Inject constructor(
         reloadPosts()
     }
 
-    fun reactToPost(postId: String, reaction: String) {
+    fun reactToPost(feed: String, postId: String, reaction: String) {
         viewModelScope.launch {
             try {
-                repository.reactToPost(feedId, postId, reaction)
+                repository.reactToPost(feed, postId, reaction)
                 // Optimistically update the post's reaction
                 _posts.value = _posts.value.map { post ->
                     if (post.id == postId) {
@@ -376,17 +409,28 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    fun adjustInterest(tag: Tag, direction: String) {
+    // Interest is user-global, but the action is entity-scoped to a feed, so it
+    // must route through a real feed entity. In the all-feeds view feedId is the
+    // "__all__" sentinel (not an entity, so the action 404s and silently does
+    // nothing), so the caller passes the post's own feed — always valid — as the
+    // routing context. Mirrors web, which routes interest through a subscribed feed.
+    fun adjustInterest(feed: String, tag: Tag, direction: String) {
+        val target = feed.takeIf { it.isNotBlank() && it != "__all__" }
+        if (target == null) {
+            _interestFeedback.tryEmit(InterestFeedback.Failure(null))
+            return
+        }
         viewModelScope.launch {
             try {
                 repository.adjustInterest(
-                    feedId,
+                    target,
                     qid = tag.qid?.takeIf { it.isNotEmpty() },
                     label = if (tag.qid.isNullOrEmpty()) tag.label else null,
                     direction = direction
                 )
-            } catch (_: Exception) {
-                // Interest is user-global and best-effort; silent on failure.
+                _interestFeedback.tryEmit(InterestFeedback.Success(direction))
+            } catch (e: Exception) {
+                _interestFeedback.tryEmit(InterestFeedback.Failure(e.toMochiError()))
             }
         }
     }
@@ -465,7 +509,19 @@ class FeedViewModel @Inject constructor(
     fun markAllRead() {
         viewModelScope.launch {
             try {
-                repository.markAllRead(feedId)
+                if (isAllFeeds) {
+                    // No aggregate read-all endpoint exists ("__all__" isn't a
+                    // feed); mark each subscribed feed read, mirroring the
+                    // loadAllFeeds fan-out.
+                    repository.listFeeds().forEach { feed ->
+                        val fid = feed.fingerprint.ifEmpty { feed.id }
+                        if (fid.isNotEmpty()) {
+                            try { repository.markAllRead(fid) } catch (_: Exception) {}
+                        }
+                    }
+                } else {
+                    repository.markAllRead(feedId)
+                }
                 val now = System.currentTimeMillis() / 1000
                 // In "unread only" mode every visible post just became read,
                 // so they should disappear from the list immediately rather
@@ -489,15 +545,23 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoading.value = true
             try {
-                val result = repository.getPosts(
-                    feedId = feedId,
-                    sort = _currentSort.value,
-                    tag = _currentTag.value,
-                    unreadOnly = _unreadOnly.value
-                )
-                _posts.value = result.posts
-                _hasMore.value = result.hasMore
-                nextCursor = result.nextCursor
+                if (isAllFeeds) {
+                    // The aggregate view fans out per feed (and honours
+                    // unreadOnly / sort there); "__all__" is not a real entity,
+                    // so a single getPosts() would just fail and silently keep
+                    // the stale list — making the toggles look like no-ops.
+                    loadAllFeeds()
+                } else {
+                    val result = repository.getPosts(
+                        feedId = feedId,
+                        sort = _currentSort.value,
+                        tag = _currentTag.value,
+                        unreadOnly = _unreadOnly.value
+                    )
+                    _posts.value = result.posts
+                    _hasMore.value = result.hasMore
+                    nextCursor = result.nextCursor
+                }
             } catch (_: Exception) {
                 // Keep existing data
             } finally {

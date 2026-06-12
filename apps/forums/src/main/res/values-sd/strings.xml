@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">ھدف</string>
     <string name="forums_access_level_view">ڏسو</string>
+    <string name="forums_access_level_vote">ووٽ ڏيو</string>
     <string name="forums_access_level_comment">تبصرو</string>
     <string name="forums_access_level_post">پوسٽ</string>
     <string name="forums_access_level_none">ڪا به نه</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">اينٽيٽي ID، @گروپ، * (هرڪو)، يا + (ميمبر)</string>
     <string name="forums_access_level">سطح</string>
     <string name="forums_access_level_moderate">اعتدال</string>
-    <string name="forums_access_level_manage">انتظام</string>
     <string name="forums_members_search">ميمبر فلٽر ڪريو</string>
     <string name="forums_banner_description">فورم جي مٿان ڏيکاريل مارڪ ڊائون.</string>
     <string name="forums_banner_placeholder">هن فورم ۾ ڀلي ڪري آيا…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">خطري وارو علائقو</string>
     <string name="forums_settings_delete_message">هي فورم ۽ ان جون سڀ پوسٽون مستقل طور ڊاهي ڇڏيندو. اهو واپس نٿو ٿي سگهي.</string>
 
+    <string name="forums_tag_interest_up">دلچسپي وڌايو</string>
+    <string name="forums_tag_interest_down">دلچسپي گهٽايو</string>
+    <string name="forums_tag_interest_remove">دلچسپي هٽايو</string>
+    <string name="forums_list_default_sort">ڊفالٽ ترتيب</string>
+    <string name="forums_access_tab_users">صارف</string>
+    <string name="forums_access_tab_groups">گروپ</string>
+    <string name="forums_access_tab_manual">دستي</string>
+    <string name="forums_access_search_users">يوزر ڳوليو</string>
+    <string name="forums_access_no_groups">ڪو گروپ دستياب ناهي</string>
 </resources>

@@ -56,8 +56,6 @@
     <string name="replication_deny">אָפּזאָגן</string>
     <string name="replication_hosts_title">מיינע האסטס</string>
     <string name="replication_hosts_empty_hint">צו רעפליצירן עס צו אן אנדער סערווער, רעגיסטרירט פאר א חשבון דארטן און ניצט די אפציע \"רעפליצירן אן עקזיסטירנדיגן חשבון\".</string>
-    <string name="replication_remove">אראפנעמען האסט</string>
-    <string name="replication_remove_title">אראפנעמען האסט?</string>
     <string name="settings_home_section_system">סיסטעם</string>
     <string name="system_replication_title">רעפליקאציע</string>
     <string name="system_replication_this_server">דער סערווער</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">קיינמאָל</string>
     <string name="replication_hosts_empty">דער חשבון איז נאָר אויף דעם סערווער.</string>
     <string name="replication_added">צוגעלייגט %1$s</string>
-    <string name="replication_remove_message">דער סערווער וועט אױפֿהערן ריפּליצירן דיין חשבון צו דעם האָסט.</string>
     <string name="settings_home_system_replication">ריפּליקאַציע (סערווער)</string>
     <string name="system_replication_pair_empty_hint">פּעיר מיט אַן אַנדער פֿריש אינסטאַלירטן סערווער ניצנדיק \"mochictl replica join &lt;existing-peer-id&gt;\" אױף דעם נײַעם סערווער.</string>
     <string name="route_delete_message">דאָס וועט אַרױסנעמען די רוט פֿאַר וועג \"%1$s\".</string>
@@ -387,4 +384,28 @@
     <string name="login_method_totp">Authenticator אַפּ</string>
     <string name="login_method_oauth">דריט־פּאַרטיי אַרײַנמעלדונג</string>
     <string name="login_method_recovery">אומקער קאָדן</string>
+    <string name="account_close_section">פֿאַרמאַך קאָנטע</string>
+    <string name="account_close_action">פֿאַרמאַך קאָנטע</string>
+    <string name="account_close_confirm_title">פֿאַרמאַכן אײַער קאָנטע?</string>
+    <string name="account_close_confirm_body">אײַער קאָנטע וועט ווערן צוגעשטעלט צו ווערן אויסגעמעקט און איר וועט ווערן אַרויסלאָגירט. איר קענט אַנולירן ווען עס איז פֿאַר דעם אויסמעקן־דאַטע דורך אַרײַנלאָגירן צוריק.</string>
+    <string name="account_data_download">אַראָפּלאָדן</string>
+    <string name="route_target_app">אַפּ</string>
+    <string name="route_target_entity">ענטיטעט</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">אײַערע דאַטן</string>
+    <string name="account_data_dialog_title">אראָפּלאָדן דיינע דאַטן</string>
+    <string name="account_data_dialog_body">דאָס איז אַ פֿולשטענדיקע זיכערקאָפּיע וואָס איר קענט אויפֿשטעלן אויף דעם אָדער אַן אַנדער Mochi סערווער. פֿאַריפֿיצירט אַז דאָס זײַט איר צו ממשיך זײַן.</string>
+    <string name="account_data_passphrase">פּאַסזאַץ</string>
+    <string name="account_data_passphrase_hint">אײַערע פּריוואַטע שליסלען זײַנען אַרײַנגענומען, פֿאַרשלוסן מיט דעם פּאַראָל‑זאַץ. היט עס אין אַ זיכערן אָרט. איר וועט דאַרפֿן עס צו אַראָפּשטעלן.</string>
+    <string name="replication_hosts_subtitle">אַנדערע סערווערס וואָס האַלטן אויך אַ קאָפּיע פֿון אײַער קאָנטע. צו אַראָפּנעמען איינעם, מעלדט זיך אָן אויף יענעם סערווער און ניצט \"נעמט אַראָפּ מײַן קאָנטע פֿון דעם סערווער\".</string>
+    <string name="replication_irreparable">ניט צו פאַרריכטן</string>
+    <string name="replication_leave">נעמט אַראָפּ מײַן קאָנטע פֿון דעם סערווער</string>
+    <string name="replication_leave_title">אַראָפּנעמען אײַער קאָנטע פֿון דעם סערווער?</string>
+    <string name="replication_leave_message">אײַער קאָנטע-דאַטן אויף דעם סערווער וועלן אויסגעמעקט ווערן פֿאַר שטענדיק און איר וועט אויסגעמאָלדן ווערן דאָ. אײַער קאָנטע בלײַבט אויף אײַערע אַנדערע סערווערס, און איר קענט שפּעטער ווידער צוגעבן דעם.</string>
+    <string name="replication_leave_confirm">אַראָפּנעמען</string>
+    <string name="replication_forget">פֿאַרגעסט דעם נישט-דערגרײכלעכן האָסט</string>
+    <string name="replication_forget_title">פֿאַרגעסן דעם נישט-דערגרײכלעכן האָסט?</string>
+    <string name="replication_forget_message">עס וועט אַראָפּגענומען ווערן פֿון אײַער רעפּליקע-סעט און מע וועט אים זאָגן אויסצומעקן זײַן קאָפּיע ווען ער פֿאַרבינדט זיך ווידער. צו אַראָפּנעמען אַ דערגרײכלעכן סערווער, מעלדט זיך אָן דאָרטן און ניצט \"נעמט אַראָפּ מײַן קאָנטע פֿון דעם סערווער\". באַשטעטיקט אַז דאָס זײַט איר כּדי צו פֿאָרזעצן.</string>
+    <string name="replication_offline">אפֿליין</string>
+    <string name="replication_forget_confirm">פֿאַרגעסן</string>
 </resources>

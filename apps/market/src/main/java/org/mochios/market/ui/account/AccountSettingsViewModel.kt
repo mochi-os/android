@@ -32,6 +32,16 @@ data class AccountSettingsUiState(
     val isSaving: Boolean = false,
     val biographyDraft: String = "",
     val placeDraft: PlaceData? = null,
+    val businessDraft: Boolean = false,
+    val companyDraft: String = "",
+    val vatDraft: String = "",
+    val addressNameDraft: String = "",
+    val addressLine1Draft: String = "",
+    val addressLine2Draft: String = "",
+    val addressCityDraft: String = "",
+    val addressRegionDraft: String = "",
+    val addressPostcodeDraft: String = "",
+    val addressCountryDraft: String = "",
     val stripeStatus: StripeStatus? = null,
     val stripeStatusLoading: Boolean = false,
     val stripeConnecting: Boolean = false,
@@ -77,12 +87,7 @@ class AccountSettingsViewModel @Inject constructor(
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
                 val account = repo.getAccount()
-                _state.value = _state.value.copy(
-                    account = account,
-                    biographyDraft = account.biography,
-                    placeDraft = parseLocationToPlace(account.location),
-                    isLoading = false,
-                )
+                _state.value = _state.value.withDrafts(account).copy(isLoading = false)
                 if (account.onboarded == 1) {
                     refreshStripe()
                 }
@@ -114,6 +119,46 @@ class AccountSettingsViewModel @Inject constructor(
         _state.value = _state.value.copy(placeDraft = value)
     }
 
+    fun updateBusiness(value: Boolean) {
+        _state.value = _state.value.copy(businessDraft = value)
+    }
+
+    fun updateCompany(value: String) {
+        _state.value = _state.value.copy(companyDraft = value)
+    }
+
+    fun updateVat(value: String) {
+        _state.value = _state.value.copy(vatDraft = value)
+    }
+
+    fun updateAddressName(value: String) {
+        _state.value = _state.value.copy(addressNameDraft = value)
+    }
+
+    fun updateAddressLine1(value: String) {
+        _state.value = _state.value.copy(addressLine1Draft = value)
+    }
+
+    fun updateAddressLine2(value: String) {
+        _state.value = _state.value.copy(addressLine2Draft = value)
+    }
+
+    fun updateAddressCity(value: String) {
+        _state.value = _state.value.copy(addressCityDraft = value)
+    }
+
+    fun updateAddressRegion(value: String) {
+        _state.value = _state.value.copy(addressRegionDraft = value)
+    }
+
+    fun updateAddressPostcode(value: String) {
+        _state.value = _state.value.copy(addressPostcodeDraft = value)
+    }
+
+    fun updateAddressCountry(value: String) {
+        _state.value = _state.value.copy(addressCountryDraft = value)
+    }
+
     fun save() {
         val current = _state.value
         if (current.isSaving) return
@@ -125,14 +170,19 @@ class AccountSettingsViewModel @Inject constructor(
                     mapOf(
                         "biography" to current.biographyDraft,
                         "location" to locationJson,
+                        "business" to if (current.businessDraft) "1" else "0",
+                        "company" to current.companyDraft,
+                        "vat" to current.vatDraft,
+                        "address_name" to current.addressNameDraft,
+                        "address_line1" to current.addressLine1Draft,
+                        "address_line2" to current.addressLine2Draft,
+                        "address_city" to current.addressCityDraft,
+                        "address_region" to current.addressRegionDraft,
+                        "address_postcode" to current.addressPostcodeDraft,
+                        "address_country" to current.addressCountryDraft,
                     ),
                 )
-                _state.value = _state.value.copy(
-                    account = account,
-                    biographyDraft = account.biography,
-                    placeDraft = parseLocationToPlace(account.location),
-                    isSaving = false,
-                )
+                _state.value = _state.value.withDrafts(account).copy(isSaving = false)
                 _events.send(AccountSettingsEvent.Saved)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(isSaving = false)
@@ -212,6 +262,28 @@ class AccountSettingsViewModel @Inject constructor(
             }
         }
     }
+
+    /**
+     * Reset every editable draft from a freshly-loaded / saved [account] and
+     * store the canonical row. Used on both initial load and after a
+     * successful save so the form reflects the server's view.
+     */
+    private fun AccountSettingsUiState.withDrafts(account: Account): AccountSettingsUiState =
+        copy(
+            account = account,
+            biographyDraft = account.biography,
+            placeDraft = parseLocationToPlace(account.location),
+            businessDraft = account.business == 1,
+            companyDraft = account.company,
+            vatDraft = account.vat,
+            addressNameDraft = account.addressName,
+            addressLine1Draft = account.addressLine1,
+            addressLine2Draft = account.addressLine2,
+            addressCityDraft = account.addressCity,
+            addressRegionDraft = account.addressRegion,
+            addressPostcodeDraft = account.addressPostcode,
+            addressCountryDraft = account.addressCountry,
+        )
 
     /**
      * Convert the server's `location` JSON blob into a [PlaceData] usable

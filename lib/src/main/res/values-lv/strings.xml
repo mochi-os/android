@@ -263,4 +263,13 @@
     <string name="stepup_error_code">Šis kods ir nepareizs vai tā derīguma termiņš ir beidzies.</string>
     <string name="stepup_error_passkey">Piekļuves atslēgas pārbaude neizdevās. Lūdzu, mēģiniet vēlreiz.</string>
     <string name="stepup_error_oauth">Neizdevās verificēt ar šo kontu. Lūdzu, mēģiniet vēlreiz.</string>
+    <string name="game_system_resign">%1$s padevās</string>
+    <string name="game_system_draw_offer">%1$s piedāvāja neizšķirtu</string>
+    <string name="game_system_draw_accept">Neizšķirts pieņemts</string>
+    <string name="game_system_draw_decline">%1$s noraidīja neizšķirtu</string>
+    <string name="reactivation_title">Jūsu kontu paredzēts dzēst</string>
+    <string name="reactivation_body">Jūsu kontu paredzēts dzēst. Jūs varat atcelt un atjaunot pilnu piekļuvi tagad.</string>
+    <string name="reactivation_body_dated">Jūsu konts un visi tā dati tiks neatgriezeniski dzēsti %1$s. Jūs varat atcelt un atjaunot pilnu piekļuvi tagad.</string>
+    <string name="reactivation_reactivate">Atkārtoti aktivizēt manu kontu</string>
+    <string name="reactivation_sign_out">Turpināt slēgšanu un izrakstīties</string>
 </resources>

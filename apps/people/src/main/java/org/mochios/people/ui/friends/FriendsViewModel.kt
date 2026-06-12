@@ -61,6 +61,13 @@ data class FriendsUiState(
      * the web add-friend-dialog's two-stage flow.
      */
     val addPreview: AddFriendPreview? = null,
+
+    /**
+     * One-shot welcome banner shown on first visit. True only after
+     * `-/welcome` reports `seen == false`; flipped back to false (and persisted
+     * server-side via `-/welcome/seen`) when the user dismisses it.
+     */
+    val showWelcome: Boolean = false,
 )
 
 /**
@@ -110,6 +117,35 @@ class FriendsViewModel @Inject constructor(
 
     init {
         loadFriends()
+        loadWelcome()
+    }
+
+    // ---------------- welcome banner ----------------
+
+    private fun loadWelcome() {
+        viewModelScope.launch {
+            try {
+                val welcome = repository.getWelcome()
+                if (!welcome.seen) {
+                    _uiState.value = _uiState.value.copy(showWelcome = true)
+                }
+            } catch (_: Exception) {
+                // Welcome is non-essential chrome; failing to fetch it just
+                // means we don't show the banner this session.
+            }
+        }
+    }
+
+    fun dismissWelcome() {
+        if (!_uiState.value.showWelcome) return
+        _uiState.value = _uiState.value.copy(showWelcome = false)
+        viewModelScope.launch {
+            try {
+                repository.markWelcomeSeen()
+            } catch (_: Exception) {
+                // Best-effort persistence; the banner is already hidden locally.
+            }
+        }
     }
 
     // ---------------- list ----------------

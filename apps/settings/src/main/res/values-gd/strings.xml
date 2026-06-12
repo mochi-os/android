@@ -56,8 +56,6 @@
     <string name="replication_deny">Diùlt</string>
     <string name="replication_hosts_title">Mo òstairean</string>
     <string name="replication_hosts_empty_hint">Gus a mhac-shamhlachadh gu frithealaiche eile, clàraich airson cunntas an sin agus cleachd an roghainn \"Mac-shamhlaich cunntas a tha ann\".</string>
-    <string name="replication_remove">Thoir an t-òstair air falbh</string>
-    <string name="replication_remove_title">An toir thu an t-òstair air falbh?</string>
     <string name="settings_home_section_system">Siostam</string>
     <string name="system_replication_title">Mac-shamhlachadh</string>
     <string name="system_replication_this_server">Am frithealaiche seo</string>
@@ -301,7 +299,6 @@
     <string name="tokens_never">Chaoidh</string>
     <string name="replication_hosts_empty">Tha an cunntas seo air an fhrithealaiche seo a-mhàin.</string>
     <string name="replication_added">Chuir %1$s</string>
-    <string name="replication_remove_message">Sguiridh an frithealaiche seo a\' macasamhlachadh do chunntas dhan òstair sin.</string>
     <string name="settings_home_system_replication">Macasamhlachadh (frithealaiche)</string>
     <string name="system_replication_pair_empty_hint">Càraidich le frithealaiche eile a chaidh a stàladh ùr le bhith a\' cleachdadh \"mochictl replica join &lt;existing-peer-id&gt;\" air an fhrithealaiche ùr.</string>
     <string name="route_delete_message">Bheir seo air falbh an t-slighe airson na slighe \"%1$s\".</string>
@@ -389,4 +386,28 @@
     <string name="login_method_totp">Aplacaid dhearbhachaidh</string>
     <string name="login_method_oauth">Soidhnigeadh a-steach treas-phàrtaidh</string>
     <string name="login_method_recovery">Còdaichean ath-shlànachaidh</string>
+    <string name="account_close_section">Dùin an cunntas</string>
+    <string name="account_close_action">Dùin an cunntas</string>
+    <string name="account_close_confirm_title">A bheil thu airson do chunntas a dhùnadh?</string>
+    <string name="account_close_confirm_body">Thèid do chunntas a chlàradh airson a sguabadh às agus thèid do chlàradh a-mach. \'S urrainn dhut a chur dheth uair sam bith ron cheann-latha sguabaidh às le bhith a\' clàradh a-steach a-rithist.</string>
+    <string name="account_data_download">Luchdaich a-nuas</string>
+    <string name="route_target_app">Aplacaid</string>
+    <string name="route_target_entity">Aonad</string>
+    <string name="route_target_url">URL</string>
+    <string name="account_data_section">Do dhàta</string>
+    <string name="account_data_dialog_title">Luchdaich a-nuas do chuid dàta</string>
+    <string name="account_data_dialog_body">Seo lethbhreac-glèidhidh iomlan as urrainn dhut aiseag air an fhrithealaiche Mochi seo no air fear eile. Dearbhaich gur tusa a th\' ann gus leantainn air adhart.</string>
+    <string name="account_data_passphrase">Abairt-fhaire</string>
+    <string name="account_data_passphrase_hint">Tha do chiachan prìobhaideach air an toirt a-steach, air an cripteachadh leis an abairt-fhacal-faire seo. Glèidh i gu sàbhailte. Bidh feum agad oirre ath-nuadhachadh.</string>
+    <string name="replication_hosts_subtitle">Frithealaichean eile aig a bheil lethbhreac den chunntas agad cuideachd. Gus fear a thoirt air falbh, clàraich a-steach air an fhrithealaiche sin agus cleachd \"Thoir an cunntas agam air falbh on fhrithealaiche seo\".</string>
+    <string name="replication_irreparable">Do-chàraidh</string>
+    <string name="replication_leave">Thoir an cunntas agam air falbh on fhrithealaiche seo</string>
+    <string name="replication_leave_title">A bheil thu airson an cunntas agad a thoirt air falbh on fhrithealaiche seo?</string>
+    <string name="replication_leave_message">Thèid dàta a\' chunntais agad air an fhrithealaiche seo a sguabadh às gu buan agus thèid do chlàradh a-mach an seo. Fanaidh an cunntas agad air na frithealaichean eile agad, agus \'s urrainn dhut am fear seo a chur ris a-rithist nas fhaide air adhart.</string>
+    <string name="replication_leave_confirm">Thoir air falbh</string>
+    <string name="replication_forget">Dìochuimhnich an t-òstair do-ruigsinn seo</string>
+    <string name="replication_forget_title">A bheil thu airson an t-òstair do-ruigsinn seo a dhìochuimhneachadh?</string>
+    <string name="replication_forget_message">Thèid a thoirt air falbh on t-seata mac-samhail agad agus thèid iarraidh air an lethbhreac aige a sguabadh às nuair a cheanglas e a-rithist. Gus frithealaiche ruigsinneach a thoirt air falbh, clàraich a-steach an sin agus cleachd \"Thoir an cunntas agam air falbh on fhrithealaiche seo\". Dearbh gur tusa a th\' ann gus leantainn air adhart.</string>
+    <string name="replication_offline">Far loidhne</string>
+    <string name="replication_forget_confirm">Dìochuimhnich</string>
 </resources>

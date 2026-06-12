@@ -16,7 +16,6 @@ import org.mochios.forums.api.MembersResponse
 import org.mochios.forums.api.ModerationLogResponse
 import org.mochios.forums.api.ModerationQueueResponse
 import org.mochios.forums.api.ModerationReportsResponse
-import org.mochios.forums.api.ProbeResponse
 import org.mochios.forums.api.RecommendationsResponse
 import org.mochios.forums.api.RestrictionsResponse
 import org.mochios.forums.api.RssTokenResponse
@@ -48,17 +47,20 @@ class ForumsRepository @Inject constructor(
         return r.fingerprint.ifEmpty { r.id }
     }
 
-    suspend fun findForums(): List<DirectoryEntry> =
-        api.findForums().unwrap().forums
-
     suspend fun searchForums(query: String): List<DirectoryEntry> =
         api.searchForums(query).unwrap().results
 
     suspend fun getRecommendations(): RecommendationsResponse =
         api.getRecommendations().unwrap()
 
-    suspend fun probeForum(url: String): ProbeResponse =
-        api.probeForum(url).unwrap()
+    suspend fun probe(url: String): org.mochios.forums.api.ProbeForumResponse =
+        api.probe(url).unwrap()
+
+    suspend fun searchUsers(query: String): List<org.mochios.forums.model.User> =
+        api.searchUsers(query).unwrap().results
+
+    suspend fun listGroups(): List<org.mochios.forums.model.Group> =
+        api.getGroups().unwrap().groups
 
     suspend fun subscribe(forumId: String, server: String? = null) {
         api.subscribe(forumId, forumId, server).unwrap()
@@ -241,12 +243,12 @@ class ForumsRepository @Inject constructor(
         api.deleteComment(forumId, postId, commentId).unwrap()
     }
 
-    suspend fun setDefaultSort(sort: String) {
-        api.setDefaultSort(sort).unwrap()
-    }
-
     suspend fun setForumSort(forumId: String, sort: String) {
         api.setForumSort(forumId, sort).unwrap()
+    }
+
+    suspend fun setDefaultSort(sort: String) {
+        api.setDefaultSort(sort).unwrap()
     }
 
     suspend fun moderationQueue(forumId: String): ModerationQueueResponse =
@@ -344,12 +346,16 @@ class ForumsRepository @Inject constructor(
         api.removePostTag(forumId, postId, tagId).unwrap()
     }
 
+    suspend fun adjustTagInterest(forumId: String, qid: String, direction: String) {
+        api.adjustTagInterest(forumId, qid, direction).unwrap()
+    }
+
     suspend fun clearNotifications(forumId: String) {
         api.clearNotifications(forumId).unwrap()
     }
 
-    suspend fun getRssToken(): RssTokenResponse =
-        api.getRssToken().unwrap()
+    suspend fun getRssToken(entity: String, mode: String = "posts"): RssTokenResponse =
+        api.getRssToken(entity, mode).unwrap()
 
     suspend fun getForumTags(forumId: String): List<org.mochios.forums.api.ForumTagCount> =
         api.getForumTags(forumId).unwrap().tags

@@ -193,4 +193,9 @@
     <string name="feeds_ai_prompt_rank">Reyting / baholash</string>
     <string name="feeds_ai_prompt_credibility">Ishonchlilik baholash</string>
 
+    <string name="feeds_refresh">Yangilash</string>
+    <string name="feeds_interest_boosted">Qiziqish kuchaytirildi</string>
+    <string name="feeds_interest_reduced">Qiziqish kamaytirildi</string>
+    <string name="feeds_interest_removed">Qiziqish olib tashlandi</string>
+    <string name="feeds_interest_failed">Qiziqishni sozlab boʻlmadi</string>
 </resources>

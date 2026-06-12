@@ -2,9 +2,6 @@ package org.mochios.market.ui.account
 
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,23 +9,19 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.CreditCard
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -41,6 +34,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -50,8 +44,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -63,6 +55,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
+import org.mochios.market.navigation.MarketApp
 
 /**
  * Seller account settings. Mirrors web's `apps/market/web/src/features/
@@ -155,10 +148,23 @@ fun AccountSettingsScreen(
                 ) {
                     val account = state.account!!
                     val status = account.status.lowercase()
-                    if (status == "suspended" || status == "banned") {
+                    val restricted = status == "suspended" || status == "banned"
+                    if (restricted) {
                         SuspensionWarning(
                             status = status,
                             reason = account.reason,
+                        )
+                    }
+
+                    if (!restricted) {
+                        SellerStatusCard(
+                            isSeller = account.seller == 1,
+                            isOnboarded = account.onboarded == 1,
+                            onNavigate = {
+                                navController.navigate(
+                                    org.mochios.market.navigation.MarketApp.SELLER_SETTINGS,
+                                )
+                            },
                         )
                     }
 
@@ -171,32 +177,70 @@ fun AccountSettingsScreen(
                         onSave = viewModel::save,
                     )
 
-                    val stripeReady = state.stripeStatus?.let {
-                        it.chargesEnabled && it.payoutsEnabled
-                    } ?: false
-                    BecomeSellerCard(
-                        activated = account.seller == 1,
-                        stripeConnected = account.onboarded == 1 && stripeReady,
-                        connecting = state.stripeConnecting,
-                        checking = state.stripeStatusLoading,
-                        platformFeePercent = state.fees?.platform ?: DEFAULT_PLATFORM_FEE,
-                        onConnect = {
-                            viewModel.connectStripe("mochi://market/account") { url ->
+
+                    if (account.seller == 1) {
+                        BusinessDetailsSection(
+                            business = state.businessDraft,
+                            company = state.companyDraft,
+                            vat = state.vatDraft,
+                            onBusinessChange = viewModel::updateBusiness,
+                            onCompanyChange = viewModel::updateCompany,
+                            onVatChange = viewModel::updateVat,
+                        )
+                    }
+
+                    ShippingAddressSection(
+                        name = state.addressNameDraft,
+                        line1 = state.addressLine1Draft,
+                        line2 = state.addressLine2Draft,
+                        city = state.addressCityDraft,
+                        region = state.addressRegionDraft,
+                        postcode = state.addressPostcodeDraft,
+                        country = state.addressCountryDraft,
+                        onNameChange = viewModel::updateAddressName,
+                        onLine1Change = viewModel::updateAddressLine1,
+                        onLine2Change = viewModel::updateAddressLine2,
+                        onCityChange = viewModel::updateAddressCity,
+                        onRegionChange = viewModel::updateAddressRegion,
+                        onPostcodeChange = viewModel::updateAddressPostcode,
+                        onCountryChange = viewModel::updateAddressCountry,
+                    )
+
+                    if (account.onboarded == 1) {
+                        StripeCard(
+                            chargesEnabled = state.stripeStatus?.chargesEnabled,
+                            payoutsEnabled = state.stripeStatus?.payoutsEnabled,
+                            testMode = account.stripeTestmode,
+                            isLoading = state.stripeStatusLoading,
+                            onDashboard = {
+                                val url = if (account.stripeTestmode) {
+                                    "https://dashboard.stripe.com/test"
+                                } else {
+                                    "https://dashboard.stripe.com"
+                                }
                                 CustomTabsIntent.Builder().build()
                                     .launchUrl(context, Uri.parse(url))
-                            }
+                            },
+                            onRefresh = viewModel::refreshStripe,
+                        )
+                    }
+
+                    OutlinedButton(
+                        onClick = {
+                            navController.navigate(MarketApp.NOTIFICATION_PREFERENCES)
                         },
-                        onCheckStatus = viewModel::checkStripeStatus,
-                        onOpenDashboard = {
-                            val url = if (account.stripeTestmode) {
-                                "https://dashboard.stripe.com/test"
-                            } else {
-                                "https://dashboard.stripe.com"
-                            }
-                            CustomTabsIntent.Builder().build()
-                                .launchUrl(context, Uri.parse(url))
-                        },
-                    )
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Text(stringResource(R.string.market_notifications_title))
+                    }
+
+                    Button(
+                        onClick = viewModel::save,
+                        enabled = !state.isSaving,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Text(stringResource(R.string.market_account_save))
+                    }
                 }
             }
         }
@@ -354,257 +398,272 @@ private fun LocationField(
 }
 
 /**
- * "Become a seller" onboarding card: a blue gradient accent bar, intro, the
- * two onboarding steps (activate account → connect Stripe), a fee disclosure,
- * and the Connect/Check-status actions.
+ * Compact seller-status card at the top of the Account screen. Mirrors web's
+ * `SellerStatusCard` — nudges non-sellers to activate, points active sellers
+ * at the seller-settings page, and flags incomplete Stripe onboarding. Hidden
+ * for suspended / banned accounts (the suspension warning takes precedence).
  */
 @Composable
-private fun BecomeSellerCard(
-    activated: Boolean,
-    stripeConnected: Boolean,
-    connecting: Boolean,
-    checking: Boolean,
-    platformFeePercent: Double,
-    onConnect: () -> Unit,
-    onCheckStatus: () -> Unit,
-    onOpenDashboard: () -> Unit,
+private fun SellerStatusCard(
+    isSeller: Boolean,
+    isOnboarded: Boolean,
+    onNavigate: () -> Unit,
 ) {
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-    ) {
-        // Gradient accent bar.
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(4.dp)
-                .background(
-                    Brush.horizontalGradient(
-                        listOf(
-                            MaterialTheme.colorScheme.primary,
-                            MaterialTheme.colorScheme.primary.copy(alpha = 0.6f),
-                        ),
-                    ),
-                ),
+    val (titleRes, bodyRes, actionRes) = when {
+        !isSeller -> Triple(
+            R.string.market_account_seller_card_start_title,
+            R.string.market_account_seller_card_start_body,
+            R.string.market_sidebar_become_seller,
         )
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+        isOnboarded -> Triple(
+            R.string.market_account_seller_card_active_title,
+            R.string.market_account_seller_card_active_body,
+            R.string.market_account_seller_card_view,
+        )
+        else -> Triple(
+            R.string.market_account_seller_card_incomplete_title,
+            R.string.market_account_seller_card_incomplete_body,
+            R.string.market_account_seller_card_continue,
+        )
+    }
+    Card(modifier = Modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.Top,
         ) {
-            Row(verticalAlignment = Alignment.Top) {
-                Box(
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clip(RoundedCornerShape(10.dp))
-                        .background(MaterialTheme.colorScheme.primaryContainer),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Icon(
-                        imageVector = Icons.Filled.Storefront,
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onPrimaryContainer,
-                        modifier = Modifier.size(22.dp),
-                    )
-                }
-                Spacer(modifier = Modifier.width(12.dp))
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = stringResource(R.string.market_account_seller_title),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                    )
-                    Spacer(modifier = Modifier.size(2.dp))
-                    Text(
-                        text = stringResource(R.string.market_account_seller_subtitle),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
+            Icon(
+                imageVector = Icons.Filled.Storefront,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(24.dp),
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = stringResource(titleRes),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Text(
+                    text = stringResource(bodyRes),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Spacer(modifier = Modifier.size(8.dp))
+                OutlinedButton(onClick = onNavigate) {
+                    Text(stringResource(actionRes))
                 }
             }
+        }
+    }
+}
 
-            SellerStep(
-                index = 1,
-                done = activated,
-                title = stringResource(R.string.market_account_seller_step_activate_title),
-                description = stringResource(R.string.market_account_seller_step_activate_desc),
+@Composable
+private fun BusinessDetailsSection(
+    business: Boolean,
+    company: String,
+    vat: String,
+    onBusinessChange: (Boolean) -> Unit,
+    onCompanyChange: (String) -> Unit,
+    onVatChange: (String) -> Unit,
+) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(
+            text = stringResource(R.string.market_account_business_title),
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold,
+        )
+        Text(
+            text = stringResource(R.string.market_account_business_desc),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = stringResource(R.string.market_account_business_switch),
+                style = MaterialTheme.typography.bodyMedium,
             )
-            SellerStep(
-                index = 2,
-                done = stripeConnected,
-                title = stringResource(R.string.market_account_seller_step_stripe_title),
-                description = stringResource(R.string.market_account_seller_step_stripe_desc),
+            Switch(checked = business, onCheckedChange = onBusinessChange)
+        }
+        OutlinedTextField(
+            value = company,
+            onValueChange = onCompanyChange,
+            label = { Text(stringResource(R.string.market_account_company_label)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = vat,
+            onValueChange = onVatChange,
+            label = { Text(stringResource(R.string.market_account_vat_label)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+@Composable
+private fun StripeCard(
+    chargesEnabled: Boolean?,
+    payoutsEnabled: Boolean?,
+    @Suppress("UNUSED_PARAMETER") testMode: Boolean,
+    isLoading: Boolean,
+    onDashboard: () -> Unit,
+    onRefresh: () -> Unit,
+) {
+    Card(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Text(
+                text = stringResource(R.string.market_account_stripe_title),
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold,
             )
-
-            FeesBox(platformFeePercent = platformFeePercent)
-
+            StatusRow(
+                label = if (chargesEnabled == true) {
+                    stringResource(R.string.market_account_stripe_charges_enabled)
+                } else {
+                    stringResource(R.string.market_account_stripe_charges_disabled)
+                },
+                enabled = chargesEnabled == true,
+            )
+            StatusRow(
+                label = if (payoutsEnabled == true) {
+                    stringResource(R.string.market_account_stripe_payouts_enabled)
+                } else {
+                    stringResource(R.string.market_account_stripe_payouts_disabled)
+                },
+                enabled = payoutsEnabled == true,
+            )
+            Spacer(modifier = Modifier.size(4.dp))
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                if (stripeConnected) {
-                    Button(
-                        onClick = onOpenDashboard,
-                        shape = RoundedCornerShape(10.dp),
-                        colors = ButtonDefaults.buttonColors(contentColor = Color.White),
-                        modifier = Modifier.weight(1f),
-                    ) {
-                        Icon(
-                            imageVector = Icons.Filled.CreditCard,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(stringResource(R.string.market_account_stripe_dashboard))
-                    }
-                } else {
-                    Button(
-                        onClick = onConnect,
-                        enabled = !connecting,
-                        shape = RoundedCornerShape(10.dp),
-                        colors = ButtonDefaults.buttonColors(contentColor = Color.White),
-                        modifier = Modifier.weight(1f),
-                    ) {
-                        Icon(
-                            imageVector = Icons.Filled.CreditCard,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(stringResource(R.string.market_account_seller_connect))
-                    }
+                OutlinedButton(
+                    onClick = onDashboard,
+                    modifier = Modifier.weight(1f),
+                ) {
+                    Text(stringResource(R.string.market_account_stripe_dashboard))
                 }
                 OutlinedButton(
-                    onClick = onCheckStatus,
-                    enabled = !checking,
-                    shape = RoundedCornerShape(10.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = MaterialTheme.colorScheme.onSurface,
-                    ),
-                    border = BorderStroke(
-                        width = 1.dp,
-                        color = MaterialTheme.colorScheme.outlineVariant,
-                    ),
+                    onClick = onRefresh,
+                    enabled = !isLoading,
+                    modifier = Modifier.weight(1f),
                 ) {
-                    Icon(
-                        imageVector = Icons.Filled.Refresh,
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp),
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(stringResource(R.string.market_account_seller_check_status))
+                    Text(stringResource(R.string.market_account_stripe_refresh))
                 }
             }
         }
     }
 }
 
-/** A single onboarding step row inside the seller card. */
 @Composable
-private fun SellerStep(
-    index: Int,
-    done: Boolean,
-    title: String,
-    description: String,
+private fun StatusRow(label: String, enabled: Boolean) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Icon(
+            imageVector = if (enabled) Icons.Filled.CheckCircle else Icons.Filled.Cancel,
+            contentDescription = null,
+            tint = if (enabled) {
+                MaterialTheme.colorScheme.primary
+            } else {
+                MaterialTheme.colorScheme.onSurfaceVariant
+            },
+            modifier = Modifier.size(16.dp),
+        )
+        Spacer(modifier = Modifier.width(6.dp))
+        Text(text = label, style = MaterialTheme.typography.bodyMedium)
+    }
+}
+
+@Composable
+private fun ShippingAddressSection(
+    name: String,
+    line1: String,
+    line2: String,
+    city: String,
+    region: String,
+    postcode: String,
+    country: String,
+    onNameChange: (String) -> Unit,
+    onLine1Change: (String) -> Unit,
+    onLine2Change: (String) -> Unit,
+    onCityChange: (String) -> Unit,
+    onRegionChange: (String) -> Unit,
+    onPostcodeChange: (String) -> Unit,
+    onCountryChange: (String) -> Unit,
 ) {
-    val bg = if (done) SellerGreenBg else MaterialTheme.colorScheme.primaryContainer
-    val border = if (done) SellerGreenBorder else MaterialTheme.colorScheme.primary
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .background(bg)
-            .border(1.dp, border, RoundedCornerShape(10.dp))
-            .padding(12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        if (done) {
-            Icon(
-                imageVector = Icons.Filled.CheckCircle,
-                contentDescription = null,
-                tint = SellerGreen,
-                modifier = Modifier.size(24.dp),
-            )
-        } else {
-            Box(
-                modifier = Modifier
-                    .size(24.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.primary),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = index.toString(),
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onPrimary,
-                    fontWeight = FontWeight.Bold,
-                )
-            }
-        }
-        Spacer(modifier = Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.SemiBold,
-                color = if (done) SellerGreen else MaterialTheme.colorScheme.onPrimaryContainer,
-            )
-            Text(
-                text = description,
-                style = MaterialTheme.typography.bodySmall,
-                color = if (done) {
-                    OnPastelSubtext
-                } else {
-                    MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.75f)
-                },
-            )
-        }
-    }
-}
-
-/** Amber fee-disclosure box: Mochi's platform cut + a vague Stripe pointer. */
-@Composable
-private fun FeesBox(platformFeePercent: Double) {
-    val feeText = if (platformFeePercent % 1.0 == 0.0) {
-        platformFeePercent.toInt().toString()
-    } else {
-        platformFeePercent.toString()
-    }
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .background(FeesBg)
-            .border(1.dp, FeesBorder, RoundedCornerShape(10.dp))
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Text(
-            text = stringResource(R.string.market_account_seller_fees_heading),
-            style = MaterialTheme.typography.bodyMedium,
+            text = stringResource(R.string.market_account_address_title),
+            style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold,
-            color = OnPastelText,
-        )
-        FeeBullet(stringResource(R.string.market_account_seller_fees_mochi, feeText))
-        FeeBullet(stringResource(R.string.market_account_seller_fees_stripe))
-    }
-}
-
-@Composable
-private fun FeeBullet(text: String) {
-    Row(verticalAlignment = Alignment.Top) {
-        Text(
-            text = "•",
-            style = MaterialTheme.typography.bodyMedium,
-            color = OnPastelText,
-            modifier = Modifier.padding(end = 8.dp),
         )
         Text(
-            text = text,
-            style = MaterialTheme.typography.bodyMedium,
-            color = OnPastelText,
+            text = stringResource(R.string.market_account_address_desc),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        OutlinedTextField(
+            value = name,
+            onValueChange = onNameChange,
+            label = { Text(stringResource(R.string.market_checkout_address_name)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = line1,
+            onValueChange = onLine1Change,
+            label = { Text(stringResource(R.string.market_checkout_address_line1)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = line2,
+            onValueChange = onLine2Change,
+            label = { Text(stringResource(R.string.market_checkout_address_line2)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = city,
+            onValueChange = onCityChange,
+            label = { Text(stringResource(R.string.market_checkout_address_city)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = region,
+            onValueChange = onRegionChange,
+            label = { Text(stringResource(R.string.market_checkout_address_region)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = postcode,
+            onValueChange = onPostcodeChange,
+            label = { Text(stringResource(R.string.market_checkout_address_postcode)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedTextField(
+            value = country,
+            onValueChange = onCountryChange,
+            label = { Text(stringResource(R.string.market_checkout_address_country)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
         )
     }
 }

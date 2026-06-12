@@ -65,6 +65,7 @@
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Цел</string>
     <string name="forums_access_level_view">Прикажи</string>
+    <string name="forums_access_level_vote">Гласај</string>
     <string name="forums_access_level_comment">Коментар</string>
     <string name="forums_access_level_post">Објави</string>
     <string name="forums_access_level_none">Ништо</string>
@@ -159,7 +160,6 @@
     <string name="forums_access_target_hint">ID на ентитет, @група, * (сите) или + (членови)</string>
     <string name="forums_access_level">Ниво</string>
     <string name="forums_access_level_moderate">Модерирај</string>
-    <string name="forums_access_level_manage">Управувај</string>
     <string name="forums_members_search">Филтрирај членови</string>
     <string name="forums_banner_description">Markdown прикажан на врвот на форумот.</string>
     <string name="forums_banner_placeholder">Добредојдовте на овој форум…</string>
@@ -198,4 +198,13 @@
     <string name="forums_settings_danger_zone">Опасна зона</string>
     <string name="forums_settings_delete_message">Ова трајно ќе го избрише форумот и сите негови објави. Ова не може да се врати.</string>
 
+    <string name="forums_tag_interest_up">Поттикни интерес</string>
+    <string name="forums_tag_interest_down">Намали интерес</string>
+    <string name="forums_tag_interest_remove">Отстрани интерес</string>
+    <string name="forums_list_default_sort">Стандардно подредување</string>
+    <string name="forums_access_tab_users">Корисници</string>
+    <string name="forums_access_tab_groups">Групи</string>
+    <string name="forums_access_tab_manual">Рачно</string>
+    <string name="forums_access_search_users">Пребарај корисници</string>
+    <string name="forums_access_no_groups">Нема достапни групи</string>
 </resources>

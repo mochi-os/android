@@ -195,4 +195,9 @@
     <string name="feeds_ai_mode_off_description">L-ebda proċessar bl-AI</string>
     <string name="feeds_ai_mode_tag_description">L-AI jagħti tikketti lill-posts biex jappoġġja r-rankjar ibbażat fuq l-interessi</string>
 
+    <string name="feeds_refresh">Aġġorna</string>
+    <string name="feeds_interest_boosted">L-interess żdied</string>
+    <string name="feeds_interest_reduced">L-interess naqas</string>
+    <string name="feeds_interest_removed">L-interess tneħħa</string>
+    <string name="feeds_interest_failed">Ma rnexxiex jiġi aġġustat l-interess</string>
 </resources>
