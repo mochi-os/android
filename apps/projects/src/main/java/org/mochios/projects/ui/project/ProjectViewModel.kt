@@ -269,7 +269,12 @@ class ProjectViewModel @Inject constructor(
     }
 
     fun selectObject(objectId: String?) {
+        val closing = objectId == null && _uiState.value.selectedObjectId != null
         _uiState.value = _uiState.value.copy(selectedObjectId = objectId)
+        // The detail sheet edits values through its own ViewModel, and local
+        // writes don't reach the websocket (projects has no commit hook) — so
+        // refresh on sheet close to reflect any field changes (card placement).
+        if (closing) refreshObjects()
     }
 
     fun createObject(
@@ -358,13 +363,22 @@ class ProjectViewModel @Inject constructor(
     }
 
     private fun handleWebSocketEvent(event: WebSocketEvent) {
-        when (event.type) {
-            "object_created", "object_updated", "object_deleted", "object_moved" -> {
-                refreshObjects()
-            }
-            "project_updated" -> {
+        // Server event types are slash-namespaced (object/update, values/update,
+        // ...) — see the mochi.websocket.write calls in projects.star. The
+        // previous underscore names here never matched anything, so the board
+        // ignored every push and cards only moved on a manual reload.
+        val type = event.type ?: return
+        when {
+            type in setOf(
+                "object/create", "object/update", "object/delete",
+                "object/ranks", "values/update",
+            ) -> refreshObjects()
+            // Structure changes: board columns derive from field options, plus
+            // views/classes/hierarchy — reload the whole project.
+            type == "project/update" || type == "project/resynced" ||
+                type == "hierarchy/set" ||
+                type.substringBefore("/") in setOf("class", "field", "option", "view") ->
                 loadProject()
-            }
         }
     }
 

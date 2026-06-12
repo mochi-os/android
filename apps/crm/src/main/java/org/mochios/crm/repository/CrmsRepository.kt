@@ -205,7 +205,9 @@ class CrmsRepository @Inject constructor(
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
         val fileParts = files.map { file ->
             val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-            MultipartBody.Part.createFormData("file", file.name, requestFile)
+            // The server reads the multipart field "files" (mochi.attachment.save);
+            // parts named anything else are silently dropped.
+            MultipartBody.Part.createFormData("files", file.name, requestFile)
         }
         return api.createComment(crmId, objectId, contentBody, parentBody, fileParts).unwrap().comment
     }
@@ -225,7 +227,7 @@ class CrmsRepository @Inject constructor(
 
     suspend fun createAttachment(crmId: String, objectId: String, file: File): Attachment {
         val requestFile = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
-        val part = MultipartBody.Part.createFormData("file", file.name, requestFile)
+        val part = MultipartBody.Part.createFormData("files", file.name, requestFile)
         return api.createAttachment(crmId, objectId, part).unwrap().attachment
     }
 

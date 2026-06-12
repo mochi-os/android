@@ -183,8 +183,10 @@ class FeedListViewModel @Inject constructor(
         for (feed in feedList) {
             if (feed.fingerprint.isNotEmpty()) {
                 val subId = webSocket.subscribe(serverUrl, feed.fingerprint) { event ->
+                    // Server event types are slash-namespaced (feeds.star commit
+                    // hook + handlers); the old underscore names never matched.
                     when (event.type) {
-                        "post_created", "post_deleted", "source_polled" -> {
+                        "post/create", "post/delete", "feed/update" -> {
                             viewModelScope.launch { refreshFeedSilently() }
                         }
                     }

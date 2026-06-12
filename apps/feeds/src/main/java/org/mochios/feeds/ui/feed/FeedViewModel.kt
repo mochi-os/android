@@ -428,11 +428,34 @@ class FeedViewModel @Inject constructor(
                     label = if (tag.qid.isNullOrEmpty()) tag.label else null,
                     direction = direction
                 )
+                applyInterestLocally(tag.qid, direction)
                 _interestFeedback.tryEmit(InterestFeedback.Success(direction))
             } catch (e: Exception) {
                 _interestFeedback.tryEmit(InterestFeedback.Failure(e.toMochiError()))
             }
         }
+    }
+
+    /**
+     * Mirror a successful interest adjustment into local state so the tag
+     * colour updates immediately (web does the same optimistic shift). Uses
+     * the server's own deltas — up +15, down -20, clamped to ±100; remove
+     * clears the weight. Interest is global per qid, so every tag with the
+     * same qid updates, across all posts and the feed tag bar.
+     */
+    private fun applyInterestLocally(qid: String?, direction: String) {
+        if (qid.isNullOrEmpty()) return
+        fun adjust(current: Double?): Double? = when (direction) {
+            "up" -> ((current ?: 0.0) + 15.0).coerceAtMost(100.0)
+            "down" -> ((current ?: 0.0) - 20.0).coerceAtLeast(-100.0)
+            else -> null
+        }
+        fun update(tags: List<Tag>): List<Tag> =
+            tags.map { if (it.qid == qid) it.copy(interest = adjust(it.interest)) else it }
+        _posts.value = _posts.value.map { post ->
+            if (post.tags.any { it.qid == qid }) post.copy(tags = update(post.tags)) else post
+        }
+        _tags.value = update(_tags.value)
     }
 
     /**
@@ -618,9 +641,12 @@ class FeedViewModel @Inject constructor(
         if (feedId.isEmpty() || isAllFeeds) return
         val serverUrl = sessionManager.getServerUrlBlocking()
         subscriptionId = webSocket.subscribe(serverUrl, feedId) { event ->
+            // Server event types are slash-namespaced (feeds.star commit hook
+            // + handlers); the old underscore names never matched anything.
             when (event.type) {
-                "post_created", "post_deleted", "post_updated", "comment_created",
-                "comment_deleted", "reaction", "source_polled" -> {
+                "post/create", "post/edit", "post/delete",
+                "comment/create", "comment/edit", "comment/delete",
+                "react/post", "react/comment", "tag/add", "tag/remove" -> {
                     viewModelScope.launch { refreshSilently() }
                 }
             }

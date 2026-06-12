@@ -79,6 +79,14 @@ class ObjectDetailViewModel @Inject constructor(
     /** Emits when an auto-save write fails — the screen shows a toast. */
     val saveFailed: SharedFlow<Unit> = _saveFailed.asSharedFlow()
 
+    private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
+    /**
+     * Emits when a comment/attachment action fails while the sheet is open.
+     * uiState.error only renders when no object is loaded, so without this
+     * the failure is invisible — the input clears and nothing appears.
+     */
+    val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
+
     private var currentProjectId: String = ""
     private var currentObjectId: String = ""
     private var wsSubscriptionId: String? = null
@@ -256,7 +264,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.createComment(currentProjectId, currentObjectId, content, parent, files)
                 loadComments()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -267,7 +275,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.updateComment(currentProjectId, currentObjectId, commentId, content)
                 loadComments()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -278,7 +286,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.deleteComment(currentProjectId, currentObjectId, commentId)
                 loadComments()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -444,7 +452,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.createAttachment(currentProjectId, currentObjectId, file)
                 loadAttachments()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -455,7 +463,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.deleteAttachment(currentProjectId, currentObjectId, attachmentId)
                 loadAttachments()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }

@@ -87,6 +87,15 @@ fun ObjectDetailSheet(
         }
     }
 
+    // Comment/attachment failures are otherwise invisible while the sheet is
+    // open (uiState.error only renders when no object is loaded) — the input
+    // clears and nothing appears. Surface the actual error.
+    LaunchedEffect(Unit) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
+        }
+    }
+
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState

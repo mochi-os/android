@@ -248,11 +248,33 @@ class PostDetailViewModel @Inject constructor(
                     label = if (tag.qid.isNullOrEmpty()) tag.label else null,
                     direction = direction
                 )
+                applyInterestLocally(tag.qid, direction)
             } catch (e: MochiError) {
                 _actionError.value = e
             } catch (_: Exception) {
                 // Silent — user can retry
             }
+        }
+    }
+
+    /**
+     * Mirror a successful interest adjustment into local state so the tag
+     * colour updates immediately (web does the same optimistic shift). Uses
+     * the server's own deltas — up +15, down -20, clamped to ±100; remove
+     * clears the weight.
+     */
+    private fun applyInterestLocally(qid: String?, direction: String) {
+        if (qid.isNullOrEmpty()) return
+        fun adjust(current: Double?): Double? = when (direction) {
+            "up" -> ((current ?: 0.0) + 15.0).coerceAtMost(100.0)
+            "down" -> ((current ?: 0.0) - 20.0).coerceAtLeast(-100.0)
+            else -> null
+        }
+        fun update(tags: List<Tag>): List<Tag> =
+            tags.map { if (it.qid == qid) it.copy(interest = adjust(it.interest)) else it }
+        _tags.value = update(_tags.value)
+        _post.value = _post.value?.let { p ->
+            if (p.tags.any { it.qid == qid }) p.copy(tags = update(p.tags)) else p
         }
     }
 
@@ -297,9 +319,12 @@ class PostDetailViewModel @Inject constructor(
         val serverUrl = sessionManager.getServerUrlBlocking()
         subscriptionId = webSocket.subscribe(serverUrl, feedId) { event ->
             if (event.post == postId) {
+                // Server event types are slash-namespaced (feeds.star commit
+                // hook + handlers); the old underscore names never matched.
                 when (event.type) {
-                    "comment_created", "comment_deleted", "comment_edited",
-                    "reaction", "post_updated" -> {
+                    "comment/create", "comment/delete", "comment/edit",
+                    "react/post", "react/comment", "post/edit",
+                    "tag/add", "tag/remove" -> {
                         viewModelScope.launch { refreshSilently() }
                     }
                 }
