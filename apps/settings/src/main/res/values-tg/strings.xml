@@ -429,4 +429,8 @@
     <string name="system_status_mesh">Mesh-и пахш</string>
     <string name="system_status_broadcast">Пахши охирин</string>
     <string name="system_status_queued_broadcasts">Пахшҳои дар навбат</string>
+    <string name="system_setting_hostname_publish">Эълони номи ҳост ва доменҳо ба серверҳои дигар</string>
+    <string name="system_setting_hostname">Номи ҳости ба серверҳои дигар эълоншуда</string>
+    <string name="peer_name_unverified">%1$s (тасдиқнашуда)</string>
+    <string name="system_status_peer_id">ID-и шарик</string>
 </resources>

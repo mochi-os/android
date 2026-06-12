@@ -431,4 +431,8 @@
     <string name="system_status_mesh">Mesh за емитовање</string>
     <string name="system_status_broadcast">Последње емитовање</string>
     <string name="system_status_queued_broadcasts">Емитовања у реду чекања</string>
+    <string name="system_setting_hostname_publish">Објави име хоста и домене другим серверима</string>
+    <string name="system_setting_hostname">Име хоста објављено другим серверима</string>
+    <string name="peer_name_unverified">%1$s (непроверено)</string>
+    <string name="system_status_peer_id">ID парњака</string>
 </resources>

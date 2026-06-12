@@ -430,4 +430,8 @@
     <string name="system_status_mesh">Ýaýlym mesh</string>
     <string name="system_status_broadcast">Soňky ýaýlym</string>
     <string name="system_status_queued_broadcasts">Nobatdaky ýaýlymlar</string>
+    <string name="system_setting_hostname_publish">Host adyny we domenleri beýleki serwerlere yglan et</string>
+    <string name="system_setting_hostname">Beýleki serwerlere yglan edilen host ady</string>
+    <string name="peer_name_unverified">%1$s (tassyklanmadyk)</string>
+    <string name="system_status_peer_id">Hyzmatdaş ID</string>
 </resources>

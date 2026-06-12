@@ -272,6 +272,7 @@
     <string name="system_status_download_from_packages">Download from packages.mochi-os.org</string>
     <string name="system_status_copy">Copy</string>
     <string name="system_status_peers">Peers</string>
+    <string name="system_status_peer_id">Peer ID</string>
     <string name="system_status_known">Known</string>
     <string name="system_status_peer_connected">Connected</string>
     <string name="system_status_peer_disconnected">Disconnected</string>
@@ -280,6 +281,7 @@
     <string name="system_status_peer_seen">Last seen</string>
     <string name="system_status_peer_queued">Queued messages</string>
     <string name="system_status_peer_oldest">Oldest queued message</string>
+    <string name="peer_name_unverified">%1$s (unverified)</string>
     <string name="system_status_users">Users</string>
     <string name="system_status_entities">Entities</string>
     <string name="system_status_reachability">Reachability</string>
@@ -387,6 +389,8 @@
     <string name="system_setting_server_started">Server started</string>
     <string name="system_setting_server_version">Server version</string>
     <string name="system_setting_signup_enabled">Allow new signups</string>
+    <string name="system_setting_hostname">Hostname announced to other servers</string>
+    <string name="system_setting_hostname_publish">Announce hostname and domains to other servers</string>
 
     <!-- System users -->
     <string name="settings_home_system_users">Users (server)</string>

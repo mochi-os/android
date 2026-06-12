@@ -430,4 +430,8 @@
     <string name="system_status_mesh">Broadcast-mesh</string>
     <string name="system_status_broadcast">Seneste udsendelse</string>
     <string name="system_status_queued_broadcasts">Udsendelser i kø</string>
+    <string name="system_setting_hostname_publish">Annoncér værtsnavn og domæner til andre servere</string>
+    <string name="system_setting_hostname">Værtsnavn annonceret til andre servere</string>
+    <string name="peer_name_unverified">%1$s (ubekræftet)</string>
+    <string name="system_status_peer_id">Peer-ID</string>
 </resources>

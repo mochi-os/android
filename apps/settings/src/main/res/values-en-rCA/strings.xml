@@ -411,4 +411,8 @@
     <string name="replication_forget_title">Forget this unreachable host?</string>
     <string name="replication_forget_message">It will be removed from your replica set and told to delete its copy when it reconnects. To remove a reachable server, sign in there and use \"Remove my account from this server\". Verify it\'s you to continue.</string>
     <string name="system_status_queued_broadcasts">Queued broadcasts</string>
+    <string name="system_setting_hostname_publish">Announce hostname and domains to other servers</string>
+    <string name="system_setting_hostname">Hostname announced to other servers</string>
+    <string name="peer_name_unverified">%1$s (unverified)</string>
+    <string name="system_status_peer_id">Peer ID</string>
 </resources>

@@ -32,6 +32,11 @@ data class SystemUpdateInfo(
 
 data class PeerEntry(
     val peer: String = "",
+    // Claimed display name ("" when none); verified = passed DNS
+    // verification. Display-only — never feed logic.
+    val name: String = "",
+    val verified: Boolean = false,
+    val fingerprint: String = "",
     val connected: Boolean = false,
     val unreachable: Boolean = false,
     val address: String = "",

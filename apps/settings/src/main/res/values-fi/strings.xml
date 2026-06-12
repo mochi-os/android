@@ -430,4 +430,8 @@
     <string name="system_status_mesh">Lähetysmesh</string>
     <string name="system_status_broadcast">Viimeisin lähetys</string>
     <string name="system_status_queued_broadcasts">Jonossa olevat lähetykset</string>
+    <string name="system_setting_hostname_publish">Ilmoita isäntänimi ja verkkotunnukset muille palvelimille</string>
+    <string name="system_setting_hostname">Muille palvelimille ilmoitettu isäntänimi</string>
+    <string name="peer_name_unverified">%1$s (vahvistamaton)</string>
+    <string name="system_status_peer_id">Vertaistunnus</string>
 </resources>

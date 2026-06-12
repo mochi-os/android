@@ -432,4 +432,8 @@
     <string name="system_status_mesh">Oddajni mesh</string>
     <string name="system_status_broadcast">Zadnje oddajanje</string>
     <string name="system_status_queued_broadcasts">Oddajanja v čakalni vrsti</string>
+    <string name="system_setting_hostname_publish">Objavi ime gostitelja in domene drugim strežnikom</string>
+    <string name="system_setting_hostname">Ime gostitelja, objavljeno drugim strežnikom</string>
+    <string name="peer_name_unverified">%1$s (nepreverjeno)</string>
+    <string name="system_status_peer_id">ID soležnika</string>
 </resources>

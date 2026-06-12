@@ -161,6 +161,8 @@ private val SETTING_LABEL_RESOURCES: Map<String, Int> = mapOf(
     "default_theme" to R.string.system_setting_default_theme,
     "domains_verification" to R.string.system_setting_domains_verification,
     "email_from" to R.string.system_setting_email_from,
+    "hostname" to R.string.system_setting_hostname,
+    "hostname_publish" to R.string.system_setting_hostname_publish,
     "oauth_public_url" to R.string.system_setting_oauth_public_url,
     "oauth_google_client_id" to R.string.system_setting_oauth_google_client_id,
     "oauth_google_client_secret" to R.string.system_setting_oauth_google_client_secret,

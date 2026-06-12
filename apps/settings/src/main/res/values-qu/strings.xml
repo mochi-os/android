@@ -429,4 +429,8 @@
     <string name="system_status_mesh">Ch\'eqechiy mesh</string>
     <string name="system_status_broadcast">Qhipa ch\'eqechiy</string>
     <string name="system_status_queued_broadcasts">Suyana siq\'ipi ch\'eqechiykuna</string>
+    <string name="system_setting_hostname_publish">Hostname hinaspa dominiokunata huk servidorkunaman willay</string>
+    <string name="system_setting_hostname">Huk servidorkunaman willasqa hostname</string>
+    <string name="peer_name_unverified">%1$s (mana chiqaqchasqa)</string>
+    <string name="system_status_peer_id">Mast\'i ID</string>
 </resources>

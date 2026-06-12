@@ -55,7 +55,10 @@ import org.mochios.android.api.userMessage
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.BootstrapEntry
+import org.mochios.settings.api.PairMember
 import org.mochios.settings.api.PendingJoin
+import org.mochios.settings.ui.PeerName
+import org.mochios.settings.ui.hyphenateFingerprint
 import org.mochios.settings.ui.login.StepUpHost
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -122,6 +125,7 @@ fun SystemReplicationScreen(
                     item("this-server-row") {
                         ThisServerRow(
                             peer = state.peer,
+                            fingerprint = state.fingerprint,
                             onCopy = {
                                 val ok = copyToClipboard(context, "peer", state.peer)
                                 viewModel.reportPeerCopied(ok)
@@ -180,11 +184,11 @@ fun SystemReplicationScreen(
                             )
                         }
                     } else {
-                        items(state.pair, key = { "pair-$it" }) { peer ->
+                        items(state.pair, key = { "pair-${it.peer}" }) { member ->
                             PairMemberRow(
-                                peer = peer,
-                                status = pairMemberSyncStatus(peer, state.bootstrap),
-                                onRemove = { viewModel.removePair(peer) },
+                                member = member,
+                                status = pairMemberSyncStatus(member.peer, state.bootstrap),
+                                onRemove = { viewModel.removePair(member.peer) },
                             )
                         }
                     }
@@ -219,15 +223,24 @@ private fun SectionHeader(title: String, subtitle: String? = null) {
 }
 
 @Composable
-private fun ThisServerRow(peer: String, onCopy: () -> Unit) {
+private fun ThisServerRow(peer: String, fingerprint: String, onCopy: () -> Unit) {
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = peer,
-                style = MaterialTheme.typography.bodySmall,
-                fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
-                modifier = Modifier.weight(1f),
-            )
+            Column(modifier = Modifier.weight(1f)) {
+                if (fingerprint.isNotBlank()) {
+                    Text(
+                        text = hyphenateFingerprint(fingerprint),
+                        style = MaterialTheme.typography.bodySmall,
+                        fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    text = peer,
+                    style = MaterialTheme.typography.bodySmall,
+                    fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                )
+            }
             IconButton(onClick = onCopy) {
                 Icon(
                     Icons.Default.ContentCopy,
@@ -266,11 +279,27 @@ private fun PendingJoinRow(
 ) {
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = join.label.ifBlank { join.peer },
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.weight(1f),
-            )
+            // Approval context: the server sets name only when verified —
+            // an unverified claim must not influence this decision.
+            Column(modifier = Modifier.weight(1f)) {
+                if (join.label.isNotBlank()) {
+                    Text(join.label, style = MaterialTheme.typography.bodyMedium)
+                }
+                PeerName(join.name, join.verified)
+                if (join.fingerprint.isNotBlank()) {
+                    Text(
+                        text = hyphenateFingerprint(join.fingerprint),
+                        style = MaterialTheme.typography.bodySmall,
+                        fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    text = join.peer,
+                    style = MaterialTheme.typography.bodySmall,
+                    fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                )
+            }
             OutlinedButton(onClick = onApprove) {
                 Icon(Icons.Default.Check, contentDescription = null)
                 Spacer(Modifier.width(4.dp))
@@ -288,14 +317,24 @@ private fun PendingJoinRow(
 
 @Composable
 private fun PairMemberRow(
-    peer: String,
+    member: PairMember,
     status: SyncStatus,
     onRemove: () -> Unit,
 ) {
+    val peer = member.peer
     var confirm by remember(peer) { mutableStateOf(false) }
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
+                PeerName(member.name, member.verified)
+                if (member.fingerprint.isNotBlank()) {
+                    Text(
+                        text = hyphenateFingerprint(member.fingerprint),
+                        style = MaterialTheme.typography.bodySmall,
+                        fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
                 Text(
                     peer,
                     style = MaterialTheme.typography.bodySmall,

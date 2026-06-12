@@ -21,6 +21,17 @@ data class PendingJoin(
     val peer: String = "",
     val label: String = "",
     val expires: Long = 0,
+    // Approval context: the server sets name only when DNS-verified.
+    val name: String = "",
+    val verified: Boolean = false,
+    val fingerprint: String = "",
+)
+
+data class PairMember(
+    val peer: String = "",
+    val name: String = "",
+    val verified: Boolean = false,
+    val fingerprint: String = "",
 )
 
 data class BootstrapEntry(
@@ -32,8 +43,9 @@ data class BootstrapEntry(
 
 data class SystemReplicationData(
     @SerializedName("peer") val peer: String = "",
+    @SerializedName("fingerprint") val fingerprint: String = "",
     @SerializedName("addresses") val addresses: List<String> = emptyList(),
-    @SerializedName("pair") val pair: List<String> = emptyList(),
+    @SerializedName("pair") val pair: List<PairMember> = emptyList(),
     @SerializedName("joins") val joins: List<PendingJoin> = emptyList(),
     @SerializedName("bootstrap") val bootstrap: List<BootstrapEntry> = emptyList(),
     @SerializedName("bootstrap_pending") val bootstrapPending: Int = 0,

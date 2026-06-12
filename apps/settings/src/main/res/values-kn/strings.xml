@@ -430,4 +430,8 @@
     <string name="system_status_mesh">ಪ್ರಸಾರ ಮೆಶ್</string>
     <string name="system_status_broadcast">ಕೊನೆಯ ಪ್ರಸಾರ</string>
     <string name="system_status_queued_broadcasts">ಸರದಿಯಲ್ಲಿರುವ ಪ್ರಸಾರಗಳು</string>
+    <string name="system_setting_hostname_publish">ಹೋಸ್ಟ್ ಹೆಸರು ಮತ್ತು ಡೊಮೇನ್‌ಗಳನ್ನು ಇತರ ಸರ್ವರ್‌ಗಳಿಗೆ ಪ್ರಕಟಿಸಿ</string>
+    <string name="system_setting_hostname">ಇತರ ಸರ್ವರ್‌ಗಳಿಗೆ ಪ್ರಕಟಿಸಲಾದ ಹೋಸ್ಟ್ ಹೆಸರು</string>
+    <string name="peer_name_unverified">%1$s (ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ)</string>
+    <string name="system_status_peer_id">ಪೀರ್ ID</string>
 </resources>

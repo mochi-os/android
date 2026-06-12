@@ -22,6 +22,10 @@ data class ReplicationLink(
     val peer: String = "",
     val label: String = "",
     val expires: Long = 0,
+    // Approval context: the server sets name only when DNS-verified.
+    val name: String = "",
+    val verified: Boolean = false,
+    val fingerprint: String = "",
 )
 
 data class ReplicationHost(
@@ -32,10 +36,14 @@ data class ReplicationHost(
     // offline: unix seconds since it was last reachable (0 when reachable).
     val irreparable: Boolean = false,
     val offline: Long = 0,
+    val name: String = "",
+    val verified: Boolean = false,
+    val fingerprint: String = "",
 )
 
 data class ReplicationServer(
     @SerializedName("id") val id: String = "",
+    @SerializedName("fingerprint") val fingerprint: String = "",
 )
 
 data class ReplicationUser(

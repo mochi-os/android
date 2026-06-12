@@ -430,4 +430,8 @@
     <string name="system_status_mesh">نشريات mesh</string>
     <string name="system_status_broadcast">آخري نشريات</string>
     <string name="system_status_queued_broadcasts">قطار ۾ نشريات</string>
+    <string name="system_setting_hostname_publish">ٻين سرورن کي هوسٽ جو نالو ۽ ڊومينز جو اعلان ڪريو</string>
+    <string name="system_setting_hostname">ٻين سرورن کي اعلان ڪيل هوسٽ جو نالو</string>
+    <string name="peer_name_unverified">%1$s (غير تصديق ٿيل)</string>
+    <string name="system_status_peer_id">ساٿي جي سڃاڻپ</string>
 </resources>

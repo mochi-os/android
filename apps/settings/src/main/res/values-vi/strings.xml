@@ -429,4 +429,8 @@
     <string name="system_status_mesh">Lưới phát sóng</string>
     <string name="system_status_broadcast">Bản phát gần nhất</string>
     <string name="system_status_queued_broadcasts">Bản phát trong hàng đợi</string>
+    <string name="system_setting_hostname_publish">Thông báo tên máy chủ và các miền cho máy chủ khác</string>
+    <string name="system_setting_hostname">Tên máy chủ được thông báo cho máy chủ khác</string>
+    <string name="peer_name_unverified">%1$s (chưa xác minh)</string>
+    <string name="system_status_peer_id">ID đồng đẳng</string>
 </resources>

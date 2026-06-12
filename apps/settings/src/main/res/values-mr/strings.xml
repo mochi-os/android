@@ -430,4 +430,8 @@
     <string name="system_status_mesh">प्रसारण मेश</string>
     <string name="system_status_broadcast">शेवटचे प्रसारण</string>
     <string name="system_status_queued_broadcasts">रांगेतील प्रसारणे</string>
+    <string name="system_setting_hostname_publish">होस्टनेम आणि डोमेन इतर सर्व्हरना जाहीर करा</string>
+    <string name="system_setting_hostname">इतर सर्व्हरना जाहीर केलेले होस्टनेम</string>
+    <string name="peer_name_unverified">%1$s (असत्यापित)</string>
+    <string name="system_status_peer_id">पीअर ID</string>
 </resources>

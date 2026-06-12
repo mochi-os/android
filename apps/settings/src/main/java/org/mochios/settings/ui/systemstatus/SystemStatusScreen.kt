@@ -53,6 +53,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUpdateInfo
+import org.mochios.settings.ui.PeerName
+import org.mochios.settings.ui.hyphenateFingerprint
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -114,6 +116,20 @@ fun SystemStatusScreen(
                         value = formatSystemTimestamp(state.serverStarted),
                         valueMono = true,
                     )
+                    if (state.serverFingerprint.isNotBlank()) {
+                        StatusRow(
+                            label = stringResource(R.string.account_identity_fingerprint),
+                            value = hyphenateFingerprint(state.serverFingerprint),
+                            valueMono = true,
+                        )
+                    }
+                    if (state.serverPeerId.isNotBlank()) {
+                        StatusRow(
+                            label = stringResource(R.string.system_status_peer_id),
+                            value = state.serverPeerId,
+                            valueMono = true,
+                        )
+                    }
                     val counts = state.counts
                     if (counts != null) {
                         StatusRow(
@@ -195,10 +211,12 @@ fun SystemStatusScreen(
 private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Column(modifier = Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            PeerName(peer.name, peer.verified)
             Text(
-                text = peer.peer,
+                text = hyphenateFingerprint(peer.fingerprint).ifBlank { peer.peer },
                 style = MaterialTheme.typography.bodySmall,
                 fontFamily = FontFamily.Monospace,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             Text(
                 text = stringResource(

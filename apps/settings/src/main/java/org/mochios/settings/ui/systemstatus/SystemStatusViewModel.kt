@@ -22,6 +22,8 @@ data class SystemStatusUiState(
     val isInstalling: Boolean = false,
     val serverVersion: String = "",
     val serverStarted: Long = 0,
+    val serverPeerId: String = "",
+    val serverFingerprint: String = "",
     val update: SystemUpdateInfo? = null,
     val peers: List<PeerEntry> = emptyList(),
     val network: NetworkInfo? = null,
@@ -65,9 +67,11 @@ class SystemStatusViewModel @Inject constructor(
                     isLoading = false,
                     serverVersion = version,
                     serverStarted = started,
+                    serverPeerId = settingsData.server.id,
+                    serverFingerprint = settingsData.server.fingerprint,
                     update = update,
                     peers = (peersData?.peers ?: emptyList())
-                        .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.peer }),
+                        .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name.ifBlank { it.fingerprint }.ifBlank { it.peer } }),
                     network = peersData?.network,
                     counts = peersData?.counts,
                 )

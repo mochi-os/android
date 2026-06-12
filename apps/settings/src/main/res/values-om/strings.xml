@@ -430,4 +430,8 @@
     <string name="system_status_mesh">Mesh tamsaasaa</string>
     <string name="system_status_broadcast">Tamsaasa dhumaa</string>
     <string name="system_status_queued_broadcasts">Tamsaasota tartiiba keessaa</string>
+    <string name="system_setting_hostname_publish">Maqaa keessummeessaa fi domeenota serveroota birootti beeksisi</string>
+    <string name="system_setting_hostname">Maqaa keessummeessaa serveroota birootti beeksifame</string>
+    <string name="peer_name_unverified">%1$s (hin mirkanoofne)</string>
+    <string name="system_status_peer_id">ID hiriyaa</string>
 </resources>

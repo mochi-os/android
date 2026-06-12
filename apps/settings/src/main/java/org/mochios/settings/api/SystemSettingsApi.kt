@@ -29,8 +29,14 @@ data class SystemSetting(
     val public: Boolean = false,
 )
 
+data class SystemSettingsServer(
+    val id: String = "",
+    val fingerprint: String = "",
+)
+
 data class SystemSettingsData(
     val settings: List<SystemSetting> = emptyList(),
+    val server: SystemSettingsServer = SystemSettingsServer(),
 )
 
 interface SystemSettingsApi {

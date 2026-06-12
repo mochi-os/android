@@ -425,4 +425,8 @@
     <string name="system_status_mesh">廣播 Mesh</string>
     <string name="system_status_broadcast">最後廣播</string>
     <string name="system_status_queued_broadcasts">佇列中的廣播</string>
+    <string name="system_setting_hostname_publish">向其他伺服器公告主機名稱和網域</string>
+    <string name="system_setting_hostname">向其他伺服器公告的主機名稱</string>
+    <string name="peer_name_unverified">%1$s (未驗證)</string>
+    <string name="system_status_peer_id">對等節點 ID</string>
 </resources>

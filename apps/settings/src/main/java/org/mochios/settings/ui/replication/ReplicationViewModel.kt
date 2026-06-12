@@ -27,6 +27,7 @@ data class ReplicationUiState(
     val hosts: List<ReplicationHost> = emptyList(),
     val username: String = "",
     val serverPeerId: String = "",
+    val serverFingerprint: String = "",
     val error: MochiError? = null,
 )
 
@@ -70,6 +71,7 @@ class ReplicationViewModel @Inject constructor(
                     hosts = data.hosts,
                     username = data.user.username,
                     serverPeerId = data.server.id,
+                    serverFingerprint = data.server.fingerprint,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())

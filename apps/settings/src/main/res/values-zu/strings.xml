@@ -430,4 +430,8 @@
     <string name="system_status_mesh">I-mesh yokusakaza</string>
     <string name="system_status_broadcast">Ukusakaza kokugcina</string>
     <string name="system_status_queued_broadcasts">Ukusakaza kulayini</string>
+    <string name="system_setting_hostname_publish">Memezela igama lomsingathi namadomeni kwamanye amaseva</string>
+    <string name="system_setting_hostname">Igama lomsingathi elimenyezelwe kwamanye amaseva</string>
+    <string name="peer_name_unverified">%1$s (akuqinisekisiwe)</string>
+    <string name="system_status_peer_id">I-ID yontanga</string>
 </resources>

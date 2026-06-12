@@ -430,4 +430,8 @@
     <string name="system_status_mesh">Közvetítési mesh</string>
     <string name="system_status_broadcast">Utolsó közvetítés</string>
     <string name="system_status_queued_broadcasts">Sorban álló közvetítések</string>
+    <string name="system_setting_hostname_publish">Gazdagépnév és tartományok bejelentése más kiszolgálóknak</string>
+    <string name="system_setting_hostname">Más kiszolgálóknak bejelentett gazdagépnév</string>
+    <string name="peer_name_unverified">%1$s (nem ellenőrzött)</string>
+    <string name="system_status_peer_id">Társ azonosító</string>
 </resources>

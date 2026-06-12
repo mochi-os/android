@@ -430,4 +430,8 @@
     <string name="system_status_mesh">მაუწყებლობის ბადე</string>
     <string name="system_status_broadcast">ბოლო მაუწყებლობა</string>
     <string name="system_status_queued_broadcasts">რიგში მყოფი მაუწყებლობები</string>
+    <string name="system_setting_hostname_publish">ჰოსტის სახელისა და დომენების გამოცხადება სხვა სერვერებისთვის</string>
+    <string name="system_setting_hostname">სხვა სერვერებისთვის გამოცხადებული ჰოსტის სახელი</string>
+    <string name="peer_name_unverified">%1$s (გადაუმოწმებელი)</string>
+    <string name="system_status_peer_id">თანატოლის ID</string>
 </resources>

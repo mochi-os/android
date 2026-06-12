@@ -430,4 +430,8 @@
     <string name="system_status_mesh">Цацалтын mesh</string>
     <string name="system_status_broadcast">Сүүлийн цацалт</string>
     <string name="system_status_queued_broadcasts">Дараалалд буй цацалтууд</string>
+    <string name="system_setting_hostname_publish">Хостын нэр болон доменуудыг бусад серверт зарлах</string>
+    <string name="system_setting_hostname">Бусад серверт зарласан хостын нэр</string>
+    <string name="peer_name_unverified">%1$s (баталгаажаагүй)</string>
+    <string name="system_status_peer_id">Хосын ID</string>
 </resources>

@@ -429,4 +429,8 @@
     <string name="system_status_mesh">Mesh ອອກອາກາດ</string>
     <string name="system_status_broadcast">ການອອກອາກາດຫຼ້າສຸດ</string>
     <string name="system_status_queued_broadcasts">ການອອກອາກາດໃນຄິວ</string>
+    <string name="system_setting_hostname_publish">ປະກາດຊື່ໂຮສ ແລະ ໂດເມນໃຫ້ເຊີບເວີອື່ນ</string>
+    <string name="system_setting_hostname">ຊື່ໂຮສທີ່ປະກາດໃຫ້ເຊີບເວີອື່ນ</string>
+    <string name="peer_name_unverified">%1$s (ຍັງບໍ່ໄດ້ຢືນຢັນ)</string>
+    <string name="system_status_peer_id">ID ຄູ່</string>
 </resources>

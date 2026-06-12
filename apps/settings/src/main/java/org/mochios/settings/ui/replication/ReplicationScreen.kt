@@ -61,6 +61,8 @@ import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.ReplicationHost
 import org.mochios.settings.api.ReplicationLink
+import org.mochios.settings.ui.PeerName
+import org.mochios.settings.ui.hyphenateFingerprint
 import org.mochios.settings.ui.login.StepUpHost
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -145,6 +147,17 @@ fun ReplicationScreen(
                                 viewModel.reportCopied(ok)
                             },
                         )
+                        if (state.serverFingerprint.isNotBlank()) {
+                            AccountFieldRow(
+                                label = stringResource(R.string.account_identity_fingerprint),
+                                value = hyphenateFingerprint(state.serverFingerprint),
+                                monospace = true,
+                                onCopy = {
+                                    val ok = copyToClipboard(context, "fingerprint", hyphenateFingerprint(state.serverFingerprint))
+                                    viewModel.reportCopied(ok)
+                                },
+                            )
+                        }
                         Spacer(Modifier.height(16.dp))
                     }
 
@@ -267,11 +280,27 @@ private fun PendingRow(
 ) {
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = link.label.ifBlank { link.peer },
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.weight(1f),
-            )
+            // Approval context: the server sets name only when verified —
+            // an unverified claim must not influence this decision.
+            Column(modifier = Modifier.weight(1f)) {
+                if (link.label.isNotBlank()) {
+                    Text(link.label, style = MaterialTheme.typography.bodyMedium)
+                }
+                PeerName(link.name, link.verified)
+                if (link.fingerprint.isNotBlank()) {
+                    Text(
+                        text = hyphenateFingerprint(link.fingerprint),
+                        style = MaterialTheme.typography.bodySmall,
+                        fontFamily = FontFamily.Monospace,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    text = link.peer,
+                    style = MaterialTheme.typography.bodySmall,
+                    fontFamily = FontFamily.Monospace,
+                )
+            }
             OutlinedButton(onClick = onApprove) {
                 Icon(Icons.Default.Check, contentDescription = null)
                 Spacer(Modifier.height(0.dp))
@@ -299,11 +328,16 @@ private fun HostRow(host: ReplicationHost, onForget: () -> Unit) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        host.peer,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium,
-                    )
+                    if (host.name.isNotBlank()) {
+                        PeerName(host.name, host.verified)
+                    } else {
+                        Text(
+                            hyphenateFingerprint(host.fingerprint).ifBlank { host.peer },
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Medium,
+                            fontFamily = FontFamily.Monospace,
+                        )
+                    }
                     if (host.irreparable) {
                         Spacer(Modifier.width(8.dp))
                         StatusBadge(stringResource(R.string.replication_irreparable))
@@ -312,6 +346,20 @@ private fun HostRow(host: ReplicationHost, onForget: () -> Unit) {
                         StatusBadge(stringResource(R.string.replication_offline))
                     }
                 }
+                if (host.name.isNotBlank() && host.fingerprint.isNotBlank()) {
+                    Text(
+                        text = hyphenateFingerprint(host.fingerprint),
+                        style = MaterialTheme.typography.labelSmall,
+                        fontFamily = FontFamily.Monospace,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    text = host.peer,
+                    style = MaterialTheme.typography.labelSmall,
+                    fontFamily = FontFamily.Monospace,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
                 if (host.added > 0) {
                     Text(
                         text = stringResource(R.string.replication_added, format.formatRelativeTime(host.added)),

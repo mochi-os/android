@@ -429,4 +429,8 @@
     <string name="system_status_mesh">ထုတ်လွှင့်မှု mesh</string>
     <string name="system_status_broadcast">နောက်ဆုံး ထုတ်လွှင့်မှု</string>
     <string name="system_status_queued_broadcasts">တန်းစီထားသော ထုတ်လွှင့်မှုများ</string>
+    <string name="system_setting_hostname_publish">Host အမည်နှင့် ဒိုမိန်းများကို အခြားဆာဗာများသို့ ကြေညာရန်</string>
+    <string name="system_setting_hostname">အခြားဆာဗာများသို့ ကြေညာထားသော host အမည်</string>
+    <string name="peer_name_unverified">%1$s (အတည်မပြုရသေး)</string>
+    <string name="system_status_peer_id">တွဲဖက် ID</string>
 </resources>

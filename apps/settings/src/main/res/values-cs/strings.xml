@@ -432,4 +432,8 @@
     <string name="system_status_mesh">Vysílací mesh</string>
     <string name="system_status_broadcast">Poslední vysílání</string>
     <string name="system_status_queued_broadcasts">Vysílání ve frontě</string>
+    <string name="system_setting_hostname_publish">Oznamovat název hostitele a domény ostatním serverům</string>
+    <string name="system_setting_hostname">Název hostitele oznamovaný ostatním serverům</string>
+    <string name="peer_name_unverified">%1$s (neověřeno)</string>
+    <string name="system_status_peer_id">ID protějšku</string>
 </resources>

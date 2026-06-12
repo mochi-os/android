@@ -430,4 +430,8 @@
     <string name="system_status_mesh">ஒலிபரப்பு மெஷ்</string>
     <string name="system_status_broadcast">கடைசி ஒலிபரப்பு</string>
     <string name="system_status_queued_broadcasts">வரிசையில் உள்ள ஒலிபரப்புகள்</string>
+    <string name="system_setting_hostname_publish">ஹோஸ்ட் பெயரையும் டொமைன்களையும் பிற சேவையகங்களுக்கு அறிவிக்கவும்</string>
+    <string name="system_setting_hostname">பிற சேவையகங்களுக்கு அறிவிக்கப்பட்ட ஹோஸ்ட் பெயர்</string>
+    <string name="peer_name_unverified">%1$s (சரிபார்க்கப்படாதது)</string>
+    <string name="system_status_peer_id">சக ID</string>
 </resources>

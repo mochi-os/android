@@ -431,4 +431,8 @@
     <string name="system_status_mesh">Mesh de difuzare</string>
     <string name="system_status_broadcast">Ultima difuzare</string>
     <string name="system_status_queued_broadcasts">Difuzări în coadă</string>
+    <string name="system_setting_hostname_publish">Anunță numele de gazdă și domeniile către alte servere</string>
+    <string name="system_setting_hostname">Nume de gazdă anunțat altor servere</string>
+    <string name="peer_name_unverified">%1$s (neverificat)</string>
+    <string name="system_status_peer_id">ID partener</string>
 </resources>

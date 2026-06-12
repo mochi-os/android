@@ -429,4 +429,8 @@
     <string name="system_status_mesh">ブロードキャストメッシュ</string>
     <string name="system_status_broadcast">最後のブロードキャスト</string>
     <string name="system_status_queued_broadcasts">キュー内のブロードキャスト</string>
+    <string name="system_setting_hostname_publish">ホスト名とドメインを他のサーバーに通知する</string>
+    <string name="system_setting_hostname">他のサーバーに通知されるホスト名</string>
+    <string name="peer_name_unverified">%1$s (未検証)</string>
+    <string name="system_status_peer_id">ピア ID</string>
 </resources>

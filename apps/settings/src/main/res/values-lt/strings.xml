@@ -432,4 +432,8 @@
     <string name="system_status_mesh">Transliacijos mesh</string>
     <string name="system_status_broadcast">Paskutinė transliacija</string>
     <string name="system_status_queued_broadcasts">Transliacijos eilėje</string>
+    <string name="system_setting_hostname_publish">Skelbti pagrindinio kompiuterio vardą ir domenus kitiems serveriams</string>
+    <string name="system_setting_hostname">Kitiems serveriams skelbiamas pagrindinio kompiuterio vardas</string>
+    <string name="peer_name_unverified">%1$s (nepatvirtinta)</string>
+    <string name="system_status_peer_id">Lygiarangio ID</string>
 </resources>

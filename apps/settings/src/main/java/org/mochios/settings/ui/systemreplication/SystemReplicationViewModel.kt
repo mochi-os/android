@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.settings.api.BootstrapEntry
+import org.mochios.settings.api.PairMember
 import org.mochios.settings.api.PendingJoin
 import org.mochios.settings.api.SystemReplicationApi
 import org.mochios.settings.ui.login.SettingsStepUpClient
@@ -23,8 +24,9 @@ import javax.inject.Inject
 data class SystemReplicationUiState(
     val isLoading: Boolean = true,
     val peer: String = "",
+    val fingerprint: String = "",
     val addresses: List<String> = emptyList(),
-    val pair: List<String> = emptyList(),
+    val pair: List<PairMember> = emptyList(),
     val joins: List<PendingJoin> = emptyList(),
     val bootstrap: List<BootstrapEntry> = emptyList(),
     val error: MochiError? = null,
@@ -68,6 +70,7 @@ class SystemReplicationViewModel @Inject constructor(
                 _uiState.value = SystemReplicationUiState(
                     isLoading = false,
                     peer = data.peer,
+                    fingerprint = data.fingerprint,
                     addresses = data.addresses,
                     pair = data.pair,
                     joins = data.joins,
