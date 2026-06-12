@@ -10,7 +10,7 @@ import retrofit2.http.POST
 data class BeginResponse(
     val allowed: List<String> = emptyList(),
     @SerializedName("has_passkey") val hasPasskey: Boolean = false,
-    val new: Boolean = false
+    val oauth: Boolean = false
 )
 
 data class CodeResponse(
@@ -103,7 +103,7 @@ data class PasskeyResponseData(
     val signature: String
 )
 data class IdentityRequest(val name: String, val privacy: String = "public")
-data class RecoveryRequest(val email: String, val code: String)
+data class RecoveryRequest(val username: String, val code: String)
 
 interface AuthApi {
 

@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,18 +19,21 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -45,98 +49,170 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CodeInputBoxes
 
 /**
- * Sign-in screen rendered entirely from the server's method config.
+ * Email-entry step of the sign-in flow (the "begin" screen).
  *
- * Two states share this composable:
- *  - **Initial** (`beginResult == null`): global [AuthUiState.methods]
- *    ([org.mochios.android.auth.MethodsResponse]) drives the email field,
- *    passkey button and one button per enabled OAuth provider.
- *  - **Per-account** (`beginResult != null`): the account's
- *    [BeginResult.allowed] list drives the email-code / authenticator / passkey
- *    options, with recovery gated on the global `recovery` flag.
- *
- * The MFA continuation (`mfaPartial != null`) keeps its own section.
+ * Driven by the global [AuthUiState.methods]
+ * ([org.mochios.android.auth.MethodsResponse]): the email field, the passkey
+ * button and one button per enabled OAuth provider. Submitting the email runs
+ * the begin API; once a [org.mochios.android.auth.BeginResult] arrives the
+ * navigation host advances to [AccountMethodsScreen].
  */
 @Composable
-fun LoginScreen(
+fun EmailEntryScreen(
     uiState: AuthUiState,
     onUpdateEmail: (String) -> Unit,
     onBeginLogin: () -> Unit,
+    onBeginPasskey: () -> Unit,
+    oauthScheme: String? = null,
+    onStartOAuth: (String, String) -> Unit = { _, _ -> }
+) {
+    AuthScreenColumn {
+        Text(
+            text = stringResource(R.string.auth_login_title),
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(modifier = Modifier.height(32.dp))
+        InitialMethods(
+            uiState = uiState,
+            onUpdateEmail = onUpdateEmail,
+            onBeginLogin = onBeginLogin,
+            onBeginPasskey = onBeginPasskey,
+            oauthScheme = oauthScheme,
+            onStartOAuth = onStartOAuth
+        )
+        if (uiState.error != null) {
+            Spacer(modifier = Modifier.height(12.dp))
+            AuthErrorBanner(error = uiState.error)
+        }
+    }
+}
+
+/**
+ * Per-account method step (the "methods" screen).
+ *
+ * The account's [org.mochios.android.auth.BeginResult.allowed] list drives the
+ * email-code / authenticator / passkey options, with recovery gated on the
+ * global `recovery` flag and previously-used OAuth providers shown when
+ * `begin.oauth` is true. The MFA continuation (`mfaPartial != null`) replaces
+ * the method list with its own section.
+ */
+@Composable
+fun AccountMethodsScreen(
+    uiState: AuthUiState,
     onRequestCode: () -> Unit,
     onUpdateCode: (String) -> Unit,
     onVerifyCode: () -> Unit,
     onUpdateTotpCode: (String) -> Unit,
     onVerifyTotp: () -> Unit,
     onBeginPasskey: () -> Unit,
-    onToggleRecovery: () -> Unit,
-    onUpdateRecoveryCode: (String) -> Unit,
-    onVerifyRecovery: () -> Unit,
+    onShowRecovery: () -> Unit,
     onBack: () -> Unit,
     oauthScheme: String? = null,
     onStartOAuth: (String, String) -> Unit = { _, _ -> }
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Spacer(modifier = Modifier.height(48.dp))
-
-        when {
-            uiState.mfaPartial != null -> {
-                Text(
-                    text = stringResource(R.string.auth_sign_in),
-                    style = MaterialTheme.typography.headlineMedium
-                )
-                Spacer(modifier = Modifier.height(32.dp))
-                MfaSection(uiState = uiState)
-            }
-
-            uiState.beginResult == null -> {
-                Text(
-                    text = stringResource(R.string.auth_login_title),
-                    style = MaterialTheme.typography.headlineMedium,
-                    fontWeight = FontWeight.Bold
-                )
-                Spacer(modifier = Modifier.height(32.dp))
-                InitialMethods(
-                    uiState = uiState,
-                    onUpdateEmail = onUpdateEmail,
-                    onBeginLogin = onBeginLogin,
-                    onBeginPasskey = onBeginPasskey,
-                    oauthScheme = oauthScheme,
-                    onStartOAuth = onStartOAuth
-                )
-            }
-
-            else -> {
-                Text(
-                    text = uiState.email,
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-                Spacer(modifier = Modifier.height(32.dp))
-                AccountMethods(
-                    uiState = uiState,
-                    onRequestCode = onRequestCode,
-                    onUpdateCode = onUpdateCode,
-                    onVerifyCode = onVerifyCode,
-                    onUpdateTotpCode = onUpdateTotpCode,
-                    onVerifyTotp = onVerifyTotp,
-                    onBeginPasskey = onBeginPasskey,
-                    onToggleRecovery = onToggleRecovery,
-                    onUpdateRecoveryCode = onUpdateRecoveryCode,
-                    onVerifyRecovery = onVerifyRecovery,
-                    onBack = onBack
-                )
-            }
+    AuthScreenColumn(onBack = onBack, title = uiState.email) {
+        if (uiState.mfaPartial != null) {
+            Text(
+                text = stringResource(R.string.auth_sign_in),
+                style = MaterialTheme.typography.headlineMedium
+            )
+            Spacer(modifier = Modifier.height(32.dp))
+            MfaSection(uiState = uiState)
+        } else {
+            AccountMethods(
+                uiState = uiState,
+                onRequestCode = onRequestCode,
+                onUpdateCode = onUpdateCode,
+                onVerifyCode = onVerifyCode,
+                onUpdateTotpCode = onUpdateTotpCode,
+                onVerifyTotp = onVerifyTotp,
+                onBeginPasskey = onBeginPasskey,
+                onShowRecovery = onShowRecovery,
+                oauthScheme = oauthScheme,
+                onStartOAuth = onStartOAuth
+            )
         }
 
         if (uiState.error != null) {
             Spacer(modifier = Modifier.height(12.dp))
             AuthErrorBanner(error = uiState.error)
+        }
+    }
+}
+
+/**
+ * Recovery-code step: a dedicated screen reached from [AccountMethodsScreen]
+ * when the account allows recovery. Verifying a code routes through the same
+ * auth result as the other factors.
+ */
+@Composable
+fun RecoveryScreen(
+    uiState: AuthUiState,
+    onUpdateCode: (String) -> Unit,
+    onVerify: () -> Unit,
+    onBack: () -> Unit
+) {
+    AuthScreenColumn(onBack = onBack, title = uiState.email) {
+        RecoverySection(
+            recoveryCode = uiState.recoveryCode,
+            isLoading = uiState.isLoading,
+            onUpdateCode = onUpdateCode,
+            onVerify = onVerify
+        )
+        if (uiState.error != null) {
+            Spacer(modifier = Modifier.height(12.dp))
+            AuthErrorBanner(error = uiState.error)
+        }
+    }
+}
+
+/**
+ * Shared vertical-scroll, centred column chrome for the auth steps. A top app
+ * bar is shown when either a [title] or an [onBack] affordance is supplied,
+ * carrying the account email and the back navigation; otherwise the screen has
+ * no app bar.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun AuthScreenColumn(
+    onBack: (() -> Unit)? = null,
+    title: String? = null,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    Scaffold(
+        topBar = {
+            if (onBack != null || title != null) {
+                TopAppBar(
+                    title = {
+                        if (title != null) {
+                            Text(title)
+                        }
+                    },
+                    navigationIcon = {
+                        if (onBack != null) {
+                            IconButton(onClick = onBack) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                    contentDescription = stringResource(R.string.auth_back)
+                                )
+                            }
+                        }
+                    }
+                )
+            }
+        }
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Spacer(modifier = Modifier.height(24.dp))
+            content()
         }
     }
 }
@@ -177,7 +253,6 @@ private fun InitialMethods(
             text = stringResource(R.string.auth_next),
             isLoading = uiState.isLoading,
             enabled = uiState.email.isNotBlank(),
-            trailingIcon = Icons.AutoMirrored.Filled.ArrowForward,
             onClick = onBeginLogin
         )
     }
@@ -226,16 +301,26 @@ private fun AccountMethods(
     onUpdateTotpCode: (String) -> Unit,
     onVerifyTotp: () -> Unit,
     onBeginPasskey: () -> Unit,
-    onToggleRecovery: () -> Unit,
-    onUpdateRecoveryCode: (String) -> Unit,
-    onVerifyRecovery: () -> Unit,
-    onBack: () -> Unit
+    onShowRecovery: () -> Unit,
+    oauthScheme: String?,
+    onStartOAuth: (String, String) -> Unit
 ) {
     val begin = uiState.beginResult ?: return
     val hasEmail = begin.allowed.contains("email")
     val hasTotp = begin.allowed.contains("totp")
     val showPasskey = begin.hasPasskey && begin.allowed.contains("passkey")
     val hasRecovery = uiState.methods?.recovery ?: false
+    // Previously-configured OAuth providers, taken from the global methods
+    // config, are offered for this account only when begin reports oauth = true.
+    val oauthProviders = if (begin.oauth) {
+        uiState.methods?.oauth.orEmpty()
+            .filterValues { enabled -> enabled }
+            .keys
+            .toList()
+            .sorted()
+    } else {
+        emptyList()
+    }
     // The single Log-in button verifies whichever factor the user engaged: the
     // email code once it's been requested, otherwise the authenticator code.
     val emailActive = uiState.codeSent
@@ -294,50 +379,51 @@ private fun AccountMethods(
             } else {
                 uiState.totpCode.length == 6
             },
-            trailingIcon = Icons.AutoMirrored.Filled.ArrowForward,
             onClick = { if (emailActive) onVerifyCode() else onVerifyTotp() }
         )
     }
 
-    if (showPasskey) {
+    // Passkey and previously-used OAuth share a single "Or log in with" header
+    // when both are offered, rather than each printing its own divider.
+    val showOauth = oauthProviders.isNotEmpty() && oauthScheme != null
+    if (showPasskey || showOauth) {
         Spacer(modifier = Modifier.height(16.dp))
         DividerWithText(stringResource(R.string.auth_or_log_in_with))
         Spacer(modifier = Modifier.height(16.dp))
-        MethodButton(
-            text = stringResource(R.string.auth_use_passkey),
-            iconRes = R.drawable.ic_passkey,
-            enabled = !uiState.isLoading,
-            onClick = onBeginPasskey
-        )
+        if (showPasskey) {
+            MethodButton(
+                text = stringResource(R.string.auth_use_passkey),
+                iconRes = R.drawable.ic_passkey,
+                enabled = !uiState.isLoading,
+                onClick = onBeginPasskey
+            )
+            if (showOauth) {
+                Spacer(modifier = Modifier.height(8.dp))
+            }
+        }
+        if (oauthScheme != null) {
+            oauthProviders.forEach { provider ->
+                MethodButton(
+                    text = providerLabel(provider),
+                    iconRes = providerIcon(provider),
+                    iconVector = if (providerIcon(provider) == null) {
+                        Icons.Default.AccountCircle
+                    } else {
+                        null
+                    },
+                    enabled = !uiState.isLoading,
+                    onClick = { onStartOAuth(provider, oauthScheme) }
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+            }
+        }
     }
 
     if (hasRecovery) {
         Spacer(modifier = Modifier.height(16.dp))
-        TextButton(onClick = onToggleRecovery) {
-            Text(
-                if (uiState.showRecovery) stringResource(R.string.auth_back_to_sign_in)
-                else stringResource(R.string.auth_lost_access_recovery)
-            )
+        TextButton(onClick = onShowRecovery) {
+            Text(stringResource(R.string.auth_lost_access_recovery))
         }
-        if (uiState.showRecovery) {
-            RecoverySection(
-                recoveryCode = uiState.recoveryCode,
-                isLoading = uiState.isLoading,
-                onUpdateCode = onUpdateRecoveryCode,
-                onVerify = onVerifyRecovery
-            )
-        }
-    }
-
-    Spacer(modifier = Modifier.height(16.dp))
-    TextButton(onClick = onBack) {
-        Icon(
-            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-            contentDescription = null,
-            modifier = Modifier.size(18.dp)
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        Text(stringResource(R.string.auth_back))
     }
 }
 
