@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">د پیل وړاندیز: %1$s</string>
     <string name="market_profile_load_failed">پروفایل نشي پورته کېدای</string>
     <string name="market_profile_member_since">غړی له %1$s راهیسې</string>
+    <string name="market_profile_joined">په %1$s کې یوځای شو</string>
     <string name="market_profile_rating_breakdown">د درجه بندۍ تفصیل</string>
     <string name="market_profile_sales_count">%1$d پلورنې</string>
     <string name="market_profile_stars_value">%1$d ستوري</string>

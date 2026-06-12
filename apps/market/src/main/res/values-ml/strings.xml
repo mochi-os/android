@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ആരംഭ ബിഡ്: %1$s</string>
     <string name="market_profile_load_failed">പ്രൊഫൈൽ ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_profile_member_since">%1$s മുതൽ അംഗം</string>
+    <string name="market_profile_joined">%1$s-ന് ചേർന്നു</string>
     <string name="market_profile_rating_breakdown">റേറ്റിംഗ് വിശദാംശം</string>
     <string name="market_profile_sales_count">%1$d വിൽപ്പനകൾ</string>
     <string name="market_profile_stars_value">%1$d നക്ഷത്രങ്ങൾ</string>

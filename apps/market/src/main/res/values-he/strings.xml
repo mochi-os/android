@@ -597,6 +597,7 @@
     <string name="market_profile_biography">אודות</string>
     <string name="market_profile_load_failed">לא ניתן היה לטעון את הפרופיל</string>
     <string name="market_profile_member_since">חבר מאז %1$s</string>
+    <string name="market_profile_joined">הצטרף ב-%1$s</string>
     <string name="market_profile_no_reviews">אין ביקורות עדיין.</string>
     <string name="market_profile_rating_breakdown">פירוט דירוג</string>
     <string name="market_profile_stars_value">%1$d כוכבים</string>

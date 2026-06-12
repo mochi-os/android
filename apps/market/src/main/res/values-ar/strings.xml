@@ -593,6 +593,7 @@
     <string name="market_profile_biography">نبذة</string>
     <string name="market_profile_load_failed">تعذر تحميل الملف الشخصي</string>
     <string name="market_profile_member_since">عضو منذ %1$s</string>
+    <string name="market_profile_joined">انضم في %1$s</string>
     <string name="market_profile_no_reviews">لا توجد تقييمات بعد.</string>
     <string name="market_profile_rating_breakdown">تفاصيل التقييم</string>
     <string name="market_profile_sales_count">%1$d مبيعات</string>

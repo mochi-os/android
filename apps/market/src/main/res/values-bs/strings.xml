@@ -593,6 +593,7 @@
     <string name="market_profile_biography">O korisniku</string>
     <string name="market_profile_load_failed">Nije moguće učitati profil</string>
     <string name="market_profile_member_since">Član od %1$s</string>
+    <string name="market_profile_joined">Pridružio se %1$s</string>
     <string name="market_profile_no_reviews">Još nema recenzija.</string>
     <string name="market_profile_rating_breakdown">Raspodjela ocjena</string>
     <string name="market_profile_sales_count">%1$d prodaja</string>

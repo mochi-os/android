@@ -597,6 +597,7 @@
     <string name="market_profile_biography">เกี่ยวกับ</string>
     <string name="market_profile_load_failed">ไม่สามารถโหลดโปรไฟล์ได้</string>
     <string name="market_profile_member_since">เป็นสมาชิกตั้งแต่ %1$s</string>
+    <string name="market_profile_joined">เข้าร่วมเมื่อ %1$s</string>
     <string name="market_profile_no_reviews">ยังไม่มีรีวิว</string>
     <string name="market_profile_rating_breakdown">รายละเอียดคะแนน</string>
     <string name="market_profile_stars_value">%1$d ดาว</string>

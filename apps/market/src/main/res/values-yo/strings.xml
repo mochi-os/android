@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Ìdíje ìbẹ̀rẹ̀: %1$s</string>
     <string name="market_profile_load_failed">Kò lè ṣàmúwá ìmọ̀ nípa ẹni</string>
     <string name="market_profile_member_since">Ọmọ ẹgbẹ́ láti %1$s</string>
+    <string name="market_profile_joined">Dara pọ̀ ní %1$s</string>
     <string name="market_profile_rating_breakdown">Àpèjúwe ìdíwọ̀n</string>
     <string name="market_profile_sales_count">%1$d títà</string>
     <string name="market_profile_stars_value">%1$d ìràwọ̀</string>

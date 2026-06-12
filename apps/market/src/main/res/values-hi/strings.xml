@@ -597,6 +597,7 @@
     <string name="market_profile_biography">परिचय</string>
     <string name="market_profile_load_failed">प्रोफ़ाइल लोड नहीं की जा सकी</string>
     <string name="market_profile_member_since">%1$s से सदस्य</string>
+    <string name="market_profile_joined">%1$s को शामिल हुए</string>
     <string name="market_profile_no_reviews">अभी तक कोई समीक्षा नहीं।</string>
     <string name="market_profile_rating_breakdown">रेटिंग विवरण</string>
     <string name="market_profile_stars_value">%1$d सितारे</string>

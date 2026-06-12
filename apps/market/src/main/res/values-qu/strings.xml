@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Qallariy ofrecimiento: %1$s</string>
     <string name="market_profile_load_failed">Manam perfilta kichayta atinichu</string>
     <string name="market_profile_member_since">Yaykusqa: %1$s</string>
+    <string name="market_profile_joined">Yaykurqan %1$s</string>
     <string name="market_profile_rating_breakdown">Qhawariypa rakiynin</string>
     <string name="market_profile_sales_count">%1$d vendisqakuna</string>
     <string name="market_profile_stars_value">%1$d ch\'askakuna</string>

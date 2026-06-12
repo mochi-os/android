@@ -611,6 +611,7 @@
     <string name="market_price_starting_bid">Puxa inicial: %1$s</string>
     <string name="market_profile_load_failed">Non se puido cargar o perfil</string>
     <string name="market_profile_member_since">Membro desde %1$s</string>
+    <string name="market_profile_joined">Uniuse o %1$s</string>
     <string name="market_profile_rating_breakdown">Desglose da valoración</string>
     <string name="market_profile_stars_value">%1$d estrelas</string>
     <string name="market_purchase_dispute_chargeback">Devolución de cargo %1$s</string>

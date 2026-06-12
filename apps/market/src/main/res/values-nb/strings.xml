@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Om</string>
     <string name="market_profile_load_failed">Kunne ikke laste inn profilen</string>
     <string name="market_profile_member_since">Medlem siden %1$s</string>
+    <string name="market_profile_joined">Ble med %1$s</string>
     <string name="market_profile_no_reviews">Ingen anmeldelser ennå.</string>
     <string name="market_profile_rating_breakdown">Vurderingsfordeling</string>
     <string name="market_profile_stars_value">%1$d stjerner</string>

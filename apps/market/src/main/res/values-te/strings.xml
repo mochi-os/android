@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ప్రారంభ బిడ్: %1$s</string>
     <string name="market_profile_load_failed">ప్రొఫైల్‌ను లోడ్ చేయడం సాధ్యం కాలేదు</string>
     <string name="market_profile_member_since">%1$s నుండి సభ్యుడు</string>
+    <string name="market_profile_joined">%1$s లో చేరారు</string>
     <string name="market_profile_rating_breakdown">రేటింగ్ విభజన</string>
     <string name="market_profile_sales_count">%1$d అమ్మకాలు</string>
     <string name="market_profile_stars_value">%1$d నక్షత్రాలు</string>

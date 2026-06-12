@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ਸ਼ੁਰੂਆਤੀ ਬੋਲੀ: %1$s</string>
     <string name="market_profile_load_failed">ਪ੍ਰੋਫਾਈਲ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕੀ</string>
     <string name="market_profile_member_since">%1$s ਤੋਂ ਮੈਂਬਰ</string>
+    <string name="market_profile_joined">%1$s ਨੂੰ ਸ਼ਾਮਲ ਹੋਏ</string>
     <string name="market_profile_rating_breakdown">ਰੇਟਿੰਗ ਵੇਰਵਾ</string>
     <string name="market_profile_sales_count">%1$d ਵਿਕਰੀਆਂ</string>
     <string name="market_profile_stars_value">%1$d ਤਾਰੇ</string>

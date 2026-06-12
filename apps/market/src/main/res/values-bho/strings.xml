@@ -527,6 +527,7 @@
     <string name="market_price_starting_bid">शुरुआती बोली: %1$s</string>
     <string name="market_profile_load_failed">प्रोफाइल लोड ना हो सकल</string>
     <string name="market_profile_member_since">%1$s से सदस्य</string>
+    <string name="market_profile_joined">%1$s के जुड़ल</string>
     <string name="market_profile_rating_breakdown">रेटिंग के विवरण</string>
     <string name="market_profile_sales_count">%1$d बिक्री</string>
     <string name="market_profile_stars_value">%1$d सितारा</string>

@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ដេញចាប់ផ្ដើម៖ %1$s</string>
     <string name="market_profile_load_failed">មិនអាចផ្ទុកប្រវត្តិរូបបានទេ</string>
     <string name="market_profile_member_since">ជាសមាជិកតាំងពី %1$s</string>
+    <string name="market_profile_joined">បានចូលរួម %1$s</string>
     <string name="market_profile_rating_breakdown">ការវាយតម្លៃលម្អិត</string>
     <string name="market_profile_sales_count">ការលក់ %1$d</string>
     <string name="market_profile_stars_value">%1$d ផ្កាយ</string>

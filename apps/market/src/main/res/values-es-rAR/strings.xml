@@ -514,6 +514,7 @@
     <string name="market_profile_biography">Acerca de</string>
     <string name="market_profile_load_failed">No se pudo cargar el perfil</string>
     <string name="market_profile_member_since">Miembro desde %1$s</string>
+    <string name="market_profile_joined">Se unió el %1$s</string>
     <string name="market_profile_no_reviews">Aún no hay reseñas.</string>
     <string name="market_profile_rating_breakdown">Detalle de la calificación</string>
     <string name="market_profile_stars_value">%1$d estrellas</string>

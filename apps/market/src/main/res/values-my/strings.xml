@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">စတင်လေလံ: %1$s</string>
     <string name="market_profile_load_failed">ပရိုဖိုင်ကို ဖွင့်၍ မရပါ</string>
     <string name="market_profile_member_since">%1$s မှစ၍ အဖွဲ့ဝင်</string>
+    <string name="market_profile_joined">%1$s တွင် ဝင်ရောက်ခဲ့သည်</string>
     <string name="market_profile_rating_breakdown">အဆင့်သတ်မှတ်ချက် အသေးစိတ်</string>
     <string name="market_profile_sales_count">ရောင်းချမှု %1$d ခု</string>
     <string name="market_profile_stars_value">ကြယ် %1$d ပွင့်</string>

@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ಪ್ರಾರಂಭಿಕ ಬಿಡ್: %1$s</string>
     <string name="market_profile_load_failed">ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_profile_member_since">%1$s ರಿಂದ ಸದಸ್ಯ</string>
+    <string name="market_profile_joined">%1$s ರಂದು ಸೇರಿದರು</string>
     <string name="market_profile_rating_breakdown">ರೇಟಿಂಗ್ ವಿವರಣೆ</string>
     <string name="market_profile_sales_count">%1$d ಮಾರಾಟಗಳು</string>
     <string name="market_profile_stars_value">%1$d ನಕ್ಷತ್ರಗಳು</string>

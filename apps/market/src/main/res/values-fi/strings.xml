@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Tietoja</string>
     <string name="market_profile_load_failed">Profiilia ei voitu ladata</string>
     <string name="market_profile_member_since">Jäsen alkaen %1$s</string>
+    <string name="market_profile_joined">Liittyi %1$s</string>
     <string name="market_profile_no_reviews">Ei vielä arvosteluja.</string>
     <string name="market_profile_rating_breakdown">Arvioiden erittely</string>
     <string name="market_profile_stars_value">%1$d tähteä</string>

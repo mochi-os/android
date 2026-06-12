@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Giới thiệu</string>
     <string name="market_profile_load_failed">Không thể tải hồ sơ</string>
     <string name="market_profile_member_since">Thành viên từ %1$s</string>
+    <string name="market_profile_joined">Đã tham gia %1$s</string>
     <string name="market_profile_no_reviews">Chưa có đánh giá nào.</string>
     <string name="market_profile_rating_breakdown">Phân tích đánh giá</string>
     <string name="market_profile_stars_value">%1$d sao</string>

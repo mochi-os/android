@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Offerta tal-bidu: %1$s</string>
     <string name="market_profile_load_failed">Ma setax jitgħabba l-profil</string>
     <string name="market_profile_member_since">Membru sa minn %1$s</string>
+    <string name="market_profile_joined">Ingħaqad %1$s</string>
     <string name="market_profile_rating_breakdown">Tqassim tal-klassifikazzjoni</string>
     <string name="market_profile_stars_value">%1$d stilel</string>
     <string name="market_purchase_dispute_chargeback">Tnaqqis %1$s</string>

@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">אָנהייב־אָנבאָט: %1$s</string>
     <string name="market_profile_load_failed">ניט געלונגען אַרויפֿצולאָדן דאָס פּראָפֿיל</string>
     <string name="market_profile_member_since">מיטגליד זינט %1$s</string>
+    <string name="market_profile_joined">אַרײַנגעטראָטן %1$s</string>
     <string name="market_profile_rating_breakdown">אָפּשאַצונג־צעטיילונג</string>
     <string name="market_profile_sales_count">%1$d פֿאַרקויפֿן</string>
     <string name="market_profile_stars_value">%1$d שטערן</string>
