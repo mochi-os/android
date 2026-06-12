@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Пардохтҳо</string>
     <string name="market_sidebar_become_seller">Фурӯшанда шавед</string>
     <string name="market_sidebar_seller_settings">Танзимоти фурӯшанда</string>
+    <string name="market_listing_detail_seller_response">Ҷавоби фурӯшанда</string>
+    <string name="market_listing_detail_seller_reviews_heading">Шарҳҳои фурӯшанда</string>
+    <string name="market_account_stripe_open_failed">Stripe-ро кушодан нашуд</string>
 </resources>

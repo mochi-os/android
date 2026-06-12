@@ -730,4 +730,5 @@
     <string name="market_seller_summary_payments">Zahlungen</string>
     <string name="market_sidebar_become_seller">Verkäufer werden</string>
     <string name="market_sidebar_seller_settings">Verkäufereinstellungen</string>
+    <string name="market_account_stripe_open_failed">Stripe konnte nicht geöffnet werden</string>
 </resources>

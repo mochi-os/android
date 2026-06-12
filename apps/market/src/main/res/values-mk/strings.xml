@@ -726,4 +726,7 @@
     <string name="market_seller_summary_payments">Плаќања</string>
     <string name="market_sidebar_become_seller">Стани продавач</string>
     <string name="market_sidebar_seller_settings">Поставки на продавачот</string>
+    <string name="market_listing_detail_seller_response">Одговор на продавачот</string>
+    <string name="market_listing_detail_seller_reviews_heading">Рецензии за продавачот</string>
+    <string name="market_account_stripe_open_failed">Не може да се отвори Stripe</string>
 </resources>

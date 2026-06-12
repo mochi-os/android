@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">पैसे</string>
     <string name="market_sidebar_become_seller">विक्रेता व्हा</string>
     <string name="market_sidebar_seller_settings">विक्रेता सेटिंग्ज</string>
+    <string name="market_listing_detail_seller_response">विक्रेत्याचा प्रतिसाद</string>
+    <string name="market_listing_detail_seller_reviews_heading">विक्रेत्याच्या समीक्षा</string>
+    <string name="market_account_stripe_open_failed">Stripe उघडता आले नाही</string>
 </resources>

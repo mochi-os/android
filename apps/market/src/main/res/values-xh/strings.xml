@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Iintlawulo</string>
     <string name="market_sidebar_become_seller">Yiba ngumthengisi</string>
     <string name="market_sidebar_seller_settings">Izicwangciso zomthengisi</string>
+    <string name="market_listing_detail_seller_response">Impendulo yomthengisi</string>
+    <string name="market_listing_detail_seller_reviews_heading">Iimbono ngomthengisi</string>
+    <string name="market_account_stripe_open_failed">Akukwazekanga ukuvula iStripe</string>
 </resources>

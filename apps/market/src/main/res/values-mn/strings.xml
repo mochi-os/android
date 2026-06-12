@@ -726,4 +726,7 @@
     <string name="market_seller_summary_payments">Төлбөр</string>
     <string name="market_sidebar_become_seller">Худалдагч болох</string>
     <string name="market_sidebar_seller_settings">Худалдагчийн тохиргоо</string>
+    <string name="market_listing_detail_seller_response">Худалдагчийн хариу</string>
+    <string name="market_listing_detail_seller_reviews_heading">Худалдагчийн үнэлгээнүүд</string>
+    <string name="market_account_stripe_open_failed">Stripe нээж чадсангүй</string>
 </resources>

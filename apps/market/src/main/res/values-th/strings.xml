@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">การชำระเงิน</string>
     <string name="market_sidebar_become_seller">เป็นผู้ขาย</string>
     <string name="market_sidebar_seller_settings">การตั้งค่าผู้ขาย</string>
+    <string name="market_listing_detail_seller_response">การตอบกลับของผู้ขาย</string>
+    <string name="market_listing_detail_seller_reviews_heading">รีวิวผู้ขาย</string>
+    <string name="market_account_stripe_open_failed">ไม่สามารถเปิด Stripe ได้</string>
 </resources>

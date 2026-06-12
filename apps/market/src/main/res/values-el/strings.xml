@@ -729,4 +729,7 @@
     <string name="market_seller_summary_payments">Πληρωμές</string>
     <string name="market_sidebar_become_seller">Γίνετε πωλητής</string>
     <string name="market_sidebar_seller_settings">Ρυθμίσεις πωλητή</string>
+    <string name="market_listing_detail_seller_response">Απάντηση πωλητή</string>
+    <string name="market_listing_detail_seller_reviews_heading">Αξιολογήσεις πωλητή</string>
+    <string name="market_account_stripe_open_failed">Δεν ήταν δυνατό το άνοιγμα του Stripe</string>
 </resources>

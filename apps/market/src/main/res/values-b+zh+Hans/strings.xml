@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">支付</string>
     <string name="market_sidebar_become_seller">成为卖家</string>
     <string name="market_sidebar_seller_settings">卖家设置</string>
+    <string name="market_listing_detail_seller_response">卖家回复</string>
+    <string name="market_listing_detail_seller_reviews_heading">卖家评价</string>
+    <string name="market_account_stripe_open_failed">无法打开 Stripe</string>
 </resources>

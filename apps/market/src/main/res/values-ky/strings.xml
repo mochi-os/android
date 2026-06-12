@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Төлөмдөр</string>
     <string name="market_sidebar_become_seller">Сатуучу болуу</string>
     <string name="market_sidebar_seller_settings">Сатуучу жөндөөлөрү</string>
+    <string name="market_listing_detail_seller_response">Сатуучунун жообу</string>
+    <string name="market_listing_detail_seller_reviews_heading">Сатуучу жөнүндө пикирлер</string>
+    <string name="market_account_stripe_open_failed">Stripe ачылган жок</string>
 </resources>

@@ -7,6 +7,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.market.ui.account.AccountSettingsScreen
+import org.mochios.market.ui.account.NotificationPreferencesScreen
 import org.mochios.market.ui.account.PublicProfileScreen
 import org.mochios.market.ui.account.SellerSettingsScreen
 import org.mochios.market.ui.browse.HomeScreen
@@ -121,6 +122,7 @@ fun NavGraphBuilder.marketNavGraph(navController: NavController) {
     composable(MarketApp.REVIEWS) { ReviewsScreen(navController = navController) }
     composable(MarketApp.ACCOUNT) { AccountSettingsScreen(navController = navController) }
     composable(MarketApp.SELLER_SETTINGS) { SellerSettingsScreen(navController = navController) }
+    composable(MarketApp.NOTIFICATION_PREFERENCES) { NotificationPreferencesScreen(navController = navController) }
 
     // ---- Detail routes ----
     composable(MarketApp.NEW_LISTING) { EditListingScreen(navController = navController) }

@@ -729,4 +729,7 @@
     <string name="market_seller_summary_payments">Плащания</string>
     <string name="market_sidebar_become_seller">Станете продавач</string>
     <string name="market_sidebar_seller_settings">Настройки на продавача</string>
+    <string name="market_listing_detail_seller_response">Отговор на продавача</string>
+    <string name="market_listing_detail_seller_reviews_heading">Отзиви за продавача</string>
+    <string name="market_account_stripe_open_failed">Stripe не може да бъде отворен</string>
 </resources>

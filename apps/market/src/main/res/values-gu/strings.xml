@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ચુકવણીઓ</string>
     <string name="market_sidebar_become_seller">વિક્રેતા બનો</string>
     <string name="market_sidebar_seller_settings">વિક્રેતા સેટિંગ્સ</string>
+    <string name="market_listing_detail_seller_response">વિક્રેતાનો પ્રતિસાદ</string>
+    <string name="market_listing_detail_seller_reviews_heading">વિક્રેતાની સમીક્ષાઓ</string>
+    <string name="market_account_stripe_open_failed">Stripe ખોલી શકાયું નથી</string>
 </resources>

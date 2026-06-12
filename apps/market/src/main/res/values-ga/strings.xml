@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Íocaíochtaí</string>
     <string name="market_sidebar_become_seller">Bí i do dhíoltóir</string>
     <string name="market_sidebar_seller_settings">Socruithe díoltóra</string>
+    <string name="market_listing_detail_seller_response">Freagra an díoltóra</string>
+    <string name="market_listing_detail_seller_reviews_heading">Léirmheasanna díoltóra</string>
+    <string name="market_account_stripe_open_failed">Níorbh fhéidir Stripe a oscailt</string>
 </resources>

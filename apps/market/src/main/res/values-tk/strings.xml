@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Tölegler</string>
     <string name="market_sidebar_become_seller">Satyjy boluň</string>
     <string name="market_sidebar_seller_settings">Satyjy sazlamalary</string>
+    <string name="market_listing_detail_seller_response">Satyjynyň jogaby</string>
+    <string name="market_listing_detail_seller_reviews_heading">Satyjynyň synlary</string>
+    <string name="market_account_stripe_open_failed">Stripe açyp bolmady</string>
 </resources>

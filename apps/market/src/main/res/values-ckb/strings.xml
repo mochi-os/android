@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">پارەدانەکان</string>
     <string name="market_sidebar_become_seller">ببە بە فرۆشیار</string>
     <string name="market_sidebar_seller_settings">ڕێکخستنەکانی فرۆشیار</string>
+    <string name="market_listing_detail_seller_response">وەڵامی فرۆشیار</string>
+    <string name="market_listing_detail_seller_reviews_heading">هەڵسەنگاندنەکانی فرۆشیار</string>
+    <string name="market_account_stripe_open_failed">نەتوانرا Stripe بکرێتەوە</string>
 </resources>

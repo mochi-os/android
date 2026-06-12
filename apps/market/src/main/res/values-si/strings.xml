@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ගෙවීම්</string>
     <string name="market_sidebar_become_seller">විකුණුම්කරුවෙකු වන්න</string>
     <string name="market_sidebar_seller_settings">විකුණුම්කරු සැකසීම්</string>
+    <string name="market_listing_detail_seller_response">විකුණුම්කරුගේ ප්‍රතිචාරය</string>
+    <string name="market_listing_detail_seller_reviews_heading">විකුණුම්කරුගේ සමාලෝචන</string>
+    <string name="market_account_stripe_open_failed">Stripe විවෘත කළ නොහැකි විය</string>
 </resources>

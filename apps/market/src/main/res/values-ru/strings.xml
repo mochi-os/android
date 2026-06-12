@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Платежи</string>
     <string name="market_sidebar_become_seller">Стать продавцом</string>
     <string name="market_sidebar_seller_settings">Настройки продавца</string>
+    <string name="market_listing_detail_seller_response">Ответ продавца</string>
+    <string name="market_listing_detail_seller_reviews_heading">Отзывы о продавце</string>
+    <string name="market_account_stripe_open_failed">Не удалось открыть Stripe</string>
 </resources>

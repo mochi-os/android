@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">പേയ്മെന്റുകൾ</string>
     <string name="market_sidebar_become_seller">ഒരു വിൽപ്പനക്കാരനാകുക</string>
     <string name="market_sidebar_seller_settings">വിൽപ്പനക്കാരൻ ക്രമീകരണങ്ങൾ</string>
+    <string name="market_listing_detail_seller_response">വിൽപ്പനക്കാരന്റെ പ്രതികരണം</string>
+    <string name="market_listing_detail_seller_reviews_heading">വിൽപ്പനക്കാരന്റെ അഭിപ്രായങ്ങൾ</string>
+    <string name="market_account_stripe_open_failed">Stripe തുറക്കാൻ കഴിഞ്ഞില്ല</string>
 </resources>

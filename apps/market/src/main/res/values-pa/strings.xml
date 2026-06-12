@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ਭੁਗਤਾਨ</string>
     <string name="market_sidebar_become_seller">ਵਿਕਰੇਤਾ ਬਣੋ</string>
     <string name="market_sidebar_seller_settings">ਵਿਕਰੇਤਾ ਸੈਟਿੰਗਾਂ</string>
+    <string name="market_listing_detail_seller_response">ਵੇਚਣ ਵਾਲੇ ਦਾ ਜਵਾਬ</string>
+    <string name="market_listing_detail_seller_reviews_heading">ਵਿਕਰੇਤਾ ਦੀਆਂ ਸਮੀਖਿਆਵਾਂ</string>
+    <string name="market_account_stripe_open_failed">Stripe ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕਿਆ</string>
 </resources>

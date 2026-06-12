@@ -729,4 +729,6 @@
     <string name="market_seller_summary_payments">Betalinger</string>
     <string name="market_sidebar_become_seller">Bli selger</string>
     <string name="market_sidebar_seller_settings">Selgerinnstillinger</string>
+    <string name="market_listing_detail_seller_response">Seljarsvar</string>
+    <string name="market_account_stripe_open_failed">Kunne ikkje opna Stripe</string>
 </resources>

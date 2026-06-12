@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">支払い</string>
     <string name="market_sidebar_become_seller">出品者になる</string>
     <string name="market_sidebar_seller_settings">販売者設定</string>
+    <string name="market_listing_detail_seller_response">販売者の返答</string>
+    <string name="market_listing_detail_seller_reviews_heading">出品者へのレビュー</string>
+    <string name="market_account_stripe_open_failed">Stripe を開けませんでした</string>
 </resources>

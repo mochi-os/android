@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Pagesat</string>
     <string name="market_sidebar_become_seller">Bëhu shitës</string>
     <string name="market_sidebar_seller_settings">Cilësimet e shitësit</string>
+    <string name="market_listing_detail_seller_response">Përgjigjja e shitësit</string>
+    <string name="market_listing_detail_seller_reviews_heading">Vlerësimet e shitësit</string>
+    <string name="market_account_stripe_open_failed">Stripe nuk u hap dot</string>
 </resources>

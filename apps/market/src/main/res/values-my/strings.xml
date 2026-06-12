@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ငွေပေးချေမှုများ</string>
     <string name="market_sidebar_become_seller">ရောင်းသူ ဖြစ်လာပါ</string>
     <string name="market_sidebar_seller_settings">ရောင်းသူ ဆက်တင်များ</string>
+    <string name="market_listing_detail_seller_response">ရောင်းသူ၏ တုံ့ပြန်ချက်</string>
+    <string name="market_listing_detail_seller_reviews_heading">ရောင်းသူ၏ သုံးသပ်ချက်များ</string>
+    <string name="market_account_stripe_open_failed">Stripe ကို ဖွင့်၍ မရပါ</string>
 </resources>

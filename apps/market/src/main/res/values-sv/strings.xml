@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Betalningar</string>
     <string name="market_sidebar_become_seller">Bli säljare</string>
     <string name="market_sidebar_seller_settings">Säljarinställningar</string>
+    <string name="market_listing_detail_seller_response">Säljarens svar</string>
+    <string name="market_listing_detail_seller_reviews_heading">Säljaromdömen</string>
+    <string name="market_account_stripe_open_failed">Kunde inte öppna Stripe</string>
 </resources>

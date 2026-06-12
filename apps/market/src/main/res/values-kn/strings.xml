@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ಪಾವತಿಗಳು</string>
     <string name="market_sidebar_become_seller">ಮಾರಾಟಗಾರರಾಗಿ</string>
     <string name="market_sidebar_seller_settings">ಮಾರಾಟಗಾರ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="market_listing_detail_seller_response">ಮಾರಾಟಗಾರ ಪ್ರತಿಕ್ರಿಯೆ</string>
+    <string name="market_listing_detail_seller_reviews_heading">ಮಾರಾಟಗಾರರ ವಿಮರ್ಶೆಗಳು</string>
+    <string name="market_account_stripe_open_failed">Stripe ಅನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
 </resources>

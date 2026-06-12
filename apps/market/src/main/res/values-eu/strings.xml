@@ -726,4 +726,7 @@
     <string name="market_seller_summary_payments">Ordainketak</string>
     <string name="market_sidebar_become_seller">Bihurtu saltzaile</string>
     <string name="market_sidebar_seller_settings">Saltzailearen ezarpenak</string>
+    <string name="market_listing_detail_seller_response">Saltzailearen erantzuna</string>
+    <string name="market_listing_detail_seller_reviews_heading">Saltzailearen iritziak</string>
+    <string name="market_account_stripe_open_failed">Ezin izan da Stripe ireki</string>
 </resources>

@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Pagaments</string>
     <string name="market_sidebar_become_seller">Fes-te venedor</string>
     <string name="market_sidebar_seller_settings">Configuració de venedor</string>
+    <string name="market_listing_detail_seller_response">Resposta del venedor</string>
+    <string name="market_listing_detail_seller_reviews_heading">Ressenyes del venedor</string>
+    <string name="market_account_stripe_open_failed">No s\'ha pogut obrir Stripe</string>
 </resources>

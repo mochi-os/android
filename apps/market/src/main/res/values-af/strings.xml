@@ -726,4 +726,7 @@
     <string name="market_seller_summary_payments">Betalings</string>
     <string name="market_sidebar_become_seller">Word \'n verkoper</string>
     <string name="market_sidebar_seller_settings">Verkopersinstellings</string>
+    <string name="market_listing_detail_seller_response">Verkoper se reaksie</string>
+    <string name="market_listing_detail_seller_reviews_heading">Verkoperresensies</string>
+    <string name="market_account_stripe_open_failed">Kon nie Stripe oopmaak nie</string>
 </resources>

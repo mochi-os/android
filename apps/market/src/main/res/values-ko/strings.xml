@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">결제</string>
     <string name="market_sidebar_become_seller">판매자 되기</string>
     <string name="market_sidebar_seller_settings">판매자 설정</string>
+    <string name="market_listing_detail_seller_response">판매자 응답</string>
+    <string name="market_listing_detail_seller_reviews_heading">판매자 리뷰</string>
+    <string name="market_account_stripe_open_failed">Stripe를 열 수 없습니다</string>
 </resources>

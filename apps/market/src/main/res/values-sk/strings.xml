@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Platby</string>
     <string name="market_sidebar_become_seller">Staňte sa predajcom</string>
     <string name="market_sidebar_seller_settings">Nastavenia predajcu</string>
+    <string name="market_listing_detail_seller_response">Odpoveď predajcu</string>
+    <string name="market_listing_detail_seller_reviews_heading">Recenzie predajcu</string>
+    <string name="market_account_stripe_open_failed">Stripe sa nepodarilo otvoriť</string>
 </resources>

@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Phuqhayañanaka</string>
     <string name="market_sidebar_become_seller">Aljiri tukuña</string>
     <string name="market_sidebar_seller_settings">Aljiri wakichäwinaka</string>
+    <string name="market_listing_detail_seller_response">Aljiri kutsu</string>
+    <string name="market_listing_detail_seller_reviews_heading">Alxiriña uñt\'ayawipa</string>
+    <string name="market_account_stripe_open_failed">Janiw Stripe jist\'arañjamäkiti</string>
 </resources>

@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Jehepyme\'ẽ</string>
     <string name="market_sidebar_become_seller">Eikóta ñemuhára</string>
     <string name="market_sidebar_seller_settings">Ñemuhára ñembokuatia</string>
+    <string name="market_listing_detail_seller_response">Hepyme\'ẽha ñembohovái</string>
+    <string name="market_listing_detail_seller_reviews_heading">Jehechakuaa vendedor rehegua</string>
+    <string name="market_account_stripe_open_failed">Ndaikatúi oñembojuruja Stripe</string>
 </resources>

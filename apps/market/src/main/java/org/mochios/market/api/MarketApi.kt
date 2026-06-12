@@ -335,7 +335,7 @@ interface MarketApi {
     @FormUrlEncoded
     @POST("-/saved/add")
     suspend fun addSaved(
-        @Field("listing") listing: String,
+        @Field("listing") listing: String, // contract-ok: read via _saved_listing_id(a) helper
         @Field("data") data: String,
     ): Response<ApiResponse<SavedToggleResponse>>
 
@@ -343,7 +343,7 @@ interface MarketApi {
     @FormUrlEncoded
     @POST("-/saved/remove")
     suspend fun removeSaved(
-        @Field("listing") listing: String,
+        @Field("listing") listing: String, // contract-ok: read via _saved_listing_id(a) helper
     ): Response<ApiResponse<SavedToggleResponse>>
 
 

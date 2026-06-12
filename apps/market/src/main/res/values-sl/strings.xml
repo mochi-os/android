@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Plačila</string>
     <string name="market_sidebar_become_seller">Postanite prodajalec</string>
     <string name="market_sidebar_seller_settings">Nastavitve prodajalca</string>
+    <string name="market_listing_detail_seller_response">Odgovor prodajalca</string>
+    <string name="market_listing_detail_seller_reviews_heading">Ocene prodajalca</string>
+    <string name="market_account_stripe_open_failed">Stripe ni bilo mogoče odpreti</string>
 </resources>

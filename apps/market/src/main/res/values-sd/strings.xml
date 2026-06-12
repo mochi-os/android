@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ادائيگيون</string>
     <string name="market_sidebar_become_seller">وڪرو ڪندڙ ٿيو</string>
     <string name="market_sidebar_seller_settings">وڪرو ڪندڙ جون سيٽنگون</string>
+    <string name="market_listing_detail_seller_response">وڪرو ڪندڙ جو جواب</string>
+    <string name="market_listing_detail_seller_reviews_heading">وڪرو ڪندڙ جا جائزا</string>
+    <string name="market_account_stripe_open_failed">Stripe کولي نه سگھيو</string>
 </resources>

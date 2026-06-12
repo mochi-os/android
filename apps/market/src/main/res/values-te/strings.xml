@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">చెల్లింపులు</string>
     <string name="market_sidebar_become_seller">విక్రేత కండి</string>
     <string name="market_sidebar_seller_settings">విక్రేత సెట్టింగ్‌లు</string>
+    <string name="market_listing_detail_seller_response">విక్రేత ప్రతిస్పందన</string>
+    <string name="market_listing_detail_seller_reviews_heading">విక్రేత సమీక్షలు</string>
+    <string name="market_account_stripe_open_failed">Stripeను తెరవడం సాధ్యం కాలేదు</string>
 </resources>

@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">באַצאָלונגען</string>
     <string name="market_sidebar_become_seller">ווערן אַ פֿאַרקויפֿער</string>
     <string name="market_sidebar_seller_settings">פֿאַרקויפֿער איינשטעלונגען</string>
+    <string name="market_listing_detail_seller_response">פֿאַרקויפֿער־ענטפֿער</string>
+    <string name="market_listing_detail_seller_reviews_heading">פאַרקויפערס באַמערקונגען</string>
+    <string name="market_account_stripe_open_failed">ניט געלונגען צו עפֿענען Stripe</string>
 </resources>

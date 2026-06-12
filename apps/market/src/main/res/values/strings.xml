@@ -16,6 +16,7 @@
     <string name="market_account_save_failed">Could not save changes</string>
     <string name="market_account_saved">Changes saved</string>
     <string name="market_account_seller_check_status">Check status</string>
+    <string name="market_account_stripe_open_failed">Could not open Stripe</string>
     <string name="market_account_seller_connect">Connect Stripe</string>
     <string name="market_account_seller_fees_heading">Fees:</string>
     <string name="market_account_seller_fees_mochi">Mochi takes %1$s%% of each sale.</string>

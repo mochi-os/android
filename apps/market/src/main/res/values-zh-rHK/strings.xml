@@ -726,4 +726,5 @@
     <string name="market_seller_summary_payments">付款</string>
     <string name="market_sidebar_become_seller">成為賣家</string>
     <string name="market_sidebar_seller_settings">賣家設定</string>
+    <string name="market_account_stripe_open_failed">無法開啟 Stripe</string>
 </resources>

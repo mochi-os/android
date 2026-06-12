@@ -729,4 +729,7 @@
     <string name="market_seller_summary_payments">পেমেন্ট</string>
     <string name="market_sidebar_become_seller">বিক্রেতা হন</string>
     <string name="market_sidebar_seller_settings">বিক্রেতা সেটিংস</string>
+    <string name="market_listing_detail_seller_response">বিক্রেতার জবাব</string>
+    <string name="market_listing_detail_seller_reviews_heading">বিক্রেতার পর্যালোচনা</string>
+    <string name="market_account_stripe_open_failed">Stripe খোলা যায়নি</string>
 </resources>

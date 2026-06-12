@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ການຊຳລະເງິນ</string>
     <string name="market_sidebar_become_seller">ກາຍເປັນຜູ້ຂາຍ</string>
     <string name="market_sidebar_seller_settings">ການຕັ້ງຄ່າຜູ້ຂາຍ</string>
+    <string name="market_listing_detail_seller_response">ການຕອບກັບຂອງຜູ້ຂາຍ</string>
+    <string name="market_listing_detail_seller_reviews_heading">ການທົບທວນຜູ້ຂາຍ</string>
+    <string name="market_account_stripe_open_failed">ບໍ່ສາມາດເປີດ Stripe ໄດ້</string>
 </resources>

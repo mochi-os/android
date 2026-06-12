@@ -726,4 +726,7 @@
     <string name="market_seller_summary_payments">Төлемдер</string>
     <string name="market_sidebar_become_seller">Сатушы болу</string>
     <string name="market_sidebar_seller_settings">Сатушы параметрлері</string>
+    <string name="market_listing_detail_seller_response">Сатушы жауабы</string>
+    <string name="market_listing_detail_seller_reviews_heading">Сатушы туралы пікірлер</string>
+    <string name="market_account_stripe_open_failed">Stripe ашу мүмкін болмады</string>
 </resources>

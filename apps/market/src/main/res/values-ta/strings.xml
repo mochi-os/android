@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">கட்டணங்கள்</string>
     <string name="market_sidebar_become_seller">விற்பனையாளராகுங்கள்</string>
     <string name="market_sidebar_seller_settings">விற்பனையாளர் அமைப்புகள்</string>
+    <string name="market_listing_detail_seller_response">விற்பனையாளர் பதில்</string>
+    <string name="market_listing_detail_seller_reviews_heading">விற்பனையாளர் மதிப்புரைகள்</string>
+    <string name="market_account_stripe_open_failed">Stripe ஐ திறக்க முடியவில்லை</string>
 </resources>

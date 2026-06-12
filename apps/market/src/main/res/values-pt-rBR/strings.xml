@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Pagamentos</string>
     <string name="market_sidebar_become_seller">Torne-se vendedor</string>
     <string name="market_sidebar_seller_settings">Configurações de vendedor</string>
+    <string name="market_listing_detail_seller_response">Resposta do vendedor</string>
+    <string name="market_listing_detail_seller_reviews_heading">Avaliações do vendedor</string>
+    <string name="market_account_stripe_open_failed">Não foi possível abrir a Stripe</string>
 </resources>

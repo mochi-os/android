@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.PlaceData
+import org.mochios.market.R
 import org.mochios.market.lib.ParsedLocation
 import org.mochios.market.lib.parseLocation
 import org.mochios.market.model.Account
@@ -212,7 +213,7 @@ class AccountSettingsViewModel @Inject constructor(
                     onUrl(resp.url)
                 } else {
                     _events.send(
-                        AccountSettingsEvent.Error(MochiError.Unknown("Could not open Stripe")),
+                        AccountSettingsEvent.Error(MochiError.Local(R.string.market_account_stripe_open_failed)),
                     )
                 }
             } catch (e: Exception) {

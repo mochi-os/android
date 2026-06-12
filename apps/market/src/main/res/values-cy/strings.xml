@@ -726,4 +726,7 @@
     <string name="market_seller_summary_payments">Taliadau</string>
     <string name="market_sidebar_become_seller">Dod yn werthwr</string>
     <string name="market_sidebar_seller_settings">Gosodiadau gwerthwr</string>
+    <string name="market_listing_detail_seller_response">Ymateb y gwerthwr</string>
+    <string name="market_listing_detail_seller_reviews_heading">Adolygiadau gwerthwr</string>
+    <string name="market_account_stripe_open_failed">Methwyd agor Stripe</string>
 </resources>

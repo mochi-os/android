@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Àwọn ìsanwó</string>
     <string name="market_sidebar_become_seller">Di olùtà</string>
     <string name="market_sidebar_seller_settings">Àwọn ètò olùtà</string>
+    <string name="market_listing_detail_seller_response">Ìdáhùn olùtà</string>
+    <string name="market_listing_detail_seller_reviews_heading">Awọn atunyẹwo olutaja</string>
+    <string name="market_account_stripe_open_failed">Kò lè ṣí Stripe</string>
 </resources>

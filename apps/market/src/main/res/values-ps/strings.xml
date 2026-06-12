@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">تادیې</string>
     <string name="market_sidebar_become_seller">پلورونکی شئ</string>
     <string name="market_sidebar_seller_settings">د پلورونکي تنظیمات</string>
+    <string name="market_listing_detail_seller_response">د خرڅوونکي ځواب</string>
+    <string name="market_listing_detail_seller_reviews_heading">د پلورونکي بیاکتنې</string>
+    <string name="market_account_stripe_open_failed">Stripe نشي خلاصېدای</string>
 </resources>

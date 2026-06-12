@@ -726,4 +726,7 @@
     <string name="market_seller_summary_payments">ክፍያዎች</string>
     <string name="market_sidebar_become_seller">ሻጭ ይሁኑ</string>
     <string name="market_sidebar_seller_settings">የሻጭ ቅንብሮች</string>
+    <string name="market_listing_detail_seller_response">የሻጭ ምላሽ</string>
+    <string name="market_listing_detail_seller_reviews_heading">የሻጭ ግምገማዎች</string>
+    <string name="market_account_stripe_open_failed">Stripeን መክፈት አልተቻለም</string>
 </resources>

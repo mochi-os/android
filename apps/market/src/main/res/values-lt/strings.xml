@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Mokėjimai</string>
     <string name="market_sidebar_become_seller">Tapti pardavėju</string>
     <string name="market_sidebar_seller_settings">Pardavėjo nustatymai</string>
+    <string name="market_listing_detail_seller_response">Pardavėjo atsakymas</string>
+    <string name="market_listing_detail_seller_reviews_heading">Pardavėjo atsiliepimai</string>
+    <string name="market_account_stripe_open_failed">Nepavyko atidaryti Stripe</string>
 </resources>

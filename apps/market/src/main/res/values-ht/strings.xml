@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Peman yo</string>
     <string name="market_sidebar_become_seller">Vin yon vandè</string>
     <string name="market_sidebar_seller_settings">Paramèt vandè</string>
+    <string name="market_listing_detail_seller_response">Repons vandè</string>
+    <string name="market_listing_detail_seller_reviews_heading">Evalyasyon vandè a</string>
+    <string name="market_account_stripe_open_failed">Pa t kapab ouvri Stripe</string>
 </resources>

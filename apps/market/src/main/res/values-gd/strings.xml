@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">Pàighidhean</string>
     <string name="market_sidebar_become_seller">Bi nad reiceadair</string>
     <string name="market_sidebar_seller_settings">Roghainnean reiceadair</string>
+    <string name="market_listing_detail_seller_response">Freagairt an reiceadair</string>
+    <string name="market_listing_detail_seller_reviews_heading">Beachdan air an reiceadair</string>
+    <string name="market_account_stripe_open_failed">Cha b\' urrainnear Stripe fhosgladh</string>
 </resources>

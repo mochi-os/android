@@ -727,4 +727,7 @@
     <string name="market_seller_summary_payments">ការទូទាត់</string>
     <string name="market_sidebar_become_seller">ក្លាយជាអ្នកលក់</string>
     <string name="market_sidebar_seller_settings">ការកំណត់អ្នកលក់</string>
+    <string name="market_listing_detail_seller_response">ការឆ្លើយតបពីអ្នកលក់</string>
+    <string name="market_listing_detail_seller_reviews_heading">មតិយោបល់អំពីអ្នកលក់</string>
+    <string name="market_account_stripe_open_failed">មិនអាចបើក Stripe បានទេ</string>
 </resources>
