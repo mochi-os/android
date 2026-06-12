@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Multi-factor အထောက်အထားစိစစ်ခြင်း</string>
     <string name="auth_mfa_subtitle">ကျန်ရှိနေသောအတည်ပြုခြင်းအဆင့်များကိုဖြည့်စွက်ပါ</string>
     <string name="auth_recover_account">အကောင့်ပြန်လည်ရယူပါ</string>
+    <string name="auth_login_title">Mochi သို့ဝင်ရောက်ပါ</string>
+    <string name="auth_next">နောက်တစ်ခု</string>
+    <string name="auth_or_log_in_with">သို့မဟုတ် ဤနည်းဖြင့်ဝင်ရောက်ပါ</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">passkey ကိုသုံးပါ</string>
+    <string name="auth_email_me_a_code">ကျွန်ုပ်ထံ ကုဒ်တစ်ခုကို အီးမေးလ်ပို့ပါ</string>
+    <string name="auth_or_enter_authenticator_code">သို့မဟုတ် authenticator ကုဒ်ကိုထည့်ပါ</string>
+    <string name="auth_log_in">ဝင်ရောက်ပါ</string>
+    <string name="auth_back">နောက်သို့</string>
+    <string name="auth_lost_access_recovery">ဝင်ရောက်ခွင့်ဆုံးရှုံးသွားပါသလား။ ပြန်လည်ရယူရေးကုဒ်ကိုသုံးပါ</string>
     <string name="auth_create_identity_title">သင်၏အထောက်အထားကိုဖန်တီးပါ</string>
     <string name="auth_create_identity_subtitle">ဤဆာဗာတွင်သင်၏အထောက်အထားအတွက်အမည်ကိုရွေးချယ်ပါ</string>
     <string name="auth_privacy_public_description">အခြားသူများရှာဖွေတွေ့ရှိနိုင်ရန် အသုံးပြုသူလမ်းညွှန်တွင်ဖော်ပြထားသည်။</string>

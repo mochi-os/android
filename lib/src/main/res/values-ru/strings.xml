@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Многофакторная аутентификация</string>
     <string name="auth_mfa_subtitle">Завершите оставшиеся шаги проверки</string>
     <string name="auth_recover_account">Восстановить аккаунт</string>
+    <string name="auth_login_title">Войти в Mochi</string>
+    <string name="auth_next">Далее</string>
+    <string name="auth_or_log_in_with">Или войти через</string>
+    <string name="auth_passkey">Ключ доступа</string>
+    <string name="auth_use_passkey">Использовать ключ доступа</string>
+    <string name="auth_email_me_a_code">Отправить код по электронной почте</string>
+    <string name="auth_or_enter_authenticator_code">Или введите код аутентификатора</string>
+    <string name="auth_log_in">Войти</string>
+    <string name="auth_back">Назад</string>
+    <string name="auth_lost_access_recovery">Потеряли доступ? Используйте код восстановления</string>
     <string name="auth_create_identity_title">Создайте свою личность</string>
     <string name="auth_create_identity_subtitle">Выберите имя для вашей личности на этом сервере</string>
     <string name="auth_privacy_public_description">Отображается в каталоге пользователей, чтобы другие могли вас найти.</string>

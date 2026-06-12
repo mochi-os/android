@@ -167,6 +167,16 @@
     <string name="auth_mfa_title">Dearbhadh ioma-fhactarach</string>
     <string name="auth_mfa_subtitle">Coilean na ceuman dearbhaidh a tha air fhàgail</string>
     <string name="auth_recover_account">Faigh air ais an cunntas</string>
+    <string name="auth_login_title">Clàraich a-steach gu Mochi</string>
+    <string name="auth_next">Air adhart</string>
+    <string name="auth_or_log_in_with">No clàraich a-steach le</string>
+    <string name="auth_passkey">Pasgair</string>
+    <string name="auth_use_passkey">Cleachd pasgair</string>
+    <string name="auth_email_me_a_code">Cuir còd thugam air post-d</string>
+    <string name="auth_or_enter_authenticator_code">No cuir a-steach còd dearbhaiche</string>
+    <string name="auth_log_in">Clàraich a-steach</string>
+    <string name="auth_back">Air ais</string>
+    <string name="auth_lost_access_recovery">Air call inntrigidh? Cleachd còd ath-shlànachaidh</string>
     <string name="auth_create_identity_subtitle">Tagh ainm airson d\' aithne air an fhrithealaiche seo</string>
     <string name="auth_privacy_public_description">Air a liostadh ann an eòlaire nan cleachdaichean gus an lorg càch thu.</string>
     <string name="auth_privacy_private_description">Falaichte o eòlaire nan cleachdaichean.</string>

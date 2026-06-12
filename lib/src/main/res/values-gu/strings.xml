@@ -165,6 +165,16 @@
     <string name="auth_mfa_title">બહુ-પરિબળ પ્રમાણીકરણ</string>
     <string name="auth_mfa_subtitle">બાકી રહેલા વેરિફિકેશન પગલાં પૂરા કરો</string>
     <string name="auth_recover_account">ખાતું પુનઃપ્રાપ્ત કરો</string>
+    <string name="auth_login_title">Mochi માં લોગ ઇન કરો</string>
+    <string name="auth_next">આગળ</string>
+    <string name="auth_or_log_in_with">અથવા આની સાથે લોગ ઇન કરો</string>
+    <string name="auth_passkey">પાસકી</string>
+    <string name="auth_use_passkey">પાસકીનો ઉપયોગ કરો</string>
+    <string name="auth_email_me_a_code">મને ઇમેઇલ પર કોડ મોકલો</string>
+    <string name="auth_or_enter_authenticator_code">અથવા ઓથેન્ટિકેટર કોડ દાખલ કરો</string>
+    <string name="auth_log_in">લોગ ઇન કરો</string>
+    <string name="auth_back">પાછળ</string>
+    <string name="auth_lost_access_recovery">ઍક્સેસ ગુમાવી? રિકવરી કોડનો ઉપયોગ કરો</string>
     <string name="auth_create_identity_subtitle">આ સર્વર પર તમારી ઓળખ માટે એક નામ પસંદ કરો</string>
     <string name="auth_privacy_public_description">વપરાશકર્તા ડિરેક્ટરીમાં સૂચિબદ્ધ છે જેથી અન્ય તમને શોધી શકે.</string>
     <string name="auth_privacy_private_description">વપરાશકર્તા ડિરેક્ટરીમાંથી છુપાવેલ.</string>

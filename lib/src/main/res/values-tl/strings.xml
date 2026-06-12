@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Multi-factor authentication</string>
     <string name="auth_mfa_subtitle">Kumpletuhin ang natitirang mga hakbang sa pagpapatunay</string>
     <string name="auth_recover_account">Bawiin ang account</string>
+    <string name="auth_login_title">Mag-log in sa Mochi</string>
+    <string name="auth_next">Susunod</string>
+    <string name="auth_or_log_in_with">O mag-log in gamit ang</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Gumamit ng passkey</string>
+    <string name="auth_email_me_a_code">I-email sa akin ang isang code</string>
+    <string name="auth_or_enter_authenticator_code">O ilagay ang authenticator code</string>
+    <string name="auth_log_in">Mag-log in</string>
+    <string name="auth_back">Bumalik</string>
+    <string name="auth_lost_access_recovery">Nawalan ng access? Gumamit ng recovery code</string>
     <string name="auth_create_identity_title">Gumawa ng iyong identity</string>
     <string name="auth_create_identity_subtitle">Pumili ng pangalan para sa iyong identity sa server na ito</string>
     <string name="auth_privacy_public_description">Nakalista sa user directory para makita ka ng iba.</string>

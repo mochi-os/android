@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">მრავალფაქტორიანი ავთენტიფიკაცია</string>
     <string name="auth_mfa_subtitle">დაასრულეთ დადასტურების დარჩენილი ნაბიჯები</string>
     <string name="auth_recover_account">ანგარიშის აღდგენა</string>
+    <string name="auth_login_title">შედით Mochi-ში</string>
+    <string name="auth_next">შემდეგი</string>
+    <string name="auth_or_log_in_with">ან შედით</string>
+    <string name="auth_passkey">გასაღები</string>
+    <string name="auth_use_passkey">გამოიყენეთ გასაღები</string>
+    <string name="auth_email_me_a_code">გამომიგზავნეთ კოდი ელფოსტით</string>
+    <string name="auth_or_enter_authenticator_code">ან შეიყვანეთ ავთენტიფიკატორის კოდი</string>
+    <string name="auth_log_in">შესვლა</string>
+    <string name="auth_back">უკან</string>
+    <string name="auth_lost_access_recovery">დაკარგეთ წვდომა? გამოიყენეთ აღდგენის კოდი</string>
     <string name="auth_create_identity_title">შექმენით თქვენი ვინაობა</string>
     <string name="auth_create_identity_subtitle">აირჩიეთ სახელი თქვენი ვინაობისთვის ამ სერვერზე</string>
     <string name="auth_privacy_public_description">მონაცემები მომხმარებელთა კატალოგში, რათა სხვებმა გნახონ.</string>

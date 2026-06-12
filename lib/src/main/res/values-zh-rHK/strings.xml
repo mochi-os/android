@@ -98,6 +98,16 @@
     <string name="auth_authenticator_code">驗證器代碼</string>
     <string name="auth_recovery_code">復原碼</string>
     <string name="auth_recover_account">復原帳戶</string>
+    <string name="auth_login_title">登入 Mochi</string>
+    <string name="auth_next">下一步</string>
+    <string name="auth_or_log_in_with">或使用以下方式登入</string>
+    <string name="auth_passkey">通行密鑰</string>
+    <string name="auth_use_passkey">使用通行密鑰</string>
+    <string name="auth_email_me_a_code">以電郵傳送驗證碼給我</string>
+    <string name="auth_or_enter_authenticator_code">或輸入驗證器代碼</string>
+    <string name="auth_log_in">登入</string>
+    <string name="auth_back">返回</string>
+    <string name="auth_lost_access_recovery">無法存取？使用復原碼</string>
     <string name="auth_create_identity_title">建立您的身份</string>
     <string name="auth_create_identity_subtitle">為您在此伺服器上的身份選擇一個名稱</string>
     <string name="auth_privacy_public_description">列於使用者目錄中，方便他人尋找您。</string>

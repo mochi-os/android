@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">बहु-घटक प्रमाणीकरण</string>
     <string name="auth_mfa_subtitle">उर्वरित व्हेरिफिकेशन पायऱ्या पूर्ण करा</string>
     <string name="auth_recover_account">खाते रिकव्हर करा</string>
+    <string name="auth_login_title">Mochi मध्ये लॉग इन करा</string>
+    <string name="auth_next">पुढे</string>
+    <string name="auth_or_log_in_with">किंवा यासह लॉग इन करा</string>
+    <string name="auth_passkey">पासकी</string>
+    <string name="auth_use_passkey">पासकी वापरा</string>
+    <string name="auth_email_me_a_code">मला कोड ईमेल करा</string>
+    <string name="auth_or_enter_authenticator_code">किंवा प्रमाणीकरण कोड प्रविष्ट करा</string>
+    <string name="auth_log_in">लॉग इन करा</string>
+    <string name="auth_back">मागे</string>
+    <string name="auth_lost_access_recovery">प्रवेश गमावला? रिकव्हरी कोड वापरा</string>
     <string name="auth_create_identity_title">तुमची ओळख तयार करा</string>
     <string name="auth_create_identity_subtitle">या सर्व्हरवर तुमच्या ओळखीसाठी नाव निवडा</string>
     <string name="auth_privacy_public_description">वापरकर्ता निर्देशिकेत सूचीबद्ध, जेणेकरून इतर तुम्हाला शोधू शकतील.</string>

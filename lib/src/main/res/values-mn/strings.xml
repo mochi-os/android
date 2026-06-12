@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Олон хүчин зүйлийн баталгаажуулалт</string>
     <string name="auth_mfa_subtitle">Үлдсэн баталгаажуулах алхмуудыг гүйцээнэ үү</string>
     <string name="auth_recover_account">Бүртгэлээ сэргээх</string>
+    <string name="auth_login_title">Mochi-д нэвтрэх</string>
+    <string name="auth_next">Дараах</string>
+    <string name="auth_or_log_in_with">Эсвэл дараахаар нэвтрэх</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Нэвтрэх түлхүүр ашиглах</string>
+    <string name="auth_email_me_a_code">Надад код имэйлээр илгээх</string>
+    <string name="auth_or_enter_authenticator_code">Эсвэл Authenticator код оруулах</string>
+    <string name="auth_log_in">Нэвтрэх</string>
+    <string name="auth_back">Буцах</string>
+    <string name="auth_lost_access_recovery">Хандалтаа алдсан уу? Сэргээх кодыг ашиглана уу</string>
     <string name="auth_create_identity_title">Хувийн мэдээллээ үүсгэх</string>
     <string name="auth_create_identity_subtitle">Энэ серверт ашиглах нэрээ сонгоно уу</string>
     <string name="auth_privacy_public_description">Хэрэглэгчийн жагсаалтад харагдах тул бусад хүмүүс таныг олох боломжтой.</string>

@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">다단계 인증</string>
     <string name="auth_mfa_subtitle">남은 인증 단계를 완료하세요</string>
     <string name="auth_recover_account">계정 복구</string>
+    <string name="auth_login_title">Mochi에 로그인</string>
+    <string name="auth_next">다음</string>
+    <string name="auth_or_log_in_with">또는 다음으로 로그인</string>
+    <string name="auth_passkey">패스키</string>
+    <string name="auth_use_passkey">패스키 사용</string>
+    <string name="auth_email_me_a_code">코드를 이메일로 보내기</string>
+    <string name="auth_or_enter_authenticator_code">또는 인증 앱 코드 입력</string>
+    <string name="auth_log_in">로그인</string>
+    <string name="auth_back">뒤로</string>
+    <string name="auth_lost_access_recovery">액세스할 수 없나요? 복구 코드 사용</string>
     <string name="auth_create_identity_title">신원 만들기</string>
     <string name="auth_create_identity_subtitle">이 서버에서 사용할 신원의 이름을 선택하세요</string>
     <string name="auth_privacy_public_description">사용자 디렉터리에 표시되어 다른 사용자가 찾을 수 있습니다.</string>

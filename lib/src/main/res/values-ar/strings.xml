@@ -159,6 +159,16 @@
     <string name="auth_mfa_title">المصادقة متعددة العوامل</string>
     <string name="auth_mfa_subtitle">أكمل خطوات التحقق المتبقية</string>
     <string name="auth_recover_account">استرداد الحساب</string>
+    <string name="auth_login_title">تسجيل الدخول إلى Mochi</string>
+    <string name="auth_next">التالي</string>
+    <string name="auth_or_log_in_with">أو سجّل الدخول باستخدام</string>
+    <string name="auth_passkey">مفتاح المرور</string>
+    <string name="auth_use_passkey">استخدم مفتاح مرور</string>
+    <string name="auth_email_me_a_code">أرسل لي رمزًا عبر البريد الإلكتروني</string>
+    <string name="auth_or_enter_authenticator_code">أو أدخل رمز المصادقة</string>
+    <string name="auth_log_in">تسجيل الدخول</string>
+    <string name="auth_back">رجوع</string>
+    <string name="auth_lost_access_recovery">فقدت الوصول؟ استخدم رمز الاسترداد</string>
     <string name="auth_create_identity_title">أنشئ هويتك</string>
     <string name="auth_create_identity_subtitle">اختر اسمًا لهويتك على هذا الخادم</string>
     <string name="auth_privacy_public_description">مدرج في دليل المستخدمين حتى يتمكن الآخرون من العثور عليك.</string>

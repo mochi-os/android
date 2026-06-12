@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Ko\'p faktorli autentifikatsiya</string>
     <string name="auth_mfa_subtitle">Qolgan tasdiqlash bosqichlarini bajaring</string>
     <string name="auth_recover_account">Hisobni tiklash</string>
+    <string name="auth_login_title">Mochi\'ga kiring</string>
+    <string name="auth_next">Keyingi</string>
+    <string name="auth_or_log_in_with">Yoki quyidagi bilan kiring</string>
+    <string name="auth_passkey">Kirish kaliti</string>
+    <string name="auth_use_passkey">Kirish kalitidan foydalaning</string>
+    <string name="auth_email_me_a_code">Menga elektron pochta orqali kod yuboring</string>
+    <string name="auth_or_enter_authenticator_code">Yoki Autentifikator kodini kiriting</string>
+    <string name="auth_log_in">Kirish</string>
+    <string name="auth_back">Orqaga</string>
+    <string name="auth_lost_access_recovery">Kirish imkonini yo\'qotdingizmi? Tiklash kodidan foydalaning</string>
     <string name="auth_create_identity_title">Shaxsingizni yarating</string>
     <string name="auth_create_identity_subtitle">Ushbu serverdagi shaxsingiz uchun ism tanlang</string>
     <string name="auth_privacy_public_description">Foydalanuvchilar katalogida ko\'rsatiladi, shunda boshqalar sizni topa oladi.</string>

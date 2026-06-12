@@ -165,6 +165,16 @@
     <string name="auth_mfa_title">Tabbatarwa mai matakai da yawa</string>
     <string name="auth_mfa_subtitle">Kammala sauran matakan tabbatarwa</string>
     <string name="auth_recover_account">Dawo da asusu</string>
+    <string name="auth_login_title">Shiga cikin Mochi</string>
+    <string name="auth_next">Na gaba</string>
+    <string name="auth_or_log_in_with">Ko shiga da</string>
+    <string name="auth_passkey">Maɓallin shiga</string>
+    <string name="auth_use_passkey">Yi amfani da maɓallin shiga</string>
+    <string name="auth_email_me_a_code">Aiko mini lambar ta imel</string>
+    <string name="auth_or_enter_authenticator_code">Ko shigar da lambar tantancewa</string>
+    <string name="auth_log_in">Shiga</string>
+    <string name="auth_back">Komawa</string>
+    <string name="auth_lost_access_recovery">An rasa damar shiga? Yi amfani da lambar dawowa</string>
     <string name="auth_create_identity_subtitle">Zaɓi suna don asalin ka a wannan sabar</string>
     <string name="auth_privacy_public_description">An jera shi a cikin jagorar masu amfani don wasu su iya samun ka.</string>
     <string name="auth_privacy_private_description">An ɓoye daga jagorar masu amfani.</string>

@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Multifactorauthenticatie</string>
     <string name="auth_mfa_subtitle">Voltooi de resterende verificatiestappen</string>
     <string name="auth_recover_account">Account herstellen</string>
+    <string name="auth_login_title">Aanmelden bij Mochi</string>
+    <string name="auth_next">Volgende</string>
+    <string name="auth_or_log_in_with">Of aanmelden met</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Een passkey gebruiken</string>
+    <string name="auth_email_me_a_code">Stuur me een code per e-mail</string>
+    <string name="auth_or_enter_authenticator_code">Of voer een authenticatorcode in</string>
+    <string name="auth_log_in">Aanmelden</string>
+    <string name="auth_back">Terug</string>
+    <string name="auth_lost_access_recovery">Geen toegang meer? Gebruik een herstelcode</string>
     <string name="auth_create_identity_title">Maak je identiteit aan</string>
     <string name="auth_create_identity_subtitle">Kies een naam voor je identiteit op deze server</string>
     <string name="auth_privacy_public_description">Vermeld in de gebruikersgids zodat anderen je kunnen vinden.</string>

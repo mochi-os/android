@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Autentikasi multi-faktor</string>
     <string name="auth_mfa_subtitle">Selesaikan langkah verifikasi yang tersisa</string>
     <string name="auth_recover_account">Pulihkan akun</string>
+    <string name="auth_login_title">Masuk ke Mochi</string>
+    <string name="auth_next">Berikutnya</string>
+    <string name="auth_or_log_in_with">Atau masuk dengan</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Gunakan passkey</string>
+    <string name="auth_email_me_a_code">Kirimi saya kode lewat email</string>
+    <string name="auth_or_enter_authenticator_code">Atau masukkan kode autentikator</string>
+    <string name="auth_log_in">Masuk</string>
+    <string name="auth_back">Kembali</string>
+    <string name="auth_lost_access_recovery">Kehilangan akses? Gunakan kode pemulihan</string>
     <string name="auth_create_identity_title">Buat identitas Anda</string>
     <string name="auth_create_identity_subtitle">Pilih nama untuk identitas Anda di server ini</string>
     <string name="auth_privacy_public_description">Tercantum dalam direktori pengguna sehingga orang lain dapat menemukan Anda.</string>

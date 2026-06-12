@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">多重身份验证</string>
     <string name="auth_mfa_subtitle">完成剩余的验证步骤</string>
     <string name="auth_recover_account">恢复账户</string>
+    <string name="auth_login_title">登录 Mochi</string>
+    <string name="auth_next">下一步</string>
+    <string name="auth_or_log_in_with">或使用以下方式登录</string>
+    <string name="auth_passkey">通行密钥</string>
+    <string name="auth_use_passkey">使用通行密钥</string>
+    <string name="auth_email_me_a_code">通过邮件向我发送验证码</string>
+    <string name="auth_or_enter_authenticator_code">或输入身份验证器验证码</string>
+    <string name="auth_log_in">登录</string>
+    <string name="auth_back">返回</string>
+    <string name="auth_lost_access_recovery">无法访问？使用恢复码</string>
     <string name="auth_create_identity_title">创建您的身份</string>
     <string name="auth_create_identity_subtitle">为您在此服务器上的身份选择一个名称</string>
     <string name="auth_privacy_public_description">在用户目录中列出,以便其他人可以找到您。</string>

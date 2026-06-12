@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Pengesahan berbilang faktor</string>
     <string name="auth_mfa_subtitle">Lengkapkan langkah pengesahan yang selebihnya</string>
     <string name="auth_recover_account">Pulihkan akaun</string>
+    <string name="auth_login_title">Log masuk ke Mochi</string>
+    <string name="auth_next">Seterusnya</string>
+    <string name="auth_or_log_in_with">Atau log masuk dengan</string>
+    <string name="auth_passkey">Kunci laluan</string>
+    <string name="auth_use_passkey">Gunakan kunci laluan</string>
+    <string name="auth_email_me_a_code">E-melkan saya kod</string>
+    <string name="auth_or_enter_authenticator_code">Atau masukkan kod authenticator</string>
+    <string name="auth_log_in">Log masuk</string>
+    <string name="auth_back">Kembali</string>
+    <string name="auth_lost_access_recovery">Hilang akses? Gunakan kod pemulihan</string>
     <string name="auth_create_identity_title">Cipta identiti anda</string>
     <string name="auth_create_identity_subtitle">Pilih nama untuk identiti anda pada pelayan ini</string>
     <string name="auth_privacy_public_description">Disenaraikan dalam direktori pengguna supaya orang lain dapat mencari anda.</string>

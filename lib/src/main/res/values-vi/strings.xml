@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Xác thực đa yếu tố</string>
     <string name="auth_mfa_subtitle">Hoàn tất các bước xác minh còn lại</string>
     <string name="auth_recover_account">Khôi phục tài khoản</string>
+    <string name="auth_login_title">Đăng nhập vào Mochi</string>
+    <string name="auth_next">Tiếp theo</string>
+    <string name="auth_or_log_in_with">Hoặc đăng nhập bằng</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Dùng passkey</string>
+    <string name="auth_email_me_a_code">Gửi mã cho tôi qua email</string>
+    <string name="auth_or_enter_authenticator_code">Hoặc nhập mã xác thực</string>
+    <string name="auth_log_in">Đăng nhập</string>
+    <string name="auth_back">Quay lại</string>
+    <string name="auth_lost_access_recovery">Mất quyền truy cập? Dùng mã khôi phục</string>
     <string name="auth_create_identity_title">Tạo danh tính của bạn</string>
     <string name="auth_create_identity_subtitle">Chọn tên cho danh tính của bạn trên máy chủ này</string>
     <string name="auth_privacy_public_description">Được hiển thị trong danh bạ người dùng để người khác có thể tìm thấy bạn.</string>

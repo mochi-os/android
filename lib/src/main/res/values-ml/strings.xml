@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">മൾട്ടി-ഫാക്ടർ പ്രാമാണീകരണം</string>
     <string name="auth_mfa_subtitle">ശേഷിക്കുന്ന സ്ഥിരീകരണ ഘട്ടങ്ങൾ പൂർത്തിയാക്കുക</string>
     <string name="auth_recover_account">അക്കൗണ്ട് വീണ്ടെടുക്കുക</string>
+    <string name="auth_login_title">Mochi-യിലേക്ക് ലോഗിൻ ചെയ്യുക</string>
+    <string name="auth_next">അടുത്തത്</string>
+    <string name="auth_or_log_in_with">അല്ലെങ്കിൽ ഇതുപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
+    <string name="auth_passkey">പാസ്കീ</string>
+    <string name="auth_use_passkey">പാസ്കീ ഉപയോഗിക്കുക</string>
+    <string name="auth_email_me_a_code">എനിക്ക് ഒരു കോഡ് ഇമെയിൽ ചെയ്യുക</string>
+    <string name="auth_or_enter_authenticator_code">അല്ലെങ്കിൽ ഓതന്റിക്കേറ്റർ കോഡ് നൽകുക</string>
+    <string name="auth_log_in">ലോഗിൻ</string>
+    <string name="auth_back">തിരികെ</string>
+    <string name="auth_lost_access_recovery">ആക്സസ് നഷ്ടപ്പെട്ടോ? റിക്കവറി കോഡ് ഉപയോഗിക്കുക</string>
     <string name="auth_create_identity_title">നിങ്ങളുടെ ഐഡന്റിറ്റി സൃഷ്ടിക്കുക</string>
     <string name="auth_create_identity_subtitle">ഈ സെർവറിലെ നിങ്ങളുടെ ഐഡന്റിറ്റിക്ക് ഒരു പേര് തിരഞ്ഞെടുക്കുക</string>
     <string name="auth_privacy_public_description">മറ്റുള്ളവർക്ക് നിങ്ങളെ കണ്ടെത്താൻ കഴിയുന്ന തരത്തിൽ ഉപയോക്തൃ ഡയറക്ടറിയിൽ ലിസ്റ്റ് ചെയ്തിരിക്കുന്നു.</string>
