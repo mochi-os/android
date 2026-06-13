@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">कतार में प्रसारण संदेश</string>
     <string name="system_setting_hostname_publish">होस्टनेम आ डोमेन दोसरा सर्वर सभ के बतावल जाव</string>
     <string name="system_setting_hostname">दोसरा सर्वर सभ के बतावल गइल होस्टनेम</string>
-    <string name="peer_name_unverified">%1$s (असत्यापित)</string>
     <string name="system_status_peer_id">पीयर आईडी</string>
     <string name="system_status_holepunch">होल पंच</string>
     <string name="system_status_holepunch_value">%1$d सफल · %2$d विफल</string>

@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Broadcast-Nachrichten in Warteschlange</string>
     <string name="system_setting_hostname_publish">Hostname und Domains anderen Servern bekanntgeben</string>
     <string name="system_setting_hostname">Anderen Servern bekanntgegebener Hostname</string>
-    <string name="peer_name_unverified">%1$s (nicht verifiziert)</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hole Punching</string>
     <string name="system_status_holepunch_value">%1$d erfolgreich · %2$d fehlgeschlagen</string>

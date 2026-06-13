@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">نامە بڵاوکراوەکانی ڕیزکراو</string>
     <string name="system_setting_hostname_publish">ناوی هۆست و دۆمەینەکان بە ڕاژەکارەکانی تر ڕابگەیەنە</string>
     <string name="system_setting_hostname">ناوی هۆستی ڕاگەیەنراو بە ڕاژەکارەکانی تر</string>
-    <string name="peer_name_unverified">%1$s (پشتڕاستنەکراوە)</string>
     <string name="system_status_peer_id">ناسنامەی هاوتا</string>
     <string name="system_status_holepunch">کونکردن</string>
     <string name="system_status_holepunch_value">%1$d سەرکەوتوو · %2$d شکستخواردوو</string>

@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Nobatdaky ýaýlym habarlary</string>
     <string name="system_setting_hostname_publish">Host adyny we domenleri beýleki serwerlere yglan et</string>
     <string name="system_setting_hostname">Beýleki serwerlere yglan edilen host ady</string>
-    <string name="peer_name_unverified">%1$s (tassyklanmadyk)</string>
     <string name="system_status_peer_id">Hyzmatdaş ID</string>
     <string name="system_status_holepunch">Deşik açma</string>
     <string name="system_status_holepunch_value">%1$d şowly · %2$d şowsuz</string>

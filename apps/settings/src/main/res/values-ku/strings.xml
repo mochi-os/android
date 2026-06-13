@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Peyamên belavkirinê di rêzê de</string>
     <string name="system_setting_hostname_publish">Navê hostê û domeynan ji serverên din re ragihîne</string>
     <string name="system_setting_hostname">Navê hostê yê ji serverên din re hatî ragihandin</string>
-    <string name="peer_name_unverified">%1$s (nehatiye verastkirin)</string>
     <string name="system_status_peer_id">Nasnameya hevtayî</string>
     <string name="system_status_holepunch">Qulkirin</string>
     <string name="system_status_holepunch_value">%1$d serketî · %2$d neserketî</string>

@@ -433,7 +433,6 @@
     <string name="system_status_queued_broadcasts">הודעות שידור בתור</string>
     <string name="system_setting_hostname_publish">הכרזת שם המארח והדומיינים לשרתים אחרים</string>
     <string name="system_setting_hostname">שם המארח המוכרז לשרתים אחרים</string>
-    <string name="peer_name_unverified">%1$s (לא מאומת)</string>
     <string name="system_status_peer_id">מזהה עמית</string>
     <string name="system_status_holepunch">ניקוב</string>
     <string name="system_status_holepunch_value">%1$d הצליחו · %2$d נכשלו</string>

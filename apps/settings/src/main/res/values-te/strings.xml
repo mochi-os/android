@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">క్యూలో ఉన్న ప్రసార సందేశాలు</string>
     <string name="system_setting_hostname_publish">హోస్ట్ పేరు మరియు డొమైన్‌లను ఇతర సర్వర్‌లకు ప్రకటించండి</string>
     <string name="system_setting_hostname">ఇతర సర్వర్‌లకు ప్రకటించిన హోస్ట్ పేరు</string>
-    <string name="peer_name_unverified">%1$s (ధృవీకరించబడలేదు)</string>
     <string name="system_status_peer_id">పీర్ ID</string>
     <string name="system_status_holepunch">హోల్ పంచ్</string>
     <string name="system_status_holepunch_value">%1$d విజయవంతం · %2$d విఫలం</string>

@@ -431,7 +431,6 @@
     <string name="system_status_queued_broadcasts">队列中的广播消息</string>
     <string name="system_setting_hostname_publish">向其他服务器通告主机名和域名</string>
     <string name="system_setting_hostname">向其他服务器通告的主机名</string>
-    <string name="peer_name_unverified">%1$s (未验证)</string>
     <string name="system_status_peer_id">对等节点 ID</string>
     <string name="system_status_holepunch">打洞穿透</string>
     <string name="system_status_holepunch_value">%1$d 成功 · %2$d 失败</string>

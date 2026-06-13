@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">በወረፋ ላይ ያሉ የስርጭት መልዕክቶች</string>
     <string name="system_setting_hostname_publish">የአስተናጋጅ ስም እና ጎራዎችን ለሌሎች አገልጋዮች አሳውቅ</string>
     <string name="system_setting_hostname">ለሌሎች አገልጋዮች የተገለጸ የአስተናጋጅ ስም</string>
-    <string name="peer_name_unverified">%1$s (ያልተረጋገጠ)</string>
     <string name="system_status_peer_id">የእኩያ መታወቂያ</string>
     <string name="system_status_holepunch">የጉድጓድ ምት</string>
     <string name="system_status_holepunch_value">%1$d ተሳክቷል · %2$d አልተሳካም</string>

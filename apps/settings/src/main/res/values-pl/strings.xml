@@ -434,7 +434,6 @@
     <string name="system_status_queued_broadcasts">Komunikaty rozgłoszeniowe w kolejce</string>
     <string name="system_setting_hostname_publish">Ogłaszaj nazwę hosta i domeny innym serwerom</string>
     <string name="system_setting_hostname">Nazwa hosta ogłaszana innym serwerom</string>
-    <string name="peer_name_unverified">%1$s (niezweryfikowana)</string>
     <string name="system_status_peer_id">Identyfikator partnera</string>
     <string name="system_status_holepunch">Przebijanie</string>
     <string name="system_status_holepunch_value">%1$d udanych · %2$d nieudanych</string>

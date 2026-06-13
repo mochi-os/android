@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Дараалалд буй өргөн нэвтрүүлгийн мессежүүд</string>
     <string name="system_setting_hostname_publish">Хостын нэр болон доменуудыг бусад серверт зарлах</string>
     <string name="system_setting_hostname">Бусад серверт зарласан хостын нэр</string>
-    <string name="peer_name_unverified">%1$s (баталгаажаагүй)</string>
     <string name="system_status_peer_id">Хосын ID</string>
     <string name="system_status_holepunch">Нүхлэлт</string>
     <string name="system_status_holepunch_value">%1$d амжилттай · %2$d амжилтгүй</string>

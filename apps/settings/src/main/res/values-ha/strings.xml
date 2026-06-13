@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Saƙonnin watsa labarai a layi</string>
     <string name="system_setting_hostname_publish">Sanar da sunan host da yankuna ga sauran sabar</string>
     <string name="system_setting_hostname">Sunan host da aka sanar wa sauran sabar</string>
-    <string name="peer_name_unverified">%1$s (ba a tantance ba)</string>
     <string name="system_status_peer_id">ID na takwara</string>
     <string name="system_status_holepunch">Hudawa</string>
     <string name="system_status_holepunch_value">%1$d nasara · %2$d kasawa</string>

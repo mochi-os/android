@@ -433,7 +433,6 @@
     <string name="system_status_queued_broadcasts">Rindā esošie apraides ziņojumi</string>
     <string name="system_setting_hostname_publish">Paziņot resursdatora nosaukumu un domēnus citiem serveriem</string>
     <string name="system_setting_hostname">Citiem serveriem paziņotais resursdatora nosaukums</string>
-    <string name="peer_name_unverified">%1$s (nepārbaudīts)</string>
     <string name="system_status_peer_id">Vienādranga ID</string>
     <string name="system_status_holepunch">Caururšana</string>
     <string name="system_status_holepunch_value">%1$d veiksmīgi · %2$d neveiksmīgi</string>

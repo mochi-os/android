@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">કતારમાં બ્રોડકાસ્ટ સંદેશા</string>
     <string name="system_setting_hostname_publish">હોસ્ટનેમ અને ડોમેન્સ અન્ય સર્વરોને જાહેર કરો</string>
     <string name="system_setting_hostname">અન્ય સર્વરોને જાહેર કરાયેલ હોસ્ટનેમ</string>
-    <string name="peer_name_unverified">%1$s (ચકાસાયેલ નથી)</string>
     <string name="system_status_peer_id">પીઅર ID</string>
     <string name="system_status_holepunch">હોલ પંચ</string>
     <string name="system_status_holepunch_value">%1$d સફળ · %2$d નિષ્ફળ</string>

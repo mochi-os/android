@@ -21,16 +21,13 @@ data class PendingJoin(
     val peer: String = "",
     val label: String = "",
     val expires: Long = 0,
-    // Approval context: the server sets name only when DNS-verified.
     val name: String = "",
-    val verified: Boolean = false,
     val fingerprint: String = "",
 )
 
 data class PairMember(
     val peer: String = "",
     val name: String = "",
-    val verified: Boolean = false,
     val fingerprint: String = "",
 )
 

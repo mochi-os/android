@@ -413,7 +413,6 @@
     <string name="system_status_queued_broadcasts">Queued broadcast messages</string>
     <string name="system_setting_hostname_publish">Announce hostname and domains to other servers</string>
     <string name="system_setting_hostname">Hostname announced to other servers</string>
-    <string name="peer_name_unverified">%1$s (unverified)</string>
     <string name="system_status_peer_id">Peer ID</string>
     <string name="system_status_holepunch">Hole punch</string>
     <string name="system_status_holepunch_value">%1$d succeeded · %2$d failed</string>

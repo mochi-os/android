@@ -435,7 +435,6 @@
     <string name="system_status_queued_broadcasts">Teachtaireachtaí craolta i scuaine</string>
     <string name="system_setting_hostname_publish">Fógair an t-óstainm agus na fearainn d\'fhreastalaithe eile</string>
     <string name="system_setting_hostname">Óstainm a fhógraítear d\'fhreastalaithe eile</string>
-    <string name="peer_name_unverified">%1$s (neamhfhíoraithe)</string>
     <string name="system_status_peer_id">Aitheantas piaraí</string>
     <string name="system_status_holepunch">Tolladh</string>
     <string name="system_status_holepunch_value">%1$d rathúil · %2$d teipthe</string>

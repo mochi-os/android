@@ -229,7 +229,7 @@ fun SystemStatusScreen(
 private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Column(modifier = Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            PeerName(peer.name, peer.verified)
+            PeerName(peer.name)
             Text(
                 text = hyphenateFingerprint(peer.fingerprint).ifBlank { peer.peer },
                 style = MaterialTheme.typography.bodySmall,

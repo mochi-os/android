@@ -279,13 +279,11 @@ private fun PendingJoinRow(
 ) {
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            // Approval context: the server sets name only when verified —
-            // an unverified claim must not influence this decision.
             Column(modifier = Modifier.weight(1f)) {
                 if (join.label.isNotBlank()) {
                     Text(join.label, style = MaterialTheme.typography.bodyMedium)
                 }
-                PeerName(join.name, join.verified)
+                PeerName(join.name)
                 if (join.fingerprint.isNotBlank()) {
                     Text(
                         text = hyphenateFingerprint(join.fingerprint),
@@ -326,7 +324,7 @@ private fun PairMemberRow(
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
-                PeerName(member.name, member.verified)
+                PeerName(member.name)
                 if (member.fingerprint.isNotBlank()) {
                     Text(
                         text = hyphenateFingerprint(member.fingerprint),

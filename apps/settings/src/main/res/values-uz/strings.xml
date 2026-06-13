@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Navbatdagi eshittirish xabarlari</string>
     <string name="system_setting_hostname_publish">Xost nomi va domenlarni boshqa serverlarga e\'lon qilish</string>
     <string name="system_setting_hostname">Boshqa serverlarga e\'lon qilingan xost nomi</string>
-    <string name="peer_name_unverified">%1$s (tasdiqlanmagan)</string>
     <string name="system_status_peer_id">Tengdosh ID</string>
     <string name="system_status_holepunch">Teshish</string>
     <string name="system_status_holepunch_value">%1$d muvaffaqiyatli · %2$d muvaffaqiyatsiz</string>

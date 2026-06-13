@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Μηνύματα εκπομπής σε αναμονή</string>
     <string name="system_setting_hostname_publish">Ανακοίνωση ονόματος κεντρικού υπολογιστή και τομέων σε άλλους διακομιστές</string>
     <string name="system_setting_hostname">Όνομα κεντρικού υπολογιστή που ανακοινώνεται σε άλλους διακομιστές</string>
-    <string name="peer_name_unverified">%1$s (μη επαληθευμένο)</string>
     <string name="system_status_peer_id">Αναγνωριστικό ομότιμου</string>
     <string name="system_status_holepunch">Διάτρηση</string>
     <string name="system_status_holepunch_value">%1$d επιτυχείς · %2$d αποτυχημένες</string>

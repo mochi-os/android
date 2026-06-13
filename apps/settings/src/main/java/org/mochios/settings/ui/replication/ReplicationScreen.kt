@@ -280,13 +280,11 @@ private fun PendingRow(
 ) {
     Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            // Approval context: the server sets name only when verified —
-            // an unverified claim must not influence this decision.
             Column(modifier = Modifier.weight(1f)) {
                 if (link.label.isNotBlank()) {
                     Text(link.label, style = MaterialTheme.typography.bodyMedium)
                 }
-                PeerName(link.name, link.verified)
+                PeerName(link.name)
                 if (link.fingerprint.isNotBlank()) {
                     Text(
                         text = hyphenateFingerprint(link.fingerprint),
@@ -329,7 +327,7 @@ private fun HostRow(host: ReplicationHost, onForget: () -> Unit) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (host.name.isNotBlank()) {
-                        PeerName(host.name, host.verified)
+                        PeerName(host.name)
                     } else {
                         Text(
                             hyphenateFingerprint(host.fingerprint).ifBlank { host.peer },

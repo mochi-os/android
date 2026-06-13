@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Uitsaaiboodskappe in die ry</string>
     <string name="system_setting_hostname_publish">Kondig gasheernaam en domeine aan ander bedieners aan</string>
     <string name="system_setting_hostname">Gasheernaam aan ander bedieners aangekondig</string>
-    <string name="peer_name_unverified">%1$s (ongeverifieer)</string>
     <string name="system_status_peer_id">Eweknoop-ID</string>
     <string name="system_status_holepunch">Gaatjie-deurboor</string>
     <string name="system_status_holepunch_value">%1$d geslaag · %2$d misluk</string>

@@ -70,6 +70,15 @@ object ApiClient {
             val appName = original.header("X-Mochi-App")
             val builder = original.newBuilder()
 
+            // Ask the server for JSON errors. The Mochi server content-negotiates
+            // (Action.error in core/server/actions.go): without this header it
+            // serves an HTML error page, which the client then rendered as raw
+            // markup — the "ugly web-page error". With it, errors come back as
+            // structured {error, message} JSON with a localised message.
+            if (original.header("Accept") == null) {
+                builder.header("Accept", "application/json")
+            }
+
             if (appName != null) {
                 builder.removeHeader("X-Mochi-App")
                 val token = sessionManager.getTokenBlocking(appName)

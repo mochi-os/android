@@ -22,9 +22,7 @@ data class ReplicationLink(
     val peer: String = "",
     val label: String = "",
     val expires: Long = 0,
-    // Approval context: the server sets name only when DNS-verified.
     val name: String = "",
-    val verified: Boolean = false,
     val fingerprint: String = "",
 )
 
@@ -37,7 +35,6 @@ data class ReplicationHost(
     val irreparable: Boolean = false,
     val offline: Long = 0,
     val name: String = "",
-    val verified: Boolean = false,
     val fingerprint: String = "",
 )
 

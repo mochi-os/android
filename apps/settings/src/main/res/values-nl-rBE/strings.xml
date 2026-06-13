@@ -434,7 +434,6 @@
     <string name="system_status_queued_broadcasts">Broadcastberichten in wachtrij</string>
     <string name="system_setting_hostname_publish">Hostnaam en domeinen aankondigen aan andere servers</string>
     <string name="system_setting_hostname">Hostnaam aangekondigd aan andere servers</string>
-    <string name="peer_name_unverified">%1$s (niet geverifieerd)</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Doorboring</string>
     <string name="system_status_holepunch_value">%1$d geslaagd · %2$d mislukt</string>

@@ -281,7 +281,6 @@
     <string name="system_status_peer_seen">Last seen</string>
     <string name="system_status_peer_queued">Queued messages</string>
     <string name="system_status_peer_oldest">Oldest queued message</string>
-    <string name="peer_name_unverified">%1$s (unverified)</string>
     <string name="system_status_users">Users</string>
     <string name="system_status_entities">Entities</string>
     <string name="system_status_reachability">Reachability</string>

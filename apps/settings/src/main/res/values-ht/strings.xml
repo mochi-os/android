@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">Mesaj difizyon nan ranje</string>
     <string name="system_setting_hostname_publish">Anonse non lame a ak domèn yo bay lòt sèvè</string>
     <string name="system_setting_hostname">Non lame anonse bay lòt sèvè</string>
-    <string name="peer_name_unverified">%1$s (pa verifye)</string>
     <string name="system_status_peer_id">ID parèy</string>
     <string name="system_status_holepunch">Pèse twou</string>
     <string name="system_status_holepunch_value">%1$d reyisi · %2$d echwe</string>

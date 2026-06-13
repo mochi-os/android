@@ -432,7 +432,6 @@
     <string name="system_status_queued_broadcasts">בראָדקאַסט מעלדונגען אין ריי</string>
     <string name="system_setting_hostname_publish">מעלדן האָסטנאָמען און דאָמענען צו אַנדערע סערווערס</string>
     <string name="system_setting_hostname">האָסטנאָמען געמאלדן צו אַנדערע סערווערס</string>
-    <string name="peer_name_unverified">%1$s (ניט באַשטעטיקט)</string>
     <string name="system_status_peer_id">פּיר ID</string>
     <string name="system_status_holepunch">לאך-שלאג</string>
     <string name="system_status_holepunch_value">%1$d געלונגען · %2$d דורכגעפאלן</string>

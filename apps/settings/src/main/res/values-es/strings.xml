@@ -433,7 +433,6 @@
     <string name="system_status_queued_broadcasts">Mensajes de difusión en cola</string>
     <string name="system_setting_hostname_publish">Anunciar el nombre de host y los dominios a otros servidores</string>
     <string name="system_setting_hostname">Nombre de host anunciado a otros servidores</string>
-    <string name="peer_name_unverified">%1$s (sin verificar)</string>
     <string name="system_status_peer_id">ID de par</string>
     <string name="system_status_holepunch">Perforación</string>
     <string name="system_status_holepunch_value">%1$d con éxito · %2$d fallidas</string>
