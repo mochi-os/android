@@ -429,11 +429,12 @@
     <string name="system_status_relay">Sa pamamagitan ng relay</string>
     <string name="system_status_mesh">Mesh ng broadcast</string>
     <string name="system_status_broadcast">Huling broadcast</string>
-    <string name="system_status_queued_broadcasts">Mga broadcast na nakapila</string>
+    <string name="system_status_queued_broadcasts">Mga naka-queue na broadcast na mensahe</string>
     <string name="system_setting_hostname_publish">Ianunsyo ang hostname at mga domain sa ibang mga server</string>
     <string name="system_setting_hostname">Hostname na inanunsyo sa ibang mga server</string>
     <string name="peer_name_unverified">%1$s (hindi pa beripikado)</string>
     <string name="system_status_peer_id">Peer ID</string>
     <string name="system_status_holepunch">Hole punch</string>
     <string name="system_status_holepunch_value">%1$d nagtagumpay · %2$d nabigo</string>
+    <string name="system_status_awaiting_routing">Mga mensaheng naghihintay ng ruta</string>
 </resources>

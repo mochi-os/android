@@ -429,11 +429,12 @@
     <string name="system_status_relay">Um endurvarpa</string>
     <string name="system_status_mesh">Útsendingar-mesh</string>
     <string name="system_status_broadcast">Síðasta útsending</string>
-    <string name="system_status_queued_broadcasts">Útsendingar í biðröð</string>
+    <string name="system_status_queued_broadcasts">Útsendingarskilaboð í biðröð</string>
     <string name="system_setting_hostname_publish">Tilkynna vélarheiti og lén til annarra netþjóna</string>
     <string name="system_setting_hostname">Vélarheiti tilkynnt öðrum netþjónum</string>
     <string name="peer_name_unverified">%1$s (óstaðfest)</string>
     <string name="system_status_peer_id">Jafningja-ID</string>
     <string name="system_status_holepunch">Gatslátt</string>
     <string name="system_status_holepunch_value">%1$d tókst · %2$d mistókst</string>
+    <string name="system_status_awaiting_routing">Skilaboð sem bíða leiðarvals</string>
 </resources>

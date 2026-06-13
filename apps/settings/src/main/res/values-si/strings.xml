@@ -429,11 +429,12 @@
     <string name="system_status_relay">රිලේ හරහා</string>
     <string name="system_status_mesh">විකාශ mesh</string>
     <string name="system_status_broadcast">අවසන් විකාශය</string>
-    <string name="system_status_queued_broadcasts">පෝලිමේ විකාශ</string>
+    <string name="system_status_queued_broadcasts">පෝලිමේ ඇති විකාශන පණිවිඩ</string>
     <string name="system_setting_hostname_publish">සත්කාරක නාමය සහ වසම් වෙනත් සේවාදායකයන්ට නිවේදනය කරන්න</string>
     <string name="system_setting_hostname">වෙනත් සේවාදායකයන්ට නිවේදනය කළ සත්කාරක නාමය</string>
     <string name="peer_name_unverified">%1$s (සත්‍යාපනය නොකළ)</string>
     <string name="system_status_peer_id">සම තැනැත්තා ID</string>
     <string name="system_status_holepunch">සිදුර විදීම</string>
     <string name="system_status_holepunch_value">%1$d සාර්ථකයි · %2$d අසාර්ථකයි</string>
+    <string name="system_status_awaiting_routing">මාර්ගගත කිරීම සඳහා රැඳී සිටින පණිවිඩ</string>
 </resources>

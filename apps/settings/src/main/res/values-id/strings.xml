@@ -428,11 +428,12 @@
     <string name="system_status_relay">Melalui relay</string>
     <string name="system_status_mesh">Mesh siaran</string>
     <string name="system_status_broadcast">Siaran terakhir</string>
-    <string name="system_status_queued_broadcasts">Siaran dalam antrean</string>
+    <string name="system_status_queued_broadcasts">Pesan siaran dalam antrean</string>
     <string name="system_setting_hostname_publish">Umumkan nama host dan domain ke server lain</string>
     <string name="system_setting_hostname">Nama host yang diumumkan ke server lain</string>
     <string name="peer_name_unverified">%1$s (belum terverifikasi)</string>
     <string name="system_status_peer_id">ID peer</string>
     <string name="system_status_holepunch">Penembusan</string>
     <string name="system_status_holepunch_value">%1$d berhasil · %2$d gagal</string>
+    <string name="system_status_awaiting_routing">Pesan menunggu perutean</string>
 </resources>

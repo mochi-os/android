@@ -428,11 +428,12 @@
     <string name="system_status_relay">Relay rupive</string>
     <string name="system_status_mesh">Mesh ñemyasãi</string>
     <string name="system_status_broadcast">Ñemyasãi paha</string>
-    <string name="system_status_queued_broadcasts">Ñemyasãi oha\'arõva</string>
+    <string name="system_status_queued_broadcasts">Marandu sarambipyre aha’arõva</string>
     <string name="system_setting_hostname_publish">Emomarandu hostname ha dominio-kuéra ambue servidor-pe</string>
     <string name="system_setting_hostname">Hostname omomarandupyre ambue servidor-pe</string>
     <string name="peer_name_unverified">%1$s (noñemboajéiva)</string>
     <string name="system_status_peer_id">Peer ID</string>
     <string name="system_status_holepunch">Hole punch</string>
     <string name="system_status_holepunch_value">%1$d osẽ porã · %2$d ndaikatúi</string>
+    <string name="system_status_awaiting_routing">Marandu oha’arõva tape</string>
 </resources>

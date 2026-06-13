@@ -429,11 +429,12 @@
     <string name="system_status_relay">Relay bidez</string>
     <string name="system_status_mesh">Igorpen mesh</string>
     <string name="system_status_broadcast">Azken igorpena</string>
-    <string name="system_status_queued_broadcasts">Ilarako igorpenak</string>
+    <string name="system_status_queued_broadcasts">Difusio-mezuak ilaran</string>
     <string name="system_setting_hostname_publish">Iragarri ostalari-izena eta domeinuak beste zerbitzariei</string>
     <string name="system_setting_hostname">Beste zerbitzariei iragarritako ostalari-izena</string>
     <string name="peer_name_unverified">%1$s (egiaztatu gabe)</string>
     <string name="system_status_peer_id">Pareko IDa</string>
     <string name="system_status_holepunch">Zulaketa</string>
     <string name="system_status_holepunch_value">%1$d ondo · %2$d huts</string>
+    <string name="system_status_awaiting_routing">Bideratzearen zain dauden mezuak</string>
 </resources>

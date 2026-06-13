@@ -429,11 +429,12 @@
     <string name="system_status_relay">റിലേ വഴി</string>
     <string name="system_status_mesh">ബ്രോഡ്കാസ്റ്റ് മെഷ്</string>
     <string name="system_status_broadcast">അവസാന ബ്രോഡ്കാസ്റ്റ്</string>
-    <string name="system_status_queued_broadcasts">ക്യൂവിലുള്ള ബ്രോഡ്കാസ്റ്റുകൾ</string>
+    <string name="system_status_queued_broadcasts">ക്യൂവിലുള്ള ബ്രോഡ്കാസ്റ്റ് സന്ദേശങ്ങൾ</string>
     <string name="system_setting_hostname_publish">ഹോസ്റ്റ്നാമവും ഡൊമെയ്‌നുകളും മറ്റ് സെർവറുകളെ അറിയിക്കുക</string>
     <string name="system_setting_hostname">മറ്റ് സെർവറുകളെ അറിയിച്ച ഹോസ്റ്റ്നാമം</string>
     <string name="peer_name_unverified">%1$s (പരിശോധിച്ചിട്ടില്ല)</string>
     <string name="system_status_peer_id">പിയർ ID</string>
     <string name="system_status_holepunch">ഹോൾ പഞ്ച്</string>
     <string name="system_status_holepunch_value">%1$d വിജയിച്ചു · %2$d പരാജയപ്പെട്ടു</string>
+    <string name="system_status_awaiting_routing">റൂട്ടിങ്ങിനായി കാത്തിരിക്കുന്ന സന്ദേശങ്ങൾ</string>
 </resources>

@@ -431,11 +431,12 @@
     <string name="system_status_relay">Праз рэтранслятар</string>
     <string name="system_status_mesh">Сетка трансляцыі</string>
     <string name="system_status_broadcast">Апошняя трансляцыя</string>
-    <string name="system_status_queued_broadcasts">Трансляцыі ў чарзе</string>
+    <string name="system_status_queued_broadcasts">Паведамленні-рассылкі ў чарзе</string>
     <string name="system_setting_hostname_publish">Абвяшчаць імя хоста і дамены іншым серверам</string>
     <string name="system_setting_hostname">Імя хоста, абвешчанае іншым серверам</string>
     <string name="peer_name_unverified">%1$s (неправерана)</string>
     <string name="system_status_peer_id">ID піра</string>
     <string name="system_status_holepunch">Прабіванне</string>
     <string name="system_status_holepunch_value">%1$d паспяхова · %2$d няўдала</string>
+    <string name="system_status_awaiting_routing">Паведамленні ў чаканні маршрутызацыі</string>
 </resources>

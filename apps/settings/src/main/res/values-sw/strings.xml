@@ -429,11 +429,12 @@
     <string name="system_status_relay">Kupitia relay</string>
     <string name="system_status_mesh">Mesh ya matangazo</string>
     <string name="system_status_broadcast">Matangazo ya mwisho</string>
-    <string name="system_status_queued_broadcasts">Matangazo kwenye foleni</string>
+    <string name="system_status_queued_broadcasts">Ujumbe wa matangazo kwenye foleni</string>
     <string name="system_setting_hostname_publish">Tangaza jina la mwenyeji na vikoa kwa seva nyingine</string>
     <string name="system_setting_hostname">Jina la mwenyeji lililotangazwa kwa seva nyingine</string>
     <string name="peer_name_unverified">%1$s (haijathibitishwa)</string>
     <string name="system_status_peer_id">Kitambulisho cha rika</string>
     <string name="system_status_holepunch">Kutoboa</string>
     <string name="system_status_holepunch_value">%1$d zilifaulu · %2$d zilishindwa</string>
+    <string name="system_status_awaiting_routing">Ujumbe unaosubiri uelekezaji</string>
 </resources>

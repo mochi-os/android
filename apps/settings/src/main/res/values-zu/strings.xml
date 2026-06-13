@@ -429,11 +429,12 @@
     <string name="system_status_relay">Nge-relay</string>
     <string name="system_status_mesh">I-mesh yokusakaza</string>
     <string name="system_status_broadcast">Ukusakaza kokugcina</string>
-    <string name="system_status_queued_broadcasts">Ukusakaza kulayini</string>
+    <string name="system_status_queued_broadcasts">Imilayezo yokusakaza eselayinini</string>
     <string name="system_setting_hostname_publish">Memezela igama lomsingathi namadomeni kwamanye amaseva</string>
     <string name="system_setting_hostname">Igama lomsingathi elimenyezelwe kwamanye amaseva</string>
     <string name="peer_name_unverified">%1$s (akuqinisekisiwe)</string>
     <string name="system_status_peer_id">I-ID yontanga</string>
     <string name="system_status_holepunch">Ukubhoboza</string>
     <string name="system_status_holepunch_value">%1$d kuphumelele · %2$d kuhlulekile</string>
+    <string name="system_status_awaiting_routing">Imilayezo elindele ukuhanjiswa kwendlela</string>
 </resources>

@@ -431,11 +431,12 @@
     <string name="system_status_relay">Prek releja</string>
     <string name="system_status_mesh">Oddajni mesh</string>
     <string name="system_status_broadcast">Zadnje oddajanje</string>
-    <string name="system_status_queued_broadcasts">Oddajanja v čakalni vrsti</string>
+    <string name="system_status_queued_broadcasts">Oddajna sporočila v čakalni vrsti</string>
     <string name="system_setting_hostname_publish">Objavi ime gostitelja in domene drugim strežnikom</string>
     <string name="system_setting_hostname">Ime gostitelja, objavljeno drugim strežnikom</string>
     <string name="peer_name_unverified">%1$s (nepreverjeno)</string>
     <string name="system_status_peer_id">ID soležnika</string>
     <string name="system_status_holepunch">Preboj</string>
     <string name="system_status_holepunch_value">%1$d uspešnih · %2$d neuspešnih</string>
+    <string name="system_status_awaiting_routing">Sporočila, ki čakajo na usmerjanje</string>
 </resources>

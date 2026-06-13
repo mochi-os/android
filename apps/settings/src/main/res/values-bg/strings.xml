@@ -429,11 +429,12 @@
     <string name="system_status_relay">Чрез реле</string>
     <string name="system_status_mesh">Мрежа за излъчване</string>
     <string name="system_status_broadcast">Последно излъчване</string>
-    <string name="system_status_queued_broadcasts">Излъчвания в опашка</string>
+    <string name="system_status_queued_broadcasts">Излъчвани съобщения на опашка</string>
     <string name="system_setting_hostname_publish">Обявяване на името на хоста и домейните към други сървъри</string>
     <string name="system_setting_hostname">Име на хост, обявено на други сървъри</string>
     <string name="peer_name_unverified">%1$s (непроверено)</string>
     <string name="system_status_peer_id">ID на пиъра</string>
     <string name="system_status_holepunch">Пробив на NAT</string>
     <string name="system_status_holepunch_value">%1$d успешни · %2$d неуспешни</string>
+    <string name="system_status_awaiting_routing">Съобщения, очакващи маршрутизация</string>
 </resources>

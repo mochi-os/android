@@ -429,11 +429,12 @@
     <string name="system_status_relay">Karaa relay</string>
     <string name="system_status_mesh">Mesh tamsaasaa</string>
     <string name="system_status_broadcast">Tamsaasa dhumaa</string>
-    <string name="system_status_queued_broadcasts">Tamsaasota tartiiba keessaa</string>
+    <string name="system_status_queued_broadcasts">Ergaawwan tamsaasaa sarara keessa</string>
     <string name="system_setting_hostname_publish">Maqaa keessummeessaa fi domeenota serveroota birootti beeksisi</string>
     <string name="system_setting_hostname">Maqaa keessummeessaa serveroota birootti beeksifame</string>
     <string name="peer_name_unverified">%1$s (hin mirkanoofne)</string>
     <string name="system_status_peer_id">ID hiriyaa</string>
     <string name="system_status_holepunch">Holee punch</string>
     <string name="system_status_holepunch_value">%1$d milkaa\'e · %2$d kufe</string>
+    <string name="system_status_awaiting_routing">Ergaawwan daandii eeggachaa jiran</string>
 </resources>

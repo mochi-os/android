@@ -429,11 +429,12 @@
     <string name="system_status_relay">রিলের মাধ্যমে</string>
     <string name="system_status_mesh">সম্প্রচার মেশ</string>
     <string name="system_status_broadcast">সর্বশেষ সম্প্রচার</string>
-    <string name="system_status_queued_broadcasts">সারিতে থাকা সম্প্রচার</string>
+    <string name="system_status_queued_broadcasts">সারিবদ্ধ ব্রডকাস্ট বার্তা</string>
     <string name="system_setting_hostname_publish">অন্যান্য সার্ভারে হোস্টনেম ও ডোমেইন ঘোষণা করুন</string>
     <string name="system_setting_hostname">অন্যান্য সার্ভারে ঘোষিত হোস্টনেম</string>
     <string name="peer_name_unverified">%1$s (যাচাই করা হয়নি)</string>
     <string name="system_status_peer_id">পিয়ার আইডি</string>
     <string name="system_status_holepunch">হোল পাঞ্চ</string>
     <string name="system_status_holepunch_value">%1$d সফল · %2$d ব্যর্থ</string>
+    <string name="system_status_awaiting_routing">রাউটিংয়ের অপেক্ষায় বার্তা</string>
 </resources>

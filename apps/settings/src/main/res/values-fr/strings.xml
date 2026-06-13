@@ -430,11 +430,12 @@
     <string name="system_status_relay">Via relais</string>
     <string name="system_status_mesh">Maillage de diffusion</string>
     <string name="system_status_broadcast">Dernière diffusion</string>
-    <string name="system_status_queued_broadcasts">Diffusions en file d\'attente</string>
+    <string name="system_status_queued_broadcasts">Messages de diffusion en file d\'attente</string>
     <string name="system_setting_hostname_publish">Annoncer le nom d\'hôte et les domaines aux autres serveurs</string>
     <string name="system_setting_hostname">Nom d\'hôte annoncé aux autres serveurs</string>
     <string name="peer_name_unverified">%1$s (non vérifié)</string>
     <string name="system_status_peer_id">ID de pair</string>
     <string name="system_status_holepunch">Perçage</string>
     <string name="system_status_holepunch_value">%1$d réussis · %2$d échoués</string>
+    <string name="system_status_awaiting_routing">Messages en attente de routage</string>
 </resources>

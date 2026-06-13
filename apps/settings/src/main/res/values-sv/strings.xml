@@ -429,11 +429,12 @@
     <string name="system_status_relay">Via relä</string>
     <string name="system_status_mesh">Broadcast-mesh</string>
     <string name="system_status_broadcast">Senaste utsändning</string>
-    <string name="system_status_queued_broadcasts">Utsändningar i kö</string>
+    <string name="system_status_queued_broadcasts">Sändningsmeddelanden i kö</string>
     <string name="system_setting_hostname_publish">Annonsera värdnamn och domäner till andra servrar</string>
     <string name="system_setting_hostname">Värdnamn annonserat till andra servrar</string>
     <string name="peer_name_unverified">%1$s (overifierad)</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hålslagning</string>
     <string name="system_status_holepunch_value">%1$d lyckades · %2$d misslyckades</string>
+    <string name="system_status_awaiting_routing">Meddelanden som väntar på routing</string>
 </resources>

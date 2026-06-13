@@ -293,7 +293,8 @@
     <string name="system_status_broadcast">Last broadcast</string>
     <string name="system_status_holepunch">Hole punch</string>
     <string name="system_status_holepunch_value">%1$d succeeded · %2$d failed</string>
-    <string name="system_status_queued_broadcasts">Queued broadcasts</string>
+    <string name="system_status_awaiting_routing">Messages awaiting routing</string>
+    <string name="system_status_queued_broadcasts">Queued broadcast messages</string>
 
     <!-- Connected accounts -->
     <string name="accounts_title">Connected accounts</string>

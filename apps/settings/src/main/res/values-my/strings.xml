@@ -428,11 +428,12 @@
     <string name="system_status_relay">Relay မှတဆင့်</string>
     <string name="system_status_mesh">ထုတ်လွှင့်မှု mesh</string>
     <string name="system_status_broadcast">နောက်ဆုံး ထုတ်လွှင့်မှု</string>
-    <string name="system_status_queued_broadcasts">တန်းစီထားသော ထုတ်လွှင့်မှုများ</string>
+    <string name="system_status_queued_broadcasts">တန်းစီထားသော ထုတ်လွှင့်မက်ဆေ့ဂျ်များ</string>
     <string name="system_setting_hostname_publish">Host အမည်နှင့် ဒိုမိန်းများကို အခြားဆာဗာများသို့ ကြေညာရန်</string>
     <string name="system_setting_hostname">အခြားဆာဗာများသို့ ကြေညာထားသော host အမည်</string>
     <string name="peer_name_unverified">%1$s (အတည်မပြုရသေး)</string>
     <string name="system_status_peer_id">တွဲဖက် ID</string>
     <string name="system_status_holepunch">ပေါက်ဖောက်ခြင်း</string>
     <string name="system_status_holepunch_value">%1$d အောင်မြင် · %2$d မအောင်မြင်</string>
+    <string name="system_status_awaiting_routing">လမ်းကြောင်းသတ်မှတ်ရန် စောင့်ဆိုင်းနေသော မက်ဆေ့ဂျ်များ</string>
 </resources>

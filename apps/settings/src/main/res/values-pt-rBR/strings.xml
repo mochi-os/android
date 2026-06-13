@@ -430,11 +430,12 @@
     <string name="system_status_relay">Via relay</string>
     <string name="system_status_mesh">Malha de transmissão</string>
     <string name="system_status_broadcast">Última transmissão</string>
-    <string name="system_status_queued_broadcasts">Transmissões na fila</string>
+    <string name="system_status_queued_broadcasts">Mensagens de transmissão na fila</string>
     <string name="system_setting_hostname_publish">Anunciar o nome de host e os domínios a outros servidores</string>
     <string name="system_setting_hostname">Nome de host anunciado a outros servidores</string>
     <string name="peer_name_unverified">%1$s (não verificado)</string>
     <string name="system_status_peer_id">ID do par</string>
     <string name="system_status_holepunch">Perfuração</string>
     <string name="system_status_holepunch_value">%1$d com êxito · %2$d falharam</string>
+    <string name="system_status_awaiting_routing">Mensagens aguardando roteamento</string>
 </resources>

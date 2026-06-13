@@ -429,11 +429,12 @@
     <string name="system_status_relay">Преку реле</string>
     <string name="system_status_mesh">Mesh за емитување</string>
     <string name="system_status_broadcast">Последно емитување</string>
-    <string name="system_status_queued_broadcasts">Емитувања во ред на чекање</string>
+    <string name="system_status_queued_broadcasts">Емитувани пораки на чекање</string>
     <string name="system_setting_hostname_publish">Објавувај го името на хостот и домените на други сервери</string>
     <string name="system_setting_hostname">Име на хост објавено на други сервери</string>
     <string name="peer_name_unverified">%1$s (непроверено)</string>
     <string name="system_status_peer_id">ID на пирот</string>
     <string name="system_status_holepunch">Пробивање</string>
     <string name="system_status_holepunch_value">%1$d успешни · %2$d неуспешни</string>
+    <string name="system_status_awaiting_routing">Пораки што чекаат рутирање</string>
 </resources>

@@ -428,11 +428,12 @@
     <string name="system_status_relay">ຜ່ານ relay</string>
     <string name="system_status_mesh">Mesh ອອກອາກາດ</string>
     <string name="system_status_broadcast">ການອອກອາກາດຫຼ້າສຸດ</string>
-    <string name="system_status_queued_broadcasts">ການອອກອາກາດໃນຄິວ</string>
+    <string name="system_status_queued_broadcasts">ຂໍ້ຄວາມກະຈາຍສຽງໃນຄິວ</string>
     <string name="system_setting_hostname_publish">ປະກາດຊື່ໂຮສ ແລະ ໂດເມນໃຫ້ເຊີບເວີອື່ນ</string>
     <string name="system_setting_hostname">ຊື່ໂຮສທີ່ປະກາດໃຫ້ເຊີບເວີອື່ນ</string>
     <string name="peer_name_unverified">%1$s (ຍັງບໍ່ໄດ້ຢືນຢັນ)</string>
     <string name="system_status_peer_id">ID ຄູ່</string>
     <string name="system_status_holepunch">ການເຈາະ</string>
     <string name="system_status_holepunch_value">%1$d ສຳເລັດ · %2$d ລົ້ມເຫລວ</string>
+    <string name="system_status_awaiting_routing">ຂໍ້ຄວາມທີ່ລໍຖ້າການກຳນົດເສັ້ນທາງ</string>
 </resources>

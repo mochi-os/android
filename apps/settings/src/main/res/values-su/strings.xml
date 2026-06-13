@@ -428,11 +428,12 @@
     <string name="system_status_relay">Ngaliwatan relay</string>
     <string name="system_status_mesh">Mesh siaran</string>
     <string name="system_status_broadcast">Siaran pamungkas</string>
-    <string name="system_status_queued_broadcasts">Siaran dina antrean</string>
+    <string name="system_status_queued_broadcasts">Talatah siaran dina antrian</string>
     <string name="system_setting_hostname_publish">Umumkeun ngaran host jeung domain ka server séjén</string>
     <string name="system_setting_hostname">Ngaran host nu diumumkeun ka server séjén</string>
     <string name="peer_name_unverified">%1$s (can diverifikasi)</string>
     <string name="system_status_peer_id">ID peer</string>
     <string name="system_status_holepunch">Nembus liang</string>
     <string name="system_status_holepunch_value">%1$d hasil · %2$d gagal</string>
+    <string name="system_status_awaiting_routing">Talatah anu ngantosan rute</string>
 </resources>

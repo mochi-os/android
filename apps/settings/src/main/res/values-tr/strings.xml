@@ -429,11 +429,12 @@
     <string name="system_status_relay">Aktarıcı üzerinden</string>
     <string name="system_status_mesh">Yayın mesh</string>
     <string name="system_status_broadcast">Son yayın</string>
-    <string name="system_status_queued_broadcasts">Kuyruktaki yayınlar</string>
+    <string name="system_status_queued_broadcasts">Kuyruktaki yayın mesajları</string>
     <string name="system_setting_hostname_publish">Ana bilgisayar adını ve alan adlarını diğer sunuculara duyur</string>
     <string name="system_setting_hostname">Diğer sunuculara duyurulan ana bilgisayar adı</string>
     <string name="peer_name_unverified">%1$s (doğrulanmamış)</string>
     <string name="system_status_peer_id">Eş kimliği</string>
     <string name="system_status_holepunch">Delik açma</string>
     <string name="system_status_holepunch_value">%1$d başarılı · %2$d başarısız</string>
+    <string name="system_status_awaiting_routing">Yönlendirme bekleyen mesajlar</string>
 </resources>

@@ -429,11 +429,12 @@
     <string name="system_status_relay">Реле аркылуу</string>
     <string name="system_status_mesh">Берүү mesh</string>
     <string name="system_status_broadcast">Акыркы берүү</string>
-    <string name="system_status_queued_broadcasts">Кезектеги берүүлөр</string>
+    <string name="system_status_queued_broadcasts">Кезектеги жайылтуу билдирүүлөрү</string>
     <string name="system_setting_hostname_publish">Хост атын жана домендерди башка серверлерге жарыялоо</string>
     <string name="system_setting_hostname">Башка серверлерге жарыяланган хост аты</string>
     <string name="peer_name_unverified">%1$s (текшерилген эмес)</string>
     <string name="system_status_peer_id">Теңтуш ID</string>
     <string name="system_status_holepunch">Тешүү</string>
     <string name="system_status_holepunch_value">%1$d ийгиликтүү · %2$d ишке ашкан жок</string>
+    <string name="system_status_awaiting_routing">Багыттоону күтүп жаткан билдирүүлөр</string>
 </resources>

@@ -430,11 +430,12 @@
     <string name="system_status_relay">Mitjançant relay</string>
     <string name="system_status_mesh">Malla de difusió</string>
     <string name="system_status_broadcast">Última difusió</string>
-    <string name="system_status_queued_broadcasts">Difusions en cua</string>
+    <string name="system_status_queued_broadcasts">Missatges de difusió en cua</string>
     <string name="system_setting_hostname_publish">Anuncia el nom d\'amfitrió i els dominis a altres servidors</string>
     <string name="system_setting_hostname">Nom d\'amfitrió anunciat a altres servidors</string>
     <string name="peer_name_unverified">%1$s (no verificat)</string>
     <string name="system_status_peer_id">ID del parell</string>
     <string name="system_status_holepunch">Perforació</string>
     <string name="system_status_holepunch_value">%1$d amb èxit · %2$d fallits</string>
+    <string name="system_status_awaiting_routing">Missatges a l\'espera d\'encaminament</string>
 </resources>

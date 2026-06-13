@@ -430,11 +430,12 @@
     <string name="system_status_relay">Преко релеја</string>
     <string name="system_status_mesh">Mesh за емитовање</string>
     <string name="system_status_broadcast">Последње емитовање</string>
-    <string name="system_status_queued_broadcasts">Емитовања у реду чекања</string>
+    <string name="system_status_queued_broadcasts">Емитоване поруке на чекању</string>
     <string name="system_setting_hostname_publish">Објави име хоста и домене другим серверима</string>
     <string name="system_setting_hostname">Име хоста објављено другим серверима</string>
     <string name="peer_name_unverified">%1$s (непроверено)</string>
     <string name="system_status_peer_id">ID парњака</string>
     <string name="system_status_holepunch">Пробијање</string>
     <string name="system_status_holepunch_value">%1$d успешно · %2$d неуспешно</string>
+    <string name="system_status_awaiting_routing">Поруке које чекају рутирање</string>
 </resources>

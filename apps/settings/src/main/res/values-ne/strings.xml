@@ -429,11 +429,12 @@
     <string name="system_status_relay">रिले मार्फत</string>
     <string name="system_status_mesh">प्रसारण मेश</string>
     <string name="system_status_broadcast">पछिल्लो प्रसारण</string>
-    <string name="system_status_queued_broadcasts">लाममा रहेका प्रसारणहरू</string>
+    <string name="system_status_queued_broadcasts">लाममा रहेका प्रसारण सन्देशहरू</string>
     <string name="system_setting_hostname_publish">होस्टनेम र डोमेनहरू अन्य सर्भरहरूलाई घोषणा गर्नुहोस्</string>
     <string name="system_setting_hostname">अन्य सर्भरहरूलाई घोषित होस्टनेम</string>
     <string name="peer_name_unverified">%1$s (अप्रमाणित)</string>
     <string name="system_status_peer_id">पियर ID</string>
     <string name="system_status_holepunch">होल पन्च</string>
     <string name="system_status_holepunch_value">%1$d सफल · %2$d असफल</string>
+    <string name="system_status_awaiting_routing">राउटिङको प्रतीक्षामा रहेका सन्देशहरू</string>
 </resources>

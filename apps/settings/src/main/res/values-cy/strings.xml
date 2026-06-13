@@ -433,11 +433,12 @@
     <string name="system_status_relay">Trwy relái</string>
     <string name="system_status_mesh">Mesh darlledu</string>
     <string name="system_status_broadcast">Darllediad diwethaf</string>
-    <string name="system_status_queued_broadcasts">Darllediadau mewn ciw</string>
+    <string name="system_status_queued_broadcasts">Negeseuon darlledu yn y ciw</string>
     <string name="system_setting_hostname_publish">Cyhoeddi enw\'r gwesteiwr a pharthau i weinyddion eraill</string>
     <string name="system_setting_hostname">Enw gwesteiwr a gyhoeddir i weinyddion eraill</string>
     <string name="peer_name_unverified">%1$s (heb ei wirio)</string>
     <string name="system_status_peer_id">ID cymar</string>
     <string name="system_status_holepunch">Tyllu</string>
     <string name="system_status_holepunch_value">%1$d llwyddiant · %2$d methiant</string>
+    <string name="system_status_awaiting_routing">Negeseuon yn aros am lwybro</string>
 </resources>

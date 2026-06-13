@@ -429,11 +429,12 @@
     <string name="system_status_relay">Via relé</string>
     <string name="system_status_mesh">Kringkastingsmesh</string>
     <string name="system_status_broadcast">Siste kringkasting</string>
-    <string name="system_status_queued_broadcasts">Kringkastinger i kø</string>
+    <string name="system_status_queued_broadcasts">Kringkastingsmeldinger i kø</string>
     <string name="system_setting_hostname_publish">Annonser vertsnavn og domener til andre servere</string>
     <string name="system_setting_hostname">Vertsnavn annonsert til andre servere</string>
     <string name="peer_name_unverified">%1$s (ubekreftet)</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hullslag</string>
     <string name="system_status_holepunch_value">%1$d vellykket · %2$d mislyktes</string>
+    <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
 </resources>

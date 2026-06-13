@@ -429,11 +429,12 @@
     <string name="system_status_relay">Via relay</string>
     <string name="system_status_mesh">Broadcast-mesh</string>
     <string name="system_status_broadcast">Laatste uitzending</string>
-    <string name="system_status_queued_broadcasts">Broadcasts in wachtrij</string>
+    <string name="system_status_queued_broadcasts">Broadcastberichten in wachtrij</string>
     <string name="system_setting_hostname_publish">Hostnaam en domeinen aankondigen aan andere servers</string>
     <string name="system_setting_hostname">Hostnaam aangekondigd aan andere servers</string>
     <string name="peer_name_unverified">%1$s (niet geverifieerd)</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Doorboring</string>
     <string name="system_status_holepunch_value">%1$d geslaagd · %2$d mislukt</string>
+    <string name="system_status_awaiting_routing">Berichten die wachten op routering</string>
 </resources>

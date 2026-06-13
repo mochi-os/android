@@ -429,11 +429,12 @@
     <string name="system_status_relay">ਰਿਲੇ ਰਾਹੀਂ</string>
     <string name="system_status_mesh">ਪ੍ਰਸਾਰਣ ਮੈਸ਼</string>
     <string name="system_status_broadcast">ਆਖਰੀ ਪ੍ਰਸਾਰਣ</string>
-    <string name="system_status_queued_broadcasts">ਕਤਾਰ ਵਿੱਚ ਪ੍ਰਸਾਰਣ</string>
+    <string name="system_status_queued_broadcasts">ਕਤਾਰ ਵਿੱਚ ਪ੍ਰਸਾਰਣ ਸੁਨੇਹੇ</string>
     <string name="system_setting_hostname_publish">ਹੋਸਟਨੇਮ ਅਤੇ ਡੋਮੇਨ ਹੋਰ ਸਰਵਰਾਂ ਨੂੰ ਐਲਾਨੋ</string>
     <string name="system_setting_hostname">ਹੋਰ ਸਰਵਰਾਂ ਨੂੰ ਐਲਾਨਿਆ ਹੋਸਟਨੇਮ</string>
     <string name="peer_name_unverified">%1$s (ਅਣ-ਤਸਦੀਕਸ਼ੁਦਾ)</string>
     <string name="system_status_peer_id">ਪੀਅਰ ID</string>
     <string name="system_status_holepunch">ਹੋਲ ਪੰਚ</string>
     <string name="system_status_holepunch_value">%1$d ਸਫਲ · %2$d ਅਸਫਲ</string>
+    <string name="system_status_awaiting_routing">ਰੂਟਿੰਗ ਦੀ ਉਡੀਕ ਵਿੱਚ ਸੁਨੇਹੇ</string>
 </resources>

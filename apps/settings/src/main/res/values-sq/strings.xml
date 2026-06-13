@@ -429,11 +429,12 @@
     <string name="system_status_relay">Me rele</string>
     <string name="system_status_mesh">Mesh i transmetimit</string>
     <string name="system_status_broadcast">Transmetimi i fundit</string>
-    <string name="system_status_queued_broadcasts">Transmetime në radhë</string>
+    <string name="system_status_queued_broadcasts">Mesazhe transmetimi në radhë</string>
     <string name="system_setting_hostname_publish">Njofto emrin e hostit dhe domenet te serverët e tjerë</string>
     <string name="system_setting_hostname">Emri i hostit i njoftuar te serverët e tjerë</string>
     <string name="peer_name_unverified">%1$s (i paverifikuar)</string>
     <string name="system_status_peer_id">ID e palës</string>
     <string name="system_status_holepunch">Shpim</string>
     <string name="system_status_holepunch_value">%1$d të suksesshme · %2$d të dështuara</string>
+    <string name="system_status_awaiting_routing">Mesazhe në pritje të rrugëzimit</string>
 </resources>

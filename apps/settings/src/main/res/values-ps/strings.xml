@@ -429,11 +429,12 @@
     <string name="system_status_relay">د ریلې له لارې</string>
     <string name="system_status_mesh">د خپرونې mesh</string>
     <string name="system_status_broadcast">وروستۍ خپرونه</string>
-    <string name="system_status_queued_broadcasts">په کتار کې خپرونې</string>
+    <string name="system_status_queued_broadcasts">په کتار کې د خپرونې پیغامونه</string>
     <string name="system_setting_hostname_publish">د کوربه نوم او ډومینونه نورو سرورونو ته اعلان کړئ</string>
     <string name="system_setting_hostname">نورو سرورونو ته اعلان شوی د کوربه نوم</string>
     <string name="peer_name_unverified">%1$s (نه تایید شوی)</string>
     <string name="system_status_peer_id">د همتا پېژند</string>
     <string name="system_status_holepunch">سوری کول</string>
     <string name="system_status_holepunch_value">%1$d بریالي · %2$d ناکام</string>
+    <string name="system_status_awaiting_routing">د لارښوونې په تمه پیغامونه</string>
 </resources>

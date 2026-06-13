@@ -428,11 +428,12 @@
     <string name="system_status_relay">Nípasẹ̀ relay</string>
     <string name="system_status_mesh">Mesh ìgbóhùnsáfẹ́fẹ́</string>
     <string name="system_status_broadcast">Ìgbóhùnsáfẹ́fẹ́ tó kẹ́yìn</string>
-    <string name="system_status_queued_broadcasts">Àwọn ìgbóhùnsáfẹ́fẹ́ nínú ìlà</string>
+    <string name="system_status_queued_broadcasts">Àwọn iṣẹ́ ìgbóhùnsáfẹ́fẹ́ tó wà ní ìlà</string>
     <string name="system_setting_hostname_publish">Kéde orúkọ agbàlejò àti àwọn domain sí àwọn olupin míràn</string>
     <string name="system_setting_hostname">Orúkọ agbàlejò tí a kéde sí àwọn olupin míràn</string>
     <string name="peer_name_unverified">%1$s (kò tíì jẹ́rìí sí)</string>
     <string name="system_status_peer_id">ID alábàákẹ́gbẹ́</string>
     <string name="system_status_holepunch">Lilu iho</string>
     <string name="system_status_holepunch_value">%1$d  aṣeyọrí · %2$d kùnà</string>
+    <string name="system_status_awaiting_routing">Àwọn iṣẹ́ tó ń dúró de ìpa-ọ̀nà</string>
 </resources>

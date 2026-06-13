@@ -429,11 +429,12 @@
     <string name="system_status_relay">Relee kaudu</string>
     <string name="system_status_mesh">Edastus-mesh</string>
     <string name="system_status_broadcast">Viimane edastus</string>
-    <string name="system_status_queued_broadcasts">Järjekorras edastused</string>
+    <string name="system_status_queued_broadcasts">Järjekorras olevad eetrisõnumid</string>
     <string name="system_setting_hostname_publish">Teata hostinimi ja domeenid teistele serveritele</string>
     <string name="system_setting_hostname">Teistele serveritele teatatud hostinimi</string>
     <string name="peer_name_unverified">%1$s (kinnitamata)</string>
     <string name="system_status_peer_id">Partneri ID</string>
     <string name="system_status_holepunch">Augustamine</string>
     <string name="system_status_holepunch_value">%1$d õnnestus · %2$d ebaõnnestus</string>
+    <string name="system_status_awaiting_routing">Marsruutimist ootavad sõnumid</string>
 </resources>

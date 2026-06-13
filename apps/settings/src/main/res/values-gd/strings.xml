@@ -431,11 +431,12 @@
     <string name="system_status_relay">Tro ath-sheachadan</string>
     <string name="system_status_mesh">Mogal craolaidh</string>
     <string name="system_status_broadcast">An craoladh mu dheireadh</string>
-    <string name="system_status_queued_broadcasts">Craolaidhean sa chiutha</string>
+    <string name="system_status_queued_broadcasts">Teachdaireachdan craolaidh sa chiudha</string>
     <string name="system_setting_hostname_publish">Foillsich ainm an òstair agus na h-àrainnean do fhrithealaichean eile</string>
     <string name="system_setting_hostname">Ainm an òstair ga fhoillseachadh do fhrithealaichean eile</string>
     <string name="peer_name_unverified">%1$s (gun dearbhadh)</string>
     <string name="system_status_peer_id">ID seise</string>
     <string name="system_status_holepunch">Tolladh</string>
     <string name="system_status_holepunch_value">%1$d soirbheachail · %2$d dh’fhàillig</string>
+    <string name="system_status_awaiting_routing">Teachdaireachdan a’ feitheamh air slighe</string>
 </resources>

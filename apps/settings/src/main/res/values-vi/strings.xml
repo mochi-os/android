@@ -428,11 +428,12 @@
     <string name="system_status_relay">Qua relay</string>
     <string name="system_status_mesh">Lưới phát sóng</string>
     <string name="system_status_broadcast">Bản phát gần nhất</string>
-    <string name="system_status_queued_broadcasts">Bản phát trong hàng đợi</string>
+    <string name="system_status_queued_broadcasts">Tin nhắn quảng bá trong hàng đợi</string>
     <string name="system_setting_hostname_publish">Thông báo tên máy chủ và các miền cho máy chủ khác</string>
     <string name="system_setting_hostname">Tên máy chủ được thông báo cho máy chủ khác</string>
     <string name="peer_name_unverified">%1$s (chưa xác minh)</string>
     <string name="system_status_peer_id">ID đồng đẳng</string>
     <string name="system_status_holepunch">Đục lỗ</string>
     <string name="system_status_holepunch_value">%1$d thành công · %2$d thất bại</string>
+    <string name="system_status_awaiting_routing">Tin nhắn đang chờ định tuyến</string>
 </resources>

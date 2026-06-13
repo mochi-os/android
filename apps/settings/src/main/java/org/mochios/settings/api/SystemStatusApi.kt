@@ -57,6 +57,7 @@ data class NetworkInfo(
     val mesh: Int = 0,
     val last: Long = 0,
     val queued: Int = 0,
+    val unresolved: Int = 0,
     val holepunch: HolePunch = HolePunch(),
 )
 

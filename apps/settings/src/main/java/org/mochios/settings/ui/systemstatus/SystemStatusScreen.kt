@@ -173,6 +173,18 @@ fun SystemStatusScreen(
                                 ),
                             )
                         }
+                        StatusRow(
+                            label = stringResource(R.string.system_status_awaiting_routing),
+                            value = network.unresolved.toString(),
+                        )
+                        StatusRow(
+                            label = stringResource(R.string.system_status_peer_queued),
+                            value = state.peers.sumOf { it.queued }.toString(),
+                        )
+                        StatusRow(
+                            label = stringResource(R.string.system_status_queued_broadcasts),
+                            value = network.queued.toString(),
+                        )
                     }
                     val update = state.update
                     if (update != null && (update.available || update.pending.isNotBlank())) {
@@ -195,15 +207,11 @@ fun SystemStatusScreen(
                         val knownLabel = stringResource(R.string.system_status_known)
                         val connectedLabel = stringResource(R.string.system_status_peer_connected)
                         val meshLabel = stringResource(R.string.system_status_mesh)
-                        val queuedLabel = stringResource(R.string.system_status_peer_queued)
-                        val broadcastsLabel = stringResource(R.string.system_status_queued_broadcasts)
                         val totals = mutableListOf(
                             "$knownLabel ${state.peers.size}",
                             "$connectedLabel ${state.peers.count { it.connected }}",
                         )
                         state.network?.let { totals.add("$meshLabel ${it.mesh}") }
-                        totals.add("$queuedLabel ${state.peers.sumOf { it.queued }}")
-                        state.network?.let { totals.add("$broadcastsLabel ${it.queued}") }
                         Text(
                             text = totals.joinToString(" · "),
                             style = MaterialTheme.typography.bodySmall,
@@ -278,7 +286,7 @@ private fun StatusRow(
             text = label,
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.width(112.dp),
+            modifier = Modifier.width(192.dp),
         )
         Text(
             text = value,

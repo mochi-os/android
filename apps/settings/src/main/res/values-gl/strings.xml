@@ -429,11 +429,12 @@
     <string name="system_status_relay">Vía relay</string>
     <string name="system_status_mesh">Malla de difusión</string>
     <string name="system_status_broadcast">Última difusión</string>
-    <string name="system_status_queued_broadcasts">Difusións en cola</string>
+    <string name="system_status_queued_broadcasts">Mensaxes de difusión en cola</string>
     <string name="system_setting_hostname_publish">Anunciar o nome de host e os dominios a outros servidores</string>
     <string name="system_setting_hostname">Nome de host anunciado a outros servidores</string>
     <string name="peer_name_unverified">%1$s (sen verificar)</string>
     <string name="system_status_peer_id">ID de par</string>
     <string name="system_status_holepunch">Perforación</string>
     <string name="system_status_holepunch_value">%1$d con éxito · %2$d fallidas</string>
+    <string name="system_status_awaiting_routing">Mensaxes á espera de encamiñamento</string>
 </resources>
