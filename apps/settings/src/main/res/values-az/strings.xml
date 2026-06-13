@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">Digər serverlərə bildirilən host adı</string>
     <string name="peer_name_unverified">%1$s (təsdiqlənməmiş)</string>
     <string name="system_status_peer_id">Tay ID-si</string>
+    <string name="system_status_holepunch">Deşik açma</string>
+    <string name="system_status_holepunch_value">%1$d uğurlu · %2$d uğursuz</string>
 </resources>

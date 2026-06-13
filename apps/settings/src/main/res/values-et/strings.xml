@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">Teistele serveritele teatatud hostinimi</string>
     <string name="peer_name_unverified">%1$s (kinnitamata)</string>
     <string name="system_status_peer_id">Partneri ID</string>
+    <string name="system_status_holepunch">Augustamine</string>
+    <string name="system_status_holepunch_value">%1$d õnnestus · %2$d ebaõnnestus</string>
 </resources>

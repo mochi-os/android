@@ -433,4 +433,6 @@
     <string name="system_setting_hostname">Номи ҳости ба серверҳои дигар эълоншуда</string>
     <string name="peer_name_unverified">%1$s (тасдиқнашуда)</string>
     <string name="system_status_peer_id">ID-и шарик</string>
+    <string name="system_status_holepunch">Сӯрохкунӣ</string>
+    <string name="system_status_holepunch_value">%1$d муваффақ · %2$d ноком</string>
 </resources>

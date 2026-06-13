@@ -433,4 +433,6 @@
     <string name="system_setting_hostname">다른 서버에 알리는 호스트 이름</string>
     <string name="peer_name_unverified">%1$s (미확인)</string>
     <string name="system_status_peer_id">피어 ID</string>
+    <string name="system_status_holepunch">홀 펀치</string>
+    <string name="system_status_holepunch_value">%1$d 성공 · %2$d 실패</string>
 </resources>

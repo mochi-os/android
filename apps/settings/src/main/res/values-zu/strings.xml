@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">Igama lomsingathi elimenyezelwe kwamanye amaseva</string>
     <string name="peer_name_unverified">%1$s (akuqinisekisiwe)</string>
     <string name="system_status_peer_id">I-ID yontanga</string>
+    <string name="system_status_holepunch">Ukubhoboza</string>
+    <string name="system_status_holepunch_value">%1$d kuphumelele · %2$d kuhlulekile</string>
 </resources>

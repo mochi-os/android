@@ -163,6 +163,16 @@ fun SystemStatusScreen(
                                 valueMono = true,
                             )
                         }
+                        if (network.holepunch.success + network.holepunch.failure > 0) {
+                            StatusRow(
+                                label = stringResource(R.string.system_status_holepunch),
+                                value = stringResource(
+                                    R.string.system_status_holepunch_value,
+                                    network.holepunch.success,
+                                    network.holepunch.failure,
+                                ),
+                            )
+                        }
                     }
                     val update = state.update
                     if (update != null && (update.available || update.pending.isNotBlank())) {

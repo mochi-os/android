@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">სხვა სერვერებისთვის გამოცხადებული ჰოსტის სახელი</string>
     <string name="peer_name_unverified">%1$s (გადაუმოწმებელი)</string>
     <string name="system_status_peer_id">თანატოლის ID</string>
+    <string name="system_status_holepunch">გახვრეტა</string>
+    <string name="system_status_holepunch_value">%1$d წარმატებული · %2$d ჩაიშალა</string>
 </resources>

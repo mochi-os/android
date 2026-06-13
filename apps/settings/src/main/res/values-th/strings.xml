@@ -433,4 +433,6 @@
     <string name="system_setting_hostname">ชื่อโฮสต์ที่ประกาศไปยังเซิร์ฟเวอร์อื่น</string>
     <string name="peer_name_unverified">%1$s (ยังไม่ยืนยัน)</string>
     <string name="system_status_peer_id">ID เพียร์</string>
+    <string name="system_status_holepunch">การเจาะรู</string>
+    <string name="system_status_holepunch_value">%1$d สำเร็จ · %2$d ล้มเหลว</string>
 </resources>

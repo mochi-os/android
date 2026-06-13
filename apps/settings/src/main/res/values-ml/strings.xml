@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">മറ്റ് സെർവറുകളെ അറിയിച്ച ഹോസ്റ്റ്നാമം</string>
     <string name="peer_name_unverified">%1$s (പരിശോധിച്ചിട്ടില്ല)</string>
     <string name="system_status_peer_id">പിയർ ID</string>
+    <string name="system_status_holepunch">ഹോൾ പഞ്ച്</string>
+    <string name="system_status_holepunch_value">%1$d വിജയിച്ചു · %2$d പരാജയപ്പെട്ടു</string>
 </resources>

@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">பிற சேவையகங்களுக்கு அறிவிக்கப்பட்ட ஹோஸ்ட் பெயர்</string>
     <string name="peer_name_unverified">%1$s (சரிபார்க்கப்படாதது)</string>
     <string name="system_status_peer_id">சக ID</string>
+    <string name="system_status_holepunch">துளையிடல்</string>
+    <string name="system_status_holepunch_value">%1$d வெற்றி · %2$d தோல்வி</string>
 </resources>

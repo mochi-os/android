@@ -435,4 +435,6 @@
     <string name="system_setting_hostname">Nom d\'hôte annoncé aux autres serveurs</string>
     <string name="peer_name_unverified">%1$s (non vérifié)</string>
     <string name="system_status_peer_id">ID de pair</string>
+    <string name="system_status_holepunch">Perçage</string>
+    <string name="system_status_holepunch_value">%1$d réussis · %2$d échoués</string>
 </resources>

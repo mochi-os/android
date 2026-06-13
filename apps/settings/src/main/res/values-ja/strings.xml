@@ -433,4 +433,6 @@
     <string name="system_setting_hostname">他のサーバーに通知されるホスト名</string>
     <string name="peer_name_unverified">%1$s (未検証)</string>
     <string name="system_status_peer_id">ピア ID</string>
+    <string name="system_status_holepunch">ホールパンチ</string>
+    <string name="system_status_holepunch_value">%1$d 成功 · %2$d 失敗</string>
 </resources>

@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">ٻين سرورن کي اعلان ڪيل هوسٽ جو نالو</string>
     <string name="peer_name_unverified">%1$s (غير تصديق ٿيل)</string>
     <string name="system_status_peer_id">ساٿي جي سڃاڻپ</string>
+    <string name="system_status_holepunch">سوراخ ڪرڻ</string>
+    <string name="system_status_holepunch_value">%1$d ڪامياب · %2$d ناڪام</string>
 </resources>

@@ -435,4 +435,6 @@
     <string name="system_setting_hostname">Ime hosta objavljeno drugim serverima</string>
     <string name="peer_name_unverified">%1$s (neprovjereno)</string>
     <string name="system_status_peer_id">ID parnjaka</string>
+    <string name="system_status_holepunch">Probijanje</string>
+    <string name="system_status_holepunch_value">%1$d uspješno · %2$d neuspješno</string>
 </resources>

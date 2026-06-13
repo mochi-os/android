@@ -433,4 +433,6 @@
     <string name="system_setting_hostname">Orúkọ agbàlejò tí a kéde sí àwọn olupin míràn</string>
     <string name="peer_name_unverified">%1$s (kò tíì jẹ́rìí sí)</string>
     <string name="system_status_peer_id">ID alábàákẹ́gbẹ́</string>
+    <string name="system_status_holepunch">Lilu iho</string>
+    <string name="system_status_holepunch_value">%1$d  aṣeyọrí · %2$d kùnà</string>
 </resources>

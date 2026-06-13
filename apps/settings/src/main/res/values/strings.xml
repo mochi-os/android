@@ -291,6 +291,8 @@
     <string name="system_status_relay">Via relay</string>
     <string name="system_status_mesh">Broadcast mesh</string>
     <string name="system_status_broadcast">Last broadcast</string>
+    <string name="system_status_holepunch">Hole punch</string>
+    <string name="system_status_holepunch_value">%1$d succeeded · %2$d failed</string>
     <string name="system_status_queued_broadcasts">Queued broadcasts</string>
 
     <!-- Connected accounts -->

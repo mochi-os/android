@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">Muille palvelimille ilmoitettu isäntänimi</string>
     <string name="peer_name_unverified">%1$s (vahvistamaton)</string>
     <string name="system_status_peer_id">Vertaistunnus</string>
+    <string name="system_status_holepunch">Reiän puhkaisu</string>
+    <string name="system_status_holepunch_value">%1$d onnistui · %2$d epäonnistui</string>
 </resources>

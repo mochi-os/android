@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">Башка серверлерге жарыяланган хост аты</string>
     <string name="peer_name_unverified">%1$s (текшерилген эмес)</string>
     <string name="system_status_peer_id">Теңтуш ID</string>
+    <string name="system_status_holepunch">Тешүү</string>
+    <string name="system_status_holepunch_value">%1$d ийгиликтүү · %2$d ишке ашкан жок</string>
 </resources>

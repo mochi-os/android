@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">نورو سرورونو ته اعلان شوی د کوربه نوم</string>
     <string name="peer_name_unverified">%1$s (نه تایید شوی)</string>
     <string name="system_status_peer_id">د همتا پېژند</string>
+    <string name="system_status_holepunch">سوری کول</string>
+    <string name="system_status_holepunch_value">%1$d بریالي · %2$d ناکام</string>
 </resources>

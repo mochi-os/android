@@ -437,4 +437,6 @@
     <string name="system_setting_hostname">Isem il-host imħabbar lil servers oħra</string>
     <string name="peer_name_unverified">%1$s (mhux verifikat)</string>
     <string name="system_status_peer_id">ID tas-sieħeb</string>
+    <string name="system_status_holepunch">Titqib</string>
+    <string name="system_status_holepunch_value">%1$d irnexxa · %2$d falla</string>
 </resources>

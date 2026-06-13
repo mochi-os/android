@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">ਹੋਰ ਸਰਵਰਾਂ ਨੂੰ ਐਲਾਨਿਆ ਹੋਸਟਨੇਮ</string>
     <string name="peer_name_unverified">%1$s (ਅਣ-ਤਸਦੀਕਸ਼ੁਦਾ)</string>
     <string name="system_status_peer_id">ਪੀਅਰ ID</string>
+    <string name="system_status_holepunch">ਹੋਲ ਪੰਚ</string>
+    <string name="system_status_holepunch_value">%1$d ਸਫਲ · %2$d ਅਸਫਲ</string>
 </resources>

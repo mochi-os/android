@@ -436,4 +436,6 @@
     <string name="system_setting_hostname">Názov hostiteľa oznamovaný ostatným serverom</string>
     <string name="peer_name_unverified">%1$s (neoverené)</string>
     <string name="system_status_peer_id">ID partnera</string>
+    <string name="system_status_holepunch">Prerazenie</string>
+    <string name="system_status_holepunch_value">%1$d úspešných · %2$d neúspešných</string>
 </resources>

@@ -433,4 +433,6 @@
     <string name="system_setting_hostname">Nama host yang diumumkan ke server lain</string>
     <string name="peer_name_unverified">%1$s (belum terverifikasi)</string>
     <string name="system_status_peer_id">ID peer</string>
+    <string name="system_status_holepunch">Penembusan</string>
+    <string name="system_status_holepunch_value">%1$d berhasil · %2$d gagal</string>
 </resources>

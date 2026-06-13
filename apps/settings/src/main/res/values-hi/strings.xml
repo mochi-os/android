@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">अन्य सर्वरों को घोषित होस्टनेम</string>
     <string name="peer_name_unverified">%1$s (असत्यापित)</string>
     <string name="system_status_peer_id">पीयर आईडी</string>
+    <string name="system_status_holepunch">होल पंच</string>
+    <string name="system_status_holepunch_value">%1$d सफल · %2$d विफल</string>
 </resources>

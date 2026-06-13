@@ -434,4 +434,6 @@
     <string name="system_setting_hostname">Emri i hostit i njoftuar te serverët e tjerë</string>
     <string name="peer_name_unverified">%1$s (i paverifikuar)</string>
     <string name="system_status_peer_id">ID e palës</string>
+    <string name="system_status_holepunch">Shpim</string>
+    <string name="system_status_holepunch_value">%1$d të suksesshme · %2$d të dështuara</string>
 </resources>

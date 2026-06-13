@@ -46,12 +46,18 @@ data class PeerEntry(
     val oldest: Long = 0,
 )
 
+data class HolePunch(
+    val success: Int = 0,
+    val failure: Int = 0,
+)
+
 data class NetworkInfo(
     val reachability: String = "",
     val relay: Boolean = false,
     val mesh: Int = 0,
     val last: Long = 0,
     val queued: Int = 0,
+    val holepunch: HolePunch = HolePunch(),
 )
 
 data class ServerCounts(

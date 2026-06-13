@@ -436,4 +436,6 @@
     <string name="system_setting_hostname">Имя хоста, объявляемое другим серверам</string>
     <string name="peer_name_unverified">%1$s (не подтверждено)</string>
     <string name="system_status_peer_id">ID пира</string>
+    <string name="system_status_holepunch">Пробивание</string>
+    <string name="system_status_holepunch_value">%1$d успешно · %2$d неудачно</string>
 </resources>
