@@ -17,8 +17,12 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Link
+import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
+import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -350,6 +354,19 @@ private fun SetupCard(
                         enabled = !state.activating,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
+                        if (state.activating) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(ButtonDefaults.IconSize),
+                                strokeWidth = 2.dp,
+                            )
+                        } else {
+                            Icon(
+                                Icons.Default.Storefront,
+                                contentDescription = null,
+                                modifier = Modifier.size(ButtonDefaults.IconSize),
+                            )
+                        }
+                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                         Text(
                             if (state.activating) {
                                 stringResource(R.string.market_seller_activating)
@@ -364,6 +381,12 @@ private fun SetupCard(
                         onClick = onDashboard,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
+                        Icon(
+                            Icons.Default.OpenInNew,
+                            contentDescription = null,
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
+                        )
+                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                         Text(
                             if (state.isOnboarded) {
                                 stringResource(R.string.market_seller_manage_stripe)
@@ -379,6 +402,19 @@ private fun SetupCard(
                         enabled = !state.connecting,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
+                        if (state.connecting) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(ButtonDefaults.IconSize),
+                                strokeWidth = 2.dp,
+                            )
+                        } else {
+                            Icon(
+                                Icons.Default.Link,
+                                contentDescription = null,
+                                modifier = Modifier.size(ButtonDefaults.IconSize),
+                            )
+                        }
+                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                         Text(
                             if (state.connecting) {
                                 stringResource(R.string.market_seller_connecting)

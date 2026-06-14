@@ -22,12 +22,15 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -212,6 +215,8 @@ private fun ErrorBlock(padding: PaddingValues, onRetry: () -> Unit) {
         )
         Spacer(Modifier.height(12.dp))
         Button(onClick = onRetry) {
+            Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.people_profile_retry))
         }
     }
@@ -506,6 +511,12 @@ private fun NameSection(
                 },
                 enabled = dirty && !state.isSaving,
             ) {
+                if (state.isSaving) {
+                    CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                } else {
+                    Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                }
+                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                 Text(
                     if (state.isSaving) stringResource(R.string.people_profile_saving)
                     else stringResource(R.string.people_profile_save),
@@ -569,6 +580,12 @@ private fun BioSection(
                 onClick = { viewModel.saveBio() },
                 enabled = dirty && !tooLong && !state.isSaving,
             ) {
+                if (state.isSaving) {
+                    CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                } else {
+                    Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                }
+                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                 Text(
                     if (state.isSaving) stringResource(R.string.people_profile_saving)
                     else stringResource(R.string.people_profile_save),

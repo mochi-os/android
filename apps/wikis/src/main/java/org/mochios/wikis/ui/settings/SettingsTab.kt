@@ -323,6 +323,12 @@ private fun HomePageSection(
                     onClick = { onSave(value) },
                     enabled = hasChanges && !isSaving,
                 ) {
+                    if (isSaving) {
+                        CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                    } else {
+                        Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                    }
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                     Text(stringResource(R.string.wikis_settings_home_save))
                 }
             }

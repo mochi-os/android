@@ -21,6 +21,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -194,6 +195,19 @@ private fun SubscriptionBody(
             enabled = !submitting,
             modifier = Modifier.fillMaxWidth().height(48.dp),
         ) {
+            if (submitting) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                    strokeWidth = 2.dp,
+                )
+            } else {
+                Icon(
+                    Icons.Default.ShoppingCart,
+                    contentDescription = null,
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                )
+            }
+            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(
                 if (submitting) stringResource(R.string.market_checkout_subscribing)
                 else stringResource(R.string.market_checkout_subscribe_button),
@@ -276,6 +290,19 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
             enabled = state.delivery != null && !state.submitting,
             modifier = Modifier.fillMaxWidth().height(48.dp),
         ) {
+            if (state.submitting) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                    strokeWidth = 2.dp,
+                )
+            } else {
+                Icon(
+                    Icons.Default.ShoppingCart,
+                    contentDescription = null,
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                )
+            }
+            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(
                 when {
                     state.submitting -> stringResource(R.string.market_checkout_processing)
