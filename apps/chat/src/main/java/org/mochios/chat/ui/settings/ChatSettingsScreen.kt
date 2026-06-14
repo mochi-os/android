@@ -49,6 +49,7 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
+import org.mochios.chat.model.ChatStatus
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -139,7 +140,7 @@ fun ChatSettingsScreen(
                                 style = MaterialTheme.typography.titleMedium,
                                 modifier = Modifier.weight(1f),
                             )
-                            if (uiState.chat.left == 0) {
+                            if (uiState.chat.status == ChatStatus.ACTIVE) {
                                 OutlinedButton(onClick = {
                                     viewModel.loadFriends()
                                     showAddMember = true
@@ -162,7 +163,7 @@ fun ChatSettingsScreen(
                             MemberRow(
                                 member = member,
                                 isMe = member.id == uiState.identity,
-                                canRemove = uiState.chat.left == 0 && member.id != uiState.identity,
+                                canRemove = uiState.chat.status == ChatStatus.ACTIVE && member.id != uiState.identity,
                                 serverUrl = viewModel.serverUrl,
                                 onRemove = { memberToRemove = member }
                             )
@@ -171,7 +172,7 @@ fun ChatSettingsScreen(
 
                     item {
                         Spacer(modifier = Modifier.height(16.dp))
-                        if (uiState.chat.left == 0) {
+                        if (uiState.chat.status == ChatStatus.ACTIVE) {
                             OutlinedButton(
                                 onClick = { showLeaveDialog = true },
                                 modifier = Modifier.fillMaxWidth()

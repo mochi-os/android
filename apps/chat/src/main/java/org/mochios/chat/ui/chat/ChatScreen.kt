@@ -80,6 +80,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.android.R as MochiR
@@ -391,7 +392,7 @@ private fun ChatContent(
                 value = draft,
                 onValueChange = { draft = it },
                 isSending = uiState.isSending,
-                enabled = uiState.chat.id.isNotEmpty() && uiState.chat.left == 0,
+                enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
                 pendingAttachments = uiState.pendingAttachments,
                 onAddAttachments = { viewModel.addAttachments(it) },
                 onRemoveAttachment = { viewModel.removeAttachment(it) },

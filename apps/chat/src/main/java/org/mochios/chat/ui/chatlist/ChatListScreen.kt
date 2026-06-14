@@ -66,6 +66,7 @@ import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.chat.R
 import org.mochios.chat.model.Chat
+import org.mochios.chat.model.ChatStatus
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -235,9 +236,9 @@ private fun ChatRow(
     val deleteLabel = stringResource(R.string.chat_settings_delete)
     val cancelLabel = stringResource(MochiR.string.common_cancel)
 
-    val subtitle = when (chat.left) {
-        2 -> stringResource(R.string.chat_list_removed_chat)
-        1 -> stringResource(R.string.chat_list_left_chat)
+    val subtitle = when (chat.status) {
+        ChatStatus.REMOVED -> stringResource(R.string.chat_list_removed_chat)
+        ChatStatus.LEFT -> stringResource(R.string.chat_list_left_chat)
         else -> null
     }
 
@@ -288,7 +289,7 @@ private fun ChatRow(
                     ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
                 }
             )
-            if (chat.left != 0) {
+            if (chat.status != ChatStatus.ACTIVE) {
                 DropdownMenuItem(
                     text = { Text(deleteLabel) },
                     leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null) },

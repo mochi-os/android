@@ -3,6 +3,16 @@ package org.mochios.chat.model
 import com.google.gson.annotations.SerializedName
 import org.mochios.android.model.Attachment
 
+// Chat status values mirrored from the server (chats.status). 'active' = current
+// member; 'left'/'removed' = departed but kept read-only; 'deleted' = hidden
+// tombstone (never sent in the chat list).
+object ChatStatus {
+    const val ACTIVE = "active"
+    const val LEFT = "left"
+    const val REMOVED = "removed"
+    const val DELETED = "deleted"
+}
+
 data class Chat(
     val id: String = "",
     val fingerprint: String = "",
@@ -12,7 +22,7 @@ data class Chat(
     val updated: Long = 0,
     val members: Int = 0,
     val other: String = "",
-    val left: Int = 0
+    val status: String = ChatStatus.ACTIVE
 )
 
 data class ChatMember(
@@ -28,7 +38,7 @@ data class ChatDetail(
     val name: String = "",
     val updated: Long = 0,
     val members: List<ChatMember> = emptyList(),
-    val left: Int = 0
+    val status: String = ChatStatus.ACTIVE
 )
 
 data class ChatViewResponse(
