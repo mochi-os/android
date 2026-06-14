@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Gatslátt</string>
     <string name="system_status_holepunch_value">%1$d tókst · %2$d mistókst</string>
     <string name="system_status_awaiting_routing">Skilaboð sem bíða leiðarvals</string>
+    <string name="system_status_relay_service">Endurvarpsþjónusta</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d frátektir · %3$d rásir · %4$d hafnað</string>
 </resources>

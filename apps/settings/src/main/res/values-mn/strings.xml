@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Нүхлэлт</string>
     <string name="system_status_holepunch_value">%1$d амжилттай · %2$d амжилтгүй</string>
     <string name="system_status_awaiting_routing">Чиглүүлэлт хүлээж буй мессежүүд</string>
+    <string name="system_status_relay_service">Дамжуулагч үйлчилгээ</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d захиалга · %3$d хэлхээ · %4$d татгалзсан</string>
 </resources>

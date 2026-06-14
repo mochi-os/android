@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">ہول پنچ</string>
     <string name="system_status_holepunch_value">%1$d کامیاب · %2$d ناکام</string>
     <string name="system_status_awaiting_routing">روٹنگ کے منتظر پیغامات</string>
+    <string name="system_status_relay_service">ریلے سروس</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d ریزرویشنز · %3$d سرکٹس · %4$d مسترد</string>
 </resources>

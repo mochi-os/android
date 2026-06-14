@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Lyukasztás</string>
     <string name="system_status_holepunch_value">%1$d sikeres · %2$d sikertelen</string>
     <string name="system_status_awaiting_routing">Útválasztásra váró üzenetek</string>
+    <string name="system_status_relay_service">Továbbító szolgáltatás</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d foglalások · %3$d áramkörök · %4$d elutasítva</string>
 </resources>

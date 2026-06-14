@@ -438,4 +438,6 @@
     <string name="system_status_holepunch">Пробивання</string>
     <string name="system_status_holepunch_value">%1$d успішно · %2$d невдало</string>
     <string name="system_status_awaiting_routing">Повідомлення, що очікують маршрутизації</string>
+    <string name="system_status_relay_service">Служба ретрансляції</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d резервування · %3$d ланцюги · %4$d відхилено</string>
 </resources>

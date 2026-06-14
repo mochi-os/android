@@ -438,4 +438,6 @@
     <string name="system_status_holepunch">Proražení</string>
     <string name="system_status_holepunch_value">%1$d úspěšných · %2$d neúspěšných</string>
     <string name="system_status_awaiting_routing">Zprávy čekající na směrování</string>
+    <string name="system_status_relay_service">Služba relé</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d rezervace · %3$d okruhy · %4$d odmítnuto</string>
 </resources>

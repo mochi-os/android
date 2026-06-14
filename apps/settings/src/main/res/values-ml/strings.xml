@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">ഹോൾ പഞ്ച്</string>
     <string name="system_status_holepunch_value">%1$d വിജയിച്ചു · %2$d പരാജയപ്പെട്ടു</string>
     <string name="system_status_awaiting_routing">റൂട്ടിങ്ങിനായി കാത്തിരിക്കുന്ന സന്ദേശങ്ങൾ</string>
+    <string name="system_status_relay_service">റിലേ സേവനം</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d റിസർവേഷനുകൾ · %3$d സർക്യൂട്ടുകൾ · %4$d നിരസിച്ചു</string>
 </resources>

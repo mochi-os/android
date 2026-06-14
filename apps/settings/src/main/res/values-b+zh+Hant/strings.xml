@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">打洞穿透</string>
     <string name="system_status_holepunch_value">%1$d 成功 · %2$d 失敗</string>
     <string name="system_status_awaiting_routing">等待路由的訊息</string>
+    <string name="system_status_relay_service">中繼服務</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d 預留 · %3$d 線路 · %4$d 拒絕</string>
 </resources>

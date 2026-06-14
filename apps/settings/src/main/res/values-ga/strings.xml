@@ -439,4 +439,6 @@
     <string name="system_status_holepunch">Tolladh</string>
     <string name="system_status_holepunch_value">%1$d rathúil · %2$d teipthe</string>
     <string name="system_status_awaiting_routing">Teachtaireachtaí ag fanacht le ródú</string>
+    <string name="system_status_relay_service">Seirbhís athsheachadáin</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d áirithintí · %3$d ciorcaid · %4$d diúltaithe</string>
 </resources>

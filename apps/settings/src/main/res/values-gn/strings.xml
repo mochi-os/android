@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">Hole punch</string>
     <string name="system_status_holepunch_value">%1$d osẽ porã · %2$d ndaikatúi</string>
     <string name="system_status_awaiting_routing">Marandu oha’arõva tape</string>
+    <string name="system_status_relay_service">Relay servicio</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d ñeñongatu · %3$d circuitos · %4$d ojejokóva</string>
 </resources>

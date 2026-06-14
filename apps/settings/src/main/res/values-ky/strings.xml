@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Тешүү</string>
     <string name="system_status_holepunch_value">%1$d ийгиликтүү · %2$d ишке ашкан жок</string>
     <string name="system_status_awaiting_routing">Багыттоону күтүп жаткан билдирүүлөр</string>
+    <string name="system_status_relay_service">Реле кызматы</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d брондоолор · %3$d чынжырлар · %4$d четке кагылды</string>
 </resources>

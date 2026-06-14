@@ -438,4 +438,6 @@
     <string name="system_status_holepunch">Przebijanie</string>
     <string name="system_status_holepunch_value">%1$d udanych · %2$d nieudanych</string>
     <string name="system_status_awaiting_routing">Wiadomości oczekujące na trasowanie</string>
+    <string name="system_status_relay_service">Usługa przekaźnika</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d rezerwacje · %3$d obwody · %4$d odrzucone</string>
 </resources>

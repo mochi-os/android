@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">การเจาะรู</string>
     <string name="system_status_holepunch_value">%1$d สำเร็จ · %2$d ล้มเหลว</string>
     <string name="system_status_awaiting_routing">ข้อความที่รอการกำหนดเส้นทาง</string>
+    <string name="system_status_relay_service">บริการรีเลย์</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d การจอง · %3$d วงจร · %4$d ถูกปฏิเสธ</string>
 </resources>

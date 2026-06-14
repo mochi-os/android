@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">Penembusan</string>
     <string name="system_status_holepunch_value">%1$d berjaya · %2$d gagal</string>
     <string name="system_status_awaiting_routing">Mesej menunggu penghalaan</string>
+    <string name="system_status_relay_service">Perkhidmatan geganti</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d tempahan · %3$d litar · %4$d ditolak</string>
 </resources>

@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Deşik açma</string>
     <string name="system_status_holepunch_value">%1$d şowly · %2$d şowsuz</string>
     <string name="system_status_awaiting_routing">Ugrukdyrylmaga garaşýan habarlar</string>
+    <string name="system_status_relay_service">Geçiriji hyzmaty</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d bronlar · %3$d zynjyrlar · %4$d ret edilen</string>
 </resources>

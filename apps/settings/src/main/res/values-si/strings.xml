@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">සිදුර විදීම</string>
     <string name="system_status_holepunch_value">%1$d සාර්ථකයි · %2$d අසාර්ථකයි</string>
     <string name="system_status_awaiting_routing">මාර්ගගත කිරීම සඳහා රැඳී සිටින පණිවිඩ</string>
+    <string name="system_status_relay_service">රිලේ සේවාව</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d වෙන්කිරීම් · %3$d පරිපථ · %4$d ප්‍රතික්ෂේපිත</string>
 </resources>

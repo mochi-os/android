@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Zulaketa</string>
     <string name="system_status_holepunch_value">%1$d ondo · %2$d huts</string>
     <string name="system_status_awaiting_routing">Bideratzearen zain dauden mezuak</string>
+    <string name="system_status_relay_service">Errele-zerbitzua</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d erreserbak · %3$d zirkuituak · %4$d ukatuak</string>
 </resources>

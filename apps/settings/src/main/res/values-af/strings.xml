@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Gaatjie-deurboor</string>
     <string name="system_status_holepunch_value">%1$d geslaag · %2$d misluk</string>
     <string name="system_status_awaiting_routing">Boodskappe wag op roetering</string>
+    <string name="system_status_relay_service">Relêdiens</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d reserverings · %3$d stroombane · %4$d geweier</string>
 </resources>

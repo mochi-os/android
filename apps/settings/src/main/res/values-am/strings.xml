@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">የጉድጓድ ምት</string>
     <string name="system_status_holepunch_value">%1$d ተሳክቷል · %2$d አልተሳካም</string>
     <string name="system_status_awaiting_routing">መልዕክቶች ለማስተላለፍ በመጠባበቅ ላይ</string>
+    <string name="system_status_relay_service">የማስተላለፊያ አገልግሎት</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d ቦታ ማስያዣ · %3$d ዙረቶች · %4$d ተከልክሏል</string>
 </resources>

@@ -411,4 +411,6 @@
     <string name="system_status_holepunch">Hole punch</string>
     <string name="system_status_holepunch_value">%1$d succeeded · %2$d failed</string>
     <string name="system_status_awaiting_routing">Messages awaiting routing</string>
+    <string name="system_status_relay_service">Relay service</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d reservations · %3$d circuits · %4$d refused</string>
 </resources>

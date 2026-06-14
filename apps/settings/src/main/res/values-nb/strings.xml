@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Hullslag</string>
     <string name="system_status_holepunch_value">%1$d vellykket · %2$d mislyktes</string>
     <string name="system_status_awaiting_routing">Meldinger som venter på ruting</string>
+    <string name="system_status_relay_service">Relétjeneste</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d reservasjoner · %3$d kretser · %4$d avvist</string>
 </resources>

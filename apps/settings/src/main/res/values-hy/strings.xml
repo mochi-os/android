@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Անցքի բացում</string>
     <string name="system_status_holepunch_value">%1$d հաջողված · %2$d ձախողված</string>
     <string name="system_status_awaiting_routing">Երթուղավորման սպասող հաղորդագրություններ</string>
+    <string name="system_status_relay_service">Փոխանցման ծառայություն</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d ամրագրումներ · %3$d շղթաներ · %4$d մերժված</string>
 </resources>

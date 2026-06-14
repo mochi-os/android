@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Augustamine</string>
     <string name="system_status_holepunch_value">%1$d õnnestus · %2$d ebaõnnestus</string>
     <string name="system_status_awaiting_routing">Marsruutimist ootavad sõnumid</string>
+    <string name="system_status_relay_service">Releeteenus</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d broneeringud · %3$d ahelad · %4$d tagasi lükatud</string>
 </resources>

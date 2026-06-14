@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Teshish</string>
     <string name="system_status_holepunch_value">%1$d muvaffaqiyatli · %2$d muvaffaqiyatsiz</string>
     <string name="system_status_awaiting_routing">Marshrutlashni kutayotgan xabarlar</string>
+    <string name="system_status_relay_service">Relay xizmati</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d bronlar · %3$d zanjirlar · %4$d rad etilgan</string>
 </resources>

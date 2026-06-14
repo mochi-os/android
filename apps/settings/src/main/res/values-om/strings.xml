@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Holee punch</string>
     <string name="system_status_holepunch_value">%1$d milkaa\'e · %2$d kufe</string>
     <string name="system_status_awaiting_routing">Ergaawwan daandii eeggachaa jiran</string>
+    <string name="system_status_relay_service">Tajaajila daddabarsaa</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d qabannoo · %3$d geengoo · %4$d didame</string>
 </resources>

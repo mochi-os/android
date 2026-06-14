@@ -440,4 +440,6 @@
     <string name="system_status_holepunch">اختراق NAT</string>
     <string name="system_status_holepunch_value">%1$d نجح · %2$d فشل</string>
     <string name="system_status_awaiting_routing">رسائل في انتظار التوجيه</string>
+    <string name="system_status_relay_service">خدمة الترحيل</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d حجوزات · %3$d دوائر · %4$d مرفوضة</string>
 </resources>

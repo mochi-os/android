@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Reiän puhkaisu</string>
     <string name="system_status_holepunch_value">%1$d onnistui · %2$d epäonnistui</string>
     <string name="system_status_awaiting_routing">Reititystä odottavat viestit</string>
+    <string name="system_status_relay_service">Välityspalvelu</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d varaukset · %3$d piirit · %4$d hylätty</string>
 </resources>

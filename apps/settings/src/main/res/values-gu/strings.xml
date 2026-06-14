@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">હોલ પંચ</string>
     <string name="system_status_holepunch_value">%1$d સફળ · %2$d નિષ્ફળ</string>
     <string name="system_status_awaiting_routing">રૂટિંગની રાહ જોતા સંદેશા</string>
+    <string name="system_status_relay_service">રિલે સેવા</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d આરક્ષણો · %3$d સર્કિટ · %4$d નકારેલ</string>
 </resources>

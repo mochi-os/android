@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Kutoboa</string>
     <string name="system_status_holepunch_value">%1$d zilifaulu · %2$d zilishindwa</string>
     <string name="system_status_awaiting_routing">Ujumbe unaosubiri uelekezaji</string>
+    <string name="system_status_relay_service">Huduma ya rele</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d uhifadhi · %3$d saketi · %4$d zilizokataliwa</string>
 </resources>

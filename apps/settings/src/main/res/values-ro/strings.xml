@@ -437,4 +437,6 @@
     <string name="system_status_holepunch">Perforare</string>
     <string name="system_status_holepunch_value">%1$d reușite · %2$d eșuate</string>
     <string name="system_status_awaiting_routing">Mesaje care așteaptă rutarea</string>
+    <string name="system_status_relay_service">Serviciu de releu</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d rezervări · %3$d circuite · %4$d respinse</string>
 </resources>

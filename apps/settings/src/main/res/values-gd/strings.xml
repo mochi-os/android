@@ -438,4 +438,6 @@
     <string name="system_status_holepunch">Tolladh</string>
     <string name="system_status_holepunch_value">%1$d soirbheachail · %2$d dh’fhàillig</string>
     <string name="system_status_awaiting_routing">Teachdaireachdan a’ feitheamh air slighe</string>
+    <string name="system_status_relay_service">Seirbheis ath-sheachadaidh</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d gleidheadh · %3$d cuairtean · %4$d air an diùltadh</string>
 </resources>

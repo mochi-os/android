@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">לאך-שלאג</string>
     <string name="system_status_holepunch_value">%1$d געלונגען · %2$d דורכגעפאלן</string>
     <string name="system_status_awaiting_routing">מעלדונגען וואָס ווארטן אויף ראוטינג</string>
+    <string name="system_status_relay_service">רעלע סערוויס</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d רעזערוואַציעס · %3$d סערקאַטס · %4$d אפגעזאגט</string>
 </resources>

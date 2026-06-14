@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">Đục lỗ</string>
     <string name="system_status_holepunch_value">%1$d thành công · %2$d thất bại</string>
     <string name="system_status_awaiting_routing">Tin nhắn đang chờ định tuyến</string>
+    <string name="system_status_relay_service">Dịch vụ chuyển tiếp</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d đặt chỗ · %3$d mạch · %4$d bị từ chối</string>
 </resources>

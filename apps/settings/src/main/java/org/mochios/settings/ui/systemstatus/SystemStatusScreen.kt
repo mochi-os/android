@@ -173,6 +173,18 @@ fun SystemStatusScreen(
                                 ),
                             )
                         }
+                        if (network.relaying.active) {
+                            StatusRow(
+                                label = stringResource(R.string.system_status_relay_service),
+                                value = stringResource(
+                                    R.string.system_status_relay_service_value,
+                                    network.relaying.reservations.held,
+                                    network.relaying.reservations.maximum,
+                                    network.relaying.circuits,
+                                    network.relaying.rejected,
+                                ),
+                            )
+                        }
                         StatusRow(
                             label = stringResource(R.string.system_status_awaiting_routing),
                             value = network.unresolved.toString(),

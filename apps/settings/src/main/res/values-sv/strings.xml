@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Hålslagning</string>
     <string name="system_status_holepunch_value">%1$d lyckades · %2$d misslyckades</string>
     <string name="system_status_awaiting_routing">Meddelanden som väntar på routing</string>
+    <string name="system_status_relay_service">Relätjänst</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d reservationer · %3$d kretsar · %4$d nekade</string>
 </resources>

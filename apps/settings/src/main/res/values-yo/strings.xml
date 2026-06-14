@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">Lilu iho</string>
     <string name="system_status_holepunch_value">%1$d  aṣeyọrí · %2$d kùnà</string>
     <string name="system_status_awaiting_routing">Àwọn iṣẹ́ tó ń dúró de ìpa-ọ̀nà</string>
+    <string name="system_status_relay_service">Iṣẹ́ àfisẹ́</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d àkọsílẹ̀ · %3$d àyíká · %4$d kọ̀</string>
 </resources>

@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">Сӯрохкунӣ</string>
     <string name="system_status_holepunch_value">%1$d муваффақ · %2$d ноком</string>
     <string name="system_status_awaiting_routing">Паёмҳои дар интизори масирёбӣ</string>
+    <string name="system_status_relay_service">Хидмати реле</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d захираҳо · %3$d занҷирҳо · %4$d рад шуд</string>
 </resources>

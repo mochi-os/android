@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">होल पंच</string>
     <string name="system_status_holepunch_value">%1$d सफल · %2$d विफल</string>
     <string name="system_status_awaiting_routing">रूटिंग के इंतजार में संदेश</string>
+    <string name="system_status_relay_service">रिले सेवा</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d आरक्षण · %3$d सर्किट · %4$d अस्वीकृत</string>
 </resources>

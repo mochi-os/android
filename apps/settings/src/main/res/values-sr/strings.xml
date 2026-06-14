@@ -437,4 +437,6 @@
     <string name="system_status_holepunch">Пробијање</string>
     <string name="system_status_holepunch_value">%1$d успешно · %2$d неуспешно</string>
     <string name="system_status_awaiting_routing">Поруке које чекају рутирање</string>
+    <string name="system_status_relay_service">Релејна услуга</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d резервације · %3$d кругови · %4$d одбијено</string>
 </resources>

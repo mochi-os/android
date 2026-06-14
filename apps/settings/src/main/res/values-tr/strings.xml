@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Delik açma</string>
     <string name="system_status_holepunch_value">%1$d başarılı · %2$d başarısız</string>
     <string name="system_status_awaiting_routing">Yönlendirme bekleyen mesajlar</string>
+    <string name="system_status_relay_service">Aktarma hizmeti</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d rezervasyonlar · %3$d devreler · %4$d reddedildi</string>
 </resources>

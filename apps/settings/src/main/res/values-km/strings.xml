@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">ការទម្លុះ</string>
     <string name="system_status_holepunch_value">%1$d បានជោគជ័យ · %2$d បានបរាជ័យ</string>
     <string name="system_status_awaiting_routing">សារកំពុងរង់ចាំការនាំផ្លូវ</string>
+    <string name="system_status_relay_service">សេវាបញ្ជូនបន្ត</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d ការកក់ · %3$d សៀគ្វី · %4$d បានបដិសេធ</string>
 </resources>

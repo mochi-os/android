@@ -435,4 +435,6 @@
     <string name="system_status_holepunch">ホールパンチ</string>
     <string name="system_status_holepunch_value">%1$d 成功 · %2$d 失敗</string>
     <string name="system_status_awaiting_routing">ルーティング待ちのメッセージ</string>
+    <string name="system_status_relay_service">リレーサービス</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d 予約 · %3$d 回線 · %4$d 拒否</string>
 </resources>

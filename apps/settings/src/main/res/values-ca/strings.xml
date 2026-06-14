@@ -437,4 +437,6 @@
     <string name="system_status_holepunch">Perforació</string>
     <string name="system_status_holepunch_value">%1$d amb èxit · %2$d fallits</string>
     <string name="system_status_awaiting_routing">Missatges a l\'espera d\'encaminament</string>
+    <string name="system_status_relay_service">Servei de repetidor</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d reserves · %3$d circuits · %4$d rebutjades</string>
 </resources>

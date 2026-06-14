@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Perforación</string>
     <string name="system_status_holepunch_value">%1$d con éxito · %2$d fallidas</string>
     <string name="system_status_awaiting_routing">Mensaxes á espera de encamiñamento</string>
+    <string name="system_status_relay_service">Servizo de repetidor</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuítos · %4$d rexeitadas</string>
 </resources>

@@ -426,4 +426,6 @@
     <string name="system_status_holepunch">Perçage</string>
     <string name="system_status_holepunch_value">%1$d réussis · %2$d échoués</string>
     <string name="system_status_awaiting_routing">Messages en attente de routage</string>
+    <string name="system_status_relay_service">Service de relais</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d réservations · %3$d circuits · %4$d refusés</string>
 </resources>

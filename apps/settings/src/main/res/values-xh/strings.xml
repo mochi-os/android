@@ -436,4 +436,6 @@
     <string name="system_status_holepunch">Ukuvula umngxuma</string>
     <string name="system_status_holepunch_value">%1$d kuphumelele · %2$d kusilele</string>
     <string name="system_status_awaiting_routing">Imiyalezo elindele ukucwangciswa kwendlela</string>
+    <string name="system_status_relay_service">Inkonzo yokudlulisa</string>
+    <string name="system_status_relay_service_value">%1$d / %2$d ukubhukisha · %3$d izakhelo · %4$d zaliwe</string>
 </resources>

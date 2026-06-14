@@ -50,6 +50,18 @@ data class HolePunch(
     val failure: Int = 0,
 )
 
+data class Reservations(
+    val held: Int = 0,
+    val maximum: Int = 0,
+)
+
+data class Relaying(
+    val active: Boolean = false,
+    val reservations: Reservations = Reservations(),
+    val circuits: Int = 0,
+    val rejected: Int = 0,
+)
+
 data class NetworkInfo(
     val reachability: String = "",
     val relay: Boolean = false,
@@ -58,6 +70,7 @@ data class NetworkInfo(
     val queued: Int = 0,
     val unresolved: Int = 0,
     val holepunch: HolePunch = HolePunch(),
+    val relaying: Relaying = Relaying(),
 )
 
 data class ServerCounts(
