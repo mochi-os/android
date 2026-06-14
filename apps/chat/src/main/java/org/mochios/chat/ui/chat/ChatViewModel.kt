@@ -16,6 +16,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -182,7 +183,7 @@ class ChatViewModel @Inject constructor(
                     }
                     ev == "removed" -> {
                         _uiState.value = _uiState.value.copy(
-                            chat = _uiState.value.chat.copy(left = 2)
+                            chat = _uiState.value.chat.copy(status = ChatStatus.REMOVED)
                         )
                     }
                     ev == "member/add" -> {
