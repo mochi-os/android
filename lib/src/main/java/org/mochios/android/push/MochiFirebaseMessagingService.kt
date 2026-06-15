@@ -24,9 +24,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import org.mochios.android.api.unwrapRaw
-import org.mochios.android.auth.TokenApi
-import org.mochios.android.auth.TokenRequest
+import org.mochios.android.auth.AuthRepository
 
 /**
  * Receives FCM messages and posts the system notification on the matching
@@ -73,7 +71,13 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
             try {
                 val deps = deps()
                 val server = deps.sessionManager().getServerUrlBlocking()
-                postPushRegisterFcm(deps.okHttpClient(), deps.tokenApi(), applicationContext, server, token)
+                postPushRegisterFcm(
+                    deps.okHttpClient(),
+                    deps.authRepository(),
+                    applicationContext,
+                    server,
+                    token
+                )
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to register FCM token with Mochi server: ${e.message}")
             }
@@ -89,21 +93,23 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
      */
     private suspend fun postPushRegisterFcm(
         client: OkHttpClient,
-        tokenApi: TokenApi,
+        authRepository: AuthRepository,
         context: Context,
         server: String,
         token: String,
     ) {
-        val appToken = runCatching {
-            tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
-        }.getOrNull() ?: return
+        val appToken =
+            authRepository.fetchToken("notifications").getOrNull() ?: return
         val installId = try {
             com.google.firebase.installations.FirebaseInstallations.getInstance().id
                 .let { task ->
                     com.google.android.gms.tasks.Tasks.await(task)
                 }
         } catch (e: Exception) {
-            Log.w(TAG, "Could not fetch Firebase Installations ID for FCM re-register: ${e.message}")
+            Log.w(
+                TAG,
+                "Could not fetch Firebase Installations ID for FCM re-register: ${e.message}"
+            )
             return
         }
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
