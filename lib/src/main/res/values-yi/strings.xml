@@ -65,6 +65,10 @@
     <string name="notifications_open">מעלדונגען</string>
     <string name="notifications_title">מעלדונגען</string>
     <string name="notifications_empty">קיין מעלדונגען</string>
+    <string name="notifications_empty_unread">איר האָט אַלץ געזען</string>
+    <string name="notifications_tab_unread">אומגעלייענט</string>
+    <string name="notifications_tab_unread_count">אומגעלייענט (%1$d)</string>
+    <string name="notifications_tab_all">אַלע</string>
     <string name="notifications_mark_all_read">צייכענען אַלץ געלייענט</string>
     <string name="notifications_clear_all">רייניקן אַלץ</string>
     <string name="notifications_loading">לאָדט…</string>

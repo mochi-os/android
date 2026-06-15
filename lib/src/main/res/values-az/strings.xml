@@ -65,6 +65,10 @@
     <string name="notifications_open">Bildirişlər</string>
     <string name="notifications_title">Bildirişlər</string>
     <string name="notifications_empty">Bildiriş yoxdur</string>
+    <string name="notifications_empty_unread">Hamısını oxudunuz</string>
+    <string name="notifications_tab_unread">Oxunmamış</string>
+    <string name="notifications_tab_unread_count">Oxunmamış (%1$d)</string>
+    <string name="notifications_tab_all">Hamısı</string>
     <string name="notifications_mark_all_read">Hamısını oxunmuş işarələ</string>
     <string name="notifications_clear_all">Hamısını təmizlə</string>
     <string name="notifications_loading">Yüklənir…</string>

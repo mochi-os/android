@@ -65,6 +65,10 @@
     <string name="notifications_open">Yatiyawinaka</string>
     <string name="notifications_title">Yatiyawinaka</string>
     <string name="notifications_empty">Jan yatiyawinak</string>
+    <string name="notifications_empty_unread">Taqi ullt\'awaytawa</string>
+    <string name="notifications_tab_unread">Jan ullt\'ata</string>
+    <string name="notifications_tab_unread_count">Jan ullt\'ata (%1$d)</string>
+    <string name="notifications_tab_all">Taqpacha</string>
     <string name="notifications_mark_all_read">Taqpach ullt\'ata uñacht\'ayaña</string>
     <string name="notifications_clear_all">Taqpach q\'umachaña</string>
     <string name="notifications_loading">Apaqaskiwa…</string>

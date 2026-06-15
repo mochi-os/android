@@ -65,6 +65,10 @@
     <string name="notifications_open">Ñehenói</string>
     <string name="notifications_title">Ñehenói</string>
     <string name="notifications_empty">Ndaipóri ñehenói</string>
+    <string name="notifications_empty_unread">Reñongatupáma</string>
+    <string name="notifications_tab_unread">Ñembohasa\'ỹva</string>
+    <string name="notifications_tab_unread_count">Ñembohasa\'ỹva (%1$d)</string>
+    <string name="notifications_tab_all">Opavave</string>
     <string name="notifications_mark_all_read">Ehecha pyre opavave</string>
     <string name="notifications_clear_all">Embopotĩ opaite</string>
     <string name="notifications_loading">Ojembogue…</string>

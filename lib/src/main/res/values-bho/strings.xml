@@ -65,6 +65,10 @@
     <string name="notifications_open">सूचना</string>
     <string name="notifications_title">सूचना</string>
     <string name="notifications_empty">कौनो सूचना नइखे</string>
+    <string name="notifications_empty_unread">सब पढ़ल हो गइल</string>
+    <string name="notifications_tab_unread">अनपढ़ल</string>
+    <string name="notifications_tab_unread_count">अनपढ़ल (%1$d)</string>
+    <string name="notifications_tab_all">सब</string>
     <string name="notifications_mark_all_read">सब पढ़ल चिह्नित करीं</string>
     <string name="notifications_clear_all">सब साफ करीं</string>
     <string name="notifications_loading">लोड हो रहल बा…</string>

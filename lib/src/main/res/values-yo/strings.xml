@@ -65,6 +65,10 @@
     <string name="notifications_open">Àwọn ìfìtọ́nisí</string>
     <string name="notifications_title">Àwọn ìfìtọ́nisí</string>
     <string name="notifications_empty">Kò sí ìfìtọ́nisí</string>
+    <string name="notifications_empty_unread">O ti ka gbogbo rẹ̀ tán</string>
+    <string name="notifications_tab_unread">Àìkà</string>
+    <string name="notifications_tab_unread_count">Àìkà (%1$d)</string>
+    <string name="notifications_tab_all">Gbogbo</string>
     <string name="notifications_mark_all_read">Sàmì sí gbogbo gẹ́gẹ́ bí kíkà</string>
     <string name="notifications_clear_all">Pa gbogbo rẹ̀ rẹ́</string>
     <string name="notifications_loading">Ń ṣí…</string>

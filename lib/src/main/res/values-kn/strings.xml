@@ -65,6 +65,10 @@
     <string name="notifications_open">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
     <string name="notifications_title">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
     <string name="notifications_empty">ಯಾವುದೇ ನೋಟಿಫಿಕೇಶನ್‌ಗಳಿಲ್ಲ</string>
+    <string name="notifications_empty_unread">ಎಲ್ಲವನ್ನೂ ನೋಡಿ ಆಗಿದೆ</string>
+    <string name="notifications_tab_unread">ಓದದಿರುವ</string>
+    <string name="notifications_tab_unread_count">ಓದದಿರುವ (%1$d)</string>
+    <string name="notifications_tab_all">ಎಲ್ಲಾ</string>
     <string name="notifications_mark_all_read">ಎಲ್ಲಾ ಓದಲಾಗಿದೆ ಎಂದು ಮಾರ್ಕ್ ಮಾಡಿ</string>
     <string name="notifications_clear_all">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="notifications_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>

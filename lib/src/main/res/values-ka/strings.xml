@@ -65,6 +65,10 @@
     <string name="notifications_open">შეტყობინებები</string>
     <string name="notifications_title">შეტყობინებები</string>
     <string name="notifications_empty">შეტყობინებები არ არის</string>
+    <string name="notifications_empty_unread">ყველაფერი წაკითხულია</string>
+    <string name="notifications_tab_unread">წაუკითხავი</string>
+    <string name="notifications_tab_unread_count">წაუკითხავი (%1$d)</string>
+    <string name="notifications_tab_all">ყველა</string>
     <string name="notifications_mark_all_read">ყველას წაკითხულად მონიშვნა</string>
     <string name="notifications_clear_all">ყველაფრის გასუფთავება</string>
     <string name="notifications_loading">იტვირთება…</string>

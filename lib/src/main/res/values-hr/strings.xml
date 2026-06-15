@@ -65,6 +65,10 @@
     <string name="notifications_open">Obavijesti</string>
     <string name="notifications_title">Obavijesti</string>
     <string name="notifications_empty">Nema obavijesti</string>
+    <string name="notifications_empty_unread">Sve ste pregledali</string>
+    <string name="notifications_tab_unread">Nepročitano</string>
+    <string name="notifications_tab_unread_count">Nepročitano (%1$d)</string>
+    <string name="notifications_tab_all">Sve</string>
     <string name="notifications_mark_all_read">Označi sve pročitano</string>
     <string name="notifications_clear_all">Očisti sve</string>
     <string name="notifications_loading">Učitavanje…</string>

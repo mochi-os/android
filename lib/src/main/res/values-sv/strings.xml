@@ -65,6 +65,10 @@
     <string name="notifications_open">Aviseringar</string>
     <string name="notifications_title">Aviseringar</string>
     <string name="notifications_empty">Inga aviseringar</string>
+    <string name="notifications_empty_unread">Du är ikapp</string>
+    <string name="notifications_tab_unread">Olästa</string>
+    <string name="notifications_tab_unread_count">Olästa (%1$d)</string>
+    <string name="notifications_tab_all">Alla</string>
     <string name="notifications_mark_all_read">Markera alla lästa</string>
     <string name="notifications_clear_all">Rensa allt</string>
     <string name="notifications_loading">Läser in…</string>

@@ -65,6 +65,10 @@
     <string name="notifications_open">Билдирмелер</string>
     <string name="notifications_title">Билдирмелер</string>
     <string name="notifications_empty">Билдирмелер жок</string>
+    <string name="notifications_empty_unread">Баары окулду</string>
+    <string name="notifications_tab_unread">Окулбаган</string>
+    <string name="notifications_tab_unread_count">Окулбаган (%1$d)</string>
+    <string name="notifications_tab_all">Баары</string>
     <string name="notifications_mark_all_read">Баарын окулду деп белгилөө</string>
     <string name="notifications_clear_all">Баарын тазалоо</string>
     <string name="notifications_loading">Жүктөлүүдө…</string>

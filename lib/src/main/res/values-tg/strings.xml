@@ -65,6 +65,10 @@
     <string name="notifications_open">Огоҳиномаҳо</string>
     <string name="notifications_title">Огоҳиномаҳо</string>
     <string name="notifications_empty">Ягон огоҳинома нест</string>
+    <string name="notifications_empty_unread">Шумо ҳамаро дидед</string>
+    <string name="notifications_tab_unread">Хонданашуда</string>
+    <string name="notifications_tab_unread_count">Хонданашуда (%1$d)</string>
+    <string name="notifications_tab_all">Ҳама</string>
     <string name="notifications_mark_all_read">Аломатгузории ҳама хондашуда</string>
     <string name="notifications_clear_all">Ҳамаро тоза кардан</string>
     <string name="notifications_loading">Бор карда мешавад…</string>

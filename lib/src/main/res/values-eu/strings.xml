@@ -65,6 +65,10 @@
     <string name="notifications_open">Jakinarazpenak</string>
     <string name="notifications_title">Jakinarazpenak</string>
     <string name="notifications_empty">Jakinarazpenik ez</string>
+    <string name="notifications_empty_unread">Egunean zaude</string>
+    <string name="notifications_tab_unread">Irakurri gabeak</string>
+    <string name="notifications_tab_unread_count">Irakurri gabeak (%1$d)</string>
+    <string name="notifications_tab_all">Guztiak</string>
     <string name="notifications_mark_all_read">Markatu denak irakurritzat</string>
     <string name="notifications_clear_all">Garbitu dena</string>
     <string name="notifications_loading">Kargatzen…</string>

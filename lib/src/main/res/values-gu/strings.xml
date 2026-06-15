@@ -65,6 +65,10 @@
     <string name="notifications_open">સૂચનાઓ</string>
     <string name="notifications_title">સૂચનાઓ</string>
     <string name="notifications_empty">કોઈ સૂચનાઓ નથી</string>
+    <string name="notifications_empty_unread">બધું જોવાઈ ગયું છે</string>
+    <string name="notifications_tab_unread">વાંચ્યા વગરની</string>
+    <string name="notifications_tab_unread_count">વાંચ્યા વગરની (%1$d)</string>
+    <string name="notifications_tab_all">બધી</string>
     <string name="notifications_mark_all_read">બધાને વાંચ્યા તરીકે માર્ક કરો</string>
     <string name="notifications_clear_all">બધું સાફ કરો</string>
     <string name="notifications_loading">લોડ થઈ રહ્યું છે…</string>

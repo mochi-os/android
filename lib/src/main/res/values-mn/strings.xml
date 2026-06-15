@@ -65,6 +65,10 @@
     <string name="notifications_open">Мэдэгдэл</string>
     <string name="notifications_title">Мэдэгдэл</string>
     <string name="notifications_empty">Мэдэгдэл алга</string>
+    <string name="notifications_empty_unread">Бүгдийг үзсэн</string>
+    <string name="notifications_tab_unread">Уншаагүй</string>
+    <string name="notifications_tab_unread_count">Уншаагүй (%1$d)</string>
+    <string name="notifications_tab_all">Бүгд</string>
     <string name="notifications_mark_all_read">Бүгдийг уншсан гэж тэмдэглэх</string>
     <string name="notifications_clear_all">Бүгдийг цэвэрлэх</string>
     <string name="notifications_loading">Ачаалж байна…</string>

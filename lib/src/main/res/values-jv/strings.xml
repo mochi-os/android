@@ -65,6 +65,10 @@
     <string name="notifications_open">Notifikasi</string>
     <string name="notifications_title">Notifikasi</string>
     <string name="notifications_empty">Ora ana notifikasi</string>
+    <string name="notifications_empty_unread">Kabèh wis diwaca</string>
+    <string name="notifications_tab_unread">Durung diwaca</string>
+    <string name="notifications_tab_unread_count">Durung diwaca (%1$d)</string>
+    <string name="notifications_tab_all">Kabèh</string>
     <string name="notifications_mark_all_read">Tandhani kabèh wis diwaca</string>
     <string name="notifications_clear_all">Resiki kabèh</string>
     <string name="notifications_loading">Mbukak…</string>

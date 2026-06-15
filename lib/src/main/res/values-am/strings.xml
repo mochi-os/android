@@ -65,6 +65,10 @@
     <string name="notifications_open">ማሳወቂያዎች</string>
     <string name="notifications_title">ማሳወቂያዎች</string>
     <string name="notifications_empty">ምንም ማሳወቂያዎች የሉም</string>
+    <string name="notifications_empty_unread">ሁሉንም አንብበዋል</string>
+    <string name="notifications_tab_unread">ያልተነበቡ</string>
+    <string name="notifications_tab_unread_count">ያልተነበቡ (%1$d)</string>
+    <string name="notifications_tab_all">ሁሉም</string>
     <string name="notifications_mark_all_read">ሁሉንም እንደተነበበ ምልክት አድርግ</string>
     <string name="notifications_clear_all">ሁሉንም አጽዳ</string>
     <string name="notifications_loading">በመጫን ላይ…</string>

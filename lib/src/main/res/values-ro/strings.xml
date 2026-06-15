@@ -65,6 +65,10 @@
     <string name="notifications_open">Notificări</string>
     <string name="notifications_title">Notificări</string>
     <string name="notifications_empty">Nicio notificare</string>
+    <string name="notifications_empty_unread">Ești la zi</string>
+    <string name="notifications_tab_unread">Necitite</string>
+    <string name="notifications_tab_unread_count">Necitite (%1$d)</string>
+    <string name="notifications_tab_all">Toate</string>
     <string name="notifications_mark_all_read">Marchează totul citit</string>
     <string name="notifications_clear_all">Golește tot</string>
     <string name="notifications_loading">Se încarcă…</string>

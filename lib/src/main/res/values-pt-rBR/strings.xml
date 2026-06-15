@@ -65,6 +65,10 @@
     <string name="notifications_open">Notificações</string>
     <string name="notifications_title">Notificações</string>
     <string name="notifications_empty">Sem notificações</string>
+    <string name="notifications_empty_unread">Você está em dia</string>
+    <string name="notifications_tab_unread">Não lidas</string>
+    <string name="notifications_tab_unread_count">Não lidas (%1$d)</string>
+    <string name="notifications_tab_all">Todas</string>
     <string name="notifications_mark_all_read">Marcar tudo como lido</string>
     <string name="notifications_clear_all">Limpar tudo</string>
     <string name="notifications_loading">Carregando…</string>

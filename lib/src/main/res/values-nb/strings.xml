@@ -65,6 +65,10 @@
     <string name="notifications_open">Varsler</string>
     <string name="notifications_title">Varsler</string>
     <string name="notifications_empty">Ingen varsler</string>
+    <string name="notifications_empty_unread">Du er ajour</string>
+    <string name="notifications_tab_unread">Uleste</string>
+    <string name="notifications_tab_unread_count">Uleste (%1$d)</string>
+    <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Merk alle som lest</string>
     <string name="notifications_clear_all">Tøm alt</string>
     <string name="notifications_loading">Laster …</string>

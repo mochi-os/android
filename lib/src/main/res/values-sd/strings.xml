@@ -65,6 +65,10 @@
     <string name="notifications_open">اطلاعون</string>
     <string name="notifications_title">اطلاعون</string>
     <string name="notifications_empty">ڪا اطلاع نه آهي</string>
+    <string name="notifications_empty_unread">سڀ ڪجهه پڙهي ورتو اٿوَ</string>
+    <string name="notifications_tab_unread">اڻ پڙهيل</string>
+    <string name="notifications_tab_unread_count">اڻ پڙهيل (%1$d)</string>
+    <string name="notifications_tab_all">سڀ</string>
     <string name="notifications_mark_all_read">سڀ پڙهيل نشانبر ڪريو</string>
     <string name="notifications_clear_all">سڀ صاف ڪريو</string>
     <string name="notifications_loading">لوڊ ٿي رهيو آهي…</string>

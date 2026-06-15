@@ -65,6 +65,10 @@
     <string name="notifications_open">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
     <string name="notifications_title">ਨੋਟੀਫਿਕੇਸ਼ਨ</string>
     <string name="notifications_empty">ਕੋਈ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ</string>
+    <string name="notifications_empty_unread">ਸਭ ਕੁਝ ਪੜ੍ਹ ਲਿਆ</string>
+    <string name="notifications_tab_unread">ਅਣਪੜ੍ਹੇ</string>
+    <string name="notifications_tab_unread_count">ਅਣਪੜ੍ਹੇ (%1$d)</string>
+    <string name="notifications_tab_all">ਸਾਰੇ</string>
     <string name="notifications_mark_all_read">ਸਾਰੇ ਪੜ੍ਹੇ ਮਾਰਕ ਕਰੋ</string>
     <string name="notifications_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
     <string name="notifications_loading">ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ (ਗ਼ਲਤੀਆਂ ਨਾਲ)</string>

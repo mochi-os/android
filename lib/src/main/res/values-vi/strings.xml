@@ -65,6 +65,10 @@
     <string name="notifications_open">Thông báo</string>
     <string name="notifications_title">Thông báo</string>
     <string name="notifications_empty">Không có thông báo</string>
+    <string name="notifications_empty_unread">Bạn đã xem hết</string>
+    <string name="notifications_tab_unread">Chưa đọc</string>
+    <string name="notifications_tab_unread_count">Chưa đọc (%1$d)</string>
+    <string name="notifications_tab_all">Tất cả</string>
     <string name="notifications_mark_all_read">Đánh dấu tất cả đã đọc</string>
     <string name="notifications_clear_all">Xóa tất cả</string>
     <string name="notifications_loading">Đang tải…</string>

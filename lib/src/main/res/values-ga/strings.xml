@@ -65,6 +65,10 @@
     <string name="notifications_open">Fógraí</string>
     <string name="notifications_title">Fógraí</string>
     <string name="notifications_empty">Níl aon fhógra</string>
+    <string name="notifications_empty_unread">Tá tú cothrom le dáta</string>
+    <string name="notifications_tab_unread">Gan léamh</string>
+    <string name="notifications_tab_unread_count">Gan léamh (%1$d)</string>
+    <string name="notifications_tab_all">Uile</string>
     <string name="notifications_mark_all_read">Marcáil gach rud léite</string>
     <string name="notifications_clear_all">Glan an t-iomlán</string>
     <string name="notifications_loading">Á luchtú…</string>

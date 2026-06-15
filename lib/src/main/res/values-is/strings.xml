@@ -65,6 +65,10 @@
     <string name="notifications_open">Tilkynningar</string>
     <string name="notifications_title">Tilkynningar</string>
     <string name="notifications_empty">Engar tilkynningar</string>
+    <string name="notifications_empty_unread">Allt lesið</string>
+    <string name="notifications_tab_unread">Ólesið</string>
+    <string name="notifications_tab_unread_count">Ólesið (%1$d)</string>
+    <string name="notifications_tab_all">Allt</string>
     <string name="notifications_mark_all_read">Merkja allt lesið</string>
     <string name="notifications_clear_all">Hreinsa allt</string>
     <string name="notifications_loading">Hleð…</string>

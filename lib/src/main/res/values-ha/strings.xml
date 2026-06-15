@@ -65,6 +65,10 @@
     <string name="notifications_open">Sanarwa</string>
     <string name="notifications_title">Sanarwa</string>
     <string name="notifications_empty">Babu sanarwa</string>
+    <string name="notifications_empty_unread">Ka cim komai</string>
+    <string name="notifications_tab_unread">Wadanda ba a karanta ba</string>
+    <string name="notifications_tab_unread_count">Wadanda ba a karanta ba (%1$d)</string>
+    <string name="notifications_tab_all">Duka</string>
     <string name="notifications_mark_all_read">Alama duka karanta</string>
     <string name="notifications_clear_all">Share duka</string>
     <string name="notifications_loading">Ana saukarwa…</string>

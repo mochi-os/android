@@ -65,6 +65,10 @@
     <string name="notifications_open">Bewara</string>
     <string name="notifications_title">Bewara</string>
     <string name="notifications_empty">Teu aya bewara</string>
+    <string name="notifications_empty_unread">Sadayana parantos kabaca</string>
+    <string name="notifications_tab_unread">Teu acan dibaca</string>
+    <string name="notifications_tab_unread_count">Teu acan dibaca (%1$d)</string>
+    <string name="notifications_tab_all">Sadaya</string>
     <string name="notifications_mark_all_read">Tandaan sadayana dibaca</string>
     <string name="notifications_clear_all">Bersihkeun sadaya</string>
     <string name="notifications_loading">Muat…</string>

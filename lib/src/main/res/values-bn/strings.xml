@@ -65,6 +65,10 @@
     <string name="notifications_open">বিজ্ঞপ্তি</string>
     <string name="notifications_title">বিজ্ঞপ্তি</string>
     <string name="notifications_empty">কোনো বিজ্ঞপ্তি নেই</string>
+    <string name="notifications_empty_unread">সব দেখা হয়ে গেছে</string>
+    <string name="notifications_tab_unread">অপঠিত</string>
+    <string name="notifications_tab_unread_count">অপঠিত (%1$d)</string>
+    <string name="notifications_tab_all">সব</string>
     <string name="notifications_mark_all_read">সব পঠিত হিসেবে চিহ্নিত করুন</string>
     <string name="notifications_clear_all">সব পরিষ্কার করুন</string>
     <string name="notifications_loading">লোড হচ্ছে…</string>

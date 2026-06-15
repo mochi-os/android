@@ -65,6 +65,10 @@
     <string name="notifications_open">Beeksisaalee</string>
     <string name="notifications_title">Beeksisaalee</string>
     <string name="notifications_empty">Beeksisaaleen hin jiran</string>
+    <string name="notifications_empty_unread">Hunda dubbiteerta</string>
+    <string name="notifications_tab_unread">Kan hin dubbatamne</string>
+    <string name="notifications_tab_unread_count">Kan hin dubbatamne (%1$d)</string>
+    <string name="notifications_tab_all">Hunda</string>
     <string name="notifications_mark_all_read">Hunda dubbifame</string>
     <string name="notifications_clear_all">Hunda cilliisi</string>
     <string name="notifications_loading">Fe\'aa jiraa…</string>

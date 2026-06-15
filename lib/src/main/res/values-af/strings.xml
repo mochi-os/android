@@ -65,6 +65,10 @@
     <string name="notifications_open">Kennisgewings</string>
     <string name="notifications_title">Kennisgewings</string>
     <string name="notifications_empty">Geen kennisgewings nie</string>
+    <string name="notifications_empty_unread">Jy\'s heeltemal op datum</string>
+    <string name="notifications_tab_unread">Ongelees</string>
+    <string name="notifications_tab_unread_count">Ongelees (%1$d)</string>
+    <string name="notifications_tab_all">Almal</string>
     <string name="notifications_mark_all_read">Merk alles gelees</string>
     <string name="notifications_clear_all">Maak alles skoon</string>
     <string name="notifications_loading">Laai…</string>

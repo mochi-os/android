@@ -237,6 +237,10 @@
     <string name="notifications_open">Notifications</string>
     <string name="notifications_title">Notifications</string>
     <string name="notifications_empty">No notifications</string>
+    <string name="notifications_empty_unread">You\'re all caught up</string>
+    <string name="notifications_tab_unread">Unread</string>
+    <string name="notifications_tab_unread_count">Unread (%1$d)</string>
+    <string name="notifications_tab_all">All</string>
     <string name="notifications_mark_all_read">Mark all read</string>
     <string name="notifications_clear_all">Clear all</string>
     <string name="notifications_clear_all_title">Clear all notifications?</string>
