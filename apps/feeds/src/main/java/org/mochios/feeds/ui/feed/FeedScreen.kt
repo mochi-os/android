@@ -217,6 +217,29 @@ fun FeedScreen(
     var addTagTarget by remember { mutableStateOf<String?>(null) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
+    // The pager addresses pages by integer index, but the posts list is
+    // replaced wholesale by background refreshes (the cache→network refresh on
+    // open, and websocket-driven refreshes), and relevance / AI / hot sorts
+    // re-rank server-side — so the same index can map to a different post after
+    // a refresh. Without anchoring that silently swaps the post under the
+    // reader about a second after it appears. We track the id of the post in
+    // view and, after any posts-list change, restore the pager to that post's
+    // new index. `suppressAnchorRestore` lets a manual refresh opt out (it
+    // intentionally returns to the top).
+    var anchorPostId by remember { mutableStateOf<String?>(null) }
+    var suppressAnchorRestore by remember { mutableStateOf(false) }
+    LaunchedEffect(posts) {
+        if (suppressAnchorRestore) {
+            suppressAnchorRestore = false
+            return@LaunchedEffect
+        }
+        val id = anchorPostId ?: return@LaunchedEffect
+        val index = posts.indexOfFirst { it.id == id }
+        if (index >= 0 && index != pagerState.currentPage) {
+            pagerState.scrollToPage(index)
+        }
+    }
+
     // Freeze guard for the page-flip overlay: if the pager ever comes to rest
     // at a fractional offset (an interrupted/incomplete settle), snap it to the
     // nearest page so the fold can't stay frozen mid-fold. Only fires once
@@ -243,6 +266,9 @@ fun FeedScreen(
             .distinctUntilChanged()
             .collectLatest { page ->
                 val current = posts.getOrNull(page) ?: return@collectLatest
+                // Remember which post the reader has settled on so a background
+                // refresh that reorders the list can keep them on it.
+                anchorPostId = current.id
                 viewModel.onPostBottomViewed(current.id)
                 // Prefetch the lazy og:image for the current page and its
                 // immediate neighbours so the picture is ready when the
@@ -367,6 +393,10 @@ fun FeedScreen(
                 },
                 actions = {
                     IconButton(onClick = {
+                        // A manual refresh intentionally returns to the top, so
+                        // don't let the anchor-restore effect pull the reader
+                        // back to the post they were on when the new list lands.
+                        suppressAnchorRestore = true
                         viewModel.refresh()
                         // Also jump back to the first post, so refresh both
                         // reloads and returns the user to the top of the feed.
@@ -508,7 +538,13 @@ fun FeedScreen(
     ) { paddingValues ->
         PullToRefreshBox(
             isRefreshing = isRefreshing,
-            onRefresh = { viewModel.refresh() },
+            onRefresh = {
+                // Pull-to-refresh is a deliberate "show me the latest" gesture
+                // from the top — let the new list settle at the top rather than
+                // anchor-restoring back to the previously-current post.
+                suppressAnchorRestore = true
+                viewModel.refresh()
+            },
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
