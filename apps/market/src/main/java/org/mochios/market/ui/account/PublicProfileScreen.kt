@@ -230,7 +230,11 @@ private fun ProfileBody(
             }
         } else {
             items(reviews, key = { it.id }) { review ->
-                ReviewCard(review = review, dateTimeText = format.formatDateTime(review.created))
+                ReviewCard(
+                    review = review,
+                    serverUrl = serverUrl,
+                    dateTimeText = format.formatDateTime(review.created),
+                )
             }
         }
 
@@ -408,23 +412,38 @@ private fun ProfileHeaderCard(
 }
 
 @Composable
-private fun ReviewCard(review: Review, dateTimeText: String) {
+private fun ReviewCard(review: Review, serverUrl: String, dateTimeText: String) {
+    val name = review.reviewerName.orEmpty().ifBlank { review.reviewer }
+    val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let {
+        "$serverUrl/market/-/user/$it/asset/avatar"
+    }
     ProfileCard {
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            RatingStars(
-                rating = review.rating.toFloat(),
-                showCount = false,
-                tint = RatingStarGold,
-            )
-            Text(
-                text = dateTimeText,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
+            EntityAvatar(name = name, src = avatarUrl, seed = review.reviewer, size = 28.dp)
+            Spacer(Modifier.width(8.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = name,
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    RatingStars(
+                        rating = review.rating.toFloat(),
+                        showCount = false,
+                        tint = RatingStarGold,
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text = dateTimeText,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
         }
         if (review.text.isNotBlank()) {
             Spacer(Modifier.height(8.dp))
