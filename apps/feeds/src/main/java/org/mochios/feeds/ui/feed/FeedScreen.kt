@@ -366,7 +366,12 @@ fun FeedScreen(
                     }
                 },
                 actions = {
-                    IconButton(onClick = { viewModel.refresh() }) {
+                    IconButton(onClick = {
+                        viewModel.refresh()
+                        // Also jump back to the first post, so refresh both
+                        // reloads and returns the user to the top of the feed.
+                        drawerScope.launch { pagerState.animateScrollToPage(0) }
+                    }) {
                         Icon(
                             Icons.Default.Refresh,
                             contentDescription = stringResource(R.string.feeds_refresh)
