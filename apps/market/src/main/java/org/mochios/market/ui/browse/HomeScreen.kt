@@ -78,6 +78,11 @@ import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.MarketSidebar
 
+// The "Browse categories" grid is hidden for now: with few listings it takes a
+// lot of vertical space for little value. Flip to `true` to bring it back once
+// listing volume grows. The category filter (filter sheet / pill) is unaffected.
+private const val SHOW_CATEGORY_BROWSER = false
+
 /**
  * Market landing / browse screen. Mirrors
  * `apps/market/web/src/routes/_authenticated/index.tsx` `BrowsePage`:
@@ -284,7 +289,7 @@ private fun HomeContent(
                 verticalArrangement = Arrangement.spacedBy(12.dp),
                 modifier = Modifier.fillMaxSize(),
             ) {
-                if (isColdStart && state.categories.isNotEmpty()) {
+                if (SHOW_CATEGORY_BROWSER && isColdStart && state.categories.isNotEmpty()) {
                     item(span = { GridItemSpan(maxLineSpan) }) {
                         Text(
                             text = stringResource(R.string.market_section_categories),
