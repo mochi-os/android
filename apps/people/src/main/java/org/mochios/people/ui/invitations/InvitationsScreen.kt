@@ -11,20 +11,18 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.PersonAddAlt
 import androidx.compose.material.icons.filled.PersonOff
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Badge
-import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -64,6 +62,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
+import org.mochios.people.ui.components.PeopleEmptyState
 import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.android.R as MochiR
@@ -210,29 +209,44 @@ fun InvitationsScreen(
                         }
                     }
                 }
-                else -> Column(
-                    modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+                received.isEmpty() && sent.isEmpty() -> InvitationsEmptyState(
+                    isSearching = uiState.searchQuery.isNotBlank(),
+                )
+                else -> LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(vertical = 12.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    StackedSectionHeader(
-                        text = stringResource(R.string.people_friends_received_tab),
-                        count = received.size,
-                    )
-                    ReceivedList(
-                        invites = received,
-                        serverUrl = serverUrl,
-                        onAccept = { viewModel.accept(it) },
-                        onDecline = { viewModel.decline(it) },
-                    )
-                    Spacer(Modifier.height(16.dp))
-                    StackedSectionHeader(
-                        text = stringResource(R.string.people_friends_sent_tab),
-                        count = sent.size,
-                    )
-                    SentList(
-                        invites = sent,
-                        serverUrl = serverUrl,
-                        onCancel = { viewModel.cancel(it) },
-                    )
+                    if (received.isNotEmpty()) {
+                        item {
+                            StackedSectionHeader(
+                                text = stringResource(R.string.people_friends_received_tab),
+                                count = received.size,
+                            )
+                        }
+                        receivedItems(
+                            invites = received,
+                            serverUrl = serverUrl,
+                            onAccept = viewModel::accept,
+                            onDecline = viewModel::decline,
+                        )
+                    }
+                    if (sent.isNotEmpty()) {
+                        if (received.isNotEmpty()) {
+                            item { Spacer(Modifier.height(16.dp)) }
+                        }
+                        item {
+                            StackedSectionHeader(
+                                text = stringResource(R.string.people_friends_sent_tab),
+                                count = sent.size,
+                            )
+                        }
+                        sentItems(
+                            invites = sent,
+                            serverUrl = serverUrl,
+                            onCancel = viewModel::cancel,
+                        )
+                    }
                 }
             }
         }
@@ -251,73 +265,47 @@ fun InvitationsScreen(
 
 @Composable
 private fun StackedSectionHeader(text: String, count: Int) {
-    Row(
+    Text(
+        text = "$text ($count)",
+        style = MaterialTheme.typography.titleSmall,
+        fontWeight = FontWeight.SemiBold,
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(
-            text,
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.weight(1f),
-        )
-        if (count > 0) {
-            Badge { Text(count.toString()) }
-        }
-    }
+    )
 }
 
-@Composable
-private fun ReceivedList(
+// Both sections live in a single parent LazyColumn so there is exactly one
+// scroll container — nesting a LazyColumn inside a verticalScroll'd Column
+// crashes with an infinite height constraint. Keys are prefixed per section so
+// a received and a sent invite sharing an id can't collide.
+private fun LazyListScope.receivedItems(
     invites: List<FriendInvite>,
     serverUrl: String,
     onAccept: (FriendInvite) -> Unit,
     onDecline: (FriendInvite) -> Unit,
 ) {
-    if (invites.isEmpty()) {
-        EmptyInvitations()
-        return
-    }
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        items(invites, key = { it.id }) { invite ->
-            ReceivedRow(
-                invite = invite,
-                serverUrl = serverUrl,
-                onAccept = { onAccept(invite) },
-                onDecline = { onDecline(invite) },
-            )
-        }
+    items(invites, key = { invite -> "received-${invite.id}" }) { invite ->
+        ReceivedRow(
+            invite = invite,
+            serverUrl = serverUrl,
+            onAccept = { onAccept(invite) },
+            onDecline = { onDecline(invite) },
+        )
     }
 }
 
-@Composable
-private fun SentList(
+private fun LazyListScope.sentItems(
     invites: List<FriendInvite>,
     serverUrl: String,
     onCancel: (FriendInvite) -> Unit,
 ) {
-    if (invites.isEmpty()) {
-        EmptyInvitations()
-        return
-    }
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        items(invites, key = { it.id }) { invite ->
-            SentRow(
-                invite = invite,
-                serverUrl = serverUrl,
-                onCancel = { onCancel(invite) },
-            )
-        }
+    items(invites, key = { invite -> "sent-${invite.id}" }) { invite ->
+        SentRow(
+            invite = invite,
+            serverUrl = serverUrl,
+            onCancel = { onCancel(invite) },
+        )
     }
 }
 
@@ -332,7 +320,7 @@ private fun ReceivedRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 4.dp, vertical = 8.dp),
+            .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
@@ -377,7 +365,7 @@ private fun SentRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 4.dp, vertical = 8.dp),
+            .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
@@ -410,18 +398,25 @@ private fun SentRow(
     }
 }
 
+// Full-screen empty state shown when both received and sent sections are empty.
+// When a search is active the hint switches to a "try adjusting your search"
+// prompt.
 @Composable
-private fun EmptyInvitations() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = stringResource(R.string.people_invitations_empty),
-            style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-    }
+private fun InvitationsEmptyState(isSearching: Boolean) {
+    PeopleEmptyState(
+        icon = Icons.Default.PersonAddAlt,
+        title = stringResource(R.string.people_invitations_empty),
+        subtitle = stringResource(
+            if (isSearching) {
+                R.string.people_friends_try_adjusting
+            } else {
+                R.string.people_invitations_empty_hint
+            },
+        ),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(top = 64.dp),
+    )
 }
 
 @Composable

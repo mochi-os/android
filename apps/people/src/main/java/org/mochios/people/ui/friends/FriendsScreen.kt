@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -20,11 +19,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Chat
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonRemove
 import androidx.compose.material.icons.filled.Search
@@ -69,6 +68,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.people.R
 import org.mochios.people.model.Friend
+import org.mochios.people.ui.components.PeopleEmptyState
 import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.android.R as MochiR
@@ -367,30 +367,16 @@ private fun FriendsContent(
 
 @Composable
 private fun EmptyFriendsHint(searchQuery: String) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(top = 64.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(
-                text = stringResource(R.string.people_friends_empty),
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = if (searchQuery.isNotBlank()) {
-                    stringResource(R.string.people_friends_try_adjusting)
-                } else {
-                    stringResource(R.string.people_friends_add_to_start)
-                },
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-    }
+    PeopleEmptyState(
+        icon = Icons.Default.Group,
+        title = stringResource(R.string.people_friends_empty),
+        subtitle = if (searchQuery.isNotBlank()) {
+            stringResource(R.string.people_friends_try_adjusting)
+        } else {
+            stringResource(R.string.people_friends_add_to_start)
+        },
+        modifier = Modifier.padding(top = 64.dp),
+    )
 }
 
 @Composable
