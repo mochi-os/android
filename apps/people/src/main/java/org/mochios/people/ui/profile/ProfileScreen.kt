@@ -34,7 +34,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
@@ -67,7 +66,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -79,7 +77,6 @@ import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
-import org.mochios.android.R as MochiR
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.ui.components.PeopleSidebar
@@ -286,17 +283,13 @@ private fun Editor(
             verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
             NameSection(state, info, viewModel)
-            HorizontalDivider()
             BioSection(state, info, viewModel)
-            HorizontalDivider()
             AccentSection(state, accentPreview, viewModel, onOpenPicker = { showColourPicker = true })
-            HorizontalDivider()
             FaviconSection(
                 faviconUrl = faviconUrl,
                 uploading = state.savingSlot == ImageSlot.FAVICON,
                 onUpload = faviconPicker.launch,
             )
-            HorizontalDivider()
             PrivacySection(state, viewModel)
         }
     }
@@ -417,8 +410,11 @@ private fun PreviewCard(
                     .size(avatarSize)
                     .clip(CircleShape)
                     .border(
-                        4.dp,
-                        MaterialTheme.colorScheme.surface,
+                        2.dp,
+                        // Accent ring when the user has set one, falling back to
+                        // the surface colour so the avatar still reads against
+                        // the banner.
+                        accent?.let { parseHexColour(it) } ?: MaterialTheme.colorScheme.surface,
                         CircleShape,
                     ),
             ) {
@@ -427,7 +423,6 @@ private fun PreviewCard(
                     src = avatarUrl,
                     seed = fingerprint,
                     size = avatarSize,
-                    accent = accent,
                 )
             }
             IconButton(
@@ -462,13 +457,6 @@ private fun PreviewCard(
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.SemiBold,
         )
-        if (fingerprint.isNotBlank()) {
-            Text(
-                text = fingerprint.take(9),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }
 
@@ -547,7 +535,7 @@ private fun BioSection(
 
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(
-            stringResource(R.string.people_profile_identity),
+            stringResource(R.string.people_profile_title),
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -709,26 +697,16 @@ private fun PrivacySection(
     viewModel: ProfileViewModel,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Text(
-            stringResource(R.string.people_profile_directory_listing),
-            style = MaterialTheme.typography.titleSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = stringResource(R.string.people_profile_privacy_public_label),
-                    style = MaterialTheme.typography.bodyMedium,
-                )
-                Text(
-                    text = stringResource(R.string.people_profile_privacy_public_desc),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
+            Text(
+                text = stringResource(R.string.people_profile_directory_listing),
+                style = MaterialTheme.typography.titleSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.weight(1f),
+            )
             Switch(
                 checked = state.privacyDraft == "public",
                 onCheckedChange = { checked ->
@@ -828,7 +806,7 @@ private fun ProfilePreviewDialog(
 
                     Spacer(Modifier.height(56.dp))
 
-                    // ---- Name + fingerprint ----
+                    // ---- Name ----
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -840,24 +818,12 @@ private fun ProfilePreviewDialog(
                             fontWeight = FontWeight.SemiBold,
                             color = accentColour ?: MaterialTheme.colorScheme.onSurface,
                         )
-                        if (info.fingerprint.isNotBlank()) {
-                            Spacer(Modifier.height(4.dp))
-                            Text(
-                                text = info.fingerprint,
-                                style = MaterialTheme.typography.labelSmall.copy(
-                                    fontFamily = FontFamily.Monospace,
-                                ),
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
                     }
 
                     Spacer(Modifier.height(16.dp))
 
                     // ---- Bio (markdown) ----
                     if (bio.isNotBlank()) {
-                        HorizontalDivider()
-                        Spacer(Modifier.height(16.dp))
                         Box(modifier = Modifier.padding(horizontal = 16.dp)) {
                             HtmlContent(html = bio)
                         }
