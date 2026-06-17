@@ -192,6 +192,10 @@
     <string name="market_editor_fee_preview_pending">Saving draft…</string>
     <string name="market_editor_instant">Instant-buy price (optional)</string>
     <string name="market_editor_instant_help">Set to 0 to disable</string>
+    <string name="market_editor_start_time">Start time</string>
+    <string name="market_editor_start_time_help">Leave blank to start on publish.</string>
+    <string name="market_editor_start_time_clear">Clear</string>
+    <string name="market_editor_start_time_next">Next</string>
     <string name="market_editor_interval">Billing interval</string>
     <string name="market_editor_interval_monthly">Monthly</string>
     <string name="market_editor_interval_yearly">Yearly</string>

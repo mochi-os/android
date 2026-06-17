@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Krājumi</string>
     <string name="market_editor_stock_units">Vienību skaits</string>
     <string name="market_editor_stock_unlimited">Neierobežots</string>
+    <string name="market_editor_start_time">Sākuma laiks</string>
+    <string name="market_editor_start_time_help">Atstājiet tukšu, lai sāktu publicēšanas brīdī.</string>
+    <string name="market_editor_start_time_next">Tālāk</string>
+    <string name="market_editor_start_time_clear">Notīrīt</string>
 </resources>

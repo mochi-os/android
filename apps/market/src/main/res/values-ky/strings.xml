@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Запас</string>
     <string name="market_editor_stock_units">Бирдиктердин саны</string>
     <string name="market_editor_stock_unlimited">Чексиз</string>
+    <string name="market_editor_start_time">Башталуу убактысы</string>
+    <string name="market_editor_start_time_help">Жарыялоодо баштоо үчүн бош калтырыңыз.</string>
+    <string name="market_editor_start_time_next">Кийинки</string>
+    <string name="market_editor_start_time_clear">Тазалоо</string>
 </resources>

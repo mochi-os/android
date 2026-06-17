@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stoc</string>
     <string name="market_editor_stock_units">Àireamh aonadan</string>
     <string name="market_editor_stock_unlimited">Gun chrìoch</string>
+    <string name="market_editor_start_time">Àm tòiseachaidh</string>
+    <string name="market_editor_start_time_help">Fàg bàn gus tòiseachadh nuair a thèid fhoillseachadh.</string>
+    <string name="market_editor_start_time_next">Air adhart</string>
+    <string name="market_editor_start_time_clear">Falamhaich</string>
 </resources>

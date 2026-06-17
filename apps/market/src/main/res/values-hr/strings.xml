@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Zaliha</string>
     <string name="market_editor_stock_units">Broj jedinica</string>
     <string name="market_editor_stock_unlimited">Neograničeno</string>
+    <string name="market_editor_start_time">Vrijeme početka</string>
+    <string name="market_editor_start_time_help">Ostavite prazno za pokretanje pri objavi.</string>
+    <string name="market_editor_start_time_next">Dalje</string>
+    <string name="market_editor_start_time_clear">Očisti</string>
 </resources>

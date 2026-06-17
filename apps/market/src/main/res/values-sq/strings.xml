@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stoku</string>
     <string name="market_editor_stock_units">Numri i njësive</string>
     <string name="market_editor_stock_unlimited">Pa kufi</string>
+    <string name="market_editor_start_time">Koha e fillimit</string>
+    <string name="market_editor_start_time_help">Lini bosh për të filluar në publikim.</string>
+    <string name="market_editor_start_time_next">Tjetra</string>
+    <string name="market_editor_start_time_clear">Pastro</string>
 </resources>

@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Запас</string>
     <string name="market_editor_stock_units">Кількість одиниць</string>
     <string name="market_editor_stock_unlimited">Без обмежень</string>
+    <string name="market_editor_start_time">Час початку</string>
+    <string name="market_editor_start_time_help">Залиште порожнім, щоб розпочати при публікації.</string>
+    <string name="market_editor_start_time_next">Далі</string>
+    <string name="market_editor_start_time_clear">Очистити</string>
 </resources>

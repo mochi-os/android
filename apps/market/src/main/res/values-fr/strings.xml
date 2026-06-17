@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stock</string>
     <string name="market_editor_stock_units">Nombre d\'unités</string>
     <string name="market_editor_stock_unlimited">Illimité</string>
+    <string name="market_editor_start_time">Heure de début</string>
+    <string name="market_editor_start_time_help">Laissez vide pour démarrer à la publication.</string>
+    <string name="market_editor_start_time_next">Suivant</string>
+    <string name="market_editor_start_time_clear">Effacer</string>
 </resources>

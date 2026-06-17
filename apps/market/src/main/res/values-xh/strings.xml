@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Inani elifumanekayo</string>
     <string name="market_editor_stock_units">Inani leeyunithi</string>
     <string name="market_editor_stock_unlimited">Akunamda</string>
+    <string name="market_editor_start_time">Ixesha lokuqalisa</string>
+    <string name="market_editor_start_time_help">Shiya kungenanto ukuze uqalise ngokupapasha.</string>
+    <string name="market_editor_start_time_next">Okulandelayo</string>
+    <string name="market_editor_start_time_clear">Cima</string>
 </resources>

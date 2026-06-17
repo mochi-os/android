@@ -734,4 +734,8 @@
     <string name="market_editor_stock">اسٹاک</string>
     <string name="market_editor_stock_units">یونٹس کی تعداد</string>
     <string name="market_editor_stock_unlimited">لامحدود</string>
+    <string name="market_editor_start_time">شروع ہونے کا وقت</string>
+    <string name="market_editor_start_time_help">شائع ہونے پر شروع کرنے کے لیے خالی چھوڑ دیں۔</string>
+    <string name="market_editor_start_time_next">اگلا</string>
+    <string name="market_editor_start_time_clear">صاف کریں</string>
 </resources>

@@ -736,4 +736,8 @@
     <string name="market_editor_stock">স্টক</string>
     <string name="market_editor_stock_units">ইউনিটের সংখ্যা</string>
     <string name="market_editor_stock_unlimited">সীমাহীন</string>
+    <string name="market_editor_start_time">শুরুর সময়</string>
+    <string name="market_editor_start_time_help">প্রকাশের সময় শুরু করতে খালি রাখুন।</string>
+    <string name="market_editor_start_time_next">পরবর্তী</string>
+    <string name="market_editor_start_time_clear">পরিষ্কার করুন</string>
 </resources>

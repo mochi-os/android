@@ -734,4 +734,8 @@
     <string name="market_editor_stock">स्टक</string>
     <string name="market_editor_stock_units">एकाइहरूको संख्या</string>
     <string name="market_editor_stock_unlimited">असीमित</string>
+    <string name="market_editor_start_time">सुरु समय</string>
+    <string name="market_editor_start_time_help">प्रकाशनमा सुरु गर्न खाली छोड्नुहोस्।</string>
+    <string name="market_editor_start_time_next">अर्को</string>
+    <string name="market_editor_start_time_clear">खाली गर्नुहोस्</string>
 </resources>

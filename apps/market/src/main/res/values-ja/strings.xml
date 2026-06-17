@@ -734,4 +734,8 @@
     <string name="market_editor_stock">在庫</string>
     <string name="market_editor_stock_units">単位数</string>
     <string name="market_editor_stock_unlimited">無制限</string>
+    <string name="market_editor_start_time">開始時刻</string>
+    <string name="market_editor_start_time_help">公開時に開始する場合は空のままにします。</string>
+    <string name="market_editor_start_time_next">次へ</string>
+    <string name="market_editor_start_time_clear">クリア</string>
 </resources>

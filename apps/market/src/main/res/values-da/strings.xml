@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Lager</string>
     <string name="market_editor_stock_units">Antal enheder</string>
     <string name="market_editor_stock_unlimited">Ubegrænset</string>
+    <string name="market_editor_start_time">Starttidspunkt</string>
+    <string name="market_editor_start_time_help">Lad være tomt for at starte ved offentliggørelse.</string>
+    <string name="market_editor_start_time_next">Næste</string>
+    <string name="market_editor_start_time_clear">Ryd</string>
 </resources>

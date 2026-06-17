@@ -729,4 +729,6 @@
     <string name="market_sidebar_become_seller">Become a seller</string>
     <string name="market_sidebar_seller_settings">Seller settings</string>
     <string name="market_account_stripe_open_failed">Could not open Stripe</string>
+    <string name="market_editor_start_time_next">Next</string>
+    <string name="market_editor_start_time_clear">Clear</string>
 </resources>

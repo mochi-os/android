@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stock</string>
     <string name="market_editor_stock_units">Adadin units</string>
     <string name="market_editor_stock_unlimited">Ba shi da iyaka</string>
+    <string name="market_editor_start_time">Lokacin farawa</string>
+    <string name="market_editor_start_time_help">Bar fanko don farawa a buga.</string>
+    <string name="market_editor_start_time_next">Na gaba</string>
+    <string name="market_editor_start_time_clear">Share</string>
 </resources>

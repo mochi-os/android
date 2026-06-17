@@ -732,4 +732,6 @@
     <string name="market_sidebar_become_seller">Verkäufer werden</string>
     <string name="market_sidebar_seller_settings">Verkäufereinstellungen</string>
     <string name="market_account_stripe_open_failed">Stripe konnte nicht geöffnet werden</string>
+    <string name="market_editor_start_time_next">Weiter</string>
+    <string name="market_editor_start_time_clear">Löschen</string>
 </resources>

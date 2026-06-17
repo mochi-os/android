@@ -734,4 +734,8 @@
     <string name="market_editor_stock">स्टॉक</string>
     <string name="market_editor_stock_units">युनिट्सची संख्या</string>
     <string name="market_editor_stock_unlimited">अमर्यादित</string>
+    <string name="market_editor_start_time">सुरू होण्याची वेळ</string>
+    <string name="market_editor_start_time_help">प्रकाशनावर सुरू करण्यासाठी रिकामे ठेवा.</string>
+    <string name="market_editor_start_time_next">पुढे</string>
+    <string name="market_editor_start_time_clear">साफ करा</string>
 </resources>

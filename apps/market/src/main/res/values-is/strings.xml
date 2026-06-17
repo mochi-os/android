@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Birgðir</string>
     <string name="market_editor_stock_units">Fjöldi eininga</string>
     <string name="market_editor_stock_unlimited">Ótakmarkað</string>
+    <string name="market_editor_start_time">Upphafstími</string>
+    <string name="market_editor_start_time_help">Skildu eftir autt til að hefja við útgáfu.</string>
+    <string name="market_editor_start_time_next">Áfram</string>
+    <string name="market_editor_start_time_clear">Hreinsa</string>
 </resources>

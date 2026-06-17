@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Varasto</string>
     <string name="market_editor_stock_units">Yksiköiden määrä</string>
     <string name="market_editor_stock_unlimited">Rajoittamaton</string>
+    <string name="market_editor_start_time">Aloitusaika</string>
+    <string name="market_editor_start_time_help">Jätä tyhjäksi aloittaaksesi julkaisussa.</string>
+    <string name="market_editor_start_time_next">Seuraava</string>
+    <string name="market_editor_start_time_clear">Tyhjennä</string>
 </resources>

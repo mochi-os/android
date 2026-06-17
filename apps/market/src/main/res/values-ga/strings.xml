@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stoc</string>
     <string name="market_editor_stock_units">Líon na n-aonad</string>
     <string name="market_editor_stock_unlimited">Gan teorainn</string>
+    <string name="market_editor_start_time">Am tosaigh</string>
+    <string name="market_editor_start_time_help">Fág folamh chun tosú ar fhoilsiú.</string>
+    <string name="market_editor_start_time_next">Ar aghaidh</string>
+    <string name="market_editor_start_time_clear">Glan</string>
 </resources>

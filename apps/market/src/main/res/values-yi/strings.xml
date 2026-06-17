@@ -734,4 +734,8 @@
     <string name="market_editor_stock">אינווענטאַר</string>
     <string name="market_editor_stock_units">צאָל איינסן</string>
     <string name="market_editor_stock_unlimited">אומבאַגרענעצט</string>
+    <string name="market_editor_start_time">אָנהייב־צײַט</string>
+    <string name="market_editor_start_time_help">לאָזט ליידיק אָנצוהייבן בײַם פֿאַרעפֿנטלעכן.</string>
+    <string name="market_editor_start_time_next">ווײַטער</string>
+    <string name="market_editor_start_time_clear">רייניקן</string>
 </resources>

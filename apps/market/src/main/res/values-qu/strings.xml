@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stock</string>
     <string name="market_editor_stock_units">Unidad yupay</string>
     <string name="market_editor_stock_unlimited">Mana harkasqa</string>
+    <string name="market_editor_start_time">Qallariy hora</string>
+    <string name="market_editor_start_time_help">Willarayman qallariypaq ch\'usaqta saqiy.</string>
+    <string name="market_editor_start_time_next">Qatiq</string>
+    <string name="market_editor_start_time_clear">Pichay</string>
 </resources>

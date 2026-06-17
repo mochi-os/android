@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Ọjà</string>
     <string name="market_editor_stock_units">Iye àwọn ọ̀kọ̀ọ̀kan</string>
     <string name="market_editor_stock_unlimited">Aláìlópin</string>
+    <string name="market_editor_start_time">Àkókò ìbẹ̀rẹ̀</string>
+    <string name="market_editor_start_time_help">Fi ṣófo láti bẹ̀rẹ̀ ní ìgbà tí a tẹ̀ jáde.</string>
+    <string name="market_editor_start_time_next">Tó kàn</string>
+    <string name="market_editor_start_time_clear">Pa rẹ́</string>
 </resources>

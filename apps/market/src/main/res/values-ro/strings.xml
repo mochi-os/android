@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stoc</string>
     <string name="market_editor_stock_units">Număr de unități</string>
     <string name="market_editor_stock_unlimited">Nelimitat</string>
+    <string name="market_editor_start_time">Ora de început</string>
+    <string name="market_editor_start_time_help">Lasă necompletat pentru a începe la publicare.</string>
+    <string name="market_editor_start_time_next">Înainte</string>
+    <string name="market_editor_start_time_clear">Golește</string>
 </resources>

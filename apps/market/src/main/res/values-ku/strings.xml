@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stok</string>
     <string name="market_editor_stock_units">Hejmara yekîneyan</string>
     <string name="market_editor_stock_unlimited">Bê sînor</string>
+    <string name="market_editor_start_time">Dema destpêkê</string>
+    <string name="market_editor_start_time_help">Vala bihêle ji bo destpêkirinê bi weşandinê.</string>
+    <string name="market_editor_start_time_next">Pêş</string>
+    <string name="market_editor_start_time_clear">Paqij bike</string>
 </resources>

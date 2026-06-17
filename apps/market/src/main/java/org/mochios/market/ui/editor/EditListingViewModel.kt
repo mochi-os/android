@@ -66,6 +66,9 @@ data class EditUiState(
     val reserveText: String = "",
     val instantText: String = "",
     val durationDays: Int = 7,
+    // Optional future auction start time (epoch seconds). null = start on
+    // publish. The duration runs from this point, mirroring web.
+    val opensAt: Long? = null,
     // Stock count for fixed-price/subscription listings. "0" (surfaced via
     // unlimitedStock) means unlimited; auctions always sell a single unit.
     val quantityText: String = "1",
@@ -227,6 +230,7 @@ class EditListingViewModel @Inject constructor(
     fun setDescription(value: String) = mutate { it.copy(description = value) }
     fun setCategory(value: String) = mutate { it.copy(category = value) }
     fun setQuantity(value: String) = mutate { it.copy(quantityText = value.filter { c -> c.isDigit() }) }
+    fun setOpensAt(value: Long?) = mutate { it.copy(opensAt = value) }
     fun setUnlimitedStock(value: Boolean) = mutate {
         it.copy(unlimitedStock = value, quantityText = if (value) it.quantityText else it.quantityText.ifBlank { "1" })
     }
@@ -376,8 +380,14 @@ class EditListingViewModel @Inject constructor(
             fields["reserve"] = toMinorUnits(current.reserveText, current.currency).toString()
             val instantMinor = toMinorUnits(current.instantText, current.currency)
             if (instantMinor > 0L) fields["instant"] = instantMinor.toString()
-            val durationSeconds = current.durationDays * 24L * 60L * 60L
-            fields["closes"] = durationSeconds.toString()
+            // opens/closes are ABSOLUTE epoch seconds — the server rejects a
+            // closes that isn't in the future, so a relative duration must NOT
+            // be sent. A future start time goes as opens; the duration runs
+            // from opens. Mirrors web's edit-listing-page publish.
+            val nowSec = System.currentTimeMillis() / 1000L
+            val opens = current.opensAt?.takeIf { it > nowSec } ?: nowSec
+            if (opens > nowSec) fields["opens"] = opens.toString()
+            fields["closes"] = (opens + current.durationDays * 24L * 60L * 60L).toString()
         }
         try {
             val published = repository.publishListing(fields)

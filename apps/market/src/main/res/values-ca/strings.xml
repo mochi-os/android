@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Estoc</string>
     <string name="market_editor_stock_units">Nombre d\'unitats</string>
     <string name="market_editor_stock_unlimited">Il·limitat</string>
+    <string name="market_editor_start_time">Hora d\'inici</string>
+    <string name="market_editor_start_time_help">Deixa-ho en blanc per començar en publicar.</string>
+    <string name="market_editor_start_time_next">Següent</string>
+    <string name="market_editor_start_time_clear">Esborra</string>
 </resources>

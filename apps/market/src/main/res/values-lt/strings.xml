@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Atsargos</string>
     <string name="market_editor_stock_units">Vienetų skaičius</string>
     <string name="market_editor_stock_unlimited">Neribota</string>
+    <string name="market_editor_start_time">Pradžios laikas</string>
+    <string name="market_editor_start_time_help">Palikite tuščią, kad pradėtumėte publikavus.</string>
+    <string name="market_editor_start_time_next">Toliau</string>
+    <string name="market_editor_start_time_clear">Išvalyti</string>
 </resources>

@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Sklad</string>
     <string name="market_editor_stock_units">Počet jednotiek</string>
     <string name="market_editor_stock_unlimited">Bez obmedzenia</string>
+    <string name="market_editor_start_time">Čas začatia</string>
+    <string name="market_editor_start_time_help">Pre spustenie pri zverejnení ponechajte prázdne.</string>
+    <string name="market_editor_start_time_next">Ďalej</string>
+    <string name="market_editor_start_time_clear">Vymazať</string>
 </resources>

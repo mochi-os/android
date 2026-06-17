@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Lager</string>
     <string name="market_editor_stock_units">Antal enheter</string>
     <string name="market_editor_stock_unlimited">Obegränsat</string>
+    <string name="market_editor_start_time">Starttid</string>
+    <string name="market_editor_start_time_help">Lämna tomt för att starta vid publicering.</string>
+    <string name="market_editor_start_time_next">Nästa</string>
+    <string name="market_editor_start_time_clear">Rensa</string>
 </resources>

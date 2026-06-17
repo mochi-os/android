@@ -734,4 +734,8 @@
     <string name="market_editor_stock">اسٽاڪ</string>
     <string name="market_editor_stock_units">يونٽن جو تعداد</string>
     <string name="market_editor_stock_unlimited">لامحدود</string>
+    <string name="market_editor_start_time">شروع جو وقت</string>
+    <string name="market_editor_start_time_help">شايع ٿيڻ تي شروع ڪرڻ لاءِ خالي ڇڏيو.</string>
+    <string name="market_editor_start_time_next">اڳيون</string>
+    <string name="market_editor_start_time_clear">صاف ڪريو</string>
 </resources>

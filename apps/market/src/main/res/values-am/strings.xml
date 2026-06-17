@@ -733,4 +733,8 @@
     <string name="market_editor_stock">ክምችት</string>
     <string name="market_editor_stock_units">የክፍሎች ብዛት</string>
     <string name="market_editor_stock_unlimited">ያልተገደበ</string>
+    <string name="market_editor_start_time">የመጀመሪያ ሰዓት</string>
+    <string name="market_editor_start_time_help">በማተም ላይ ለመጀመር ባዶ ይተዉት።</string>
+    <string name="market_editor_start_time_next">ቀጣይ</string>
+    <string name="market_editor_start_time_clear">አጽዳ</string>
 </resources>

@@ -734,4 +734,8 @@
     <string name="market_editor_stock">තොගය</string>
     <string name="market_editor_stock_units">ඒකක ගණන</string>
     <string name="market_editor_stock_unlimited">අසීමිත</string>
+    <string name="market_editor_start_time">ආරම්භක වේලාව</string>
+    <string name="market_editor_start_time_help">ප්‍රකාශයේදී ආරම්භ වීමට හිස්ව තබන්න.</string>
+    <string name="market_editor_start_time_next">ඊළඟ</string>
+    <string name="market_editor_start_time_clear">හිස් කරන්න</string>
 </resources>

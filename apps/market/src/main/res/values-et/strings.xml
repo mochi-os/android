@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Laoseis</string>
     <string name="market_editor_stock_units">Ühikute arv</string>
     <string name="market_editor_stock_unlimited">Piiramatu</string>
+    <string name="market_editor_start_time">Algusaeg</string>
+    <string name="market_editor_start_time_help">Jäta tühjaks, et alustada avaldamisel.</string>
+    <string name="market_editor_start_time_next">Edasi</string>
+    <string name="market_editor_start_time_clear">Tühjenda</string>
 </resources>

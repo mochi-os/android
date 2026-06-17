@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Bar</string>
     <string name="market_editor_stock_units">Birlikleriň sany</string>
     <string name="market_editor_stock_unlimited">Çäksiz</string>
+    <string name="market_editor_start_time">Başlanýan wagty</string>
+    <string name="market_editor_start_time_help">Çap etmek bilen başlamak üçin boş galdyryň.</string>
+    <string name="market_editor_start_time_next">Indiki</string>
+    <string name="market_editor_start_time_clear">Arassalamak</string>
 </resources>

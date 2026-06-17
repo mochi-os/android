@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Залихе</string>
     <string name="market_editor_stock_units">Број јединица</string>
     <string name="market_editor_stock_unlimited">Неограничено</string>
+    <string name="market_editor_start_time">Време почетка</string>
+    <string name="market_editor_start_time_help">Оставите празно да започне при објављивању.</string>
+    <string name="market_editor_start_time_next">Dalje</string>
+    <string name="market_editor_start_time_clear">Очисти</string>
 </resources>

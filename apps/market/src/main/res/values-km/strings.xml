@@ -734,4 +734,8 @@
     <string name="market_editor_stock">ស្តុក</string>
     <string name="market_editor_stock_units">ចំនួនឯកតា</string>
     <string name="market_editor_stock_unlimited">គ្មានដែនកំណត់</string>
+    <string name="market_editor_start_time">ម៉ោងចាប់ផ្តើម</string>
+    <string name="market_editor_start_time_help">ទុកឲ្យទទេដើម្បីចាប់ផ្ដើមលើការបោះពុម្ពផ្សាយ។</string>
+    <string name="market_editor_start_time_next">បន្ទាប់</string>
+    <string name="market_editor_start_time_clear">សម្អាត</string>
 </resources>

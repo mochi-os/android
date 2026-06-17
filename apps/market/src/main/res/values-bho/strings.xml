@@ -736,4 +736,8 @@
     <string name="market_editor_stock">स्टॉक</string>
     <string name="market_editor_stock_units">इकाई के संख्या</string>
     <string name="market_editor_stock_unlimited">असीमित</string>
+    <string name="market_editor_start_time">शुरू समय</string>
+    <string name="market_editor_start_time_help">प्रकाशन पर शुरू करे खातिर खाली छोड़ीं।</string>
+    <string name="market_editor_start_time_next">अगिला</string>
+    <string name="market_editor_start_time_clear">साफ करीं</string>
 </resources>

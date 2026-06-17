@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stok</string>
     <string name="market_editor_stock_units">Jumlah unit</string>
     <string name="market_editor_stock_unlimited">Teu watesan</string>
+    <string name="market_editor_start_time">Waktos mimiti</string>
+    <string name="market_editor_start_time_help">Kosongkeun pikeun mimiti dina nerbitkeun.</string>
+    <string name="market_editor_start_time_next">Salajengna</string>
+    <string name="market_editor_start_time_clear">Bersihkeun</string>
 </resources>

@@ -733,4 +733,8 @@
     <string name="market_editor_stock">Stocka</string>
     <string name="market_editor_stock_units">Unitate kopurua</string>
     <string name="market_editor_stock_unlimited">Mugagabea</string>
+    <string name="market_editor_start_time">Hasiera-ordua</string>
+    <string name="market_editor_start_time_help">Utzi hutsik argitaratzean hasteko.</string>
+    <string name="market_editor_start_time_next">Hurrengoa</string>
+    <string name="market_editor_start_time_clear">Garbitu</string>
 </resources>

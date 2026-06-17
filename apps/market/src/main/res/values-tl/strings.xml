@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stock</string>
     <string name="market_editor_stock_units">Bilang ng yunit</string>
     <string name="market_editor_stock_unlimited">Walang limitasyon</string>
+    <string name="market_editor_start_time">Oras ng simula</string>
+    <string name="market_editor_start_time_help">Iwanang blangko para magsimula sa publish.</string>
+    <string name="market_editor_start_time_next">Susunod</string>
+    <string name="market_editor_start_time_clear">Burahin</string>
 </resources>

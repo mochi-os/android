@@ -734,4 +734,8 @@
     <string name="market_editor_stock">สต็อก</string>
     <string name="market_editor_stock_units">จำนวนหน่วย</string>
     <string name="market_editor_stock_unlimited">ไม่จำกัด</string>
+    <string name="market_editor_start_time">เวลาเริ่มต้น</string>
+    <string name="market_editor_start_time_help">เว้นว่างเพื่อเริ่มต้นเมื่อเผยแพร่</string>
+    <string name="market_editor_start_time_next">ถัดไป</string>
+    <string name="market_editor_start_time_clear">ล้าง</string>
 </resources>

@@ -734,4 +734,8 @@
     <string name="market_editor_stock">재고</string>
     <string name="market_editor_stock_units">단위 수</string>
     <string name="market_editor_stock_unlimited">무제한</string>
+    <string name="market_editor_start_time">시작 시간</string>
+    <string name="market_editor_start_time_help">게시 시 시작하려면 비워 두세요.</string>
+    <string name="market_editor_start_time_next">다음</string>
+    <string name="market_editor_start_time_clear">지우기</string>
 </resources>

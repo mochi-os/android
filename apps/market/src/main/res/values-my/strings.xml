@@ -734,4 +734,8 @@
     <string name="market_editor_stock">လက်ကျန်ပစ္စည်း</string>
     <string name="market_editor_stock_units">ယူနစ် အရေအတွက်</string>
     <string name="market_editor_stock_unlimited">အကန့်အသတ်မဲ့</string>
+    <string name="market_editor_start_time">စတင်ချိန်</string>
+    <string name="market_editor_start_time_help">ထုတ်ဝေချိန်တွင် စတင်ရန် ဗလာထားပါ။</string>
+    <string name="market_editor_start_time_next">နောက်တစ်ခု</string>
+    <string name="market_editor_start_time_clear">ရှင်းမည်</string>
 </resources>

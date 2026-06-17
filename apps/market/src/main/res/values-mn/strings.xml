@@ -733,4 +733,8 @@
     <string name="market_editor_stock">Бараа</string>
     <string name="market_editor_stock_units">Нэгжийн тоо</string>
     <string name="market_editor_stock_unlimited">Хязгааргүй</string>
+    <string name="market_editor_start_time">Эхлэх цаг</string>
+    <string name="market_editor_start_time_help">Нийтлэхэд эхлэхийн тулд хоосон үлдээнэ үү.</string>
+    <string name="market_editor_start_time_next">Дараах</string>
+    <string name="market_editor_start_time_clear">Цэвэрлэх</string>
 </resources>

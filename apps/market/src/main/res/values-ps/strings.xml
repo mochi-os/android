@@ -734,4 +734,8 @@
     <string name="market_editor_stock">ذخیره</string>
     <string name="market_editor_stock_units">د واحدونو شمیر</string>
     <string name="market_editor_stock_unlimited">بې حده</string>
+    <string name="market_editor_start_time">د پیل وخت</string>
+    <string name="market_editor_start_time_help">د خپریدو په وخت پیل لپاره خالي پریږدئ.</string>
+    <string name="market_editor_start_time_next">بل</string>
+    <string name="market_editor_start_time_clear">پاک کړئ</string>
 </resources>

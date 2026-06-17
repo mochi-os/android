@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Disponibilità</string>
     <string name="market_editor_stock_units">Numero di unità</string>
     <string name="market_editor_stock_unlimited">Illimitato</string>
+    <string name="market_editor_start_time">Ora di inizio</string>
+    <string name="market_editor_start_time_help">Lascia vuoto per iniziare al momento della pubblicazione.</string>
+    <string name="market_editor_start_time_next">Avanti</string>
+    <string name="market_editor_start_time_clear">Cancella</string>
 </resources>

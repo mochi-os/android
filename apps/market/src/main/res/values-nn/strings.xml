@@ -735,4 +735,8 @@
     <string name="market_editor_stock">Lager</string>
     <string name="market_editor_stock_units">Tal på einingar</string>
     <string name="market_editor_stock_unlimited">Uavgrensa</string>
+    <string name="market_editor_start_time">Starttid</string>
+    <string name="market_editor_start_time_help">Lat stå tomt for å starta ved publisering.</string>
+    <string name="market_editor_start_time_next">Neste</string>
+    <string name="market_editor_start_time_clear">Tøm</string>
 </resources>

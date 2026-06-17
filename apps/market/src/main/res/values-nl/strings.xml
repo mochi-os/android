@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Voorraad</string>
     <string name="market_editor_stock_units">Aantal eenheden</string>
     <string name="market_editor_stock_unlimited">Onbeperkt</string>
+    <string name="market_editor_start_time">Starttijd</string>
+    <string name="market_editor_start_time_help">Laat leeg om bij publicatie te starten.</string>
+    <string name="market_editor_start_time_next">Volgende</string>
+    <string name="market_editor_start_time_clear">Wissen</string>
 </resources>

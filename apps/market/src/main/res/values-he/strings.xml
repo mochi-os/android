@@ -734,4 +734,8 @@
     <string name="market_editor_stock">מלאי</string>
     <string name="market_editor_stock_units">מספר יחידות</string>
     <string name="market_editor_stock_unlimited">ללא הגבלה</string>
+    <string name="market_editor_start_time">שעת התחלה</string>
+    <string name="market_editor_start_time_help">השאר ריק כדי להתחיל בפרסום.</string>
+    <string name="market_editor_start_time_next">הבא</string>
+    <string name="market_editor_start_time_clear">נקה</string>
 </resources>

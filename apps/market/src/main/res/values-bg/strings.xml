@@ -736,4 +736,8 @@
     <string name="market_editor_stock">Наличност</string>
     <string name="market_editor_stock_units">Брой единици</string>
     <string name="market_editor_stock_unlimited">Неограничено</string>
+    <string name="market_editor_start_time">Начален час</string>
+    <string name="market_editor_start_time_help">Оставете празно, за да започне при публикуване.</string>
+    <string name="market_editor_start_time_next">Напред</string>
+    <string name="market_editor_start_time_clear">Изчисти</string>
 </resources>

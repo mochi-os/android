@@ -734,4 +734,8 @@
     <string name="market_editor_stock">کۆگا</string>
     <string name="market_editor_stock_units">ژمارەی یەکەکان</string>
     <string name="market_editor_stock_unlimited">بێسنوور</string>
+    <string name="market_editor_start_time">کاتی دەستپێک</string>
+    <string name="market_editor_start_time_help">بەتاڵی بهێڵە بۆ دەستپێکردن لە کاتی بڵاوکردنەوە.</string>
+    <string name="market_editor_start_time_next">دواتر</string>
+    <string name="market_editor_start_time_clear">پاککردنەوە</string>
 </resources>

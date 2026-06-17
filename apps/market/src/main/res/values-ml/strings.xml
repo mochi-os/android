@@ -734,4 +734,8 @@
     <string name="market_editor_stock">സ്റ്റോക്ക്</string>
     <string name="market_editor_stock_units">യൂണിറ്റുകളുടെ എണ്ണം</string>
     <string name="market_editor_stock_unlimited">പരിധിയില്ല</string>
+    <string name="market_editor_start_time">ആരംഭ സമയം</string>
+    <string name="market_editor_start_time_help">പ്രസിദ്ധീകരണത്തിൽ ആരംഭിക്കാൻ ശൂന്യമായി വിടുക.</string>
+    <string name="market_editor_start_time_next">അടുത്തത്</string>
+    <string name="market_editor_start_time_clear">മായ്ക്കുക</string>
 </resources>

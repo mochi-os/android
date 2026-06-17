@@ -734,4 +734,8 @@
     <string name="market_editor_stock">庫存</string>
     <string name="market_editor_stock_units">單位數量</string>
     <string name="market_editor_stock_unlimited">無限制</string>
+    <string name="market_editor_start_time">開始時間</string>
+    <string name="market_editor_start_time_help">留空表示在發佈時開始。</string>
+    <string name="market_editor_start_time_next">下一步</string>
+    <string name="market_editor_start_time_clear">清除</string>
 </resources>

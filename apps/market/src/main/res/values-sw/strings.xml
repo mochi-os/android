@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Hisa</string>
     <string name="market_editor_stock_units">Idadi ya vipengele</string>
     <string name="market_editor_stock_unlimited">Bila Kikomo</string>
+    <string name="market_editor_start_time">Wakati wa kuanza</string>
+    <string name="market_editor_start_time_help">Acha tupu kuanza wakati wa kuchapisha.</string>
+    <string name="market_editor_start_time_next">Endelea</string>
+    <string name="market_editor_start_time_clear">Futa</string>
 </resources>

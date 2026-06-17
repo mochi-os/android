@@ -733,4 +733,8 @@
     <string name="market_editor_stock">Қор</string>
     <string name="market_editor_stock_units">Бірлік саны</string>
     <string name="market_editor_stock_unlimited">Шектеусіз</string>
+    <string name="market_editor_start_time">Бастау уақыты</string>
+    <string name="market_editor_start_time_help">Жариялау кезінде басталу үшін бос қалдырыңыз.</string>
+    <string name="market_editor_start_time_next">Келесі</string>
+    <string name="market_editor_start_time_clear">Тазалау</string>
 </resources>

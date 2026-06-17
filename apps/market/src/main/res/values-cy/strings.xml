@@ -733,4 +733,8 @@
     <string name="market_editor_stock">Stoc</string>
     <string name="market_editor_stock_units">Nifer yr unedau</string>
     <string name="market_editor_stock_unlimited">Diderfyn</string>
+    <string name="market_editor_start_time">Amser cychwyn</string>
+    <string name="market_editor_start_time_help">Gadewch yn wag i ddechrau wrth gyhoeddi.</string>
+    <string name="market_editor_start_time_next">Nesaf</string>
+    <string name="market_editor_start_time_clear">Clirio</string>
 </resources>

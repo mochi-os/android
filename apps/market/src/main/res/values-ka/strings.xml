@@ -734,4 +734,8 @@
     <string name="market_editor_stock">მარაგი</string>
     <string name="market_editor_stock_units">ერთეულების რაოდენობა</string>
     <string name="market_editor_stock_unlimited">უცნობი მოწყობილობა</string>
+    <string name="market_editor_start_time">დაწყების დრო</string>
+    <string name="market_editor_start_time_help">დატოვეთ ცარიელი გამოქვეყნებისას დასაწყებად.</string>
+    <string name="market_editor_start_time_next">შემდეგი</string>
+    <string name="market_editor_start_time_clear">გასუფთავება</string>
 </resources>

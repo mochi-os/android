@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Zaloga</string>
     <string name="market_editor_stock_units">Število enot</string>
     <string name="market_editor_stock_unlimited">Neomejeno</string>
+    <string name="market_editor_start_time">Čas začetka</string>
+    <string name="market_editor_start_time_help">Pustite prazno za začetek ob objavi.</string>
+    <string name="market_editor_start_time_next">Naprej</string>
+    <string name="market_editor_start_time_clear">Počisti</string>
 </resources>

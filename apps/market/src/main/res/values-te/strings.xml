@@ -734,4 +734,8 @@
     <string name="market_editor_stock">స్టాక్</string>
     <string name="market_editor_stock_units">యూనిట్ల సంఖ్య</string>
     <string name="market_editor_stock_unlimited">అపరిమితం</string>
+    <string name="market_editor_start_time">ప్రారంభ సమయం</string>
+    <string name="market_editor_start_time_help">ప్రచురణలో ప్రారంభించడానికి ఖాళీగా ఉంచండి.</string>
+    <string name="market_editor_start_time_next">తదుపరి</string>
+    <string name="market_editor_start_time_clear">క్లియర్ చేయండి</string>
 </resources>

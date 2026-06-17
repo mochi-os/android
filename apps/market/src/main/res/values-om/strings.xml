@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Kuusaa</string>
     <string name="market_editor_stock_units">Baay\'ina yuunitii</string>
     <string name="market_editor_stock_unlimited">Daangaa hin qabu</string>
+    <string name="market_editor_start_time">Yeroo jalqabaa</string>
+    <string name="market_editor_start_time_help">Maxxansa irratti jalqabuuf duwwaa kaa\'i.</string>
+    <string name="market_editor_start_time_next">Itti aanu</string>
+    <string name="market_editor_start_time_clear">Cilliisi</string>
 </resources>

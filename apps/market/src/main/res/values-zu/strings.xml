@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Isitokwe</string>
     <string name="market_editor_stock_units">Inani lamayunithi</string>
     <string name="market_editor_stock_unlimited">Akunamkhawulo</string>
+    <string name="market_editor_start_time">Isikhathi sokuqala</string>
+    <string name="market_editor_start_time_help">Shiya kungenalutho ukuze kuqale ekushicilelweni.</string>
+    <string name="market_editor_start_time_next">Okulandelayo</string>
+    <string name="market_editor_start_time_clear">Sula</string>
 </resources>

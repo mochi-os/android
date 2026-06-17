@@ -734,4 +734,8 @@
     <string name="market_editor_stock">ສິນຄ້າຄົງເຫຼືອ</string>
     <string name="market_editor_stock_units">ຈຳນວນຫົວໜ່ວຍ</string>
     <string name="market_editor_stock_unlimited">ບໍ່ຈຳກັດ</string>
+    <string name="market_editor_start_time">ເວລາເລີ່ມ</string>
+    <string name="market_editor_start_time_help">ປະໄວ້ຫວ່າງເພື່ອເລີ່ມເມື່ອເຜີຍແຜ່.</string>
+    <string name="market_editor_start_time_next">ຕໍ່ໄປ</string>
+    <string name="market_editor_start_time_clear">ລ້າງ</string>
 </resources>

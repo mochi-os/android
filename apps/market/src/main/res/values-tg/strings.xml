@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Захира</string>
     <string name="market_editor_stock_units">Шумораи воҳидҳо</string>
     <string name="market_editor_stock_unlimited">Беҳудуд</string>
+    <string name="market_editor_start_time">Вақти оғоз</string>
+    <string name="market_editor_start_time_help">Барои оғоз дар нашр холӣ гузоред.</string>
+    <string name="market_editor_start_time_next">Баъдӣ</string>
+    <string name="market_editor_start_time_clear">Тоза кардан</string>
 </resources>

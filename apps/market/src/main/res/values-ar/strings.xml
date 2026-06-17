@@ -734,4 +734,8 @@
     <string name="market_editor_stock">المخزون</string>
     <string name="market_editor_stock_units">عدد الوحدات</string>
     <string name="market_editor_stock_unlimited">غير محدود</string>
+    <string name="market_editor_start_time">وقت البدء</string>
+    <string name="market_editor_start_time_help">اتركه فارغًا للبدء عند النشر.</string>
+    <string name="market_editor_start_time_next">التالي</string>
+    <string name="market_editor_start_time_clear">مسح</string>
 </resources>

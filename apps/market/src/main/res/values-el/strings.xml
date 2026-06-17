@@ -736,4 +736,8 @@
     <string name="market_editor_stock">Απόθεμα</string>
     <string name="market_editor_stock_units">Αριθμός μονάδων</string>
     <string name="market_editor_stock_unlimited">Απεριόριστο</string>
+    <string name="market_editor_start_time">Ώρα έναρξης</string>
+    <string name="market_editor_start_time_help">Αφήστε κενό για έναρξη κατά τη δημοσίευση.</string>
+    <string name="market_editor_start_time_next">Επόμενο</string>
+    <string name="market_editor_start_time_clear">Εκκαθάριση</string>
 </resources>

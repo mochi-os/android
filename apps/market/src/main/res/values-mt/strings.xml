@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stokk</string>
     <string name="market_editor_stock_units">Numru ta\' unitajiet</string>
     <string name="market_editor_stock_unlimited">Mingħajr limitu</string>
+    <string name="market_editor_start_time">Ħin tal-bidu</string>
+    <string name="market_editor_start_time_help">Ħalli vojt biex tibda fil-publish.</string>
+    <string name="market_editor_start_time_next">Li jmiss</string>
+    <string name="market_editor_start_time_clear">Naddaf</string>
 </resources>

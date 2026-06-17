@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stok</string>
     <string name="market_editor_stock_units">Birim sayısı</string>
     <string name="market_editor_stock_unlimited">Sınırsız</string>
+    <string name="market_editor_start_time">Başlangıç zamanı</string>
+    <string name="market_editor_start_time_help">Yayımlandığında başlatmak için boş bırakın.</string>
+    <string name="market_editor_start_time_next">İleri</string>
+    <string name="market_editor_start_time_clear">Temizle</string>
 </resources>

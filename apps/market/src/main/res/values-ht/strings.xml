@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stock</string>
     <string name="market_editor_stock_units">Kantite inite</string>
     <string name="market_editor_stock_unlimited">Ilimite</string>
+    <string name="market_editor_start_time">Lè kòmansman</string>
+    <string name="market_editor_start_time_help">Kite vid pou kòmanse sou piblikasyon.</string>
+    <string name="market_editor_start_time_next">Pwochen</string>
+    <string name="market_editor_start_time_clear">Efase</string>
 </resources>

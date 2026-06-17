@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Mavjud</string>
     <string name="market_editor_stock_units">Birliklar soni</string>
     <string name="market_editor_stock_unlimited">Cheksiz</string>
+    <string name="market_editor_start_time">Boshlanish vaqti</string>
+    <string name="market_editor_start_time_help">Eʼlon qilishda boshlash uchun boʻsh qoldiring.</string>
+    <string name="market_editor_start_time_next">Keyingi</string>
+    <string name="market_editor_start_time_clear">Tozalash</string>
 </resources>

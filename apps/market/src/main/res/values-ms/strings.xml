@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stok</string>
     <string name="market_editor_stock_units">Bilangan unit</string>
     <string name="market_editor_stock_unlimited">Tanpa had</string>
+    <string name="market_editor_start_time">Masa mula</string>
+    <string name="market_editor_start_time_help">Biarkan kosong untuk mula pada penerbitan.</string>
+    <string name="market_editor_start_time_next">Seterusnya</string>
+    <string name="market_editor_start_time_clear">Kosongkan</string>
 </resources>

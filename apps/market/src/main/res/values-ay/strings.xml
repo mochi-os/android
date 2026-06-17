@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stock</string>
     <string name="market_editor_stock_units">Unidadanak jakhu</string>
     <string name="market_editor_stock_unlimited">Juntayata jaytaña</string>
+    <string name="market_editor_start_time">Qalltaña pacha</string>
+    <string name="market_editor_start_time_help">Wakischa jaytaña publicara qalltañataki.</string>
+    <string name="market_editor_start_time_next">Jutiri</string>
+    <string name="market_editor_start_time_clear">Q\'umachaña</string>
 </resources>

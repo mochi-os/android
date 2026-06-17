@@ -237,6 +237,7 @@ fun EditListingScreen(
                     durationDays = state.durationDays,
                     reserveText = state.reserveText,
                     instantText = state.instantText,
+                    opensAt = state.opensAt,
                     onPricingChange = viewModel::setPricing,
                     onCurrencyChange = viewModel::setCurrency,
                     onPriceChange = viewModel::setPriceText,
@@ -244,6 +245,7 @@ fun EditListingScreen(
                     onDurationChange = viewModel::setDurationDays,
                     onReserveChange = viewModel::setReserveText,
                     onInstantChange = viewModel::setInstantText,
+                    onOpensChange = viewModel::setOpensAt,
                 )
             }
 

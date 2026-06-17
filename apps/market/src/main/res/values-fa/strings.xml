@@ -734,4 +734,8 @@
     <string name="market_editor_stock">موجودی</string>
     <string name="market_editor_stock_units">تعداد واحدها</string>
     <string name="market_editor_stock_unlimited">نامحدود</string>
+    <string name="market_editor_start_time">زمان شروع</string>
+    <string name="market_editor_start_time_help">برای شروع هنگام انتشار، خالی بگذارید.</string>
+    <string name="market_editor_start_time_next">بعدی</string>
+    <string name="market_editor_start_time_clear">پاک کردن</string>
 </resources>

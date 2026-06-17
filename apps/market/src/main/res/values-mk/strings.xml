@@ -733,4 +733,8 @@
     <string name="market_editor_stock">Залиха</string>
     <string name="market_editor_stock_units">Број на единици</string>
     <string name="market_editor_stock_unlimited">Неограничено</string>
+    <string name="market_editor_start_time">Време на почеток</string>
+    <string name="market_editor_start_time_help">Оставете празно за почеток при објавување.</string>
+    <string name="market_editor_start_time_next">Следно</string>
+    <string name="market_editor_start_time_clear">Исчисти</string>
 </resources>

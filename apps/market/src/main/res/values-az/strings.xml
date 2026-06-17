@@ -733,4 +733,8 @@
     <string name="market_editor_stock">Stok</string>
     <string name="market_editor_stock_units">Vahidlərin sayı</string>
     <string name="market_editor_stock_unlimited">Provayderin əlaqəsini kəsmək?</string>
+    <string name="market_editor_start_time">Başlama vaxtı</string>
+    <string name="market_editor_start_time_help">Dərc edildikdə başlamaq üçün boş buraxın.</string>
+    <string name="market_editor_start_time_next">Növbəti</string>
+    <string name="market_editor_start_time_clear">Təmizlə</string>
 </resources>

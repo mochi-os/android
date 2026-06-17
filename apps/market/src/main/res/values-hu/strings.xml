@@ -736,4 +736,8 @@
     <string name="market_editor_stock">Készlet</string>
     <string name="market_editor_stock_units">Egységek száma</string>
     <string name="market_editor_stock_unlimited">Korlátlan</string>
+    <string name="market_editor_start_time">Kezdés ideje</string>
+    <string name="market_editor_start_time_help">Hagyja üresen, hogy közzétételkor induljon.</string>
+    <string name="market_editor_start_time_next">Tovább</string>
+    <string name="market_editor_start_time_clear">Törlés</string>
 </resources>

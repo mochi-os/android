@@ -734,4 +734,8 @@
     <string name="market_editor_stock">ਸਟਾਕ</string>
     <string name="market_editor_stock_units">ਯੂਨਿਟਾਂ ਦੀ ਗਿਣਤੀ</string>
     <string name="market_editor_stock_unlimited">ਅਸੀਮਤ</string>
+    <string name="market_editor_start_time">ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਸਮਾਂ</string>
+    <string name="market_editor_start_time_help">ਲਿੰਕ</string>
+    <string name="market_editor_start_time_next">ਅੱਗੇ</string>
+    <string name="market_editor_start_time_clear">ਸਾਫ਼ ਕਰੋ</string>
 </resources>

@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stok</string>
     <string name="market_editor_stock_units">Cacah unit</string>
     <string name="market_editor_stock_unlimited">Ora winates</string>
+    <string name="market_editor_start_time">Wektu wiwitan</string>
+    <string name="market_editor_start_time_help">Kosongna kanggo miwiti pas diterbitaké.</string>
+    <string name="market_editor_start_time_next">Sabanjure</string>
+    <string name="market_editor_start_time_clear">Resiki</string>
 </resources>

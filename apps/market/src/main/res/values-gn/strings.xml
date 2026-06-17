@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Stock</string>
     <string name="market_editor_stock_units">Mba\'e papapy</string>
     <string name="market_editor_stock_unlimited">Ipa\'ũ\'ỹva</string>
+    <string name="market_editor_start_time">Ñepyrũ aravo</string>
+    <string name="market_editor_start_time_help">Eheja vacío oñepyrũ haguã publicación-pe.</string>
+    <string name="market_editor_start_time_next">Tenonde</string>
+    <string name="market_editor_start_time_clear">Embopotĩ</string>
 </resources>

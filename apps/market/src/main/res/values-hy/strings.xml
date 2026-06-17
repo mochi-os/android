@@ -734,4 +734,8 @@
     <string name="market_editor_stock">Պաշար</string>
     <string name="market_editor_stock_units">Միավորների քանակ</string>
     <string name="market_editor_stock_unlimited">Անսահմանափակ</string>
+    <string name="market_editor_start_time">Սկսելու ժամանակ</string>
+    <string name="market_editor_start_time_help">Թողնել դատարկ</string>
+    <string name="market_editor_start_time_next">Հաջորդ</string>
+    <string name="market_editor_start_time_clear">Մաքրել ամենը</string>
 </resources>

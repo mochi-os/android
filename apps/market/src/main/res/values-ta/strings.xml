@@ -734,4 +734,8 @@
     <string name="market_editor_stock">இருப்பு</string>
     <string name="market_editor_stock_units">அலகுகளின் எண்ணிக்கை</string>
     <string name="market_editor_stock_unlimited">வரம்பற்றது</string>
+    <string name="market_editor_start_time">தொடக்க நேரம்</string>
+    <string name="market_editor_start_time_help">வெளியீட்டில் தொடங்க காலியாக விடவும்.</string>
+    <string name="market_editor_start_time_next">அடுத்து</string>
+    <string name="market_editor_start_time_clear">அழி</string>
 </resources>
