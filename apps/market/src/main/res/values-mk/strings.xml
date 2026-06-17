@@ -412,6 +412,7 @@
     <string name="market_profile_biography">За</string>
     <string name="market_profile_load_failed">Не може да се вчита профилот</string>
     <string name="market_profile_member_since">Член од %1$s</string>
+    <string name="market_profile_joined">Се придружи %1$s</string>
     <string name="market_profile_no_reviews">Сè уште нема критики.</string>
     <string name="market_profile_rating_breakdown">Распределба на оцени</string>
     <string name="market_profile_reviews_section">Прегледи</string>

@@ -32,7 +32,6 @@ object SettingsRetrofitModule {
             .addInterceptor(Interceptor { chain ->
                 val token = sessionManager.getTokenBlocking("settings")
                 val req = chain.request().newBuilder()
-                    .header("Accept", "application/json")
                 if (token != null) req.header("Authorization", "Bearer $token")
                 chain.proceed(req.build())
             })

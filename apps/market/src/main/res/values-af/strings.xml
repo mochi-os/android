@@ -412,6 +412,7 @@
     <string name="market_profile_biography">Oor</string>
     <string name="market_profile_load_failed">Kon nie profiel laai nie</string>
     <string name="market_profile_member_since">Lid sedert %1$s</string>
+    <string name="market_profile_joined">Aangesluit %1$s</string>
     <string name="market_profile_no_reviews">Nog geen resensies nie.</string>
     <string name="market_profile_rating_breakdown">Graderings-uitsplitsing</string>
     <string name="market_profile_reviews_section">Resensies</string>

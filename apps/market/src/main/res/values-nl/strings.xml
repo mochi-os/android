@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Over</string>
     <string name="market_profile_load_failed">Profiel kon niet worden geladen</string>
     <string name="market_profile_member_since">Lid sinds %1$s</string>
+    <string name="market_profile_joined">Lid geworden op %1$s</string>
     <string name="market_profile_no_reviews">Nog geen recensies.</string>
     <string name="market_profile_rating_breakdown">Verdeling beoordelingen</string>
     <string name="market_profile_stars_value">%1$d sterren</string>

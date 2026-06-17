@@ -611,6 +611,7 @@
     <string name="market_price_starting_bid">Panimulang bid: %1$s</string>
     <string name="market_profile_load_failed">Hindi na-load ang profile</string>
     <string name="market_profile_member_since">Miyembro mula %1$s</string>
+    <string name="market_profile_joined">Sumali noong %1$s</string>
     <string name="market_profile_rating_breakdown">Detalye ng rating</string>
     <string name="market_profile_stars_value">%1$d stars</string>
     <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>

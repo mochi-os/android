@@ -597,6 +597,7 @@
     <string name="market_profile_biography">درباره</string>
     <string name="market_profile_load_failed">بارگذاری نمایه ممکن نشد</string>
     <string name="market_profile_member_since">عضو از %1$s</string>
+    <string name="market_profile_joined">عضو شده در %1$s</string>
     <string name="market_profile_no_reviews">هنوز نظری ثبت نشده است.</string>
     <string name="market_profile_rating_breakdown">تفکیک امتیاز</string>
     <string name="market_profile_stars_value">%1$d ستاره</string>

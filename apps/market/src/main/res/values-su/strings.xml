@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Tawaran awal: %1$s</string>
     <string name="market_profile_load_failed">Henteu tiasa ngamuat propil</string>
     <string name="market_profile_member_since">Anggota ti %1$s</string>
+    <string name="market_profile_joined">Gabung %1$s</string>
     <string name="market_profile_rating_breakdown">Rincian peunteun</string>
     <string name="market_profile_sales_count">%1$d penjualan</string>
     <string name="market_profile_stars_value">%1$d béntang</string>

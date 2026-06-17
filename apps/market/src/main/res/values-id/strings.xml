@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Tentang</string>
     <string name="market_profile_load_failed">Tidak dapat memuat profil</string>
     <string name="market_profile_member_since">Anggota sejak %1$s</string>
+    <string name="market_profile_joined">Bergabung %1$s</string>
     <string name="market_profile_no_reviews">Belum ada ulasan.</string>
     <string name="market_profile_rating_breakdown">Rincian peringkat</string>
     <string name="market_profile_stars_value">%1$d bintang</string>

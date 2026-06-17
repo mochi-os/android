@@ -593,6 +593,7 @@
     <string name="market_profile_biography">O uživateli</string>
     <string name="market_profile_load_failed">Profil se nepodařilo načíst</string>
     <string name="market_profile_member_since">Členem od %1$s</string>
+    <string name="market_profile_joined">Připojil se %1$s</string>
     <string name="market_profile_no_reviews">Zatím žádné recenze.</string>
     <string name="market_profile_rating_breakdown">Rozpis hodnocení</string>
     <string name="market_profile_sales_count">%1$d prodejů</string>

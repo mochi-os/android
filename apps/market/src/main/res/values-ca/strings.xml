@@ -593,6 +593,7 @@
     <string name="market_profile_biography">Sobre mi</string>
     <string name="market_profile_load_failed">No s\'ha pogut carregar el perfil</string>
     <string name="market_profile_member_since">Membre des de %1$s</string>
+    <string name="market_profile_joined">Es va unir el %1$s</string>
     <string name="market_profile_no_reviews">Encara no hi ha valoracions.</string>
     <string name="market_profile_rating_breakdown">Desglossament de valoracions</string>
     <string name="market_profile_sales_count">%1$d vendes</string>

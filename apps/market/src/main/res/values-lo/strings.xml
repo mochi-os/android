@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ການປະມູນເລີ່ມຕົ້ນ: %1$s</string>
     <string name="market_profile_load_failed">ບໍ່ສາມາດໂຫຼດໂປຣໄຟລ໌ໄດ້</string>
     <string name="market_profile_member_since">ສະມາຊິກຕັ້ງແຕ່ %1$s</string>
+    <string name="market_profile_joined">ເຂົ້າຮ່ວມ %1$s</string>
     <string name="market_profile_rating_breakdown">ລາຍລະອຽດການຈັດອັນດັບ</string>
     <string name="market_profile_sales_count">%1$d ການຂາຍ</string>
     <string name="market_profile_stars_value">%1$d ດາວ</string>

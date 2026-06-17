@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Pêşkêşa destpêkê: %1$s</string>
     <string name="market_profile_load_failed">Profîl nehat barkirin</string>
     <string name="market_profile_member_since">Endam ji %1$s ve</string>
+    <string name="market_profile_joined">Tevlî bû %1$s</string>
     <string name="market_profile_rating_breakdown">Veqetandina nirxandinê</string>
     <string name="market_profile_sales_count">%1$d firotin</string>
     <string name="market_profile_stars_value">%1$d stêrk</string>

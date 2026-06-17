@@ -412,6 +412,7 @@
     <string name="market_profile_biography">Тухай</string>
     <string name="market_profile_load_failed">Профайл ачааллаж чадсангүй</string>
     <string name="market_profile_member_since">%1$s-аас гишүүн</string>
+    <string name="market_profile_joined">%1$s-нд нэгдсэн</string>
     <string name="market_profile_no_reviews">Одоогоор үнэлгээ алга.</string>
     <string name="market_profile_rating_breakdown">Үнэлгээний задаргаа</string>
     <string name="market_profile_reviews_section">Шүүмжүүд</string>

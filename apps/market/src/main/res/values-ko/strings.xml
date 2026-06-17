@@ -597,6 +597,7 @@
     <string name="market_profile_biography">소개</string>
     <string name="market_profile_load_failed">프로필을 불러올 수 없습니다</string>
     <string name="market_profile_member_since">가입일: %1$s</string>
+    <string name="market_profile_joined">%1$s 가입</string>
     <string name="market_profile_no_reviews">아직 리뷰가 없습니다.</string>
     <string name="market_profile_rating_breakdown">평점 분포</string>
     <string name="market_profile_stars_value">%1$d점</string>

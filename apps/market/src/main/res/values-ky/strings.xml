@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Баштапкы сунуш: %1$s</string>
     <string name="market_profile_load_failed">Профилди жүктөө мүмкүн болгон жок</string>
     <string name="market_profile_member_since">%1$s жылдан бери катышуучу</string>
+    <string name="market_profile_joined">%1$s кошулду</string>
     <string name="market_profile_rating_breakdown">Рейтинг бөлүштүрүлүшү</string>
     <string name="market_profile_stars_value">%1$d жылдыз</string>
     <string name="market_purchase_dispute_chargeback">Чарджбэк %1$s</string>

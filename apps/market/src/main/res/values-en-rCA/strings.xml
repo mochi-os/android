@@ -495,6 +495,7 @@
     <string name="market_profile_biography">About</string>
     <string name="market_profile_load_failed">Could not load profile</string>
     <string name="market_profile_member_since">Member since %1$s</string>
+    <string name="market_profile_joined">Joined %1$s</string>
     <string name="market_profile_no_reviews">No reviews yet.</string>
     <string name="market_profile_rating_breakdown">Rating breakdown</string>
     <string name="market_profile_stars_value">%1$d stars</string>

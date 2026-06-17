@@ -422,6 +422,7 @@
     <string name="market_profile_biography">Über</string>
     <string name="market_profile_load_failed">Profil konnte nicht geladen werden</string>
     <string name="market_profile_member_since">Mitglied seit %1$s</string>
+    <string name="market_profile_joined">Beigetreten %1$s</string>
     <string name="market_profile_no_reviews">Noch keine Bewertungen.</string>
     <string name="market_profile_rating_breakdown">Bewertungsübersicht</string>
     <string name="market_profile_stars_value">%1$d Sterne</string>

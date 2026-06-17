@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -41,6 +42,8 @@ import org.mochios.android.R
  * @param seed   Stable identifier (usually the person's entity ID) used to pick
  *               a deterministic colour for the initials circle.
  * @param size   Avatar diameter.
+ * @param shape  Avatar outline shape. Defaults to a full circle; pass a
+ *               [RoundedCornerShape] for a squircle (e.g. seller profiles).
  * @param accent Optional hex colour ("#rrggbb"). When set, drawn as a 2dp ring.
  * @param containerColor Initials-circle fill. Null keeps the deterministic
  *               seeded colour; pass an explicit colour for a flat themed avatar.
@@ -53,6 +56,7 @@ fun EntityAvatar(
     src: String? = null,
     seed: String? = null,
     size: Dp = 24.dp,
+    shape: Shape = CircleShape,
     accent: String? = null,
     containerColor: Color? = null,
     contentColor: Color = Color.White,
@@ -62,11 +66,11 @@ fun EntityAvatar(
 
     val ringColor = accent?.let { parseHexColour(it) }
     val ringModifier = if (ringColor != null) {
-        Modifier.border(2.dp, ringColor, CircleShape)
+        Modifier.border(2.dp, ringColor, shape)
     } else {
         Modifier
     }
-    val outer = modifier.size(size).then(ringModifier).clip(CircleShape)
+    val outer = modifier.size(size).then(ringModifier).clip(shape)
 
     val useImage = !src.isNullOrBlank() && !loadFailed
     if (useImage) {

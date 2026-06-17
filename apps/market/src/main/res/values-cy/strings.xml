@@ -412,6 +412,7 @@
     <string name="market_profile_biography">Amdano</string>
     <string name="market_profile_load_failed">Methwyd llwytho\'r proffil</string>
     <string name="market_profile_member_since">Aelod ers %1$s</string>
+    <string name="market_profile_joined">Ymunodd %1$s</string>
     <string name="market_profile_no_reviews">Dim adolygiadau eto.</string>
     <string name="market_profile_rating_breakdown">Dadansoddiad sgôr</string>
     <string name="market_profile_reviews_section">Adolygiadau</string>

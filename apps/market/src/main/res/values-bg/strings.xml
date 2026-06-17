@@ -672,6 +672,7 @@
     <string name="market_price_starting_bid">Начална оферта: %1$s</string>
     <string name="market_profile_load_failed">Профилът не може да бъде зареден</string>
     <string name="market_profile_member_since">Член от %1$s</string>
+    <string name="market_profile_joined">Присъедини се на %1$s</string>
     <string name="market_profile_no_reviews">Все още няма отзиви.</string>
     <string name="market_profile_rating_breakdown">Разбивка на рейтинга</string>
     <string name="market_profile_stars_value">%1$d звезди</string>

@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Inani lokuqala: %1$s</string>
     <string name="market_profile_load_failed">Ayikwazanga ukulayisha iphrofayili</string>
     <string name="market_profile_member_since">Ilungu kusukela %1$s</string>
+    <string name="market_profile_joined">Wajoyina ngo-%1$s</string>
     <string name="market_profile_rating_breakdown">Ukuhlukaniswa kwesilinganiso</string>
     <string name="market_profile_sales_count">%1$d ukuthengiswa</string>
     <string name="market_profile_stars_value">%1$d izinkanyezi</string>

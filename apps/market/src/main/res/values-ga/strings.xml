@@ -611,6 +611,7 @@
     <string name="market_price_starting_bid">Tairiscint tosaigh: %1$s</string>
     <string name="market_profile_load_failed">Níorbh fhéidir an phróifíl a luchtú</string>
     <string name="market_profile_member_since">Ina bhall ó %1$s</string>
+    <string name="market_profile_joined">Cláraithe %1$s</string>
     <string name="market_profile_rating_breakdown">Miondealú rátála</string>
     <string name="market_profile_stars_value">%1$d réalta</string>
     <string name="market_purchase_dispute_chargeback">Aisíocaíocht chárta %1$s</string>

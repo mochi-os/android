@@ -35,7 +35,6 @@ object AppModule {
             .addInterceptor(Interceptor { chain ->
                 val token = sessionManager.getTokenBlocking("feeds")
                 val builder = chain.request().newBuilder()
-                    .header("Accept", "application/json")
                 if (token != null) {
                     builder.header("Authorization", "Bearer $token")
                 }

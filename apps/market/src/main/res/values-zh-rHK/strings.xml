@@ -244,6 +244,7 @@
     <string name="market_profile_biography">關於</string>
     <string name="market_profile_load_failed">無法載入個人資料</string>
     <string name="market_profile_member_since">自 %1$s 起為會員</string>
+    <string name="market_profile_joined">於 %1$s 加入</string>
     <string name="market_profile_no_reviews">尚無評論。</string>
     <string name="market_profile_rating_breakdown">評分明細</string>
     <string name="market_profile_sales_count">%1$d 件銷售</string>

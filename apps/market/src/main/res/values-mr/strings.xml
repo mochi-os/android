@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">प्रारंभिक बोली: %1$s</string>
     <string name="market_profile_load_failed">प्रोफाइल लोड करता आले नाही</string>
     <string name="market_profile_member_since">%1$s पासून सदस्य</string>
+    <string name="market_profile_joined">%1$s रोजी सामील झाले</string>
     <string name="market_profile_rating_breakdown">रेटिंग तपशील</string>
     <string name="market_profile_sales_count">%1$d विक्री</string>
     <string name="market_profile_stars_value">%1$d तारे</string>

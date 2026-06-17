@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Despre</string>
     <string name="market_profile_load_failed">Profilul nu a putut fi încărcat</string>
     <string name="market_profile_member_since">Membru din %1$s</string>
+    <string name="market_profile_joined">S-a alăturat în %1$s</string>
     <string name="market_profile_no_reviews">Nicio recenzie încă.</string>
     <string name="market_profile_rating_breakdown">Distribuția evaluărilor</string>
     <string name="market_profile_stars_value">%1$d stele</string>

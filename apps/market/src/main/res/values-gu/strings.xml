@@ -608,6 +608,7 @@
     <string name="market_price_starting_bid">પ્રારંભિક બોલી: %1$s</string>
     <string name="market_profile_load_failed">પ્રોફાઇલ લોડ કરી શકાઈ નથી</string>
     <string name="market_profile_member_since">%1$s થી સભ્ય</string>
+    <string name="market_profile_joined">%1$s ના રોજ જોડાયા</string>
     <string name="market_profile_rating_breakdown">રેટિંગ વિગતો</string>
     <string name="market_profile_sales_count">%1$d વેચાણ</string>
     <string name="market_profile_stars_value">%1$d તારા</string>

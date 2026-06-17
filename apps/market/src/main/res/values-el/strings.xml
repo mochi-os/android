@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Σχετικά</string>
     <string name="market_profile_load_failed">Δεν ήταν δυνατή η φόρτωση του προφίλ</string>
     <string name="market_profile_member_since">Μέλος από %1$s</string>
+    <string name="market_profile_joined">Εγγραφή %1$s</string>
     <string name="market_profile_no_reviews">Δεν υπάρχουν κριτικές ακόμη.</string>
     <string name="market_profile_rating_breakdown">Ανάλυση βαθμολογίας</string>
     <string name="market_profile_stars_value">%1$d αστέρια</string>

@@ -516,6 +516,7 @@
     <string name="market_profile_biography">Bemutatkozás</string>
     <string name="market_profile_load_failed">A profil nem tölthető be</string>
     <string name="market_profile_member_since">Tag ekkor óta: %1$s</string>
+    <string name="market_profile_joined">Csatlakozott: %1$s</string>
     <string name="market_profile_no_reviews">Még nincsenek értékelések.</string>
     <string name="market_profile_rating_breakdown">Értékelés megoszlása</string>
     <string name="market_profile_stars_value">%1$d csillag</string>

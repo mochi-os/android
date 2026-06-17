@@ -123,6 +123,12 @@ object ApiClient {
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
+            .addInterceptor(Interceptor { chain ->
+                val request = chain.request().newBuilder()
+                    .header("Accept", "application/json")
+                    .build()
+                chain.proceed(request)
+            })
             .addInterceptor(authInterceptor)
             .addInterceptor(invalidationInterceptor)
             .cookieJar(sessionManager.cookieJar)

@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Kuhusu</string>
     <string name="market_profile_load_failed">Imeshindwa kupakia wasifu</string>
     <string name="market_profile_member_since">Mwanachama tangu %1$s</string>
+    <string name="market_profile_joined">Alijiunga %1$s</string>
     <string name="market_profile_no_reviews">Hakuna ukaguzi bado.</string>
     <string name="market_profile_rating_breakdown">Mchanganuo wa ukadiriaji</string>
     <string name="market_profile_stars_value">nyota %1$d</string>

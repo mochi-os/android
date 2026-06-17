@@ -597,6 +597,7 @@
     <string name="market_profile_biography">O użytkowniku</string>
     <string name="market_profile_load_failed">Nie udało się wczytać profilu</string>
     <string name="market_profile_member_since">Członek od %1$s</string>
+    <string name="market_profile_joined">Dołączył(a) %1$s</string>
     <string name="market_profile_no_reviews">Brak recenzji.</string>
     <string name="market_profile_rating_breakdown">Rozkład ocen</string>
     <string name="market_profile_stars_value">%1$d gwiazdek</string>
