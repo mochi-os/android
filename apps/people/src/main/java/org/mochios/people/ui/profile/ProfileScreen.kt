@@ -237,9 +237,9 @@ private fun Editor(
     var showSizeWarning by remember { mutableStateOf<String?>(null) }
 
     val accentPreview = state.accentDraft.trim().takeIf { ProfileViewModel.ACCENT_PATTERN.matches(it) }
-    val avatarUrl = imageUrl(viewModel.serverUrl, info.fingerprint, "avatar", info.avatar)
-    val bannerUrl = imageUrl(viewModel.serverUrl, info.fingerprint, "banner", info.banner)
-    val faviconUrl = imageUrl(viewModel.serverUrl, info.fingerprint, "favicon", info.favicon)
+    val avatarUrl = imageUrl(viewModel.serverUrl, info.id, "avatar", info.avatar)
+    val bannerUrl = imageUrl(viewModel.serverUrl, info.id, "banner", info.banner)
+    val faviconUrl = imageUrl(viewModel.serverUrl, info.id, "favicon", info.favicon)
 
     val avatarPicker = rememberImagePicker(
         slot = ImageSlot.AVATAR,
@@ -768,8 +768,8 @@ private fun ProfilePreviewDialog(
     val accentColour = accent?.let { parseHexColour(it) }
     val name = state.nameDraft.trim().ifBlank { info.name }
     val bio = state.bioDraft
-    val avatarUrl = imageUrl(serverUrl, info.fingerprint, "avatar", info.avatar)
-    val bannerUrl = imageUrl(serverUrl, info.fingerprint, "banner", info.banner)
+    val avatarUrl = imageUrl(serverUrl, info.id, "avatar", info.avatar)
+    val bannerUrl = imageUrl(serverUrl, info.id, "banner", info.banner)
 
     Dialog(
         onDismissRequest = onDismiss,
@@ -887,10 +887,10 @@ private fun ProfilePreviewDialog(
 
 // ---- Helpers ----
 
-private fun imageUrl(serverUrl: String, fingerprint: String, slot: String, version: String?): String? {
-    if (serverUrl.isBlank() || fingerprint.isBlank()) return null
+private fun imageUrl(serverUrl: String, id: String, slot: String, version: String?): String? {
+    if (serverUrl.isBlank() || id.isBlank()) return null
     if (version.isNullOrBlank()) return null
-    return "$serverUrl/${fingerprint.replace("-", "")}/-/$slot?v=$version"
+    return "$serverUrl/people/$id/-/$slot?v=$version"
 }
 
 private fun parseHexColour(hex: String): Color? {
