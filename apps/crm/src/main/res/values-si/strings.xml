@@ -332,4 +332,5 @@
     <string name="crm_access_target">ඉලක්කය</string>
     <string name="crm_access_target_hint">ආයතන ID, @group, * (සියලුදෙනා), හෝ + (සාමාජිකයන්)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">තීරුවක් එක් කරන්න</string>
 </resources>

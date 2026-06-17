@@ -332,4 +332,5 @@
     <string name="crm_access_target">Цел</string>
     <string name="crm_access_target_hint">ID на обект, @група, * (всички) или + (членове)</string>
     <string name="crm_attachment_remove">Премахване на прикачения файл</string>
+    <string name="crm_board_add_column">Добави колона</string>
 </resources>

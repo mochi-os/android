@@ -332,4 +332,5 @@
     <string name="crm_access_target">ٹارگٹ</string>
     <string name="crm_access_target_hint">اینٹیٹی ID، @گروپ، * (سب)، یا + (ممبران)</string>
     <string name="crm_attachment_remove">اٹیچمنٹ ہٹائیں</string>
+    <string name="crm_board_add_column">کالم شامل کریں</string>
 </resources>

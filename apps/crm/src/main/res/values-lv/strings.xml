@@ -332,4 +332,5 @@
     <string name="crm_access_target">Mērķis</string>
     <string name="crm_access_target_hint">Entītijas ID, @grupa, * (visi) vai + (dalībnieki)</string>
     <string name="crm_attachment_remove">Noņemt pielikumu</string>
+    <string name="crm_board_add_column">Pievienot kolonnu</string>
 </resources>

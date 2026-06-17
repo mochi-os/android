@@ -332,4 +332,5 @@
     <string name="crm_access_target">Թիրախ</string>
     <string name="crm_access_target_hint">Էության ID, @խումբ, * (բոլորը), կամ + (անդամներ)</string>
     <string name="crm_attachment_remove">Հեռացնել կցորդը</string>
+    <string name="crm_board_add_column">Ավելացնել պատվիրակություն</string>
 </resources>

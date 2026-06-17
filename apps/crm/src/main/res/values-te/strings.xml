@@ -332,4 +332,5 @@
     <string name="crm_access_target">లక్ష్యం</string>
     <string name="crm_access_target_hint">ఎంటిటీ ID, @group, * (అందరూ), లేదా + (సభ్యులు)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">కాలమ్‌ను జోడించండి</string>
 </resources>

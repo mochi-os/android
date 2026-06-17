@@ -332,4 +332,5 @@
     <string name="crm_access_target">Manufa</string>
     <string name="crm_access_target_hint">ID ɗin mahaɗi, @ƙungiya, * (kowa), ko + (mambobi)</string>
     <string name="crm_attachment_remove">Cire haɗe</string>
+    <string name="crm_board_add_column">Ƙara column</string>
 </resources>

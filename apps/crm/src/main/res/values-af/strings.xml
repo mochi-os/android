@@ -332,4 +332,5 @@
     <string name="crm_access_target">Teiken</string>
     <string name="crm_access_target_hint">Entiteits-ID, @groep, * (almal) of + (lede)</string>
     <string name="crm_attachment_remove">Verwyder aanhangsel</string>
+    <string name="crm_board_add_column">Voeg kolom by</string>
 </resources>

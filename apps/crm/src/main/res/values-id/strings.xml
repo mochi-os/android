@@ -332,4 +332,5 @@
     <string name="crm_access_target">Target</string>
     <string name="crm_access_target_hint">ID entitas, @grup, * (semua orang), atau + (anggota)</string>
     <string name="crm_attachment_remove">Hapus lampiran</string>
+    <string name="crm_board_add_column">Tambah kolom</string>
 </resources>

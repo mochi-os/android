@@ -332,4 +332,5 @@
     <string name="crm_access_target">ターゲット</string>
     <string name="crm_access_target_hint">エンティティ ID、@グループ、*（全員）、または +（メンバー）</string>
     <string name="crm_attachment_remove">添付を削除</string>
+    <string name="crm_board_add_column">列を追加</string>
 </resources>

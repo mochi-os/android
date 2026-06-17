@@ -332,4 +332,5 @@
     <string name="crm_access_target">Hedef</string>
     <string name="crm_access_target_hint">Varlık kimliği, @grup, * (herkes) veya + (üyeler)</string>
     <string name="crm_attachment_remove">Eki kaldır</string>
+    <string name="crm_board_add_column">Sütun ekle</string>
 </resources>

@@ -332,4 +332,5 @@
     <string name="crm_access_target">Cíl</string>
     <string name="crm_access_target_hint">ID entity, @skupina, * (všichni) nebo + (členové)</string>
     <string name="crm_attachment_remove">Odebrat přílohu</string>
+    <string name="crm_board_add_column">Přidat sloupec</string>
 </resources>

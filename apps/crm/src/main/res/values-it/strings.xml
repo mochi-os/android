@@ -332,4 +332,5 @@
     <string name="crm_access_target">Destinazione</string>
     <string name="crm_access_target_hint">ID entità, @gruppo, * (tutti) o + (membri)</string>
     <string name="crm_attachment_remove">Rimuovi allegato</string>
+    <string name="crm_board_add_column">Aggiungi colonna</string>
 </resources>

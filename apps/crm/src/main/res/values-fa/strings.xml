@@ -332,4 +332,5 @@
     <string name="crm_access_target">هدف</string>
     <string name="crm_access_target_hint">شناسه موجودیت، @گروه، * (همه)، یا + (اعضا)</string>
     <string name="crm_attachment_remove">حذف پیوست</string>
+    <string name="crm_board_add_column">افزودن ستون</string>
 </resources>

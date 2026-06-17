@@ -332,4 +332,5 @@
     <string name="crm_access_target">대상</string>
     <string name="crm_access_target_hint">엔티티 ID, @그룹, * (모두), 또는 + (구성원)</string>
     <string name="crm_attachment_remove">첨부 파일 제거</string>
+    <string name="crm_board_add_column">컬럼 추가</string>
 </resources>

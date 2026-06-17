@@ -334,4 +334,5 @@
     <string name="crm_access_target">Sasaran</string>
     <string name="crm_access_target_hint">ID entiti, @kumpulan, * (semua orang), atau + (ahli)</string>
     <string name="crm_attachment_remove">Buang lampiran</string>
+    <string name="crm_board_add_column">Tambah lajur</string>
 </resources>

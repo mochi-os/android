@@ -332,4 +332,5 @@
     <string name="crm_access_target">Siht</string>
     <string name="crm_access_target_hint">Olemi ID, @grupp, * (kõik) või + (liikmed)</string>
     <string name="crm_attachment_remove">Eemalda manus</string>
+    <string name="crm_board_add_column">Lisa veerg</string>
 </resources>

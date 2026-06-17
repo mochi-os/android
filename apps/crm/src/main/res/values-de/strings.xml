@@ -334,4 +334,5 @@
     <string name="crm_access_target">Ziel</string>
     <string name="crm_access_target_hint">Entitäts-ID, @gruppe, * (alle) oder + (Mitglieder)</string>
     <string name="crm_attachment_remove">Anhang entfernen</string>
+    <string name="crm_board_add_column">Spalte hinzufügen</string>
 </resources>

@@ -332,4 +332,5 @@
     <string name="crm_access_target">เป้าหมาย</string>
     <string name="crm_access_target_hint">รหัสเอนทิตี, @กลุ่ม, * (ทุกคน), หรือ + (สมาชิก)</string>
     <string name="crm_attachment_remove">ลบไฟล์แนบ</string>
+    <string name="crm_board_add_column">เพิ่มคอลัมน์</string>
 </resources>

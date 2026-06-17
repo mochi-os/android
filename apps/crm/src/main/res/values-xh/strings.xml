@@ -332,4 +332,5 @@
     <string name="crm_access_target">Injongo</string>
     <string name="crm_access_target_hint">I-ID yendawo, @qela, * (wonke ubani), okanye + (amalungu)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">Yongeza ikholamu</string>
 </resources>

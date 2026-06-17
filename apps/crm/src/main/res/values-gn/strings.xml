@@ -332,4 +332,5 @@
     <string name="crm_access_target">Apoukapy</string>
     <string name="crm_access_target_hint">Entidad ID, @atyguasu, * (opavave), térã + (mba\'apoharakuéra)</string>
     <string name="crm_attachment_remove">Eipe\'a jeitypa</string>
+    <string name="crm_board_add_column">Embojuaju columna</string>
 </resources>

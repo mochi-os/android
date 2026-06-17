@@ -332,4 +332,5 @@
     <string name="crm_access_target">ئامانج</string>
     <string name="crm_access_target_hint">ناسنامەی بەرکار، @group، * (هەمووان)، یان + (ئەندامان)</string>
     <string name="crm_attachment_remove">لابردنی هاوپێچ</string>
+    <string name="crm_board_add_column">زیادکردنی ستوون</string>
 </resources>

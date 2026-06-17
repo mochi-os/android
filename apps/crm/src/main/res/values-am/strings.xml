@@ -332,4 +332,5 @@
     <string name="crm_access_target">ዒላማ</string>
     <string name="crm_access_target_hint">የማንነት መታወቂያ፣ @ቡድን፣ * (ሁሉም)፣ ወይም + (አባላት)</string>
     <string name="crm_attachment_remove">አባሪውን ያስወግዱ</string>
+    <string name="crm_board_add_column">ዓምድ ጨምር</string>
 </resources>

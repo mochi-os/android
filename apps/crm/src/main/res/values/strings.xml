@@ -252,6 +252,7 @@
     <string name="crm_board_no_options">No options configured for column field</string>
     <string name="crm_board_unassigned">Unassigned</string>
     <string name="crm_board_new">New</string>
+    <string name="crm_board_add_column">Add column</string>
     <string name="crm_board_column_options">Column options</string>
     <string name="crm_board_rename">Rename</string>
     <string name="crm_board_rename_column">Rename column</string>

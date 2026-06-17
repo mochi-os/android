@@ -332,4 +332,5 @@
     <string name="crm_access_target">Doel</string>
     <string name="crm_access_target_hint">Entiteits-ID, @groep, * (iedereen), of + (leden)</string>
     <string name="crm_attachment_remove">Bijlage verwijderen</string>
+    <string name="crm_board_add_column">Kolom toevoegen</string>
 </resources>

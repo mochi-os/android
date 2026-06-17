@@ -332,4 +332,5 @@
     <string name="crm_access_target">Lengo</string>
     <string name="crm_access_target_hint">Kitambulisho cha huluki, @kikundi, * (kila mtu), au + (wanachama)</string>
     <string name="crm_attachment_remove">Ondoa kiambatisho</string>
+    <string name="crm_board_add_column">Ongeza safu</string>
 </resources>
