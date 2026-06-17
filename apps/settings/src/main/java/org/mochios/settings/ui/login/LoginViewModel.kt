@@ -33,6 +33,10 @@ data class LoginUiState(
     val totpEnabled: Boolean = false,
     val recoveryCount: Int = 0,
     val oauth: List<OAuthIdentity> = emptyList(),
+    /** OAuth providers the server has configured (enabled), lowercase keys.
+     *  Drives which providers are offered for linking — matching web, which
+     *  reads the same `/_/auth/methods` oauth map. */
+    val oauthProviders: List<String> = emptyList(),
 )
 
 @HiltViewModel
@@ -94,6 +98,15 @@ class LoginViewModel @Inject constructor(
                 val recovery = api.recoveryCount().bodyOrThrow().count
                 val oauth = api.listOAuth().bodyOrThrow().identities
                     .sortedWith(compareBy(NaturalCompare) { it.provider })
+                // Server-configured OAuth providers (best-effort: a failure
+                // here shouldn't blank the whole security page).
+                val oauthProviders = runCatching {
+                    authRepository.getAvailableMethods().oauth
+                        .filterValues { it }
+                        .keys
+                        .map { it.lowercase() }
+                        .sorted()
+                }.getOrDefault(emptyList())
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     methods = methods,
@@ -101,6 +114,7 @@ class LoginViewModel @Inject constructor(
                     totpEnabled = totp,
                     recoveryCount = recovery,
                     oauth = oauth,
+                    oauthProviders = oauthProviders,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())

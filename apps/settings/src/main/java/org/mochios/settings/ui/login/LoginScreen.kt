@@ -161,6 +161,7 @@ fun LoginScreen(
 
             OAuthSection(
                 identities = state.oauth,
+                providers = state.oauthProviders,
                 onUnlink = viewModel::unlinkOAuth,
                 onLink = viewModel::linkOAuth,
             )
@@ -633,6 +634,7 @@ private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDo
 @Composable
 private fun OAuthSection(
     identities: List<OAuthIdentity>,
+    providers: List<String>,
     onUnlink: (String) -> Unit,
     onLink: (String) -> Unit,
 ) {
@@ -649,7 +651,7 @@ private fun OAuthSection(
             Card(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), colors = CardDefaults.outlinedCardColors()) {
                 Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(modifier = Modifier.weight(1f)) {
-                        Text(id.provider.replaceFirstChar { it.uppercase() }, fontWeight = FontWeight.SemiBold)
+                        Text(oauthProviderLabel(id.provider), fontWeight = FontWeight.SemiBold)
                         if (id.email.isNotBlank()) {
                             Text(
                                 id.email,
@@ -690,7 +692,7 @@ private fun OAuthSection(
     }
     Spacer(Modifier.height(8.dp))
     val linkedProviders = identities.map { it.provider.lowercase() }.toSet()
-    val available = OAUTH_PROVIDERS.filter { it !in linkedProviders }
+    val available = providers.filter { it !in linkedProviders }
     if (available.isNotEmpty()) {
         var showLink by remember { mutableStateOf(false) }
         Button(onClick = { showLink = true }) {
@@ -712,7 +714,7 @@ private fun OAuthSection(
                                 },
                                 modifier = Modifier.fillMaxWidth(),
                             ) {
-                                Text(provider.replaceFirstChar { it.uppercase() })
+                                Text(oauthProviderLabel(provider))
                             }
                         }
                     }
@@ -727,7 +729,16 @@ private fun OAuthSection(
     }
 }
 
-private val OAUTH_PROVIDERS = listOf("github", "google")
+/** Proper brand casing for OAuth providers, mirroring web's
+ *  `oauthProviderLabel`. Brand names stay verbatim (not localised). */
+private fun oauthProviderLabel(provider: String): String = when (provider.lowercase()) {
+    "github" -> "GitHub"
+    "google" -> "Google"
+    "facebook" -> "Facebook"
+    "microsoft" -> "Microsoft"
+    "x" -> "X"
+    else -> provider.replaceFirstChar { it.uppercase() }
+}
 
 @Composable
 private fun SectionHeader(text: String) {
