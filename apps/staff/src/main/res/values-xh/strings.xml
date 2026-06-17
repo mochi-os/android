@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">Akufunyenwanga</string>
     <string name="staff_disputes_reason_other">Okunye</string>
     <string name="staff_disputes_reason_unauthorised">Akuvunyelwanga</string>
-    <string name="staff_disputes_refund_exceeds_total">Imali yembuyekezo idlula iimali zonke ze-oda</string>
     <string name="staff_disputes_refund_must_be_positive">Imali yembuyekezo kufuneka ibe ngaphezulu kwesiqingatha</string>
     <string name="staff_disputes_resolution_buyer">Sombululela umthengi</string>
     <string name="staff_disputes_resolution_label">Isisombululo</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Khangela ngegama, umnwe, okanye i-ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Imfihlo yokusayina i-Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Sele kubuyiselwe</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Imali yokubuyiselwa idlula imali eseleyo enokubuyiselwa</string>
 </resources>

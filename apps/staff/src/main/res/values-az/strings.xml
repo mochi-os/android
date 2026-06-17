@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Digər</string>
     <string name="staff_disputes_reason_unauthorised">Əlçatan deyil</string>
     <string name="staff_disputes_refund_amount_label">Geri qaytarma məbləği (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Geri qaytarma məbləği sifariş cəmindən artıqdır</string>
     <string name="staff_disputes_refund_help">Tam %1$s geri qaytarmaq üçün boş buraxın. Qismən geri qaytarma üçün daha kiçik məbləğ daxil edin.</string>
     <string name="staff_disputes_refund_must_be_positive">Geri qaytarma məbləği sıfırdan böyük olmalıdır</string>
     <string name="staff_disputes_resolution_buyer">Alıcı üçün həll et</string>
@@ -517,4 +516,6 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Bu rəyi həmişəlik silmək istəyirsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook imzalama sirri</string>
+    <string name="staff_disputes_meta_already_refunded">Artıq geri qaytarılıb</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Geri qaytarma məbləği qalan qaytarıla bilən məbləği aşır</string>
 </resources>

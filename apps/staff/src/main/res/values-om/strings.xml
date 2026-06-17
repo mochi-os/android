@@ -253,7 +253,6 @@
     <string name="staff_disputes_reason_not_received">Hin argamne</string>
     <string name="staff_disputes_reason_other">Biraa</string>
     <string name="staff_disputes_reason_unauthorised">Hin hayyamamne</string>
-    <string name="staff_disputes_refund_exceeds_total">Hangi deebii kaffaltii waliigala ajajaa caalee</string>
     <string name="staff_disputes_refund_must_be_positive">Hangi deebii kaffaltii zeeroo caaluu qaba</string>
     <string name="staff_disputes_resolution_buyer">Bituuf furi</string>
     <string name="staff_disputes_resolution_label">Furmaata</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Maqaa, faanaa quba, ykn ID\'n barbaadi…</string>
 
     <string name="staff_config_field_stripe_webhook">Iccitiroo mallattoo Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Duraan deebi\'eera</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Hamma deebii kennamuu danda\'u hafe ni darba</string>
 </resources>

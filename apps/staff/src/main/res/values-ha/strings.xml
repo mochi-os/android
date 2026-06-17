@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">Ba a karɓa ba</string>
     <string name="staff_disputes_reason_other">Sauran</string>
     <string name="staff_disputes_reason_unauthorised">Ba a ba da izini ba</string>
-    <string name="staff_disputes_refund_exceeds_total">Adadin refund ya wuce jimillar oda</string>
     <string name="staff_disputes_refund_must_be_positive">Adadin refund dole ya zama fiye da sifili</string>
     <string name="staff_disputes_resolution_buyer">Warware don mai siye</string>
     <string name="staff_disputes_resolution_label">Warwarewa</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Bincika ta suna, yatsa, ko ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Sirrin sa hannu na webhook</string>
+    <string name="staff_disputes_meta_already_refunded">An riga an mayar</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Adadin maidawa ya wuce adadin da ya rage da za a iya mayarwa</string>
 </resources>

@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Lain-lain</string>
     <string name="staff_disputes_reason_unauthorised">Tidak dibenarkan</string>
     <string name="staff_disputes_refund_amount_label">Jumlah bayaran balik (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Jumlah bayaran balik melebihi jumlah pesanan</string>
     <string name="staff_disputes_refund_help">Biarkan kosong untuk bayaran balik penuh %1$s. Masukkan jumlah lebih kecil untuk bayaran balik separa.</string>
     <string name="staff_disputes_refund_must_be_positive">Jumlah bayaran balik mestilah lebih besar daripada sifar</string>
     <string name="staff_disputes_resolution_buyer">Selesaikan untuk pembeli</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Peranan dikemas kini</string>
 
     <string name="staff_config_field_stripe_webhook">Rahsia tandatangan Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Sudah dikembalikan</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Jumlah bayaran balik melebihi jumlah yang masih boleh dikembalikan</string>
 </resources>

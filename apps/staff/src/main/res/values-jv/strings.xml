@@ -257,7 +257,6 @@
     <string name="staff_disputes_reason_not_received">Ora ditampa</string>
     <string name="staff_disputes_reason_other">Liyané</string>
     <string name="staff_disputes_reason_unauthorised">Ora dilanggané</string>
-    <string name="staff_disputes_refund_exceeds_total">Jumlah refund ngluwihi total pesenan</string>
     <string name="staff_disputes_refund_must_be_positive">Jumlah refund kudu luwih saka nol</string>
     <string name="staff_disputes_resolution_buyer">Rampungaké kanggo pembeli</string>
     <string name="staff_disputes_resolution_label">Resolusi</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Goleki miturut jeneng, sidik jari, utawa ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Rahasia tapak tangan Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Wis dibalèkaké</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Jumlah pangembalian ngluwihi jumlah sing isih bisa dibalèkaké</string>
 </resources>

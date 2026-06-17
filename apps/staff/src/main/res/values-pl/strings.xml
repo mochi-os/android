@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Inne</string>
     <string name="staff_disputes_reason_unauthorised">Nieuprawnione</string>
     <string name="staff_disputes_refund_amount_label">Kwota zwrotu (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Kwota zwrotu przekracza sumę zamówienia</string>
     <string name="staff_disputes_refund_help">Pozostaw puste dla pełnego zwrotu %1$s. Wprowadź mniejszą kwotę dla zwrotu częściowego.</string>
     <string name="staff_disputes_refund_must_be_positive">Kwota zwrotu musi być większa od zera</string>
     <string name="staff_disputes_resolution_buyer">Rozstrzygnij na korzyść kupującego</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rola zaktualizowana</string>
 
     <string name="staff_config_field_stripe_webhook">Tajny klucz podpisywania webhooka</string>
+    <string name="staff_disputes_meta_already_refunded">Już zwrócono</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Kwota zwrotu przekracza pozostałą kwotę podlegającą zwrotowi</string>
 </resources>

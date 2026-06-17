@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">अन्य</string>
     <string name="staff_disputes_reason_unauthorised">अनधिकृत</string>
     <string name="staff_disputes_refund_amount_label">रिफ़ंड राशि (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">रिफ़ंड राशि ऑर्डर के कुल से अधिक है</string>
     <string name="staff_disputes_refund_help">%1$s की पूर्ण रिफ़ंड के लिए खाली छोड़ें। आंशिक रिफ़ंड के लिए छोटी राशि दर्ज करें।</string>
     <string name="staff_disputes_refund_must_be_positive">रिफ़ंड राशि शून्य से अधिक होनी चाहिए</string>
     <string name="staff_disputes_resolution_buyer">खरीदार के लिए हल करें</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">भूमिका अपडेट की गई</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त</string>
+    <string name="staff_disputes_meta_already_refunded">पहले ही वापस किया गया</string>
+    <string name="staff_disputes_refund_exceeds_remaining">रिफ़ंड राशि शेष रिफ़ंड योग्य राशि से अधिक है</string>
 </resources>

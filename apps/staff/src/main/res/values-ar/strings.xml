@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">أخرى</string>
     <string name="staff_disputes_reason_unauthorised">غير مصرح</string>
     <string name="staff_disputes_refund_amount_label">مبلغ الاسترداد (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">مبلغ الاسترداد يتجاوز إجمالي الطلب</string>
     <string name="staff_disputes_refund_help">اتركه فارغًا لاسترداد كامل بمقدار %1$s. أدخل مبلغًا أصغر لاسترداد جزئي.</string>
     <string name="staff_disputes_refund_must_be_positive">يجب أن يكون مبلغ الاسترداد أكبر من صفر</string>
     <string name="staff_disputes_resolution_buyer">الحل لصالح المشتري</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">تم تحديث الدور</string>
 
     <string name="staff_config_field_stripe_webhook">سر توقيع Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">تم استرداده بالفعل</string>
+    <string name="staff_disputes_refund_exceeds_remaining">مبلغ الاسترداد يتجاوز المبلغ المتبقي القابل للاسترداد</string>
 </resources>

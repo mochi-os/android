@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Drugo</string>
     <string name="staff_disputes_reason_unauthorised">Brez dovoljenja</string>
     <string name="staff_disputes_refund_amount_label">Znesek povračila (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Znesek vračila presega skupni znesek naročila</string>
     <string name="staff_disputes_refund_help">Pustite prazno za celotno povračilo %1$s. Vnesite manjši znesek za delno povračilo.</string>
     <string name="staff_disputes_refund_must_be_positive">Znesek vračila mora biti večji od nič</string>
     <string name="staff_disputes_resolution_buyer">Razreši v korist kupca</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Vloga posodobljena</string>
 
     <string name="staff_config_field_stripe_webhook">Skrivni ključ za podpisovanje webhooka</string>
+    <string name="staff_disputes_meta_already_refunded">Že povrnjeno</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Znesek vračila presega preostali znesek za vračilo</string>
 </resources>

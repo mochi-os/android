@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">อื่น ๆ</string>
     <string name="staff_disputes_reason_unauthorised">ไม่ได้รับอนุญาต</string>
     <string name="staff_disputes_refund_amount_label">จำนวนเงินคืน (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">ยอดคืนเงินเกินยอดรวมของคำสั่งซื้อ</string>
     <string name="staff_disputes_refund_help">เว้นว่างเพื่อคืนเงินเต็มจำนวน %1$s ป้อนจำนวนน้อยกว่าเพื่อคืนเงินบางส่วน</string>
     <string name="staff_disputes_refund_must_be_positive">ยอดคืนเงินต้องมากกว่าศูนย์</string>
     <string name="staff_disputes_resolution_buyer">แก้ไขให้ผู้ซื้อ</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">อัปเดตบทบาทแล้ว</string>
 
     <string name="staff_config_field_stripe_webhook">รหัสลับสำหรับลงนาม Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">คืนเงินแล้ว</string>
+    <string name="staff_disputes_refund_exceeds_remaining">จำนวนเงินคืนเกินจำนวนเงินคืนที่เหลืออยู่</string>
 </resources>

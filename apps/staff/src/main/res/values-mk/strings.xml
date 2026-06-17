@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Друго</string>
     <string name="staff_disputes_reason_unauthorised">Неовластено</string>
     <string name="staff_disputes_refund_amount_label">Износ за поврат (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Износот на поврат го надминува вкупниот износ на нарачката</string>
     <string name="staff_disputes_refund_help">Оставете празно за целосен поврат на %1$s. Внесете помал износ за делумен поврат.</string>
     <string name="staff_disputes_refund_must_be_positive">Износот на поврат мора да биде поголем од нула</string>
     <string name="staff_disputes_resolution_buyer">Реши во корист на купувачот</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Улогата е ажурирана</string>
 
     <string name="staff_config_field_stripe_webhook">Тајна за потпишување Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Веќе вратено</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Износот за враќање го надминува преостанатиот износ за враќање</string>
 </resources>

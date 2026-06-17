@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">その他</string>
     <string name="staff_disputes_reason_unauthorised">未承認</string>
     <string name="staff_disputes_refund_amount_label">返金額(%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">返金額が注文合計を超えています</string>
     <string name="staff_disputes_refund_help">%1$s の全額返金は空欄のまま、部分返金は少ない金額を入力してください。</string>
     <string name="staff_disputes_refund_must_be_positive">返金額は 0 より大きくなければなりません</string>
     <string name="staff_disputes_resolution_buyer">買い手のために解決</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">ロールを更新しました</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook 署名シークレット</string>
+    <string name="staff_disputes_meta_already_refunded">返金済み</string>
+    <string name="staff_disputes_refund_exceeds_remaining">返金額が残りの返金可能額を超えています</string>
 </resources>

@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">मिळाले नाही</string>
     <string name="staff_disputes_reason_other">इतर</string>
     <string name="staff_disputes_reason_unauthorised">अनधिकृत</string>
-    <string name="staff_disputes_refund_exceeds_total">रिफंडची रक्कम ऑर्डरच्या एकूण रकमेपेक्षा जास्त आहे</string>
     <string name="staff_disputes_refund_must_be_positive">रिफंडची रक्कम शून्यापेक्षा जास्त असावी</string>
     <string name="staff_disputes_resolution_buyer">खरेदीदारासाठी निराकरण करा</string>
     <string name="staff_disputes_resolution_label">रिझोल्यूशन</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">नाव, फिंगरप्रिंट, किंवा ID ने शोधा…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook स्वाक्षरी गुपित</string>
+    <string name="staff_disputes_meta_already_refunded">आधीच परत केले</string>
+    <string name="staff_disputes_refund_exceeds_remaining">परतावा रक्कम उर्वरित परत करण्यायोग्य रकमेपेक्षा जास्त आहे</string>
 </resources>

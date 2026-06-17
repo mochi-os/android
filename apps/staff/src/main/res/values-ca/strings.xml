@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Altres</string>
     <string name="staff_disputes_reason_unauthorised">No autoritzat</string>
     <string name="staff_disputes_refund_amount_label">Quantitat del reembors (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">L\'import del reemborsament supera el total de la comanda</string>
     <string name="staff_disputes_refund_help">Deixa en blanc per a un reembors total de %1$s. Introdueix una quantitat menor per a un reembors parcial.</string>
     <string name="staff_disputes_refund_must_be_positive">L\'import del reemborsament ha de ser superior a zero</string>
     <string name="staff_disputes_resolution_buyer">Resol a favor del comprador</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rol actualitzat</string>
 
     <string name="staff_config_field_stripe_webhook">Secret de signatura del Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Ja reemborsat</string>
+    <string name="staff_disputes_refund_exceeds_remaining">L\'import del reemborsament supera l\'import reemborsable restant</string>
 </resources>

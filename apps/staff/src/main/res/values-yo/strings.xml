@@ -253,7 +253,6 @@
     <string name="staff_disputes_reason_not_received">Kò gba</string>
     <string name="staff_disputes_reason_other">Mìíràn</string>
     <string name="staff_disputes_reason_unauthorised">Aláìláyè</string>
-    <string name="staff_disputes_refund_exceeds_total">Iye padà ju lápapọ̀ ètò lọ</string>
     <string name="staff_disputes_refund_must_be_positive">Iye padà gbọ́dọ̀ ju òdo lọ</string>
     <string name="staff_disputes_resolution_buyer">Yanjú fún olùrà</string>
     <string name="staff_disputes_resolution_label">Ìpinnu</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Wá nípa orúkọ, ìka ọwọ́, tàbí ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Àṣírí ìbúwọ́lù Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Ti dapada tẹ́lẹ̀</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Iye ifowoleyin ti kọja iye ifowoleyin ti o ku</string>
 </resources>

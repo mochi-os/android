@@ -232,7 +232,6 @@
     <string name="staff_disputes_reason_not_received">Non reçu</string>
     <string name="staff_disputes_reason_unauthorised">Non autorisé</string>
     <string name="staff_disputes_refund_amount_label">Montant du remboursement (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Le montant du remboursement dépasse le total de la commande</string>
     <string name="staff_disputes_refund_help">Laisser vide pour un remboursement complet de %1$s. Saisir un montant inférieur pour un remboursement partiel.</string>
     <string name="staff_disputes_refund_must_be_positive">Le montant du remboursement doit être supérieur à zéro</string>
     <string name="staff_disputes_resolution_buyer">Trancher en faveur de l\'acheteur</string>
@@ -518,4 +517,6 @@
     <string name="staff_config_field_stripe_publishable">Clé publiable</string>
     <string name="staff_config_field_stripe_secret">Clé secrète</string>
 
+    <string name="staff_disputes_meta_already_refunded">Déjà remboursé</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Le montant du remboursement dépasse le montant remboursable restant</string>
 </resources>

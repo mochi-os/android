@@ -361,7 +361,6 @@
     <string name="staff_disputes_reason_not_received">未收到</string>
     <string name="staff_disputes_reason_unauthorised">未經授權</string>
     <string name="staff_disputes_refund_amount_label">退款金額（%1$s）</string>
-    <string name="staff_disputes_refund_exceeds_total">退款金額超過訂單總額</string>
     <string name="staff_disputes_refund_help">留空可全額退款 %1$s。輸入較小的金額可作部分退款。</string>
     <string name="staff_disputes_refund_must_be_positive">退款金額必須大於零</string>
     <string name="staff_disputes_resolution_buyer">判予買家</string>
@@ -516,4 +515,6 @@
     <string name="staff_team_toast_role_failed">無法更新角色</string>
     <string name="staff_team_toast_role_updated">已更新角色</string>
 
+    <string name="staff_disputes_meta_already_refunded">已退款</string>
+    <string name="staff_disputes_refund_exceeds_remaining">退款金額超出剩餘可退款金額</string>
 </resources>

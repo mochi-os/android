@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Egyéb</string>
     <string name="staff_disputes_reason_unauthorised">Nem engedélyezett</string>
     <string name="staff_disputes_refund_amount_label">Visszatérítés összege (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">A visszatérítés összege meghaladja a rendelés végösszegét</string>
     <string name="staff_disputes_refund_help">Hagyja üresen a teljes %1$s visszatérítéséhez. Részleges visszatérítéshez adjon meg kisebb összeget.</string>
     <string name="staff_disputes_refund_must_be_positive">A visszatérítés összegének nagyobbnak kell lennie nullánál</string>
     <string name="staff_disputes_resolution_buyer">Megoldás a vevő javára</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Szerepkör frissítve</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook aláírási titok</string>
+    <string name="staff_disputes_meta_already_refunded">Már visszatérítve</string>
+    <string name="staff_disputes_refund_exceeds_remaining">A visszatérítés összege meghaladja a fennmaradó visszatéríthető összeget</string>
 </resources>

@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Diğer</string>
     <string name="staff_disputes_reason_unauthorised">Yetkisiz</string>
     <string name="staff_disputes_refund_amount_label">İade tutarı (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">İade tutarı sipariş toplamını aşıyor</string>
     <string name="staff_disputes_refund_help">%1$s tutarın tamamının iadesi için boş bırakın. Kısmi iade için daha düşük bir tutar girin.</string>
     <string name="staff_disputes_refund_must_be_positive">İade tutarı sıfırdan büyük olmalı</string>
     <string name="staff_disputes_resolution_buyer">Alıcı lehine çöz</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rol güncellendi</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook imzalama gizli anahtarı</string>
+    <string name="staff_disputes_meta_already_refunded">Zaten iade edildi</string>
+    <string name="staff_disputes_refund_exceeds_remaining">İade tutarı kalan iade edilebilir tutarı aşıyor</string>
 </resources>

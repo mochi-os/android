@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Outro</string>
     <string name="staff_disputes_reason_unauthorised">Não permitido</string>
     <string name="staff_disputes_refund_amount_label">Valor do reembolso (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">O valor do reembolso excede o total do pedido</string>
     <string name="staff_disputes_refund_help">Deixe em branco para um reembolso total de %1$s. Insira um valor menor para um reembolso parcial.</string>
     <string name="staff_disputes_refund_must_be_positive">O valor do reembolso deve ser maior que zero</string>
     <string name="staff_disputes_resolution_buyer">Resolver a favor do comprador</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Função atualizada</string>
 
     <string name="staff_config_field_stripe_webhook">Segredo de assinatura do webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Já reembolsado</string>
+    <string name="staff_disputes_refund_exceeds_remaining">O valor do reembolso excede o valor reembolsável restante</string>
 </resources>

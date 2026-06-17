@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Annet</string>
     <string name="staff_disputes_reason_unauthorised">Ikke tillatt</string>
     <string name="staff_disputes_refund_amount_label">Refusjonsbeløp (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Refusjonsbeløpet overstiger bestillingens totalsum</string>
     <string name="staff_disputes_refund_help">La være tom for full refusjon av %1$s. Skriv inn et mindre beløp for delvis refusjon.</string>
     <string name="staff_disputes_refund_must_be_positive">Refusjonsbeløpet må være større enn null</string>
     <string name="staff_disputes_resolution_buyer">Løs til fordel for kjøper</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rolle oppdatert</string>
 
     <string name="staff_config_field_stripe_webhook">Hemmelig signeringsnøkkel for webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Allerede refundert</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Refusjonsbeløpet overstiger det gjenværende refunderbare beløpet</string>
 </resources>

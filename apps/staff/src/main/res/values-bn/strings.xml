@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">অন্যান্য</string>
     <string name="staff_disputes_reason_unauthorised">অনুমোদিত নয়</string>
     <string name="staff_disputes_refund_amount_label">ফেরতের পরিমাণ (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">রিফান্ডের পরিমাণ অর্ডারের মোট পরিমাণের চেয়ে বেশি</string>
     <string name="staff_disputes_refund_help">%1$s এর পূর্ণ ফেরতের জন্য খালি রাখুন। আংশিক ফেরতের জন্য ছোট পরিমাণ দিন।</string>
     <string name="staff_disputes_refund_must_be_positive">রিফান্ডের পরিমাণ অবশ্যই শূন্যের চেয়ে বেশি হতে হবে</string>
     <string name="staff_disputes_resolution_buyer">ক্রেতার পক্ষে সমাধান করুন</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">ভূমিকা আপডেট হয়েছে</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook স্বাক্ষর গোপন কী</string>
+    <string name="staff_disputes_meta_already_refunded">ইতিমধ্যে ফেরত দেওয়া হয়েছে</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ফেরত দেওয়ার পরিমাণ অবশিষ্ট ফেরতযোগ্য পরিমাণ অতিক্রম করেছে</string>
 </resources>

@@ -258,7 +258,6 @@
     <string name="staff_disputes_reason_not_received">አልተቀበለም</string>
     <string name="staff_disputes_reason_other">ሌላ</string>
     <string name="staff_disputes_reason_unauthorised">ያልተፈቀደ</string>
-    <string name="staff_disputes_refund_exceeds_total">የተመላሽ ገንዘብ መጠን ከትዕዛዝ ጠቅላላ ይበልጣል</string>
     <string name="staff_disputes_refund_must_be_positive">የተመላሽ ገንዘብ መጠን ከዜሮ መብለጥ አለበት</string>
     <string name="staff_disputes_resolution_buyer">ለገዢ ፍታ</string>
     <string name="staff_disputes_resolution_label">ፍታት</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">በስም፣ በጣት አሻራ ወይም በመለያ ይፈልጉ…</string>
 
     <string name="staff_config_field_stripe_webhook">የWebhook መፈረሚያ ሚስጥር</string>
+    <string name="staff_disputes_meta_already_refunded">ቀደም ብሎ ተመላሽ ተደርጓል</string>
+    <string name="staff_disputes_refund_exceeds_remaining">የመመለሻ መጠን የቀረውን ሊመለስ የሚችለውን መጠን አልፏል</string>
 </resources>

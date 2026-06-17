@@ -315,7 +315,6 @@
     <string name="staff_disputes_reason_not_received">Nicht erhalten</string>
     <string name="staff_disputes_reason_unauthorised">Nicht autorisiert</string>
     <string name="staff_disputes_refund_amount_label">Rückerstattungsbetrag (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Rückerstattungsbetrag übersteigt den Bestelltotal</string>
     <string name="staff_disputes_refund_help">Leer lassen für eine vollständige Rückerstattung von %1$s. Geben Sie einen kleineren Betrag für eine teilweise Rückerstattung ein.</string>
     <string name="staff_disputes_resolution_buyer">Zugunsten des Käufers entscheiden</string>
     <string name="staff_disputes_resolution_label">Entscheidung</string>
@@ -516,4 +515,6 @@
     <string name="staff_team_toast_role_failed">Rolle konnte nicht aktualisiert werden</string>
     <string name="staff_team_toast_role_updated">Rolle aktualisiert</string>
 
+    <string name="staff_disputes_meta_already_refunded">Bereits erstattet</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Erstattungsbetrag übersteigt den verbleibenden erstattungsfähigen Betrag</string>
 </resources>

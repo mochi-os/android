@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ניט באַקומען</string>
     <string name="staff_disputes_reason_other">אַנדער</string>
     <string name="staff_disputes_reason_unauthorised">נישט אויטאָריזירט</string>
-    <string name="staff_disputes_refund_exceeds_total">אומקער סומע גייט איבער באַשטעלונג סך־הכּל</string>
     <string name="staff_disputes_refund_must_be_positive">אומקער סומע מוז זײַן גרעסער פֿון נול</string>
     <string name="staff_disputes_resolution_buyer">אויפֿלייזן פֿאַר קויפֿער</string>
     <string name="staff_disputes_resolution_label">אויפֿלייזונג</string>
@@ -513,4 +512,6 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. אויסמעקן די רעצענזיע פֿאַר תּמיד? דאָס קען נישט אומגעטאָן ווערן.</string>
     <string name="staff_team_dialog_search_placeholder">זוך לויט נאָמען, פֿינגערצייכן אָדער ID…</string>
     <string name="staff_config_field_stripe_webhook">Webhook סיגנירן סוד</string>
+    <string name="staff_disputes_meta_already_refunded">שוין צוריקגעצאלט</string>
+    <string name="staff_disputes_refund_exceeds_remaining">די צוריקצאלונג סומע גייט אריבער די פארבליבענע צוריקצאלבארע סומע</string>
 </resources>

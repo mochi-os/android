@@ -253,7 +253,6 @@
     <string name="staff_disputes_reason_not_received">नइखे मिलल</string>
     <string name="staff_disputes_reason_other">दोसर</string>
     <string name="staff_disputes_reason_unauthorised">अनधिकृत</string>
-    <string name="staff_disputes_refund_exceeds_total">रिफंड राशि ऑर्डर कुल से अधिक बा</string>
     <string name="staff_disputes_refund_must_be_positive">रिफंड राशि शून्य से अधिक होखे के चाहीं</string>
     <string name="staff_disputes_resolution_buyer">खरीदार खातिर सुलझाईं</string>
     <string name="staff_disputes_resolution_label">समाधान</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिंट, भा ID से खोजीं…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त कुंजी</string>
+    <string name="staff_disputes_meta_already_refunded">पहिलहीं वापसी कइल गइल</string>
+    <string name="staff_disputes_refund_exceeds_remaining">वापसी रकम बाँचल वापसी योग्य रकम से बेसी बा</string>
 </resources>

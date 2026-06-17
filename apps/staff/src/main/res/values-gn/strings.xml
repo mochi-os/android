@@ -252,7 +252,6 @@
     <string name="staff_disputes_reason_not_received">Noñemog̃uahẽi</string>
     <string name="staff_disputes_reason_other">Ambue</string>
     <string name="staff_disputes_reason_unauthorised">Iderecho\'ỹva</string>
-    <string name="staff_disputes_refund_exceeds_total">Devolución hetakue ohasa order tuichakue</string>
     <string name="staff_disputes_refund_must_be_positive">Devolución hetakue tuichave va\'erã sero hapykuere</string>
     <string name="staff_disputes_resolution_buyer">Embohovái joguahárape</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Eheka téra, kuãhũ térã ID rupive…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook ñe\'ẽñemi rerasokuaa</string>
+    <string name="staff_disputes_meta_already_refunded">Ojepoñepyrũma</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Pe pyahu jeporureguáva ohasa hína pe oĩ teréi reembolsable</string>
 </resources>

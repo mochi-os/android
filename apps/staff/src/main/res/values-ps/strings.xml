@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">نه دي ترلاسه شوي</string>
     <string name="staff_disputes_reason_other">نور</string>
     <string name="staff_disputes_reason_unauthorised">غیر مجاز</string>
-    <string name="staff_disputes_refund_exceeds_total">د بیرته ورکړې مقدار د فرمایش له ټولې څخه ډیر دی</string>
     <string name="staff_disputes_refund_must_be_positive">د بیرته ورکړې مقدار باید له صفر څخه ډیر وي</string>
     <string name="staff_disputes_resolution_buyer">د پیرودونکي لپاره حل کړئ</string>
     <string name="staff_disputes_resolution_label">حل</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">د نوم، ګوتې نښې، یا پیژند له مخې لټون…</string>
 
     <string name="staff_config_field_stripe_webhook">د Webhook د لاسلیک پټ کلید</string>
+    <string name="staff_disputes_meta_already_refunded">مخکې بېرته ورکړل شوی</string>
+    <string name="staff_disputes_refund_exceeds_remaining">د بېرته ورکړې مقدار د پاتې بېرته ورکولو وړ مقدار څخه ډېر دی</string>
 </resources>

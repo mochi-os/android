@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Друго</string>
     <string name="staff_disputes_reason_unauthorised">Неоторизирано</string>
     <string name="staff_disputes_refund_amount_label">Сума за възстановяване (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Сумата за възстановяване надвишава общата сума на поръчката</string>
     <string name="staff_disputes_refund_help">Оставете празно за пълно възстановяване на %1$s. Въведете по-малка сума за частично възстановяване.</string>
     <string name="staff_disputes_refund_must_be_positive">Сумата за възстановяване трябва да е по-голяма от нула</string>
     <string name="staff_disputes_resolution_buyer">Разреши в полза на купувача</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Ролята е актуализирана</string>
 
     <string name="staff_config_field_stripe_webhook">Таен ключ за подписване на Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Вече възстановена</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Сумата за възстановяване надвишава оставащата възстановима сума</string>
 </resources>

@@ -265,7 +265,6 @@
     <string name="staff_disputes_reason_not_received">არ არის მიღებული</string>
     <string name="staff_disputes_reason_other">სხვა</string>
     <string name="staff_disputes_reason_unauthorised">მინიჭების გარეშე</string>
-    <string name="staff_disputes_refund_exceeds_total">დაბრუნების ოდენობა აღემატება შეკვეთის ჯამს</string>
     <string name="staff_disputes_refund_must_be_positive">დაბრუნების ოდენობა ნულზე მეტი უნდა იყოს</string>
     <string name="staff_disputes_resolution_buyer">მყიდველის სასარგებლოდ გადაწყვეტა</string>
     <string name="staff_disputes_resolution_label">გადაწყვეტა</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">ძიება სახელით, თითის ანაბეჭდით ან ID-ით…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook-ის ხელმოწერის საიდუმლო</string>
+    <string name="staff_disputes_meta_already_refunded">უკვე დაბრუნებულია</string>
+    <string name="staff_disputes_refund_exceeds_remaining">დაბრუნების თანხა აღემატება დარჩენილ დასაბრუნებელ თანხას</string>
 </resources>

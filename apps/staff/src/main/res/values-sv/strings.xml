@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Övrigt</string>
     <string name="staff_disputes_reason_unauthorised">Obehörig</string>
     <string name="staff_disputes_refund_amount_label">Återbetalningsbelopp (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Återbetalningsbeloppet överstiger ordersumman</string>
     <string name="staff_disputes_refund_help">Lämna tomt för en fullständig återbetalning av %1$s. Ange ett mindre belopp för partiell återbetalning.</string>
     <string name="staff_disputes_refund_must_be_positive">Återbetalningsbeloppet måste vara större än noll</string>
     <string name="staff_disputes_resolution_buyer">Lös till köparens fördel</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Roll uppdaterad</string>
 
     <string name="staff_config_field_stripe_webhook">Signeringshemlighet för webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Redan återbetalt</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Återbetalningsbeloppet överstiger det återstående återbetalningsbara beloppet</string>
 </resources>

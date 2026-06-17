@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">မရရှိပါ</string>
     <string name="staff_disputes_reason_other">အခြား</string>
     <string name="staff_disputes_reason_unauthorised">ခွင့်ပြုမထား</string>
-    <string name="staff_disputes_refund_exceeds_total">ပြန်အမ်းပမာဏသည် အော်ဒါစုစုပေါင်းထက် ကျော်လွန်နေသည်</string>
     <string name="staff_disputes_refund_must_be_positive">ပြန်အမ်းပမာဏသည် သုညထက် ကြီးရမည်</string>
     <string name="staff_disputes_resolution_buyer">ဝယ်သူဘက်က ဖြေရှင်း</string>
     <string name="staff_disputes_resolution_label">ဖြေရှင်းချက်</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">နာမည်၊ လက်ဗွေ၊ သို့မဟုတ် ID ဖြင့် ရှာရန်…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook လက်မှတ်ထိုးခြင်း လျှို့ဝှက်ချက်</string>
+    <string name="staff_disputes_meta_already_refunded">ပြန်အမ်းပြီး</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ပြန်အမ်းငွေ ပမာဏသည် ကျန်ရှိသော ပြန်အမ်းနိုင်သည့် ပမာဏထက် ပိုနေသည်</string>
 </resources>

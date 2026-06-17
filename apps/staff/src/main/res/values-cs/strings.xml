@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Ostatní</string>
     <string name="staff_disputes_reason_unauthorised">Bez oprávnění</string>
     <string name="staff_disputes_refund_amount_label">Částka vrácení (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Částka refundace přesahuje celkovou hodnotu objednávky</string>
     <string name="staff_disputes_refund_help">Nechte prázdné pro plné vrácení %1$s. Zadejte nižší částku pro částečné vrácení.</string>
     <string name="staff_disputes_refund_must_be_positive">Částka refundace musí být větší než nula</string>
     <string name="staff_disputes_resolution_buyer">Vyřešit ve prospěch kupujícího</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Role aktualizována</string>
 
     <string name="staff_config_field_stripe_webhook">Tajný klíč pro podpis Webhooku</string>
+    <string name="staff_disputes_meta_already_refunded">Již vráceno</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Částka vrácení překračuje zbývající vratnou částku</string>
 </resources>

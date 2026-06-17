@@ -261,7 +261,6 @@
     <string name="staff_disputes_reason_not_received">Алынган жок</string>
     <string name="staff_disputes_reason_other">Башка</string>
     <string name="staff_disputes_reason_unauthorised">Уруксатсыз</string>
-    <string name="staff_disputes_refund_exceeds_total">Кайтаруу суммасы буйрутма жалпысынан ашат</string>
     <string name="staff_disputes_refund_must_be_positive">Кайтаруу суммасы нөлдөн чоң болушу керек</string>
     <string name="staff_disputes_resolution_buyer">Сатып алуучу үчүн чечүү</string>
     <string name="staff_disputes_resolution_label">Чечим</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">Аты, манжа изи же ID боюнча издөө…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook кол коюу сыры</string>
+    <string name="staff_disputes_meta_already_refunded">Кайтарылган</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Кайтаруу суммасы калган кайтарылуучу суммадан ашып кетти</string>
 </resources>

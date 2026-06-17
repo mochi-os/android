@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Nyingine</string>
     <string name="staff_disputes_reason_unauthorised">Hairuhusiwi</string>
     <string name="staff_disputes_refund_amount_label">Kiasi cha kurudisha (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Kiasi cha marejesho kinazidi jumla ya agizo</string>
     <string name="staff_disputes_refund_help">Acha tupu kwa marejesho kamili ya %1$s. Ingiza kiasi kidogo zaidi kwa marejesho sehemu.</string>
     <string name="staff_disputes_refund_must_be_positive">Kiasi cha marejesho lazima kiwe kubwa kuliko sifuri</string>
     <string name="staff_disputes_resolution_buyer">Tatua kwa ajili ya mnunuzi</string>
@@ -517,4 +516,6 @@
     <string name="staff_disputes_stripe_unrecognized">malipo hayatambuliki</string>
 
     <string name="staff_config_field_stripe_webhook">Siri ya kutia saini ya webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Tayari imerejeshwa</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Kiasi cha kurejesha kinazidi kiasi kilichobaki kinachoweza kurejeshwa</string>
 </resources>

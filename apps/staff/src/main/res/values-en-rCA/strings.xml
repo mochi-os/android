@@ -311,7 +311,6 @@
     <string name="staff_disputes_reason_not_as_described">Not as described</string>
     <string name="staff_disputes_reason_not_received">Not received</string>
     <string name="staff_disputes_refund_amount_label">Refund amount (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Refund amount exceeds order total</string>
     <string name="staff_disputes_refund_help">Leave blank for a full refund of %1$s. Enter a smaller amount for a partial refund.</string>
     <string name="staff_disputes_refund_must_be_positive">Refund amount must be greater than zero</string>
     <string name="staff_disputes_resolution_buyer">Resolve for buyer</string>

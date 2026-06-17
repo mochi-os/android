@@ -259,7 +259,6 @@
     <string name="staff_disputes_reason_not_received">Pa resevwa</string>
     <string name="staff_disputes_reason_other">Lòt</string>
     <string name="staff_disputes_reason_unauthorised">Pa otorize</string>
-    <string name="staff_disputes_refund_exceeds_total">Montan ranbousman depase total kòmand</string>
     <string name="staff_disputes_refund_must_be_positive">Montan ranbousman dwe pi gwo pase zewo</string>
     <string name="staff_disputes_resolution_buyer">Rezoud pou achtè</string>
     <string name="staff_disputes_resolution_label">Rezolisyon</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">Chèche pa non, anprent, oswa ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Sekrè siyati webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Deja ranbouse</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Kantite ranbousman an depase kantite ki rete pou ranbouse</string>
 </resources>

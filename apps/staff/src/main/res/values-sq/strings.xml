@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Tjetër</string>
     <string name="staff_disputes_reason_unauthorised">I paautorizuar</string>
     <string name="staff_disputes_refund_amount_label">Shuma e rikthimit (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Shuma e rimbursimit tejkalon totalin e porosisë</string>
     <string name="staff_disputes_refund_help">Lëre bosh për rikthim të plotë të %1$s. Vendos një shumë më të vogël për rikthim të pjesshëm.</string>
     <string name="staff_disputes_refund_must_be_positive">Shuma e rimbursimit duhet të jetë më e madhe se zero</string>
     <string name="staff_disputes_resolution_buyer">Zgjidh për blerësin</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Roli u përditësua</string>
 
     <string name="staff_config_field_stripe_webhook">Sekreti i nënshkrimit të webhook-ut</string>
+    <string name="staff_disputes_meta_already_refunded">Tashmë e rimbursuar</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Shuma e rimbursimit tejkalon shumën e mbetur të rimbursueshme</string>
 </resources>

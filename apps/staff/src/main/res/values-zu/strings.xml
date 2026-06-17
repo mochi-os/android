@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">Akutholakelanga</string>
     <string name="staff_disputes_reason_other">Okunye</string>
     <string name="staff_disputes_reason_unauthorised">Akuvunyelwe</string>
-    <string name="staff_disputes_refund_exceeds_total">Inani lokubuyiselwa lidlula isamba se-oda</string>
     <string name="staff_disputes_refund_must_be_positive">Inani lokubuyiselwa kufanele libe ngaphezu kuka-zero</string>
     <string name="staff_disputes_resolution_buyer">Xazulula umthengi</string>
     <string name="staff_disputes_resolution_label">Isixazululo</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Sesha ngegama, izigxivizo zeminwe, noma i-ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Imfihlo yokusayina i-Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Sekubuyiselwe</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Inani lokubuyiselwa lidlula inani elisele elingabuyiselwa</string>
 </resources>

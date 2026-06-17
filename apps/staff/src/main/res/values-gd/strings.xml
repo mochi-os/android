@@ -263,7 +263,6 @@
     <string name="staff_disputes_reason_not_received">Cha deach fhaighinn</string>
     <string name="staff_disputes_reason_other">Eile</string>
     <string name="staff_disputes_reason_unauthorised">Gun chead</string>
-    <string name="staff_disputes_refund_exceeds_total">Tha suim an ath-dhìolaidh nas motha na suim iomlan an òrdaigh</string>
     <string name="staff_disputes_refund_must_be_positive">Feumaidh suim an ath-dhìolaidh a bhith nas motha na neoini</string>
     <string name="staff_disputes_resolution_buyer">Fuasgail airson a\' cheannaiche</string>
     <string name="staff_disputes_resolution_label">Rùn</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Lorg a rèir ainm, lorg-meòir, no ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Rùn soidhnidh webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Air ath-phàigheadh mar-thà</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Tha an t-suim ath-phàighidh nas motha na an t-suim ath-phàigheach a tha air fhàgail</string>
 </resources>

@@ -35,6 +35,9 @@ data class Dispute(
     /** Stripe `evidence_details.due_by` — Unix seconds. Zero when not applicable. */
     @SerializedName("evidence_due") val evidenceDue: Long = 0,
     @SerializedName("refund_amount") val refundAmount: Long = 0,
+    /** Total already refunded against this order (minor units), across prior
+     *  resolutions. The remaining refundable amount is total - orderRefunded. */
+    @SerializedName("order_refunded") val orderRefunded: Long = 0,
     val resolved: Long = 0,
     val created: Long = 0,
     val listing: String = "",

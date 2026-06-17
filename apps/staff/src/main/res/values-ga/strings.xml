@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Eile</string>
     <string name="staff_disputes_reason_unauthorised">Gan údarú</string>
     <string name="staff_disputes_refund_amount_label">Méid aisíocaíochta (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Sáraíonn méid na haisíocaíochta iomlán an ordaithe</string>
     <string name="staff_disputes_refund_help">Fág folamh le haghaidh aisíocaíocht iomlán de %1$s. Cuir isteach méid níos lú le haghaidh aisíocaíocht pháirteach.</string>
     <string name="staff_disputes_refund_must_be_positive">Caithfidh méid na haisíocaíochta a bheith níos mó ná nialas</string>
     <string name="staff_disputes_resolution_buyer">Réitigh ar son an cheannaitheora</string>
@@ -517,4 +516,6 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. An léirmheas seo a scriosadh go buan? Ní féidir é seo a chur ar ais.</string>
 
     <string name="staff_config_field_stripe_webhook">Rún sínithe webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Aisíoctha cheana féin</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Sáraíonn méid an aisíoca an méid in-aisíoctha atá fágtha</string>
 </resources>

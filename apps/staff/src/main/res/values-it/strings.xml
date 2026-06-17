@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Altro</string>
     <string name="staff_disputes_reason_unauthorised">Non autorizzato</string>
     <string name="staff_disputes_refund_amount_label">Importo del rimborso (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">L\'importo del rimborso supera il totale dell\'ordine</string>
     <string name="staff_disputes_refund_help">Lascia vuoto per un rimborso completo di %1$s. Inserisci un importo inferiore per un rimborso parziale.</string>
     <string name="staff_disputes_refund_must_be_positive">L\'importo del rimborso deve essere maggiore di zero</string>
     <string name="staff_disputes_resolution_buyer">Risolvi a favore dell\'acquirente</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Ruolo aggiornato</string>
 
     <string name="staff_config_field_stripe_webhook">Segreto di firma del webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Già rimborsato</string>
+    <string name="staff_disputes_refund_exceeds_remaining">L\'importo del rimborso supera l\'importo rimborsabile rimanente</string>
 </resources>

@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">प्राप्त भएको छैन</string>
     <string name="staff_disputes_reason_other">अन्य</string>
     <string name="staff_disputes_reason_unauthorised">अनधिकृत</string>
-    <string name="staff_disputes_refund_exceeds_total">फिर्ता रकम अर्डर कुल भन्दा बढी छ</string>
     <string name="staff_disputes_refund_must_be_positive">फिर्ता रकम शून्य भन्दा बढी हुनुपर्छ</string>
     <string name="staff_disputes_resolution_buyer">क्रेताको पक्षमा समाधान गर्नुहोस्</string>
     <string name="staff_disputes_resolution_label">समाधान</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिन्ट, वा ID द्वारा खोज्नुहोस्…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गोप्य</string>
+    <string name="staff_disputes_meta_already_refunded">पहिले नै फिर्ता गरिएको</string>
+    <string name="staff_disputes_refund_exceeds_remaining">फिर्ता रकम बाँकी फिर्ता गर्न योग्य रकम भन्दा बढी छ</string>
 </resources>

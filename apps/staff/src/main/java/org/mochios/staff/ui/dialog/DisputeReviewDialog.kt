@@ -116,6 +116,10 @@ fun DisputeReviewDialog(
                         onResolutionChange = { resolution = it },
                     )
                     if (resolution == "resolved_buyer") {
+                        // The full refund and placeholder reflect what's left to
+                        // refund (total minus anything already refunded), matching
+                        // web's `remaining` and the clamp in the view model.
+                        val remaining = (dispute.total - dispute.orderRefunded).coerceAtLeast(0)
                         OutlinedTextField(
                             value = refundInput,
                             onValueChange = { refundInput = it },
@@ -128,7 +132,7 @@ fun DisputeReviewDialog(
                                 )
                             },
                             placeholder = {
-                                Text(formatPrice(dispute.total, dispute.currency))
+                                Text(formatPrice(remaining, dispute.currency))
                             },
                             singleLine = true,
                             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
@@ -137,7 +141,7 @@ fun DisputeReviewDialog(
                         Text(
                             text = stringResource(
                                 R.string.staff_disputes_refund_help,
-                                formatPrice(dispute.total, dispute.currency),
+                                formatPrice(remaining, dispute.currency),
                             ),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -212,6 +216,13 @@ private fun MetadataCard(dispute: Dispute) {
             stringResource(R.string.staff_disputes_meta_total),
             formatPrice(dispute.total, dispute.currency),
         )
+        // Prior refunds against this order, so the moderator sees what's left.
+        if (dispute.orderRefunded > 0) {
+            MetaRow(
+                stringResource(R.string.staff_disputes_meta_already_refunded),
+                formatPrice(dispute.orderRefunded, dispute.currency),
+            )
+        }
         val reasonValue = if (dispute.opener == "stripe") {
             stringResource(
                 R.string.staff_disputes_dialog_title_chargeback,

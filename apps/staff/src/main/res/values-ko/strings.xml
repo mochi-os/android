@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">기타</string>
     <string name="staff_disputes_reason_unauthorised">권한 없음</string>
     <string name="staff_disputes_refund_amount_label">환불 금액 (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">환불 금액이 주문 총액을 초과해요</string>
     <string name="staff_disputes_refund_help">%1$s 전액 환불은 비워두고, 부분 환불은 더 적은 금액을 입력하세요.</string>
     <string name="staff_disputes_refund_must_be_positive">환불 금액은 0보다 커야 해요</string>
     <string name="staff_disputes_resolution_buyer">구매자에게 유리하게 해결</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">역할이 업데이트되었습니다</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook 서명 시크릿</string>
+    <string name="staff_disputes_meta_already_refunded">이미 환불됨</string>
+    <string name="staff_disputes_refund_exceeds_remaining">환불 금액이 남은 환불 가능 금액을 초과합니다</string>
 </resources>

@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Iné</string>
     <string name="staff_disputes_reason_unauthorised">Neoprávnené</string>
     <string name="staff_disputes_refund_amount_label">Suma vrátenia (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Suma refundácie presahuje celkovú sumu objednávky</string>
     <string name="staff_disputes_refund_help">Ponechajte prázdne pre úplné vrátenie %1$s. Zadajte nižšiu sumu pre čiastočné vrátenie.</string>
     <string name="staff_disputes_refund_must_be_positive">Suma refundácie musí byť väčšia ako nula</string>
     <string name="staff_disputes_resolution_buyer">Vyriešiť v prospech kupujúceho</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rola aktualizovaná</string>
 
     <string name="staff_config_field_stripe_webhook">Tajný kľúč na podpisovanie webhookov</string>
+    <string name="staff_disputes_meta_already_refunded">Už vrátené</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Suma vrátenia presahuje zostávajúcu vratnú sumu</string>
 </resources>

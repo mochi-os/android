@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">అందలేదు</string>
     <string name="staff_disputes_reason_other">ఇతర</string>
     <string name="staff_disputes_reason_unauthorised">అనుమతి లేదు</string>
-    <string name="staff_disputes_refund_exceeds_total">రీఫండ్ మొత్తం ఆర్డర్ మొత్తాన్ని మించిపోయింది</string>
     <string name="staff_disputes_refund_must_be_positive">రీఫండ్ మొత్తం సున్నా కంటే ఎక్కువగా ఉండాలి</string>
     <string name="staff_disputes_resolution_buyer">కొనుగోలుదారు కోసం పరిష్కరించండి</string>
     <string name="staff_disputes_resolution_label">రిజల్యూషన్</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">పేరు, వేలిముద్ర లేదా ID ద్వారా శోధించండి…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook సంతకం రహస్యం</string>
+    <string name="staff_disputes_meta_already_refunded">ఇప్పటికే తిరిగి చెల్లించబడింది</string>
+    <string name="staff_disputes_refund_exceeds_remaining">రీఫండ్ మొత్తం మిగిలిన రీఫండ్ చేయదగిన మొత్తాన్ని మించిపోయింది</string>
 </resources>

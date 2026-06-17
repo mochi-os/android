@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ບໍ່ໄດ້ຮັບ</string>
     <string name="staff_disputes_reason_other">ອື່ນໆ</string>
     <string name="staff_disputes_reason_unauthorised">ບໍ່ໄດ້ຮັບອະນຸຍາດ</string>
-    <string name="staff_disputes_refund_exceeds_total">ຈຳນວນຄືນເງິນເກີນຍອດທັງໝົດຂອງຄຳສັ່ງຊື້</string>
     <string name="staff_disputes_refund_must_be_positive">ຈຳນວນຄືນເງິນຕ້ອງຫຼາຍກວ່າສູນ</string>
     <string name="staff_disputes_resolution_buyer">ແກ້ໄຂສຳລັບຜູ້ຊື້</string>
     <string name="staff_disputes_resolution_label">ຄວາມລະອຽດ</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">ຄົ້ນຫາດ້ວຍຊື່, ລາຍນິ້ວມື, ຫຼື ID…</string>
 
     <string name="staff_config_field_stripe_webhook">ຄວາມລັບການເຊັນ Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">ຄືນເງິນແລ້ວ</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ຈຳນວນເງິນຄືນເກີນຈຳນວນທີ່ສາມາດຄືນໄດ້ທີ່ເຫຼືອ</string>
 </resources>

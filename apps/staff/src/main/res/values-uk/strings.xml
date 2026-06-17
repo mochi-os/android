@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Інше</string>
     <string name="staff_disputes_reason_unauthorised">Не авторизовано</string>
     <string name="staff_disputes_refund_amount_label">Сума повернення (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Сума повернення перевищує суму замовлення</string>
     <string name="staff_disputes_refund_help">Залиште порожнім для повного повернення %1$s. Введіть меншу суму для часткового повернення.</string>
     <string name="staff_disputes_refund_must_be_positive">Сума повернення має бути більшою за нуль</string>
     <string name="staff_disputes_resolution_buyer">Вирішити на користь покупця</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Роль оновлено</string>
 
     <string name="staff_config_field_stripe_webhook">Секрет для підпису Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Уже повернуто</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Сума повернення перевищує суму, що залишилася для повернення</string>
 </resources>

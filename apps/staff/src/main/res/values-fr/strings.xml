@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Autre</string>
     <string name="staff_disputes_reason_unauthorised">Non autorisé</string>
     <string name="staff_disputes_refund_amount_label">Montant du remboursement (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Le montant du remboursement dépasse le total de la commande</string>
     <string name="staff_disputes_refund_help">Laissez vide pour un remboursement intégral de %1$s. Saisissez un montant inférieur pour un remboursement partiel.</string>
     <string name="staff_disputes_refund_must_be_positive">Le montant du remboursement doit être supérieur à zéro</string>
     <string name="staff_disputes_resolution_buyer">Résoudre pour l\'acheteur</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rôle mis à jour</string>
 
     <string name="staff_config_field_stripe_webhook">Secret de signature du webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Déjà remboursé</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Le montant du remboursement dépasse le montant remboursable restant</string>
 </resources>

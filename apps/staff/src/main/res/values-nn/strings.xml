@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Anna</string>
     <string name="staff_disputes_reason_unauthorised">Ikkje autorisert</string>
     <string name="staff_disputes_refund_amount_label">Refusjonssum (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Refusjonsbeløp overstig totalbestilling</string>
     <string name="staff_disputes_refund_help">Lat ho vere tom for full refusjon av %1$s. Skriv inn ein mindre sum for delvis refusjon.</string>
     <string name="staff_disputes_refund_must_be_positive">Refusjonsbeløp må vera større enn null</string>
     <string name="staff_disputes_resolution_buyer">Løys for kjøpar</string>
@@ -514,4 +513,6 @@
     <string name="staff_team_toast_role_failed">Kunne ikkje oppdatere rolle</string>
     <string name="staff_team_toast_role_updated">Rolle oppdatert</string>
 
+    <string name="staff_disputes_meta_already_refunded">Allereie refundert</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Refusjonsbeløpet overstig det gjenverande refunderbare beløpet</string>
 </resources>

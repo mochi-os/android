@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">Alynmadyk</string>
     <string name="staff_disputes_reason_other">Beýleki</string>
     <string name="staff_disputes_reason_unauthorised">Rugsatsyz</string>
-    <string name="staff_disputes_refund_exceeds_total">Yzyna gaýtaryş mukdary sargyt jemiňden köp</string>
     <string name="staff_disputes_refund_must_be_positive">Yzyna gaýtaryş mukdary nuldan köp bolmaly</string>
     <string name="staff_disputes_resolution_buyer">Alyjy üçin çöz</string>
     <string name="staff_disputes_resolution_label">Çözgüt</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Ady, barmak yzy ýa-da ID boýunça gözläň…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook gol çekiş gizlin açary</string>
+    <string name="staff_disputes_meta_already_refunded">Eýýäm yzyna gaýtarylan</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Yzyna gaýtaryljak möçber galan yza gaýtaryljak möçberden geçýär</string>
 </resources>

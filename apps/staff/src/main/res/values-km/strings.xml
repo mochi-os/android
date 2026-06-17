@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">មិនបានទទួល</string>
     <string name="staff_disputes_reason_other">ផ្សេងទៀត</string>
     <string name="staff_disputes_reason_unauthorised">មិនបានអនុញ្ញាត</string>
-    <string name="staff_disputes_refund_exceeds_total">ចំនួនទឹកប្រាក់សងវិញលើសសរុបការបញ្ជាទិញ</string>
     <string name="staff_disputes_refund_must_be_positive">ចំនួនទឹកប្រាក់សងវិញត្រូវតែធំជាងសូន្យ</string>
     <string name="staff_disputes_resolution_buyer">ដោះស្រាយសម្រាប់អ្នកទិញ</string>
     <string name="staff_disputes_resolution_label">ដំណោះស្រាយ</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">ស្វែងរកតាមឈ្មោះ ស្នាមម្រាមដៃ ឬលេខសម្គាល់…</string>
 
     <string name="staff_config_field_stripe_webhook">សម្ងាត់ចុះហត្ថលេខា Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">បានសងវិញរួចហើយ</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ចំនួនទឹកប្រាក់សងវិញលើសពីចំនួនទឹកប្រាក់ដែលនៅសល់ដែលអាចសងវិញបាន</string>
 </resources>

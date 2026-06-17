@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Басқа</string>
     <string name="staff_disputes_reason_unauthorised">Рұқсат етілмеген</string>
     <string name="staff_disputes_refund_amount_label">Қайтару сомасы (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Қайтару сомасы тапсырыс жалпы сомасынан асып кетті</string>
     <string name="staff_disputes_refund_help">Толық %1$s қайтару үшін бос қалдырыңыз. Жартылай қайтару үшін кіші соманы енгізіңіз.</string>
     <string name="staff_disputes_refund_must_be_positive">Қайтару сомасы нөлден үлкен болуы керек</string>
     <string name="staff_disputes_resolution_buyer">Сатып алушының пайдасына шешу</string>
@@ -517,4 +516,6 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Осы пікірді біржола жою керек пе? Бұл әрекетті кері қайтару мүмкін емес.</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook қолтаңба құпиясы</string>
+    <string name="staff_disputes_meta_already_refunded">Қайтарылған</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Қайтару сомасы қалған қайтарылатын сомадан асып кетеді</string>
 </resources>

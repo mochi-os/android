@@ -265,7 +265,6 @@
     <string name="staff_disputes_reason_not_received">Хүлээж аваагүй</string>
     <string name="staff_disputes_reason_other">Бусад</string>
     <string name="staff_disputes_reason_unauthorised">Эрхгүй</string>
-    <string name="staff_disputes_refund_exceeds_total">Буцаах дүн нь захиалгын нийт дүнгээс хэтэрсэн</string>
     <string name="staff_disputes_refund_must_be_positive">Буцаах дүн нь тэгээс их байх ёстой</string>
     <string name="staff_disputes_resolution_buyer">Худалдан авагчийн талд шийдвэрлэх</string>
     <string name="staff_disputes_resolution_label">Тогтоол</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">Нэр, хурууны хээ эсвэл ID-аар хайх…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook гарын үсгийн нууц</string>
+    <string name="staff_disputes_meta_already_refunded">Аль хэдийн буцаасан</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Буцаах дүн үлдсэн буцаах боломжтой дүнгээс хэтэрсэн</string>
 </resources>

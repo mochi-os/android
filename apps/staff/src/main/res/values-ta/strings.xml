@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">பெறப்படவில்லை</string>
     <string name="staff_disputes_reason_other">மற்றவை</string>
     <string name="staff_disputes_reason_unauthorised">அனுமதிக்கப்படாதது</string>
-    <string name="staff_disputes_refund_exceeds_total">பணத்தைத் திரும்பப் பெறுதல் தொகை ஆர்டர் மொத்தத்தை மீறுகிறது</string>
     <string name="staff_disputes_refund_must_be_positive">பணத்தைத் திரும்பப் பெறுதல் தொகை பூஜ்ஜியத்தை விட அதிகமாக இருக்க வேண்டும்</string>
     <string name="staff_disputes_resolution_buyer">வாங்குபவருக்காக தீர்க்கவும்</string>
     <string name="staff_disputes_resolution_label">தீர்வு</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">பெயர், கைரேகை, அல்லது ID மூலம் தேடவும்…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook கையொப்பமிடும் ரகசியம்</string>
+    <string name="staff_disputes_meta_already_refunded">ஏற்கனவே திருப்பித் தரப்பட்டது</string>
+    <string name="staff_disputes_refund_exceeds_remaining">திருப்பித் தரும் தொகை மீதமுள்ள திருப்பித் தரக்கூடிய தொகையை மீறுகிறது</string>
 </resources>

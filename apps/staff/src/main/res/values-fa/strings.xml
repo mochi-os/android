@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">سایر</string>
     <string name="staff_disputes_reason_unauthorised">غیرمجاز</string>
     <string name="staff_disputes_refund_amount_label">مبلغ بازپرداخت (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">مبلغ بازپرداخت از کل سفارش بیشتر است</string>
     <string name="staff_disputes_refund_help">برای بازپرداخت کامل %1$s خالی بگذارید. مبلغ کمتر برای بازپرداخت جزئی وارد کنید.</string>
     <string name="staff_disputes_refund_must_be_positive">مبلغ بازپرداخت باید بیشتر از صفر باشد</string>
     <string name="staff_disputes_resolution_buyer">رفع به نفع خریدار</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">نقش به‌روزرسانی شد</string>
 
     <string name="staff_config_field_stripe_webhook">راز امضای وب‌هوک</string>
+    <string name="staff_disputes_meta_already_refunded">قبلاً بازپرداخت شده</string>
+    <string name="staff_disputes_refund_exceeds_remaining">مبلغ بازپرداخت از مبلغ قابل بازپرداخت باقیمانده بیشتر است</string>
 </resources>

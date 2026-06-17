@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ലഭിച്ചില്ല</string>
     <string name="staff_disputes_reason_other">മറ്റുള്ളവ</string>
     <string name="staff_disputes_reason_unauthorised">അനുവദിച്ചിട്ടില്ല</string>
-    <string name="staff_disputes_refund_exceeds_total">റീഫണ്ട് തുക പൂജ്യത്തേക്കാൾ കൂടുതലായിരിക്കണം</string>
     <string name="staff_disputes_refund_must_be_positive">റീഫണ്ട് അംഗീകരിച്ചു</string>
     <string name="staff_disputes_resolution_buyer">വിൽക്കുന്നയാൾക്കായി പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolution_label">പരിഹരിക്കുക</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">പേര്, ഫിംഗർപ്രിന്റ്, അല്ലെങ്കിൽ ID പ്രകാരം തിരയുക…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook ഒപ്പിടൽ രഹസ്യം</string>
+    <string name="staff_disputes_meta_already_refunded">ഇതിനകം മടക്കിനൽകി</string>
+    <string name="staff_disputes_refund_exceeds_remaining">റീഫണ്ട് തുക ബാക്കിയുള്ള റീഫണ്ട് ചെയ്യാവുന്ന തുകയെ കവിയുന്നു</string>
 </resources>

@@ -325,7 +325,6 @@
     <string name="staff_disputes_reason_not_received">No recibido</string>
     <string name="staff_disputes_reason_unauthorised">No autorizado</string>
     <string name="staff_disputes_refund_amount_label">Monto del reembolso (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">El monto del reembolso supera el total del pedido</string>
     <string name="staff_disputes_refund_help">Dejá en blanco para un reembolso completo de %1$s. Ingresá un monto menor para un reembolso parcial.</string>
     <string name="staff_disputes_refund_must_be_positive">El monto del reembolso debe ser mayor a cero</string>
     <string name="staff_disputes_resolution_buyer">Resolver a favor del comprador</string>
@@ -514,4 +513,6 @@
     <string name="staff_team_toast_role_failed">No se pudo actualizar el rol</string>
     <string name="staff_team_toast_role_updated">Rol actualizado</string>
 
+    <string name="staff_disputes_meta_already_refunded">Ya reembolsado</string>
+    <string name="staff_disputes_refund_exceeds_remaining">El monto del reembolso supera el monto reembolsable restante</string>
 </resources>

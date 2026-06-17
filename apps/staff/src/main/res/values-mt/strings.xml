@@ -259,7 +259,6 @@
     <string name="staff_disputes_reason_not_received">Mhux riċevut</string>
     <string name="staff_disputes_reason_other">Oħra</string>
     <string name="staff_disputes_reason_unauthorised">Mhux awtorizzat</string>
-    <string name="staff_disputes_refund_exceeds_total">L-ammont tar-rifużjoni jaqbeż it-total tal-ordni</string>
     <string name="staff_disputes_refund_must_be_positive">L-ammont tar-rifużjoni jrid ikun akbar minn żero</string>
     <string name="staff_disputes_resolution_buyer">Solvi għax-xerrej</string>
     <string name="staff_disputes_resolution_label">Riżoluzzjoni</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">Fittex b\'isem, marka tas-swaba\', jew ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Sigriet tal-iffirmar tal-Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Diġà rifondut</string>
+    <string name="staff_disputes_refund_exceeds_remaining">L-ammont tar-rifond jaqbeż l-ammont rifondibbli li jifdal</string>
 </resources>

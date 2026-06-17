@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ಸಿಗಲಿಲ್ಲ</string>
     <string name="staff_disputes_reason_other">ಇತರ</string>
     <string name="staff_disputes_reason_unauthorised">ಅನುಮತಿಸದ</string>
-    <string name="staff_disputes_refund_exceeds_total">ರಿಫಂಡ್ ಮೊತ್ತ ಆರ್ಡರ್ ಒಟ್ಟು ಮೊತ್ತವನ್ನು ಮೀರಿದೆ</string>
     <string name="staff_disputes_refund_must_be_positive">ರಿಫಂಡ್ ಮೊತ್ತ ಶೂನ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚಿರಬೇಕು</string>
     <string name="staff_disputes_resolution_buyer">ಖರೀದಿದಾರರಿಗಾಗಿ ಪರಿಹರಿಸಿ</string>
     <string name="staff_disputes_resolution_label">ರೆಸಲ್ಯೂಶನ್</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">ಹೆಸರು, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ ID ಮೂಲಕ ಹುಡುಕಿ…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook ಸಹಿ ರಹಸ್ಯ</string>
+    <string name="staff_disputes_meta_already_refunded">ಈಗಾಗಲೇ ಮರುಪಾವತಿಸಲಾಗಿದೆ</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ಮರುಪಾವತಿ ಮೊತ್ತವು ಉಳಿದ ಮರುಪಾವತಿಸಬಹುದಾದ ಮೊತ್ತವನ್ನು ಮೀರಿದೆ</string>
 </resources>

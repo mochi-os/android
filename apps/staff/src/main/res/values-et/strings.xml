@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Muu</string>
     <string name="staff_disputes_reason_unauthorised">Volitamata</string>
     <string name="staff_disputes_refund_amount_label">Tagastussumma (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Tagasimakse summa ületab tellimuse kogusumma</string>
     <string name="staff_disputes_refund_help">Jäta tühjaks täieliku %1$s tagastuse jaoks. Sisesta väiksem summa osalise tagastuse jaoks.</string>
     <string name="staff_disputes_refund_must_be_positive">Tagasimakse summa peab olema suurem kui null</string>
     <string name="staff_disputes_resolution_buyer">Lahenda ostja kasuks</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Roll on uuendatud</string>
 
     <string name="staff_config_field_stripe_webhook">Webhooki allkirjastamise saladus</string>
+    <string name="staff_disputes_meta_already_refunded">Juba tagastatud</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Tagastussumma ületab allesjäänud tagastatava summa</string>
 </resources>

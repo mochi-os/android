@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Bestelakoa</string>
     <string name="staff_disputes_reason_unauthorised">Baimenik gabe</string>
     <string name="staff_disputes_refund_amount_label">Itzulketa zenbatekoa (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Itzulketaren zenbatekoak eskaeraren guztizkoa gainditzen du</string>
     <string name="staff_disputes_refund_help">Hutsik utzi %1$s itzulketa osorako. Zenbateko txikiagoa idatzi itzulketa partziala egiteko.</string>
     <string name="staff_disputes_refund_must_be_positive">Itzulketaren zenbatekoa zerotik handiagoa izan behar da</string>
     <string name="staff_disputes_resolution_buyer">Ebatzi eroslearen alde</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rola eguneratu da</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook sinatzeko sekretua</string>
+    <string name="staff_disputes_meta_already_refunded">Dagoeneko itzulia</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Itzulketa zenbatekoa geratzen den itzulketa zenbatekoa gainditzen du</string>
 </resources>

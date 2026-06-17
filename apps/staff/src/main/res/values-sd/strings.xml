@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">وصول نه ٿيو</string>
     <string name="staff_disputes_reason_other">ٻيو</string>
     <string name="staff_disputes_reason_unauthorised">غير مجاز</string>
-    <string name="staff_disputes_refund_exceeds_total">واپسي رقم آرڊر ڪل کان وڌيڪ آهي</string>
     <string name="staff_disputes_refund_must_be_positive">واپسي رقم صفر کان وڌيڪ هجڻ گهرجي</string>
     <string name="staff_disputes_resolution_buyer">خريد ڪندڙ لاءِ حل ڪريو</string>
     <string name="staff_disputes_resolution_label">حل</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">نالي، فنگر پرنٽ، يا ID سان ڳوليو…</string>
 
     <string name="staff_config_field_stripe_webhook">ويب هوڪ دستخط ڳجهو ڪنجي</string>
+    <string name="staff_disputes_meta_already_refunded">اڳ ۾ ئي واپس ٿيل</string>
+    <string name="staff_disputes_refund_exceeds_remaining">واپسي رقم باقي واپسي لائق رقم کان وڌيڪ آهي</string>
 </resources>

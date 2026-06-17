@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Annað</string>
     <string name="staff_disputes_reason_unauthorised">Óheimilt</string>
     <string name="staff_disputes_refund_amount_label">Endurgreiðsluupphæð (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Endurgreiðsluupphæð fer yfir heildarpöntunarupphæð</string>
     <string name="staff_disputes_refund_help">Skildu eftir tómt fyrir fulla endurgreiðslu á %1$s. Sláðu inn lægri upphæð fyrir hluta endurgreiðslu.</string>
     <string name="staff_disputes_refund_must_be_positive">Endurgreiðsluupphæð verður að vera stærri en núll</string>
     <string name="staff_disputes_resolution_buyer">Leysa fyrir kaupanda</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Hlutverk uppfært</string>
 
     <string name="staff_config_field_stripe_webhook">Undirritunarleynd webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Þegar endurgreitt</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Endurgreiðsluupphæð er hærri en eftirstandandi upphæð sem hægt er að endurgreiða</string>
 </resources>

@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Іншае</string>
     <string name="staff_disputes_reason_unauthorised">Несанкцыянавана</string>
     <string name="staff_disputes_refund_amount_label">Сума звароту (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Сума вяртання перавышае агульную суму заказа</string>
     <string name="staff_disputes_refund_help">Пакіньце пустым для поўнага звароту %1$s. Увядзіце меншую суму для частковага звароту.</string>
     <string name="staff_disputes_refund_must_be_positive">Сума вяртання павінна быць больш за нуль</string>
     <string name="staff_disputes_resolution_buyer">Вырашыць у карысць пакупніка</string>
@@ -517,4 +516,6 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Выдаліць гэты водгук назаўсёды? Гэта дзеянне нельга адмяніць.</string>
 
     <string name="staff_config_field_stripe_webhook">Сакрэтны ключ подпісу Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Ужо вернута</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Сума вяртання перавышае пакінутую суму для вяртання</string>
 </resources>

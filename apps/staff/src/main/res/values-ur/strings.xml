@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">دیگر</string>
     <string name="staff_disputes_reason_unauthorised">غیر مجاز</string>
     <string name="staff_disputes_refund_amount_label">رقم کی واپسی (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">refund کی رقم آرڈر کے کل سے زیادہ ہے</string>
     <string name="staff_disputes_refund_help">%1$s کی مکمل واپسی کے لیے خالی چھوڑیں۔ جزوی واپسی کے لیے کم رقم درج کریں۔</string>
     <string name="staff_disputes_refund_must_be_positive">refund کی رقم صفر سے زیادہ ہونی چاہیے</string>
     <string name="staff_disputes_resolution_buyer">خریدار کے حق میں حل کریں</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">کردار اپ ڈیٹ ہو گیا</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook دستخط کا خفیہ کلید</string>
+    <string name="staff_disputes_meta_already_refunded">پہلے ہی واپس کر دیا گیا</string>
+    <string name="staff_disputes_refund_exceeds_remaining">واپسی کی رقم باقی واپسی کے قابل رقم سے زیادہ ہے</string>
 </resources>

@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">אחר</string>
     <string name="staff_disputes_reason_unauthorised">לא מורשה</string>
     <string name="staff_disputes_refund_amount_label">סכום החזר (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">סכום ההחזר חורג מסך ההזמנה</string>
     <string name="staff_disputes_refund_help">השאר ריק להחזר מלא של %1$s. הזן סכום קטן יותר להחזר חלקי.</string>
     <string name="staff_disputes_refund_must_be_positive">סכום ההחזר חייב להיות גדול מאפס</string>
     <string name="staff_disputes_resolution_buyer">פתור לטובת הקונה</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">התפקיד עודכן</string>
 
     <string name="staff_config_field_stripe_webhook">סוד החתימה של ה-Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">כבר הוחזר</string>
+    <string name="staff_disputes_refund_exceeds_remaining">סכום ההחזר עולה על הסכום הניתן להחזר שנותר</string>
 </resources>

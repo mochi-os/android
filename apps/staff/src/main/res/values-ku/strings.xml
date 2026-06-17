@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">Nehatiye stendin</string>
     <string name="staff_disputes_reason_other">Yên din</string>
     <string name="staff_disputes_reason_unauthorised">Bê destûr</string>
-    <string name="staff_disputes_refund_exceeds_total">Mîqdara vegerandinê ji giştîya fermanê zêdetir e</string>
     <string name="staff_disputes_refund_must_be_positive">Mîqdara vegerandinê divê ji sifirê mezintir be</string>
     <string name="staff_disputes_resolution_buyer">Ji bo kirîer çareser bike</string>
     <string name="staff_disputes_resolution_label">Çareserî</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Bi nav, şopa tilî, an nasnameyê bigere…</string>
 
     <string name="staff_config_field_stripe_webhook">Veşariya îmzekirinê ya Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Berê hate vegerandin</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Mîqdara vegerandinê ji mîqdara mayî ya vegerandinê derbas dibe</string>
 </resources>

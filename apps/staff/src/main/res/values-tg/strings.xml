@@ -259,7 +259,6 @@
     <string name="staff_disputes_reason_not_received">Қабул нашудааст</string>
     <string name="staff_disputes_reason_other">Дигар</string>
     <string name="staff_disputes_reason_unauthorised">Иҷозат дода нашуд</string>
-    <string name="staff_disputes_refund_exceeds_total">Маблағи бозгардонӣ аз ҷамъи фармоиш зиёдтар аст</string>
     <string name="staff_disputes_refund_must_be_positive">Маблағи бозгардонӣ бояд аз сифр зиёдтар бошад</string>
     <string name="staff_disputes_resolution_buyer">Ҳал кардан барои харидор</string>
     <string name="staff_disputes_resolution_label">Қарор</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">Ҷустуҷӯ аз рӯи ном, изи ангушт ё ID…</string>
 
     <string name="staff_config_field_stripe_webhook">Калиди махфии имзои Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Аллакай баргардонда шудааст</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Маблағи баргардонидан аз маблағи боқимондаи баргардониданӣ зиёд аст</string>
 </resources>

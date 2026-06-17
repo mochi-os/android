@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ලැබී නැත</string>
     <string name="staff_disputes_reason_other">වෙනත්</string>
     <string name="staff_disputes_reason_unauthorised">අනවසරයි</string>
-    <string name="staff_disputes_refund_exceeds_total">refund මුදල ඇණවුමේ එකතුව ඉක්මවයි</string>
     <string name="staff_disputes_refund_must_be_positive">refund මුදල ශුන්‍යයට වඩා වැඩි විය යුතුය</string>
     <string name="staff_disputes_resolution_buyer">ගැනුම්කරු සඳහා විසඳන්න</string>
     <string name="staff_disputes_resolution_label">විභේදනය</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">නම, ඇඟිලි සලකුණ හෝ ID අනුව සොයන්න…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook අත්සන් කිරීමේ රහස</string>
+    <string name="staff_disputes_meta_already_refunded">දැනටමත් ආපසු ගෙවා ඇත</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ආපසු ගෙවීමේ මුදල ඉතිරි ආපසු ගෙවිය හැකි මුදල ඉක්මවයි</string>
 </resources>

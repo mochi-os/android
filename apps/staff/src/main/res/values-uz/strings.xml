@@ -265,7 +265,6 @@
     <string name="staff_disputes_reason_not_received">Qabul qilinmadi</string>
     <string name="staff_disputes_reason_other">Boshqa</string>
     <string name="staff_disputes_reason_unauthorised">Ruxsatsiz</string>
-    <string name="staff_disputes_refund_exceeds_total">Qaytarish summasi buyurtma jamidan oshib ketdi</string>
     <string name="staff_disputes_refund_must_be_positive">Qaytarish summasi noldan katta boʻlishi kerak</string>
     <string name="staff_disputes_resolution_buyer">Xaridor foydasiga hal qilish</string>
     <string name="staff_disputes_resolution_label">Yechim</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">Ism, barmoq izi yoki ID boʻyicha qidirish…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook imzolash maxfiy kaliti</string>
+    <string name="staff_disputes_meta_already_refunded">Allaqachon qaytarilgan</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Qaytarish summasi qolgan qaytariladigan summadan oshib ketdi</string>
 </resources>

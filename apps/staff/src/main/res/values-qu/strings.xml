@@ -253,7 +253,6 @@
     <string name="staff_disputes_reason_not_received">Mana chaskisqa</string>
     <string name="staff_disputes_reason_other">Huk</string>
     <string name="staff_disputes_reason_unauthorised">Mana autorizasqa</string>
-    <string name="staff_disputes_refund_exceeds_total">Devolución kuska orden tukuypa aswan kachkan</string>
     <string name="staff_disputes_refund_must_be_positive">Devolución kuska zeromanta aswan kanan</string>
     <string name="staff_disputes_resolution_buyer">Rantiqpaq allichay</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Sutiwan, ruk\'anawan, utaq ID-wan maskay…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook firmanapaq pakasqa</string>
+    <string name="staff_disputes_meta_already_refunded">Ñam kutichipusqa</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Kutichinapaq qullqi puchuq kutichina qullqimanta yallin</string>
 </resources>

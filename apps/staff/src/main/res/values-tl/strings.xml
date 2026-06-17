@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Iba pa</string>
     <string name="staff_disputes_reason_unauthorised">Hindi pinahihintulutan</string>
     <string name="staff_disputes_refund_amount_label">Halaga ng refund (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Ang halaga ng refund ay lumampas sa kabuuan ng order</string>
     <string name="staff_disputes_refund_help">Iwanang blangko para sa kumpletong refund ng %1$s. Maglagay ng mas maliit na halaga para sa bahagyang refund.</string>
     <string name="staff_disputes_refund_must_be_positive">Ang halaga ng refund ay dapat mas malaki sa zero</string>
     <string name="staff_disputes_resolution_buyer">Resolbahin para sa buyer</string>
@@ -517,4 +516,6 @@
     <string name="staff_disputes_stripe_unrecognized">hindi nakikilalang singil</string>
 
     <string name="staff_config_field_stripe_webhook">Lihim na panglagda ng Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Naisauli na</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Lumampas ang halaga ng refund sa natitirang halagang maaaring i-refund</string>
 </resources>

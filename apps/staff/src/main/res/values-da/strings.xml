@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Andet</string>
     <string name="staff_disputes_reason_unauthorised">Ikke tilladt</string>
     <string name="staff_disputes_refund_amount_label">Refusionsbeløb (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Refunderingsbeløb overstiger ordrens samlede beløb</string>
     <string name="staff_disputes_refund_help">Efterlad tom for fuld refusion af %1$s. Indtast et mindre beløb for delvis refusion.</string>
     <string name="staff_disputes_refund_must_be_positive">Refunderingsbeløb skal være større end nul</string>
     <string name="staff_disputes_resolution_buyer">Løs til fordel for køber</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rolle opdateret</string>
 
     <string name="staff_config_field_stripe_webhook">Hemmelig signeringsnøgle til webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Allerede refunderet</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Refunderingsbeløbet overstiger det resterende refunderbare beløb</string>
 </resources>

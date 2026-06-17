@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Այլ</string>
     <string name="staff_disputes_reason_unauthorised">Չլիազորված</string>
     <string name="staff_disputes_refund_amount_label">Վերադարձի գումարը (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Վերադարձի գումարը գերազանցում է պատվերի ընդհանուր գումարը</string>
     <string name="staff_disputes_refund_help">Թողեք դատարկ %1$s-ի ամբողջական վերադարձի համար: Մուտքագրեք ավելի փոքր գումար մասնակի վերադարձի համար:</string>
     <string name="staff_disputes_refund_must_be_positive">Վերադարձի գումարը պետք է զրոյից մեծ լինի</string>
     <string name="staff_disputes_resolution_buyer">Լուծել գնորդի օգտին</string>
@@ -517,4 +516,6 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s։ Ընդմիշտ ջնջե՞լ այս կարծիքը։ Սա հնարավոր չէ հետարկել։</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook-ի ստորագրման գաղտնիք</string>
+    <string name="staff_disputes_meta_already_refunded">Արդեն վերադարձված է</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Վերադարձի գումարը գերազանցում է մնացած վերադարձելի գումարը</string>
 </resources>

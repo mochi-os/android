@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Arall</string>
     <string name="staff_disputes_reason_unauthorised">Heb awdurdod</string>
     <string name="staff_disputes_refund_amount_label">Swm yr ad-daliad (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Mae swm yr ad-daliad yn fwy na chyfanswm yr archeb</string>
     <string name="staff_disputes_refund_help">Gadewch yn wag ar gyfer ad-daliad llawn o %1$s. Rhowch swm llai ar gyfer ad-daliad rhannol.</string>
     <string name="staff_disputes_refund_must_be_positive">Rhaid i swm yr ad-daliad fod yn fwy na sero</string>
     <string name="staff_disputes_resolution_buyer">Datrys i\'r prynwr</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Diweddarwyd y rôl</string>
 
     <string name="staff_config_field_stripe_webhook">Cyfrinach lofnodi Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Eisoes wedi\'i ad-dalu</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Mae\'r swm ad-daliad yn fwy na\'r swm ad-daladwy sy\'n weddill</string>
 </resources>

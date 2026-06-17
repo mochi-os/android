@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Друго</string>
     <string name="staff_disputes_reason_unauthorised">Неовлашћено</string>
     <string name="staff_disputes_refund_amount_label">Износ повраћаја (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Износ повраћаја прелази укупно поруџбине</string>
     <string name="staff_disputes_refund_help">Оставите празно за пун повраћај %1$s. Унесите мањи износ за делимични повраћај.</string>
     <string name="staff_disputes_refund_must_be_positive">Износ повраћаја мора бити већи од нуле</string>
     <string name="staff_disputes_resolution_buyer">Реши у корист купца</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Улога ажурирана</string>
 
     <string name="staff_config_field_stripe_webhook">Тајни кључ за потписивање webhook-а</string>
+    <string name="staff_disputes_meta_already_refunded">Већ враћено</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Износ повраћаја прелази преостали износ за повраћај</string>
 </resources>

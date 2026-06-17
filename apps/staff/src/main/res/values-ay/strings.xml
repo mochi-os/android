@@ -252,7 +252,6 @@
     <string name="staff_disputes_reason_not_received">Jan katuqata</string>
     <string name="staff_disputes_reason_other">Yaqha</string>
     <string name="staff_disputes_reason_unauthorised">Janiw permitidakit Mantawi</string>
-    <string name="staff_disputes_refund_exceeds_total">Refund jakhu orden total mä juk\'ampi</string>
     <string name="staff_disputes_refund_must_be_positive">Refund jakhu cero juk\'ampi</string>
     <string name="staff_disputes_resolution_buyer">Alasirit resolvama</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">Suti, huellampi, jan ukax ID jakhumpi thaqhaña…</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook firmañ jamasa</string>
+    <string name="staff_disputes_meta_already_refunded">Ya kuti</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Kutiyirinakam pataru pataru jiqhatatpacha</string>
 </resources>

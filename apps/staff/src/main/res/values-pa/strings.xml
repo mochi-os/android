@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ਨਹੀਂ ਮਿਲਿਆ</string>
     <string name="staff_disputes_reason_other">ਹੋਰ</string>
     <string name="staff_disputes_reason_unauthorised">ਅਣਅਧਿਕਾਰਤ</string>
-    <string name="staff_disputes_refund_exceeds_total">ਰਿਫੰਡ ਰਕਮ ਆਰਡਰ ਦੇ ਕੁੱਲ ਤੋਂ ਵੱਧ ਹੈ</string>
     <string name="staff_disputes_refund_must_be_positive">ਰਿਫੰਡ ਰਕਮ ਜ਼ੀਰੋ ਤੋਂ ਵੱਧ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ</string>
     <string name="staff_disputes_resolution_buyer">ਖਰੀਦਦਾਰ ਦੇ ਹੱਕ ਵਿੱਚ ਹੱਲ ਕਰੋ</string>
     <string name="staff_disputes_resolution_label">ਰੈਜ਼ੋਲਿਊਸ਼ਨ</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_dialog_search_placeholder">ਨਾਮ, ਫਿੰਗਰਪ੍ਰਿੰਟ, ਜਾਂ ID ਦੁਆਰਾ ਖੋਜੋ…</string>
 
     <string name="staff_config_field_stripe_webhook">ਵੈੱਬਹੁੱਕ ਸਾਈਨਿੰਗ ਸੀਕ੍ਰੇਟ</string>
+    <string name="staff_disputes_meta_already_refunded">ਪਹਿਲਾਂ ਹੀ ਵਾਪਸ ਕੀਤਾ</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ਰਿਫੰਡ ਦੀ ਰਕਮ ਬਾਕੀ ਰਿਫੰਡਯੋਗ ਰਕਮ ਤੋਂ ਵੱਧ ਹੈ</string>
 </resources>

@@ -259,7 +259,6 @@
     <string name="staff_disputes_reason_not_received">وەرنەگیراوە</string>
     <string name="staff_disputes_reason_other">هیتر</string>
     <string name="staff_disputes_reason_unauthorised">ڕێگەپێنەدراو</string>
-    <string name="staff_disputes_refund_exceeds_total">بڕی گەڕاندنەوەی پارە لە کۆی داواکاری زیاترە</string>
     <string name="staff_disputes_refund_must_be_positive">بڕی گەڕاندنەوەی پارە دەبێت لە سفر زیاتر بێت</string>
     <string name="staff_disputes_resolution_buyer">چارەسەر بۆ کڕیار</string>
     <string name="staff_disputes_resolution_label">چارەسەر</string>
@@ -517,4 +516,6 @@
     <string name="staff_team_dialog_search_placeholder">گەڕان بە ناو، پەنجەمۆر، یان ناسنامە…</string>
 
     <string name="staff_config_field_stripe_webhook">نهێنیی واژووکردنی Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">پێشتر گەڕێنرایەوە</string>
+    <string name="staff_disputes_refund_exceeds_remaining">بڕی گەڕاندنەوە لە بڕی گەڕاندنەوەی ماوەی تێپەڕیووە</string>
 </resources>

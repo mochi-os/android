@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Ander</string>
     <string name="staff_disputes_reason_unauthorised">Nie toegelaat nie</string>
     <string name="staff_disputes_refund_amount_label">Terugbetalingsbedrag (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Terugbetalingsbedrag oorskry bestellingstotaal</string>
     <string name="staff_disputes_refund_help">Laat leeg vir \'n volle terugbetaling van %1$s. Voer \'n kleiner bedrag in vir \'n gedeeltelike terugbetaling.</string>
     <string name="staff_disputes_refund_must_be_positive">Terugbetalingsbedrag moet groter as nul wees</string>
     <string name="staff_disputes_resolution_buyer">Los op vir koper</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rol opgedateer</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook-ondertekeningsgeheim</string>
+    <string name="staff_disputes_meta_already_refunded">Reeds terugbetaal</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Terugbetalingsbedrag oorskry oorblywende terugbetaalbare bedrag</string>
 </resources>

@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Άλλο</string>
     <string name="staff_disputes_reason_unauthorised">Μη εξουσιοδοτημένο</string>
     <string name="staff_disputes_refund_amount_label">Ποσό επιστροφής (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Το ποσό επιστροφής υπερβαίνει το σύνολο της παραγγελίας</string>
     <string name="staff_disputes_refund_help">Αφήστε κενό για πλήρη επιστροφή %1$s. Εισαγάγετε μικρότερο ποσό για μερική επιστροφή.</string>
     <string name="staff_disputes_refund_must_be_positive">Το ποσό επιστροφής πρέπει να είναι μεγαλύτερο από μηδέν</string>
     <string name="staff_disputes_resolution_buyer">Επίλυση υπέρ του αγοραστή</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Ο ρόλος ενημερώθηκε</string>
 
     <string name="staff_config_field_stripe_webhook">Μυστικό υπογραφής Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Έχει ήδη επιστραφεί</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Το ποσό επιστροφής υπερβαίνει το υπόλοιπο ποσό προς επιστροφή</string>
 </resources>

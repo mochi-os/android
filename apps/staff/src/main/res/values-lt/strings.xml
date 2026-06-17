@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Kita</string>
     <string name="staff_disputes_reason_unauthorised">Neautorizuota</string>
     <string name="staff_disputes_refund_amount_label">Grąžinimo suma (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Grąžinama suma viršija užsakymo bendrą sumą</string>
     <string name="staff_disputes_refund_help">Palikite tuščią visam %1$s grąžinimui. Įveskite mažesnę sumą daliniam grąžinimui.</string>
     <string name="staff_disputes_refund_must_be_positive">Grąžinama suma turi būti didesnė nei nulis</string>
     <string name="staff_disputes_resolution_buyer">Išspręsti pirkėjo naudai</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Vaidmuo atnaujintas</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook pasirašymo paslaptis</string>
+    <string name="staff_disputes_meta_already_refunded">Jau grąžinta</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Grąžinimo suma viršija likusią grąžintiną sumą</string>
 </resources>

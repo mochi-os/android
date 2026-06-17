@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Sonstige</string>
     <string name="staff_disputes_reason_unauthorised">Nicht zugelassen</string>
     <string name="staff_disputes_refund_amount_label">Erstattungsbetrag (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Erstattungsbetrag übersteigt Bestellsumme</string>
     <string name="staff_disputes_refund_help">Leer lassen für eine vollständige Erstattung von %1$s. Geben Sie einen kleineren Betrag für eine Teilerstattung ein.</string>
     <string name="staff_disputes_refund_must_be_positive">Erstattungsbetrag muss größer als null sein</string>
     <string name="staff_disputes_resolution_buyer">Zugunsten des Käufers entscheiden</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rolle aktualisiert</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook-Signaturschlüssel</string>
+    <string name="staff_disputes_meta_already_refunded">Bereits erstattet</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Erstattungsbetrag übersteigt den verbleibenden erstattungsfähigen Betrag</string>
 </resources>

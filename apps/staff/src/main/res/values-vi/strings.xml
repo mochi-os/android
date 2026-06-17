@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Khác</string>
     <string name="staff_disputes_reason_unauthorised">Không được phép</string>
     <string name="staff_disputes_refund_amount_label">Số tiền hoàn (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Số tiền hoàn vượt quá tổng đơn hàng</string>
     <string name="staff_disputes_refund_help">Để trống để hoàn toàn bộ %1$s. Nhập số nhỏ hơn để hoàn một phần.</string>
     <string name="staff_disputes_refund_must_be_positive">Số tiền hoàn phải lớn hơn không</string>
     <string name="staff_disputes_resolution_buyer">Giải quyết cho người mua</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Đã cập nhật vai trò</string>
 
     <string name="staff_config_field_stripe_webhook">Khóa bí mật ký Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Đã hoàn tiền</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Số tiền hoàn lại vượt quá số tiền còn có thể hoàn lại</string>
 </resources>

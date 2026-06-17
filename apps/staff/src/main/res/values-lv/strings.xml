@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Cits</string>
     <string name="staff_disputes_reason_unauthorised">Nesankcionēts</string>
     <string name="staff_disputes_refund_amount_label">Atmaksas summa (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Atmaksas summa pārsniedz pasūtījuma kopsummu</string>
     <string name="staff_disputes_refund_help">Atstājiet tukšu pilnai %1$s atmaksai. Ievadiet mazāku summu daļējai atmaksai.</string>
     <string name="staff_disputes_refund_must_be_positive">Atmaksas summai jābūt lielākai par nulli</string>
     <string name="staff_disputes_resolution_buyer">Atrisināt par labu pircējam</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Loma atjaunināta</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook parakstīšanas noslēpums</string>
+    <string name="staff_disputes_meta_already_refunded">Jau atmaksāts</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Atmaksas summa pārsniedz atlikušo atmaksājamo summu</string>
 </resources>

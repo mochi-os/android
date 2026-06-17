@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Altele</string>
     <string name="staff_disputes_reason_unauthorised">Neautorizat</string>
     <string name="staff_disputes_refund_amount_label">Sumă de rambursare (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Suma rambursării depășește totalul comenzii</string>
     <string name="staff_disputes_refund_help">Lasă gol pentru o rambursare completă de %1$s. Introdu o sumă mai mică pentru o rambursare parțială.</string>
     <string name="staff_disputes_refund_must_be_positive">Suma rambursării trebuie să fie mai mare decât zero</string>
     <string name="staff_disputes_resolution_buyer">Rezolvă în favoarea cumpărătorului</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rol actualizat</string>
 
     <string name="staff_config_field_stripe_webhook">Secret de semnare webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Deja rambursat</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Suma rambursării depășește suma rambursabilă rămasă</string>
 </resources>

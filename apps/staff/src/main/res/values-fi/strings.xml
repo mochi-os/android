@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Muu</string>
     <string name="staff_disputes_reason_unauthorised">Ei sallittu</string>
     <string name="staff_disputes_refund_amount_label">Palautussumma (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Hyvityssumma ylittää tilauksen kokonaissumman</string>
     <string name="staff_disputes_refund_help">Jätä tyhjäksi koko %1$s palautukselle. Syötä pienempi summa osittaista palautusta varten.</string>
     <string name="staff_disputes_refund_must_be_positive">Hyvityssumman on oltava nollaa suurempi</string>
     <string name="staff_disputes_resolution_buyer">Ratkaise ostajan hyväksi</string>
@@ -515,4 +514,6 @@
     <string name="staff_team_toast_role_updated">Rooli päivitetty</string>
 
     <string name="staff_config_field_stripe_webhook">Webhookin allekirjoitussalaisuus</string>
+    <string name="staff_disputes_meta_already_refunded">Jo hyvitetty</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Hyvityssumma ylittää jäljellä olevan hyvitettävän summan</string>
 </resources>
