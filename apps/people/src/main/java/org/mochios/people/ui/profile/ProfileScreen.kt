@@ -41,7 +41,10 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -492,10 +495,20 @@ private fun NameSection(
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+        // Save the name on the keyboard's Done action when there's an edit to
+        // commit, mirroring web's Enter-to-save on the profile name field.
+        val saveName = {
+            viewModel.saveName(
+                onSuccess = { scope.launch { /* snackbar lives at scaffold root */ } },
+                onError = { /* shown via state.error → snackbar */ },
+            )
+        }
         OutlinedTextField(
             value = state.nameDraft,
             onValueChange = viewModel::setNameDraft,
             singleLine = true,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+            keyboardActions = KeyboardActions(onDone = { if (dirty && !state.isSaving) saveName() }),
             modifier = Modifier.fillMaxWidth(),
         )
         Row(
@@ -503,12 +516,7 @@ private fun NameSection(
             horizontalArrangement = Arrangement.End,
         ) {
             Button(
-                onClick = {
-                    viewModel.saveName(
-                        onSuccess = { scope.launch { /* snackbar lives at scaffold root */ } },
-                        onError = { /* shown via state.error → snackbar */ },
-                    )
-                },
+                onClick = saveName,
                 enabled = dirty && !state.isSaving,
             ) {
                 if (state.isSaving) {
