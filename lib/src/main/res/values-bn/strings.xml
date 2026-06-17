@@ -159,6 +159,16 @@
     <string name="auth_mfa_title">বহু-স্তরীয় প্রমাণীকরণ</string>
     <string name="auth_mfa_subtitle">অবশিষ্ট যাচাইকরণ ধাপগুলি সম্পূর্ণ করুন</string>
     <string name="auth_recover_account">অ্যাকাউন্ট পুনরুদ্ধার করুন</string>
+    <string name="auth_login_title">Mochi-তে লগ ইন করুন</string>
+    <string name="auth_next">পরবর্তী</string>
+    <string name="auth_or_log_in_with">অথবা এর মাধ্যমে লগ ইন করুন</string>
+    <string name="auth_passkey">পাসকি</string>
+    <string name="auth_use_passkey">একটি পাসকি ব্যবহার করুন</string>
+    <string name="auth_email_me_a_code">আমাকে ইমেইলে একটি কোড পাঠান</string>
+    <string name="auth_or_enter_authenticator_code">অথবা অথেন্টিকেটর কোড লিখুন</string>
+    <string name="auth_log_in">লগ ইন করুন</string>
+    <string name="auth_back">ফিরে যান</string>
+    <string name="auth_lost_access_recovery">অ্যাক্সেস হারিয়েছেন? একটি রিকভারি কোড ব্যবহার করুন</string>
     <string name="auth_create_identity_title">আপনার পরিচয় তৈরি করুন</string>
     <string name="auth_create_identity_subtitle">এই সার্ভারে আপনার পরিচয়ের জন্য একটি নাম বেছে নিন</string>
     <string name="auth_privacy_public_description">ব্যবহারকারী ডিরেক্টরিতে তালিকাভুক্ত যাতে অন্যরা আপনাকে খুঁজে পেতে পারে।</string>

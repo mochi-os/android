@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Mirkaneessa marsaa baay\'ee</string>
     <string name="auth_mfa_subtitle">Tarkaanfiilee mirkaneessuu hafan xumuri</string>
     <string name="auth_recover_account">Akkaawuntii deebisi</string>
+    <string name="auth_login_title">Mochi seeni</string>
+    <string name="auth_next">Itti aanu</string>
+    <string name="auth_or_log_in_with">Yookaan kanaan seeni</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Furtuu darbii fayyadami</string>
+    <string name="auth_email_me_a_code">Koodii imeeliidhaan naaf ergi</string>
+    <string name="auth_or_enter_authenticator_code">Yookaan koodii Authenticator galchi</string>
+    <string name="auth_log_in">Seeni</string>
+    <string name="auth_back">Duuba</string>
+    <string name="auth_lost_access_recovery">Seensa dhabdee? Koodii deebii fayyadami</string>
     <string name="auth_create_identity_title">Eenyummaa kee uumi</string>
     <string name="auth_create_identity_subtitle">Sarvarii kana irratti eenyummaa keetiif maqaa filadhu</string>
     <string name="auth_privacy_public_description">Galmee fayyadamtootaa keessatti tarreeffameera akka warri kaan si argan.</string>

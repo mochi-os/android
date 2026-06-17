@@ -159,6 +159,16 @@
     <string name="auth_mfa_title">ባለብዙ-ደረጃ ማረጋገጫ</string>
     <string name="auth_mfa_subtitle">ቀሪዎቹን የማረጋገጫ ደረጃዎች ያጠናቅቁ</string>
     <string name="auth_recover_account">መለያ መልሶ ማግኘት</string>
+    <string name="auth_login_title">ወደ Mochi ይግቡ</string>
+    <string name="auth_next">ቀጣይ</string>
+    <string name="auth_or_log_in_with">ወይም በዚህ ይግቡ</string>
+    <string name="auth_passkey">የይለፍ ቁልፍ</string>
+    <string name="auth_use_passkey">የይለፍ ቁልፍ ይጠቀሙ</string>
+    <string name="auth_email_me_a_code">ኮድ በኢሜይል ይላኩልኝ</string>
+    <string name="auth_or_enter_authenticator_code">ወይም የአረጋጋጭ ኮድ ያስገቡ</string>
+    <string name="auth_log_in">ይግቡ</string>
+    <string name="auth_back">ተመለስ</string>
+    <string name="auth_lost_access_recovery">መዳረሻ አጥተዋል? የመልሶ ማግኛ ኮድ ይጠቀሙ</string>
     <string name="auth_create_identity_title">ማንነትዎን ይፍጠሩ</string>
     <string name="auth_create_identity_subtitle">በዚህ አገልጋይ ላይ ለማንነትዎ ስም ይምረጡ</string>
     <string name="auth_privacy_public_description">ሌሎች እንዲያገኙዎት በተጠቃሚ ማውጫ ውስጥ ተዘርዝሯል።</string>

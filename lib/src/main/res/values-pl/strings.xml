@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Uwierzytelnianie wieloskładnikowe</string>
     <string name="auth_mfa_subtitle">Wykonaj pozostałe kroki weryfikacji</string>
     <string name="auth_recover_account">Odzyskaj konto</string>
+    <string name="auth_login_title">Zaloguj się do Mochi</string>
+    <string name="auth_next">Dalej</string>
+    <string name="auth_or_log_in_with">Lub zaloguj się za pomocą</string>
+    <string name="auth_passkey">Klucz dostępu</string>
+    <string name="auth_use_passkey">Użyj klucza dostępu</string>
+    <string name="auth_email_me_a_code">Wyślij mi kod e-mailem</string>
+    <string name="auth_or_enter_authenticator_code">Lub wprowadź kod z aplikacji uwierzytelniającej</string>
+    <string name="auth_log_in">Zaloguj się</string>
+    <string name="auth_back">Wstecz</string>
+    <string name="auth_lost_access_recovery">Utracono dostęp? Użyj kodu odzyskiwania</string>
     <string name="auth_create_identity_title">Utwórz swoją tożsamość</string>
     <string name="auth_create_identity_subtitle">Wybierz nazwę dla swojej tożsamości na tym serwerze</string>
     <string name="auth_privacy_public_description">Widoczna w katalogu użytkowników, aby inni mogli Cię znaleźć.</string>

@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">אימות רב-שלבי</string>
     <string name="auth_mfa_subtitle">השלימו את שלבי האימות הנותרים</string>
     <string name="auth_recover_account">שחזור חשבון</string>
+    <string name="auth_login_title">התחברות ל-Mochi</string>
+    <string name="auth_next">הבא</string>
+    <string name="auth_or_log_in_with">או התחבר באמצעות</string>
+    <string name="auth_passkey">מפתח גישה</string>
+    <string name="auth_use_passkey">השתמש במפתח גישה</string>
+    <string name="auth_email_me_a_code">שלחו לי קוד באימייל</string>
+    <string name="auth_or_enter_authenticator_code">או הזן קוד מאמת</string>
+    <string name="auth_log_in">התחבר</string>
+    <string name="auth_back">חזור</string>
+    <string name="auth_lost_access_recovery">אבדה הגישה? השתמש בקוד שחזור</string>
     <string name="auth_create_identity_subtitle">בחרו שם לזהות שלכם בשרת זה</string>
     <string name="auth_privacy_public_description">מופיע בספריית המשתמשים כדי שאחרים יוכלו למצוא אתכם.</string>
     <string name="auth_privacy_private_description">מוסתר מספריית המשתמשים.</string>

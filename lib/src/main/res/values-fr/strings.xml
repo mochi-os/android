@@ -168,6 +168,16 @@
     <string name="auth_mfa_title">Authentification multifacteur</string>
     <string name="auth_mfa_subtitle">Effectuez les étapes de vérification restantes</string>
     <string name="auth_recover_account">Récupérer le compte</string>
+    <string name="auth_login_title">Se connecter à Mochi</string>
+    <string name="auth_next">Suivant</string>
+    <string name="auth_or_log_in_with">Ou se connecter avec</string>
+    <string name="auth_passkey">Clé d\'accès</string>
+    <string name="auth_use_passkey">Utiliser une clé d\'accès</string>
+    <string name="auth_email_me_a_code">M\'envoyer un code par e-mail</string>
+    <string name="auth_or_enter_authenticator_code">Ou saisir le code de l\'authentificateur</string>
+    <string name="auth_log_in">Se connecter</string>
+    <string name="auth_back">Retour</string>
+    <string name="auth_lost_access_recovery">Accès perdu ? Utilisez un code de récupération</string>
     <string name="auth_create_identity_subtitle">Choisissez un nom pour votre identité sur ce serveur</string>
     <string name="auth_privacy_public_description">Répertorié dans l\'annuaire des utilisateurs pour que d\'autres puissent vous trouver.</string>
     <string name="auth_privacy_private_description">Masqué de l\'annuaire des utilisateurs.</string>

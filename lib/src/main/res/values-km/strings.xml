@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">ការផ្ទៀងផ្ទាត់ច្រើនកត្តា</string>
     <string name="auth_mfa_subtitle">បំពេញជំហានផ្ទៀងផ្ទាត់ដែលនៅសល់</string>
     <string name="auth_recover_account">សង្គ្រោះគណនី</string>
+    <string name="auth_login_title">ចូលទៅ Mochi</string>
+    <string name="auth_next">បន្ទាប់</string>
+    <string name="auth_or_log_in_with">ឬចូលដោយប្រើ</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">ប្រើ passkey</string>
+    <string name="auth_email_me_a_code">ផ្ញើកូដឱ្យខ្ញុំតាមអ៊ីមែល</string>
+    <string name="auth_or_enter_authenticator_code">ឬបញ្ចូលកូដកម្មវិធីផ្ទៀងផ្ទាត់</string>
+    <string name="auth_log_in">ចូល</string>
+    <string name="auth_back">ត្រឡប់</string>
+    <string name="auth_lost_access_recovery">បាត់បង់សិទ្ធិចូល? ប្រើកូដស្តារ</string>
     <string name="auth_create_identity_title">បង្កើតអត្តសញ្ញាណរបស់អ្នក</string>
     <string name="auth_create_identity_subtitle">ជ្រើសរើសឈ្មោះសម្រាប់អត្តសញ្ញាណរបស់អ្នកនៅលើម៉ាស៊ីនមេនេះ</string>
     <string name="auth_privacy_public_description">ដាក់បញ្ចូលក្នុងថតអ្នកប្រើ ដើម្បីឱ្យអ្នកដទៃអាចរកអ្នកឃើញ។</string>

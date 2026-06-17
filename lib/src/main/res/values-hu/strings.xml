@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Többtényezős hitelesítés</string>
     <string name="auth_mfa_subtitle">Végezze el a hátralévő ellenőrzési lépéseket</string>
     <string name="auth_recover_account">Fiók helyreállítása</string>
+    <string name="auth_login_title">Jelentkezzen be a Mochiba</string>
+    <string name="auth_next">Tovább</string>
+    <string name="auth_or_log_in_with">Vagy jelentkezzen be ezzel</string>
+    <string name="auth_passkey">Azonosítókulcs</string>
+    <string name="auth_use_passkey">Azonosítókulcs használata</string>
+    <string name="auth_email_me_a_code">Kérek kódot e-mailben</string>
+    <string name="auth_or_enter_authenticator_code">Vagy adja meg a hitelesítő kódot</string>
+    <string name="auth_log_in">Bejelentkezés</string>
+    <string name="auth_back">Vissza</string>
+    <string name="auth_lost_access_recovery">Elvesztette a hozzáférést? Használjon helyreállítási kódot</string>
     <string name="auth_create_identity_subtitle">Válasszon nevet az identitásához ezen a kiszolgálón</string>
     <string name="auth_privacy_public_description">Megjelenik a felhasználói címtárban, így mások megtalálhatják.</string>
     <string name="auth_privacy_private_description">Nem jelenik meg a felhasználói címtárban.</string>
