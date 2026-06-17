@@ -74,10 +74,18 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 items(uiState.accessRules, key = { it.subject }) { rule ->
+                    // Render the rule's effective level (a deny rule, grant=0,
+                    // reads as "none") so the chip and the grant-independent
+                    // level dropdown share one label function.
+                    val effective = rule.copy(
+                        operation = if (rule.grant == 0) "none" else rule.operation,
+                    )
                     AccessRuleCard(
-                        rule = rule,
-                        levelLabel = { op -> accessLevelLabel(op, rule.grant) },
+                        rule = effective,
+                        levelLabel = { op -> accessLevelLabel(op) },
                         onRevoke = { viewModel.revokeAccess(rule.subject) },
+                        levels = ACCESS_LEVEL_CHANGE_KEYS,
+                        onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
                     )
                 }
             }
@@ -96,18 +104,23 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
     }
 }
 
+// Grant-independent level label. Callers pass the rule's *effective* level
+// ("none" for a deny rule), so this maps each level — including "none" — to its
+// label, and the inline level-change dropdown can reuse it per option.
 @Composable
-private fun accessLevelLabel(operation: String, grant: Int): String {
-    if (grant == 0) return stringResource(R.string.forums_access_level_none)
-    return when (operation) {
-        "view" -> stringResource(R.string.forums_access_level_view)
-        "vote" -> stringResource(R.string.forums_access_level_vote)
-        "comment" -> stringResource(R.string.forums_access_level_comment)
-        "post" -> stringResource(R.string.forums_access_level_post)
-        "moderate" -> stringResource(R.string.forums_access_level_moderate)
-        else -> operation
-    }
+private fun accessLevelLabel(operation: String): String = when (operation) {
+    "view" -> stringResource(R.string.forums_access_level_view)
+    "vote" -> stringResource(R.string.forums_access_level_vote)
+    "comment" -> stringResource(R.string.forums_access_level_comment)
+    "post" -> stringResource(R.string.forums_access_level_post)
+    "moderate" -> stringResource(R.string.forums_access_level_moderate)
+    "none" -> stringResource(R.string.forums_access_level_none)
+    else -> operation
 }
+
+// Levels offered when changing an existing rule inline (web filters out "none"
+// — denying is done via revoke). Highest-to-lowest, matching web's order.
+private val ACCESS_LEVEL_CHANGE_KEYS = listOf("moderate", "post", "comment", "vote", "view")
 
 /**
  * Add-access dialog mirroring web's `AccessDialog`: pick the subject as a
