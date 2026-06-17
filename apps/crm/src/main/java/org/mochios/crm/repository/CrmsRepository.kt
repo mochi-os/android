@@ -366,9 +366,12 @@ class CrmsRepository @Inject constructor(
         multi: Boolean? = null,
         card: Boolean? = null,
         position: String? = null,
-        rows: Int? = null
+        rows: Int? = null,
+        pattern: String? = null,
+        minlength: Int? = null,
+        maxlength: Int? = null
     ) {
-        api.updateField(crmId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows).unwrap()
+        api.updateField(crmId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows, pattern, minlength, maxlength).unwrap()
     }
 
     suspend fun deleteField(crmId: String, classId: String, fieldId: String) {

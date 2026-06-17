@@ -289,6 +289,9 @@ fun FieldDetailScreen(
                 || isMulti != field.isMulti
                 || showOnCard != field.showOnCard
                 || (rowsInt ?: 0) != field.rows
+                || editPattern != field.pattern
+                || (editMinlength.toIntOrNull() ?: 0) != field.minlength
+                || (editMaxlength.toIntOrNull() ?: 0) != field.maxlength
 
         if (hasChanges) {
             TextButton(
@@ -302,7 +305,10 @@ fun FieldDetailScreen(
                         multi = isMulti.takeIf { it != field.isMulti },
                         card = showOnCard.takeIf { it != field.showOnCard },
                         position = editPosition.takeIf { it != field.position },
-                        rows = rowsInt?.takeIf { it != field.rows }
+                        rows = rowsInt?.takeIf { it != field.rows },
+                        pattern = editPattern.takeIf { it != field.pattern },
+                        minlength = (editMinlength.toIntOrNull() ?: 0).takeIf { it != field.minlength },
+                        maxlength = (editMaxlength.toIntOrNull() ?: 0).takeIf { it != field.maxlength }
                     )
                 },
                 modifier = Modifier.fillMaxWidth()
