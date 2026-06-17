@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Tālāk</string>
     <string name="market_editor_start_time_clear">Notīrīt</string>
     <string name="market_listing_detail_buy_now_label">Pirkt tagad</string>
+    <string name="market_section_recently_viewed">Nesen skatīts</string>
+    <string name="market_recently_viewed_clear">Notīrīt visu</string>
 </resources>

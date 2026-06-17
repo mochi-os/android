@@ -741,4 +741,6 @@
     <string name="market_editor_start_time_next">Επόμενο</string>
     <string name="market_editor_start_time_clear">Εκκαθάριση</string>
     <string name="market_listing_detail_buy_now_label">Αγοράστε τώρα</string>
+    <string name="market_section_recently_viewed">Πρόσφατα προβληθέντα</string>
+    <string name="market_recently_viewed_clear">Εκκαθάριση όλων</string>
 </resources>

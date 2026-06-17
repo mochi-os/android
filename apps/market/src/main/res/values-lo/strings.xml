@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">ຕໍ່ໄປ</string>
     <string name="market_editor_start_time_clear">ລ້າງ</string>
     <string name="market_listing_detail_buy_now_label">ຊື້ດຽວນີ້</string>
+    <string name="market_section_recently_viewed">ເບິ່ງລ່າສຸດ</string>
+    <string name="market_recently_viewed_clear">ລ້າງທັງໝົດ</string>
 </resources>

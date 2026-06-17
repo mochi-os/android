@@ -738,4 +738,6 @@
     <string name="market_editor_start_time_next">Növbəti</string>
     <string name="market_editor_start_time_clear">Təmizlə</string>
     <string name="market_listing_detail_buy_now_label">İndi al</string>
+    <string name="market_section_recently_viewed">Bu yaxınlarda baxılan</string>
+    <string name="market_recently_viewed_clear">Hamısını təmizlə</string>
 </resources>

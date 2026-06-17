@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Jutiri</string>
     <string name="market_editor_start_time_clear">Q\'umachaña</string>
     <string name="market_listing_detail_buy_now_label">Jichhakiy alaña</string>
+    <string name="market_section_recently_viewed">Jichhüru uñjata</string>
+    <string name="market_recently_viewed_clear">Taqpach q\'umachaña</string>
 </resources>

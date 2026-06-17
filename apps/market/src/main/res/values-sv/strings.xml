@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Nästa</string>
     <string name="market_editor_start_time_clear">Rensa</string>
     <string name="market_listing_detail_buy_now_label">Köp nu</string>
+    <string name="market_section_recently_viewed">Nyligen visade</string>
+    <string name="market_recently_viewed_clear">Rensa allt</string>
 </resources>

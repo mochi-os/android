@@ -738,4 +738,6 @@
     <string name="market_editor_start_time_next">Келесі</string>
     <string name="market_editor_start_time_clear">Тазалау</string>
     <string name="market_listing_detail_buy_now_label">Қазір сатып алу</string>
+    <string name="market_section_recently_viewed">Соңғы көрілгендер</string>
+    <string name="market_recently_viewed_clear">Барлығын тазалау</string>
 </resources>

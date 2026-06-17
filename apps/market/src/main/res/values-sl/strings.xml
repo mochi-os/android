@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Naprej</string>
     <string name="market_editor_start_time_clear">Počisti</string>
     <string name="market_listing_detail_buy_now_label">Kupi takoj</string>
+    <string name="market_section_recently_viewed">Nedavno ogledano</string>
+    <string name="market_recently_viewed_clear">Počisti vse</string>
 </resources>

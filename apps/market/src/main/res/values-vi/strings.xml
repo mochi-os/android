@@ -741,4 +741,6 @@
     <string name="market_editor_start_time_next">Tiếp theo</string>
     <string name="market_editor_start_time_clear">Xóa</string>
     <string name="market_listing_detail_buy_now_label">Mua ngay</string>
+    <string name="market_section_recently_viewed">Đã xem gần đây</string>
+    <string name="market_recently_viewed_clear">Xóa tất cả</string>
 </resources>

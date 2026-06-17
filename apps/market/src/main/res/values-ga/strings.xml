@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Ar aghaidh</string>
     <string name="market_editor_start_time_clear">Glan</string>
     <string name="market_listing_detail_buy_now_label">Ceannaigh anois</string>
+    <string name="market_section_recently_viewed">Féachta le déanaí</string>
+    <string name="market_recently_viewed_clear">Glan an t-iomlán</string>
 </resources>

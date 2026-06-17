@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">ถัดไป</string>
     <string name="market_editor_start_time_clear">ล้าง</string>
     <string name="market_listing_detail_buy_now_label">ซื้อเลย</string>
+    <string name="market_section_recently_viewed">ดูล่าสุด</string>
+    <string name="market_recently_viewed_clear">ล้างทั้งหมด</string>
 </resources>

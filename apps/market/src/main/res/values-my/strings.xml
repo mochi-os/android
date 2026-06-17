@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">နောက်တစ်ခု</string>
     <string name="market_editor_start_time_clear">ရှင်းမည်</string>
     <string name="market_listing_detail_buy_now_label">ယခုပင် ဝယ်မည်</string>
+    <string name="market_section_recently_viewed">လတ်တလော ကြည့်ရှုခဲ့</string>
+    <string name="market_recently_viewed_clear">အားလုံး ရှင်းမည်</string>
 </resources>

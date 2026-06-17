@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">다음</string>
     <string name="market_editor_start_time_clear">지우기</string>
     <string name="market_listing_detail_buy_now_label">즉시 구매</string>
+    <string name="market_section_recently_viewed">최근 본 상품</string>
+    <string name="market_recently_viewed_clear">모두 지우기</string>
 </resources>

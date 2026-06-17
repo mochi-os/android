@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Tjetra</string>
     <string name="market_editor_start_time_clear">Pastro</string>
     <string name="market_listing_detail_buy_now_label">Blije tani</string>
+    <string name="market_section_recently_viewed">Të parët së fundmi</string>
+    <string name="market_recently_viewed_clear">Pastro të gjitha</string>
 </resources>

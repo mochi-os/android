@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">அடுத்து</string>
     <string name="market_editor_start_time_clear">அழி</string>
     <string name="market_listing_detail_buy_now_label">இப்போதே வாங்கு</string>
+    <string name="market_section_recently_viewed">சமீபத்தில் பார்க்கப்பட்டவை</string>
+    <string name="market_recently_viewed_clear">அனைத்தையும் அழி</string>
 </resources>

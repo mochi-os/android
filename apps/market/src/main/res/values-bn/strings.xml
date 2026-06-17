@@ -741,4 +741,6 @@
     <string name="market_editor_start_time_next">পরবর্তী</string>
     <string name="market_editor_start_time_clear">পরিষ্কার করুন</string>
     <string name="market_listing_detail_buy_now_label">এখনই কিনুন</string>
+    <string name="market_section_recently_viewed">সম্প্রতি দেখা</string>
+    <string name="market_recently_viewed_clear">সব পরিষ্কার করুন</string>
 </resources>

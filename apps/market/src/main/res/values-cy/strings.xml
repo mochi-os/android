@@ -738,4 +738,6 @@
     <string name="market_editor_start_time_next">Nesaf</string>
     <string name="market_editor_start_time_clear">Clirio</string>
     <string name="market_listing_detail_buy_now_label">Prynu nawr</string>
+    <string name="market_section_recently_viewed">A welwyd yn ddiweddar</string>
+    <string name="market_recently_viewed_clear">Clirio popeth</string>
 </resources>

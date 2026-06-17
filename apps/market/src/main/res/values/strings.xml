@@ -610,6 +610,8 @@
     <string name="market_search_placeholder">Search the market</string>
     <string name="market_section_categories">Browse Categories</string>
     <string name="market_section_listings">Recent Listings</string>
+    <string name="market_section_recently_viewed">Recently viewed</string>
+    <string name="market_recently_viewed_clear">Clear all</string>
     <string name="market_section_recent">Recently viewed</string>
     <string name="market_seller_activate_action">Activate seller account</string>
     <string name="market_seller_activating">Activating…</string>

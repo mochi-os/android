@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">അടുത്തത്</string>
     <string name="market_editor_start_time_clear">മായ്ക്കുക</string>
     <string name="market_listing_detail_buy_now_label">ഇപ്പോൾ വാങ്ങുക</string>
+    <string name="market_section_recently_viewed">ശുപാർശകൾ</string>
+    <string name="market_recently_viewed_clear">എല്ലാം മായ്ക്കുക</string>
 </resources>

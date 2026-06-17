@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Indiki</string>
     <string name="market_editor_start_time_clear">Arassalamak</string>
     <string name="market_listing_detail_buy_now_label">Häzir satyn almak</string>
+    <string name="market_section_recently_viewed">Ýakynda görlen</string>
+    <string name="market_recently_viewed_clear">Hemmesini arassalamak</string>
 </resources>

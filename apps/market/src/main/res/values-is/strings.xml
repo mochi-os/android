@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Áfram</string>
     <string name="market_editor_start_time_clear">Hreinsa</string>
     <string name="market_listing_detail_buy_now_label">Kaupa núna</string>
+    <string name="market_section_recently_viewed">Nýlega skoðað</string>
+    <string name="market_recently_viewed_clear">Hreinsa allt</string>
 </resources>

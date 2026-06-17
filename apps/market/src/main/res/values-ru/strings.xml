@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Далее</string>
     <string name="market_editor_start_time_clear">Очистить</string>
     <string name="market_listing_detail_buy_now_label">Купить сейчас</string>
+    <string name="market_section_recently_viewed">Недавно просмотренные</string>
+    <string name="market_recently_viewed_clear">Очистить всё</string>
 </resources>

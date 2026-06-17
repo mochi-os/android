@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Sabanjure</string>
     <string name="market_editor_start_time_clear">Resiki</string>
     <string name="market_listing_detail_buy_now_label">Tuku saiki</string>
+    <string name="market_section_recently_viewed">Lagi waé didelok</string>
+    <string name="market_recently_viewed_clear">Resiki kabèh</string>
 </resources>

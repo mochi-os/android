@@ -110,6 +110,12 @@ class HomeViewModel @Inject constructor(
         runSearch(reset = true)
     }
 
+    /** Clear the on-device recently-viewed history; the observe() flow then
+     *  emits empty and drops the strip. Mirrors web's clearRecentlyViewed. */
+    fun clearRecentlyViewed() {
+        viewModelScope.launch { recentStore.clear() }
+    }
+
     fun openFilterSheet(focused: Filter? = null) {
         _state.value = _state.value.copy(filterSheetOpen = true, focusedFilter = focused)
     }

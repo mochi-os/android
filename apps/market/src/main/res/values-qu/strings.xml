@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Qatiq</string>
     <string name="market_editor_start_time_clear">Pichay</string>
     <string name="market_listing_detail_buy_now_label">Kunan rantiy</string>
+    <string name="market_section_recently_viewed">Yaqa pacha qhawasqa</string>
+    <string name="market_recently_viewed_clear">Llapan pichay</string>
 </resources>

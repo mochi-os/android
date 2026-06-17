@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Հաջորդ</string>
     <string name="market_editor_start_time_clear">Մաքրել ամենը</string>
     <string name="market_listing_detail_buy_now_label">Հենց հիմա գնելու գին</string>
+    <string name="market_section_recently_viewed">Վերջերս դիտված</string>
+    <string name="market_recently_viewed_clear">Մաքրել զտիչները</string>
 </resources>

@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Susunod</string>
     <string name="market_editor_start_time_clear">Burahin</string>
     <string name="market_listing_detail_buy_now_label">Bilhin ngayon</string>
+    <string name="market_section_recently_viewed">Kamakailang tiningnan</string>
+    <string name="market_recently_viewed_clear">Burahin lahat</string>
 </resources>

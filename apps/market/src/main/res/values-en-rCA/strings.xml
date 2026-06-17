@@ -732,4 +732,6 @@
     <string name="market_editor_start_time_next">Next</string>
     <string name="market_editor_start_time_clear">Clear</string>
     <string name="market_listing_detail_buy_now_label">Buy it now</string>
+    <string name="market_section_recently_viewed">Recently viewed</string>
+    <string name="market_recently_viewed_clear">Clear all</string>
 </resources>

@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">आगे</string>
     <string name="market_editor_start_time_clear">साफ़ करें</string>
     <string name="market_listing_detail_buy_now_label">अभी खरीदें</string>
+    <string name="market_section_recently_viewed">हाल ही में देखा गया</string>
+    <string name="market_recently_viewed_clear">सब साफ़ करें</string>
 </resources>

@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Itti aanu</string>
     <string name="market_editor_start_time_clear">Cilliisi</string>
     <string name="market_listing_detail_buy_now_label">Amma bitadhu</string>
+    <string name="market_section_recently_viewed">Dhiyeenya ilaalame</string>
+    <string name="market_recently_viewed_clear">Hunda cilliisi</string>
 </resources>

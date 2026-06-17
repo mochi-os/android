@@ -733,4 +733,6 @@
     <string name="market_editor_start_time_next">Siguiente</string>
     <string name="market_editor_start_time_clear">Quitar</string>
     <string name="market_listing_detail_buy_now_label">Comprá ahora</string>
+    <string name="market_section_recently_viewed">Vistos recientemente</string>
+    <string name="market_recently_viewed_clear">Borrar todo</string>
 </resources>

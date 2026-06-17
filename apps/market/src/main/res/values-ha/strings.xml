@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Na gaba</string>
     <string name="market_editor_start_time_clear">Share</string>
     <string name="market_listing_detail_buy_now_label">Sayi yanzu</string>
+    <string name="market_section_recently_viewed">An kalla kwanan nan</string>
+    <string name="market_recently_viewed_clear">Share duka</string>
 </resources>

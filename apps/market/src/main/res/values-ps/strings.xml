@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">بل</string>
     <string name="market_editor_start_time_clear">پاک کړئ</string>
     <string name="market_listing_detail_buy_now_label">اوس یې واخله</string>
+    <string name="market_section_recently_viewed">په وروستیو کې لیدل شوي</string>
+    <string name="market_recently_viewed_clear">ټول پاک کړئ</string>
 </resources>

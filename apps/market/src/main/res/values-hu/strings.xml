@@ -741,4 +741,6 @@
     <string name="market_editor_start_time_next">Tovább</string>
     <string name="market_editor_start_time_clear">Törlés</string>
     <string name="market_listing_detail_buy_now_label">Vásárolja meg most</string>
+    <string name="market_section_recently_viewed">Nemrég megtekintett</string>
+    <string name="market_recently_viewed_clear">Összes törlése</string>
 </resources>

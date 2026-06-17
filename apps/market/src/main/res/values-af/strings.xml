@@ -738,4 +738,6 @@
     <string name="market_editor_start_time_next">Volgende</string>
     <string name="market_editor_start_time_clear">Maak skoon</string>
     <string name="market_listing_detail_buy_now_label">Koop dit nou</string>
+    <string name="market_section_recently_viewed">Onlangs bekyk</string>
+    <string name="market_recently_viewed_clear">Maak alles skoon</string>
 </resources>

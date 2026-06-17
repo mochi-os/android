@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Dalje</string>
     <string name="market_editor_start_time_clear">Очисти</string>
     <string name="market_listing_detail_buy_now_label">Купи одмах</string>
+    <string name="market_section_recently_viewed">Недавно прегледано</string>
+    <string name="market_recently_viewed_clear">Очисти све</string>
 </resources>

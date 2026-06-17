@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Toliau</string>
     <string name="market_editor_start_time_clear">Išvalyti</string>
     <string name="market_listing_detail_buy_now_label">Pirkti dabar</string>
+    <string name="market_section_recently_viewed">Neseniai peržiūrėti</string>
+    <string name="market_recently_viewed_clear">Išvalyti viską</string>
 </resources>

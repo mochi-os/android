@@ -741,4 +741,6 @@
     <string name="market_editor_start_time_next">Напред</string>
     <string name="market_editor_start_time_clear">Изчисти</string>
     <string name="market_listing_detail_buy_now_label">Купи сега</string>
+    <string name="market_section_recently_viewed">Наскоро прегледани</string>
+    <string name="market_recently_viewed_clear">Изчисти всички</string>
 </resources>

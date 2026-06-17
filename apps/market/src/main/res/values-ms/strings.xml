@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Seterusnya</string>
     <string name="market_editor_start_time_clear">Kosongkan</string>
     <string name="market_listing_detail_buy_now_label">Beli sekarang</string>
+    <string name="market_section_recently_viewed">Baru dilihat</string>
+    <string name="market_recently_viewed_clear">Kosongkan semua</string>
 </resources>

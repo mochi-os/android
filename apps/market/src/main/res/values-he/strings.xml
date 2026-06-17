@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">הבא</string>
     <string name="market_editor_start_time_clear">נקה</string>
     <string name="market_listing_detail_buy_now_label">קנה עכשיו</string>
+    <string name="market_section_recently_viewed">נצפו לאחרונה</string>
+    <string name="market_recently_viewed_clear">נקה הכול</string>
 </resources>

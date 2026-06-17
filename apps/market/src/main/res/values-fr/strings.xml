@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Suivant</string>
     <string name="market_editor_start_time_clear">Effacer</string>
     <string name="market_listing_detail_buy_now_label">Achat immédiat</string>
+    <string name="market_section_recently_viewed">Vus récemment</string>
+    <string name="market_recently_viewed_clear">Tout effacer</string>
 </resources>

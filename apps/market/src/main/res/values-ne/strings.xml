@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">अर्को</string>
     <string name="market_editor_start_time_clear">खाली गर्नुहोस्</string>
     <string name="market_listing_detail_buy_now_label">अहिले नै किन्नुहोस्</string>
+    <string name="market_section_recently_viewed">हालै हेरिएका</string>
+    <string name="market_recently_viewed_clear">सबै खाली गर्नुहोस्</string>
 </resources>

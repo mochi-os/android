@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">التالي</string>
     <string name="market_editor_start_time_clear">مسح</string>
     <string name="market_listing_detail_buy_now_label">اشترِ الآن</string>
+    <string name="market_section_recently_viewed">شوهدت مؤخرًا</string>
+    <string name="market_recently_viewed_clear">مسح الكل</string>
 </resources>

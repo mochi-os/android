@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">次へ</string>
     <string name="market_editor_start_time_clear">クリア</string>
     <string name="market_listing_detail_buy_now_label">今すぐ購入</string>
+    <string name="market_section_recently_viewed">最近見た商品</string>
+    <string name="market_recently_viewed_clear">すべてクリア</string>
 </resources>

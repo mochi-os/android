@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Înainte</string>
     <string name="market_editor_start_time_clear">Golește</string>
     <string name="market_listing_detail_buy_now_label">Cumpără acum</string>
+    <string name="market_section_recently_viewed">Vizualizate recent</string>
+    <string name="market_recently_viewed_clear">Golește tot</string>
 </resources>

@@ -738,4 +738,6 @@
     <string name="market_editor_start_time_next">Дараах</string>
     <string name="market_editor_start_time_clear">Цэвэрлэх</string>
     <string name="market_listing_detail_buy_now_label">Одоо худалдан авах</string>
+    <string name="market_section_recently_viewed">Сүүлд үзсэн</string>
+    <string name="market_recently_viewed_clear">Бүгдийг цэвэрлэх</string>
 </resources>

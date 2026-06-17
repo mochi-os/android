@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">ಮುಂದೆ</string>
     <string name="market_editor_start_time_clear">ತೆರವುಗೊಳಿಸಿ</string>
     <string name="market_listing_detail_buy_now_label">ಈಗಲೇ ಖರೀದಿಸಿ</string>
+    <string name="market_section_recently_viewed">ಇತ್ತೀಚೆಗೆ ವೀಕ್ಷಿಸಲಾಗಿದೆ</string>
+    <string name="market_recently_viewed_clear">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
 </resources>

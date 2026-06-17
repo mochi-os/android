@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">ווײַטער</string>
     <string name="market_editor_start_time_clear">רייניקן</string>
     <string name="market_listing_detail_buy_now_label">קויפֿן עס איצט</string>
+    <string name="market_section_recently_viewed">לעצטנס געקוקט</string>
+    <string name="market_recently_viewed_clear">רייניקן אַלץ</string>
 </resources>

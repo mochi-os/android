@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">下一步</string>
     <string name="market_editor_start_time_clear">清除</string>
     <string name="market_listing_detail_buy_now_label">立即购买</string>
+    <string name="market_section_recently_viewed">最近浏览</string>
+    <string name="market_recently_viewed_clear">全部清除</string>
 </resources>

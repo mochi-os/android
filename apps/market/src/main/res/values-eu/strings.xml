@@ -738,4 +738,6 @@
     <string name="market_editor_start_time_next">Hurrengoa</string>
     <string name="market_editor_start_time_clear">Garbitu</string>
     <string name="market_listing_detail_buy_now_label">Erosi orain</string>
+    <string name="market_section_recently_viewed">Azkenaldian ikusiak</string>
+    <string name="market_recently_viewed_clear">Garbitu dena</string>
 </resources>

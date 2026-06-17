@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">បន្ទាប់</string>
     <string name="market_editor_start_time_clear">សម្អាត</string>
     <string name="market_listing_detail_buy_now_label">ទិញឥឡូវ</string>
+    <string name="market_section_recently_viewed">បានមើលថ្មីៗ</string>
+    <string name="market_recently_viewed_clear">សម្អាតទាំងអស់</string>
 </resources>

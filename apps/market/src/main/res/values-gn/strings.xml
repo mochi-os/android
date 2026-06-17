@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Tenonde</string>
     <string name="market_editor_start_time_clear">Embopotĩ</string>
     <string name="market_listing_detail_buy_now_label">Ejogua ko\'ã ko\'ãngaite</string>
+    <string name="market_section_recently_viewed">Ehecha va\'ekue ramoguáve</string>
+    <string name="market_recently_viewed_clear">Embopotĩ opaite</string>
 </resources>

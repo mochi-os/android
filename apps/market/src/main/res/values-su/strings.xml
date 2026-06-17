@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Salajengna</string>
     <string name="market_editor_start_time_clear">Bersihkeun</string>
     <string name="market_listing_detail_buy_now_label">Beli ayeuna</string>
+    <string name="market_section_recently_viewed">Anu kakara ditempo</string>
+    <string name="market_recently_viewed_clear">Bersihkeun sadaya</string>
 </resources>

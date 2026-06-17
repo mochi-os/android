@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">دواتر</string>
     <string name="market_editor_start_time_clear">پاککردنەوە</string>
     <string name="market_listing_detail_buy_now_label">ئێستا بیکڕە</string>
+    <string name="market_section_recently_viewed">تازە بینراوە</string>
+    <string name="market_recently_viewed_clear">پاککردنەوەی هەموو</string>
 </resources>

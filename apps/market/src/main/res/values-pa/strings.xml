@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">ਅੱਗੇ</string>
     <string name="market_editor_start_time_clear">ਸਾਫ਼ ਕਰੋ</string>
     <string name="market_listing_detail_buy_now_label">ਹੁਣੇ ਖਰੀਦੋ</string>
+    <string name="market_section_recently_viewed">ਹਾਲ ਹੀ ਵਿੱਚ ਦੇਖੇ ਗਏ</string>
+    <string name="market_recently_viewed_clear">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
 </resources>

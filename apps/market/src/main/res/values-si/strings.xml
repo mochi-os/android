@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">ඊළඟ</string>
     <string name="market_editor_start_time_clear">හිස් කරන්න</string>
     <string name="market_listing_detail_buy_now_label">දැන් මිලදී ගන්න</string>
+    <string name="market_section_recently_viewed">මෑත දී බැලූ</string>
+    <string name="market_recently_viewed_clear">සියල්ල හිස් කරන්න</string>
 </resources>

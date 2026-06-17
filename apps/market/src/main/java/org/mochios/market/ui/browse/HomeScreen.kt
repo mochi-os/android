@@ -193,6 +193,7 @@ fun HomeScreen(
                 },
                 onActivateAccount = viewModel::activateAccount,
                 onDismissOnboarding = viewModel::dismissOnboarding,
+                onClearRecent = viewModel::clearRecentlyViewed,
             )
         }
     }
@@ -227,6 +228,7 @@ private fun HomeContent(
     onCategoryClick: (Category) -> Unit,
     onActivateAccount: () -> Unit,
     onDismissOnboarding: () -> Unit,
+    onClearRecent: () -> Unit,
 ) {
     val gridState = rememberLazyGridState()
     // Only the scroll position is derived here — it depends solely on the
@@ -289,6 +291,46 @@ private fun HomeContent(
                 verticalArrangement = Arrangement.spacedBy(12.dp),
                 modifier = Modifier.fillMaxSize(),
             ) {
+                // Recently viewed: an on-device strip above the grid on the
+                // default browse view, excluding items already in the grid.
+                // Mirrors web's home-page recently-viewed section.
+                val visibleRecent = state.recentListings.filter { recent ->
+                    state.listings.none { it.id == recent.id }
+                }
+                if (isColdStart && visibleRecent.isNotEmpty()) {
+                    item(span = { GridItemSpan(maxLineSpan) }) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Text(
+                                text = stringResource(R.string.market_section_recently_viewed),
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.SemiBold,
+                                modifier = Modifier.weight(1f),
+                            )
+                            TextButton(onClick = onClearRecent) {
+                                Text(stringResource(R.string.market_recently_viewed_clear))
+                            }
+                        }
+                    }
+                    item(span = { GridItemSpan(maxLineSpan) }) {
+                        LazyRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            items(visibleRecent, key = { it.id }) { listing ->
+                                org.mochios.market.ui.components.ListingCard(
+                                    listing = listing,
+                                    modifier = Modifier.width(160.dp),
+                                    category = state.categories
+                                        .firstOrNull { it.id == listing.category }?.name,
+                                    saved = listing.id.toString() in state.savedIds,
+                                    onClick = { onListingClick(listing) },
+                                    onToggleSave = onToggleSave,
+                                )
+                            }
+                        }
+                    }
+                }
+
                 if (SHOW_CATEGORY_BROWSER && isColdStart && state.categories.isNotEmpty()) {
                     item(span = { GridItemSpan(maxLineSpan) }) {
                         Text(

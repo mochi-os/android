@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Ďalej</string>
     <string name="market_editor_start_time_clear">Vymazať</string>
     <string name="market_listing_detail_buy_now_label">Kúpiť teraz</string>
+    <string name="market_section_recently_viewed">Nedávno zobrazené</string>
+    <string name="market_recently_viewed_clear">Vymazať všetko</string>
 </resources>

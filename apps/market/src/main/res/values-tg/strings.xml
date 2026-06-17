@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Баъдӣ</string>
     <string name="market_editor_start_time_clear">Тоза кардан</string>
     <string name="market_listing_detail_buy_now_label">Бо нархи имрӯз харидан</string>
+    <string name="market_section_recently_viewed">Ба наздикӣ дидашуда</string>
+    <string name="market_recently_viewed_clear">Ҳамаро тоза кардан</string>
 </resources>

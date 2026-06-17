@@ -738,4 +738,6 @@
     <string name="market_editor_start_time_next">Далей</string>
     <string name="market_editor_start_time_clear">Ачысціць</string>
     <string name="market_listing_detail_buy_now_label">Купіць зараз</string>
+    <string name="market_section_recently_viewed">Нядаўна прагледжана</string>
+    <string name="market_recently_viewed_clear">Ачысціць усё</string>
 </resources>

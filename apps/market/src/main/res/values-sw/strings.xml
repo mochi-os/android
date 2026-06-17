@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">Endelea</string>
     <string name="market_editor_start_time_clear">Futa</string>
     <string name="market_listing_detail_buy_now_label">Inunue sasa</string>
+    <string name="market_section_recently_viewed">Zilizotazamwa hivi karibuni</string>
+    <string name="market_recently_viewed_clear">Futa vyote</string>
 </resources>

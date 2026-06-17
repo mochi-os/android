@@ -739,4 +739,6 @@
     <string name="market_editor_start_time_next">بعدی</string>
     <string name="market_editor_start_time_clear">پاک کردن</string>
     <string name="market_listing_detail_buy_now_label">همین حالا بخرید</string>
+    <string name="market_section_recently_viewed">اخیراً مشاهده‌شده</string>
+    <string name="market_recently_viewed_clear">پاک کردن همه</string>
 </resources>
