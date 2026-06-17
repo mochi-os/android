@@ -740,4 +740,5 @@
     <string name="market_editor_start_time_help">প্রকাশের সময় শুরু করতে খালি রাখুন।</string>
     <string name="market_editor_start_time_next">পরবর্তী</string>
     <string name="market_editor_start_time_clear">পরিষ্কার করুন</string>
+    <string name="market_listing_detail_buy_now_label">এখনই কিনুন</string>
 </resources>

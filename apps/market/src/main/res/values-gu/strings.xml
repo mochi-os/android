@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">પબ્લિશ વખતે શરૂ કરવા માટે ખાલી રાખો.</string>
     <string name="market_editor_start_time_next">આગળ</string>
     <string name="market_editor_start_time_clear">સાફ કરો</string>
+    <string name="market_listing_detail_buy_now_label">હમણાં ખરીદો</string>
 </resources>

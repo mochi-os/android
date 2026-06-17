@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">השאר ריק כדי להתחיל בפרסום.</string>
     <string name="market_editor_start_time_next">הבא</string>
     <string name="market_editor_start_time_clear">נקה</string>
+    <string name="market_listing_detail_buy_now_label">קנה עכשיו</string>
 </resources>

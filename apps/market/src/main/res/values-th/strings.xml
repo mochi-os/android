@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">เว้นว่างเพื่อเริ่มต้นเมื่อเผยแพร่</string>
     <string name="market_editor_start_time_next">ถัดไป</string>
     <string name="market_editor_start_time_clear">ล้าง</string>
+    <string name="market_listing_detail_buy_now_label">ซื้อเลย</string>
 </resources>

@@ -217,11 +217,13 @@ class ListingDetailViewModel @Inject constructor(
         ceiling: Long?,
         currency: Currency,
         onSuccess: () -> Unit = {},
+        onInstantWin: () -> Unit = {},
     ) {
         val auctionId = _state.value.listing?.auction?.id ?: return
         viewModelScope.launch {
             try {
                 val result = repository.placeBid(auctionId, amount, ceiling)
+                if (result.instant == true) onInstantWin()
                 // Branch on the server's bid outcome (matches the web listing
                 // page): an instant buy-it-now win, an immediate outbid by an
                 // existing proxy ceiling, or an ordinary accepted bid.

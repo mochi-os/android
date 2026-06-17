@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Жариялау кезінде басталу үшін бос қалдырыңыз.</string>
     <string name="market_editor_start_time_next">Келесі</string>
     <string name="market_editor_start_time_clear">Тазалау</string>
+    <string name="market_listing_detail_buy_now_label">Қазір сатып алу</string>
 </resources>

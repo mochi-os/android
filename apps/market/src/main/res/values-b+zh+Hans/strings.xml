@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">留空则在发布时开始。</string>
     <string name="market_editor_start_time_next">下一步</string>
     <string name="market_editor_start_time_clear">清除</string>
+    <string name="market_listing_detail_buy_now_label">立即购买</string>
 </resources>

@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Vala bihêle ji bo destpêkirinê bi weşandinê.</string>
     <string name="market_editor_start_time_next">Pêş</string>
     <string name="market_editor_start_time_clear">Paqij bike</string>
+    <string name="market_listing_detail_buy_now_label">Niha bikire</string>
 </resources>

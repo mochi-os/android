@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Shiya kungenalutho ukuze kuqale ekushicilelweni.</string>
     <string name="market_editor_start_time_next">Okulandelayo</string>
     <string name="market_editor_start_time_clear">Sula</string>
+    <string name="market_listing_detail_buy_now_label">Yithenge manje</string>
 </resources>

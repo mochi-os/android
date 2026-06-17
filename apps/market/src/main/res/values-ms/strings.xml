@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Biarkan kosong untuk mula pada penerbitan.</string>
     <string name="market_editor_start_time_next">Seterusnya</string>
     <string name="market_editor_start_time_clear">Kosongkan</string>
+    <string name="market_listing_detail_buy_now_label">Beli sekarang</string>
 </resources>

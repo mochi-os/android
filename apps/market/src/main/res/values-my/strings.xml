@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">ထုတ်ဝေချိန်တွင် စတင်ရန် ဗလာထားပါ။</string>
     <string name="market_editor_start_time_next">နောက်တစ်ခု</string>
     <string name="market_editor_start_time_clear">ရှင်းမည်</string>
+    <string name="market_listing_detail_buy_now_label">ယခုပင် ဝယ်မည်</string>
 </resources>

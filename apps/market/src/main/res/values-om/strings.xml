@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Maxxansa irratti jalqabuuf duwwaa kaa\'i.</string>
     <string name="market_editor_start_time_next">Itti aanu</string>
     <string name="market_editor_start_time_clear">Cilliisi</string>
+    <string name="market_listing_detail_buy_now_label">Amma bitadhu</string>
 </resources>

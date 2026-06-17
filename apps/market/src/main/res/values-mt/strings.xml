@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Ħalli vojt biex tibda fil-publish.</string>
     <string name="market_editor_start_time_next">Li jmiss</string>
     <string name="market_editor_start_time_clear">Naddaf</string>
+    <string name="market_listing_detail_buy_now_label">Ixtrih issa</string>
 </resources>

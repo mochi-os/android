@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Yayımlandığında başlatmak için boş bırakın.</string>
     <string name="market_editor_start_time_next">İleri</string>
     <string name="market_editor_start_time_clear">Temizle</string>
+    <string name="market_listing_detail_buy_now_label">Hemen al</string>
 </resources>

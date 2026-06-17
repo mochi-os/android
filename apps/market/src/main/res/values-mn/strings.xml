@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Нийтлэхэд эхлэхийн тулд хоосон үлдээнэ үү.</string>
     <string name="market_editor_start_time_next">Дараах</string>
     <string name="market_editor_start_time_clear">Цэвэрлэх</string>
+    <string name="market_listing_detail_buy_now_label">Одоо худалдан авах</string>
 </resources>

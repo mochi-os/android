@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">ਲਿੰਕ</string>
     <string name="market_editor_start_time_next">ਅੱਗੇ</string>
     <string name="market_editor_start_time_clear">ਸਾਫ਼ ਕਰੋ</string>
+    <string name="market_listing_detail_buy_now_label">ਹੁਣੇ ਖਰੀਦੋ</string>
 </resources>

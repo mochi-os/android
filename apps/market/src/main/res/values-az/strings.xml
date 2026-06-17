@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Dərc edildikdə başlamaq üçün boş buraxın.</string>
     <string name="market_editor_start_time_next">Növbəti</string>
     <string name="market_editor_start_time_clear">Təmizlə</string>
+    <string name="market_listing_detail_buy_now_label">İndi al</string>
 </resources>

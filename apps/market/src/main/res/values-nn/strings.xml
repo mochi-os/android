@@ -739,4 +739,5 @@
     <string name="market_editor_start_time_help">Lat stå tomt for å starta ved publisering.</string>
     <string name="market_editor_start_time_next">Neste</string>
     <string name="market_editor_start_time_clear">Tøm</string>
+    <string name="market_listing_detail_buy_now_label">Kjøp no</string>
 </resources>

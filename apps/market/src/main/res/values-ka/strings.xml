@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">დატოვეთ ცარიელი გამოქვეყნებისას დასაწყებად.</string>
     <string name="market_editor_start_time_next">შემდეგი</string>
     <string name="market_editor_start_time_clear">გასუფთავება</string>
+    <string name="market_listing_detail_buy_now_label">ყიდე ახლავე</string>
 </resources>

@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Gadewch yn wag i ddechrau wrth gyhoeddi.</string>
     <string name="market_editor_start_time_next">Nesaf</string>
     <string name="market_editor_start_time_clear">Clirio</string>
+    <string name="market_listing_detail_buy_now_label">Prynu nawr</string>
 </resources>

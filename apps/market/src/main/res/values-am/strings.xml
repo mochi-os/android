@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">በማተም ላይ ለመጀመር ባዶ ይተዉት።</string>
     <string name="market_editor_start_time_next">ቀጣይ</string>
     <string name="market_editor_start_time_clear">አጽዳ</string>
+    <string name="market_listing_detail_buy_now_label">አሁን ግዛው</string>
 </resources>

@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Laat leeg om te starten bij publiceren.</string>
     <string name="market_editor_start_time_next">Volgende</string>
     <string name="market_editor_start_time_clear">Wissen</string>
+    <string name="market_listing_detail_buy_now_label">Nu kopen</string>
 </resources>

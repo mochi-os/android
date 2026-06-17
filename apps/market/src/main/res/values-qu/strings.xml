@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Willarayman qallariypaq ch\'usaqta saqiy.</string>
     <string name="market_editor_start_time_next">Qatiq</string>
     <string name="market_editor_start_time_clear">Pichay</string>
+    <string name="market_listing_detail_buy_now_label">Kunan rantiy</string>
 </resources>

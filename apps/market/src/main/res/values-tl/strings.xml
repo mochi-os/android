@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Iwanang blangko para magsimula sa publish.</string>
     <string name="market_editor_start_time_next">Susunod</string>
     <string name="market_editor_start_time_clear">Burahin</string>
+    <string name="market_listing_detail_buy_now_label">Bilhin ngayon</string>
 </resources>

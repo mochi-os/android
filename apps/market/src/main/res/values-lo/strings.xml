@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">ປະໄວ້ຫວ່າງເພື່ອເລີ່ມເມື່ອເຜີຍແຜ່.</string>
     <string name="market_editor_start_time_next">ຕໍ່ໄປ</string>
     <string name="market_editor_start_time_clear">ລ້າງ</string>
+    <string name="market_listing_detail_buy_now_label">ຊື້ດຽວນີ້</string>
 </resources>

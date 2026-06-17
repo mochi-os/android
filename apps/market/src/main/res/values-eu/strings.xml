@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Utzi hutsik argitaratzean hasteko.</string>
     <string name="market_editor_start_time_next">Hurrengoa</string>
     <string name="market_editor_start_time_clear">Garbitu</string>
+    <string name="market_listing_detail_buy_now_label">Erosi orain</string>
 </resources>

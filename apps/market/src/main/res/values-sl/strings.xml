@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Pustite prazno za začetek ob objavi.</string>
     <string name="market_editor_start_time_next">Naprej</string>
     <string name="market_editor_start_time_clear">Počisti</string>
+    <string name="market_listing_detail_buy_now_label">Kupi takoj</string>
 </resources>

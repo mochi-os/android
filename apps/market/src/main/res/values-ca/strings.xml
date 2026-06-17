@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Deixa-ho en blanc per començar en publicar.</string>
     <string name="market_editor_start_time_next">Següent</string>
     <string name="market_editor_start_time_clear">Esborra</string>
+    <string name="market_listing_detail_buy_now_label">Compra-ho ara</string>
 </resources>

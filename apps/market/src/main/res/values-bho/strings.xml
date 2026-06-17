@@ -740,4 +740,5 @@
     <string name="market_editor_start_time_help">प्रकाशन पर शुरू करे खातिर खाली छोड़ीं।</string>
     <string name="market_editor_start_time_next">अगिला</string>
     <string name="market_editor_start_time_clear">साफ करीं</string>
+    <string name="market_listing_detail_buy_now_label">अबहीं खरीदीं</string>
 </resources>

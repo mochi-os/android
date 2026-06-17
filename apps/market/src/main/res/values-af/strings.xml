@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Laat leeg om met publikasie te begin.</string>
     <string name="market_editor_start_time_next">Volgende</string>
     <string name="market_editor_start_time_clear">Maak skoon</string>
+    <string name="market_listing_detail_buy_now_label">Koop dit nou</string>
 </resources>

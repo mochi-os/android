@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Kosongkan untuk memulai saat penerbitan.</string>
     <string name="market_editor_start_time_next">Berikutnya</string>
     <string name="market_editor_start_time_clear">Bersihkan</string>
+    <string name="market_listing_detail_buy_now_label">Beli sekarang</string>
 </resources>

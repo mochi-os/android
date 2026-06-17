@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Palikite tuščią, kad pradėtumėte publikavus.</string>
     <string name="market_editor_start_time_next">Toliau</string>
     <string name="market_editor_start_time_clear">Išvalyti</string>
+    <string name="market_listing_detail_buy_now_label">Pirkti dabar</string>
 </resources>

@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Kosongna kanggo miwiti pas diterbitaké.</string>
     <string name="market_editor_start_time_next">Sabanjure</string>
     <string name="market_editor_start_time_clear">Resiki</string>
+    <string name="market_listing_detail_buy_now_label">Tuku saiki</string>
 </resources>

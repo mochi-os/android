@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Laissez vide pour démarrer à la publication.</string>
     <string name="market_editor_start_time_next">Suivant</string>
     <string name="market_editor_start_time_clear">Effacer</string>
+    <string name="market_listing_detail_buy_now_label">Achat immédiat</string>
 </resources>

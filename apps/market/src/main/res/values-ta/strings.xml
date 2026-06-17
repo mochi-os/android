@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">வெளியீட்டில் தொடங்க காலியாக விடவும்.</string>
     <string name="market_editor_start_time_next">அடுத்து</string>
     <string name="market_editor_start_time_clear">அழி</string>
+    <string name="market_listing_detail_buy_now_label">இப்போதே வாங்கு</string>
 </resources>

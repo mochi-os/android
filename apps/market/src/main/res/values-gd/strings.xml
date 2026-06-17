@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Fàg bàn gus tòiseachadh nuair a thèid fhoillseachadh.</string>
     <string name="market_editor_start_time_next">Air adhart</string>
     <string name="market_editor_start_time_clear">Falamhaich</string>
+    <string name="market_listing_detail_buy_now_label">Ceannaich a-nis</string>
 </resources>

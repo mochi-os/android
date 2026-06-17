@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">اتركه فارغًا للبدء عند النشر.</string>
     <string name="market_editor_start_time_next">التالي</string>
     <string name="market_editor_start_time_clear">مسح</string>
+    <string name="market_listing_detail_buy_now_label">اشترِ الآن</string>
 </resources>

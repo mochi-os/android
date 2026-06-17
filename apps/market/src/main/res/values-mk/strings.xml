@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Оставете празно за почеток при објавување.</string>
     <string name="market_editor_start_time_next">Следно</string>
     <string name="market_editor_start_time_clear">Исчисти</string>
+    <string name="market_listing_detail_buy_now_label">Купи веднаш</string>
 </resources>

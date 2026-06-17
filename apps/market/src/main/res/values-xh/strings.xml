@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Shiya kungenanto ukuze uqalise ngokupapasha.</string>
     <string name="market_editor_start_time_next">Okulandelayo</string>
     <string name="market_editor_start_time_clear">Cima</string>
+    <string name="market_listing_detail_buy_now_label">Yithenge ngoku</string>
 </resources>

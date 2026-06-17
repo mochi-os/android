@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">प्रकाशनावर सुरू करण्यासाठी रिकामे ठेवा.</string>
     <string name="market_editor_start_time_next">पुढे</string>
     <string name="market_editor_start_time_clear">साफ करा</string>
+    <string name="market_listing_detail_buy_now_label">आत्ताच खरेदी करा</string>
 </resources>

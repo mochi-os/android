@@ -732,4 +732,5 @@
     <string name="market_editor_start_time_help">Dejalo en blanco para empezar al publicar.</string>
     <string name="market_editor_start_time_next">Siguiente</string>
     <string name="market_editor_start_time_clear">Quitar</string>
+    <string name="market_listing_detail_buy_now_label">Comprá ahora</string>
 </resources>

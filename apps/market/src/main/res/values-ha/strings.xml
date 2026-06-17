@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Bar fanko don farawa a buga.</string>
     <string name="market_editor_start_time_next">Na gaba</string>
     <string name="market_editor_start_time_clear">Share</string>
+    <string name="market_listing_detail_buy_now_label">Sayi yanzu</string>
 </resources>

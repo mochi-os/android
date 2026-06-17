@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">ಪ್ರಕಟಣೆಯಲ್ಲಿ ಆರಂಭಿಸಲು ಖಾಲಿ ಬಿಡಿ.</string>
     <string name="market_editor_start_time_next">ಮುಂದೆ</string>
     <string name="market_editor_start_time_clear">ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="market_listing_detail_buy_now_label">ಈಗಲೇ ಖರೀದಿಸಿ</string>
 </resources>

@@ -730,4 +730,5 @@
     <string name="market_account_stripe_open_failed">無法開啟 Stripe</string>
     <string name="market_editor_start_time_next">下一步</string>
     <string name="market_editor_start_time_clear">清除</string>
+    <string name="market_listing_detail_buy_now_label">立即購買</string>
 </resources>

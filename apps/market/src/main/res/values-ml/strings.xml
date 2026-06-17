@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">പ്രസിദ്ധീകരണത്തിൽ ആരംഭിക്കാൻ ശൂന്യമായി വിടുക.</string>
     <string name="market_editor_start_time_next">അടുത്തത്</string>
     <string name="market_editor_start_time_clear">മായ്ക്കുക</string>
+    <string name="market_listing_detail_buy_now_label">ഇപ്പോൾ വാങ്ങുക</string>
 </resources>

@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Lini bosh për të filluar në publikim.</string>
     <string name="market_editor_start_time_next">Tjetra</string>
     <string name="market_editor_start_time_clear">Pastro</string>
+    <string name="market_listing_detail_buy_now_label">Blije tani</string>
 </resources>

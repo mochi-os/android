@@ -734,4 +734,5 @@
     <string name="market_account_stripe_open_failed">Stripe konnte nicht geöffnet werden</string>
     <string name="market_editor_start_time_next">Weiter</string>
     <string name="market_editor_start_time_clear">Löschen</string>
+    <string name="market_listing_detail_buy_now_label">Jetzt kaufen</string>
 </resources>

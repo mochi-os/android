@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Lad være tomt for at starte ved offentliggørelse.</string>
     <string name="market_editor_start_time_next">Næste</string>
     <string name="market_editor_start_time_clear">Ryd</string>
+    <string name="market_listing_detail_buy_now_label">Køb nu</string>
 </resources>

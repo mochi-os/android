@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Ostavite prazno da počne na objavi.</string>
     <string name="market_editor_start_time_next">Dalje</string>
     <string name="market_editor_start_time_clear">Očisti</string>
+    <string name="market_listing_detail_buy_now_label">Kupi odmah</string>
 </resources>

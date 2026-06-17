@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Çap etmek bilen başlamak üçin boş galdyryň.</string>
     <string name="market_editor_start_time_next">Indiki</string>
     <string name="market_editor_start_time_clear">Arassalamak</string>
+    <string name="market_listing_detail_buy_now_label">Häzir satyn almak</string>
 </resources>

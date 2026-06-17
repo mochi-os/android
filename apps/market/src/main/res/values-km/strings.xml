@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">ទុកឲ្យទទេដើម្បីចាប់ផ្ដើមលើការបោះពុម្ពផ្សាយ។</string>
     <string name="market_editor_start_time_next">បន្ទាប់</string>
     <string name="market_editor_start_time_clear">សម្អាត</string>
+    <string name="market_listing_detail_buy_now_label">ទិញឥឡូវ</string>
 </resources>

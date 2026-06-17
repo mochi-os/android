@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">公開時に開始する場合は空のままにします。</string>
     <string name="market_editor_start_time_next">次へ</string>
     <string name="market_editor_start_time_clear">クリア</string>
+    <string name="market_listing_detail_buy_now_label">今すぐ購入</string>
 </resources>

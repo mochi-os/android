@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Kite vid pou kòmanse sou piblikasyon.</string>
     <string name="market_editor_start_time_next">Pwochen</string>
     <string name="market_editor_start_time_clear">Efase</string>
+    <string name="market_listing_detail_buy_now_label">Achte li kounye a</string>
 </resources>

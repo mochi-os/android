@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Skildu eftir autt til að hefja við útgáfu.</string>
     <string name="market_editor_start_time_next">Áfram</string>
     <string name="market_editor_start_time_clear">Hreinsa</string>
+    <string name="market_listing_detail_buy_now_label">Kaupa núna</string>
 </resources>

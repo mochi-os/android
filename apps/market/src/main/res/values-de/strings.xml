@@ -740,4 +740,5 @@
     <string name="market_editor_start_time_help">Leer lassen, um beim Veröffentlichen zu starten.</string>
     <string name="market_editor_start_time_next">Weiter</string>
     <string name="market_editor_start_time_clear">Leeren</string>
+    <string name="market_listing_detail_buy_now_label">Sofort kaufen</string>
 </resources>

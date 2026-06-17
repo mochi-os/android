@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Барои оғоз дар нашр холӣ гузоред.</string>
     <string name="market_editor_start_time_next">Баъдӣ</string>
     <string name="market_editor_start_time_clear">Тоза кардан</string>
+    <string name="market_listing_detail_buy_now_label">Бо нархи имрӯз харидан</string>
 </resources>

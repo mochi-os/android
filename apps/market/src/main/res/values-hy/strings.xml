@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Թողնել դատարկ</string>
     <string name="market_editor_start_time_next">Հաջորդ</string>
     <string name="market_editor_start_time_clear">Մաքրել ամենը</string>
+    <string name="market_listing_detail_buy_now_label">Հենց հիմա գնելու գին</string>
 </resources>

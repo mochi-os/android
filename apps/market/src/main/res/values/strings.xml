@@ -328,6 +328,7 @@
     <string name="market_listing_detail_message_seller">Message seller</string>
     <string name="market_listing_detail_not_found">Listing not found</string>
     <string name="market_listing_detail_place_bid">Place bid</string>
+    <string name="market_listing_detail_buy_now_label">Buy it now</string>
     <string name="market_listing_detail_relist">Relist</string>
     <string name="market_listing_detail_relist_failed">Could not relist</string>
     <string name="market_listing_detail_relist_in_progress">Relisting</string>

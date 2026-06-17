@@ -737,4 +737,5 @@
     <string name="market_editor_start_time_help">Пакіньце пустым, каб пачаць пры публікацыі.</string>
     <string name="market_editor_start_time_next">Далей</string>
     <string name="market_editor_start_time_clear">Ачысціць</string>
+    <string name="market_listing_detail_buy_now_label">Купіць зараз</string>
 </resources>

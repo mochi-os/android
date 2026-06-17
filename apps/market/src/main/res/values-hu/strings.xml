@@ -740,4 +740,5 @@
     <string name="market_editor_start_time_help">Hagyja üresen, hogy közzétételkor induljon.</string>
     <string name="market_editor_start_time_next">Tovább</string>
     <string name="market_editor_start_time_clear">Törlés</string>
+    <string name="market_listing_detail_buy_now_label">Vásárolja meg most</string>
 </resources>

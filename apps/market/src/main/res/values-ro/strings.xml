@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Lasă necompletat pentru a începe la publicare.</string>
     <string name="market_editor_start_time_next">Înainte</string>
     <string name="market_editor_start_time_clear">Golește</string>
+    <string name="market_listing_detail_buy_now_label">Cumpără acum</string>
 </resources>

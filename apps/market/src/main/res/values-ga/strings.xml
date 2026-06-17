@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">Fág folamh chun tosú ar fhoilsiú.</string>
     <string name="market_editor_start_time_next">Ar aghaidh</string>
     <string name="market_editor_start_time_clear">Glan</string>
+    <string name="market_listing_detail_buy_now_label">Ceannaigh anois</string>
 </resources>

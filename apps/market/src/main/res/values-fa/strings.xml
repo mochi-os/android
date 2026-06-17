@@ -738,4 +738,5 @@
     <string name="market_editor_start_time_help">برای شروع هنگام انتشار، خالی بگذارید.</string>
     <string name="market_editor_start_time_next">بعدی</string>
     <string name="market_editor_start_time_clear">پاک کردن</string>
+    <string name="market_listing_detail_buy_now_label">همین حالا بخرید</string>
 </resources>
