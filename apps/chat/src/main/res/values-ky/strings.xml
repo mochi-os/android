@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Бул чатты жана анын билдирүүлөрүн ушул түзмөктөн гана өчүрөт.</string>
 
     <string name="chat_message_deleted">Бул билдирүү өчүрүлдү</string>
+    <string name="chat_search_hint">Чаттан издөө...</string>
+    <string name="chat_search_no_results">Натыйжа жок</string>
 </resources>

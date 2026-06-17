@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Aalisin nito ang chat at mga mensahe nito sa device na ito lamang.</string>
 
     <string name="chat_message_deleted">Na-delete ang mensaheng ito</string>
+    <string name="chat_search_hint">Maghanap sa chat...</string>
+    <string name="chat_search_no_results">Walang resulta</string>
 </resources>

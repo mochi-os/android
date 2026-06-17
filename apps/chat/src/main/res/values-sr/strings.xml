@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Ovo uklanja ćaskanje i njegove poruke samo sa ovog uređaja.</string>
 
     <string name="chat_message_deleted">Ова порука је избрисана</string>
+    <string name="chat_search_hint">Претражи у ћаскању...</string>
+    <string name="chat_search_no_results">Нема резултата</string>
 </resources>

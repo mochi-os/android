@@ -6,6 +6,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -16,6 +18,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.model.ChatSearchResult
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
@@ -32,6 +35,10 @@ data class ChatUiState(
     val isSending: Boolean = false,
     val error: MochiError? = null,
     val pendingAttachments: List<Uri> = emptyList(),
+    val searchOpen: Boolean = false,
+    val searchQuery: String = "",
+    val searchResults: List<ChatSearchResult> = emptyList(),
+    val searchLoading: Boolean = false,
 )
 
 @HiltViewModel
@@ -50,6 +57,7 @@ class ChatViewModel @Inject constructor(
     val uiState: StateFlow<ChatUiState> = _uiState.asStateFlow()
 
     private var subscriptionId: String? = null
+    private var searchJob: Job? = null
 
     init {
         load()
@@ -162,6 +170,41 @@ class ChatViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    // ---------------- message search ----------------
+
+    fun openSearch() {
+        _uiState.value = _uiState.value.copy(
+            searchOpen = true, searchQuery = "", searchResults = emptyList(), searchLoading = false,
+        )
+    }
+
+    fun closeSearch() {
+        searchJob?.cancel()
+        _uiState.value = _uiState.value.copy(
+            searchOpen = false, searchQuery = "", searchResults = emptyList(), searchLoading = false,
+        )
+    }
+
+    /** Debounced server-side message search; needs >=2 chars (matches web). */
+    fun setSearchQuery(query: String) {
+        _uiState.value = _uiState.value.copy(searchQuery = query)
+        searchJob?.cancel()
+        if (query.trim().length < 2) {
+            _uiState.value = _uiState.value.copy(searchResults = emptyList(), searchLoading = false)
+            return
+        }
+        searchJob = viewModelScope.launch {
+            delay(300)
+            _uiState.value = _uiState.value.copy(searchLoading = true)
+            try {
+                val res = repository.search(chatId, query.trim())
+                _uiState.value = _uiState.value.copy(searchResults = res.results, searchLoading = false)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(searchLoading = false, error = e.toMochiError())
             }
         }
     }

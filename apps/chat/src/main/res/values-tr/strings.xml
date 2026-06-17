@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Bu işlem sohbeti ve mesajlarını yalnızca bu cihazdan kaldırır.</string>
 
     <string name="chat_message_deleted">Bu mesaj silindi</string>
+    <string name="chat_search_hint">Sohbette ara...</string>
+    <string name="chat_search_no_results">Sonuç yok</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Ieu ngahapus obrolan sareng pesenna ti alat ieu wungkul.</string>
 
     <string name="chat_message_deleted">Ieu pesen geus dihapus</string>
+    <string name="chat_search_hint">Téangan dina obrolan...</string>
+    <string name="chat_search_no_results">Teu aya hasil</string>
 </resources>

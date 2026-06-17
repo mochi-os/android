@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">ນີ້ຈະລຶບການສົນທະນາ ແລະ ຂໍ້ຄວາມຂອງມັນອອກຈາກອຸປະກອນນີ້ເທົ່ານັ້ນ.</string>
 
     <string name="chat_message_deleted">ຂໍ້ຄວາມນີ້ຖືກລຶບແລ້ວ</string>
+    <string name="chat_search_hint">ຊອກຫາໃນແຊັດ...</string>
+    <string name="chat_search_no_results">ບໍ່ມີຜົນການຊອກຫາ</string>
 </resources>

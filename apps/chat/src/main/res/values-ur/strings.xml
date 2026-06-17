@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">یہ چیٹ اور اس کے پیغامات کو صرف اس آلے سے ہٹاتا ہے۔</string>
 
     <string name="chat_message_deleted">یہ پیغام حذف کر دیا گیا</string>
+    <string name="chat_search_hint">چیٹ میں تلاش کریں...</string>
+    <string name="chat_search_no_results">کوئی نتائج نہیں</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">ئەمە گفتوگۆکە و نامەکانی تەنیا لەم ئامێرە لادەبات.</string>
 
     <string name="chat_message_deleted">ئەم پەیامە سڕاوەتەوە</string>
+    <string name="chat_search_hint">گەڕان لە چاتدا...</string>
+    <string name="chat_search_no_results">هیچ ئەنجامێک نییە</string>
 </resources>

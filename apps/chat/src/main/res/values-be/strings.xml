@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Гэта выдаліць чат і яго паведамленні толькі з гэтай прылады.</string>
 
     <string name="chat_message_deleted">Гэта паведамленне было выдалена</string>
+    <string name="chat_search_hint">Пошук у чаце...</string>
+    <string name="chat_search_no_results">Нічога не знойдзена</string>
 </resources>

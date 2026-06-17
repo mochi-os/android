@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Èyí yóò yọ ìjíròrò àti àwọn ìránṣẹ́ rẹ̀ kúrò lórí ẹ̀rọ yìí nìkan.</string>
 
     <string name="chat_message_deleted">A ti pa ìfiránṣẹ́ yìí rẹ́</string>
+    <string name="chat_search_hint">Wá nínú ìfọ̀rọ̀wérọ̀...</string>
+    <string name="chat_search_no_results">Kò sí àbájáde</string>
 </resources>

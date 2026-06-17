@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">මෙයින් කතාබස සහ එහි පණිවිඩ මෙම උපාංගයෙන් පමණක් ඉවත් කරයි.</string>
 
     <string name="chat_message_deleted">මෙම පණිවිඩය මකන ලදී</string>
+    <string name="chat_search_hint">කතාබසේ සොයන්න...</string>
+    <string name="chat_search_no_results">ප්‍රතිඵල නැත</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Þetta fjarlægir spjallið og skilaboð þess aðeins úr þessu tæki.</string>
 
     <string name="chat_message_deleted">Þessum skilaboðum var eytt</string>
+    <string name="chat_search_hint">Leita í spjalli...</string>
+    <string name="chat_search_no_results">Engar niðurstöður</string>
 </resources>

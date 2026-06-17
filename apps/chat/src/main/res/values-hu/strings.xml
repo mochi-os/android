@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Ezzel a csevegés és az üzenetei csak erről az eszközről törlődnek.</string>
 
     <string name="chat_message_deleted">Ez az üzenet törölve lett</string>
+    <string name="chat_search_hint">Keresés a chatben...</string>
+    <string name="chat_search_no_results">Nincs találat</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Αυτό αφαιρεί τη συνομιλία και τα μηνύματά της μόνο από αυτήν τη συσκευή.</string>
 
     <string name="chat_message_deleted">Αυτό το μήνυμα διαγράφηκε</string>
+    <string name="chat_search_hint">Αναζήτηση στη συνομιλία...</string>
+    <string name="chat_search_no_results">Κανένα αποτέλεσμα</string>
 </resources>

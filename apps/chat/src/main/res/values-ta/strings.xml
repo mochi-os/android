@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">இது இந்த சாதனத்திலிருந்து மட்டும் அரட்டையையும் அதன் செய்திகளையும் நீக்கும்.</string>
 
     <string name="chat_message_deleted">இந்தச் செய்தி நீக்கப்பட்டது</string>
+    <string name="chat_search_hint">அரட்டையில் தேடு...</string>
+    <string name="chat_search_no_results">முடிவுகள் இல்லை</string>
 </resources>

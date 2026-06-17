@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Iki mbusak obrolan lan pesen-pesene mung saka piranti iki.</string>
 
     <string name="chat_message_deleted">Pesen iki wis dibusak</string>
+    <string name="chat_search_hint">Golek ing chat...</string>
+    <string name="chat_search_no_results">Ora ana asil</string>
 </resources>

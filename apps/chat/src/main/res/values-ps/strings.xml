@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">دا چټ او د هغه پیغامونه یوازې له دې وسیلې څخه لرې کوي.</string>
 
     <string name="chat_message_deleted">دا پیغام ړنګ شوی دی</string>
+    <string name="chat_search_hint">په چټ کې ولټوئ...</string>
+    <string name="chat_search_no_results">پایلې نشته</string>
 </resources>

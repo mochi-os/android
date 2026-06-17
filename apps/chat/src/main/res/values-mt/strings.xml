@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Dan ineħħi l-chat u l-messaġġi tiegħu minn dan l-apparat biss.</string>
 
     <string name="chat_message_deleted">Dan il-messaġġ tħassar</string>
+    <string name="chat_search_hint">Fittex fiċ-chat...</string>
+    <string name="chat_search_no_results">L-ebda riżultat</string>
 </resources>

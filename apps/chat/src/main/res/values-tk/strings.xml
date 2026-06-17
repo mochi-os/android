@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Bu diňe şu enjamdan söhbeti we onuň habarlaryny aýyrýar.</string>
 
     <string name="chat_message_deleted">Bu habar pozuldy</string>
+    <string name="chat_search_hint">Çatda gözle...</string>
+    <string name="chat_search_no_results">Netije ýok</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Cela supprime la conversation et ses messages de cet appareil uniquement.</string>
 
     <string name="chat_message_deleted">Ce message a été supprimé</string>
+    <string name="chat_search_hint">Rechercher dans la discussion...</string>
+    <string name="chat_search_no_results">Aucun résultat</string>
 </resources>

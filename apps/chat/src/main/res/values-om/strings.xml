@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Kun marii fi ergaawwan isaa moosaajii kana qofa irraa haqa.</string>
 
     <string name="chat_message_deleted">Ergaan kun haqameera</string>
+    <string name="chat_search_hint">Chaattii keessa barbaadi...</string>
+    <string name="chat_search_no_results">Bu\'aan hin jiru</string>
 </resources>

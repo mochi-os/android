@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Sa retire chat la ak mesaj li yo sou aparèy sa a sèlman.</string>
 
     <string name="chat_message_deleted">Mesaj sa a te efase</string>
+    <string name="chat_search_hint">Chèche nan chat la...</string>
+    <string name="chat_search_no_results">Pa gen rezilta</string>
 </resources>

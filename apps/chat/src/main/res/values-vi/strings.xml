@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Thao tác này chỉ xóa cuộc trò chuyện và tin nhắn khỏi thiết bị này.</string>
 
     <string name="chat_message_deleted">Tin nhắn này đã bị xóa</string>
+    <string name="chat_search_hint">Tìm trong cuộc trò chuyện...</string>
+    <string name="chat_search_no_results">Không có kết quả</string>
 </resources>

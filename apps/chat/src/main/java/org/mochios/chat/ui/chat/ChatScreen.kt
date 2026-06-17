@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
@@ -33,6 +34,7 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -41,11 +43,13 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -241,6 +245,8 @@ private fun ChatContent(
     val uiState by viewModel.uiState.collectAsState()
     var draft by remember { mutableStateOf("") }
     val listState = rememberLazyListState()
+    val scope = rememberCoroutineScope()
+    val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
 
     LaunchedEffect(uiState.messages.size) {
         if (uiState.messages.isNotEmpty()) {
@@ -306,6 +312,12 @@ private fun ChatContent(
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
                     if (uiState.chat.id.isNotEmpty()) {
+                        IconButton(onClick = { viewModel.openSearch() }) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.chat_search_hint)
+                            )
+                        }
                         IconButton(onClick = { onSettings(uiState.chat.fingerprint.ifEmpty { uiState.chat.id }) }) {
                             Icon(
                                 Icons.Default.Settings,
@@ -352,7 +364,6 @@ private fun ChatContent(
                     }
                 }
                 else -> {
-                    val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
                     LazyColumn(
                         state = listState,
                         modifier = Modifier.weight(1f).fillMaxWidth(),
@@ -415,6 +426,120 @@ private fun ChatContent(
                     draft = ""
                 }
             )
+
+            if (uiState.searchOpen) {
+                ChatSearchSheet(
+                    query = uiState.searchQuery,
+                    onQueryChange = { viewModel.setSearchQuery(it) },
+                    results = uiState.searchResults,
+                    loading = uiState.searchLoading,
+                    onDismiss = { viewModel.closeSearch() },
+                    onResultClick = { result ->
+                        val idx = messageLazyIndex(grouped, uiState.hasMore, result.id)
+                        viewModel.closeSearch()
+                        if (idx >= 0) scope.launch { listState.animateScrollToItem(idx) }
+                    },
+                )
+            }
+        }
+    }
+}
+
+/**
+ * The LazyColumn item index of a message id within the loaded list, accounting
+ * for the leading "load older" item and date separators. Returns -1 when the
+ * message isn't currently loaded (so we can't scroll to it).
+ */
+private fun messageLazyIndex(
+    grouped: List<MessageListEntry>,
+    hasMore: Boolean,
+    messageId: String,
+): Int {
+    var index = if (hasMore) 1 else 0
+    for (entry in grouped) {
+        if (entry is MessageListEntry.MessageItem && entry.message.id == messageId) return index
+        index++
+    }
+    return -1
+}
+
+/**
+ * Search-in-chat bottom sheet: a query field over the server search endpoint
+ * plus a results list (sender / excerpt / time). Tapping a result jumps to the
+ * message if it's loaded. Mirrors the web chat-search header's capability.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ChatSearchSheet(
+    query: String,
+    onQueryChange: (String) -> Unit,
+    results: List<org.mochios.chat.model.ChatSearchResult>,
+    loading: Boolean,
+    onDismiss: () -> Unit,
+    onResultClick: (org.mochios.chat.model.ChatSearchResult) -> Unit,
+) {
+    val format = LocalFormat.current
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 16.dp)
+        ) {
+            OutlinedTextField(
+                value = query,
+                onValueChange = onQueryChange,
+                placeholder = { Text(stringResource(R.string.chat_search_hint)) },
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            when {
+                loading -> Box(
+                    modifier = Modifier.fillMaxWidth().padding(24.dp),
+                    contentAlignment = Alignment.Center,
+                ) { CircularProgressIndicator() }
+                query.trim().length >= 2 && results.isEmpty() -> Text(
+                    text = stringResource(R.string.chat_search_no_results),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(vertical = 16.dp),
+                )
+                else -> LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
+                    items(results, key = { it.id }) { result ->
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { onResultClick(result) }
+                                .padding(vertical = 8.dp)
+                        ) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                            ) {
+                                Text(
+                                    text = result.name,
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.primary,
+                                )
+                                Text(
+                                    text = format.formatTimestamp(result.created),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                            Text(
+                                text = result.excerpt.ifBlank { result.body },
+                                style = MaterialTheme.typography.bodyMedium,
+                                maxLines = 2,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                        HorizontalDivider()
+                    }
+                }
+            }
         }
     }
 }

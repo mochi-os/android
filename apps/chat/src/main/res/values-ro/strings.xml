@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Aceasta elimină chatul și mesajele sale doar de pe acest dispozitiv.</string>
 
     <string name="chat_message_deleted">Acest mesaj a fost șters</string>
+    <string name="chat_search_hint">Caută în chat...</string>
+    <string name="chat_search_no_results">Niciun rezultat</string>
 </resources>

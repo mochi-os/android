@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Spowoduje to usunięcie czatu i jego wiadomości tylko z tego urządzenia.</string>
 
     <string name="chat_message_deleted">Ta wiadomość została usunięta</string>
+    <string name="chat_search_hint">Szukaj w czacie...</string>
+    <string name="chat_search_no_results">Brak wyników</string>
 </resources>

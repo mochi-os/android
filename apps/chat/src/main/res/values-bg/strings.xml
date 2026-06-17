@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Това премахва чата и неговите съобщения само от това устройство.</string>
 
     <string name="chat_message_deleted">Това съобщение беше изтрито</string>
+    <string name="chat_search_hint">Търсене в чата...</string>
+    <string name="chat_search_no_results">Няма резултати</string>
 </resources>

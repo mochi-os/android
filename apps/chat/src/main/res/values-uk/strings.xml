@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Це видалить чат та його повідомлення лише з цього пристрою.</string>
 
     <string name="chat_message_deleted">Це повідомлення було видалено</string>
+    <string name="chat_search_hint">Пошук у чаті...</string>
+    <string name="chat_search_no_results">Немає результатів</string>
 </resources>

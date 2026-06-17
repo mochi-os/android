@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Энэ нь чат болон мессежүүдийг зөвхөн энэ төхөөрөмжөөс устгана.</string>
 
     <string name="chat_message_deleted">Энэ мессеж устгагдсан</string>
+    <string name="chat_search_hint">Чатаас хайх...</string>
+    <string name="chat_search_no_results">Илэрц олдсонгүй</string>
 </resources>

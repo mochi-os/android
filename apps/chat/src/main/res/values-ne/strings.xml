@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">यसले च्याट र यसका सन्देशहरू यो यन्त्रबाट मात्र हटाउँछ।</string>
 
     <string name="chat_message_deleted">यो सन्देश मेटाइयो</string>
+    <string name="chat_search_hint">च्याटमा खोज्नुहोस्...</string>
+    <string name="chat_search_no_results">कुनै नतिजा छैन</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Akax aka aparatutakix chat ukat yatiyäwinakap chhaqtayi.</string>
 
     <string name="chat_message_deleted">Aka mensajex chhaqtayatawa</string>
+    <string name="chat_search_hint">Chatan thaqhaña...</string>
+    <string name="chat_search_no_results">Janiw jikxatatax utjkiti</string>
 </resources>

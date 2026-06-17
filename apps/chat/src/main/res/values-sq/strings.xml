@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Kjo heq bisedën dhe mesazhet e saj vetëm nga kjo pajisje.</string>
 
     <string name="chat_message_deleted">Ky mesazh u fshi</string>
+    <string name="chat_search_hint">Kërko në bisedë...</string>
+    <string name="chat_search_no_results">Asnjë rezultat</string>
 </resources>

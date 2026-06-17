@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Tämä poistaa keskustelun ja sen viestit vain tästä laitteesta.</string>
 
     <string name="chat_message_deleted">Tämä viesti poistettiin</string>
+    <string name="chat_search_hint">Hae keskustelusta...</string>
+    <string name="chat_search_no_results">Ei tuloksia</string>
 </resources>

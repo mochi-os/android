@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">ეს წაშლის ჩატსა და მის შეტყობინებებს მხოლოდ ამ მოწყობილობიდან.</string>
 
     <string name="chat_message_deleted">ეს შეტყობინება წაიშალა</string>
+    <string name="chat_search_hint">ძიება ჩატში...</string>
+    <string name="chat_search_no_results">შედეგები არ არის</string>
 </resources>

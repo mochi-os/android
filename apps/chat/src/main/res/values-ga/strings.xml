@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Baineann sé seo an comhrá agus a chuid teachtaireachtaí den ghléas seo amháin.</string>
 
     <string name="chat_message_deleted">Scriosadh an teachtaireacht seo</string>
+    <string name="chat_search_hint">Cuardaigh sa chomhrá...</string>
+    <string name="chat_search_no_results">Gan torthaí</string>
 </resources>

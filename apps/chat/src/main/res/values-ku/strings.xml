@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Ev tenê chatê û peyamên wê ji vê amûrê radike.</string>
 
     <string name="chat_message_deleted">Ev peyam hat jêbirin</string>
+    <string name="chat_search_hint">Di sohbetê de bigere...</string>
+    <string name="chat_search_no_results">Encam tune</string>
 </resources>

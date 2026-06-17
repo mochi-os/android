@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">To odstrani klepet in njegova sporočila samo iz te naprave.</string>
 
     <string name="chat_message_deleted">To sporočilo je bilo izbrisano</string>
+    <string name="chat_search_hint">Išči v klepetu...</string>
+    <string name="chat_search_no_results">Ni zadetkov</string>
 </resources>

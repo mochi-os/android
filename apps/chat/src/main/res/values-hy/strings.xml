@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Սա հեռացնում է զրույցը և դրա հաղորդագրությունները միայն այս սարքից:</string>
 
     <string name="chat_message_deleted">Այս հաղորդագրությունը ջնջվել է</string>
+    <string name="chat_search_hint">Որոնել զրույցում...</string>
+    <string name="chat_search_no_results">Արդյունքներ չկան</string>
 </resources>

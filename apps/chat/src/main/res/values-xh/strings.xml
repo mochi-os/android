@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Oku kususa incoko nemiyalezo yayo kule sixhobo kuphela.</string>
 
     <string name="chat_message_deleted">Lo myalezo ucinyiwe</string>
+    <string name="chat_search_hint">Khangela kwincoko...</string>
+    <string name="chat_search_no_results">Akukho ziphumo</string>
 </resources>

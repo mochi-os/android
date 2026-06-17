@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Бұл чатты және оның хабарламаларын тек осы құрылғыдан жояды.</string>
 
     <string name="chat_message_deleted">Бұл хабарлама жойылды</string>
+    <string name="chat_search_hint">Чат ішінен іздеу...</string>
+    <string name="chat_search_no_results">Нәтижелер жоқ</string>
 </resources>

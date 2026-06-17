@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Bu chat va uning xabarlarini faqat ushbu qurilmadan o\'chiradi.</string>
 
     <string name="chat_message_deleted">Bu xabar oʻchirilgan</string>
+    <string name="chat_search_hint">Chat ichida qidirish...</string>
+    <string name="chat_search_no_results">Natijalar yoʻq</string>
 </resources>

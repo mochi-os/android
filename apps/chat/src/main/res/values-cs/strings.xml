@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Tímto se chat a jeho zprávy odeberou pouze z tohoto zařízení.</string>
 
     <string name="chat_message_deleted">Tato zpráva byla smazána</string>
+    <string name="chat_search_hint">Hledat v chatu...</string>
+    <string name="chat_search_no_results">Žádné výsledky</string>
 </resources>

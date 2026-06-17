@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Dit verwyder die klets en sy boodskappe slegs vanaf hierdie toestel.</string>
 
     <string name="chat_message_deleted">Hierdie boodskap is uitgevee</string>
+    <string name="chat_search_hint">Soek in gesprek...</string>
+    <string name="chat_search_no_results">Geen resultate nie</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Dette fjerner chatten og meldingene fra kun denne enheten.</string>
 
     <string name="chat_message_deleted">Denne meldingen ble slettet</string>
+    <string name="chat_search_hint">Søk i chatten...</string>
+    <string name="chat_search_no_results">Ingen resultater</string>
 </resources>

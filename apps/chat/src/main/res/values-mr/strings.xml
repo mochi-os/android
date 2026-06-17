@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">हे केवळ या डिव्हाइसवरून चॅट आणि त्याचे संदेश काढून टाकते.</string>
 
     <string name="chat_message_deleted">हा संदेश हटवला गेला</string>
+    <string name="chat_search_hint">चॅटमध्ये शोधा...</string>
+    <string name="chat_search_no_results">कोणतेही परिणाम नाहीत</string>
 </resources>

@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Kayqa rimanakuyta hinaspa willayninkunata kay dispositivollamantam pichan.</string>
 
     <string name="chat_message_deleted">Kay willay pichasqam</string>
+    <string name="chat_search_hint">Chatpi maskay...</string>
+    <string name="chat_search_no_results">Mana tarisqa kanchu</string>
 </resources>

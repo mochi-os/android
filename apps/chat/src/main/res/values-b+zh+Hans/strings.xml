@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">此操作仅会从此设备删除该聊天及其消息。</string>
 
     <string name="chat_message_deleted">此消息已被删除</string>
+    <string name="chat_search_hint">在聊天中搜索...</string>
+    <string name="chat_search_no_results">无结果</string>
 </resources>

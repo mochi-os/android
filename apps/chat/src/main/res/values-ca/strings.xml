@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">Això elimina el xat i els seus missatges només d\'aquest dispositiu.</string>
 
     <string name="chat_message_deleted">Aquest missatge s\'ha suprimit</string>
+    <string name="chat_search_hint">Cerca al xat...</string>
+    <string name="chat_search_no_results">Sense resultats</string>
 </resources>

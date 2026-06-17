@@ -70,4 +70,6 @@
     <string name="chat_settings_delete_message">ഇത് ഈ ഉപകരണത്തിൽ നിന്ന് മാത്രം ചാറ്റും അതിന്റെ സന്ദേശങ്ങളും നീക്കം ചെയ്യുന്നു.</string>
 
     <string name="chat_message_deleted">ഈ സന്ദേശം ഇല്ലാതാക്കി</string>
+    <string name="chat_search_hint">ചാറ്റിൽ തിരയുക...</string>
+    <string name="chat_search_no_results">ഫലങ്ങളൊന്നുമില്ല</string>
 </resources>
