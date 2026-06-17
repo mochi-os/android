@@ -155,8 +155,11 @@ class PeopleRepository @Inject constructor(
         api.setFavicon(person, multipart(file)).unwrap()
     }
 
+    // The picker always re-encodes to JPEG, so the part must declare an image
+    // Content-Type — the server rejects "application/octet-stream" with
+    // "<slot> must be an image". Field name "file" matches the web upload.
     private fun multipart(file: File): MultipartBody.Part {
-        val body = file.asRequestBody("application/octet-stream".toMediaTypeOrNull())
+        val body = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
         return MultipartBody.Part.createFormData("file", file.name, body)
     }
 
