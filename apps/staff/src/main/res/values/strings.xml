@@ -185,6 +185,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
     <string name="staff_config_field_stripe_publishable">Publishable key</string>
     <string name="staff_config_field_stripe_secret">Secret key</string>
+    <string name="staff_config_field_stripe_webhook">Webhook signing secret</string>
     <string name="staff_config_group_moderation">Moderation</string>
     <string name="staff_config_group_payments">Payments</string>
     <string name="staff_config_group_reviews">Reviews</string>

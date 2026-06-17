@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">به‌روزرسانی نقش ناموفق بود</string>
     <string name="staff_team_toast_role_updated">نقش به‌روزرسانی شد</string>
 
+    <string name="staff_config_field_stripe_webhook">راز امضای وب‌هوک</string>
 </resources>

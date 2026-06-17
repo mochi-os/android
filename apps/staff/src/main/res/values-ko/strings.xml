@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">역할 업데이트에 실패했습니다</string>
     <string name="staff_team_toast_role_updated">역할이 업데이트되었습니다</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook 서명 시크릿</string>
 </resources>

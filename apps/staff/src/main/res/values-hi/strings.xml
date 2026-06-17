@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">भूमिका अपडेट करने में विफल</string>
     <string name="staff_team_toast_role_updated">भूमिका अपडेट की गई</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त</string>
 </resources>

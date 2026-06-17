@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">Nie udało się zaktualizować roli</string>
     <string name="staff_team_toast_role_updated">Rola zaktualizowana</string>
 
+    <string name="staff_config_field_stripe_webhook">Tajny klucz podpisywania webhooka</string>
 </resources>

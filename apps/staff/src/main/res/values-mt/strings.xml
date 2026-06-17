@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Tħassar din ir-reviżjoni permanentement? Dan ma jistax jitreġġa\' lura.</string>
     <string name="staff_team_dialog_search_placeholder">Fittex b\'isem, marka tas-swaba\', jew ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Sigriet tal-iffirmar tal-Webhook</string>
 </resources>

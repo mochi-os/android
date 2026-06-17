@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">Kunne ikke oppdatere rolle</string>
     <string name="staff_team_toast_role_updated">Rolle oppdatert</string>
 
+    <string name="staff_config_field_stripe_webhook">Hemmelig signeringsnøkkel for webhook</string>
 </resources>

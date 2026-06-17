@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ин баррасиро ба таври доимӣ нест кунем? Ин амалро бекор кардан мумкин нест.</string>
     <string name="staff_team_dialog_search_placeholder">Ҷустуҷӯ аз рӯи ном, изи ангушт ё ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Калиди махфии имзои Webhook</string>
 </resources>

@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Cima oluphononongo ngokusisigxina? Oku akunakubuyiselwa.</string>
     <string name="staff_team_dialog_search_placeholder">Khangela ngegama, umnwe, okanye i-ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Imfihlo yokusayina i-Webhook</string>
 </resources>

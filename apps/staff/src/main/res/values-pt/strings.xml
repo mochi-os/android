@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">Falha ao atualizar a função</string>
     <string name="staff_team_toast_role_updated">Função atualizada</string>
 
+    <string name="staff_config_field_stripe_webhook">Segredo de assinatura do webhook</string>
 </resources>

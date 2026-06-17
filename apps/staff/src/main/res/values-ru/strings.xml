@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">Не удалось обновить роль</string>
     <string name="staff_team_toast_role_updated">Роль обновлена</string>
 
+    <string name="staff_config_field_stripe_webhook">Секретный ключ подписи webhook</string>
 </resources>

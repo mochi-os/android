@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">Не успеа да се ажурира улогата</string>
     <string name="staff_team_toast_role_updated">Улогата е ажурирана</string>
 
+    <string name="staff_config_field_stripe_webhook">Тајна за потпишување Webhook</string>
 </resources>

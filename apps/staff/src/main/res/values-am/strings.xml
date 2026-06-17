@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s። ይህን ግምገማ በቋሚነት ይሰረዝ? ይህ መቀልበስ አይቻልም።</string>
     <string name="staff_team_dialog_search_placeholder">በስም፣ በጣት አሻራ ወይም በመለያ ይፈልጉ…</string>
 
+    <string name="staff_config_field_stripe_webhook">የWebhook መፈረሚያ ሚስጥር</string>
 </resources>

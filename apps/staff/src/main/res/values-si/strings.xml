@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. මෙම සමාලෝචනය ස්ථිරව මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
     <string name="staff_team_dialog_search_placeholder">නම, ඇඟිලි සලකුණ හෝ ID අනුව සොයන්න…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook අත්සන් කිරීමේ රහස</string>
 </resources>

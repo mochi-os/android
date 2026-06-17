@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Бул пикирди биротоло өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="staff_team_dialog_search_placeholder">Аты, манжа изи же ID боюнча издөө…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook кол коюу сыры</string>
 </resources>

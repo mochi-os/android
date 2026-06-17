@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ushbu sharhni butunlay oʻchirib tashlaysizmi? Buni bekor qilib boʻlmaydi.</string>
     <string name="staff_team_dialog_search_placeholder">Ism, barmoq izi yoki ID boʻyicha qidirish…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook imzolash maxfiy kaliti</string>
 </resources>

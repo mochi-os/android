@@ -512,4 +512,5 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s אויף %3$s. אויסמעקן די רעצענזיע פֿאַר תּמיד? דאָס קען נישט אומגעטאָן ווערן.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. אויסמעקן די רעצענזיע פֿאַר תּמיד? דאָס קען נישט אומגעטאָן ווערן.</string>
     <string name="staff_team_dialog_search_placeholder">זוך לויט נאָמען, פֿינגערצייכן אָדער ID…</string>
+    <string name="staff_config_field_stripe_webhook">Webhook סיגנירן סוד</string>
 </resources>

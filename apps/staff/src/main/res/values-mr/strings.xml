@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. हे पुनरावलोकन कायमचे हटवायचे? हे पूर्ववत करता येणार नाही.</string>
     <string name="staff_team_dialog_search_placeholder">नाव, फिंगरप्रिंट, किंवा ID ने शोधा…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook स्वाक्षरी गुपित</string>
 </resources>

@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Sguab às an lèirmheas seo gu buan? Cha ghabh seo a thilleadh.</string>
     <string name="staff_team_dialog_search_placeholder">Lorg a rèir ainm, lorg-meòir, no ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Rùn soidhnidh webhook</string>
 </resources>

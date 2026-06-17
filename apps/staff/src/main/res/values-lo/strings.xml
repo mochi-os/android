@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ລຶບການວິຈານນີ້ຖາວອນ? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
     <string name="staff_team_dialog_search_placeholder">ຄົ້ນຫາດ້ວຍຊື່, ລາຍນິ້ວມື, ຫຼື ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">ຄວາມລັບການເຊັນ Webhook</string>
 </resources>

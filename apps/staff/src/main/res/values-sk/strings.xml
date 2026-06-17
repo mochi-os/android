@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">Aktualizácia roly zlyhala</string>
     <string name="staff_team_toast_role_updated">Rola aktualizovaná</string>
 
+    <string name="staff_config_field_stripe_webhook">Tajný kľúč na podpisovanie webhookov</string>
 </resources>

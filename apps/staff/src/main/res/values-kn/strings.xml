@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ಈ ವಿಮರ್ಶೆಯನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="staff_team_dialog_search_placeholder">ಹೆಸರು, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ ID ಮೂಲಕ ಹುಡುಕಿ…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook ಸಹಿ ರಹಸ್ಯ</string>
 </resources>

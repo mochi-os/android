@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s। यो समीक्षा स्थायी रूपमा मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
     <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिन्ट, वा ID द्वारा खोज्नुहोस्…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गोप्य</string>
 </resources>

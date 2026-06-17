@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. بە تەواوەتی ئەم پێداچوونەوەیە بسڕێتەوە؟ ئەمە ناتوانرێت پاشگەزی لێ بکرێتەوە.</string>
     <string name="staff_team_dialog_search_placeholder">گەڕان بە ناو، پەنجەمۆر، یان ناسنامە…</string>
 
+    <string name="staff_config_field_stripe_webhook">نهێنیی واژووکردنی Webhook</string>
 </resources>

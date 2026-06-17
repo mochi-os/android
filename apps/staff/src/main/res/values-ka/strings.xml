@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. სამუდამოდ წავშალოთ ეს მიმოხილვა? ამის გაუქმება შეუძლებელია.</string>
     <string name="staff_team_dialog_search_placeholder">ძიება სახელით, თითის ანაბეჭდით ან ID-ით…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook-ის ხელმოწერის საიდუმლო</string>
 </resources>

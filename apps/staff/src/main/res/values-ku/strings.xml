@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ev nirxandin bi awayekî daîmî jê bibe? Ev nayê vegerandin.</string>
     <string name="staff_team_dialog_search_placeholder">Bi nav, şopa tilî, an nasnameyê bigere…</string>
 
+    <string name="staff_config_field_stripe_webhook">Veşariya îmzekirinê ya Webhook</string>
 </resources>

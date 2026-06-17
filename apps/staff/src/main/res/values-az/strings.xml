@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s tarixində. Bu rəyi həmişəlik silmək istəyirsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Bu rəyi həmişəlik silmək istəyirsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook imzalama sirri</string>
 </resources>

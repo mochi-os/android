@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">更新角色失敗</string>
     <string name="staff_team_toast_role_updated">角色已更新</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook 簽署密鑰</string>
 </resources>

@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s на %3$s. Выдаліць гэты водгук назаўсёды? Гэта дзеянне нельга адмяніць.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Выдаліць гэты водгук назаўсёды? Гэта дзеянне нельга адмяніць.</string>
 
+    <string name="staff_config_field_stripe_webhook">Сакрэтны ключ подпісу Webhook</string>
 </resources>

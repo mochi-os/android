@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ഈ അവലോകനം ശാശ്വതമായി ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="staff_team_dialog_search_placeholder">പേര്, ഫിംഗർപ്രിന്റ്, അല്ലെങ്കിൽ ID പ്രകാരം തിരയുക…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook ഒപ്പിടൽ രഹസ്യം</string>
 </resources>

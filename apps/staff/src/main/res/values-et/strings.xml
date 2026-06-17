@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">Rolli uuendamine ebaõnnestus</string>
     <string name="staff_team_toast_role_updated">Roll on uuendatud</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhooki allkirjastamise saladus</string>
 </resources>

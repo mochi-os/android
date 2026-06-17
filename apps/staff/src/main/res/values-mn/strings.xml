@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Энэ үнэлгээг бүрмөсөн устгах уу? Үүнийг буцаах боломжгүй.</string>
     <string name="staff_team_dialog_search_placeholder">Нэр, хурууны хээ эсвэл ID-аар хайх…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook гарын үсгийн нууц</string>
 </resources>

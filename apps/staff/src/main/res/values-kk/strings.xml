@@ -516,4 +516,5 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Осы пікірді біржола жою керек пе? Бұл әрекетті кері қайтару мүмкін емес.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Осы пікірді біржола жою керек пе? Бұл әрекетті кері қайтару мүмкін емес.</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook қолтаңба құпиясы</string>
 </resources>

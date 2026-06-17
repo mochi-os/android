@@ -181,6 +181,13 @@ private fun ConfigBody(
                 onLocalChange = onLocalChange,
                 onSave = onSave,
             )
+            SecretField(
+                label = stringResource(R.string.staff_config_field_stripe_webhook),
+                key = ConfigViewModel.KEY_STRIPE_WEBHOOK,
+                state = state,
+                onLocalChange = onLocalChange,
+                onSave = onSave,
+            )
             TextField(
                 label = stringResource(R.string.staff_config_field_stripe_oauth_client),
                 key = ConfigViewModel.KEY_STRIPE_OAUTH,

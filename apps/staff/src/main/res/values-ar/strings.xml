@@ -514,4 +514,5 @@
     <string name="staff_team_toast_role_failed">تعذر تحديث الدور</string>
     <string name="staff_team_toast_role_updated">تم تحديث الدور</string>
 
+    <string name="staff_config_field_stripe_webhook">سر توقيع Webhook</string>
 </resources>

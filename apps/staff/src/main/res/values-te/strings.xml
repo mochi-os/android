@@ -514,4 +514,5 @@
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ఈ సమీక్షను శాశ్వతంగా తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
     <string name="staff_team_dialog_search_placeholder">పేరు, వేలిముద్ర లేదా ID ద్వారా శోధించండి…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook సంతకం రహస్యం</string>
 </resources>
