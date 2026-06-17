@@ -1,7 +1,5 @@
 package org.mochios.people.ui.friends
 
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -58,7 +56,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -100,13 +97,13 @@ fun FriendsScreen(
     onSwitchSection: (PeopleSidebarSection) -> Unit,
     onOpenNotifications: () -> Unit,
     onLogout: () -> Unit,
+    onOpenLink: (String) -> Unit = {},
     initialAction: String? = null,
     viewModel: FriendsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     var showOverflow by remember { mutableStateOf(false) }
-    val context = LocalContext.current
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
 
@@ -118,19 +115,14 @@ fun FriendsScreen(
     }
 
     // Side-effect events from the ViewModel — toast strings and the chat
-    // deep-link Intent dispatch. Done here (vs the ViewModel) so the
-    // launcher Intent stays out of ViewModel scope.
+    // deep-link. The link is routed through onOpenLink (→ MainActivity's
+    // navigateToLink), the same path the person-view "Message" button uses;
+    // a raw `mochi://chat/...` Intent isn't handled by the app's router.
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
                 is FriendsEvent.Toast -> snackbarHostState.showSnackbar(event.message)
-                is FriendsEvent.MessageFriend -> {
-                    val uri = Uri.parse("mochi://chat/with?friend=${Uri.encode(event.friendId)}")
-                    val intent = Intent(Intent.ACTION_VIEW, uri).apply {
-                        setPackage(context.packageName)
-                    }
-                    context.startActivity(intent)
-                }
+                is FriendsEvent.MessageFriend -> onOpenLink("chat/new?friend=${event.friendId}")
             }
         }
     }

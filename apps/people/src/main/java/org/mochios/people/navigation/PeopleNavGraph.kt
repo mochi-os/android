@@ -98,6 +98,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onSwitchSection = { navController.openPeopleSection(it) },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
+            onOpenLink = onOpenLink,
             initialAction = action.ifBlank { null },
         )
     }

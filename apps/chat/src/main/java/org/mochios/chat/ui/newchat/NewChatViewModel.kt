@@ -46,13 +46,27 @@ class NewChatViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val data = repository.getNewChatData()
-                val preselected = if (preselectFriend.isNotBlank() &&
-                    data.friends.any { it.id == preselectFriend }) {
-                    setOf(preselectFriend)
-                } else emptySet()
+                val friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name })
+
+                // Deep-link entry (mochi://chat/with?friend=X): skip the picker
+                // and drop straight into the 1-on-1. Reuse the friend's existing
+                // chat if there is one, otherwise create it, then forward to the
+                // conversation. isLoading stays true so the picker never flashes
+                // before the screen navigates away.
+                val target = preselectFriend
+                    .takeIf { it.isNotBlank() }
+                    ?.let { id -> friends.firstOrNull { it.id == id } }
+                if (target != null) {
+                    val chatId = target.chatId.ifBlank {
+                        val response = repository.createChat(target.name, listOf(target.id))
+                        response.fingerprint.ifEmpty { response.id }
+                    }
+                    _uiState.value = _uiState.value.copy(friends = friends, createdChatId = chatId)
+                    return@launch
+                }
+
                 _uiState.value = _uiState.value.copy(
-                    friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name }),
-                    selected = preselected,
+                    friends = friends,
                     isLoading = false,
                 )
             } catch (e: Exception) {
