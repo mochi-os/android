@@ -75,6 +75,7 @@ import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.WikisSidebar
+import org.mochios.wikis.ui.dialog.CreateWikiDialog
 import org.mochios.android.R as MochiR
 
 /**
@@ -89,8 +90,7 @@ import org.mochios.android.R as MochiR
  *    `source`). Subscribed cards have a per-row overflow with a single
  *    Unsubscribe item that opens a [ConfirmDialog].
  *  - Empty state when the user has no wikis — a hint, a Create wiki button
- *    (currently a stub: opens a placeholder dialog the host wires in
- *    downstream), an inline debounced directory search, and a
+ *    (opens [CreateWikiDialog]), an inline debounced directory search, and a
  *    "Recommended wikis" rail. Search results and recommendations both
  *    expose a Subscribe button; the ViewModel handles the 502
  *    retry-without-server-hint fallback.
@@ -265,12 +265,15 @@ fun WikiListScreen(
         )
     }
 
-    // Stub Create-wiki dialog placeholder. The real dialog is owned by a
-    // downstream agent (CreateWikiDialog) — this stub lets the wiring be
-    // exercised end-to-end without blocking the rest of the list screen.
+    // Create-wiki dialog. Pure-input; onSubmit calls the ViewModel, which talks
+    // to the repository and emits OpenWiki to navigate to the new wiki on
+    // success. Stays open showing a spinner while the request is in flight.
     if (uiState.createDialogOpen) {
-        CreateWikiDialogStub(
+        CreateWikiDialog(
+            open = true,
             onDismiss = { viewModel.closeCreateDialog() },
+            onSubmit = { name, privacy -> viewModel.createWiki(name, privacy) },
+            isPending = uiState.createPending,
         )
     }
 }
@@ -613,28 +616,6 @@ private fun SubscribableRow(
             }
         }
     }
-}
-
-/**
- * Placeholder for the create-wiki dialog. The real implementation is owned by
- * a downstream agent (`CreateWikiDialog`) — keeping a stub here means the
- * Create-wiki button on this screen has somewhere to land, and replacing the
- * stub is a single-file swap. The stub deliberately mounts an
- * [androidx.compose.material3.AlertDialog]-equivalent body so it can be
- * dismissed and doesn't leave the user stranded.
- */
-@Composable
-private fun CreateWikiDialogStub(onDismiss: () -> Unit) {
-    androidx.compose.material3.AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.wikis_create_button)) },
-        text = { Text(stringResource(R.string.wikis_create_dialog_stub)) },
-        confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_close))
-            }
-        },
-    )
 }
 
 private fun copyToClipboard(context: Context, label: String, text: String) {

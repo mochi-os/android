@@ -100,9 +100,6 @@
     <string name="wikis_rss_failed">Failed to get RSS token</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
 
-    <!-- Create-wiki dialog placeholder (stub until CreateWikiDialog lands) -->
-    <string name="wikis_create_dialog_stub">Wiki creation will be available in a future update.</string>
-
     <!-- Find wikis screen -->
     <string name="wikis_find_title">Find wikis</string>
     <string name="wikis_find_search_placeholder">Search by name, ID, fingerprint, or URL…</string>
