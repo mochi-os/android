@@ -49,6 +49,8 @@ import org.mochios.settings.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsHomeScreen(
+    isAdmin: Boolean,
+    hasDomainAccess: Boolean,
     onOpenAccount: () -> Unit,
     onOpenLogin: () -> Unit,
     onOpenPreferences: () -> Unit,
@@ -179,14 +181,17 @@ fun SettingsHomeScreen(
                 HorizontalDivider()
             }
 
-            item {
-                ListItem(
-                    modifier = Modifier.clickable(onClick = onOpenDomains),
-                    headlineContent = { Text(stringResource(R.string.settings_home_domains)) },
-                    leadingContent = { Icon(Icons.Default.Public, contentDescription = null) },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
-                HorizontalDivider()
+            // Domains: needs domain access (admin or a delegation), matching web.
+            if (hasDomainAccess) {
+                item {
+                    ListItem(
+                        modifier = Modifier.clickable(onClick = onOpenDomains),
+                        headlineContent = { Text(stringResource(R.string.settings_home_domains)) },
+                        leadingContent = { Icon(Icons.Default.Public, contentDescription = null) },
+                        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    )
+                    HorizontalDivider()
+                }
             }
             item {
                 ListItem(
@@ -206,6 +211,9 @@ fun SettingsHomeScreen(
                 )
                 HorizontalDivider()
             }
+            // System group: administrator-only (Status / Users / Settings /
+            // Replication / Documents), matching web's admin-gated sidebar.
+            if (isAdmin) {
             item {
                 ListItem(
                     headlineContent = {
@@ -278,6 +286,7 @@ fun SettingsHomeScreen(
                 )
                 HorizontalDivider()
             }
+            } // end if (isAdmin) — System group
             item {
                 ListItem(
                     modifier = Modifier.clickable(onClick = { onOpenDocument("privacy") }),

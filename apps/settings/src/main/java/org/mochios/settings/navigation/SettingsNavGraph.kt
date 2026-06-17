@@ -1,5 +1,8 @@
 package org.mochios.settings.navigation
 
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
@@ -55,7 +58,11 @@ fun NavGraphBuilder.settingsNavGraph(
     onOpenLink: (String) -> Unit,
 ) {
     composable(SettingsApp.HOME) {
+        val homeViewModel: org.mochios.settings.ui.home.SettingsHomeViewModel = hiltViewModel()
+        val homeState by homeViewModel.state.collectAsState()
         SettingsHomeScreen(
+            isAdmin = homeState.isAdmin,
+            hasDomainAccess = homeState.hasDomainAccess,
             onOpenAccount = { navController.navigate(SettingsApp.ACCOUNT) },
             onOpenLogin = { navController.navigate(SettingsApp.LOGIN) },
             onOpenPreferences = { navController.navigate(SettingsApp.PREFERENCES) },
