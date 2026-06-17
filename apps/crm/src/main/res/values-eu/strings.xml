@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Entitate IDa, @taldea, * (denak), edo + (kideak)</string>
     <string name="crm_attachment_remove">Kendu eranskina</string>
     <string name="crm_board_add_column">Gehitu zutabea</string>
+    <string name="crm_settings_entity_id">Entitate IDa</string>
+    <string name="crm_settings_fingerprint">Hatz-marka</string>
+    <string name="crm_settings_server">Zerbitzaria</string>
 </resources>

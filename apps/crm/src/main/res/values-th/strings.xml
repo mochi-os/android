@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">รหัสเอนทิตี, @กลุ่ม, * (ทุกคน), หรือ + (สมาชิก)</string>
     <string name="crm_attachment_remove">ลบไฟล์แนบ</string>
     <string name="crm_board_add_column">เพิ่มคอลัมน์</string>
+    <string name="crm_settings_entity_id">Entity ID</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">เซิร์ฟเวอร์</string>
 </resources>

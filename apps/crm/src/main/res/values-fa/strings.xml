@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">شناسه موجودیت، @گروه، * (همه)، یا + (اعضا)</string>
     <string name="crm_attachment_remove">حذف پیوست</string>
     <string name="crm_board_add_column">افزودن ستون</string>
+    <string name="crm_settings_entity_id">شناسه موجودیت</string>
+    <string name="crm_settings_fingerprint">اثر انگشت</string>
+    <string name="crm_settings_server">سرور</string>
 </resources>

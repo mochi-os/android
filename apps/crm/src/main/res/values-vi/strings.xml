@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ID thực thể, @group, * (mọi người), hoặc + (thành viên)</string>
     <string name="crm_attachment_remove">Xóa tệp đính kèm</string>
     <string name="crm_board_add_column">Thêm cột</string>
+    <string name="crm_settings_entity_id">ID thực thể</string>
+    <string name="crm_settings_fingerprint">Dấu vân tay</string>
+    <string name="crm_settings_server">Máy chủ</string>
 </resources>

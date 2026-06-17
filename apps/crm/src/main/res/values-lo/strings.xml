@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ID ຕົວຕົນ, @ກຸ່ມ, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">ເພີ່ມຖັນ</string>
+    <string name="crm_settings_entity_id">ID ຂອງເອັນຕິຕີ້</string>
+    <string name="crm_settings_fingerprint">ລາຍນິ້ວມື</string>
+    <string name="crm_settings_server">ເຊີບເວີ</string>
 </resources>

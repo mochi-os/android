@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Subjekto ID, @grupė, * (visi) arba + (nariai)</string>
     <string name="crm_attachment_remove">Pašalinti priedą</string>
     <string name="crm_board_add_column">Pridėti stulpelį</string>
+    <string name="crm_settings_entity_id">Subjekto ID</string>
+    <string name="crm_settings_fingerprint">Pirštų atspaudas</string>
+    <string name="crm_settings_server">Serveris</string>
 </resources>

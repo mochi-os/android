@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">លេខសម្គាល់អង្គភាព, @group, * (មនុស្សគ្រប់គ្នា), ឬ + (សមាជិក)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">បន្ថែមជួរឈរ</string>
+    <string name="crm_settings_entity_id">លេខសម្គាល់អង្គភាព</string>
+    <string name="crm_settings_fingerprint">ស្នាមម្រាមដៃ</string>
+    <string name="crm_settings_server">ម៉ាស៊ីនមេ</string>
 </resources>

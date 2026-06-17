@@ -335,4 +335,7 @@
     <string name="crm_access_target_hint">Entitäts-ID, @gruppe, * (alle) oder + (Mitglieder)</string>
     <string name="crm_attachment_remove">Anhang entfernen</string>
     <string name="crm_board_add_column">Spalte hinzufügen</string>
+    <string name="crm_settings_entity_id">Entitäts-ID</string>
+    <string name="crm_settings_fingerprint">Fingerabdruck</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

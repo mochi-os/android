@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Entity ID, @group, * (လူတိုင်း), သို့မဟုတ် + (အဖွဲ့ဝင်များ)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">ကော်လံ ထည့်မည်</string>
+    <string name="crm_settings_entity_id">အကောင့် ID</string>
+    <string name="crm_settings_fingerprint">လက်ဗွေ</string>
+    <string name="crm_settings_server">ဆာဗာ</string>
 </resources>

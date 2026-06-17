@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ID de entidad, @grupo, * (todos) o + (miembros)</string>
     <string name="crm_attachment_remove">Quitar archivo adjunto</string>
     <string name="crm_board_add_column">Añadir columna</string>
+    <string name="crm_settings_entity_id">ID de entidad</string>
+    <string name="crm_settings_fingerprint">Huella</string>
+    <string name="crm_settings_server">Servidor</string>
 </resources>

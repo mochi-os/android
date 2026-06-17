@@ -335,4 +335,7 @@
     <string name="crm_access_target_hint">ID entiti, @kumpulan, * (semua orang), atau + (ahli)</string>
     <string name="crm_attachment_remove">Buang lampiran</string>
     <string name="crm_board_add_column">Tambah lajur</string>
+    <string name="crm_settings_entity_id">ID Entiti</string>
+    <string name="crm_settings_fingerprint">Cap jari</string>
+    <string name="crm_settings_server">Pelayan</string>
 </resources>

@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Entitets-ID, @gruppe, * (alle) eller + (medlemmer)</string>
     <string name="crm_attachment_remove">Fjern vedhæftning</string>
     <string name="crm_board_add_column">Tilføj kolonne</string>
+    <string name="crm_settings_entity_id">Entitets-ID</string>
+    <string name="crm_settings_fingerprint">Fingeraftryk</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

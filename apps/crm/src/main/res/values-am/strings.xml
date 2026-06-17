@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">የማንነት መታወቂያ፣ @ቡድን፣ * (ሁሉም)፣ ወይም + (አባላት)</string>
     <string name="crm_attachment_remove">አባሪውን ያስወግዱ</string>
     <string name="crm_board_add_column">ዓምድ ጨምር</string>
+    <string name="crm_settings_entity_id">የአካል መለያ</string>
+    <string name="crm_settings_fingerprint">ጣት አሻራ</string>
+    <string name="crm_settings_server">ሰርቨር</string>
 </resources>

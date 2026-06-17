@@ -335,4 +335,7 @@
     <string name="crm_access_target_hint">Aitheantas aonáin, @grúpa, * (gach duine), nó + (baill)</string>
     <string name="crm_attachment_remove">Bain ceangaltán</string>
     <string name="crm_board_add_column">Cuir colún leis</string>
+    <string name="crm_settings_entity_id">ID an aonáin</string>
+    <string name="crm_settings_fingerprint">Méarlorg</string>
+    <string name="crm_settings_server">Freastalaí</string>
 </resources>

@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ענטיטעט־ID, @גרופּע, * (אַלעמען), אָדער + (מיטגלידער)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">צולייגן זײַל</string>
+    <string name="crm_settings_entity_id">ענטיטעט־ID</string>
+    <string name="crm_settings_fingerprint">פֿינגער־אָפּדרוק</string>
+    <string name="crm_settings_server">סערווער</string>
 </resources>

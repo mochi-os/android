@@ -335,4 +335,7 @@
     <string name="crm_access_target_hint">ID d\'entitat, @grup, * (tothom) o + (membres)</string>
     <string name="crm_attachment_remove">Elimina l\'adjunt</string>
     <string name="crm_board_add_column">Afegeix una columna</string>
+    <string name="crm_settings_entity_id">ID de l\'entitat</string>
+    <string name="crm_settings_fingerprint">Empremta</string>
+    <string name="crm_settings_server">Servidor</string>
 </resources>

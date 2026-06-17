@@ -334,4 +334,6 @@
     <string name="crm_access_target">Cible</string>
     <string name="crm_access_target_hint">ID d\'entité, @groupe, * (tout le monde) ou + (membres)</string>
     <string name="crm_attachment_remove">Retirer la pièce jointe</string>
+    <string name="crm_settings_entity_id">Identifiant de l\'entité</string>
+    <string name="crm_settings_fingerprint">Empreinte</string>
 </resources>

@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">د موجودیت ID، @ګروپ، * (هرڅوک)، یا + (غړي)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">کالم اضافه کړئ</string>
+    <string name="crm_settings_entity_id">د موجودیت ID</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

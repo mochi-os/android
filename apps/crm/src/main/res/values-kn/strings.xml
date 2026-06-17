@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ಎಂಟಿಟಿ ID, @group, * (ಎಲ್ಲರೂ), ಅಥವಾ + (ಸದಸ್ಯರು)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
+    <string name="crm_settings_entity_id">ಎಂಟಿಟಿ ID</string>
+    <string name="crm_settings_fingerprint">ಬೆರಳಚ್ಚು</string>
+    <string name="crm_settings_server">ಸರ್ವರ್</string>
 </resources>

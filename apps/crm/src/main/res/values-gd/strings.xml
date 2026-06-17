@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ID neach-dèilig, @buidheann, * (a h-uile duine), no + (buill)</string>
     <string name="crm_attachment_remove">Thoir air falbh an ceanglachan</string>
     <string name="crm_board_add_column">Cuir colbh ris</string>
+    <string name="crm_settings_entity_id">ID an aonaid</string>
+    <string name="crm_settings_fingerprint">Meur-lorg</string>
+    <string name="crm_settings_server">Frithealaiche</string>
 </resources>

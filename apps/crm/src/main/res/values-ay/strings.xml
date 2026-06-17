@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Uñt\'awi ID, @tama, * (taqi), jan ukax + (uskutanaka)</string>
     <string name="crm_attachment_remove">Yapxatata apsuña</string>
     <string name="crm_board_add_column">Columna yapxataña</string>
+    <string name="crm_settings_entity_id">Entidad ID</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">Servidor</string>
 </resources>

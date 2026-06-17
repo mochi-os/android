@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Olemi ID, @grupp, * (kõik) või + (liikmed)</string>
     <string name="crm_attachment_remove">Eemalda manus</string>
     <string name="crm_board_add_column">Lisa veerg</string>
+    <string name="crm_settings_entity_id">Olemi ID</string>
+    <string name="crm_settings_fingerprint">Sõrmejälg</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

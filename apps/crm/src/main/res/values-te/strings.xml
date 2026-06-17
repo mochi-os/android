@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ఎంటిటీ ID, @group, * (అందరూ), లేదా + (సభ్యులు)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">కాలమ్‌ను జోడించండి</string>
+    <string name="crm_settings_entity_id">ఎంటిటీ ID</string>
+    <string name="crm_settings_fingerprint">వేలిముద్ర</string>
+    <string name="crm_settings_server">సర్వర్</string>
 </resources>

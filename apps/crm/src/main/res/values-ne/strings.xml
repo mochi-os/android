@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">एन्टिटी ID, @समूह, * (सबैजना), वा + (सदस्यहरू)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">स्तम्भ थप्नुहोस्</string>
+    <string name="crm_settings_entity_id">एन्टिटी आईडी</string>
+    <string name="crm_settings_fingerprint">औंलाछाप</string>
+    <string name="crm_settings_server">सर्भर</string>
 </resources>

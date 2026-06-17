@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Entiteits-ID, @groep, * (almal) of + (lede)</string>
     <string name="crm_attachment_remove">Verwyder aanhangsel</string>
     <string name="crm_board_add_column">Voeg kolom by</string>
+    <string name="crm_settings_entity_id">Entiteit-ID</string>
+    <string name="crm_settings_fingerprint">Vingerafdruk</string>
+    <string name="crm_settings_server">Bediener</string>
 </resources>

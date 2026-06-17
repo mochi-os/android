@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Auðkenni einingar, @hópur, * (allir), eða + (meðlimir)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">Bæta við dálki</string>
+    <string name="crm_settings_entity_id">Auðkenni einingar</string>
+    <string name="crm_settings_fingerprint">Fingrafar</string>
+    <string name="crm_settings_server">Þjónn</string>
 </resources>

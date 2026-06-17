@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ID entity, @skupina, * (všetci) alebo + (členovia)</string>
     <string name="crm_attachment_remove">Odstrániť prílohu</string>
     <string name="crm_board_add_column">Pridať stĺpec</string>
+    <string name="crm_settings_entity_id">ID entity</string>
+    <string name="crm_settings_fingerprint">Odtlačok</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

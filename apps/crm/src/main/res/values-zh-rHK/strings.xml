@@ -334,4 +334,6 @@
     <string name="crm_access_target">目標</string>
     <string name="crm_access_target_hint">實體 ID、@群組、*（所有人）或 +（成員）</string>
     <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_settings_entity_id">Entity ID</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
 </resources>

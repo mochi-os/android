@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Entitásazonosító, @csoport, * (mindenki) vagy + (tagok)</string>
     <string name="crm_attachment_remove">Melléklet eltávolítása</string>
     <string name="crm_board_add_column">Oszlop hozzáadása</string>
+    <string name="crm_settings_entity_id">Entitás azonosító</string>
+    <string name="crm_settings_fingerprint">Ujjlenyomat</string>
+    <string name="crm_settings_server">Kiszolgáló</string>
 </resources>

@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Kitambulisho cha huluki, @kikundi, * (kila mtu), au + (wanachama)</string>
     <string name="crm_attachment_remove">Ondoa kiambatisho</string>
     <string name="crm_board_add_column">Ongeza safu</string>
+    <string name="crm_settings_entity_id">Kitambulisho cha kitengo</string>
+    <string name="crm_settings_fingerprint">Alama ya kidole</string>
+    <string name="crm_settings_server">Seva</string>
 </resources>

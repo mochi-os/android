@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">實體 ID、@群組、*（所有人）或 +（成員）</string>
     <string name="crm_attachment_remove">移除附件</string>
     <string name="crm_board_add_column">新增欄位</string>
+    <string name="crm_settings_entity_id">實體 ID</string>
+    <string name="crm_settings_fingerprint">指紋</string>
+    <string name="crm_settings_server">伺服器</string>
 </resources>

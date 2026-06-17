@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ერთეულის ID, @ჯგუფი, * (ყველა) ან + (წევრები)</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">სვეტის დამატება</string>
+    <string name="crm_settings_entity_id">ერთეულის ID</string>
+    <string name="crm_settings_fingerprint">ანაბეჭდი</string>
+    <string name="crm_settings_server">სერვერი</string>
 </resources>

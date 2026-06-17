@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Identyfikator encji, @grupa, * (wszyscy) lub + (członkowie)</string>
     <string name="crm_attachment_remove">Usuń załącznik</string>
     <string name="crm_board_add_column">Dodaj kolumnę</string>
+    <string name="crm_settings_entity_id">ID encji</string>
+    <string name="crm_settings_fingerprint">Odcisk palca</string>
+    <string name="crm_settings_server">Serwer</string>
 </resources>

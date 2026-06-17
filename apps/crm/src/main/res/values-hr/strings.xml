@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ID entiteta, @grupa, * (svi) ili + (članovi)</string>
     <string name="crm_attachment_remove">Ukloni privitak</string>
     <string name="crm_board_add_column">Dodaj stupac</string>
+    <string name="crm_settings_entity_id">ID entiteta</string>
+    <string name="crm_settings_fingerprint">Otisak</string>
+    <string name="crm_settings_server">Poslužitelj</string>
 </resources>

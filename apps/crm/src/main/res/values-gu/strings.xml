@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">એન્ટિટી ID, @group, * (દરેક), અથવા + (સભ્યો)</string>
     <string name="crm_attachment_remove">જોડાણ દૂર કરો</string>
     <string name="crm_board_add_column">કૉલમ ઉમેરો</string>
+    <string name="crm_settings_entity_id">એન્ટિટી ID</string>
+    <string name="crm_settings_fingerprint">આંગળાની છાપ</string>
+    <string name="crm_settings_server">સર્વર</string>
 </resources>

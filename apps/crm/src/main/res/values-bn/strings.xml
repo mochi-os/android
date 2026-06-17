@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">সত্তা আইডি, @group, * (সবাই), বা + (সদস্যরা)</string>
     <string name="crm_attachment_remove">সংযুক্তি সরান</string>
     <string name="crm_board_add_column">কলাম যোগ করুন</string>
+    <string name="crm_settings_entity_id">ইউনিট আইডি</string>
+    <string name="crm_settings_fingerprint">ফিঙ্গারপ্রিন্ট</string>
+    <string name="crm_settings_server">সার্ভার</string>
 </resources>

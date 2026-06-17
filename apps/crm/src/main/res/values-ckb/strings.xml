@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ناسنامەی بەرکار، @group، * (هەمووان)، یان + (ئەندامان)</string>
     <string name="crm_attachment_remove">لابردنی هاوپێچ</string>
     <string name="crm_board_add_column">زیادکردنی ستوون</string>
+    <string name="crm_settings_entity_id">ناسنامەی ئەنتیتی</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">ڕاژەکار</string>
 </resources>

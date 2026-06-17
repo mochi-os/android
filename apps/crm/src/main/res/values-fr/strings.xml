@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">ID d\'entité, @groupe, * (tout le monde) ou + (membres)</string>
     <string name="crm_attachment_remove">Supprimer la pièce jointe</string>
     <string name="crm_board_add_column">Ajouter une colonne</string>
+    <string name="crm_settings_entity_id">ID d\'entité</string>
+    <string name="crm_settings_fingerprint">Empreinte</string>
+    <string name="crm_settings_server">Serveur</string>
 </resources>

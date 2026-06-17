@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">इकाई ID, @group, * (सभी), या + (सदस्य)</string>
     <string name="crm_attachment_remove">अनुलग्नक हटाएं</string>
     <string name="crm_board_add_column">कॉलम जोड़ें</string>
+    <string name="crm_settings_entity_id">एंटिटी ID</string>
+    <string name="crm_settings_fingerprint">फिंगरप्रिंट</string>
+    <string name="crm_settings_server">सर्वर</string>
 </resources>

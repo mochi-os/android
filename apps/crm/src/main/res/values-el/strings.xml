@@ -333,4 +333,7 @@
     <string name="crm_access_target_hint">Αναγνωριστικό οντότητας, @ομάδα, * (όλοι) ή + (μέλη)</string>
     <string name="crm_attachment_remove">Αφαίρεση συνημμένου</string>
     <string name="crm_board_add_column">Προσθήκη στήλης</string>
+    <string name="crm_settings_entity_id">ID οντότητας</string>
+    <string name="crm_settings_fingerprint">Αποτύπωμα</string>
+    <string name="crm_settings_server">Διακομιστής</string>
 </resources>
