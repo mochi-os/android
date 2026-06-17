@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">ჯგუფები</string>
     <string name="crm_access_target">სამიზნე</string>
     <string name="crm_access_target_hint">ერთეულის ID, @ჯგუფი, * (ყველა) ან + (წევრები)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

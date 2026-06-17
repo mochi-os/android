@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Hópar</string>
     <string name="crm_access_target">Markmið</string>
     <string name="crm_access_target_hint">Auðkenni einingar, @hópur, * (allir), eða + (meðlimir)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

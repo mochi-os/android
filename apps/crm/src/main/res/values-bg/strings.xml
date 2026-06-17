@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Групи</string>
     <string name="crm_access_target">Цел</string>
     <string name="crm_access_target_hint">ID на обект, @група, * (всички) или + (членове)</string>
+    <string name="crm_attachment_remove">Премахване на прикачения файл</string>
 </resources>

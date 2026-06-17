@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">গ্রুপসমূহ</string>
     <string name="crm_access_target">টার্গেট</string>
     <string name="crm_access_target_hint">সত্তা আইডি, @group, * (সবাই), বা + (সদস্যরা)</string>
+    <string name="crm_attachment_remove">সংযুক্তি সরান</string>
 </resources>

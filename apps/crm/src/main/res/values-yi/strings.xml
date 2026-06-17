@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">גרופּעס</string>
     <string name="crm_access_target">ציל</string>
     <string name="crm_access_target_hint">ענטיטעט־ID, @גרופּע, * (אַלעמען), אָדער + (מיטגלידער)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

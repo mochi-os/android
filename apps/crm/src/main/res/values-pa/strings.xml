@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">ਗਰੁੱਪ</string>
     <string name="crm_access_target">ਟੀਚਾ</string>
     <string name="crm_access_target_hint">ਇਕਾਈ ID, @group, * (ਹਰ ਕੋਈ), ਜਾਂ + (ਮੈਂਬਰ)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

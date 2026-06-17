@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Групи</string>
     <string name="crm_access_target">Цел</string>
     <string name="crm_access_target_hint">ID на ентитет, @група, * (сите) или + (членови)</string>
+    <string name="crm_attachment_remove">Отстрани прилог</string>
 </resources>

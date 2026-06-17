@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupės</string>
     <string name="crm_access_target">Tikslas</string>
     <string name="crm_access_target_hint">Subjekto ID, @grupė, * (visi) arba + (nariai)</string>
+    <string name="crm_attachment_remove">Pašalinti priedą</string>
 </resources>

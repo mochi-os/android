@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Бүлгүүд</string>
     <string name="crm_access_target">Зорилт</string>
     <string name="crm_access_target_hint">Бүртгэлийн ID, @бүлэг, * (бүгд), эсвэл + (гишүүд)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

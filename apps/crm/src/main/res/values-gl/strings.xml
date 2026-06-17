@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupos</string>
     <string name="crm_access_target">Obxectivo</string>
     <string name="crm_access_target_hint">ID de entidade, @grupo, * (todos) ou + (membros)</string>
+    <string name="crm_attachment_remove">Eliminar anexo</string>
 </resources>

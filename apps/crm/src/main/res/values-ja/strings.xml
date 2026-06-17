@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">グループ</string>
     <string name="crm_access_target">ターゲット</string>
     <string name="crm_access_target_hint">エンティティ ID、@グループ、*（全員）、または +（メンバー）</string>
+    <string name="crm_attachment_remove">添付を削除</string>
 </resources>

@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupper</string>
     <string name="crm_access_target">Mål</string>
     <string name="crm_access_target_hint">Entitets-ID, @grupp, * (alla) eller + (medlemmar)</string>
+    <string name="crm_attachment_remove">Ta bort bilaga</string>
 </resources>

@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">گرووپەکان</string>
     <string name="crm_access_target">ئامانج</string>
     <string name="crm_access_target_hint">ناسنامەی بەرکار، @group، * (هەمووان)، یان + (ئەندامان)</string>
+    <string name="crm_attachment_remove">لابردنی هاوپێچ</string>
 </resources>

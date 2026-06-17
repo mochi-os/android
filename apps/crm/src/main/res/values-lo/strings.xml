@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">ກຸ່ມ</string>
     <string name="crm_access_target">ເປົ້າໝາຍ</string>
     <string name="crm_access_target_hint">ID ຕົວຕົນ, @ກຸ່ມ, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

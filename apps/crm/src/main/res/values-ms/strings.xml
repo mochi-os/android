@@ -333,4 +333,5 @@
     <string name="crm_access_tab_groups">Kumpulan</string>
     <string name="crm_access_target">Sasaran</string>
     <string name="crm_access_target_hint">ID entiti, @kumpulan, * (semua orang), atau + (ahli)</string>
+    <string name="crm_attachment_remove">Buang lampiran</string>
 </resources>

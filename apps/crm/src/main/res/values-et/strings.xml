@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupid</string>
     <string name="crm_access_target">Siht</string>
     <string name="crm_access_target_hint">Olemi ID, @grupp, * (kõik) või + (liikmed)</string>
+    <string name="crm_attachment_remove">Eemalda manus</string>
 </resources>

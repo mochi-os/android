@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">समूह</string>
     <string name="crm_access_target">लक्ष्य</string>
     <string name="crm_access_target_hint">इकाई ID, @समूह, * (हर केहू), भा + (सदस्य लोग)</string>
+    <string name="crm_attachment_remove">अटैचमेंट हटाईं</string>
 </resources>

@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">กลุ่ม</string>
     <string name="crm_access_target">เป้าหมาย</string>
     <string name="crm_access_target_hint">รหัสเอนทิตี, @กลุ่ม, * (ทุกคน), หรือ + (สมาชิก)</string>
+    <string name="crm_attachment_remove">ลบไฟล์แนบ</string>
 </resources>

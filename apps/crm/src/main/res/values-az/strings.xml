@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Qruplar</string>
     <string name="crm_access_target">Hədəf</string>
     <string name="crm_access_target_hint">Subyekt ID, @qrup, * (hamı) və ya + (üzvlər)</string>
+    <string name="crm_attachment_remove">Qoşmanı silin</string>
 </resources>

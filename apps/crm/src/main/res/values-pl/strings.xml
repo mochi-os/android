@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupy</string>
     <string name="crm_access_target">Cel</string>
     <string name="crm_access_target_hint">Identyfikator encji, @grupa, * (wszyscy) lub + (członkowie)</string>
+    <string name="crm_attachment_remove">Usuń załącznik</string>
 </resources>

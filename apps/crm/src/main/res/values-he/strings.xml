@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">קבוצות</string>
     <string name="crm_access_target">יעד</string>
     <string name="crm_access_target_hint">מזהה ישות, @group, * (כולם), או + (חברים)</string>
+    <string name="crm_attachment_remove">הסרת קובץ מצורף</string>
 </resources>

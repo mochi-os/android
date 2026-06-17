@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grup</string>
     <string name="crm_access_target">Target</string>
     <string name="crm_access_target_hint">ID entitas, @grup, * (semua orang), atau + (anggota)</string>
+    <string name="crm_attachment_remove">Hapus lampiran</string>
 </resources>

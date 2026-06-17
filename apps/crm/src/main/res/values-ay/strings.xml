@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Gruponaka</string>
     <string name="crm_access_target">Apayaña</string>
     <string name="crm_access_target_hint">Uñt\'awi ID, @tama, * (taqi), jan ukax + (uskutanaka)</string>
+    <string name="crm_attachment_remove">Yapxatata apsuña</string>
 </resources>

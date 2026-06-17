@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">المجموعات</string>
     <string name="crm_access_target">الهدف</string>
     <string name="crm_access_target_hint">معرّف الكيان، @مجموعة، * (الجميع)، أو + (الأعضاء)</string>
+    <string name="crm_attachment_remove">إزالة المرفق</string>
 </resources>

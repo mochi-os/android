@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupas</string>
     <string name="crm_access_target">Mērķis</string>
     <string name="crm_access_target_hint">Entītijas ID, @grupa, * (visi) vai + (dalībnieki)</string>
+    <string name="crm_attachment_remove">Noņemt pielikumu</string>
 </resources>

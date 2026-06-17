@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupe</string>
     <string name="crm_access_target">Cilj</string>
     <string name="crm_access_target_hint">ID entiteta, @grupa, * (svi) ili + (članovi)</string>
+    <string name="crm_attachment_remove">Ukloni privitak</string>
 </resources>

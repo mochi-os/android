@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">ગ્રુપ્સ</string>
     <string name="crm_access_target">લક્ષ્ય</string>
     <string name="crm_access_target_hint">એન્ટિટી ID, @group, * (દરેક), અથવા + (સભ્યો)</string>
+    <string name="crm_attachment_remove">જોડાણ દૂર કરો</string>
 </resources>

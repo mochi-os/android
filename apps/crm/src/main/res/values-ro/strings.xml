@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupuri</string>
     <string name="crm_access_target">Țintă</string>
     <string name="crm_access_target_hint">ID entitate, @grup, * (toți) sau + (membri)</string>
+    <string name="crm_attachment_remove">Elimină atașamentul</string>
 </resources>

@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Ryhmät</string>
     <string name="crm_access_target">Kohde</string>
     <string name="crm_access_target_hint">Entiteetin tunnus, @ryhmä, * (kaikki) tai + (jäsenet)</string>
+    <string name="crm_attachment_remove">Poista liite</string>
 </resources>

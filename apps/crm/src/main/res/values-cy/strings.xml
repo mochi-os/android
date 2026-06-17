@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grwpiau</string>
     <string name="crm_access_target">Targed</string>
     <string name="crm_access_target_hint">ID endid, @grŵp, * (pawb), neu + (aelodau)</string>
+    <string name="crm_attachment_remove">Tynnu atodiad</string>
 </resources>

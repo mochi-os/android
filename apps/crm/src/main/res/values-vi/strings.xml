@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Nhóm</string>
     <string name="crm_access_target">Mục tiêu</string>
     <string name="crm_access_target_hint">ID thực thể, @group, * (mọi người), hoặc + (thành viên)</string>
+    <string name="crm_attachment_remove">Xóa tệp đính kèm</string>
 </resources>

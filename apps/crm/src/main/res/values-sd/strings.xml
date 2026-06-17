@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">گروپ</string>
     <string name="crm_access_target">ھدف</string>
     <string name="crm_access_target_hint">اينٽيٽي ID، @گروپ، * (هرڪو)، يا + (ميمبر)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

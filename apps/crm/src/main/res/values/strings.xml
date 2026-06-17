@@ -185,6 +185,7 @@
     <string name="crm_attachments">Attachments</string>
     <string name="crm_attachment_empty">No attachments</string>
     <string name="crm_attachment_add">Add attachment</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_attachment_default_name">attachment</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>

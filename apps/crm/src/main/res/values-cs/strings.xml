@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Skupiny</string>
     <string name="crm_access_target">Cíl</string>
     <string name="crm_access_target_hint">ID entity, @skupina, * (všichni) nebo + (členové)</string>
+    <string name="crm_attachment_remove">Odebrat přílohu</string>
 </resources>

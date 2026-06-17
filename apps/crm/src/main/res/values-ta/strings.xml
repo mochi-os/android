@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">குழுக்கள்</string>
     <string name="crm_access_target">இலக்கு</string>
     <string name="crm_access_target_hint">நிறுவன ID, @group, * (அனைவரும்), அல்லது + (உறுப்பினர்கள்)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
 </resources>

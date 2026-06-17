@@ -426,14 +426,17 @@ private fun CrmContent(
         CreateObjectDialog(
             classes = details.classes,
             hierarchy = details.hierarchy,
+            fields = details.fields,
+            options = details.options,
+            people = uiState.people,
             objects = uiState.objects,
             presetParent = uiState.createObjectParent,
             isCreating = uiState.isCreatingObject,
             activeView = activeView,
             viewModel = viewModel,
             onDismiss = { viewModel.hideCreateObjectDialog() },
-            onCreate = { classId, title, parent, initialValues ->
-                viewModel.createObject(classId, title, parent, initialValues)
+            onCreate = { classId, title, parent, initialValues, files ->
+                viewModel.createObject(classId, title, parent, initialValues, files)
             }
         )
     }

@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Skupine</string>
     <string name="crm_access_target">Cilj</string>
     <string name="crm_access_target_hint">ID entitete, @skupina, * (vsi) ali + (člani)</string>
+    <string name="crm_attachment_remove">Odstrani prilogo</string>
 </resources>

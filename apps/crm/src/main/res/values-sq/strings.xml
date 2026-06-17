@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Grupet</string>
     <string name="crm_access_target">Objektivi</string>
     <string name="crm_access_target_hint">ID entiteti, @grup, * (të gjithë), ose + (anëtarët)</string>
+    <string name="crm_attachment_remove">Hiq bashkëngjitjen</string>
 </resources>

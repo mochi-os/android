@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Группы</string>
     <string name="crm_access_target">Цель</string>
     <string name="crm_access_target_hint">ID сущности, @группа, * (все) или + (участники)</string>
+    <string name="crm_attachment_remove">Удалить вложение</string>
 </resources>

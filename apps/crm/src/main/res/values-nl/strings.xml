@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Groepen</string>
     <string name="crm_access_target">Doel</string>
     <string name="crm_access_target_hint">Entiteits-ID, @groep, * (iedereen), of + (leden)</string>
+    <string name="crm_attachment_remove">Bijlage verwijderen</string>
 </resources>

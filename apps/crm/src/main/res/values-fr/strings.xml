@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Groupes</string>
     <string name="crm_access_target">Cible</string>
     <string name="crm_access_target_hint">ID d\'entité, @groupe, * (tout le monde) ou + (membres)</string>
+    <string name="crm_attachment_remove">Supprimer la pièce jointe</string>
 </resources>

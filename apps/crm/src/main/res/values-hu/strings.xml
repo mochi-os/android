@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Csoportok</string>
     <string name="crm_access_target">Cél</string>
     <string name="crm_access_target_hint">Entitásazonosító, @csoport, * (mindenki) vagy + (tagok)</string>
+    <string name="crm_attachment_remove">Melléklet eltávolítása</string>
 </resources>

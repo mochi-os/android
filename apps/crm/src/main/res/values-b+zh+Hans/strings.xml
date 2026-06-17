@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">群组</string>
     <string name="crm_access_target">目标</string>
     <string name="crm_access_target_hint">实体 ID、@群组、*(所有人)或 +(成员)</string>
+    <string name="crm_attachment_remove">移除附件</string>
 </resources>

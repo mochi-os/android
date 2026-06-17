@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">ቡድኖች</string>
     <string name="crm_access_target">ዒላማ</string>
     <string name="crm_access_target_hint">የማንነት መታወቂያ፣ @ቡድን፣ * (ሁሉም)፣ ወይም + (አባላት)</string>
+    <string name="crm_attachment_remove">አባሪውን ያስወግዱ</string>
 </resources>

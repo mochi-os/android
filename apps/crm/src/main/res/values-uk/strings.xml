@@ -331,4 +331,5 @@
     <string name="crm_access_tab_groups">Групи</string>
     <string name="crm_access_target">Ціль</string>
     <string name="crm_access_target_hint">ID сутності, @група, * (всі) або + (учасники)</string>
+    <string name="crm_attachment_remove">Видалити вкладення</string>
 </resources>
