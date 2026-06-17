@@ -15,6 +15,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.market.lib.cheapestMatchingZone
+import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Auction
 import org.mochios.market.model.Bid
@@ -113,6 +114,21 @@ class CheckoutViewModel @Inject constructor(
                     null
                 }
                 val delivery = preselectDelivery(detail.listing, detail.shipping)
+                // Seed the pay-what-you-want field with the listing's minimum so
+                // it shows a usable value rather than an empty box behind a
+                // "minimum X" label. Without this the buyer can submit an empty
+                // field, which bypasses the amount check below and surfaces a
+                // confusing "Amount must be at least X" error from the server.
+                val amountSeed =
+                    if (detail.listing.pricing == org.mochios.market.model.PricingModel.PWYW &&
+                        detail.listing.currency != null
+                    ) {
+                        java.math.BigDecimal(detail.listing.price)
+                            .movePointLeft(currencyDecimals(detail.listing.currency))
+                            .toPlainString()
+                    } else {
+                        ""
+                    }
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     listing = detail.listing,
@@ -120,6 +136,7 @@ class CheckoutViewModel @Inject constructor(
                     auction = detail.auction,
                     wonBid = wonBid,
                     delivery = delivery,
+                    amountText = amountSeed,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
