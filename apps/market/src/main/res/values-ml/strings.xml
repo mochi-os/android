@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">വിൽപ്പനക്കാരന്റെ പ്രതികരണം</string>
     <string name="market_listing_detail_seller_reviews_heading">വിൽപ്പനക്കാരന്റെ അഭിപ്രായങ്ങൾ</string>
     <string name="market_account_stripe_open_failed">Stripe തുറക്കാൻ കഴിഞ്ഞില്ല</string>
+    <string name="market_editor_stock">സ്റ്റോക്ക്</string>
+    <string name="market_editor_stock_units">യൂണിറ്റുകളുടെ എണ്ണം</string>
+    <string name="market_editor_stock_unlimited">പരിധിയില്ല</string>
 </resources>

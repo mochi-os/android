@@ -733,4 +733,7 @@
     <string name="market_listing_detail_seller_response">বিক্রেতার জবাব</string>
     <string name="market_listing_detail_seller_reviews_heading">বিক্রেতার পর্যালোচনা</string>
     <string name="market_account_stripe_open_failed">Stripe খোলা যায়নি</string>
+    <string name="market_editor_stock">স্টক</string>
+    <string name="market_editor_stock_units">ইউনিটের সংখ্যা</string>
+    <string name="market_editor_stock_unlimited">সীমাহীন</string>
 </resources>

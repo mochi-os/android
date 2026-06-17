@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">การตอบกลับของผู้ขาย</string>
     <string name="market_listing_detail_seller_reviews_heading">รีวิวผู้ขาย</string>
     <string name="market_account_stripe_open_failed">ไม่สามารถเปิด Stripe ได้</string>
+    <string name="market_editor_stock">สต็อก</string>
+    <string name="market_editor_stock_units">จำนวนหน่วย</string>
+    <string name="market_editor_stock_unlimited">ไม่จำกัด</string>
 </resources>

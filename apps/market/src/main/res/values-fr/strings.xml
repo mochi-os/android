@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Réponse du vendeur</string>
     <string name="market_listing_detail_seller_reviews_heading">Avis sur le vendeur</string>
     <string name="market_account_stripe_open_failed">Impossible d\'ouvrir Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Nombre d\'unités</string>
+    <string name="market_editor_stock_unlimited">Illimité</string>
 </resources>

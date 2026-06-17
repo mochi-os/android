@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">وڪرو ڪندڙ جو جواب</string>
     <string name="market_listing_detail_seller_reviews_heading">وڪرو ڪندڙ جا جائزا</string>
     <string name="market_account_stripe_open_failed">Stripe کولي نه سگھيو</string>
+    <string name="market_editor_stock">اسٽاڪ</string>
+    <string name="market_editor_stock_units">يونٽن جو تعداد</string>
+    <string name="market_editor_stock_unlimited">لامحدود</string>
 </resources>

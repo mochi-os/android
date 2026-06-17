@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Hepyme\'ẽha ñembohovái</string>
     <string name="market_listing_detail_seller_reviews_heading">Jehechakuaa vendedor rehegua</string>
     <string name="market_account_stripe_open_failed">Ndaikatúi oñembojuruja Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Mba\'e papapy</string>
+    <string name="market_editor_stock_unlimited">Ipa\'ũ\'ỹva</string>
 </resources>

@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">판매자 응답</string>
     <string name="market_listing_detail_seller_reviews_heading">판매자 리뷰</string>
     <string name="market_account_stripe_open_failed">Stripe를 열 수 없습니다</string>
+    <string name="market_editor_stock">재고</string>
+    <string name="market_editor_stock_units">단위 수</string>
+    <string name="market_editor_stock_unlimited">무제한</string>
 </resources>

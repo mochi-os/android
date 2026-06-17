@@ -733,4 +733,7 @@
     <string name="market_listing_detail_seller_response">Απάντηση πωλητή</string>
     <string name="market_listing_detail_seller_reviews_heading">Αξιολογήσεις πωλητή</string>
     <string name="market_account_stripe_open_failed">Δεν ήταν δυνατό το άνοιγμα του Stripe</string>
+    <string name="market_editor_stock">Απόθεμα</string>
+    <string name="market_editor_stock_units">Αριθμός μονάδων</string>
+    <string name="market_editor_stock_unlimited">Απεριόριστο</string>
 </resources>

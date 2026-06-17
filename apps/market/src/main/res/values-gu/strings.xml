@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">વિક્રેતાનો પ્રતિસાદ</string>
     <string name="market_listing_detail_seller_reviews_heading">વિક્રેતાની સમીક્ષાઓ</string>
     <string name="market_account_stripe_open_failed">Stripe ખોલી શકાયું નથી</string>
+    <string name="market_editor_stock">સ્ટોક</string>
+    <string name="market_editor_stock_units">યુનિટ્સની સંખ્યા</string>
+    <string name="market_editor_stock_unlimited">અમર્યાદિત</string>
 </resources>

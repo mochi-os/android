@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">የሻጭ ምላሽ</string>
     <string name="market_listing_detail_seller_reviews_heading">የሻጭ ግምገማዎች</string>
     <string name="market_account_stripe_open_failed">Stripeን መክፈት አልተቻለም</string>
+    <string name="market_editor_stock">ክምችት</string>
+    <string name="market_editor_stock_units">የክፍሎች ብዛት</string>
+    <string name="market_editor_stock_unlimited">ያልተገደበ</string>
 </resources>

@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Freagairt an reiceadair</string>
     <string name="market_listing_detail_seller_reviews_heading">Beachdan air an reiceadair</string>
     <string name="market_account_stripe_open_failed">Cha b\' urrainnear Stripe fhosgladh</string>
+    <string name="market_editor_stock">Stoc</string>
+    <string name="market_editor_stock_units">Àireamh aonadan</string>
+    <string name="market_editor_stock_unlimited">Gun chrìoch</string>
 </resources>

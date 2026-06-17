@@ -66,6 +66,10 @@ data class EditUiState(
     val reserveText: String = "",
     val instantText: String = "",
     val durationDays: Int = 7,
+    // Stock count for fixed-price/subscription listings. "0" (surfaced via
+    // unlimitedStock) means unlimited; auctions always sell a single unit.
+    val quantityText: String = "1",
+    val unlimitedStock: Boolean = false,
     val pickup: Boolean = false,
     val shipping: Boolean = false,
     val download: Boolean = false,
@@ -201,6 +205,8 @@ class EditListingViewModel @Inject constructor(
             reserveText = "",
             instantText = "",
             durationDays = 7,
+            quantityText = if (listing.quantity == 0L) "1" else listing.quantity.toString(),
+            unlimitedStock = listing.quantity == 0L,
             pickup = listing.pickup == 1L,
             shipping = listing.shipping == 1L,
             download = type == ListingType.DIGITAL,
@@ -220,6 +226,10 @@ class EditListingViewModel @Inject constructor(
     fun setTitle(value: String) = mutate { it.copy(title = value) }
     fun setDescription(value: String) = mutate { it.copy(description = value) }
     fun setCategory(value: String) = mutate { it.copy(category = value) }
+    fun setQuantity(value: String) = mutate { it.copy(quantityText = value.filter { c -> c.isDigit() }) }
+    fun setUnlimitedStock(value: Boolean) = mutate {
+        it.copy(unlimitedStock = value, quantityText = if (value) it.quantityText else it.quantityText.ifBlank { "1" })
+    }
     fun setCondition(value: Condition?) = mutate { it.copy(condition = value) }
 
     fun setType(value: ListingType) = mutate {
@@ -321,6 +331,14 @@ class EditListingViewModel @Inject constructor(
             "price" to toMinorUnits(s.priceText, s.currency).toString(),
             "currency" to currencyWire(s.currency),
             "interval" to (if (s.pricing == PricingModel.SUBSCRIPTION) intervalWire(s.interval) else null),
+            // Auctions always sell one unit; otherwise 0 (unlimited) when the
+            // unlimited toggle is on, else the entered count (min 1). Mirrors
+            // web's edit-listing-page quantity handling.
+            "quantity" to when {
+                s.pricing == PricingModel.AUCTION -> "1"
+                s.unlimitedStock -> "0"
+                else -> (s.quantityText.toLongOrNull()?.coerceAtLeast(1L) ?: 1L).toString()
+            },
             "pickup" to (if (s.pickup) "1" else "0"),
             "shipping" to (if (s.shipping) "1" else "0"),
             "location" to s.location,

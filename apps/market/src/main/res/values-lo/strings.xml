@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">ການຕອບກັບຂອງຜູ້ຂາຍ</string>
     <string name="market_listing_detail_seller_reviews_heading">ການທົບທວນຜູ້ຂາຍ</string>
     <string name="market_account_stripe_open_failed">ບໍ່ສາມາດເປີດ Stripe ໄດ້</string>
+    <string name="market_editor_stock">ສິນຄ້າຄົງເຫຼືອ</string>
+    <string name="market_editor_stock_units">ຈຳນວນຫົວໜ່ວຍ</string>
+    <string name="market_editor_stock_unlimited">ບໍ່ຈຳກັດ</string>
 </resources>

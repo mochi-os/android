@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Saltzailearen erantzuna</string>
     <string name="market_listing_detail_seller_reviews_heading">Saltzailearen iritziak</string>
     <string name="market_account_stripe_open_failed">Ezin izan da Stripe ireki</string>
+    <string name="market_editor_stock">Stocka</string>
+    <string name="market_editor_stock_units">Unitate kopurua</string>
+    <string name="market_editor_stock_unlimited">Mugagabea</string>
 </resources>

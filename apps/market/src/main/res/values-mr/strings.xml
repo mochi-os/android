@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">विक्रेत्याचा प्रतिसाद</string>
     <string name="market_listing_detail_seller_reviews_heading">विक्रेत्याच्या समीक्षा</string>
     <string name="market_account_stripe_open_failed">Stripe उघडता आले नाही</string>
+    <string name="market_editor_stock">स्टॉक</string>
+    <string name="market_editor_stock_units">युनिट्सची संख्या</string>
+    <string name="market_editor_stock_unlimited">अमर्यादित</string>
 </resources>

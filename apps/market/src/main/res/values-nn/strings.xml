@@ -732,4 +732,7 @@
     <string name="market_sidebar_seller_settings">Selgerinnstillinger</string>
     <string name="market_listing_detail_seller_response">Seljarsvar</string>
     <string name="market_account_stripe_open_failed">Kunne ikkje opna Stripe</string>
+    <string name="market_editor_stock">Lager</string>
+    <string name="market_editor_stock_units">Tal på einingar</string>
+    <string name="market_editor_stock_unlimited">Uavgrensa</string>
 </resources>

@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">விற்பனையாளர் பதில்</string>
     <string name="market_listing_detail_seller_reviews_heading">விற்பனையாளர் மதிப்புரைகள்</string>
     <string name="market_account_stripe_open_failed">Stripe ஐ திறக்க முடியவில்லை</string>
+    <string name="market_editor_stock">இருப்பு</string>
+    <string name="market_editor_stock_units">அலகுகளின் எண்ணிக்கை</string>
+    <string name="market_editor_stock_unlimited">வரம்பற்றது</string>
 </resources>

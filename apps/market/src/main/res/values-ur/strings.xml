@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">بیچنے والے کا جواب</string>
     <string name="market_listing_detail_seller_reviews_heading">بیچنے والے کے جائزے</string>
     <string name="market_account_stripe_open_failed">Stripe نہیں کھل سکا</string>
+    <string name="market_editor_stock">اسٹاک</string>
+    <string name="market_editor_stock_units">یونٹس کی تعداد</string>
+    <string name="market_editor_stock_unlimited">لامحدود</string>
 </resources>

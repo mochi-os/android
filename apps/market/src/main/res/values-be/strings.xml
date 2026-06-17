@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Адказ прадаўца</string>
     <string name="market_listing_detail_seller_reviews_heading">Водгукі пра прадаўца</string>
     <string name="market_account_stripe_open_failed">Не ўдалося адкрыць Stripe</string>
+    <string name="market_editor_stock">Запас</string>
+    <string name="market_editor_stock_units">Колькасць адзінак</string>
+    <string name="market_editor_stock_unlimited">Без абмежаванняў</string>
 </resources>

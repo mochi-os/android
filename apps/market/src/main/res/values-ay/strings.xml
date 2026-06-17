@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Aljiri kutsu</string>
     <string name="market_listing_detail_seller_reviews_heading">Alxiriña uñt\'ayawipa</string>
     <string name="market_account_stripe_open_failed">Janiw Stripe jist\'arañjamäkiti</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Unidadanak jakhu</string>
+    <string name="market_editor_stock_unlimited">Juntayata jaytaña</string>
 </resources>

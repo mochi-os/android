@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Ìdáhùn olùtà</string>
     <string name="market_listing_detail_seller_reviews_heading">Awọn atunyẹwo olutaja</string>
     <string name="market_account_stripe_open_failed">Kò lè ṣí Stripe</string>
+    <string name="market_editor_stock">Ọjà</string>
+    <string name="market_editor_stock_units">Iye àwọn ọ̀kọ̀ọ̀kan</string>
+    <string name="market_editor_stock_unlimited">Aláìlópin</string>
 </resources>

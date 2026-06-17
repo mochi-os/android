@@ -733,4 +733,7 @@
     <string name="market_listing_detail_seller_response">Antwort des Verkäufers</string>
     <string name="market_listing_detail_seller_reviews_heading">Verkäuferbewertungen</string>
     <string name="market_account_stripe_open_failed">Stripe konnte nicht geöffnet werden</string>
+    <string name="market_editor_stock">Bestand</string>
+    <string name="market_editor_stock_units">Anzahl der Einheiten</string>
+    <string name="market_editor_stock_unlimited">Unbegrenzt</string>
 </resources>

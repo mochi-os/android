@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Odgovor prodavača</string>
     <string name="market_listing_detail_seller_reviews_heading">Recenzije prodavača</string>
     <string name="market_account_stripe_open_failed">Nije moguće otvoriti Stripe</string>
+    <string name="market_editor_stock">Zalihe</string>
+    <string name="market_editor_stock_units">Broj jedinica</string>
+    <string name="market_editor_stock_unlimited">Neograničeno</string>
 </resources>

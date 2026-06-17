@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Tweġiba tal-bejjiegħ</string>
     <string name="market_listing_detail_seller_reviews_heading">Reviews tal-bejjiegħ</string>
     <string name="market_account_stripe_open_failed">Ma setax jinfetaħ Stripe</string>
+    <string name="market_editor_stock">Stokk</string>
+    <string name="market_editor_stock_units">Numru ta\' unitajiet</string>
+    <string name="market_editor_stock_unlimited">Mingħajr limitu</string>
 </resources>

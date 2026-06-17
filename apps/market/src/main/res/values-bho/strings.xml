@@ -733,4 +733,7 @@
     <string name="market_listing_detail_seller_response">विक्रेता जवाब</string>
     <string name="market_listing_detail_seller_reviews_heading">बेचेवाला के समीक्षा</string>
     <string name="market_account_stripe_open_failed">Stripe ना खुल सकल</string>
+    <string name="market_editor_stock">स्टॉक</string>
+    <string name="market_editor_stock_units">इकाई के संख्या</string>
+    <string name="market_editor_stock_unlimited">असीमित</string>
 </resources>

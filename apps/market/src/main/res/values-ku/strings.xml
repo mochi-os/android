@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Bersiva firoşker</string>
     <string name="market_listing_detail_seller_reviews_heading">Nirxandinên firoşkar</string>
     <string name="market_account_stripe_open_failed">Stripe nehat vekirin</string>
+    <string name="market_editor_stock">Stok</string>
+    <string name="market_editor_stock_units">Hejmara yekîneyan</string>
+    <string name="market_editor_stock_unlimited">Bê sînor</string>
 </resources>

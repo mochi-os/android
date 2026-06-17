@@ -176,6 +176,9 @@
     <string name="market_editor_category_none">Select a category</string>
     <string name="market_editor_condition">Condition</string>
     <string name="market_editor_condition_new">New</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Number of units</string>
+    <string name="market_editor_stock_unlimited">Unlimited</string>
     <string name="market_editor_condition_refurbished">Refurbished</string>
     <string name="market_editor_condition_used">Used</string>
     <string name="market_editor_currency">Currency</string>

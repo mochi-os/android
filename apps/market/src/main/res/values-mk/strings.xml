@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Одговор на продавачот</string>
     <string name="market_listing_detail_seller_reviews_heading">Рецензии за продавачот</string>
     <string name="market_account_stripe_open_failed">Не може да се отвори Stripe</string>
+    <string name="market_editor_stock">Залиха</string>
+    <string name="market_editor_stock_units">Број на единици</string>
+    <string name="market_editor_stock_unlimited">Неограничено</string>
 </resources>

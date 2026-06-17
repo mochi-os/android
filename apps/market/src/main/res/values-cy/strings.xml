@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Ymateb y gwerthwr</string>
     <string name="market_listing_detail_seller_reviews_heading">Adolygiadau gwerthwr</string>
     <string name="market_account_stripe_open_failed">Methwyd agor Stripe</string>
+    <string name="market_editor_stock">Stoc</string>
+    <string name="market_editor_stock_units">Nifer yr unedau</string>
+    <string name="market_editor_stock_unlimited">Diderfyn</string>
 </resources>

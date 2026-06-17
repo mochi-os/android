@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">విక్రేత ప్రతిస్పందన</string>
     <string name="market_listing_detail_seller_reviews_heading">విక్రేత సమీక్షలు</string>
     <string name="market_account_stripe_open_failed">Stripeను తెరవడం సాధ్యం కాలేదు</string>
+    <string name="market_editor_stock">స్టాక్</string>
+    <string name="market_editor_stock_units">యూనిట్ల సంఖ్య</string>
+    <string name="market_editor_stock_unlimited">అపరిమితం</string>
 </resources>

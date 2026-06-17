@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Сатуучунун жообу</string>
     <string name="market_listing_detail_seller_reviews_heading">Сатуучу жөнүндө пикирлер</string>
     <string name="market_account_stripe_open_failed">Stripe ачылган жок</string>
+    <string name="market_editor_stock">Запас</string>
+    <string name="market_editor_stock_units">Бирдиктердин саны</string>
+    <string name="market_editor_stock_unlimited">Чексиз</string>
 </resources>

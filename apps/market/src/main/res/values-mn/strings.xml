@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Худалдагчийн хариу</string>
     <string name="market_listing_detail_seller_reviews_heading">Худалдагчийн үнэлгээнүүд</string>
     <string name="market_account_stripe_open_failed">Stripe нээж чадсангүй</string>
+    <string name="market_editor_stock">Бараа</string>
+    <string name="market_editor_stock_units">Нэгжийн тоо</string>
+    <string name="market_editor_stock_unlimited">Хязгааргүй</string>
 </resources>

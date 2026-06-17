@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Odgovor prodajalca</string>
     <string name="market_listing_detail_seller_reviews_heading">Ocene prodajalca</string>
     <string name="market_account_stripe_open_failed">Stripe ni bilo mogoče odpreti</string>
+    <string name="market_editor_stock">Zaloga</string>
+    <string name="market_editor_stock_units">Število enot</string>
+    <string name="market_editor_stock_unlimited">Neomejeno</string>
 </resources>

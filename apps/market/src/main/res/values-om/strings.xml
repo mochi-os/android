@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Deebii gurguraa</string>
     <string name="market_listing_detail_seller_reviews_heading">Tilmaama gurgurtaa</string>
     <string name="market_account_stripe_open_failed">Stripe banuun hin danda\'amne</string>
+    <string name="market_editor_stock">Kuusaa</string>
+    <string name="market_editor_stock_units">Baay\'ina yuunitii</string>
+    <string name="market_editor_stock_unlimited">Daangaa hin qabu</string>
 </resources>

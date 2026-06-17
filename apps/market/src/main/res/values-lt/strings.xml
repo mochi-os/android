@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Pardavėjo atsakymas</string>
     <string name="market_listing_detail_seller_reviews_heading">Pardavėjo atsiliepimai</string>
     <string name="market_account_stripe_open_failed">Nepavyko atidaryti Stripe</string>
+    <string name="market_editor_stock">Atsargos</string>
+    <string name="market_editor_stock_units">Vienetų skaičius</string>
+    <string name="market_editor_stock_unlimited">Neribota</string>
 </resources>

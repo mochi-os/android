@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -35,6 +36,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -196,6 +198,33 @@ fun EditListingScreen(
                     condition = state.condition,
                     onChange = viewModel::setCondition,
                 )
+                // Stock — only meaningful for non-auction listings (auctions
+                // sell a single unit). Unlimited toggle maps to quantity 0.
+                if (state.pricing != PricingModel.AUCTION) {
+                    Spacer(Modifier.padding(top = 8.dp))
+                    OutlinedTextField(
+                        value = if (state.unlimitedStock) "" else state.quantityText,
+                        onValueChange = viewModel::setQuantity,
+                        label = { Text(stringResource(R.string.market_editor_stock)) },
+                        placeholder = {
+                            Text(
+                                stringResource(
+                                    if (state.unlimitedStock) R.string.market_editor_stock_unlimited
+                                    else R.string.market_editor_stock_units
+                                )
+                            )
+                        },
+                        enabled = !state.unlimitedStock,
+                        singleLine = true,
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    SwitchRow(
+                        label = stringResource(R.string.market_editor_stock_unlimited),
+                        checked = state.unlimitedStock,
+                        onChange = viewModel::setUnlimitedStock,
+                    )
+                }
             }
 
             // ---- Pricing ----

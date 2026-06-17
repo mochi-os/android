@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Satıcının cavabı</string>
     <string name="market_listing_detail_seller_reviews_heading">Satıcı rəyləri</string>
     <string name="market_account_stripe_open_failed">Stripe açılmadı</string>
+    <string name="market_editor_stock">Stok</string>
+    <string name="market_editor_stock_units">Vahidlərin sayı</string>
+    <string name="market_editor_stock_unlimited">Provayderin əlaqəsini kəsmək?</string>
 </resources>

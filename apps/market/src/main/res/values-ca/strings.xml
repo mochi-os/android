@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Resposta del venedor</string>
     <string name="market_listing_detail_seller_reviews_heading">Ressenyes del venedor</string>
     <string name="market_account_stripe_open_failed">No s\'ha pogut obrir Stripe</string>
+    <string name="market_editor_stock">Estoc</string>
+    <string name="market_editor_stock_units">Nombre d\'unitats</string>
+    <string name="market_editor_stock_unlimited">Il·limitat</string>
 </resources>

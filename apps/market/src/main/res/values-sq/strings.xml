@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Përgjigjja e shitësit</string>
     <string name="market_listing_detail_seller_reviews_heading">Vlerësimet e shitësit</string>
     <string name="market_account_stripe_open_failed">Stripe nuk u hap dot</string>
+    <string name="market_editor_stock">Stoku</string>
+    <string name="market_editor_stock_units">Numri i njësive</string>
+    <string name="market_editor_stock_unlimited">Pa kufi</string>
 </resources>

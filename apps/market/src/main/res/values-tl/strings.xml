@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Tugon ng nagbebenta</string>
     <string name="market_listing_detail_seller_reviews_heading">Mga review ng nagbebenta</string>
     <string name="market_account_stripe_open_failed">Hindi nabuksan ang Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Bilang ng yunit</string>
+    <string name="market_editor_stock_unlimited">Walang limitasyon</string>
 </resources>

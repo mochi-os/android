@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Myyjän vastaus</string>
     <string name="market_listing_detail_seller_reviews_heading">Myyjän arvostelut</string>
     <string name="market_account_stripe_open_failed">Stripen avaaminen epäonnistui</string>
+    <string name="market_editor_stock">Varasto</string>
+    <string name="market_editor_stock_units">Yksiköiden määrä</string>
+    <string name="market_editor_stock_unlimited">Rajoittamaton</string>
 </resources>

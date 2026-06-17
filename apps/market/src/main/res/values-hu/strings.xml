@@ -733,4 +733,7 @@
     <string name="market_listing_detail_seller_response">Eladói válasz</string>
     <string name="market_listing_detail_seller_reviews_heading">Eladói értékelések</string>
     <string name="market_account_stripe_open_failed">A Stripe megnyitása nem sikerült</string>
+    <string name="market_editor_stock">Készlet</string>
+    <string name="market_editor_stock_units">Egységek száma</string>
+    <string name="market_editor_stock_unlimited">Korlátlan</string>
 </resources>

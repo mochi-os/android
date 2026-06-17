@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">විකුණුම්කරුගේ ප්‍රතිචාරය</string>
     <string name="market_listing_detail_seller_reviews_heading">විකුණුම්කරුගේ සමාලෝචන</string>
     <string name="market_account_stripe_open_failed">Stripe විවෘත කළ නොහැකි විය</string>
+    <string name="market_editor_stock">තොගය</string>
+    <string name="market_editor_stock_units">ඒකක ගණන</string>
+    <string name="market_editor_stock_unlimited">අසීමිත</string>
 </resources>

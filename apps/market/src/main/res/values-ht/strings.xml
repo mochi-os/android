@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Repons vandè</string>
     <string name="market_listing_detail_seller_reviews_heading">Evalyasyon vandè a</string>
     <string name="market_account_stripe_open_failed">Pa t kapab ouvri Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Kantite inite</string>
+    <string name="market_editor_stock_unlimited">Ilimite</string>
 </resources>

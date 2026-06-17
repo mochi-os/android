@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Sotuvchi javobi</string>
     <string name="market_listing_detail_seller_reviews_heading">Sotuvchi haqida sharhlar</string>
     <string name="market_account_stripe_open_failed">Stripe ochilmadi</string>
+    <string name="market_editor_stock">Mavjud</string>
+    <string name="market_editor_stock_units">Birliklar soni</string>
+    <string name="market_editor_stock_unlimited">Cheksiz</string>
 </resources>

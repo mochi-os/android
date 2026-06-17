@@ -733,4 +733,7 @@
     <string name="market_listing_detail_seller_response">Phản hồi của người bán</string>
     <string name="market_listing_detail_seller_reviews_heading">Đánh giá người bán</string>
     <string name="market_account_stripe_open_failed">Không thể mở Stripe</string>
+    <string name="market_editor_stock">Tồn kho</string>
+    <string name="market_editor_stock_units">Số đơn vị</string>
+    <string name="market_editor_stock_unlimited">Không giới hạn</string>
 </resources>

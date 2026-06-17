@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Satyjynyň jogaby</string>
     <string name="market_listing_detail_seller_reviews_heading">Satyjynyň synlary</string>
     <string name="market_account_stripe_open_failed">Stripe açyp bolmady</string>
+    <string name="market_editor_stock">Bar</string>
+    <string name="market_editor_stock_units">Birlikleriň sany</string>
+    <string name="market_editor_stock_unlimited">Çäksiz</string>
 </resources>

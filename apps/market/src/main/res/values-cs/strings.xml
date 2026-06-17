@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Odpověď prodávajícího</string>
     <string name="market_listing_detail_seller_reviews_heading">Hodnocení prodejce</string>
     <string name="market_account_stripe_open_failed">Nelze otevřít Stripe</string>
+    <string name="market_editor_stock">Sklad</string>
+    <string name="market_editor_stock_units">Počet jednotek</string>
+    <string name="market_editor_stock_unlimited">Neomezeno</string>
 </resources>

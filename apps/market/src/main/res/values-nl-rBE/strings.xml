@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Reactie van verkoper</string>
     <string name="market_listing_detail_seller_reviews_heading">Beoordelingen van de verkoper</string>
     <string name="market_account_stripe_open_failed">Kon Stripe niet openen</string>
+    <string name="market_editor_stock">Voorraad</string>
+    <string name="market_editor_stock_units">Aantal eenheden</string>
+    <string name="market_editor_stock_unlimited">Onbeperkt</string>
 </resources>

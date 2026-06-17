@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Impendulo yomthengisi</string>
     <string name="market_listing_detail_seller_reviews_heading">Iimbono ngomthengisi</string>
     <string name="market_account_stripe_open_failed">Akukwazekanga ukuvula iStripe</string>
+    <string name="market_editor_stock">Inani elifumanekayo</string>
+    <string name="market_editor_stock_units">Inani leeyunithi</string>
+    <string name="market_editor_stock_unlimited">Akunamda</string>
 </resources>

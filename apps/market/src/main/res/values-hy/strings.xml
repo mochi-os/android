@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">Վաճառողի պատասխան</string>
     <string name="market_listing_detail_seller_reviews_heading">Վաճառողի կարծիքները</string>
     <string name="market_account_stripe_open_failed">Չհաջողվեց բացել Stripe-ը</string>
+    <string name="market_editor_stock">Պաշար</string>
+    <string name="market_editor_stock_units">Միավորների քանակ</string>
+    <string name="market_editor_stock_unlimited">Անսահմանափակ</string>
 </resources>

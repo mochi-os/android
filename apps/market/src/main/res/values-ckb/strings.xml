@@ -731,4 +731,7 @@
     <string name="market_listing_detail_seller_response">وەڵامی فرۆشیار</string>
     <string name="market_listing_detail_seller_reviews_heading">هەڵسەنگاندنەکانی فرۆشیار</string>
     <string name="market_account_stripe_open_failed">نەتوانرا Stripe بکرێتەوە</string>
+    <string name="market_editor_stock">کۆگا</string>
+    <string name="market_editor_stock_units">ژمارەی یەکەکان</string>
+    <string name="market_editor_stock_unlimited">بێسنوور</string>
 </resources>

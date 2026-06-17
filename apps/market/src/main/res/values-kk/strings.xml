@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Сатушы жауабы</string>
     <string name="market_listing_detail_seller_reviews_heading">Сатушы туралы пікірлер</string>
     <string name="market_account_stripe_open_failed">Stripe ашу мүмкін болмады</string>
+    <string name="market_editor_stock">Қор</string>
+    <string name="market_editor_stock_units">Бірлік саны</string>
+    <string name="market_editor_stock_unlimited">Шектеусіз</string>
 </resources>

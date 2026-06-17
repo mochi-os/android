@@ -730,4 +730,7 @@
     <string name="market_listing_detail_seller_response">Verkoper se reaksie</string>
     <string name="market_listing_detail_seller_reviews_heading">Verkoperresensies</string>
     <string name="market_account_stripe_open_failed">Kon nie Stripe oopmaak nie</string>
+    <string name="market_editor_stock">Voorraad</string>
+    <string name="market_editor_stock_units">Aantal eenhede</string>
+    <string name="market_editor_stock_unlimited">Onbeperk</string>
 </resources>

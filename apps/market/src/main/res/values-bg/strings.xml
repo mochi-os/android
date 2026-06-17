@@ -733,4 +733,7 @@
     <string name="market_listing_detail_seller_response">Отговор на продавача</string>
     <string name="market_listing_detail_seller_reviews_heading">Отзиви за продавача</string>
     <string name="market_account_stripe_open_failed">Stripe не може да бъде отворен</string>
+    <string name="market_editor_stock">Наличност</string>
+    <string name="market_editor_stock_units">Брой единици</string>
+    <string name="market_editor_stock_unlimited">Неограничено</string>
 </resources>
