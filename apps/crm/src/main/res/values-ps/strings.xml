@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">د کالمونو په ساحه کې هیڅ اختیارونه نشته</string>
     <string name="crm_design_preview_empty">د ښودلو لپاره هیڅ نشته</string>
 
+    <string name="crm_access_tab_manual">لاسي</string>
+    <string name="crm_access_search_users">کاروونکي وپلټئ</string>
+    <string name="crm_access_no_groups">هیڅ ډلې شتون نلري</string>
+    <string name="crm_access_tab_users">کاروونکي</string>
+    <string name="crm_access_tab_groups">ګروپونه</string>
+    <string name="crm_access_target">هدف</string>
+    <string name="crm_access_target_hint">د موجودیت ID، @ګروپ، * (هرڅوک)، یا + (غړي)</string>
 </resources>

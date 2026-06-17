@@ -326,4 +326,11 @@
     <string name="crm_design_preview_empty">Nichts anzuzeigen</string>
     <string name="crm_not_found">CRM nicht gefunden</string>
 
+    <string name="crm_access_tab_users">Benutzer</string>
+    <string name="crm_access_tab_groups">Gruppen</string>
+    <string name="crm_access_tab_manual">Manuell</string>
+    <string name="crm_access_search_users">Benutzer suchen</string>
+    <string name="crm_access_no_groups">No groups available</string>
+    <string name="crm_access_target">Ziel</string>
+    <string name="crm_access_target_hint">Entitäts-ID, @gruppe, * (alle) oder + (Mitglieder)</string>
 </resources>

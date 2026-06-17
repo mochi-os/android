@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Inga alternativ på kolumnfältet</string>
     <string name="crm_design_preview_empty">Inget att visa</string>
 
+    <string name="crm_access_tab_manual">Manuell</string>
+    <string name="crm_access_search_users">Sök användare</string>
+    <string name="crm_access_no_groups">Inga grupper tillgängliga</string>
+    <string name="crm_access_tab_users">Användare</string>
+    <string name="crm_access_tab_groups">Grupper</string>
+    <string name="crm_access_target">Mål</string>
+    <string name="crm_access_target_hint">Entitets-ID, @grupp, * (alla) eller + (medlemmar)</string>
 </resources>

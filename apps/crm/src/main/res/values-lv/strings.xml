@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Kolonnu laukam nav opciju</string>
     <string name="crm_design_preview_empty">Nav ko rādīt</string>
 
+    <string name="crm_access_tab_manual">Manuāls</string>
+    <string name="crm_access_search_users">Meklēt lietotājus</string>
+    <string name="crm_access_no_groups">Nav pieejamu grupu</string>
+    <string name="crm_access_tab_users">Lietotāji</string>
+    <string name="crm_access_tab_groups">Grupas</string>
+    <string name="crm_access_target">Mērķis</string>
+    <string name="crm_access_target_hint">Entītijas ID, @grupa, * (visi) vai + (dalībnieki)</string>
 </resources>

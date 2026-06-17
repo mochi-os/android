@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Sütun alanında seçenek yok</string>
     <string name="crm_design_preview_empty">Gösterilecek bir şey yok</string>
 
+    <string name="crm_access_tab_manual">Elle</string>
+    <string name="crm_access_search_users">Kullanıcılarda ara</string>
+    <string name="crm_access_no_groups">Grup yok</string>
+    <string name="crm_access_tab_users">Kullanıcılar</string>
+    <string name="crm_access_tab_groups">Gruplar</string>
+    <string name="crm_access_target">Hedef</string>
+    <string name="crm_access_target_hint">Varlık kimliği, @grup, * (herkes) veya + (üyeler)</string>
 </resources>

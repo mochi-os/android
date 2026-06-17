@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Тилкелер талаасында варианттар жок</string>
     <string name="crm_design_preview_empty">Көрсөтө турган эч нерсе жок</string>
 
+    <string name="crm_access_tab_manual">Кол менен</string>
+    <string name="crm_access_search_users">Колдонуучуларды издөө</string>
+    <string name="crm_access_no_groups">Топтор жеткиликсиз</string>
+    <string name="crm_access_tab_users">Колдонуучулар</string>
+    <string name="crm_access_tab_groups">Топтор</string>
+    <string name="crm_access_target">Максат</string>
+    <string name="crm_access_target_hint">Объекттин ID, @топ, * (баары), же + (мүчөлөр)</string>
 </resources>

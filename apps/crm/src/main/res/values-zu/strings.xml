@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Azikho izinketho enkanjini yamakholomu</string>
     <string name="crm_design_preview_empty">Akukho lutho okungaboniswa</string>
 
+    <string name="crm_access_tab_manual">Mathupha</string>
+    <string name="crm_access_search_users">Sesha abasebenzisi</string>
+    <string name="crm_access_no_groups">Awekho amaqembu atholakalayo</string>
+    <string name="crm_access_tab_users">Abasebenzisi</string>
+    <string name="crm_access_tab_groups">Amaqembu</string>
+    <string name="crm_access_target">Okuqondiwe</string>
+    <string name="crm_access_target_hint">I-ID yonhlangothi, @iqembu, * (wonke umuntu), noma + (amalungu)</string>
 </resources>

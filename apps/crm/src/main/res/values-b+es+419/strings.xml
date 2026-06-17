@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">No hay opciones en el campo de columnas</string>
     <string name="crm_design_preview_empty">Nada que mostrar</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Buscar usuarios</string>
+    <string name="crm_access_no_groups">No hay grupos disponibles</string>
+    <string name="crm_access_tab_users">Usuarios</string>
+    <string name="crm_access_tab_groups">Grupos</string>
+    <string name="crm_access_target">Destino</string>
+    <string name="crm_access_target_hint">ID de entidad, @grupo, * (todos) o + (miembros)</string>
 </resources>

@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Teu aya pilihan dina widang kolom</string>
     <string name="crm_design_preview_empty">Teu aya nu kudu ditémbongkeun</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Paluruh pamaké</string>
+    <string name="crm_access_no_groups">Teu aya grup</string>
+    <string name="crm_access_tab_users">Pamaké</string>
+    <string name="crm_access_tab_groups">Grup</string>
+    <string name="crm_access_target">Target</string>
+    <string name="crm_access_target_hint">ID éntitas, @grup, * (sadayana), atawa + (anggota)</string>
 </resources>

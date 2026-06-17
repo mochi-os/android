@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Veergude väljal pole valikuid</string>
     <string name="crm_design_preview_empty">Pole midagi näidata</string>
 
+    <string name="crm_access_tab_manual">Käsitsi</string>
+    <string name="crm_access_search_users">Otsi kasutajaid</string>
+    <string name="crm_access_no_groups">Saadaolevaid gruppe pole</string>
+    <string name="crm_access_tab_users">Kasutajad</string>
+    <string name="crm_access_tab_groups">Grupid</string>
+    <string name="crm_access_target">Siht</string>
+    <string name="crm_access_target_hint">Olemi ID, @grupp, * (kõik) või + (liikmed)</string>
 </resources>

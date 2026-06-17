@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">列字段上没有选项</string>
     <string name="crm_design_preview_empty">无内容可显示</string>
 
+    <string name="crm_access_tab_manual">手动</string>
+    <string name="crm_access_search_users">搜索用户</string>
+    <string name="crm_access_no_groups">无可用群组</string>
+    <string name="crm_access_tab_users">用户</string>
+    <string name="crm_access_tab_groups">群组</string>
+    <string name="crm_access_target">目标</string>
+    <string name="crm_access_target_hint">实体 ID、@群组、*(所有人)或 +(成员)</string>
 </resources>

@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Няма параметраў для поля слупкоў</string>
     <string name="crm_design_preview_empty">Няма чаго паказаць</string>
 
+    <string name="crm_access_tab_manual">Уручную</string>
+    <string name="crm_access_search_users">Пошук карыстальнікаў</string>
+    <string name="crm_access_no_groups">Групы недаступны</string>
+    <string name="crm_access_tab_users">Карыстальнікі</string>
+    <string name="crm_access_tab_groups">Групы</string>
+    <string name="crm_access_target">Мэта</string>
+    <string name="crm_access_target_hint">ID сутнасці, @група, * (усе) ці + (удзельнікі)</string>
 </resources>

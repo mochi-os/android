@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Ingen alternativ på kolonnefeltet</string>
     <string name="crm_design_preview_empty">Ingenting å vise</string>
 
+    <string name="crm_access_tab_manual">Manuell</string>
+    <string name="crm_access_search_users">Søk i brukarar</string>
+    <string name="crm_access_no_groups">Ingen grupper tilgjengelege</string>
+    <string name="crm_access_tab_users">Brukarar</string>
+    <string name="crm_access_tab_groups">Grupper</string>
+    <string name="crm_access_target">Mål</string>
+    <string name="crm_access_target_hint">Entitets-ID, @gruppe, * (alle), eller + (medlemer)</string>
 </resources>

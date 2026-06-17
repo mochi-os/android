@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Walang opsyon sa columns field</string>
     <string name="crm_design_preview_empty">Walang maipakita</string>
 
+    <string name="crm_access_tab_manual">Manwal</string>
+    <string name="crm_access_search_users">Maghanap ng user</string>
+    <string name="crm_access_no_groups">Walang available na grupo</string>
+    <string name="crm_access_tab_users">Mga user</string>
+    <string name="crm_access_tab_groups">Mga group</string>
+    <string name="crm_access_target">Target</string>
+    <string name="crm_access_target_hint">Entity ID, @group, * (lahat), o + (mga miyembro)</string>
 </resources>

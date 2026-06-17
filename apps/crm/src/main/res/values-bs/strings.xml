@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Nema opcija na polju kolona</string>
     <string name="crm_design_preview_empty">Nema ničega za prikaz</string>
 
+    <string name="crm_access_tab_manual">Ručno</string>
+    <string name="crm_access_search_users">Pretraži korisnike</string>
+    <string name="crm_access_no_groups">Nema dostupnih grupa</string>
+    <string name="crm_access_tab_users">Korisnici</string>
+    <string name="crm_access_tab_groups">Grupe</string>
+    <string name="crm_access_target">Cilj</string>
+    <string name="crm_access_target_hint">ID entiteta, @grupa, * (svi) ili + (članovi)</string>
 </resources>

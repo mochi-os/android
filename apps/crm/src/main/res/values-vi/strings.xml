@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Không có tùy chọn nào trên trường cột</string>
     <string name="crm_design_preview_empty">Không có gì để hiển thị</string>
 
+    <string name="crm_access_tab_manual">Thủ công</string>
+    <string name="crm_access_search_users">Tìm kiếm người dùng</string>
+    <string name="crm_access_no_groups">Không có nhóm nào</string>
+    <string name="crm_access_tab_users">Người dùng</string>
+    <string name="crm_access_tab_groups">Nhóm</string>
+    <string name="crm_access_target">Mục tiêu</string>
+    <string name="crm_access_target_hint">ID thực thể, @group, * (mọi người), hoặc + (thành viên)</string>
 </resources>

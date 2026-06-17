@@ -326,4 +326,11 @@
     <string name="crm_design_preview_no_options">Níl aon rogha ar réimse na gcolún</string>
     <string name="crm_design_preview_empty">Níl rud ar bith le taispeáint</string>
 
+    <string name="crm_access_tab_manual">Láimhe</string>
+    <string name="crm_access_search_users">Cuardaigh úsáideoirí</string>
+    <string name="crm_access_no_groups">Níl aon ghrúpa ar fáil</string>
+    <string name="crm_access_tab_users">Úsáideoirí</string>
+    <string name="crm_access_tab_groups">Grúpaí</string>
+    <string name="crm_access_target">Sprioc</string>
+    <string name="crm_access_target_hint">Aitheantas aonáin, @grúpa, * (gach duine), nó + (baill)</string>
 </resources>

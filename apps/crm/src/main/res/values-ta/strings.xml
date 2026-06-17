@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">நெடுவரிசைகள் புலத்தில் விருப்பங்கள் இல்லை</string>
     <string name="crm_design_preview_empty">காட்ட எதுவும் இல்லை</string>
 
+    <string name="crm_access_tab_manual">கைமுறை</string>
+    <string name="crm_access_search_users">பயனர்களைத் தேடு</string>
+    <string name="crm_access_no_groups">குழுக்கள் கிடைக்கவில்லை</string>
+    <string name="crm_access_tab_users">பயனர்கள்</string>
+    <string name="crm_access_tab_groups">குழுக்கள்</string>
+    <string name="crm_access_target">இலக்கு</string>
+    <string name="crm_access_target_hint">நிறுவன ID, @group, * (அனைவரும்), அல்லது + (உறுப்பினர்கள்)</string>
 </resources>

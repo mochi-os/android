@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Սյունակների դաշտում ընտրանքներ չկան</string>
     <string name="crm_design_preview_empty">Ցույց տալու բան չկա</string>
 
+    <string name="crm_access_tab_manual">Նշել բոլորը կարդացված</string>
+    <string name="crm_access_search_users">Որոնել օգտատերեր</string>
+    <string name="crm_access_no_groups">Հասանելի խմբեր չկան</string>
+    <string name="crm_access_tab_users">Օգտատերեր</string>
+    <string name="crm_access_tab_groups">Խմբեր</string>
+    <string name="crm_access_target">Թիրախ</string>
+    <string name="crm_access_target_hint">Էության ID, @խումբ, * (բոլորը), կամ + (անդամներ)</string>
 </resources>

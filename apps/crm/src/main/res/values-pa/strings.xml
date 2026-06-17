@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">ਕਾਲਮ ਫੀਲਡ ਉੱਤੇ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ</string>
     <string name="crm_design_preview_empty">ਦਿਖਾਉਣ ਲਈ ਕੁਝ ਨਹੀਂ</string>
 
+    <string name="crm_access_tab_manual">ਮੈਨੁਅਲ</string>
+    <string name="crm_access_search_users">ਉਪਭੋਗਤਾ ਖੋਜੋ</string>
+    <string name="crm_access_no_groups">ਕੋਈ ਗਰੁੱਪ ਉਪਲਬਧ ਨਹੀਂ</string>
+    <string name="crm_access_tab_users">ਉਪਭੋਗਤਾ</string>
+    <string name="crm_access_tab_groups">ਗਰੁੱਪ</string>
+    <string name="crm_access_target">ਟੀਚਾ</string>
+    <string name="crm_access_target_hint">ਇਕਾਈ ID, @group, * (ਹਰ ਕੋਈ), ਜਾਂ + (ਮੈਂਬਰ)</string>
 </resources>

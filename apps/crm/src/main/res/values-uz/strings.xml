@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Ustunlar maydonida variantlar yo\'q</string>
     <string name="crm_design_preview_empty">Ko\'rsatadigan narsa yo\'q</string>
 
+    <string name="crm_access_tab_manual">Qoʻlda</string>
+    <string name="crm_access_search_users">Foydalanuvchilarni qidirish</string>
+    <string name="crm_access_no_groups">Mavjud guruhlar yoʻq</string>
+    <string name="crm_access_tab_users">Foydalanuvchilar</string>
+    <string name="crm_access_tab_groups">Guruhlar</string>
+    <string name="crm_access_target">Maqsad</string>
+    <string name="crm_access_target_hint">Obyekt IDsi, @guruh, * (hamma) yoki + (aʼzolar)</string>
 </resources>

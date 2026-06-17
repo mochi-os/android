@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Zutabeen eremuan ez dago aukerarik</string>
     <string name="crm_design_preview_empty">Ez dago ezer erakusteko</string>
 
+    <string name="crm_access_tab_manual">Eskuz</string>
+    <string name="crm_access_search_users">Bilatu erabiltzaileak</string>
+    <string name="crm_access_no_groups">Ez dago talde erabilgarririk</string>
+    <string name="crm_access_tab_users">Erabiltzaileak</string>
+    <string name="crm_access_tab_groups">Taldeak</string>
+    <string name="crm_access_target">Helburua</string>
+    <string name="crm_access_target_hint">Entitate IDa, @taldea, * (denak), edo + (kideak)</string>
 </resources>

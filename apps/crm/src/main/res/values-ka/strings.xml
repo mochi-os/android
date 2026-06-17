@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">სვეტების ველზე ვარიანტები არ არის</string>
     <string name="crm_design_preview_empty">საჩვენებელი არაფერია</string>
 
+    <string name="crm_access_tab_manual">სახელმძღვანელო</string>
+    <string name="crm_access_search_users">მომხმარებლების ძიება</string>
+    <string name="crm_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
+    <string name="crm_access_tab_users">მომხმარებლის სახელი</string>
+    <string name="crm_access_tab_groups">ჯგუფები</string>
+    <string name="crm_access_target">სამიზნე</string>
+    <string name="crm_access_target_hint">ერთეულის ID, @ჯგუფი, * (ყველა) ან + (წევრები)</string>
 </resources>

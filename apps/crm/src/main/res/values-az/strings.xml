@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Sütun sahəsində seçim yoxdur</string>
     <string name="crm_design_preview_empty">Göstəriləcək heç nə yoxdur</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">İstifadəçi axtar</string>
+    <string name="crm_access_no_groups">Mövcud qrup yoxdur</string>
+    <string name="crm_access_tab_users">İstifadəçilər bu identifikatoru Tətbiqlərin idarəetmə səhifəsinə yapışdıraraq bu tətbiqi quraşdıra bilərlər.</string>
+    <string name="crm_access_tab_groups">Qruplar</string>
+    <string name="crm_access_target">Hədəf</string>
+    <string name="crm_access_target_hint">Subyekt ID, @qrup, * (hamı) və ya + (üzvlər)</string>
 </resources>

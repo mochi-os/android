@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Kò sí àṣàyàn lórí pápá àwọn kọ́lọ̀ọ̀mù</string>
     <string name="crm_design_preview_empty">Kò sí ohun láti fihàn</string>
 
+    <string name="crm_access_tab_manual">Ìwé ìtọ́nisọ́nà</string>
+    <string name="crm_access_search_users">Wá àwọn user</string>
+    <string name="crm_access_no_groups">Kò sí ẹgbẹ́ tó wà</string>
+    <string name="crm_access_tab_users">Àwọn user</string>
+    <string name="crm_access_tab_groups">Àwọn àwùjọ</string>
+    <string name="crm_access_target">Ibi àfojúsùn</string>
+    <string name="crm_access_target_hint">ID ẹ̀ka, @ẹgbẹ́, * (gbogbo ènìyàn), tàbí + (àwọn ọmọ ẹgbẹ́)</string>
 </resources>

@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Ei vaihtoehtoja sarakkeiden kentässä</string>
     <string name="crm_design_preview_empty">Ei näytettävää</string>
 
+    <string name="crm_access_tab_manual">Manuaalinen</string>
+    <string name="crm_access_search_users">Hae käyttäjiä</string>
+    <string name="crm_access_no_groups">Ei saatavilla olevia ryhmiä</string>
+    <string name="crm_access_tab_users">Käyttäjät</string>
+    <string name="crm_access_tab_groups">Ryhmät</string>
+    <string name="crm_access_target">Kohde</string>
+    <string name="crm_access_target_hint">Entiteetin tunnus, @ryhmä, * (kaikki) tai + (jäsenet)</string>
 </resources>

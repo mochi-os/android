@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">કૉલમ ક્ષેત્ર પર કોઈ વિકલ્પ નથી</string>
     <string name="crm_design_preview_empty">બતાવવા માટે કંઈ નથી</string>
 
+    <string name="crm_access_tab_manual">મેન્યુઅલ</string>
+    <string name="crm_access_search_users">વપરાશકર્તાઓ શોધો</string>
+    <string name="crm_access_no_groups">કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી</string>
+    <string name="crm_access_tab_users">વપરાશકર્તાઓ</string>
+    <string name="crm_access_tab_groups">ગ્રુપ્સ</string>
+    <string name="crm_access_target">લક્ષ્ય</string>
+    <string name="crm_access_target_hint">એન્ટિટી ID, @group, * (દરેક), અથવા + (સભ્યો)</string>
 </resources>

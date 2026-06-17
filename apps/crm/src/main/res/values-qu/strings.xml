@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Mana akllaykuna kolumnakuna kampupi kanchu</string>
     <string name="crm_design_preview_empty">Mana imapas qhawachinapaq kanchu</string>
 
+    <string name="crm_access_tab_manual">Maki ruway</string>
+    <string name="crm_access_search_users">Usuariokunata maskay</string>
+    <string name="crm_access_no_groups">Mana grupokuna atikuq</string>
+    <string name="crm_access_tab_users">Apaykachaqkuna</string>
+    <string name="crm_access_tab_groups">Huñukuna</string>
+    <string name="crm_access_target">Chayana</string>
+    <string name="crm_access_target_hint">Entity ID, @huñu, * (llapan), utaq + (yanapaqkuna)</string>
 </resources>

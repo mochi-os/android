@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">በዓምዶች መስክ ላይ ምንም አማራጮች የሉም</string>
     <string name="crm_design_preview_empty">የሚታይ ምንም ነገር የለም</string>
 
+    <string name="crm_access_tab_manual">በእጅ</string>
+    <string name="crm_access_search_users">ተጠቃሚዎችን ይፈልጉ</string>
+    <string name="crm_access_no_groups">ምንም ቡድኖች የሉም</string>
+    <string name="crm_access_tab_users">ተጠቃሚዎች</string>
+    <string name="crm_access_tab_groups">ቡድኖች</string>
+    <string name="crm_access_target">ዒላማ</string>
+    <string name="crm_access_target_hint">የማንነት መታወቂያ፣ @ቡድን፣ * (ሁሉም)፣ ወይም + (አባላት)</string>
 </resources>

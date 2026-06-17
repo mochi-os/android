@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Hakuna chaguo kwenye uga wa safu</string>
     <string name="crm_design_preview_empty">Hakuna cha kuonyesha</string>
 
+    <string name="crm_access_tab_manual">Mwongozo</string>
+    <string name="crm_access_search_users">Tafuta watumiaji</string>
+    <string name="crm_access_no_groups">Hakuna vikundi vinavyopatikana</string>
+    <string name="crm_access_tab_users">Watumiaji</string>
+    <string name="crm_access_tab_groups">Vikundi</string>
+    <string name="crm_access_target">Lengo</string>
+    <string name="crm_access_target_hint">Kitambulisho cha huluki, @kikundi, * (kila mtu), au + (wanachama)</string>
 </resources>

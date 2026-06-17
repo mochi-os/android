@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">کالمز فیلڈ پر کوئی آپشنز نہیں</string>
     <string name="crm_design_preview_empty">دکھانے کے لیے کچھ نہیں</string>
 
+    <string name="crm_access_tab_manual">دستی</string>
+    <string name="crm_access_search_users">صارفین تلاش کریں</string>
+    <string name="crm_access_no_groups">کوئی گروپ دستیاب نہیں</string>
+    <string name="crm_access_tab_users">صارفین</string>
+    <string name="crm_access_tab_groups">گروپس</string>
+    <string name="crm_access_target">ٹارگٹ</string>
+    <string name="crm_access_target_hint">اینٹیٹی ID، @گروپ، * (سب)، یا + (ممبران)</string>
 </resources>

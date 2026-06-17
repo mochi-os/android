@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Tidak ada opsi pada bidang kolom</string>
     <string name="crm_design_preview_empty">Tidak ada yang ditampilkan</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Cari pengguna</string>
+    <string name="crm_access_no_groups">Tidak ada grup yang tersedia</string>
+    <string name="crm_access_tab_users">Pengguna</string>
+    <string name="crm_access_tab_groups">Grup</string>
+    <string name="crm_access_target">Target</string>
+    <string name="crm_access_target_hint">ID entitas, @grup, * (semua orang), atau + (anggota)</string>
 </resources>

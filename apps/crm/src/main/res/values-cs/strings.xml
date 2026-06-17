@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">V poli sloupců nejsou žádné možnosti</string>
     <string name="crm_design_preview_empty">Není co zobrazit</string>
 
+    <string name="crm_access_tab_manual">Ručně</string>
+    <string name="crm_access_search_users">Hledat uživatele</string>
+    <string name="crm_access_no_groups">Žádné skupiny k dispozici</string>
+    <string name="crm_access_tab_users">Uživatelé</string>
+    <string name="crm_access_tab_groups">Skupiny</string>
+    <string name="crm_access_target">Cíl</string>
+    <string name="crm_access_target_hint">ID entity, @skupina, * (všichni) nebo + (členové)</string>
 </resources>

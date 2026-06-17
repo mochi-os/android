@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">ບໍ່ມີຕົວເລືອກໃນຊ່ອງສຳລັບຖັນ</string>
     <string name="crm_design_preview_empty">ບໍ່ມີຫຍັງໃຫ້ສະແດງ</string>
 
+    <string name="crm_access_tab_manual">ດ້ວຍຕົນເອງ</string>
+    <string name="crm_access_search_users">ຄົ້ນຫາຜູ້ໃຊ້</string>
+    <string name="crm_access_no_groups">ບໍ່ມີກຸ່ມທີ່ມີຢູ່</string>
+    <string name="crm_access_tab_users">ຜູ້ໃຊ້</string>
+    <string name="crm_access_tab_groups">ກຸ່ມ</string>
+    <string name="crm_access_target">ເປົ້າໝາຍ</string>
+    <string name="crm_access_target_hint">ID ຕົວຕົນ, @ກຸ່ມ, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
 </resources>

@@ -326,4 +326,11 @@
     <string name="crm_find_search_hint">Cerca un CRM al qual subscriure\'s</string>
     <string name="crm_settings_delete_confirm_message">Segur que voleu suprimir aquest CRM? Tots els objectes, comentaris i paràmetres se suprimiran permanentment.</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Cerca usuaris</string>
+    <string name="crm_access_no_groups">No hi ha cap grup disponible</string>
+    <string name="crm_access_tab_users">Usuaris</string>
+    <string name="crm_access_tab_groups">Grups</string>
+    <string name="crm_access_target">Destinació</string>
+    <string name="crm_access_target_hint">ID d\'entitat, @grup, * (tothom) o + (membres)</string>
 </resources>

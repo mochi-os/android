@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Ora ana pilihan ing ruas kolom</string>
     <string name="crm_design_preview_empty">Ora ana kang ditampilake</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Goleki pangguna</string>
+    <string name="crm_access_no_groups">Ora ana grup kasedhiya</string>
+    <string name="crm_access_tab_users">Panganggo</string>
+    <string name="crm_access_tab_groups">Grup</string>
+    <string name="crm_access_target">Target</string>
+    <string name="crm_access_target_hint">ID entitas, @grup, * (sedaya), utawi + (anggota)</string>
 </resources>

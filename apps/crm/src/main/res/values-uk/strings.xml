@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Поле стовпців не має параметрів</string>
     <string name="crm_design_preview_empty">Немає що показати</string>
 
+    <string name="crm_access_tab_manual">Вручну</string>
+    <string name="crm_access_search_users">Пошук користувачів</string>
+    <string name="crm_access_no_groups">Немає доступних груп</string>
+    <string name="crm_access_tab_users">Користувачі</string>
+    <string name="crm_access_tab_groups">Групи</string>
+    <string name="crm_access_target">Ціль</string>
+    <string name="crm_access_target_hint">ID сутності, @група, * (всі) або + (учасники)</string>
 </resources>

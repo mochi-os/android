@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Brak opcji w polu kolumn</string>
     <string name="crm_design_preview_empty">Nic do wyświetlenia</string>
 
+    <string name="crm_access_tab_manual">Ręczny</string>
+    <string name="crm_access_search_users">Szukaj użytkowników</string>
+    <string name="crm_access_no_groups">Brak dostępnych grup</string>
+    <string name="crm_access_tab_users">Użytkownicy</string>
+    <string name="crm_access_tab_groups">Grupy</string>
+    <string name="crm_access_target">Cel</string>
+    <string name="crm_access_target_hint">Identyfikator encji, @grupa, * (wszyscy) lub + (członkowie)</string>
 </resources>

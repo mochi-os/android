@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">אין אפשרויות בשדה העמודות</string>
     <string name="crm_design_preview_empty">אין מה להציג</string>
 
+    <string name="crm_access_tab_manual">ידני</string>
+    <string name="crm_access_search_users">חפש משתמשים</string>
+    <string name="crm_access_no_groups">אין קבוצות זמינות</string>
+    <string name="crm_access_tab_users">משתמשים</string>
+    <string name="crm_access_tab_groups">קבוצות</string>
+    <string name="crm_access_target">יעד</string>
+    <string name="crm_access_target_hint">מזהה ישות, @group, * (כולם), או + (חברים)</string>
 </resources>

@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">కాలమ్‌ల ఫీల్డ్‌పై ఎంపికలు లేవు</string>
     <string name="crm_design_preview_empty">చూపించడానికి ఏమీ లేదు</string>
 
+    <string name="crm_access_tab_manual">మాన్యువల్</string>
+    <string name="crm_access_search_users">యూజర్లను శోధించండి</string>
+    <string name="crm_access_no_groups">గ్రూపులు అందుబాటులో లేవు</string>
+    <string name="crm_access_tab_users">యూజర్‌లు</string>
+    <string name="crm_access_tab_groups">గ్రూపులు</string>
+    <string name="crm_access_target">లక్ష్యం</string>
+    <string name="crm_access_target_hint">ఎంటిటీ ID, @group, * (అందరూ), లేదా + (సభ్యులు)</string>
 </resources>

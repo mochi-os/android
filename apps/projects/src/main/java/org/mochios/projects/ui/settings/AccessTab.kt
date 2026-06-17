@@ -46,6 +46,10 @@ import org.mochios.android.R as MochiR
 
 private val ACCESS_LEVEL_KEYS = listOf("owner", "design", "write", "comment", "view", "none")
 
+// Levels offered when changing an existing rule's level inline, mirroring web's
+// inline level select (no "owner" — ownership isn't reassigned this way).
+private val ACCESS_LEVEL_CHANGE_KEYS = ACCESS_LEVEL_KEYS.filter { it != "owner" }
+
 @Composable
 private fun accessLevelLabel(value: String): String = when (value) {
     "owner" -> stringResource(R.string.projects_access_level_owner)
@@ -89,6 +93,8 @@ fun AccessTab(
                         rule = rule,
                         levelLabel = { op -> accessLevelLabel(op) },
                         onRevoke = { viewModel.revokeAccess(rule.subject) },
+                        levels = ACCESS_LEVEL_CHANGE_KEYS,
+                        onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
                     )
                 }
             }

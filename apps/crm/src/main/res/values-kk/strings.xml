@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Бағандар өрісінде опциялар жоқ</string>
     <string name="crm_design_preview_empty">Көрсететін ештеңе жоқ</string>
 
+    <string name="crm_access_tab_manual">Қолмен</string>
+    <string name="crm_access_search_users">Қолданушыларды іздеу</string>
+    <string name="crm_access_no_groups">Топтар қолжетімсіз</string>
+    <string name="crm_access_tab_users">Пайдаланушылар</string>
+    <string name="crm_access_tab_groups">Топтар</string>
+    <string name="crm_access_target">Мақсат</string>
+    <string name="crm_access_target_hint">Нысан идентификаторы, @топ, * (барлығы) немесе + (мүшелер)</string>
 </resources>

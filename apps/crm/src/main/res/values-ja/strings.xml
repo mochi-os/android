@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">列フィールドにオプションがありません</string>
     <string name="crm_design_preview_empty">表示する項目がありません</string>
 
+    <string name="crm_access_tab_manual">手動</string>
+    <string name="crm_access_search_users">ユーザーを検索</string>
+    <string name="crm_access_no_groups">利用可能なグループがありません</string>
+    <string name="crm_access_tab_users">ユーザー</string>
+    <string name="crm_access_tab_groups">グループ</string>
+    <string name="crm_access_target">ターゲット</string>
+    <string name="crm_access_target_hint">エンティティ ID、@グループ、*（全員）、または +（メンバー）</string>
 </resources>

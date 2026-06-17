@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Баганын талбарт сонголт байхгүй</string>
     <string name="crm_design_preview_empty">Харуулах зүйл байхгүй</string>
 
+    <string name="crm_access_tab_manual">Гар аргаар</string>
+    <string name="crm_access_search_users">Хэрэглэгчид хайх</string>
+    <string name="crm_access_no_groups">Боломжит групп байхгүй</string>
+    <string name="crm_access_tab_users">Хэрэглэгчид</string>
+    <string name="crm_access_tab_groups">Бүлгүүд</string>
+    <string name="crm_access_target">Зорилт</string>
+    <string name="crm_access_target_hint">Бүртгэлийн ID, @бүлэг, * (бүгд), эсвэл + (гишүүд)</string>
 </resources>

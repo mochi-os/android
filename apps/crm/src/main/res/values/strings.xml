@@ -95,6 +95,13 @@
 
     <!-- Access -->
     <string name="crm_access_user_fingerprint">User fingerprint</string>
+    <string name="crm_access_tab_users">Users</string>
+    <string name="crm_access_tab_groups">Groups</string>
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Search users</string>
+    <string name="crm_access_no_groups">No groups available</string>
+    <string name="crm_access_target">Target</string>
+    <string name="crm_access_target_hint">Entity ID, @group, * (everyone), or + (members)</string>
     <string name="crm_access_level_owner">Owner</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_write">Write</string>

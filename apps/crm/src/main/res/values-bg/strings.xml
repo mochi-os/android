@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Няма опции в полето за колони</string>
     <string name="crm_design_preview_empty">Няма какво да се покаже</string>
 
+    <string name="crm_access_tab_manual">Ръчно</string>
+    <string name="crm_access_search_users">Търси потребители</string>
+    <string name="crm_access_no_groups">Няма налични групи</string>
+    <string name="crm_access_tab_users">Потребители</string>
+    <string name="crm_access_tab_groups">Групи</string>
+    <string name="crm_access_target">Цел</string>
+    <string name="crm_access_target_hint">ID на обект, @група, * (всички) или + (членове)</string>
 </resources>

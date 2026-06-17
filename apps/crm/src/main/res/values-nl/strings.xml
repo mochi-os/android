@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Geen opties op het kolomveld</string>
     <string name="crm_design_preview_empty">Niets te tonen</string>
 
+    <string name="crm_access_tab_manual">Handmatig</string>
+    <string name="crm_access_search_users">Zoek gebruikers</string>
+    <string name="crm_access_no_groups">Geen groepen beschikbaar</string>
+    <string name="crm_access_tab_users">Gebruikers</string>
+    <string name="crm_access_tab_groups">Groepen</string>
+    <string name="crm_access_target">Doel</string>
+    <string name="crm_access_target_hint">Entiteits-ID, @groep, * (iedereen), of + (leden)</string>
 </resources>

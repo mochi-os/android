@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">තීරු ක්ෂේත්‍රයේ විකල්ප කිසිවක් නැත</string>
     <string name="crm_design_preview_empty">පෙන්වීමට කිසිවක් නැත</string>
 
+    <string name="crm_access_tab_manual">අතින්</string>
+    <string name="crm_access_search_users">පරිශීලකයින් සොයන්න</string>
+    <string name="crm_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
+    <string name="crm_access_tab_users">පරිශීලකයන්</string>
+    <string name="crm_access_tab_groups">කණ්ඩායම්</string>
+    <string name="crm_access_target">ඉලක්කය</string>
+    <string name="crm_access_target_hint">ආයතන ID, @group, * (සියලුදෙනා), හෝ + (සාමාජිකයන්)</string>
 </resources>

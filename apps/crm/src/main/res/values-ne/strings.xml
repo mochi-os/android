@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">स्तम्भ क्षेत्रमा कुनै विकल्प छैन</string>
     <string name="crm_design_preview_empty">देखाउन केही छैन</string>
 
+    <string name="crm_access_tab_manual">म्यानुअल</string>
+    <string name="crm_access_search_users">प्रयोगकर्ताहरू खोज्नुहोस्</string>
+    <string name="crm_access_no_groups">कुनै समूह उपलब्ध छैन</string>
+    <string name="crm_access_tab_users">प्रयोगकर्ताहरू</string>
+    <string name="crm_access_tab_groups">समूहहरू</string>
+    <string name="crm_access_target">लक्ष्य</string>
+    <string name="crm_access_target_hint">एन्टिटी ID, @समूह, * (सबैजना), वा + (सदस्यहरू)</string>
 </resources>

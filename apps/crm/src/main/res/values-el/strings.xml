@@ -324,4 +324,11 @@
     <string name="crm_design_preview_no_options">Δεν υπάρχουν επιλογές στο πεδίο στηλών</string>
     <string name="crm_design_preview_empty">Δεν υπάρχει τίποτα προς εμφάνιση</string>
 
+    <string name="crm_access_tab_manual">Χειροκίνητο</string>
+    <string name="crm_access_search_users">Αναζήτηση χρηστών</string>
+    <string name="crm_access_no_groups">Δεν υπάρχουν διαθέσιμες ομάδες</string>
+    <string name="crm_access_tab_users">Χρήστες</string>
+    <string name="crm_access_tab_groups">Ομάδες</string>
+    <string name="crm_access_target">Στόχος</string>
+    <string name="crm_access_target_hint">Αναγνωριστικό οντότητας, @ομάδα, * (όλοι) ή + (μέλη)</string>
 </resources>
