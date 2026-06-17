@@ -38,6 +38,14 @@ data class AccountStatus(
     val purge: Long
 )
 
+/** Everything a single `_/identity` fetch yields — the bound identity entity
+ *  and the account lifecycle status. Lets callers that need both (bootstrap)
+ *  avoid issuing the same request twice. */
+data class IdentityInfo(
+    val identity: Identity,
+    val status: AccountStatus
+)
+
 @Singleton
 class AuthRepository @Inject constructor(
     private val authApi: AuthApi,
@@ -132,23 +140,21 @@ class AuthRepository @Inject constructor(
         authApi.createIdentity(IdentityRequest(name, privacy)).unwrapRaw()
     }
 
-    suspend fun getIdentity(): Identity {
+    /** Single `_/identity` round-trip yielding both the bound identity and the
+     *  account status. Prefer this when you need both (e.g. bootstrap) so the
+     *  request isn't issued twice. */
+    suspend fun getIdentityInfo(): IdentityInfo {
         val response = authApi.getIdentity().unwrapRaw()
-        return Identity(
-            identity = response.identity?.id.orEmpty(),
-            name = response.identity?.name?.takeIf { it.isNotBlank() }
-                ?: response.user.name,
-            email = response.user.email,
-            fingerprint = response.identity?.fingerprint.orEmpty()
+        return IdentityInfo(
+            identity = Identity(
+                identity = response.identity?.id.orEmpty(),
+                name = response.identity?.name?.takeIf { it.isNotBlank() }
+                    ?: response.user.name,
+                email = response.user.email,
+                fingerprint = response.identity?.fingerprint.orEmpty()
+            ),
+            status = AccountStatus(response.user.status, response.user.purge)
         )
-    }
-
-    /** Account lifecycle status + purge deadline (unix seconds, 0 when not
-     *  closing). Read at bootstrap to route a soft-deleted ("closing")
-     *  session to the reactivation interstitial. */
-    suspend fun accountStatus(): AccountStatus {
-        val response = authApi.getIdentity().unwrapRaw()
-        return AccountStatus(response.user.status, response.user.purge)
     }
 
     /** Cancel a pending closure, reactivating the account. */

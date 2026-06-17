@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Declares Mochi's AccountManager authenticator. Without this resource (and the
+  AuthenticatorService that references it in AndroidManifest), the app is not the
+  owner of the "org.mochios.account" type, so AccountManager.addAccountExplicitly
+  throws a SecurityException. The accountType must match MochiAccount.TYPE.
+-->
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="org.mochios.account"
+    android:icon="@mipmap/ic_launcher"
+    android:smallIcon="@mipmap/ic_launcher"
+    android:label="@string/app_name" />

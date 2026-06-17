@@ -78,7 +78,7 @@ class SystemUsersViewModel @Inject constructor(
 
     private fun loadCurrentUser() {
         viewModelScope.launch {
-            runCatching { authRepository.getIdentity() }
+            runCatching { authRepository.getIdentityInfo().identity }
                 .onSuccess { identity ->
                     _uiState.value = _uiState.value.copy(currentUsername = identity.email)
                 }

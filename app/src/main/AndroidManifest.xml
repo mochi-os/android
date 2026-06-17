@@ -353,6 +353,25 @@
                 android:resource="@xml/update_paths" />
         </provider>
 
+        <!--
+          AccountManager authenticator for cross-app session sharing. Makes
+          org.mochios.mochi the owner of the "org.mochios.account" type so
+          MochiAccount.upsert() can call addAccountExplicitly without a
+          SecurityException. Bound by the system AccountManagerService, so it
+          must be exported. The referenced @xml/authenticator declares the
+          matching account type (MochiAccount.TYPE).
+        -->
+        <service
+            android:name="org.mochios.android.account.AuthenticatorService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
         <service
             android:name="org.mochios.android.push.PushService"
             android:enabled="true"

@@ -1,6 +1,7 @@
 package org.mochios.android.ui
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,6 +14,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.auth.Identity
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LanguageRepository
 import org.mochios.android.i18n.LanguageStore
@@ -255,13 +257,19 @@ class AppBootstrapViewModel @Inject constructor(
             return
         }
 
+        // Single `_/identity` fetch reused for both the closing-account check
+        // below and publishAccount() further down — they used to hit the same
+        // endpoint twice per launch. Best-effort: a failed fetch shouldn't wedge
+        // the launch, so fall through to the normal Ready path.
+        val identityInfo = runCatching { authRepository.getIdentityInfo() }
+            .onFailure { e -> Log.w(TAG, "getIdentityInfo failed at bootstrap", e) }
+            .getOrNull()
+
         // A soft-deleted ("closing") account has a valid session but every app
         // action is refused server-side. Route to the reactivation interstitial
-        // instead of into the app. Best-effort: a failed status check shouldn't
-        // wedge the launch, so fall through to the normal Ready path.
-        val status = runCatching { authRepository.accountStatus() }.getOrNull()
-        if (status?.status == "closing") {
-            _stage.value = AuthStage.NeedsReactivation(status.purge)
+        // instead of into the app.
+        if (identityInfo?.status?.status == "closing") {
+            _stage.value = AuthStage.NeedsReactivation(identityInfo.status.purge)
             return
         }
 
@@ -288,7 +296,7 @@ class AppBootstrapViewModel @Inject constructor(
         // Republishing every bootstrap means a missing record (legacy state,
         // wiped authenticator, etc.) self-heals — only an explicit logout
         // (clearAll) or runtime account-removed event takes us back to login.
-        runCatching { publishAccount() }
+        runCatching { publishAccount(identityInfo?.identity) }
 
         // Theme + preferences are best-effort warm-ups.
         runCatching { themeRepository.fetchAndCacheTheme() }
@@ -317,22 +325,38 @@ class AppBootstrapViewModel @Inject constructor(
      * Best-effort — failure here doesn't block this app, just means a
      * sibling install won't be able to silent-adopt this session.
      */
-    private suspend fun publishAccount() {
+    private suspend fun publishAccount(identity: Identity?) {
         val session = sessionManager.currentToken.first() ?: return
         val server = sessionManager.serverUrl.first()
-        val identity = runCatching { authRepository.getIdentity() }.getOrNull() ?: return
-        if (identity.identity.isBlank()) return
+        if (identity == null || identity.identity.isBlank()) return
+
+        // Local binding is the canonical "who am I" and must be written
+        // independently of the best-effort AccountManager sharing below.
+        // Historically the upsert ran first, so an addAccountExplicitly
+        // SecurityException (e.g. a device where the authenticator isn't
+        // registered) aborted the whole function and left boundIdentity empty —
+        // which broke every screen that resolves the current person from it.
+        sessionManager.setBoundAccount(identity.identity, server)
+
         val displayName = identity.name.takeIf { it.isNotBlank() }
             ?: identity.email.takeIf { it.isNotBlank() }
             ?: ""
-        MochiAccount.upsert(
-            context,
-            identity = identity.identity,
-            name = displayName,
-            server = server,
-            fingerprint = identity.fingerprint.takeIf { it.isNotBlank() },
-            session = session
-        )
-        sessionManager.setBoundAccount(identity.identity, server)
+        // Cross-app session sharing. Best-effort: a failure here only means a
+        // sibling install can't silent-adopt this session, so it must not
+        // propagate and undo the local binding above.
+        runCatching {
+            MochiAccount.upsert(
+                context,
+                identity = identity.identity,
+                name = displayName,
+                server = server,
+                fingerprint = identity.fingerprint.takeIf { it.isNotBlank() },
+                session = session
+            )
+        }.onFailure { e -> Log.e(TAG, "AccountManager sharing upsert failed", e) }
+    }
+
+    private companion object {
+        const val TAG = "AppBootstrap"
     }
 }
