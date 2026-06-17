@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Гомдлыг шийдэх</string>
     <string name="staff_appeals_empty">Хүлээгдэж буй давж заалдалт алга</string>
     <string name="staff_appeals_history">Зарын түүх</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Тэмдэглэл</string>
     <string name="staff_appeals_open_sidebar">Хажуугийн самбарыг нээх</string>
     <string name="staff_appeals_reason_label">Худалдагчийн давж заалдсан шалтгаан</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Худалдагчид</string>
     <string name="staff_dashboard_kpi_total_orders">Нийт захиалгууд</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Үгүй</string>
     <string name="staff_dashboard_open_sidebar">Хажуугийн самбарыг нээх</string>
-    <string name="staff_dashboard_order_fallback">Захиалга #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Захиалга #%1$s</string>
     <string name="staff_dashboard_system">Систем</string>
     <string name="staff_dashboard_tab_audit">Аудит</string>
     <string name="staff_dashboard_tab_listings">Зарууд</string>
@@ -248,7 +248,7 @@
     <string name="staff_disputes_empty">Маргаан алга</string>
     <string name="staff_disputes_filter_status_label">Төлөв</string>
     <string name="staff_disputes_history">Маргааны түүх</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Худалдан авагчийн мэдээлэл</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback хураамж</string>
     <string name="staff_disputes_meta_evidence_due">Нотлох баримт ирэх хугацаа</string>
@@ -338,7 +338,7 @@
     <string name="staff_moderation_open_sidebar">Хажуугийн самбарыг нээх</string>
     <string name="staff_moderation_system">Систем</string>
     <string name="staff_moderation_title">Хяналтын лог</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Үйлдэл</string>
     <string name="staff_reports_action_ban">Хэрэглэгчид хориг тавих</string>
     <string name="staff_reports_action_dismiss">Болих</string>
@@ -509,9 +509,9 @@
     <string name="staff_disputes_stripe_product_unacceptable">бараа хүлээн зөвшөөрөхгүй</string>
     <string name="staff_disputes_stripe_subscription_canceled">захиалга цуцлагдсан</string>
     <string name="staff_disputes_stripe_unrecognized">танигдаагүй төлбөр</string>
-    <string name="staff_reports_listing_label">Зар #%1$d</string>
+    <string name="staff_reports_listing_label">Зар #%1$s</string>
     <string name="staff_reports_meta_details">Мэдэгдсэн хүний мэдээлэл</string>
-    <string name="staff_reviews_order_label">захиалга #%1$d</string>
+    <string name="staff_reviews_order_label">захиалга #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s-нд. Энэ үнэлгээг бүрмөсөн устгах уу? Үүнийг буцаах боломжгүй.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Энэ үнэлгээг бүрмөсөн устгах уу? Үүнийг буцаах боломжгүй.</string>
     <string name="staff_team_dialog_search_placeholder">Нэр, хурууны хээ эсвэл ID-аар хайх…</string>

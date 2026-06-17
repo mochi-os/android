@@ -253,8 +253,8 @@
     <string name="market_purchase_download_many">下載你的 %1$d 個檔案。</string>
     <string name="market_purchase_download_one">下載你的檔案。</string>
     <string name="market_purchase_review_from">%1$s 的評論</string>
-    <string name="market_purchases_auction_label">拍賣 #%1$d</string>
-    <string name="market_purchases_order_label">訂單 #%1$d</string>
+    <string name="market_purchases_auction_label">拍賣 #%1$s</string>
+    <string name="market_purchases_order_label">訂單 #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 已退款</string>
     <string name="market_purchases_won_for">以 %1$s 勝出</string>
     <string name="market_rating_reviews">(%1$d 則評論)</string>

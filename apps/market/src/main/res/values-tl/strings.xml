@@ -350,7 +350,7 @@
     <string name="market_purchase_track">I-track ang package</string>
     <string name="market_purchases_complete_purchase">Kumpletuhin ang pagbili</string>
     <string name="market_purchases_empty">Walang pagbili</string>
-    <string name="market_purchases_order_label">Order #%1$d</string>
+    <string name="market_purchases_order_label">Order #%1$s</string>
     <string name="market_purchases_title">Mga Pagbili</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">Wala pang review</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">I-download ang iyong %1$d file sa ibaba.</string>
     <string name="market_purchase_download_one">I-download ang iyong file sa ibaba.</string>
     <string name="market_purchase_review_from">Review mula kay %1$s</string>
-    <string name="market_purchases_auction_label">Auction #%1$d</string>
+    <string name="market_purchases_auction_label">Auction #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s na-refund</string>
     <string name="market_purchases_won_for">Napanalunan sa halagang %1$s</string>
     <string name="market_refund_dialog_amount_help">Iwanang blanko para i-refund ang buong order.</string>

@@ -356,7 +356,7 @@
     <string name="market_purchase_track">Rekja sendingu</string>
     <string name="market_purchases_complete_purchase">Ljúka kaupum</string>
     <string name="market_purchases_empty">Engin kaup</string>
-    <string name="market_purchases_order_label">Pöntun #%1$d</string>
+    <string name="market_purchases_order_label">Pöntun #%1$s</string>
     <string name="market_purchases_title">Kaup</string>
     <string name="market_rating_label">Einkunn</string>
     <string name="market_rating_no_reviews">Engar umsagnir ennþá</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Sæktu %1$d skrárnar þínar hér að neðan.</string>
     <string name="market_purchase_download_one">Sæktu skrána þína hér að neðan.</string>
     <string name="market_purchase_review_from">Umsögn frá %1$s</string>
-    <string name="market_purchases_auction_label">Uppboð #%1$d</string>
+    <string name="market_purchases_auction_label">Uppboð #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s endurgreitt</string>
     <string name="market_purchases_won_for">Unnið á %1$s</string>
     <string name="market_refund_dialog_amount_help">Skildu eftir autt til að endurgreiða alla pöntunina.</string>

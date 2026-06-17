@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Landelela umthwalo</string>
     <string name="market_purchases_complete_purchase">Gqibezela ukuthenga</string>
     <string name="market_purchases_empty">Akukho ntengo zenziwe</string>
-    <string name="market_purchases_order_label">I-oda #%1$d</string>
+    <string name="market_purchases_order_label">I-oda #%1$s</string>
     <string name="market_purchases_title">Iintengo</string>
     <string name="market_rating_label">Ireyithingi</string>
     <string name="market_rating_no_reviews">Akukho zimvavanyo okwangoku</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Khuphela iifayile zakho ezi-%1$d ngezantsi.</string>
     <string name="market_purchase_download_one">Khuphela ifayile yakho ngezantsi.</string>
     <string name="market_purchase_review_from">Uphononongo oluvela ku-%1$s</string>
-    <string name="market_purchases_auction_label">Ifandesi #%1$d</string>
+    <string name="market_purchases_auction_label">Ifandesi #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ebuyiselweyo</string>
     <string name="market_purchases_won_for">Iphunyelelwe nge-%1$s</string>
     <string name="market_refund_dialog_amount_help">Yishiye ingenanto ukuze ubuyisele i-oda lonke.</string>

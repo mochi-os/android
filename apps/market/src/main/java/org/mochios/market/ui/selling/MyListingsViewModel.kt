@@ -60,7 +60,7 @@ data class MyListingsUiState(
     val categories: List<Category> = emptyList(),
 
     /** Listing currently in-flight for a delete or relist mutation. */
-    val mutatingId: Long? = null,
+    val mutatingId: String? = null,
     /** Per-action error message used for inline toast routing. */
     val mutationError: MochiError? = null,
 )
@@ -70,7 +70,7 @@ data class MyListingsUiState(
  * navigation triggers that we don't want to bake into the persistent state.
  */
 sealed class MyListingsEvent {
-    data class NavigateToEdit(val listingId: Long) : MyListingsEvent()
+    data class NavigateToEdit(val listingId: String) : MyListingsEvent()
     data class Toast(val message: String) : MyListingsEvent()
 }
 

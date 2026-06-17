@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d försäljningar</string>
     <string name="market_profile_sales_count">%1$d försäljningar</string>
     <string name="market_purchase_dispute_response">Säljarens svar</string>
-    <string name="market_purchases_order_label">Beställning #%1$d</string>
+    <string name="market_purchases_order_label">Beställning #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Berätta om dig själv för köpare…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Ladda ned dina %1$d filer nedan.</string>
     <string name="market_purchase_download_one">Ladda ned din fil nedan.</string>
     <string name="market_purchase_review_from">Omdöme från %1$s</string>
-    <string name="market_purchases_auction_label">Auktion nr %1$d</string>
+    <string name="market_purchases_auction_label">Auktion nr %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s återbetalat</string>
     <string name="market_purchases_won_for">Vunnen för %1$s</string>
     <string name="market_rating_reviews">(%1$d recensioner)</string>

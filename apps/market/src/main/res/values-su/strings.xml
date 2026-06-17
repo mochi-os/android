@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Lacak paket</string>
     <string name="market_purchases_complete_purchase">Réngsékeun pamayaran</string>
     <string name="market_purchases_empty">Teu aya pameseran</string>
-    <string name="market_purchases_order_label">Pesenan #%1$d</string>
+    <string name="market_purchases_order_label">Pesenan #%1$s</string>
     <string name="market_purchases_title">Pameseran</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">Tacan aya ulasan</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Unduh %1$d berkas anjeun di handap.</string>
     <string name="market_purchase_download_one">Unduh berkas anjeun di handap.</string>
     <string name="market_purchase_review_from">Tinjauan ti %1$s</string>
-    <string name="market_purchases_auction_label">Lélang #%1$d</string>
+    <string name="market_purchases_auction_label">Lélang #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s dibalikkeun</string>
     <string name="market_purchases_won_for">Meunang ku %1$s</string>
     <string name="market_refund_dialog_amount_help">Kosongkeun pikeun mulangkeun sakabéh pesenan.</string>

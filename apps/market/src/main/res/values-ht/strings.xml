@@ -363,7 +363,7 @@
     <string name="market_purchase_track">Track pake</string>
     <string name="market_purchases_complete_purchase">Konplete acha</string>
     <string name="market_purchases_empty">Pa gen acha</string>
-    <string name="market_purchases_order_label">Kòmand #%1$d</string>
+    <string name="market_purchases_order_label">Kòmand #%1$s</string>
     <string name="market_purchases_title">Acha yo</string>
     <string name="market_rating_label">Evalyasyon</string>
     <string name="market_rating_no_reviews">Poko gen revizyon</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Telechaje %1$d fichye ou yo anba a.</string>
     <string name="market_purchase_download_one">Telechaje fichye ou a anba a.</string>
     <string name="market_purchase_review_from">Revizyon ki soti nan men %1$s</string>
-    <string name="market_purchases_auction_label">Lavant ozanchè #%1$d</string>
+    <string name="market_purchases_auction_label">Lavant ozanchè #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ranbouse</string>
     <string name="market_purchases_won_for">Genyen pou %1$s</string>
     <string name="market_refund_dialog_amount_help">Kite vid pou ranbouse tout kòmand la.</string>

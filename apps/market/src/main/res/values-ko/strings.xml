@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d건의 판매</string>
     <string name="market_profile_sales_count">%1$d건의 판매</string>
     <string name="market_purchase_dispute_response">판매자 응답</string>
-    <string name="market_purchases_order_label">주문 #%1$d</string>
+    <string name="market_purchases_order_label">주문 #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">구매자에게 자신을 소개하세요…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">아래에서 파일 %1$d개를 다운로드하세요.</string>
     <string name="market_purchase_download_one">아래에서 파일을 다운로드하세요.</string>
     <string name="market_purchase_review_from">%1$s님의 리뷰</string>
-    <string name="market_purchases_auction_label">경매 #%1$d</string>
+    <string name="market_purchases_auction_label">경매 #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 환불됨</string>
     <string name="market_purchases_won_for">%1$s에 낙찰</string>
     <string name="market_rating_reviews">(리뷰 %1$d개)</string>

@@ -27,8 +27,8 @@
     <string name="market_price_per_month">%1$s / jyut6</string>
     <string name="market_price_per_year">%1$s / nin4</string>
     <string name="market_profile_sales_count">%1$d gin6 sou1sau3</string>
-    <string name="market_purchases_auction_label">Paak3maai6 #%1$d</string>
-    <string name="market_purchases_order_label">Deng6daan1 #%1$d</string>
+    <string name="market_purchases_auction_label">Paak3maai6 #%1$s</string>
+    <string name="market_purchases_order_label">Deng6daan1 #%1$s</string>
     <string name="market_rating_reviews">(%1$d ping4leon6)</string>
     <string name="market_checkout_address_name">名稱</string>
     <string name="market_back">返回</string>

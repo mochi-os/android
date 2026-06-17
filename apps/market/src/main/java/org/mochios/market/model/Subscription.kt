@@ -11,8 +11,8 @@ import com.google.gson.annotations.SerializedName
  * the subscription was cancelled (0 if active).
  */
 data class Subscription(
-    val id: Long = 0,
-    val listing: Long = 0,
+    val id: String = "",
+    val listing: String = "",
     val buyer: String = "",
     val seller: String = "",
     val stripe: String = "",

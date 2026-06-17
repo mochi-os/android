@@ -351,7 +351,7 @@
     <string name="market_purchase_track">Lorg pasgan</string>
     <string name="market_purchases_complete_purchase">Crìochnaich an ceannach</string>
     <string name="market_purchases_empty">Gun cheannach</string>
-    <string name="market_purchases_order_label">Òrdugh #%1$d</string>
+    <string name="market_purchases_order_label">Òrdugh #%1$s</string>
     <string name="market_purchases_title">Ceannachdan</string>
     <string name="market_rating_label">Rangadh</string>
     <string name="market_rating_no_reviews">Chan eil lèirmheasan ann fhathast</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Luchdaich a-nuas na %1$d faidhlichean agad gu h-ìosal.</string>
     <string name="market_purchase_download_one">Luchdaich a-nuas am faidhle agad gu h-ìosal.</string>
     <string name="market_purchase_review_from">Lèirmheas o %1$s</string>
-    <string name="market_purchases_auction_label">Rop #%1$d</string>
+    <string name="market_purchases_auction_label">Rop #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s air ath-dhìoladh</string>
     <string name="market_purchases_won_for">Air a bhuannachadh airson %1$s</string>
     <string name="market_refund_dialog_amount_help">Fàg bàn gus an òrdugh slàn ath-dhìoladh.</string>

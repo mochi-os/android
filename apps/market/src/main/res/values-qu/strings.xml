@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Paqueteta qhaway</string>
     <string name="market_purchases_complete_purchase">Rantiy tukuy</string>
     <string name="market_purchases_empty">Mana rantiykuna</string>
-    <string name="market_purchases_order_label">Mañakuy #%1$d</string>
+    <string name="market_purchases_order_label">Mañakuy #%1$s</string>
     <string name="market_purchases_title">Rantiykuna</string>
     <string name="market_rating_label">Reseña puntaje</string>
     <string name="market_rating_no_reviews">Manaraq reseñakuna</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">%1$d archivoykikunata urayman apaykachay.</string>
     <string name="market_purchase_download_one">Archivoykita urayman apaykachay.</string>
     <string name="market_purchase_review_from">%1$s nisqamanta qhawariy</string>
-    <string name="market_purchases_auction_label">Remate #%1$d</string>
+    <string name="market_purchases_auction_label">Remate #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s kutichisqa</string>
     <string name="market_purchases_won_for">%1$s qullqipi llalliy</string>
     <string name="market_refund_dialog_amount_help">Lluy ordenta kutichinaykipaq ch\'usaqta saqiy.</string>

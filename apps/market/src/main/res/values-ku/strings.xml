@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Pakêtê bişopîne</string>
     <string name="market_purchases_complete_purchase">Kirrîna xwe temam bike</string>
     <string name="market_purchases_empty">Tu kirîn tune</string>
-    <string name="market_purchases_order_label">Fermandar #%1$d</string>
+    <string name="market_purchases_order_label">Fermandar #%1$s</string>
     <string name="market_purchases_title">Kirîn</string>
     <string name="market_rating_label">Nirxandin</string>
     <string name="market_rating_no_reviews">Hêj tu nirxandin tune</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Pelên xwe yên %1$d li jêr daxe.</string>
     <string name="market_purchase_download_one">Pela xwe li jêr daxe.</string>
     <string name="market_purchase_review_from">Nirxandin ji %1$s</string>
-    <string name="market_purchases_auction_label">Mezad #%1$d</string>
+    <string name="market_purchases_auction_label">Mezad #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s hate vegerandin</string>
     <string name="market_purchases_won_for">Bi %1$s hate birin</string>
     <string name="market_refund_dialog_amount_help">Vala bihêle da ku tevahiya fermanê were vegerandin.</string>

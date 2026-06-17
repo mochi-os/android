@@ -351,7 +351,7 @@
     <string name="market_purchase_track">Топтомду көзөмөлдөө</string>
     <string name="market_purchases_complete_purchase">Сатып алууну аяктоо</string>
     <string name="market_purchases_empty">Сатып алуулар жок</string>
-    <string name="market_purchases_order_label">Заказ #%1$d</string>
+    <string name="market_purchases_order_label">Заказ #%1$s</string>
     <string name="market_purchases_title">Сатып алуулар</string>
     <string name="market_rating_label">Рейтинг</string>
     <string name="market_rating_no_reviews">Пикирлер азырынча жок</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Төмөндө %1$d файлыңызды жүктөп алыңыз.</string>
     <string name="market_purchase_download_one">Төмөндө файлыңызды жүктөп алыңыз.</string>
     <string name="market_purchase_review_from">%1$s баалоосу</string>
-    <string name="market_purchases_auction_label">Аукцион №%1$d</string>
+    <string name="market_purchases_auction_label">Аукцион №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s кайтарылды</string>
     <string name="market_purchases_won_for">%1$s үчүн утулду</string>
     <string name="market_refund_dialog_amount_help">Толук буйрутманы кайтаруу үчүн бош калтырыңыз.</string>

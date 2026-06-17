@@ -350,7 +350,7 @@
     <string name="market_purchase_track">പാക്കേജ് ട്രാക്ക് ചെയ്യുക</string>
     <string name="market_purchases_complete_purchase">വാങ്ങൽ പൂർത്തിയാക്കുക</string>
     <string name="market_purchases_empty">വാങ്ങലുകളൊന്നുമില്ല</string>
-    <string name="market_purchases_order_label">ഓർഡർ #%1$d</string>
+    <string name="market_purchases_order_label">ഓർഡർ #%1$s</string>
     <string name="market_purchases_title">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="market_rating_label">കോളങ്ങൾ പുനഃക്രമീകരിക്കുക</string>
     <string name="market_rating_no_reviews">അവലോകനങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">നിങ്ങളുടെ %1$d ഫയലുകൾ താഴെ ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="market_purchase_download_one">നിങ്ങളുടെ ഫയൽ താഴെ ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="market_purchase_review_from">%1$s ൽ നിന്നുള്ള അവലോകനം</string>
-    <string name="market_purchases_auction_label">ലേലം #%1$d</string>
+    <string name="market_purchases_auction_label">ലേലം #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s തിരികെ നൽകി</string>
     <string name="market_purchases_won_for">%1$s ന് നേടി</string>
     <string name="market_refund_dialog_amount_help">മുഴുവൻ ഓർഡറും തിരികെ നൽകാൻ ശൂന്യമായി വിടുക.</string>

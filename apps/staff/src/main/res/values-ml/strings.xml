@@ -50,8 +50,8 @@
     <string name="staff_appeals_dialog_title">അപ്പീൽ തീരുമാനിക്കുക</string>
     <string name="staff_appeals_empty">തീർപ്പുകൽപ്പിക്കാത്ത അപ്പീലുകളൊന്നുമില്ല</string>
     <string name="staff_appeals_history">ലിസ്റ്റിംഗ് ചരിത്രം</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">കുറിപ്പുകൾ</string>
     <string name="staff_appeals_open_sidebar">സൈഡ്‌ബാർ തുറക്കുക</string>
     <string name="staff_appeals_submit">സമർപ്പിക്കുക</string>
@@ -221,7 +221,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">വിൽപ്പനക്കാർ</string>
     <string name="staff_dashboard_kpi_total_orders">ആകെ ഓർഡറുകൾ</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">ഇല്ല</string>
     <string name="staff_dashboard_open_sidebar">സൈഡ്‌ബാർ തുറക്കുക</string>
     <string name="staff_dashboard_system">സിസ്റ്റം</string>
@@ -239,7 +239,7 @@
     <string name="staff_disputes_empty">തർക്കങ്ങളൊന്നുമില്ല</string>
     <string name="staff_disputes_filter_status_label">സ്റ്റാറ്റസ്</string>
     <string name="staff_disputes_history">തർക്ക ചരിത്രം</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback ഫീസ്</string>
     <string name="staff_disputes_meta_evidence_due">തെളിവ് സമർപ്പിക്കേണ്ടത്</string>
     <string name="staff_disputes_meta_listing">ലിസ്റ്റിംഗ്</string>
@@ -326,7 +326,7 @@
     <string name="staff_moderation_open_sidebar">സൈഡ്‌ബാർ തുറക്കുക</string>
     <string name="staff_moderation_system">സിസ്റ്റം</string>
     <string name="staff_moderation_title">മോഡറേഷൻ ലോഗ്</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">പ്രവർത്തനം</string>
     <string name="staff_reports_action_ban">ഉപയോക്താവിനെ വിലക്കുക</string>
     <string name="staff_reports_action_dismiss">ഒഴിവാക്കുക</string>
@@ -474,7 +474,7 @@
     <string name="staff_team_toast_role_failed">റോൾ അപ്ഡേറ്റ് ചെയ്യാൻ പരാജയപ്പെട്ടു</string>
     <string name="staff_team_toast_role_updated">റോൾ അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">ഓർഡർ #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ഓർഡർ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">കാരണം (നിർബന്ധമല്ല)</string>
     <string name="staff_accounts_sales">%1$d വിൽപ്പനകൾ</string>
@@ -507,9 +507,9 @@
     <string name="staff_disputes_stripe_unrecognized">തിരിച്ചറിയാത്ത ചാർജ്</string>
     <string name="staff_listings_seller_unknown">അജ്ഞാത വിൽപ്പനക്കാരൻ</string>
     <string name="staff_listings_seller_verified">സ്ഥിരീകരിച്ച വിൽപ്പനക്കാരൻ</string>
-    <string name="staff_reports_listing_label">ലിസ്റ്റിംഗ് #%1$d</string>
+    <string name="staff_reports_listing_label">ലിസ്റ്റിംഗ് #%1$s</string>
     <string name="staff_reports_meta_details">റിപ്പോർട്ടറുടെ വിശദാംശങ്ങൾ</string>
-    <string name="staff_reviews_order_label">ഓർഡർ #%1$d</string>
+    <string name="staff_reviews_order_label">ഓർഡർ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s-ന്. ഈ അവലോകനം ശാശ്വതമായി ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ഈ അവലോകനം ശാശ്വതമായി ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="staff_team_dialog_search_placeholder">പേര്, ഫിംഗർപ്രിന്റ്, അല്ലെങ്കിൽ ID പ്രകാരം തിരയുക…</string>

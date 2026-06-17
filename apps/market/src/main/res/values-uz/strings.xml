@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Paketni kuzatish</string>
     <string name="market_purchases_complete_purchase">Xaridni yakunlash</string>
     <string name="market_purchases_empty">Xaridlar yoʻq</string>
-    <string name="market_purchases_order_label">Buyurtma #%1$d</string>
+    <string name="market_purchases_order_label">Buyurtma #%1$s</string>
     <string name="market_purchases_title">Xaridlar</string>
     <string name="market_rating_label">Baholash</string>
     <string name="market_rating_no_reviews">Hozircha sharhlar yoʻq</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Quyida %1$d ta faylingizni yuklab oling.</string>
     <string name="market_purchase_download_one">Quyida faylingizni yuklab oling.</string>
     <string name="market_purchase_review_from">%1$s sharhi</string>
-    <string name="market_purchases_auction_label">Auksion #%1$d</string>
+    <string name="market_purchases_auction_label">Auksion #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s qaytarildi</string>
     <string name="market_purchases_won_for">%1$s ga yutib olindi</string>
     <string name="market_refund_dialog_amount_help">To\'liq buyurtmani qaytarish uchun bo\'sh qoldiring.</string>

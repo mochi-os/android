@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Archeb</string>
     <string name="market_purchase_total">Cyfanswm</string>
     <string name="market_purchase_track">Olrhain pecyn</string>
-    <string name="market_purchases_auction_label">Arwerthiant #%1$d</string>
+    <string name="market_purchases_auction_label">Arwerthiant #%1$s</string>
     <string name="market_purchases_complete_purchase">Cwblhau pryniant</string>
     <string name="market_purchases_empty">Dim prynu</string>
-    <string name="market_purchases_order_label">Archeb #%1$d</string>
+    <string name="market_purchases_order_label">Archeb #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s wedi\'i ad-dalu</string>
     <string name="market_purchases_title">Pryniannau</string>
     <string name="market_purchases_won_for">Enillwyd am %1$s</string>

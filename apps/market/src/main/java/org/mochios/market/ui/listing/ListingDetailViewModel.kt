@@ -81,10 +81,10 @@ class ListingDetailViewModel @Inject constructor(
     val snackbar: SharedFlow<ListingDetailSnackbar> = _snackbar.asSharedFlow()
 
     /** Carries the new listing id after a successful relist so the screen can navigate to its editor. */
-    private val _navigateToEdit = MutableSharedFlow<Long>(extraBufferCapacity = 1)
-    val navigateToEdit: SharedFlow<Long> = _navigateToEdit.asSharedFlow()
+    private val _navigateToEdit = MutableSharedFlow<String>(extraBufferCapacity = 1)
+    val navigateToEdit: SharedFlow<String> = _navigateToEdit.asSharedFlow()
 
-    private var currentId: Long = 0
+    private var currentId: String = ""
 
     init {
         loadCategories()
@@ -104,30 +104,30 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun load(id: String) {
-        val parsed = id.toLongOrNull() ?: run {
+        if (id.isBlank()) {
             _state.value = _state.value.copy(
                 isLoading = false,
                 error = MochiError.Unknown("Invalid listing id"),
             )
             return
         }
-        currentId = parsed
+        currentId = id
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
-                val resp = repository.getListing(parsed)
+                val resp = repository.getListing(id)
                 // Photos are best-effort: the detail payload only embeds the
                 // primary `photo`, so the full set comes from the public
                 // `-/photos/list` endpoint. A failure just falls back to the
                 // embedded photo (or an empty carousel). Sorted by rank so the
                 // carousel order matches the seller's arrangement.
                 val photos = runCatching {
-                    repository.listPhotos(parsed).sortedBy { it.rank }
+                    repository.listPhotos(id).sortedBy { it.rank }
                 }.getOrDefault(emptyList())
                 // Audit fetch is best-effort: regular buyers don't have read
                 // access, and a 403 must not blow up the detail render.
                 val audit = runCatching {
-                    repository.auditObject(kind = "listing", objectId = parsed.toString()).audit
+                    repository.auditObject(kind = "listing", objectId = id).audit
                 }.getOrDefault(emptyList())
                 // Seller reviews are best-effort: a fetch failure (or a seller
                 // with no public reviews) just hides the section. `role` is the
@@ -153,7 +153,7 @@ class ListingDetailViewModel @Inject constructor(
                 // Record the visit for the "recently viewed" rail. Best-effort —
                 // a write failure here must not surface as a load error.
                 try {
-                    recentStore.push(parsed.toString())
+                    recentStore.push(id)
                 } catch (_: Exception) {
                     // ignore
                 }
@@ -169,7 +169,7 @@ class ListingDetailViewModel @Inject constructor(
 
     fun toggleSave() {
         val listing = _state.value.listing?.listing ?: return
-        if (listing.id == 0L) return
+        if (listing.id.isEmpty()) return
         viewModelScope.launch {
             try {
                 savedRepository.toggle(listing)
@@ -185,16 +185,16 @@ class ListingDetailViewModel @Inject constructor(
         onSuccess: () -> Unit = {},
     ) {
         val id = currentId
-        if (id == 0L) return
+        if (id.isEmpty()) return
         viewModelScope.launch {
             try {
                 repository.createReport(
-                    target = id.toString(),
+                    target = id,
                     type = "listing",
                     reason = reason,
                     details = details.ifBlank { null },
                 )
-                reportedStore.markReported(id.toString())
+                reportedStore.markReported(id)
                 _snackbar.emit(
                     ListingDetailSnackbar(
                         org.mochios.market.R.string.market_report_dialog_success,
@@ -242,7 +242,7 @@ class ListingDetailViewModel @Inject constructor(
                 }
                 _snackbar.emit(snackbar)
                 // Refresh so the new high bid and history surface immediately.
-                load(currentId.toString())
+                load(currentId)
                 onSuccess()
             } catch (e: Exception) {
                 _state.value = _state.value.copy(error = e.toMochiError())
@@ -257,7 +257,7 @@ class ListingDetailViewModel @Inject constructor(
 
     fun relistListing() {
         val id = currentId
-        if (id == 0L) return
+        if (id.isEmpty()) return
         viewModelScope.launch {
             try {
                 val resp = repository.relistListing(id)
@@ -274,7 +274,7 @@ class ListingDetailViewModel @Inject constructor(
     }
 
     fun isSaved(): Flow<Boolean> =
-        savedRepository.observeIds().map { set -> currentId.toString() in set }
+        savedRepository.observeIds().map { set -> currentId in set }
 
     fun isReported(): Flow<Boolean> =
         reportedStore.observe().map { set -> currentId.toString() in set }

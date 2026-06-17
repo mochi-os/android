@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d eladás</string>
     <string name="market_profile_sales_count">%1$d eladás</string>
     <string name="market_purchase_dispute_response">Eladó válasza</string>
-    <string name="market_purchases_order_label">Rendelés #%1$d</string>
+    <string name="market_purchases_order_label">Rendelés #%1$s</string>
 
     <string name="market_editor_zone_country_fr">Franciaország</string>
     <string name="market_editor_zone_country_gb">Egyesült Királyság</string>
@@ -524,7 +524,7 @@
     <string name="market_purchase_download_many">Töltse le a(z) %1$d fájlt alább.</string>
     <string name="market_purchase_download_one">Töltse le a fájlt alább.</string>
     <string name="market_purchase_review_from">Értékelés tőle: %1$s</string>
-    <string name="market_purchases_auction_label">Aukció #%1$d</string>
+    <string name="market_purchases_auction_label">Aukció #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s visszatérítve</string>
     <string name="market_purchases_won_for">Megnyerve ennyiért: %1$s</string>
     <string name="market_rating_reviews">(%1$d értékelés)</string>

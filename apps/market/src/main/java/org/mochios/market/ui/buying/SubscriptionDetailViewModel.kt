@@ -48,7 +48,7 @@ class SubscriptionDetailViewModel @Inject constructor(
     private val repository: MarketRepository,
 ) : ViewModel() {
 
-    val subscriptionId: Long = savedStateHandle.get<String>("id")?.toLongOrNull() ?: 0L
+    val subscriptionId: String = savedStateHandle.get<String>("id").orEmpty()
 
     private val _uiState = MutableStateFlow(SubscriptionDetailUiState())
     val uiState: StateFlow<SubscriptionDetailUiState> = _uiState.asStateFlow()
@@ -72,7 +72,7 @@ class SubscriptionDetailViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val sub = findSubscription(subscriptionId)
-                val listing = sub?.listing?.takeIf { it > 0 }
+                val listing = sub?.listing?.takeIf { it.isNotEmpty() }
                     ?.let {
                         runCatching { repository.getListing(it).listing }.getOrNull()
                     }
@@ -101,8 +101,8 @@ class SubscriptionDetailViewModel @Inject constructor(
      * reached. Returns `null` when the id can't be resolved — the
      * screen then renders the "not found" state.
      */
-    private suspend fun findSubscription(id: Long): Subscription? {
-        if (id <= 0L) return null
+    private suspend fun findSubscription(id: String): Subscription? {
+        if (id.isEmpty()) return null
         var page = 1
         var seen = 0L
         var total = Long.MAX_VALUE

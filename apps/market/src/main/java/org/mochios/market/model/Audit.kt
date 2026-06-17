@@ -13,8 +13,8 @@ package org.mochios.market.model
  * names refer to the same wire shape.
  */
 data class AuditEvent(
-    val id: Long = 0,
-    val event: Long = 0,
+    val id: String = "",
+    val event: String = "",
     val app: String = "",
     val kind: String = "",
     val `object`: String = "",

@@ -350,7 +350,7 @@
     <string name="market_purchase_track">بسته تعقیب کړئ</string>
     <string name="market_purchases_complete_purchase">اخیستنه بشپړه کړئ</string>
     <string name="market_purchases_empty">هیڅ پیرودنې نشته</string>
-    <string name="market_purchases_order_label">امر #%1$d</string>
+    <string name="market_purchases_order_label">امر #%1$s</string>
     <string name="market_purchases_title">پیرودنې</string>
     <string name="market_rating_label">درجه بندي</string>
     <string name="market_rating_no_reviews">تر اوسه هیڅ بیاکتنې نشته</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">خپل %1$d دوتنې لاندې ډاونلوډ کړئ.</string>
     <string name="market_purchase_download_one">خپله دوتنه لاندې ډاونلوډ کړئ.</string>
     <string name="market_purchase_review_from">بیاکتنه له %1$s څخه</string>
-    <string name="market_purchases_auction_label">لیلام #%1$d</string>
+    <string name="market_purchases_auction_label">لیلام #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s بیرته ورکړل شو</string>
     <string name="market_purchases_won_for">وګټل شو په %1$s</string>
     <string name="market_refund_dialog_amount_help">د بشپړ امر د بیرته ورکړې لپاره خالي پرېږدئ.</string>

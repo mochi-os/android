@@ -343,7 +343,7 @@
     <string name="market_purchase_track">Track paquete</string>
     <string name="market_purchases_complete_purchase">Eipysyrõ jogua</string>
     <string name="market_purchases_empty">Ndaipóri jejogua</string>
-    <string name="market_purchases_order_label">Pedido #%1$d</string>
+    <string name="market_purchases_order_label">Pedido #%1$s</string>
     <string name="market_purchases_title">Jejoguakuéra</string>
     <string name="market_rating_label">Ñembyeko\'ói</string>
     <string name="market_rating_no_reviews">Ndaipóri reseñas gueteri</string>
@@ -617,7 +617,7 @@
     <string name="market_purchase_download_many">Emboguejy ne %1$d marandurenda yvýpe.</string>
     <string name="market_purchase_download_one">Emboguejy ne marandurenda yvýpe.</string>
     <string name="market_purchase_review_from">Jechakuaa %1$s rehegua</string>
-    <string name="market_purchases_auction_label">Ñemuha hepyme\'ẽ #%1$d</string>
+    <string name="market_purchases_auction_label">Ñemuha hepyme\'ẽ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ojejevyjey</string>
     <string name="market_purchases_won_for">Ojepyhy %1$s rehe</string>
     <string name="market_refund_dialog_amount_help">Eheja nandi rejevy haguã opa ñemuha.</string>

@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Geejjiba hordofi</string>
     <string name="market_purchases_complete_purchase">Bittaa xumuri</string>
     <string name="market_purchases_empty">Bittaa hin jiru</string>
-    <string name="market_purchases_order_label">Aja\'a #%1$d</string>
+    <string name="market_purchases_order_label">Aja\'a #%1$s</string>
     <string name="market_purchases_title">Bittaa</string>
     <string name="market_rating_label">Sadarkeessuu</string>
     <string name="market_rating_no_reviews">Hanga ammaatti gamaaggamni hin jiru</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Faayiloota kee %1$d gadi buusi.</string>
     <string name="market_purchase_download_one">Faayilii kee gadi buusi.</string>
     <string name="market_purchase_review_from">Madaallii %1$s irraa</string>
-    <string name="market_purchases_auction_label">Caalbaasii #%1$d</string>
+    <string name="market_purchases_auction_label">Caalbaasii #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s deebi\'eera</string>
     <string name="market_purchases_won_for">%1$s\'tti injifatame</string>
     <string name="market_refund_dialog_amount_help">Ajaja guutuu deebisuuf duwwaa dhiisi.</string>

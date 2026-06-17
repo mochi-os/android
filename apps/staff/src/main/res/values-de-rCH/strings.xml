@@ -124,8 +124,8 @@
     <string name="staff_appeals_dialog_title">Einspruch entscheiden</string>
     <string name="staff_appeals_empty">Keine ausstehenden Einsprüche</string>
     <string name="staff_appeals_history">Inseratverlauf</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notizen</string>
     <string name="staff_appeals_reason_label">Begründung des Verkäufers</string>
     <string name="staff_appeals_submit">Übermitteln</string>
@@ -278,9 +278,9 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Verkäufer</string>
     <string name="staff_dashboard_kpi_total_orders">Bestellungen gesamt</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nein</string>
-    <string name="staff_dashboard_order_fallback">Bestellung #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Bestellung #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Inserate</string>
@@ -295,7 +295,7 @@
     <string name="staff_disputes_dialog_title_view">Streitfall ansehen</string>
     <string name="staff_disputes_empty">Keine Streitfälle</string>
     <string name="staff_disputes_history">Streitfall-Verlauf</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Angaben des Käufers</string>
     <string name="staff_disputes_meta_chargeback_fee">Rückbuchungsgebühr</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">von Stripe einbehalten</string>
@@ -389,7 +389,7 @@
     <string name="staff_moderation_listing_filter_placeholder">Inserats-ID</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_title">Moderationsprotokoll</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aktion</string>
     <string name="staff_reports_action_ban">Person sperren</string>
     <string name="staff_reports_action_failed">Meldung konnte nicht bearbeitet werden</string>
@@ -402,7 +402,7 @@
     <string name="staff_reports_dialog_title_view">Meldung</string>
     <string name="staff_reports_empty">Keine Meldungen</string>
     <string name="staff_reports_history">Meldungsverlauf</string>
-    <string name="staff_reports_listing_label">Inserat #%1$d</string>
+    <string name="staff_reports_listing_label">Inserat #%1$s</string>
     <string name="staff_reports_meta_details">Angaben zur meldenden Person</string>
     <string name="staff_reports_meta_price">Preis</string>
     <string name="staff_reports_meta_reporter">Meldende Person</string>
@@ -435,7 +435,7 @@
     <string name="staff_reviews_filter_hidden">Ausgeblendet</string>
     <string name="staff_reviews_filter_published">Veröffentlicht</string>
     <string name="staff_reviews_filter_removed">Entfernt</string>
-    <string name="staff_reviews_order_label">Bestellung #%1$d</string>
+    <string name="staff_reviews_order_label">Bestellung #%1$s</string>
     <string name="staff_reviews_overflow_actions">Aktionen</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s am %3$s. Diese Bewertung dauerhaft löschen? Dies kann nicht rückgängig gemacht werden.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Diese Bewertung dauerhaft löschen? Dies kann nicht rückgängig gemacht werden.</string>

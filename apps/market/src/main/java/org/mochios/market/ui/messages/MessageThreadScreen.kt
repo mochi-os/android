@@ -94,13 +94,13 @@ fun MessageThreadScreen(
     // the resolved thread id from state rather than the raw arg — the socket
     // attaches as soon as the thread is created/loaded. The helper closes the
     // socket on dispose, so navigating away unwinds it for us.
-    val threadId = state.thread?.id?.takeIf { it != 0L }
+    val threadId = state.thread?.id?.takeIf { it.isNotEmpty() }
     val socket = rememberGameWebSocket(
         gameKey = threadId?.let { "market-thread-$it" },
     )
     LaunchedEffect(socket, threadId) {
         socket?.events?.collectLatest { event ->
-            val message = event.toMessage(threadId ?: 0L) ?: return@collectLatest
+            val message = event.toMessage(threadId ?: "") ?: return@collectLatest
             viewModel.ingestRemote(message)
         }
     }
@@ -345,10 +345,10 @@ private fun ComposeRow(
  * for any keyed topic) onto a market [Message]. Returns null for events
  * that aren't message payloads or that lack a body.
  */
-private fun GameWsEvent.toMessage(threadId: Long): Message? {
+private fun GameWsEvent.toMessage(threadId: String): Message? {
     if (type != "message") return null
     val text = body?.takeIf { it.isNotBlank() } ?: return null
-    val rawId = (raw["id"] as? Number)?.toLong() ?: 0L
+    val rawId = raw["id"] as? String ?: ""
     return Message(
         id = rawId,
         thread = threadId,

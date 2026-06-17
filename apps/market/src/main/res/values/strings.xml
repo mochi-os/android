@@ -481,10 +481,10 @@
     <string name="market_purchase_title">Order</string>
     <string name="market_purchase_total">Total</string>
     <string name="market_purchase_track">Track package</string>
-    <string name="market_purchases_auction_label">Auction #%1$d</string>
+    <string name="market_purchases_auction_label">Auction #%1$s</string>
     <string name="market_purchases_complete_purchase">Complete purchase</string>
     <string name="market_purchases_empty">No purchases</string>
-    <string name="market_purchases_order_label">Order #%1$d</string>
+    <string name="market_purchases_order_label">Order #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refunded</string>
     <string name="market_purchases_title">Purchases</string>
     <string name="market_purchases_won_for">Won for %1$s</string>

@@ -18,7 +18,7 @@ import com.google.gson.annotations.SerializedName
  * seller fields.
  */
 data class PendingListing(
-    val id: Long = 0,
+    val id: String = "",
     val seller: String = "",
     val title: String = "",
     val description: String = "",

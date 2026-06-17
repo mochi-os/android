@@ -350,7 +350,7 @@
     <string name="market_purchase_track">பேக்கேஜை கண்காணி</string>
     <string name="market_purchases_complete_purchase">வாங்குதலை முடிக்கவும்</string>
     <string name="market_purchases_empty">வாங்குதல்கள் இல்லை</string>
-    <string name="market_purchases_order_label">ஆர்டர் #%1$d</string>
+    <string name="market_purchases_order_label">ஆர்டர் #%1$s</string>
     <string name="market_purchases_title">வாங்குதல்கள்</string>
     <string name="market_rating_label">மதிப்பீடு</string>
     <string name="market_rating_no_reviews">விமர்சனங்கள் இன்னும் இல்லை</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">கீழே உங்கள் %1$d கோப்புகளை பதிவிறக்கவும்.</string>
     <string name="market_purchase_download_one">கீழே உங்கள் கோப்பைப் பதிவிறக்கவும்.</string>
     <string name="market_purchase_review_from">%1$s இடமிருந்து விமர்சனம்</string>
-    <string name="market_purchases_auction_label">ஏலம் #%1$d</string>
+    <string name="market_purchases_auction_label">ஏலம் #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s திரும்பப் பெறப்பட்டது</string>
     <string name="market_purchases_won_for">%1$s க்கு வென்றது</string>
     <string name="market_refund_dialog_amount_help">முழு ஆர்டரையும் திருப்பித் தர காலியாக விடவும்.</string>

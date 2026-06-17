@@ -350,7 +350,7 @@
     <string name="market_purchase_track">פֿאַרצייכן פּעקל</string>
     <string name="market_purchases_complete_purchase">פֿאַרענדיקט קויף</string>
     <string name="market_purchases_empty">קיין אײַנקויפֿן</string>
-    <string name="market_purchases_order_label">באשטעלונג #%1$d</string>
+    <string name="market_purchases_order_label">באשטעלונג #%1$s</string>
     <string name="market_purchases_title">אײַנקויפֿן</string>
     <string name="market_rating_label">באַוואַרטונג</string>
     <string name="market_rating_no_reviews">נאָך קיין רעצענזיעס</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">אַראָפּלאָדן אײַערע %1$d פֿײַלן אונטן.</string>
     <string name="market_purchase_download_one">אַראָפּלאָדן אײַער פֿײַל אונטן.</string>
     <string name="market_purchase_review_from">רעצענזיע פֿון %1$s</string>
-    <string name="market_purchases_auction_label">ליציטאַציע #%1$d</string>
+    <string name="market_purchases_auction_label">ליציטאַציע #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s צוריקגעצאָלט</string>
     <string name="market_purchases_won_for">געוווּנען פֿאַר %1$s</string>
     <string name="market_refund_dialog_amount_help">לאָזט ליידיק צו צוריקצאָלן די פֿולע באַשטעלונג.</string>

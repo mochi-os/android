@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Amua rufaa</string>
     <string name="staff_appeals_empty">Hakuna rufaa zinazosubiri</string>
     <string name="staff_appeals_history">Historia ya orodha</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Maelezo</string>
     <string name="staff_appeals_open_sidebar">Fungua upau wa kando</string>
     <string name="staff_appeals_reason_label">Sababu ya rufaa ya muuzaji</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Wauzaji</string>
     <string name="staff_dashboard_kpi_total_orders">Jumla ya maagizo</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Hapana</string>
     <string name="staff_dashboard_open_sidebar">Fungua upau wa kando</string>
-    <string name="staff_dashboard_order_fallback">Agizo #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Agizo #%1$s</string>
     <string name="staff_dashboard_system">Mfumo</string>
     <string name="staff_dashboard_tab_audit">Ukaguzi</string>
     <string name="staff_dashboard_tab_listings">Orodha</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Hakuna mizozo</string>
     <string name="staff_disputes_filter_status_label">Hali</string>
     <string name="staff_disputes_history">Historia ya migogoro</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Maelezo ya mnunuzi</string>
     <string name="staff_disputes_meta_chargeback_fee">Ada ya mlipuko</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">imehifadhiwa na Stripe</string>
@@ -346,7 +346,7 @@
     <string name="staff_moderation_open_sidebar">Fungua upau wa kando</string>
     <string name="staff_moderation_system">Mfumo</string>
     <string name="staff_moderation_title">Kumbukumbu ya udhibiti</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Kitendo</string>
     <string name="staff_reports_action_ban">Piga mtumiaji marufuku</string>
     <string name="staff_reports_action_dismiss">Ondoa</string>
@@ -367,7 +367,7 @@
     <string name="staff_reports_filter_status_label">Hali</string>
     <string name="staff_reports_filter_type_label">Aina</string>
     <string name="staff_reports_history">Historia ya ripoti</string>
-    <string name="staff_reports_listing_label">Tangazo #%1$d</string>
+    <string name="staff_reports_listing_label">Tangazo #%1$s</string>
     <string name="staff_reports_meta_details">Maelezo ya mtoa ripoti</string>
     <string name="staff_reports_meta_price">Bei</string>
     <string name="staff_reports_meta_reason">Sababu</string>
@@ -410,7 +410,7 @@
     <string name="staff_reviews_filter_removed">Imeondolewa</string>
     <string name="staff_reviews_filter_status">Hali</string>
     <string name="staff_reviews_open_sidebar">Fungua upau wa kando</string>
-    <string name="staff_reviews_order_label">agizo #%1$d</string>
+    <string name="staff_reviews_order_label">agizo #%1$s</string>
     <string name="staff_reviews_overflow_actions">Vitendo</string>
     <string name="staff_reviews_remove_confirm">Ondoa</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s mnamo %3$s. Futa kabisa hakiki hii? Kitendo hiki hakiwezi kutenduliwa.</string>

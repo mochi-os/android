@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d myyntiä</string>
     <string name="market_profile_sales_count">%1$d myyntiä</string>
     <string name="market_purchase_dispute_response">Myyjän vastaus</string>
-    <string name="market_purchases_order_label">Tilaus #%1$d</string>
+    <string name="market_purchases_order_label">Tilaus #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Kerro ostajille itsestäsi…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Lataa %1$d tiedostoasi alta.</string>
     <string name="market_purchase_download_one">Lataa tiedostosi alta.</string>
     <string name="market_purchase_review_from">Arvostelu käyttäjältä %1$s</string>
-    <string name="market_purchases_auction_label">Huutokauppa #%1$d</string>
+    <string name="market_purchases_auction_label">Huutokauppa #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s palautettu</string>
     <string name="market_purchases_won_for">Voitettu hintaan %1$s</string>
     <string name="market_rating_reviews">(%1$d arvostelua)</string>

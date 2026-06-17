@@ -444,7 +444,7 @@
     <string name="market_listing_detail_sales_count">%1$d salg</string>
     <string name="market_profile_sales_count">%1$d salg</string>
     <string name="market_purchase_dispute_response">Sælgers svar</string>
-    <string name="market_purchases_order_label">Bestilling #%1$d</string>
+    <string name="market_purchases_order_label">Bestilling #%1$s</string>
 
     <string name="market_account_biography_placeholder">Fortæl købere om dig selv…</string>
     <string name="market_account_load_failed">Kunne ikke indlæse kontoen</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Download dine %1$d filer nedenfor.</string>
     <string name="market_purchase_download_one">Download din fil nedenfor.</string>
     <string name="market_purchase_review_from">Anmeldelse fra %1$s</string>
-    <string name="market_purchases_auction_label">Auktion #%1$d</string>
+    <string name="market_purchases_auction_label">Auktion #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refunderet</string>
     <string name="market_purchases_won_for">Vundet for %1$s</string>
     <string name="market_rating_reviews">(%1$d anmeldelser)</string>

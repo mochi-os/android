@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ಪ್ಯಾಕೇಜ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</string>
     <string name="market_purchases_complete_purchase">ಖರೀದಿ ಪೂರ್ಣಗೊಳಿಸಿ</string>
     <string name="market_purchases_empty">ಯಾವುದೇ ಖರೀದಿಗಳಿಲ್ಲ</string>
-    <string name="market_purchases_order_label">ಆದೇಶ #%1$d</string>
+    <string name="market_purchases_order_label">ಆದೇಶ #%1$s</string>
     <string name="market_purchases_title">ಖರೀದಿಗಳು</string>
     <string name="market_rating_label">ರೇಟಿಂಗ್</string>
     <string name="market_rating_no_reviews">ಇನ್ನೂ ಯಾವುದೇ ರಿವ್ಯೂಗಳಿಲ್ಲ</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">ನಿಮ್ಮ %1$d ಫೈಲ್‌ಗಳನ್ನು ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="market_purchase_download_one">ನಿಮ್ಮ ಫೈಲ್ ಅನ್ನು ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="market_purchase_review_from">%1$s ರಿಂದ ವಿಮರ್ಶೆ</string>
-    <string name="market_purchases_auction_label">ಹರಾಜು #%1$d</string>
+    <string name="market_purchases_auction_label">ಹರಾಜು #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ಮರುಪಾವತಿಸಲಾಗಿದೆ</string>
     <string name="market_purchases_won_for">%1$s ಗೆ ಗೆದ್ದಿದೆ</string>
     <string name="market_refund_dialog_amount_help">ಪೂರ್ಣ ಆದೇಶವನ್ನು ಮರುಪಾವತಿಸಲು ಖಾಲಿ ಬಿಡಿ.</string>

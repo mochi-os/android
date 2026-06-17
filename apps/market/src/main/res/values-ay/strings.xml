@@ -370,7 +370,7 @@
     <string name="market_purchase_track">Trackiyasa</string>
     <string name="market_purchases_complete_purchase">Alaña tukuyaña</string>
     <string name="market_purchases_empty">Jan alasiwinaka</string>
-    <string name="market_purchases_order_label">Pedido #%1$d</string>
+    <string name="market_purchases_order_label">Pedido #%1$s</string>
     <string name="market_purchases_title">Alasiwinaka</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">Janira reviewanaka</string>
@@ -621,7 +621,7 @@
     <string name="market_purchase_download_many">Aka aynacharu %1$d arkivunakam apsuma.</string>
     <string name="market_purchase_download_one">Aka aynacharu arkivuma apsuma.</string>
     <string name="market_purchase_review_from">%1$s jaqitha arxata</string>
-    <string name="market_purchases_auction_label">Tantachasiwi #%1$d</string>
+    <string name="market_purchases_auction_label">Tantachasiwi #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s kutt\'ayata</string>
     <string name="market_purchases_won_for">%1$s mayni atipawi</string>
     <string name="market_refund_dialog_amount_help">Taqpach kutt\'ayañataki ch\'usa jaytma.</string>

@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Розглянути апеляцію</string>
     <string name="staff_appeals_empty">Немає очікуваних апеляцій</string>
     <string name="staff_appeals_history">Історія оголошень</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Нотатки</string>
     <string name="staff_appeals_open_sidebar">Відкрити бічну панель</string>
     <string name="staff_appeals_reason_label">Причина апеляції продавця</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Продавці</string>
     <string name="staff_dashboard_kpi_total_orders">Всього замовлень</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ні</string>
     <string name="staff_dashboard_open_sidebar">Відкрити бічну панель</string>
-    <string name="staff_dashboard_order_fallback">Замовлення № %1$d</string>
+    <string name="staff_dashboard_order_fallback">Замовлення № %1$s</string>
     <string name="staff_dashboard_system">Система</string>
     <string name="staff_dashboard_tab_audit">Аудит</string>
     <string name="staff_dashboard_tab_listings">Оголошення</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Немає спорів</string>
     <string name="staff_disputes_filter_status_label">Статус</string>
     <string name="staff_disputes_history">Історія спорів</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Дані покупця</string>
     <string name="staff_disputes_meta_chargeback_fee">Комісія за чарджбек</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">утримано Stripe</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">Відкрити бічну панель</string>
     <string name="staff_moderation_system">Система</string>
     <string name="staff_moderation_title">Журнал модерації</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Дія</string>
     <string name="staff_reports_action_ban">Заблокувати користувача</string>
     <string name="staff_reports_action_dismiss">Закрити</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">Статус</string>
     <string name="staff_reports_filter_type_label">Тип</string>
     <string name="staff_reports_history">Історія скарг</string>
-    <string name="staff_reports_listing_label">Оголошення № %1$d</string>
+    <string name="staff_reports_listing_label">Оголошення № %1$s</string>
     <string name="staff_reports_meta_details">Дані того, хто поскаржився</string>
     <string name="staff_reports_meta_price">Ціна</string>
     <string name="staff_reports_meta_reason">Причина</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">Видалено</string>
     <string name="staff_reviews_filter_status">Статус</string>
     <string name="staff_reviews_open_sidebar">Відкрити бічну панель</string>
-    <string name="staff_reviews_order_label">замовлення № %1$d</string>
+    <string name="staff_reviews_order_label">замовлення № %1$s</string>
     <string name="staff_reviews_overflow_actions">Дії</string>
     <string name="staff_reviews_remove_confirm">Видалити</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s від %3$s. Назавжди видалити цей відгук? Цю дію не можна скасувати.</string>

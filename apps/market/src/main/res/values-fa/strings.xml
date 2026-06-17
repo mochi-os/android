@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d فروش</string>
     <string name="market_profile_sales_count">%1$d فروش</string>
     <string name="market_purchase_dispute_response">پاسخ فروشنده</string>
-    <string name="market_purchases_order_label">سفارش #%1$d</string>
+    <string name="market_purchases_order_label">سفارش #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">درباره خودتان به خریداران بگویید…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">%1$d فایل خود را در پایین دانلود کنید.</string>
     <string name="market_purchase_download_one">فایل خود را در پایین دانلود کنید.</string>
     <string name="market_purchase_review_from">نظر از %1$s</string>
-    <string name="market_purchases_auction_label">حراج #%1$d</string>
+    <string name="market_purchases_auction_label">حراج #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s بازپرداخت شد</string>
     <string name="market_purchases_won_for">برنده شد به مبلغ %1$s</string>
     <string name="market_rating_reviews">(%1$d نظر)</string>

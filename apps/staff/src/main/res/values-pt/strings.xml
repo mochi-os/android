@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Decidir recurso</string>
     <string name="staff_appeals_empty">Sem recursos pendentes</string>
     <string name="staff_appeals_history">Histórico do anúncio</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notas</string>
     <string name="staff_appeals_open_sidebar">Abrir barra lateral</string>
     <string name="staff_appeals_reason_label">Motivo do recurso do vendedor</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Vendedores</string>
     <string name="staff_dashboard_kpi_total_orders">Total de encomendas</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Não</string>
     <string name="staff_dashboard_open_sidebar">Abrir barra lateral</string>
-    <string name="staff_dashboard_order_fallback">Encomenda n.º %1$d</string>
+    <string name="staff_dashboard_order_fallback">Encomenda n.º %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoria</string>
     <string name="staff_dashboard_tab_listings">Anúncios</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Sem disputas</string>
     <string name="staff_disputes_filter_status_label">Estado</string>
     <string name="staff_disputes_history">Histórico de disputas</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Dados do comprador</string>
     <string name="staff_disputes_meta_chargeback_fee">Taxa de estorno</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">retidos pela Stripe</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">Abrir barra lateral</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_title">Registo de moderação</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Ação</string>
     <string name="staff_reports_action_ban">Banir utilizador</string>
     <string name="staff_reports_action_dismiss">Dispensar</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">Estado</string>
     <string name="staff_reports_filter_type_label">Tipo</string>
     <string name="staff_reports_history">Histórico de denúncias</string>
-    <string name="staff_reports_listing_label">Anúncio n.º %1$d</string>
+    <string name="staff_reports_listing_label">Anúncio n.º %1$s</string>
     <string name="staff_reports_meta_details">Dados do denunciante</string>
     <string name="staff_reports_meta_price">Preço</string>
     <string name="staff_reports_meta_reason">Motivo</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">Removido</string>
     <string name="staff_reviews_filter_status">Estado</string>
     <string name="staff_reviews_open_sidebar">Abrir barra lateral</string>
-    <string name="staff_reviews_order_label">encomenda n.º %1$d</string>
+    <string name="staff_reviews_order_label">encomenda n.º %1$s</string>
     <string name="staff_reviews_overflow_actions">Ações</string>
     <string name="staff_reviews_remove_confirm">Remover</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s em %3$s. Eliminar permanentemente esta avaliação? Esta ação não pode ser anulada.</string>

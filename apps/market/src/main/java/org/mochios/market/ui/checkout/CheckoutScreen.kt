@@ -505,8 +505,8 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
 @Composable
 private fun ShippingZoneDropdown(
     zones: List<ShippingOption>,
-    selectedId: Long?,
-    onSelected: (Long) -> Unit,
+    selectedId: String?,
+    onSelected: (String) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
     val selected = zones.firstOrNull { it.id == selectedId }

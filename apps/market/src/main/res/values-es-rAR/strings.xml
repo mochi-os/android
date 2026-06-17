@@ -225,7 +225,7 @@
     <string name="market_purchase_review_rating">Calificación</string>
     <string name="market_purchase_review_submitted">Reseña enviada</string>
     <string name="market_purchase_total">Total</string>
-    <string name="market_purchases_order_label">Pedido #%1$d</string>
+    <string name="market_purchases_order_label">Pedido #%1$s</string>
     <string name="market_rating_label">Calificación</string>
     <string name="market_refund_details_label">Detalles</string>
     <string name="market_refund_reason_damaged">Dañado</string>
@@ -542,7 +542,7 @@
     <string name="market_purchase_summary">Resumen del pedido</string>
     <string name="market_purchase_title">Pedido</string>
     <string name="market_purchase_track">Seguir paquete</string>
-    <string name="market_purchases_auction_label">Subasta n.º %1$d</string>
+    <string name="market_purchases_auction_label">Subasta n.º %1$s</string>
     <string name="market_purchases_complete_purchase">Completar compra</string>
     <string name="market_purchases_empty">Sin compras</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsado</string>

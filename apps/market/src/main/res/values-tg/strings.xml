@@ -604,8 +604,8 @@
     <string name="market_purchase_download_many">%1$d файли худро дар поён зеркашӣ кунед.</string>
     <string name="market_purchase_download_one">Файли худро дар поён зеркашӣ кунед.</string>
     <string name="market_purchase_review_from">Баррасӣ аз %1$s</string>
-    <string name="market_purchases_auction_label">Музояда #%1$d</string>
-    <string name="market_purchases_order_label">Фармоиш #%1$d</string>
+    <string name="market_purchases_auction_label">Музояда #%1$s</string>
+    <string name="market_purchases_order_label">Фармоиш #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s баргардонда шуд</string>
     <string name="market_purchases_won_for">Бо нархи %1$s бурд карда шуд</string>
     <string name="market_rating_reviews">(%1$d баррасӣ)</string>

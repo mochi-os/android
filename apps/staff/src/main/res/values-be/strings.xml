@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Вырашыць апеляцыю</string>
     <string name="staff_appeals_empty">Чакаючых апеляцый няма</string>
     <string name="staff_appeals_history">Гісторыя аб\'явы</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Нататкі</string>
     <string name="staff_appeals_open_sidebar">Адкрыць бакавую панэль</string>
     <string name="staff_appeals_reason_label">Прычына апеляцыі прадаўца</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Прадаўцы</string>
     <string name="staff_dashboard_kpi_total_orders">Усяго заказаў</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Не</string>
     <string name="staff_dashboard_open_sidebar">Адкрыць бакавую панэль</string>
-    <string name="staff_dashboard_order_fallback">Заказ #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Заказ #%1$s</string>
     <string name="staff_dashboard_system">Сістэма</string>
     <string name="staff_dashboard_tab_audit">Аўдыт</string>
     <string name="staff_dashboard_tab_listings">Аб\'явы</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Спрэчак няма</string>
     <string name="staff_disputes_filter_status_label">Статус</string>
     <string name="staff_disputes_history">Гісторыя спрэчак</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Дадзеныя пакупніка</string>
     <string name="staff_disputes_meta_chargeback_fee">Плата за вяртанне сродкаў</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">утрымана Stripe</string>
@@ -346,7 +346,7 @@
     <string name="staff_moderation_open_sidebar">Адкрыць бакавую панэль</string>
     <string name="staff_moderation_system">Сістэма</string>
     <string name="staff_moderation_title">Журнал мадэрацыі</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Дзеянне</string>
     <string name="staff_reports_action_ban">Заблакаваць карыстальніка</string>
     <string name="staff_reports_action_dismiss">Адхіліць</string>
@@ -367,7 +367,7 @@
     <string name="staff_reports_filter_status_label">Статус</string>
     <string name="staff_reports_filter_type_label">Тып</string>
     <string name="staff_reports_history">Гісторыя скаргаў</string>
-    <string name="staff_reports_listing_label">Аб\'ява #%1$d</string>
+    <string name="staff_reports_listing_label">Аб\'ява #%1$s</string>
     <string name="staff_reports_meta_details">Дадзеныя падаўшага скаргу</string>
     <string name="staff_reports_meta_price">Цана</string>
     <string name="staff_reports_meta_reason">Прычына</string>
@@ -410,7 +410,7 @@
     <string name="staff_reviews_filter_removed">Выдалена</string>
     <string name="staff_reviews_filter_status">Статус</string>
     <string name="staff_reviews_open_sidebar">Адкрыць бакавую панэль</string>
-    <string name="staff_reviews_order_label">заказ #%1$d</string>
+    <string name="staff_reviews_order_label">заказ #%1$s</string>
     <string name="staff_reviews_overflow_actions">Дзеянні</string>
     <string name="staff_reviews_remove_confirm">Выдаліць</string>
     <string name="staff_reviews_remove_title">Выдаліць водгук?</string>

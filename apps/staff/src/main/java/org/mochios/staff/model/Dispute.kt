@@ -21,8 +21,8 @@ import com.google.gson.annotations.SerializedName
  * can render a "no fee charged" state cleanly when [fee] is 0.
  */
 data class Dispute(
-    val id: Long = 0,
-    val order: Long = 0,
+    val id: String = "",
+    val order: String = "",
     val opener: String = "",
     val reason: String = "",
     val description: String = "",
@@ -37,7 +37,7 @@ data class Dispute(
     @SerializedName("refund_amount") val refundAmount: Long = 0,
     val resolved: Long = 0,
     val created: Long = 0,
-    val listing: Long = 0,
+    val listing: String = "",
     val buyer: String = "",
     @SerializedName("buyer_name") val buyerName: String = "",
     val seller: String = "",

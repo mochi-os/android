@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Одлучи за жалба</string>
     <string name="staff_appeals_empty">Нема жалби што чекаат</string>
     <string name="staff_appeals_history">Историја на оглас</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Белешки</string>
     <string name="staff_appeals_open_sidebar">Отвори страничен прозорец</string>
     <string name="staff_appeals_reason_label">Причина за жалба на продавачот</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Продавачи</string>
     <string name="staff_dashboard_kpi_total_orders">Вкупно нарачки</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Не</string>
     <string name="staff_dashboard_open_sidebar">Отвори страничен прозорец</string>
-    <string name="staff_dashboard_order_fallback">Нарачка #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Нарачка #%1$s</string>
     <string name="staff_dashboard_system">Систем</string>
     <string name="staff_dashboard_tab_audit">Ревизија</string>
     <string name="staff_dashboard_tab_listings">Огласи</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Нема спорови</string>
     <string name="staff_disputes_filter_status_label">Статус</string>
     <string name="staff_disputes_history">Историја на спорови</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Детали за купувачот</string>
     <string name="staff_disputes_meta_chargeback_fee">Такса за сторно плаќање</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">задржано од Stripe</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">Отвори страничен прозорец</string>
     <string name="staff_moderation_system">Систем</string>
     <string name="staff_moderation_title">Дневник за модерација</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Акција</string>
     <string name="staff_reports_action_ban">Блокирај корисник</string>
     <string name="staff_reports_action_dismiss">Отфрли</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">Статус</string>
     <string name="staff_reports_filter_type_label">Тип</string>
     <string name="staff_reports_history">Историја на извештаи</string>
-    <string name="staff_reports_listing_label">Оглас #%1$d</string>
+    <string name="staff_reports_listing_label">Оглас #%1$s</string>
     <string name="staff_reports_meta_details">Детали за пријавувачот</string>
     <string name="staff_reports_meta_price">Цена</string>
     <string name="staff_reports_meta_reason">Причина</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">Отстрането</string>
     <string name="staff_reviews_filter_status">Статус</string>
     <string name="staff_reviews_open_sidebar">Отвори страничен прозорец</string>
-    <string name="staff_reviews_order_label">нарачка #%1$d</string>
+    <string name="staff_reviews_order_label">нарачка #%1$s</string>
     <string name="staff_reviews_overflow_actions">Акции</string>
     <string name="staff_reviews_remove_confirm">Отстрани</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s на %3$s. Трајно избришете го овој преглед? Ова дејство не може да се поништи.</string>

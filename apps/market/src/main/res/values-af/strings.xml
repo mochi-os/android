@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Bestelling</string>
     <string name="market_purchase_total">Totaal</string>
     <string name="market_purchase_track">Volg pakkie</string>
-    <string name="market_purchases_auction_label">Veiling #%1$d</string>
+    <string name="market_purchases_auction_label">Veiling #%1$s</string>
     <string name="market_purchases_complete_purchase">Voltooi aankoop</string>
     <string name="market_purchases_empty">Geen aankope</string>
-    <string name="market_purchases_order_label">Bestelling #%1$d</string>
+    <string name="market_purchases_order_label">Bestelling #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s terugbetaal</string>
     <string name="market_purchases_title">Aankope</string>
     <string name="market_purchases_won_for">Gewen vir %1$s</string>

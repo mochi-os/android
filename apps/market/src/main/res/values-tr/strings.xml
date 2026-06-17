@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d satış</string>
     <string name="market_profile_sales_count">%1$d satış</string>
     <string name="market_purchase_dispute_response">Satıcının yanıtı</string>
-    <string name="market_purchases_order_label">Sipariş #%1$d</string>
+    <string name="market_purchases_order_label">Sipariş #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Alıcılara kendinizden bahsedin…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">%1$d dosyanızı aşağıdan indirin.</string>
     <string name="market_purchase_download_one">Dosyanızı aşağıdan indirin.</string>
     <string name="market_purchase_review_from">%1$s tarafından değerlendirme</string>
-    <string name="market_purchases_auction_label">Açık artırma #%1$d</string>
+    <string name="market_purchases_auction_label">Açık artırma #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s iade edildi</string>
     <string name="market_purchases_won_for">%1$s ile kazanıldı</string>
     <string name="market_rating_reviews">(%1$d değerlendirme)</string>

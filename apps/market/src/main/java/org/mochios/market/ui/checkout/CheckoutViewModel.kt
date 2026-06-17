@@ -43,7 +43,7 @@ data class CheckoutUiState(
     val auction: Auction? = null,
     val wonBid: Bid? = null,
     val delivery: DeliveryMethod? = null,
-    val optionId: Long? = null,
+    val optionId: String? = null,
     val amountText: String = "",
     val addressName: String = "",
     val addressLine1: String = "",
@@ -64,7 +64,7 @@ data class CheckoutUiState(
  */
 sealed interface CheckoutEvent {
     data class OpenStripe(val url: String) : CheckoutEvent
-    data class OrderComplete(val orderId: Long) : CheckoutEvent
+    data class OrderComplete(val orderId: String) : CheckoutEvent
     data class ShowError(val message: String) : CheckoutEvent
 }
 
@@ -86,7 +86,7 @@ class CheckoutViewModel @Inject constructor(
     private val repository: MarketRepository,
 ) : ViewModel() {
 
-    val listingId: Long = savedStateHandle.get<String>("listingId")?.toLongOrNull() ?: 0L
+    val listingId: String = savedStateHandle.get<String>("listingId").orEmpty()
 
     private val _uiState = MutableStateFlow(CheckoutUiState())
     val uiState: StateFlow<CheckoutUiState> = _uiState.asStateFlow()
@@ -167,7 +167,7 @@ class CheckoutViewModel @Inject constructor(
         )
     }
 
-    fun onShippingOptionChanged(id: Long?) {
+    fun onShippingOptionChanged(id: String?) {
         _uiState.value = _uiState.value.copy(optionId = id)
     }
 
@@ -212,7 +212,7 @@ class CheckoutViewModel @Inject constructor(
                 }
                 if (response.checkoutUrl.isNotBlank()) {
                     _events.tryEmit(CheckoutEvent.OpenStripe(response.checkoutUrl))
-                } else if (response.order != null && response.order.id > 0) {
+                } else if (response.order != null && response.order.id.isNotEmpty()) {
                     _events.tryEmit(CheckoutEvent.OrderComplete(response.order.id))
                 } else {
                     _events.tryEmit(CheckoutEvent.ShowError(CHECKOUT_FAILED))

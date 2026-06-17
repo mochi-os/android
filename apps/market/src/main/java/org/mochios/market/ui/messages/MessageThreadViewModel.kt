@@ -76,7 +76,7 @@ class MessageThreadViewModel @Inject constructor(
      * when the screen is opened from a listing the arg is the sentinel "new"
      * (→ 0), and [refresh] fills this in via `threads/create` before loading.
      */
-    private var resolvedThreadId: Long = threadId.toLongOrNull() ?: 0L
+    private var resolvedThreadId: String = threadId.takeIf { it.isNotBlank() && it != "new" } ?: ""
 
     private val _state = MutableStateFlow(MessageThreadUiState())
     val state: StateFlow<MessageThreadUiState> = _state.asStateFlow()
@@ -96,9 +96,10 @@ class MessageThreadViewModel @Inject constructor(
                 // open (or reuse) the thread for this listing first — the
                 // server returns the existing thread when one already exists.
                 // Mirrors the web flow's threads/create → threads/get sequence.
-                if (resolvedThreadId == 0L) {
-                    val listing = listingId.toLongOrNull()
-                        ?: throw IllegalStateException("Missing listing id for new thread")
+                if (resolvedThreadId.isEmpty()) {
+                    val listing = listingId.ifBlank {
+                        throw IllegalStateException("Missing listing id for new thread")
+                    }
                     resolvedThreadId = repo.createThread(listing).id
                 }
                 val response = repo.getThread(resolvedThreadId)
@@ -160,7 +161,7 @@ class MessageThreadViewModel @Inject constructor(
      */
     fun ingestRemote(message: Message) {
         val existing = _state.value.messages
-        if (existing.any { it.id == message.id && message.id != 0L }) return
+        if (existing.any { it.id == message.id && message.id.isNotEmpty() }) return
         _state.value = _state.value.copy(messages = existing + message)
         viewModelScope.launch { _events.send(MessageThreadEvent.Appended(message)) }
     }

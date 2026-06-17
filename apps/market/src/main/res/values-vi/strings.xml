@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d lượt bán</string>
     <string name="market_profile_sales_count">%1$d lượt bán</string>
     <string name="market_purchase_dispute_response">Phản hồi của người bán</string>
-    <string name="market_purchases_order_label">Đơn hàng #%1$d</string>
+    <string name="market_purchases_order_label">Đơn hàng #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Hãy giới thiệu về bạn cho người mua…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Tải xuống %1$d tệp của bạn bên dưới.</string>
     <string name="market_purchase_download_one">Tải xuống tệp của bạn bên dưới.</string>
     <string name="market_purchase_review_from">Đánh giá từ %1$s</string>
-    <string name="market_purchases_auction_label">Đấu giá #%1$d</string>
+    <string name="market_purchases_auction_label">Đấu giá #%1$s</string>
 
 
     <string name="market_purchases_refunded_partial">Đã hoàn −%1$s</string>

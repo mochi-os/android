@@ -463,10 +463,10 @@
     <string name="market_purchase_title">ትዕዛዝ</string>
     <string name="market_purchase_total">ጠቅላላ</string>
     <string name="market_purchase_track">እሽጉን ይከታተሉ</string>
-    <string name="market_purchases_auction_label">ጨረታ #%1$d</string>
+    <string name="market_purchases_auction_label">ጨረታ #%1$s</string>
     <string name="market_purchases_complete_purchase">ግዢ አጠናቅቅ</string>
     <string name="market_purchases_empty">ምንም ግዢዎች የሉም</string>
-    <string name="market_purchases_order_label">ትዕዛዝ #%1$d</string>
+    <string name="market_purchases_order_label">ትዕዛዝ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ተመልሷል</string>
     <string name="market_purchases_title">ግዢዎች</string>
     <string name="market_purchases_won_for">በ%1$s ተሸንፏል</string>

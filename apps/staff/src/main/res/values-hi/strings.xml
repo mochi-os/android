@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">अपील पर निर्णय करें</string>
     <string name="staff_appeals_empty">कोई लंबित अपील नहीं</string>
     <string name="staff_appeals_history">लिस्टिंग इतिहास</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">नोट्स</string>
     <string name="staff_appeals_open_sidebar">साइडबार खोलें</string>
     <string name="staff_appeals_reason_label">विक्रेता की अपील का कारण</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">विक्रेता</string>
     <string name="staff_dashboard_kpi_total_orders">कुल ऑर्डर</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">नहीं</string>
     <string name="staff_dashboard_open_sidebar">साइडबार खोलें</string>
-    <string name="staff_dashboard_order_fallback">ऑर्डर #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ऑर्डर #%1$s</string>
     <string name="staff_dashboard_system">सिस्टम</string>
     <string name="staff_dashboard_tab_audit">ऑडिट</string>
     <string name="staff_dashboard_tab_listings">लिस्टिंग</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">कोई विवाद नहीं</string>
     <string name="staff_disputes_filter_status_label">स्टेटस</string>
     <string name="staff_disputes_history">विवाद इतिहास</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">खरीदार का विवरण</string>
     <string name="staff_disputes_meta_chargeback_fee">चार्जबैक शुल्क</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe द्वारा रोका गया</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">साइडबार खोलें</string>
     <string name="staff_moderation_system">सिस्टम</string>
     <string name="staff_moderation_title">मॉडरेशन लॉग</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">एक्शन</string>
     <string name="staff_reports_action_ban">उपयोगकर्ता को बैन करें</string>
     <string name="staff_reports_action_dismiss">खारिज करें</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">स्टेटस</string>
     <string name="staff_reports_filter_type_label">प्रकार</string>
     <string name="staff_reports_history">रिपोर्ट इतिहास</string>
-    <string name="staff_reports_listing_label">विज्ञापन #%1$d</string>
+    <string name="staff_reports_listing_label">विज्ञापन #%1$s</string>
     <string name="staff_reports_meta_details">रिपोर्ट करने वाले का विवरण</string>
     <string name="staff_reports_meta_price">कीमत</string>
     <string name="staff_reports_meta_reason">कारण</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">हटाया गया</string>
     <string name="staff_reviews_filter_status">स्टेटस</string>
     <string name="staff_reviews_open_sidebar">साइडबार खोलें</string>
-    <string name="staff_reviews_order_label">ऑर्डर #%1$d</string>
+    <string name="staff_reviews_order_label">ऑर्डर #%1$s</string>
     <string name="staff_reviews_overflow_actions">एक्शन्स</string>
     <string name="staff_reviews_remove_confirm">हटाएँ</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s दिनांक %3$s. इस समीक्षा को स्थायी रूप से हटाएं? यह क्रिया पूर्ववत नहीं की जा सकती।</string>

@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Gjurmo paketën</string>
     <string name="market_purchases_complete_purchase">Përfundo blerjen</string>
     <string name="market_purchases_empty">Asnjë blerje</string>
-    <string name="market_purchases_order_label">Porosi #%1$d</string>
+    <string name="market_purchases_order_label">Porosi #%1$s</string>
     <string name="market_purchases_title">Blerjet</string>
     <string name="market_rating_label">Vlerësimi</string>
     <string name="market_rating_no_reviews">Ende pa vlerësime</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Shkarkoni %1$d skedarët tuaj më poshtë.</string>
     <string name="market_purchase_download_one">Shkarkoni skedarin tuaj më poshtë.</string>
     <string name="market_purchase_review_from">Vlerësim nga %1$s</string>
-    <string name="market_purchases_auction_label">Ankand #%1$d</string>
+    <string name="market_purchases_auction_label">Ankand #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s të rimbursuara</string>
     <string name="market_purchases_won_for">Fituar për %1$s</string>
     <string name="market_refund_dialog_amount_help">Lëreni bosh për të rimbursuar të gjithë porosinë.</string>

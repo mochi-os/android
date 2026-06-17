@@ -603,8 +603,8 @@
     <string name="market_purchase_download_many">Preuzmite svoje %1$d datoteke u nastavku.</string>
     <string name="market_purchase_download_one">Preuzmite svoju datoteku u nastavku.</string>
     <string name="market_purchase_review_from">Recenzija od %1$s</string>
-    <string name="market_purchases_auction_label">Aukcija #%1$d</string>
-    <string name="market_purchases_order_label">Narudžba #%1$d</string>
+    <string name="market_purchases_auction_label">Aukcija #%1$s</string>
+    <string name="market_purchases_order_label">Narudžba #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vraćeno</string>
     <string name="market_purchases_won_for">Osvojeno za %1$s</string>
     <string name="market_rating_reviews">(%1$d recenzija)</string>

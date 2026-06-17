@@ -352,7 +352,7 @@
     <string name="market_purchase_track">ტრეკი შეიქმნა</string>
     <string name="market_purchases_complete_purchase">შეძენის დასრულება</string>
     <string name="market_purchases_empty">შესყიდვები არ არის</string>
-    <string name="market_purchases_order_label">შეკვეთა #%1$d</string>
+    <string name="market_purchases_order_label">შეკვეთა #%1$s</string>
     <string name="market_purchases_title">შესყიდვები</string>
     <string name="market_rating_label">შეფასება</string>
     <string name="market_rating_no_reviews">მიმოხილვები ჯერ არ არის</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">ჩამოტვირთეთ თქვენი %1$d ფაილი ქვემოთ.</string>
     <string name="market_purchase_download_one">ჩამოტვირთეთ თქვენი ფაილი ქვემოთ.</string>
     <string name="market_purchase_review_from">მიმოხილვა %1$s-სგან</string>
-    <string name="market_purchases_auction_label">აუქციონი #%1$d</string>
+    <string name="market_purchases_auction_label">აუქციონი #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s დაბრუნდა</string>
     <string name="market_purchases_won_for">მოგებული %1$s-ად</string>
     <string name="market_refund_dialog_amount_help">დატოვეთ ცარიელი მთლიანი შეკვეთის დასაბრუნებლად.</string>

@@ -188,15 +188,15 @@ interface StaffApi {
 
     /**
      * Create a category. `digital` and `physical` are wire-level 0/1
-     * ints — pass `1` for true, `0` for false. `parent` is the integer
-     * id of the parent category (omit for a top-level category).
+     * ints — pass `1` for true, `0` for false. `parent` is the uid
+     * of the parent category (omit for a top-level category).
      */
     @FormUrlEncoded
     @POST("-/categories/create")
     suspend fun createCategory(
         @Field("name") name: String,
         @Field("slug") slug: String,
-        @Field("parent") parent: Int? = null,
+        @Field("parent") parent: String? = null,
         @Field("icon") icon: String? = null,
         @Field("position") position: Int? = null,
         @Field("digital") digital: Int? = null,
@@ -211,10 +211,10 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/categories/update")
     suspend fun updateCategory(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("name") name: String? = null,
         @Field("slug") slug: String? = null,
-        @Field("parent") parent: Int? = null,
+        @Field("parent") parent: String? = null,
         @Field("icon") icon: String? = null,
         @Field("position") position: Int? = null,
         @Field("digital") digital: Int? = null,
@@ -226,7 +226,7 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/categories/delete")
     suspend fun deleteCategory(
-        @Field("id") id: Int,
+        @Field("id") id: String,
     ): Response<ApiResponse<OkResponse>>
 
     // ---- Listings moderation ----
@@ -250,7 +250,7 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/listings/approve")
     suspend fun approveListing(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("notes") notes: String? = null,
     ): Response<ApiResponse<OkResponse>>
 
@@ -258,7 +258,7 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/listings/reject")
     suspend fun rejectListing(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("reason") reason: String? = null,
         @Field("notes") notes: String? = null,
     ): Response<ApiResponse<OkResponse>>
@@ -267,7 +267,7 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/listings/remove")
     suspend fun removeListing(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("reason") reason: String? = null,
         @Field("notes") notes: String? = null,
     ): Response<ApiResponse<OkResponse>>
@@ -277,7 +277,7 @@ interface StaffApi {
     /** Moderation log, optionally filtered to a single listing id. */
     @GET("-/moderation/log")
     suspend fun getModerationLog(
-        @Query("listing") listing: Int? = null,
+        @Query("listing") listing: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<ModerationLogResponse>>
@@ -321,7 +321,7 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/reports/action")
     suspend fun actionReport(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("action") action: String,
         @Field("notes") notes: String? = null,
     ): Response<ApiResponse<Report>>
@@ -346,7 +346,7 @@ interface StaffApi {
     @POST("-/disputes/review")
     suspend fun reviewDispute(
         // staff.star forwards ["id", "status", "resolution", "amount"].
-        @Field("id") id: Int,
+        @Field("id") id: String,
         // status is the OUTCOME — "resolved_buyer" or "resolved_seller" (required).
         @Field("status") status: String,
         // resolution is the free-text writeup (optional, <=5000 chars).
@@ -429,14 +429,14 @@ interface StaffApi {
     /**
      * Decide on a listing appeal. `decision` is `approve` /
      * `reject` / `escalate` (the Comptroller validates). The field is sent as
-     * `id` (the integer listing id the appeal is filed against) — staff.star
+     * `id` (the listing uid the appeal is filed against) — staff.star
      * forwards `["id", "decision", "notes"]` verbatim, so it must be `id`, not
      * `listing_id` (which the handler would silently drop).
      */
     @FormUrlEncoded
     @POST("-/appeals/decide")
     suspend fun decideAppeal(
-        @Field("id") listingId: Int,
+        @Field("id") listingId: String,
         @Field("decision") decision: String,
         @Field("notes") notes: String? = null,
     ): Response<ApiResponse<OkResponse>>
@@ -459,7 +459,7 @@ interface StaffApi {
     @FormUrlEncoded
     @POST("-/reviews/action")
     suspend fun actionReview(
-        @Field("id") id: Int,
+        @Field("id") id: String,
         @Field("action") action: String,
     ): Response<ApiResponse<Review>>
 }

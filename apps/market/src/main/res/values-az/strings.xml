@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Sifariş</string>
     <string name="market_purchase_total">İz</string>
     <string name="market_purchase_track">İzləmə URL-i</string>
-    <string name="market_purchases_auction_label">Auksion №%1$d</string>
+    <string name="market_purchases_auction_label">Auksion №%1$s</string>
     <string name="market_purchases_complete_purchase">Alışı tamamla</string>
     <string name="market_purchases_empty">Alış yoxdur</string>
-    <string name="market_purchases_order_label">Sifariş №%1$d</string>
+    <string name="market_purchases_order_label">Sifariş №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s qaytarıldı</string>
     <string name="market_purchases_title">Alışlar</string>
     <string name="market_purchases_won_for">%1$s-ə qazanıldı</string>

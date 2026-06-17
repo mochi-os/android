@@ -300,8 +300,8 @@ private fun ZoneDialog(
                     val minor = toMinorUnits(priceText, currency)
                     onSave(
                         ShippingOption(
-                            id = initial?.id ?: 0L,
-                            listing = initial?.listing ?: 0L,
+                            id = initial?.id ?: "",
+                            listing = initial?.listing ?: "",
                             region = region,
                             price = minor,
                             currency = currency.name.lowercase(),

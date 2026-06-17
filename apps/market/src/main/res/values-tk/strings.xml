@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Paketi yzarla</string>
     <string name="market_purchases_complete_purchase">Satyn almagy tamamlamak</string>
     <string name="market_purchases_empty">Satyn alyşlar ýok</string>
-    <string name="market_purchases_order_label">Sargyt #%1$d</string>
+    <string name="market_purchases_order_label">Sargyt #%1$s</string>
     <string name="market_purchases_title">Satyn alyşlar</string>
     <string name="market_rating_label">Baha</string>
     <string name="market_rating_no_reviews">Heniz synlar ýok</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">%1$d faýlyňyzy aşakdan ýükläp alyň.</string>
     <string name="market_purchase_download_one">Faýlyňyzy aşakdan ýükläp alyň.</string>
     <string name="market_purchase_review_from">%1$s tarapyndan synag</string>
-    <string name="market_purchases_auction_label">Auksion #%1$d</string>
+    <string name="market_purchases_auction_label">Auksion #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s yzyna gaýtaryldy</string>
     <string name="market_purchases_won_for">%1$s bahasyna utuldy</string>
     <string name="market_refund_dialog_amount_help">Doly sargydy yzyna gaýtarmak üçin boş goýuň.</string>

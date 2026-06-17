@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d ventas</string>
     <string name="market_profile_sales_count">%1$d ventas</string>
     <string name="market_purchase_dispute_response">Respuesta del vendedor</string>
-    <string name="market_purchases_order_label">Pedido n.º %1$d</string>
+    <string name="market_purchases_order_label">Pedido n.º %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Cuéntales a los compradores sobre ti…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Descarga tus %1$d archivos a continuación.</string>
     <string name="market_purchase_download_one">Descarga tu archivo a continuación.</string>
     <string name="market_purchase_review_from">Reseña de %1$s</string>
-    <string name="market_purchases_auction_label">Subasta n.º %1$d</string>
+    <string name="market_purchases_auction_label">Subasta n.º %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsados</string>
     <string name="market_purchases_won_for">Ganado por %1$s</string>
     <string name="market_rating_reviews">(%1$d reseñas)</string>

@@ -11,8 +11,8 @@ import com.google.gson.annotations.SerializedName
  * whether the review is publicly visible (moderation gate).
  */
 data class Review(
-    val id: Long = 0,
-    val order: Long = 0,
+    val id: String = "",
+    val order: String = "",
     val reviewer: String = "",
     val subject: String = "",
     val role: String = "",

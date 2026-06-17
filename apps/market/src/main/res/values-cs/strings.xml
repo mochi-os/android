@@ -603,8 +603,8 @@
     <string name="market_purchase_download_many">Stáhněte si níže své soubory (%1$d).</string>
     <string name="market_purchase_download_one">Stáhněte si svůj soubor níže.</string>
     <string name="market_purchase_review_from">Recenze od %1$s</string>
-    <string name="market_purchases_auction_label">Aukce č. %1$d</string>
-    <string name="market_purchases_order_label">Objednávka č. %1$d</string>
+    <string name="market_purchases_auction_label">Aukce č. %1$s</string>
+    <string name="market_purchases_order_label">Objednávka č. %1$s</string>
     <string name="market_purchases_refunded_partial">Vráceno −%1$s</string>
     <string name="market_purchases_won_for">Vyhráno za %1$s</string>
     <string name="market_rating_reviews">(%1$d recenzí)</string>

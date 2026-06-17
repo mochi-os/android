@@ -343,7 +343,7 @@ private fun ReviewRow(
                     overflow = TextOverflow.Ellipsis,
                 )
             }
-            if (review.order > 0) {
+            if (review.order.isNotEmpty()) {
                 Text(
                     text = stringResource(R.string.staff_reviews_order_label, review.order),
                     style = MaterialTheme.typography.bodySmall,

@@ -603,8 +603,8 @@
     <string name="market_purchase_download_many">نزّل ملفاتك البالغ عددها %1$d أدناه.</string>
     <string name="market_purchase_download_one">نزّل ملفك أدناه.</string>
     <string name="market_purchase_review_from">تقييم من %1$s</string>
-    <string name="market_purchases_auction_label">مزاد رقم %1$d</string>
-    <string name="market_purchases_order_label">طلب رقم %1$d</string>
+    <string name="market_purchases_auction_label">مزاد رقم %1$s</string>
+    <string name="market_purchases_order_label">طلب رقم %1$s</string>
     <string name="market_purchases_refunded_partial">تم ردّ %1$s−</string>
     <string name="market_purchases_won_for">فاز بسعر %1$s</string>
     <string name="market_rating_reviews">(%1$d تقييمًا)</string>

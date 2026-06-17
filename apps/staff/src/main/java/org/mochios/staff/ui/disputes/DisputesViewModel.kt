@@ -184,7 +184,7 @@ class DisputesViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reviewDispute(
-                    id = current.id.toInt(),
+                    id = current.id,
                     status = status,
                     resolution = resolution.takeIf { it.isNotBlank() },
                     refundAmount = refundAmountMinor,

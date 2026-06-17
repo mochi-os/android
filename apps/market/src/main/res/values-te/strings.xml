@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ప్యాకేజీని ట్రాక్ చేయండి</string>
     <string name="market_purchases_complete_purchase">కొనుగోలును పూర్తి చేయండి</string>
     <string name="market_purchases_empty">కొనుగోళ్లు లేవు</string>
-    <string name="market_purchases_order_label">ఆర్డర్ #%1$d</string>
+    <string name="market_purchases_order_label">ఆర్డర్ #%1$s</string>
     <string name="market_purchases_title">కొనుగోళ్లు</string>
     <string name="market_rating_label">రేటింగ్</string>
     <string name="market_rating_no_reviews">ఇంకా రివ్యూలు లేవు</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">మీ %1$d ఫైళ్లను దిగువన డౌన్‌లోడ్ చేయండి.</string>
     <string name="market_purchase_download_one">మీ ఫైల్‌ను దిగువన డౌన్‌లోడ్ చేయండి.</string>
     <string name="market_purchase_review_from">%1$s నుండి సమీక్ష</string>
-    <string name="market_purchases_auction_label">వేలం #%1$d</string>
+    <string name="market_purchases_auction_label">వేలం #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s తిరిగి చెల్లించబడింది</string>
     <string name="market_purchases_won_for">%1$sకి గెలుచుకున్నారు</string>
     <string name="market_refund_dialog_amount_help">పూర్తి ఆర్డర్‌ను తిరిగి చెల్లించడానికి ఖాళీగా ఉంచండి.</string>

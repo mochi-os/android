@@ -356,7 +356,7 @@
     <string name="market_purchase_track">Rastrexar paquete</string>
     <string name="market_purchases_complete_purchase">Completar compra</string>
     <string name="market_purchases_empty">Sen compras</string>
-    <string name="market_purchases_order_label">Pedido #%1$d</string>
+    <string name="market_purchases_order_label">Pedido #%1$s</string>
     <string name="market_purchases_title">Compras</string>
     <string name="market_rating_label">Valoración</string>
     <string name="market_rating_no_reviews">Aínda non hai reseñas</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Descarga os teus %1$d ficheiros máis abaixo.</string>
     <string name="market_purchase_download_one">Descarga o teu ficheiro máis abaixo.</string>
     <string name="market_purchase_review_from">Reseña de %1$s</string>
-    <string name="market_purchases_auction_label">Poxa #%1$d</string>
+    <string name="market_purchases_auction_label">Poxa #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsado</string>
     <string name="market_purchases_won_for">Gañado por %1$s</string>
     <string name="market_refund_dialog_amount_help">Deixa en branco para reembolsar o pedido completo.</string>

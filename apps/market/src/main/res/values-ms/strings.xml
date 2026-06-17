@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d jualan</string>
     <string name="market_profile_sales_count">%1$d jualan</string>
     <string name="market_purchase_dispute_response">Jawapan penjual</string>
-    <string name="market_purchases_order_label">Pesanan #%1$d</string>
+    <string name="market_purchases_order_label">Pesanan #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Beritahu pembeli tentang diri anda…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Muat turun %1$d fail anda di bawah.</string>
     <string name="market_purchase_download_one">Muat turun fail anda di bawah.</string>
     <string name="market_purchase_review_from">Ulasan daripada %1$s</string>
-    <string name="market_purchases_auction_label">Lelongan #%1$d</string>
+    <string name="market_purchases_auction_label">Lelongan #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s dibayar balik</string>
     <string name="market_purchases_won_for">Dimenangi dengan %1$s</string>
     <string name="market_rating_reviews">(%1$d ulasan)</string>

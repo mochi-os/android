@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ຕິດຕາມພັດສະດຸ</string>
     <string name="market_purchases_complete_purchase">ສຳເລັດການຊື້</string>
     <string name="market_purchases_empty">ບໍ່ມີການຊື້</string>
-    <string name="market_purchases_order_label">ສັ່ງຊື້ #%1$d</string>
+    <string name="market_purchases_order_label">ສັ່ງຊື້ #%1$s</string>
     <string name="market_purchases_title">ການຊື້</string>
     <string name="market_rating_label">ການໃຫ້ຄະແນນ</string>
     <string name="market_rating_no_reviews">ຍັງບໍ່ມີຄຳວິຈານ</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">ດາວໂຫຼດໄຟລ໌ %1$d ໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
     <string name="market_purchase_download_one">ດາວໂຫຼດໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
     <string name="market_purchase_review_from">ການວິຈານຈາກ %1$s</string>
-    <string name="market_purchases_auction_label">ການປະມູນ #%1$d</string>
+    <string name="market_purchases_auction_label">ການປະມູນ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ຄືນເງິນແລ້ວ</string>
     <string name="market_purchases_won_for">ຊະນະທີ່ %1$s</string>
     <string name="market_refund_dialog_amount_help">ປະປ່ອຍຫວ່າງເພື່ອຄືນເງິນເຕັມຈຳນວນ.</string>

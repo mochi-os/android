@@ -49,8 +49,8 @@
     <string name="staff_appeals_dialog_title">Putuskeun banding</string>
     <string name="staff_appeals_empty">Teu aya banding nu antri</string>
     <string name="staff_appeals_history">Riwayat listing</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Catetan</string>
     <string name="staff_appeals_open_sidebar">Buka sidebar</string>
     <string name="staff_appeals_submit">Kirim</string>
@@ -220,7 +220,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Penjual</string>
     <string name="staff_dashboard_kpi_total_orders">Total pesenan</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Henteu</string>
     <string name="staff_dashboard_open_sidebar">Buka sidebar</string>
     <string name="staff_dashboard_system">Sistem</string>
@@ -238,7 +238,7 @@
     <string name="staff_disputes_empty">Teu aya sengketa</string>
     <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_history">Riwayat sengketa</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Béaya chargeback</string>
     <string name="staff_disputes_meta_evidence_due">Bukti kudu asup pangtelat</string>
     <string name="staff_disputes_meta_listing">Listing</string>
@@ -323,7 +323,7 @@
     <string name="staff_moderation_open_sidebar">Buka sidebar</string>
     <string name="staff_moderation_system">Sistem</string>
     <string name="staff_moderation_title">Log modérasi</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aksi</string>
     <string name="staff_reports_action_ban">Blokir pamaké</string>
     <string name="staff_reports_action_dismiss">Pasini</string>
@@ -471,7 +471,7 @@
     <string name="staff_team_toast_role_failed">Pancén gagal diropéa</string>
     <string name="staff_team_toast_role_updated">Pancén diropéa</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">Pesenan #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Pesenan #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">Cabut panyepenan</string>
     <string name="staff_accounts_reason_optional_label">Alesan (opsional)</string>
@@ -507,9 +507,9 @@
     <string name="staff_listings_seller_unknown">Penjual teu dikenal</string>
     <string name="staff_listings_seller_verified">Penjual diverifikasi</string>
     <string name="staff_moderation_filter_clear">Kosongkeun saringan</string>
-    <string name="staff_reports_listing_label">Daptaran #%1$d</string>
+    <string name="staff_reports_listing_label">Daptaran #%1$s</string>
     <string name="staff_reports_meta_details">Detil palapor</string>
-    <string name="staff_reviews_order_label">pesenan #%1$d</string>
+    <string name="staff_reviews_order_label">pesenan #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s dina %3$s. Hapus permanén ulasan ieu? Ieu teu bisa dibatalkeun.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Hapus permanén ulasan ieu? Ieu teu bisa dibatalkeun.</string>
     <string name="staff_team_dialog_search_placeholder">Téangan ku ngaran, sidik ramo, atawa ID…</string>

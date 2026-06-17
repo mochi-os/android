@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Eskaera</string>
     <string name="market_purchase_total">Guztira</string>
     <string name="market_purchase_track">Jarraitu paketea</string>
-    <string name="market_purchases_auction_label">Enkantea #%1$d</string>
+    <string name="market_purchases_auction_label">Enkantea #%1$s</string>
     <string name="market_purchases_complete_purchase">Osatu erosketa</string>
     <string name="market_purchases_empty">Erosketarik ez</string>
-    <string name="market_purchases_order_label">Eskaera #%1$d</string>
+    <string name="market_purchases_order_label">Eskaera #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s itzulita</string>
     <string name="market_purchases_title">Erosketak</string>
     <string name="market_purchases_won_for">%1$s-rengatik irabazia</string>

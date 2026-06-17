@@ -315,7 +315,7 @@ private fun TrackingCard(order: Order) {
 }
 
 @Composable
-private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (Long) -> Unit) {
+private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (String) -> Unit) {
     Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(

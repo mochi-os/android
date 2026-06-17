@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Magdesisyon sa apela</string>
     <string name="staff_appeals_empty">Walang nakabinbing apela</string>
     <string name="staff_appeals_history">History ng listing</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Mga Tala</string>
     <string name="staff_appeals_open_sidebar">Buksan ang sidebar</string>
     <string name="staff_appeals_reason_label">Dahilan ng apela ng nagbebenta</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Mga nagbebenta</string>
     <string name="staff_dashboard_kpi_total_orders">Kabuuang order</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Hindi</string>
     <string name="staff_dashboard_open_sidebar">Buksan ang sidebar</string>
-    <string name="staff_dashboard_order_fallback">Order #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Order #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Mga listing</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Walang dispute</string>
     <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_history">History ng dispute</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Detalye ng mamimili</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback fee</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">pinanatili ng Stripe</string>
@@ -346,7 +346,7 @@
     <string name="staff_moderation_open_sidebar">Buksan ang sidebar</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_title">Moderation log</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aksyon</string>
     <string name="staff_reports_action_ban">I-ban ang user</string>
     <string name="staff_reports_action_dismiss">I-dismiss</string>
@@ -367,7 +367,7 @@
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Uri</string>
     <string name="staff_reports_history">Kasaysayan ng report</string>
-    <string name="staff_reports_listing_label">Listahan #%1$d</string>
+    <string name="staff_reports_listing_label">Listahan #%1$s</string>
     <string name="staff_reports_meta_details">Detalye ng nag-uulat</string>
     <string name="staff_reports_meta_price">Presyo</string>
     <string name="staff_reports_meta_reason">Dahilan</string>
@@ -410,7 +410,7 @@
     <string name="staff_reviews_filter_removed">Naalis</string>
     <string name="staff_reviews_filter_status">Status</string>
     <string name="staff_reviews_open_sidebar">Buksan ang sidebar</string>
-    <string name="staff_reviews_order_label">order #%1$d</string>
+    <string name="staff_reviews_order_label">order #%1$s</string>
     <string name="staff_reviews_overflow_actions">Mga aksyon</string>
     <string name="staff_reviews_remove_confirm">Alisin</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s noong %3$s. Permanenteng burahin ang review na ito? Hindi maaaring ibalik ang aksyong ito.</string>

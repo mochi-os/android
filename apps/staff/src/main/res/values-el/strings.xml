@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Απόφαση για προσφυγή</string>
     <string name="staff_appeals_empty">Καμία εκκρεμής προσφυγή</string>
     <string name="staff_appeals_history">Ιστορικό καταχώρισης</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Σημειώσεις</string>
     <string name="staff_appeals_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
     <string name="staff_appeals_reason_label">Αιτία προσφυγής του πωλητή</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Πωλητές</string>
     <string name="staff_dashboard_kpi_total_orders">Σύνολο παραγγελιών</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Όχι</string>
     <string name="staff_dashboard_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
-    <string name="staff_dashboard_order_fallback">Παραγγελία #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Παραγγελία #%1$s</string>
     <string name="staff_dashboard_system">Σύστημα</string>
     <string name="staff_dashboard_tab_audit">Έλεγχος</string>
     <string name="staff_dashboard_tab_listings">Καταχωρίσεις</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Καμία διαφωνία</string>
     <string name="staff_disputes_filter_status_label">Κατάσταση</string>
     <string name="staff_disputes_history">Ιστορικό αμφισβητήσεων</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Στοιχεία αγοραστή</string>
     <string name="staff_disputes_meta_chargeback_fee">Χρέωση αντιστροφής</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">παρακρατήθηκαν από την Stripe</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
     <string name="staff_moderation_system">Σύστημα</string>
     <string name="staff_moderation_title">Αρχείο συντονισμού</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Ενέργεια</string>
     <string name="staff_reports_action_ban">Αποκλεισμός χρήστη</string>
     <string name="staff_reports_action_dismiss">Απόρριψη</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">Κατάσταση</string>
     <string name="staff_reports_filter_type_label">Τύπος</string>
     <string name="staff_reports_history">Ιστορικό αναφορών</string>
-    <string name="staff_reports_listing_label">Αγγελία #%1$d</string>
+    <string name="staff_reports_listing_label">Αγγελία #%1$s</string>
     <string name="staff_reports_meta_details">Στοιχεία υποβάλλοντος αναφοράς</string>
     <string name="staff_reports_meta_price">Τιμή</string>
     <string name="staff_reports_meta_reason">Αιτία</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">Αφαιρέθηκε</string>
     <string name="staff_reviews_filter_status">Κατάσταση</string>
     <string name="staff_reviews_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
-    <string name="staff_reviews_order_label">παραγγελία #%1$d</string>
+    <string name="staff_reviews_order_label">παραγγελία #%1$s</string>
     <string name="staff_reviews_overflow_actions">Ενέργειες</string>
     <string name="staff_reviews_remove_confirm">Αφαίρεση</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s στις %3$s. Διαγραφή αυτής της κριτικής μόνιμα; Αυτή η ενέργεια δεν αναιρείται.</string>

@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ਪੈਕੇਜ ਟਰੈਕ ਕਰੋ</string>
     <string name="market_purchases_complete_purchase">ਖਰੀਦ ਪੂਰੀ ਕਰੋ</string>
     <string name="market_purchases_empty">ਕੋਈ ਖਰੀਦਾਰੀਆਂ ਨਹੀਂ</string>
-    <string name="market_purchases_order_label">ਆਰਡਰ #%1$d</string>
+    <string name="market_purchases_order_label">ਆਰਡਰ #%1$s</string>
     <string name="market_purchases_title">ਖਰੀਦਾਰੀਆਂ</string>
     <string name="market_rating_label">ਰੇਟਿੰਗ</string>
     <string name="market_rating_no_reviews">ਅਜੇ ਕੋਈ ਸਮੀਖਿਆਵਾਂ ਨਹੀਂ</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">ਹੇਠਾਂ ਆਪਣੀਆਂ %1$d ਫਾਈਲਾਂ ਡਾਊਨਲੋਡ ਕਰੋ।</string>
     <string name="market_purchase_download_one">ਹੇਠਾਂ ਆਪਣੀ ਫਾਈਲ ਡਾਊਨਲੋਡ ਕਰੋ।</string>
     <string name="market_purchase_review_from">%1$s ਵੱਲੋਂ ਸਮੀਖਿਆ</string>
-    <string name="market_purchases_auction_label">ਨਿਲਾਮੀ #%1$d</string>
+    <string name="market_purchases_auction_label">ਨਿਲਾਮੀ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ਵਾਪਸ ਕੀਤੇ</string>
     <string name="market_purchases_won_for">%1$s ਵਿੱਚ ਜਿੱਤੀ</string>
     <string name="market_refund_dialog_amount_help">ਪੂਰੇ ਆਰਡਰ ਨੂੰ ਵਾਪਸ ਕਰਨ ਲਈ ਖਾਲੀ ਛੱਡੋ।</string>

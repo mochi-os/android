@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Тапсырыс</string>
     <string name="market_purchase_total">Барлығы</string>
     <string name="market_purchase_track">Қаптаманы бақылау</string>
-    <string name="market_purchases_auction_label">Аукцион №%1$d</string>
+    <string name="market_purchases_auction_label">Аукцион №%1$s</string>
     <string name="market_purchases_complete_purchase">Сатып алуды аяқтау</string>
     <string name="market_purchases_empty">Сатып алулар жоқ</string>
-    <string name="market_purchases_order_label">Тапсырыс №%1$d</string>
+    <string name="market_purchases_order_label">Тапсырыс №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s қайтарылды</string>
     <string name="market_purchases_title">Сатып алулар</string>
     <string name="market_purchases_won_for">%1$s үшін жеңіс</string>

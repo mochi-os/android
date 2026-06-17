@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Апелляция боюнча чечим</string>
     <string name="staff_appeals_empty">Күтүлгөн апелляциялар жок</string>
     <string name="staff_appeals_history">Жарнама тарыхы</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Эскертүүлөр</string>
     <string name="staff_appeals_open_sidebar">Каптал тилкесин ачуу</string>
     <string name="staff_appeals_reason_label">Сатуучунун аппеляциясынын себеби</string>
@@ -226,7 +226,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Сатуучулар</string>
     <string name="staff_dashboard_kpi_total_orders">Бардык буйрутмалар</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Жок</string>
     <string name="staff_dashboard_open_sidebar">Каптал тилкесин ачуу</string>
     <string name="staff_dashboard_system">Системалык</string>
@@ -245,7 +245,7 @@
     <string name="staff_disputes_empty">Талаштар жок</string>
     <string name="staff_disputes_filter_status_label">Абалы</string>
     <string name="staff_disputes_history">Талаш тарыхы</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback акысы</string>
     <string name="staff_disputes_meta_evidence_due">Далил мөөнөтү</string>
     <string name="staff_disputes_meta_listing">Жарнама</string>
@@ -334,7 +334,7 @@
     <string name="staff_moderation_open_sidebar">Каптал тилкесин ачуу</string>
     <string name="staff_moderation_system">Системалык</string>
     <string name="staff_moderation_title">Модерация журналы</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Аракет</string>
     <string name="staff_reports_action_ban">Колдонуучуга тыюу салуу</string>
     <string name="staff_reports_action_dismiss">Четке кагуу</string>
@@ -483,7 +483,7 @@
     <string name="staff_team_toast_role_updated">Ролу жаңыртылды</string>
 
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">Заказ #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Заказ #%1$s</string>
 
     <string name="staff_audit_action_staff_team_role_changed">Кызматкердин ролу өзгөртүлдү</string>
     <string name="staff_disputes_dialog_title_chargeback">Чарджбэк: %1$s</string>
@@ -509,9 +509,9 @@
     <string name="staff_disputes_stripe_product_unacceptable">товар канааттандырарлык эмес</string>
     <string name="staff_disputes_stripe_subscription_canceled">жазылуу жокко чыгарылды</string>
     <string name="staff_disputes_stripe_unrecognized">тааныла элек төлөм</string>
-    <string name="staff_reports_listing_label">Жарыя #%1$d</string>
+    <string name="staff_reports_listing_label">Жарыя #%1$s</string>
     <string name="staff_reports_meta_details">Билдирүүчүнүн маалыматтары</string>
-    <string name="staff_reviews_order_label">буйрутма #%1$d</string>
+    <string name="staff_reviews_order_label">буйрутма #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Бул пикирди биротоло өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Бул пикирди биротоло өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="staff_team_dialog_search_placeholder">Аты, манжа изи же ID боюнча издөө…</string>

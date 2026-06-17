@@ -200,7 +200,7 @@ class ListingsViewModel @Inject constructor(
         _state.value = _state.value.copy(submitting = true)
         viewModelScope.launch {
             try {
-                val id = pending.listing.id.toInt()
+                val id = pending.listing.id
                 when (pending.type) {
                     ListingActionType.APPROVE ->
                         repository.approveListing(id, notes.takeIf { it.isNotBlank() })

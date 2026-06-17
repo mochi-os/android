@@ -50,8 +50,8 @@
     <string name="staff_appeals_dialog_title">ਅਪੀਲ ਉੱਤੇ ਫੈਸਲਾ ਕਰੋ</string>
     <string name="staff_appeals_empty">ਕੋਈ ਬਕਾਇਆ ਅਪੀਲਾਂ ਨਹੀਂ</string>
     <string name="staff_appeals_history">ਆਈਟਮ ਦੇ ਵੇਰਵੇ ਲੋਡ ਹੋ ਰਹੇ ਹਨ</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">ਨੋਟਸ</string>
     <string name="staff_appeals_open_sidebar">ਸਾਈਡਬਾਰ ਖੋਲ੍ਹੋ</string>
     <string name="staff_appeals_submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
@@ -221,7 +221,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">ਵੇਚਣ ਵਾਲੇ</string>
     <string name="staff_dashboard_kpi_total_orders">ਕੁੱਲ ਆਰਡਰ</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">ਨਹੀਂ</string>
     <string name="staff_dashboard_open_sidebar">ਸਾਈਡਬਾਰ ਖੋਲ੍ਹੋ</string>
     <string name="staff_dashboard_system">ਸਿਸਟਮ</string>
@@ -239,7 +239,7 @@
     <string name="staff_disputes_empty">ਕੋਈ ਵਿਵਾਦ ਨਹੀਂ</string>
     <string name="staff_disputes_filter_status_label">ਸਥਿਤੀ</string>
     <string name="staff_disputes_history">ਵਿਵਾਦ ਇਤਿਹਾਸ</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">ਚਾਰਜਬੈਕ ਫੀਸ</string>
     <string name="staff_disputes_meta_evidence_due">ਸਬੂਤ ਜਮ੍ਹਾਂ ਕਰਾਉਣ ਦੀ ਅੰਤਿਮ ਮਿਤੀ</string>
     <string name="staff_disputes_meta_listing">ਲਿਸਟਿੰਗ</string>
@@ -326,7 +326,7 @@
     <string name="staff_moderation_open_sidebar">ਸਾਈਡਬਾਰ ਖੋਲ੍ਹੋ</string>
     <string name="staff_moderation_system">ਸਿਸਟਮ</string>
     <string name="staff_moderation_title">ਮਾਡਰੇਸ਼ਨ ਲੌਗ</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">ਕਾਰਵਾਈ</string>
     <string name="staff_reports_action_ban">ਯੂਜ਼ਰ ਉੱਤੇ ਪਾਬੰਦੀ ਲਾਓ</string>
     <string name="staff_reports_action_dismiss">ਖਾਰਜ ਕਰੋ</string>
@@ -474,7 +474,7 @@
     <string name="staff_team_toast_role_failed">ਭੂਮਿਕਾ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="staff_team_toast_role_updated">ਭੂਮਿਕਾ ਅੱਪਡੇਟ ਹੋਈ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">ਆਰਡਰ #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ਆਰਡਰ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ਕਾਰਨ (ਚੋਣਵਾਂ)</string>
     <string name="staff_accounts_sales">%1$d ਵਿਕਰੀਆਂ</string>
@@ -507,9 +507,9 @@
     <string name="staff_disputes_stripe_unrecognized">ਅਣਪਛਾਤਾ ਚਾਰਜ</string>
     <string name="staff_listings_seller_unknown">ਅਣਜਾਣ ਵਿਕਰੇਤਾ</string>
     <string name="staff_listings_seller_verified">ਤਸਦੀਕਸ਼ੁਦਾ ਵਿਕਰੇਤਾ</string>
-    <string name="staff_reports_listing_label">ਸੂਚੀ #%1$d</string>
+    <string name="staff_reports_listing_label">ਸੂਚੀ #%1$s</string>
     <string name="staff_reports_meta_details">ਰਿਪੋਰਟਰ ਦੇ ਵੇਰਵੇ</string>
-    <string name="staff_reviews_order_label">ਆਰਡਰ #%1$d</string>
+    <string name="staff_reviews_order_label">ਆਰਡਰ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%3$s ਨੂੰ %1$s → %2$s। ਇਸ ਸਮੀਖਿਆ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s। ਇਸ ਸਮੀਖਿਆ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="staff_team_dialog_search_placeholder">ਨਾਮ, ਫਿੰਗਰਪ੍ਰਿੰਟ, ਜਾਂ ID ਦੁਆਰਾ ਖੋਜੋ…</string>

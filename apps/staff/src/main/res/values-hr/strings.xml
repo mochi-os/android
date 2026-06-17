@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Odluči o žalbi</string>
     <string name="staff_appeals_empty">Nema žalbi na čekanju</string>
     <string name="staff_appeals_history">Povijest oglasa</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Bilješke</string>
     <string name="staff_appeals_open_sidebar">Otvori bočnu traku</string>
     <string name="staff_appeals_reason_label">Razlog žalbe prodavača</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Prodavači</string>
     <string name="staff_dashboard_kpi_total_orders">Ukupno narudžbi</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ne</string>
     <string name="staff_dashboard_open_sidebar">Otvori bočnu traku</string>
-    <string name="staff_dashboard_order_fallback">Narudžba #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Narudžba #%1$s</string>
     <string name="staff_dashboard_system">Sustav</string>
     <string name="staff_dashboard_tab_audit">Revizija</string>
     <string name="staff_dashboard_tab_listings">Oglasi</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Nema sporova</string>
     <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_history">Povijest sporova</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Podaci kupca</string>
     <string name="staff_disputes_meta_chargeback_fee">Naknada za chargeback</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">zadržao Stripe</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">Otvori bočnu traku</string>
     <string name="staff_moderation_system">Sustav</string>
     <string name="staff_moderation_title">Zapisnik moderacije</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Radnja</string>
     <string name="staff_reports_action_ban">Blokiraj korisnika</string>
     <string name="staff_reports_action_dismiss">Odbaci</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Tip</string>
     <string name="staff_reports_history">Povijest prijava</string>
-    <string name="staff_reports_listing_label">Oglas #%1$d</string>
+    <string name="staff_reports_listing_label">Oglas #%1$s</string>
     <string name="staff_reports_meta_details">Podaci podnositelja prijave</string>
     <string name="staff_reports_meta_price">Cijena</string>
     <string name="staff_reports_meta_reason">Razlog</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">Uklonjeno</string>
     <string name="staff_reviews_filter_status">Status</string>
     <string name="staff_reviews_open_sidebar">Otvori bočnu traku</string>
-    <string name="staff_reviews_order_label">narudžba #%1$d</string>
+    <string name="staff_reviews_order_label">narudžba #%1$s</string>
     <string name="staff_reviews_overflow_actions">Radnje</string>
     <string name="staff_reviews_remove_confirm">Ukloni</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s dana %3$s. Trajno obrisati ovu recenziju? Ova radnja se ne može poništiti.</string>

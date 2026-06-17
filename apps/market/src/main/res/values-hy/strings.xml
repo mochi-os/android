@@ -352,7 +352,7 @@
     <string name="market_purchase_track">Հետևել փաթեթին</string>
     <string name="market_purchases_complete_purchase">Ավարտեք հաստատումը՝ շարունակելու համար</string>
     <string name="market_purchases_empty">Գնումներ չկան</string>
-    <string name="market_purchases_order_label">Պատվեր #%1$d</string>
+    <string name="market_purchases_order_label">Պատվեր #%1$s</string>
     <string name="market_purchases_title">Գնումներ</string>
     <string name="market_rating_label">Գնահատական</string>
     <string name="market_rating_no_reviews">Դեռ կարծիքներ չկան</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Ներբեռնեք ձեր %1$d ֆայլերը ստորև։</string>
     <string name="market_purchase_download_one">Ներբեռնեք ձեր ֆայլը ստորև։</string>
     <string name="market_purchase_review_from">Կարծիք %1$s-ից</string>
-    <string name="market_purchases_auction_label">Աճուրդ #%1$d</string>
+    <string name="market_purchases_auction_label">Աճուրդ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s վերադարձված է</string>
     <string name="market_purchases_won_for">Շահվել է %1$s-ով</string>
     <string name="market_refund_dialog_amount_help">Թողեք դատարկ՝ ամբողջ պատվերը վերադարձնելու համար։</string>

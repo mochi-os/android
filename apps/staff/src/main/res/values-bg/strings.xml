@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Реши обжалването</string>
     <string name="staff_appeals_empty">Няма чакащи обжалвания</string>
     <string name="staff_appeals_history">История на обявата</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Бележки</string>
     <string name="staff_appeals_open_sidebar">Отвори страничната лента</string>
     <string name="staff_appeals_reason_label">Причина за обжалването на продавача</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Продавачи</string>
     <string name="staff_dashboard_kpi_total_orders">Общо поръчки</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Не</string>
     <string name="staff_dashboard_open_sidebar">Отвори страничната лента</string>
-    <string name="staff_dashboard_order_fallback">Поръчка #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Поръчка #%1$s</string>
     <string name="staff_dashboard_system">Система</string>
     <string name="staff_dashboard_tab_audit">Одит</string>
     <string name="staff_dashboard_tab_listings">Обяви</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Няма спорове</string>
     <string name="staff_disputes_filter_status_label">Състояние</string>
     <string name="staff_disputes_history">История на споровете</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Данни на купувача</string>
     <string name="staff_disputes_meta_chargeback_fee">Такса за chargeback</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">задържано от Stripe</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">Отвори страничната лента</string>
     <string name="staff_moderation_system">Система</string>
     <string name="staff_moderation_title">Дневник за модерация</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Действие</string>
     <string name="staff_reports_action_ban">Блокирай потребителя</string>
     <string name="staff_reports_action_dismiss">Отхвърли</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">Състояние</string>
     <string name="staff_reports_filter_type_label">Тип</string>
     <string name="staff_reports_history">История на докладите</string>
-    <string name="staff_reports_listing_label">Обява #%1$d</string>
+    <string name="staff_reports_listing_label">Обява #%1$s</string>
     <string name="staff_reports_meta_details">Данни на подателя</string>
     <string name="staff_reports_meta_price">Цена</string>
     <string name="staff_reports_meta_reason">Причина</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">Премахнато</string>
     <string name="staff_reviews_filter_status">Състояние</string>
     <string name="staff_reviews_open_sidebar">Отвори страничната лента</string>
-    <string name="staff_reviews_order_label">поръчка #%1$d</string>
+    <string name="staff_reviews_order_label">поръчка #%1$s</string>
     <string name="staff_reviews_overflow_actions">Действия</string>
     <string name="staff_reviews_remove_confirm">Премахни</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s на %3$s. Изтрий ли този отзив за постоянно? Това действие не може да бъде отменено.</string>

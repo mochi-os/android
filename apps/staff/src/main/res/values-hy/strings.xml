@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Որոշում</string>
     <string name="staff_appeals_empty">Սպասվող բողոքներ չկան</string>
     <string name="staff_appeals_history">Ցուցակագրումը մերժվեց</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Նշումներ</string>
     <string name="staff_appeals_open_sidebar">Բացել կողագոտին</string>
     <string name="staff_appeals_reason_label">Վաճառողի բողոքի պատճառը</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Վաճառողներ</string>
     <string name="staff_dashboard_kpi_total_orders">Ընդհանուր պատվերներ</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ոչ</string>
     <string name="staff_dashboard_open_sidebar">Բացել կողագոտին</string>
-    <string name="staff_dashboard_order_fallback">Պատվեր #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Պատվեր #%1$s</string>
     <string name="staff_dashboard_system">Համակարգ</string>
     <string name="staff_dashboard_tab_audit">Նույնականացման թոքեններ</string>
     <string name="staff_dashboard_tab_listings">Բեռնվում է diff-ը...</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Վիճաբանություններ չկան</string>
     <string name="staff_disputes_filter_status_label">Կարգավիճակ</string>
     <string name="staff_disputes_history">Վեճի պատմություն</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Գնորդի մանրամասները</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback ստացված է</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">պահված է Stripe-ի կողմից</string>
@@ -346,7 +346,7 @@
     <string name="staff_moderation_open_sidebar">Բացել կողագոտին</string>
     <string name="staff_moderation_system">Համակարգ</string>
     <string name="staff_moderation_title">Մոդերացիայի շեմերը թարմացվեցին</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Գործողություն կատարված է</string>
     <string name="staff_reports_action_ban">Բանկը չկարողացավ մշակել</string>
     <string name="staff_reports_action_dismiss">Հեռացնել</string>
@@ -367,7 +367,7 @@
     <string name="staff_reports_filter_status_label">Կարգավիճակ</string>
     <string name="staff_reports_filter_type_label">Տեսակ</string>
     <string name="staff_reports_history">Հաղորդումների պատմություն</string>
-    <string name="staff_reports_listing_label">Հայտարարություն #%1$d</string>
+    <string name="staff_reports_listing_label">Հայտարարություն #%1$s</string>
     <string name="staff_reports_meta_details">Հաղորդողի մանրամասները</string>
     <string name="staff_reports_meta_price">Գին</string>
     <string name="staff_reports_meta_reason">Պատճառ</string>
@@ -410,7 +410,7 @@
     <string name="staff_reviews_filter_removed">Հեռացված է</string>
     <string name="staff_reviews_filter_status">Կարգավիճակ</string>
     <string name="staff_reviews_open_sidebar">Բացել կողագոտին</string>
-    <string name="staff_reviews_order_label">պատվեր #%1$d</string>
+    <string name="staff_reviews_order_label">պատվեր #%1$s</string>
     <string name="staff_reviews_overflow_actions">Ակտիվ</string>
     <string name="staff_reviews_remove_confirm">Հեռացնել</string>
     <string name="staff_reviews_remove_title">Հեռացնե՞լ կարծիքը։</string>

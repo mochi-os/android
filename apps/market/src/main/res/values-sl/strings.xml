@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d prodaj</string>
     <string name="market_profile_sales_count">%1$d prodaj</string>
     <string name="market_purchase_dispute_response">Odgovor prodajalca</string>
-    <string name="market_purchases_order_label">Naročilo #%1$d</string>
+    <string name="market_purchases_order_label">Naročilo #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Povejte kupcem o sebi…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Spodaj prenesite svoje datoteke (%1$d).</string>
     <string name="market_purchase_download_one">Spodaj prenesite svojo datoteko.</string>
     <string name="market_purchase_review_from">Mnenje od %1$s</string>
-    <string name="market_purchases_auction_label">Dražba #%1$d</string>
+    <string name="market_purchases_auction_label">Dražba #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vrnjeno</string>
     <string name="market_purchases_won_for">Pridobljeno za %1$s</string>
     <string name="market_rating_reviews">(%1$d mnenj)</string>

@@ -462,8 +462,8 @@ private fun SaveStatusBadge(status: SaveStatus) {
 @Composable
 private fun CategoryDropdown(
     categories: List<Category>,
-    selected: Long,
-    onChange: (Long) -> Unit,
+    selected: String,
+    onChange: (String) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
     val active = categories.firstOrNull { it.id == selected }

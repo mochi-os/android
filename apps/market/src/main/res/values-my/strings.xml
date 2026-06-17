@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ပစ္စည်း ခြေရာခံမည်</string>
     <string name="market_purchases_complete_purchase">ဝယ်ယူမှု ပြီးစီးအောင်လုပ်မည်</string>
     <string name="market_purchases_empty">ဝယ်ယူမှုများ မရှိ</string>
-    <string name="market_purchases_order_label">အမှာစာ #%1$d</string>
+    <string name="market_purchases_order_label">အမှာစာ #%1$s</string>
     <string name="market_purchases_title">ဝယ်ယူမှုများ</string>
     <string name="market_rating_label">အဆင့်သတ်မှတ်ချက်</string>
     <string name="market_rating_no_reviews">သုံးသပ်ချက်များ မရှိသေးပါ</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">သင်၏ ဖိုင် %1$d ခုကို အောက်တွင် ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="market_purchase_download_one">သင်၏ ဖိုင်ကို အောက်တွင် ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="market_purchase_review_from">%1$s ထံမှ သုံးသပ်ချက်</string>
-    <string name="market_purchases_auction_label">လေလံပွဲ #%1$d</string>
+    <string name="market_purchases_auction_label">လေလံပွဲ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ပြန်အမ်းပြီး</string>
     <string name="market_purchases_won_for">%1$s ဖြင့် အနိုင်ရရှိ</string>
     <string name="market_refund_dialog_amount_help">မှာယူမှုအပြည့်ကို ပြန်အမ်းရန် ဗလာထားပါ။</string>

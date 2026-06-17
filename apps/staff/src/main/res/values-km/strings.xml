@@ -50,8 +50,8 @@
     <string name="staff_appeals_dialog_title">សម្រេចបណ្ដឹងឧទ្ធរណ៍</string>
     <string name="staff_appeals_empty">មិនមានបណ្តឹងសាទុក្ខដែលកំពុងរង់ចាំ</string>
     <string name="staff_appeals_history">ប្រវត្តិការដាក់លក់</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">កំណត់ចំណាំ</string>
     <string name="staff_appeals_open_sidebar">បើករបារចំហៀង</string>
     <string name="staff_appeals_submit">ដាក់ស្នើ</string>
@@ -221,7 +221,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">អ្នកលក់</string>
     <string name="staff_dashboard_kpi_total_orders">ការបញ្ជាទិញសរុប</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">ទេ</string>
     <string name="staff_dashboard_open_sidebar">បើករបារចំហៀង</string>
     <string name="staff_dashboard_system">ប្រព័ន្ធ</string>
@@ -239,7 +239,7 @@
     <string name="staff_disputes_empty">មិនមានវិវាទ</string>
     <string name="staff_disputes_filter_status_label">ស្ថានភាព</string>
     <string name="staff_disputes_history">ប្រវត្តិវិវាទ</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">ថ្លៃ Chargeback</string>
     <string name="staff_disputes_meta_evidence_due">ភស្តុតាងត្រូវផ្ដល់ត្រឹម</string>
     <string name="staff_disputes_meta_listing">ការដាក់លក់</string>
@@ -326,7 +326,7 @@
     <string name="staff_moderation_open_sidebar">បើករបារចំហៀង</string>
     <string name="staff_moderation_system">ប្រព័ន្ធ</string>
     <string name="staff_moderation_title">កំណត់ហេតុការសម្របសម្រួល</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">សកម្មភាព</string>
     <string name="staff_reports_action_ban">ហាមឃាត់អ្នកប្រើប្រាស់</string>
     <string name="staff_reports_action_dismiss">បិទ</string>
@@ -474,7 +474,7 @@
     <string name="staff_team_toast_role_failed">បានបរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពតួនាទី</string>
     <string name="staff_team_toast_role_updated">បានធ្វើបច្ចុប្បន្នភាពតួនាទី</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">ការបញ្ជា #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ការបញ្ជា #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">មូលហេតុ (ស្រេចចិត្ត)</string>
     <string name="staff_accounts_sales">ការលក់ %1$d</string>
@@ -507,9 +507,9 @@
     <string name="staff_disputes_stripe_unrecognized">ការគិតប្រាក់មិនស្គាល់</string>
     <string name="staff_listings_seller_unknown">អ្នកលក់មិនស្គាល់</string>
     <string name="staff_listings_seller_verified">អ្នកលក់ដែលបានផ្ទៀងផ្ទាត់</string>
-    <string name="staff_reports_listing_label">ការចុះបញ្ជី #%1$d</string>
+    <string name="staff_reports_listing_label">ការចុះបញ្ជី #%1$s</string>
     <string name="staff_reports_meta_details">ព័ត៌មានលម្អិតរបស់អ្នករាយការណ៍</string>
-    <string name="staff_reviews_order_label">ការបញ្ជាទិញ #%1$d</string>
+    <string name="staff_reviews_order_label">ការបញ្ជាទិញ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s នៅលើ %3$s។ លុបការវាយតម្លៃនេះជាអចិន្ត្រៃយ៍? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s។ លុបការវាយតម្លៃនេះជាអចិន្ត្រៃយ៍? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="staff_team_dialog_search_placeholder">ស្វែងរកតាមឈ្មោះ ស្នាមម្រាមដៃ ឬលេខសម្គាល់…</string>

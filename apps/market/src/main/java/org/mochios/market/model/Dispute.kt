@@ -17,8 +17,8 @@ import com.google.gson.annotations.SerializedName
  * unix-seconds deadline by which the seller must submit evidence on Stripe.
  */
 data class Dispute(
-    val id: Long = 0,
-    val order: Long = 0,
+    val id: String = "",
+    val order: String = "",
     val opener: String = "",
     val reason: String = "",
     val description: String = "",
@@ -77,8 +77,8 @@ enum class DisputeStatus {
  * note in [body]. [role] is `"buyer"`, `"seller"`, or `"staff"`.
  */
 data class DisputeEvidence(
-    val id: Long = 0,
-    val dispute: Long = 0,
+    val id: String = "",
+    val dispute: String = "",
     val actor: String = "",
     @SerializedName("actor_name") val actorName: String = "",
     val role: String = "",

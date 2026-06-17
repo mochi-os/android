@@ -50,8 +50,8 @@
     <string name="staff_appeals_dialog_title">అప్పీల్‌ను నిర్ణయించండి</string>
     <string name="staff_appeals_empty">పెండింగ్‌లో అప్పీల్‌లు లేవు</string>
     <string name="staff_appeals_history">లిస్టింగ్ చరిత్ర</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">నోట్‌లు</string>
     <string name="staff_appeals_open_sidebar">సైడ్‌బార్ తెరువు</string>
     <string name="staff_appeals_submit">సమర్పించండి</string>
@@ -221,7 +221,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">విక్రేతలు</string>
     <string name="staff_dashboard_kpi_total_orders">మొత్తం ఆర్డర్‌లు</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">కాదు</string>
     <string name="staff_dashboard_open_sidebar">సైడ్‌బార్ తెరువు</string>
     <string name="staff_dashboard_system">సిస్టమ్</string>
@@ -239,7 +239,7 @@
     <string name="staff_disputes_empty">వివాదాలు లేవు</string>
     <string name="staff_disputes_filter_status_label">స్థితి</string>
     <string name="staff_disputes_history">వివాద చరిత్ర</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">ఛార్జ్‌బ్యాక్ ఫీజు</string>
     <string name="staff_disputes_meta_evidence_due">ఆధారాలు అందించాల్సిన గడువు</string>
     <string name="staff_disputes_meta_listing">లిస్టింగ్</string>
@@ -326,7 +326,7 @@
     <string name="staff_moderation_open_sidebar">సైడ్‌బార్ తెరువు</string>
     <string name="staff_moderation_system">సిస్టమ్</string>
     <string name="staff_moderation_title">మోడరేషన్ లాగ్</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">చర్య</string>
     <string name="staff_reports_action_ban">వినియోగదారుని నిషేధించండి</string>
     <string name="staff_reports_action_dismiss">విస్మరించండి</string>
@@ -474,7 +474,7 @@
     <string name="staff_team_toast_role_failed">పాత్రను నవీకరించడంలో విఫలమైంది</string>
     <string name="staff_team_toast_role_updated">పాత్ర నవీకరించబడింది</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">ఆర్డర్ #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ఆర్డర్ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">కారణం (ఐచ్ఛికం)</string>
     <string name="staff_accounts_sales">%1$d అమ్మకాలు</string>
@@ -507,9 +507,9 @@
     <string name="staff_disputes_stripe_unrecognized">గుర్తించని చార్జ్</string>
     <string name="staff_listings_seller_unknown">తెలియని విక్రేత</string>
     <string name="staff_listings_seller_verified">ధృవీకరించబడిన విక్రేత</string>
-    <string name="staff_reports_listing_label">జాబితా #%1$d</string>
+    <string name="staff_reports_listing_label">జాబితా #%1$s</string>
     <string name="staff_reports_meta_details">నివేదిక చేసినవారి వివరాలు</string>
-    <string name="staff_reviews_order_label">ఆర్డర్ #%1$d</string>
+    <string name="staff_reviews_order_label">ఆర్డర్ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$sన. ఈ సమీక్షను శాశ్వతంగా తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ఈ సమీక్షను శాశ్వతంగా తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
     <string name="staff_team_dialog_search_placeholder">పేరు, వేలిముద్ర లేదా ID ద్వారా శోధించండి…</string>

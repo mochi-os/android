@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">ตัดสินการอุทธรณ์</string>
     <string name="staff_appeals_empty">ไม่มีคำอุทธรณ์ที่รอดำเนินการ</string>
     <string name="staff_appeals_history">ประวัติประกาศ</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">บันทึก</string>
     <string name="staff_appeals_open_sidebar">เปิดแถบด้านข้าง</string>
     <string name="staff_appeals_reason_label">เหตุผลการอุทธรณ์ของผู้ขาย</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">ผู้ขาย</string>
     <string name="staff_dashboard_kpi_total_orders">คำสั่งซื้อทั้งหมด</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">ไม่</string>
     <string name="staff_dashboard_open_sidebar">เปิดแถบด้านข้าง</string>
-    <string name="staff_dashboard_order_fallback">คำสั่งซื้อ #%1$d</string>
+    <string name="staff_dashboard_order_fallback">คำสั่งซื้อ #%1$s</string>
     <string name="staff_dashboard_system">ระบบ</string>
     <string name="staff_dashboard_tab_audit">การตรวจสอบ</string>
     <string name="staff_dashboard_tab_listings">ประกาศ</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">ไม่มีข้อพิพาท</string>
     <string name="staff_disputes_filter_status_label">สถานะ</string>
     <string name="staff_disputes_history">ประวัติข้อพิพาท</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">ข้อมูลผู้ซื้อ</string>
     <string name="staff_disputes_meta_chargeback_fee">ค่าธรรมเนียม chargeback</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe เก็บไว้</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">เปิดแถบด้านข้าง</string>
     <string name="staff_moderation_system">ระบบ</string>
     <string name="staff_moderation_title">บันทึกการดูแล</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">การกระทำ</string>
     <string name="staff_reports_action_ban">แบนผู้ใช้</string>
     <string name="staff_reports_action_dismiss">ปิด</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">สถานะ</string>
     <string name="staff_reports_filter_type_label">ประเภท</string>
     <string name="staff_reports_history">ประวัติการรายงาน</string>
-    <string name="staff_reports_listing_label">ประกาศ #%1$d</string>
+    <string name="staff_reports_listing_label">ประกาศ #%1$s</string>
     <string name="staff_reports_meta_details">ข้อมูลผู้รายงาน</string>
     <string name="staff_reports_meta_price">ราคา</string>
     <string name="staff_reports_meta_reason">เหตุผล</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">ลบแล้ว</string>
     <string name="staff_reviews_filter_status">สถานะ</string>
     <string name="staff_reviews_open_sidebar">เปิดแถบด้านข้าง</string>
-    <string name="staff_reviews_order_label">คำสั่งซื้อ #%1$d</string>
+    <string name="staff_reviews_order_label">คำสั่งซื้อ #%1$s</string>
     <string name="staff_reviews_overflow_actions">การกระทำ</string>
     <string name="staff_reviews_remove_confirm">ลบ</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s เมื่อ %3$s ลบรีวิวนี้ถาวร? การกระทำนี้ไม่สามารถยกเลิกได้</string>

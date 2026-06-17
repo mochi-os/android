@@ -358,7 +358,7 @@
     <string name="market_purchase_track">Tọpa ẹrù</string>
     <string name="market_purchases_complete_purchase">Parí ìrà</string>
     <string name="market_purchases_empty">Kò sí rírà</string>
-    <string name="market_purchases_order_label">Pípèsè #%1$d</string>
+    <string name="market_purchases_order_label">Pípèsè #%1$s</string>
     <string name="market_purchases_title">Àwọn rírà</string>
     <string name="market_rating_label">Ìpele</string>
     <string name="market_rating_no_reviews">Kò sí àyẹ̀wò síbẹ̀</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Gba àwọn fáìlì %1$d rẹ wálẹ̀ ní ìsàlẹ̀.</string>
     <string name="market_purchase_download_one">Gba fáìlì rẹ wálẹ̀ ní ìsàlẹ̀.</string>
     <string name="market_purchase_review_from">Àyẹ̀wò láti ọ̀dọ̀ %1$s</string>
-    <string name="market_purchases_auction_label">Ìdíje #%1$d</string>
+    <string name="market_purchases_auction_label">Ìdíje #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s tí a dá padà</string>
     <string name="market_purchases_won_for">Jíjà fún %1$s</string>
     <string name="market_refund_dialog_amount_help">Fi sílẹ̀ ní òfo láti dá gbogbo owó àṣẹ padà.</string>

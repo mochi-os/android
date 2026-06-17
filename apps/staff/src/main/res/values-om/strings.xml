@@ -48,8 +48,8 @@
     <string name="staff_appeals_dialog_title">Iyyannoo murteessi</string>
     <string name="staff_appeals_empty">Iyyannoon eegaa jiru hin jiru</string>
     <string name="staff_appeals_history">Seenaa tarreeffama</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Yaadannoo</string>
     <string name="staff_appeals_open_sidebar">Saaree banuu</string>
     <string name="staff_appeals_submit">Galchaa</string>
@@ -219,7 +219,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Gurgurtoota</string>
     <string name="staff_dashboard_kpi_total_orders">Ajajoota walumaagala</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Lakki</string>
     <string name="staff_dashboard_open_sidebar">Saaree banuu</string>
     <string name="staff_dashboard_system">Sirna</string>
@@ -237,7 +237,7 @@
     <string name="staff_disputes_empty">Mormiin hin jiru</string>
     <string name="staff_disputes_filter_status_label">Haala</string>
     <string name="staff_disputes_history">Seenaa mormii</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Kaffaltii chaargii deebi\'e</string>
     <string name="staff_disputes_meta_evidence_due">Ragaan kan barbaachisuu</string>
     <string name="staff_disputes_meta_listing">Tarreeffama</string>
@@ -323,7 +323,7 @@
     <string name="staff_moderation_open_sidebar">Saaree banuu</string>
     <string name="staff_moderation_system">Sirna</string>
     <string name="staff_moderation_title">Galmee toattaachuu</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Tarkaanfii</string>
     <string name="staff_reports_action_ban">Fayyadamaa dhorki</string>
     <string name="staff_reports_action_dismiss">Dhiisi</string>
@@ -470,7 +470,7 @@
     <string name="staff_team_toast_role_failed">Gahee haaromsuun hin milkoofne</string>
     <string name="staff_team_toast_role_updated">Gahee haaromfameera</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">Aja\'a #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Aja\'a #%1$s</string>
 
     <string name="staff_accounts_action_unban_title">Dhorkaa kaasi</string>
     <string name="staff_accounts_action_unsuspend_title">Addaan kutiinsa kaasi</string>
@@ -506,9 +506,9 @@
     <string name="staff_disputes_stripe_unrecognized">kaffaltiin hin beekamne</string>
     <string name="staff_listings_seller_unknown">Gurguraa hin beekamne</string>
     <string name="staff_listings_seller_verified">Gurguraa mirkanaa\'e</string>
-    <string name="staff_reports_listing_label">Tarreeffama #%1$d</string>
+    <string name="staff_reports_listing_label">Tarreeffama #%1$s</string>
     <string name="staff_reports_meta_details">Odeeffannoo gabaasaa</string>
-    <string name="staff_reviews_order_label">ajaja #%1$d</string>
+    <string name="staff_reviews_order_label">ajaja #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s irratti. Gamaaggama kana yeroo hundaaf haqi? Kun deebifamuu hin danda\'u.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Gamaaggama kana yeroo hundaaf haqi? Kun deebifamuu hin danda\'u.</string>
     <string name="staff_team_dialog_adding">Itti dabalamaa jira…</string>

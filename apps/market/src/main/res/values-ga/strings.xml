@@ -354,7 +354,7 @@
     <string name="market_purchase_track">Rian an phacáiste</string>
     <string name="market_purchases_complete_purchase">Críochnaigh ceannach</string>
     <string name="market_purchases_empty">Níl aon cheannach</string>
-    <string name="market_purchases_order_label">Ordú #%1$d</string>
+    <string name="market_purchases_order_label">Ordú #%1$s</string>
     <string name="market_purchases_title">Ceannacháin</string>
     <string name="market_rating_label">Rátáil</string>
     <string name="market_rating_no_reviews">Níl aon athbhreithniú fós</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">Íoslódáil do %1$d chomhad thíos.</string>
     <string name="market_purchase_download_one">Íoslódáil do chomhad thíos.</string>
     <string name="market_purchase_review_from">Léirmheas ó %1$s</string>
-    <string name="market_purchases_auction_label">Ceant #%1$d</string>
+    <string name="market_purchases_auction_label">Ceant #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s aisíoctha</string>
     <string name="market_purchases_won_for">Buaite ar %1$s</string>
     <string name="market_refund_dialog_amount_help">Fág folamh chun an t-ordú iomlán a aisíoc.</string>

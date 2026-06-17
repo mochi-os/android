@@ -60,7 +60,7 @@ import org.mochios.market.model.Asset
 fun DigitalAssetsManager(
     assets: List<Asset>,
     onUpload: (List<Uri>) -> Unit,
-    onDelete: (Long) -> Unit,
+    onDelete: (String) -> Unit,
     onReorder: (List<Asset>) -> Unit,
     onAddExternal: (filename: String, mime: String, reference: String) -> Unit,
     isUploading: Boolean,

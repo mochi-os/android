@@ -350,7 +350,7 @@
     <string name="market_purchase_track">පැකේජය track කරන්න</string>
     <string name="market_purchases_complete_purchase">මිලදී ගැනීම සම්පූර්ණ කරන්න</string>
     <string name="market_purchases_empty">මිලදී ගැනීම් නැත</string>
-    <string name="market_purchases_order_label">ඇණවුම #%1$d</string>
+    <string name="market_purchases_order_label">ඇණවුම #%1$s</string>
     <string name="market_purchases_title">මිලදී ගැනීම්</string>
     <string name="market_rating_label">ශ්‍රේණිගත කිරීම</string>
     <string name="market_rating_no_reviews">තවම සමාලෝචන නැත</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">පහත ඔබේ ගොනු %1$d බාගත කරන්න.</string>
     <string name="market_purchase_download_one">පහත ඔබේ ගොනුව බාගත කරන්න.</string>
     <string name="market_purchase_review_from">%1$s ගෙන් සමාලෝචනය</string>
-    <string name="market_purchases_auction_label">වෙන්දේසිය #%1$d</string>
+    <string name="market_purchases_auction_label">වෙන්දේසිය #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ආපසු ගෙවන ලදී</string>
     <string name="market_purchases_won_for">%1$s ට ජයගත්තේය</string>
     <string name="market_refund_dialog_amount_help">මුළු ඇණවුම ආපසු ගෙවීමට හිස්ව තබන්න.</string>

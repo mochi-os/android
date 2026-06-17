@@ -56,9 +56,9 @@ import javax.inject.Singleton
  *
  * The market app is a stateless proxy to the Comptroller — every action
  * is a class-context route (`-/<group>/<verb>`) with no entity scope.
- * Listing / order / bid IDs are numeric (Long); the wire format is
- * `application/x-www-form-urlencoded` so every numeric id is serialised
- * to its decimal string before reaching [MarketApi].
+ * Listing / order / bid IDs are opaque comptroller uids (String); the wire
+ * format is `application/x-www-form-urlencoded`, and the `.toString()` calls
+ * below are identity no-ops retained to make the wire serialisation explicit.
  */
 @Singleton
 class MarketRepository @Inject constructor(
@@ -194,7 +194,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun deleteListing(id: Long) {
+    suspend fun deleteListing(id: String) {
         try {
             api.deleteListing(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -202,7 +202,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun listingRemovalCheck(id: Long): RemovalCheck {
+    suspend fun listingRemovalCheck(id: String): RemovalCheck {
         return try {
             api.removalCheckListing(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -228,7 +228,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun relistListing(id: Long): RelistResponse {
+    suspend fun relistListing(id: String): RelistResponse {
         return try {
             api.relistListing(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -257,7 +257,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun getListing(id: Long): ListingDetailResponse {
+    suspend fun getListing(id: String): ListingDetailResponse {
         return try {
             api.getListing(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -272,7 +272,7 @@ class MarketRepository @Inject constructor(
      * them sequentially. Individual failures (e.g. listing removed server-side)
      * are dropped silently so the caller still gets the rows that did resolve.
      */
-    suspend fun getListingsByIds(ids: List<Long>): List<Listing> = coroutineScope {
+    suspend fun getListingsByIds(ids: List<String>): List<Listing> = coroutineScope {
         ids.map { id ->
             async {
                 try {
@@ -297,7 +297,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun appealListing(id: Long, reason: String): Listing {
+    suspend fun appealListing(id: String, reason: String): Listing {
         return try {
             api.appealListing(id.toString(), reason).unwrap()
         } catch (e: Exception) {
@@ -307,7 +307,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Shipping ----
 
-    suspend fun setShipping(listing: Long, options: List<ShippingOptionInput>) {
+    suspend fun setShipping(listing: String, options: List<ShippingOptionInput>) {
         try {
             api.setShipping(listing.toString(), gson.toJson(options)).unwrap()
         } catch (e: Exception) {
@@ -317,7 +317,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Photos ----
 
-    suspend fun uploadPhoto(listing: Long, file: File): Photo {
+    suspend fun uploadPhoto(listing: String, file: File): Photo {
         return try {
             val listingPart = listing.toString().toRequestBody(text)
             val filePart = multipart("file", file)
@@ -327,7 +327,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun listPhotos(listing: Long): List<Photo> {
+    suspend fun listPhotos(listing: String): List<Photo> {
         return try {
             api.listPhotos(listing.toString()).unwrap()
         } catch (e: Exception) {
@@ -343,7 +343,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun reorderPhotos(listing: Long, ids: List<String>) {
+    suspend fun reorderPhotos(listing: String, ids: List<String>) {
         try {
             api.reorderPhotos(listing.toString(), gson.toJson(ids)).unwrap()
         } catch (e: Exception) {
@@ -353,7 +353,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Assets ----
 
-    suspend fun uploadAsset(listing: Long, file: File): Asset {
+    suspend fun uploadAsset(listing: String, file: File): Asset {
         return try {
             val listingPart = listing.toString().toRequestBody(text)
             val filePart = multipart("file", file)
@@ -364,7 +364,7 @@ class MarketRepository @Inject constructor(
     }
 
     suspend fun externalAsset(
-        listing: Long,
+        listing: String,
         filename: String,
         mime: String,
         reference: String,
@@ -376,7 +376,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun removeAsset(id: Long) {
+    suspend fun removeAsset(id: String) {
         try {
             api.removeAsset(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -384,7 +384,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun reorderAssets(listing: Long, ids: List<Long>) {
+    suspend fun reorderAssets(listing: String, ids: List<String>) {
         try {
             api.reorderAssets(listing.toString(), gson.toJson(ids)).unwrap()
         } catch (e: Exception) {
@@ -397,7 +397,7 @@ class MarketRepository @Inject constructor(
      * bytes are streamed; this repo call returns the ResponseBody for the
      * caller to write to disk, or surface the external reference URL.
      */
-    suspend fun downloadAsset(id: Long): okhttp3.ResponseBody {
+    suspend fun downloadAsset(id: String): okhttp3.ResponseBody {
         return try {
             api.downloadAsset(id.toString()).also { response ->
                 if (!response.isSuccessful) {
@@ -411,7 +411,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Bids ----
 
-    suspend fun placeBid(auction: Long, amount: Long, ceiling: Long? = null): BidResponse {
+    suspend fun placeBid(auction: String, amount: Long, ceiling: Long? = null): BidResponse {
         return try {
             api.placeBid(auction.toString(), amount.toString(), ceiling?.toString()).unwrap()
         } catch (e: Exception) {
@@ -509,7 +509,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun getOrder(id: Long): OrderDetailResponse {
+    suspend fun getOrder(id: String): OrderDetailResponse {
         return try {
             api.getOrder(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -518,7 +518,7 @@ class MarketRepository @Inject constructor(
     }
 
     suspend fun shipOrder(
-        id: Long,
+        id: String,
         carrier: String? = null,
         tracking: String? = null,
         url: String? = null,
@@ -530,7 +530,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun confirmOrder(id: Long): Order {
+    suspend fun confirmOrder(id: String): Order {
         return try {
             api.confirmOrder(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -539,7 +539,7 @@ class MarketRepository @Inject constructor(
     }
 
     suspend fun disputeOrder(
-        id: Long,
+        id: String,
         reason: String? = null,
         description: String? = null,
     ): Order {
@@ -553,7 +553,7 @@ class MarketRepository @Inject constructor(
     data class RefundResult(val order: Order, val dispute: Dispute?)
 
     suspend fun refundOrder(
-        id: Long,
+        id: String,
         amount: Long? = null,
         reason: String? = null,
     ): RefundResult {
@@ -568,7 +568,7 @@ class MarketRepository @Inject constructor(
     // ---- Subscriptions ----
 
     suspend fun createSubscription(
-        listing: Long,
+        listing: String,
         successUrl: String? = null,
         cancelUrl: String? = null,
         clientPlatform: String? = null,
@@ -593,7 +593,7 @@ class MarketRepository @Inject constructor(
     }
 
     suspend fun listSubscribers(
-        listing: Long? = null,
+        listing: String? = null,
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
@@ -605,7 +605,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun cancelSubscription(id: Long): Subscription {
+    suspend fun cancelSubscription(id: String): Subscription {
         return try {
             api.cancelSubscription(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -613,7 +613,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun pauseSubscription(id: Long): Subscription {
+    suspend fun pauseSubscription(id: String): Subscription {
         return try {
             api.pauseSubscription(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -621,7 +621,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun resumeSubscription(id: Long): Subscription {
+    suspend fun resumeSubscription(id: String): Subscription {
         return try {
             api.resumeSubscription(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -629,7 +629,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun reactivateSubscription(id: Long): Subscription {
+    suspend fun reactivateSubscription(id: String): Subscription {
         return try {
             api.reactivateSubscription(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -639,7 +639,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Threads ----
 
-    suspend fun createThread(listing: Long, buyer: String? = null): MarketThread {
+    suspend fun createThread(listing: String, buyer: String? = null): MarketThread {
         return try {
             api.createThread(listing.toString(), buyer).unwrap()
         } catch (e: Exception) {
@@ -659,7 +659,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun getThread(id: Long): ThreadDetailResponse {
+    suspend fun getThread(id: String): ThreadDetailResponse {
         return try {
             api.getThread(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -669,7 +669,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Messages ----
 
-    suspend fun sendMessage(thread: Long, body: String): Message {
+    suspend fun sendMessage(thread: String, body: String): Message {
         return try {
             api.sendMessage(thread.toString(), body).unwrap()
         } catch (e: Exception) {
@@ -677,7 +677,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun markMessagesRead(thread: Long) {
+    suspend fun markMessagesRead(thread: String) {
         try {
             api.markMessagesRead(thread.toString()).unwrap()
         } catch (e: Exception) {
@@ -687,7 +687,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Reviews ----
 
-    suspend fun createReview(order: Long, rating: Int, text: String? = null): Review {
+    suspend fun createReview(order: String, rating: Int, text: String? = null): Review {
         return try {
             api.createReview(order.toString(), rating, text).unwrap()
         } catch (e: Exception) {
@@ -695,7 +695,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun respondToReview(id: Long, response: String): Review {
+    suspend fun respondToReview(id: String, response: String): Review {
         return try {
             api.respondReview(id.toString(), response).unwrap()
         } catch (e: Exception) {
@@ -755,7 +755,7 @@ class MarketRepository @Inject constructor(
 
     // ---- Disputes ----
 
-    suspend fun getDispute(id: Long): Dispute {
+    suspend fun getDispute(id: String): Dispute {
         return try {
             api.getDispute(id.toString()).unwrap()
         } catch (e: Exception) {
@@ -763,7 +763,7 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    suspend fun respondToDispute(id: Long, body: String): Dispute {
+    suspend fun respondToDispute(id: String, body: String): Dispute {
         return try {
             api.respondDispute(id.toString(), body).unwrap()
         } catch (e: Exception) {

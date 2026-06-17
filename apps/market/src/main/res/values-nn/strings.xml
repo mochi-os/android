@@ -440,7 +440,7 @@
     <string name="market_listing_detail_sales_count">%1$d sal</string>
     <string name="market_profile_sales_count">%1$d sal</string>
     <string name="market_purchase_dispute_response">Seljarens svar</string>
-    <string name="market_purchases_order_label">Tinging #%1$d</string>
+    <string name="market_purchases_order_label">Tinging #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Fortel kjøparar om deg sjølv…</string>
@@ -607,7 +607,7 @@
     <string name="market_purchase_download_many">Last ned dei %1$d filene dine nedanfor.</string>
     <string name="market_purchase_download_one">Last ned fila di nedanfor.</string>
     <string name="market_purchase_review_from">Vurdering frå %1$s</string>
-    <string name="market_purchases_auction_label">Auksjon #%1$d</string>
+    <string name="market_purchases_auction_label">Auksjon #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refundert</string>
     <string name="market_purchases_won_for">Vunnen for %1$s</string>
     <string name="market_rating_reviews">(%1$d vurderingar)</string>

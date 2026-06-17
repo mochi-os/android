@@ -30,7 +30,7 @@ data class PurchaseDetailUiState(
 sealed interface PurchaseDetailEvent {
     data class Toast(val message: String) : PurchaseDetailEvent
     data class OpenUrl(val url: String) : PurchaseDetailEvent
-    data class DownloadAsset(val assetId: Long) : PurchaseDetailEvent
+    data class DownloadAsset(val assetId: String) : PurchaseDetailEvent
 }
 
 @HiltViewModel
@@ -39,7 +39,7 @@ class PurchaseDetailViewModel @Inject constructor(
     private val repository: MarketRepository,
 ) : ViewModel() {
 
-    val orderId: Long = savedStateHandle.get<String>("orderId")?.toLongOrNull() ?: 0L
+    val orderId: String = savedStateHandle.get<String>("orderId").orEmpty()
 
     private val _uiState = MutableStateFlow(PurchaseDetailUiState())
     val uiState: StateFlow<PurchaseDetailUiState> = _uiState.asStateFlow()
@@ -57,7 +57,7 @@ class PurchaseDetailViewModel @Inject constructor(
             try {
                 val detail = repository.getOrder(orderId)
                 val audit = runCatching {
-                    repository.auditObject(kind = "order", objectId = orderId.toString()).audit
+                    repository.auditObject(kind = "order", objectId = orderId).audit
                 }.getOrDefault(emptyList())
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -122,7 +122,7 @@ class PurchaseDetailViewModel @Inject constructor(
         }
     }
 
-    fun requestDownload(assetId: Long) {
+    fun requestDownload(assetId: String) {
         _events.tryEmit(PurchaseDetailEvent.DownloadAsset(assetId))
     }
 }

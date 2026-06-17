@@ -71,7 +71,7 @@ fun CategoryEditDialog(
         is CategoryDialogMode.Edit -> stringResource(R.string.staff_categories_dialog_edit_title)
     }
     val isEdit = mode is CategoryDialogMode.Edit
-    val editingId = if (mode is CategoryDialogMode.Edit) mode.category.id else 0L
+    val editingId = if (mode is CategoryDialogMode.Edit) mode.category.id else ""
     val canSubmit = form.name.isNotBlank() && form.slug.isNotBlank() && !submitting
 
     AlertDialog(
@@ -165,13 +165,13 @@ fun CategoryEditDialog(
 
 @Composable
 private fun ParentDropdown(
-    current: Long,
+    current: String,
     categories: List<Category>,
-    excludeId: Long,
-    onChange: (Long) -> Unit,
+    excludeId: String,
+    onChange: (String) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val currentName = if (current <= 0L) {
+    val currentName = if (current.isEmpty()) {
         stringResource(R.string.staff_categories_dialog_parent_none)
     } else {
         categories.firstOrNull { it.id == current }?.name
@@ -203,7 +203,7 @@ private fun ParentDropdown(
                     text = { Text(stringResource(R.string.staff_categories_dialog_parent_none)) },
                     onClick = {
                         expanded = false
-                        onChange(0L)
+                        onChange("")
                     },
                 )
                 val options = categories.filter { it.id != excludeId }

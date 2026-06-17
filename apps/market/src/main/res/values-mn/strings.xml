@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Захиалга</string>
     <string name="market_purchase_total">Нийт</string>
     <string name="market_purchase_track">Илгээмжийг хянах</string>
-    <string name="market_purchases_auction_label">Дуудлага худалдаа #%1$d</string>
+    <string name="market_purchases_auction_label">Дуудлага худалдаа #%1$s</string>
     <string name="market_purchases_complete_purchase">Худалдан авалтыг гүйцээх</string>
     <string name="market_purchases_empty">Худалдан авалт алга</string>
-    <string name="market_purchases_order_label">Захиалга #%1$d</string>
+    <string name="market_purchases_order_label">Захиалга #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s буцаасан</string>
     <string name="market_purchases_title">Худалдан авалтууд</string>
     <string name="market_purchases_won_for">%1$s-аар хожсон</string>

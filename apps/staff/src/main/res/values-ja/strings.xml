@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">異議申立を裁定</string>
     <string name="staff_appeals_empty">保留中の異議申立はありません</string>
     <string name="staff_appeals_history">リスティング履歴</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">メモ</string>
     <string name="staff_appeals_open_sidebar">サイドバーを開く</string>
     <string name="staff_appeals_reason_label">出品者の異議申し立て理由</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">販売者</string>
     <string name="staff_dashboard_kpi_total_orders">合計注文数</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">いいえ</string>
     <string name="staff_dashboard_open_sidebar">サイドバーを開く</string>
-    <string name="staff_dashboard_order_fallback">注文 #%1$d</string>
+    <string name="staff_dashboard_order_fallback">注文 #%1$s</string>
     <string name="staff_dashboard_system">システム</string>
     <string name="staff_dashboard_tab_audit">監査</string>
     <string name="staff_dashboard_tab_listings">リスティング</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">異議申立はありません</string>
     <string name="staff_disputes_filter_status_label">ステータス</string>
     <string name="staff_disputes_history">異議申立履歴</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">購入者の詳細</string>
     <string name="staff_disputes_meta_chargeback_fee">チャージバック手数料</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripeにより保留</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">サイドバーを開く</string>
     <string name="staff_moderation_system">システム</string>
     <string name="staff_moderation_title">モデレーションログ</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">操作</string>
     <string name="staff_reports_action_ban">ユーザーをBAN</string>
     <string name="staff_reports_action_dismiss">閉じる</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">ステータス</string>
     <string name="staff_reports_filter_type_label">タイプ</string>
     <string name="staff_reports_history">報告履歴</string>
-    <string name="staff_reports_listing_label">出品 #%1$d</string>
+    <string name="staff_reports_listing_label">出品 #%1$s</string>
     <string name="staff_reports_meta_details">通報者の詳細</string>
     <string name="staff_reports_meta_price">価格</string>
     <string name="staff_reports_meta_reason">理由</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">削除済み</string>
     <string name="staff_reviews_filter_status">ステータス</string>
     <string name="staff_reviews_open_sidebar">サイドバーを開く</string>
-    <string name="staff_reviews_order_label">注文 #%1$d</string>
+    <string name="staff_reviews_order_label">注文 #%1$s</string>
     <string name="staff_reviews_overflow_actions">操作</string>
     <string name="staff_reviews_remove_confirm">削除</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s(%3$s)。このレビューを完全に削除しますか?この操作は取り消せません。</string>

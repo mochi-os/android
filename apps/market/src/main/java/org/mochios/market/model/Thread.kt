@@ -11,9 +11,9 @@ import com.google.gson.annotations.SerializedName
  * an inbox without an extra fetch per row.
  */
 data class MarketThread(
-    val id: Long = 0,
-    val listing: Long = 0,
-    val order: Long = 0,
+    val id: String = "",
+    val listing: String = "",
+    val order: String = "",
     val buyer: String = "",
     val seller: String = "",
     val created: Long = 0,
@@ -32,8 +32,8 @@ data class MarketThread(
  * (unread) or the timestamp the recipient marked it read.
  */
 data class Message(
-    val id: Long = 0,
-    val thread: Long = 0,
+    val id: String = "",
+    val thread: String = "",
     val sender: String = "",
     @SerializedName("sender_name") val senderName: String = "",
     val body: String = "",

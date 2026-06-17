@@ -350,7 +350,7 @@
     <string name="market_purchase_track">پيڪيج ٽريڪ ڪريو</string>
     <string name="market_purchases_complete_purchase">خريداري مڪمل ڪريو</string>
     <string name="market_purchases_empty">ڪا خريداري نه آهي</string>
-    <string name="market_purchases_order_label">آرڊر #%1$d</string>
+    <string name="market_purchases_order_label">آرڊر #%1$s</string>
     <string name="market_purchases_title">خريداريون</string>
     <string name="market_rating_label">درجه بندي</string>
     <string name="market_rating_no_reviews">اڃا ڪو جائزو نه آهي</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">هيٺ پنهنجون %1$d فائلون ڊائون لوڊ ڪريو.</string>
     <string name="market_purchase_download_one">هيٺ پنهنجي فائل ڊائون لوڊ ڪريو.</string>
     <string name="market_purchase_review_from">%1$s پاران جائزو</string>
-    <string name="market_purchases_auction_label">نيلامي #%1$d</string>
+    <string name="market_purchases_auction_label">نيلامي #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s واپس ڪيو ويو</string>
     <string name="market_purchases_won_for">%1$s تي کٽيو</string>
     <string name="market_refund_dialog_amount_help">پورو آرڊر واپس ڪرڻ لاءِ خالي ڇڏيو.</string>

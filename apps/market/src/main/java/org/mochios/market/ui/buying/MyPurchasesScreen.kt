@@ -102,8 +102,8 @@ fun MyPurchasesScreen(
 private fun PurchasesList(
     state: MyPurchasesUiState,
     onLoadMore: () -> Unit,
-    onOrderClick: (Long) -> Unit,
-    onCompletePurchase: (Long) -> Unit,
+    onOrderClick: (String) -> Unit,
+    onCompletePurchase: (String) -> Unit,
 ) {
     // Build a synthetic item list so the InfiniteList can render the
     // won-bid strip above the order rows in a single LazyColumn pass.
@@ -133,7 +133,7 @@ private sealed interface PurchasesRow {
 }
 
 @Composable
-private fun WonBidRow(bid: Bid, onCompletePurchase: (Long) -> Unit) {
+private fun WonBidRow(bid: Bid, onCompletePurchase: (String) -> Unit) {
     val listingId = bid.listing ?: return
     val currency = bid.currency ?: Currency.GBP
     Row(
@@ -155,7 +155,7 @@ private fun WonBidRow(bid: Bid, onCompletePurchase: (Long) -> Unit) {
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = bid.title
-                    ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: 0L),
+                    ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: ""),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.onTertiaryContainer,
                 maxLines = 1,
@@ -180,7 +180,7 @@ private fun WonBidRow(bid: Bid, onCompletePurchase: (Long) -> Unit) {
 }
 
 @Composable
-private fun OrderRowCard(order: Order, onClick: (Long) -> Unit) {
+private fun OrderRowCard(order: Order, onClick: (String) -> Unit) {
     val format = LocalFormat.current
     val currency = order.currency ?: Currency.GBP
     Row(

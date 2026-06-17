@@ -122,7 +122,7 @@
     <string name="staff_config_saving">儲存緊…</string>
     <string name="staff_dashboard_col_date">日期</string>
     <string name="staff_dashboard_kpi_revenue_currency">%1$s</string>
-    <string name="staff_dashboard_order_fallback">Deng6daan1 #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Deng6daan1 #%1$s</string>
     <string name="staff_listings_approve">批准</string>
     <string name="staff_listings_search_clear">清除搜尋</string>
     <string name="staff_reports_meta_target">目標</string>
@@ -208,8 +208,8 @@
     <string name="staff_appeals_dialog_title">裁決上訴</string>
     <string name="staff_appeals_empty">冇待處理嘅上訴</string>
     <string name="staff_appeals_history">刊登歷史</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_reason_label">賣家嘅上訴理由</string>
     <string name="staff_appeals_title">上訴</string>
     <string name="staff_appeals_upheld_toast">上訴已接納</string>
@@ -329,7 +329,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">賣家</string>
     <string name="staff_dashboard_kpi_total_orders">訂單總數</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">否</string>
     <string name="staff_dashboard_tab_audit">審計</string>
     <string name="staff_dashboard_tab_orders">訂單</string>
@@ -342,7 +342,7 @@
     <string name="staff_disputes_dialog_title_view">查看爭議</string>
     <string name="staff_disputes_empty">冇爭議</string>
     <string name="staff_disputes_history">爭議記錄</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">買家資料</string>
     <string name="staff_disputes_meta_chargeback_fee">拒付手續費</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">由 Stripe 收取</string>
@@ -416,7 +416,7 @@
     <string name="staff_moderation_filter_clear">清除篩選</string>
     <string name="staff_moderation_listing_filter_placeholder">刊登 ID</string>
     <string name="staff_moderation_title">審核記錄</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">處理</string>
     <string name="staff_reports_action_ban">封禁用戶</string>
     <string name="staff_reports_action_failed">處理舉報失敗</string>
@@ -431,7 +431,7 @@
     <string name="staff_reports_dialog_title_view">舉報</string>
     <string name="staff_reports_empty">冇舉報</string>
     <string name="staff_reports_history">舉報記錄</string>
-    <string name="staff_reports_listing_label">刊登 #%1$d</string>
+    <string name="staff_reports_listing_label">刊登 #%1$s</string>
     <string name="staff_reports_meta_details">舉報人詳情</string>
     <string name="staff_reports_meta_price">價錢</string>
     <string name="staff_reports_meta_reporter">舉報人</string>
@@ -453,7 +453,7 @@
     <string name="staff_reviews_filter_all">所有狀態</string>
     <string name="staff_reviews_filter_hidden">已隱藏</string>
     <string name="staff_reviews_filter_published">已發布</string>
-    <string name="staff_reviews_order_label">訂單 #%1$d</string>
+    <string name="staff_reviews_order_label">訂單 #%1$s</string>
     <string name="staff_reviews_overflow_actions">操作</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s 喺 %3$s。永久刪除呢個評論？此操作無法復原。</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s。永久刪除呢個評論？此操作無法復原。</string>

@@ -350,7 +350,7 @@
     <string name="market_purchase_track">តាមដានកញ្ចប់</string>
     <string name="market_purchases_complete_purchase">បំពេញការទិញ</string>
     <string name="market_purchases_empty">មិនមានការទិញ</string>
-    <string name="market_purchases_order_label">ការបញ្ជា #%1$d</string>
+    <string name="market_purchases_order_label">ការបញ្ជា #%1$s</string>
     <string name="market_purchases_title">ការទិញ</string>
     <string name="market_rating_label">ការវាយតម្លៃ</string>
     <string name="market_rating_no_reviews">មិនទាន់មានការវាយតម្លៃ</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">ទាញយកឯកសារ %1$d របស់អ្នកខាងក្រោម។</string>
     <string name="market_purchase_download_one">ទាញយកឯកសាររបស់អ្នកខាងក្រោម។</string>
     <string name="market_purchase_review_from">ការវាយតម្លៃពី %1$s</string>
-    <string name="market_purchases_auction_label">ការដេញថ្លៃ #%1$d</string>
+    <string name="market_purchases_auction_label">ការដេញថ្លៃ #%1$s</string>
     <string name="market_purchases_refunded_partial">បានសងវិញ −%1$s</string>
     <string name="market_purchases_won_for">ឈ្នះក្នុងតម្លៃ %1$s</string>
     <string name="market_refund_dialog_amount_help">ទុកនៅទទេដើម្បីសងវិញពេញការបញ្ជាទិញ។</string>

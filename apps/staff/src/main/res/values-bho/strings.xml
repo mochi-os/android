@@ -48,8 +48,8 @@
     <string name="staff_appeals_dialog_title">अपील के तय करीं</string>
     <string name="staff_appeals_empty">कौनो लंबित अपील नइखे</string>
     <string name="staff_appeals_history">लिस्टिंग इतिहास</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">नोट</string>
     <string name="staff_appeals_open_sidebar">साइडबार खोलीं</string>
     <string name="staff_appeals_submit">जमा करीं</string>
@@ -219,7 +219,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">विक्रेता</string>
     <string name="staff_dashboard_kpi_total_orders">कुल ऑर्डर</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">नाहीं</string>
     <string name="staff_dashboard_open_sidebar">साइडबार खोलीं</string>
     <string name="staff_dashboard_system">सिस्टम</string>
@@ -237,7 +237,7 @@
     <string name="staff_disputes_empty">कौनो विवाद नइखे</string>
     <string name="staff_disputes_filter_status_label">स्थिति</string>
     <string name="staff_disputes_history">विवाद इतिहास</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback शुल्क</string>
     <string name="staff_disputes_meta_evidence_due">साक्ष्य के अंतिम तिथि</string>
     <string name="staff_disputes_meta_listing">लिस्टिंग</string>
@@ -322,7 +322,7 @@
     <string name="staff_moderation_open_sidebar">साइडबार खोलीं</string>
     <string name="staff_moderation_system">सिस्टम</string>
     <string name="staff_moderation_title">मॉडरेशन लॉग</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">क्रिया</string>
     <string name="staff_reports_action_ban">उपयोगकर्ता प्रतिबंधित करीं</string>
     <string name="staff_reports_action_dismiss">खारिज करीं</string>
@@ -477,7 +477,7 @@
     <string name="staff_audit_action_auction_cancelled">नीलामी रद्द कइल गइल</string>
     <string name="staff_audit_action_staff_team_role_changed">स्टाफ भूमिका बदलल गइल</string>
     <string name="staff_categories_delete_desc">“%1$s” के मिटाईं? इ वापस ना हो सकेला।</string>
-    <string name="staff_dashboard_order_fallback">ऑर्डर #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ऑर्डर #%1$s</string>
     <string name="staff_disputes_dialog_title_chargeback">चार्जबैक: %1$s</string>
     <string name="staff_disputes_dialog_title_view">विवाद देखीं</string>
     <string name="staff_disputes_meta_buyer_details">खरीददार के विवरण</string>
@@ -506,9 +506,9 @@
     <string name="staff_listings_seller_unknown">अज्ञात विक्रेता</string>
     <string name="staff_listings_seller_verified">सत्यापित विक्रेता</string>
     <string name="staff_moderation_filter_clear">फिल्टर साफ करीं</string>
-    <string name="staff_reports_listing_label">लिस्टिंग #%1$d</string>
+    <string name="staff_reports_listing_label">लिस्टिंग #%1$s</string>
     <string name="staff_reports_meta_details">रिपोर्ट करे वाला के विवरण</string>
-    <string name="staff_reviews_order_label">ऑर्डर #%1$d</string>
+    <string name="staff_reviews_order_label">ऑर्डर #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s के। ई समीक्षा हमेशा खातिर मिटाईं? इ वापस ना हो सकेला।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s। ई समीक्षा हमेशा खातिर मिटाईं? इ वापस ना हो सकेला।</string>
     <string name="staff_team_dialog_adding">जोड़ल जा रहल बा…</string>

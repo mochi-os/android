@@ -603,8 +603,8 @@
     <string name="market_purchase_download_many">Baixeu els vostres %1$d fitxers a continuació.</string>
     <string name="market_purchase_download_one">Baixeu el vostre fitxer a continuació.</string>
     <string name="market_purchase_review_from">Ressenya de %1$s</string>
-    <string name="market_purchases_auction_label">Subhasta núm. %1$d</string>
-    <string name="market_purchases_order_label">Comanda núm. %1$d</string>
+    <string name="market_purchases_auction_label">Subhasta núm. %1$s</string>
+    <string name="market_purchases_order_label">Comanda núm. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reemborsat</string>
     <string name="market_purchases_won_for">Guanyada per %1$s</string>
     <string name="market_rating_reviews">(%1$d ressenyes)</string>

@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Нарачај</string>
     <string name="market_purchase_total">Вкупно</string>
     <string name="market_purchase_track">Следи пакет</string>
-    <string name="market_purchases_auction_label">Аукција #%1$d</string>
+    <string name="market_purchases_auction_label">Аукција #%1$s</string>
     <string name="market_purchases_complete_purchase">Заврши купување</string>
     <string name="market_purchases_empty">Нема купувања</string>
-    <string name="market_purchases_order_label">Нарачка #%1$d</string>
+    <string name="market_purchases_order_label">Нарачка #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s вратени</string>
     <string name="market_purchases_title">Купувања</string>
     <string name="market_purchases_won_for">Освоено за %1$s</string>

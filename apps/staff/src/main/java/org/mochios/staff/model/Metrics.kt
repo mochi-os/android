@@ -39,8 +39,8 @@ data class MetricsOverview(
  * `apps/staff/web/src/types/metrics.ts`. `total` is in minor currency units.
  */
 data class ActivityOrder(
-    val id: Long = 0,
-    val listing: Long = 0,
+    val id: String = "",
+    val listing: String = "",
     val buyer: String = "",
     @SerializedName("buyer_name") val buyerName: String = "",
     val seller: String = "",
@@ -57,7 +57,7 @@ data class ActivityOrder(
  * in `apps/staff/web/src/types/metrics.ts`.
  */
 data class ActivityListing(
-    val id: Long = 0,
+    val id: String = "",
     val seller: String = "",
     @SerializedName("seller_name") val sellerName: String = "",
     val title: String = "",

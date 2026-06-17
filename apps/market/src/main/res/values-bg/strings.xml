@@ -523,8 +523,8 @@
     <string name="market_purchase_download_many">Изтеглете вашите %1$d файла по-долу.</string>
     <string name="market_purchase_download_one">Изтеглете вашия файл по-долу.</string>
     <string name="market_purchase_review_from">Отзив от %1$s</string>
-    <string name="market_purchases_auction_label">Търг №%1$d</string>
-    <string name="market_purchases_order_label">Поръчка №%1$d</string>
+    <string name="market_purchases_auction_label">Търг №%1$s</string>
+    <string name="market_purchases_order_label">Поръчка №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s възстановени</string>
     <string name="market_purchases_won_for">Спечелено за %1$s</string>
     <string name="market_rating_reviews">(%1$d отзива)</string>

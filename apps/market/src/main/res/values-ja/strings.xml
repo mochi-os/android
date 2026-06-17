@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d 件の販売</string>
     <string name="market_profile_sales_count">%1$d 件の販売</string>
     <string name="market_purchase_dispute_response">出品者の回答</string>
-    <string name="market_purchases_order_label">注文 #%1$d</string>
+    <string name="market_purchases_order_label">注文 #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">購入者に自己紹介をしましょう…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">下記の %1$d 個のファイルをダウンロードしてください。</string>
     <string name="market_purchase_download_one">下記からファイルをダウンロードしてください。</string>
     <string name="market_purchase_review_from">%1$s からのレビュー</string>
-    <string name="market_purchases_auction_label">オークション #%1$d</string>
+    <string name="market_purchases_auction_label">オークション #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 返金済み</string>
     <string name="market_purchases_won_for">%1$s で落札</string>
     <string name="market_rating_reviews">（レビュー %1$d 件）</string>

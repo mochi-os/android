@@ -43,7 +43,7 @@ import org.mochios.market.repository.MarketRepository
 @Composable
 fun AppealRemovalDialog(
     open: Boolean,
-    listingId: Long,
+    listingId: String,
     onDismiss: () -> Unit,
     onSuccess: () -> Unit = {},
 ) {

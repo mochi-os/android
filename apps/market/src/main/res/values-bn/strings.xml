@@ -522,8 +522,8 @@
     <string name="market_purchase_download_many">নিচে আপনার %1$d টি ফাইল ডাউনলোড করুন।</string>
     <string name="market_purchase_download_one">নিচে আপনার ফাইল ডাউনলোড করুন।</string>
     <string name="market_purchase_review_from">%1$s-এর পর্যালোচনা</string>
-    <string name="market_purchases_auction_label">নিলাম #%1$d</string>
-    <string name="market_purchases_order_label">অর্ডার #%1$d</string>
+    <string name="market_purchases_auction_label">নিলাম #%1$s</string>
+    <string name="market_purchases_order_label">অর্ডার #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ফেরত দেওয়া হয়েছে</string>
     <string name="market_purchases_won_for">%1$s-এ জেতা হয়েছে</string>
     <string name="market_rating_reviews">(%1$d টি পর্যালোচনা)</string>

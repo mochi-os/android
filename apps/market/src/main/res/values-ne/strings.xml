@@ -350,7 +350,7 @@
     <string name="market_purchase_track">प्याकेज ट्र्याक गर्नुहोस्</string>
     <string name="market_purchases_complete_purchase">खरिद पूरा गर्नुहोस्</string>
     <string name="market_purchases_empty">कुनै किनमेल छैन</string>
-    <string name="market_purchases_order_label">अर्डर #%1$d</string>
+    <string name="market_purchases_order_label">अर्डर #%1$s</string>
     <string name="market_purchases_title">किनमेलहरू</string>
     <string name="market_rating_label">रेटिङ</string>
     <string name="market_rating_no_reviews">अहिलेसम्म कुनै समीक्षा छैन</string>
@@ -618,7 +618,7 @@
     <string name="market_purchase_download_many">तल आफ्ना %1$d फाइलहरू डाउनलोड गर्नुहोस्।</string>
     <string name="market_purchase_download_one">तल आफ्नो फाइल डाउनलोड गर्नुहोस्।</string>
     <string name="market_purchase_review_from">%1$s बाट समीक्षा</string>
-    <string name="market_purchases_auction_label">लिलाम #%1$d</string>
+    <string name="market_purchases_auction_label">लिलाम #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s फिर्ता गरियो</string>
     <string name="market_purchases_won_for">%1$s मा जितियो</string>
     <string name="market_refund_dialog_amount_help">पूरै अर्डर फिर्ता गर्न खाली छोड्नुहोस्।</string>

@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">Mauzo %1$d</string>
     <string name="market_profile_sales_count">Mauzo %1$d</string>
     <string name="market_purchase_dispute_response">Jibu la muuzaji</string>
-    <string name="market_purchases_order_label">Agizo #%1$d</string>
+    <string name="market_purchases_order_label">Agizo #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Waeleze wanunuzi kukuhusu…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Pakua faili zako %1$d hapa chini.</string>
     <string name="market_purchase_download_one">Pakua faili yako hapa chini.</string>
     <string name="market_purchase_review_from">Ukaguzi kutoka kwa %1$s</string>
-    <string name="market_purchases_auction_label">Mnada #%1$d</string>
+    <string name="market_purchases_auction_label">Mnada #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s imerejeshwa</string>
     <string name="market_purchases_won_for">Imeshindwa kwa %1$s</string>
     <string name="market_rating_reviews">(hakiki %1$d)</string>

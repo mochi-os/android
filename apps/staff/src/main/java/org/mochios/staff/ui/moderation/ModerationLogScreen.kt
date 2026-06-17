@@ -71,10 +71,10 @@ fun ModerationLogScreen(
 ) {
     val state by viewModel.state.collectAsState()
 
-    var listingInput by remember { mutableStateOf(state.listingId?.toString() ?: "") }
+    var listingInput by remember { mutableStateOf(state.listingId ?: "") }
     LaunchedEffect(listingInput) {
         delay(300L)
-        val parsed = listingInput.trim().toIntOrNull()
+        val parsed = listingInput.trim().ifBlank { null }
         if (parsed != state.listingId) viewModel.setListingId(parsed)
     }
 

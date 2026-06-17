@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Рассмотреть апелляцию</string>
     <string name="staff_appeals_empty">Нет ожидающих апелляций</string>
     <string name="staff_appeals_history">История объявления</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Заметки</string>
     <string name="staff_appeals_open_sidebar">Открыть боковую панель</string>
     <string name="staff_appeals_reason_label">Причина апелляции продавца</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Продавцы</string>
     <string name="staff_dashboard_kpi_total_orders">Всего заказов</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Нет</string>
     <string name="staff_dashboard_open_sidebar">Открыть боковую панель</string>
-    <string name="staff_dashboard_order_fallback">Заказ № %1$d</string>
+    <string name="staff_dashboard_order_fallback">Заказ № %1$s</string>
     <string name="staff_dashboard_system">Система</string>
     <string name="staff_dashboard_tab_audit">Аудит</string>
     <string name="staff_dashboard_tab_listings">Объявления</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Нет споров</string>
     <string name="staff_disputes_filter_status_label">Статус</string>
     <string name="staff_disputes_history">История споров</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Данные покупателя</string>
     <string name="staff_disputes_meta_chargeback_fee">Комиссия за чарджбэк</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">удержано Stripe</string>
@@ -360,7 +360,7 @@
     <string name="staff_moderation_open_sidebar">Открыть боковую панель</string>
     <string name="staff_moderation_system">Система</string>
     <string name="staff_moderation_title">Журнал модерации</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Действие</string>
     <string name="staff_reports_action_ban">Заблокировать пользователя</string>
     <string name="staff_reports_action_dismiss">Закрыть</string>
@@ -381,7 +381,7 @@
     <string name="staff_reports_filter_status_label">Статус</string>
     <string name="staff_reports_filter_type_label">Тип</string>
     <string name="staff_reports_history">История жалоб</string>
-    <string name="staff_reports_listing_label">Объявление № %1$d</string>
+    <string name="staff_reports_listing_label">Объявление № %1$s</string>
     <string name="staff_reports_meta_details">Данные подавшего жалобу</string>
     <string name="staff_reports_meta_price">Цена</string>
     <string name="staff_reports_meta_reason">Причина</string>
@@ -424,7 +424,7 @@
     <string name="staff_reviews_filter_removed">Удалено</string>
     <string name="staff_reviews_filter_status">Статус</string>
     <string name="staff_reviews_open_sidebar">Открыть боковую панель</string>
-    <string name="staff_reviews_order_label">заказ № %1$d</string>
+    <string name="staff_reviews_order_label">заказ № %1$s</string>
     <string name="staff_reviews_overflow_actions">Действия</string>
     <string name="staff_reviews_remove_confirm">Удалить</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s от %3$s. Удалить этот отзыв навсегда? Это действие нельзя отменить.</string>

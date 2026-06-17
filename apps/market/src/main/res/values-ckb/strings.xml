@@ -350,7 +350,7 @@
     <string name="market_purchase_track">بەستە بەدوادابچوو</string>
     <string name="market_purchases_complete_purchase">تەواوکردنی کڕین</string>
     <string name="market_purchases_empty">هیچ کڕینێک نییە</string>
-    <string name="market_purchases_order_label">داواکاری #%1$d</string>
+    <string name="market_purchases_order_label">داواکاری #%1$s</string>
     <string name="market_purchases_title">کڕینەکان</string>
     <string name="market_rating_label">هەڵسەنگاندن</string>
     <string name="market_rating_no_reviews">هێشتا هیچ هەڵسەنگاندنێک نییە</string>
@@ -616,7 +616,7 @@
     <string name="market_purchase_download_many">%1$d فایلەکانت لە خوارەوە داگرە.</string>
     <string name="market_purchase_download_one">فایلەکەت لە خوارەوە داگرە.</string>
     <string name="market_purchase_review_from">پێداچوونەوە لە %1$s</string>
-    <string name="market_purchases_auction_label">مزایەدە #%1$d</string>
+    <string name="market_purchases_auction_label">مزایەدە #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s گەڕێنرایەوە</string>
     <string name="market_purchases_won_for">بردرایەوە بە %1$s</string>
     <string name="market_refund_dialog_amount_help">بەتاڵی بهێڵەوە بۆ گەڕاندنەوەی تەواوی داواکاری.</string>

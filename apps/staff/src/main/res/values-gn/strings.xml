@@ -48,8 +48,8 @@
     <string name="staff_appeals_dialog_title">Decidi apelación</string>
     <string name="staff_appeals_empty">Ndaipóri apelación oha\'arõva</string>
     <string name="staff_appeals_history">Listado tembiasakue</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Apuntes</string>
     <string name="staff_appeals_open_sidebar">Embovy yke pe</string>
     <string name="staff_appeals_submit">Emondo</string>
@@ -218,7 +218,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Hepyme\'ẽhakuéra</string>
     <string name="staff_dashboard_kpi_total_orders">Pedido total</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nahániri</string>
     <string name="staff_dashboard_open_sidebar">Embovy yke pe</string>
     <string name="staff_dashboard_system">Sistema</string>
@@ -236,7 +236,7 @@
     <string name="staff_disputes_empty">Ndaipóri disputa</string>
     <string name="staff_disputes_filter_status_label">Mba\'éichapa</string>
     <string name="staff_disputes_history">Disputa rembiasakue</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback repykue</string>
     <string name="staff_disputes_meta_evidence_due">Pruéva oĩva\'erã</string>
     <string name="staff_disputes_meta_listing">Listado</string>
@@ -321,7 +321,7 @@
     <string name="staff_moderation_open_sidebar">Embovy yke pe</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_title">Moderación log</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Tembiapo</string>
     <string name="staff_reports_action_ban">Emboyke puruhára</string>
     <string name="staff_reports_action_dismiss">Mbohovái</string>
@@ -477,7 +477,7 @@
     <string name="staff_audit_action_staff_team_role_changed">Mba\'apohára tembiapo iñambue</string>
     <string name="staff_audit_empty">Ndaipóri tembiasakue jehecha</string>
     <string name="staff_categories_delete_desc">Embogue “%1$s”? Ndaikatumo\'ãi oñembojevy.</string>
-    <string name="staff_dashboard_order_fallback">Jerure #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Jerure #%1$s</string>
     <string name="staff_disputes_dialog_title_chargeback">Ñemyenyhẽjey: %1$s</string>
     <string name="staff_disputes_dialog_title_view">Ehecha joavy</string>
     <string name="staff_disputes_meta_buyer_details">Jogua marandu</string>
@@ -506,9 +506,9 @@
     <string name="staff_listings_seller_unknown">Ñemuhára ojekuaa\'ỹva</string>
     <string name="staff_listings_seller_verified">Ñemuhára oñemoneĩva</string>
     <string name="staff_moderation_filter_clear">Embogue mboguahávo</string>
-    <string name="staff_reports_listing_label">Ñemuha #%1$d</string>
+    <string name="staff_reports_listing_label">Ñemuha #%1$s</string>
     <string name="staff_reports_meta_details">Momarandúva marandu</string>
-    <string name="staff_reviews_order_label">jerure #%1$d</string>
+    <string name="staff_reviews_order_label">jerure #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ára %3$s. Embogue tapiaite ko jehechakue? Ndaikatumo\'ãi oñembojevy.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Embogue tapiaite ko jehechakue? Ndaikatumo\'ãi oñembojevy.</string>
     <string name="staff_team_dialog_adding">Oñembojoaju hína…</string>

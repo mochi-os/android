@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d pardavimų</string>
     <string name="market_profile_sales_count">%1$d pardavimų</string>
     <string name="market_purchase_dispute_response">Pardavėjo atsakymas</string>
-    <string name="market_purchases_order_label">Užsakymas Nr. %1$d</string>
+    <string name="market_purchases_order_label">Užsakymas Nr. %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Papasakokite pirkėjams apie save…</string>
@@ -605,7 +605,7 @@
     <string name="market_purchase_download_many">Atsisiųskite %1$d failų žemiau.</string>
     <string name="market_purchase_download_one">Atsisiųskite failą žemiau.</string>
     <string name="market_purchase_review_from">Atsiliepimas nuo %1$s</string>
-    <string name="market_purchases_auction_label">Aukcionas Nr. %1$d</string>
+    <string name="market_purchases_auction_label">Aukcionas Nr. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s grąžinta</string>
     <string name="market_purchases_won_for">Laimėta už %1$s</string>
     <string name="market_rating_reviews">(%1$d atsiliepimų)</string>

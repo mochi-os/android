@@ -463,10 +463,10 @@
     <string name="market_purchase_title">Заказ</string>
     <string name="market_purchase_total">Усяго</string>
     <string name="market_purchase_track">Адсочваць пасылку</string>
-    <string name="market_purchases_auction_label">Аўкцыён №%1$d</string>
+    <string name="market_purchases_auction_label">Аўкцыён №%1$s</string>
     <string name="market_purchases_complete_purchase">Завяршыць пакупку</string>
     <string name="market_purchases_empty">Пакупак няма</string>
-    <string name="market_purchases_order_label">Заказ №%1$d</string>
+    <string name="market_purchases_order_label">Заказ №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s вернута</string>
     <string name="market_purchases_title">Пакупкі</string>
     <string name="market_purchases_won_for">Выйграна за %1$s</string>
