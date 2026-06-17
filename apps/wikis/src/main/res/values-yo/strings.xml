@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Ẹnikẹ́ni</string>
     <string name="wikis_access_subject_authenticated">Àwọn olùmúlò tí a fọwọ́sí</string>
 
+    <string name="wikis_revision_compare">Fi àwọn àyípadà wéra</string>
+    <string name="wikis_revision_show_page">Fi ojú-ìwé hàn</string>
+    <string name="wikis_revision_compare_failed">Kò lè gbé ẹ̀yà tẹ́lẹ̀ wọlé fún ìfiwéra.</string>
+    <string name="wikis_revision_changes_from">Àwọn àyípadà láti ẹ̀yà %1$d → %2$d</string>
 </resources>

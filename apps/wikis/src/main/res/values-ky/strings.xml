@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Каалаган адам</string>
     <string name="wikis_access_subject_authenticated">Аныкталган колдонуучулар</string>
 
+    <string name="wikis_revision_compare">Өзгөртүүлөрдү салыштыруу</string>
+    <string name="wikis_revision_show_page">Баракты көрсөтүү</string>
+    <string name="wikis_revision_compare_failed">Салыштыруу үчүн мурунку версияны жүктөө мүмкүн болгон жок.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d версиясынан өзгөртүүлөр</string>
 </resources>

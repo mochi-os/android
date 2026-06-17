@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">မည်သူမဆို</string>
     <string name="wikis_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
 
+    <string name="wikis_revision_compare">ပြောင်းလဲမှုများကို နှိုင်းယှဉ်ပါ</string>
+    <string name="wikis_revision_show_page">စာမျက်နှာ ပြပါ</string>
+    <string name="wikis_revision_compare_failed">နှိုင်းယှဉ်ရန် ယခင်ဗားရှင်းကို ဖွင့်၍မရပါ။</string>
+    <string name="wikis_revision_changes_from">ဗားရှင်း %1$d → %2$d မှ ပြောင်းလဲမှုများ</string>
 </resources>

@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Niveli i qasjes</string>
     <string name="wikis_access_subject_anyone">Kushdo</string>
     <string name="wikis_access_subject_authenticated">Përdorues të vërtetuar</string>
+    <string name="wikis_revision_compare">Krahaso ndryshimet</string>
+    <string name="wikis_revision_show_page">Shfaq faqen</string>
+    <string name="wikis_revision_compare_failed">Versioni i mëparshëm nuk mund të ngarkohej për krahasim.</string>
+    <string name="wikis_revision_changes_from">Ndryshimet nga versioni %1$d → %2$d</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">כל אחד</string>
     <string name="wikis_access_subject_authenticated">משתמשים מאומתים</string>
 
+    <string name="wikis_revision_compare">השוואת שינויים</string>
+    <string name="wikis_revision_show_page">הצגת הדף</string>
+    <string name="wikis_revision_compare_failed">לא ניתן לטעון את הגרסה הקודמת להשוואה.</string>
+    <string name="wikis_revision_changes_from">שינויים מגרסה %1$d → %2$d</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Ҳар кас</string>
     <string name="wikis_access_subject_authenticated">Корбарони тасдиқшуда</string>
 
+    <string name="wikis_revision_compare">Муқоисаи тағйирот</string>
+    <string name="wikis_revision_show_page">Нишон додани саҳифа</string>
+    <string name="wikis_revision_compare_failed">Версияи қаблиро барои муқоиса бор кардан имконнопазир буд.</string>
+    <string name="wikis_revision_changes_from">Тағйирот аз версияи %1$d → %2$d</string>
 </resources>

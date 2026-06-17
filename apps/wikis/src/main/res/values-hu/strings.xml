@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Bárki</string>
     <string name="wikis_access_subject_authenticated">Hitelesített felhasználók</string>
 
+    <string name="wikis_revision_compare">Változások összehasonlítása</string>
+    <string name="wikis_revision_show_page">Oldal megjelenítése</string>
+    <string name="wikis_revision_compare_failed">Az előző verziót nem sikerült betölteni az összehasonlításhoz.</string>
+    <string name="wikis_revision_changes_from">Változások a(z) %1$d → %2$d verzióhoz képest</string>
 </resources>

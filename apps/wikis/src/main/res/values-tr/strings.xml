@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Herkes</string>
     <string name="wikis_access_subject_authenticated">Kimliği doğrulanmış kullanıcılar</string>
 
+    <string name="wikis_revision_compare">Değişiklikleri karşılaştır</string>
+    <string name="wikis_revision_show_page">Sayfayı göster</string>
+    <string name="wikis_revision_compare_failed">Karşılaştırma için önceki sürüm yüklenemedi.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d sürümünden değişiklikler</string>
 </resources>

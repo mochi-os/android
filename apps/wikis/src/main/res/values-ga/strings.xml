@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Aon duine</string>
     <string name="wikis_access_subject_authenticated">Úsáideoirí fíordheimhnithe</string>
 
+    <string name="wikis_revision_compare">Cuir athruithe i gcomparáid</string>
+    <string name="wikis_revision_show_page">Taispeáin an leathanach</string>
+    <string name="wikis_revision_compare_failed">Níorbh fhéidir an leagan roimhe seo a lódáil le haghaidh comparáide.</string>
+    <string name="wikis_revision_changes_from">Athruithe ó leagan %1$d → %2$d</string>
 </resources>

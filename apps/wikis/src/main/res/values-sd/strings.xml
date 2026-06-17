@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ڪوبه</string>
     <string name="wikis_access_subject_authenticated">تصديق ٿيل استعمال ڪندڙ</string>
 
+    <string name="wikis_revision_compare">تبديليون ڀيٽيو</string>
+    <string name="wikis_revision_show_page">صفحو ڏيکاريو</string>
+    <string name="wikis_revision_compare_failed">ڀيٽ لاءِ اڳوڻو نسخو لوڊ نه ٿي سگهيو.</string>
+    <string name="wikis_revision_changes_from">نسخي %1$d → %2$d کان تبديليون</string>
 </resources>

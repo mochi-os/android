@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Opavave</string>
     <string name="wikis_access_subject_authenticated">Puruhára jeikuaapyre</string>
 
+    <string name="wikis_revision_compare">Embojoja umi moambue</string>
+    <string name="wikis_revision_show_page">Ehechauka kuatiarogue</string>
+    <string name="wikis_revision_compare_failed">Ndaikatúi oñembohenda pe versión ymaguare ojojoja hag̃ua.</string>
+    <string name="wikis_revision_changes_from">Moambue versión %1$d → %2$d guive</string>
 </resources>

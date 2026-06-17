@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Ниво на пристап</string>
     <string name="wikis_access_subject_anyone">Секој</string>
     <string name="wikis_access_subject_authenticated">Автентицирани корисници</string>
+    <string name="wikis_revision_compare">Спореди промени</string>
+    <string name="wikis_revision_show_page">Прикажи страница</string>
+    <string name="wikis_revision_compare_failed">Не може да се вчита претходната верзија за споредба.</string>
+    <string name="wikis_revision_changes_from">Промени од верзијата %1$d → %2$d</string>
 </resources>

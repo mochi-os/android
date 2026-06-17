@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Alle</string>
     <string name="wikis_access_subject_authenticated">Autentiserte brukere</string>
 
+    <string name="wikis_revision_compare">Sammenlign endringer</string>
+    <string name="wikis_revision_show_page">Vis side</string>
+    <string name="wikis_revision_compare_failed">Kunne ikke laste inn forrige versjon for sammenligning.</string>
+    <string name="wikis_revision_changes_from">Endringer fra versjon %1$d → %2$d</string>
 </resources>

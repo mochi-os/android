@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Nivel de acceso</string>
     <string name="wikis_access_subject_anyone">Calquera</string>
     <string name="wikis_access_subject_authenticated">Usuarios autenticados</string>
+    <string name="wikis_revision_compare">Comparar cambios</string>
+    <string name="wikis_revision_show_page">Amosar a páxina</string>
+    <string name="wikis_revision_compare_failed">Non se puido cargar a versión anterior para comparala.</string>
+    <string name="wikis_revision_changes_from">Cambios da versión %1$d → %2$d</string>
 </resources>

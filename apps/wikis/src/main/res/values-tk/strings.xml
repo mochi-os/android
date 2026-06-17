@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Islendik</string>
     <string name="wikis_access_subject_authenticated">Tassyklanan ulanyjylar</string>
 
+    <string name="wikis_revision_compare">Üýtgeşmeleri deňeşdir</string>
+    <string name="wikis_revision_show_page">Sahypany görkez</string>
+    <string name="wikis_revision_compare_failed">Deňeşdirmek üçin öňki wersiýany ýükläp bolmady.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d wersiýasyndan üýtgeşmeler</string>
 </resources>

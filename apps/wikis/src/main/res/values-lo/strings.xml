@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ໃຜກໍໄດ້</string>
     <string name="wikis_access_subject_authenticated">ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ</string>
 
+    <string name="wikis_revision_compare">ປຽບທຽບການປ່ຽນແປງ</string>
+    <string name="wikis_revision_show_page">ສະແດງໜ້າ</string>
+    <string name="wikis_revision_compare_failed">ບໍ່ສາມາດໂຫຼດລຸ້ນກ່ອນໜ້າເພື່ອປຽບທຽບໄດ້.</string>
+    <string name="wikis_revision_changes_from">ການປ່ຽນແປງຈາກລຸ້ນ %1$d → %2$d</string>
 </resources>

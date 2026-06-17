@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Sarbide maila</string>
     <string name="wikis_access_subject_anyone">Edonor</string>
     <string name="wikis_access_subject_authenticated">Autentifikatutako erabiltzaileak</string>
+    <string name="wikis_revision_compare">Konparatu aldaketak</string>
+    <string name="wikis_revision_show_page">Erakutsi orria</string>
+    <string name="wikis_revision_compare_failed">Ezin izan da aurreko bertsioa kargatu konparatzeko.</string>
+    <string name="wikis_revision_changes_from">Aldaketak %1$d → %2$d bertsiotik</string>
 </resources>

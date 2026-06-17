@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">İstənilən şəxs</string>
     <string name="wikis_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>
 
+    <string name="wikis_revision_compare">Dəyişiklikləri müqayisə et</string>
+    <string name="wikis_revision_show_page">Səhifəni göstər</string>
+    <string name="wikis_revision_compare_failed">Müqayisə üçün əvvəlki versiya yüklənə bilmədi.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d versiyasından dəyişikliklər</string>
 </resources>

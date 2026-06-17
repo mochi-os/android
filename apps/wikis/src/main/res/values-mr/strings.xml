@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">कोणीही</string>
     <string name="wikis_access_subject_authenticated">प्रमाणित वापरकर्ते</string>
 
+    <string name="wikis_revision_compare">बदलांची तुलना करा</string>
+    <string name="wikis_revision_show_page">पृष्ठ दाखवा</string>
+    <string name="wikis_revision_compare_failed">तुलनेसाठी मागील आवृत्ती लोड करता आली नाही.</string>
+    <string name="wikis_revision_changes_from">आवृत्ती %1$d → %2$d पासूनचे बदल</string>
 </resources>

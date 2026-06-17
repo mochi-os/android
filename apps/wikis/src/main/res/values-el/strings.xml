@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Οποιοσδήποτε</string>
     <string name="wikis_access_subject_authenticated">Πιστοποιημένοι χρήστες</string>
 
+    <string name="wikis_revision_compare">Σύγκριση αλλαγών</string>
+    <string name="wikis_revision_show_page">Εμφάνιση σελίδας</string>
+    <string name="wikis_revision_compare_failed">Δεν ήταν δυνατή η φόρτωση της προηγούμενης έκδοσης για σύγκριση.</string>
+    <string name="wikis_revision_changes_from">Αλλαγές από την έκδοση %1$d → %2$d</string>
 </resources>

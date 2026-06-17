@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Kowa</string>
     <string name="wikis_access_subject_authenticated">Masu amfani da aka tabbatar</string>
 
+    <string name="wikis_revision_compare">Kwatanta canje-canje</string>
+    <string name="wikis_revision_show_page">Nuna shafin</string>
+    <string name="wikis_revision_compare_failed">An kasa loda sigar baya don kwatanta.</string>
+    <string name="wikis_revision_changes_from">Canje daga sigar %1$d → %2$d</string>
 </resources>

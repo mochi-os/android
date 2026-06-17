@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Nenpòt moun</string>
     <string name="wikis_access_subject_authenticated">Itilizatè otantifye</string>
 
+    <string name="wikis_revision_compare">Konpare chanjman yo</string>
+    <string name="wikis_revision_show_page">Montre paj la</string>
+    <string name="wikis_revision_compare_failed">Pa t kapab chaje vèsyon anvan an pou konparezon.</string>
+    <string name="wikis_revision_changes_from">Chanjman depi vèsyon %1$d → %2$d</string>
 </resources>

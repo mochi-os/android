@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Hver sem er</string>
     <string name="wikis_access_subject_authenticated">Auðkenndir notendur</string>
 
+    <string name="wikis_revision_compare">Bera saman breytingar</string>
+    <string name="wikis_revision_show_page">Sýna síðu</string>
+    <string name="wikis_revision_compare_failed">Ekki tókst að hlaða fyrri útgáfu til samanburðar.</string>
+    <string name="wikis_revision_changes_from">Breytingar frá útgáfu %1$d → %2$d</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Noma ubani</string>
     <string name="wikis_access_subject_authenticated">Abasebenzisi abaqinisekisiwe</string>
 
+    <string name="wikis_revision_compare">Qhathanisa izinguquko</string>
+    <string name="wikis_revision_show_page">Bonisa ikhasi</string>
+    <string name="wikis_revision_compare_failed">Ayikwazanga ukulayisha inguqulo edlule ukuze kuqhathaniswe.</string>
+    <string name="wikis_revision_changes_from">Izinguquko ezisuka kunguqulo %1$d → %2$d</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Било ко</string>
     <string name="wikis_access_subject_authenticated">Аутентификовани корисници</string>
 
+    <string name="wikis_revision_compare">Упореди измене</string>
+    <string name="wikis_revision_show_page">Прикажи страницу</string>
+    <string name="wikis_revision_compare_failed">Претходна верзија није могла да се учита ради поређења.</string>
+    <string name="wikis_revision_changes_from">Измене из верзије %1$d → %2$d</string>
 </resources>

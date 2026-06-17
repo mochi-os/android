@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Har kim</string>
     <string name="wikis_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
 
+    <string name="wikis_revision_compare">O‘zgarishlarni solishtirish</string>
+    <string name="wikis_revision_show_page">Sahifani ko‘rsatish</string>
+    <string name="wikis_revision_compare_failed">Solishtirish uchun oldingi versiyani yuklab bo‘lmadi.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d versiyadagi o‘zgarishlar</string>
 </resources>

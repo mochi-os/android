@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Nabani na</string>
     <string name="wikis_access_subject_authenticated">Abasebenzisi abaqinisekisiweyo</string>
 
+    <string name="wikis_revision_compare">Thelekisa iinguqu</string>
+    <string name="wikis_revision_show_page">Bonisa iphepha</string>
+    <string name="wikis_revision_compare_failed">Ayikwazanga ukulayisha inguqulelo yangaphambili ukuze kuthelekiswe.</string>
+    <string name="wikis_revision_changes_from">Iinguqu ukusuka kwinguqulelo %1$d → %2$d</string>
 </resources>

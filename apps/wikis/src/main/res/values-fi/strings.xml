@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Kuka tahansa</string>
     <string name="wikis_access_subject_authenticated">Todennetut käyttäjät</string>
 
+    <string name="wikis_revision_compare">Vertaa muutoksia</string>
+    <string name="wikis_revision_show_page">Näytä sivu</string>
+    <string name="wikis_revision_compare_failed">Aiempaa versiota ei voitu ladata vertailua varten.</string>
+    <string name="wikis_revision_changes_from">Muutokset versiosta %1$d → %2$d</string>
 </resources>

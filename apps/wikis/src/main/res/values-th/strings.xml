@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ใครก็ได้</string>
     <string name="wikis_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>
 
+    <string name="wikis_revision_compare">เปรียบเทียบการเปลี่ยนแปลง</string>
+    <string name="wikis_revision_show_page">แสดงหน้า</string>
+    <string name="wikis_revision_compare_failed">ไม่สามารถโหลดเวอร์ชันก่อนหน้าเพื่อเปรียบเทียบได้</string>
+    <string name="wikis_revision_changes_from">การเปลี่ยนแปลงจากเวอร์ชัน %1$d → %2$d</string>
 </resources>

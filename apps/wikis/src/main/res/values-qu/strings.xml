@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Pipas</string>
     <string name="wikis_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
 
+    <string name="wikis_revision_compare">Hukchasqakunata tupachiy</string>
+    <string name="wikis_revision_show_page">Pankata rikuchiy</string>
+    <string name="wikis_revision_compare_failed">Tupachinapaq ñawpaq mit\'a mana chaskichikurqachu.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d mit\'amanta hukchasqakuna</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ඕනෑම කෙනෙක්</string>
     <string name="wikis_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
 
+    <string name="wikis_revision_compare">වෙනස්කම් සංසන්දනය කරන්න</string>
+    <string name="wikis_revision_show_page">පිටුව පෙන්වන්න</string>
+    <string name="wikis_revision_compare_failed">සංසන්දනය සඳහා පෙර අනුවාදය පූරණය කළ නොහැකි විය.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d අනුවාදයේ වෙනස්කම්</string>
 </resources>

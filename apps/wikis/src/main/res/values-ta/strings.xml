@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">யாரும்</string>
     <string name="wikis_access_subject_authenticated">அங்கீகரிக்கப்பட்ட பயனர்கள்</string>
 
+    <string name="wikis_revision_compare">மாற்றங்களை ஒப்பிடுக</string>
+    <string name="wikis_revision_show_page">பக்கத்தைக் காட்டு</string>
+    <string name="wikis_revision_compare_failed">ஒப்பிடுவதற்கு முந்தைய பதிப்பை ஏற்ற முடியவில்லை.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d பதிப்பிலிருந்து மாற்றங்கள்</string>
 </resources>
