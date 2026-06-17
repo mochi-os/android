@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Acest mesaj a fost șters</string>
     <string name="chat_search_hint">Caută în chat...</string>
     <string name="chat_search_no_results">Niciun rezultat</string>
+    <string name="chat_message_forward">Redirecționează</string>
+    <string name="chat_forward_title">Redirecționează către…</string>
+    <string name="chat_forward_search">Caută chaturi…</string>
+    <string name="chat_forward_empty">Niciun chat către care să redirecționezi</string>
+    <string name="chat_forward_success">Redirecționat</string>
+    <string name="chat_forward_failed">Redirecționarea a eșuat</string>
 </resources>

@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Оваа порака е избришана</string>
     <string name="chat_search_hint">Пребарај во разговорот...</string>
     <string name="chat_search_no_results">Нема резултати</string>
+    <string name="chat_message_forward">Препрати</string>
+    <string name="chat_forward_title">Препрати до…</string>
+    <string name="chat_forward_search">Пребарај разговори…</string>
+    <string name="chat_forward_empty">Нема разговори за препраќање</string>
+    <string name="chat_forward_success">Препратено</string>
+    <string name="chat_forward_failed">Препраќањето не успеа</string>
 </resources>

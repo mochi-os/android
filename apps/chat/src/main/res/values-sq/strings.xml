@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Ky mesazh u fshi</string>
     <string name="chat_search_hint">Kërko në bisedë...</string>
     <string name="chat_search_no_results">Asnjë rezultat</string>
+    <string name="chat_message_forward">Përcill</string>
+    <string name="chat_forward_title">Përcill te…</string>
+    <string name="chat_forward_search">Kërko biseda…</string>
+    <string name="chat_forward_empty">S\'ka biseda ku të përcillet</string>
+    <string name="chat_forward_success">U përcoll</string>
+    <string name="chat_forward_failed">Përcjellja dështoi</string>
 </resources>

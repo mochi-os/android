@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Tin nhắn này đã bị xóa</string>
     <string name="chat_search_hint">Tìm trong cuộc trò chuyện...</string>
     <string name="chat_search_no_results">Không có kết quả</string>
+    <string name="chat_message_forward">Chuyển tiếp</string>
+    <string name="chat_forward_title">Chuyển tiếp đến…</string>
+    <string name="chat_forward_search">Tìm kiếm cuộc trò chuyện…</string>
+    <string name="chat_forward_empty">Không có cuộc trò chuyện nào để chuyển tiếp</string>
+    <string name="chat_forward_success">Đã chuyển tiếp</string>
+    <string name="chat_forward_failed">Không thể chuyển tiếp</string>
 </resources>

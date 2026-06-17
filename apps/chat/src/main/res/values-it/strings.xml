@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Questo messaggio è stato eliminato</string>
     <string name="chat_search_hint">Cerca nella chat...</string>
     <string name="chat_search_no_results">Nessun risultato</string>
+    <string name="chat_message_forward">Inoltra</string>
+    <string name="chat_forward_title">Inoltra a…</string>
+    <string name="chat_forward_search">Cerca nelle chat…</string>
+    <string name="chat_forward_empty">Nessuna chat a cui inoltrare</string>
+    <string name="chat_forward_success">Inoltrato</string>
+    <string name="chat_forward_failed">Inoltro non riuscito</string>
 </resources>

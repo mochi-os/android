@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Aka mensajex chhaqtayatawa</string>
     <string name="chat_search_hint">Chatan thaqhaña...</string>
     <string name="chat_search_no_results">Janiw jikxatatax utjkiti</string>
+    <string name="chat_message_forward">Apayaña</string>
+    <string name="chat_forward_title">Apayaña…</string>
+    <string name="chat_forward_search">Chatanaka thaqhaña…</string>
+    <string name="chat_forward_empty">Janiw apayañataki chatanakax utjkiti</string>
+    <string name="chat_forward_success">Apayatawa</string>
+    <string name="chat_forward_failed">Janiw apayaskiti</string>
 </resources>

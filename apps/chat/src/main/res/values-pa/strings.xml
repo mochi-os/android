@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">ਇਹ ਸੁਨੇਹਾ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ ਸੀ</string>
     <string name="chat_search_hint">ਚੈਟ ਵਿੱਚ ਖੋਜੋ...</string>
     <string name="chat_search_no_results">ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ</string>
+    <string name="chat_message_forward">ਫਾਰਵਰਡ ਕਰੋ</string>
+    <string name="chat_forward_title">ਫਾਰਵਰਡ ਕਰੋ…</string>
+    <string name="chat_forward_search">ਚੈਟਾਂ ਖੋਜੋ…</string>
+    <string name="chat_forward_empty">ਫਾਰਵਰਡ ਕਰਨ ਲਈ ਕੋਈ ਚੈਟ ਨਹੀਂ</string>
+    <string name="chat_forward_success">ਫਾਰਵਰਡ ਕੀਤਾ ਗਿਆ</string>
+    <string name="chat_forward_failed">ਫਾਰਵਰਡ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
 </resources>

@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Бұл хабарлама жойылды</string>
     <string name="chat_search_hint">Чат ішінен іздеу...</string>
     <string name="chat_search_no_results">Нәтижелер жоқ</string>
+    <string name="chat_message_forward">Қайта жіберу</string>
+    <string name="chat_forward_title">Қайта жіберу…</string>
+    <string name="chat_forward_search">Чаттарды іздеу…</string>
+    <string name="chat_forward_empty">Қайта жіберетін чаттар жоқ</string>
+    <string name="chat_forward_success">Қайта жіберілді</string>
+    <string name="chat_forward_failed">Қайта жіберу сәтсіз аяқталды</string>
 </resources>

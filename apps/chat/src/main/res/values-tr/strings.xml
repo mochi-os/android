@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Bu mesaj silindi</string>
     <string name="chat_search_hint">Sohbette ara...</string>
     <string name="chat_search_no_results">Sonuç yok</string>
+    <string name="chat_message_forward">İlet</string>
+    <string name="chat_forward_title">Şuraya ilet…</string>
+    <string name="chat_forward_search">Sohbetlerde ara…</string>
+    <string name="chat_forward_empty">İletilecek sohbet yok</string>
+    <string name="chat_forward_success">İletildi</string>
+    <string name="chat_forward_failed">İletilemedi</string>
 </resources>

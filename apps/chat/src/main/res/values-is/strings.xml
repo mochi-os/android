@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Þessum skilaboðum var eytt</string>
     <string name="chat_search_hint">Leita í spjalli...</string>
     <string name="chat_search_no_results">Engar niðurstöður</string>
+    <string name="chat_message_forward">Áframsenda</string>
+    <string name="chat_forward_title">Áframsenda til…</string>
+    <string name="chat_forward_search">Leita í spjöllum…</string>
+    <string name="chat_forward_empty">Engin spjöll til að áframsenda í</string>
+    <string name="chat_forward_success">Áframsent</string>
+    <string name="chat_forward_failed">Ekki tókst að áframsenda</string>
 </resources>

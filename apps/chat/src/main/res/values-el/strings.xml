@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Αυτό το μήνυμα διαγράφηκε</string>
     <string name="chat_search_hint">Αναζήτηση στη συνομιλία...</string>
     <string name="chat_search_no_results">Κανένα αποτέλεσμα</string>
+    <string name="chat_message_forward">Προώθηση</string>
+    <string name="chat_forward_title">Προώθηση σε…</string>
+    <string name="chat_forward_search">Αναζήτηση συνομιλιών…</string>
+    <string name="chat_forward_empty">Δεν υπάρχουν συνομιλίες για προώθηση</string>
+    <string name="chat_forward_success">Προωθήθηκε</string>
+    <string name="chat_forward_failed">Αποτυχία προώθησης</string>
 </resources>

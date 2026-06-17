@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Това съобщение беше изтрито</string>
     <string name="chat_search_hint">Търсене в чата...</string>
     <string name="chat_search_no_results">Няма резултати</string>
+    <string name="chat_message_forward">Препрати</string>
+    <string name="chat_forward_title">Препрати до…</string>
+    <string name="chat_forward_search">Търсене в чатовете…</string>
+    <string name="chat_forward_empty">Няма чатове за препращане</string>
+    <string name="chat_forward_success">Препратено</string>
+    <string name="chat_forward_failed">Неуспешно препращане</string>
 </resources>

@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">هي پيغام ڊيليٽ ڪيو ويو</string>
     <string name="chat_search_hint">چيٽ ۾ ڳوليو...</string>
     <string name="chat_search_no_results">ڪو نتيجو ناهي</string>
+    <string name="chat_message_forward">اڳتي موڪليو</string>
+    <string name="chat_forward_title">اڳتي موڪليو…</string>
+    <string name="chat_forward_search">چيٽون ڳوليو…</string>
+    <string name="chat_forward_empty">اڳتي موڪلڻ لاءِ ڪا چيٽ ناهي</string>
+    <string name="chat_forward_success">اڳتي موڪليو ويو</string>
+    <string name="chat_forward_failed">اڳتي موڪلڻ ۾ ناڪامي</string>
 </resources>

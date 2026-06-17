@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Scriosadh an teachtaireacht seo</string>
     <string name="chat_search_hint">Cuardaigh sa chomhrá...</string>
     <string name="chat_search_no_results">Gan torthaí</string>
+    <string name="chat_message_forward">Cuir ar aghaidh</string>
+    <string name="chat_forward_title">Cuir ar aghaidh chuig…</string>
+    <string name="chat_forward_search">Cuardaigh comhráite…</string>
+    <string name="chat_forward_empty">Níl aon chomhrá le cur ar aghaidh chuige</string>
+    <string name="chat_forward_success">Curtha ar aghaidh</string>
+    <string name="chat_forward_failed">Theip ar chur ar aghaidh</string>
 </resources>

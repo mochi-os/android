@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">यो सन्देश मेटाइयो</string>
     <string name="chat_search_hint">च्याटमा खोज्नुहोस्...</string>
     <string name="chat_search_no_results">कुनै नतिजा छैन</string>
+    <string name="chat_message_forward">फर्वार्ड गर्नुहोस्</string>
+    <string name="chat_forward_title">कसलाई फर्वार्ड गर्ने…</string>
+    <string name="chat_forward_search">च्याटहरू खोज्नुहोस्…</string>
+    <string name="chat_forward_empty">फर्वार्ड गर्न कुनै च्याट छैन</string>
+    <string name="chat_forward_success">फर्वार्ड गरियो</string>
+    <string name="chat_forward_failed">फर्वार्ड गर्न सकिएन</string>
 </resources>

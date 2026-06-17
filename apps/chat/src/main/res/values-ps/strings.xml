@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">دا پیغام ړنګ شوی دی</string>
     <string name="chat_search_hint">په چټ کې ولټوئ...</string>
     <string name="chat_search_no_results">پایلې نشته</string>
+    <string name="chat_message_forward">ورلېږل</string>
+    <string name="chat_forward_title">ورلېږل…</string>
+    <string name="chat_forward_search">چټونه ولټوئ…</string>
+    <string name="chat_forward_empty">د لېږلو لپاره کوم چټ نشته</string>
+    <string name="chat_forward_success">ورولېږل شو</string>
+    <string name="chat_forward_failed">ورلېږل ونه شول</string>
 </resources>

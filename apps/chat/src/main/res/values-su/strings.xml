@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Ieu pesen geus dihapus</string>
     <string name="chat_search_hint">Téangan dina obrolan...</string>
     <string name="chat_search_no_results">Teu aya hasil</string>
+    <string name="chat_message_forward">Teruskeun</string>
+    <string name="chat_forward_title">Teruskeun ka…</string>
+    <string name="chat_forward_search">Téangan obrolan…</string>
+    <string name="chat_forward_empty">Teu aya obrolan pikeun neruskeun</string>
+    <string name="chat_forward_success">Diteruskeun</string>
+    <string name="chat_forward_failed">Gagal neruskeun</string>
 </resources>

@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">ဤမက်ဆေ့ဂျ်ကို ဖျက်လိုက်ပါပြီ</string>
     <string name="chat_search_hint">ချတ်ထဲတွင် ရှာရန်...</string>
     <string name="chat_search_no_results">ရလဒ် မရှိပါ</string>
+    <string name="chat_message_forward">ထပ်ဆင့်ပို့ရန်</string>
+    <string name="chat_forward_title">ထပ်ဆင့်ပို့ရန်…</string>
+    <string name="chat_forward_search">ချတ်များ ရှာရန်…</string>
+    <string name="chat_forward_empty">ထပ်ဆင့်ပို့ရန် ချတ် မရှိပါ</string>
+    <string name="chat_forward_success">ထပ်ဆင့်ပို့ပြီးပါပြီ</string>
+    <string name="chat_forward_failed">ထပ်ဆင့်ပို့၍ မရပါ</string>
 </resources>

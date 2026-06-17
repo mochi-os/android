@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Ez az üzenet törölve lett</string>
     <string name="chat_search_hint">Keresés a chatben...</string>
     <string name="chat_search_no_results">Nincs találat</string>
+    <string name="chat_message_forward">Továbbítás</string>
+    <string name="chat_forward_title">Továbbítás ide…</string>
+    <string name="chat_forward_search">Chatek keresése…</string>
+    <string name="chat_forward_empty">Nincs chat, ahová továbbíthatnál</string>
+    <string name="chat_forward_success">Továbbítva</string>
+    <string name="chat_forward_failed">Nem sikerült továbbítani</string>
 </resources>

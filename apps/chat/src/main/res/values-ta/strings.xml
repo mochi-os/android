@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">இந்தச் செய்தி நீக்கப்பட்டது</string>
     <string name="chat_search_hint">அரட்டையில் தேடு...</string>
     <string name="chat_search_no_results">முடிவுகள் இல்லை</string>
+    <string name="chat_message_forward">முன்னனுப்பு</string>
+    <string name="chat_forward_title">முன்னனுப்பு…</string>
+    <string name="chat_forward_search">அரட்டைகளைத் தேடு…</string>
+    <string name="chat_forward_empty">முன்னனுப்ப அரட்டைகள் இல்லை</string>
+    <string name="chat_forward_success">முன்னனுப்பப்பட்டது</string>
+    <string name="chat_forward_failed">முன்னனுப்ப முடியவில்லை</string>
 </resources>

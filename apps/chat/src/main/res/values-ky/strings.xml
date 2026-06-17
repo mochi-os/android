@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Бул билдирүү өчүрүлдү</string>
     <string name="chat_search_hint">Чаттан издөө...</string>
     <string name="chat_search_no_results">Натыйжа жок</string>
+    <string name="chat_message_forward">Кайра жөнөтүү</string>
+    <string name="chat_forward_title">Кайра жөнөтүү…</string>
+    <string name="chat_forward_search">Чаттарды издөө…</string>
+    <string name="chat_forward_empty">Кайра жөнөтүүгө чат жок</string>
+    <string name="chat_forward_success">Кайра жөнөтүлдү</string>
+    <string name="chat_forward_failed">Кайра жөнөтүлгөн жок</string>
 </resources>

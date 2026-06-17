@@ -246,7 +246,14 @@ private fun ChatContent(
     var draft by remember { mutableStateOf("") }
     val listState = rememberLazyListState()
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
     val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
+
+    LaunchedEffect(Unit) {
+        viewModel.events.collect { msg ->
+            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+        }
+    }
 
     LaunchedEffect(uiState.messages.size) {
         if (uiState.messages.isNotEmpty()) {
@@ -402,7 +409,8 @@ private fun ChatContent(
                                             serverUrl = viewModel.serverUrl,
                                             chatId = uiState.chat.id,
                                             onDelete = { viewModel.deleteMessages(listOf(entry.message.id)) },
-                                            onReact = { reaction -> viewModel.react(entry.message.id, reaction) }
+                                            onReact = { reaction -> viewModel.react(entry.message.id, reaction) },
+                                            onForward = { viewModel.openForward(entry.message.id) }
                                         )
                                     }
                                 }
@@ -439,6 +447,15 @@ private fun ChatContent(
                         viewModel.closeSearch()
                         if (idx >= 0) scope.launch { listState.animateScrollToItem(idx) }
                     },
+                )
+            }
+
+            if (uiState.forwardMessageId != null) {
+                ChatForwardSheet(
+                    chats = uiState.forwardChats,
+                    loading = uiState.forwardLoading,
+                    onDismiss = { viewModel.closeForward() },
+                    onSelect = { chat -> viewModel.forwardToChat(chat.id) },
                 )
             }
         }
@@ -553,7 +570,8 @@ private fun MessageBubble(
     serverUrl: String,
     chatId: String,
     onDelete: () -> Unit,
-    onReact: (String) -> Unit
+    onReact: (String) -> Unit,
+    onForward: () -> Unit
 ) {
     val format = LocalFormat.current
     val clipboard = LocalClipboardManager.current
@@ -565,8 +583,9 @@ private fun MessageBubble(
     // copy any non-empty message, and delete your own. Deleted tombstones have
     // no actions.
     val canCopy = !message.deleted && message.body.isNotEmpty()
+    val canForward = !message.deleted
     val canDelete = !message.deleted && isOwn
-    val hasMenu = canCopy || canDelete
+    val hasMenu = canCopy || canForward || canDelete
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -678,6 +697,15 @@ private fun MessageBubble(
                             },
                         )
                     }
+                    if (canForward) {
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.chat_message_forward)) },
+                            onClick = {
+                                onForward()
+                                menuExpanded = false
+                            },
+                        )
+                    }
                     if (canDelete) {
                         DropdownMenuItem(
                             text = { Text(stringResource(MochiR.string.common_delete)) },
@@ -717,6 +745,74 @@ private fun chatReactionCounts(counts: Map<String, Int>, myReaction: String?): L
 private sealed class MessageListEntry {
     data class DateHeader(val dayKey: String, val epochSeconds: Long) : MessageListEntry()
     data class MessageItem(val message: ChatMessage) : MessageListEntry()
+}
+
+/**
+ * Forward-to-chat bottom sheet: a filterable list of the user's other active
+ * chats; tapping one forwards the open message there. (Forward-to-friend is a
+ * newer web feature not yet on web main, so it's deferred here for parity.)
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ChatForwardSheet(
+    chats: List<org.mochios.chat.model.Chat>,
+    loading: Boolean,
+    onDismiss: () -> Unit,
+    onSelect: (org.mochios.chat.model.Chat) -> Unit,
+) {
+    var filter by remember { mutableStateOf("") }
+    val filtered = remember(chats, filter) {
+        if (filter.isBlank()) chats
+        else chats.filter { it.name.contains(filter.trim(), ignoreCase = true) }
+    }
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 16.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.chat_forward_title),
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.padding(bottom = 8.dp),
+            )
+            OutlinedTextField(
+                value = filter,
+                onValueChange = { filter = it },
+                placeholder = { Text(stringResource(R.string.chat_forward_search)) },
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            when {
+                loading -> Box(
+                    modifier = Modifier.fillMaxWidth().padding(24.dp),
+                    contentAlignment = Alignment.Center,
+                ) { CircularProgressIndicator() }
+                filtered.isEmpty() -> Text(
+                    text = stringResource(R.string.chat_forward_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(vertical = 16.dp),
+                )
+                else -> LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
+                    items(filtered, key = { it.id }) { chat ->
+                        Text(
+                            text = chat.name,
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { onSelect(chat) }
+                                .padding(vertical = 12.dp),
+                        )
+                        HorizontalDivider()
+                    }
+                }
+            }
+        }
+    }
 }
 
 private fun groupMessagesByDate(messages: List<ChatMessage>): List<MessageListEntry> {

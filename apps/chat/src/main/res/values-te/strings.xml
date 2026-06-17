@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">ఈ సందేశం తొలగించబడింది</string>
     <string name="chat_search_hint">చాట్‌లో వెతకండి...</string>
     <string name="chat_search_no_results">ఫలితాలు లేవు</string>
+    <string name="chat_message_forward">ఫార్వర్డ్ చేయండి</string>
+    <string name="chat_forward_title">ఫార్వర్డ్ చేయండి…</string>
+    <string name="chat_forward_search">చాట్‌లను వెతకండి…</string>
+    <string name="chat_forward_empty">ఫార్వర్డ్ చేయడానికి చాట్‌లు లేవు</string>
+    <string name="chat_forward_success">ఫార్వర్డ్ చేయబడింది</string>
+    <string name="chat_forward_failed">ఫార్వర్డ్ చేయడం విఫలమైంది</string>
 </resources>

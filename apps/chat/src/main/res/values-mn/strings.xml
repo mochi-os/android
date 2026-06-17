@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Энэ мессеж устгагдсан</string>
     <string name="chat_search_hint">Чатаас хайх...</string>
     <string name="chat_search_no_results">Илэрц олдсонгүй</string>
+    <string name="chat_message_forward">Дамжуулах</string>
+    <string name="chat_forward_title">Дамжуулах…</string>
+    <string name="chat_forward_search">Чат хайх…</string>
+    <string name="chat_forward_empty">Дамжуулах чат алга</string>
+    <string name="chat_forward_success">Дамжуулагдлаа</string>
+    <string name="chat_forward_failed">Дамжуулж чадсангүй</string>
 </resources>

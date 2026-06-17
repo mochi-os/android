@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Mesej ini telah dipadamkan</string>
     <string name="chat_search_hint">Cari dalam sembang...</string>
     <string name="chat_search_no_results">Tiada hasil</string>
+    <string name="chat_message_forward">Majukan</string>
+    <string name="chat_forward_title">Majukan ke…</string>
+    <string name="chat_forward_search">Cari sembang…</string>
+    <string name="chat_forward_empty">Tiada sembang untuk dimajukan</string>
+    <string name="chat_forward_success">Dimajukan</string>
+    <string name="chat_forward_failed">Gagal memajukan</string>
 </resources>

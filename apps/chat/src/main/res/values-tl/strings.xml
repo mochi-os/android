@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Na-delete ang mensaheng ito</string>
     <string name="chat_search_hint">Maghanap sa chat...</string>
     <string name="chat_search_no_results">Walang resulta</string>
+    <string name="chat_message_forward">I-forward</string>
+    <string name="chat_forward_title">I-forward sa…</string>
+    <string name="chat_forward_search">Maghanap ng chat…</string>
+    <string name="chat_forward_empty">Walang chat na puwedeng pag-forward-an</string>
+    <string name="chat_forward_success">Na-forward</string>
+    <string name="chat_forward_failed">Hindi na-forward</string>
 </resources>

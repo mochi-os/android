@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">یہ پیغام حذف کر دیا گیا</string>
     <string name="chat_search_hint">چیٹ میں تلاش کریں...</string>
     <string name="chat_search_no_results">کوئی نتائج نہیں</string>
+    <string name="chat_message_forward">فارورڈ کریں</string>
+    <string name="chat_forward_title">فارورڈ کریں…</string>
+    <string name="chat_forward_search">چیٹس تلاش کریں…</string>
+    <string name="chat_forward_empty">فارورڈ کرنے کے لیے کوئی چیٹ نہیں</string>
+    <string name="chat_forward_success">فارورڈ کر دیا گیا</string>
+    <string name="chat_forward_failed">فارورڈ نہیں ہو سکا</string>
 </resources>

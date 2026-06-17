@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">To sporočilo je bilo izbrisano</string>
     <string name="chat_search_hint">Išči v klepetu...</string>
     <string name="chat_search_no_results">Ni zadetkov</string>
+    <string name="chat_message_forward">Posreduj</string>
+    <string name="chat_forward_title">Posreduj v…</string>
+    <string name="chat_forward_search">Išči po klepetih…</string>
+    <string name="chat_forward_empty">Ni klepetov za posredovanje</string>
+    <string name="chat_forward_success">Posredovano</string>
+    <string name="chat_forward_failed">Posredovanje ni uspelo</string>
 </resources>

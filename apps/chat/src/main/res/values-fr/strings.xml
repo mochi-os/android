@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Ce message a été supprimé</string>
     <string name="chat_search_hint">Rechercher dans la discussion...</string>
     <string name="chat_search_no_results">Aucun résultat</string>
+    <string name="chat_message_forward">Transférer</string>
+    <string name="chat_forward_title">Transférer à…</string>
+    <string name="chat_forward_search">Rechercher des discussions…</string>
+    <string name="chat_forward_empty">Aucune discussion vers laquelle transférer</string>
+    <string name="chat_forward_success">Transféré</string>
+    <string name="chat_forward_failed">Échec du transfert</string>
 </resources>

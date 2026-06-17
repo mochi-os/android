@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">ئەم پەیامە سڕاوەتەوە</string>
     <string name="chat_search_hint">گەڕان لە چاتدا...</string>
     <string name="chat_search_no_results">هیچ ئەنجامێک نییە</string>
+    <string name="chat_message_forward">ناردنەوە</string>
+    <string name="chat_forward_title">ناردنەوە بۆ…</string>
+    <string name="chat_forward_search">گەڕان بە چاتەکاندا…</string>
+    <string name="chat_forward_empty">هیچ چاتێک نییە بۆ ناردنەوە</string>
+    <string name="chat_forward_success">نێردرایەوە</string>
+    <string name="chat_forward_failed">ناردنەوە سەرکەوتوو نەبوو</string>
 </resources>

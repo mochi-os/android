@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">דער מעסעדזש איז אויסגעמעקט געוואָרן</string>
     <string name="chat_search_hint">זוכן אין שמועס...</string>
     <string name="chat_search_no_results">קיין רעזולטאַטן</string>
+    <string name="chat_message_forward">ווײַטערשיקן</string>
+    <string name="chat_forward_title">ווײַטערשיקן צו…</string>
+    <string name="chat_forward_search">זוכן שמועסן…</string>
+    <string name="chat_forward_empty">ניטאָ קיין שמועסן וווּהין ווײַטערצושיקן</string>
+    <string name="chat_forward_success">ווײַטערגעשיקט</string>
+    <string name="chat_forward_failed">ניט געלונגען ווײַטערצושיקן</string>
 </resources>

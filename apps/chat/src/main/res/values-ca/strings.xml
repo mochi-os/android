@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Aquest missatge s\'ha suprimit</string>
     <string name="chat_search_hint">Cerca al xat...</string>
     <string name="chat_search_no_results">Sense resultats</string>
+    <string name="chat_message_forward">Reenvia</string>
+    <string name="chat_forward_title">Reenvia a…</string>
+    <string name="chat_forward_search">Cerca xats…</string>
+    <string name="chat_forward_empty">No hi ha xats per reenviar-hi</string>
+    <string name="chat_forward_success">Reenviat</string>
+    <string name="chat_forward_failed">No s\'ha pogut reenviar</string>
 </resources>

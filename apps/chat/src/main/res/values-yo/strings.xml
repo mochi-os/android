@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">A ti pa ìfiránṣẹ́ yìí rẹ́</string>
     <string name="chat_search_hint">Wá nínú ìfọ̀rọ̀wérọ̀...</string>
     <string name="chat_search_no_results">Kò sí àbájáde</string>
+    <string name="chat_message_forward">Fi ránṣẹ́ síwájú</string>
+    <string name="chat_forward_title">Fi ránṣẹ́ síwájú sí…</string>
+    <string name="chat_forward_search">Wá àwọn ìfọ̀rọ̀wérọ̀…</string>
+    <string name="chat_forward_empty">Kò sí ìfọ̀rọ̀wérọ̀ láti fi ránṣẹ́ síwájú sí</string>
+    <string name="chat_forward_success">A ti fi ránṣẹ́ síwájú</string>
+    <string name="chat_forward_failed">Kò lè fi ránṣẹ́ síwájú</string>
 </resources>

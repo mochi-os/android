@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">សារនេះត្រូវបានលុប</string>
     <string name="chat_search_hint">ស្វែងរកក្នុងការជជែក...</string>
     <string name="chat_search_no_results">គ្មានលទ្ធផលទេ</string>
+    <string name="chat_message_forward">បញ្ជូនបន្ត</string>
+    <string name="chat_forward_title">បញ្ជូនបន្តទៅ…</string>
+    <string name="chat_forward_search">ស្វែងរកការជជែក…</string>
+    <string name="chat_forward_empty">គ្មានការជជែកដើម្បីបញ្ជូនបន្តទេ</string>
+    <string name="chat_forward_success">បានបញ្ជូនបន្ត</string>
+    <string name="chat_forward_failed">មិនអាចបញ្ជូនបន្តបានទេ</string>
 </resources>

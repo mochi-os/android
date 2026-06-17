@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">এই বার্তাটি মুছে ফেলা হয়েছে</string>
     <string name="chat_search_hint">চ্যাটে খুঁজুন...</string>
     <string name="chat_search_no_results">কোনো ফলাফল নেই</string>
+    <string name="chat_message_forward">ফরোয়ার্ড</string>
+    <string name="chat_forward_title">ফরোয়ার্ড করুন…</string>
+    <string name="chat_forward_search">চ্যাট খুঁজুন…</string>
+    <string name="chat_forward_empty">ফরোয়ার্ড করার মতো কোনো চ্যাট নেই</string>
+    <string name="chat_forward_success">ফরোয়ার্ড করা হয়েছে</string>
+    <string name="chat_forward_failed">ফরোয়ার্ড করা যায়নি</string>
 </resources>

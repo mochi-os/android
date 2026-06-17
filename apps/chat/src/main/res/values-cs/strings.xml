@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Tato zpráva byla smazána</string>
     <string name="chat_search_hint">Hledat v chatu...</string>
     <string name="chat_search_no_results">Žádné výsledky</string>
+    <string name="chat_message_forward">Přeposlat</string>
+    <string name="chat_forward_title">Přeposlat do…</string>
+    <string name="chat_forward_search">Hledat chaty…</string>
+    <string name="chat_forward_empty">Žádné chaty k přeposlání</string>
+    <string name="chat_forward_success">Přeposláno</string>
+    <string name="chat_forward_failed">Přeposlání se nezdařilo</string>
 </resources>

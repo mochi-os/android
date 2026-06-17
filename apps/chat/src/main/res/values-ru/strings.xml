@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Это сообщение было удалено</string>
     <string name="chat_search_hint">Поиск в чате...</string>
     <string name="chat_search_no_results">Нет результатов</string>
+    <string name="chat_message_forward">Переслать</string>
+    <string name="chat_forward_title">Переслать в…</string>
+    <string name="chat_forward_search">Поиск чатов…</string>
+    <string name="chat_forward_empty">Нет чатов для пересылки</string>
+    <string name="chat_forward_success">Переслано</string>
+    <string name="chat_forward_failed">Не удалось переслать</string>
 </resources>

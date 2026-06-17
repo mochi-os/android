@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">このメッセージは削除されました</string>
     <string name="chat_search_hint">チャット内を検索...</string>
     <string name="chat_search_no_results">結果がありません</string>
+    <string name="chat_message_forward">転送</string>
+    <string name="chat_forward_title">転送先…</string>
+    <string name="chat_forward_search">チャットを検索…</string>
+    <string name="chat_forward_empty">転送先のチャットがありません</string>
+    <string name="chat_forward_success">転送しました</string>
+    <string name="chat_forward_failed">転送できませんでした</string>
 </resources>

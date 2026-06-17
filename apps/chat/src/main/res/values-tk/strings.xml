@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Bu habar pozuldy</string>
     <string name="chat_search_hint">Çatda gözle...</string>
     <string name="chat_search_no_results">Netije ýok</string>
+    <string name="chat_message_forward">Ugrat</string>
+    <string name="chat_forward_title">Ugrat…</string>
+    <string name="chat_forward_search">Çatlary gözle…</string>
+    <string name="chat_forward_empty">Ugratmak üçin çat ýok</string>
+    <string name="chat_forward_success">Ugradyldy</string>
+    <string name="chat_forward_failed">Ugradyp bolmady</string>
 </resources>

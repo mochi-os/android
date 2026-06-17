@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">ይህ መልዕክት ተሰርዟል</string>
     <string name="chat_search_hint">በውይይቱ ውስጥ ፈልግ...</string>
     <string name="chat_search_no_results">ውጤት የለም</string>
+    <string name="chat_message_forward">አስተላልፍ</string>
+    <string name="chat_forward_title">ወደ… አስተላልፍ</string>
+    <string name="chat_forward_search">ውይይቶችን ፈልግ…</string>
+    <string name="chat_forward_empty">የሚተላለፍበት ውይይት የለም</string>
+    <string name="chat_forward_success">ተላልፏል</string>
+    <string name="chat_forward_failed">ማስተላለፍ አልተሳካም</string>
 </resources>

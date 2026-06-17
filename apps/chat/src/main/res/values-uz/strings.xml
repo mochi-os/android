@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Bu xabar oʻchirilgan</string>
     <string name="chat_search_hint">Chat ichida qidirish...</string>
     <string name="chat_search_no_results">Natijalar yoʻq</string>
+    <string name="chat_message_forward">Uzatish</string>
+    <string name="chat_forward_title">Uzatish…</string>
+    <string name="chat_forward_search">Chatlarni qidirish…</string>
+    <string name="chat_forward_empty">Uzatish uchun chatlar yoʻq</string>
+    <string name="chat_forward_success">Uzatildi</string>
+    <string name="chat_forward_failed">Uzatib boʻlmadi</string>
 </resources>

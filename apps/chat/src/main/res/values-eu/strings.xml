@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Mezu hau ezabatu egin da</string>
     <string name="chat_search_hint">Bilatu txatean...</string>
     <string name="chat_search_no_results">Emaitzarik ez</string>
+    <string name="chat_message_forward">Birbidali</string>
+    <string name="chat_forward_title">Birbidali hona…</string>
+    <string name="chat_forward_search">Bilatu txatak…</string>
+    <string name="chat_forward_empty">Ez dago txatik birbidaltzeko</string>
+    <string name="chat_forward_success">Birbidalita</string>
+    <string name="chat_forward_failed">Ezin izan da birbidali</string>
 </resources>

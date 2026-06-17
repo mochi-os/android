@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Ova je poruka izbrisana</string>
     <string name="chat_search_hint">Pretraži u razgovoru...</string>
     <string name="chat_search_no_results">Nema rezultata</string>
+    <string name="chat_message_forward">Proslijedi</string>
+    <string name="chat_forward_title">Proslijedi u…</string>
+    <string name="chat_forward_search">Pretraži razgovore…</string>
+    <string name="chat_forward_empty">Nema razgovora za prosljeđivanje</string>
+    <string name="chat_forward_success">Proslijeđeno</string>
+    <string name="chat_forward_failed">Prosljeđivanje nije uspjelo</string>
 </resources>

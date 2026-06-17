@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Esta mensagem foi eliminada</string>
     <string name="chat_search_hint">Pesquisar na conversa...</string>
     <string name="chat_search_no_results">Sem resultados</string>
+    <string name="chat_message_forward">Reencaminhar</string>
+    <string name="chat_forward_title">Reencaminhar para…</string>
+    <string name="chat_forward_search">Pesquisar conversas…</string>
+    <string name="chat_forward_empty">Sem conversas para reencaminhar</string>
+    <string name="chat_forward_success">Reencaminhada</string>
+    <string name="chat_forward_failed">Não foi possível reencaminhar</string>
 </resources>

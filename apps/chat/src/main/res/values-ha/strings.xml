@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">An share wannan saƙon</string>
     <string name="chat_search_hint">Nemo a cikin hira...</string>
     <string name="chat_search_no_results">Babu sakamako</string>
+    <string name="chat_message_forward">Tura</string>
+    <string name="chat_forward_title">Tura zuwa…</string>
+    <string name="chat_forward_search">Nemo hirarraki…</string>
+    <string name="chat_forward_empty">Babu hirarrakin da za a tura zuwa</string>
+    <string name="chat_forward_success">An tura</string>
+    <string name="chat_forward_failed">An kasa turawa</string>
 </resources>

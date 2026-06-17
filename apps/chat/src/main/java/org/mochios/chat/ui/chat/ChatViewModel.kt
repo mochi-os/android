@@ -8,14 +8,19 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.chat.R
+import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatSearchResult
@@ -39,6 +44,9 @@ data class ChatUiState(
     val searchQuery: String = "",
     val searchResults: List<ChatSearchResult> = emptyList(),
     val searchLoading: Boolean = false,
+    val forwardMessageId: String? = null,
+    val forwardChats: List<Chat> = emptyList(),
+    val forwardLoading: Boolean = false,
 )
 
 @HiltViewModel
@@ -58,6 +66,10 @@ class ChatViewModel @Inject constructor(
 
     private var subscriptionId: String? = null
     private var searchJob: Job? = null
+
+    // One-shot toast messages (already localised) — e.g. forward success/failure.
+    private val _events = MutableSharedFlow<String>(extraBufferCapacity = 4)
+    val events: SharedFlow<String> = _events.asSharedFlow()
 
     init {
         load()
@@ -205,6 +217,45 @@ class ChatViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(searchResults = res.results, searchLoading = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(searchLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    // ---------------- forward ----------------
+
+    /** Open the forward sheet for [messageId]; load active chats (minus this
+     *  one) as destinations. */
+    fun openForward(messageId: String) {
+        _uiState.value = _uiState.value.copy(
+            forwardMessageId = messageId, forwardChats = emptyList(), forwardLoading = true,
+        )
+        viewModelScope.launch {
+            try {
+                val chats = repository.listChats()
+                    .filter { it.id != chatId && it.status == ChatStatus.ACTIVE }
+                _uiState.value = _uiState.value.copy(forwardChats = chats, forwardLoading = false)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(forwardLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    fun closeForward() {
+        _uiState.value = _uiState.value.copy(
+            forwardMessageId = null, forwardChats = emptyList(), forwardLoading = false,
+        )
+    }
+
+    /** Forward the message currently open in the forward sheet to [toChatId]. */
+    fun forwardToChat(toChatId: String) {
+        val messageId = _uiState.value.forwardMessageId ?: return
+        viewModelScope.launch {
+            try {
+                repository.forwardMessages(chatId, listOf(messageId), toChatId)
+                _uiState.value = _uiState.value.copy(forwardMessageId = null, forwardChats = emptyList())
+                _events.emit(application.getString(R.string.chat_forward_success))
+            } catch (e: Exception) {
+                _events.emit(application.getString(R.string.chat_forward_failed))
             }
         }
     }

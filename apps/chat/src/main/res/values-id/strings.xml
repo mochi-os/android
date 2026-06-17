@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Pesan ini telah dihapus</string>
     <string name="chat_search_hint">Cari di chat...</string>
     <string name="chat_search_no_results">Tidak ada hasil</string>
+    <string name="chat_message_forward">Teruskan</string>
+    <string name="chat_forward_title">Teruskan ke…</string>
+    <string name="chat_forward_search">Cari chat…</string>
+    <string name="chat_forward_empty">Tidak ada chat untuk diteruskan</string>
+    <string name="chat_forward_success">Diteruskan</string>
+    <string name="chat_forward_failed">Gagal meneruskan</string>
 </resources>

@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">ข้อความนี้ถูกลบแล้ว</string>
     <string name="chat_search_hint">ค้นหาในแชท...</string>
     <string name="chat_search_no_results">ไม่พบผลลัพธ์</string>
+    <string name="chat_message_forward">ส่งต่อ</string>
+    <string name="chat_forward_title">ส่งต่อไปยัง…</string>
+    <string name="chat_forward_search">ค้นหาแชท…</string>
+    <string name="chat_forward_empty">ไม่มีแชทให้ส่งต่อ</string>
+    <string name="chat_forward_success">ส่งต่อแล้ว</string>
+    <string name="chat_forward_failed">ส่งต่อไม่สำเร็จ</string>
 </resources>

@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Ko ñe\'ẽmondo oñemboguete</string>
     <string name="chat_search_hint">Eheka ñemongetápe...</string>
     <string name="chat_search_no_results">Ndaipóri ojejuhúva</string>
+    <string name="chat_message_forward">Embohasa</string>
+    <string name="chat_forward_title">Embohasa…</string>
+    <string name="chat_forward_search">Eheka ñemongeta…</string>
+    <string name="chat_forward_empty">Ndaipóri ñemongeta embohasa haguã</string>
+    <string name="chat_forward_success">Oñembohasa</string>
+    <string name="chat_forward_failed">Ndaikatúi oñembohasa</string>
 </resources>

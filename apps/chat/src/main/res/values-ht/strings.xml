@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Mesaj sa a te efase</string>
     <string name="chat_search_hint">Chèche nan chat la...</string>
     <string name="chat_search_no_results">Pa gen rezilta</string>
+    <string name="chat_message_forward">Transfere</string>
+    <string name="chat_forward_title">Transfere bay…</string>
+    <string name="chat_forward_search">Chèche chat…</string>
+    <string name="chat_forward_empty">Pa gen okenn chat pou transfere ladan l</string>
+    <string name="chat_forward_success">Mesaj la transfere</string>
+    <string name="chat_forward_failed">Nou pa t ka transfere</string>
 </resources>

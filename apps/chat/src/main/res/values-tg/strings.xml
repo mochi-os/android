@@ -72,4 +72,10 @@
     <string name="chat_message_deleted">Ин паём нест карда шуд</string>
     <string name="chat_search_hint">Ҷустуҷӯ дар чат...</string>
     <string name="chat_search_no_results">Натиҷае нест</string>
+    <string name="chat_message_forward">Интиқол додан</string>
+    <string name="chat_forward_title">Интиқол додан ба…</string>
+    <string name="chat_forward_search">Ҷустуҷӯи чатҳо…</string>
+    <string name="chat_forward_empty">Чате барои интиқол нест</string>
+    <string name="chat_forward_success">Интиқол дода шуд</string>
+    <string name="chat_forward_failed">Интиқол дода нашуд</string>
 </resources>
