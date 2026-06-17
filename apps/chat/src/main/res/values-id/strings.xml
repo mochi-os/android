@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Hapus secara lokal</string>
     <string name="chat_settings_delete_message">Ini hanya menghapus chat dan pesannya dari perangkat ini.</string>
 
+    <string name="chat_message_deleted">Pesan ini telah dihapus</string>
 </resources>

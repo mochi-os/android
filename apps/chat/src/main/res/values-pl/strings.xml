@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Usuń lokalnie</string>
     <string name="chat_settings_delete_message">Spowoduje to usunięcie czatu i jego wiadomości tylko z tego urządzenia.</string>
 
+    <string name="chat_message_deleted">Ta wiadomość została usunięta</string>
 </resources>

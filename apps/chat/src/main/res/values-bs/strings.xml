@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Obriši lokalno</string>
     <string name="chat_settings_delete_message">Ovo uklanja chat i njegove poruke samo s ovog uređaja.</string>
 
+    <string name="chat_message_deleted">Ova poruka je izbrisana</string>
 </resources>

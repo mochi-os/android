@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Burahin nang lokal</string>
     <string name="chat_settings_delete_message">Aalisin nito ang chat at mga mensahe nito sa device na ito lamang.</string>
 
+    <string name="chat_message_deleted">Na-delete ang mensaheng ito</string>
 </resources>

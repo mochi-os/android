@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Lokal löschen</string>
     <string name="chat_settings_delete_message">Dadurch werden der Chat und seine Nachrichten nur von diesem Gerät entfernt.</string>
 
+    <string name="chat_message_deleted">Diese Nachricht wurde gelöscht</string>
 </resources>

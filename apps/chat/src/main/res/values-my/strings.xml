@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">ဒေသခံ၌ ဖျက်ပါ</string>
     <string name="chat_settings_delete_message">ဤလုပ်ဆောင်ချက်သည် ချတ်နှင့် ၎င်း၏ မက်ဆေ့ဂျ်များကို ဤစက်ပစ္စည်းမှသာ ဖယ်ရှားပါသည်။</string>
 
+    <string name="chat_message_deleted">ဤမက်ဆေ့ဂျ်ကို ဖျက်လိုက်ပါပြီ</string>
 </resources>

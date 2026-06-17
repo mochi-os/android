@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">স্থানীয়ভাবে মুছুন</string>
     <string name="chat_settings_delete_message">এটি শুধুমাত্র এই ডিভাইস থেকে চ্যাট এবং এর বার্তাগুলি সরিয়ে দেয়।</string>
 
+    <string name="chat_message_deleted">এই বার্তাটি মুছে ফেলা হয়েছে</string>
 </resources>

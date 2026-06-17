@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Ħassar lokalment</string>
     <string name="chat_settings_delete_message">Dan ineħħi l-chat u l-messaġġi tiegħu minn dan l-apparat biss.</string>
 
+    <string name="chat_message_deleted">Dan il-messaġġ tħassar</string>
 </resources>

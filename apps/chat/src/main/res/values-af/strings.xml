@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Vee plaaslik uit</string>
     <string name="chat_settings_delete_message">Dit verwyder die klets en sy boodskappe slegs vanaf hierdie toestel.</string>
 
+    <string name="chat_message_deleted">Hierdie boodskap is uitgevee</string>
 </resources>

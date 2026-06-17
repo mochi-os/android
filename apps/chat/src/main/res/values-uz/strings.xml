@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Mahalliy o\'chirish</string>
     <string name="chat_settings_delete_message">Bu chat va uning xabarlarini faqat ushbu qurilmadan o\'chiradi.</string>
 
+    <string name="chat_message_deleted">Bu xabar oʻchirilgan</string>
 </resources>

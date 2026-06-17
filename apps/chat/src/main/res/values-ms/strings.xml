@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Padam secara setempat</string>
     <string name="chat_settings_delete_message">Ini mengeluarkan sembang dan mesejnya daripada peranti ini sahaja.</string>
 
+    <string name="chat_message_deleted">Mesej ini telah dipadamkan</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Ištrinti vietoje</string>
     <string name="chat_settings_delete_message">Tai pašalina pokalbį ir jo pranešimus tik iš šio įrenginio.</string>
 
+    <string name="chat_message_deleted">Ši žinutė buvo ištrinta</string>
 </resources>

@@ -1,5 +1,8 @@
 package org.mochios.chat.ui.chat
 
+import android.widget.Toast
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -35,6 +38,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -57,8 +62,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -74,10 +82,13 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.model.ReactionCount
+import org.mochios.android.model.ReactionType
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.ReactionBar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
@@ -378,7 +389,9 @@ private fun ChatContent(
                                             isOwn = entry.message.member == uiState.identity,
                                             isGroup = uiState.chat.members.size > 2,
                                             serverUrl = viewModel.serverUrl,
-                                            chatId = uiState.chat.id
+                                            chatId = uiState.chat.id,
+                                            onDelete = { viewModel.deleteMessages(listOf(entry.message.id)) },
+                                            onReact = { reaction -> viewModel.react(entry.message.id, reaction) }
                                         )
                                     }
                                 }
@@ -406,15 +419,30 @@ private fun ChatContent(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun MessageBubble(
     message: ChatMessage,
     isOwn: Boolean,
     isGroup: Boolean,
     serverUrl: String,
-    chatId: String
+    chatId: String,
+    onDelete: () -> Unit,
+    onReact: (String) -> Unit
 ) {
     val format = LocalFormat.current
+    val clipboard = LocalClipboardManager.current
+    val context = LocalContext.current
+    val copiedMessage = stringResource(MochiR.string.common_copied)
+    var menuExpanded by remember { mutableStateOf(false) }
+
+    // A long-press menu is only worth showing when there's an action: you can
+    // copy any non-empty message, and delete your own. Deleted tombstones have
+    // no actions.
+    val canCopy = !message.deleted && message.body.isNotEmpty()
+    val canDelete = !message.deleted && isOwn
+    val hasMenu = canCopy || canDelete
+
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = if (isOwn) Alignment.End else Alignment.Start
@@ -438,59 +466,128 @@ private fun MessageBubble(
                 )
             }
         }
-        Card(
-            shape = RoundedCornerShape(16.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = if (isOwn) {
-                    MaterialTheme.colorScheme.primaryContainer
-                } else {
-                    MaterialTheme.colorScheme.surfaceVariant
-                }
-            ),
-            modifier = Modifier.widthIn(max = 320.dp)
-        ) {
-            Column(modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)) {
-                if (!isOwn && !isGroup) {
-                    Text(
-                        text = message.name,
-                        style = MaterialTheme.typography.labelMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Spacer(modifier = Modifier.height(2.dp))
-                }
-                if (message.body.isNotEmpty()) {
-                    Text(
-                        text = message.body,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = if (isOwn) {
-                            MaterialTheme.colorScheme.onPrimaryContainer
+        Box {
+            Card(
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = if (isOwn) {
+                        MaterialTheme.colorScheme.primaryContainer
+                    } else {
+                        MaterialTheme.colorScheme.surfaceVariant
+                    }
+                ),
+                modifier = Modifier
+                    .widthIn(max = 320.dp)
+                    .then(
+                        if (hasMenu) {
+                            Modifier.combinedClickable(
+                                onClick = {},
+                                onLongClick = { menuExpanded = true },
+                            )
                         } else {
-                            MaterialTheme.colorScheme.onSurface
+                            Modifier
                         }
                     )
-                }
-                if (message.attachments.isNotEmpty()) {
-                    if (message.body.isNotEmpty()) Spacer(modifier = Modifier.height(6.dp))
-                    AttachmentGallery(
-                        attachments = message.attachments,
-                        urlBuilder = { att ->
-                            resolveAttachmentUrl(serverUrl, att.url ?: "/chat/$chatId/-/attachments/${att.id}")
-                        },
-                        thumbnailUrlBuilder = { att ->
-                            resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/chat/$chatId/-/attachments/${att.id}/thumbnail")
+            ) {
+                Column(modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)) {
+                    if (!isOwn && !isGroup) {
+                        Text(
+                            text = message.name,
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(modifier = Modifier.height(2.dp))
+                    }
+                    if (message.deleted) {
+                        Text(
+                            text = stringResource(R.string.chat_message_deleted),
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontStyle = FontStyle.Italic,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    } else {
+                        if (message.body.isNotEmpty()) {
+                            Text(
+                                text = message.body,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = if (isOwn) {
+                                    MaterialTheme.colorScheme.onPrimaryContainer
+                                } else {
+                                    MaterialTheme.colorScheme.onSurface
+                                }
+                            )
                         }
+                        if (message.attachments.isNotEmpty()) {
+                            if (message.body.isNotEmpty()) Spacer(modifier = Modifier.height(6.dp))
+                            AttachmentGallery(
+                                attachments = message.attachments,
+                                urlBuilder = { att ->
+                                    resolveAttachmentUrl(serverUrl, att.url ?: "/chat/$chatId/-/attachments/${att.id}")
+                                },
+                                thumbnailUrlBuilder = { att ->
+                                    resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/chat/$chatId/-/attachments/${att.id}/thumbnail")
+                                }
+                            )
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = format.formatTimestamp(message.created),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = format.formatTimestamp(message.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
             }
+            if (hasMenu) {
+                DropdownMenu(
+                    expanded = menuExpanded,
+                    onDismissRequest = { menuExpanded = false },
+                ) {
+                    if (canCopy) {
+                        DropdownMenuItem(
+                            text = { Text(stringResource(MochiR.string.common_copy)) },
+                            onClick = {
+                                clipboard.setText(AnnotatedString(message.body))
+                                Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+                                menuExpanded = false
+                            },
+                        )
+                    }
+                    if (canDelete) {
+                        DropdownMenuItem(
+                            text = { Text(stringResource(MochiR.string.common_delete)) },
+                            onClick = {
+                                onDelete()
+                                menuExpanded = false
+                            },
+                        )
+                    }
+                }
+            }
+        }
+        if (!message.deleted) {
+            Spacer(modifier = Modifier.height(2.dp))
+            ReactionBar(
+                reactions = chatReactionCounts(message.reactionCounts, message.myReaction),
+                onReact = onReact,
+                onRemoveReaction = { onReact("none") },
+            )
         }
     }
 }
+
+/**
+ * Adapt the chat server's reaction shape — a `{reaction: count}` map plus the
+ * viewer's own reaction — into the lib [ReactionBar]'s `List<ReactionCount>`.
+ * Unknown reaction keys are dropped; pills are ordered by the canonical
+ * [ReactionType] order for stability.
+ */
+private fun chatReactionCounts(counts: Map<String, Int>, myReaction: String?): List<ReactionCount> =
+    counts.mapNotNull { (key, count) ->
+        ReactionType.fromString(key)?.let { type ->
+            ReactionCount(type = type, count = count, isMine = key.equals(myReaction, ignoreCase = true))
+        }
+    }.sortedBy { it.type.ordinal }
 
 private sealed class MessageListEntry {
     data class DateHeader(val dayKey: String, val epochSeconds: Long) : MessageListEntry()

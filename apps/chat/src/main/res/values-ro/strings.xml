@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Ștergeți local</string>
     <string name="chat_settings_delete_message">Aceasta elimină chatul și mesajele sale doar de pe acest dispozitiv.</string>
 
+    <string name="chat_message_deleted">Acest mesaj a fost șters</string>
 </resources>

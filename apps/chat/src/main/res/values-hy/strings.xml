@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Ջնջել տեղականորեն</string>
     <string name="chat_settings_delete_message">Սա հեռացնում է զրույցը և դրա հաղորդագրությունները միայն այս սարքից:</string>
 
+    <string name="chat_message_deleted">Այս հաղորդագրությունը ջնջվել է</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Moosaajii kana irraa haqi</string>
     <string name="chat_settings_delete_message">Kun marii fi ergaawwan isaa moosaajii kana qofa irraa haqa.</string>
 
+    <string name="chat_message_deleted">Ergaan kun haqameera</string>
 </resources>

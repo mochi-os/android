@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Kay dispositivullapi pichay</string>
     <string name="chat_settings_delete_message">Kayqa rimanakuyta hinaspa willayninkunata kay dispositivollamantam pichan.</string>
 
+    <string name="chat_message_deleted">Kay willay pichasqam</string>
 </resources>

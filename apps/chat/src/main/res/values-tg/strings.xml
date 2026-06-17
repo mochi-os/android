@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Нест кардан дар ин дастгоҳ</string>
     <string name="chat_settings_delete_message">Ин чат ва паёмҳои онро танҳо аз ин дастгоҳ нест мекунад.</string>
 
+    <string name="chat_message_deleted">Ин паём нест карда шуд</string>
 </resources>

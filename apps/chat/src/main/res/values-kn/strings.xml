@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">ಸ್ಥಳೀಯವಾಗಿ ಅಳಿಸಿ</string>
     <string name="chat_settings_delete_message">ಇದು ಈ ಸಾಧನದಿಂದ ಮಾತ್ರ ಚಾಟ್ ಮತ್ತು ಅದರ ಸಂದೇಶಗಳನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
 
+    <string name="chat_message_deleted">ಈ ಸಂದೇಶವನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
 </resources>

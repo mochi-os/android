@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Τοπική διαγραφή</string>
     <string name="chat_settings_delete_message">Αυτό αφαιρεί τη συνομιλία και τα μηνύματά της μόνο από αυτήν τη συσκευή.</string>
 
+    <string name="chat_message_deleted">Αυτό το μήνυμα διαγράφηκε</string>
 </resources>

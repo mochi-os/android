@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">स्थानिक पातळीवर हटवा</string>
     <string name="chat_settings_delete_message">हे केवळ या डिव्हाइसवरून चॅट आणि त्याचे संदेश काढून टाकते.</string>
 
+    <string name="chat_message_deleted">हा संदेश हटवला गेला</string>
 </resources>

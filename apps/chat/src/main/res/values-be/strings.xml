@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Выдаліць лакальна</string>
     <string name="chat_settings_delete_message">Гэта выдаліць чат і яго паведамленні толькі з гэтай прылады.</string>
 
+    <string name="chat_message_deleted">Гэта паведамленне было выдалена</string>
 </resources>

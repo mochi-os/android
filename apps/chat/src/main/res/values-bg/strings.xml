@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Локално изтриване</string>
     <string name="chat_settings_delete_message">Това премахва чата и неговите съобщения само от това устройство.</string>
 
+    <string name="chat_message_deleted">Това съобщение беше изтрито</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">حذف محليًا</string>
     <string name="chat_settings_delete_message">يؤدي هذا إلى إزالة الدردشة ورسائلها من هذا الجهاز فقط.</string>
 
+    <string name="chat_message_deleted">تم حذف هذه الرسالة</string>
 </resources>

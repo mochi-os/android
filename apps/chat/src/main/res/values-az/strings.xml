@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Lokal olaraq silin</string>
     <string name="chat_settings_delete_message">Bu, söhbəti və onun mesajlarını yalnız bu cihazdan silir.</string>
 
+    <string name="chat_message_deleted">Bu mesaj silindi</string>
 </resources>

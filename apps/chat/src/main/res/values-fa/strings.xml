@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">حذف محلی</string>
     <string name="chat_settings_delete_message">این کار گفتگو و پیام‌های آن را فقط از این دستگاه حذف می‌کند.</string>
 
+    <string name="chat_message_deleted">این پیام حذف شد</string>
 </resources>

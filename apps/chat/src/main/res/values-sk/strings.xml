@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Odstrániť lokálne</string>
     <string name="chat_settings_delete_message">Týmto sa chat a jeho správy odstránia iba z tohto zariadenia.</string>
 
+    <string name="chat_message_deleted">Táto správa bola odstránená</string>
 </resources>

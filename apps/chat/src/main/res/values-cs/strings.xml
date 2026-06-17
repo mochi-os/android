@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Smazat lokálně</string>
     <string name="chat_settings_delete_message">Tímto se chat a jeho zprávy odeberou pouze z tohoto zařízení.</string>
 
+    <string name="chat_message_deleted">Tato zpráva byla smazána</string>
 </resources>

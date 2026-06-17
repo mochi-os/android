@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">從本機刪除</string>
     <string name="chat_settings_delete_message">這只會從此裝置移除聊天及其訊息。</string>
 
+    <string name="chat_message_deleted">此訊息已被刪除</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">په محلي ډول ړنګ کړئ</string>
     <string name="chat_settings_delete_message">دا چټ او د هغه پیغامونه یوازې له دې وسیلې څخه لرې کوي.</string>
 
+    <string name="chat_message_deleted">دا پیغام ړنګ شوی دی</string>
 </resources>

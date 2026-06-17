@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">លុបនៅក្នុងតំបន់</string>
     <string name="chat_settings_delete_message">សកម្មភាពនេះលុបការជជែក និងសាររបស់វាចេញពីឧបករណ៍នេះតែប៉ុណ្ណោះ។</string>
 
+    <string name="chat_message_deleted">សារនេះត្រូវបានលុប</string>
 </resources>

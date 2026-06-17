@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Удалить локально</string>
     <string name="chat_settings_delete_message">Это удалит чат и его сообщения только с этого устройства.</string>
 
+    <string name="chat_message_deleted">Это сообщение было удалено</string>
 </resources>

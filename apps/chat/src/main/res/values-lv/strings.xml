@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Dzēst lokāli</string>
     <string name="chat_settings_delete_message">Šī darbība noņem tērzēšanu un tās ziņojumus tikai no šīs ierīces.</string>
 
+    <string name="chat_message_deleted">Šī ziņa tika izdzēsta</string>
 </resources>

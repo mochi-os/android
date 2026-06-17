@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Futa kwenye kifaa</string>
     <string name="chat_settings_delete_message">Hii inaondoa gumzo na ujumbe wake kwenye kifaa hiki pekee.</string>
 
+    <string name="chat_message_deleted">Ujumbe huu ulifutwa</string>
 </resources>

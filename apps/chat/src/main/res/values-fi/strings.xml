@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Poista paikallisesti</string>
     <string name="chat_settings_delete_message">Tämä poistaa keskustelun ja sen viestit vain tästä laitteesta.</string>
 
+    <string name="chat_message_deleted">Tämä viesti poistettiin</string>
 </resources>

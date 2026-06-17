@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">ローカルから削除</string>
     <string name="chat_settings_delete_message">このデバイスからのみチャットとそのメッセージを削除します。</string>
 
+    <string name="chat_message_deleted">このメッセージは削除されました</string>
 </resources>

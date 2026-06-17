@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">સ્થાનિક રીતે કાઢી નાખો</string>
     <string name="chat_settings_delete_message">આ ફક્ત આ ઉપકરણ પરથી ચેટ અને તેના સંદેશા દૂર કરે છે.</string>
 
+    <string name="chat_message_deleted">આ સંદેશ કાઢી નાખવામાં આવ્યો</string>
 </resources>

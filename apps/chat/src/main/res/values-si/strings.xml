@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">දේශීයව මකන්න</string>
     <string name="chat_settings_delete_message">මෙයින් කතාබස සහ එහි පණිවිඩ මෙම උපාංගයෙන් පමණක් ඉවත් කරයි.</string>
 
+    <string name="chat_message_deleted">මෙම පණිවිඩය මකන ලදී</string>
 </resources>

@@ -70,8 +70,25 @@ class ChatViewModel @Inject constructor(
                     isLoading = false
                 )
                 subscribeWebSocket(view.chat.key)
+                markRead()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /**
+     * Move the read watermark to the latest message (server defaults `read` to
+     * the newest message's time). Fire-and-forget: the watermark is local-only,
+     * non-synced, and only moves forward, so failures are non-critical. Mirrors
+     * the web client marking a chat read on open / on each new message.
+     */
+    private fun markRead() {
+        viewModelScope.launch {
+            try {
+                repository.markRead(chatId)
+            } catch (_: Exception) {
+                // Non-critical; ignore.
             }
         }
     }
@@ -88,6 +105,7 @@ class ChatViewModel @Inject constructor(
                     isRefreshing = false,
                     error = null
                 )
+                markRead()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
             }
@@ -109,6 +127,41 @@ class ChatViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoadingMore = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Delete messages (delete-for-everyone). The server only removes the ones
+     *  the caller owns; refresh reflects the resulting tombstones. */
+    fun deleteMessages(messageIds: List<String>) {
+        if (messageIds.isEmpty()) return
+        viewModelScope.launch {
+            try {
+                repository.deleteMessages(chatId, messageIds)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Toggle a reaction on a message (pass "none"/"" to clear). Updates the
+     *  affected message in place from the server's returned counts. */
+    fun react(messageId: String, reaction: String) {
+        viewModelScope.launch {
+            try {
+                val res = repository.react(chatId, messageId, reaction)
+                _uiState.value = _uiState.value.copy(
+                    messages = _uiState.value.messages.map { m ->
+                        if (m.id == messageId) {
+                            m.copy(reactionCounts = res.reactionCounts, myReaction = res.myReaction)
+                        } else {
+                            m
+                        }
+                    }
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }
@@ -196,6 +249,14 @@ class ChatViewModel @Inject constructor(
                                 )
                             } catch (_: Exception) { }
                         }
+                    }
+                    ev == "delete" -> {
+                        // A message was tombstoned — refresh to render "deleted".
+                        refresh()
+                    }
+                    ev == "reaction" -> {
+                        // A reaction changed on a message — refresh to update counts.
+                        refresh()
                     }
                     ev == null && event.body != null -> {
                         // Incoming message — refresh

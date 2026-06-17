@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Efase lokalman</string>
     <string name="chat_settings_delete_message">Sa retire chat la ak mesaj li yo sou aparèy sa a sèlman.</string>
 
+    <string name="chat_message_deleted">Mesaj sa a te efase</string>
 </resources>

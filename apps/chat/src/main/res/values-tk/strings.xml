@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Ýerli poz</string>
     <string name="chat_settings_delete_message">Bu diňe şu enjamdan söhbeti we onuň habarlaryny aýyrýar.</string>
 
+    <string name="chat_message_deleted">Bu habar pozuldy</string>
 </resources>

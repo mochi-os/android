@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">ਸਥਾਨਕ ਤੌਰ \'ਤੇ ਮਿਟਾਓ</string>
     <string name="chat_settings_delete_message">ਇਹ ਚੈਟ ਅਤੇ ਇਸਦੇ ਸੁਨੇਹਿਆਂ ਨੂੰ ਸਿਰਫ਼ ਇਸ ਡਿਵਾਈਸ ਤੋਂ ਹਟਾਉਂਦਾ ਹੈ।</string>
 
+    <string name="chat_message_deleted">ਇਹ ਸੁਨੇਹਾ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ ਸੀ</string>
 </resources>

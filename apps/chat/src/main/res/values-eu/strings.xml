@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Ezabatu lokalki</string>
     <string name="chat_settings_delete_message">Honek txata eta bere mezuak gailu honetatik bakarrik kentzen ditu.</string>
 
+    <string name="chat_message_deleted">Mezu hau ezabatu egin da</string>
 </resources>

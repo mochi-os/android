@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Sguab às gu h-ionadail</string>
     <string name="chat_settings_delete_message">Bheir seo air falbh an còmhradh agus na teachdaireachdan aige bhon uidheam seo a-mhàin.</string>
 
+    <string name="chat_message_deleted">Chaidh an teachdaireachd seo a sguabadh às</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Radera lokalt</string>
     <string name="chat_settings_delete_message">Detta tar bort chatten och dess meddelanden endast från den här enheten.</string>
 
+    <string name="chat_message_deleted">Det här meddelandet har raderats</string>
 </resources>

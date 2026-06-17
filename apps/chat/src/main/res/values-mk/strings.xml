@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Избриши локално</string>
     <string name="chat_settings_delete_message">Ова го отстранува разговорот и неговите пораки само од овој уред.</string>
 
+    <string name="chat_message_deleted">Оваа порака е избришана</string>
 </resources>

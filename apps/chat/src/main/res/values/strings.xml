@@ -52,6 +52,7 @@
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_message_too_long">Message too long</string>
     <string name="chat_message_empty">Message cannot be empty</string>
+    <string name="chat_message_deleted">This message was deleted</string>
 
     <!-- Chat overflow / settings -->
     <string name="chat_settings_title">Chat settings</string>

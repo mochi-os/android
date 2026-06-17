@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Жергиликтүү өчүрүү</string>
     <string name="chat_settings_delete_message">Бул чатты жана анын билдирүүлөрүн ушул түзмөктөн гана өчүрөт.</string>
 
+    <string name="chat_message_deleted">Бул билдирүү өчүрүлдү</string>
 </resources>

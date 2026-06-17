@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">مقامي طور تي ختم ڪريو</string>
     <string name="chat_settings_delete_message">هي رڳو هن ڊوائيس تان چيٽ ۽ ان جا پيغام هٽائي ٿو.</string>
 
+    <string name="chat_message_deleted">هي پيغام ڊيليٽ ڪيو ويو</string>
 </resources>

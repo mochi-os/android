@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">በአካባቢ ይሰርዙ</string>
     <string name="chat_settings_delete_message">ይህ ውይይቱን እና መልዕክቶቹን ከዚህ መሣሪያ ብቻ ያስወግዳል።</string>
 
+    <string name="chat_message_deleted">ይህ መልዕክት ተሰርዟል</string>
 </resources>

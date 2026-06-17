@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">ლოკალურად წაშლა</string>
     <string name="chat_settings_delete_message">ეს წაშლის ჩატსა და მის შეტყობინებებს მხოლოდ ამ მოწყობილობიდან.</string>
 
+    <string name="chat_message_deleted">ეს შეტყობინება წაიშალა</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">مقامی طور پر حذف کریں</string>
     <string name="chat_settings_delete_message">یہ چیٹ اور اس کے پیغامات کو صرف اس آلے سے ہٹاتا ہے۔</string>
 
+    <string name="chat_message_deleted">یہ پیغام حذف کر دیا گیا</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">מחיקה מקומית</string>
     <string name="chat_settings_delete_message">פעולה זו מסירה את הצ\'אט ואת ההודעות שלו מהמכשיר הזה בלבד.</string>
 
+    <string name="chat_message_deleted">ההודעה הזו נמחקה</string>
 </resources>

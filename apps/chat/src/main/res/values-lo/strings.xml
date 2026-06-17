@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">ລຶບໃນເຄື່ອງ</string>
     <string name="chat_settings_delete_message">ນີ້ຈະລຶບການສົນທະນາ ແລະ ຂໍ້ຄວາມຂອງມັນອອກຈາກອຸປະກອນນີ້ເທົ່ານັ້ນ.</string>
 
+    <string name="chat_message_deleted">ຂໍ້ຄວາມນີ້ຖືກລຶບແລ້ວ</string>
 </resources>

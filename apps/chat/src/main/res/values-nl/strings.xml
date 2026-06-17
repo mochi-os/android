@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Lokaal verwijderen</string>
     <string name="chat_settings_delete_message">Dit verwijdert de chat en de berichten alleen van dit apparaat.</string>
 
+    <string name="chat_message_deleted">Dit bericht is verwijderd</string>
 </resources>

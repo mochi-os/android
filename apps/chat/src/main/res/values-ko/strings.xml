@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">로컬에서 삭제</string>
     <string name="chat_settings_delete_message">이 기기에서만 채팅과 메시지를 삭제합니다.</string>
 
+    <string name="chat_message_deleted">이 메시지는 삭제되었습니다</string>
 </resources>

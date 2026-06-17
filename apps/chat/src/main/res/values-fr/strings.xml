@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Supprimer localement</string>
     <string name="chat_settings_delete_message">Cela supprime la conversation et ses messages de cet appareil uniquement.</string>
 
+    <string name="chat_message_deleted">Ce message a été supprimé</string>
 </resources>

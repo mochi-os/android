@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Видалити локально</string>
     <string name="chat_settings_delete_message">Це видалить чат та його повідомлення лише з цього пристрою.</string>
 
+    <string name="chat_message_deleted">Це повідомлення було видалено</string>
 </resources>

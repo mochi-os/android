@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Xóa cục bộ</string>
     <string name="chat_settings_delete_message">Thao tác này chỉ xóa cuộc trò chuyện và tin nhắn khỏi thiết bị này.</string>
 
+    <string name="chat_message_deleted">Tin nhắn này đã bị xóa</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Busak sacara lokal</string>
     <string name="chat_settings_delete_message">Iki mbusak obrolan lan pesen-pesene mung saka piranti iki.</string>
 
+    <string name="chat_message_deleted">Pesen iki wis dibusak</string>
 </resources>

@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Slett lokalt</string>
     <string name="chat_settings_delete_message">Dette fjerner chatten og meldingene fra kun denne enheten.</string>
 
+    <string name="chat_message_deleted">Denne meldingen ble slettet</string>
 </resources>

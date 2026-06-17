@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">ลบในเครื่อง</string>
     <string name="chat_settings_delete_message">การดำเนินการนี้จะลบแชทและข้อความออกจากอุปกรณ์นี้เท่านั้น</string>
 
+    <string name="chat_message_deleted">ข้อความนี้ถูกลบแล้ว</string>
 </resources>

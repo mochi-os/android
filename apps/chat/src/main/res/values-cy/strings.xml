@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Dileu\'n lleol</string>
     <string name="chat_settings_delete_message">Mae hyn yn tynnu\'r sgwrs a\'i negeseuon o\'r ddyfais hon yn unig.</string>
 
+    <string name="chat_message_deleted">Cafodd y neges hon ei dileu</string>
 </resources>

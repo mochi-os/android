@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Төхөөрөмжөөс устгах</string>
     <string name="chat_settings_delete_message">Энэ нь чат болон мессежүүдийг зөвхөн энэ төхөөрөмжөөс устгана.</string>
 
+    <string name="chat_message_deleted">Энэ мессеж устгагдсан</string>
 </resources>

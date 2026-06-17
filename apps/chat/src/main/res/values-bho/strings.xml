@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">स्थानीय रूप से हटाईं</string>
     <string name="chat_settings_delete_message">ई चैट आ ओकर संदेस के खाली एही डिवाइस से हटावेला।</string>
 
+    <string name="chat_message_deleted">ई मैसेज डिलीट कर दिहल गइल</string>
 </resources>

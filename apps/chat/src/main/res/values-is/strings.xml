@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Eyða staðbundið</string>
     <string name="chat_settings_delete_message">Þetta fjarlægir spjallið og skilaboð þess aðeins úr þessu tæki.</string>
 
+    <string name="chat_message_deleted">Þessum skilaboðum var eytt</string>
 </resources>

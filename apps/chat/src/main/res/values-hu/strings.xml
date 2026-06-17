@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Helyi törlés</string>
     <string name="chat_settings_delete_message">Ezzel a csevegés és az üzenetei csak erről az eszközről törlődnek.</string>
 
+    <string name="chat_message_deleted">Ez az üzenet törölve lett</string>
 </resources>

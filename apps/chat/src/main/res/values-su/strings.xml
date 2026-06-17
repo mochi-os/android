@@ -69,4 +69,5 @@
     <string name="chat_settings_delete">Pupus lokal</string>
     <string name="chat_settings_delete_message">Ieu ngahapus obrolan sareng pesenna ti alat ieu wungkul.</string>
 
+    <string name="chat_message_deleted">Ieu pesen geus dihapus</string>
 </resources>
