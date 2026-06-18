@@ -1,7 +1,9 @@
 package org.mochios.people.ui.profile
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,11 +24,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -40,8 +43,10 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.material3.RadioButton
@@ -70,6 +75,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
@@ -95,7 +101,8 @@ import org.mochios.people.ui.components.PeopleSidebarSection
  *  - Display name: inline text field with a Save button.
  *  - Bio (the server calls it "profile"): multi-line text area with a length
  *    indicator and a Save button. Capped at 100 KB.
- *  - Accent: small swatch + "Change" button → opens [ColourPickerDialog].
+ *  - Accent: inline [AccentColorPicker] (presets, saturation/value field, hue
+ *    slider, hex input) with Clear / Save.
  *  - Privacy: switch to toggle public / private (directory listing).
  *  - Three image slots: avatar, banner, favicon. Each picks a system image
  *    via [rememberImagePicker], resizes it, then uploads via the ViewModel.
@@ -233,8 +240,8 @@ private fun Editor(
     context: android.content.Context,
 ) {
     val info = state.info ?: return
-    var showColourPicker by remember { mutableStateOf(false) }
     var showSizeWarning by remember { mutableStateOf<String?>(null) }
+    var showEditName by remember { mutableStateOf(false) }
 
     val accentPreview = state.accentDraft.trim().takeIf { ProfileViewModel.ACCENT_PATTERN.matches(it) }
     val avatarUrl = imageUrl(viewModel.serverUrl, info.id, "avatar", info.avatar)
@@ -277,6 +284,7 @@ private fun Editor(
             uploadingBanner = state.savingSlot == ImageSlot.BANNER,
             onChangeAvatar = avatarPicker.launch,
             onChangeBanner = bannerPicker.launch,
+            onEditName = { showEditName = true },
         )
 
         Column(
@@ -285,9 +293,8 @@ private fun Editor(
                 .padding(horizontal = 16.dp, vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
-            NameSection(state, info, viewModel)
             BioSection(state, info, viewModel)
-            AccentSection(state, accentPreview, viewModel, onOpenPicker = { showColourPicker = true })
+            AccentSection(state, viewModel)
             FaviconSection(
                 faviconUrl = faviconUrl,
                 uploading = state.savingSlot == ImageSlot.FAVICON,
@@ -297,17 +304,23 @@ private fun Editor(
         }
     }
 
-    if (showColourPicker) {
-        ColourPickerDialog(
-            initial = state.accentDraft,
-            onDismiss = { showColourPicker = false },
-            onConfirm = { hex ->
-                viewModel.setAccentDraft(hex)
-                viewModel.saveAccent(
-                    onSuccess = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_accent_saved)) } },
-                    onError = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_save_accent_failed)) } },
+    if (showEditName) {
+        EditNameDialog(
+            initialName = state.nameDraft,
+            isSaving = state.savingField == ProfileField.NAME,
+            onDismiss = { showEditName = false },
+            onSave = { newName ->
+                viewModel.setNameDraft(newName)
+                viewModel.saveName(
+                    onSuccess = {
+                        showEditName = false
+                        scope.launch {
+                            snackbar.showSnackbar(context.getString(R.string.people_profile_name_saved))
+                        }
+                    },
+                    // Failures surface through state.error → scaffold snackbar.
+                    onError = {},
                 )
-                showColourPicker = false
             },
         )
     }
@@ -337,16 +350,19 @@ private fun PreviewCard(
     uploadingBanner: Boolean,
     onChangeAvatar: () -> Unit,
     onChangeBanner: () -> Unit,
+    onEditName: () -> Unit,
 ) {
-    val avatarSize = 80.dp
+    val avatarSize = 96.dp
     Box(modifier = Modifier.fillMaxWidth()) {
         // Banner — 3:1 aspect, falls back to a muted placeholder with a
-        // camera icon when no banner is set.
+        // camera icon when no banner is set. Tapping the banner picks a new
+        // image (disabled while an upload is in flight).
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(3f)
-                .background(MaterialTheme.colorScheme.surfaceVariant),
+                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .clickable(enabled = !uploadingBanner, onClick = onChangeBanner),
             contentAlignment = Alignment.Center,
         ) {
             if (bannerUrl != null) {
@@ -376,158 +392,199 @@ private fun PreviewCard(
                     )
                 }
             }
-            // Top-right "Change banner" button.
-            Row(
-                modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(8.dp),
-            ) {
-                OutlinedButton(
-                    onClick = onChangeBanner,
-                    enabled = !uploadingBanner,
+            if (uploadingBanner) {
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(Color.Black.copy(alpha = 0.35f)),
+                    contentAlignment = Alignment.Center,
                 ) {
-                    Icon(
-                        Icons.Filled.CloudUpload,
-                        contentDescription = null,
-                        modifier = Modifier.size(16.dp),
-                    )
-                    Spacer(Modifier.width(6.dp))
-                    Text(
-                        text = if (uploadingBanner)
-                            stringResource(R.string.people_profile_uploading)
-                        else stringResource(R.string.people_profile_change_banner),
-                    )
+                    CircularProgressIndicator(color = Color.White)
                 }
+            } else {
+                // Text hint — signals the banner is tappable to change.
+                Text(
+                    text = stringResource(R.string.people_profile_change_banner),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = Color.White,
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(8.dp)
+                        .clip(RoundedCornerShape(999.dp))
+                        .background(Color.Black.copy(alpha = 0.45f))
+                        .padding(horizontal = 12.dp, vertical = 6.dp),
+                )
             }
         }
 
-        // Avatar pinned over the banner's bottom-left edge.
+        // Avatar pinned over the banner's bottom-left edge. Tapping it picks a
+        // new avatar (disabled while an upload is in flight).
         Box(
             modifier = Modifier
                 .padding(start = 16.dp)
                 .offset(y = avatarSize / 2)
                 .align(Alignment.BottomStart),
         ) {
+            // A surface separator ring always sits between the avatar and the
+            // banner. When the user sets a parseable accent, its ring is drawn
+            // in that separator band (overlapping the surface padding only), so
+            // the image keeps the same size whether or not an accent is set.
+            val ringColour = accent?.let { parseHexColour(it) }
+            val separator = 5.dp
+            val accentWidth = 2.5.dp
+            val imageSize = avatarSize - separator * 2
             Box(
                 modifier = Modifier
                     .size(avatarSize)
                     .clip(CircleShape)
-                    .border(
-                        2.dp,
-                        // Accent ring when the user has set one, falling back to
-                        // the surface colour so the avatar still reads against
-                        // the banner.
-                        accent?.let { parseHexColour(it) } ?: MaterialTheme.colorScheme.surface,
-                        CircleShape,
-                    ),
-            ) {
-                EntityAvatar(
-                    name = name,
-                    src = avatarUrl,
-                    seed = fingerprint,
-                    size = avatarSize,
-                )
-            }
-            IconButton(
-                onClick = onChangeAvatar,
-                enabled = !uploadingAvatar,
-                modifier = Modifier
-                    .align(Alignment.BottomEnd)
-                    .offset(x = 2.dp, y = 2.dp)
-                    .size(28.dp)
-                    .clip(CircleShape)
                     .background(MaterialTheme.colorScheme.surface)
-                    .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape),
+                    .clickable(enabled = !uploadingAvatar, onClick = onChangeAvatar),
+                contentAlignment = Alignment.Center,
             ) {
-                Icon(
-                    Icons.Filled.CloudUpload,
-                    contentDescription = stringResource(R.string.people_profile_upload_avatar),
-                    modifier = Modifier.size(16.dp),
-                )
+                // Accent ring — overlaps the separator band, hugging the image.
+                if (ringColour != null) {
+                    Box(
+                        modifier = Modifier
+                            .size(imageSize + accentWidth * 2)
+                            .border(accentWidth, ringColour, CircleShape),
+                    )
+                }
+                Box(
+                    modifier = Modifier
+                        .size(imageSize)
+                        .clip(CircleShape),
+                ) {
+                    EntityAvatar(
+                        name = name,
+                        src = avatarUrl,
+                        seed = fingerprint,
+                        size = imageSize,
+                        borderColor = Color.Transparent,
+                    )
+                    if (uploadingAvatar) {
+                        Box(
+                            modifier = Modifier
+                                .matchParentSize()
+                                .background(Color.Black.copy(alpha = 0.35f)),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(24.dp),
+                                strokeWidth = 2.dp,
+                                color = Color.White,
+                            )
+                        }
+                    }
+                }
+            }
+            if (!uploadingAvatar) {
+                // Camera hint badge — signals the avatar is tappable to change.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomEnd)
+                        .size(28.dp)
+                        .clip(CircleShape)
+                        .background(MaterialTheme.colorScheme.surface)
+                        .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(
+                        Icons.Filled.PhotoCamera,
+                        contentDescription = stringResource(R.string.people_profile_upload_avatar),
+                        modifier = Modifier.size(16.dp),
+                    )
+                }
             }
         }
-    }
 
-    // Identity row underneath the hero. Pad enough to clear the half-
-    // overhanging avatar.
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(top = 48.dp, start = 16.dp, end = 16.dp),
-    ) {
-        Text(
-            text = name.ifBlank { "—" },
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.SemiBold,
-        )
-    }
-}
-
-@Composable
-private fun NameSection(
-    state: ProfileUiState,
-    info: PersonInformation,
-    viewModel: ProfileViewModel,
-) {
-    val context = LocalContext.current
-    val scope = rememberCoroutineScope()
-    val snackbarText = stringResource(R.string.people_profile_name_saved)
-    val errorText = stringResource(R.string.people_profile_save_name_failed)
-
-    val trimmed = state.nameDraft.trim()
-    val dirty = trimmed.isNotEmpty() && trimmed != info.name
-
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Text(
-            stringResource(R.string.people_profile_name),
-            style = MaterialTheme.typography.titleSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        // Save the name on the keyboard's Done action when there's an edit to
-        // commit, mirroring web's Enter-to-save on the profile name field.
-        val saveName = {
-            viewModel.saveName(
-                onSuccess = { scope.launch { /* snackbar lives at scaffold root */ } },
-                onError = { /* shown via state.error → snackbar */ },
+        // Name + edit pencil, aligned to the avatar's bottom and sitting to
+        // its right. The pencil is a compact clickable icon (not an
+        // IconButton) so the row collapses to the text height — that lets the
+        // avatarSize/2 offset land the name's bottom exactly on the avatar's.
+        Row(
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .offset(y = avatarSize / 2)
+                .fillMaxWidth()
+                .padding(start = 16.dp + avatarSize + 12.dp, end = 16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Text(
+                text = name.ifBlank { "—" },
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.SemiBold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f, fill = false),
+            )
+            Icon(
+                imageVector = Icons.Outlined.Edit,
+                contentDescription = stringResource(R.string.people_profile_edit_name),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .clickable(onClick = onEditName)
+                    .padding(6.dp)
+                    .size(20.dp),
             )
         }
-        OutlinedTextField(
-            value = state.nameDraft,
-            onValueChange = viewModel::setNameDraft,
-            singleLine = true,
-            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-            keyboardActions = KeyboardActions(onDone = { if (dirty && !state.isSaving) saveName() }),
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.End,
-        ) {
-            Button(
-                onClick = saveName,
-                enabled = dirty && !state.isSaving,
-            ) {
-                if (state.isSaving) {
-                    CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+    }
+
+    // Clear the half-overhanging avatar / name row before the form begins.
+    Spacer(Modifier.height(avatarSize / 2 + 8.dp))
+}
+
+/**
+ * "Edit name" dialog — holds the name field locally so Cancel discards the
+ * edit and only Save commits it. Mirrors the old inline name section, moved
+ * behind the pencil affordance on the hero card.
+ */
+@Composable
+private fun EditNameDialog(
+    initialName: String,
+    isSaving: Boolean,
+    onSave: (String) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    var name by remember { mutableStateOf(initialName) }
+    val trimmed = name.trim()
+    val valid = trimmed.isNotEmpty()
+
+    AlertDialog(
+        onDismissRequest = { if (!isSaving) onDismiss() },
+        title = { Text(stringResource(R.string.people_profile_edit_name)) },
+        text = {
+            OutlinedTextField(
+                value = name,
+                onValueChange = { value -> name = value },
+                singleLine = true,
+                label = { Text(stringResource(R.string.people_profile_name)) },
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                keyboardActions = KeyboardActions(
+                    onDone = { if (valid && !isSaving) onSave(trimmed) },
+                ),
+                modifier = Modifier.fillMaxWidth(),
+            )
+        },
+        confirmButton = {
+            TextButton(onClick = { onSave(trimmed) }, enabled = valid && !isSaving) {
+                if (isSaving) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                        strokeWidth = 2.dp,
+                    )
                 } else {
-                    Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                    Text(stringResource(R.string.people_profile_save))
                 }
-                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                Text(
-                    if (state.isSaving) stringResource(R.string.people_profile_saving)
-                    else stringResource(R.string.people_profile_save),
-                )
             }
-        }
-    }
-    // Toast-on-success path: trigger after info.name changes.
-    LaunchedEffect(info.name) {
-        // No-op placeholder — onSuccess fires the scope.launch in saveName().
-        // Kept for symmetry with future logic.
-        if (info.name == trimmed && dirty.not()) {
-            // nothing
-        }
-    }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss, enabled = !isSaving) {
+                Text(stringResource(R.string.people_common_cancel))
+            }
+        },
+    )
 }
 
 @Composable
@@ -554,36 +611,45 @@ private fun BioSection(
             minLines = 4,
             maxLines = 10,
             isError = tooLong,
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
+                unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
+            ),
             modifier = Modifier.fillMaxWidth(),
         )
-        LinearProgressIndicator(
-            progress = { progress },
-            color = if (tooLong) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
-            modifier = Modifier.fillMaxWidth().height(4.dp),
-        )
+        // Bottom row: inline progress track (left, flexible) + character count
+        // + Save button, matching the web profile editor layout.
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
+            LinearProgressIndicator(
+                progress = { progress },
+                color = if (tooLong) MaterialTheme.colorScheme.error
+                        else MaterialTheme.colorScheme.primary,
+                drawStopIndicator = {},
+                modifier = Modifier.weight(1f),
+            )
             Text(
-                text = "$length / ${ProfileViewModel.BIO_MAX}",
+                text = "%,d / %,d".format(length, ProfileViewModel.BIO_MAX),
                 style = MaterialTheme.typography.bodySmall,
                 color = if (tooLong) MaterialTheme.colorScheme.error
                         else MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
             )
+            val savingBio = state.savingField == ProfileField.BIO
             Button(
                 onClick = { viewModel.saveBio() },
-                enabled = dirty && !tooLong && !state.isSaving,
+                enabled = dirty && !tooLong && !savingBio,
             ) {
-                if (state.isSaving) {
+                if (savingBio) {
                     CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                 } else {
-                    Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                    Icon(Icons.Filled.Save, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                 }
                 Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                 Text(
-                    if (state.isSaving) stringResource(R.string.people_profile_saving)
+                    if (savingBio) stringResource(R.string.people_profile_saving)
                     else stringResource(R.string.people_profile_save),
                 )
             }
@@ -594,53 +660,21 @@ private fun BioSection(
 @Composable
 private fun AccentSection(
     state: ProfileUiState,
-    accentPreview: String?,
     viewModel: ProfileViewModel,
-    onOpenPicker: () -> Unit,
 ) {
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(
             stringResource(R.string.people_profile_accent),
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            // Live swatch — empty / invalid hex falls back to the surface
-            // variant so the slot stays visible.
-            val previewColour = accentPreview?.let { parseHexColour(it) }
-            Box(
-                modifier = Modifier
-                    .size(32.dp)
-                    .clip(CircleShape)
-                    .background(previewColour ?: MaterialTheme.colorScheme.surfaceVariant)
-                    .border(
-                        1.dp,
-                        MaterialTheme.colorScheme.outlineVariant,
-                        CircleShape,
-                    ),
-            )
-            Text(
-                text = state.accentDraft.ifBlank {
-                    stringResource(R.string.people_profile_accent_unset)
-                },
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.weight(1f),
-            )
-            OutlinedButton(onClick = onOpenPicker) {
-                Text(stringResource(R.string.people_profile_change))
-            }
-        }
-        if (state.accentDraft.isNotBlank()) {
-            TextButton(onClick = {
-                viewModel.setAccentDraft("")
-                viewModel.saveAccent()
-            }) {
-                Text(stringResource(R.string.people_profile_clear))
-            }
-        }
+        AccentColorPicker(
+            hex = state.accentDraft,
+            isSaving = state.savingField == ProfileField.ACCENT,
+            onHexChange = { hex -> viewModel.setAccentDraft(hex) },
+            onClear = { viewModel.clearAccent() },
+            onSave = { viewModel.saveAccent() },
+        )
     }
 }
 
@@ -687,7 +721,11 @@ private fun FaviconSection(
                     }
                 }
             }
-            OutlinedButton(onClick = onUpload, enabled = !uploading) {
+            OutlinedButton(
+                onClick = onUpload,
+                enabled = !uploading,
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
+            ) {
                 Icon(Icons.Filled.CloudUpload, contentDescription = null, modifier = Modifier.size(16.dp))
                 Spacer(Modifier.width(6.dp))
                 Text(
@@ -720,7 +758,7 @@ private fun PrivacySection(
                 onCheckedChange = { checked ->
                     viewModel.savePrivacy(if (checked) "public" else "private")
                 },
-                enabled = !state.isSaving,
+                enabled = state.savingField != ProfileField.PRIVACY,
             )
         }
         if (state.privacyDraft == "private") {

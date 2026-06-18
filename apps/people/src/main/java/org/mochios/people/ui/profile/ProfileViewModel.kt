@@ -27,18 +27,26 @@ import javax.inject.Inject
 enum class ImageSlot { AVATAR, BANNER, FAVICON }
 
 /**
+ * Which text field is currently being saved. Lets each section's Save control
+ * show its own in-flight spinner instead of every button reacting to a single
+ * shared flag.
+ */
+enum class ProfileField { NAME, BIO, ACCENT, PRIVACY }
+
+/**
  * Reactive state for the Profile editor. Each `*Draft` field holds the
  * unsaved-but-being-edited value; `info` holds the last value we successfully
  * round-tripped through the server. The screen renders drafts everywhere
  * except the preview card's fingerprint / identity, which always shows the
  * canonical server value.
  *
- * `savingSlot` tracks per-slot image uploads so the relevant button can show
- * an in-flight indicator without disabling the whole form.
+ * `savingSlot` tracks per-slot image uploads and `savingField` tracks per-field
+ * text saves, so the relevant control can show an in-flight indicator without
+ * disabling the whole form.
  */
 data class ProfileUiState(
     val isLoading: Boolean = true,
-    val isSaving: Boolean = false,
+    val savingField: ProfileField? = null,
     val savingSlot: ImageSlot? = null,
     val info: PersonInformation? = null,
     val nameDraft: String = "",
@@ -46,7 +54,10 @@ data class ProfileUiState(
     val accentDraft: String = "",
     val privacyDraft: String = "private",
     val error: MochiError? = null,
-)
+) {
+    /** True while any field save is in flight. */
+    val isSaving: Boolean get() = savingField != null
+}
 
 @HiltViewModel
 class ProfileViewModel @Inject constructor(
@@ -115,7 +126,7 @@ class ProfileViewModel @Inject constructor(
         val trimmed = _uiState.value.nameDraft.trim()
         val info = _uiState.value.info ?: return
         if (trimmed.isEmpty() || trimmed == info.name) return
-        launchSave(onSuccess, onError) { person ->
+        launchSave(ProfileField.NAME, onSuccess, onError) { person ->
             repository.setName(person, trimmed)
             val updated = info.copy(name = trimmed)
             _uiState.value = _uiState.value.copy(info = updated, nameDraft = trimmed)
@@ -130,7 +141,7 @@ class ProfileViewModel @Inject constructor(
             onError(MochiError.Unknown("Profile too long"))
             return
         }
-        launchSave(onSuccess, onError) { person ->
+        launchSave(ProfileField.BIO, onSuccess, onError) { person ->
             repository.setProfile(person, value)
             val updated = info.copy(profile = value)
             _uiState.value = _uiState.value.copy(info = updated, bioDraft = value)
@@ -145,10 +156,24 @@ class ProfileViewModel @Inject constructor(
             onError(MochiError.Unknown("Invalid colour"))
             return
         }
-        launchSave(onSuccess, onError) { person ->
+        launchSave(ProfileField.ACCENT, onSuccess, onError) { person ->
             repository.setAccent(person, trimmed)
             val updated = info.copy(style = PersonStyle(accent = trimmed.ifEmpty { null }))
             _uiState.value = _uiState.value.copy(info = updated, accentDraft = trimmed)
+        }
+    }
+
+    /**
+     * Clear the accent by posting `accent=""` to the style endpoint. No-ops
+     * when nothing is set so an empty profile doesn't fire a needless request.
+     */
+    fun clearAccent(onSuccess: () -> Unit = {}, onError: (MochiError) -> Unit = {}) {
+        val info = _uiState.value.info ?: return
+        if (info.style.accent.orEmpty().isEmpty() && _uiState.value.accentDraft.isEmpty()) return
+        launchSave(ProfileField.ACCENT, onSuccess, onError) { person ->
+            repository.setAccent(person, "")
+            val updated = info.copy(style = PersonStyle(accent = null))
+            _uiState.value = _uiState.value.copy(info = updated, accentDraft = "")
         }
     }
 
@@ -157,7 +182,7 @@ class ProfileViewModel @Inject constructor(
         val info = _uiState.value.info ?: return
         if (value == info.privacy) return
         setPrivacyDraft(value)
-        launchSave(onSuccess = {}, onError) { person ->
+        launchSave(ProfileField.PRIVACY, onSuccess = {}, onError) { person ->
             repository.setPrivacy(person, value)
             val updated = info.copy(privacy = value)
             _uiState.value = _uiState.value.copy(info = updated, privacyDraft = value)
@@ -204,21 +229,22 @@ class ProfileViewModel @Inject constructor(
     }
 
     private fun launchSave(
+        field: ProfileField,
         onSuccess: () -> Unit,
         onError: (MochiError) -> Unit,
         block: suspend (person: String) -> Unit,
     ) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSaving = true, error = null)
+            _uiState.value = _uiState.value.copy(savingField = field, error = null)
             try {
                 val person = sessionManager.getBoundIdentity()
                     ?: throw IllegalStateException("no bound identity")
                 block(person)
-                _uiState.value = _uiState.value.copy(isSaving = false)
+                _uiState.value = _uiState.value.copy(savingField = null)
                 onSuccess()
             } catch (e: Exception) {
                 val err = e.toMochiError()
-                _uiState.value = _uiState.value.copy(isSaving = false, error = err)
+                _uiState.value = _uiState.value.copy(savingField = null, error = err)
                 onError(err)
             }
         }
