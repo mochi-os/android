@@ -1,5 +1,8 @@
 package org.mochios.people.repository
 
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -31,6 +34,17 @@ import javax.inject.Singleton
 class PeopleRepository @Inject constructor(
     private val api: PeopleApi,
 ) {
+
+    /**
+     * Emits whenever a group is edited or deleted. The group list and the
+     * group detail live on separate back-stack entries with independent
+     * ViewModels, so the list can't observe the detail directly. This shared
+     * signal lets the list reload the moment a mutation succeeds, instead of
+     * relying on navigation-resume callbacks that don't fire across the app's
+     * multi-graph navigation.
+     */
+    private val _groupsChanged = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    val groupsChanged: SharedFlow<Unit> = _groupsChanged.asSharedFlow()
 
     // ---- Friends + invites ----
 
@@ -105,10 +119,12 @@ class PeopleRepository @Inject constructor(
         description: String? = null,
     ) {
         api.updateGroup(id, name, description).unwrap()
+        _groupsChanged.tryEmit(Unit)
     }
 
     suspend fun deleteGroup(id: String) {
         api.deleteGroup(id).unwrap()
+        _groupsChanged.tryEmit(Unit)
     }
 
     suspend fun addGroupMember(group: String, member: String, type: GroupMemberType) {

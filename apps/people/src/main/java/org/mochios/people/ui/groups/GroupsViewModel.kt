@@ -46,11 +46,36 @@ class GroupsViewModel @Inject constructor(
 
     init {
         load()
+        observeGroupChanges()
     }
 
-    private fun load() {
+    /**
+     * Reload the list whenever a group is edited or deleted on the detail
+     * screen, which runs on a separate ViewModel. Keeps this list in sync
+     * without depending on navigation-resume callbacks.
+     */
+    private fun observeGroupChanges() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            repository.groupsChanged.collect {
+                load(silent = true)
+            }
+        }
+    }
+
+    /**
+     * Fetch the group list.
+     *
+     * @param silent when `true`, updates the list in the background without
+     * toggling the loading indicator or surfacing a fetch error — used for
+     * cross-screen sync where the change was already confirmed elsewhere, so
+     * a spinner or error screen would only flicker. The current list is kept
+     * if a silent fetch fails.
+     */
+    private fun load(silent: Boolean = false) {
+        viewModelScope.launch {
+            if (!silent) {
+                _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            }
             try {
                 val groups = repository.listGroups()
                     .sortedWith(compareBy(NaturalCompare) { it.name })
@@ -59,10 +84,12 @@ class GroupsViewModel @Inject constructor(
                     isLoading = false,
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
+                if (!silent) {
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        error = e.toMochiError(),
+                    )
+                }
             }
         }
     }
