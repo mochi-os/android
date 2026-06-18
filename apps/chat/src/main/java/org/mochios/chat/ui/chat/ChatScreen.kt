@@ -665,11 +665,15 @@ private fun MessageBubble(
                             if (message.body.isNotEmpty()) Spacer(modifier = Modifier.height(6.dp))
                             AttachmentGallery(
                                 attachments = message.attachments,
+                                // The server's `url`/`thumbnail_url` point at the
+                                // flat `/chat/attachments/<id>` route, which does
+                                // not serve the asset here. Always build the chat
+                                // asset route instead: `/chat/<chatId>/-/attachments/<id>`.
                                 urlBuilder = { att ->
-                                    resolveAttachmentUrl(serverUrl, att.url ?: "/chat/$chatId/-/attachments/${att.id}")
+                                    resolveAttachmentUrl(serverUrl, "/chat/$chatId/-/attachments/${att.id}")
                                 },
                                 thumbnailUrlBuilder = { att ->
-                                    resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/chat/$chatId/-/attachments/${att.id}/thumbnail")
+                                    resolveAttachmentUrl(serverUrl, "/chat/$chatId/-/attachments/${att.id}/thumbnail")
                                 }
                             )
                         }
