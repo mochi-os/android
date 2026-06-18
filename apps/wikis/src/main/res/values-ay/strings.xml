@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Khitisa</string>
     <string name="wikis_access_subject_authenticated">Yatiyat apnaqirinaka</string>
 
+    <string name="wikis_revision_compare">Mayjt\'awinaka uñakipt\'aña</string>
+    <string name="wikis_revision_show_page">Janar uñacht\'ayaña</string>
+    <string name="wikis_revision_compare_failed">Uñakipt\'añataki nayra versión janiw apsuñjamäkiti.</string>
+    <string name="wikis_revision_changes_from">Versión %1$d → %2$d mayjt\'awinaka</string>
 </resources>

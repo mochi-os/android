@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Non hai opcións no campo de columnas</string>
     <string name="crm_design_preview_empty">Nada que mostrar</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Buscar usuarios</string>
+    <string name="crm_access_no_groups">Non hai grupos dispoñibles</string>
+    <string name="crm_access_tab_users">Usuarios</string>
+    <string name="crm_access_tab_groups">Grupos</string>
+    <string name="crm_access_target">Obxectivo</string>
+    <string name="crm_access_target_hint">ID de entidade, @grupo, * (todos) ou + (membros)</string>
+    <string name="crm_attachment_remove">Eliminar anexo</string>
+    <string name="crm_board_add_column">Engadir columna</string>
+    <string name="crm_settings_entity_id">ID de entidade</string>
+    <string name="crm_settings_fingerprint">Pegada</string>
+    <string name="crm_settings_server">Servidor</string>
 </resources>

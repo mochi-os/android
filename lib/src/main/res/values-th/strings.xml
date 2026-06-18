@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">การยืนยันตัวตนหลายปัจจัย</string>
     <string name="auth_mfa_subtitle">ดำเนินขั้นตอนการยืนยันที่เหลือให้เสร็จสิ้น</string>
     <string name="auth_recover_account">กู้คืนบัญชี</string>
+    <string name="auth_login_title">เข้าสู่ระบบ Mochi</string>
+    <string name="auth_next">ถัดไป</string>
+    <string name="auth_or_log_in_with">หรือเข้าสู่ระบบด้วย</string>
+    <string name="auth_passkey">พาสคีย์</string>
+    <string name="auth_use_passkey">ใช้พาสคีย์</string>
+    <string name="auth_email_me_a_code">ส่งรหัสทางอีเมลให้ฉัน</string>
+    <string name="auth_or_enter_authenticator_code">หรือป้อนรหัส Authenticator</string>
+    <string name="auth_log_in">เข้าสู่ระบบ</string>
+    <string name="auth_back">ย้อนกลับ</string>
+    <string name="auth_lost_access_recovery">เข้าถึงไม่ได้ใช่ไหม ใช้รหัสกู้คืน</string>
     <string name="auth_create_identity_title">สร้างตัวตนของคุณ</string>
     <string name="auth_create_identity_subtitle">เลือกชื่อสำหรับตัวตนของคุณบนเซิร์ฟเวอร์นี้</string>
     <string name="auth_privacy_public_description">แสดงในไดเรกทอรีผู้ใช้เพื่อให้ผู้อื่นค้นหาคุณได้</string>

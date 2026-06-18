@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Nuk ka opsione në fushën e kolonave</string>
     <string name="crm_design_preview_empty">Asgjë për të shfaqur</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Kërko përdorues</string>
+    <string name="crm_access_no_groups">Asnjë grup i disponueshëm</string>
+    <string name="crm_access_tab_users">Përdoruesit</string>
+    <string name="crm_access_tab_groups">Grupet</string>
+    <string name="crm_access_target">Objektivi</string>
+    <string name="crm_access_target_hint">ID entiteti, @grup, * (të gjithë), ose + (anëtarët)</string>
+    <string name="crm_attachment_remove">Hiq bashkëngjitjen</string>
+    <string name="crm_board_add_column">Shto kolonë</string>
+    <string name="crm_settings_entity_id">ID e entitetit</string>
+    <string name="crm_settings_fingerprint">Gjurma</string>
+    <string name="crm_settings_server">Serveri</string>
 </resources>

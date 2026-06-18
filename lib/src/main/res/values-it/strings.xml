@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Autenticazione a più fattori</string>
     <string name="auth_mfa_subtitle">Completa i passaggi di verifica rimanenti</string>
     <string name="auth_recover_account">Recupera account</string>
+    <string name="auth_login_title">Accedi a Mochi</string>
+    <string name="auth_next">Avanti</string>
+    <string name="auth_or_log_in_with">Oppure accedi con</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Usa una passkey</string>
+    <string name="auth_email_me_a_code">Inviami un codice via email</string>
+    <string name="auth_or_enter_authenticator_code">Oppure inserisci il codice dell\'autenticatore</string>
+    <string name="auth_log_in">Accedi</string>
+    <string name="auth_back">Indietro</string>
+    <string name="auth_lost_access_recovery">Accesso perso? Usa un codice di recupero</string>
     <string name="auth_create_identity_title">Crea la tua identità</string>
     <string name="auth_create_identity_subtitle">Scegli un nome per la tua identità su questo server</string>
     <string name="auth_privacy_public_description">Elencato nella directory utenti in modo che gli altri possano trovarti.</string>

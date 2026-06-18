@@ -53,6 +53,10 @@ import org.mochios.android.ui.components.AccessRuleCard
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
+// Levels offered when changing an existing rule's level inline, mirroring web's
+// FEEDS_ACCESS_LEVELS select.
+private val ACCESS_LEVEL_CHANGE_KEYS = listOf("comment", "react", "view", "none")
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AccessTab(
@@ -106,6 +110,8 @@ fun AccessTab(
                             rule = rule,
                             levelLabel = { op -> accessLevelLabel(op) },
                             onRevoke = { viewModel.revokeAccess(rule.subject) },
+                            levels = ACCESS_LEVEL_CHANGE_KEYS,
+                            onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
                         )
                     }
                 }

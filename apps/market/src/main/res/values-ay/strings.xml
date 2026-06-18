@@ -370,7 +370,7 @@
     <string name="market_purchase_track">Trackiyasa</string>
     <string name="market_purchases_complete_purchase">Alaña tukuyaña</string>
     <string name="market_purchases_empty">Jan alasiwinaka</string>
-    <string name="market_purchases_order_label">Pedido #%1$d</string>
+    <string name="market_purchases_order_label">Pedido #%1$s</string>
     <string name="market_purchases_title">Alasiwinaka</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">Janira reviewanaka</string>
@@ -612,6 +612,7 @@
     <string name="market_price_starting_bid">Qalltawi churawi: %1$s</string>
     <string name="market_profile_load_failed">Janiw uñt\'awi apaqañjamäkiti</string>
     <string name="market_profile_member_since">Chika %1$s pachata</string>
+    <string name="market_profile_joined">%1$s mayachasiwi</string>
     <string name="market_profile_rating_breakdown">Chanichawi jaljtäwi</string>
     <string name="market_profile_sales_count">%1$d alxañanaka</string>
     <string name="market_profile_stars_value">%1$d warawaranaka</string>
@@ -621,7 +622,7 @@
     <string name="market_purchase_download_many">Aka aynacharu %1$d arkivunakam apsuma.</string>
     <string name="market_purchase_download_one">Aka aynacharu arkivuma apsuma.</string>
     <string name="market_purchase_review_from">%1$s jaqitha arxata</string>
-    <string name="market_purchases_auction_label">Tantachasiwi #%1$d</string>
+    <string name="market_purchases_auction_label">Tantachasiwi #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s kutt\'ayata</string>
     <string name="market_purchases_won_for">%1$s mayni atipawi</string>
     <string name="market_refund_dialog_amount_help">Taqpach kutt\'ayañataki ch\'usa jaytma.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Aljiri kutsu</string>
     <string name="market_listing_detail_seller_reviews_heading">Alxiriña uñt\'ayawipa</string>
     <string name="market_account_stripe_open_failed">Janiw Stripe jist\'arañjamäkiti</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Unidadanak jakhu</string>
+    <string name="market_editor_stock_unlimited">Juntayata jaytaña</string>
+    <string name="market_editor_start_time">Qalltaña pacha</string>
+    <string name="market_editor_start_time_help">Wakischa jaytaña publicara qalltañataki.</string>
+    <string name="market_editor_start_time_next">Jutiri</string>
+    <string name="market_editor_start_time_clear">Q\'umachaña</string>
+    <string name="market_listing_detail_buy_now_label">Jichhakiy alaña</string>
+    <string name="market_section_recently_viewed">Jichhüru uñjata</string>
+    <string name="market_recently_viewed_clear">Taqpach q\'umachaña</string>
 </resources>

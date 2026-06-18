@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">이의 제기 결정</string>
     <string name="staff_appeals_empty">대기 중인 이의 신청이 없어요</string>
     <string name="staff_appeals_history">목록 기록</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">메모</string>
     <string name="staff_appeals_open_sidebar">사이드바 열기</string>
     <string name="staff_appeals_reason_label">판매자의 이의 신청 사유</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">판매자</string>
     <string name="staff_dashboard_kpi_total_orders">총 주문</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">아니요</string>
     <string name="staff_dashboard_open_sidebar">사이드바 열기</string>
-    <string name="staff_dashboard_order_fallback">주문 #%1$d</string>
+    <string name="staff_dashboard_order_fallback">주문 #%1$s</string>
     <string name="staff_dashboard_system">시스템</string>
     <string name="staff_dashboard_tab_audit">감사</string>
     <string name="staff_dashboard_tab_listings">목록</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">분쟁이 없어요</string>
     <string name="staff_disputes_filter_status_label">상태</string>
     <string name="staff_disputes_history">분쟁 기록</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">구매자 정보</string>
     <string name="staff_disputes_meta_chargeback_fee">차지백 수수료</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe에서 보유</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">기타</string>
     <string name="staff_disputes_reason_unauthorised">권한 없음</string>
     <string name="staff_disputes_refund_amount_label">환불 금액 (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">환불 금액이 주문 총액을 초과해요</string>
     <string name="staff_disputes_refund_help">%1$s 전액 환불은 비워두고, 부분 환불은 더 적은 금액을 입력하세요.</string>
     <string name="staff_disputes_refund_must_be_positive">환불 금액은 0보다 커야 해요</string>
     <string name="staff_disputes_resolution_buyer">구매자에게 유리하게 해결</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">사이드바 열기</string>
     <string name="staff_moderation_system">시스템</string>
     <string name="staff_moderation_title">모더레이션 로그</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">작업</string>
     <string name="staff_reports_action_ban">사용자 차단</string>
     <string name="staff_reports_action_dismiss">닫기</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">상태</string>
     <string name="staff_reports_filter_type_label">유형</string>
     <string name="staff_reports_history">신고 기록</string>
-    <string name="staff_reports_listing_label">리스팅 #%1$d</string>
+    <string name="staff_reports_listing_label">리스팅 #%1$s</string>
     <string name="staff_reports_meta_details">신고자 정보</string>
     <string name="staff_reports_meta_price">가격</string>
     <string name="staff_reports_meta_reason">사유</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">제거됨</string>
     <string name="staff_reviews_filter_status">상태</string>
     <string name="staff_reviews_open_sidebar">사이드바 열기</string>
-    <string name="staff_reviews_order_label">주문 #%1$d</string>
+    <string name="staff_reviews_order_label">주문 #%1$s</string>
     <string name="staff_reviews_overflow_actions">작업</string>
     <string name="staff_reviews_remove_confirm">제거</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s (%3$s). 이 리뷰를 영구 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">역할 업데이트에 실패했습니다</string>
     <string name="staff_team_toast_role_updated">역할이 업데이트되었습니다</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook 서명 시크릿</string>
+    <string name="staff_disputes_meta_already_refunded">이미 환불됨</string>
+    <string name="staff_disputes_refund_exceeds_remaining">환불 금액이 남은 환불 가능 금액을 초과합니다</string>
 </resources>

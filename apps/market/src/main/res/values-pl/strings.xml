@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d sprzedaży</string>
     <string name="market_profile_sales_count">%1$d sprzedaży</string>
     <string name="market_purchase_dispute_response">Odpowiedź sprzedawcy</string>
-    <string name="market_purchases_order_label">Zamówienie #%1$d</string>
+    <string name="market_purchases_order_label">Zamówienie #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Opowiedz kupującym o sobie…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">O użytkowniku</string>
     <string name="market_profile_load_failed">Nie udało się wczytać profilu</string>
     <string name="market_profile_member_since">Członek od %1$s</string>
+    <string name="market_profile_joined">Dołączył(a) %1$s</string>
     <string name="market_profile_no_reviews">Brak recenzji.</string>
     <string name="market_profile_rating_breakdown">Rozkład ocen</string>
     <string name="market_profile_stars_value">%1$d gwiazdek</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Pobierz swoje %1$d plików poniżej.</string>
     <string name="market_purchase_download_one">Pobierz swój plik poniżej.</string>
     <string name="market_purchase_review_from">Recenzja od %1$s</string>
-    <string name="market_purchases_auction_label">Aukcja #%1$d</string>
+    <string name="market_purchases_auction_label">Aukcja #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s zwrócone</string>
     <string name="market_purchases_won_for">Wygrana za %1$s</string>
     <string name="market_rating_reviews">(%1$d recenzji)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Odpowiedź sprzedającego</string>
     <string name="market_listing_detail_seller_reviews_heading">Opinie o sprzedawcy</string>
     <string name="market_account_stripe_open_failed">Nie udało się otworzyć Stripe</string>
+    <string name="market_editor_stock">Stan magazynowy</string>
+    <string name="market_editor_stock_units">Liczba jednostek</string>
+    <string name="market_editor_stock_unlimited">Bez limitu</string>
+    <string name="market_editor_start_time">Czas rozpoczęcia</string>
+    <string name="market_editor_start_time_help">Pozostaw puste, aby rozpocząć przy publikacji.</string>
+    <string name="market_editor_start_time_next">Dalej</string>
+    <string name="market_editor_start_time_clear">Wyczyść</string>
+    <string name="market_listing_detail_buy_now_label">Kup teraz</string>
+    <string name="market_section_recently_viewed">Ostatnio oglądane</string>
+    <string name="market_recently_viewed_clear">Wyczyść wszystko</string>
 </resources>

@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Paketni kuzatish</string>
     <string name="market_purchases_complete_purchase">Xaridni yakunlash</string>
     <string name="market_purchases_empty">Xaridlar yoʻq</string>
-    <string name="market_purchases_order_label">Buyurtma #%1$d</string>
+    <string name="market_purchases_order_label">Buyurtma #%1$s</string>
     <string name="market_purchases_title">Xaridlar</string>
     <string name="market_rating_label">Baholash</string>
     <string name="market_rating_no_reviews">Hozircha sharhlar yoʻq</string>
@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Boshlang\'ich taklif: %1$s</string>
     <string name="market_profile_load_failed">Profilni yuklab bo\'lmadi</string>
     <string name="market_profile_member_since">A\'zo bo\'lgan sana: %1$s</string>
+    <string name="market_profile_joined">%1$s da qoʻshildi</string>
     <string name="market_profile_rating_breakdown">Reyting taqsimoti</string>
     <string name="market_profile_stars_value">%1$d yulduz</string>
     <string name="market_purchase_dispute_chargeback">To\'lov qaytarish %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Quyida %1$d ta faylingizni yuklab oling.</string>
     <string name="market_purchase_download_one">Quyida faylingizni yuklab oling.</string>
     <string name="market_purchase_review_from">%1$s sharhi</string>
-    <string name="market_purchases_auction_label">Auksion #%1$d</string>
+    <string name="market_purchases_auction_label">Auksion #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s qaytarildi</string>
     <string name="market_purchases_won_for">%1$s ga yutib olindi</string>
     <string name="market_refund_dialog_amount_help">To\'liq buyurtmani qaytarish uchun bo\'sh qoldiring.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Sotuvchi javobi</string>
     <string name="market_listing_detail_seller_reviews_heading">Sotuvchi haqida sharhlar</string>
     <string name="market_account_stripe_open_failed">Stripe ochilmadi</string>
+    <string name="market_editor_stock">Mavjud</string>
+    <string name="market_editor_stock_units">Birliklar soni</string>
+    <string name="market_editor_stock_unlimited">Cheksiz</string>
+    <string name="market_editor_start_time">Boshlanish vaqti</string>
+    <string name="market_editor_start_time_help">Eʼlon qilishda boshlash uchun boʻsh qoldiring.</string>
+    <string name="market_editor_start_time_next">Keyingi</string>
+    <string name="market_editor_start_time_clear">Tozalash</string>
+    <string name="market_listing_detail_buy_now_label">Hozir sotib olish</string>
+    <string name="market_section_recently_viewed">Yaqinda koʻrilgan</string>
+    <string name="market_recently_viewed_clear">Hammasini tozalash</string>
 </resources>

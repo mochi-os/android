@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Ջնջել տեղականորեն</string>
     <string name="chat_settings_delete_message">Սա հեռացնում է զրույցը և դրա հաղորդագրությունները միայն այս սարքից:</string>
 
+    <string name="chat_message_deleted">Այս հաղորդագրությունը ջնջվել է</string>
+    <string name="chat_search_hint">Որոնել զրույցում...</string>
+    <string name="chat_search_no_results">Արդյունքներ չկան</string>
+    <string name="chat_message_forward">Փոխանցել</string>
+    <string name="chat_forward_title">Փոխանցել…</string>
+    <string name="chat_forward_search">Որոնել զրույցներ…</string>
+    <string name="chat_forward_empty">Փոխանցելու զրույցներ չկան</string>
+    <string name="chat_forward_success">Փոխանցվեց</string>
+    <string name="chat_forward_failed">Չհաջողվեց փոխանցել</string>
 </resources>

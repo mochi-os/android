@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Kdokoli</string>
     <string name="wikis_access_subject_authenticated">Ověření uživatelé</string>
 
+    <string name="wikis_revision_compare">Porovnat změny</string>
+    <string name="wikis_revision_show_page">Zobrazit stránku</string>
+    <string name="wikis_revision_compare_failed">Nepodařilo se načíst předchozí verzi pro porovnání.</string>
+    <string name="wikis_revision_changes_from">Změny z verze %1$d → %2$d</string>
 </resources>

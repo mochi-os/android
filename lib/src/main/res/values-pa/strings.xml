@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">ਮਲਟੀ-ਫੈਕਟਰ ਪ੍ਰਮਾਣੀਕਰਨ</string>
     <string name="auth_mfa_subtitle">ਬਾਕੀ ਤਸਦੀਕੀ ਪੜਾਅ ਪੂਰੇ ਕਰੋ</string>
     <string name="auth_recover_account">ਖਾਤਾ ਮੁੜ-ਪ੍ਰਾਪਤ ਕਰੋ</string>
+    <string name="auth_login_title">Mochi ਵਿੱਚ ਲੌਗ ਇਨ ਕਰੋ</string>
+    <string name="auth_next">ਅੱਗੇ</string>
+    <string name="auth_or_log_in_with">ਜਾਂ ਇਸ ਨਾਲ ਲੌਗ ਇਨ ਕਰੋ</string>
+    <string name="auth_passkey">ਪਾਸਕੀ</string>
+    <string name="auth_use_passkey">ਪਾਸਕੀ ਵਰਤੋ</string>
+    <string name="auth_email_me_a_code">ਮੈਨੂੰ ਕੋਡ ਈਮੇਲ ਕਰੋ</string>
+    <string name="auth_or_enter_authenticator_code">ਜਾਂ ਪ੍ਰਮਾਣੀਕਰਤਾ ਕੋਡ ਦਾਖਲ ਕਰੋ</string>
+    <string name="auth_log_in">ਲੌਗ ਇਨ ਕਰੋ</string>
+    <string name="auth_back">ਵਾਪਸ</string>
+    <string name="auth_lost_access_recovery">ਪਹੁੰਚ ਗੁਆਚ ਗਈ? ਰਿਕਵਰੀ ਕੋਡ ਵਰਤੋ</string>
     <string name="auth_create_identity_title">ਆਪਣੀ ਪਛਾਣ ਬਣਾਓ</string>
     <string name="auth_create_identity_subtitle">ਇਸ ਸਰਵਰ ਉੱਤੇ ਆਪਣੀ ਪਛਾਣ ਲਈ ਇੱਕ ਨਾਮ ਚੁਣੋ</string>
     <string name="auth_privacy_public_description">ਉਪਭੋਗਤਾ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਸੂਚੀਬੱਧ ਤਾਂ ਜੋ ਹੋਰ ਤੁਹਾਨੂੰ ਲੱਭ ਸਕਣ।</string>

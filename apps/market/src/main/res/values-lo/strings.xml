@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ຕິດຕາມພັດສະດຸ</string>
     <string name="market_purchases_complete_purchase">ສຳເລັດການຊື້</string>
     <string name="market_purchases_empty">ບໍ່ມີການຊື້</string>
-    <string name="market_purchases_order_label">ສັ່ງຊື້ #%1$d</string>
+    <string name="market_purchases_order_label">ສັ່ງຊື້ #%1$s</string>
     <string name="market_purchases_title">ການຊື້</string>
     <string name="market_rating_label">ການໃຫ້ຄະແນນ</string>
     <string name="market_rating_no_reviews">ຍັງບໍ່ມີຄຳວິຈານ</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ການປະມູນເລີ່ມຕົ້ນ: %1$s</string>
     <string name="market_profile_load_failed">ບໍ່ສາມາດໂຫຼດໂປຣໄຟລ໌ໄດ້</string>
     <string name="market_profile_member_since">ສະມາຊິກຕັ້ງແຕ່ %1$s</string>
+    <string name="market_profile_joined">ເຂົ້າຮ່ວມ %1$s</string>
     <string name="market_profile_rating_breakdown">ລາຍລະອຽດການຈັດອັນດັບ</string>
     <string name="market_profile_sales_count">%1$d ການຂາຍ</string>
     <string name="market_profile_stars_value">%1$d ດາວ</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">ດາວໂຫຼດໄຟລ໌ %1$d ໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
     <string name="market_purchase_download_one">ດາວໂຫຼດໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
     <string name="market_purchase_review_from">ການວິຈານຈາກ %1$s</string>
-    <string name="market_purchases_auction_label">ການປະມູນ #%1$d</string>
+    <string name="market_purchases_auction_label">ການປະມູນ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ຄືນເງິນແລ້ວ</string>
     <string name="market_purchases_won_for">ຊະນະທີ່ %1$s</string>
     <string name="market_refund_dialog_amount_help">ປະປ່ອຍຫວ່າງເພື່ອຄືນເງິນເຕັມຈຳນວນ.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">ການຕອບກັບຂອງຜູ້ຂາຍ</string>
     <string name="market_listing_detail_seller_reviews_heading">ການທົບທວນຜູ້ຂາຍ</string>
     <string name="market_account_stripe_open_failed">ບໍ່ສາມາດເປີດ Stripe ໄດ້</string>
+    <string name="market_editor_stock">ສິນຄ້າຄົງເຫຼືອ</string>
+    <string name="market_editor_stock_units">ຈຳນວນຫົວໜ່ວຍ</string>
+    <string name="market_editor_stock_unlimited">ບໍ່ຈຳກັດ</string>
+    <string name="market_editor_start_time">ເວລາເລີ່ມ</string>
+    <string name="market_editor_start_time_help">ປະໄວ້ຫວ່າງເພື່ອເລີ່ມເມື່ອເຜີຍແຜ່.</string>
+    <string name="market_editor_start_time_next">ຕໍ່ໄປ</string>
+    <string name="market_editor_start_time_clear">ລ້າງ</string>
+    <string name="market_listing_detail_buy_now_label">ຊື້ດຽວນີ້</string>
+    <string name="market_section_recently_viewed">ເບິ່ງລ່າສຸດ</string>
+    <string name="market_recently_viewed_clear">ລ້າງທັງໝົດ</string>
 </resources>

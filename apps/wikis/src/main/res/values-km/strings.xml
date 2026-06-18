@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">អ្នកណាក៏បាន</string>
     <string name="wikis_access_subject_authenticated">អ្នកប្រើដែលបានផ្ទៀងផ្ទាត់</string>
 
+    <string name="wikis_revision_compare">ប្រៀបធៀបការផ្លាស់ប្ដូរ</string>
+    <string name="wikis_revision_show_page">បង្ហាញទំព័រ</string>
+    <string name="wikis_revision_compare_failed">មិនអាចផ្ទុកកំណែមុនសម្រាប់ការប្រៀបធៀបបានទេ។</string>
+    <string name="wikis_revision_changes_from">ការផ្លាស់ប្ដូរពីកំណែ %1$d → %2$d</string>
 </resources>

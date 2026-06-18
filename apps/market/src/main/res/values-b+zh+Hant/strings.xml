@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d 筆銷售</string>
     <string name="market_profile_sales_count">%1$d 筆銷售</string>
     <string name="market_purchase_dispute_response">賣家回應</string>
-    <string name="market_purchases_order_label">訂單 #%1$d</string>
+    <string name="market_purchases_order_label">訂單 #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">向買家介紹一下你自己…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">關於</string>
     <string name="market_profile_load_failed">無法載入個人檔案</string>
     <string name="market_profile_member_since">加入時間：%1$s</string>
+    <string name="market_profile_joined">加入於 %1$s</string>
     <string name="market_profile_no_reviews">尚無評論。</string>
     <string name="market_profile_rating_breakdown">評分明細</string>
     <string name="market_profile_stars_value">%1$d 星</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">請於下方下載您的 %1$d 個檔案。</string>
     <string name="market_purchase_download_one">請於下方下載您的檔案。</string>
     <string name="market_purchase_review_from">來自 %1$s 的評論</string>
-    <string name="market_purchases_auction_label">拍賣 #%1$d</string>
+    <string name="market_purchases_auction_label">拍賣 #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 已退款</string>
     <string name="market_purchases_won_for">以 %1$s 得標</string>
     <string name="market_rating_reviews">(%1$d 則評價)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">賣家回覆</string>
     <string name="market_listing_detail_seller_reviews_heading">賣家評價</string>
     <string name="market_account_stripe_open_failed">無法開啟 Stripe</string>
+    <string name="market_editor_stock">庫存</string>
+    <string name="market_editor_stock_units">單位數量</string>
+    <string name="market_editor_stock_unlimited">無限制</string>
+    <string name="market_editor_start_time">開始時間</string>
+    <string name="market_editor_start_time_help">留空表示在發佈時開始。</string>
+    <string name="market_editor_start_time_next">下一步</string>
+    <string name="market_editor_start_time_clear">清除</string>
+    <string name="market_listing_detail_buy_now_label">立即購買</string>
+    <string name="market_section_recently_viewed">最近瀏覽</string>
+    <string name="market_recently_viewed_clear">全部清除</string>
 </resources>

@@ -326,4 +326,15 @@
     <string name="crm_design_preview_empty">Nada para mostrar</string>
     <string name="crm_not_found">CRM no encontrado</string>
 
+    <string name="crm_access_search_users">Buscá usuarios</string>
+    <string name="crm_access_tab_users">Usuarios</string>
+    <string name="crm_access_tab_groups">Grupos</string>
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_no_groups">No groups available</string>
+    <string name="crm_access_target">Destino</string>
+    <string name="crm_access_target_hint">ID de entidad, @grupo, * (todos) o + (miembros)</string>
+    <string name="crm_attachment_remove">Quitar adjunto</string>
+    <string name="crm_board_add_column">Agregá una columna</string>
+    <string name="crm_settings_entity_id">Entity ID</string>
+    <string name="crm_settings_fingerprint">Huella digital</string>
 </resources>

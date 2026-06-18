@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Oricine</string>
     <string name="wikis_access_subject_authenticated">Utilizatori autentificați</string>
 
+    <string name="wikis_revision_compare">Compară modificările</string>
+    <string name="wikis_revision_show_page">Afișează pagina</string>
+    <string name="wikis_revision_compare_failed">Versiunea anterioară nu a putut fi încărcată pentru comparație.</string>
+    <string name="wikis_revision_changes_from">Modificări de la versiunea %1$d → %2$d</string>
 </resources>

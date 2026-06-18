@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Bet kas</string>
     <string name="wikis_access_subject_authenticated">Autentifikuoti naudotojai</string>
 
+    <string name="wikis_revision_compare">Palyginti pakeitimus</string>
+    <string name="wikis_revision_show_page">Rodyti puslapį</string>
+    <string name="wikis_revision_compare_failed">Nepavyko įkelti ankstesnės versijos palyginimui.</string>
+    <string name="wikis_revision_changes_from">Pakeitimai nuo versijos %1$d → %2$d</string>
 </resources>

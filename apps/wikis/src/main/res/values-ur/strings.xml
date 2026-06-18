@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">رسائی کی سطح</string>
     <string name="wikis_access_subject_anyone">کوئی بھی</string>
     <string name="wikis_access_subject_authenticated">تصدیق شدہ صارفین</string>
+    <string name="wikis_revision_compare">تبدیلیوں کا موازنہ کریں</string>
+    <string name="wikis_revision_show_page">صفحہ دکھائیں</string>
+    <string name="wikis_revision_compare_failed">موازنے کے لیے پچھلا ورژن لوڈ نہیں ہو سکا۔</string>
+    <string name="wikis_revision_changes_from">ورژن %1$d → %2$d سے تبدیلیاں</string>
 </resources>

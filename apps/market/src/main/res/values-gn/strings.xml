@@ -343,7 +343,7 @@
     <string name="market_purchase_track">Track paquete</string>
     <string name="market_purchases_complete_purchase">Eipysyrõ jogua</string>
     <string name="market_purchases_empty">Ndaipóri jejogua</string>
-    <string name="market_purchases_order_label">Pedido #%1$d</string>
+    <string name="market_purchases_order_label">Pedido #%1$s</string>
     <string name="market_purchases_title">Jejoguakuéra</string>
     <string name="market_rating_label">Ñembyeko\'ói</string>
     <string name="market_rating_no_reviews">Ndaipóri reseñas gueteri</string>
@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Pepy ñepyrũ: %1$s</string>
     <string name="market_profile_load_failed">Ndaikatúi oñembohyru rechaukaha</string>
     <string name="market_profile_member_since">Vusapy %1$s guive</string>
+    <string name="market_profile_joined">Oike %1$s</string>
     <string name="market_profile_rating_breakdown">Mba\'e\'epyme\'ẽ jeporavokuaa</string>
     <string name="market_profile_stars_value">%1$d mbyja</string>
     <string name="market_purchase_dispute_chargeback">Pirepoty ñembojevy %1$s</string>
@@ -617,7 +618,7 @@
     <string name="market_purchase_download_many">Emboguejy ne %1$d marandurenda yvýpe.</string>
     <string name="market_purchase_download_one">Emboguejy ne marandurenda yvýpe.</string>
     <string name="market_purchase_review_from">Jechakuaa %1$s rehegua</string>
-    <string name="market_purchases_auction_label">Ñemuha hepyme\'ẽ #%1$d</string>
+    <string name="market_purchases_auction_label">Ñemuha hepyme\'ẽ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ojejevyjey</string>
     <string name="market_purchases_won_for">Ojepyhy %1$s rehe</string>
     <string name="market_refund_dialog_amount_help">Eheja nandi rejevy haguã opa ñemuha.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Hepyme\'ẽha ñembohovái</string>
     <string name="market_listing_detail_seller_reviews_heading">Jehechakuaa vendedor rehegua</string>
     <string name="market_account_stripe_open_failed">Ndaikatúi oñembojuruja Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Mba\'e papapy</string>
+    <string name="market_editor_stock_unlimited">Ipa\'ũ\'ỹva</string>
+    <string name="market_editor_start_time">Ñepyrũ aravo</string>
+    <string name="market_editor_start_time_help">Eheja vacío oñepyrũ haguã publicación-pe.</string>
+    <string name="market_editor_start_time_next">Tenonde</string>
+    <string name="market_editor_start_time_clear">Embopotĩ</string>
+    <string name="market_listing_detail_buy_now_label">Ejogua ko\'ã ko\'ãngaite</string>
+    <string name="market_section_recently_viewed">Ehecha va\'ekue ramoguáve</string>
+    <string name="market_recently_viewed_clear">Embopotĩ opaite</string>
 </resources>

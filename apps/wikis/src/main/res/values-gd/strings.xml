@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Duine sam bith</string>
     <string name="wikis_access_subject_authenticated">Cleachdaichean dearbhte</string>
 
+    <string name="wikis_revision_compare">Dèan coimeas eadar atharraichidhean</string>
+    <string name="wikis_revision_show_page">Seall an duilleag</string>
+    <string name="wikis_revision_compare_failed">Cha b\' urrainn an tionndadh roimhe a luchdadh airson coimeas.</string>
+    <string name="wikis_revision_changes_from">Atharraichidhean bho thionndadh %1$d → %2$d</string>
 </resources>

@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Columnanak campon janiw chhijllañanakax utjkiti</string>
     <string name="crm_design_preview_empty">Janiw kuns uñacht\'ayañax utjkiti</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Usuarionak thaqhama</string>
+    <string name="crm_access_no_groups">Jan tamanak utjki</string>
+    <string name="crm_access_tab_users">Aka tamar mantapki uka apnaqirinakampi tamanakampi</string>
+    <string name="crm_access_tab_groups">Gruponaka</string>
+    <string name="crm_access_target">Apayaña</string>
+    <string name="crm_access_target_hint">Uñt\'awi ID, @tama, * (taqi), jan ukax + (uskutanaka)</string>
+    <string name="crm_attachment_remove">Yapxatata apsuña</string>
+    <string name="crm_board_add_column">Columna yapxataña</string>
+    <string name="crm_settings_entity_id">Entidad ID</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">Servidor</string>
 </resources>

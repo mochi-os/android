@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Chan eil roghainnean air raon nan colbhan</string>
     <string name="crm_design_preview_empty">Chan eil dad ri shealltainn</string>
 
+    <string name="crm_access_tab_manual">Le làimh</string>
+    <string name="crm_access_search_users">Lorg cleachdaichean</string>
+    <string name="crm_access_no_groups">Chan eil buidhnean rim faotainn</string>
+    <string name="crm_access_tab_users">Cleachdaichean</string>
+    <string name="crm_access_tab_groups">Buidhnean</string>
+    <string name="crm_access_target">Targaid</string>
+    <string name="crm_access_target_hint">ID neach-dèilig, @buidheann, * (a h-uile duine), no + (buill)</string>
+    <string name="crm_attachment_remove">Thoir air falbh an ceanglachan</string>
+    <string name="crm_board_add_column">Cuir colbh ris</string>
+    <string name="crm_settings_entity_id">ID an aonaid</string>
+    <string name="crm_settings_fingerprint">Meur-lorg</string>
+    <string name="crm_settings_server">Frithealaiche</string>
 </resources>

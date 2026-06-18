@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Cinn ar an achomharc</string>
     <string name="staff_appeals_empty">Níl aon achomharc ar feitheamh</string>
     <string name="staff_appeals_history">Stair an liostaithe</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Nótaí</string>
     <string name="staff_appeals_open_sidebar">Oscail barra taoibh</string>
     <string name="staff_appeals_reason_label">Cúis achomhairc an díoltóra</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Díoltóirí</string>
     <string name="staff_dashboard_kpi_total_orders">Orduithe iomlán</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Níl</string>
     <string name="staff_dashboard_open_sidebar">Oscail barra taoibh</string>
-    <string name="staff_dashboard_order_fallback">Ordú #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Ordú #%1$s</string>
     <string name="staff_dashboard_system">Córas</string>
     <string name="staff_dashboard_tab_audit">Iniúchadh</string>
     <string name="staff_dashboard_tab_listings">Liostuithe</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Níl aon díospóid</string>
     <string name="staff_disputes_filter_status_label">Stádas</string>
     <string name="staff_disputes_history">Stair an aighnis</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Sonraí an cheannaitheora</string>
     <string name="staff_disputes_meta_chargeback_fee">Táille cúl-mhuirir</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">coinnithe ag Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Eile</string>
     <string name="staff_disputes_reason_unauthorised">Gan údarú</string>
     <string name="staff_disputes_refund_amount_label">Méid aisíocaíochta (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Sáraíonn méid na haisíocaíochta iomlán an ordaithe</string>
     <string name="staff_disputes_refund_help">Fág folamh le haghaidh aisíocaíocht iomlán de %1$s. Cuir isteach méid níos lú le haghaidh aisíocaíocht pháirteach.</string>
     <string name="staff_disputes_refund_must_be_positive">Caithfidh méid na haisíocaíochta a bheith níos mó ná nialas</string>
     <string name="staff_disputes_resolution_buyer">Réitigh ar son an cheannaitheora</string>
@@ -346,7 +345,7 @@
     <string name="staff_moderation_open_sidebar">Oscail barra taoibh</string>
     <string name="staff_moderation_system">Córas</string>
     <string name="staff_moderation_title">Loga modhnóireachta</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Gníomh</string>
     <string name="staff_reports_action_ban">Coisc úsáideoir</string>
     <string name="staff_reports_action_dismiss">Dífhostaigh</string>
@@ -367,7 +366,7 @@
     <string name="staff_reports_filter_status_label">Stádas</string>
     <string name="staff_reports_filter_type_label">Cineál</string>
     <string name="staff_reports_history">Stair tuairisce</string>
-    <string name="staff_reports_listing_label">Liosta #%1$d</string>
+    <string name="staff_reports_listing_label">Liosta #%1$s</string>
     <string name="staff_reports_meta_details">Sonraí an tuairisceora</string>
     <string name="staff_reports_meta_price">Praghas</string>
     <string name="staff_reports_meta_reason">Cúis</string>
@@ -410,7 +409,7 @@
     <string name="staff_reviews_filter_removed">Bainte</string>
     <string name="staff_reviews_filter_status">Stádas</string>
     <string name="staff_reviews_open_sidebar">Oscail barra taoibh</string>
-    <string name="staff_reviews_order_label">ordú #%1$d</string>
+    <string name="staff_reviews_order_label">ordú #%1$s</string>
     <string name="staff_reviews_overflow_actions">Gníomhartha</string>
     <string name="staff_reviews_remove_confirm">Bain</string>
     <string name="staff_reviews_remove_title">Bain athbhreithniú?</string>
@@ -516,4 +515,7 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ar %3$s. An léirmheas seo a scriosadh go buan? Ní féidir é seo a chur ar ais.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. An léirmheas seo a scriosadh go buan? Ní féidir é seo a chur ar ais.</string>
 
+    <string name="staff_config_field_stripe_webhook">Rún sínithe webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Aisíoctha cheana féin</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Sáraíonn méid an aisíoca an méid in-aisíoctha atá fágtha</string>
 </resources>

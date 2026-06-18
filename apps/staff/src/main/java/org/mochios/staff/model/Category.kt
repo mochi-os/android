@@ -10,15 +10,15 @@ import com.google.gson.annotations.SerializedName
  * staff types file types them as booleans, which Gson tolerates either way;
  * here they are booleans to match the TS source of truth.
  *
- * `parent` is the integer id of the parent category. It is nullable so a
- * root-level category (web omits the field or sends `0`) can be modelled
- * cleanly without conflating "explicitly under category 0" with "no parent".
+ * `parent` is the comptroller uid of the parent category. It is nullable so a
+ * root-level category (web omits the field or sends `""`) can be modelled
+ * cleanly without conflating "explicitly under a parent" with "no parent".
  * `children` is the count of direct sub-categories, populated server-side
  * for the staff tree view.
  */
 data class Category(
-    val id: Long = 0,
-    val parent: Long? = null,
+    val id: String = "",
+    val parent: String? = null,
     val name: String = "",
     val slug: String = "",
     val icon: String = "",

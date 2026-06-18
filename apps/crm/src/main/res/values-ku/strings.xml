@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Li qada stûnan ti vebijêrk tune</string>
     <string name="crm_design_preview_empty">Tiştek ji bo nîşandanê tune</string>
 
+    <string name="crm_access_tab_manual">Destî</string>
+    <string name="crm_access_search_users">Li bikarhêneran bigere</string>
+    <string name="crm_access_no_groups">Tu kom berdest nîn in</string>
+    <string name="crm_access_tab_users">Bikarhêner</string>
+    <string name="crm_access_tab_groups">Kom</string>
+    <string name="crm_access_target">Armanc</string>
+    <string name="crm_access_target_hint">Nasnameya saziyê, @kom, * (her kes), an + (endam)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">Stûn zêde bike</string>
+    <string name="crm_settings_entity_id">Nasnameya mîhengehê</string>
+    <string name="crm_settings_fingerprint">Tilîya destan</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

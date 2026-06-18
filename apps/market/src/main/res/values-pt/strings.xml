@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d vendas</string>
     <string name="market_profile_sales_count">%1$d vendas</string>
     <string name="market_purchase_dispute_response">Resposta do vendedor</string>
-    <string name="market_purchases_order_label">Encomenda n.º %1$d</string>
+    <string name="market_purchases_order_label">Encomenda n.º %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Fale sobre si aos compradores…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Sobre</string>
     <string name="market_profile_load_failed">Não foi possível carregar o perfil</string>
     <string name="market_profile_member_since">Membro desde %1$s</string>
+    <string name="market_profile_joined">Entrou em %1$s</string>
     <string name="market_profile_no_reviews">Ainda não há avaliações.</string>
     <string name="market_profile_rating_breakdown">Detalhe das avaliações</string>
     <string name="market_profile_stars_value">%1$d estrelas</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Transfira os seus %1$d ficheiros abaixo.</string>
     <string name="market_purchase_download_one">Transfira o seu ficheiro abaixo.</string>
     <string name="market_purchase_review_from">Avaliação de %1$s</string>
-    <string name="market_purchases_auction_label">Leilão #%1$d</string>
+    <string name="market_purchases_auction_label">Leilão #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsado</string>
     <string name="market_purchases_won_for">Arrematado por %1$s</string>
     <string name="market_rating_reviews">(%1$d avaliações)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Resposta do vendedor</string>
     <string name="market_listing_detail_seller_reviews_heading">Avaliações do vendedor</string>
     <string name="market_account_stripe_open_failed">Não foi possível abrir a Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Número de unidades</string>
+    <string name="market_editor_stock_unlimited">Ilimitado</string>
+    <string name="market_editor_start_time">Hora de início</string>
+    <string name="market_editor_start_time_help">Deixe em branco para começar ao publicar.</string>
+    <string name="market_editor_start_time_next">Seguinte</string>
+    <string name="market_editor_start_time_clear">Limpar</string>
+    <string name="market_listing_detail_buy_now_label">Comprar já</string>
+    <string name="market_section_recently_viewed">Vistos recentemente</string>
+    <string name="market_recently_viewed_clear">Limpar tudo</string>
 </resources>

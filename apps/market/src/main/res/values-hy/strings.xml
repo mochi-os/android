@@ -352,7 +352,7 @@
     <string name="market_purchase_track">Հետևել փաթեթին</string>
     <string name="market_purchases_complete_purchase">Ավարտեք հաստատումը՝ շարունակելու համար</string>
     <string name="market_purchases_empty">Գնումներ չկան</string>
-    <string name="market_purchases_order_label">Պատվեր #%1$d</string>
+    <string name="market_purchases_order_label">Պատվեր #%1$s</string>
     <string name="market_purchases_title">Գնումներ</string>
     <string name="market_rating_label">Գնահատական</string>
     <string name="market_rating_no_reviews">Դեռ կարծիքներ չկան</string>
@@ -611,6 +611,7 @@
     <string name="market_price_starting_bid">Մեկնարկային հայտ՝ %1$s</string>
     <string name="market_profile_load_failed">Չհաջողվեց բեռնել պրոֆիլը</string>
     <string name="market_profile_member_since">Անդամ է %1$s-ից</string>
+    <string name="market_profile_joined">Միացել է %1$s</string>
     <string name="market_profile_rating_breakdown">Վարկանիշի մանրամասներ</string>
     <string name="market_profile_stars_value">%1$d աստղ</string>
     <string name="market_purchase_dispute_chargeback">Հետգանձում %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Ներբեռնեք ձեր %1$d ֆայլերը ստորև։</string>
     <string name="market_purchase_download_one">Ներբեռնեք ձեր ֆայլը ստորև։</string>
     <string name="market_purchase_review_from">Կարծիք %1$s-ից</string>
-    <string name="market_purchases_auction_label">Աճուրդ #%1$d</string>
+    <string name="market_purchases_auction_label">Աճուրդ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s վերադարձված է</string>
     <string name="market_purchases_won_for">Շահվել է %1$s-ով</string>
     <string name="market_refund_dialog_amount_help">Թողեք դատարկ՝ ամբողջ պատվերը վերադարձնելու համար։</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Վաճառողի պատասխան</string>
     <string name="market_listing_detail_seller_reviews_heading">Վաճառողի կարծիքները</string>
     <string name="market_account_stripe_open_failed">Չհաջողվեց բացել Stripe-ը</string>
+    <string name="market_editor_stock">Պաշար</string>
+    <string name="market_editor_stock_units">Միավորների քանակ</string>
+    <string name="market_editor_stock_unlimited">Անսահմանափակ</string>
+    <string name="market_editor_start_time">Սկսելու ժամանակ</string>
+    <string name="market_editor_start_time_help">Թողնել դատարկ</string>
+    <string name="market_editor_start_time_next">Հաջորդ</string>
+    <string name="market_editor_start_time_clear">Մաքրել ամենը</string>
+    <string name="market_listing_detail_buy_now_label">Հենց հիմա գնելու գին</string>
+    <string name="market_section_recently_viewed">Վերջերս դիտված</string>
+    <string name="market_recently_viewed_clear">Մաքրել զտիչները</string>
 </resources>

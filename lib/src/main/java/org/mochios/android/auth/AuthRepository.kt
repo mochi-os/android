@@ -14,9 +14,9 @@ sealed class AuthResult {
 }
 
 data class BeginResult(
-    val methods: List<String>,
+    val allowed: List<String>,
     val hasPasskey: Boolean,
-    val isNew: Boolean
+    val oauth: Boolean
 )
 
 data class PasskeyChallenge(
@@ -55,9 +55,9 @@ class AuthRepository @Inject constructor(
     suspend fun beginLogin(email: String): BeginResult {
         val response = authApi.begin(EmailRequest(email)).unwrapRaw()
         return BeginResult(
-            methods = response.methods,
+            allowed = response.allowed,
             hasPasskey = response.hasPasskey,
-            isNew = response.new
+            oauth = response.oauth
         )
     }
 
@@ -121,8 +121,8 @@ class AuthRepository @Inject constructor(
         return mapVerifyResponse(data)
     }
 
-    suspend fun verifyRecoveryCode(email: String, code: String): AuthResult {
-        val response = authApi.verifyRecoveryCode(RecoveryRequest(email, code))
+    suspend fun verifyRecoveryCode(username: String, code: String): AuthResult {
+        val response = authApi.verifyRecoveryCode(RecoveryRequest(username, code))
         extractSessionCookie(response)
         val data = response.unwrapRaw()
         return mapVerifyResponse(data)

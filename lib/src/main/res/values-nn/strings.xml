@@ -160,6 +160,16 @@
     <string name="auth_mfa_title">Fleirfaktor-autentisering</string>
     <string name="auth_mfa_subtitle">Fullfør dei resterande stadfestingsstega</string>
     <string name="auth_recover_account">Gjenopprett konto</string>
+    <string name="auth_login_title">Logg inn på Mochi</string>
+    <string name="auth_next">Neste</string>
+    <string name="auth_or_log_in_with">Eller logg inn med</string>
+    <string name="auth_passkey">Passnøkkel</string>
+    <string name="auth_use_passkey">Bruk ein passnøkkel</string>
+    <string name="auth_email_me_a_code">Send meg ein kode på e-post</string>
+    <string name="auth_or_enter_authenticator_code">Eller skriv inn autentiseringskode</string>
+    <string name="auth_log_in">Logg inn</string>
+    <string name="auth_back">Tilbake</string>
+    <string name="auth_lost_access_recovery">Mista tilgang? Bruk ein gjenopprettingskode</string>
     <string name="auth_create_identity_title">Opprett identiteten din</string>
     <string name="auth_create_identity_subtitle">Vel eit namn for identiteten din på denne tenaren</string>
     <string name="auth_privacy_public_description">Lista i brukarkatalogen så andre kan finna deg.</string>

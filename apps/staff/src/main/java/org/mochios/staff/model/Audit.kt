@@ -23,8 +23,8 @@ import com.google.gson.annotations.SerializedName
  * keep it usable as an identifier.
  */
 data class AuditEntry(
-    val id: Long = 0,
-    val event: Long = 0,
+    val id: String = "",
+    val event: String = "",
     val app: String = "",
     val kind: String = "",
     val `object`: String = "",

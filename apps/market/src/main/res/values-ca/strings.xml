@@ -593,6 +593,7 @@
     <string name="market_profile_biography">Sobre mi</string>
     <string name="market_profile_load_failed">No s\'ha pogut carregar el perfil</string>
     <string name="market_profile_member_since">Membre des de %1$s</string>
+    <string name="market_profile_joined">Es va unir el %1$s</string>
     <string name="market_profile_no_reviews">Encara no hi ha valoracions.</string>
     <string name="market_profile_rating_breakdown">Desglossament de valoracions</string>
     <string name="market_profile_sales_count">%1$d vendes</string>
@@ -603,8 +604,8 @@
     <string name="market_purchase_download_many">Baixeu els vostres %1$d fitxers a continuació.</string>
     <string name="market_purchase_download_one">Baixeu el vostre fitxer a continuació.</string>
     <string name="market_purchase_review_from">Ressenya de %1$s</string>
-    <string name="market_purchases_auction_label">Subhasta núm. %1$d</string>
-    <string name="market_purchases_order_label">Comanda núm. %1$d</string>
+    <string name="market_purchases_auction_label">Subhasta núm. %1$s</string>
+    <string name="market_purchases_order_label">Comanda núm. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reemborsat</string>
     <string name="market_purchases_won_for">Guanyada per %1$s</string>
     <string name="market_rating_reviews">(%1$d ressenyes)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Resposta del venedor</string>
     <string name="market_listing_detail_seller_reviews_heading">Ressenyes del venedor</string>
     <string name="market_account_stripe_open_failed">No s\'ha pogut obrir Stripe</string>
+    <string name="market_editor_stock">Estoc</string>
+    <string name="market_editor_stock_units">Nombre d\'unitats</string>
+    <string name="market_editor_stock_unlimited">Il·limitat</string>
+    <string name="market_editor_start_time">Hora d\'inici</string>
+    <string name="market_editor_start_time_help">Deixa-ho en blanc per començar en publicar.</string>
+    <string name="market_editor_start_time_next">Següent</string>
+    <string name="market_editor_start_time_clear">Esborra</string>
+    <string name="market_listing_detail_buy_now_label">Compra-ho ara</string>
+    <string name="market_section_recently_viewed">Vist recentment</string>
+    <string name="market_recently_viewed_clear">Esborra-ho tot</string>
 </resources>

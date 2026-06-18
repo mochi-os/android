@@ -351,7 +351,7 @@
     <string name="market_purchase_track">Lorg pasgan</string>
     <string name="market_purchases_complete_purchase">Crìochnaich an ceannach</string>
     <string name="market_purchases_empty">Gun cheannach</string>
-    <string name="market_purchases_order_label">Òrdugh #%1$d</string>
+    <string name="market_purchases_order_label">Òrdugh #%1$s</string>
     <string name="market_purchases_title">Ceannachdan</string>
     <string name="market_rating_label">Rangadh</string>
     <string name="market_rating_no_reviews">Chan eil lèirmheasan ann fhathast</string>
@@ -611,6 +611,7 @@
     <string name="market_price_starting_bid">Tairgse tòiseachaidh: %1$s</string>
     <string name="market_profile_load_failed">Cha b\' urrainnear a\' phròifil a luchdadh</string>
     <string name="market_profile_member_since">\'Na bhall bho %1$s</string>
+    <string name="market_profile_joined">Air clàradh %1$s</string>
     <string name="market_profile_rating_breakdown">Briseadh sìos rangachaidh</string>
     <string name="market_profile_stars_value">%1$d rionnagan</string>
     <string name="market_purchase_dispute_chargeback">Cùl-thagradh %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Luchdaich a-nuas na %1$d faidhlichean agad gu h-ìosal.</string>
     <string name="market_purchase_download_one">Luchdaich a-nuas am faidhle agad gu h-ìosal.</string>
     <string name="market_purchase_review_from">Lèirmheas o %1$s</string>
-    <string name="market_purchases_auction_label">Rop #%1$d</string>
+    <string name="market_purchases_auction_label">Rop #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s air ath-dhìoladh</string>
     <string name="market_purchases_won_for">Air a bhuannachadh airson %1$s</string>
     <string name="market_refund_dialog_amount_help">Fàg bàn gus an òrdugh slàn ath-dhìoladh.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Freagairt an reiceadair</string>
     <string name="market_listing_detail_seller_reviews_heading">Beachdan air an reiceadair</string>
     <string name="market_account_stripe_open_failed">Cha b\' urrainnear Stripe fhosgladh</string>
+    <string name="market_editor_stock">Stoc</string>
+    <string name="market_editor_stock_units">Àireamh aonadan</string>
+    <string name="market_editor_stock_unlimited">Gun chrìoch</string>
+    <string name="market_editor_start_time">Àm tòiseachaidh</string>
+    <string name="market_editor_start_time_help">Fàg bàn gus tòiseachadh nuair a thèid fhoillseachadh.</string>
+    <string name="market_editor_start_time_next">Air adhart</string>
+    <string name="market_editor_start_time_clear">Falamhaich</string>
+    <string name="market_listing_detail_buy_now_label">Ceannaich a-nis</string>
+    <string name="market_section_recently_viewed">Air an coimhead o chionn ghoirid</string>
+    <string name="market_recently_viewed_clear">Falamhaich a h-uile</string>
 </resources>

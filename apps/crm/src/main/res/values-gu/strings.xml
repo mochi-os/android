@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">કૉલમ ક્ષેત્ર પર કોઈ વિકલ્પ નથી</string>
     <string name="crm_design_preview_empty">બતાવવા માટે કંઈ નથી</string>
 
+    <string name="crm_access_tab_manual">મેન્યુઅલ</string>
+    <string name="crm_access_search_users">વપરાશકર્તાઓ શોધો</string>
+    <string name="crm_access_no_groups">કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી</string>
+    <string name="crm_access_tab_users">વપરાશકર્તાઓ</string>
+    <string name="crm_access_tab_groups">ગ્રુપ્સ</string>
+    <string name="crm_access_target">લક્ષ્ય</string>
+    <string name="crm_access_target_hint">એન્ટિટી ID, @group, * (દરેક), અથવા + (સભ્યો)</string>
+    <string name="crm_attachment_remove">જોડાણ દૂર કરો</string>
+    <string name="crm_board_add_column">કૉલમ ઉમેરો</string>
+    <string name="crm_settings_entity_id">એન્ટિટી ID</string>
+    <string name="crm_settings_fingerprint">આંગળાની છાપ</string>
+    <string name="crm_settings_server">સર્વર</string>
 </resources>

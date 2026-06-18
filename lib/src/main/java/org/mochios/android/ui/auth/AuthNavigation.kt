@@ -1,5 +1,6 @@
 package org.mochios.android.ui.auth
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -18,6 +19,13 @@ fun AuthNavigation(
     val viewModel: AuthViewModel = hiltViewModel()
     val uiState by viewModel.uiState.collectAsState()
     val context = androidx.compose.ui.platform.LocalContext.current
+
+    // The AuthViewModel is activity-scoped and survives logout, so it still
+    // holds the previous user's email and BeginResult. Wipe that on (re)entry
+    // so the flow always restarts at the email step.
+    LaunchedEffect(Unit) {
+        viewModel.resetForLogin()
+    }
 
     LaunchedEffect(uiState.oauthLaunchUrl) {
         val url = uiState.oauthLaunchUrl ?: return@LaunchedEffect
@@ -41,6 +49,17 @@ fun AuthNavigation(
         }
     }
 
+    // Advance to the per-account methods step once begin returns. The block
+    // reads the *current* state (not the composition snapshot) so the on-entry
+    // resetForLogin — which runs first — has already cleared any stale
+    // beginResult, preventing a spurious double-navigation into "account".
+    LaunchedEffect(uiState.beginResult != null) {
+        if (viewModel.uiState.value.beginResult != null &&
+            navController.currentDestination?.route == "login") {
+            navController.navigate("account")
+        }
+    }
+
     LaunchedEffect(uiState.needsIdentity) {
         if (uiState.needsIdentity) {
             navController.navigate("identity") {
@@ -59,21 +78,60 @@ fun AuthNavigation(
         }
 
         composable("login") {
-            LoginScreen(
+            EmailEntryScreen(
                 uiState = uiState,
                 onUpdateEmail = viewModel::updateEmail,
                 onBeginLogin = viewModel::beginLogin,
+                onBeginPasskey = viewModel::beginPasskeyAuth,
+                oauthScheme = oauthScheme,
+                onStartOAuth = viewModel::startOAuth
+            )
+        }
+
+        composable("account") {
+            // Defend against landing here without a BeginResult — e.g. the saved
+            // nav back stack is restored after process death while the recreated
+            // ViewModel state is empty. There's nothing to render, so drop back
+            // to the email step instead of showing a blank screen.
+            LaunchedEffect(Unit) {
+                if (viewModel.uiState.value.beginResult == null) {
+                    navController.navigate("login") {
+                        popUpTo("account") { inclusive = true }
+                        launchSingleTop = true
+                    }
+                }
+            }
+            // Clear the begin result when leaving so returning to the email step
+            // (via the button or system back) doesn't immediately re-navigate.
+            val leaveAccount = {
+                navController.popBackStack()
+                viewModel.backToEmailEntry()
+            }
+            BackHandler(onBack = leaveAccount)
+            AccountMethodsScreen(
+                uiState = uiState,
                 onRequestCode = viewModel::requestEmailCode,
                 onUpdateCode = viewModel::updateCode,
                 onVerifyCode = viewModel::verifyCode,
                 onUpdateTotpCode = viewModel::updateTotpCode,
                 onVerifyTotp = viewModel::verifyTotp,
                 onBeginPasskey = viewModel::beginPasskeyAuth,
-                onToggleRecovery = viewModel::toggleRecovery,
-                onUpdateRecoveryCode = viewModel::updateRecoveryCode,
-                onVerifyRecovery = viewModel::verifyRecoveryCode,
+                onShowRecovery = { navController.navigate("recovery") },
+                onBack = leaveAccount,
                 oauthScheme = oauthScheme,
                 onStartOAuth = viewModel::startOAuth
+            )
+        }
+
+        composable("recovery") {
+            RecoveryScreen(
+                uiState = uiState,
+                onUpdateCode = viewModel::updateRecoveryCode,
+                onVerify = viewModel::verifyRecoveryCode,
+                onBack = {
+                    navController.popBackStack()
+                    viewModel.clearRecovery()
+                }
             )
         }
 

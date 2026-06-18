@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Nicio opțiune pe câmpul coloanelor</string>
     <string name="crm_design_preview_empty">Nimic de afișat</string>
 
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Caută utilizatori</string>
+    <string name="crm_access_no_groups">Niciun grup disponibil</string>
+    <string name="crm_access_tab_users">Utilizatori</string>
+    <string name="crm_access_tab_groups">Grupuri</string>
+    <string name="crm_access_target">Țintă</string>
+    <string name="crm_access_target_hint">ID entitate, @grup, * (toți) sau + (membri)</string>
+    <string name="crm_attachment_remove">Elimină atașamentul</string>
+    <string name="crm_board_add_column">Adaugă coloană</string>
+    <string name="crm_settings_entity_id">ID entitate</string>
+    <string name="crm_settings_fingerprint">Amprentă</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

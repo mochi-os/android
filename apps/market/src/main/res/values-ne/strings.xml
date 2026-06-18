@@ -350,7 +350,7 @@
     <string name="market_purchase_track">प्याकेज ट्र्याक गर्नुहोस्</string>
     <string name="market_purchases_complete_purchase">खरिद पूरा गर्नुहोस्</string>
     <string name="market_purchases_empty">कुनै किनमेल छैन</string>
-    <string name="market_purchases_order_label">अर्डर #%1$d</string>
+    <string name="market_purchases_order_label">अर्डर #%1$s</string>
     <string name="market_purchases_title">किनमेलहरू</string>
     <string name="market_rating_label">रेटिङ</string>
     <string name="market_rating_no_reviews">अहिलेसम्म कुनै समीक्षा छैन</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">सुरुवाती बोली: %1$s</string>
     <string name="market_profile_load_failed">प्रोफाइल लोड गर्न सकिएन</string>
     <string name="market_profile_member_since">%1$s देखि सदस्य</string>
+    <string name="market_profile_joined">%1$s मा सामेल भयो</string>
     <string name="market_profile_rating_breakdown">मूल्याङ्कन विवरण</string>
     <string name="market_profile_sales_count">%1$d बिक्री</string>
     <string name="market_profile_stars_value">%1$d तारा</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">तल आफ्ना %1$d फाइलहरू डाउनलोड गर्नुहोस्।</string>
     <string name="market_purchase_download_one">तल आफ्नो फाइल डाउनलोड गर्नुहोस्।</string>
     <string name="market_purchase_review_from">%1$s बाट समीक्षा</string>
-    <string name="market_purchases_auction_label">लिलाम #%1$d</string>
+    <string name="market_purchases_auction_label">लिलाम #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s फिर्ता गरियो</string>
     <string name="market_purchases_won_for">%1$s मा जितियो</string>
     <string name="market_refund_dialog_amount_help">पूरै अर्डर फिर्ता गर्न खाली छोड्नुहोस्।</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">बिक्रेताको प्रतिक्रिया</string>
     <string name="market_listing_detail_seller_reviews_heading">विक्रेताको समीक्षाहरू</string>
     <string name="market_account_stripe_open_failed">Stripe खोल्न सकिएन</string>
+    <string name="market_editor_stock">स्टक</string>
+    <string name="market_editor_stock_units">एकाइहरूको संख्या</string>
+    <string name="market_editor_stock_unlimited">असीमित</string>
+    <string name="market_editor_start_time">सुरु समय</string>
+    <string name="market_editor_start_time_help">प्रकाशनमा सुरु गर्न खाली छोड्नुहोस्।</string>
+    <string name="market_editor_start_time_next">अर्को</string>
+    <string name="market_editor_start_time_clear">खाली गर्नुहोस्</string>
+    <string name="market_listing_detail_buy_now_label">अहिले नै किन्नुहोस्</string>
+    <string name="market_section_recently_viewed">हालै हेरिएका</string>
+    <string name="market_recently_viewed_clear">सबै खाली गर्नुहोस्</string>
 </resources>

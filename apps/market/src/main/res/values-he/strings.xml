@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d מכירות</string>
     <string name="market_profile_sales_count">%1$d מכירות</string>
     <string name="market_purchase_dispute_response">תגובת המוכר</string>
-    <string name="market_purchases_order_label">הזמנה #%1$d</string>
+    <string name="market_purchases_order_label">הזמנה #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">ספרו לקונים על עצמכם…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">אודות</string>
     <string name="market_profile_load_failed">לא ניתן היה לטעון את הפרופיל</string>
     <string name="market_profile_member_since">חבר מאז %1$s</string>
+    <string name="market_profile_joined">הצטרף ב-%1$s</string>
     <string name="market_profile_no_reviews">אין ביקורות עדיין.</string>
     <string name="market_profile_rating_breakdown">פירוט דירוג</string>
     <string name="market_profile_stars_value">%1$d כוכבים</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">הורידו את %1$d הקבצים שלכם להלן.</string>
     <string name="market_purchase_download_one">הורידו את הקובץ שלכם להלן.</string>
     <string name="market_purchase_review_from">ביקורת מאת %1$s</string>
-    <string name="market_purchases_auction_label">מכירה פומבית #%1$d</string>
+    <string name="market_purchases_auction_label">מכירה פומבית #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s זוכה</string>
     <string name="market_purchases_won_for">נרכש ב-%1$s</string>
     <string name="market_rating_reviews">(%1$d ביקורות)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">תגובת המוכר</string>
     <string name="market_listing_detail_seller_reviews_heading">ביקורות על המוכר</string>
     <string name="market_account_stripe_open_failed">לא ניתן לפתוח את Stripe</string>
+    <string name="market_editor_stock">מלאי</string>
+    <string name="market_editor_stock_units">מספר יחידות</string>
+    <string name="market_editor_stock_unlimited">ללא הגבלה</string>
+    <string name="market_editor_start_time">שעת התחלה</string>
+    <string name="market_editor_start_time_help">השאר ריק כדי להתחיל בפרסום.</string>
+    <string name="market_editor_start_time_next">הבא</string>
+    <string name="market_editor_start_time_clear">נקה</string>
+    <string name="market_listing_detail_buy_now_label">קנה עכשיו</string>
+    <string name="market_section_recently_viewed">נצפו לאחרונה</string>
+    <string name="market_recently_viewed_clear">נקה הכול</string>
 </resources>

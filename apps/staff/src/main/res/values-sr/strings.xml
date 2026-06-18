@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Одлучи о жалби</string>
     <string name="staff_appeals_empty">Нема жалби на чекању</string>
     <string name="staff_appeals_history">Историја огласа</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Белешке</string>
     <string name="staff_appeals_open_sidebar">Отвори бочну траку</string>
     <string name="staff_appeals_reason_label">Разлог жалбе продавца</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Продавци</string>
     <string name="staff_dashboard_kpi_total_orders">Укупно поруџбина</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Не</string>
     <string name="staff_dashboard_open_sidebar">Отвори бочну траку</string>
-    <string name="staff_dashboard_order_fallback">Поруџбина #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Поруџбина #%1$s</string>
     <string name="staff_dashboard_system">Систем</string>
     <string name="staff_dashboard_tab_audit">Ревизија</string>
     <string name="staff_dashboard_tab_listings">Огласи</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Нема спорова</string>
     <string name="staff_disputes_filter_status_label">Статус</string>
     <string name="staff_disputes_history">Историја спорова</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Подаци купца</string>
     <string name="staff_disputes_meta_chargeback_fee">Накнада за сторнирање</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">задржао Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Друго</string>
     <string name="staff_disputes_reason_unauthorised">Неовлашћено</string>
     <string name="staff_disputes_refund_amount_label">Износ повраћаја (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Износ повраћаја прелази укупно поруџбине</string>
     <string name="staff_disputes_refund_help">Оставите празно за пун повраћај %1$s. Унесите мањи износ за делимични повраћај.</string>
     <string name="staff_disputes_refund_must_be_positive">Износ повраћаја мора бити већи од нуле</string>
     <string name="staff_disputes_resolution_buyer">Реши у корист купца</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Отвори бочну траку</string>
     <string name="staff_moderation_system">Систем</string>
     <string name="staff_moderation_title">Дневник модерације</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Радња</string>
     <string name="staff_reports_action_ban">Забрани корисника</string>
     <string name="staff_reports_action_dismiss">Одбаци</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Статус</string>
     <string name="staff_reports_filter_type_label">Тип</string>
     <string name="staff_reports_history">Историја пријава</string>
-    <string name="staff_reports_listing_label">Оглас #%1$d</string>
+    <string name="staff_reports_listing_label">Оглас #%1$s</string>
     <string name="staff_reports_meta_details">Подаци пријавиоца</string>
     <string name="staff_reports_meta_price">Цена</string>
     <string name="staff_reports_meta_reason">Разлог</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Уклоњено</string>
     <string name="staff_reviews_filter_status">Статус</string>
     <string name="staff_reviews_open_sidebar">Отвори бочну траку</string>
-    <string name="staff_reviews_order_label">поруџбина #%1$d</string>
+    <string name="staff_reviews_order_label">поруџбина #%1$s</string>
     <string name="staff_reviews_overflow_actions">Радње</string>
     <string name="staff_reviews_remove_confirm">Уклони</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s дана %3$s. Трајно обрисати ову рецензију? Ова радња се не може поништити.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Грешка при ажурирању улоге</string>
     <string name="staff_team_toast_role_updated">Улога ажурирана</string>
 
+    <string name="staff_config_field_stripe_webhook">Тајни кључ за потписивање webhook-а</string>
+    <string name="staff_disputes_meta_already_refunded">Већ враћено</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Износ повраћаја прелази преостали износ за повраћај</string>
 </resources>

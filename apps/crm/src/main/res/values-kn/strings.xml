@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">ಕಾಲಮ್‌ಗಳ ಕ್ಷೇತ್ರದಲ್ಲಿ ಯಾವುದೇ ಆಯ್ಕೆಗಳಿಲ್ಲ</string>
     <string name="crm_design_preview_empty">ತೋರಿಸಲು ಏನೂ ಇಲ್ಲ</string>
 
+    <string name="crm_access_tab_manual">ಮ್ಯಾನುಯಲ್</string>
+    <string name="crm_access_search_users">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ</string>
+    <string name="crm_access_no_groups">ಯಾವುದೇ ಗ್ರೂಪ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
+    <string name="crm_access_tab_users">ಬಳಕೆದಾರರು</string>
+    <string name="crm_access_tab_groups">ಗುಂಪುಗಳು</string>
+    <string name="crm_access_target">ಗುರಿ</string>
+    <string name="crm_access_target_hint">ಎಂಟಿಟಿ ID, @group, * (ಎಲ್ಲರೂ), ಅಥವಾ + (ಸದಸ್ಯರು)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
+    <string name="crm_settings_entity_id">ಎಂಟಿಟಿ ID</string>
+    <string name="crm_settings_fingerprint">ಬೆರಳಚ್ಚು</string>
+    <string name="crm_settings_server">ಸರ್ವರ್</string>
 </resources>

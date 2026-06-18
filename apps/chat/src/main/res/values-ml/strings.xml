@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">പ്രാദേശികമായി ഇല്ലാതാക്കുക</string>
     <string name="chat_settings_delete_message">ഇത് ഈ ഉപകരണത്തിൽ നിന്ന് മാത്രം ചാറ്റും അതിന്റെ സന്ദേശങ്ങളും നീക്കം ചെയ്യുന്നു.</string>
 
+    <string name="chat_message_deleted">ഈ സന്ദേശം ഇല്ലാതാക്കി</string>
+    <string name="chat_search_hint">ചാറ്റിൽ തിരയുക...</string>
+    <string name="chat_search_no_results">ഫലങ്ങളൊന്നുമില്ല</string>
+    <string name="chat_message_forward">ഫോർവേഡ് ചെയ്യുക</string>
+    <string name="chat_forward_title">ഇതിലേക്ക് ഫോർവേഡ് ചെയ്യുക…</string>
+    <string name="chat_forward_search">ചാറ്റുകൾ തിരയുക…</string>
+    <string name="chat_forward_empty">ഫോർവേഡ് ചെയ്യാൻ ചാറ്റുകളൊന്നുമില്ല</string>
+    <string name="chat_forward_success">ഫോർവേഡ് ചെയ്തു</string>
+    <string name="chat_forward_failed">ഫോർവേഡ് ചെയ്യാനായില്ല</string>
 </resources>

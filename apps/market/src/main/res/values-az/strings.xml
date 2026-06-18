@@ -412,6 +412,7 @@
     <string name="market_profile_biography">Haqqında</string>
     <string name="market_profile_load_failed">Profil yüklənmədi</string>
     <string name="market_profile_member_since">%1$s-dən üzv</string>
+    <string name="market_profile_joined">%1$s tarixində qoşulub</string>
     <string name="market_profile_no_reviews">Hələ rəy yoxdur.</string>
     <string name="market_profile_rating_breakdown">Reytinq bölgüsü</string>
     <string name="market_profile_reviews_section">Rəylər</string>
@@ -463,10 +464,10 @@
     <string name="market_purchase_title">Sifariş</string>
     <string name="market_purchase_total">İz</string>
     <string name="market_purchase_track">İzləmə URL-i</string>
-    <string name="market_purchases_auction_label">Auksion №%1$d</string>
+    <string name="market_purchases_auction_label">Auksion №%1$s</string>
     <string name="market_purchases_complete_purchase">Alışı tamamla</string>
     <string name="market_purchases_empty">Alış yoxdur</string>
-    <string name="market_purchases_order_label">Sifariş №%1$d</string>
+    <string name="market_purchases_order_label">Sifariş №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s qaytarıldı</string>
     <string name="market_purchases_title">Alışlar</string>
     <string name="market_purchases_won_for">%1$s-ə qazanıldı</string>
@@ -729,4 +730,14 @@
     <string name="market_listing_detail_seller_response">Satıcının cavabı</string>
     <string name="market_listing_detail_seller_reviews_heading">Satıcı rəyləri</string>
     <string name="market_account_stripe_open_failed">Stripe açılmadı</string>
+    <string name="market_editor_stock">Stok</string>
+    <string name="market_editor_stock_units">Vahidlərin sayı</string>
+    <string name="market_editor_stock_unlimited">Provayderin əlaqəsini kəsmək?</string>
+    <string name="market_editor_start_time">Başlama vaxtı</string>
+    <string name="market_editor_start_time_help">Dərc edildikdə başlamaq üçün boş buraxın.</string>
+    <string name="market_editor_start_time_next">Növbəti</string>
+    <string name="market_editor_start_time_clear">Təmizlə</string>
+    <string name="market_listing_detail_buy_now_label">İndi al</string>
+    <string name="market_section_recently_viewed">Bu yaxınlarda baxılan</string>
+    <string name="market_recently_viewed_clear">Hamısını təmizlə</string>
 </resources>

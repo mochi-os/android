@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">열 필드에 옵션이 없습니다</string>
     <string name="crm_design_preview_empty">표시할 내용이 없습니다</string>
 
+    <string name="crm_access_tab_manual">수동</string>
+    <string name="crm_access_search_users">사용자 검색</string>
+    <string name="crm_access_no_groups">이용 가능한 그룹이 없어요</string>
+    <string name="crm_access_tab_users">사용자</string>
+    <string name="crm_access_tab_groups">그룹</string>
+    <string name="crm_access_target">대상</string>
+    <string name="crm_access_target_hint">엔티티 ID, @그룹, * (모두), 또는 + (구성원)</string>
+    <string name="crm_attachment_remove">첨부 파일 제거</string>
+    <string name="crm_board_add_column">컬럼 추가</string>
+    <string name="crm_settings_entity_id">엔티티 ID</string>
+    <string name="crm_settings_fingerprint">지문</string>
+    <string name="crm_settings_server">서버</string>
 </resources>

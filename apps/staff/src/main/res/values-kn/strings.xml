@@ -50,8 +50,8 @@
     <string name="staff_appeals_dialog_title">ಮನವಿ ಬಗ್ಗೆ ನಿರ್ಧರಿಸಿ</string>
     <string name="staff_appeals_empty">ಯಾವುದೇ ಬಾಕಿ ಇರುವ ಮನವಿಗಳಿಲ್ಲ</string>
     <string name="staff_appeals_history">ಲಿಸ್ಟಿಂಗ್ ಇತಿಹಾಸ</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">ನೋಟ್‌ಗಳು</string>
     <string name="staff_appeals_open_sidebar">ಸೈಡ್‌ಬಾರ್ ತೆರೆಯಿರಿ</string>
     <string name="staff_appeals_submit">ಸಲ್ಲಿಸಿ</string>
@@ -221,7 +221,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">ಮಾರಾಟಗಾರರು</string>
     <string name="staff_dashboard_kpi_total_orders">ಒಟ್ಟು ಆರ್ಡರ್‌ಗಳು</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">ಇಲ್ಲ</string>
     <string name="staff_dashboard_open_sidebar">ಸೈಡ್‌ಬಾರ್ ತೆರೆಯಿರಿ</string>
     <string name="staff_dashboard_system">ಸಿಸ್ಟಮ್</string>
@@ -239,7 +239,7 @@
     <string name="staff_disputes_empty">ಯಾವುದೇ ವಿವಾದಗಳಿಲ್ಲ</string>
     <string name="staff_disputes_filter_status_label">ಸ್ಥಿತಿ</string>
     <string name="staff_disputes_history">ವಿವಾದ ಇತಿಹಾಸ</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ಶುಲ್ಕ</string>
     <string name="staff_disputes_meta_evidence_due">ಪುರಾವೆ ಸಲ್ಲಿಕೆ ಗಡುವು</string>
     <string name="staff_disputes_meta_listing">ಲಿಸ್ಟಿಂಗ್</string>
@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ಸಿಗಲಿಲ್ಲ</string>
     <string name="staff_disputes_reason_other">ಇತರ</string>
     <string name="staff_disputes_reason_unauthorised">ಅನುಮತಿಸದ</string>
-    <string name="staff_disputes_refund_exceeds_total">ರಿಫಂಡ್ ಮೊತ್ತ ಆರ್ಡರ್ ಒಟ್ಟು ಮೊತ್ತವನ್ನು ಮೀರಿದೆ</string>
     <string name="staff_disputes_refund_must_be_positive">ರಿಫಂಡ್ ಮೊತ್ತ ಶೂನ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚಿರಬೇಕು</string>
     <string name="staff_disputes_resolution_buyer">ಖರೀದಿದಾರರಿಗಾಗಿ ಪರಿಹರಿಸಿ</string>
     <string name="staff_disputes_resolution_label">ರೆಸಲ್ಯೂಶನ್</string>
@@ -326,7 +325,7 @@
     <string name="staff_moderation_open_sidebar">ಸೈಡ್‌ಬಾರ್ ತೆರೆಯಿರಿ</string>
     <string name="staff_moderation_system">ಸಿಸ್ಟಮ್</string>
     <string name="staff_moderation_title">ಮಾಡರೇಶನ್ ಲಾಗ್</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">ಕ್ರಿಯೆ</string>
     <string name="staff_reports_action_ban">ಬಳಕೆದಾರರನ್ನು ನಿಷೇಧಿಸಿ</string>
     <string name="staff_reports_action_dismiss">ತಿರಸ್ಕರಿಸಿ</string>
@@ -474,7 +473,7 @@
     <string name="staff_team_toast_role_failed">ಪಾತ್ರವನ್ನು ನವೀಕರಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="staff_team_toast_role_updated">ಪಾತ್ರ ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">ಆದೇಶ #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ಆದೇಶ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ಕಾರಣ (ಐಚ್ಛಿಕ)</string>
     <string name="staff_accounts_sales">%1$d ಮಾರಾಟಗಳು</string>
@@ -507,11 +506,14 @@
     <string name="staff_disputes_stripe_unrecognized">ಗುರುತಿಸದ ಶುಲ್ಕ</string>
     <string name="staff_listings_seller_unknown">ಅಪರಿಚಿತ ಮಾರಾಟಗಾರ</string>
     <string name="staff_listings_seller_verified">ಪರಿಶೀಲಿಸಿದ ಮಾರಾಟಗಾರ</string>
-    <string name="staff_reports_listing_label">ಪಟ್ಟಿ #%1$d</string>
+    <string name="staff_reports_listing_label">ಪಟ್ಟಿ #%1$s</string>
     <string name="staff_reports_meta_details">ವರದಿಗಾರನ ವಿವರಗಳು</string>
-    <string name="staff_reviews_order_label">ಆದೇಶ #%1$d</string>
+    <string name="staff_reviews_order_label">ಆದೇಶ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s ರಂದು. ಈ ವಿಮರ್ಶೆಯನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ಈ ವಿಮರ್ಶೆಯನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="staff_team_dialog_search_placeholder">ಹೆಸರು, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ ID ಮೂಲಕ ಹುಡುಕಿ…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook ಸಹಿ ರಹಸ್ಯ</string>
+    <string name="staff_disputes_meta_already_refunded">ಈಗಾಗಲೇ ಮರುಪಾವತಿಸಲಾಗಿದೆ</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ಮರುಪಾವತಿ ಮೊತ್ತವು ಉಳಿದ ಮರುಪಾವತಿಸಬಹುದಾದ ಮೊತ್ತವನ್ನು ಮೀರಿದೆ</string>
 </resources>

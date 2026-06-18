@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Kustuta kohalikult</string>
     <string name="chat_settings_delete_message">See eemaldab vestluse ja selle sõnumid ainult sellest seadmest.</string>
 
+    <string name="chat_message_deleted">See sõnum on kustutatud</string>
+    <string name="chat_search_hint">Otsi vestlusest...</string>
+    <string name="chat_search_no_results">Tulemusi pole</string>
+    <string name="chat_message_forward">Edasta</string>
+    <string name="chat_forward_title">Edasta…</string>
+    <string name="chat_forward_search">Otsi vestlusi…</string>
+    <string name="chat_forward_empty">Pole vestlusi, kuhu edastada</string>
+    <string name="chat_forward_success">Edastatud</string>
+    <string name="chat_forward_failed">Edastamine ebaõnnestus</string>
 </resources>

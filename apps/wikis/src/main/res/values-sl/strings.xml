@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Raven dostopa</string>
     <string name="wikis_access_subject_anyone">Kdor koli</string>
     <string name="wikis_access_subject_authenticated">Overjeni uporabniki</string>
+    <string name="wikis_revision_compare">Primerjaj spremembe</string>
+    <string name="wikis_revision_show_page">Pokaži stran</string>
+    <string name="wikis_revision_compare_failed">Prejšnje različice za primerjavo ni bilo mogoče naložiti.</string>
+    <string name="wikis_revision_changes_from">Spremembe iz različice %1$d → %2$d</string>
 </resources>

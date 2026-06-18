@@ -38,9 +38,9 @@ import javax.inject.Inject
  *  - [subscribingId] / [unsubscribingId] disable per-row Subscribe /
  *    Unsubscribe buttons while a request is in flight, matching the web's
  *    `pendingWikiId` + mutation `isPending` flags.
- *  - [createDialogOpen] is a separate concern from the toolbar overflow's
- *    RSS submenu; the dialog body itself is owned by a downstream agent
- *    (`CreateWikiDialog` / `JoinWikiScreen`). This screen only owns the bit.
+ *  - [createDialogOpen] / [createPending] back the Create-wiki dialog
+ *    ([CreateWikiDialog]); [createWiki] calls the repository and emits
+ *    [WikiListEvent.OpenWiki] to navigate to the new wiki on success.
  */
 data class WikiListUiState(
     val isLoading: Boolean = false,
@@ -50,6 +50,7 @@ data class WikiListUiState(
     val error: MochiError? = null,
 
     val createDialogOpen: Boolean = false,
+    val createPending: Boolean = false,
 
     val searchQuery: String = "",
     val searchResults: List<DirectoryEntry> = emptyList(),
@@ -158,6 +159,33 @@ class WikiListViewModel @Inject constructor(
 
     fun closeCreateDialog() {
         _uiState.value = _uiState.value.copy(createDialogOpen = false)
+    }
+
+    /**
+     * Create a new (owned) wiki and navigate to its home, mirroring the web
+     * `CreateEntityDialog` flow. On success the dialog closes, the list is
+     * refreshed (so the wiki is present if the user backs out of its home),
+     * and an [WikiListEvent.OpenWiki] navigates to the new wiki. On failure the
+     * dialog stays open and the error is surfaced as a toast.
+     */
+    fun createWiki(name: String, privacy: String) {
+        if (_uiState.value.createPending) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(createPending = true)
+            try {
+                val created = repo.createWiki(name, privacy)
+                _uiState.value = _uiState.value.copy(
+                    createPending = false,
+                    createDialogOpen = false,
+                )
+                refresh()
+                _events.emit(WikiListEvent.OpenWiki(created.fingerprint.ifBlank { created.id }, created.home))
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(createPending = false)
+                val message = errorToMessage(e.toMochiError()) ?: "Failed to create wiki"
+                _events.emit(WikiListEvent.Toast(message))
+            }
+        }
     }
 
     // ---------------- inline directory search ----------------

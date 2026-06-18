@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d prodaj</string>
     <string name="market_profile_sales_count">%1$d prodaj</string>
     <string name="market_purchase_dispute_response">Odgovor prodajalca</string>
-    <string name="market_purchases_order_label">Naročilo #%1$d</string>
+    <string name="market_purchases_order_label">Naročilo #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Povejte kupcem o sebi…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">O meni</string>
     <string name="market_profile_load_failed">Profila ni bilo mogoče naložiti</string>
     <string name="market_profile_member_since">Član od %1$s</string>
+    <string name="market_profile_joined">Pridružil(a) se %1$s</string>
     <string name="market_profile_no_reviews">Še ni mnenj.</string>
     <string name="market_profile_rating_breakdown">Razčlenitev ocen</string>
     <string name="market_profile_stars_value">%1$d zvezdic</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Spodaj prenesite svoje datoteke (%1$d).</string>
     <string name="market_purchase_download_one">Spodaj prenesite svojo datoteko.</string>
     <string name="market_purchase_review_from">Mnenje od %1$s</string>
-    <string name="market_purchases_auction_label">Dražba #%1$d</string>
+    <string name="market_purchases_auction_label">Dražba #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vrnjeno</string>
     <string name="market_purchases_won_for">Pridobljeno za %1$s</string>
     <string name="market_rating_reviews">(%1$d mnenj)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Odgovor prodajalca</string>
     <string name="market_listing_detail_seller_reviews_heading">Ocene prodajalca</string>
     <string name="market_account_stripe_open_failed">Stripe ni bilo mogoče odpreti</string>
+    <string name="market_editor_stock">Zaloga</string>
+    <string name="market_editor_stock_units">Število enot</string>
+    <string name="market_editor_stock_unlimited">Neomejeno</string>
+    <string name="market_editor_start_time">Čas začetka</string>
+    <string name="market_editor_start_time_help">Pustite prazno za začetek ob objavi.</string>
+    <string name="market_editor_start_time_next">Naprej</string>
+    <string name="market_editor_start_time_clear">Počisti</string>
+    <string name="market_listing_detail_buy_now_label">Kupi takoj</string>
+    <string name="market_section_recently_viewed">Nedavno ogledano</string>
+    <string name="market_recently_viewed_clear">Počisti vse</string>
 </resources>

@@ -412,6 +412,7 @@
     <string name="market_profile_biography">Honi buruz</string>
     <string name="market_profile_load_failed">Ezin izan da profila kargatu</string>
     <string name="market_profile_member_since">%1$s-tik kide</string>
+    <string name="market_profile_joined">%1$s-(e)an elkartu zen</string>
     <string name="market_profile_no_reviews">Oraindik iritzirik ez.</string>
     <string name="market_profile_rating_breakdown">Balorazioaren banaketa</string>
     <string name="market_profile_reviews_section">Iritziak</string>
@@ -463,10 +464,10 @@
     <string name="market_purchase_title">Eskaera</string>
     <string name="market_purchase_total">Guztira</string>
     <string name="market_purchase_track">Jarraitu paketea</string>
-    <string name="market_purchases_auction_label">Enkantea #%1$d</string>
+    <string name="market_purchases_auction_label">Enkantea #%1$s</string>
     <string name="market_purchases_complete_purchase">Osatu erosketa</string>
     <string name="market_purchases_empty">Erosketarik ez</string>
-    <string name="market_purchases_order_label">Eskaera #%1$d</string>
+    <string name="market_purchases_order_label">Eskaera #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s itzulita</string>
     <string name="market_purchases_title">Erosketak</string>
     <string name="market_purchases_won_for">%1$s-rengatik irabazia</string>
@@ -729,4 +730,14 @@
     <string name="market_listing_detail_seller_response">Saltzailearen erantzuna</string>
     <string name="market_listing_detail_seller_reviews_heading">Saltzailearen iritziak</string>
     <string name="market_account_stripe_open_failed">Ezin izan da Stripe ireki</string>
+    <string name="market_editor_stock">Stocka</string>
+    <string name="market_editor_stock_units">Unitate kopurua</string>
+    <string name="market_editor_stock_unlimited">Mugagabea</string>
+    <string name="market_editor_start_time">Hasiera-ordua</string>
+    <string name="market_editor_start_time_help">Utzi hutsik argitaratzean hasteko.</string>
+    <string name="market_editor_start_time_next">Hurrengoa</string>
+    <string name="market_editor_start_time_clear">Garbitu</string>
+    <string name="market_listing_detail_buy_now_label">Erosi orain</string>
+    <string name="market_section_recently_viewed">Azkenaldian ikusiak</string>
+    <string name="market_recently_viewed_clear">Garbitu dena</string>
 </resources>

@@ -350,7 +350,7 @@
     <string name="market_purchase_track">പാക്കേജ് ട്രാക്ക് ചെയ്യുക</string>
     <string name="market_purchases_complete_purchase">വാങ്ങൽ പൂർത്തിയാക്കുക</string>
     <string name="market_purchases_empty">വാങ്ങലുകളൊന്നുമില്ല</string>
-    <string name="market_purchases_order_label">ഓർഡർ #%1$d</string>
+    <string name="market_purchases_order_label">ഓർഡർ #%1$s</string>
     <string name="market_purchases_title">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="market_rating_label">കോളങ്ങൾ പുനഃക്രമീകരിക്കുക</string>
     <string name="market_rating_no_reviews">അവലോകനങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ആരംഭ ബിഡ്: %1$s</string>
     <string name="market_profile_load_failed">പ്രൊഫൈൽ ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_profile_member_since">%1$s മുതൽ അംഗം</string>
+    <string name="market_profile_joined">%1$s-ന് ചേർന്നു</string>
     <string name="market_profile_rating_breakdown">റേറ്റിംഗ് വിശദാംശം</string>
     <string name="market_profile_sales_count">%1$d വിൽപ്പനകൾ</string>
     <string name="market_profile_stars_value">%1$d നക്ഷത്രങ്ങൾ</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">നിങ്ങളുടെ %1$d ഫയലുകൾ താഴെ ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="market_purchase_download_one">നിങ്ങളുടെ ഫയൽ താഴെ ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="market_purchase_review_from">%1$s ൽ നിന്നുള്ള അവലോകനം</string>
-    <string name="market_purchases_auction_label">ലേലം #%1$d</string>
+    <string name="market_purchases_auction_label">ലേലം #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s തിരികെ നൽകി</string>
     <string name="market_purchases_won_for">%1$s ന് നേടി</string>
     <string name="market_refund_dialog_amount_help">മുഴുവൻ ഓർഡറും തിരികെ നൽകാൻ ശൂന്യമായി വിടുക.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">വിൽപ്പനക്കാരന്റെ പ്രതികരണം</string>
     <string name="market_listing_detail_seller_reviews_heading">വിൽപ്പനക്കാരന്റെ അഭിപ്രായങ്ങൾ</string>
     <string name="market_account_stripe_open_failed">Stripe തുറക്കാൻ കഴിഞ്ഞില്ല</string>
+    <string name="market_editor_stock">സ്റ്റോക്ക്</string>
+    <string name="market_editor_stock_units">യൂണിറ്റുകളുടെ എണ്ണം</string>
+    <string name="market_editor_stock_unlimited">പരിധിയില്ല</string>
+    <string name="market_editor_start_time">ആരംഭ സമയം</string>
+    <string name="market_editor_start_time_help">പ്രസിദ്ധീകരണത്തിൽ ആരംഭിക്കാൻ ശൂന്യമായി വിടുക.</string>
+    <string name="market_editor_start_time_next">അടുത്തത്</string>
+    <string name="market_editor_start_time_clear">മായ്ക്കുക</string>
+    <string name="market_listing_detail_buy_now_label">ഇപ്പോൾ വാങ്ങുക</string>
+    <string name="market_section_recently_viewed">ശുപാർശകൾ</string>
+    <string name="market_recently_viewed_clear">എല്ലാം മായ്ക്കുക</string>
 </resources>

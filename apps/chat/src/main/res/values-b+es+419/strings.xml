@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Eliminar localmente</string>
     <string name="chat_settings_delete_message">Esto elimina el chat y sus mensajes solo de este dispositivo.</string>
 
+    <string name="chat_message_deleted">Este mensaje fue eliminado</string>
+    <string name="chat_search_hint">Buscar en el chat...</string>
+    <string name="chat_search_no_results">Sin resultados</string>
+    <string name="chat_message_forward">Reenviar</string>
+    <string name="chat_forward_title">Reenviar a…</string>
+    <string name="chat_forward_search">Buscar chats…</string>
+    <string name="chat_forward_empty">No hay chats a los que reenviar</string>
+    <string name="chat_forward_success">Reenviado</string>
+    <string name="chat_forward_failed">No se pudo reenviar</string>
 </resources>

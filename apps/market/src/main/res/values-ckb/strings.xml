@@ -350,7 +350,7 @@
     <string name="market_purchase_track">بەستە بەدوادابچوو</string>
     <string name="market_purchases_complete_purchase">تەواوکردنی کڕین</string>
     <string name="market_purchases_empty">هیچ کڕینێک نییە</string>
-    <string name="market_purchases_order_label">داواکاری #%1$d</string>
+    <string name="market_purchases_order_label">داواکاری #%1$s</string>
     <string name="market_purchases_title">کڕینەکان</string>
     <string name="market_rating_label">هەڵسەنگاندن</string>
     <string name="market_rating_no_reviews">هێشتا هیچ هەڵسەنگاندنێک نییە</string>
@@ -607,6 +607,7 @@
     <string name="market_price_starting_bid">داوای دەستپێک: %1$s</string>
     <string name="market_profile_load_failed">نەتوانرا پرۆفایل بار بکرێت</string>
     <string name="market_profile_member_since">ئەندام لە %1$s</string>
+    <string name="market_profile_joined">بەشداری کرد لە %1$s</string>
     <string name="market_profile_rating_breakdown">وردەکاری هەڵسەنگاندن</string>
     <string name="market_profile_sales_count">%1$d فرۆشتن</string>
     <string name="market_profile_stars_value">%1$d ئەستێرە</string>
@@ -616,7 +617,7 @@
     <string name="market_purchase_download_many">%1$d فایلەکانت لە خوارەوە داگرە.</string>
     <string name="market_purchase_download_one">فایلەکەت لە خوارەوە داگرە.</string>
     <string name="market_purchase_review_from">پێداچوونەوە لە %1$s</string>
-    <string name="market_purchases_auction_label">مزایەدە #%1$d</string>
+    <string name="market_purchases_auction_label">مزایەدە #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s گەڕێنرایەوە</string>
     <string name="market_purchases_won_for">بردرایەوە بە %1$s</string>
     <string name="market_refund_dialog_amount_help">بەتاڵی بهێڵەوە بۆ گەڕاندنەوەی تەواوی داواکاری.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">وەڵامی فرۆشیار</string>
     <string name="market_listing_detail_seller_reviews_heading">هەڵسەنگاندنەکانی فرۆشیار</string>
     <string name="market_account_stripe_open_failed">نەتوانرا Stripe بکرێتەوە</string>
+    <string name="market_editor_stock">کۆگا</string>
+    <string name="market_editor_stock_units">ژمارەی یەکەکان</string>
+    <string name="market_editor_stock_unlimited">بێسنوور</string>
+    <string name="market_editor_start_time">کاتی دەستپێک</string>
+    <string name="market_editor_start_time_help">بەتاڵی بهێڵە بۆ دەستپێکردن لە کاتی بڵاوکردنەوە.</string>
+    <string name="market_editor_start_time_next">دواتر</string>
+    <string name="market_editor_start_time_clear">پاککردنەوە</string>
+    <string name="market_listing_detail_buy_now_label">ئێستا بیکڕە</string>
+    <string name="market_section_recently_viewed">تازە بینراوە</string>
+    <string name="market_recently_viewed_clear">پاککردنەوەی هەموو</string>
 </resources>

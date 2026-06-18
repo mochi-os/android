@@ -350,7 +350,7 @@
     <string name="market_purchase_track">پيڪيج ٽريڪ ڪريو</string>
     <string name="market_purchases_complete_purchase">خريداري مڪمل ڪريو</string>
     <string name="market_purchases_empty">ڪا خريداري نه آهي</string>
-    <string name="market_purchases_order_label">آرڊر #%1$d</string>
+    <string name="market_purchases_order_label">آرڊر #%1$s</string>
     <string name="market_purchases_title">خريداريون</string>
     <string name="market_rating_label">درجه بندي</string>
     <string name="market_rating_no_reviews">اڃا ڪو جائزو نه آهي</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">شروعاتي بولي: %1$s</string>
     <string name="market_profile_load_failed">پروفائيل لوڊ نه ٿي سگھيو</string>
     <string name="market_profile_member_since">ميمبر %1$s کان</string>
+    <string name="market_profile_joined">%1$s ۾ شامل ٿيو</string>
     <string name="market_profile_rating_breakdown">ريٽنگ جي تفصيل</string>
     <string name="market_profile_sales_count">%1$d وڪرا</string>
     <string name="market_profile_stars_value">%1$d تارا</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">هيٺ پنهنجون %1$d فائلون ڊائون لوڊ ڪريو.</string>
     <string name="market_purchase_download_one">هيٺ پنهنجي فائل ڊائون لوڊ ڪريو.</string>
     <string name="market_purchase_review_from">%1$s پاران جائزو</string>
-    <string name="market_purchases_auction_label">نيلامي #%1$d</string>
+    <string name="market_purchases_auction_label">نيلامي #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s واپس ڪيو ويو</string>
     <string name="market_purchases_won_for">%1$s تي کٽيو</string>
     <string name="market_refund_dialog_amount_help">پورو آرڊر واپس ڪرڻ لاءِ خالي ڇڏيو.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">وڪرو ڪندڙ جو جواب</string>
     <string name="market_listing_detail_seller_reviews_heading">وڪرو ڪندڙ جا جائزا</string>
     <string name="market_account_stripe_open_failed">Stripe کولي نه سگھيو</string>
+    <string name="market_editor_stock">اسٽاڪ</string>
+    <string name="market_editor_stock_units">يونٽن جو تعداد</string>
+    <string name="market_editor_stock_unlimited">لامحدود</string>
+    <string name="market_editor_start_time">شروع جو وقت</string>
+    <string name="market_editor_start_time_help">شايع ٿيڻ تي شروع ڪرڻ لاءِ خالي ڇڏيو.</string>
+    <string name="market_editor_start_time_next">اڳيون</string>
+    <string name="market_editor_start_time_clear">صاف ڪريو</string>
+    <string name="market_listing_detail_buy_now_label">ابھي خريد ڪريو</string>
+    <string name="market_section_recently_viewed">تازو ڏٺل</string>
+    <string name="market_recently_viewed_clear">سڀ صاف ڪريو</string>
 </resources>

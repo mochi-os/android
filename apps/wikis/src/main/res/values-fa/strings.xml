@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">هر کسی</string>
     <string name="wikis_access_subject_authenticated">کاربران احراز هویت‌شده</string>
 
+    <string name="wikis_revision_compare">مقایسهٔ تغییرات</string>
+    <string name="wikis_revision_show_page">نمایش صفحه</string>
+    <string name="wikis_revision_compare_failed">بارگذاری نسخهٔ پیشین برای مقایسه ممکن نشد.</string>
+    <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$d → %2$d</string>
 </resources>

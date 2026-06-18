@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Няма параметраў для поля слупкоў</string>
     <string name="crm_design_preview_empty">Няма чаго паказаць</string>
 
+    <string name="crm_access_tab_manual">Уручную</string>
+    <string name="crm_access_search_users">Пошук карыстальнікаў</string>
+    <string name="crm_access_no_groups">Групы недаступны</string>
+    <string name="crm_access_tab_users">Карыстальнікі</string>
+    <string name="crm_access_tab_groups">Групы</string>
+    <string name="crm_access_target">Мэта</string>
+    <string name="crm_access_target_hint">ID сутнасці, @група, * (усе) ці + (удзельнікі)</string>
+    <string name="crm_attachment_remove">Выдаліць укладанне</string>
+    <string name="crm_board_add_column">Дадаць слупок</string>
+    <string name="crm_settings_entity_id">ID сутнасці</string>
+    <string name="crm_settings_fingerprint">Адбітак пальца</string>
+    <string name="crm_settings_server">Сервер</string>
 </resources>

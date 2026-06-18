@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Ħassar lokalment</string>
     <string name="chat_settings_delete_message">Dan ineħħi l-chat u l-messaġġi tiegħu minn dan l-apparat biss.</string>
 
+    <string name="chat_message_deleted">Dan il-messaġġ tħassar</string>
+    <string name="chat_search_hint">Fittex fiċ-chat...</string>
+    <string name="chat_search_no_results">L-ebda riżultat</string>
+    <string name="chat_message_forward">Għaddi</string>
+    <string name="chat_forward_title">Għaddi lil…</string>
+    <string name="chat_forward_search">Fittex chats…</string>
+    <string name="chat_forward_empty">M\'hemm l-ebda chats biex tgħaddilhom</string>
+    <string name="chat_forward_success">Mgħoddi</string>
+    <string name="chat_forward_failed">Ma rnexxiex li jintgħadda</string>
 </resources>

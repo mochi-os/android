@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Itraċċja l-pakkett</string>
     <string name="market_purchases_complete_purchase">Lesti x-xirja</string>
     <string name="market_purchases_empty">L-ebda xirjiet</string>
-    <string name="market_purchases_order_label">Ordni #%1$d</string>
+    <string name="market_purchases_order_label">Ordni #%1$s</string>
     <string name="market_purchases_title">Xirjiet</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">L-ebda reviews s\'issa</string>
@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Offerta tal-bidu: %1$s</string>
     <string name="market_profile_load_failed">Ma setax jitgħabba l-profil</string>
     <string name="market_profile_member_since">Membru sa minn %1$s</string>
+    <string name="market_profile_joined">Ingħaqad %1$s</string>
     <string name="market_profile_rating_breakdown">Tqassim tal-klassifikazzjoni</string>
     <string name="market_profile_stars_value">%1$d stilel</string>
     <string name="market_purchase_dispute_chargeback">Tnaqqis %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Niżżel il-%1$d fajls tiegħek hawn taħt.</string>
     <string name="market_purchase_download_one">Niżżel il-fajl tiegħek hawn taħt.</string>
     <string name="market_purchase_review_from">Reviżjoni minn %1$s</string>
-    <string name="market_purchases_auction_label">Irkant #%1$d</string>
+    <string name="market_purchases_auction_label">Irkant #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s rifondut</string>
     <string name="market_purchases_won_for">Rebaħ għal %1$s</string>
     <string name="market_refund_dialog_amount_help">Ħalli vojt biex tirrifondi l-ordni sħiħa.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Tweġiba tal-bejjiegħ</string>
     <string name="market_listing_detail_seller_reviews_heading">Reviews tal-bejjiegħ</string>
     <string name="market_account_stripe_open_failed">Ma setax jinfetaħ Stripe</string>
+    <string name="market_editor_stock">Stokk</string>
+    <string name="market_editor_stock_units">Numru ta\' unitajiet</string>
+    <string name="market_editor_stock_unlimited">Mingħajr limitu</string>
+    <string name="market_editor_start_time">Ħin tal-bidu</string>
+    <string name="market_editor_start_time_help">Ħalli vojt biex tibda fil-publish.</string>
+    <string name="market_editor_start_time_next">Li jmiss</string>
+    <string name="market_editor_start_time_clear">Naddaf</string>
+    <string name="market_listing_detail_buy_now_label">Ixtrih issa</string>
+    <string name="market_section_recently_viewed">Recently viewed</string>
+    <string name="market_recently_viewed_clear">Naddaf kollox</string>
 </resources>

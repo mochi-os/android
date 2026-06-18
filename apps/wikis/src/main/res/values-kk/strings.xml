@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Кез келген</string>
     <string name="wikis_access_subject_authenticated">Аутентификацияланған пайдаланушылар</string>
 
+    <string name="wikis_revision_compare">Өзгерістерді салыстыру</string>
+    <string name="wikis_revision_show_page">Бетті көрсету</string>
+    <string name="wikis_revision_compare_failed">Салыстыру үшін алдыңғы нұсқаны жүктеу мүмкін болмады.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d нұсқасынан өзгерістер</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Qualsevol</string>
     <string name="wikis_access_subject_authenticated">Usuaris autenticats</string>
 
+    <string name="wikis_revision_compare">Compara els canvis</string>
+    <string name="wikis_revision_show_page">Mostra la pàgina</string>
+    <string name="wikis_revision_compare_failed">No s\'ha pogut carregar la versió anterior per comparar.</string>
+    <string name="wikis_revision_changes_from">Canvis de la versió %1$d → %2$d</string>
 </resources>

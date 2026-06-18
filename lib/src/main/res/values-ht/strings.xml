@@ -165,6 +165,16 @@
     <string name="auth_mfa_title">Otantifikasyon milti-faktè</string>
     <string name="auth_mfa_subtitle">Konplete etap verifikasyon ki rete yo</string>
     <string name="auth_recover_account">Rekipere kont</string>
+    <string name="auth_login_title">Konekte nan Mochi</string>
+    <string name="auth_next">Pwochen</string>
+    <string name="auth_or_log_in_with">Oswa konekte ak</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Sèvi ak yon passkey</string>
+    <string name="auth_email_me_a_code">Voye yon kòd ban mwen pa imèl</string>
+    <string name="auth_or_enter_authenticator_code">Oswa antre kòd otantifikatè a</string>
+    <string name="auth_log_in">Konekte</string>
+    <string name="auth_back">Retounen</string>
+    <string name="auth_lost_access_recovery">Ou pèdi aksè? Sèvi ak yon kòd rekiperasyon</string>
     <string name="auth_create_identity_subtitle">Chwazi yon non pou idantite ou sou sèvè sa a</string>
     <string name="auth_privacy_public_description">Parèt nan anyè itilizatè a pou lòt moun ka jwenn ou.</string>
     <string name="auth_privacy_private_description">Kache nan anyè itilizatè a.</string>

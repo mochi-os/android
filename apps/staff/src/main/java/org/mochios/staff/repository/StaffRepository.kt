@@ -39,10 +39,11 @@ import javax.inject.Singleton
  * a non-staff caller gets 403 on most endpoints, with [getMe] always
  * succeeding so the layout can decide which admin-only items to surface.
  *
- * Numeric IDs (listings, categories, reports, disputes, reviews, appeals)
- * are typed as [Int] on the Retrofit side to match the staff Comptroller
- * (`event_staff_*` handlers parse the wire-decimal ids back to integers)
- * — the repository's `Long` parameters serialise via `.toInt()`.
+ * Row IDs (listings, categories, reports, disputes, reviews, appeals) are
+ * opaque comptroller uids (String) — the migration to `mochi.uid()` text
+ * ids (see `apps/comptroller/starlark/comptroller.star`) means the
+ * `event_staff_*` handlers no longer parse them as integers; they are
+ * forwarded verbatim on the wire.
  */
 @Singleton
 class StaffRepository @Inject constructor(
@@ -162,7 +163,7 @@ class StaffRepository @Inject constructor(
     suspend fun createCategory(
         name: String,
         slug: String,
-        parent: Int? = null,
+        parent: String? = null,
         icon: String? = null,
         position: Int? = null,
         digital: Boolean? = null,
@@ -184,10 +185,10 @@ class StaffRepository @Inject constructor(
     }
 
     suspend fun updateCategory(
-        id: Int,
+        id: String,
         name: String? = null,
         slug: String? = null,
-        parent: Int? = null,
+        parent: String? = null,
         icon: String? = null,
         position: Int? = null,
         digital: Boolean? = null,
@@ -211,7 +212,7 @@ class StaffRepository @Inject constructor(
         }
     }
 
-    suspend fun deleteCategory(id: Int) {
+    suspend fun deleteCategory(id: String) {
         try {
             api.deleteCategory(id).unwrap()
         } catch (e: Exception) {
@@ -235,7 +236,7 @@ class StaffRepository @Inject constructor(
         }
     }
 
-    suspend fun approveListing(id: Int, notes: String? = null) {
+    suspend fun approveListing(id: String, notes: String? = null) {
         try {
             api.approveListing(id, notes).unwrap()
         } catch (e: Exception) {
@@ -243,7 +244,7 @@ class StaffRepository @Inject constructor(
         }
     }
 
-    suspend fun rejectListing(id: Int, reason: String? = null, notes: String? = null) {
+    suspend fun rejectListing(id: String, reason: String? = null, notes: String? = null) {
         try {
             api.rejectListing(id, reason, notes).unwrap()
         } catch (e: Exception) {
@@ -251,7 +252,7 @@ class StaffRepository @Inject constructor(
         }
     }
 
-    suspend fun removeListing(id: Int, reason: String? = null, notes: String? = null) {
+    suspend fun removeListing(id: String, reason: String? = null, notes: String? = null) {
         try {
             api.removeListing(id, reason, notes).unwrap()
         } catch (e: Exception) {
@@ -262,7 +263,7 @@ class StaffRepository @Inject constructor(
     // ---- Moderation ----
 
     suspend fun getModerationLog(
-        listingId: Int? = null,
+        listingId: String? = null,
         page: Int? = null,
         limit: Int? = null,
     ): ModerationLogResponse {
@@ -304,7 +305,7 @@ class StaffRepository @Inject constructor(
         }
     }
 
-    suspend fun actionReport(id: Int, action: String, notes: String? = null): Report {
+    suspend fun actionReport(id: String, action: String, notes: String? = null): Report {
         return try {
             api.actionReport(id, action, notes).unwrap()
         } catch (e: Exception) {
@@ -327,7 +328,7 @@ class StaffRepository @Inject constructor(
     }
 
     suspend fun reviewDispute(
-        id: Int,
+        id: String,
         status: String,
         resolution: String? = null,
         refundAmount: Long? = null,
@@ -421,7 +422,7 @@ class StaffRepository @Inject constructor(
         }
     }
 
-    suspend fun decideAppeal(listingId: Int, decision: String, notes: String? = null) {
+    suspend fun decideAppeal(listingId: String, decision: String, notes: String? = null) {
         try {
             api.decideAppeal(listingId, decision, notes).unwrap()
         } catch (e: Exception) {
@@ -443,7 +444,7 @@ class StaffRepository @Inject constructor(
         }
     }
 
-    suspend fun actionReview(id: Int, action: String): Review {
+    suspend fun actionReview(id: String, action: String): Review {
         return try {
             api.actionReview(id, action).unwrap()
         } catch (e: Exception) {

@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d รายการขาย</string>
     <string name="market_profile_sales_count">%1$d รายการขาย</string>
     <string name="market_purchase_dispute_response">การตอบของผู้ขาย</string>
-    <string name="market_purchases_order_label">คำสั่งซื้อ #%1$d</string>
+    <string name="market_purchases_order_label">คำสั่งซื้อ #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">บอกผู้ซื้อเกี่ยวกับตัวคุณ…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">เกี่ยวกับ</string>
     <string name="market_profile_load_failed">ไม่สามารถโหลดโปรไฟล์ได้</string>
     <string name="market_profile_member_since">เป็นสมาชิกตั้งแต่ %1$s</string>
+    <string name="market_profile_joined">เข้าร่วมเมื่อ %1$s</string>
     <string name="market_profile_no_reviews">ยังไม่มีรีวิว</string>
     <string name="market_profile_rating_breakdown">รายละเอียดคะแนน</string>
     <string name="market_profile_stars_value">%1$d ดาว</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">ดาวน์โหลดไฟล์ของคุณ %1$d ไฟล์ด้านล่าง</string>
     <string name="market_purchase_download_one">ดาวน์โหลดไฟล์ของคุณด้านล่าง</string>
     <string name="market_purchase_review_from">รีวิวจาก %1$s</string>
-    <string name="market_purchases_auction_label">การประมูล #%1$d</string>
+    <string name="market_purchases_auction_label">การประมูล #%1$s</string>
     <string name="market_purchases_refunded_partial">คืนเงิน −%1$s</string>
     <string name="market_purchases_won_for">ชนะที่ %1$s</string>
     <string name="market_rating_reviews">(%1$d รีวิว)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">การตอบกลับของผู้ขาย</string>
     <string name="market_listing_detail_seller_reviews_heading">รีวิวผู้ขาย</string>
     <string name="market_account_stripe_open_failed">ไม่สามารถเปิด Stripe ได้</string>
+    <string name="market_editor_stock">สต็อก</string>
+    <string name="market_editor_stock_units">จำนวนหน่วย</string>
+    <string name="market_editor_stock_unlimited">ไม่จำกัด</string>
+    <string name="market_editor_start_time">เวลาเริ่มต้น</string>
+    <string name="market_editor_start_time_help">เว้นว่างเพื่อเริ่มต้นเมื่อเผยแพร่</string>
+    <string name="market_editor_start_time_next">ถัดไป</string>
+    <string name="market_editor_start_time_clear">ล้าง</string>
+    <string name="market_listing_detail_buy_now_label">ซื้อเลย</string>
+    <string name="market_section_recently_viewed">ดูล่าสุด</string>
+    <string name="market_recently_viewed_clear">ล้างทั้งหมด</string>
 </resources>

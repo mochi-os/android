@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">कॉलम फील्ड पर कौनो विकल्प नइखे</string>
     <string name="crm_design_preview_empty">देखावे खातिर कुछ नइखे</string>
 
+    <string name="crm_access_tab_manual">मैनुअल</string>
+    <string name="crm_access_search_users">यूजर खोजीं</string>
+    <string name="crm_access_no_groups">कौनो ग्रुप उपलब्ध नइखे</string>
+    <string name="crm_access_tab_users">उपयोगकर्ता सब</string>
+    <string name="crm_access_tab_groups">समूह</string>
+    <string name="crm_access_target">लक्ष्य</string>
+    <string name="crm_access_target_hint">इकाई ID, @समूह, * (हर केहू), भा + (सदस्य लोग)</string>
+    <string name="crm_attachment_remove">अटैचमेंट हटाईं</string>
+    <string name="crm_board_add_column">कॉलम जोड़ीं</string>
+    <string name="crm_settings_entity_id">एंटिटी ID</string>
+    <string name="crm_settings_fingerprint">फिंगरप्रिंट</string>
+    <string name="crm_settings_server">सर्वर</string>
 </resources>

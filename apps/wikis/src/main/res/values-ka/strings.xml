@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ნებისმიერი</string>
     <string name="wikis_access_subject_authenticated">ავთენტიფიცირებული მომხმარებლები</string>
 
+    <string name="wikis_revision_compare">ცვლილებების შედარება</string>
+    <string name="wikis_revision_show_page">გვერდის ჩვენება</string>
+    <string name="wikis_revision_compare_failed">შესადარებლად წინა ვერსიის ჩატვირთვა ვერ მოხერხდა.</string>
+    <string name="wikis_revision_changes_from">ცვლილებები ვერსიიდან %1$d → %2$d</string>
 </resources>

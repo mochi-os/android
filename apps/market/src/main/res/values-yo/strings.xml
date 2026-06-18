@@ -358,7 +358,7 @@
     <string name="market_purchase_track">Tọpa ẹrù</string>
     <string name="market_purchases_complete_purchase">Parí ìrà</string>
     <string name="market_purchases_empty">Kò sí rírà</string>
-    <string name="market_purchases_order_label">Pípèsè #%1$d</string>
+    <string name="market_purchases_order_label">Pípèsè #%1$s</string>
     <string name="market_purchases_title">Àwọn rírà</string>
     <string name="market_rating_label">Ìpele</string>
     <string name="market_rating_no_reviews">Kò sí àyẹ̀wò síbẹ̀</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Ìdíje ìbẹ̀rẹ̀: %1$s</string>
     <string name="market_profile_load_failed">Kò lè ṣàmúwá ìmọ̀ nípa ẹni</string>
     <string name="market_profile_member_since">Ọmọ ẹgbẹ́ láti %1$s</string>
+    <string name="market_profile_joined">Dara pọ̀ ní %1$s</string>
     <string name="market_profile_rating_breakdown">Àpèjúwe ìdíwọ̀n</string>
     <string name="market_profile_sales_count">%1$d títà</string>
     <string name="market_profile_stars_value">%1$d ìràwọ̀</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Gba àwọn fáìlì %1$d rẹ wálẹ̀ ní ìsàlẹ̀.</string>
     <string name="market_purchase_download_one">Gba fáìlì rẹ wálẹ̀ ní ìsàlẹ̀.</string>
     <string name="market_purchase_review_from">Àyẹ̀wò láti ọ̀dọ̀ %1$s</string>
-    <string name="market_purchases_auction_label">Ìdíje #%1$d</string>
+    <string name="market_purchases_auction_label">Ìdíje #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s tí a dá padà</string>
     <string name="market_purchases_won_for">Jíjà fún %1$s</string>
     <string name="market_refund_dialog_amount_help">Fi sílẹ̀ ní òfo láti dá gbogbo owó àṣẹ padà.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Ìdáhùn olùtà</string>
     <string name="market_listing_detail_seller_reviews_heading">Awọn atunyẹwo olutaja</string>
     <string name="market_account_stripe_open_failed">Kò lè ṣí Stripe</string>
+    <string name="market_editor_stock">Ọjà</string>
+    <string name="market_editor_stock_units">Iye àwọn ọ̀kọ̀ọ̀kan</string>
+    <string name="market_editor_stock_unlimited">Aláìlópin</string>
+    <string name="market_editor_start_time">Àkókò ìbẹ̀rẹ̀</string>
+    <string name="market_editor_start_time_help">Fi ṣófo láti bẹ̀rẹ̀ ní ìgbà tí a tẹ̀ jáde.</string>
+    <string name="market_editor_start_time_next">Tó kàn</string>
+    <string name="market_editor_start_time_clear">Pa rẹ́</string>
+    <string name="market_listing_detail_buy_now_label">Rà á báyìí</string>
+    <string name="market_section_recently_viewed">Tí a wò láìpẹ́</string>
+    <string name="market_recently_viewed_clear">Pa gbogbo rẹ̀ rẹ́</string>
 </resources>

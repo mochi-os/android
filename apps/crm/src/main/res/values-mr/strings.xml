@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">स्तंभ फील्डवर कोणतेही पर्याय नाहीत</string>
     <string name="crm_design_preview_empty">दाखवण्यासाठी काहीही नाही</string>
 
+    <string name="crm_access_tab_manual">मॅन्युअल</string>
+    <string name="crm_access_search_users">वापरकर्ते शोधा</string>
+    <string name="crm_access_no_groups">गट उपलब्ध नाहीत</string>
+    <string name="crm_access_tab_users">वापरकर्ते</string>
+    <string name="crm_access_tab_groups">गट</string>
+    <string name="crm_access_target">लक्ष्य</string>
+    <string name="crm_access_target_hint">एंटिटी ID, @group, * (प्रत्येकजण), किंवा + (सदस्य)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">कॉलम जोडा</string>
+    <string name="crm_settings_entity_id">एंटिटी आयडी</string>
+    <string name="crm_settings_fingerprint">बोटाचा ठसा</string>
+    <string name="crm_settings_server">सर्व्हर</string>
 </resources>

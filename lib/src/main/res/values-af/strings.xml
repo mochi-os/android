@@ -218,6 +218,16 @@
     <string name="auth_mfa_title">Multifaktor-verifikasie</string>
     <string name="auth_mfa_subtitle">Voltooi die oorblywende verifikasiestappe</string>
     <string name="auth_recover_account">Herstel rekening</string>
+    <string name="auth_login_title">Meld aan by Mochi</string>
+    <string name="auth_next">Volgende</string>
+    <string name="auth_or_log_in_with">Of meld aan met</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Gebruik \'n wagsleutel</string>
+    <string name="auth_email_me_a_code">E-pos my \'n kode</string>
+    <string name="auth_or_enter_authenticator_code">Of voer verifikator-kode in</string>
+    <string name="auth_log_in">Meld aan</string>
+    <string name="auth_back">Terug</string>
+    <string name="auth_lost_access_recovery">Toegang verloor? Gebruik \'n herstelkode</string>
     <string name="auth_create_identity_subtitle">Kies \'n naam vir jou identiteit op hierdie bediener</string>
     <string name="auth_privacy_public_description">In die gebruikersgids gelys sodat ander jou kan vind.</string>
     <string name="auth_privacy_private_description">Versteek van die gebruikersgids.</string>

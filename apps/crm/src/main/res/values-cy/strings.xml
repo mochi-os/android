@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Dim opsiynau ar y maes colofnau</string>
     <string name="crm_design_preview_empty">Dim i\'w ddangos</string>
 
+    <string name="crm_access_tab_manual">Llawlyfr</string>
+    <string name="crm_access_search_users">Chwilio defnyddwyr</string>
+    <string name="crm_access_no_groups">Dim grwpiau ar gael</string>
+    <string name="crm_access_tab_users">Defnyddwyr</string>
+    <string name="crm_access_tab_groups">Grwpiau</string>
+    <string name="crm_access_target">Targed</string>
+    <string name="crm_access_target_hint">ID endid, @grŵp, * (pawb), neu + (aelodau)</string>
+    <string name="crm_attachment_remove">Tynnu atodiad</string>
+    <string name="crm_board_add_column">Ychwanegu colofn</string>
+    <string name="crm_settings_entity_id">ID endid</string>
+    <string name="crm_settings_fingerprint">Olion bysedd</string>
+    <string name="crm_settings_server">Gweinydd</string>
 </resources>

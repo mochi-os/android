@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d myyntiä</string>
     <string name="market_profile_sales_count">%1$d myyntiä</string>
     <string name="market_purchase_dispute_response">Myyjän vastaus</string>
-    <string name="market_purchases_order_label">Tilaus #%1$d</string>
+    <string name="market_purchases_order_label">Tilaus #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Kerro ostajille itsestäsi…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Tietoja</string>
     <string name="market_profile_load_failed">Profiilia ei voitu ladata</string>
     <string name="market_profile_member_since">Jäsen alkaen %1$s</string>
+    <string name="market_profile_joined">Liittyi %1$s</string>
     <string name="market_profile_no_reviews">Ei vielä arvosteluja.</string>
     <string name="market_profile_rating_breakdown">Arvioiden erittely</string>
     <string name="market_profile_stars_value">%1$d tähteä</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Lataa %1$d tiedostoasi alta.</string>
     <string name="market_purchase_download_one">Lataa tiedostosi alta.</string>
     <string name="market_purchase_review_from">Arvostelu käyttäjältä %1$s</string>
-    <string name="market_purchases_auction_label">Huutokauppa #%1$d</string>
+    <string name="market_purchases_auction_label">Huutokauppa #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s palautettu</string>
     <string name="market_purchases_won_for">Voitettu hintaan %1$s</string>
     <string name="market_rating_reviews">(%1$d arvostelua)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Myyjän vastaus</string>
     <string name="market_listing_detail_seller_reviews_heading">Myyjän arvostelut</string>
     <string name="market_account_stripe_open_failed">Stripen avaaminen epäonnistui</string>
+    <string name="market_editor_stock">Varasto</string>
+    <string name="market_editor_stock_units">Yksiköiden määrä</string>
+    <string name="market_editor_stock_unlimited">Rajoittamaton</string>
+    <string name="market_editor_start_time">Aloitusaika</string>
+    <string name="market_editor_start_time_help">Jätä tyhjäksi aloittaaksesi julkaisussa.</string>
+    <string name="market_editor_start_time_next">Seuraava</string>
+    <string name="market_editor_start_time_clear">Tyhjennä</string>
+    <string name="market_listing_detail_buy_now_label">Osta heti</string>
+    <string name="market_section_recently_viewed">Viimeksi katsotut</string>
+    <string name="market_recently_viewed_clear">Tyhjennä kaikki</string>
 </resources>

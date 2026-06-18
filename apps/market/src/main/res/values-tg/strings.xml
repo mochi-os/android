@@ -595,6 +595,7 @@
     <string name="market_profile_biography">Дар бораи</string>
     <string name="market_profile_load_failed">Профилро бор кардан имкон надошт</string>
     <string name="market_profile_member_since">Узв аз %1$s</string>
+    <string name="market_profile_joined">Ҳамроҳ шуд %1$s</string>
     <string name="market_profile_no_reviews">Ҳанӯз баррасиҳо нестанд.</string>
     <string name="market_profile_rating_breakdown">Тақсимоти рейтинг</string>
     <string name="market_profile_stars_value">%1$d ситора</string>
@@ -604,8 +605,8 @@
     <string name="market_purchase_download_many">%1$d файли худро дар поён зеркашӣ кунед.</string>
     <string name="market_purchase_download_one">Файли худро дар поён зеркашӣ кунед.</string>
     <string name="market_purchase_review_from">Баррасӣ аз %1$s</string>
-    <string name="market_purchases_auction_label">Музояда #%1$d</string>
-    <string name="market_purchases_order_label">Фармоиш #%1$d</string>
+    <string name="market_purchases_auction_label">Музояда #%1$s</string>
+    <string name="market_purchases_order_label">Фармоиш #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s баргардонда шуд</string>
     <string name="market_purchases_won_for">Бо нархи %1$s бурд карда шуд</string>
     <string name="market_rating_reviews">(%1$d баррасӣ)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Ҷавоби фурӯшанда</string>
     <string name="market_listing_detail_seller_reviews_heading">Шарҳҳои фурӯшанда</string>
     <string name="market_account_stripe_open_failed">Stripe-ро кушодан нашуд</string>
+    <string name="market_editor_stock">Захира</string>
+    <string name="market_editor_stock_units">Шумораи воҳидҳо</string>
+    <string name="market_editor_stock_unlimited">Беҳудуд</string>
+    <string name="market_editor_start_time">Вақти оғоз</string>
+    <string name="market_editor_start_time_help">Барои оғоз дар нашр холӣ гузоред.</string>
+    <string name="market_editor_start_time_next">Баъдӣ</string>
+    <string name="market_editor_start_time_clear">Тоза кардан</string>
+    <string name="market_listing_detail_buy_now_label">Бо нархи имрӯз харидан</string>
+    <string name="market_section_recently_viewed">Ба наздикӣ дидашуда</string>
+    <string name="market_recently_viewed_clear">Ҳамаро тоза кардан</string>
 </resources>

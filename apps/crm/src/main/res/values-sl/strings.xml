@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Polje stolpcev nima možnosti</string>
     <string name="crm_design_preview_empty">Ničesar za prikaz</string>
 
+    <string name="crm_access_tab_manual">Ročno</string>
+    <string name="crm_access_search_users">Iskanje uporabnikov</string>
+    <string name="crm_access_no_groups">Ni razpoložljivih skupin</string>
+    <string name="crm_access_tab_users">Uporabniki</string>
+    <string name="crm_access_tab_groups">Skupine</string>
+    <string name="crm_access_target">Cilj</string>
+    <string name="crm_access_target_hint">ID entitete, @skupina, * (vsi) ali + (člani)</string>
+    <string name="crm_attachment_remove">Odstrani prilogo</string>
+    <string name="crm_board_add_column">Dodaj stolpec</string>
+    <string name="crm_settings_entity_id">ID entitete</string>
+    <string name="crm_settings_fingerprint">Prstni odtis</string>
+    <string name="crm_settings_server">Strežnik</string>
 </resources>

@@ -197,7 +197,7 @@
     <string name="market_purchase_review_rating">Bewertung</string>
     <string name="market_purchase_review_submitted">Bewertung eingereicht</string>
     <string name="market_purchase_total">Total</string>
-    <string name="market_purchases_order_label">Bestellung #%1$d</string>
+    <string name="market_purchases_order_label">Bestellung #%1$s</string>
     <string name="market_rating_label">Bewertung</string>
     <string name="market_refund_details_label">Details</string>
     <string name="market_refund_reason_damaged">Beschädigt</string>
@@ -422,6 +422,7 @@
     <string name="market_profile_biography">Über</string>
     <string name="market_profile_load_failed">Profil konnte nicht geladen werden</string>
     <string name="market_profile_member_since">Mitglied seit %1$s</string>
+    <string name="market_profile_joined">Beigetreten %1$s</string>
     <string name="market_profile_no_reviews">Noch keine Bewertungen.</string>
     <string name="market_profile_rating_breakdown">Bewertungsübersicht</string>
     <string name="market_profile_stars_value">%1$d Sterne</string>
@@ -455,7 +456,7 @@
     <string name="market_purchase_summary">Bestellübersicht</string>
     <string name="market_purchase_title">Bestellung</string>
     <string name="market_purchase_track">Paket verfolgen</string>
-    <string name="market_purchases_auction_label">Auktion Nr. %1$d</string>
+    <string name="market_purchases_auction_label">Auktion Nr. %1$s</string>
     <string name="market_purchases_empty">Keine Käufe</string>
     <string name="market_purchases_refunded_partial">−%1$s zurückerstattet</string>
     <string name="market_purchases_title">Käufe</string>
@@ -731,4 +732,9 @@
     <string name="market_sidebar_become_seller">Verkäufer werden</string>
     <string name="market_sidebar_seller_settings">Verkäufereinstellungen</string>
     <string name="market_account_stripe_open_failed">Stripe konnte nicht geöffnet werden</string>
+    <string name="market_editor_start_time_next">Weiter</string>
+    <string name="market_editor_start_time_clear">Löschen</string>
+    <string name="market_listing_detail_buy_now_label">Jetzt kaufen</string>
+    <string name="market_section_recently_viewed">Kürzlich angesehen</string>
+    <string name="market_recently_viewed_clear">Alle löschen</string>
 </resources>

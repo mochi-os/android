@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Odstrániť lokálne</string>
     <string name="chat_settings_delete_message">Týmto sa chat a jeho správy odstránia iba z tohto zariadenia.</string>
 
+    <string name="chat_message_deleted">Táto správa bola odstránená</string>
+    <string name="chat_search_hint">Hľadať v chate...</string>
+    <string name="chat_search_no_results">Žiadne výsledky</string>
+    <string name="chat_message_forward">Preposlať</string>
+    <string name="chat_forward_title">Preposlať do…</string>
+    <string name="chat_forward_search">Hľadať chaty…</string>
+    <string name="chat_forward_empty">Žiadne chaty na preposlanie</string>
+    <string name="chat_forward_success">Preposlané</string>
+    <string name="chat_forward_failed">Nepodarilo sa preposlať</string>
 </resources>

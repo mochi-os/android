@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Nessuna opzione sul campo colonne</string>
     <string name="crm_design_preview_empty">Niente da mostrare</string>
 
+    <string name="crm_access_tab_manual">Manuale</string>
+    <string name="crm_access_search_users">Cerca utenti</string>
+    <string name="crm_access_no_groups">Nessun gruppo disponibile</string>
+    <string name="crm_access_tab_users">Utenti</string>
+    <string name="crm_access_tab_groups">Gruppi</string>
+    <string name="crm_access_target">Destinazione</string>
+    <string name="crm_access_target_hint">ID entità, @gruppo, * (tutti) o + (membri)</string>
+    <string name="crm_attachment_remove">Rimuovi allegato</string>
+    <string name="crm_board_add_column">Aggiungi colonna</string>
+    <string name="crm_settings_entity_id">ID entità</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

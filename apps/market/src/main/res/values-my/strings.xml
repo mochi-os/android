@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ပစ္စည်း ခြေရာခံမည်</string>
     <string name="market_purchases_complete_purchase">ဝယ်ယူမှု ပြီးစီးအောင်လုပ်မည်</string>
     <string name="market_purchases_empty">ဝယ်ယူမှုများ မရှိ</string>
-    <string name="market_purchases_order_label">အမှာစာ #%1$d</string>
+    <string name="market_purchases_order_label">အမှာစာ #%1$s</string>
     <string name="market_purchases_title">ဝယ်ယူမှုများ</string>
     <string name="market_rating_label">အဆင့်သတ်မှတ်ချက်</string>
     <string name="market_rating_no_reviews">သုံးသပ်ချက်များ မရှိသေးပါ</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">စတင်လေလံ: %1$s</string>
     <string name="market_profile_load_failed">ပရိုဖိုင်ကို ဖွင့်၍ မရပါ</string>
     <string name="market_profile_member_since">%1$s မှစ၍ အဖွဲ့ဝင်</string>
+    <string name="market_profile_joined">%1$s တွင် ဝင်ရောက်ခဲ့သည်</string>
     <string name="market_profile_rating_breakdown">အဆင့်သတ်မှတ်ချက် အသေးစိတ်</string>
     <string name="market_profile_sales_count">ရောင်းချမှု %1$d ခု</string>
     <string name="market_profile_stars_value">ကြယ် %1$d ပွင့်</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">သင်၏ ဖိုင် %1$d ခုကို အောက်တွင် ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="market_purchase_download_one">သင်၏ ဖိုင်ကို အောက်တွင် ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="market_purchase_review_from">%1$s ထံမှ သုံးသပ်ချက်</string>
-    <string name="market_purchases_auction_label">လေလံပွဲ #%1$d</string>
+    <string name="market_purchases_auction_label">လေလံပွဲ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ပြန်အမ်းပြီး</string>
     <string name="market_purchases_won_for">%1$s ဖြင့် အနိုင်ရရှိ</string>
     <string name="market_refund_dialog_amount_help">မှာယူမှုအပြည့်ကို ပြန်အမ်းရန် ဗလာထားပါ။</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">ရောင်းသူ၏ တုံ့ပြန်ချက်</string>
     <string name="market_listing_detail_seller_reviews_heading">ရောင်းသူ၏ သုံးသပ်ချက်များ</string>
     <string name="market_account_stripe_open_failed">Stripe ကို ဖွင့်၍ မရပါ</string>
+    <string name="market_editor_stock">လက်ကျန်ပစ္စည်း</string>
+    <string name="market_editor_stock_units">ယူနစ် အရေအတွက်</string>
+    <string name="market_editor_stock_unlimited">အကန့်အသတ်မဲ့</string>
+    <string name="market_editor_start_time">စတင်ချိန်</string>
+    <string name="market_editor_start_time_help">ထုတ်ဝေချိန်တွင် စတင်ရန် ဗလာထားပါ။</string>
+    <string name="market_editor_start_time_next">နောက်တစ်ခု</string>
+    <string name="market_editor_start_time_clear">ရှင်းမည်</string>
+    <string name="market_listing_detail_buy_now_label">ယခုပင် ဝယ်မည်</string>
+    <string name="market_section_recently_viewed">လတ်တလော ကြည့်ရှုခဲ့</string>
+    <string name="market_recently_viewed_clear">အားလုံး ရှင်းမည်</string>
 </resources>

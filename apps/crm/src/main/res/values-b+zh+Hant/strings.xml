@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">欄目欄位沒有選項</string>
     <string name="crm_design_preview_empty">沒有可顯示的內容</string>
 
+    <string name="crm_access_tab_manual">手動</string>
+    <string name="crm_access_search_users">搜尋使用者</string>
+    <string name="crm_access_no_groups">無可用的群組</string>
+    <string name="crm_access_tab_users">使用者</string>
+    <string name="crm_access_tab_groups">群組</string>
+    <string name="crm_access_target">目標</string>
+    <string name="crm_access_target_hint">實體 ID、@群組、*（所有人）或 +（成員）</string>
+    <string name="crm_attachment_remove">移除附件</string>
+    <string name="crm_board_add_column">新增欄位</string>
+    <string name="crm_settings_entity_id">實體 ID</string>
+    <string name="crm_settings_fingerprint">指紋</string>
+    <string name="crm_settings_server">伺服器</string>
 </resources>

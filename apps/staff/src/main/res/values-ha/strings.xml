@@ -49,8 +49,8 @@
     <string name="staff_appeals_dialog_title">Yanke shawara kan roko</string>
     <string name="staff_appeals_empty">Babu appeals masu jiran tabbatarwa</string>
     <string name="staff_appeals_history">Tarihin listing</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Bayanai</string>
     <string name="staff_appeals_open_sidebar">Bude gefe</string>
     <string name="staff_appeals_submit">Aikawa</string>
@@ -220,7 +220,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Masu sayarwa</string>
     <string name="staff_dashboard_kpi_total_orders">Jimillar oda</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">A\'a</string>
     <string name="staff_dashboard_open_sidebar">Bude gefe</string>
     <string name="staff_dashboard_system">System</string>
@@ -238,7 +238,7 @@
     <string name="staff_disputes_empty">Babu jayayya</string>
     <string name="staff_disputes_filter_status_label">Matsayi</string>
     <string name="staff_disputes_history">Tarihin gardama</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Kuɗin chargeback</string>
     <string name="staff_disputes_meta_evidence_due">Shaida da ake bukata kafin</string>
     <string name="staff_disputes_meta_listing">Tallace</string>
@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">Ba a karɓa ba</string>
     <string name="staff_disputes_reason_other">Sauran</string>
     <string name="staff_disputes_reason_unauthorised">Ba a ba da izini ba</string>
-    <string name="staff_disputes_refund_exceeds_total">Adadin refund ya wuce jimillar oda</string>
     <string name="staff_disputes_refund_must_be_positive">Adadin refund dole ya zama fiye da sifili</string>
     <string name="staff_disputes_resolution_buyer">Warware don mai siye</string>
     <string name="staff_disputes_resolution_label">Warwarewa</string>
@@ -324,7 +323,7 @@
     <string name="staff_moderation_open_sidebar">Bude gefe</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_title">Log na moderation</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aiki</string>
     <string name="staff_reports_action_ban">Hana mai amfani</string>
     <string name="staff_reports_action_dismiss">Kau da shi</string>
@@ -472,7 +471,7 @@
     <string name="staff_team_toast_role_failed">An kasa sabunta matsayi</string>
     <string name="staff_team_toast_role_updated">An sabunta matsayi</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">Oda #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Oda #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">Ɗage dakatarwa</string>
     <string name="staff_accounts_reason_optional_label">Dalili (na zaɓi)</string>
@@ -507,11 +506,14 @@
     <string name="staff_disputes_stripe_unrecognized">caji da ba a sani ba</string>
     <string name="staff_listings_seller_unknown">Mai sayarwa da ba a sani ba</string>
     <string name="staff_listings_seller_verified">Mai sayarwa da aka tabbatar</string>
-    <string name="staff_reports_listing_label">Tallace-tallace #%1$d</string>
+    <string name="staff_reports_listing_label">Tallace-tallace #%1$s</string>
     <string name="staff_reports_meta_details">Bayanan mai bayar da rahoto</string>
-    <string name="staff_reviews_order_label">oda #%1$d</string>
+    <string name="staff_reviews_order_label">oda #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s a kan %3$s. A goge wannan ra\'ayin har abada? Ba za a iya warware wannan ba.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. A goge wannan ra\'ayin har abada? Ba za a iya warware wannan ba.</string>
     <string name="staff_team_dialog_search_placeholder">Bincika ta suna, yatsa, ko ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Sirrin sa hannu na webhook</string>
+    <string name="staff_disputes_meta_already_refunded">An riga an mayar</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Adadin maidawa ya wuce adadin da ya rage da za a iya mayarwa</string>
 </resources>

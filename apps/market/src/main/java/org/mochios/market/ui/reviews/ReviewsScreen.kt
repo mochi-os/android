@@ -116,9 +116,9 @@ fun ReviewsScreen(
                             serverUrl = viewModel.serverUrl,
                             onLoadMore = { viewModel.loadMore(ReviewsTab.SENT) },
                             onListingTap = { listingId ->
-                                if (listingId > 0L) {
+                                if (listingId.isNotEmpty()) {
                                     navController.navigate(
-                                        MarketApp.listingDetail(listingId.toString()),
+                                        MarketApp.listingDetail(listingId),
                                     )
                                 }
                             },
@@ -135,8 +135,8 @@ private fun ReceivedTab(
     state: ReviewsTabState,
     serverUrl: String,
     onLoadMore: () -> Unit,
-    onDraftChange: (Long, String) -> Unit,
-    onSubmit: (Long) -> Unit,
+    onDraftChange: (String, String) -> Unit,
+    onSubmit: (String) -> Unit,
 ) {
     EmptyOrError(state, R.string.market_reviews_empty_received_title, R.string.market_reviews_empty_received_subtitle) {
         InfiniteList(
@@ -162,7 +162,7 @@ private fun SentTab(
     state: ReviewsTabState,
     serverUrl: String,
     onLoadMore: () -> Unit,
-    onListingTap: (Long) -> Unit,
+    onListingTap: (String) -> Unit,
 ) {
     EmptyOrError(state, R.string.market_reviews_empty_sent_title, R.string.market_reviews_empty_sent_subtitle) {
         InfiniteList(
@@ -306,7 +306,7 @@ private fun ReceivedReviewCard(
 private fun SentReviewCard(
     review: Review,
     serverUrl: String,
-    onListingTap: (Long) -> Unit,
+    onListingTap: (String) -> Unit,
 ) {
     val format = LocalFormat.current
     val name = review.subjectName.orEmpty().ifBlank { review.subject }

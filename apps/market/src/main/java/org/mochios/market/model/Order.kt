@@ -15,8 +15,8 @@ import com.google.gson.annotations.SerializedName
  * get from older server versions, so they stay nullable.
  */
 data class Order(
-    val id: Long = 0,
-    val listing: Long = 0,
+    val id: String = "",
+    val listing: String = "",
     val buyer: String = "",
     val seller: String = "",
     val type: String = "",
@@ -35,7 +35,7 @@ data class Order(
     @SerializedName("address_region") val addressRegion: String = "",
     @SerializedName("address_postcode") val addressPostcode: String = "",
     @SerializedName("address_country") val addressCountry: String = "",
-    val option: Long = 0,
+    val option: String = "",
     val carrier: String = "",
     val tracking: String = "",
     val url: String = "",
@@ -102,8 +102,8 @@ data class Tracking(
  * the seller-supplied free-text note shown in the prior-refunds list.
  */
 data class Refund(
-    val id: Long = 0,
-    val order: Long = 0,
+    val id: String = "",
+    val order: String = "",
     val amount: Long = 0,
     val currency: Currency? = null,
     val reason: String = "",

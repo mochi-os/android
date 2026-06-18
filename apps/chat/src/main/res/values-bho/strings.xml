@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">स्थानीय रूप से हटाईं</string>
     <string name="chat_settings_delete_message">ई चैट आ ओकर संदेस के खाली एही डिवाइस से हटावेला।</string>
 
+    <string name="chat_message_deleted">ई मैसेज डिलीट कर दिहल गइल</string>
+    <string name="chat_search_hint">चैट में खोजीं...</string>
+    <string name="chat_search_no_results">कवनो नतीजा नइखे</string>
+    <string name="chat_message_forward">फॉरवर्ड करीं</string>
+    <string name="chat_forward_title">फॉरवर्ड करीं…</string>
+    <string name="chat_forward_search">चैट खोजीं…</string>
+    <string name="chat_forward_empty">फॉरवर्ड करे खातिर कवनो चैट नइखे</string>
+    <string name="chat_forward_success">फॉरवर्ड हो गइल</string>
+    <string name="chat_forward_failed">फॉरवर्ड ना हो सकल</string>
 </resources>

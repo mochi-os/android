@@ -114,8 +114,11 @@ fun AppealDecideDialog(
 
                 Spacer(Modifier.height(4.dp))
                 StaffAuditTimeline(
-                    kind = "appeal",
-                    objectId = appeal.id.toString(),
+                    // The audit timeline is the LISTING's moderation history.
+                    // "appeal" is not a valid audit kind (403); web uses
+                    // kind='listing' with the appeal's listing id.
+                    kind = "listing",
+                    objectId = appeal.listing.toString(),
                     modifier = Modifier.fillMaxWidth(),
                 )
             }

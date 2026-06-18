@@ -63,13 +63,13 @@ data class ListingDetailResponse(
 
 /** Inline `my_order` projection on [ListingDetailResponse]. */
 data class MyOrder(
-    val id: Long = 0,
+    val id: String = "",
     val status: String = "",
 )
 
 /** Inline `my_reservation` projection on [ListingDetailResponse]. */
 data class MyReservation(
-    val id: Long = 0,
+    val id: String = "",
     val type: String = "",
     val created: Long = 0,
 )
@@ -238,7 +238,7 @@ data class ThreadDetailResponse(
 
 /** Narrow listing projection on [ThreadDetailResponse]. */
 data class ThreadListingPreview(
-    val id: Long = 0,
+    val id: String = "",
     val title: String = "",
     val price: Long = 0,
     val currency: Currency? = null,

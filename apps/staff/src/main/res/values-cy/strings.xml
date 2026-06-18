@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Penderfynu apêl</string>
     <string name="staff_appeals_empty">Dim apeliadau ar y gweill</string>
     <string name="staff_appeals_history">Hanes y rhestriad</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Nodiadau</string>
     <string name="staff_appeals_open_sidebar">Agor y bar ochr</string>
     <string name="staff_appeals_reason_label">Rheswm apêl y gwerthwr</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Gwerthwyr</string>
     <string name="staff_dashboard_kpi_total_orders">Cyfanswm archebion</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Na</string>
     <string name="staff_dashboard_open_sidebar">Agor y bar ochr</string>
-    <string name="staff_dashboard_order_fallback">Archeb #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Archeb #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Archwiliad</string>
     <string name="staff_dashboard_tab_listings">Rhestriadau</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Dim anghydfodau</string>
     <string name="staff_disputes_filter_status_label">Statws</string>
     <string name="staff_disputes_history">Hanes anghydfodau</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Manylion y prynwr</string>
     <string name="staff_disputes_meta_chargeback_fee">Ffi cefnataliad</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">wedi\'u cadw gan Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Arall</string>
     <string name="staff_disputes_reason_unauthorised">Heb awdurdod</string>
     <string name="staff_disputes_refund_amount_label">Swm yr ad-daliad (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Mae swm yr ad-daliad yn fwy na chyfanswm yr archeb</string>
     <string name="staff_disputes_refund_help">Gadewch yn wag ar gyfer ad-daliad llawn o %1$s. Rhowch swm llai ar gyfer ad-daliad rhannol.</string>
     <string name="staff_disputes_refund_must_be_positive">Rhaid i swm yr ad-daliad fod yn fwy na sero</string>
     <string name="staff_disputes_resolution_buyer">Datrys i\'r prynwr</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Agor y bar ochr</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_title">Log cymedroli</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Gweithred</string>
     <string name="staff_reports_action_ban">Gwahardd defnyddiwr</string>
     <string name="staff_reports_action_dismiss">Diystyru</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Statws</string>
     <string name="staff_reports_filter_type_label">Math</string>
     <string name="staff_reports_history">Hanes adroddiadau</string>
-    <string name="staff_reports_listing_label">Hysbyseb #%1$d</string>
+    <string name="staff_reports_listing_label">Hysbyseb #%1$s</string>
     <string name="staff_reports_meta_details">Manylion yr adroddwr</string>
     <string name="staff_reports_meta_price">Pris</string>
     <string name="staff_reports_meta_reason">Rheswm</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Wedi\'i dynnu</string>
     <string name="staff_reviews_filter_status">Statws</string>
     <string name="staff_reviews_open_sidebar">Agor y bar ochr</string>
-    <string name="staff_reviews_order_label">archeb #%1$d</string>
+    <string name="staff_reviews_order_label">archeb #%1$s</string>
     <string name="staff_reviews_overflow_actions">Gweithredoedd</string>
     <string name="staff_reviews_remove_confirm">Tynnu</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ar %3$s. Dileu\'r adolygiad hwn yn barhaol? Ni ellir dadwneud y weithred hon.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Methwyd diweddaru\'r rôl</string>
     <string name="staff_team_toast_role_updated">Diweddarwyd y rôl</string>
 
+    <string name="staff_config_field_stripe_webhook">Cyfrinach lofnodi Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Eisoes wedi\'i ad-dalu</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Mae\'r swm ad-daliad yn fwy na\'r swm ad-daladwy sy\'n weddill</string>
 </resources>

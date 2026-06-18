@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Gjurmo paketën</string>
     <string name="market_purchases_complete_purchase">Përfundo blerjen</string>
     <string name="market_purchases_empty">Asnjë blerje</string>
-    <string name="market_purchases_order_label">Porosi #%1$d</string>
+    <string name="market_purchases_order_label">Porosi #%1$s</string>
     <string name="market_purchases_title">Blerjet</string>
     <string name="market_rating_label">Vlerësimi</string>
     <string name="market_rating_no_reviews">Ende pa vlerësime</string>
@@ -611,6 +611,7 @@
     <string name="market_price_starting_bid">Oferta fillestare: %1$s</string>
     <string name="market_profile_load_failed">Profili nuk u ngarkua dot</string>
     <string name="market_profile_member_since">Anëtar që nga %1$s</string>
+    <string name="market_profile_joined">U anëtarësua më %1$s</string>
     <string name="market_profile_rating_breakdown">Shpërndarja e vlerësimeve</string>
     <string name="market_profile_stars_value">%1$d yje</string>
     <string name="market_purchase_dispute_chargeback">Kthim pagese %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Shkarkoni %1$d skedarët tuaj më poshtë.</string>
     <string name="market_purchase_download_one">Shkarkoni skedarin tuaj më poshtë.</string>
     <string name="market_purchase_review_from">Vlerësim nga %1$s</string>
-    <string name="market_purchases_auction_label">Ankand #%1$d</string>
+    <string name="market_purchases_auction_label">Ankand #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s të rimbursuara</string>
     <string name="market_purchases_won_for">Fituar për %1$s</string>
     <string name="market_refund_dialog_amount_help">Lëreni bosh për të rimbursuar të gjithë porosinë.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Përgjigjja e shitësit</string>
     <string name="market_listing_detail_seller_reviews_heading">Vlerësimet e shitësit</string>
     <string name="market_account_stripe_open_failed">Stripe nuk u hap dot</string>
+    <string name="market_editor_stock">Stoku</string>
+    <string name="market_editor_stock_units">Numri i njësive</string>
+    <string name="market_editor_stock_unlimited">Pa kufi</string>
+    <string name="market_editor_start_time">Koha e fillimit</string>
+    <string name="market_editor_start_time_help">Lini bosh për të filluar në publikim.</string>
+    <string name="market_editor_start_time_next">Tjetra</string>
+    <string name="market_editor_start_time_clear">Pastro</string>
+    <string name="market_listing_detail_buy_now_label">Blije tani</string>
+    <string name="market_section_recently_viewed">Të parët së fundmi</string>
+    <string name="market_recently_viewed_clear">Pastro të gjitha</string>
 </resources>

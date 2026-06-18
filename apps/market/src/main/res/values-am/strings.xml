@@ -412,6 +412,7 @@
     <string name="market_profile_biography">ስለ</string>
     <string name="market_profile_load_failed">መገለጫን መጫን አልተቻለም</string>
     <string name="market_profile_member_since">ከ%1$s ጀምሮ አባል</string>
+    <string name="market_profile_joined">%1$s ተቀላቅሏል</string>
     <string name="market_profile_no_reviews">ገና ግምገማዎች የሉም።</string>
     <string name="market_profile_rating_breakdown">የደረጃ ስርጭት</string>
     <string name="market_profile_reviews_section">ግምገማዎች</string>
@@ -463,10 +464,10 @@
     <string name="market_purchase_title">ትዕዛዝ</string>
     <string name="market_purchase_total">ጠቅላላ</string>
     <string name="market_purchase_track">እሽጉን ይከታተሉ</string>
-    <string name="market_purchases_auction_label">ጨረታ #%1$d</string>
+    <string name="market_purchases_auction_label">ጨረታ #%1$s</string>
     <string name="market_purchases_complete_purchase">ግዢ አጠናቅቅ</string>
     <string name="market_purchases_empty">ምንም ግዢዎች የሉም</string>
-    <string name="market_purchases_order_label">ትዕዛዝ #%1$d</string>
+    <string name="market_purchases_order_label">ትዕዛዝ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ተመልሷል</string>
     <string name="market_purchases_title">ግዢዎች</string>
     <string name="market_purchases_won_for">በ%1$s ተሸንፏል</string>
@@ -729,4 +730,14 @@
     <string name="market_listing_detail_seller_response">የሻጭ ምላሽ</string>
     <string name="market_listing_detail_seller_reviews_heading">የሻጭ ግምገማዎች</string>
     <string name="market_account_stripe_open_failed">Stripeን መክፈት አልተቻለም</string>
+    <string name="market_editor_stock">ክምችት</string>
+    <string name="market_editor_stock_units">የክፍሎች ብዛት</string>
+    <string name="market_editor_stock_unlimited">ያልተገደበ</string>
+    <string name="market_editor_start_time">የመጀመሪያ ሰዓት</string>
+    <string name="market_editor_start_time_help">በማተም ላይ ለመጀመር ባዶ ይተዉት።</string>
+    <string name="market_editor_start_time_next">ቀጣይ</string>
+    <string name="market_editor_start_time_clear">አጽዳ</string>
+    <string name="market_listing_detail_buy_now_label">አሁን ግዛው</string>
+    <string name="market_section_recently_viewed">በቅርቡ የታዩ</string>
+    <string name="market_recently_viewed_clear">ሁሉንም አጽዳ</string>
 </resources>

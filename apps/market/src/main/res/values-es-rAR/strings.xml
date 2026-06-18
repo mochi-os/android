@@ -225,7 +225,7 @@
     <string name="market_purchase_review_rating">Calificación</string>
     <string name="market_purchase_review_submitted">Reseña enviada</string>
     <string name="market_purchase_total">Total</string>
-    <string name="market_purchases_order_label">Pedido #%1$d</string>
+    <string name="market_purchases_order_label">Pedido #%1$s</string>
     <string name="market_rating_label">Calificación</string>
     <string name="market_refund_details_label">Detalles</string>
     <string name="market_refund_reason_damaged">Dañado</string>
@@ -514,6 +514,7 @@
     <string name="market_profile_biography">Acerca de</string>
     <string name="market_profile_load_failed">No se pudo cargar el perfil</string>
     <string name="market_profile_member_since">Miembro desde %1$s</string>
+    <string name="market_profile_joined">Se unió el %1$s</string>
     <string name="market_profile_no_reviews">Aún no hay reseñas.</string>
     <string name="market_profile_rating_breakdown">Detalle de la calificación</string>
     <string name="market_profile_stars_value">%1$d estrellas</string>
@@ -542,7 +543,7 @@
     <string name="market_purchase_summary">Resumen del pedido</string>
     <string name="market_purchase_title">Pedido</string>
     <string name="market_purchase_track">Seguir paquete</string>
-    <string name="market_purchases_auction_label">Subasta n.º %1$d</string>
+    <string name="market_purchases_auction_label">Subasta n.º %1$s</string>
     <string name="market_purchases_complete_purchase">Completar compra</string>
     <string name="market_purchases_empty">Sin compras</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsado</string>
@@ -728,4 +729,10 @@
     <string name="market_sidebar_become_seller">Conviértete en vendedor</string>
     <string name="market_sidebar_seller_settings">Ajustes de vendedor</string>
     <string name="market_account_stripe_open_failed">No se pudo abrir Stripe</string>
+    <string name="market_editor_start_time_help">Dejalo en blanco para empezar al publicar.</string>
+    <string name="market_editor_start_time_next">Siguiente</string>
+    <string name="market_editor_start_time_clear">Quitar</string>
+    <string name="market_listing_detail_buy_now_label">Comprá ahora</string>
+    <string name="market_section_recently_viewed">Vistos recientemente</string>
+    <string name="market_recently_viewed_clear">Borrar todo</string>
 </resources>

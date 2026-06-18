@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Sapa wae</string>
     <string name="wikis_access_subject_authenticated">Pangguna sing wis dipriksa</string>
 
+    <string name="wikis_revision_compare">Bandhingake owahan</string>
+    <string name="wikis_revision_show_page">Tampilake kaca</string>
+    <string name="wikis_revision_compare_failed">Ora bisa ngemot versi sadurunge kanggo dibandhingake.</string>
+    <string name="wikis_revision_changes_from">Owahan saka versi %1$d → %2$d</string>
 </resources>

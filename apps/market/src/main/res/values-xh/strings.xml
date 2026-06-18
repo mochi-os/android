@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Landelela umthwalo</string>
     <string name="market_purchases_complete_purchase">Gqibezela ukuthenga</string>
     <string name="market_purchases_empty">Akukho ntengo zenziwe</string>
-    <string name="market_purchases_order_label">I-oda #%1$d</string>
+    <string name="market_purchases_order_label">I-oda #%1$s</string>
     <string name="market_purchases_title">Iintengo</string>
     <string name="market_rating_label">Ireyithingi</string>
     <string name="market_rating_no_reviews">Akukho zimvavanyo okwangoku</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Ibhidi yokuqala: %1$s</string>
     <string name="market_profile_load_failed">Akukwazekanga ukulayisha iprofayile</string>
     <string name="market_profile_member_since">Ilungu ukususela ngo-%1$s</string>
+    <string name="market_profile_joined">Wajoyina ngo-%1$s</string>
     <string name="market_profile_rating_breakdown">Inkcazo yolinganiselo</string>
     <string name="market_profile_sales_count">%1$d intengiso</string>
     <string name="market_profile_stars_value">%1$d iinkwenkwezi</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Khuphela iifayile zakho ezi-%1$d ngezantsi.</string>
     <string name="market_purchase_download_one">Khuphela ifayile yakho ngezantsi.</string>
     <string name="market_purchase_review_from">Uphononongo oluvela ku-%1$s</string>
-    <string name="market_purchases_auction_label">Ifandesi #%1$d</string>
+    <string name="market_purchases_auction_label">Ifandesi #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ebuyiselweyo</string>
     <string name="market_purchases_won_for">Iphunyelelwe nge-%1$s</string>
     <string name="market_refund_dialog_amount_help">Yishiye ingenanto ukuze ubuyisele i-oda lonke.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Impendulo yomthengisi</string>
     <string name="market_listing_detail_seller_reviews_heading">Iimbono ngomthengisi</string>
     <string name="market_account_stripe_open_failed">Akukwazekanga ukuvula iStripe</string>
+    <string name="market_editor_stock">Inani elifumanekayo</string>
+    <string name="market_editor_stock_units">Inani leeyunithi</string>
+    <string name="market_editor_stock_unlimited">Akunamda</string>
+    <string name="market_editor_start_time">Ixesha lokuqalisa</string>
+    <string name="market_editor_start_time_help">Shiya kungenanto ukuze uqalise ngokupapasha.</string>
+    <string name="market_editor_start_time_next">Okulandelayo</string>
+    <string name="market_editor_start_time_clear">Cima</string>
+    <string name="market_listing_detail_buy_now_label">Yithenge ngoku</string>
+    <string name="market_section_recently_viewed">Okubukwe kutsha nje</string>
+    <string name="market_recently_viewed_clear">Cima konke</string>
 </resources>

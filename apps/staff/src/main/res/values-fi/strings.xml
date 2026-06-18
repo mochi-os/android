@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Päätä valitus</string>
     <string name="staff_appeals_empty">Ei odottavia valituksia</string>
     <string name="staff_appeals_history">Ilmoituksen historia</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Muistiinpanot</string>
     <string name="staff_appeals_open_sidebar">Avaa sivupalkki</string>
     <string name="staff_appeals_reason_label">Myyjän valituksen syy</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Myyjät</string>
     <string name="staff_dashboard_kpi_total_orders">Tilauksia yhteensä</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ei</string>
     <string name="staff_dashboard_open_sidebar">Avaa sivupalkki</string>
-    <string name="staff_dashboard_order_fallback">Tilaus #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Tilaus #%1$s</string>
     <string name="staff_dashboard_system">Järjestelmä</string>
     <string name="staff_dashboard_tab_audit">Tarkastus</string>
     <string name="staff_dashboard_tab_listings">Ilmoitukset</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Ei riitoja</string>
     <string name="staff_disputes_filter_status_label">Tila</string>
     <string name="staff_disputes_history">Riitautushistoria</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Ostajan tiedot</string>
     <string name="staff_disputes_meta_chargeback_fee">Maksupalautusmaksu</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripen pidättämä</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Muu</string>
     <string name="staff_disputes_reason_unauthorised">Ei sallittu</string>
     <string name="staff_disputes_refund_amount_label">Palautussumma (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Hyvityssumma ylittää tilauksen kokonaissumman</string>
     <string name="staff_disputes_refund_help">Jätä tyhjäksi koko %1$s palautukselle. Syötä pienempi summa osittaista palautusta varten.</string>
     <string name="staff_disputes_refund_must_be_positive">Hyvityssumman on oltava nollaa suurempi</string>
     <string name="staff_disputes_resolution_buyer">Ratkaise ostajan hyväksi</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Avaa sivupalkki</string>
     <string name="staff_moderation_system">Järjestelmä</string>
     <string name="staff_moderation_title">Moderointiloki</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Toiminto</string>
     <string name="staff_reports_action_ban">Estä käyttäjä</string>
     <string name="staff_reports_action_dismiss">Hylkää</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Tila</string>
     <string name="staff_reports_filter_type_label">Tyyppi</string>
     <string name="staff_reports_history">Ilmoitushistoria</string>
-    <string name="staff_reports_listing_label">Ilmoitus #%1$d</string>
+    <string name="staff_reports_listing_label">Ilmoitus #%1$s</string>
     <string name="staff_reports_meta_details">Ilmoittajan tiedot</string>
     <string name="staff_reports_meta_price">Hinta</string>
     <string name="staff_reports_meta_reason">Syy</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Poistettu</string>
     <string name="staff_reviews_filter_status">Tila</string>
     <string name="staff_reviews_open_sidebar">Avaa sivupalkki</string>
-    <string name="staff_reviews_order_label">tilaus #%1$d</string>
+    <string name="staff_reviews_order_label">tilaus #%1$s</string>
     <string name="staff_reviews_overflow_actions">Toiminnot</string>
     <string name="staff_reviews_remove_confirm">Poista</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Poistetaanko tämä arvostelu pysyvästi? Tätä toimintoa ei voi peruuttaa.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Roolin päivitys epäonnistui</string>
     <string name="staff_team_toast_role_updated">Rooli päivitetty</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhookin allekirjoitussalaisuus</string>
+    <string name="staff_disputes_meta_already_refunded">Jo hyvitetty</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Hyvityssumma ylittää jäljellä olevan hyvitettävän summan</string>
 </resources>

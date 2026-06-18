@@ -49,8 +49,8 @@
     <string name="staff_appeals_dialog_title">اپيل تي فيصلو ڪريو</string>
     <string name="staff_appeals_empty">ڪا التوا ۾ اپيل نه آهي</string>
     <string name="staff_appeals_history">لسٽنگ تاريخ</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">نوٽ</string>
     <string name="staff_appeals_open_sidebar">سائڊبار کوليو</string>
     <string name="staff_appeals_submit">جمع ڪريو</string>
@@ -220,7 +220,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">وڪرو ڪندڙ</string>
     <string name="staff_dashboard_kpi_total_orders">ڪل آرڊر</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">نه</string>
     <string name="staff_dashboard_open_sidebar">سائڊبار کوليو</string>
     <string name="staff_dashboard_system">سسٽم</string>
@@ -238,7 +238,7 @@
     <string name="staff_disputes_empty">ڪا تڪرار نه آهي</string>
     <string name="staff_disputes_filter_status_label">حالت</string>
     <string name="staff_disputes_history">تڪرار جي تاريخ</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback في</string>
     <string name="staff_disputes_meta_evidence_due">ثبوت جي آخري تاريخ</string>
     <string name="staff_disputes_meta_listing">لسٽنگ</string>
@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">وصول نه ٿيو</string>
     <string name="staff_disputes_reason_other">ٻيو</string>
     <string name="staff_disputes_reason_unauthorised">غير مجاز</string>
-    <string name="staff_disputes_refund_exceeds_total">واپسي رقم آرڊر ڪل کان وڌيڪ آهي</string>
     <string name="staff_disputes_refund_must_be_positive">واپسي رقم صفر کان وڌيڪ هجڻ گهرجي</string>
     <string name="staff_disputes_resolution_buyer">خريد ڪندڙ لاءِ حل ڪريو</string>
     <string name="staff_disputes_resolution_label">حل</string>
@@ -324,7 +323,7 @@
     <string name="staff_moderation_open_sidebar">سائڊبار کوليو</string>
     <string name="staff_moderation_system">سسٽم</string>
     <string name="staff_moderation_title">اعتدال جو لاگ</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">عمل</string>
     <string name="staff_reports_action_ban">صارف تي پابندي</string>
     <string name="staff_reports_action_dismiss">رد ڪريو</string>
@@ -472,7 +471,7 @@
     <string name="staff_team_toast_role_failed">ڪردار اپڊيٽ ڪرڻ ۾ ناڪامي</string>
     <string name="staff_team_toast_role_updated">ڪردار اپڊيٽ ٿيو</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">آرڊر #%1$d</string>
+    <string name="staff_dashboard_order_fallback">آرڊر #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">معطلي ختم ڪريو</string>
     <string name="staff_accounts_reason_optional_label">سبب (اختياري)</string>
@@ -507,11 +506,14 @@
     <string name="staff_disputes_stripe_unrecognized">اڻ سڃاتل چارج</string>
     <string name="staff_listings_seller_unknown">اڻ ڄاتل وڪرو ڪندڙ</string>
     <string name="staff_listings_seller_verified">تصديق ٿيل وڪرو ڪندڙ</string>
-    <string name="staff_reports_listing_label">لسٽنگ #%1$d</string>
+    <string name="staff_reports_listing_label">لسٽنگ #%1$s</string>
     <string name="staff_reports_meta_details">رپورٽ ڪندڙ جون تفصيلون</string>
-    <string name="staff_reviews_order_label">آرڊر #%1$d</string>
+    <string name="staff_reviews_order_label">آرڊر #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s تي. هي جائزو مستقل طور ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. هي جائزو مستقل طور ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
     <string name="staff_team_dialog_search_placeholder">نالي، فنگر پرنٽ، يا ID سان ڳوليو…</string>
 
+    <string name="staff_config_field_stripe_webhook">ويب هوڪ دستخط ڳجهو ڪنجي</string>
+    <string name="staff_disputes_meta_already_refunded">اڳ ۾ ئي واپس ٿيل</string>
+    <string name="staff_disputes_refund_exceeds_remaining">واپسي رقم باقي واپسي لائق رقم کان وڌيڪ آهي</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ਕੋਈ ਵੀ</string>
     <string name="wikis_access_subject_authenticated">ਪ੍ਰਮਾਣਿਤ ਵਰਤੋਂਕਾਰ</string>
 
+    <string name="wikis_revision_compare">ਤਬਦੀਲੀਆਂ ਦੀ ਤੁਲਨਾ ਕਰੋ</string>
+    <string name="wikis_revision_show_page">ਪੰਨਾ ਦਿਖਾਓ</string>
+    <string name="wikis_revision_compare_failed">ਤੁਲਨਾ ਲਈ ਪਿਛਲਾ ਵਰਜਨ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।</string>
+    <string name="wikis_revision_changes_from">ਵਰਜਨ %1$d → %2$d ਤੋਂ ਤਬਦੀਲੀਆਂ</string>
 </resources>

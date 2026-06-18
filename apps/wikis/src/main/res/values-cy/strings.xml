@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Unrhyw un</string>
     <string name="wikis_access_subject_authenticated">Defnyddwyr dilys</string>
 
+    <string name="wikis_revision_compare">Cymharu newidiadau</string>
+    <string name="wikis_revision_show_page">Dangos y dudalen</string>
+    <string name="wikis_revision_compare_failed">Methwyd â llwytho\'r fersiwn flaenorol i\'w chymharu.</string>
+    <string name="wikis_revision_changes_from">Newidiadau o fersiwn %1$d → %2$d</string>
 </resources>

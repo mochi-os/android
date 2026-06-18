@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Видалити локально</string>
     <string name="chat_settings_delete_message">Це видалить чат та його повідомлення лише з цього пристрою.</string>
 
+    <string name="chat_message_deleted">Це повідомлення було видалено</string>
+    <string name="chat_search_hint">Пошук у чаті...</string>
+    <string name="chat_search_no_results">Немає результатів</string>
+    <string name="chat_message_forward">Переслати</string>
+    <string name="chat_forward_title">Переслати в…</string>
+    <string name="chat_forward_search">Пошук чатів…</string>
+    <string name="chat_forward_empty">Немає чатів для пересилання</string>
+    <string name="chat_forward_success">Переслано</string>
+    <string name="chat_forward_failed">Не вдалося переслати</string>
 </resources>

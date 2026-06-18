@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">გასაჩივრების გადაწყვეტა</string>
     <string name="staff_appeals_empty">მოლოდინში მყოფი გასაჩივრებები არ არის</string>
     <string name="staff_appeals_history">ჩამონათვალის ისტორია</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">შენიშვნები</string>
     <string name="staff_appeals_open_sidebar">გვერდითი პანელის გახსნა</string>
     <string name="staff_appeals_reason_label">გამყიდველის გასაჩივრების მიზეზი</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">გამყიდველები</string>
     <string name="staff_dashboard_kpi_total_orders">სულ</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">არა</string>
     <string name="staff_dashboard_open_sidebar">გვერდითი პანელის გახსნა</string>
-    <string name="staff_dashboard_order_fallback">შეკვეთა #%1$d</string>
+    <string name="staff_dashboard_order_fallback">შეკვეთა #%1$s</string>
     <string name="staff_dashboard_system">სისტემა</string>
     <string name="staff_dashboard_tab_audit">აუდიტი</string>
     <string name="staff_dashboard_tab_listings">ჩამონათვლები</string>
@@ -248,7 +248,7 @@
     <string name="staff_disputes_empty">დავები არ არის</string>
     <string name="staff_disputes_filter_status_label">სტატუსი</string>
     <string name="staff_disputes_history">დავის ისტორია</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">მყიდველის დეტალები</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback-ის საკომისიო</string>
     <string name="staff_disputes_meta_evidence_due">მტკიცებულების ვადა</string>
@@ -265,7 +265,6 @@
     <string name="staff_disputes_reason_not_received">არ არის მიღებული</string>
     <string name="staff_disputes_reason_other">სხვა</string>
     <string name="staff_disputes_reason_unauthorised">მინიჭების გარეშე</string>
-    <string name="staff_disputes_refund_exceeds_total">დაბრუნების ოდენობა აღემატება შეკვეთის ჯამს</string>
     <string name="staff_disputes_refund_must_be_positive">დაბრუნების ოდენობა ნულზე მეტი უნდა იყოს</string>
     <string name="staff_disputes_resolution_buyer">მყიდველის სასარგებლოდ გადაწყვეტა</string>
     <string name="staff_disputes_resolution_label">გადაწყვეტა</string>
@@ -338,7 +337,7 @@
     <string name="staff_moderation_open_sidebar">გვერდითი პანელის გახსნა</string>
     <string name="staff_moderation_system">სისტემა</string>
     <string name="staff_moderation_title">მოდერაციის ჟურნალი</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">მოქმედება</string>
     <string name="staff_reports_action_ban">მომხმარებლის Ban</string>
     <string name="staff_reports_action_dismiss">უარყოფა</string>
@@ -359,7 +358,7 @@
     <string name="staff_reports_filter_status_label">სტატუსი</string>
     <string name="staff_reports_filter_type_label">სამშაბათი</string>
     <string name="staff_reports_history">ანგარიშების ისტორია</string>
-    <string name="staff_reports_listing_label">განცხადება #%1$d</string>
+    <string name="staff_reports_listing_label">განცხადება #%1$s</string>
     <string name="staff_reports_meta_price">ფასი</string>
     <string name="staff_reports_meta_reason">მიზეზი</string>
     <string name="staff_reports_meta_reporter">მოანგარიშე</string>
@@ -511,9 +510,12 @@
     <string name="staff_disputes_stripe_subscription_canceled">გამოწერა გაუქმდა</string>
     <string name="staff_disputes_stripe_unrecognized">ამოუცნობი გადახდა</string>
     <string name="staff_reports_meta_details">მომხსენებლის დეტალები</string>
-    <string name="staff_reviews_order_label">შეკვეთა #%1$d</string>
+    <string name="staff_reviews_order_label">შეკვეთა #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s — %3$s. სამუდამოდ წავშალოთ ეს მიმოხილვა? ამის გაუქმება შეუძლებელია.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. სამუდამოდ წავშალოთ ეს მიმოხილვა? ამის გაუქმება შეუძლებელია.</string>
     <string name="staff_team_dialog_search_placeholder">ძიება სახელით, თითის ანაბეჭდით ან ID-ით…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook-ის ხელმოწერის საიდუმლო</string>
+    <string name="staff_disputes_meta_already_refunded">უკვე დაბრუნებულია</string>
+    <string name="staff_disputes_refund_exceeds_remaining">დაბრუნების თანხა აღემატება დარჩენილ დასაბრუნებელ თანხას</string>
 </resources>

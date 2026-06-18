@@ -412,6 +412,7 @@
     <string name="market_profile_biography">За</string>
     <string name="market_profile_load_failed">Не може да се вчита профилот</string>
     <string name="market_profile_member_since">Член од %1$s</string>
+    <string name="market_profile_joined">Се придружи %1$s</string>
     <string name="market_profile_no_reviews">Сè уште нема критики.</string>
     <string name="market_profile_rating_breakdown">Распределба на оцени</string>
     <string name="market_profile_reviews_section">Прегледи</string>
@@ -463,10 +464,10 @@
     <string name="market_purchase_title">Нарачај</string>
     <string name="market_purchase_total">Вкупно</string>
     <string name="market_purchase_track">Следи пакет</string>
-    <string name="market_purchases_auction_label">Аукција #%1$d</string>
+    <string name="market_purchases_auction_label">Аукција #%1$s</string>
     <string name="market_purchases_complete_purchase">Заврши купување</string>
     <string name="market_purchases_empty">Нема купувања</string>
-    <string name="market_purchases_order_label">Нарачка #%1$d</string>
+    <string name="market_purchases_order_label">Нарачка #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s вратени</string>
     <string name="market_purchases_title">Купувања</string>
     <string name="market_purchases_won_for">Освоено за %1$s</string>
@@ -729,4 +730,14 @@
     <string name="market_listing_detail_seller_response">Одговор на продавачот</string>
     <string name="market_listing_detail_seller_reviews_heading">Рецензии за продавачот</string>
     <string name="market_account_stripe_open_failed">Не може да се отвори Stripe</string>
+    <string name="market_editor_stock">Залиха</string>
+    <string name="market_editor_stock_units">Број на единици</string>
+    <string name="market_editor_stock_unlimited">Неограничено</string>
+    <string name="market_editor_start_time">Време на почеток</string>
+    <string name="market_editor_start_time_help">Оставете празно за почеток при објавување.</string>
+    <string name="market_editor_start_time_next">Следно</string>
+    <string name="market_editor_start_time_clear">Исчисти</string>
+    <string name="market_listing_detail_buy_now_label">Купи веднаш</string>
+    <string name="market_section_recently_viewed">Неодамна прегледано</string>
+    <string name="market_recently_viewed_clear">Исчисти сè</string>
 </resources>

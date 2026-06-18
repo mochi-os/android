@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Nema opcija u polju kolona</string>
     <string name="crm_design_preview_empty">Nema ničega za prikaz</string>
 
+    <string name="crm_access_tab_manual">Ручно</string>
+    <string name="crm_access_search_users">Претражи кориснике</string>
+    <string name="crm_access_no_groups">Нема доступних група</string>
+    <string name="crm_access_tab_users">Корисници</string>
+    <string name="crm_access_tab_groups">Групе</string>
+    <string name="crm_access_target">Циљ</string>
+    <string name="crm_access_target_hint">ID entiteta, @grupa, * (svi) ili + (članovi)</string>
+    <string name="crm_attachment_remove">Уклони прилог</string>
+    <string name="crm_board_add_column">Додај колону</string>
+    <string name="crm_settings_entity_id">ID ентитета</string>
+    <string name="crm_settings_fingerprint">Отисак прста</string>
+    <string name="crm_settings_server">Сервер</string>
 </resources>

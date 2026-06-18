@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Obriši lokalno</string>
     <string name="chat_settings_delete_message">Ovo uklanja chat i njegove poruke samo s ovog uređaja.</string>
 
+    <string name="chat_message_deleted">Ova poruka je izbrisana</string>
+    <string name="chat_search_hint">Pretraži u razgovoru...</string>
+    <string name="chat_search_no_results">Nema rezultata</string>
+    <string name="chat_message_forward">Proslijedi</string>
+    <string name="chat_forward_title">Proslijedi u…</string>
+    <string name="chat_forward_search">Pretraži razgovore…</string>
+    <string name="chat_forward_empty">Nema razgovora za prosljeđivanje</string>
+    <string name="chat_forward_success">Proslijeđeno</string>
+    <string name="chat_forward_failed">Prosljeđivanje nije uspjelo</string>
 </resources>

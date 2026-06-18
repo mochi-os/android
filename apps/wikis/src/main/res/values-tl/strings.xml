@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Sinuman</string>
     <string name="wikis_access_subject_authenticated">Mga napatotohanang user</string>
 
+    <string name="wikis_revision_compare">Ihambing ang mga pagbabago</string>
+    <string name="wikis_revision_show_page">Ipakita ang pahina</string>
+    <string name="wikis_revision_compare_failed">Hindi ma-load ang nakaraang bersyon para sa paghahambing.</string>
+    <string name="wikis_revision_changes_from">Mga pagbabago mula sa bersyon %1$d → %2$d</string>
 </resources>

@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Autentificare cu mai mulți factori</string>
     <string name="auth_mfa_subtitle">Finalizează pașii de verificare rămași</string>
     <string name="auth_recover_account">Recuperează contul</string>
+    <string name="auth_login_title">Conectează-te la Mochi</string>
+    <string name="auth_next">Înainte</string>
+    <string name="auth_or_log_in_with">Sau conectează-te cu</string>
+    <string name="auth_passkey">Cheie de acces</string>
+    <string name="auth_use_passkey">Folosește o cheie de acces</string>
+    <string name="auth_email_me_a_code">Trimite-mi un cod prin e-mail</string>
+    <string name="auth_or_enter_authenticator_code">Sau introdu codul de autentificare</string>
+    <string name="auth_log_in">Conectează-te</string>
+    <string name="auth_back">Înapoi</string>
+    <string name="auth_lost_access_recovery">Ai pierdut accesul? Folosește un cod de recuperare</string>
     <string name="auth_create_identity_title">Creează-ți identitatea</string>
     <string name="auth_create_identity_subtitle">Alege un nume pentru identitatea ta pe acest server</string>
     <string name="auth_privacy_public_description">Apare în directorul de utilizatori, astfel încât alții te pot găsi.</string>

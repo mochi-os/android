@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Her kes</string>
     <string name="wikis_access_subject_authenticated">Bikarhênerên erêkirî</string>
 
+    <string name="wikis_revision_compare">Guhertinan bidin ber hev</string>
+    <string name="wikis_revision_show_page">Rûpelê nîşan bide</string>
+    <string name="wikis_revision_compare_failed">Ji bo berhevkirinê guhertoya berê nehat barkirin.</string>
+    <string name="wikis_revision_changes_from">Guhertin ji guhertoya %1$d → %2$d</string>
 </resources>

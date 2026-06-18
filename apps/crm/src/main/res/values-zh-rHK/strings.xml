@@ -326,4 +326,14 @@
     <string name="crm_design_preview_empty">沒有可顯示的內容</string>
     <string name="crm_not_found">找不到 CRM</string>
 
+    <string name="crm_access_search_users">搜尋用戶</string>
+    <string name="crm_access_tab_users">用戶</string>
+    <string name="crm_access_tab_groups">Groups</string>
+    <string name="crm_access_tab_manual">手動</string>
+    <string name="crm_access_no_groups">No groups available</string>
+    <string name="crm_access_target">目標</string>
+    <string name="crm_access_target_hint">實體 ID、@群組、*（所有人）或 +（成員）</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_settings_entity_id">Entity ID</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
 </resources>

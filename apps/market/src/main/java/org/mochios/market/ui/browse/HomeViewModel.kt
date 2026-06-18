@@ -110,6 +110,12 @@ class HomeViewModel @Inject constructor(
         runSearch(reset = true)
     }
 
+    /** Clear the on-device recently-viewed history; the observe() flow then
+     *  emits empty and drops the strip. Mirrors web's clearRecentlyViewed. */
+    fun clearRecentlyViewed() {
+        viewModelScope.launch { recentStore.clear() }
+    }
+
     fun openFilterSheet(focused: Filter? = null) {
         _state.value = _state.value.copy(filterSheetOpen = true, focusedFilter = focused)
     }
@@ -238,15 +244,14 @@ class HomeViewModel @Inject constructor(
                 // — 20 round-trips per home load on a freshly opened app.
                 val resolved = arrayOfNulls<Listing>(ids.size)
                 val missingIndexes = mutableListOf<Int>()
-                val missingIds = mutableListOf<Long>()
+                val missingIds = mutableListOf<String>()
                 ids.forEachIndexed { index, id ->
                     val cached = listingCache[id]
                     if (cached != null) {
                         resolved[index] = cached
                     } else {
-                        val longId = id.toLongOrNull() ?: return@forEachIndexed
                         missingIndexes += index
-                        missingIds += longId
+                        missingIds += id
                     }
                 }
                 if (missingIds.isNotEmpty()) {
@@ -254,7 +259,7 @@ class HomeViewModel @Inject constructor(
                     // The batch helper drops failed individual fetches, so we
                     // can't assume `fetched.size == missingIds.size`. Match by
                     // listing id rather than positional index.
-                    val byId = fetched.associateBy { it.id.toString() }
+                    val byId = fetched.associateBy { it.id }
                     missingIndexes.forEach { slot ->
                         val id = ids[slot]
                         val listing = byId[id]

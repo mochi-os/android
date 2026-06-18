@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ఎవరైనా</string>
     <string name="wikis_access_subject_authenticated">ప్రామాణీకరించిన వినియోగదారులు</string>
 
+    <string name="wikis_revision_compare">మార్పులను పోల్చండి</string>
+    <string name="wikis_revision_show_page">పేజీని చూపించు</string>
+    <string name="wikis_revision_compare_failed">పోలిక కోసం మునుపటి వెర్షన్‌ను లోడ్ చేయడం సాధ్యం కాలేదు.</string>
+    <string name="wikis_revision_changes_from">%1$d → %2$d వెర్షన్ నుండి మార్పులు</string>
 </resources>

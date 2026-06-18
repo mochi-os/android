@@ -36,7 +36,6 @@ data class AuthUiState(
     val identityName: String = "",
     val identityPrivacy: String = "public",
     val recoveryCode: String = "",
-    val showRecovery: Boolean = false,
     val authComplete: Boolean = false,
     val needsIdentity: Boolean = false,
     val serverValidated: Boolean = false,
@@ -119,11 +118,52 @@ class AuthViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(recoveryCode = code, error = null)
     }
 
-    fun toggleRecovery() {
+    /**
+     * Clear all per-user login input so the flow restarts at the email step.
+     *
+     * The AuthViewModel is activity-scoped and outlives the AuthNavigation
+     * composable, so after a logout it still holds the previous user's email
+     * and [BeginResult]. AuthNavigation calls this on (re)entry to wipe that
+     * stale state. Server-level config ([AuthUiState.serverValidated],
+     * [AuthUiState.methods]) is preserved so the user isn't bounced back
+     * through server setup.
+     */
+    fun resetForLogin() {
         _uiState.value = _uiState.value.copy(
-            showRecovery = !_uiState.value.showRecovery,
+            email = "",
+            beginResult = null,
+            codeSent = false,
+            code = "",
+            totpCode = "",
+            mfaPartial = null,
+            mfaRemaining = emptyList(),
+            mfaEmailCode = "",
+            mfaTotpCode = "",
+            identityName = "",
+            identityPrivacy = "public",
+            recoveryCode = "",
+            needsIdentity = false,
             error = null
         )
+    }
+
+    /** Return from the per-account method step to email entry, keeping the
+     *  typed email and the server method config but clearing any in-progress
+     *  code/recovery input. Mirrors the mockup's "Back" affordance. */
+    fun backToEmailEntry() {
+        _uiState.value = _uiState.value.copy(
+            beginResult = null,
+            codeSent = false,
+            code = "",
+            totpCode = "",
+            recoveryCode = "",
+            error = null
+        )
+    }
+
+    /** Clear the recovery-code input when leaving the recovery step. */
+    fun clearRecovery() {
+        _uiState.value = _uiState.value.copy(recoveryCode = "", error = null)
     }
 
     fun validateServer() {
@@ -171,9 +211,10 @@ class AuthViewModel @Inject constructor(
                     isLoading = false,
                     beginResult = result
                 )
-                // Match the web flow: auto-send the email code so the user
-                // doesn't see an extra "Send code" tap before the input.
-                if (result.methods.contains("email") && !result.hasPasskey) {
+                // When email code is the only allowed factor there's no choice
+                // to make, so send the code immediately and drop the user
+                // straight onto the code input.
+                if (result.allowed.singleOrNull() == "email") {
                     requestEmailCode()
                 }
             } catch (e: Exception) {

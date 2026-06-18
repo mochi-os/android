@@ -11,17 +11,27 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Event
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.DatePicker
+import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TimePicker
+import androidx.compose.material3.rememberDatePickerState
+import androidx.compose.material3.rememberTimePickerState
+import org.mochios.android.R as MochiR
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -70,6 +80,7 @@ fun PricingModelSelector(
     durationDays: Int,
     reserveText: String,
     instantText: String,
+    opensAt: Long?,
     onPricingChange: (PricingModel) -> Unit,
     onCurrencyChange: (Currency) -> Unit,
     onPriceChange: (String) -> Unit,
@@ -77,6 +88,7 @@ fun PricingModelSelector(
     onDurationChange: (Int) -> Unit,
     onReserveChange: (String) -> Unit,
     onInstantChange: (String) -> Unit,
+    onOpensChange: (Long?) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -143,6 +155,7 @@ fun PricingModelSelector(
                     helperText = stringResource(R.string.market_editor_instant_help),
                 )
                 DurationDropdown(days = durationDays, onChange = onDurationChange)
+                StartTimeField(opensAt = opensAt, onChange = onOpensChange)
             }
         }
     }
@@ -320,6 +333,131 @@ private fun PriceField(
                 }
             },
             modifier = Modifier.fillMaxWidth(),
+        )
+    }
+}
+
+/**
+ * Optional future auction start time. Tapping the calendar icon picks a date
+ * then a time (combined in the device's local zone, matching web's
+ * datetime-local). Clearing reverts to "start on publish" (opensAt = null).
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun StartTimeField(
+    opensAt: Long?,
+    onChange: (Long?) -> Unit,
+) {
+    var showDate by remember { mutableStateOf(false) }
+    var showTime by remember { mutableStateOf(false) }
+    var pickedDateMillis by remember { mutableStateOf<Long?>(null) }
+
+    // Empty when no start time (the field then reads as "start on publish",
+    // explained by the help text below — matching web's empty datetime input).
+    val display = opensAt?.let {
+        java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault())
+            .format(java.util.Date(it * 1000L))
+    } ?: ""
+
+    Column(modifier = Modifier.fillMaxWidth()) {
+        OutlinedTextField(
+            value = display,
+            onValueChange = {},
+            readOnly = true,
+            label = { Text(stringResource(R.string.market_editor_start_time)) },
+            trailingIcon = {
+                Row {
+                    if (opensAt != null) {
+                        IconButton(onClick = { onChange(null) }) {
+                            Icon(
+                                Icons.Default.Clear,
+                                contentDescription = stringResource(R.string.market_editor_start_time_clear),
+                            )
+                        }
+                    }
+                    IconButton(onClick = { showDate = true }) {
+                        Icon(
+                            Icons.Default.Event,
+                            contentDescription = stringResource(R.string.market_editor_start_time),
+                        )
+                    }
+                }
+            },
+            modifier = Modifier.fillMaxWidth(),
+        )
+        Text(
+            stringResource(R.string.market_editor_start_time_help),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(start = 16.dp, top = 4.dp),
+        )
+    }
+
+    if (showDate) {
+        val dateState = rememberDatePickerState(
+            initialSelectedDateMillis = opensAt?.let { it * 1000L } ?: System.currentTimeMillis(),
+        )
+        DatePickerDialog(
+            onDismissRequest = { showDate = false },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        pickedDateMillis = dateState.selectedDateMillis
+                        showDate = false
+                        if (pickedDateMillis != null) showTime = true
+                    },
+                    enabled = dateState.selectedDateMillis != null,
+                ) { Text(stringResource(R.string.market_editor_start_time_next)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDate = false }) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
+            },
+        ) { DatePicker(state = dateState) }
+    }
+
+    if (showTime) {
+        val initial = java.util.Calendar.getInstance().apply { opensAt?.let { timeInMillis = it * 1000L } }
+        val timeState = rememberTimePickerState(
+            initialHour = initial.get(java.util.Calendar.HOUR_OF_DAY),
+            initialMinute = initial.get(java.util.Calendar.MINUTE),
+        )
+        AlertDialog(
+            onDismissRequest = { showTime = false },
+            title = { Text(stringResource(R.string.market_editor_start_time)) },
+            text = { TimePicker(state = timeState) },
+            confirmButton = {
+                TextButton(onClick = {
+                    val dm = pickedDateMillis
+                    if (dm != null) {
+                        // DatePicker returns UTC-midnight millis; read the
+                        // calendar date in UTC, then rebuild in the local zone
+                        // with the picked time so the epoch matches the user's
+                        // local datetime (as web's datetime-local does).
+                        val utc = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
+                            .apply { timeInMillis = dm }
+                        val local = java.util.Calendar.getInstance().apply {
+                            set(
+                                utc.get(java.util.Calendar.YEAR),
+                                utc.get(java.util.Calendar.MONTH),
+                                utc.get(java.util.Calendar.DAY_OF_MONTH),
+                                timeState.hour,
+                                timeState.minute,
+                                0,
+                            )
+                            set(java.util.Calendar.MILLISECOND, 0)
+                        }
+                        onChange(local.timeInMillis / 1000L)
+                    }
+                    showTime = false
+                }) { Text(stringResource(MochiR.string.common_save)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showTime = false }) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
+            },
         )
     }
 }

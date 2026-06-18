@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">裁决申诉</string>
     <string name="staff_appeals_empty">无待处理的申诉</string>
     <string name="staff_appeals_history">商品历史</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">备注</string>
     <string name="staff_appeals_open_sidebar">打开侧边栏</string>
     <string name="staff_appeals_reason_label">卖家申诉理由</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">卖家</string>
     <string name="staff_dashboard_kpi_total_orders">订单总数</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">否</string>
     <string name="staff_dashboard_open_sidebar">打开侧边栏</string>
-    <string name="staff_dashboard_order_fallback">订单 #%1$d</string>
+    <string name="staff_dashboard_order_fallback">订单 #%1$s</string>
     <string name="staff_dashboard_system">系统</string>
     <string name="staff_dashboard_tab_audit">审计</string>
     <string name="staff_dashboard_tab_listings">商品</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">无争议</string>
     <string name="staff_disputes_filter_status_label">状态</string>
     <string name="staff_disputes_history">争议历史</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">买家详情</string>
     <string name="staff_disputes_meta_chargeback_fee">拒付手续费</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">由 Stripe 留存</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">其他</string>
     <string name="staff_disputes_reason_unauthorised">未授权</string>
     <string name="staff_disputes_refund_amount_label">退款金额(%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">退款金额超过订单总额</string>
     <string name="staff_disputes_refund_help">留空表示全额退款 %1$s。输入较小金额表示部分退款。</string>
     <string name="staff_disputes_refund_must_be_positive">退款金额必须大于零</string>
     <string name="staff_disputes_resolution_buyer">判给买家</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">打开侧边栏</string>
     <string name="staff_moderation_system">系统</string>
     <string name="staff_moderation_title">审核日志</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">操作</string>
     <string name="staff_reports_action_ban">封禁用户</string>
     <string name="staff_reports_action_dismiss">关闭</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">状态</string>
     <string name="staff_reports_filter_type_label">类型</string>
     <string name="staff_reports_history">举报历史</string>
-    <string name="staff_reports_listing_label">商品 #%1$d</string>
+    <string name="staff_reports_listing_label">商品 #%1$s</string>
     <string name="staff_reports_meta_details">举报人详情</string>
     <string name="staff_reports_meta_price">价格</string>
     <string name="staff_reports_meta_reason">原因</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">已移除</string>
     <string name="staff_reviews_filter_status">状态</string>
     <string name="staff_reviews_open_sidebar">打开侧边栏</string>
-    <string name="staff_reviews_order_label">订单 #%1$d</string>
+    <string name="staff_reviews_order_label">订单 #%1$s</string>
     <string name="staff_reviews_overflow_actions">操作</string>
     <string name="staff_reviews_remove_confirm">移除</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s 于 %3$s。永久删除此评价?此操作无法撤销。</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">更新角色失败</string>
     <string name="staff_team_toast_role_updated">角色已更新</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook 签名密钥</string>
+    <string name="staff_disputes_meta_already_refunded">已退款</string>
+    <string name="staff_disputes_refund_exceeds_remaining">退款金额超出剩余可退款金额</string>
 </resources>

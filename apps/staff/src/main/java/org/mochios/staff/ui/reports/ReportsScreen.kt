@@ -129,7 +129,7 @@ private fun ReportsBody(
     onTypeChange: (String?) -> Unit,
     onStatusChange: (String?) -> Unit,
     onLoadMore: () -> Unit,
-    onOpenListing: (Long) -> Unit,
+    onOpenListing: (String) -> Unit,
     onOpenReport: (Report) -> Unit,
     onRetry: () -> Unit,
 ) {
@@ -180,7 +180,7 @@ private fun ReportsBody(
 @Composable
 private fun ReportRow(
     report: Report,
-    onOpenListing: (Long) -> Unit,
+    onOpenListing: (String) -> Unit,
     onActionClick: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -273,7 +273,7 @@ private fun ReportRow(
 @Composable
 private fun targetText(report: Report): String = when (report.type) {
     "listing" -> report.listing?.title
-        ?: stringResource(R.string.staff_reports_listing_label, report.target.toLongOrNull() ?: 0L)
+        ?: stringResource(R.string.staff_reports_listing_label, report.target)
     else -> report.targetName.ifBlank { formatFingerprint(report.target) }
 }
 

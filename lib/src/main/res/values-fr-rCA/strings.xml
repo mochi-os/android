@@ -106,6 +106,16 @@
     <string name="auth_authenticator_code">Code de l\'application d\'authentification</string>
     <string name="auth_recovery_code">Code de récupération</string>
     <string name="auth_recover_account">Récupérer le compte</string>
+    <string name="auth_login_title">Connectez-vous à Mochi</string>
+    <string name="auth_next">Suivant</string>
+    <string name="auth_or_log_in_with">Ou connectez-vous avec</string>
+    <string name="auth_passkey">Clé d\'accès</string>
+    <string name="auth_use_passkey">Utiliser une clé d\'accès</string>
+    <string name="auth_email_me_a_code">M\'envoyer un code par courriel</string>
+    <string name="auth_or_enter_authenticator_code">Ou saisissez le code de l\'authentificateur</string>
+    <string name="auth_log_in">Se connecter</string>
+    <string name="auth_back">Retour</string>
+    <string name="auth_lost_access_recovery">Accès perdu? Utilisez un code de récupération</string>
     <string name="auth_create_identity_subtitle">Choisissez un nom pour votre identité sur ce serveur</string>
     <string name="auth_privacy_public_description">Affichée dans le répertoire des utilisateurs afin que les autres puissent vous trouver.</string>
     <string name="auth_privacy_private_description">Masquée du répertoire des utilisateurs.</string>

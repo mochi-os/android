@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">هەرکەسێک</string>
     <string name="wikis_access_subject_authenticated">بەکارهێنەرە پشتڕاستکراوەکان</string>
 
+    <string name="wikis_revision_compare">بەراوردکردنی گۆڕانکارییەکان</string>
+    <string name="wikis_revision_show_page">پیشاندانی لاپەڕە</string>
+    <string name="wikis_revision_compare_failed">نەتوانرا وەشانی پێشوو بۆ بەراوردکردن بار بکرێت.</string>
+    <string name="wikis_revision_changes_from">گۆڕانکارییەکان لە وەشانی %1$d → %2$d</string>
 </resources>

@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d продаја</string>
     <string name="market_profile_sales_count">%1$d продаја</string>
     <string name="market_purchase_dispute_response">Одговор продавца</string>
-    <string name="market_purchases_order_label">Поруџбина #%1$d</string>
+    <string name="market_purchases_order_label">Поруџбина #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Реците купцима о себи…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">O korisniku</string>
     <string name="market_profile_load_failed">Učitavanje profila nije uspelo</string>
     <string name="market_profile_member_since">Član od %1$s</string>
+    <string name="market_profile_joined">Pridružio se %1$s</string>
     <string name="market_profile_no_reviews">Još nema recenzija.</string>
     <string name="market_profile_rating_breakdown">Raspodela ocena</string>
     <string name="market_profile_stars_value">%1$d zvezdica</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Preuzmite svojih %1$d fajlova ispod.</string>
     <string name="market_purchase_download_one">Preuzmite svoj fajl ispod.</string>
     <string name="market_purchase_review_from">Recenzija od %1$s</string>
-    <string name="market_purchases_auction_label">Aukcija #%1$d</string>
+    <string name="market_purchases_auction_label">Aukcija #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refundirano</string>
     <string name="market_purchases_won_for">Osvojeno za %1$s</string>
     <string name="market_rating_reviews">(%1$d recenzija)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Одговор продавца</string>
     <string name="market_listing_detail_seller_reviews_heading">Рецензије продавца</string>
     <string name="market_account_stripe_open_failed">Nije moguće otvoriti Stripe</string>
+    <string name="market_editor_stock">Залихе</string>
+    <string name="market_editor_stock_units">Број јединица</string>
+    <string name="market_editor_stock_unlimited">Неограничено</string>
+    <string name="market_editor_start_time">Време почетка</string>
+    <string name="market_editor_start_time_help">Оставите празно да започне при објављивању.</string>
+    <string name="market_editor_start_time_next">Dalje</string>
+    <string name="market_editor_start_time_clear">Очисти</string>
+    <string name="market_listing_detail_buy_now_label">Купи одмах</string>
+    <string name="market_section_recently_viewed">Недавно прегледано</string>
+    <string name="market_recently_viewed_clear">Очисти све</string>
 </resources>

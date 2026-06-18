@@ -27,8 +27,8 @@
     <string name="market_price_per_month">%1$s / jyut6</string>
     <string name="market_price_per_year">%1$s / nin4</string>
     <string name="market_profile_sales_count">%1$d gin6 sou1sau3</string>
-    <string name="market_purchases_auction_label">Paak3maai6 #%1$d</string>
-    <string name="market_purchases_order_label">Deng6daan1 #%1$d</string>
+    <string name="market_purchases_auction_label">Paak3maai6 #%1$s</string>
+    <string name="market_purchases_order_label">Deng6daan1 #%1$s</string>
     <string name="market_rating_reviews">(%1$d ping4leon6)</string>
     <string name="market_checkout_address_name">名稱</string>
     <string name="market_back">返回</string>
@@ -469,6 +469,7 @@
     <string name="market_profile_biography">關於</string>
     <string name="market_profile_load_failed">無法載入個人檔案</string>
     <string name="market_profile_member_since">加入日期:%1$s</string>
+    <string name="market_profile_joined">%1$s 加入</string>
     <string name="market_profile_no_reviews">暫時未有評價。</string>
     <string name="market_profile_rating_breakdown">評分分析</string>
     <string name="market_profile_stars_value">%1$d 星</string>
@@ -727,4 +728,9 @@
     <string name="market_sidebar_become_seller">成為賣家</string>
     <string name="market_sidebar_seller_settings">賣家設定</string>
     <string name="market_account_stripe_open_failed">無法開啟 Stripe</string>
+    <string name="market_editor_start_time_next">下一步</string>
+    <string name="market_editor_start_time_clear">清除</string>
+    <string name="market_listing_detail_buy_now_label">即刻買</string>
+    <string name="market_section_recently_viewed">最近瀏覽</string>
+    <string name="market_recently_viewed_clear">全部清除</string>
 </resources>

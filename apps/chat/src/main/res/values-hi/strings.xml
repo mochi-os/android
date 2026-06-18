@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">स्थानीय रूप से हटाएँ</string>
     <string name="chat_settings_delete_message">यह चैट और उसके संदेशों को केवल इस डिवाइस से हटाता है।</string>
 
+    <string name="chat_message_deleted">यह मैसेज डिलीट कर दिया गया</string>
+    <string name="chat_search_hint">चैट में खोजें...</string>
+    <string name="chat_search_no_results">कोई परिणाम नहीं</string>
+    <string name="chat_message_forward">फ़ॉरवर्ड करें</string>
+    <string name="chat_forward_title">फ़ॉरवर्ड करें…</string>
+    <string name="chat_forward_search">चैट खोजें…</string>
+    <string name="chat_forward_empty">फ़ॉरवर्ड करने के लिए कोई चैट नहीं</string>
+    <string name="chat_forward_success">फ़ॉरवर्ड किया गया</string>
+    <string name="chat_forward_failed">फ़ॉरवर्ड नहीं किया जा सका</string>
 </resources>

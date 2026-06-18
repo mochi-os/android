@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">حذف محلی</string>
     <string name="chat_settings_delete_message">این کار گفتگو و پیام‌های آن را فقط از این دستگاه حذف می‌کند.</string>
 
+    <string name="chat_message_deleted">این پیام حذف شد</string>
+    <string name="chat_search_hint">جستجو در چت...</string>
+    <string name="chat_search_no_results">نتیجه‌ای یافت نشد</string>
+    <string name="chat_message_forward">بازارسال</string>
+    <string name="chat_forward_title">بازارسال به…</string>
+    <string name="chat_forward_search">جستجوی چت‌ها…</string>
+    <string name="chat_forward_empty">چتی برای بازارسال وجود ندارد</string>
+    <string name="chat_forward_success">بازارسال شد</string>
+    <string name="chat_forward_failed">بازارسال ناموفق بود</string>
 </resources>

@@ -412,6 +412,7 @@
     <string name="market_profile_biography">Туралы</string>
     <string name="market_profile_load_failed">Профильді жүктеу мүмкін болмады</string>
     <string name="market_profile_member_since">%1$s бастап мүше</string>
+    <string name="market_profile_joined">%1$s қосылды</string>
     <string name="market_profile_no_reviews">Әлі пікірлер жоқ.</string>
     <string name="market_profile_rating_breakdown">Рейтинг бөлінісі</string>
     <string name="market_profile_reviews_section">Шолулар</string>
@@ -463,10 +464,10 @@
     <string name="market_purchase_title">Тапсырыс</string>
     <string name="market_purchase_total">Барлығы</string>
     <string name="market_purchase_track">Қаптаманы бақылау</string>
-    <string name="market_purchases_auction_label">Аукцион №%1$d</string>
+    <string name="market_purchases_auction_label">Аукцион №%1$s</string>
     <string name="market_purchases_complete_purchase">Сатып алуды аяқтау</string>
     <string name="market_purchases_empty">Сатып алулар жоқ</string>
-    <string name="market_purchases_order_label">Тапсырыс №%1$d</string>
+    <string name="market_purchases_order_label">Тапсырыс №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s қайтарылды</string>
     <string name="market_purchases_title">Сатып алулар</string>
     <string name="market_purchases_won_for">%1$s үшін жеңіс</string>
@@ -729,4 +730,14 @@
     <string name="market_listing_detail_seller_response">Сатушы жауабы</string>
     <string name="market_listing_detail_seller_reviews_heading">Сатушы туралы пікірлер</string>
     <string name="market_account_stripe_open_failed">Stripe ашу мүмкін болмады</string>
+    <string name="market_editor_stock">Қор</string>
+    <string name="market_editor_stock_units">Бірлік саны</string>
+    <string name="market_editor_stock_unlimited">Шектеусіз</string>
+    <string name="market_editor_start_time">Бастау уақыты</string>
+    <string name="market_editor_start_time_help">Жариялау кезінде басталу үшін бос қалдырыңыз.</string>
+    <string name="market_editor_start_time_next">Келесі</string>
+    <string name="market_editor_start_time_clear">Тазалау</string>
+    <string name="market_listing_detail_buy_now_label">Қазір сатып алу</string>
+    <string name="market_section_recently_viewed">Соңғы көрілгендер</string>
+    <string name="market_recently_viewed_clear">Барлығын тазалау</string>
 </resources>

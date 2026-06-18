@@ -125,7 +125,7 @@ class AppealsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.decideAppeal(
-                    listingId = current.listing.toInt(),
+                    listingId = current.listing,
                     decision = decision,
                     notes = notes.takeIf { it.isNotBlank() },
                 )

@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Шағымды шешу</string>
     <string name="staff_appeals_empty">Күтудегі шағымдар жоқ</string>
     <string name="staff_appeals_history">Хабарландыру тарихы</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Жазбалар</string>
     <string name="staff_appeals_open_sidebar">Бүйір тақтаны ашу</string>
     <string name="staff_appeals_reason_label">Сатушының шағымы себебі</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Сатушылар</string>
     <string name="staff_dashboard_kpi_total_orders">Барлық тапсырыстар</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Жоқ</string>
     <string name="staff_dashboard_open_sidebar">Бүйір тақтаны ашу</string>
-    <string name="staff_dashboard_order_fallback">Тапсырыс #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Тапсырыс #%1$s</string>
     <string name="staff_dashboard_system">Жүйе</string>
     <string name="staff_dashboard_tab_audit">Аудит</string>
     <string name="staff_dashboard_tab_listings">Хабарландырулар</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Даулар жоқ</string>
     <string name="staff_disputes_filter_status_label">Күй</string>
     <string name="staff_disputes_history">Дауларды шешу тарихы</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Сатып алушы туралы</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback ақысы</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe ұстап қалған</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Басқа</string>
     <string name="staff_disputes_reason_unauthorised">Рұқсат етілмеген</string>
     <string name="staff_disputes_refund_amount_label">Қайтару сомасы (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Қайтару сомасы тапсырыс жалпы сомасынан асып кетті</string>
     <string name="staff_disputes_refund_help">Толық %1$s қайтару үшін бос қалдырыңыз. Жартылай қайтару үшін кіші соманы енгізіңіз.</string>
     <string name="staff_disputes_refund_must_be_positive">Қайтару сомасы нөлден үлкен болуы керек</string>
     <string name="staff_disputes_resolution_buyer">Сатып алушының пайдасына шешу</string>
@@ -346,7 +345,7 @@
     <string name="staff_moderation_open_sidebar">Бүйір тақтаны ашу</string>
     <string name="staff_moderation_system">Жүйе</string>
     <string name="staff_moderation_title">Модерация журналы</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Әрекет</string>
     <string name="staff_reports_action_ban">Пайдаланушыға тыйым салу</string>
     <string name="staff_reports_action_dismiss">Жабу</string>
@@ -367,7 +366,7 @@
     <string name="staff_reports_filter_status_label">Күй</string>
     <string name="staff_reports_filter_type_label">Түрі</string>
     <string name="staff_reports_history">Шағымдар тарихы</string>
-    <string name="staff_reports_listing_label">Хабарландыру #%1$d</string>
+    <string name="staff_reports_listing_label">Хабарландыру #%1$s</string>
     <string name="staff_reports_meta_details">Шағымданушы туралы</string>
     <string name="staff_reports_meta_price">Бағасы</string>
     <string name="staff_reports_meta_reason">Себеп</string>
@@ -410,7 +409,7 @@
     <string name="staff_reviews_filter_removed">Жойылды</string>
     <string name="staff_reviews_filter_status">Күй</string>
     <string name="staff_reviews_open_sidebar">Бүйір тақтаны ашу</string>
-    <string name="staff_reviews_order_label">тапсырыс #%1$d</string>
+    <string name="staff_reviews_order_label">тапсырыс #%1$s</string>
     <string name="staff_reviews_overflow_actions">Әрекеттер</string>
     <string name="staff_reviews_remove_confirm">Жою</string>
     <string name="staff_reviews_remove_title">Шолуды жою керек пе?</string>
@@ -516,4 +515,7 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Осы пікірді біржола жою керек пе? Бұл әрекетті кері қайтару мүмкін емес.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Осы пікірді біржола жою керек пе? Бұл әрекетті кері қайтару мүмкін емес.</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook қолтаңба құпиясы</string>
+    <string name="staff_disputes_meta_already_refunded">Қайтарылған</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Қайтару сомасы қалған қайтарылатын сомадан асып кетеді</string>
 </resources>

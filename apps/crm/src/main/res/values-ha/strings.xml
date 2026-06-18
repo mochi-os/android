@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Babu zaɓuɓɓuka a filin shafuna</string>
     <string name="crm_design_preview_empty">Babu abin nunawa</string>
 
+    <string name="crm_access_tab_manual">Hannu</string>
+    <string name="crm_access_search_users">Bincika masu amfani</string>
+    <string name="crm_access_no_groups">Babu ƙungiyoyi</string>
+    <string name="crm_access_tab_users">Masu amfani</string>
+    <string name="crm_access_tab_groups">Groups</string>
+    <string name="crm_access_target">Manufa</string>
+    <string name="crm_access_target_hint">ID ɗin mahaɗi, @ƙungiya, * (kowa), ko + (mambobi)</string>
+    <string name="crm_attachment_remove">Cire haɗe</string>
+    <string name="crm_board_add_column">Ƙara column</string>
+    <string name="crm_settings_entity_id">Entity ID</string>
+    <string name="crm_settings_fingerprint">Sawun yatsa</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

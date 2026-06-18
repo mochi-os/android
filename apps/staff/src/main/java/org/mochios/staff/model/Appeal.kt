@@ -16,8 +16,8 @@ import com.google.gson.annotations.SerializedName
  * list/decide.
  */
 data class Appeal(
-    val id: Long = 0,
-    val listing: Long = 0,
+    val id: String = "",
+    val listing: String = "",
     val action: String = "",
     val score: Double = 0.0,
     val actor: String = "",

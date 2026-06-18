@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d 件の販売</string>
     <string name="market_profile_sales_count">%1$d 件の販売</string>
     <string name="market_purchase_dispute_response">出品者の回答</string>
-    <string name="market_purchases_order_label">注文 #%1$d</string>
+    <string name="market_purchases_order_label">注文 #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">購入者に自己紹介をしましょう…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">プロフィール</string>
     <string name="market_profile_load_failed">プロフィールを読み込めませんでした</string>
     <string name="market_profile_member_since">登録日: %1$s</string>
+    <string name="market_profile_joined">%1$s に参加</string>
     <string name="market_profile_no_reviews">レビューはまだありません。</string>
     <string name="market_profile_rating_breakdown">評価の内訳</string>
     <string name="market_profile_stars_value">%1$d つ星</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">下記の %1$d 個のファイルをダウンロードしてください。</string>
     <string name="market_purchase_download_one">下記からファイルをダウンロードしてください。</string>
     <string name="market_purchase_review_from">%1$s からのレビュー</string>
-    <string name="market_purchases_auction_label">オークション #%1$d</string>
+    <string name="market_purchases_auction_label">オークション #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 返金済み</string>
     <string name="market_purchases_won_for">%1$s で落札</string>
     <string name="market_rating_reviews">（レビュー %1$d 件）</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">販売者の返答</string>
     <string name="market_listing_detail_seller_reviews_heading">出品者へのレビュー</string>
     <string name="market_account_stripe_open_failed">Stripe を開けませんでした</string>
+    <string name="market_editor_stock">在庫</string>
+    <string name="market_editor_stock_units">単位数</string>
+    <string name="market_editor_stock_unlimited">無制限</string>
+    <string name="market_editor_start_time">開始時刻</string>
+    <string name="market_editor_start_time_help">公開時に開始する場合は空のままにします。</string>
+    <string name="market_editor_start_time_next">次へ</string>
+    <string name="market_editor_start_time_clear">クリア</string>
+    <string name="market_listing_detail_buy_now_label">今すぐ購入</string>
+    <string name="market_section_recently_viewed">最近見た商品</string>
+    <string name="market_recently_viewed_clear">すべてクリア</string>
 </resources>

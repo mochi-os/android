@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d predajov</string>
     <string name="market_profile_sales_count">%1$d predajov</string>
     <string name="market_purchase_dispute_response">Odpoveď predajcu</string>
-    <string name="market_purchases_order_label">Objednávka č. %1$d</string>
+    <string name="market_purchases_order_label">Objednávka č. %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Povedzte kupujúcim o sebe…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">O používateľovi</string>
     <string name="market_profile_load_failed">Profil sa nepodarilo načítať</string>
     <string name="market_profile_member_since">Členom od %1$s</string>
+    <string name="market_profile_joined">Pripojil(a) sa %1$s</string>
     <string name="market_profile_no_reviews">Zatiaľ žiadne recenzie.</string>
     <string name="market_profile_rating_breakdown">Rozloženie hodnotení</string>
     <string name="market_profile_stars_value">%1$d hviezdičiek</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Stiahnite si svojich %1$d súborov nižšie.</string>
     <string name="market_purchase_download_one">Stiahnite si svoj súbor nižšie.</string>
     <string name="market_purchase_review_from">Recenzia od %1$s</string>
-    <string name="market_purchases_auction_label">Aukcia č. %1$d</string>
+    <string name="market_purchases_auction_label">Aukcia č. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vrátené</string>
     <string name="market_purchases_won_for">Vyhrané za %1$s</string>
     <string name="market_rating_reviews">(%1$d recenzií)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Odpoveď predajcu</string>
     <string name="market_listing_detail_seller_reviews_heading">Recenzie predajcu</string>
     <string name="market_account_stripe_open_failed">Stripe sa nepodarilo otvoriť</string>
+    <string name="market_editor_stock">Sklad</string>
+    <string name="market_editor_stock_units">Počet jednotiek</string>
+    <string name="market_editor_stock_unlimited">Bez obmedzenia</string>
+    <string name="market_editor_start_time">Čas začatia</string>
+    <string name="market_editor_start_time_help">Pre spustenie pri zverejnení ponechajte prázdne.</string>
+    <string name="market_editor_start_time_next">Ďalej</string>
+    <string name="market_editor_start_time_clear">Vymazať</string>
+    <string name="market_listing_detail_buy_now_label">Kúpiť teraz</string>
+    <string name="market_section_recently_viewed">Nedávno zobrazené</string>
+    <string name="market_recently_viewed_clear">Vymazať všetko</string>
 </resources>

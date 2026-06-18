@@ -1,5 +1,6 @@
 package org.mochios.chat.repository
 
+import com.google.gson.Gson
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -8,9 +9,13 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.api.CreateChatResponse
+import org.mochios.chat.api.DeleteMessagesResponse
+import org.mochios.chat.api.ForwardResponse
 import org.mochios.chat.api.MemberAddResponse
 import org.mochios.chat.api.MessageListResponse
 import org.mochios.chat.api.NewChatResponse
+import org.mochios.chat.api.ReactResponse
+import org.mochios.chat.api.SearchResponse
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatMember
 import org.mochios.chat.model.ChatViewResponse
@@ -95,6 +100,23 @@ class ChatRepository @Inject constructor(
     suspend fun removeMember(chatId: String, member: String) {
         api.removeMember(chatId, member).unwrap()
     }
+
+    // message_ids goes over the wire as a JSON array string (server json.decodes it).
+    suspend fun forwardMessages(chatId: String, messageIds: List<String>, toChat: String): ForwardResponse =
+        api.forwardMessages(chatId, Gson().toJson(messageIds), toChat).unwrap()
+
+    suspend fun react(chatId: String, messageId: String, reaction: String): ReactResponse =
+        api.react(chatId, messageId, reaction).unwrap()
+
+    suspend fun deleteMessages(chatId: String, messageIds: List<String>): DeleteMessagesResponse =
+        api.deleteMessages(chatId, Gson().toJson(messageIds)).unwrap()
+
+    /** Move the read watermark; [read] defaults server-side to the latest message. */
+    suspend fun markRead(chatId: String, read: Long? = null): Long =
+        api.markRead(chatId, read).unwrap().read
+
+    suspend fun search(chatId: String, query: String): SearchResponse =
+        api.search(chatId, query).unwrap()
 
     private fun guessMediaType(file: File): String {
         val ext = file.extension.lowercase()

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Ktokoľvek</string>
     <string name="wikis_access_subject_authenticated">Overení používatelia</string>
 
+    <string name="wikis_revision_compare">Porovnať zmeny</string>
+    <string name="wikis_revision_show_page">Zobraziť stránku</string>
+    <string name="wikis_revision_compare_failed">Predchádzajúcu verziu na porovnanie sa nepodarilo načítať.</string>
+    <string name="wikis_revision_changes_from">Zmeny z verzie %1$d → %2$d</string>
 </resources>

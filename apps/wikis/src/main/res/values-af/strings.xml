@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Enigiemand</string>
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>
 
+    <string name="wikis_revision_compare">Vergelyk veranderinge</string>
+    <string name="wikis_revision_show_page">Wys bladsy</string>
+    <string name="wikis_revision_compare_failed">Kon nie die vorige weergawe vir vergelyking laai nie.</string>
+    <string name="wikis_revision_changes_from">Veranderinge van weergawe %1$d → %2$d</string>
 </resources>

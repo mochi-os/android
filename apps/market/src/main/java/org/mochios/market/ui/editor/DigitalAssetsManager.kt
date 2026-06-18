@@ -20,6 +20,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.InsertDriveFile
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowDownward
+import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material3.HorizontalDivider
@@ -58,7 +60,7 @@ import org.mochios.market.model.Asset
 fun DigitalAssetsManager(
     assets: List<Asset>,
     onUpload: (List<Uri>) -> Unit,
-    onDelete: (Long) -> Unit,
+    onDelete: (String) -> Unit,
     onReorder: (List<Asset>) -> Unit,
     onAddExternal: (filename: String, mime: String, reference: String) -> Unit,
     isUploading: Boolean,
@@ -127,6 +129,24 @@ fun DigitalAssetsManager(
                 assets.forEachIndexed { index, asset ->
                     AssetRow(
                         asset = asset,
+                        canMoveUp = index > 0,
+                        canMoveDown = index < assets.size - 1,
+                        onMoveUp = {
+                            if (index > 0) {
+                                val mut = assets.toMutableList()
+                                mut.removeAt(index)
+                                mut.add(index - 1, asset)
+                                onReorder(mut)
+                            }
+                        },
+                        onMoveDown = {
+                            if (index < assets.size - 1) {
+                                val mut = assets.toMutableList()
+                                mut.removeAt(index)
+                                mut.add(index + 1, asset)
+                                onReorder(mut)
+                            }
+                        },
                         onDelete = { onDelete(asset.id) },
                     )
                     if (index < assets.size - 1) HorizontalDivider()
@@ -154,6 +174,10 @@ fun DigitalAssetsManager(
 @Composable
 private fun AssetRow(
     asset: Asset,
+    canMoveUp: Boolean,
+    canMoveDown: Boolean,
+    onMoveUp: () -> Unit,
+    onMoveDown: () -> Unit,
     onDelete: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -187,6 +211,22 @@ private fun AssetRow(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
+        }
+        IconButton(onClick = onMoveUp, enabled = canMoveUp) {
+            Icon(
+                Icons.Default.ArrowUpward,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(20.dp),
+            )
+        }
+        IconButton(onClick = onMoveDown, enabled = canMoveDown) {
+            Icon(
+                Icons.Default.ArrowDownward,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(20.dp),
+            )
         }
         IconButton(onClick = onDelete) {
             Icon(

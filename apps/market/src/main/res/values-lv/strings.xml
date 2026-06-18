@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d pārdošanas</string>
     <string name="market_profile_sales_count">%1$d pārdošanas</string>
     <string name="market_purchase_dispute_response">Pārdevēja atbilde</string>
-    <string name="market_purchases_order_label">Pasūtījums Nr. %1$d</string>
+    <string name="market_purchases_order_label">Pasūtījums Nr. %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Pastāstiet pircējiem par sevi…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Par</string>
     <string name="market_profile_load_failed">Neizdevās ielādēt profilu</string>
     <string name="market_profile_member_since">Dalībnieks kopš %1$s</string>
+    <string name="market_profile_joined">Pievienojās %1$s</string>
     <string name="market_profile_no_reviews">Vēl nav atsauksmju.</string>
     <string name="market_profile_rating_breakdown">Vērtējuma sadalījums</string>
     <string name="market_profile_stars_value">%1$d zvaigznes</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Lejupielādējiet savus %1$d failus tālāk.</string>
     <string name="market_purchase_download_one">Lejupielādējiet savu failu tālāk.</string>
     <string name="market_purchase_review_from">Atsauksme no %1$s</string>
-    <string name="market_purchases_auction_label">Izsole #%1$d</string>
+    <string name="market_purchases_auction_label">Izsole #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s atmaksāts</string>
     <string name="market_purchases_won_for">Iegūts par %1$s</string>
     <string name="market_rating_reviews">(%1$d atsauksmes)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Pārdevēja atbilde</string>
     <string name="market_listing_detail_seller_reviews_heading">Pārdevēja atsauksmes</string>
     <string name="market_account_stripe_open_failed">Neizdevās atvērt Stripe</string>
+    <string name="market_editor_stock">Krājumi</string>
+    <string name="market_editor_stock_units">Vienību skaits</string>
+    <string name="market_editor_stock_unlimited">Neierobežots</string>
+    <string name="market_editor_start_time">Sākuma laiks</string>
+    <string name="market_editor_start_time_help">Atstājiet tukšu, lai sāktu publicēšanas brīdī.</string>
+    <string name="market_editor_start_time_next">Tālāk</string>
+    <string name="market_editor_start_time_clear">Notīrīt</string>
+    <string name="market_listing_detail_buy_now_label">Pirkt tagad</string>
+    <string name="market_section_recently_viewed">Nesen skatīts</string>
+    <string name="market_recently_viewed_clear">Notīrīt visu</string>
 </resources>

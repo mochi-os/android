@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Usuń lokalnie</string>
     <string name="chat_settings_delete_message">Spowoduje to usunięcie czatu i jego wiadomości tylko z tego urządzenia.</string>
 
+    <string name="chat_message_deleted">Ta wiadomość została usunięta</string>
+    <string name="chat_search_hint">Szukaj w czacie...</string>
+    <string name="chat_search_no_results">Brak wyników</string>
+    <string name="chat_message_forward">Prześlij dalej</string>
+    <string name="chat_forward_title">Prześlij dalej do…</string>
+    <string name="chat_forward_search">Szukaj czatów…</string>
+    <string name="chat_forward_empty">Brak czatów do przesłania dalej</string>
+    <string name="chat_forward_success">Przesłano dalej</string>
+    <string name="chat_forward_failed">Nie udało się przesłać dalej</string>
 </resources>

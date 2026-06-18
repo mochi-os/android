@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">பல-காரணி அங்கீகாரம்</string>
     <string name="auth_mfa_subtitle">மீதமுள்ள சரிபார்ப்பு படிகளை முடிக்கவும்</string>
     <string name="auth_recover_account">கணக்கை மீட்டெடு</string>
+    <string name="auth_login_title">Mochi இல் உள்நுழைக</string>
+    <string name="auth_next">அடுத்து</string>
+    <string name="auth_or_log_in_with">அல்லது இதன் மூலம் உள்நுழைக</string>
+    <string name="auth_passkey">கடவுக்குறி</string>
+    <string name="auth_use_passkey">கடவுவிசையைப் பயன்படுத்தவும்</string>
+    <string name="auth_email_me_a_code">எனக்கு ஒரு குறியீட்டை மின்னஞ்சல் செய்யவும்</string>
+    <string name="auth_or_enter_authenticator_code">அல்லது அங்கீகரிப்பு குறியீட்டை உள்ளிடவும்</string>
+    <string name="auth_log_in">உள்நுழைக</string>
+    <string name="auth_back">பின்</string>
+    <string name="auth_lost_access_recovery">அணுகலை இழந்தீர்களா? மீட்பு குறியீட்டைப் பயன்படுத்தவும்</string>
     <string name="auth_create_identity_title">உங்கள் அடையாளத்தை உருவாக்கவும்</string>
     <string name="auth_create_identity_subtitle">இந்த சேவையகத்தில் உங்கள் அடையாளத்திற்கு ஒரு பெயரைத் தேர்ந்தெடுக்கவும்</string>
     <string name="auth_privacy_public_description">மற்றவர்கள் உங்களைக் கண்டறிய பயனர் கோப்பகத்தில் பட்டியலிடப்பட்டுள்ளது.</string>

@@ -6,16 +6,24 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.chat.R
+import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.model.ChatSearchResult
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
@@ -32,6 +40,13 @@ data class ChatUiState(
     val isSending: Boolean = false,
     val error: MochiError? = null,
     val pendingAttachments: List<Uri> = emptyList(),
+    val searchOpen: Boolean = false,
+    val searchQuery: String = "",
+    val searchResults: List<ChatSearchResult> = emptyList(),
+    val searchLoading: Boolean = false,
+    val forwardMessageId: String? = null,
+    val forwardChats: List<Chat> = emptyList(),
+    val forwardLoading: Boolean = false,
 )
 
 @HiltViewModel
@@ -50,6 +65,11 @@ class ChatViewModel @Inject constructor(
     val uiState: StateFlow<ChatUiState> = _uiState.asStateFlow()
 
     private var subscriptionId: String? = null
+    private var searchJob: Job? = null
+
+    // One-shot toast messages (already localised) — e.g. forward success/failure.
+    private val _events = MutableSharedFlow<String>(extraBufferCapacity = 4)
+    val events: SharedFlow<String> = _events.asSharedFlow()
 
     init {
         load()
@@ -70,8 +90,25 @@ class ChatViewModel @Inject constructor(
                     isLoading = false
                 )
                 subscribeWebSocket(view.chat.key)
+                markRead()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /**
+     * Move the read watermark to the latest message (server defaults `read` to
+     * the newest message's time). Fire-and-forget: the watermark is local-only,
+     * non-synced, and only moves forward, so failures are non-critical. Mirrors
+     * the web client marking a chat read on open / on each new message.
+     */
+    private fun markRead() {
+        viewModelScope.launch {
+            try {
+                repository.markRead(chatId)
+            } catch (_: Exception) {
+                // Non-critical; ignore.
             }
         }
     }
@@ -88,6 +125,7 @@ class ChatViewModel @Inject constructor(
                     isRefreshing = false,
                     error = null
                 )
+                markRead()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
             }
@@ -109,6 +147,115 @@ class ChatViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoadingMore = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Delete messages (delete-for-everyone). The server only removes the ones
+     *  the caller owns; refresh reflects the resulting tombstones. */
+    fun deleteMessages(messageIds: List<String>) {
+        if (messageIds.isEmpty()) return
+        viewModelScope.launch {
+            try {
+                repository.deleteMessages(chatId, messageIds)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Toggle a reaction on a message (pass "none"/"" to clear). Updates the
+     *  affected message in place from the server's returned counts. */
+    fun react(messageId: String, reaction: String) {
+        viewModelScope.launch {
+            try {
+                val res = repository.react(chatId, messageId, reaction)
+                _uiState.value = _uiState.value.copy(
+                    messages = _uiState.value.messages.map { m ->
+                        if (m.id == messageId) {
+                            m.copy(reactionCounts = res.reactionCounts, myReaction = res.myReaction)
+                        } else {
+                            m
+                        }
+                    }
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    // ---------------- message search ----------------
+
+    fun openSearch() {
+        _uiState.value = _uiState.value.copy(
+            searchOpen = true, searchQuery = "", searchResults = emptyList(), searchLoading = false,
+        )
+    }
+
+    fun closeSearch() {
+        searchJob?.cancel()
+        _uiState.value = _uiState.value.copy(
+            searchOpen = false, searchQuery = "", searchResults = emptyList(), searchLoading = false,
+        )
+    }
+
+    /** Debounced server-side message search; needs >=2 chars (matches web). */
+    fun setSearchQuery(query: String) {
+        _uiState.value = _uiState.value.copy(searchQuery = query)
+        searchJob?.cancel()
+        if (query.trim().length < 2) {
+            _uiState.value = _uiState.value.copy(searchResults = emptyList(), searchLoading = false)
+            return
+        }
+        searchJob = viewModelScope.launch {
+            delay(300)
+            _uiState.value = _uiState.value.copy(searchLoading = true)
+            try {
+                val res = repository.search(chatId, query.trim())
+                _uiState.value = _uiState.value.copy(searchResults = res.results, searchLoading = false)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(searchLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    // ---------------- forward ----------------
+
+    /** Open the forward sheet for [messageId]; load active chats (minus this
+     *  one) as destinations. */
+    fun openForward(messageId: String) {
+        _uiState.value = _uiState.value.copy(
+            forwardMessageId = messageId, forwardChats = emptyList(), forwardLoading = true,
+        )
+        viewModelScope.launch {
+            try {
+                val chats = repository.listChats()
+                    .filter { it.id != chatId && it.status == ChatStatus.ACTIVE }
+                _uiState.value = _uiState.value.copy(forwardChats = chats, forwardLoading = false)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(forwardLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    fun closeForward() {
+        _uiState.value = _uiState.value.copy(
+            forwardMessageId = null, forwardChats = emptyList(), forwardLoading = false,
+        )
+    }
+
+    /** Forward the message currently open in the forward sheet to [toChatId]. */
+    fun forwardToChat(toChatId: String) {
+        val messageId = _uiState.value.forwardMessageId ?: return
+        viewModelScope.launch {
+            try {
+                repository.forwardMessages(chatId, listOf(messageId), toChatId)
+                _uiState.value = _uiState.value.copy(forwardMessageId = null, forwardChats = emptyList())
+                _events.emit(application.getString(R.string.chat_forward_success))
+            } catch (e: Exception) {
+                _events.emit(application.getString(R.string.chat_forward_failed))
             }
         }
     }
@@ -196,6 +343,14 @@ class ChatViewModel @Inject constructor(
                                 )
                             } catch (_: Exception) { }
                         }
+                    }
+                    ev == "delete" -> {
+                        // A message was tombstoned — refresh to render "deleted".
+                        refresh()
+                    }
+                    ev == "reaction" -> {
+                        // A reaction changed on a message — refresh to update counts.
+                        refresh()
                     }
                     ev == null && event.body != null -> {
                         // Incoming message — refresh

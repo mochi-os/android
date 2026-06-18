@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Akukho zikhethwayo kwifildi yeekhalamu</string>
     <string name="crm_design_preview_empty">Akukho nto yokubonisa</string>
 
+    <string name="crm_access_tab_manual">Ngesandla</string>
+    <string name="crm_access_search_users">Khangela abasebenzisi</string>
+    <string name="crm_access_no_groups">Akukho maqela afumanekayo</string>
+    <string name="crm_access_tab_users">Abasebenzisi</string>
+    <string name="crm_access_tab_groups">Amaqela</string>
+    <string name="crm_access_target">Injongo</string>
+    <string name="crm_access_target_hint">I-ID yendawo, @qela, * (wonke ubani), okanye + (amalungu)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">Yongeza ikholamu</string>
+    <string name="crm_settings_entity_id">I-ID yequmrhu</string>
+    <string name="crm_settings_fingerprint">Uphawu lomnwe</string>
+    <string name="crm_settings_server">Iseva</string>
 </resources>

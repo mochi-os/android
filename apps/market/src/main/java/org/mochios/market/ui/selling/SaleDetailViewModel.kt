@@ -46,7 +46,7 @@ class SaleDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
-    private val orderId: Long = savedStateHandle.get<String>("orderId")?.toLongOrNull() ?: 0L
+    private val orderId: String = savedStateHandle.get<String>("orderId").orEmpty()
 
     private val _state = MutableStateFlow(SaleDetailUiState())
     val state: StateFlow<SaleDetailUiState> = _state.asStateFlow()
@@ -59,7 +59,7 @@ class SaleDetailViewModel @Inject constructor(
     }
 
     fun load() {
-        if (orderId <= 0L) {
+        if (orderId.isEmpty()) {
             _state.value = _state.value.copy(
                 isLoading = false,
                 error = MochiError.NotFoundError("Order id is missing"),
@@ -71,7 +71,7 @@ class SaleDetailViewModel @Inject constructor(
             try {
                 val detail = repo.getOrder(orderId)
                 val audit = try {
-                    repo.auditObject(kind = "order", objectId = orderId.toString()).audit
+                    repo.auditObject(kind = "order", objectId = orderId).audit
                 } catch (_: Exception) {
                     emptyList()
                 }

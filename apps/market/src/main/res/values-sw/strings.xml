@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">Mauzo %1$d</string>
     <string name="market_profile_sales_count">Mauzo %1$d</string>
     <string name="market_purchase_dispute_response">Jibu la muuzaji</string>
-    <string name="market_purchases_order_label">Agizo #%1$d</string>
+    <string name="market_purchases_order_label">Agizo #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Waeleze wanunuzi kukuhusu…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Kuhusu</string>
     <string name="market_profile_load_failed">Imeshindwa kupakia wasifu</string>
     <string name="market_profile_member_since">Mwanachama tangu %1$s</string>
+    <string name="market_profile_joined">Alijiunga %1$s</string>
     <string name="market_profile_no_reviews">Hakuna ukaguzi bado.</string>
     <string name="market_profile_rating_breakdown">Mchanganuo wa ukadiriaji</string>
     <string name="market_profile_stars_value">nyota %1$d</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Pakua faili zako %1$d hapa chini.</string>
     <string name="market_purchase_download_one">Pakua faili yako hapa chini.</string>
     <string name="market_purchase_review_from">Ukaguzi kutoka kwa %1$s</string>
-    <string name="market_purchases_auction_label">Mnada #%1$d</string>
+    <string name="market_purchases_auction_label">Mnada #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s imerejeshwa</string>
     <string name="market_purchases_won_for">Imeshindwa kwa %1$s</string>
     <string name="market_rating_reviews">(hakiki %1$d)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Jibu la muuzaji</string>
     <string name="market_listing_detail_seller_reviews_heading">Maoni ya muuzaji</string>
     <string name="market_account_stripe_open_failed">Imeshindwa kufungua Stripe</string>
+    <string name="market_editor_stock">Hisa</string>
+    <string name="market_editor_stock_units">Idadi ya vipengele</string>
+    <string name="market_editor_stock_unlimited">Bila Kikomo</string>
+    <string name="market_editor_start_time">Wakati wa kuanza</string>
+    <string name="market_editor_start_time_help">Acha tupu kuanza wakati wa kuchapisha.</string>
+    <string name="market_editor_start_time_next">Endelea</string>
+    <string name="market_editor_start_time_clear">Futa</string>
+    <string name="market_listing_detail_buy_now_label">Inunue sasa</string>
+    <string name="market_section_recently_viewed">Zilizotazamwa hivi karibuni</string>
+    <string name="market_recently_viewed_clear">Futa vyote</string>
 </resources>

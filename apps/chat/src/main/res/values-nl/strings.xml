@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Lokaal verwijderen</string>
     <string name="chat_settings_delete_message">Dit verwijdert de chat en de berichten alleen van dit apparaat.</string>
 
+    <string name="chat_message_deleted">Dit bericht is verwijderd</string>
+    <string name="chat_search_hint">Zoeken in chat...</string>
+    <string name="chat_search_no_results">Geen resultaten</string>
+    <string name="chat_message_forward">Doorsturen</string>
+    <string name="chat_forward_title">Doorsturen naar…</string>
+    <string name="chat_forward_search">Chats zoeken…</string>
+    <string name="chat_forward_empty">Geen chats om naar door te sturen</string>
+    <string name="chat_forward_success">Doorgestuurd</string>
+    <string name="chat_forward_failed">Doorsturen mislukt</string>
 </resources>

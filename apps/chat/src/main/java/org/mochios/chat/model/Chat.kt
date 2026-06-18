@@ -53,7 +53,21 @@ data class ChatMessage(
     val name: String = "",
     val body: String = "",
     val created: Long = 0,
-    val attachments: List<Attachment> = emptyList()
+    val attachments: List<Attachment> = emptyList(),
+    val deleted: Boolean = false,
+    @SerializedName("reaction_counts") val reactionCounts: Map<String, Int> = emptyMap(),
+    @SerializedName("my_reaction") val myReaction: String? = null,
+    @SerializedName("reply_to") val replyTo: String? = null
+)
+
+/** A message hit from `:chat/-/search`. */
+data class ChatSearchResult(
+    val id: String = "",
+    val member: String = "",
+    val name: String = "",
+    val body: String = "",
+    val excerpt: String = "",
+    val created: Long = 0
 )
 
 data class Friend(

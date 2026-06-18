@@ -350,7 +350,7 @@
     <string name="market_purchase_track">පැකේජය track කරන්න</string>
     <string name="market_purchases_complete_purchase">මිලදී ගැනීම සම්පූර්ණ කරන්න</string>
     <string name="market_purchases_empty">මිලදී ගැනීම් නැත</string>
-    <string name="market_purchases_order_label">ඇණවුම #%1$d</string>
+    <string name="market_purchases_order_label">ඇණවුම #%1$s</string>
     <string name="market_purchases_title">මිලදී ගැනීම්</string>
     <string name="market_rating_label">ශ්‍රේණිගත කිරීම</string>
     <string name="market_rating_no_reviews">තවම සමාලෝචන නැත</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ආරම්භක ලංසුව: %1$s</string>
     <string name="market_profile_load_failed">පැතිකඩ පූරණය කළ නොහැකි විය</string>
     <string name="market_profile_member_since">%1$s සිට සාමාජිකයෙකි</string>
+    <string name="market_profile_joined">%1$s දී එක් විය</string>
     <string name="market_profile_rating_breakdown">ශ්‍රේණිගත කිරීමේ බෙදුම</string>
     <string name="market_profile_sales_count">විකුණුම් %1$d</string>
     <string name="market_profile_stars_value">තරු %1$d</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">පහත ඔබේ ගොනු %1$d බාගත කරන්න.</string>
     <string name="market_purchase_download_one">පහත ඔබේ ගොනුව බාගත කරන්න.</string>
     <string name="market_purchase_review_from">%1$s ගෙන් සමාලෝචනය</string>
-    <string name="market_purchases_auction_label">වෙන්දේසිය #%1$d</string>
+    <string name="market_purchases_auction_label">වෙන්දේසිය #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ආපසු ගෙවන ලදී</string>
     <string name="market_purchases_won_for">%1$s ට ජයගත්තේය</string>
     <string name="market_refund_dialog_amount_help">මුළු ඇණවුම ආපසු ගෙවීමට හිස්ව තබන්න.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">විකුණුම්කරුගේ ප්‍රතිචාරය</string>
     <string name="market_listing_detail_seller_reviews_heading">විකුණුම්කරුගේ සමාලෝචන</string>
     <string name="market_account_stripe_open_failed">Stripe විවෘත කළ නොහැකි විය</string>
+    <string name="market_editor_stock">තොගය</string>
+    <string name="market_editor_stock_units">ඒකක ගණන</string>
+    <string name="market_editor_stock_unlimited">අසීමිත</string>
+    <string name="market_editor_start_time">ආරම්භක වේලාව</string>
+    <string name="market_editor_start_time_help">ප්‍රකාශයේදී ආරම්භ වීමට හිස්ව තබන්න.</string>
+    <string name="market_editor_start_time_next">ඊළඟ</string>
+    <string name="market_editor_start_time_clear">හිස් කරන්න</string>
+    <string name="market_listing_detail_buy_now_label">දැන් මිලදී ගන්න</string>
+    <string name="market_section_recently_viewed">මෑත දී බැලූ</string>
+    <string name="market_recently_viewed_clear">සියල්ල හිස් කරන්න</string>
 </resources>

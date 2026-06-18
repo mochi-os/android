@@ -100,9 +100,6 @@
     <string name="wikis_rss_failed">Failed to get RSS token</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
 
-    <!-- Create-wiki dialog placeholder (stub until CreateWikiDialog lands) -->
-    <string name="wikis_create_dialog_stub">Wiki creation will be available in a future update.</string>
-
     <!-- Find wikis screen -->
     <string name="wikis_find_title">Find wikis</string>
     <string name="wikis_find_search_placeholder">Search by name, ID, fingerprint, or URL…</string>
@@ -242,6 +239,10 @@
     <string name="wikis_revision_current_badge">Current</string>
     <string name="wikis_revision_back_to_history">Back to history</string>
     <string name="wikis_revision_revert_to_this">Revert to this version</string>
+    <string name="wikis_revision_compare">Compare changes</string>
+    <string name="wikis_revision_show_page">Show page</string>
+    <string name="wikis_revision_changes_from">Changes from version %1$d → %2$d</string>
+    <string name="wikis_revision_compare_failed">Could not load previous version for comparison.</string>
 
     <!-- Recent changes screen -->
     <string name="wikis_changes_title">Recent changes</string>

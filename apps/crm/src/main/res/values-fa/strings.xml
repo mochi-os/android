@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">هیچ گزینه‌ای روی فیلد ستون‌ها وجود ندارد</string>
     <string name="crm_design_preview_empty">چیزی برای نمایش نیست</string>
 
+    <string name="crm_access_tab_manual">دستی</string>
+    <string name="crm_access_search_users">جست‌وجوی کاربران</string>
+    <string name="crm_access_no_groups">هیچ گروهی در دسترس نیست</string>
+    <string name="crm_access_tab_users">کاربران</string>
+    <string name="crm_access_tab_groups">گروه‌ها</string>
+    <string name="crm_access_target">هدف</string>
+    <string name="crm_access_target_hint">شناسه موجودیت، @گروه، * (همه)، یا + (اعضا)</string>
+    <string name="crm_attachment_remove">حذف پیوست</string>
+    <string name="crm_board_add_column">افزودن ستون</string>
+    <string name="crm_settings_entity_id">شناسه موجودیت</string>
+    <string name="crm_settings_fingerprint">اثر انگشت</string>
+    <string name="crm_settings_server">سرور</string>
 </resources>

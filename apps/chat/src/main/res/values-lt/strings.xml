@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Ištrinti vietoje</string>
     <string name="chat_settings_delete_message">Tai pašalina pokalbį ir jo pranešimus tik iš šio įrenginio.</string>
 
+    <string name="chat_message_deleted">Ši žinutė buvo ištrinta</string>
+    <string name="chat_search_hint">Ieškoti pokalbyje...</string>
+    <string name="chat_search_no_results">Rezultatų nėra</string>
+    <string name="chat_message_forward">Persiųsti</string>
+    <string name="chat_forward_title">Persiųsti į…</string>
+    <string name="chat_forward_search">Ieškoti pokalbių…</string>
+    <string name="chat_forward_empty">Nėra pokalbių, į kuriuos persiųsti</string>
+    <string name="chat_forward_success">Persiųsta</string>
+    <string name="chat_forward_failed">Nepavyko persiųsti</string>
 </resources>

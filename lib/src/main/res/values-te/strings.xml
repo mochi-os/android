@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">బహుళ-కారక ప్రామాణీకరణ</string>
     <string name="auth_mfa_subtitle">మిగిలిన ధృవీకరణ దశలను పూర్తి చేయండి</string>
     <string name="auth_recover_account">ఖాతాను తిరిగి పొందండి</string>
+    <string name="auth_login_title">Mochiలో లాగిన్ అవ్వండి</string>
+    <string name="auth_next">తదుపరి</string>
+    <string name="auth_or_log_in_with">లేదా దీనితో లాగిన్ అవ్వండి</string>
+    <string name="auth_passkey">పాస్‌కీ</string>
+    <string name="auth_use_passkey">పాస్‌కీని ఉపయోగించండి</string>
+    <string name="auth_email_me_a_code">నాకు ఒక కోడ్‌ను ఇమెయిల్ చేయండి</string>
+    <string name="auth_or_enter_authenticator_code">లేదా ఆథెంటికేటర్ కోడ్‌ను నమోదు చేయండి</string>
+    <string name="auth_log_in">లాగిన్ అవ్వండి</string>
+    <string name="auth_back">వెనుకకు</string>
+    <string name="auth_lost_access_recovery">యాక్సెస్ కోల్పోయారా? రికవరీ కోడ్‌ను ఉపయోగించండి</string>
     <string name="auth_create_identity_title">మీ గుర్తింపును సృష్టించండి</string>
     <string name="auth_create_identity_subtitle">ఈ సర్వర్‌లో మీ గుర్తింపు కోసం ఒక పేరును ఎంచుకోండి</string>
     <string name="auth_privacy_public_description">ఇతరులు మిమ్మల్ని కనుగొనగలిగేలా వినియోగదారు డైరెక్టరీలో జాబితా చేయబడింది.</string>

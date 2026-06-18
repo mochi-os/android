@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">קיין אָפּציעס אױפֿן זײַלן פֿעלד</string>
     <string name="crm_design_preview_empty">גאָרנישט צו ווײַזן</string>
 
+    <string name="crm_access_tab_manual">מאַנואַל</string>
+    <string name="crm_access_search_users">זוך באַניצערס</string>
+    <string name="crm_access_no_groups">קיין גרופּעס פֿאַראַן</string>
+    <string name="crm_access_tab_users">באַניצערס</string>
+    <string name="crm_access_tab_groups">גרופּעס</string>
+    <string name="crm_access_target">ציל</string>
+    <string name="crm_access_target_hint">ענטיטעט־ID, @גרופּע, * (אַלעמען), אָדער + (מיטגלידער)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">צולייגן זײַל</string>
+    <string name="crm_settings_entity_id">ענטיטעט־ID</string>
+    <string name="crm_settings_fingerprint">פֿינגער־אָפּדרוק</string>
+    <string name="crm_settings_server">סערווער</string>
 </resources>

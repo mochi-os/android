@@ -363,7 +363,7 @@
     <string name="market_purchase_track">Bi diddigin fakiti</string>
     <string name="market_purchases_complete_purchase">Kammala saye</string>
     <string name="market_purchases_empty">Babu siye</string>
-    <string name="market_purchases_order_label">Oda #%1$d</string>
+    <string name="market_purchases_order_label">Oda #%1$s</string>
     <string name="market_purchases_title">Siye</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">Babu reviews tukuna</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Tayin farawa: %1$s</string>
     <string name="market_profile_load_failed">Ba a iya loda bayanan martaba ba</string>
     <string name="market_profile_member_since">Memba tun %1$s</string>
+    <string name="market_profile_joined">Ya shiga %1$s</string>
     <string name="market_profile_rating_breakdown">Cikakken bayanin kima</string>
     <string name="market_profile_sales_count">Sayarwa %1$d</string>
     <string name="market_profile_stars_value">Taurari %1$d</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Sauke fayilolinku %1$d a ƙasa.</string>
     <string name="market_purchase_download_one">Sauke fayilinku a ƙasa.</string>
     <string name="market_purchase_review_from">Bita daga %1$s</string>
-    <string name="market_purchases_auction_label">Gwanjo #%1$d</string>
+    <string name="market_purchases_auction_label">Gwanjo #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s an mayar</string>
     <string name="market_purchases_won_for">An ci a kan %1$s</string>
     <string name="market_refund_dialog_amount_help">Bar shi babu komai don mayar da duka odar.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Amsar mai sayarwa</string>
     <string name="market_listing_detail_seller_reviews_heading">Sake-saken mai siyarwa</string>
     <string name="market_account_stripe_open_failed">Ba a iya buɗe Stripe ba</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Adadin units</string>
+    <string name="market_editor_stock_unlimited">Ba shi da iyaka</string>
+    <string name="market_editor_start_time">Lokacin farawa</string>
+    <string name="market_editor_start_time_help">Bar fanko don farawa a buga.</string>
+    <string name="market_editor_start_time_next">Na gaba</string>
+    <string name="market_editor_start_time_clear">Share</string>
+    <string name="market_listing_detail_buy_now_label">Sayi yanzu</string>
+    <string name="market_section_recently_viewed">An kalla kwanan nan</string>
+    <string name="market_recently_viewed_clear">Share duka</string>
 </resources>

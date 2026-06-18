@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Excluir localmente</string>
     <string name="chat_settings_delete_message">Isto remove o chat e suas mensagens apenas deste dispositivo.</string>
 
+    <string name="chat_message_deleted">Esta mensagem foi excluída</string>
+    <string name="chat_search_hint">Pesquisar na conversa...</string>
+    <string name="chat_search_no_results">Nenhum resultado</string>
+    <string name="chat_message_forward">Encaminhar</string>
+    <string name="chat_forward_title">Encaminhar para…</string>
+    <string name="chat_forward_search">Pesquisar conversas…</string>
+    <string name="chat_forward_empty">Nenhuma conversa para encaminhar</string>
+    <string name="chat_forward_success">Encaminhada</string>
+    <string name="chat_forward_failed">Falha ao encaminhar</string>
 </resources>

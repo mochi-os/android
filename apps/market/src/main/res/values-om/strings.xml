@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Geejjiba hordofi</string>
     <string name="market_purchases_complete_purchase">Bittaa xumuri</string>
     <string name="market_purchases_empty">Bittaa hin jiru</string>
-    <string name="market_purchases_order_label">Aja\'a #%1$d</string>
+    <string name="market_purchases_order_label">Aja\'a #%1$s</string>
     <string name="market_purchases_title">Bittaa</string>
     <string name="market_rating_label">Sadarkeessuu</string>
     <string name="market_rating_no_reviews">Hanga ammaatti gamaaggamni hin jiru</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Caalbaasii jalqabaa: %1$s</string>
     <string name="market_profile_load_failed">Piroofaayilii fe\'uun hin danda\'amne</string>
     <string name="market_profile_member_since">Miseensa kan ta\'e %1$s irraa eegalee</string>
+    <string name="market_profile_joined">Kan makame %1$s</string>
     <string name="market_profile_rating_breakdown">Bal\'ina madaallii</string>
     <string name="market_profile_sales_count">Gurgurtaa %1$d</string>
     <string name="market_profile_stars_value">Urjii %1$d</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Faayiloota kee %1$d gadi buusi.</string>
     <string name="market_purchase_download_one">Faayilii kee gadi buusi.</string>
     <string name="market_purchase_review_from">Madaallii %1$s irraa</string>
-    <string name="market_purchases_auction_label">Caalbaasii #%1$d</string>
+    <string name="market_purchases_auction_label">Caalbaasii #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s deebi\'eera</string>
     <string name="market_purchases_won_for">%1$s\'tti injifatame</string>
     <string name="market_refund_dialog_amount_help">Ajaja guutuu deebisuuf duwwaa dhiisi.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Deebii gurguraa</string>
     <string name="market_listing_detail_seller_reviews_heading">Tilmaama gurgurtaa</string>
     <string name="market_account_stripe_open_failed">Stripe banuun hin danda\'amne</string>
+    <string name="market_editor_stock">Kuusaa</string>
+    <string name="market_editor_stock_units">Baay\'ina yuunitii</string>
+    <string name="market_editor_stock_unlimited">Daangaa hin qabu</string>
+    <string name="market_editor_start_time">Yeroo jalqabaa</string>
+    <string name="market_editor_start_time_help">Maxxansa irratti jalqabuuf duwwaa kaa\'i.</string>
+    <string name="market_editor_start_time_next">Itti aanu</string>
+    <string name="market_editor_start_time_clear">Cilliisi</string>
+    <string name="market_listing_detail_buy_now_label">Amma bitadhu</string>
+    <string name="market_section_recently_viewed">Dhiyeenya ilaalame</string>
+    <string name="market_recently_viewed_clear">Hunda cilliisi</string>
 </resources>

@@ -168,7 +168,7 @@ class ReportsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.actionReport(
-                    id = current.id.toInt(),
+                    id = current.id,
                     action = action,
                     notes = notes.takeIf { it.isNotBlank() },
                 )

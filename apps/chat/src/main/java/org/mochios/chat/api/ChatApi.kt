@@ -1,11 +1,13 @@
 package org.mochios.chat.api
 
+import com.google.gson.annotations.SerializedName
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatMember
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.model.ChatSearchResult
 import org.mochios.chat.model.ChatViewResponse
 import org.mochios.chat.model.Friend
 import retrofit2.Response
@@ -46,6 +48,25 @@ data class MemberAddResponse(
 )
 
 data class SuccessResponse(val success: Boolean = false)
+
+data class ForwardResponse(
+    val forwarded: List<String> = emptyList(),
+    @SerializedName("to_chat") val toChat: String = ""
+)
+
+data class ReactResponse(
+    @SerializedName("reaction_counts") val reactionCounts: Map<String, Int> = emptyMap(),
+    @SerializedName("my_reaction") val myReaction: String? = null
+)
+
+data class DeleteMessagesResponse(val deleted: List<String> = emptyList())
+
+data class MarkReadResponse(val read: Long = 0)
+
+data class SearchResponse(
+    val query: String = "",
+    val results: List<ChatSearchResult> = emptyList()
+)
 
 interface ChatApi {
 
@@ -120,4 +141,42 @@ interface ChatApi {
         @Path("chatId") chatId: String,
         @Field("member") member: String
     ): Response<ApiResponse<SuccessResponse>>
+
+    // message_ids is a JSON-encoded array string (e.g. ["id1","id2"]), matching
+    // the web client's URLSearchParams({ message_ids: JSON.stringify(...) }).
+    @FormUrlEncoded
+    @POST("{chatId}/-/messages/forward")
+    suspend fun forwardMessages(
+        @Path("chatId") chatId: String,
+        @Field("message_ids") messageIds: String,
+        @Field("to_chat") toChat: String
+    ): Response<ApiResponse<ForwardResponse>>
+
+    @FormUrlEncoded
+    @POST("{chatId}/-/react")
+    suspend fun react(
+        @Path("chatId") chatId: String,
+        @Field("message") message: String,
+        @Field("reaction") reaction: String
+    ): Response<ApiResponse<ReactResponse>>
+
+    @FormUrlEncoded
+    @POST("{chatId}/-/messages/delete")
+    suspend fun deleteMessages(
+        @Path("chatId") chatId: String,
+        @Field("message_ids") messageIds: String
+    ): Response<ApiResponse<DeleteMessagesResponse>>
+
+    @FormUrlEncoded
+    @POST("{chatId}/-/read")
+    suspend fun markRead(
+        @Path("chatId") chatId: String,
+        @Field("read") read: Long?
+    ): Response<ApiResponse<MarkReadResponse>>
+
+    @GET("{chatId}/-/search")
+    suspend fun search(
+        @Path("chatId") chatId: String,
+        @Query("q") query: String
+    ): Response<ApiResponse<SearchResponse>>
 }

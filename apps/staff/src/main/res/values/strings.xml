@@ -52,8 +52,8 @@
     <string name="staff_appeals_dialog_title">Decide appeal</string>
     <string name="staff_appeals_empty">No pending appeals</string>
     <string name="staff_appeals_history">Listing history</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notes</string>
     <string name="staff_appeals_open_sidebar">Open sidebar</string>
     <string name="staff_appeals_reason_label">Seller\'s appeal reason</string>
@@ -185,6 +185,7 @@
     <string name="staff_config_field_stripe_oauth_client">OAuth client ID</string>
     <string name="staff_config_field_stripe_publishable">Publishable key</string>
     <string name="staff_config_field_stripe_secret">Secret key</string>
+    <string name="staff_config_field_stripe_webhook">Webhook signing secret</string>
     <string name="staff_config_group_moderation">Moderation</string>
     <string name="staff_config_group_payments">Payments</string>
     <string name="staff_config_group_reviews">Reviews</string>
@@ -227,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Sellers</string>
     <string name="staff_dashboard_kpi_total_orders">Total orders</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">No</string>
     <string name="staff_dashboard_open_sidebar">Open sidebar</string>
-    <string name="staff_dashboard_order_fallback">Order #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Order #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Listings</string>
@@ -248,13 +249,14 @@
     <string name="staff_disputes_empty">No disputes</string>
     <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_history">Dispute history</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Buyer\'s details</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback fee</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">kept by Stripe</string>
     <string name="staff_disputes_meta_chargeback_fee_partial">%1$s refunded</string>
     <string name="staff_disputes_meta_chargeback_fee_refunded">refunded</string>
     <string name="staff_disputes_meta_evidence_due">Evidence due by</string>
+    <string name="staff_disputes_meta_already_refunded">Already refunded</string>
     <string name="staff_disputes_meta_listing">Listing</string>
     <string name="staff_disputes_meta_reason">Reason</string>
     <string name="staff_disputes_meta_refunded">Refunded</string>
@@ -271,7 +273,7 @@
     <string name="staff_disputes_reason_other">Other</string>
     <string name="staff_disputes_reason_unauthorised">Unauthorised</string>
     <string name="staff_disputes_refund_amount_label">Refund amount (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Refund amount exceeds order total</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Refund amount exceeds remaining refundable amount</string>
     <string name="staff_disputes_refund_help">Leave blank for a full refund of %1$s. Enter a smaller amount for a partial refund.</string>
     <string name="staff_disputes_refund_must_be_positive">Refund amount must be greater than zero</string>
     <string name="staff_disputes_resolution_buyer">Resolve for buyer</string>
@@ -359,7 +361,7 @@
     <string name="staff_moderation_open_sidebar">Open sidebar</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_title">Moderation log</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Action</string>
     <string name="staff_reports_action_ban">Ban user</string>
     <string name="staff_reports_action_dismiss">Dismiss</string>
@@ -380,7 +382,7 @@
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>
     <string name="staff_reports_history">Report history</string>
-    <string name="staff_reports_listing_label">Listing #%1$d</string>
+    <string name="staff_reports_listing_label">Listing #%1$s</string>
     <string name="staff_reports_meta_details">Reporter\'s details</string>
     <string name="staff_reports_meta_price">Price</string>
     <string name="staff_reports_meta_reason">Reason</string>
@@ -423,7 +425,7 @@
     <string name="staff_reviews_filter_removed">Removed</string>
     <string name="staff_reviews_filter_status">Status</string>
     <string name="staff_reviews_open_sidebar">Open sidebar</string>
-    <string name="staff_reviews_order_label">order #%1$d</string>
+    <string name="staff_reviews_order_label">order #%1$s</string>
     <string name="staff_reviews_overflow_actions">Actions</string>
     <string name="staff_reviews_remove_confirm">Remove</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s on %3$s. Permanently delete this review? This cannot be undone.</string>

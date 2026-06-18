@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ప్యాకేజీని ట్రాక్ చేయండి</string>
     <string name="market_purchases_complete_purchase">కొనుగోలును పూర్తి చేయండి</string>
     <string name="market_purchases_empty">కొనుగోళ్లు లేవు</string>
-    <string name="market_purchases_order_label">ఆర్డర్ #%1$d</string>
+    <string name="market_purchases_order_label">ఆర్డర్ #%1$s</string>
     <string name="market_purchases_title">కొనుగోళ్లు</string>
     <string name="market_rating_label">రేటింగ్</string>
     <string name="market_rating_no_reviews">ఇంకా రివ్యూలు లేవు</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ప్రారంభ బిడ్: %1$s</string>
     <string name="market_profile_load_failed">ప్రొఫైల్‌ను లోడ్ చేయడం సాధ్యం కాలేదు</string>
     <string name="market_profile_member_since">%1$s నుండి సభ్యుడు</string>
+    <string name="market_profile_joined">%1$s లో చేరారు</string>
     <string name="market_profile_rating_breakdown">రేటింగ్ విభజన</string>
     <string name="market_profile_sales_count">%1$d అమ్మకాలు</string>
     <string name="market_profile_stars_value">%1$d నక్షత్రాలు</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">మీ %1$d ఫైళ్లను దిగువన డౌన్‌లోడ్ చేయండి.</string>
     <string name="market_purchase_download_one">మీ ఫైల్‌ను దిగువన డౌన్‌లోడ్ చేయండి.</string>
     <string name="market_purchase_review_from">%1$s నుండి సమీక్ష</string>
-    <string name="market_purchases_auction_label">వేలం #%1$d</string>
+    <string name="market_purchases_auction_label">వేలం #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s తిరిగి చెల్లించబడింది</string>
     <string name="market_purchases_won_for">%1$sకి గెలుచుకున్నారు</string>
     <string name="market_refund_dialog_amount_help">పూర్తి ఆర్డర్‌ను తిరిగి చెల్లించడానికి ఖాళీగా ఉంచండి.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">విక్రేత ప్రతిస్పందన</string>
     <string name="market_listing_detail_seller_reviews_heading">విక్రేత సమీక్షలు</string>
     <string name="market_account_stripe_open_failed">Stripeను తెరవడం సాధ్యం కాలేదు</string>
+    <string name="market_editor_stock">స్టాక్</string>
+    <string name="market_editor_stock_units">యూనిట్ల సంఖ్య</string>
+    <string name="market_editor_stock_unlimited">అపరిమితం</string>
+    <string name="market_editor_start_time">ప్రారంభ సమయం</string>
+    <string name="market_editor_start_time_help">ప్రచురణలో ప్రారంభించడానికి ఖాళీగా ఉంచండి.</string>
+    <string name="market_editor_start_time_next">తదుపరి</string>
+    <string name="market_editor_start_time_clear">క్లియర్ చేయండి</string>
+    <string name="market_listing_detail_buy_now_label">ఇప్పుడే కొనండి</string>
+    <string name="market_section_recently_viewed">ఇటీవల వీక్షించినవి</string>
+    <string name="market_recently_viewed_clear">అన్నీ క్లియర్ చేయండి</string>
 </resources>

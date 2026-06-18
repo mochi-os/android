@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Decideix el recurs</string>
     <string name="staff_appeals_empty">Cap apel·lació pendent</string>
     <string name="staff_appeals_history">Historial de l\'anunci</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notes</string>
     <string name="staff_appeals_open_sidebar">Obrir la barra lateral</string>
     <string name="staff_appeals_reason_label">Motiu del recurs del venedor</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Venedors</string>
     <string name="staff_dashboard_kpi_total_orders">Comandes totals</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">No</string>
     <string name="staff_dashboard_open_sidebar">Obrir la barra lateral</string>
-    <string name="staff_dashboard_order_fallback">Comanda núm. %1$d</string>
+    <string name="staff_dashboard_order_fallback">Comanda núm. %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Auditoria</string>
     <string name="staff_dashboard_tab_listings">Anuncis</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Sense disputes</string>
     <string name="staff_disputes_filter_status_label">Estat</string>
     <string name="staff_disputes_history">Historial de disputes</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Dades del comprador</string>
     <string name="staff_disputes_meta_chargeback_fee">Comissió per reclamació de càrrec</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">retinguts per Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Altres</string>
     <string name="staff_disputes_reason_unauthorised">No autoritzat</string>
     <string name="staff_disputes_refund_amount_label">Quantitat del reembors (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">L\'import del reemborsament supera el total de la comanda</string>
     <string name="staff_disputes_refund_help">Deixa en blanc per a un reembors total de %1$s. Introdueix una quantitat menor per a un reembors parcial.</string>
     <string name="staff_disputes_refund_must_be_positive">L\'import del reemborsament ha de ser superior a zero</string>
     <string name="staff_disputes_resolution_buyer">Resol a favor del comprador</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Obrir la barra lateral</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_title">Registre de moderació</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Acció</string>
     <string name="staff_reports_action_ban">Veta l\'usuari</string>
     <string name="staff_reports_action_dismiss">Descarta</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Estat</string>
     <string name="staff_reports_filter_type_label">Tipus</string>
     <string name="staff_reports_history">Historial d\'informes</string>
-    <string name="staff_reports_listing_label">Anunci núm. %1$d</string>
+    <string name="staff_reports_listing_label">Anunci núm. %1$s</string>
     <string name="staff_reports_meta_details">Dades del denunciant</string>
     <string name="staff_reports_meta_price">Preu</string>
     <string name="staff_reports_meta_reason">Motiu</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Eliminat</string>
     <string name="staff_reviews_filter_status">Estat</string>
     <string name="staff_reviews_open_sidebar">Obrir la barra lateral</string>
-    <string name="staff_reviews_order_label">comanda núm. %1$d</string>
+    <string name="staff_reviews_order_label">comanda núm. %1$s</string>
     <string name="staff_reviews_overflow_actions">Accions</string>
     <string name="staff_reviews_remove_confirm">Elimina</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s el %3$s. Eliminar definitivament aquesta ressenya? Aquesta acció no es pot desfer.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">No s\'ha pogut actualitzar el rol</string>
     <string name="staff_team_toast_role_updated">Rol actualitzat</string>
 
+    <string name="staff_config_field_stripe_webhook">Secret de signatura del Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Ja reemborsat</string>
+    <string name="staff_disputes_refund_exceeds_remaining">L\'import del reemborsament supera l\'import reemborsable restant</string>
 </resources>

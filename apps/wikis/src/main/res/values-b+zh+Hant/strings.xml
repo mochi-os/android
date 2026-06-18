@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">任何人</string>
     <string name="wikis_access_subject_authenticated">已驗證使用者</string>
 
+    <string name="wikis_revision_compare">比較變更</string>
+    <string name="wikis_revision_show_page">顯示頁面</string>
+    <string name="wikis_revision_compare_failed">無法載入先前版本進行比較。</string>
+    <string name="wikis_revision_changes_from">從版本 %1$d → %2$d 的變更</string>
 </resources>

@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Apellyatsiyani hal qilish</string>
     <string name="staff_appeals_empty">Kutilayotgan apellyatsiyalar yoʻq</string>
     <string name="staff_appeals_history">Eʼlon tarixi</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Eslatmalar</string>
     <string name="staff_appeals_open_sidebar">Yon panelni ochish</string>
     <string name="staff_appeals_reason_label">Sotuvchining shikoyat sababi</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Sotuvchilar</string>
     <string name="staff_dashboard_kpi_total_orders">Jami buyurtmalar</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Yoʻq</string>
     <string name="staff_dashboard_open_sidebar">Yon panelni ochish</string>
-    <string name="staff_dashboard_order_fallback">Buyurtma #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Buyurtma #%1$s</string>
     <string name="staff_dashboard_system">Tizim</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Eʼlonlar</string>
@@ -248,7 +248,7 @@
     <string name="staff_disputes_empty">Bahslar yoʻq</string>
     <string name="staff_disputes_filter_status_label">Holat</string>
     <string name="staff_disputes_history">Bahs tarixi</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Xaridorning maʼlumotlari</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback toʻlovi</string>
     <string name="staff_disputes_meta_evidence_due">Dalil topshirish muddati</string>
@@ -265,7 +265,6 @@
     <string name="staff_disputes_reason_not_received">Qabul qilinmadi</string>
     <string name="staff_disputes_reason_other">Boshqa</string>
     <string name="staff_disputes_reason_unauthorised">Ruxsatsiz</string>
-    <string name="staff_disputes_refund_exceeds_total">Qaytarish summasi buyurtma jamidan oshib ketdi</string>
     <string name="staff_disputes_refund_must_be_positive">Qaytarish summasi noldan katta boʻlishi kerak</string>
     <string name="staff_disputes_resolution_buyer">Xaridor foydasiga hal qilish</string>
     <string name="staff_disputes_resolution_label">Yechim</string>
@@ -338,7 +337,7 @@
     <string name="staff_moderation_open_sidebar">Yon panelni ochish</string>
     <string name="staff_moderation_system">Tizim</string>
     <string name="staff_moderation_title">Moderatsiya jurnali</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Amal</string>
     <string name="staff_reports_action_ban">Foydalanuvchini bloklash</string>
     <string name="staff_reports_action_dismiss">Bekor qilish</string>
@@ -509,11 +508,14 @@
     <string name="staff_disputes_stripe_product_unacceptable">mahsulot nomaqbul</string>
     <string name="staff_disputes_stripe_subscription_canceled">obuna bekor qilindi</string>
     <string name="staff_disputes_stripe_unrecognized">tanilmagan toʻlov</string>
-    <string name="staff_reports_listing_label">Eʼlon #%1$d</string>
+    <string name="staff_reports_listing_label">Eʼlon #%1$s</string>
     <string name="staff_reports_meta_details">Xabar beruvchining maʼlumotlari</string>
-    <string name="staff_reviews_order_label">buyurtma #%1$d</string>
+    <string name="staff_reviews_order_label">buyurtma #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s sanasida. Ushbu sharhni butunlay oʻchirib tashlaysizmi? Buni bekor qilib boʻlmaydi.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ushbu sharhni butunlay oʻchirib tashlaysizmi? Buni bekor qilib boʻlmaydi.</string>
     <string name="staff_team_dialog_search_placeholder">Ism, barmoq izi yoki ID boʻyicha qidirish…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook imzolash maxfiy kaliti</string>
+    <string name="staff_disputes_meta_already_refunded">Allaqachon qaytarilgan</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Qaytarish summasi qolgan qaytariladigan summadan oshib ketdi</string>
 </resources>

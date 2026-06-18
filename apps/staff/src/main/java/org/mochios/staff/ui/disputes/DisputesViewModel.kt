@@ -55,8 +55,9 @@ sealed class DisputesEvent {
     /** Validation: refund amount must be > 0. */
     object RefundMustBePositive : DisputesEvent()
 
-    /** Validation: refund amount > order total. */
-    object RefundExceedsTotal : DisputesEvent()
+    /** Validation: refund amount > remaining refundable amount (total minus
+     *  any prior refunds against the order). */
+    object RefundExceedsRemaining : DisputesEvent()
 }
 
 private const val PAGE_SIZE = 20
@@ -159,7 +160,8 @@ class DisputesViewModel @Inject constructor(
      * refund in minor currency units; null means "full refund of
      * dispute.total" (when resolving for the buyer). Validation:
      *   - amount > 0 (rejected via [DisputesEvent.RefundMustBePositive]),
-     *   - amount <= dispute.total (rejected via [DisputesEvent.RefundExceedsTotal]).
+     *   - amount <= remaining = total - order_refunded (rejected via
+     *     [DisputesEvent.RefundExceedsRemaining]).
      */
     fun reviewDispute(
         status: String,
@@ -174,8 +176,9 @@ class DisputesViewModel @Inject constructor(
                 _events.tryEmit(DisputesEvent.RefundMustBePositive)
                 return
             }
-            if (refundAmountMinor > current.total) {
-                _events.tryEmit(DisputesEvent.RefundExceedsTotal)
+            val remaining = current.total - current.orderRefunded
+            if (refundAmountMinor > remaining) {
+                _events.tryEmit(DisputesEvent.RefundExceedsRemaining)
                 return
             }
         }
@@ -184,7 +187,7 @@ class DisputesViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reviewDispute(
-                    id = current.id.toInt(),
+                    id = current.id,
                     status = status,
                     resolution = resolution.takeIf { it.isNotBlank() },
                     refundAmount = refundAmountMinor,

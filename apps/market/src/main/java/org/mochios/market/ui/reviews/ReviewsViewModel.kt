@@ -26,7 +26,7 @@ data class ReviewsTabState(
     val hasMore: Boolean = true,
     val error: MochiError? = null,
     /** Per-review response drafts keyed by review id. */
-    val responseDrafts: Map<Long, String> = emptyMap(),
+    val responseDrafts: Map<String, String> = emptyMap(),
 )
 
 /**
@@ -117,7 +117,7 @@ class ReviewsViewModel @Inject constructor(
         }
     }
 
-    fun setResponseDraft(reviewId: Long, value: String) {
+    fun setResponseDraft(reviewId: String, value: String) {
         updateTab(ReviewsTab.RECEIVED) { state ->
             val updated = state.responseDrafts.toMutableMap().apply {
                 if (value.isEmpty()) remove(reviewId) else put(reviewId, value)
@@ -126,7 +126,7 @@ class ReviewsViewModel @Inject constructor(
         }
     }
 
-    fun submitResponse(reviewId: Long) {
+    fun submitResponse(reviewId: String) {
         val draft = _state.value.received.responseDrafts[reviewId]?.trim().orEmpty()
         if (draft.isEmpty()) return
         viewModelScope.launch {

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Vem som helst</string>
     <string name="wikis_access_subject_authenticated">Autentiserade användare</string>
 
+    <string name="wikis_revision_compare">Jämför ändringar</string>
+    <string name="wikis_revision_show_page">Visa sida</string>
+    <string name="wikis_revision_compare_failed">Det gick inte att läsa in den tidigare versionen för jämförelse.</string>
+    <string name="wikis_revision_changes_from">Ändringar från version %1$d → %2$d</string>
 </resources>

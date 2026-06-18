@@ -25,7 +25,7 @@ import javax.inject.Inject
 data class CategoryForm(
     val name: String = "",
     val slug: String = "",
-    val parent: Long = 0,
+    val parent: String = "",
     val icon: String = "",
     val digital: Boolean = false,
     val physical: Boolean = false,
@@ -101,7 +101,7 @@ class CategoriesViewModel @Inject constructor(
             form = CategoryForm(
                 name = category.name,
                 slug = category.slug,
-                parent = category.parent ?: 0,
+                parent = category.parent ?: "",
                 icon = category.icon,
                 digital = category.digital,
                 physical = category.physical,
@@ -131,7 +131,7 @@ class CategoriesViewModel @Inject constructor(
                         repo.createCategory(
                             name = form.name.trim(),
                             slug = form.slug.trim(),
-                            parent = form.parent.takeIf { it > 0 }?.toInt(),
+                            parent = form.parent.takeIf { it.isNotBlank() },
                             icon = form.icon.takeIf { it.isNotBlank() },
                             position = form.position.toIntOrNull(),
                             digital = form.digital,
@@ -143,10 +143,10 @@ class CategoriesViewModel @Inject constructor(
                     }
                     is CategoryDialogMode.Edit -> {
                         repo.updateCategory(
-                            id = mode.category.id.toInt(),
+                            id = mode.category.id,
                             name = form.name.trim(),
                             slug = form.slug.trim(),
-                            parent = form.parent.toInt(),
+                            parent = form.parent,
                             icon = form.icon.takeIf { it.isNotBlank() },
                             position = form.position.toIntOrNull(),
                             digital = form.digital,
@@ -180,7 +180,7 @@ class CategoriesViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(submitting = true)
             try {
-                repo.deleteCategory(target.id.toInt())
+                repo.deleteCategory(target.id)
                 _state.value = _state.value.copy(deleteTarget = null, submitting = false)
                 _events.send(
                     CategoriesEvent.Toast(org.mochios.staff.R.string.staff_categories_toast_deleted),

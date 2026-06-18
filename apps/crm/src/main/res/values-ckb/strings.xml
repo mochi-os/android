@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">هیچ هەڵبژاردەیەک لەسەر خانەی ستوون نییە</string>
     <string name="crm_design_preview_empty">هیچ شت نییە بۆ پیشاندان</string>
 
+    <string name="crm_access_tab_manual">دەستی</string>
+    <string name="crm_access_search_users">گەڕانی بەکارهێنەران</string>
+    <string name="crm_access_no_groups">هیچ گرووپێک بەردەست نییە</string>
+    <string name="crm_access_tab_users">بەکارهێنەران</string>
+    <string name="crm_access_tab_groups">گرووپەکان</string>
+    <string name="crm_access_target">ئامانج</string>
+    <string name="crm_access_target_hint">ناسنامەی بەرکار، @group، * (هەمووان)، یان + (ئەندامان)</string>
+    <string name="crm_attachment_remove">لابردنی هاوپێچ</string>
+    <string name="crm_board_add_column">زیادکردنی ستوون</string>
+    <string name="crm_settings_entity_id">ناسنامەی ئەنتیتی</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">ڕاژەکار</string>
 </resources>

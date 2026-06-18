@@ -1,5 +1,8 @@
 package org.mochios.chat.ui.chat
 
+import android.widget.Toast
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
@@ -30,17 +34,22 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -57,8 +66,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -74,10 +86,13 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.model.ReactionCount
+import org.mochios.android.model.ReactionType
 import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.ReactionBar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
@@ -230,6 +245,15 @@ private fun ChatContent(
     val uiState by viewModel.uiState.collectAsState()
     var draft by remember { mutableStateOf("") }
     val listState = rememberLazyListState()
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
+
+    LaunchedEffect(Unit) {
+        viewModel.events.collect { msg ->
+            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+        }
+    }
 
     LaunchedEffect(uiState.messages.size) {
         if (uiState.messages.isNotEmpty()) {
@@ -295,6 +319,12 @@ private fun ChatContent(
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
                     if (uiState.chat.id.isNotEmpty()) {
+                        IconButton(onClick = { viewModel.openSearch() }) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.chat_search_hint)
+                            )
+                        }
                         IconButton(onClick = { onSettings(uiState.chat.fingerprint.ifEmpty { uiState.chat.id }) }) {
                             Icon(
                                 Icons.Default.Settings,
@@ -341,7 +371,6 @@ private fun ChatContent(
                     }
                 }
                 else -> {
-                    val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
                     LazyColumn(
                         state = listState,
                         modifier = Modifier.weight(1f).fillMaxWidth(),
@@ -378,7 +407,10 @@ private fun ChatContent(
                                             isOwn = entry.message.member == uiState.identity,
                                             isGroup = uiState.chat.members.size > 2,
                                             serverUrl = viewModel.serverUrl,
-                                            chatId = uiState.chat.id
+                                            chatId = uiState.chat.id,
+                                            onDelete = { viewModel.deleteMessages(listOf(entry.message.id)) },
+                                            onReact = { reaction -> viewModel.react(entry.message.id, reaction) },
+                                            onForward = { viewModel.openForward(entry.message.id) }
                                         )
                                     }
                                 }
@@ -402,19 +434,159 @@ private fun ChatContent(
                     draft = ""
                 }
             )
+
+            if (uiState.searchOpen) {
+                ChatSearchSheet(
+                    query = uiState.searchQuery,
+                    onQueryChange = { viewModel.setSearchQuery(it) },
+                    results = uiState.searchResults,
+                    loading = uiState.searchLoading,
+                    onDismiss = { viewModel.closeSearch() },
+                    onResultClick = { result ->
+                        val idx = messageLazyIndex(grouped, uiState.hasMore, result.id)
+                        viewModel.closeSearch()
+                        if (idx >= 0) scope.launch { listState.animateScrollToItem(idx) }
+                    },
+                )
+            }
+
+            if (uiState.forwardMessageId != null) {
+                ChatForwardSheet(
+                    chats = uiState.forwardChats,
+                    loading = uiState.forwardLoading,
+                    onDismiss = { viewModel.closeForward() },
+                    onSelect = { chat -> viewModel.forwardToChat(chat.id) },
+                )
+            }
         }
     }
 }
 
+/**
+ * The LazyColumn item index of a message id within the loaded list, accounting
+ * for the leading "load older" item and date separators. Returns -1 when the
+ * message isn't currently loaded (so we can't scroll to it).
+ */
+private fun messageLazyIndex(
+    grouped: List<MessageListEntry>,
+    hasMore: Boolean,
+    messageId: String,
+): Int {
+    var index = if (hasMore) 1 else 0
+    for (entry in grouped) {
+        if (entry is MessageListEntry.MessageItem && entry.message.id == messageId) return index
+        index++
+    }
+    return -1
+}
+
+/**
+ * Search-in-chat bottom sheet: a query field over the server search endpoint
+ * plus a results list (sender / excerpt / time). Tapping a result jumps to the
+ * message if it's loaded. Mirrors the web chat-search header's capability.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ChatSearchSheet(
+    query: String,
+    onQueryChange: (String) -> Unit,
+    results: List<org.mochios.chat.model.ChatSearchResult>,
+    loading: Boolean,
+    onDismiss: () -> Unit,
+    onResultClick: (org.mochios.chat.model.ChatSearchResult) -> Unit,
+) {
+    val format = LocalFormat.current
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 16.dp)
+        ) {
+            OutlinedTextField(
+                value = query,
+                onValueChange = onQueryChange,
+                placeholder = { Text(stringResource(R.string.chat_search_hint)) },
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            when {
+                loading -> Box(
+                    modifier = Modifier.fillMaxWidth().padding(24.dp),
+                    contentAlignment = Alignment.Center,
+                ) { CircularProgressIndicator() }
+                query.trim().length >= 2 && results.isEmpty() -> Text(
+                    text = stringResource(R.string.chat_search_no_results),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(vertical = 16.dp),
+                )
+                else -> LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
+                    items(results, key = { it.id }) { result ->
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { onResultClick(result) }
+                                .padding(vertical = 8.dp)
+                        ) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                            ) {
+                                Text(
+                                    text = result.name,
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.primary,
+                                )
+                                Text(
+                                    text = format.formatTimestamp(result.created),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            }
+                            Text(
+                                text = result.excerpt.ifBlank { result.body },
+                                style = MaterialTheme.typography.bodyMedium,
+                                maxLines = 2,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+                        }
+                        HorizontalDivider()
+                    }
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun MessageBubble(
     message: ChatMessage,
     isOwn: Boolean,
     isGroup: Boolean,
     serverUrl: String,
-    chatId: String
+    chatId: String,
+    onDelete: () -> Unit,
+    onReact: (String) -> Unit,
+    onForward: () -> Unit
 ) {
     val format = LocalFormat.current
+    val clipboard = LocalClipboardManager.current
+    val context = LocalContext.current
+    val copiedMessage = stringResource(MochiR.string.common_copied)
+    var menuExpanded by remember { mutableStateOf(false) }
+
+    // A long-press menu is only worth showing when there's an action: you can
+    // copy any non-empty message, and delete your own. Deleted tombstones have
+    // no actions.
+    val canCopy = !message.deleted && message.body.isNotEmpty()
+    val canForward = !message.deleted
+    val canDelete = !message.deleted && isOwn
+    val hasMenu = canCopy || canForward || canDelete
+
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = if (isOwn) Alignment.End else Alignment.Start
@@ -438,63 +610,209 @@ private fun MessageBubble(
                 )
             }
         }
-        Card(
-            shape = RoundedCornerShape(16.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = if (isOwn) {
-                    MaterialTheme.colorScheme.primaryContainer
-                } else {
-                    MaterialTheme.colorScheme.surfaceVariant
-                }
-            ),
-            modifier = Modifier.widthIn(max = 320.dp)
-        ) {
-            Column(modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)) {
-                if (!isOwn && !isGroup) {
-                    Text(
-                        text = message.name,
-                        style = MaterialTheme.typography.labelMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Spacer(modifier = Modifier.height(2.dp))
-                }
-                if (message.body.isNotEmpty()) {
-                    Text(
-                        text = message.body,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = if (isOwn) {
-                            MaterialTheme.colorScheme.onPrimaryContainer
+        Box {
+            Card(
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = if (isOwn) {
+                        MaterialTheme.colorScheme.primaryContainer
+                    } else {
+                        MaterialTheme.colorScheme.surfaceVariant
+                    }
+                ),
+                modifier = Modifier
+                    .widthIn(max = 320.dp)
+                    .then(
+                        if (hasMenu) {
+                            Modifier.combinedClickable(
+                                onClick = {},
+                                onLongClick = { menuExpanded = true },
+                            )
                         } else {
-                            MaterialTheme.colorScheme.onSurface
+                            Modifier
                         }
                     )
-                }
-                if (message.attachments.isNotEmpty()) {
-                    if (message.body.isNotEmpty()) Spacer(modifier = Modifier.height(6.dp))
-                    AttachmentGallery(
-                        attachments = message.attachments,
-                        urlBuilder = { att ->
-                            resolveAttachmentUrl(serverUrl, att.url ?: "/chat/$chatId/-/attachments/${att.id}")
-                        },
-                        thumbnailUrlBuilder = { att ->
-                            resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/chat/$chatId/-/attachments/${att.id}/thumbnail")
+            ) {
+                Column(modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)) {
+                    if (!isOwn && !isGroup) {
+                        Text(
+                            text = message.name,
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(modifier = Modifier.height(2.dp))
+                    }
+                    if (message.deleted) {
+                        Text(
+                            text = stringResource(R.string.chat_message_deleted),
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontStyle = FontStyle.Italic,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    } else {
+                        if (message.body.isNotEmpty()) {
+                            Text(
+                                text = message.body,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = if (isOwn) {
+                                    MaterialTheme.colorScheme.onPrimaryContainer
+                                } else {
+                                    MaterialTheme.colorScheme.onSurface
+                                }
+                            )
                         }
+                        if (message.attachments.isNotEmpty()) {
+                            if (message.body.isNotEmpty()) Spacer(modifier = Modifier.height(6.dp))
+                            AttachmentGallery(
+                                attachments = message.attachments,
+                                urlBuilder = { att ->
+                                    resolveAttachmentUrl(serverUrl, att.url ?: "/chat/$chatId/-/attachments/${att.id}")
+                                },
+                                thumbnailUrlBuilder = { att ->
+                                    resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/chat/$chatId/-/attachments/${att.id}/thumbnail")
+                                }
+                            )
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = format.formatTimestamp(message.created),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = format.formatTimestamp(message.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
             }
+            if (hasMenu) {
+                DropdownMenu(
+                    expanded = menuExpanded,
+                    onDismissRequest = { menuExpanded = false },
+                ) {
+                    if (canCopy) {
+                        DropdownMenuItem(
+                            text = { Text(stringResource(MochiR.string.common_copy)) },
+                            onClick = {
+                                clipboard.setText(AnnotatedString(message.body))
+                                Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+                                menuExpanded = false
+                            },
+                        )
+                    }
+                    if (canForward) {
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.chat_message_forward)) },
+                            onClick = {
+                                onForward()
+                                menuExpanded = false
+                            },
+                        )
+                    }
+                    if (canDelete) {
+                        DropdownMenuItem(
+                            text = { Text(stringResource(MochiR.string.common_delete)) },
+                            onClick = {
+                                onDelete()
+                                menuExpanded = false
+                            },
+                        )
+                    }
+                }
+            }
+        }
+        if (!message.deleted) {
+            Spacer(modifier = Modifier.height(2.dp))
+            ReactionBar(
+                reactions = chatReactionCounts(message.reactionCounts, message.myReaction),
+                onReact = onReact,
+                onRemoveReaction = { onReact("none") },
+            )
         }
     }
 }
 
+/**
+ * Adapt the chat server's reaction shape — a `{reaction: count}` map plus the
+ * viewer's own reaction — into the lib [ReactionBar]'s `List<ReactionCount>`.
+ * Unknown reaction keys are dropped; pills are ordered by the canonical
+ * [ReactionType] order for stability.
+ */
+private fun chatReactionCounts(counts: Map<String, Int>, myReaction: String?): List<ReactionCount> =
+    counts.mapNotNull { (key, count) ->
+        ReactionType.fromString(key)?.let { type ->
+            ReactionCount(type = type, count = count, isMine = key.equals(myReaction, ignoreCase = true))
+        }
+    }.sortedBy { it.type.ordinal }
+
 private sealed class MessageListEntry {
     data class DateHeader(val dayKey: String, val epochSeconds: Long) : MessageListEntry()
     data class MessageItem(val message: ChatMessage) : MessageListEntry()
+}
+
+/**
+ * Forward-to-chat bottom sheet: a filterable list of the user's other active
+ * chats; tapping one forwards the open message there. (Forward-to-friend is a
+ * newer web feature not yet on web main, so it's deferred here for parity.)
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ChatForwardSheet(
+    chats: List<org.mochios.chat.model.Chat>,
+    loading: Boolean,
+    onDismiss: () -> Unit,
+    onSelect: (org.mochios.chat.model.Chat) -> Unit,
+) {
+    var filter by remember { mutableStateOf("") }
+    val filtered = remember(chats, filter) {
+        if (filter.isBlank()) chats
+        else chats.filter { it.name.contains(filter.trim(), ignoreCase = true) }
+    }
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 16.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.chat_forward_title),
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.padding(bottom = 8.dp),
+            )
+            OutlinedTextField(
+                value = filter,
+                onValueChange = { filter = it },
+                placeholder = { Text(stringResource(R.string.chat_forward_search)) },
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            when {
+                loading -> Box(
+                    modifier = Modifier.fillMaxWidth().padding(24.dp),
+                    contentAlignment = Alignment.Center,
+                ) { CircularProgressIndicator() }
+                filtered.isEmpty() -> Text(
+                    text = stringResource(R.string.chat_forward_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(vertical = 16.dp),
+                )
+                else -> LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
+                    items(filtered, key = { it.id }) { chat ->
+                        Text(
+                            text = chat.name,
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { onSelect(chat) }
+                                .padding(vertical = 12.dp),
+                        )
+                        HorizontalDivider()
+                    }
+                }
+            }
+        }
+    }
 }
 
 private fun groupMessagesByDate(messages: List<ChatMessage>): List<MessageListEntry> {

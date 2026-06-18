@@ -350,7 +350,7 @@
     <string name="market_purchase_track">តាមដានកញ្ចប់</string>
     <string name="market_purchases_complete_purchase">បំពេញការទិញ</string>
     <string name="market_purchases_empty">មិនមានការទិញ</string>
-    <string name="market_purchases_order_label">ការបញ្ជា #%1$d</string>
+    <string name="market_purchases_order_label">ការបញ្ជា #%1$s</string>
     <string name="market_purchases_title">ការទិញ</string>
     <string name="market_rating_label">ការវាយតម្លៃ</string>
     <string name="market_rating_no_reviews">មិនទាន់មានការវាយតម្លៃ</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ដេញចាប់ផ្ដើម៖ %1$s</string>
     <string name="market_profile_load_failed">មិនអាចផ្ទុកប្រវត្តិរូបបានទេ</string>
     <string name="market_profile_member_since">ជាសមាជិកតាំងពី %1$s</string>
+    <string name="market_profile_joined">បានចូលរួម %1$s</string>
     <string name="market_profile_rating_breakdown">ការវាយតម្លៃលម្អិត</string>
     <string name="market_profile_sales_count">ការលក់ %1$d</string>
     <string name="market_profile_stars_value">%1$d ផ្កាយ</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">ទាញយកឯកសារ %1$d របស់អ្នកខាងក្រោម។</string>
     <string name="market_purchase_download_one">ទាញយកឯកសាររបស់អ្នកខាងក្រោម។</string>
     <string name="market_purchase_review_from">ការវាយតម្លៃពី %1$s</string>
-    <string name="market_purchases_auction_label">ការដេញថ្លៃ #%1$d</string>
+    <string name="market_purchases_auction_label">ការដេញថ្លៃ #%1$s</string>
     <string name="market_purchases_refunded_partial">បានសងវិញ −%1$s</string>
     <string name="market_purchases_won_for">ឈ្នះក្នុងតម្លៃ %1$s</string>
     <string name="market_refund_dialog_amount_help">ទុកនៅទទេដើម្បីសងវិញពេញការបញ្ជាទិញ។</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">ការឆ្លើយតបពីអ្នកលក់</string>
     <string name="market_listing_detail_seller_reviews_heading">មតិយោបល់អំពីអ្នកលក់</string>
     <string name="market_account_stripe_open_failed">មិនអាចបើក Stripe បានទេ</string>
+    <string name="market_editor_stock">ស្តុក</string>
+    <string name="market_editor_stock_units">ចំនួនឯកតា</string>
+    <string name="market_editor_stock_unlimited">គ្មានដែនកំណត់</string>
+    <string name="market_editor_start_time">ម៉ោងចាប់ផ្តើម</string>
+    <string name="market_editor_start_time_help">ទុកឲ្យទទេដើម្បីចាប់ផ្ដើមលើការបោះពុម្ពផ្សាយ។</string>
+    <string name="market_editor_start_time_next">បន្ទាប់</string>
+    <string name="market_editor_start_time_clear">សម្អាត</string>
+    <string name="market_listing_detail_buy_now_label">ទិញឥឡូវ</string>
+    <string name="market_section_recently_viewed">បានមើលថ្មីៗ</string>
+    <string name="market_recently_viewed_clear">សម្អាតទាំងអស់</string>
 </resources>

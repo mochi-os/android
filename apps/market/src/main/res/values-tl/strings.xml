@@ -350,7 +350,7 @@
     <string name="market_purchase_track">I-track ang package</string>
     <string name="market_purchases_complete_purchase">Kumpletuhin ang pagbili</string>
     <string name="market_purchases_empty">Walang pagbili</string>
-    <string name="market_purchases_order_label">Order #%1$d</string>
+    <string name="market_purchases_order_label">Order #%1$s</string>
     <string name="market_purchases_title">Mga Pagbili</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">Wala pang review</string>
@@ -611,6 +611,7 @@
     <string name="market_price_starting_bid">Panimulang bid: %1$s</string>
     <string name="market_profile_load_failed">Hindi na-load ang profile</string>
     <string name="market_profile_member_since">Miyembro mula %1$s</string>
+    <string name="market_profile_joined">Sumali noong %1$s</string>
     <string name="market_profile_rating_breakdown">Detalye ng rating</string>
     <string name="market_profile_stars_value">%1$d stars</string>
     <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">I-download ang iyong %1$d file sa ibaba.</string>
     <string name="market_purchase_download_one">I-download ang iyong file sa ibaba.</string>
     <string name="market_purchase_review_from">Review mula kay %1$s</string>
-    <string name="market_purchases_auction_label">Auction #%1$d</string>
+    <string name="market_purchases_auction_label">Auction #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s na-refund</string>
     <string name="market_purchases_won_for">Napanalunan sa halagang %1$s</string>
     <string name="market_refund_dialog_amount_help">Iwanang blanko para i-refund ang buong order.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Tugon ng nagbebenta</string>
     <string name="market_listing_detail_seller_reviews_heading">Mga review ng nagbebenta</string>
     <string name="market_account_stripe_open_failed">Hindi nabuksan ang Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Bilang ng yunit</string>
+    <string name="market_editor_stock_unlimited">Walang limitasyon</string>
+    <string name="market_editor_start_time">Oras ng simula</string>
+    <string name="market_editor_start_time_help">Iwanang blangko para magsimula sa publish.</string>
+    <string name="market_editor_start_time_next">Susunod</string>
+    <string name="market_editor_start_time_clear">Burahin</string>
+    <string name="market_listing_detail_buy_now_label">Bilhin ngayon</string>
+    <string name="market_section_recently_viewed">Kamakailang tiningnan</string>
+    <string name="market_recently_viewed_clear">Burahin lahat</string>
 </resources>

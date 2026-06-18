@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">কলাম ফিল্ডে কোনো অপশন নেই</string>
     <string name="crm_design_preview_empty">দেখানোর কিছু নেই</string>
 
+    <string name="crm_access_tab_manual">ম্যানুয়াল</string>
+    <string name="crm_access_search_users">ব্যবহারকারী অনুসন্ধান করুন</string>
+    <string name="crm_access_no_groups">কোনো গ্রুপ উপলব্ধ নেই</string>
+    <string name="crm_access_tab_users">ব্যবহারকারী</string>
+    <string name="crm_access_tab_groups">গ্রুপসমূহ</string>
+    <string name="crm_access_target">টার্গেট</string>
+    <string name="crm_access_target_hint">সত্তা আইডি, @group, * (সবাই), বা + (সদস্যরা)</string>
+    <string name="crm_attachment_remove">সংযুক্তি সরান</string>
+    <string name="crm_board_add_column">কলাম যোগ করুন</string>
+    <string name="crm_settings_entity_id">ইউনিট আইডি</string>
+    <string name="crm_settings_fingerprint">ফিঙ্গারপ্রিন্ট</string>
+    <string name="crm_settings_server">সার্ভার</string>
 </resources>

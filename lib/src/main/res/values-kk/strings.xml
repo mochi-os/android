@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Көп факторлы аутентификация</string>
     <string name="auth_mfa_subtitle">Қалған растау қадамдарын аяқтаңыз</string>
     <string name="auth_recover_account">Тіркелгіні қалпына келтіру</string>
+    <string name="auth_login_title">Mochi-ге кіру</string>
+    <string name="auth_next">Келесі</string>
+    <string name="auth_or_log_in_with">Немесе мынамен кіріңіз</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Passkey пайдалану</string>
+    <string name="auth_email_me_a_code">Маған код электрондық поштамен жіберіңіз</string>
+    <string name="auth_or_enter_authenticator_code">Немесе аутентификатор кодын енгізіңіз</string>
+    <string name="auth_log_in">Кіру</string>
+    <string name="auth_back">Артқа</string>
+    <string name="auth_lost_access_recovery">Кіре алмайсыз ба? Қалпына келтіру кодын пайдаланыңыз</string>
     <string name="auth_create_identity_title">Жеке басыңызды жасаңыз</string>
     <string name="auth_create_identity_subtitle">Осы сервердегі жеке басыңыз үшін атау таңдаңыз</string>
     <string name="auth_privacy_public_description">Басқалар сізді таба алуы үшін пайдаланушылар каталогында көрсетіледі.</string>

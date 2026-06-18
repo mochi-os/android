@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">從本機刪除</string>
     <string name="chat_settings_delete_message">這只會從此裝置移除聊天及其訊息。</string>
 
+    <string name="chat_message_deleted">此訊息已被刪除</string>
+    <string name="chat_search_hint">在聊天中搜尋...</string>
+    <string name="chat_search_no_results">沒有結果</string>
+    <string name="chat_message_forward">轉傳</string>
+    <string name="chat_forward_title">轉傳至…</string>
+    <string name="chat_forward_search">搜尋聊天…</string>
+    <string name="chat_forward_empty">沒有可轉傳的聊天</string>
+    <string name="chat_forward_success">已轉傳</string>
+    <string name="chat_forward_failed">轉傳失敗</string>
 </resources>

@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Awtentikazzjoni b\'aktar minn fattur wieħed</string>
     <string name="auth_mfa_subtitle">Lesti l-passi ta\' verifika li fadal</string>
     <string name="auth_recover_account">Irkupra l-kont</string>
+    <string name="auth_login_title">Idħol f\'Mochi</string>
+    <string name="auth_next">Li jmiss</string>
+    <string name="auth_or_log_in_with">Jew idħol bi</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Uża passkey</string>
+    <string name="auth_email_me_a_code">Ibgħatli kodiċi bl-email</string>
+    <string name="auth_or_enter_authenticator_code">Jew daħħal il-kodiċi tal-awtentikazzjoni</string>
+    <string name="auth_log_in">Idħol</string>
+    <string name="auth_back">Lura</string>
+    <string name="auth_lost_access_recovery">Tlift l-aċċess? Uża kodiċi ta\' rkupru</string>
     <string name="auth_create_identity_title">Oħloq l-identità tiegħek</string>
     <string name="auth_create_identity_subtitle">Agħżel isem għall-identità tiegħek fuq dan is-server</string>
     <string name="auth_privacy_public_description">Imniżżel fid-direttorju tal-utenti biex oħrajn ikunu jistgħu jsibuk.</string>

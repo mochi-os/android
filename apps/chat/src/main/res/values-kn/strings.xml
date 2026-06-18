@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">ಸ್ಥಳೀಯವಾಗಿ ಅಳಿಸಿ</string>
     <string name="chat_settings_delete_message">ಇದು ಈ ಸಾಧನದಿಂದ ಮಾತ್ರ ಚಾಟ್ ಮತ್ತು ಅದರ ಸಂದೇಶಗಳನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
 
+    <string name="chat_message_deleted">ಈ ಸಂದೇಶವನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="chat_search_hint">ಚಾಟ್‌ನಲ್ಲಿ ಹುಡುಕಿ...</string>
+    <string name="chat_search_no_results">ಯಾವುದೇ ಫಲಿತಾಂಶಗಳಿಲ್ಲ</string>
+    <string name="chat_message_forward">ಫಾರ್ವರ್ಡ್ ಮಾಡಿ</string>
+    <string name="chat_forward_title">ಇಲ್ಲಿಗೆ ಫಾರ್ವರ್ಡ್ ಮಾಡಿ…</string>
+    <string name="chat_forward_search">ಚಾಟ್‌ಗಳನ್ನು ಹುಡುಕಿ…</string>
+    <string name="chat_forward_empty">ಫಾರ್ವರ್ಡ್ ಮಾಡಲು ಯಾವುದೇ ಚಾಟ್‌ಗಳಿಲ್ಲ</string>
+    <string name="chat_forward_success">ಫಾರ್ವರ್ಡ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="chat_forward_failed">ಫಾರ್ವರ್ಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
 </resources>

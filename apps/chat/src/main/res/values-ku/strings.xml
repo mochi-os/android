@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Herêmî jêbibe</string>
     <string name="chat_settings_delete_message">Ev tenê chatê û peyamên wê ji vê amûrê radike.</string>
 
+    <string name="chat_message_deleted">Ev peyam hat jêbirin</string>
+    <string name="chat_search_hint">Di sohbetê de bigere...</string>
+    <string name="chat_search_no_results">Encam tune</string>
+    <string name="chat_message_forward">Beralî bike</string>
+    <string name="chat_forward_title">Beralî bike bo…</string>
+    <string name="chat_forward_search">Li sohbetan bigere…</string>
+    <string name="chat_forward_empty">Sohbetek ji bo beralîkirinê tune</string>
+    <string name="chat_forward_success">Hat beralîkirin</string>
+    <string name="chat_forward_failed">Beralîkirin bi ser neket</string>
 </resources>

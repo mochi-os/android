@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Dirree tarjaawwanii irratti filannoon hin jiru</string>
     <string name="crm_design_preview_empty">Wanti agarsiifamu hin jiru</string>
 
+    <string name="crm_access_tab_manual">Harkaan</string>
+    <string name="crm_access_search_users">Fayyadamtoota barbaadi</string>
+    <string name="crm_access_no_groups">Garreen hin jiran</string>
+    <string name="crm_access_tab_users">Fayyadamtoota</string>
+    <string name="crm_access_tab_groups">Garee</string>
+    <string name="crm_access_target">Galma</string>
+    <string name="crm_access_target_hint">Eenyummaa entiitii, @gareen, * (hunda), yookaan + (miseensota)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">Tarjaa dabali</string>
+    <string name="crm_settings_entity_id">ID Iddoo</string>
+    <string name="crm_settings_fingerprint">Maxxansa quba</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

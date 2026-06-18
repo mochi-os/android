@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Будь-хто</string>
     <string name="wikis_access_subject_authenticated">Автентифіковані користувачі</string>
 
+    <string name="wikis_revision_compare">Порівняти зміни</string>
+    <string name="wikis_revision_show_page">Показати сторінку</string>
+    <string name="wikis_revision_compare_failed">Не вдалося завантажити попередню версію для порівняння.</string>
+    <string name="wikis_revision_changes_from">Зміни з версії %1$d → %2$d</string>
 </resources>

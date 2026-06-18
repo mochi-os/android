@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d Verkäufe</string>
     <string name="market_profile_sales_count">%1$d Verkäufe</string>
     <string name="market_purchase_dispute_response">Antwort des Verkäufers</string>
-    <string name="market_purchases_order_label">Bestellung Nr. %1$d</string>
+    <string name="market_purchases_order_label">Bestellung Nr. %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Erzähle Käufern von dir…</string>
@@ -666,6 +666,7 @@
     <string name="market_profile_biography">Über</string>
     <string name="market_profile_load_failed">Profil konnte nicht geladen werden</string>
     <string name="market_profile_member_since">Mitglied seit %1$s</string>
+    <string name="market_profile_joined">Beigetreten %1$s</string>
     <string name="market_profile_no_reviews">Noch keine Bewertungen.</string>
     <string name="market_profile_rating_breakdown">Bewertungsübersicht</string>
     <string name="market_profile_stars_value">%1$d Sterne</string>
@@ -674,7 +675,7 @@
     <string name="market_purchase_download_many">Laden Sie Ihre %1$d Dateien unten herunter.</string>
     <string name="market_purchase_download_one">Laden Sie Ihre Datei unten herunter.</string>
     <string name="market_purchase_review_from">Bewertung von %1$s</string>
-    <string name="market_purchases_auction_label">Auktion Nr. %1$d</string>
+    <string name="market_purchases_auction_label">Auktion Nr. %1$s</string>
 
     <string name="market_account_address_desc">Wird bei künftigen Bestellungen automatisch ausgefüllt, sobald die Checkout-Integration verfügbar ist.</string>
     <string name="market_account_address_title">Standard-Lieferadresse</string>
@@ -732,4 +733,14 @@
     <string name="market_listing_detail_seller_response">Antwort des Verkäufers</string>
     <string name="market_listing_detail_seller_reviews_heading">Verkäuferbewertungen</string>
     <string name="market_account_stripe_open_failed">Stripe konnte nicht geöffnet werden</string>
+    <string name="market_editor_stock">Bestand</string>
+    <string name="market_editor_stock_units">Anzahl der Einheiten</string>
+    <string name="market_editor_stock_unlimited">Unbegrenzt</string>
+    <string name="market_editor_start_time">Startzeit</string>
+    <string name="market_editor_start_time_help">Leer lassen, um beim Veröffentlichen zu starten.</string>
+    <string name="market_editor_start_time_next">Weiter</string>
+    <string name="market_editor_start_time_clear">Leeren</string>
+    <string name="market_listing_detail_buy_now_label">Sofort kaufen</string>
+    <string name="market_section_recently_viewed">Zuletzt angesehen</string>
+    <string name="market_recently_viewed_clear">Alle leeren</string>
 </resources>

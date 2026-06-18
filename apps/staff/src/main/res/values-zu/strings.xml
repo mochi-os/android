@@ -49,8 +49,8 @@
     <string name="staff_appeals_dialog_title">Nquma isikhalazo</string>
     <string name="staff_appeals_empty">Azikho izikhalo ezilindile</string>
     <string name="staff_appeals_history">Umlando woshicilelo</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Amanothi</string>
     <string name="staff_appeals_open_sidebar">Vula ibha eseceleni</string>
     <string name="staff_appeals_submit">Hambisa</string>
@@ -220,7 +220,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Abathengisi</string>
     <string name="staff_dashboard_kpi_total_orders">Isamba sama-oda</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Cha</string>
     <string name="staff_dashboard_open_sidebar">Vula ibha eseceleni</string>
     <string name="staff_dashboard_system">Isistimu</string>
@@ -238,7 +238,7 @@
     <string name="staff_disputes_empty">Azikho izimpikiswano</string>
     <string name="staff_disputes_filter_status_label">Isimo</string>
     <string name="staff_disputes_history">Umlando wempikiswano</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Imali ye-chargeback</string>
     <string name="staff_disputes_meta_evidence_due">Ubufakazi bulindeleke ngo</string>
     <string name="staff_disputes_meta_listing">Uhlu</string>
@@ -254,7 +254,6 @@
     <string name="staff_disputes_reason_not_received">Akutholakelanga</string>
     <string name="staff_disputes_reason_other">Okunye</string>
     <string name="staff_disputes_reason_unauthorised">Akuvunyelwe</string>
-    <string name="staff_disputes_refund_exceeds_total">Inani lokubuyiselwa lidlula isamba se-oda</string>
     <string name="staff_disputes_refund_must_be_positive">Inani lokubuyiselwa kufanele libe ngaphezu kuka-zero</string>
     <string name="staff_disputes_resolution_buyer">Xazulula umthengi</string>
     <string name="staff_disputes_resolution_label">Isixazululo</string>
@@ -324,7 +323,7 @@
     <string name="staff_moderation_open_sidebar">Vula ibha eseceleni</string>
     <string name="staff_moderation_system">Isistimu</string>
     <string name="staff_moderation_title">Ilogi yokulawula</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Isenzo</string>
     <string name="staff_reports_action_ban">Vimba umsebenzisi</string>
     <string name="staff_reports_action_dismiss">Cashisa</string>
@@ -472,7 +471,7 @@
     <string name="staff_team_toast_role_failed">Yehlulekile ukubuyekeza indima</string>
     <string name="staff_team_toast_role_updated">Indima ibuyekeziwe</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">I-oda #%1$d</string>
+    <string name="staff_dashboard_order_fallback">I-oda #%1$s</string>
 
     <string name="staff_accounts_action_unsuspend_title">Susa ukumiswa</string>
     <string name="staff_accounts_reason_optional_label">Isizathu (akudingekile)</string>
@@ -507,11 +506,14 @@
     <string name="staff_disputes_stripe_unrecognized">umthwalo ongaziwa</string>
     <string name="staff_listings_seller_unknown">Umthengisi ongaziwa</string>
     <string name="staff_listings_seller_verified">Umthengisi oqinisekisiwe</string>
-    <string name="staff_reports_listing_label">Uhlu #%1$d</string>
+    <string name="staff_reports_listing_label">Uhlu #%1$s</string>
     <string name="staff_reports_meta_details">Imininingwane yombiki</string>
-    <string name="staff_reviews_order_label">i-oda #%1$d</string>
+    <string name="staff_reviews_order_label">i-oda #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ngo-%3$s. Susa unomphela lokhu kubuyekezwa? Lokhu ngeke kuhlehliswe.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Susa unomphela lokhu kubuyekezwa? Lokhu ngeke kuhlehliswe.</string>
     <string name="staff_team_dialog_search_placeholder">Sesha ngegama, izigxivizo zeminwe, noma i-ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Imfihlo yokusayina i-Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Sekubuyiselwe</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Inani lokubuyiselwa lidlula inani elisele elingabuyiselwa</string>
 </resources>

@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d فروش</string>
     <string name="market_profile_sales_count">%1$d فروش</string>
     <string name="market_purchase_dispute_response">پاسخ فروشنده</string>
-    <string name="market_purchases_order_label">سفارش #%1$d</string>
+    <string name="market_purchases_order_label">سفارش #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">درباره خودتان به خریداران بگویید…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">درباره</string>
     <string name="market_profile_load_failed">بارگذاری نمایه ممکن نشد</string>
     <string name="market_profile_member_since">عضو از %1$s</string>
+    <string name="market_profile_joined">عضو شده در %1$s</string>
     <string name="market_profile_no_reviews">هنوز نظری ثبت نشده است.</string>
     <string name="market_profile_rating_breakdown">تفکیک امتیاز</string>
     <string name="market_profile_stars_value">%1$d ستاره</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">%1$d فایل خود را در پایین دانلود کنید.</string>
     <string name="market_purchase_download_one">فایل خود را در پایین دانلود کنید.</string>
     <string name="market_purchase_review_from">نظر از %1$s</string>
-    <string name="market_purchases_auction_label">حراج #%1$d</string>
+    <string name="market_purchases_auction_label">حراج #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s بازپرداخت شد</string>
     <string name="market_purchases_won_for">برنده شد به مبلغ %1$s</string>
     <string name="market_rating_reviews">(%1$d نظر)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">پاسخ فروشنده</string>
     <string name="market_listing_detail_seller_reviews_heading">نظرات فروشنده</string>
     <string name="market_account_stripe_open_failed">باز کردن Stripe انجام نشد</string>
+    <string name="market_editor_stock">موجودی</string>
+    <string name="market_editor_stock_units">تعداد واحدها</string>
+    <string name="market_editor_stock_unlimited">نامحدود</string>
+    <string name="market_editor_start_time">زمان شروع</string>
+    <string name="market_editor_start_time_help">برای شروع هنگام انتشار، خالی بگذارید.</string>
+    <string name="market_editor_start_time_next">بعدی</string>
+    <string name="market_editor_start_time_clear">پاک کردن</string>
+    <string name="market_listing_detail_buy_now_label">همین حالا بخرید</string>
+    <string name="market_section_recently_viewed">اخیراً مشاهده‌شده</string>
+    <string name="market_recently_viewed_clear">پاک کردن همه</string>
 </resources>

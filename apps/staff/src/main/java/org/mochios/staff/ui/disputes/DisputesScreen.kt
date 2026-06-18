@@ -75,7 +75,7 @@ fun DisputesScreen(
 
     val resolvedMsg = stringResource(R.string.staff_disputes_resolved_toast)
     val refundPositiveMsg = stringResource(R.string.staff_disputes_refund_must_be_positive)
-    val refundExceedsMsg = stringResource(R.string.staff_disputes_refund_exceeds_total)
+    val refundExceedsMsg = stringResource(R.string.staff_disputes_refund_exceeds_remaining)
 
     LaunchedEffect(viewModel) {
         viewModel.events.collect { event ->
@@ -83,7 +83,7 @@ fun DisputesScreen(
                 is DisputesEvent.Resolved -> snackbar.showSnackbar(resolvedMsg)
                 is DisputesEvent.Toast -> snackbar.showSnackbar(event.message)
                 is DisputesEvent.RefundMustBePositive -> snackbar.showSnackbar(refundPositiveMsg)
-                is DisputesEvent.RefundExceedsTotal -> snackbar.showSnackbar(refundExceedsMsg)
+                is DisputesEvent.RefundExceedsRemaining -> snackbar.showSnackbar(refundExceedsMsg)
             }
         }
     }

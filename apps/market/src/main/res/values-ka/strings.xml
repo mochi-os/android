@@ -352,7 +352,7 @@
     <string name="market_purchase_track">ტრეკი შეიქმნა</string>
     <string name="market_purchases_complete_purchase">შეძენის დასრულება</string>
     <string name="market_purchases_empty">შესყიდვები არ არის</string>
-    <string name="market_purchases_order_label">შეკვეთა #%1$d</string>
+    <string name="market_purchases_order_label">შეკვეთა #%1$s</string>
     <string name="market_purchases_title">შესყიდვები</string>
     <string name="market_rating_label">შეფასება</string>
     <string name="market_rating_no_reviews">მიმოხილვები ჯერ არ არის</string>
@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">საწყისი განაცხადი: %1$s</string>
     <string name="market_profile_load_failed">პროფილის ჩატვირთვა ვერ მოხერხდა</string>
     <string name="market_profile_member_since">წევრი %1$s-დან</string>
+    <string name="market_profile_joined">შემოუერთდა %1$s</string>
     <string name="market_profile_rating_breakdown">შეფასებების დეტალები</string>
     <string name="market_profile_stars_value">%1$d ვარსკვლავი</string>
     <string name="market_purchase_dispute_chargeback">თანხის დაბრუნება %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">ჩამოტვირთეთ თქვენი %1$d ფაილი ქვემოთ.</string>
     <string name="market_purchase_download_one">ჩამოტვირთეთ თქვენი ფაილი ქვემოთ.</string>
     <string name="market_purchase_review_from">მიმოხილვა %1$s-სგან</string>
-    <string name="market_purchases_auction_label">აუქციონი #%1$d</string>
+    <string name="market_purchases_auction_label">აუქციონი #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s დაბრუნდა</string>
     <string name="market_purchases_won_for">მოგებული %1$s-ად</string>
     <string name="market_refund_dialog_amount_help">დატოვეთ ცარიელი მთლიანი შეკვეთის დასაბრუნებლად.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">გამყიდველის პასუხი</string>
     <string name="market_listing_detail_seller_reviews_heading">გამყიდველის შეფასებები</string>
     <string name="market_account_stripe_open_failed">Stripe-ის გახსნა ვერ მოხერხდა</string>
+    <string name="market_editor_stock">მარაგი</string>
+    <string name="market_editor_stock_units">ერთეულების რაოდენობა</string>
+    <string name="market_editor_stock_unlimited">უცნობი მოწყობილობა</string>
+    <string name="market_editor_start_time">დაწყების დრო</string>
+    <string name="market_editor_start_time_help">დატოვეთ ცარიელი გამოქვეყნებისას დასაწყებად.</string>
+    <string name="market_editor_start_time_next">შემდეგი</string>
+    <string name="market_editor_start_time_clear">გასუფთავება</string>
+    <string name="market_listing_detail_buy_now_label">ყიდე ახლავე</string>
+    <string name="market_section_recently_viewed">ბოლო ნახვები</string>
+    <string name="market_recently_viewed_clear">ყველაფრის გასუფთავება</string>
 </resources>

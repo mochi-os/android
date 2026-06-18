@@ -354,7 +354,7 @@
     <string name="market_purchase_track">Track paket</string>
     <string name="market_purchases_complete_purchase">Rampungké tuku</string>
     <string name="market_purchases_empty">Ora ana tuku</string>
-    <string name="market_purchases_order_label">Pesenan #%1$d</string>
+    <string name="market_purchases_order_label">Pesenan #%1$s</string>
     <string name="market_purchases_title">Tuku</string>
     <string name="market_rating_label">Penilaian</string>
     <string name="market_rating_no_reviews">Durung ana review</string>
@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Tawaran wiwitan: %1$s</string>
     <string name="market_profile_load_failed">Ora bisa ngemot profil</string>
     <string name="market_profile_member_since">Anggota wiwit %1$s</string>
+    <string name="market_profile_joined">Gabung %1$s</string>
     <string name="market_profile_rating_breakdown">Rincian rating</string>
     <string name="market_profile_stars_value">%1$d lintang</string>
     <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Undhuh %1$d berkas panjenengan ing ngisor iki.</string>
     <string name="market_purchase_download_one">Undhuh berkas panjenengan ing ngisor iki.</string>
     <string name="market_purchase_review_from">Ulasan saka %1$s</string>
-    <string name="market_purchases_auction_label">Lelang #%1$d</string>
+    <string name="market_purchases_auction_label">Lelang #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s wis dibalèkake</string>
     <string name="market_purchases_won_for">Menang regane %1$s</string>
     <string name="market_refund_dialog_amount_help">Kosongake kanggo mbalèkake kabèh pesenan.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Wangsulan sing dodol</string>
     <string name="market_listing_detail_seller_reviews_heading">Ulasan penjual</string>
     <string name="market_account_stripe_open_failed">Ora bisa mbukak Stripe</string>
+    <string name="market_editor_stock">Stok</string>
+    <string name="market_editor_stock_units">Cacah unit</string>
+    <string name="market_editor_stock_unlimited">Ora winates</string>
+    <string name="market_editor_start_time">Wektu wiwitan</string>
+    <string name="market_editor_start_time_help">Kosongna kanggo miwiti pas diterbitaké.</string>
+    <string name="market_editor_start_time_next">Sabanjure</string>
+    <string name="market_editor_start_time_clear">Resiki</string>
+    <string name="market_listing_detail_buy_now_label">Tuku saiki</string>
+    <string name="market_section_recently_viewed">Lagi waé didelok</string>
+    <string name="market_recently_viewed_clear">Resiki kabèh</string>
 </resources>

@@ -12,8 +12,8 @@ import com.google.gson.annotations.SerializedName
  * shapes — keep nullable.
  */
 data class Auction(
-    val id: Long = 0,
-    val listing: Long = 0,
+    val id: String = "",
+    val listing: String = "",
     val reserve: Long = 0,
     val instant: Long = 0,
     val opens: Long = 0,
@@ -38,9 +38,9 @@ data class Auction(
  * UI can render a card without an extra listing fetch.
  */
 data class Bid(
-    val id: Long = 0,
-    val auction: Long? = null,
-    val listing: Long? = null,
+    val id: String = "",
+    val auction: String? = null,
+    val listing: String? = null,
     val bidder: String? = null,
     val amount: Long = 0,
     val ceiling: Long? = null,

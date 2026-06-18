@@ -85,6 +85,9 @@
     <string name="crm_views_filter">Filter (stored, not yet applied)</string>
     <string name="crm_people_empty">No people have access yet</string>
     <string name="crm_settings_save">Save changes</string>
+    <string name="crm_settings_entity_id">Entity ID</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">Server</string>
     <string name="crm_settings_danger_zone">Danger zone</string>
     <string name="crm_settings_unsubscribe">Unsubscribe</string>
     <string name="crm_settings_delete_crm">Delete CRM</string>
@@ -95,6 +98,13 @@
 
     <!-- Access -->
     <string name="crm_access_user_fingerprint">User fingerprint</string>
+    <string name="crm_access_tab_users">Users</string>
+    <string name="crm_access_tab_groups">Groups</string>
+    <string name="crm_access_tab_manual">Manual</string>
+    <string name="crm_access_search_users">Search users</string>
+    <string name="crm_access_no_groups">No groups available</string>
+    <string name="crm_access_target">Target</string>
+    <string name="crm_access_target_hint">Entity ID, @group, * (everyone), or + (members)</string>
     <string name="crm_access_level_owner">Owner</string>
     <string name="crm_access_level_design">Design</string>
     <string name="crm_access_level_write">Write</string>
@@ -178,6 +188,7 @@
     <string name="crm_attachments">Attachments</string>
     <string name="crm_attachment_empty">No attachments</string>
     <string name="crm_attachment_add">Add attachment</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_attachment_default_name">attachment</string>
     <string name="crm_attachment_size_bytes">%1$d B</string>
     <string name="crm_attachment_size_kb">%1$d KB</string>
@@ -244,6 +255,7 @@
     <string name="crm_board_no_options">No options configured for column field</string>
     <string name="crm_board_unassigned">Unassigned</string>
     <string name="crm_board_new">New</string>
+    <string name="crm_board_add_column">Add column</string>
     <string name="crm_board_column_options">Column options</string>
     <string name="crm_board_rename">Rename</string>
     <string name="crm_board_rename_column">Rename column</string>

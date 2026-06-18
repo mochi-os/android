@@ -5,6 +5,7 @@ import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
+import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FolderOpen
@@ -26,12 +28,14 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.ViewColumn
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -51,6 +55,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -81,6 +86,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.crm.R
 import org.mochios.crm.ui.board.BoardView
+import org.mochios.crm.ui.board.parseColor
 import org.mochios.crm.ui.`object`.ObjectDetailSheet
 import org.mochios.crm.ui.crmlist.CrmListViewModel
 import org.mochios.crm.ui.router.PROJECTS_FEATURE
@@ -223,6 +229,7 @@ private fun CrmContent(
     val uiState by viewModel.uiState.collectAsState()
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
+    var showAddColumn by remember { mutableStateOf(false) }
 
     LaunchedEffect(initialObjectId) {
         if (initialObjectId != null) {
@@ -264,6 +271,19 @@ private fun CrmContent(
                             expanded = showOverflow,
                             onDismissRequest = { showOverflow = false }
                         ) {
+                            // Add column — only meaningful on a board view that
+                            // groups by a field (mirrors web's overflow "Add
+                            // column"). Creates a new option on the grouping field.
+                            if (activeView?.viewtype == "board" && activeView.columns.isNotBlank()) {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.crm_board_add_column)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        showAddColumn = true
+                                    },
+                                    leadingIcon = { Icon(Icons.Default.ViewColumn, contentDescription = null) }
+                                )
+                            }
                             DropdownMenuItem(
                                 text = { Text(stringResource(R.string.crm_settings)) },
                                 onClick = {
@@ -426,14 +446,30 @@ private fun CrmContent(
         CreateObjectDialog(
             classes = details.classes,
             hierarchy = details.hierarchy,
+            fields = details.fields,
+            options = details.options,
+            people = uiState.people,
             objects = uiState.objects,
             presetParent = uiState.createObjectParent,
             isCreating = uiState.isCreatingObject,
             activeView = activeView,
             viewModel = viewModel,
             onDismiss = { viewModel.hideCreateObjectDialog() },
-            onCreate = { classId, title, parent, initialValues ->
-                viewModel.createObject(classId, title, parent, initialValues)
+            onCreate = { classId, title, parent, initialValues, files ->
+                viewModel.createObject(classId, title, parent, initialValues, files)
+            }
+        )
+    }
+
+    // Add-column dialog (board views). Creates a new option on the board's
+    // grouping field, mirroring web's overflow "Add column".
+    if (showAddColumn && activeView != null && activeView.columns.isNotBlank()) {
+        val columnFieldId = activeView.columns
+        AddColumnDialog(
+            onDismiss = { showAddColumn = false },
+            onAdd = { name, colour ->
+                viewModel.addColumnOption(columnFieldId, name, colour)
+                showAddColumn = false
             }
         )
     }
@@ -541,4 +577,77 @@ private fun SortRow(viewModel: CrmViewModel) {
             )
         }
     }
+}
+
+// Add a new board column (= a new option on the board's grouping field).
+// Name + a preset colour, mirroring web's OptionDialog used for "Add column".
+// Boards render the option colour, not its icon, so no icon field here.
+@Composable
+private fun AddColumnDialog(
+    onDismiss: () -> Unit,
+    onAdd: (name: String, colour: String?) -> Unit,
+) {
+    var name by remember { mutableStateOf("") }
+    var colour by remember { mutableStateOf("#3b82f6") }
+    val presetColours = listOf(
+        "#ef4444", "#f97316", "#eab308", "#22c55e",
+        "#06b6d4", "#3b82f6", "#8b5cf6", "#ec4899",
+        "#6b7280", "#000000"
+    )
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.crm_board_add_column)) },
+        text = {
+            Column {
+                OutlinedTextField(
+                    value = name,
+                    onValueChange = { name = it },
+                    label = { Text(stringResource(R.string.crm_field_name)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(stringResource(R.string.crm_option_color), style = MaterialTheme.typography.labelMedium)
+                Spacer(modifier = Modifier.height(8.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    presetColours.take(5).forEach { hex ->
+                        IconButton(onClick = { colour = hex }, modifier = Modifier.size(32.dp)) {
+                            Icon(
+                                Icons.Default.Circle,
+                                contentDescription = hex,
+                                tint = parseColor(hex),
+                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
+                            )
+                        }
+                    }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    presetColours.drop(5).forEach { hex ->
+                        IconButton(onClick = { colour = hex }, modifier = Modifier.size(32.dp)) {
+                            Icon(
+                                Icons.Default.Circle,
+                                contentDescription = hex,
+                                tint = parseColor(hex),
+                                modifier = if (colour == hex) Modifier.size(28.dp) else Modifier.size(20.dp)
+                            )
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(
+                onClick = { onAdd(name.trim(), colour.ifBlank { null }) },
+                enabled = name.isNotBlank()
+            ) {
+                Text(stringResource(MochiR.string.common_add))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(MochiR.string.common_cancel))
+            }
+        }
+    )
 }

@@ -131,7 +131,7 @@ class ReviewsViewModel @Inject constructor(
         // [askRemove] -> [confirmRemove] so the user gets the ConfirmDialog.
         viewModelScope.launch {
             try {
-                val updated = repo.actionReview(review.id.toInt(), action)
+                val updated = repo.actionReview(review.id, action)
                 _state.value = _state.value.copy(
                     reviews = _state.value.reviews.map { if (it.id == updated.id) updated else it },
                 )
@@ -157,7 +157,7 @@ class ReviewsViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(submitting = true)
             try {
-                val updated = repo.actionReview(target.id.toInt(), "remove")
+                val updated = repo.actionReview(target.id, "remove")
                 _state.value = _state.value.copy(
                     reviews = _state.value.reviews.map { if (it.id == updated.id) updated else it },
                     pendingRemove = null,

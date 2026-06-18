@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Nincsenek opciók az oszlopok mezőn</string>
     <string name="crm_design_preview_empty">Nincs megjeleníthető tartalom</string>
 
+    <string name="crm_access_tab_manual">Kézikönyv</string>
+    <string name="crm_access_search_users">Felhasználók keresése</string>
+    <string name="crm_access_no_groups">Nincsenek elérhető csoportok</string>
+    <string name="crm_access_tab_users">Felhasználók</string>
+    <string name="crm_access_tab_groups">Csoportok</string>
+    <string name="crm_access_target">Cél</string>
+    <string name="crm_access_target_hint">Entitásazonosító, @csoport, * (mindenki) vagy + (tagok)</string>
+    <string name="crm_attachment_remove">Melléklet eltávolítása</string>
+    <string name="crm_board_add_column">Oszlop hozzáadása</string>
+    <string name="crm_settings_entity_id">Entitás azonosító</string>
+    <string name="crm_settings_fingerprint">Ujjlenyomat</string>
+    <string name="crm_settings_server">Kiszolgáló</string>
 </resources>

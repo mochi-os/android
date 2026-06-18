@@ -363,7 +363,7 @@
     <string name="market_purchase_track">Track pake</string>
     <string name="market_purchases_complete_purchase">Konplete acha</string>
     <string name="market_purchases_empty">Pa gen acha</string>
-    <string name="market_purchases_order_label">Kòmand #%1$d</string>
+    <string name="market_purchases_order_label">Kòmand #%1$s</string>
     <string name="market_purchases_title">Acha yo</string>
     <string name="market_rating_label">Evalyasyon</string>
     <string name="market_rating_no_reviews">Poko gen revizyon</string>
@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Òf kòmansman: %1$s</string>
     <string name="market_profile_load_failed">Pa t kapab chaje pwofil la</string>
     <string name="market_profile_member_since">Manm depi %1$s</string>
+    <string name="market_profile_joined">Antre %1$s</string>
     <string name="market_profile_rating_breakdown">Detay evalyasyon</string>
     <string name="market_profile_stars_value">%1$d zetwal</string>
     <string name="market_purchase_dispute_chargeback">Ranbousman bankè %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Telechaje %1$d fichye ou yo anba a.</string>
     <string name="market_purchase_download_one">Telechaje fichye ou a anba a.</string>
     <string name="market_purchase_review_from">Revizyon ki soti nan men %1$s</string>
-    <string name="market_purchases_auction_label">Lavant ozanchè #%1$d</string>
+    <string name="market_purchases_auction_label">Lavant ozanchè #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ranbouse</string>
     <string name="market_purchases_won_for">Genyen pou %1$s</string>
     <string name="market_refund_dialog_amount_help">Kite vid pou ranbouse tout kòmand la.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Repons vandè</string>
     <string name="market_listing_detail_seller_reviews_heading">Evalyasyon vandè a</string>
     <string name="market_account_stripe_open_failed">Pa t kapab ouvri Stripe</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Kantite inite</string>
+    <string name="market_editor_stock_unlimited">Ilimite</string>
+    <string name="market_editor_start_time">Lè kòmansman</string>
+    <string name="market_editor_start_time_help">Kite vid pou kòmanse sou piblikasyon.</string>
+    <string name="market_editor_start_time_next">Pwochen</string>
+    <string name="market_editor_start_time_clear">Efase</string>
+    <string name="market_listing_detail_buy_now_label">Achte li kounye a</string>
+    <string name="market_section_recently_viewed">Wè dènyèman</string>
+    <string name="market_recently_viewed_clear">Efase tout</string>
 </resources>

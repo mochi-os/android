@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Ukuqinisekiswa kwezici eziningi</string>
     <string name="auth_mfa_subtitle">Qedela izinyathelo zokuqinisekisa ezisele</string>
     <string name="auth_recover_account">Takula i-akhawunti</string>
+    <string name="auth_login_title">Ngena ku-Mochi</string>
+    <string name="auth_next">Okulandelayo</string>
+    <string name="auth_or_log_in_with">Noma ngena ngemvume nge</string>
+    <string name="auth_passkey">I-passkey</string>
+    <string name="auth_use_passkey">Sebenzisa i-passkey</string>
+    <string name="auth_email_me_a_code">Ngithumelele ikhodi nge-imeyili</string>
+    <string name="auth_or_enter_authenticator_code">Noma faka ikhodi yesiqinisekisi</string>
+    <string name="auth_log_in">Ngena ngemvume</string>
+    <string name="auth_back">Emuva</string>
+    <string name="auth_lost_access_recovery">Ulahlekelwe ukufinyelela? Sebenzisa ikhodi yokutakula</string>
     <string name="auth_create_identity_title">Dala ubunikazi bakho</string>
     <string name="auth_create_identity_subtitle">Khetha igama lobunikazi bakho kule seva</string>
     <string name="auth_privacy_public_description">Ifakwe ohlwini lwemibhalo yabasebenzisi ukuze abanye bakwazi ukukuthola.</string>

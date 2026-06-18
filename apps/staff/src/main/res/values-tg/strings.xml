@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Қарор оид ба шикоят</string>
     <string name="staff_appeals_empty">Ягон шикояти интизорӣ нест</string>
     <string name="staff_appeals_history">Таърихи эълон</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Қайдҳо</string>
     <string name="staff_appeals_open_sidebar">Панели канориро кушодан</string>
     <string name="staff_appeals_reason_label">Сабаби арзи фурӯшанда</string>
@@ -226,7 +226,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Фурӯшандагон</string>
     <string name="staff_dashboard_kpi_total_orders">Фармоишҳои умумӣ</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Не</string>
     <string name="staff_dashboard_open_sidebar">Панели канориро кушодан</string>
     <string name="staff_dashboard_system">Система</string>
@@ -244,7 +244,7 @@
     <string name="staff_disputes_empty">Ягон баҳс нест</string>
     <string name="staff_disputes_filter_status_label">Ҳолат</string>
     <string name="staff_disputes_history">Таърихи баҳсҳо</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Пардохти chargeback</string>
     <string name="staff_disputes_meta_evidence_due">Далелҳо то</string>
     <string name="staff_disputes_meta_listing">Эълон</string>
@@ -259,7 +259,6 @@
     <string name="staff_disputes_reason_not_received">Қабул нашудааст</string>
     <string name="staff_disputes_reason_other">Дигар</string>
     <string name="staff_disputes_reason_unauthorised">Иҷозат дода нашуд</string>
-    <string name="staff_disputes_refund_exceeds_total">Маблағи бозгардонӣ аз ҷамъи фармоиш зиёдтар аст</string>
     <string name="staff_disputes_refund_must_be_positive">Маблағи бозгардонӣ бояд аз сифр зиёдтар бошад</string>
     <string name="staff_disputes_resolution_buyer">Ҳал кардан барои харидор</string>
     <string name="staff_disputes_resolution_label">Қарор</string>
@@ -331,7 +330,7 @@
     <string name="staff_moderation_open_sidebar">Панели канориро кушодан</string>
     <string name="staff_moderation_system">Система</string>
     <string name="staff_moderation_title">Гузориши модератсия</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Амал</string>
     <string name="staff_reports_action_ban">Манъи корбар</string>
     <string name="staff_reports_action_dismiss">Рад кардан</string>
@@ -483,7 +482,7 @@
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
 
     <string name="staff_audit_action_staff_team_role_changed">Нақши кормандон тағйир ёфт</string>
-    <string name="staff_dashboard_order_fallback">Фармоиш №%1$d</string>
+    <string name="staff_dashboard_order_fallback">Фармоиш №%1$s</string>
     <string name="staff_disputes_dialog_title_chargeback">Бозпардохт: %1$s</string>
     <string name="staff_disputes_dialog_title_view">Дидани баҳс</string>
     <string name="staff_disputes_meta_buyer_details">Тафсилоти харидор</string>
@@ -509,11 +508,14 @@
     <string name="staff_disputes_stripe_product_unacceptable">маҳсулот қобили қабул нест</string>
     <string name="staff_disputes_stripe_subscription_canceled">обуна бекор карда шуд</string>
     <string name="staff_disputes_stripe_unrecognized">пардохти номаълум</string>
-    <string name="staff_reports_listing_label">Эълон №%1$d</string>
+    <string name="staff_reports_listing_label">Эълон №%1$s</string>
     <string name="staff_reports_meta_details">Тафсилоти шикоятгар</string>
-    <string name="staff_reviews_order_label">фармоиш №%1$d</string>
+    <string name="staff_reviews_order_label">фармоиш №%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s дар %3$s. Ин баррасиро ба таври доимӣ нест кунем? Ин амалро бекор кардан мумкин нест.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ин баррасиро ба таври доимӣ нест кунем? Ин амалро бекор кардан мумкин нест.</string>
     <string name="staff_team_dialog_search_placeholder">Ҷустуҷӯ аз рӯи ном, изи ангушт ё ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Калиди махфии имзои Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Аллакай баргардонда шудааст</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Маблағи баргардонидан аз маблағи боқимондаи баргардониданӣ зиёд аст</string>
 </resources>

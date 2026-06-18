@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">Продажів: %1$d</string>
     <string name="market_profile_sales_count">Продажів: %1$d</string>
     <string name="market_purchase_dispute_response">Відповідь продавця</string>
-    <string name="market_purchases_order_label">Замовлення № %1$d</string>
+    <string name="market_purchases_order_label">Замовлення № %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Розкажіть покупцям про себе…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Про продавця</string>
     <string name="market_profile_load_failed">Не вдалося завантажити профіль</string>
     <string name="market_profile_member_since">Учасник з %1$s</string>
+    <string name="market_profile_joined">Приєднався %1$s</string>
     <string name="market_profile_no_reviews">Відгуків ще немає.</string>
     <string name="market_profile_rating_breakdown">Розподіл оцінок</string>
     <string name="market_profile_stars_value">%1$d зірок</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Завантажте свої %1$d файлів нижче.</string>
     <string name="market_purchase_download_one">Завантажте свій файл нижче.</string>
     <string name="market_purchase_review_from">Відгук від %1$s</string>
-    <string name="market_purchases_auction_label">Аукціон №%1$d</string>
+    <string name="market_purchases_auction_label">Аукціон №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s повернено</string>
     <string name="market_purchases_won_for">Виграно за %1$s</string>
     <string name="market_rating_reviews">(%1$d відгуків)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Відповідь продавця</string>
     <string name="market_listing_detail_seller_reviews_heading">Відгуки про продавця</string>
     <string name="market_account_stripe_open_failed">Не вдалося відкрити Stripe</string>
+    <string name="market_editor_stock">Запас</string>
+    <string name="market_editor_stock_units">Кількість одиниць</string>
+    <string name="market_editor_stock_unlimited">Без обмежень</string>
+    <string name="market_editor_start_time">Час початку</string>
+    <string name="market_editor_start_time_help">Залиште порожнім, щоб розпочати при публікації.</string>
+    <string name="market_editor_start_time_next">Далі</string>
+    <string name="market_editor_start_time_clear">Очистити</string>
+    <string name="market_listing_detail_buy_now_label">Купити зараз</string>
+    <string name="market_section_recently_viewed">Нещодавно переглянуті</string>
+    <string name="market_recently_viewed_clear">Очистити все</string>
 </resources>

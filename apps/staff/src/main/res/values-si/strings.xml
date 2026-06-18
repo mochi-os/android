@@ -50,8 +50,8 @@
     <string name="staff_appeals_dialog_title">අභියාචනය තීරණය කරන්න</string>
     <string name="staff_appeals_empty">සැලකිල්ලට පැමිණි අභියාචනා නැත</string>
     <string name="staff_appeals_history">ලැයිස්තුගත කිරීමේ ඉතිහාසය</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">සටහන්</string>
     <string name="staff_appeals_open_sidebar">පැති තීරුව විවෘත කරන්න</string>
     <string name="staff_appeals_submit">ඉදිරිපත් කරන්න</string>
@@ -221,7 +221,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">විකුණුම්කරුවන්</string>
     <string name="staff_dashboard_kpi_total_orders">මුළු ඇණවුම්</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">නැත</string>
     <string name="staff_dashboard_open_sidebar">පැති තීරුව විවෘත කරන්න</string>
     <string name="staff_dashboard_system">පද්ධතිය</string>
@@ -239,7 +239,7 @@
     <string name="staff_disputes_empty">ආරවුල් නැත</string>
     <string name="staff_disputes_filter_status_label">තත්ත්වය</string>
     <string name="staff_disputes_history">ආරවුල් ඉතිහාසය</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback ගාස්තුව</string>
     <string name="staff_disputes_meta_evidence_due">සාක්ෂි ඉදිරිපත් කළ යුත්තේ</string>
     <string name="staff_disputes_meta_listing">ලැයිස්තුගත කිරීම</string>
@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">ලැබී නැත</string>
     <string name="staff_disputes_reason_other">වෙනත්</string>
     <string name="staff_disputes_reason_unauthorised">අනවසරයි</string>
-    <string name="staff_disputes_refund_exceeds_total">refund මුදල ඇණවුමේ එකතුව ඉක්මවයි</string>
     <string name="staff_disputes_refund_must_be_positive">refund මුදල ශුන්‍යයට වඩා වැඩි විය යුතුය</string>
     <string name="staff_disputes_resolution_buyer">ගැනුම්කරු සඳහා විසඳන්න</string>
     <string name="staff_disputes_resolution_label">විභේදනය</string>
@@ -326,7 +325,7 @@
     <string name="staff_moderation_open_sidebar">පැති තීරුව විවෘත කරන්න</string>
     <string name="staff_moderation_system">පද්ධතිය</string>
     <string name="staff_moderation_title">මෝඩරේෂන් ලොගය</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">ක්‍රියාව</string>
     <string name="staff_reports_action_ban">පරිශීලකයා තහනම් කරන්න</string>
     <string name="staff_reports_action_dismiss">ඉවත ලන්න</string>
@@ -474,7 +473,7 @@
     <string name="staff_team_toast_role_failed">භූමිකාව යාවත්කාලීන කිරීමට අසමත් විය</string>
     <string name="staff_team_toast_role_updated">භූමිකාව යාවත්කාලීන කරන ලදී</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">ඇණවුම #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ඇණවුම #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">හේතුව (අත්‍යවශ්‍ය නොවේ)</string>
     <string name="staff_accounts_sales">විකුණුම් %1$d</string>
@@ -507,11 +506,14 @@
     <string name="staff_disputes_stripe_unrecognized">හඳුනා නොගත් අයකිරීම</string>
     <string name="staff_listings_seller_unknown">නොදන්නා විකුණුම්කරු</string>
     <string name="staff_listings_seller_verified">තහවුරු කළ විකුණුම්කරු</string>
-    <string name="staff_reports_listing_label">ලැයිස්තුව #%1$d</string>
+    <string name="staff_reports_listing_label">ලැයිස්තුව #%1$s</string>
     <string name="staff_reports_meta_details">වාර්තාකරුගේ විස්තර</string>
-    <string name="staff_reviews_order_label">ඇණවුම #%1$d</string>
+    <string name="staff_reviews_order_label">ඇණවුම #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%3$s දින %1$s → %2$s. මෙම සමාලෝචනය ස්ථිරව මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. මෙම සමාලෝචනය ස්ථිරව මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
     <string name="staff_team_dialog_search_placeholder">නම, ඇඟිලි සලකුණ හෝ ID අනුව සොයන්න…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook අත්සන් කිරීමේ රහස</string>
+    <string name="staff_disputes_meta_already_refunded">දැනටමත් ආපසු ගෙවා ඇත</string>
+    <string name="staff_disputes_refund_exceeds_remaining">ආපසු ගෙවීමේ මුදල ඉතිරි ආපසු ගෙවිය හැකි මුදල ඉක්මවයි</string>
 </resources>

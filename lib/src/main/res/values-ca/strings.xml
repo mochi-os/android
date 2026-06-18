@@ -218,6 +218,16 @@
     <string name="auth_mfa_title">Autenticació multifactor</string>
     <string name="auth_mfa_subtitle">Completeu els passos de verificació restants</string>
     <string name="auth_recover_account">Recupera el compte</string>
+    <string name="auth_login_title">Inicia la sessió a Mochi</string>
+    <string name="auth_next">Següent</string>
+    <string name="auth_or_log_in_with">O inicia la sessió amb</string>
+    <string name="auth_passkey">Clau d\'accés</string>
+    <string name="auth_use_passkey">Utilitza una clau d\'accés</string>
+    <string name="auth_email_me_a_code">Envia\'m un codi per correu</string>
+    <string name="auth_or_enter_authenticator_code">O introdueix el codi de l\'autenticador</string>
+    <string name="auth_log_in">Inicia la sessió</string>
+    <string name="auth_back">Enrere</string>
+    <string name="auth_lost_access_recovery">Has perdut l\'accés? Utilitza un codi de recuperació</string>
     <string name="auth_create_identity_subtitle">Trieu un nom per a la vostra identitat en aquest servidor</string>
     <string name="auth_privacy_public_description">Apareix al directori d\'usuaris perquè altres us puguin trobar.</string>
     <string name="auth_privacy_private_description">Amagat del directori d\'usuaris.</string>

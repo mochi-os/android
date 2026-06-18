@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">केहू</string>
     <string name="wikis_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
 
+    <string name="wikis_revision_compare">बदलाव के तुलना करीं</string>
+    <string name="wikis_revision_show_page">पन्ना देखाईं</string>
+    <string name="wikis_revision_compare_failed">तुलना खातिर पिछला संस्करण लोड ना हो सकल।</string>
+    <string name="wikis_revision_changes_from">संस्करण %1$d → %2$d से बदलाव</string>
 </resources>

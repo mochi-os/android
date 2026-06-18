@@ -189,7 +189,7 @@
     <string name="market_purchase_review_body">Examiner</string>
     <string name="market_purchase_review_rating">Note</string>
     <string name="market_purchase_total">Total</string>
-    <string name="market_purchases_order_label">Commande #%1$d</string>
+    <string name="market_purchases_order_label">Commande #%1$s</string>
     <string name="market_rating_label">Note</string>
     <string name="market_refund_details_label">Détails</string>
     <string name="market_refund_reason_damaged">Endommagé</string>
@@ -496,6 +496,7 @@
     <string name="market_profile_biography">À propos</string>
     <string name="market_profile_load_failed">Impossible de charger le profil</string>
     <string name="market_profile_member_since">Membre depuis %1$s</string>
+    <string name="market_profile_joined">Inscrit le %1$s</string>
     <string name="market_profile_no_reviews">Aucun avis pour le moment.</string>
     <string name="market_profile_rating_breakdown">Détail des évaluations</string>
     <string name="market_profile_stars_value">%1$d étoiles</string>
@@ -530,7 +531,7 @@
     <string name="market_purchase_summary">Résumé de la commande</string>
     <string name="market_purchase_title">Commande</string>
     <string name="market_purchase_track">Suivre le colis</string>
-    <string name="market_purchases_auction_label">Enchère n° %1$d</string>
+    <string name="market_purchases_auction_label">Enchère n° %1$s</string>
     <string name="market_purchases_complete_purchase">Compléter l\'achat</string>
     <string name="market_purchases_empty">Aucun achat</string>
     <string name="market_purchases_refunded_partial">−%1$s remboursé</string>
@@ -728,4 +729,9 @@
     <string name="market_sidebar_become_seller">Devenir vendeur</string>
     <string name="market_sidebar_seller_settings">Paramètres vendeur</string>
     <string name="market_account_stripe_open_failed">Impossible d\'ouvrir Stripe</string>
+    <string name="market_editor_start_time_next">Suivant</string>
+    <string name="market_editor_start_time_clear">Effacer</string>
+    <string name="market_listing_detail_buy_now_label">Acheter maintenant</string>
+    <string name="market_section_recently_viewed">Consultés récemment</string>
+    <string name="market_recently_viewed_clear">Tout effacer</string>
 </resources>

@@ -326,4 +326,16 @@
     <string name="crm_design_preview_no_options">Keine Optionen im Spaltenfeld</string>
     <string name="crm_design_preview_empty">Nichts anzuzeigen</string>
 
+    <string name="crm_access_tab_manual">Manuell</string>
+    <string name="crm_access_search_users">Benutzer suchen</string>
+    <string name="crm_access_no_groups">Keine Gruppen verfügbar</string>
+    <string name="crm_access_tab_users">Benutzer</string>
+    <string name="crm_access_tab_groups">Gruppen</string>
+    <string name="crm_access_target">Ziel</string>
+    <string name="crm_access_target_hint">Entitäts-ID, @gruppe, * (alle) oder + (Mitglieder)</string>
+    <string name="crm_attachment_remove">Anhang entfernen</string>
+    <string name="crm_board_add_column">Spalte hinzufügen</string>
+    <string name="crm_settings_entity_id">Entitäts-ID</string>
+    <string name="crm_settings_fingerprint">Fingerabdruck</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

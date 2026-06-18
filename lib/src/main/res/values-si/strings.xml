@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">බහු-සාධක සත්‍යාපනය</string>
     <string name="auth_mfa_subtitle">ඉතිරි සත්‍යාපන පියවර සම්පූර්ණ කරන්න</string>
     <string name="auth_recover_account">ගිණුම ප්‍රතිසාධනය කරන්න</string>
+    <string name="auth_login_title">Mochi වෙත පුරන්න</string>
+    <string name="auth_next">ඊළඟ</string>
+    <string name="auth_or_log_in_with">හෝ මේ සමඟ පුරන්න</string>
+    <string name="auth_passkey">ප්‍රවේශ යතුර</string>
+    <string name="auth_use_passkey">මුරයතුරක් භාවිතා කරන්න</string>
+    <string name="auth_email_me_a_code">මට කේතයක් ඊමේල් කරන්න</string>
+    <string name="auth_or_enter_authenticator_code">හෝ Authenticator කේතය ඇතුළත් කරන්න</string>
+    <string name="auth_log_in">පුරන්න</string>
+    <string name="auth_back">ආපසු</string>
+    <string name="auth_lost_access_recovery">ප්‍රවේශය නැති වුණාද? ප්‍රතිසාධන කේතයක් භාවිතා කරන්න</string>
     <string name="auth_create_identity_title">ඔබගේ අනන්‍යතාව සාදන්න</string>
     <string name="auth_create_identity_subtitle">මෙම සේවාදායකයේ ඔබගේ අනන්‍යතාව සඳහා නමක් තෝරන්න</string>
     <string name="auth_privacy_public_description">අන් අයට ඔබව සොයාගත හැකි වන පරිදි පරිශීලක නාමාවලියේ ලැයිස්තුගත වේ.</string>

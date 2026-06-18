@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Decide contestația</string>
     <string name="staff_appeals_empty">Niciun apel în așteptare</string>
     <string name="staff_appeals_history">Istoricul anunțului</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Note</string>
     <string name="staff_appeals_open_sidebar">Deschide bara laterală</string>
     <string name="staff_appeals_reason_label">Motivul contestației vânzătorului</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Vânzători</string>
     <string name="staff_dashboard_kpi_total_orders">Total comenzi</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nu</string>
     <string name="staff_dashboard_open_sidebar">Deschide bara laterală</string>
-    <string name="staff_dashboard_order_fallback">Comanda nr. %1$d</string>
+    <string name="staff_dashboard_order_fallback">Comanda nr. %1$s</string>
     <string name="staff_dashboard_system">Sistem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Anunțuri</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Nicio dispută</string>
     <string name="staff_disputes_filter_status_label">Stare</string>
     <string name="staff_disputes_history">Istoric dispute</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Detalii cumpărător</string>
     <string name="staff_disputes_meta_chargeback_fee">Taxă chargeback</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">reținute de Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Altele</string>
     <string name="staff_disputes_reason_unauthorised">Neautorizat</string>
     <string name="staff_disputes_refund_amount_label">Sumă de rambursare (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Suma rambursării depășește totalul comenzii</string>
     <string name="staff_disputes_refund_help">Lasă gol pentru o rambursare completă de %1$s. Introdu o sumă mai mică pentru o rambursare parțială.</string>
     <string name="staff_disputes_refund_must_be_positive">Suma rambursării trebuie să fie mai mare decât zero</string>
     <string name="staff_disputes_resolution_buyer">Rezolvă în favoarea cumpărătorului</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Deschide bara laterală</string>
     <string name="staff_moderation_system">Sistem</string>
     <string name="staff_moderation_title">Jurnal de moderare</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Acțiune</string>
     <string name="staff_reports_action_ban">Blochează utilizatorul</string>
     <string name="staff_reports_action_dismiss">Renunță</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Stare</string>
     <string name="staff_reports_filter_type_label">Tip</string>
     <string name="staff_reports_history">Istoric rapoarte</string>
-    <string name="staff_reports_listing_label">Anunț nr. %1$d</string>
+    <string name="staff_reports_listing_label">Anunț nr. %1$s</string>
     <string name="staff_reports_meta_details">Detalii reclamant</string>
     <string name="staff_reports_meta_price">Preț</string>
     <string name="staff_reports_meta_reason">Motiv</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Eliminat</string>
     <string name="staff_reviews_filter_status">Stare</string>
     <string name="staff_reviews_open_sidebar">Deschide bara laterală</string>
-    <string name="staff_reviews_order_label">comanda nr. %1$d</string>
+    <string name="staff_reviews_order_label">comanda nr. %1$s</string>
     <string name="staff_reviews_overflow_actions">Acțiuni</string>
     <string name="staff_reviews_remove_confirm">Elimină</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s pe %3$s. Ștergi definitiv această recenzie? Această acțiune nu poate fi anulată.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Eroare la actualizarea rolului</string>
     <string name="staff_team_toast_role_updated">Rol actualizat</string>
 
+    <string name="staff_config_field_stripe_webhook">Secret de semnare webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Deja rambursat</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Suma rambursării depășește suma rambursabilă rămasă</string>
 </resources>

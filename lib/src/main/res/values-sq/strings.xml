@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">Vërtetim me shumë faktorë</string>
     <string name="auth_mfa_subtitle">Përfundoni hapat e mbetur të verifikimit</string>
     <string name="auth_recover_account">Rikuperoni llogarinë</string>
+    <string name="auth_login_title">Hyni në Mochi</string>
+    <string name="auth_next">Tjetra</string>
+    <string name="auth_or_log_in_with">Ose hyni me</string>
+    <string name="auth_passkey">Kyç</string>
+    <string name="auth_use_passkey">Përdorni një çelës hyrjeje</string>
+    <string name="auth_email_me_a_code">Më dërgo një kod me email</string>
+    <string name="auth_or_enter_authenticator_code">Ose vendosni kodin e autentikuesit</string>
+    <string name="auth_log_in">Hyni</string>
+    <string name="auth_back">Mbrapa</string>
+    <string name="auth_lost_access_recovery">Humbët aksesin? Përdorni një kod rikuperimi</string>
     <string name="auth_create_identity_title">Krijoni identitetin tuaj</string>
     <string name="auth_create_identity_subtitle">Zgjidhni një emër për identitetin tuaj në këtë server</string>
     <string name="auth_privacy_public_description">Listohet në drejtorinë e përdoruesve që të tjerët t\'ju gjejnë.</string>

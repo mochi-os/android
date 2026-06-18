@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Saha waé</string>
     <string name="wikis_access_subject_authenticated">Pangguna anu disahkeun</string>
 
+    <string name="wikis_revision_compare">Bandingkeun parobahan</string>
+    <string name="wikis_revision_show_page">Témbongkeun kaca</string>
+    <string name="wikis_revision_compare_failed">Teu bisa ngamuat versi saméméhna pikeun dibandingkeun.</string>
+    <string name="wikis_revision_changes_from">Parobahan ti versi %1$d → %2$d</string>
 </resources>

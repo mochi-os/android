@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Rozhodnout o odvolání</string>
     <string name="staff_appeals_empty">Žádná čekající odvolání</string>
     <string name="staff_appeals_history">Historie nabídky</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Poznámky</string>
     <string name="staff_appeals_open_sidebar">Otevřít postranní panel</string>
     <string name="staff_appeals_reason_label">Důvod odvolání prodejce</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Prodávající</string>
     <string name="staff_dashboard_kpi_total_orders">Celkem objednávek</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ne</string>
     <string name="staff_dashboard_open_sidebar">Otevřít postranní panel</string>
-    <string name="staff_dashboard_order_fallback">Objednávka č. %1$d</string>
+    <string name="staff_dashboard_order_fallback">Objednávka č. %1$s</string>
     <string name="staff_dashboard_system">Systém</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Nabídky</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Žádné spory</string>
     <string name="staff_disputes_filter_status_label">Stav</string>
     <string name="staff_disputes_history">Historie sporů</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Údaje kupujícího</string>
     <string name="staff_disputes_meta_chargeback_fee">Poplatek za chargeback</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">ponecháno službou Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Ostatní</string>
     <string name="staff_disputes_reason_unauthorised">Bez oprávnění</string>
     <string name="staff_disputes_refund_amount_label">Částka vrácení (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Částka refundace přesahuje celkovou hodnotu objednávky</string>
     <string name="staff_disputes_refund_help">Nechte prázdné pro plné vrácení %1$s. Zadejte nižší částku pro částečné vrácení.</string>
     <string name="staff_disputes_refund_must_be_positive">Částka refundace musí být větší než nula</string>
     <string name="staff_disputes_resolution_buyer">Vyřešit ve prospěch kupujícího</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Otevřít postranní panel</string>
     <string name="staff_moderation_system">Systém</string>
     <string name="staff_moderation_title">Protokol moderování</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Akce</string>
     <string name="staff_reports_action_ban">Zablokovat uživatele</string>
     <string name="staff_reports_action_dismiss">Zavřít</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Stav</string>
     <string name="staff_reports_filter_type_label">Typ</string>
     <string name="staff_reports_history">Historie hlášení</string>
-    <string name="staff_reports_listing_label">Inzerát č. %1$d</string>
+    <string name="staff_reports_listing_label">Inzerát č. %1$s</string>
     <string name="staff_reports_meta_details">Údaje nahlašujícího</string>
     <string name="staff_reports_meta_price">Cena</string>
     <string name="staff_reports_meta_reason">Důvod</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Odebráno</string>
     <string name="staff_reviews_filter_status">Stav</string>
     <string name="staff_reviews_open_sidebar">Otevřít postranní panel</string>
-    <string name="staff_reviews_order_label">objednávka č. %1$d</string>
+    <string name="staff_reviews_order_label">objednávka č. %1$s</string>
     <string name="staff_reviews_overflow_actions">Akce</string>
     <string name="staff_reviews_remove_confirm">Odebrat</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s dne %3$s. Trvale smazat tuto recenzi? Tuto akci nelze vrátit zpět.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Aktualizace role se nezdařila</string>
     <string name="staff_team_toast_role_updated">Role aktualizována</string>
 
+    <string name="staff_config_field_stripe_webhook">Tajný klíč pro podpis Webhooku</string>
+    <string name="staff_disputes_meta_already_refunded">Již vráceno</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Částka vrácení překračuje zbývající vratnou částku</string>
 </resources>

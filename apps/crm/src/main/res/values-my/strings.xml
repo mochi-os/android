@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">ကော်လံများ အကွက်တွင် ရွေးချယ်စရာများ မရှိပါ</string>
     <string name="crm_design_preview_empty">ပြသရန် ဘာမှ မရှိပါ</string>
 
+    <string name="crm_access_tab_manual">ကိုယ်တိုင်</string>
+    <string name="crm_access_search_users">သုံးစွဲသူများ ရှာဖွေ</string>
+    <string name="crm_access_no_groups">အုပ်စုများ မရရှိနိုင်ပါ</string>
+    <string name="crm_access_tab_users">သုံးစွဲသူများ</string>
+    <string name="crm_access_tab_groups">အုပ်စုများ</string>
+    <string name="crm_access_target">ဦးတည်ရာ</string>
+    <string name="crm_access_target_hint">Entity ID, @group, * (လူတိုင်း), သို့မဟုတ် + (အဖွဲ့ဝင်များ)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">ကော်လံ ထည့်မည်</string>
+    <string name="crm_settings_entity_id">အကောင့် ID</string>
+    <string name="crm_settings_fingerprint">လက်ဗွေ</string>
+    <string name="crm_settings_server">ဆာဗာ</string>
 </resources>

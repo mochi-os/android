@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Узровень доступу</string>
     <string name="wikis_access_subject_anyone">Любы</string>
     <string name="wikis_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
+    <string name="wikis_revision_compare">Параўнаць змены</string>
+    <string name="wikis_revision_show_page">Паказаць старонку</string>
+    <string name="wikis_revision_compare_failed">Не ўдалося загрузіць папярэднюю версію для параўнання.</string>
+    <string name="wikis_revision_changes_from">Змены з версіі %1$d → %2$d</string>
 </resources>

@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Futa kwenye kifaa</string>
     <string name="chat_settings_delete_message">Hii inaondoa gumzo na ujumbe wake kwenye kifaa hiki pekee.</string>
 
+    <string name="chat_message_deleted">Ujumbe huu ulifutwa</string>
+    <string name="chat_search_hint">Tafuta kwenye gumzo...</string>
+    <string name="chat_search_no_results">Hakuna matokeo</string>
+    <string name="chat_message_forward">Sambaza</string>
+    <string name="chat_forward_title">Sambaza kwa…</string>
+    <string name="chat_forward_search">Tafuta gumzo…</string>
+    <string name="chat_forward_empty">Hakuna gumzo la kusambaza</string>
+    <string name="chat_forward_success">Imesambazwa</string>
+    <string name="chat_forward_failed">Imeshindwa kusambaza</string>
 </resources>

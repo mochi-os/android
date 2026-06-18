@@ -18,8 +18,8 @@ import com.google.gson.annotations.SerializedName
  * name rendered inline).
  */
 data class Review(
-    val id: Long = 0,
-    val order: Long = 0,
+    val id: String = "",
+    val order: String = "",
     val reviewer: String = "",
     @SerializedName("reviewer_name") val reviewerName: String? = null,
     val subject: String = "",
@@ -28,7 +28,7 @@ data class Review(
     @SerializedName("buyer_name") val buyerName: String? = null,
     val seller: String? = null,
     @SerializedName("seller_name") val sellerName: String? = null,
-    val listing: Long? = null,
+    val listing: String? = null,
     @SerializedName("listing_title") val listingTitle: String? = null,
     val role: String = "",
     val rating: Int = 0,

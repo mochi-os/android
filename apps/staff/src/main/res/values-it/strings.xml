@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Decidi sul ricorso</string>
     <string name="staff_appeals_empty">Nessun ricorso in sospeso</string>
     <string name="staff_appeals_history">Cronologia annuncio</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Note</string>
     <string name="staff_appeals_open_sidebar">Apri barra laterale</string>
     <string name="staff_appeals_reason_label">Motivo del ricorso del venditore</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Venditori</string>
     <string name="staff_dashboard_kpi_total_orders">Ordini totali</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">No</string>
     <string name="staff_dashboard_open_sidebar">Apri barra laterale</string>
-    <string name="staff_dashboard_order_fallback">Ordine n. %1$d</string>
+    <string name="staff_dashboard_order_fallback">Ordine n. %1$s</string>
     <string name="staff_dashboard_system">Sistema</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Annunci</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Nessuna disputa</string>
     <string name="staff_disputes_filter_status_label">Stato</string>
     <string name="staff_disputes_history">Cronologia contestazioni</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Dettagli dell\'acquirente</string>
     <string name="staff_disputes_meta_chargeback_fee">Commissione di storno</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">trattenuti da Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Altro</string>
     <string name="staff_disputes_reason_unauthorised">Non autorizzato</string>
     <string name="staff_disputes_refund_amount_label">Importo del rimborso (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">L\'importo del rimborso supera il totale dell\'ordine</string>
     <string name="staff_disputes_refund_help">Lascia vuoto per un rimborso completo di %1$s. Inserisci un importo inferiore per un rimborso parziale.</string>
     <string name="staff_disputes_refund_must_be_positive">L\'importo del rimborso deve essere maggiore di zero</string>
     <string name="staff_disputes_resolution_buyer">Risolvi a favore dell\'acquirente</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Apri barra laterale</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_title">Registro di moderazione</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Azione</string>
     <string name="staff_reports_action_ban">Bandisci utente</string>
     <string name="staff_reports_action_dismiss">Ignora</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Stato</string>
     <string name="staff_reports_filter_type_label">Tipo</string>
     <string name="staff_reports_history">Cronologia segnalazioni</string>
-    <string name="staff_reports_listing_label">Annuncio n. %1$d</string>
+    <string name="staff_reports_listing_label">Annuncio n. %1$s</string>
     <string name="staff_reports_meta_details">Dettagli del segnalante</string>
     <string name="staff_reports_meta_price">Prezzo</string>
     <string name="staff_reports_meta_reason">Motivo</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Rimosso</string>
     <string name="staff_reviews_filter_status">Stato</string>
     <string name="staff_reviews_open_sidebar">Apri barra laterale</string>
-    <string name="staff_reviews_order_label">ordine n. %1$d</string>
+    <string name="staff_reviews_order_label">ordine n. %1$s</string>
     <string name="staff_reviews_overflow_actions">Azioni</string>
     <string name="staff_reviews_remove_confirm">Rimuovi</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s il %3$s. Eliminare definitivamente questa recensione? Questa azione non può essere annullata.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Impossibile aggiornare il ruolo</string>
     <string name="staff_team_toast_role_updated">Ruolo aggiornato</string>
 
+    <string name="staff_config_field_stripe_webhook">Segreto di firma del webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Già rimborsato</string>
+    <string name="staff_disputes_refund_exceeds_remaining">L\'importo del rimborso supera l\'importo rimborsabile rimanente</string>
 </resources>

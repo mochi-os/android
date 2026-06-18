@@ -159,6 +159,16 @@
     <string name="auth_mfa_title">Многофакторно удостоверяване</string>
     <string name="auth_mfa_subtitle">Завършете останалите стъпки за потвърждение</string>
     <string name="auth_recover_account">Възстановяване на акаунт</string>
+    <string name="auth_login_title">Вход в Mochi</string>
+    <string name="auth_next">Напред</string>
+    <string name="auth_or_log_in_with">Или влезте с</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Използвайте ключ за достъп</string>
+    <string name="auth_email_me_a_code">Изпратете ми код по имейл</string>
+    <string name="auth_or_enter_authenticator_code">Или въведете код от authenticator</string>
+    <string name="auth_log_in">Вход</string>
+    <string name="auth_back">Назад</string>
+    <string name="auth_lost_access_recovery">Загубен достъп? Използвайте код за възстановяване</string>
     <string name="auth_create_identity_title">Създайте своята самоличност</string>
     <string name="auth_create_identity_subtitle">Изберете име за самоличността си на този сървър</string>
     <string name="auth_privacy_public_description">Включена в потребителския указател, за да могат другите да ви намират.</string>

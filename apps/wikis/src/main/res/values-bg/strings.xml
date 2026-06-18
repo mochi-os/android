@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Всеки</string>
     <string name="wikis_access_subject_authenticated">Удостоверени потребители</string>
 
+    <string name="wikis_revision_compare">Сравняване на промените</string>
+    <string name="wikis_revision_show_page">Показване на страницата</string>
+    <string name="wikis_revision_compare_failed">Предишната версия не можа да бъде заредена за сравнение.</string>
+    <string name="wikis_revision_changes_from">Промени от версия %1$d → %2$d</string>
 </resources>

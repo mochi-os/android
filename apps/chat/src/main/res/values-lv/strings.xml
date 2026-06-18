@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Dzēst lokāli</string>
     <string name="chat_settings_delete_message">Šī darbība noņem tērzēšanu un tās ziņojumus tikai no šīs ierīces.</string>
 
+    <string name="chat_message_deleted">Šī ziņa tika izdzēsta</string>
+    <string name="chat_search_hint">Meklēt sarunā...</string>
+    <string name="chat_search_no_results">Nav rezultātu</string>
+    <string name="chat_message_forward">Pārsūtīt</string>
+    <string name="chat_forward_title">Pārsūtīt uz…</string>
+    <string name="chat_forward_search">Meklēt sarunas…</string>
+    <string name="chat_forward_empty">Nav sarunu, uz kurām pārsūtīt</string>
+    <string name="chat_forward_success">Pārsūtīts</string>
+    <string name="chat_forward_failed">Neizdevās pārsūtīt</string>
 </resources>

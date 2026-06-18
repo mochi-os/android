@@ -13,11 +13,11 @@ import com.google.gson.annotations.SerializedName
  * payload — keep them nullable so Gson deserialises both shapes.
  */
 data class Listing(
-    val id: Long = 0,
+    val id: String = "",
     val seller: String = "",
     val title: String = "",
     val description: String = "",
-    val category: Long = 0,
+    val category: String = "",
     val tags: String = "",
     val condition: Condition? = null,
     val type: ListingType? = null,
@@ -71,8 +71,8 @@ data class Photo(
  * URL stored in the asset row).
  */
 data class Asset(
-    val id: Long = 0,
-    val listing: Long = 0,
+    val id: String = "",
+    val listing: String = "",
     val hosting: String = "",
     val filename: String = "",
     val size: Long = 0,
@@ -87,8 +87,8 @@ data class Asset(
  * is a free-text estimate (e.g. "3-5 working days"), not a parsed number.
  */
 data class ShippingOption(
-    val id: Long = 0,
-    val listing: Long = 0,
+    val id: String = "",
+    val listing: String = "",
     val region: String = "",
     val price: Long = 0,
     val currency: String = "",
@@ -118,8 +118,8 @@ data class ShippingOptionInput(
  * the count of direct sub-categories.
  */
 data class Category(
-    val id: Long = 0,
-    val parent: Long = 0,
+    val id: String = "",
+    val parent: String = "",
     val name: String = "",
     val slug: String = "",
     val icon: String = "",

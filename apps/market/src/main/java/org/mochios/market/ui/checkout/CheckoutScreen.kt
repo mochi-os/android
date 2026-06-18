@@ -234,6 +234,12 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
     val selectedZone = state.shipping.firstOrNull { it.id == state.optionId }
     val total = itemPrice + (selectedZone?.price ?: 0L)
 
+    // A pay-what-you-want listing must carry an amount at or above the
+    // minimum before checkout can proceed; otherwise an empty/too-low field
+    // reaches the server and returns "Amount must be at least X".
+    val pwywAmountOk = listing.pricing != PricingModel.PWYW || isAuctionCompletion ||
+        (state.amountText.isNotBlank() && toMinorUnits(state.amountText, currency) >= listing.price)
+
     val available = remember(listing, state.shipping) {
         buildList {
             if (listing.shipping > 0 || state.shipping.isNotEmpty()) add(DeliveryMethod.SHIPPING)
@@ -287,7 +293,7 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
 
         Button(
             onClick = { viewModel.submit() },
-            enabled = state.delivery != null && !state.submitting,
+            enabled = state.delivery != null && !state.submitting && pwywAmountOk,
             modifier = Modifier.fillMaxWidth().height(48.dp),
         ) {
             if (state.submitting) {
@@ -505,8 +511,8 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
 @Composable
 private fun ShippingZoneDropdown(
     zones: List<ShippingOption>,
-    selectedId: Long?,
-    onSelected: (Long) -> Unit,
+    selectedId: String?,
+    onSelected: (String) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
     val selected = zones.firstOrNull { it.id == selectedId }

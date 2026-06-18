@@ -1,6 +1,11 @@
 package org.mochios.wikis.ui.history
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -18,6 +23,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AccessTime
+import androidx.compose.material.icons.filled.Difference
 import androidx.compose.material.icons.filled.Restore
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -34,6 +40,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -134,6 +143,10 @@ fun RevisionViewScreen(
                             slug = viewModel.slug,
                             revision = revision,
                             currentVersion = state.currentVersion,
+                            showDiff = state.showDiff,
+                            previousRevision = state.previousRevision,
+                            previousLoading = state.previousLoading,
+                            onToggleDiff = viewModel::toggleDiff,
                             onBackToHistory = {
                                 navController.navigate(
                                     WikisApp.pageHistory(viewModel.wikiId, viewModel.slug)
@@ -157,17 +170,23 @@ fun RevisionViewScreen(
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun RevisionBody(
     slug: String,
     revision: RevisionDetail,
     currentVersion: Int,
+    showDiff: Boolean,
+    previousRevision: RevisionDetail?,
+    previousLoading: Boolean,
+    onToggleDiff: () -> Unit,
     onBackToHistory: () -> Unit,
     onRevert: () -> Unit,
 ) {
     val format = LocalFormat.current
     val createdLabel = format.formatTimestamp(revision.created)
     val isCurrent = revision.version == currentVersion
+    val hasPrevious = revision.version > 1
 
     Column(
         modifier = Modifier
@@ -213,9 +232,25 @@ private fun RevisionBody(
                 Spacer(Modifier.height(12.dp))
 
                 // Action buttons
-                Row(
+                FlowRow(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
+                    if (hasPrevious) {
+                        OutlinedButton(onClick = onToggleDiff) {
+                            Icon(
+                                Icons.Default.Difference,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                            )
+                            Spacer(Modifier.width(6.dp))
+                            Text(
+                                stringResource(
+                                    if (showDiff) R.string.wikis_revision_show_page
+                                    else R.string.wikis_revision_compare,
+                                ),
+                            )
+                        }
+                    }
                     OutlinedButton(onClick = onBackToHistory) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
@@ -283,11 +318,107 @@ private fun RevisionBody(
         HorizontalDivider()
         Spacer(Modifier.height(16.dp))
 
-        // Markdown body
-        MarkdownContent(
-            content = revision.content,
-            modifier = Modifier.fillMaxWidth(),
-        )
+        // Body: a line diff against the previous revision in compare mode,
+        // otherwise the rendered markdown.
+        if (showDiff && hasPrevious) {
+            when {
+                previousLoading -> {
+                    Box(Modifier.fillMaxWidth().padding(24.dp), contentAlignment = Alignment.Center) {
+                        CircularProgressIndicator()
+                    }
+                }
+                previousRevision != null -> {
+                    Text(
+                        text = stringResource(
+                            R.string.wikis_revision_changes_from,
+                            previousRevision.version,
+                            revision.version,
+                        ),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    DiffView(
+                        oldContent = previousRevision.content,
+                        newContent = revision.content,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+                else -> {
+                    Text(
+                        text = stringResource(R.string.wikis_revision_compare_failed),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+        } else {
+            MarkdownContent(
+                content = revision.content,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        }
+    }
+}
+
+/**
+ * Line-level diff rendering: added lines green with a `+`, removed lines red
+ * with a `-`, unchanged lines muted with a space. Mirrors web's DiffView.
+ */
+@Composable
+private fun DiffView(
+    oldContent: String,
+    newContent: String,
+    modifier: Modifier = Modifier,
+) {
+    val lines = remember(oldContent, newContent) { diffLines(oldContent, newContent) }
+    val addedBg = Color(0x2622C55E)
+    val removedBg = Color(0x26EF4444)
+    val addedFg = Color(0xFF16A34A)
+    val removedFg = Color(0xFFDC2626)
+    val unchangedFg = MaterialTheme.colorScheme.onSurfaceVariant
+
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(10.dp))
+            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(10.dp))
+            .horizontalScroll(rememberScrollState()),
+    ) {
+        lines.forEach { line ->
+            val bg = when (line.type) {
+                DiffType.ADDED -> addedBg
+                DiffType.REMOVED -> removedBg
+                DiffType.UNCHANGED -> Color.Transparent
+            }
+            val fg = when (line.type) {
+                DiffType.ADDED -> addedFg
+                DiffType.REMOVED -> removedFg
+                DiffType.UNCHANGED -> unchangedFg
+            }
+            val prefix = when (line.type) {
+                DiffType.ADDED -> "+"
+                DiffType.REMOVED -> "-"
+                DiffType.UNCHANGED -> " "
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(bg)
+                    .padding(horizontal = 12.dp, vertical = 1.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text(
+                    text = prefix,
+                    style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace),
+                    color = fg,
+                )
+                Text(
+                    text = line.text.ifEmpty { " " },
+                    style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace),
+                    color = fg,
+                )
+            }
+        }
     }
 }
 

@@ -98,6 +98,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.market.R
+import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.locationName
 import org.mochios.market.lib.parseLocation
 import org.mochios.market.lib.ratingStars
@@ -302,6 +303,21 @@ fun ListingDetailScreen(
                                 MarketApp.messageThread(listing.id.toString(), "new"),
                             )
                         },
+                        onBuyNow = {
+                            val auc = response.auction
+                            if (auc != null && auc.instant > 0) {
+                                viewModel.placeBid(
+                                    amount = auc.instant,
+                                    ceiling = null,
+                                    currency = listing.currency ?: Currency.GBP,
+                                    onInstantWin = {
+                                        navController.navigate(
+                                            MarketApp.checkout(listing.id.toString()),
+                                        )
+                                    },
+                                )
+                            }
+                        },
                         onPrimaryCta = {
                             when (listing.pricing) {
                                 PricingModel.AUCTION -> {
@@ -433,6 +449,7 @@ private fun ListingDetailContent(
     onReport: () -> Unit,
     onMessageSeller: () -> Unit,
     onPrimaryCta: () -> Unit,
+    onBuyNow: () -> Unit,
     onEdit: () -> Unit,
     onRelist: () -> Unit,
     onAssetDownload: (Asset) -> Unit,
@@ -622,6 +639,32 @@ private fun ListingDetailContent(
                         enabled = !sellerSuspended,
                         modifier = Modifier.fillMaxWidth(),
                     )
+
+                    // Auction "Buy it now": when the seller set an instant-buy
+                    // price, offer it alongside the bid CTA (mirrors web). A
+                    // tap bids at the instant amount, which the server resolves
+                    // as an instant win -> checkout.
+                    if (listing.pricing == PricingModel.AUCTION && auction != null && auction.instant > 0 && !sellerSuspended) {
+                        OutlinedButton(
+                            onClick = onBuyNow,
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.ShoppingCart,
+                                contentDescription = null,
+                                modifier = Modifier.size(18.dp),
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            // "Buy it now" is translated; the price is appended
+                            // as a formatted, language-neutral amount (web shows
+                            // the same "Buy it now — <price>").
+                            Text(
+                                stringResource(R.string.market_listing_detail_buy_now_label) +
+                                    " — " + formatPrice(auction.instant, listing.currency ?: Currency.GBP)
+                            )
+                        }
+                    }
 
                     if (sellerSuspended) {
                         Text(

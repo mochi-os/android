@@ -350,7 +350,7 @@
     <string name="market_purchase_track">Paqueteta qhaway</string>
     <string name="market_purchases_complete_purchase">Rantiy tukuy</string>
     <string name="market_purchases_empty">Mana rantiykuna</string>
-    <string name="market_purchases_order_label">Mañakuy #%1$d</string>
+    <string name="market_purchases_order_label">Mañakuy #%1$s</string>
     <string name="market_purchases_title">Rantiykuna</string>
     <string name="market_rating_label">Reseña puntaje</string>
     <string name="market_rating_no_reviews">Manaraq reseñakuna</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">Qallariy ofrecimiento: %1$s</string>
     <string name="market_profile_load_failed">Manam perfilta kichayta atinichu</string>
     <string name="market_profile_member_since">Yaykusqa: %1$s</string>
+    <string name="market_profile_joined">Yaykurqan %1$s</string>
     <string name="market_profile_rating_breakdown">Qhawariypa rakiynin</string>
     <string name="market_profile_sales_count">%1$d vendisqakuna</string>
     <string name="market_profile_stars_value">%1$d ch\'askakuna</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">%1$d archivoykikunata urayman apaykachay.</string>
     <string name="market_purchase_download_one">Archivoykita urayman apaykachay.</string>
     <string name="market_purchase_review_from">%1$s nisqamanta qhawariy</string>
-    <string name="market_purchases_auction_label">Remate #%1$d</string>
+    <string name="market_purchases_auction_label">Remate #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s kutichisqa</string>
     <string name="market_purchases_won_for">%1$s qullqipi llalliy</string>
     <string name="market_refund_dialog_amount_help">Lluy ordenta kutichinaykipaq ch\'usaqta saqiy.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Rantikuq kutichiy</string>
     <string name="market_listing_detail_seller_reviews_heading">Qhatumanta qillqasqakuna</string>
     <string name="market_account_stripe_open_failed">Manam Stripeta kichayta atinichu</string>
+    <string name="market_editor_stock">Stock</string>
+    <string name="market_editor_stock_units">Unidad yupay</string>
+    <string name="market_editor_stock_unlimited">Mana harkasqa</string>
+    <string name="market_editor_start_time">Qallariy hora</string>
+    <string name="market_editor_start_time_help">Willarayman qallariypaq ch\'usaqta saqiy.</string>
+    <string name="market_editor_start_time_next">Qatiq</string>
+    <string name="market_editor_start_time_clear">Pichay</string>
+    <string name="market_listing_detail_buy_now_label">Kunan rantiy</string>
+    <string name="market_section_recently_viewed">Yaqa pacha qhawasqa</string>
+    <string name="market_recently_viewed_clear">Llapan pichay</string>
 </resources>

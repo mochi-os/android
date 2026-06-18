@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d فروخت</string>
     <string name="market_profile_sales_count">%1$d فروخت</string>
     <string name="market_purchase_dispute_response">فروخت کنندہ کا جواب</string>
-    <string name="market_purchases_order_label">آرڈر #%1$d</string>
+    <string name="market_purchases_order_label">آرڈر #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">خریداروں کو اپنے بارے میں بتائیں…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">تعارف</string>
     <string name="market_profile_load_failed">پروفائل لوڈ نہیں ہو سکا</string>
     <string name="market_profile_member_since">رکن بنے %1$s سے</string>
+    <string name="market_profile_joined">شامل ہوئے %1$s</string>
     <string name="market_profile_no_reviews">ابھی کوئی جائزے نہیں۔</string>
     <string name="market_profile_rating_breakdown">ریٹنگ کی تفصیل</string>
     <string name="market_profile_stars_value">%1$d ستارے</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">ذیل میں اپنی %1$d فائلیں ڈاؤن لوڈ کریں۔</string>
     <string name="market_purchase_download_one">ذیل میں اپنی فائل ڈاؤن لوڈ کریں۔</string>
     <string name="market_purchase_review_from">%1$s کی طرف سے جائزہ</string>
-    <string name="market_purchases_auction_label">نیلامی #%1$d</string>
+    <string name="market_purchases_auction_label">نیلامی #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s واپس کیا گیا</string>
     <string name="market_purchases_won_for">%1$s میں جیتا</string>
     <string name="market_rating_reviews">(%1$d جائزے)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">بیچنے والے کا جواب</string>
     <string name="market_listing_detail_seller_reviews_heading">بیچنے والے کے جائزے</string>
     <string name="market_account_stripe_open_failed">Stripe نہیں کھل سکا</string>
+    <string name="market_editor_stock">اسٹاک</string>
+    <string name="market_editor_stock_units">یونٹس کی تعداد</string>
+    <string name="market_editor_stock_unlimited">لامحدود</string>
+    <string name="market_editor_start_time">شروع ہونے کا وقت</string>
+    <string name="market_editor_start_time_help">شائع ہونے پر شروع کرنے کے لیے خالی چھوڑ دیں۔</string>
+    <string name="market_editor_start_time_next">اگلا</string>
+    <string name="market_editor_start_time_clear">صاف کریں</string>
+    <string name="market_listing_detail_buy_now_label">ابھی خریدیں</string>
+    <string name="market_section_recently_viewed">حال ہی میں دیکھے گئے</string>
+    <string name="market_recently_viewed_clear">سب صاف کریں</string>
 </resources>

@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">ລຶບໃນເຄື່ອງ</string>
     <string name="chat_settings_delete_message">ນີ້ຈະລຶບການສົນທະນາ ແລະ ຂໍ້ຄວາມຂອງມັນອອກຈາກອຸປະກອນນີ້ເທົ່ານັ້ນ.</string>
 
+    <string name="chat_message_deleted">ຂໍ້ຄວາມນີ້ຖືກລຶບແລ້ວ</string>
+    <string name="chat_search_hint">ຊອກຫາໃນແຊັດ...</string>
+    <string name="chat_search_no_results">ບໍ່ມີຜົນການຊອກຫາ</string>
+    <string name="chat_message_forward">ສົ່ງຕໍ່</string>
+    <string name="chat_forward_title">ສົ່ງຕໍ່ຫາ…</string>
+    <string name="chat_forward_search">ຊອກຫາແຊັດ…</string>
+    <string name="chat_forward_empty">ບໍ່ມີແຊັດໃຫ້ສົ່ງຕໍ່</string>
+    <string name="chat_forward_success">ສົ່ງຕໍ່ແລ້ວ</string>
+    <string name="chat_forward_failed">ສົ່ງຕໍ່ບໍ່ສຳເລັດ</string>
 </resources>

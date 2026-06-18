@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">全員</string>
     <string name="wikis_access_subject_authenticated">認証済みユーザー</string>
 
+    <string name="wikis_revision_compare">変更点を比較</string>
+    <string name="wikis_revision_show_page">ページを表示</string>
+    <string name="wikis_revision_compare_failed">比較用に以前のバージョンを読み込めませんでした。</string>
+    <string name="wikis_revision_changes_from">バージョン %1$d → %2$d からの変更点</string>
 </resources>

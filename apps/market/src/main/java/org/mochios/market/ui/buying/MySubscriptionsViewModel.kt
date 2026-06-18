@@ -23,7 +23,7 @@ data class MySubscriptionsUiState(
     val subscriptions: List<Subscription> = emptyList(),
     val total: Long = 0,
     val error: MochiError? = null,
-    val mutatingId: Long? = null,
+    val mutatingId: String? = null,
 )
 
 sealed interface MySubscriptionsEvent {
@@ -85,12 +85,12 @@ class MySubscriptionsViewModel @Inject constructor(
         }
     }
 
-    fun pause(id: Long) = mutate(id) { repository.pauseSubscription(id) }
-    fun resume(id: Long) = mutate(id) { repository.resumeSubscription(id) }
-    fun reactivate(id: Long) = mutate(id) { repository.reactivateSubscription(id) }
-    fun cancel(id: Long) = mutate(id) { repository.cancelSubscription(id) }
+    fun pause(id: String) = mutate(id) { repository.pauseSubscription(id) }
+    fun resume(id: String) = mutate(id) { repository.resumeSubscription(id) }
+    fun reactivate(id: String) = mutate(id) { repository.reactivateSubscription(id) }
+    fun cancel(id: String) = mutate(id) { repository.cancelSubscription(id) }
 
-    private fun mutate(id: Long, op: suspend () -> Subscription) {
+    private fun mutate(id: String, op: suspend () -> Subscription) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(mutatingId = id)
             try {

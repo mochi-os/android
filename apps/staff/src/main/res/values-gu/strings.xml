@@ -50,8 +50,8 @@
     <string name="staff_appeals_dialog_title">અપીલ પર નિર્ણય કરો</string>
     <string name="staff_appeals_empty">કોઈ બાકી અપીલ્સ નથી</string>
     <string name="staff_appeals_history">લિસ્ટિંગ ઇતિહાસ</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">નોંધો</string>
     <string name="staff_appeals_open_sidebar">સાઇડબાર ખોલો</string>
     <string name="staff_appeals_submit">સબમિટ કરો</string>
@@ -221,7 +221,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">વિક્રેતાઓ</string>
     <string name="staff_dashboard_kpi_total_orders">કુલ ઑર્ડર</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">ના</string>
     <string name="staff_dashboard_open_sidebar">સાઇડબાર ખોલો</string>
     <string name="staff_dashboard_system">સિસ્ટમ</string>
@@ -239,7 +239,7 @@
     <string name="staff_disputes_empty">કોઈ વિવાદો નથી</string>
     <string name="staff_disputes_filter_status_label">સ્થિતિ</string>
     <string name="staff_disputes_history">વિવાદ ઇતિહાસ</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">chargeback ફી</string>
     <string name="staff_disputes_meta_evidence_due">પુરાવા આ તારીખ સુધીમાં જમા કરાવો</string>
     <string name="staff_disputes_meta_listing">લિસ્ટિંગ</string>
@@ -255,7 +255,6 @@
     <string name="staff_disputes_reason_not_received">પ્રાપ્ત થયું નથી</string>
     <string name="staff_disputes_reason_other">અન્ય</string>
     <string name="staff_disputes_reason_unauthorised">અનધિકૃત</string>
-    <string name="staff_disputes_refund_exceeds_total">રિફંડ રકમ ઓર્ડર કુલ કરતાં વધુ છે</string>
     <string name="staff_disputes_refund_must_be_positive">રિફંડ રકમ શૂન્યથી વધુ હોવી જોઈએ</string>
     <string name="staff_disputes_resolution_buyer">ખરીદનાર માટે ઉકેલો</string>
     <string name="staff_disputes_resolution_label">રિઝોલ્યુશન</string>
@@ -326,7 +325,7 @@
     <string name="staff_moderation_open_sidebar">સાઇડબાર ખોલો</string>
     <string name="staff_moderation_system">સિસ્ટમ</string>
     <string name="staff_moderation_title">મોડરેશન લોગ</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">ક્રિયા</string>
     <string name="staff_reports_action_ban">વપરાશકર્તાને પ્રતિબંધિત કરો</string>
     <string name="staff_reports_action_dismiss">રદ કરો</string>
@@ -474,7 +473,7 @@
     <string name="staff_team_toast_role_failed">ભૂમિકા અપડેટ કરવામાં નિષ્ફળ</string>
     <string name="staff_team_toast_role_updated">ભૂમિકા અપડેટ થઈ</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">ઓર્ડર #%1$d</string>
+    <string name="staff_dashboard_order_fallback">ઓર્ડર #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">કારણ (વૈકલ્પિક)</string>
     <string name="staff_accounts_sales">%1$d વેચાણ</string>
@@ -507,11 +506,14 @@
     <string name="staff_disputes_stripe_unrecognized">અજાણ્યો ચાર્જ</string>
     <string name="staff_listings_seller_unknown">અજાણ્યો વિક્રેતા</string>
     <string name="staff_listings_seller_verified">ચકાસાયેલ વિક્રેતા</string>
-    <string name="staff_reports_listing_label">લિસ્ટિંગ #%1$d</string>
+    <string name="staff_reports_listing_label">લિસ્ટિંગ #%1$s</string>
     <string name="staff_reports_meta_details">રિપોર્ટરની વિગતો</string>
-    <string name="staff_reviews_order_label">ઑર્ડર #%1$d</string>
+    <string name="staff_reviews_order_label">ઑર્ડર #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s પર. આ સમીક્ષા કાયમ માટે કાઢી નાખીએ? આ પૂર્વવત્ કરી શકાશે નહીં.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. આ સમીક્ષા કાયમ માટે કાઢી નાખીએ? આ પૂર્વવત્ કરી શકાશે નહીં.</string>
     <string name="staff_team_dialog_search_placeholder">નામ, ફિંગરપ્રિન્ટ અથવા ID દ્વારા શોધો…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook સહી કરવાનું ગુપ્ત</string>
+    <string name="staff_disputes_meta_already_refunded">પહેલેથી જ પાછું આપેલું</string>
+    <string name="staff_disputes_refund_exceeds_remaining">રિફંડની રકમ બાકી રિફંડપાત્ર રકમ કરતાં વધી ગઈ છે</string>
 </resources>

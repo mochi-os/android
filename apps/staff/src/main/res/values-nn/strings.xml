@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Avgjer klage</string>
     <string name="staff_appeals_empty">Ingen ankar som ventar</string>
     <string name="staff_appeals_history">Oppføringshistorikk</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Merknader</string>
     <string name="staff_appeals_open_sidebar">Opne sidepanelet</string>
     <string name="staff_appeals_reason_label">Seljarens grunngjeving for klage</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Seljarar</string>
     <string name="staff_dashboard_kpi_total_orders">Totale ordrar</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nei</string>
     <string name="staff_dashboard_open_sidebar">Opne sidepanelet</string>
-    <string name="staff_dashboard_order_fallback">Tinging #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Tinging #%1$s</string>
     <string name="staff_dashboard_system">System</string>
     <string name="staff_dashboard_tab_audit">Revisjon</string>
     <string name="staff_dashboard_tab_listings">Oppføringar</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Ingen tvistar</string>
     <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_history">Tvistehistorikk</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Kjøparopplysningar</string>
     <string name="staff_disputes_meta_chargeback_fee">Tilbakeføringsgebyr</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">halde att av Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Anna</string>
     <string name="staff_disputes_reason_unauthorised">Ikkje autorisert</string>
     <string name="staff_disputes_refund_amount_label">Refusjonssum (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Refusjonsbeløp overstig totalbestilling</string>
     <string name="staff_disputes_refund_help">Lat ho vere tom for full refusjon av %1$s. Skriv inn ein mindre sum for delvis refusjon.</string>
     <string name="staff_disputes_refund_must_be_positive">Refusjonsbeløp må vera større enn null</string>
     <string name="staff_disputes_resolution_buyer">Løys for kjøpar</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Opne sidepanelet</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_title">Moderasjonslogg</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Handling</string>
     <string name="staff_reports_action_ban">Utesteng brukar</string>
     <string name="staff_reports_action_dismiss">Avvis</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>
     <string name="staff_reports_history">Rapporthistorikk</string>
-    <string name="staff_reports_listing_label">Annonse #%1$d</string>
+    <string name="staff_reports_listing_label">Annonse #%1$s</string>
     <string name="staff_reports_meta_details">Detaljar om rapportøren</string>
     <string name="staff_reports_meta_price">Pris</string>
     <string name="staff_reports_meta_reason">Grunn</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Fjerna</string>
     <string name="staff_reviews_filter_status">Status</string>
     <string name="staff_reviews_open_sidebar">Opne sidepanelet</string>
-    <string name="staff_reviews_order_label">tinging #%1$d</string>
+    <string name="staff_reviews_order_label">tinging #%1$s</string>
     <string name="staff_reviews_overflow_actions">Handlingar</string>
     <string name="staff_reviews_remove_confirm">Fjern</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s den %3$s. Slette denne vurderinga permanent? Denne handlinga kan ikkje angrast.</string>
@@ -514,4 +513,6 @@
     <string name="staff_team_toast_role_failed">Kunne ikkje oppdatere rolle</string>
     <string name="staff_team_toast_role_updated">Rolle oppdatert</string>
 
+    <string name="staff_disputes_meta_already_refunded">Allereie refundert</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Refusjonsbeløpet overstig det gjenverande refunderbare beløpet</string>
 </resources>

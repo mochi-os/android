@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ಪ್ಯಾಕೇಜ್ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</string>
     <string name="market_purchases_complete_purchase">ಖರೀದಿ ಪೂರ್ಣಗೊಳಿಸಿ</string>
     <string name="market_purchases_empty">ಯಾವುದೇ ಖರೀದಿಗಳಿಲ್ಲ</string>
-    <string name="market_purchases_order_label">ಆದೇಶ #%1$d</string>
+    <string name="market_purchases_order_label">ಆದೇಶ #%1$s</string>
     <string name="market_purchases_title">ಖರೀದಿಗಳು</string>
     <string name="market_rating_label">ರೇಟಿಂಗ್</string>
     <string name="market_rating_no_reviews">ಇನ್ನೂ ಯಾವುದೇ ರಿವ್ಯೂಗಳಿಲ್ಲ</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ಪ್ರಾರಂಭಿಕ ಬಿಡ್: %1$s</string>
     <string name="market_profile_load_failed">ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_profile_member_since">%1$s ರಿಂದ ಸದಸ್ಯ</string>
+    <string name="market_profile_joined">%1$s ರಂದು ಸೇರಿದರು</string>
     <string name="market_profile_rating_breakdown">ರೇಟಿಂಗ್ ವಿವರಣೆ</string>
     <string name="market_profile_sales_count">%1$d ಮಾರಾಟಗಳು</string>
     <string name="market_profile_stars_value">%1$d ನಕ್ಷತ್ರಗಳು</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">ನಿಮ್ಮ %1$d ಫೈಲ್‌ಗಳನ್ನು ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="market_purchase_download_one">ನಿಮ್ಮ ಫೈಲ್ ಅನ್ನು ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="market_purchase_review_from">%1$s ರಿಂದ ವಿಮರ್ಶೆ</string>
-    <string name="market_purchases_auction_label">ಹರಾಜು #%1$d</string>
+    <string name="market_purchases_auction_label">ಹರಾಜು #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ಮರುಪಾವತಿಸಲಾಗಿದೆ</string>
     <string name="market_purchases_won_for">%1$s ಗೆ ಗೆದ್ದಿದೆ</string>
     <string name="market_refund_dialog_amount_help">ಪೂರ್ಣ ಆದೇಶವನ್ನು ಮರುಪಾವತಿಸಲು ಖಾಲಿ ಬಿಡಿ.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">ಮಾರಾಟಗಾರ ಪ್ರತಿಕ್ರಿಯೆ</string>
     <string name="market_listing_detail_seller_reviews_heading">ಮಾರಾಟಗಾರರ ವಿಮರ್ಶೆಗಳು</string>
     <string name="market_account_stripe_open_failed">Stripe ಅನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="market_editor_stock">ಸ್ಟಾಕ್</string>
+    <string name="market_editor_stock_units">ಯೂನಿಟ್‌ಗಳ ಸಂಖ್ಯೆ</string>
+    <string name="market_editor_stock_unlimited">ಅಪರಿಮಿತ</string>
+    <string name="market_editor_start_time">ಪ್ರಾರಂಭ ಸಮಯ</string>
+    <string name="market_editor_start_time_help">ಪ್ರಕಟಣೆಯಲ್ಲಿ ಆರಂಭಿಸಲು ಖಾಲಿ ಬಿಡಿ.</string>
+    <string name="market_editor_start_time_next">ಮುಂದೆ</string>
+    <string name="market_editor_start_time_clear">ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="market_listing_detail_buy_now_label">ಈಗಲೇ ಖರೀದಿಸಿ</string>
+    <string name="market_section_recently_viewed">ಇತ್ತೀಚೆಗೆ ವೀಕ್ಷಿಸಲಾಗಿದೆ</string>
+    <string name="market_recently_viewed_clear">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
 </resources>

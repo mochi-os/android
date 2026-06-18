@@ -134,12 +134,12 @@ private fun BidsTabRow(active: BidsFilter, onSelected: (BidsFilter) -> Unit) {
 @Composable
 private fun BidRow(
     bid: Bid,
-    onClick: (Long) -> Unit,
-    onCompletePurchase: (Long) -> Unit,
+    onClick: (String) -> Unit,
+    onCompletePurchase: (String) -> Unit,
 ) {
     val format = LocalFormat.current
     val currency = bid.currency ?: Currency.GBP
-    val title = bid.title ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: 0L)
+    val title = bid.title ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: "")
     Row(
         modifier = Modifier
             .fillMaxWidth()

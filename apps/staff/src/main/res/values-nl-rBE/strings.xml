@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Beslissen over beroep</string>
     <string name="staff_appeals_empty">Geen openstaande beroepen</string>
     <string name="staff_appeals_history">Listinggeschiedenis</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notities</string>
     <string name="staff_appeals_open_sidebar">Zijbalk openen</string>
     <string name="staff_appeals_reason_label">Reden van bezwaar van de verkoper</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Verkopers</string>
     <string name="staff_dashboard_kpi_total_orders">Totale bestellingen</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nee</string>
     <string name="staff_dashboard_open_sidebar">Zijbalk openen</string>
-    <string name="staff_dashboard_order_fallback">Bestelling nr. %1$d</string>
+    <string name="staff_dashboard_order_fallback">Bestelling nr. %1$s</string>
     <string name="staff_dashboard_system">Systeem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Listings</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Geen disputen</string>
     <string name="staff_disputes_filter_status_label">Status</string>
     <string name="staff_disputes_history">Geschillengeschiedenis</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Gegevens van de koper</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback-kosten</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">ingehouden door Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Andere</string>
     <string name="staff_disputes_reason_unauthorised">Niet geautoriseerd</string>
     <string name="staff_disputes_refund_amount_label">Terugbetalingsbedrag (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Terugbetalingsbedrag overschrijdt totaal van de bestelling</string>
     <string name="staff_disputes_refund_help">Laat leeg voor een volledige terugbetaling van %1$s. Voer een lager bedrag in voor een gedeeltelijke terugbetaling.</string>
     <string name="staff_disputes_refund_must_be_positive">Terugbetalingsbedrag moet groter zijn dan nul</string>
     <string name="staff_disputes_resolution_buyer">Oplossen ten gunste van koper</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Zijbalk openen</string>
     <string name="staff_moderation_system">Systeem</string>
     <string name="staff_moderation_title">Moderatielog</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Actie</string>
     <string name="staff_reports_action_ban">Gebruiker verbannen</string>
     <string name="staff_reports_action_dismiss">Sluiten</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Status</string>
     <string name="staff_reports_filter_type_label">Type</string>
     <string name="staff_reports_history">Rapportgeschiedenis</string>
-    <string name="staff_reports_listing_label">Advertentie nr. %1$d</string>
+    <string name="staff_reports_listing_label">Advertentie nr. %1$s</string>
     <string name="staff_reports_meta_details">Gegevens van de melder</string>
     <string name="staff_reports_meta_price">Prijs</string>
     <string name="staff_reports_meta_reason">Reden</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Verwijderd</string>
     <string name="staff_reviews_filter_status">Status</string>
     <string name="staff_reviews_open_sidebar">Zijbalk openen</string>
-    <string name="staff_reviews_order_label">bestelling nr. %1$d</string>
+    <string name="staff_reviews_order_label">bestelling nr. %1$s</string>
     <string name="staff_reviews_overflow_actions">Acties</string>
     <string name="staff_reviews_remove_confirm">Verwijderen</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s op %3$s. Deze beoordeling permanent verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Kan rol niet bijwerken</string>
     <string name="staff_team_toast_role_updated">Rol bijgewerkt</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook-ondertekeningsgeheim</string>
+    <string name="staff_disputes_meta_already_refunded">Al terugbetaald</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Het terugbetalingsbedrag overschrijdt het resterende terug te betalen bedrag</string>
 </resources>

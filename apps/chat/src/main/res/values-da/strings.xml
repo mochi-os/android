@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Slet lokalt</string>
     <string name="chat_settings_delete_message">Dette fjerner chatten og dens beskeder fra denne enhed alene.</string>
 
+    <string name="chat_message_deleted">Denne besked blev slettet</string>
+    <string name="chat_search_hint">Søg i chatten...</string>
+    <string name="chat_search_no_results">Ingen resultater</string>
+    <string name="chat_message_forward">Videresend</string>
+    <string name="chat_forward_title">Videresend til…</string>
+    <string name="chat_forward_search">Søg i chats…</string>
+    <string name="chat_forward_empty">Ingen chats at videresende til</string>
+    <string name="chat_forward_success">Videresendt</string>
+    <string name="chat_forward_failed">Kunne ikke videresende</string>
 </resources>

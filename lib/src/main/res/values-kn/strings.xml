@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">ಬಹು-ಅಂಶ ದೃಢೀಕರಣ</string>
     <string name="auth_mfa_subtitle">ಉಳಿದ ಪರಿಶೀಲನಾ ಹಂತಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ</string>
     <string name="auth_recover_account">ಖಾತೆಯನ್ನು ಮರುಪಡೆಯಿರಿ</string>
+    <string name="auth_login_title">Mochi ಗೆ ಲಾಗಿನ್ ಮಾಡಿ</string>
+    <string name="auth_next">ಮುಂದೆ</string>
+    <string name="auth_or_log_in_with">ಅಥವಾ ಇದರೊಂದಿಗೆ ಲಾಗಿನ್ ಮಾಡಿ</string>
+    <string name="auth_passkey">ಪಾಸ್‌ಕೀ</string>
+    <string name="auth_use_passkey">ಪಾಸ್‌ಕೀ ಬಳಸಿ</string>
+    <string name="auth_email_me_a_code">ನನಗೆ ಇಮೇಲ್ ಮೂಲಕ ಕೋಡ್ ಕಳುಹಿಸಿ</string>
+    <string name="auth_or_enter_authenticator_code">ಅಥವಾ ದೃಢೀಕರಣ ಕೋಡ್ ನಮೂದಿಸಿ</string>
+    <string name="auth_log_in">ಲಾಗಿನ್ ಮಾಡಿ</string>
+    <string name="auth_back">ಹಿಂದೆ</string>
+    <string name="auth_lost_access_recovery">ಪ್ರವೇಶ ಕಳೆದುಕೊಂಡಿರಾ? ರಿಕವರಿ ಕೋಡ್ ಬಳಸಿ</string>
     <string name="auth_create_identity_title">ನಿಮ್ಮ ಗುರುತನ್ನು ರಚಿಸಿ</string>
     <string name="auth_create_identity_subtitle">ಈ ಸರ್ವರ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಗುರುತಿಗಾಗಿ ಹೆಸರನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="auth_privacy_public_description">ಬಳಕೆದಾರರ ಡೈರೆಕ್ಟರಿಯಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡಲಾಗಿದೆ ಆದ್ದರಿಂದ ಇತರರು ನಿಮ್ಮನ್ನು ಹುಡುಕಬಹುದು.</string>

@@ -33,6 +33,12 @@ data class RevisionViewUiState(
     val wiki: WikiInfo? = null,
     val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
+    /** Compare-changes mode: when on, the body shows a line diff against the
+     *  previous revision instead of the rendered markdown. Mirrors web's
+     *  revision-view "Compare changes" toggle. */
+    val showDiff: Boolean = false,
+    val previousRevision: RevisionDetail? = null,
+    val previousLoading: Boolean = false,
 )
 
 /**
@@ -97,6 +103,34 @@ class RevisionViewModel @Inject constructor(
                     isLoading = false,
                     error = e.toMochiError(),
                 )
+            }
+        }
+    }
+
+    /**
+     * Toggle compare-changes mode. On first switch into diff mode (for a
+     * revision past version 1), lazily fetch the previous revision so its
+     * content can be diffed against this one — mirroring web, which fetches
+     * `version - 1` only when the diff is shown.
+     */
+    fun toggleDiff() {
+        val showing = !_uiState.value.showDiff
+        _uiState.value = _uiState.value.copy(showDiff = showing)
+        if (showing && version > 1 &&
+            _uiState.value.previousRevision == null &&
+            !_uiState.value.previousLoading
+        ) {
+            viewModelScope.launch {
+                _uiState.value = _uiState.value.copy(previousLoading = true)
+                try {
+                    val resp = repository.getRevision(wikiId, slug, version - 1)
+                    _uiState.value = _uiState.value.copy(
+                        previousRevision = resp.revision,
+                        previousLoading = false,
+                    )
+                } catch (e: Exception) {
+                    _uiState.value = _uiState.value.copy(previousLoading = false)
+                }
             }
         }
     }

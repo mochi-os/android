@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">İtiraza karar ver</string>
     <string name="staff_appeals_empty">Bekleyen itiraz yok</string>
     <string name="staff_appeals_history">İlan geçmişi</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notlar</string>
     <string name="staff_appeals_open_sidebar">Kenar çubuğunu aç</string>
     <string name="staff_appeals_reason_label">Satıcının itiraz gerekçesi</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Satıcılar</string>
     <string name="staff_dashboard_kpi_total_orders">Toplam siparişler</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Hayır</string>
     <string name="staff_dashboard_open_sidebar">Kenar çubuğunu aç</string>
-    <string name="staff_dashboard_order_fallback">Sipariş #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Sipariş #%1$s</string>
     <string name="staff_dashboard_system">Sistem</string>
     <string name="staff_dashboard_tab_audit">Denetim</string>
     <string name="staff_dashboard_tab_listings">İlanlar</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Anlaşmazlık yok</string>
     <string name="staff_disputes_filter_status_label">Durum</string>
     <string name="staff_disputes_history">Anlaşmazlık geçmişi</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Alıcı bilgileri</string>
     <string name="staff_disputes_meta_chargeback_fee">Ters ibraz ücreti</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe tarafından alıkonuldu</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Diğer</string>
     <string name="staff_disputes_reason_unauthorised">Yetkisiz</string>
     <string name="staff_disputes_refund_amount_label">İade tutarı (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">İade tutarı sipariş toplamını aşıyor</string>
     <string name="staff_disputes_refund_help">%1$s tutarın tamamının iadesi için boş bırakın. Kısmi iade için daha düşük bir tutar girin.</string>
     <string name="staff_disputes_refund_must_be_positive">İade tutarı sıfırdan büyük olmalı</string>
     <string name="staff_disputes_resolution_buyer">Alıcı lehine çöz</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Kenar çubuğunu aç</string>
     <string name="staff_moderation_system">Sistem</string>
     <string name="staff_moderation_title">Moderasyon günlüğü</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Eylem</string>
     <string name="staff_reports_action_ban">Kullanıcıyı yasakla</string>
     <string name="staff_reports_action_dismiss">Kapat</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Durum</string>
     <string name="staff_reports_filter_type_label">Tür</string>
     <string name="staff_reports_history">Bildirim geçmişi</string>
-    <string name="staff_reports_listing_label">İlan #%1$d</string>
+    <string name="staff_reports_listing_label">İlan #%1$s</string>
     <string name="staff_reports_meta_details">Şikâyetçi bilgileri</string>
     <string name="staff_reports_meta_price">Fiyat</string>
     <string name="staff_reports_meta_reason">Neden</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Kaldırıldı</string>
     <string name="staff_reviews_filter_status">Durum</string>
     <string name="staff_reviews_open_sidebar">Kenar çubuğunu aç</string>
-    <string name="staff_reviews_order_label">sipariş #%1$d</string>
+    <string name="staff_reviews_order_label">sipariş #%1$s</string>
     <string name="staff_reviews_overflow_actions">Eylemler</string>
     <string name="staff_reviews_remove_confirm">Kaldır</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s tarihinde. Bu değerlendirme kalıcı olarak silinsin mi? Bu işlem geri alınamaz.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Rol güncellenemedi</string>
     <string name="staff_team_toast_role_updated">Rol güncellendi</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook imzalama gizli anahtarı</string>
+    <string name="staff_disputes_meta_already_refunded">Zaten iade edildi</string>
+    <string name="staff_disputes_refund_exceeds_remaining">İade tutarı kalan iade edilebilir tutarı aşıyor</string>
 </resources>

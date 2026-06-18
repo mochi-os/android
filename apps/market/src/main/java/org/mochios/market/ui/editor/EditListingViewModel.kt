@@ -53,10 +53,10 @@ val AUCTION_DURATIONS: List<Int> = listOf(1, 3, 5, 7, 10, 14)
 data class EditUiState(
     val isLoading: Boolean = true,
     val isNew: Boolean = true,
-    val listingId: Long = 0L,
+    val listingId: String = "",
     val title: String = "",
     val description: String = "",
-    val category: Long = 0L,
+    val category: String = "",
     val condition: Condition? = null,
     val type: ListingType = ListingType.PHYSICAL,
     val pricing: PricingModel = PricingModel.FIXED,
@@ -66,6 +66,13 @@ data class EditUiState(
     val reserveText: String = "",
     val instantText: String = "",
     val durationDays: Int = 7,
+    // Optional future auction start time (epoch seconds). null = start on
+    // publish. The duration runs from this point, mirroring web.
+    val opensAt: Long? = null,
+    // Stock count for fixed-price/subscription listings. "0" (surfaced via
+    // unlimitedStock) means unlimited; auctions always sell a single unit.
+    val quantityText: String = "1",
+    val unlimitedStock: Boolean = false,
     val pickup: Boolean = false,
     val shipping: Boolean = false,
     val download: Boolean = false,
@@ -92,7 +99,7 @@ sealed class EditListingEvent {
     /** Emit when the listing is deleted so the host can navigate back. */
     data object Deleted : EditListingEvent()
     /** Emit when the listing is published so the host can navigate to detail. */
-    data class Published(val id: Long) : EditListingEvent()
+    data class Published(val id: String) : EditListingEvent()
 }
 
 /**
@@ -118,7 +125,7 @@ class EditListingViewModel @Inject constructor(
 
     private val rawId: String = savedStateHandle.get<String>("id").orEmpty()
     private val isNew: Boolean = rawId.isEmpty() || rawId == "new"
-    private val initialId: Long = rawId.toLongOrNull() ?: 0L
+    private val initialId: String = if (isNew) "" else rawId
 
     private val _state = MutableStateFlow(EditUiState(isNew = isNew, listingId = initialId))
     val state: StateFlow<EditUiState> = _state.asStateFlow()
@@ -145,7 +152,7 @@ class EditListingViewModel @Inject constructor(
                     _state.value = _state.value.copy(
                         isLoading = false,
                         isNew = true,
-                        listingId = 0L,
+                        listingId = "",
                         categories = categories,
                         stripeOnboarded = stripe?.chargesEnabled,
                     )
@@ -201,6 +208,8 @@ class EditListingViewModel @Inject constructor(
             reserveText = "",
             instantText = "",
             durationDays = 7,
+            quantityText = if (listing.quantity == 0L) "1" else listing.quantity.toString(),
+            unlimitedStock = listing.quantity == 0L,
             pickup = listing.pickup == 1L,
             shipping = listing.shipping == 1L,
             download = type == ListingType.DIGITAL,
@@ -219,7 +228,12 @@ class EditListingViewModel @Inject constructor(
 
     fun setTitle(value: String) = mutate { it.copy(title = value) }
     fun setDescription(value: String) = mutate { it.copy(description = value) }
-    fun setCategory(value: Long) = mutate { it.copy(category = value) }
+    fun setCategory(value: String) = mutate { it.copy(category = value) }
+    fun setQuantity(value: String) = mutate { it.copy(quantityText = value.filter { c -> c.isDigit() }) }
+    fun setOpensAt(value: Long?) = mutate { it.copy(opensAt = value) }
+    fun setUnlimitedStock(value: Boolean) = mutate {
+        it.copy(unlimitedStock = value, quantityText = if (value) it.quantityText else it.quantityText.ifBlank { "1" })
+    }
     fun setCondition(value: Condition?) = mutate { it.copy(condition = value) }
 
     fun setType(value: ListingType) = mutate {
@@ -290,10 +304,10 @@ class EditListingViewModel @Inject constructor(
             _state.value = _state.value.copy(saveStatus = SaveStatus.SAVING)
             val fields = buildFields(current)
             try {
-                val updated = if (current.isNew || current.listingId == 0L) {
+                val updated = if (current.isNew || current.listingId.isEmpty()) {
                     repository.createListing(fields)
                 } else {
-                    repository.updateListing(fields + ("id" to current.listingId.toString()))
+                    repository.updateListing(fields + ("id" to current.listingId))
                 }
                 _state.value = _state.value.copy(
                     listingId = updated.id,
@@ -314,13 +328,21 @@ class EditListingViewModel @Inject constructor(
         return mapOf(
             "title" to s.title,
             "description" to s.description,
-            "category" to s.category.takeIf { it != 0L }?.toString(),
+            "category" to s.category.takeIf { it.isNotEmpty() },
             "condition" to s.condition?.let { conditionWire(it) },
             "type" to typeWire(s.type),
             "pricing" to pricingWire(s.pricing),
             "price" to toMinorUnits(s.priceText, s.currency).toString(),
             "currency" to currencyWire(s.currency),
             "interval" to (if (s.pricing == PricingModel.SUBSCRIPTION) intervalWire(s.interval) else null),
+            // Auctions always sell one unit; otherwise 0 (unlimited) when the
+            // unlimited toggle is on, else the entered count (min 1). Mirrors
+            // web's edit-listing-page quantity handling.
+            "quantity" to when {
+                s.pricing == PricingModel.AUCTION -> "1"
+                s.unlimitedStock -> "0"
+                else -> (s.quantityText.toLongOrNull()?.coerceAtLeast(1L) ?: 1L).toString()
+            },
             "pickup" to (if (s.pickup) "1" else "0"),
             "shipping" to (if (s.shipping) "1" else "0"),
             "location" to s.location,
@@ -338,11 +360,11 @@ class EditListingViewModel @Inject constructor(
         if (priceBelowStripeMinimum(current)) {
             return
         }
-        if (current.listingId == 0L) {
+        if (current.listingId.isEmpty()) {
             // Make sure the draft has been saved before publishing.
             viewModelScope.launch {
                 save()
-                if (_state.value.listingId != 0L) {
+                if (_state.value.listingId.isNotEmpty()) {
                     doPublish(_state.value)
                 }
             }
@@ -353,13 +375,19 @@ class EditListingViewModel @Inject constructor(
 
     private suspend fun doPublish(current: EditUiState) {
         _state.value = _state.value.copy(publishStatus = SaveStatus.SAVING)
-        val fields = mutableMapOf<String, String?>("id" to current.listingId.toString())
+        val fields = mutableMapOf<String, String?>("id" to current.listingId)
         if (current.pricing == PricingModel.AUCTION) {
             fields["reserve"] = toMinorUnits(current.reserveText, current.currency).toString()
             val instantMinor = toMinorUnits(current.instantText, current.currency)
             if (instantMinor > 0L) fields["instant"] = instantMinor.toString()
-            val durationSeconds = current.durationDays * 24L * 60L * 60L
-            fields["closes"] = durationSeconds.toString()
+            // opens/closes are ABSOLUTE epoch seconds — the server rejects a
+            // closes that isn't in the future, so a relative duration must NOT
+            // be sent. A future start time goes as opens; the duration runs
+            // from opens. Mirrors web's edit-listing-page publish.
+            val nowSec = System.currentTimeMillis() / 1000L
+            val opens = current.opensAt?.takeIf { it > nowSec } ?: nowSec
+            if (opens > nowSec) fields["opens"] = opens.toString()
+            fields["closes"] = (opens + current.durationDays * 24L * 60L * 60L).toString()
         }
         try {
             val published = repository.publishListing(fields)
@@ -375,7 +403,7 @@ class EditListingViewModel @Inject constructor(
 
     fun deleteListing() {
         val id = _state.value.listingId
-        if (id == 0L) return
+        if (id.isEmpty()) return
         viewModelScope.launch {
             try {
                 repository.deleteListing(id)
@@ -390,7 +418,7 @@ class EditListingViewModel @Inject constructor(
 
     fun appeal(reason: String) {
         val id = _state.value.listingId
-        if (id == 0L || reason.isBlank()) return
+        if (id.isEmpty() || reason.isBlank()) return
         viewModelScope.launch {
             try {
                 repository.appealListing(id, reason.trim())
@@ -411,9 +439,9 @@ class EditListingViewModel @Inject constructor(
         if (uris.isEmpty()) return
         // Make sure we have a listing row to attach photos to.
         viewModelScope.launch {
-            if (_state.value.listingId == 0L) {
+            if (_state.value.listingId.isEmpty()) {
                 save()
-                if (_state.value.listingId == 0L) return@launch
+                if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId
             _state.value = _state.value.copy(isUploadingPhoto = true)
@@ -453,7 +481,7 @@ class EditListingViewModel @Inject constructor(
 
     fun reorderPhotos(newOrder: List<Photo>) {
         val listingId = _state.value.listingId
-        if (listingId == 0L) return
+        if (listingId.isEmpty()) return
         _state.value = _state.value.copy(photos = newOrder)
         viewModelScope.launch {
             try {
@@ -473,9 +501,9 @@ class EditListingViewModel @Inject constructor(
     ) {
         if (uris.isEmpty()) return
         viewModelScope.launch {
-            if (_state.value.listingId == 0L) {
+            if (_state.value.listingId.isEmpty()) {
                 save()
-                if (_state.value.listingId == 0L) return@launch
+                if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId
             _state.value = _state.value.copy(isUploadingAsset = true)
@@ -500,7 +528,7 @@ class EditListingViewModel @Inject constructor(
         }
     }
 
-    fun deleteAsset(id: Long) {
+    fun deleteAsset(id: String) {
         viewModelScope.launch {
             try {
                 repository.removeAsset(id)
@@ -515,7 +543,7 @@ class EditListingViewModel @Inject constructor(
 
     fun reorderAssets(newOrder: List<Asset>) {
         val listingId = _state.value.listingId
-        if (listingId == 0L) return
+        if (listingId.isEmpty()) return
         _state.value = _state.value.copy(assets = newOrder)
         viewModelScope.launch {
             try {
@@ -529,9 +557,9 @@ class EditListingViewModel @Inject constructor(
     fun addExternalAsset(filename: String, mime: String, reference: String) {
         if (filename.isBlank() || reference.isBlank()) return
         viewModelScope.launch {
-            if (_state.value.listingId == 0L) {
+            if (_state.value.listingId.isEmpty()) {
                 save()
-                if (_state.value.listingId == 0L) return@launch
+                if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId
             try {
@@ -548,7 +576,7 @@ class EditListingViewModel @Inject constructor(
     fun saveZones(zones: List<ShippingOption>) {
         val listingId = _state.value.listingId
         _state.value = _state.value.copy(zones = zones)
-        if (listingId == 0L) return
+        if (listingId.isEmpty()) return
         viewModelScope.launch {
             try {
                 repository.setShipping(

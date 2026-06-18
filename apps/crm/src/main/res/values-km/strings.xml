@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">មិនមានជម្រើសលើវាលជួរឈរ</string>
     <string name="crm_design_preview_empty">មិនមានអ្វីសម្រាប់បង្ហាញ</string>
 
+    <string name="crm_access_tab_manual">សៀវភៅណែនាំ</string>
+    <string name="crm_access_search_users">ស្វែងរកអ្នកប្រើ</string>
+    <string name="crm_access_no_groups">មិនមានក្រុម</string>
+    <string name="crm_access_tab_users">អ្នកប្រើប្រាស់</string>
+    <string name="crm_access_tab_groups">ក្រុម</string>
+    <string name="crm_access_target">គោលដៅ</string>
+    <string name="crm_access_target_hint">លេខសម្គាល់អង្គភាព, @group, * (មនុស្សគ្រប់គ្នា), ឬ + (សមាជិក)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">បន្ថែមជួរឈរ</string>
+    <string name="crm_settings_entity_id">លេខសម្គាល់អង្គភាព</string>
+    <string name="crm_settings_fingerprint">ស្នាមម្រាមដៃ</string>
+    <string name="crm_settings_server">ម៉ាស៊ីនមេ</string>
 </resources>

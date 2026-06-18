@@ -48,8 +48,8 @@
     <string name="staff_appeals_dialog_title">Pinnu ẹjọ́ àfilọ̀</string>
     <string name="staff_appeals_empty">Kò sí ẹjọ́ tó dúró</string>
     <string name="staff_appeals_history">Ìtàn listing</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Àkọsílẹ̀</string>
     <string name="staff_appeals_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
     <string name="staff_appeals_submit">Fi sí ilẹ̀</string>
@@ -219,7 +219,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Àwọn olùtà</string>
     <string name="staff_dashboard_kpi_total_orders">Lápapọ̀ àwọn ọjà</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Bẹ́ẹ̀ kọ́</string>
     <string name="staff_dashboard_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
     <string name="staff_dashboard_system">System</string>
@@ -237,7 +237,7 @@
     <string name="staff_disputes_empty">Kò sí àríyànjiyàn</string>
     <string name="staff_disputes_filter_status_label">Ìpò</string>
     <string name="staff_disputes_history">Ìtàn àríyànjiyàn</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Owó chargeback</string>
     <string name="staff_disputes_meta_evidence_due">Ẹ̀rí gbọ́dọ̀ dé nípa</string>
     <string name="staff_disputes_meta_listing">Àkójọ</string>
@@ -253,7 +253,6 @@
     <string name="staff_disputes_reason_not_received">Kò gba</string>
     <string name="staff_disputes_reason_other">Mìíràn</string>
     <string name="staff_disputes_reason_unauthorised">Aláìláyè</string>
-    <string name="staff_disputes_refund_exceeds_total">Iye padà ju lápapọ̀ ètò lọ</string>
     <string name="staff_disputes_refund_must_be_positive">Iye padà gbọ́dọ̀ ju òdo lọ</string>
     <string name="staff_disputes_resolution_buyer">Yanjú fún olùrà</string>
     <string name="staff_disputes_resolution_label">Ìpinnu</string>
@@ -322,7 +321,7 @@
     <string name="staff_moderation_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
     <string name="staff_moderation_system">System</string>
     <string name="staff_moderation_title">Ìṣàkọsílẹ̀ ìṣàkóso</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Ìṣe</string>
     <string name="staff_reports_action_ban">Fòfin de olùmúlò</string>
     <string name="staff_reports_action_dismiss">Mú kúrò</string>
@@ -469,7 +468,7 @@
     <string name="staff_team_toast_role_failed">Ko le ṣe imudojuiwọn ipa naa</string>
     <string name="staff_team_toast_role_updated">Ipa ti ni imudojuiwọn</string>
     <string name="staff_audit_action_auction_cancelled">Auction cancelled</string>
-    <string name="staff_dashboard_order_fallback">Pípèsè #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Pípèsè #%1$s</string>
 
     <string name="staff_accounts_action_unban_title">Gbé ìfòfindè kúrò</string>
     <string name="staff_accounts_action_unsuspend_title">Gbé ìdádúró kúrò</string>
@@ -506,12 +505,15 @@
     <string name="staff_listings_seller_unknown">Olùtà àìmọ̀</string>
     <string name="staff_listings_seller_verified">Olùtà tí a ti fẹ̀rí hàn</string>
     <string name="staff_moderation_filter_clear">Pa àyẹ̀wò rẹ́</string>
-    <string name="staff_reports_listing_label">Àtòjọ #%1$d</string>
+    <string name="staff_reports_listing_label">Àtòjọ #%1$s</string>
     <string name="staff_reports_meta_details">Àlàyé olùròyìn</string>
-    <string name="staff_reviews_order_label">ètò #%1$d</string>
+    <string name="staff_reviews_order_label">ètò #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ní %3$s. Pa àtúnyẹ̀wò yìí rẹ́ pátápátá? A kò lè yí èyí padà.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Pa àtúnyẹ̀wò yìí rẹ́ pátápátá? A kò lè yí èyí padà.</string>
     <string name="staff_team_dialog_adding">Ń fi kún…</string>
     <string name="staff_team_dialog_search_placeholder">Wá nípa orúkọ, ìka ọwọ́, tàbí ID…</string>
 
+    <string name="staff_config_field_stripe_webhook">Àṣírí ìbúwọ́lù Webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Ti dapada tẹ́lẹ̀</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Iye ifowoleyin ti kọja iye ifowoleyin ti o ku</string>
 </resources>

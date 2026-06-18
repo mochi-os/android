@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d lượt bán</string>
     <string name="market_profile_sales_count">%1$d lượt bán</string>
     <string name="market_purchase_dispute_response">Phản hồi của người bán</string>
-    <string name="market_purchases_order_label">Đơn hàng #%1$d</string>
+    <string name="market_purchases_order_label">Đơn hàng #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Hãy giới thiệu về bạn cho người mua…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Giới thiệu</string>
     <string name="market_profile_load_failed">Không thể tải hồ sơ</string>
     <string name="market_profile_member_since">Thành viên từ %1$s</string>
+    <string name="market_profile_joined">Đã tham gia %1$s</string>
     <string name="market_profile_no_reviews">Chưa có đánh giá nào.</string>
     <string name="market_profile_rating_breakdown">Phân tích đánh giá</string>
     <string name="market_profile_stars_value">%1$d sao</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Tải xuống %1$d tệp của bạn bên dưới.</string>
     <string name="market_purchase_download_one">Tải xuống tệp của bạn bên dưới.</string>
     <string name="market_purchase_review_from">Đánh giá từ %1$s</string>
-    <string name="market_purchases_auction_label">Đấu giá #%1$d</string>
+    <string name="market_purchases_auction_label">Đấu giá #%1$s</string>
 
 
     <string name="market_purchases_refunded_partial">Đã hoàn −%1$s</string>
@@ -732,4 +733,14 @@
     <string name="market_listing_detail_seller_response">Phản hồi của người bán</string>
     <string name="market_listing_detail_seller_reviews_heading">Đánh giá người bán</string>
     <string name="market_account_stripe_open_failed">Không thể mở Stripe</string>
+    <string name="market_editor_stock">Tồn kho</string>
+    <string name="market_editor_stock_units">Số đơn vị</string>
+    <string name="market_editor_stock_unlimited">Không giới hạn</string>
+    <string name="market_editor_start_time">Thời gian bắt đầu</string>
+    <string name="market_editor_start_time_help">Để trống để bắt đầu khi xuất bản.</string>
+    <string name="market_editor_start_time_next">Tiếp theo</string>
+    <string name="market_editor_start_time_clear">Xóa</string>
+    <string name="market_listing_detail_buy_now_label">Mua ngay</string>
+    <string name="market_section_recently_viewed">Đã xem gần đây</string>
+    <string name="market_recently_viewed_clear">Xóa tất cả</string>
 </resources>

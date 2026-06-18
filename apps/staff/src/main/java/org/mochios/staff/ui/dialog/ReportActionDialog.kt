@@ -254,7 +254,7 @@ private fun reportActionOptions(): List<Pair<String, String>> = listOf(
 @Composable
 private fun targetText(report: Report): String = when (report.type) {
     "listing" -> report.listing?.title
-        ?: stringResource(R.string.staff_reports_listing_label, report.target.toLongOrNull() ?: 0L)
+        ?: stringResource(R.string.staff_reports_listing_label, report.target)
     else -> report.targetName.ifBlank { formatFingerprint(report.target) }
 }
 

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ആർക്കും</string>
     <string name="wikis_access_subject_authenticated">പ്രാമാണീകരിച്ച ഉപയോക്താക്കൾ</string>
 
+    <string name="wikis_revision_compare">മാറ്റങ്ങൾ താരതമ്യം ചെയ്യുക</string>
+    <string name="wikis_revision_show_page">പേജ് കാണിക്കുക</string>
+    <string name="wikis_revision_compare_failed">താരതമ്യത്തിനായി മുൻ പതിപ്പ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.</string>
+    <string name="wikis_revision_changes_from">പതിപ്പ് %1$d → %2$d മുതലുള്ള മാറ്റങ്ങൾ</string>
 </resources>

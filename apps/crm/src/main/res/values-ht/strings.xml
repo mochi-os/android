@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Pa gen opsyon sou chan kolòn nan</string>
     <string name="crm_design_preview_empty">Pa gen anyen pou montre</string>
 
+    <string name="crm_access_tab_manual">Manyèl</string>
+    <string name="crm_access_search_users">Chèche itilizatè</string>
+    <string name="crm_access_no_groups">Pa gen gwoup disponib</string>
+    <string name="crm_access_tab_users">Itilizatè</string>
+    <string name="crm_access_tab_groups">Gwoup</string>
+    <string name="crm_access_target">Sib</string>
+    <string name="crm_access_target_hint">ID antite, @gwoup, * (tout moun), oswa + (manm)</string>
+    <string name="crm_attachment_remove">Retire pyès jwenti</string>
+    <string name="crm_board_add_column">Ajoute kolòn</string>
+    <string name="crm_settings_entity_id">ID Antite</string>
+    <string name="crm_settings_fingerprint">Anprent dijital</string>
+    <string name="crm_settings_server">Sèvè</string>
 </resources>

@@ -326,4 +326,16 @@
     <string name="crm_design_preview_no_options">Níl aon rogha ar réimse na gcolún</string>
     <string name="crm_design_preview_empty">Níl rud ar bith le taispeáint</string>
 
+    <string name="crm_access_tab_manual">Láimhe</string>
+    <string name="crm_access_search_users">Cuardaigh úsáideoirí</string>
+    <string name="crm_access_no_groups">Níl aon ghrúpa ar fáil</string>
+    <string name="crm_access_tab_users">Úsáideoirí</string>
+    <string name="crm_access_tab_groups">Grúpaí</string>
+    <string name="crm_access_target">Sprioc</string>
+    <string name="crm_access_target_hint">Aitheantas aonáin, @grúpa, * (gach duine), nó + (baill)</string>
+    <string name="crm_attachment_remove">Bain ceangaltán</string>
+    <string name="crm_board_add_column">Cuir colún leis</string>
+    <string name="crm_settings_entity_id">ID an aonáin</string>
+    <string name="crm_settings_fingerprint">Méarlorg</string>
+    <string name="crm_settings_server">Freastalaí</string>
 </resources>

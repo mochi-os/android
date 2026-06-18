@@ -159,6 +159,16 @@
     <string name="auth_mfa_title">Dilysu aml-ffactor</string>
     <string name="auth_mfa_subtitle">Cwblhewch y camau dilysu sy\'n weddill</string>
     <string name="auth_recover_account">Adfer cyfrif</string>
+    <string name="auth_login_title">Mewngofnodi i Mochi</string>
+    <string name="auth_next">Nesaf</string>
+    <string name="auth_or_log_in_with">Neu mewngofnodwch gyda</string>
+    <string name="auth_passkey">Pasallwedd</string>
+    <string name="auth_use_passkey">Defnyddio pasallwedd</string>
+    <string name="auth_email_me_a_code">E-bostiwch god ataf</string>
+    <string name="auth_or_enter_authenticator_code">Neu rhowch god dilysydd</string>
+    <string name="auth_log_in">Mewngofnodi</string>
+    <string name="auth_back">Yn ôl</string>
+    <string name="auth_lost_access_recovery">Wedi colli mynediad? Defnyddiwch god adfer</string>
     <string name="auth_create_identity_title">Creu eich hunaniaeth</string>
     <string name="auth_create_identity_subtitle">Dewiswch enw ar gyfer eich hunaniaeth ar y gweinydd hwn</string>
     <string name="auth_privacy_public_description">Wedi\'i restru yn y cyfeiriadur defnyddwyr fel y gall eraill ddod o hyd i chi.</string>

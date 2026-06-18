@@ -28,7 +28,7 @@ import javax.inject.Inject
  * count and page size mirror the web `useLoadMore` behaviour.
  */
 data class ModerationLogUiState(
-    val listingId: Int? = null,
+    val listingId: String? = null,
     val isLoading: Boolean = true,
     val isLoadingMore: Boolean = false,
     val entries: List<ModerationEntry> = emptyList(),
@@ -47,7 +47,7 @@ class ModerationLogViewModel @Inject constructor(
 
     private val _state = MutableStateFlow(
         ModerationLogUiState(
-            listingId = savedStateHandle.get<Int>(KEY_LISTING_ID),
+            listingId = savedStateHandle.get<String>(KEY_LISTING_ID),
         ),
     )
     val state: StateFlow<ModerationLogUiState> = _state.asStateFlow()
@@ -66,7 +66,7 @@ class ModerationLogViewModel @Inject constructor(
     }
 
     /** Apply / clear the listing-id filter. */
-    fun setListingId(listingId: Int?) {
+    fun setListingId(listingId: String?) {
         if (_state.value.listingId == listingId) return
         _state.value = _state.value.copy(listingId = listingId)
         savedStateHandle[KEY_LISTING_ID] = listingId

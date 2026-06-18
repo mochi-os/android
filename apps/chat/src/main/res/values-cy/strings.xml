@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Dileu\'n lleol</string>
     <string name="chat_settings_delete_message">Mae hyn yn tynnu\'r sgwrs a\'i negeseuon o\'r ddyfais hon yn unig.</string>
 
+    <string name="chat_message_deleted">Cafodd y neges hon ei dileu</string>
+    <string name="chat_search_hint">Chwilio yn y sgwrs...</string>
+    <string name="chat_search_no_results">Dim canlyniadau</string>
+    <string name="chat_message_forward">Anfon ymlaen</string>
+    <string name="chat_forward_title">Anfon ymlaen at…</string>
+    <string name="chat_forward_search">Chwilio sgyrsiau…</string>
+    <string name="chat_forward_empty">Dim sgyrsiau i anfon ymlaen atynt</string>
+    <string name="chat_forward_success">Anfonwyd ymlaen</string>
+    <string name="chat_forward_failed">Methwyd anfon ymlaen</string>
 </resources>

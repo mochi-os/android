@@ -109,7 +109,7 @@ fun AppealsScreen(
 private fun AppealsBody(
     state: AppealsUiState,
     onLoadMore: () -> Unit,
-    onOpenListing: (Long) -> Unit,
+    onOpenListing: (String) -> Unit,
     onOpenAppeal: (Appeal) -> Unit,
     onRetry: () -> Unit,
 ) {

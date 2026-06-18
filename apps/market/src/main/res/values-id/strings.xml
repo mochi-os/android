@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d penjualan</string>
     <string name="market_profile_sales_count">%1$d penjualan</string>
     <string name="market_purchase_dispute_response">Tanggapan penjual</string>
-    <string name="market_purchases_order_label">Pesanan #%1$d</string>
+    <string name="market_purchases_order_label">Pesanan #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Ceritakan tentang diri Anda kepada pembeli…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Tentang</string>
     <string name="market_profile_load_failed">Tidak dapat memuat profil</string>
     <string name="market_profile_member_since">Anggota sejak %1$s</string>
+    <string name="market_profile_joined">Bergabung %1$s</string>
     <string name="market_profile_no_reviews">Belum ada ulasan.</string>
     <string name="market_profile_rating_breakdown">Rincian peringkat</string>
     <string name="market_profile_stars_value">%1$d bintang</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Unduh %1$d file Anda di bawah.</string>
     <string name="market_purchase_download_one">Unduh file Anda di bawah.</string>
     <string name="market_purchase_review_from">Ulasan dari %1$s</string>
-    <string name="market_purchases_auction_label">Lelang #%1$d</string>
+    <string name="market_purchases_auction_label">Lelang #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s dikembalikan</string>
     <string name="market_purchases_won_for">Dimenangkan seharga %1$s</string>
     <string name="market_rating_reviews">(%1$d ulasan)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Tanggapan penjual</string>
     <string name="market_listing_detail_seller_reviews_heading">Ulasan penjual</string>
     <string name="market_account_stripe_open_failed">Tidak dapat membuka Stripe</string>
+    <string name="market_editor_stock">Stok</string>
+    <string name="market_editor_stock_units">Jumlah unit</string>
+    <string name="market_editor_stock_unlimited">Tak terbatas</string>
+    <string name="market_editor_start_time">Waktu mulai</string>
+    <string name="market_editor_start_time_help">Kosongkan untuk memulai saat penerbitan.</string>
+    <string name="market_editor_start_time_next">Berikutnya</string>
+    <string name="market_editor_start_time_clear">Bersihkan</string>
+    <string name="market_listing_detail_buy_now_label">Beli sekarang</string>
+    <string name="market_section_recently_viewed">Baru dilihat</string>
+    <string name="market_recently_viewed_clear">Bersihkan semua</string>
 </resources>

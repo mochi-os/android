@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ווער עס איז</string>
     <string name="wikis_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
 
+    <string name="wikis_revision_compare">פֿאַרגלײַך ענדערונגען</string>
+    <string name="wikis_revision_show_page">ווײַז בלאַט</string>
+    <string name="wikis_revision_compare_failed">מע האָט נישט געקענט לאָדן די פֿריִערדיקע ווערסיע פֿאַר פֿאַרגלײַך.</string>
+    <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$d → %2$d</string>
 </resources>

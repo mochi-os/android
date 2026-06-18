@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.model.User
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.model.FieldOption
@@ -20,6 +21,7 @@ import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.repository.CrmsRepository
+import java.io.File
 import javax.inject.Inject
 
 data class CrmUiState(
@@ -277,6 +279,7 @@ class CrmViewModel @Inject constructor(
         title: String,
         parent: String? = null,
         initialValues: Map<String, String> = emptyMap(),
+        files: List<File> = emptyList(),
     ) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreatingObject = true)
@@ -284,6 +287,12 @@ class CrmViewModel @Inject constructor(
                 val obj = repository.createObject(crmId, classId, parent, title)
                 if (initialValues.isNotEmpty()) {
                     repository.setValues(crmId, obj.id, initialValues)
+                }
+                // Upload any attachments picked in the create dialog, mirroring
+                // web's create-then-upload flow. One failure shouldn't lose the
+                // object or the other files, so each upload is isolated.
+                for (file in files) {
+                    runCatching { repository.createAttachment(crmId, obj.id, file) }
                 }
                 _uiState.value = _uiState.value.copy(
                     isCreatingObject = false,
@@ -393,6 +402,21 @@ class CrmViewModel @Inject constructor(
     fun getOptionsForField(classId: String, fieldId: String): List<FieldOption> {
         val details = _uiState.value.crmDetails ?: return emptyList()
         return details.options[classId]?.get(fieldId) ?: emptyList()
+    }
+
+    /**
+     * Live user search for FieldEditor's user-type fields in the create dialog.
+     * Mirrors ObjectDetailViewModel.searchPeople — the PersonPicker wants
+     * [User]s whose fingerprint is the person's entity id.
+     */
+    suspend fun searchPeople(query: String): List<User> {
+        return try {
+            repository.searchUsers(query).map {
+                User(id = 0, name = it.name, fingerprint = it.id)
+            }
+        } catch (_: Exception) {
+            emptyList()
+        }
     }
 
     fun getAllOptionsForField(fieldId: String): List<FieldOption> {

@@ -593,6 +593,7 @@
     <string name="market_profile_biography">O uživateli</string>
     <string name="market_profile_load_failed">Profil se nepodařilo načíst</string>
     <string name="market_profile_member_since">Členem od %1$s</string>
+    <string name="market_profile_joined">Připojil se %1$s</string>
     <string name="market_profile_no_reviews">Zatím žádné recenze.</string>
     <string name="market_profile_rating_breakdown">Rozpis hodnocení</string>
     <string name="market_profile_sales_count">%1$d prodejů</string>
@@ -603,8 +604,8 @@
     <string name="market_purchase_download_many">Stáhněte si níže své soubory (%1$d).</string>
     <string name="market_purchase_download_one">Stáhněte si svůj soubor níže.</string>
     <string name="market_purchase_review_from">Recenze od %1$s</string>
-    <string name="market_purchases_auction_label">Aukce č. %1$d</string>
-    <string name="market_purchases_order_label">Objednávka č. %1$d</string>
+    <string name="market_purchases_auction_label">Aukce č. %1$s</string>
+    <string name="market_purchases_order_label">Objednávka č. %1$s</string>
     <string name="market_purchases_refunded_partial">Vráceno −%1$s</string>
     <string name="market_purchases_won_for">Vyhráno za %1$s</string>
     <string name="market_rating_reviews">(%1$d recenzí)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Odpověď prodávajícího</string>
     <string name="market_listing_detail_seller_reviews_heading">Hodnocení prodejce</string>
     <string name="market_account_stripe_open_failed">Nelze otevřít Stripe</string>
+    <string name="market_editor_stock">Sklad</string>
+    <string name="market_editor_stock_units">Počet jednotek</string>
+    <string name="market_editor_stock_unlimited">Neomezeno</string>
+    <string name="market_editor_start_time">Čas začátku</string>
+    <string name="market_editor_start_time_help">Ponechte prázdné pro spuštění při publikování.</string>
+    <string name="market_editor_start_time_next">Další</string>
+    <string name="market_editor_start_time_clear">Vymazat</string>
+    <string name="market_listing_detail_buy_now_label">Koupit teď</string>
+    <string name="market_section_recently_viewed">Nedávno zobrazené</string>
+    <string name="market_recently_viewed_clear">Vymazat vše</string>
 </resources>

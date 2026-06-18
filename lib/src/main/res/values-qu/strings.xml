@@ -161,6 +161,16 @@
     <string name="auth_mfa_title">Achkha-rikch\'aq riqsichikuy</string>
     <string name="auth_mfa_subtitle">Puchuq riqsichikuy ruwaykunata tukuchiy</string>
     <string name="auth_recover_account">Cuenta-ta kutichiy</string>
+    <string name="auth_login_title">Mochi-man yaykuy</string>
+    <string name="auth_next">Qatiq</string>
+    <string name="auth_or_log_in_with">Icha kaywan yaykuy</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Passkey-ta apaykachay</string>
+    <string name="auth_email_me_a_code">Email-niyman código apachiy</string>
+    <string name="auth_or_enter_authenticator_code">Icha authenticator código yaykuchiy</string>
+    <string name="auth_log_in">Yaykuy</string>
+    <string name="auth_back">Kutichiy</string>
+    <string name="auth_lost_access_recovery">Yaykuyta chinkachirqankichu? Recuperación código-ta apaykachay</string>
     <string name="auth_create_identity_title">Riqsichikuyniykita kamariy</string>
     <string name="auth_create_identity_subtitle">Kay servidor-pi riqsichikuyniykipaq huk sutita akllay</string>
     <string name="auth_privacy_public_description">Apaykachaq directorio-pi rikhurin, hukkuna tarisunaykipaq.</string>

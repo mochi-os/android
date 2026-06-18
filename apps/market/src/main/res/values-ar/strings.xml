@@ -593,6 +593,7 @@
     <string name="market_profile_biography">نبذة</string>
     <string name="market_profile_load_failed">تعذر تحميل الملف الشخصي</string>
     <string name="market_profile_member_since">عضو منذ %1$s</string>
+    <string name="market_profile_joined">انضم في %1$s</string>
     <string name="market_profile_no_reviews">لا توجد تقييمات بعد.</string>
     <string name="market_profile_rating_breakdown">تفاصيل التقييم</string>
     <string name="market_profile_sales_count">%1$d مبيعات</string>
@@ -603,8 +604,8 @@
     <string name="market_purchase_download_many">نزّل ملفاتك البالغ عددها %1$d أدناه.</string>
     <string name="market_purchase_download_one">نزّل ملفك أدناه.</string>
     <string name="market_purchase_review_from">تقييم من %1$s</string>
-    <string name="market_purchases_auction_label">مزاد رقم %1$d</string>
-    <string name="market_purchases_order_label">طلب رقم %1$d</string>
+    <string name="market_purchases_auction_label">مزاد رقم %1$s</string>
+    <string name="market_purchases_order_label">طلب رقم %1$s</string>
     <string name="market_purchases_refunded_partial">تم ردّ %1$s−</string>
     <string name="market_purchases_won_for">فاز بسعر %1$s</string>
     <string name="market_rating_reviews">(%1$d تقييمًا)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">رد البائع</string>
     <string name="market_listing_detail_seller_reviews_heading">تقييمات البائع</string>
     <string name="market_account_stripe_open_failed">تعذّر فتح Stripe</string>
+    <string name="market_editor_stock">المخزون</string>
+    <string name="market_editor_stock_units">عدد الوحدات</string>
+    <string name="market_editor_stock_unlimited">غير محدود</string>
+    <string name="market_editor_start_time">وقت البدء</string>
+    <string name="market_editor_start_time_help">اتركه فارغًا للبدء عند النشر.</string>
+    <string name="market_editor_start_time_next">التالي</string>
+    <string name="market_editor_start_time_clear">مسح</string>
+    <string name="market_listing_detail_buy_now_label">اشترِ الآن</string>
+    <string name="market_section_recently_viewed">شوهدت مؤخرًا</string>
+    <string name="market_recently_viewed_clear">مسح الكل</string>
 </resources>

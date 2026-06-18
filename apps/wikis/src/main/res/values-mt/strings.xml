@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Kulħadd</string>
     <string name="wikis_access_subject_authenticated">Utenti awtentikati</string>
 
+    <string name="wikis_revision_compare">Qabbel il-bidliet</string>
+    <string name="wikis_revision_show_page">Uri l-paġna</string>
+    <string name="wikis_revision_compare_failed">Ma setgħetx tittella\' l-verżjoni preċedenti għall-paragun.</string>
+    <string name="wikis_revision_changes_from">Bidliet mill-verżjoni %1$d → %2$d</string>
 </resources>

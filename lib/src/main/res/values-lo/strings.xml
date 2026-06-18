@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">ການພິສູດຢືນຢັນຫຼາຍປັດໄຈ</string>
     <string name="auth_mfa_subtitle">ດຳເນີນຂັ້ນຕອນການຢືນຢັນທີ່ເຫຼືອໃຫ້ສຳເລັດ</string>
     <string name="auth_recover_account">ກູ້ຄືນບັນຊີ</string>
+    <string name="auth_login_title">ເຂົ້າສູ່ລະບົບ Mochi</string>
+    <string name="auth_next">ຕໍ່ໄປ</string>
+    <string name="auth_or_log_in_with">ຫຼື ເຂົ້າສູ່ລະບົບດ້ວຍ</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">ໃຊ້ passkey</string>
+    <string name="auth_email_me_a_code">ສົ່ງລະຫັດໃຫ້ຂ້ອຍທາງອີເມວ</string>
+    <string name="auth_or_enter_authenticator_code">ຫຼື ປ້ອນລະຫັດແອັບຢືນຢັນຕົວຕົນ</string>
+    <string name="auth_log_in">ເຂົ້າສູ່ລະບົບ</string>
+    <string name="auth_back">ກັບຄືນ</string>
+    <string name="auth_lost_access_recovery">ເຂົ້າເຖິງບໍ່ໄດ້ບໍ? ໃຊ້ລະຫັດກູ້ຄືນ</string>
     <string name="auth_create_identity_title">ສ້າງຕົວຕົນຂອງທ່ານ</string>
     <string name="auth_create_identity_subtitle">ເລືອກຊື່ສຳລັບຕົວຕົນຂອງທ່ານໃນເຊີບເວີນີ້</string>
     <string name="auth_privacy_public_description">ລົງລາຍຊື່ໃນລະບົບລາຍຊື່ຜູ້ໃຊ້ເພື່ອໃຫ້ຄົນອື່ນຊອກພົບທ່ານໄດ້.</string>

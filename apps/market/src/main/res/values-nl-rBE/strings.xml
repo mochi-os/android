@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d verkopen</string>
     <string name="market_profile_sales_count">%1$d verkopen</string>
     <string name="market_purchase_dispute_response">Antwoord van de verkoper</string>
-    <string name="market_purchases_order_label">Bestelling nr. %1$d</string>
+    <string name="market_purchases_order_label">Bestelling nr. %1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Vertel kopers iets over jezelf…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Over</string>
     <string name="market_profile_load_failed">Kon profiel niet laden</string>
     <string name="market_profile_member_since">Lid sinds %1$s</string>
+    <string name="market_profile_joined">Lid geworden op %1$s</string>
     <string name="market_profile_no_reviews">Nog geen recensies.</string>
     <string name="market_profile_rating_breakdown">Beoordelingsoverzicht</string>
     <string name="market_profile_stars_value">%1$d sterren</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Download hieronder uw %1$d bestanden.</string>
     <string name="market_purchase_download_one">Download hieronder uw bestand.</string>
     <string name="market_purchase_review_from">Recensie van %1$s</string>
-    <string name="market_purchases_auction_label">Veiling #%1$d</string>
+    <string name="market_purchases_auction_label">Veiling #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s terugbetaald</string>
     <string name="market_purchases_won_for">Gewonnen voor %1$s</string>
     <string name="market_rating_reviews">(%1$d beoordelingen)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Reactie van verkoper</string>
     <string name="market_listing_detail_seller_reviews_heading">Beoordelingen van de verkoper</string>
     <string name="market_account_stripe_open_failed">Kon Stripe niet openen</string>
+    <string name="market_editor_stock">Voorraad</string>
+    <string name="market_editor_stock_units">Aantal eenheden</string>
+    <string name="market_editor_stock_unlimited">Onbeperkt</string>
+    <string name="market_editor_start_time">Starttijd</string>
+    <string name="market_editor_start_time_help">Laat leeg om te starten bij publiceren.</string>
+    <string name="market_editor_start_time_next">Volgende</string>
+    <string name="market_editor_start_time_clear">Wissen</string>
+    <string name="market_listing_detail_buy_now_label">Nu kopen</string>
+    <string name="market_section_recently_viewed">Recent bekeken</string>
+    <string name="market_recently_viewed_clear">Alles wissen</string>
 </resources>

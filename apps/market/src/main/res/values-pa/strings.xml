@@ -350,7 +350,7 @@
     <string name="market_purchase_track">ਪੈਕੇਜ ਟਰੈਕ ਕਰੋ</string>
     <string name="market_purchases_complete_purchase">ਖਰੀਦ ਪੂਰੀ ਕਰੋ</string>
     <string name="market_purchases_empty">ਕੋਈ ਖਰੀਦਾਰੀਆਂ ਨਹੀਂ</string>
-    <string name="market_purchases_order_label">ਆਰਡਰ #%1$d</string>
+    <string name="market_purchases_order_label">ਆਰਡਰ #%1$s</string>
     <string name="market_purchases_title">ਖਰੀਦਾਰੀਆਂ</string>
     <string name="market_rating_label">ਰੇਟਿੰਗ</string>
     <string name="market_rating_no_reviews">ਅਜੇ ਕੋਈ ਸਮੀਖਿਆਵਾਂ ਨਹੀਂ</string>
@@ -609,6 +609,7 @@
     <string name="market_price_starting_bid">ਸ਼ੁਰੂਆਤੀ ਬੋਲੀ: %1$s</string>
     <string name="market_profile_load_failed">ਪ੍ਰੋਫਾਈਲ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕੀ</string>
     <string name="market_profile_member_since">%1$s ਤੋਂ ਮੈਂਬਰ</string>
+    <string name="market_profile_joined">%1$s ਨੂੰ ਸ਼ਾਮਲ ਹੋਏ</string>
     <string name="market_profile_rating_breakdown">ਰੇਟਿੰਗ ਵੇਰਵਾ</string>
     <string name="market_profile_sales_count">%1$d ਵਿਕਰੀਆਂ</string>
     <string name="market_profile_stars_value">%1$d ਤਾਰੇ</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">ਹੇਠਾਂ ਆਪਣੀਆਂ %1$d ਫਾਈਲਾਂ ਡਾਊਨਲੋਡ ਕਰੋ।</string>
     <string name="market_purchase_download_one">ਹੇਠਾਂ ਆਪਣੀ ਫਾਈਲ ਡਾਊਨਲੋਡ ਕਰੋ।</string>
     <string name="market_purchase_review_from">%1$s ਵੱਲੋਂ ਸਮੀਖਿਆ</string>
-    <string name="market_purchases_auction_label">ਨਿਲਾਮੀ #%1$d</string>
+    <string name="market_purchases_auction_label">ਨਿਲਾਮੀ #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ਵਾਪਸ ਕੀਤੇ</string>
     <string name="market_purchases_won_for">%1$s ਵਿੱਚ ਜਿੱਤੀ</string>
     <string name="market_refund_dialog_amount_help">ਪੂਰੇ ਆਰਡਰ ਨੂੰ ਵਾਪਸ ਕਰਨ ਲਈ ਖਾਲੀ ਛੱਡੋ।</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">ਵੇਚਣ ਵਾਲੇ ਦਾ ਜਵਾਬ</string>
     <string name="market_listing_detail_seller_reviews_heading">ਵਿਕਰੇਤਾ ਦੀਆਂ ਸਮੀਖਿਆਵਾਂ</string>
     <string name="market_account_stripe_open_failed">Stripe ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕਿਆ</string>
+    <string name="market_editor_stock">ਸਟਾਕ</string>
+    <string name="market_editor_stock_units">ਯੂਨਿਟਾਂ ਦੀ ਗਿਣਤੀ</string>
+    <string name="market_editor_stock_unlimited">ਅਸੀਮਤ</string>
+    <string name="market_editor_start_time">ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਸਮਾਂ</string>
+    <string name="market_editor_start_time_help">ਲਿੰਕ</string>
+    <string name="market_editor_start_time_next">ਅੱਗੇ</string>
+    <string name="market_editor_start_time_clear">ਸਾਫ਼ ਕਰੋ</string>
+    <string name="market_listing_detail_buy_now_label">ਹੁਣੇ ਖਰੀਦੋ</string>
+    <string name="market_section_recently_viewed">ਹਾਲ ਹੀ ਵਿੱਚ ਦੇਖੇ ਗਏ</string>
+    <string name="market_recently_viewed_clear">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
 </resources>

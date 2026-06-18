@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">لا توجد خيارات على حقل الأعمدة</string>
     <string name="crm_design_preview_empty">لا يوجد شيء لعرضه</string>
 
+    <string name="crm_access_tab_manual">يدوي</string>
+    <string name="crm_access_search_users">البحث عن مستخدمين</string>
+    <string name="crm_access_no_groups">لا توجد مجموعات متاحة</string>
+    <string name="crm_access_tab_users">المستخدمون</string>
+    <string name="crm_access_tab_groups">المجموعات</string>
+    <string name="crm_access_target">الهدف</string>
+    <string name="crm_access_target_hint">معرّف الكيان، @مجموعة، * (الجميع)، أو + (الأعضاء)</string>
+    <string name="crm_attachment_remove">إزالة المرفق</string>
+    <string name="crm_board_add_column">إضافة عمود</string>
+    <string name="crm_settings_entity_id">معرّف الكيان</string>
+    <string name="crm_settings_fingerprint">البصمة</string>
+    <string name="crm_settings_server">الخادم</string>
 </resources>

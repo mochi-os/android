@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Kiwango cha ufikiaji</string>
     <string name="wikis_access_subject_anyone">Mtu yeyote</string>
     <string name="wikis_access_subject_authenticated">Watumiaji waliothibitishwa</string>
+    <string name="wikis_revision_compare">Linganisha mabadiliko</string>
+    <string name="wikis_revision_show_page">Onyesha ukurasa</string>
+    <string name="wikis_revision_compare_failed">Haikuweza kupakia toleo la awali kwa ajili ya kulinganisha.</string>
+    <string name="wikis_revision_changes_from">Mabadiliko kutoka toleo %1$d → %2$d</string>
 </resources>

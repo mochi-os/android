@@ -34,7 +34,6 @@ object NotificationsModule {
             .addInterceptor(Interceptor { chain ->
                 val token = sessionManager.getTokenBlocking("notifications")
                 val builder = chain.request().newBuilder()
-                    .header("Accept", "application/json")
                 if (token != null) builder.header("Authorization", "Bearer $token")
                 chain.proceed(builder.build())
             })

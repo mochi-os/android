@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Ákveða áfrýjun</string>
     <string name="staff_appeals_empty">Engar áfrýjanir í bið</string>
     <string name="staff_appeals_history">Saga auglýsingar</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Athugasemdir</string>
     <string name="staff_appeals_open_sidebar">Opna hliðarstiku</string>
     <string name="staff_appeals_reason_label">Ástæða áfrýjunar seljanda</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Seljendur</string>
     <string name="staff_dashboard_kpi_total_orders">Samtals pantanir</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Nei</string>
     <string name="staff_dashboard_open_sidebar">Opna hliðarstiku</string>
-    <string name="staff_dashboard_order_fallback">Pöntun #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Pöntun #%1$s</string>
     <string name="staff_dashboard_system">Kerfi</string>
     <string name="staff_dashboard_tab_audit">Endurskoðun</string>
     <string name="staff_dashboard_tab_listings">Auglýsingar</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Engin ágreiningsmál</string>
     <string name="staff_disputes_filter_status_label">Staða</string>
     <string name="staff_disputes_history">Saga ágreinings</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Upplýsingar kaupanda</string>
     <string name="staff_disputes_meta_chargeback_fee">Endurkröfugjald</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">haldið eftir af Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Annað</string>
     <string name="staff_disputes_reason_unauthorised">Óheimilt</string>
     <string name="staff_disputes_refund_amount_label">Endurgreiðsluupphæð (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Endurgreiðsluupphæð fer yfir heildarpöntunarupphæð</string>
     <string name="staff_disputes_refund_help">Skildu eftir tómt fyrir fulla endurgreiðslu á %1$s. Sláðu inn lægri upphæð fyrir hluta endurgreiðslu.</string>
     <string name="staff_disputes_refund_must_be_positive">Endurgreiðsluupphæð verður að vera stærri en núll</string>
     <string name="staff_disputes_resolution_buyer">Leysa fyrir kaupanda</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Opna hliðarstiku</string>
     <string name="staff_moderation_system">Kerfi</string>
     <string name="staff_moderation_title">Yfirferðarskrá</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Aðgerð</string>
     <string name="staff_reports_action_ban">Banna notanda</string>
     <string name="staff_reports_action_dismiss">Hafna</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Staða</string>
     <string name="staff_reports_filter_type_label">Tegund</string>
     <string name="staff_reports_history">Tilkynningasaga</string>
-    <string name="staff_reports_listing_label">Auglýsing #%1$d</string>
+    <string name="staff_reports_listing_label">Auglýsing #%1$s</string>
     <string name="staff_reports_meta_details">Upplýsingar tilkynnanda</string>
     <string name="staff_reports_meta_price">Verð</string>
     <string name="staff_reports_meta_reason">Ástæða</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Fjarlægt</string>
     <string name="staff_reviews_filter_status">Staða</string>
     <string name="staff_reviews_open_sidebar">Opna hliðarstiku</string>
-    <string name="staff_reviews_order_label">pöntun #%1$d</string>
+    <string name="staff_reviews_order_label">pöntun #%1$s</string>
     <string name="staff_reviews_overflow_actions">Aðgerðir</string>
     <string name="staff_reviews_remove_confirm">Fjarlægja</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s þann %3$s. Eyða þessari umsögn varanlega? Ekki er hægt að afturkalla þessa aðgerð.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Ekki tókst að uppfæra hlutverkið</string>
     <string name="staff_team_toast_role_updated">Hlutverk uppfært</string>
 
+    <string name="staff_config_field_stripe_webhook">Undirritunarleynd webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Þegar endurgreitt</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Endurgreiðsluupphæð er hærri en eftirstandandi upphæð sem hægt er að endurgreiða</string>
 </resources>

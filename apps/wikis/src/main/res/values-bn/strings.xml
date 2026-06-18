@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">অ্যাক্সেস লেভেল</string>
     <string name="wikis_access_subject_anyone">যে কেউ</string>
     <string name="wikis_access_subject_authenticated">প্রমাণীকৃত ব্যবহারকারী</string>
+    <string name="wikis_revision_compare">পরিবর্তন তুলনা করুন</string>
+    <string name="wikis_revision_show_page">পৃষ্ঠা দেখান</string>
+    <string name="wikis_revision_compare_failed">তুলনার জন্য পূর্ববর্তী সংস্করণ লোড করা যায়নি।</string>
+    <string name="wikis_revision_changes_from">সংস্করণ %1$d → %2$d থেকে পরিবর্তনসমূহ</string>
 </resources>

@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">在本地删除</string>
     <string name="chat_settings_delete_message">此操作仅会从此设备删除该聊天及其消息。</string>
 
+    <string name="chat_message_deleted">此消息已被删除</string>
+    <string name="chat_search_hint">在聊天中搜索...</string>
+    <string name="chat_search_no_results">无结果</string>
+    <string name="chat_message_forward">转发</string>
+    <string name="chat_forward_title">转发到…</string>
+    <string name="chat_forward_search">搜索聊天…</string>
+    <string name="chat_forward_empty">没有可转发的聊天</string>
+    <string name="chat_forward_success">已转发</string>
+    <string name="chat_forward_failed">转发失败</string>
 </resources>

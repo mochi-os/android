@@ -412,6 +412,7 @@
     <string name="market_profile_biography">Oor</string>
     <string name="market_profile_load_failed">Kon nie profiel laai nie</string>
     <string name="market_profile_member_since">Lid sedert %1$s</string>
+    <string name="market_profile_joined">Aangesluit %1$s</string>
     <string name="market_profile_no_reviews">Nog geen resensies nie.</string>
     <string name="market_profile_rating_breakdown">Graderings-uitsplitsing</string>
     <string name="market_profile_reviews_section">Resensies</string>
@@ -463,10 +464,10 @@
     <string name="market_purchase_title">Bestelling</string>
     <string name="market_purchase_total">Totaal</string>
     <string name="market_purchase_track">Volg pakkie</string>
-    <string name="market_purchases_auction_label">Veiling #%1$d</string>
+    <string name="market_purchases_auction_label">Veiling #%1$s</string>
     <string name="market_purchases_complete_purchase">Voltooi aankoop</string>
     <string name="market_purchases_empty">Geen aankope</string>
-    <string name="market_purchases_order_label">Bestelling #%1$d</string>
+    <string name="market_purchases_order_label">Bestelling #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s terugbetaal</string>
     <string name="market_purchases_title">Aankope</string>
     <string name="market_purchases_won_for">Gewen vir %1$s</string>
@@ -729,4 +730,14 @@
     <string name="market_listing_detail_seller_response">Verkoper se reaksie</string>
     <string name="market_listing_detail_seller_reviews_heading">Verkoperresensies</string>
     <string name="market_account_stripe_open_failed">Kon nie Stripe oopmaak nie</string>
+    <string name="market_editor_stock">Voorraad</string>
+    <string name="market_editor_stock_units">Aantal eenhede</string>
+    <string name="market_editor_stock_unlimited">Onbeperk</string>
+    <string name="market_editor_start_time">Begintyd</string>
+    <string name="market_editor_start_time_help">Laat leeg om met publikasie te begin.</string>
+    <string name="market_editor_start_time_next">Volgende</string>
+    <string name="market_editor_start_time_clear">Maak skoon</string>
+    <string name="market_listing_detail_buy_now_label">Koop dit nou</string>
+    <string name="market_section_recently_viewed">Onlangs bekyk</string>
+    <string name="market_recently_viewed_clear">Maak alles skoon</string>
 </resources>

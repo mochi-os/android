@@ -194,7 +194,7 @@
     <string name="market_purchase_review_body">Review</string>
     <string name="market_purchase_review_submitted">Review submitted</string>
     <string name="market_purchase_total">Total</string>
-    <string name="market_purchases_order_label">Order #%1$d</string>
+    <string name="market_purchases_order_label">Order #%1$s</string>
     <string name="market_refund_details_label">Details</string>
     <string name="market_refund_reason_damaged">Damaged</string>
     <string name="market_refund_reason_not_as_described">Not as described</string>
@@ -495,6 +495,7 @@
     <string name="market_profile_biography">About</string>
     <string name="market_profile_load_failed">Could not load profile</string>
     <string name="market_profile_member_since">Member since %1$s</string>
+    <string name="market_profile_joined">Joined %1$s</string>
     <string name="market_profile_no_reviews">No reviews yet.</string>
     <string name="market_profile_rating_breakdown">Rating breakdown</string>
     <string name="market_profile_stars_value">%1$d stars</string>
@@ -529,7 +530,7 @@
     <string name="market_purchase_summary">Order summary</string>
     <string name="market_purchase_title">Order</string>
     <string name="market_purchase_track">Track package</string>
-    <string name="market_purchases_auction_label">Auction #%1$d</string>
+    <string name="market_purchases_auction_label">Auction #%1$s</string>
     <string name="market_purchases_complete_purchase">Complete purchase</string>
     <string name="market_purchases_empty">No purchases</string>
     <string name="market_purchases_refunded_partial">−%1$s refunded</string>
@@ -728,4 +729,9 @@
     <string name="market_sidebar_become_seller">Become a seller</string>
     <string name="market_sidebar_seller_settings">Seller settings</string>
     <string name="market_account_stripe_open_failed">Could not open Stripe</string>
+    <string name="market_editor_start_time_next">Next</string>
+    <string name="market_editor_start_time_clear">Clear</string>
+    <string name="market_listing_detail_buy_now_label">Buy it now</string>
+    <string name="market_section_recently_viewed">Recently viewed</string>
+    <string name="market_recently_viewed_clear">Clear all</string>
 </resources>

@@ -48,8 +48,8 @@
     <string name="staff_appeals_dialog_title">Apelación amtaña</string>
     <string name="staff_appeals_empty">Jan pendiente apelacionanak</string>
     <string name="staff_appeals_history">Listado sarawi</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Notanaka</string>
     <string name="staff_appeals_open_sidebar">Lado paneluxa jist\'arasiña</string>
     <string name="staff_appeals_submit">Apayaña</string>
@@ -218,7 +218,7 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Aljirinaka</string>
     <string name="staff_dashboard_kpi_total_orders">Track</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Janiwa</string>
     <string name="staff_dashboard_open_sidebar">Lado paneluxa jist\'arasiña</string>
     <string name="staff_dashboard_system">Sistema</string>
@@ -236,7 +236,7 @@
     <string name="staff_disputes_empty">Jan disputanaka</string>
     <string name="staff_disputes_filter_status_label">Estado</string>
     <string name="staff_disputes_history">Disputa sarawi</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_chargeback_fee">Chargeback chani</string>
     <string name="staff_disputes_meta_evidence_due">Pruebanak puriñkam</string>
     <string name="staff_disputes_meta_listing">Listado</string>
@@ -252,7 +252,6 @@
     <string name="staff_disputes_reason_not_received">Jan katuqata</string>
     <string name="staff_disputes_reason_other">Yaqha</string>
     <string name="staff_disputes_reason_unauthorised">Janiw permitidakit Mantawi</string>
-    <string name="staff_disputes_refund_exceeds_total">Refund jakhu orden total mä juk\'ampi</string>
     <string name="staff_disputes_refund_must_be_positive">Refund jakhu cero juk\'ampi</string>
     <string name="staff_disputes_resolution_buyer">Alasirit resolvama</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
@@ -321,7 +320,7 @@
     <string name="staff_moderation_open_sidebar">Lado paneluxa jist\'arasiña</string>
     <string name="staff_moderation_system">Sistema</string>
     <string name="staff_moderation_title">Moderación log</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Lurawi</string>
     <string name="staff_reports_action_ban">Usuario jark\'aña</string>
     <string name="staff_reports_action_dismiss">Apaqaña</string>
@@ -477,7 +476,7 @@
     <string name="staff_audit_action_staff_team_role_changed">Irnaqirin lurawipa mayjt\'ayata</string>
     <string name="staff_audit_empty">Janiwa uñakipäwi sarnaqäwipäkiti</string>
     <string name="staff_categories_delete_desc">“%1$s” chhaqtayañati? Janiwa kuttayañjamäkiti.</string>
-    <string name="staff_dashboard_order_fallback">Mayiwi #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Mayiwi #%1$s</string>
     <string name="staff_disputes_dialog_title_chargeback">Qullqi kuttayata: %1$s</string>
     <string name="staff_disputes_dialog_title_view">Ch\'axwawi uñjaña</string>
     <string name="staff_disputes_meta_buyer_details">Alirin yatiyawinakapa</string>
@@ -506,12 +505,15 @@
     <string name="staff_listings_seller_unknown">Jan uñt\'ata aljiri</string>
     <string name="staff_listings_seller_verified">Uñakipata aljiri</string>
     <string name="staff_moderation_filter_clear">Suxta chhaqtayaña</string>
-    <string name="staff_reports_listing_label">Aljaña #%1$d</string>
+    <string name="staff_reports_listing_label">Aljaña #%1$s</string>
     <string name="staff_reports_meta_details">Yatiyirin yatiyawinakapa</string>
-    <string name="staff_reviews_order_label">mayiwi #%1$d</string>
+    <string name="staff_reviews_order_label">mayiwi #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s urunxa. Aka amuyt\'awi wiñay chhaqtayañati? Janiwa kuttayañjamäkiti.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Aka amuyt\'awi wiñay chhaqtayañati? Janiwa kuttayañjamäkiti.</string>
     <string name="staff_team_dialog_adding">Yapxatasiski…</string>
     <string name="staff_team_dialog_search_placeholder">Suti, huellampi, jan ukax ID jakhumpi thaqhaña…</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhook firmañ jamasa</string>
+    <string name="staff_disputes_meta_already_refunded">Ya kuti</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Kutiyirinakam pataru pataru jiqhatatpacha</string>
 </resources>

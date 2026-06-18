@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName
  * the queue without a second fetch.
  */
 data class Report(
-    val id: Long = 0,
+    val id: String = "",
     val target: String = "",
     val type: String = "",
     val reporter: String = "",
@@ -33,7 +33,7 @@ data class Report(
  * Mirrors `ReportListing` in `apps/staff/web/src/types/reports.ts`.
  */
 data class ReportListing(
-    val id: Long = 0,
+    val id: String = "",
     val title: String = "",
     val seller: String = "",
     val price: Long = 0,

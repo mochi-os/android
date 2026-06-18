@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">На поле столбцов нет вариантов</string>
     <string name="crm_design_preview_empty">Нечего показать</string>
 
+    <string name="crm_access_tab_manual">Вручную</string>
+    <string name="crm_access_search_users">Поиск пользователей</string>
+    <string name="crm_access_no_groups">Нет доступных групп</string>
+    <string name="crm_access_tab_users">Пользователи</string>
+    <string name="crm_access_tab_groups">Группы</string>
+    <string name="crm_access_target">Цель</string>
+    <string name="crm_access_target_hint">ID сущности, @группа, * (все) или + (участники)</string>
+    <string name="crm_attachment_remove">Удалить вложение</string>
+    <string name="crm_board_add_column">Добавить колонку</string>
+    <string name="crm_settings_entity_id">Идентификатор сущности</string>
+    <string name="crm_settings_fingerprint">Отпечаток</string>
+    <string name="crm_settings_server">Сервер</string>
 </resources>

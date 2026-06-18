@@ -307,4 +307,8 @@
     <string name="wikis_access_change_level">Tahap akses</string>
     <string name="wikis_access_subject_anyone">Sesiapa</string>
     <string name="wikis_access_subject_authenticated">Pengguna disahkan</string>
+    <string name="wikis_revision_compare">Bandingkan perubahan</string>
+    <string name="wikis_revision_show_page">Tunjukkan halaman</string>
+    <string name="wikis_revision_compare_failed">Tidak dapat memuatkan versi terdahulu untuk perbandingan.</string>
+    <string name="wikis_revision_changes_from">Perubahan daripada versi %1$d → %2$d</string>
 </resources>

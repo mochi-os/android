@@ -444,7 +444,7 @@
     <string name="market_listing_detail_sales_count">%1$d salg</string>
     <string name="market_profile_sales_count">%1$d salg</string>
     <string name="market_purchase_dispute_response">Sælgers svar</string>
-    <string name="market_purchases_order_label">Bestilling #%1$d</string>
+    <string name="market_purchases_order_label">Bestilling #%1$s</string>
 
     <string name="market_account_biography_placeholder">Fortæl købere om dig selv…</string>
     <string name="market_account_load_failed">Kunne ikke indlæse kontoen</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Om</string>
     <string name="market_profile_load_failed">Kunne ikke indlæse profilen</string>
     <string name="market_profile_member_since">Medlem siden %1$s</string>
+    <string name="market_profile_joined">Tilmeldt %1$s</string>
     <string name="market_profile_no_reviews">Ingen anmeldelser endnu.</string>
     <string name="market_profile_rating_breakdown">Vurderingsoversigt</string>
     <string name="market_profile_stars_value">%1$d stjerner</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">Download dine %1$d filer nedenfor.</string>
     <string name="market_purchase_download_one">Download din fil nedenfor.</string>
     <string name="market_purchase_review_from">Anmeldelse fra %1$s</string>
-    <string name="market_purchases_auction_label">Auktion #%1$d</string>
+    <string name="market_purchases_auction_label">Auktion #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refunderet</string>
     <string name="market_purchases_won_for">Vundet for %1$s</string>
     <string name="market_rating_reviews">(%1$d anmeldelser)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Sælgers svar</string>
     <string name="market_listing_detail_seller_reviews_heading">Sælgeranmeldelser</string>
     <string name="market_account_stripe_open_failed">Kunne ikke åbne Stripe</string>
+    <string name="market_editor_stock">Lager</string>
+    <string name="market_editor_stock_units">Antal enheder</string>
+    <string name="market_editor_stock_unlimited">Ubegrænset</string>
+    <string name="market_editor_start_time">Starttidspunkt</string>
+    <string name="market_editor_start_time_help">Lad være tomt for at starte ved offentliggørelse.</string>
+    <string name="market_editor_start_time_next">Næste</string>
+    <string name="market_editor_start_time_clear">Ryd</string>
+    <string name="market_listing_detail_buy_now_label">Køb nu</string>
+    <string name="market_section_recently_viewed">Senest set</string>
+    <string name="market_recently_viewed_clear">Ryd alle</string>
 </resources>

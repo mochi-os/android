@@ -443,7 +443,7 @@
     <string name="market_listing_detail_sales_count">%1$d satış</string>
     <string name="market_profile_sales_count">%1$d satış</string>
     <string name="market_purchase_dispute_response">Satıcının yanıtı</string>
-    <string name="market_purchases_order_label">Sipariş #%1$d</string>
+    <string name="market_purchases_order_label">Sipariş #%1$s</string>
 
     <string name="market_account_biography_counter">%1$d / %2$d</string>
     <string name="market_account_biography_placeholder">Alıcılara kendinizden bahsedin…</string>
@@ -597,6 +597,7 @@
     <string name="market_profile_biography">Hakkında</string>
     <string name="market_profile_load_failed">Profil yüklenemedi</string>
     <string name="market_profile_member_since">Üyelik tarihi: %1$s</string>
+    <string name="market_profile_joined">%1$s tarihinde katıldı</string>
     <string name="market_profile_no_reviews">Henüz değerlendirme yok.</string>
     <string name="market_profile_rating_breakdown">Puan dağılımı</string>
     <string name="market_profile_stars_value">%1$d yıldız</string>
@@ -605,7 +606,7 @@
     <string name="market_purchase_download_many">%1$d dosyanızı aşağıdan indirin.</string>
     <string name="market_purchase_download_one">Dosyanızı aşağıdan indirin.</string>
     <string name="market_purchase_review_from">%1$s tarafından değerlendirme</string>
-    <string name="market_purchases_auction_label">Açık artırma #%1$d</string>
+    <string name="market_purchases_auction_label">Açık artırma #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s iade edildi</string>
     <string name="market_purchases_won_for">%1$s ile kazanıldı</string>
     <string name="market_rating_reviews">(%1$d değerlendirme)</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Satıcı yanıtı</string>
     <string name="market_listing_detail_seller_reviews_heading">Satıcı yorumları</string>
     <string name="market_account_stripe_open_failed">Stripe açılamadı</string>
+    <string name="market_editor_stock">Stok</string>
+    <string name="market_editor_stock_units">Birim sayısı</string>
+    <string name="market_editor_stock_unlimited">Sınırsız</string>
+    <string name="market_editor_start_time">Başlangıç zamanı</string>
+    <string name="market_editor_start_time_help">Yayımlandığında başlatmak için boş bırakın.</string>
+    <string name="market_editor_start_time_next">İleri</string>
+    <string name="market_editor_start_time_clear">Temizle</string>
+    <string name="market_listing_detail_buy_now_label">Hemen al</string>
+    <string name="market_section_recently_viewed">Son görüntülenenler</string>
+    <string name="market_recently_viewed_clear">Tümünü temizle</string>
 </resources>

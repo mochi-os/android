@@ -351,7 +351,7 @@
     <string name="market_purchase_track">Топтомду көзөмөлдөө</string>
     <string name="market_purchases_complete_purchase">Сатып алууну аяктоо</string>
     <string name="market_purchases_empty">Сатып алуулар жок</string>
-    <string name="market_purchases_order_label">Заказ #%1$d</string>
+    <string name="market_purchases_order_label">Заказ #%1$s</string>
     <string name="market_purchases_title">Сатып алуулар</string>
     <string name="market_rating_label">Рейтинг</string>
     <string name="market_rating_no_reviews">Пикирлер азырынча жок</string>
@@ -610,6 +610,7 @@
     <string name="market_price_starting_bid">Баштапкы сунуш: %1$s</string>
     <string name="market_profile_load_failed">Профилди жүктөө мүмкүн болгон жок</string>
     <string name="market_profile_member_since">%1$s жылдан бери катышуучу</string>
+    <string name="market_profile_joined">%1$s кошулду</string>
     <string name="market_profile_rating_breakdown">Рейтинг бөлүштүрүлүшү</string>
     <string name="market_profile_stars_value">%1$d жылдыз</string>
     <string name="market_purchase_dispute_chargeback">Чарджбэк %1$s</string>
@@ -618,7 +619,7 @@
     <string name="market_purchase_download_many">Төмөндө %1$d файлыңызды жүктөп алыңыз.</string>
     <string name="market_purchase_download_one">Төмөндө файлыңызды жүктөп алыңыз.</string>
     <string name="market_purchase_review_from">%1$s баалоосу</string>
-    <string name="market_purchases_auction_label">Аукцион №%1$d</string>
+    <string name="market_purchases_auction_label">Аукцион №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s кайтарылды</string>
     <string name="market_purchases_won_for">%1$s үчүн утулду</string>
     <string name="market_refund_dialog_amount_help">Толук буйрутманы кайтаруу үчүн бош калтырыңыз.</string>
@@ -730,4 +731,14 @@
     <string name="market_listing_detail_seller_response">Сатуучунун жообу</string>
     <string name="market_listing_detail_seller_reviews_heading">Сатуучу жөнүндө пикирлер</string>
     <string name="market_account_stripe_open_failed">Stripe ачылган жок</string>
+    <string name="market_editor_stock">Запас</string>
+    <string name="market_editor_stock_units">Бирдиктердин саны</string>
+    <string name="market_editor_stock_unlimited">Чексиз</string>
+    <string name="market_editor_start_time">Башталуу убактысы</string>
+    <string name="market_editor_start_time_help">Жарыялоодо баштоо үчүн бош калтырыңыз.</string>
+    <string name="market_editor_start_time_next">Кийинки</string>
+    <string name="market_editor_start_time_clear">Тазалоо</string>
+    <string name="market_listing_detail_buy_now_label">Азыр сатып алуу</string>
+    <string name="market_section_recently_viewed">Жакында көрүлгөн</string>
+    <string name="market_recently_viewed_clear">Баарын тазалоо</string>
 </resources>

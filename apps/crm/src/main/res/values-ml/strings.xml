@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">കോളങ്ങളുടെ ഫീൽഡിൽ ഓപ്ഷനുകളൊന്നുമില്ല</string>
     <string name="crm_design_preview_empty">കാണിക്കാൻ ഒന്നുമില്ല</string>
 
+    <string name="crm_access_tab_manual">മാനുവൽ</string>
+    <string name="crm_access_search_users">ഉപയോക്താക്കളെ തിരയുക</string>
+    <string name="crm_access_no_groups">ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്ല</string>
+    <string name="crm_access_tab_users">ഉപയോക്താക്കൾ</string>
+    <string name="crm_access_tab_groups">ഗ്രൂപ്പുകൾ</string>
+    <string name="crm_access_target">ലക്ഷ്യം</string>
+    <string name="crm_access_target_hint">എന്റിറ്റി ഐഡി, @group, * (എല്ലാവർക്കും), അല്ലെങ്കിൽ + (അംഗങ്ങൾ)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">കോളം ചേർക്കുക</string>
+    <string name="crm_settings_entity_id">എന്റിറ്റി ID</string>
+    <string name="crm_settings_fingerprint">വിരലടയാളം</string>
+    <string name="crm_settings_server">സെർവർ</string>
 </resources>

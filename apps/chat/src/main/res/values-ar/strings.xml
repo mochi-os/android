@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">حذف محليًا</string>
     <string name="chat_settings_delete_message">يؤدي هذا إلى إزالة الدردشة ورسائلها من هذا الجهاز فقط.</string>
 
+    <string name="chat_message_deleted">تم حذف هذه الرسالة</string>
+    <string name="chat_search_hint">البحث في الدردشة...</string>
+    <string name="chat_search_no_results">لا توجد نتائج</string>
+    <string name="chat_message_forward">إعادة توجيه</string>
+    <string name="chat_forward_title">إعادة توجيه إلى…</string>
+    <string name="chat_forward_search">البحث في الدردشات…</string>
+    <string name="chat_forward_empty">لا توجد دردشات لإعادة التوجيه إليها</string>
+    <string name="chat_forward_success">تمت إعادة التوجيه</string>
+    <string name="chat_forward_failed">تعذرت إعادة التوجيه</string>
 </resources>

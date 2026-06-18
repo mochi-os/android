@@ -14,6 +14,7 @@ import org.mochios.android.model.AccessRule
 import org.mochios.android.util.NaturalCompare
 import org.mochios.crm.model.Person
 import org.mochios.crm.model.Crm
+import org.mochios.crm.model.Group
 import org.mochios.crm.repository.CrmsRepository
 import javax.inject.Inject
 
@@ -27,7 +28,9 @@ data class CrmSettingsUiState(
     val isDeleting: Boolean = false,
     val name: String = "",
     val description: String = "",
-    val prefix: String = ""
+    val prefix: String = "",
+    val userSearchResults: List<Person> = emptyList(),
+    val groups: List<Group> = emptyList()
 )
 
 @HiltViewModel
@@ -139,6 +142,34 @@ class CrmSettingsViewModel @Inject constructor(
                 loadAccess()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Live user search for the access picker (needs >=2 chars), mirroring web. */
+    fun searchUsers(query: String) {
+        if (query.trim().length < 2) {
+            _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
+            return
+        }
+        viewModelScope.launch {
+            try {
+                _uiState.value = _uiState.value.copy(userSearchResults = repository.searchUsers(query.trim()))
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
+            }
+        }
+    }
+
+    /** Load the user's friend groups for the access picker's Groups tab. */
+    fun loadGroups() {
+        viewModelScope.launch {
+            try {
+                _uiState.value = _uiState.value.copy(
+                    groups = repository.getGroups().sortedWith(compareBy(NaturalCompare) { it.name }),
+                )
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(groups = emptyList())
             }
         }
     }

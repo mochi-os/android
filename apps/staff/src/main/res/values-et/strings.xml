@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Otsusta apellatsioon</string>
     <string name="staff_appeals_empty">Ootel apellatsioone pole</string>
     <string name="staff_appeals_history">Kuulutuse ajalugu</string>
-    <string name="staff_appeals_listing_label">#%1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (#%2$d)</string>
+    <string name="staff_appeals_listing_label">#%1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (#%2$s)</string>
     <string name="staff_appeals_notes_label">Märkmed</string>
     <string name="staff_appeals_open_sidebar">Ava külgriba</string>
     <string name="staff_appeals_reason_label">Müüja vaide põhjus</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Müüjad</string>
     <string name="staff_dashboard_kpi_total_orders">Tellimusi kokku</string>
-    <string name="staff_dashboard_listing_fallback">#%1$d</string>
+    <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Ei</string>
     <string name="staff_dashboard_open_sidebar">Ava külgriba</string>
-    <string name="staff_dashboard_order_fallback">Tellimus #%1$d</string>
+    <string name="staff_dashboard_order_fallback">Tellimus #%1$s</string>
     <string name="staff_dashboard_system">Süsteem</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Kuulutused</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Vaidlusi pole</string>
     <string name="staff_disputes_filter_status_label">Olek</string>
     <string name="staff_disputes_history">Vaidluste ajalugu</string>
-    <string name="staff_disputes_listing_label">#%1$d</string>
+    <string name="staff_disputes_listing_label">#%1$s</string>
     <string name="staff_disputes_meta_buyer_details">Ostja andmed</string>
     <string name="staff_disputes_meta_chargeback_fee">Tagasinõude tasu</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">Stripe peatas</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Muu</string>
     <string name="staff_disputes_reason_unauthorised">Volitamata</string>
     <string name="staff_disputes_refund_amount_label">Tagastussumma (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Tagasimakse summa ületab tellimuse kogusumma</string>
     <string name="staff_disputes_refund_help">Jäta tühjaks täieliku %1$s tagastuse jaoks. Sisesta väiksem summa osalise tagastuse jaoks.</string>
     <string name="staff_disputes_refund_must_be_positive">Tagasimakse summa peab olema suurem kui null</string>
     <string name="staff_disputes_resolution_buyer">Lahenda ostja kasuks</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Ava külgriba</string>
     <string name="staff_moderation_system">Süsteem</string>
     <string name="staff_moderation_title">Modereerimislogi</string>
-    <string name="staff_moderation_unknown_listing">#%1$d</string>
+    <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Tegevus</string>
     <string name="staff_reports_action_ban">Blokeeri kasutaja</string>
     <string name="staff_reports_action_dismiss">Sulge</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Olek</string>
     <string name="staff_reports_filter_type_label">Tüüp</string>
     <string name="staff_reports_history">Raporti ajalugu</string>
-    <string name="staff_reports_listing_label">Kuulutus #%1$d</string>
+    <string name="staff_reports_listing_label">Kuulutus #%1$s</string>
     <string name="staff_reports_meta_details">Teataja andmed</string>
     <string name="staff_reports_meta_price">Hind</string>
     <string name="staff_reports_meta_reason">Põhjus</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Eemaldatud</string>
     <string name="staff_reviews_filter_status">Olek</string>
     <string name="staff_reviews_open_sidebar">Ava külgriba</string>
-    <string name="staff_reviews_order_label">tellimus #%1$d</string>
+    <string name="staff_reviews_order_label">tellimus #%1$s</string>
     <string name="staff_reviews_overflow_actions">Tegevused</string>
     <string name="staff_reviews_remove_confirm">Eemalda</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s. Kustuta see arvustus jäädavalt? Seda toimingut ei saa tagasi võtta.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Rolli uuendamine ebaõnnestus</string>
     <string name="staff_team_toast_role_updated">Roll on uuendatud</string>
 
+    <string name="staff_config_field_stripe_webhook">Webhooki allkirjastamise saladus</string>
+    <string name="staff_disputes_meta_already_refunded">Juba tagastatud</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Tagastussumma ületab allesjäänud tagastatava summa</string>
 </resources>

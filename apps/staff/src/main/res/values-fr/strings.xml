@@ -53,8 +53,8 @@
     <string name="staff_appeals_dialog_title">Statuer sur le recours</string>
     <string name="staff_appeals_empty">Aucun recours en attente</string>
     <string name="staff_appeals_history">Historique de l\'annonce</string>
-    <string name="staff_appeals_listing_label">n° %1$d</string>
-    <string name="staff_appeals_listing_with_id">%1$s (n° %2$d)</string>
+    <string name="staff_appeals_listing_label">n° %1$s</string>
+    <string name="staff_appeals_listing_with_id">%1$s (n° %2$s)</string>
     <string name="staff_appeals_notes_label">Notes</string>
     <string name="staff_appeals_open_sidebar">Ouvrir le menu</string>
     <string name="staff_appeals_reason_label">Raison du recours du vendeur</string>
@@ -228,10 +228,10 @@
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Vendeurs</string>
     <string name="staff_dashboard_kpi_total_orders">Total des commandes</string>
-    <string name="staff_dashboard_listing_fallback">n° %1$d</string>
+    <string name="staff_dashboard_listing_fallback">n° %1$s</string>
     <string name="staff_dashboard_no">Non</string>
     <string name="staff_dashboard_open_sidebar">Ouvrir le menu</string>
-    <string name="staff_dashboard_order_fallback">Commande n° %1$d</string>
+    <string name="staff_dashboard_order_fallback">Commande n° %1$s</string>
     <string name="staff_dashboard_system">Système</string>
     <string name="staff_dashboard_tab_audit">Audit</string>
     <string name="staff_dashboard_tab_listings">Annonces</string>
@@ -249,7 +249,7 @@
     <string name="staff_disputes_empty">Aucun litige</string>
     <string name="staff_disputes_filter_status_label">Statut</string>
     <string name="staff_disputes_history">Historique des litiges</string>
-    <string name="staff_disputes_listing_label">n° %1$d</string>
+    <string name="staff_disputes_listing_label">n° %1$s</string>
     <string name="staff_disputes_meta_buyer_details">Détails de l\'acheteur</string>
     <string name="staff_disputes_meta_chargeback_fee">Frais de rétrofacturation</string>
     <string name="staff_disputes_meta_chargeback_fee_kept">conservés par Stripe</string>
@@ -272,7 +272,6 @@
     <string name="staff_disputes_reason_other">Autre</string>
     <string name="staff_disputes_reason_unauthorised">Non autorisé</string>
     <string name="staff_disputes_refund_amount_label">Montant du remboursement (%1$s)</string>
-    <string name="staff_disputes_refund_exceeds_total">Le montant du remboursement dépasse le total de la commande</string>
     <string name="staff_disputes_refund_help">Laissez vide pour un remboursement intégral de %1$s. Saisissez un montant inférieur pour un remboursement partiel.</string>
     <string name="staff_disputes_refund_must_be_positive">Le montant du remboursement doit être supérieur à zéro</string>
     <string name="staff_disputes_resolution_buyer">Résoudre pour l\'acheteur</string>
@@ -360,7 +359,7 @@
     <string name="staff_moderation_open_sidebar">Ouvrir le menu</string>
     <string name="staff_moderation_system">Système</string>
     <string name="staff_moderation_title">Journal de modération</string>
-    <string name="staff_moderation_unknown_listing">n° %1$d</string>
+    <string name="staff_moderation_unknown_listing">n° %1$s</string>
     <string name="staff_reports_action">Action</string>
     <string name="staff_reports_action_ban">Bannir l\'utilisateur</string>
     <string name="staff_reports_action_dismiss">Ignorer</string>
@@ -381,7 +380,7 @@
     <string name="staff_reports_filter_status_label">Statut</string>
     <string name="staff_reports_filter_type_label">Type</string>
     <string name="staff_reports_history">Historique des signalements</string>
-    <string name="staff_reports_listing_label">Annonce n° %1$d</string>
+    <string name="staff_reports_listing_label">Annonce n° %1$s</string>
     <string name="staff_reports_meta_details">Détails du signalant</string>
     <string name="staff_reports_meta_price">Prix</string>
     <string name="staff_reports_meta_reason">Raison</string>
@@ -424,7 +423,7 @@
     <string name="staff_reviews_filter_removed">Supprimé</string>
     <string name="staff_reviews_filter_status">Statut</string>
     <string name="staff_reviews_open_sidebar">Ouvrir le menu</string>
-    <string name="staff_reviews_order_label">commande n° %1$d</string>
+    <string name="staff_reviews_order_label">commande n° %1$s</string>
     <string name="staff_reviews_overflow_actions">Actions</string>
     <string name="staff_reviews_remove_confirm">Retirer</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s le %3$s. Supprimer définitivement cet avis ? Cette action est irréversible.</string>
@@ -514,4 +513,7 @@
     <string name="staff_team_toast_role_failed">Échec de la mise à jour du rôle</string>
     <string name="staff_team_toast_role_updated">Rôle mis à jour</string>
 
+    <string name="staff_config_field_stripe_webhook">Secret de signature du webhook</string>
+    <string name="staff_disputes_meta_already_refunded">Déjà remboursé</string>
+    <string name="staff_disputes_refund_exceeds_remaining">Le montant du remboursement dépasse le montant remboursable restant</string>
 </resources>

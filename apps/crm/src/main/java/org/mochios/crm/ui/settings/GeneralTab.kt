@@ -1,6 +1,7 @@
 package org.mochios.crm.ui.settings
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,10 +10,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -22,12 +27,18 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.api.userMessage
 import org.mochios.crm.R
 import org.mochios.crm.ui.`object`.ConfirmDeleteDialog
+import org.mochios.android.R as MochiR
 
 @Composable
 fun GeneralTab(
@@ -97,6 +108,24 @@ fun GeneralTab(
             }
         }
 
+        // Entity identity: the CRM's entity ID, fingerprint, and origin server,
+        // each copyable — mirrors web's settings entity-ID / fingerprint / server
+        // rows.
+        uiState.crm?.let { crm ->
+            Spacer(modifier = Modifier.height(24.dp))
+            HorizontalDivider()
+            Spacer(modifier = Modifier.height(12.dp))
+            CrmInfoRow(stringResource(R.string.crm_settings_entity_id), crm.id)
+            crm.fingerprint.takeIf { it.isNotBlank() }?.let {
+                Spacer(modifier = Modifier.height(8.dp))
+                CrmInfoRow(stringResource(R.string.crm_settings_fingerprint), it)
+            }
+            crm.server?.takeIf { it.isNotBlank() }?.let {
+                Spacer(modifier = Modifier.height(8.dp))
+                CrmInfoRow(stringResource(R.string.crm_settings_server), it)
+            }
+        }
+
         Spacer(modifier = Modifier.height(32.dp))
         HorizontalDivider()
         Spacer(modifier = Modifier.height(16.dp))
@@ -162,5 +191,36 @@ fun GeneralTab(
             },
             onDismiss = { showUnsubscribeConfirm = false }
         )
+    }
+}
+
+/** A read-only identity row (label + monospace value) with a copy button. */
+@Composable
+private fun CrmInfoRow(label: String, value: String) {
+    val clipboard = LocalClipboardManager.current
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Text(
+                text = value,
+                style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+        IconButton(onClick = { clipboard.setText(AnnotatedString(value)) }) {
+            Icon(
+                Icons.Default.ContentCopy,
+                contentDescription = stringResource(MochiR.string.common_copy),
+                modifier = Modifier.size(18.dp),
+            )
+        }
     }
 }

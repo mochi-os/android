@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">Stulpelių lauke nėra parinkčių</string>
     <string name="crm_design_preview_empty">Nėra ką rodyti</string>
 
+    <string name="crm_access_tab_manual">Rankinis</string>
+    <string name="crm_access_search_users">Ieškoti vartotojų</string>
+    <string name="crm_access_no_groups">Grupių nėra</string>
+    <string name="crm_access_tab_users">Vartotojai</string>
+    <string name="crm_access_tab_groups">Grupės</string>
+    <string name="crm_access_target">Tikslas</string>
+    <string name="crm_access_target_hint">Subjekto ID, @grupė, * (visi) arba + (nariai)</string>
+    <string name="crm_attachment_remove">Pašalinti priedą</string>
+    <string name="crm_board_add_column">Pridėti stulpelį</string>
+    <string name="crm_settings_entity_id">Subjekto ID</string>
+    <string name="crm_settings_fingerprint">Pirštų atspaudas</string>
+    <string name="crm_settings_server">Serveris</string>
 </resources>

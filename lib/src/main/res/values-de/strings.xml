@@ -168,6 +168,16 @@
     <string name="auth_mfa_title">Mehrstufige Authentifizierung</string>
     <string name="auth_mfa_subtitle">Schließen Sie die verbleibenden Bestätigungsschritte ab</string>
     <string name="auth_recover_account">Konto wiederherstellen</string>
+    <string name="auth_login_title">Bei Mochi anmelden</string>
+    <string name="auth_next">Weiter</string>
+    <string name="auth_or_log_in_with">Oder anmelden mit</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">Passkey verwenden</string>
+    <string name="auth_email_me_a_code">Code per E-Mail senden</string>
+    <string name="auth_or_enter_authenticator_code">Oder Authenticator-Code eingeben</string>
+    <string name="auth_log_in">Anmelden</string>
+    <string name="auth_back">Zurück</string>
+    <string name="auth_lost_access_recovery">Zugriff verloren? Wiederherstellungscode verwenden</string>
     <string name="auth_create_identity_subtitle">Wählen Sie einen Namen für Ihre Identität auf diesem Server</string>
     <string name="auth_privacy_public_description">Im Benutzerverzeichnis aufgeführt, sodass andere Sie finden können.</string>
     <string name="auth_privacy_private_description">Im Benutzerverzeichnis ausgeblendet.</string>

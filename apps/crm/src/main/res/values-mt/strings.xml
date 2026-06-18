@@ -324,4 +324,16 @@
     <string name="crm_design_preview_no_options">L-ebda għażla fuq il-kamp tal-kolonni</string>
     <string name="crm_design_preview_empty">Xejn x\'turi</string>
 
+    <string name="crm_access_tab_manual">Manwali</string>
+    <string name="crm_access_search_users">Fittex utenti</string>
+    <string name="crm_access_no_groups">L-ebda gruppi disponibbli</string>
+    <string name="crm_access_tab_users">Utenti</string>
+    <string name="crm_access_tab_groups">Gruppi</string>
+    <string name="crm_access_target">Mira</string>
+    <string name="crm_access_target_hint">ID tal-entità, @grupp, * (kulħadd), jew + (membri)</string>
+    <string name="crm_attachment_remove">Remove attachment</string>
+    <string name="crm_board_add_column">Żid kolonna</string>
+    <string name="crm_settings_entity_id">ID tal-entità</string>
+    <string name="crm_settings_fingerprint">Fingerprint</string>
+    <string name="crm_settings_server">Server</string>
 </resources>

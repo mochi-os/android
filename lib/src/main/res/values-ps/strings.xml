@@ -163,6 +163,16 @@
     <string name="auth_mfa_title">څو فکتوري تصدیق</string>
     <string name="auth_mfa_subtitle">د تصدیق پاتې پړاوونه بشپړ کړئ</string>
     <string name="auth_recover_account">د حساب بیارغونه</string>
+    <string name="auth_login_title">Mochi ته ننوتل</string>
+    <string name="auth_next">بل</string>
+    <string name="auth_or_log_in_with">یا د دې په مرسته ننوتل</string>
+    <string name="auth_passkey">Passkey</string>
+    <string name="auth_use_passkey">passkey وکاروئ</string>
+    <string name="auth_email_me_a_code">ماته د بریښنالیک له لارې کوډ راولېږئ</string>
+    <string name="auth_or_enter_authenticator_code">یا د authenticator کوډ دننه کړئ</string>
+    <string name="auth_log_in">ننوتل</string>
+    <string name="auth_back">شاته</string>
+    <string name="auth_lost_access_recovery">لاسرسی مو له لاسه ورکړ؟ د بیارغونې کوډ وکاروئ</string>
     <string name="auth_create_identity_title">خپله هویت جوړ کړئ</string>
     <string name="auth_create_identity_subtitle">په دې سرور کې د خپل هویت لپاره یو نوم وټاکئ</string>
     <string name="auth_privacy_public_description">د کارونکو په لارښود کې لیست شوی ترڅو نور تاسو وموندلی شي.</string>

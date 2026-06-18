@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">Bất kỳ ai</string>
     <string name="wikis_access_subject_authenticated">Người dùng đã xác thực</string>
 
+    <string name="wikis_revision_compare">So sánh thay đổi</string>
+    <string name="wikis_revision_show_page">Hiển thị trang</string>
+    <string name="wikis_revision_compare_failed">Không thể tải phiên bản trước để so sánh.</string>
+    <string name="wikis_revision_changes_from">Thay đổi từ phiên bản %1$d → %2$d</string>
 </resources>

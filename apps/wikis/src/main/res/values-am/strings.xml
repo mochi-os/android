@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">ማንኛውም ሰው</string>
     <string name="wikis_access_subject_authenticated">የተረጋገጡ ተጠቃሚዎች</string>
 
+    <string name="wikis_revision_compare">ለውጦችን አወዳድር</string>
+    <string name="wikis_revision_show_page">ገጽ አሳይ</string>
+    <string name="wikis_revision_compare_failed">ለማነጻጸር ቀዳሚውን ስሪት መጫን አልተቻለም።</string>
+    <string name="wikis_revision_changes_from">ከስሪት %1$d → %2$d ለውጦች</string>
 </resources>

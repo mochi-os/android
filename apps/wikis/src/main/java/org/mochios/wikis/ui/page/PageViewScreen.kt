@@ -75,6 +75,7 @@ import org.mochios.wikis.ui.components.MarkdownContent
 import org.mochios.wikis.ui.components.TagManager
 import org.mochios.wikis.ui.components.TocHeading
 import org.mochios.wikis.ui.components.WikiContextValue
+import org.mochios.wikis.ui.dialog.RenamePageDialog
 import org.mochios.android.R as MochiR
 
 /** Feature key shared with the WikisRouter for [LastViewedStore.set] / .get(). */
@@ -152,6 +153,7 @@ fun PageViewScreen(
         ?: stringResource(R.string.wikis_pageview_title_fallback)
 
     var menuExpanded by remember { mutableStateOf(false) }
+    var showRenameDialog by remember { mutableStateOf(false) }
     var unsubscribeDialogOpen by remember { mutableStateOf(false) }
     var isUnsubscribing by remember { mutableStateOf(false) }
 
@@ -214,13 +216,7 @@ fun PageViewScreen(
                             },
                             onRename = {
                                 menuExpanded = false
-                                // Rename dialog lives in a separate agent's
-                                // file; for now route to the placeholder edit
-                                // route — the dialog will replace this when
-                                // the RenamePageDialog lands.
-                                navController.navigate(
-                                    WikisApp.pageEdit(viewModel.wikiId, viewModel.slug)
-                                )
+                                showRenameDialog = true
                             },
                             onHistory = {
                                 menuExpanded = false
@@ -396,6 +392,29 @@ fun PageViewScreen(
             },
         )
     }
+
+    // Rename-page dialog. Self-contained: it runs the rename mutation via the
+    // repository and reports back so we can navigate to the new slug and toast
+    // how many pages/links were updated (mirrors the web rename-page toast).
+    RenamePageDialog(
+        open = showRenameDialog,
+        wikiId = viewModel.wikiId,
+        currentSlug = viewModel.slug,
+        onDismiss = { showRenameDialog = false },
+        onRenamed = { newSlug, _, _ ->
+            showRenameDialog = false
+            // Web's toast appends a "Renamed N pages, updated M links" count via
+            // plurals, but those plurals aren't localized (default catalog only);
+            // use the fully localized success string so non-English users don't
+            // get an English toast.
+            scope.launch {
+                snackbar.showSnackbar(context.getString(R.string.wikis_rename_page_success))
+            }
+            navController.navigate(WikisApp.pageView(viewModel.wikiId, newSlug)) {
+                popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = false }
+            }
+        },
+    )
 }
 
 /**

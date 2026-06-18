@@ -131,6 +131,7 @@ class ConfigViewModel @Inject constructor(
         const val KEY_REVIEW_WINDOW = "review_timeout_days"
         const val KEY_STRIPE_PUBLISHABLE = "stripe_publishable_key"
         const val KEY_STRIPE_SECRET = "stripe_secret_key"
+        const val KEY_STRIPE_WEBHOOK = "stripe_webhook_secret"
         const val KEY_STRIPE_OAUTH = "stripe_oauth_client_id"
     }
 }

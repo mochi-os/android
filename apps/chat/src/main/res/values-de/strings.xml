@@ -69,4 +69,13 @@
     <string name="chat_settings_delete">Lokal löschen</string>
     <string name="chat_settings_delete_message">Dadurch werden der Chat und seine Nachrichten nur von diesem Gerät entfernt.</string>
 
+    <string name="chat_message_deleted">Diese Nachricht wurde gelöscht</string>
+    <string name="chat_search_hint">Im Chat suchen...</string>
+    <string name="chat_search_no_results">Keine Ergebnisse</string>
+    <string name="chat_message_forward">Weiterleiten</string>
+    <string name="chat_forward_title">Weiterleiten an…</string>
+    <string name="chat_forward_search">Chats durchsuchen…</string>
+    <string name="chat_forward_empty">Keine Chats zum Weiterleiten</string>
+    <string name="chat_forward_success">Weitergeleitet</string>
+    <string name="chat_forward_failed">Weiterleiten fehlgeschlagen</string>
 </resources>

@@ -310,4 +310,8 @@
     <string name="wikis_access_subject_anyone">أي شخص</string>
     <string name="wikis_access_subject_authenticated">المستخدمون المُوثَّقون</string>
 
+    <string name="wikis_revision_compare">مقارنة التغييرات</string>
+    <string name="wikis_revision_show_page">عرض الصفحة</string>
+    <string name="wikis_revision_compare_failed">تعذّر تحميل الإصدار السابق للمقارنة.</string>
+    <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$d → %2$d</string>
 </resources>
