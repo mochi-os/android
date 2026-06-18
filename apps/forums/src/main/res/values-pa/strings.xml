@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">ਮੈਨੁਅਲ</string>
     <string name="forums_access_search_users">ਉਪਭੋਗਤਾ ਖੋਜੋ</string>
     <string name="forums_access_no_groups">ਕੋਈ ਗਰੁੱਪ ਉਪਲਬਧ ਨਹੀਂ</string>
+    <string name="forums_saved_title">ਸੰਭਾਲਿਆ ਗਿਆ</string>
+    <string name="forums_saved_save">ਬਾਅਦ ਲਈ ਸੰਭਾਲੋ</string>
+    <string name="forums_saved_remove">ਸੰਭਾਲੇ ਤੋਂ ਹਟਾਓ</string>
+    <string name="forums_saved_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
+    <string name="forums_saved_clear_confirm_title">ਸਾਰੀਆਂ ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਸਾਫ਼ ਕਰਨੀਆਂ ਹਨ?</string>
+    <string name="forums_saved_clear_confirm_body">ਇਹ ਤੁਹਾਡੀ ਸੰਭਾਲੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਰ ਪੋਸਟ ਹਟਾ ਦਿੰਦਾ ਹੈ। ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="forums_saved_empty_title">ਅਜੇ ਤੱਕ ਕੁਝ ਵੀ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
+    <string name="forums_saved_empty_subtitle">ਕਿਸੇ ਵੀ ਪੋਸਟ ਨੂੰ ਇੱਥੇ ਬਾਅਦ ਲਈ ਸੰਭਾਲਣ ਲਈ ਉਸ ਦੇ ਬੁੱਕਮਾਰਕ \'ਤੇ ਟੈਪ ਕਰੋ।</string>
+    <string name="forums_saved_error_clear">ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਸਾਫ਼ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d ਨਵੀਂ ਪੋਸਟ</item>
+        <item quantity="other">%d ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
+    </plurals>
 </resources>

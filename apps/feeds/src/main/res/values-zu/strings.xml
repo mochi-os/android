@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Intshisekelo inciphisiwe</string>
     <string name="feeds_interest_removed">Intshisekelo isusiwe</string>
     <string name="feeds_interest_failed">Kuhlulekile ukulungisa intshisekelo</string>
+    <string name="feeds_saved_title">Kulondoloziwe</string>
+    <string name="feeds_saved_menu">Kulondoloziwe</string>
+    <string name="feeds_saved_save">Londoloza ukuze ubuke kamuva</string>
+    <string name="feeds_saved_remove">Susa kokulondoloziwe</string>
+    <string name="feeds_saved_clear_all">Sula konke</string>
+    <string name="feeds_saved_clear_confirm_title">Sula yonke imithombo elondoloziwe?</string>
+    <string name="feeds_saved_clear_confirm_body">Lokhu kususa wonke umbhalo ohlwini lwakho lokulondoloziwe. Lokhu akunakubuyiselwa.</string>
+    <string name="feeds_saved_empty_title">Akukho lutho olusagciniwe</string>
+    <string name="feeds_saved_empty_subtitle">Thepha ibhukhimakhi kunoma yimuphi umbhalo ukuze uwulondoloze lapha ukuze uwubuke kamuva.</string>
+    <string name="feeds_saved_error_clear">Yehlulekile ukusula imibhalo elondoloziwe</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d umbhalo omusha</item>
+        <item quantity="other">%d imibhalo emisha</item>
+    </plurals>
 </resources>

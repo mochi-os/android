@@ -198,4 +198,21 @@
     <string name="feeds_interest_reduced">Diddordeb wedi\'i leihau</string>
     <string name="feeds_interest_removed">Diddordeb wedi\'i ddileu</string>
     <string name="feeds_interest_failed">Methwyd addasu diddordeb</string>
+    <string name="feeds_saved_title">Wedi\'i gadw</string>
+    <string name="feeds_saved_menu">Wedi\'i gadw</string>
+    <string name="feeds_saved_save">Cadw at nes ymlaen</string>
+    <string name="feeds_saved_remove">Tynnu o\'r cadwedig</string>
+    <string name="feeds_saved_clear_all">Clirio popeth</string>
+    <string name="feeds_saved_clear_confirm_title">Clirio pob postiad sydd wedi\'u cadw?</string>
+    <string name="feeds_saved_clear_confirm_body">Mae hyn yn tynnu pob postiad o\'ch rhestr gadwedig. Ni ellir dadwneud hyn.</string>
+    <string name="feeds_saved_empty_title">Heb gadw dim eto</string>
+    <string name="feeds_saved_empty_subtitle">Tapiwch y nod tudalen ar unrhyw bostiad i\'w gadw yma at nes ymlaen.</string>
+    <string name="feeds_saved_error_clear">Methwyd clirio\'r postiadau cadwedig</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d postiad newydd</item>
+        <item quantity="two">%d bostiad newydd</item>
+        <item quantity="few">%d postiad newydd</item>
+        <item quantity="many">%d postiad newydd</item>
+        <item quantity="other">%d postiad newydd</item>
+    </plurals>
 </resources>

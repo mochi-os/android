@@ -209,4 +209,7 @@
     <string name="forums_access_tab_manual">Manuelle</string>
     <string name="forums_access_search_users">Rechercher des utilisateurs</string>
     <string name="forums_access_no_groups">Aucun groupe disponible</string>
+    <string name="forums_saved_title">Enregistré</string>
+    <string name="forums_saved_remove">Retirer des favoris</string>
+    <string name="forums_saved_clear_all">Tout effacer</string>
 </resources>

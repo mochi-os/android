@@ -207,4 +207,19 @@
     <string name="forums_access_tab_manual">Manuálne</string>
     <string name="forums_access_search_users">Hľadať používateľov</string>
     <string name="forums_access_no_groups">Nie sú dostupné žiadne skupiny</string>
+    <string name="forums_saved_title">Uložené</string>
+    <string name="forums_saved_save">Uložiť na neskôr</string>
+    <string name="forums_saved_remove">Odstrániť z uložených</string>
+    <string name="forums_saved_clear_all">Vymazať všetko</string>
+    <string name="forums_saved_clear_confirm_title">Vymazať všetky uložené príspevky?</string>
+    <string name="forums_saved_clear_confirm_body">Týmto sa z vášho zoznamu uložených odstráni každý príspevok. Túto akciu nie je možné vrátiť späť.</string>
+    <string name="forums_saved_empty_title">Zatiaľ nič neuložené</string>
+    <string name="forums_saved_empty_subtitle">Klepnutím na záložku pri ľubovoľnom príspevku ho sem uložíte na neskôr.</string>
+    <string name="forums_saved_error_clear">Uložené príspevky sa nepodarilo vymazať</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nový príspevok</item>
+        <item quantity="few">%d nové príspevky</item>
+        <item quantity="many">%d nového príspevku</item>
+        <item quantity="other">%d nových príspevkov</item>
+    </plurals>
 </resources>

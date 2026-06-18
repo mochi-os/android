@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">मैनुअल</string>
     <string name="forums_access_search_users">यूजर खोजीं</string>
     <string name="forums_access_no_groups">कौनो ग्रुप उपलब्ध नइखे</string>
+    <string name="forums_saved_title">सहेजल गइल</string>
+    <string name="forums_saved_save">बाद खातिर सहेजीं</string>
+    <string name="forums_saved_remove">सहेजल से हटाईं</string>
+    <string name="forums_saved_clear_all">सब साफ करीं</string>
+    <string name="forums_saved_clear_confirm_title">सब सहेजल पोस्ट साफ करीं?</string>
+    <string name="forums_saved_clear_confirm_body">ई रउरा सहेजल सूची से हर पोस्ट हटा दी। एकरा के वापस ना कइल जा सकेला।</string>
+    <string name="forums_saved_empty_title">अबहीं तक कुछुओ सहेजल नइखे</string>
+    <string name="forums_saved_empty_subtitle">कौनो पोस्ट के इहाँ बाद खातिर सहेजे खातिर ओकर बुकमार्क दबाईं।</string>
+    <string name="forums_saved_error_clear">सहेजल पोस्ट साफ करे में नाकाम</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d नया पोस्ट</item>
+        <item quantity="other">%d नया पोस्ट</item>
+    </plurals>
 </resources>

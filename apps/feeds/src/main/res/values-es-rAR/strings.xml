@@ -196,4 +196,8 @@
     <string name="feeds_settings_prompt_reset">Prompt restablecido al predeterminado</string>
 
     <string name="feeds_refresh">Actualizá</string>
+    <string name="feeds_saved_title">Guardado</string>
+    <string name="feeds_saved_menu">Guardado</string>
+    <string name="feeds_saved_remove">Quitar de guardados</string>
+    <string name="feeds_saved_clear_all">Borrar todo</string>
 </resources>

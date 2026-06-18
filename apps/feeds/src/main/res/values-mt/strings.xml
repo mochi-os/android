@@ -200,4 +200,20 @@
     <string name="feeds_interest_reduced">L-interess naqas</string>
     <string name="feeds_interest_removed">L-interess tneħħa</string>
     <string name="feeds_interest_failed">Ma rnexxiex jiġi aġġustat l-interess</string>
+    <string name="feeds_saved_title">Issejvjat</string>
+    <string name="feeds_saved_menu">Issejvjat</string>
+    <string name="feeds_saved_save">Issejvja għal aktar tard</string>
+    <string name="feeds_saved_remove">Neħħi mis-salvati</string>
+    <string name="feeds_saved_clear_all">Naddaf kollox</string>
+    <string name="feeds_saved_clear_confirm_title">Tnaddaf il-postijiet salvati kollha?</string>
+    <string name="feeds_saved_clear_confirm_body">Dan ineħħi kull post mil-lista tas-salvati tiegħek. Dan ma jistax jitreġġa\' lura.</string>
+    <string name="feeds_saved_empty_title">Xejn ma ġie salvat sa issa</string>
+    <string name="feeds_saved_empty_subtitle">Agħfas il-bookmark fuq kwalunkwe post biex issejvjah hawn għal aktar tard.</string>
+    <string name="feeds_saved_error_clear">Ma rnexxiex jitnaddfu l-postijiet salvati</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d post ġdid</item>
+        <item quantity="few">%d postijiet ġodda</item>
+        <item quantity="many">%d post ġdid</item>
+        <item quantity="other">%d post ġdid</item>
+    </plurals>
 </resources>

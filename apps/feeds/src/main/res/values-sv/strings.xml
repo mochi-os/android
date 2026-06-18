@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Intresse minskat</string>
     <string name="feeds_interest_removed">Intresse borttaget</string>
     <string name="feeds_interest_failed">Kunde inte justera intresse</string>
+    <string name="feeds_saved_title">Sparad</string>
+    <string name="feeds_saved_menu">Sparad</string>
+    <string name="feeds_saved_save">Spara till senare</string>
+    <string name="feeds_saved_remove">Ta bort från sparade</string>
+    <string name="feeds_saved_clear_all">Rensa allt</string>
+    <string name="feeds_saved_clear_confirm_title">Rensa alla sparade inlägg?</string>
+    <string name="feeds_saved_clear_confirm_body">Detta tar bort alla inlägg från din lista över sparade. Detta kan inte ångras.</string>
+    <string name="feeds_saved_empty_title">Inget sparat ännu</string>
+    <string name="feeds_saved_empty_subtitle">Tryck på bokmärket på ett inlägg för att spara det här till senare.</string>
+    <string name="feeds_saved_error_clear">Det gick inte att rensa sparade inlägg</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nytt inlägg</item>
+        <item quantity="other">%d nya inlägg</item>
+    </plurals>
 </resources>

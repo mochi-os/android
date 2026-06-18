@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Cari pengguna</string>
     <string name="forums_access_no_groups">Tiada kumpulan tersedia</string>
+    <string name="forums_saved_title">Disimpan</string>
+    <string name="forums_saved_save">Simpan untuk kemudian</string>
+    <string name="forums_saved_remove">Buang daripada disimpan</string>
+    <string name="forums_saved_clear_all">Kosongkan semua</string>
+    <string name="forums_saved_clear_confirm_title">Kosongkan semua siaran disimpan?</string>
+    <string name="forums_saved_clear_confirm_body">Ini membuang setiap siaran daripada senarai disimpan anda. Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="forums_saved_empty_title">Tiada apa-apa disimpan lagi</string>
+    <string name="forums_saved_empty_subtitle">Ketik penanda buku pada mana-mana siaran untuk menyimpannya di sini untuk kemudian.</string>
+    <string name="forums_saved_error_clear">Gagal mengosongkan siaran disimpan</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d siaran baharu</item>
+        <item quantity="other">%d siaran baharu</item>
+    </plurals>
 </resources>

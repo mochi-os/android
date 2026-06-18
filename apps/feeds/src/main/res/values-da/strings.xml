@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesse reduceret</string>
     <string name="feeds_interest_removed">Interesse fjernet</string>
     <string name="feeds_interest_failed">Kunne ikke justere interesse</string>
+    <string name="feeds_saved_title">Gemt</string>
+    <string name="feeds_saved_menu">Gemt</string>
+    <string name="feeds_saved_save">Gem til senere</string>
+    <string name="feeds_saved_remove">Fjern fra gemte</string>
+    <string name="feeds_saved_clear_all">Ryd alle</string>
+    <string name="feeds_saved_clear_confirm_title">Ryd alle gemte opslag?</string>
+    <string name="feeds_saved_clear_confirm_body">Dette fjerner alle opslag fra din liste over gemte. Dette kan ikke fortrydes.</string>
+    <string name="feeds_saved_empty_title">Intet gemt endnu</string>
+    <string name="feeds_saved_empty_subtitle">Tryk på bogmærket på et opslag for at gemme det her til senere.</string>
+    <string name="feeds_saved_error_clear">De gemte opslag kunne ikke ryddes</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nyt opslag</item>
+        <item quantity="other">%d nye opslag</item>
+    </plurals>
 </resources>

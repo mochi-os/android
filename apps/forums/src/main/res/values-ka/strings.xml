@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">სახელმძღვანელო</string>
     <string name="forums_access_search_users">მომხმარებლების ძიება</string>
     <string name="forums_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
+    <string name="forums_saved_title">შენახული</string>
+    <string name="forums_saved_save">შეინახე მოგვიანებისთვის</string>
+    <string name="forums_saved_remove">წაშლა შენახულებიდან</string>
+    <string name="forums_saved_clear_all">ყველაფრის გასუფთავება</string>
+    <string name="forums_saved_clear_confirm_title">წავშალო ყველა შენახული პოსტი?</string>
+    <string name="forums_saved_clear_confirm_body">ეს ამოშლის ყველა პოსტს თქვენი შენახულების სიიდან. ამის გაუქმება შეუძლებელია.</string>
+    <string name="forums_saved_empty_title">ჯერ არაფერია შენახული</string>
+    <string name="forums_saved_empty_subtitle">შესანახად აქ მოგვიანებისთვის შეეხეთ ნებისმიერი პოსტის სანიშნეს.</string>
+    <string name="forums_saved_error_clear">შენახული პოსტების წაშლა ვერ მოხერხდა</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d ახალი პოსტი</item>
+        <item quantity="other">%d ახალი პოსტი</item>
+    </plurals>
 </resources>

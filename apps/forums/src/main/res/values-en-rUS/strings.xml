@@ -209,4 +209,7 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Search users</string>
     <string name="forums_access_no_groups">No groups available</string>
+    <string name="forums_saved_title">Saved</string>
+    <string name="forums_saved_remove">Remove from saved</string>
+    <string name="forums_saved_clear_all">Clear all</string>
 </resources>

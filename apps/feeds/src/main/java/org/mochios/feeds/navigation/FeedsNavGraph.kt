@@ -11,6 +11,7 @@ import org.mochios.feeds.ui.post.CreatePostScreen
 import org.mochios.feeds.ui.post.PostDetailScreen
 import org.mochios.feeds.ui.post.PostSourceScreen
 import org.mochios.feeds.ui.router.FeedsRouter
+import org.mochios.feeds.ui.saved.SavedScreen
 import org.mochios.feeds.ui.settings.FeedSettingsScreen
 import org.mochios.feeds.ui.settings.SourcesScreen
 import java.net.URLEncoder
@@ -32,6 +33,7 @@ object FeedsApp {
     const val FIND_FEEDS = "feeds/findFeeds"
     const val FEED_SETTINGS = "feeds/feedSettings/{feedId}"
     const val FEED_SOURCES = "feeds/feedSources/{feedId}?source={source}"
+    const val SAVED = "feeds/saved"
 
     fun feed(feedId: String) = "feeds/feed/$feedId"
     fun post(feedId: String, postId: String) = "feeds/post/$feedId/$postId"
@@ -93,6 +95,7 @@ fun NavGraphBuilder.feedsNavGraph(
             onNavigateToSources = { feedId, sourceUrl ->
                 navController.navigate(FeedsApp.feedSources(feedId, sourceUrl))
             },
+            onNavigateToSaved = { navController.navigate(FeedsApp.SAVED) },
             onSelectFeed = { feedId ->
                 // Swap the current feed in-place rather than stacking — back
                 // from a feed goes to the host (not a chain of every feed
@@ -169,6 +172,15 @@ fun NavGraphBuilder.feedsNavGraph(
     ) {
         CreatePostScreen(
             onNavigateBack = { navController.popBackStack() },
+        )
+    }
+
+    composable(FeedsApp.SAVED) {
+        SavedScreen(
+            onNavigateBack = { navController.popBackStack() },
+            onOpenPost = { feedId, postId ->
+                navController.navigate(FeedsApp.post(feedId, postId))
+            },
         )
     }
 

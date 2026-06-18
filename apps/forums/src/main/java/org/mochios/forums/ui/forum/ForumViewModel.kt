@@ -16,6 +16,7 @@ import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
 import org.mochios.forums.repository.ForumsRepository
+import org.mochios.forums.repository.SavedRepository
 import javax.inject.Inject
 
 data class ForumUiState(
@@ -38,6 +39,7 @@ data class ForumUiState(
 class ForumViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: ForumsRepository,
+    private val savedRepository: SavedRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
 ) : ViewModel() {
@@ -47,12 +49,22 @@ class ForumViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(ForumUiState())
     val uiState: StateFlow<ForumUiState> = _uiState.asStateFlow()
 
+    /** Set of post ids the user has saved, mirrored from [SavedRepository] so
+     *  each post card can show its bookmark filled/empty without awaiting. */
+    val savedIds: StateFlow<Set<String>> = savedRepository.savedIds
+
+    /** Count of real-time new posts queued behind the "new posts" pill rather
+     *  than injected into the list while the user is reading. */
+    private val _newPostsCount = MutableStateFlow(0)
+    val newPostsCount: StateFlow<Int> = _newPostsCount.asStateFlow()
+
     private var subscriptionId: String? = null
 
     init {
         load()
         loadTags()
         clearNotifications()
+        viewModelScope.launch { savedRepository.load() }
     }
 
     // Mark this forum's notifications read on the server (clear/object) when the
@@ -73,27 +85,46 @@ class ForumViewModel @Inject constructor(
     private fun subscribeWebSocket(forumKey: String) {
         if (forumKey.isBlank() || subscriptionId != null) return
         val serverUrl = sessionManager.getServerUrlBlocking()
-        subscriptionId = webSocket.subscribe(serverUrl, forumKey) { _ ->
-            // forums.star broadcasts post/*, comment/*, tag/* — every event
-            // is a hint that the visible post list / tag chip counts may have
-            // changed. Refresh silently so the user sees the update without a
-            // spinner. (Could be narrowed per-event later if profiling
-            // shows it's too eager.)
-            viewModelScope.launch {
-                try {
-                    val r = repository.viewForum(forumId, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
-                    _uiState.value = _uiState.value.copy(
-                        forum = r.forum,
-                        posts = r.posts,
-                        canManage = r.can_manage,
-                        canModerate = r.can_moderate,
-                        hasMore = r.hasMore,
-                        nextCursor = r.nextCursor,
-                    )
-                    loadTags()
-                } catch (_: Exception) {}
+        subscriptionId = webSocket.subscribe(serverUrl, forumKey) { event ->
+            // A brand-new post is queued behind the "new posts" pill so the list
+            // doesn't shift under the reader; everything else (edits, deletes,
+            // comments, votes, tags) mutates already-visible items, so refresh
+            // silently. A refresh incorporates any queued posts and clears the
+            // pill (see refreshSilently).
+            if (event.type == "post/create") {
+                _newPostsCount.value += 1
+            } else {
+                viewModelScope.launch { refreshSilently() }
             }
         }
+    }
+
+    /** Pull the latest list silently (no spinner) and clear the new-posts pill,
+     *  since the fresh list already incorporates any queued posts. */
+    private suspend fun refreshSilently() {
+        try {
+            val r = repository.viewForum(
+                forumId,
+                sort = _uiState.value.sort.ifEmpty { null },
+                tag = _uiState.value.currentTag,
+            )
+            _uiState.value = _uiState.value.copy(
+                forum = r.forum,
+                posts = r.posts,
+                canManage = r.can_manage,
+                canModerate = r.can_moderate,
+                hasMore = r.hasMore,
+                nextCursor = r.nextCursor,
+            )
+            _newPostsCount.value = 0
+            loadTags()
+        } catch (_: Exception) {}
+    }
+
+    /** Reveal the queued new posts: refresh the list and clear the pill. The
+     *  screen also scrolls to the top when this is invoked. */
+    fun showNewPosts() {
+        viewModelScope.launch { refreshSilently() }
     }
 
     override fun onCleared() {
@@ -192,6 +223,18 @@ class ForumViewModel @Inject constructor(
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Toggle the saved ("read-later") state of a post. The bookmark fill
+     *  updates optimistically via [savedIds]; a failed call reverts it. */
+    fun toggleSave(post: Post) {
+        viewModelScope.launch {
+            try {
+                savedRepository.toggle(post)
+            } catch (_: Exception) {
+                // SavedRepository already reverted the optimistic mirror update.
             }
         }
     }

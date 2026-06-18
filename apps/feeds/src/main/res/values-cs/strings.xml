@@ -198,4 +198,20 @@
     <string name="feeds_interest_reduced">Zájem snížen</string>
     <string name="feeds_interest_removed">Zájem odebrán</string>
     <string name="feeds_interest_failed">Nepodařilo se upravit zájem</string>
+    <string name="feeds_saved_title">Uloženo</string>
+    <string name="feeds_saved_menu">Uloženo</string>
+    <string name="feeds_saved_save">Uložit na později</string>
+    <string name="feeds_saved_remove">Odebrat z uložených</string>
+    <string name="feeds_saved_clear_all">Vymazat vše</string>
+    <string name="feeds_saved_clear_confirm_title">Vymazat všechny uložené příspěvky?</string>
+    <string name="feeds_saved_clear_confirm_body">Tím se z vašeho seznamu uložených odstraní každý příspěvek. Tuto akci nelze vrátit zpět.</string>
+    <string name="feeds_saved_empty_title">Zatím nic neuloženo</string>
+    <string name="feeds_saved_empty_subtitle">Klepnutím na záložku u libovolného příspěvku jej zde uložíte na později.</string>
+    <string name="feeds_saved_error_clear">Uložené příspěvky se nepodařilo vymazat</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nový příspěvek</item>
+        <item quantity="few">%d nové příspěvky</item>
+        <item quantity="many">%d nového příspěvku</item>
+        <item quantity="other">%d nových příspěvků</item>
+    </plurals>
 </resources>

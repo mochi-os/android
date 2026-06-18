@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Enterè diminye</string>
     <string name="feeds_interest_removed">Enterè retire</string>
     <string name="feeds_interest_failed">Echwe pou ajiste enterè</string>
+    <string name="feeds_saved_title">Sove</string>
+    <string name="feeds_saved_menu">Sove</string>
+    <string name="feeds_saved_save">Sere pou pita</string>
+    <string name="feeds_saved_remove">Retire nan sa ki sere yo</string>
+    <string name="feeds_saved_clear_all">Efase tout</string>
+    <string name="feeds_saved_clear_confirm_title">Efase tout pòs ki sere yo?</string>
+    <string name="feeds_saved_clear_confirm_body">Sa retire chak pòs nan lis sere ou a. Yo pa ka defèt sa.</string>
+    <string name="feeds_saved_empty_title">Anyen poko sove</string>
+    <string name="feeds_saved_empty_subtitle">Tape sou make liv la sou nenpòt pòs pou sere li la pou pita.</string>
+    <string name="feeds_saved_error_clear">Echèk pou efase pòs ki sere yo</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nouvo pòs</item>
+        <item quantity="other">%d nouvo pòs</item>
+    </plurals>
 </resources>

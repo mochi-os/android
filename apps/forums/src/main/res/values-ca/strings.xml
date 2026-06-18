@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Cerca usuaris</string>
     <string name="forums_access_no_groups">No hi ha cap grup disponible</string>
+    <string name="forums_saved_title">Desat</string>
+    <string name="forums_saved_save">Desa per a més tard</string>
+    <string name="forums_saved_remove">Elimina de desats</string>
+    <string name="forums_saved_clear_all">Esborra-ho tot</string>
+    <string name="forums_saved_clear_confirm_title">Voleu esborrar totes les publicacions desades?</string>
+    <string name="forums_saved_clear_confirm_body">Això elimina totes les publicacions de la vostra llista de desats. No es pot desfer.</string>
+    <string name="forums_saved_empty_title">Encara no hi ha res desat</string>
+    <string name="forums_saved_empty_subtitle">Toqueu el marcador de qualsevol publicació per desar-la aquí per a més tard.</string>
+    <string name="forums_saved_error_clear">No s\'han pogut esborrar les publicacions desades</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d publicació nova</item>
+        <item quantity="other">%d publicacions noves</item>
+    </plurals>
 </resources>

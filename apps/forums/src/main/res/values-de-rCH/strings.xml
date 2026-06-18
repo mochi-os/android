@@ -207,4 +207,7 @@
     <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Benutzer suchen</string>
     <string name="forums_access_no_groups">No groups available</string>
+    <string name="forums_saved_title">Gespeichert</string>
+    <string name="forums_saved_remove">Aus Gespeicherten entfernen</string>
+    <string name="forums_saved_clear_all">Alle löschen</string>
 </resources>

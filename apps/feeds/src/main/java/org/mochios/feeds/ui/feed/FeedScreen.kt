@@ -39,6 +39,8 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ImportExport
@@ -126,6 +128,7 @@ import org.mochios.feeds.ui.component.PostBody
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MediaGrid
+import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
@@ -147,6 +150,7 @@ fun FeedScreen(
     onNavigateToEditPost: (String, String) -> Unit,
     onNavigateToSettings: (String) -> Unit,
     onNavigateToSources: (feedId: String, sourceUrl: String?) -> Unit = { _, _ -> },
+    onNavigateToSaved: () -> Unit = {},
     onSelectFeed: (String) -> Unit,
     onNavigateToFindFeeds: () -> Unit,
     onOpenNotifications: () -> Unit = {},
@@ -207,6 +211,8 @@ fun FeedScreen(
     val isNotFound by viewModel.isNotFound.collectAsState()
     val currentSort by viewModel.currentSort.collectAsState()
     val unreadOnly by viewModel.unreadOnly.collectAsState()
+    val savedIds by viewModel.savedIds.collectAsState()
+    val newPostsCount by viewModel.newPostsCount.collectAsState()
 
 
     var showOverflowMenu by remember { mutableStateOf(false) }
@@ -485,6 +491,16 @@ fun FeedScreen(
                                     showOverflowMenu = false
                                 }
                             )
+                            DropdownMenuItem(
+                                text = { Text(stringResource(R.string.feeds_saved_menu)) },
+                                leadingIcon = {
+                                    Icon(Icons.Default.Bookmark, contentDescription = null)
+                                },
+                                onClick = {
+                                    onNavigateToSaved()
+                                    showOverflowMenu = false
+                                }
+                            )
                             if (permissions.manage) {
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.feeds_tab_sources)) },
@@ -623,9 +639,11 @@ fun FeedScreen(
                                     serverUrl = viewModel.serverUrl,
                                     fallbackFeedId = viewModel.feedId,
                                     canManage = permissions.manage,
+                                    isSaved = savedIds.contains(post.id),
                                     onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
                                     onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
                                     onReact = { reaction -> viewModel.reactToPost(routeFeedId, post.id, reaction) },
+                                    onToggleSave = { viewModel.toggleSave(post) },
                                     onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
                                     onDelete = { pendingDelete = post },
                                     onAddTag = { addTagTarget = post.id },
@@ -667,6 +685,17 @@ fun FeedScreen(
                                     pagerState = pagerState,
                                     pageCount = posts.size,
                                     page = renderPost,
+                                )
+                                NewItemsPill(
+                                    count = newPostsCount,
+                                    label = pluralStringResource(
+                                        R.plurals.feeds_new_posts, newPostsCount, newPostsCount
+                                    ),
+                                    onClick = {
+                                        viewModel.showNewPosts()
+                                        drawerScope.launch { pagerState.animateScrollToPage(0) }
+                                    },
+                                    modifier = Modifier.align(Alignment.TopCenter),
                                 )
                             }
                         }
@@ -772,9 +801,11 @@ private fun PostCard(
     serverUrl: String,
     fallbackFeedId: String,
     canManage: Boolean,
+    isSaved: Boolean,
     onClick: () -> Unit,
     onComments: () -> Unit,
     onReact: (String) -> Unit,
+    onToggleSave: () -> Unit,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     onAddTag: () -> Unit,
@@ -1004,8 +1035,10 @@ private fun PostCard(
         PostActionBar(
             post = post,
             canManage = canManage,
+            isSaved = isSaved,
             onReact = onReact,
             onComments = onComments,
+            onToggleSave = onToggleSave,
             onEdit = onEdit,
             onDelete = onDelete,
             onAddTag = onAddTag,
@@ -1030,8 +1063,10 @@ private fun PostCard(
 private fun PostActionBar(
     post: Post,
     canManage: Boolean,
+    isSaved: Boolean,
     onReact: (String) -> Unit,
     onComments: () -> Unit,
+    onToggleSave: () -> Unit,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     onAddTag: () -> Unit,
@@ -1061,6 +1096,17 @@ private fun PostActionBar(
                 contentDescription = stringResource(R.string.feeds_comments),
                 modifier = Modifier.size(18.dp),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        IconButton(onClick = onToggleSave, modifier = Modifier.size(32.dp)) {
+            Icon(
+                if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
+                contentDescription = stringResource(
+                    if (isSaved) R.string.feeds_saved_remove else R.string.feeds_saved_save
+                ),
+                modifier = Modifier.size(18.dp),
+                tint = if (isSaved) MaterialTheme.colorScheme.primary
+                else MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
         if (canManage) {

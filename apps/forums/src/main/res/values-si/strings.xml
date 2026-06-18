@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">අතින්</string>
     <string name="forums_access_search_users">පරිශීලකයින් සොයන්න</string>
     <string name="forums_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
+    <string name="forums_saved_title">සුරකින ලදී</string>
+    <string name="forums_saved_save">පසුව සඳහා සුරකින්න</string>
+    <string name="forums_saved_remove">සුරැකූවායින් ඉවත් කරන්න</string>
+    <string name="forums_saved_clear_all">සියල්ල හිස් කරන්න</string>
+    <string name="forums_saved_clear_confirm_title">සුරැකූ සියලු පළ කිරීම් හිස් කරන්නද?</string>
+    <string name="forums_saved_clear_confirm_body">මෙය ඔබේ සුරැකූ ලැයිස්තුවෙන් සෑම පළ කිරීමක්ම ඉවත් කරයි. මෙය පෙරළිය නොහැක.</string>
+    <string name="forums_saved_empty_title">තවමත් කිසිවක් සුරැකී නැත</string>
+    <string name="forums_saved_empty_subtitle">ඕනෑම පළ කිරීමක් මෙහි පසුව සඳහා සුරැකීමට එහි පිටුසලකුණ තට්ටු කරන්න.</string>
+    <string name="forums_saved_error_clear">සුරැකූ පළ කිරීම් හිස් කිරීමට අසමත් විය</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d නව පළ කිරීම</item>
+        <item quantity="other">%d නව පළ කිරීම්</item>
+    </plurals>
 </resources>

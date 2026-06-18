@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Шавқ кам карда шуд</string>
     <string name="feeds_interest_removed">Шавқ бартараф карда шуд</string>
     <string name="feeds_interest_failed">Танзими шавқ ба анҷом нарасид</string>
+    <string name="feeds_saved_title">Захирашуда</string>
+    <string name="feeds_saved_menu">Захирашуда</string>
+    <string name="feeds_saved_save">Барои баъдтар нигоҳ доред</string>
+    <string name="feeds_saved_remove">Аз нигоҳдошташуда тоза кунед</string>
+    <string name="feeds_saved_clear_all">Ҳамаро тоза кардан</string>
+    <string name="feeds_saved_clear_confirm_title">Ҳамаи паёмҳои нигоҳдошташударо тоза мекунед?</string>
+    <string name="feeds_saved_clear_confirm_body">Ин ҳар паёмро аз рӯйхати нигоҳдошташудаи шумо тоза мекунад. Инро бекор кардан мумкин нест.</string>
+    <string name="feeds_saved_empty_title">То ҳол чизе захира нашудааст</string>
+    <string name="feeds_saved_empty_subtitle">Барои нигоҳ доштани ягон паём дар ин ҷо барои баъдтар, ба хатчӯби он зер кунед.</string>
+    <string name="feeds_saved_error_clear">Тоза кардани паёмҳои нигоҳдошташуда ноком шуд</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d паёми нав</item>
+        <item quantity="other">%d паёмҳои нав</item>
+    </plurals>
 </resources>

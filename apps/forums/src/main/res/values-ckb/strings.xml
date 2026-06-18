@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">دەستی</string>
     <string name="forums_access_search_users">گەڕانی بەکارهێنەران</string>
     <string name="forums_access_no_groups">هیچ گرووپێک بەردەست نییە</string>
+    <string name="forums_saved_title">پاشەکەوت کرا</string>
+    <string name="forums_saved_save">پاشەکەوت بۆ دواتر</string>
+    <string name="forums_saved_remove">لابردن لە پاشەکەوتکراوەکان</string>
+    <string name="forums_saved_clear_all">پاککردنەوەی هەموو</string>
+    <string name="forums_saved_clear_confirm_title">سڕینەوەی هەموو پۆستە پاشەکەوتکراوەکان؟</string>
+    <string name="forums_saved_clear_confirm_body">ئەمە هەموو پۆستێک لە لیستی پاشەکەوتەکانت لادەبات. ناتوانرێت بگەڕێنرێتەوە.</string>
+    <string name="forums_saved_empty_title">هێشتا هیچ پاشەکەوت نەکراوە</string>
+    <string name="forums_saved_empty_subtitle">بۆ پاشەکەوتکردنی هەر پۆستێک بۆ دواتر لێرە، دەست بنێ بە نیشانەکەی.</string>
+    <string name="forums_saved_error_clear">سڕینەوەی پۆستە پاشەکەوتکراوەکان سەرکەوتوو نەبوو</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d پۆستی نوێ</item>
+        <item quantity="other">%d پۆستی نوێ</item>
+    </plurals>
 </resources>

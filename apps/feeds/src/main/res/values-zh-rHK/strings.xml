@@ -196,4 +196,8 @@
     <string name="feeds_settings_prompt_saved">已儲存提示</string>
 
     <string name="feeds_refresh">重新整理</string>
+    <string name="feeds_saved_title">已儲存</string>
+    <string name="feeds_saved_menu">已儲存</string>
+    <string name="feeds_saved_remove">從已儲存中移除</string>
+    <string name="feeds_saved_clear_all">清除全部</string>
 </resources>

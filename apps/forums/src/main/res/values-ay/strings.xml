@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Usuarionak thaqhama</string>
     <string name="forums_access_no_groups">Jan tamanak utjki</string>
+    <string name="forums_saved_title">Imaña</string>
+    <string name="forums_saved_save">Qhipxarutaki imaña</string>
+    <string name="forums_saved_remove">Imatatat apsuña</string>
+    <string name="forums_saved_clear_all">Taqpach q\'umachaña</string>
+    <string name="forums_saved_clear_confirm_title">¿Taqi imata yatiyäwinaka pichañ muntati?</string>
+    <string name="forums_saved_clear_confirm_body">Akax taqi yatiyäwinakwa imat listamat apsu. Janiw kutirayañ jaqukipkaspati.</string>
+    <string name="forums_saved_empty_title">Janir kunas imt\'atati</string>
+    <string name="forums_saved_empty_subtitle">Kuna yatiyäwirus aka cheqar qhipxarutaki imañatakix marcador uñtʼat liphiñtʼam.</string>
+    <string name="forums_saved_error_clear">Imat yatiyäwinak pichañax jan walt\'kiti</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d machaqa yatiyäwi</item>
+        <item quantity="other">%d machaqa yatiyäwinaka</item>
+    </plurals>
 </resources>

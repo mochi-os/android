@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Mwongozo</string>
     <string name="forums_access_search_users">Tafuta watumiaji</string>
     <string name="forums_access_no_groups">Hakuna vikundi vinavyopatikana</string>
+    <string name="forums_saved_title">Imehifadhiwa</string>
+    <string name="forums_saved_save">Hifadhi kwa baadaye</string>
+    <string name="forums_saved_remove">Ondoa kwenye zilizohifadhiwa</string>
+    <string name="forums_saved_clear_all">Futa vyote</string>
+    <string name="forums_saved_clear_confirm_title">Futa machapisho yote yaliyohifadhiwa?</string>
+    <string name="forums_saved_clear_confirm_body">Hii inaondoa kila chapisho kwenye orodha yako ya yaliyohifadhiwa. Kitendo hiki hakiwezi kutenduliwa.</string>
+    <string name="forums_saved_empty_title">Hakuna kilichohifadhiwa bado</string>
+    <string name="forums_saved_empty_subtitle">Gusa alamisho kwenye chapisho lolote ili kulihifadhi hapa kwa baadaye.</string>
+    <string name="forums_saved_error_clear">Imeshindwa kufuta machapisho yaliyohifadhiwa</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d chapisho jipya</item>
+        <item quantity="other">%d machapisho mapya</item>
+    </plurals>
 </resources>

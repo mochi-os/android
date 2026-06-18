@@ -207,4 +207,16 @@
     <string name="forums_access_tab_manual">ကိုယ်တိုင်</string>
     <string name="forums_access_search_users">သုံးစွဲသူများ ရှာဖွေ</string>
     <string name="forums_access_no_groups">အုပ်စုများ မရရှိနိုင်ပါ</string>
+    <string name="forums_saved_title">သိမ်းပြီး</string>
+    <string name="forums_saved_save">နောက်မှကြည့်ရန် သိမ်းပါ</string>
+    <string name="forums_saved_remove">သိမ်းထားသည်မှ ဖယ်ရှားပါ</string>
+    <string name="forums_saved_clear_all">အားလုံး ရှင်းမည်</string>
+    <string name="forums_saved_clear_confirm_title">သိမ်းထားသော ပို့စ်အားလုံးကို ရှင်းမလား?</string>
+    <string name="forums_saved_clear_confirm_body">၎င်းသည် သင်၏သိမ်းထားသည့်စာရင်းမှ ပို့စ်တိုင်းကို ဖယ်ရှားသည်။ ၎င်းကို နောက်ပြန်လှည့်၍မရပါ။</string>
+    <string name="forums_saved_empty_title">ဘာမှ မသိမ်းရသေးပါ</string>
+    <string name="forums_saved_empty_subtitle">မည်သည့်ပို့စ်ကိုမဆို နောက်မှကြည့်ရန် ဤနေရာတွင်သိမ်းရန် ၎င်း၏ booklink ကို တို့ပါ။</string>
+    <string name="forums_saved_error_clear">သိမ်းထားသောပို့စ်များကို ရှင်းရန် မအောင်မြင်ပါ</string>
+    <plurals name="forums_new_posts">
+        <item quantity="other">ပို့စ်အသစ် %dခု</item>
+    </plurals>
 </resources>

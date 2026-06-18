@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">మాన్యువల్</string>
     <string name="forums_access_search_users">యూజర్లను శోధించండి</string>
     <string name="forums_access_no_groups">గ్రూపులు అందుబాటులో లేవు</string>
+    <string name="forums_saved_title">సేవ్ చేయబడింది</string>
+    <string name="forums_saved_save">తర్వాత కోసం సేవ్ చేయండి</string>
+    <string name="forums_saved_remove">సేవ్ చేసిన వాటి నుండి తీసివేయండి</string>
+    <string name="forums_saved_clear_all">అన్నీ క్లియర్ చేయండి</string>
+    <string name="forums_saved_clear_confirm_title">సేవ్ చేసిన అన్ని పోస్ట్‌లను క్లియర్ చేయాలా?</string>
+    <string name="forums_saved_clear_confirm_body">ఇది మీ సేవ్ చేసిన జాబితా నుండి ప్రతి పోస్ట్‌ను తీసివేస్తుంది. దీన్ని రద్దు చేయడం సాధ్యం కాదు.</string>
+    <string name="forums_saved_empty_title">ఇంకా ఏదీ సేవ్ చేయబడలేదు</string>
+    <string name="forums_saved_empty_subtitle">ఏదైనా పోస్ట్‌ను ఇక్కడ తర్వాత కోసం సేవ్ చేయడానికి దాని బుక్‌మార్క్‌ను ట్యాప్ చేయండి.</string>
+    <string name="forums_saved_error_clear">సేవ్ చేసిన పోస్ట్‌లను క్లియర్ చేయడం విఫలమైంది</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d కొత్త పోస్ట్</item>
+        <item quantity="other">%d కొత్త పోస్ట్‌లు</item>
+    </plurals>
 </resources>

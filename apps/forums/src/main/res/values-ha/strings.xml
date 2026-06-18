@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Hannu</string>
     <string name="forums_access_search_users">Bincika masu amfani</string>
     <string name="forums_access_no_groups">Babu ƙungiyoyi</string>
+    <string name="forums_saved_title">An adana</string>
+    <string name="forums_saved_save">Ajiye don baya</string>
+    <string name="forums_saved_remove">Cire daga ajiyayyu</string>
+    <string name="forums_saved_clear_all">Share duka</string>
+    <string name="forums_saved_clear_confirm_title">Share duk wasiƙun da aka ajiye?</string>
+    <string name="forums_saved_clear_confirm_body">Wannan yana cire kowane wasiƙa daga jerin ajiyarka. Ba za a iya soke shi ba.</string>
+    <string name="forums_saved_empty_title">Babu wani abu da aka adana har yanzu</string>
+    <string name="forums_saved_empty_subtitle">Danna alamar shafi a kan kowane wasiƙa don ajiye shi nan don baya.</string>
+    <string name="forums_saved_error_clear">An kasa share wasiƙun da aka ajiye</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d sabon wasiƙa</item>
+        <item quantity="other">%d sababbin wasiƙu</item>
+    </plurals>
 </resources>

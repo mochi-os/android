@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">ম্যানুয়াল</string>
     <string name="forums_access_search_users">ব্যবহারকারী অনুসন্ধান করুন</string>
     <string name="forums_access_no_groups">কোনো গ্রুপ উপলব্ধ নেই</string>
+    <string name="forums_saved_title">সংরক্ষিত</string>
+    <string name="forums_saved_save">পরে দেখার জন্য সংরক্ষণ করুন</string>
+    <string name="forums_saved_remove">সংরক্ষিত থেকে সরান</string>
+    <string name="forums_saved_clear_all">সব পরিষ্কার করুন</string>
+    <string name="forums_saved_clear_confirm_title">সব সংরক্ষিত পোস্ট মুছে ফেলবেন?</string>
+    <string name="forums_saved_clear_confirm_body">এটি আপনার সংরক্ষিত তালিকা থেকে প্রতিটি পোস্ট সরিয়ে দেবে। এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
+    <string name="forums_saved_empty_title">এখনো কিছুই সংরক্ষণ করা হয়নি</string>
+    <string name="forums_saved_empty_subtitle">পরে দেখার জন্য এখানে সংরক্ষণ করতে যেকোনো পোস্টের বুকমার্কে ট্যাপ করুন।</string>
+    <string name="forums_saved_error_clear">সংরক্ষিত পোস্ট মোছা যায়নি</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d নতুন পোস্ট</item>
+        <item quantity="other">%d নতুন পোস্ট</item>
+    </plurals>
 </resources>

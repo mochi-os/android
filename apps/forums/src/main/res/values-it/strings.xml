@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manuale</string>
     <string name="forums_access_search_users">Cerca utenti</string>
     <string name="forums_access_no_groups">Nessun gruppo disponibile</string>
+    <string name="forums_saved_title">Salvato</string>
+    <string name="forums_saved_save">Salva per dopo</string>
+    <string name="forums_saved_remove">Rimuovi dai salvati</string>
+    <string name="forums_saved_clear_all">Cancella tutto</string>
+    <string name="forums_saved_clear_confirm_title">Cancellare tutti i post salvati?</string>
+    <string name="forums_saved_clear_confirm_body">Questo rimuove ogni post dal tuo elenco dei salvati. L\'operazione non può essere annullata.</string>
+    <string name="forums_saved_empty_title">Nessun elemento salvato finora</string>
+    <string name="forums_saved_empty_subtitle">Tocca il segnalibro di un post qualsiasi per salvarlo qui per dopo.</string>
+    <string name="forums_saved_error_clear">Impossibile cancellare i post salvati</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nuovo post</item>
+        <item quantity="other">%d nuovi post</item>
+    </plurals>
 </resources>

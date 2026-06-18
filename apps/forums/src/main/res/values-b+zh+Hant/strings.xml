@@ -207,4 +207,16 @@
     <string name="forums_access_tab_manual">手動</string>
     <string name="forums_access_search_users">搜尋使用者</string>
     <string name="forums_access_no_groups">無可用的群組</string>
+    <string name="forums_saved_title">已儲存</string>
+    <string name="forums_saved_save">稍後儲存</string>
+    <string name="forums_saved_remove">從已儲存中移除</string>
+    <string name="forums_saved_clear_all">全部清除</string>
+    <string name="forums_saved_clear_confirm_title">清除所有已儲存的貼文？</string>
+    <string name="forums_saved_clear_confirm_body">這會從你的已儲存清單中移除每一則貼文。此操作無法復原。</string>
+    <string name="forums_saved_empty_title">尚未儲存任何內容</string>
+    <string name="forums_saved_empty_subtitle">點按任何貼文上的書籤即可將其儲存到這裡稍後查看。</string>
+    <string name="forums_saved_error_clear">清除已儲存的貼文失敗</string>
+    <plurals name="forums_new_posts">
+        <item quantity="other">%d 則新貼文</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">İlgi alanı azaltıldı</string>
     <string name="feeds_interest_removed">İlgi alanı kaldırıldı</string>
     <string name="feeds_interest_failed">İlgi alanı ayarlanamadı</string>
+    <string name="feeds_saved_title">Kaydedildi</string>
+    <string name="feeds_saved_menu">Kaydedildi</string>
+    <string name="feeds_saved_save">Sonrası için kaydet</string>
+    <string name="feeds_saved_remove">Kaydedilenlerden kaldır</string>
+    <string name="feeds_saved_clear_all">Tümünü temizle</string>
+    <string name="feeds_saved_clear_confirm_title">Kaydedilen tüm gönderiler temizlensin mi?</string>
+    <string name="feeds_saved_clear_confirm_body">Bu, kaydedilenler listenizden her gönderiyi kaldırır. Bu işlem geri alınamaz.</string>
+    <string name="feeds_saved_empty_title">Henüz hiçbir şey kaydedilmedi</string>
+    <string name="feeds_saved_empty_subtitle">Herhangi bir gönderiyi sonrası için buraya kaydetmek için yer iminize dokunun.</string>
+    <string name="feeds_saved_error_clear">Kaydedilen gönderiler temizlenemedi</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d yeni gönderi</item>
+        <item quantity="other">%d yeni gönderi</item>
+    </plurals>
 </resources>

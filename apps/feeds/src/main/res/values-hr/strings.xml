@@ -198,4 +198,19 @@
     <string name="feeds_interest_reduced">Interes smanjen</string>
     <string name="feeds_interest_removed">Interes uklonjen</string>
     <string name="feeds_interest_failed">Prilagodba interesa nije uspjela</string>
+    <string name="feeds_saved_title">Spremljeno</string>
+    <string name="feeds_saved_menu">Spremljeno</string>
+    <string name="feeds_saved_save">Spremi za poslije</string>
+    <string name="feeds_saved_remove">Ukloni iz spremljenih</string>
+    <string name="feeds_saved_clear_all">Očisti sve</string>
+    <string name="feeds_saved_clear_confirm_title">Obrisati sve spremljene objave?</string>
+    <string name="feeds_saved_clear_confirm_body">Time se uklanja svaka objava s vašeg popisa spremljenih. To se ne može poništiti.</string>
+    <string name="feeds_saved_empty_title">Još ništa nije spremljeno</string>
+    <string name="feeds_saved_empty_subtitle">Dodirnite oznaku na bilo kojoj objavi da je spremite ovdje za poslije.</string>
+    <string name="feeds_saved_error_clear">Spremljene objave nije moguće obrisati</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nova objava</item>
+        <item quantity="few">%d nove objave</item>
+        <item quantity="other">%d novih objava</item>
+    </plurals>
 </resources>

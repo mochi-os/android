@@ -207,4 +207,16 @@
     <string name="forums_access_tab_manual">수동</string>
     <string name="forums_access_search_users">사용자 검색</string>
     <string name="forums_access_no_groups">이용 가능한 그룹이 없어요</string>
+    <string name="forums_saved_title">저장됨</string>
+    <string name="forums_saved_save">나중에 보기 위해 저장</string>
+    <string name="forums_saved_remove">저장됨에서 제거</string>
+    <string name="forums_saved_clear_all">모두 지우기</string>
+    <string name="forums_saved_clear_confirm_title">저장된 게시물을 모두 지우시겠어요?</string>
+    <string name="forums_saved_clear_confirm_body">저장 목록에서 모든 게시물이 제거됩니다. 이 작업은 되돌릴 수 없습니다.</string>
+    <string name="forums_saved_empty_title">아직 저장된 항목 없음</string>
+    <string name="forums_saved_empty_subtitle">게시물의 북마크를 탭하여 여기에 나중에 보기 위해 저장하세요.</string>
+    <string name="forums_saved_error_clear">저장된 게시물을 지우지 못했습니다</string>
+    <plurals name="forums_new_posts">
+        <item quantity="other">새 게시물 %d개</item>
+    </plurals>
 </resources>

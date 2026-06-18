@@ -198,4 +198,22 @@
     <string name="feeds_interest_reduced">تم تقليل الاهتمام</string>
     <string name="feeds_interest_removed">تمت إزالة الاهتمام</string>
     <string name="feeds_interest_failed">فشل ضبط الاهتمام</string>
+    <string name="feeds_saved_title">تم الحفظ</string>
+    <string name="feeds_saved_menu">تم الحفظ</string>
+    <string name="feeds_saved_save">حفظ لوقت لاحق</string>
+    <string name="feeds_saved_remove">إزالة من المحفوظات</string>
+    <string name="feeds_saved_clear_all">مسح الكل</string>
+    <string name="feeds_saved_clear_confirm_title">مسح كل المنشورات المحفوظة؟</string>
+    <string name="feeds_saved_clear_confirm_body">يؤدي هذا إلى إزالة كل منشور من قائمة المحفوظات. لا يمكن التراجع عن ذلك.</string>
+    <string name="feeds_saved_empty_title">لم يتم حفظ أي شيء بعد</string>
+    <string name="feeds_saved_empty_subtitle">انقر على علامة الإشارة في أي منشور لحفظه هنا لوقت لاحق.</string>
+    <string name="feeds_saved_error_clear">تعذّر مسح المنشورات المحفوظة</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="zero">%d منشور جديد</item>
+        <item quantity="one">%d منشور جديد</item>
+        <item quantity="two">%d منشوران جديدان</item>
+        <item quantity="few">%d منشورات جديدة</item>
+        <item quantity="many">%d منشورًا جديدًا</item>
+        <item quantity="other">%d منشور جديد</item>
+    </plurals>
 </resources>

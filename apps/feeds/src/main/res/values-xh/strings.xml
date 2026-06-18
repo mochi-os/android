@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Umdla uncitshisiwe</string>
     <string name="feeds_interest_removed">Umdla ususiwe</string>
     <string name="feeds_interest_failed">Ayiphumelelanga ukulungisa umdla</string>
+    <string name="feeds_saved_title">Igciniwe</string>
+    <string name="feeds_saved_menu">Igciniwe</string>
+    <string name="feeds_saved_save">Gcina ukuze ujonge kamva</string>
+    <string name="feeds_saved_remove">Susa kwezigciniweyo</string>
+    <string name="feeds_saved_clear_all">Cima konke</string>
+    <string name="feeds_saved_clear_confirm_title">Cima zonke iiposti ezigciniweyo?</string>
+    <string name="feeds_saved_clear_confirm_body">Oku kususa yonke iposti kuluhlu lwakho lwezigciniweyo. Oku akunakubuyiselwa.</string>
+    <string name="feeds_saved_empty_title">Akukho nto igciniweyo okwangoku</string>
+    <string name="feeds_saved_empty_subtitle">Cofa ibhukimaki kuyo nayiphi na iposti ukuze uyigcine apha ukuze uyijonge kamva.</string>
+    <string name="feeds_saved_error_clear">Akuphumelelanga ukucima iiposti ezigciniweyo</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d iposti entsha</item>
+        <item quantity="other">%d iiposti ezintsha</item>
+    </plurals>
 </resources>

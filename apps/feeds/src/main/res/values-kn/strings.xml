@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">ಆಸಕ್ತಿ ಕಡಿಮೆ ಮಾಡಲಾಗಿದೆ</string>
     <string name="feeds_interest_removed">ಆಸಕ್ತಿ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="feeds_interest_failed">ಆಸಕ್ತಿ ಹೊಂದಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="feeds_saved_title">ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_saved_menu">ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="feeds_saved_save">ನಂತರಕ್ಕಾಗಿ ಉಳಿಸಿ</string>
+    <string name="feeds_saved_remove">ಉಳಿಸಿದವುಗಳಿಂದ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="feeds_saved_clear_all">ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="feeds_saved_clear_confirm_title">ಉಳಿಸಿದ ಎಲ್ಲಾ ಪೋಸ್ಟ್‌ಗಳನ್ನು ತೆರವುಗೊಳಿಸಬೇಕೆ?</string>
+    <string name="feeds_saved_clear_confirm_body">ಇದು ನಿಮ್ಮ ಉಳಿಸಿದ ಪಟ್ಟಿಯಿಂದ ಪ್ರತಿ ಪೋಸ್ಟ್ ಅನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗದು.</string>
+    <string name="feeds_saved_empty_title">ಇನ್ನೂ ಏನನ್ನೂ ಉಳಿಸಲಾಗಿಲ್ಲ</string>
+    <string name="feeds_saved_empty_subtitle">ಯಾವುದೇ ಪೋಸ್ಟ್ ಅನ್ನು ಇಲ್ಲಿ ನಂತರಕ್ಕಾಗಿ ಉಳಿಸಲು ಅದರ ಬುಕ್‌ಮಾರ್ಕ್ ಅನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
+    <string name="feeds_saved_error_clear">ಉಳಿಸಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ತೆರವುಗೊಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d ಹೊಸ ಪೋಸ್ಟ್</item>
+        <item quantity="other">%d ಹೊಸ ಪೋಸ್ಟ್‌ಗಳು</item>
+    </plurals>
 </resources>

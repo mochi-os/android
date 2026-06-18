@@ -207,4 +207,19 @@
     <string name="forums_access_tab_manual">Le làimh</string>
     <string name="forums_access_search_users">Lorg cleachdaichean</string>
     <string name="forums_access_no_groups">Chan eil buidhnean rim faotainn</string>
+    <string name="forums_saved_title">Air a shàbhaladh</string>
+    <string name="forums_saved_save">Sàbhail airson às dèidh seo</string>
+    <string name="forums_saved_remove">Thoir air falbh bho na sàbhailte</string>
+    <string name="forums_saved_clear_all">Falamhaich a h-uile</string>
+    <string name="forums_saved_clear_confirm_title">Falamhaich a h-uile post a chaidh a shàbhaladh?</string>
+    <string name="forums_saved_clear_confirm_body">Bheir seo air falbh gach post bhon liosta shàbhailte agad. Cha ghabh seo a neo-dhèanamh.</string>
+    <string name="forums_saved_empty_title">Cha deach dad a shàbhaladh fhathast</string>
+    <string name="forums_saved_empty_subtitle">Thoir gnogag air a\' chomharra-lìn air post sam bith gus a shàbhaladh an seo airson às dèidh seo.</string>
+    <string name="forums_saved_error_clear">Cha b\' urrainn na postaichean sàbhailte fhalamhachadh</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d phost ùr</item>
+        <item quantity="two">%d phost ùr</item>
+        <item quantity="few">%d postaichean ùra</item>
+        <item quantity="other">%d post ùr</item>
+    </plurals>
 </resources>

@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">በእጅ</string>
     <string name="forums_access_search_users">ተጠቃሚዎችን ይፈልጉ</string>
     <string name="forums_access_no_groups">ምንም ቡድኖች የሉም</string>
+    <string name="forums_saved_title">ተቀምጧል</string>
+    <string name="forums_saved_save">ለኋላ አስቀምጥ</string>
+    <string name="forums_saved_remove">ከተቀመጡ አስወግድ</string>
+    <string name="forums_saved_clear_all">ሁሉንም አጽዳ</string>
+    <string name="forums_saved_clear_confirm_title">ሁሉንም የተቀመጡ ልጥፎች ይጽዱ?</string>
+    <string name="forums_saved_clear_confirm_body">ይህ ሁሉንም ልጥፍ ከተቀመጠ ዝርዝርዎ ያስወግዳል። ይህ ሊቀለበስ አይችልም።</string>
+    <string name="forums_saved_empty_title">እስካሁን ምንም አልተቀመጠም</string>
+    <string name="forums_saved_empty_subtitle">ለኋላ እዚህ ለማስቀመጥ በማንኛውም ልጥፍ ላይ ያለውን ዕልባት ይንኩ።</string>
+    <string name="forums_saved_error_clear">የተቀመጡ ልጥፎችን ማጽዳት አልተሳካም</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d አዲስ ልጥፍ</item>
+        <item quantity="other">%d አዲስ ልጥፎች</item>
+    </plurals>
 </resources>

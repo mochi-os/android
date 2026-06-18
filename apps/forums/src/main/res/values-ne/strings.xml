@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">म्यानुअल</string>
     <string name="forums_access_search_users">प्रयोगकर्ताहरू खोज्नुहोस्</string>
     <string name="forums_access_no_groups">कुनै समूह उपलब्ध छैन</string>
+    <string name="forums_saved_title">सुरक्षित गरियो</string>
+    <string name="forums_saved_save">पछिको लागि सुरक्षित गर्नुहोस्</string>
+    <string name="forums_saved_remove">सुरक्षितबाट हटाउनुहोस्</string>
+    <string name="forums_saved_clear_all">सबै खाली गर्नुहोस्</string>
+    <string name="forums_saved_clear_confirm_title">सबै सुरक्षित पोस्टहरू खाली गर्ने?</string>
+    <string name="forums_saved_clear_confirm_body">यसले तपाईंको सुरक्षित सूचीबाट हरेक पोस्ट हटाउँछ। यो फिर्ता गर्न सकिँदैन।</string>
+    <string name="forums_saved_empty_title">अहिलेसम्म केहि पनि सुरक्षित गरिएको छैन</string>
+    <string name="forums_saved_empty_subtitle">कुनै पनि पोस्ट यहाँ पछिको लागि सुरक्षित गर्न त्यसको बुकमार्कमा ट्याप गर्नुहोस्।</string>
+    <string name="forums_saved_error_clear">सुरक्षित पोस्टहरू खाली गर्न असफल</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d नयाँ पोस्ट</item>
+        <item quantity="other">%d नयाँ पोस्ट</item>
+    </plurals>
 </resources>

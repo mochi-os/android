@@ -198,4 +198,20 @@
     <string name="feeds_interest_reduced">Zanimanje zmanjšano</string>
     <string name="feeds_interest_removed">Zanimanje odstranjeno</string>
     <string name="feeds_interest_failed">Neuspešna prilagoditev zanimanja</string>
+    <string name="feeds_saved_title">Shranjeno</string>
+    <string name="feeds_saved_menu">Shranjeno</string>
+    <string name="feeds_saved_save">Shrani za pozneje</string>
+    <string name="feeds_saved_remove">Odstrani iz shranjenih</string>
+    <string name="feeds_saved_clear_all">Počisti vse</string>
+    <string name="feeds_saved_clear_confirm_title">Počistiti vse shranjene objave?</string>
+    <string name="feeds_saved_clear_confirm_body">S tem se iz vašega seznama shranjenih odstrani vsaka objava. Tega ni mogoče razveljaviti.</string>
+    <string name="feeds_saved_empty_title">Še nič ni shranjeno</string>
+    <string name="feeds_saved_empty_subtitle">Tapnite zaznamek pri kateri koli objavi, da jo shranite sem za pozneje.</string>
+    <string name="feeds_saved_error_clear">Shranjenih objav ni bilo mogoče počistiti</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nova objava</item>
+        <item quantity="two">%d novi objavi</item>
+        <item quantity="few">%d nove objave</item>
+        <item quantity="other">%d novih objav</item>
+    </plurals>
 </resources>

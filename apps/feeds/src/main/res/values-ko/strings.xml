@@ -198,4 +198,17 @@
     <string name="feeds_interest_reduced">관심사가 줄어들었어요</string>
     <string name="feeds_interest_removed">관심사가 제거되었어요</string>
     <string name="feeds_interest_failed">관심사 조정에 실패했어요</string>
+    <string name="feeds_saved_title">저장됨</string>
+    <string name="feeds_saved_menu">저장됨</string>
+    <string name="feeds_saved_save">나중에 보기 위해 저장</string>
+    <string name="feeds_saved_remove">저장됨에서 제거</string>
+    <string name="feeds_saved_clear_all">모두 지우기</string>
+    <string name="feeds_saved_clear_confirm_title">저장된 게시물을 모두 지우시겠어요?</string>
+    <string name="feeds_saved_clear_confirm_body">저장 목록에서 모든 게시물이 제거됩니다. 이 작업은 되돌릴 수 없습니다.</string>
+    <string name="feeds_saved_empty_title">아직 저장된 항목 없음</string>
+    <string name="feeds_saved_empty_subtitle">게시물의 북마크를 탭하여 여기에 나중에 보기 위해 저장하세요.</string>
+    <string name="feeds_saved_error_clear">저장된 게시물을 지우지 못했습니다</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">새 게시물 %d개</item>
+    </plurals>
 </resources>

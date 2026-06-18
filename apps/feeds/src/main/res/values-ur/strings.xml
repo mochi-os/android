@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">دلچسپی کم کر دی گئی</string>
     <string name="feeds_interest_removed">دلچسپی ہٹا دی گئی</string>
     <string name="feeds_interest_failed">دلچسپی ایڈجسٹ کرنے میں ناکامی</string>
+    <string name="feeds_saved_title">محفوظ ہو گیا</string>
+    <string name="feeds_saved_menu">محفوظ ہو گیا</string>
+    <string name="feeds_saved_save">بعد کے لیے محفوظ کریں</string>
+    <string name="feeds_saved_remove">محفوظ شدہ سے ہٹائیں</string>
+    <string name="feeds_saved_clear_all">سب صاف کریں</string>
+    <string name="feeds_saved_clear_confirm_title">تمام محفوظ شدہ پوسٹس صاف کریں؟</string>
+    <string name="feeds_saved_clear_confirm_body">یہ آپ کی محفوظ شدہ فہرست سے ہر پوسٹ کو ہٹا دیتا ہے۔ اسے واپس نہیں کیا جا سکتا۔</string>
+    <string name="feeds_saved_empty_title">ابھی تک کچھ بھی محفوظ نہیں ہوا</string>
+    <string name="feeds_saved_empty_subtitle">کسی بھی پوسٹ کو یہاں بعد کے لیے محفوظ کرنے کے لیے اس کے بک مارک پر ٹیپ کریں۔</string>
+    <string name="feeds_saved_error_clear">محفوظ شدہ پوسٹس صاف کرنے میں ناکام</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d نئی پوسٹ</item>
+        <item quantity="other">%d نئی پوسٹس</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Áhugaefni minnkað</string>
     <string name="feeds_interest_removed">Áhugaefni fjarlægt</string>
     <string name="feeds_interest_failed">Tókst ekki að breyta áhugaefni</string>
+    <string name="feeds_saved_title">Vistað</string>
+    <string name="feeds_saved_menu">Vistað</string>
+    <string name="feeds_saved_save">Vista til síðari tíma</string>
+    <string name="feeds_saved_remove">Fjarlægja úr vistuðu</string>
+    <string name="feeds_saved_clear_all">Hreinsa allt</string>
+    <string name="feeds_saved_clear_confirm_title">Hreinsa allar vistaðar færslur?</string>
+    <string name="feeds_saved_clear_confirm_body">Þetta fjarlægir allar færslur af vistaða listanum þínum. Ekki er hægt að afturkalla þetta.</string>
+    <string name="feeds_saved_empty_title">Ekkert vistað enn</string>
+    <string name="feeds_saved_empty_subtitle">Pikkaðu á bókamerkið á hvaða færslu sem er til að vista hana hér til síðari tíma.</string>
+    <string name="feeds_saved_error_clear">Mistókst að hreinsa vistaðar færslur</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d ný færsla</item>
+        <item quantity="other">%d nýjar færslur</item>
+    </plurals>
 </resources>

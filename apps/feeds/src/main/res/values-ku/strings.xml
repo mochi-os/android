@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Balkêşî hat kêmkirin</string>
     <string name="feeds_interest_removed">Balkêşî hat rakirin</string>
     <string name="feeds_interest_failed">Eyarkirina balkêşiyê neserkeftî bû</string>
+    <string name="feeds_saved_title">Hatiye tomarkirin</string>
+    <string name="feeds_saved_menu">Hatiye tomarkirin</string>
+    <string name="feeds_saved_save">Bo paşê tomar bike</string>
+    <string name="feeds_saved_remove">Ji tomarkiriyan rake</string>
+    <string name="feeds_saved_clear_all">Hemûyan paqij bike</string>
+    <string name="feeds_saved_clear_confirm_title">Hemû şandiyên tomarkirî paqij bikim?</string>
+    <string name="feeds_saved_clear_confirm_body">Ev her şandiyê ji lîsteya tomarkiriyên te radike. Ev nayê vegerandin.</string>
+    <string name="feeds_saved_empty_title">Hîn tu tişt nehatiye tomarkirin</string>
+    <string name="feeds_saved_empty_subtitle">Ji bo tomarkirina her şandiyekê li vir bo paşê, li nîşana wê bitikîne.</string>
+    <string name="feeds_saved_error_clear">Paqijkirina şandiyên tomarkirî serneket</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d şandiyê nû</item>
+        <item quantity="other">%d şandiyên nû</item>
+    </plurals>
 </resources>

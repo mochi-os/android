@@ -200,4 +200,20 @@
     <string name="feeds_interest_reduced">Цікавасць зніжана</string>
     <string name="feeds_interest_removed">Цікавасць выдалена</string>
     <string name="feeds_interest_failed">Не ўдалося скарэктаваць інтарэс</string>
+    <string name="feeds_saved_title">Захавана</string>
+    <string name="feeds_saved_menu">Захавана</string>
+    <string name="feeds_saved_save">Захаваць на потым</string>
+    <string name="feeds_saved_remove">Выдаліць са збярэжаных</string>
+    <string name="feeds_saved_clear_all">Ачысціць усё</string>
+    <string name="feeds_saved_clear_confirm_title">Ачысціць усе захаваныя допісы?</string>
+    <string name="feeds_saved_clear_confirm_body">Гэта выдаліць кожны допіс са спіса захаваных. Гэта нельга адмяніць.</string>
+    <string name="feeds_saved_empty_title">Пакуль нічога не захавана</string>
+    <string name="feeds_saved_empty_subtitle">Націсніце закладку на любым допісе, каб захаваць яго тут на потым.</string>
+    <string name="feeds_saved_error_clear">Не ўдалося ачысціць захаваныя допісы</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d новы допіс</item>
+        <item quantity="few">%d новыя допісы</item>
+        <item quantity="many">%d новых допісаў</item>
+        <item quantity="other">%d новага допісу</item>
+    </plurals>
 </resources>

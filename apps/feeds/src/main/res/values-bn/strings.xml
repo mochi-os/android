@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">আগ্রহ কমানো হয়েছে</string>
     <string name="feeds_interest_removed">আগ্রহ সরানো হয়েছে</string>
     <string name="feeds_interest_failed">আগ্রহ সামঞ্জস্য করতে ব্যর্থ</string>
+    <string name="feeds_saved_title">সংরক্ষিত</string>
+    <string name="feeds_saved_menu">সংরক্ষিত</string>
+    <string name="feeds_saved_save">পরে দেখার জন্য সংরক্ষণ করুন</string>
+    <string name="feeds_saved_remove">সংরক্ষিত থেকে সরান</string>
+    <string name="feeds_saved_clear_all">সব পরিষ্কার করুন</string>
+    <string name="feeds_saved_clear_confirm_title">সব সংরক্ষিত পোস্ট মুছে ফেলবেন?</string>
+    <string name="feeds_saved_clear_confirm_body">এটি আপনার সংরক্ষিত তালিকা থেকে প্রতিটি পোস্ট সরিয়ে দেবে। এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
+    <string name="feeds_saved_empty_title">এখনো কিছুই সংরক্ষণ করা হয়নি</string>
+    <string name="feeds_saved_empty_subtitle">পরে দেখার জন্য এখানে সংরক্ষণ করতে যেকোনো পোস্টের বুকমার্কে ট্যাপ করুন।</string>
+    <string name="feeds_saved_error_clear">সংরক্ষিত পোস্ট মোছা যায়নি</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d নতুন পোস্ট</item>
+        <item quantity="other">%d নতুন পোস্ট</item>
+    </plurals>
 </resources>

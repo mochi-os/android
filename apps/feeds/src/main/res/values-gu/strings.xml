@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">રુચિ ઘટાડી</string>
     <string name="feeds_interest_removed">રુચિ દૂર કરી</string>
     <string name="feeds_interest_failed">રુચિ ગોઠવવામાં નિષ્ફળ</string>
+    <string name="feeds_saved_title">સાચવ્યું</string>
+    <string name="feeds_saved_menu">સાચવ્યું</string>
+    <string name="feeds_saved_save">પછી માટે સાચવો</string>
+    <string name="feeds_saved_remove">સાચવેલમાંથી દૂર કરો</string>
+    <string name="feeds_saved_clear_all">બધું સાફ કરો</string>
+    <string name="feeds_saved_clear_confirm_title">બધી સાચવેલ પોસ્ટ સાફ કરવી છે?</string>
+    <string name="feeds_saved_clear_confirm_body">આ તમારી સાચવેલ સૂચિમાંથી દરેક પોસ્ટ દૂર કરે છે. આ પાછું વાળી શકાતું નથી.</string>
+    <string name="feeds_saved_empty_title">હજુ સુધી કંઈ સાચવ્યું નથી</string>
+    <string name="feeds_saved_empty_subtitle">કોઈપણ પોસ્ટને અહીં પછી માટે સાચવવા તેના બુકમાર્ક પર ટૅપ કરો.</string>
+    <string name="feeds_saved_error_clear">સાચવેલ પોસ્ટ સાફ કરવામાં નિષ્ફળ</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d નવી પોસ્ટ</item>
+        <item quantity="other">%d નવી પોસ્ટ</item>
+    </plurals>
 </resources>

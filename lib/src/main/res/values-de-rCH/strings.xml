@@ -263,4 +263,24 @@
     <string name="reactivation_body_dated">Ihr Konto und alle zugehörigen Daten werden am %1$s endgültig gelöscht. Sie können den Vorgang jetzt abbrechen und den vollen Zugriff wiederherstellen.</string>
     <string name="reactivation_reactivate">Mein Konto reaktivieren</string>
     <string name="reactivation_sign_out">Schliessen fortsetzen und abmelden</string>
+    <string name="game_system_resign">%1$s hat aufgegeben</string>
+    <string name="game_system_draw_offer">%1$s hat ein Remis angeboten</string>
+    <string name="game_system_draw_accept">Remis vereinbart</string>
+    <string name="game_system_draw_decline">%1$s hat das Remis abgelehnt</string>
+    <string name="stepup_title">Bestätigen Sie, dass Sie es sind</string>
+    <string name="stepup_description">Dies ist eine sicherheitsrelevante Änderung an Ihrem Konto. Bestätigen Sie Ihre Identität, um fortzufahren.</string>
+    <string name="stepup_email_label">E-Mail-Code</string>
+    <string name="stepup_email_placeholder">Code aus deiner E-Mail eingeben</string>
+    <string name="stepup_totp_label">Authenticator-Code</string>
+    <string name="stepup_totp_placeholder">Code Ihrer Authenticator-App eingeben</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Passkey verwenden</string>
+    <string name="stepup_send_email">E-Mail senden</string>
+    <string name="stepup_resend_email">E-Mail erneut senden</string>
+    <string name="stepup_verify">Verifizieren</string>
+    <string name="stepup_continue_with">Mit %1$s fortsetzen</string>
+    <string name="stepup_error_start">Die erneute Authentifizierung konnte nicht gestartet werden. Bitte versuchen Sie es erneut.</string>
+    <string name="stepup_error_code">Dieser Code ist falsch oder abgelaufen.</string>
+    <string name="stepup_error_passkey">Die Passkey-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
+    <string name="stepup_error_oauth">Verifizierung mit diesem Konto fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
 </resources>

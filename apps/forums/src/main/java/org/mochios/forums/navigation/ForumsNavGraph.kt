@@ -13,6 +13,7 @@ import org.mochios.forums.ui.moderation.ForumModerationSettingsScreen
 import org.mochios.forums.ui.newpost.NewPostScreen
 import org.mochios.forums.ui.post.PostScreen
 import org.mochios.forums.ui.router.ForumsRouter
+import org.mochios.forums.ui.saved.SavedScreen
 import org.mochios.forums.ui.settings.ForumSettingsScreen
 
 object ForumsApp {
@@ -29,6 +30,7 @@ object ForumsApp {
     const val FORUM_SETTINGS = "forums/forum/{forumId}/settings"
     const val MODERATION = "forums/forum/{forumId}/moderation"
     const val MODERATION_SETTINGS = "forums/forum/{forumId}/moderation/settings"
+    const val SAVED = "forums/saved"
 
     fun forum(forumId: String) = "forums/forum/$forumId"
     fun post(forumId: String, postId: String) = "forums/forum/$forumId/post/$postId"
@@ -75,8 +77,18 @@ fun NavGraphBuilder.forumsNavGraph(
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },
             onFindForums = { navController.navigate(ForumsApp.FIND_FORUMS) },
             onSettings = { fId -> navController.navigate(ForumsApp.forumSettings(fId)) },
+            onNavigateToSaved = { navController.navigate(ForumsApp.SAVED) },
             onOpenNotifications = onOpenNotifications,
             onLogout = onLogout,
+        )
+    }
+
+    composable(ForumsApp.SAVED) {
+        SavedScreen(
+            onNavigateBack = { navController.popBackStack() },
+            onOpenPost = { forumId, postId ->
+                navController.navigate(ForumsApp.post(forumId, postId))
+            },
         )
     }
 

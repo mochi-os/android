@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesse reduziert</string>
     <string name="feeds_interest_removed">Interesse entfernt</string>
     <string name="feeds_interest_failed">Interesse konnte nicht angepasst werden</string>
+    <string name="feeds_saved_title">Gespeichert</string>
+    <string name="feeds_saved_menu">Gespeichert</string>
+    <string name="feeds_saved_save">Für später speichern</string>
+    <string name="feeds_saved_remove">Aus Gespeichertem entfernen</string>
+    <string name="feeds_saved_clear_all">Alle leeren</string>
+    <string name="feeds_saved_clear_confirm_title">Alle gespeicherten Beiträge löschen?</string>
+    <string name="feeds_saved_clear_confirm_body">Dadurch werden alle Beiträge aus deiner Liste der gespeicherten Beiträge entfernt. Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="feeds_saved_empty_title">Noch nichts gespeichert</string>
+    <string name="feeds_saved_empty_subtitle">Tippe auf das Lesezeichen eines Beitrags, um ihn hier für später zu speichern.</string>
+    <string name="feeds_saved_error_clear">Gespeicherte Beiträge konnten nicht gelöscht werden</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d neuer Beitrag</item>
+        <item quantity="other">%d neue Beiträge</item>
+    </plurals>
 </resources>

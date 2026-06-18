@@ -207,4 +207,18 @@
     <string name="forums_access_tab_manual">Ručno</string>
     <string name="forums_access_search_users">Pretraži korisnike</string>
     <string name="forums_access_no_groups">Nema dostupnih grupa</string>
+    <string name="forums_saved_title">Spremljeno</string>
+    <string name="forums_saved_save">Spremi za poslije</string>
+    <string name="forums_saved_remove">Ukloni iz spremljenih</string>
+    <string name="forums_saved_clear_all">Očisti sve</string>
+    <string name="forums_saved_clear_confirm_title">Obrisati sve spremljene objave?</string>
+    <string name="forums_saved_clear_confirm_body">Time se uklanja svaka objava s vašeg popisa spremljenih. To se ne može poništiti.</string>
+    <string name="forums_saved_empty_title">Još ništa nije spremljeno</string>
+    <string name="forums_saved_empty_subtitle">Dodirnite oznaku na bilo kojoj objavi da je spremite ovdje za poslije.</string>
+    <string name="forums_saved_error_clear">Spremljene objave nije moguće obrisati</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nova objava</item>
+        <item quantity="few">%d nove objave</item>
+        <item quantity="other">%d novih objava</item>
+    </plurals>
 </resources>

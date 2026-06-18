@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Кызыкчылык азайтылды</string>
     <string name="feeds_interest_removed">Кызыкчылык алынып салынды</string>
     <string name="feeds_interest_failed">Кызыкчылыкты тууралоо ишке ашкан жок</string>
+    <string name="feeds_saved_title">Сакталды</string>
+    <string name="feeds_saved_menu">Сакталды</string>
+    <string name="feeds_saved_save">Кийинкиге сактоо</string>
+    <string name="feeds_saved_remove">Сакталгандардан өчүрүү</string>
+    <string name="feeds_saved_clear_all">Баарын тазалоо</string>
+    <string name="feeds_saved_clear_confirm_title">Бардык сакталган жазууларды тазалайсызбы?</string>
+    <string name="feeds_saved_clear_confirm_body">Бул сиздин сакталгандар тизмеңизден ар бир жазууну өчүрөт. Муну кайтаруу мүмкүн эмес.</string>
+    <string name="feeds_saved_empty_title">Азырынча эч нерсе сакталган жок</string>
+    <string name="feeds_saved_empty_subtitle">Каалаган жазууну бул жерге кийинкиге сактоо үчүн анын чкатчасын басыңыз.</string>
+    <string name="feeds_saved_error_clear">Сакталган жазууларды тазалоо ишке ашкан жок</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d жаңы жазуу</item>
+        <item quantity="other">%d жаңы жазуу</item>
+    </plurals>
 </resources>

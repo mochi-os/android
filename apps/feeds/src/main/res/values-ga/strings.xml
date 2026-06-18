@@ -198,4 +198,21 @@
     <string name="feeds_interest_reduced">Suim laghdaithe</string>
     <string name="feeds_interest_removed">Suim bainte</string>
     <string name="feeds_interest_failed">Theip ar shuim a choigeartú</string>
+    <string name="feeds_saved_title">Sábháilte</string>
+    <string name="feeds_saved_menu">Sábháilte</string>
+    <string name="feeds_saved_save">Sábháil do níos déanaí</string>
+    <string name="feeds_saved_remove">Bain ó na cinn shábháilte</string>
+    <string name="feeds_saved_clear_all">Glan an t-iomlán</string>
+    <string name="feeds_saved_clear_confirm_title">Glan gach postáil shábháilte?</string>
+    <string name="feeds_saved_clear_confirm_body">Baineann sé seo gach postáil ó do liosta sábháilte. Ní féidir é seo a chealú.</string>
+    <string name="feeds_saved_empty_title">Níl aon rud sábháilte fós</string>
+    <string name="feeds_saved_empty_subtitle">Tapáil an leabharmharc ar phostáil ar bith chun é a shábháil anseo do níos déanaí.</string>
+    <string name="feeds_saved_error_clear">Theip ar na postálacha sábháilte a ghlanadh</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d phostáil nua</item>
+        <item quantity="two">%d phostáil nua</item>
+        <item quantity="few">%d phostáil nua</item>
+        <item quantity="many">%d bpostáil nua</item>
+        <item quantity="other">%d postáil nua</item>
+    </plurals>
 </resources>

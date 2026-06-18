@@ -19,6 +19,8 @@ import org.mochios.forums.model.ModerationSettingsResponse
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.RecommendedForum
 import org.mochios.forums.model.Restriction
+import org.mochios.forums.model.SavedListResponse
+import org.mochios.forums.model.SavedToggleResponse
 import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -163,6 +165,27 @@ interface ForumsApi {
 
     @GET("-/new")
     suspend fun getNewForum(): Response<ApiResponse<Map<String, Any>>>
+
+    // ---- Saved (read-later) — class-level, per-user list spanning all forums ----
+
+    @POST("-/saved/list")
+    suspend fun listSaved(): Response<ApiResponse<SavedListResponse>>
+
+    @FormUrlEncoded
+    @POST("-/saved/add")
+    suspend fun addSaved(
+        @Field("post") post: String,
+        @Field("data") data: String
+    ): Response<ApiResponse<SavedToggleResponse>>
+
+    @FormUrlEncoded
+    @POST("-/saved/remove")
+    suspend fun removeSaved(
+        @Field("post") post: String
+    ): Response<ApiResponse<SavedToggleResponse>>
+
+    @POST("-/saved/clear")
+    suspend fun clearSaved(): Response<ApiResponse<SavedToggleResponse>>
 
     @FormUrlEncoded
     @POST("-/create")

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Kiinnostusta vähennetty</string>
     <string name="feeds_interest_removed">Kiinnostus poistettu</string>
     <string name="feeds_interest_failed">Kiinnostuksen kohteen säätäminen epäonnistui</string>
+    <string name="feeds_saved_title">Tallennettu</string>
+    <string name="feeds_saved_menu">Tallennettu</string>
+    <string name="feeds_saved_save">Tallenna myöhemmäksi</string>
+    <string name="feeds_saved_remove">Poista tallennetuista</string>
+    <string name="feeds_saved_clear_all">Tyhjennä kaikki</string>
+    <string name="feeds_saved_clear_confirm_title">Tyhjennetäänkö kaikki tallennetut julkaisut?</string>
+    <string name="feeds_saved_clear_confirm_body">Tämä poistaa kaikki julkaisut tallennettujen luettelosta. Tätä ei voi kumota.</string>
+    <string name="feeds_saved_empty_title">Mitään ei ole vielä tallennettu</string>
+    <string name="feeds_saved_empty_subtitle">Tallenna julkaisu tähän myöhemmäksi napauttamalla sen kirjanmerkkiä.</string>
+    <string name="feeds_saved_error_clear">Tallennettujen julkaisujen tyhjentäminen epäonnistui</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d uusi julkaisu</item>
+        <item quantity="other">%d uutta julkaisua</item>
+    </plurals>
 </resources>

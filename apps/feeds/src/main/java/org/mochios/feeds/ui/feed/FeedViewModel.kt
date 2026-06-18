@@ -27,6 +27,7 @@ import org.mochios.feeds.model.Post
 import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
+import org.mochios.feeds.repository.SavedRepository
 import javax.inject.Inject
 
 private const val PREFS = "mochi_feeds"
@@ -42,10 +43,20 @@ sealed interface InterestFeedback {
 class FeedViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: FeedsRepository,
+    private val savedRepository: SavedRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
     @ApplicationContext private val context: Context,
 ) : ViewModel() {
+
+    /** Set of post ids the user has saved, mirrored from [SavedRepository] so
+     *  each post card can show its bookmark filled/empty without awaiting. */
+    val savedIds: StateFlow<Set<String>> = savedRepository.savedIds
+
+    /** Count of real-time new posts queued behind the "new posts" pill rather
+     *  than injected into the pager while the user is reading. */
+    private val _newPostsCount = MutableStateFlow(0)
+    val newPostsCount: StateFlow<Int> = _newPostsCount.asStateFlow()
 
     private val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 
@@ -109,6 +120,7 @@ class FeedViewModel @Inject constructor(
     init {
         loadFeed()
         subscribeToWebSocket()
+        viewModelScope.launch { savedRepository.load() }
     }
 
     // Mark this feed's notifications read on the server (clear/object), so the
@@ -373,6 +385,18 @@ class FeedViewModel @Inject constructor(
         _unreadOnly.value = unreadOnly
         prefs.edit().putBoolean(KEY_UNREAD_ONLY, unreadOnly).apply()
         reloadPosts()
+    }
+
+    /** Toggle the saved ("read-later") state of a post. The bookmark fill
+     *  updates optimistically via [savedIds]; a failed call reverts it. */
+    fun toggleSave(post: Post) {
+        viewModelScope.launch {
+            try {
+                savedRepository.toggle(post)
+            } catch (_: Exception) {
+                // SavedRepository already reverted the optimistic mirror update.
+            }
+        }
     }
 
     fun reactToPost(feed: String, postId: String, reaction: String) {
@@ -644,7 +668,12 @@ class FeedViewModel @Inject constructor(
             // Server event types are slash-namespaced (feeds.star commit hook
             // + handlers); the old underscore names never matched anything.
             when (event.type) {
-                "post/create", "post/edit", "post/delete",
+                // A brand-new post is queued behind the "new posts" pill so the
+                // pager doesn't shift under the reader; tapping it refreshes.
+                "post/create" -> {
+                    _newPostsCount.value += 1
+                }
+                "post/edit", "post/delete",
                 "comment/create", "comment/edit", "comment/delete",
                 "react/post", "react/comment", "tag/add", "tag/remove" -> {
                     viewModelScope.launch { refreshSilently() }
@@ -664,9 +693,17 @@ class FeedViewModel @Inject constructor(
             _posts.value = result.posts
             _hasMore.value = result.hasMore
             nextCursor = result.nextCursor
+            // The fresh list incorporates any queued posts — clear the pill.
+            _newPostsCount.value = 0
         } catch (_: Exception) {
             // Silent failure
         }
+    }
+
+    /** Reveal the queued new posts: refresh the list and clear the pill. The
+     *  screen also scrolls the pager to the top when this is invoked. */
+    fun showNewPosts() {
+        viewModelScope.launch { refreshSilently() }
     }
 
     override fun onCleared() {

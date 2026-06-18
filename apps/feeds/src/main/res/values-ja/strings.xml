@@ -198,4 +198,17 @@
     <string name="feeds_interest_reduced">興味を弱めました</string>
     <string name="feeds_interest_removed">興味を削除しました</string>
     <string name="feeds_interest_failed">興味の調整に失敗しました</string>
+    <string name="feeds_saved_title">保存しました</string>
+    <string name="feeds_saved_menu">保存しました</string>
+    <string name="feeds_saved_save">後で見るために保存</string>
+    <string name="feeds_saved_remove">保存済みから削除</string>
+    <string name="feeds_saved_clear_all">すべてクリア</string>
+    <string name="feeds_saved_clear_confirm_title">保存したすべての投稿を消去しますか？</string>
+    <string name="feeds_saved_clear_confirm_body">これにより、保存リストからすべての投稿が削除されます。元に戻すことはできません。</string>
+    <string name="feeds_saved_empty_title">まだ何も保存されていません</string>
+    <string name="feeds_saved_empty_subtitle">投稿のブックマークをタップすると、ここに後で見るために保存できます。</string>
+    <string name="feeds_saved_error_clear">保存した投稿を消去できませんでした</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">%d 件の新着投稿</item>
+    </plurals>
 </resources>

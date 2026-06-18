@@ -198,4 +198,20 @@
     <string name="feeds_interest_reduced">תחום העניין הופחת</string>
     <string name="feeds_interest_removed">תחום העניין הוסר</string>
     <string name="feeds_interest_failed">התאמת תחום העניין נכשלה</string>
+    <string name="feeds_saved_title">נשמר</string>
+    <string name="feeds_saved_menu">נשמר</string>
+    <string name="feeds_saved_save">שמירה למועד מאוחר יותר</string>
+    <string name="feeds_saved_remove">הסרה מהשמורים</string>
+    <string name="feeds_saved_clear_all">נקה הכול</string>
+    <string name="feeds_saved_clear_confirm_title">לנקות את כל הפוסטים השמורים?</string>
+    <string name="feeds_saved_clear_confirm_body">פעולה זו מסירה כל פוסט מרשימת השמורים שלך. לא ניתן לבטל זאת.</string>
+    <string name="feeds_saved_empty_title">עדיין לא נשמר דבר</string>
+    <string name="feeds_saved_empty_subtitle">הקש על הסימנייה של כל פוסט כדי לשמור אותו כאן למועד מאוחר יותר.</string>
+    <string name="feeds_saved_error_clear">ניקוי הפוסטים השמורים נכשל</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">פוסט חדש אחד</item>
+        <item quantity="two">%d פוסטים חדשים</item>
+        <item quantity="many">%d פוסטים חדשים</item>
+        <item quantity="other">%d פוסטים חדשים</item>
+    </plurals>
 </resources>

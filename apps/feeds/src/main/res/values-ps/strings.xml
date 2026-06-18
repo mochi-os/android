@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">علاقه کمه شوه</string>
     <string name="feeds_interest_removed">علاقه لیرې شوه</string>
     <string name="feeds_interest_failed">د علاقې تنظیمولو پاتې راغلل</string>
+    <string name="feeds_saved_title">خوندي شو</string>
+    <string name="feeds_saved_menu">خوندي شو</string>
+    <string name="feeds_saved_save">د وروسته لپاره خوندي کړئ</string>
+    <string name="feeds_saved_remove">له خوندي شویو لرې کړئ</string>
+    <string name="feeds_saved_clear_all">ټول پاک کړئ</string>
+    <string name="feeds_saved_clear_confirm_title">ټول خوندي شوي پوستونه پاک کړئ؟</string>
+    <string name="feeds_saved_clear_confirm_body">دا ستاسو د خوندي شویو له لیست څخه هر پوست لرې کوي. دا بیرته نشي کیدی.</string>
+    <string name="feeds_saved_empty_title">لا تر اوسه څه نه دي خوندي شوي</string>
+    <string name="feeds_saved_empty_subtitle">د دې لپاره چې هر پوست دلته د وروسته لپاره خوندي کړئ، د هغه نښه ووهئ.</string>
+    <string name="feeds_saved_error_clear">د خوندي شویو پوستونو پاکول ناکام شو</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d نوی پوست</item>
+        <item quantity="other">%d نوي پوستونه</item>
+    </plurals>
 </resources>

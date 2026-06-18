@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesi u zvogëlua</string>
     <string name="feeds_interest_removed">Interesi u hoq</string>
     <string name="feeds_interest_failed">Rregullimi i interesit dështoi</string>
+    <string name="feeds_saved_title">I ruajtur</string>
+    <string name="feeds_saved_menu">I ruajtur</string>
+    <string name="feeds_saved_save">Ruaj për më vonë</string>
+    <string name="feeds_saved_remove">Hiq nga të ruajturat</string>
+    <string name="feeds_saved_clear_all">Pastro të gjitha</string>
+    <string name="feeds_saved_clear_confirm_title">Të pastrohen të gjitha postimet e ruajtura?</string>
+    <string name="feeds_saved_clear_confirm_body">Kjo heq çdo postim nga lista juaj e të ruajturave. Ky veprim nuk mund të zhbëhet.</string>
+    <string name="feeds_saved_empty_title">Asgjë ende e ruajtur</string>
+    <string name="feeds_saved_empty_subtitle">Trokit te faqeruajtësi i çdo postimi për ta ruajtur këtu për më vonë.</string>
+    <string name="feeds_saved_error_clear">Pastrimi i postimeve të ruajtura dështoi</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d postim i ri</item>
+        <item quantity="other">%d postime të reja</item>
+    </plurals>
 </resources>

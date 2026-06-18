@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Søk i brukere</string>
     <string name="forums_access_no_groups">Ingen grupper tilgjengelig</string>
+    <string name="forums_saved_title">Lagret</string>
+    <string name="forums_saved_save">Lagre til senere</string>
+    <string name="forums_saved_remove">Fjern fra lagrede</string>
+    <string name="forums_saved_clear_all">Tøm alt</string>
+    <string name="forums_saved_clear_confirm_title">Tømme alle lagrede innlegg?</string>
+    <string name="forums_saved_clear_confirm_body">Dette fjerner alle innlegg fra listen din over lagrede. Dette kan ikke angres.</string>
+    <string name="forums_saved_empty_title">Ingenting lagret ennå</string>
+    <string name="forums_saved_empty_subtitle">Trykk på bokmerket på et innlegg for å lagre det her til senere.</string>
+    <string name="forums_saved_error_clear">Kunne ikke tømme lagrede innlegg</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nytt innlegg</item>
+        <item quantity="other">%d nye innlegg</item>
+    </plurals>
 </resources>

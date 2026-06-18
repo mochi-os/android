@@ -198,4 +198,20 @@
     <string name="feeds_interest_reduced">Інтерес знижено</string>
     <string name="feeds_interest_removed">Інтерес видалено</string>
     <string name="feeds_interest_failed">Не вдалося скоригувати інтерес</string>
+    <string name="feeds_saved_title">Збережено</string>
+    <string name="feeds_saved_menu">Збережено</string>
+    <string name="feeds_saved_save">Зберегти на потім</string>
+    <string name="feeds_saved_remove">Видалити зі збережених</string>
+    <string name="feeds_saved_clear_all">Очистити все</string>
+    <string name="feeds_saved_clear_confirm_title">Очистити всі збережені дописи?</string>
+    <string name="feeds_saved_clear_confirm_body">Це видалить кожен допис із вашого списку збережених. Цю дію не можна скасувати.</string>
+    <string name="feeds_saved_empty_title">Поки нічого не збережено</string>
+    <string name="feeds_saved_empty_subtitle">Торкніться закладки на будь-якому дописі, щоб зберегти його тут на потім.</string>
+    <string name="feeds_saved_error_clear">Не вдалося очистити збережені дописи</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d новий допис</item>
+        <item quantity="few">%d нові дописи</item>
+        <item quantity="many">%d нових дописів</item>
+        <item quantity="other">%d нового допису</item>
+    </plurals>
 </resources>

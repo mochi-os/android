@@ -263,4 +263,23 @@
     <string name="reactivation_body_dated">Votre compte et toutes ses données seront supprimés définitivement le %1$s. Vous pouvez annuler et rétablir l\'accès complet dès maintenant.</string>
     <string name="reactivation_reactivate">Réactiver mon compte</string>
     <string name="reactivation_sign_out">Continuer la fermeture et se déconnecter</string>
+    <string name="game_system_resign">%1$s a abandonné</string>
+    <string name="game_system_draw_offer">%1$s a proposé la nulle</string>
+    <string name="game_system_draw_accept">Nulle acceptée</string>
+    <string name="game_system_draw_decline">%1$s a refusé la nulle</string>
+    <string name="stepup_title">Confirmez votre identité</string>
+    <string name="stepup_description">Il s\'agit d\'une modification de sécurité de votre compte. Vérifiez votre identité pour continuer.</string>
+    <string name="stepup_email_placeholder">Saisissez le code reçu par e-mail</string>
+    <string name="stepup_totp_label">Code d\'authentification</string>
+    <string name="stepup_totp_placeholder">Saisissez le code de votre application d\'authentification</string>
+    <string name="stepup_passkey_label">Clé d\'accès</string>
+    <string name="stepup_use_passkey">Utiliser votre clé d\'accès</string>
+    <string name="stepup_send_email">Envoyer l\'e-mail</string>
+    <string name="stepup_resend_email">Renvoyer l\'e-mail</string>
+    <string name="stepup_verify">Vérifier</string>
+    <string name="stepup_continue_with">Continuer avec %1$s</string>
+    <string name="stepup_error_start">Impossible de démarrer la réauthentification. Veuillez réessayer.</string>
+    <string name="stepup_error_code">Ce code est incorrect ou a expiré.</string>
+    <string name="stepup_error_passkey">La vérification par clé d\'accès a échoué. Veuillez réessayer.</string>
+    <string name="stepup_error_oauth">Impossible de vérifier avec ce compte. Veuillez réessayer.</string>
 </resources>

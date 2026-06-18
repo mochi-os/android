@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Kërko përdorues</string>
     <string name="forums_access_no_groups">Asnjë grup i disponueshëm</string>
+    <string name="forums_saved_title">I ruajtur</string>
+    <string name="forums_saved_save">Ruaj për më vonë</string>
+    <string name="forums_saved_remove">Hiq nga të ruajturat</string>
+    <string name="forums_saved_clear_all">Pastro të gjitha</string>
+    <string name="forums_saved_clear_confirm_title">Të pastrohen të gjitha postimet e ruajtura?</string>
+    <string name="forums_saved_clear_confirm_body">Kjo heq çdo postim nga lista juaj e të ruajturave. Ky veprim nuk mund të zhbëhet.</string>
+    <string name="forums_saved_empty_title">Asgjë ende e ruajtur</string>
+    <string name="forums_saved_empty_subtitle">Trokit te faqeruajtësi i çdo postimi për ta ruajtur këtu për më vonë.</string>
+    <string name="forums_saved_error_clear">Pastrimi i postimeve të ruajtura dështoi</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d postim i ri</item>
+        <item quantity="other">%d postime të reja</item>
+    </plurals>
 </resources>

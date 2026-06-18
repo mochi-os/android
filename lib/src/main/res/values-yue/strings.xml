@@ -269,4 +269,17 @@
     <string name="reactivation_body_dated">你嘅帳戶同埋所有資料將會喺 %1$s 永久刪除。你而家可以取消並回復完整存取權限。</string>
     <string name="reactivation_reactivate">重新啟用我嘅帳戶</string>
     <string name="reactivation_sign_out">繼續關閉並登出</string>
+    <string name="game_system_resign">%1$s 認輸</string>
+    <string name="game_system_draw_offer">%1$s 提出和棋</string>
+    <string name="game_system_draw_accept">同意和棋</string>
+    <string name="game_system_draw_decline">%1$s 拒絕和棋</string>
+    <string name="stepup_email_label">電子郵件代碼</string>
+    <string name="stepup_email_placeholder">輸入電子郵件中的驗證碼</string>
+    <string name="stepup_totp_label">驗證器代碼</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_send_email">傳送郵件</string>
+    <string name="stepup_resend_email">重新發送電郵</string>
+    <string name="stepup_verify">驗證</string>
+    <string name="stepup_continue_with">使用 %1$s 繼續</string>
+    <string name="stepup_error_oauth">無法使用該帳戶進行驗證。請重試。</string>
 </resources>

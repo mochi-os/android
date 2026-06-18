@@ -207,4 +207,19 @@
     <string name="forums_access_tab_manual">ידני</string>
     <string name="forums_access_search_users">חפש משתמשים</string>
     <string name="forums_access_no_groups">אין קבוצות זמינות</string>
+    <string name="forums_saved_title">נשמר</string>
+    <string name="forums_saved_save">שמירה למועד מאוחר יותר</string>
+    <string name="forums_saved_remove">הסרה מהשמורים</string>
+    <string name="forums_saved_clear_all">נקה הכול</string>
+    <string name="forums_saved_clear_confirm_title">לנקות את כל הפוסטים השמורים?</string>
+    <string name="forums_saved_clear_confirm_body">פעולה זו מסירה כל פוסט מרשימת השמורים שלך. לא ניתן לבטל זאת.</string>
+    <string name="forums_saved_empty_title">עדיין לא נשמר דבר</string>
+    <string name="forums_saved_empty_subtitle">הקש על הסימנייה של כל פוסט כדי לשמור אותו כאן למועד מאוחר יותר.</string>
+    <string name="forums_saved_error_clear">ניקוי הפוסטים השמורים נכשל</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">פוסט חדש אחד</item>
+        <item quantity="two">%d פוסטים חדשים</item>
+        <item quantity="many">%d פוסטים חדשים</item>
+        <item quantity="other">%d פוסטים חדשים</item>
+    </plurals>
 </resources>

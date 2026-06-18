@@ -198,4 +198,20 @@
     <string name="feeds_interest_reduced">Интерес снижен</string>
     <string name="feeds_interest_removed">Интерес удалён</string>
     <string name="feeds_interest_failed">Не удалось скорректировать интерес</string>
+    <string name="feeds_saved_title">Сохранено</string>
+    <string name="feeds_saved_menu">Сохранено</string>
+    <string name="feeds_saved_save">Сохранить на потом</string>
+    <string name="feeds_saved_remove">Удалить из сохранённого</string>
+    <string name="feeds_saved_clear_all">Очистить всё</string>
+    <string name="feeds_saved_clear_confirm_title">Очистить все сохранённые публикации?</string>
+    <string name="feeds_saved_clear_confirm_body">Это удалит каждую публикацию из вашего списка сохранённого. Это действие нельзя отменить.</string>
+    <string name="feeds_saved_empty_title">Пока ничего не сохранено</string>
+    <string name="feeds_saved_empty_subtitle">Коснитесь закладки на любой публикации, чтобы сохранить её здесь на потом.</string>
+    <string name="feeds_saved_error_clear">Не удалось очистить сохранённые публикации</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d новая публикация</item>
+        <item quantity="few">%d новые публикации</item>
+        <item quantity="many">%d новых публикаций</item>
+        <item quantity="other">%d новой публикации</item>
+    </plurals>
 </resources>

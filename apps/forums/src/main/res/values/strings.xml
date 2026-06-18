@@ -242,4 +242,17 @@
     <string name="forums_settings_delete_message">This will permanently delete the forum and all its posts. This cannot be undone.</string>
     <string name="forums_forum_not_found">Forum not found</string>
     <string name="forums_post_not_found">Post not found</string>
+    <string name="forums_saved_title">Saved</string>
+    <string name="forums_saved_save">Save for later</string>
+    <string name="forums_saved_remove">Remove from saved</string>
+    <string name="forums_saved_clear_all">Clear all</string>
+    <string name="forums_saved_clear_confirm_title">Clear all saved posts?</string>
+    <string name="forums_saved_clear_confirm_body">This removes every post from your saved list. This cannot be undone.</string>
+    <string name="forums_saved_empty_title">Nothing saved yet</string>
+    <string name="forums_saved_empty_subtitle">Tap the bookmark on any post to save it here for later.</string>
+    <string name="forums_saved_error_clear">Failed to clear saved posts</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d new post</item>
+        <item quantity="other">%d new posts</item>
+    </plurals>
 </resources>

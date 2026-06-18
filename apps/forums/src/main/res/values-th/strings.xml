@@ -207,4 +207,16 @@
     <string name="forums_access_tab_manual">คู่มือ</string>
     <string name="forums_access_search_users">ค้นหาผู้ใช้</string>
     <string name="forums_access_no_groups">ไม่มีกลุ่มที่ใช้งานได้</string>
+    <string name="forums_saved_title">บันทึกแล้ว</string>
+    <string name="forums_saved_save">บันทึกไว้ดูภายหลัง</string>
+    <string name="forums_saved_remove">นำออกจากที่บันทึก</string>
+    <string name="forums_saved_clear_all">ล้างทั้งหมด</string>
+    <string name="forums_saved_clear_confirm_title">ล้างโพสต์ที่บันทึกทั้งหมดไหม?</string>
+    <string name="forums_saved_clear_confirm_body">การทำเช่นนี้จะนำทุกโพสต์ออกจากรายการที่บันทึกของคุณ ไม่สามารถเลิกทำได้</string>
+    <string name="forums_saved_empty_title">ยังไม่มีรายการที่บันทึก</string>
+    <string name="forums_saved_empty_subtitle">แตะที่บุ๊กมาร์กบนโพสต์ใดก็ได้เพื่อบันทึกไว้ที่นี่สำหรับดูภายหลัง</string>
+    <string name="forums_saved_error_clear">ล้างโพสต์ที่บันทึกไม่สำเร็จ</string>
+    <plurals name="forums_new_posts">
+        <item quantity="other">%d โพสต์ใหม่</item>
+    </plurals>
 </resources>

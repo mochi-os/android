@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interés reducido</string>
     <string name="feeds_interest_removed">Interés eliminado</string>
     <string name="feeds_interest_failed">Error al ajustar el interés</string>
+    <string name="feeds_saved_title">Guardado</string>
+    <string name="feeds_saved_menu">Guardado</string>
+    <string name="feeds_saved_save">Guardar para más tarde</string>
+    <string name="feeds_saved_remove">Quitar de guardados</string>
+    <string name="feeds_saved_clear_all">Borrar todo</string>
+    <string name="feeds_saved_clear_confirm_title">¿Borrar todas las publicaciones guardadas?</string>
+    <string name="feeds_saved_clear_confirm_body">Esto quita todas las publicaciones de tu lista de guardados. No se puede deshacer.</string>
+    <string name="feeds_saved_empty_title">Aún no hay nada guardado</string>
+    <string name="feeds_saved_empty_subtitle">Toca el marcador de cualquier publicación para guardarla aquí para más tarde.</string>
+    <string name="feeds_saved_error_clear">No se pudieron borrar las publicaciones guardadas</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d publicación nueva</item>
+        <item quantity="other">%d publicaciones nuevas</item>
+    </plurals>
 </resources>

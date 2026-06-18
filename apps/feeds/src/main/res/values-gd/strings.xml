@@ -200,4 +200,20 @@
     <string name="feeds_interest_reduced">Chaidh an ùidh ìsleachadh</string>
     <string name="feeds_interest_removed">Chaidh an ùidh a thoirt air falbh</string>
     <string name="feeds_interest_failed">Cha b\' urrainn an ùidh atharrachadh</string>
+    <string name="feeds_saved_title">Air a shàbhaladh</string>
+    <string name="feeds_saved_menu">Air a shàbhaladh</string>
+    <string name="feeds_saved_save">Sàbhail airson às dèidh seo</string>
+    <string name="feeds_saved_remove">Thoir air falbh bho na sàbhailte</string>
+    <string name="feeds_saved_clear_all">Falamhaich a h-uile</string>
+    <string name="feeds_saved_clear_confirm_title">Falamhaich a h-uile post a chaidh a shàbhaladh?</string>
+    <string name="feeds_saved_clear_confirm_body">Bheir seo air falbh gach post bhon liosta shàbhailte agad. Cha ghabh seo a neo-dhèanamh.</string>
+    <string name="feeds_saved_empty_title">Cha deach dad a shàbhaladh fhathast</string>
+    <string name="feeds_saved_empty_subtitle">Thoir gnogag air a\' chomharra-lìn air post sam bith gus a shàbhaladh an seo airson às dèidh seo.</string>
+    <string name="feeds_saved_error_clear">Cha b\' urrainn na postaichean sàbhailte fhalamhachadh</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d phost ùr</item>
+        <item quantity="two">%d phost ùr</item>
+        <item quantity="few">%d postaichean ùra</item>
+        <item quantity="other">%d post ùr</item>
+    </plurals>
 </resources>

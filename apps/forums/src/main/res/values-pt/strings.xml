@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Pesquisar utilizadores</string>
     <string name="forums_access_no_groups">Sem grupos disponíveis</string>
+    <string name="forums_saved_title">Guardado</string>
+    <string name="forums_saved_save">Guardar para mais tarde</string>
+    <string name="forums_saved_remove">Remover dos guardados</string>
+    <string name="forums_saved_clear_all">Limpar tudo</string>
+    <string name="forums_saved_clear_confirm_title">Limpar todas as publicações guardadas?</string>
+    <string name="forums_saved_clear_confirm_body">Isto remove todas as publicações da sua lista de guardados. Não é possível anular.</string>
+    <string name="forums_saved_empty_title">Ainda nada guardado</string>
+    <string name="forums_saved_empty_subtitle">Toque no marcador de qualquer publicação para a guardar aqui para mais tarde.</string>
+    <string name="forums_saved_error_clear">Falha ao limpar as publicações guardadas</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d publicação nova</item>
+        <item quantity="other">%d publicações novas</item>
+    </plurals>
 </resources>

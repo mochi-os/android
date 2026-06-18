@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Қолмен</string>
     <string name="forums_access_search_users">Қолданушыларды іздеу</string>
     <string name="forums_access_no_groups">Топтар қолжетімсіз</string>
+    <string name="forums_saved_title">Сақталды</string>
+    <string name="forums_saved_save">Кейінге сақтау</string>
+    <string name="forums_saved_remove">Сақталғандардан жою</string>
+    <string name="forums_saved_clear_all">Барлығын тазалау</string>
+    <string name="forums_saved_clear_confirm_title">Барлық сақталған жазбаларды тазалау керек пе?</string>
+    <string name="forums_saved_clear_confirm_body">Бұл сақталған тізіміңізден әрбір жазбаны жояды. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="forums_saved_empty_title">Әзірге ештеңе сақталмаған</string>
+    <string name="forums_saved_empty_subtitle">Кез келген жазбаны осында кейінге сақтау үшін оның бетбелгісін түртіңіз.</string>
+    <string name="forums_saved_error_clear">Сақталған жазбаларды тазалау сәтсіз аяқталды</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d жаңа жазба</item>
+        <item quantity="other">%d жаңа жазба</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesse ridotto</string>
     <string name="feeds_interest_removed">Interesse rimosso</string>
     <string name="feeds_interest_failed">Impossibile modificare l\'interesse</string>
+    <string name="feeds_saved_title">Salvato</string>
+    <string name="feeds_saved_menu">Salvato</string>
+    <string name="feeds_saved_save">Salva per dopo</string>
+    <string name="feeds_saved_remove">Rimuovi dai salvati</string>
+    <string name="feeds_saved_clear_all">Cancella tutto</string>
+    <string name="feeds_saved_clear_confirm_title">Cancellare tutti i post salvati?</string>
+    <string name="feeds_saved_clear_confirm_body">Questo rimuove ogni post dal tuo elenco dei salvati. L\'operazione non può essere annullata.</string>
+    <string name="feeds_saved_empty_title">Nessun elemento salvato finora</string>
+    <string name="feeds_saved_empty_subtitle">Tocca il segnalibro di un post qualsiasi per salvarlo qui per dopo.</string>
+    <string name="feeds_saved_error_clear">Impossibile cancellare i post salvati</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nuovo post</item>
+        <item quantity="other">%d nuovi post</item>
+    </plurals>
 </resources>

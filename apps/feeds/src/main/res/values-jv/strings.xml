@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Minat dikurangi</string>
     <string name="feeds_interest_removed">Minat dibusak</string>
     <string name="feeds_interest_failed">Gagal nyetel minat</string>
+    <string name="feeds_saved_title">Disimpen</string>
+    <string name="feeds_saved_menu">Disimpen</string>
+    <string name="feeds_saved_save">Simpen kanggo mengko</string>
+    <string name="feeds_saved_remove">Busak saka sing kasimpen</string>
+    <string name="feeds_saved_clear_all">Resiki kabèh</string>
+    <string name="feeds_saved_clear_confirm_title">Resiki kabeh kiriman sing kasimpen?</string>
+    <string name="feeds_saved_clear_confirm_body">Iki mbusak saben kiriman saka dhaptar simpenanmu. Iki ora bisa dibatalake.</string>
+    <string name="feeds_saved_empty_title">Durung ana sing disimpen</string>
+    <string name="feeds_saved_empty_subtitle">Tutul markah ing kiriman apa wae kanggo nyimpen ing kene kanggo mengko.</string>
+    <string name="feeds_saved_error_clear">Gagal ngresiki kiriman sing kasimpen</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d kiriman anyar</item>
+        <item quantity="other">%d kiriman anyar</item>
+    </plurals>
 </resources>

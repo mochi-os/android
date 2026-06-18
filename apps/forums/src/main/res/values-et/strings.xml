@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Käsitsi</string>
     <string name="forums_access_search_users">Otsi kasutajaid</string>
     <string name="forums_access_no_groups">Saadaolevaid gruppe pole</string>
+    <string name="forums_saved_title">Salvestatud</string>
+    <string name="forums_saved_save">Salvesta hiljemaks</string>
+    <string name="forums_saved_remove">Eemalda salvestatutest</string>
+    <string name="forums_saved_clear_all">Tühjenda kõik</string>
+    <string name="forums_saved_clear_confirm_title">Kustutada kõik salvestatud postitused?</string>
+    <string name="forums_saved_clear_confirm_body">See eemaldab kõik postitused teie salvestatute loendist. Seda ei saa tagasi võtta.</string>
+    <string name="forums_saved_empty_title">Veel ei ole midagi salvestatud</string>
+    <string name="forums_saved_empty_subtitle">Postituse hiljemaks siia salvestamiseks puudutage selle järjehoidjat.</string>
+    <string name="forums_saved_error_clear">Salvestatud postituste kustutamine ebaõnnestus</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d uus postitus</item>
+        <item quantity="other">%d uut postitust</item>
+    </plurals>
 </resources>

@@ -198,4 +198,19 @@
     <string name="feeds_interest_reduced">Interes redus</string>
     <string name="feeds_interest_removed">Interes eliminat</string>
     <string name="feeds_interest_failed">Ajustarea interesului a eșuat</string>
+    <string name="feeds_saved_title">Salvat</string>
+    <string name="feeds_saved_menu">Salvat</string>
+    <string name="feeds_saved_save">Salvează pentru mai târziu</string>
+    <string name="feeds_saved_remove">Elimină din salvate</string>
+    <string name="feeds_saved_clear_all">Golește tot</string>
+    <string name="feeds_saved_clear_confirm_title">Ștergeți toate postările salvate?</string>
+    <string name="feeds_saved_clear_confirm_body">Aceasta elimină fiecare postare din lista ta de salvate. Acțiunea nu poate fi anulată.</string>
+    <string name="feeds_saved_empty_title">Nimic salvat încă</string>
+    <string name="feeds_saved_empty_subtitle">Atinge marcajul oricărei postări pentru a o salva aici pentru mai târziu.</string>
+    <string name="feeds_saved_error_clear">Ștergerea postărilor salvate a eșuat</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d postare nouă</item>
+        <item quantity="few">%d postări noi</item>
+        <item quantity="other">%d de postări noi</item>
+    </plurals>
 </resources>

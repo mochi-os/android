@@ -207,4 +207,19 @@
     <string name="forums_access_tab_manual">Ręczny</string>
     <string name="forums_access_search_users">Szukaj użytkowników</string>
     <string name="forums_access_no_groups">Brak dostępnych grup</string>
+    <string name="forums_saved_title">Zapisano</string>
+    <string name="forums_saved_save">Zapisz na później</string>
+    <string name="forums_saved_remove">Usuń z zapisanych</string>
+    <string name="forums_saved_clear_all">Wyczyść wszystko</string>
+    <string name="forums_saved_clear_confirm_title">Wyczyścić wszystkie zapisane posty?</string>
+    <string name="forums_saved_clear_confirm_body">Spowoduje to usunięcie każdego posta z listy zapisanych. Tej operacji nie można cofnąć.</string>
+    <string name="forums_saved_empty_title">Nic jeszcze nie zapisano</string>
+    <string name="forums_saved_empty_subtitle">Dotknij zakładki przy dowolnym poście, aby zapisać go tutaj na później.</string>
+    <string name="forums_saved_error_clear">Nie udało się wyczyścić zapisanych postów</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nowy post</item>
+        <item quantity="few">%d nowe posty</item>
+        <item quantity="many">%d nowych postów</item>
+        <item quantity="other">%d nowego posta</item>
+    </plurals>
 </resources>

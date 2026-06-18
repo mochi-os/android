@@ -198,4 +198,17 @@
     <string name="feeds_interest_reduced">စိတ်ဝင်စားမှု လျှော့ပြီးပါပြီ</string>
     <string name="feeds_interest_removed">စိတ်ဝင်စားမှု ဖယ်ရှားပြီးပါပြီ</string>
     <string name="feeds_interest_failed">စိတ်ဝင်စားမှု ချိန်ညှိ၍ မရပါ</string>
+    <string name="feeds_saved_title">သိမ်းပြီး</string>
+    <string name="feeds_saved_menu">သိမ်းပြီး</string>
+    <string name="feeds_saved_save">နောက်မှကြည့်ရန် သိမ်းပါ</string>
+    <string name="feeds_saved_remove">သိမ်းထားသည်မှ ဖယ်ရှားပါ</string>
+    <string name="feeds_saved_clear_all">အားလုံး ရှင်းမည်</string>
+    <string name="feeds_saved_clear_confirm_title">သိမ်းထားသော ပို့စ်အားလုံးကို ရှင်းမလား?</string>
+    <string name="feeds_saved_clear_confirm_body">၎င်းသည် သင်၏သိမ်းထားသည့်စာရင်းမှ ပို့စ်တိုင်းကို ဖယ်ရှားသည်။ ၎င်းကို နောက်ပြန်လှည့်၍မရပါ။</string>
+    <string name="feeds_saved_empty_title">ဘာမှ မသိမ်းရသေးပါ</string>
+    <string name="feeds_saved_empty_subtitle">မည်သည့်ပို့စ်ကိုမဆို နောက်မှကြည့်ရန် ဤနေရာတွင်သိမ်းရန် ၎င်း၏ booklink ကို တို့ပါ။</string>
+    <string name="feeds_saved_error_clear">သိမ်းထားသောပို့စ်များကို ရှင်းရန် မအောင်မြင်ပါ</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">ပို့စ်အသစ် %dခု</item>
+    </plurals>
 </resources>

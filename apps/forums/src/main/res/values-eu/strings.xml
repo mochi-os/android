@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Eskuz</string>
     <string name="forums_access_search_users">Bilatu erabiltzaileak</string>
     <string name="forums_access_no_groups">Ez dago talde erabilgarririk</string>
+    <string name="forums_saved_title">Gordeta</string>
+    <string name="forums_saved_save">Gorde geroko</string>
+    <string name="forums_saved_remove">Kendu gordeetatik</string>
+    <string name="forums_saved_clear_all">Garbitu dena</string>
+    <string name="forums_saved_clear_confirm_title">Gordetako argitalpen guztiak garbitu?</string>
+    <string name="forums_saved_clear_confirm_body">Honek argitalpen guztiak kentzen ditu zure gordeen zerrendatik. Ezin da desegin.</string>
+    <string name="forums_saved_empty_title">Ez dago oraindik ezer gordeta</string>
+    <string name="forums_saved_empty_subtitle">Sakatu edozein argitalpenetako laster-marka hemen geroko gordetzeko.</string>
+    <string name="forums_saved_error_clear">Ezin izan dira gordetako argitalpenak garbitu</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d argitalpen berri</item>
+        <item quantity="other">%d argitalpen berri</item>
+    </plurals>
 </resources>

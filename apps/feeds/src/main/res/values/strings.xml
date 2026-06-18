@@ -251,4 +251,18 @@
     <string name="feeds_settings_ai_account_updated">AI account updated</string>
     <string name="feeds_settings_prompt_saved">Prompt saved</string>
     <string name="feeds_settings_prompt_reset">Prompt reset to default</string>
+    <string name="feeds_saved_title">Saved</string>
+    <string name="feeds_saved_menu">Saved</string>
+    <string name="feeds_saved_save">Save for later</string>
+    <string name="feeds_saved_remove">Remove from saved</string>
+    <string name="feeds_saved_clear_all">Clear all</string>
+    <string name="feeds_saved_clear_confirm_title">Clear all saved posts?</string>
+    <string name="feeds_saved_clear_confirm_body">This removes every post from your saved list. This cannot be undone.</string>
+    <string name="feeds_saved_empty_title">Nothing saved yet</string>
+    <string name="feeds_saved_empty_subtitle">Tap the bookmark on any post to save it here for later.</string>
+    <string name="feeds_saved_error_clear">Failed to clear saved posts</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d new post</item>
+        <item quantity="other">%d new posts</item>
+    </plurals>
 </resources>

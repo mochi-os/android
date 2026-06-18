@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Միջակայք</string>
     <string name="feeds_interest_removed">Անվավեր JSON ֆայլ</string>
     <string name="feeds_interest_failed">Չհաջողվեց կարգավորել հետաքրքրությունը</string>
+    <string name="feeds_saved_title">Պահպանված է</string>
+    <string name="feeds_saved_menu">Պահպանված է</string>
+    <string name="feeds_saved_save">Պահել ավելի ուշ համար</string>
+    <string name="feeds_saved_remove">Հեռացնել պահվածներից</string>
+    <string name="feeds_saved_clear_all">Մաքրել զտիչները</string>
+    <string name="feeds_saved_clear_confirm_title">Մաքրե՞լ բոլոր պահված գրառումները</string>
+    <string name="feeds_saved_clear_confirm_body">Սա հեռացնում է բոլոր գրառումները ձեր պահվածների ցանկից։ Սա հնարավոր չէ հետարկել։</string>
+    <string name="feeds_saved_empty_title">Դեռ ոչինչ չի պահպանվել</string>
+    <string name="feeds_saved_empty_subtitle">Ցանկացած գրառում այստեղ ավելի ուշ համար պահելու համար հպեք դրա էջանիշին։</string>
+    <string name="feeds_saved_error_clear">Չհաջողվեց մաքրել պահված գրառումները</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d նոր գրառում</item>
+        <item quantity="other">%d նոր գրառում</item>
+    </plurals>
 </resources>

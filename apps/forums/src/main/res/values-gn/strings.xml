@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Eheka usuarios</string>
     <string name="forums_access_no_groups">Ndaipóri grupos oĩva</string>
+    <string name="forums_saved_title">Oñeñongatu</string>
+    <string name="forums_saved_save">Eñongatu upe rireguarã</string>
+    <string name="forums_saved_remove">Eipe\'a ñongatupývagui</string>
+    <string name="forums_saved_clear_all">Embopotĩ opaite</string>
+    <string name="forums_saved_clear_confirm_title">¿Emboguepa opa marandu ñongatupyre?</string>
+    <string name="forums_saved_clear_confirm_body">Kóva oipe\'a opa marandu ne ñongatupyre ndive. Ndaikatúi ojejapojey.</string>
+    <string name="forums_saved_empty_title">Ndaipóri gueteri mba\'eve oñongatupyre</string>
+    <string name="forums_saved_empty_subtitle">Eñongatu haguã peteĩ marandu ko\'ápe upe rireguarã, ekutu marcador hese.</string>
+    <string name="forums_saved_error_clear">Ndaikatúi oñemboguepa umi marandu ñongatupyre</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d marandu pyahu</item>
+        <item quantity="other">%d marandu pyahu</item>
+    </plurals>
 </resources>

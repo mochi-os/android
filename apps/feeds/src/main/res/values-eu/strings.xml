@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesa murriztuta</string>
     <string name="feeds_interest_removed">Interesa kenduta</string>
     <string name="feeds_interest_failed">Ezin izan da interesa doitu</string>
+    <string name="feeds_saved_title">Gordeta</string>
+    <string name="feeds_saved_menu">Gordeta</string>
+    <string name="feeds_saved_save">Gorde geroko</string>
+    <string name="feeds_saved_remove">Kendu gordeetatik</string>
+    <string name="feeds_saved_clear_all">Garbitu dena</string>
+    <string name="feeds_saved_clear_confirm_title">Gordetako argitalpen guztiak garbitu?</string>
+    <string name="feeds_saved_clear_confirm_body">Honek argitalpen guztiak kentzen ditu zure gordeen zerrendatik. Ezin da desegin.</string>
+    <string name="feeds_saved_empty_title">Ez dago oraindik ezer gordeta</string>
+    <string name="feeds_saved_empty_subtitle">Sakatu edozein argitalpenetako laster-marka hemen geroko gordetzeko.</string>
+    <string name="feeds_saved_error_clear">Ezin izan dira gordetako argitalpenak garbitu</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d argitalpen berri</item>
+        <item quantity="other">%d argitalpen berri</item>
+    </plurals>
 </resources>

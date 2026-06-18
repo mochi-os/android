@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Nabawasan ang interest</string>
     <string name="feeds_interest_removed">Natanggal ang interest</string>
     <string name="feeds_interest_failed">Nabigong i-adjust ang interest</string>
+    <string name="feeds_saved_title">Na-save</string>
+    <string name="feeds_saved_menu">Na-save</string>
+    <string name="feeds_saved_save">I-save para sa mamaya</string>
+    <string name="feeds_saved_remove">Alisin sa mga naka-save</string>
+    <string name="feeds_saved_clear_all">Burahin lahat</string>
+    <string name="feeds_saved_clear_confirm_title">Burahin ang lahat ng naka-save na post?</string>
+    <string name="feeds_saved_clear_confirm_body">Inaalis nito ang bawat post sa iyong listahan ng mga naka-save. Hindi ito mababawi.</string>
+    <string name="feeds_saved_empty_title">Wala pang nai-save</string>
+    <string name="feeds_saved_empty_subtitle">I-tap ang bookmark sa anumang post para i-save ito rito para sa mamaya.</string>
+    <string name="feeds_saved_error_clear">Hindi nabura ang mga naka-save na post</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d bagong post</item>
+        <item quantity="other">%d bagong post</item>
+    </plurals>
 </resources>

@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Destî</string>
     <string name="forums_access_search_users">Li bikarhêneran bigere</string>
     <string name="forums_access_no_groups">Tu kom berdest nîn in</string>
+    <string name="forums_saved_title">Hatiye tomarkirin</string>
+    <string name="forums_saved_save">Bo paşê tomar bike</string>
+    <string name="forums_saved_remove">Ji tomarkiriyan rake</string>
+    <string name="forums_saved_clear_all">Hemûyan paqij bike</string>
+    <string name="forums_saved_clear_confirm_title">Hemû şandiyên tomarkirî paqij bikim?</string>
+    <string name="forums_saved_clear_confirm_body">Ev her şandiyê ji lîsteya tomarkiriyên te radike. Ev nayê vegerandin.</string>
+    <string name="forums_saved_empty_title">Hîn tu tişt nehatiye tomarkirin</string>
+    <string name="forums_saved_empty_subtitle">Ji bo tomarkirina her şandiyekê li vir bo paşê, li nîşana wê bitikîne.</string>
+    <string name="forums_saved_error_clear">Paqijkirina şandiyên tomarkirî serneket</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d şandiyê nû</item>
+        <item quantity="other">%d şandiyên nû</item>
+    </plurals>
 </resources>
