@@ -793,20 +793,11 @@ private fun ListingDetailContent(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    // Flat white avatar with black initials and a hairline
-                    // outline, matching the seller avatar on ListingCard.
                     EntityAvatar(
                         name = sellerName,
                         src = rememberSellerAvatarUrl(listing),
                         seed = seller.id,
                         size = 40.dp,
-                        containerColor = Color.White,
-                        contentColor = Color.Black,
-                        modifier = Modifier.border(
-                            width = 1.dp,
-                            color = MaterialTheme.colorScheme.outlineVariant,
-                            shape = CircleShape,
-                        ),
                     )
                     Text(
                         text = sellerName,

@@ -1,7 +1,6 @@
 package org.mochios.market.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -227,20 +226,11 @@ fun ListingCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                // Flat white avatar with black initials to match the new
-                // theme; a hairline outline keeps it defined on a light card.
                 EntityAvatar(
                     name = name.ifBlank { "?" },
                     src = avatarUrl,
                     seed = listing.seller,
                     size = 24.dp,
-                    containerColor = Color.White,
-                    contentColor = Color.Black,
-                    modifier = Modifier.border(
-                        width = 1.dp,
-                        color = MaterialTheme.colorScheme.outlineVariant,
-                        shape = CircleShape,
-                    ),
                 )
                 Text(
                     text = name,

@@ -44,11 +44,16 @@ import org.mochios.android.R
  * @param size   Avatar diameter.
  * @param shape  Avatar outline shape. Defaults to a full circle; pass a
  *               [RoundedCornerShape] for a squircle (e.g. seller profiles).
- * @param accent Optional hex colour ("#rrggbb"). When set, drawn as a 2dp ring.
- * @param containerColor Initials-circle fill. Null keeps the deterministic
- *               seeded colour; pass an explicit colour for a flat themed avatar.
- * @param contentColor Initials text colour (defaults to white for the seeded
- *               circle; pair with [containerColor] for a light-on-dark swap).
+ * @param accent Optional hex colour ("#rrggbb"). When set, drawn as a 2dp ring
+ *               in place of the default border.
+ * @param containerColor Initials-circle fill. Defaults to a flat white avatar
+ *               (the app-wide style); pass null to use the deterministic seeded
+ *               colour instead.
+ * @param contentColor Initials text colour. Defaults to black to pair with the
+ *               white fill.
+ * @param borderColor Hairline ring drawn around the avatar so it stays defined
+ *               against the surface. Pass [Color.Transparent] to drop it; it is
+ *               ignored when [accent] is set (the accent ring takes over).
  */
 @Composable
 fun EntityAvatar(
@@ -58,17 +63,18 @@ fun EntityAvatar(
     size: Dp = 24.dp,
     shape: Shape = CircleShape,
     accent: String? = null,
-    containerColor: Color? = null,
-    contentColor: Color = Color.White,
+    containerColor: Color? = Color.White,
+    contentColor: Color = Color.Black,
+    borderColor: Color = MaterialTheme.colorScheme.outlineVariant,
     modifier: Modifier = Modifier,
 ) {
     var loadFailed by remember(src) { mutableStateOf(false) }
 
     val ringColor = accent?.let { parseHexColour(it) }
-    val ringModifier = if (ringColor != null) {
-        Modifier.border(2.dp, ringColor, shape)
-    } else {
-        Modifier
+    val ringModifier = when {
+        ringColor != null -> Modifier.border(2.dp, ringColor, shape)
+        borderColor != Color.Transparent -> Modifier.border(1.dp, borderColor, shape)
+        else -> Modifier
     }
     val outer = modifier.size(size).then(ringModifier).clip(shape)
 
