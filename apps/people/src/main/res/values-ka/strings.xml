@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">შეიყვანეთ სწორი hex-ფერი (მაგ. #a78bfa)</string>
     <string name="people_profile_retry">ხელახლა ცდა</string>
     <string name="people_profile_accent_unset">აქცენტის ფერი არ არის დაყენებული</string>
+    <string name="people_profile_accent_none">არცერთი</string>
     <string name="people_profile_change">შეცვლა</string>
     <string name="people_profile_privacy_public_label">საჯარო პროფილი</string>
     <string name="people_profile_privacy_public_desc">ნებისმიერს შეუძლია იპოვოს და ნახოს თქვენი პროფილი</string>

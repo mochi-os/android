@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Allin hex llimp\'ita qillqay (kayhina #a78bfa)</string>
     <string name="people_profile_retry">Watiq ruway</string>
     <string name="people_profile_accent_unset">Mana llimp\'i churasqachu</string>
+    <string name="people_profile_accent_none">Mana</string>
     <string name="people_profile_change">Hukchay</string>
     <string name="people_profile_privacy_public_label">Tukuypaq qhawarina</string>
     <string name="people_profile_privacy_public_desc">Pipas qhawariniykita tariyta hinaspa qhawayta atin</string>

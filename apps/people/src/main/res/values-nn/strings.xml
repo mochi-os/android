@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Skriv inn ein gyldig heks-farge (t.d. #a78bfa)</string>
     <string name="people_profile_retry">Prøv igjen</string>
     <string name="people_profile_accent_unset">Ingen aksentfarge vald</string>
+    <string name="people_profile_accent_none">Ingen</string>
     <string name="people_profile_change">Endre</string>
     <string name="people_profile_privacy_public_label">Offentleg profil</string>
     <string name="people_profile_privacy_public_desc">Alle kan finne og sjå profilen din</string>

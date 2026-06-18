@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Geçerli bir hex renk girin (ör. #a78bfa)</string>
     <string name="people_profile_retry">Yeniden dene</string>
     <string name="people_profile_accent_unset">Vurgu rengi ayarlanmadı</string>
+    <string name="people_profile_accent_none">Yok</string>
     <string name="people_profile_change">Değiştir</string>
     <string name="people_profile_privacy_public_label">Herkese açık profil</string>
     <string name="people_profile_privacy_public_desc">Herkes profilinizi bulabilir ve görüntüleyebilir</string>

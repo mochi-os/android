@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Введите корректный HEX-цвет (например, #a78bfa)</string>
     <string name="people_profile_retry">Повторить</string>
     <string name="people_profile_accent_unset">Акцентный цвет не задан</string>
+    <string name="people_profile_accent_none">Нет</string>
     <string name="people_profile_change">Изменить</string>
     <string name="people_profile_privacy_public_label">Публичный профиль</string>
     <string name="people_profile_privacy_public_desc">Ваш профиль смогут найти и просмотреть все</string>

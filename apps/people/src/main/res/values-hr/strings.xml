@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Unesite valjanu hex boju (npr. #a78bfa)</string>
     <string name="people_profile_retry">Pokušaj ponovno</string>
     <string name="people_profile_accent_unset">Naglasna boja nije postavljena</string>
+    <string name="people_profile_accent_none">Ništa</string>
     <string name="people_profile_change">Promijeni</string>
     <string name="people_profile_privacy_public_label">Javni profil</string>
     <string name="people_profile_privacy_public_desc">Svatko može pronaći i vidjeti vaš profil</string>

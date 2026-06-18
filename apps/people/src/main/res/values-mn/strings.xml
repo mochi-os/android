@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Зөв hex өнгө оруулна уу (жишээ нь #a78bfa)</string>
     <string name="people_profile_retry">Дахин оролдох</string>
     <string name="people_profile_accent_unset">Өргөлтийн өнгө тохируулаагүй</string>
+    <string name="people_profile_accent_none">Алга</string>
     <string name="people_profile_change">Өөрчлөх</string>
     <string name="people_profile_privacy_public_label">Нийтийн профайл</string>
     <string name="people_profile_privacy_public_desc">Хэн ч таны профайлыг олж үзэх боломжтой</string>

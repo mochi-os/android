@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">ป้อนรหัสสีฐานสิบหกที่ถูกต้อง (เช่น #a78bfa)</string>
     <string name="people_profile_retry">ลองอีกครั้ง</string>
     <string name="people_profile_accent_unset">ไม่ได้ตั้งสีเน้น</string>
+    <string name="people_profile_accent_none">ไม่มี</string>
     <string name="people_profile_change">เปลี่ยน</string>
     <string name="people_profile_privacy_public_label">โปรไฟล์สาธารณะ</string>
     <string name="people_profile_privacy_public_desc">ทุกคนสามารถค้นหาและดูโปรไฟล์ของคุณได้</string>

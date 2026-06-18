@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Ingresa un color hexadecimal válido (p. ej. #a78bfa)</string>
     <string name="people_profile_retry">Reintentar</string>
     <string name="people_profile_accent_unset">Sin color de acento</string>
+    <string name="people_profile_accent_none">Ninguno</string>
     <string name="people_profile_change">Cambiar</string>
     <string name="people_profile_privacy_public_label">Perfil público</string>
     <string name="people_profile_privacy_public_desc">Cualquiera puede encontrar y ver tu perfil</string>

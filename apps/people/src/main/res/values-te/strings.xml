@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">చెల్లుబాటు అయ్యే హెక్స్ రంగును నమోదు చేయండి (ఉదా. #a78bfa)</string>
     <string name="people_profile_retry">మళ్లీ ప్రయత్నించు</string>
     <string name="people_profile_accent_unset">యాక్సెంట్ సెట్ చేయలేదు</string>
+    <string name="people_profile_accent_none">ఏదీ లేదు</string>
     <string name="people_profile_change">మార్చు</string>
     <string name="people_profile_privacy_public_label">పబ్లిక్ ప్రొఫైల్</string>
     <string name="people_profile_privacy_public_desc">ఎవరైనా మీ ప్రొఫైల్‌ను కనుగొని చూడవచ్చు</string>

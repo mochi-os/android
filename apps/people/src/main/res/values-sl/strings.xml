@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Vnesite veljavno šestnajstiško barvo (npr. #a78bfa)</string>
     <string name="people_profile_retry">Poskusi znova</string>
     <string name="people_profile_accent_unset">Poudarna barva ni nastavljena</string>
+    <string name="people_profile_accent_none">Brez</string>
     <string name="people_profile_change">Spremeni</string>
     <string name="people_profile_privacy_public_label">Javni profil</string>
     <string name="people_profile_privacy_public_desc">Vsakdo lahko najde in si ogleda vaš profil</string>

@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Մուտքագրեք վավեր տասնվեցական գույն (օր.՝ #a78bfa)</string>
     <string name="people_profile_retry">Կրկնել</string>
     <string name="people_profile_accent_unset">Շեշտադրման գույնը կարգավորված չէ</string>
+    <string name="people_profile_accent_none">Ոչ մեկը</string>
     <string name="people_profile_change">Փոխել</string>
     <string name="people_profile_privacy_public_label">Հանրային հաշվի էջ</string>
     <string name="people_profile_privacy_public_desc">Ցանկացած ոք կարող է գտնել և դիտել ձեր հաշվի էջը</string>

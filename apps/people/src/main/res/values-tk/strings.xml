@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Dogry on altylyk reňk giriziň (mysal #a78bfa)</string>
     <string name="people_profile_retry">Gaýtalamak</string>
     <string name="people_profile_accent_unset">Bezeg reňki bellenilmedi</string>
+    <string name="people_profile_accent_none">Hiç biri</string>
     <string name="people_profile_change">Üýtgetmek</string>
     <string name="people_profile_privacy_public_label">Açyk profil</string>
     <string name="people_profile_privacy_public_desc">Profiliňizi her kim tapyp we görüp biler</string>

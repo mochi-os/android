@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Ingiza rangi halali ya heksi (mf. #a78bfa)</string>
     <string name="people_profile_retry">Jaribu tena</string>
     <string name="people_profile_accent_unset">Hakuna rangi ya msisitizo iliyowekwa</string>
+    <string name="people_profile_accent_none">Hakuna</string>
     <string name="people_profile_change">Badilisha</string>
     <string name="people_profile_privacy_public_label">Wasifu wa umma</string>
     <string name="people_profile_privacy_public_desc">Mtu yeyote anaweza kupata na kuona wasifu wako</string>

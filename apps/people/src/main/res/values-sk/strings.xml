@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Zadajte platnú hexadecimálnu farbu (napr. #a78bfa)</string>
     <string name="people_profile_retry">Skúsiť znova</string>
     <string name="people_profile_accent_unset">Žiadna zvýrazňujúca farba</string>
+    <string name="people_profile_accent_none">Žiadne</string>
     <string name="people_profile_change">Zmeniť</string>
     <string name="people_profile_privacy_public_label">Verejný profil</string>
     <string name="people_profile_privacy_public_desc">Váš profil môže nájsť a zobraziť ktokoľvek</string>

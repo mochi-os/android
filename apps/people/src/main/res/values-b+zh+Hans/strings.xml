@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">请输入有效的十六进制颜色（例如 #a78bfa）</string>
     <string name="people_profile_retry">重试</string>
     <string name="people_profile_accent_unset">未设置强调色</string>
+    <string name="people_profile_accent_none">无</string>
     <string name="people_profile_change">更改</string>
     <string name="people_profile_privacy_public_label">公开个人资料</string>
     <string name="people_profile_privacy_public_desc">任何人都可以查找并查看你的个人资料</string>

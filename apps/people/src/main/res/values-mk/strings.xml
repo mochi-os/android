@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Внесете валидна шестоаголна боја (на пр. #a78bfa)</string>
     <string name="people_profile_retry">Обиди се повторно</string>
     <string name="people_profile_accent_unset">Не е поставена акцентна боја</string>
+    <string name="people_profile_accent_none">Ништо</string>
     <string name="people_profile_change">Промени</string>
     <string name="people_profile_privacy_public_label">Јавен профил</string>
     <string name="people_profile_privacy_public_desc">Секој може да го најде и види вашиот профил</string>

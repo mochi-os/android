@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Indtast en gyldig hex-farve (f.eks. #a78bfa)</string>
     <string name="people_profile_retry">Prøv igen</string>
     <string name="people_profile_accent_unset">Ingen accentfarve angivet</string>
+    <string name="people_profile_accent_none">Ingen</string>
     <string name="people_profile_change">Skift</string>
     <string name="people_profile_privacy_public_label">Offentlig profil</string>
     <string name="people_profile_privacy_public_desc">Alle kan finde og se din profil</string>

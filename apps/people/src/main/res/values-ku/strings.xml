@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Rengekî hex yê derbasdar binivîse (mînak #a78bfa)</string>
     <string name="people_profile_retry">Dîsa biceribîne</string>
     <string name="people_profile_accent_unset">Tu rengê girîngkirinê nehatiye danîn</string>
+    <string name="people_profile_accent_none">Tu</string>
     <string name="people_profile_change">Biguherîne</string>
     <string name="people_profile_privacy_public_label">Profîla giştî</string>
     <string name="people_profile_privacy_public_desc">Her kes dikare profîla te bibîne û lê binêre</string>

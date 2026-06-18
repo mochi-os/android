@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Introduceți o culoare hex validă (de ex. #a78bfa)</string>
     <string name="people_profile_retry">Reîncearcă</string>
     <string name="people_profile_accent_unset">Nicio culoare de accent setată</string>
+    <string name="people_profile_accent_none">Niciuna</string>
     <string name="people_profile_change">Modifică</string>
     <string name="people_profile_privacy_public_label">Profil public</string>
     <string name="people_profile_privacy_public_desc">Oricine vă poate găsi și vedea profilul</string>

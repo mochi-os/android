@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Introduïu un color hexadecimal vàlid (p. ex. #a78bfa)</string>
     <string name="people_profile_retry">Torna-ho a provar</string>
     <string name="people_profile_accent_unset">Cap color d\'accent definit</string>
+    <string name="people_profile_accent_none">Cap</string>
     <string name="people_profile_change">Canvia</string>
     <string name="people_profile_privacy_public_label">Perfil públic</string>
     <string name="people_profile_privacy_public_desc">Qualsevol pot trobar i veure el vostre perfil</string>

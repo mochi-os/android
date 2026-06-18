@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">වලංගු hex වර්ණයක් ඇතුළත් කරන්න (උදා. #a78bfa)</string>
     <string name="people_profile_retry">නැවත උත්සාහ කරන්න</string>
     <string name="people_profile_accent_unset">අවධාරණ වර්ණයක් සකසා නැත</string>
+    <string name="people_profile_accent_none">කිසිවක් නැත</string>
     <string name="people_profile_change">වෙනස් කරන්න</string>
     <string name="people_profile_privacy_public_label">පොදු පැතිකඩ</string>
     <string name="people_profile_privacy_public_desc">ඕනෑම කෙනෙකුට ඔබේ පැතිකඩ සොයා බැලිය හැක</string>

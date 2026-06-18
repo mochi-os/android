@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Iontráil dath heicsidheachúlach bailí (m.sh. #a78bfa)</string>
     <string name="people_profile_retry">Atriail</string>
     <string name="people_profile_accent_unset">Gan aiblimh socraithe</string>
+    <string name="people_profile_accent_none">Faic</string>
     <string name="people_profile_change">Athraigh</string>
     <string name="people_profile_privacy_public_label">Próifíl phoiblí</string>
     <string name="people_profile_privacy_public_desc">Is féidir le duine ar bith do phróifíl a aimsiú agus a fheiceáil</string>

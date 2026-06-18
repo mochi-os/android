@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">एगो वैध हेक्स रंग डालीं (जइसे #a78bfa)</string>
     <string name="people_profile_retry">फेर से कोशिश करीं</string>
     <string name="people_profile_accent_unset">कवनो एक्सेंट सेट नइखे</string>
+    <string name="people_profile_accent_none">कुछुओ ना</string>
     <string name="people_profile_change">बदलीं</string>
     <string name="people_profile_privacy_public_label">सार्वजनिक प्रोफाइल</string>
     <string name="people_profile_privacy_public_desc">केहू भी रउआ के प्रोफाइल खोज आ देख सकेला</string>

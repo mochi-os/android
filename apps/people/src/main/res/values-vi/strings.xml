@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Nhập mã màu hex hợp lệ (ví dụ: #a78bfa)</string>
     <string name="people_profile_retry">Thử lại</string>
     <string name="people_profile_accent_unset">Chưa đặt màu nhấn</string>
+    <string name="people_profile_accent_none">Không có</string>
     <string name="people_profile_change">Thay đổi</string>
     <string name="people_profile_privacy_public_label">Hồ sơ công khai</string>
     <string name="people_profile_privacy_public_desc">Bất kỳ ai cũng có thể tìm và xem hồ sơ của bạn</string>

@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">സാധുവായ ഹെക്സ് നിറം നൽകുക (ഉദാ. #a78bfa)</string>
     <string name="people_profile_retry">വീണ്ടും ശ്രമിക്കുക</string>
     <string name="people_profile_accent_unset">ആക്സന്റ് സജ്ജമാക്കിയിട്ടില്ല</string>
+    <string name="people_profile_accent_none">ഒന്നുമില്ല</string>
     <string name="people_profile_change">മാറ്റുക</string>
     <string name="people_profile_privacy_public_label">പൊതു പ്രൊഫൈൽ</string>
     <string name="people_profile_privacy_public_desc">ആർക്കും നിങ്ങളുടെ പ്രൊഫൈൽ കണ്ടെത്താനും കാണാനും കഴിയും</string>

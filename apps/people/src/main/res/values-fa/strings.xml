@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">یک رنگ هگز معتبر وارد کنید (مثلاً #a78bfa)</string>
     <string name="people_profile_retry">تلاش مجدد</string>
     <string name="people_profile_accent_unset">رنگ شاخصی تنظیم نشده</string>
+    <string name="people_profile_accent_none">هیچ‌کدام</string>
     <string name="people_profile_change">تغییر</string>
     <string name="people_profile_privacy_public_label">نمایه عمومی</string>
     <string name="people_profile_privacy_public_desc">هر کسی می‌تواند نمایه شما را پیدا و مشاهده کند</string>

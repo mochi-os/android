@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Unesite ispravnu heksadecimalnu boju (npr. #a78bfa)</string>
     <string name="people_profile_retry">Pokušaj ponovo</string>
     <string name="people_profile_accent_unset">Nije postavljen akcent</string>
+    <string name="people_profile_accent_none">Ništa</string>
     <string name="people_profile_change">Promijeni</string>
     <string name="people_profile_privacy_public_label">Javni profil</string>
     <string name="people_profile_privacy_public_desc">Bilo ko može pronaći i pregledati vaš profil</string>

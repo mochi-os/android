@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Skriv inn en gyldig heksadesimal farge (f.eks. #a78bfa)</string>
     <string name="people_profile_retry">Prøv igjen</string>
     <string name="people_profile_accent_unset">Ingen aksent valgt</string>
+    <string name="people_profile_accent_none">Ingen</string>
     <string name="people_profile_change">Endre</string>
     <string name="people_profile_privacy_public_label">Offentlig profil</string>
     <string name="people_profile_privacy_public_desc">Alle kan finne og se profilen din</string>

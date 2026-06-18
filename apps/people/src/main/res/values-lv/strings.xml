@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Ievadiet derīgu hex krāsu (piem., #a78bfa)</string>
     <string name="people_profile_retry">Mēģināt vēlreiz</string>
     <string name="people_profile_accent_unset">Akcenta krāsa nav iestatīta</string>
+    <string name="people_profile_accent_none">Nav</string>
     <string name="people_profile_change">Mainīt</string>
     <string name="people_profile_privacy_public_label">Publisks profils</string>
     <string name="people_profile_privacy_public_desc">Ikviens var atrast un skatīt jūsu profilu</string>

@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Sisesta sobiv kuueteistkümnendvärv (nt #a78bfa)</string>
     <string name="people_profile_retry">Proovi uuesti</string>
     <string name="people_profile_accent_unset">Rõhuvärvi pole määratud</string>
+    <string name="people_profile_accent_none">Puudub</string>
     <string name="people_profile_change">Muuda</string>
     <string name="people_profile_privacy_public_label">Avalik profiil</string>
     <string name="people_profile_privacy_public_desc">Igaüks saab leida ja vaadata sinu profiili</string>

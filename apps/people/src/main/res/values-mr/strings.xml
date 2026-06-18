@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">वैध हेक्स रंग प्रविष्ट करा (उदा. #a78bfa)</string>
     <string name="people_profile_retry">पुन्हा प्रयत्न करा</string>
     <string name="people_profile_accent_unset">कोणताही अॅक्सेंट सेट केलेला नाही</string>
+    <string name="people_profile_accent_none">काहीही नाही</string>
     <string name="people_profile_change">बदला</string>
     <string name="people_profile_privacy_public_label">सार्वजनिक प्रोफाइल</string>
     <string name="people_profile_privacy_public_desc">कोणीही तुमची प्रोफाइल शोधू आणि पाहू शकतो</string>

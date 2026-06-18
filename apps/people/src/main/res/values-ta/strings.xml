@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">சரியான ஹெக்ஸ் நிறத்தை உள்ளிடவும் (எ.கா. #a78bfa)</string>
     <string name="people_profile_retry">மீண்டும் முயற்சி</string>
     <string name="people_profile_accent_unset">அழுத்த நிறம் அமைக்கப்படவில்லை</string>
+    <string name="people_profile_accent_none">ஒன்றுமில்லை</string>
     <string name="people_profile_change">மாற்று</string>
     <string name="people_profile_privacy_public_label">பொது சுயவிவரம்</string>
     <string name="people_profile_privacy_public_desc">எவரும் உங்கள் சுயவிவரத்தைக் கண்டறிந்து பார்க்க முடியும்</string>

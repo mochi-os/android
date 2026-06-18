@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Faka umbala we-hex osebenzayo (umz. #a78bfa)</string>
     <string name="people_profile_retry">Zama kwakhona</string>
     <string name="people_profile_accent_unset">Akukho mbala wokugqamisa osetiweyo</string>
+    <string name="people_profile_accent_none">Akukho nanye</string>
     <string name="people_profile_change">Tshintsha</string>
     <string name="people_profile_privacy_public_label">Iprofayile yoluntu</string>
     <string name="people_profile_privacy_public_desc">Nabani na unokufumana aze ajonge iprofayile yakho</string>

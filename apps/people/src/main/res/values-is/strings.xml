@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Sláðu inn gildan hex-lit (t.d. #a78bfa)</string>
     <string name="people_profile_retry">Reyna aftur</string>
     <string name="people_profile_accent_unset">Enginn áherslulitur stilltur</string>
+    <string name="people_profile_accent_none">Ekkert</string>
     <string name="people_profile_change">Breyta</string>
     <string name="people_profile_privacy_public_label">Opinber prófíll</string>
     <string name="people_profile_privacy_public_desc">Hver sem er getur fundið og skoðað prófílinn þinn</string>

@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Εισαγάγετε ένα έγκυρο δεκαεξαδικό χρώμα (π.χ. #a78bfa)</string>
     <string name="people_profile_retry">Επανάληψη</string>
     <string name="people_profile_accent_unset">Δεν έχει οριστεί χρώμα τονισμού</string>
+    <string name="people_profile_accent_none">Κανένα</string>
     <string name="people_profile_change">Αλλαγή</string>
     <string name="people_profile_privacy_public_label">Δημόσιο προφίλ</string>
     <string name="people_profile_privacy_public_desc">Οποιοσδήποτε μπορεί να βρει και να δει το προφίλ σας</string>

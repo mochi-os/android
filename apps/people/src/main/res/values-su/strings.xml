@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Asupkeun kode warna hex anu sah (cth. #a78bfa)</string>
     <string name="people_profile_retry">Cobian deui</string>
     <string name="people_profile_accent_unset">Teu aya warna aksen</string>
+    <string name="people_profile_accent_none">Euweuh</string>
     <string name="people_profile_change">Robih</string>
     <string name="people_profile_privacy_public_label">Propil umum</string>
     <string name="people_profile_privacy_public_desc">Sing saha waé tiasa manggihan sareng ningali propil anjeun</string>

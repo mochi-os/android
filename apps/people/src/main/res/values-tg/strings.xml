@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Ранги шонздаҳии дурустро ворид кунед (масалан #a78bfa)</string>
     <string name="people_profile_retry">Боз кӯшиш кардан</string>
     <string name="people_profile_accent_unset">Ранги аксент муқаррар нашудааст</string>
+    <string name="people_profile_accent_none">Ҳеҷ кадом</string>
     <string name="people_profile_change">Тағйир додан</string>
     <string name="people_profile_privacy_public_label">Профили оммавӣ</string>
     <string name="people_profile_privacy_public_desc">Ҳар кас метавонад профили шуморо ёбад ва бубинад</string>

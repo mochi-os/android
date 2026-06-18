@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Voer \'n geldige hekskleur in (bv. #a78bfa)</string>
     <string name="people_profile_retry">Probeer weer</string>
     <string name="people_profile_accent_unset">Geen aksentkleur gestel nie</string>
+    <string name="people_profile_accent_none">Geen</string>
     <string name="people_profile_change">Verander</string>
     <string name="people_profile_privacy_public_label">Openbare profiel</string>
     <string name="people_profile_privacy_public_desc">Enigeen kan jou profiel vind en bekyk</string>

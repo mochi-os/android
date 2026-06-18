@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Emoinge peteĩ sa\'y hex hekopete (techapyrã #a78bfa)</string>
     <string name="people_profile_retry">Eñeha\'ã jey</string>
     <string name="people_profile_accent_unset">Ndaipóri sa\'y oñemoĩva</string>
+    <string name="people_profile_accent_none">Mba\'eve</string>
     <string name="people_profile_change">Emoambue</string>
     <string name="people_profile_privacy_public_label">Mba\'echauka opavavépe ĝuarã</string>
     <string name="people_profile_privacy_public_desc">Mavave ikatu ojuhu ha ohecha ne mba\'echauka</string>

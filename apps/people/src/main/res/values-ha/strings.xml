@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Shigar da ingantaccen launi na hex (misali #a78bfa)</string>
     <string name="people_profile_retry">Sake gwadawa</string>
     <string name="people_profile_accent_unset">Ba a saita launin haske ba</string>
+    <string name="people_profile_accent_none">Babu</string>
     <string name="people_profile_change">Canza</string>
     <string name="people_profile_privacy_public_label">Martaba ta jama\'a</string>
     <string name="people_profile_privacy_public_desc">Kowa zai iya samun da kallon martabarka</string>

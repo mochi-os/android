@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Bifa hex sirrii galchi (fkn #a78bfa)</string>
     <string name="people_profile_retry">Irra deebi\'ii yaali</string>
     <string name="people_profile_accent_unset">Bifni cuunfaa hin qophaa\'ne</string>
+    <string name="people_profile_accent_none">Tokko illee</string>
     <string name="people_profile_change">Jijjiiri</string>
     <string name="people_profile_privacy_public_label">Piroofaayilii ummataa</string>
     <string name="people_profile_privacy_public_desc">Namni kamuu piroofaayilii kee argachuu fi ilaaluu danda\'a</string>

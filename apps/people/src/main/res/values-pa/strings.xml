@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">ਇੱਕ ਜਾਇਜ਼ ਹੈਕਸ ਰੰਗ ਦਾਖਲ ਕਰੋ (ਜਿਵੇਂ #a78bfa)</string>
     <string name="people_profile_retry">ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
     <string name="people_profile_accent_unset">ਕੋਈ ਉਚਾਰਨ ਰੰਗ ਸੈੱਟ ਨਹੀਂ ਹੈ</string>
+    <string name="people_profile_accent_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="people_profile_change">ਬਦਲੋ</string>
     <string name="people_profile_privacy_public_label">ਜਨਤਕ ਪ੍ਰੋਫਾਈਲ</string>
     <string name="people_profile_privacy_public_desc">ਕੋਈ ਵੀ ਤੁਹਾਡੀ ਪ੍ਰੋਫਾਈਲ ਲੱਭ ਅਤੇ ਵੇਖ ਸਕਦਾ ਹੈ</string>

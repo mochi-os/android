@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Voer een geldige hexkleur in (bijv. #a78bfa)</string>
     <string name="people_profile_retry">Opnieuw proberen</string>
     <string name="people_profile_accent_unset">Geen accentkleur ingesteld</string>
+    <string name="people_profile_accent_none">Geen</string>
     <string name="people_profile_change">Wijzigen</string>
     <string name="people_profile_privacy_public_label">Openbaar profiel</string>
     <string name="people_profile_privacy_public_desc">Iedereen kan uw profiel vinden en bekijken</string>

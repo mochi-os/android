@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">માન્ય હેક્સ રંગ દાખલ કરો (દા.ત. #a78bfa)</string>
     <string name="people_profile_retry">ફરી પ્રયાસ કરો</string>
     <string name="people_profile_accent_unset">કોઈ ઉચ્ચારણ રંગ સેટ નથી</string>
+    <string name="people_profile_accent_none">કોઈ નહીં</string>
     <string name="people_profile_change">બદલો</string>
     <string name="people_profile_privacy_public_label">જાહેર પ્રોફાઇલ</string>
     <string name="people_profile_privacy_public_desc">કોઈપણ તમારી પ્રોફાઇલ શોધી અને જોઈ શકે છે</string>

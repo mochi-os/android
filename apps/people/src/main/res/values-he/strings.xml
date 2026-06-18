@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">הזן צבע הקס תקין (לדוגמה ‎#a78bfa)</string>
     <string name="people_profile_retry">נסה שוב</string>
     <string name="people_profile_accent_unset">לא הוגדר צבע הדגשה</string>
+    <string name="people_profile_accent_none">ללא</string>
     <string name="people_profile_change">שנה</string>
     <string name="people_profile_privacy_public_label">פרופיל ציבורי</string>
     <string name="people_profile_privacy_public_desc">כל אחד יכול למצוא ולצפות בפרופיל שלך</string>

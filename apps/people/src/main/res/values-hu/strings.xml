@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Adjon meg érvényes hexadecimális színt (pl. #a78bfa)</string>
     <string name="people_profile_retry">Újra</string>
     <string name="people_profile_accent_unset">Nincs kiemelőszín beállítva</string>
+    <string name="people_profile_accent_none">Nincs</string>
     <string name="people_profile_change">Módosítás</string>
     <string name="people_profile_privacy_public_label">Nyilvános profil</string>
     <string name="people_profile_privacy_public_desc">Bárki megtalálhatja és megtekintheti a profilját</string>

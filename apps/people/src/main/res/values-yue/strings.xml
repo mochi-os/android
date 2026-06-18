@@ -172,6 +172,7 @@
     <string name="people_profile_accent_invalid">請輸入有效嘅十六進制色碼（例如 #a78bfa）</string>
     <string name="people_profile_retry">重試</string>
     <string name="people_profile_accent_unset">未設定強調色</string>
+    <string name="people_profile_accent_none">無</string>
     <string name="people_profile_change">更改</string>
     <string name="people_profile_privacy_public_label">公開個人檔案</string>
     <string name="people_profile_privacy_public_desc">任何人都可以搵到同查看你嘅個人檔案</string>

@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Antre yon koulè eks valab (egzanp #a78bfa)</string>
     <string name="people_profile_retry">Eseye ankò</string>
     <string name="people_profile_accent_unset">Pa gen koulè aksantyasyon</string>
+    <string name="people_profile_accent_none">Okenn</string>
     <string name="people_profile_change">Chanje</string>
     <string name="people_profile_privacy_public_label">Pwofil piblik</string>
     <string name="people_profile_privacy_public_desc">Nenpòt moun ka jwenn epi gade pwofil ou</string>

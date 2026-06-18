@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Inserisci un colore esadecimale valido (ad es. #a78bfa)</string>
     <string name="people_profile_retry">Riprova</string>
     <string name="people_profile_accent_unset">Nessun accento impostato</string>
+    <string name="people_profile_accent_none">Nessuno</string>
     <string name="people_profile_change">Modifica</string>
     <string name="people_profile_privacy_public_label">Profilo pubblico</string>
     <string name="people_profile_privacy_public_desc">Chiunque può trovare e visualizzare il tuo profilo</string>

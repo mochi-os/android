@@ -184,6 +184,7 @@
     <string name="people_profile_accent_presets">Rhagosodiadau</string>
     <string name="people_profile_accent_invalid">Rhowch liw hecs dilys (e.e. #a78bfa)</string>
     <string name="people_profile_accent_unset">Dim lliw acen wedi\'i osod</string>
+    <string name="people_profile_accent_none">Dim</string>
     <string name="people_profile_privacy_public_label">Proffil cyhoeddus</string>
     <string name="people_profile_privacy_public_desc">Gall unrhyw un ddod o hyd i\'ch proffil a\'i weld</string>
     <string name="people_profile_privacy_private_desc">Dim ond ffrindiau cyffredin all weld eich proffil</string>

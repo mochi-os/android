@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">ትክክለኛ የሄክስ ቀለም ያስገቡ (ለምሳሌ #a78bfa)</string>
     <string name="people_profile_retry">እንደገና ሞክር</string>
     <string name="people_profile_accent_unset">ምንም የጎላ ቀለም አልተዋቀረም</string>
+    <string name="people_profile_accent_none">ምንም</string>
     <string name="people_profile_change">ቀይር</string>
     <string name="people_profile_privacy_public_label">ይፋዊ መገለጫ</string>
     <string name="people_profile_privacy_public_desc">ማንኛውም ሰው መገለጫዎን ማግኘት እና ማየት ይችላል</string>

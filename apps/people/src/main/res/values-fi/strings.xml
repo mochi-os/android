@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Anna kelvollinen heksaväri (esim. #a78bfa)</string>
     <string name="people_profile_retry">Yritä uudelleen</string>
     <string name="people_profile_accent_unset">Ei korostusväriä asetettu</string>
+    <string name="people_profile_accent_none">Ei mitään</string>
     <string name="people_profile_change">Vaihda</string>
     <string name="people_profile_privacy_public_label">Julkinen profiili</string>
     <string name="people_profile_privacy_public_desc">Kuka tahansa voi löytää ja katsella profiiliasi</string>

@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Въведете валиден шестнадесетичен цвят (напр. #a78bfa)</string>
     <string name="people_profile_retry">Опитайте отново</string>
     <string name="people_profile_accent_unset">Няма зададен акцент</string>
+    <string name="people_profile_accent_none">Няма</string>
     <string name="people_profile_change">Промяна</string>
     <string name="people_profile_privacy_public_label">Публичен профил</string>
     <string name="people_profile_privacy_public_desc">Всеки може да намери и види профила ви</string>

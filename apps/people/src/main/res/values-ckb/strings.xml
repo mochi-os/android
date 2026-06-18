@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">ڕەنگێکی هێکسی دروست بنووسە (بۆ نموونە #a78bfa)</string>
     <string name="people_profile_retry">هەوڵدانەوە</string>
     <string name="people_profile_accent_unset">هیچ ڕەنگی ڕەنگاوڕەنگ دانەنراوە</string>
+    <string name="people_profile_accent_none">هیچ</string>
     <string name="people_profile_change">گۆڕین</string>
     <string name="people_profile_privacy_public_label">پرۆفایلی گشتی</string>
     <string name="people_profile_privacy_public_desc">هەرکەسێک دەتوانێت پرۆفایلەکەت ببینێت و بدۆزێتەوە</string>

@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">صحيح هيڪس رنگ داخل ڪريو (مثال طور #a78bfa)</string>
     <string name="people_profile_retry">ٻيهر ڪوشش ڪريو</string>
     <string name="people_profile_accent_unset">ڪو ايڪسينٽ مقرر نه ٿيل</string>
+    <string name="people_profile_accent_none">ڪا به نه</string>
     <string name="people_profile_change">تبديل ڪريو</string>
     <string name="people_profile_privacy_public_label">عوامي پروفائل</string>
     <string name="people_profile_privacy_public_desc">ڪو به توهان جو پروفائل ڳولي ۽ ڏسي سگهي ٿو</string>

@@ -164,6 +164,7 @@
     <string name="people_profile_accent_invalid">Saisissez une couleur hexadécimale valide (p. ex. #a78bfa)</string>
     <string name="people_profile_retry">Réessayer</string>
     <string name="people_profile_accent_unset">Aucune couleur d\'accent définie</string>
+    <string name="people_profile_accent_none">Aucun</string>
     <string name="people_profile_change">Modifier</string>
     <string name="people_profile_clear">Effacer</string>
     <string name="people_profile_privacy_public_label">Profil public</string>

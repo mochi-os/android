@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">បញ្ចូលលេខកូដពណ៌ hex ត្រឹមត្រូវ (ឧ. #a78bfa)</string>
     <string name="people_profile_retry">ព្យាយាមម្តងទៀត</string>
     <string name="people_profile_accent_unset">មិនបានកំណត់ពណ៌សង្កត់</string>
+    <string name="people_profile_accent_none">គ្មាន</string>
     <string name="people_profile_change">ផ្លាស់ប្តូរ</string>
     <string name="people_profile_privacy_public_label">ប្រវត្តិរូបសាធារណៈ</string>
     <string name="people_profile_privacy_public_desc">នរណាក៏អាចស្វែងរក និងមើលប្រវត្តិរូបរបស់អ្នកបាន</string>

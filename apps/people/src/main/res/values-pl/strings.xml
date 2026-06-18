@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Wprowadź prawidłowy kolor szesnastkowy (np. #a78bfa)</string>
     <string name="people_profile_retry">Spróbuj ponownie</string>
     <string name="people_profile_accent_unset">Nie ustawiono koloru wiodącego</string>
+    <string name="people_profile_accent_none">Brak</string>
     <string name="people_profile_change">Zmień</string>
     <string name="people_profile_privacy_public_label">Profil publiczny</string>
     <string name="people_profile_privacy_public_desc">Każdy może znaleźć i wyświetlić Twój profil</string>

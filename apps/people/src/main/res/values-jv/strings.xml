@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Lebetaken werna heks ingkang sah (cth. #a78bfa)</string>
     <string name="people_profile_retry">Cobi malih</string>
     <string name="people_profile_accent_unset">Boten wonten aksen ingkang disetel</string>
+    <string name="people_profile_accent_none">Ora ana</string>
     <string name="people_profile_change">Ewahi</string>
     <string name="people_profile_privacy_public_label">Profil umum</string>
     <string name="people_profile_privacy_public_desc">Sinten kemawon saged manggihaken lan ningali profil panjenengan</string>

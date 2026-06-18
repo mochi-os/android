@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Masukkan warna heksa yang valid (mis. #a78bfa)</string>
     <string name="people_profile_retry">Coba lagi</string>
     <string name="people_profile_accent_unset">Tidak ada aksen yang disetel</string>
+    <string name="people_profile_accent_none">Tidak ada</string>
     <string name="people_profile_change">Ubah</string>
     <string name="people_profile_privacy_public_label">Profil publik</string>
     <string name="people_profile_privacy_public_desc">Siapa pun dapat menemukan dan melihat profil Anda</string>

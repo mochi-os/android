@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">ಮಾನ್ಯವಾದ ಹೆಕ್ಸ್ ಬಣ್ಣವನ್ನು ನಮೂದಿಸಿ (ಉದಾ. #a78bfa)</string>
     <string name="people_profile_retry">ಮರುಪ್ರಯತ್ನಿಸಿ</string>
     <string name="people_profile_accent_unset">ಯಾವುದೇ ಆಕ್ಸೆಂಟ್ ಹೊಂದಿಸಿಲ್ಲ</string>
+    <string name="people_profile_accent_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="people_profile_change">ಬದಲಾಯಿಸಿ</string>
     <string name="people_profile_privacy_public_label">ಸಾರ್ವಜನಿಕ ಪ್ರೊಫೈಲ್</string>
     <string name="people_profile_privacy_public_desc">ಯಾರಾದರೂ ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಹುಡುಕಬಹುದು ಮತ್ತು ವೀಕ್ಷಿಸಬಹುದು</string>

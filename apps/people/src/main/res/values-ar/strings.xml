@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">أدخل لونًا سداسيًا صالحًا (مثال: ‎#a78bfa)</string>
     <string name="people_profile_retry">إعادة المحاولة</string>
     <string name="people_profile_accent_unset">لم يتم تعيين لون مميز</string>
+    <string name="people_profile_accent_none">لا شيء</string>
     <string name="people_profile_change">تغيير</string>
     <string name="people_profile_privacy_public_label">ملف شخصي عام</string>
     <string name="people_profile_privacy_public_desc">يمكن لأي شخص العثور على ملفك الشخصي وعرضه</string>

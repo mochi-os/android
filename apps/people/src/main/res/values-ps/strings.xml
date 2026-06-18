@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">د سم هیکس رنګ ولیکئ (لکه #a78bfa)</string>
     <string name="people_profile_retry">بیا هڅه وکړئ</string>
     <string name="people_profile_accent_unset">هېڅ تاکیدي رنګ نه دی ټاکل شوی</string>
+    <string name="people_profile_accent_none">هیڅوک</string>
     <string name="people_profile_change">بدلون</string>
     <string name="people_profile_privacy_public_label">عامه پېژندنه</string>
     <string name="people_profile_privacy_public_desc">هر څوک کولی شي ستاسو پېژندنه ومومي او وګوري</string>

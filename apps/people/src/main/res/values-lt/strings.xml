@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Įveskite tinkamą šešioliktainį spalvos kodą (pvz., #a78bfa)</string>
     <string name="people_profile_retry">Bandyti dar kartą</string>
     <string name="people_profile_accent_unset">Akcento spalva nenustatyta</string>
+    <string name="people_profile_accent_none">Nėra</string>
     <string name="people_profile_change">Keisti</string>
     <string name="people_profile_privacy_public_label">Viešas profilis</string>
     <string name="people_profile_privacy_public_desc">Bet kas gali rasti ir peržiūrėti jūsų profilį</string>

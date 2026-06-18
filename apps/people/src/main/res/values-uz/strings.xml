@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Yaroqli hex rangini kiriting (masalan #a78bfa)</string>
     <string name="people_profile_retry">Qayta urinish</string>
     <string name="people_profile_accent_unset">Urg\'u rangi o\'rnatilmagan</string>
+    <string name="people_profile_accent_none">Hech qanday</string>
     <string name="people_profile_change">O\'zgartirish</string>
     <string name="people_profile_privacy_public_label">Ochiq profil</string>
     <string name="people_profile_privacy_public_desc">Har kim sizning profilingizni topishi va ko\'rishi mumkin</string>

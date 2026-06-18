@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Введіть дійсний шістнадцятковий колір (напр. #a78bfa)</string>
     <string name="people_profile_retry">Повторити</string>
     <string name="people_profile_accent_unset">Акцент не встановлено</string>
+    <string name="people_profile_accent_none">Немає</string>
     <string name="people_profile_change">Змінити</string>
     <string name="people_profile_privacy_public_label">Публічний профіль</string>
     <string name="people_profile_privacy_public_desc">Будь-хто може знайти та переглянути ваш профіль</string>

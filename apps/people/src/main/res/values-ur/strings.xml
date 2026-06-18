@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">درست ہیکس رنگ درج کریں (مثلاً #a78bfa)</string>
     <string name="people_profile_retry">دوبارہ کوشش کریں</string>
     <string name="people_profile_accent_unset">کوئی ایکسنٹ مقرر نہیں</string>
+    <string name="people_profile_accent_none">کوئی نہیں</string>
     <string name="people_profile_change">تبدیل کریں</string>
     <string name="people_profile_privacy_public_label">عوامی پروفائل</string>
     <string name="people_profile_privacy_public_desc">کوئی بھی آپ کا پروفائل تلاش اور دیکھ سکتا ہے</string>

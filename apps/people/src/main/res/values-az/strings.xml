@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Düzgün hex rəng daxil edin (məs. #a78bfa)</string>
     <string name="people_profile_retry">Yenidən cəhd et</string>
     <string name="people_profile_accent_unset">Vurğu rəngi təyin edilməyib</string>
+    <string name="people_profile_accent_none">Heç biri</string>
     <string name="people_profile_change">Dəyişdir</string>
     <string name="people_profile_privacy_public_label">Açıq profil</string>
     <string name="people_profile_privacy_public_desc">Hər kəs profilinizi tapa və baxa bilər</string>

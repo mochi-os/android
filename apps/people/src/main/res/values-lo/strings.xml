@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">ໃສ່ລະຫັດສີ hex ທີ່ຖືກຕ້ອງ (ເຊັ່ນ #a78bfa)</string>
     <string name="people_profile_retry">ລອງໃໝ່</string>
     <string name="people_profile_accent_unset">ບໍ່ມີສີເນັ້ນ</string>
+    <string name="people_profile_accent_none">ບໍ່ມີ</string>
     <string name="people_profile_change">ປ່ຽນ</string>
     <string name="people_profile_privacy_public_label">ໂປຣໄຟລ໌ສາທາລະນະ</string>
     <string name="people_profile_privacy_public_desc">ໃຜກໍສາມາດຄົ້ນຫາ ແລະ ເບິ່ງໂປຣໄຟລ໌ຂອງທ່ານໄດ້</string>

@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Geben Sie eine gültige Hex-Farbe ein (z. B. #a78bfa)</string>
     <string name="people_profile_retry">Erneut versuchen</string>
     <string name="people_profile_accent_unset">Keine Akzentfarbe festgelegt</string>
+    <string name="people_profile_accent_none">Keine</string>
     <string name="people_profile_change">Ändern</string>
     <string name="people_profile_privacy_public_label">Öffentliches Profil</string>
     <string name="people_profile_privacy_public_desc">Jeder kann Ihr Profil finden und ansehen</string>

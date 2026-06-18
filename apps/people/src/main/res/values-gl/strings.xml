@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Introduce unha cor hexadecimal válida (p. ex. #a78bfa)</string>
     <string name="people_profile_retry">Reintentar</string>
     <string name="people_profile_accent_unset">Sen cor de acento definida</string>
+    <string name="people_profile_accent_none">Ningún</string>
     <string name="people_profile_change">Cambiar</string>
     <string name="people_profile_privacy_public_label">Perfil público</string>
     <string name="people_profile_privacy_public_desc">Calquera pode atopar e ver o teu perfil</string>

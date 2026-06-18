@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">မှန်ကန်သော hex အရောင်ကို ထည့်ပါ (ဥပမာ #a78bfa)</string>
     <string name="people_profile_retry">ထပ်ကြိုးစားရန်</string>
     <string name="people_profile_accent_unset">အရောင်အသား မသတ်မှတ်ထားပါ</string>
+    <string name="people_profile_accent_none">မရှိ</string>
     <string name="people_profile_change">ပြောင်းရန်</string>
     <string name="people_profile_privacy_public_label">အများသုံး ပရိုဖိုင်</string>
     <string name="people_profile_privacy_public_desc">မည်သူမဆို သင်၏ ပရိုဖိုင်ကို ရှာဖွေ၍ ကြည့်ရှုနိုင်သည်</string>

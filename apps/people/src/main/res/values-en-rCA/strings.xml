@@ -163,6 +163,7 @@
     <string name="people_profile_accent_invalid">Enter a valid hex colour (e.g. #a78bfa)</string>
     <string name="people_profile_retry">Retry</string>
     <string name="people_profile_accent_unset">No accent set</string>
+    <string name="people_profile_accent_none">None</string>
     <string name="people_profile_change">Change</string>
     <string name="people_profile_clear">Clear</string>
     <string name="people_profile_privacy_public_label">Public profile</string>

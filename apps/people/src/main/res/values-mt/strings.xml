@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Daħħal kulur eżadeċimali validu (eż. #a78bfa)</string>
     <string name="people_profile_retry">Erġa\' pprova</string>
     <string name="people_profile_accent_unset">L-ebda aċċent issettjat</string>
+    <string name="people_profile_accent_none">Xejn</string>
     <string name="people_profile_change">Ibdel</string>
     <string name="people_profile_privacy_public_label">Profil pubbliku</string>
     <string name="people_profile_privacy_public_desc">Kulħadd jista\' jsib u jara l-profil tiegħek</string>

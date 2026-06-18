@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Maglagay ng wastong hex na kulay (hal. #a78bfa)</string>
     <string name="people_profile_retry">Subukang muli</string>
     <string name="people_profile_accent_unset">Walang nakatakdang accent</string>
+    <string name="people_profile_accent_none">Wala</string>
     <string name="people_profile_change">Baguhin</string>
     <string name="people_profile_privacy_public_label">Pampublikong profile</string>
     <string name="people_profile_privacy_public_desc">Maaaring mahanap at matingnan ng kahit sino ang iyong profile</string>

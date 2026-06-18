@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Жарамды HEX түсін енгізіңіз (мысалы, #a78bfa)</string>
     <string name="people_profile_retry">Қайталау</string>
     <string name="people_profile_accent_unset">Акцент түсі орнатылмаған</string>
+    <string name="people_profile_accent_none">Жоқ</string>
     <string name="people_profile_change">Өзгерту</string>
     <string name="people_profile_privacy_public_label">Ашық профиль</string>
     <string name="people_profile_privacy_public_desc">Кез келген адам сіздің профиліңізді таба алады және көре алады</string>

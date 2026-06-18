@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Vendosni një ngjyrë heks të vlefshme (p.sh. #a78bfa)</string>
     <string name="people_profile_retry">Riprovo</string>
     <string name="people_profile_accent_unset">Asnjë ngjyrë theksuese e vendosur</string>
+    <string name="people_profile_accent_none">Asnjë</string>
     <string name="people_profile_change">Ndrysho</string>
     <string name="people_profile_privacy_public_label">Profil publik</string>
     <string name="people_profile_privacy_public_desc">Kushdo mund ta gjejë dhe ta shohë profilin tuaj</string>

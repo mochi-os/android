@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Tẹ àwọ̀ hex tó tọ́ (fún àpẹẹrẹ #a78bfa)</string>
     <string name="people_profile_retry">Gbìyànjú lẹ́ẹ̀kan sí i</string>
     <string name="people_profile_accent_unset">Kò sí àwọ̀ àfikún tí a yàn</string>
+    <string name="people_profile_accent_none">Kòsí</string>
     <string name="people_profile_change">Yí padà</string>
     <string name="people_profile_privacy_public_label">Profaìlì gbangba</string>
     <string name="people_profile_privacy_public_desc">Ẹnikẹ́ni lè rí, kí ó sì wo profaìlì rẹ</string>

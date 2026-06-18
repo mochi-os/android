@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Увядзіце сапраўдны шаснаццатковы колер (напр. #a78bfa)</string>
     <string name="people_profile_retry">Паўтарыць</string>
     <string name="people_profile_accent_unset">Акцэнтны колер не зададзены</string>
+    <string name="people_profile_accent_none">Няма</string>
     <string name="people_profile_change">Змяніць</string>
     <string name="people_profile_privacy_public_label">Публічны профіль</string>
     <string name="people_profile_privacy_public_desc">Любы можа знайсці і праглядзець ваш профіль</string>

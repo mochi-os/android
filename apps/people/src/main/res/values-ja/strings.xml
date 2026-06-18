@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">有効な16進カラーコードを入力してください (例: #a78bfa)</string>
     <string name="people_profile_retry">再試行</string>
     <string name="people_profile_accent_unset">アクセントカラーが設定されていません</string>
+    <string name="people_profile_accent_none">なし</string>
     <string name="people_profile_change">変更</string>
     <string name="people_profile_privacy_public_label">公開プロフィール</string>
     <string name="people_profile_privacy_public_desc">誰でもあなたのプロフィールを検索して閲覧できます</string>

@@ -182,6 +182,7 @@
     <string name="people_profile_accent_invalid">Cuir a-steach dath sia-dheicheach dligheach (m.e. #a78bfa)</string>
     <string name="people_profile_retry">Feuch a-rithist</string>
     <string name="people_profile_accent_unset">Cha deach dath sònrachaidh a shuidheachadh</string>
+    <string name="people_profile_accent_none">Chan eil gin</string>
     <string name="people_profile_change">Atharraich</string>
     <string name="people_profile_privacy_public_label">Pròifil phoblach</string>
     <string name="people_profile_privacy_public_desc">Faodaidh duine sam bith do phròifil a lorg agus a shealltainn</string>

@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">Masukkan warna heks yang sah (cth. #a78bfa)</string>
     <string name="people_profile_retry">Cuba semula</string>
     <string name="people_profile_accent_unset">Tiada warna aksen ditetapkan</string>
+    <string name="people_profile_accent_none">Tiada</string>
     <string name="people_profile_change">Tukar</string>
     <string name="people_profile_privacy_public_label">Profil awam</string>
     <string name="people_profile_privacy_public_desc">Sesiapa sahaja boleh mencari dan melihat profil anda</string>

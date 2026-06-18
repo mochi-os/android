@@ -183,6 +183,7 @@
     <string name="people_profile_accent_invalid">גיט אַרײַן אַ גילטיקן העקס-קאָליר (למשל #a78bfa)</string>
     <string name="people_profile_retry">נאָך אַ מאָל</string>
     <string name="people_profile_accent_unset">קיין אַקצענט-קאָליר באַשטימט</string>
+    <string name="people_profile_accent_none">קיינס</string>
     <string name="people_profile_change">טוישן</string>
     <string name="people_profile_privacy_public_label">עפֿנטלעכער פּראָפֿיל</string>
     <string name="people_profile_privacy_public_desc">יעדער קען געפֿינען און באַקוקן אײַער פּראָפֿיל</string>
