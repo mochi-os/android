@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,7 +20,6 @@ import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PersonAdd
@@ -380,7 +380,6 @@ private fun FriendRow(
     onRemove: () -> Unit,
 ) {
     val avatarUrl = if (serverUrl.isNotBlank()) "$serverUrl/people/${friend.id}/-/avatar" else null
-    var showMenu by remember { mutableStateOf(false) }
 
     Card(
         onClick = onTap,
@@ -394,8 +393,7 @@ private fun FriendRow(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
             EntityAvatar(
                 name = friend.name,
@@ -403,6 +401,7 @@ private fun FriendRow(
                 seed = friend.id,
                 size = 40.dp,
             )
+            Spacer(modifier = Modifier.width(12.dp))
             Text(
                 text = friend.name,
                 style = MaterialTheme.typography.bodyLarge,
@@ -416,26 +415,11 @@ private fun FriendRow(
                     contentDescription = stringResource(R.string.people_friends_message),
                 )
             }
-            Box {
-                IconButton(onClick = { showMenu = true }) {
-                    Icon(
-                        Icons.Default.MoreHoriz,
-                        contentDescription = stringResource(MochiR.string.common_more_options),
-                    )
-                }
-                DropdownMenu(
-                    expanded = showMenu,
-                    onDismissRequest = { showMenu = false },
-                ) {
-                    DropdownMenuItem(
-                        text = { Text(stringResource(R.string.people_friends_remove)) },
-                        leadingIcon = { Icon(Icons.Default.PersonRemove, contentDescription = null) },
-                        onClick = {
-                            showMenu = false
-                            onRemove()
-                        },
-                    )
-                }
+            IconButton(onClick = onRemove) {
+                Icon(
+                    Icons.Default.PersonRemove,
+                    contentDescription = stringResource(R.string.people_friends_remove),
+                )
             }
         }
     }
