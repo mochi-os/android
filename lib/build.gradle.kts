@@ -101,6 +101,7 @@ dependencies {
     api(libs.coil.network)
     api(libs.media3.exoplayer)
     api(libs.media3.ui)
+    api(libs.media3.datasource.okhttp)
 
     implementation(libs.markwon.core)
     implementation(libs.markwon.html)

@@ -1,5 +1,6 @@
 package org.mochios.android.ui.components
 
+import androidx.annotation.OptIn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
@@ -7,9 +8,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.media3.common.MediaItem
+import androidx.media3.common.util.UnstableApi
+import androidx.media3.datasource.okhttp.OkHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.ui.PlayerView
+import dagger.hilt.android.EntryPointAccessors
+import org.mochios.android.api.AssetHttpEntryPoint
 
+@OptIn(UnstableApi::class)
 @Composable
 fun VideoPlayer(
     url: String,
@@ -17,7 +24,14 @@ fun VideoPlayer(
 ) {
     val context = LocalContext.current
     val exoPlayer = remember {
-        ExoPlayer.Builder(context).build()
+        // Stream through the authenticated asset client so session-gated video
+        // URLs (e.g. /chat/<id>/-/attachments/<id>) don't come back 401.
+        val client = EntryPointAccessors
+            .fromApplication(context.applicationContext, AssetHttpEntryPoint::class.java)
+            .assetHttpClient()
+        ExoPlayer.Builder(context)
+            .setMediaSourceFactory(DefaultMediaSourceFactory(OkHttpDataSource.Factory(client)))
+            .build()
     }
 
     DisposableEffect(url) {

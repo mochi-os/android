@@ -72,7 +72,9 @@ fun AttachmentGallery(
         for (video in videos) {
             VideoThumbnail(
                 video = video,
-                thumbnailUrl = thumbnailUrlBuilder?.invoke(video),
+                // The server has no video-thumbnail route, so decode a frame
+                // from the video URL itself (VideoFrameDecoder in the loader).
+                frameUrl = urlBuilder(video),
                 onClick = { showVideoUrl = urlBuilder(video) }
             )
         }
@@ -126,7 +128,7 @@ fun AttachmentGallery(
 @Composable
 private fun VideoThumbnail(
     video: Attachment,
-    thumbnailUrl: String?,
+    frameUrl: String,
     onClick: () -> Unit
 ) {
     Box(
@@ -138,14 +140,14 @@ private fun VideoThumbnail(
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
-        if (thumbnailUrl != null) {
-            AsyncImage(
-                model = thumbnailUrl,
-                contentDescription = video.name,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
-        }
+        // VideoFrame routes to VideoFrameFetcher, which range-extracts the
+        // opening frame and caches it in Coil's memory cache.
+        AsyncImage(
+            model = VideoFrame(frameUrl),
+            contentDescription = video.name,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
         Icon(
             imageVector = Icons.Default.PlayCircle,
             contentDescription = stringResource(R.string.common_play_video),
