@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Aucune discussion vers laquelle transférer</string>
     <string name="chat_forward_success">Transféré</string>
     <string name="chat_forward_failed">Échec du transfert</string>
+    <string name="chat_message_reply">Répondre</string>
+    <string name="chat_message_select">Sélectionner</string>
+    <string name="chat_reply_attachment">Pièce jointe</string>
+    <string name="chat_replying_to">Réponse à %1$s</string>
+    <string name="chat_delete_confirm_title">Supprimer le message ?</string>
+    <string name="chat_delete_confirm_body">Cela supprime le message pour tout le monde et est irréversible.</string>
+    <string name="chat_delete_own_only">Vous ne pouvez supprimer que vos propres messages</string>
+    <string name="chat_selection_title">%1$d sélectionné(s)</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Vaš račun i svi njegovi podaci biće trajno izbrisani %1$s. Sada možete otkazati i vratiti puni pristup.</string>
     <string name="reactivation_reactivate">Ponovo aktiviraj moj račun</string>
     <string name="reactivation_sign_out">Nastavi sa zatvaranjem i odjavi se</string>
+    <string name="common_play">Pusti</string>
+    <string name="common_pause">Pauziraj</string>
+    <string name="common_opening_file">Otvaranje datoteke…</string>
+    <string name="common_no_app_for_file">Nijedna aplikacija ne može otvoriti ovu datoteku</string>
+    <string name="common_file_open_failed">Datoteku nije moguće otvoriti</string>
 </resources>

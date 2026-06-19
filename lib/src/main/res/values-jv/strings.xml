@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Akun panjenengan lan kabeh datane bakal dibusak permanen ing %1$s. Panjenengan bisa mbatalake lan mulihake akses kabeh saiki.</string>
     <string name="reactivation_reactivate">Aktifake maneh akunku</string>
     <string name="reactivation_sign_out">Terusake nutup lan metu</string>
+    <string name="common_play">Puter</string>
+    <string name="common_pause">Jeda</string>
+    <string name="common_opening_file">Mbukak berkas…</string>
+    <string name="common_no_app_for_file">Ora ana app sing bisa mbukak berkas iki</string>
+    <string name="common_file_open_failed">Ora bisa mbukak berkas</string>
 </resources>

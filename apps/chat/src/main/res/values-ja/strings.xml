@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">転送先のチャットがありません</string>
     <string name="chat_forward_success">転送しました</string>
     <string name="chat_forward_failed">転送できませんでした</string>
+    <string name="chat_message_reply">返信</string>
+    <string name="chat_message_select">選択</string>
+    <string name="chat_reply_attachment">添付ファイル</string>
+    <string name="chat_replying_to">%1$s に返信</string>
+    <string name="chat_delete_confirm_title">メッセージを削除しますか?</string>
+    <string name="chat_delete_confirm_body">全員からこのメッセージが削除され、元に戻すことはできません。</string>
+    <string name="chat_delete_own_only">自分のメッセージのみ削除できます</string>
+    <string name="chat_selection_title">%1$d 件選択中</string>
 </resources>

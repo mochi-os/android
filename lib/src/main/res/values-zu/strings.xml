@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">I-akhawunti yakho nayo yonke idatha yayo izosuswa unomphela ngo-%1$s. Ungakhansela futhi ubuyisele ukufinyelela okugcwele manje.</string>
     <string name="reactivation_reactivate">Phinda uvuselele i-akhawunti yami</string>
     <string name="reactivation_sign_out">Qhubeka uvale uphinde uphume</string>
+    <string name="common_play">Dlala</string>
+    <string name="common_pause">Misa</string>
+    <string name="common_opening_file">Kuvulwa ifayela…</string>
+    <string name="common_no_app_for_file">Alikho i-app elingavula leli fayela</string>
+    <string name="common_file_open_failed">Ayikwazanga ukuvula ifayela</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">သင့်အကောင့်နှင့် ၎င်း၏ဒေတာအားလုံးကို %1$s တွင် အပြီးတိုင်ဖျက်ပစ်ပါမည်။ ယခု ပယ်ဖျက်၍ ဝင်ရောက်ခွင့်အပြည့်အဝကို ပြန်လည်ရယူနိုင်ပါသည်။</string>
     <string name="reactivation_reactivate">ကျွန်ုပ်၏အကောင့်ကို ပြန်လည်အသက်သွင်းရန်</string>
     <string name="reactivation_sign_out">ပိတ်ခြင်းကို ဆက်လုပ်ပြီး ထွက်ရန်</string>
+    <string name="common_play">ဖွင့်ရန်</string>
+    <string name="common_pause">ခဏရပ်ရန်</string>
+    <string name="common_opening_file">ဖိုင် ဖွင့်နေသည်…</string>
+    <string name="common_no_app_for_file">ဤဖိုင်ကို ဖွင့်နိုင်သော အက်ပ် မရှိပါ</string>
+    <string name="common_file_open_failed">ဖိုင်ကို ဖွင့်၍ မရပါ</string>
 </resources>

@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">គ្មានការជជែកដើម្បីបញ្ជូនបន្តទេ</string>
     <string name="chat_forward_success">បានបញ្ជូនបន្ត</string>
     <string name="chat_forward_failed">មិនអាចបញ្ជូនបន្តបានទេ</string>
+    <string name="chat_message_reply">ឆ្លើយតប</string>
+    <string name="chat_message_select">ជ្រើសរើស</string>
+    <string name="chat_reply_attachment">ឯកសារភ្ជាប់</string>
+    <string name="chat_replying_to">កំពុងឆ្លើយតបទៅ %1$s</string>
+    <string name="chat_delete_confirm_title">លុបសារ?</string>
+    <string name="chat_delete_confirm_body">សកម្មភាពនេះលុបសារសម្រាប់មនុស្សគ្រប់គ្នា ហើយមិនអាចត្រឡប់វិញបានទេ។</string>
+    <string name="chat_delete_own_only">អ្នកអាចលុបបានតែសាររបស់អ្នកប៉ុណ្ណោះ</string>
+    <string name="chat_selection_title">បានជ្រើស %1$d</string>
 </resources>

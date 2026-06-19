@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Акаунтът ви и всички негови данни ще бъдат окончателно изтрити на %1$s. Можете да отмените и да възстановите пълния достъп сега.</string>
     <string name="reactivation_reactivate">Реактивиране на акаунта ми</string>
     <string name="reactivation_sign_out">Продължете със закриването и излезте</string>
+    <string name="common_play">Възпроизвеждане</string>
+    <string name="common_pause">Пауза</string>
+    <string name="common_opening_file">Отваряне на файла…</string>
+    <string name="common_no_app_for_file">Няма приложение, което може да отвори този файл</string>
+    <string name="common_file_open_failed">Файлът не можа да бъде отворен</string>
 </resources>

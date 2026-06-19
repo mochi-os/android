@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ҳисоби шумо ва ҳамаи маълумоти он дар %1$s ба таври доимӣ нест карда мешавад. Шумо метавонед ҳозир бекор кунед ва дастрасии пурраро барқарор кунед.</string>
     <string name="reactivation_reactivate">Ҳисоби маро аз нав фаъол кунед</string>
     <string name="reactivation_sign_out">Бастанро идома диҳед ва бароед</string>
+    <string name="common_play">Пахш кардан</string>
+    <string name="common_pause">Таваққуф</string>
+    <string name="common_opening_file">Кушодани файл…</string>
+    <string name="common_no_app_for_file">Ягон барнома ин файлро кушода наметавонад</string>
+    <string name="common_file_open_failed">Файл кушода нашуд</string>
 </resources>

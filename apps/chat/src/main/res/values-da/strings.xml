@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Ingen chats at videresende til</string>
     <string name="chat_forward_success">Videresendt</string>
     <string name="chat_forward_failed">Kunne ikke videresende</string>
+    <string name="chat_message_reply">Svar</string>
+    <string name="chat_message_select">Vælg</string>
+    <string name="chat_reply_attachment">Vedhæftning</string>
+    <string name="chat_replying_to">Svarer %1$s</string>
+    <string name="chat_delete_confirm_title">Slet besked?</string>
+    <string name="chat_delete_confirm_body">Dette sletter beskeden for alle og kan ikke fortrydes.</string>
+    <string name="chat_delete_own_only">Du kan kun slette dine egne beskeder</string>
+    <string name="chat_selection_title">%1$d valgt</string>
 </resources>

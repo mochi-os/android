@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Ei keskusteluja, joihin välittää</string>
     <string name="chat_forward_success">Välitetty</string>
     <string name="chat_forward_failed">Välitys epäonnistui</string>
+    <string name="chat_message_reply">Vastaa</string>
+    <string name="chat_message_select">Valitse</string>
+    <string name="chat_reply_attachment">Liite</string>
+    <string name="chat_replying_to">Vastaus käyttäjälle %1$s</string>
+    <string name="chat_delete_confirm_title">Poistetaanko viesti?</string>
+    <string name="chat_delete_confirm_body">Tämä poistaa viestin kaikilta eikä sitä voi kumota.</string>
+    <string name="chat_delete_own_only">Voit poistaa vain omat viestisi</string>
+    <string name="chat_selection_title">%1$d valittu</string>
 </resources>

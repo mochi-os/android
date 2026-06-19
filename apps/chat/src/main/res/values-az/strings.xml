@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Yönləndirmək üçün söhbət yoxdur</string>
     <string name="chat_forward_success">Yönləndirildi</string>
     <string name="chat_forward_failed">Yönləndirmək mümkün olmadı</string>
+    <string name="chat_message_reply">Cavabla</string>
+    <string name="chat_message_select">Seç</string>
+    <string name="chat_reply_attachment">Qoşma</string>
+    <string name="chat_replying_to">%1$s istifadəçisinə cavab verilir</string>
+    <string name="chat_delete_confirm_title">Mesaj silinsin?</string>
+    <string name="chat_delete_confirm_body">Bu, mesajı hamı üçün silir və geri qaytarmaq mümkün deyil.</string>
+    <string name="chat_delete_own_only">Yalnız öz mesajlarınızı silə bilərsiniz</string>
+    <string name="chat_selection_title">%1$d seçildi</string>
 </resources>

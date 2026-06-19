@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">آپ کا اکاؤنٹ اور اس کا تمام ڈیٹا %1$s کو مستقل طور پر حذف کر دیا جائے گا۔ آپ ابھی منسوخ کر کے مکمل رسائی بحال کر سکتے ہیں۔</string>
     <string name="reactivation_reactivate">میرا اکاؤنٹ دوبارہ فعال کریں</string>
     <string name="reactivation_sign_out">بند کرنا جاری رکھیں اور سائن آؤٹ کریں</string>
+    <string name="common_play">چلائیں</string>
+    <string name="common_pause">روکیں</string>
+    <string name="common_opening_file">فائل کھولی جا رہی ہے…</string>
+    <string name="common_no_app_for_file">کوئی ایپ اس فائل کو نہیں کھول سکتی</string>
+    <string name="common_file_open_failed">فائل نہیں کھل سکی</string>
 </resources>

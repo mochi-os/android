@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Nincs chat, ahová továbbíthatnál</string>
     <string name="chat_forward_success">Továbbítva</string>
     <string name="chat_forward_failed">Nem sikerült továbbítani</string>
+    <string name="chat_message_reply">Válasz</string>
+    <string name="chat_message_select">Kijelölés</string>
+    <string name="chat_reply_attachment">Melléklet</string>
+    <string name="chat_replying_to">Válasz neki: %1$s</string>
+    <string name="chat_delete_confirm_title">Törli az üzenetet?</string>
+    <string name="chat_delete_confirm_body">Ezzel mindenki számára törli az üzenetet, és nem vonható vissza.</string>
+    <string name="chat_delete_own_only">Csak a saját üzeneteit törölheti</string>
+    <string name="chat_selection_title">%1$d kijelölve</string>
 </resources>

@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Hakuna gumzo la kusambaza</string>
     <string name="chat_forward_success">Imesambazwa</string>
     <string name="chat_forward_failed">Imeshindwa kusambaza</string>
+    <string name="chat_message_reply">Jibu</string>
+    <string name="chat_message_select">Chagua</string>
+    <string name="chat_reply_attachment">Kiambatisho</string>
+    <string name="chat_replying_to">Unamjibu %1$s</string>
+    <string name="chat_delete_confirm_title">Futa ujumbe?</string>
+    <string name="chat_delete_confirm_body">Hii inafuta ujumbe kwa kila mtu na haiwezi kutenduliwa.</string>
+    <string name="chat_delete_own_only">Unaweza kufuta ujumbe wako pekee</string>
+    <string name="chat_selection_title">%1$d zimechaguliwa</string>
 </resources>

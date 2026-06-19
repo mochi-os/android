@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Pa gen okenn chat pou transfere ladan l</string>
     <string name="chat_forward_success">Mesaj la transfere</string>
     <string name="chat_forward_failed">Nou pa t ka transfere</string>
+    <string name="chat_message_reply">Reponn</string>
+    <string name="chat_message_select">Chwazi</string>
+    <string name="chat_reply_attachment">Pyès jwenti</string>
+    <string name="chat_replying_to">W ap reponn %1$s</string>
+    <string name="chat_delete_confirm_title">Efase mesaj la?</string>
+    <string name="chat_delete_confirm_body">Sa efase mesaj la pou tout moun epi ou pa ka defè l.</string>
+    <string name="chat_delete_own_only">Ou ka efase pwòp mesaj ou yo sèlman</string>
+    <string name="chat_selection_title">%1$d chwazi</string>
 </resources>

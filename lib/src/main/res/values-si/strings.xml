@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">ඔබේ ගිණුම සහ එහි සියලුම දත්ත %1$s දින ස්ථිරවම මකා දැමෙනු ඇත. ඔබට දැන් මෙය අවලංගු කර සම්පූර්ණ ප්‍රවේශය නැවත ලබා ගත හැකිය.</string>
     <string name="reactivation_reactivate">මගේ ගිණුම නැවත සක්‍රිය කරන්න</string>
     <string name="reactivation_sign_out">වැසීම දිගටම කරගෙන පිටවන්න</string>
+    <string name="common_play">වාදනය කරන්න</string>
+    <string name="common_pause">විරාම කරන්න</string>
+    <string name="common_opening_file">ගොනුව විවෘත කරමින්…</string>
+    <string name="common_no_app_for_file">මෙම ගොනුව විවෘත කළ හැකි යෙදුමක් නැත</string>
+    <string name="common_file_open_failed">ගොනුව විවෘත කළ නොහැකි විය</string>
 </resources>

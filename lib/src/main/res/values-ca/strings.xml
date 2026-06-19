@@ -284,4 +284,9 @@
     <string name="reactivation_body_dated">El compte i totes les seves dades se suprimiran definitivament el %1$s. Podeu cancel·lar-ho i restaurar l\'accés complet ara.</string>
     <string name="reactivation_reactivate">Reactivar el meu compte</string>
     <string name="reactivation_sign_out">Continuar amb el tancament i tancar la sessió</string>
+    <string name="common_play">Reprodueix</string>
+    <string name="common_pause">Pausa</string>
+    <string name="common_opening_file">S\'està obrint el fitxer…</string>
+    <string name="common_no_app_for_file">Cap aplicació pot obrir aquest fitxer</string>
+    <string name="common_file_open_failed">No s\'ha pogut obrir el fitxer</string>
 </resources>

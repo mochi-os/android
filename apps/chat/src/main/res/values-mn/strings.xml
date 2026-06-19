@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Дамжуулах чат алга</string>
     <string name="chat_forward_success">Дамжуулагдлаа</string>
     <string name="chat_forward_failed">Дамжуулж чадсангүй</string>
+    <string name="chat_message_reply">Хариулах</string>
+    <string name="chat_message_select">Сонгох</string>
+    <string name="chat_reply_attachment">Хавсралт</string>
+    <string name="chat_replying_to">%1$s-д хариулж байна</string>
+    <string name="chat_delete_confirm_title">Мессеж устгах уу?</string>
+    <string name="chat_delete_confirm_body">Энэ нь мессежийг бүх хүний хувьд устгах бөгөөд буцаах боломжгүй.</string>
+    <string name="chat_delete_own_only">Та зөвхөн өөрийн мессежийг устгаж чадна</string>
+    <string name="chat_selection_title">%1$d сонгосон</string>
 </resources>

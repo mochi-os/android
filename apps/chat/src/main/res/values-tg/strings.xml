@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Чате барои интиқол нест</string>
     <string name="chat_forward_success">Интиқол дода шуд</string>
     <string name="chat_forward_failed">Интиқол дода нашуд</string>
+    <string name="chat_message_reply">Ҷавоб додан</string>
+    <string name="chat_message_select">Интихоб кардан</string>
+    <string name="chat_reply_attachment">Замима</string>
+    <string name="chat_replying_to">Ҷавоб ба %1$s</string>
+    <string name="chat_delete_confirm_title">Паём нест карда шавад?</string>
+    <string name="chat_delete_confirm_body">Ин паёмро барои ҳама нест мекунад ва баргардонида намешавад.</string>
+    <string name="chat_delete_own_only">Шумо танҳо паёмҳои худро нест карда метавонед</string>
+    <string name="chat_selection_title">%1$d интихобшуда</string>
 </resources>

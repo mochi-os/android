@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">ထပ်ဆင့်ပို့ရန် ချတ် မရှိပါ</string>
     <string name="chat_forward_success">ထပ်ဆင့်ပို့ပြီးပါပြီ</string>
     <string name="chat_forward_failed">ထပ်ဆင့်ပို့၍ မရပါ</string>
+    <string name="chat_message_reply">ပြန်ကြားရန်</string>
+    <string name="chat_message_select">ရွေးချယ်ရန်</string>
+    <string name="chat_reply_attachment">ပူးတွဲဖိုင်</string>
+    <string name="chat_replying_to">%1$s ကို ပြန်ကြားနေသည်</string>
+    <string name="chat_delete_confirm_title">မက်ဆေ့ဂျ် ဖျက်မလား?</string>
+    <string name="chat_delete_confirm_body">ဤသည်က မက်ဆေ့ဂျ်ကို အားလုံးအတွက် ဖျက်လိုက်မည်ဖြစ်ပြီး ပြန်လည်ပြင်၍ မရတော့ပါ။</string>
+    <string name="chat_delete_own_only">သင်၏ မက်ဆေ့ဂျ်များကိုသာ ဖျက်နိုင်ပါသည်</string>
+    <string name="chat_selection_title">%1$d ခု ရွေးထားသည်</string>
 </resources>

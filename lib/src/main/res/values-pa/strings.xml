@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">ਤੁਹਾਡਾ ਖਾਤਾ ਅਤੇ ਇਸ ਦਾ ਸਾਰਾ ਡਾਟਾ %1$s ਨੂੰ ਪੱਕੇ ਤੌਰ \'ਤੇ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਤੁਸੀਂ ਹੁਣ ਇਸ ਨੂੰ ਰੱਦ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਪੂਰੀ ਪਹੁੰਚ ਬਹਾਲ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="reactivation_reactivate">ਮੇਰਾ ਖਾਤਾ ਮੁੜ ਚਾਲੂ ਕਰੋ</string>
     <string name="reactivation_sign_out">ਬੰਦ ਕਰਨਾ ਜਾਰੀ ਰੱਖੋ ਅਤੇ ਸਾਈਨ ਆਊਟ ਕਰੋ</string>
+    <string name="common_play">ਚਲਾਓ</string>
+    <string name="common_pause">ਰੋਕੋ</string>
+    <string name="common_opening_file">ਫਾਈਲ ਖੋਲ੍ਹੀ ਜਾ ਰਹੀ ਹੈ…</string>
+    <string name="common_no_app_for_file">ਕੋਈ ਐਪ ਇਸ ਫਾਈਲ ਨੂੰ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੀ</string>
+    <string name="common_file_open_failed">ਫਾਈਲ ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕੀ</string>
 </resources>

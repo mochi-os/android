@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Akaunti yako na data yake yote itafutwa kabisa tarehe %1$s. Unaweza kughairi na kurejesha ufikiaji kamili sasa.</string>
     <string name="reactivation_reactivate">Washa upya akaunti yangu</string>
     <string name="reactivation_sign_out">Endelea kufunga na utoke</string>
+    <string name="common_play">Cheza</string>
+    <string name="common_pause">Simamisha</string>
+    <string name="common_opening_file">Inafungua faili…</string>
+    <string name="common_no_app_for_file">Hakuna programu inayoweza kufungua faili hili</string>
+    <string name="common_file_open_failed">Imeshindwa kufungua faili</string>
 </resources>

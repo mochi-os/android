@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Cuentamasa taqi datonakapasa %1$s urunx wiñayatakiw chhaqtayasini. Jichhax jay sasin taqpach mantañ kutt\'ayañ atkta.</string>
     <string name="reactivation_reactivate">Cuentaja wasitat q\'añchayaña</string>
     <string name="reactivation_sign_out">Jist\'antaña sarantayañ ukatx mistsuña</string>
+    <string name="common_play">Uñtʼayaña</string>
+    <string name="common_pause">Sayt\'ayaña</string>
+    <string name="common_opening_file">Archivo jist\'araski…</string>
+    <string name="common_no_app_for_file">Janiw aka archivo jist\'arañ app utjkiti</string>
+    <string name="common_file_open_failed">Janiw archivo jist\'arañ atkiti</string>
 </resources>

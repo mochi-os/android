@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">お客様のアカウントとそのすべてのデータは %1$s に完全に削除されます。今すぐ取り消して、すべてのアクセスを復元できます。</string>
     <string name="reactivation_reactivate">アカウントを再有効化</string>
     <string name="reactivation_sign_out">閉鎖を続行してサインアウト</string>
+    <string name="common_play">再生</string>
+    <string name="common_pause">一時停止</string>
+    <string name="common_opening_file">ファイルを開いています…</string>
+    <string name="common_no_app_for_file">このファイルを開けるアプリがありません</string>
+    <string name="common_file_open_failed">ファイルを開けませんでした</string>
 </resources>

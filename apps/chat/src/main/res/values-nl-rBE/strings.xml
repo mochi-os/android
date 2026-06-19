@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Geen chats om naar door te sturen</string>
     <string name="chat_forward_success">Doorgestuurd</string>
     <string name="chat_forward_failed">Doorsturen mislukt</string>
+    <string name="chat_message_reply">Antwoorden</string>
+    <string name="chat_message_select">Selecteren</string>
+    <string name="chat_reply_attachment">Bijlage</string>
+    <string name="chat_replying_to">Antwoorden op %1$s</string>
+    <string name="chat_delete_confirm_title">Bericht verwijderen?</string>
+    <string name="chat_delete_confirm_body">Dit verwijdert het bericht voor iedereen en kan niet ongedaan worden gemaakt.</string>
+    <string name="chat_delete_own_only">U kunt enkel uw eigen berichten verwijderen</string>
+    <string name="chat_selection_title">%1$d geselecteerd</string>
 </resources>

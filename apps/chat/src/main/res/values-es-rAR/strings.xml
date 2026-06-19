@@ -66,5 +66,13 @@
     <string name="chat_settings_delete_message">Esto quita el chat y sus mensajes solo de este dispositivo.</string>
     <string name="chat_members_empty">No hay miembros</string>
     <string name="chat_chat_not_found">Chat no encontrado</string>
+    <string name="chat_message_reply">Responder</string>
+    <string name="chat_message_select">Seleccionar</string>
+    <string name="chat_reply_attachment">Adjunto</string>
+    <string name="chat_replying_to">Respondiendo a %1$s</string>
+    <string name="chat_delete_confirm_title">¿Eliminar mensaje?</string>
+    <string name="chat_delete_confirm_body">Esto elimina el mensaje para todos y no se puede deshacer.</string>
+    <string name="chat_delete_own_only">Solo podés eliminar tus propios mensajes</string>
+    <string name="chat_selection_title">%1$d seleccionados</string>
 
 </resources>

@@ -282,4 +282,10 @@
     <string name="reactivation_body_dated">Тіркелгіңіз бен оның барлық деректері %1$s күні біржола жойылады. Қазір бас тартып, толық қол жеткізуді қалпына келтіре аласыз.</string>
     <string name="reactivation_reactivate">Тіркелгімді қайта белсендіру</string>
     <string name="reactivation_sign_out">Жабуды жалғастыру және шығу</string>
+
+    <string name="common_play">Ойнату</string>
+    <string name="common_pause">Кідірту</string>
+    <string name="common_opening_file">Файл ашылуда…</string>
+    <string name="common_no_app_for_file">Бұл файлды ашатын қолданба жоқ</string>
+    <string name="common_file_open_failed">Файлды ашу мүмкін болмады</string>
 </resources>

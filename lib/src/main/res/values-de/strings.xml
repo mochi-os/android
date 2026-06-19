@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ihr Konto und alle zugehörigen Daten werden am %1$s endgültig gelöscht. Sie können den Vorgang jetzt abbrechen und den vollen Zugriff wiederherstellen.</string>
     <string name="reactivation_reactivate">Mein Konto reaktivieren</string>
     <string name="reactivation_sign_out">Schließen fortsetzen und abmelden</string>
+    <string name="common_play">Abspielen</string>
+    <string name="common_pause">Pause</string>
+    <string name="common_opening_file">Datei wird geöffnet…</string>
+    <string name="common_no_app_for_file">Keine App kann diese Datei öffnen</string>
+    <string name="common_file_open_failed">Datei konnte nicht geöffnet werden</string>
 </resources>

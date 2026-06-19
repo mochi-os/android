@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Llogaria juaj dhe të gjitha të dhënat e saj do të fshihen përgjithmonë më %1$s. Mund ta anuloni dhe të rivendosni qasjen e plotë tani.</string>
     <string name="reactivation_reactivate">Riaktivizo llogarinë time</string>
     <string name="reactivation_sign_out">Vazhdo mbylljen dhe dil</string>
+    <string name="common_play">Luaj</string>
+    <string name="common_pause">Ndalo</string>
+    <string name="common_opening_file">Po hapet skedari…</string>
+    <string name="common_no_app_for_file">Asnjë aplikacion nuk mund ta hapë këtë skedar</string>
+    <string name="common_file_open_failed">Skedari nuk u hap dot</string>
 </resources>

@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">ఫార్వర్డ్ చేయడానికి చాట్‌లు లేవు</string>
     <string name="chat_forward_success">ఫార్వర్డ్ చేయబడింది</string>
     <string name="chat_forward_failed">ఫార్వర్డ్ చేయడం విఫలమైంది</string>
+    <string name="chat_message_reply">రిప్లై</string>
+    <string name="chat_message_select">ఎంచుకోండి</string>
+    <string name="chat_reply_attachment">జోడింపు</string>
+    <string name="chat_replying_to">%1$sకి రిప్లై ఇస్తున్నారు</string>
+    <string name="chat_delete_confirm_title">సందేశాన్ని తొలగించాలా?</string>
+    <string name="chat_delete_confirm_body">ఇది అందరి కోసం సందేశాన్ని తొలగిస్తుంది, దీన్ని తిరిగి పొందలేరు.</string>
+    <string name="chat_delete_own_only">మీరు మీ సొంత సందేశాలను మాత్రమే తొలగించగలరు</string>
+    <string name="chat_selection_title">%1$d ఎంచుకోబడ్డాయి</string>
 </resources>

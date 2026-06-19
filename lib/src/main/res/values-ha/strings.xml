@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Za a goge asusunka da dukkan bayananka har abada a %1$s. Kana iya soke shi kuma maido da cikakken samun dama yanzu.</string>
     <string name="reactivation_reactivate">Sake kunna asusuna</string>
     <string name="reactivation_sign_out">Ci gaba da rufewa kuma fita</string>
+    <string name="common_play">Kunna</string>
+    <string name="common_pause">Dakata</string>
+    <string name="common_opening_file">Ana buɗe fayil…</string>
+    <string name="common_no_app_for_file">Babu manhajar da za ta iya buɗe wannan fayil</string>
+    <string name="common_file_open_failed">An kasa buɗe fayil</string>
 </resources>

@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Нет чатов для пересылки</string>
     <string name="chat_forward_success">Переслано</string>
     <string name="chat_forward_failed">Не удалось переслать</string>
+    <string name="chat_message_reply">Ответить</string>
+    <string name="chat_message_select">Выбрать</string>
+    <string name="chat_reply_attachment">Вложение</string>
+    <string name="chat_replying_to">Ответ %1$s</string>
+    <string name="chat_delete_confirm_title">Удалить сообщение?</string>
+    <string name="chat_delete_confirm_body">Сообщение будет удалено для всех без возможности восстановления.</string>
+    <string name="chat_delete_own_only">Вы можете удалять только свои сообщения</string>
+    <string name="chat_selection_title">Выбрано: %1$d</string>
 </resources>

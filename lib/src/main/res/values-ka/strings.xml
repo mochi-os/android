@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">თქვენი ანგარიში და მისი ყველა მონაცემი სამუდამოდ წაიშლება %1$s-ს. ახლა შეგიძლიათ გააუქმოთ და სრულად აღადგინოთ წვდომა.</string>
     <string name="reactivation_reactivate">ჩემი ანგარიშის ხელახლა გააქტიურება</string>
     <string name="reactivation_sign_out">დახურვის გაგრძელება და გასვლა</string>
+    <string name="common_play">დაკვრა</string>
+    <string name="common_pause">პაუზა</string>
+    <string name="common_opening_file">ფაილის გახსნა…</string>
+    <string name="common_no_app_for_file">ამ ფაილის გასახსნელი აპი არ არის</string>
+    <string name="common_file_open_failed">ფაილის გახსნა ვერ მოხერხდა</string>
 </resources>

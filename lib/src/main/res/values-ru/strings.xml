@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ваш аккаунт и все его данные будут безвозвратно удалены %1$s. Вы можете отменить это и восстановить полный доступ прямо сейчас.</string>
     <string name="reactivation_reactivate">Повторно активировать мой аккаунт</string>
     <string name="reactivation_sign_out">Продолжить закрытие и выйти</string>
+    <string name="common_play">Воспроизвести</string>
+    <string name="common_pause">Пауза</string>
+    <string name="common_opening_file">Открытие файла…</string>
+    <string name="common_no_app_for_file">Нет приложения для открытия этого файла</string>
+    <string name="common_file_open_failed">Не удалось открыть файл</string>
 </resources>

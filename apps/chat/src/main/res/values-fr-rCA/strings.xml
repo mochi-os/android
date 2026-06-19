@@ -66,5 +66,13 @@
     <string name="chat_settings_delete">Supprimer localement</string>
     <string name="chat_settings_delete_message">Cette action retire le clavardage et ses messages de cet appareil seulement.</string>
     <string name="chat_members_empty">Aucun membre</string>
+    <string name="chat_message_reply">Répondre</string>
+    <string name="chat_message_select">Sélectionner</string>
+    <string name="chat_reply_attachment">Pièce jointe</string>
+    <string name="chat_replying_to">En réponse à %1$s</string>
+    <string name="chat_delete_confirm_title">Supprimer le message?</string>
+    <string name="chat_delete_confirm_body">Cette action supprime le message pour tout le monde et est irréversible.</string>
+    <string name="chat_delete_own_only">Vous ne pouvez supprimer que vos propres messages</string>
+    <string name="chat_selection_title">%1$d sélectionné(s)</string>
 
 </resources>

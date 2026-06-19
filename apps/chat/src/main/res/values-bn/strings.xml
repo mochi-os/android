@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">ফরোয়ার্ড করার মতো কোনো চ্যাট নেই</string>
     <string name="chat_forward_success">ফরোয়ার্ড করা হয়েছে</string>
     <string name="chat_forward_failed">ফরোয়ার্ড করা যায়নি</string>
+    <string name="chat_message_reply">উত্তর দিন</string>
+    <string name="chat_message_select">নির্বাচন করুন</string>
+    <string name="chat_reply_attachment">সংযুক্তি</string>
+    <string name="chat_replying_to">%1$s-কে উত্তর দিচ্ছেন</string>
+    <string name="chat_delete_confirm_title">বার্তা মুছবেন?</string>
+    <string name="chat_delete_confirm_body">এটি সবার জন্য বার্তাটি মুছে ফেলে এবং পূর্বাবস্থায় ফেরানো যায় না।</string>
+    <string name="chat_delete_own_only">আপনি শুধুমাত্র নিজের বার্তা মুছতে পারবেন</string>
+    <string name="chat_selection_title">%1$dটি নির্বাচিত</string>
 </resources>

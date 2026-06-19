@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">没有可转发的聊天</string>
     <string name="chat_forward_success">已转发</string>
     <string name="chat_forward_failed">转发失败</string>
+    <string name="chat_message_reply">回复</string>
+    <string name="chat_message_select">选择</string>
+    <string name="chat_reply_attachment">附件</string>
+    <string name="chat_replying_to">正在回复 %1$s</string>
+    <string name="chat_delete_confirm_title">删除消息?</string>
+    <string name="chat_delete_confirm_body">此操作将为所有人删除该消息,且无法撤销。</string>
+    <string name="chat_delete_own_only">您只能删除自己发送的消息</string>
+    <string name="chat_selection_title">已选择 %1$d 条</string>
 </resources>

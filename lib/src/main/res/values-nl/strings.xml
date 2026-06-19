@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Uw account en alle bijbehorende gegevens worden definitief verwijderd op %1$s. U kunt dit nu annuleren en de volledige toegang herstellen.</string>
     <string name="reactivation_reactivate">Mijn account heractiveren</string>
     <string name="reactivation_sign_out">Doorgaan met sluiten en afmelden</string>
+    <string name="common_play">Afspelen</string>
+    <string name="common_pause">Pauzeren</string>
+    <string name="common_opening_file">Bestand openen…</string>
+    <string name="common_no_app_for_file">Geen app kan dit bestand openen</string>
+    <string name="common_file_open_failed">Kan bestand niet openen</string>
 </resources>

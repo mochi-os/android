@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Reikningurinn þinn og öll gögn hans verða endanlega eytt þann %1$s. Þú getur hætt við og endurheimt fullan aðgang núna.</string>
     <string name="reactivation_reactivate">Endurvirkja reikninginn minn</string>
     <string name="reactivation_sign_out">Halda áfram að loka og skrá út</string>
+    <string name="common_play">Spila</string>
+    <string name="common_pause">Gera hlé</string>
+    <string name="common_opening_file">Opnar skrá…</string>
+    <string name="common_no_app_for_file">Ekkert forrit getur opnað þessa skrá</string>
+    <string name="common_file_open_failed">Ekki tókst að opna skrá</string>
 </resources>

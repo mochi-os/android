@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">لا توجد دردشات لإعادة التوجيه إليها</string>
     <string name="chat_forward_success">تمت إعادة التوجيه</string>
     <string name="chat_forward_failed">تعذرت إعادة التوجيه</string>
+    <string name="chat_message_reply">رد</string>
+    <string name="chat_message_select">تحديد</string>
+    <string name="chat_reply_attachment">مرفق</string>
+    <string name="chat_replying_to">الرد على %1$s</string>
+    <string name="chat_delete_confirm_title">حذف الرسالة؟</string>
+    <string name="chat_delete_confirm_body">سيؤدي هذا إلى حذف الرسالة لدى الجميع ولا يمكن التراجع عنه.</string>
+    <string name="chat_delete_own_only">يمكنك حذف رسائلك فقط</string>
+    <string name="chat_selection_title">تم تحديد %1$d</string>
 </resources>

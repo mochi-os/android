@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Permanenteng buburahin ang iyong account at lahat ng data nito sa %1$s. Maaari mong kanselahin at ibalik ang buong access ngayon.</string>
     <string name="reactivation_reactivate">I-reactivate ang aking account</string>
     <string name="reactivation_sign_out">Magpatuloy sa pagsasara at mag-sign out</string>
+    <string name="common_play">I-play</string>
+    <string name="common_pause">I-pause</string>
+    <string name="common_opening_file">Binubuksan ang file…</string>
+    <string name="common_no_app_for_file">Walang app na makakapagbukas ng file na ito</string>
+    <string name="common_file_open_failed">Hindi mabuksan ang file</string>
 </resources>

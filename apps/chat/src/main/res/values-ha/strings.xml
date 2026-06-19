@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Babu hirarrakin da za a tura zuwa</string>
     <string name="chat_forward_success">An tura</string>
     <string name="chat_forward_failed">An kasa turawa</string>
+    <string name="chat_message_reply">Amsa</string>
+    <string name="chat_message_select">Zaɓa</string>
+    <string name="chat_reply_attachment">Haɗe</string>
+    <string name="chat_replying_to">Ana amsa wa %1$s</string>
+    <string name="chat_delete_confirm_title">A share saƙon?</string>
+    <string name="chat_delete_confirm_body">Wannan zai share saƙon ga kowa kuma ba za a iya dawo da shi ba.</string>
+    <string name="chat_delete_own_only">Saƙonninka kawai za ka iya sharewa</string>
+    <string name="chat_selection_title">An zaɓi %1$d</string>
 </resources>

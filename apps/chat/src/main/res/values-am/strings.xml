@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">የሚተላለፍበት ውይይት የለም</string>
     <string name="chat_forward_success">ተላልፏል</string>
     <string name="chat_forward_failed">ማስተላለፍ አልተሳካም</string>
+    <string name="chat_message_reply">መልስ ስጥ</string>
+    <string name="chat_message_select">ምረጥ</string>
+    <string name="chat_reply_attachment">አባሪ</string>
+    <string name="chat_replying_to">ለ%1$s መልስ በመስጠት ላይ</string>
+    <string name="chat_delete_confirm_title">መልዕክት ይሰረዝ?</string>
+    <string name="chat_delete_confirm_body">ይህ መልዕክቱን ለሁሉም ሰው ይሰርዘዋል እና መልሶ ማግኘት አይቻልም።</string>
+    <string name="chat_delete_own_only">የራስዎን መልዕክቶች ብቻ መሰረዝ ይችላሉ</string>
+    <string name="chat_selection_title">%1$d ተመርጧል</string>
 </resources>

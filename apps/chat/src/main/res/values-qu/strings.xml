@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Reenvianapaq mana chat kanchu</string>
     <string name="chat_forward_success">Reenviasqa</string>
     <string name="chat_forward_failed">Reenviay mana atikurqachu</string>
+    <string name="chat_message_reply">Kutichiy</string>
+    <string name="chat_message_select">Akllay</string>
+    <string name="chat_reply_attachment">Kawsay</string>
+    <string name="chat_replying_to">%1$s runaman kutichichkan</string>
+    <string name="chat_delete_confirm_title">¿Willayta pichay?</string>
+    <string name="chat_delete_confirm_body">Kayqa willayta llapanpaq pichan, manañam kutichiy atikunchu.</string>
+    <string name="chat_delete_own_only">Kikiyki willaykunallatam pichayta atinki</string>
+    <string name="chat_selection_title">%1$d akllasqa</string>
 </resources>

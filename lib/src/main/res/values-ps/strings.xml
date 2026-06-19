@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">ستاسو حساب او د هغه ټول ډاټا به د %1$s په نېټه د تل لپاره حذف شي. تاسو کولی شئ اوس دا لغوه کړئ او بشپړ لاسرسی بیرته ترلاسه کړئ.</string>
     <string name="reactivation_reactivate">زما حساب بیا فعال کړئ</string>
     <string name="reactivation_sign_out">تړل دوام ورکړئ او ووځئ</string>
+    <string name="common_play">پلې کړئ</string>
+    <string name="common_pause">ودروئ</string>
+    <string name="common_opening_file">فایل پرانیستل کیږي…</string>
+    <string name="common_no_app_for_file">هیڅ اپلیکیشن دا فایل نه شي پرانیستلی</string>
+    <string name="common_file_open_failed">فایل پرانیستل ونشول</string>
 </resources>

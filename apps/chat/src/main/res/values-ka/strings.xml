@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">გადასაგზავნი ჩატები არ არის</string>
     <string name="chat_forward_success">გადაიგზავნა</string>
     <string name="chat_forward_failed">გადაგზავნა ვერ მოხერხდა</string>
+    <string name="chat_message_reply">პასუხი</string>
+    <string name="chat_message_select">მონიშვნა</string>
+    <string name="chat_reply_attachment">დანართი</string>
+    <string name="chat_replying_to">პასუხი %1$s-ს</string>
+    <string name="chat_delete_confirm_title">წავშალოთ შეტყობინება?</string>
+    <string name="chat_delete_confirm_body">ეს წაშლის შეტყობინებას ყველასთვის და მისი დაბრუნება შეუძლებელია.</string>
+    <string name="chat_delete_own_only">მხოლოდ საკუთარი შეტყობინებების წაშლა შეგიძლიათ</string>
+    <string name="chat_selection_title">%1$d მონიშნული</string>
 </resources>

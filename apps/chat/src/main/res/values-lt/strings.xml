@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Nėra pokalbių, į kuriuos persiųsti</string>
     <string name="chat_forward_success">Persiųsta</string>
     <string name="chat_forward_failed">Nepavyko persiųsti</string>
+    <string name="chat_message_reply">Atsakyti</string>
+    <string name="chat_message_select">Pasirinkti</string>
+    <string name="chat_reply_attachment">Priedas</string>
+    <string name="chat_replying_to">Atsakoma %1$s</string>
+    <string name="chat_delete_confirm_title">Ištrinti žinutę?</string>
+    <string name="chat_delete_confirm_body">Žinutė bus ištrinta visiems ir to nebus galima atšaukti.</string>
+    <string name="chat_delete_own_only">Galite ištrinti tik savo žinutes</string>
+    <string name="chat_selection_title">Pasirinkta: %1$d</string>
 </resources>

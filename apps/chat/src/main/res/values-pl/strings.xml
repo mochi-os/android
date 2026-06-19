@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Brak czatów do przesłania dalej</string>
     <string name="chat_forward_success">Przesłano dalej</string>
     <string name="chat_forward_failed">Nie udało się przesłać dalej</string>
+    <string name="chat_message_reply">Odpowiedz</string>
+    <string name="chat_message_select">Zaznacz</string>
+    <string name="chat_reply_attachment">Załącznik</string>
+    <string name="chat_replying_to">Odpowiadasz %1$s</string>
+    <string name="chat_delete_confirm_title">Usunąć wiadomość?</string>
+    <string name="chat_delete_confirm_body">Spowoduje to usunięcie wiadomości dla wszystkich i nie można tego cofnąć.</string>
+    <string name="chat_delete_own_only">Możesz usuwać tylko własne wiadomości</string>
+    <string name="chat_selection_title">Zaznaczono: %1$d</string>
 </resources>

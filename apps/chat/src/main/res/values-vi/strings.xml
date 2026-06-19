@@ -78,4 +78,13 @@
     <string name="chat_forward_empty">Không có cuộc trò chuyện nào để chuyển tiếp</string>
     <string name="chat_forward_success">Đã chuyển tiếp</string>
     <string name="chat_forward_failed">Không thể chuyển tiếp</string>
+
+    <string name="chat_message_reply">Trả lời</string>
+    <string name="chat_message_select">Chọn</string>
+    <string name="chat_reply_attachment">Tệp đính kèm</string>
+    <string name="chat_replying_to">Đang trả lời %1$s</string>
+    <string name="chat_delete_confirm_title">Xóa tin nhắn?</string>
+    <string name="chat_delete_confirm_body">Thao tác này sẽ xóa tin nhắn với mọi người và không thể hoàn tác.</string>
+    <string name="chat_delete_own_only">Bạn chỉ có thể xóa tin nhắn của chính mình</string>
+    <string name="chat_selection_title">Đã chọn %1$d</string>
 </resources>

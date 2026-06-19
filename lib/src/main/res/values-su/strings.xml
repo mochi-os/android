@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Akun anjeun sareng sadaya datana bakal dihapus permanén dina %1$s. Anjeun tiasa ngabolaykeun sareng mulangkeun aksés pinuh ayeuna.</string>
     <string name="reactivation_reactivate">Aktipkeun deui akun abdi</string>
     <string name="reactivation_sign_out">Teraskeun nutup sareng kaluar</string>
+    <string name="common_play">Puter</string>
+    <string name="common_pause">Eureun</string>
+    <string name="common_opening_file">Muka berkas…</string>
+    <string name="common_no_app_for_file">Teu aya aplikasi anu tiasa muka berkas ieu</string>
+    <string name="common_file_open_failed">Teu tiasa muka berkas</string>
 </resources>

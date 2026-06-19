@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">د لېږلو لپاره کوم چټ نشته</string>
     <string name="chat_forward_success">ورولېږل شو</string>
     <string name="chat_forward_failed">ورلېږل ونه شول</string>
+    <string name="chat_message_reply">ځواب</string>
+    <string name="chat_message_select">غوره کول</string>
+    <string name="chat_reply_attachment">ضمیمه</string>
+    <string name="chat_replying_to">%1$s ته ځواب ورکول</string>
+    <string name="chat_delete_confirm_title">پیغام ړنګ کړو؟</string>
+    <string name="chat_delete_confirm_body">دا پیغام د ټولو لپاره ړنګوي او بیرته نه شي راګرځیدلی.</string>
+    <string name="chat_delete_own_only">تاسو یوازې خپل پیغامونه ړنګولی شئ</string>
+    <string name="chat_selection_title">%1$d غوره شول</string>
 </resources>

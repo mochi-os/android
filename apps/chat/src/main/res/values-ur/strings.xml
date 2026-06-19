@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">فارورڈ کرنے کے لیے کوئی چیٹ نہیں</string>
     <string name="chat_forward_success">فارورڈ کر دیا گیا</string>
     <string name="chat_forward_failed">فارورڈ نہیں ہو سکا</string>
+    <string name="chat_message_reply">جواب دیں</string>
+    <string name="chat_message_select">منتخب کریں</string>
+    <string name="chat_reply_attachment">اٹیچمنٹ</string>
+    <string name="chat_replying_to">%1$s کو جواب دیا جا رہا ہے</string>
+    <string name="chat_delete_confirm_title">پیغام حذف کریں؟</string>
+    <string name="chat_delete_confirm_body">یہ پیغام سب کے لیے حذف کر دیتا ہے اور اسے واپس نہیں کیا جا سکتا۔</string>
+    <string name="chat_delete_own_only">آپ صرف اپنے پیغامات حذف کر سکتے ہیں</string>
+    <string name="chat_selection_title">%1$d منتخب</string>
 </resources>

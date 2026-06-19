@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Няма чатове за препращане</string>
     <string name="chat_forward_success">Препратено</string>
     <string name="chat_forward_failed">Неуспешно препращане</string>
+    <string name="chat_message_reply">Отговор</string>
+    <string name="chat_message_select">Избор</string>
+    <string name="chat_reply_attachment">Прикачен файл</string>
+    <string name="chat_replying_to">Отговор до %1$s</string>
+    <string name="chat_delete_confirm_title">Изтриване на съобщението?</string>
+    <string name="chat_delete_confirm_body">Това изтрива съобщението за всички и не може да бъде отменено.</string>
+    <string name="chat_delete_own_only">Можете да изтривате само собствените си съобщения</string>
+    <string name="chat_selection_title">%1$d избрани</string>
 </resources>

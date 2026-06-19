@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">החשבון שלך וכל הנתונים שבו יימחקו לצמיתות בתאריך %1$s. ניתן לבטל ולשחזר גישה מלאה כעת.</string>
     <string name="reactivation_reactivate">הפעל מחדש את החשבון שלי</string>
     <string name="reactivation_sign_out">המשך בסגירה והתנתק</string>
+    <string name="common_play">הפעל</string>
+    <string name="common_pause">השהה</string>
+    <string name="common_opening_file">פותח קובץ…</string>
+    <string name="common_no_app_for_file">אין אפליקציה שיכולה לפתוח קובץ זה</string>
+    <string name="common_file_open_failed">לא ניתן לפתוח את הקובץ</string>
 </resources>

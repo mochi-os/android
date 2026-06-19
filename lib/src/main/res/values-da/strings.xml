@@ -284,4 +284,9 @@
     <string name="reactivation_body_dated">Din konto og alle dens data slettes permanent den %1$s. Du kan annullere og gendanne fuld adgang nu.</string>
     <string name="reactivation_reactivate">Genaktivér min konto</string>
     <string name="reactivation_sign_out">Fortsæt med at lukke og log ud</string>
+    <string name="common_play">Afspil</string>
+    <string name="common_pause">Pause</string>
+    <string name="common_opening_file">Åbner fil…</string>
+    <string name="common_no_app_for_file">Ingen app kan åbne denne fil</string>
+    <string name="common_file_open_failed">Kunne ikke åbne filen</string>
 </resources>

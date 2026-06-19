@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">حساب شما و همه داده‌های آن در %1$s برای همیشه حذف خواهند شد. می‌توانید اکنون آن را لغو کرده و دسترسی کامل را بازیابی کنید.</string>
     <string name="reactivation_reactivate">فعال‌سازی مجدد حساب من</string>
     <string name="reactivation_sign_out">ادامه بستن و خروج از حساب</string>
+    <string name="common_play">پخش</string>
+    <string name="common_pause">توقف</string>
+    <string name="common_opening_file">در حال باز کردن فایل…</string>
+    <string name="common_no_app_for_file">هیچ برنامه‌ای نمی‌تواند این فایل را باز کند</string>
+    <string name="common_file_open_failed">باز کردن فایل ممکن نشد</string>
 </resources>

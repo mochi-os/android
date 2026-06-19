@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">אײַער קאָנטע און אַלע אירע דאַטן וועלן ווערן שטענדיק אויסגעמעקט אויף %1$s. איר קענט אַנולירן און צוריקשטעלן פֿולן צוטריט איצט.</string>
     <string name="reactivation_reactivate">ווידער אַקטיווירן מײַן קאָנטע</string>
     <string name="reactivation_sign_out">המשך פֿאַרמאַכן און לאָגיר אַרויס</string>
+    <string name="common_play">שפּילן</string>
+    <string name="common_pause">פּויזע</string>
+    <string name="common_opening_file">עפֿענען טעקע…</string>
+    <string name="common_no_app_for_file">קיין אַפּ קען נישט עפֿענען די טעקע</string>
+    <string name="common_file_open_failed">האָט נישט געקענט עפֿענען די טעקע</string>
 </resources>

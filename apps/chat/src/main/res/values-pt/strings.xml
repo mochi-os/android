@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Sem conversas para reencaminhar</string>
     <string name="chat_forward_success">Reencaminhada</string>
     <string name="chat_forward_failed">Não foi possível reencaminhar</string>
+    <string name="chat_message_reply">Responder</string>
+    <string name="chat_message_select">Selecionar</string>
+    <string name="chat_reply_attachment">Anexo</string>
+    <string name="chat_replying_to">A responder a %1$s</string>
+    <string name="chat_delete_confirm_title">Eliminar mensagem?</string>
+    <string name="chat_delete_confirm_body">Isto elimina a mensagem para todos e não pode ser anulado.</string>
+    <string name="chat_delete_own_only">Só pode eliminar as suas próprias mensagens</string>
+    <string name="chat_selection_title">%1$d selecionadas</string>
 </resources>

@@ -78,4 +78,13 @@
     <string name="chat_forward_empty">Қайта жіберетін чаттар жоқ</string>
     <string name="chat_forward_success">Қайта жіберілді</string>
     <string name="chat_forward_failed">Қайта жіберу сәтсіз аяқталды</string>
+
+    <string name="chat_message_reply">Жауап беру</string>
+    <string name="chat_message_select">Таңдау</string>
+    <string name="chat_reply_attachment">Тіркеме</string>
+    <string name="chat_replying_to">%1$s пайдаланушысына жауап беру</string>
+    <string name="chat_delete_confirm_title">Хабарлама жойылсын ба?</string>
+    <string name="chat_delete_confirm_body">Бұл хабарламаны барлығы үшін жояды әрі оны қайтару мүмкін емес.</string>
+    <string name="chat_delete_own_only">Тек өз хабарламаларыңызды ғана жоя аласыз</string>
+    <string name="chat_selection_title">%1$d таңдалды</string>
 </resources>

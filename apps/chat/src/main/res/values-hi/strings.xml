@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">फ़ॉरवर्ड करने के लिए कोई चैट नहीं</string>
     <string name="chat_forward_success">फ़ॉरवर्ड किया गया</string>
     <string name="chat_forward_failed">फ़ॉरवर्ड नहीं किया जा सका</string>
+    <string name="chat_message_reply">जवाब दें</string>
+    <string name="chat_message_select">चुनें</string>
+    <string name="chat_reply_attachment">अटैचमेंट</string>
+    <string name="chat_replying_to">%1$s को जवाब दे रहे हैं</string>
+    <string name="chat_delete_confirm_title">मैसेज डिलीट करें?</string>
+    <string name="chat_delete_confirm_body">इससे यह मैसेज सभी के लिए डिलीट हो जाएगा और इसे वापस नहीं लाया जा सकता।</string>
+    <string name="chat_delete_own_only">आप केवल अपने ही मैसेज डिलीट कर सकते हैं</string>
+    <string name="chat_selection_title">%1$d चुने गए</string>
 </resources>

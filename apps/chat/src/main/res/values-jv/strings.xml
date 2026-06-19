@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Ora ana chat kanggo nerusake</string>
     <string name="chat_forward_success">Wis diterusake</string>
     <string name="chat_forward_failed">Gagal nerusake</string>
+    <string name="chat_message_reply">Bales</string>
+    <string name="chat_message_select">Pilih</string>
+    <string name="chat_reply_attachment">Lampiran</string>
+    <string name="chat_replying_to">Mbales %1$s</string>
+    <string name="chat_delete_confirm_title">Busak pesen?</string>
+    <string name="chat_delete_confirm_body">Iki mbusak pesen kanggo kabeh wong lan ora bisa dibalèkaké.</string>
+    <string name="chat_delete_own_only">Sampéyan mung bisa mbusak pesen sampéyan dhéwé</string>
+    <string name="chat_selection_title">%1$d dipilih</string>
 </resources>

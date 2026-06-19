@@ -78,4 +78,13 @@
     <string name="chat_forward_empty">Dim sgyrsiau i anfon ymlaen atynt</string>
     <string name="chat_forward_success">Anfonwyd ymlaen</string>
     <string name="chat_forward_failed">Methwyd anfon ymlaen</string>
+
+    <string name="chat_message_reply">Ateb</string>
+    <string name="chat_message_select">Dewis</string>
+    <string name="chat_reply_attachment">Atodiad</string>
+    <string name="chat_replying_to">Ateb i %1$s</string>
+    <string name="chat_delete_confirm_title">Dileu\'r neges?</string>
+    <string name="chat_delete_confirm_body">Mae hyn yn dileu\'r neges i bawb ac ni ellir ei dadwneud.</string>
+    <string name="chat_delete_own_only">Dim ond eich negeseuon eich hun y gallwch eu dileu</string>
+    <string name="chat_selection_title">%1$d wedi\'u dewis</string>
 </resources>

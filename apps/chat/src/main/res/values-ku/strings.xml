@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Sohbetek ji bo beralîkirinê tune</string>
     <string name="chat_forward_success">Hat beralîkirin</string>
     <string name="chat_forward_failed">Beralîkirin bi ser neket</string>
+    <string name="chat_message_reply">Bersiv bide</string>
+    <string name="chat_message_select">Hilbijêre</string>
+    <string name="chat_reply_attachment">Pêvek</string>
+    <string name="chat_replying_to">Bersiva %1$s tê dayîn</string>
+    <string name="chat_delete_confirm_title">Peyam were jêbirin?</string>
+    <string name="chat_delete_confirm_body">Ev peyamê ji bo herkesî jê dibe û nayê vegerandin.</string>
+    <string name="chat_delete_own_only">Tu tenê dikarî peyamên xwe jê bibî</string>
+    <string name="chat_selection_title">%1$d hatin hilbijartin</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Tilisi ja kaikki sen tiedot poistetaan pysyvästi %1$s. Voit peruuttaa ja palauttaa täyden käyttöoikeuden nyt.</string>
     <string name="reactivation_reactivate">Aktivoi tilini uudelleen</string>
     <string name="reactivation_sign_out">Jatka sulkemista ja kirjaudu ulos</string>
+    <string name="common_play">Toista</string>
+    <string name="common_pause">Keskeytä</string>
+    <string name="common_opening_file">Avataan tiedostoa…</string>
+    <string name="common_no_app_for_file">Mikään sovellus ei voi avata tätä tiedostoa</string>
+    <string name="common_file_open_failed">Tiedostoa ei voitu avata</string>
 </resources>

@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Nav sarunu, uz kurām pārsūtīt</string>
     <string name="chat_forward_success">Pārsūtīts</string>
     <string name="chat_forward_failed">Neizdevās pārsūtīt</string>
+    <string name="chat_message_reply">Atbildēt</string>
+    <string name="chat_message_select">Atlasīt</string>
+    <string name="chat_reply_attachment">Pielikums</string>
+    <string name="chat_replying_to">Atbild %1$s</string>
+    <string name="chat_delete_confirm_title">Dzēst ziņojumu?</string>
+    <string name="chat_delete_confirm_body">Tādējādi ziņojums tiks dzēsts visiem un to nevarēs atsaukt.</string>
+    <string name="chat_delete_own_only">Jūs varat dzēst tikai savus ziņojumus</string>
+    <string name="chat_selection_title">Atlasīti: %1$d</string>
 </resources>

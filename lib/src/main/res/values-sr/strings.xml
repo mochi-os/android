@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ваш налог и сви његови подаци биће трајно избрисани %1$s. Сада можете отказати и вратити пун приступ.</string>
     <string name="reactivation_reactivate">Поново активирај мој налог</string>
     <string name="reactivation_sign_out">Настави са затварањем и одјави се</string>
+    <string name="common_play">Пусти</string>
+    <string name="common_pause">Паузирај</string>
+    <string name="common_opening_file">Отварање датотеке…</string>
+    <string name="common_no_app_for_file">Ниједна апликација не може да отвори ову датотеку</string>
+    <string name="common_file_open_failed">Није могуће отворити датотеку</string>
 </resources>

@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Nessuna chat a cui inoltrare</string>
     <string name="chat_forward_success">Inoltrato</string>
     <string name="chat_forward_failed">Inoltro non riuscito</string>
+    <string name="chat_message_reply">Rispondi</string>
+    <string name="chat_message_select">Seleziona</string>
+    <string name="chat_reply_attachment">Allegato</string>
+    <string name="chat_replying_to">Risposta a %1$s</string>
+    <string name="chat_delete_confirm_title">Eliminare il messaggio?</string>
+    <string name="chat_delete_confirm_body">Il messaggio verrà eliminato per tutti e non potrà essere recuperato.</string>
+    <string name="chat_delete_own_only">Puoi eliminare solo i tuoi messaggi</string>
+    <string name="chat_selection_title">%1$d selezionati</string>
 </resources>

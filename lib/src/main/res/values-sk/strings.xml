@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Váš účet a všetky jeho údaje budú natrvalo odstránené dňa %1$s. Teraz to môžete zrušiť a obnoviť úplný prístup.</string>
     <string name="reactivation_reactivate">Znova aktivovať môj účet</string>
     <string name="reactivation_sign_out">Pokračovať v zatváraní a odhlásiť sa</string>
+    <string name="common_play">Prehrať</string>
+    <string name="common_pause">Pozastaviť</string>
+    <string name="common_opening_file">Otvára sa súbor…</string>
+    <string name="common_no_app_for_file">Tento súbor nemožno otvoriť žiadnou aplikáciou</string>
+    <string name="common_file_open_failed">Súbor sa nepodarilo otvoriť</string>
 </resources>

@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Geen gesprekke om na aan te stuur nie</string>
     <string name="chat_forward_success">Aangestuur</string>
     <string name="chat_forward_failed">Kon nie aanstuur nie</string>
+    <string name="chat_message_reply">Antwoord</string>
+    <string name="chat_message_select">Kies</string>
+    <string name="chat_reply_attachment">Aanhangsel</string>
+    <string name="chat_replying_to">Antwoord op %1$s</string>
+    <string name="chat_delete_confirm_title">Vee boodskap uit?</string>
+    <string name="chat_delete_confirm_body">Dit vee die boodskap vir almal uit en kan nie ongedaan gemaak word nie.</string>
+    <string name="chat_delete_own_only">Jy kan net jou eie boodskappe uitvee</string>
+    <string name="chat_selection_title">%1$d gekies</string>
 </resources>

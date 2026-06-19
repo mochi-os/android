@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">നിങ്ങളുടെ അക്കൗണ്ടും അതിന്റെ എല്ലാ ഡാറ്റയും %1$s-ന് ശാശ്വതമായി ഇല്ലാതാക്കപ്പെടും. ഇപ്പോൾ നിങ്ങൾക്ക് റദ്ദാക്കാനും പൂർണ്ണ ആക്സസ് പുനഃസ്ഥാപിക്കാനും കഴിയും.</string>
     <string name="reactivation_reactivate">എന്റെ അക്കൗണ്ട് വീണ്ടും സജീവമാക്കുക</string>
     <string name="reactivation_sign_out">അടയ്ക്കൽ തുടരുകയും സൈൻ ഔട്ട് ചെയ്യുകയും ചെയ്യുക</string>
+    <string name="common_play">പ്ലേ ചെയ്യുക</string>
+    <string name="common_pause">താൽക്കാലികമായി നിർത്തുക</string>
+    <string name="common_opening_file">ഫയൽ തുറക്കുന്നു…</string>
+    <string name="common_no_app_for_file">ഈ ഫയൽ തുറക്കാൻ കഴിയുന്ന ആപ്പ് ഇല്ല</string>
+    <string name="common_file_open_failed">ഫയൽ തുറക്കാനായില്ല</string>
 </resources>

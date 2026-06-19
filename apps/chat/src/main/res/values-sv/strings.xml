@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Inga chattar att vidarebefordra till</string>
     <string name="chat_forward_success">Vidarebefordrat</string>
     <string name="chat_forward_failed">Det gick inte att vidarebefordra</string>
+    <string name="chat_message_reply">Svara</string>
+    <string name="chat_message_select">Markera</string>
+    <string name="chat_reply_attachment">Bilaga</string>
+    <string name="chat_replying_to">Svarar %1$s</string>
+    <string name="chat_delete_confirm_title">Radera meddelande?</string>
+    <string name="chat_delete_confirm_body">Detta raderar meddelandet för alla och kan inte ångras.</string>
+    <string name="chat_delete_own_only">Du kan bara radera dina egna meddelanden</string>
+    <string name="chat_selection_title">%1$d markerade</string>
 </resources>

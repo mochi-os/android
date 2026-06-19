@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Ez dago txatik birbidaltzeko</string>
     <string name="chat_forward_success">Birbidalita</string>
     <string name="chat_forward_failed">Ezin izan da birbidali</string>
+    <string name="chat_message_reply">Erantzun</string>
+    <string name="chat_message_select">Hautatu</string>
+    <string name="chat_reply_attachment">Eranskina</string>
+    <string name="chat_replying_to">%1$s(r)i erantzuten</string>
+    <string name="chat_delete_confirm_title">Mezua ezabatu?</string>
+    <string name="chat_delete_confirm_body">Honek mezua guztientzat ezabatzen du eta ezin da desegin.</string>
+    <string name="chat_delete_own_only">Zure mezuak baino ezin dituzu ezabatu</string>
+    <string name="chat_selection_title">%1$d hautatuta</string>
 </resources>

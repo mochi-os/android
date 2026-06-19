@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Akaawuntiin keefi daataan isaa hundi guyyaa %1$s dhaabbiidhaan haqamu. Amma dhaabuun dandeenya guutuu deebisuu dandeessa.</string>
     <string name="reactivation_reactivate">Akaawuntii koo deebisii hojjechiisi</string>
     <string name="reactivation_sign_out">Cufuu itti fufiitii baʼi</string>
+    <string name="common_play">Taphachiisi</string>
+    <string name="common_pause">Dhaabi</string>
+    <string name="common_opening_file">Faayilii banaa jira…</string>
+    <string name="common_no_app_for_file">Appiin faayilii kana banu hin jiru</string>
+    <string name="common_file_open_failed">Faayilii banuun hin danda\'amne</string>
 </resources>

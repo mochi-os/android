@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">اڳتي موڪلڻ لاءِ ڪا چيٽ ناهي</string>
     <string name="chat_forward_success">اڳتي موڪليو ويو</string>
     <string name="chat_forward_failed">اڳتي موڪلڻ ۾ ناڪامي</string>
+    <string name="chat_message_reply">جواب ڏيو</string>
+    <string name="chat_message_select">چونڊيو</string>
+    <string name="chat_reply_attachment">ڳنڍيل فائل</string>
+    <string name="chat_replying_to">%1$s کي جواب پيو ڏجي</string>
+    <string name="chat_delete_confirm_title">پيغام ڊيليٽ ڪجي؟</string>
+    <string name="chat_delete_confirm_body">هي پيغام سڀني لاءِ ڊيليٽ ٿي ويندو ۽ واپس نه ٿو ٿي سگهي.</string>
+    <string name="chat_delete_own_only">توهان رڳو پنهنجا پيغام ئي ڊيليٽ ڪري سگهو ٿا</string>
+    <string name="chat_selection_title">%1$d چونڊيا ويا</string>
 </resources>

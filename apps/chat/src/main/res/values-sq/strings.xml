@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">S\'ka biseda ku të përcillet</string>
     <string name="chat_forward_success">U përcoll</string>
     <string name="chat_forward_failed">Përcjellja dështoi</string>
+    <string name="chat_message_reply">Përgjigju</string>
+    <string name="chat_message_select">Zgjidh</string>
+    <string name="chat_reply_attachment">Bashkëngjitje</string>
+    <string name="chat_replying_to">Po i përgjigjeni %1$s</string>
+    <string name="chat_delete_confirm_title">Të fshihet mesazhi?</string>
+    <string name="chat_delete_confirm_body">Kjo e fshin mesazhin për të gjithë dhe nuk mund të zhbëhet.</string>
+    <string name="chat_delete_own_only">Mund të fshini vetëm mesazhet tuaja</string>
+    <string name="chat_selection_title">%1$d të zgjedhura</string>
 </resources>

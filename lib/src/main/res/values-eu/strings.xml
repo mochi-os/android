@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Zure kontua eta bere datu guztiak betiko ezabatuko dira %1$s. Orain bertan behera utzi eta sarbide osoa berreskura dezakezu.</string>
     <string name="reactivation_reactivate">Berraktibatu nire kontua</string>
     <string name="reactivation_sign_out">Jarraitu ixten eta amaitu saioa</string>
+    <string name="common_play">Erreproduzitu</string>
+    <string name="common_pause">Pausatu</string>
+    <string name="common_opening_file">Fitxategia irekitzen…</string>
+    <string name="common_no_app_for_file">Ezin du aplikaziorik fitxategi hau ireki</string>
+    <string name="common_file_open_failed">Ezin izan da fitxategia ireki</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Vaš račun in vsi njegovi podatki bodo trajno izbrisani dne %1$s. Zdaj lahko prekličete in obnovite poln dostop.</string>
     <string name="reactivation_reactivate">Znova aktiviraj moj račun</string>
     <string name="reactivation_sign_out">Nadaljuj z zapiranjem in se odjavi</string>
+    <string name="common_play">Predvajaj</string>
+    <string name="common_pause">Premor</string>
+    <string name="common_opening_file">Odpiranje datoteke…</string>
+    <string name="common_no_app_for_file">Te datoteke ni mogoče odpreti z nobeno aplikacijo</string>
+    <string name="common_file_open_failed">Datoteke ni bilo mogoče odpreti</string>
 </resources>

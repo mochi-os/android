@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">તમારું ખાતું અને તેનો બધો ડેટા %1$s ના રોજ કાયમ માટે કાઢી નાખવામાં આવશે. તમે હમણાં જ રદ કરીને સંપૂર્ણ ઍક્સેસ પુનઃસ્થાપિત કરી શકો છો.</string>
     <string name="reactivation_reactivate">મારું ખાતું ફરી સક્રિય કરો</string>
     <string name="reactivation_sign_out">બંધ કરવાનું ચાલુ રાખો અને સાઇન આઉટ કરો</string>
+    <string name="common_play">ચલાવો</string>
+    <string name="common_pause">થોભાવો</string>
+    <string name="common_opening_file">ફાઇલ ખોલી રહ્યાં છે…</string>
+    <string name="common_no_app_for_file">કોઈ ઍપ આ ફાઇલ ખોલી શકતી નથી</string>
+    <string name="common_file_open_failed">ફાઇલ ખોલી શકાઈ નહીં</string>
 </resources>

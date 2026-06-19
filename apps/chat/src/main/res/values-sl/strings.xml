@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Ni klepetov za posredovanje</string>
     <string name="chat_forward_success">Posredovano</string>
     <string name="chat_forward_failed">Posredovanje ni uspelo</string>
+    <string name="chat_message_reply">Odgovori</string>
+    <string name="chat_message_select">Izberi</string>
+    <string name="chat_reply_attachment">Priloga</string>
+    <string name="chat_replying_to">Odgovor na %1$s</string>
+    <string name="chat_delete_confirm_title">Izbrišem sporočilo?</string>
+    <string name="chat_delete_confirm_body">S tem se sporočilo izbriše za vse in tega ni mogoče razveljaviti.</string>
+    <string name="chat_delete_own_only">Izbrišete lahko le svoja sporočila</string>
+    <string name="chat_selection_title">Izbrano: %1$d</string>
 </resources>

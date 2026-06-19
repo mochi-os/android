@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">फर्वार्ड गर्न कुनै च्याट छैन</string>
     <string name="chat_forward_success">फर्वार्ड गरियो</string>
     <string name="chat_forward_failed">फर्वार्ड गर्न सकिएन</string>
+    <string name="chat_message_reply">जवाफ दिनुहोस्</string>
+    <string name="chat_message_select">छान्नुहोस्</string>
+    <string name="chat_reply_attachment">एट्याचमेन्ट</string>
+    <string name="chat_replying_to">%1$s लाई जवाफ दिँदै</string>
+    <string name="chat_delete_confirm_title">सन्देश मेटाउने हो?</string>
+    <string name="chat_delete_confirm_body">यसले सबैका लागि सन्देश मेटाउँछ र फेरि फर्काउन सकिँदैन।</string>
+    <string name="chat_delete_own_only">तपाईंले आफ्ना सन्देशहरू मात्र मेटाउन सक्नुहुन्छ</string>
+    <string name="chat_selection_title">%1$d छानियो</string>
 </resources>

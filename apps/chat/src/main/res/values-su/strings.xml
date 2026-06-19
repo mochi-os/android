@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Teu aya obrolan pikeun neruskeun</string>
     <string name="chat_forward_success">Diteruskeun</string>
     <string name="chat_forward_failed">Gagal neruskeun</string>
+    <string name="chat_message_reply">Bales</string>
+    <string name="chat_message_select">Pilih</string>
+    <string name="chat_reply_attachment">Lampiran</string>
+    <string name="chat_replying_to">Ngabales ka %1$s</string>
+    <string name="chat_delete_confirm_title">Hapus pesen?</string>
+    <string name="chat_delete_confirm_body">Ieu ngahapus pesen pikeun sadayana sareng teu tiasa dibatalkeun.</string>
+    <string name="chat_delete_own_only">Anjeun ngan ukur tiasa ngahapus pesen anjeun sorangan</string>
+    <string name="chat_selection_title">%1$d dipilih</string>
 </resources>

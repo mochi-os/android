@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Žádné chaty k přeposlání</string>
     <string name="chat_forward_success">Přeposláno</string>
     <string name="chat_forward_failed">Přeposlání se nezdařilo</string>
+    <string name="chat_message_reply">Odpovědět</string>
+    <string name="chat_message_select">Vybrat</string>
+    <string name="chat_reply_attachment">Příloha</string>
+    <string name="chat_replying_to">Odpověď uživateli %1$s</string>
+    <string name="chat_delete_confirm_title">Smazat zprávu?</string>
+    <string name="chat_delete_confirm_body">Tímto se zpráva smaže pro všechny a nelze ji obnovit.</string>
+    <string name="chat_delete_own_only">Smazat můžete pouze vlastní zprávy</string>
+    <string name="chat_selection_title">Vybráno: %1$d</string>
 </resources>

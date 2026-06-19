@@ -78,4 +78,13 @@
     <string name="chat_forward_empty">M\'hemm l-ebda chats biex tgħaddilhom</string>
     <string name="chat_forward_success">Mgħoddi</string>
     <string name="chat_forward_failed">Ma rnexxiex li jintgħadda</string>
+
+    <string name="chat_message_reply">Wieġeb</string>
+    <string name="chat_message_select">Agħżel</string>
+    <string name="chat_reply_attachment">Mehmuż</string>
+    <string name="chat_replying_to">Qed twieġeb lil %1$s</string>
+    <string name="chat_delete_confirm_title">Tħassar il-messaġġ?</string>
+    <string name="chat_delete_confirm_body">Dan iħassar il-messaġġ għal kulħadd u ma jistax jitreġġa\' lura.</string>
+    <string name="chat_delete_own_only">Tista\' tħassar biss il-messaġġi tiegħek stess</string>
+    <string name="chat_selection_title">%1$d magħżula</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">መለያዎ እና ሁሉም ውሂቡ በ%1$s በቋሚነት ይሰረዛል። አሁን መሰረዙን ሰርዘው ሙሉ መዳረሻ መመለስ ይችላሉ።</string>
     <string name="reactivation_reactivate">መለያዬን እንደገና አንቃ</string>
     <string name="reactivation_sign_out">መዝጋቱን ይቀጥሉ እና ይውጡ</string>
+    <string name="common_play">አጫውት</string>
+    <string name="common_pause">አቁም</string>
+    <string name="common_opening_file">ፋይል በመክፈት ላይ…</string>
+    <string name="common_no_app_for_file">ይህን ፋይል መክፈት የሚችል መተግበሪያ የለም</string>
+    <string name="common_file_open_failed">ፋይሉን መክፈት አልተቻለም</string>
 </resources>

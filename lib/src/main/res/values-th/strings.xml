@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">บัญชีของคุณและข้อมูลทั้งหมดจะถูกลบอย่างถาวรในวันที่ %1$s คุณสามารถยกเลิกและกู้คืนการเข้าถึงทั้งหมดได้ทันที</string>
     <string name="reactivation_reactivate">เปิดใช้งานบัญชีของฉันอีกครั้ง</string>
     <string name="reactivation_sign_out">ดำเนินการปิดต่อและออกจากระบบ</string>
+    <string name="common_play">เล่น</string>
+    <string name="common_pause">หยุดชั่วคราว</string>
+    <string name="common_opening_file">กำลังเปิดไฟล์…</string>
+    <string name="common_no_app_for_file">ไม่มีแอปที่เปิดไฟล์นี้ได้</string>
+    <string name="common_file_open_failed">เปิดไฟล์ไม่สำเร็จ</string>
 </resources>

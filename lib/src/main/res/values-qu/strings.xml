@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Cuentaykitawan llapan datosninwan %1$s punchawpi wiñaypaq pichakunqa. Kunanmi sayachiyta hinaspa llapan yaykuyta kutichiyta atinki.</string>
     <string name="reactivation_reactivate">Cuentayta kawsarichiy</string>
     <string name="reactivation_sign_out">Wichqayta katiy hinaspa lluqsiy</string>
+    <string name="common_play">Tukachiy</string>
+    <string name="common_pause">Sayachiy</string>
+    <string name="common_opening_file">Archivota kichachkan…</string>
+    <string name="common_no_app_for_file">Mana app kay archivota kichayta atinchu</string>
+    <string name="common_file_open_failed">Archivota mana kichayta atikunchu</string>
 </resources>

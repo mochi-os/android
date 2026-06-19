@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Kont ou an ak tout done li yo ap efase nèt nan dat %1$s. Ou kapab anile epi retabli aksè konplè kounye a.</string>
     <string name="reactivation_reactivate">Reaktive kont mwen an</string>
     <string name="reactivation_sign_out">Kontinye fèmen an epi dekonekte</string>
+    <string name="common_play">Jwe</string>
+    <string name="common_pause">Kanpe</string>
+    <string name="common_opening_file">Ap ouvri fichye…</string>
+    <string name="common_no_app_for_file">Pa gen okenn app ki ka ouvri fichye sa a</string>
+    <string name="common_file_open_failed">Nou pa t ka ouvri fichye a</string>
 </resources>

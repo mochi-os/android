@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Hesabınız və onun bütün məlumatları %1$s tarixində birdəfəlik silinəcək. İndi ləğv edib tam girişi bərpa edə bilərsiniz.</string>
     <string name="reactivation_reactivate">Hesabımı yenidən aktivləşdir</string>
     <string name="reactivation_sign_out">Bağlamağa davam et və çıx</string>
+    <string name="common_play">Oynat</string>
+    <string name="common_pause">Dayandır</string>
+    <string name="common_opening_file">Fayl açılır…</string>
+    <string name="common_no_app_for_file">Bu faylı aça biləcək tətbiq yoxdur</string>
+    <string name="common_file_open_failed">Faylı açmaq mümkün olmadı</string>
 </resources>

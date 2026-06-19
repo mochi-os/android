@@ -282,4 +282,10 @@
     <string name="reactivation_body_dated">Il-kont tiegħek u d-data kollha tiegħu se jitħassru b\'mod permanenti fil-%1$s. Tista\' tikkanċella u tirrestawra l-aċċess sħiħ issa.</string>
     <string name="reactivation_reactivate">Attiva l-kont tiegħi mill-ġdid</string>
     <string name="reactivation_sign_out">Kompli l-għeluq u oħroġ</string>
+
+    <string name="common_play">Daqq</string>
+    <string name="common_pause">Pawża</string>
+    <string name="common_opening_file">Qed jinfetaħ il-fajl…</string>
+    <string name="common_no_app_for_file">L-ebda app ma tista\' tiftaħ dan il-fajl</string>
+    <string name="common_file_open_failed">Ma rnexxiex jinfetaħ il-fajl</string>
 </resources>

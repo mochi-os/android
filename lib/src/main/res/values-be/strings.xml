@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ваш рахунак і ўсе яго даныя будуць назаўжды выдалены %1$s. Вы можаце скасаваць і аднавіць поўны доступ зараз.</string>
     <string name="reactivation_reactivate">Аднавіць мой рахунак</string>
     <string name="reactivation_sign_out">Працягнуць закрыццё і выйсці</string>
+    <string name="common_play">Прайграць</string>
+    <string name="common_pause">Прыпыніць</string>
+    <string name="common_opening_file">Адкрыццё файла…</string>
+    <string name="common_no_app_for_file">Няма праграмы, якая можа адкрыць гэты файл</string>
+    <string name="common_file_open_failed">Не ўдалося адкрыць файл</string>
 </resources>

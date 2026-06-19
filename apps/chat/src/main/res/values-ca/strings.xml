@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">No hi ha xats per reenviar-hi</string>
     <string name="chat_forward_success">Reenviat</string>
     <string name="chat_forward_failed">No s\'ha pogut reenviar</string>
+    <string name="chat_message_reply">Respon</string>
+    <string name="chat_message_select">Selecciona</string>
+    <string name="chat_reply_attachment">Adjunt</string>
+    <string name="chat_replying_to">S\'està responent a %1$s</string>
+    <string name="chat_delete_confirm_title">Voleu suprimir el missatge?</string>
+    <string name="chat_delete_confirm_body">Això suprimeix el missatge per a tothom i no es pot desfer.</string>
+    <string name="chat_delete_own_only">Només podeu suprimir els vostres propis missatges</string>
+    <string name="chat_selection_title">%1$d seleccionats</string>
 </resources>

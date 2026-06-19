@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Tiada sembang untuk dimajukan</string>
     <string name="chat_forward_success">Dimajukan</string>
     <string name="chat_forward_failed">Gagal memajukan</string>
+    <string name="chat_message_reply">Balas</string>
+    <string name="chat_message_select">Pilih</string>
+    <string name="chat_reply_attachment">Lampiran</string>
+    <string name="chat_replying_to">Membalas kepada %1$s</string>
+    <string name="chat_delete_confirm_title">Padam mesej?</string>
+    <string name="chat_delete_confirm_body">Ini memadamkan mesej untuk semua orang dan tidak boleh dibatalkan.</string>
+    <string name="chat_delete_own_only">Anda hanya boleh memadamkan mesej anda sendiri</string>
+    <string name="chat_selection_title">%1$d dipilih</string>
 </resources>

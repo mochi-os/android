@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ο λογαριασμός σας και όλα τα δεδομένα του θα διαγραφούν οριστικά στις %1$s. Μπορείτε να ακυρώσετε και να αποκαταστήσετε την πλήρη πρόσβαση τώρα.</string>
     <string name="reactivation_reactivate">Επανενεργοποίηση του λογαριασμού μου</string>
     <string name="reactivation_sign_out">Συνέχεια κλεισίματος και αποσύνδεση</string>
+    <string name="common_play">Αναπαραγωγή</string>
+    <string name="common_pause">Παύση</string>
+    <string name="common_opening_file">Άνοιγμα αρχείου…</string>
+    <string name="common_no_app_for_file">Καμία εφαρμογή δεν μπορεί να ανοίξει αυτό το αρχείο</string>
+    <string name="common_file_open_failed">Δεν ήταν δυνατό το άνοιγμα του αρχείου</string>
 </resources>

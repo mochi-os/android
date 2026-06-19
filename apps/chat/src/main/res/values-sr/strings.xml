@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Нема ћаскања за прослеђивање</string>
     <string name="chat_forward_success">Прослеђено</string>
     <string name="chat_forward_failed">Прослеђивање није успело</string>
+    <string name="chat_message_reply">Одговори</string>
+    <string name="chat_message_select">Изабери</string>
+    <string name="chat_reply_attachment">Прилог</string>
+    <string name="chat_replying_to">Одговор на %1$s</string>
+    <string name="chat_delete_confirm_title">Избрисати поруку?</string>
+    <string name="chat_delete_confirm_body">Ово брише поруку за све и не може се опозвати.</string>
+    <string name="chat_delete_own_only">Можете брисати само сопствене поруке</string>
+    <string name="chat_selection_title">Изабрано: %1$d</string>
 </resources>

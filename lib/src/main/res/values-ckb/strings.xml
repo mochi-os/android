@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">هەژمارەکەت و هەموو داتاکانی بە تەواوەتی لە %1$s دەسڕێنەوە. ئێستا دەتوانیت هەڵیبوەشێنیتەوە و دەستگەیشتنی تەواو بگەڕێنیتەوە.</string>
     <string name="reactivation_reactivate">هەژمارەکەم دووبارە چالاک بکەرەوە</string>
     <string name="reactivation_sign_out">بەردەوامبە لە داخستن و بچۆ دەرەوە</string>
+    <string name="common_play">لێدان</string>
+    <string name="common_pause">وەستان</string>
+    <string name="common_opening_file">کردنەوەی پەڕگە…</string>
+    <string name="common_no_app_for_file">هیچ ئەپێک ناتوانێت ئەم پەڕگەیە بکاتەوە</string>
+    <string name="common_file_open_failed">نەتوانرا پەڕگەکە بکرێتەوە</string>
 </resources>

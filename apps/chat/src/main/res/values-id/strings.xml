@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Tidak ada chat untuk diteruskan</string>
     <string name="chat_forward_success">Diteruskan</string>
     <string name="chat_forward_failed">Gagal meneruskan</string>
+    <string name="chat_message_reply">Balas</string>
+    <string name="chat_message_select">Pilih</string>
+    <string name="chat_reply_attachment">Lampiran</string>
+    <string name="chat_replying_to">Membalas %1$s</string>
+    <string name="chat_delete_confirm_title">Hapus pesan?</string>
+    <string name="chat_delete_confirm_body">Ini menghapus pesan untuk semua orang dan tidak dapat dibatalkan.</string>
+    <string name="chat_delete_own_only">Anda hanya dapat menghapus pesan Anda sendiri</string>
+    <string name="chat_selection_title">%1$d dipilih</string>
 </resources>

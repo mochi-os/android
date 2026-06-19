@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Kontoen din og alle dataene dens vil bli slettet permanent %1$s. Du kan avbryte og gjenopprette full tilgang nå.</string>
     <string name="reactivation_reactivate">Reaktiver kontoen min</string>
     <string name="reactivation_sign_out">Fortsett å lukke og logg ut</string>
+    <string name="common_play">Spill av</string>
+    <string name="common_pause">Pause</string>
+    <string name="common_opening_file">Åpner fil…</string>
+    <string name="common_no_app_for_file">Ingen app kan åpne denne filen</string>
+    <string name="common_file_open_failed">Kunne ikke åpne filen</string>
 </resources>

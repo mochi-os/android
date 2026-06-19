@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">ניטאָ קיין שמועסן וווּהין ווײַטערצושיקן</string>
     <string name="chat_forward_success">ווײַטערגעשיקט</string>
     <string name="chat_forward_failed">ניט געלונגען ווײַטערצושיקן</string>
+    <string name="chat_message_reply">ענטפֿערן</string>
+    <string name="chat_message_select">אויסקלײַבן</string>
+    <string name="chat_reply_attachment">בײַלאַגע</string>
+    <string name="chat_replying_to">ענטפֿערט אויף %1$s</string>
+    <string name="chat_delete_confirm_title">אויסמעקן די מעלדונג?</string>
+    <string name="chat_delete_confirm_body">דאָס מעקט אויס די מעלדונג פֿאַר אַלעמען און קען נישט צוריקגעמאַכט ווערן.</string>
+    <string name="chat_delete_own_only">איר קענט בלויז אויסמעקן אײַערע אייגענע מעלדונגען</string>
+    <string name="chat_selection_title">%1$d אויסגעקליבן</string>
 </resources>

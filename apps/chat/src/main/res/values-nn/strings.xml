@@ -68,5 +68,13 @@
     <string name="chat_settings_leave_and_delete">Forlat og slett lokalt</string>
     <string name="chat_settings_delete">Slett lokalt</string>
     <string name="chat_settings_delete_message">Dette fjernar chatten og meldingane berre frå denne eininga.</string>
+    <string name="chat_message_reply">Svar</string>
+    <string name="chat_message_select">Vel</string>
+    <string name="chat_reply_attachment">Vedlegg</string>
+    <string name="chat_replying_to">Svarar %1$s</string>
+    <string name="chat_delete_confirm_title">Slette meldinga?</string>
+    <string name="chat_delete_confirm_body">Dette slettar meldinga for alle og kan ikkje angrast.</string>
+    <string name="chat_delete_own_only">Du kan berre slette dine eigne meldingar</string>
+    <string name="chat_selection_title">%1$d valde</string>
 
 </resources>

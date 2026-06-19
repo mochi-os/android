@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">ਫਾਰਵਰਡ ਕਰਨ ਲਈ ਕੋਈ ਚੈਟ ਨਹੀਂ</string>
     <string name="chat_forward_success">ਫਾਰਵਰਡ ਕੀਤਾ ਗਿਆ</string>
     <string name="chat_forward_failed">ਫਾਰਵਰਡ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
+    <string name="chat_message_reply">ਜਵਾਬ ਦਿਓ</string>
+    <string name="chat_message_select">ਚੁਣੋ</string>
+    <string name="chat_reply_attachment">ਅਟੈਚਮੈਂਟ</string>
+    <string name="chat_replying_to">%1$s ਨੂੰ ਜਵਾਬ ਦੇ ਰਹੇ ਹੋ</string>
+    <string name="chat_delete_confirm_title">ਸੁਨੇਹਾ ਮਿਟਾਉਣਾ ਹੈ?</string>
+    <string name="chat_delete_confirm_body">ਇਸ ਨਾਲ ਸੁਨੇਹਾ ਸਾਰਿਆਂ ਲਈ ਮਿਟ ਜਾਂਦਾ ਹੈ ਅਤੇ ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="chat_delete_own_only">ਤੁਸੀਂ ਸਿਰਫ਼ ਆਪਣੇ ਸੁਨੇਹੇ ਹੀ ਮਿਟਾ ਸਕਦੇ ਹੋ</string>
+    <string name="chat_selection_title">%1$d ਚੁਣੇ ਗਏ</string>
 </resources>

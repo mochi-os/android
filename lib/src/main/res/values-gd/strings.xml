@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Thèid do chunntas agus a dhàta gu lèir a sguabadh às gu buan air %1$s. \'S urrainn dhut a chur dheth agus làn-inntrigeadh ath-shuidheachadh a-nis.</string>
     <string name="reactivation_reactivate">Ath-ghnìomhaich mo chunntas</string>
     <string name="reactivation_sign_out">Lean air an dùnadh agus clàraich a-mach</string>
+    <string name="common_play">Cluich</string>
+    <string name="common_pause">Cuir \'na stad</string>
+    <string name="common_opening_file">A\' fosgladh an fhaidhle…</string>
+    <string name="common_no_app_for_file">Chan eil aplacaid ann as urrainn am faidhle seo fhosgladh</string>
+    <string name="common_file_open_failed">Cha b\' urrainn am faidhle fhosgladh</string>
 </resources>

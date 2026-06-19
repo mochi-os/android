@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">फॉरवर्ड करे खातिर कवनो चैट नइखे</string>
     <string name="chat_forward_success">फॉरवर्ड हो गइल</string>
     <string name="chat_forward_failed">फॉरवर्ड ना हो सकल</string>
+    <string name="chat_message_reply">जवाब दीं</string>
+    <string name="chat_message_select">चुनीं</string>
+    <string name="chat_reply_attachment">अटैचमेंट</string>
+    <string name="chat_replying_to">%1$s के जवाब देत बानी</string>
+    <string name="chat_delete_confirm_title">संदेस मिटाईं?</string>
+    <string name="chat_delete_confirm_body">एह से ई संदेस सभ खातिर मिट जाई आ ओकर वापसी ना हो पाई।</string>
+    <string name="chat_delete_own_only">रउआ खाली आपन संदेस मिटा सकेनी</string>
+    <string name="chat_selection_title">%1$d चुनल गइल</string>
 </resources>

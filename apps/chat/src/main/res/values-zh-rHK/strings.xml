@@ -66,5 +66,13 @@
     <string name="chat_settings_delete_title">刪除聊天</string>
     <string name="chat_settings_delete_message">此操作只會從此裝置移除該聊天及其訊息。</string>
     <string name="chat_chat_not_found">找不到聊天</string>
+    <string name="chat_message_reply">回覆</string>
+    <string name="chat_message_select">選擇</string>
+    <string name="chat_reply_attachment">附件</string>
+    <string name="chat_replying_to">正在回覆 %1$s</string>
+    <string name="chat_delete_confirm_title">刪除訊息？</string>
+    <string name="chat_delete_confirm_body">此操作會為所有人刪除此訊息，且無法復原。</string>
+    <string name="chat_delete_own_only">你只可以刪除自己的訊息</string>
+    <string name="chat_selection_title">已選擇 %1$d 項</string>
 
 </resources>

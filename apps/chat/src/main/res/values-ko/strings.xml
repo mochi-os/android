@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">전달할 채팅이 없습니다</string>
     <string name="chat_forward_success">전달됨</string>
     <string name="chat_forward_failed">전달하지 못했습니다</string>
+    <string name="chat_message_reply">답장</string>
+    <string name="chat_message_select">선택</string>
+    <string name="chat_reply_attachment">첨부 파일</string>
+    <string name="chat_replying_to">%1$s님에게 답장</string>
+    <string name="chat_delete_confirm_title">메시지를 삭제할까요?</string>
+    <string name="chat_delete_confirm_body">모든 사람에게서 메시지가 삭제되며 되돌릴 수 없습니다.</string>
+    <string name="chat_delete_own_only">본인이 보낸 메시지만 삭제할 수 있습니다</string>
+    <string name="chat_selection_title">%1$d개 선택됨</string>
 </resources>

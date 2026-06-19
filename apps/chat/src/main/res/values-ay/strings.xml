@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Janiw apayañataki chatanakax utjkiti</string>
     <string name="chat_forward_success">Apayatawa</string>
     <string name="chat_forward_failed">Janiw apayaskiti</string>
+    <string name="chat_message_reply">Kutiyaña</string>
+    <string name="chat_message_select">Ajlliña</string>
+    <string name="chat_reply_attachment">Archivo</string>
+    <string name="chat_replying_to">%1$s tuqir kutiyaski</string>
+    <string name="chat_delete_confirm_title">¿Mensaje chhaqtayañ?</string>
+    <string name="chat_delete_confirm_body">Akax taqininakatakiw mensaje chhaqtayi, janiw kutt\'ayañ atipkiti.</string>
+    <string name="chat_delete_own_only">Jumampi mensajenakamak chhaqtayañ atta</string>
+    <string name="chat_selection_title">%1$d ajllita</string>
 </resources>

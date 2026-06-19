@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">A óò pa àkáǹtì rẹ àti gbogbo dátà rẹ̀ rẹ́ pátápátá ní %1$s. O lè fagilé e kí o sì mú ìráyèsí kíkún padà báyìí.</string>
     <string name="reactivation_reactivate">Tún àkáǹtì mi ṣíṣẹ́</string>
     <string name="reactivation_sign_out">Tẹ̀síwájú nínú pípa á kí o sì jáde</string>
+    <string name="common_play">Mú ṣiṣẹ́</string>
+    <string name="common_pause">Dáwọ́ dúró</string>
+    <string name="common_opening_file">Ń ṣí fáìlì…</string>
+    <string name="common_no_app_for_file">Kò sí app tó lè ṣí fáìlì yìí</string>
+    <string name="common_file_open_failed">Kò lè ṣí fáìlì</string>
 </resources>

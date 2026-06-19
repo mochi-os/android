@@ -284,4 +284,9 @@
     <string name="reactivation_body_dated">Jou rekening en al sy data sal permanent verwyder word op %1$s. Jy kan nou kanselleer en volle toegang herstel.</string>
     <string name="reactivation_reactivate">Heraktiveer my rekening</string>
     <string name="reactivation_sign_out">Gaan voort met sluit en meld af</string>
+    <string name="common_play">Speel</string>
+    <string name="common_pause">Pouseer</string>
+    <string name="common_opening_file">Maak lêer oop…</string>
+    <string name="common_no_app_for_file">Geen app kan hierdie lêer oopmaak nie</string>
+    <string name="common_file_open_failed">Kon nie lêer oopmaak nie</string>
 </resources>

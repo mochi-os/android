@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">ບັນຊີຂອງທ່ານ ແລະ ຂໍ້ມູນທັງໝົດຂອງມັນຈະຖືກລຶບຖາວອນໃນວັນທີ %1$s. ທ່ານສາມາດຍົກເລີກ ແລະ ກູ້ຄືນການເຂົ້າເຖິງເຕັມຮູບແບບໄດ້ດຽວນີ້.</string>
     <string name="reactivation_reactivate">ເປີດໃຊ້ບັນຊີຂອງຂ້ອຍຄືນ</string>
     <string name="reactivation_sign_out">ສືບຕໍ່ປິດ ແລະ ອອກຈາກລະບົບ</string>
+    <string name="common_play">ຫຼິ້ນ</string>
+    <string name="common_pause">ຢຸດຊົ່ວຄາວ</string>
+    <string name="common_opening_file">ກຳລັງເປີດໄຟລ໌…</string>
+    <string name="common_no_app_for_file">ບໍ່ມີແອັບໃດສາມາດເປີດໄຟລ໌ນີ້ໄດ້</string>
+    <string name="common_file_open_failed">ບໍ່ສາມາດເປີດໄຟລ໌ໄດ້</string>
 </resources>

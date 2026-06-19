@@ -282,4 +282,10 @@
     <string name="reactivation_body_dated">Bydd eich cyfrif a\'i holl ddata yn cael eu dileu\'n barhaol ar %1$s. Gallwch ganslo ac adfer mynediad llawn nawr.</string>
     <string name="reactivation_reactivate">Ailysgogi fy nghyfrif</string>
     <string name="reactivation_sign_out">Parhau i gau ac allgofnodi</string>
+
+    <string name="common_play">Chwarae</string>
+    <string name="common_pause">Oedi</string>
+    <string name="common_opening_file">Yn agor y ffeil…</string>
+    <string name="common_no_app_for_file">Ni all unrhyw ap agor y ffeil hon</string>
+    <string name="common_file_open_failed">Methwyd agor y ffeil</string>
 </resources>

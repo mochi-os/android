@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ditt konto och all dess data raderas permanent den %1$s. Du kan avbryta och återställa full åtkomst nu.</string>
     <string name="reactivation_reactivate">Återaktivera mitt konto</string>
     <string name="reactivation_sign_out">Fortsätt stänga och logga ut</string>
+    <string name="common_play">Spela upp</string>
+    <string name="common_pause">Pausa</string>
+    <string name="common_opening_file">Öppnar fil…</string>
+    <string name="common_no_app_for_file">Ingen app kan öppna den här filen</string>
+    <string name="common_file_open_failed">Det gick inte att öppna filen</string>
 </resources>

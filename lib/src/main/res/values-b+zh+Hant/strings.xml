@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">你的帳戶及其所有資料將於 %1$s 永久刪除。你現在可以取消並還原完整存取權限。</string>
     <string name="reactivation_reactivate">重新啟用我的帳戶</string>
     <string name="reactivation_sign_out">繼續關閉並登出</string>
+    <string name="common_play">播放</string>
+    <string name="common_pause">暫停</string>
+    <string name="common_opening_file">正在開啟檔案…</string>
+    <string name="common_no_app_for_file">沒有應用程式可開啟此檔案</string>
+    <string name="common_file_open_failed">無法開啟檔案</string>
 </resources>

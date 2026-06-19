@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Kò sí ìfọ̀rọ̀wérọ̀ láti fi ránṣẹ́ síwájú sí</string>
     <string name="chat_forward_success">A ti fi ránṣẹ́ síwájú</string>
     <string name="chat_forward_failed">Kò lè fi ránṣẹ́ síwájú</string>
+    <string name="chat_message_reply">Dáhùn</string>
+    <string name="chat_message_select">Yàn</string>
+    <string name="chat_reply_attachment">Fáìlì àsopọ̀</string>
+    <string name="chat_replying_to">Ń dáhùn sí %1$s</string>
+    <string name="chat_delete_confirm_title">Pa ìránṣẹ́ rẹ́?</string>
+    <string name="chat_delete_confirm_body">Èyí yóò pa ìránṣẹ́ náà rẹ́ fún gbogbo ènìyàn, kò sì ṣeé yí padà.</string>
+    <string name="chat_delete_own_only">O lè pa àwọn ìránṣẹ́ tìrẹ nìkan rẹ́</string>
+    <string name="chat_selection_title">%1$d tí a yàn</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Hasabyňyz we ähli maglumatlary %1$s senesinde hemişelik pozular. Indi ony ýatyryp we doly elýeterligi dikeldip bilersiňiz.</string>
     <string name="reactivation_reactivate">Hasabymy gaýtadan işjeňleşdir</string>
     <string name="reactivation_sign_out">Ýapmagy dowam et we ulgamdan çyk</string>
+    <string name="common_play">Oýnat</string>
+    <string name="common_pause">Saklat</string>
+    <string name="common_opening_file">Faýl açylýar…</string>
+    <string name="common_no_app_for_file">Bu faýly açyp biljek programma ýok</string>
+    <string name="common_file_open_failed">Faýly açyp bolmady</string>
 </resources>

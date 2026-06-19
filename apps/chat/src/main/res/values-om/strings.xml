@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Chaattiin itti dabarsan hin jiru</string>
     <string name="chat_forward_success">Dabarfame</string>
     <string name="chat_forward_failed">Dabarsuun hin milkoofne</string>
+    <string name="chat_message_reply">Deebii</string>
+    <string name="chat_message_select">Filadhu</string>
+    <string name="chat_reply_attachment">Faayilii</string>
+    <string name="chat_replying_to">%1$s\'f deebisaa jirta</string>
+    <string name="chat_delete_confirm_title">Ergaa haquu?</string>
+    <string name="chat_delete_confirm_body">Kun ergaa nama hundaaf haqa; deebisanii argachuun hin danda\'amu.</string>
+    <string name="chat_delete_own_only">Ergaa kee qofa haquu dandeessa</string>
+    <string name="chat_selection_title">%1$d filataman</string>
 </resources>

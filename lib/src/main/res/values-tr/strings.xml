@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Hesabınız ve tüm verileri %1$s tarihinde kalıcı olarak silinecek. Şimdi iptal edip tam erişimi geri yükleyebilirsiniz.</string>
     <string name="reactivation_reactivate">Hesabımı yeniden etkinleştir</string>
     <string name="reactivation_sign_out">Kapatmaya devam et ve oturumu kapat</string>
+    <string name="common_play">Oynat</string>
+    <string name="common_pause">Duraklat</string>
+    <string name="common_opening_file">Dosya açılıyor…</string>
+    <string name="common_no_app_for_file">Bu dosyayı açabilecek uygulama yok</string>
+    <string name="common_file_open_failed">Dosya açılamadı</string>
 </resources>

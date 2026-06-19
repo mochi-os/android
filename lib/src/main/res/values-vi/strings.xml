@@ -282,4 +282,10 @@
     <string name="reactivation_body_dated">Tài khoản của bạn và toàn bộ dữ liệu của nó sẽ bị xóa vĩnh viễn vào %1$s. Bạn có thể hủy và khôi phục toàn bộ quyền truy cập ngay bây giờ.</string>
     <string name="reactivation_reactivate">Kích hoạt lại tài khoản của tôi</string>
     <string name="reactivation_sign_out">Tiếp tục đóng và đăng xuất</string>
+
+    <string name="common_play">Phát</string>
+    <string name="common_pause">Tạm dừng</string>
+    <string name="common_opening_file">Đang mở tệp…</string>
+    <string name="common_no_app_for_file">Không có ứng dụng nào có thể mở tệp này</string>
+    <string name="common_file_open_failed">Không thể mở tệp</string>
 </resources>

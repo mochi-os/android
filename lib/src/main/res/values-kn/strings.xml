@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">ನಿಮ್ಮ ಖಾತೆ ಮತ್ತು ಅದರ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು %1$s ರಂದು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ. ನೀವು ಈಗ ರದ್ದುಗೊಳಿಸಿ ಪೂರ್ಣ ಪ್ರವೇಶವನ್ನು ಮರುಸ್ಥಾಪಿಸಬಹುದು.</string>
     <string name="reactivation_reactivate">ನನ್ನ ಖಾತೆಯನ್ನು ಮರುಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="reactivation_sign_out">ಮುಚ್ಚುವುದನ್ನು ಮುಂದುವರಿಸಿ ಮತ್ತು ಸೈನ್ ಔಟ್ ಮಾಡಿ</string>
+    <string name="common_play">ಪ್ಲೇ ಮಾಡಿ</string>
+    <string name="common_pause">ವಿರಾಮ</string>
+    <string name="common_opening_file">ಫೈಲ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ…</string>
+    <string name="common_no_app_for_file">ಈ ಫೈಲ್ ಅನ್ನು ಯಾವುದೇ ಆ್ಯಪ್ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
+    <string name="common_file_open_failed">ಫೈಲ್ ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
 </resources>

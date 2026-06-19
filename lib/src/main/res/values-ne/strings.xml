@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">तपाईंको खाता र यसका सबै डेटा %1$s मा स्थायी रूपमा मेटाइनेछ। तपाईं अहिले रद्द गरी पूर्ण पहुँच पुनर्स्थापना गर्न सक्नुहुन्छ।</string>
     <string name="reactivation_reactivate">मेरो खाता पुनः सक्रिय गर्नुहोस्</string>
     <string name="reactivation_sign_out">बन्द गर्न जारी राख्नुहोस् र साइन आउट गर्नुहोस्</string>
+    <string name="common_play">चलाउनुहोस्</string>
+    <string name="common_pause">रोक्नुहोस्</string>
+    <string name="common_opening_file">फाइल खोल्दै…</string>
+    <string name="common_no_app_for_file">यो फाइल खोल्न सक्ने कुनै एप छैन</string>
+    <string name="common_file_open_failed">फाइल खोल्न सकिएन</string>
 </resources>

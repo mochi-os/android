@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Engin spjöll til að áframsenda í</string>
     <string name="chat_forward_success">Áframsent</string>
     <string name="chat_forward_failed">Ekki tókst að áframsenda</string>
+    <string name="chat_message_reply">Svara</string>
+    <string name="chat_message_select">Velja</string>
+    <string name="chat_reply_attachment">Viðhengi</string>
+    <string name="chat_replying_to">Svar til %1$s</string>
+    <string name="chat_delete_confirm_title">Eyða skilaboðum?</string>
+    <string name="chat_delete_confirm_body">Þetta eyðir skilaboðunum fyrir alla og er ekki hægt að afturkalla.</string>
+    <string name="chat_delete_own_only">Þú getur aðeins eytt þínum eigin skilaboðum</string>
+    <string name="chat_selection_title">%1$d valin</string>
 </resources>

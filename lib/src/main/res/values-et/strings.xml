@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Teie konto ja kõik selle andmed kustutatakse jäädavalt %1$s. Saate selle nüüd tühistada ja täieliku juurdepääsu taastada.</string>
     <string name="reactivation_reactivate">Taasaktiveeri minu konto</string>
     <string name="reactivation_sign_out">Jätka sulgemist ja logi välja</string>
+    <string name="common_play">Esita</string>
+    <string name="common_pause">Peata</string>
+    <string name="common_opening_file">Faili avamine…</string>
+    <string name="common_no_app_for_file">Ükski rakendus ei saa seda faili avada</string>
+    <string name="common_file_open_failed">Faili ei õnnestunud avada</string>
 </resources>

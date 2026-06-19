@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Pole vestlusi, kuhu edastada</string>
     <string name="chat_forward_success">Edastatud</string>
     <string name="chat_forward_failed">Edastamine ebaõnnestus</string>
+    <string name="chat_message_reply">Vasta</string>
+    <string name="chat_message_select">Vali</string>
+    <string name="chat_reply_attachment">Manus</string>
+    <string name="chat_replying_to">Vastad kasutajale %1$s</string>
+    <string name="chat_delete_confirm_title">Kustutada sõnum?</string>
+    <string name="chat_delete_confirm_body">See kustutab sõnumi kõigi jaoks ja seda ei saa tagasi võtta.</string>
+    <string name="chat_delete_own_only">Saad kustutada ainult enda sõnumeid</string>
+    <string name="chat_selection_title">%1$d valitud</string>
 </resources>

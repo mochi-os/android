@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">रउआ के खाता आ ओकर सभ डेटा %1$s के हमेशा खातिर मिटा दिहल जाई। रउआ अबहीं रद्द क के पूरा पहुँच वापस पा सकेनी।</string>
     <string name="reactivation_reactivate">हमार खाता फेर से चालू करीं</string>
     <string name="reactivation_sign_out">बंद करत रहीं आ साइन आउट करीं</string>
+    <string name="common_play">चलाईं</string>
+    <string name="common_pause">रोकीं</string>
+    <string name="common_opening_file">फाइल खुल रहल बा…</string>
+    <string name="common_no_app_for_file">ई फाइल खोले वाला कवनो ऐप नइखे</string>
+    <string name="common_file_open_failed">फाइल ना खुल सकल</string>
 </resources>

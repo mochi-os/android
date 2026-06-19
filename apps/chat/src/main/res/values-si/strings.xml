@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">ඉදිරියට යැවීමට කතාබස් නැත</string>
     <string name="chat_forward_success">ඉදිරියට යවන ලදී</string>
     <string name="chat_forward_failed">ඉදිරියට යැවීමට අසමත් විය</string>
+    <string name="chat_message_reply">පිළිතුරු දෙන්න</string>
+    <string name="chat_message_select">තෝරන්න</string>
+    <string name="chat_reply_attachment">ඇමුණුම</string>
+    <string name="chat_replying_to">%1$s ට පිළිතුරු දෙමින්</string>
+    <string name="chat_delete_confirm_title">පණිවිඩය මකන්නද?</string>
+    <string name="chat_delete_confirm_body">මෙයින් සියලු දෙනා සඳහා පණිවිඩය මැකෙන අතර එය ආපසු හැරවිය නොහැක.</string>
+    <string name="chat_delete_own_only">ඔබට මැකිය හැක්කේ ඔබගේම පණිවිඩ පමණි</string>
+    <string name="chat_selection_title">%1$d ක් තෝරා ඇත</string>
 </resources>

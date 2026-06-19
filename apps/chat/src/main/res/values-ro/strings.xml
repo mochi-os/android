@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Niciun chat către care să redirecționezi</string>
     <string name="chat_forward_success">Redirecționat</string>
     <string name="chat_forward_failed">Redirecționarea a eșuat</string>
+    <string name="chat_message_reply">Răspunde</string>
+    <string name="chat_message_select">Selectează</string>
+    <string name="chat_reply_attachment">Atașament</string>
+    <string name="chat_replying_to">Răspunzi lui %1$s</string>
+    <string name="chat_delete_confirm_title">Ștergi mesajul?</string>
+    <string name="chat_delete_confirm_body">Aceasta șterge mesajul pentru toți și nu poate fi anulată.</string>
+    <string name="chat_delete_own_only">Poți șterge doar propriile mesaje</string>
+    <string name="chat_selection_title">%1$d selectate</string>
 </resources>

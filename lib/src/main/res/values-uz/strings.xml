@@ -282,4 +282,10 @@
     <string name="reactivation_body_dated">Hisobingiz va uning barcha ma\'lumotlari %1$s sanasida butunlay o\'chiriladi. Hozir bekor qilib, to\'liq kirishni tiklashingiz mumkin.</string>
     <string name="reactivation_reactivate">Hisobimni qayta faollashtirish</string>
     <string name="reactivation_sign_out">Yopishni davom ettirish va tizimdan chiqish</string>
+
+    <string name="common_play">Ijro etish</string>
+    <string name="common_pause">Pauza</string>
+    <string name="common_opening_file">Fayl ochilmoqda…</string>
+    <string name="common_no_app_for_file">Bu faylni hech qaysi ilova ocha olmaydi</string>
+    <string name="common_file_open_failed">Faylni ochib boʻlmadi</string>
 </resources>

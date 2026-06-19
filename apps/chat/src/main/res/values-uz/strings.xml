@@ -78,4 +78,13 @@
     <string name="chat_forward_empty">Uzatish uchun chatlar yoʻq</string>
     <string name="chat_forward_success">Uzatildi</string>
     <string name="chat_forward_failed">Uzatib boʻlmadi</string>
+
+    <string name="chat_message_reply">Javob berish</string>
+    <string name="chat_message_select">Tanlash</string>
+    <string name="chat_reply_attachment">Ilova</string>
+    <string name="chat_replying_to">%1$s ga javob berilmoqda</string>
+    <string name="chat_delete_confirm_title">Xabar oʻchirilsinmi?</string>
+    <string name="chat_delete_confirm_body">Bu xabarni hamma uchun oʻchiradi va uni qaytarib boʻlmaydi.</string>
+    <string name="chat_delete_own_only">Faqat oʻz xabarlaringizni oʻchira olasiz</string>
+    <string name="chat_selection_title">%1$d ta tanlandi</string>
 </resources>

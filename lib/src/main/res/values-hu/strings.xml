@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Fiókját és annak minden adatát véglegesen töröljük ekkor: %1$s. Most megszakíthatja, és visszaállíthatja a teljes hozzáférést.</string>
     <string name="reactivation_reactivate">Fiókom újraaktiválása</string>
     <string name="reactivation_sign_out">Bezárás folytatása és kijelentkezés</string>
+    <string name="common_play">Lejátszás</string>
+    <string name="common_pause">Szünet</string>
+    <string name="common_opening_file">Fájl megnyitása…</string>
+    <string name="common_no_app_for_file">Nincs olyan alkalmazás, amely meg tudná nyitni ezt a fájlt</string>
+    <string name="common_file_open_failed">Nem sikerült megnyitni a fájlt</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Таны бүртгэл болон түүний бүх өгөгдөл %1$s-нд бүрмөсөн устгагдана. Та одоо цуцалж, бүрэн хандалтыг сэргээж болно.</string>
     <string name="reactivation_reactivate">Миний бүртгэлийг дахин идэвхжүүлэх</string>
     <string name="reactivation_sign_out">Хаахаа үргэлжлүүлж, системээс гарах</string>
+    <string name="common_play">Тоглуулах</string>
+    <string name="common_pause">Түр зогсоох</string>
+    <string name="common_opening_file">Файл нээж байна…</string>
+    <string name="common_no_app_for_file">Энэ файлыг нээх апп алга</string>
+    <string name="common_file_open_failed">Файлыг нээж чадсангүй</string>
 </resources>

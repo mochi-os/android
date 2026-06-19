@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">முன்னனுப்ப அரட்டைகள் இல்லை</string>
     <string name="chat_forward_success">முன்னனுப்பப்பட்டது</string>
     <string name="chat_forward_failed">முன்னனுப்ப முடியவில்லை</string>
+    <string name="chat_message_reply">பதிலளி</string>
+    <string name="chat_message_select">தேர்ந்தெடு</string>
+    <string name="chat_reply_attachment">இணைப்பு</string>
+    <string name="chat_replying_to">%1$s-க்கு பதிலளிக்கிறீர்கள்</string>
+    <string name="chat_delete_confirm_title">செய்தியை நீக்கவா?</string>
+    <string name="chat_delete_confirm_body">இது அனைவருக்கும் செய்தியை நீக்குகிறது, இதைச் செயல்தவிர்க்க முடியாது.</string>
+    <string name="chat_delete_own_only">உங்கள் சொந்த செய்திகளை மட்டுமே நீக்க முடியும்</string>
+    <string name="chat_selection_title">%1$d தேர்ந்தெடுக்கப்பட்டது</string>
 </resources>

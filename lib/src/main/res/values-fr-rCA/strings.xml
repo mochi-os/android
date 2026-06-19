@@ -263,4 +263,9 @@
     <string name="reactivation_body_dated">Votre compte et toutes ses données seront supprimés définitivement le %1$s. Vous pouvez annuler et rétablir l\'accès complet dès maintenant.</string>
     <string name="reactivation_reactivate">Réactiver mon compte</string>
     <string name="reactivation_sign_out">Continuer la fermeture et se déconnecter</string>
+    <string name="common_play">Lire</string>
+    <string name="common_pause">Pause</string>
+    <string name="common_opening_file">Ouverture du fichier…</string>
+    <string name="common_no_app_for_file">Aucune application ne peut ouvrir ce fichier</string>
+    <string name="common_file_open_failed">Impossible d\'ouvrir le fichier</string>
 </resources>

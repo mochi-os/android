@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Hesabê we û hemû daneyên wê dê di %1$s de bi mayînde were jêbirin. Hûn dikarin niha betal bikin û gihîştina temam vegerînin.</string>
     <string name="reactivation_reactivate">Hesabê min ji nû ve çalak bike</string>
     <string name="reactivation_sign_out">Berdewamiya girtinê û derketin</string>
+    <string name="common_play">Lêxe</string>
+    <string name="common_pause">Rawestîne</string>
+    <string name="common_opening_file">Dosye tê vekirin…</string>
+    <string name="common_no_app_for_file">Tu sepan nikare vê dosyeyê veke</string>
+    <string name="common_file_open_failed">Dosye nehat vekirin</string>
 </resources>

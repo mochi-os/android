@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">మీ ఖాతా మరియు దాని మొత్తం డేటా %1$s నాడు శాశ్వతంగా తొలగించబడుతుంది. మీరు ఇప్పుడు రద్దు చేసి పూర్తి యాక్సెస్‌ను పునరుద్ధరించవచ్చు.</string>
     <string name="reactivation_reactivate">నా ఖాతాను తిరిగి సక్రియం చేయి</string>
     <string name="reactivation_sign_out">మూసివేయడం కొనసాగించి సైన్ అవుట్ చేయండి</string>
+    <string name="common_play">ప్లే చేయండి</string>
+    <string name="common_pause">పాజ్ చేయండి</string>
+    <string name="common_opening_file">ఫైల్‌ను తెరుస్తోంది…</string>
+    <string name="common_no_app_for_file">ఈ ఫైల్‌ను తెరవగల యాప్ ఏదీ లేదు</string>
+    <string name="common_file_open_failed">ఫైల్‌ను తెరవడం సాధ్యపడలేదు</string>
 </resources>

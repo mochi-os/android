@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Ձեր հաշիվը և դրա բոլոր տվյալները ընդմիշտ կջնջվեն %1$s-ին։ Կարող եք հիմա չեղարկել և վերականգնել ամբողջ մուտքը։</string>
     <string name="reactivation_reactivate">Վերականգնել իմ հաշիվը</string>
     <string name="reactivation_sign_out">Շարունակել փակումը և դուրս գրվել</string>
+    <string name="common_play">Նվագարկել</string>
+    <string name="common_pause">Դադարեցնել</string>
+    <string name="common_opening_file">Ֆայլը բացվում է…</string>
+    <string name="common_no_app_for_file">Ոչ մի հավելված չի կարող բացել այս ֆայլը</string>
+    <string name="common_file_open_failed">Չհաջողվեց բացել ֆայլը</string>
 </resources>

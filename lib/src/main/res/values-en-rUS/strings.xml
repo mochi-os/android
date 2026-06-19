@@ -263,4 +263,9 @@
     <string name="reactivation_body_dated">Your account and all its data will be permanently deleted on %1$s. You can cancel and restore full access now.</string>
     <string name="reactivation_reactivate">Reactivate my account</string>
     <string name="reactivation_sign_out">Continue closing and sign out</string>
+    <string name="common_play">Play</string>
+    <string name="common_pause">Pause</string>
+    <string name="common_opening_file">Opening file…</string>
+    <string name="common_no_app_for_file">No app can open this file</string>
+    <string name="common_file_open_failed">Couldn\'t open file</string>
 </resources>

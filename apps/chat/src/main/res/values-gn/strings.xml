@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Ndaipóri ñemongeta embohasa haguã</string>
     <string name="chat_forward_success">Oñembohasa</string>
     <string name="chat_forward_failed">Ndaikatúi oñembohasa</string>
+    <string name="chat_message_reply">Embohovái</string>
+    <string name="chat_message_select">Eiporavo</string>
+    <string name="chat_reply_attachment">Marandurenda</string>
+    <string name="chat_replying_to">Embohovái %1$s-pe</string>
+    <string name="chat_delete_confirm_title">¿Emboguete ñe\'ẽmondo?</string>
+    <string name="chat_delete_confirm_body">Kóva omboguete ñe\'ẽmondo opavavépe g̃uarã ha ndaikatumo\'ãi ojejevy.</string>
+    <string name="chat_delete_own_only">Ikatu reipe\'a nde ñe\'ẽmondo añoite</string>
+    <string name="chat_selection_title">%1$d ojeporavo</string>
 </resources>

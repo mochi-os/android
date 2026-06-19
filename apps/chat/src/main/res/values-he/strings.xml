@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">אין צ\'אטים להעברה</string>
     <string name="chat_forward_success">הועבר</string>
     <string name="chat_forward_failed">ההעברה נכשלה</string>
+    <string name="chat_message_reply">השב</string>
+    <string name="chat_message_select">בחר</string>
+    <string name="chat_reply_attachment">קובץ מצורף</string>
+    <string name="chat_replying_to">בתגובה אל %1$s</string>
+    <string name="chat_delete_confirm_title">למחוק את ההודעה?</string>
+    <string name="chat_delete_confirm_body">פעולה זו מוחקת את ההודעה עבור כולם ולא ניתן לבטלה.</string>
+    <string name="chat_delete_own_only">ניתן למחוק רק את ההודעות שלך</string>
+    <string name="chat_selection_title">%1$d נבחרו</string>
 </resources>

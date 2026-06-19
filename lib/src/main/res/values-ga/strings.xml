@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Scriosfar do chuntas agus a chuid sonraí go léir go buan ar %1$s. Is féidir leat é a chealú agus rochtain iomlán a athbhunú anois.</string>
     <string name="reactivation_reactivate">Athghníomhachtaigh mo chuntas</string>
     <string name="reactivation_sign_out">Lean ar aghaidh leis an dúnadh agus sínigh amach</string>
+    <string name="common_play">Seinn</string>
+    <string name="common_pause">Cuir ar sos</string>
+    <string name="common_opening_file">Comhad á oscailt…</string>
+    <string name="common_no_app_for_file">Níl aon aip in ann an comhad seo a oscailt</string>
+    <string name="common_file_open_failed">Níorbh fhéidir an comhad a oscailt</string>
 </resources>

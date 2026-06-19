@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">तुमचे खाते आणि त्यातील सर्व डेटा %1$s रोजी कायमचा हटवला जाईल. तुम्ही आता रद्द करू शकता आणि पूर्ण प्रवेश पुनर्संचयित करू शकता.</string>
     <string name="reactivation_reactivate">माझे खाते पुन्हा सक्रिय करा</string>
     <string name="reactivation_sign_out">बंद करणे सुरू ठेवा आणि साइन आउट करा</string>
+    <string name="common_play">चालवा</string>
+    <string name="common_pause">थांबवा</string>
+    <string name="common_opening_file">फाइल उघडत आहे…</string>
+    <string name="common_no_app_for_file">ही फाइल उघडू शकेल असे कोणतेही अॅप नाही</string>
+    <string name="common_file_open_failed">फाइल उघडता आली नाही</string>
 </resources>

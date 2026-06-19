@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">ഫോർവേഡ് ചെയ്യാൻ ചാറ്റുകളൊന്നുമില്ല</string>
     <string name="chat_forward_success">ഫോർവേഡ് ചെയ്തു</string>
     <string name="chat_forward_failed">ഫോർവേഡ് ചെയ്യാനായില്ല</string>
+    <string name="chat_message_reply">മറുപടി നൽകുക</string>
+    <string name="chat_message_select">തിരഞ്ഞെടുക്കുക</string>
+    <string name="chat_reply_attachment">അറ്റാച്ച്മെന്റ്</string>
+    <string name="chat_replying_to">%1$s നു മറുപടി നൽകുന്നു</string>
+    <string name="chat_delete_confirm_title">സന്ദേശം ഇല്ലാതാക്കണോ?</string>
+    <string name="chat_delete_confirm_body">ഇത് എല്ലാവർക്കുമായി സന്ദേശം ഇല്ലാതാക്കുന്നു, ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <string name="chat_delete_own_only">നിങ്ങളുടെ സ്വന്തം സന്ദേശങ്ങൾ മാത്രമേ ഇല്ലാതാക്കാൻ കഴിയൂ</string>
+    <string name="chat_selection_title">%1$d തിരഞ്ഞെടുത്തു</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Tu cuenta y todos sus datos se eliminarán de forma permanente el %1$s. Puedes cancelar y restaurar el acceso completo ahora.</string>
     <string name="reactivation_reactivate">Reactivar mi cuenta</string>
     <string name="reactivation_sign_out">Continuar con el cierre y cerrar sesión</string>
+    <string name="common_play">Reproducir</string>
+    <string name="common_pause">Pausar</string>
+    <string name="common_opening_file">Abriendo archivo…</string>
+    <string name="common_no_app_for_file">Ninguna app puede abrir este archivo</string>
+    <string name="common_file_open_failed">No se pudo abrir el archivo</string>
 </resources>

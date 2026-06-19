@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Кайра жөнөтүүгө чат жок</string>
     <string name="chat_forward_success">Кайра жөнөтүлдү</string>
     <string name="chat_forward_failed">Кайра жөнөтүлгөн жок</string>
+    <string name="chat_message_reply">Жооп берүү</string>
+    <string name="chat_message_select">Тандоо</string>
+    <string name="chat_reply_attachment">Тиркеме</string>
+    <string name="chat_replying_to">%1$s билдирүүсүнө жооп берүүдө</string>
+    <string name="chat_delete_confirm_title">Билдирүү өчүрүлсүнбү?</string>
+    <string name="chat_delete_confirm_body">Бул билдирүүнү баары үчүн өчүрөт жана аны кайтарууга болбойт.</string>
+    <string name="chat_delete_own_only">Сиз өзүңүздүн билдирүүлөрүңүздү гана өчүрө аласыз</string>
+    <string name="chat_selection_title">%1$d тандалды</string>
 </resources>

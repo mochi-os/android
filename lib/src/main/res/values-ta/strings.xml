@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">உங்கள் கணக்கும் அதன் அனைத்து தரவும் %1$s அன்று நிரந்தரமாக நீக்கப்படும். இப்போது ரத்து செய்து முழு அணுகலை மீட்டெடுக்கலாம்.</string>
     <string name="reactivation_reactivate">என் கணக்கை மீண்டும் செயல்படுத்து</string>
     <string name="reactivation_sign_out">மூடுவதைத் தொடர்ந்து வெளியேறு</string>
+    <string name="common_play">இயக்கு</string>
+    <string name="common_pause">இடைநிறுத்து</string>
+    <string name="common_opening_file">கோப்பைத் திறக்கிறது…</string>
+    <string name="common_no_app_for_file">இந்தக் கோப்பைத் திறக்கக்கூடிய பயன்பாடு எதுவும் இல்லை</string>
+    <string name="common_file_open_failed">கோப்பைத் திறக்க முடியவில்லை</string>
 </resources>

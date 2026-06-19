@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">আপনার অ্যাকাউন্ট এবং এর সমস্ত ডেটা %1$s তারিখে স্থায়ীভাবে মুছে ফেলা হবে। আপনি এখনই বাতিল করে সম্পূর্ণ অ্যাক্সেস পুনরুদ্ধার করতে পারেন।</string>
     <string name="reactivation_reactivate">আমার অ্যাকাউন্ট পুনরায় সক্রিয় করুন</string>
     <string name="reactivation_sign_out">বন্ধ করা চালিয়ে যান এবং সাইন আউট করুন</string>
+    <string name="common_play">চালান</string>
+    <string name="common_pause">বিরতি দিন</string>
+    <string name="common_opening_file">ফাইল খোলা হচ্ছে…</string>
+    <string name="common_no_app_for_file">কোনো অ্যাপ এই ফাইলটি খুলতে পারে না</string>
+    <string name="common_file_open_failed">ফাইল খোলা যায়নি</string>
 </resources>

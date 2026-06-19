@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">No hay chats a los que reenviar</string>
     <string name="chat_forward_success">Reenviado</string>
     <string name="chat_forward_failed">No se pudo reenviar</string>
+    <string name="chat_message_reply">Responder</string>
+    <string name="chat_message_select">Seleccionar</string>
+    <string name="chat_reply_attachment">Archivo adjunto</string>
+    <string name="chat_replying_to">Respondiendo a %1$s</string>
+    <string name="chat_delete_confirm_title">¿Eliminar mensaje?</string>
+    <string name="chat_delete_confirm_body">Esto elimina el mensaje para todos y no se puede deshacer.</string>
+    <string name="chat_delete_own_only">Solo puedes eliminar tus propios mensajes</string>
+    <string name="chat_selection_title">%1$d seleccionados</string>
 </resources>

@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Jūsų paskyra ir visi jos duomenys bus visam laikui ištrinti %1$s. Galite atšaukti ir dabar atkurti visą prieigą.</string>
     <string name="reactivation_reactivate">Vėl suaktyvinti mano paskyrą</string>
     <string name="reactivation_sign_out">Tęsti uždarymą ir atsijungti</string>
+    <string name="common_play">Paleisti</string>
+    <string name="common_pause">Pristabdyti</string>
+    <string name="common_opening_file">Atidaromas failas…</string>
+    <string name="common_no_app_for_file">Nėra programėlės, galinčios atidaryti šį failą</string>
+    <string name="common_file_open_failed">Nepavyko atidaryti failo</string>
 </resources>

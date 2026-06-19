@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Walang chat na puwedeng pag-forward-an</string>
     <string name="chat_forward_success">Na-forward</string>
     <string name="chat_forward_failed">Hindi na-forward</string>
+    <string name="chat_message_reply">Tumugon</string>
+    <string name="chat_message_select">Piliin</string>
+    <string name="chat_reply_attachment">Attachment</string>
+    <string name="chat_replying_to">Tumutugon kay %1$s</string>
+    <string name="chat_delete_confirm_title">I-delete ang mensahe?</string>
+    <string name="chat_delete_confirm_body">Buburahin nito ang mensahe para sa lahat at hindi na mababawi.</string>
+    <string name="chat_delete_own_only">Sarili mo lang na mga mensahe ang puwede mong i-delete</string>
+    <string name="chat_selection_title">%1$d ang napili</string>
 </resources>

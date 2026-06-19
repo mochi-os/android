@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">Nenhuma conversa para encaminhar</string>
     <string name="chat_forward_success">Encaminhada</string>
     <string name="chat_forward_failed">Falha ao encaminhar</string>
+    <string name="chat_message_reply">Responder</string>
+    <string name="chat_message_select">Selecionar</string>
+    <string name="chat_reply_attachment">Anexo</string>
+    <string name="chat_replying_to">Respondendo a %1$s</string>
+    <string name="chat_delete_confirm_title">Excluir mensagem?</string>
+    <string name="chat_delete_confirm_body">Isso exclui a mensagem para todos e não pode ser desfeito.</string>
+    <string name="chat_delete_own_only">Você só pode excluir suas próprias mensagens</string>
+    <string name="chat_selection_title">%1$d selecionada(s)</string>
 </resources>

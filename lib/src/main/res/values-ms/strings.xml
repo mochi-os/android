@@ -282,4 +282,9 @@
     <string name="reactivation_body_dated">Akaun anda dan semua datanya akan dipadamkan secara kekal pada %1$s. Anda boleh membatalkan dan memulihkan akses penuh sekarang.</string>
     <string name="reactivation_reactivate">Aktifkan semula akaun saya</string>
     <string name="reactivation_sign_out">Teruskan penutupan dan log keluar</string>
+    <string name="common_play">Main</string>
+    <string name="common_pause">Jeda</string>
+    <string name="common_opening_file">Membuka fail…</string>
+    <string name="common_no_app_for_file">Tiada apl yang boleh membuka fail ini</string>
+    <string name="common_file_open_failed">Tidak dapat membuka fail</string>
 </resources>

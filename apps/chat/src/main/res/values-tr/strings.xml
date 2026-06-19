@@ -78,4 +78,12 @@
     <string name="chat_forward_empty">İletilecek sohbet yok</string>
     <string name="chat_forward_success">İletildi</string>
     <string name="chat_forward_failed">İletilemedi</string>
+    <string name="chat_message_reply">Yanıtla</string>
+    <string name="chat_message_select">Seç</string>
+    <string name="chat_reply_attachment">Ek</string>
+    <string name="chat_replying_to">%1$s yanıtlanıyor</string>
+    <string name="chat_delete_confirm_title">Mesaj silinsin mi?</string>
+    <string name="chat_delete_confirm_body">Bu, mesajı herkes için siler ve geri alınamaz.</string>
+    <string name="chat_delete_own_only">Yalnızca kendi mesajlarınızı silebilirsiniz</string>
+    <string name="chat_selection_title">%1$d seçildi</string>
 </resources>
