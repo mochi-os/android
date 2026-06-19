@@ -164,8 +164,10 @@ class Format(val preferences: UserPreferences) {
 fun Format.formatTimestamp(epochSeconds: Long): String {
     if (epochSeconds <= 0) return ""
 
-    val now = System.currentTimeMillis() / 1000
-    val diff = now - epochSeconds
+    // Normalise through epochToMillis so the diff matches how formatDateTime
+    // reads the same value, and stays correct whether the input is epoch
+    // seconds or milliseconds.
+    val diff = (System.currentTimeMillis() - epochToMillis(epochSeconds)) / 1000
 
     val absolute: () -> String = { formatDateTime(epochSeconds) }
 
@@ -173,7 +175,9 @@ fun Format.formatTimestamp(epochSeconds: Long): String {
     val useRelative = when (display) {
         TimestampDisplay.RELATIVE -> true
         TimestampDisplay.ABSOLUTE -> false
-        TimestampDisplay.AUTO -> diff in 0 until 86_400
+        // "now" and slight clock skew (diff <= 0) are still recent, so a just
+        // sent/received item reads "just now" instead of the absolute date.
+        TimestampDisplay.AUTO -> diff < 86_400
     }
     if (!useRelative) return absolute()
 
@@ -208,8 +212,7 @@ fun Format.formatRelativeTime(epochSeconds: Long): String {
     val display = preferences.timestampDisplay
     if (display == TimestampDisplay.ABSOLUTE) return formatDate(epochSeconds)
 
-    val now = System.currentTimeMillis() / 1000
-    val diff = now - epochSeconds
+    val diff = (System.currentTimeMillis() - epochToMillis(epochSeconds)) / 1000
 
     return when {
         diff < 0 -> stringResource(R.string.format_time_just_now)
