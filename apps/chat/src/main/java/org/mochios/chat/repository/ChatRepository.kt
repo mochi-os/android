@@ -42,17 +42,23 @@ class ChatRepository @Inject constructor(
     suspend fun getMessages(chatId: String, before: Long? = null, limit: Int? = null): MessageListResponse =
         api.getMessages(chatId, before, limit).unwrap()
 
-    suspend fun sendMessage(chatId: String, body: String, files: List<File> = emptyList()): String {
+    suspend fun sendMessage(
+        chatId: String,
+        body: String,
+        files: List<File> = emptyList(),
+        replyTo: String? = null,
+    ): String {
         if (files.isEmpty()) {
-            return api.sendMessage(chatId, body).unwrap().id
+            return api.sendMessage(chatId, body, replyTo).unwrap().id
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
+        val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
         val parts = files.map { file ->
             val mediaType = guessMediaType(file).toMediaTypeOrNull()
             val requestFile = file.asRequestBody(mediaType)
             MultipartBody.Part.createFormData("files", file.name, requestFile)
         }
-        return api.sendMessageWithFiles(chatId, bodyPart, parts).unwrap().id
+        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
     }
 
     suspend fun sendMessageFromUris(
@@ -60,11 +66,13 @@ class ChatRepository @Inject constructor(
         body: String,
         uris: List<android.net.Uri>,
         contentResolver: android.content.ContentResolver,
+        replyTo: String? = null,
     ): String {
         if (uris.isEmpty()) {
-            return api.sendMessage(chatId, body).unwrap().id
+            return api.sendMessage(chatId, body, replyTo).unwrap().id
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
+        val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
         val parts = uris.map { uri ->
             val mimeType = contentResolver.getType(uri) ?: "application/octet-stream"
             val fileName = uri.lastPathSegment?.substringAfterLast('/') ?: "file"
@@ -76,7 +84,7 @@ class ChatRepository @Inject constructor(
                 bytes.toRequestBody(mimeType.toMediaTypeOrNull()),
             )
         }
-        return api.sendMessageWithFiles(chatId, bodyPart, parts).unwrap().id
+        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
     }
 
     suspend fun getMembers(chatId: String): List<ChatMember> =

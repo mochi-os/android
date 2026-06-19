@@ -2,6 +2,7 @@ package org.mochios.chat.ui.chat
 
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,14 +22,20 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Forward
 import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.filled.Reply
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ContentCopy
+import androidx.compose.material.icons.outlined.CheckBox
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Info
@@ -36,6 +43,7 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -66,6 +74,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -247,6 +256,12 @@ private fun ChatContent(
     val listState = rememberLazyListState()
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
+    val clipboard = LocalClipboardManager.current
+    val copiedMessage = stringResource(MochiR.string.common_copied)
+    val deleteOwnOnlyMessage = stringResource(R.string.chat_delete_own_only)
+    // Messages awaiting delete confirmation (single from the menu, or the whole
+    // selection); null when no confirm dialog is open.
+    var pendingDelete by remember { mutableStateOf<List<String>?>(null) }
     val grouped = remember(uiState.messages) { groupMessagesByDate(uiState.messages) }
 
     LaunchedEffect(Unit) {
@@ -339,6 +354,33 @@ private fun ChatContent(
                 .fillMaxSize()
                 .padding(padding)
         ) {
+            if (uiState.selectionMode) {
+                SelectionBar(
+                    count = uiState.selectedIds.size,
+                    onClose = { viewModel.exitSelection() },
+                    onCopy = {
+                        val text = uiState.messages
+                            .filter { it.id in uiState.selectedIds }
+                            .map { it.body }
+                            .filter { it.isNotBlank() }
+                            .joinToString("\n")
+                        if (text.isNotBlank()) {
+                            clipboard.setText(AnnotatedString(text))
+                            Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+                        }
+                        viewModel.exitSelection()
+                    },
+                    onForward = { viewModel.forwardSelected() },
+                    onDelete = {
+                        val selected = uiState.messages.filter { it.id in uiState.selectedIds }
+                        if (selected.any { it.member != uiState.identity }) {
+                            Toast.makeText(context, deleteOwnOnlyMessage, Toast.LENGTH_SHORT).show()
+                        } else {
+                            pendingDelete = uiState.selectedIds.toList()
+                        }
+                    },
+                )
+            }
             when {
                 uiState.isLoading && uiState.messages.isEmpty() -> {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -405,9 +447,17 @@ private fun ChatContent(
                                             isOwn = entry.message.member == uiState.identity,
                                             isGroup = uiState.chat.members.size > 2,
                                             chatId = uiState.chat.id,
-                                            onDelete = { viewModel.deleteMessages(listOf(entry.message.id)) },
+                                            selectionMode = uiState.selectionMode,
+                                            isSelected = entry.message.id in uiState.selectedIds,
+                                            replyToMessage = entry.message.replyTo?.let { rid ->
+                                                uiState.messages.firstOrNull { it.id == rid }
+                                            },
+                                            onStartSelect = { viewModel.enterSelection(entry.message.id) },
+                                            onToggleSelect = { viewModel.toggleSelection(entry.message.id) },
+                                            onReply = { viewModel.startReply(entry.message) },
+                                            onDelete = { pendingDelete = listOf(entry.message.id) },
                                             onReact = { reaction -> viewModel.react(entry.message.id, reaction) },
-                                            onForward = { viewModel.openForward(entry.message.id) }
+                                            onForward = { viewModel.openForward(entry.message.id) },
                                         )
                                     }
                                 }
@@ -415,6 +465,13 @@ private fun ChatContent(
                         }
                     }
                 }
+            }
+
+            uiState.replyingTo?.let { replied ->
+                ReplyComposerPreview(
+                    replied = replied,
+                    onCancel = { viewModel.cancelReply() },
+                )
             }
 
             ComposerBar(
@@ -447,12 +504,38 @@ private fun ChatContent(
                 )
             }
 
-            if (uiState.forwardMessageId != null) {
+            if (uiState.forwardMessageIds.isNotEmpty()) {
                 ChatForwardSheet(
                     chats = uiState.forwardChats,
                     loading = uiState.forwardLoading,
                     onDismiss = { viewModel.closeForward() },
                     onSelect = { chat -> viewModel.forwardToChat(chat.id) },
+                )
+            }
+
+            pendingDelete?.let { ids ->
+                AlertDialog(
+                    onDismissRequest = { pendingDelete = null },
+                    title = { Text(stringResource(R.string.chat_delete_confirm_title)) },
+                    text = { Text(stringResource(R.string.chat_delete_confirm_body)) },
+                    confirmButton = {
+                        TextButton(
+                            onClick = {
+                                viewModel.deleteMessages(ids)
+                                pendingDelete = null
+                            }
+                        ) {
+                            Text(
+                                stringResource(MochiR.string.common_delete),
+                                color = MaterialTheme.colorScheme.error,
+                            )
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(onClick = { pendingDelete = null }) {
+                            Text(stringResource(MochiR.string.common_cancel))
+                        }
+                    },
                 )
             }
         }
@@ -565,26 +648,38 @@ private fun MessageBubble(
     isOwn: Boolean,
     isGroup: Boolean,
     chatId: String,
+    selectionMode: Boolean,
+    isSelected: Boolean,
+    replyToMessage: ChatMessage?,
+    onStartSelect: () -> Unit,
+    onToggleSelect: () -> Unit,
+    onReply: () -> Unit,
     onDelete: () -> Unit,
     onReact: (String) -> Unit,
-    onForward: () -> Unit
+    onForward: () -> Unit,
 ) {
     val format = LocalFormat.current
-    val clipboard = LocalClipboardManager.current
-    val context = LocalContext.current
-    val copiedMessage = stringResource(MochiR.string.common_copied)
     var menuExpanded by remember { mutableStateOf(false) }
 
-    // A long-press menu is only worth showing when there's an action: you can
-    // copy any non-empty message, and delete your own. Deleted tombstones have
-    // no actions.
-    val canCopy = !message.deleted && message.body.isNotEmpty()
-    val canForward = !message.deleted
+    // Non-deleted messages get a context menu (reply / forward / select, plus
+    // delete on your own). Tombstones have no actions.
     val canDelete = !message.deleted && isOwn
-    val hasMenu = canCopy || canForward || canDelete
+    val hasMenu = !message.deleted
 
     Column(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .then(
+                if (isSelected) {
+                    Modifier.background(MaterialTheme.colorScheme.surfaceVariant)
+                } else {
+                    Modifier
+                }
+            )
+            .then(
+                if (selectionMode) Modifier.clickable(onClick = onToggleSelect) else Modifier
+            )
+            .padding(vertical = 2.dp),
         horizontalAlignment = if (isOwn) Alignment.End else Alignment.Start
     ) {
         if (isGroup && !isOwn) {
@@ -621,15 +716,15 @@ private fun MessageBubble(
                     // Reserve a strip below the bubble for the reaction button,
                     // which floats just under the bottom-right corner so it never
                     // sits on the message text (even for short messages).
-                    .padding(bottom = 20.dp)
+                    .padding(bottom = if (selectionMode) 0.dp else 20.dp)
                     .then(
-                        if (hasMenu) {
-                            Modifier.combinedClickable(
+                        when {
+                            selectionMode -> Modifier.clickable(onClick = onToggleSelect)
+                            hasMenu -> Modifier.combinedClickable(
                                 onClick = {},
                                 onLongClick = { menuExpanded = true },
                             )
-                        } else {
-                            Modifier
+                            else -> Modifier
                         }
                     )
             ) {
@@ -641,6 +736,10 @@ private fun MessageBubble(
                             color = MaterialTheme.colorScheme.primary
                         )
                         Spacer(modifier = Modifier.height(2.dp))
+                    }
+                    if (replyToMessage != null && !message.deleted) {
+                        ReplyQuote(replied = replyToMessage, isOwn = isOwn)
+                        Spacer(modifier = Modifier.height(4.dp))
                     }
                     if (message.deleted) {
                         Text(
@@ -686,42 +785,63 @@ private fun MessageBubble(
                     )
                 }
             }
-            if (hasMenu) {
+            if (hasMenu && !selectionMode) {
                 DropdownMenu(
                     expanded = menuExpanded,
                     onDismissRequest = { menuExpanded = false },
                 ) {
-                    if (canCopy) {
-                        DropdownMenuItem(
-                            text = { Text(stringResource(MochiR.string.common_copy)) },
-                            onClick = {
-                                clipboard.setText(AnnotatedString(message.body))
-                                Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
-                                menuExpanded = false
-                            },
-                        )
-                    }
-                    if (canForward) {
-                        DropdownMenuItem(
-                            text = { Text(stringResource(R.string.chat_message_forward)) },
-                            onClick = {
-                                onForward()
-                                menuExpanded = false
-                            },
-                        )
-                    }
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.chat_message_select)) },
+                        leadingIcon = { Icon(Icons.Outlined.CheckBox, contentDescription = null) },
+                        onClick = {
+                            menuExpanded = false
+                            onStartSelect()
+                        },
+                    )
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.chat_message_reply)) },
+                        leadingIcon = {
+                            Icon(Icons.AutoMirrored.Filled.Reply, contentDescription = null)
+                        },
+                        onClick = {
+                            menuExpanded = false
+                            onReply()
+                        },
+                    )
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.chat_message_forward)) },
+                        leadingIcon = {
+                            Icon(Icons.AutoMirrored.Filled.Forward, contentDescription = null)
+                        },
+                        onClick = {
+                            menuExpanded = false
+                            onForward()
+                        },
+                    )
                     if (canDelete) {
                         DropdownMenuItem(
-                            text = { Text(stringResource(MochiR.string.common_delete)) },
+                            text = {
+                                Text(
+                                    stringResource(MochiR.string.common_delete),
+                                    color = MaterialTheme.colorScheme.error,
+                                )
+                            },
+                            leadingIcon = {
+                                Icon(
+                                    Icons.Outlined.Delete,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.error,
+                                )
+                            },
                             onClick = {
-                                onDelete()
                                 menuExpanded = false
+                                onDelete()
                             },
                         )
                     }
                 }
             }
-            if (!message.deleted) {
+            if (!message.deleted && !selectionMode) {
                 Row(
                     modifier = Modifier
                         .align(Alignment.BottomEnd)
@@ -747,6 +867,144 @@ private fun MessageBubble(
                     )
                 }
             }
+        }
+    }
+}
+
+/**
+ * Quoted preview of the message a bubble is replying to: an accent bar, the
+ * original sender's name, and a one-line snippet of its body (or "Attachment").
+ */
+@Composable
+private fun ReplyQuote(replied: ChatMessage, isOwn: Boolean) {
+    val accent = if (isOwn) {
+        MaterialTheme.colorScheme.onPrimaryContainer
+    } else {
+        MaterialTheme.colorScheme.primary
+    }
+    val preview = replied.body.ifBlank { stringResource(R.string.chat_reply_attachment) }
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(6.dp))
+            .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.06f))
+            .padding(horizontal = 8.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Box(
+            modifier = Modifier
+                .width(3.dp)
+                .height(28.dp)
+                .clip(RoundedCornerShape(2.dp))
+                .background(accent)
+        )
+        Spacer(Modifier.width(6.dp))
+        Column {
+            Text(
+                text = replied.name,
+                style = MaterialTheme.typography.labelSmall,
+                color = accent,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = preview,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+    }
+}
+
+/**
+ * Contextual top strip shown while multi-selecting: a close button, the count,
+ * and batch Forward / Delete actions for the current selection.
+ */
+@Composable
+private fun SelectionBar(
+    count: Int,
+    onClose: () -> Unit,
+    onCopy: () -> Unit,
+    onForward: () -> Unit,
+    onDelete: () -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .padding(horizontal = 4.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        IconButton(onClick = onClose) {
+            Icon(Icons.Default.Close, contentDescription = null)
+        }
+        Text(
+            text = stringResource(R.string.chat_selection_title, count),
+            style = MaterialTheme.typography.titleMedium,
+            modifier = Modifier.weight(1f),
+        )
+        IconButton(onClick = onCopy, enabled = count > 0) {
+            Icon(
+                Icons.Default.ContentCopy,
+                contentDescription = stringResource(MochiR.string.common_copy),
+            )
+        }
+        IconButton(onClick = onForward, enabled = count > 0) {
+            Icon(
+                Icons.AutoMirrored.Filled.Forward,
+                contentDescription = stringResource(R.string.chat_message_forward),
+            )
+        }
+        IconButton(onClick = onDelete, enabled = count > 0) {
+            Icon(
+                Icons.Outlined.Delete,
+                contentDescription = stringResource(MochiR.string.common_delete),
+                tint = MaterialTheme.colorScheme.error,
+            )
+        }
+    }
+}
+
+/**
+ * Strip above the composer showing the message being replied to, with a button
+ * to cancel the reply.
+ */
+@Composable
+private fun ReplyComposerPreview(replied: ChatMessage, onCancel: () -> Unit) {
+    val preview = replied.body.ifBlank { stringResource(R.string.chat_reply_attachment) }
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .padding(start = 12.dp, top = 6.dp, bottom = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            Icons.AutoMirrored.Filled.Reply,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.size(18.dp),
+        )
+        Spacer(Modifier.width(8.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = stringResource(R.string.chat_replying_to, replied.name),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = preview,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+        IconButton(onClick = onCancel) {
+            Icon(Icons.Default.Close, contentDescription = null)
         }
     }
 }

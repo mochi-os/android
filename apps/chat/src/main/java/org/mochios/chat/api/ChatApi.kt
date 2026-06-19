@@ -97,7 +97,8 @@ interface ChatApi {
     @POST("{chatId}/-/send")
     suspend fun sendMessage(
         @Path("chatId") chatId: String,
-        @Field("body") body: String
+        @Field("body") body: String,
+        @Field("reply_to") replyTo: String? = null
     ): Response<ApiResponse<SendMessageResponse>>
 
     @Multipart
@@ -105,6 +106,7 @@ interface ChatApi {
     suspend fun sendMessageWithFiles(
         @Path("chatId") chatId: String,
         @Part("body") body: RequestBody,
+        @Part("reply_to") replyTo: RequestBody? = null,
         @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<SendMessageResponse>>
 

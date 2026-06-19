@@ -44,9 +44,12 @@ data class ChatUiState(
     val searchQuery: String = "",
     val searchResults: List<ChatSearchResult> = emptyList(),
     val searchLoading: Boolean = false,
-    val forwardMessageId: String? = null,
+    val forwardMessageIds: List<String> = emptyList(),
     val forwardChats: List<Chat> = emptyList(),
     val forwardLoading: Boolean = false,
+    val replyingTo: ChatMessage? = null,
+    val selectionMode: Boolean = false,
+    val selectedIds: Set<String> = emptySet(),
 )
 
 @HiltViewModel
@@ -230,9 +233,13 @@ class ChatViewModel @Inject constructor(
 
     /** Open the forward sheet for [messageId]; load active chats (minus this
      *  one) as destinations. */
-    fun openForward(messageId: String) {
+    fun openForward(messageId: String) = openForward(listOf(messageId))
+
+    /** Open the forward sheet for several [messageIds] (used by selection mode). */
+    fun openForward(messageIds: List<String>) {
+        if (messageIds.isEmpty()) return
         _uiState.value = _uiState.value.copy(
-            forwardMessageId = messageId, forwardChats = emptyList(), forwardLoading = true,
+            forwardMessageIds = messageIds, forwardChats = emptyList(), forwardLoading = true,
         )
         viewModelScope.launch {
             try {
@@ -247,17 +254,23 @@ class ChatViewModel @Inject constructor(
 
     fun closeForward() {
         _uiState.value = _uiState.value.copy(
-            forwardMessageId = null, forwardChats = emptyList(), forwardLoading = false,
+            forwardMessageIds = emptyList(), forwardChats = emptyList(), forwardLoading = false,
         )
     }
 
-    /** Forward the message currently open in the forward sheet to [toChatId]. */
+    /** Forward the messages currently open in the forward sheet to [toChatId]. */
     fun forwardToChat(toChatId: String) {
-        val messageId = _uiState.value.forwardMessageId ?: return
+        val messageIds = _uiState.value.forwardMessageIds
+        if (messageIds.isEmpty()) return
         viewModelScope.launch {
             try {
-                repository.forwardMessages(chatId, listOf(messageId), toChatId)
-                _uiState.value = _uiState.value.copy(forwardMessageId = null, forwardChats = emptyList())
+                repository.forwardMessages(chatId, messageIds, toChatId)
+                _uiState.value = _uiState.value.copy(
+                    forwardMessageIds = emptyList(),
+                    forwardChats = emptyList(),
+                    selectionMode = false,
+                    selectedIds = emptySet(),
+                )
                 _events.emit(application.getString(R.string.chat_forward_success))
             } catch (e: Exception) {
                 _events.emit(application.getString(R.string.chat_forward_failed))
@@ -265,19 +278,66 @@ class ChatViewModel @Inject constructor(
         }
     }
 
+    // ---------------- reply ----------------
+
+    /** Start replying to [message]; the composer shows a preview until sent or cancelled. */
+    fun startReply(message: ChatMessage) {
+        _uiState.value = _uiState.value.copy(replyingTo = message)
+    }
+
+    fun cancelReply() {
+        _uiState.value = _uiState.value.copy(replyingTo = null)
+    }
+
+    // ---------------- selection ----------------
+
+    /** Enter multi-select mode with [messageId] selected. */
+    fun enterSelection(messageId: String) {
+        _uiState.value = _uiState.value.copy(selectionMode = true, selectedIds = setOf(messageId))
+    }
+
+    /** Toggle [messageId] in the selection; leaving selection mode when empty. */
+    fun toggleSelection(messageId: String) {
+        val current = _uiState.value.selectedIds
+        val updated = if (messageId in current) current - messageId else current + messageId
+        _uiState.value = _uiState.value.copy(
+            selectedIds = updated,
+            selectionMode = updated.isNotEmpty(),
+        )
+    }
+
+    fun exitSelection() {
+        _uiState.value = _uiState.value.copy(selectionMode = false, selectedIds = emptySet())
+    }
+
+    /** Delete every selected message (server keeps only the ones we own), then exit. */
+    fun deleteSelected() {
+        val ids = _uiState.value.selectedIds.toList()
+        exitSelection()
+        deleteMessages(ids)
+    }
+
+    /** Open the forward sheet for the current selection. */
+    fun forwardSelected() {
+        openForward(_uiState.value.selectedIds.toList())
+    }
+
     fun sendMessage(body: String) {
         val trimmed = body.trim()
         val attachments = _uiState.value.pendingAttachments
         if (trimmed.isEmpty() && attachments.isEmpty()) return
+        val replyTo = _uiState.value.replyingTo?.id
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSending = true)
             try {
                 if (attachments.isEmpty()) {
-                    repository.sendMessage(chatId, trimmed)
+                    repository.sendMessage(chatId, trimmed, replyTo = replyTo)
                 } else {
-                    repository.sendMessageFromUris(chatId, trimmed, attachments, application.contentResolver)
+                    repository.sendMessageFromUris(
+                        chatId, trimmed, attachments, application.contentResolver, replyTo = replyTo,
+                    )
                 }
-                _uiState.value = _uiState.value.copy(pendingAttachments = emptyList())
+                _uiState.value = _uiState.value.copy(pendingAttachments = emptyList(), replyingTo = null)
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

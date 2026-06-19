@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <string name="notification_channel_chat">Chat notifications</string>
 
@@ -56,6 +57,14 @@
     <string name="chat_search_hint">Search in chat...</string>
     <string name="chat_search_no_results">No results</string>
     <string name="chat_message_forward">Forward</string>
+    <string name="chat_message_reply">Reply</string>
+    <string name="chat_message_select">Select</string>
+    <string name="chat_reply_attachment">Attachment</string>
+    <string name="chat_replying_to">Replying to %1$s</string>
+    <string name="chat_delete_confirm_title">Delete message?</string>
+    <string name="chat_delete_confirm_body">This deletes the message for everyone and cannot be undone.</string>
+    <string name="chat_delete_own_only">You can only delete your own messages</string>
+    <string name="chat_selection_title">%1$d selected</string>
     <string name="chat_forward_title">Forward to…</string>
     <string name="chat_forward_search">Search chats…</string>
     <string name="chat_forward_empty">No chats to forward to</string>
