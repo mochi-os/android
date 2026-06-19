@@ -46,7 +46,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.feeds.R
@@ -114,7 +113,6 @@ fun SavedScreen(
                 items(saved, key = { it.post.id }) { item ->
                     SavedPostCard(
                         item = item,
-                        serverUrl = viewModel.serverUrl,
                         onClick = { onOpenPost(item.post.feedId, item.post.id) },
                     )
                 }
@@ -147,7 +145,6 @@ fun SavedScreen(
 @Composable
 private fun SavedPostCard(
     item: SavedItem,
-    serverUrl: String,
     onClick: () -> Unit,
 ) {
     val post = item.post
@@ -185,12 +182,9 @@ private fun SavedPostCard(
             }
             if (image != null) {
                 AsyncImage(
-                    model = resolveAttachmentUrl(
-                        serverUrl,
-                        image.thumbnailUrl
-                            ?: image.url
-                            ?: "/feeds/${post.feedId}/-/attachments/${image.id}/thumbnail",
-                    ),
+                    model = image.thumbnailUrl
+                        ?: image.url
+                        ?: "/feeds/${post.feedId}/-/attachments/${image.id}/thumbnail",
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier

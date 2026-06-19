@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
-import org.mochios.android.auth.SessionManager
 import org.mochios.feeds.model.SavedItem
 import org.mochios.feeds.repository.SavedRepository
 import javax.inject.Inject
@@ -21,13 +20,9 @@ import javax.inject.Inject
 @HiltViewModel
 class SavedViewModel @Inject constructor(
     private val savedRepository: SavedRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
 
     val saved: StateFlow<List<SavedItem>> = savedRepository.saved
-
-    /** Base URL for resolving attachment thumbnail paths to absolute URLs. */
-    val serverUrl: String = sessionManager.getServerUrlBlocking()
 
     private val _clearFailed = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
     val clearFailed: SharedFlow<Unit> = _clearFailed.asSharedFlow()
