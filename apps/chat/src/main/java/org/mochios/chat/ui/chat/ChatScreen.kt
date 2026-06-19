@@ -92,6 +92,7 @@ import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.ReactionAddButton
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
@@ -622,6 +623,10 @@ private fun MessageBubble(
                 ),
                 modifier = Modifier
                     .widthIn(max = 320.dp)
+                    // Reserve a strip below the bubble for the reaction button,
+                    // which floats just under the bottom-right corner so it never
+                    // sits on the message text (even for short messages).
+                    .padding(bottom = 20.dp)
                     .then(
                         if (hasMenu) {
                             Modifier.combinedClickable(
@@ -721,30 +726,47 @@ private fun MessageBubble(
                     }
                 }
             }
-        }
-        if (!message.deleted) {
-            Spacer(modifier = Modifier.height(2.dp))
-            ReactionBar(
-                reactions = chatReactionCounts(message.reactionCounts, message.myReaction),
-                onReact = onReact,
-                onRemoveReaction = { onReact("none") },
-            )
+            if (!message.deleted) {
+                Row(
+                    modifier = Modifier
+                        .align(Alignment.BottomEnd)
+                        .padding(end = 6.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    val reactions = chatReactionCounts(message.reactionCounts, message.myReaction)
+                    if (reactions.isNotEmpty()) {
+                        ReactionBar(
+                            reactions = reactions,
+                            onReact = onReact,
+                            onRemoveReaction = { onReact("none") },
+                            showAddButton = false,
+                            maxVisible = 3
+                        )
+                    }
+                    ReactionAddButton(
+                        onReact = onReact,
+                        currentReaction = message.myReaction?.let { key ->
+                            ReactionType.fromString(key)
+                        }
+                    )
+                }
+            }
         }
     }
 }
 
 /**
  * Adapt the chat server's reaction shape — a `{reaction: count}` map plus the
- * viewer's own reaction — into the lib [ReactionBar]'s `List<ReactionCount>`.
- * Unknown reaction keys are dropped; pills are ordered by the canonical
- * [ReactionType] order for stability.
+ * viewer's own reaction — into the lib [ReactionBar]'s `List<ReactionCount>`,
+ * ordered most-reacted first so the visible pills show the top reactions.
  */
 private fun chatReactionCounts(counts: Map<String, Int>, myReaction: String?): List<ReactionCount> =
     counts.mapNotNull { (key, count) ->
         ReactionType.fromString(key)?.let { type ->
             ReactionCount(type = type, count = count, isMine = key.equals(myReaction, ignoreCase = true))
         }
-    }.sortedBy { it.type.ordinal }
+    }.sortedByDescending { reaction -> reaction.count }
 
 private sealed class MessageListEntry {
     data class DateHeader(val dayKey: String, val epochSeconds: Long) : MessageListEntry()
