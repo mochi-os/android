@@ -80,7 +80,7 @@ class ChatViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val view = repository.viewChat(chatId)
-                val msgs = repository.getMessages(chatId)
+                val msgs = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE)
                 _uiState.value = _uiState.value.copy(
                     chat = view.chat,
                     identity = view.identity,
@@ -117,7 +117,7 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val msgs = repository.getMessages(chatId)
+                val msgs = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE)
                 _uiState.value = _uiState.value.copy(
                     messages = msgs.messages,
                     hasMore = msgs.hasMore,
@@ -138,9 +138,14 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoadingMore = true)
             try {
-                val older = repository.getMessages(chatId, before = cursor)
+                val older = repository.getMessages(chatId, before = cursor, limit = MESSAGE_PAGE_SIZE)
+                // Drop any message the page overlaps with (the `before` cursor can
+                // be inclusive), keeping ids unique so the LazyColumn keys don't
+                // collide.
+                val merged = (older.messages + _uiState.value.messages)
+                    .distinctBy { message -> message.id }
                 _uiState.value = _uiState.value.copy(
-                    messages = older.messages + _uiState.value.messages,
+                    messages = merged,
                     hasMore = older.hasMore,
                     nextCursor = older.nextCursor,
                     isLoadingMore = false
@@ -364,5 +369,11 @@ class ChatViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         subscriptionId?.let { webSocket.unsubscribe(it) }
+    }
+
+    private companion object {
+
+        /** Messages fetched per page on load, refresh, and load-more. */
+        const val MESSAGE_PAGE_SIZE = 30
     }
 }
