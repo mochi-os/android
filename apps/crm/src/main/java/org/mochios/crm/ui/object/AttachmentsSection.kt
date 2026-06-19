@@ -45,7 +45,6 @@ import org.mochios.android.R as MochiR
 fun AttachmentsSection(
     attachments: List<Attachment>,
     crmId: String,
-    serverUrl: String,
     onAddAttachment: (File) -> Unit,
     onDeleteAttachment: (String) -> Unit,
 ) {
@@ -69,10 +68,10 @@ fun AttachmentsSection(
     }
 
     val urlBuilder: (Attachment) -> String = { attachment ->
-        "$serverUrl/crm/$crmId/-/attachments/${attachment.id}"
+        "/crm/$crmId/-/attachments/${attachment.id}"
     }
     val thumbnailUrlBuilder: (Attachment) -> String = { attachment ->
-        "$serverUrl/crm/$crmId/-/attachments/${attachment.id}/thumbnail"
+        "/crm/$crmId/-/attachments/${attachment.id}/thumbnail"
     }
 
     Column(modifier = Modifier.fillMaxWidth()) {

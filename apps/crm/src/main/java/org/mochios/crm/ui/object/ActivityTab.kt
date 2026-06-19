@@ -40,9 +40,9 @@ import org.mochios.crm.model.CrmDetails
 fun ActivityTab(
     activity: List<Activity>,
     crmDetails: CrmDetails,
-    // Builds the avatar proxy URL for an activity actor. Should return an
-    // absolute URL to the crm app's proxy action, e.g.
-    // "<server>/crm/<crm>/-/activity/<activity.id>/asset/avatar".
+    // Builds the avatar proxy path for an activity actor. Should return a
+    // server-relative path to the crm app's proxy action, e.g.
+    // "/crm/<crm>/-/activity/<activity.id>/asset/avatar".
     avatarUrlBuilder: ((Activity) -> String?)? = null
 ) {
     if (activity.isEmpty()) {

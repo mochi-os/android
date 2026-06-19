@@ -51,7 +51,6 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
-import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MentionSuggestion
@@ -64,15 +63,14 @@ import org.mochios.android.R as MochiR
 @Composable
 fun CommentsTab(
     comments: List<Comment>,
-    serverUrl: String,
     crmId: String,
     onCreateComment: (String, String?, List<File>) -> Unit,
     onUpdateComment: (String, String) -> Unit,
     onDeleteComment: (String) -> Unit,
     onSearchUsers: (suspend (String) -> List<MentionSuggestion>)? = null,
-    // Builds the avatar proxy URL for a commenter. Should return an absolute
-    // URL to the crm app's proxy action, e.g.
-    // "<server>/crm/<crm>/-/comment/<comment.id>/asset/avatar".
+    // Builds the avatar proxy path for a commenter. Should return a
+    // server-relative path to the crm app's proxy action, e.g.
+    // "/crm/<crm>/-/comment/<comment.id>/asset/avatar".
     avatarUrlBuilder: ((Comment) -> String?)? = null
 ) {
     val context = LocalContext.current
@@ -204,7 +202,6 @@ fun CommentsTab(
                     CommentItem(
                         comment = comment,
                         depth = 0,
-                        serverUrl = serverUrl,
                         crmId = crmId,
                         avatarUrlBuilder = avatarUrlBuilder,
                         onReply = { id, name ->
@@ -224,7 +221,6 @@ fun CommentsTab(
 private fun CommentItem(
     comment: Comment,
     depth: Int,
-    serverUrl: String,
     crmId: String,
     avatarUrlBuilder: ((Comment) -> String?)?,
     onReply: (String, String) -> Unit,
@@ -337,10 +333,10 @@ private fun CommentItem(
             AttachmentGallery(
                 attachments = comment.attachments,
                 urlBuilder = { att ->
-                    resolveAttachmentUrl(serverUrl, att.url ?: "/crm/$crmId/-/attachments/${att.id}")
+                    att.url ?: "/crm/$crmId/-/attachments/${att.id}"
                 },
                 thumbnailUrlBuilder = { att ->
-                    resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/crm/$crmId/-/attachments/${att.id}/thumbnail")
+                    att.thumbnailUrl ?: "/crm/$crmId/-/attachments/${att.id}/thumbnail"
                 }
             )
         }
@@ -351,7 +347,6 @@ private fun CommentItem(
                 CommentItem(
                     comment = child,
                     depth = depth + 1,
-                    serverUrl = serverUrl,
                     crmId = crmId,
                     avatarUrlBuilder = avatarUrlBuilder,
                     onReply = onReply,

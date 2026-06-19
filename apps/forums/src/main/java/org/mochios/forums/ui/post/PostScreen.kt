@@ -59,7 +59,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.HtmlContent
@@ -140,7 +139,6 @@ fun PostScreen(
                                     || uiState.canModerate,
                                 canModerate = uiState.canModerate,
                                 isAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank(),
-                                serverUrl = viewModel.serverUrl,
                                 forumId = viewModel.forumId,
                                 onVote = { viewModel.votePost(it) },
                                 onEdit = { showEditPost = true },
@@ -174,7 +172,6 @@ fun PostScreen(
                         } else {
                             commentsItems(
                                 comments = uiState.comments,
-                                serverUrl = viewModel.serverUrl,
                                 forumId = viewModel.forumId,
                                 currentIdentity = uiState.identity,
                                 canModerate = uiState.canModerate,
@@ -535,7 +532,6 @@ private fun PostHeader(
     canEdit: Boolean,
     canModerate: Boolean,
     isAuthor: Boolean,
-    serverUrl: String,
     forumId: String,
     onVote: (String) -> Unit,
     onEdit: () -> Unit,
@@ -739,10 +735,10 @@ private fun PostHeader(
                 AttachmentGallery(
                     attachments = post.attachments,
                     urlBuilder = { att ->
-                        resolveAttachmentUrl(serverUrl, att.url ?: "/forums/$forumId/-/attachments/${att.id}")
+                        att.url ?: "/forums/$forumId/-/attachments/${att.id}"
                     },
                     thumbnailUrlBuilder = { att ->
-                        resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail")
+                        att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
                     }
                 )
             }
@@ -817,7 +813,6 @@ private fun AddTagDialog(
 
 private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
     comments: List<ForumComment>,
-    serverUrl: String,
     forumId: String,
     currentIdentity: String,
     canModerate: Boolean,
@@ -839,7 +834,6 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
             CommentCard(
                 comment = c,
                 depth = depth,
-                serverUrl = serverUrl,
                 forumId = forumId,
                 canEdit = canEditThis,
                 canModerate = canModerate,
@@ -856,7 +850,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
             )
         }
         if (c.children.isNotEmpty()) {
-            commentsItems(c.children, serverUrl, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport, onQuote)
+            commentsItems(c.children, forumId, currentIdentity, canModerate, depth + 1, onVote, onReply, onEdit, onDelete, onApprove, onRemove, onRestore, onReport, onQuote)
         }
     }
 }
@@ -865,7 +859,6 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
 private fun CommentCard(
     comment: ForumComment,
     depth: Int,
-    serverUrl: String,
     forumId: String,
     canEdit: Boolean,
     canModerate: Boolean,
@@ -966,10 +959,10 @@ private fun CommentCard(
                 AttachmentGallery(
                     attachments = comment.attachments,
                     urlBuilder = { att ->
-                        resolveAttachmentUrl(serverUrl, att.url ?: "/forums/$forumId/-/attachments/${att.id}")
+                        att.url ?: "/forums/$forumId/-/attachments/${att.id}"
                     },
                     thumbnailUrlBuilder = { att ->
-                        resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail")
+                        att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
                     }
                 )
             }

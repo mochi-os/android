@@ -9,15 +9,14 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.market.model.MarketThread
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 /**
- * UI state for [MessagesInboxScreen]. Holds the paginated inbox plus the
- * resolved server URL so list rows can build avatar URLs for the other
- * party without each row pulling them from the session manager themselves.
+ * UI state for [MessagesInboxScreen]. Holds the paginated inbox; list rows
+ * build the other party's avatar URL as a server-relative path the avatar
+ * component resolves against the session server.
  */
 data class MessagesInboxUiState(
     val threads: List<MarketThread> = emptyList(),
@@ -36,10 +35,7 @@ data class MessagesInboxUiState(
 @HiltViewModel
 class MessagesInboxViewModel @Inject constructor(
     private val repo: MarketRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
-
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _state = MutableStateFlow(MessagesInboxUiState())
     val state: StateFlow<MessagesInboxUiState> = _state.asStateFlow()

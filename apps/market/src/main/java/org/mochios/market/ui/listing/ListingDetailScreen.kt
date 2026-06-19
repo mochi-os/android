@@ -102,7 +102,6 @@ import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.locationName
 import org.mochios.market.lib.parseLocation
 import org.mochios.market.lib.ratingStars
-import org.mochios.market.lib.rememberSellerAvatarUrl
 import org.mochios.market.model.AccountSummary
 import org.mochios.market.model.Asset
 import org.mochios.market.model.AuditEvent
@@ -795,7 +794,8 @@ private fun ListingDetailContent(
                 ) {
                     EntityAvatar(
                         name = sellerName,
-                        src = rememberSellerAvatarUrl(listing),
+                        src = listing.seller.takeIf { id -> id.isNotBlank() }
+                            ?.let { id -> "/market/-/user/$id/asset/avatar" },
                         seed = seller.id,
                         size = 40.dp,
                     )

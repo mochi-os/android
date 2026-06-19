@@ -70,7 +70,6 @@ fun AddTeamMemberDialog(
     onRoleChange: (String) -> Unit,
     onSubmit: () -> Unit,
     onCancel: () -> Unit,
-    serverUrl: String,
 ) {
     val canSubmit = state.addSelectedId != null &&
         state.addRole.isNotBlank() &&
@@ -149,7 +148,7 @@ fun AddTeamMemberDialog(
                                         ) {
                                             EntityAvatar(
                                                 name = person.name,
-                                                src = "$serverUrl/staff/-/user/${person.id}/asset/avatar",
+                                                src = "/staff/-/user/${person.id}/asset/avatar",
                                                 seed = person.id,
                                                 size = 28.dp,
                                             )

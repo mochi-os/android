@@ -207,6 +207,7 @@ private fun ConfirmRow(result: GroupDetailViewModel.SearchResult) {
         when (result.type) {
             GroupMemberType.USER -> EntityAvatar(
                 name = result.name,
+                src = "/people/${result.id}/-/avatar",
                 seed = result.id,
                 size = 40.dp,
             )
@@ -270,6 +271,7 @@ private fun SearchRow(
         when (result.type) {
             GroupMemberType.USER -> EntityAvatar(
                 name = result.name,
+                src = "/people/${result.id}/-/avatar",
                 seed = result.id,
                 size = 32.dp,
             )

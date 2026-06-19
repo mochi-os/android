@@ -19,7 +19,6 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.auth.SessionManager
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
 import org.mochios.chess.model.MoveRequest
@@ -87,7 +86,6 @@ sealed class ChessGameEvent {
 class ChessGameViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repo: ChessRepository,
-    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     /**
@@ -95,9 +93,6 @@ class ChessGameViewModel @Inject constructor(
      * Both resolve to the same game server-side.
      */
     val gameId: String = savedStateHandle.get<String>("gameId") ?: ""
-
-    /** Server origin — captured at construction for opponent-avatar URLs. */
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _uiState = MutableStateFlow(ChessGameUiState())
     val uiState: StateFlow<ChessGameUiState> = _uiState.asStateFlow()

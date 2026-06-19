@@ -14,6 +14,7 @@ import okhttp3.OkHttpClient
 import org.mochios.android.api.AssetHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.VideoFrameFetcher
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
@@ -55,6 +56,10 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     override fun newImageLoader(context: PlatformContext): ImageLoader =
         ImageLoader.Builder(context)
             .components {
+                // Expand server-relative asset paths ("/people/<id>/-/avatar")
+                // to absolute URLs, so call sites pass relative paths without
+                // threading the server URL through.
+                add(RelativeAssetUrlMapper(sessionManager))
                 add(OkHttpNetworkFetcherFactory(callFactory = { assetHttpClient }))
                 add(VideoFrameFetcher.Factory(sessionManager))
             }

@@ -65,9 +65,6 @@ class PersonViewModel @Inject constructor(
 
     val personId: String = savedStateHandle.get<String>("id").orEmpty()
 
-    /** Used by the composable to build avatar / banner URLs. */
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
-
     private val _uiState = MutableStateFlow(PersonViewUiState())
     val uiState: StateFlow<PersonViewUiState> = _uiState.asStateFlow()
 

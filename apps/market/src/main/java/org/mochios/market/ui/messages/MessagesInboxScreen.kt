@@ -94,7 +94,6 @@ fun MessagesInboxScreen(
                     ) { thread ->
                         InboxRow(
                             thread = thread,
-                            serverUrl = viewModel.serverUrl,
                             onClick = {
                                 navController.navigate(
                                     MarketApp.messageThread(
@@ -146,12 +145,11 @@ private fun EmptyInbox() {
 @Composable
 private fun InboxRow(
     thread: MarketThread,
-    serverUrl: String,
     onClick: () -> Unit,
 ) {
     val otherEntity = thread.otherEntityId()
     val otherName = thread.otherName.orEmpty().ifBlank { otherEntity.orEmpty() }
-    val avatarUrl = otherEntity?.let { "$serverUrl/market/-/user/$it/asset/avatar" }
+    val avatarUrl = otherEntity?.let { "/market/-/user/$it/asset/avatar" }
     val unread = (thread.unread ?: 0L).toInt()
     val format = LocalFormat.current
     val timestamp = thread.lastMessageTime ?: thread.updated

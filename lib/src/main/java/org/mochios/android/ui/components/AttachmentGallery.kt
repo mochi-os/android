@@ -77,11 +77,23 @@ fun AttachmentGallery(
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
+    // Resolve the caller's (possibly relative) paths to absolute URLs once, for
+    // every consumer. Coil could map relative image URLs itself, but the video
+    // frame decoder, ExoPlayer and the file downloader aren't Coil, so resolve
+    // here. Absolute URLs pass through unchanged.
+    val serverUrl = rememberServerUrl()
+    val resolvedUrl: (Attachment) -> String = { att ->
+        resolveAttachmentUrl(serverUrl, urlBuilder(att))
+    }
+    val resolvedThumb: ((Attachment) -> String)? = thumbnailUrlBuilder?.let { tb ->
+        { att -> resolveAttachmentUrl(serverUrl, tb(att)) }
+    }
+
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (images.isNotEmpty()) {
             MediaGrid(
-                urls = images.map { urlBuilder(it) },
-                thumbnailUrls = thumbnailUrlBuilder?.let { tb -> images.map { tb(it) } },
+                urls = images.map { resolvedUrl(it) },
+                thumbnailUrls = resolvedThumb?.let { tb -> images.map { tb(it) } },
                 contentDescriptions = images.map { it.name },
                 onClick = { index ->
                     viewerIndex = index
@@ -95,15 +107,15 @@ fun AttachmentGallery(
                 video = video,
                 // The server has no video-thumbnail route, so decode a frame
                 // from the video URL itself (VideoFrameDecoder in the loader).
-                frameUrl = urlBuilder(video),
-                onClick = { showVideoUrl = urlBuilder(video) }
+                frameUrl = resolvedUrl(video),
+                onClick = { showVideoUrl = resolvedUrl(video) }
             )
         }
 
         for (audio in audios) {
             AudioAttachment(
                 audio = audio,
-                url = urlBuilder(audio)
+                url = resolvedUrl(audio)
             )
         }
 
@@ -127,7 +139,7 @@ fun AttachmentGallery(
                                 ).show()
                                 scope.launch {
                                     val result = AttachmentOpener.open(
-                                        context, urlBuilder(file), file
+                                        context, resolvedUrl(file), file
                                     )
                                     downloadingId = null
                                     val message = when (result) {
@@ -157,7 +169,7 @@ fun AttachmentGallery(
 
     if (showViewer && images.isNotEmpty()) {
         LightboxScreen(
-            images = images.map { urlBuilder(it) },
+            images = images.map { resolvedUrl(it) },
             initialIndex = viewerIndex,
             onDismiss = { showViewer = false }
         )
@@ -288,4 +300,17 @@ private fun fileKindTint(kind: FileKind): Color = when (kind) {
     FileKind.TEXT -> Color(0xFF607D8B)   // blue-grey
     FileKind.AUDIO -> Color(0xFF8E24AA)  // purple
     else -> MaterialTheme.colorScheme.onSurfaceVariant
+}
+
+/**
+ * Resolves a possibly-relative attachment path against [serverUrl] to an
+ * absolute URL. Coil's [RelativeAssetUrlMapper] handles relative paths for
+ * image requests, but the gallery's video frame decoder, ExoPlayer and the file
+ * downloader aren't Coil, so this resolves once for every consumer. Absolute
+ * URLs pass through unchanged.
+ */
+private fun resolveAttachmentUrl(serverUrl: String, path: String): String {
+    if (path.startsWith("http://") || path.startsWith("https://")) return path
+    val base = serverUrl.trimEnd('/')
+    return if (path.startsWith("/")) "$base$path" else "$base/$path"
 }

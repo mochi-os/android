@@ -88,7 +88,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
-import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.NotificationBell
@@ -267,9 +266,7 @@ private fun ChatContent(
             val members = uiState.chat.members
             val isGroup = members.size > 2
             val peer = if (members.size == 2) members.firstOrNull { it.id != uiState.identity } else null
-            val peerAvatarUrl = peer?.let {
-                if (viewModel.serverUrl.isNotBlank()) "${viewModel.serverUrl}/people/${it.id}/-/avatar" else null
-            }
+            val peerAvatarUrl = peer?.let { "/people/${it.id}/-/avatar" }
             val youLabel = stringResource(R.string.chat_members_you)
             val membersSubtitle = remember(members, uiState.identity, youLabel) {
                 if (!isGroup) "" else {
@@ -407,7 +404,6 @@ private fun ChatContent(
                                             message = entry.message,
                                             isOwn = entry.message.member == uiState.identity,
                                             isGroup = uiState.chat.members.size > 2,
-                                            serverUrl = viewModel.serverUrl,
                                             chatId = uiState.chat.id,
                                             onDelete = { viewModel.deleteMessages(listOf(entry.message.id)) },
                                             onReact = { reaction -> viewModel.react(entry.message.id, reaction) },
@@ -568,7 +564,6 @@ private fun MessageBubble(
     message: ChatMessage,
     isOwn: Boolean,
     isGroup: Boolean,
-    serverUrl: String,
     chatId: String,
     onDelete: () -> Unit,
     onReact: (String) -> Unit,
@@ -599,7 +594,7 @@ private fun MessageBubble(
             ) {
                 EntityAvatar(
                     name = message.name,
-                    src = "$serverUrl/chat/$chatId/-/${message.id}/asset/avatar",
+                    src = "/chat/$chatId/-/${message.id}/asset/avatar",
                     seed = message.member,
                     size = 16.dp,
                 )
@@ -675,10 +670,10 @@ private fun MessageBubble(
                                 // not serve the asset here. Always build the chat
                                 // asset route instead: `/chat/<chatId>/-/attachments/<id>`.
                                 urlBuilder = { att ->
-                                    resolveAttachmentUrl(serverUrl, "/chat/$chatId/-/attachments/${att.id}")
+                                    "/chat/$chatId/-/attachments/${att.id}"
                                 },
                                 thumbnailUrlBuilder = { att ->
-                                    resolveAttachmentUrl(serverUrl, "/chat/$chatId/-/attachments/${att.id}/thumbnail")
+                                    "/chat/$chatId/-/attachments/${att.id}/thumbnail"
                                 }
                             )
                         }

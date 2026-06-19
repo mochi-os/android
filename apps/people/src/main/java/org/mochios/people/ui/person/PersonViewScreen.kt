@@ -126,7 +126,6 @@ fun PersonViewScreen(
                     info = uiState.info!!,
                     friendState = uiState.friendState,
                     isMutating = uiState.isMutating,
-                    serverUrl = viewModel.serverUrl,
                     error = uiState.error,
                     onAddFriend = viewModel::addFriend,
                     onAccept = viewModel::acceptInvite,
@@ -144,7 +143,6 @@ private fun PersonBody(
     info: org.mochios.people.model.PersonInformation,
     friendState: FriendState,
     isMutating: Boolean,
-    serverUrl: String,
     error: org.mochios.android.api.MochiError?,
     onAddFriend: () -> Unit,
     onAccept: () -> Unit,
@@ -157,8 +155,8 @@ private fun PersonBody(
         friendState !is FriendState.Self
 
     val accent = info.style.accent
-    val avatarUrl = avatarUrlFor(serverUrl, info)
-    val bannerUrl = bannerUrlFor(serverUrl, info)
+    val avatarUrl = avatarUrlFor(info)
+    val bannerUrl = bannerUrlFor(info)
 
     Column(
         modifier = modifier
@@ -391,16 +389,16 @@ private fun ActionRow(
     }
 }
 
-private fun avatarUrlFor(serverUrl: String, info: org.mochios.people.model.PersonInformation): String? {
+private fun avatarUrlFor(info: org.mochios.people.model.PersonInformation): String? {
     if (info.avatar.isBlank()) return null
     val id = info.id.ifBlank { return null }
-    return "$serverUrl/people/$id/-/avatar?v=${info.avatar}"
+    return "/people/$id/-/avatar?v=${info.avatar}"
 }
 
-private fun bannerUrlFor(serverUrl: String, info: org.mochios.people.model.PersonInformation): String? {
+private fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): String? {
     if (info.banner.isBlank()) return null
     val id = info.id.ifBlank { return null }
-    return "$serverUrl/people/$id/-/banner?v=${info.banner}"
+    return "/people/$id/-/banner?v=${info.banner}"
 }
 
 private fun parseAccent(hex: String?): Color? {

@@ -40,8 +40,6 @@ class WordsGameListViewModel @Inject constructor(
     private val sessionManager: SessionManager,
 ) : ViewModel() {
 
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
-
     private val _uiState = MutableStateFlow(WordsGameListUiState())
     val uiState: StateFlow<WordsGameListUiState> = _uiState.asStateFlow()
 

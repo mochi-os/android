@@ -104,7 +104,6 @@ fun ReviewsScreen(
                     ReviewsTab.RECEIVED -> {
                         ReceivedTab(
                             state = state.received,
-                            serverUrl = viewModel.serverUrl,
                             onLoadMore = { viewModel.loadMore(ReviewsTab.RECEIVED) },
                             onDraftChange = { id, v -> viewModel.setResponseDraft(id, v) },
                             onSubmit = viewModel::submitResponse,
@@ -113,7 +112,6 @@ fun ReviewsScreen(
                     ReviewsTab.SENT -> {
                         SentTab(
                             state = state.sent,
-                            serverUrl = viewModel.serverUrl,
                             onLoadMore = { viewModel.loadMore(ReviewsTab.SENT) },
                             onListingTap = { listingId ->
                                 if (listingId.isNotEmpty()) {
@@ -133,7 +131,6 @@ fun ReviewsScreen(
 @Composable
 private fun ReceivedTab(
     state: ReviewsTabState,
-    serverUrl: String,
     onLoadMore: () -> Unit,
     onDraftChange: (String, String) -> Unit,
     onSubmit: (String) -> Unit,
@@ -147,7 +144,6 @@ private fun ReceivedTab(
         ) { review ->
             ReceivedReviewCard(
                 review = review,
-                serverUrl = serverUrl,
                 draft = state.responseDrafts[review.id].orEmpty(),
                 onDraftChange = { onDraftChange(review.id, it) },
                 onSubmit = { onSubmit(review.id) },
@@ -160,7 +156,6 @@ private fun ReceivedTab(
 @Composable
 private fun SentTab(
     state: ReviewsTabState,
-    serverUrl: String,
     onLoadMore: () -> Unit,
     onListingTap: (String) -> Unit,
 ) {
@@ -171,7 +166,7 @@ private fun SentTab(
             hasMore = state.hasMore,
             onLoadMore = onLoadMore,
         ) { review ->
-            SentReviewCard(review = review, serverUrl = serverUrl, onListingTap = onListingTap)
+            SentReviewCard(review = review, onListingTap = onListingTap)
             HorizontalDivider()
         }
     }
@@ -220,7 +215,6 @@ private fun EmptyOrError(
 @Composable
 private fun ReceivedReviewCard(
     review: Review,
-    serverUrl: String,
     draft: String,
     onDraftChange: (String) -> Unit,
     onSubmit: () -> Unit,
@@ -228,7 +222,7 @@ private fun ReceivedReviewCard(
     val format = LocalFormat.current
     val name = review.reviewerName.orEmpty().ifBlank { review.reviewer }
     val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let {
-        "$serverUrl/market/-/user/$it/asset/avatar"
+        "/market/-/user/$it/asset/avatar"
     }
     Column(
         modifier = Modifier
@@ -305,13 +299,12 @@ private fun ReceivedReviewCard(
 @Composable
 private fun SentReviewCard(
     review: Review,
-    serverUrl: String,
     onListingTap: (String) -> Unit,
 ) {
     val format = LocalFormat.current
     val name = review.subjectName.orEmpty().ifBlank { review.subject }
     val avatarUrl = review.subject.takeIf { it.isNotBlank() }?.let {
-        "$serverUrl/market/-/user/$it/asset/avatar"
+        "/market/-/user/$it/asset/avatar"
     }
     Column(
         modifier = Modifier

@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
@@ -40,16 +39,7 @@ data class InvitationsUiState(
 @HiltViewModel
 class InvitationsViewModel @Inject constructor(
     private val repository: PeopleRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
-
-    /**
-     * Absolute base URL for the server — used by the screen to build avatar
-     * URLs that hit the people app's per-entity proxy
-     * (`/people/<id>/-/avatar`). Read once at construction; the session URL
-     * does not change without process restart.
-     */
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _events = Channel<InvitationsEvent>(Channel.BUFFERED)
     val events: Flow<InvitationsEvent> = _events.receiveAsFlow()

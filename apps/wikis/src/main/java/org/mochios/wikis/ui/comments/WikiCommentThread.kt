@@ -51,8 +51,9 @@ import org.mochios.android.R as MochiR
  * Recursive composable that renders one [WikiComment] plus its descendant
  * thread. Mirrors `apps/wikis/web/src/features/wiki/wiki-comment-thread.tsx`:
  *
- *  - Avatar (left) keyed on the per-comment proxy URL
- *    `<baseURL>comment/<id>/asset/avatar` so remote authors render correctly.
+ *  - Avatar (left) keyed on the per-comment proxy path
+ *    `/wikis/<id>/-/comment/<id>/asset/avatar` so remote authors render
+ *    correctly. [EntityAvatar] resolves it against the session server URL.
  *  - Author name + relative time (`formatTimestamp` from lib).
  *  - "(edited)" pill when `comment.edited > 0`.
  *  - Body: server-rendered HTML via [HtmlContent] when available, otherwise
@@ -95,7 +96,6 @@ fun WikiCommentThread(
 ) {
     val format = LocalFormat.current
     val wiki = LocalWikiContext.current
-    val baseURL = wiki?.baseURL
 
     var collapsed by rememberSaveable(comment.id) { mutableStateOf(false) }
     var editing by rememberSaveable(comment.id) { mutableStateOf(false) }
@@ -113,7 +113,9 @@ fun WikiCommentThread(
     val timeAgo = format.formatTimestamp(comment.created)
     val displayName = comment.name.ifBlank { comment.author }
 
-    val avatarSrc = baseURL?.let { "${it}comment/${comment.id}/asset/avatar" }
+    val avatarSrc = wiki?.let { ctx ->
+        "/wikis/${ctx.wikiId}/-/comment/${comment.id}/asset/avatar"
+    }
 
     val totalDescendants = remember(comment) { countDescendants(comment) }
 

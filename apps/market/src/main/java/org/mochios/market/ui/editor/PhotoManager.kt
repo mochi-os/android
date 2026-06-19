@@ -68,9 +68,6 @@ import org.mochios.market.model.Photo
  * @param onUpload      Invoked with selected URIs from [ActivityResultContracts.GetMultipleContents].
  * @param onDelete      Invoked with the comptroller-issued photo id.
  * @param onReorder     Invoked with the photos in the requested new order.
- * @param baseURL       URL prefix used to fetch thumbnails (e.g.
- *                      `<server>/market/-/photo/`). Concatenated with each
- *                      photo's id; the suffix is added internally.
  * @param isUploading   True while a file upload is in flight; shows the
  *                      progress indicator under the grid.
  */
@@ -81,7 +78,6 @@ fun PhotoManager(
     onUpload: (List<Uri>) -> Unit,
     onDelete: (String) -> Unit,
     onReorder: (List<Photo>) -> Unit,
-    baseURL: String,
     isUploading: Boolean,
     modifier: Modifier = Modifier,
 ) {
@@ -153,7 +149,6 @@ fun PhotoManager(
                     val index = photos.indexOf(photo)
                     PhotoCell(
                         photo = photo,
-                        baseURL = baseURL,
                         canMoveUp = index > 0,
                         canMoveDown = index < photos.size - 1,
                         onDelete = { onDelete(photo.id) },
@@ -222,7 +217,6 @@ private fun EmptyPhotos(onAdd: () -> Unit) {
 @Composable
 private fun PhotoCell(
     photo: Photo,
-    baseURL: String,
     canMoveUp: Boolean,
     canMoveDown: Boolean,
     onDelete: () -> Unit,
@@ -238,7 +232,7 @@ private fun PhotoCell(
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             AsyncImage(
-                model = "$baseURL${photo.id}/thumbnail",
+                model = "/market/-/photo/${photo.id}/thumbnail",
                 contentDescription = photo.name,
                 contentScale = androidx.compose.ui.layout.ContentScale.Crop,
                 modifier = Modifier.fillMaxSize(),

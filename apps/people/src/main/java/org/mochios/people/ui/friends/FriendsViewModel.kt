@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
 import org.mochios.people.model.Friend
 import org.mochios.people.model.PersonInformation
@@ -100,11 +99,7 @@ sealed class FriendsEvent {
 @HiltViewModel
 class FriendsViewModel @Inject constructor(
     private val repository: PeopleRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
-
-    /** Used by the composable to build avatar URLs (`$serverUrl/people/<id>/-/avatar`). */
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _uiState = MutableStateFlow(FriendsUiState())
     val uiState: StateFlow<FriendsUiState> = _uiState.asStateFlow()

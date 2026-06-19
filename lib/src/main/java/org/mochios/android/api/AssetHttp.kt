@@ -41,9 +41,19 @@ object AssetHttpModule {
                 val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
                 val token = app?.let { sessionManager.getTokenBlocking(it) }
                 val authed = if (token != null) {
-                    request.newBuilder()
+                    val builder = request.newBuilder()
                         .header("Authorization", "Bearer $token")
-                        .build()
+                    // Avatar endpoints authenticate via the `token` query param —
+                    // they redirect to a file URL that drops the Authorization
+                    // header — so pass the token there too.
+                    if (request.url.pathSegments.lastOrNull() == "avatar") {
+                        builder.url(
+                            request.url.newBuilder()
+                                .setQueryParameter("token", token)
+                                .build()
+                        )
+                    }
+                    builder.build()
                 } else {
                     request
                 }

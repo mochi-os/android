@@ -84,7 +84,6 @@ import org.mochios.android.model.Comment
 import org.mochios.android.model.Reaction
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
-import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
@@ -349,7 +348,7 @@ internal fun PostDetailContent(
                         CommentItem(
                             comment = comment,
                             depth = depth,
-                            avatarUrl = "${viewModel.serverUrl}/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
+                            avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
                             serverUrl = viewModel.serverUrl,
                             feedId = viewModel.feedId,
                             isEditing = editingCommentId == comment.id,
@@ -524,10 +523,10 @@ private fun PostContent(
             AttachmentGallery(
                 attachments = post.attachments,
                 urlBuilder = { att ->
-                    resolveAttachmentUrl(serverUrl, att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}")
+                    att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}"
                 },
                 thumbnailUrlBuilder = { att ->
-                    resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail")
+                    att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
                 }
             )
         }
@@ -806,10 +805,10 @@ private fun CommentItem(
                 AttachmentGallery(
                     attachments = comment.attachments,
                     urlBuilder = { att ->
-                        resolveAttachmentUrl(serverUrl, att.url ?: "/feeds/$feedId/-/attachments/${att.id}")
+                        att.url ?: "/feeds/$feedId/-/attachments/${att.id}"
                     },
                     thumbnailUrlBuilder = { att ->
-                        resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/feeds/$feedId/-/attachments/${att.id}/thumbnail")
+                        att.thumbnailUrl ?: "/feeds/$feedId/-/attachments/${att.id}/thumbnail"
                     }
                 )
             }

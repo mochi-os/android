@@ -64,7 +64,6 @@ import org.mochios.chess.R
 fun ChessSidebar(
     activeGames: List<ChessSidebarGame>,
     completedGames: List<ChessSidebarGame>,
-    serverUrl: String,
     onOpenGame: (gameId: String) -> Unit,
     onOpenNewGame: () -> Unit,
     websocketStatusLabel: String? = null,
@@ -97,7 +96,6 @@ fun ChessSidebar(
                     items(activeGames, key = { "active-${it.id}" }) { row ->
                         SidebarGameRow(
                             game = row,
-                            serverUrl = serverUrl,
                             statusSuffix = null,
                             onClick = { onOpenGame(row.id) },
                         )
@@ -110,7 +108,6 @@ fun ChessSidebar(
                     items(completedGames, key = { "completed-${it.id}" }) { row ->
                         SidebarGameRow(
                             game = row,
-                            serverUrl = serverUrl,
                             statusSuffix = row.statusLabel,
                             onClick = { onOpenGame(row.id) },
                         )
@@ -169,12 +166,11 @@ private fun SidebarSectionHeader(text: String) {
 @Composable
 private fun SidebarGameRow(
     game: ChessSidebarGame,
-    serverUrl: String,
     statusSuffix: String?,
     onClick: () -> Unit,
 ) {
-    val avatarUrl = if (serverUrl.isNotBlank() && game.opponentId.isNotBlank()) {
-        "$serverUrl/people/${game.opponentId}/-/avatar"
+    val avatarUrl = if (game.opponentId.isNotBlank()) {
+        "/people/${game.opponentId}/-/avatar"
     } else null
 
     Row(

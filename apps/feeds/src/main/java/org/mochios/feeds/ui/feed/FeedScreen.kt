@@ -117,7 +117,6 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.model.Reaction
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
-import org.mochios.android.model.resolveAttachmentUrl
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -620,7 +619,6 @@ fun FeedScreen(
                                 val sourceUrl = post.data?.rss?.link?.takeIf { it.isNotEmpty() }
                                 PostCard(
                                     post = post,
-                                    serverUrl = viewModel.serverUrl,
                                     fallbackFeedId = viewModel.feedId,
                                     canManage = permissions.manage,
                                     onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
@@ -769,7 +767,6 @@ fun FeedScreen(
 @Composable
 private fun PostCard(
     post: Post,
-    serverUrl: String,
     fallbackFeedId: String,
     canManage: Boolean,
     onClick: () -> Unit,
@@ -800,7 +797,7 @@ private fun PostCard(
     val otherAttachments = post.attachments.filter { !it.isImage }
     val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
     val attachmentImageUrls = attachmentImages.map { att ->
-        resolveAttachmentUrl(serverUrl, att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}")
+        att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}"
     }
     val rssImageUrl = post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
@@ -943,7 +940,7 @@ private fun PostCard(
                 MediaGrid(
                     urls = attachmentImageUrls.drop(gridStartIndex),
                     thumbnailUrls = gridImages.map { att ->
-                        resolveAttachmentUrl(serverUrl, att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail")
+                        att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
                     },
                     contentDescriptions = gridImages.map { it.name },
                     onClick = { index -> lightboxState = attachmentImageUrls to (index + gridStartIndex) }

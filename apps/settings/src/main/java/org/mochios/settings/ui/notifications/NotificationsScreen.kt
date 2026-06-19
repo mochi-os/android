@@ -133,7 +133,6 @@ fun NotificationsScreen(
                         items(uiState.items, key = { it.id }) { n ->
                             NotificationCard(
                                 notification = n,
-                                serverUrl = viewModel.serverUrl,
                                 onClick = {
                                     if (n.read == 0L) viewModel.markRead(n.id)
                                     if (n.link.isNotBlank()) onOpenLink(n.link)
@@ -165,7 +164,6 @@ fun NotificationsScreen(
 @Composable
 private fun NotificationCard(
     notification: MochiNotification,
-    serverUrl: String,
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -186,8 +184,8 @@ private fun NotificationCard(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            val avatarSrc = if (notification.sender.isNotBlank() && serverUrl.isNotBlank()) {
-                "$serverUrl/people/${notification.sender}/-/avatar"
+            val avatarSrc = if (notification.sender.isNotBlank()) {
+                "/people/${notification.sender}/-/avatar"
             } else null
             EntityAvatar(
                 name = notification.sender.ifBlank { notification.app },

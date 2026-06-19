@@ -164,7 +164,6 @@ fun ChatSettingsScreen(
                                 member = member,
                                 isMe = member.id == uiState.identity,
                                 canRemove = uiState.chat.status == ChatStatus.ACTIVE && member.id != uiState.identity,
-                                serverUrl = viewModel.serverUrl,
                                 onRemove = { memberToRemove = member }
                             )
                         }
@@ -264,7 +263,6 @@ fun ChatSettingsScreen(
         val candidates = uiState.friends.filter { it.id !in existingMemberIds }
         AddMemberDialog(
             friends = candidates,
-            serverUrl = viewModel.serverUrl,
             onConfirm = { friendId ->
                 viewModel.addMember(friendId)
                 showAddMember = false
@@ -277,7 +275,6 @@ fun ChatSettingsScreen(
 @Composable
 private fun AddMemberDialog(
     friends: List<org.mochios.chat.model.Friend>,
-    serverUrl: String,
     onConfirm: (friendId: String) -> Unit,
     onDismiss: () -> Unit,
 ) {
@@ -318,7 +315,7 @@ private fun AddMemberDialog(
                             ) {
                                 EntityAvatar(
                                     name = f.name,
-                                    src = if (serverUrl.isNotBlank()) "$serverUrl/people/${f.id}/-/avatar" else null,
+                                    src = "/people/${f.id}/-/avatar",
                                     seed = f.id,
                                     size = 24.dp,
                                 )
@@ -344,7 +341,6 @@ private fun MemberRow(
     member: ChatMember,
     isMe: Boolean,
     canRemove: Boolean,
-    serverUrl: String,
     onRemove: () -> Unit
 ) {
     Row(
@@ -353,7 +349,7 @@ private fun MemberRow(
     ) {
         EntityAvatar(
             name = member.name,
-            src = if (serverUrl.isNotBlank()) "$serverUrl/people/${member.id}/-/avatar" else null,
+            src = "/people/${member.id}/-/avatar",
             seed = member.id,
             size = 32.dp,
         )

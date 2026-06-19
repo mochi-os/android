@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.market.model.Account
 import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
@@ -68,11 +67,9 @@ data class PublicProfileUiState(
 class PublicProfileViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repo: MarketRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
 
     val accountId: String = savedStateHandle.get<String>("accountId").orEmpty()
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _state = MutableStateFlow(PublicProfileUiState())
     val state: StateFlow<PublicProfileUiState> = _state.asStateFlow()

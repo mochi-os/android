@@ -66,9 +66,6 @@ class ProfileViewModel @Inject constructor(
     private val sessionManager: SessionManager,
 ) : ViewModel() {
 
-    /** Server origin (no trailing slash) for building avatar / banner URLs. */
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
-
     private val _uiState = MutableStateFlow(ProfileUiState())
     val uiState: StateFlow<ProfileUiState> = _uiState.asStateFlow()
 

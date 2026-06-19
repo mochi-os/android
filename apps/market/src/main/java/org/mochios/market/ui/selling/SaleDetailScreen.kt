@@ -58,7 +58,6 @@ import coil3.request.crossfade
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.api.userMessage
-import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.market.R
@@ -75,10 +74,6 @@ import org.mochios.market.ui.components.StatusBadge
 import org.mochios.market.ui.dialog.DisputeResponseDialog
 import org.mochios.market.ui.dialog.IssueRefundDialog
 import org.mochios.market.ui.dialog.ShipOrderDialog
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
-import dagger.hilt.android.EntryPointAccessors
-import dagger.hilt.components.SingletonComponent
 import org.mochios.android.R as MochiR
 
 /**
@@ -96,15 +91,6 @@ fun SaleDetailScreen(
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
-    val sessionManager = remember(context) {
-        EntryPointAccessors
-            .fromApplication(context.applicationContext, SaleDetailEntryPoint::class.java)
-            .sessionManager()
-    }
-    val serverUrl = remember(sessionManager) {
-        sessionManager.getServerUrlBlocking().trimEnd('/')
-    }
-
     var shipDialogOpen by remember { mutableStateOf(false) }
     var refundDialogOpen by remember { mutableStateOf(false) }
     var disputeDialogOpen by remember { mutableStateOf(false) }
@@ -155,7 +141,6 @@ fun SaleDetailScreen(
                 detail != null -> SaleDetailBody(
                     detail = detail,
                     state = state,
-                    serverUrl = serverUrl,
                     auditExpanded = auditExpanded,
                     onToggleAudit = { auditExpanded = !auditExpanded },
                     onOpenShip = { shipDialogOpen = true },
@@ -234,7 +219,6 @@ fun SaleDetailScreen(
 private fun SaleDetailBody(
     detail: OrderDetailResponse,
     state: SaleDetailUiState,
-    serverUrl: String,
     auditExpanded: Boolean,
     onToggleAudit: () -> Unit,
     onOpenShip: () -> Unit,
@@ -265,7 +249,7 @@ private fun SaleDetailBody(
                     if (!photoId.isNullOrBlank()) {
                         AsyncImage(
                             model = ImageRequest.Builder(LocalContext.current)
-                                .data("$serverUrl/market/-/photo/$photoId/thumbnail")
+                                .data("/market/-/photo/$photoId/thumbnail")
                                 .crossfade(true)
                                 .build(),
                             contentDescription = null,
@@ -669,10 +653,4 @@ private fun ReviewPanel(
             }
         }
     }
-}
-
-@EntryPoint
-@InstallIn(SingletonComponent::class)
-interface SaleDetailEntryPoint {
-    fun sessionManager(): SessionManager
 }

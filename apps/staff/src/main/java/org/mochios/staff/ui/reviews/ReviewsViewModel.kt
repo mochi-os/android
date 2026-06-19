@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.staff.model.Review
 import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
@@ -61,19 +60,15 @@ sealed interface ReviewsEvent {
  * page on init, refetches on filter change, and exposes `hide` / `restore` /
  * `remove` actions that map to the Comptroller's `reviews/action` endpoint.
  *
- * [SessionManager] is injected only to keep the constructor consistent with
- * sibling staff ViewModels — the reviews screen renders avatars via the
- * Comptroller asset proxy (`/staff/-/user/:user/asset/avatar`) which is
- * constructed at the call site, not here.
+ * The reviews screen renders avatars via the Comptroller asset proxy
+ * (`/staff/-/user/:user/asset/avatar`), built as a server-relative path at
+ * the call site and resolved by the shared avatar composable.
  */
 @HiltViewModel
 class ReviewsViewModel @Inject constructor(
     private val repo: StaffRepository,
-    sessionManager: SessionManager,
     private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
-
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _state = MutableStateFlow(
         ReviewsUiState(

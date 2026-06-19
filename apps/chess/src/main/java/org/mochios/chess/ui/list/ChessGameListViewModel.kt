@@ -67,9 +67,6 @@ class ChessGameListViewModel @Inject constructor(
     sessionManager: SessionManager,
 ) : ViewModel() {
 
-    /** Server origin — captured at construction for opponent-avatar URLs. */
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
-
     private val _uiState = MutableStateFlow(ChessGameListUiState())
     val uiState: StateFlow<ChessGameListUiState> = _uiState.asStateFlow()
 

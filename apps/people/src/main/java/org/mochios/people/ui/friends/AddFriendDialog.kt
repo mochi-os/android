@@ -67,7 +67,6 @@ import org.mochios.android.R as MochiR
 @Composable
 fun AddFriendDialog(
     state: FriendsUiState,
-    serverUrl: String,
     onQueryChange: (String) -> Unit,
     onRetry: () -> Unit,
     onOpenPreview: (User) -> Unit,
@@ -90,13 +89,11 @@ fun AddFriendDialog(
             if (preview != null) {
                 PreviewBody(
                     preview = preview,
-                    serverUrl = serverUrl,
                     onRetry = onRetryPreview,
                 )
             } else {
                 SearchBody(
                     state = state,
-                    serverUrl = serverUrl,
                     onQueryChange = onQueryChange,
                     onRetry = onRetry,
                     onTapResult = onOpenPreview,
@@ -139,7 +136,6 @@ fun AddFriendDialog(
 @Composable
 private fun SearchBody(
     state: FriendsUiState,
-    serverUrl: String,
     onQueryChange: (String) -> Unit,
     onRetry: () -> Unit,
     onTapResult: (User) -> Unit,
@@ -215,7 +211,6 @@ private fun SearchBody(
                         items(state.addSearchResults, key = { it.id }) { user ->
                             AddFriendRow(
                                 user = user,
-                                serverUrl = serverUrl,
                                 invited = user.id in state.invitedUserIds,
                                 pending = state.addingUserId == user.id,
                                 onSelect = { onTapResult(user) },
@@ -231,13 +226,12 @@ private fun SearchBody(
 @Composable
 private fun AddFriendRow(
     user: User,
-    serverUrl: String,
     invited: Boolean,
     pending: Boolean,
     onSelect: () -> Unit,
 ) {
     val effectiveStatus = if (invited) RelationshipStatus.INVITED else user.relationshipStatus
-    val avatarUrl = if (serverUrl.isNotBlank()) "$serverUrl/people/${user.id}/-/avatar" else null
+    val avatarUrl = "/people/${user.id}/-/avatar"
 
     Row(
         modifier = Modifier
@@ -358,7 +352,6 @@ private fun AddFriendActionButton(
 @Composable
 private fun PreviewBody(
     preview: AddFriendPreview,
-    serverUrl: String,
     onRetry: () -> Unit,
 ) {
     Column(
@@ -401,7 +394,6 @@ private fun PreviewBody(
                 PreviewProfile(
                     user = preview.targetUser,
                     info = preview.information,
-                    serverUrl = serverUrl,
                 )
             }
         }
@@ -412,10 +404,9 @@ private fun PreviewBody(
 private fun PreviewProfile(
     user: User,
     info: PersonInformation,
-    serverUrl: String,
 ) {
-    val avatarUrl = avatarUrlFor(serverUrl, info, user)
-    val bannerUrl = bannerUrlFor(serverUrl, info, user)
+    val avatarUrl = avatarUrlFor(info, user)
+    val bannerUrl = bannerUrlFor(info, user)
     val accent = info.style.accent
     val displayName = info.name.takeIf { it.isNotBlank() } ?: user.name
     val fingerprint = info.fingerprint.takeIf { it.isNotBlank() } ?: user.fingerprintHyphens
@@ -590,23 +581,19 @@ private fun EmptyHint(title: String, description: String) {
 }
 
 private fun avatarUrlFor(
-    serverUrl: String,
     info: PersonInformation,
     fallback: User,
 ): String? {
-    if (serverUrl.isBlank()) return null
     val id = info.id.ifBlank { fallback.id }.ifBlank { return null }
     val v = info.avatar
-    return if (v.isBlank()) "$serverUrl/people/$id/-/avatar" else "$serverUrl/people/$id/-/avatar?v=$v"
+    return if (v.isBlank()) "/people/$id/-/avatar" else "/people/$id/-/avatar?v=$v"
 }
 
 private fun bannerUrlFor(
-    serverUrl: String,
     info: PersonInformation,
     fallback: User,
 ): String? {
-    if (serverUrl.isBlank()) return null
     if (info.banner.isBlank()) return null
     val id = info.id.ifBlank { fallback.id }.ifBlank { return null }
-    return "$serverUrl/people/$id/-/banner?v=${info.banner}"
+    return "/people/$id/-/banner?v=${info.banner}"
 }

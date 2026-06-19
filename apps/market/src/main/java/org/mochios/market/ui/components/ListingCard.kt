@@ -51,8 +51,6 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.theme.LocalEntityRadius
 import org.mochios.market.R
 import org.mochios.market.lib.ratingStars
-import org.mochios.market.lib.rememberListingThumbnailUrl
-import org.mochios.market.lib.rememberSellerAvatarUrl
 import org.mochios.market.model.Condition
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingType
@@ -121,8 +119,11 @@ fun ListingCard(
                 .fillMaxWidth()
                 .aspectRatio(1f),
         ) {
-            // Resolve the photo from the listing itself.
-            val photoUrl = rememberListingThumbnailUrl(listing)
+            // Resolve the photo from the listing itself. The relative path is
+            // expanded by RelativeAssetUrlMapper inside the Coil pipeline.
+            val photoUrl = listing.photo?.id
+                ?.takeIf { id -> id.isNotBlank() }
+                ?.let { id -> "/market/-/photo/$id/thumbnail" }
             if (photoUrl.isNullOrBlank()) {
                 NoPhotoPlaceholder(modifier = Modifier.fillMaxSize())
             } else {
@@ -203,10 +204,11 @@ fun ListingCard(
 
             val name = sellerName ?: listing.sellerName.orEmpty()
             // Resolve the seller's avatar from the listing; an explicit
-            // sellerAvatarUrl from the caller still wins when provided.
-            // rememberSellerAvatarUrl is called unconditionally (Compose rule),
-            // then the caller's override takes precedence.
-            val derivedAvatarUrl = rememberSellerAvatarUrl(listing)
+            // sellerAvatarUrl from the caller still wins when provided. The
+            // relative path is expanded + token-gated inside EntityAvatar.
+            val derivedAvatarUrl = listing.seller
+                .takeIf { id -> id.isNotBlank() }
+                ?.let { id -> "/market/-/user/$id/asset/avatar" }
             val avatarUrl = sellerAvatarUrl ?: derivedAvatarUrl
             val rating = sellerRating.takeIf { it > 0f }
                 ?: listing.sellerRating?.let { ratingStars(it) } ?: 0f

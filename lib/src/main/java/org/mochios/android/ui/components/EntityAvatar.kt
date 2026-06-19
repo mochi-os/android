@@ -18,6 +18,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -27,7 +28,9 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
+import dagger.hilt.android.EntryPointAccessors
 import org.mochios.android.R
+import org.mochios.android.auth.SessionEntryPoint
 
 /**
  * Circular avatar for a person entity. When `src` is provided the image is
@@ -37,7 +40,9 @@ import org.mochios.android.R
  * message / post / activity ID in that app's local DB.
  *
  * @param name   Person's display name (used for initials + content description).
- * @param src    Absolute URL for the avatar image. Null or a failing URL falls
+ * @param src    Avatar image URL. May be absolute, or a server-relative path
+ *               (e.g. "/people/<id>/-/avatar") which `RelativeAssetUrlMapper`
+ *               expands against the session server. Null or a failing URL falls
  *               back to the initials placeholder.
  * @param seed   Stable identifier (usually the person's entity ID) used to pick
  *               a deterministic colour for the initials circle.
@@ -55,6 +60,26 @@ import org.mochios.android.R
  *               against the surface. Pass [Color.Transparent] to drop it; it is
  *               ignored when [accent] is set (the accent ring takes over).
  */
+/**
+ * The session server URL (no trailing slash), pulled from `SessionManager` via
+ * Hilt so composables can expand relative asset paths without each screen
+ * threading the value through. Returns "" outside a Hilt application (e.g. a
+ * `@Preview`), which leaves relative paths unresolved and falls back gracefully.
+ */
+@Composable
+fun rememberServerUrl(): String {
+    val context = LocalContext.current
+    return remember(context) {
+        runCatching {
+            EntryPointAccessors
+                .fromApplication(context.applicationContext, SessionEntryPoint::class.java)
+                .sessionManager()
+                .getServerUrlBlocking()
+                .trimEnd('/')
+        }.getOrDefault("")
+    }
+}
+
 @Composable
 fun EntityAvatar(
     name: String,
@@ -80,7 +105,7 @@ fun EntityAvatar(
 
     val useImage = !src.isNullOrBlank() && !loadFailed
     if (useImage) {
-        val context = androidx.compose.ui.platform.LocalContext.current
+        val context = LocalContext.current
         AsyncImage(
             model = ImageRequest.Builder(context)
                 .data(src)

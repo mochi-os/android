@@ -18,7 +18,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Asset
 import org.mochios.market.model.Category
@@ -115,13 +114,7 @@ sealed class EditListingEvent {
 class EditListingViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: MarketRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
-
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
-
-    /** Base URL for photo thumbnails — concatenate `<id>/thumbnail`. */
-    val photoBaseURL: String = "$serverUrl/market/-/photo/"
 
     private val rawId: String = savedStateHandle.get<String>("id").orEmpty()
     private val isNew: Boolean = rawId.isEmpty() || rawId == "new"

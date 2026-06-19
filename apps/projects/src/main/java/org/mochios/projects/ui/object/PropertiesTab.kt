@@ -70,7 +70,6 @@ fun PropertiesTab(
     onAddChild: () -> Unit = {},
     onNavigateToObject: (String) -> Unit = {},
     projectId: String = "",
-    serverUrl: String = "",
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val fields = projectDetails.fields[obj.objectClass] ?: emptyList()
@@ -158,7 +157,6 @@ fun PropertiesTab(
             AttachmentsSection(
                 attachments = uiState.attachments,
                 projectId = projectId,
-                serverUrl = serverUrl,
                 onAddAttachment = { file -> viewModel.createAttachment(file) },
                 onDeleteAttachment = { id -> viewModel.deleteAttachment(id) },
             )

@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.market.model.Message
 import org.mochios.market.model.ThreadListingPreview
 import org.mochios.market.model.MarketThread
@@ -64,12 +63,10 @@ sealed interface MessageThreadEvent {
 class MessageThreadViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repo: MarketRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
 
     val listingId: String = savedStateHandle.get<String>("listingId").orEmpty()
     val threadId: String = savedStateHandle.get<String>("threadId").orEmpty()
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     /**
      * Thread id used for every thread-scoped call. Seeded from the route arg;

@@ -59,8 +59,6 @@ class ObjectDetailViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(ObjectDetailUiState())
     val uiState: StateFlow<ObjectDetailUiState> = _uiState.asStateFlow()
 
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
-
     private var debounceJobs = mutableMapOf<String, Job>()
 
     // Auto-save runs on a scope deliberately NOT tied to viewModelScope: a

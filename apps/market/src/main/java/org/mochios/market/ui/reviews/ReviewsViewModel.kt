@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
@@ -56,10 +55,7 @@ sealed interface ReviewsEvent {
 @HiltViewModel
 class ReviewsViewModel @Inject constructor(
     private val repo: MarketRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
-
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _state = MutableStateFlow(ReviewsUiState())
     val state: StateFlow<ReviewsUiState> = _state.asStateFlow()

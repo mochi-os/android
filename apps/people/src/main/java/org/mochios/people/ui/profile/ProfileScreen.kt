@@ -187,7 +187,6 @@ fun ProfileScreen(
     if (showPreview && state.info != null) {
         ProfilePreviewDialog(
             state = state,
-            serverUrl = viewModel.serverUrl,
             onDismiss = { showPreview = false },
         )
     }
@@ -244,9 +243,9 @@ private fun Editor(
     var showEditName by remember { mutableStateOf(false) }
 
     val accentPreview = state.accentDraft.trim().takeIf { ProfileViewModel.ACCENT_PATTERN.matches(it) }
-    val avatarUrl = imageUrl(viewModel.serverUrl, info.id, "avatar", info.avatar)
-    val bannerUrl = imageUrl(viewModel.serverUrl, info.id, "banner", info.banner)
-    val faviconUrl = imageUrl(viewModel.serverUrl, info.id, "favicon", info.favicon)
+    val avatarUrl = avatarPath(info.id, info.avatar)
+    val bannerUrl = imageUrl(info.id, "banner", info.banner)
+    val faviconUrl = imageUrl(info.id, "favicon", info.favicon)
 
     val avatarPicker = rememberImagePicker(
         slot = ImageSlot.AVATAR,
@@ -784,7 +783,6 @@ private fun PrivacySection(
 @Composable
 private fun ProfilePreviewDialog(
     state: ProfileUiState,
-    serverUrl: String,
     onDismiss: () -> Unit,
 ) {
     val info = state.info ?: return
@@ -792,8 +790,8 @@ private fun ProfilePreviewDialog(
     val accentColour = accent?.let { parseHexColour(it) }
     val name = state.nameDraft.trim().ifBlank { info.name }
     val bio = state.bioDraft
-    val avatarUrl = imageUrl(serverUrl, info.id, "avatar", info.avatar)
-    val bannerUrl = imageUrl(serverUrl, info.id, "banner", info.banner)
+    val avatarUrl = avatarPath(info.id, info.avatar)
+    val bannerUrl = imageUrl(info.id, "banner", info.banner)
 
     Dialog(
         onDismissRequest = onDismiss,
@@ -899,10 +897,19 @@ private fun ProfilePreviewDialog(
 
 // ---- Helpers ----
 
-private fun imageUrl(serverUrl: String, id: String, slot: String, version: String?): String? {
-    if (serverUrl.isBlank() || id.isBlank()) return null
-    if (version.isNullOrBlank()) return null
-    return "$serverUrl/people/$id/-/$slot?v=$version"
+private fun imageUrl(id: String, slot: String, version: String?): String? {
+    if (id.isBlank() || version.isNullOrBlank()) return null
+    return "/people/$id/-/$slot?v=$version"
+}
+
+/**
+ * Server-relative avatar path for [EntityAvatar], which resolves the host
+ * itself. Banner/favicon still use [imageUrl] since they feed `AsyncImage`,
+ * which needs an absolute URL.
+ */
+private fun avatarPath(id: String, version: String?): String? {
+    if (id.isBlank() || version.isNullOrBlank()) return null
+    return "/people/$id/-/avatar?v=$version"
 }
 
 private fun parseHexColour(hex: String): Color? {

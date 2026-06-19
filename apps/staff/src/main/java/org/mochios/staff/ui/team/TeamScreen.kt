@@ -98,7 +98,6 @@ fun TeamScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         TeamBody(
             state = state,
-            serverUrl = viewModel.serverUrl,
             isAdmin = isAdmin,
             onChangeRole = viewModel::changeRole,
             onAskRemove = viewModel::askRemove,
@@ -117,7 +116,6 @@ fun TeamScreen(
             onRoleChange = viewModel::setAddRole,
             onSubmit = viewModel::submitAdd,
             onCancel = viewModel::closeAddDialog,
-            serverUrl = viewModel.serverUrl,
         )
     }
 
@@ -137,7 +135,6 @@ fun TeamScreen(
 @Composable
 private fun TeamBody(
     state: TeamUiState,
-    serverUrl: String,
     isAdmin: Boolean,
     onChangeRole: (StaffMember, String) -> Unit,
     onAskRemove: (StaffMember) -> Unit,
@@ -157,7 +154,6 @@ private fun TeamBody(
                     items(state.members, key = { it.id }) { member ->
                         MemberRow(
                             member = member,
-                            serverUrl = serverUrl,
                             isAdmin = isAdmin,
                             roleUpdating = state.roleUpdatingId == member.id,
                             onChangeRole = onChangeRole,
@@ -174,7 +170,6 @@ private fun TeamBody(
 @Composable
 private fun MemberRow(
     member: StaffMember,
-    serverUrl: String,
     isAdmin: Boolean,
     roleUpdating: Boolean,
     onChangeRole: (StaffMember, String) -> Unit,
@@ -182,7 +177,7 @@ private fun MemberRow(
 ) {
     val format = LocalFormat.current
     val displayName = member.name?.takeIf { it.isNotBlank() } ?: fingerprint(member.id)
-    val avatarUrl = "$serverUrl/staff/-/user/${member.id}/asset/avatar"
+    val avatarUrl = "/staff/-/user/${member.id}/asset/avatar"
 
     Row(
         modifier = Modifier
@@ -210,7 +205,7 @@ private fun MemberRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             if (member.addedby.isNotBlank()) {
-                AddedByLine(member = member, serverUrl = serverUrl)
+                AddedByLine(member = member)
             }
         }
         Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
@@ -233,7 +228,7 @@ private fun MemberRow(
 }
 
 @Composable
-private fun AddedByLine(member: StaffMember, serverUrl: String) {
+private fun AddedByLine(member: StaffMember) {
     val isSystem = member.addedby == "system"
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -254,7 +249,7 @@ private fun AddedByLine(member: StaffMember, serverUrl: String) {
             val name = member.addedbyName?.takeIf { it.isNotBlank() } ?: fingerprint(member.addedby)
             EntityAvatar(
                 name = name,
-                src = "$serverUrl/staff/-/user/${member.addedby}/asset/avatar",
+                src = "/staff/-/user/${member.addedby}/asset/avatar",
                 seed = member.addedby,
                 size = 20.dp,
             )

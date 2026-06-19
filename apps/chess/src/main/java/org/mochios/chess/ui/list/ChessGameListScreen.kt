@@ -113,7 +113,6 @@ fun ChessGameListScreen(
             ChessSidebar(
                 activeGames = uiState.activeSidebar,
                 completedGames = uiState.completedSidebar,
-                serverUrl = viewModel.serverUrl,
                 onOpenGame = { gameId ->
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(ChessApp.gameDetail(gameId))
@@ -173,7 +172,6 @@ fun ChessGameListScreen(
                     else -> GameCardGrid(
                         activeGames = uiState.activeSidebar,
                         completedGames = uiState.completedSidebar,
-                        serverUrl = viewModel.serverUrl,
                         onOpenGame = { gameId ->
                             navController.navigate(ChessApp.gameDetail(gameId))
                         },
@@ -264,7 +262,6 @@ private fun EmptyState(onNewGame: () -> Unit) {
 private fun GameCardGrid(
     activeGames: List<ChessSidebarGame>,
     completedGames: List<ChessSidebarGame>,
-    serverUrl: String,
     onOpenGame: (String) -> Unit,
     onNewGame: () -> Unit,
 ) {
@@ -280,7 +277,6 @@ private fun GameCardGrid(
             items(activeGames, key = { "active-${it.id}" }) { game ->
                 GameCard(
                     game = game,
-                    serverUrl = serverUrl,
                     statusSuffix = null,
                     onClick = { onOpenGame(game.id) },
                 )
@@ -293,7 +289,6 @@ private fun GameCardGrid(
             items(completedGames, key = { "completed-${it.id}" }) { game ->
                 GameCard(
                     game = game,
-                    serverUrl = serverUrl,
                     statusSuffix = game.statusLabel,
                     onClick = { onOpenGame(game.id) },
                 )
@@ -327,12 +322,11 @@ private fun SectionHeader(text: String) {
 @Composable
 private fun GameCard(
     game: ChessSidebarGame,
-    serverUrl: String,
     statusSuffix: String?,
     onClick: () -> Unit,
 ) {
-    val avatarUrl = if (serverUrl.isNotBlank() && game.opponentId.isNotBlank()) {
-        "$serverUrl/people/${game.opponentId}/-/avatar"
+    val avatarUrl = if (game.opponentId.isNotBlank()) {
+        "/people/${game.opponentId}/-/avatar"
     } else null
 
     Card(

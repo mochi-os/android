@@ -249,11 +249,9 @@ fun ObjectDetailSheet(
                             onAddChild = { onAddChild(obj.id) },
                             onNavigateToObject = onNavigateToObject,
                             crmId = crmId,
-                            serverUrl = viewModel.serverUrl,
                         )
                         1 -> CommentsTab(
                             comments = uiState.comments,
-                            serverUrl = viewModel.serverUrl,
                             crmId = crmId,
                             onCreateComment = { content, parent, files ->
                                 viewModel.createComment(content, parent, files)
@@ -266,14 +264,14 @@ fun ObjectDetailSheet(
                             },
                             onSearchUsers = { query -> viewModel.searchUsers(query) },
                             avatarUrlBuilder = { comment ->
-                                "${viewModel.serverUrl}/crm/$crmId/-/comment/${comment.id}/asset/avatar"
+                                "/crm/$crmId/-/comment/${comment.id}/asset/avatar"
                             }
                         )
                         2 -> ActivityTab(
                             activity = uiState.activity,
                             crmDetails = crmDetails,
                             avatarUrlBuilder = { entry ->
-                                "${viewModel.serverUrl}/crm/$crmId/-/activity/${entry.id}/asset/avatar"
+                                "/crm/$crmId/-/activity/${entry.id}/asset/avatar"
                             }
                         )
                     }

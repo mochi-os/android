@@ -258,7 +258,6 @@ fun EditListingScreen(
                     },
                     onDelete = viewModel::deletePhoto,
                     onReorder = viewModel::reorderPhotos,
-                    baseURL = viewModel.photoBaseURL,
                     isUploading = state.isUploadingPhoto,
                 )
             }

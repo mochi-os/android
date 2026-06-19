@@ -76,10 +76,6 @@ fun InvitationsScreen(
     viewModel: InvitationsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    // Avatar URLs are absolute — the lib's Coil loader doesn't share the
-    // people-app retrofit baseUrl, so the ViewModel exposes the server URL
-    // for the row composables to compose with.
-    val serverUrl = viewModel.serverUrl
     var showOverflow by remember { mutableStateOf(false) }
     val received = viewModel.filteredReceived()
     val sent = viewModel.filteredSent()
@@ -226,7 +222,6 @@ fun InvitationsScreen(
                         }
                         receivedItems(
                             invites = received,
-                            serverUrl = serverUrl,
                             onAccept = viewModel::accept,
                             onDecline = viewModel::decline,
                         )
@@ -243,7 +238,6 @@ fun InvitationsScreen(
                         }
                         sentItems(
                             invites = sent,
-                            serverUrl = serverUrl,
                             onCancel = viewModel::cancel,
                         )
                     }
@@ -281,14 +275,12 @@ private fun StackedSectionHeader(text: String, count: Int) {
 // a received and a sent invite sharing an id can't collide.
 private fun LazyListScope.receivedItems(
     invites: List<FriendInvite>,
-    serverUrl: String,
     onAccept: (FriendInvite) -> Unit,
     onDecline: (FriendInvite) -> Unit,
 ) {
     items(invites, key = { invite -> "received-${invite.id}" }) { invite ->
         ReceivedRow(
             invite = invite,
-            serverUrl = serverUrl,
             onAccept = { onAccept(invite) },
             onDecline = { onDecline(invite) },
         )
@@ -297,13 +289,11 @@ private fun LazyListScope.receivedItems(
 
 private fun LazyListScope.sentItems(
     invites: List<FriendInvite>,
-    serverUrl: String,
     onCancel: (FriendInvite) -> Unit,
 ) {
     items(invites, key = { invite -> "sent-${invite.id}" }) { invite ->
         SentRow(
             invite = invite,
-            serverUrl = serverUrl,
             onCancel = { onCancel(invite) },
         )
     }
@@ -312,11 +302,10 @@ private fun LazyListScope.sentItems(
 @Composable
 private fun ReceivedRow(
     invite: FriendInvite,
-    serverUrl: String,
     onAccept: () -> Unit,
     onDecline: () -> Unit,
 ) {
-    val avatarSrc = avatarUrl(serverUrl, invite.id)
+    val avatarSrc = avatarUrl(invite.id)
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -358,10 +347,9 @@ private fun ReceivedRow(
 @Composable
 private fun SentRow(
     invite: FriendInvite,
-    serverUrl: String,
     onCancel: () -> Unit,
 ) {
-    val avatarSrc = avatarUrl(serverUrl, invite.id)
+    val avatarSrc = avatarUrl(invite.id)
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -514,7 +502,7 @@ private data class PolicyOption(
     val description: String,
 )
 
-private fun avatarUrl(serverUrl: String, id: String): String? {
-    if (serverUrl.isBlank() || id.isBlank()) return null
-    return "$serverUrl/people/$id/-/avatar"
+private fun avatarUrl(id: String): String? {
+    if (id.isBlank()) return null
+    return "/people/$id/-/avatar"
 }

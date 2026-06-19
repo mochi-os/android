@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.api.ModerationQueueResponse
 import org.mochios.forums.api.ModerationReportsResponse
@@ -37,11 +36,9 @@ data class ModerationUiState(
 class ModerationViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: ForumsRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
 
     val forumId: String = savedStateHandle["forumId"] ?: ""
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _uiState = MutableStateFlow(ModerationUiState())
     val uiState: StateFlow<ModerationUiState> = _uiState.asStateFlow()

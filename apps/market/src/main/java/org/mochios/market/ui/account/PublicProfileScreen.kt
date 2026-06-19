@@ -129,7 +129,6 @@ fun PublicProfileScreen(
                     reviews = state.reviews,
                     isLoadingReviews = state.isLoadingReviews,
                     hasMore = state.hasMore,
-                    serverUrl = viewModel.serverUrl,
                     accountId = viewModel.accountId,
                     onLoadMore = viewModel::loadMoreReviews,
                     modifier = Modifier.padding(padding),
@@ -145,14 +144,13 @@ private fun ProfileBody(
     reviews: List<Review>,
     isLoadingReviews: Boolean,
     hasMore: Boolean,
-    serverUrl: String,
     accountId: String,
     onLoadMore: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val format = LocalFormat.current
     val avatarUrl = accountId.takeIf { it.isNotBlank() }?.let {
-        "$serverUrl/market/-/user/$it/asset/avatar"
+        "/market/-/user/$it/asset/avatar"
     }
     val parsedLocation = parseLocation(account.location)
     val locationLabel = locationName(parsedLocation)
@@ -232,7 +230,6 @@ private fun ProfileBody(
             items(reviews, key = { it.id }) { review ->
                 ReviewCard(
                     review = review,
-                    serverUrl = serverUrl,
                     dateTimeText = format.formatDateTime(review.created),
                 )
             }
@@ -412,10 +409,10 @@ private fun ProfileHeaderCard(
 }
 
 @Composable
-private fun ReviewCard(review: Review, serverUrl: String, dateTimeText: String) {
+private fun ReviewCard(review: Review, dateTimeText: String) {
     val name = review.reviewerName.orEmpty().ifBlank { review.reviewer }
     val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let {
-        "$serverUrl/market/-/user/$it/asset/avatar"
+        "/market/-/user/$it/asset/avatar"
     }
     ProfileCard {
         Row(

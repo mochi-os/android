@@ -251,11 +251,9 @@ fun ObjectDetailSheet(
                             onAddChild = { onAddChild(obj.id) },
                             onNavigateToObject = onNavigateToObject,
                             projectId = projectId,
-                            serverUrl = viewModel.serverUrl,
                         )
                         1 -> CommentsTab(
                             comments = uiState.comments,
-                            serverUrl = viewModel.serverUrl,
                             projectId = projectId,
                             onCreateComment = { content, parent, files ->
                                 viewModel.createComment(content, parent, files)
@@ -268,14 +266,14 @@ fun ObjectDetailSheet(
                             },
                             onSearchUsers = { query -> viewModel.searchUsers(query) },
                             avatarUrlBuilder = { comment ->
-                                "${viewModel.serverUrl}/projects/$projectId/-/comment/${comment.id}/asset/avatar"
+                                "/projects/$projectId/-/comment/${comment.id}/asset/avatar"
                             }
                         )
                         2 -> ActivityTab(
                             activity = uiState.activity,
                             projectDetails = projectDetails,
                             avatarUrlBuilder = { entry ->
-                                "${viewModel.serverUrl}/projects/$projectId/-/activity/${entry.id}/asset/avatar"
+                                "/projects/$projectId/-/activity/${entry.id}/asset/avatar"
                             }
                         )
                         3 -> RequestsTab(

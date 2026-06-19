@@ -115,7 +115,6 @@ fun ReviewsScreen(
         ReviewsBody(
             padding = androidx.compose.foundation.layout.PaddingValues(0.dp),
             state = state,
-            serverUrl = viewModel.serverUrl,
             onFilterChange = viewModel::setFilter,
             onAction = viewModel::runAction,
             onAskRemove = viewModel::askRemove,
@@ -158,7 +157,6 @@ fun ReviewsScreen(
 private fun ReviewsBody(
     padding: PaddingValues,
     state: ReviewsUiState,
-    serverUrl: String,
     onFilterChange: (ReviewStatusFilter) -> Unit,
     onAction: (Review, String) -> Unit,
     onAskRemove: (Review) -> Unit,
@@ -183,7 +181,6 @@ private fun ReviewsBody(
                     items(state.reviews, key = { it.id }) { review ->
                         ReviewRow(
                             review = review,
-                            serverUrl = serverUrl,
                             onAction = onAction,
                             onAskRemove = onAskRemove,
                         )
@@ -289,15 +286,14 @@ private fun ActiveFilterChips(
 @Composable
 private fun ReviewRow(
     review: Review,
-    serverUrl: String,
     onAction: (Review, String) -> Unit,
     onAskRemove: (Review) -> Unit,
 ) {
     val format = LocalFormat.current
     val reviewerName = review.reviewerName.orEmpty().ifBlank { fingerprint(review.reviewer) }
     val subjectName = review.subjectName.orEmpty().ifBlank { fingerprint(review.subject) }
-    val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let {
-        "$serverUrl/staff/-/user/$it/asset/avatar"
+    val avatarUrl = review.reviewer.takeIf { reviewer -> reviewer.isNotBlank() }?.let { reviewer ->
+        "/staff/-/user/$reviewer/asset/avatar"
     }
     Row(
         modifier = Modifier

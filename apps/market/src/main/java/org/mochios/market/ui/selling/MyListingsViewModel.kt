@@ -13,7 +13,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.market.model.AccountFees
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
@@ -77,10 +76,7 @@ sealed class MyListingsEvent {
 @HiltViewModel
 class MyListingsViewModel @Inject constructor(
     private val repo: MarketRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
-
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _state = MutableStateFlow(MyListingsUiState())
     val state: StateFlow<MyListingsUiState> = _state.asStateFlow()

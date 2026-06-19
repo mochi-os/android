@@ -40,9 +40,9 @@ import org.mochios.projects.model.ProjectDetails
 fun ActivityTab(
     activity: List<Activity>,
     projectDetails: ProjectDetails,
-    // Builds the avatar proxy URL for an activity actor. Should return an
-    // absolute URL to the projects app's proxy action, e.g.
-    // "<server>/projects/<project>/-/activity/<activity.id>/asset/avatar".
+    // Builds the avatar proxy path for an activity actor. Should return a
+    // server-relative path to the projects app's proxy action, e.g.
+    // "/projects/<project>/-/activity/<activity.id>/asset/avatar".
     avatarUrlBuilder: ((Activity) -> String?)? = null
 ) {
     if (activity.isEmpty()) {

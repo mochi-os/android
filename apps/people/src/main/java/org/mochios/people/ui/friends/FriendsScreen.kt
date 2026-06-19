@@ -222,7 +222,6 @@ fun FriendsScreen(
 
                     FriendsContent(
                         state = uiState,
-                        serverUrl = viewModel.serverUrl,
                         filteredFriends = viewModel.filteredFriends(),
                         onPersonTap = { onOpenPerson(it.id) },
                         onMessageFriend = { viewModel.messageFriend(it) },
@@ -237,7 +236,6 @@ fun FriendsScreen(
     if (uiState.addDialogOpen) {
         AddFriendDialog(
             state = uiState,
-            serverUrl = viewModel.serverUrl,
             onQueryChange = viewModel::updateAddSearchQuery,
             onRetry = viewModel::retryAddSearch,
             onOpenPreview = viewModel::openAddPreview,
@@ -303,7 +301,6 @@ private fun WelcomeBanner(onDismiss: () -> Unit) {
 @Composable
 private fun FriendsContent(
     state: FriendsUiState,
-    serverUrl: String,
     filteredFriends: List<Friend>,
     onPersonTap: (Friend) -> Unit,
     onMessageFriend: (Friend) -> Unit,
@@ -345,7 +342,6 @@ private fun FriendsContent(
                     items(filteredFriends, key = { it.id }) { friend ->
                         FriendRow(
                             friend = friend,
-                            serverUrl = serverUrl,
                             onTap = { onPersonTap(friend) },
                             onMessage = { onMessageFriend(friend) },
                             onRemove = { onRemoveFriend(friend) },
@@ -374,12 +370,11 @@ private fun EmptyFriendsHint(searchQuery: String) {
 @Composable
 private fun FriendRow(
     friend: Friend,
-    serverUrl: String,
     onTap: () -> Unit,
     onMessage: () -> Unit,
     onRemove: () -> Unit,
 ) {
-    val avatarUrl = if (serverUrl.isNotBlank()) "$serverUrl/people/${friend.id}/-/avatar" else null
+    val avatarUrl = "/people/${friend.id}/-/avatar"
 
     Card(
         onClick = onTap,

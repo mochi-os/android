@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
 import org.mochios.staff.model.DirectorySearchResult
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.repository.StaffRepository
@@ -57,10 +56,7 @@ sealed interface TeamEvent {
 @HiltViewModel
 class TeamViewModel @Inject constructor(
     private val repo: StaffRepository,
-    sessionManager: SessionManager,
 ) : ViewModel() {
-
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _state = MutableStateFlow(TeamUiState())
     val state: StateFlow<TeamUiState> = _state.asStateFlow()
