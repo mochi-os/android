@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,29 +15,44 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AttachFile
+import androidx.compose.material.icons.automirrored.filled.Article
+import androidx.compose.material.icons.automirrored.filled.InsertDriveFile
+import androidx.compose.material.icons.automirrored.filled.TextSnippet
+import androidx.compose.material.icons.filled.Audiotrack
+import androidx.compose.material.icons.filled.PictureAsPdf
 import androidx.compose.material.icons.filled.PlayCircle
+import androidx.compose.material.icons.filled.TableChart
 import androidx.compose.material3.AssistChip
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import android.widget.Toast
 import coil3.compose.AsyncImage
+import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Attachment
+import org.mochios.android.model.FileKind
+import org.mochios.android.util.AttachmentOpener
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -50,11 +66,16 @@ fun AttachmentGallery(
 
     val images = attachments.filter { it.isImage }
     val videos = attachments.filter { it.isVideo }
-    val files = attachments.filter { !it.isImage && !it.isVideo }
+    val audios = attachments.filter { it.isAudio }
+    val files = attachments.filter { !it.isImage && !it.isVideo && !it.isAudio }
 
     var showViewer by rememberSaveable { mutableStateOf(false) }
     var viewerIndex by rememberSaveable { mutableIntStateOf(0) }
     var showVideoUrl by remember { mutableStateOf<String?>(null) }
+    var downloadingId by remember { mutableStateOf<String?>(null) }
+
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (images.isNotEmpty()) {
@@ -79,6 +100,13 @@ fun AttachmentGallery(
             )
         }
 
+        for (audio in audios) {
+            AudioAttachment(
+                audio = audio,
+                url = urlBuilder(audio)
+            )
+        }
+
         if (files.isNotEmpty()) {
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -87,7 +115,40 @@ fun AttachmentGallery(
                 for (file in files) {
                     FileChip(
                         attachment = file,
-                        onClick = { /* Download via urlBuilder */ }
+                        loading = downloadingId == file.id,
+                        onClick = {
+                            // One download at a time; ignore taps while busy.
+                            if (downloadingId == null) {
+                                downloadingId = file.id
+                                Toast.makeText(
+                                    context,
+                                    context.getString(R.string.common_opening_file),
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                scope.launch {
+                                    val result = AttachmentOpener.open(
+                                        context, urlBuilder(file), file
+                                    )
+                                    downloadingId = null
+                                    val message = when (result) {
+                                        AttachmentOpener.OpenResult.NO_APP ->
+                                            R.string.common_no_app_for_file
+
+                                        AttachmentOpener.OpenResult.FAILED ->
+                                            R.string.common_file_open_failed
+
+                                        AttachmentOpener.OpenResult.OPENED -> null
+                                    }
+                                    if (message != null) {
+                                        Toast.makeText(
+                                            context,
+                                            context.getString(message),
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
+                                }
+                            }
+                        }
                     )
                 }
             }
@@ -158,8 +219,29 @@ private fun VideoThumbnail(
 }
 
 @Composable
+private fun AudioAttachment(
+    audio: Attachment,
+    url: String
+) {
+    val format = LocalFormat.current
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = "${audio.name} (${format.formatFileSize(audio.size)})",
+            style = MaterialTheme.typography.bodySmall,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        AudioPlayer(
+            url = url,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
+
+@Composable
 private fun FileChip(
     attachment: Attachment,
+    loading: Boolean,
     onClick: () -> Unit
 ) {
     val format = LocalFormat.current
@@ -169,11 +251,41 @@ private fun FileChip(
             Text("${attachment.name} (${format.formatFileSize(attachment.size)})")
         },
         leadingIcon = {
-            Icon(
-                imageVector = Icons.Default.AttachFile,
-                contentDescription = null,
-                modifier = Modifier.size(18.dp)
-            )
-        }
+            if (loading) {
+                CircularProgressIndicator(
+                    strokeWidth = 2.dp,
+                    modifier = Modifier.size(28.dp)
+                )
+            } else {
+                Icon(
+                    imageVector = fileKindIcon(attachment.fileKind),
+                    contentDescription = null,
+                    tint = fileKindTint(attachment.fileKind),
+                    modifier = Modifier.size(28.dp)
+                )
+            }
+        },
+        border = null
     )
+}
+
+/** Representative icon for a non-media file kind. */
+private fun fileKindIcon(kind: FileKind): ImageVector = when (kind) {
+    FileKind.PDF -> Icons.Default.PictureAsPdf
+    FileKind.WORD -> Icons.AutoMirrored.Filled.Article
+    FileKind.EXCEL -> Icons.Default.TableChart
+    FileKind.TEXT -> Icons.AutoMirrored.Filled.TextSnippet
+    FileKind.AUDIO -> Icons.Default.Audiotrack
+    else -> Icons.AutoMirrored.Filled.InsertDriveFile
+}
+
+/** Drive-style accent colour for a file kind's icon. */
+@Composable
+private fun fileKindTint(kind: FileKind): Color = when (kind) {
+    FileKind.PDF -> Color(0xFFE53935)    // red
+    FileKind.WORD -> Color(0xFF1E88E5)   // blue
+    FileKind.EXCEL -> Color(0xFF2E9E50)  // green
+    FileKind.TEXT -> Color(0xFF607D8B)   // blue-grey
+    FileKind.AUDIO -> Color(0xFF8E24AA)  // purple
+    else -> MaterialTheme.colorScheme.onSurfaceVariant
 }

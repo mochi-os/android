@@ -101,6 +101,11 @@
     <string name="common_expand">Expand</string>
     <string name="common_subscribe">Subscribe</string>
     <string name="common_play_video">Play video</string>
+    <string name="common_play">Play</string>
+    <string name="common_pause">Pause</string>
+    <string name="common_opening_file">Opening file…</string>
+    <string name="common_no_app_for_file">No app can open this file</string>
+    <string name="common_file_open_failed">Couldn\'t open file</string>
     <string name="common_copy">Copy</string>
     <string name="common_copied">Copied to clipboard</string>
 

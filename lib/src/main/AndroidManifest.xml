@@ -2,4 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <!--
+          File provider that hands a downloaded attachment (PDF, text, office
+          document, …) to the system viewer. Cached files live in
+          cacheDir/attachments/ and are exposed read-only via attachment_paths.xml;
+          FLAG_GRANT_READ_URI_PERMISSION on the ACTION_VIEW intent grants the
+          viewer transient access without a runtime permission.
+        -->
+        <provider
+            android:name="org.mochios.android.util.AttachmentFileProvider"
+            android:authorities="${applicationId}.attachments"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/attachment_paths" />
+        </provider>
+    </application>
 </manifest>
