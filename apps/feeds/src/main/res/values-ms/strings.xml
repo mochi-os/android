@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Minat dikurangkan</string>
     <string name="feeds_interest_removed">Minat dialih keluar</string>
     <string name="feeds_interest_failed">Gagal melaraskan minat</string>
+    <string name="feeds_saved_title">Disimpan</string>
+    <string name="feeds_saved_menu">Disimpan</string>
+    <string name="feeds_saved_save">Simpan untuk kemudian</string>
+    <string name="feeds_saved_remove">Buang daripada disimpan</string>
+    <string name="feeds_saved_clear_all">Kosongkan semua</string>
+    <string name="feeds_saved_clear_confirm_title">Kosongkan semua siaran disimpan?</string>
+    <string name="feeds_saved_clear_confirm_body">Ini membuang setiap siaran daripada senarai disimpan anda. Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="feeds_saved_empty_title">Tiada apa-apa disimpan lagi</string>
+    <string name="feeds_saved_empty_subtitle">Ketik penanda buku pada mana-mana siaran untuk menyimpannya di sini untuk kemudian.</string>
+    <string name="feeds_saved_error_clear">Gagal mengosongkan siaran disimpan</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d siaran baharu</item>
+        <item quantity="other">%d siaran baharu</item>
+    </plurals>
 </resources>

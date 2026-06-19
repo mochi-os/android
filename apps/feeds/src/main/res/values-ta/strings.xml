@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">ஆர்வம் குறைக்கப்பட்டது</string>
     <string name="feeds_interest_removed">ஆர்வம் நீக்கப்பட்டது</string>
     <string name="feeds_interest_failed">ஆர்வத்தைச் சரிசெய்ய முடியவில்லை</string>
+    <string name="feeds_saved_title">சேமிக்கப்பட்டது</string>
+    <string name="feeds_saved_menu">சேமிக்கப்பட்டது</string>
+    <string name="feeds_saved_save">பின்னர் பார்க்க சேமி</string>
+    <string name="feeds_saved_remove">சேமித்தவற்றிலிருந்து அகற்று</string>
+    <string name="feeds_saved_clear_all">அனைத்தையும் அழி</string>
+    <string name="feeds_saved_clear_confirm_title">சேமித்த அனைத்து இடுகைகளையும் அழிக்கவா?</string>
+    <string name="feeds_saved_clear_confirm_body">இது உங்கள் சேமித்த பட்டியலிலிருந்து ஒவ்வொரு இடுகையையும் அகற்றும். இதை மீட்டெடுக்க முடியாது.</string>
+    <string name="feeds_saved_empty_title">இன்னும் எதுவும் சேமிக்கப்படவில்லை</string>
+    <string name="feeds_saved_empty_subtitle">எந்த இடுகையையும் இங்கே பின்னர் பார்க்க சேமிக்க அதன் புத்தகக்குறியைத் தட்டவும்.</string>
+    <string name="feeds_saved_error_clear">சேமித்த இடுகைகளை அழிக்க முடியவில்லை</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d புதிய இடுகை</item>
+        <item quantity="other">%d புதிய இடுகைகள்</item>
+    </plurals>
 </resources>

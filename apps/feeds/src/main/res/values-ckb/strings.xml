@@ -200,4 +200,18 @@
     <string name="feeds_interest_reduced">ئارەزوو کەمکرایەوە</string>
     <string name="feeds_interest_removed">ئارەزوو لابرا</string>
     <string name="feeds_interest_failed">ڕێکخستنی ئارەزوو سەرکەوتوو نەبوو</string>
+    <string name="feeds_saved_title">پاشەکەوت کرا</string>
+    <string name="feeds_saved_menu">پاشەکەوت کرا</string>
+    <string name="feeds_saved_save">پاشەکەوت بۆ دواتر</string>
+    <string name="feeds_saved_remove">لابردن لە پاشەکەوتکراوەکان</string>
+    <string name="feeds_saved_clear_all">پاککردنەوەی هەموو</string>
+    <string name="feeds_saved_clear_confirm_title">سڕینەوەی هەموو پۆستە پاشەکەوتکراوەکان؟</string>
+    <string name="feeds_saved_clear_confirm_body">ئەمە هەموو پۆستێک لە لیستی پاشەکەوتەکانت لادەبات. ناتوانرێت بگەڕێنرێتەوە.</string>
+    <string name="feeds_saved_empty_title">هێشتا هیچ پاشەکەوت نەکراوە</string>
+    <string name="feeds_saved_empty_subtitle">بۆ پاشەکەوتکردنی هەر پۆستێک بۆ دواتر لێرە، دەست بنێ بە نیشانەکەی.</string>
+    <string name="feeds_saved_error_clear">سڕینەوەی پۆستە پاشەکەوتکراوەکان سەرکەوتوو نەبوو</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d پۆستی نوێ</item>
+        <item quantity="other">%d پۆستی نوێ</item>
+    </plurals>
 </resources>

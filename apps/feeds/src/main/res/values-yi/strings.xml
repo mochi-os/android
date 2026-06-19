@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">אינטערעס פֿאַרקלענערט</string>
     <string name="feeds_interest_removed">אינטערעס אַראָפּגענומען</string>
     <string name="feeds_interest_failed">ניט געלונגען צו רעגולירן אינטערעס</string>
+    <string name="feeds_saved_title">אויפֿגעהיט</string>
+    <string name="feeds_saved_menu">אויפֿגעהיט</string>
+    <string name="feeds_saved_save">היט אויף שפּעטער</string>
+    <string name="feeds_saved_remove">אַראָפּנעמען פֿון געהיטענע</string>
+    <string name="feeds_saved_clear_all">רייניקן אַלץ</string>
+    <string name="feeds_saved_clear_confirm_title">רייניקן אַלע געהיטענע אַרײַנשרײַבן?</string>
+    <string name="feeds_saved_clear_confirm_body">דאָס נעמט אַראָפּ יעדן אַרײַנשרײַב פֿון דײַן רשימה פֿון געהיטענע. דאָס קען מען נישט צוריקדרייען.</string>
+    <string name="feeds_saved_empty_title">גאָרניט נאָך געראַטעוועט</string>
+    <string name="feeds_saved_empty_subtitle">טאַפּ דעם לייענצייכן אויף וועלכן עס איז אַרײַנשרײַב צו היטן עס דאָ אויף שפּעטער.</string>
+    <string name="feeds_saved_error_clear">ניט געלונגען צו רייניקן די געהיטענע אַרײַנשרײַבן</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d נײַער אַרײַנשרײַב</item>
+        <item quantity="other">%d נײַע אַרײַנשרײַבן</item>
+    </plurals>
 </resources>

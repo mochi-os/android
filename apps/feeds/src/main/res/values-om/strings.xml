@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Fedha hir\'isame</string>
     <string name="feeds_interest_removed">Fedha haqame</string>
     <string name="feeds_interest_failed">Fedha sirreessuu hin dandeenye</string>
+    <string name="feeds_saved_title">Olkaa\'ame</string>
+    <string name="feeds_saved_menu">Olkaa\'ame</string>
+    <string name="feeds_saved_save">Booda eegoof olkaa\'i</string>
+    <string name="feeds_saved_remove">Kan olkaa\'aman irraa balleessi</string>
+    <string name="feeds_saved_clear_all">Hunda cilliisi</string>
+    <string name="feeds_saved_clear_confirm_title">Maxxansaalee olkaa\'aman hunda haquu?</string>
+    <string name="feeds_saved_clear_confirm_body">Kun tarree olkaa\'aman kee irraa maxxansaa hunda balleessa. Kun deebi\'ee gochuu hin danda\'amu.</string>
+    <string name="feeds_saved_empty_title">Hanga ammaa wanti olkaa\'ame hin jiru</string>
+    <string name="feeds_saved_empty_subtitle">Maxxansaa kamiyyuu asitti booda eegoof olkaa\'uuf mallattoo isaa tuqi.</string>
+    <string name="feeds_saved_error_clear">Maxxansaalee olkaa\'aman haquun hin milkoofne</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d maxxansaa haaraa</item>
+        <item quantity="other">%d maxxansaalee haaraa</item>
+    </plurals>
 </resources>

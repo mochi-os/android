@@ -198,4 +198,20 @@
     <string name="feeds_interest_reduced">Pomėgis sumažintas</string>
     <string name="feeds_interest_removed">Pomėgis pašalintas</string>
     <string name="feeds_interest_failed">Nepavyko pakoreguoti pomėgio</string>
+    <string name="feeds_saved_title">Išsaugota</string>
+    <string name="feeds_saved_menu">Išsaugota</string>
+    <string name="feeds_saved_save">Išsaugoti vėlesniam laikui</string>
+    <string name="feeds_saved_remove">Pašalinti iš išsaugotų</string>
+    <string name="feeds_saved_clear_all">Išvalyti viską</string>
+    <string name="feeds_saved_clear_confirm_title">Išvalyti visus išsaugotus įrašus?</string>
+    <string name="feeds_saved_clear_confirm_body">Tai pašalina kiekvieną įrašą iš jūsų išsaugotų sąrašo. Šio veiksmo anuliuoti negalima.</string>
+    <string name="feeds_saved_empty_title">Dar nieko neišsaugota</string>
+    <string name="feeds_saved_empty_subtitle">Bakstelėkite bet kurio įrašo žymę, kad išsaugotumėte jį čia vėlesniam laikui.</string>
+    <string name="feeds_saved_error_clear">Nepavyko išvalyti išsaugotų įrašų</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d naujas įrašas</item>
+        <item quantity="few">%d nauji įrašai</item>
+        <item quantity="many">%d naujo įrašo</item>
+        <item quantity="other">%d naujų įrašų</item>
+    </plurals>
 </resources>

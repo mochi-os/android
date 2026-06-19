@@ -198,4 +198,17 @@
     <string name="feeds_interest_reduced">បានបន្ថយចំណាប់អារម្មណ៍</string>
     <string name="feeds_interest_removed">បានដកចំណាប់អារម្មណ៍</string>
     <string name="feeds_interest_failed">បរាជ័យក្នុងការកែតម្រូវចំណាប់អារម្មណ៍</string>
+    <string name="feeds_saved_title">បានរក្សាទុក</string>
+    <string name="feeds_saved_menu">បានរក្សាទុក</string>
+    <string name="feeds_saved_save">រក្សាទុកសម្រាប់ពេលក្រោយ</string>
+    <string name="feeds_saved_remove">លុបចេញពីការរក្សាទុក</string>
+    <string name="feeds_saved_clear_all">សម្អាតទាំងអស់</string>
+    <string name="feeds_saved_clear_confirm_title">សម្អាតការបង្ហោះដែលបានរក្សាទុកទាំងអស់?</string>
+    <string name="feeds_saved_clear_confirm_body">វាលុបការបង្ហោះទាំងអស់ចេញពីបញ្ជីរក្សាទុករបស់អ្នក។ មិនអាចត្រឡប់វិញបានទេ។</string>
+    <string name="feeds_saved_empty_title">មិនទាន់មានអ្វីបានរក្សាទុកនៅឡើយទេ</string>
+    <string name="feeds_saved_empty_subtitle">ប៉ះសញ្ញាចំណាំនៅលើការបង្ហោះណាមួយ ដើម្បីរក្សាទុកវានៅទីនេះសម្រាប់ពេលក្រោយ។</string>
+    <string name="feeds_saved_error_clear">បរាជ័យក្នុងការសម្អាតការបង្ហោះដែលបានរក្សាទុក</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">ការបង្ហោះថ្មី %d </item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Το ενδιαφέρον μειώθηκε</string>
     <string name="feeds_interest_removed">Το ενδιαφέρον αφαιρέθηκε</string>
     <string name="feeds_interest_failed">Αποτυχία ρύθμισης ενδιαφέροντος</string>
+    <string name="feeds_saved_title">Αποθηκεύτηκε</string>
+    <string name="feeds_saved_menu">Αποθηκεύτηκε</string>
+    <string name="feeds_saved_save">Αποθήκευση για αργότερα</string>
+    <string name="feeds_saved_remove">Αφαίρεση από τα αποθηκευμένα</string>
+    <string name="feeds_saved_clear_all">Εκκαθάριση όλων</string>
+    <string name="feeds_saved_clear_confirm_title">Εκκαθάριση όλων των αποθηκευμένων δημοσιεύσεων;</string>
+    <string name="feeds_saved_clear_confirm_body">Αυτό αφαιρεί κάθε δημοσίευση από τη λίστα αποθηκευμένων σας. Δεν μπορεί να αναιρεθεί.</string>
+    <string name="feeds_saved_empty_title">Δεν έχει αποθηκευτεί τίποτα ακόμη</string>
+    <string name="feeds_saved_empty_subtitle">Πατήστε τον σελιδοδείκτη σε οποιαδήποτε δημοσίευση για να την αποθηκεύσετε εδώ για αργότερα.</string>
+    <string name="feeds_saved_error_clear">Η εκκαθάριση των αποθηκευμένων δημοσιεύσεων απέτυχε</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d νέα δημοσίευση</item>
+        <item quantity="other">%d νέες δημοσιεύσεις</item>
+    </plurals>
 </resources>

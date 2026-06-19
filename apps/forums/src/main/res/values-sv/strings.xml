@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Sök användare</string>
     <string name="forums_access_no_groups">Inga grupper tillgängliga</string>
+    <string name="forums_saved_title">Sparad</string>
+    <string name="forums_saved_save">Spara till senare</string>
+    <string name="forums_saved_remove">Ta bort från sparade</string>
+    <string name="forums_saved_clear_all">Rensa allt</string>
+    <string name="forums_saved_clear_confirm_title">Rensa alla sparade inlägg?</string>
+    <string name="forums_saved_clear_confirm_body">Detta tar bort alla inlägg från din lista över sparade. Detta kan inte ångras.</string>
+    <string name="forums_saved_empty_title">Inget sparat ännu</string>
+    <string name="forums_saved_empty_subtitle">Tryck på bokmärket på ett inlägg för att spara det här till senare.</string>
+    <string name="forums_saved_error_clear">Det gick inte att rensa sparade inlägg</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nytt inlägg</item>
+        <item quantity="other">%d nya inlägg</item>
+    </plurals>
 </resources>

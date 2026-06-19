@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesse reduzido</string>
     <string name="feeds_interest_removed">Interesse removido</string>
     <string name="feeds_interest_failed">Falha ao ajustar interesse</string>
+    <string name="feeds_saved_title">Guardado</string>
+    <string name="feeds_saved_menu">Guardado</string>
+    <string name="feeds_saved_save">Guardar para mais tarde</string>
+    <string name="feeds_saved_remove">Remover dos guardados</string>
+    <string name="feeds_saved_clear_all">Limpar tudo</string>
+    <string name="feeds_saved_clear_confirm_title">Limpar todas as publicações guardadas?</string>
+    <string name="feeds_saved_clear_confirm_body">Isto remove todas as publicações da sua lista de guardados. Não é possível anular.</string>
+    <string name="feeds_saved_empty_title">Ainda nada guardado</string>
+    <string name="feeds_saved_empty_subtitle">Toque no marcador de qualquer publicação para a guardar aqui para mais tarde.</string>
+    <string name="feeds_saved_error_clear">Falha ao limpar as publicações guardadas</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d publicação nova</item>
+        <item quantity="other">%d publicações novas</item>
+    </plurals>
 </resources>

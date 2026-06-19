@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Minat dikurangi</string>
     <string name="feeds_interest_removed">Minat dihapus</string>
     <string name="feeds_interest_failed">Gagal menyesuaikan minat</string>
+    <string name="feeds_saved_title">Tersimpan</string>
+    <string name="feeds_saved_menu">Tersimpan</string>
+    <string name="feeds_saved_save">Simpan untuk nanti</string>
+    <string name="feeds_saved_remove">Hapus dari tersimpan</string>
+    <string name="feeds_saved_clear_all">Bersihkan semua</string>
+    <string name="feeds_saved_clear_confirm_title">Bersihkan semua kiriman tersimpan?</string>
+    <string name="feeds_saved_clear_confirm_body">Ini menghapus setiap kiriman dari daftar tersimpan Anda. Tindakan ini tidak dapat dibatalkan.</string>
+    <string name="feeds_saved_empty_title">Belum ada yang disimpan</string>
+    <string name="feeds_saved_empty_subtitle">Ketuk markah pada kiriman mana pun untuk menyimpannya di sini untuk nanti.</string>
+    <string name="feeds_saved_error_clear">Gagal membersihkan kiriman tersimpan</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d kiriman baru</item>
+        <item quantity="other">%d kiriman baru</item>
+    </plurals>
 </resources>

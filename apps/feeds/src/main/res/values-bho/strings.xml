@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">रुचि घटावल गइल</string>
     <string name="feeds_interest_removed">रुचि हटावल गइल</string>
     <string name="feeds_interest_failed">रुचि समायोजित करे में विफल</string>
+    <string name="feeds_saved_title">सहेजल गइल</string>
+    <string name="feeds_saved_menu">सहेजल गइल</string>
+    <string name="feeds_saved_save">बाद खातिर सहेजीं</string>
+    <string name="feeds_saved_remove">सहेजल से हटाईं</string>
+    <string name="feeds_saved_clear_all">सब साफ करीं</string>
+    <string name="feeds_saved_clear_confirm_title">सब सहेजल पोस्ट साफ करीं?</string>
+    <string name="feeds_saved_clear_confirm_body">ई रउरा सहेजल सूची से हर पोस्ट हटा दी। एकरा के वापस ना कइल जा सकेला।</string>
+    <string name="feeds_saved_empty_title">अबहीं तक कुछुओ सहेजल नइखे</string>
+    <string name="feeds_saved_empty_subtitle">कौनो पोस्ट के इहाँ बाद खातिर सहेजे खातिर ओकर बुकमार्क दबाईं।</string>
+    <string name="feeds_saved_error_clear">सहेजल पोस्ट साफ करे में नाकाम</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d नया पोस्ट</item>
+        <item quantity="other">%d नया पोस्ट</item>
+    </plurals>
 </resources>

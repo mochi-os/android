@@ -198,4 +198,17 @@
     <string name="feeds_interest_reduced">兴趣已降低</string>
     <string name="feeds_interest_removed">兴趣已移除</string>
     <string name="feeds_interest_failed">调整兴趣失败</string>
+    <string name="feeds_saved_title">已保存</string>
+    <string name="feeds_saved_menu">已保存</string>
+    <string name="feeds_saved_save">稍后保存</string>
+    <string name="feeds_saved_remove">从已保存中移除</string>
+    <string name="feeds_saved_clear_all">全部清除</string>
+    <string name="feeds_saved_clear_confirm_title">清除所有已保存的帖子？</string>
+    <string name="feeds_saved_clear_confirm_body">这将从你的已保存列表中移除每一条帖子。此操作无法撤销。</string>
+    <string name="feeds_saved_empty_title">尚未保存任何内容</string>
+    <string name="feeds_saved_empty_subtitle">点按任意帖子上的书签即可将其保存到这里稍后查看。</string>
+    <string name="feeds_saved_error_clear">清除已保存的帖子失败</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">%d 条新帖子</item>
+    </plurals>
 </resources>

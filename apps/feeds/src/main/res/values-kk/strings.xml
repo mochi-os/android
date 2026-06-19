@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Қызығушылық азайтылды</string>
     <string name="feeds_interest_removed">Қызығушылық жойылды</string>
     <string name="feeds_interest_failed">Қызығушылықты реттеу сәтсіз аяқталды</string>
+    <string name="feeds_saved_title">Сақталды</string>
+    <string name="feeds_saved_menu">Сақталды</string>
+    <string name="feeds_saved_save">Кейінге сақтау</string>
+    <string name="feeds_saved_remove">Сақталғандардан жою</string>
+    <string name="feeds_saved_clear_all">Барлығын тазалау</string>
+    <string name="feeds_saved_clear_confirm_title">Барлық сақталған жазбаларды тазалау керек пе?</string>
+    <string name="feeds_saved_clear_confirm_body">Бұл сақталған тізіміңізден әрбір жазбаны жояды. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="feeds_saved_empty_title">Әзірге ештеңе сақталмаған</string>
+    <string name="feeds_saved_empty_subtitle">Кез келген жазбаны осында кейінге сақтау үшін оның бетбелгісін түртіңіз.</string>
+    <string name="feeds_saved_error_clear">Сақталған жазбаларды тазалау сәтсіз аяқталды</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d жаңа жазба</item>
+        <item quantity="other">%d жаңа жазба</item>
+    </plurals>
 </resources>

@@ -268,4 +268,24 @@
     <string name="common_opening_file">Opening file…</string>
     <string name="common_no_app_for_file">No app can open this file</string>
     <string name="common_file_open_failed">Couldn\'t open file</string>
+    <string name="game_system_resign">%1$s resigned</string>
+    <string name="game_system_draw_offer">%1$s offered a draw</string>
+    <string name="game_system_draw_accept">Draw agreed</string>
+    <string name="game_system_draw_decline">%1$s declined the draw</string>
+    <string name="stepup_title">Confirm it\'s you</string>
+    <string name="stepup_description">This is a security change to your account. Verify it\'s you to continue.</string>
+    <string name="stepup_email_label">Email code</string>
+    <string name="stepup_email_placeholder">Enter the code from your email</string>
+    <string name="stepup_totp_label">Authenticator code</string>
+    <string name="stepup_totp_placeholder">Enter your authenticator code</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_use_passkey">Use your passkey</string>
+    <string name="stepup_send_email">Send email</string>
+    <string name="stepup_resend_email">Resend email</string>
+    <string name="stepup_verify">Verify</string>
+    <string name="stepup_continue_with">Continue with %1$s</string>
+    <string name="stepup_error_start">Couldn\'t start re-authentication. Please try again.</string>
+    <string name="stepup_error_code">That code is incorrect or has expired.</string>
+    <string name="stepup_error_passkey">Passkey verification failed. Please try again.</string>
+    <string name="stepup_error_oauth">Couldn\'t verify with that account. Please try again.</string>
 </resources>

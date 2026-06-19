@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manuel</string>
     <string name="forums_access_search_users">Søg efter brugere</string>
     <string name="forums_access_no_groups">Ingen grupper tilgængelige</string>
+    <string name="forums_saved_title">Gemt</string>
+    <string name="forums_saved_save">Gem til senere</string>
+    <string name="forums_saved_remove">Fjern fra gemte</string>
+    <string name="forums_saved_clear_all">Ryd alle</string>
+    <string name="forums_saved_clear_confirm_title">Ryd alle gemte opslag?</string>
+    <string name="forums_saved_clear_confirm_body">Dette fjerner alle opslag fra din liste over gemte. Dette kan ikke fortrydes.</string>
+    <string name="forums_saved_empty_title">Intet gemt endnu</string>
+    <string name="forums_saved_empty_subtitle">Tryk på bogmærket på et opslag for at gemme det her til senere.</string>
+    <string name="forums_saved_error_clear">De gemte opslag kunne ikke ryddes</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nyt opslag</item>
+        <item quantity="other">%d nye opslag</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">ਦਿਲਚਸਪੀ ਘਟਾਈ ਗਈ</string>
     <string name="feeds_interest_removed">ਦਿਲਚਸਪੀ ਹਟਾਈ ਗਈ</string>
     <string name="feeds_interest_failed">ਦਿਲਚਸਪੀ ਨੂੰ ਅਡਜਸਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="feeds_saved_title">ਸੰਭਾਲਿਆ ਗਿਆ</string>
+    <string name="feeds_saved_menu">ਸੰਭਾਲਿਆ ਗਿਆ</string>
+    <string name="feeds_saved_save">ਬਾਅਦ ਲਈ ਸੰਭਾਲੋ</string>
+    <string name="feeds_saved_remove">ਸੰਭਾਲੇ ਤੋਂ ਹਟਾਓ</string>
+    <string name="feeds_saved_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
+    <string name="feeds_saved_clear_confirm_title">ਸਾਰੀਆਂ ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਸਾਫ਼ ਕਰਨੀਆਂ ਹਨ?</string>
+    <string name="feeds_saved_clear_confirm_body">ਇਹ ਤੁਹਾਡੀ ਸੰਭਾਲੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਰ ਪੋਸਟ ਹਟਾ ਦਿੰਦਾ ਹੈ। ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="feeds_saved_empty_title">ਅਜੇ ਤੱਕ ਕੁਝ ਵੀ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ</string>
+    <string name="feeds_saved_empty_subtitle">ਕਿਸੇ ਵੀ ਪੋਸਟ ਨੂੰ ਇੱਥੇ ਬਾਅਦ ਲਈ ਸੰਭਾਲਣ ਲਈ ਉਸ ਦੇ ਬੁੱਕਮਾਰਕ \'ਤੇ ਟੈਪ ਕਰੋ।</string>
+    <string name="feeds_saved_error_clear">ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਸਾਫ਼ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d ਨਵੀਂ ਪੋਸਟ</item>
+        <item quantity="other">%d ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
+    </plurals>
 </resources>

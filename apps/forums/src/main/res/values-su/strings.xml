@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Paluruh pamaké</string>
     <string name="forums_access_no_groups">Teu aya grup</string>
+    <string name="forums_saved_title">Disimpen</string>
+    <string name="forums_saved_save">Simpen kanggo engké</string>
+    <string name="forums_saved_remove">Piceun tina nu disimpen</string>
+    <string name="forums_saved_clear_all">Bersihkeun sadaya</string>
+    <string name="forums_saved_clear_confirm_title">Pupus sadaya kintunan nu disimpen?</string>
+    <string name="forums_saved_clear_confirm_body">Ieu mupus unggal kintunan tina daptar disimpen anjeun. Ieu teu tiasa dibatalkeun.</string>
+    <string name="forums_saved_empty_title">Can aya nu disimpen</string>
+    <string name="forums_saved_empty_subtitle">Toél markah dina kintunan mana waé pikeun nyimpen di dieu kanggo engké.</string>
+    <string name="forums_saved_error_clear">Gagal mupus kintunan nu disimpen</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d kintunan anyar</item>
+        <item quantity="other">%d kintunan anyar</item>
+    </plurals>
 </resources>

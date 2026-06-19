@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Centre d\'intérêt réduit</string>
     <string name="feeds_interest_removed">Centre d\'intérêt retiré</string>
     <string name="feeds_interest_failed">Échec de l\'ajustement du centre d\'intérêt</string>
+    <string name="feeds_saved_title">Enregistré</string>
+    <string name="feeds_saved_menu">Enregistré</string>
+    <string name="feeds_saved_save">Enregistrer pour plus tard</string>
+    <string name="feeds_saved_remove">Retirer des enregistrés</string>
+    <string name="feeds_saved_clear_all">Tout effacer</string>
+    <string name="feeds_saved_clear_confirm_title">Effacer toutes les publications enregistrées ?</string>
+    <string name="feeds_saved_clear_confirm_body">Cette action retire toutes les publications de votre liste d\'enregistrés. Elle est irréversible.</string>
+    <string name="feeds_saved_empty_title">Rien d\'enregistré pour l\'instant</string>
+    <string name="feeds_saved_empty_subtitle">Touchez le marque-page d\'une publication pour l\'enregistrer ici pour plus tard.</string>
+    <string name="feeds_saved_error_clear">Échec de l\'effacement des publications enregistrées</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nouvelle publication</item>
+        <item quantity="other">%d nouvelles publications</item>
+    </plurals>
 </resources>

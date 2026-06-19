@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">கைமுறை</string>
     <string name="forums_access_search_users">பயனர்களைத் தேடு</string>
     <string name="forums_access_no_groups">குழுக்கள் கிடைக்கவில்லை</string>
+    <string name="forums_saved_title">சேமிக்கப்பட்டது</string>
+    <string name="forums_saved_save">பின்னர் பார்க்க சேமி</string>
+    <string name="forums_saved_remove">சேமித்தவற்றிலிருந்து அகற்று</string>
+    <string name="forums_saved_clear_all">அனைத்தையும் அழி</string>
+    <string name="forums_saved_clear_confirm_title">சேமித்த அனைத்து இடுகைகளையும் அழிக்கவா?</string>
+    <string name="forums_saved_clear_confirm_body">இது உங்கள் சேமித்த பட்டியலிலிருந்து ஒவ்வொரு இடுகையையும் அகற்றும். இதை மீட்டெடுக்க முடியாது.</string>
+    <string name="forums_saved_empty_title">இன்னும் எதுவும் சேமிக்கப்படவில்லை</string>
+    <string name="forums_saved_empty_subtitle">எந்த இடுகையையும் இங்கே பின்னர் பார்க்க சேமிக்க அதன் புத்தகக்குறியைத் தட்டவும்.</string>
+    <string name="forums_saved_error_clear">சேமித்த இடுகைகளை அழிக்க முடியவில்லை</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d புதிய இடுகை</item>
+        <item quantity="other">%d புதிய இடுகைகள்</item>
+    </plurals>
 </resources>

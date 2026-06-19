@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">מאַנואַל</string>
     <string name="forums_access_search_users">זוך באַניצערס</string>
     <string name="forums_access_no_groups">קיין גרופּעס פֿאַראַן</string>
+    <string name="forums_saved_title">אויפֿגעהיט</string>
+    <string name="forums_saved_save">היט אויף שפּעטער</string>
+    <string name="forums_saved_remove">אַראָפּנעמען פֿון געהיטענע</string>
+    <string name="forums_saved_clear_all">רייניקן אַלץ</string>
+    <string name="forums_saved_clear_confirm_title">רייניקן אַלע געהיטענע אַרײַנשרײַבן?</string>
+    <string name="forums_saved_clear_confirm_body">דאָס נעמט אַראָפּ יעדן אַרײַנשרײַב פֿון דײַן רשימה פֿון געהיטענע. דאָס קען מען נישט צוריקדרייען.</string>
+    <string name="forums_saved_empty_title">גאָרניט נאָך געראַטעוועט</string>
+    <string name="forums_saved_empty_subtitle">טאַפּ דעם לייענצייכן אויף וועלכן עס איז אַרײַנשרײַב צו היטן עס דאָ אויף שפּעטער.</string>
+    <string name="forums_saved_error_clear">ניט געלונגען צו רייניקן די געהיטענע אַרײַנשרײַבן</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d נײַער אַרײַנשרײַב</item>
+        <item quantity="other">%d נײַע אַרײַנשרײַבן</item>
+    </plurals>
 </resources>

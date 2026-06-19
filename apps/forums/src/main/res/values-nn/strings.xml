@@ -207,4 +207,7 @@
     <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Søk i brukarar</string>
     <string name="forums_access_no_groups">Ingen grupper tilgjengelege</string>
+    <string name="forums_saved_clear_all">Tøm alle</string>
+    <string name="forums_saved_title">Lagra</string>
+    <string name="forums_saved_remove">Fjern frå lagra</string>
 </resources>

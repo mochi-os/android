@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Ngesandla</string>
     <string name="forums_access_search_users">Khangela abasebenzisi</string>
     <string name="forums_access_no_groups">Akukho maqela afumanekayo</string>
+    <string name="forums_saved_title">Igciniwe</string>
+    <string name="forums_saved_save">Gcina ukuze ujonge kamva</string>
+    <string name="forums_saved_remove">Susa kwezigciniweyo</string>
+    <string name="forums_saved_clear_all">Cima konke</string>
+    <string name="forums_saved_clear_confirm_title">Cima zonke iiposti ezigciniweyo?</string>
+    <string name="forums_saved_clear_confirm_body">Oku kususa yonke iposti kuluhlu lwakho lwezigciniweyo. Oku akunakubuyiselwa.</string>
+    <string name="forums_saved_empty_title">Akukho nto igciniweyo okwangoku</string>
+    <string name="forums_saved_empty_subtitle">Cofa ibhukimaki kuyo nayiphi na iposti ukuze uyigcine apha ukuze uyijonge kamva.</string>
+    <string name="forums_saved_error_clear">Akuphumelelanga ukucima iiposti ezigciniweyo</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d iposti entsha</item>
+        <item quantity="other">%d iiposti ezintsha</item>
+    </plurals>
 </resources>

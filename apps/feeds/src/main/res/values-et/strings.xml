@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Huvi vähendatud</string>
     <string name="feeds_interest_removed">Huvi eemaldatud</string>
     <string name="feeds_interest_failed">Huvi kohandamine ebaõnnestus</string>
+    <string name="feeds_saved_title">Salvestatud</string>
+    <string name="feeds_saved_menu">Salvestatud</string>
+    <string name="feeds_saved_save">Salvesta hiljemaks</string>
+    <string name="feeds_saved_remove">Eemalda salvestatutest</string>
+    <string name="feeds_saved_clear_all">Tühjenda kõik</string>
+    <string name="feeds_saved_clear_confirm_title">Kustutada kõik salvestatud postitused?</string>
+    <string name="feeds_saved_clear_confirm_body">See eemaldab kõik postitused teie salvestatute loendist. Seda ei saa tagasi võtta.</string>
+    <string name="feeds_saved_empty_title">Veel ei ole midagi salvestatud</string>
+    <string name="feeds_saved_empty_subtitle">Postituse hiljemaks siia salvestamiseks puudutage selle järjehoidjat.</string>
+    <string name="feeds_saved_error_clear">Salvestatud postituste kustutamine ebaõnnestus</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d uus postitus</item>
+        <item quantity="other">%d uut postitust</item>
+    </plurals>
 </resources>

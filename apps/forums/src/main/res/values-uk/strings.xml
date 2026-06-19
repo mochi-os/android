@@ -207,4 +207,19 @@
     <string name="forums_access_tab_manual">Вручну</string>
     <string name="forums_access_search_users">Пошук користувачів</string>
     <string name="forums_access_no_groups">Немає доступних груп</string>
+    <string name="forums_saved_title">Збережено</string>
+    <string name="forums_saved_save">Зберегти на потім</string>
+    <string name="forums_saved_remove">Видалити зі збережених</string>
+    <string name="forums_saved_clear_all">Очистити все</string>
+    <string name="forums_saved_clear_confirm_title">Очистити всі збережені дописи?</string>
+    <string name="forums_saved_clear_confirm_body">Це видалить кожен допис із вашого списку збережених. Цю дію не можна скасувати.</string>
+    <string name="forums_saved_empty_title">Поки нічого не збережено</string>
+    <string name="forums_saved_empty_subtitle">Торкніться закладки на будь-якому дописі, щоб зберегти його тут на потім.</string>
+    <string name="forums_saved_error_clear">Не вдалося очистити збережені дописи</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d новий допис</item>
+        <item quantity="few">%d нові дописи</item>
+        <item quantity="many">%d нових дописів</item>
+        <item quantity="other">%d нового допису</item>
+    </plurals>
 </resources>

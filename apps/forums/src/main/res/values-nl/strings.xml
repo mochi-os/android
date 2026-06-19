@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Handmatig</string>
     <string name="forums_access_search_users">Zoek gebruikers</string>
     <string name="forums_access_no_groups">Geen groepen beschikbaar</string>
+    <string name="forums_saved_title">Opgeslagen</string>
+    <string name="forums_saved_save">Bewaren voor later</string>
+    <string name="forums_saved_remove">Verwijderen uit bewaard</string>
+    <string name="forums_saved_clear_all">Alles wissen</string>
+    <string name="forums_saved_clear_confirm_title">Alle bewaarde berichten wissen?</string>
+    <string name="forums_saved_clear_confirm_body">Hiermee wordt elk bericht uit je lijst met bewaarde berichten verwijderd. Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="forums_saved_empty_title">Nog niets opgeslagen</string>
+    <string name="forums_saved_empty_subtitle">Tik op de bladwijzer van een bericht om het hier voor later te bewaren.</string>
+    <string name="forums_saved_error_clear">Bewaarde berichten wissen mislukt</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d nieuw bericht</item>
+        <item quantity="other">%d nieuwe berichten</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesse redusert</string>
     <string name="feeds_interest_removed">Interesse fjernet</string>
     <string name="feeds_interest_failed">Kunne ikke justere interesse</string>
+    <string name="feeds_saved_title">Lagret</string>
+    <string name="feeds_saved_menu">Lagret</string>
+    <string name="feeds_saved_save">Lagre til senere</string>
+    <string name="feeds_saved_remove">Fjern fra lagrede</string>
+    <string name="feeds_saved_clear_all">Tøm alt</string>
+    <string name="feeds_saved_clear_confirm_title">Tømme alle lagrede innlegg?</string>
+    <string name="feeds_saved_clear_confirm_body">Dette fjerner alle innlegg fra listen din over lagrede. Dette kan ikke angres.</string>
+    <string name="feeds_saved_empty_title">Ingenting lagret ennå</string>
+    <string name="feeds_saved_empty_subtitle">Trykk på bokmerket på et innlegg for å lagre det her til senere.</string>
+    <string name="feeds_saved_error_clear">Kunne ikke tømme lagrede innlegg</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nytt innlegg</item>
+        <item quantity="other">%d nye innlegg</item>
+    </plurals>
 </resources>

@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">دستی</string>
     <string name="forums_access_search_users">جست‌وجوی کاربران</string>
     <string name="forums_access_no_groups">هیچ گروهی در دسترس نیست</string>
+    <string name="forums_saved_title">ذخیره شد</string>
+    <string name="forums_saved_save">ذخیره برای بعد</string>
+    <string name="forums_saved_remove">حذف از ذخیره‌شده‌ها</string>
+    <string name="forums_saved_clear_all">پاک کردن همه</string>
+    <string name="forums_saved_clear_confirm_title">همه پست‌های ذخیره‌شده پاک شوند؟</string>
+    <string name="forums_saved_clear_confirm_body">این کار هر پست را از فهرست ذخیره‌شده‌های شما حذف می‌کند. این عمل قابل بازگشت نیست.</string>
+    <string name="forums_saved_empty_title">هنوز چیزی ذخیره نشده است</string>
+    <string name="forums_saved_empty_subtitle">برای ذخیره هر پست در اینجا برای بعد، روی نشانک آن ضربه بزنید.</string>
+    <string name="forums_saved_error_clear">پاک‌کردن پست‌های ذخیره‌شده ناموفق بود</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d پست جدید</item>
+        <item quantity="other">%d پست جدید</item>
+    </plurals>
 </resources>

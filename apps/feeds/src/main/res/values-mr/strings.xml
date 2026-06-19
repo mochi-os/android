@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">इंटरेस्ट कमी केला</string>
     <string name="feeds_interest_removed">इंटरेस्ट काढला</string>
     <string name="feeds_interest_failed">इंटरेस्ट समायोजित करण्यात अयशस्वी</string>
+    <string name="feeds_saved_title">जतन केले</string>
+    <string name="feeds_saved_menu">जतन केले</string>
+    <string name="feeds_saved_save">नंतरसाठी जतन करा</string>
+    <string name="feeds_saved_remove">जतन केलेल्यांमधून काढा</string>
+    <string name="feeds_saved_clear_all">सर्व साफ करा</string>
+    <string name="feeds_saved_clear_confirm_title">सर्व जतन केलेल्या पोस्ट साफ करायच्या?</string>
+    <string name="feeds_saved_clear_confirm_body">हे तुमच्या जतन केलेल्या सूचीतून प्रत्येक पोस्ट काढून टाकते. हे पूर्ववत करता येणार नाही.</string>
+    <string name="feeds_saved_empty_title">अद्याप काहीही जतन केले नाही</string>
+    <string name="feeds_saved_empty_subtitle">कोणतीही पोस्ट येथे नंतरसाठी जतन करण्यासाठी तिच्या बुकमार्कवर टॅप करा.</string>
+    <string name="feeds_saved_error_clear">जतन केलेल्या पोस्ट साफ करण्यात अयशस्वी</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d नवीन पोस्ट</item>
+        <item quantity="other">%d नवीन पोस्ट</item>
+    </plurals>
 </resources>

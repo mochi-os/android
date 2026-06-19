@@ -274,4 +274,17 @@
     <string name="common_opening_file">開緊檔案…</string>
     <string name="common_no_app_for_file">冇應用程式可以開呢個檔案</string>
     <string name="common_file_open_failed">無法開啟檔案</string>
+    <string name="game_system_resign">%1$s 認輸</string>
+    <string name="game_system_draw_offer">%1$s 提出和棋</string>
+    <string name="game_system_draw_accept">同意和棋</string>
+    <string name="game_system_draw_decline">%1$s 拒絕和棋</string>
+    <string name="stepup_email_label">電子郵件代碼</string>
+    <string name="stepup_email_placeholder">輸入電子郵件中的驗證碼</string>
+    <string name="stepup_totp_label">驗證器代碼</string>
+    <string name="stepup_passkey_label">Passkey</string>
+    <string name="stepup_send_email">傳送郵件</string>
+    <string name="stepup_resend_email">重新發送電郵</string>
+    <string name="stepup_verify">驗證</string>
+    <string name="stepup_continue_with">使用 %1$s 繼續</string>
+    <string name="stepup_error_oauth">無法使用該帳戶進行驗證。請重試。</string>
 </resources>

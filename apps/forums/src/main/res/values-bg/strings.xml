@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Ръчно</string>
     <string name="forums_access_search_users">Търси потребители</string>
     <string name="forums_access_no_groups">Няма налични групи</string>
+    <string name="forums_saved_title">Запазено</string>
+    <string name="forums_saved_save">Запази за по-късно</string>
+    <string name="forums_saved_remove">Премахни от запазените</string>
+    <string name="forums_saved_clear_all">Изчисти всички</string>
+    <string name="forums_saved_clear_confirm_title">Изчистване на всички запазени публикации?</string>
+    <string name="forums_saved_clear_confirm_body">Това премахва всяка публикация от списъка ви със запазени. Действието е необратимо.</string>
+    <string name="forums_saved_empty_title">Все още нищо не е запазено</string>
+    <string name="forums_saved_empty_subtitle">Докоснете отметката на която и да е публикация, за да я запазите тук за по-късно.</string>
+    <string name="forums_saved_error_clear">Запазените публикации не бяха изчистени</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d нова публикация</item>
+        <item quantity="other">%d нови публикации</item>
+    </plurals>
 </resources>

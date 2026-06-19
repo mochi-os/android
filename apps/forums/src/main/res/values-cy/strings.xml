@@ -207,4 +207,20 @@
     <string name="forums_access_tab_manual">Llawlyfr</string>
     <string name="forums_access_search_users">Chwilio defnyddwyr</string>
     <string name="forums_access_no_groups">Dim grwpiau ar gael</string>
+    <string name="forums_saved_title">Wedi\'i gadw</string>
+    <string name="forums_saved_save">Cadw at nes ymlaen</string>
+    <string name="forums_saved_remove">Tynnu o\'r cadwedig</string>
+    <string name="forums_saved_clear_all">Clirio popeth</string>
+    <string name="forums_saved_clear_confirm_title">Clirio pob postiad sydd wedi\'u cadw?</string>
+    <string name="forums_saved_clear_confirm_body">Mae hyn yn tynnu pob postiad o\'ch rhestr gadwedig. Ni ellir dadwneud hyn.</string>
+    <string name="forums_saved_empty_title">Heb gadw dim eto</string>
+    <string name="forums_saved_empty_subtitle">Tapiwch y nod tudalen ar unrhyw bostiad i\'w gadw yma at nes ymlaen.</string>
+    <string name="forums_saved_error_clear">Methwyd clirio\'r postiadau cadwedig</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d postiad newydd</item>
+        <item quantity="two">%d bostiad newydd</item>
+        <item quantity="few">%d postiad newydd</item>
+        <item quantity="many">%d postiad newydd</item>
+        <item quantity="other">%d postiad newydd</item>
+    </plurals>
 </resources>

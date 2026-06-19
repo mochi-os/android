@@ -23,6 +23,8 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Forum
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.PushPin
@@ -61,6 +63,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -76,6 +79,7 @@ import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.forums.R
@@ -100,6 +104,7 @@ fun ForumScreen(
     onNewPost: (String) -> Unit,
     onFindForums: () -> Unit,
     onSettings: (String) -> Unit,
+    onNavigateToSaved: () -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
     listViewModel: ForumListViewModel = hiltViewModel(),
@@ -177,6 +182,7 @@ fun ForumScreen(
                 onPostClick = onPostClick,
                 onNewPost = onNewPost,
                 onSettings = onSettings,
+                onNavigateToSaved = onNavigateToSaved,
                 onOpenNotifications = onOpenNotifications,
             )
         }
@@ -221,10 +227,13 @@ private fun ForumContent(
     onPostClick: (String, String) -> Unit,
     onNewPost: (String) -> Unit,
     onSettings: (String) -> Unit,
+    onNavigateToSaved: () -> Unit,
     onOpenNotifications: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val savedIds by viewModel.savedIds.collectAsState()
+    val newPostsCount by viewModel.newPostsCount.collectAsState()
     var showSortMenu by remember { mutableStateOf(false) }
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
 
@@ -248,6 +257,12 @@ private fun ForumContent(
                 },
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
+                    IconButton(onClick = onNavigateToSaved) {
+                        Icon(
+                            Icons.Default.Bookmark,
+                            contentDescription = stringResource(R.string.forums_saved_title)
+                        )
+                    }
                     Box {
                         IconButton(onClick = { showSortMenu = true }) {
                             Icon(Icons.Default.Sort, contentDescription = stringResource(R.string.forums_sort_label))
@@ -363,7 +378,11 @@ private fun ForumContent(
                     }
                 }
                 else -> {
+                    val listState = androidx.compose.foundation.lazy.rememberLazyListState()
+                    val pillScope = rememberCoroutineScope()
+                    Box(modifier = Modifier.fillMaxSize()) {
                     LazyColumn(
+                        state = listState,
                         modifier = Modifier.fillMaxSize(),
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -371,8 +390,10 @@ private fun ForumContent(
                         items(uiState.posts, key = { it.id }) { post ->
                             PostCard(
                                 post = post,
+                                isSaved = savedIds.contains(post.id),
                                 onClick = { onPostClick(forumIdForCallbacks, post.id) },
-                                onVote = { vote -> viewModel.votePost(post.id, vote) }
+                                onVote = { vote -> viewModel.votePost(post.id, vote) },
+                                onToggleSave = { viewModel.toggleSave(post) },
                             )
                         }
                         if (uiState.hasMore) {
@@ -389,6 +410,18 @@ private fun ForumContent(
                             }
                         }
                     }
+                    NewItemsPill(
+                        count = newPostsCount,
+                        label = pluralStringResource(
+                            R.plurals.forums_new_posts, newPostsCount, newPostsCount
+                        ),
+                        onClick = {
+                            viewModel.showNewPosts()
+                            pillScope.launch { listState.animateScrollToItem(0) }
+                        },
+                        modifier = Modifier.align(Alignment.TopCenter),
+                    )
+                    }
                 }
             }
           }
@@ -399,8 +432,10 @@ private fun ForumContent(
 @Composable
 private fun PostCard(
     post: Post,
+    isSaved: Boolean,
     onClick: () -> Unit,
-    onVote: (String) -> Unit
+    onVote: (String) -> Unit,
+    onToggleSave: () -> Unit,
 ) {
     val format = LocalFormat.current
     Card(
@@ -490,6 +525,17 @@ private fun PostCard(
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+                IconButton(onClick = onToggleSave, modifier = Modifier.size(32.dp)) {
+                    Icon(
+                        if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
+                        contentDescription = stringResource(
+                            if (isSaved) R.string.forums_saved_remove else R.string.forums_saved_save
+                        ),
+                        tint = if (isSaved) MaterialTheme.colorScheme.primary
+                              else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
             }
         }
     }

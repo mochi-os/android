@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interesse verminderd</string>
     <string name="feeds_interest_removed">Interesse verwijderd</string>
     <string name="feeds_interest_failed">Interesse aanpassen mislukt</string>
+    <string name="feeds_saved_title">Opgeslagen</string>
+    <string name="feeds_saved_menu">Opgeslagen</string>
+    <string name="feeds_saved_save">Bewaren voor later</string>
+    <string name="feeds_saved_remove">Verwijderen uit bewaard</string>
+    <string name="feeds_saved_clear_all">Alles wissen</string>
+    <string name="feeds_saved_clear_confirm_title">Alle bewaarde berichten wissen?</string>
+    <string name="feeds_saved_clear_confirm_body">Hiermee wordt elk bericht uit je lijst met bewaarde berichten verwijderd. Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="feeds_saved_empty_title">Nog niets opgeslagen</string>
+    <string name="feeds_saved_empty_subtitle">Tik op de bladwijzer van een bericht om het hier voor later te bewaren.</string>
+    <string name="feeds_saved_error_clear">Bewaarde berichten wissen mislukt</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nieuw bericht</item>
+        <item quantity="other">%d nieuwe berichten</item>
+    </plurals>
 </resources>

@@ -200,4 +200,18 @@
     <string name="feeds_interest_reduced">Maraq azaldıldı</string>
     <string name="feeds_interest_removed">Maraq silindi</string>
     <string name="feeds_interest_failed">Marağı tənzimləmək alınmadı</string>
+    <string name="feeds_saved_title">Saxlanıldı</string>
+    <string name="feeds_saved_menu">Saxlanıldı</string>
+    <string name="feeds_saved_save">Sonra üçün saxla</string>
+    <string name="feeds_saved_remove">Saxlanılanlardan sil</string>
+    <string name="feeds_saved_clear_all">Hamısını təmizlə</string>
+    <string name="feeds_saved_clear_confirm_title">Bütün saxlanmış paylaşımlar silinsin?</string>
+    <string name="feeds_saved_clear_confirm_body">Bu, saxlanılan siyahınızdan hər paylaşımı silir. Bu geri qaytarıla bilməz.</string>
+    <string name="feeds_saved_empty_title">Hələ heç nə yadda saxlanılmayıb</string>
+    <string name="feeds_saved_empty_subtitle">İstənilən paylaşımı sonra üçün burada saxlamaq üçün əlfəcinə toxunun.</string>
+    <string name="feeds_saved_error_clear">Saxlanmış paylaşımları silmək alınmadı</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d yeni paylaşım</item>
+        <item quantity="other">%d yeni paylaşım</item>
+    </plurals>
 </resources>

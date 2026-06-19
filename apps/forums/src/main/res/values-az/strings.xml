@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">İstifadəçi axtar</string>
     <string name="forums_access_no_groups">Mövcud qrup yoxdur</string>
+    <string name="forums_saved_title">Saxlanıldı</string>
+    <string name="forums_saved_save">Sonra üçün saxla</string>
+    <string name="forums_saved_remove">Saxlanılanlardan sil</string>
+    <string name="forums_saved_clear_all">Hamısını təmizlə</string>
+    <string name="forums_saved_clear_confirm_title">Bütün saxlanmış paylaşımlar silinsin?</string>
+    <string name="forums_saved_clear_confirm_body">Bu, saxlanılan siyahınızdan hər paylaşımı silir. Bu geri qaytarıla bilməz.</string>
+    <string name="forums_saved_empty_title">Hələ heç nə yadda saxlanılmayıb</string>
+    <string name="forums_saved_empty_subtitle">İstənilən paylaşımı sonra üçün burada saxlamaq üçün əlfəcinə toxunun.</string>
+    <string name="forums_saved_error_clear">Saxlanmış paylaşımları silmək alınmadı</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d yeni paylaşım</item>
+        <item quantity="other">%d yeni paylaşım</item>
+    </plurals>
 </resources>

@@ -207,4 +207,18 @@
     <string name="forums_access_tab_manual">Ручно</string>
     <string name="forums_access_search_users">Претражи кориснике</string>
     <string name="forums_access_no_groups">Нема доступних група</string>
+    <string name="forums_saved_title">Сачувано</string>
+    <string name="forums_saved_save">Сачувај за касније</string>
+    <string name="forums_saved_remove">Уклони из сачуваних</string>
+    <string name="forums_saved_clear_all">Очисти све</string>
+    <string name="forums_saved_clear_confirm_title">Обрисати све сачуване објаве?</string>
+    <string name="forums_saved_clear_confirm_body">Ово уклања сваку објаву са ваше листе сачуваних. Ово се не може опозвати.</string>
+    <string name="forums_saved_empty_title">Још ништа није сачувано</string>
+    <string name="forums_saved_empty_subtitle">Додирните ознаку на било којој објави да је сачувате овде за касније.</string>
+    <string name="forums_saved_error_clear">Брисање сачуваних објава није успело</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d нова објава</item>
+        <item quantity="few">%d нове објаве</item>
+        <item quantity="other">%d нових објава</item>
+    </plurals>
 </resources>

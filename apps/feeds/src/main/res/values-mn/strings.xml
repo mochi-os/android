@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Сонирхол багассан</string>
     <string name="feeds_interest_removed">Сонирхол устгагдсан</string>
     <string name="feeds_interest_failed">Сонирхлыг тохируулж чадсангүй</string>
+    <string name="feeds_saved_title">Хадгалагдсан</string>
+    <string name="feeds_saved_menu">Хадгалагдсан</string>
+    <string name="feeds_saved_save">Дараа үзэхээр хадгалах</string>
+    <string name="feeds_saved_remove">Хадгалсанаас хасах</string>
+    <string name="feeds_saved_clear_all">Бүгдийг цэвэрлэх</string>
+    <string name="feeds_saved_clear_confirm_title">Хадгалсан бүх нийтлэлийг цэвэрлэх үү?</string>
+    <string name="feeds_saved_clear_confirm_body">Энэ нь таны хадгалсан жагсаалтаас бүх нийтлэлийг хасна. Үүнийг буцаах боломжгүй.</string>
+    <string name="feeds_saved_empty_title">Одоохондоо юу ч хадгалаагүй байна</string>
+    <string name="feeds_saved_empty_subtitle">Аливаа нийтлэлийг энд дараа үзэхээр хадгалахын тулд хавчуургад нь товшино уу.</string>
+    <string name="feeds_saved_error_clear">Хадгалсан нийтлэлүүдийг цэвэрлэж чадсангүй</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d шинэ нийтлэл</item>
+        <item quantity="other">%d шинэ нийтлэл</item>
+    </plurals>
 </resources>

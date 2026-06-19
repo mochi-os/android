@@ -207,4 +207,16 @@
     <string name="forums_access_tab_manual">សៀវភៅណែនាំ</string>
     <string name="forums_access_search_users">ស្វែងរកអ្នកប្រើ</string>
     <string name="forums_access_no_groups">មិនមានក្រុម</string>
+    <string name="forums_saved_title">បានរក្សាទុក</string>
+    <string name="forums_saved_save">រក្សាទុកសម្រាប់ពេលក្រោយ</string>
+    <string name="forums_saved_remove">លុបចេញពីការរក្សាទុក</string>
+    <string name="forums_saved_clear_all">សម្អាតទាំងអស់</string>
+    <string name="forums_saved_clear_confirm_title">សម្អាតការបង្ហោះដែលបានរក្សាទុកទាំងអស់?</string>
+    <string name="forums_saved_clear_confirm_body">វាលុបការបង្ហោះទាំងអស់ចេញពីបញ្ជីរក្សាទុករបស់អ្នក។ មិនអាចត្រឡប់វិញបានទេ។</string>
+    <string name="forums_saved_empty_title">មិនទាន់មានអ្វីបានរក្សាទុកនៅឡើយទេ</string>
+    <string name="forums_saved_empty_subtitle">ប៉ះសញ្ញាចំណាំនៅលើការបង្ហោះណាមួយ ដើម្បីរក្សាទុកវានៅទីនេះសម្រាប់ពេលក្រោយ។</string>
+    <string name="forums_saved_error_clear">បរាជ័យក្នុងការសម្អាតការបង្ហោះដែលបានរក្សាទុក</string>
+    <plurals name="forums_new_posts">
+        <item quantity="other">ការបង្ហោះថ្មី %d </item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Gyzyklanma azaldyldy</string>
     <string name="feeds_interest_removed">Gyzyklanma aýryldy</string>
     <string name="feeds_interest_failed">Gyzyklanma sazlanmady</string>
+    <string name="feeds_saved_title">Saklandy</string>
+    <string name="feeds_saved_menu">Saklandy</string>
+    <string name="feeds_saved_save">Soňra üçin ýatda sakla</string>
+    <string name="feeds_saved_remove">Ýatda saklananlardan aýyr</string>
+    <string name="feeds_saved_clear_all">Hemmesini arassalamak</string>
+    <string name="feeds_saved_clear_confirm_title">Ähli ýatda saklanan ýazgylar arassalansynmy?</string>
+    <string name="feeds_saved_clear_confirm_body">Bu siziň ýatda saklanan sanawyňyzdan her ýazgyny aýyrýar. Muny yzyna gaýtaryp bolmaýar.</string>
+    <string name="feeds_saved_empty_title">Hiç zat heniz ýazga geçirilmedi</string>
+    <string name="feeds_saved_empty_subtitle">Islendik ýazgyny şu ýerde soňra üçin ýatda saklamak üçin onuň bellige basyň.</string>
+    <string name="feeds_saved_error_clear">Ýatda saklanan ýazgylary arassalap bolmady</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d täze ýazgy</item>
+        <item quantity="other">%d täze ýazgy</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Qiziqish kamaytirildi</string>
     <string name="feeds_interest_removed">Qiziqish olib tashlandi</string>
     <string name="feeds_interest_failed">Qiziqishni sozlab boʻlmadi</string>
+    <string name="feeds_saved_title">Saqlandi</string>
+    <string name="feeds_saved_menu">Saqlandi</string>
+    <string name="feeds_saved_save">Keyinroq uchun saqlash</string>
+    <string name="feeds_saved_remove">Saqlanganlardan olib tashlash</string>
+    <string name="feeds_saved_clear_all">Hammasini tozalash</string>
+    <string name="feeds_saved_clear_confirm_title">Barcha saqlangan postlar tozalansinmi?</string>
+    <string name="feeds_saved_clear_confirm_body">Bu sizning saqlangan ro\'yxatingizdan har bir postni olib tashlaydi. Buni qaytarib bo\'lmaydi.</string>
+    <string name="feeds_saved_empty_title">Hali hech narsa saqlanmagan</string>
+    <string name="feeds_saved_empty_subtitle">Istalgan postni shu yerda keyinroq uchun saqlash uchun uning xatcho\'piga teging.</string>
+    <string name="feeds_saved_error_clear">Saqlangan postlarni tozalab bo\'lmadi</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d yangi post</item>
+        <item quantity="other">%d yangi post</item>
+    </plurals>
 </resources>

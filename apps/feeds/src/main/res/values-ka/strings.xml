@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">ინტერესი შემცირდა</string>
     <string name="feeds_interest_removed">ინტერესი წაიშალა</string>
     <string name="feeds_interest_failed">ინტერესის კორექტირება ვერ მოხერხდა</string>
+    <string name="feeds_saved_title">შენახული</string>
+    <string name="feeds_saved_menu">შენახული</string>
+    <string name="feeds_saved_save">შეინახე მოგვიანებისთვის</string>
+    <string name="feeds_saved_remove">წაშლა შენახულებიდან</string>
+    <string name="feeds_saved_clear_all">ყველაფრის გასუფთავება</string>
+    <string name="feeds_saved_clear_confirm_title">წავშალო ყველა შენახული პოსტი?</string>
+    <string name="feeds_saved_clear_confirm_body">ეს ამოშლის ყველა პოსტს თქვენი შენახულების სიიდან. ამის გაუქმება შეუძლებელია.</string>
+    <string name="feeds_saved_empty_title">ჯერ არაფერია შენახული</string>
+    <string name="feeds_saved_empty_subtitle">შესანახად აქ მოგვიანებისთვის შეეხეთ ნებისმიერი პოსტის სანიშნეს.</string>
+    <string name="feeds_saved_error_clear">შენახული პოსტების წაშლა ვერ მოხერხდა</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d ახალი პოსტი</item>
+        <item quantity="other">%d ახალი პოსტი</item>
+    </plurals>
 </resources>

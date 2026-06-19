@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Munakuy pisiyachisqa</string>
     <string name="feeds_interest_removed">Munakuy pichasqa</string>
     <string name="feeds_interest_failed">Mana munakuyta tupachiyta atinchu</string>
+    <string name="feeds_saved_title">Waqaychasqa</string>
+    <string name="feeds_saved_menu">Waqaychasqa</string>
+    <string name="feeds_saved_save">Qhipaman waqaychay</string>
+    <string name="feeds_saved_remove">Waqaychasqakunamanta hurquy</string>
+    <string name="feeds_saved_clear_all">Llapan pichay</string>
+    <string name="feeds_saved_clear_confirm_title">¿Llapa waqaychasqa willakuykunata pichanki?</string>
+    <string name="feeds_saved_clear_confirm_body">Kayqa llapa willakuyta waqaychasqayki listamanta hurqun. Manam kutichiyta atikunchu.</string>
+    <string name="feeds_saved_empty_title">Manaraqmi imaynapas waqaychasqachu</string>
+    <string name="feeds_saved_empty_subtitle">Mayqan willakuytapas kaypi qhipaman waqaychanaykipaq, marcador ñitiy.</string>
+    <string name="feeds_saved_error_clear">Waqaychasqa willakuykunata pichay mana atikurqachu</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d musuq willakuy</item>
+        <item quantity="other">%d musuq willakuykuna</item>
+    </plurals>
 </resources>

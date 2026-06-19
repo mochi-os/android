@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Goleki pangguna</string>
     <string name="forums_access_no_groups">Ora ana grup kasedhiya</string>
+    <string name="forums_saved_title">Disimpen</string>
+    <string name="forums_saved_save">Simpen kanggo mengko</string>
+    <string name="forums_saved_remove">Busak saka sing kasimpen</string>
+    <string name="forums_saved_clear_all">Resiki kabèh</string>
+    <string name="forums_saved_clear_confirm_title">Resiki kabeh kiriman sing kasimpen?</string>
+    <string name="forums_saved_clear_confirm_body">Iki mbusak saben kiriman saka dhaptar simpenanmu. Iki ora bisa dibatalake.</string>
+    <string name="forums_saved_empty_title">Durung ana sing disimpen</string>
+    <string name="forums_saved_empty_subtitle">Tutul markah ing kiriman apa wae kanggo nyimpen ing kene kanggo mengko.</string>
+    <string name="forums_saved_error_clear">Gagal ngresiki kiriman sing kasimpen</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d kiriman anyar</item>
+        <item quantity="other">%d kiriman anyar</item>
+    </plurals>
 </resources>

@@ -198,4 +198,19 @@
     <string name="feeds_interest_reduced">Interese samazināta</string>
     <string name="feeds_interest_removed">Interese noņemta</string>
     <string name="feeds_interest_failed">Neizdevās pielāgot interesi</string>
+    <string name="feeds_saved_title">Saglabāts</string>
+    <string name="feeds_saved_menu">Saglabāts</string>
+    <string name="feeds_saved_save">Saglabāt vēlākam laikam</string>
+    <string name="feeds_saved_remove">Noņemt no saglabātajiem</string>
+    <string name="feeds_saved_clear_all">Notīrīt visu</string>
+    <string name="feeds_saved_clear_confirm_title">Notīrīt visus saglabātos ierakstus?</string>
+    <string name="feeds_saved_clear_confirm_body">Tas noņem katru ierakstu no jūsu saglabāto saraksta. To nevar atsaukt.</string>
+    <string name="feeds_saved_empty_title">Vēl nekas nav saglabāts</string>
+    <string name="feeds_saved_empty_subtitle">Pieskarieties jebkura ieraksta grāmatzīmei, lai saglabātu to šeit vēlākam laikam.</string>
+    <string name="feeds_saved_error_clear">Neizdevās notīrīt saglabātos ierakstus</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="zero">%d jaunu ierakstu</item>
+        <item quantity="one">%d jauns ieraksts</item>
+        <item quantity="other">%d jauni ieraksti</item>
+    </plurals>
 </resources>

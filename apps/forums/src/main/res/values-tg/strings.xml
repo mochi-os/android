@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Дастӣ</string>
     <string name="forums_access_search_users">Ҷустуҷӯи корбарон</string>
     <string name="forums_access_no_groups">Ягон гурӯҳ дастрас нест</string>
+    <string name="forums_saved_title">Захирашуда</string>
+    <string name="forums_saved_save">Барои баъдтар нигоҳ доред</string>
+    <string name="forums_saved_remove">Аз нигоҳдошташуда тоза кунед</string>
+    <string name="forums_saved_clear_all">Ҳамаро тоза кардан</string>
+    <string name="forums_saved_clear_confirm_title">Ҳамаи паёмҳои нигоҳдошташударо тоза мекунед?</string>
+    <string name="forums_saved_clear_confirm_body">Ин ҳар паёмро аз рӯйхати нигоҳдошташудаи шумо тоза мекунад. Инро бекор кардан мумкин нест.</string>
+    <string name="forums_saved_empty_title">То ҳол чизе захира нашудааст</string>
+    <string name="forums_saved_empty_subtitle">Барои нигоҳ доштани ягон паём дар ин ҷо барои баъдтар, ба хатчӯби он зер кунед.</string>
+    <string name="forums_saved_error_clear">Тоза кардани паёмҳои нигоҳдошташуда ноком шуд</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d паёми нав</item>
+        <item quantity="other">%d паёмҳои нав</item>
+    </plurals>
 </resources>

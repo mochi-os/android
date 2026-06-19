@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Oikoteveva oñembogue\'i</string>
     <string name="feeds_interest_removed">Oikoteveva oñembogue</string>
     <string name="feeds_interest_failed">Ndaikatúi oñemyatyrõ oikoteveva</string>
+    <string name="feeds_saved_title">Oñeñongatu</string>
+    <string name="feeds_saved_menu">Oñeñongatu</string>
+    <string name="feeds_saved_save">Eñongatu upe rireguarã</string>
+    <string name="feeds_saved_remove">Eipe\'a ñongatupývagui</string>
+    <string name="feeds_saved_clear_all">Embopotĩ opaite</string>
+    <string name="feeds_saved_clear_confirm_title">¿Emboguepa opa marandu ñongatupyre?</string>
+    <string name="feeds_saved_clear_confirm_body">Kóva oipe\'a opa marandu ne ñongatupyre ndive. Ndaikatúi ojejapojey.</string>
+    <string name="feeds_saved_empty_title">Ndaipóri gueteri mba\'eve oñongatupyre</string>
+    <string name="feeds_saved_empty_subtitle">Eñongatu haguã peteĩ marandu ko\'ápe upe rireguarã, ekutu marcador hese.</string>
+    <string name="feeds_saved_error_clear">Ndaikatúi oñemboguepa umi marandu ñongatupyre</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d marandu pyahu</item>
+        <item quantity="other">%d marandu pyahu</item>
+    </plurals>
 </resources>

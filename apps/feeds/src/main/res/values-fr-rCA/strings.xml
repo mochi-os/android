@@ -194,4 +194,8 @@
     <string name="feeds_settings_prompt_reset">Invite réinitialisée par défaut</string>
 
     <string name="feeds_refresh">Actualiser</string>
+    <string name="feeds_saved_title">Enregistré</string>
+    <string name="feeds_saved_menu">Enregistré</string>
+    <string name="feeds_saved_remove">Retirer des favoris</string>
+    <string name="feeds_saved_clear_all">Tout effacer</string>
 </resources>

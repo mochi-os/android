@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Minat dikurangan</string>
     <string name="feeds_interest_removed">Minat dipupus</string>
     <string name="feeds_interest_failed">Gagal ngajustér minat</string>
+    <string name="feeds_saved_title">Disimpen</string>
+    <string name="feeds_saved_menu">Disimpen</string>
+    <string name="feeds_saved_save">Simpen kanggo engké</string>
+    <string name="feeds_saved_remove">Piceun tina nu disimpen</string>
+    <string name="feeds_saved_clear_all">Bersihkeun sadaya</string>
+    <string name="feeds_saved_clear_confirm_title">Pupus sadaya kintunan nu disimpen?</string>
+    <string name="feeds_saved_clear_confirm_body">Ieu mupus unggal kintunan tina daptar disimpen anjeun. Ieu teu tiasa dibatalkeun.</string>
+    <string name="feeds_saved_empty_title">Can aya nu disimpen</string>
+    <string name="feeds_saved_empty_subtitle">Toél markah dina kintunan mana waé pikeun nyimpen di dieu kanggo engké.</string>
+    <string name="feeds_saved_error_clear">Gagal mupus kintunan nu disimpen</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d kintunan anyar</item>
+        <item quantity="other">%d kintunan anyar</item>
+    </plurals>
 </resources>

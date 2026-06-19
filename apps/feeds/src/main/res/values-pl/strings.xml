@@ -198,4 +198,20 @@
     <string name="feeds_interest_reduced">Zainteresowanie zmniejszone</string>
     <string name="feeds_interest_removed">Zainteresowanie usunięte</string>
     <string name="feeds_interest_failed">Nie udało się dostosować zainteresowania</string>
+    <string name="feeds_saved_title">Zapisano</string>
+    <string name="feeds_saved_menu">Zapisano</string>
+    <string name="feeds_saved_save">Zapisz na później</string>
+    <string name="feeds_saved_remove">Usuń z zapisanych</string>
+    <string name="feeds_saved_clear_all">Wyczyść wszystko</string>
+    <string name="feeds_saved_clear_confirm_title">Wyczyścić wszystkie zapisane posty?</string>
+    <string name="feeds_saved_clear_confirm_body">Spowoduje to usunięcie każdego posta z listy zapisanych. Tej operacji nie można cofnąć.</string>
+    <string name="feeds_saved_empty_title">Nic jeszcze nie zapisano</string>
+    <string name="feeds_saved_empty_subtitle">Dotknij zakładki przy dowolnym poście, aby zapisać go tutaj na później.</string>
+    <string name="feeds_saved_error_clear">Nie udało się wyczyścić zapisanych postów</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nowy post</item>
+        <item quantity="few">%d nowe posty</item>
+        <item quantity="many">%d nowych postów</item>
+        <item quantity="other">%d nowego posta</item>
+    </plurals>
 </resources>

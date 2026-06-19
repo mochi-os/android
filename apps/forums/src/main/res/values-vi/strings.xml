@@ -207,4 +207,16 @@
     <string name="forums_access_tab_manual">Thủ công</string>
     <string name="forums_access_search_users">Tìm kiếm người dùng</string>
     <string name="forums_access_no_groups">Không có nhóm nào</string>
+    <string name="forums_saved_title">Đã lưu</string>
+    <string name="forums_saved_save">Lưu để xem sau</string>
+    <string name="forums_saved_remove">Xóa khỏi mục đã lưu</string>
+    <string name="forums_saved_clear_all">Xóa tất cả</string>
+    <string name="forums_saved_clear_confirm_title">Xóa tất cả bài viết đã lưu?</string>
+    <string name="forums_saved_clear_confirm_body">Thao tác này xóa mọi bài viết khỏi danh sách đã lưu của bạn. Không thể hoàn tác.</string>
+    <string name="forums_saved_empty_title">Chưa lưu gì cả</string>
+    <string name="forums_saved_empty_subtitle">Chạm vào dấu trang trên bất kỳ bài viết nào để lưu vào đây để xem sau.</string>
+    <string name="forums_saved_error_clear">Không xóa được các bài viết đã lưu</string>
+    <plurals name="forums_new_posts">
+        <item quantity="other">%d bài viết mới</item>
+    </plurals>
 </resources>

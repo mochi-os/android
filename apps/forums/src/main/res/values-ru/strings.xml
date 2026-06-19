@@ -207,4 +207,19 @@
     <string name="forums_access_tab_manual">Вручную</string>
     <string name="forums_access_search_users">Поиск пользователей</string>
     <string name="forums_access_no_groups">Нет доступных групп</string>
+    <string name="forums_saved_title">Сохранено</string>
+    <string name="forums_saved_save">Сохранить на потом</string>
+    <string name="forums_saved_remove">Удалить из сохранённого</string>
+    <string name="forums_saved_clear_all">Очистить всё</string>
+    <string name="forums_saved_clear_confirm_title">Очистить все сохранённые публикации?</string>
+    <string name="forums_saved_clear_confirm_body">Это удалит каждую публикацию из вашего списка сохранённого. Это действие нельзя отменить.</string>
+    <string name="forums_saved_empty_title">Пока ничего не сохранено</string>
+    <string name="forums_saved_empty_subtitle">Коснитесь закладки на любой публикации, чтобы сохранить её здесь на потом.</string>
+    <string name="forums_saved_error_clear">Не удалось очистить сохранённые публикации</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d новая публикация</item>
+        <item quantity="few">%d новые публикации</item>
+        <item quantity="many">%d новых публикаций</item>
+        <item quantity="other">%d новой публикации</item>
+    </plurals>
 </resources>

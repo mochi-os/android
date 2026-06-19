@@ -207,4 +207,18 @@
     <string name="forums_access_tab_manual">Manuāls</string>
     <string name="forums_access_search_users">Meklēt lietotājus</string>
     <string name="forums_access_no_groups">Nav pieejamu grupu</string>
+    <string name="forums_saved_title">Saglabāts</string>
+    <string name="forums_saved_save">Saglabāt vēlākam laikam</string>
+    <string name="forums_saved_remove">Noņemt no saglabātajiem</string>
+    <string name="forums_saved_clear_all">Notīrīt visu</string>
+    <string name="forums_saved_clear_confirm_title">Notīrīt visus saglabātos ierakstus?</string>
+    <string name="forums_saved_clear_confirm_body">Tas noņem katru ierakstu no jūsu saglabāto saraksta. To nevar atsaukt.</string>
+    <string name="forums_saved_empty_title">Vēl nekas nav saglabāts</string>
+    <string name="forums_saved_empty_subtitle">Pieskarieties jebkura ieraksta grāmatzīmei, lai saglabātu to šeit vēlākam laikam.</string>
+    <string name="forums_saved_error_clear">Neizdevās notīrīt saglabātos ierakstus</string>
+    <plurals name="forums_new_posts">
+        <item quantity="zero">%d jaunu ierakstu</item>
+        <item quantity="one">%d jauns ieraksts</item>
+        <item quantity="other">%d jauni ieraksti</item>
+    </plurals>
 </resources>

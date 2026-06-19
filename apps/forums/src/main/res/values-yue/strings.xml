@@ -207,4 +207,7 @@
     <string name="forums_access_tab_manual">手動</string>
     <string name="forums_access_search_users">搜尋用戶</string>
     <string name="forums_access_no_groups">冇可用嘅群組</string>
+    <string name="forums_saved_title">已儲存</string>
+    <string name="forums_saved_remove">由已儲存中移除</string>
+    <string name="forums_saved_clear_all">全部清除</string>
 </resources>

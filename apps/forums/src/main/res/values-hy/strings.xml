@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Նշել բոլորը կարդացված</string>
     <string name="forums_access_search_users">Որոնել օգտատերեր</string>
     <string name="forums_access_no_groups">Հասանելի խմբեր չկան</string>
+    <string name="forums_saved_title">Պահպանված է</string>
+    <string name="forums_saved_save">Պահել ավելի ուշ համար</string>
+    <string name="forums_saved_remove">Հեռացնել պահվածներից</string>
+    <string name="forums_saved_clear_all">Մաքրել զտիչները</string>
+    <string name="forums_saved_clear_confirm_title">Մաքրե՞լ բոլոր պահված գրառումները</string>
+    <string name="forums_saved_clear_confirm_body">Սա հեռացնում է բոլոր գրառումները ձեր պահվածների ցանկից։ Սա հնարավոր չէ հետարկել։</string>
+    <string name="forums_saved_empty_title">Դեռ ոչինչ չի պահպանվել</string>
+    <string name="forums_saved_empty_subtitle">Ցանկացած գրառում այստեղ ավելի ուշ համար պահելու համար հպեք դրա էջանիշին։</string>
+    <string name="forums_saved_error_clear">Չհաջողվեց մաքրել պահված գրառումները</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d նոր գրառում</item>
+        <item quantity="other">%d նոր գրառում</item>
+    </plurals>
 </resources>

@@ -200,4 +200,8 @@
     <string name="feeds_interest_reduced">Interesse redusert</string>
     <string name="feeds_interest_removed">Interesse fjerna</string>
     <string name="feeds_interest_failed">Klarte ikkje justera interesse</string>
+    <string name="feeds_saved_clear_all">Tøm alle</string>
+    <string name="feeds_saved_title">Lagra</string>
+    <string name="feeds_saved_menu">Lagra</string>
+    <string name="feeds_saved_remove">Fjern frå lagra</string>
 </resources>

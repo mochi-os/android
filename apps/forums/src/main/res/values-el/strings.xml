@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Χειροκίνητο</string>
     <string name="forums_access_search_users">Αναζήτηση χρηστών</string>
     <string name="forums_access_no_groups">Δεν υπάρχουν διαθέσιμες ομάδες</string>
+    <string name="forums_saved_title">Αποθηκεύτηκε</string>
+    <string name="forums_saved_save">Αποθήκευση για αργότερα</string>
+    <string name="forums_saved_remove">Αφαίρεση από τα αποθηκευμένα</string>
+    <string name="forums_saved_clear_all">Εκκαθάριση όλων</string>
+    <string name="forums_saved_clear_confirm_title">Εκκαθάριση όλων των αποθηκευμένων δημοσιεύσεων;</string>
+    <string name="forums_saved_clear_confirm_body">Αυτό αφαιρεί κάθε δημοσίευση από τη λίστα αποθηκευμένων σας. Δεν μπορεί να αναιρεθεί.</string>
+    <string name="forums_saved_empty_title">Δεν έχει αποθηκευτεί τίποτα ακόμη</string>
+    <string name="forums_saved_empty_subtitle">Πατήστε τον σελιδοδείκτη σε οποιαδήποτε δημοσίευση για να την αποθηκεύσετε εδώ για αργότερα.</string>
+    <string name="forums_saved_error_clear">Η εκκαθάριση των αποθηκευμένων δημοσιεύσεων απέτυχε</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d νέα δημοσίευση</item>
+        <item quantity="other">%d νέες δημοσιεύσεις</item>
+    </plurals>
 </resources>

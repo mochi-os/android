@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Qoʻlda</string>
     <string name="forums_access_search_users">Foydalanuvchilarni qidirish</string>
     <string name="forums_access_no_groups">Mavjud guruhlar yoʻq</string>
+    <string name="forums_saved_title">Saqlandi</string>
+    <string name="forums_saved_save">Keyinroq uchun saqlash</string>
+    <string name="forums_saved_remove">Saqlanganlardan olib tashlash</string>
+    <string name="forums_saved_clear_all">Hammasini tozalash</string>
+    <string name="forums_saved_clear_confirm_title">Barcha saqlangan postlar tozalansinmi?</string>
+    <string name="forums_saved_clear_confirm_body">Bu sizning saqlangan ro\'yxatingizdan har bir postni olib tashlaydi. Buni qaytarib bo\'lmaydi.</string>
+    <string name="forums_saved_empty_title">Hali hech narsa saqlanmagan</string>
+    <string name="forums_saved_empty_subtitle">Istalgan postni shu yerda keyinroq uchun saqlash uchun uning xatcho\'piga teging.</string>
+    <string name="forums_saved_error_clear">Saqlangan postlarni tozalab bo\'lmadi</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d yangi post</item>
+        <item quantity="other">%d yangi post</item>
+    </plurals>
 </resources>

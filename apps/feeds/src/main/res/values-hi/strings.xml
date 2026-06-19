@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">रुचि घटाई गई</string>
     <string name="feeds_interest_removed">रुचि हटाई गई</string>
     <string name="feeds_interest_failed">रुचि समायोजित करने में विफल</string>
+    <string name="feeds_saved_title">सेव किया गया</string>
+    <string name="feeds_saved_menu">सेव किया गया</string>
+    <string name="feeds_saved_save">बाद के लिए सहेजें</string>
+    <string name="feeds_saved_remove">सहेजे गए से हटाएँ</string>
+    <string name="feeds_saved_clear_all">सब साफ़ करें</string>
+    <string name="feeds_saved_clear_confirm_title">सभी सहेजी गई पोस्ट साफ़ करें?</string>
+    <string name="feeds_saved_clear_confirm_body">यह आपकी सहेजी गई सूची से हर पोस्ट हटा देता है। इसे पूर्ववत नहीं किया जा सकता।</string>
+    <string name="feeds_saved_empty_title">अभी तक कुछ भी सहेजा नहीं गया</string>
+    <string name="feeds_saved_empty_subtitle">किसी भी पोस्ट को यहाँ बाद के लिए सहेजने के लिए उसके बुकमार्क पर टैप करें।</string>
+    <string name="feeds_saved_error_clear">सहेजी गई पोस्ट साफ़ करने में विफल</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d नई पोस्ट</item>
+        <item quantity="other">%d नई पोस्ट</item>
+    </plurals>
 </resources>

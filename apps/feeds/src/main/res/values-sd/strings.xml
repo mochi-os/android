@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">دلچسپي گهٽ ٿي</string>
     <string name="feeds_interest_removed">دلچسپي هٽائي وئي</string>
     <string name="feeds_interest_failed">دلچسپي ترتيب ڏيڻ ۾ ناڪام</string>
+    <string name="feeds_saved_title">محفوظ ٿيو</string>
+    <string name="feeds_saved_menu">محفوظ ٿيو</string>
+    <string name="feeds_saved_save">پوءِ لاءِ محفوظ ڪريو</string>
+    <string name="feeds_saved_remove">محفوظ ٿيلن مان هٽايو</string>
+    <string name="feeds_saved_clear_all">سڀ صاف ڪريو</string>
+    <string name="feeds_saved_clear_confirm_title">سڀ محفوظ ٿيل پوسٽون صاف ڪجن؟</string>
+    <string name="feeds_saved_clear_confirm_body">هي توهان جي محفوظ فهرست مان هر پوسٽ هٽائي ٿو. ان کي واپس نٿو ڪري سگهجي.</string>
+    <string name="feeds_saved_empty_title">اڃا ڪجهه به محفوظ نه ٿيو آهي</string>
+    <string name="feeds_saved_empty_subtitle">ڪنهن به پوسٽ کي هتي پوءِ لاءِ محفوظ ڪرڻ لاءِ ان جي بوڪ مارڪ تي ٽيپ ڪريو.</string>
+    <string name="feeds_saved_error_clear">محفوظ ٿيل پوسٽون صاف ڪرڻ ۾ ناڪامي</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d نئين پوسٽ</item>
+        <item quantity="other">%d نيون پوسٽون</item>
+    </plurals>
 </resources>

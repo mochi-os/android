@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Гар аргаар</string>
     <string name="forums_access_search_users">Хэрэглэгчид хайх</string>
     <string name="forums_access_no_groups">Боломжит групп байхгүй</string>
+    <string name="forums_saved_title">Хадгалагдсан</string>
+    <string name="forums_saved_save">Дараа үзэхээр хадгалах</string>
+    <string name="forums_saved_remove">Хадгалсанаас хасах</string>
+    <string name="forums_saved_clear_all">Бүгдийг цэвэрлэх</string>
+    <string name="forums_saved_clear_confirm_title">Хадгалсан бүх нийтлэлийг цэвэрлэх үү?</string>
+    <string name="forums_saved_clear_confirm_body">Энэ нь таны хадгалсан жагсаалтаас бүх нийтлэлийг хасна. Үүнийг буцаах боломжгүй.</string>
+    <string name="forums_saved_empty_title">Одоохондоо юу ч хадгалаагүй байна</string>
+    <string name="forums_saved_empty_subtitle">Аливаа нийтлэлийг энд дараа үзэхээр хадгалахын тулд хавчуургад нь товшино уу.</string>
+    <string name="forums_saved_error_clear">Хадгалсан нийтлэлүүдийг цэвэрлэж чадсангүй</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d шинэ нийтлэл</item>
+        <item quantity="other">%d шинэ нийтлэл</item>
+    </plurals>
 </resources>

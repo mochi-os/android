@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Elle</string>
     <string name="forums_access_search_users">Kullanıcılarda ara</string>
     <string name="forums_access_no_groups">Grup yok</string>
+    <string name="forums_saved_title">Kaydedildi</string>
+    <string name="forums_saved_save">Sonrası için kaydet</string>
+    <string name="forums_saved_remove">Kaydedilenlerden kaldır</string>
+    <string name="forums_saved_clear_all">Tümünü temizle</string>
+    <string name="forums_saved_clear_confirm_title">Kaydedilen tüm gönderiler temizlensin mi?</string>
+    <string name="forums_saved_clear_confirm_body">Bu, kaydedilenler listenizden her gönderiyi kaldırır. Bu işlem geri alınamaz.</string>
+    <string name="forums_saved_empty_title">Henüz hiçbir şey kaydedilmedi</string>
+    <string name="forums_saved_empty_subtitle">Herhangi bir gönderiyi sonrası için buraya kaydetmek için yer iminize dokunun.</string>
+    <string name="forums_saved_error_clear">Kaydedilen gönderiler temizlenemedi</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d yeni gönderi</item>
+        <item quantity="other">%d yeni gönderi</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">താൽപ്പര്യം കുറച്ചു</string>
     <string name="feeds_interest_removed">താൽപ്പര്യം നീക്കം ചെയ്തു</string>
     <string name="feeds_interest_failed">താൽപ്പര്യം ക്രമീകരിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="feeds_saved_title">സേവ് ചെയ്തു</string>
+    <string name="feeds_saved_menu">സേവ് ചെയ്തു</string>
+    <string name="feeds_saved_save">പിന്നീടേക്കായി സംരക്ഷിക്കുക</string>
+    <string name="feeds_saved_remove">സംരക്ഷിച്ചവയിൽ നിന്ന് നീക്കം ചെയ്യുക</string>
+    <string name="feeds_saved_clear_all">എല്ലാം മായ്ക്കുക</string>
+    <string name="feeds_saved_clear_confirm_title">സംരക്ഷിച്ച എല്ലാ പോസ്റ്റുകളും മായ്ക്കണോ?</string>
+    <string name="feeds_saved_clear_confirm_body">ഇത് നിങ്ങളുടെ സംരക്ഷിച്ച പട്ടികയിൽ നിന്ന് എല്ലാ പോസ്റ്റും നീക്കം ചെയ്യുന്നു. ഇത് പഴയപടിയാക്കാനാകില്ല.</string>
+    <string name="feeds_saved_empty_title">ഇതുവരെ ഒന്നും സംരക്ഷിച്ചിട്ടില്ല</string>
+    <string name="feeds_saved_empty_subtitle">ഏതെങ്കിലും പോസ്റ്റ് ഇവിടെ പിന്നീടേക്കായി സംരക്ഷിക്കാൻ അതിന്റെ ബുക്ക്മാർക്കിൽ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="feeds_saved_error_clear">സംരക്ഷിച്ച പോസ്റ്റുകൾ മായ്ക്കാനായില്ല</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d പുതിയ പോസ്റ്റ്</item>
+        <item quantity="other">%d പുതിയ പോസ്റ്റുകൾ</item>
+    </plurals>
 </resources>

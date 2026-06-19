@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">An rage interest</string>
     <string name="feeds_interest_removed">An cire interest</string>
     <string name="feeds_interest_failed">An gaza daidaita interest</string>
+    <string name="feeds_saved_title">An adana</string>
+    <string name="feeds_saved_menu">An adana</string>
+    <string name="feeds_saved_save">Ajiye don baya</string>
+    <string name="feeds_saved_remove">Cire daga ajiyayyu</string>
+    <string name="feeds_saved_clear_all">Share duka</string>
+    <string name="feeds_saved_clear_confirm_title">Share duk wasiƙun da aka ajiye?</string>
+    <string name="feeds_saved_clear_confirm_body">Wannan yana cire kowane wasiƙa daga jerin ajiyarka. Ba za a iya soke shi ba.</string>
+    <string name="feeds_saved_empty_title">Babu wani abu da aka adana har yanzu</string>
+    <string name="feeds_saved_empty_subtitle">Danna alamar shafi a kan kowane wasiƙa don ajiye shi nan don baya.</string>
+    <string name="feeds_saved_error_clear">An kasa share wasiƙun da aka ajiye</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d sabon wasiƙa</item>
+        <item quantity="other">%d sababbin wasiƙu</item>
+    </plurals>
 </resources>

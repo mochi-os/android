@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">A ti dín ìfẹ́ kù</string>
     <string name="feeds_interest_removed">A ti mú ìfẹ́ kúrò</string>
     <string name="feeds_interest_failed">Kò lè ṣàtúnṣe ìfẹ́</string>
+    <string name="feeds_saved_title">Ti fi pamọ́</string>
+    <string name="feeds_saved_menu">Ti fi pamọ́</string>
+    <string name="feeds_saved_save">Fipamọ́ fún ìgbà tó ń bọ̀</string>
+    <string name="feeds_saved_remove">Yọ kúrò nínú àwọn tí a fipamọ́</string>
+    <string name="feeds_saved_clear_all">Pa gbogbo rẹ̀ rẹ́</string>
+    <string name="feeds_saved_clear_confirm_title">Pa gbogbo àwọn ìfìwéránṣẹ́ tí a fipamọ́ rẹ́?</string>
+    <string name="feeds_saved_clear_confirm_body">Èyí yọ gbogbo ìfìwéránṣẹ́ kúrò nínú àkójọ àwọn tí o fipamọ́. A kò lè dá a padà.</string>
+    <string name="feeds_saved_empty_title">Kò sí ohun tí a tí pamọ́ síbẹ̀</string>
+    <string name="feeds_saved_empty_subtitle">Tẹ àmì-ìwé lórí ìfìwéránṣẹ́ èyíkéyìí láti fipamọ́ síbí fún ìgbà tó ń bọ̀.</string>
+    <string name="feeds_saved_error_clear">Kò ṣàṣeyọrí láti pa àwọn ìfìwéránṣẹ́ tí a fipamọ́ rẹ́</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d ìfìwéránṣẹ́ tuntun</item>
+        <item quantity="other">%d ìfìwéránṣẹ́ tuntun</item>
+    </plurals>
 </resources>

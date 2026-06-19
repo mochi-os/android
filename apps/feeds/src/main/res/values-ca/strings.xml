@@ -200,4 +200,18 @@
     <string name="feeds_interest_reduced">Interès reduït</string>
     <string name="feeds_interest_removed">Interès retirat</string>
     <string name="feeds_interest_failed">No s\'ha pogut ajustar l\'interès</string>
+    <string name="feeds_saved_title">Desat</string>
+    <string name="feeds_saved_menu">Desat</string>
+    <string name="feeds_saved_save">Desa per a més tard</string>
+    <string name="feeds_saved_remove">Elimina de desats</string>
+    <string name="feeds_saved_clear_all">Esborra-ho tot</string>
+    <string name="feeds_saved_clear_confirm_title">Voleu esborrar totes les publicacions desades?</string>
+    <string name="feeds_saved_clear_confirm_body">Això elimina totes les publicacions de la vostra llista de desats. No es pot desfer.</string>
+    <string name="feeds_saved_empty_title">Encara no hi ha res desat</string>
+    <string name="feeds_saved_empty_subtitle">Toqueu el marcador de qualsevol publicació per desar-la aquí per a més tard.</string>
+    <string name="feeds_saved_error_clear">No s\'han pogut esborrar les publicacions desades</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d publicació nova</item>
+        <item quantity="other">%d publicacions noves</item>
+    </plurals>
 </resources>

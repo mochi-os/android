@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">मैन्युअल</string>
     <string name="forums_access_search_users">यूज़र खोजें</string>
     <string name="forums_access_no_groups">कोई ग्रुप उपलब्ध नहीं</string>
+    <string name="forums_saved_title">सेव किया गया</string>
+    <string name="forums_saved_save">बाद के लिए सहेजें</string>
+    <string name="forums_saved_remove">सहेजे गए से हटाएँ</string>
+    <string name="forums_saved_clear_all">सब साफ़ करें</string>
+    <string name="forums_saved_clear_confirm_title">सभी सहेजी गई पोस्ट साफ़ करें?</string>
+    <string name="forums_saved_clear_confirm_body">यह आपकी सहेजी गई सूची से हर पोस्ट हटा देता है। इसे पूर्ववत नहीं किया जा सकता।</string>
+    <string name="forums_saved_empty_title">अभी तक कुछ भी सहेजा नहीं गया</string>
+    <string name="forums_saved_empty_subtitle">किसी भी पोस्ट को यहाँ बाद के लिए सहेजने के लिए उसके बुकमार्क पर टैप करें।</string>
+    <string name="forums_saved_error_clear">सहेजी गई पोस्ट साफ़ करने में विफल</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d नई पोस्ट</item>
+        <item quantity="other">%d नई पोस्ट</item>
+    </plurals>
 </resources>

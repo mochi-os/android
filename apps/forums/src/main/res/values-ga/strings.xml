@@ -207,4 +207,20 @@
     <string name="forums_access_tab_manual">Láimhe</string>
     <string name="forums_access_search_users">Cuardaigh úsáideoirí</string>
     <string name="forums_access_no_groups">Níl aon ghrúpa ar fáil</string>
+    <string name="forums_saved_title">Sábháilte</string>
+    <string name="forums_saved_save">Sábháil do níos déanaí</string>
+    <string name="forums_saved_remove">Bain ó na cinn shábháilte</string>
+    <string name="forums_saved_clear_all">Glan an t-iomlán</string>
+    <string name="forums_saved_clear_confirm_title">Glan gach postáil shábháilte?</string>
+    <string name="forums_saved_clear_confirm_body">Baineann sé seo gach postáil ó do liosta sábháilte. Ní féidir é seo a chealú.</string>
+    <string name="forums_saved_empty_title">Níl aon rud sábháilte fós</string>
+    <string name="forums_saved_empty_subtitle">Tapáil an leabharmharc ar phostáil ar bith chun é a shábháil anseo do níos déanaí.</string>
+    <string name="forums_saved_error_clear">Theip ar na postálacha sábháilte a ghlanadh</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d phostáil nua</item>
+        <item quantity="two">%d phostáil nua</item>
+        <item quantity="few">%d phostáil nua</item>
+        <item quantity="many">%d bpostáil nua</item>
+        <item quantity="other">%d postáil nua</item>
+    </plurals>
 </resources>

@@ -11,6 +11,8 @@ import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.SavedListResponse
+import org.mochios.feeds.model.SavedToggleResponse
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
 import retrofit2.Response
@@ -196,6 +198,27 @@ interface FeedsApi {
 
     @GET("-/groups")
     suspend fun getGroups(): Response<ApiResponse<GroupListResponse>>
+
+    // --- Saved (read-later) — class-level, per-user list spanning all feeds ---
+
+    @POST("-/saved/list")
+    suspend fun listSaved(): Response<ApiResponse<SavedListResponse>>
+
+    @FormUrlEncoded
+    @POST("-/saved/add")
+    suspend fun addSaved(
+        @Field("post") post: String,
+        @Field("data") data: String
+    ): Response<ApiResponse<SavedToggleResponse>>
+
+    @FormUrlEncoded
+    @POST("-/saved/remove")
+    suspend fun removeSaved(
+        @Field("post") post: String
+    ): Response<ApiResponse<SavedToggleResponse>>
+
+    @POST("-/saved/clear")
+    suspend fun clearSaved(): Response<ApiResponse<SavedToggleResponse>>
 
     // --- Entity-level endpoints ---
 

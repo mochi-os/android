@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">ፍላጎት ቀንሷል</string>
     <string name="feeds_interest_removed">ፍላጎት ተወግዷል</string>
     <string name="feeds_interest_failed">ፍላጎትን ማስተካከል አልተሳካም</string>
+    <string name="feeds_saved_title">ተቀምጧል</string>
+    <string name="feeds_saved_menu">ተቀምጧል</string>
+    <string name="feeds_saved_save">ለኋላ አስቀምጥ</string>
+    <string name="feeds_saved_remove">ከተቀመጡ አስወግድ</string>
+    <string name="feeds_saved_clear_all">ሁሉንም አጽዳ</string>
+    <string name="feeds_saved_clear_confirm_title">ሁሉንም የተቀመጡ ልጥፎች ይጽዱ?</string>
+    <string name="feeds_saved_clear_confirm_body">ይህ ሁሉንም ልጥፍ ከተቀመጠ ዝርዝርዎ ያስወግዳል። ይህ ሊቀለበስ አይችልም።</string>
+    <string name="feeds_saved_empty_title">እስካሁን ምንም አልተቀመጠም</string>
+    <string name="feeds_saved_empty_subtitle">ለኋላ እዚህ ለማስቀመጥ በማንኛውም ልጥፍ ላይ ያለውን ዕልባት ይንኩ።</string>
+    <string name="feeds_saved_error_clear">የተቀመጡ ልጥፎችን ማጽዳት አልተሳካም</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d አዲስ ልጥፍ</item>
+        <item quantity="other">%d አዲስ ልጥፎች</item>
+    </plurals>
 </resources>

@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Mvuto umepunguzwa</string>
     <string name="feeds_interest_removed">Mvuto umeondolewa</string>
     <string name="feeds_interest_failed">Imeshindwa kurekebisha mvuto</string>
+    <string name="feeds_saved_title">Imehifadhiwa</string>
+    <string name="feeds_saved_menu">Imehifadhiwa</string>
+    <string name="feeds_saved_save">Hifadhi kwa baadaye</string>
+    <string name="feeds_saved_remove">Ondoa kwenye zilizohifadhiwa</string>
+    <string name="feeds_saved_clear_all">Futa vyote</string>
+    <string name="feeds_saved_clear_confirm_title">Futa machapisho yote yaliyohifadhiwa?</string>
+    <string name="feeds_saved_clear_confirm_body">Hii inaondoa kila chapisho kwenye orodha yako ya yaliyohifadhiwa. Kitendo hiki hakiwezi kutenduliwa.</string>
+    <string name="feeds_saved_empty_title">Hakuna kilichohifadhiwa bado</string>
+    <string name="feeds_saved_empty_subtitle">Gusa alamisho kwenye chapisho lolote ili kulihifadhi hapa kwa baadaye.</string>
+    <string name="feeds_saved_error_clear">Imeshindwa kufuta machapisho yaliyohifadhiwa</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d chapisho jipya</item>
+        <item quantity="other">%d machapisho mapya</item>
+    </plurals>
 </resources>

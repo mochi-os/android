@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Interés jisk\'a</string>
     <string name="feeds_interest_removed">Interés apsuta</string>
     <string name="feeds_interest_failed">Janiw interés askichaña atinkti</string>
+    <string name="feeds_saved_title">Imaña</string>
+    <string name="feeds_saved_menu">Imaña</string>
+    <string name="feeds_saved_save">Qhipxarutaki imaña</string>
+    <string name="feeds_saved_remove">Imatatat apsuña</string>
+    <string name="feeds_saved_clear_all">Taqpach q\'umachaña</string>
+    <string name="feeds_saved_clear_confirm_title">¿Taqi imata yatiyäwinaka pichañ muntati?</string>
+    <string name="feeds_saved_clear_confirm_body">Akax taqi yatiyäwinakwa imat listamat apsu. Janiw kutirayañ jaqukipkaspati.</string>
+    <string name="feeds_saved_empty_title">Janir kunas imt\'atati</string>
+    <string name="feeds_saved_empty_subtitle">Kuna yatiyäwirus aka cheqar qhipxarutaki imañatakix marcador uñtʼat liphiñtʼam.</string>
+    <string name="feeds_saved_error_clear">Imat yatiyäwinak pichañax jan walt\'kiti</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d machaqa yatiyäwi</item>
+        <item quantity="other">%d machaqa yatiyäwinaka</item>
+    </plurals>
 </resources>

@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Manwal</string>
     <string name="forums_access_search_users">Maghanap ng user</string>
     <string name="forums_access_no_groups">Walang available na grupo</string>
+    <string name="forums_saved_title">Na-save</string>
+    <string name="forums_saved_save">I-save para sa mamaya</string>
+    <string name="forums_saved_remove">Alisin sa mga naka-save</string>
+    <string name="forums_saved_clear_all">Burahin lahat</string>
+    <string name="forums_saved_clear_confirm_title">Burahin ang lahat ng naka-save na post?</string>
+    <string name="forums_saved_clear_confirm_body">Inaalis nito ang bawat post sa iyong listahan ng mga naka-save. Hindi ito mababawi.</string>
+    <string name="forums_saved_empty_title">Wala pang nai-save</string>
+    <string name="forums_saved_empty_subtitle">I-tap ang bookmark sa anumang post para i-save ito rito para sa mamaya.</string>
+    <string name="forums_saved_error_clear">Hindi nabura ang mga naka-save na post</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d bagong post</item>
+        <item quantity="other">%d bagong post</item>
+    </plurals>
 </resources>

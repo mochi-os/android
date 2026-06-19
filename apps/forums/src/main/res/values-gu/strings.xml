@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">મેન્યુઅલ</string>
     <string name="forums_access_search_users">વપરાશકર્તાઓ શોધો</string>
     <string name="forums_access_no_groups">કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી</string>
+    <string name="forums_saved_title">સાચવ્યું</string>
+    <string name="forums_saved_save">પછી માટે સાચવો</string>
+    <string name="forums_saved_remove">સાચવેલમાંથી દૂર કરો</string>
+    <string name="forums_saved_clear_all">બધું સાફ કરો</string>
+    <string name="forums_saved_clear_confirm_title">બધી સાચવેલ પોસ્ટ સાફ કરવી છે?</string>
+    <string name="forums_saved_clear_confirm_body">આ તમારી સાચવેલ સૂચિમાંથી દરેક પોસ્ટ દૂર કરે છે. આ પાછું વાળી શકાતું નથી.</string>
+    <string name="forums_saved_empty_title">હજુ સુધી કંઈ સાચવ્યું નથી</string>
+    <string name="forums_saved_empty_subtitle">કોઈપણ પોસ્ટને અહીં પછી માટે સાચવવા તેના બુકમાર્ક પર ટૅપ કરો.</string>
+    <string name="forums_saved_error_clear">સાચવેલ પોસ્ટ સાફ કરવામાં નિષ્ફળ</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d નવી પોસ્ટ</item>
+        <item quantity="other">%d નવી પોસ્ટ</item>
+    </plurals>
 </resources>

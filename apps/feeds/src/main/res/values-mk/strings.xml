@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Интересот е намален</string>
     <string name="feeds_interest_removed">Интересот е отстранет</string>
     <string name="feeds_interest_failed">Неуспешно прилагодување на интерес</string>
+    <string name="feeds_saved_title">Зачувано</string>
+    <string name="feeds_saved_menu">Зачувано</string>
+    <string name="feeds_saved_save">Зачувај за подоцна</string>
+    <string name="feeds_saved_remove">Отстрани од зачуваните</string>
+    <string name="feeds_saved_clear_all">Исчисти сè</string>
+    <string name="feeds_saved_clear_confirm_title">Да се исчистат сите зачувани објави?</string>
+    <string name="feeds_saved_clear_confirm_body">Ова ја отстранува секоја објава од вашата листа на зачувани. Ова не може да се врати.</string>
+    <string name="feeds_saved_empty_title">Сè уште ништо не е зачувано</string>
+    <string name="feeds_saved_empty_subtitle">Допрете го обележувачот на која било објава за да ја зачувате тука за подоцна.</string>
+    <string name="feeds_saved_error_clear">Чистењето на зачуваните објави не успеа</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d нова објава</item>
+        <item quantity="other">%d нови објави</item>
+    </plurals>
 </resources>

@@ -198,4 +198,17 @@
     <string name="feeds_interest_reduced">ຫຼຸດຄວາມສົນໃຈແລ້ວ</string>
     <string name="feeds_interest_removed">ຍ້າຍຄວາມສົນໃຈແລ້ວ</string>
     <string name="feeds_interest_failed">ປັບຄວາມສົນໃຈລົ້ມເຫຼວ</string>
+    <string name="feeds_saved_title">ບັນທຶກແລ້ວ</string>
+    <string name="feeds_saved_menu">ບັນທຶກແລ້ວ</string>
+    <string name="feeds_saved_save">ບັນທຶກໄວ້ສຳລັບພາຍຫຼັງ</string>
+    <string name="feeds_saved_remove">ລຶບອອກຈາກລາຍການທີ່ບັນທຶກ</string>
+    <string name="feeds_saved_clear_all">ລ້າງທັງໝົດ</string>
+    <string name="feeds_saved_clear_confirm_title">ລ້າງໂພສທີ່ບັນທຶກໄວ້ທັງໝົດບໍ?</string>
+    <string name="feeds_saved_clear_confirm_body">ການນີ້ຈະລຶບທຸກໂພສອອກຈາກລາຍການທີ່ບັນທຶກຂອງທ່ານ. ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
+    <string name="feeds_saved_empty_title">ຍັງບໍ່ມີສິ່ງໃດທີ່ບັນທຶກໄວ້</string>
+    <string name="feeds_saved_empty_subtitle">ແຕະບຸກມາກໃນໂພສໃດກໍໄດ້ເພື່ອບັນທຶກໄວ້ທີ່ນີ້ສຳລັບພາຍຫຼັງ.</string>
+    <string name="feeds_saved_error_clear">ລ້າງໂພສທີ່ບັນທຶກບໍ່ສຳເລັດ</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">%d ໂພສໃໝ່</item>
+    </plurals>
 </resources>

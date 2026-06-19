@@ -198,4 +198,17 @@
     <string name="feeds_interest_reduced">Đã giảm sở thích</string>
     <string name="feeds_interest_removed">Đã xoá sở thích</string>
     <string name="feeds_interest_failed">Không điều chỉnh sở thích được</string>
+    <string name="feeds_saved_title">Đã lưu</string>
+    <string name="feeds_saved_menu">Đã lưu</string>
+    <string name="feeds_saved_save">Lưu để xem sau</string>
+    <string name="feeds_saved_remove">Xóa khỏi mục đã lưu</string>
+    <string name="feeds_saved_clear_all">Xóa tất cả</string>
+    <string name="feeds_saved_clear_confirm_title">Xóa tất cả bài viết đã lưu?</string>
+    <string name="feeds_saved_clear_confirm_body">Thao tác này xóa mọi bài viết khỏi danh sách đã lưu của bạn. Không thể hoàn tác.</string>
+    <string name="feeds_saved_empty_title">Chưa lưu gì cả</string>
+    <string name="feeds_saved_empty_subtitle">Chạm vào dấu trang trên bất kỳ bài viết nào để lưu vào đây để xem sau.</string>
+    <string name="feeds_saved_error_clear">Không xóa được các bài viết đã lưu</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="other">%d bài viết mới</item>
+    </plurals>
 </resources>

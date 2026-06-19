@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Рачно</string>
     <string name="forums_access_search_users">Пребарај корисници</string>
     <string name="forums_access_no_groups">Нема достапни групи</string>
+    <string name="forums_saved_title">Зачувано</string>
+    <string name="forums_saved_save">Зачувај за подоцна</string>
+    <string name="forums_saved_remove">Отстрани од зачуваните</string>
+    <string name="forums_saved_clear_all">Исчисти сè</string>
+    <string name="forums_saved_clear_confirm_title">Да се исчистат сите зачувани објави?</string>
+    <string name="forums_saved_clear_confirm_body">Ова ја отстранува секоја објава од вашата листа на зачувани. Ова не може да се врати.</string>
+    <string name="forums_saved_empty_title">Сè уште ништо не е зачувано</string>
+    <string name="forums_saved_empty_subtitle">Допрете го обележувачот на која било објава за да ја зачувате тука за подоцна.</string>
+    <string name="forums_saved_error_clear">Чистењето на зачуваните објави не успеа</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d нова објава</item>
+        <item quantity="other">%d нови објави</item>
+    </plurals>
 </resources>

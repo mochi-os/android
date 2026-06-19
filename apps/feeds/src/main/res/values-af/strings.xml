@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Belang verminder</string>
     <string name="feeds_interest_removed">Belang verwyder</string>
     <string name="feeds_interest_failed">Kon nie belang aanpas nie</string>
+    <string name="feeds_saved_title">Gestoor</string>
+    <string name="feeds_saved_menu">Gestoor</string>
+    <string name="feeds_saved_save">Stoor vir later</string>
+    <string name="feeds_saved_remove">Verwyder uit gestoor</string>
+    <string name="feeds_saved_clear_all">Maak alles skoon</string>
+    <string name="feeds_saved_clear_confirm_title">Vee alle gestoorde plasings uit?</string>
+    <string name="feeds_saved_clear_confirm_body">Dit verwyder elke plasing uit jou gestoorde lys. Dit kan nie ongedaan gemaak word nie.</string>
+    <string name="feeds_saved_empty_title">Nog niks gestoor nie</string>
+    <string name="feeds_saved_empty_subtitle">Tik die boekmerk op enige plasing om dit hier vir later te stoor.</string>
+    <string name="feeds_saved_error_clear">Kon nie gestoorde plasings uitvee nie</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d nuwe plasing</item>
+        <item quantity="other">%d nuwe plasings</item>
+    </plurals>
 </resources>

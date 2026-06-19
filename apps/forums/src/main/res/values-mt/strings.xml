@@ -207,4 +207,19 @@
     <string name="forums_access_tab_manual">Manwali</string>
     <string name="forums_access_search_users">Fittex utenti</string>
     <string name="forums_access_no_groups">L-ebda gruppi disponibbli</string>
+    <string name="forums_saved_title">Issejvjat</string>
+    <string name="forums_saved_save">Issejvja għal aktar tard</string>
+    <string name="forums_saved_remove">Neħħi mis-salvati</string>
+    <string name="forums_saved_clear_all">Naddaf kollox</string>
+    <string name="forums_saved_clear_confirm_title">Tnaddaf il-postijiet salvati kollha?</string>
+    <string name="forums_saved_clear_confirm_body">Dan ineħħi kull post mil-lista tas-salvati tiegħek. Dan ma jistax jitreġġa\' lura.</string>
+    <string name="forums_saved_empty_title">Xejn ma ġie salvat sa issa</string>
+    <string name="forums_saved_empty_subtitle">Agħfas il-bookmark fuq kwalunkwe post biex issejvjah hawn għal aktar tard.</string>
+    <string name="forums_saved_error_clear">Ma rnexxiex jitnaddfu l-postijiet salvati</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d post ġdid</item>
+        <item quantity="few">%d postijiet ġodda</item>
+        <item quantity="many">%d post ġdid</item>
+        <item quantity="other">%d post ġdid</item>
+    </plurals>
 </resources>

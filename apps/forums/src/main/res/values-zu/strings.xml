@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Mathupha</string>
     <string name="forums_access_search_users">Sesha abasebenzisi</string>
     <string name="forums_access_no_groups">Awekho amaqembu atholakalayo</string>
+    <string name="forums_saved_title">Kulondoloziwe</string>
+    <string name="forums_saved_save">Londoloza ukuze ubuke kamuva</string>
+    <string name="forums_saved_remove">Susa kokulondoloziwe</string>
+    <string name="forums_saved_clear_all">Sula konke</string>
+    <string name="forums_saved_clear_confirm_title">Sula yonke imithombo elondoloziwe?</string>
+    <string name="forums_saved_clear_confirm_body">Lokhu kususa wonke umbhalo ohlwini lwakho lokulondoloziwe. Lokhu akunakubuyiselwa.</string>
+    <string name="forums_saved_empty_title">Akukho lutho olusagciniwe</string>
+    <string name="forums_saved_empty_subtitle">Thepha ibhukhimakhi kunoma yimuphi umbhalo ukuze uwulondoloze lapha ukuze uwubuke kamuva.</string>
+    <string name="forums_saved_error_clear">Yehlulekile ukusula imibhalo elondoloziwe</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d umbhalo omusha</item>
+        <item quantity="other">%d imibhalo emisha</item>
+    </plurals>
 </resources>

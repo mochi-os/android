@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">El bilen</string>
     <string name="forums_access_search_users">Ulanyjylary gözle</string>
     <string name="forums_access_no_groups">Elýeterli toparlar ýok</string>
+    <string name="forums_saved_title">Saklandy</string>
+    <string name="forums_saved_save">Soňra üçin ýatda sakla</string>
+    <string name="forums_saved_remove">Ýatda saklananlardan aýyr</string>
+    <string name="forums_saved_clear_all">Hemmesini arassalamak</string>
+    <string name="forums_saved_clear_confirm_title">Ähli ýatda saklanan ýazgylar arassalansynmy?</string>
+    <string name="forums_saved_clear_confirm_body">Bu siziň ýatda saklanan sanawyňyzdan her ýazgyny aýyrýar. Muny yzyna gaýtaryp bolmaýar.</string>
+    <string name="forums_saved_empty_title">Hiç zat heniz ýazga geçirilmedi</string>
+    <string name="forums_saved_empty_subtitle">Islendik ýazgyny şu ýerde soňra üçin ýatda saklamak üçin onuň bellige basyň.</string>
+    <string name="forums_saved_error_clear">Ýatda saklanan ýazgylary arassalap bolmady</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d täze ýazgy</item>
+        <item quantity="other">%d täze ýazgy</item>
+    </plurals>
 </resources>

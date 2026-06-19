@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">Érdeklődés csökkentve</string>
     <string name="feeds_interest_removed">Érdeklődés eltávolítva</string>
     <string name="feeds_interest_failed">Nem sikerült módosítani az érdeklődést</string>
+    <string name="feeds_saved_title">Mentve</string>
+    <string name="feeds_saved_menu">Mentve</string>
+    <string name="feeds_saved_save">Mentés későbbre</string>
+    <string name="feeds_saved_remove">Eltávolítás a mentettek közül</string>
+    <string name="feeds_saved_clear_all">Összes törlése</string>
+    <string name="feeds_saved_clear_confirm_title">Törli az összes mentett bejegyzést?</string>
+    <string name="feeds_saved_clear_confirm_body">Ez eltávolít minden bejegyzést a mentettek listájáról. A művelet nem vonható vissza.</string>
+    <string name="feeds_saved_empty_title">Még semmi sincs mentve</string>
+    <string name="feeds_saved_empty_subtitle">Koppintson bármely bejegyzés könyvjelzőjére, hogy ide mentse későbbre.</string>
+    <string name="feeds_saved_error_clear">A mentett bejegyzések törlése nem sikerült</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d új bejegyzés</item>
+        <item quantity="other">%d új bejegyzés</item>
+    </plurals>
 </resources>

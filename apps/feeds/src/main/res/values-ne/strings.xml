@@ -198,4 +198,18 @@
     <string name="feeds_interest_reduced">रुचि घटाइयो</string>
     <string name="feeds_interest_removed">रुचि हटाइयो</string>
     <string name="feeds_interest_failed">रुचि समायोजन गर्न असफल</string>
+    <string name="feeds_saved_title">सुरक्षित गरियो</string>
+    <string name="feeds_saved_menu">सुरक्षित गरियो</string>
+    <string name="feeds_saved_save">पछिको लागि सुरक्षित गर्नुहोस्</string>
+    <string name="feeds_saved_remove">सुरक्षितबाट हटाउनुहोस्</string>
+    <string name="feeds_saved_clear_all">सबै खाली गर्नुहोस्</string>
+    <string name="feeds_saved_clear_confirm_title">सबै सुरक्षित पोस्टहरू खाली गर्ने?</string>
+    <string name="feeds_saved_clear_confirm_body">यसले तपाईंको सुरक्षित सूचीबाट हरेक पोस्ट हटाउँछ। यो फिर्ता गर्न सकिँदैन।</string>
+    <string name="feeds_saved_empty_title">अहिलेसम्म केहि पनि सुरक्षित गरिएको छैन</string>
+    <string name="feeds_saved_empty_subtitle">कुनै पनि पोस्ट यहाँ पछिको लागि सुरक्षित गर्न त्यसको बुकमार्कमा ट्याप गर्नुहोस्।</string>
+    <string name="feeds_saved_error_clear">सुरक्षित पोस्टहरू खाली गर्न असफल</string>
+    <plurals name="feeds_new_posts">
+        <item quantity="one">%d नयाँ पोस्ट</item>
+        <item quantity="other">%d नयाँ पोस्ट</item>
+    </plurals>
 </resources>

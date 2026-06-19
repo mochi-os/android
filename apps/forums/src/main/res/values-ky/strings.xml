@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Кол менен</string>
     <string name="forums_access_search_users">Колдонуучуларды издөө</string>
     <string name="forums_access_no_groups">Топтор жеткиликсиз</string>
+    <string name="forums_saved_title">Сакталды</string>
+    <string name="forums_saved_save">Кийинкиге сактоо</string>
+    <string name="forums_saved_remove">Сакталгандардан өчүрүү</string>
+    <string name="forums_saved_clear_all">Баарын тазалоо</string>
+    <string name="forums_saved_clear_confirm_title">Бардык сакталган жазууларды тазалайсызбы?</string>
+    <string name="forums_saved_clear_confirm_body">Бул сиздин сакталгандар тизмеңизден ар бир жазууну өчүрөт. Муну кайтаруу мүмкүн эмес.</string>
+    <string name="forums_saved_empty_title">Азырынча эч нерсе сакталган жок</string>
+    <string name="forums_saved_empty_subtitle">Каалаган жазууну бул жерге кийинкиге сактоо үчүн анын чкатчасын басыңыз.</string>
+    <string name="forums_saved_error_clear">Сакталган жазууларды тазалоо ишке ашкан жок</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d жаңы жазуу</item>
+        <item quantity="other">%d жаңы жазуу</item>
+    </plurals>
 </resources>

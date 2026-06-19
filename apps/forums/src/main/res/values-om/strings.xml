@@ -207,4 +207,17 @@
     <string name="forums_access_tab_manual">Harkaan</string>
     <string name="forums_access_search_users">Fayyadamtoota barbaadi</string>
     <string name="forums_access_no_groups">Garreen hin jiran</string>
+    <string name="forums_saved_title">Olkaa\'ame</string>
+    <string name="forums_saved_save">Booda eegoof olkaa\'i</string>
+    <string name="forums_saved_remove">Kan olkaa\'aman irraa balleessi</string>
+    <string name="forums_saved_clear_all">Hunda cilliisi</string>
+    <string name="forums_saved_clear_confirm_title">Maxxansaalee olkaa\'aman hunda haquu?</string>
+    <string name="forums_saved_clear_confirm_body">Kun tarree olkaa\'aman kee irraa maxxansaa hunda balleessa. Kun deebi\'ee gochuu hin danda\'amu.</string>
+    <string name="forums_saved_empty_title">Hanga ammaa wanti olkaa\'ame hin jiru</string>
+    <string name="forums_saved_empty_subtitle">Maxxansaa kamiyyuu asitti booda eegoof olkaa\'uuf mallattoo isaa tuqi.</string>
+    <string name="forums_saved_error_clear">Maxxansaalee olkaa\'aman haquun hin milkoofne</string>
+    <plurals name="forums_new_posts">
+        <item quantity="one">%d maxxansaa haaraa</item>
+        <item quantity="other">%d maxxansaalee haaraa</item>
+    </plurals>
 </resources>
