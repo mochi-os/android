@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Isso exclui a mensagem para todos e não pode ser desfeito.</string>
     <string name="chat_delete_own_only">Você só pode excluir suas próprias mensagens</string>
     <string name="chat_selection_title">%1$d selecionada(s)</string>
+    <string name="chat_forward_subtitle">Escolha um chat ou amigo para encaminhar as mensagens selecionadas</string>
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Amigos</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">यामुळे संदेश सर्वांसाठी हटवला जातो आणि तो परत मिळवता येणार नाही.</string>
     <string name="chat_delete_own_only">तुम्ही फक्त तुमचेच संदेश हटवू शकता</string>
     <string name="chat_selection_title">%1$d निवडले</string>
+    <string name="chat_forward_subtitle">निवडलेले संदेश अग्रेषित करण्यासाठी चॅट किंवा मित्र निवडा</string>
+    <string name="chat_forward_chats">चॅट्स</string>
+    <string name="chat_forward_friends">मित्र</string>
 </resources>

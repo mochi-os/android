@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">ഇത് എല്ലാവർക്കുമായി സന്ദേശം ഇല്ലാതാക്കുന്നു, ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="chat_delete_own_only">നിങ്ങളുടെ സ്വന്തം സന്ദേശങ്ങൾ മാത്രമേ ഇല്ലാതാക്കാൻ കഴിയൂ</string>
     <string name="chat_selection_title">%1$d തിരഞ്ഞെടുത്തു</string>
+    <string name="chat_forward_subtitle">തിരഞ്ഞെടുത്ത സന്ദേശങ്ങൾ കൈമാറാൻ ഒരു ചാറ്റോ സുഹൃത്തിനെയോ തിരഞ്ഞെടുക്കുക</string>
+    <string name="chat_forward_chats">ചാറ്റുകൾ</string>
+    <string name="chat_forward_friends">സുഹൃത്തുക്കൾ</string>
 </resources>

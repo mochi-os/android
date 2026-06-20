@@ -113,6 +113,10 @@ class ChatRepository @Inject constructor(
     suspend fun forwardMessages(chatId: String, messageIds: List<String>, toChat: String): ForwardResponse =
         api.forwardMessages(chatId, Gson().toJson(messageIds), toChat).unwrap()
 
+    // Forward to a friend's 1-on-1 chat (server creates or reuses it atomically).
+    suspend fun forwardToFriend(chatId: String, messageIds: List<String>, member: String): ForwardResponse =
+        api.forwardToFriend(chatId, member, Gson().toJson(messageIds)).unwrap()
+
     suspend fun react(chatId: String, messageId: String, reaction: String): ReactResponse =
         api.react(chatId, messageId, reaction).unwrap()
 

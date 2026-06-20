@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">هي پيغام سڀني لاءِ ڊيليٽ ٿي ويندو ۽ واپس نه ٿو ٿي سگهي.</string>
     <string name="chat_delete_own_only">توهان رڳو پنهنجا پيغام ئي ڊيليٽ ڪري سگهو ٿا</string>
     <string name="chat_selection_title">%1$d چونڊيا ويا</string>
+    <string name="chat_forward_subtitle">چونڊيل پيغام اڳتي موڪلڻ لاءِ چيٽ يا دوست چونڊيو</string>
+    <string name="chat_forward_chats">چيٽ</string>
+    <string name="chat_forward_friends">دوست</string>
 </resources>

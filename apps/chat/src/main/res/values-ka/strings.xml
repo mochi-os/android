@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">ეს წაშლის შეტყობინებას ყველასთვის და მისი დაბრუნება შეუძლებელია.</string>
     <string name="chat_delete_own_only">მხოლოდ საკუთარი შეტყობინებების წაშლა შეგიძლიათ</string>
     <string name="chat_selection_title">%1$d მონიშნული</string>
+    <string name="chat_forward_subtitle">აირჩიეთ ჩატი ან მეგობარი არჩეული შეტყობინებების გადასაგზავნად</string>
+    <string name="chat_forward_chats">ჩატები</string>
+    <string name="chat_forward_friends">მეგობრები</string>
 </resources>

@@ -507,9 +507,11 @@ private fun ChatContent(
             if (uiState.forwardMessageIds.isNotEmpty()) {
                 ChatForwardSheet(
                     chats = uiState.forwardChats,
+                    friends = uiState.forwardFriends,
                     loading = uiState.forwardLoading,
                     onDismiss = { viewModel.closeForward() },
                     onSelect = { chat -> viewModel.forwardToChat(chat.id) },
+                    onSelectFriend = { friend -> viewModel.forwardToFriend(friend.id) },
                 )
             }
 
@@ -1027,22 +1029,29 @@ private sealed class MessageListEntry {
 }
 
 /**
- * Forward-to-chat bottom sheet: a filterable list of the user's other active
- * chats; tapping one forwards the open message there. (Forward-to-friend is a
- * newer web feature not yet on web main, so it's deferred here for parity.)
+ * Forward bottom sheet: a filterable list of the user's other active chats and
+ * of friends without an existing direct chat. Tapping a chat forwards the open
+ * messages there; tapping a friend forwards into their 1-on-1 chat, which the
+ * server creates or reuses atomically.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ChatForwardSheet(
     chats: List<org.mochios.chat.model.Chat>,
+    friends: List<org.mochios.chat.model.Friend>,
     loading: Boolean,
     onDismiss: () -> Unit,
     onSelect: (org.mochios.chat.model.Chat) -> Unit,
+    onSelectFriend: (org.mochios.chat.model.Friend) -> Unit,
 ) {
     var filter by remember { mutableStateOf("") }
     val filtered = remember(chats, filter) {
         if (filter.isBlank()) chats
         else chats.filter { it.name.contains(filter.trim(), ignoreCase = true) }
+    }
+    val filteredFriends = remember(friends, filter) {
+        if (filter.isBlank()) friends
+        else friends.filter { it.name.contains(filter.trim(), ignoreCase = true) }
     }
     ModalBottomSheet(onDismissRequest = onDismiss) {
         Column(
@@ -1054,6 +1063,11 @@ private fun ChatForwardSheet(
             Text(
                 text = stringResource(R.string.chat_forward_title),
                 style = MaterialTheme.typography.titleMedium,
+            )
+            Text(
+                text = stringResource(R.string.chat_forward_subtitle),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 8.dp),
             )
             OutlinedTextField(
@@ -1070,28 +1084,66 @@ private fun ChatForwardSheet(
                     modifier = Modifier.fillMaxWidth().padding(24.dp),
                     contentAlignment = Alignment.Center,
                 ) { CircularProgressIndicator() }
-                filtered.isEmpty() -> Text(
+                filtered.isEmpty() && filteredFriends.isEmpty() -> Text(
                     text = stringResource(R.string.chat_forward_empty),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(vertical = 16.dp),
                 )
                 else -> LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
-                    items(filtered, key = { it.id }) { chat ->
-                        Text(
-                            text = chat.name,
-                            style = MaterialTheme.typography.bodyLarge,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable { onSelect(chat) }
-                                .padding(vertical = 12.dp),
-                        )
-                        HorizontalDivider()
+                    if (filtered.isNotEmpty()) {
+                        // Only label the sections when both are present.
+                        if (filteredFriends.isNotEmpty()) {
+                            item("chats-header") {
+                                ForwardSectionHeader(stringResource(R.string.chat_forward_chats))
+                            }
+                        }
+                        items(filtered, key = { "chat-" + it.id }) { chat ->
+                            Text(
+                                text = chat.name,
+                                style = MaterialTheme.typography.bodyLarge,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { onSelect(chat) }
+                                    .padding(vertical = 12.dp),
+                            )
+                            HorizontalDivider()
+                        }
+                    }
+                    if (filteredFriends.isNotEmpty()) {
+                        if (filtered.isNotEmpty()) {
+                            item("friends-header") {
+                                ForwardSectionHeader(stringResource(R.string.chat_forward_friends))
+                            }
+                        }
+                        items(filteredFriends, key = { "friend-" + it.id }) { friend ->
+                            Text(
+                                text = friend.name,
+                                style = MaterialTheme.typography.bodyLarge,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { onSelectFriend(friend) }
+                                    .padding(vertical = 12.dp),
+                            )
+                            HorizontalDivider()
+                        }
                     }
                 }
             }
         }
     }
+}
+
+@Composable
+private fun ForwardSectionHeader(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 12.dp, bottom = 4.dp),
+    )
 }
 
 private fun groupMessagesByDate(messages: List<ChatMessage>): List<MessageListEntry> {

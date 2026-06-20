@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Dette sletter meldingen for alle og kan ikke angres.</string>
     <string name="chat_delete_own_only">Du kan bare slette dine egne meldinger</string>
     <string name="chat_selection_title">%1$d valgt</string>
+    <string name="chat_forward_subtitle">Velg en chat eller venn å videresende de valgte meldingene til</string>
+    <string name="chat_forward_chats">Chatter</string>
+    <string name="chat_forward_friends">Venner</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Ovo briše poruku za sve i ne može se poništiti.</string>
     <string name="chat_delete_own_only">Možete brisati samo vlastite poruke</string>
     <string name="chat_selection_title">Odabrano: %1$d</string>
+    <string name="chat_forward_subtitle">Odaberite chat ili prijatelja kojem ćete proslijediti odabrane poruke</string>
+    <string name="chat_forward_chats">Chatovi</string>
+    <string name="chat_forward_friends">Prijatelji</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Wannan zai share saƙon ga kowa kuma ba za a iya dawo da shi ba.</string>
     <string name="chat_delete_own_only">Saƙonninka kawai za ka iya sharewa</string>
     <string name="chat_selection_title">An zaɓi %1$d</string>
+    <string name="chat_forward_subtitle">Zaɓi taɗi ko aboki da za a tura saƙonnin da aka zaɓa zuwa gare shi</string>
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Abokai</string>
 </resources>

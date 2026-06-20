@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">ಇದು ಎಲ್ಲರಿಗೂ ಸಂದೇಶವನ್ನು ಅಳಿಸುತ್ತದೆ ಮತ್ತು ಇದನ್ನು ಪೂರ್ವಸ್ಥಿತಿಗೆ ತರಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="chat_delete_own_only">ನಿಮ್ಮ ಸ್ವಂತ ಸಂದೇಶಗಳನ್ನು ಮಾತ್ರ ನೀವು ಅಳಿಸಬಹುದು</string>
     <string name="chat_selection_title">%1$d ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ</string>
+    <string name="chat_forward_subtitle">ಆಯ್ಕೆ ಮಾಡಿದ ಸಂದೇಶಗಳನ್ನು ಫಾರ್ವರ್ಡ್ ಮಾಡಲು ಚಾಟ್ ಅಥವಾ ಸ್ನೇಹಿತರನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="chat_forward_chats">ಚಾಟ್‌ಗಳು</string>
+    <string name="chat_forward_friends">ಸ್ನೇಹಿತರು</string>
 </resources>

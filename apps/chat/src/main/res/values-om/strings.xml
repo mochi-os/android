@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Kun ergaa nama hundaaf haqa; deebisanii argachuun hin danda\'amu.</string>
     <string name="chat_delete_own_only">Ergaa kee qofa haquu dandeessa</string>
     <string name="chat_selection_title">%1$d filataman</string>
+    <string name="chat_forward_subtitle">Ergaawwan filataman dabarsuuf chaatii ykn michuu fili</string>
+    <string name="chat_forward_chats">Chaattota</string>
+    <string name="chat_forward_friends">Hiriyoota</string>
 </resources>

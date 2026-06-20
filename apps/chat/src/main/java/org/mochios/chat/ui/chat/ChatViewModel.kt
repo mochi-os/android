@@ -25,6 +25,7 @@ import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatSearchResult
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.Friend
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -47,6 +48,7 @@ data class ChatUiState(
     val searchLoading: Boolean = false,
     val forwardMessageIds: List<String> = emptyList(),
     val forwardChats: List<Chat> = emptyList(),
+    val forwardFriends: List<Friend> = emptyList(),
     val forwardLoading: Boolean = false,
     val replyingTo: ChatMessage? = null,
     val selectionMode: Boolean = false,
@@ -243,13 +245,22 @@ class ChatViewModel @Inject constructor(
     fun openForward(messageIds: List<String>) {
         if (messageIds.isEmpty()) return
         _uiState.value = _uiState.value.copy(
-            forwardMessageIds = messageIds, forwardChats = emptyList(), forwardLoading = true,
+            forwardMessageIds = messageIds, forwardChats = emptyList(),
+            forwardFriends = emptyList(), forwardLoading = true,
         )
         viewModelScope.launch {
             try {
                 val chats = repository.listChats()
                     .filter { it.id != chatId && it.status == ChatStatus.ACTIVE }
-                _uiState.value = _uiState.value.copy(forwardChats = chats, forwardLoading = false)
+                // Offer friends without an existing 1-on-1 chat as destinations
+                // (those with one already appear in the chats list) — matching
+                // web. Forwarding to a friend creates the chat server-side.
+                val friends = runCatching {
+                    repository.getNewChatData().friends.filter { it.chatId.isEmpty() }
+                }.getOrDefault(emptyList())
+                _uiState.value = _uiState.value.copy(
+                    forwardChats = chats, forwardFriends = friends, forwardLoading = false,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(forwardLoading = false, error = e.toMochiError())
             }
@@ -258,7 +269,8 @@ class ChatViewModel @Inject constructor(
 
     fun closeForward() {
         _uiState.value = _uiState.value.copy(
-            forwardMessageIds = emptyList(), forwardChats = emptyList(), forwardLoading = false,
+            forwardMessageIds = emptyList(), forwardChats = emptyList(),
+            forwardFriends = emptyList(), forwardLoading = false,
         )
     }
 
@@ -272,6 +284,29 @@ class ChatViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     forwardMessageIds = emptyList(),
                     forwardChats = emptyList(),
+                    forwardFriends = emptyList(),
+                    selectionMode = false,
+                    selectedIds = emptySet(),
+                )
+                _events.emit(application.getString(R.string.chat_forward_success))
+            } catch (e: Exception) {
+                _events.emit(application.getString(R.string.chat_forward_failed))
+            }
+        }
+    }
+
+    /** Forward the open messages to [memberId]'s 1-on-1 chat. The server reuses
+     *  or creates that chat atomically after validating the messages. */
+    fun forwardToFriend(memberId: String) {
+        val messageIds = _uiState.value.forwardMessageIds
+        if (messageIds.isEmpty()) return
+        viewModelScope.launch {
+            try {
+                repository.forwardToFriend(chatId, messageIds, memberId)
+                _uiState.value = _uiState.value.copy(
+                    forwardMessageIds = emptyList(),
+                    forwardChats = emptyList(),
+                    forwardFriends = emptyList(),
                     selectionMode = false,
                     selectedIds = emptySet(),
                 )

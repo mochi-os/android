@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Hii inafuta ujumbe kwa kila mtu na haiwezi kutenduliwa.</string>
     <string name="chat_delete_own_only">Unaweza kufuta ujumbe wako pekee</string>
     <string name="chat_selection_title">%1$d zimechaguliwa</string>
+    <string name="chat_forward_subtitle">Chagua gumzo au rafiki wa kutuma ujumbe uliochaguliwa</string>
+    <string name="chat_forward_chats">Magumzo</string>
+    <string name="chat_forward_friends">Marafiki</string>
 </resources>

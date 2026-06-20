@@ -87,4 +87,7 @@
     <string name="chat_delete_confirm_body">Thao tác này sẽ xóa tin nhắn với mọi người và không thể hoàn tác.</string>
     <string name="chat_delete_own_only">Bạn chỉ có thể xóa tin nhắn của chính mình</string>
     <string name="chat_selection_title">Đã chọn %1$d</string>
+    <string name="chat_forward_subtitle">Chọn một cuộc trò chuyện hoặc bạn bè để chuyển tiếp các tin nhắn đã chọn</string>
+    <string name="chat_forward_chats">Trò chuyện</string>
+    <string name="chat_forward_friends">Bạn bè</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Èyí yóò pa ìránṣẹ́ náà rẹ́ fún gbogbo ènìyàn, kò sì ṣeé yí padà.</string>
     <string name="chat_delete_own_only">O lè pa àwọn ìránṣẹ́ tìrẹ nìkan rẹ́</string>
     <string name="chat_selection_title">%1$d tí a yàn</string>
+    <string name="chat_forward_subtitle">Yan ìbánisọ̀rọ̀ tàbí ọ̀rẹ́ láti fi àwọn ìfọ̀rọ̀ tí a yàn ránṣẹ́ síi</string>
+    <string name="chat_forward_chats">Àwọn ìjíròrò</string>
+    <string name="chat_forward_friends">Àwọn ọ̀rẹ́</string>
 </resources>

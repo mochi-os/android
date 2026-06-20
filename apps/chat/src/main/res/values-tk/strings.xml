@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Bu habar hemmeler üçin pozulýar we yzyna gaýtaryp bolmaýar.</string>
     <string name="chat_delete_own_only">Diňe öz habarlaryňy pozup bilersiň</string>
     <string name="chat_selection_title">%1$d saýlandy</string>
+    <string name="chat_forward_subtitle">Saýlanan habarlary ugratmak üçin çat ýa-da dost saýlaň</string>
+    <string name="chat_forward_chats">Söhbetdeşlikler</string>
+    <string name="chat_forward_friends">Dostlar</string>
 </resources>

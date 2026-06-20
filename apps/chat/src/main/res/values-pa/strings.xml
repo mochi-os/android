@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">ਇਸ ਨਾਲ ਸੁਨੇਹਾ ਸਾਰਿਆਂ ਲਈ ਮਿਟ ਜਾਂਦਾ ਹੈ ਅਤੇ ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="chat_delete_own_only">ਤੁਸੀਂ ਸਿਰਫ਼ ਆਪਣੇ ਸੁਨੇਹੇ ਹੀ ਮਿਟਾ ਸਕਦੇ ਹੋ</string>
     <string name="chat_selection_title">%1$d ਚੁਣੇ ਗਏ</string>
+    <string name="chat_forward_subtitle">ਚੁਣੇ ਸੁਨੇਹੇ ਅੱਗੇ ਭੇਜਣ ਲਈ ਚੈਟ ਜਾਂ ਦੋਸਤ ਚੁਣੋ</string>
+    <string name="chat_forward_chats">ਚੈਟਾਂ</string>
+    <string name="chat_forward_friends">ਦੋਸਤ</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">S tem se sporočilo izbriše za vse in tega ni mogoče razveljaviti.</string>
     <string name="chat_delete_own_only">Izbrišete lahko le svoja sporočila</string>
     <string name="chat_selection_title">Izbrano: %1$d</string>
+    <string name="chat_forward_subtitle">Izberi klepet ali prijatelja za posredovanje izbranih sporočil</string>
+    <string name="chat_forward_chats">Klepeti</string>
+    <string name="chat_forward_friends">Prijatelji</string>
 </resources>

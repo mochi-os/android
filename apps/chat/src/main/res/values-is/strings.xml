@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Þetta eyðir skilaboðunum fyrir alla og er ekki hægt að afturkalla.</string>
     <string name="chat_delete_own_only">Þú getur aðeins eytt þínum eigin skilaboðum</string>
     <string name="chat_selection_title">%1$d valin</string>
+    <string name="chat_forward_subtitle">Veldu spjall eða vin til að áframsenda völdu skilaboðin á</string>
+    <string name="chat_forward_chats">Spjöll</string>
+    <string name="chat_forward_friends">Vinir</string>
 </resources>

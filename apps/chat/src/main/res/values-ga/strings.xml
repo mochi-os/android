@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Scriosann sé seo an teachtaireacht do gach duine agus ní féidir é a chur ar ais.</string>
     <string name="chat_delete_own_only">Ní féidir leat ach do theachtaireachtaí féin a scriosadh</string>
     <string name="chat_selection_title">%1$d roghnaithe</string>
+    <string name="chat_forward_subtitle">Roghnaigh comhrá nó cara chun na teachtaireachtaí roghnaithe a chur ar aghaidh</string>
+    <string name="chat_forward_chats">Comhráite</string>
+    <string name="chat_forward_friends">Cairde</string>
 </resources>

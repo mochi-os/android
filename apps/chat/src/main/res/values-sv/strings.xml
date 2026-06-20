@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Detta raderar meddelandet för alla och kan inte ångras.</string>
     <string name="chat_delete_own_only">Du kan bara radera dina egna meddelanden</string>
     <string name="chat_selection_title">%1$d markerade</string>
+    <string name="chat_forward_subtitle">Välj en chatt eller vän att vidarebefordra de valda meddelandena till</string>
+    <string name="chat_forward_chats">Chattar</string>
+    <string name="chat_forward_friends">Vänner</string>
 </resources>

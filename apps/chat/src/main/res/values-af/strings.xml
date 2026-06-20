@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Dit vee die boodskap vir almal uit en kan nie ongedaan gemaak word nie.</string>
     <string name="chat_delete_own_only">Jy kan net jou eie boodskappe uitvee</string>
     <string name="chat_selection_title">%1$d gekies</string>
+    <string name="chat_forward_subtitle">Kies \'n klets of vriend om die gekose boodskappe na aan te stuur</string>
+    <string name="chat_forward_chats">Kletse</string>
+    <string name="chat_forward_friends">Vriende</string>
 </resources>

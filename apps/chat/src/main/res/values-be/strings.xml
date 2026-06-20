@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Гэта выдаліць паведамленне для ўсіх, і яго нельга будзе аднавіць.</string>
     <string name="chat_delete_own_only">Вы можаце выдаляць толькі свае паведамленні</string>
     <string name="chat_selection_title">Выбрана: %1$d</string>
+    <string name="chat_forward_subtitle">Выберыце чат або сябра, каб пераслаць выбраныя паведамленні</string>
+    <string name="chat_forward_chats">Чаты</string>
+    <string name="chat_forward_friends">Сябры</string>
 </resources>

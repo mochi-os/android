@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Ова ја брише пораката за сите и не може да се врати.</string>
     <string name="chat_delete_own_only">Можете да ги бришете само вашите пораки</string>
     <string name="chat_selection_title">%1$d избрани</string>
+    <string name="chat_forward_subtitle">Изберете разговор или пријател за да ги препратите избраните пораки</string>
+    <string name="chat_forward_chats">Разговори</string>
+    <string name="chat_forward_friends">Пријатели</string>
 </resources>

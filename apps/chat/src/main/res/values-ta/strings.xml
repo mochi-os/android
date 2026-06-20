@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">இது அனைவருக்கும் செய்தியை நீக்குகிறது, இதைச் செயல்தவிர்க்க முடியாது.</string>
     <string name="chat_delete_own_only">உங்கள் சொந்த செய்திகளை மட்டுமே நீக்க முடியும்</string>
     <string name="chat_selection_title">%1$d தேர்ந்தெடுக்கப்பட்டது</string>
+    <string name="chat_forward_subtitle">தேர்ந்தெடுத்த செய்திகளை அனுப்ப அரட்டை அல்லது நண்பரைத் தேர்வுசெய்க</string>
+    <string name="chat_forward_chats">அரட்டைகள்</string>
+    <string name="chat_forward_friends">நண்பர்கள்</string>
 </resources>

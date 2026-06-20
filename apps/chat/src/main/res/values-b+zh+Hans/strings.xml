@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">此操作将为所有人删除该消息,且无法撤销。</string>
     <string name="chat_delete_own_only">您只能删除自己发送的消息</string>
     <string name="chat_selection_title">已选择 %1$d 条</string>
+    <string name="chat_forward_subtitle">选择一个聊天或好友以转发所选消息</string>
+    <string name="chat_forward_chats">聊天</string>
+    <string name="chat_forward_friends">好友</string>
 </resources>

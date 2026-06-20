@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Ieu ngahapus pesen pikeun sadayana sareng teu tiasa dibatalkeun.</string>
     <string name="chat_delete_own_only">Anjeun ngan ukur tiasa ngahapus pesen anjeun sorangan</string>
     <string name="chat_selection_title">%1$d dipilih</string>
+    <string name="chat_forward_subtitle">Pilih obrolan atawa babaturan pikeun neruskeun pesen anu dipilih</string>
+    <string name="chat_forward_chats">Chat</string>
+    <string name="chat_forward_friends">Babaturan</string>
 </resources>

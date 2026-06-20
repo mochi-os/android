@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">यसले सबैका लागि सन्देश मेटाउँछ र फेरि फर्काउन सकिँदैन।</string>
     <string name="chat_delete_own_only">तपाईंले आफ्ना सन्देशहरू मात्र मेटाउन सक्नुहुन्छ</string>
     <string name="chat_selection_title">%1$d छानियो</string>
+    <string name="chat_forward_subtitle">चयन गरिएका सन्देशहरू फर्वार्ड गर्न कुराकानी वा साथी छान्नुहोस्</string>
+    <string name="chat_forward_chats">च्याटहरू</string>
+    <string name="chat_forward_friends">साथीहरू</string>
 </resources>

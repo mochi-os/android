@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Ezzel mindenki számára törli az üzenetet, és nem vonható vissza.</string>
     <string name="chat_delete_own_only">Csak a saját üzeneteit törölheti</string>
     <string name="chat_selection_title">%1$d kijelölve</string>
+    <string name="chat_forward_subtitle">Válassz csevegést vagy ismerőst, akinek továbbítod a kijelölt üzeneteket</string>
+    <string name="chat_forward_chats">Chatek</string>
+    <string name="chat_forward_friends">Barátok</string>
 </resources>

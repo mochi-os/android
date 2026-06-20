@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">এটি সবার জন্য বার্তাটি মুছে ফেলে এবং পূর্বাবস্থায় ফেরানো যায় না।</string>
     <string name="chat_delete_own_only">আপনি শুধুমাত্র নিজের বার্তা মুছতে পারবেন</string>
     <string name="chat_selection_title">%1$dটি নির্বাচিত</string>
+    <string name="chat_forward_subtitle">নির্বাচিত বার্তা ফরওয়ার্ড করতে একটি চ্যাট বা বন্ধু বেছে নিন</string>
+    <string name="chat_forward_chats">চ্যাট</string>
+    <string name="chat_forward_friends">বন্ধুরা</string>
 </resources>

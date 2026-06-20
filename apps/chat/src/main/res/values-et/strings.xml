@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">See kustutab sõnumi kõigi jaoks ja seda ei saa tagasi võtta.</string>
     <string name="chat_delete_own_only">Saad kustutada ainult enda sõnumeid</string>
     <string name="chat_selection_title">%1$d valitud</string>
+    <string name="chat_forward_subtitle">Vali vestlus või sõber, kellele valitud sõnumid edasi saata</string>
+    <string name="chat_forward_chats">Vestlused</string>
+    <string name="chat_forward_friends">Sõbrad</string>
 </resources>

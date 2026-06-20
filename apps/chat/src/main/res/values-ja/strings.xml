@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">全員からこのメッセージが削除され、元に戻すことはできません。</string>
     <string name="chat_delete_own_only">自分のメッセージのみ削除できます</string>
     <string name="chat_selection_title">%1$d 件選択中</string>
+    <string name="chat_forward_subtitle">選択したメッセージを転送するチャットまたは友達を選択してください</string>
+    <string name="chat_forward_chats">チャット</string>
+    <string name="chat_forward_friends">友だち</string>
 </resources>

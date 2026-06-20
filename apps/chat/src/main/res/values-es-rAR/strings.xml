@@ -75,4 +75,6 @@
     <string name="chat_delete_own_only">Solo podés eliminar tus propios mensajes</string>
     <string name="chat_selection_title">%1$d seleccionados</string>
 
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Amigos</string>
 </resources>

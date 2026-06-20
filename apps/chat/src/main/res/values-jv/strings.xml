@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Iki mbusak pesen kanggo kabeh wong lan ora bisa dibalèkaké.</string>
     <string name="chat_delete_own_only">Sampéyan mung bisa mbusak pesen sampéyan dhéwé</string>
     <string name="chat_selection_title">%1$d dipilih</string>
+    <string name="chat_forward_subtitle">Pilih obrolan utawa kanca kanggo nerusake pesen sing dipilih</string>
+    <string name="chat_forward_chats">Chat</string>
+    <string name="chat_forward_friends">Kanca</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">ئەمە پەیامەکە بۆ هەمووان دەسڕێتەوە و ناتوانرێت بگەڕێنرێتەوە.</string>
     <string name="chat_delete_own_only">تەنیا دەتوانیت پەیامەکانی خۆت بسڕیتەوە</string>
     <string name="chat_selection_title">%1$d هەڵبژێردراو</string>
+    <string name="chat_forward_subtitle">گفتوگۆیەک یان هاوڕێیەک هەڵبژێرە بۆ ئاراستەکردنی پەیامە هەڵبژێردراوەکان</string>
+    <string name="chat_forward_chats">گفتوگۆکان</string>
+    <string name="chat_forward_friends">هاوڕێکان</string>
 </resources>

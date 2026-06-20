@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Žinutė bus ištrinta visiems ir to nebus galima atšaukti.</string>
     <string name="chat_delete_own_only">Galite ištrinti tik savo žinutes</string>
     <string name="chat_selection_title">Pasirinkta: %1$d</string>
+    <string name="chat_forward_subtitle">Pasirinkite pokalbį arba draugą, kuriam persiųsti pasirinktas žinutes</string>
+    <string name="chat_forward_chats">Pokalbiai</string>
+    <string name="chat_forward_friends">Draugai</string>
 </resources>

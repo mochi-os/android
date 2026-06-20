@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Spowoduje to usunięcie wiadomości dla wszystkich i nie można tego cofnąć.</string>
     <string name="chat_delete_own_only">Możesz usuwać tylko własne wiadomości</string>
     <string name="chat_selection_title">Zaznaczono: %1$d</string>
+    <string name="chat_forward_subtitle">Wybierz czat lub znajomego, do którego przekazać wybrane wiadomości</string>
+    <string name="chat_forward_chats">Czaty</string>
+    <string name="chat_forward_friends">Znajomi</string>
 </resources>

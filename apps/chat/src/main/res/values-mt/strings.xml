@@ -87,4 +87,7 @@
     <string name="chat_delete_confirm_body">Dan iħassar il-messaġġ għal kulħadd u ma jistax jitreġġa\' lura.</string>
     <string name="chat_delete_own_only">Tista\' tħassar biss il-messaġġi tiegħek stess</string>
     <string name="chat_selection_title">%1$d magħżula</string>
+    <string name="chat_forward_subtitle">Agħżel chat jew ħabib biex tgħaddi l-messaġġi magħżula lilu</string>
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Ħbieb</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Isto elimina a mensaxe para todos e non se pode desfacer.</string>
     <string name="chat_delete_own_only">Só podes eliminar as túas propias mensaxes</string>
     <string name="chat_selection_title">%1$d seleccionadas</string>
+    <string name="chat_forward_subtitle">Escolle un chat ou amigo ao que reenviar as mensaxes seleccionadas</string>
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Amigos</string>
 </resources>

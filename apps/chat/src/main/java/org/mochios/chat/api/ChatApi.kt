@@ -159,6 +159,18 @@ interface ChatApi {
         @Field("to_chat") toChat: String
     ): Response<ApiResponse<ForwardResponse>>
 
+    // Forward to a friend: the server atomically reuses or creates the 1-on-1
+    // chat with `member` (only after validating the messages), avoiding the
+    // orphan-empty-chat race of a client-side create-then-forward. The source
+    // chat is the `:chat` path param.
+    @FormUrlEncoded
+    @POST("{chatId}/-/messages/forward/friend")
+    suspend fun forwardToFriend(
+        @Path("chatId") chatId: String,
+        @Field("member") member: String,
+        @Field("message_ids") messageIds: String
+    ): Response<ApiResponse<ForwardResponse>>
+
     @FormUrlEncoded
     @POST("{chatId}/-/react")
     suspend fun react(

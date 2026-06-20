@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Tämä poistaa viestin kaikilta eikä sitä voi kumota.</string>
     <string name="chat_delete_own_only">Voit poistaa vain omat viestisi</string>
     <string name="chat_selection_title">%1$d valittu</string>
+    <string name="chat_forward_subtitle">Valitse keskustelu tai kaveri, jolle valitut viestit välitetään</string>
+    <string name="chat_forward_chats">Chatit</string>
+    <string name="chat_forward_friends">Kaverit</string>
 </resources>

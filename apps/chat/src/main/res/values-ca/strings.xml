@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Això suprimeix el missatge per a tothom i no es pot desfer.</string>
     <string name="chat_delete_own_only">Només podeu suprimir els vostres propis missatges</string>
     <string name="chat_selection_title">%1$d seleccionats</string>
+    <string name="chat_forward_subtitle">Tria un xat o amic per reenviar-hi els missatges seleccionats</string>
+    <string name="chat_forward_chats">Xats</string>
+    <string name="chat_forward_friends">Amics</string>
 </resources>

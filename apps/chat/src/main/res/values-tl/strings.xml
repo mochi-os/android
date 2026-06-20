@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Buburahin nito ang mensahe para sa lahat at hindi na mababawi.</string>
     <string name="chat_delete_own_only">Sarili mo lang na mga mensahe ang puwede mong i-delete</string>
     <string name="chat_selection_title">%1$d ang napili</string>
+    <string name="chat_forward_subtitle">Pumili ng chat o kaibigan na pagpapasahan ng mga napiling mensahe</string>
+    <string name="chat_forward_chats">Mga chat</string>
+    <string name="chat_forward_friends">Mga kaibigan</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Това изтрива съобщението за всички и не може да бъде отменено.</string>
     <string name="chat_delete_own_only">Можете да изтривате само собствените си съобщения</string>
     <string name="chat_selection_title">%1$d избрани</string>
+    <string name="chat_forward_subtitle">Изберете чат или приятел, към когото да препратите избраните съобщения</string>
+    <string name="chat_forward_chats">Чатове</string>
+    <string name="chat_forward_friends">Приятели</string>
 </resources>

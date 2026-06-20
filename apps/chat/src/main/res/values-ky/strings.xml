@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Бул билдирүүнү баары үчүн өчүрөт жана аны кайтарууга болбойт.</string>
     <string name="chat_delete_own_only">Сиз өзүңүздүн билдирүүлөрүңүздү гана өчүрө аласыз</string>
     <string name="chat_selection_title">%1$d тандалды</string>
+    <string name="chat_forward_subtitle">Тандалган билдирүүлөрдү багыттоо үчүн маек же дос тандаңыз</string>
+    <string name="chat_forward_chats">Чаттар</string>
+    <string name="chat_forward_friends">Достор</string>
 </resources>

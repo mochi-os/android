@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Bu, mesajı hamı üçün silir və geri qaytarmaq mümkün deyil.</string>
     <string name="chat_delete_own_only">Yalnız öz mesajlarınızı silə bilərsiniz</string>
     <string name="chat_selection_title">%1$d seçildi</string>
+    <string name="chat_forward_subtitle">Seçilmiş mesajları yönləndirmək üçün söhbət və ya dost seçin</string>
+    <string name="chat_forward_chats">Söhbətlər</string>
+    <string name="chat_forward_friends">Dostlar</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">دا پیغام د ټولو لپاره ړنګوي او بیرته نه شي راګرځیدلی.</string>
     <string name="chat_delete_own_only">تاسو یوازې خپل پیغامونه ړنګولی شئ</string>
     <string name="chat_selection_title">%1$d غوره شول</string>
+    <string name="chat_forward_subtitle">غوره شوي پیغامونه لیږلو لپاره چټ یا ملګری وټاکئ</string>
+    <string name="chat_forward_chats">چټونه</string>
+    <string name="chat_forward_friends">ملګري</string>
 </resources>

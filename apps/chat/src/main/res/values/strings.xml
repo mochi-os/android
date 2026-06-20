@@ -66,6 +66,9 @@
     <string name="chat_delete_own_only">You can only delete your own messages</string>
     <string name="chat_selection_title">%1$d selected</string>
     <string name="chat_forward_title">Forward to…</string>
+    <string name="chat_forward_subtitle">Choose a chat or friend to forward the selected messages to</string>
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Friends</string>
     <string name="chat_forward_search">Search chats…</string>
     <string name="chat_forward_empty">No chats to forward to</string>
     <string name="chat_forward_success">Forwarded</string>

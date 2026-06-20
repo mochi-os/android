@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Tímto se zpráva smaže pro všechny a nelze ji obnovit.</string>
     <string name="chat_delete_own_only">Smazat můžete pouze vlastní zprávy</string>
     <string name="chat_selection_title">Vybráno: %1$d</string>
+    <string name="chat_forward_subtitle">Vyberte chat nebo přítele, kterému přeposlat vybrané zprávy</string>
+    <string name="chat_forward_chats">Chaty</string>
+    <string name="chat_forward_friends">Přátelé</string>
 </resources>

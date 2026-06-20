@@ -87,4 +87,7 @@
     <string name="chat_delete_confirm_body">Mae hyn yn dileu\'r neges i bawb ac ni ellir ei dadwneud.</string>
     <string name="chat_delete_own_only">Dim ond eich negeseuon eich hun y gallwch eu dileu</string>
     <string name="chat_selection_title">%1$d wedi\'u dewis</string>
+    <string name="chat_forward_subtitle">Dewiswch sgwrs neu ffrind i anfon y negeseuon a ddewiswyd ymlaen ato</string>
+    <string name="chat_forward_chats">Sgyrsiau</string>
+    <string name="chat_forward_friends">Ffrindiau</string>
 </resources>

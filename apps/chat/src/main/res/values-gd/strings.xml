@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Sguabaidh seo às an teachdaireachd don a h-uile duine agus chan urrainnear a h-aiseag.</string>
     <string name="chat_delete_own_only">Chan urrainn dhut ach na teachdaireachdan agad fhèin a sguabadh às</string>
     <string name="chat_selection_title">%1$d air an taghadh</string>
+    <string name="chat_forward_subtitle">Tagh còmhradh no caraid airson na teachdaireachdan a thagh thu a chur air adhart</string>
+    <string name="chat_forward_chats">Còmhraidhean</string>
+    <string name="chat_forward_friends">Caraidean</string>
 </resources>

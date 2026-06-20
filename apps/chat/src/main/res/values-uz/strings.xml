@@ -87,4 +87,7 @@
     <string name="chat_delete_confirm_body">Bu xabarni hamma uchun oʻchiradi va uni qaytarib boʻlmaydi.</string>
     <string name="chat_delete_own_only">Faqat oʻz xabarlaringizni oʻchira olasiz</string>
     <string name="chat_selection_title">%1$d ta tanlandi</string>
+    <string name="chat_forward_subtitle">Tanlangan xabarlarni yo\'naltirish uchun suhbat yoki do\'stni tanlang</string>
+    <string name="chat_forward_chats">Suhbatlar</string>
+    <string name="chat_forward_friends">Doʻstlar</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Akax taqininakatakiw mensaje chhaqtayi, janiw kutt\'ayañ atipkiti.</string>
     <string name="chat_delete_own_only">Jumampi mensajenakamak chhaqtayañ atta</string>
     <string name="chat_selection_title">%1$d ajllita</string>
+    <string name="chat_forward_subtitle">Mä aru lakʼa jan ukax mä masi ajllim, ajllita yatiyäwinak apañataki</string>
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Masinaka</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">આ સંદેશને બધા માટે કાઢી નાખે છે અને તેને પાછું લાવી શકાશે નહીં.</string>
     <string name="chat_delete_own_only">તમે ફક્ત તમારા પોતાના સંદેશા જ કાઢી શકો છો</string>
     <string name="chat_selection_title">%1$d પસંદ કર્યા</string>
+    <string name="chat_forward_subtitle">પસંદ કરેલા સંદેશા ફોરવર્ડ કરવા માટે ચેટ અથવા મિત્ર પસંદ કરો</string>
+    <string name="chat_forward_chats">ચેટ્સ</string>
+    <string name="chat_forward_friends">મિત્રો</string>
 </resources>

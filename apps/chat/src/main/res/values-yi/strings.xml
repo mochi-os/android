@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">דאָס מעקט אויס די מעלדונג פֿאַר אַלעמען און קען נישט צוריקגעמאַכט ווערן.</string>
     <string name="chat_delete_own_only">איר קענט בלויז אויסמעקן אײַערע אייגענע מעלדונגען</string>
     <string name="chat_selection_title">%1$d אויסגעקליבן</string>
+    <string name="chat_forward_subtitle">קלײַבט אויס אַ שמועס אָדער פֿרײַנד צו װײַטערשיקן די אויסגעקליבענע מעלדונגען</string>
+    <string name="chat_forward_chats">שמועסן</string>
+    <string name="chat_forward_friends">חברים</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Ин паёмро барои ҳама нест мекунад ва баргардонида намешавад.</string>
     <string name="chat_delete_own_only">Шумо танҳо паёмҳои худро нест карда метавонед</string>
     <string name="chat_selection_title">%1$d интихобшуда</string>
+    <string name="chat_forward_subtitle">Чат ё дӯстеро интихоб кунед, то паёмҳои интихобшударо ба он равон кунед</string>
+    <string name="chat_forward_chats">Чатҳо</string>
+    <string name="chat_forward_friends">Дӯстон</string>
 </resources>

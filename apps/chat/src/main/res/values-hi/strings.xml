@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">इससे यह मैसेज सभी के लिए डिलीट हो जाएगा और इसे वापस नहीं लाया जा सकता।</string>
     <string name="chat_delete_own_only">आप केवल अपने ही मैसेज डिलीट कर सकते हैं</string>
     <string name="chat_selection_title">%1$d चुने गए</string>
+    <string name="chat_forward_subtitle">चयनित संदेश अग्रेषित करने के लिए कोई चैट या मित्र चुनें</string>
+    <string name="chat_forward_chats">चैट्स</string>
+    <string name="chat_forward_friends">मित्र</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Lokhu kususa umlayezo kuwo wonke umuntu futhi ngeke kuhlehliswe.</string>
     <string name="chat_delete_own_only">Ungasusa kuphela imilayezo yakho</string>
     <string name="chat_selection_title">%1$d kukhethiwe</string>
+    <string name="chat_forward_subtitle">Khetha ingxoxo noma umngane wokudlulisela imilayezo ekhethiwe</string>
+    <string name="chat_forward_chats">Izingxoxo</string>
+    <string name="chat_forward_friends">Abangane</string>
 </resources>

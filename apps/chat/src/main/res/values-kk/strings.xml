@@ -87,4 +87,7 @@
     <string name="chat_delete_confirm_body">Бұл хабарламаны барлығы үшін жояды әрі оны қайтару мүмкін емес.</string>
     <string name="chat_delete_own_only">Тек өз хабарламаларыңызды ғана жоя аласыз</string>
     <string name="chat_selection_title">%1$d таңдалды</string>
+    <string name="chat_forward_subtitle">Таңдалған хабарларды бағыттау үшін чат немесе досты таңдаңыз</string>
+    <string name="chat_forward_chats">Чаттар</string>
+    <string name="chat_forward_friends">Достар</string>
 </resources>

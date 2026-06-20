@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Honek mezua guztientzat ezabatzen du eta ezin da desegin.</string>
     <string name="chat_delete_own_only">Zure mezuak baino ezin dituzu ezabatu</string>
     <string name="chat_selection_title">%1$d hautatuta</string>
+    <string name="chat_forward_subtitle">Aukeratu txat edo lagun bat hautatutako mezuak birbidaltzeko</string>
+    <string name="chat_forward_chats">Txatak</string>
+    <string name="chat_forward_friends">Lagunak</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">การดำเนินการนี้จะลบข้อความสำหรับทุกคนและไม่สามารถกู้คืนได้</string>
     <string name="chat_delete_own_only">คุณลบได้เฉพาะข้อความของคุณเองเท่านั้น</string>
     <string name="chat_selection_title">เลือกแล้ว %1$d รายการ</string>
+    <string name="chat_forward_subtitle">เลือกแชทหรือเพื่อนเพื่อส่งต่อข้อความที่เลือก</string>
+    <string name="chat_forward_chats">แชท</string>
+    <string name="chat_forward_friends">เพื่อน</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">یہ پیغام سب کے لیے حذف کر دیتا ہے اور اسے واپس نہیں کیا جا سکتا۔</string>
     <string name="chat_delete_own_only">آپ صرف اپنے پیغامات حذف کر سکتے ہیں</string>
     <string name="chat_selection_title">%1$d منتخب</string>
+    <string name="chat_forward_subtitle">منتخب پیغامات آگے بھیجنے کے لیے چیٹ یا دوست منتخب کریں</string>
+    <string name="chat_forward_chats">چیٹس</string>
+    <string name="chat_forward_friends">دوست</string>
 </resources>

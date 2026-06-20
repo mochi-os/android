@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Týmto sa správa odstráni pre všetkých a nedá sa to vrátiť späť.</string>
     <string name="chat_delete_own_only">Môžete odstrániť iba svoje vlastné správy</string>
     <string name="chat_selection_title">Vybraté: %1$d</string>
+    <string name="chat_forward_subtitle">Vyberte chat alebo priateľa, ktorému preposlať vybrané správy</string>
+    <string name="chat_forward_chats">Chaty</string>
+    <string name="chat_forward_friends">Priatelia</string>
 </resources>

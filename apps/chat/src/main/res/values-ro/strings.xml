@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Aceasta șterge mesajul pentru toți și nu poate fi anulată.</string>
     <string name="chat_delete_own_only">Poți șterge doar propriile mesaje</string>
     <string name="chat_selection_title">%1$d selectate</string>
+    <string name="chat_forward_subtitle">Alege un chat sau un prieten căruia să-i redirecționezi mesajele selectate</string>
+    <string name="chat_forward_chats">Chaturi</string>
+    <string name="chat_forward_friends">Prieteni</string>
 </resources>

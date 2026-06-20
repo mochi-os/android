@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Dit verwijdert het bericht voor iedereen en kan niet ongedaan worden gemaakt.</string>
     <string name="chat_delete_own_only">U kunt enkel uw eigen berichten verwijderen</string>
     <string name="chat_selection_title">%1$d geselecteerd</string>
+    <string name="chat_forward_subtitle">Kies een chat of vriend om de geselecteerde berichten naar door te sturen</string>
+    <string name="chat_forward_chats">Chats</string>
+    <string name="chat_forward_friends">Vrienden</string>
 </resources>

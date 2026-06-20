@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">Il messaggio verrà eliminato per tutti e non potrà essere recuperato.</string>
     <string name="chat_delete_own_only">Puoi eliminare solo i tuoi messaggi</string>
     <string name="chat_selection_title">%1$d selezionati</string>
+    <string name="chat_forward_subtitle">Scegli una chat o un amico a cui inoltrare i messaggi selezionati</string>
+    <string name="chat_forward_chats">Chat</string>
+    <string name="chat_forward_friends">Amici</string>
 </resources>

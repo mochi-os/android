@@ -75,4 +75,6 @@
     <string name="chat_delete_own_only">你只可以刪除自己嘅訊息</string>
     <string name="chat_selection_title">已選取 %1$d 條</string>
 
+    <string name="chat_forward_chats">傾偈</string>
+    <string name="chat_forward_friends">朋友</string>
 </resources>

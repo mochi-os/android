@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">سيؤدي هذا إلى حذف الرسالة لدى الجميع ولا يمكن التراجع عنه.</string>
     <string name="chat_delete_own_only">يمكنك حذف رسائلك فقط</string>
     <string name="chat_selection_title">تم تحديد %1$d</string>
+    <string name="chat_forward_subtitle">اختر دردشة أو صديقًا لإعادة توجيه الرسائل المحددة إليه</string>
+    <string name="chat_forward_chats">الدردشات</string>
+    <string name="chat_forward_friends">الأصدقاء</string>
 </resources>

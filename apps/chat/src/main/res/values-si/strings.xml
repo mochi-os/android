@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">මෙයින් සියලු දෙනා සඳහා පණිවිඩය මැකෙන අතර එය ආපසු හැරවිය නොහැක.</string>
     <string name="chat_delete_own_only">ඔබට මැකිය හැක්කේ ඔබගේම පණිවිඩ පමණි</string>
     <string name="chat_selection_title">%1$d ක් තෝරා ඇත</string>
+    <string name="chat_forward_subtitle">තෝරාගත් පණිවිඩ යොමු කිරීමට චැට් එකක් හෝ මිතුරෙකු තෝරන්න</string>
+    <string name="chat_forward_chats">චැට්</string>
+    <string name="chat_forward_friends">මිතුරන්</string>
 </resources>

@@ -86,4 +86,7 @@
     <string name="chat_delete_confirm_body">ይህ መልዕክቱን ለሁሉም ሰው ይሰርዘዋል እና መልሶ ማግኘት አይቻልም።</string>
     <string name="chat_delete_own_only">የራስዎን መልዕክቶች ብቻ መሰረዝ ይችላሉ</string>
     <string name="chat_selection_title">%1$d ተመርጧል</string>
+    <string name="chat_forward_subtitle">የተመረጡትን መልዕክቶች ለማስተላለፍ ውይይት ወይም ጓደኛ ይምረጡ</string>
+    <string name="chat_forward_chats">ውይይቶች</string>
+    <string name="chat_forward_friends">ጓደኞች</string>
 </resources>
