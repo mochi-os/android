@@ -39,8 +39,8 @@ class ChatRepository @Inject constructor(
     suspend fun viewChat(chatId: String): ChatViewResponse =
         api.viewChat(chatId).unwrap()
 
-    suspend fun getMessages(chatId: String, before: Long? = null, limit: Int? = null): MessageListResponse =
-        api.getMessages(chatId, before, limit).unwrap()
+    suspend fun getMessages(chatId: String, before: Long? = null, beforeId: String? = null, limit: Int? = null): MessageListResponse =
+        api.getMessages(chatId, before, beforeId, limit).unwrap()
 
     suspend fun sendMessage(
         chatId: String,

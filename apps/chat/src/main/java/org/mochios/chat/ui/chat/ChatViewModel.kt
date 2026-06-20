@@ -34,6 +34,7 @@ data class ChatUiState(
     val messages: List<ChatMessage> = emptyList(),
     val hasMore: Boolean = false,
     val nextCursor: Long? = null,
+    val nextCursorId: String? = null,
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,
@@ -90,6 +91,7 @@ class ChatViewModel @Inject constructor(
                     messages = msgs.messages,
                     hasMore = msgs.hasMore,
                     nextCursor = msgs.nextCursor,
+                    nextCursorId = msgs.nextCursorId,
                     isLoading = false
                 )
                 subscribeWebSocket(view.chat.key)
@@ -125,6 +127,7 @@ class ChatViewModel @Inject constructor(
                     messages = msgs.messages,
                     hasMore = msgs.hasMore,
                     nextCursor = msgs.nextCursor,
+                    nextCursorId = msgs.nextCursorId,
                     isRefreshing = false,
                     error = null
                 )
@@ -137,20 +140,21 @@ class ChatViewModel @Inject constructor(
 
     fun loadMoreOlder() {
         val cursor = _uiState.value.nextCursor ?: return
+        val cursorId = _uiState.value.nextCursorId
         if (_uiState.value.isLoadingMore) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoadingMore = true)
             try {
-                val older = repository.getMessages(chatId, before = cursor, limit = MESSAGE_PAGE_SIZE)
-                // Drop any message the page overlaps with (the `before` cursor can
-                // be inclusive), keeping ids unique so the LazyColumn keys don't
-                // collide.
+                val older = repository.getMessages(chatId, before = cursor, beforeId = cursorId, limit = MESSAGE_PAGE_SIZE)
+                // Defensive: the (created, id) keyset cursor returns no overlap,
+                // but dedupe by id anyway so the LazyColumn keys can never collide.
                 val merged = (older.messages + _uiState.value.messages)
                     .distinctBy { message -> message.id }
                 _uiState.value = _uiState.value.copy(
                     messages = merged,
                     hasMore = older.hasMore,
                     nextCursor = older.nextCursor,
+                    nextCursorId = older.nextCursorId,
                     isLoadingMore = false
                 )
             } catch (e: Exception) {

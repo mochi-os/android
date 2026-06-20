@@ -35,7 +35,11 @@ data class NewChatResponse(
 data class MessageListResponse(
     val messages: List<ChatMessage> = emptyList(),
     val hasMore: Boolean = false,
-    val nextCursor: Long? = null
+    // Keyset cursor for the next (older) page: the oldest message's timestamp
+    // plus its id. The id disambiguates messages sharing one whole-second
+    // nextCursor, which a timestamp-only cursor cannot.
+    val nextCursor: Long? = null,
+    val nextCursorId: String? = null
 )
 
 data class SendMessageResponse(val id: String = "")
@@ -90,6 +94,7 @@ interface ChatApi {
     suspend fun getMessages(
         @Path("chatId") chatId: String,
         @Query("before") before: Long? = null,
+        @Query("before_id") beforeId: String? = null,
         @Query("limit") limit: Int? = null
     ): Response<ApiResponse<MessageListResponse>>
 
