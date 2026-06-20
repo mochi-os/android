@@ -7,6 +7,8 @@ package org.mochios.android.ui.components
 
 import android.content.Context
 import android.text.Spanned
+import android.text.StaticLayout
+import android.text.TextUtils
 import android.text.style.ClickableSpan
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -31,6 +33,16 @@ class ClickableLinkTextView @JvmOverloads constructor(
     /** Image URL (AsyncDrawable destination) -> its alt/title text. */
     var imageAltByUrl: Map<String, String> = emptyMap()
 
+    /**
+     * When true, the visible line count is capped to whatever fits the view's
+     * own (bounded) height and the last visible line is ellipsised. Used by the
+     * feeds magazine page, where each post fills the screen: the body grows to
+     * occupy the available space instead of a fixed line cap, and only truncates
+     * when the text genuinely overflows. Leave false for the normal
+     * maxLines-driven behaviour.
+     */
+    var clampToHeight = false
+
     private var downX = 0f
     private var downY = 0f
     private var pendingLink: ClickableSpan? = null
@@ -45,6 +57,41 @@ class ClickableLinkTextView @JvmOverloads constructor(
             longPressFired = true
             onImageLongPress?.invoke(alt)
         }
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        if (clampToHeight) {
+            val heightMode = MeasureSpec.getMode(heightMeasureSpec)
+            // Only meaningful when the parent bounds our height (EXACTLY from a
+            // weighted slot, or AT_MOST). With an unbounded height there is
+            // nothing to fit against, so fall through to the default behaviour.
+            if (heightMode == MeasureSpec.EXACTLY || heightMode == MeasureSpec.AT_MOST) {
+                val available = MeasureSpec.getSize(heightMeasureSpec) -
+                    compoundPaddingTop - compoundPaddingBottom
+                val width = MeasureSpec.getSize(widthMeasureSpec) -
+                    compoundPaddingLeft - compoundPaddingRight
+                val content = text
+                if (available > 0 && width > 0 && !content.isNullOrEmpty()) {
+                    // Lay the full (uncapped) text out in a throwaway layout so
+                    // the target line count is derived independently of the
+                    // view's current maxLines — that keeps it stable across
+                    // measure passes and avoids a maxLines feedback loop.
+                    val full = StaticLayout.Builder
+                        .obtain(content, 0, content.length, paint, width)
+                        .setLineSpacing(lineSpacingExtra, lineSpacingMultiplier)
+                        .setIncludePad(includeFontPadding)
+                        .build()
+                    var fit = 0
+                    while (fit < full.lineCount && full.getLineBottom(fit) <= available) fit++
+                    val target = if (fit < full.lineCount) fit.coerceAtLeast(1) else Int.MAX_VALUE
+                    if (maxLines != target) {
+                        maxLines = target
+                        ellipsize = if (target == Int.MAX_VALUE) null else TextUtils.TruncateAt.END
+                    }
+                }
+            }
+        }
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {

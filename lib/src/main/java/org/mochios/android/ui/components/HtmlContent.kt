@@ -26,6 +26,7 @@ fun HtmlContent(
     html: String,
     modifier: Modifier = Modifier,
     maxLines: Int = Int.MAX_VALUE,
+    clampToBoundedHeight: Boolean = false,
     onClick: (() -> Unit)? = null,
     onImageLongPress: ((String) -> Unit)? = null,
     onTextViewReady: ((TextView) -> Unit)? = null
@@ -68,11 +69,20 @@ fun HtmlContent(
             }
         },
         update = { textView ->
-            textView.maxLines = maxLines
-            if (maxLines != Int.MAX_VALUE) {
-                textView.ellipsize = TextUtils.TruncateAt.END
+            val view = textView as ClickableLinkTextView
+            view.clampToHeight = clampToBoundedHeight
+            if (clampToBoundedHeight) {
+                // The visible line count and ellipsis are decided in the view's
+                // onMeasure from its bounded height; start uncapped so the clamp
+                // can both grow and shrink it.
+                textView.maxLines = Int.MAX_VALUE
+            } else {
+                textView.maxLines = maxLines
+                if (maxLines != Int.MAX_VALUE) {
+                    textView.ellipsize = TextUtils.TruncateAt.END
+                }
             }
-            (textView as ClickableLinkTextView).onNonLinkClick = onClick
+            view.onNonLinkClick = onClick
             textView.onImageLongPress = onImageLongPress
             textView.imageAltByUrl = altByUrl
             markwon.setParsedMarkdown(textView, spanned)

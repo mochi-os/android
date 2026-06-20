@@ -45,12 +45,18 @@ import org.mochios.android.R as MochiR
  *
  * Long-pressing an image shows its alt/title text (e.g. a web comic's
  * punchline) in a dialog.
+ *
+ * With [fillHeight] the body grows to fill the height it is given (the caller
+ * places it in a weighted slot) and ellipsises only when the text overflows
+ * that space, rather than stopping at a fixed [maxLines]. This is the feeds
+ * magazine page, where each post fills the screen.
  */
 @Composable
 fun PostBody(
     post: Post,
     modifier: Modifier = Modifier,
     maxLines: Int = Int.MAX_VALUE,
+    fillHeight: Boolean = false,
     titleFontSize: TextUnit = 18.sp,
     titleBodyGap: Dp = 4.dp,
     onClick: (() -> Unit)? = null,
@@ -68,12 +74,13 @@ fun PostBody(
             html = body,
             modifier = modifier,
             maxLines = maxLines,
+            clampToBoundedHeight = fillHeight,
             onClick = onClick,
             onImageLongPress = showAlt,
         )
     } else {
         val rest = body.substring(rawTitle.length).trimStart('\n', ' ')
-        val truncated = maxLines != Int.MAX_VALUE
+        val truncated = fillHeight || maxLines != Int.MAX_VALUE
         val titleModifier = Modifier
             .fillMaxWidth()
             .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier)
@@ -92,8 +99,15 @@ fun PostBody(
                 Spacer(modifier = Modifier.height(titleBodyGap))
                 HtmlContent(
                     html = rest,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = if (fillHeight) {
+                        Modifier
+                            .fillMaxWidth()
+                            .weight(1f)
+                    } else {
+                        Modifier.fillMaxWidth()
+                    },
                     maxLines = maxLines,
+                    clampToBoundedHeight = fillHeight,
                     onClick = onClick,
                     onImageLongPress = showAlt,
                 )

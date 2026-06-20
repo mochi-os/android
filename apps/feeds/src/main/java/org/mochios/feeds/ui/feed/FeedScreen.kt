@@ -12,8 +12,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.heightIn
@@ -867,11 +865,14 @@ private fun PostCard(
               contentScale = ContentScale.Fit,
           )
       }
+      // No verticalScroll: this is a fixed, screen-filling magazine page, not a
+      // scroller. The body (below) flexes to fill the space and ellipsises when
+      // it overflows; the full article is one tap away in the detail screen. A
+      // nested vertical scroll here would also fight the pager's swipe-to-flip.
       Column(
           modifier = Modifier
               .weight(1f)
               .fillMaxWidth()
-              .verticalScroll(rememberScrollState())
               .clickable(onClick = onClick)
               .padding(
                   start = 16.dp,
@@ -952,16 +953,21 @@ private fun PostCard(
                 }
             }
 
-            // Post body (truncated). Taps open detail. For RSS posts the
-            // first line is the article title — bolded for scannability.
+            // Post body. Each post fills the magazine page, so the body grows
+            // to occupy the space between the title and the bottom of the page
+            // and ellipsises only when the text overflows it. Taps open detail
+            // for the full article. For RSS posts the first line is the article
+            // title — bolded for scannability.
             if (post.body.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(8.dp))
                 PostBody(
                     post = post,
-                    maxLines = 6,
+                    fillHeight = true,
                     titleFontSize = 20.sp,
                     titleBodyGap = 8.dp,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f),
                     onClick = onClick
                 )
             }
