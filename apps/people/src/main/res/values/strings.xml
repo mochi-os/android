@@ -29,6 +29,8 @@
     <string name="people_friends_add_to_start">Add friends to start connecting</string>
     <string name="people_friends_search">Search friends</string>
     <string name="people_friends_search_placeholder">Search…</string>
+    <string name="people_friends_sort_name">Name (A–Z)</string>
+    <string name="people_friends_sort_recent">Recently added</string>
     <string name="people_friends_searching">Searching…</string>
     <string name="people_friends_remove">Remove friend</string>
     <string name="people_friends_remove_confirm">Are you sure you want to remove %1$s from your friends list? This action cannot be undone.</string>

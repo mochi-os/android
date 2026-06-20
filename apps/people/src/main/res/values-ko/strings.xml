@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">초대됨</string>
     <string name="people_person_add_friend">친구로 추가</string>
 
+    <string name="people_friends_sort_name">이름 (A–Z)</string>
+    <string name="people_friends_sort_recent">최근 추가됨</string>
 </resources>

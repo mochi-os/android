@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Uitgenodigd</string>
     <string name="people_person_add_friend">Toevoegen als vriend</string>
 
+    <string name="people_friends_sort_name">Naam (A–Z)</string>
+    <string name="people_friends_sort_recent">Onlangs toegevoegd</string>
 </resources>

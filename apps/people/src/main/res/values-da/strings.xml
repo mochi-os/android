@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Inviteret</string>
     <string name="people_person_add_friend">Tilføj som ven</string>
 
+    <string name="people_friends_sort_name">Navn (A–Z)</string>
+    <string name="people_friends_sort_recent">Tilføjet for nylig</string>
 </resources>

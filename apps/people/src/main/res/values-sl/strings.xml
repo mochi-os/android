@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Povabljen(a)</string>
     <string name="people_person_add_friend">Dodaj kot prijatelja</string>
 
+    <string name="people_friends_sort_name">Ime (A–Ž)</string>
+    <string name="people_friends_sort_recent">Nedavno dodano</string>
 </resources>

@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">دعوت ڏنل</string>
     <string name="people_person_add_friend">دوست طور شامل ڪريو</string>
 
+    <string name="people_friends_sort_name">نالو (A–Z)</string>
+    <string name="people_friends_sort_recent">تازو شامل ٿيل</string>
 </resources>

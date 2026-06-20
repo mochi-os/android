@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">تمت الدعوة</string>
     <string name="people_person_add_friend">إضافة كصديق</string>
 
+    <string name="people_friends_sort_name">الاسم (أ–ي)</string>
+    <string name="people_friends_sort_recent">أُضيف مؤخرًا</string>
 </resources>

@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">A ti pè</string>
     <string name="people_person_add_friend">Fi kún gẹ́gẹ́ bí ọ̀rẹ́</string>
 
+    <string name="people_friends_sort_name">Orúkọ (A–Z)</string>
+    <string name="people_friends_sort_recent">Tí a ṣẹ̀ṣẹ̀ fi kún</string>
 </resources>

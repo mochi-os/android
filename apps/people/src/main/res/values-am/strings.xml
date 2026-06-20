@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">ተጋብዟል</string>
     <string name="people_person_add_friend">እንደ ጓደኛ ጨምር</string>
 
+    <string name="people_friends_sort_name">ስም (ሀ–ፐ)</string>
+    <string name="people_friends_sort_recent">በቅርቡ የተጨመረ</string>
 </resources>

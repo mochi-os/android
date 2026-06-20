@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Zaproszono</string>
     <string name="people_person_add_friend">Dodaj do znajomych</string>
 
+    <string name="people_friends_sort_name">Nazwa (A–Z)</string>
+    <string name="people_friends_sort_recent">Niedawno dodane</string>
 </resources>

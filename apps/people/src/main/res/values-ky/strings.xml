@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Чакырылган</string>
     <string name="people_person_add_friend">Дос катары кошуу</string>
 
+    <string name="people_friends_sort_name">Аты (А–Я)</string>
+    <string name="people_friends_sort_recent">Жакында кошулган</string>
 </resources>

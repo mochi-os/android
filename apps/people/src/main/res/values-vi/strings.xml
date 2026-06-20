@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Đã mời</string>
     <string name="people_person_add_friend">Thêm làm bạn bè</string>
 
+    <string name="people_friends_sort_name">Tên (A–Z)</string>
+    <string name="people_friends_sort_recent">Mới thêm gần đây</string>
 </resources>

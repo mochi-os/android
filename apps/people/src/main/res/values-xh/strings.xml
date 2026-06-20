@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Umenyiwe</string>
     <string name="people_person_add_friend">Yongeza njengomhlobo</string>
 
+    <string name="people_friends_sort_name">Igama (A–Z)</string>
+    <string name="people_friends_sort_recent">Kongezwe kutshanje</string>
 </resources>

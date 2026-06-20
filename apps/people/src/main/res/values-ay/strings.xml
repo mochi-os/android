@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Jawsata</string>
     <string name="people_person_add_friend">Masjam yapxataña</string>
 
+    <string name="people_friends_sort_name">Suti (A–Z)</string>
+    <string name="people_friends_sort_recent">Qhipa uru yapxatata</string>
 </resources>

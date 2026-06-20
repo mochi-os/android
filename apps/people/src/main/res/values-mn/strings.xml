@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Уригдсан</string>
     <string name="people_person_add_friend">Найзаар нэмэх</string>
 
+    <string name="people_friends_sort_name">Нэр (A–Z)</string>
+    <string name="people_friends_sort_recent">Саяхан нэмсэн</string>
 </resources>

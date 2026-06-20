@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Amealikwa</string>
     <string name="people_person_add_friend">Ongeza kama rafiki</string>
 
+    <string name="people_friends_sort_name">Jina (A–Z)</string>
+    <string name="people_friends_sort_recent">Imeongezwa hivi karibuni</string>
 </resources>

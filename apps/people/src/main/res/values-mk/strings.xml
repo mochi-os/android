@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Поканет</string>
     <string name="people_person_add_friend">Додај како пријател</string>
 
+    <string name="people_friends_sort_name">Име (А–Ш)</string>
+    <string name="people_friends_sort_recent">Неодамна додадено</string>
 </resources>

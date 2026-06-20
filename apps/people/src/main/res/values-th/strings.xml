@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">เชิญแล้ว</string>
     <string name="people_person_add_friend">เพิ่มเป็นเพื่อน</string>
 
+    <string name="people_friends_sort_name">ชื่อ (A–Z)</string>
+    <string name="people_friends_sort_recent">เพิ่มเมื่อเร็ว ๆ นี้</string>
 </resources>

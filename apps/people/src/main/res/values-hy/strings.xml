@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Հրավիրված</string>
     <string name="people_person_add_friend">Ավելացնել որպես ընկեր</string>
 
+    <string name="people_friends_sort_name">Անուն (Ա–Ֆ)</string>
+    <string name="people_friends_sort_recent">Վերջերս ավելացված</string>
 </resources>

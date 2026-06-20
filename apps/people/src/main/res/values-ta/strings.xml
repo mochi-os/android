@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">அழைக்கப்பட்டது</string>
     <string name="people_person_add_friend">நண்பராக சேர்</string>
 
+    <string name="people_friends_sort_name">பெயர் (A–Z)</string>
+    <string name="people_friends_sort_recent">சமீபத்தில் சேர்க்கப்பட்டது</string>
 </resources>

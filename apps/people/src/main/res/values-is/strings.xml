@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Boðið</string>
     <string name="people_person_add_friend">Bæta við sem vini</string>
 
+    <string name="people_friends_sort_name">Nafn (A–Ö)</string>
+    <string name="people_friends_sort_recent">Nýlega bætt við</string>
 </resources>

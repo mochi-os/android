@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">بلنه ورکړل شوه</string>
     <string name="people_person_add_friend">د ملګري په توګه اضافه کړئ</string>
 
+    <string name="people_friends_sort_name">نوم (A–Z)</string>
+    <string name="people_friends_sort_recent">پدې وروستیو کې اضافه شوی</string>
 </resources>

@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Mink\'asqa</string>
     <string name="people_person_add_friend">Masihina yapay</string>
 
+    <string name="people_friends_sort_name">Suti (A–Z)</string>
+    <string name="people_friends_sort_recent">Ñaqha yapasqa</string>
 </resources>

@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Tugadh cuireadh</string>
     <string name="people_person_add_friend">Cuir mar chara</string>
 
+    <string name="people_friends_sort_name">Ainm (A–Z)</string>
+    <string name="people_friends_sort_recent">Curtha leis le déanaí</string>
 </resources>

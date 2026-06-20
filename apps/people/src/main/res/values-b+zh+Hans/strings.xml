@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">已邀请</string>
     <string name="people_person_add_friend">添加为好友</string>
 
+    <string name="people_friends_sort_name">名称 (A–Z)</string>
+    <string name="people_friends_sort_recent">最近添加</string>
 </resources>

@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">მოწვეული</string>
     <string name="people_person_add_friend">მეგობრად დამატება</string>
 
+    <string name="people_friends_sort_name">სახელი (A–Z)</string>
+    <string name="people_friends_sort_recent">ცოტა ხნის წინ დამატებული</string>
 </resources>

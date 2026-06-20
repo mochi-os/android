@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Envite</string>
     <string name="people_person_add_friend">Ajoute kòm zanmi</string>
 
+    <string name="people_friends_sort_name">Non (A–Z)</string>
+    <string name="people_friends_sort_recent">Ajoute dènyèman</string>
 </resources>

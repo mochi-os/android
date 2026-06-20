@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Kutsuttu</string>
     <string name="people_person_add_friend">Lisää kaveriksi</string>
 
+    <string name="people_friends_sort_name">Nimi (A–Z)</string>
+    <string name="people_friends_sort_recent">Äskettäin lisätty</string>
 </resources>

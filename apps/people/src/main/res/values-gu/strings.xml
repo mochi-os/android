@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">આમંત્રિત</string>
     <string name="people_person_add_friend">મિત્ર તરીકે ઉમેરો</string>
 
+    <string name="people_friends_sort_name">નામ (A–Z)</string>
+    <string name="people_friends_sort_recent">તાજેતરમાં ઉમેરાયેલ</string>
 </resources>

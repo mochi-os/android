@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">بانگهێشتکراو</string>
     <string name="people_person_add_friend">زیادکردن وەک هاوڕێ</string>
 
+    <string name="people_friends_sort_name">ناو (A–Z)</string>
+    <string name="people_friends_sort_recent">بەم دواییە زیادکراو</string>
 </resources>

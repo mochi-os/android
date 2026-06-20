@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Davet edildi</string>
     <string name="people_person_add_friend">Arkadaş olarak ekle</string>
 
+    <string name="people_friends_sort_name">Ad (A–Z)</string>
+    <string name="people_friends_sort_recent">Yakın zamanda eklendi</string>
 </resources>

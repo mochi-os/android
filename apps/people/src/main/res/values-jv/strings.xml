@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Sampun diulemi</string>
     <string name="people_person_add_friend">Tambahaken minangka kanca</string>
 
+    <string name="people_friends_sort_name">Jeneng (A–Z)</string>
+    <string name="people_friends_sort_recent">Lagi wae ditambahake</string>
 </resources>

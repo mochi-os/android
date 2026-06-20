@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Pozván</string>
     <string name="people_person_add_friend">Přidat jako přítele</string>
 
+    <string name="people_friends_sort_name">Název (A–Z)</string>
+    <string name="people_friends_sort_recent">Nedávno přidáno</string>
 </resources>

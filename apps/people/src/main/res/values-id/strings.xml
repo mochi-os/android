@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Diundang</string>
     <string name="people_person_add_friend">Tambahkan sebagai teman</string>
 
+    <string name="people_friends_sort_name">Nama (A–Z)</string>
+    <string name="people_friends_sort_recent">Baru ditambahkan</string>
 </resources>

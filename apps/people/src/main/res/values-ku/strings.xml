@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Vexwendî</string>
     <string name="people_person_add_friend">Wek heval zêde bike</string>
 
+    <string name="people_friends_sort_name">Nav (A–Z)</string>
+    <string name="people_friends_sort_recent">Vê dawiyê hatî zêdekirin</string>
 </resources>

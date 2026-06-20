@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">ക്ഷണിച്ചു</string>
     <string name="people_person_add_friend">സുഹൃത്തായി ചേർക്കുക</string>
 
+    <string name="people_friends_sort_name">പേര് (A–Z)</string>
+    <string name="people_friends_sort_recent">അടുത്തിടെ ചേർത്തത്</string>
 </resources>

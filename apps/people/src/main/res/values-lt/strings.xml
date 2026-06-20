@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Pakviestas (-a)</string>
     <string name="people_person_add_friend">Pridėti kaip draugą</string>
 
+    <string name="people_friends_sort_name">Vardas (A–Z)</string>
+    <string name="people_friends_sort_recent">Neseniai pridėta</string>
 </resources>

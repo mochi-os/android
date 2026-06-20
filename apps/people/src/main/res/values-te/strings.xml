@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">ఆహ్వానించబడింది</string>
     <string name="people_person_add_friend">స్నేహితుడిగా జోడించు</string>
 
+    <string name="people_friends_sort_name">పేరు (A–Z)</string>
+    <string name="people_friends_sort_recent">ఇటీవల జోడించబడింది</string>
 </resources>

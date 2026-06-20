@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Convidat</string>
     <string name="people_person_add_friend">Afegeix com a amic</string>
 
+    <string name="people_friends_sort_name">Nom (A–Z)</string>
+    <string name="people_friends_sort_recent">Afegit recentment</string>
 </resources>

@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">আমন্ত্রিত</string>
     <string name="people_person_add_friend">বন্ধু হিসেবে যোগ করুন</string>
 
+    <string name="people_friends_sort_name">নাম (A–Z)</string>
+    <string name="people_friends_sort_recent">সম্প্রতি যোগ করা হয়েছে</string>
 </resources>

@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Diondang</string>
     <string name="people_person_add_friend">Tambihan jadi babaturan</string>
 
+    <string name="people_friends_sort_name">Ngaran (A–Z)</string>
+    <string name="people_friends_sort_recent">Nembé ditambahkeun</string>
 </resources>

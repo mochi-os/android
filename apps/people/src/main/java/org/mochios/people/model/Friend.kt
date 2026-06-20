@@ -9,5 +9,8 @@ data class Friend(
     val `class`: String = "person",
     val id: String = "",
     val identity: String = "",
-    val name: String = ""
+    val name: String = "",
+    // Friendship creation time (unix seconds), from the server's `created`
+    // column. Drives the "Recently added" sort; 0 when absent.
+    val created: Long = 0
 )

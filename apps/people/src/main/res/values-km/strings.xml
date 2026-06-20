@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">បានអញ្ជើញ</string>
     <string name="people_person_add_friend">បន្ថែមជាមិត្តភក្តិ</string>
 
+    <string name="people_friends_sort_name">ឈ្មោះ (A–Z)</string>
+    <string name="people_friends_sort_recent">បានបន្ថែមថ្មីៗ</string>
 </resources>

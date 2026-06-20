@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Mistieden</string>
     <string name="people_person_add_friend">Żid bħala ħabib</string>
 
+    <string name="people_friends_sort_name">Isem (A–Z)</string>
+    <string name="people_friends_sort_recent">Miżjud reċentement</string>
 </resources>

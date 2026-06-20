@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -24,7 +25,9 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonRemove
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -215,6 +218,57 @@ fun FriendsScreen(
                             .fillMaxWidth()
                             .padding(horizontal = 16.dp, vertical = 8.dp),
                     )
+
+                    // Sort toggle (name vs recently added), matching web. Only
+                    // shown once there are friends to order.
+                    if (uiState.friends.isNotEmpty()) {
+                        var sortMenuOpen by remember { mutableStateOf(false) }
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 16.dp),
+                            horizontalArrangement = Arrangement.End,
+                        ) {
+                            Box {
+                                TextButton(onClick = { sortMenuOpen = true }) {
+                                    Icon(
+                                        Icons.Default.Sort,
+                                        contentDescription = null,
+                                        modifier = Modifier.size(18.dp),
+                                    )
+                                    Spacer(Modifier.width(4.dp))
+                                    Text(
+                                        when (uiState.sortBy) {
+                                            FriendSortBy.RECENT ->
+                                                stringResource(R.string.people_friends_sort_recent)
+                                            FriendSortBy.NAME ->
+                                                stringResource(R.string.people_friends_sort_name)
+                                        }
+                                    )
+                                    Icon(Icons.Default.ArrowDropDown, contentDescription = null)
+                                }
+                                DropdownMenu(
+                                    expanded = sortMenuOpen,
+                                    onDismissRequest = { sortMenuOpen = false },
+                                ) {
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.people_friends_sort_name)) },
+                                        onClick = {
+                                            viewModel.setSortBy(FriendSortBy.NAME)
+                                            sortMenuOpen = false
+                                        },
+                                    )
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.people_friends_sort_recent)) },
+                                        onClick = {
+                                            viewModel.setSortBy(FriendSortBy.RECENT)
+                                            sortMenuOpen = false
+                                        },
+                                    )
+                                }
+                            }
+                        }
+                    }
 
                     if (uiState.showWelcome) {
                         WelcomeBanner(onDismiss = { viewModel.dismissWelcome() })

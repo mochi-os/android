@@ -33,11 +33,15 @@ import javax.inject.Inject
  * are emitted through [toasts] so the screen can render them via Snackbar
  * without owning more state.
  */
+/** How the friends list is ordered. Mirrors web's name/recent toggle. */
+enum class FriendSortBy { NAME, RECENT }
+
 data class FriendsUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val friends: List<Friend> = emptyList(),
     val searchQuery: String = "",
+    val sortBy: FriendSortBy = FriendSortBy.NAME,
     val error: MochiError? = null,
 
     // Remove-friend confirmation dialog
@@ -150,7 +154,6 @@ class FriendsViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val list = repository.listFriends().friends
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(friends = list, isLoading = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
@@ -163,7 +166,6 @@ class FriendsViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val list = repository.listFriends().friends
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
                     friends = list,
                     isRefreshing = false,
@@ -182,11 +184,21 @@ class FriendsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(searchQuery = query)
     }
 
+    fun setSortBy(sortBy: FriendSortBy) {
+        _uiState.value = _uiState.value.copy(sortBy = sortBy)
+    }
+
     fun filteredFriends(): List<Friend> {
         val q = _uiState.value.searchQuery.trim()
-        val base = _uiState.value.friends
-        if (q.isBlank()) return base
-        return base.filter { it.name.contains(q, ignoreCase = true) }
+        val base = if (q.isBlank()) {
+            _uiState.value.friends
+        } else {
+            _uiState.value.friends.filter { it.name.contains(q, ignoreCase = true) }
+        }
+        return when (_uiState.value.sortBy) {
+            FriendSortBy.RECENT -> base.sortedByDescending { it.created }
+            FriendSortBy.NAME -> base.sortedWith(compareBy(NaturalCompare) { it.name })
+        }
     }
 
     // ---------------- remove ----------------

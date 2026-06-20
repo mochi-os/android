@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">פֿאַרבעטן</string>
     <string name="people_person_add_friend">צוגעבן ווי אַ פֿרײַנד</string>
 
+    <string name="people_friends_sort_name">נאָמען (A–Z)</string>
+    <string name="people_friends_sort_recent">לעצטנס צוגעלייגט</string>
 </resources>

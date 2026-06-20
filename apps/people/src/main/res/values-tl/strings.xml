@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Inimbitahan</string>
     <string name="people_person_add_friend">Idagdag bilang kaibigan</string>
 
+    <string name="people_friends_sort_name">Pangalan (A–Z)</string>
+    <string name="people_friends_sort_recent">Kamakailang idinagdag</string>
 </resources>

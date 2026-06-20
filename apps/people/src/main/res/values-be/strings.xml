@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Запрошаны</string>
     <string name="people_person_add_friend">Дадаць у сябры</string>
 
+    <string name="people_friends_sort_name">Імя (А–Я)</string>
+    <string name="people_friends_sort_recent">Нядаўна дададзена</string>
 </resources>

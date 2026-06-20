@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Meghívva</string>
     <string name="people_person_add_friend">Hozzáadás ismerősként</string>
 
+    <string name="people_friends_sort_name">Név (A–Z)</string>
+    <string name="people_friends_sort_recent">Nemrég hozzáadva</string>
 </resources>

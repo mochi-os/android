@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">निमंत्रित</string>
     <string name="people_person_add_friend">दोस्त के रूप में जोड़ीं</string>
 
+    <string name="people_friends_sort_name">नाम (A–Z)</string>
+    <string name="people_friends_sort_recent">हाले में जोड़ल</string>
 </resources>

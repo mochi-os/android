@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Oñehenóima</string>
     <string name="people_person_add_friend">Embojoaju angirũramo</string>
 
+    <string name="people_friends_sort_name">Téra (A–Z)</string>
+    <string name="people_friends_sort_recent">Ojeʼ̃a ramoiténte</string>
 </resources>

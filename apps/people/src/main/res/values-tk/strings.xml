@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Çakylyk iberildi</string>
     <string name="people_person_add_friend">Dost hökmünde goşmak</string>
 
+    <string name="people_friends_sort_name">At (A–Z)</string>
+    <string name="people_friends_sort_recent">Ýaňy-ýakynda goşuldy</string>
 </resources>

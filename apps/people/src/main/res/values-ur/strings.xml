@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">مدعو</string>
     <string name="people_person_add_friend">بطور دوست شامل کریں</string>
 
+    <string name="people_friends_sort_name">نام (A–Z)</string>
+    <string name="people_friends_sort_recent">حال ہی میں شامل کیا گیا</string>
 </resources>

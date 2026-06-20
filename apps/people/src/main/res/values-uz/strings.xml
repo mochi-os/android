@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Taklif qilingan</string>
     <string name="people_person_add_friend">Do\'st sifatida qo\'shish</string>
 
+    <string name="people_friends_sort_name">Ism (A–Z)</string>
+    <string name="people_friends_sort_recent">Yaqinda qo\'shilgan</string>
 </resources>

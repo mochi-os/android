@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">ਸੱਦਾ ਭੇਜਿਆ</string>
     <string name="people_person_add_friend">ਦੋਸਤ ਵਜੋਂ ਜੋੜੋ</string>
 
+    <string name="people_friends_sort_name">ਨਾਮ (A–Z)</string>
+    <string name="people_friends_sort_recent">ਹਾਲ ਹੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ</string>
 </resources>

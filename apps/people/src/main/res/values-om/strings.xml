@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Afeerameera</string>
     <string name="people_person_add_friend">Akka hiriyaatti dabali</string>
 
+    <string name="people_friends_sort_name">Maqaa (A–Z)</string>
+    <string name="people_friends_sort_recent">Dhiheenya dabalame</string>
 </resources>

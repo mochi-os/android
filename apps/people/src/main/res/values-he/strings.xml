@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">הוזמן</string>
     <string name="people_person_add_friend">הוסף כחבר</string>
 
+    <string name="people_friends_sort_name">שם (א–ת)</string>
+    <string name="people_friends_sort_recent">נוסף לאחרונה</string>
 </resources>

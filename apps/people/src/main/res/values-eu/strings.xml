@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">Gonbidatuta</string>
     <string name="people_person_add_friend">Gehitu lagun gisa</string>
 
+    <string name="people_friends_sort_name">Izena (A–Z)</string>
+    <string name="people_friends_sort_recent">Duela gutxi gehituta</string>
 </resources>

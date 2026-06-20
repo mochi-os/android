@@ -199,4 +199,6 @@
     <string name="people_person_state_invited">An gayyace shi</string>
     <string name="people_person_add_friend">Ƙara a matsayin aboki</string>
 
+    <string name="people_friends_sort_name">Suna (A–Z)</string>
+    <string name="people_friends_sort_recent">An ƙara kwanan nan</string>
 </resources>
