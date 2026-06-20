@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Názov (A–Z)</string>
     <string name="people_friends_sort_recent">Nedávno pridané</string>
+    <string name="people_invitations_accept_all">Prijať všetky</string>
+    <string name="people_invitations_decline_all">Odmietnuť všetky</string>
+    <string name="people_invitations_cancel_all">Zrušiť všetky</string>
+    <string name="people_invitations_all_accepted">Všetky pozvánky prijaté</string>
+    <string name="people_invitations_all_declined">Všetky pozvánky odmietnuté</string>
+    <string name="people_invitations_all_cancelled">Všetky pozvánky zrušené</string>
+    <string name="people_invitations_some_accept_failed">Niektoré pozvánky nebolo možné prijať</string>
+    <string name="people_invitations_some_decline_failed">Niektoré pozvánky nebolo možné odmietnuť</string>
+    <string name="people_invitations_some_cancel_failed">Niektoré pozvánky nebolo možné zrušiť</string>
 </resources>

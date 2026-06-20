@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">ชื่อ (A–Z)</string>
     <string name="people_friends_sort_recent">เพิ่มเมื่อเร็ว ๆ นี้</string>
+    <string name="people_invitations_accept_all">ยอมรับทั้งหมด</string>
+    <string name="people_invitations_decline_all">ปฏิเสธทั้งหมด</string>
+    <string name="people_invitations_cancel_all">ยกเลิกทั้งหมด</string>
+    <string name="people_invitations_all_accepted">ยอมรับคำเชิญทั้งหมดแล้ว</string>
+    <string name="people_invitations_all_declined">ปฏิเสธคำเชิญทั้งหมดแล้ว</string>
+    <string name="people_invitations_all_cancelled">ยกเลิกคำเชิญทั้งหมดแล้ว</string>
+    <string name="people_invitations_some_accept_failed">ไม่สามารถยอมรับคำเชิญบางรายการได้</string>
+    <string name="people_invitations_some_decline_failed">ไม่สามารถปฏิเสธคำเชิญบางรายการได้</string>
+    <string name="people_invitations_some_cancel_failed">ไม่สามารถยกเลิกคำเชิญบางรายการได้</string>
 </resources>

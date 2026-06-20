@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">שם (א–ת)</string>
     <string name="people_friends_sort_recent">נוסף לאחרונה</string>
+    <string name="people_invitations_accept_all">קבל הכול</string>
+    <string name="people_invitations_decline_all">דחה הכול</string>
+    <string name="people_invitations_cancel_all">בטל הכול</string>
+    <string name="people_invitations_all_accepted">כל ההזמנות התקבלו</string>
+    <string name="people_invitations_all_declined">כל ההזמנות נדחו</string>
+    <string name="people_invitations_all_cancelled">כל ההזמנות בוטלו</string>
+    <string name="people_invitations_some_accept_failed">לא ניתן היה לקבל חלק מההזמנות</string>
+    <string name="people_invitations_some_decline_failed">לא ניתן היה לדחות חלק מההזמנות</string>
+    <string name="people_invitations_some_cancel_failed">לא ניתן היה לבטל חלק מההזמנות</string>
 </resources>

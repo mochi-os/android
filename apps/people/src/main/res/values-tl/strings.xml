@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Pangalan (A–Z)</string>
     <string name="people_friends_sort_recent">Kamakailang idinagdag</string>
+    <string name="people_invitations_accept_all">Tanggapin lahat</string>
+    <string name="people_invitations_decline_all">Tanggihan lahat</string>
+    <string name="people_invitations_cancel_all">Kanselahin lahat</string>
+    <string name="people_invitations_all_accepted">Lahat ng imbitasyon ay tinanggap</string>
+    <string name="people_invitations_all_declined">Lahat ng imbitasyon ay tinanggihan</string>
+    <string name="people_invitations_all_cancelled">Lahat ng imbitasyon ay kinansela</string>
+    <string name="people_invitations_some_accept_failed">Hindi matanggap ang ilang imbitasyon</string>
+    <string name="people_invitations_some_decline_failed">Hindi matanggihan ang ilang imbitasyon</string>
+    <string name="people_invitations_some_cancel_failed">Hindi makansela ang ilang imbitasyon</string>
 </resources>

@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nafn (A–Ö)</string>
     <string name="people_friends_sort_recent">Nýlega bætt við</string>
+    <string name="people_invitations_accept_all">Samþykkja allt</string>
+    <string name="people_invitations_decline_all">Hafna öllu</string>
+    <string name="people_invitations_cancel_all">Hætta við allt</string>
+    <string name="people_invitations_all_accepted">Öllum boðum samþykkt</string>
+    <string name="people_invitations_all_declined">Öllum boðum hafnað</string>
+    <string name="people_invitations_all_cancelled">Öllum boðum aflýst</string>
+    <string name="people_invitations_some_accept_failed">Ekki tókst að samþykkja sum boð</string>
+    <string name="people_invitations_some_decline_failed">Ekki tókst að hafna sumum boðum</string>
+    <string name="people_invitations_some_cancel_failed">Ekki tókst að aflýsa sumum boðum</string>
 </resources>

@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">नाम (A–Z)</string>
     <string name="people_friends_sort_recent">भर्खरै थपिएको</string>
+    <string name="people_invitations_accept_all">सबै स्वीकार गर्नुहोस्</string>
+    <string name="people_invitations_decline_all">सबै अस्वीकार गर्नुहोस्</string>
+    <string name="people_invitations_cancel_all">सबै रद्द गर्नुहोस्</string>
+    <string name="people_invitations_all_accepted">सबै निमन्त्रणा स्वीकार गरियो</string>
+    <string name="people_invitations_all_declined">सबै निमन्त्रणा अस्वीकार गरियो</string>
+    <string name="people_invitations_all_cancelled">सबै निमन्त्रणा रद्द गरियो</string>
+    <string name="people_invitations_some_accept_failed">केही निमन्त्रणा स्वीकार गर्न सकिएन</string>
+    <string name="people_invitations_some_decline_failed">केही निमन्त्रणा अस्वीकार गर्न सकिएन</string>
+    <string name="people_invitations_some_cancel_failed">केही निमन्त्रणा रद्द गर्न सकिएन</string>
 </resources>

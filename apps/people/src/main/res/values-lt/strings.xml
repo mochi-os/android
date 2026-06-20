@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Vardas (A–Z)</string>
     <string name="people_friends_sort_recent">Neseniai pridėta</string>
+    <string name="people_invitations_accept_all">Priimti visus</string>
+    <string name="people_invitations_decline_all">Atmesti visus</string>
+    <string name="people_invitations_cancel_all">Atšaukti visus</string>
+    <string name="people_invitations_all_accepted">Visi kvietimai priimti</string>
+    <string name="people_invitations_all_declined">Visi kvietimai atmesti</string>
+    <string name="people_invitations_all_cancelled">Visi kvietimai atšaukti</string>
+    <string name="people_invitations_some_accept_failed">Kai kurių kvietimų nepavyko priimti</string>
+    <string name="people_invitations_some_decline_failed">Kai kurių kvietimų nepavyko atmesti</string>
+    <string name="people_invitations_some_cancel_failed">Kai kurių kvietimų nepavyko atšaukti</string>
 </resources>

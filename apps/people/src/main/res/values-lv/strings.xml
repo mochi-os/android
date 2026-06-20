@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nosaukums (A–Z)</string>
     <string name="people_friends_sort_recent">Nesen pievienots</string>
+    <string name="people_invitations_accept_all">Pieņemt visus</string>
+    <string name="people_invitations_decline_all">Noraidīt visus</string>
+    <string name="people_invitations_cancel_all">Atcelt visus</string>
+    <string name="people_invitations_all_accepted">Visi ielūgumi pieņemti</string>
+    <string name="people_invitations_all_declined">Visi ielūgumi noraidīti</string>
+    <string name="people_invitations_all_cancelled">Visi ielūgumi atcelti</string>
+    <string name="people_invitations_some_accept_failed">Dažus ielūgumus neizdevās pieņemt</string>
+    <string name="people_invitations_some_decline_failed">Dažus ielūgumus neizdevās noraidīt</string>
+    <string name="people_invitations_some_cancel_failed">Dažus ielūgumus neizdevās atcelt</string>
 </resources>

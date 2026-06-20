@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">At (A–Z)</string>
     <string name="people_friends_sort_recent">Ýaňy-ýakynda goşuldy</string>
+    <string name="people_invitations_accept_all">Hemmesini kabul et</string>
+    <string name="people_invitations_decline_all">Hemmesini ret et</string>
+    <string name="people_invitations_cancel_all">Hemmesini ýatyr</string>
+    <string name="people_invitations_all_accepted">Ähli çakylyklar kabul edildi</string>
+    <string name="people_invitations_all_declined">Ähli çakylyklar ret edildi</string>
+    <string name="people_invitations_all_cancelled">Ähli çakylyklar ýatyryldy</string>
+    <string name="people_invitations_some_accept_failed">Käbir çakylyklary kabul edip bolmady</string>
+    <string name="people_invitations_some_decline_failed">Käbir çakylyklary ret edip bolmady</string>
+    <string name="people_invitations_some_cancel_failed">Käbir çakylyklary ýatyryp bolmady</string>
 </resources>

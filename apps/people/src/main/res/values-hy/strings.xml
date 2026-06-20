@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Անուն (Ա–Ֆ)</string>
     <string name="people_friends_sort_recent">Վերջերս ավելացված</string>
+    <string name="people_invitations_accept_all">Ընդունել բոլորը</string>
+    <string name="people_invitations_decline_all">Մերժել բոլորը</string>
+    <string name="people_invitations_cancel_all">Չեղարկել բոլորը</string>
+    <string name="people_invitations_all_accepted">Բոլոր հրավերներն ընդունված են</string>
+    <string name="people_invitations_all_declined">Բոլոր հրավերները մերժված են</string>
+    <string name="people_invitations_all_cancelled">Բոլոր հրավերները չեղարկված են</string>
+    <string name="people_invitations_some_accept_failed">Որոշ հրավերներ չհաջողվեց ընդունել</string>
+    <string name="people_invitations_some_decline_failed">Որոշ հրավերներ չհաջողվեց մերժել</string>
+    <string name="people_invitations_some_cancel_failed">Որոշ հրավերներ չհաջողվեց չեղարկել</string>
 </resources>

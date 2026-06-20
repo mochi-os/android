@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">ਨਾਮ (A–Z)</string>
     <string name="people_friends_sort_recent">ਹਾਲ ਹੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ</string>
+    <string name="people_invitations_accept_all">ਸਭ ਸਵੀਕਾਰ ਕਰੋ</string>
+    <string name="people_invitations_decline_all">ਸਭ ਅਸਵੀਕਾਰ ਕਰੋ</string>
+    <string name="people_invitations_cancel_all">ਸਭ ਰੱਦ ਕਰੋ</string>
+    <string name="people_invitations_all_accepted">ਸਾਰੇ ਸੱਦੇ ਸਵੀਕਾਰ ਕੀਤੇ ਗਏ</string>
+    <string name="people_invitations_all_declined">ਸਾਰੇ ਸੱਦੇ ਅਸਵੀਕਾਰ ਕੀਤੇ ਗਏ</string>
+    <string name="people_invitations_all_cancelled">ਸਾਰੇ ਸੱਦੇ ਰੱਦ ਕੀਤੇ ਗਏ</string>
+    <string name="people_invitations_some_accept_failed">ਕੁਝ ਸੱਦੇ ਸਵੀਕਾਰ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</string>
+    <string name="people_invitations_some_decline_failed">ਕੁਝ ਸੱਦੇ ਅਸਵੀਕਾਰ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</string>
+    <string name="people_invitations_some_cancel_failed">ਕੁਝ ਸੱਦੇ ਰੱਦ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</string>
 </resources>

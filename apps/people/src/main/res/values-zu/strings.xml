@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Igama (A–Z)</string>
     <string name="people_friends_sort_recent">Kwengezwe muva nje</string>
+    <string name="people_invitations_accept_all">Yamukela konke</string>
+    <string name="people_invitations_decline_all">Yenqaba konke</string>
+    <string name="people_invitations_cancel_all">Khansela konke</string>
+    <string name="people_invitations_all_accepted">Zonke izimemo zamukelwe</string>
+    <string name="people_invitations_all_declined">Zonke izimemo zenqatshwe</string>
+    <string name="people_invitations_all_cancelled">Zonke izimemo zikhanseliwe</string>
+    <string name="people_invitations_some_accept_failed">Ezinye izimemo azikwazanga ukwamukelwa</string>
+    <string name="people_invitations_some_decline_failed">Ezinye izimemo azikwazanga ukwenqatshelwa</string>
+    <string name="people_invitations_some_cancel_failed">Ezinye izimemo azikwazanga ukukhanselwa</string>
 </resources>

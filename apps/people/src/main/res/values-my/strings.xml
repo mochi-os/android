@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">အမည် (A–Z)</string>
     <string name="people_friends_sort_recent">မကြာသေးမီက ထည့်ထားသည်</string>
+    <string name="people_invitations_accept_all">အားလုံးလက်ခံပါ</string>
+    <string name="people_invitations_decline_all">အားလုံးငြင်းပယ်ပါ</string>
+    <string name="people_invitations_cancel_all">အားလုံးပယ်ဖျက်ပါ</string>
+    <string name="people_invitations_all_accepted">ဖိတ်ကြားချက်အားလုံးကို လက်ခံပြီးပါပြီ</string>
+    <string name="people_invitations_all_declined">ဖိတ်ကြားချက်အားလုံးကို ငြင်းပယ်ပြီးပါပြီ</string>
+    <string name="people_invitations_all_cancelled">ဖိတ်ကြားချက်အားလုံးကို ပယ်ဖျက်ပြီးပါပြီ</string>
+    <string name="people_invitations_some_accept_failed">အချို့ဖိတ်ကြားချက်များကို လက်ခံ၍မရပါ</string>
+    <string name="people_invitations_some_decline_failed">အချို့ဖိတ်ကြားချက်များကို ငြင်းပယ်၍မရပါ</string>
+    <string name="people_invitations_some_cancel_failed">အချို့ဖိတ်ကြားချက်များကို ပယ်ဖျက်၍မရပါ</string>
 </resources>

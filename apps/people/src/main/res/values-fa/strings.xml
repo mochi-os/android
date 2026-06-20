@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">نام (الف–ی)</string>
     <string name="people_friends_sort_recent">به‌تازگی افزوده‌شده</string>
+    <string name="people_invitations_accept_all">پذیرش همه</string>
+    <string name="people_invitations_decline_all">رد همه</string>
+    <string name="people_invitations_cancel_all">لغو همه</string>
+    <string name="people_invitations_all_accepted">همه دعوت‌ها پذیرفته شد</string>
+    <string name="people_invitations_all_declined">همه دعوت‌ها رد شد</string>
+    <string name="people_invitations_all_cancelled">همه دعوت‌ها لغو شد</string>
+    <string name="people_invitations_some_accept_failed">برخی دعوت‌ها پذیرفته نشدند</string>
+    <string name="people_invitations_some_decline_failed">برخی دعوت‌ها رد نشدند</string>
+    <string name="people_invitations_some_cancel_failed">برخی دعوت‌ها لغو نشدند</string>
 </resources>

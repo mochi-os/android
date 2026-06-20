@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Ngaran (A–Z)</string>
     <string name="people_friends_sort_recent">Nembé ditambahkeun</string>
+    <string name="people_invitations_accept_all">Tarima sadayana</string>
+    <string name="people_invitations_decline_all">Tolak sadayana</string>
+    <string name="people_invitations_cancel_all">Batalkeun sadayana</string>
+    <string name="people_invitations_all_accepted">Sadaya ondangan ditarima</string>
+    <string name="people_invitations_all_declined">Sadaya ondangan ditolak</string>
+    <string name="people_invitations_all_cancelled">Sadaya ondangan dibatalkeun</string>
+    <string name="people_invitations_some_accept_failed">Sababaraha ondangan teu tiasa ditarima</string>
+    <string name="people_invitations_some_decline_failed">Sababaraha ondangan teu tiasa ditolak</string>
+    <string name="people_invitations_some_cancel_failed">Sababaraha ondangan teu tiasa dibatalkeun</string>
 </resources>

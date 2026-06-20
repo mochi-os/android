@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Ном (А–Я)</string>
     <string name="people_friends_sort_recent">Ба наздикӣ илова шуд</string>
+    <string name="people_invitations_accept_all">Ҳамаро қабул кардан</string>
+    <string name="people_invitations_decline_all">Ҳамаро рад кардан</string>
+    <string name="people_invitations_cancel_all">Ҳамаро бекор кардан</string>
+    <string name="people_invitations_all_accepted">Ҳама даъватҳо қабул шуданд</string>
+    <string name="people_invitations_all_declined">Ҳама даъватҳо рад шуданд</string>
+    <string name="people_invitations_all_cancelled">Ҳама даъватҳо бекор шуданд</string>
+    <string name="people_invitations_some_accept_failed">Баъзе даъватҳоро қабул кардан имконнопазир буд</string>
+    <string name="people_invitations_some_decline_failed">Баъзе даъватҳоро рад кардан имконнопазир буд</string>
+    <string name="people_invitations_some_cancel_failed">Баъзе даъватҳоро бекор кардан имконнопазир буд</string>
 </resources>

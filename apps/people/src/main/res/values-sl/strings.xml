@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Ime (A–Ž)</string>
     <string name="people_friends_sort_recent">Nedavno dodano</string>
+    <string name="people_invitations_accept_all">Sprejmi vse</string>
+    <string name="people_invitations_decline_all">Zavrni vse</string>
+    <string name="people_invitations_cancel_all">Prekliči vse</string>
+    <string name="people_invitations_all_accepted">Vsa povabila sprejeta</string>
+    <string name="people_invitations_all_declined">Vsa povabila zavrnjena</string>
+    <string name="people_invitations_all_cancelled">Vsa povabila preklicana</string>
+    <string name="people_invitations_some_accept_failed">Nekaterih povabil ni bilo mogoče sprejeti</string>
+    <string name="people_invitations_some_decline_failed">Nekaterih povabil ni bilo mogoče zavrniti</string>
+    <string name="people_invitations_some_cancel_failed">Nekaterih povabil ni bilo mogoče preklicati</string>
 </resources>

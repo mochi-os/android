@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Suti (A–Z)</string>
     <string name="people_friends_sort_recent">Ñaqha yapasqa</string>
+    <string name="people_invitations_accept_all">Llapanta chaskiy</string>
+    <string name="people_invitations_decline_all">Llapanta mana chaskiy</string>
+    <string name="people_invitations_cancel_all">Llapanta wikch\'uy</string>
+    <string name="people_invitations_all_accepted">Llapan minkakuykuna chaskisqa</string>
+    <string name="people_invitations_all_declined">Llapan minkakuykuna mana chaskisqa</string>
+    <string name="people_invitations_all_cancelled">Llapan minkakuykuna wikch\'usqa</string>
+    <string name="people_invitations_some_accept_failed">Wakin minkakuykuna mana chaskiyta atikurqachu</string>
+    <string name="people_invitations_some_decline_failed">Wakin minkakuykuna mana wikch\'uyta atikurqachu</string>
+    <string name="people_invitations_some_cancel_failed">Wakin minkakuykuna mana wikch\'uyta atikurqachu</string>
 </resources>

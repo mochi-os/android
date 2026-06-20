@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Naam (A–Z)</string>
     <string name="people_friends_sort_recent">Onlangs bygevoeg</string>
+    <string name="people_invitations_accept_all">Aanvaar almal</string>
+    <string name="people_invitations_decline_all">Wys almal van die hand</string>
+    <string name="people_invitations_cancel_all">Kanselleer almal</string>
+    <string name="people_invitations_all_accepted">Alle uitnodigings aanvaar</string>
+    <string name="people_invitations_all_declined">Alle uitnodigings van die hand gewys</string>
+    <string name="people_invitations_all_cancelled">Alle uitnodigings gekanselleer</string>
+    <string name="people_invitations_some_accept_failed">Sommige uitnodigings kon nie aanvaar word nie</string>
+    <string name="people_invitations_some_decline_failed">Sommige uitnodigings kon nie van die hand gewys word nie</string>
+    <string name="people_invitations_some_cancel_failed">Sommige uitnodigings kon nie gekanselleer word nie</string>
 </resources>

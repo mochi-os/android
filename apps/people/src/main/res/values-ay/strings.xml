@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Suti (A–Z)</string>
     <string name="people_friends_sort_recent">Qhipa uru yapxatata</string>
+    <string name="people_invitations_accept_all">Taqi katuqaña</string>
+    <string name="people_invitations_decline_all">Taqi jan katuqaña</string>
+    <string name="people_invitations_cancel_all">Taqi jarq\'aña</string>
+    <string name="people_invitations_all_accepted">Taqi jawsäwinakax katuqatawa</string>
+    <string name="people_invitations_all_declined">Taqi jawsäwinakax jan katuqatakiti</string>
+    <string name="people_invitations_all_cancelled">Taqi jawsäwinakax jarq\'atawa</string>
+    <string name="people_invitations_some_accept_failed">Yaqhip jawsäwinakax janiw katuqkataynati</string>
+    <string name="people_invitations_some_decline_failed">Yaqhip jawsäwinakax janiw jan katuqkataynati</string>
+    <string name="people_invitations_some_cancel_failed">Yaqhip jawsäwinakax janiw jarq\'kataynati</string>
 </resources>

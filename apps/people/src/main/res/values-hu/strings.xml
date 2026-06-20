@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Név (A–Z)</string>
     <string name="people_friends_sort_recent">Nemrég hozzáadva</string>
+    <string name="people_invitations_accept_all">Összes elfogadása</string>
+    <string name="people_invitations_decline_all">Összes elutasítása</string>
+    <string name="people_invitations_cancel_all">Összes megszakítása</string>
+    <string name="people_invitations_all_accepted">Minden meghívás elfogadva</string>
+    <string name="people_invitations_all_declined">Minden meghívás elutasítva</string>
+    <string name="people_invitations_all_cancelled">Minden meghívás visszavonva</string>
+    <string name="people_invitations_some_accept_failed">Néhány meghívást nem sikerült elfogadni</string>
+    <string name="people_invitations_some_decline_failed">Néhány meghívást nem sikerült elutasítani</string>
+    <string name="people_invitations_some_cancel_failed">Néhány meghívást nem sikerült visszavonni</string>
 </resources>

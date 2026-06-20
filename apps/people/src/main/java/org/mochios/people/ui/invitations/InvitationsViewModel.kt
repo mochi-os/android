@@ -23,6 +23,11 @@ sealed class InvitationsEvent {
     data class Declined(val name: String) : InvitationsEvent()
     data class Cancelled(val name: String) : InvitationsEvent()
     data class PolicyUpdated(val policy: String) : InvitationsEvent()
+    // Batch results. `allSucceeded` distinguishes the success toast from the
+    // partial-failure one, mirroring web's Promise.allSettled handling.
+    data class BatchAccepted(val allSucceeded: Boolean) : InvitationsEvent()
+    data class BatchDeclined(val allSucceeded: Boolean) : InvitationsEvent()
+    data class BatchCancelled(val allSucceeded: Boolean) : InvitationsEvent()
 }
 
 data class InvitationsUiState(
@@ -33,6 +38,7 @@ data class InvitationsUiState(
     val policy: String = "notify",
     val settingsDialogOpen: Boolean = false,
     val savingPolicy: Boolean = false,
+    val batchInProgress: Boolean = false,
     val error: MochiError? = null,
 )
 
@@ -139,6 +145,47 @@ class InvitationsViewModel @Inject constructor(
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
+        }
+    }
+
+    // Batch actions. Each fans out over the full (unfiltered) list — matching
+    // web, which acts on all received/sent invites regardless of the search
+    // box — applying the existing per-invite call to each, then reports whether
+    // every one succeeded. Sequential to avoid racing concurrent friend-list
+    // mutations on the server; invite lists are short.
+    fun acceptAll() {
+        val list = _uiState.value.received
+        if (list.isEmpty() || _uiState.value.batchInProgress) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(batchInProgress = true)
+            val allOk = list.all { runCatching { repository.acceptInvite(it.id) }.isSuccess }
+            _events.trySend(InvitationsEvent.BatchAccepted(allOk))
+            _uiState.value = _uiState.value.copy(batchInProgress = false)
+            refresh()
+        }
+    }
+
+    fun declineAll() {
+        val list = _uiState.value.received
+        if (list.isEmpty() || _uiState.value.batchInProgress) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(batchInProgress = true)
+            val allOk = list.all { runCatching { repository.ignoreInvite(it.id) }.isSuccess }
+            _events.trySend(InvitationsEvent.BatchDeclined(allOk))
+            _uiState.value = _uiState.value.copy(batchInProgress = false)
+            refresh()
+        }
+    }
+
+    fun cancelAll() {
+        val list = _uiState.value.sent
+        if (list.isEmpty() || _uiState.value.batchInProgress) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(batchInProgress = true)
+            val allOk = list.all { runCatching { repository.deleteFriend(it.id) }.isSuccess }
+            _events.trySend(InvitationsEvent.BatchCancelled(allOk))
+            _uiState.value = _uiState.value.copy(batchInProgress = false)
+            refresh()
         }
     }
 

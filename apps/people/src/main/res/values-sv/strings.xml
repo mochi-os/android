@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Namn (A–Ö)</string>
     <string name="people_friends_sort_recent">Nyligen tillagd</string>
+    <string name="people_invitations_accept_all">Acceptera alla</string>
+    <string name="people_invitations_decline_all">Avböj alla</string>
+    <string name="people_invitations_cancel_all">Avbryt alla</string>
+    <string name="people_invitations_all_accepted">Alla inbjudningar accepterade</string>
+    <string name="people_invitations_all_declined">Alla inbjudningar avböjda</string>
+    <string name="people_invitations_all_cancelled">Alla inbjudningar avbrutna</string>
+    <string name="people_invitations_some_accept_failed">Vissa inbjudningar kunde inte accepteras</string>
+    <string name="people_invitations_some_decline_failed">Vissa inbjudningar kunde inte avböjas</string>
+    <string name="people_invitations_some_cancel_failed">Vissa inbjudningar kunde inte avbrytas</string>
 </resources>

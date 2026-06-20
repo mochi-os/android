@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">الاسم (أ–ي)</string>
     <string name="people_friends_sort_recent">أُضيف مؤخرًا</string>
+    <string name="people_invitations_accept_all">قبول الكل</string>
+    <string name="people_invitations_decline_all">رفض الكل</string>
+    <string name="people_invitations_cancel_all">إلغاء الكل</string>
+    <string name="people_invitations_all_accepted">تم قبول جميع الدعوات</string>
+    <string name="people_invitations_all_declined">تم رفض جميع الدعوات</string>
+    <string name="people_invitations_all_cancelled">تم إلغاء جميع الدعوات</string>
+    <string name="people_invitations_some_accept_failed">تعذّر قبول بعض الدعوات</string>
+    <string name="people_invitations_some_decline_failed">تعذّر رفض بعض الدعوات</string>
+    <string name="people_invitations_some_cancel_failed">تعذّر إلغاء بعض الدعوات</string>
 </resources>

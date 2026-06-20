@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nav (A–Z)</string>
     <string name="people_friends_sort_recent">Vê dawiyê hatî zêdekirin</string>
+    <string name="people_invitations_accept_all">Hemûyan bipejirîne</string>
+    <string name="people_invitations_decline_all">Hemûyan red bike</string>
+    <string name="people_invitations_cancel_all">Hemûyan betal bike</string>
+    <string name="people_invitations_all_accepted">Hemû vexwendin hatin pejirandin</string>
+    <string name="people_invitations_all_declined">Hemû vexwendin hatin redkirin</string>
+    <string name="people_invitations_all_cancelled">Hemû vexwendin hatin betalkirin</string>
+    <string name="people_invitations_some_accept_failed">Hin vexwendin nehatin pejirandin</string>
+    <string name="people_invitations_some_decline_failed">Hin vexwendin nehatin redkirin</string>
+    <string name="people_invitations_some_cancel_failed">Hin vexwendin nehatin betalkirin</string>
 </resources>

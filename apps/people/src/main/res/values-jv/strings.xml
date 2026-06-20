@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Jeneng (A–Z)</string>
     <string name="people_friends_sort_recent">Lagi wae ditambahake</string>
+    <string name="people_invitations_accept_all">Tampa kabeh</string>
+    <string name="people_invitations_decline_all">Tolak kabeh</string>
+    <string name="people_invitations_cancel_all">Batalake kabeh</string>
+    <string name="people_invitations_all_accepted">Kabeh undhangan ditampa</string>
+    <string name="people_invitations_all_declined">Kabeh undhangan ditolak</string>
+    <string name="people_invitations_all_cancelled">Kabeh undhangan dibatalake</string>
+    <string name="people_invitations_some_accept_failed">Sawetara undhangan ora bisa ditampa</string>
+    <string name="people_invitations_some_decline_failed">Sawetara undhangan ora bisa ditolak</string>
+    <string name="people_invitations_some_cancel_failed">Sawetara undhangan ora bisa dibatalake</string>
 </resources>

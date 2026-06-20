@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">נאָמען (A–Z)</string>
     <string name="people_friends_sort_recent">לעצטנס צוגעלייגט</string>
+    <string name="people_invitations_accept_all">אָננעמען אַלע</string>
+    <string name="people_invitations_decline_all">אָפּזאָגן אַלע</string>
+    <string name="people_invitations_cancel_all">אַנולירן אַלע</string>
+    <string name="people_invitations_all_accepted">אַלע פֿאַרבעטונגען אָנגענומען</string>
+    <string name="people_invitations_all_declined">אַלע פֿאַרבעטונגען אָפּגעזאָגט</string>
+    <string name="people_invitations_all_cancelled">אַלע פֿאַרבעטונגען אַנולירט</string>
+    <string name="people_invitations_some_accept_failed">עטלעכע פֿאַרבעטונגען האָבן זיך נישט געקענט אָננעמען</string>
+    <string name="people_invitations_some_decline_failed">עטלעכע פֿאַרבעטונגען האָבן זיך נישט געקענט אָפּזאָגן</string>
+    <string name="people_invitations_some_cancel_failed">עטלעכע פֿאַרבעטונגען האָבן זיך נישט געקענט אַנולירן</string>
 </resources>

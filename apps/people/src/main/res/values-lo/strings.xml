@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">ຊື່ (A–Z)</string>
     <string name="people_friends_sort_recent">ເພີ່ມเมื่อเร็วໆ ນີ້</string>
+    <string name="people_invitations_accept_all">ຍອມຮັບທັງໝົດ</string>
+    <string name="people_invitations_decline_all">ປະຕິເສດທັງໝົດ</string>
+    <string name="people_invitations_cancel_all">ຍົກເລີກທັງໝົດ</string>
+    <string name="people_invitations_all_accepted">ຍອມຮັບຄຳເຊີນທັງໝົດແລ້ວ</string>
+    <string name="people_invitations_all_declined">ປະຕິເສດຄຳເຊີນທັງໝົດແລ້ວ</string>
+    <string name="people_invitations_all_cancelled">ຍົກເລີກຄຳເຊີນທັງໝົດແລ້ວ</string>
+    <string name="people_invitations_some_accept_failed">ບໍ່ສາມາດຍອมรับบางคำเชิญได้</string>
+    <string name="people_invitations_some_decline_failed">ບໍ່ສາມາດປະຕິເສດບາງຄຳເຊີນໄດ້</string>
+    <string name="people_invitations_some_cancel_failed">ບໍ່ສາມາດຍົກເລີกบางคำเชิญได้</string>
 </resources>

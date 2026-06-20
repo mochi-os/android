@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Аты (А–Я)</string>
     <string name="people_friends_sort_recent">Жақында қосылды</string>
+    <string name="people_invitations_accept_all">Барлығын қабылдау</string>
+    <string name="people_invitations_decline_all">Барлығынан бас тарту</string>
+    <string name="people_invitations_cancel_all">Барлығын болдырмау</string>
+    <string name="people_invitations_all_accepted">Барлық шақырулар қабылданды</string>
+    <string name="people_invitations_all_declined">Барлық шақырулардан бас тартылды</string>
+    <string name="people_invitations_all_cancelled">Барлық шақырулар бас тартылды</string>
+    <string name="people_invitations_some_accept_failed">Кейбір шақыруларды қабылдау мүмкін болмады</string>
+    <string name="people_invitations_some_decline_failed">Кейбір шақырулардан бас тарту мүмкін болмады</string>
+    <string name="people_invitations_some_cancel_failed">Кейбір шақыруларды болдырмау мүмкін болмады</string>
 </resources>

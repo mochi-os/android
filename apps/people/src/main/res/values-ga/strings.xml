@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Ainm (A–Z)</string>
     <string name="people_friends_sort_recent">Curtha leis le déanaí</string>
+    <string name="people_invitations_accept_all">Glac le gach ceann</string>
+    <string name="people_invitations_decline_all">Diúltaigh do gach ceann</string>
+    <string name="people_invitations_cancel_all">Cuir gach ceann ar ceal</string>
+    <string name="people_invitations_all_accepted">Glacadh le gach cuireadh</string>
+    <string name="people_invitations_all_declined">Diúltaíodh do gach cuireadh</string>
+    <string name="people_invitations_all_cancelled">Cuireadh gach cuireadh ar ceal</string>
+    <string name="people_invitations_some_accept_failed">Níorbh fhéidir glacadh le roinnt cuirí</string>
+    <string name="people_invitations_some_decline_failed">Níorbh fhéidir roinnt cuirí a dhiúltú</string>
+    <string name="people_invitations_some_cancel_failed">Níorbh fhéidir roinnt cuirí a chur ar ceal</string>
 </resources>

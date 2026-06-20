@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nama (A–Z)</string>
     <string name="people_friends_sort_recent">Baru ditambahkan</string>
+    <string name="people_invitations_accept_all">Terima semua</string>
+    <string name="people_invitations_decline_all">Tolak semua</string>
+    <string name="people_invitations_cancel_all">Batalkan semua</string>
+    <string name="people_invitations_all_accepted">Semua undangan diterima</string>
+    <string name="people_invitations_all_declined">Semua undangan ditolak</string>
+    <string name="people_invitations_all_cancelled">Semua undangan dibatalkan</string>
+    <string name="people_invitations_some_accept_failed">Beberapa undangan tidak dapat diterima</string>
+    <string name="people_invitations_some_decline_failed">Beberapa undangan tidak dapat ditolak</string>
+    <string name="people_invitations_some_cancel_failed">Beberapa undangan tidak dapat dibatalkan</string>
 </resources>

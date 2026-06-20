@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Non (A–Z)</string>
     <string name="people_friends_sort_recent">Ajoute dènyèman</string>
+    <string name="people_invitations_accept_all">Aksepte tout</string>
+    <string name="people_invitations_decline_all">Refize tout</string>
+    <string name="people_invitations_cancel_all">Anile tout</string>
+    <string name="people_invitations_all_accepted">Tout envitasyon aksepte</string>
+    <string name="people_invitations_all_declined">Tout envitasyon refize</string>
+    <string name="people_invitations_all_cancelled">Tout envitasyon anile</string>
+    <string name="people_invitations_some_accept_failed">Kèk envitasyon pa t kapab aksepte</string>
+    <string name="people_invitations_some_decline_failed">Kèk envitasyon pa t kapab refize</string>
+    <string name="people_invitations_some_cancel_failed">Kèk envitasyon pa t kapab anile</string>
 </resources>

@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">ስም (ሀ–ፐ)</string>
     <string name="people_friends_sort_recent">በቅርቡ የተጨመረ</string>
+    <string name="people_invitations_accept_all">ሁሉንም ተቀበል</string>
+    <string name="people_invitations_decline_all">ሁሉንም አትቀበል</string>
+    <string name="people_invitations_cancel_all">ሁሉንም ሰርዝ</string>
+    <string name="people_invitations_all_accepted">ሁሉም ግብዣዎች ተቀብለዋል</string>
+    <string name="people_invitations_all_declined">ሁሉም ግብዣዎች ተቀባይነት አጥተዋል</string>
+    <string name="people_invitations_all_cancelled">ሁሉም ግብዣዎች ተሰርዘዋል</string>
+    <string name="people_invitations_some_accept_failed">አንዳንድ ግብዣዎች ሊቀበሉ አልቻሉም</string>
+    <string name="people_invitations_some_decline_failed">አንዳንድ ግብዣዎች ሊከለከሉ አልቻሉም</string>
+    <string name="people_invitations_some_cancel_failed">አንዳንድ ግብዣዎች ሊሰረዙ አልቻሉም</string>
 </resources>

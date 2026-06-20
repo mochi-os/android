@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Име (А–Я)</string>
     <string name="people_friends_sort_recent">Наскоро добавени</string>
+    <string name="people_invitations_accept_all">Приеми всички</string>
+    <string name="people_invitations_decline_all">Отхвърли всички</string>
+    <string name="people_invitations_cancel_all">Отмени всички</string>
+    <string name="people_invitations_all_accepted">Всички покани са приети</string>
+    <string name="people_invitations_all_declined">Всички покани са отхвърлени</string>
+    <string name="people_invitations_all_cancelled">Всички покани са отменени</string>
+    <string name="people_invitations_some_accept_failed">Някои покани не можаха да бъдат приети</string>
+    <string name="people_invitations_some_decline_failed">Някои покани не можаха да бъдат отхвърлени</string>
+    <string name="people_invitations_some_cancel_failed">Някои покани не можаха да бъдат отменени</string>
 </resources>

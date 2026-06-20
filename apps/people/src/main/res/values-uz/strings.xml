@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Ism (A–Z)</string>
     <string name="people_friends_sort_recent">Yaqinda qo\'shilgan</string>
+    <string name="people_invitations_accept_all">Hammasini qabul qilish</string>
+    <string name="people_invitations_decline_all">Hammasini rad etish</string>
+    <string name="people_invitations_cancel_all">Hammasini bekor qilish</string>
+    <string name="people_invitations_all_accepted">Barcha takliflar qabul qilindi</string>
+    <string name="people_invitations_all_declined">Barcha takliflar rad etildi</string>
+    <string name="people_invitations_all_cancelled">Barcha takliflar bekor qilindi</string>
+    <string name="people_invitations_some_accept_failed">Ba\'zi takliflar qabul qilinmadi</string>
+    <string name="people_invitations_some_decline_failed">Ba\'zi takliflar rad etilmadi</string>
+    <string name="people_invitations_some_cancel_failed">Ba\'zi takliflar bekor qilinmadi</string>
 </resources>

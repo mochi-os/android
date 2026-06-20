@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Maqaa (A–Z)</string>
     <string name="people_friends_sort_recent">Dhiheenya dabalame</string>
+    <string name="people_invitations_accept_all">Hunda fudhadhu</string>
+    <string name="people_invitations_decline_all">Hunda diddu</string>
+    <string name="people_invitations_cancel_all">Hunda haqi</string>
+    <string name="people_invitations_all_accepted">Afeerraawwan hundi fudhataman</string>
+    <string name="people_invitations_all_declined">Afeerraawwan hundi diidaman</string>
+    <string name="people_invitations_all_cancelled">Afeerraawwan hundi haqaman</string>
+    <string name="people_invitations_some_accept_failed">Afeerraawwan tokko tokko fudhachuun hin danda\'amne</string>
+    <string name="people_invitations_some_decline_failed">Afeerraawwan tokko tokko diiduun hin danda\'amne</string>
+    <string name="people_invitations_some_cancel_failed">Afeerraawwan tokko tokko haquun hin danda\'amne</string>
 </resources>

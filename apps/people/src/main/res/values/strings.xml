@@ -59,6 +59,15 @@
     <string name="people_invitations_sent">Sent (%1$d)</string>
     <string name="people_friends_received_tab">Received</string>
     <string name="people_friends_sent_tab">Sent</string>
+    <string name="people_invitations_accept_all">Accept all</string>
+    <string name="people_invitations_decline_all">Decline all</string>
+    <string name="people_invitations_cancel_all">Cancel all</string>
+    <string name="people_invitations_all_accepted">All invitations accepted</string>
+    <string name="people_invitations_all_declined">All invitations declined</string>
+    <string name="people_invitations_all_cancelled">All invitations cancelled</string>
+    <string name="people_invitations_some_accept_failed">Some invitations could not be accepted</string>
+    <string name="people_invitations_some_decline_failed">Some invitations could not be declined</string>
+    <string name="people_invitations_some_cancel_failed">Some invitations could not be cancelled</string>
     <string name="people_invitations_incoming">Incoming invitations</string>
     <string name="people_invitations_empty">No pending invitations</string>
     <string name="people_invitations_empty_hint">New invitations will appear here</string>

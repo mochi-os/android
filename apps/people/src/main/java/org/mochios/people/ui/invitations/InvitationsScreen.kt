@@ -3,6 +3,8 @@ package org.mochios.people.ui.invitations
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -88,6 +90,12 @@ fun InvitationsScreen(
     val declinedFmt = stringResource(R.string.people_invitations_toast_declined)
     val cancelledFmt = stringResource(R.string.people_invitations_toast_cancelled)
     val policyFmt = stringResource(R.string.people_invitations_toast_policy)
+    val allAccepted = stringResource(R.string.people_invitations_all_accepted)
+    val allDeclined = stringResource(R.string.people_invitations_all_declined)
+    val allCancelled = stringResource(R.string.people_invitations_all_cancelled)
+    val someAcceptFailed = stringResource(R.string.people_invitations_some_accept_failed)
+    val someDeclineFailed = stringResource(R.string.people_invitations_some_decline_failed)
+    val someCancelFailed = stringResource(R.string.people_invitations_some_cancel_failed)
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             val msg = when (event) {
@@ -95,6 +103,9 @@ fun InvitationsScreen(
                 is InvitationsEvent.Declined -> declinedFmt.format(event.name)
                 is InvitationsEvent.Cancelled -> cancelledFmt.format(event.name)
                 is InvitationsEvent.PolicyUpdated -> policyFmt
+                is InvitationsEvent.BatchAccepted -> if (event.allSucceeded) allAccepted else someAcceptFailed
+                is InvitationsEvent.BatchDeclined -> if (event.allSucceeded) allDeclined else someDeclineFailed
+                is InvitationsEvent.BatchCancelled -> if (event.allSucceeded) allCancelled else someCancelFailed
             }
             snackbarHostState.showSnackbar(msg)
         }
@@ -218,6 +229,16 @@ fun InvitationsScreen(
                             StackedSectionHeader(
                                 text = stringResource(R.string.people_friends_received_tab),
                                 count = received.size,
+                                action = {
+                                    TextButton(
+                                        onClick = viewModel::acceptAll,
+                                        enabled = !uiState.batchInProgress,
+                                    ) { Text(stringResource(R.string.people_invitations_accept_all)) }
+                                    TextButton(
+                                        onClick = viewModel::declineAll,
+                                        enabled = !uiState.batchInProgress,
+                                    ) { Text(stringResource(R.string.people_invitations_decline_all)) }
+                                },
                             )
                         }
                         receivedItems(
@@ -234,6 +255,12 @@ fun InvitationsScreen(
                             StackedSectionHeader(
                                 text = stringResource(R.string.people_friends_sent_tab),
                                 count = sent.size,
+                                action = {
+                                    TextButton(
+                                        onClick = viewModel::cancelAll,
+                                        enabled = !uiState.batchInProgress,
+                                    ) { Text(stringResource(R.string.people_invitations_cancel_all)) }
+                                },
                             )
                         }
                         sentItems(
@@ -258,15 +285,25 @@ fun InvitationsScreen(
 }
 
 @Composable
-private fun StackedSectionHeader(text: String, count: Int) {
-    Text(
-        text = "$text ($count)",
-        style = MaterialTheme.typography.titleSmall,
-        fontWeight = FontWeight.SemiBold,
+private fun StackedSectionHeader(
+    text: String,
+    count: Int,
+    action: (@Composable RowScope.() -> Unit)? = null,
+) {
+    Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp),
-    )
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = "$text ($count)",
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold,
+            modifier = Modifier.weight(1f),
+        )
+        action?.invoke(this)
+    }
 }
 
 // Both sections live in a single parent LazyColumn so there is exactly one

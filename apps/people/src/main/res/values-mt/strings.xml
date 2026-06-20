@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Isem (A–Z)</string>
     <string name="people_friends_sort_recent">Miżjud reċentement</string>
+    <string name="people_invitations_accept_all">Aċċetta kollox</string>
+    <string name="people_invitations_decline_all">Irrifjuta kollox</string>
+    <string name="people_invitations_cancel_all">Ikkanċella kollox</string>
+    <string name="people_invitations_all_accepted">L-istediniet kollha aċċettati</string>
+    <string name="people_invitations_all_declined">L-istediniet kollha rifjutati</string>
+    <string name="people_invitations_all_cancelled">L-istediniet kollha kkanċellati</string>
+    <string name="people_invitations_some_accept_failed">Xi stediniet ma setgħux jiġu aċċettati</string>
+    <string name="people_invitations_some_decline_failed">Xi stediniet ma setgħux jiġu rifjutati</string>
+    <string name="people_invitations_some_cancel_failed">Xi stediniet ma setgħux jiġu kkanċellati</string>
 </resources>

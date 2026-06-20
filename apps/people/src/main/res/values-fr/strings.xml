@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nom (A–Z)</string>
     <string name="people_friends_sort_recent">Ajouté récemment</string>
+    <string name="people_invitations_accept_all">Tout accepter</string>
+    <string name="people_invitations_decline_all">Tout refuser</string>
+    <string name="people_invitations_cancel_all">Tout annuler</string>
+    <string name="people_invitations_all_accepted">Toutes les invitations acceptées</string>
+    <string name="people_invitations_all_declined">Toutes les invitations refusées</string>
+    <string name="people_invitations_all_cancelled">Toutes les invitations annulées</string>
+    <string name="people_invitations_some_accept_failed">Certaines invitations n\'ont pas pu être acceptées</string>
+    <string name="people_invitations_some_decline_failed">Certaines invitations n\'ont pas pu être refusées</string>
+    <string name="people_invitations_some_cancel_failed">Certaines invitations n\'ont pas pu être annulées</string>
 </resources>

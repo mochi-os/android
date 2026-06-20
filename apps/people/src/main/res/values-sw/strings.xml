@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Jina (A–Z)</string>
     <string name="people_friends_sort_recent">Imeongezwa hivi karibuni</string>
+    <string name="people_invitations_accept_all">Kubali zote</string>
+    <string name="people_invitations_decline_all">Kataa zote</string>
+    <string name="people_invitations_cancel_all">Ghairi zote</string>
+    <string name="people_invitations_all_accepted">Mialiko yote imekubaliwa</string>
+    <string name="people_invitations_all_declined">Mialiko yote imekataliwa</string>
+    <string name="people_invitations_all_cancelled">Mialiko yote imeghairiwa</string>
+    <string name="people_invitations_some_accept_failed">Baadhi ya mialiko haikuweza kukubaliwa</string>
+    <string name="people_invitations_some_decline_failed">Baadhi ya mialiko haikuweza kukataliwa</string>
+    <string name="people_invitations_some_cancel_failed">Baadhi ya mialiko haikuweza kughairiwa</string>
 </resources>

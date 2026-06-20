@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Emri (A–Z)</string>
     <string name="people_friends_sort_recent">Shtuar së fundmi</string>
+    <string name="people_invitations_accept_all">Prano të gjitha</string>
+    <string name="people_invitations_decline_all">Refuzo të gjitha</string>
+    <string name="people_invitations_cancel_all">Anulo të gjitha</string>
+    <string name="people_invitations_all_accepted">Të gjitha ftesat u pranuan</string>
+    <string name="people_invitations_all_declined">Të gjitha ftesat u refuzuan</string>
+    <string name="people_invitations_all_cancelled">Të gjitha ftesat u anuluan</string>
+    <string name="people_invitations_some_accept_failed">Disa ftesa nuk u pranuan dot</string>
+    <string name="people_invitations_some_decline_failed">Disa ftesa nuk u refuzuan dot</string>
+    <string name="people_invitations_some_cancel_failed">Disa ftesa nuk u anuluan dot</string>
 </resources>

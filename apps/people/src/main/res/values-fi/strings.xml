@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nimi (A–Z)</string>
     <string name="people_friends_sort_recent">Äskettäin lisätty</string>
+    <string name="people_invitations_accept_all">Hyväksy kaikki</string>
+    <string name="people_invitations_decline_all">Hylkää kaikki</string>
+    <string name="people_invitations_cancel_all">Peruuta kaikki</string>
+    <string name="people_invitations_all_accepted">Kaikki kutsut hyväksytty</string>
+    <string name="people_invitations_all_declined">Kaikki kutsut hylätty</string>
+    <string name="people_invitations_all_cancelled">Kaikki kutsut peruttu</string>
+    <string name="people_invitations_some_accept_failed">Joitakin kutsuja ei voitu hyväksyä</string>
+    <string name="people_invitations_some_decline_failed">Joitakin kutsuja ei voitu hylätä</string>
+    <string name="people_invitations_some_cancel_failed">Joitakin kutsuja ei voitu peruuttaa</string>
 </resources>

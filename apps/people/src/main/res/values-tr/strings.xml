@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Ad (A–Z)</string>
     <string name="people_friends_sort_recent">Yakın zamanda eklendi</string>
+    <string name="people_invitations_accept_all">Tümünü kabul et</string>
+    <string name="people_invitations_decline_all">Tümünü reddet</string>
+    <string name="people_invitations_cancel_all">Tümünü iptal et</string>
+    <string name="people_invitations_all_accepted">Tüm davetler kabul edildi</string>
+    <string name="people_invitations_all_declined">Tüm davetler reddedildi</string>
+    <string name="people_invitations_all_cancelled">Tüm davetler iptal edildi</string>
+    <string name="people_invitations_some_accept_failed">Bazı davetler kabul edilemedi</string>
+    <string name="people_invitations_some_decline_failed">Bazı davetler reddedilemedi</string>
+    <string name="people_invitations_some_cancel_failed">Bazı davetler iptal edilemedi</string>
 </resources>

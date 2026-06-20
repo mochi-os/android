@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">名稱 (A–Z)</string>
     <string name="people_friends_sort_recent">最近新增</string>
+    <string name="people_invitations_accept_all">全部接受</string>
+    <string name="people_invitations_decline_all">全部拒絕</string>
+    <string name="people_invitations_cancel_all">全部取消</string>
+    <string name="people_invitations_all_accepted">已接受所有邀請</string>
+    <string name="people_invitations_all_declined">已拒絕所有邀請</string>
+    <string name="people_invitations_all_cancelled">已取消所有邀請</string>
+    <string name="people_invitations_some_accept_failed">部分邀請無法接受</string>
+    <string name="people_invitations_some_decline_failed">部分邀請無法拒絕</string>
+    <string name="people_invitations_some_cancel_failed">部分邀請無法取消</string>
 </resources>

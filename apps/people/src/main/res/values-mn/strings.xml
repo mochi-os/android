@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Нэр (A–Z)</string>
     <string name="people_friends_sort_recent">Саяхан нэмсэн</string>
+    <string name="people_invitations_accept_all">Бүгдийг хүлээн зөвшөөрөх</string>
+    <string name="people_invitations_decline_all">Бүгдээс татгалзах</string>
+    <string name="people_invitations_cancel_all">Бүгдийг цуцлах</string>
+    <string name="people_invitations_all_accepted">Бүх урилгыг хүлээн зөвшөөрсөн</string>
+    <string name="people_invitations_all_declined">Бүх урилгаас татгалзсан</string>
+    <string name="people_invitations_all_cancelled">Бүх урилгыг цуцалсан</string>
+    <string name="people_invitations_some_accept_failed">Зарим урилгыг хүлээн авч чадсангүй</string>
+    <string name="people_invitations_some_decline_failed">Зарим урилгаас татгалзаж чадсангүй</string>
+    <string name="people_invitations_some_cancel_failed">Зарим урилгыг цуцалж чадсангүй</string>
 </resources>

@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">పేరు (A–Z)</string>
     <string name="people_friends_sort_recent">ఇటీవల జోడించబడింది</string>
+    <string name="people_invitations_accept_all">అన్నీ అంగీకరించు</string>
+    <string name="people_invitations_decline_all">అన్నీ తిరస్కరించు</string>
+    <string name="people_invitations_cancel_all">అన్నీ రద్దు చేయి</string>
+    <string name="people_invitations_all_accepted">అన్ని ఆహ్వానాలు అంగీకరించబడ్డాయి</string>
+    <string name="people_invitations_all_declined">అన్ని ఆహ్వానాలు తిరస్కరించబడ్డాయి</string>
+    <string name="people_invitations_all_cancelled">అన్ని ఆహ్వానాలు రద్దు చేయబడ్డాయి</string>
+    <string name="people_invitations_some_accept_failed">కొన్ని ఆహ్వానాలను అంగీకరించలేకపోయాం</string>
+    <string name="people_invitations_some_decline_failed">కొన్ని ఆహ్వానాలను తిరస్కరించలేకపోయాం</string>
+    <string name="people_invitations_some_cancel_failed">కొన్ని ఆహ్వానాలను రద్దు చేయలేకపోయాం</string>
 </resources>

@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Téra (A–Z)</string>
     <string name="people_friends_sort_recent">Ojeʼ̃a ramoiténte</string>
+    <string name="people_invitations_accept_all">Emoneĩmba</string>
+    <string name="people_invitations_decline_all">Emboyke opavave</string>
+    <string name="people_invitations_cancel_all">Ejoko opavave</string>
+    <string name="people_invitations_all_accepted">Opa ñembyatyrã oñemoneĩ</string>
+    <string name="people_invitations_all_declined">Opa ñembyatyrã oñemboyke</string>
+    <string name="people_invitations_all_cancelled">Opa ñembyatyrã ojejoko</string>
+    <string name="people_invitations_some_accept_failed">Oĩ ñembyatyrã ndaikatúiva oñemoneĩ</string>
+    <string name="people_invitations_some_decline_failed">Oĩ ñembyatyrã ndaikatúiva oñemboyke</string>
+    <string name="people_invitations_some_cancel_failed">Oĩ ñembyatyrã ndaikatúiva ojejoko</string>
 </resources>

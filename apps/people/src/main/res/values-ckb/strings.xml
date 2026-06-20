@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">ناو (A–Z)</string>
     <string name="people_friends_sort_recent">بەم دواییە زیادکراو</string>
+    <string name="people_invitations_accept_all">هەمووی قبوڵ بکە</string>
+    <string name="people_invitations_decline_all">هەمووی ڕەت بکەوە</string>
+    <string name="people_invitations_cancel_all">هەمووی هەڵوەشێنەوە</string>
+    <string name="people_invitations_all_accepted">هەموو بانگهێشتەکان قبوڵ کران</string>
+    <string name="people_invitations_all_declined">هەموو بانگهێشتەکان ڕەتکرانەوە</string>
+    <string name="people_invitations_all_cancelled">هەموو بانگهێشتەکان هەڵوەشێنرانەوە</string>
+    <string name="people_invitations_some_accept_failed">هەندێک بانگهێشت نەتوانرا قبوڵ بکرێن</string>
+    <string name="people_invitations_some_decline_failed">هەندێک بانگهێشت نەتوانرا ڕەت بکرێنەوە</string>
+    <string name="people_invitations_some_cancel_failed">هەندێک بانگهێشت نەتوانرا هەڵبوەشێنرێنەوە</string>
 </resources>

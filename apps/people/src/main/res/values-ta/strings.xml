@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">பெயர் (A–Z)</string>
     <string name="people_friends_sort_recent">சமீபத்தில் சேர்க்கப்பட்டது</string>
+    <string name="people_invitations_accept_all">அனைத்தையும் ஏற்கவும்</string>
+    <string name="people_invitations_decline_all">அனைத்தையும் நிராகரி</string>
+    <string name="people_invitations_cancel_all">அனைத்தையும் ரத்துசெய்</string>
+    <string name="people_invitations_all_accepted">அனைத்து அழைப்புகளும் ஏற்கப்பட்டன</string>
+    <string name="people_invitations_all_declined">அனைத்து அழைப்புகளும் நிராகரிக்கப்பட்டன</string>
+    <string name="people_invitations_all_cancelled">அனைத்து அழைப்புகளும் ரத்தாயின</string>
+    <string name="people_invitations_some_accept_failed">சில அழைப்புகளை ஏற்க முடியவில்லை</string>
+    <string name="people_invitations_some_decline_failed">சில அழைப்புகளை நிராகரிக்க முடியவில்லை</string>
+    <string name="people_invitations_some_cancel_failed">சில அழைப்புகளை ரத்துசெய்ய முடியவில்லை</string>
 </resources>

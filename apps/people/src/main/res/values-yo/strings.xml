@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Orúkọ (A–Z)</string>
     <string name="people_friends_sort_recent">Tí a ṣẹ̀ṣẹ̀ fi kún</string>
+    <string name="people_invitations_accept_all">Gba gbogbo rẹ̀</string>
+    <string name="people_invitations_decline_all">Kọ gbogbo rẹ̀</string>
+    <string name="people_invitations_cancel_all">Fagilé gbogbo rẹ̀</string>
+    <string name="people_invitations_all_accepted">Gbogbo ìpè ni a gbà</string>
+    <string name="people_invitations_all_declined">Gbogbo ìpè ni a kọ̀</string>
+    <string name="people_invitations_all_cancelled">Gbogbo ìpè ni a fagilé</string>
+    <string name="people_invitations_some_accept_failed">Àwọn ìpè kan kò ṣeé gbà</string>
+    <string name="people_invitations_some_decline_failed">Àwọn ìpè kan kò ṣeé kọ̀</string>
+    <string name="people_invitations_some_cancel_failed">Àwọn ìpè kan kò ṣeé fagilé</string>
 </resources>

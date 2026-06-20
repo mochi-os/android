@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">სახელი (A–Z)</string>
     <string name="people_friends_sort_recent">ცოტა ხნის წინ დამატებული</string>
+    <string name="people_invitations_accept_all">ყველას მიღება</string>
+    <string name="people_invitations_decline_all">ყველას უარყოფა</string>
+    <string name="people_invitations_cancel_all">ყველას გაუქმება</string>
+    <string name="people_invitations_all_accepted">ყველა მოწვევა მიღებულია</string>
+    <string name="people_invitations_all_declined">ყველა მოწვევა უარყოფილია</string>
+    <string name="people_invitations_all_cancelled">ყველა მოწვევა გაუქმებულია</string>
+    <string name="people_invitations_some_accept_failed">ზოგიერთი მოწვევის მიღება ვერ მოხერხდა</string>
+    <string name="people_invitations_some_decline_failed">ზოგიერთი მოწვევის უარყოფა ვერ მოხერხდა</string>
+    <string name="people_invitations_some_cancel_failed">ზოგიერთი მოწვევის გაუქმება ვერ მოხერხდა</string>
 </resources>

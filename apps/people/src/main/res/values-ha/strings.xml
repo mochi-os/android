@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Suna (A–Z)</string>
     <string name="people_friends_sort_recent">An ƙara kwanan nan</string>
+    <string name="people_invitations_accept_all">Karɓi duka</string>
+    <string name="people_invitations_decline_all">Ƙi duka</string>
+    <string name="people_invitations_cancel_all">Soke duka</string>
+    <string name="people_invitations_all_accepted">An karɓi dukkan gayyace-gayyace</string>
+    <string name="people_invitations_all_declined">An ƙi dukkan gayyace-gayyace</string>
+    <string name="people_invitations_all_cancelled">An soke dukkan gayyace-gayyace</string>
+    <string name="people_invitations_some_accept_failed">An kasa karɓar wasu gayyace-gayyace</string>
+    <string name="people_invitations_some_decline_failed">An kasa ƙin wasu gayyace-gayyace</string>
+    <string name="people_invitations_some_cancel_failed">An kasa soke wasu gayyace-gayyace</string>
 </resources>

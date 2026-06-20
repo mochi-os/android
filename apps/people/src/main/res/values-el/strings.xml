@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Όνομα (A–Z)</string>
     <string name="people_friends_sort_recent">Προστέθηκαν πρόσφατα</string>
+    <string name="people_invitations_accept_all">Αποδοχή όλων</string>
+    <string name="people_invitations_decline_all">Απόρριψη όλων</string>
+    <string name="people_invitations_cancel_all">Ακύρωση όλων</string>
+    <string name="people_invitations_all_accepted">Όλες οι προσκλήσεις έγιναν αποδεκτές</string>
+    <string name="people_invitations_all_declined">Όλες οι προσκλήσεις απορρίφθηκαν</string>
+    <string name="people_invitations_all_cancelled">Όλες οι προσκλήσεις ακυρώθηκαν</string>
+    <string name="people_invitations_some_accept_failed">Ορισμένες προσκλήσεις δεν ήταν δυνατό να γίνουν αποδεκτές</string>
+    <string name="people_invitations_some_decline_failed">Ορισμένες προσκλήσεις δεν ήταν δυνατό να απορριφθούν</string>
+    <string name="people_invitations_some_cancel_failed">Ορισμένες προσκλήσεις δεν ήταν δυνατό να ακυρωθούν</string>
 </resources>

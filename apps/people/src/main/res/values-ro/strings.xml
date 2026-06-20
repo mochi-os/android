@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nume (A–Z)</string>
     <string name="people_friends_sort_recent">Adăugat recent</string>
+    <string name="people_invitations_accept_all">Acceptă tot</string>
+    <string name="people_invitations_decline_all">Refuză tot</string>
+    <string name="people_invitations_cancel_all">Anulează tot</string>
+    <string name="people_invitations_all_accepted">Toate invitațiile acceptate</string>
+    <string name="people_invitations_all_declined">Toate invitațiile refuzate</string>
+    <string name="people_invitations_all_cancelled">Toate invitațiile anulate</string>
+    <string name="people_invitations_some_accept_failed">Unele invitații nu au putut fi acceptate</string>
+    <string name="people_invitations_some_decline_failed">Unele invitații nu au putut fi refuzate</string>
+    <string name="people_invitations_some_cancel_failed">Unele invitații nu au putut fi anulate</string>
 </resources>

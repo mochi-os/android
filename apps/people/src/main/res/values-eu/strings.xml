@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Izena (A–Z)</string>
     <string name="people_friends_sort_recent">Duela gutxi gehituta</string>
+    <string name="people_invitations_accept_all">Onartu guztiak</string>
+    <string name="people_invitations_decline_all">Baztertu guztiak</string>
+    <string name="people_invitations_cancel_all">Utzi guztiak bertan behera</string>
+    <string name="people_invitations_all_accepted">Gonbidapen guztiak onartuta</string>
+    <string name="people_invitations_all_declined">Gonbidapen guztiak baztertuta</string>
+    <string name="people_invitations_all_cancelled">Gonbidapen guztiak bertan behera utzita</string>
+    <string name="people_invitations_some_accept_failed">Gonbidapen batzuk ezin izan dira onartu</string>
+    <string name="people_invitations_some_decline_failed">Gonbidapen batzuk ezin izan dira baztertu</string>
+    <string name="people_invitations_some_cancel_failed">Gonbidapen batzuk ezin izan dira bertan behera utzi</string>
 </resources>

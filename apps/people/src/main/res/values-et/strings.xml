@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Nimi (A–Z)</string>
     <string name="people_friends_sort_recent">Hiljuti lisatud</string>
+    <string name="people_invitations_accept_all">Nõustu kõigiga</string>
+    <string name="people_invitations_decline_all">Lükka kõik tagasi</string>
+    <string name="people_invitations_cancel_all">Tühista kõik</string>
+    <string name="people_invitations_all_accepted">Kõik kutsed vastu võetud</string>
+    <string name="people_invitations_all_declined">Kõik kutsed tagasi lükatud</string>
+    <string name="people_invitations_all_cancelled">Kõik kutsed tühistatud</string>
+    <string name="people_invitations_some_accept_failed">Mõnda kutset ei õnnestunud vastu võtta</string>
+    <string name="people_invitations_some_decline_failed">Mõnda kutset ei õnnestunud tagasi lükata</string>
+    <string name="people_invitations_some_cancel_failed">Mõnda kutset ei õnnestunud tühistada</string>
 </resources>

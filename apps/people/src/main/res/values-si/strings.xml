@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">නම (A–Z)</string>
     <string name="people_friends_sort_recent">මෑතකදී එක් කළ</string>
+    <string name="people_invitations_accept_all">සියල්ල පිළිගන්න</string>
+    <string name="people_invitations_decline_all">සියල්ල ප්‍රතික්ෂේප කරන්න</string>
+    <string name="people_invitations_cancel_all">සියල්ල අවලංගු කරන්න</string>
+    <string name="people_invitations_all_accepted">සියලු ආරාධනා පිළිගත්තා</string>
+    <string name="people_invitations_all_declined">සියලු ආරාධනා ප්‍රතික්ෂේප කළා</string>
+    <string name="people_invitations_all_cancelled">සියලු ආරාධනා අවලංගු කළා</string>
+    <string name="people_invitations_some_accept_failed">සමහර ආරාධනා පිළිගත නොහැකි විය</string>
+    <string name="people_invitations_some_decline_failed">සමහර ආරාධනා ප්‍රතික්ෂේප කළ නොහැකි විය</string>
+    <string name="people_invitations_some_cancel_failed">සමහර ආරාධනා අවලංගු කළ නොහැකි විය</string>
 </resources>

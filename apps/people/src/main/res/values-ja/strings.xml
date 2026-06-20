@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">名前 (A–Z)</string>
     <string name="people_friends_sort_recent">最近追加</string>
+    <string name="people_invitations_accept_all">すべて承認</string>
+    <string name="people_invitations_decline_all">すべて辞退</string>
+    <string name="people_invitations_cancel_all">すべてキャンセル</string>
+    <string name="people_invitations_all_accepted">すべての招待を承認しました</string>
+    <string name="people_invitations_all_declined">すべての招待を辞退しました</string>
+    <string name="people_invitations_all_cancelled">すべての招待をキャンセルしました</string>
+    <string name="people_invitations_some_accept_failed">一部の招待を承認できませんでした</string>
+    <string name="people_invitations_some_decline_failed">一部の招待を辞退できませんでした</string>
+    <string name="people_invitations_some_cancel_failed">一部の招待をキャンセルできませんでした</string>
 </resources>

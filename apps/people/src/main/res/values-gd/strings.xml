@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Ainm (A–Z)</string>
     <string name="people_friends_sort_recent">Air a chur ris o chionn ghoirid</string>
+    <string name="people_invitations_accept_all">Gabh ris na h-uile</string>
+    <string name="people_invitations_decline_all">Diùlt na h-uile</string>
+    <string name="people_invitations_cancel_all">Sguir dhen a h-uile</string>
+    <string name="people_invitations_all_accepted">Chaidh gabhail ris a h-uile cuireadh</string>
+    <string name="people_invitations_all_declined">Chaidh a h-uile cuireadh a dhiùltadh</string>
+    <string name="people_invitations_all_cancelled">Chaidh a h-uile cuireadh a chur dheth</string>
+    <string name="people_invitations_some_accept_failed">Cha b\' urrainn gabhail ri cuid de na cuiridhean</string>
+    <string name="people_invitations_some_decline_failed">Cha b\' urrainn cuid de na cuiridhean a dhiùltadh</string>
+    <string name="people_invitations_some_cancel_failed">Cha b\' urrainn cuid de na cuiridhean a chur dheth</string>
 </resources>

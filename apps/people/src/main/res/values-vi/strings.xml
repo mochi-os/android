@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">Tên (A–Z)</string>
     <string name="people_friends_sort_recent">Mới thêm gần đây</string>
+    <string name="people_invitations_accept_all">Chấp nhận tất cả</string>
+    <string name="people_invitations_decline_all">Từ chối tất cả</string>
+    <string name="people_invitations_cancel_all">Hủy tất cả</string>
+    <string name="people_invitations_all_accepted">Đã chấp nhận tất cả lời mời</string>
+    <string name="people_invitations_all_declined">Đã từ chối tất cả lời mời</string>
+    <string name="people_invitations_all_cancelled">Đã hủy tất cả lời mời</string>
+    <string name="people_invitations_some_accept_failed">Không thể chấp nhận một số lời mời</string>
+    <string name="people_invitations_some_decline_failed">Không thể từ chối một số lời mời</string>
+    <string name="people_invitations_some_cancel_failed">Không thể hủy một số lời mời</string>
 </resources>

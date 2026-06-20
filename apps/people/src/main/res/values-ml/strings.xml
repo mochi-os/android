@@ -201,4 +201,13 @@
 
     <string name="people_friends_sort_name">പേര് (A–Z)</string>
     <string name="people_friends_sort_recent">അടുത്തിടെ ചേർത്തത്</string>
+    <string name="people_invitations_accept_all">എല്ലാം സ്വീകരിക്കുക</string>
+    <string name="people_invitations_decline_all">എല്ലാം നിരസിക്കുക</string>
+    <string name="people_invitations_cancel_all">എല്ലാം റദ്ദാക്കുക</string>
+    <string name="people_invitations_all_accepted">എല്ലാ ക്ഷണങ്ങളും സ്വീകരിച്ചു</string>
+    <string name="people_invitations_all_declined">എല്ലാ ക്ഷണങ്ങളും നിരസിച്ചു</string>
+    <string name="people_invitations_all_cancelled">എല്ലാ ക്ഷണങ്ങളും റദ്ദാക്കി</string>
+    <string name="people_invitations_some_accept_failed">ചില ക്ഷണങ്ങൾ സ്വീകരിക്കാനായില്ല</string>
+    <string name="people_invitations_some_decline_failed">ചില ക്ഷണങ്ങൾ നിരസിക്കാനായില്ല</string>
+    <string name="people_invitations_some_cancel_failed">ചില ക്ഷണങ്ങൾ റദ്ദാക്കാനായില്ല</string>
 </resources>
