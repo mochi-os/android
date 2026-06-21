@@ -27,6 +27,7 @@ fun HtmlContent(
     modifier: Modifier = Modifier,
     maxLines: Int = Int.MAX_VALUE,
     clampToBoundedHeight: Boolean = false,
+    passThroughTouches: Boolean = false,
     onClick: (() -> Unit)? = null,
     onImageLongPress: ((String) -> Unit)? = null,
     onTextViewReady: ((TextView) -> Unit)? = null
@@ -71,6 +72,7 @@ fun HtmlContent(
         update = { textView ->
             val view = textView as ClickableLinkTextView
             view.clampToHeight = clampToBoundedHeight
+            view.passThroughTouches = passThroughTouches
             if (clampToBoundedHeight) {
                 // The visible line count and ellipsis are decided in the view's
                 // onMeasure from its bounded height; start uncapped so the clamp

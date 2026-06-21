@@ -43,6 +43,16 @@ class ClickableLinkTextView @JvmOverloads constructor(
      */
     var clampToHeight = false
 
+    /**
+     * When true, all touch handling is skipped (onTouchEvent returns false) so
+     * the gesture passes straight to the Compose parent. Used by the feeds
+     * magazine preview, where the body fills the screen: without this the
+     * full-screen text view would swallow every swipe and the pager could not
+     * flip to the next post. Taps still open the post via the card's own
+     * clickable; links and image alt-text remain available in the detail view.
+     */
+    var passThroughTouches = false
+
     private var downX = 0f
     private var downY = 0f
     private var pendingLink: ClickableSpan? = null
@@ -95,6 +105,9 @@ class ClickableLinkTextView @JvmOverloads constructor(
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        // Don't consume anything: let the Compose pager flip and the card's
+        // clickable open the post.
+        if (passThroughTouches) return false
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 downX = event.x

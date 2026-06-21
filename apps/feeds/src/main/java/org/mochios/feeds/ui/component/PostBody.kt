@@ -75,6 +75,7 @@ fun PostBody(
             modifier = modifier,
             maxLines = maxLines,
             clampToBoundedHeight = fillHeight,
+            passThroughTouches = fillHeight,
             onClick = onClick,
             onImageLongPress = showAlt,
         )
@@ -108,6 +109,7 @@ fun PostBody(
                     },
                     maxLines = maxLines,
                     clampToBoundedHeight = fillHeight,
+                    passThroughTouches = fillHeight,
                     onClick = onClick,
                     onImageLongPress = showAlt,
                 )
