@@ -86,9 +86,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
-import org.mochios.android.model.Reaction
-import org.mochios.android.model.ReactionCount
-import org.mochios.android.model.ReactionType
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
@@ -98,6 +95,8 @@ import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.feeds.ui.component.PostBody
+import org.mochios.feeds.ui.component.currentReactionType
+import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
@@ -590,6 +589,7 @@ private fun PostContent(
                 reactions = toReactionCounts(post.reactions, post.myReaction),
                 onReact = onReact,
                 onRemoveReaction = { onReact(post.myReaction) },
+                currentReaction = currentReactionType(post.myReaction),
                 modifier = Modifier.weight(1f)
             )
             if (showBody) {
@@ -715,12 +715,6 @@ private fun interestColor(interest: Double): Color {
     return Color.hsl(hue, 0.8f, 0.45f)
 }
 
-private fun toReactionCounts(reactions: List<Reaction>, myReaction: String): List<ReactionCount> =
-    reactions.groupBy { it.reaction }.mapNotNull { (reaction, list) ->
-        val type = ReactionType.fromString(reaction) ?: return@mapNotNull null
-        ReactionCount(type, list.size, reaction.equals(myReaction, ignoreCase = true))
-    }
-
 @Composable
 private fun CommentItem(
     comment: Comment,
@@ -823,7 +817,8 @@ private fun CommentItem(
             ReactionBar(
                 reactions = toReactionCounts(comment.reactions, comment.myReaction),
                 onReact = onReact,
-                onRemoveReaction = { onReact(comment.myReaction) }
+                onRemoveReaction = { onReact(comment.myReaction) },
+                currentReaction = currentReactionType(comment.myReaction)
             )
 
             // Comment actions
