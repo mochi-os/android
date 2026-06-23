@@ -72,20 +72,20 @@ fun HtmlContent(
         update = { textView ->
             val view = textView as ClickableLinkTextView
             view.clampToHeight = clampToBoundedHeight
-            // A selectable TextView renders through the Editor, which ignores
-            // `ellipsize` — so the trailing "…" never draws. The clamped feeds
-            // body passes its touches through and can't be selected anyway, so
-            // turn selection off there to let the ellipsis show. (Re-asserting
-            // the movement method afterwards, since toggling selection clears
-            // it.) Guarded so other callers keep selection and we don't thrash.
+            // The clamped feeds body is a non-interactive preview, so drop text
+            // selection there — the platform ellipsis path through the Editor is
+            // moot now (we truncate the text ourselves in onMeasure), and a plain
+            // non-selectable view is the right behaviour for a preview anyway.
+            // Re-assert the movement method afterwards, since toggling selection
+            // clears it. Guarded so other callers keep selection and don't thrash.
             val wantSelectable = !clampToBoundedHeight
             if (textView.isTextSelectable != wantSelectable) {
                 textView.setTextIsSelectable(wantSelectable)
                 textView.movementMethod = TableAwareMovementMethod.create()
             }
             if (clampToBoundedHeight) {
-                // The visible line count and ellipsis are decided in onMeasure
-                // from the bounded height; start uncapped so it can grow/shrink.
+                // Truncation (with an appended "…") is done in onMeasure from the
+                // bounded height, against fullText below — leave maxLines uncapped.
                 textView.maxLines = Int.MAX_VALUE
             } else {
                 textView.maxLines = maxLines
@@ -98,6 +98,9 @@ fun HtmlContent(
             textView.onImageLongPress = onImageLongPress
             textView.imageAltByUrl = altByUrl
             markwon.setParsedMarkdown(textView, spanned)
+            // Source for height-clamped truncation; null when not clamping so
+            // onMeasure leaves the text alone for every other caller.
+            view.fullText = if (clampToBoundedHeight) spanned else null
             onTextViewReady?.invoke(textView)
         },
         modifier = modifier
