@@ -12,8 +12,11 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -865,21 +868,35 @@ private fun PostCard(
               contentScale = ContentScale.Fit,
           )
       }
-      // No verticalScroll: this is a fixed, screen-filling magazine page, not a
-      // scroller. The body (below) flexes to fill the space and ellipsises when
-      // it overflows; the full article is one tap away in the detail screen. A
-      // nested vertical scroll here would also fight the pager's swipe-to-flip.
-      Column(
+      // One post = one screen. The body fills the space between the header and
+      // the bottom of the page and ellipsises the overflow, so it "fills the
+      // screen" instead of overflowing into a scroll. The verticalScroll is kept
+      // ONLY for its nested-scroll handoff to the pager — that's what makes the
+      // flip clean (proven by the scroll-then-flip version). The inner column is
+      // pinned to the viewport height, so there's nothing to actually scroll: a
+      // swipe forwards to the pager immediately and flips.
+      BoxWithConstraints(
           modifier = Modifier
               .weight(1f)
               .fillMaxWidth()
-              .clickable(onClick = onClick)
-              .padding(
-                  start = 16.dp,
-                  end = 4.dp,
-                  top = if (heroUrl != null) 12.dp else 16.dp,
-              )
       ) {
+        val viewportHeight = maxHeight
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .clickable(onClick = onClick)
+        ) {
+          Column(
+              modifier = Modifier
+                  .height(viewportHeight)
+                  .fillMaxWidth()
+                  .padding(
+                      start = 16.dp,
+                      end = 4.dp,
+                      top = if (heroUrl != null) 12.dp else 16.dp,
+                  )
+          ) {
             // Header: source/feed name + timestamp, above the title.
             // formatTimestamp obeys every timestamp preference (relative /
             // absolute / auto, and the date+time+timezone format).
@@ -953,16 +970,20 @@ private fun PostCard(
                 }
             }
 
-            // Post body. Each post fills the magazine page, so the body grows
-            // to occupy the space between the title and the bottom of the page
-            // and ellipsises only when the text overflows it. Taps open detail
-            // for the full article. For RSS posts the first line is the article
-            // title — bolded for scannability.
+            // Post body — fillHeight gives it the weighted remainder of the
+            // viewport-height column, so it fills the space under the header and
+            // ellipsises the overflow ("enough to fill the screen", no scroll
+            // through the whole article). passThroughTouches lets a swipe reach
+            // the page's (zero-range) verticalScroll, which forwards to the
+            // pager and flips immediately; taps open detail via the card's
+            // clickable. For RSS posts the first line is the article title —
+            // bolded for scannability.
             if (post.body.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(8.dp))
                 PostBody(
                     post = post,
                     fillHeight = true,
+                    passThroughTouches = true,
                     titleFontSize = 20.sp,
                     titleBodyGap = 8.dp,
                     modifier = Modifier
@@ -1038,7 +1059,9 @@ private fun PostCard(
                     }
                 }
             }
+          }
         }
+      }
 
         PostActionBar(
             post = post,

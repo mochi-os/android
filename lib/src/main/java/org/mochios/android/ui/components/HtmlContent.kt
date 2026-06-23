@@ -26,8 +26,8 @@ fun HtmlContent(
     html: String,
     modifier: Modifier = Modifier,
     maxLines: Int = Int.MAX_VALUE,
-    clampToBoundedHeight: Boolean = false,
     passThroughTouches: Boolean = false,
+    clampToBoundedHeight: Boolean = false,
     onClick: (() -> Unit)? = null,
     onImageLongPress: ((String) -> Unit)? = null,
     onTextViewReady: ((TextView) -> Unit)? = null
@@ -72,11 +72,20 @@ fun HtmlContent(
         update = { textView ->
             val view = textView as ClickableLinkTextView
             view.clampToHeight = clampToBoundedHeight
-            view.passThroughTouches = passThroughTouches
+            // A selectable TextView renders through the Editor, which ignores
+            // `ellipsize` — so the trailing "…" never draws. The clamped feeds
+            // body passes its touches through and can't be selected anyway, so
+            // turn selection off there to let the ellipsis show. (Re-asserting
+            // the movement method afterwards, since toggling selection clears
+            // it.) Guarded so other callers keep selection and we don't thrash.
+            val wantSelectable = !clampToBoundedHeight
+            if (textView.isTextSelectable != wantSelectable) {
+                textView.setTextIsSelectable(wantSelectable)
+                textView.movementMethod = TableAwareMovementMethod.create()
+            }
             if (clampToBoundedHeight) {
-                // The visible line count and ellipsis are decided in the view's
-                // onMeasure from its bounded height; start uncapped so the clamp
-                // can both grow and shrink it.
+                // The visible line count and ellipsis are decided in onMeasure
+                // from the bounded height; start uncapped so it can grow/shrink.
                 textView.maxLines = Int.MAX_VALUE
             } else {
                 textView.maxLines = maxLines
@@ -85,6 +94,7 @@ fun HtmlContent(
                 }
             }
             view.onNonLinkClick = onClick
+            textView.passThroughTouches = passThroughTouches
             textView.onImageLongPress = onImageLongPress
             textView.imageAltByUrl = altByUrl
             markwon.setParsedMarkdown(textView, spanned)

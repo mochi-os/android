@@ -34,24 +34,24 @@ class ClickableLinkTextView @JvmOverloads constructor(
     var imageAltByUrl: Map<String, String> = emptyMap()
 
     /**
-     * When true, the visible line count is capped to whatever fits the view's
-     * own (bounded) height and the last visible line is ellipsised. Used by the
-     * feeds magazine page, where each post fills the screen: the body grows to
-     * occupy the available space instead of a fixed line cap, and only truncates
-     * when the text genuinely overflows. Leave false for the normal
-     * maxLines-driven behaviour.
-     */
-    var clampToHeight = false
-
-    /**
-     * When true, all touch handling is skipped (onTouchEvent returns false) so
-     * the gesture passes straight to the Compose parent. Used by the feeds
-     * magazine preview, where the body fills the screen: without this the
-     * full-screen text view would swallow every swipe and the pager could not
-     * flip to the next post. Taps still open the post via the card's own
-     * clickable; links and image alt-text remain available in the detail view.
+     * When true, no touch is consumed (onTouchEvent returns false) so the
+     * gesture passes to the Compose parent. The feeds magazine page uses this
+     * for the (uncapped, full-height) post body so a drag reaches the page's
+     * verticalScroll — which scrolls the post and, at its boundary, forwards to
+     * the pager to flip — instead of the text view swallowing the swipe. Taps
+     * fall through to the card's own clickable (open the post); links and image
+     * alt-text remain available in the detail view.
      */
     var passThroughTouches = false
+
+    /**
+     * When true, the visible line count is capped to whatever fits the view's
+     * own bounded height and the last visible line is ellipsised. The feeds
+     * magazine page gives the body a weighted slot sized to the free space, so
+     * the body "fills the screen" and truncates with "…" instead of overflowing
+     * into a scroll. Leave false for normal maxLines-driven behaviour.
+     */
+    var clampToHeight = false
 
     private var downX = 0f
     private var downY = 0f
@@ -73,8 +73,7 @@ class ClickableLinkTextView @JvmOverloads constructor(
         if (clampToHeight) {
             val heightMode = MeasureSpec.getMode(heightMeasureSpec)
             // Only meaningful when the parent bounds our height (EXACTLY from a
-            // weighted slot, or AT_MOST). With an unbounded height there is
-            // nothing to fit against, so fall through to the default behaviour.
+            // weighted slot, or AT_MOST). Unbounded → nothing to fit against.
             if (heightMode == MeasureSpec.EXACTLY || heightMode == MeasureSpec.AT_MOST) {
                 val available = MeasureSpec.getSize(heightMeasureSpec) -
                     compoundPaddingTop - compoundPaddingBottom
@@ -84,8 +83,8 @@ class ClickableLinkTextView @JvmOverloads constructor(
                 if (available > 0 && width > 0 && !content.isNullOrEmpty()) {
                     // Lay the full (uncapped) text out in a throwaway layout so
                     // the target line count is derived independently of the
-                    // view's current maxLines — that keeps it stable across
-                    // measure passes and avoids a maxLines feedback loop.
+                    // view's current maxLines — stable across measure passes,
+                    // no feedback loop.
                     val full = StaticLayout.Builder
                         .obtain(content, 0, content.length, paint, width)
                         .setLineSpacing(lineSpacingExtra, lineSpacingMultiplier)
@@ -105,8 +104,8 @@ class ClickableLinkTextView @JvmOverloads constructor(
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
-        // Don't consume anything: let the Compose pager flip and the card's
-        // clickable open the post.
+        // Don't consume anything: let the page's verticalScroll / pager own the
+        // gesture and the card's clickable handle taps.
         if (passThroughTouches) return false
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
