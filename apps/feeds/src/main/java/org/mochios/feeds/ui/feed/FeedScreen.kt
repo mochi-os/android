@@ -122,14 +122,15 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.model.Reaction
-import org.mochios.android.model.ReactionCount
-import org.mochios.android.model.ReactionType
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipBook
 import org.mochios.feeds.ui.component.PostBody
+import org.mochios.feeds.ui.component.PostTitle
+import org.mochios.feeds.ui.component.currentReactionType
+import org.mochios.feeds.ui.component.rssDisplayTitle
+import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MediaGrid
@@ -897,7 +898,21 @@ private fun PostCard(
                       top = if (heroUrl != null) 12.dp else 16.dp,
                   )
           ) {
-            // Header: source/feed name + timestamp, above the title.
+            // Title first (RSS posts only), so the byline sits beneath it.
+            // Hoisted out of PostBody — which renders the same line via
+            // PostTitle — so the source/time row can slot in between.
+            val displayTitle = rssDisplayTitle(post)
+            if (displayTitle != null) {
+                PostTitle(
+                    title = displayTitle,
+                    fontSize = 20.sp,
+                    truncated = true,
+                    onClick = onClick,
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+            }
+
+            // Byline: source/feed name + timestamp, below the title.
             // formatTimestamp obeys every timestamp preference (relative /
             // absolute / auto, and the date+time+timezone format).
             Row(
@@ -924,6 +939,24 @@ private fun PostCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
+
+            // Action row (react, tag, comment, save, edit/delete) directly
+            // below the byline. Moved up from the former bottom bar, so all
+            // post controls sit in the header block; it now flips and scrolls
+            // with the card rather than staying pinned at the screen bottom.
+            Spacer(modifier = Modifier.height(8.dp))
+            PostActionBar(
+                post = post,
+                canManage = canManage,
+                isSaved = isSaved,
+                onReact = onReact,
+                onComments = onComments,
+                onToggleSave = onToggleSave,
+                onEdit = onEdit,
+                onDelete = onDelete,
+                onAddTag = onAddTag,
+                onAdjustInterest = onAdjustInterest,
+            )
 
             // Memory badge
             post.data?.memory?.let { memory ->
@@ -984,8 +1017,8 @@ private fun PostCard(
                     post = post,
                     fillHeight = true,
                     passThroughTouches = true,
-                    titleFontSize = 20.sp,
-                    titleBodyGap = 8.dp,
+                    // Title is rendered above the byline, not inside the body.
+                    includeTitle = false,
                     modifier = Modifier
                         .fillMaxWidth()
                         .weight(1f),
@@ -1062,19 +1095,6 @@ private fun PostCard(
           }
         }
       }
-
-        PostActionBar(
-            post = post,
-            canManage = canManage,
-            isSaved = isSaved,
-            onReact = onReact,
-            onComments = onComments,
-            onToggleSave = onToggleSave,
-            onEdit = onEdit,
-            onDelete = onDelete,
-            onAddTag = onAddTag,
-            onAdjustInterest = onAdjustInterest,
-        )
     }
 
     lightboxState?.let { (urls, index) ->
@@ -1086,10 +1106,10 @@ private fun PostCard(
     }
 }
 
-// Bottom action bar: reaction bar, then comment / edit / delete icon buttons.
-// Lives outside the flipping page content so it stays put during the page-flip
-// and simply reflects whichever post is current (updating on swipe-commit),
-// rather than flipping along with the card.
+// Action bar: reaction bar, then tag / comment / save / edit / delete buttons.
+// Rendered in the header block beneath the byline, so it flips and scrolls
+// with the card. The host content column supplies the horizontal padding, so
+// this only adds the inter-row vertical gap.
 @Composable
 private fun PostActionBar(
     post: Post,
@@ -1106,14 +1126,14 @@ private fun PostActionBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(start = 16.dp, end = 4.dp, top = 8.dp, bottom = 16.dp),
+            .padding(vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         ReactionBar(
             reactions = toReactionCounts(post.reactions, post.myReaction),
             onReact = onReact,
             onRemoveReaction = { onReact(post.myReaction) },
+            currentReaction = currentReactionType(post.myReaction),
             modifier = Modifier.weight(1f)
         )
         PostTagsButton(
@@ -1212,11 +1232,6 @@ private fun stripCommentHtml(html: String): String =
         .replace(Regex("\\s+"), " ")
         .trim()
 
-private fun toReactionCounts(reactions: List<Reaction>, myReaction: String): List<ReactionCount> =
-    reactions.groupBy { it.reaction }.mapNotNull { (reaction, list) ->
-        val type = ReactionType.fromString(reaction) ?: return@mapNotNull null
-        ReactionCount(type, list.size, reaction.equals(myReaction, ignoreCase = true))
-    }
 
 @Composable
 private fun InterestSuggestionsDialog(
