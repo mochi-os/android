@@ -189,6 +189,7 @@
 
     <!-- Reactions -->
     <string name="reaction_add">Add reaction</string>
+    <string name="reaction_remove">Clear</string>
     <string name="reaction_like">Like</string>
     <string name="reaction_dislike">Dislike</string>
     <string name="reaction_laugh">Laugh</string>

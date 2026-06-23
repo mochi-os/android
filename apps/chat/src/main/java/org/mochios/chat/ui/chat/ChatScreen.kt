@@ -105,7 +105,6 @@ import org.mochios.android.model.ReactionType
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.NotificationBell
-import org.mochios.android.ui.components.ReactionAddButton
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
@@ -853,24 +852,18 @@ private fun MessageBubble(
                     modifier = Modifier
                         .align(Alignment.BottomEnd)
                         .padding(end = 6.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    val reactions = chatReactionCounts(message.reactionCounts, message.myReaction)
-                    if (reactions.isNotEmpty()) {
-                        ReactionBar(
-                            reactions = reactions,
-                            onReact = onReact,
-                            onRemoveReaction = { onReact("none") },
-                            showAddButton = false,
-                            maxVisible = 3
-                        )
-                    }
-                    ReactionAddButton(
+                    // Single bar with pills + built-in add button, so the
+                    // add/change/clear affordance is consistent with feeds.
+                    ReactionBar(
+                        reactions = chatReactionCounts(message.reactionCounts, message.myReaction),
                         onReact = onReact,
+                        onRemoveReaction = { onReact("none") },
                         currentReaction = message.myReaction?.let { key ->
                             ReactionType.fromString(key)
-                        }
+                        },
+                        maxVisible = 3
                     )
                 }
             }

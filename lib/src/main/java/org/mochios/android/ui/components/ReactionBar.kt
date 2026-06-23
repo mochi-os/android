@@ -31,6 +31,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
@@ -53,44 +54,48 @@ fun ReactionBar(
     onRemoveReaction: () -> Unit,
     modifier: Modifier = Modifier,
     showAddButton: Boolean = true,
-    maxVisible: Int? = null
+    maxVisible: Int? = null,
+    currentReaction: ReactionType? = null
 ) {
     var showPicker by remember { mutableStateOf(false) }
     val shape = RoundedCornerShape(16.dp)
-    val visibleReactions = maxVisible?.let { max -> reactions.take(max) } ?: reactions
-    val hiddenCount = maxVisible
-        ?.let { max -> reactions.drop(max).sumOf { reaction -> reaction.count } }
-        ?: 0
+
+    // The viewer's own reaction always sits at the right end of the bar — in the
+    // slot the add button would otherwise hold. Others render first, then the
+    // overflow chip, then the viewer's reaction (or the add button if they
+    // haven't reacted). When the viewer has reacted the add button is hidden;
+    // tapping their highlighted pill reopens the picker to change or clear it.
+    val mine = reactions.firstOrNull { reaction -> reaction.isMine }
+    val others = reactions.filter { reaction -> !reaction.isMine }
+    val visibleOthers = maxVisible?.let { max ->
+        val slots = if (mine != null) (max - 1).coerceAtLeast(0) else max
+        others.take(slots)
+    } ?: others
+    val hiddenCount = others
+        .filter { reaction -> reaction !in visibleOthers }
+        .sumOf { reaction -> reaction.count }
+
+    val onSelect: (ReactionType) -> Unit = { type ->
+        showPicker = false
+        onReact(type.name.lowercase())
+    }
+    val onClear = {
+        showPicker = false
+        onRemoveReaction()
+    }
+    val onDismiss = { showPicker = false }
 
     FlowRow(
         modifier = modifier,
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        for (reaction in visibleReactions) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .clip(shape)
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
-                    .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), shape)
-                    .clickable {
-                        if (reaction.isMine) onRemoveReaction() else onReact(reaction.type.name.lowercase())
-                    }
-                    .padding(horizontal = 4.dp, vertical = 4.dp)
-            ) {
-                Text(
-                    text = reaction.type.emoji,
-                    style = MaterialTheme.typography.bodySmall
-                )
-                if (reaction.count > 1) {
-                    Text(
-                        text = " ${reaction.count}",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
+        for (reaction in visibleOthers) {
+            ReactionPill(
+                reaction = reaction,
+                shape = shape,
+                onClick = { onReact(reaction.type.name.lowercase()) }
+            )
         }
 
         if (hiddenCount > 0) {
@@ -109,7 +114,18 @@ fun ReactionBar(
             }
         }
 
-        if (showAddButton) {
+        if (mine != null) {
+            Box {
+                ReactionPill(
+                    reaction = mine,
+                    shape = shape,
+                    onClick = { showPicker = true }
+                )
+                if (showPicker) {
+                    ReactionPickerPopup(currentReaction, onSelect, onClear, onDismiss)
+                }
+            }
+        } else if (showAddButton) {
             Box {
                 Box(
                     modifier = Modifier
@@ -126,19 +142,8 @@ fun ReactionBar(
                         tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
-
                 if (showPicker) {
-                    Popup(
-                        onDismissRequest = { showPicker = false },
-                        alignment = Alignment.TopStart
-                    ) {
-                        ReactionPicker(
-                            onSelect = { type ->
-                                showPicker = false
-                                onReact(type.name.lowercase())
-                            }
-                        )
-                    }
+                    ReactionPickerPopup(currentReaction, onSelect, onClear, onDismiss)
                 }
             }
         }
@@ -146,64 +151,69 @@ fun ReactionBar(
 }
 
 /**
- * Standalone smiley button that opens the [ReactionPicker]. Use where the
- * add-reaction affordance lives apart from the reaction pills — e.g. floating on
- * a chat bubble's corner, with the pills shown separately via
- * [ReactionBar] (`showAddButton = false`).
- *
- * When [currentReaction] is set, the button shows that reaction's emoji instead
- * of the generic smiley, reflecting the viewer's own reaction.
- *
- * @param onReact invoked with the chosen reaction key (lowercase [ReactionType] name).
- * @param currentReaction the viewer's existing reaction, shown on the button if any.
+ * A single reaction pill — the emoji plus its count. The viewer's own reaction
+ * is highlighted with the primary container colour so the bar marks which
+ * reaction is theirs.
  */
 @Composable
-fun ReactionAddButton(
-    onReact: (String) -> Unit,
-    modifier: Modifier = Modifier,
-    currentReaction: ReactionType? = null
+private fun ReactionPill(
+    reaction: ReactionCount,
+    shape: Shape,
+    onClick: () -> Unit
 ) {
-    var showPicker by remember { mutableStateOf(false) }
-    val positionProvider = rememberBelowEndPositionProvider()
-
-    Box(modifier) {
-        Box(
-            modifier = Modifier
-                .size(28.dp)
-                .clip(CircleShape)
-                .background(MaterialTheme.colorScheme.surface)
-                .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape)
-                .clickable { showPicker = true },
-            contentAlignment = Alignment.Center
-        ) {
-            if (currentReaction != null) {
-                Text(
-                    text = currentReaction.emoji,
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            } else {
-                Icon(
-                    imageVector = Icons.Outlined.EmojiEmotions,
-                    contentDescription = stringResource(R.string.reaction_add),
-                    modifier = Modifier.size(18.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .clip(shape)
+            .background(
+                if (reaction.isMine) {
+                    MaterialTheme.colorScheme.primaryContainer
+                } else {
+                    MaterialTheme.colorScheme.surfaceVariant
+                }
+            )
+            .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), shape)
+            .clickable(onClick = onClick)
+            .padding(horizontal = 4.dp, vertical = 4.dp)
+    ) {
+        Text(
+            text = reaction.type.emoji,
+            style = MaterialTheme.typography.bodySmall
+        )
+        if (reaction.count > 1) {
+            Text(
+                text = " ${reaction.count}",
+                style = MaterialTheme.typography.labelSmall,
+                color = if (reaction.isMine) {
+                    MaterialTheme.colorScheme.onPrimaryContainer
+                } else {
+                    MaterialTheme.colorScheme.onSurfaceVariant
+                }
+            )
         }
+    }
+}
 
-        if (showPicker) {
-            Popup(
-                popupPositionProvider = positionProvider,
-                onDismissRequest = { showPicker = false }
-            ) {
-                ReactionPicker(
-                    onSelect = { type ->
-                        showPicker = false
-                        onReact(type.name.lowercase())
-                    }
-                )
-            }
-        }
+/**
+ * The reaction-picker popup, anchored just below the bar's right-most chip (the
+ * viewer's reaction or the add button).
+ */
+@Composable
+private fun ReactionPickerPopup(
+    currentReaction: ReactionType?,
+    onSelect: (ReactionType) -> Unit,
+    onClear: () -> Unit,
+    onDismiss: () -> Unit
+) {
+    Popup(
+        popupPositionProvider = rememberBelowEndPositionProvider(),
+        onDismissRequest = onDismiss
+    ) {
+        ReactionPicker(
+            currentReaction = currentReaction,
+            onSelect = onSelect,
+            onClear = onClear
+        )
     }
 }
 
@@ -239,7 +249,9 @@ private fun rememberBelowEndPositionProvider(gap: Dp = 4.dp): PopupPositionProvi
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ReactionPicker(
-    onSelect: (ReactionType) -> Unit
+    onSelect: (ReactionType) -> Unit,
+    currentReaction: ReactionType? = null,
+    onClear: () -> Unit = {}
 ) {
     val shape = RoundedCornerShape(24.dp)
 
@@ -257,6 +269,14 @@ private fun ReactionPicker(
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
+                    // Highlight the viewer's current reaction in the picker.
+                    .then(
+                        if (type == currentReaction) {
+                            Modifier.background(MaterialTheme.colorScheme.primaryContainer)
+                        } else {
+                            Modifier
+                        }
+                    )
                     .clickable { onSelect(type) }
                     .padding(8.dp),
                 contentAlignment = Alignment.Center
@@ -264,6 +284,22 @@ private fun ReactionPicker(
                 Text(
                     text = type.emoji,
                     style = MaterialTheme.typography.titleMedium
+                )
+            }
+        }
+        // Clear-reaction option, only when the viewer has reacted.
+        if (currentReaction != null) {
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .clickable { onClear() }
+                    .padding(horizontal = 12.dp, vertical = 8.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = stringResource(R.string.reaction_remove),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
         }
