@@ -34,18 +34,29 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.PlatformTextStyle
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntRect
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupPositionProvider
 import org.mochios.android.R
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 
+/**
+ * A row of reaction pills with a trailing add/change affordance.
+ *
+ * @param emojiSize the font size of the pill emojis. The add-reaction icon is
+ *   measured to the emoji's laid-out height so the icon and pills line up exactly.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ReactionBar(
@@ -53,12 +64,16 @@ fun ReactionBar(
     onReact: (String) -> Unit,
     onRemoveReaction: () -> Unit,
     modifier: Modifier = Modifier,
-    showAddButton: Boolean = true,
+    emojiSize: TextUnit = 14.sp,
     maxVisible: Int? = null,
     currentReaction: ReactionType? = null
 ) {
     var showPicker by remember { mutableStateOf(false) }
     val shape = RoundedCornerShape(16.dp)
+
+    // Single source of truth for the bar's sizing: the emoji text style and the
+    // add-icon size measured to match the emoji's laid-out height.
+    val (emojiStyle, iconSize) = rememberReactionSizing(emojiSize)
 
     // The viewer's own reaction always sits at the right end of the bar — in the
     // slot the add button would otherwise hold. Others render first, then the
@@ -94,6 +109,7 @@ fun ReactionBar(
             ReactionPill(
                 reaction = reaction,
                 shape = shape,
+                emojiStyle = emojiStyle,
                 onClick = { onReact(reaction.type.name.lowercase()) }
             )
         }
@@ -119,26 +135,28 @@ fun ReactionBar(
                 ReactionPill(
                     reaction = mine,
                     shape = shape,
+                    emojiStyle = emojiStyle,
                     onClick = { showPicker = true }
                 )
                 if (showPicker) {
                     ReactionPickerPopup(currentReaction, onSelect, onClear, onDismiss)
                 }
             }
-        } else if (showAddButton) {
+        } else {
             Box {
                 Box(
                     modifier = Modifier
                         .clip(shape)
                         .background(MaterialTheme.colorScheme.surfaceVariant)
+                        .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), shape)
                         .clickable { showPicker = true }
-                        .padding(horizontal = 8.dp, vertical = 4.dp),
+                        .padding(horizontal = 4.dp, vertical = 4.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         imageVector = Icons.Outlined.EmojiEmotions,
                         contentDescription = stringResource(R.string.reaction_add),
-                        modifier = Modifier.size(16.dp),
+                        modifier = Modifier.size(iconSize),
                         tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
@@ -152,45 +170,72 @@ fun ReactionBar(
 
 /**
  * A single reaction pill — the emoji plus its count. The viewer's own reaction
- * is highlighted with the primary container colour so the bar marks which
- * reaction is theirs.
+ * is marked with a primary-coloured border so the bar shows which reaction is
+ * theirs without recolouring the pill.
  */
 @Composable
 private fun ReactionPill(
     reaction: ReactionCount,
     shape: Shape,
+    emojiStyle: TextStyle,
     onClick: () -> Unit
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .clip(shape)
-            .background(
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .border(
+                1.dp,
                 if (reaction.isMine) {
-                    MaterialTheme.colorScheme.primaryContainer
+                    MaterialTheme.colorScheme.primary
                 } else {
-                    MaterialTheme.colorScheme.surfaceVariant
-                }
+                    MaterialTheme.colorScheme.outline.copy(alpha = 0.3f)
+                },
+                shape
             )
-            .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), shape)
             .clickable(onClick = onClick)
             .padding(horizontal = 4.dp, vertical = 4.dp)
     ) {
         Text(
             text = reaction.type.emoji,
-            style = MaterialTheme.typography.bodySmall
+            style = emojiStyle
         )
         if (reaction.count > 1) {
             Text(
                 text = " ${reaction.count}",
                 style = MaterialTheme.typography.labelSmall,
-                color = if (reaction.isMine) {
-                    MaterialTheme.colorScheme.onPrimaryContainer
-                } else {
-                    MaterialTheme.colorScheme.onSurfaceVariant
-                }
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
+    }
+}
+
+/** A representative emoji used to measure the pill height for the add icon. */
+private const val REACTION_EMOJI_SAMPLE = "😀"
+
+/** The emoji text style and the matching add-icon size for a reaction bar. */
+private data class ReactionSizing(val emojiStyle: TextStyle, val iconSize: Dp)
+
+/**
+ * The single source of truth for a reaction bar's sizing. Builds the emoji text
+ * style from [emojiSize] and measures its laid-out height so the add-reaction
+ * icon can be sized to match the pills exactly, regardless of font and density.
+ */
+@Composable
+private fun rememberReactionSizing(emojiSize: TextUnit): ReactionSizing {
+    val emojiStyle = MaterialTheme.typography.titleMedium.copy(
+        fontSize = emojiSize,
+        lineHeight = emojiSize,
+        platformStyle = PlatformTextStyle(includeFontPadding = false)
+    )
+    val textMeasurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    return remember(emojiStyle, density, textMeasurer) {
+        val iconSize = with(density) {
+            textMeasurer.measure(REACTION_EMOJI_SAMPLE, emojiStyle).size.height.toDp()
+        }
+        ReactionSizing(emojiStyle, iconSize)
     }
 }
 

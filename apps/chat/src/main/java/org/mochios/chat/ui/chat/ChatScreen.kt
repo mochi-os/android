@@ -722,7 +722,7 @@ private fun MessageBubble(
                     // Reserve a strip below the bubble for the reaction button,
                     // which floats just under the bottom-right corner so it never
                     // sits on the message text (even for short messages).
-                    .padding(bottom = if (selectionMode) 0.dp else 20.dp)
+                    .padding(bottom = if (selectionMode) 0.dp else 18.dp)
                     .then(
                         when {
                             selectionMode -> Modifier.clickable(onClick = onToggleSelect)
