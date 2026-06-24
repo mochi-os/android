@@ -49,18 +49,20 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.ImportExport
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.EmojiEvents
+import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -98,6 +100,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import android.widget.Toast
@@ -121,7 +124,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
@@ -135,7 +137,6 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.NewItemsPill
-import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.feeds.R
@@ -223,9 +224,7 @@ fun FeedScreen(
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
-    var showAbout by remember { mutableStateOf(false) }
     var showSuggestedInterests by remember { mutableStateOf(false) }
-    var showDefaultSortDialog by remember { mutableStateOf(false) }
     var addTagTarget by remember { mutableStateOf<String?>(null) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
 
@@ -336,36 +335,38 @@ fun FeedScreen(
             ListItem(
                 modifier = Modifier.clickable {
                     drawerScope.launch { drawerState.close() }
+                    onNavigateToSaved()
+                },
+                headlineContent = { Text(stringResource(R.string.feeds_saved_menu)) },
+                leadingContent = { Icon(Icons.Default.BookmarkBorder, contentDescription = null) },
+                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            )
+            ListItem(
+                modifier = Modifier.clickable {
+                    drawerScope.launch { drawerState.close() }
                     onNavigateToFindFeeds()
                 },
                 headlineContent = { Text(stringResource(R.string.feeds_find_feeds)) },
                 leadingContent = { Icon(Icons.Default.Search, contentDescription = null) },
                 colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
-            ListItem(
-                modifier = Modifier.clickable {
-                    drawerScope.launch { drawerState.close() }
-                    showDefaultSortDialog = true
-                },
-                headlineContent = { Text(stringResource(R.string.feeds_default_sort)) },
-                leadingContent = { Icon(Icons.Default.ImportExport, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
-            )
-            val suggestedInterests by viewModel.suggestedInterests.collectAsState()
-            if (suggestedInterests.isNotEmpty()) {
-                ListItem(
-                    modifier = Modifier.clickable {
-                        drawerScope.launch { drawerState.close() }
-                        showSuggestedInterests = true
-                    },
-                    headlineContent = { Text(stringResource(R.string.feeds_suggested_interests)) },
-                    supportingContent = {
-                        Text(stringResource(R.string.feeds_suggested_interests_count, suggestedInterests.size))
-                    },
-                    leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
-                    colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
-                )
-            }
+            // TODO: re-enable Suggested interests once it's wired into the
+            // subscribe-feed flow.
+            // val suggestedInterests by viewModel.suggestedInterests.collectAsState()
+            // if (suggestedInterests.isNotEmpty()) {
+            //     ListItem(
+            //         modifier = Modifier.clickable {
+            //             drawerScope.launch { drawerState.close() }
+            //             showSuggestedInterests = true
+            //         },
+            //         headlineContent = { Text(stringResource(R.string.feeds_suggested_interests)) },
+            //         supportingContent = {
+            //             Text(stringResource(R.string.feeds_suggested_interests_count, suggestedInterests.size))
+            //         },
+            //         leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
+            //         colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
+            //     )
+            // }
             ListItem(
                 modifier = Modifier.clickable {
                     drawerScope.launch { drawerState.close() }
@@ -373,15 +374,6 @@ fun FeedScreen(
                 },
                 headlineContent = { Text(stringResource(R.string.feeds_logout)) },
                 leadingContent = { Icon(Icons.Default.Logout, contentDescription = null) },
-                colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
-            )
-            ListItem(
-                modifier = Modifier.clickable {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-                headlineContent = { Text(stringResource(MochiR.string.about_label)) },
-                leadingContent = { Icon(Icons.Default.Info, contentDescription = null) },
                 colors = ListItemDefaults.colors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
@@ -404,110 +396,20 @@ fun FeedScreen(
                     }
                 },
                 actions = {
-                    IconButton(onClick = {
-                        // A manual refresh intentionally returns to the top, so
-                        // don't let the anchor-restore effect pull the reader
-                        // back to the post they were on when the new list lands.
-                        suppressAnchorRestore = true
-                        viewModel.refresh()
-                        // Also jump back to the first post, so refresh both
-                        // reloads and returns the user to the top of the feed.
-                        drawerScope.launch { pagerState.animateScrollToPage(0) }
-                    }) {
-                        Icon(
-                            Icons.Default.Refresh,
-                            contentDescription = stringResource(R.string.feeds_refresh)
-                        )
-                    }
-                    NotificationBell(onClick = onOpenNotifications)
                     if (permissions.manage) {
                         IconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
                             Icon(Icons.Default.Add, contentDescription = stringResource(R.string.feeds_new_post))
                         }
                     }
-                    Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
-                            Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
-                        }
-                        DropdownMenu(
-                            expanded = showOverflowMenu,
-                            onDismissRequest = { showOverflowMenu = false }
-                        ) {
-                            // Sort options — listed inline (no nested menu)
-                            // with a check next to the active one. Each tap
-                            // picks the sort and dismisses the menu.
-                            Text(
-                                text = stringResource(R.string.feeds_sort_label),
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp)
-                            )
-                            val sortOptions = listOf(
-                                "ai" to R.string.feeds_sort_ai,
-                                "interests" to R.string.feeds_sort_interests,
-                                "new" to R.string.feeds_sort_new,
-                                "hot" to R.string.feeds_sort_hot,
-                                "top" to R.string.feeds_sort_top,
-                            )
-                            sortOptions.forEach { (value, labelRes) ->
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(labelRes)) },
-                                    leadingIcon = {
-                                        if (currentSort == value) {
-                                            Icon(Icons.Default.Check, contentDescription = null)
-                                        } else {
-                                            Spacer(Modifier.size(24.dp))
-                                        }
-                                    },
-                                    onClick = {
-                                        viewModel.setSort(value)
-                                        showOverflowMenu = false
-                                    }
-                                )
+                    if (permissions.manage) {
+                        Box {
+                            IconButton(onClick = { showOverflowMenu = true }) {
+                                Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
                             }
-
-                            HorizontalDivider()
-
-                            // Unread-only toggle. Tapping flips state; the
-                            // leading checkmark indicates the current value.
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.feeds_unread_only)) },
-                                leadingIcon = {
-                                    if (unreadOnly) {
-                                        Icon(Icons.Default.Check, contentDescription = null)
-                                    } else {
-                                        Spacer(Modifier.size(24.dp))
-                                    }
-                                },
-                                onClick = {
-                                    viewModel.setUnreadOnly(!unreadOnly)
-                                    showOverflowMenu = false
-                                }
-                            )
-
-                            HorizontalDivider()
-
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.feeds_mark_all_read)) },
-                                leadingIcon = {
-                                    Icon(Icons.Default.DoneAll, contentDescription = null)
-                                },
-                                onClick = {
-                                    viewModel.markAllRead()
-                                    showOverflowMenu = false
-                                }
-                            )
-                            DropdownMenuItem(
-                                text = { Text(stringResource(R.string.feeds_saved_menu)) },
-                                leadingIcon = {
-                                    Icon(Icons.Default.Bookmark, contentDescription = null)
-                                },
-                                onClick = {
-                                    onNavigateToSaved()
-                                    showOverflowMenu = false
-                                }
-                            )
-                            if (permissions.manage) {
+                            DropdownMenu(
+                                expanded = showOverflowMenu,
+                                onDismissRequest = { showOverflowMenu = false }
+                            ) {
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.feeds_tab_sources)) },
                                     leadingIcon = {
@@ -558,19 +460,32 @@ fun FeedScreen(
             }
         }
     ) { paddingValues ->
-        PullToRefreshBox(
-            isRefreshing = isRefreshing,
-            onRefresh = {
-                // Pull-to-refresh is a deliberate "show me the latest" gesture
-                // from the top — let the new list settle at the top rather than
-                // anchor-restoring back to the previously-current post.
-                suppressAnchorRestore = true
-                viewModel.refresh()
-            },
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
+            FeedFilterChips(
+                currentSort = currentSort,
+                unreadOnly = unreadOnly,
+                onSetSort = { sort -> viewModel.setSort(sort) },
+                onSetUnreadOnly = { value -> viewModel.setUnreadOnly(value) },
+                onMarkAllRead = { viewModel.markAllRead() },
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+            )
+            PullToRefreshBox(
+                isRefreshing = isRefreshing,
+                onRefresh = {
+                    // Pull-to-refresh is a deliberate "show me the latest" gesture
+                    // from the top — let the new list settle at the top rather than
+                    // anchor-restoring back to the previously-current post.
+                    suppressAnchorRestore = true
+                    viewModel.refresh()
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
+            ) {
             when {
                 isLoading && posts.isEmpty() -> {
                     Box(
@@ -707,45 +622,8 @@ fun FeedScreen(
                     }
                 }
             }
+            }
         }
-    }
-
-    if (showDefaultSortDialog) {
-        val sortOptions = listOf(
-            "ai" to R.string.feeds_sort_ai,
-            "interests" to R.string.feeds_sort_interests,
-            "new" to R.string.feeds_sort_new,
-            "hot" to R.string.feeds_sort_hot,
-            "top" to R.string.feeds_sort_top,
-        )
-        androidx.compose.material3.AlertDialog(
-            onDismissRequest = { showDefaultSortDialog = false },
-            title = { Text(stringResource(R.string.feeds_default_sort)) },
-            text = {
-                androidx.compose.foundation.layout.Column {
-                    sortOptions.forEach { (value, labelRes) ->
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    viewModel.setGlobalDefaultSort(value)
-                                    showDefaultSortDialog = false
-                                }
-                                .padding(vertical = 12.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            Text(stringResource(labelRes))
-                        }
-                    }
-                }
-            },
-            confirmButton = {},
-            dismissButton = {
-                TextButton(onClick = { showDefaultSortDialog = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
-        )
     }
 
     if (showSuggestedInterests) {
@@ -756,10 +634,6 @@ fun FeedScreen(
             onDismissOne = { viewModel.dismissInterest(it) },
             onDismiss = { showSuggestedInterests = false },
         )
-    }
-
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
     }
 
     pendingDelete?.let { target ->
@@ -1285,5 +1159,154 @@ private fun InterestSuggestionsDialog(
             }
         },
     )
+}
+
+/** A sort option for the feed sort chip: server value, label, and icon. */
+private data class FeedSortOption(val value: String, val labelRes: Int, val icon: ImageVector)
+
+/** The feed's sort options in display order, each with its chip/menu icon. */
+private fun feedSortOptions(): List<FeedSortOption> = listOf(
+    FeedSortOption("interests", R.string.feeds_sort_interests, Icons.Default.Star),
+    FeedSortOption("new", R.string.feeds_sort_new, Icons.Default.Schedule),
+    FeedSortOption("hot", R.string.feeds_sort_hot, Icons.Default.LocalFireDepartment),
+    FeedSortOption("top", R.string.feeds_sort_top, Icons.Default.EmojiEvents),
+)
+
+/**
+ * The read-filter and sort chips shown at the top of the feed. Each is a compact
+ * label-plus-chevron button that opens a dropdown of options.
+ */
+@Composable
+private fun FeedFilterChips(
+    currentSort: String,
+    unreadOnly: Boolean,
+    onSetSort: (String) -> Unit,
+    onSetUnreadOnly: (Boolean) -> Unit,
+    onMarkAllRead: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    var showReadMenu by remember { mutableStateOf(false) }
+    var showSortMenu by remember { mutableStateOf(false) }
+    val sortOptions = feedSortOptions()
+    val activeSort = sortOptions.firstOrNull { option -> option.value == currentSort }
+        ?: sortOptions.first()
+
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Box {
+            FeedFilterChip(
+                icon = if (unreadOnly) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                label = stringResource(
+                    if (unreadOnly) R.string.feeds_unread else R.string.feeds_filter_all
+                ),
+                onClick = { showReadMenu = true },
+            )
+            DropdownMenu(
+                expanded = showReadMenu,
+                onDismissRequest = { showReadMenu = false },
+            ) {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.feeds_filter_all)) },
+                    leadingIcon = { Icon(Icons.Default.Visibility, contentDescription = null) },
+                    trailingIcon = {
+                        if (!unreadOnly) {
+                            Icon(Icons.Default.Check, contentDescription = null)
+                        }
+                    },
+                    onClick = {
+                        onSetUnreadOnly(false)
+                        showReadMenu = false
+                    },
+                )
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.feeds_unread)) },
+                    leadingIcon = { Icon(Icons.Default.VisibilityOff, contentDescription = null) },
+                    trailingIcon = {
+                        if (unreadOnly) {
+                            Icon(Icons.Default.Check, contentDescription = null)
+                        }
+                    },
+                    onClick = {
+                        onSetUnreadOnly(true)
+                        showReadMenu = false
+                    },
+                )
+                HorizontalDivider()
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.feeds_mark_all_read)) },
+                    leadingIcon = { Icon(Icons.Default.DoneAll, contentDescription = null) },
+                    onClick = {
+                        onMarkAllRead()
+                        showReadMenu = false
+                    },
+                )
+            }
+        }
+
+        Spacer(Modifier.width(8.dp))
+
+        Box {
+            FeedFilterChip(
+                icon = activeSort.icon,
+                label = stringResource(activeSort.labelRes),
+                onClick = { showSortMenu = true },
+            )
+            DropdownMenu(
+                expanded = showSortMenu,
+                onDismissRequest = { showSortMenu = false },
+            ) {
+                sortOptions.forEach { option ->
+                    DropdownMenuItem(
+                        text = { Text(stringResource(option.labelRes)) },
+                        leadingIcon = { Icon(option.icon, contentDescription = null) },
+                        trailingIcon = {
+                            if (option.value == currentSort) {
+                                Icon(Icons.Default.Check, contentDescription = null)
+                            }
+                        },
+                        onClick = {
+                            onSetSort(option.value)
+                            showSortMenu = false
+                        },
+                    )
+                }
+            }
+        }
+    }
+}
+
+/** A single compact filter chip: an icon, a label, and a dropdown chevron. */
+@Composable
+private fun FeedFilterChip(
+    icon: ImageVector,
+    label: String,
+    onClick: () -> Unit,
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .clickable(onClick = onClick)
+            .padding(horizontal = 8.dp, vertical = 4.dp),
+    ) {
+        Icon(
+            icon,
+            contentDescription = null,
+            modifier = Modifier.size(18.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.width(6.dp))
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelLarge,
+        )
+        Icon(
+            Icons.Default.ArrowDropDown,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
 }
 
