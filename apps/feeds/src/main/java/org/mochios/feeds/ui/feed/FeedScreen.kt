@@ -53,7 +53,6 @@ import androidx.compose.material.icons.filled.ImportExport
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Logout
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.MoreVert
@@ -76,7 +75,6 @@ import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -232,20 +230,28 @@ fun FeedScreen(
     // replaced wholesale by background refreshes (the cache→network refresh on
     // open, and websocket-driven refreshes), and relevance / AI / hot sorts
     // re-rank server-side — so the same index can map to a different post after
-    // a refresh. Without anchoring that silently swaps the post under the
-    // reader about a second after it appears. We track the id of the post in
-    // view and, after any posts-list change, restore the pager to that post's
-    // new index. `suppressAnchorRestore` lets a manual refresh opt out (it
-    // intentionally returns to the top).
-    var anchorPostId by remember { mutableStateOf<String?>(null) }
+    // a refresh. Without anchoring that silently swaps the post under the reader
+    // about a second after it appears. To keep them on their post we capture the
+    // list as it was and, after a change, look up where the post they were
+    // viewing moved to — reading the LIVE currentPage against the PREVIOUS list,
+    // not a separately-tracked id. (That id lagged a fresh swipe: a "1 new post"
+    // re-emission landing mid-flip would see the stale id and yank the reader
+    // back to the post they'd just left.) `suppressAnchorRestore` lets a manual
+    // refresh opt out (it intentionally returns to the top).
+    var previousPosts by remember { mutableStateOf(posts) }
     var suppressAnchorRestore by remember { mutableStateOf(false) }
     LaunchedEffect(posts) {
+        val oldPosts = previousPosts
+        previousPosts = posts
         if (suppressAnchorRestore) {
             suppressAnchorRestore = false
             return@LaunchedEffect
         }
-        val id = anchorPostId ?: return@LaunchedEffect
-        val index = posts.indexOfFirst { it.id == id }
+        // The post under the reader right now, taken from the list as it was at
+        // the page they've actually swiped to — so a stale anchor can't fight a
+        // swipe that the currentPage→id sync hasn't caught up with yet.
+        val viewingId = oldPosts.getOrNull(pagerState.currentPage)?.id ?: return@LaunchedEffect
+        val index = posts.indexOfFirst { it.id == viewingId }
         if (index >= 0 && index != pagerState.currentPage) {
             pagerState.scrollToPage(index)
         }
@@ -277,9 +283,6 @@ fun FeedScreen(
             .distinctUntilChanged()
             .collectLatest { page ->
                 val current = posts.getOrNull(page) ?: return@collectLatest
-                // Remember which post the reader has settled on so a background
-                // refresh that reorders the list can keep them on it.
-                anchorPostId = current.id
                 viewModel.onPostBottomViewed(current.id)
                 // Prefetch the lazy og:image for the current page and its
                 // immediate neighbours so the picture is ready when the
@@ -542,20 +545,6 @@ fun FeedScreen(
                 )
             )
         },
-        floatingActionButton = {
-            // Reachable refresh/jump deep in the feed: a scroll-to-top button
-            // appears once a few posts in (pull-to-refresh only works at page 0).
-            if (pagerState.currentPage > 2) {
-                SmallFloatingActionButton(
-                    onClick = { drawerScope.launch { pagerState.animateScrollToPage(0) } }
-                ) {
-                    Icon(
-                        Icons.Default.KeyboardArrowUp,
-                        contentDescription = stringResource(R.string.feeds_scroll_to_top)
-                    )
-                }
-            }
-        }
     ) { paddingValues ->
         PullToRefreshBox(
             isRefreshing = isRefreshing,
