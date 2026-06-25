@@ -93,6 +93,12 @@ class FeedViewModel @Inject constructor(
     private val _isRefreshing = MutableStateFlow(false)
     val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
 
+    // Spinner for the top-bar button, which refreshes only the post in view.
+    // Kept separate from [isRefreshing] so it doesn't drive the pull-to-refresh
+    // indicator.
+    private val _isPostRefreshing = MutableStateFlow(false)
+    val isPostRefreshing: StateFlow<Boolean> = _isPostRefreshing.asStateFlow()
+
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore.asStateFlow()
 
@@ -308,6 +314,41 @@ class FeedViewModel @Inject constructor(
                 _isRefreshing.value = false
             }
         }
+    }
+
+    /**
+     * Re-fetch a single post and patch it in place, leaving the rest of the
+     * list and the reader's position untouched. Backs the top-bar refresh
+     * button, which refreshes only the post currently in view. [postFeedId] is
+     * the post's own feed — it differs per card in the all-feeds aggregate, so
+     * it must come from the post rather than [feedId].
+     */
+    fun refreshPost(postFeedId: String, postId: String) {
+        viewModelScope.launch {
+            _isPostRefreshing.value = true
+            try {
+                val fresh = repository.getPost(postFeedId, postId).post
+                _posts.value = _posts.value.map { existing ->
+                    if (existing.id != postId) existing
+                    else mergeRefreshedPost(existing, fresh)
+                }
+            } catch (_: Exception) {
+                // Silent — best-effort single-post refresh.
+            } finally {
+                _isPostRefreshing.value = false
+            }
+        }
+    }
+
+    // Fold a freshly fetched post onto the visible card, keeping the lazily
+    // loaded og:image when the detail response doesn't carry one (so the
+    // picture doesn't blink out on refresh).
+    private fun mergeRefreshedPost(existing: Post, fresh: Post): Post {
+        val freshRss = fresh.data?.rss ?: return fresh
+        if (freshRss.image.isNotEmpty()) return fresh
+        val existingImage = existing.data?.rss?.image
+        if (existingImage.isNullOrEmpty()) return fresh
+        return fresh.copy(data = fresh.data.copy(rss = freshRss.copy(image = existingImage)))
     }
 
     private val isRelevanceSort: Boolean

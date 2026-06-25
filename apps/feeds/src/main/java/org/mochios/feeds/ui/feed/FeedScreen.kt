@@ -43,6 +43,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
@@ -55,6 +56,7 @@ import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.AccountCircle
@@ -65,8 +67,6 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -74,11 +74,15 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
+import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SmallFloatingActionButton
@@ -89,6 +93,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
@@ -112,6 +117,7 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
@@ -196,6 +202,7 @@ fun FeedScreen(
                     "down" -> interestReduced
                     else -> interestRemoved
                 }
+
                 is InterestFeedback.Failure -> fb.error?.message ?: interestFailed
             }
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
@@ -216,6 +223,7 @@ fun FeedScreen(
     val permissions by viewModel.permissions.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val isRefreshing by viewModel.isRefreshing.collectAsState()
+    val isPostRefreshing by viewModel.isPostRefreshing.collectAsState()
     val isLoadingMore by viewModel.isLoadingMore.collectAsState()
     val hasMore by viewModel.hasMore.collectAsState()
     val error by viewModel.error.collectAsState()
@@ -382,300 +390,414 @@ fun FeedScreen(
             )
         },
     ) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = feedInfo?.name ?: stringResource(R.string.feeds_feed_title_default),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                },
-                // Slightly shorter than the 64dp default to reclaim vertical space.
-                expandedHeight = 52.dp,
-                navigationIcon = {
-                    IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.feeds_title))
-                    }
-                },
-                actions = {
-                    if (permissions.manage) {
-                        IconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
-                            Icon(Icons.Default.Add, contentDescription = stringResource(R.string.feeds_new_post))
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = feedInfo?.name
+                                ?: stringResource(R.string.feeds_feed_title_default),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    },
+                    // Slightly shorter than the 64dp default to reclaim vertical space.
+                    expandedHeight = 52.dp,
+                    navigationIcon = {
+                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                            Icon(
+                                Icons.Default.Menu,
+                                contentDescription = stringResource(R.string.feeds_title)
+                            )
                         }
-                    }
-                    if (permissions.manage) {
-                        Box {
-                            IconButton(onClick = { showOverflowMenu = true }) {
-                                Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
+                    },
+                    actions = {
+                        IconButton(
+                            onClick = {
+                                // Refresh only the post currently in view, patched in
+                                // place so the pager doesn't move. Its feed comes from
+                                // the post itself (cards span feeds in the aggregate).
+                                posts.getOrNull(pagerState.currentPage)?.let { current ->
+                                    val postFeedId = current.feedFingerprint
+                                        .ifEmpty { current.feed }
+                                        .ifEmpty { viewModel.feedId }
+                                    viewModel.refreshPost(postFeedId, current.id)
+                                }
+                            },
+                            enabled = !isPostRefreshing,
+                        ) {
+                            if (isPostRefreshing) {
+                                CircularProgressIndicator(
+                                    modifier = Modifier.size(20.dp),
+                                    strokeWidth = 2.dp,
+                                )
+                            } else {
+                                Icon(
+                                    Icons.Default.Refresh,
+                                    contentDescription = stringResource(R.string.feeds_refresh),
+                                )
                             }
-                            DropdownMenu(
-                                expanded = showOverflowMenu,
-                                onDismissRequest = { showOverflowMenu = false }
-                            ) {
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.feeds_tab_sources)) },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.RssFeed, contentDescription = null)
-                                    },
-                                    onClick = {
-                                        // Pass the source of the post the user is
-                                        // currently on so the Sources list opens
-                                        // scrolled to it.
-                                        onNavigateToSources(
-                                            viewModel.feedId,
-                                            posts.getOrNull(pagerState.currentPage)?.source?.url,
+                        }
+                        if (permissions.manage) {
+                            Box {
+                                IconButton(onClick = { showOverflowMenu = true }) {
+                                    Icon(
+                                        Icons.Default.MoreVert,
+                                        contentDescription = stringResource(MochiR.string.common_more_options)
+                                    )
+                                }
+                                DropdownMenu(
+                                    expanded = showOverflowMenu,
+                                    onDismissRequest = { showOverflowMenu = false }
+                                ) {
+                                    // Edit/delete act on the post currently in view;
+                                    // its feed comes from the post (cards span feeds
+                                    // in the all-feeds aggregate).
+                                    val currentPost = posts.getOrNull(pagerState.currentPage)
+                                    if (currentPost != null) {
+                                        val postFeedId = currentPost.feedFingerprint
+                                            .ifEmpty { currentPost.feed }
+                                            .ifEmpty { viewModel.feedId }
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(MochiR.string.common_edit)) },
+                                            leadingIcon = {
+                                                Icon(Icons.Default.Edit, contentDescription = null)
+                                            },
+                                            onClick = {
+                                                onNavigateToEditPost(postFeedId, currentPost.id)
+                                                showOverflowMenu = false
+                                            }
                                         )
-                                        showOverflowMenu = false
+                                        DropdownMenuItem(
+                                            text = { Text(stringResource(MochiR.string.common_delete)) },
+                                            leadingIcon = {
+                                                Icon(
+                                                    Icons.Default.Delete,
+                                                    contentDescription = null
+                                                )
+                                            },
+                                            onClick = {
+                                                pendingDelete = currentPost
+                                                showOverflowMenu = false
+                                            }
+                                        )
+                                        HorizontalDivider()
                                     }
-                                )
-                                DropdownMenuItem(
-                                    text = { Text(stringResource(R.string.feeds_settings)) },
-                                    leadingIcon = {
-                                        Icon(Icons.Default.Settings, contentDescription = null)
-                                    },
-                                    onClick = {
-                                        onNavigateToSettings(viewModel.feedId)
-                                        showOverflowMenu = false
-                                    }
-                                )
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                        leadingIcon = {
+                                            Icon(Icons.Default.RssFeed, contentDescription = null)
+                                        },
+                                        onClick = {
+                                            // Pass the source of the post the user is
+                                            // currently on so the Sources list opens
+                                            // scrolled to it.
+                                            onNavigateToSources(
+                                                viewModel.feedId,
+                                                posts.getOrNull(pagerState.currentPage)?.source?.url,
+                                            )
+                                            showOverflowMenu = false
+                                        }
+                                    )
+                                    DropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_settings)) },
+                                        leadingIcon = {
+                                            Icon(Icons.Default.Settings, contentDescription = null)
+                                        },
+                                        onClick = {
+                                            onNavigateToSettings(viewModel.feedId)
+                                            showOverflowMenu = false
+                                        }
+                                    )
+                                }
                             }
                         }
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surface
-                )
-            )
-        },
-        floatingActionButton = {
-            // Reachable refresh/jump deep in the feed: a scroll-to-top button
-            // appears once a few posts in (pull-to-refresh only works at page 0).
-            if (pagerState.currentPage > 2) {
-                SmallFloatingActionButton(
-                    onClick = { drawerScope.launch { pagerState.animateScrollToPage(0) } }
-                ) {
-                    Icon(
-                        Icons.Default.KeyboardArrowUp,
-                        contentDescription = stringResource(R.string.feeds_scroll_to_top)
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.surface
                     )
+                )
+            },
+            floatingActionButton = {
+                Column(
+                    horizontalAlignment = Alignment.End,
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                ) {
+                    // Reachable jump deep in the feed: a scroll-to-top button appears
+                    // once a few posts in (pull-to-refresh only works at page 0).
+                    if (pagerState.currentPage > 2) {
+                        SmallFloatingActionButton(
+                            onClick = { drawerScope.launch { pagerState.animateScrollToPage(0) } }
+                        ) {
+                            Icon(
+                                Icons.Default.KeyboardArrowUp,
+                                contentDescription = stringResource(R.string.feeds_scroll_to_top)
+                            )
+                        }
+                    }
+                    // Primary action: create a new post in this feed.
+                    if (permissions.manage) {
+                        FloatingActionButton(
+                            onClick = { onNavigateToCreatePost(viewModel.feedId) }
+                        ) {
+                            Icon(
+                                Icons.Default.Add,
+                                contentDescription = stringResource(R.string.feeds_new_post)
+                            )
+                        }
+                    }
                 }
             }
-        }
-    ) { paddingValues ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(paddingValues)
-        ) {
-            FeedFilterChips(
-                currentSort = currentSort,
-                unreadOnly = unreadOnly,
-                hasAi = hasAi,
-                onSetSort = { sort -> viewModel.setSort(sort) },
-                onSetUnreadOnly = { value -> viewModel.setUnreadOnly(value) },
-                onMarkAllRead = { viewModel.markAllRead { feedListViewModel.refreshSilently() } },
-                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-            )
-            PullToRefreshBox(
-                isRefreshing = isRefreshing,
-                onRefresh = {
-                    // Pull-to-refresh is a deliberate "show me the latest" gesture
-                    // from the top — let the new list settle at the top rather than
-                    // anchor-restoring back to the previously-current post.
-                    suppressAnchorRestore = true
-                    viewModel.refresh()
-                },
+        ) { paddingValues ->
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
+                    .fillMaxSize()
+                    .padding(paddingValues)
             ) {
-            when {
-                isLoading && posts.isEmpty() -> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        CircularProgressIndicator()
-                    }
-                }
-                isNotFound && posts.isEmpty() -> {
-                    NotFoundState(
-                        title = stringResource(R.string.feeds_feed_not_found),
-                        onBack = { drawerScope.launch { drawerState.open() } },
-                    )
-                }
-                error != null && posts.isEmpty() -> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(
-                                text = error!!.userMessage(),
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.error
-                            )
-                            Spacer(modifier = Modifier.height(16.dp))
-                            TextButton(onClick = { viewModel.loadFeed() }) {
-                                Text(stringResource(MochiR.string.common_retry))
-                            }
-                        }
-                    }
-                }
-                else -> {
-                    Column(modifier = Modifier.fillMaxSize()) {
-                        if (posts.isEmpty() && !isLoading) {
+                FeedFilterChips(
+                    currentSort = currentSort,
+                    unreadOnly = unreadOnly,
+                    hasAi = hasAi,
+                    onSetSort = { sort -> viewModel.setSort(sort) },
+                    onSetUnreadOnly = { value -> viewModel.setUnreadOnly(value) },
+                    onMarkAllRead = { viewModel.markAllRead { feedListViewModel.refreshSilently() } },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp)
+                        .padding(bottom = 8.dp)
+                )
+                PullToRefreshBox(
+                    isRefreshing = isRefreshing,
+                    onRefresh = {
+                        // Pull-to-refresh is a deliberate "show me the latest" gesture
+                        // from the top — let the new list settle at the top rather than
+                        // anchor-restoring back to the previously-current post.
+                        suppressAnchorRestore = true
+                        viewModel.refresh()
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                ) {
+                    when {
+                        isLoading && posts.isEmpty() -> {
                             Box(
-                                modifier = Modifier
-                                    .fillMaxSize()
-                                    .padding(48.dp),
+                                modifier = Modifier.fillMaxSize(),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Text(
-                                    text = stringResource(R.string.feeds_no_posts_yet),
-                                    style = MaterialTheme.typography.bodyLarge,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
+                                CircularProgressIndicator()
                             }
-                        } else {
-                            // Magazine-style vertical pager: one post per page.
-                            // The pager itself handles gestures/fling and
-                            // renders the live (interactive) post. A FlipBook
-                            // overlay paints the Flipboard book-fold during a
-                            // transition (it draws nothing at rest, so the live
-                            // page shows through). The fold is hinged at the
-                            // mid-screen crease: the outgoing top half stays
-                            // put while a single leaf turns toward the viewer.
-                            val renderPost: @Composable (Int) -> Unit = { index ->
-                                val post = posts[index]
-                                // Prefer the fingerprint, but fall back to the feed's
-                                // entity id (always present on a post) before the
-                                // "__all__" aggregate sentinel — so react / interest /
-                                // open-post all reach a real entity in the aggregate view.
-                                val routeFeedId = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { viewModel.feedId }
-                                // post.source.url is the RSS feed (XML) URL —
-                                // not the article URL. The article URL lives
-                                // in rss.link. Anything else falls through to
-                                // the standard post detail screen.
-                                val sourceUrl = post.data?.rss?.link?.takeIf { it.isNotEmpty() }
-                                PostCard(
-                                    post = post,
-                                    fallbackFeedId = viewModel.feedId,
-                                    canManage = permissions.manage,
-                                    isSaved = savedIds.contains(post.id),
-                                    onClick = { onNavigateToPost(routeFeedId, post.id, sourceUrl, false) },
-                                    onComments = { onNavigateToPost(routeFeedId, post.id, sourceUrl, true) },
-                                    onReact = { reaction -> viewModel.reactToPost(routeFeedId, post.id, reaction) },
-                                    onToggleSave = { viewModel.toggleSave(post) },
-                                    onEdit = { onNavigateToEditPost(routeFeedId, post.id) },
-                                    onDelete = { pendingDelete = post },
-                                    onAddTag = { addTagTarget = post.id },
-                                    onAdjustInterest = { tag, direction -> viewModel.adjustInterest(routeFeedId, tag, direction) },
-                                )
-                            }
-                            Box(modifier = Modifier.fillMaxSize()) {
-                                VerticalPager(
-                                    state = pagerState,
-                                    modifier = Modifier.fillMaxSize(),
-                                    key = { page -> posts[page].id },
-                                    // Default snap threshold is 50% of page;
-                                    // even 20% still felt like work on a tall
-                                    // phone where the thumb naturally moves
-                                    // 60-80dp. Drop to 8% so any deliberate
-                                    // upward gesture commits to the next post
-                                    // and the fold only rubber-bands back on a
-                                    // clear flick-and-release-back. Velocity-
-                                    // based fling continues to handle flicks.
-                                    //
-                                    // snapAnimationSpec: default spring micro-
-                                    // overshoots near the end and reads as a
-                                    // bounce. A short FastOutSlowIn tween
-                                    // settles cleanly, matching the eased fold.
-                                    flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
-                                        state = pagerState,
-                                        snapPositionalThreshold = 0.08f,
-                                        snapAnimationSpec = androidx.compose.animation.core.tween(
-                                            durationMillis = 220,
-                                            easing = androidx.compose.animation.core.FastOutSlowInEasing,
-                                        ),
-                                    ),
-                                ) { page ->
-                                    renderPost(page)
+                        }
+
+                        isNotFound && posts.isEmpty() -> {
+                            NotFoundState(
+                                title = stringResource(R.string.feeds_feed_not_found),
+                                onBack = { drawerScope.launch { drawerState.open() } },
+                            )
+                        }
+
+                        error != null && posts.isEmpty() -> {
+                            Box(
+                                modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Text(
+                                        text = error!!.userMessage(),
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        color = MaterialTheme.colorScheme.error
+                                    )
+                                    Spacer(modifier = Modifier.height(16.dp))
+                                    TextButton(onClick = { viewModel.loadFeed() }) {
+                                        Text(stringResource(MochiR.string.common_retry))
+                                    }
                                 }
-                                // Drawn after the pager → on top; no pointer
-                                // input of its own, so drags pass through.
-                                FlipBook(
-                                    pagerState = pagerState,
-                                    pageCount = posts.size,
-                                    page = renderPost,
-                                )
-                                NewItemsPill(
-                                    count = newPostsCount,
-                                    label = pluralStringResource(
-                                        R.plurals.feeds_new_posts, newPostsCount, newPostsCount
-                                    ),
-                                    onClick = {
-                                        viewModel.showNewPosts()
-                                        drawerScope.launch { pagerState.animateScrollToPage(0) }
-                                    },
-                                    modifier = Modifier.align(Alignment.TopCenter),
-                                )
+                            }
+                        }
+
+                        else -> {
+                            Column(modifier = Modifier.fillMaxSize()) {
+                                if (posts.isEmpty() && !isLoading) {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxSize()
+                                            .padding(48.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = stringResource(R.string.feeds_no_posts_yet),
+                                            style = MaterialTheme.typography.bodyLarge,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                    }
+                                } else {
+                                    // Magazine-style vertical pager: one post per page.
+                                    // The pager itself handles gestures/fling and
+                                    // renders the live (interactive) post. A FlipBook
+                                    // overlay paints the Flipboard book-fold during a
+                                    // transition (it draws nothing at rest, so the live
+                                    // page shows through). The fold is hinged at the
+                                    // mid-screen crease: the outgoing top half stays
+                                    // put while a single leaf turns toward the viewer.
+                                    val renderPost: @Composable (Int) -> Unit = { index ->
+                                        val post = posts[index]
+                                        // Prefer the fingerprint, but fall back to the feed's
+                                        // entity id (always present on a post) before the
+                                        // "__all__" aggregate sentinel — so react / interest /
+                                        // open-post all reach a real entity in the aggregate view.
+                                        val routeFeedId = post.feedFingerprint.ifEmpty { post.feed }
+                                            .ifEmpty { viewModel.feedId }
+                                        // post.source.url is the RSS feed (XML) URL —
+                                        // not the article URL. The article URL lives
+                                        // in rss.link. Anything else falls through to
+                                        // the standard post detail screen.
+                                        val sourceUrl =
+                                            post.data?.rss?.link?.takeIf { it.isNotEmpty() }
+                                        PostCard(
+                                            post = post,
+                                            fallbackFeedId = viewModel.feedId,
+                                            isSaved = savedIds.contains(post.id),
+                                            onClick = {
+                                                onNavigateToPost(
+                                                    routeFeedId,
+                                                    post.id,
+                                                    sourceUrl,
+                                                    false
+                                                )
+                                            },
+                                            onComments = {
+                                                onNavigateToPost(
+                                                    routeFeedId,
+                                                    post.id,
+                                                    sourceUrl,
+                                                    true
+                                                )
+                                            },
+                                            onReact = { reaction ->
+                                                viewModel.reactToPost(
+                                                    routeFeedId,
+                                                    post.id,
+                                                    reaction
+                                                )
+                                            },
+                                            onToggleSave = { viewModel.toggleSave(post) },
+                                            onAddTag = { addTagTarget = post.id },
+                                            onAdjustInterest = { tag, direction ->
+                                                viewModel.adjustInterest(
+                                                    routeFeedId,
+                                                    tag,
+                                                    direction
+                                                )
+                                            },
+                                        )
+                                    }
+                                    Box(modifier = Modifier.fillMaxSize()) {
+                                        VerticalPager(
+                                            state = pagerState,
+                                            modifier = Modifier.fillMaxSize(),
+                                            key = { page -> posts[page].id },
+                                            // Default snap threshold is 50% of page;
+                                            // even 20% still felt like work on a tall
+                                            // phone where the thumb naturally moves
+                                            // 60-80dp. Drop to 8% so any deliberate
+                                            // upward gesture commits to the next post
+                                            // and the fold only rubber-bands back on a
+                                            // clear flick-and-release-back. Velocity-
+                                            // based fling continues to handle flicks.
+                                            //
+                                            // snapAnimationSpec: default spring micro-
+                                            // overshoots near the end and reads as a
+                                            // bounce. A short FastOutSlowIn tween
+                                            // settles cleanly, matching the eased fold.
+                                            flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
+                                                state = pagerState,
+                                                snapPositionalThreshold = 0.08f,
+                                                snapAnimationSpec = androidx.compose.animation.core.tween(
+                                                    durationMillis = 220,
+                                                    easing = androidx.compose.animation.core.FastOutSlowInEasing,
+                                                ),
+                                            ),
+                                        ) { page ->
+                                            renderPost(page)
+                                        }
+                                        // Drawn after the pager → on top; no pointer
+                                        // input of its own, so drags pass through.
+                                        FlipBook(
+                                            pagerState = pagerState,
+                                            pageCount = posts.size,
+                                            page = renderPost,
+                                        )
+                                        NewItemsPill(
+                                            count = newPostsCount,
+                                            label = pluralStringResource(
+                                                R.plurals.feeds_new_posts,
+                                                newPostsCount,
+                                                newPostsCount
+                                            ),
+                                            onClick = {
+                                                viewModel.showNewPosts()
+                                                drawerScope.launch {
+                                                    pagerState.animateScrollToPage(
+                                                        0
+                                                    )
+                                                }
+                                            },
+                                            modifier = Modifier.align(Alignment.TopCenter),
+                                        )
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
-            }
         }
-    }
 
-    if (showSuggestedInterests) {
-        val suggestions by viewModel.suggestedInterests.collectAsState()
-        InterestSuggestionsDialog(
-            suggestions = suggestions,
-            onAdd = { viewModel.addInterest(it) },
-            onDismissOne = { viewModel.dismissInterest(it) },
-            onDismiss = { showSuggestedInterests = false },
-        )
-    }
+        if (showSuggestedInterests) {
+            val suggestions by viewModel.suggestedInterests.collectAsState()
+            InterestSuggestionsDialog(
+                suggestions = suggestions,
+                onAdd = { viewModel.addInterest(it) },
+                onDismissOne = { viewModel.dismissInterest(it) },
+                onDismiss = { showSuggestedInterests = false },
+            )
+        }
 
-    pendingDelete?.let { target ->
-        AlertDialog(
-            onDismissRequest = { pendingDelete = null },
-            title = { Text(stringResource(R.string.feeds_delete_post)) },
-            text = { Text(stringResource(R.string.feeds_delete_post_confirm)) },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        viewModel.deletePost(target.id)
-                        pendingDelete = null
+        pendingDelete?.let { target ->
+            AlertDialog(
+                onDismissRequest = { pendingDelete = null },
+                title = { Text(stringResource(R.string.feeds_delete_post)) },
+                text = { Text(stringResource(R.string.feeds_delete_post_confirm)) },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            viewModel.deletePost(target.id)
+                            pendingDelete = null
+                        }
+                    ) {
+                        Text(
+                            stringResource(MochiR.string.common_delete),
+                            color = MaterialTheme.colorScheme.error
+                        )
                     }
-                ) {
-                    Text(
-                        stringResource(MochiR.string.common_delete),
-                        color = MaterialTheme.colorScheme.error
-                    )
+                },
+                dismissButton = {
+                    TextButton(onClick = { pendingDelete = null }) {
+                        Text(stringResource(MochiR.string.common_cancel))
+                    }
                 }
-            },
-            dismissButton = {
-                TextButton(onClick = { pendingDelete = null }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            }
-        )
-    }
+            )
+        }
 
-    addTagTarget?.let { postId ->
-        AddTagDialog(
-            onDismiss = { addTagTarget = null },
-            onAdd = { label, qid ->
-                viewModel.addTag(postId, label, qid)
-                addTagTarget = null
-            }
-        )
-    }
+        addTagTarget?.let { postId ->
+            AddTagDialog(
+                onDismiss = { addTagTarget = null },
+                onAdd = { label, qid ->
+                    viewModel.addTag(postId, label, qid)
+                    addTagTarget = null
+                }
+            )
+        }
     }
 }
 
@@ -683,14 +805,11 @@ fun FeedScreen(
 private fun PostCard(
     post: Post,
     fallbackFeedId: String,
-    canManage: Boolean,
     isSaved: Boolean,
     onClick: () -> Unit,
     onComments: () -> Unit,
     onReact: (String) -> Unit,
     onToggleSave: () -> Unit,
-    onEdit: () -> Unit,
-    onDelete: () -> Unit,
     onAddTag: () -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
 ) {
@@ -725,255 +844,267 @@ private fun PostCard(
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surface)
     ) {
-      if (heroUrl != null) {
-          // Square corners; height follows the image's ratio up to a half-screen
-          // cap. ContentScale.Fit means a landscape image fills the width
-          // edge-to-edge, while a very tall image (e.g. a web comic) is shown
-          // whole, contained within the cap (with side margins), rather than
-          // cropped top and bottom. Tap opens the full-screen lightbox.
-          val maxHeroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
-          AsyncImage(
-              model = heroUrl,
-              contentDescription = stringResource(R.string.feeds_image_preview),
-              modifier = Modifier
-                  .fillMaxWidth()
-                  .heightIn(max = maxHeroHeight)
-                  .clickable {
-                      lightboxState = if (heroFromAttachment) {
-                          attachmentImageUrls to 0
-                      } else {
-                          listOf(heroUrl) to 0
-                      }
-                  },
-              contentScale = ContentScale.Fit,
-          )
-      }
-      // One post = one screen. The body fills the space between the header and
-      // the bottom of the page and ellipsises the overflow, so it "fills the
-      // screen" instead of overflowing into a scroll. The verticalScroll is kept
-      // ONLY for its nested-scroll handoff to the pager — that's what makes the
-      // flip clean (proven by the scroll-then-flip version). The inner column is
-      // pinned to the viewport height, so there's nothing to actually scroll: a
-      // swipe forwards to the pager immediately and flips.
-      BoxWithConstraints(
-          modifier = Modifier
-              .weight(1f)
-              .fillMaxWidth()
-      ) {
-        val viewportHeight = maxHeight
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .verticalScroll(rememberScrollState())
-                .clickable(onClick = onClick)
-        ) {
-          Column(
-              modifier = Modifier
-                  .height(viewportHeight)
-                  .fillMaxWidth()
-                  .padding(
-                      start = 16.dp,
-                      end = 4.dp,
-                      top = if (heroUrl != null) 12.dp else 16.dp,
-                  )
-          ) {
-            // Title first (RSS posts only), so the byline sits beneath it.
-            // Hoisted out of PostBody — which renders the same line via
-            // PostTitle — so the source/time row can slot in between.
-            val displayTitle = rssDisplayTitle(post)
-            if (displayTitle != null) {
-                PostTitle(
-                    title = displayTitle,
-                    fontSize = 20.sp,
-                    truncated = true,
-                    onClick = onClick,
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-            }
-
-            // Byline: source/feed name + timestamp, below the title.
-            // formatTimestamp obeys every timestamp preference (relative /
-            // absolute / auto, and the date+time+timezone format).
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                val defaultAuthor = stringResource(R.string.feeds_post_default_author)
-                val authorName = post.source?.name?.takeIf { it.isNotEmpty() }
-                    ?: post.feedName.takeIf { it.isNotEmpty() }
-                    ?: defaultAuthor
-                Text(
-                    text = authorName,
-                    style = MaterialTheme.typography.labelMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = LocalFormat.current.formatTimestamp(post.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            // Action row (react, tag, comment, save, edit/delete) directly
-            // below the byline. Moved up from the former bottom bar, so all
-            // post controls sit in the header block; it now flips and scrolls
-            // with the card rather than staying pinned at the screen bottom.
-            Spacer(modifier = Modifier.height(8.dp))
-            PostActionBar(
-                post = post,
-                canManage = canManage,
-                isSaved = isSaved,
-                onReact = onReact,
-                onComments = onComments,
-                onToggleSave = onToggleSave,
-                onEdit = onEdit,
-                onDelete = onDelete,
-                onAddTag = onAddTag,
-                onAdjustInterest = onAdjustInterest,
-            )
-
-            // Memory badge
-            post.data?.memory?.let { memory ->
-                if (memory.yearsAgo > 0) {
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = pluralStringResource(R.plurals.feeds_memory_years_ago_today, memory.yearsAgo, memory.yearsAgo),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.primary,
-                        fontWeight = FontWeight.Medium
-                    )
-                }
-            }
-
-            // Location info
-            post.data?.checkin?.let { checkin ->
-                if (checkin.name.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = stringResource(R.string.feeds_location_at, checkin.name),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-            post.data?.travelling?.let { travelling ->
-                val origin = travelling.origin?.name ?: ""
-                val destination = travelling.destination?.name ?: ""
-                if (origin.isNotEmpty() || destination.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(4.dp))
-                    val text = when {
-                        origin.isNotEmpty() && destination.isNotEmpty() ->
-                            stringResource(R.string.feeds_travel_arrow, origin, destination)
-                        origin.isNotEmpty() ->
-                            stringResource(R.string.feeds_travel_from, origin)
-                        else ->
-                            stringResource(R.string.feeds_travel_to, destination)
-                    }
-                    Text(
-                        text = text,
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-
-            // Post body — fillHeight gives it the weighted remainder of the
-            // viewport-height column, so it fills the space under the header and
-            // ellipsises the overflow ("enough to fill the screen", no scroll
-            // through the whole article). passThroughTouches lets a swipe reach
-            // the page's (zero-range) verticalScroll, which forwards to the
-            // pager and flips immediately; taps open detail via the card's
-            // clickable. For RSS posts the first line is the article title —
-            // bolded for scannability.
-            if (post.body.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(8.dp))
-                PostBody(
-                    post = post,
-                    fillHeight = true,
-                    passThroughTouches = true,
-                    // Title is rendered above the byline, not inside the body.
-                    includeTitle = false,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f),
-                    onClick = onClick
-                )
-            }
-
-            // Remaining attachment images (the first is the hero on top).
-            // Indices are kept aligned to the full list so the lightbox still
-            // spans every image.
-            val gridStartIndex = if (heroFromAttachment) 1 else 0
-            val gridImages = attachmentImages.drop(gridStartIndex)
-            if (gridImages.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(8.dp))
-                MediaGrid(
-                    urls = attachmentImageUrls.drop(gridStartIndex),
-                    thumbnailUrls = gridImages.map { att ->
-                        att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
+        if (heroUrl != null) {
+            // Square corners; height follows the image's ratio up to a half-screen
+            // cap. ContentScale.Fit means a landscape image fills the width
+            // edge-to-edge, while a very tall image (e.g. a web comic) is shown
+            // whole, contained within the cap (with side margins), rather than
+            // cropped top and bottom. Tap opens the full-screen lightbox.
+            val maxHeroHeight = (LocalConfiguration.current.screenHeightDp / 2).dp
+            AsyncImage(
+                model = heroUrl,
+                contentDescription = stringResource(R.string.feeds_image_preview),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .heightIn(max = maxHeroHeight)
+                    .clickable {
+                        lightboxState = if (heroFromAttachment) {
+                            attachmentImageUrls to 0
+                        } else {
+                            listOf(heroUrl) to 0
+                        }
                     },
-                    contentDescriptions = gridImages.map { it.name },
-                    onClick = { index -> lightboxState = attachmentImageUrls to (index + gridStartIndex) }
-                )
-            }
-            if (otherAttachments.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = pluralStringResource(R.plurals.feeds_attachment_count, otherAttachments.size, otherAttachments.size),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.primary
-                )
-            }
-
-            // RSS preview image — only when it isn't already the hero on top.
-            // Tapping opens the lightbox (web parity).
-            if (rssImageUrl != null && rssImageUrl != heroUrl) {
-                Spacer(modifier = Modifier.height(8.dp))
-                AsyncImage(
-                    model = rssImageUrl,
-                    contentDescription = stringResource(R.string.feeds_image_preview),
+                contentScale = ContentScale.Fit,
+            )
+        }
+        // One post fills at least one screen. A short post stays screen-filling
+        // (the inner column has a viewport-height floor); a long post grows past
+        // it and the verticalScroll lets the reader scroll through. When the
+        // scroll reaches the bottom, the leftover drag hands off to the pager and
+        // flips to the next post.
+        BoxWithConstraints(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+        ) {
+            val viewportHeight = maxHeight
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+                    .clickable(onClick = onClick)
+            ) {
+                Column(
                     modifier = Modifier
+                        .heightIn(min = viewportHeight)
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(8.dp))
-                        .clickable { lightboxState = listOf(rssImageUrl) to 0 },
-                    contentScale = ContentScale.Fit
-                )
-            }
+                        .padding(
+                            start = 16.dp,
+                            end = 4.dp,
+                            top = if (heroUrl != null) 12.dp else 16.dp,
+                        )
+                ) {
+                    // Title first (RSS posts only), so the byline sits beneath it.
+                    // Hoisted out of PostBody — which renders the same line via
+                    // PostTitle — so the source/time row can slot in between.
+                    val displayTitle = rssDisplayTitle(post)
+                    if (displayTitle != null) {
+                        PostTitle(
+                            title = displayTitle,
+                            fontSize = 20.sp,
+                            truncated = true,
+                            onClick = onClick,
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                    }
 
-
-            // Inline comments preview (top-level only, newest first)
-            if (post.comments.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(8.dp))
-                val previewLimit = 3
-                val previewed = post.comments.take(previewLimit)
-                val remaining = post.comments.size - previewed.size
-                val anonymous = stringResource(R.string.feeds_anonymous)
-                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    for (comment in previewed) {
-                        CommentPreviewLine(
-                            comment = comment,
-                            anonymous = anonymous
+                    // Byline: source/feed name + timestamp, below the title.
+                    // formatTimestamp obeys every timestamp preference (relative /
+                    // absolute / auto, and the date+time+timezone format).
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        val defaultAuthor = stringResource(R.string.feeds_post_default_author)
+                        val authorName = post.source?.name?.takeIf { it.isNotEmpty() }
+                            ?: post.feedName.takeIf { it.isNotEmpty() }
+                            ?: defaultAuthor
+                        Text(
+                            text = authorName,
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.weight(1f),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = LocalFormat.current.formatTimestamp(post.created),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-                    if (remaining > 0) {
-                        Text(
-                            text = pluralStringResource(R.plurals.feeds_view_more_comments, remaining, remaining),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.primary,
-                            fontWeight = FontWeight.Medium,
-                            modifier = Modifier.clickable(onClick = onComments)
+
+                    // Action row (react, tag, comment, save, edit/delete) directly
+                    // below the byline. Moved up from the former bottom bar, so all
+                    // post controls sit in the header block; it now flips and scrolls
+                    // with the card rather than staying pinned at the screen bottom.
+                    Spacer(modifier = Modifier.height(8.dp))
+                    PostActionBar(
+                        post = post,
+                        isSaved = isSaved,
+                        onReact = onReact,
+                        onComments = onComments,
+                        onToggleSave = onToggleSave,
+                        onAddTag = onAddTag,
+                        onAdjustInterest = onAdjustInterest,
+                    )
+
+                    // Memory badge
+                    post.data?.memory?.let { memory ->
+                        if (memory.yearsAgo > 0) {
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = pluralStringResource(
+                                    R.plurals.feeds_memory_years_ago_today,
+                                    memory.yearsAgo,
+                                    memory.yearsAgo
+                                ),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.primary,
+                                fontWeight = FontWeight.Medium
+                            )
+                        }
+                    }
+
+                    // Location info
+                    post.data?.checkin?.let { checkin ->
+                        if (checkin.name.isNotEmpty()) {
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = stringResource(R.string.feeds_location_at, checkin.name),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                    post.data?.travelling?.let { travelling ->
+                        val origin = travelling.origin?.name ?: ""
+                        val destination = travelling.destination?.name ?: ""
+                        if (origin.isNotEmpty() || destination.isNotEmpty()) {
+                            Spacer(modifier = Modifier.height(4.dp))
+                            val text = when {
+                                origin.isNotEmpty() && destination.isNotEmpty() ->
+                                    stringResource(R.string.feeds_travel_arrow, origin, destination)
+
+                                origin.isNotEmpty() ->
+                                    stringResource(R.string.feeds_travel_from, origin)
+
+                                else ->
+                                    stringResource(R.string.feeds_travel_to, destination)
+                            }
+                            Text(
+                                text = text,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+
+                    // Post body — rendered at its full height so a long article scrolls
+                    // within the page (the column's viewport-height floor keeps short
+                    // posts screen-filling). passThroughTouches stays ON: the body's
+                    // TextView must forward vertical drags to the page's verticalScroll
+                    // (which scrolls the article) instead of consuming them — otherwise
+                    // a drag over the text is swallowed and the page can neither scroll
+                    // nor flip. Once the scroll bottoms out the leftover drag hands off
+                    // to the pager and flips. Taps still open detail via the card's
+                    // clickable. For RSS posts the first line is the article title —
+                    // bolded for scannability.
+                    if (post.body.isNotEmpty()) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        PostBody(
+                            post = post,
+                            fillHeight = false,
+                            passThroughTouches = true,
+                            // Title is rendered above the byline, not inside the body.
+                            includeTitle = false,
+                            modifier = Modifier.fillMaxWidth(),
+                            onClick = onClick
                         )
+                    }
+
+                    // Remaining attachment images (the first is the hero on top).
+                    // Indices are kept aligned to the full list so the lightbox still
+                    // spans every image.
+                    val gridStartIndex = if (heroFromAttachment) 1 else 0
+                    val gridImages = attachmentImages.drop(gridStartIndex)
+                    if (gridImages.isNotEmpty()) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        MediaGrid(
+                            urls = attachmentImageUrls.drop(gridStartIndex),
+                            thumbnailUrls = gridImages.map { att ->
+                                att.thumbnailUrl
+                                    ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
+                            },
+                            contentDescriptions = gridImages.map { it.name },
+                            onClick = { index ->
+                                lightboxState = attachmentImageUrls to (index + gridStartIndex)
+                            }
+                        )
+                    }
+                    if (otherAttachments.isNotEmpty()) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = pluralStringResource(
+                                R.plurals.feeds_attachment_count,
+                                otherAttachments.size,
+                                otherAttachments.size
+                            ),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+
+                    // RSS preview image — only when it isn't already the hero on top.
+                    // Tapping opens the lightbox (web parity).
+                    if (rssImageUrl != null && rssImageUrl != heroUrl) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        AsyncImage(
+                            model = rssImageUrl,
+                            contentDescription = stringResource(R.string.feeds_image_preview),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(8.dp))
+                                .clickable { lightboxState = listOf(rssImageUrl) to 0 },
+                            contentScale = ContentScale.Fit
+                        )
+                    }
+
+
+                    // Inline comments preview (top-level only, newest first)
+                    if (post.comments.isNotEmpty()) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        val previewLimit = 3
+                        val previewed = post.comments.take(previewLimit)
+                        val remaining = post.comments.size - previewed.size
+                        val anonymous = stringResource(R.string.feeds_anonymous)
+                        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                            for (comment in previewed) {
+                                CommentPreviewLine(
+                                    comment = comment,
+                                    anonymous = anonymous
+                                )
+                            }
+                            if (remaining > 0) {
+                                Text(
+                                    text = pluralStringResource(
+                                        R.plurals.feeds_view_more_comments,
+                                        remaining,
+                                        remaining
+                                    ),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.primary,
+                                    fontWeight = FontWeight.Medium,
+                                    modifier = Modifier.clickable(onClick = onComments)
+                                )
+                            }
+                        }
                     }
                 }
             }
-          }
         }
-      }
     }
 
     lightboxState?.let { (urls, index) ->
@@ -992,13 +1123,10 @@ private fun PostCard(
 @Composable
 private fun PostActionBar(
     post: Post,
-    canManage: Boolean,
     isSaved: Boolean,
     onReact: (String) -> Unit,
     onComments: () -> Unit,
     onToggleSave: () -> Unit,
-    onEdit: () -> Unit,
-    onDelete: () -> Unit,
     onAddTag: () -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
 ) {
@@ -1013,50 +1141,56 @@ private fun PostActionBar(
             onReact = onReact,
             onRemoveReaction = { onReact(post.myReaction) },
             currentReaction = currentReactionType(post.myReaction),
-            modifier = Modifier.weight(1f)
         )
+        // The reaction add button is a filled circle, so its padding sits inside
+        // the background; this spacer makes the gap to the tag match the gaps
+        // between the borderless icons (≈16dp everywhere).
+        Spacer(modifier = Modifier.width(8.dp))
         PostTagsButton(
             tags = post.tags,
             onAddTag = onAddTag,
             onAdjustInterest = onAdjustInterest,
+            horizontalPadding = 8.dp,
         )
-        IconButton(onClick = onComments, modifier = Modifier.size(32.dp)) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .clickable(onClick = onComments)
+                .padding(horizontal = 8.dp, vertical = 4.dp)
+        ) {
+            val hasComments = post.comments.isNotEmpty()
+            val commentColor = MaterialTheme.colorScheme.onSurfaceVariant
             Icon(
-                Icons.Default.ChatBubbleOutline,
+                if (hasComments) Icons.Filled.ChatBubble else Icons.Default.ChatBubbleOutline,
                 contentDescription = stringResource(R.string.feeds_comments),
                 modifier = Modifier.size(18.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                tint = commentColor
             )
-        }
-        IconButton(onClick = onToggleSave, modifier = Modifier.size(32.dp)) {
-            Icon(
-                if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
-                contentDescription = stringResource(
-                    if (isSaved) R.string.feeds_saved_remove else R.string.feeds_saved_save
-                ),
-                modifier = Modifier.size(18.dp),
-                tint = if (isSaved) MaterialTheme.colorScheme.primary
-                else MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-        if (canManage) {
-            IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
-                Icon(
-                    Icons.Default.Edit,
-                    contentDescription = stringResource(MochiR.string.common_edit),
-                    modifier = Modifier.size(18.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
-                Icon(
-                    Icons.Default.Delete,
-                    contentDescription = stringResource(MochiR.string.common_delete),
-                    modifier = Modifier.size(18.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+            if (hasComments) {
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(
+                    text = "${post.comments.size}",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = commentColor
                 )
             }
         }
+        Icon(
+            if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
+            contentDescription = stringResource(
+                if (isSaved) R.string.feeds_saved_remove else R.string.feeds_saved_save
+            ),
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .clickable(onClick = onToggleSave)
+                .padding(horizontal = 8.dp, vertical = 4.dp)
+                .size(18.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        // Flexible space trails the action group, keeping reaction + tag +
+        // comment + save left-aligned and adjacent rather than spread apart.
+        Spacer(modifier = Modifier.weight(1f))
     }
 }
 
@@ -1119,7 +1253,7 @@ private fun InterestSuggestionsDialog(
     onDismissOne: (InterestSuggestion) -> Unit,
     onDismiss: () -> Unit,
 ) {
-    androidx.compose.material3.AlertDialog(
+    AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.feeds_suggested_interests)) },
         text = {
@@ -1127,8 +1261,10 @@ private fun InterestSuggestionsDialog(
                 Text(stringResource(R.string.feeds_suggested_interests_empty))
             } else {
                 LazyColumn(
-                    modifier = Modifier.fillMaxWidth().height(300.dp),
-                    verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(4.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(300.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
                     items(suggestions, key = { it.qid }) { s ->
                         Row(
@@ -1137,11 +1273,14 @@ private fun InterestSuggestionsDialog(
                                 .padding(vertical = 4.dp),
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
-                            androidx.compose.foundation.layout.Column(modifier = Modifier.weight(1f)) {
+                            Column(modifier = Modifier.weight(1f)) {
                                 Text(s.label, style = MaterialTheme.typography.bodyMedium)
                                 if (s.count > 0) {
                                     Text(
-                                        stringResource(R.string.feeds_suggested_interests_count, s.count),
+                                        stringResource(
+                                            R.string.feeds_suggested_interests_count,
+                                            s.count
+                                        ),
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
@@ -1175,10 +1314,10 @@ private data class FeedSortOption(val value: String, val labelRes: Int, val icon
  * ([hasAi]); it then applies to every feed.
  */
 private fun feedSortOptions(hasAi: Boolean): List<FeedSortOption> = buildList {
-    add(FeedSortOption("interests", R.string.feeds_sort_interests, Icons.Default.Star))
     if (hasAi) {
         add(FeedSortOption("ai", R.string.feeds_sort_ai, Icons.Default.AutoAwesome))
     }
+    add(FeedSortOption("interests", R.string.feeds_sort_interests, Icons.Default.Star))
     add(FeedSortOption("new", R.string.feeds_sort_new, Icons.Default.Schedule))
     add(FeedSortOption("hot", R.string.feeds_sort_hot, Icons.Default.LocalFireDepartment))
     add(FeedSortOption("top", R.string.feeds_sort_top, Icons.Default.EmojiEvents))
@@ -1206,6 +1345,7 @@ private fun FeedFilterChips(
 
     Row(
         modifier = modifier,
+        horizontalArrangement = Arrangement.End,
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Box {
@@ -1290,29 +1430,39 @@ private fun FeedFilterChips(
     }
 }
 
-/** A single compact filter chip: an icon, a label, and a dropdown chevron. */
+/**
+ * A single compact filter chip: an icon, a label, and a dropdown chevron.
+ * Styled as a Material [FilterChip] (matching the market filters). Always shown
+ * selected — each chip represents an active filter dimension rather than an
+ * on/off toggle, so every option (e.g. All vs Unread) renders the same way.
+ */
 @Composable
 private fun FeedFilterChip(
     icon: ImageVector,
     label: String,
     onClick: () -> Unit,
 ) {
-    AssistChip(
-        onClick = onClick,
-        label = { Text(label) },
-        leadingIcon = {
-            Icon(
-                icon,
-                contentDescription = null,
-                modifier = Modifier.size(AssistChipDefaults.IconSize),
-            )
-        },
-        trailingIcon = {
-            Icon(
-                Icons.Default.ArrowDropDown,
-                contentDescription = null,
-            )
-        },
-    )
+    // Drop the 48dp minimum touch target so the chip sits at its 32dp height
+    // instead of reserving extra space above and below it.
+    CompositionLocalProvider(LocalMinimumInteractiveComponentSize provides Dp.Unspecified) {
+        FilterChip(
+            selected = true,
+            onClick = onClick,
+            label = { Text(label) },
+            leadingIcon = {
+                Icon(
+                    icon,
+                    contentDescription = null,
+                    modifier = Modifier.size(FilterChipDefaults.IconSize),
+                )
+            },
+            trailingIcon = {
+                Icon(
+                    Icons.Default.ArrowDropDown,
+                    contentDescription = null,
+                )
+            },
+        )
+    }
 }
 
