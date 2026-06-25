@@ -45,13 +45,24 @@ class ClickableLinkTextView @JvmOverloads constructor(
     var passThroughTouches = false
 
     /**
-     * When true, the visible line count is capped to whatever fits the view's
-     * own bounded height and the last visible line is ellipsised. The feeds
-     * magazine page gives the body a weighted slot sized to the free space, so
-     * the body "fills the screen" and truncates with "…" instead of overflowing
-     * into a scroll. Leave false for normal maxLines-driven behaviour.
+     * When true, the text is truncated to whatever fits the view's own bounded
+     * height with a literal "…" appended. The feeds magazine page gives the body
+     * a weighted slot sized to the free space, so the body "fills the screen" and
+     * ends in an ellipsis instead of overflowing into a scroll. We truncate the
+     * text ourselves rather than using maxLines + `ellipsize = END`, because the
+     * platform end-ellipsis does not render on Markwon `Spanned` content (it
+     * silently clips with no "…"). Set [fullText] alongside this so the
+     * un-truncated source is available to re-truncate against on each measure.
+     * Leave false for normal maxLines-driven behaviour.
      */
     var clampToHeight = false
+
+    /**
+     * The complete, un-truncated text to clamp from when [clampToHeight] is set.
+     * Kept separate from the view's (possibly already-truncated) `text` so the
+     * truncation is always computed from the full content and stays stable.
+     */
+    var fullText: CharSequence? = null
 
     private var downX = 0f
     private var downY = 0f
@@ -61,6 +72,7 @@ class ClickableLinkTextView @JvmOverloads constructor(
     private var longPressFired = false
     private val touchSlop = ViewConfiguration.get(context).scaledTouchSlop
     private val longPressTimeout = ViewConfiguration.getLongPressTimeout().toLong()
+    private val ELLIPSIS = "…"
 
     private val longPressRunnable = Runnable {
         imageAlt?.let { alt ->
@@ -70,7 +82,8 @@ class ClickableLinkTextView @JvmOverloads constructor(
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        if (clampToHeight) {
+        val source = fullText
+        if (clampToHeight && !source.isNullOrEmpty()) {
             val heightMode = MeasureSpec.getMode(heightMeasureSpec)
             // Only meaningful when the parent bounds our height (EXACTLY from a
             // weighted slot, or AT_MOST). Unbounded → nothing to fit against.
@@ -79,28 +92,52 @@ class ClickableLinkTextView @JvmOverloads constructor(
                     compoundPaddingTop - compoundPaddingBottom
                 val width = MeasureSpec.getSize(widthMeasureSpec) -
                     compoundPaddingLeft - compoundPaddingRight
-                val content = text
-                if (available > 0 && width > 0 && !content.isNullOrEmpty()) {
-                    // Lay the full (uncapped) text out in a throwaway layout so
-                    // the target line count is derived independently of the
-                    // view's current maxLines — stable across measure passes,
-                    // no feedback loop.
-                    val full = StaticLayout.Builder
-                        .obtain(content, 0, content.length, paint, width)
-                        .setLineSpacing(lineSpacingExtra, lineSpacingMultiplier)
-                        .setIncludePad(includeFontPadding)
-                        .build()
-                    var fit = 0
-                    while (fit < full.lineCount && full.getLineBottom(fit) <= available) fit++
-                    val target = if (fit < full.lineCount) fit.coerceAtLeast(1) else Int.MAX_VALUE
-                    if (maxLines != target) {
-                        maxLines = target
-                        ellipsize = if (target == Int.MAX_VALUE) null else TextUtils.TruncateAt.END
+                if (available > 0 && width > 0) {
+                    val clamped = truncateToHeight(source, width, available)
+                    // Guard against re-truncating our own output each pass (which
+                    // would loop): only swap the text when it actually changes.
+                    if (text?.toString() != clamped.toString()) {
+                        text = clamped
                     }
                 }
             }
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
+
+    private fun staticLayout(text: CharSequence, width: Int): StaticLayout =
+        StaticLayout.Builder
+            .obtain(text, 0, text.length, paint, width)
+            .setLineSpacing(lineSpacingExtra, lineSpacingMultiplier)
+            .setIncludePad(includeFontPadding)
+            .build()
+
+    /**
+     * Return [source] truncated to fit [available] px tall at [width], ending in
+     * a literal ellipsis when it overflows (or [source] unchanged when it fits).
+     * Truncating the text ourselves works around `ellipsize = END` not drawing on
+     * Markwon `Spanned` content. `subSequence` on a Spanned keeps the spans, so
+     * formatting up to the cut survives; the candidate is re-measured so the
+     * appended "…" itself is guaranteed to fit.
+     */
+    private fun truncateToHeight(source: CharSequence, width: Int, available: Int): CharSequence {
+        val full = staticLayout(source, width)
+        if (full.height <= available) return source
+        var fit = 0
+        while (fit < full.lineCount && full.getLineBottom(fit) <= available) fit++
+        if (fit <= 0) fit = 1
+        var cut = full.getLineEnd(fit - 1)
+        while (cut > 0 && source[cut - 1].isWhitespace()) cut--
+        // Drop a word at a time until "<text>…" fits the available height.
+        while (cut > 0) {
+            val candidate = TextUtils.concat(source.subSequence(0, cut), ELLIPSIS)
+            if (staticLayout(candidate, width).height <= available) break
+            var previous = cut
+            while (previous > 0 && !source[previous - 1].isWhitespace()) previous--
+            while (previous > 0 && source[previous - 1].isWhitespace()) previous--
+            cut = if (previous < cut) previous else cut - 1
+        }
+        return TextUtils.concat(source.subSequence(0, cut.coerceAtLeast(0)), ELLIPSIS)
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {

@@ -18,6 +18,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okio.appendingSink
 import okio.buffer
 import okio.sink
 import org.json.JSONObject
@@ -138,25 +139,32 @@ class UpdateChecker(
             // accumulate APKs from every release the user ever skipped.
             purgeStale(ctx, keep = latest)
 
+            // Resumable: each attempt continues from the partial file via a
+            // Range request rather than restarting, and the partial is KEPT on
+            // failure — so a connection that drops every few MB accumulates
+            // progress across attempts (and, because the file survives between
+            // checkNow calls, across daily polls / repeat button presses) until
+            // it completes, instead of forever re-downloading from zero. A
+            // newer version landing clears the old partial via purgeStale above.
             var staged = false
             for (attempt in 1..DOWNLOAD_ATTEMPTS) {
                 try {
-                    download(target)
-                    if (target.exists() && target.length() > 0L) {
+                    if (download(target)) {
                         staged = true
                         break
                     }
-                    Log.w(TAG, "APK download produced empty file (attempt $attempt/$DOWNLOAD_ATTEMPTS)")
+                    Log.i(TAG, "APK incomplete at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS)")
                 } catch (e: Exception) {
-                    Log.i(TAG, "APK download failed (attempt $attempt/$DOWNLOAD_ATTEMPTS): ${e.message}")
+                    Log.i(TAG, "APK download dropped at ${target.length()} bytes (attempt $attempt/$DOWNLOAD_ATTEMPTS): ${e.message}")
                 }
-                target.delete()
+                // Keep the partial — the next attempt resumes from it.
                 if (attempt < DOWNLOAD_ATTEMPTS) {
                     // Linear backoff: 2s, then 4s.
                     delay(DOWNLOAD_RETRY_DELAY_MS * attempt)
                 }
             }
             if (!staged) {
+                // Leave the partial in place on purpose: the next check resumes it.
                 return@withContext CheckOutcome.DownloadFailed
             }
 
@@ -170,7 +178,7 @@ class UpdateChecker(
 
         private fun fetchLatest(): String? {
             val req = Request.Builder().url(VERSIONS_URL).get().build()
-            httpClient().newCall(req).execute().use { resp ->
+            metaClient().newCall(req).execute().use { resp ->
                 if (!resp.isSuccessful) {
                     Log.i(TAG, "Fetch $VERSIONS_URL: status ${resp.code}")
                     return null
@@ -181,26 +189,71 @@ class UpdateChecker(
             }
         }
 
-        private fun download(target: File) {
+        /**
+         * Download (or resume) the APK to [target]. Sends a Range request from
+         * the current partial length so an interrupted transfer continues
+         * rather than restarting. Returns true once the file is complete (its
+         * length matches the server's reported total); a mid-stream drop throws,
+         * leaving the partial in place for the next attempt to resume from.
+         */
+        private fun download(target: File): Boolean {
             target.parentFile?.mkdirs()
-            val req = Request.Builder().url(APK_URL).get().build()
-            httpClient().newCall(req).execute().use { resp ->
-                if (!resp.isSuccessful) {
+            val have = if (target.exists()) target.length() else 0L
+            val builder = Request.Builder().url(APK_URL).get()
+            if (have > 0) builder.header("Range", "bytes=$have-")
+            downloadClient().newCall(builder.build()).execute().use { resp ->
+                // 206 = resume accepted; 200 = full body (first fetch, or a
+                // server that ignored the Range header).
+                if (resp.code != 200 && resp.code != 206) {
                     throw IllegalStateException("HTTP ${resp.code}")
                 }
                 val body = resp.body ?: throw IllegalStateException("empty body")
-                // Stream straight to disk — APK is ~30 MB, don't buffer in memory.
-                target.sink().buffer().use { out ->
-                    body.source().use { src -> out.writeAll(src) }
+                val resuming = resp.code == 206 && have > 0
+                // Total file size: a 206 reports it as the "/<total>" tail of
+                // Content-Range; a 200 reports it as Content-Length.
+                val total = if (resuming) {
+                    resp.header("Content-Range")?.substringAfterLast('/')?.toLongOrNull()
+                } else {
+                    body.contentLength().takeIf { it > 0 }
                 }
+                // Server resent the whole file despite our Range — drop the
+                // partial so we don't append a full body onto it.
+                if (!resuming && have > 0) target.delete()
+                // Stream straight to disk — append when resuming, truncate when
+                // starting fresh. The APK is ~40 MB, so never buffer in memory.
+                val out = if (resuming) target.appendingSink() else target.sink()
+                out.buffer().use { sink -> body.source().use { src -> sink.writeAll(src) } }
+                // Complete only when we know the total AND the file matches it —
+                // never stage a truncated APK as if it were ready to install.
+                return total != null && target.length() == total
             }
         }
 
-        private fun httpClient(): OkHttpClient = OkHttpClient.Builder()
+        // versions.json poll. A tiny file, so cap the WHOLE call hard with
+        // callTimeout. readTimeout alone only bounds the gap between packets —
+        // a connection that establishes then stalls (common on mobile data,
+        // occasional on wifi) would block for the full readTimeout, leaving the
+        // "Check for updates" button spinning. callTimeout bounds connect +
+        // write + read + any retries, so the button fails fast and shows an
+        // error instead of hanging.
+        private fun metaClient(): OkHttpClient = OkHttpClient.Builder()
+            .callTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(15, TimeUnit.SECONDS)
-            // Download timeout is permissive — phones on slow networks should be
-            // able to finish a 30 MB pull.
-            .readTimeout(5, TimeUnit.MINUTES)
+            .readTimeout(15, TimeUnit.SECONDS)
+            .build()
+
+        // ~40 MB APK pull, downloaded resumably (see download()). readTimeout
+        // aborts an attempt when the connection goes dead (no bytes for the
+        // window) so the retry loop can resume; callTimeout bounds a single
+        // attempt so it can't run away. Neither has to cover the whole 40 MB in
+        // one shot — the Range resume carries progress across attempts, so a
+        // slow/flaky link completes over several rounds rather than one long
+        // transfer. (A timeout firing is no longer a lost download — just the
+        // end of one resumable chunk.)
+        private fun downloadClient(): OkHttpClient = OkHttpClient.Builder()
+            .callTimeout(4, TimeUnit.MINUTES)
+            .connectTimeout(15, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
             .build()
 
         private fun purgeStale(ctx: Context, keep: String) {
