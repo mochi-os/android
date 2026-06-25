@@ -31,6 +31,11 @@ class FeedListViewModel @Inject constructor(
     private val _feeds = MutableStateFlow<List<Feed>>(emptyList())
     val feeds: StateFlow<List<Feed>> = _feeds.asStateFlow()
 
+    // Whether the server has an AI provider configured; gates the AI sort
+    // option offered for every feed.
+    private val _hasAi = MutableStateFlow(false)
+    val hasAi: StateFlow<Boolean> = _hasAi.asStateFlow()
+
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
@@ -94,9 +99,11 @@ class FeedListViewModel @Inject constructor(
             _isLoading.value = true
             _error.value = null
             try {
-                val feedList = repository.listFeeds()
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                val info = repository.getFeedsInfo()
+                val feedList = info.feeds
+                    .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
+                _hasAi.value = info.hasAi
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -110,9 +117,11 @@ class FeedListViewModel @Inject constructor(
         viewModelScope.launch {
             _isRefreshing.value = true
             try {
-                val feedList = repository.listFeeds()
-                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                val info = repository.getFeedsInfo()
+                val feedList = info.feeds
+                    .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
+                _hasAi.value = info.hasAi
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -201,11 +210,21 @@ class FeedListViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Re-fetch the feed list without surfacing a loading or refreshing
+     * indicator, so the drawer's unread badges reflect server state after an
+     * action elsewhere (e.g. marking a feed read).
+     */
+    fun refreshSilently() {
+        viewModelScope.launch { refreshFeedSilently() }
+    }
+
     private suspend fun refreshFeedSilently() {
         try {
-            val feedList = repository.listFeeds()
-                .sortedWith(compareBy(NaturalCompare) { it.name })
-            _feeds.value = feedList
+            val info = repository.getFeedsInfo()
+            _feeds.value = info.feeds
+                .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
+            _hasAi.value = info.hasAi
         } catch (_: Exception) {
             // Silent refresh failure
         }

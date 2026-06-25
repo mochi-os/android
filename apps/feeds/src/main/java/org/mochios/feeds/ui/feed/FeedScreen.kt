@@ -41,6 +41,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
@@ -64,6 +65,8 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.AssistChip
+import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -169,6 +172,7 @@ fun FeedScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
+    val hasAi by feedListViewModel.hasAi.collectAsState()
 
     // Persist the last-viewed feed so the next cold start lands here. The
     // router composable reads this back via [LastViewedStore.get].
@@ -468,9 +472,10 @@ fun FeedScreen(
             FeedFilterChips(
                 currentSort = currentSort,
                 unreadOnly = unreadOnly,
+                hasAi = hasAi,
                 onSetSort = { sort -> viewModel.setSort(sort) },
                 onSetUnreadOnly = { value -> viewModel.setUnreadOnly(value) },
-                onMarkAllRead = { viewModel.markAllRead() },
+                onMarkAllRead = { viewModel.markAllRead { feedListViewModel.refreshSilently() } },
                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
             )
             PullToRefreshBox(
@@ -1164,13 +1169,20 @@ private fun InterestSuggestionsDialog(
 /** A sort option for the feed sort chip: server value, label, and icon. */
 private data class FeedSortOption(val value: String, val labelRes: Int, val icon: ImageVector)
 
-/** The feed's sort options in display order, each with its chip/menu icon. */
-private fun feedSortOptions(): List<FeedSortOption> = listOf(
-    FeedSortOption("interests", R.string.feeds_sort_interests, Icons.Default.Star),
-    FeedSortOption("new", R.string.feeds_sort_new, Icons.Default.Schedule),
-    FeedSortOption("hot", R.string.feeds_sort_hot, Icons.Default.LocalFireDepartment),
-    FeedSortOption("top", R.string.feeds_sort_top, Icons.Default.EmojiEvents),
-)
+/**
+ * The feed's sort options in display order, each with its chip/menu icon. The
+ * AI option is offered only when the server has an AI provider configured
+ * ([hasAi]); it then applies to every feed.
+ */
+private fun feedSortOptions(hasAi: Boolean): List<FeedSortOption> = buildList {
+    add(FeedSortOption("interests", R.string.feeds_sort_interests, Icons.Default.Star))
+    if (hasAi) {
+        add(FeedSortOption("ai", R.string.feeds_sort_ai, Icons.Default.AutoAwesome))
+    }
+    add(FeedSortOption("new", R.string.feeds_sort_new, Icons.Default.Schedule))
+    add(FeedSortOption("hot", R.string.feeds_sort_hot, Icons.Default.LocalFireDepartment))
+    add(FeedSortOption("top", R.string.feeds_sort_top, Icons.Default.EmojiEvents))
+}
 
 /**
  * The read-filter and sort chips shown at the top of the feed. Each is a compact
@@ -1180,6 +1192,7 @@ private fun feedSortOptions(): List<FeedSortOption> = listOf(
 private fun FeedFilterChips(
     currentSort: String,
     unreadOnly: Boolean,
+    hasAi: Boolean,
     onSetSort: (String) -> Unit,
     onSetUnreadOnly: (Boolean) -> Unit,
     onMarkAllRead: () -> Unit,
@@ -1187,7 +1200,7 @@ private fun FeedFilterChips(
 ) {
     var showReadMenu by remember { mutableStateOf(false) }
     var showSortMenu by remember { mutableStateOf(false) }
-    val sortOptions = feedSortOptions()
+    val sortOptions = feedSortOptions(hasAi)
     val activeSort = sortOptions.firstOrNull { option -> option.value == currentSort }
         ?: sortOptions.first()
 
@@ -1284,29 +1297,22 @@ private fun FeedFilterChip(
     label: String,
     onClick: () -> Unit,
 ) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .clip(RoundedCornerShape(50))
-            .clickable(onClick = onClick)
-            .padding(horizontal = 8.dp, vertical = 4.dp),
-    ) {
-        Icon(
-            icon,
-            contentDescription = null,
-            modifier = Modifier.size(18.dp),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Spacer(Modifier.width(6.dp))
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelLarge,
-        )
-        Icon(
-            Icons.Default.ArrowDropDown,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-    }
+    AssistChip(
+        onClick = onClick,
+        label = { Text(label) },
+        leadingIcon = {
+            Icon(
+                icon,
+                contentDescription = null,
+                modifier = Modifier.size(AssistChipDefaults.IconSize),
+            )
+        },
+        trailingIcon = {
+            Icon(
+                Icons.Default.ArrowDropDown,
+                contentDescription = null,
+            )
+        },
+    )
 }
 

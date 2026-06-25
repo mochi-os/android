@@ -34,6 +34,16 @@ data class FeedInfoResult(
     val permissions: Permissions
 )
 
+/**
+ * The class-level feeds overview returned by `-/info`: the subscribed feed
+ * list and whether the server has any AI provider configured (which gates the
+ * AI sort option).
+ */
+data class FeedsInfoResult(
+    val feeds: List<Feed>,
+    val hasAi: Boolean
+)
+
 data class PostListResult(
     val posts: List<Post>,
     val hasMore: Boolean,
@@ -100,8 +110,20 @@ class FeedsRepository @Inject constructor(
     // --- Class-level operations ---
 
     suspend fun listFeeds(): List<Feed> {
+        return getFeedsInfo().feeds
+    }
+
+    /**
+     * Fetch the full class-level feeds overview (`-/info`): feed list, the
+     * user's global default sort, and the server's AI availability.
+     */
+    suspend fun getFeedsInfo(): FeedsInfoResult {
         return try {
-            api.getInfo().unwrap().feeds
+            val response = api.getInfo().unwrap()
+            FeedsInfoResult(
+                feeds = response.feeds,
+                hasAi = response.hasAi
+            )
         } catch (e: Exception) {
             throw e.toMochiError()
         }

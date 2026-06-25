@@ -31,7 +31,11 @@ import retrofit2.http.Query
 // Response wrapper types
 
 data class FeedListResponse(
-    val feeds: List<Feed> = emptyList()
+    val feeds: List<Feed> = emptyList(),
+    val entity: Boolean = false,
+    val hasAi: Boolean = false,
+    val settings: FeedSettings = FeedSettings(),
+    @SerializedName("user_id") val userId: String = ""
 )
 
 data class FeedCreateResponse(

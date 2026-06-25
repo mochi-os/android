@@ -558,7 +558,7 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    fun markAllRead() {
+    fun markAllRead(onComplete: () -> Unit = {}) {
         viewModelScope.launch {
             try {
                 if (isAllFeeds) {
@@ -586,6 +586,9 @@ class FeedViewModel @Inject constructor(
                     _posts.value.map { it.copy(read = now) }
                 }
                 _feedInfo.value = _feedInfo.value?.copy(unread = 0)
+                // Server has committed the read state — let the caller refresh
+                // any dependent UI (e.g. the drawer's unread badges) silently.
+                onComplete()
             } catch (_: Exception) {
                 // Refresh on failure
                 refresh()
