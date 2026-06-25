@@ -213,4 +213,5 @@
         <item quantity="few">%d нове објаве</item>
         <item quantity="other">%d нових објава</item>
     </plurals>
+    <string name="feeds_caught_up">Видели сте све</string>
 </resources>

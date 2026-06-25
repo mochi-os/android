@@ -211,4 +211,5 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d ໂພສໃໝ່</item>
     </plurals>
+    <string name="feeds_caught_up">ທ່ານໄດ້ເບິ່ງທັງໝົດແລ້ວ</string>
 </resources>

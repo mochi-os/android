@@ -212,4 +212,5 @@
         <item quantity="one">%d نئی پوسٹ</item>
         <item quantity="other">%d نئی پوسٹس</item>
     </plurals>
+    <string name="feeds_caught_up">آپ سب کچھ دیکھ چکے ہیں</string>
 </resources>

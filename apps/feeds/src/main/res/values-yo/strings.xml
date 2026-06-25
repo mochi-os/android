@@ -212,4 +212,5 @@
         <item quantity="one">%d ìfìwéránṣẹ́ tuntun</item>
         <item quantity="other">%d ìfìwéránṣẹ́ tuntun</item>
     </plurals>
+    <string name="feeds_caught_up">O ti rí gbogbo rẹ̀</string>
 </resources>

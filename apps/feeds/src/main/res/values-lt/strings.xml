@@ -214,4 +214,5 @@
         <item quantity="many">%d naujo įrašo</item>
         <item quantity="other">%d naujų įrašų</item>
     </plurals>
+    <string name="feeds_caught_up">Peržiūrėjote viską</string>
 </resources>

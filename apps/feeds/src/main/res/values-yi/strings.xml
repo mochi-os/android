@@ -212,4 +212,5 @@
         <item quantity="one">%d נײַער אַרײַנשרײַב</item>
         <item quantity="other">%d נײַע אַרײַנשרײַבן</item>
     </plurals>
+    <string name="feeds_caught_up">איר האָט שוין געזען אַלץ</string>
 </resources>

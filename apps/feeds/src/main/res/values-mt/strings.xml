@@ -216,4 +216,5 @@
         <item quantity="many">%d post ġdid</item>
         <item quantity="other">%d post ġdid</item>
     </plurals>
+    <string name="feeds_caught_up">Rajt kollox</string>
 </resources>

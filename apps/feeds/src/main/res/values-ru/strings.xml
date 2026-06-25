@@ -214,4 +214,5 @@
         <item quantity="many">%d новых публикаций</item>
         <item quantity="other">%d новой публикации</item>
     </plurals>
+    <string name="feeds_caught_up">Вы всё просмотрели</string>
 </resources>

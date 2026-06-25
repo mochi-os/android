@@ -212,4 +212,5 @@
         <item quantity="one">%d नवीन पोस्ट</item>
         <item quantity="other">%d नवीन पोस्ट</item>
     </plurals>
+    <string name="feeds_caught_up">तुम्ही सर्व पाहिले आहे</string>
 </resources>

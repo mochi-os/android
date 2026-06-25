@@ -214,4 +214,5 @@
         <item quantity="one">%d publicació nova</item>
         <item quantity="other">%d publicacions noves</item>
     </plurals>
+    <string name="feeds_caught_up">Estàs al dia</string>
 </resources>

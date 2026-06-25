@@ -211,4 +211,5 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d bài viết mới</item>
     </plurals>
+    <string name="feeds_caught_up">Bạn đã xem hết</string>
 </resources>

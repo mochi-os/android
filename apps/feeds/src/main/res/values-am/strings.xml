@@ -212,4 +212,5 @@
         <item quantity="one">%d አዲስ ልጥፍ</item>
         <item quantity="other">%d አዲስ ልጥፎች</item>
     </plurals>
+    <string name="feeds_caught_up">ሁሉንም ተመልክተዋል</string>
 </resources>

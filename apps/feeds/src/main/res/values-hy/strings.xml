@@ -212,4 +212,5 @@
         <item quantity="one">%d նոր գրառում</item>
         <item quantity="other">%d նոր գրառում</item>
     </plurals>
+    <string name="feeds_caught_up">Դուք տեսել եք ամեն ինչ</string>
 </resources>

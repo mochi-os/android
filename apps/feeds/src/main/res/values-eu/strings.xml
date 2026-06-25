@@ -212,4 +212,5 @@
         <item quantity="one">%d argitalpen berri</item>
         <item quantity="other">%d argitalpen berri</item>
     </plurals>
+    <string name="feeds_caught_up">Dena ikusi duzu</string>
 </resources>

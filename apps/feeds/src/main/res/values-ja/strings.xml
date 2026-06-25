@@ -211,4 +211,5 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d 件の新着投稿</item>
     </plurals>
+    <string name="feeds_caught_up">すべて表示しました</string>
 </resources>

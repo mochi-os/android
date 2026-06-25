@@ -212,4 +212,5 @@
         <item quantity="one">%d nuovo post</item>
         <item quantity="other">%d nuovi post</item>
     </plurals>
+    <string name="feeds_caught_up">Sei aggiornato</string>
 </resources>

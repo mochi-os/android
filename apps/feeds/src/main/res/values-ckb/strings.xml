@@ -214,4 +214,5 @@
         <item quantity="one">%d پۆستی نوێ</item>
         <item quantity="other">%d پۆستی نوێ</item>
     </plurals>
+    <string name="feeds_caught_up">هەمووت بینی</string>
 </resources>

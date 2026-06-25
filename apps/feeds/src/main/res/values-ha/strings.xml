@@ -212,4 +212,5 @@
         <item quantity="one">%d sabon wasiƙa</item>
         <item quantity="other">%d sababbin wasiƙu</item>
     </plurals>
+    <string name="feeds_caught_up">Kun ga komai</string>
 </resources>

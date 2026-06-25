@@ -212,4 +212,5 @@
         <item quantity="one">%d ný færsla</item>
         <item quantity="other">%d nýjar færslur</item>
     </plurals>
+    <string name="feeds_caught_up">Þú hefur séð allt</string>
 </resources>

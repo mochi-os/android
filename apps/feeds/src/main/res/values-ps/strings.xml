@@ -212,4 +212,5 @@
         <item quantity="one">%d نوی پوست</item>
         <item quantity="other">%d نوي پوستونه</item>
     </plurals>
+    <string name="feeds_caught_up">تاسو ټول ولیدل</string>
 </resources>

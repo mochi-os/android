@@ -212,4 +212,5 @@
         <item quantity="one">%d umbhalo omusha</item>
         <item quantity="other">%d imibhalo emisha</item>
     </plurals>
+    <string name="feeds_caught_up">Usubonile konke</string>
 </resources>

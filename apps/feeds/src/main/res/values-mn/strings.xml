@@ -212,4 +212,5 @@
         <item quantity="one">%d шинэ нийтлэл</item>
         <item quantity="other">%d шинэ нийтлэл</item>
     </plurals>
+    <string name="feeds_caught_up">Та бүгдийг үзсэн</string>
 </resources>

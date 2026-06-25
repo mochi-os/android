@@ -198,4 +198,5 @@
     <string name="feeds_saved_menu">Enregistré</string>
     <string name="feeds_saved_remove">Retirer des favoris</string>
     <string name="feeds_saved_clear_all">Tout effacer</string>
+    <string name="feeds_caught_up">Vous êtes à jour</string>
 </resources>

@@ -211,4 +211,5 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">ပို့စ်အသစ် %dခု</item>
     </plurals>
+    <string name="feeds_caught_up">အားလုံးကို ကြည့်ပြီးပါပြီ</string>
 </resources>

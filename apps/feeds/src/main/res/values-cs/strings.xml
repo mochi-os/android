@@ -214,4 +214,5 @@
         <item quantity="many">%d nového příspěvku</item>
         <item quantity="other">%d nových příspěvků</item>
     </plurals>
+    <string name="feeds_caught_up">Máte vše přečtené</string>
 </resources>

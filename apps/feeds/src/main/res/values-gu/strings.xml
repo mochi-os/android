@@ -212,4 +212,5 @@
         <item quantity="one">%d નવી પોસ્ટ</item>
         <item quantity="other">%d નવી પોસ્ટ</item>
     </plurals>
+    <string name="feeds_caught_up">તમે બધું જોઈ લીધું</string>
 </resources>

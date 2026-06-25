@@ -212,4 +212,5 @@
         <item quantity="one">%d chapisho jipya</item>
         <item quantity="other">%d machapisho mapya</item>
     </plurals>
+    <string name="feeds_caught_up">Umeona kila kitu</string>
 </resources>

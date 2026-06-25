@@ -212,4 +212,5 @@
         <item quantity="one">%d kiriman anyar</item>
         <item quantity="other">%d kiriman anyar</item>
     </plurals>
+    <string name="feeds_caught_up">Sampeyan wis ndeleng kabeh</string>
 </resources>

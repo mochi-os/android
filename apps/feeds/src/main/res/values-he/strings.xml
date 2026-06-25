@@ -214,4 +214,5 @@
         <item quantity="many">%d פוסטים חדשים</item>
         <item quantity="other">%d פוסטים חדשים</item>
     </plurals>
+    <string name="feeds_caught_up">צפית בכל הפוסטים</string>
 </resources>

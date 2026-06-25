@@ -212,4 +212,5 @@
         <item quantity="one">%d täze ýazgy</item>
         <item quantity="other">%d täze ýazgy</item>
     </plurals>
+    <string name="feeds_caught_up">Hemmesini gördüňiz</string>
 </resources>

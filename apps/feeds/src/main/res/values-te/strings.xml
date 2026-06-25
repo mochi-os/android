@@ -212,4 +212,5 @@
         <item quantity="one">%d కొత్త పోస్ట్</item>
         <item quantity="other">%d కొత్త పోస్ట్‌లు</item>
     </plurals>
+    <string name="feeds_caught_up">మీరు అన్నీ చూశారు</string>
 </resources>

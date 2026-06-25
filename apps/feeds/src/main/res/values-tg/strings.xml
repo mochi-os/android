@@ -212,4 +212,5 @@
         <item quantity="one">%d паёми нав</item>
         <item quantity="other">%d паёмҳои нав</item>
     </plurals>
+    <string name="feeds_caught_up">Шумо ҳамаро дидед</string>
 </resources>

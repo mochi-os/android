@@ -212,4 +212,5 @@
         <item quantity="one">%d uus postitus</item>
         <item quantity="other">%d uut postitust</item>
     </plurals>
+    <string name="feeds_caught_up">Olete kõik üle vaadanud</string>
 </resources>

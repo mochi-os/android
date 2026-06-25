@@ -212,4 +212,5 @@
         <item quantity="one">%d nouvelle publication</item>
         <item quantity="other">%d nouvelles publications</item>
     </plurals>
+    <string name="feeds_caught_up">Vous êtes à jour</string>
 </resources>

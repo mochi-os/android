@@ -200,4 +200,5 @@
     <string name="feeds_saved_menu">已儲存</string>
     <string name="feeds_saved_remove">從已儲存中移除</string>
     <string name="feeds_saved_clear_all">清除全部</string>
+    <string name="feeds_caught_up">你已看完所有內容</string>
 </resources>

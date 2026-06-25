@@ -213,4 +213,5 @@
         <item quantity="few">%d postări noi</item>
         <item quantity="other">%d de postări noi</item>
     </plurals>
+    <string name="feeds_caught_up">Ești la zi</string>
 </resources>

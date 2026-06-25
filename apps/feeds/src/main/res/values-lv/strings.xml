@@ -213,4 +213,5 @@
         <item quantity="one">%d jauns ieraksts</item>
         <item quantity="other">%d jauni ieraksti</item>
     </plurals>
+    <string name="feeds_caught_up">Esat apskatījis visu</string>
 </resources>

@@ -212,4 +212,5 @@
         <item quantity="one">%d kintunan anyar</item>
         <item quantity="other">%d kintunan anyar</item>
     </plurals>
+    <string name="feeds_caught_up">Anjeun parantos ningali sadayana</string>
 </resources>

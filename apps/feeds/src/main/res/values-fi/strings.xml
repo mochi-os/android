@@ -212,4 +212,5 @@
         <item quantity="one">%d uusi julkaisu</item>
         <item quantity="other">%d uutta julkaisua</item>
     </plurals>
+    <string name="feeds_caught_up">Olet ajan tasalla</string>
 </resources>

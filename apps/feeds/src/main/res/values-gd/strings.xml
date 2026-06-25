@@ -216,4 +216,5 @@
         <item quantity="few">%d postaichean ùra</item>
         <item quantity="other">%d post ùr</item>
     </plurals>
+    <string name="feeds_caught_up">Chunnaic thu a h-uile càil</string>
 </resources>

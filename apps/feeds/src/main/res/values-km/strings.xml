@@ -211,4 +211,5 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">ការបង្ហោះថ្មី %d </item>
     </plurals>
+    <string name="feeds_caught_up">អ្នកបានឃើញទាំងអស់ហើយ</string>
 </resources>

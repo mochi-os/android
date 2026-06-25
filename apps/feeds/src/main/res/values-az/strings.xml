@@ -214,4 +214,5 @@
         <item quantity="one">%d yeni paylaşım</item>
         <item quantity="other">%d yeni paylaşım</item>
     </plurals>
+    <string name="feeds_caught_up">Hər şeyi gördünüz</string>
 </resources>

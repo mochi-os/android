@@ -212,4 +212,5 @@
         <item quantity="one">%d жаңы жазуу</item>
         <item quantity="other">%d жаңы жазуу</item>
     </plurals>
+    <string name="feeds_caught_up">Баарын көрдүңүз</string>
 </resources>

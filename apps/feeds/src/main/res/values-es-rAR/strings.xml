@@ -200,4 +200,5 @@
     <string name="feeds_saved_menu">Guardado</string>
     <string name="feeds_saved_remove">Quitar de guardados</string>
     <string name="feeds_saved_clear_all">Borrar todo</string>
+    <string name="feeds_caught_up">Estás al día</string>
 </resources>

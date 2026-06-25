@@ -215,4 +215,5 @@
         <item quantity="many">%d postiad newydd</item>
         <item quantity="other">%d postiad newydd</item>
     </plurals>
+    <string name="feeds_caught_up">Rydych wedi dal i fyny</string>
 </resources>

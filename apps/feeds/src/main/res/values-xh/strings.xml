@@ -212,4 +212,5 @@
         <item quantity="one">%d iposti entsha</item>
         <item quantity="other">%d iiposti ezintsha</item>
     </plurals>
+    <string name="feeds_caught_up">Uyibonile yonke into</string>
 </resources>

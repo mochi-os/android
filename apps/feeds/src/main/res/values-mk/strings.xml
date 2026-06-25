@@ -212,4 +212,5 @@
         <item quantity="one">%d нова објава</item>
         <item quantity="other">%d нови објави</item>
     </plurals>
+    <string name="feeds_caught_up">Видовте сè</string>
 </resources>

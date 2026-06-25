@@ -212,4 +212,5 @@
         <item quantity="one">%d marandu pyahu</item>
         <item quantity="other">%d marandu pyahu</item>
     </plurals>
+    <string name="feeds_caught_up">Rehecháma opavave</string>
 </resources>

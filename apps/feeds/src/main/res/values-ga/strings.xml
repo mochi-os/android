@@ -215,4 +215,5 @@
         <item quantity="many">%d bpostáil nua</item>
         <item quantity="other">%d postáil nua</item>
     </plurals>
+    <string name="feeds_caught_up">Tá tú cothrom le dáta</string>
 </resources>

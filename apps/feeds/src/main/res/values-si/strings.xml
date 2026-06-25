@@ -212,4 +212,5 @@
         <item quantity="one">%d නව පළ කිරීම</item>
         <item quantity="other">%d නව පළ කිරීම්</item>
     </plurals>
+    <string name="feeds_caught_up">ඔබ සියල්ල බැලුවා</string>
 </resources>

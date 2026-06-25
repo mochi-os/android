@@ -212,4 +212,5 @@
         <item quantity="one">%d şandiyê nû</item>
         <item quantity="other">%d şandiyên nû</item>
     </plurals>
+    <string name="feeds_caught_up">Te her tişt dît</string>
 </resources>

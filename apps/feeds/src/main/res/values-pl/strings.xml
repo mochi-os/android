@@ -214,4 +214,5 @@
         <item quantity="many">%d nowych postów</item>
         <item quantity="other">%d nowego posta</item>
     </plurals>
+    <string name="feeds_caught_up">Wszystko obejrzane</string>
 </resources>

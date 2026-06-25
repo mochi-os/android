@@ -212,4 +212,5 @@
         <item quantity="one">%d νέα δημοσίευση</item>
         <item quantity="other">%d νέες δημοσιεύσεις</item>
     </plurals>
+    <string name="feeds_caught_up">Είστε ενημερωμένοι</string>
 </resources>

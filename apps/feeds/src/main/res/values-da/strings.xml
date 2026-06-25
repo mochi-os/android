@@ -212,4 +212,5 @@
         <item quantity="one">%d nyt opslag</item>
         <item quantity="other">%d nye opslag</item>
     </plurals>
+    <string name="feeds_caught_up">Du er helt opdateret</string>
 </resources>

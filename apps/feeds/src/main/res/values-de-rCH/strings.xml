@@ -200,4 +200,5 @@
     <string name="feeds_saved_menu">Gespeichert</string>
     <string name="feeds_saved_remove">Aus Gespeicherten entfernen</string>
     <string name="feeds_saved_clear_all">Alle löschen</string>
+    <string name="feeds_caught_up">Du bist auf dem neuesten Stand</string>
 </resources>

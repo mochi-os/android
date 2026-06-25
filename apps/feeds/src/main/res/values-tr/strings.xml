@@ -212,4 +212,5 @@
         <item quantity="one">%d yeni gönderi</item>
         <item quantity="other">%d yeni gönderi</item>
     </plurals>
+    <string name="feeds_caught_up">Her şeyi gördünüz</string>
 </resources>

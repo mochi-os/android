@@ -212,4 +212,5 @@
         <item quantity="one">%d nouvo pòs</item>
         <item quantity="other">%d nouvo pòs</item>
     </plurals>
+    <string name="feeds_caught_up">Ou wè tout bagay deja</string>
 </resources>

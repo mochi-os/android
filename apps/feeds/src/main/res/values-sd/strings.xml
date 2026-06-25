@@ -212,4 +212,5 @@
         <item quantity="one">%d نئين پوسٽ</item>
         <item quantity="other">%d نيون پوسٽون</item>
     </plurals>
+    <string name="feeds_caught_up">توھان سڀ ڪجھ ڏسي ورتو</string>
 </resources>

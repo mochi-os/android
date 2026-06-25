@@ -212,4 +212,5 @@
         <item quantity="one">%d kiriman baru</item>
         <item quantity="other">%d kiriman baru</item>
     </plurals>
+    <string name="feeds_caught_up">Kamu sudah melihat semuanya</string>
 </resources>

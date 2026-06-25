@@ -212,4 +212,5 @@
         <item quantity="one">%d új bejegyzés</item>
         <item quantity="other">%d új bejegyzés</item>
     </plurals>
+    <string name="feeds_caught_up">Mindent megnéztél</string>
 </resources>

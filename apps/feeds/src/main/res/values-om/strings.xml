@@ -212,4 +212,5 @@
         <item quantity="one">%d maxxansaa haaraa</item>
         <item quantity="other">%d maxxansaalee haaraa</item>
     </plurals>
+    <string name="feeds_caught_up">Hunda ilaalteerta</string>
 </resources>

@@ -211,4 +211,5 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">%d โพสต์ใหม่</item>
     </plurals>
+    <string name="feeds_caught_up">คุณดูครบทั้งหมดแล้ว</string>
 </resources>

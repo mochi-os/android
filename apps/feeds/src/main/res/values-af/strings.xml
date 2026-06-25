@@ -212,4 +212,5 @@
         <item quantity="one">%d nuwe plasing</item>
         <item quantity="other">%d nuwe plasings</item>
     </plurals>
+    <string name="feeds_caught_up">Jy is heeltemal op datum</string>
 </resources>

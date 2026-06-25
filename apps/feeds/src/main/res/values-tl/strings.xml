@@ -212,4 +212,5 @@
         <item quantity="one">%d bagong post</item>
         <item quantity="other">%d bagong post</item>
     </plurals>
+    <string name="feeds_caught_up">Nakita mo na ang lahat</string>
 </resources>

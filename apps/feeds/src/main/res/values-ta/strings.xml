@@ -212,4 +212,5 @@
         <item quantity="one">%d புதிய இடுகை</item>
         <item quantity="other">%d புதிய இடுகைகள்</item>
     </plurals>
+    <string name="feeds_caught_up">நீங்கள் அனைத்தையும் பார்த்துவிட்டீர்கள்</string>
 </resources>

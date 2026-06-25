@@ -212,4 +212,5 @@
         <item quantity="one">%d musuq willakuy</item>
         <item quantity="other">%d musuq willakuykuna</item>
     </plurals>
+    <string name="feeds_caught_up">Tukuyta rikurqankiña</string>
 </resources>

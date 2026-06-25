@@ -211,4 +211,5 @@
     <plurals name="feeds_new_posts">
         <item quantity="other">새 게시물 %d개</item>
     </plurals>
+    <string name="feeds_caught_up">모두 확인했습니다</string>
 </resources>
