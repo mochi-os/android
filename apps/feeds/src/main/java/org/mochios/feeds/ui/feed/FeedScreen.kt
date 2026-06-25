@@ -304,9 +304,18 @@ fun FeedScreen(
     // refresh opt out (it intentionally returns to the top).
     var previousPosts by remember { mutableStateOf(posts) }
     var suppressAnchorRestore by remember { mutableStateOf(false) }
+    // Set by the "new posts" pill: jump to the top once the refreshed list lands.
+    // Uses requestScrollToPage so it survives the keyed pager's data-change scroll
+    // restoration (which would otherwise keep the reader on their current post).
+    var goToTopOnRefresh by remember { mutableStateOf(false) }
     LaunchedEffect(posts) {
         val oldPosts = previousPosts
         previousPosts = posts
+        if (goToTopOnRefresh) {
+            goToTopOnRefresh = false
+            pagerState.requestScrollToPage(0)
+            return@LaunchedEffect
+        }
         if (suppressAnchorRestore) {
             suppressAnchorRestore = false
             return@LaunchedEffect
@@ -818,12 +827,11 @@ fun FeedScreen(
                                                 newPostsCount
                                             ),
                                             onClick = {
+                                                // Refresh and jump to the top: the
+                                                // anchor effect requests page 0 once
+                                                // the new list lands (goToTopOnRefresh).
+                                                goToTopOnRefresh = true
                                                 viewModel.showNewPosts()
-                                                drawerScope.launch {
-                                                    pagerState.animateScrollToPage(
-                                                        0
-                                                    )
-                                                }
                                             },
                                             modifier = Modifier.align(Alignment.TopCenter),
                                         )
