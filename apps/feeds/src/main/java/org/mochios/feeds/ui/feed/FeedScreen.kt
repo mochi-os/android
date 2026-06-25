@@ -10,6 +10,8 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.rememberScrollState
@@ -84,6 +86,7 @@ import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
@@ -91,6 +94,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberDrawerState
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -98,14 +102,20 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
+import androidx.compose.ui.input.nestedscroll.NestedScrollSource
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -132,11 +142,11 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.FeatureDrawerItem
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.FeatureListDrawer
 import org.mochios.android.ui.components.FlipBook
+import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.ui.component.currentReactionType
@@ -153,6 +163,7 @@ import org.mochios.feeds.api.InterestSuggestion
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.post.AddTagDialog
+import org.mochios.feeds.ui.post.CommentInputBar
 import org.mochios.feeds.ui.post.PostTagsButton
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
@@ -194,6 +205,7 @@ fun FeedScreen(
     val interestReduced = stringResource(R.string.feeds_interest_reduced)
     val interestRemoved = stringResource(R.string.feeds_interest_removed)
     val interestFailed = stringResource(R.string.feeds_interest_failed)
+    val caughtUpMessage = stringResource(R.string.feeds_caught_up)
     LaunchedEffect(Unit) {
         viewModel.interestFeedback.collectLatest { fb ->
             val msg = when (fb) {
@@ -232,13 +244,53 @@ fun FeedScreen(
     val unreadOnly by viewModel.unreadOnly.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
+    val commentTarget by viewModel.commentTarget.collectAsState()
+    val commentDraft by viewModel.commentDraft.collectAsState()
+    val commentAttachments by viewModel.commentAttachments.collectAsState()
+    val isSendingComment by viewModel.isSendingComment.collectAsState()
+    val currentUserId by viewModel.currentUserId.collectAsState()
+    val commentFilePicker = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.GetMultipleContents()
+    ) { uris ->
+        uris.forEach { uri -> viewModel.addCommentAttachment(uri) }
+    }
 
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
     var showSuggestedInterests by remember { mutableStateOf(false) }
     var addTagTarget by remember { mutableStateOf<String?>(null) }
+    // (feedId, postId, commentId) of a comment pending delete confirmation.
+    var pendingDeleteComment by remember { mutableStateOf<Triple<String, String, String>?>(null) }
     val pagerState = rememberPagerState(pageCount = { posts.size })
+
+    // "You're all caught up": when the reader is on the last post with nothing
+    // more to load and flips up (drags toward a next post that doesn't exist),
+    // the over-scroll is unconsumed and surfaces here. Rate-limited so a sustained
+    // drag shows the toast once.
+    val atFeedEnd by rememberUpdatedState(
+        posts.isNotEmpty() && pagerState.currentPage == posts.lastIndex && !hasMore
+    )
+    var lastCaughtUpToastAt by remember { mutableLongStateOf(0L) }
+    val endOverscrollConnection = remember {
+        object : NestedScrollConnection {
+            override fun onPostScroll(
+                consumed: Offset,
+                available: Offset,
+                source: NestedScrollSource
+            ): Offset {
+                // available.y < 0 is an unconsumed forward (toward-next) drag.
+                if (available.y < -1f && atFeedEnd) {
+                    val now = System.currentTimeMillis()
+                    if (now - lastCaughtUpToastAt > 1500L) {
+                        lastCaughtUpToastAt = now
+                        Toast.makeText(context, caughtUpMessage, Toast.LENGTH_SHORT).show()
+                    }
+                }
+                return Offset.Zero
+            }
+        }
+    }
 
     // The pager addresses pages by integer index, but the posts list is
     // replaced wholesale by background refreshes (the cache→network refresh on
@@ -649,8 +701,9 @@ fun FeedScreen(
                                             .ifEmpty { viewModel.feedId }
                                         // post.source.url is the RSS feed (XML) URL —
                                         // not the article URL. The article URL lives
-                                        // in rss.link. Anything else falls through to
-                                        // the standard post detail screen.
+                                        // in rss.link; when present, tapping the card
+                                        // opens the in-app article (PostSourceScreen).
+                                        // Anything else falls through to post detail.
                                         val sourceUrl =
                                             post.data?.rss?.link?.takeIf { it.isNotEmpty() }
                                         PostCard(
@@ -665,7 +718,17 @@ fun FeedScreen(
                                                     false
                                                 )
                                             },
+                                            // The comment icon opens the composer
+                                            // bottom sheet to add a comment.
                                             onComments = {
+                                                viewModel.openCommentComposer(
+                                                    routeFeedId,
+                                                    post.id
+                                                )
+                                            },
+                                            // "N more comments" opens the post with
+                                            // its comments (expandComments = true).
+                                            onViewComments = {
                                                 onNavigateToPost(
                                                     routeFeedId,
                                                     post.id,
@@ -673,10 +736,40 @@ fun FeedScreen(
                                                     true
                                                 )
                                             },
+                                            onReplyComment = { parentId, parentName, parentBody ->
+                                                viewModel.openCommentComposer(
+                                                    routeFeedId,
+                                                    post.id,
+                                                    parentId,
+                                                    parentName,
+                                                    parentBody
+                                                )
+                                            },
+                                            onEditComment = { commentId, body ->
+                                                viewModel.openCommentEditor(
+                                                    routeFeedId,
+                                                    post.id,
+                                                    commentId,
+                                                    body
+                                                )
+                                            },
+                                            onDeleteComment = { commentId ->
+                                                pendingDeleteComment =
+                                                    Triple(routeFeedId, post.id, commentId)
+                                            },
+                                            currentUserId = currentUserId,
                                             onReact = { reaction ->
                                                 viewModel.reactToPost(
                                                     routeFeedId,
                                                     post.id,
+                                                    reaction
+                                                )
+                                            },
+                                            onReactComment = { commentId, reaction ->
+                                                viewModel.reactToComment(
+                                                    routeFeedId,
+                                                    post.id,
+                                                    commentId,
                                                     reaction
                                                 )
                                             },
@@ -691,7 +784,11 @@ fun FeedScreen(
                                             },
                                         )
                                     }
-                                    Box(modifier = Modifier.fillMaxSize()) {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxSize()
+                                            .nestedScroll(endOverscrollConnection)
+                                    ) {
                                         VerticalPager(
                                             state = pagerState,
                                             modifier = Modifier.fillMaxSize(),
@@ -798,8 +895,123 @@ fun FeedScreen(
                 }
             )
         }
+
+        pendingDeleteComment?.let { (feedId, postId, commentId) ->
+            AlertDialog(
+                onDismissRequest = { pendingDeleteComment = null },
+                title = { Text(stringResource(R.string.feeds_delete_comment)) },
+                text = { Text(stringResource(R.string.feeds_delete_comment_confirm)) },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            viewModel.deleteComment(feedId, postId, commentId)
+                            pendingDeleteComment = null
+                        }
+                    ) {
+                        Text(
+                            stringResource(MochiR.string.common_delete),
+                            color = MaterialTheme.colorScheme.error
+                        )
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = { pendingDeleteComment = null }) {
+                        Text(stringResource(MochiR.string.common_cancel))
+                    }
+                }
+            )
+        }
+
+        commentTarget?.let { target ->
+            ModalBottomSheet(
+                onDismissRequest = { viewModel.closeCommentComposer() },
+                sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+                // Hide the drag handle and match the input bar's surface colour
+                // so the sheet reads as one continuous composer.
+                dragHandle = null,
+                containerColor = MaterialTheme.colorScheme.surface,
+            ) {
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    // Chat-style reply preview: who/what you're replying to.
+                    if (target.parentId != null) {
+                        CommentReplyPreview(
+                            name = target.parentName.orEmpty(),
+                            body = target.parentBody.orEmpty(),
+                            onCancel = { viewModel.closeCommentComposer() },
+                        )
+                    }
+                    // Reuse the post detail's comment input (text + attach + send,
+                    // with @-mentions). The reply context is shown above, so the
+                    // input bar's own indicator is suppressed.
+                    CommentInputBar(
+                        text = commentDraft,
+                        onTextChange = { value -> viewModel.setCommentDraft(value) },
+                        attachments = commentAttachments,
+                        onAddAttachment = { commentFilePicker.launch("*/*") },
+                        onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
+                        onSend = { viewModel.sendComment() },
+                        isSending = isSendingComment,
+                        replyingTo = null,
+                        onCancelReply = { viewModel.closeCommentComposer() },
+                        onSearchMembers = { query -> viewModel.searchMembers(query) },
+                    )
+                }
+            }
+        }
     }
 }
+
+/**
+ * A chat-style reply preview shown above the comment composer: an accent bar,
+ * the author being replied to, and a one-line snippet of their comment.
+ */
+@Composable
+private fun CommentReplyPreview(
+    name: String,
+    body: String,
+    onCancel: () -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 4.dp, top = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Box(
+            modifier = Modifier
+                .width(3.dp)
+                .height(36.dp)
+                .clip(RoundedCornerShape(2.dp))
+                .background(MaterialTheme.colorScheme.primary)
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = name,
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.primary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            Text(
+                text = body,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+        IconButton(onClick = onCancel) {
+            Icon(
+                Icons.Default.Close,
+                contentDescription = stringResource(R.string.feeds_cancel_reply),
+                modifier = Modifier.size(18.dp),
+            )
+        }
+    }
+}
+
 
 @Composable
 private fun PostCard(
@@ -808,7 +1020,13 @@ private fun PostCard(
     isSaved: Boolean,
     onClick: () -> Unit,
     onComments: () -> Unit,
+    onViewComments: () -> Unit,
     onReact: (String) -> Unit,
+    onReactComment: (commentId: String, reaction: String) -> Unit,
+    onReplyComment: (parentId: String, parentName: String, parentBody: String) -> Unit,
+    onEditComment: (commentId: String, body: String) -> Unit,
+    onDeleteComment: (commentId: String) -> Unit,
+    currentUserId: String?,
     onToggleSave: () -> Unit,
     onAddTag: () -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
@@ -1073,18 +1291,46 @@ private fun PostCard(
                     }
 
 
-                    // Inline comments preview (top-level only, newest first)
+                    // Inline comments preview (top-level only, newest first).
+                    // Uses the same CommentItem layout as the detail screen, but
+                    // capped at 3 and view-only for management (edit/delete and
+                    // threaded replies live on the post detail screen).
                     if (post.comments.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(8.dp))
                         val previewLimit = 3
                         val previewed = post.comments.take(previewLimit)
                         val remaining = post.comments.size - previewed.size
+                        val commentFeedId = post.feedFingerprint
+                            .ifEmpty { post.feed }
+                            .ifEmpty { fallbackFeedId }
                         val anonymous = stringResource(R.string.feeds_anonymous)
-                        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Column {
                             for (comment in previewed) {
-                                CommentPreviewLine(
+                                CommentItem(
                                     comment = comment,
-                                    anonymous = anonymous
+                                    depth = 0,
+                                    avatarUrl = "/feeds/$commentFeedId/-/${post.id}/${comment.id}/asset/avatar",
+                                    feedId = commentFeedId,
+                                    isEditing = false,
+                                    editText = "",
+                                    onEditTextChange = {},
+                                    onSaveEdit = {},
+                                    onCancelEdit = {},
+                                    onReply = {
+                                        onReplyComment(
+                                            comment.id,
+                                            comment.name.ifEmpty { anonymous },
+                                            comment.body
+                                        )
+                                    },
+                                    onEdit = {
+                                        onEditComment(comment.id, comment.markdownSource)
+                                    },
+                                    onDelete = { onDeleteComment(comment.id) },
+                                    onReact = { reaction -> onReactComment(comment.id, reaction) },
+                                    canManage = false,
+                                    isMine = currentUserId != null && comment.authorId == currentUserId,
+                                    horizontalPadding = 0.dp,
                                 )
                             }
                             if (remaining > 0) {
@@ -1097,7 +1343,10 @@ private fun PostCard(
                                     style = MaterialTheme.typography.labelSmall,
                                     color = MaterialTheme.colorScheme.primary,
                                     fontWeight = FontWeight.Medium,
-                                    modifier = Modifier.clickable(onClick = onComments)
+                                    // "N more comments" opens the post with its
+                                    // comments to read the whole thread (the comment
+                                    // icon is for composing, not viewing).
+                                    modifier = Modifier.clickable(onClick = onViewComments)
                                 )
                             }
                         }
@@ -1151,6 +1400,7 @@ private fun PostActionBar(
             onAddTag = onAddTag,
             onAdjustInterest = onAdjustInterest,
             horizontalPadding = 8.dp,
+            iconSize = 24.dp,
         )
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -1164,7 +1414,7 @@ private fun PostActionBar(
             Icon(
                 if (hasComments) Icons.Filled.ChatBubble else Icons.Default.ChatBubbleOutline,
                 contentDescription = stringResource(R.string.feeds_comments),
-                modifier = Modifier.size(18.dp),
+                modifier = Modifier.size(24.dp),
                 tint = commentColor
             )
             if (hasComments) {
@@ -1185,7 +1435,7 @@ private fun PostActionBar(
                 .clip(RoundedCornerShape(8.dp))
                 .clickable(onClick = onToggleSave)
                 .padding(horizontal = 8.dp, vertical = 4.dp)
-                .size(18.dp),
+                .size(24.dp),
             tint = MaterialTheme.colorScheme.onSurfaceVariant
         )
         // Flexible space trails the action group, keeping reaction + tag +
@@ -1193,57 +1443,6 @@ private fun PostActionBar(
         Spacer(modifier = Modifier.weight(1f))
     }
 }
-
-@Composable
-private fun CommentPreviewLine(
-    comment: Comment,
-    anonymous: String
-) {
-    val displayName = comment.name.ifEmpty { anonymous }
-    val plain = stripCommentHtml(comment.body)
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(
-            text = displayName,
-            style = MaterialTheme.typography.labelSmall,
-            fontWeight = FontWeight.SemiBold,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
-        Spacer(modifier = Modifier.width(6.dp))
-        Text(
-            text = plain,
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurface,
-            modifier = Modifier.weight(1f),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
-        Spacer(modifier = Modifier.width(6.dp))
-        Text(
-            text = LocalFormat.current.formatRelativeTime(comment.created),
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-    }
-}
-
-
-private fun stripCommentHtml(html: String): String =
-    html
-        .replace(Regex("<br\\s*/?>"), " ")
-        .replace(Regex("<[^>]*>"), "")
-        .replace("&amp;", "&")
-        .replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&quot;", "\"")
-        .replace("&#39;", "'")
-        .replace("&nbsp;", " ")
-        .replace(Regex("\\s+"), " ")
-        .trim()
 
 
 @Composable

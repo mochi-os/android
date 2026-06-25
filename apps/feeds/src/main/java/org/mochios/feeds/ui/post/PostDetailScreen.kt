@@ -96,6 +96,7 @@ import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
+import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.toReactionCounts
@@ -295,6 +296,7 @@ internal fun PostDetailContent(
     val isNotFound by viewModel.isNotFound.collectAsState()
     val editingCommentId by viewModel.editingCommentId.collectAsState()
     val editCommentText by viewModel.editCommentText.collectAsState()
+    val currentUserId by viewModel.currentUserId.collectAsState()
     val tags by viewModel.tags.collectAsState()
 
     when {
@@ -372,7 +374,6 @@ internal fun PostDetailContent(
                             comment = comment,
                             depth = depth,
                             avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
-                            serverUrl = viewModel.serverUrl,
                             feedId = viewModel.feedId,
                             isEditing = editingCommentId == comment.id,
                             editText = if (editingCommentId == comment.id) editCommentText else "",
@@ -393,7 +394,8 @@ internal fun PostDetailContent(
                                     reaction
                                 )
                             },
-                            canManage = permissions.manage
+                            canManage = permissions.manage,
+                            isMine = currentUserId != null && comment.authorId == currentUserId,
                         )
                     }
                 }
@@ -640,6 +642,7 @@ private fun PostContent(
                     onAddTag = onAddTag,
                     onAdjustInterest = onAdjustInterest,
                     horizontalPadding = 8.dp,
+                    iconSize = 24.dp,
                 )
             }
             Spacer(modifier = Modifier.weight(1f))
@@ -659,6 +662,7 @@ internal fun PostTagsButton(
     onAddTag: () -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
     horizontalPadding: Dp = 6.dp,
+    iconSize: Dp = 18.dp,
 ) {
     var open by remember { mutableStateOf(false) }
     Box {
@@ -674,7 +678,7 @@ internal fun PostTagsButton(
             Icon(
                 if (hasTags) Icons.Filled.LocalOffer else Icons.Outlined.LocalOffer,
                 contentDescription = stringResource(R.string.feeds_tags),
-                modifier = Modifier.size(18.dp),
+                modifier = Modifier.size(iconSize),
                 tint = tagColor
             )
             if (hasTags) {
@@ -776,139 +780,6 @@ private fun interestColor(interest: Double): Color {
     return Color.hsl(hue, 0.8f, 0.45f)
 }
 
-@Composable
-private fun CommentItem(
-    comment: Comment,
-    depth: Int,
-    avatarUrl: String,
-    serverUrl: String,
-    feedId: String,
-    isEditing: Boolean,
-    editText: String,
-    onEditTextChange: (String) -> Unit,
-    onSaveEdit: () -> Unit,
-    onCancelEdit: () -> Unit,
-    onReply: () -> Unit,
-    onEdit: () -> Unit,
-    onDelete: () -> Unit,
-    onReact: (String) -> Unit,
-    canManage: Boolean
-) {
-    val startPadding = (16 + depth * 24).coerceAtMost(96).dp
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = startPadding, end = 16.dp, top = 8.dp, bottom = 8.dp)
-    ) {
-        // Comment header
-        val anonymous = stringResource(R.string.feeds_anonymous)
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(
-                name = comment.name.ifEmpty { anonymous },
-                src = avatarUrl,
-                seed = comment.author,
-                size = 20.dp,
-            )
-            Spacer(modifier = Modifier.width(6.dp))
-            Text(
-                text = comment.name.ifEmpty { anonymous },
-                style = MaterialTheme.typography.labelMedium,
-                fontWeight = FontWeight.SemiBold
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = LocalFormat.current.formatRelativeTime(comment.created),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            if (comment.edited > 0) {
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = stringResource(MochiR.string.comment_edited),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        }
-
-        Spacer(modifier = Modifier.height(4.dp))
-
-        if (isEditing) {
-            OutlinedTextField(
-                value = editText,
-                onValueChange = onEditTextChange,
-                modifier = Modifier.fillMaxWidth(),
-                minLines = 2
-            )
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.End
-            ) {
-                TextButton(onClick = onCancelEdit) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-                TextButton(onClick = onSaveEdit) {
-                    Text(stringResource(MochiR.string.common_save))
-                }
-            }
-        } else {
-            // Comment body
-            HtmlContent(
-                html = comment.body,
-                modifier = Modifier.fillMaxWidth()
-            )
-
-            // Comment attachments
-            if (comment.attachments.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(4.dp))
-                AttachmentGallery(
-                    attachments = comment.attachments,
-                    urlBuilder = { att ->
-                        att.url ?: "/feeds/$feedId/-/attachments/${att.id}"
-                    },
-                    thumbnailUrlBuilder = { att ->
-                        att.thumbnailUrl ?: "/feeds/$feedId/-/attachments/${att.id}/thumbnail"
-                    }
-                )
-            }
-
-            // Reactions on comment — always shown so users can add their first reaction.
-            Spacer(modifier = Modifier.height(4.dp))
-            ReactionBar(
-                reactions = toReactionCounts(comment.reactions, comment.myReaction),
-                onReact = onReact,
-                onRemoveReaction = { onReact(comment.myReaction) },
-                currentReaction = currentReactionType(comment.myReaction)
-            )
-
-            // Comment actions
-            Row {
-                TextButton(onClick = onReply, modifier = Modifier.height(32.dp)) {
-                    Text(
-                        stringResource(MochiR.string.comment_reply),
-                        style = MaterialTheme.typography.labelSmall
-                    )
-                }
-                if (canManage) {
-                    TextButton(onClick = onEdit, modifier = Modifier.height(32.dp)) {
-                        Text(
-                            stringResource(MochiR.string.common_edit),
-                            style = MaterialTheme.typography.labelSmall
-                        )
-                    }
-                    TextButton(onClick = onDelete, modifier = Modifier.height(32.dp)) {
-                        Text(
-                            stringResource(MochiR.string.common_delete),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.error
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
 
 @Composable
 internal fun CommentInputBar(

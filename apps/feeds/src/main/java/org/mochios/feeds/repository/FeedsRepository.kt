@@ -222,11 +222,14 @@ class FeedsRepository @Inject constructor(
         limit: Int = 20,
         sort: String? = null,
         tag: String? = null,
-        unreadOnly: Boolean = false
+        unreadOnly: Boolean = false,
+        forceRefresh: Boolean = false
     ): PostListResult {
         val isFirstPage = before == null && offset == null
-        // Only cache first-page requests
-        if (isFirstPage) {
+        // Only cache first-page requests. An explicit refresh skips the cached
+        // copy and re-fetches so it can't show stale data (e.g. comments that
+        // changed since the cache was written).
+        if (isFirstPage && !forceRefresh) {
             getCachedPosts(feedId, sort, tag, unreadOnly)?.let { return it }
         }
         return try {

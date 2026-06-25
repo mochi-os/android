@@ -6,6 +6,7 @@
 package org.mochios.feeds.ui.feed
 
 import android.content.Context
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -25,6 +26,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Permissions
@@ -43,6 +45,22 @@ sealed interface InterestFeedback {
     data class Success(val direction: String) : InterestFeedback
     data class Failure(val error: MochiError?) : InterestFeedback
 }
+
+/**
+ * The post (and optional parent comment) the comment-composer bottom sheet is
+ * targeting. [parentId] non-null means the sheet is composing a reply to that
+ * comment; [parentName] is the author shown in the sheet's "Replying to…" line.
+ */
+data class CommentTarget(
+    val feedId: String,
+    val postId: String,
+    val parentId: String? = null,
+    val parentName: String? = null,
+    val parentBody: String? = null,
+    // When set, the composer is editing this existing comment rather than
+    // creating a new one (or a reply).
+    val editCommentId: String? = null,
+)
 
 @HiltViewModel
 class FeedViewModel @Inject constructor(
@@ -99,6 +117,20 @@ class FeedViewModel @Inject constructor(
     private val _isPostRefreshing = MutableStateFlow(false)
     val isPostRefreshing: StateFlow<Boolean> = _isPostRefreshing.asStateFlow()
 
+    // Comment composer bottom-sheet target: non-null while the sheet is open.
+    // A non-null [CommentTarget.parentId] means the sheet is composing a reply.
+    private val _commentTarget = MutableStateFlow<CommentTarget?>(null)
+    val commentTarget: StateFlow<CommentTarget?> = _commentTarget.asStateFlow()
+
+    private val _commentDraft = MutableStateFlow("")
+    val commentDraft: StateFlow<String> = _commentDraft.asStateFlow()
+
+    private val _commentAttachments = MutableStateFlow<List<Uri>>(emptyList())
+    val commentAttachments: StateFlow<List<Uri>> = _commentAttachments.asStateFlow()
+
+    private val _isSendingComment = MutableStateFlow(false)
+    val isSendingComment: StateFlow<Boolean> = _isSendingComment.asStateFlow()
+
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore.asStateFlow()
 
@@ -122,6 +154,11 @@ class FeedViewModel @Inject constructor(
     private val _unreadOnly = MutableStateFlow(prefs.getBoolean(KEY_UNREAD_ONLY, false))
     val unreadOnly: StateFlow<Boolean> = _unreadOnly.asStateFlow()
 
+    // The viewer's own entity id, so comment items can offer edit/delete on the
+    // viewer's own comments. Resolved once from the bound session identity.
+    private val _currentUserId = MutableStateFlow<String?>(null)
+    val currentUserId: StateFlow<String?> = _currentUserId.asStateFlow()
+
     val isAllFeeds: Boolean = feedId == "__all__"
 
     private var subscriptionId: String? = null
@@ -132,6 +169,7 @@ class FeedViewModel @Inject constructor(
         loadFeed()
         subscribeToWebSocket()
         viewModelScope.launch { savedRepository.load() }
+        viewModelScope.launch { _currentUserId.value = sessionManager.getBoundIdentity() }
     }
 
     // Mark this feed's notifications read on the server (clear/object), so the
@@ -300,7 +338,8 @@ class FeedViewModel @Inject constructor(
                         feedId = feedId,
                         sort = _currentSort.value,
                         tag = _currentTag.value,
-                        unreadOnly = _unreadOnly.value
+                        unreadOnly = _unreadOnly.value,
+                        forceRefresh = true
                     )
                     _posts.value = result.posts
                     _hasMore.value = result.hasMore
@@ -336,6 +375,136 @@ class FeedViewModel @Inject constructor(
                 // Silent — best-effort single-post refresh.
             } finally {
                 _isPostRefreshing.value = false
+            }
+        }
+    }
+
+    /** Open the comment-composer sheet for [postId] (optionally replying to a
+     *  comment). [postFeedId] is the post's own feed. */
+    fun openCommentComposer(
+        postFeedId: String,
+        postId: String,
+        parentId: String? = null,
+        parentName: String? = null,
+        parentBody: String? = null,
+    ) {
+        _commentDraft.value = ""
+        _commentAttachments.value = emptyList()
+        _commentTarget.value = CommentTarget(postFeedId, postId, parentId, parentName, parentBody)
+    }
+
+    /** Open the composer to edit an existing comment, prefilled with [body]. */
+    fun openCommentEditor(postFeedId: String, postId: String, commentId: String, body: String) {
+        _commentDraft.value = body
+        _commentAttachments.value = emptyList()
+        _commentTarget.value = CommentTarget(postFeedId, postId, editCommentId = commentId)
+    }
+
+    fun closeCommentComposer() {
+        _commentTarget.value = null
+        _commentDraft.value = ""
+        _commentAttachments.value = emptyList()
+    }
+
+    fun setCommentDraft(text: String) {
+        _commentDraft.value = text
+    }
+
+    fun addCommentAttachment(uri: Uri) {
+        _commentAttachments.value = _commentAttachments.value + uri
+    }
+
+    fun removeCommentAttachment(uri: Uri) {
+        _commentAttachments.value = _commentAttachments.value - uri
+    }
+
+    /** Search the composer target's feed for @-mention suggestions. */
+    suspend fun searchMembers(query: String): List<MentionSuggestion> {
+        val feedId = _commentTarget.value?.feedId ?: return emptyList()
+        return try {
+            repository.searchMembers(feedId, query).map { member ->
+                MentionSuggestion(id = member.id, name = member.name)
+            }
+        } catch (_: Exception) {
+            emptyList()
+        }
+    }
+
+    /**
+     * Post the drafted comment for the open composer target — creating a new
+     * comment/reply, or saving an edit when [CommentTarget.editCommentId] is set
+     * — then refresh just that post so the card's preview reflects the change.
+     */
+    fun sendComment() {
+        val target = _commentTarget.value ?: return
+        val body = _commentDraft.value.trim()
+        if (body.isEmpty() || _isSendingComment.value) return
+        viewModelScope.launch {
+            _isSendingComment.value = true
+            try {
+                if (target.editCommentId != null) {
+                    repository.editComment(target.feedId, target.postId, target.editCommentId, body)
+                } else {
+                    repository.createComment(
+                        feedId = target.feedId,
+                        postId = target.postId,
+                        body = body,
+                        parent = target.parentId,
+                        files = _commentAttachments.value,
+                        contentResolver = context.contentResolver,
+                    )
+                }
+                _commentTarget.value = null
+                _commentDraft.value = ""
+                _commentAttachments.value = emptyList()
+                refreshPostQuietly(target.feedId, target.postId)
+            } catch (_: Exception) {
+                // Keep the draft so the user can retry.
+            } finally {
+                _isSendingComment.value = false
+            }
+        }
+    }
+
+    /**
+     * Delete a comment from a post shown in the feed, then refresh that post so
+     * it drops out of the card's preview.
+     */
+    fun deleteComment(postFeedId: String, postId: String, commentId: String) {
+        viewModelScope.launch {
+            try {
+                repository.deleteComment(postFeedId, postId, commentId)
+                refreshPostQuietly(postFeedId, postId)
+            } catch (_: Exception) {
+                // Silent — best-effort.
+            }
+        }
+    }
+
+    // Re-fetch a single post and patch it in place without the refresh spinner.
+    private suspend fun refreshPostQuietly(postFeedId: String, postId: String) {
+        val fresh = repository.getPost(postFeedId, postId).post
+        _posts.value = _posts.value.map { existing ->
+            if (existing.id != postId) existing else mergeRefreshedPost(existing, fresh)
+        }
+    }
+
+    /**
+     * React to a comment shown in a feed card, then refresh just that post so
+     * the comment's reaction pills update in place. [postFeedId] is the post's
+     * own feed (cards span feeds in the all-feeds aggregate).
+     */
+    fun reactToComment(postFeedId: String, postId: String, commentId: String, reaction: String) {
+        viewModelScope.launch {
+            try {
+                repository.reactToComment(postFeedId, postId, commentId, reaction)
+                val fresh = repository.getPost(postFeedId, postId).post
+                _posts.value = _posts.value.map { existing ->
+                    if (existing.id != postId) existing
+                    else mergeRefreshedPost(existing, fresh)
+                }
+            } catch (_: Exception) {
+                // Silent — best-effort.
             }
         }
     }
@@ -652,7 +821,8 @@ class FeedViewModel @Inject constructor(
                         feedId = feedId,
                         sort = _currentSort.value,
                         tag = _currentTag.value,
-                        unreadOnly = _unreadOnly.value
+                        unreadOnly = _unreadOnly.value,
+                        forceRefresh = true
                     )
                     _posts.value = result.posts
                     _hasMore.value = result.hasMore
@@ -737,7 +907,8 @@ class FeedViewModel @Inject constructor(
                 feedId = feedId,
                 sort = _currentSort.value,
                 tag = _currentTag.value,
-                unreadOnly = _unreadOnly.value
+                unreadOnly = _unreadOnly.value,
+                forceRefresh = true
             )
             _posts.value = result.posts
             _hasMore.value = result.hasMore
