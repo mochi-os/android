@@ -256,7 +256,9 @@ fun FeedScreen(
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     var pendingDelete by remember { mutableStateOf<Post?>(null) }
-    var showSuggestedInterests by remember { mutableStateOf(false) }
+    // Set once the viewer closes the one-shot post-subscribe suggestions prompt,
+    // so it doesn't reopen while the suggestions are still being acted on.
+    var suggestionsDismissed by remember { mutableStateOf(false) }
     var addTagTarget by remember { mutableStateOf<String?>(null) }
     // (feedId, postId, commentId) of a comment pending delete confirmation.
     var pendingDeleteComment by remember { mutableStateOf<Triple<String, String, String>?>(null) }
@@ -844,13 +846,16 @@ fun FeedScreen(
             }
         }
 
-        if (showSuggestedInterests) {
-            val suggestions by viewModel.suggestedInterests.collectAsState()
+        // Show the suggestions raised by a just-completed subscribe once: they
+        // appear when the prompt arrives, hide when the viewer acts on them all,
+        // closes the dialog, or refreshes (which clears the list in the VM).
+        val suggestedInterests by viewModel.suggestedInterests.collectAsState()
+        if (suggestedInterests.isNotEmpty() && !suggestionsDismissed) {
             InterestSuggestionsDialog(
-                suggestions = suggestions,
+                suggestions = suggestedInterests,
                 onAdd = { viewModel.addInterest(it) },
                 onDismissOne = { viewModel.dismissInterest(it) },
-                onDismiss = { showSuggestedInterests = false },
+                onDismiss = { suggestionsDismissed = true },
             )
         }
 

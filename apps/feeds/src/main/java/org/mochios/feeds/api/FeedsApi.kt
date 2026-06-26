@@ -21,6 +21,7 @@ import org.mochios.feeds.model.SavedToggleResponse
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -70,6 +71,16 @@ data class PostCreateResponse(
 
 data class SuccessResponse(
     val success: Boolean = false
+)
+
+data class SubscribeRequest(
+    val feed: String,
+    val server: String? = null
+)
+
+data class UnsubscribeRequest(
+    val feed: String,
+    val server: String? = null
 )
 
 data class RecommendationsResponse(
@@ -175,18 +186,14 @@ interface FeedsApi {
         @Query("url") url: String
     ): Response<ApiResponse<ProbeResponse>>
 
-    @FormUrlEncoded
     @POST("-/subscribe")
     suspend fun subscribe(
-        @Field("feed") feed: String,
-        @Field("server") server: String?
+        @Body body: SubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("-/unsubscribe")
     suspend fun unsubscribe(
-        @Field("feed") feed: String,
-        @Field("server") server: String? // contract-ok: unsubscribe resolves locally; server hint ignored
+        @Body body: UnsubscribeRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded

@@ -10,8 +10,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -30,10 +28,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
@@ -69,7 +64,7 @@ import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.android.R as MochiR
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FindFeedsScreen(
     onNavigateBack: () -> Unit,
@@ -83,6 +78,14 @@ fun FindFeedsScreen(
         error?.let {
             snackbarHostState.showSnackbar(it.userMessage())
             viewModel.clearError()
+        }
+    }
+
+    // After a successful subscribe, open the new feed (its screen reloads and
+    // shows the interest-suggestions prompt).
+    LaunchedEffect(Unit) {
+        viewModel.navigateToFeed.collect { feedId ->
+            onNavigateToFeed(feedId)
         }
     }
 
@@ -115,7 +118,7 @@ fun FindFeedsScreen(
 // Shared body of the Find Feeds experience. Used by FindFeedsScreen and by the
 // FeedListScreen onboarding empty state so first-run users can search and
 // subscribe without an extra navigation step.
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FindFeedsContent(
     viewModel: FindFeedsViewModel,
@@ -131,7 +134,6 @@ fun FindFeedsContent(
     val subscribedFeeds by viewModel.subscribedFeeds.collectAsState()
     val probeResult by viewModel.probeResult.collectAsState()
     val isProbing by viewModel.isProbing.collectAsState()
-    val interestSuggestions by viewModel.interestSuggestions.collectAsState()
 
     Column(
         modifier = modifier
@@ -160,52 +162,6 @@ fun FindFeedsContent(
         ) { }
 
         Spacer(modifier = Modifier.height(8.dp))
-
-        // Interest suggestions after subscribing
-        if (interestSuggestions.isNotEmpty()) {
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                shape = RoundedCornerShape(10.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-                )
-            ) {
-                Column(modifier = Modifier.padding(12.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = stringResource(R.string.feeds_tune_interests),
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.SemiBold
-                        )
-                        TextButton(onClick = { viewModel.dismissAllSuggestions() }) {
-                            Text(stringResource(R.string.feeds_dismiss), style = MaterialTheme.typography.labelSmall)
-                        }
-                    }
-                    Spacer(modifier = Modifier.height(4.dp))
-                    FlowRow(
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalArrangement = Arrangement.spacedBy(6.dp)
-                    ) {
-                        interestSuggestions.forEach { suggestion ->
-                            AssistChip(
-                                onClick = { viewModel.addInterest(suggestion) },
-                                label = { Text(suggestion.label, style = MaterialTheme.typography.labelSmall) },
-                                trailingIcon = {
-                                    Icon(Icons.Default.Check, contentDescription = stringResource(MochiR.string.common_add), modifier = Modifier.size(14.dp))
-                                }
-                            )
-                        }
-                    }
-                }
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-        }
 
         val probe = probeResult
         val displayFeeds = if (probe != null) {

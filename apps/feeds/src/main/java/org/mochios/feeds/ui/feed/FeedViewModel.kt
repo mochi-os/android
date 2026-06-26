@@ -168,8 +168,24 @@ class FeedViewModel @Inject constructor(
     init {
         loadFeed()
         subscribeToWebSocket()
+        observePendingInterestSuggestions()
         viewModelScope.launch { savedRepository.load() }
         viewModelScope.launch { _currentUserId.value = sessionManager.getBoundIdentity() }
+    }
+
+    // Show interest suggestions raised by a just-completed subscribe exactly
+    // once: consume the repository's pending prompt when it targets this feed,
+    // then clear it so it never reappears (e.g. on a return visit).
+    private fun observePendingInterestSuggestions() {
+        if (isAllFeeds || feedId.isEmpty()) return
+        viewModelScope.launch {
+            repository.pendingInterestSuggestion.collect { pending ->
+                if (pending != null && pending.feedId == feedId) {
+                    _suggestedInterests.value = pending.suggestions
+                    repository.clearPendingInterestSuggestion()
+                }
+            }
+        }
     }
 
     // Mark this feed's notifications read on the server (clear/object), so the
@@ -326,6 +342,8 @@ class FeedViewModel @Inject constructor(
     fun refresh() {
         viewModelScope.launch {
             _isRefreshing.value = true
+            // A manual refresh dismisses the one-shot post-subscribe suggestions.
+            _suggestedInterests.value = emptyList()
             try {
                 if (isAllFeeds) {
                     loadAllFeeds()
@@ -365,6 +383,8 @@ class FeedViewModel @Inject constructor(
     fun refreshPost(postFeedId: String, postId: String) {
         viewModelScope.launch {
             _isPostRefreshing.value = true
+            // The top-bar refresh button also dismisses the suggestions prompt.
+            _suggestedInterests.value = emptyList()
             try {
                 val fresh = repository.getPost(postFeedId, postId).post
                 _posts.value = _posts.value.map { existing ->
@@ -853,13 +873,6 @@ class FeedViewModel @Inject constructor(
                 _tags.value = repository.getTags(feedId)
             } catch (_: Exception) {
                 // Tags are non-critical
-            }
-        }
-        viewModelScope.launch {
-            try {
-                _suggestedInterests.value = repository.getSuggestedInterests(feedId)
-            } catch (_: Exception) {
-                // Suggestions are non-critical
             }
         }
     }

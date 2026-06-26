@@ -8,6 +8,9 @@ package org.mochios.feeds.repository
 import android.content.ContentResolver
 import android.net.Uri
 import com.google.gson.Gson
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -19,6 +22,8 @@ import org.mochios.android.model.PlaceData
 import org.mochios.android.model.User
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.InterestSuggestion
+import org.mochios.feeds.api.SubscribeRequest
+import org.mochios.feeds.api.UnsubscribeRequest
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
@@ -66,6 +71,17 @@ data class AddSourceResult(
     val suggestedCredibility: Int? = null
 )
 
+/**
+ * A one-shot interest-suggestion prompt raised by subscribing to a feed, to be
+ * shown once on that feed's screen. Held in the [@Singleton][Singleton]
+ * repository because the subscribe action (FindFeeds) and the feed screen live
+ * in different ViewModels.
+ */
+data class PendingInterestSuggestion(
+    val feedId: String,
+    val suggestions: List<InterestSuggestion>
+)
+
 @Singleton
 class FeedsRepository @Inject constructor(
     private val api: FeedsApi
@@ -88,6 +104,23 @@ class FeedsRepository @Inject constructor(
         val result: FeedInfoResult,
         val timestamp: Long = System.currentTimeMillis()
     )
+
+    // One-shot interest suggestions raised by a successful subscribe, consumed
+    // once by the matching feed screen. Bridges the FindFeeds subscribe flow and
+    // the feed screen, which are separate ViewModels.
+    private val _pendingInterestSuggestion = MutableStateFlow<PendingInterestSuggestion?>(null)
+    val pendingInterestSuggestion: StateFlow<PendingInterestSuggestion?> =
+        _pendingInterestSuggestion.asStateFlow()
+
+    /** Stash suggestions for [feedId] so its feed screen can show them once. */
+    fun setPendingInterestSuggestion(feedId: String, suggestions: List<InterestSuggestion>) {
+        _pendingInterestSuggestion.value = PendingInterestSuggestion(feedId, suggestions)
+    }
+
+    /** Clear the pending suggestion once consumed (or when no longer relevant). */
+    fun clearPendingInterestSuggestion() {
+        _pendingInterestSuggestion.value = null
+    }
 
     fun getCachedPosts(feedId: String, sort: String?, tag: String?, unreadOnly: Boolean): PostListResult? {
         val cached = postCache[feedId] ?: return null
@@ -164,7 +197,8 @@ class FeedsRepository @Inject constructor(
 
     suspend fun subscribeFeed(feed: String, server: String? = null) {
         try {
-            api.subscribe(feed, server).unwrap()
+            // Server hint omitted from the request body for now.
+            api.subscribe(SubscribeRequest(feed = feed)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -172,7 +206,8 @@ class FeedsRepository @Inject constructor(
 
     suspend fun unsubscribeFeed(feed: String, server: String? = null) {
         try {
-            api.unsubscribe(feed, server).unwrap()
+            // Server hint omitted from the request body for now.
+            api.unsubscribe(UnsubscribeRequest(feed = feed)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
