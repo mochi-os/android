@@ -220,3 +220,35 @@ internal fun CommentItem(
         }
     }
 }
+
+/**
+ * Flattens a nested comment tree into a depth-tagged list for a flat
+ * [androidx.compose.foundation.lazy.LazyColumn], preserving order: each comment
+ * is immediately followed by its (deeper) replies.
+ */
+internal fun flattenComments(comments: List<Comment>, depth: Int): List<Pair<Comment, Int>> {
+    val result = mutableListOf<Pair<Comment, Int>>()
+    for (comment in comments) {
+        result.add(comment to depth)
+        result.addAll(flattenComments(comment.children, depth + 1))
+    }
+    return result
+}
+
+/**
+ * Strips the limited HTML a comment body carries (line breaks and common
+ * entities) back to plain text — used to seed the edit field from the rendered
+ * body.
+ */
+internal fun stripHtml(html: String): String {
+    return html
+        .replace(Regex("<br\\s*/?>"), "\n")
+        .replace(Regex("<[^>]*>"), "")
+        .replace("&amp;", "&")
+        .replace("&lt;", "<")
+        .replace("&gt;", ">")
+        .replace("&quot;", "\"")
+        .replace("&#39;", "'")
+        .replace("&nbsp;", " ")
+        .trim()
+}

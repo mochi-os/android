@@ -5,25 +5,21 @@
 
 package org.mochios.feeds.ui.post
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -37,11 +33,11 @@ import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.ThumbDown
-import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material.icons.filled.ThumbDown
+import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
@@ -71,41 +67,40 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import androidx.hilt.navigation.compose.hiltViewModel
+import coil3.compose.AsyncImage
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.ui.components.EntityAvatar
-import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LocationMapView
-import org.mochios.android.ui.components.VideoEmbed
-import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
-import org.mochios.feeds.ui.component.CommentItem
-import org.mochios.feeds.ui.component.PostBody
-import org.mochios.feeds.ui.component.currentReactionType
-import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.VideoEmbed
+import org.mochios.android.ui.components.extractVideos
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.ui.component.CommentItem
+import org.mochios.feeds.ui.component.PostBody
+import org.mochios.feeds.ui.component.currentReactionType
+import org.mochios.feeds.ui.component.flattenComments
+import org.mochios.feeds.ui.component.stripHtml
+import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -798,11 +793,7 @@ internal fun CommentInputBar(
         shadowElevation = 8.dp,
         color = MaterialTheme.colorScheme.surface
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .imePadding()
-        ) {
+        Column(modifier = Modifier.fillMaxWidth()) {
             if (replyingTo != null) {
                 Row(
                     modifier = Modifier
@@ -933,28 +924,6 @@ internal fun AddTagDialog(
             }
         }
     )
-}
-
-private fun flattenComments(comments: List<Comment>, depth: Int): List<Pair<Comment, Int>> {
-    val result = mutableListOf<Pair<Comment, Int>>()
-    for (comment in comments) {
-        result.add(comment to depth)
-        result.addAll(flattenComments(comment.children, depth + 1))
-    }
-    return result
-}
-
-private fun stripHtml(html: String): String {
-    return html
-        .replace(Regex("<br\\s*/?>"), "\n")
-        .replace(Regex("<[^>]*>"), "")
-        .replace("&amp;", "&")
-        .replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&quot;", "\"")
-        .replace("&#39;", "'")
-        .replace("&nbsp;", " ")
-        .trim()
 }
 
 

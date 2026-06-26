@@ -599,7 +599,7 @@ fun FeedScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(top = paddingValues.calculateTopPadding())
+                    .padding(paddingValues)
             ) {
                 FeedFilterChips(
                     currentSort = currentSort,
