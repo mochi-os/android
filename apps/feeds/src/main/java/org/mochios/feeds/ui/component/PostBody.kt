@@ -56,6 +56,7 @@ fun PostBody(
     titleFontSize: TextUnit = 18.sp,
     titleBodyGap: Dp = 4.dp,
     includeTitle: Boolean = true,
+    stripTrailingLink: Boolean = false,
     onClick: (() -> Unit)? = null,
 ) {
     var altText by remember { mutableStateOf<String?>(null) }
@@ -66,10 +67,21 @@ fun PostBody(
     // Body text with the RSS title line stripped when present, so the title
     // isn't repeated — whether it's rendered here or hoisted by the caller
     // (e.g. the feed card renders it above the byline via [PostTitle]).
-    val bodyContent = if (title != null) {
-        post.body.substring(rawTitle.length).trimStart('\n', ' ')
-    } else {
-        post.body
+    val bodyContent = run {
+        val withoutTitle = if (title != null) {
+            post.body.substring(rawTitle.length).trimStart('\n', ' ')
+        } else {
+            post.body
+        }
+        // For RSS posts the body ends with the raw article link. The feed card
+        // drops it for a cleaner preview — the title and body still open the
+        // article — while the detail screen keeps it.
+        val rssLink = post.data?.rss?.link.orEmpty()
+        if (stripTrailingLink && rssLink.isNotEmpty() && withoutTitle.endsWith(rssLink)) {
+            withoutTitle.substring(0, withoutTitle.length - rssLink.length).trimEnd('\n', ' ')
+        } else {
+            withoutTitle
+        }
     }
     val truncated = fillHeight || maxLines != Int.MAX_VALUE
 

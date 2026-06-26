@@ -599,7 +599,7 @@ fun FeedScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(paddingValues)
+                    .padding(top = paddingValues.calculateTopPadding())
             ) {
                 FeedFilterChips(
                     currentSort = currentSort,
@@ -1089,12 +1089,11 @@ private fun PostCard(
                 .weight(1f)
                 .fillMaxWidth()
         ) {
-            val viewportHeight = maxHeight
+            val viewportHeight = this.maxHeight
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
-                    .clickable(onClick = onClick)
             ) {
                 Column(
                     modifier = Modifier
@@ -1198,7 +1197,11 @@ private fun PostCard(
                             Spacer(modifier = Modifier.height(4.dp))
                             val text = when {
                                 origin.isNotEmpty() && destination.isNotEmpty() ->
-                                    stringResource(R.string.feeds_travel_arrow, origin, destination)
+                                    stringResource(
+                                        R.string.feeds_travel_arrow,
+                                        origin,
+                                        destination
+                                    )
 
                                 origin.isNotEmpty() ->
                                     stringResource(R.string.feeds_travel_from, origin)
@@ -1232,7 +1235,16 @@ private fun PostCard(
                             passThroughTouches = true,
                             // Title is rendered above the byline, not inside the body.
                             includeTitle = false,
-                            modifier = Modifier.fillMaxWidth(),
+                            // Drop the trailing RSS link from the card preview.
+                            stripTrailingLink = true,
+                            // The body TextView passes touches through (returns
+                            // false), so a tap on it never reaches onClick on its
+                            // own. Wrap it in a clickable — like PostTitle — so
+                            // tapping the body opens detail/source; vertical drags
+                            // still pass through to the page scroll/flip.
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable(onClick = onClick),
                             onClick = onClick
                         )
                     }
@@ -1321,7 +1333,12 @@ private fun PostCard(
                                         onEditComment(comment.id, comment.markdownSource)
                                     },
                                     onDelete = { onDeleteComment(comment.id) },
-                                    onReact = { reaction -> onReactComment(comment.id, reaction) },
+                                    onReact = { reaction ->
+                                        onReactComment(
+                                            comment.id,
+                                            reaction
+                                        )
+                                    },
                                     canManage = false,
                                     isMine = currentUserId != null && comment.authorId == currentUserId,
                                     horizontalPadding = 0.dp,
@@ -1568,7 +1585,12 @@ private fun FeedFilterChips(
                 )
                 DropdownMenuItem(
                     text = { Text(stringResource(R.string.feeds_unread)) },
-                    leadingIcon = { Icon(Icons.Default.VisibilityOff, contentDescription = null) },
+                    leadingIcon = {
+                        Icon(
+                            Icons.Default.VisibilityOff,
+                            contentDescription = null
+                        )
+                    },
                     trailingIcon = {
                         if (unreadOnly) {
                             Icon(Icons.Default.Check, contentDescription = null)
